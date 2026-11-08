@@ -92,7 +92,7 @@ abstract class Js5Transport {
           var5 = var4.field_V;
           var6 = var5.getPlayerStat((byte) 120, param2);
           if (var6 != -1) {
-            param0 = param0 + param3 + var5.field_k[var6] + "<br>";
+            param0 = param0 + param3 + var5.playerNames[var6] + "<br>";
           }
           stackIn_7_0 = (String) (param0);
           return stackIn_7_0;

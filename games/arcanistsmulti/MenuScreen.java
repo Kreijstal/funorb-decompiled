@@ -8700,7 +8700,7 @@ final class MenuScreen {
             TexturedSpriteHelpers.drawTexturedSpriteIntGuard(var10, var20 + var16 - 0, var11, var8, 118, var9, var12[2][var2.field_V.field_N[var14][14]], -12 + var15);
             var15 += 32;
             var16 += 64;
-            var21 = var2.field_V.field_k[var14];
+            var21 = var2.field_V.playerNames[var14];
             var16 += 16;
             var22 = SpellProjectile.field_B.textWidth("Wmmmmmmmmmmm");
             var15 = var15 - (var22 / 2 + 7);
@@ -8868,7 +8868,7 @@ final class MenuScreen {
           var3 = var2.field_V.getPlayerCount(0);
           var4 = var2.field_V.getCurrentPlayer(false);
           if (0 <= var4 &&
-            var2.field_V.field_d) {
+            var2.field_V.teamMode) {
             var4 = var4 & 1;
           }
           var7 = EmailLoginCredentials.field_f / 2;
@@ -8902,7 +8902,7 @@ final class MenuScreen {
             var2.field_V = var2.field_w;
           }
           if (var4 >= 0) {
-            if (var2.field_V.field_d) {
+            if (var2.field_V.teamMode) {
               if (0 == var4) {
                 discarded$0 = var14.append(EditableTextWidget.field_K + ThrowableFormatHelpers.field_d + "<br><br>");
               }
@@ -8910,7 +8910,7 @@ final class MenuScreen {
                 discarded$1 = var14.append(EditableTextWidget.field_K + BirthDateEntryPanel.field_I + "<br><br>");
               }
             } else {
-              discarded$2 = var14.append(EditableTextWidget.field_K + var2.field_V.field_k[var4] + "<br><br>");
+              discarded$2 = var14.append(EditableTextWidget.field_K + var2.field_V.playerNames[var4] + "<br><br>");
             }
           } else {
             if (-2 == var4) {
@@ -9004,8 +9004,8 @@ final class MenuScreen {
           while (var20 < var3) {
             boolean decompiledFrameRemainder0 = true;
             var5Lifetime3 = var19[var20] * 3.141592653589793;
-            if ((var2.field_V.field_d ||
-              var4 != var20) && (!var2.field_V.field_d ||
+            if ((var2.field_V.teamMode ||
+              var4 != var20) && (!var2.field_V.teamMode ||
               ~var4 != ~(var20 & 1) ||
               (1 << var20 & var2.field_J) != 0)) {
               stackIn_73_0 = 0;
@@ -9099,7 +9099,7 @@ final class MenuScreen {
             TexturedSpriteHelpers.drawTexturedSpriteIntGuard(var11, var26 * 2 + (var25Lifetime1 + var23 + 0), var12, var9, -88, var10, var13[2][var2.field_V.field_N[var20][14]], var22 - 12);
             var22 += 32;
             var23 += 64;
-            var27 = var2.field_V.field_k[var20];
+            var27 = var2.field_V.playerNames[var20];
             var28 = SpellProjectile.field_B.textWidth("Wmmmmmmmmmmm");
             if (var4 == var20) {
               var23 += 16;
@@ -11237,7 +11237,7 @@ final class MenuScreen {
               }
             }
             var4 = stackIn_35_0[stackIn_36_1];
-            if (var2.field_V.field_d) {
+            if (var2.field_V.teamMode) {
               stackIn_42_0 = NameCheckHelpers.field_n;
               if (this.field_l != 3) {
                 if (var2.field_I >= 0) {

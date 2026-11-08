@@ -366,9 +366,9 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
           if (param2 == 0) {
             if (param0 >= 0 &&
               param6 >= 0 &&
-              param0 < param4.field_y &&
-              param6 < param4.field_H) {
-              var8_int = param0 + param6 * param4.field_y;
+              param0 < param4.arenaWidth &&
+              param6 < param4.arenaHeight) {
+              var8_int = param0 + param6 * param4.arenaWidth;
               if (!param5 &&
                 param1.field_m[var8_int] != 0 &&
                 param1.field_m[var8_int] != -5) {
@@ -387,8 +387,8 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
             var8_intLifetime1 = 0;
           }
           var10 = 1 + (param6 + param2);
-          if (-1 + param4.field_H < var10) {
-            var10 = -1 + param4.field_H;
+          if (-1 + param4.arenaHeight < var10) {
+            var10 = -1 + param4.arenaHeight;
           }
           var11 = var8_intLifetime1;
           var12 = param2 * param2;
@@ -414,10 +414,10 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
                   var17 = 0;
                 }
                 var18 = var13 + param0;
-                if (var18 > -1 + param4.field_y) {
-                  var18 = param4.field_y - 1;
+                if (var18 > -1 + param4.arenaWidth) {
+                  var18 = param4.arenaWidth - 1;
                 }
-                var19 = var11 * param4.field_y + var17;
+                var19 = var11 * param4.arenaWidth + var17;
                 for (var20 = var17; var18 > var20; var20++) {
                   if (!param5 &&
                     param1.field_m[var19] != 0 &&
@@ -458,10 +458,10 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
               var17Lifetime1 = 0;
             }
             var18Lifetime1 = var13Lifetime1 + param0;
-            if (var18Lifetime1 > param4.field_y - 1) {
-              var18Lifetime1 = -1 + param4.field_y;
+            if (var18Lifetime1 > param4.arenaWidth - 1) {
+              var18Lifetime1 = -1 + param4.arenaWidth;
             }
-            var22 = var11 * param4.field_y + var17Lifetime1;
+            var22 = var11 * param4.arenaWidth + var17Lifetime1;
             var19Lifetime1 = var22;
             for (var20Lifetime1 = var17Lifetime1; var18Lifetime1 >= var20Lifetime1; var20Lifetime1++) {
               if (!param5 &&

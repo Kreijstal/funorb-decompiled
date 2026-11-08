@@ -84,9 +84,9 @@ final class SoundEffectVoice extends IntrusiveNode {
           }
           var7 = param5.field_q;
           var8 = param5.field_y;
-          if (param3 < param0.field_y &&
+          if (param3 < param0.arenaWidth &&
             -var7 < param3) {
-            if (param1 >= param0.field_H) {
+            if (param1 >= param0.arenaHeight) {
               return false;
             }
             if (-var8 >= param1) {
@@ -95,14 +95,14 @@ final class SoundEffectVoice extends IntrusiveNode {
             stackIn_16_0 = (0 < param3) ? param3 : 0;
             var9 = stackIn_16_0;
             var10 = param3 + var7;
-            if (param0.field_y < var10) {
-              var10 = param0.field_y;
+            if (param0.arenaWidth < var10) {
+              var10 = param0.arenaWidth;
             }
             stackIn_22_0 = (param1 <= 0) ? 0 : param1;
             var11 = stackIn_22_0;
             var12 = param1 + var8;
-            if (param0.field_y < var12) {
-              var12 = param0.field_y;
+            if (param0.arenaWidth < var12) {
+              var12 = param0.arenaWidth;
             }
             var10 = var10 - var9;
             var12 = var12 - var11;

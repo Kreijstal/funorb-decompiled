@@ -97,17 +97,17 @@ final class ChatPanel {
           }
           param2 = param2 + param5.field_x;
           param1 = param1 + param5.field_o;
-          var7_int = param2 + param4.field_y * param1;
+          var7_int = param2 + param4.arenaWidth * param1;
           var8 = 0;
           var9 = param5.field_y;
           var10 = param5.field_q;
-          var11 = -var10 + param4.field_y;
+          var11 = -var10 + param4.arenaWidth;
           var12 = param6;
           if (param1 < 0) {
             var13 = -param1 + 0;
             var9 = var9 - var13;
             param1 = 0;
-            var7_int = var7_int + param4.field_y * var13;
+            var7_int = var7_int + param4.arenaWidth * var13;
             var8 = var8 + var13 * var10;
           }
           if (param2 < 0) {
@@ -119,11 +119,11 @@ final class ChatPanel {
             var12 = var12 + var13Lifetime1;
             var7_int = var7_int + var13Lifetime1;
           }
-          if (param4.field_H - 1 < var9 + param1) {
-            var9 = var9 - (var9 + (param1 + (-param4.field_H + 1)));
+          if (param4.arenaHeight - 1 < var9 + param1) {
+            var9 = var9 - (var9 + (param1 + (-param4.arenaHeight + 1)));
           }
-          if (param4.field_y - 1 < param2 + var10) {
-            var13Lifetime2 = param2 + var10 - (-1 + param4.field_y);
+          if (param4.arenaWidth - 1 < param2 + var10) {
+            var13Lifetime2 = param2 + var10 - (-1 + param4.arenaWidth);
             var10 = var10 - var13Lifetime2;
             var11 = var11 + var13Lifetime2;
             var12 = var12 + var13Lifetime2;

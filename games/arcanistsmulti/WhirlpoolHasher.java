@@ -379,7 +379,7 @@ final class WhirlpoolHasher {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          MessageDialog.field_ob.trySelectSpell(0, 4, 0, GradientBarButton.field_O.field_y / 2, 0, GradientBarButton.field_O.field_y / 2, 0, -60);
+          MessageDialog.field_ob.trySelectSpell(0, 4, 0, GradientBarButton.field_O.arenaWidth / 2, 0, GradientBarButton.field_O.arenaWidth / 2, 0, -60);
           if (StatefulTextPainter.field_p != 6) {
             param0.setHealth((byte) -92, 250);
           } else {

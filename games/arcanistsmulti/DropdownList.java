@@ -248,7 +248,7 @@ final class DropdownList extends UiContainer implements ButtonListener {
           param1 = param1 + param3.field_o;
           var7_int = param3.field_q;
           var8 = param3.field_y;
-          if (param6 >= param5.field_y) {
+          if (param6 >= param5.arenaWidth) {
             return false;
           }
           if (param6 <= -var7_int) {
@@ -257,20 +257,20 @@ final class DropdownList extends UiContainer implements ButtonListener {
           if (param2) {
             return false;
           }
-          if (param0 < param5.field_H &&
+          if (param0 < param5.arenaHeight &&
             param0 > -var8) {
             stackIn_17_0 = (0 < param6) ? param6 : 0;
             var9 = stackIn_17_0;
             var10 = param6 + var7_int;
-            if (param5.field_y < var10) {
-              var10 = param5.field_y;
+            if (param5.arenaWidth < var10) {
+              var10 = param5.arenaWidth;
             }
             stackIn_22_0 = (param0 <= 0) ? 0 : param0;
             var11 = stackIn_22_0;
             var12 = param0 + var8;
             var10 = var10 - var9;
-            if (var12 > param5.field_y) {
-              var12 = param5.field_y;
+            if (var12 > param5.arenaWidth) {
+              var12 = param5.arenaWidth;
             }
             var12 = var12 - var11;
             if ((1 & var10) > 0) {

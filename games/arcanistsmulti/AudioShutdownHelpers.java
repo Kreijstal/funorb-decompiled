@@ -207,7 +207,7 @@ final class AudioShutdownHelpers {
                     }
                   }
                   if ((decompiledFrameRemainder1) &&
-                    (var4_ref_ml.getY((byte) -106) > Checkbox.field_J.field_H)) {
+                    (var4_ref_ml.getY((byte) -106) > Checkbox.field_J.arenaHeight)) {
                     DropdownList.field_N = 4;
                     LoginStackHelpers.field_a = NameTable.field_b;
                     var3 = NameTable.field_b;

@@ -45,7 +45,7 @@ final class BattleResetHelpers {
             field_h = (ConnectionState) null;
           }
           while (var3 != null) {
-            if (40 == var3.field_jb) {
+            if (40 == var3.unitType) {
               var2++;
             }
             var3 = (BattleUnit) (var1.next(0));
@@ -77,21 +77,21 @@ final class BattleResetHelpers {
           WhirlpoolHasher.field_k = 0;
           GradientBarButton.field_O.field_X[0] = 0;
           MessageDialog.field_ob.field_t = false;
-          GradientBarButton.field_O.field_D = false;
+          GradientBarButton.field_O.animating = false;
           GradientBarButton.field_O.startTurn(0, true, 0);
           MessageDialog.field_ob.field_bb = 0;
           GradientBarButton.field_O.setCurrentPlayer(-4207, 0);
           GradientBarButton.field_O.setSeed(3, true);
-          GradientBarButton.field_O.field_y = 1920;
-          GradientBarButton.field_O.field_H = 960;
+          GradientBarButton.field_O.arenaWidth = 1920;
+          GradientBarButton.field_O.arenaHeight = 960;
           if (StatefulTextPainter.field_p == 0) {
-            GradientBarButton.field_O.field_y = 1280;
-            GradientBarButton.field_O.field_H = 480;
+            GradientBarButton.field_O.arenaWidth = 1280;
+            GradientBarButton.field_O.arenaHeight = 480;
             GradientBarButton.field_O.setSeed(9, true);
           }
           if (StatefulTextPainter.field_p == 1) {
-            GradientBarButton.field_O.field_y = 960;
-            GradientBarButton.field_O.field_H = 960;
+            GradientBarButton.field_O.arenaWidth = 960;
+            GradientBarButton.field_O.arenaHeight = 960;
             GradientBarButton.field_O.setSeed(33, true);
           }
           if (StatefulTextPainter.field_p == 2) {
@@ -112,8 +112,8 @@ final class BattleResetHelpers {
           if (StatefulTextPainter.field_p == 7) {
             GradientBarButton.field_O.setSeed(45, true);
           }
-          GradientBarButton.field_O.field_Hb = GradientBarButton.field_O.field_H >> 1;
-          GradientBarButton.field_O.field_hb = GradientBarButton.field_O.field_y >> 1;
+          GradientBarButton.field_O.field_Hb = GradientBarButton.field_O.arenaHeight >> 1;
+          GradientBarButton.field_O.field_hb = GradientBarButton.field_O.arenaWidth >> 1;
           GradientBarButton.field_O.generateTerrain(649860712, true);
           if (DelegatingCanvas.field_c[GradientBarButton.field_O.getArenaTheme(-31497) + 1] != null) {
             SpellProjectile.playMusic(DelegatingCanvas.field_c[GradientBarButton.field_O.getArenaTheme(-31497) + 1], 3);
@@ -166,7 +166,7 @@ final class BattleResetHelpers {
                         GradientBarButton.field_O.setDisplayFlags(true, -1, true);
                         MessageDialog.field_ob.field_y = false;
                         MessageDialog.field_ob.field_G = true;
-                        if (9 != GradientBarButton.field_O.field_x[0]) {
+                        if (9 != GradientBarButton.field_O.playerSpellbook[0]) {
                           GradientBarButton.field_O.addUnit((byte) -127, new BattleUnit(0, 910, 181, GradientBarButton.field_O.nextUnitId(-93), GradientBarButton.field_O, 0));
                         } else {
                           GradientBarButton.field_O.addUnit((byte) -115, new BattleUnit(27, 910, 181, GradientBarButton.field_O.nextUnitId(-115), GradientBarButton.field_O, 0));
@@ -203,7 +203,7 @@ final class BattleResetHelpers {
                             }
                           }
                         }
-                        GradientBarButton.field_O.field_x[0] = var1_int;
+                        GradientBarButton.field_O.playerSpellbook[0] = var1_int;
                         GradientBarButton.field_O.field_X[0] = 0;
                         GradientBarButton.field_O.field_Ab[0] = 0;
                         GradientBarButton.field_O.field_o[0] = 0;
@@ -218,9 +218,9 @@ final class BattleResetHelpers {
                         GradientBarButton.field_O.setSpellSlot(0, 1, -1, 67, 12);
                         GradientBarButton.field_O.setSpellSlot(0, 2, -1, 28, 14);
                         GradientBarButton.field_O.addUnit((byte) -116, new BattleUnit(0, 707, 365, GradientBarButton.field_O.nextUnitId(-92), GradientBarButton.field_O, 0));
-                        GradientBarButton.field_O.addUnit((byte) -119, new BattleUnit(3, 341, -GradientBarButton.field_O.field_H, GradientBarButton.field_O.nextUnitId(-119), GradientBarButton.field_O, 1));
-                        GradientBarButton.field_O.addUnit((byte) -117, new BattleUnit(3, 1152, -GradientBarButton.field_O.field_H, GradientBarButton.field_O.nextUnitId(-116), GradientBarButton.field_O, 2));
-                        GradientBarButton.field_O.addUnit((byte) -118, new BattleUnit(3, 1546, -GradientBarButton.field_O.field_H, GradientBarButton.field_O.nextUnitId(-111), GradientBarButton.field_O, 3));
+                        GradientBarButton.field_O.addUnit((byte) -119, new BattleUnit(3, 341, -GradientBarButton.field_O.arenaHeight, GradientBarButton.field_O.nextUnitId(-119), GradientBarButton.field_O, 1));
+                        GradientBarButton.field_O.addUnit((byte) -117, new BattleUnit(3, 1152, -GradientBarButton.field_O.arenaHeight, GradientBarButton.field_O.nextUnitId(-116), GradientBarButton.field_O, 2));
+                        GradientBarButton.field_O.addUnit((byte) -118, new BattleUnit(3, 1546, -GradientBarButton.field_O.arenaHeight, GradientBarButton.field_O.nextUnitId(-111), GradientBarButton.field_O, 3));
                         GradientBarButton.field_O.setPlayerCount(4, (byte) -105);
                       }
                     } else {
@@ -271,7 +271,7 @@ final class BattleResetHelpers {
           var6 = GradientBarButton.field_O.getUnitByOwner(0, true);
           if (var6 != null) {
             MessageDialog.field_ob.field_m.followUnit(-88, var6);
-            MessageDialog.field_ob.field_bb = var6.field_T;
+            MessageDialog.field_ob.field_bb = var6.unitId;
           } else {
             MessageDialog.field_ob.field_bb = -1;
           }

@@ -129,8 +129,8 @@ final class BattleScreen {
             this.field_n = 0;
             IntrusiveDeque.field_c = -var4_int;
           }
-          if (IntrusiveDeque.field_c > this.field_V.field_y + var4_int) {
-            IntrusiveDeque.field_c = var4_int + this.field_V.field_y;
+          if (IntrusiveDeque.field_c > this.field_V.arenaWidth + var4_int) {
+            IntrusiveDeque.field_c = var4_int + this.field_V.arenaWidth;
             this.field_n = 0;
           }
           if (CameraFollowTarget.field_g < param1) {
@@ -231,7 +231,7 @@ final class BattleScreen {
           this.field_t = false;
           if (!this.field_ab &&
             StatefulTextPainter.field_p == 7 &&
-            this.field_V.field_q > 1) {
+            this.field_V.playerCount > 1) {
             this.field_I = this.field_V.getCurrentPlayer(false);
             return;
           }
@@ -256,7 +256,7 @@ final class BattleScreen {
         var9 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           var5_int = IntKeyLookup.field_g.field_nb;
-          var6 = var5_int / 2 + this.field_V.field_H - param0;
+          var6 = var5_int / 2 + this.field_V.arenaHeight - param0;
           for (var7 = 0; var7 < EmailLoginCredentials.field_f; var7++) {
             var8 = (int)Math.abs(18.0 * Math.cos(3.141592653589793 * (double)(param3 + (var7 + BattleAction.field_r * 4)) / 64.0));
             if (BattleAction.field_r < 64) {
@@ -499,7 +499,7 @@ final class BattleScreen {
               SpellProjectile.field_B.drawText(var13, var12 - 1, SpellProjectile.field_B.field_C / 2 + 3 + (-8 + param0) + (this.field_l[param2] - 8 + 4), 0, 0);
               SpellProjectile.field_B.drawText(var13, var12, SpellProjectile.field_B.field_C / 2 + 3 + (-8 + (this.field_l[param2] + param0 - 8)) + 4, var8, -1);
             }
-            var11 = NameHelpers.normalizeName((byte) 121, (CharSequence) ((Object) this.field_V.field_k[param2]));
+            var11 = NameHelpers.normalizeName((byte) 121, (CharSequence) ((Object) this.field_V.playerNames[param2]));
             SpellProjectile.field_B.drawCentered(var11, 12 + param1 / 2 + 25, SpellProjectile.field_B.field_C / 2 + (-1 + param0 + this.field_l[param2] / 2), 8421504 ^ (var8 | 8421504), 0);
             SpellProjectile.field_B.drawCentered(var11, 12 + param1 / 2 + 26, -1 + (-1 + this.field_l[param2] / 2 + param0 + SpellProjectile.field_B.field_C / 2), 8421504 ^ (8421504 | var8), 0);
             SpellProjectile.field_B.drawCentered(var11, param1 / 2 + 12 + 26, -1 + (param0 + this.field_l[param2] / 2 + SpellProjectile.field_B.field_C / 2), var8, -1);
@@ -638,7 +638,7 @@ final class BattleScreen {
               !(this.field_z >= this.field_V.getThemeParameter(12955)) ||
               StatefulTextPainter.field_p == 6) && MusicPatchNode.field_s == 0) {
               var10 = (this.field_z + 49) / 50;
-              if (var10 > this.field_V.getThemeParameter(12955) / 50 && (this.field_V.field_x[this.field_V.getCurrentPlayer(false)] != 8 ||
+              if (var10 > this.field_V.getThemeParameter(12955) / 50 && (this.field_V.playerSpellbook[this.field_V.getCurrentPlayer(false)] != 8 ||
                 this.field_V.field_X[this.field_V.getCurrentPlayer(false)] == 0)) {
                 var10 = this.field_V.getThemeParameter(param5 ^ 13051) / 50;
               }
@@ -704,7 +704,7 @@ final class BattleScreen {
                     }
                   }
                 } else {
-                  var15_ref = this.field_V.field_k[var10Lifetime1];
+                  var15_ref = this.field_V.playerNames[var10Lifetime1];
                   var11_refLifetime2 = var15_ref;
                   var11_refLifetime2 = var15_ref;
                   var11_refLifetime2 = var15_ref;
@@ -894,7 +894,7 @@ final class BattleScreen {
               }
               if (this.field_ab) {
                 stackIn_71_0 = this.field_V.getRound((byte) -75);
-                if (var5.field_E != -1) {
+                if (var5.facing != -1) {
                   stackIn_72_1 = 4;
                 } else {
                   stackIn_72_1 = 2;
@@ -916,7 +916,7 @@ final class BattleScreen {
               }
               if (this.field_ab) {
                 stackIn_84_0 = this.field_V.getRound((byte) -75);
-                if (-1 != var5.field_E) {
+                if (-1 != var5.facing) {
                   stackIn_85_1 = 5;
                 } else {
                   stackIn_85_1 = 3;
@@ -1138,7 +1138,7 @@ final class BattleScreen {
             var5_ref_ml = this.field_V.getUnitByOwner(this.field_bb, true);
             if (var5_ref_ml != null &&
               null == var5_ref_ml.getLinkedUnit(24501) &&
-              var5_ref_ml.getY((byte) -60) >= 128 + this.field_V.field_H) {
+              var5_ref_ml.getY((byte) -60) >= 128 + this.field_V.arenaHeight) {
               var4 = 1;
               var6 = var5_ref_ml.getDisplayedHealth(-20357) / 2;
               if (var6 < 25) {
@@ -1185,7 +1185,7 @@ final class BattleScreen {
           if (this.field_g) {
             var5 = this.computeHealthBarLength(var5, 0);
           }
-          if (!this.field_V.field_d) {
+          if (!this.field_V.teamMode) {
             for (var6 = 0; var6 < this.field_V.getPlayerCount(0); var6++) {
               var5 = this.getPlayerStatusCode(var5, (byte) -3, var6);
             }
@@ -1204,7 +1204,7 @@ final class BattleScreen {
             EffectVolumeHelpers.field_g = -1;
           }
           if (this.field_I >= 0 && (StatefulTextPainter.field_p == -1 ||
-            StatefulTextPainter.field_p == 7) && (10 != this.field_V.field_x[this.field_I] &&
+            StatefulTextPainter.field_p == 7) && (10 != this.field_V.playerSpellbook[this.field_I] &&
             this.field_I == this.field_bb)) {
             var6 = 30;
             var7Lifetime1 = -150 + (var3_int + IconHighlightPainter.getHoldTimer((byte) -117));
@@ -1213,7 +1213,7 @@ final class BattleScreen {
               EffectVolumeHelpers.field_g = -4;
               var8 = 1;
               var9 = 100;
-              if (4 == this.field_V.field_x[this.field_I]) {
+              if (4 == this.field_V.playerSpellbook[this.field_I]) {
                 var9 = this.field_V.field_X[this.field_I] / 5 * 5 + 5;
                 if (this.field_V.field_X[this.field_I] > 0 &&
                   this.field_V.field_X[this.field_I] + 5 == var9) {
@@ -1222,11 +1222,11 @@ final class BattleScreen {
               }
               if (this.field_V.field_X[this.field_I] < var9) {
                 if (ConditionalTextValue.field_f) {
-                  IntrusiveNodeHashTable.field_f = MouseStateHelpers.field_d[this.field_V.field_x[this.field_I] + 128 + 12];
-                  if (this.field_V.field_x[this.field_I] == 8) {
+                  IntrusiveNodeHashTable.field_f = MouseStateHelpers.field_d[this.field_V.playerSpellbook[this.field_I] + 128 + 12];
+                  if (this.field_V.playerSpellbook[this.field_I] == 8) {
                     IntrusiveNodeHashTable.field_f = MouseStateHelpers.field_d[156];
                   }
-                  if (9 == this.field_V.field_x[this.field_I]) {
+                  if (9 == this.field_V.playerSpellbook[this.field_I]) {
                     IntrusiveNodeHashTable.field_f = MouseStateHelpers.field_d[157];
                   }
                 }
@@ -1239,11 +1239,11 @@ final class BattleScreen {
               } else {
                 var8 = 0;
                 if (ConditionalTextValue.field_f) {
-                  IntrusiveNodeHashTable.field_f = MouseStateHelpers.field_d[128 + (this.field_V.field_x[this.field_I] + 12)] + LoadingTracker.field_i;
-                  if (8 == this.field_V.field_x[this.field_I]) {
+                  IntrusiveNodeHashTable.field_f = MouseStateHelpers.field_d[128 + (this.field_V.playerSpellbook[this.field_I] + 12)] + LoadingTracker.field_i;
+                  if (8 == this.field_V.playerSpellbook[this.field_I]) {
                     IntrusiveNodeHashTable.field_f = MouseStateHelpers.field_d[156] + LoadingTracker.field_i;
                   }
-                  if (this.field_V.field_x[this.field_I] == 9) {
+                  if (this.field_V.playerSpellbook[this.field_I] == 9) {
                     IntrusiveNodeHashTable.field_f = MouseStateHelpers.field_d[157] + LoadingTracker.field_i;
                   }
                 }
@@ -1279,13 +1279,13 @@ final class BattleScreen {
             }
             SoftwareRasterizer.resetClip();
             if (var8 == 0) {
-              WhirlpoolHasher.field_o[this.field_V.field_x[this.field_I] + 1].drawHalfSize(var6 - 32, var7Lifetime1 - 48);
+              WhirlpoolHasher.field_o[this.field_V.playerSpellbook[this.field_I] + 1].drawHalfSize(var6 - 32, var7Lifetime1 - 48);
             } else {
-              WhirlpoolHasher.field_o[this.field_V.field_x[this.field_I] + 1].drawHalfSize(-32 + var6, -48 + (var7Lifetime1 - (int)(4.0 * Math.sin((double)SpriteState.field_v * 0.5) + 4.0)));
+              WhirlpoolHasher.field_o[this.field_V.playerSpellbook[this.field_I] + 1].drawHalfSize(-32 + var6, -48 + (var7Lifetime1 - (int)(4.0 * Math.sin((double)SpriteState.field_v * 0.5) + 4.0)));
             }
             if (!(this.field_V.field_X[this.field_I] <= 0)) {
               var9 = this.field_V.field_X[this.field_I] / 20;
-              if (this.field_V.field_x[this.field_I] == 4) {
+              if (this.field_V.playerSpellbook[this.field_I] == 4) {
                 var9 = this.field_V.field_X[this.field_I] % 5;
                 if (0 == var9 &&
                   0 < this.field_V.field_X[this.field_I]) {
@@ -1416,12 +1416,12 @@ final class BattleScreen {
               if (var6_ref_ml.getDisplayedHealth(-20357) > var3_int) {
                 var3_int = var6_ref_ml.getDisplayedHealth(-20357);
               }
-              if (var4 < SpellProjectile.field_B.textWidth(this.field_V.field_k[var5])) {
-                var4 = SpellProjectile.field_B.textWidth(this.field_V.field_k[var5]);
+              if (var4 < SpellProjectile.field_B.textWidth(this.field_V.playerNames[var5])) {
+                var4 = SpellProjectile.field_B.textWidth(this.field_V.playerNames[var5]);
               }
             }
           }
-          if (!this.field_V.field_d) {
+          if (!this.field_V.teamMode) {
             for (var5Lifetime1 = 0; var5Lifetime1 < this.field_V.getPlayerCount(0); var5Lifetime1++) {
               param0 = this.drawPlayerSummary(param0, var4, var5Lifetime1, param1 - 4);
             }
@@ -1498,14 +1498,14 @@ final class BattleScreen {
             }
             var2_int = stackIn_7_0[stackIn_8_1];
             this.field_K = 4;
-            var3 = this.field_V.field_y >> this.field_K;
-            var4 = this.field_V.field_H >> this.field_K;
+            var3 = this.field_V.arenaWidth >> this.field_K;
+            var4 = this.field_V.arenaHeight >> this.field_K;
             var5 = EmailLoginCredentials.field_j;
             if (EmailLoginCredentials.field_f > 8 + (var3 + 640)) {
               if (640 + 2 * var3 + 8 <= EmailLoginCredentials.field_f) {
                 this.field_K = 3;
-                var3 = this.field_V.field_y >> this.field_K;
-                var4 = this.field_V.field_H >> this.field_K;
+                var3 = this.field_V.arenaWidth >> this.field_K;
+                var4 = this.field_V.arenaHeight >> this.field_K;
               }
             } else {
               var5 = IntKeyLookup.field_g.field_nb;
@@ -1574,7 +1574,7 @@ final class BattleScreen {
                     var14 = var9Lifetime1.getOwnerId(param0 ^ 17579);
                     var11[var14] = -var6 + EmailLoginCredentials.field_f - var3 + (var9Lifetime1.getX(-85) >> this.field_K);
                     var12[var14] = -var6 - var4 + (var5 - 8);
-                    var13[var14] = SpellProjectile.field_B.textWidth(this.field_V.field_k[var14]);
+                    var13[var14] = SpellProjectile.field_B.textWidth(this.field_V.playerNames[var14]);
                     for (var15_int = 0; var15_int < var14; var15_int++) {
                       if (var21[var15_int] != 0 &&
                         Math.abs(var22[var15_int] - var22[var14]) < 4 + (var23[var14] + var23[var15_int]) / 2 &&
@@ -1609,7 +1609,7 @@ final class BattleScreen {
                     var2_intLifetime1Lifetime1 = 0;
                     var14Lifetime2 = var9Lifetime1Lifetime2.getOwnerId(17571);
                     var2_intLifetime1Lifetime1 = NameCheckHelpers.field_n[var14Lifetime2];
-                    var15 = this.field_V.field_k[var14Lifetime2];
+                    var15 = this.field_V.playerNames[var14Lifetime2];
                     SpellProjectile.field_B.drawCentered(var15, var22[var14Lifetime2], var21[var14Lifetime2] - 1, (var2_intLifetime1Lifetime1 | 8421504) ^ 8421504, 0);
                     SpellProjectile.field_B.drawCentered(var15, -1 + var22[var14Lifetime2], var21[var14Lifetime2], 8421504 ^ (8421504 | var2_intLifetime1Lifetime1), 0);
                     SpellProjectile.field_B.drawCentered(var15, var22[var14Lifetime2], var21[var14Lifetime2], var2_intLifetime1Lifetime1, -1);
@@ -1745,7 +1745,7 @@ final class BattleScreen {
                 stackIn_152_0 = (this.field_V.canStandAt(this.field_s, var6, -16, this.field_r)) ? 65280 : 16711680;
                 var10Lifetime2 = stackIn_152_0;
                 GameSelectionHelpers.field_m.makeRasterTarget(true);
-                SoftwareRasterizer.setClip(-param1 + (EmailLoginCredentials.field_f >> 1), (var4_int >> 1) - param2, (EmailLoginCredentials.field_f >> 1) + (-param1 + this.field_V.field_y), this.field_V.field_H - param2 + (var4_int >> 1));
+                SoftwareRasterizer.setClip(-param1 + (EmailLoginCredentials.field_f >> 1), (var4_int >> 1) - param2, (EmailLoginCredentials.field_f >> 1) + (-param1 + this.field_V.arenaWidth), this.field_V.arenaHeight - param2 + (var4_int >> 1));
                 SoftwareRasterizer.resetClip();
                 var11_int = -param1 + (this.field_s + (EmailLoginCredentials.field_f >> 1));
                 var12 = -param2 + (this.field_r + ((var4_int >> 1) - (var9_intLifetime1 >> 1)));
@@ -1759,13 +1759,13 @@ final class BattleScreen {
               }
               if (DropdownList.field_N == 150) {
                 var9_intLifetime2 = var6.getSize(-8323);
-                stackIn_25_0 = (this.field_V.canPlaceUnitAt(this.field_s, this.field_V.field_H - 16, (byte) -75, var6)) ? 65280 : 16711680;
+                stackIn_25_0 = (this.field_V.canPlaceUnitAt(this.field_s, this.field_V.arenaHeight - 16, (byte) -75, var6)) ? 65280 : 16711680;
                 var10Lifetime3 = stackIn_25_0;
                 GameSelectionHelpers.field_m.makeRasterTarget(true);
-                SoftwareRasterizer.setClip((EmailLoginCredentials.field_f >> 1) - param1, (var4_int >> 1) - param2, this.field_V.field_y - param1 + (EmailLoginCredentials.field_f >> 1), (var4_int >> 1) + (this.field_V.field_H - param2));
+                SoftwareRasterizer.setClip((EmailLoginCredentials.field_f >> 1) - param1, (var4_int >> 1) - param2, this.field_V.arenaWidth - param1 + (EmailLoginCredentials.field_f >> 1), (var4_int >> 1) + (this.field_V.arenaHeight - param2));
                 SoftwareRasterizer.resetClip();
                 var11_intLifetime1 = (EmailLoginCredentials.field_f >> 1) + (this.field_s - param1);
-                var12Lifetime1 = (var4_int >> 1) - param2 + this.field_V.field_H + (-16 - (var9_intLifetime2 >> 1));
+                var12Lifetime1 = (var4_int >> 1) - param2 + this.field_V.arenaHeight + (-16 - (var9_intLifetime2 >> 1));
                 SoftwareRasterizer.fillCircleAlpha(var11_intLifetime1, var12Lifetime1, var9_intLifetime2 >> 1, var10Lifetime3, 128);
                 QuickChatPhraseCache.fillCircleMasked(var9_intLifetime2 >> 1, (byte) 78, 3 * Math.abs(-16 + (this.field_P & 31)) + 128, var11_intLifetime1, var12Lifetime1);
                 if (this.field_V.isTurnFinished((byte) 89)) {
@@ -1919,7 +1919,7 @@ final class BattleScreen {
                 stackIn_144_0 = (this.field_V.isUnitInRange(false, var6, DropdownList.field_N, this.field_r, this.field_s)) ? 65280 : 16711680;
                 var10Lifetime5 = stackIn_144_0;
                 GameSelectionHelpers.field_m.makeRasterTarget(true);
-                SoftwareRasterizer.setClip(-param1 + (EmailLoginCredentials.field_f >> 1), -param2 + (var4_int >> 1), (EmailLoginCredentials.field_f >> 1) + (-param1 + this.field_V.field_y), (var4_int >> 1) + (-param2 + this.field_V.field_H));
+                SoftwareRasterizer.setClip(-param1 + (EmailLoginCredentials.field_f >> 1), -param2 + (var4_int >> 1), (EmailLoginCredentials.field_f >> 1) + (-param1 + this.field_V.arenaWidth), (var4_int >> 1) + (-param2 + this.field_V.arenaHeight));
                 var11_intLifetime3 = -param1 + (var7Lifetime1 + (EmailLoginCredentials.field_f >> 1));
                 var12Lifetime3 = (var4_int >> 1) + var8Lifetime1 + (-param2 - (var9_intLifetime4 >> 1));
                 QuickChatPhraseCache.fillCircleMasked((var9_intLifetime4 >> 1) + 128, (byte) 88, -(128 + Math.abs(-16 + (31 & this.field_P)) * 3), var11_intLifetime3, var12Lifetime3);
@@ -2166,13 +2166,13 @@ final class BattleScreen {
           }
           if (!this.field_V.isAnimating(true)) {
             if (var9 <= 0) {
-              param1.field_E = -1;
+              param1.facing = -1;
             } else {
-              param1.field_E = 1;
+              param1.facing = 1;
             }
             if (DropdownList.field_N == 155 &&
               Math.abs(var9) < Math.abs(var10)) {
-              var9 = param1.field_E * 64;
+              var9 = param1.facing * 64;
               var10 = (var10 < 0) ? -64 : 64;
               var11 = (int)Math.sqrt((double)(var9 * var9 + var10 * var10));
               if (var11 == 0) {
@@ -2284,17 +2284,17 @@ final class BattleScreen {
             var3 = 16711680;
           }
           SoftwareRasterizer.fillRectangleAlpha((EmailLoginCredentials.field_f >> 1) - IntrusiveDeque.field_c - 8, (var2_int >> 1) + (-CameraFollowTarget.field_g - 8), 8, 8, var3, 64);
-          SoftwareRasterizer.fillRectangleAlpha(-IntrusiveDeque.field_c - (-(EmailLoginCredentials.field_f >> 1) - this.field_V.field_y), -8 + (-CameraFollowTarget.field_g + (var2_int >> 1)), 8, 8, var3, 64);
-          SoftwareRasterizer.setClip(-IntrusiveDeque.field_c + (EmailLoginCredentials.field_f >> 1), -8 + (var2_int >> 1) + (-CameraFollowTarget.field_g + param0), this.field_V.field_y + (-IntrusiveDeque.field_c + (EmailLoginCredentials.field_f >> 1)), EmailLoginCredentials.field_j);
-          for (var4 = ((255 & SpriteState.field_v) >> 2) - 64; 8 + this.field_V.field_y >= var4; var4 += 64) {
+          SoftwareRasterizer.fillRectangleAlpha(-IntrusiveDeque.field_c - (-(EmailLoginCredentials.field_f >> 1) - this.field_V.arenaWidth), -8 + (-CameraFollowTarget.field_g + (var2_int >> 1)), 8, 8, var3, 64);
+          SoftwareRasterizer.setClip(-IntrusiveDeque.field_c + (EmailLoginCredentials.field_f >> 1), -8 + (var2_int >> 1) + (-CameraFollowTarget.field_g + param0), this.field_V.arenaWidth + (-IntrusiveDeque.field_c + (EmailLoginCredentials.field_f >> 1)), EmailLoginCredentials.field_j);
+          for (var4 = ((255 & SpriteState.field_v) >> 2) - 64; 8 + this.field_V.arenaWidth >= var4; var4 += 64) {
             SoftwareRasterizer.fillRectangleAlpha((EmailLoginCredentials.field_f >> 1) + (-IntrusiveDeque.field_c + var4), (var2_int >> 1) + (0 - CameraFollowTarget.field_g) - 8, 32, 8, var3, 64);
           }
-          SoftwareRasterizer.setClip(-IntrusiveDeque.field_c + (EmailLoginCredentials.field_f >> 1) - 8, (var2_int >> 1) + 0 - CameraFollowTarget.field_g, (EmailLoginCredentials.field_f >> 1) + (-IntrusiveDeque.field_c + this.field_V.field_y) + 8, EmailLoginCredentials.field_j);
-          for (var4Lifetime1 = -64 - ((SpriteState.field_v & 255) >> 2); var4Lifetime1 <= this.field_V.field_H; var4Lifetime1 += 64) {
+          SoftwareRasterizer.setClip(-IntrusiveDeque.field_c + (EmailLoginCredentials.field_f >> 1) - 8, (var2_int >> 1) + 0 - CameraFollowTarget.field_g, (EmailLoginCredentials.field_f >> 1) + (-IntrusiveDeque.field_c + this.field_V.arenaWidth) + 8, EmailLoginCredentials.field_j);
+          for (var4Lifetime1 = -64 - ((SpriteState.field_v & 255) >> 2); var4Lifetime1 <= this.field_V.arenaHeight; var4Lifetime1 += 64) {
             SoftwareRasterizer.fillRectangleAlpha(-8 + (-IntrusiveDeque.field_c + 0) + (EmailLoginCredentials.field_f >> 1), var4Lifetime1 - (CameraFollowTarget.field_g - ((var2_int >> 1) - 4)), 8, 32, var3, 64);
           }
-          for (var4Lifetime2 = -64 + (SpriteState.field_v >> 2 & 63); var4Lifetime2 <= this.field_V.field_H; var4Lifetime2 += 64) {
-            SoftwareRasterizer.fillRectangleAlpha((EmailLoginCredentials.field_f >> 1) + (this.field_V.field_y - IntrusiveDeque.field_c), -4 + ((var2_int >> 1) + (var4Lifetime2 - CameraFollowTarget.field_g)), 8, 32, var3, 64);
+          for (var4Lifetime2 = -64 + (SpriteState.field_v >> 2 & 63); var4Lifetime2 <= this.field_V.arenaHeight; var4Lifetime2 += 64) {
+            SoftwareRasterizer.fillRectangleAlpha((EmailLoginCredentials.field_f >> 1) + (this.field_V.arenaWidth - IntrusiveDeque.field_c), -4 + ((var2_int >> 1) + (var4Lifetime2 - CameraFollowTarget.field_g)), 8, 32, var3, 64);
           }
           SoftwareRasterizer.resetClip();
           return;
@@ -2373,8 +2373,8 @@ final class BattleScreen {
           if (this.field_k) {
             this.field_k = false;
             this.field_V.copyFrom((byte) 112, this.field_w);
-            this.field_V.field_rb = FullscreenFocusCanvas.field_g;
-            this.field_V.field_sb = CredentialParseHelpers.field_h;
+            this.field_V.unitSamples = FullscreenFocusCanvas.field_g;
+            this.field_V.projectileSamples = CredentialParseHelpers.field_h;
             this.field_C = true;
             this.field_bb = this.field_V.getCurrentPlayer(false);
             var5 = this.field_V.getUnitByOwner(this.field_V.getCurrentPlayer(false), true);
@@ -2511,7 +2511,7 @@ final class BattleScreen {
           var7Lifetime1 = IntKeyLookup.field_g.field_nb;
           var8 = this.field_V.getTerrainOffset(true);
           var6 = -(param3 + 240) * (-EmailLoginCredentials.field_j + 960) / 1440;
-          var5_intLifetime1 = (EmailLoginCredentials.field_f - 1280) * (var8 + param0) / (2 * var8 + this.field_V.field_y);
+          var5_intLifetime1 = (EmailLoginCredentials.field_f - 1280) * (var8 + param0) / (2 * var8 + this.field_V.arenaWidth);
           if (var6 > 0) {
             var6 = 0;
           }
@@ -2536,7 +2536,7 @@ final class BattleScreen {
             }
             var10 += 22;
             var10 = (int)((double)var10 + (8.0 * Math.sin(3.141592653589793 * (double)BattleAction.field_r / 64.0) + 32.0));
-            SoftwareRasterizer.drawVerticalLine(var9, -var10 + this.field_V.field_H + (-param3 + (var7Lifetime1 >> 1)), var10, (16449 | param2) >> 1);
+            SoftwareRasterizer.drawVerticalLine(var9, -var10 + this.field_V.arenaHeight + (-param3 + (var7Lifetime1 >> 1)), var10, (16449 | param2) >> 1);
           }
           for (var9Lifetime1 = 0; EmailLoginCredentials.field_f > var9Lifetime1; var9Lifetime1++) {
             var10Lifetime1 = (int)Math.abs(Math.cos((double)(BattleAction.field_r + (var9Lifetime1 + param0)) * 3.141592653589793 / 64.0) * 14.0);
@@ -2550,7 +2550,7 @@ final class BattleScreen {
             }
             var10Lifetime1 += 20;
             var10Lifetime1 = (int)((double)var10Lifetime1 + (8.0 * Math.sin((double)BattleAction.field_r * 3.141592653589793 / 64.0) + 32.0));
-            SoftwareRasterizer.drawVerticalLine(var9Lifetime1, -param3 + this.field_V.field_H - (-(var7Lifetime1 >> 1) + var10Lifetime1), var10Lifetime1, 16448 | param2 >> 1);
+            SoftwareRasterizer.drawVerticalLine(var9Lifetime1, -param3 + this.field_V.arenaHeight - (-(var7Lifetime1 >> 1) + var10Lifetime1), var10Lifetime1, 16448 | param2 >> 1);
           }
           if (param1 > -82) {
             this.field_V = (Battle) null;
@@ -2567,75 +2567,75 @@ final class BattleScreen {
             }
             var10Lifetime2 += 16;
             var10Lifetime2 = (int)((double)var10Lifetime2 + (Math.sin((double)BattleAction.field_r * 3.141592653589793 / 64.0) * 8.0 + 32.0));
-            SoftwareRasterizer.drawVerticalLineAlpha(var9Lifetime2, -var10Lifetime2 + (-param3 + this.field_V.field_H + (var7Lifetime1 >> 1)), var10Lifetime2, param2 | 16448, 128);
+            SoftwareRasterizer.drawVerticalLineAlpha(var9Lifetime2, -var10Lifetime2 + (-param3 + this.field_V.arenaHeight + (var7Lifetime1 >> 1)), var10Lifetime2, param2 | 16448, 128);
           }
           if (ThreeButtonPanel.hasMembership(true) &&
             this.field_T) {
-            this.field_V.getTerrainMask((byte) 69).drawScaled((EmailLoginCredentials.field_f >> 1) - param0, -param3 + (var7Lifetime1 >> 1), this.field_V.field_y, this.field_V.field_H);
+            this.field_V.getTerrainMask((byte) 69).drawScaled((EmailLoginCredentials.field_f >> 1) - param0, -param3 + (var7Lifetime1 >> 1), this.field_V.arenaWidth, this.field_V.arenaHeight);
           } else {
-            var9_ref_int__ = this.field_V.field_V.field_l;
+            var9_ref_int__ = this.field_V.terrainSprite.field_l;
             if (null != this.field_V.field_pb) {
-              this.field_V.field_V.field_l = this.field_V.field_pb;
+              this.field_V.terrainSprite.field_l = this.field_V.field_pb;
             }
-            this.field_V.field_V.draw((EmailLoginCredentials.field_f >> 1) - param0, -param3 + (var7Lifetime1 >> 1));
-            this.field_V.field_V.field_l = var9_ref_int__;
+            this.field_V.terrainSprite.draw((EmailLoginCredentials.field_f >> 1) - param0, -param3 + (var7Lifetime1 >> 1));
+            this.field_V.terrainSprite.field_l = var9_ref_int__;
           }
-          if (null != this.field_V.field_V) {
+          if (null != this.field_V.terrainSprite) {
             var9Lifetime3 = 0;
             var10Lifetime3 = 0;
             var11 = this.field_V.getTerrainMask((byte) 69);
             LoadingProgressDialog.field_tb = LoadingProgressDialog.field_tb + 1;
-            if (-1 + this.field_V.field_y <= LoadingProgressDialog.field_tb) {
+            if (-1 + this.field_V.arenaWidth <= LoadingProgressDialog.field_tb) {
               LoadingProgressDialog.field_tb = 0;
             }
             var12 = LoadingProgressDialog.field_tb - 2 * (1 & LoadingProgressDialog.field_tb) + 1;
             if (var12 < 0) {
               var12 = 0;
             }
-            if (var12 >= -1 + this.field_V.field_y) {
-              var12 = this.field_V.field_y - 1;
+            if (var12 >= -1 + this.field_V.arenaWidth) {
+              var12 = this.field_V.arenaWidth - 1;
             }
             var10Lifetime3Lifetime1 = (LoadingProgressDialog.field_tb >> 1) + this.field_V.field_hb;
             var13 = 2 * (LoadingProgressDialog.field_tb & 1) - 1;
-            var9Lifetime3Lifetime1 = LoadingProgressDialog.field_tb + 2 * this.field_V.field_y;
-            for (var14 = 2; var14 < this.field_V.field_H - 2; var14 += 2) {
+            var9Lifetime3Lifetime1 = LoadingProgressDialog.field_tb + 2 * this.field_V.arenaWidth;
+            for (var14 = 2; var14 < this.field_V.arenaHeight - 2; var14 += 2) {
               if (var11.field_m[var10Lifetime3Lifetime1] != 0) {
-                if (this.field_V.field_V.field_m[var9Lifetime3Lifetime1] == 0 &&
+                if (this.field_V.terrainSprite.field_m[var9Lifetime3Lifetime1] == 0 &&
                   var11.field_m[var10Lifetime3Lifetime1 + var13] != 0 &&
                   var11.field_m[-this.field_V.field_hb + var10Lifetime3Lifetime1] != 0 &&
                   var11.field_m[var10Lifetime3Lifetime1] != -1) {
-                  this.field_V.field_V.field_m[var9Lifetime3Lifetime1] = var11.field_m[var10Lifetime3Lifetime1];
+                  this.field_V.terrainSprite.field_m[var9Lifetime3Lifetime1] = var11.field_m[var10Lifetime3Lifetime1];
                 }
               } else {
                 if (var11.field_m[var10Lifetime3Lifetime1 + var13] == 0 &&
                   var11.field_m[var10Lifetime3Lifetime1 - this.field_V.field_hb] == 0) {
-                  this.field_V.field_V.field_m[var9Lifetime3Lifetime1] = (byte) 0;
+                  this.field_V.terrainSprite.field_m[var9Lifetime3Lifetime1] = (byte) 0;
                 }
               }
               boolean decompiledFrameRemainder0 = true;
-              var9Lifetime3Lifetime1 = var9Lifetime3Lifetime1 + this.field_V.field_y;
+              var9Lifetime3Lifetime1 = var9Lifetime3Lifetime1 + this.field_V.arenaWidth;
               if (var11.field_m[var10Lifetime3Lifetime1] != 0) {
-                if (this.field_V.field_V.field_m[var9Lifetime3Lifetime1] == 0 &&
+                if (this.field_V.terrainSprite.field_m[var9Lifetime3Lifetime1] == 0 &&
                   var11.field_m[var10Lifetime3Lifetime1 + var13] != 0 &&
                   var11.field_m[var10Lifetime3Lifetime1 + this.field_V.field_hb] != 0 &&
                   var11.field_m[var10Lifetime3Lifetime1] != -1) {
-                  this.field_V.field_V.field_m[var9Lifetime3Lifetime1] = var11.field_m[var10Lifetime3Lifetime1];
+                  this.field_V.terrainSprite.field_m[var9Lifetime3Lifetime1] = var11.field_m[var10Lifetime3Lifetime1];
                 }
               } else {
                 if (0 == var11.field_m[var10Lifetime3Lifetime1 + var13]) {
                   if (var11.field_m[this.field_V.field_hb + var10Lifetime3Lifetime1] != 0) {
                     var10Lifetime3Lifetime1 = var10Lifetime3Lifetime1 + this.field_V.field_hb;
-                    var9Lifetime3Lifetime1 = var9Lifetime3Lifetime1 + this.field_V.field_y;
+                    var9Lifetime3Lifetime1 = var9Lifetime3Lifetime1 + this.field_V.arenaWidth;
                     decompiledFrameRemainder0 = false;
                   }
                   else {
-                    this.field_V.field_V.field_m[var9Lifetime3Lifetime1] = (byte) 0;
+                    this.field_V.terrainSprite.field_m[var9Lifetime3Lifetime1] = (byte) 0;
                   }
                 }
               }
               if (decompiledFrameRemainder0) {
                 var10Lifetime3Lifetime1 = var10Lifetime3Lifetime1 + this.field_V.field_hb;
-                var9Lifetime3Lifetime1 = var9Lifetime3Lifetime1 + this.field_V.field_y;
+                var9Lifetime3Lifetime1 = var9Lifetime3Lifetime1 + this.field_V.arenaWidth;
               }
             }
             return;
@@ -2880,8 +2880,8 @@ final class BattleScreen {
             !this.field_V.hasPendingActions(-45) && (!SocketJs5Transport.field_r &&
             !LoginStackHelpers.hasOpenOverlay((byte) 110) ||
             !this.field_ab)) {
-            var5 = this.field_V.field_y >> this.field_K;
-            var6 = this.field_V.field_H >> this.field_K;
+            var5 = this.field_V.arenaWidth >> this.field_K;
+            var6 = this.field_V.arenaHeight >> this.field_K;
             var7 = EmailLoginCredentials.field_j;
             if (var5 + 648 > EmailLoginCredentials.field_f) {
               var7 = var2_int;
@@ -2908,7 +2908,7 @@ final class BattleScreen {
           }
           boolean decompiledFrameRemainder1 = true;
           boolean decompiledFrameRemainder0 = true;
-          var6Lifetime1 = 64 - var2_int / 2 + this.field_V.field_H;
+          var6Lifetime1 = 64 - var2_int / 2 + this.field_V.arenaHeight;
           this.scrollCameraToSide(var6Lifetime1, var5Lifetime1, true);
           if ((this.field_V.getCurrentPlayer(false) == this.field_I &&
             !(this.field_z <= 1) || !this.field_ab) && (!this.field_V.isAnimating(true))) {
@@ -2959,7 +2959,7 @@ final class BattleScreen {
             !ClientRuntimeException.hasMenuPage(-113) ||
             WhirlpoolHasher.field_k == 6)) {
             var5 = 16777215;
-            var8 = this.field_V.field_k[param2];
+            var8 = this.field_V.playerNames[param2];
             var6 = var8;
             if ((1 << param2 & this.field_J) > 0) {
               if ((1 << param2 & this.field_a) > 0) {
@@ -3027,16 +3027,16 @@ final class BattleScreen {
           }
           if (!this.field_V.isAnimating(true)) {
             if (var9 > 0) {
-              param2.field_E = 1;
+              param2.facing = 1;
             } else {
-              param2.field_E = -1;
+              param2.facing = -1;
             }
             if ((DropdownList.field_N == 127 ||
               DropdownList.field_N == 128 ||
               DropdownList.field_N == 129 ||
               DropdownList.field_N == 136) &&
               Math.abs(var9) < Math.abs(var10)) {
-              var9 = 64 * param2.field_E;
+              var9 = 64 * param2.facing;
               var10 = (var10 >= 0) ? 64 : -64;
               var11 = (int)Math.sqrt((double)(var9 * var9 + var10 * var10));
               if (0 == var11) {
@@ -3188,7 +3188,7 @@ final class BattleScreen {
                 this.field_I >= 0 &&
                 var5 != 0 &&
                 this.field_i) {
-                if (!this.field_V.field_d) {
+                if (!this.field_V.teamMode) {
                   stackIn_66_0 = (this.field_I != var4) ? 0 : 1;
                   var6 = stackIn_66_0;
                 } else {
@@ -3296,7 +3296,7 @@ final class BattleScreen {
           }
           var4Lifetime1 = IntKeyLookup.field_g.field_nb;
           var5Lifetime1 = -var4Lifetime1 / 2;
-          var6Lifetime1 = this.field_V.field_H - var4Lifetime1 / 2 + 64;
+          var6Lifetime1 = this.field_V.arenaHeight - var4Lifetime1 / 2 + 64;
           this.scrollCameraToSide(var6Lifetime1, var5Lifetime1, param0);
           if (param1) {
             this.handleBattleInput(0);
@@ -3684,13 +3684,13 @@ final class BattleScreen {
             37 != var6.getType(-22625)) {
             var7_ref_ml = this.field_V.getUnitByOwner(this.field_V.getCurrentPlayer(false), true);
             if (var7_ref_ml != null &&
-              var7_ref_ml.getY((byte) -32) > this.field_V.field_H) {
+              var7_ref_ml.getY((byte) -32) > this.field_V.arenaHeight) {
               var6 = this.getSelectedUnit(10781);
             }
           }
           if (var6 != null &&
             null != var6.getLinkedUnit(24501)) {
-            if (!this.field_V.field_d) {
+            if (!this.field_V.teamMode) {
               if (var6.getTeam(false) != this.field_V.getCurrentPlayer(false)) {
                 var6 = this.getSelectedUnit(10781);
               }
@@ -3721,7 +3721,7 @@ final class BattleScreen {
           var7 = stackIn_60_0;
           if (var6 != null) {
             boolean decompiledFrameRemainder3 = true;
-            if (var6.getY((byte) 121) >= 128 + this.field_V.field_H) {
+            if (var6.getY((byte) 121) >= 128 + this.field_V.arenaHeight) {
               if (var6.getDisplayedHealth(param1 ^ -20367) > 0 &&
                 null == var6.getLinkedUnit(24501)) {
                 if ((!(this.field_ab)) &&
@@ -3850,7 +3850,7 @@ final class BattleScreen {
               }
               if (EffectVolumeHelpers.field_g == -4) {
                 var8Lifetime1 = 100;
-                if (this.field_V.field_x[this.field_I] == 4) {
+                if (this.field_V.playerSpellbook[this.field_I] == 4) {
                   var8Lifetime1 = this.field_V.field_X[this.field_I] / 5 * 5 + 5;
                   if (this.field_V.field_X[this.field_I] > 0 &&
                     var8Lifetime1 == this.field_V.field_X[this.field_I] + 5) {
@@ -4335,9 +4335,9 @@ final class BattleScreen {
           }
           if (!this.field_V.isAnimating(true)) {
             if (0 < var9) {
-              param1.field_E = 1;
+              param1.facing = 1;
             } else {
-              param1.field_E = -1;
+              param1.facing = -1;
             }
             if ((DropdownList.field_N == 127 ||
               DropdownList.field_N == 128 ||
@@ -4345,7 +4345,7 @@ final class BattleScreen {
               DropdownList.field_N == 136 ||
               155 == DropdownList.field_N) &&
               Math.abs(var9) < Math.abs(var10)) {
-              var9 = param1.field_E * 64;
+              var9 = param1.facing * 64;
               var10 = (0 > var10) ? -64 : 64;
               var11 = (int)Math.sqrt((double)(var9 * var9 + var10 * var10));
               if (var11 == 0) {
@@ -4552,7 +4552,7 @@ final class BattleScreen {
             return (BattleUnit) (stackIn_6_0);
           }
           var5 = 0;
-          if (var8.getY((byte) 127) >= this.field_V.field_H) {
+          if (var8.getY((byte) 127) >= this.field_V.arenaHeight) {
             var5 = 1;
           }
           var6 = var8;
@@ -4569,7 +4569,7 @@ final class BattleScreen {
                 37 != var10.getType(-22625)) {
                 continue;
               }
-              if (this.field_V.field_d) {
+              if (this.field_V.teamMode) {
                 if (var10 == null ||
                   ~var10.getOwnerId(17571) != ~this.field_V.getCurrentPlayer(false)) {
                   if (var10.getLinkedUnit(24501) == null) {
@@ -4835,10 +4835,10 @@ final class BattleScreen {
           this.field_I = param5;
           var15_int = param12;
           this.field_V = new Battle(false, false, param1, param2, param3, param4, param9, param10, param6, param7, param8, var15_int, param13);
-          this.field_V.field_H = 960;
-          this.field_V.field_y = 1920;
-          this.field_V.field_Hb = this.field_V.field_H >> 1;
-          this.field_V.field_hb = this.field_V.field_y >> 1;
+          this.field_V.arenaHeight = 960;
+          this.field_V.arenaWidth = 1920;
+          this.field_V.field_Hb = this.field_V.arenaHeight >> 1;
+          this.field_V.field_hb = this.field_V.arenaWidth >> 1;
           this.field_V.regenerateTerrain(88);
           this.field_V.renderTerrainSprite(true);
           BattleStartHelpers.startBattleScreen((byte) -117, this);
@@ -4850,8 +4850,8 @@ final class BattleScreen {
           if (!this.field_ab) {
             BufferedSocket.setActiveBattleScreen(this, true);
             UiContainer.selectMenuPage((byte) 83, 0);
-            this.field_V.field_sb = CredentialParseHelpers.field_h;
-            this.field_V.field_rb = FullscreenFocusCanvas.field_g;
+            this.field_V.projectileSamples = CredentialParseHelpers.field_h;
+            this.field_V.unitSamples = FullscreenFocusCanvas.field_g;
           } else {
             CachedArchiveProvider.clearBattleReferences(63);
             this.field_w = new Battle(false, false, param1, param2, param3, param4, param9, param10, param6, param7, param8, var15_int, param13);

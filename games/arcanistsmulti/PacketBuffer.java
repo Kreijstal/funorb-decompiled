@@ -307,7 +307,7 @@ class PacketBuffer extends IntrusiveNode {
           var2 = 0;
           var3 = (BattleUnit) (var1.first(12623));
           while (var3 != null) {
-            if (var3.field_jb == 11) {
+            if (var3.unitType == 11) {
               var2++;
             }
             var3 = (BattleUnit) (var1.next(0));

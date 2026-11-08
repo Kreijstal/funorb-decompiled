@@ -2,140 +2,140 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SpellProjectile extends DualLinkNode {
-    int field_v;
-    int field_F;
+    int x;
+    int velocityY;
     static SceneWidget field_A;
-    private PcmSampleStream field_D;
-    int field_z;
-    private int field_n;
-    private int field_J;
-    int field_I;
+    private PcmSampleStream flightSoundStream;
+    int subpixelY;
+    private int damageSourceId;
+    private int flightSoundTicks;
+    int spellType;
     static BinaryBitmapFont field_B;
-    private Battle field_q;
+    private Battle battle;
     private int field_x;
-    BattleUnit field_t;
-    int field_o;
+    BattleUnit owner;
+    int subpixelX;
     int field_H;
     boolean field_w;
-    private IsaacRandom field_C;
-    int field_y;
-    private Sprite field_p;
+    private IsaacRandom random;
+    int ageTicks;
+    private Sprite sprite;
     static Sprite field_E;
     static String field_s;
-    int field_u;
-    int field_G;
-    private int field_r;
+    int velocityX;
+    int y;
+    private int spriteRadius;
     static SceneWidget field_m;
 
-    final boolean canCollide(int param0) {
+    final boolean canCollide(int obfuscationGuard) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
           if (!this.isAlive(-139)) {
             return false;
           }
-          if (this.field_I == 74 &&
-            this.field_y > 10) {
+          if (this.spellType == 74 &&
+            this.ageTicks > 10) {
             return false;
           }
-          if (this.field_I == 84 &&
-            this.field_y > 10) {
+          if (this.spellType == 84 &&
+            this.ageTicks > 10) {
             return false;
           }
-          if (this.field_I == 81 &&
-            this.field_y > 10) {
+          if (this.spellType == 81 &&
+            this.ageTicks > 10) {
             return false;
           }
-          if (this.field_I == 75 &&
-            10 < this.field_y) {
+          if (this.spellType == 75 &&
+            10 < this.ageTicks) {
             return false;
           }
-          if (73 == this.field_I &&
-            this.field_y > 10) {
+          if (73 == this.spellType &&
+            this.ageTicks > 10) {
             return false;
           }
-          if (this.field_I == 97 &&
-            this.field_y > 10) {
+          if (this.spellType == 97 &&
+            this.ageTicks > 10) {
             return false;
           }
-          if (this.field_I == 113 &&
-            this.field_y > 10) {
+          if (this.spellType == 113 &&
+            this.ageTicks > 10) {
             return false;
           }
-          if (this.field_I == 71) {
+          if (this.spellType == 71) {
             return false;
           }
-          if (this.field_I == 47 &&
-            50 < this.field_y) {
+          if (this.spellType == 47 &&
+            50 < this.ageTicks) {
             return false;
           }
-          if (36 == this.field_I &&
-            50 < this.field_y) {
+          if (36 == this.spellType &&
+            50 < this.ageTicks) {
             return false;
           }
-          if (param0 != 6) {
+          if (obfuscationGuard != 6) {
             this.isAlive(-117);
           }
-          if (this.field_I == 19 &&
-            this.field_y > 50) {
+          if (this.spellType == 19 &&
+            this.ageTicks > 50) {
             return false;
           }
-          if (this.field_I == 153) {
+          if (this.spellType == 153) {
             return false;
           }
-          if (this.field_I == 136) {
+          if (this.spellType == 136) {
             return false;
           }
-          if (this.field_I == 141 &&
-            10 < this.field_y) {
+          if (this.spellType == 141 &&
+            10 < this.ageTicks) {
             return false;
           }
-          if (this.field_I == 142) {
+          if (this.spellType == 142) {
             return false;
           }
-          if (this.field_I == 144 &&
-            this.field_y > 10) {
+          if (this.spellType == 144 &&
+            this.ageTicks > 10) {
             return false;
           }
-          if (this.field_I == 125 &&
-            this.field_y > 10) {
+          if (this.spellType == 125 &&
+            this.ageTicks > 10) {
             return false;
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "mi.V(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "mi.V(" + obfuscationGuard + ')');
         }
     }
 
-    private final void playSound(int param0, boolean param1) {
+    private final void playSound(int soundId, boolean obfuscationGuard) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          if (!param1) {
+          if (!obfuscationGuard) {
             return;
           }
-          if (null != this.field_q.field_sb &&
-            this.field_q.field_sb[param0] != null) {
-            DropdownList.playSampleAtVolume((byte) -30, SceneWidgetNode.field_r[param0], this.field_q.field_sb[param0]);
+          if (null != this.battle.projectileSamples &&
+            this.battle.projectileSamples[soundId] != null) {
+            DropdownList.playSampleAtVolume((byte) -30, SceneWidgetNode.field_r[soundId], this.battle.projectileSamples[soundId]);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw CommonUiHelpers.wrapException((Throwable) ((Object) var3), "mi.J(" + param0 + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var3), "mi.J(" + soundId + ',' + obfuscationGuard + ')');
         }
     }
 
-    final int getX(int param0) {
+    final int getX(int obfuscationGuard) {
         RuntimeException var2 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 == 25) {
-            stackIn_4_0 = this.field_v;
+          if (obfuscationGuard == 25) {
+            stackIn_4_0 = this.x;
             return stackIn_4_0;
           }
           stackIn_2_0 = -95;
@@ -143,19 +143,19 @@ final class SpellProjectile extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "mi.T(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "mi.T(" + obfuscationGuard + ')');
         }
     }
 
-    final static void playMusic(MusicTrack param0, int param1) {
+    final static void playMusic(MusicTrack track, int obfuscationGuard) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          MusicAndClipHelpers.playMusicTrack(param0, true, (byte) -119);
-          if (param1 != 3) {
+          MusicAndClipHelpers.playMusicTrack(track, true, (byte) -119);
+          if (obfuscationGuard != 3) {
             SpellProjectile.isPointerInRect(-112, 22, 80, -24, 120);
           }
           return;
@@ -164,49 +164,49 @@ final class SpellProjectile extends DualLinkNode {
           runtimeException = decompiledCaughtException;
           stackIn_6_0 = runtimeException;
           stackIn_6_1 = new StringBuilder().append("mi.AA(");
-          if (param0 == null) {
+          if (track == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
-    final boolean isPersistentType(int param0) {
+    final boolean isPersistentType(int obfuscationGuard) {
         boolean stackIn_43_0 = false;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
         try {
-          var2_int = 40 / ((54 - param0) / 47);
-          stackIn_43_0 = (this.field_I == 105) || (this.field_I == 87) || (this.field_I == 88) || (90 == this.field_I) || (this.field_I == 100) || (this.field_I == 95) || (this.field_I == 114) || (this.field_I == 102) || (this.field_I == 109) || (this.field_I == 112) || (this.field_I == 129) || (132 == this.field_I) || (166 == this.field_I) || (this.field_I == 167);
+          var2_int = 40 / ((54 - obfuscationGuard) / 47);
+          stackIn_43_0 = (this.spellType == 105) || (this.spellType == 87) || (this.spellType == 88) || (90 == this.spellType) || (this.spellType == 100) || (this.spellType == 95) || (this.spellType == 114) || (this.spellType == 102) || (this.spellType == 109) || (this.spellType == 112) || (this.spellType == 129) || (132 == this.spellType) || (166 == this.spellType) || (this.spellType == 167);
           return stackIn_43_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "mi.BA(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "mi.BA(" + obfuscationGuard + ')');
         }
     }
 
-    final static boolean isPointerInRect(int param0, int param1, int param2, int param3, int param4) {
+    final static boolean isPointerInRect(int height, int y, int width, int obfuscationGuard, int x) {
         RuntimeException var5 = null;
         boolean stackIn_16_0 = false;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param3 != -8) {
+          if (obfuscationGuard != -8) {
             SpellProjectile.isPointerInRect(-116, -3, 107, 69, 64);
           }
-          stackIn_16_0 = (EmailLoginCredentials.field_g >= param4) && ((param4 + param2) > EmailLoginCredentials.field_g) && (param1 <= MenuButtonPanel.field_I) && ((param1 + param0) > MenuButtonPanel.field_I);
+          stackIn_16_0 = (EmailLoginCredentials.field_g >= x) && ((x + width) > EmailLoginCredentials.field_g) && (y <= MenuButtonPanel.field_I) && ((y + height) > MenuButtonPanel.field_I);
           return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw CommonUiHelpers.wrapException((Throwable) ((Object) var5), "mi.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var5), "mi.A(" + height + ',' + y + ',' + width + ',' + obfuscationGuard + ',' + x + ')');
         }
     }
 
-    private final void detonate(int param0, int param1, int param2, int param3) {
+    private final void detonate(int obfuscationGuard, int targetX, int targetY, int round) {
         int stackIn_958_0 = 0;
         int stackIn_1007_1 = 0;
         int stackIn_1293_0 = 0;
@@ -236,12 +236,12 @@ final class SpellProjectile extends DualLinkNode {
         int var19 = 0;
         var19 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          if (param0 != 6016) {
+          if (obfuscationGuard != 6016) {
             return;
           }
           regionExit1: {
             var5 = null;
-            var6 = this.field_I;
+            var6 = this.spellType;
             if (var6 == 84 &&
               var19 == 0) {
               break regionExit1;
@@ -266,74 +266,74 @@ final class SpellProjectile extends DualLinkNode {
                 if (var6 == 133 &&
                   var19 == 0) {
                   this.updateFlightSound(7, (byte) 34);
-                  if (this.field_G >= this.field_q.field_H) {
-                    if (96 == this.field_q.field_Y) {
-                      this.field_q.field_Y = -96;
+                  if (this.y >= this.battle.arenaHeight) {
+                    if (96 == this.battle.field_Y) {
+                      this.battle.field_Y = -96;
                     }
-                    this.field_G = this.field_q.field_H;
+                    this.y = this.battle.arenaHeight;
                     this.applyAreaEffect(this.field_H, this.field_H, this.field_H, 8);
-                    var6_ref_jd = new IsaacRandom(new int[]{this.field_q.field_Q, param3, this.field_v, this.field_G});
+                    var6_ref_jd = new IsaacRandom(new int[]{this.battle.randomSeed, round, this.x, this.y});
                     var7 = 0;
                     while (40 > var7) {
-                      var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 135, this.field_G, this.field_q);
+                      var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 135, this.y, this.battle);
                       var8 = 8191 & var6_ref_jd.nextInt((byte) -46);
-                      if (0 == this.field_u) {
-                        this.field_u = 1;
+                      if (0 == this.velocityX) {
+                        this.velocityX = 1;
                       }
-                      ((SpellProjectile) (var5)).field_u = this.field_u + Math.abs((127 & var6_ref_jd.nextInt((byte) -46)) * GradientBarPainter.sine(param0 - 5896, var8) >> 17) * this.field_u / Math.abs(this.field_u);
-                      ((SpellProjectile) (var5)).field_F = -Math.abs(this.field_F) - Math.abs((var6_ref_jd.nextInt((byte) -46) & 127) * BevelBoxPainter.cosine(var8, param0 - 6134) >> 17);
-                      this.field_q.onProjectileFinished(param0 ^ 6068, (SpellProjectile) (var5));
+                      ((SpellProjectile) (var5)).velocityX = this.velocityX + Math.abs((127 & var6_ref_jd.nextInt((byte) -46)) * GradientBarPainter.sine(obfuscationGuard - 5896, var8) >> 17) * this.velocityX / Math.abs(this.velocityX);
+                      ((SpellProjectile) (var5)).velocityY = -Math.abs(this.velocityY) - Math.abs((var6_ref_jd.nextInt((byte) -46) & 127) * BevelBoxPainter.cosine(var8, obfuscationGuard - 6134) >> 17);
+                      this.battle.onProjectileFinished(obfuscationGuard ^ 6068, (SpellProjectile) (var5));
                       var7++;
                     }
                     this.playTypeSound(1, (byte) 37, 7);
-                    var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 130, this.field_G, this.field_q);
-                    this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                    var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 130, this.y, this.battle);
+                    this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                     this.remove(0);
                     return;
                   }
-                  this.field_o = this.field_o + this.field_u;
-                  this.field_z = this.field_z + this.field_F;
-                  this.field_F = this.field_F + 4;
-                  this.field_G = this.field_z >> 4;
-                  this.field_v = this.field_o >> 4;
-                  if (null != this.field_t &&
-                    this.field_y < 25) {
-                    this.field_q.eraseUnitMask(this.field_t, param0 ^ 6016);
+                  this.subpixelX = this.subpixelX + this.velocityX;
+                  this.subpixelY = this.subpixelY + this.velocityY;
+                  this.velocityY = this.velocityY + 4;
+                  this.y = this.subpixelY >> 4;
+                  this.x = this.subpixelX >> 4;
+                  if (null != this.owner &&
+                    this.ageTicks < 25) {
+                    this.battle.eraseUnitMask(this.owner, obfuscationGuard ^ 6016);
                   }
-                  if (!this.field_q.spriteOverlapsTerrain(this.field_G - this.field_r, param0 ^ 6018, -this.field_r + this.field_v, this.field_p)) {
-                    if (this.field_v < -640) {
+                  if (!this.battle.spriteOverlapsTerrain(this.y - this.spriteRadius, obfuscationGuard ^ 6018, -this.spriteRadius + this.x, this.sprite)) {
+                    if (this.x < -640) {
                       this.remove(0);
                       return;
                     }
-                    if (this.field_v > 640 + this.field_q.field_y) {
+                    if (this.x > 640 + this.battle.arenaWidth) {
                       this.remove(0);
                       return;
                     }
-                    if (this.field_t == null) {
+                    if (this.owner == null) {
                       return;
                     }
-                    if (this.field_y >= 25) {
+                    if (this.ageTicks >= 25) {
                       return;
                     }
-                    this.field_q.stampUnitMask(param0 ^ -6129, this.field_t);
+                    this.battle.stampUnitMask(obfuscationGuard ^ -6129, this.owner);
                     return;
                   }
-                  var6_ref_jd = new IsaacRandom(new int[]{this.field_q.field_Q, param3, this.field_v, this.field_G});
+                  var6_ref_jd = new IsaacRandom(new int[]{this.battle.randomSeed, round, this.x, this.y});
                   var7 = 0;
                   while (var7 < 17) {
-                    var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 135, this.field_G, this.field_q);
+                    var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 135, this.y, this.battle);
                     var8 = (var6_ref_jd.nextInt((byte) -46) & 8191) * 3 / 2;
-                    if (this.field_u == 0) {
-                      this.field_u = 1;
+                    if (this.velocityX == 0) {
+                      this.velocityX = 1;
                     }
-                    ((SpellProjectile) (var5)).field_u = this.field_u + Math.abs((var6_ref_jd.nextInt((byte) -46) & 127) * GradientBarPainter.sine(113, var8) >> 17) * this.field_u / Math.abs(this.field_u);
-                    ((SpellProjectile) (var5)).field_F = this.field_F - (-((127 & var6_ref_jd.nextInt((byte) -46)) * BevelBoxPainter.cosine(var8, param0 ^ -6134) >> 17) + 64);
-                    this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                    ((SpellProjectile) (var5)).velocityX = this.velocityX + Math.abs((var6_ref_jd.nextInt((byte) -46) & 127) * GradientBarPainter.sine(113, var8) >> 17) * this.velocityX / Math.abs(this.velocityX);
+                    ((SpellProjectile) (var5)).velocityY = this.velocityY - (-((127 & var6_ref_jd.nextInt((byte) -46)) * BevelBoxPainter.cosine(var8, obfuscationGuard ^ -6134) >> 17) + 64);
+                    this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                     var7++;
                   }
                   this.playTypeSound(1, (byte) 37, 7);
-                  var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 130, this.field_G, this.field_q);
-                  this.field_q.onProjectileFinished(param0 - 5964, (SpellProjectile) (var5));
+                  var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 130, this.y, this.battle);
+                  this.battle.onProjectileFinished(obfuscationGuard - 5964, (SpellProjectile) (var5));
                   this.applyAreaEffect(9, 5, 16, 8);
                   this.remove(0);
                   return;
@@ -434,19 +434,19 @@ final class SpellProjectile extends DualLinkNode {
                                         if (128 < this.field_x) {
                                           this.field_x = this.field_x - 256;
                                         }
-                                        if (25 <= this.field_y) {
-                                          if (!this.field_q.spriteOverlapsTerrain(this.field_G - this.field_r, param0 - 6014, this.field_v - this.field_r, this.field_p)) {
+                                        if (25 <= this.ageTicks) {
+                                          if (!this.battle.spriteOverlapsTerrain(this.y - this.spriteRadius, obfuscationGuard - 6014, this.x - this.spriteRadius, this.sprite)) {
                                             return;
                                           }
                                           if (BitHelpers.field_b) {
-                                            var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 101, this.field_G, this.field_q);
-                                            this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                            var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 101, this.y, this.battle);
+                                            this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                             this.applyAreaEffect(10, 64, 32, 8);
                                           }
-                                          this.remove(param0 - 6016);
+                                          this.remove(obfuscationGuard - 6016);
                                           return;
                                         }
-                                        this.field_y = this.field_y + 1;
+                                        this.ageTicks = this.ageTicks + 1;
                                         if (var19 == 0) {
                                           return;
                                         }
@@ -454,41 +454,41 @@ final class SpellProjectile extends DualLinkNode {
                                         if (var6 != 117) {
                                           if (var6 == 16) {
                                             var6 = 1;
-                                            if (this.field_y >= 300) {
+                                            if (this.ageTicks >= 300) {
                                               var6 = 0;
                                             }
                                             var7 = 2;
                                             this.field_x = this.field_x + 1;
                                             if (this.field_x > 64) {
                                               this.field_x = this.field_x - (-(int)(4.0 * Math.random()) + 64);
-                                              var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 87, this.field_G, this.field_q);
-                                              ((SpellProjectile) (var5)).field_F = -1;
-                                              this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                              var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 87, this.y, this.battle);
+                                              ((SpellProjectile) (var5)).velocityY = -1;
+                                              this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                             }
                                             if ((63 & this.field_x) == 0) {
-                                              var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 88, this.field_G, this.field_q);
-                                              ((SpellProjectile) (var5)).field_F = -16;
-                                              ((SpellProjectile) (var5)).field_u = 0;
+                                              var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 88, this.y, this.battle);
+                                              ((SpellProjectile) (var5)).velocityY = -16;
+                                              ((SpellProjectile) (var5)).velocityX = 0;
                                               ((SpellProjectile) (var5)).field_H = -4;
-                                              this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                              this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                             }
                                             if (var6 == 0) {
-                                              this.field_F = 0;
-                                              this.field_u = 0;
+                                              this.velocityY = 0;
+                                              this.velocityX = 0;
                                               GameSelectionHelpers.field_k = 0;
                                               BitHelpers.field_b = false;
                                               NodeHashTable.field_m = 0;
                                               var8 = 0;
-                                              if (this.field_q.isSolidAt(this.field_G + 1, -3 + this.field_v, (byte) -83)) {
+                                              if (this.battle.isSolidAt(this.y + 1, -3 + this.x, (byte) -83)) {
                                                 var8++;
                                               }
-                                              if (this.field_q.isSolidAt(1 + this.field_G, this.field_v + 3, (byte) -83)) {
+                                              if (this.battle.isSolidAt(1 + this.y, this.x + 3, (byte) -83)) {
                                                 var8++;
                                               }
-                                              if (this.field_q.isSolidAt(1 + this.field_G - 5, this.field_v, (byte) -83)) {
+                                              if (this.battle.isSolidAt(1 + this.y - 5, this.x, (byte) -83)) {
                                                 var8++;
                                               }
-                                              if (this.field_q.isSolidAt(5 + this.field_G + 1, this.field_v, (byte) -83)) {
+                                              if (this.battle.isSolidAt(5 + this.y + 1, this.x, (byte) -83)) {
                                                 var8++;
                                               }
                                               if (0 < var8) {
@@ -496,26 +496,26 @@ final class SpellProjectile extends DualLinkNode {
                                                 NodeHashTable.field_m = NodeHashTable.field_m / var8;
                                               }
                                               if (0 == var8) {
-                                                this.field_y = 50;
+                                                this.ageTicks = 50;
                                               } else {
-                                                if (this.field_y <= 300) {
-                                                  this.field_y = 300;
+                                                if (this.ageTicks <= 300) {
+                                                  this.ageTicks = 300;
                                                 }
                                                 if (BitHelpers.field_b) {
-                                                  if (this.field_I == 16) {
+                                                  if (this.spellType == 16) {
                                                     this.playTypeSound(2, (byte) 37, 0);
                                                     this.applyAreaEffect(5, 20, 16, 8);
-                                                    this.remove(param0 ^ 6016);
+                                                    this.remove(obfuscationGuard ^ 6016);
                                                     return;
                                                   }
                                                 } else {
-                                                  if (16 == this.field_I) {
+                                                  if (16 == this.spellType) {
                                                     BitHelpers.field_b = false;
-                                                    if (!(this.field_G <= (this.field_q.field_H - 32)) ||
-                                                      this.field_q.isSolidAt(this.field_G, -3 + this.field_v, (byte) -83) ||
-                                                      this.field_q.isSolidAt(this.field_G, this.field_v + 3, (byte) -83) ||
-                                                      this.field_q.isSolidAt(this.field_G - 5, this.field_v, (byte) -83) ||
-                                                      this.field_q.isSolidAt(5 + this.field_G, this.field_v, (byte) -83)) {
+                                                    if (!(this.y <= (this.battle.arenaHeight - 32)) ||
+                                                      this.battle.isSolidAt(this.y, -3 + this.x, (byte) -83) ||
+                                                      this.battle.isSolidAt(this.y, this.x + 3, (byte) -83) ||
+                                                      this.battle.isSolidAt(this.y - 5, this.x, (byte) -83) ||
+                                                      this.battle.isSolidAt(5 + this.y, this.x, (byte) -83)) {
                                                       if (BitHelpers.field_b) {
                                                         this.applyAreaEffect(5, 20, 16, 8);
                                                       }
@@ -529,31 +529,31 @@ final class SpellProjectile extends DualLinkNode {
                                             if (var6 != 0 ||
                                               var19 != 0) {
                                               var8 = 0;
-                                              if (null != this.field_t &&
-                                                this.field_y < 5) {
-                                                this.field_q.eraseUnitMask(this.field_t, param0 - 6016);
+                                              if (null != this.owner &&
+                                                this.ageTicks < 5) {
+                                                this.battle.eraseUnitMask(this.owner, obfuscationGuard - 6016);
                                                 var8 = 1;
                                               }
                                               var9 = 0;
-                                              this.field_G = this.field_z >> 4;
+                                              this.y = this.subpixelY >> 4;
                                               BitHelpers.field_b = false;
-                                              this.field_v = this.field_o >> 4;
+                                              this.x = this.subpixelX >> 4;
                                               NodeHashTable.field_m = 0;
                                               GameSelectionHelpers.field_k = 0;
                                               var10 = 0;
-                                              if (this.field_q.isSolidAt(this.field_G, -3 + this.field_v, (byte) -83)) {
+                                              if (this.battle.isSolidAt(this.y, -3 + this.x, (byte) -83)) {
                                                 var10++;
                                                 var9 = 1;
                                               }
-                                              if (this.field_q.isSolidAt(this.field_G, this.field_v + 3, (byte) -83)) {
+                                              if (this.battle.isSolidAt(this.y, this.x + 3, (byte) -83)) {
                                                 var10++;
                                                 var9 = 1;
                                               }
-                                              if (this.field_q.isSolidAt(this.field_G - 5, this.field_v, (byte) -83)) {
+                                              if (this.battle.isSolidAt(this.y - 5, this.x, (byte) -83)) {
                                                 var9 = 1;
                                                 var10++;
                                               }
-                                              if (this.field_q.isSolidAt(5 + this.field_G, this.field_v, (byte) -83)) {
+                                              if (this.battle.isSolidAt(5 + this.y, this.x, (byte) -83)) {
                                                 var9 = 1;
                                                 var10++;
                                               }
@@ -562,44 +562,44 @@ final class SpellProjectile extends DualLinkNode {
                                                 GameSelectionHelpers.field_k = GameSelectionHelpers.field_k / var10;
                                               }
                                               if (var9 != 0 &&
-                                                var7 < this.field_y &&
+                                                var7 < this.ageTicks &&
                                                 !BitHelpers.field_b) {
                                                 this.playTypeSound(2, (byte) 37, 0);
                                                 this.applyAreaEffect(0, 0, 8, 8);
                                                 this.remove(0);
                                                 return;
                                               }
-                                              this.field_F = this.field_F + 4;
-                                              if (16 == this.field_I) {
-                                                if (this.field_u > 0) {
-                                                  this.field_u = this.field_u - 1;
+                                              this.velocityY = this.velocityY + 4;
+                                              if (16 == this.spellType) {
+                                                if (this.velocityX > 0) {
+                                                  this.velocityX = this.velocityX - 1;
                                                 }
-                                                if (0 > this.field_u) {
-                                                  this.field_u = this.field_u + 1;
+                                                if (0 > this.velocityX) {
+                                                  this.velocityX = this.velocityX + 1;
                                                 }
                                               }
-                                              var11 = this.field_o;
-                                              var12 = this.field_z;
+                                              var11 = this.subpixelX;
+                                              var12 = this.subpixelY;
                                               var13 = 0;
                                               scanLoop3: while (true) {
-                                                this.field_z = this.field_z + (this.field_F + 4);
-                                                this.field_o = this.field_o + this.field_u;
+                                                this.subpixelY = this.subpixelY + (this.velocityY + 4);
+                                                this.subpixelX = this.subpixelX + this.velocityX;
                                                 BitHelpers.field_b = false;
                                                 NodeHashTable.field_m = 0;
                                                 GameSelectionHelpers.field_k = 0;
                                                 var10 = 0;
-                                                this.field_v = this.field_o >> 4;
-                                                this.field_G = this.field_z >> 4;
-                                                if (this.field_q.isSolidAt(this.field_G, -3 + this.field_v, (byte) -83)) {
+                                                this.x = this.subpixelX >> 4;
+                                                this.y = this.subpixelY >> 4;
+                                                if (this.battle.isSolidAt(this.y, -3 + this.x, (byte) -83)) {
                                                   var10++;
                                                 }
-                                                if (this.field_q.isSolidAt(this.field_G, 3 + this.field_v, (byte) -83)) {
+                                                if (this.battle.isSolidAt(this.y, 3 + this.x, (byte) -83)) {
                                                   var10++;
                                                 }
-                                                if (this.field_q.isSolidAt(-5 + this.field_G, this.field_v, (byte) -83)) {
+                                                if (this.battle.isSolidAt(-5 + this.y, this.x, (byte) -83)) {
                                                   var10++;
                                                 }
-                                                if (this.field_q.isSolidAt(5 + this.field_G, this.field_v, (byte) -83)) {
+                                                if (this.battle.isSolidAt(5 + this.y, this.x, (byte) -83)) {
                                                   var10++;
                                                 }
                                                 stackIn_1293_0 = 0;
@@ -611,7 +611,7 @@ final class SpellProjectile extends DualLinkNode {
                                                   }
                                                   boolean decompiledFrameRemainder14 = true;
                                                   if (var10 <= 0 ||
-                                                    this.field_y < var7 &&
+                                                    this.ageTicks < var7 &&
                                                     BitHelpers.field_b) {
                                                     var13 = 6;
                                                     decompiledFrameRemainder14 = (var19 != 0);
@@ -619,25 +619,25 @@ final class SpellProjectile extends DualLinkNode {
                                                   if (decompiledFrameRemainder14) {
                                                     if (BitHelpers.field_b) {
                                                       this.playTypeSound(2, (byte) 37, 0);
-                                                      this.field_G = this.field_G - 4;
-                                                      this.field_z = this.field_z - 64;
+                                                      this.y = this.y - 4;
+                                                      this.subpixelY = this.subpixelY - 64;
                                                       this.applyAreaEffect(5, 20, 48, 8);
-                                                      this.remove(param0 ^ 6016);
+                                                      this.remove(obfuscationGuard ^ 6016);
                                                       return;
                                                     }
-                                                    if (null != this.field_t) {
-                                                      this.field_t = null;
+                                                    if (null != this.owner) {
+                                                      this.owner = null;
                                                     }
-                                                    var15 = -GameSelectionHelpers.field_k + this.field_G;
-                                                    var14 = this.field_v - NodeHashTable.field_m;
+                                                    var15 = -GameSelectionHelpers.field_k + this.y;
+                                                    var14 = this.x - NodeHashTable.field_m;
                                                     var16 = ConnectionState.greatestCommonDivisor(var15 << 4, var14 << 4, false);
                                                     if (16 > var16) {
                                                       var15 = -1;
                                                       var16 = 16;
                                                       var14 = 0;
                                                     }
-                                                    var17 = (var14 * (this.field_u << 8) + var15 * (this.field_F << 8)) / var16;
-                                                    var18 = (-(var14 * (this.field_F << 8)) + var15 * (this.field_u << 8)) / var16;
+                                                    var17 = (var14 * (this.velocityX << 8) + var15 * (this.velocityY << 8)) / var16;
+                                                    var18 = (-(var14 * (this.velocityY << 8)) + var15 * (this.velocityX << 8)) / var16;
                                                     if (0 > var17) {
                                                       var17 = -var17;
                                                       var15 = -var15;
@@ -648,33 +648,33 @@ final class SpellProjectile extends DualLinkNode {
                                                     var18 = var18 >> 1;
                                                     var17 = var17 >> 1;
                                                     if (Math.abs(var18) < 128) {
-                                                      if (this.field_y > 50) {
-                                                        this.field_y = 300;
+                                                      if (this.ageTicks > 50) {
+                                                        this.ageTicks = 300;
                                                       }
-                                                      if (!(this.field_y > 5)) {
-                                                        this.field_y = 6;
+                                                      if (!(this.ageTicks > 5)) {
+                                                        this.ageTicks = 6;
                                                         if (var19 != 0) {
-                                                          if (this.field_y < 50) {
+                                                          if (this.ageTicks < 50) {
                                                             this.playTypeSound(2, (byte) 37, 0);
                                                             this.applyAreaEffect(0, 0, 8, 8);
                                                           }
-                                                          this.field_y = 50;
+                                                          this.ageTicks = 50;
                                                         }
                                                       }
                                                     } else {
-                                                      if (this.field_y < 50) {
+                                                      if (this.ageTicks < 50) {
                                                         this.playTypeSound(2, (byte) 37, 0);
                                                         this.applyAreaEffect(0, 0, 8, 8);
                                                       }
-                                                      this.field_y = 50;
+                                                      this.ageTicks = 50;
                                                     }
-                                                    this.field_z = var12;
-                                                    this.field_o = var11;
-                                                    this.field_F = (var15 * var17 - var18 * var14) / var16;
-                                                    this.field_G = this.field_z >> 4;
+                                                    this.subpixelY = var12;
+                                                    this.subpixelX = var11;
+                                                    this.velocityY = (var15 * var17 - var18 * var14) / var16;
+                                                    this.y = this.subpixelY >> 4;
                                                     var13++;
-                                                    this.field_v = this.field_o >> 4;
-                                                    this.field_u = (var15 * var18 + var14 * var17) / var16;
+                                                    this.x = this.subpixelX >> 4;
+                                                    this.velocityX = (var15 * var18 + var14 * var17) / var16;
                                                   }
                                                   if (var9 == 0 &&
                                                     var13 < 5) {
@@ -686,27 +686,27 @@ final class SpellProjectile extends DualLinkNode {
                                                 break;
                                               }
                                               if (stackIn_1293_0 == stackIn_1293_1) {
-                                                this.field_u = this.field_u >> 1;
-                                                this.field_F = this.field_F >> 1;
+                                                this.velocityX = this.velocityX >> 1;
+                                                this.velocityY = this.velocityY >> 1;
                                               }
-                                              if (this.field_t != null &&
+                                              if (this.owner != null &&
                                                 var8 != 0) {
-                                                this.field_q.stampUnitMask(-127, this.field_t);
+                                                this.battle.stampUnitMask(-127, this.owner);
                                               }
                                             }
-                                            if (this.field_y <= 250 && (this.field_y > 5 ||
-                                              this.field_y < 5)) {
-                                              this.field_y = this.field_y + 1;
+                                            if (this.ageTicks <= 250 && (this.ageTicks > 5 ||
+                                              this.ageTicks < 5)) {
+                                              this.ageTicks = this.ageTicks + 1;
                                             }
-                                            if (this.field_v < -640) {
+                                            if (this.x < -640) {
                                               this.remove(0);
                                               return;
                                             }
-                                            if (640 + this.field_q.field_y < this.field_v) {
+                                            if (640 + this.battle.arenaWidth < this.x) {
                                               this.remove(0);
                                               return;
                                             }
-                                            if (this.field_G <= this.field_q.field_H) {
+                                            if (this.y <= this.battle.arenaHeight) {
                                               return;
                                             }
                                             this.remove(0);
@@ -738,79 +738,79 @@ final class SpellProjectile extends DualLinkNode {
                                             }
                                           }
                                           var6 = 1;
-                                          if (165 == this.field_I &&
-                                            300 <= this.field_y) {
+                                          if (165 == this.spellType &&
+                                            300 <= this.ageTicks) {
                                             var6 = 0;
                                           }
-                                          if (this.field_I == 16 &&
-                                            this.field_y >= 300) {
+                                          if (this.spellType == 16 &&
+                                            this.ageTicks >= 300) {
                                             var6 = 0;
                                           }
-                                          if (this.field_I == 20 &&
-                                            300 <= this.field_y) {
+                                          if (this.spellType == 20 &&
+                                            300 <= this.ageTicks) {
                                             var6 = 0;
                                           }
-                                          if (this.field_I == 159 &&
-                                            this.field_y >= 300) {
+                                          if (this.spellType == 159 &&
+                                            this.ageTicks >= 300) {
                                             var6 = 0;
                                           }
-                                          if (160 == this.field_I &&
-                                            this.field_y >= 300) {
+                                          if (160 == this.spellType &&
+                                            this.ageTicks >= 300) {
                                             var6 = 0;
                                           }
-                                          if (135 == this.field_I &&
-                                            this.field_y >= 300) {
+                                          if (135 == this.spellType &&
+                                            this.ageTicks >= 300) {
                                             var6 = 0;
                                           }
-                                          if (this.field_I == 152 &&
-                                            300 <= this.field_y) {
+                                          if (this.spellType == 152 &&
+                                            300 <= this.ageTicks) {
                                             var6 = 0;
                                           }
-                                          if (this.field_I == 46 &&
-                                            this.field_y >= 300) {
+                                          if (this.spellType == 46 &&
+                                            this.ageTicks >= 300) {
                                             var6 = 0;
                                           }
-                                          if (this.field_I == 76 &&
-                                            this.field_y >= 300) {
+                                          if (this.spellType == 76 &&
+                                            this.ageTicks >= 300) {
                                             var6 = 0;
                                           }
-                                          if (this.field_I == 34 &&
-                                            0 < this.field_y) {
+                                          if (this.spellType == 34 &&
+                                            0 < this.ageTicks) {
                                             var6 = 0;
                                           }
-                                          if (116 == this.field_I &&
-                                            this.field_y > 250) {
+                                          if (116 == this.spellType &&
+                                            this.ageTicks > 250) {
                                             var6 = 0;
                                           }
                                           if (var6 != 0) {
-                                            if (this.field_I == 13 ||
-                                              67 == this.field_I ||
-                                              12 == this.field_I) {
+                                            if (this.spellType == 13 ||
+                                              67 == this.spellType ||
+                                              12 == this.spellType) {
                                               this.updateFlightSound(0, (byte) 34);
                                             }
-                                            if (this.field_I == 46 ||
-                                              76 == this.field_I ||
-                                              this.field_I == 41) {
+                                            if (this.spellType == 46 ||
+                                              76 == this.spellType ||
+                                              this.spellType == 41) {
                                               this.updateFlightSound(3, (byte) 34);
                                             }
-                                            if (this.field_I == 26 ||
-                                              25 == this.field_I ||
-                                              this.field_I == 20) {
+                                            if (this.spellType == 26 ||
+                                              25 == this.spellType ||
+                                              this.spellType == 20) {
                                               this.updateFlightSound(1, (byte) 34);
                                             }
                                             boolean decompiledFrameCompleted36 = true;
-                                            if (this.field_I == 31 ||
-                                              this.field_I == 34 ||
-                                              this.field_I == 33) {
+                                            if (this.spellType == 31 ||
+                                              this.spellType == 34 ||
+                                              this.spellType == 33) {
                                               this.updateFlightSound(2, (byte) 34);
-                                              if (this.field_I == 34) {
-                                                var7 = Math.abs(-this.field_t.field_lb + this.field_v);
+                                              if (this.spellType == 34) {
+                                                var7 = Math.abs(-this.owner.x + this.x);
                                                 if (var7 < 50) {
                                                   var7 = 50;
                                                 }
                                                 var8 = 225;
-                                                if (this.field_q.field_x[this.field_t.field_u] == 2) {
-                                                  var8 = var8 + this.field_q.field_X[this.field_t.field_u];
+                                                if (this.battle.playerSpellbook[this.owner.ownerPlayer] == 2) {
+                                                  var8 = var8 + this.battle.field_X[this.owner.ownerPlayer];
                                                 }
                                                 if (var7 < var8) {
                                                   var8 = var7;
@@ -818,8 +818,8 @@ final class SpellProjectile extends DualLinkNode {
                                                 var8 -= 50;
                                                 var9 = 0;
                                                 while (var8 > var9) {
-                                                  var5 = this.spawnFromHere(this.field_v + (int)((double)(-var8) + (double)var8 * Math.random() * 2.0) / 25, (BattleUnit) null, (byte) 81, 112, this.field_G + (int)((double)(-var8) + Math.random() * (double)var8 * 2.0) / 25, this.field_q);
-                                                  this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                  var5 = this.spawnFromHere(this.x + (int)((double)(-var8) + (double)var8 * Math.random() * 2.0) / 25, (BattleUnit) null, (byte) 81, 112, this.y + (int)((double)(-var8) + Math.random() * (double)var8 * 2.0) / 25, this.battle);
+                                                  this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                                   var9 += 50;
                                                   if (var19 != 0) {
                                                     decompiledFrameCompleted36 = false;
@@ -829,72 +829,72 @@ final class SpellProjectile extends DualLinkNode {
                                               }
                                             }
                                             if ((decompiledFrameCompleted36) &&
-                                              (this.field_I == 53)) {
+                                              (this.spellType == 53)) {
                                               this.updateFlightSound(4, (byte) 34);
                                             }
-                                            if (this.field_I == 116 ||
-                                              this.field_I == 135 ||
-                                              this.field_I == 152 ||
-                                              this.field_I == 122) {
+                                            if (this.spellType == 116 ||
+                                              this.spellType == 135 ||
+                                              this.spellType == 152 ||
+                                              this.spellType == 122) {
                                               this.updateFlightSound(6, (byte) 34);
                                             }
-                                            if (this.field_I == 146 ||
-                                              this.field_I == 143) {
+                                            if (this.spellType == 146 ||
+                                              this.spellType == 143) {
                                               this.updateFlightSound(7, (byte) 34);
                                             }
-                                            if (147 == this.field_I) {
-                                              var5 = this.spawnFromHere(this.field_v + (int)(11.0 * Math.random() - 5.0), (BattleUnit) null, (byte) 81, 102, this.field_G, this.field_q);
-                                              this.field_q.onProjectileFinished(param0 ^ 6068, (SpellProjectile) (var5));
-                                              if (this.field_y == 225 &&
-                                                this.field_q.field_sb != null &&
-                                                null != this.field_q.field_sb[74]) {
-                                                DropdownList.playSampleAtVolume((byte) -30, SceneWidgetNode.field_r[220] >> 2, this.field_q.field_sb[74]);
+                                            if (147 == this.spellType) {
+                                              var5 = this.spawnFromHere(this.x + (int)(11.0 * Math.random() - 5.0), (BattleUnit) null, (byte) 81, 102, this.y, this.battle);
+                                              this.battle.onProjectileFinished(obfuscationGuard ^ 6068, (SpellProjectile) (var5));
+                                              if (this.ageTicks == 225 &&
+                                                this.battle.projectileSamples != null &&
+                                                null != this.battle.projectileSamples[74]) {
+                                                DropdownList.playSampleAtVolume((byte) -30, SceneWidgetNode.field_r[220] >> 2, this.battle.projectileSamples[74]);
                                               }
                                             }
                                           }
-                                          if (165 == this.field_I) {
+                                          if (165 == this.spellType) {
                                             this.field_x = this.field_x + 1;
                                             if (16 < this.field_x) {
                                               this.field_x = this.field_x - (-(int)(4.0 * Math.random()) + 16);
-                                              var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 166, this.field_G, this.field_q);
-                                              ((SpellProjectile) (var5)).field_u = (int)(21.0 * Math.random()) - 10;
-                                              ((SpellProjectile) (var5)).field_F = -10 + (int)(Math.random() * 21.0);
-                                              this.field_q.onProjectileFinished(param0 ^ 6068, (SpellProjectile) (var5));
+                                              var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 166, this.y, this.battle);
+                                              ((SpellProjectile) (var5)).velocityX = (int)(21.0 * Math.random()) - 10;
+                                              ((SpellProjectile) (var5)).velocityY = -10 + (int)(Math.random() * 21.0);
+                                              this.battle.onProjectileFinished(obfuscationGuard ^ 6068, (SpellProjectile) (var5));
                                             }
                                           }
                                           boolean decompiledFrameRemainder13 = true;
-                                          if (16 == this.field_I) {
+                                          if (16 == this.spellType) {
                                             this.field_x = this.field_x + 1;
                                             if (this.field_x > 16) {
                                               this.field_x = this.field_x - (16 - (int)(Math.random() * 4.0));
-                                              var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 87, this.field_G, this.field_q);
-                                              ((SpellProjectile) (var5)).field_F = -1;
-                                              this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                              var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 87, this.y, this.battle);
+                                              ((SpellProjectile) (var5)).velocityY = -1;
+                                              this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                             }
                                             decompiledFrameRemainder13 = ((3 & this.field_x) == 0);
                                             if (decompiledFrameRemainder13) {
-                                              var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 88, this.field_G, this.field_q);
+                                              var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 88, this.y, this.battle);
                                               ((SpellProjectile) (var5)).field_H = -4;
-                                              ((SpellProjectile) (var5)).field_u = 0;
-                                              ((SpellProjectile) (var5)).field_F = -16;
-                                              this.field_q.onProjectileFinished(param0 ^ 6068, (SpellProjectile) (var5));
+                                              ((SpellProjectile) (var5)).velocityX = 0;
+                                              ((SpellProjectile) (var5)).velocityY = -16;
+                                              this.battle.onProjectileFinished(obfuscationGuard ^ 6068, (SpellProjectile) (var5));
                                               decompiledFrameRemainder13 = (var19 != 0);
                                             }
                                           }
                                           if (decompiledFrameRemainder13) {
-                                            if (67 == this.field_I) {
+                                            if (67 == this.spellType) {
                                               this.field_x = this.field_x + 1;
                                               decompiledFrameRemainder13 = !(this.field_x <= 4);
                                               if (decompiledFrameRemainder13) {
                                                 this.field_x = this.field_x - 4;
-                                                var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 88, this.field_G, this.field_q);
-                                                ((SpellProjectile) (var5)).field_F = -16;
-                                                this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 88, this.y, this.battle);
+                                                ((SpellProjectile) (var5)).velocityY = -16;
+                                                this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                                 decompiledFrameRemainder13 = (var19 != 0);
                                               }
                                             }
                                             if (decompiledFrameRemainder13) {
-                                              if (this.field_I == 31) {
+                                              if (this.spellType == 31) {
                                                 if (0 >= this.field_x) {
                                                   this.field_x = this.field_x - 1;
                                                   if (-4 > this.field_x) {
@@ -903,37 +903,37 @@ final class SpellProjectile extends DualLinkNode {
                                                 }
                                                 decompiledFrameRemainder13 = ((3 & this.field_x) == 0);
                                                 if (decompiledFrameRemainder13) {
-                                                  var5 = this.spawnFromHere(this.field_v + (int)(-2.0 + Math.random() * 4.0), (BattleUnit) null, (byte) 81, 112, this.field_G + (int)(Math.random() * 4.0 - 2.0), this.field_q);
-                                                  ((SpellProjectile) (var5)).field_u = 4 * this.field_u + (int)(-8.0 + 16.0 * Math.random());
-                                                  ((SpellProjectile) (var5)).field_F = 4 * this.field_F + (int)(Math.random() * 16.0 - 8.0);
-                                                  this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                  var5 = this.spawnFromHere(this.x + (int)(-2.0 + Math.random() * 4.0), (BattleUnit) null, (byte) 81, 112, this.y + (int)(Math.random() * 4.0 - 2.0), this.battle);
+                                                  ((SpellProjectile) (var5)).velocityX = 4 * this.velocityX + (int)(-8.0 + 16.0 * Math.random());
+                                                  ((SpellProjectile) (var5)).velocityY = 4 * this.velocityY + (int)(Math.random() * 16.0 - 8.0);
+                                                  this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                                   decompiledFrameRemainder13 = (var19 != 0);
                                                 }
                                               }
                                               if (decompiledFrameRemainder13) {
-                                                if (122 == this.field_I) {
+                                                if (122 == this.spellType) {
                                                   this.field_x = this.field_x + 1;
                                                   decompiledFrameRemainder13 = !(this.field_x <= 4);
                                                   if (decompiledFrameRemainder13) {
                                                     this.field_x = this.field_x - 4;
-                                                    var5 = this.spawnFromHere(this.field_v + (int)(4.0 * Math.random() - 2.0), (BattleUnit) null, (byte) 81, 129, this.field_G + (int)(-2.0 + 4.0 * Math.random()), this.field_q);
-                                                    ((SpellProjectile) (var5)).field_F = -16;
-                                                    this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                    var5 = this.spawnFromHere(this.x + (int)(4.0 * Math.random() - 2.0), (BattleUnit) null, (byte) 81, 129, this.y + (int)(-2.0 + 4.0 * Math.random()), this.battle);
+                                                    ((SpellProjectile) (var5)).velocityY = -16;
+                                                    this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                                     decompiledFrameRemainder13 = (var19 != 0);
                                                   }
                                                 }
                                                 if (decompiledFrameRemainder13) {
-                                                  if (this.field_I == 116) {
+                                                  if (this.spellType == 116) {
                                                     this.field_x = this.field_x + 1;
                                                     if (this.field_x > 4) {
                                                       this.field_x = this.field_x - 4;
-                                                      var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 129, this.field_G, this.field_q);
-                                                      ((SpellProjectile) (var5)).field_F = -16;
-                                                      this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                      var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 129, this.y, this.battle);
+                                                      ((SpellProjectile) (var5)).velocityY = -16;
+                                                      this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                                     }
                                                   } else {
-                                                    if (this.field_I != 146 &&
-                                                      this.field_I == 143) {
+                                                    if (this.spellType != 146 &&
+                                                      this.spellType == 143) {
                                                     }
                                                   }
                                                 }
@@ -944,83 +944,83 @@ final class SpellProjectile extends DualLinkNode {
                                             regionExit5: {
                                               if (var6 != 0) {
                                                 var7 = 0;
-                                                if (null != this.field_t &&
-                                                  25 > this.field_y) {
+                                                if (null != this.owner &&
+                                                  25 > this.ageTicks) {
                                                   var7 = 1;
-                                                  this.field_q.eraseUnitMask(this.field_t, 0);
+                                                  this.battle.eraseUnitMask(this.owner, 0);
                                                 }
                                                 var8 = 0;
-                                                this.field_G = this.field_z >> 4;
-                                                this.field_v = this.field_o >> 4;
-                                                if (this.field_I != 31 &&
-                                                  this.field_q.spriteOverlapsTerrain(this.field_G - this.field_r, param0 - 6014, -this.field_r + this.field_v, this.field_p)) {
-                                                  this.field_F = 0;
-                                                  this.field_u = 0;
+                                                this.y = this.subpixelY >> 4;
+                                                this.x = this.subpixelX >> 4;
+                                                if (this.spellType != 31 &&
+                                                  this.battle.spriteOverlapsTerrain(this.y - this.spriteRadius, obfuscationGuard - 6014, -this.spriteRadius + this.x, this.sprite)) {
+                                                  this.velocityY = 0;
+                                                  this.velocityX = 0;
                                                   var8 = 1;
                                                 }
-                                                this.field_F = this.field_F + 4;
-                                                if (this.field_I == 25 &&
-                                                  this.field_F > 0 &&
-                                                  this.field_y > 50) {
-                                                  var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 89, this.field_G, this.field_q);
-                                                  this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                this.velocityY = this.velocityY + 4;
+                                                if (this.spellType == 25 &&
+                                                  this.velocityY > 0 &&
+                                                  this.ageTicks > 50) {
+                                                  var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 89, this.y, this.battle);
+                                                  this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                                   this.playTypeSound(1, (byte) 37, 1);
-                                                  this.applyAreaEffect(25, 64, 12, param0 - 6008);
-                                                  this.field_I = 26;
-                                                  this.field_F = this.field_F / 2;
-                                                  this.field_p = QuickChatPhrase.field_x[0];
-                                                  this.field_u = this.field_u / 2;
-                                                  this.field_y = 50;
-                                                  this.field_r = this.field_p.field_n / 2;
+                                                  this.applyAreaEffect(25, 64, 12, obfuscationGuard - 6008);
+                                                  this.spellType = 26;
+                                                  this.velocityY = this.velocityY / 2;
+                                                  this.sprite = QuickChatPhrase.field_x[0];
+                                                  this.velocityX = this.velocityX / 2;
+                                                  this.ageTicks = 50;
+                                                  this.spriteRadius = this.sprite.field_n / 2;
                                                 }
-                                                if ((this.field_I == 152 ||
-                                                  this.field_I == 135) &&
-                                                  this.field_F < 0) {
-                                                  this.field_F = this.field_F + 4;
+                                                if ((this.spellType == 152 ||
+                                                  this.spellType == 135) &&
+                                                  this.velocityY < 0) {
+                                                  this.velocityY = this.velocityY + 4;
                                                 }
-                                                if (this.field_I != 135 ||
-                                                  this.field_F <= 0) {
-                                                  if (16 == this.field_I) {
-                                                    if (this.field_u > 0) {
-                                                      this.field_u = this.field_u - 1;
+                                                if (this.spellType != 135 ||
+                                                  this.velocityY <= 0) {
+                                                  if (16 == this.spellType) {
+                                                    if (this.velocityX > 0) {
+                                                      this.velocityX = this.velocityX - 1;
                                                     }
-                                                    if (this.field_u < 0) {
-                                                      this.field_u = this.field_u + 1;
+                                                    if (this.velocityX < 0) {
+                                                      this.velocityX = this.velocityX + 1;
                                                       if (var19 != 0) {
-                                                        if (this.field_u > 0) {
-                                                          this.field_u = this.field_u - 1;
+                                                        if (this.velocityX > 0) {
+                                                          this.velocityX = this.velocityX - 1;
                                                         }
-                                                        if (this.field_u < 0) {
-                                                          this.field_u = this.field_u + 1;
+                                                        if (this.velocityX < 0) {
+                                                          this.velocityX = this.velocityX + 1;
                                                         }
                                                       }
                                                     }
                                                   }
                                                 } else {
-                                                  if (this.field_u > 0) {
-                                                    this.field_u = this.field_u - 1;
+                                                  if (this.velocityX > 0) {
+                                                    this.velocityX = this.velocityX - 1;
                                                   }
-                                                  if (this.field_u < 0) {
-                                                    this.field_u = this.field_u + 1;
+                                                  if (this.velocityX < 0) {
+                                                    this.velocityX = this.velocityX + 1;
                                                   }
                                                 }
-                                                if (this.field_I == 46) {
-                                                  if (this.field_G > this.field_q.field_H - 32) {
+                                                if (this.spellType == 46) {
+                                                  if (this.y > this.battle.arenaHeight - 32) {
                                                     this.checkHeightEffects(77);
                                                     this.remove(0);
                                                     return;
                                                   }
-                                                  if (0 < this.field_u) {
-                                                    this.field_u = this.field_u - 1;
+                                                  if (0 < this.velocityX) {
+                                                    this.velocityX = this.velocityX - 1;
                                                   }
-                                                  if (this.field_u < 0) {
-                                                    this.field_u = this.field_u + 1;
+                                                  if (this.velocityX < 0) {
+                                                    this.velocityX = this.velocityX + 1;
                                                   }
-                                                  this.field_u = this.field_u * 15 >> 4;
-                                                  this.field_F = this.field_F * 15 >> 4;
+                                                  this.velocityX = this.velocityX * 15 >> 4;
+                                                  this.velocityY = this.velocityY * 15 >> 4;
                                                 }
-                                                var9 = this.field_o;
-                                                var10 = this.field_z;
+                                                var9 = this.subpixelX;
+                                                var10 = this.subpixelY;
                                                 var11 = 0;
                                                 scanLoop6: while (true) {
                                                   boolean decompiledFrameCompleted25 = true;
@@ -1053,11 +1053,11 @@ final class SpellProjectile extends DualLinkNode {
                                                       boolean decompiledFrameCompleted34 = true;
                                                       boolean decompiledFrameCompleted21 = true;
                                                       boolean decompiledFrameCompleted35 = true;
-                                                      this.field_z = this.field_z + (4 + this.field_F);
-                                                      this.field_o = this.field_o + this.field_u;
-                                                      this.field_G = this.field_z >> 4;
-                                                      this.field_v = this.field_o >> 4;
-                                                      if (!this.field_q.spriteOverlapsTerrain(this.field_G - this.field_r, param0 ^ 6018, this.field_v - this.field_r, this.field_p)) {
+                                                      this.subpixelY = this.subpixelY + (4 + this.velocityY);
+                                                      this.subpixelX = this.subpixelX + this.velocityX;
+                                                      this.y = this.subpixelY >> 4;
+                                                      this.x = this.subpixelX >> 4;
+                                                      if (!this.battle.spriteOverlapsTerrain(this.y - this.spriteRadius, obfuscationGuard ^ 6018, this.x - this.spriteRadius, this.sprite)) {
                                                         var11 = 6;
                                                         if (var19 == 0) {
                                                           if (var8 == 0 &&
@@ -1068,72 +1068,72 @@ final class SpellProjectile extends DualLinkNode {
                                                           break regionExit7;
                                                         }
                                                       }
-                                                      if (this.field_I == 46) {
+                                                      if (this.spellType == 46) {
                                                         do {
                                                           var12_ref_ll = ScreenSwitchHelpers.field_f[17];
-                                                          if ((this.field_q.field_H / 4) > this.field_G) {
+                                                          if ((this.battle.arenaHeight / 4) > this.y) {
                                                             var12_ref_ll = ScreenSwitchHelpers.field_f[18];
                                                           }
-                                                          if (this.field_G < this.field_q.field_H / 5) {
+                                                          if (this.y < this.battle.arenaHeight / 5) {
                                                             var12_ref_ll = ScreenSwitchHelpers.field_f[19];
                                                           }
-                                                          this.field_p = var12_ref_ll.toRgbSprite();
+                                                          this.sprite = var12_ref_ll.toRgbSprite();
                                                           if (BitHelpers.field_b &&
-                                                            16 == this.field_I) {
+                                                            16 == this.spellType) {
                                                             decompiledFrameCompleted35 = false;
                                                             break;
                                                           }
                                                           if (BitHelpers.field_b &&
-                                                            this.field_I == 20) {
+                                                            this.spellType == 20) {
                                                             decompiledFrameCompleted34 = false;
                                                             break;
                                                           }
                                                           if (BitHelpers.field_b &&
-                                                            159 == this.field_I) {
+                                                            159 == this.spellType) {
                                                             decompiledFrameCompleted33 = false;
                                                             break;
                                                           }
                                                           if (BitHelpers.field_b &&
-                                                            160 == this.field_I) {
+                                                            160 == this.spellType) {
                                                             decompiledFrameCompleted32 = false;
                                                             break;
                                                           }
                                                           if (BitHelpers.field_b) {
-                                                            if (135 == this.field_I) {
+                                                            if (135 == this.spellType) {
                                                               decompiledFrameCompleted31 = false;
                                                               break;
                                                             }
-                                                            if (152 == this.field_I) {
+                                                            if (152 == this.spellType) {
                                                               decompiledFrameCompleted30 = false;
                                                               break;
                                                             }
                                                           }
                                                           if (BitHelpers.field_b &&
-                                                            76 == this.field_I) {
+                                                            76 == this.spellType) {
                                                             decompiledFrameCompleted29 = false;
                                                             break;
                                                           }
                                                           if (BitHelpers.field_b &&
-                                                            this.field_I == 46) {
+                                                            this.spellType == 46) {
                                                             decompiledFrameCompleted28 = false;
                                                             break;
                                                           }
                                                           if (BitHelpers.field_b &&
-                                                            31 == this.field_I) {
+                                                            31 == this.spellType) {
                                                             decompiledFrameCompleted27 = false;
                                                             break;
                                                           }
                                                           boolean decompiledFrameRemainder12 = true;
-                                                          if (this.field_I == 20) {
-                                                            var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 90, this.field_G, this.field_q);
-                                                            this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
-                                                            this.applyAreaEffect(5, 32, 3, param0 ^ 6024);
+                                                          if (this.spellType == 20) {
+                                                            var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 90, this.y, this.battle);
+                                                            this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                            this.applyAreaEffect(5, 32, 3, obfuscationGuard ^ 6024);
                                                             decompiledFrameRemainder12 = (var19 != 0);
                                                           }
                                                           if (decompiledFrameRemainder12) {
-                                                            if (this.field_I == 135 &&
-                                                              this.field_y < 25) {
-                                                              this.applyAreaEffect(0, 32, 3, param0 ^ 6024);
+                                                            if (this.spellType == 135 &&
+                                                              this.ageTicks < 25) {
+                                                              this.applyAreaEffect(0, 32, 3, obfuscationGuard ^ 6024);
                                                               decompiledFrameRemainder12 = (var19 != 0);
                                                               if (decompiledFrameRemainder12) {
                                                                 decompiledFrameCompleted26 = false;
@@ -1141,25 +1141,25 @@ final class SpellProjectile extends DualLinkNode {
                                                               }
                                                             }
                                                             if ((decompiledFrameRemainder12) &&
-                                                              (this.field_I == 152)) {
-                                                              var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 130, this.field_G, this.field_q);
-                                                              this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
-                                                              if (0 > this.field_F) {
+                                                              (this.spellType == 152)) {
+                                                              var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 130, this.y, this.battle);
+                                                              this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                              if (0 > this.velocityY) {
                                                                 decompiledFrameCompleted25 = false;
                                                                 break;
                                                               }
                                                             }
                                                           }
-                                                          var12 = -NodeHashTable.field_m + this.field_v;
-                                                          var13 = this.field_G - GameSelectionHelpers.field_k;
+                                                          var12 = -NodeHashTable.field_m + this.x;
+                                                          var13 = this.y - GameSelectionHelpers.field_k;
                                                           var14 = ConnectionState.greatestCommonDivisor(var13 << 4, var12 << 4, false);
                                                           if (var14 < 1) {
                                                             var14 = 16;
                                                             var13 = -1;
                                                             var12 = 0;
                                                           }
-                                                          var15 = ((this.field_F << 8) * var13 + (this.field_u << 8) * var12) / var14;
-                                                          var16 = ((this.field_u << 8) * var13 - var12 * (this.field_F << 8)) / var14;
+                                                          var15 = ((this.velocityY << 8) * var13 + (this.velocityX << 8) * var12) / var14;
+                                                          var16 = ((this.velocityX << 8) * var13 - var12 * (this.velocityY << 8)) / var14;
                                                           if (var15 < 0) {
                                                             var16 = -var16;
                                                             var13 = -var13;
@@ -1168,66 +1168,66 @@ final class SpellProjectile extends DualLinkNode {
                                                           }
                                                           boolean decompiledFrameRemainder11 = true;
                                                           var15 = -(var15 >> 1);
-                                                          if (20 != this.field_I &&
-                                                            this.field_I != 159 &&
-                                                            this.field_I != 160 &&
-                                                            165 != this.field_I) {
-                                                            if (this.field_I == 135 ||
-                                                              this.field_I == 152) {
+                                                          if (20 != this.spellType &&
+                                                            this.spellType != 159 &&
+                                                            this.spellType != 160 &&
+                                                            165 != this.spellType) {
+                                                            if (this.spellType == 135 ||
+                                                              this.spellType == 152) {
                                                               if ((Math.abs(var16) < 128) &&
-                                                                (decompiledFrameRemainder11 = !(this.field_y <= 200))) {
-                                                                this.field_y = 300;
+                                                                (decompiledFrameRemainder11 = !(this.ageTicks <= 200))) {
+                                                                this.ageTicks = 300;
                                                                 decompiledFrameRemainder11 = (var19 != 0);
                                                               }
                                                               if (decompiledFrameRemainder11) {
-                                                                var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 132, this.field_G, this.field_q);
-                                                                this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
-                                                                this.field_y = this.field_y + 5;
+                                                                var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 132, this.y, this.battle);
+                                                                this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                                this.ageTicks = this.ageTicks + 5;
                                                                 decompiledFrameRemainder11 = (var19 != 0);
                                                               }
                                                             }
                                                             if (decompiledFrameRemainder11) {
-                                                              if (this.field_I == 46) {
+                                                              if (this.spellType == 46) {
                                                                 var15 = var15 >> 1;
                                                                 var16 = var16 >> 1;
                                                                 if ((256 > Math.abs(var16)) &&
-                                                                  (decompiledFrameRemainder11 = !(this.field_y <= 50))) {
-                                                                  this.field_y = 300;
+                                                                  (decompiledFrameRemainder11 = !(this.ageTicks <= 50))) {
+                                                                  this.ageTicks = 300;
                                                                   decompiledFrameRemainder11 = (var19 != 0);
                                                                 }
                                                                 if (decompiledFrameRemainder11) {
-                                                                  this.field_y = 50;
+                                                                  this.ageTicks = 50;
                                                                   decompiledFrameRemainder11 = (var19 != 0);
                                                                 }
                                                               }
                                                               if (decompiledFrameRemainder11) {
-                                                                if (16 != this.field_I &&
-                                                                  76 != this.field_I) {
-                                                                  if (this.field_I == 26) {
+                                                                if (16 != this.spellType &&
+                                                                  76 != this.spellType) {
+                                                                  if (this.spellType == 26) {
                                                                     decompiledFrameCompleted24 = false;
                                                                     break;
                                                                   }
-                                                                  if ((this.field_I != 31) &&
-                                                                    (decompiledFrameRemainder11 = (this.field_I == 34))) {
+                                                                  if ((this.spellType != 31) &&
+                                                                    (decompiledFrameRemainder11 = (this.spellType == 34))) {
                                                                     var12 = 0;
                                                                     var13 = 0;
-                                                                    this.field_y = 1;
+                                                                    this.ageTicks = 1;
                                                                     decompiledFrameRemainder11 = (var19 != 0);
                                                                   }
                                                                   if (decompiledFrameRemainder11) {
                                                                     this.field_x = 0;
                                                                     this.playTypeSound(1, (byte) 37, 2);
-                                                                    this.field_y = this.field_y + 50;
-                                                                    var17 = this.field_v;
-                                                                    this.field_v = NodeHashTable.field_m;
-                                                                    var18 = this.field_G;
-                                                                    this.field_G = GameSelectionHelpers.field_k;
-                                                                    var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 99, this.field_G, this.field_q);
-                                                                    this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                                    this.ageTicks = this.ageTicks + 50;
+                                                                    var17 = this.x;
+                                                                    this.x = NodeHashTable.field_m;
+                                                                    var18 = this.y;
+                                                                    this.y = GameSelectionHelpers.field_k;
+                                                                    var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 99, this.y, this.battle);
+                                                                    this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                                                     this.applyAreaEffect(10, 64, 64, 8);
-                                                                    this.field_G = var18;
-                                                                    this.field_v = var17;
-                                                                    if (this.field_y > 1000) {
+                                                                    this.y = var18;
+                                                                    this.x = var17;
+                                                                    if (this.ageTicks > 1000) {
                                                                       decompiledFrameCompleted23 = false;
                                                                       break;
                                                                     }
@@ -1250,17 +1250,17 @@ final class SpellProjectile extends DualLinkNode {
                                                                   var16 = var16 >> 1;
                                                                   var15 = var15 >> 1;
                                                                   if ((Math.abs(var16) < 128) &&
-                                                                    (decompiledFrameRemainder11 = !(50 >= this.field_y))) {
-                                                                    this.field_y = 300;
+                                                                    (decompiledFrameRemainder11 = !(50 >= this.ageTicks))) {
+                                                                    this.ageTicks = 300;
                                                                     decompiledFrameRemainder11 = (var19 != 0);
                                                                   }
                                                                   if (decompiledFrameRemainder11) {
-                                                                    if (this.field_y < 50 &&
-                                                                      16 == this.field_I) {
+                                                                    if (this.ageTicks < 50 &&
+                                                                      16 == this.spellType) {
                                                                       this.playTypeSound(2, (byte) 37, 0);
                                                                       this.applyAreaEffect(0, 0, 8, 8);
                                                                     }
-                                                                    this.field_y = 50;
+                                                                    this.ageTicks = 50;
                                                                     decompiledFrameRemainder11 = (var19 != 0);
                                                                   }
                                                                 }
@@ -1268,48 +1268,48 @@ final class SpellProjectile extends DualLinkNode {
                                                             }
                                                           }
                                                           if (decompiledFrameRemainder11) {
-                                                            if (this.field_I != 165) {
-                                                              var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 90, this.field_G, this.field_q);
-                                                              this.field_q.onProjectileFinished(param0 ^ 6068, (SpellProjectile) (var5));
+                                                            if (this.spellType != 165) {
+                                                              var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 90, this.y, this.battle);
+                                                              this.battle.onProjectileFinished(obfuscationGuard ^ 6068, (SpellProjectile) (var5));
                                                             }
                                                             if (Math.abs(var16) >= 128) {
-                                                              this.field_y = this.field_y + 5;
-                                                              if ((!(this.field_y < 300)) &&
-                                                                (this.field_I == 165) &&
-                                                                (this.field_I == 165)) {
-                                                                this.field_q.carveTerrainAndSprite(this.field_G - this.field_r, -112, this.field_v - this.field_r, this.field_p);
+                                                              this.ageTicks = this.ageTicks + 5;
+                                                              if ((!(this.ageTicks < 300)) &&
+                                                                (this.spellType == 165) &&
+                                                                (this.spellType == 165)) {
+                                                                this.battle.carveTerrainAndSprite(this.y - this.spriteRadius, -112, this.x - this.spriteRadius, this.sprite);
                                                                 if ((var19 != 0) &&
-                                                                  (this.field_y > 200)) {
-                                                                  this.field_y = 300;
-                                                                  if (165 == this.field_I) {
-                                                                    this.field_q.carveTerrainAndSprite(-this.field_r + this.field_G, param0 ^ -6132, -this.field_r + this.field_v, this.field_p);
+                                                                  (this.ageTicks > 200)) {
+                                                                  this.ageTicks = 300;
+                                                                  if (165 == this.spellType) {
+                                                                    this.battle.carveTerrainAndSprite(-this.spriteRadius + this.y, obfuscationGuard ^ -6132, -this.spriteRadius + this.x, this.sprite);
                                                                   }
                                                                 }
                                                               }
                                                             } else {
-                                                              if (this.field_y > 200) {
-                                                                this.field_y = 300;
-                                                                if (165 == this.field_I) {
-                                                                  this.field_q.carveTerrainAndSprite(-this.field_r + this.field_G, param0 ^ -6132, -this.field_r + this.field_v, this.field_p);
+                                                              if (this.ageTicks > 200) {
+                                                                this.ageTicks = 300;
+                                                                if (165 == this.spellType) {
+                                                                  this.battle.carveTerrainAndSprite(-this.spriteRadius + this.y, obfuscationGuard ^ -6132, -this.spriteRadius + this.x, this.sprite);
                                                                 }
                                                               }
                                                             }
                                                           }
                                                           boolean decompiledFrameRemainder10 = true;
                                                           if (var15 < -128) {
-                                                            if (this.field_I == 143 ||
-                                                              this.field_I == 135 ||
-                                                              this.field_I == 152) {
-                                                              if ((this.field_I != 143) &&
-                                                                (decompiledFrameRemainder10 = (null != this.field_q.field_sb)) &&
-                                                                (decompiledFrameRemainder10 = (this.field_q.field_sb[CacheEntry.field_n[7][1]] != null))) {
-                                                                IconHighlightPainter.playSample(200 + (int)(Math.random() * 500.0), false, this.field_q.field_sb[CacheEntry.field_n[7][1]], SceneWidgetNode.field_r[CacheEntry.field_n[7][1]] / 4);
+                                                            if (this.spellType == 143 ||
+                                                              this.spellType == 135 ||
+                                                              this.spellType == 152) {
+                                                              if ((this.spellType != 143) &&
+                                                                (decompiledFrameRemainder10 = (null != this.battle.projectileSamples)) &&
+                                                                (decompiledFrameRemainder10 = (this.battle.projectileSamples[CacheEntry.field_n[7][1]] != null))) {
+                                                                IconHighlightPainter.playSample(200 + (int)(Math.random() * 500.0), false, this.battle.projectileSamples[CacheEntry.field_n[7][1]], SceneWidgetNode.field_r[CacheEntry.field_n[7][1]] / 4);
                                                                 decompiledFrameRemainder10 = (var19 != 0);
                                                               }
                                                               if ((decompiledFrameRemainder10) &&
-                                                                (null != this.field_q.field_sb) &&
-                                                                (this.field_q.field_sb[CacheEntry.field_n[7][0]] != null)) {
-                                                                IconHighlightPainter.playSample((int)(Math.random() * 500.0) + 200, false, this.field_q.field_sb[CacheEntry.field_n[7][0]], SceneWidgetNode.field_r[CacheEntry.field_n[7][0]] / 8);
+                                                                (null != this.battle.projectileSamples) &&
+                                                                (this.battle.projectileSamples[CacheEntry.field_n[7][0]] != null)) {
+                                                                IconHighlightPainter.playSample((int)(Math.random() * 500.0) + 200, false, this.battle.projectileSamples[CacheEntry.field_n[7][0]], SceneWidgetNode.field_r[CacheEntry.field_n[7][0]] / 8);
                                                                 if (var19 != 0) {
                                                                   this.playTypeSound(1, (byte) 37, 3);
                                                                 }
@@ -1318,21 +1318,21 @@ final class SpellProjectile extends DualLinkNode {
                                                               this.playTypeSound(1, (byte) 37, 3);
                                                             }
                                                           }
-                                                          this.field_u = (var15 * var12 + var16 * var13) / var14;
-                                                          this.field_F = (var15 * var13 - var16 * var12) / var14;
-                                                          if ((135 == this.field_I ||
-                                                            152 == this.field_I) && Math.abs(var16) < 128) {
-                                                            this.field_F = this.field_F - 32;
+                                                          this.velocityX = (var15 * var12 + var16 * var13) / var14;
+                                                          this.velocityY = (var15 * var13 - var16 * var12) / var14;
+                                                          if ((135 == this.spellType ||
+                                                            152 == this.spellType) && Math.abs(var16) < 128) {
+                                                            this.velocityY = this.velocityY - 32;
                                                           }
-                                                          this.field_z = var10;
-                                                          this.field_o = var9;
-                                                          this.field_G = this.field_z >> 4;
-                                                          this.field_v = this.field_o >> 4;
+                                                          this.subpixelY = var10;
+                                                          this.subpixelX = var9;
+                                                          this.y = this.subpixelY >> 4;
+                                                          this.x = this.subpixelX >> 4;
                                                           var11++;
-                                                          if (143 == this.field_I &&
-                                                            100 < this.field_y) {
-                                                            this.field_F = -64;
-                                                            this.field_u = 0;
+                                                          if (143 == this.spellType &&
+                                                            100 < this.ageTicks) {
+                                                            this.velocityY = -64;
+                                                            this.velocityX = 0;
                                                             this.applyAreaEffect(0, 0, 32, 8);
                                                           }
                                                           if (var8 == 0 &&
@@ -1374,60 +1374,60 @@ final class SpellProjectile extends DualLinkNode {
                                                         (decompiledFrameCompleted22)) {
                                                         while (true) {
                                                           if (BitHelpers.field_b &&
-                                                            16 == this.field_I) {
+                                                            16 == this.spellType) {
                                                             break;
                                                           }
                                                           if (BitHelpers.field_b &&
-                                                            this.field_I == 20) {
+                                                            this.spellType == 20) {
                                                             decompiledFrameCompleted21 = false;
                                                             break;
                                                           }
                                                           if (BitHelpers.field_b &&
-                                                            159 == this.field_I) {
+                                                            159 == this.spellType) {
                                                             decompiledFrameCompleted20 = false;
                                                             break;
                                                           }
                                                           if (BitHelpers.field_b &&
-                                                            160 == this.field_I) {
+                                                            160 == this.spellType) {
                                                             decompiledFrameCompleted19 = false;
                                                             break;
                                                           }
                                                           if (BitHelpers.field_b) {
-                                                            if (135 == this.field_I) {
+                                                            if (135 == this.spellType) {
                                                               decompiledFrameCompleted18 = false;
                                                               break;
                                                             }
-                                                            if (152 == this.field_I) {
+                                                            if (152 == this.spellType) {
                                                               decompiledFrameCompleted17 = false;
                                                               break;
                                                             }
                                                           }
                                                           if (BitHelpers.field_b &&
-                                                            76 == this.field_I) {
+                                                            76 == this.spellType) {
                                                             decompiledFrameCompleted16 = false;
                                                             break;
                                                           }
                                                           if (BitHelpers.field_b &&
-                                                            this.field_I == 46) {
+                                                            this.spellType == 46) {
                                                             decompiledFrameCompleted15 = false;
                                                             break;
                                                           }
                                                           if (BitHelpers.field_b &&
-                                                            31 == this.field_I) {
+                                                            31 == this.spellType) {
                                                             decompiledFrameCompleted14 = false;
                                                             break;
                                                           }
                                                           boolean decompiledFrameRemainder9 = true;
-                                                          if (this.field_I == 20) {
-                                                            var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 90, this.field_G, this.field_q);
-                                                            this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
-                                                            this.applyAreaEffect(5, 32, 3, param0 ^ 6024);
+                                                          if (this.spellType == 20) {
+                                                            var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 90, this.y, this.battle);
+                                                            this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                            this.applyAreaEffect(5, 32, 3, obfuscationGuard ^ 6024);
                                                             decompiledFrameRemainder9 = (var19 != 0);
                                                           }
                                                           if (decompiledFrameRemainder9) {
-                                                            if (this.field_I == 135 &&
-                                                              this.field_y < 25) {
-                                                              this.applyAreaEffect(0, 32, 3, param0 ^ 6024);
+                                                            if (this.spellType == 135 &&
+                                                              this.ageTicks < 25) {
+                                                              this.applyAreaEffect(0, 32, 3, obfuscationGuard ^ 6024);
                                                               decompiledFrameRemainder9 = (var19 != 0);
                                                               if (decompiledFrameRemainder9) {
                                                                 decompiledFrameCompleted13 = false;
@@ -1435,25 +1435,25 @@ final class SpellProjectile extends DualLinkNode {
                                                               }
                                                             }
                                                             if ((decompiledFrameRemainder9) &&
-                                                              (this.field_I == 152)) {
-                                                              var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 130, this.field_G, this.field_q);
-                                                              this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
-                                                              if (0 > this.field_F) {
+                                                              (this.spellType == 152)) {
+                                                              var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 130, this.y, this.battle);
+                                                              this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                              if (0 > this.velocityY) {
                                                                 decompiledFrameCompleted12 = false;
                                                                 break;
                                                               }
                                                             }
                                                           }
-                                                          var12 = -NodeHashTable.field_m + this.field_v;
-                                                          var13 = this.field_G - GameSelectionHelpers.field_k;
+                                                          var12 = -NodeHashTable.field_m + this.x;
+                                                          var13 = this.y - GameSelectionHelpers.field_k;
                                                           var14 = ConnectionState.greatestCommonDivisor(var13 << 4, var12 << 4, false);
                                                           if (var14 < 1) {
                                                             var14 = 16;
                                                             var13 = -1;
                                                             var12 = 0;
                                                           }
-                                                          var15 = ((this.field_F << 8) * var13 + (this.field_u << 8) * var12) / var14;
-                                                          var16 = ((this.field_u << 8) * var13 - var12 * (this.field_F << 8)) / var14;
+                                                          var15 = ((this.velocityY << 8) * var13 + (this.velocityX << 8) * var12) / var14;
+                                                          var16 = ((this.velocityX << 8) * var13 - var12 * (this.velocityY << 8)) / var14;
                                                           if (var15 < 0) {
                                                             var16 = -var16;
                                                             var13 = -var13;
@@ -1462,66 +1462,66 @@ final class SpellProjectile extends DualLinkNode {
                                                           }
                                                           boolean decompiledFrameRemainder8 = true;
                                                           var15 = -(var15 >> 1);
-                                                          if (20 != this.field_I &&
-                                                            this.field_I != 159 &&
-                                                            this.field_I != 160 &&
-                                                            165 != this.field_I) {
-                                                            if (this.field_I == 135 ||
-                                                              this.field_I == 152) {
+                                                          if (20 != this.spellType &&
+                                                            this.spellType != 159 &&
+                                                            this.spellType != 160 &&
+                                                            165 != this.spellType) {
+                                                            if (this.spellType == 135 ||
+                                                              this.spellType == 152) {
                                                               if ((Math.abs(var16) < 128) &&
-                                                                (decompiledFrameRemainder8 = !(this.field_y <= 200))) {
-                                                                this.field_y = 300;
+                                                                (decompiledFrameRemainder8 = !(this.ageTicks <= 200))) {
+                                                                this.ageTicks = 300;
                                                                 decompiledFrameRemainder8 = (var19 != 0);
                                                               }
                                                               if (decompiledFrameRemainder8) {
-                                                                var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 132, this.field_G, this.field_q);
-                                                                this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
-                                                                this.field_y = this.field_y + 5;
+                                                                var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 132, this.y, this.battle);
+                                                                this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                                this.ageTicks = this.ageTicks + 5;
                                                                 decompiledFrameRemainder8 = (var19 != 0);
                                                               }
                                                             }
                                                             if (decompiledFrameRemainder8) {
-                                                              if (this.field_I == 46) {
+                                                              if (this.spellType == 46) {
                                                                 var15 = var15 >> 1;
                                                                 var16 = var16 >> 1;
                                                                 if ((256 > Math.abs(var16)) &&
-                                                                  (decompiledFrameRemainder8 = !(this.field_y <= 50))) {
-                                                                  this.field_y = 300;
+                                                                  (decompiledFrameRemainder8 = !(this.ageTicks <= 50))) {
+                                                                  this.ageTicks = 300;
                                                                   decompiledFrameRemainder8 = (var19 != 0);
                                                                 }
                                                                 if (decompiledFrameRemainder8) {
-                                                                  this.field_y = 50;
+                                                                  this.ageTicks = 50;
                                                                   decompiledFrameRemainder8 = (var19 != 0);
                                                                 }
                                                               }
                                                               if (decompiledFrameRemainder8) {
-                                                                if (16 != this.field_I &&
-                                                                  76 != this.field_I) {
-                                                                  if (this.field_I == 26) {
+                                                                if (16 != this.spellType &&
+                                                                  76 != this.spellType) {
+                                                                  if (this.spellType == 26) {
                                                                     decompiledFrameCompleted11 = false;
                                                                     break;
                                                                   }
-                                                                  if ((this.field_I != 31) &&
-                                                                    (decompiledFrameRemainder8 = (this.field_I == 34))) {
+                                                                  if ((this.spellType != 31) &&
+                                                                    (decompiledFrameRemainder8 = (this.spellType == 34))) {
                                                                     var12 = 0;
                                                                     var13 = 0;
-                                                                    this.field_y = 1;
+                                                                    this.ageTicks = 1;
                                                                     decompiledFrameRemainder8 = (var19 != 0);
                                                                   }
                                                                   if (decompiledFrameRemainder8) {
                                                                     this.field_x = 0;
                                                                     this.playTypeSound(1, (byte) 37, 2);
-                                                                    this.field_y = this.field_y + 50;
-                                                                    var17 = this.field_v;
-                                                                    this.field_v = NodeHashTable.field_m;
-                                                                    var18 = this.field_G;
-                                                                    this.field_G = GameSelectionHelpers.field_k;
-                                                                    var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 99, this.field_G, this.field_q);
-                                                                    this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                                    this.ageTicks = this.ageTicks + 50;
+                                                                    var17 = this.x;
+                                                                    this.x = NodeHashTable.field_m;
+                                                                    var18 = this.y;
+                                                                    this.y = GameSelectionHelpers.field_k;
+                                                                    var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 99, this.y, this.battle);
+                                                                    this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                                                     this.applyAreaEffect(10, 64, 64, 8);
-                                                                    this.field_G = var18;
-                                                                    this.field_v = var17;
-                                                                    if (this.field_y > 1000) {
+                                                                    this.y = var18;
+                                                                    this.x = var17;
+                                                                    if (this.ageTicks > 1000) {
                                                                       decompiledFrameCompleted10 = false;
                                                                       break;
                                                                     }
@@ -1544,17 +1544,17 @@ final class SpellProjectile extends DualLinkNode {
                                                                   var16 = var16 >> 1;
                                                                   var15 = var15 >> 1;
                                                                   if ((Math.abs(var16) < 128) &&
-                                                                    (decompiledFrameRemainder8 = !(50 >= this.field_y))) {
-                                                                    this.field_y = 300;
+                                                                    (decompiledFrameRemainder8 = !(50 >= this.ageTicks))) {
+                                                                    this.ageTicks = 300;
                                                                     decompiledFrameRemainder8 = (var19 != 0);
                                                                   }
                                                                   if (decompiledFrameRemainder8) {
-                                                                    if (this.field_y < 50 &&
-                                                                      16 == this.field_I) {
+                                                                    if (this.ageTicks < 50 &&
+                                                                      16 == this.spellType) {
                                                                       this.playTypeSound(2, (byte) 37, 0);
                                                                       this.applyAreaEffect(0, 0, 8, 8);
                                                                     }
-                                                                    this.field_y = 50;
+                                                                    this.ageTicks = 50;
                                                                     decompiledFrameRemainder8 = (var19 != 0);
                                                                   }
                                                                 }
@@ -1562,48 +1562,48 @@ final class SpellProjectile extends DualLinkNode {
                                                             }
                                                           }
                                                           if (decompiledFrameRemainder8) {
-                                                            if (this.field_I != 165) {
-                                                              var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 90, this.field_G, this.field_q);
-                                                              this.field_q.onProjectileFinished(param0 ^ 6068, (SpellProjectile) (var5));
+                                                            if (this.spellType != 165) {
+                                                              var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 90, this.y, this.battle);
+                                                              this.battle.onProjectileFinished(obfuscationGuard ^ 6068, (SpellProjectile) (var5));
                                                             }
                                                             if (Math.abs(var16) >= 128) {
-                                                              this.field_y = this.field_y + 5;
-                                                              if ((!(this.field_y < 300)) &&
-                                                                (this.field_I == 165) &&
-                                                                (this.field_I == 165)) {
-                                                                this.field_q.carveTerrainAndSprite(this.field_G - this.field_r, -112, this.field_v - this.field_r, this.field_p);
+                                                              this.ageTicks = this.ageTicks + 5;
+                                                              if ((!(this.ageTicks < 300)) &&
+                                                                (this.spellType == 165) &&
+                                                                (this.spellType == 165)) {
+                                                                this.battle.carveTerrainAndSprite(this.y - this.spriteRadius, -112, this.x - this.spriteRadius, this.sprite);
                                                                 if ((var19 != 0) &&
-                                                                  (this.field_y > 200)) {
-                                                                  this.field_y = 300;
-                                                                  if (165 == this.field_I) {
-                                                                    this.field_q.carveTerrainAndSprite(-this.field_r + this.field_G, param0 ^ -6132, -this.field_r + this.field_v, this.field_p);
+                                                                  (this.ageTicks > 200)) {
+                                                                  this.ageTicks = 300;
+                                                                  if (165 == this.spellType) {
+                                                                    this.battle.carveTerrainAndSprite(-this.spriteRadius + this.y, obfuscationGuard ^ -6132, -this.spriteRadius + this.x, this.sprite);
                                                                   }
                                                                 }
                                                               }
                                                             } else {
-                                                              if (this.field_y > 200) {
-                                                                this.field_y = 300;
-                                                                if (165 == this.field_I) {
-                                                                  this.field_q.carveTerrainAndSprite(-this.field_r + this.field_G, param0 ^ -6132, -this.field_r + this.field_v, this.field_p);
+                                                              if (this.ageTicks > 200) {
+                                                                this.ageTicks = 300;
+                                                                if (165 == this.spellType) {
+                                                                  this.battle.carveTerrainAndSprite(-this.spriteRadius + this.y, obfuscationGuard ^ -6132, -this.spriteRadius + this.x, this.sprite);
                                                                 }
                                                               }
                                                             }
                                                           }
                                                           boolean decompiledFrameRemainder7 = true;
                                                           if (var15 < -128) {
-                                                            if (this.field_I == 143 ||
-                                                              this.field_I == 135 ||
-                                                              this.field_I == 152) {
-                                                              if ((this.field_I != 143) &&
-                                                                (decompiledFrameRemainder7 = (null != this.field_q.field_sb)) &&
-                                                                (decompiledFrameRemainder7 = (this.field_q.field_sb[CacheEntry.field_n[7][1]] != null))) {
-                                                                IconHighlightPainter.playSample(200 + (int)(Math.random() * 500.0), false, this.field_q.field_sb[CacheEntry.field_n[7][1]], SceneWidgetNode.field_r[CacheEntry.field_n[7][1]] / 4);
+                                                            if (this.spellType == 143 ||
+                                                              this.spellType == 135 ||
+                                                              this.spellType == 152) {
+                                                              if ((this.spellType != 143) &&
+                                                                (decompiledFrameRemainder7 = (null != this.battle.projectileSamples)) &&
+                                                                (decompiledFrameRemainder7 = (this.battle.projectileSamples[CacheEntry.field_n[7][1]] != null))) {
+                                                                IconHighlightPainter.playSample(200 + (int)(Math.random() * 500.0), false, this.battle.projectileSamples[CacheEntry.field_n[7][1]], SceneWidgetNode.field_r[CacheEntry.field_n[7][1]] / 4);
                                                                 decompiledFrameRemainder7 = (var19 != 0);
                                                               }
                                                               if ((decompiledFrameRemainder7) &&
-                                                                (null != this.field_q.field_sb) &&
-                                                                (this.field_q.field_sb[CacheEntry.field_n[7][0]] != null)) {
-                                                                IconHighlightPainter.playSample((int)(Math.random() * 500.0) + 200, false, this.field_q.field_sb[CacheEntry.field_n[7][0]], SceneWidgetNode.field_r[CacheEntry.field_n[7][0]] / 8);
+                                                                (null != this.battle.projectileSamples) &&
+                                                                (this.battle.projectileSamples[CacheEntry.field_n[7][0]] != null)) {
+                                                                IconHighlightPainter.playSample((int)(Math.random() * 500.0) + 200, false, this.battle.projectileSamples[CacheEntry.field_n[7][0]], SceneWidgetNode.field_r[CacheEntry.field_n[7][0]] / 8);
                                                                 if (var19 != 0) {
                                                                   this.playTypeSound(1, (byte) 37, 3);
                                                                 }
@@ -1612,21 +1612,21 @@ final class SpellProjectile extends DualLinkNode {
                                                               this.playTypeSound(1, (byte) 37, 3);
                                                             }
                                                           }
-                                                          this.field_u = (var15 * var12 + var16 * var13) / var14;
-                                                          this.field_F = (var15 * var13 - var16 * var12) / var14;
-                                                          if ((135 == this.field_I ||
-                                                            152 == this.field_I) && Math.abs(var16) < 128) {
-                                                            this.field_F = this.field_F - 32;
+                                                          this.velocityX = (var15 * var12 + var16 * var13) / var14;
+                                                          this.velocityY = (var15 * var13 - var16 * var12) / var14;
+                                                          if ((135 == this.spellType ||
+                                                            152 == this.spellType) && Math.abs(var16) < 128) {
+                                                            this.velocityY = this.velocityY - 32;
                                                           }
-                                                          this.field_z = var10;
-                                                          this.field_o = var9;
-                                                          this.field_G = this.field_z >> 4;
-                                                          this.field_v = this.field_o >> 4;
+                                                          this.subpixelY = var10;
+                                                          this.subpixelX = var9;
+                                                          this.y = this.subpixelY >> 4;
+                                                          this.x = this.subpixelX >> 4;
                                                           var11++;
-                                                          if (143 == this.field_I &&
-                                                            100 < this.field_y) {
-                                                            this.field_F = -64;
-                                                            this.field_u = 0;
+                                                          if (143 == this.spellType &&
+                                                            100 < this.ageTicks) {
+                                                            this.velocityY = -64;
+                                                            this.velocityX = 0;
                                                             this.applyAreaEffect(0, 0, 32, 8);
                                                           }
                                                           if (var8 == 0 &&
@@ -1639,13 +1639,13 @@ final class SpellProjectile extends DualLinkNode {
                                                             break;
                                                           }
                                                           var12_ref_ll = ScreenSwitchHelpers.field_f[17];
-                                                          if ((this.field_q.field_H / 4) > this.field_G) {
+                                                          if ((this.battle.arenaHeight / 4) > this.y) {
                                                             var12_ref_ll = ScreenSwitchHelpers.field_f[18];
                                                           }
-                                                          if (this.field_G < this.field_q.field_H / 5) {
+                                                          if (this.y < this.battle.arenaHeight / 5) {
                                                             var12_ref_ll = ScreenSwitchHelpers.field_f[19];
                                                           }
-                                                          this.field_p = var12_ref_ll.toRgbSprite();
+                                                          this.sprite = var12_ref_ll.toRgbSprite();
                                                         }
                                                       }
                                                       if ((decompiledFrameCompleted34) &&
@@ -1704,8 +1704,8 @@ final class SpellProjectile extends DualLinkNode {
                                                         (decompiledFrameCompleted10) &&
                                                         (decompiledFrameCompleted9) &&
                                                         (decompiledFrameCompleted8)) {
-                                                        var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 90, this.field_G, this.field_q);
-                                                        this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                        var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 90, this.y, this.battle);
+                                                        this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                                         this.applyAreaEffect(5, 20, 32, 8);
                                                         break regionExit8;
                                                       }
@@ -1732,7 +1732,7 @@ final class SpellProjectile extends DualLinkNode {
                                                         (decompiledFrameCompleted10) &&
                                                         (decompiledFrameCompleted9) &&
                                                         (decompiledFrameCompleted8)) {
-                                                        this.applyAreaEffect(10, 32, 32, param0 - 6008);
+                                                        this.applyAreaEffect(10, 32, 32, obfuscationGuard - 6008);
                                                         break regionExit8;
                                                       }
                                                       if ((decompiledFrameCompleted31) &&
@@ -1757,7 +1757,7 @@ final class SpellProjectile extends DualLinkNode {
                                                         (decompiledFrameCompleted9) &&
                                                         (decompiledFrameCompleted8)) {
                                                         this.applyAreaEffect(50, 128, 128, 8);
-                                                        this.field_q.carveTerrainAndSprite(-this.field_r + this.field_G, -120, this.field_v - this.field_r, this.field_p);
+                                                        this.battle.carveTerrainAndSprite(-this.spriteRadius + this.y, -120, this.x - this.spriteRadius, this.sprite);
                                                         break regionExit8;
                                                       }
                                                       if ((decompiledFrameCompleted29) &&
@@ -1778,9 +1778,9 @@ final class SpellProjectile extends DualLinkNode {
                                                         (decompiledFrameCompleted9) &&
                                                         (decompiledFrameCompleted8)) {
                                                         this.playTypeSound(1, (byte) 37, 7);
-                                                        var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 132, this.field_G, this.field_q);
-                                                        this.field_q.onProjectileFinished(param0 ^ 6068, (SpellProjectile) (var5));
-                                                        this.applyAreaEffect(3, 20, 32, param0 ^ 6024);
+                                                        var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 132, this.y, this.battle);
+                                                        this.battle.onProjectileFinished(obfuscationGuard ^ 6068, (SpellProjectile) (var5));
+                                                        this.applyAreaEffect(3, 20, 32, obfuscationGuard ^ 6024);
                                                         break regionExit8;
                                                       }
                                                       if ((decompiledFrameCompleted28) &&
@@ -1799,8 +1799,8 @@ final class SpellProjectile extends DualLinkNode {
                                                         (decompiledFrameCompleted9) &&
                                                         (decompiledFrameCompleted8)) {
                                                         this.playTypeSound(2, (byte) 37, 3);
-                                                        var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 95, this.field_G, this.field_q);
-                                                        this.field_q.onProjectileFinished(param0 - 5964, (SpellProjectile) (var5));
+                                                        var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 95, this.y, this.battle);
+                                                        this.battle.onProjectileFinished(obfuscationGuard - 5964, (SpellProjectile) (var5));
                                                         this.applyAreaEffect(5, 20, 32, 8);
                                                         break regionExit8;
                                                       }
@@ -1823,18 +1823,18 @@ final class SpellProjectile extends DualLinkNode {
                                                           return;
                                                         }
                                                         this.field_x = 5;
-                                                        this.field_y = this.field_y + 50;
-                                                        var12 = this.field_v;
-                                                        this.field_v = NodeHashTable.field_m;
-                                                        var13 = this.field_G;
-                                                        this.field_G = GameSelectionHelpers.field_k;
+                                                        this.ageTicks = this.ageTicks + 50;
+                                                        var12 = this.x;
+                                                        this.x = NodeHashTable.field_m;
+                                                        var13 = this.y;
+                                                        this.y = GameSelectionHelpers.field_k;
                                                         this.playTypeSound(1, (byte) 37, 2);
-                                                        var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 99, this.field_G, this.field_q);
-                                                        this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                        var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 99, this.y, this.battle);
+                                                        this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                                         this.applyAreaEffect(10, 64, 64, 8);
-                                                        this.field_G = var13;
-                                                        this.field_v = var12;
-                                                        if (1000 < this.field_y) {
+                                                        this.y = var13;
+                                                        this.x = var12;
+                                                        if (1000 < this.ageTicks) {
                                                           this.remove(0);
                                                         }
                                                         this.notifyOwner((byte) 118);
@@ -1849,8 +1849,8 @@ final class SpellProjectile extends DualLinkNode {
                                                         (decompiledFrameCompleted10) &&
                                                         (decompiledFrameCompleted9) &&
                                                         (decompiledFrameCompleted8)) {
-                                                        var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 95, this.field_G, this.field_q);
-                                                        this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                        var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 95, this.y, this.battle);
+                                                        this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                                         this.applyAreaEffect(2, 10, 8, 8);
                                                       }
                                                     }
@@ -1867,72 +1867,72 @@ final class SpellProjectile extends DualLinkNode {
                                                     if ((decompiledFrameCompleted25) &&
                                                       (decompiledFrameCompleted12) &&
                                                       (decompiledFrameCompleted8)) {
-                                                      this.field_y = this.field_y + 50;
-                                                      var17 = this.field_v;
-                                                      var18 = this.field_G;
-                                                      this.field_v = NodeHashTable.field_m;
-                                                      this.field_G = GameSelectionHelpers.field_k;
-                                                      var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 89, this.field_G, this.field_q);
-                                                      this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                      this.ageTicks = this.ageTicks + 50;
+                                                      var17 = this.x;
+                                                      var18 = this.y;
+                                                      this.x = NodeHashTable.field_m;
+                                                      this.y = GameSelectionHelpers.field_k;
+                                                      var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 89, this.y, this.battle);
+                                                      this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                                       this.playTypeSound(1, (byte) 37, 1);
                                                       if (!BitHelpers.field_b) {
                                                         this.applyAreaEffect(50, 64, 96, 8);
                                                         if (var19 != 0) {
                                                           var10 -= 256;
                                                           this.applyAreaEffect(25, 64, 96, 8);
-                                                          if (0 == (this.field_v & 1)) {
-                                                            this.field_u = this.field_u - 64;
-                                                            this.field_u = this.field_u + 64;
+                                                          if (0 == (this.x & 1)) {
+                                                            this.velocityX = this.velocityX - 64;
+                                                            this.velocityX = this.velocityX + 64;
                                                           } else {
-                                                            this.field_u = this.field_u + 64;
+                                                            this.velocityX = this.velocityX + 64;
                                                           }
-                                                          this.field_F = this.field_F - 64;
+                                                          this.velocityY = this.velocityY - 64;
                                                         }
                                                       } else {
                                                         var10 -= 256;
                                                         this.applyAreaEffect(25, 64, 96, 8);
-                                                        if (0 == (this.field_v & 1)) {
-                                                          this.field_u = this.field_u - 64;
+                                                        if (0 == (this.x & 1)) {
+                                                          this.velocityX = this.velocityX - 64;
                                                           if (var19 != 0) {
-                                                            this.field_u = this.field_u + 64;
+                                                            this.velocityX = this.velocityX + 64;
                                                           }
                                                         } else {
-                                                          this.field_u = this.field_u + 64;
+                                                          this.velocityX = this.velocityX + 64;
                                                         }
-                                                        this.field_F = this.field_F - 64;
+                                                        this.velocityY = this.velocityY - 64;
                                                       }
-                                                      this.field_v = var17;
-                                                      this.field_G = var18;
-                                                      if (this.field_y > 200) {
+                                                      this.x = var17;
+                                                      this.y = var18;
+                                                      if (this.ageTicks > 200) {
                                                         this.remove(0);
                                                         return;
                                                       }
-                                                      var12 = -(this.field_u >> 1);
+                                                      var12 = -(this.velocityX >> 1);
                                                       var14 = 1;
-                                                      var13 = -(this.field_F >> 1);
+                                                      var13 = -(this.velocityY >> 1);
                                                       var15 = 1;
                                                       var16 = 0;
-                                                      this.field_z = var10;
-                                                      this.field_o = var9;
+                                                      this.subpixelY = var10;
+                                                      this.subpixelX = var9;
                                                       if (!BitHelpers.field_b) {
-                                                        this.field_F = (var13 * var15 - var12 * var16) / var14;
-                                                        this.field_u = (var16 * var13 + var15 * var12) / var14;
+                                                        this.velocityY = (var13 * var15 - var12 * var16) / var14;
+                                                        this.velocityX = (var16 * var13 + var15 * var12) / var14;
                                                       }
-                                                      this.field_v = this.field_o >> 4;
-                                                      this.field_G = this.field_z >> 4;
+                                                      this.x = this.subpixelX >> 4;
+                                                      this.y = this.subpixelY >> 4;
                                                       this.notifyOwner((byte) 104);
                                                       return;
                                                     }
                                                   }
                                                   if ((decompiledFrameCompleted25) &&
                                                     (decompiledFrameCompleted12)) {
-                                                    if (null != this.field_t &&
+                                                    if (null != this.owner &&
                                                       var7 != 0) {
-                                                      this.field_q.stampUnitMask(-46, this.field_t);
+                                                      this.battle.stampUnitMask(-46, this.owner);
                                                     }
                                                     if (5 == var11) {
-                                                      this.field_F = this.field_F >> 1;
-                                                      this.field_u = this.field_u >> 1;
+                                                      this.velocityY = this.velocityY >> 1;
+                                                      this.velocityX = this.velocityX >> 1;
                                                     }
                                                     if (var19 == 0) {
                                                       break regionExit4;
@@ -1947,44 +1947,44 @@ final class SpellProjectile extends DualLinkNode {
                                                 return;
                                               }
                                             }
-                                            if (this.field_I != 116) {
+                                            if (this.spellType != 116) {
                                               boolean decompiledFrameRemainder15 = true;
-                                              this.field_u = 0;
-                                              this.field_F = 0;
-                                              if (this.field_I != 34 ||
-                                                null == this.field_t) {
-                                                if (this.field_I == 46) {
+                                              this.velocityX = 0;
+                                              this.velocityY = 0;
+                                              if (this.spellType != 34 ||
+                                                null == this.owner) {
+                                                if (this.spellType == 46) {
                                                   this.checkHeightEffects(87);
-                                                  this.remove(param0 ^ 6016);
+                                                  this.remove(obfuscationGuard ^ 6016);
                                                   return;
                                                 }
-                                                if (this.field_I == 76) {
-                                                  if (7 <= this.field_G) {
-                                                    this.field_q.carveTerrainAndSprite(this.field_G - this.field_r, param0 ^ -6020, -this.field_r + this.field_v, this.field_p);
+                                                if (this.spellType == 76) {
+                                                  if (7 <= this.y) {
+                                                    this.battle.carveTerrainAndSprite(this.y - this.spriteRadius, obfuscationGuard ^ -6020, -this.spriteRadius + this.x, this.sprite);
                                                   }
                                                   this.remove(0);
                                                   return;
                                                 }
-                                                if (20 == this.field_I) {
-                                                  var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 90, this.field_G, this.field_q);
-                                                  this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                if (20 == this.spellType) {
+                                                  var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 90, this.y, this.battle);
+                                                  this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                                   this.remove(0);
                                                   return;
                                                 }
-                                                if (159 == this.field_I) {
+                                                if (159 == this.spellType) {
                                                   this.applyAreaEffect(10, 32, 32, 8);
-                                                  this.remove(param0 ^ 6016);
+                                                  this.remove(obfuscationGuard ^ 6016);
                                                   return;
                                                 }
-                                                if (160 == this.field_I) {
-                                                  this.field_q.carveTerrainAndSprite(this.field_G - this.field_r, -82, this.field_v - this.field_r, this.field_p);
-                                                  this.remove(param0 ^ 6016);
+                                                if (160 == this.spellType) {
+                                                  this.battle.carveTerrainAndSprite(this.y - this.spriteRadius, -82, this.x - this.spriteRadius, this.sprite);
+                                                  this.remove(obfuscationGuard ^ 6016);
                                                   return;
                                                 }
-                                                if (this.field_I != 135 &&
-                                                  152 != this.field_I) {
-                                                  if (!this.field_q.spriteOverlapsTerrain(1 + this.field_G - this.field_r, 2, -this.field_r + this.field_v, this.field_p)) {
-                                                    this.field_y = 0;
+                                                if (this.spellType != 135 &&
+                                                  152 != this.spellType) {
+                                                  if (!this.battle.spriteOverlapsTerrain(1 + this.y - this.spriteRadius, 2, -this.spriteRadius + this.x, this.sprite)) {
+                                                    this.ageTicks = 0;
                                                     if (var19 == 0) {
                                                       break regionExit4;
                                                     }
@@ -1992,7 +1992,7 @@ final class SpellProjectile extends DualLinkNode {
                                                   }
                                                   else {
                                                     if (BitHelpers.field_b) {
-                                                      if (this.field_I != 16) {
+                                                      if (this.spellType != 16) {
                                                         break regionExit4;
                                                       }
                                                       this.playTypeSound(2, (byte) 37, 0);
@@ -2000,11 +2000,11 @@ final class SpellProjectile extends DualLinkNode {
                                                       this.remove(0);
                                                       return;
                                                     }
-                                                    if (16 != this.field_I) {
+                                                    if (16 != this.spellType) {
                                                       break regionExit4;
                                                     }
-                                                    if ((-32 + this.field_q.field_H) >= this.field_G &&
-                                                      !this.field_q.spriteOverlapsTerrain(this.field_G - this.field_r + 1, 2, -this.field_r + this.field_v, ScreenSwitchHelpers.field_f[0].toRgbSprite())) {
+                                                    if ((-32 + this.battle.arenaHeight) >= this.y &&
+                                                      !this.battle.spriteOverlapsTerrain(this.y - this.spriteRadius + 1, 2, -this.spriteRadius + this.x, ScreenSwitchHelpers.field_f[0].toRgbSprite())) {
                                                       break regionExit4;
                                                     }
                                                     this.remove(0);
@@ -2013,106 +2013,106 @@ final class SpellProjectile extends DualLinkNode {
                                                 }
                                                 if (decompiledFrameRemainder15) {
                                                   this.playTypeSound(1, (byte) 37, 7);
-                                                  var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 130, this.field_G, this.field_q);
-                                                  this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
-                                                  this.applyAreaEffect(3, 16, 16, param0 ^ 6024);
+                                                  var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 130, this.y, this.battle);
+                                                  this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                  this.applyAreaEffect(3, 16, 16, obfuscationGuard ^ 6024);
                                                   this.remove(0);
                                                   return;
                                                 }
                                               }
-                                              var7 = this.field_v;
-                                              var8 = Math.abs(this.field_v - this.field_t.field_lb);
+                                              var7 = this.x;
+                                              var8 = Math.abs(this.x - this.owner.x);
                                               if (var8 < 50) {
                                                 var8 = 50;
                                               }
                                               var9 = 225;
-                                              if (this.field_q.field_x[this.field_t.field_u] == 2) {
-                                                var9 = var9 + this.field_q.field_X[this.field_t.field_u];
+                                              if (this.battle.playerSpellbook[this.owner.ownerPlayer] == 2) {
+                                                var9 = var9 + this.battle.field_X[this.owner.ownerPlayer];
                                               }
                                               if (var9 > var8) {
                                                 var9 = var8;
                                               }
-                                              if (this.field_y == 50) {
+                                              if (this.ageTicks == 50) {
                                                 var7 -= 128;
                                               }
-                                              if (100 == this.field_y) {
+                                              if (100 == this.ageTicks) {
                                                 var7 += 128;
                                               }
-                                              if (175 == this.field_y) {
+                                              if (175 == this.ageTicks) {
                                                 var7 -= 64;
                                               }
-                                              if (this.field_y == 200) {
+                                              if (this.ageTicks == 200) {
                                                 var7 += 64;
                                               }
-                                              if (this.field_y == 225) {
+                                              if (this.ageTicks == 225) {
                                                 var7++;
                                               }
-                                              if (250 == this.field_y) {
+                                              if (250 == this.ageTicks) {
                                                 var7 -= 32;
                                               }
-                                              if (275 == this.field_y) {
+                                              if (275 == this.ageTicks) {
                                                 var7 += 32;
                                               }
-                                              if (300 == this.field_y) {
+                                              if (300 == this.ageTicks) {
                                                 var7++;
                                               }
-                                              if (310 == this.field_y) {
+                                              if (310 == this.ageTicks) {
                                                 var7 -= 16;
                                               }
-                                              if (325 == this.field_y) {
+                                              if (325 == this.ageTicks) {
                                                 var7 += 16;
                                               }
-                                              if (~this.field_v != ~var7 &&
-                                                this.field_y <= var8) {
+                                              if (~this.x != ~var7 &&
+                                                this.ageTicks <= var8) {
                                                 this.playSound(100, true);
-                                                var5 = this.spawnFromHere(var7, (BattleUnit) null, (byte) 81, 84, -480, this.field_q);
-                                                ((SpellProjectile) (var5)).field_u = (-var7 + this.field_v) / 3;
-                                                ((SpellProjectile) (var5)).field_y = 45;
-                                                ((SpellProjectile) (var5)).field_F = (480 + this.field_G) / 3;
-                                                this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                var5 = this.spawnFromHere(var7, (BattleUnit) null, (byte) 81, 84, -480, this.battle);
+                                                ((SpellProjectile) (var5)).velocityX = (-var7 + this.x) / 3;
+                                                ((SpellProjectile) (var5)).ageTicks = 45;
+                                                ((SpellProjectile) (var5)).velocityY = (480 + this.y) / 3;
+                                                this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                               }
-                                              if (var9 < this.field_y) {
+                                              if (var9 < this.ageTicks) {
                                                 this.remove(0);
                                                 return;
                                               }
                                             }
                                           }
                                           boolean decompiledFrameRemainder17 = true;
-                                          if ((250 >= this.field_y ||
-                                            this.field_I == 34) &&
-                                            (decompiledFrameRemainder17 = (this.field_I != 26)) &&
-                                            (decompiledFrameRemainder17 = (this.field_I != 31)) &&
-                                            (decompiledFrameRemainder17 = (this.field_I != 34 ||
-                                            !(this.field_y <= 0)))) {
-                                            this.field_y = this.field_y + 1;
+                                          if ((250 >= this.ageTicks ||
+                                            this.spellType == 34) &&
+                                            (decompiledFrameRemainder17 = (this.spellType != 26)) &&
+                                            (decompiledFrameRemainder17 = (this.spellType != 31)) &&
+                                            (decompiledFrameRemainder17 = (this.spellType != 34 ||
+                                            !(this.ageTicks <= 0)))) {
+                                            this.ageTicks = this.ageTicks + 1;
                                             decompiledFrameRemainder17 = (var19 != 0);
                                           }
                                           if (decompiledFrameRemainder17) {
-                                            if (this.field_I == 116) {
-                                              if (this.field_y == 251) {
+                                            if (this.spellType == 116) {
+                                              if (this.ageTicks == 251) {
                                                 this.playTypeSound(1, (byte) 37, 6);
-                                                var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 128, this.field_G, this.field_q);
-                                                this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
-                                                this.applyAreaEffect(40, 128, 32, param0 ^ 6024);
+                                                var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 128, this.y, this.battle);
+                                                this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                this.applyAreaEffect(40, 128, 32, obfuscationGuard ^ 6024);
                                               }
-                                              this.field_y = this.field_y + 1;
+                                              this.ageTicks = this.ageTicks + 1;
                                               var7 = 1;
-                                              if (null != this.field_t) {
-                                                this.field_q.eraseUnitMask(this.field_t, param0 ^ 6016);
-                                                if (this.field_q.field_x[this.field_t.field_u] == 6) {
-                                                  var7 = var7 + this.field_q.field_X[this.field_t.field_u] / 20;
+                                              if (null != this.owner) {
+                                                this.battle.eraseUnitMask(this.owner, obfuscationGuard ^ 6016);
+                                                if (this.battle.playerSpellbook[this.owner.ownerPlayer] == 6) {
+                                                  var7 = var7 + this.battle.field_X[this.owner.ownerPlayer] / 20;
                                                 }
                                               }
                                               boolean decompiledFrameCompleted7 = true;
-                                              if ((-250 + this.field_y) % 5 == 0) {
-                                                var8 = (this.field_y - 250 - 5) / 5;
+                                              if ((-250 + this.ageTicks) % 5 == 0) {
+                                                var8 = (this.ageTicks - 250 - 5) / 5;
                                                 var9 = var8 * 8192 / 15;
                                                 var10 = 0;
                                                 while (var7 > var10) {
                                                   var11 = GradientBarPainter.sine(-43, var9) * (3 + var10) >> 12;
-                                                  var12 = (3 + var10) * BevelBoxPainter.cosine(var9, param0 - 6137) >> 12;
+                                                  var12 = (3 + var10) * BevelBoxPainter.cosine(var9, obfuscationGuard - 6137) >> 12;
                                                   BitHelpers.field_b = false;
-                                                  stackOut_2218_0 = this.field_q.isSolidAt(this.field_G + var12, this.field_v + var11, (byte) -83);
+                                                  stackOut_2218_0 = this.battle.isSolidAt(this.y + var12, this.x + var11, (byte) -83);
                                                   stackIn_2234_0 = stackOut_2218_0 ? 1 : 0;
                                                   stackIn_2219_0 = stackOut_2218_0;
                                                   if (var19 != 0) {
@@ -2122,172 +2122,172 @@ final class SpellProjectile extends DualLinkNode {
                                                   if (stackIn_2219_0 &&
                                                     !BitHelpers.field_b) {
                                                     this.playTypeSound(1, (byte) 37, 6);
-                                                    var5 = this.spawnFromHere(var11 + this.field_v, this.field_t, (byte) 81, 117, var12 + this.field_G, this.field_q);
-                                                    this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
-                                                    var5 = this.spawnFromHere(this.field_v + var11, (BattleUnit) null, (byte) 81, 128, this.field_G + var12, this.field_q);
-                                                    this.field_q.onProjectileFinished(param0 - 5964, (SpellProjectile) (var5));
+                                                    var5 = this.spawnFromHere(var11 + this.x, this.owner, (byte) 81, 117, var12 + this.y, this.battle);
+                                                    this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                    var5 = this.spawnFromHere(this.x + var11, (BattleUnit) null, (byte) 81, 128, this.y + var12, this.battle);
+                                                    this.battle.onProjectileFinished(obfuscationGuard - 5964, (SpellProjectile) (var5));
                                                   }
                                                   var10++;
                                                 }
                                               }
                                               if (decompiledFrameCompleted7) {
-                                                if (this.field_t != null) {
-                                                  this.field_q.stampUnitMask(-68, this.field_t);
+                                                if (this.owner != null) {
+                                                  this.battle.stampUnitMask(-68, this.owner);
                                                 }
-                                                this.field_F = 0;
-                                                this.field_u = 0;
+                                                this.velocityY = 0;
+                                                this.velocityX = 0;
                                                 stackIn_2234_0 = -326;
                                               }
-                                              if (stackIn_2234_0 > ~this.field_y) {
+                                              if (stackIn_2234_0 > ~this.ageTicks) {
                                                 this.remove(0);
                                               }
                                               return;
                                             }
-                                            if (this.field_I == 33) {
+                                            if (this.spellType == 33) {
                                               var7 = 0;
                                               while (var7 < 10) {
-                                                var5 = this.spawnFromHere(this.field_v, this.field_t, (byte) 81, 112, this.field_G, this.field_q);
-                                                ((SpellProjectile) (var5)).field_u = (int)(96.0 * Math.sin(3.14 * (double)var7 / 5.0)) << 4;
-                                                ((SpellProjectile) (var5)).field_F = (int)(-32.0 + 96.0 * Math.cos((double)var7 * 3.14 / 5.0)) << 4;
-                                                this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                var5 = this.spawnFromHere(this.x, this.owner, (byte) 81, 112, this.y, this.battle);
+                                                ((SpellProjectile) (var5)).velocityX = (int)(96.0 * Math.sin(3.14 * (double)var7 / 5.0)) << 4;
+                                                ((SpellProjectile) (var5)).velocityY = (int)(-32.0 + 96.0 * Math.cos((double)var7 * 3.14 / 5.0)) << 4;
+                                                this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                                 var7++;
                                                 if (var19 != 0) {
                                                   return;
                                                 }
                                               }
                                               this.playTypeSound(1, (byte) 37, 2);
-                                              var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 99, this.field_G, this.field_q);
-                                              this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                              var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 99, this.y, this.battle);
+                                              this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                               this.applyAreaEffect(80, 256, 64, 8);
-                                              this.remove(param0 ^ 6016);
+                                              this.remove(obfuscationGuard ^ 6016);
                                               return;
                                             }
-                                            if (this.field_I == 122) {
+                                            if (this.spellType == 122) {
                                               this.playTypeSound(1, (byte) 37, 1);
-                                              var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 154, this.field_G, this.field_q);
-                                              this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                              var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 154, this.y, this.battle);
+                                              this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                               this.applyAreaEffect(30, 128, 64, 8);
-                                              this.field_y = this.field_y + 1;
+                                              this.ageTicks = this.ageTicks + 1;
                                               this.drawOrbitEffect(88);
                                               this.remove(0);
                                               return;
                                             }
-                                            if (this.field_I == 53) {
+                                            if (this.spellType == 53) {
                                               this.playTypeSound(1, (byte) 37, 4);
                                               this.playSound(132, true);
-                                              var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 104, this.field_G, this.field_q);
-                                              this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
-                                              var5 = this.spawnFromHere(this.field_v, this.field_t, (byte) 81, 55, this.field_G, this.field_q);
+                                              var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 104, this.y, this.battle);
+                                              this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
+                                              var5 = this.spawnFromHere(this.x, this.owner, (byte) 81, 55, this.y, this.battle);
                                               ((SpellProjectile) (var5)).field_H = 1;
-                                              this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                              this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                               this.applyAreaEffect(40, 64, 48, 8);
                                               this.remove(0);
                                               return;
                                             }
-                                            if (12 == this.field_I) {
+                                            if (12 == this.spellType) {
                                               this.playTypeSound(1, (byte) 37, 0);
-                                              var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 86, this.field_G, this.field_q);
-                                              this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                              var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 86, this.y, this.battle);
+                                              this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                               this.applyAreaEffect(50, 128, 80, 8);
                                               this.remove(0);
                                               return;
                                             }
-                                            if (this.field_I == 143) {
-                                              if (null != this.field_q.field_sb &&
-                                                null != this.field_q.field_sb[CacheEntry.field_n[7][2]]) {
-                                                IconHighlightPainter.playSample((int)(Math.random() * 50.0) + 100, false, this.field_q.field_sb[CacheEntry.field_n[7][2]], SceneWidgetNode.field_r[CacheEntry.field_n[7][2]] / 2);
+                                            if (this.spellType == 143) {
+                                              if (null != this.battle.projectileSamples &&
+                                                null != this.battle.projectileSamples[CacheEntry.field_n[7][2]]) {
+                                                IconHighlightPainter.playSample((int)(Math.random() * 50.0) + 100, false, this.battle.projectileSamples[CacheEntry.field_n[7][2]], SceneWidgetNode.field_r[CacheEntry.field_n[7][2]] / 2);
                                               }
-                                              var5 = this.spawnFromHere(-32 + this.field_v, (BattleUnit) null, (byte) 81, 131, this.field_G, this.field_q);
-                                              this.field_q.onProjectileFinished(param0 - 5964, (SpellProjectile) (var5));
-                                              var5 = this.spawnFromHere(32 + this.field_v, (BattleUnit) null, (byte) 81, 131, this.field_G, this.field_q);
-                                              this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
-                                              var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 131, -32 + this.field_G, this.field_q);
-                                              this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
-                                              var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 131, this.field_G + 32, this.field_q);
-                                              this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                              var5 = this.spawnFromHere(-32 + this.x, (BattleUnit) null, (byte) 81, 131, this.y, this.battle);
+                                              this.battle.onProjectileFinished(obfuscationGuard - 5964, (SpellProjectile) (var5));
+                                              var5 = this.spawnFromHere(32 + this.x, (BattleUnit) null, (byte) 81, 131, this.y, this.battle);
+                                              this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
+                                              var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 131, -32 + this.y, this.battle);
+                                              this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
+                                              var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 131, this.y + 32, this.battle);
+                                              this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                               this.applyAreaEffect(50, 128, 128, 8);
                                               this.remove(0);
                                               return;
                                             }
-                                            if (this.field_I == 147) {
+                                            if (this.spellType == 147) {
                                               this.playTypeSound(0, (byte) 37, 9);
                                               this.applyAreaEffect(10, 256, 128, 8);
-                                              var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 101, this.field_G, this.field_q);
-                                              this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
-                                              var5 = this.spawnFromHere(this.field_v, this.field_t, (byte) 81, 74, this.field_G, this.field_q);
-                                              ((SpellProjectile) (var5)).field_u = 0;
-                                              ((SpellProjectile) (var5)).field_F = -256;
-                                              ((SpellProjectile) (var5)).field_y = 5;
-                                              this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                              var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 101, this.y, this.battle);
+                                              this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
+                                              var5 = this.spawnFromHere(this.x, this.owner, (byte) 81, 74, this.y, this.battle);
+                                              ((SpellProjectile) (var5)).velocityX = 0;
+                                              ((SpellProjectile) (var5)).velocityY = -256;
+                                              ((SpellProjectile) (var5)).ageTicks = 5;
+                                              this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                               this.remove(0);
                                               return;
                                             }
-                                            if (this.field_I == 13) {
+                                            if (this.spellType == 13) {
                                               this.playTypeSound(0, (byte) 37, 0);
-                                              var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 86, this.field_G, this.field_q);
-                                              this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
-                                              var7_ref_jd = new IsaacRandom(new int[]{this.field_q.field_Q, param3, this.field_v, this.field_G});
+                                              var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 86, this.y, this.battle);
+                                              this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
+                                              var7_ref_jd = new IsaacRandom(new int[]{this.battle.randomSeed, round, this.x, this.y});
                                               var8 = 0;
                                               while (var8 < 5) {
-                                                var5 = this.spawnFromHere(this.field_v, this.field_t, (byte) 81, 14, this.field_G, this.field_q);
+                                                var5 = this.spawnFromHere(this.x, this.owner, (byte) 81, 14, this.y, this.battle);
                                                 var9 = HuffmanCodec.randomBelow(var7_ref_jd, -2147483648, 8192);
-                                                ((SpellProjectile) (var5)).field_u = GradientBarPainter.sine(127, var9) >> 9;
-                                                ((SpellProjectile) (var5)).field_F = (BevelBoxPainter.cosine(var9, -115) * 3 >> 11) - 64;
-                                                this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                ((SpellProjectile) (var5)).velocityX = GradientBarPainter.sine(127, var9) >> 9;
+                                                ((SpellProjectile) (var5)).velocityY = (BevelBoxPainter.cosine(var9, -115) * 3 >> 11) - 64;
+                                                this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                                 var8++;
                                                 if (var19 != 0) {
                                                   return;
                                                 }
                                               }
-                                              this.applyAreaEffect(25, 128, 64, param0 ^ 6024);
+                                              this.applyAreaEffect(25, 128, 64, obfuscationGuard ^ 6024);
                                               this.remove(0);
                                               return;
                                             }
-                                            if (41 == this.field_I) {
+                                            if (41 == this.spellType) {
                                               this.playTypeSound(0, (byte) 37, 3);
-                                              var7_ref_jd = new IsaacRandom(new int[]{this.field_q.field_Q, param3, this.field_v, this.field_G});
+                                              var7_ref_jd = new IsaacRandom(new int[]{this.battle.randomSeed, round, this.x, this.y});
                                               var8 = 0;
                                               do {
                                                 if (var8 >= 5) {
                                                   var8 = 0;
                                                   break;
                                                 }
-                                                var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 42, this.field_G, this.field_q);
+                                                var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 42, this.y, this.battle);
                                                 var9 = HuffmanCodec.randomBelow(var7_ref_jd, -2147483648, 8192);
-                                                ((SpellProjectile) (var5)).field_u = GradientBarPainter.sine(-95, var9) >> 9;
-                                                ((SpellProjectile) (var5)).field_F = (3 * BevelBoxPainter.cosine(var9, -111) >> 11) - 64;
-                                                this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                ((SpellProjectile) (var5)).velocityX = GradientBarPainter.sine(-95, var9) >> 9;
+                                                ((SpellProjectile) (var5)).velocityY = (3 * BevelBoxPainter.cosine(var9, -111) >> 11) - 64;
+                                                this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                                 var8++;
                                               } while (var19 == 0);
                                               while (var8 < 4) {
-                                                var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 76, this.field_G, this.field_q);
-                                                var9 = HuffmanCodec.randomBelow(var7_ref_jd, param0 ^ -2147477632, 8192);
-                                                ((SpellProjectile) (var5)).field_u = GradientBarPainter.sine(-71, var9) >> 11;
-                                                ((SpellProjectile) (var5)).field_F = BevelBoxPainter.cosine(var9, param0 - 6130) >> 11;
-                                                this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 76, this.y, this.battle);
+                                                var9 = HuffmanCodec.randomBelow(var7_ref_jd, obfuscationGuard ^ -2147477632, 8192);
+                                                ((SpellProjectile) (var5)).velocityX = GradientBarPainter.sine(-71, var9) >> 11;
+                                                ((SpellProjectile) (var5)).velocityY = BevelBoxPainter.cosine(var9, obfuscationGuard - 6130) >> 11;
+                                                this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                                 var8++;
                                                 if (var19 != 0) {
                                                   return;
                                                 }
                                               }
-                                              var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 94, this.field_G, this.field_q);
-                                              this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                              var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 94, this.y, this.battle);
+                                              this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                               this.applyAreaEffect(5, 128, 64, 8);
-                                              this.remove(param0 ^ 6016);
+                                              this.remove(obfuscationGuard ^ 6016);
                                               return;
                                             }
-                                            if (this.field_I == 67) {
+                                            if (this.spellType == 67) {
                                               this.playTypeSound(1, (byte) 37, 0);
-                                              var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 86, this.field_G, this.field_q);
-                                              this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                              var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 86, this.y, this.battle);
+                                              this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                               var7 = 0;
                                               while (var7 < 15) {
-                                                var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 16, this.field_G, this.field_q);
+                                                var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 16, this.y, this.battle);
                                                 var8 = 8192 * var7 / 15;
-                                                ((SpellProjectile) (var5)).field_u = GradientBarPainter.sine(118, var8) >> 9;
-                                                ((SpellProjectile) (var5)).field_F = (3 * BevelBoxPainter.cosine(var8, param0 ^ -6117) >> 11) - 64;
+                                                ((SpellProjectile) (var5)).velocityX = GradientBarPainter.sine(118, var8) >> 9;
+                                                ((SpellProjectile) (var5)).velocityY = (3 * BevelBoxPainter.cosine(var8, obfuscationGuard ^ -6117) >> 11) - 64;
                                                 ((SpellProjectile) (var5)).field_w = this.field_w;
-                                                this.field_q.onProjectileFinished(param0 ^ 6068, (SpellProjectile) (var5));
+                                                this.battle.onProjectileFinished(obfuscationGuard ^ 6068, (SpellProjectile) (var5));
                                                 var7++;
                                                 if (var19 != 0) {
                                                   return;
@@ -2297,21 +2297,21 @@ final class SpellProjectile extends DualLinkNode {
                                               this.remove(0);
                                               return;
                                             }
-                                            if (this.field_I == 146) {
+                                            if (this.spellType == 146) {
                                               this.playTypeSound(0, (byte) 37, 7);
-                                              var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 131, this.field_G, this.field_q);
-                                              this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                              var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 131, this.y, this.battle);
+                                              this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                               var7 = 0;
                                               while (var7 < 15) {
-                                                var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 145, this.field_G, this.field_q);
+                                                var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 145, this.y, this.battle);
                                                 var8 = 8192 * var7 / 15;
-                                                ((SpellProjectile) (var5)).field_u = GradientBarPainter.sine(-78, var8) >> 9;
-                                                ((SpellProjectile) (var5)).field_F = -64 + (3 * BevelBoxPainter.cosine(var8, -116) >> 11);
-                                                ((SpellProjectile) (var5)).field_z = ((SpellProjectile) (var5)).field_z + 4 * ((SpellProjectile) (var5)).field_F;
-                                                ((SpellProjectile) (var5)).field_o = ((SpellProjectile) (var5)).field_o + 4 * ((SpellProjectile) (var5)).field_u;
-                                                ((SpellProjectile) (var5)).field_G = ((SpellProjectile) (var5)).field_z >> 4;
-                                                ((SpellProjectile) (var5)).field_v = ((SpellProjectile) (var5)).field_o >> 4;
-                                                this.field_q.onProjectileFinished(param0 ^ 6068, (SpellProjectile) (var5));
+                                                ((SpellProjectile) (var5)).velocityX = GradientBarPainter.sine(-78, var8) >> 9;
+                                                ((SpellProjectile) (var5)).velocityY = -64 + (3 * BevelBoxPainter.cosine(var8, -116) >> 11);
+                                                ((SpellProjectile) (var5)).subpixelY = ((SpellProjectile) (var5)).subpixelY + 4 * ((SpellProjectile) (var5)).velocityY;
+                                                ((SpellProjectile) (var5)).subpixelX = ((SpellProjectile) (var5)).subpixelX + 4 * ((SpellProjectile) (var5)).velocityX;
+                                                ((SpellProjectile) (var5)).y = ((SpellProjectile) (var5)).subpixelY >> 4;
+                                                ((SpellProjectile) (var5)).x = ((SpellProjectile) (var5)).subpixelX >> 4;
+                                                this.battle.onProjectileFinished(obfuscationGuard ^ 6068, (SpellProjectile) (var5));
                                                 var7++;
                                                 if (var19 != 0) {
                                                   return;
@@ -2322,28 +2322,28 @@ final class SpellProjectile extends DualLinkNode {
                                               return;
                                             }
                                           }
-                                          if (this.field_v < -640) {
+                                          if (this.x < -640) {
                                             this.remove(0);
                                             return;
                                           }
-                                          if (this.field_v > this.field_q.field_y + 640) {
+                                          if (this.x > this.battle.arenaWidth + 640) {
                                             this.remove(0);
                                             return;
                                           }
-                                          if (this.field_G <= this.field_q.field_H) {
+                                          if (this.y <= this.battle.arenaHeight) {
                                             return;
                                           }
                                           this.remove(0);
                                           return;
                                         }
                                       }
-                                      if (this.field_q.isSolidAt(this.field_G, this.field_v, (byte) -83)) {
+                                      if (this.battle.isSolidAt(this.y, this.x, (byte) -83)) {
                                         return;
                                       }
                                       this.playTypeSound(1, (byte) 37, 6);
                                       this.applyAreaEffect(25, 32, 64, 8);
-                                      var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 128, this.field_G, this.field_q);
-                                      this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                      var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 128, this.y, this.battle);
+                                      this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                       this.remove(0);
                                       return;
                                     }
@@ -2355,88 +2355,88 @@ final class SpellProjectile extends DualLinkNode {
                         }
                       }
                     }
-                    if ((this.field_I == 91 ||
-                      this.field_I == 92) &&
-                      this.field_y < 20) {
-                      this.field_y = this.field_y + 1;
+                    if ((this.spellType == 91 ||
+                      this.spellType == 92) &&
+                      this.ageTicks < 20) {
+                      this.ageTicks = this.ageTicks + 1;
                       return;
                     }
-                    if (this.field_I == 49 ||
-                      10 == this.field_I ||
-                      43 == this.field_I) {
+                    if (this.spellType == 49 ||
+                      10 == this.spellType ||
+                      43 == this.spellType) {
                       this.updateFlightSound(3, (byte) 34);
                     }
-                    if (this.field_I == 0) {
+                    if (this.spellType == 0) {
                       this.updateFlightSound(9, (byte) 34);
                     }
-                    if (this.field_I == 52 ||
-                      this.field_I == 50 ||
-                      this.field_I == 54) {
+                    if (this.spellType == 52 ||
+                      this.spellType == 50 ||
+                      this.spellType == 54) {
                       this.updateFlightSound(4, (byte) 34);
                     }
-                    if (this.field_I == 23 ||
-                      24 == this.field_I ||
-                      this.field_I == 82 ||
-                      this.field_I == 21) {
+                    if (this.spellType == 23 ||
+                      24 == this.spellType ||
+                      this.spellType == 82 ||
+                      this.spellType == 21) {
                       this.updateFlightSound(1, (byte) 34);
-                      if (this.field_I == 23) {
-                        var5 = this.spawnFromHere(this.field_v + (int)(-8.0 + Math.random() * 17.0), (BattleUnit) null, (byte) 81, 90, this.field_G + (int)(-8.0 + Math.random() * 17.0), this.field_q);
-                        this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                      if (this.spellType == 23) {
+                        var5 = this.spawnFromHere(this.x + (int)(-8.0 + Math.random() * 17.0), (BattleUnit) null, (byte) 81, 90, this.y + (int)(-8.0 + Math.random() * 17.0), this.battle);
+                        this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                       }
-                      if (this.field_I == 82) {
+                      if (this.spellType == 82) {
                         this.field_x = this.field_x + 1;
                         if (this.field_x > 4) {
                           this.field_x = this.field_x - 4;
-                          var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 90, this.field_G, this.field_q);
-                          this.field_q.onProjectileFinished(param0 ^ 6068, (SpellProjectile) (var5));
+                          var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 90, this.y, this.battle);
+                          this.battle.onProjectileFinished(obfuscationGuard ^ 6068, (SpellProjectile) (var5));
                         }
                       }
                     }
                     boolean decompiledFrameRemainder16 = true;
-                    if (this.field_I != 10 &&
-                      this.field_I != 91) {
-                      if (this.field_I != 17 &&
-                        this.field_I != 91) {
-                        if (14 == this.field_I) {
+                    if (this.spellType != 10 &&
+                      this.spellType != 91) {
+                      if (this.spellType != 17 &&
+                        this.spellType != 91) {
+                        if (14 == this.spellType) {
                           this.updateFlightSound(0, (byte) 34);
                           this.field_x = this.field_x + 1;
                           decompiledFrameRemainder16 = !(this.field_x <= 4);
                           if (decompiledFrameRemainder16) {
                             this.field_x = this.field_x - 4;
-                            var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 88, this.field_G, this.field_q);
-                            this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                            var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 88, this.y, this.battle);
+                            this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                             decompiledFrameRemainder16 = (var19 != 0);
                           }
                         }
                         if (decompiledFrameRemainder16) {
-                          if (this.field_I != 11) {
-                            if (this.field_I != 164) {
-                              if (this.field_I != 158) {
-                                if (this.field_I != 44 &&
-                                  this.field_I != 42 &&
-                                  96 != this.field_I &&
-                                  92 != this.field_I) {
-                                  if (this.field_I != 18) {
-                                    if (115 == this.field_I) {
+                          if (this.spellType != 11) {
+                            if (this.spellType != 164) {
+                              if (this.spellType != 158) {
+                                if (this.spellType != 44 &&
+                                  this.spellType != 42 &&
+                                  96 != this.spellType &&
+                                  92 != this.spellType) {
+                                  if (this.spellType != 18) {
+                                    if (115 == this.spellType) {
                                       this.updateFlightSound(6, (byte) 34);
                                       this.field_x = this.field_x + 1;
                                       decompiledFrameRemainder16 = !(4 >= this.field_x);
                                       if (decompiledFrameRemainder16) {
                                         this.field_x = this.field_x - 4;
-                                        var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 129, this.field_G, this.field_q);
-                                        this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                        var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 129, this.y, this.battle);
+                                        this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                         decompiledFrameRemainder16 = (var19 != 0);
                                       }
                                     }
                                     if (decompiledFrameRemainder16) {
-                                      if (this.field_I == 120 ||
-                                        this.field_I == 124) {
+                                      if (this.spellType == 120 ||
+                                        this.spellType == 124) {
                                         this.updateFlightSound(6, (byte) 34);
                                         decompiledFrameRemainder16 = (var19 != 0);
                                       }
                                       if (decompiledFrameRemainder16) {
-                                        if ((this.field_I != 140) &&
-                                          (decompiledFrameRemainder16 = (this.field_I == 145))) {
+                                        if ((this.spellType != 140) &&
+                                          (decompiledFrameRemainder16 = (this.spellType == 145))) {
                                           this.updateFlightSound(7, (byte) 34);
                                           decompiledFrameRemainder16 = (var19 != 0);
                                         }
@@ -2446,10 +2446,10 @@ final class SpellProjectile extends DualLinkNode {
                                           decompiledFrameRemainder16 = !(this.field_x <= 2);
                                           if (decompiledFrameRemainder16) {
                                             this.field_x = this.field_x - 2;
-                                            var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 130, this.field_G, this.field_q);
-                                            this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
-                                            var5 = this.spawnFromHere(-16 + (this.field_v + (int)(32.0 * Math.random())), (BattleUnit) null, (byte) 81, 130, -16 + this.field_G + (int)(32.0 * Math.random()), this.field_q);
-                                            this.field_q.onProjectileFinished(param0 ^ 6068, (SpellProjectile) (var5));
+                                            var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 130, this.y, this.battle);
+                                            this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
+                                            var5 = this.spawnFromHere(-16 + (this.x + (int)(32.0 * Math.random())), (BattleUnit) null, (byte) 81, 130, -16 + this.y + (int)(32.0 * Math.random()), this.battle);
+                                            this.battle.onProjectileFinished(obfuscationGuard ^ 6068, (SpellProjectile) (var5));
                                             decompiledFrameRemainder16 = (var19 != 0);
                                           }
                                         }
@@ -2462,12 +2462,12 @@ final class SpellProjectile extends DualLinkNode {
                                     decompiledFrameRemainder16 = !(this.field_x <= 2);
                                     if (decompiledFrameRemainder16) {
                                       this.field_x = this.field_x - 2;
-                                      var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 87, this.field_G, this.field_q);
-                                      this.field_q.onProjectileFinished(param0 ^ 6068, (SpellProjectile) (var5));
-                                      var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 88, this.field_G, this.field_q);
-                                      ((SpellProjectile) (var5)).field_F = -this.field_F;
-                                      ((SpellProjectile) (var5)).field_u = -this.field_u;
-                                      this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                      var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 87, this.y, this.battle);
+                                      this.battle.onProjectileFinished(obfuscationGuard ^ 6068, (SpellProjectile) (var5));
+                                      var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 88, this.y, this.battle);
+                                      ((SpellProjectile) (var5)).velocityY = -this.velocityY;
+                                      ((SpellProjectile) (var5)).velocityX = -this.velocityX;
+                                      this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                       decompiledFrameRemainder16 = (var19 != 0);
                                     }
                                   }
@@ -2478,31 +2478,31 @@ final class SpellProjectile extends DualLinkNode {
                                   decompiledFrameRemainder16 = !(this.field_x <= 2);
                                   if (decompiledFrameRemainder16) {
                                     this.field_x = this.field_x - 2;
-                                    var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 95, this.field_G, this.field_q);
-                                    this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                    var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 95, this.y, this.battle);
+                                    this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                     decompiledFrameRemainder16 = (var19 != 0);
                                   }
                                 }
                               }
                               if (decompiledFrameRemainder16) {
                                 this.updateFlightSound(8, (byte) 34);
-                                var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 166, this.field_G, this.field_q);
-                                this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
-                                var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 166, this.field_G, this.field_q);
-                                ((SpellProjectile) (var5)).field_u = (int)(21.0 * Math.random()) - 10;
-                                ((SpellProjectile) (var5)).field_F = (int)(21.0 * Math.random()) - 10;
-                                this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
-                                var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 166, this.field_G, this.field_q);
-                                ((SpellProjectile) (var5)).field_u = (int)(Math.random() * 21.0) - 10;
-                                ((SpellProjectile) (var5)).field_F = (int)(21.0 * Math.random()) - 10;
-                                this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 166, this.y, this.battle);
+                                this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
+                                var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 166, this.y, this.battle);
+                                ((SpellProjectile) (var5)).velocityX = (int)(21.0 * Math.random()) - 10;
+                                ((SpellProjectile) (var5)).velocityY = (int)(21.0 * Math.random()) - 10;
+                                this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
+                                var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 166, this.y, this.battle);
+                                ((SpellProjectile) (var5)).velocityX = (int)(Math.random() * 21.0) - 10;
+                                ((SpellProjectile) (var5)).velocityY = (int)(21.0 * Math.random()) - 10;
+                                this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                 decompiledFrameRemainder16 = (var19 != 0);
                               }
                             }
                             if (decompiledFrameRemainder16) {
                               this.updateFlightSound(8, (byte) 34);
-                              var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 166, this.field_G, this.field_q);
-                              this.field_q.onProjectileFinished(param0 - 5964, (SpellProjectile) (var5));
+                              var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 166, this.y, this.battle);
+                              this.battle.onProjectileFinished(obfuscationGuard - 5964, (SpellProjectile) (var5));
                               decompiledFrameRemainder16 = (var19 != 0);
                             }
                           }
@@ -2512,12 +2512,12 @@ final class SpellProjectile extends DualLinkNode {
                             decompiledFrameRemainder16 = !(2 >= this.field_x);
                             if (decompiledFrameRemainder16) {
                               this.field_x = this.field_x - 2;
-                              var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 87, this.field_G, this.field_q);
-                              this.field_q.onProjectileFinished(param0 ^ 6068, (SpellProjectile) (var5));
-                              var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 88, this.field_G, this.field_q);
-                              ((SpellProjectile) (var5)).field_F = -this.field_F;
-                              ((SpellProjectile) (var5)).field_u = -this.field_u;
-                              this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                              var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 87, this.y, this.battle);
+                              this.battle.onProjectileFinished(obfuscationGuard ^ 6068, (SpellProjectile) (var5));
+                              var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 88, this.y, this.battle);
+                              ((SpellProjectile) (var5)).velocityY = -this.velocityY;
+                              ((SpellProjectile) (var5)).velocityX = -this.velocityX;
+                              this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                               decompiledFrameRemainder16 = (var19 != 0);
                             }
                           }
@@ -2528,19 +2528,19 @@ final class SpellProjectile extends DualLinkNode {
                         this.field_x = this.field_x + 1;
                         if (!(this.field_x <= 2)) {
                           this.field_x = this.field_x - 2;
-                          var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 87, this.field_G, this.field_q);
-                          this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
-                          var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 88, this.field_G, this.field_q);
-                          ((SpellProjectile) (var5)).field_u = -this.field_u;
-                          ((SpellProjectile) (var5)).field_F = -this.field_F;
-                          this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                          var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 87, this.y, this.battle);
+                          this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
+                          var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 88, this.y, this.battle);
+                          ((SpellProjectile) (var5)).velocityX = -this.velocityX;
+                          ((SpellProjectile) (var5)).velocityY = -this.velocityY;
+                          this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                           if (var19 != 0) {
                             this.updateFlightSound(0, (byte) 34);
                             this.field_x = this.field_x + 1;
                             if (4 < this.field_x) {
                               this.field_x = this.field_x - 4;
-                              var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 87, this.field_G, this.field_q);
-                              this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                              var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 87, this.y, this.battle);
+                              this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                             }
                           }
                         }
@@ -2550,26 +2550,26 @@ final class SpellProjectile extends DualLinkNode {
                       this.field_x = this.field_x + 1;
                       if (4 < this.field_x) {
                         this.field_x = this.field_x - 4;
-                        var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 87, this.field_G, this.field_q);
-                        this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                        var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 87, this.y, this.battle);
+                        this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                       }
                     }
                     boolean decompiledFrameRemainder6 = true;
-                    if (this.field_I == 50) {
-                      if (this.field_y < 250) {
-                        this.field_y = this.field_y + 1;
+                    if (this.spellType == 50) {
+                      if (this.ageTicks < 250) {
+                        this.ageTicks = this.ageTicks + 1;
                       }
-                      if (this.field_y < 250 &&
-                        25 < this.field_y) {
-                        var6 = -this.field_v + param1;
-                        var7 = -100 - this.field_G;
-                        if (this.field_y > 150) {
-                          var7 = param2 - this.field_G;
+                      if (this.ageTicks < 250 &&
+                        25 < this.ageTicks) {
+                        var6 = -this.x + targetX;
+                        var7 = -100 - this.y;
+                        if (this.ageTicks > 150) {
+                          var7 = targetY - this.y;
                         }
                         var8 = LoginMessageTable.computeAngle(var6, var7, (byte) -110);
-                        var9 = LoginMessageTable.computeAngle(this.field_u, this.field_F, (byte) -89);
+                        var9 = LoginMessageTable.computeAngle(this.velocityX, this.velocityY, (byte) -89);
                         var10 = -4096 + (8191 & -var9 + var8 + 4096);
-                        var11 = ConnectionState.greatestCommonDivisor(this.field_F, this.field_u, false);
+                        var11 = ConnectionState.greatestCommonDivisor(this.velocityY, this.velocityX, false);
                         if (var10 < -1024 ||
                           var10 > 1024) {
                           if (var11 < 100) {
@@ -2594,56 +2594,56 @@ final class SpellProjectile extends DualLinkNode {
                           var10 = -48;
                         }
                         var9 = var9 + var10;
-                        this.field_u = var11 * BevelBoxPainter.cosine(var9, -109) >> 16;
-                        this.field_F = GradientBarPainter.sine(125, var9) * var11 >> 16;
+                        this.velocityX = var11 * BevelBoxPainter.cosine(var9, -109) >> 16;
+                        this.velocityY = GradientBarPainter.sine(125, var9) * var11 >> 16;
                         if (var19 != 0) {
-                          this.field_F = this.field_F + 4;
+                          this.velocityY = this.velocityY + 4;
                         }
                       } else {
-                        this.field_F = this.field_F + 4;
+                        this.velocityY = this.velocityY + 4;
                       }
-                      this.field_o = this.field_o + this.field_u;
-                      this.field_z = this.field_z + this.field_F;
-                      this.field_v = this.field_o >> 4;
-                      this.field_G = this.field_z >> 4;
+                      this.subpixelX = this.subpixelX + this.velocityX;
+                      this.subpixelY = this.subpixelY + this.velocityY;
+                      this.x = this.subpixelX >> 4;
+                      this.y = this.subpixelY >> 4;
                       decompiledFrameRemainder6 = (var19 != 0);
                     }
                     if (decompiledFrameRemainder6) {
-                      if (18 != this.field_I &&
-                        11 != this.field_I &&
-                        this.field_I != 44 &&
-                        this.field_I != 96 &&
-                        0 != this.field_I &&
-                        this.field_I != 158) {
-                        this.field_o = this.field_o + this.field_u;
-                        this.field_z = this.field_z + this.field_F;
-                        this.field_G = this.field_z >> 4;
-                        this.field_F = this.field_F + 4;
-                        this.field_v = this.field_o >> 4;
+                      if (18 != this.spellType &&
+                        11 != this.spellType &&
+                        this.spellType != 44 &&
+                        this.spellType != 96 &&
+                        0 != this.spellType &&
+                        this.spellType != 158) {
+                        this.subpixelX = this.subpixelX + this.velocityX;
+                        this.subpixelY = this.subpixelY + this.velocityY;
+                        this.y = this.subpixelY >> 4;
+                        this.velocityY = this.velocityY + 4;
+                        this.x = this.subpixelX >> 4;
                         decompiledFrameRemainder6 = (var19 != 0);
                       }
                       if (decompiledFrameRemainder6) {
-                        if (250 > this.field_y) {
-                          this.field_y = this.field_y + 1;
-                          if (250 == this.field_y &&
-                            this.field_q.field_Y > 0) {
-                            this.field_q.field_Y = -this.field_q.field_Y;
-                            if (this.field_q.field_Y == 0) {
-                              this.field_q.field_Y = -2;
+                        if (250 > this.ageTicks) {
+                          this.ageTicks = this.ageTicks + 1;
+                          if (250 == this.ageTicks &&
+                            this.battle.field_Y > 0) {
+                            this.battle.field_Y = -this.battle.field_Y;
+                            if (this.battle.field_Y == 0) {
+                              this.battle.field_Y = -2;
                             }
                           }
                         }
                         boolean decompiledFrameRemainder5 = true;
-                        if (250 > this.field_y &&
-                          this.field_y > 25) {
+                        if (250 > this.ageTicks &&
+                          this.ageTicks > 25) {
                           boolean decompiledFrameRemainder4 = true;
-                          var6 = -this.field_v + param1;
-                          var7 = param2 - this.field_G;
+                          var6 = -this.x + targetX;
+                          var7 = targetY - this.y;
                           var8 = LoginMessageTable.computeAngle(var6, var7, (byte) -90);
-                          var9 = LoginMessageTable.computeAngle(this.field_u, this.field_F, (byte) 57);
+                          var9 = LoginMessageTable.computeAngle(this.velocityX, this.velocityY, (byte) 57);
                           var10 = -4096 + (var8 - (var9 - 4096) & 8191);
-                          var11 = ConnectionState.greatestCommonDivisor(this.field_F, this.field_u, false);
-                          if (0 == this.field_I) {
+                          var11 = ConnectionState.greatestCommonDivisor(this.velocityY, this.velocityX, false);
+                          if (0 == this.spellType) {
                             if (-1024 > var10 ||
                               var10 > 1024) {
                               if (var11 < 100) {
@@ -2671,7 +2671,7 @@ final class SpellProjectile extends DualLinkNode {
                             }
                           }
                           if (decompiledFrameRemainder4) {
-                            if (this.field_I == 18) {
+                            if (this.spellType == 18) {
                               if (-1024 > var10 ||
                                 1024 < var10) {
                                 if (200 > var11) {
@@ -2699,7 +2699,7 @@ final class SpellProjectile extends DualLinkNode {
                               }
                             }
                             if (decompiledFrameRemainder4) {
-                              if (this.field_I != 158) {
+                              if (this.spellType != 158) {
                                 if (var10 < -1024 ||
                                   var10 > 1024) {
                                   if (var11 < 200) {
@@ -2761,24 +2761,24 @@ final class SpellProjectile extends DualLinkNode {
                             }
                           }
                           var9 = var9 + var10;
-                          this.field_u = var11 * BevelBoxPainter.cosine(var9, -102) >> 16;
-                          this.field_F = GradientBarPainter.sine(-59, var9) * var11 >> 16;
+                          this.velocityX = var11 * BevelBoxPainter.cosine(var9, -102) >> 16;
+                          this.velocityY = GradientBarPainter.sine(-59, var9) * var11 >> 16;
                           decompiledFrameRemainder5 = (var19 != 0);
                         }
                         if (decompiledFrameRemainder5) {
-                          this.field_F = this.field_F + 4;
-                          if (158 == this.field_I &&
-                            250 <= this.field_y) {
-                            var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 163, this.field_G, this.field_q);
+                          this.velocityY = this.velocityY + 4;
+                          if (158 == this.spellType &&
+                            250 <= this.ageTicks) {
+                            var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 163, this.y, this.battle);
                             this.playTypeSound(0, (byte) 37, 0);
-                            this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                            this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                             var6 = 0;
                             while (15 > var6) {
-                              var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 159, this.field_G, this.field_q);
+                              var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 159, this.y, this.battle);
                               var7 = var6 * 8192 / 15;
-                              ((SpellProjectile) (var5)).field_u = GradientBarPainter.sine(-36, var7) >> 10;
-                              ((SpellProjectile) (var5)).field_F = (BevelBoxPainter.cosine(var7, -127) >> 11) - 64;
-                              this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                              ((SpellProjectile) (var5)).velocityX = GradientBarPainter.sine(-36, var7) >> 10;
+                              ((SpellProjectile) (var5)).velocityY = (BevelBoxPainter.cosine(var7, -127) >> 11) - 64;
+                              this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                               var6++;
                               if (var19 != 0) {
                                 return;
@@ -2789,73 +2789,73 @@ final class SpellProjectile extends DualLinkNode {
                             return;
                           }
                         }
-                        if (this.field_I == 158 && (this.field_y == 50 ||
-                          this.field_y == 100 ||
-                          150 == this.field_y ||
-                          this.field_y == 200)) {
-                          var5 = this.spawnFromHere(this.field_v, this.field_t, (byte) 81, 159, this.field_G, this.field_q);
-                          ((SpellProjectile) (var5)).field_F = this.field_F / 2;
-                          ((SpellProjectile) (var5)).field_u = this.field_u / 2;
-                          this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                        if (this.spellType == 158 && (this.ageTicks == 50 ||
+                          this.ageTicks == 100 ||
+                          150 == this.ageTicks ||
+                          this.ageTicks == 200)) {
+                          var5 = this.spawnFromHere(this.x, this.owner, (byte) 81, 159, this.y, this.battle);
+                          ((SpellProjectile) (var5)).velocityY = this.velocityY / 2;
+                          ((SpellProjectile) (var5)).velocityX = this.velocityX / 2;
+                          this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                         }
-                        if (this.field_I == 0) {
-                          var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 102, this.field_G, this.field_q);
-                          this.field_q.onProjectileFinished(param0 - 5964, (SpellProjectile) (var5));
+                        if (this.spellType == 0) {
+                          var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 102, this.y, this.battle);
+                          this.battle.onProjectileFinished(obfuscationGuard - 5964, (SpellProjectile) (var5));
                         }
-                        this.field_z = this.field_z + this.field_F;
-                        this.field_o = this.field_o + this.field_u;
-                        this.field_G = this.field_z >> 4;
-                        this.field_v = this.field_o >> 4;
+                        this.subpixelY = this.subpixelY + this.velocityY;
+                        this.subpixelX = this.subpixelX + this.velocityX;
+                        this.y = this.subpixelY >> 4;
+                        this.x = this.subpixelX >> 4;
                       }
                     }
-                    if (null != this.field_t &&
-                      this.field_y < 25) {
-                      this.field_q.eraseUnitMask(this.field_t, param0 - 6016);
-                      this.field_y = this.field_y + 1;
+                    if (null != this.owner &&
+                      this.ageTicks < 25) {
+                      this.battle.eraseUnitMask(this.owner, obfuscationGuard - 6016);
+                      this.ageTicks = this.ageTicks + 1;
                     }
-                    var6 = this.field_o;
-                    var7 = this.field_z;
-                    if (!this.field_q.spriteOverlapsTerrain(-this.field_r + this.field_G, 2, this.field_v - this.field_r, this.field_p)) {
-                      if (-640 > this.field_v) {
+                    var6 = this.subpixelX;
+                    var7 = this.subpixelY;
+                    if (!this.battle.spriteOverlapsTerrain(-this.spriteRadius + this.y, 2, this.x - this.spriteRadius, this.sprite)) {
+                      if (-640 > this.x) {
                         this.remove(0);
                         return;
                       }
-                      if ((this.field_q.field_y + 640) < this.field_v) {
+                      if ((this.battle.arenaWidth + 640) < this.x) {
                         this.remove(0);
                         return;
                       }
-                      if (this.field_G > this.field_q.field_H) {
+                      if (this.y > this.battle.arenaHeight) {
                         this.remove(0);
                         return;
                       }
-                      if (null == this.field_t) {
+                      if (null == this.owner) {
                         return;
                       }
-                      if (this.field_y > 25) {
+                      if (this.ageTicks > 25) {
                         return;
                       }
-                      this.field_q.stampUnitMask(-54, this.field_t);
+                      this.battle.stampUnitMask(-54, this.owner);
                       return;
                     }
                     boolean decompiledFrameCompleted6 = true;
-                    if (92 == this.field_I) {
+                    if (92 == this.spellType) {
                       this.playTypeSound(0, (byte) 37, 3);
-                      var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 94, this.field_G, this.field_q);
-                      this.field_q.onProjectileFinished(param0 ^ 6068, (SpellProjectile) (var5));
+                      var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 94, this.y, this.battle);
+                      this.battle.onProjectileFinished(obfuscationGuard ^ 6068, (SpellProjectile) (var5));
                       this.applyAreaEffect(50, 96, 48, 8);
-                      var9_ref_jd = new IsaacRandom(new int[]{this.field_q.field_Q, param3, this.field_v, this.field_G});
+                      var9_ref_jd = new IsaacRandom(new int[]{this.battle.randomSeed, round, this.x, this.y});
                       var10 = 0;
                       while (var10 < 15) {
-                        var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 76, this.field_G, this.field_q);
+                        var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 76, this.y, this.battle);
                         stackIn_958_0 = HuffmanCodec.randomBelow(var9_ref_jd, -2147483648, 8192);
                         if (var19 != 0) {
                           decompiledFrameCompleted6 = false;
                           break;
                         }
                         var11 = stackIn_958_0;
-                        ((SpellProjectile) (var5)).field_u = GradientBarPainter.sine(119, var11) >> 10;
-                        ((SpellProjectile) (var5)).field_F = BevelBoxPainter.cosine(var11, -119) >> 10;
-                        this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                        ((SpellProjectile) (var5)).velocityX = GradientBarPainter.sine(119, var11) >> 10;
+                        ((SpellProjectile) (var5)).velocityY = BevelBoxPainter.cosine(var11, -119) >> 10;
+                        this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                         var10++;
                       }
                     }
@@ -2863,41 +2863,41 @@ final class SpellProjectile extends DualLinkNode {
                       stackIn_958_0 = -1;
                     }
                     var8 = stackIn_958_0;
-                    if (this.field_I == 162) {
-                      var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 163, this.field_G, this.field_q);
+                    if (this.spellType == 162) {
+                      var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 163, this.y, this.battle);
                       this.playTypeSound(0, (byte) 37, 0);
-                      this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                      this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                       var9 = 0;
                       while (var9 < 4) {
-                        var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 159, this.field_G, this.field_q);
+                        var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 159, this.y, this.battle);
                         var10 = 8192 * var9 / 4;
-                        ((SpellProjectile) (var5)).field_u = GradientBarPainter.sine(param0 ^ 6136, var10) >> 10;
-                        ((SpellProjectile) (var5)).field_F = (BevelBoxPainter.cosine(var10, -113) >> 11) - 64;
-                        this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                        ((SpellProjectile) (var5)).velocityX = GradientBarPainter.sine(obfuscationGuard ^ 6136, var10) >> 10;
+                        ((SpellProjectile) (var5)).velocityY = (BevelBoxPainter.cosine(var10, -113) >> 11) - 64;
+                        this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                         var9++;
                         if (var19 != 0) {
                           return;
                         }
                       }
-                      var5 = this.spawnFromHere(this.field_v, this.field_t, (byte) 81, 167, this.field_G, this.field_q);
-                      ((SpellProjectile) (var5)).field_u = 0;
-                      ((SpellProjectile) (var5)).field_F = -1;
-                      this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
-                      this.applyAreaEffect(60, 128, 64, param0 ^ 6024);
+                      var5 = this.spawnFromHere(this.x, this.owner, (byte) 81, 167, this.y, this.battle);
+                      ((SpellProjectile) (var5)).velocityX = 0;
+                      ((SpellProjectile) (var5)).velocityY = -1;
+                      this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
+                      this.applyAreaEffect(60, 128, 64, obfuscationGuard ^ 6024);
                       this.remove(0);
                       return;
                     }
-                    if (91 == this.field_I) {
-                      var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 86, this.field_G, this.field_q);
+                    if (91 == this.spellType) {
+                      var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 86, this.y, this.battle);
                       this.playTypeSound(0, (byte) 37, 0);
-                      this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                      this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                       var9 = 0;
                       while (var9 < 15) {
-                        var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 16, this.field_G, this.field_q);
+                        var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 16, this.y, this.battle);
                         var10 = var9 * 8192 / 15;
-                        ((SpellProjectile) (var5)).field_u = GradientBarPainter.sine(param0 - 6056, var10) >> 10;
-                        ((SpellProjectile) (var5)).field_F = -64 + (BevelBoxPainter.cosine(var10, param0 - 6119) >> 11);
-                        this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                        ((SpellProjectile) (var5)).velocityX = GradientBarPainter.sine(obfuscationGuard - 6056, var10) >> 10;
+                        ((SpellProjectile) (var5)).velocityY = -64 + (BevelBoxPainter.cosine(var10, obfuscationGuard - 6119) >> 11);
+                        this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                         var9++;
                         if (var19 != 0) {
                           return;
@@ -2907,92 +2907,92 @@ final class SpellProjectile extends DualLinkNode {
                       this.remove(0);
                       return;
                     }
-                    if (52 == this.field_I) {
+                    if (52 == this.spellType) {
                       this.playTypeSound(1, (byte) 37, 4);
                       var8 = 103;
                       this.applyAreaEffect(30, 128, 64, 8);
                     }
-                    if (this.field_I == 50) {
+                    if (this.spellType == 50) {
                       this.playTypeSound(1, (byte) 37, 4);
                       var8 = 103;
                       this.applyAreaEffect(15, 256, 48, 8);
                     }
-                    if (this.field_I == 54) {
+                    if (this.spellType == 54) {
                       this.playTypeSound(1, (byte) 37, 4);
-                      this.applyAreaEffect(25, 128, 64, param0 - 6008);
+                      this.applyAreaEffect(25, 128, 64, obfuscationGuard - 6008);
                       var8 = 104;
                     }
-                    if (10 == this.field_I) {
+                    if (10 == this.spellType) {
                       this.playTypeSound(1, (byte) 37, 0);
                       var8 = 85;
                       this.applyAreaEffect(50, 128, 64, 8);
                     }
-                    if (17 == this.field_I) {
+                    if (17 == this.spellType) {
                       this.playTypeSound(1, (byte) 37, 0);
                       var8 = 85;
                       this.applyAreaEffect(25, 128, 64, 8);
                     }
-                    if (18 == this.field_I) {
+                    if (18 == this.spellType) {
                       this.playTypeSound(1, (byte) 37, 0);
                       this.applyAreaEffect(15, 128, 64, 8);
                       var8 = 85;
                     }
-                    if (this.field_I == 14) {
+                    if (this.spellType == 14) {
                       this.playTypeSound(1, (byte) 37, 0);
                       this.applyAreaEffect(25, 96, 48, 8);
                       var8 = 86;
                     }
-                    if (11 == this.field_I) {
+                    if (11 == this.spellType) {
                       this.playTypeSound(1, (byte) 37, 0);
                       var8 = 85;
                       this.applyAreaEffect(50, 128, 64, 8);
                     }
-                    if (this.field_I == 140) {
+                    if (this.spellType == 140) {
                       this.playTypeSound(0, (byte) 37, 6);
                       var8 = 130;
                       this.applyAreaEffect(50, 128, 64, 8);
                     }
-                    if (124 == this.field_I) {
+                    if (124 == this.spellType) {
                       this.playTypeSound(2, (byte) 37, 6);
                       this.applyAreaEffect(20, 32, 16, 8);
                       var8 = 128;
                     }
-                    if (this.field_I == 164) {
+                    if (this.spellType == 164) {
                       this.playTypeSound(2, (byte) 37, 0);
                       var8 = 99;
-                      if (this.field_y > 1) {
+                      if (this.ageTicks > 1) {
                         stackIn_1007_1 = 5;
                       } else {
                         stackIn_1007_1 = 0;
                       }
                       this.applyAreaEffect(stackIn_1007_1, 32, 32, 8);
                     }
-                    if (this.field_I == 161) {
+                    if (this.spellType == 161) {
                       var8 = 163;
                       if (BitHelpers.field_b) {
-                        this.applyAreaEffect(0, 0, 16, param0 ^ 6024);
+                        this.applyAreaEffect(0, 0, 16, obfuscationGuard ^ 6024);
                       }
                     }
-                    if (this.field_I == 158) {
-                      var9 = 250 - this.field_y;
+                    if (this.spellType == 158) {
+                      var9 = 250 - this.ageTicks;
                       if (50 < var9) {
                         var9 = 50;
                       }
                       var8 = 163;
                       this.applyAreaEffect(var9, 128, 64, 8);
                     }
-                    if (this.field_I == 120) {
+                    if (this.spellType == 120) {
                       this.playTypeSound(1, (byte) 37, 6);
                       var8 = 154;
                       this.applyAreaEffect(0, 32, 32, 8);
                     }
-                    if (this.field_I == 115) {
+                    if (this.spellType == 115) {
                       boolean decompiledSharedTail2 = !(!BitHelpers.field_b);
                       if (!decompiledSharedTail2) {
                         this.playTypeSound(2, (byte) 37, 6);
-                        this.field_q.carveTerrainAndSprite(this.field_G - 8, param0 ^ -6121, -8 + this.field_v, ScreenSwitchHelpers.field_f[0].toRgbSprite());
-                        var5 = this.spawnFromHere(this.field_v, this.field_t, (byte) 81, 117, this.field_G, this.field_q);
-                        this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                        this.battle.carveTerrainAndSprite(this.y - 8, obfuscationGuard ^ -6121, -8 + this.x, ScreenSwitchHelpers.field_f[0].toRgbSprite());
+                        var5 = this.spawnFromHere(this.x, this.owner, (byte) 81, 117, this.y, this.battle);
+                        this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                         decompiledSharedTail2 = (var19 != 0);
                       }
                       if (decompiledSharedTail2) {
@@ -3001,57 +3001,57 @@ final class SpellProjectile extends DualLinkNode {
                         var8 = 128;
                       }
                     }
-                    if (this.field_I == 0) {
+                    if (this.spellType == 0) {
                       this.playTypeSound(1, (byte) 37, 9);
                       this.applyAreaEffect(10, 64, 32, 8);
                       var8 = 101;
                     }
-                    if (this.field_I == 43) {
+                    if (this.spellType == 43) {
                       this.playTypeSound(2, (byte) 37, 3);
-                      var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 95, this.field_G, this.field_q);
-                      this.field_q.onProjectileFinished(param0 ^ 6068, (SpellProjectile) (var5));
+                      var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 95, this.y, this.battle);
+                      this.battle.onProjectileFinished(obfuscationGuard ^ 6068, (SpellProjectile) (var5));
                       this.applyAreaEffect(5, 32, 16, 8);
                     }
-                    if (this.field_I == 24) {
+                    if (this.spellType == 24) {
                       this.playTypeSound(1, (byte) 37, 1);
-                      var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 89, this.field_G, this.field_q);
-                      this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                      var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 89, this.y, this.battle);
+                      this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                       this.applyAreaEffect(25, 128, 64, 8);
-                      this.field_y = this.field_y + 1;
+                      this.ageTicks = this.ageTicks + 1;
                       this.drawUnitMarkers((byte) -104);
                     }
-                    if (this.field_I == 82) {
+                    if (this.spellType == 82) {
                       this.playTypeSound(1, (byte) 37, 1);
-                      var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 89, this.field_G, this.field_q);
-                      this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                      var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 89, this.y, this.battle);
+                      this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                       this.applyAreaEffect(25, 128, 48, 8);
                       this.drawUnitMarkers((byte) -100);
-                      this.field_o = var6;
-                      this.field_z = var7;
-                      this.field_G = this.field_z >> 4;
-                      this.field_v = this.field_o >> 4;
+                      this.subpixelX = var6;
+                      this.subpixelY = var7;
+                      this.y = this.subpixelY >> 4;
+                      this.x = this.subpixelX >> 4;
                     }
-                    if (this.field_I == 49) {
+                    if (this.spellType == 49) {
                       this.playTypeSound(0, (byte) 37, 3);
-                      var9_ref_jd = new IsaacRandom(new int[]{this.field_q.field_Q, param3, this.field_v, this.field_G});
+                      var9_ref_jd = new IsaacRandom(new int[]{this.battle.randomSeed, round, this.x, this.y});
                       var10 = 0;
                       while (true) {
                         if (var10 < 10) {
-                          var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 42, this.field_G, this.field_q);
+                          var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 42, this.y, this.battle);
                           ((SpellProjectile) (var5)).field_w = this.field_w;
-                          var11 = HuffmanCodec.randomBelow(var9_ref_jd, param0 ^ -2147477632, 8192);
-                          ((SpellProjectile) (var5)).field_u = GradientBarPainter.sine(126, var11) >> 9;
-                          ((SpellProjectile) (var5)).field_F = -64 + (BevelBoxPainter.cosine(var11, -119) >> 9);
-                          this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                          var11 = HuffmanCodec.randomBelow(var9_ref_jd, obfuscationGuard ^ -2147477632, 8192);
+                          ((SpellProjectile) (var5)).velocityX = GradientBarPainter.sine(126, var11) >> 9;
+                          ((SpellProjectile) (var5)).velocityY = -64 + (BevelBoxPainter.cosine(var11, -119) >> 9);
+                          this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                           var10++;
                           if (var19 == 0) {
                             continue;
                           }
                         } else {
-                          this.field_G = GameSelectionHelpers.field_k;
-                          this.field_v = NodeHashTable.field_m;
-                          var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 94, this.field_G, this.field_q);
-                          this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                          this.y = GameSelectionHelpers.field_k;
+                          this.x = NodeHashTable.field_m;
+                          var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 94, this.y, this.battle);
+                          this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                         }
                         break;
                       }
@@ -3061,16 +3061,16 @@ final class SpellProjectile extends DualLinkNode {
                     boolean decompiledFrameRemainder3 = true;
                     boolean decompiledFrameCompleted4 = true;
                     boolean decompiledFrameCompleted5 = true;
-                    if (23 == this.field_I) {
+                    if (23 == this.spellType) {
                       this.playTypeSound(0, (byte) 37, 1);
-                      var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 89, this.field_G, this.field_q);
-                      this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                      var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 89, this.y, this.battle);
+                      this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                       this.applyAreaEffect(25, 128, 128, 8);
-                      this.field_o = var6;
-                      this.field_z = var7;
-                      this.field_v = this.field_o >> 4;
-                      this.field_G = this.field_z >> 4;
-                      var9_ref_jd = new IsaacRandom(new int[]{this.field_q.field_Q, param3, this.field_v, this.field_G});
+                      this.subpixelX = var6;
+                      this.subpixelY = var7;
+                      this.x = this.subpixelX >> 4;
+                      this.y = this.subpixelY >> 4;
+                      var9_ref_jd = new IsaacRandom(new int[]{this.battle.randomSeed, round, this.x, this.y});
                       var10 = 0;
                       do {
                         if (var10 >= 5) {
@@ -3081,15 +3081,15 @@ final class SpellProjectile extends DualLinkNode {
                         var10++;
                       } while (var19 == 0);
                       while (var10 < 5) {
-                        var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 82, this.field_G, this.field_q);
+                        var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 82, this.y, this.battle);
                         var11 = HuffmanCodec.randomBelow(var9_ref_jd, -2147483648, 8192);
-                        ((SpellProjectile) (var5)).field_u = GradientBarPainter.sine(param0 - 5899, var11) >> 10;
-                        ((SpellProjectile) (var5)).field_F = (BevelBoxPainter.cosine(var11, -120) >> 11) - 48;
-                        ((SpellProjectile) (var5)).field_v = ((SpellProjectile) (var5)).field_v + ((SpellProjectile) (var5)).field_u;
-                        ((SpellProjectile) (var5)).field_G = ((SpellProjectile) (var5)).field_G + 2 * (48 + ((SpellProjectile) (var5)).field_F);
-                        ((SpellProjectile) (var5)).field_o = ((SpellProjectile) (var5)).field_v << 4;
-                        ((SpellProjectile) (var5)).field_z = ((SpellProjectile) (var5)).field_G << 4;
-                        this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                        ((SpellProjectile) (var5)).velocityX = GradientBarPainter.sine(obfuscationGuard - 5899, var11) >> 10;
+                        ((SpellProjectile) (var5)).velocityY = (BevelBoxPainter.cosine(var11, -120) >> 11) - 48;
+                        ((SpellProjectile) (var5)).x = ((SpellProjectile) (var5)).x + ((SpellProjectile) (var5)).velocityX;
+                        ((SpellProjectile) (var5)).y = ((SpellProjectile) (var5)).y + 2 * (48 + ((SpellProjectile) (var5)).velocityY);
+                        ((SpellProjectile) (var5)).subpixelX = ((SpellProjectile) (var5)).x << 4;
+                        ((SpellProjectile) (var5)).subpixelY = ((SpellProjectile) (var5)).y << 4;
+                        this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                         var10++;
                         if (var19 != 0) {
                           decompiledFrameCompleted5 = false;
@@ -3098,20 +3098,20 @@ final class SpellProjectile extends DualLinkNode {
                       }
                     }
                     if ((decompiledFrameCompleted5) &&
-                      (this.field_I == 21)) {
+                      (this.spellType == 21)) {
                       this.playTypeSound(1, (byte) 37, 1);
-                      var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 89, this.field_G, this.field_q);
-                      this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
-                      this.applyAreaEffect(40, 96, 48, param0 - 6008);
-                      var9_ref_jd = new IsaacRandom(new int[]{this.field_q.field_Q, param3, this.field_v, this.field_G});
+                      var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 89, this.y, this.battle);
+                      this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
+                      this.applyAreaEffect(40, 96, 48, obfuscationGuard - 6008);
+                      var9_ref_jd = new IsaacRandom(new int[]{this.battle.randomSeed, round, this.x, this.y});
                       var10 = 0;
                       while (var10 < 7) {
-                        var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 20, this.field_G, this.field_q);
+                        var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 20, this.y, this.battle);
                         ((SpellProjectile) (var5)).field_w = this.field_w;
                         var11 = HuffmanCodec.randomBelow(var9_ref_jd, -2147483648, 8192);
-                        ((SpellProjectile) (var5)).field_u = GradientBarPainter.sine(10, var11) >> 9;
-                        ((SpellProjectile) (var5)).field_F = BevelBoxPainter.cosine(var11, -114) >> 9;
-                        this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                        ((SpellProjectile) (var5)).velocityX = GradientBarPainter.sine(10, var11) >> 9;
+                        ((SpellProjectile) (var5)).velocityY = BevelBoxPainter.cosine(var11, -114) >> 9;
+                        this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                         var10++;
                         if (var19 != 0) {
                           decompiledFrameCompleted4 = false;
@@ -3120,21 +3120,21 @@ final class SpellProjectile extends DualLinkNode {
                       }
                     }
                     if ((decompiledFrameCompleted4) &&
-                      (decompiledFrameRemainder3 = (40 == this.field_I))) {
+                      (decompiledFrameRemainder3 = (40 == this.spellType))) {
                       this.playTypeSound(1, (byte) 37, 3);
-                      var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 94, this.field_G, this.field_q);
-                      this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                      var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 94, this.y, this.battle);
+                      this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                       this.applyAreaEffect(25, 128, 48, 8);
-                      var9_ref_jd = new IsaacRandom(new int[]{this.field_q.field_Q, param3, this.field_v, this.field_G});
+                      var9_ref_jd = new IsaacRandom(new int[]{this.battle.randomSeed, round, this.x, this.y});
                     }
                     if (decompiledFrameRemainder3) {
                       var10 = 0;
                       while (var10 < 10) {
-                        var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 76, this.field_G, this.field_q);
+                        var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 76, this.y, this.battle);
                         var11 = HuffmanCodec.randomBelow(var9_ref_jd, -2147483648, 8192);
-                        ((SpellProjectile) (var5)).field_u = GradientBarPainter.sine(0, var11) >> 11;
-                        ((SpellProjectile) (var5)).field_F = BevelBoxPainter.cosine(var11, -116) >> 11;
-                        this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                        ((SpellProjectile) (var5)).velocityX = GradientBarPainter.sine(0, var11) >> 11;
+                        ((SpellProjectile) (var5)).velocityY = BevelBoxPainter.cosine(var11, -116) >> 11;
+                        this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                         var10++;
                         if (var19 != 0) {
                           decompiledFrameCompleted3 = false;
@@ -3143,26 +3143,26 @@ final class SpellProjectile extends DualLinkNode {
                       }
                     }
                     if (decompiledFrameCompleted3) {
-                      if (this.field_I != 145) {
+                      if (this.spellType != 145) {
                         boolean decompiledFrameRemainder2 = true;
                         boolean decompiledFrameCompleted0 = true;
                         boolean decompiledFrameRemainder1 = true;
                         boolean decompiledFrameCompleted1 = true;
                         boolean decompiledFrameRemainder0 = true;
                         boolean decompiledFrameCompleted2 = true;
-                        if (this.field_I == 42) {
+                        if (this.spellType == 42) {
                           this.playTypeSound(1, (byte) 37, 3);
-                          var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 94, this.field_G, this.field_q);
-                          this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
-                          this.applyAreaEffect(25, 96, 48, param0 - 6008);
-                          var9_ref_jd = new IsaacRandom(new int[]{this.field_q.field_Q, param3, this.field_v, this.field_G});
+                          var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 94, this.y, this.battle);
+                          this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
+                          this.applyAreaEffect(25, 96, 48, obfuscationGuard - 6008);
+                          var9_ref_jd = new IsaacRandom(new int[]{this.battle.randomSeed, round, this.x, this.y});
                           var10 = 0;
                           while (var10 < 4) {
-                            var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 76, this.field_G, this.field_q);
+                            var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 76, this.y, this.battle);
                             var11 = HuffmanCodec.randomBelow(var9_ref_jd, -2147483648, 8192);
-                            ((SpellProjectile) (var5)).field_u = GradientBarPainter.sine(param0 - 6088, var11) >> 11;
-                            ((SpellProjectile) (var5)).field_F = BevelBoxPainter.cosine(var11, -114) >> 11;
-                            this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                            ((SpellProjectile) (var5)).velocityX = GradientBarPainter.sine(obfuscationGuard - 6088, var11) >> 11;
+                            ((SpellProjectile) (var5)).velocityY = BevelBoxPainter.cosine(var11, -114) >> 11;
+                            this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                             var10++;
                             if (var19 != 0) {
                               decompiledFrameCompleted2 = false;
@@ -3171,21 +3171,21 @@ final class SpellProjectile extends DualLinkNode {
                           }
                         }
                         if ((decompiledFrameCompleted2) &&
-                          (decompiledFrameRemainder0 = (this.field_I == 96))) {
+                          (decompiledFrameRemainder0 = (this.spellType == 96))) {
                           this.playTypeSound(1, (byte) 37, 3);
-                          var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 94, this.field_G, this.field_q);
-                          this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                          var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 94, this.y, this.battle);
+                          this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                           this.applyAreaEffect(10, 64, 32, 8);
-                          var9_ref_jd = new IsaacRandom(new int[]{this.field_q.field_Q, param3, this.field_v, this.field_G});
+                          var9_ref_jd = new IsaacRandom(new int[]{this.battle.randomSeed, round, this.x, this.y});
                         }
                         if (decompiledFrameRemainder0) {
                           var10 = 0;
                           while (var10 < 2) {
-                            var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 43, this.field_G, this.field_q);
+                            var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 43, this.y, this.battle);
                             var11 = HuffmanCodec.randomBelow(var9_ref_jd, -2147483648, 8192);
-                            ((SpellProjectile) (var5)).field_u = GradientBarPainter.sine(-5, var11) >> 10;
-                            ((SpellProjectile) (var5)).field_F = BevelBoxPainter.cosine(var11, -103) >> 10;
-                            this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                            ((SpellProjectile) (var5)).velocityX = GradientBarPainter.sine(-5, var11) >> 10;
+                            ((SpellProjectile) (var5)).velocityY = BevelBoxPainter.cosine(var11, -103) >> 10;
+                            this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                             var10++;
                             if (var19 != 0) {
                               decompiledFrameCompleted1 = false;
@@ -3194,21 +3194,21 @@ final class SpellProjectile extends DualLinkNode {
                           }
                         }
                         if ((decompiledFrameCompleted1) &&
-                          (decompiledFrameRemainder1 = (44 == this.field_I))) {
+                          (decompiledFrameRemainder1 = (44 == this.spellType))) {
                           this.playTypeSound(1, (byte) 37, 3);
-                          var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 94, this.field_G, this.field_q);
-                          this.field_q.onProjectileFinished(param0 - 5964, (SpellProjectile) (var5));
+                          var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 94, this.y, this.battle);
+                          this.battle.onProjectileFinished(obfuscationGuard - 5964, (SpellProjectile) (var5));
                           this.applyAreaEffect(25, 64, 32, 8);
-                          var9_ref_jd = new IsaacRandom(new int[]{this.field_q.field_Q, param3, this.field_v, this.field_G});
+                          var9_ref_jd = new IsaacRandom(new int[]{this.battle.randomSeed, round, this.x, this.y});
                         }
                         if (decompiledFrameRemainder1) {
                           var10 = 0;
                           while (15 > var10) {
-                            var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 43, this.field_G, this.field_q);
+                            var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 43, this.y, this.battle);
                             var11 = HuffmanCodec.randomBelow(var9_ref_jd, -2147483648, 8192);
-                            ((SpellProjectile) (var5)).field_u = GradientBarPainter.sine(116, var11) >> 9;
-                            ((SpellProjectile) (var5)).field_F = BevelBoxPainter.cosine(var11, -112) >> 9;
-                            this.field_q.onProjectileFinished(param0 - 5964, (SpellProjectile) (var5));
+                            ((SpellProjectile) (var5)).velocityX = GradientBarPainter.sine(116, var11) >> 9;
+                            ((SpellProjectile) (var5)).velocityY = BevelBoxPainter.cosine(var11, -112) >> 9;
+                            this.battle.onProjectileFinished(obfuscationGuard - 5964, (SpellProjectile) (var5));
                             var10++;
                             if (var19 != 0) {
                               decompiledFrameCompleted0 = false;
@@ -3217,267 +3217,267 @@ final class SpellProjectile extends DualLinkNode {
                           }
                         }
                         if ((decompiledFrameCompleted0) &&
-                          (decompiledFrameRemainder2 = (this.field_I == 156))) {
-                          var5 = this.spawnFromHere(this.field_v, this.field_t, (byte) 81, 168, this.field_G, this.field_q);
-                          this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                          (decompiledFrameRemainder2 = (this.spellType == 156))) {
+                          var5 = this.spawnFromHere(this.x, this.owner, (byte) 81, 168, this.y, this.battle);
+                          this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                         }
                         if (decompiledFrameRemainder2) {
                           ((SpellProjectile) (var5)).field_H = 1;
                         }
                         if (var8 != -1) {
-                          var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, var8, this.field_G, this.field_q);
-                          this.field_q.onProjectileFinished(param0 ^ 6068, (SpellProjectile) (var5));
+                          var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, var8, this.y, this.battle);
+                          this.battle.onProjectileFinished(obfuscationGuard ^ 6068, (SpellProjectile) (var5));
                         }
-                        if (this.field_I != 121) {
-                          this.remove(param0 - 6016);
+                        if (this.spellType != 121) {
+                          this.remove(obfuscationGuard - 6016);
                         }
                         return;
                       }
                       this.playTypeSound(2, (byte) 37, 3);
                       this.applyAreaEffect(5, 32, 16, 8);
                     }
-                    if (this.field_G >= 7 &&
+                    if (this.y >= 7 &&
                       !BitHelpers.field_b) {
-                      this.field_q.carveTerrainAndSprite(-this.field_r + this.field_G, -119, -this.field_r + this.field_v, this.field_p);
+                      this.battle.carveTerrainAndSprite(-this.spriteRadius + this.y, -119, -this.spriteRadius + this.x, this.sprite);
                     }
                     this.remove(0);
                     return;
                   }
                 } else {
                   this.updateFlightSound(3, (byte) 34);
-                  this.field_z = this.field_z + this.field_F;
-                  this.field_o = this.field_o + this.field_u;
-                  this.field_G = this.field_z >> 4;
-                  this.field_F = this.field_F + 4;
-                  this.field_v = this.field_o >> 4;
-                  if (50 > this.field_y) {
-                    this.field_y = this.field_y + 1;
+                  this.subpixelY = this.subpixelY + this.velocityY;
+                  this.subpixelX = this.subpixelX + this.velocityX;
+                  this.y = this.subpixelY >> 4;
+                  this.velocityY = this.velocityY + 4;
+                  this.x = this.subpixelX >> 4;
+                  if (50 > this.ageTicks) {
+                    this.ageTicks = this.ageTicks + 1;
                   }
-                  if (null != this.field_t &&
-                    25 > this.field_y) {
-                    this.field_q.eraseUnitMask(this.field_t, param0 - 6016);
+                  if (null != this.owner &&
+                    25 > this.ageTicks) {
+                    this.battle.eraseUnitMask(this.owner, obfuscationGuard - 6016);
                   }
-                  if (this.field_y < 50 &&
-                    !this.field_q.spriteOverlapsTerrain(this.field_G - this.field_r, 2, -this.field_r + this.field_v, this.field_p)) {
-                    if (-640 > this.field_v) {
+                  if (this.ageTicks < 50 &&
+                    !this.battle.spriteOverlapsTerrain(this.y - this.spriteRadius, 2, -this.spriteRadius + this.x, this.sprite)) {
+                    if (-640 > this.x) {
                       this.remove(0);
                       return;
                     }
-                    if (this.field_q.field_y + 640 < this.field_v) {
-                      this.remove(param0 ^ 6016);
+                    if (this.battle.arenaWidth + 640 < this.x) {
+                      this.remove(obfuscationGuard ^ 6016);
                       return;
                     }
-                    if (this.field_q.field_H < this.field_G) {
+                    if (this.battle.arenaHeight < this.y) {
                       this.remove(0);
                       return;
                     }
-                    if (null == this.field_t) {
+                    if (null == this.owner) {
                       return;
                     }
-                    if (this.field_y >= 25) {
+                    if (this.ageTicks >= 25) {
                       return;
                     }
-                    this.field_q.stampUnitMask(param0 ^ -6067, this.field_t);
+                    this.battle.stampUnitMask(obfuscationGuard ^ -6067, this.owner);
                     if (var19 == 0) {
                       return;
                     }
                   } else {
-                    var6_ref_jd = new IsaacRandom(new int[]{this.field_q.field_Q, param3, this.field_v, this.field_G});
+                    var6_ref_jd = new IsaacRandom(new int[]{this.battle.randomSeed, round, this.x, this.y});
                     var7 = 0;
                     while (var7 < 45) {
-                      var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 46, this.field_G, this.field_q);
+                      var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 46, this.y, this.battle);
                       var8 = var6_ref_jd.nextInt((byte) -46) & 8191;
-                      ((SpellProjectile) (var5)).field_u = this.field_u + ((var6_ref_jd.nextInt((byte) -46) & 127) * GradientBarPainter.sine(-122, var8) >> 16);
-                      ((SpellProjectile) (var5)).field_F = this.field_F + ((127 & var6_ref_jd.nextInt((byte) -46)) * BevelBoxPainter.cosine(var8, param0 - 6140) >> 16);
-                      this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                      ((SpellProjectile) (var5)).velocityX = this.velocityX + ((var6_ref_jd.nextInt((byte) -46) & 127) * GradientBarPainter.sine(-122, var8) >> 16);
+                      ((SpellProjectile) (var5)).velocityY = this.velocityY + ((127 & var6_ref_jd.nextInt((byte) -46)) * BevelBoxPainter.cosine(var8, obfuscationGuard - 6140) >> 16);
+                      this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                       var7++;
                       if (var19 != 0) {
                         return;
                       }
                     }
                     this.playTypeSound(1, (byte) 37, 3);
-                    var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 94, this.field_G, this.field_q);
-                    this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                    var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 94, this.y, this.battle);
+                    this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                     this.applyAreaEffect(10, 5, 16, 8);
                     this.remove(0);
                     return;
                   }
                 }
-                this.field_z = this.field_z + this.field_F;
-                this.field_o = this.field_o + this.field_u;
-                this.field_G = this.field_z >> 4;
-                this.field_F = this.field_F + 4;
-                this.field_v = this.field_o >> 4;
-                if (this.field_q.spriteOverlapsTerrain(-this.field_r + this.field_G, 2, -this.field_r + this.field_v, this.field_p)) {
-                  this.field_y = this.field_y + 1;
-                  var6 = this.field_v;
-                  var7 = this.field_G;
-                  this.field_v = NodeHashTable.field_m;
-                  this.field_G = GameSelectionHelpers.field_k;
+                this.subpixelY = this.subpixelY + this.velocityY;
+                this.subpixelX = this.subpixelX + this.velocityX;
+                this.y = this.subpixelY >> 4;
+                this.velocityY = this.velocityY + 4;
+                this.x = this.subpixelX >> 4;
+                if (this.battle.spriteOverlapsTerrain(-this.spriteRadius + this.y, 2, -this.spriteRadius + this.x, this.sprite)) {
+                  this.ageTicks = this.ageTicks + 1;
+                  var6 = this.x;
+                  var7 = this.y;
+                  this.x = NodeHashTable.field_m;
+                  this.y = GameSelectionHelpers.field_k;
                   this.playTypeSound(1, (byte) 37, 1);
-                  var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 89, this.field_G, this.field_q);
-                  this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
-                  this.applyAreaEffect(5, 128, 64, param0 - 6008);
-                  this.field_v = var6;
-                  this.field_G = var7;
-                  if (this.field_C == null) {
-                    this.field_C = new IsaacRandom(new int[]{this.field_q.field_Q, param3, this.field_v, this.field_G});
+                  var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 89, this.y, this.battle);
+                  this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
+                  this.applyAreaEffect(5, 128, 64, obfuscationGuard - 6008);
+                  this.x = var6;
+                  this.y = var7;
+                  if (this.random == null) {
+                    this.random = new IsaacRandom(new int[]{this.battle.randomSeed, round, this.x, this.y});
                   }
                   var8 = 0;
                   while (true) {
-                    if (this.field_y / 2 > var8) {
-                      var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 20, this.field_G, this.field_q);
-                      var9 = HuffmanCodec.randomBelow(this.field_C, -2147483648, 8192);
-                      ((SpellProjectile) (var5)).field_u = GradientBarPainter.sine(-46, var9) >> 9;
-                      ((SpellProjectile) (var5)).field_F = BevelBoxPainter.cosine(var9, -127) >> 9;
-                      this.field_q.onProjectileFinished(param0 ^ 6068, (SpellProjectile) (var5));
+                    if (this.ageTicks / 2 > var8) {
+                      var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 20, this.y, this.battle);
+                      var9 = HuffmanCodec.randomBelow(this.random, -2147483648, 8192);
+                      ((SpellProjectile) (var5)).velocityX = GradientBarPainter.sine(-46, var9) >> 9;
+                      ((SpellProjectile) (var5)).velocityY = BevelBoxPainter.cosine(var9, -127) >> 9;
+                      this.battle.onProjectileFinished(obfuscationGuard ^ 6068, (SpellProjectile) (var5));
                       var8++;
                       if (var19 != 0) {
                         return;
                       }
                       continue;
                     }
-                    if (10 >= this.field_y) {
+                    if (10 >= this.ageTicks) {
                       break;
                     }
                     this.remove(0);
                     return;
                   }
                 }
-                if (-640 > this.field_v) {
+                if (-640 > this.x) {
                   this.remove(0);
                   return;
                 }
-                if (this.field_v > 640 + this.field_q.field_y) {
+                if (this.x > 640 + this.battle.arenaWidth) {
                   this.remove(0);
                   return;
                 }
-                if (this.field_G > this.field_q.field_H) {
+                if (this.y > this.battle.arenaHeight) {
                   this.remove(0);
                   return;
                 }
-                var5 = this.spawnFromHere(this.field_v + (int)(64.0 * Math.random() - 32.0), (BattleUnit) null, (byte) 81, 90, this.field_G + (int)(Math.random() * 64.0 - 32.0), this.field_q);
-                this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                var5 = this.spawnFromHere(this.x + (int)(64.0 * Math.random() - 32.0), (BattleUnit) null, (byte) 81, 90, this.y + (int)(Math.random() * 64.0 - 32.0), this.battle);
+                this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                 return;
               }
             }
           }
-          if (this.field_I == 113 &&
-            this.field_y < 20) {
-            this.field_y = this.field_y + 1;
+          if (this.spellType == 113 &&
+            this.ageTicks < 20) {
+            this.ageTicks = this.ageTicks + 1;
             return;
           }
-          this.field_y = this.field_y + 1;
-          if (null == this.field_C) {
-            this.field_C = new IsaacRandom(new int[]{this.field_q.field_Q, param3, this.field_v, this.field_G});
+          this.ageTicks = this.ageTicks + 1;
+          if (null == this.random) {
+            this.random = new IsaacRandom(new int[]{this.battle.randomSeed, round, this.x, this.y});
           }
           var6 = 50;
-          if (84 == this.field_I &&
-            this.field_t != null &&
-            2 == this.field_q.field_x[this.field_t.field_u]) {
-            var6 = var6 + this.field_q.field_X[this.field_t.field_u] / 4;
+          if (84 == this.spellType &&
+            this.owner != null &&
+            2 == this.battle.playerSpellbook[this.owner.ownerPlayer]) {
+            var6 = var6 + this.battle.field_X[this.owner.ownerPlayer] / 4;
           }
-          if (this.field_I == 75) {
+          if (this.spellType == 75) {
             var6 = 75;
           }
-          if (73 == this.field_I) {
+          if (73 == this.spellType) {
             var6 = 60;
-            if (this.field_t != null &&
-              this.field_q.field_x[this.field_t.field_u] == 0) {
-              var6 = 60 + 3 * this.field_q.field_X[this.field_t.field_u] / 10;
+            if (this.owner != null &&
+              this.battle.playerSpellbook[this.owner.ownerPlayer] == 0) {
+              var6 = 60 + 3 * this.battle.field_X[this.owner.ownerPlayer] / 10;
             }
           }
-          if (this.field_I == 144) {
+          if (this.spellType == 144) {
             var6 = 60;
           }
-          if (this.field_I == 97) {
+          if (this.spellType == 97) {
             var6 = 15;
           }
-          if (this.field_I == 125) {
+          if (this.spellType == 125) {
             var6 = 25;
           }
-          if (this.field_I == 153) {
+          if (this.spellType == 153) {
             var6 = 25;
           }
-          if (113 == this.field_I) {
+          if (113 == this.spellType) {
             var6 = 35;
           }
-          if (this.field_y <= var6 && (null == this.field_t ||
-            !(this.field_t.field_x > 0))) {
-            if (0 != this.field_y % 5) {
+          if (this.ageTicks <= var6 && (null == this.owner ||
+            !(this.owner.pendingDamage > 0))) {
+            if (0 != this.ageTicks % 5) {
               return;
             }
-            if (this.field_I == 73) {
-              var5 = this.spawnFromHere(this.field_v, this.field_t, (byte) 81, 16, this.field_G, this.field_q);
-              if (null != this.field_t &&
-                0 == this.field_q.field_x[this.field_t.field_u]) {
-                var7 = 2 * this.field_q.field_X[this.field_t.field_u];
-                ((SpellProjectile) (var5)).field_u = this.field_u + HuffmanCodec.randomBelow(this.field_C, -2147483648, var7 * 2 + 1) - var7;
-                ((SpellProjectile) (var5)).field_F = -var7 + this.field_F + HuffmanCodec.randomBelow(this.field_C, -2147483648, var7 * 2 + 1);
+            if (this.spellType == 73) {
+              var5 = this.spawnFromHere(this.x, this.owner, (byte) 81, 16, this.y, this.battle);
+              if (null != this.owner &&
+                0 == this.battle.playerSpellbook[this.owner.ownerPlayer]) {
+                var7 = 2 * this.battle.field_X[this.owner.ownerPlayer];
+                ((SpellProjectile) (var5)).velocityX = this.velocityX + HuffmanCodec.randomBelow(this.random, -2147483648, var7 * 2 + 1) - var7;
+                ((SpellProjectile) (var5)).velocityY = -var7 + this.velocityY + HuffmanCodec.randomBelow(this.random, -2147483648, var7 * 2 + 1);
               }
             }
-            if (this.field_I == 144) {
-              var5 = this.spawnFromHere(this.field_v, this.field_t, (byte) 81, 145, this.field_G, this.field_q);
+            if (this.spellType == 144) {
+              var5 = this.spawnFromHere(this.x, this.owner, (byte) 81, 145, this.y, this.battle);
               this.playSound(166, true);
             }
-            if (this.field_I == 75) {
-              var5 = this.spawnFromHere(this.field_v, this.field_t, (byte) 81, 43, this.field_G, this.field_q);
+            if (this.spellType == 75) {
+              var5 = this.spawnFromHere(this.x, this.owner, (byte) 81, 43, this.y, this.battle);
             }
-            if (97 == this.field_I) {
-              var5 = this.spawnFromHere(this.field_v, this.field_t, (byte) 81, 96, this.field_G, this.field_q);
+            if (97 == this.spellType) {
+              var5 = this.spawnFromHere(this.x, this.owner, (byte) 81, 96, this.y, this.battle);
             }
-            if (this.field_I == 125) {
-              var5 = this.spawnFromHere(this.field_v, this.field_t, (byte) 81, 124, this.field_G, this.field_q);
+            if (this.spellType == 125) {
+              var5 = this.spawnFromHere(this.x, this.owner, (byte) 81, 124, this.y, this.battle);
             }
-            if (this.field_I == 153) {
+            if (this.spellType == 153) {
               boolean decompiledSharedTail1 = !(!Js5Transport.isFeatureEnabled(0, (byte) -89));
               if (!decompiledSharedTail1) {
-                var5 = this.spawnFromHere(this.field_v, this.field_t, (byte) 81, 115, this.field_G, this.field_q);
+                var5 = this.spawnFromHere(this.x, this.owner, (byte) 81, 115, this.y, this.battle);
                 decompiledSharedTail1 = (var19 != 0);
               }
               if (decompiledSharedTail1) {
-                var5 = this.spawnFromHere(this.field_v, this.field_t, (byte) 81, 116, this.field_G, this.field_q);
+                var5 = this.spawnFromHere(this.x, this.owner, (byte) 81, 116, this.y, this.battle);
               }
               ((SpellProjectile) (var5)).field_w = this.field_w;
             }
-            if (this.field_I == 81) {
-              var5 = this.spawnFromHere(this.field_v, this.field_t, (byte) 81, 20, this.field_G, this.field_q);
+            if (this.spellType == 81) {
+              var5 = this.spawnFromHere(this.x, this.owner, (byte) 81, 20, this.y, this.battle);
               this.playSound(88, true);
             }
-            if (this.field_I == 113) {
-              var5 = this.spawnFromHere(this.field_v, this.field_t, (byte) 81, 52, this.field_G, this.field_q);
+            if (this.spellType == 113) {
+              var5 = this.spawnFromHere(this.x, this.owner, (byte) 81, 52, this.y, this.battle);
             }
-            if (this.field_I == 84) {
-              var5 = this.spawnFromHere((this.field_u >> 4) + this.field_v, this.field_t, (byte) 81, 30, this.field_G + (this.field_F >> 4), this.field_q);
+            if (this.spellType == 84) {
+              var5 = this.spawnFromHere((this.velocityX >> 4) + this.x, this.owner, (byte) 81, 30, this.y + (this.velocityY >> 4), this.battle);
               ((SpellProjectile) (var5)).field_w = this.field_w;
-              ((SpellProjectile) (var5)).field_F = this.field_F;
-              ((SpellProjectile) (var5)).field_u = this.field_u;
+              ((SpellProjectile) (var5)).velocityY = this.velocityY;
+              ((SpellProjectile) (var5)).velocityX = this.velocityX;
               if (var19 != 0) {
-                if (125 != this.field_I &&
-                  153 != this.field_I) {
-                  ((SpellProjectile) (var5)).field_u = -15 + (this.field_u >> 1) + HuffmanCodec.randomBelow(this.field_C, -2147483648, 31);
-                  ((SpellProjectile) (var5)).field_F = -15 + (this.field_F >> 1) + HuffmanCodec.randomBelow(this.field_C, param0 + 2147477632, 31);
-                  ((SpellProjectile) (var5)).field_u = this.field_u + HuffmanCodec.randomBelow(this.field_C, -2147483648, 31) - 15;
-                  ((SpellProjectile) (var5)).field_F = this.field_F + (HuffmanCodec.randomBelow(this.field_C, -2147483648, 31) - 15);
+                if (125 != this.spellType &&
+                  153 != this.spellType) {
+                  ((SpellProjectile) (var5)).velocityX = -15 + (this.velocityX >> 1) + HuffmanCodec.randomBelow(this.random, -2147483648, 31);
+                  ((SpellProjectile) (var5)).velocityY = -15 + (this.velocityY >> 1) + HuffmanCodec.randomBelow(this.random, obfuscationGuard + 2147477632, 31);
+                  ((SpellProjectile) (var5)).velocityX = this.velocityX + HuffmanCodec.randomBelow(this.random, -2147483648, 31) - 15;
+                  ((SpellProjectile) (var5)).velocityY = this.velocityY + (HuffmanCodec.randomBelow(this.random, -2147483648, 31) - 15);
                 } else {
-                  ((SpellProjectile) (var5)).field_u = this.field_u + HuffmanCodec.randomBelow(this.field_C, -2147483648, 31) - 15;
-                  ((SpellProjectile) (var5)).field_F = this.field_F + (HuffmanCodec.randomBelow(this.field_C, -2147483648, 31) - 15);
+                  ((SpellProjectile) (var5)).velocityX = this.velocityX + HuffmanCodec.randomBelow(this.random, -2147483648, 31) - 15;
+                  ((SpellProjectile) (var5)).velocityY = this.velocityY + (HuffmanCodec.randomBelow(this.random, -2147483648, 31) - 15);
                 }
               }
             } else {
-              boolean decompiledSharedTail0 = (125 == this.field_I ||
-                153 == this.field_I);
+              boolean decompiledSharedTail0 = (125 == this.spellType ||
+                153 == this.spellType);
               if (!decompiledSharedTail0) {
-                ((SpellProjectile) (var5)).field_u = -15 + (this.field_u >> 1) + HuffmanCodec.randomBelow(this.field_C, -2147483648, 31);
-                ((SpellProjectile) (var5)).field_F = -15 + (this.field_F >> 1) + HuffmanCodec.randomBelow(this.field_C, param0 + 2147477632, 31);
+                ((SpellProjectile) (var5)).velocityX = -15 + (this.velocityX >> 1) + HuffmanCodec.randomBelow(this.random, -2147483648, 31);
+                ((SpellProjectile) (var5)).velocityY = -15 + (this.velocityY >> 1) + HuffmanCodec.randomBelow(this.random, obfuscationGuard + 2147477632, 31);
                 decompiledSharedTail0 = (var19 != 0);
               }
               if (decompiledSharedTail0) {
-                ((SpellProjectile) (var5)).field_u = this.field_u + HuffmanCodec.randomBelow(this.field_C, -2147483648, 31) - 15;
-                ((SpellProjectile) (var5)).field_F = this.field_F + (HuffmanCodec.randomBelow(this.field_C, -2147483648, 31) - 15);
+                ((SpellProjectile) (var5)).velocityX = this.velocityX + HuffmanCodec.randomBelow(this.random, -2147483648, 31) - 15;
+                ((SpellProjectile) (var5)).velocityY = this.velocityY + (HuffmanCodec.randomBelow(this.random, -2147483648, 31) - 15);
               }
             }
-            this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+            this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
             return;
           }
           this.remove(0);
@@ -3485,24 +3485,24 @@ final class SpellProjectile extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw CommonUiHelpers.wrapException((Throwable) (var5), "mi.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) (var5), "mi.G(" + obfuscationGuard + ',' + targetX + ',' + targetY + ',' + round + ')');
         }
     }
 
-    private final void notifyOwner(byte param0) {
+    private final void notifyOwner(byte obfuscationGuard) {
         int var2_int = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (null != this.field_t) {
-            this.field_q.stampUnitMask(-49, this.field_t);
+          if (null != this.owner) {
+            this.battle.stampUnitMask(-49, this.owner);
           }
-          var2_int = 48 % ((param0 + 53) / 38);
+          var2_int = 48 % ((obfuscationGuard + 53) / 38);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "mi.LA(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "mi.LA(" + obfuscationGuard + ')');
         }
     }
 
@@ -3510,26 +3510,26 @@ final class SpellProjectile extends DualLinkNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (this.field_D != null) {
-            DateOfBirthValidator.stopEffectStream(this.field_D, 123);
+          if (this.flightSoundStream != null) {
+            DateOfBirthValidator.stopEffectStream(this.flightSoundStream, 123);
           }
-          if (this.field_t != null) {
-            if (this == this.field_t.field_gb) {
-              this.field_t.field_gb = null;
+          if (this.owner != null) {
+            if (this == this.owner.attachedProjectile) {
+              this.owner.attachedProjectile = null;
             }
-            if (!this.field_t.isDead(-1)) {
-              this.field_q.stampUnitMask(-44, this.field_t);
+            if (!this.owner.isDead(-1)) {
+              this.battle.stampUnitMask(-44, this.owner);
             }
           }
-          this.field_J = 0;
-          this.field_u = 0;
+          this.flightSoundTicks = 0;
+          this.velocityX = 0;
           this.field_x = 0;
-          this.field_F = param0;
-          this.field_p = null;
+          this.velocityY = param0;
+          this.sprite = null;
           this.field_H = 0;
-          this.field_y = 0;
-          this.field_C = null;
-          this.field_q.addProjectile(-1, this);
+          this.ageTicks = 0;
+          this.random = null;
+          this.battle.addProjectile(-1, this);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3538,7 +3538,7 @@ final class SpellProjectile extends DualLinkNode {
         }
     }
 
-    private final PcmSampleStream createFlightSoundStream(PcmSample param0, int param1) {
+    private final PcmSampleStream createFlightSoundStream(PcmSample sample, int obfuscationGuard) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -3550,12 +3550,12 @@ final class SpellProjectile extends DualLinkNode {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null == param0) {
+          if (null == sample) {
             stackIn_2_0 = null;
             return (PcmSampleStream) (stackIn_2_0);
           }
-          var3_int = Math.abs(this.field_F) + Math.abs(this.field_u);
-          if (param1 != 19227) {
+          var3_int = Math.abs(this.velocityY) + Math.abs(this.velocityX);
+          if (obfuscationGuard != 19227) {
             field_E = (Sprite) null;
           }
           var4 = var3_int / 10 + 100;
@@ -3563,42 +3563,42 @@ final class SpellProjectile extends DualLinkNode {
           if (512 > var3_int) {
             var5 = var5 * var3_int / 512;
           }
-          stackIn_9_0 = PcmSampleStream.createAtRatePercent(param0, var4, var5);
+          stackIn_9_0 = PcmSampleStream.createAtRatePercent(sample, var4, var5);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_13_0 = var3;
           stackIn_13_1 = new StringBuilder().append("mi.CA(");
-          if (param0 == null) {
+          if (sample == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
-    private final void playTypeSound(int param0, byte param1, int param2) {
+    private final void playTypeSound(int soundIndex, byte obfuscationGuard, int soundGroup) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          if (param1 != 37) {
-            this.field_F = 10;
+          if (obfuscationGuard != 37) {
+            this.velocityY = 10;
           }
-          if (null != this.field_q.field_sb &&
-            this.field_q.field_sb[CacheEntry.field_n[param2][param0]] != null) {
-            DropdownList.playSampleAtVolume((byte) -30, SceneWidgetNode.field_r[CacheEntry.field_n[param2][param0]], this.field_q.field_sb[CacheEntry.field_n[param2][param0]]);
+          if (null != this.battle.projectileSamples &&
+            this.battle.projectileSamples[CacheEntry.field_n[soundGroup][soundIndex]] != null) {
+            DropdownList.playSampleAtVolume((byte) -30, SceneWidgetNode.field_r[CacheEntry.field_n[soundGroup][soundIndex]], this.battle.projectileSamples[CacheEntry.field_n[soundGroup][soundIndex]]);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw CommonUiHelpers.wrapException((Throwable) ((Object) var4), "mi.MA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var4), "mi.MA(" + soundIndex + ',' + obfuscationGuard + ',' + soundGroup + ')');
         }
     }
 
-    private final boolean isActiveEffect(byte param0) {
+    private final boolean isActiveEffect(byte obfuscationGuard) {
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -3609,98 +3609,98 @@ final class SpellProjectile extends DualLinkNode {
           if (this.isPersistentType(120)) {
             return false;
           }
-          if (this.field_I != 1 &&
-            this.field_I != 2 &&
-            this.field_I != 3) {
-            if (15 != this.field_I &&
-              this.field_I != 19 &&
-              this.field_I != 68) {
-              if (this.field_I != 22 &&
-                26 != this.field_I &&
-                this.field_I != 27 &&
-                this.field_I != 28 &&
-                this.field_I != 29 &&
-                this.field_I != 68) {
-                var2_int = -78 / ((param0 + 7) / 49);
-                if (this.field_I != 30 &&
-                  69 != this.field_I &&
-                  this.field_I != 32 &&
-                  this.field_I != 36 &&
-                  this.field_I != 35 &&
-                  70 != this.field_I &&
-                  71 != this.field_I) {
-                  if (this.field_I != 47 &&
-                    this.field_I != 48 &&
-                    this.field_I != 49 &&
-                    this.field_I != 72) {
-                    if (55 != this.field_I &&
-                      this.field_I != 56 &&
-                      this.field_I != 157 &&
-                      this.field_I != 168) {
-                      if (60 != this.field_I &&
-                        this.field_I != 62 &&
-                        this.field_I != 63 &&
-                        64 != this.field_I &&
-                        this.field_I != 65) {
-                        if (this.field_I != 73 &&
-                          this.field_I != 74 &&
-                          75 != this.field_I &&
-                          77 != this.field_I &&
-                          78 != this.field_I) {
-                          if (this.field_I != 79 &&
-                            80 != this.field_I) {
-                            if (81 != this.field_I &&
-                              this.field_I != 83 &&
-                              84 != this.field_I) {
-                              if (this.field_I != 85 &&
-                                this.field_I != 86 &&
-                                this.field_I != 89 &&
-                                this.field_I != 163) {
-                                if (this.field_I == 93) {
+          if (this.spellType != 1 &&
+            this.spellType != 2 &&
+            this.spellType != 3) {
+            if (15 != this.spellType &&
+              this.spellType != 19 &&
+              this.spellType != 68) {
+              if (this.spellType != 22 &&
+                26 != this.spellType &&
+                this.spellType != 27 &&
+                this.spellType != 28 &&
+                this.spellType != 29 &&
+                this.spellType != 68) {
+                var2_int = -78 / ((obfuscationGuard + 7) / 49);
+                if (this.spellType != 30 &&
+                  69 != this.spellType &&
+                  this.spellType != 32 &&
+                  this.spellType != 36 &&
+                  this.spellType != 35 &&
+                  70 != this.spellType &&
+                  71 != this.spellType) {
+                  if (this.spellType != 47 &&
+                    this.spellType != 48 &&
+                    this.spellType != 49 &&
+                    this.spellType != 72) {
+                    if (55 != this.spellType &&
+                      this.spellType != 56 &&
+                      this.spellType != 157 &&
+                      this.spellType != 168) {
+                      if (60 != this.spellType &&
+                        this.spellType != 62 &&
+                        this.spellType != 63 &&
+                        64 != this.spellType &&
+                        this.spellType != 65) {
+                        if (this.spellType != 73 &&
+                          this.spellType != 74 &&
+                          75 != this.spellType &&
+                          77 != this.spellType &&
+                          78 != this.spellType) {
+                          if (this.spellType != 79 &&
+                            80 != this.spellType) {
+                            if (81 != this.spellType &&
+                              this.spellType != 83 &&
+                              84 != this.spellType) {
+                              if (this.spellType != 85 &&
+                                this.spellType != 86 &&
+                                this.spellType != 89 &&
+                                this.spellType != 163) {
+                                if (this.spellType == 93) {
                                   return false;
                                 }
-                                if (94 != this.field_I &&
-                                  this.field_I != 97) {
-                                  if (this.field_I == 98) {
+                                if (94 != this.spellType &&
+                                  this.spellType != 97) {
+                                  if (this.spellType == 98) {
                                     return false;
                                   }
-                                  if (this.field_I != 99 &&
-                                    this.field_I != 101 &&
-                                    this.field_I != 103 &&
-                                    this.field_I != 104 &&
-                                    this.field_I != 106 &&
-                                    this.field_I != 107) {
-                                    if (108 != this.field_I &&
-                                      this.field_I != 110) {
-                                      if (this.field_I != 111 &&
-                                        this.field_I != 113 &&
-                                        this.field_I != 114) {
-                                        if (this.field_I != 118 &&
-                                          this.field_I != 119 &&
-                                          this.field_I != 121 &&
-                                          this.field_I != 123 &&
-                                          this.field_I != 125 &&
-                                          this.field_I != 127 &&
-                                          this.field_I != 126 &&
-                                          this.field_I != 128) {
-                                          if (130 != this.field_I &&
-                                            this.field_I != 131 &&
-                                            this.field_I != 134 &&
-                                            this.field_I != 136 &&
-                                            138 != this.field_I &&
-                                            this.field_I != 139 &&
-                                            this.field_I != 141 &&
-                                            this.field_I != 142 &&
-                                            this.field_I != 144) {
-                                            if (148 != this.field_I &&
-                                              this.field_I != 149 &&
-                                              150 != this.field_I &&
-                                              this.field_I != 153 &&
-                                              this.field_I != 154) {
-                                              if (this.field_I == 151) {
+                                  if (this.spellType != 99 &&
+                                    this.spellType != 101 &&
+                                    this.spellType != 103 &&
+                                    this.spellType != 104 &&
+                                    this.spellType != 106 &&
+                                    this.spellType != 107) {
+                                    if (108 != this.spellType &&
+                                      this.spellType != 110) {
+                                      if (this.spellType != 111 &&
+                                        this.spellType != 113 &&
+                                        this.spellType != 114) {
+                                        if (this.spellType != 118 &&
+                                          this.spellType != 119 &&
+                                          this.spellType != 121 &&
+                                          this.spellType != 123 &&
+                                          this.spellType != 125 &&
+                                          this.spellType != 127 &&
+                                          this.spellType != 126 &&
+                                          this.spellType != 128) {
+                                          if (130 != this.spellType &&
+                                            this.spellType != 131 &&
+                                            this.spellType != 134 &&
+                                            this.spellType != 136 &&
+                                            138 != this.spellType &&
+                                            this.spellType != 139 &&
+                                            this.spellType != 141 &&
+                                            this.spellType != 142 &&
+                                            this.spellType != 144) {
+                                            if (148 != this.spellType &&
+                                              this.spellType != 149 &&
+                                              150 != this.spellType &&
+                                              this.spellType != 153 &&
+                                              this.spellType != 154) {
+                                              if (this.spellType == 151) {
                                                 return false;
                                               }
-                                              if (this.field_I != 160) {
+                                              if (this.spellType != 160) {
                                                 return true;
                                               }
                                               return false;
@@ -3743,11 +3743,11 @@ final class SpellProjectile extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "mi.DA(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "mi.DA(" + obfuscationGuard + ')');
         }
     }
 
-    private final SpellProjectile spawnFromHere(int param0, BattleUnit param1, byte param2, int param3, int param4, Battle param5) {
+    private final SpellProjectile spawnFromHere(int x, BattleUnit owner, byte obfuscationGuard, int spellType, int y, Battle battle) {
         RuntimeException var7 = null;
         SpellProjectile stackIn_4_0 = null;
         RuntimeException stackIn_8_0 = null;
@@ -3757,23 +3757,23 @@ final class SpellProjectile extends DualLinkNode {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param2 != 81) {
+          if (obfuscationGuard != 81) {
             this.setBattle(76, (Battle) null);
           }
-          stackIn_4_0 = BevelBoxPainter.createProjectile(param1, param4, (byte) -118, param5, this.field_n, param0, param3);
+          stackIn_4_0 = BevelBoxPainter.createProjectile(owner, y, (byte) -118, battle, this.damageSourceId, x, spellType);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
           stackIn_8_0 = var7;
-          stackIn_8_1 = new StringBuilder().append("mi.KA(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_8_1 = new StringBuilder().append("mi.KA(").append(x).append(',');
+          if (owner == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
           }
-          stackIn_12_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
-          if (param5 == null) {
+          stackIn_12_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(obfuscationGuard).append(',').append(spellType).append(',').append(y).append(',');
+          if (battle == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
@@ -3782,7 +3782,7 @@ final class SpellProjectile extends DualLinkNode {
         }
     }
 
-    final void initialize(int param0, int param1, int param2, int param3, int param4, Battle param5, BattleUnit param6) {
+    final void initialize(int obfuscationGuard, int spellType, int y, int x, int damageSourceId, Battle battle, BattleUnit owner) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -3791,17 +3791,17 @@ final class SpellProjectile extends DualLinkNode {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_I = param1;
-          this.field_G = param2;
-          this.field_v = param3;
-          this.field_n = param4;
-          this.field_t = param6;
-          if (param0 > -92) {
+          this.spellType = spellType;
+          this.y = y;
+          this.x = x;
+          this.damageSourceId = damageSourceId;
+          this.owner = owner;
+          if (obfuscationGuard > -92) {
             return;
           }
-          this.field_q = param5;
-          this.field_o = this.field_v << 4;
-          this.field_z = this.field_G << 4;
+          this.battle = battle;
+          this.subpixelX = this.x << 4;
+          this.subpixelY = this.y << 4;
           this.initializeSprite(-103);
           this.field_w = false;
           return;
@@ -3809,14 +3809,14 @@ final class SpellProjectile extends DualLinkNode {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
           stackIn_7_0 = runtimeException;
-          stackIn_7_1 = new StringBuilder().append("mi.K(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
-          if (param5 == null) {
+          stackIn_7_1 = new StringBuilder().append("mi.K(").append(obfuscationGuard).append(',').append(spellType).append(',').append(y).append(',').append(x).append(',').append(damageSourceId).append(',');
+          if (battle == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
           stackIn_11_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',');
-          if (param6 == null) {
+          if (owner == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
@@ -3825,39 +3825,39 @@ final class SpellProjectile extends DualLinkNode {
         }
     }
 
-    private final boolean shouldCameraFollow(int param0) {
+    private final boolean shouldCameraFollow(int obfuscationGuard) {
         RuntimeException var2 = null;
         boolean stackIn_41_0 = false;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null == this.field_p) {
+          if (null == this.sprite) {
             return false;
           }
-          if (this.field_I == 157) {
+          if (this.spellType == 157) {
             return false;
           }
-          if (this.field_I == 168) {
+          if (this.spellType == 168) {
             return false;
           }
-          if (this.field_I == 26) {
+          if (this.spellType == 26) {
             return true;
           }
-          if (this.field_I == 64) {
+          if (this.spellType == 64) {
             return true;
           }
-          if (63 == this.field_I) {
+          if (63 == this.spellType) {
             return true;
           }
-          if (this.field_I == 160) {
+          if (this.spellType == 160) {
             return true;
           }
-          if (param0 != -8209) {
+          if (obfuscationGuard != -8209) {
             this.updateFlightSound(-104, (byte) 102);
           }
-          if (this.field_I == 28) {
+          if (this.spellType == 28) {
             return true;
           }
-          if (this.field_I == 49) {
+          if (this.spellType == 49) {
             return true;
           }
           stackIn_41_0 = this.isActiveEffect((byte) -108);
@@ -3865,11 +3865,11 @@ final class SpellProjectile extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "mi.H(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "mi.H(" + obfuscationGuard + ')');
         }
     }
 
-    final void setBattle(int param0, Battle param1) {
+    final void setBattle(int obfuscationGuard, Battle battle) {
         RuntimeException runtimeException = null;
         int var3_int = 0;
         RuntimeException stackIn_5_0 = null;
@@ -3877,15 +3877,15 @@ final class SpellProjectile extends DualLinkNode {
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3_int = 7 % ((-52 - param0) / 61);
-          this.field_q = param1;
+          var3_int = 7 % ((-52 - obfuscationGuard) / 61);
+          this.battle = battle;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
           stackIn_5_0 = runtimeException;
-          stackIn_5_1 = new StringBuilder().append("mi.E(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_5_1 = new StringBuilder().append("mi.E(").append(obfuscationGuard).append(',');
+          if (battle == null) {
             stackIn_6_2 = "null";
           } else {
             stackIn_6_2 = "{...}";
@@ -3894,7 +3894,7 @@ final class SpellProjectile extends DualLinkNode {
         }
     }
 
-    final void updateMotion(int param0, byte param1, int param2, int param3) {
+    final void updateMotion(int round, byte obfuscationGuard, int targetY, int targetX) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         Object stackIn_392_0 = null;
@@ -4009,92 +4009,92 @@ final class SpellProjectile extends DualLinkNode {
         int var14Lifetime1Lifetime1;
         var19 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          if (this.field_p == null) {
+          if (this.sprite == null) {
             return;
           }
           if (this.isSecondaryLinked((byte) -17)) {
             return;
           }
           regionExit1: {
-            var6 = 109 / ((19 - param1) / 55);
+            var6 = 109 / ((19 - obfuscationGuard) / 55);
             var5 = null;
-            var9 = this.field_I;
+            var9 = this.spellType;
             if (var9 != 127) {
               if (var9 == 149 &&
                 var19 == 0) {
-                if (this.field_t != null &&
-                  !this.field_t.isDead(-1)) {
-                  if (256 <= this.field_y) {
+                if (this.owner != null &&
+                  !this.owner.isDead(-1)) {
+                  if (256 <= this.ageTicks) {
                     return;
                   }
-                  this.field_y = this.field_y + 1;
-                  if (this.field_y > 255) {
-                    this.field_y = 0;
+                  this.ageTicks = this.ageTicks + 1;
+                  if (this.ageTicks > 255) {
+                    this.ageTicks = 0;
                   }
-                  MidiPcmStream.field_L.setDeque((byte) 90, this.field_q.field_Kb);
+                  MidiPcmStream.field_L.setDeque((byte) 90, this.battle.projectiles);
                   var5 = (SpellProjectile) (MidiPcmStream.field_L.first(-69));
                   while (null != var5) {
                     stackIn_392_0 = var5;
                     boolean decompiledFrameRemainder2 = true;
                     if (((SpellProjectile) stackIn_392_0).isActiveEffect((byte) -124)) {
-                      var9 = this.field_v - ((SpellProjectile) (var5)).field_v;
-                      var10 = this.field_G - ((SpellProjectile) (var5)).field_G;
+                      var9 = this.x - ((SpellProjectile) (var5)).x;
+                      var10 = this.y - ((SpellProjectile) (var5)).y;
                       if (!(Math.abs(var9) < 32) ||
                         !(Math.abs(var10) < 32)) {
-                        var9 = this.field_u + (this.field_v - ((SpellProjectile) (var5)).field_v);
-                        var10 = this.field_G - (-this.field_F + ((SpellProjectile) (var5)).field_G);
+                        var9 = this.velocityX + (this.x - ((SpellProjectile) (var5)).x);
+                        var10 = this.y - (-this.velocityY + ((SpellProjectile) (var5)).y);
                         if ((!(Math.abs(var9) >= 32)) &&
                           (!(Math.abs(var10) >= 32))) {
-                          ((SpellProjectile) (var5)).field_G = this.field_G;
-                          ((SpellProjectile) (var5)).field_v = this.field_v;
-                          this.field_y = 256;
-                          ((SpellProjectile) (var5)).field_o = ((SpellProjectile) (var5)).field_v << 4;
-                          ((SpellProjectile) (var5)).field_z = ((SpellProjectile) (var5)).field_G << 4;
+                          ((SpellProjectile) (var5)).y = this.y;
+                          ((SpellProjectile) (var5)).x = this.x;
+                          this.ageTicks = 256;
+                          ((SpellProjectile) (var5)).subpixelX = ((SpellProjectile) (var5)).x << 4;
+                          ((SpellProjectile) (var5)).subpixelY = ((SpellProjectile) (var5)).y << 4;
                         }
                         decompiledFrameRemainder2 = false;
                       }
                       else {
-                        ((SpellProjectile) (var5)).field_v = this.field_v + this.field_u;
-                        this.field_y = 256;
-                        ((SpellProjectile) (var5)).field_G = this.field_F + this.field_G;
-                        ((SpellProjectile) (var5)).field_o = ((SpellProjectile) (var5)).field_v << 4;
-                        ((SpellProjectile) (var5)).field_z = ((SpellProjectile) (var5)).field_G << 4;
+                        ((SpellProjectile) (var5)).x = this.x + this.velocityX;
+                        this.ageTicks = 256;
+                        ((SpellProjectile) (var5)).y = this.velocityY + this.y;
+                        ((SpellProjectile) (var5)).subpixelX = ((SpellProjectile) (var5)).x << 4;
+                        ((SpellProjectile) (var5)).subpixelY = ((SpellProjectile) (var5)).y << 4;
                       }
                     }
                     var5 = (SpellProjectile) (MidiPcmStream.field_L.next(-18502));
                   }
-                  MidiPcmStream.field_L.setDeque((byte) 28, this.field_q.field_i);
+                  MidiPcmStream.field_L.setDeque((byte) 28, this.battle.units);
                   stackIn_392_0Lifetime1 = MidiPcmStream.field_L.first(-66);
                   var9_ref_ml = (BattleUnit) (stackIn_392_0Lifetime1);
                   while (null != var9_ref_ml) {
                     boolean decompiledFrameRemainder1 = true;
-                    if (var9_ref_ml.field_Y <= 32) {
-                      var10Lifetime2 = this.field_v - var9_ref_ml.field_lb;
-                      var11 = this.field_G - var9_ref_ml.field_db;
+                    if (var9_ref_ml.size <= 32) {
+                      var10Lifetime2 = this.x - var9_ref_ml.x;
+                      var11 = this.y - var9_ref_ml.y;
                       if (!(Math.abs(var10Lifetime2) < 32) ||
                         !(Math.abs(var11) < 32)) {
-                        var10Lifetime2 = this.field_v + this.field_u - var9_ref_ml.field_lb;
-                        var11 = -var9_ref_ml.field_db + this.field_F + this.field_G;
+                        var10Lifetime2 = this.x + this.velocityX - var9_ref_ml.x;
+                        var11 = -var9_ref_ml.y + this.velocityY + this.y;
                         if ((!(Math.abs(var10Lifetime2) >= 32)) &&
                           (!(Math.abs(var11) >= 32))) {
-                          this.field_y = 256;
-                          this.field_q.eraseUnitMask(var9_ref_ml, 0);
-                          var9_ref_ml.field_db = this.field_G;
-                          var9_ref_ml.field_lb = this.field_v;
-                          var9_ref_ml.field_R = var9_ref_ml.field_db << 4;
-                          var9_ref_ml.field_X = var9_ref_ml.field_lb << 4;
-                          var9_ref_ml.field_z = true;
+                          this.ageTicks = 256;
+                          this.battle.eraseUnitMask(var9_ref_ml, 0);
+                          var9_ref_ml.y = this.y;
+                          var9_ref_ml.x = this.x;
+                          var9_ref_ml.subpixelY = var9_ref_ml.y << 4;
+                          var9_ref_ml.subpixelX = var9_ref_ml.x << 4;
+                          var9_ref_ml.moving = true;
                         }
                         decompiledFrameRemainder1 = false;
                       }
                       else {
-                        this.field_y = 256;
-                        this.field_q.eraseUnitMask(var9_ref_ml, 0);
-                        var9_ref_ml.field_db = this.field_G + this.field_F;
-                        var9_ref_ml.field_lb = this.field_v + this.field_u;
-                        var9_ref_ml.field_X = var9_ref_ml.field_lb << 4;
-                        var9_ref_ml.field_z = true;
-                        var9_ref_ml.field_R = var9_ref_ml.field_db << 4;
+                        this.ageTicks = 256;
+                        this.battle.eraseUnitMask(var9_ref_ml, 0);
+                        var9_ref_ml.y = this.y + this.velocityY;
+                        var9_ref_ml.x = this.x + this.velocityX;
+                        var9_ref_ml.subpixelX = var9_ref_ml.x << 4;
+                        var9_ref_ml.moving = true;
+                        var9_ref_ml.subpixelY = var9_ref_ml.y << 4;
                       }
                     }
                     var9_ref_ml = (BattleUnit) (MidiPcmStream.field_L.next(-18502));
@@ -4106,36 +4106,36 @@ final class SpellProjectile extends DualLinkNode {
               }
               if (32 == var9 &&
                 var19 == 0) {
-                this.field_y = this.field_y + 1;
-                if ((this.field_y == 100 ||
-                  this.field_y == 150) && (null != this.field_q.field_sb &&
-                  null != this.field_q.field_sb[103])) {
-                  DropdownList.playSampleAtVolume((byte) -30, SceneWidgetNode.field_r[103], this.field_q.field_sb[103]);
+                this.ageTicks = this.ageTicks + 1;
+                if ((this.ageTicks == 100 ||
+                  this.ageTicks == 150) && (null != this.battle.projectileSamples &&
+                  null != this.battle.projectileSamples[103])) {
+                  DropdownList.playSampleAtVolume((byte) -30, SceneWidgetNode.field_r[103], this.battle.projectileSamples[103]);
                 }
-                var5 = this.spawnFromHere(this.field_t.field_lb, (BattleUnit) null, (byte) 81, 100, this.field_t.field_db - (this.field_t.field_Y >> 1), this.field_q);
-                ((SpellProjectile) (var5)).field_u = (int)(64.0 * Math.sin(0.1 * (double)this.field_y));
-                ((SpellProjectile) (var5)).field_F = (int)(Math.cos((double)this.field_y * 0.1) * 64.0);
-                this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                var5 = this.spawnFromHere(this.owner.x, (BattleUnit) null, (byte) 81, 100, this.owner.y - (this.owner.size >> 1), this.battle);
+                ((SpellProjectile) (var5)).velocityX = (int)(64.0 * Math.sin(0.1 * (double)this.ageTicks));
+                ((SpellProjectile) (var5)).velocityY = (int)(Math.cos((double)this.ageTicks * 0.1) * 64.0);
+                this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                 var9_double = 2.0 * (3.141592653589793 * Math.random());
-                var5 = this.spawnFromHere(this.field_t.field_lb + (int)(Math.random() * 256.0 * Math.cos(var9_double)), (BattleUnit) null, (byte) 81, 100, this.field_t.field_db - (this.field_t.field_Y >> 1) + (int)(Math.random() * 256.0 * Math.sin(var9_double)), this.field_q);
-                this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
-                if (this.field_y % 15 == 1) {
-                  MidiPcmStream.field_L.setDeque((byte) 39, this.field_q.field_i);
+                var5 = this.spawnFromHere(this.owner.x + (int)(Math.random() * 256.0 * Math.cos(var9_double)), (BattleUnit) null, (byte) 81, 100, this.owner.y - (this.owner.size >> 1) + (int)(Math.random() * 256.0 * Math.sin(var9_double)), this.battle);
+                this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
+                if (this.ageTicks % 15 == 1) {
+                  MidiPcmStream.field_L.setDeque((byte) 39, this.battle.units);
                   var11_ref_ml = (BattleUnit) (MidiPcmStream.field_L.first(-59));
                   while (var11_ref_ml != null) {
                     stackOut_430_0 = var11_ref_ml;
                     stackIn_472_0 = stackOut_430_0;
                     stackIn_431_0 = stackOut_430_0;
-                    if (stackIn_431_0 != this.field_t) {
-                      var12 = -var11_ref_ml.field_lb + this.field_v;
-                      var13 = this.field_G - var11_ref_ml.field_db;
+                    if (stackIn_431_0 != this.owner) {
+                      var12 = -var11_ref_ml.x + this.x;
+                      var13 = this.y - var11_ref_ml.y;
                       var14 = ConnectionState.greatestCommonDivisor(var13, var12, false);
                       if (256 > var14 ||
-                        var11_ref_ml.field_z) {
-                        if (var11_ref_ml.field_db >= 0 &&
-                          this.field_y <= 200) {
+                        var11_ref_ml.moving) {
+                        if (var11_ref_ml.y >= 0 &&
+                          this.ageTicks <= 200) {
                           if (Math.abs(var12) > 64 &&
-                            100 > this.field_y) {
+                            100 > this.ageTicks) {
                             var12 = -var12;
                             var13 = -var13;
                             var13 += 128;
@@ -4155,37 +4155,37 @@ final class SpellProjectile extends DualLinkNode {
                           4 < var14 &&
                           var14 < 512) {
                           var11_ref_ml.field_P = 2;
-                          if (!var11_ref_ml.field_z) {
-                            var11_ref_ml.field_eb = var11_ref_ml.field_eb - var15;
+                          if (!var11_ref_ml.moving) {
+                            var11_ref_ml.velocityY = var11_ref_ml.velocityY - var15;
                           }
-                          var11_ref_ml.field_kb = var11_ref_ml.field_kb - var12 * var15 / var14;
-                          var11_ref_ml.field_eb = var11_ref_ml.field_eb - (var15 * var13 / var14 + 8);
-                          var11_ref_ml.field_z = true;
-                          var5 = this.spawnFromHere(var11_ref_ml.field_lb + (int)(Math.random() * (double)var11_ref_ml.field_Y - (double)(var11_ref_ml.field_Y / 2)), (BattleUnit) null, (byte) 81, 100, var11_ref_ml.field_db, this.field_q);
-                          this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                          var11_ref_ml.velocityX = var11_ref_ml.velocityX - var12 * var15 / var14;
+                          var11_ref_ml.velocityY = var11_ref_ml.velocityY - (var15 * var13 / var14 + 8);
+                          var11_ref_ml.moving = true;
+                          var5 = this.spawnFromHere(var11_ref_ml.x + (int)(Math.random() * (double)var11_ref_ml.size - (double)(var11_ref_ml.size / 2)), (BattleUnit) null, (byte) 81, 100, var11_ref_ml.y, this.battle);
+                          this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                         }
                       }
                     }
                     var11_ref_ml = (BattleUnit) (MidiPcmStream.field_L.next(-18502));
                   }
-                  MidiPcmStream.field_L.setDeque((byte) 122, this.field_q.field_Kb);
+                  MidiPcmStream.field_L.setDeque((byte) 122, this.battle.projectiles);
                   stackIn_472_0Lifetime1 = MidiPcmStream.field_L.first(-109);
                   var11_ref_mi = (SpellProjectile) (stackIn_472_0Lifetime1);
                   while (var11_ref_mi != null) {
-                    stackIn_539_0 = var11_ref_mi.field_I;
+                    stackIn_539_0 = var11_ref_mi.spellType;
                     stackIn_539_1 = 30;
                     if (stackIn_539_0 != stackIn_539_1 &&
-                      84 != var11_ref_mi.field_I &&
-                      var11_ref_mi.field_I != 149) {
-                      var12Lifetime3 = this.field_v - var11_ref_mi.field_v;
-                      var13Lifetime3 = this.field_G - var11_ref_mi.field_G;
+                      84 != var11_ref_mi.spellType &&
+                      var11_ref_mi.spellType != 149) {
+                      var12Lifetime3 = this.x - var11_ref_mi.x;
+                      var13Lifetime3 = this.y - var11_ref_mi.y;
                       var14Lifetime3 = ConnectionState.greatestCommonDivisor(var13Lifetime3, var12Lifetime3, false);
                       if (var14Lifetime3 < 256 ||
                         var11_ref_mi.isAlive(-139)) {
-                        if (0 <= var11_ref_mi.field_G &&
-                          this.field_y <= 200) {
+                        if (0 <= var11_ref_mi.y &&
+                          this.ageTicks <= 200) {
                           if (!(Math.abs(var12Lifetime3) > 64) ||
-                            this.field_y >= 100) {
+                            this.ageTicks >= 100) {
                             var12Lifetime3 = 0;
                             var13Lifetime3 = 32;
                           } else {
@@ -4201,26 +4201,26 @@ final class SpellProjectile extends DualLinkNode {
                         if (var14Lifetime3 > 128) {
                           var15Lifetime2 = 8192 / var14Lifetime3;
                         }
-                        if (var11_ref_mi.field_I == 71 ||
-                          47 == var11_ref_mi.field_I ||
-                          var11_ref_mi.field_I == 36) {
+                        if (var11_ref_mi.spellType == 71 ||
+                          47 == var11_ref_mi.spellType ||
+                          var11_ref_mi.spellType == 36) {
                           if (var12Lifetime3 > 0) {
-                            var11_ref_mi.field_o = var11_ref_mi.field_o + 240;
-                            var11_ref_mi.field_v = var11_ref_mi.field_v + 15;
+                            var11_ref_mi.subpixelX = var11_ref_mi.subpixelX + 240;
+                            var11_ref_mi.x = var11_ref_mi.x + 15;
                           }
                           if (var12Lifetime3 < 0) {
-                            var11_ref_mi.field_v = var11_ref_mi.field_v - 15;
-                            var11_ref_mi.field_o = var11_ref_mi.field_o - 240;
+                            var11_ref_mi.x = var11_ref_mi.x - 15;
+                            var11_ref_mi.subpixelX = var11_ref_mi.subpixelX - 240;
                           }
                         }
                         if (0 < var15Lifetime2 &&
                           var14Lifetime3 > 4 &&
                           var14Lifetime3 < 512) {
-                          if (var11_ref_mi.field_I == 16) {
-                            var11_ref_mi.field_y = 0;
+                          if (var11_ref_mi.spellType == 16) {
+                            var11_ref_mi.ageTicks = 0;
                           }
-                          var11_ref_mi.field_F = var11_ref_mi.field_F - (-(var15Lifetime2 / 2) + var15Lifetime2 * var13Lifetime3 / var14Lifetime3);
-                          var11_ref_mi.field_u = var11_ref_mi.field_u - var15Lifetime2 * var12Lifetime3 / var14Lifetime3;
+                          var11_ref_mi.velocityY = var11_ref_mi.velocityY - (-(var15Lifetime2 / 2) + var15Lifetime2 * var13Lifetime3 / var14Lifetime3);
+                          var11_ref_mi.velocityX = var11_ref_mi.velocityX - var15Lifetime2 * var12Lifetime3 / var14Lifetime3;
                         }
                       }
                     }
@@ -4228,7 +4228,7 @@ final class SpellProjectile extends DualLinkNode {
                   }
                 }
                 stackIn_539_0Lifetime1 = -251;
-                stackIn_539_1Lifetime1 = ~this.field_y;
+                stackIn_539_1Lifetime1 = ~this.ageTicks;
                 if (stackIn_539_0Lifetime1 <= stackIn_539_1Lifetime1) {
                   return;
                 }
@@ -4246,30 +4246,30 @@ final class SpellProjectile extends DualLinkNode {
                   }
                   regionExit3: {
                     if (var9 == 56) {
-                      if (!this.field_t.isDead(-1) &&
-                        (128 + this.field_q.field_H) > this.field_t.field_db) {
-                        this.field_v = this.field_t.field_lb;
-                        this.field_G = this.field_t.field_db - (this.field_t.field_Y >> 1);
-                        this.field_o = this.field_v << 4;
-                        this.field_z = this.field_G << 4;
-                        if (this.field_y != 0) {
+                      if (!this.owner.isDead(-1) &&
+                        (128 + this.battle.arenaHeight) > this.owner.y) {
+                        this.x = this.owner.x;
+                        this.y = this.owner.y - (this.owner.size >> 1);
+                        this.subpixelX = this.x << 4;
+                        this.subpixelY = this.y << 4;
+                        if (this.ageTicks != 0) {
                           return;
                         }
-                        if (this.field_t.field_ib >= 250) {
+                        if (this.owner.health >= 250) {
                           return;
                         }
                         var9 = 0;
-                        MidiPcmStream.field_L.setDeque((byte) 69, this.field_q.field_i);
+                        MidiPcmStream.field_L.setDeque((byte) 69, this.battle.units);
                         var10_ref_ml = (BattleUnit) (MidiPcmStream.field_L.first(-111));
                         while (var10_ref_ml != null) {
                           if (var19 != 0) {
                             return;
                           }
-                          if (var10_ref_ml.field_s == this.field_t &&
-                            0 < var10_ref_ml.field_ib - var10_ref_ml.field_x &&
-                            this.field_t.field_ib < 250) {
-                            this.field_t.field_ib = this.field_t.field_ib + 1;
-                            var10_ref_ml.field_x = var10_ref_ml.field_x + 1;
+                          if (var10_ref_ml.linkedUnit == this.owner &&
+                            0 < var10_ref_ml.health - var10_ref_ml.pendingDamage &&
+                            this.owner.health < 250) {
+                            this.owner.health = this.owner.health + 1;
+                            var10_ref_ml.pendingDamage = var10_ref_ml.pendingDamage + 1;
                             var9 = 1;
                           }
                           var10_ref_ml = (BattleUnit) (MidiPcmStream.field_L.next(-18502));
@@ -4283,7 +4283,7 @@ final class SpellProjectile extends DualLinkNode {
                         this.remove(0);
                         return;
                       }
-                      if (this.field_q.getCurrentPlayer(false) == this.field_t.field_T) {
+                      if (this.battle.getCurrentPlayer(false) == this.owner.unitId) {
                       }
                       this.remove(0);
                       return;
@@ -4300,8 +4300,8 @@ final class SpellProjectile extends DualLinkNode {
                       if (var9 != 108 &&
                         var9 != 109) {
                         if (var9 == 112) {
-                          this.field_y = this.field_y + 1;
-                          if (this.field_y <= 50) {
+                          this.ageTicks = this.ageTicks + 1;
+                          if (this.ageTicks <= 50) {
                             return;
                           }
                           this.remove(0);
@@ -4368,16 +4368,16 @@ final class SpellProjectile extends DualLinkNode {
                                         }
                                         if (137 == var9 &&
                                           var19 == 0) {
-                                          this.field_y = this.field_y + 1;
-                                          if (this.field_y == 3 &&
+                                          this.ageTicks = this.ageTicks + 1;
+                                          if (this.ageTicks == 3 &&
                                             0 == this.field_H) {
                                             this.playSound(160, true);
                                           }
-                                          if (this.field_y > 8) {
-                                            this.field_y = this.field_y - 8;
+                                          if (this.ageTicks > 8) {
+                                            this.ageTicks = this.ageTicks - 8;
                                             this.field_H = this.field_H + 1;
                                             if (this.field_H == 1) {
-                                              this.applyAreaEffect(0, this.field_t.field_Y, this.field_t.field_Y * 2, 8);
+                                              this.applyAreaEffect(0, this.owner.size, this.owner.size * 2, 8);
                                             }
                                           }
                                           if (this.field_H < 8) {
@@ -4388,47 +4388,47 @@ final class SpellProjectile extends DualLinkNode {
                                         }
                                         if (var9 == 114 &&
                                           var19 == 0) {
-                                          this.field_y = this.field_y + 64;
-                                          this.field_G = -480;
-                                          if (this.field_F >= this.field_y) {
+                                          this.ageTicks = this.ageTicks + 64;
+                                          this.y = -480;
+                                          if (this.velocityY >= this.ageTicks) {
                                             return;
                                           }
                                           this.remove(0);
                                           return;
                                         }
                                         if (var9 == 155) {
-                                          if (this.field_t.field_q > 0) {
-                                            this.field_t.field_q = this.field_t.field_q - 1;
-                                            this.field_t.field_z = true;
+                                          if (this.owner.field_q > 0) {
+                                            this.owner.field_q = this.owner.field_q - 1;
+                                            this.owner.moving = true;
                                           }
-                                          this.field_y = this.field_y + 1;
-                                          if (0 != (this.field_y & 5)) {
+                                          this.ageTicks = this.ageTicks + 1;
+                                          if (0 != (this.ageTicks & 5)) {
                                             return;
                                           }
-                                          if (this.field_t.field_q <= 0) {
-                                            if (this.field_y > 128) {
+                                          if (this.owner.field_q <= 0) {
+                                            if (this.ageTicks > 128) {
                                               this.remove(0);
                                             }
                                             return;
                                           }
-                                          var5 = this.spawnFromHere(this.field_t.field_lb, this.field_t, (byte) 81, 0, this.field_t.field_db - this.field_t.field_Y - 8, this.field_q);
-                                          ((SpellProjectile) (var5)).field_u = -56 + 8 * (this.field_y / 5 & 15);
-                                          this.field_q.field_mb = this.field_t.field_lb;
-                                          ((SpellProjectile) (var5)).field_F = -100;
-                                          this.field_q.field_t = -240;
-                                          this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                          var5 = this.spawnFromHere(this.owner.x, this.owner, (byte) 81, 0, this.owner.y - this.owner.size - 8, this.battle);
+                                          ((SpellProjectile) (var5)).velocityX = -56 + 8 * (this.ageTicks / 5 & 15);
+                                          this.battle.field_mb = this.owner.x;
+                                          ((SpellProjectile) (var5)).velocityY = -100;
+                                          this.battle.field_t = -240;
+                                          this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                           return;
                                         }
                                         if (var9 == 60) {
-                                          this.field_y = this.field_y + 1;
+                                          this.ageTicks = this.ageTicks + 1;
                                           var9 = 0;
                                           boolean decompiledNaturalLoopExit0 = false;
                                           while (!(decompiledNaturalLoopExit0 = (32 <= var9))) {
-                                            stackIn_823_0 = this.field_G;
+                                            stackIn_823_0 = this.y;
                                             if (var19 == 0) {
-                                              if (stackIn_823_0 < -32 + this.field_q.field_H &&
-                                                !this.field_q.spriteOverlapsTerrain(this.field_G - this.field_r, 2, this.field_v - this.field_r, this.field_p)) {
-                                                this.field_G = this.field_G + 1;
+                                              if (stackIn_823_0 < -32 + this.battle.arenaHeight &&
+                                                !this.battle.spriteOverlapsTerrain(this.y - this.spriteRadius, 2, this.x - this.spriteRadius, this.sprite)) {
+                                                this.y = this.y + 1;
                                               }
                                               var9++;
                                               continue;
@@ -4436,17 +4436,17 @@ final class SpellProjectile extends DualLinkNode {
                                             break;
                                           }
                                           if (decompiledNaturalLoopExit0) {
-                                            stackIn_823_0 = compareDoublesNanGreater(128.0 * Math.random(), (double)this.field_y);
+                                            stackIn_823_0 = compareDoublesNanGreater(128.0 * Math.random(), (double)this.ageTicks);
                                           }
                                           if (stackIn_823_0 < 0) {
-                                            var5 = this.spawnFromHere(this.field_v + (int)(96.0 * Math.random() - 48.0), (BattleUnit) null, (byte) 81, 109, (int)(-480.0 + Math.random() * (double)(this.field_G + 480)), this.field_q);
-                                            this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                            var5 = this.spawnFromHere(this.x + (int)(96.0 * Math.random() - 48.0), (BattleUnit) null, (byte) 81, 109, (int)(-480.0 + Math.random() * (double)(this.y + 480)), this.battle);
+                                            this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                           }
-                                          if (this.field_y < 128) {
+                                          if (this.ageTicks < 128) {
                                             return;
                                           }
-                                          var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 108, this.field_G, this.field_q);
-                                          this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                          var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 108, this.y, this.battle);
+                                          this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                           this.applyAreaEffect(50, 128, 96, 8);
                                           this.playTypeSound(1, (byte) 37, 5);
                                           this.remove(0);
@@ -4459,52 +4459,52 @@ final class SpellProjectile extends DualLinkNode {
                                           var9 != 66)) {
                                           if (119 == var9 &&
                                             var19 == 0) {
-                                            if (this.field_y != 0) {
-                                              if (this.field_y > 50) {
-                                                this.field_y = this.field_y + 1;
-                                                if (this.field_y <= 80) {
+                                            if (this.ageTicks != 0) {
+                                              if (this.ageTicks > 50) {
+                                                this.ageTicks = this.ageTicks + 1;
+                                                if (this.ageTicks <= 80) {
                                                   return;
                                                 }
                                                 this.remove(0);
                                                 return;
                                               }
-                                              this.field_y = this.field_y + 1;
-                                              if (this.field_y <= 50) {
+                                              this.ageTicks = this.ageTicks + 1;
+                                              if (this.ageTicks <= 50) {
                                                 return;
                                               }
                                               this.remove(0);
                                               return;
                                             }
-                                            if (this.field_t != null) {
-                                              this.field_q.eraseUnitMask(this.field_t, 0);
+                                            if (this.owner != null) {
+                                              this.battle.eraseUnitMask(this.owner, 0);
                                             }
                                             var9 = 25;
-                                            var10Lifetime1 = this.field_o;
-                                            var11Lifetime1 = this.field_z;
+                                            var10Lifetime1 = this.subpixelX;
+                                            var11Lifetime1 = this.subpixelY;
                                             var12Lifetime1 = 0;
                                             var13Lifetime1 = 0;
                                             while (var13Lifetime1 == 0) {
-                                              if (this.field_q.isSolidAt(this.field_G, this.field_v + 2, (byte) -83) ||
-                                                this.field_q.isSolidAt(this.field_G, this.field_v - 2, (byte) -83) ||
-                                                this.field_q.isSolidAt(this.field_G - 2, this.field_v, (byte) -83) ||
-                                                this.field_q.isSolidAt(this.field_G + 2, this.field_v, (byte) -83)) {
+                                              if (this.battle.isSolidAt(this.y, this.x + 2, (byte) -83) ||
+                                                this.battle.isSolidAt(this.y, this.x - 2, (byte) -83) ||
+                                                this.battle.isSolidAt(this.y - 2, this.x, (byte) -83) ||
+                                                this.battle.isSolidAt(this.y + 2, this.x, (byte) -83)) {
                                                 var13Lifetime1 = 1;
                                               }
                                               var12Lifetime1++;
-                                              this.field_z = this.field_z + (this.field_F >> 1);
-                                              this.field_o = this.field_o + (this.field_u >> 1);
-                                              this.field_G = this.field_z >> 4;
-                                              this.field_v = this.field_o >> 4;
-                                              if (-640 > this.field_v) {
+                                              this.subpixelY = this.subpixelY + (this.velocityY >> 1);
+                                              this.subpixelX = this.subpixelX + (this.velocityX >> 1);
+                                              this.y = this.subpixelY >> 4;
+                                              this.x = this.subpixelX >> 4;
+                                              if (-640 > this.x) {
                                                 var13Lifetime1 = 1;
                                               }
-                                              if ((640 + this.field_q.field_y) < this.field_v) {
+                                              if ((640 + this.battle.arenaWidth) < this.x) {
                                                 var13Lifetime1 = 1;
                                               }
-                                              if (this.field_q.field_H < this.field_G) {
+                                              if (this.battle.arenaHeight < this.y) {
                                                 var13Lifetime1 = 1;
                                               }
-                                              if (this.field_G < -480) {
+                                              if (this.y < -480) {
                                                 var13Lifetime1 = 1;
                                               }
                                               if (var12Lifetime1 <= var9) {
@@ -4512,23 +4512,23 @@ final class SpellProjectile extends DualLinkNode {
                                               }
                                               var13Lifetime1 = 1;
                                             }
-                                            this.field_F = this.field_z - var11Lifetime1;
-                                            this.field_u = this.field_o - var10Lifetime1;
-                                            this.field_z = var11Lifetime1;
-                                            this.field_o = var10Lifetime1;
-                                            this.field_G = this.field_z >> 4;
-                                            this.field_v = this.field_o >> 4;
+                                            this.velocityY = this.subpixelY - var11Lifetime1;
+                                            this.velocityX = this.subpixelX - var10Lifetime1;
+                                            this.subpixelY = var11Lifetime1;
+                                            this.subpixelX = var10Lifetime1;
+                                            this.y = this.subpixelY >> 4;
+                                            this.x = this.subpixelX >> 4;
                                             regionExit5: {
                                               if (var12Lifetime1 <= var9 &&
                                                 var12Lifetime1 > 5) {
                                                 var14Lifetime1 = 0;
                                                 while (var14Lifetime1 < var12Lifetime1) {
-                                                  var15Lifetime1 = (this.field_u * var14Lifetime1 / var12Lifetime1 >> 4) + this.field_v;
-                                                  var16 = this.field_G + (var14Lifetime1 * this.field_F / var12Lifetime1 >> 4);
+                                                  var15Lifetime1 = (this.velocityX * var14Lifetime1 / var12Lifetime1 >> 4) + this.x;
+                                                  var16 = this.y + (var14Lifetime1 * this.velocityY / var12Lifetime1 >> 4);
                                                   var17 = Math.abs(var12Lifetime1 / 2 - var14Lifetime1);
-                                                  var18 = (var12Lifetime1 * var12Lifetime1 / 4 - var17 * var17) / 4 + (-var14Lifetime1 + var12Lifetime1) * this.field_t.getSize(-8323) / (2 * var12Lifetime1);
+                                                  var18 = (var12Lifetime1 * var12Lifetime1 / 4 - var17 * var17) / 4 + (-var14Lifetime1 + var12Lifetime1) * this.owner.getSize(-8323) / (2 * var12Lifetime1);
                                                   var16 = var16 + var18;
-                                                  var5 = this.spawnFromHere(var15Lifetime1, (BattleUnit) null, (byte) 81, 151, var16, this.field_q);
+                                                  var5 = this.spawnFromHere(var15Lifetime1, (BattleUnit) null, (byte) 81, 151, var16, this.battle);
                                                   stackIn_953_0 = var5;
                                                   stackIn_950_1 = ScreenSwitchHelpers.field_f;
                                                   if (0 == (1 & var14Lifetime1)) {
@@ -4540,29 +4540,29 @@ final class SpellProjectile extends DualLinkNode {
                                                       stackIn_951_2 = 27;
                                                     }
                                                   }
-                                                  ((SpellProjectile) (stackIn_953_0)).field_p = ((IndexedSprite) (Object) stackIn_950_1[stackIn_951_2]).toRgbSprite();
-                                                  ((SpellProjectile) (var5)).field_y = var18;
+                                                  ((SpellProjectile) (stackIn_953_0)).sprite = ((IndexedSprite) (Object) stackIn_950_1[stackIn_951_2]).toRgbSprite();
+                                                  ((SpellProjectile) (var5)).ageTicks = var18;
                                                   ((SpellProjectile) (var5)).field_x = 2 * var14Lifetime1;
-                                                  this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                  this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                                   var14Lifetime1++;
                                                 }
                                                 DropdownList.field_N = -1;
                                                 stackIn_953_0Lifetime1 = this;
-                                                this.field_y = 1;
+                                                this.ageTicks = 1;
                                                 break regionExit5;
                                               }
-                                              stackIn_957_0 = this.field_q;
+                                              stackIn_957_0 = this.battle;
                                               stackIn_957_1 = 87;
-                                              if (this.field_t.field_s != null) {
-                                                stackIn_958_2 = this.field_t.field_s.field_T;
+                                              if (this.owner.linkedUnit != null) {
+                                                stackIn_958_2 = this.owner.linkedUnit.unitId;
                                               } else {
-                                                stackIn_958_2 = this.field_t.field_T;
+                                                stackIn_958_2 = this.owner.unitId;
                                               }
                                               ((Battle) (Object) stackIn_957_0).resetSpellSlots(stackIn_957_1, stackIn_958_2, true);
-                                              this.field_y = 51;
+                                              this.ageTicks = 51;
                                             }
-                                            if (null != this.field_t) {
-                                              this.field_q.stampUnitMask(-100, this.field_t);
+                                            if (null != this.owner) {
+                                              this.battle.stampUnitMask(-100, this.owner);
                                             }
                                             return;
                                           }
@@ -4573,13 +4573,13 @@ final class SpellProjectile extends DualLinkNode {
                                                 return;
                                               }
                                             }
-                                            this.field_y = this.field_y - 1;
-                                            if (this.field_y > 0) {
+                                            this.ageTicks = this.ageTicks - 1;
+                                            if (this.ageTicks > 0) {
                                               return;
                                             }
-                                            this.field_q.spriteOverlapsTerrain(-8 + this.field_G, 2, this.field_v - 8, this.field_p);
+                                            this.battle.spriteOverlapsTerrain(-8 + this.y, 2, this.x - 8, this.sprite);
                                             if (!BitHelpers.field_b) {
-                                              this.field_q.carveTerrainAndSprite(this.field_G - 8, -19, -8 + this.field_v, this.field_p);
+                                              this.battle.carveTerrainAndSprite(this.y - 8, -19, -8 + this.x, this.sprite);
                                             }
                                             this.remove(0);
                                             return;
@@ -4588,27 +4588,27 @@ final class SpellProjectile extends DualLinkNode {
                                             93 != var9) {
                                             if (var9 == 72 &&
                                               var19 == 0) {
-                                              if (!this.field_t.isDead(-1) &&
-                                                (this.field_q.field_H + 128) > this.field_t.field_db) {
-                                                this.field_G = this.field_t.field_db - (this.field_t.field_Y >> 1);
-                                                this.field_v = this.field_t.field_lb;
-                                                this.field_o = this.field_v << 4;
-                                                this.field_z = this.field_G << 4;
-                                                var9 = this.field_y * 4096 / 100;
+                                              if (!this.owner.isDead(-1) &&
+                                                (this.battle.arenaHeight + 128) > this.owner.y) {
+                                                this.y = this.owner.y - (this.owner.size >> 1);
+                                                this.x = this.owner.x;
+                                                this.subpixelX = this.x << 4;
+                                                this.subpixelY = this.y << 4;
+                                                var9 = this.ageTicks * 4096 / 100;
                                                 var10Lifetime1 = GradientBarPainter.sine(10, var9) >> 10;
                                                 var11Lifetime1 = BevelBoxPainter.cosine(var9, -105) >> 10;
-                                                this.field_y = this.field_y + 1;
-                                                var5 = this.spawnFromHere(this.field_v - var10Lifetime1, (BattleUnit) null, (byte) 81, 95, this.field_G - var11Lifetime1, this.field_q);
-                                                this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
-                                                var5 = this.spawnFromHere(this.field_v + var10Lifetime1, (BattleUnit) null, (byte) 81, 95, this.field_G - var11Lifetime1, this.field_q);
-                                                this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
-                                                if (!this.field_q.spriteOverlapsTerrain(this.field_G - var11Lifetime1 - this.field_r, 2, var10Lifetime1 + (this.field_v - this.field_r), DateHelpers.field_a)) {
-                                                  this.field_q.carveTerrainAndSprite(-var11Lifetime1 + this.field_G - 8, -125, -8 + (this.field_v + var10Lifetime1), ScreenSwitchHelpers.field_f[7].toRgbSprite());
+                                                this.ageTicks = this.ageTicks + 1;
+                                                var5 = this.spawnFromHere(this.x - var10Lifetime1, (BattleUnit) null, (byte) 81, 95, this.y - var11Lifetime1, this.battle);
+                                                this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                var5 = this.spawnFromHere(this.x + var10Lifetime1, (BattleUnit) null, (byte) 81, 95, this.y - var11Lifetime1, this.battle);
+                                                this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                if (!this.battle.spriteOverlapsTerrain(this.y - var11Lifetime1 - this.spriteRadius, 2, var10Lifetime1 + (this.x - this.spriteRadius), DateHelpers.field_a)) {
+                                                  this.battle.carveTerrainAndSprite(-var11Lifetime1 + this.y - 8, -125, -8 + (this.x + var10Lifetime1), ScreenSwitchHelpers.field_f[7].toRgbSprite());
                                                 }
-                                                if (!this.field_q.spriteOverlapsTerrain(this.field_G + (-var11Lifetime1 - this.field_r), 2, -this.field_r + (-var10Lifetime1 + this.field_v), DateHelpers.field_a)) {
-                                                  this.field_q.carveTerrainAndSprite(-8 + this.field_G - var11Lifetime1, -44, -8 + (this.field_v - var10Lifetime1), ScreenSwitchHelpers.field_f[7].toRgbSprite());
+                                                if (!this.battle.spriteOverlapsTerrain(this.y + (-var11Lifetime1 - this.spriteRadius), 2, -this.spriteRadius + (-var10Lifetime1 + this.x), DateHelpers.field_a)) {
+                                                  this.battle.carveTerrainAndSprite(-8 + this.y - var11Lifetime1, -44, -8 + (this.x - var10Lifetime1), ScreenSwitchHelpers.field_f[7].toRgbSprite());
                                                 }
-                                                if (this.field_y <= 100) {
+                                                if (this.ageTicks <= 100) {
                                                   return;
                                                 }
                                                 this.remove(0);
@@ -4618,21 +4618,21 @@ final class SpellProjectile extends DualLinkNode {
                                               return;
                                             }
                                             if (var9 == 83) {
-                                              if (!this.field_t.isDead(-1) &&
-                                                (this.field_q.field_H + 128) > this.field_t.field_db) {
-                                                this.field_v = this.field_t.field_lb;
-                                                this.field_G = -(this.field_t.field_Y >> 1) + this.field_t.field_db;
-                                                this.field_z = this.field_G << 4;
-                                                this.field_o = this.field_v << 4;
-                                                var9 = 4096 * (this.field_y + this.field_v + this.field_G) / 100;
+                                              if (!this.owner.isDead(-1) &&
+                                                (this.battle.arenaHeight + 128) > this.owner.y) {
+                                                this.x = this.owner.x;
+                                                this.y = -(this.owner.size >> 1) + this.owner.y;
+                                                this.subpixelY = this.y << 4;
+                                                this.subpixelX = this.x << 4;
+                                                var9 = 4096 * (this.ageTicks + this.x + this.y) / 100;
                                                 var10Lifetime1 = GradientBarPainter.sine(117, var9) >> 10;
                                                 var11Lifetime1 = BevelBoxPainter.cosine(var9, -112) >> 10;
-                                                this.field_y = this.field_y + 20;
-                                                var5 = this.spawnFromHere(var10Lifetime1 + this.field_v, this.field_t, (byte) 81, 3, this.field_G + var11Lifetime1, this.field_q);
-                                                ((SpellProjectile) (var5)).field_u = var10Lifetime1;
-                                                ((SpellProjectile) (var5)).field_F = var11Lifetime1;
-                                                this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
-                                                if (this.field_y < 200) {
+                                                this.ageTicks = this.ageTicks + 20;
+                                                var5 = this.spawnFromHere(var10Lifetime1 + this.x, this.owner, (byte) 81, 3, this.y + var11Lifetime1, this.battle);
+                                                ((SpellProjectile) (var5)).velocityX = var10Lifetime1;
+                                                ((SpellProjectile) (var5)).velocityY = var11Lifetime1;
+                                                this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                if (this.ageTicks < 200) {
                                                   return;
                                                 }
                                                 this.remove(0);
@@ -4643,43 +4643,43 @@ final class SpellProjectile extends DualLinkNode {
                                             }
                                             if (var9 == 22 &&
                                               var19 == 0) {
-                                              QuickChatHelpers.field_b = -3 + (7 & this.field_y);
-                                              if (0 == this.field_y) {
-                                                this.field_C = new IsaacRandom(new int[]{this.field_q.field_Q, param0, this.field_v, this.field_G});
+                                              QuickChatHelpers.field_b = -3 + (7 & this.ageTicks);
+                                              if (0 == this.ageTicks) {
+                                                this.random = new IsaacRandom(new int[]{this.battle.randomSeed, round, this.x, this.y});
                                               }
-                                              if (this.field_y == 50 &&
-                                                this.field_q.field_sb != null &&
-                                                null != this.field_q.field_sb[90]) {
-                                                DropdownList.playSampleAtVolume((byte) -30, SceneWidgetNode.field_r[90], this.field_q.field_sb[90]);
+                                              if (this.ageTicks == 50 &&
+                                                this.battle.projectileSamples != null &&
+                                                null != this.battle.projectileSamples[90]) {
+                                                DropdownList.playSampleAtVolume((byte) -30, SceneWidgetNode.field_r[90], this.battle.projectileSamples[90]);
                                               }
-                                              this.field_y = this.field_y + 1;
-                                              if (this.field_y % 15 == 1) {
-                                                MidiPcmStream.field_L.setDeque((byte) 28, this.field_q.field_i);
+                                              this.ageTicks = this.ageTicks + 1;
+                                              if (this.ageTicks % 15 == 1) {
+                                                MidiPcmStream.field_L.setDeque((byte) 28, this.battle.units);
                                                 var9_ref_mlLifetime1 = (BattleUnit) (MidiPcmStream.field_L.first(-70));
                                                 while (var9_ref_mlLifetime1 != null) {
-                                                  stackOut_1133_0 = var9_ref_mlLifetime1.field_z;
+                                                  stackOut_1133_0 = var9_ref_mlLifetime1.moving;
                                                   stackIn_1159_0 = stackOut_1133_0 ? 1 : 0;
                                                   stackIn_1134_0 = stackOut_1133_0;
                                                   if (!stackIn_1134_0) {
-                                                    var9_ref_mlLifetime1.field_z = true;
-                                                    var9_ref_mlLifetime1.field_eb = -16;
-                                                    var9_ref_mlLifetime1.field_kb = 64 * (HuffmanCodec.randomBelow(this.field_C, -2147483648, 256) & 2) - 32;
-                                                    var5 = this.spawnFromHere(var9_ref_mlLifetime1.field_lb + (int)(Math.random() * (double)var9_ref_mlLifetime1.field_Y - (double)(var9_ref_mlLifetime1.field_Y / 2)), (BattleUnit) null, (byte) 81, 90, var9_ref_mlLifetime1.field_db, this.field_q);
-                                                    this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                    var9_ref_mlLifetime1.moving = true;
+                                                    var9_ref_mlLifetime1.velocityY = -16;
+                                                    var9_ref_mlLifetime1.velocityX = 64 * (HuffmanCodec.randomBelow(this.random, -2147483648, 256) & 2) - 32;
+                                                    var5 = this.spawnFromHere(var9_ref_mlLifetime1.x + (int)(Math.random() * (double)var9_ref_mlLifetime1.size - (double)(var9_ref_mlLifetime1.size / 2)), (BattleUnit) null, (byte) 81, 90, var9_ref_mlLifetime1.y, this.battle);
+                                                    this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                                   }
-                                                  if (var9_ref_mlLifetime1.field_jb == 22 ||
-                                                    23 == var9_ref_mlLifetime1.field_jb ||
-                                                    var9_ref_mlLifetime1.field_jb == 21 ||
-                                                    var9_ref_mlLifetime1.field_jb == 24 ||
-                                                    var9_ref_mlLifetime1.field_jb == 20 ||
-                                                    var9_ref_mlLifetime1.field_jb == 35) {
-                                                    var9_ref_mlLifetime1.field_x = var9_ref_mlLifetime1.field_x + 2;
-                                                    var9_ref_mlLifetime1.field_z = true;
+                                                  if (var9_ref_mlLifetime1.unitType == 22 ||
+                                                    23 == var9_ref_mlLifetime1.unitType ||
+                                                    var9_ref_mlLifetime1.unitType == 21 ||
+                                                    var9_ref_mlLifetime1.unitType == 24 ||
+                                                    var9_ref_mlLifetime1.unitType == 20 ||
+                                                    var9_ref_mlLifetime1.unitType == 35) {
+                                                    var9_ref_mlLifetime1.pendingDamage = var9_ref_mlLifetime1.pendingDamage + 2;
+                                                    var9_ref_mlLifetime1.moving = true;
                                                   }
                                                   var9_ref_mlLifetime1 = (BattleUnit) (MidiPcmStream.field_L.next(-18502));
                                                 }
                                               }
-                                              stackIn_1159_0Lifetime1 = this.field_y;
+                                              stackIn_1159_0Lifetime1 = this.ageTicks;
                                               if (stackIn_1159_0Lifetime1 <= 250) {
                                                 return;
                                               }
@@ -4689,61 +4689,61 @@ final class SpellProjectile extends DualLinkNode {
                                             }
                                             if (var9 == 29 &&
                                               var19 == 0) {
-                                              if (this.field_t != null &&
-                                                this.field_t.isDead(-1)) {
+                                              if (this.owner != null &&
+                                                this.owner.isDead(-1)) {
                                                 this.remove(0);
                                                 return;
                                               }
                                               if (this.field_H > 0 ||
-                                                this.field_y < 30) {
-                                                this.field_y = this.field_y + 1;
+                                                this.ageTicks < 30) {
+                                                this.ageTicks = this.ageTicks + 1;
                                               }
-                                              if (1 == (7 & this.field_y)) {
-                                                if (this.field_y == 1 ||
-                                                  this.field_y == 33) {
-                                                  this.field_C = new IsaacRandom(new int[]{this.field_q.field_Q, param0, this.field_v, this.field_G});
+                                              if (1 == (7 & this.ageTicks)) {
+                                                if (this.ageTicks == 1 ||
+                                                  this.ageTicks == 33) {
+                                                  this.random = new IsaacRandom(new int[]{this.battle.randomSeed, round, this.x, this.y});
                                                 }
-                                                var9 = HuffmanCodec.randomBelow(this.field_C, -2147483648, 8192);
-                                                var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 21, this.field_G, this.field_q);
+                                                var9 = HuffmanCodec.randomBelow(this.random, -2147483648, 8192);
+                                                var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 21, this.y, this.battle);
                                                 ((SpellProjectile) (var5)).field_w = this.field_w;
                                                 this.playSound(89, true);
-                                                ((SpellProjectile) (var5)).field_u = GradientBarPainter.sine(126, var9) >> 11;
-                                                ((SpellProjectile) (var5)).field_F = -256 + (BevelBoxPainter.cosine(var9, -119) >> 9);
-                                                this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                ((SpellProjectile) (var5)).velocityX = GradientBarPainter.sine(126, var9) >> 11;
+                                                ((SpellProjectile) (var5)).velocityY = -256 + (BevelBoxPainter.cosine(var9, -119) >> 9);
+                                                this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                               }
-                                              if (this.field_y <= 250) {
+                                              if (this.ageTicks <= 250) {
                                                 return;
                                               }
                                               this.remove(0);
                                               return;
                                             }
                                             if (var9 == 118) {
-                                              this.field_y = this.field_y + 1;
-                                              if (0 == this.field_y % 3) {
-                                                var9 = this.field_v;
-                                                this.field_v = this.field_t.field_X + this.field_u * this.field_y / 3 >> 4;
-                                                var10Lifetime1 = this.field_G;
-                                                this.field_G = -(this.field_t.field_Y / 2) + (this.field_t.field_R + this.field_y * this.field_F / 3 >> 4);
+                                              this.ageTicks = this.ageTicks + 1;
+                                              if (0 == this.ageTicks % 3) {
+                                                var9 = this.x;
+                                                this.x = this.owner.subpixelX + this.velocityX * this.ageTicks / 3 >> 4;
+                                                var10Lifetime1 = this.y;
+                                                this.y = -(this.owner.size / 2) + (this.owner.subpixelY + this.ageTicks * this.velocityY / 3 >> 4);
                                                 this.applyAreaEffect(5, 64, 32, 8);
                                                 this.playTypeSound(2, (byte) 37, 6);
-                                                var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 129, this.field_G, this.field_q);
-                                                this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
-                                                this.field_v = var9;
-                                                this.field_G = var10Lifetime1;
+                                                var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 129, this.y, this.battle);
+                                                this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                this.x = var9;
+                                                this.y = var10Lifetime1;
                                               }
-                                              if (this.field_y <= 16) {
+                                              if (this.ageTicks <= 16) {
                                                 return;
                                               }
-                                              var9 = this.field_v;
-                                              var10Lifetime1 = this.field_G;
-                                              this.field_v = this.field_t.field_X + this.field_u * this.field_y / 3 >> 4;
-                                              this.field_G = -(this.field_t.field_Y / 2) + (this.field_t.field_R + this.field_F * this.field_y / 3 >> 4);
+                                              var9 = this.x;
+                                              var10Lifetime1 = this.y;
+                                              this.x = this.owner.subpixelX + this.velocityX * this.ageTicks / 3 >> 4;
+                                              this.y = -(this.owner.size / 2) + (this.owner.subpixelY + this.velocityY * this.ageTicks / 3 >> 4);
                                               this.applyAreaEffect(10, 128, 48, 8);
                                               this.playTypeSound(1, (byte) 37, 6);
-                                              var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 154, this.field_G, this.field_q);
-                                              this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
-                                              this.field_G = var10Lifetime1;
-                                              this.field_v = var9;
+                                              var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 154, this.y, this.battle);
+                                              this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
+                                              this.y = var10Lifetime1;
+                                              this.x = var9;
                                               this.remove(0);
                                               return;
                                             }
@@ -4752,42 +4752,42 @@ final class SpellProjectile extends DualLinkNode {
                                                 var19 != 0) {
                                                 if (var9 == 80 &&
                                                   var19 == 0) {
-                                                  var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 87, this.field_G, this.field_q);
-                                                  ((SpellProjectile) (var5)).field_u = (int)(Math.random() * 15.0) - 8;
-                                                  ((SpellProjectile) (var5)).field_F = ((SpellProjectile) (var5)).field_F - 16;
-                                                  this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
-                                                  if (this.field_t.field_lb < this.field_v) {
-                                                    this.field_t.field_M = -1;
+                                                  var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 87, this.y, this.battle);
+                                                  ((SpellProjectile) (var5)).velocityX = (int)(Math.random() * 15.0) - 8;
+                                                  ((SpellProjectile) (var5)).velocityY = ((SpellProjectile) (var5)).velocityY - 16;
+                                                  this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                  if (this.owner.x < this.x) {
+                                                    this.owner.field_M = -1;
                                                   }
-                                                  if (this.field_v < this.field_t.field_lb) {
-                                                    this.field_t.field_M = 1;
+                                                  if (this.x < this.owner.x) {
+                                                    this.owner.field_M = 1;
                                                   }
-                                                  this.field_y = this.field_y + 1;
-                                                  if (this.field_y <= 50) {
+                                                  this.ageTicks = this.ageTicks + 1;
+                                                  if (this.ageTicks <= 50) {
                                                     return;
                                                   }
                                                   this.playTypeSound(0, (byte) 37, 1);
-                                                  var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 89, this.field_G, this.field_q);
-                                                  this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                  var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 89, this.y, this.battle);
+                                                  this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                                   this.applyAreaEffect(75, 256, 80, 8);
                                                   this.remove(0);
                                                   return;
                                                 }
                                                 if (69 == var9) {
-                                                  if (!this.field_t.isDead(-1) &&
-                                                    this.field_t.field_db < (128 + this.field_q.field_H)) {
+                                                  if (!this.owner.isDead(-1) &&
+                                                    this.owner.y < (128 + this.battle.arenaHeight)) {
                                                     this.field_x = this.field_x + 1;
-                                                    this.field_G = this.field_t.field_db;
-                                                    this.field_v = this.field_t.field_lb;
+                                                    this.y = this.owner.y;
+                                                    this.x = this.owner.x;
                                                     if (this.field_x >= 12) {
                                                       this.field_x = this.field_x - 12;
                                                     }
                                                     boolean decompiledFrameCompleted1 = true;
-                                                    if (this.field_y < 250) {
-                                                      if (0 < this.field_y) {
-                                                        this.field_y = this.field_y + 1;
+                                                    if (this.ageTicks < 250) {
+                                                      if (0 < this.ageTicks) {
+                                                        this.ageTicks = this.ageTicks + 1;
                                                       }
-                                                      MidiPcmStream.field_L.setDeque((byte) 121, this.field_q.field_Kb);
+                                                      MidiPcmStream.field_L.setDeque((byte) 121, this.battle.projectiles);
                                                       var9_ref_mi = (SpellProjectile) (MidiPcmStream.field_L.first(-60));
                                                       while (null != var9_ref_mi) {
                                                         stackOut_1284_0 = var9_ref_mi;
@@ -4799,27 +4799,27 @@ final class SpellProjectile extends DualLinkNode {
                                                           break;
                                                         }
                                                         if (((SpellProjectile) (Object) stackIn_1285_0).isAlive(stackIn_1322_1) &&
-                                                          30 != var9_ref_mi.field_I &&
-                                                          93 != var9_ref_mi.field_I &&
-                                                          var9_ref_mi.field_I != 84 &&
-                                                          118 != var9_ref_mi.field_I &&
-                                                          var9_ref_mi.field_I != 119) {
-                                                          var10Lifetime1 = -this.field_v + var9_ref_mi.field_v;
-                                                          var11Lifetime1 = -this.field_G + var9_ref_mi.field_G;
-                                                          if (var10Lifetime1 * var9_ref_mi.field_u + var11Lifetime1 * var9_ref_mi.field_F < 0) {
+                                                          30 != var9_ref_mi.spellType &&
+                                                          93 != var9_ref_mi.spellType &&
+                                                          var9_ref_mi.spellType != 84 &&
+                                                          118 != var9_ref_mi.spellType &&
+                                                          var9_ref_mi.spellType != 119) {
+                                                          var10Lifetime1 = -this.x + var9_ref_mi.x;
+                                                          var11Lifetime1 = -this.y + var9_ref_mi.y;
+                                                          if (var10Lifetime1 * var9_ref_mi.velocityX + var11Lifetime1 * var9_ref_mi.velocityY < 0) {
                                                             var12Lifetime1 = var10Lifetime1 * var10Lifetime1 + var11Lifetime1 * var11Lifetime1;
-                                                            if (this.field_t.field_jb == 25) {
+                                                            if (this.owner.unitType == 25) {
                                                               var12Lifetime1 = 3 * var12Lifetime1 / 2;
                                                             }
                                                             if (var12Lifetime1 < 65536) {
-                                                              this.field_y = this.field_y + 1;
+                                                              this.ageTicks = this.ageTicks + 1;
                                                               if (var12Lifetime1 > 0) {
-                                                                var9_ref_mi.field_u = var9_ref_mi.field_u + Math.abs(var10Lifetime1) * 32 * var10Lifetime1 / var12Lifetime1;
-                                                                var9_ref_mi.field_F = var9_ref_mi.field_F + Math.abs(var11Lifetime1) * var11Lifetime1 * 32 / var12Lifetime1;
+                                                                var9_ref_mi.velocityX = var9_ref_mi.velocityX + Math.abs(var10Lifetime1) * 32 * var10Lifetime1 / var12Lifetime1;
+                                                                var9_ref_mi.velocityY = var9_ref_mi.velocityY + Math.abs(var11Lifetime1) * var11Lifetime1 * 32 / var12Lifetime1;
                                                                 if (var10Lifetime1 <= 0) {
-                                                                  var9_ref_mi.field_u = var9_ref_mi.field_u - 5;
+                                                                  var9_ref_mi.velocityX = var9_ref_mi.velocityX - 5;
                                                                 } else {
-                                                                  var9_ref_mi.field_u = var9_ref_mi.field_u + 5;
+                                                                  var9_ref_mi.velocityX = var9_ref_mi.velocityX + 5;
                                                                 }
                                                               }
                                                             }
@@ -4829,74 +4829,74 @@ final class SpellProjectile extends DualLinkNode {
                                                       }
                                                     }
                                                     if (decompiledFrameCompleted1) {
-                                                      this.field_z = this.field_G << 4;
+                                                      this.subpixelY = this.y << 4;
                                                       stackIn_1322_0Lifetime1 = this;
-                                                      stackIn_1322_1 = this.field_v << 4;
+                                                      stackIn_1322_1 = this.x << 4;
                                                     }
-                                                    this.field_o = stackIn_1322_1;
+                                                    this.subpixelX = stackIn_1322_1;
                                                     return;
                                                   }
-                                                  if (this.field_q.getCurrentPlayer(false) == this.field_t.field_T) {
+                                                  if (this.battle.getCurrentPlayer(false) == this.owner.unitId) {
                                                   }
                                                   this.remove(0);
                                                   return;
                                                 }
                                                 if (138 == var9 &&
                                                   var19 == 0) {
-                                                  if (this.field_t.field_ib > 0 &&
-                                                    this.field_t.field_db < (this.field_q.field_H + 128)) {
-                                                    this.field_G = this.field_t.field_db;
-                                                    this.field_v = this.field_t.field_lb;
-                                                    if (0 == this.field_y) {
-                                                      if (null != this.field_t && (null == this.field_t.field_gb ||
-                                                        this.field_t.field_gb.field_I != 121)) {
-                                                        this.field_t.field_gb = this;
+                                                  if (this.owner.health > 0 &&
+                                                    this.owner.y < (this.battle.arenaHeight + 128)) {
+                                                    this.y = this.owner.y;
+                                                    this.x = this.owner.x;
+                                                    if (0 == this.ageTicks) {
+                                                      if (null != this.owner && (null == this.owner.attachedProjectile ||
+                                                        this.owner.attachedProjectile.spellType != 121)) {
+                                                        this.owner.attachedProjectile = this;
                                                       }
-                                                      MidiPcmStream.field_L.setDeque((byte) 117, this.field_q.field_i);
+                                                      MidiPcmStream.field_L.setDeque((byte) 117, this.battle.units);
                                                       var9_ref_mlLifetime1Lifetime1 = (BattleUnit) (MidiPcmStream.field_L.first(-62));
                                                       while (var9_ref_mlLifetime1Lifetime1 != null) {
-                                                        if (var9_ref_mlLifetime1Lifetime1 != this.field_t &&
-                                                          this.field_y == 0) {
-                                                          var10Lifetime1 = -var9_ref_mlLifetime1Lifetime1.field_lb + this.field_v;
-                                                          var11Lifetime1 = -(this.field_t.field_Y / 2) + this.field_G + (-var9_ref_mlLifetime1Lifetime1.field_db + var9_ref_mlLifetime1Lifetime1.field_Y / 2);
-                                                          if (Math.abs(var10Lifetime1) < ((var9_ref_mlLifetime1Lifetime1.field_Y + this.field_t.field_Y * 4 / 3) / 2) &&
-                                                            Math.abs(var11Lifetime1) < (this.field_t.field_Y * 4 / 3 + var9_ref_mlLifetime1Lifetime1.field_Y) / 2) {
-                                                            var12Lifetime1 = this.field_v;
-                                                            this.field_v = var9_ref_mlLifetime1Lifetime1.field_lb;
-                                                            var13Lifetime1 = this.field_G;
+                                                        if (var9_ref_mlLifetime1Lifetime1 != this.owner &&
+                                                          this.ageTicks == 0) {
+                                                          var10Lifetime1 = -var9_ref_mlLifetime1Lifetime1.x + this.x;
+                                                          var11Lifetime1 = -(this.owner.size / 2) + this.y + (-var9_ref_mlLifetime1Lifetime1.y + var9_ref_mlLifetime1Lifetime1.size / 2);
+                                                          if (Math.abs(var10Lifetime1) < ((var9_ref_mlLifetime1Lifetime1.size + this.owner.size * 4 / 3) / 2) &&
+                                                            Math.abs(var11Lifetime1) < (this.owner.size * 4 / 3 + var9_ref_mlLifetime1Lifetime1.size) / 2) {
+                                                            var12Lifetime1 = this.x;
+                                                            this.x = var9_ref_mlLifetime1Lifetime1.x;
+                                                            var13Lifetime1 = this.y;
                                                             if (var10Lifetime1 > 0) {
-                                                              this.field_v = this.field_v - 4;
+                                                              this.x = this.x - 4;
                                                             } else {
-                                                              this.field_v = this.field_v + 4;
+                                                              this.x = this.x + 4;
                                                             }
-                                                            this.field_G = var9_ref_mlLifetime1Lifetime1.field_db;
-                                                            this.field_G = this.field_G + 8;
-                                                            var5 = this.spawnFromHere(this.field_t.field_lb, this.field_t, (byte) 81, 139, this.field_t.field_db, this.field_q);
-                                                            this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
-                                                            ((SpellProjectile) (var5)).field_u = var10Lifetime1;
-                                                            ((SpellProjectile) (var5)).field_F = var11Lifetime1;
-                                                            if (28 == this.field_t.field_jb) {
+                                                            this.y = var9_ref_mlLifetime1Lifetime1.y;
+                                                            this.y = this.y + 8;
+                                                            var5 = this.spawnFromHere(this.owner.x, this.owner, (byte) 81, 139, this.owner.y, this.battle);
+                                                            this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                            ((SpellProjectile) (var5)).velocityX = var10Lifetime1;
+                                                            ((SpellProjectile) (var5)).velocityY = var11Lifetime1;
+                                                            if (28 == this.owner.unitType) {
                                                               this.playTypeSound(2, (byte) 37, 6);
                                                               this.applyAreaEffect(5, 32, 16, 8);
                                                             }
-                                                            if (this.field_t.field_jb == 29) {
+                                                            if (this.owner.unitType == 29) {
                                                               this.playTypeSound(1, (byte) 37, 6);
                                                               this.applyAreaEffect(15, 32, 16, 8);
                                                             }
-                                                            if (this.field_t.field_jb == 30) {
+                                                            if (this.owner.unitType == 30) {
                                                               this.playTypeSound(0, (byte) 37, 6);
                                                               this.applyAreaEffect(30, 32, 16, 8);
                                                             }
-                                                            this.field_v = var12Lifetime1;
-                                                            this.field_G = var13Lifetime1;
-                                                            this.field_y = 1;
+                                                            this.x = var12Lifetime1;
+                                                            this.y = var13Lifetime1;
+                                                            this.ageTicks = 1;
                                                           }
                                                         }
                                                         var9_ref_mlLifetime1Lifetime1 = (BattleUnit) (MidiPcmStream.field_L.next(-18502));
                                                       }
                                                     }
-                                                    this.field_z = this.field_G << 4;
-                                                    this.field_o = this.field_v << 4;
+                                                    this.subpixelY = this.y << 4;
+                                                    this.subpixelX = this.x << 4;
                                                     return;
                                                   }
                                                   this.remove(0);
@@ -4904,62 +4904,62 @@ final class SpellProjectile extends DualLinkNode {
                                                 }
                                                 if (var9 == 70 &&
                                                   var19 == 0) {
-                                                  if (!this.field_t.isDead(-1) &&
-                                                    (128 + this.field_q.field_H) > this.field_t.field_db) {
+                                                  if (!this.owner.isDead(-1) &&
+                                                    (128 + this.battle.arenaHeight) > this.owner.y) {
                                                     this.field_x = this.field_x + 1;
-                                                    this.field_v = this.field_t.field_lb;
+                                                    this.x = this.owner.x;
                                                     if (16 <= this.field_x) {
                                                       this.field_x = this.field_x - 16;
                                                     }
-                                                    this.field_G = this.field_t.field_db;
-                                                    if (this.field_y < 5) {
-                                                      MidiPcmStream.field_L.setDeque((byte) 116, this.field_q.field_i);
+                                                    this.y = this.owner.y;
+                                                    if (this.ageTicks < 5) {
+                                                      MidiPcmStream.field_L.setDeque((byte) 116, this.battle.units);
                                                       var9_ref_mlLifetime1Lifetime1 = (BattleUnit) (MidiPcmStream.field_L.first(-57));
                                                       while (var9_ref_mlLifetime1Lifetime1 != null) {
-                                                        if (~this.field_t.field_u != ~var9_ref_mlLifetime1Lifetime1.field_u) {
-                                                          var10Lifetime1 = -var9_ref_mlLifetime1Lifetime1.field_lb + this.field_v;
-                                                          var11Lifetime1 = this.field_G - (this.field_t.field_Y / 2 + (-(var9_ref_mlLifetime1Lifetime1.field_Y / 2) + var9_ref_mlLifetime1Lifetime1.field_db));
+                                                        if (~this.owner.ownerPlayer != ~var9_ref_mlLifetime1Lifetime1.ownerPlayer) {
+                                                          var10Lifetime1 = -var9_ref_mlLifetime1Lifetime1.x + this.x;
+                                                          var11Lifetime1 = this.y - (this.owner.size / 2 + (-(var9_ref_mlLifetime1Lifetime1.size / 2) + var9_ref_mlLifetime1Lifetime1.y));
                                                           if (Math.abs(var10Lifetime1) < 64 &&
                                                             Math.abs(var11Lifetime1) < 64) {
-                                                            var12Lifetime1 = this.field_v;
-                                                            this.field_v = var9_ref_mlLifetime1Lifetime1.field_lb;
-                                                            var13Lifetime1 = this.field_G;
-                                                            this.field_G = var9_ref_mlLifetime1Lifetime1.field_db;
+                                                            var12Lifetime1 = this.x;
+                                                            this.x = var9_ref_mlLifetime1Lifetime1.x;
+                                                            var13Lifetime1 = this.y;
+                                                            this.y = var9_ref_mlLifetime1Lifetime1.y;
                                                             if (var10Lifetime1 >= 0) {
-                                                              this.field_v = this.field_v - 8;
+                                                              this.x = this.x - 8;
                                                             } else {
-                                                              this.field_v = this.field_v + 8;
+                                                              this.x = this.x + 8;
                                                             }
-                                                            this.field_G = this.field_G + 8;
-                                                            var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 100, this.field_G, this.field_q);
-                                                            this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                            this.y = this.y + 8;
+                                                            var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 100, this.y, this.battle);
+                                                            this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                                             this.playTypeSound(2, (byte) 37, 2);
                                                             var14Lifetime1 = 0;
                                                             while (true) {
                                                               if (var14Lifetime1 < 5) {
-                                                                var5 = this.spawnFromHere(this.field_v + (int)(-2.0 + Math.random() * 4.0), (BattleUnit) null, (byte) 81, 112, this.field_G + (int)(-2.0 + Math.random() * 4.0), this.field_q);
-                                                                ((SpellProjectile) (var5)).field_u = (int)(32.0 * Math.random() - 16.0) << 4;
-                                                                ((SpellProjectile) (var5)).field_F = (int)(-16.0 + Math.random() * 32.0) << 4;
-                                                                this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                                var5 = this.spawnFromHere(this.x + (int)(-2.0 + Math.random() * 4.0), (BattleUnit) null, (byte) 81, 112, this.y + (int)(-2.0 + Math.random() * 4.0), this.battle);
+                                                                ((SpellProjectile) (var5)).velocityX = (int)(32.0 * Math.random() - 16.0) << 4;
+                                                                ((SpellProjectile) (var5)).velocityY = (int)(-16.0 + Math.random() * 32.0) << 4;
+                                                                this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                                                 var14Lifetime1++;
                                                                 continue;
                                                               }
                                                               break;
                                                             }
                                                             this.applyAreaEffect(5, 32, 16, 8);
-                                                            this.field_y = this.field_y + 1;
-                                                            this.field_v = var12Lifetime1;
-                                                            this.field_G = var13Lifetime1;
+                                                            this.ageTicks = this.ageTicks + 1;
+                                                            this.x = var12Lifetime1;
+                                                            this.y = var13Lifetime1;
                                                           }
                                                         }
                                                         var9_ref_mlLifetime1Lifetime1 = (BattleUnit) (MidiPcmStream.field_L.next(-18502));
                                                       }
                                                     }
-                                                    this.field_z = this.field_G << 4;
-                                                    this.field_o = this.field_v << 4;
+                                                    this.subpixelY = this.y << 4;
+                                                    this.subpixelX = this.x << 4;
                                                     return;
                                                   }
-                                                  if (this.field_q.getCurrentPlayer(false) == this.field_t.field_T) {
+                                                  if (this.battle.getCurrentPlayer(false) == this.owner.unitId) {
                                                   }
                                                   this.remove(0);
                                                   return;
@@ -4969,30 +4969,30 @@ final class SpellProjectile extends DualLinkNode {
                                                   if (this.field_x >= 16) {
                                                     this.field_x = this.field_x - 16;
                                                   }
-                                                  if (this.field_y == -1) {
-                                                    this.field_y = 0;
+                                                  if (this.ageTicks == -1) {
+                                                    this.ageTicks = 0;
                                                   }
                                                   scanLoop6: while (true) {
-                                                    if (this.field_q.field_H > this.field_G) {
-                                                      stackOut_1433_0 = this.field_q.spriteOverlapsTerrain(-this.field_r + this.field_G, 2, this.field_v - this.field_r, this.field_p);
+                                                    if (this.battle.arenaHeight > this.y) {
+                                                      stackOut_1433_0 = this.battle.spriteOverlapsTerrain(-this.spriteRadius + this.y, 2, this.x - this.spriteRadius, this.sprite);
                                                       stackIn_1444_0 = stackOut_1433_0 ? 1 : 0;
                                                       stackIn_1434_0 = stackOut_1433_0;
                                                       if (var19 != 0) {
                                                         break scanLoop6;
                                                       }
                                                       if (!stackIn_1434_0) {
-                                                        this.field_z = this.field_z + 16;
-                                                        if (this.field_y == 0) {
-                                                          this.field_y = -1;
+                                                        this.subpixelY = this.subpixelY + 16;
+                                                        if (this.ageTicks == 0) {
+                                                          this.ageTicks = -1;
                                                         }
-                                                        this.field_G = this.field_z >> 4;
+                                                        this.y = this.subpixelY >> 4;
                                                         continue;
                                                       }
                                                     }
-                                                    stackIn_1444_0 = this.field_G;
+                                                    stackIn_1444_0 = this.y;
                                                     break;
                                                   }
-                                                  if (stackIn_1444_0 < this.field_q.field_H) {
+                                                  if (stackIn_1444_0 < this.battle.arenaHeight) {
                                                     return;
                                                   }
                                                   this.remove(0);
@@ -5000,7 +5000,7 @@ final class SpellProjectile extends DualLinkNode {
                                                 }
                                                 if (126 == var9 &&
                                                   var19 == 0) {
-                                                  if (this.field_t.isDead(-1)) {
+                                                  if (this.owner.isDead(-1)) {
                                                     this.remove(0);
                                                     return;
                                                   }
@@ -5008,50 +5008,50 @@ final class SpellProjectile extends DualLinkNode {
                                                   if (this.field_x >= 255) {
                                                     this.field_x = this.field_x - 255;
                                                   }
-                                                  if (!this.field_q.isRecording(-28046)) {
-                                                    var9 = -this.field_q.field_H;
+                                                  if (!this.battle.isRecording(-28046)) {
+                                                    var9 = -this.battle.arenaHeight;
                                                     while (true) {
-                                                      if (var9 < this.field_G) {
-                                                        var10Lifetime1 = this.field_v + (int)(Math.sin((double)(this.field_G - var9) * 3.14 / (double)(this.field_G + this.field_q.field_H)) * Math.cos(-((double)SpriteState.field_v * 0.1) + (double)(-var9)) * 64.0);
-                                                        var5 = this.spawnFromHere(var10Lifetime1, (BattleUnit) null, (byte) 81, 129, var9 + (int)(32.0 * Math.random() - 16.0), this.field_q);
-                                                        this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
-                                                        ((SpellProjectile) (var5)).field_u = (int)(Math.random() * 5.0 - 2.0);
-                                                        ((SpellProjectile) (var5)).field_F = -64;
+                                                      if (var9 < this.y) {
+                                                        var10Lifetime1 = this.x + (int)(Math.sin((double)(this.y - var9) * 3.14 / (double)(this.y + this.battle.arenaHeight)) * Math.cos(-((double)SpriteState.field_v * 0.1) + (double)(-var9)) * 64.0);
+                                                        var5 = this.spawnFromHere(var10Lifetime1, (BattleUnit) null, (byte) 81, 129, var9 + (int)(32.0 * Math.random() - 16.0), this.battle);
+                                                        this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                        ((SpellProjectile) (var5)).velocityX = (int)(Math.random() * 5.0 - 2.0);
+                                                        ((SpellProjectile) (var5)).velocityY = -64;
                                                         ((SpellProjectile) (var5)).field_x = 1;
                                                         var9 += 32;
                                                         continue;
                                                       }
                                                       break;
                                                     }
-                                                    var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 129, this.field_G, this.field_q);
-                                                    ((SpellProjectile) (var5)).field_u = (int)(-64.0 + Math.random() * 128.0);
-                                                    ((SpellProjectile) (var5)).field_F = -(int)Math.sqrt((double)(-(((SpellProjectile) (var5)).field_u * ((SpellProjectile) (var5)).field_u) + 4096));
-                                                    this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                    var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 129, this.y, this.battle);
+                                                    ((SpellProjectile) (var5)).velocityX = (int)(-64.0 + Math.random() * 128.0);
+                                                    ((SpellProjectile) (var5)).velocityY = -(int)Math.sqrt((double)(-(((SpellProjectile) (var5)).velocityX * ((SpellProjectile) (var5)).velocityX) + 4096));
+                                                    this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                                   }
-                                                  if (this.field_y == -1) {
-                                                    this.field_y = 0;
+                                                  if (this.ageTicks == -1) {
+                                                    this.ageTicks = 0;
                                                   }
-                                                  while (this.field_G < this.field_q.field_H &&
-                                                    !this.field_q.spriteOverlapsTerrain(-this.field_r + this.field_G, 2, -this.field_r + this.field_v, this.field_p)) {
-                                                    this.field_z = this.field_z + 16;
-                                                    this.field_G = this.field_z >> 4;
-                                                    if (0 != this.field_y) {
+                                                  while (this.y < this.battle.arenaHeight &&
+                                                    !this.battle.spriteOverlapsTerrain(-this.spriteRadius + this.y, 2, -this.spriteRadius + this.x, this.sprite)) {
+                                                    this.subpixelY = this.subpixelY + 16;
+                                                    this.y = this.subpixelY >> 4;
+                                                    if (0 != this.ageTicks) {
                                                       continue;
                                                     }
-                                                    this.field_y = -1;
+                                                    this.ageTicks = -1;
                                                   }
-                                                  if (this.field_y >= 25) {
-                                                    this.field_y = this.field_y + 1;
-                                                    if (this.field_y <= 27) {
+                                                  if (this.ageTicks >= 25) {
+                                                    this.ageTicks = this.ageTicks + 1;
+                                                    if (this.ageTicks <= 27) {
                                                       return;
                                                     }
-                                                    this.field_y = 0;
+                                                    this.ageTicks = 0;
                                                     return;
                                                   }
-                                                  if (this.field_y > 0) {
-                                                    this.field_y = this.field_y + 1;
+                                                  if (this.ageTicks > 0) {
+                                                    this.ageTicks = this.ageTicks + 1;
                                                   }
-                                                  MidiPcmStream.field_L.setDeque((byte) 51, this.field_q.field_Kb);
+                                                  MidiPcmStream.field_L.setDeque((byte) 51, this.battle.projectiles);
                                                   var9_ref_miLifetime1 = (SpellProjectile) (MidiPcmStream.field_L.first(-62));
                                                   while (null != var9_ref_miLifetime1) {
                                                     stackOut_1493_0 = var9_ref_miLifetime1;
@@ -5059,63 +5059,63 @@ final class SpellProjectile extends DualLinkNode {
                                                     stackIn_1494_0 = stackOut_1493_0;
                                                     regionExit7: {
                                                       if (((SpellProjectile) (Object) stackIn_1494_0).isAlive(-139) &&
-                                                        126 != var9_ref_miLifetime1.field_I &&
-                                                        var9_ref_miLifetime1.field_I != 30 &&
-                                                        93 != var9_ref_miLifetime1.field_I &&
-                                                        84 != var9_ref_miLifetime1.field_I) {
-                                                        var10Lifetime1 = var9_ref_miLifetime1.field_v - this.field_v;
-                                                        var11Lifetime1 = -this.field_G + var9_ref_miLifetime1.field_G;
+                                                        126 != var9_ref_miLifetime1.spellType &&
+                                                        var9_ref_miLifetime1.spellType != 30 &&
+                                                        93 != var9_ref_miLifetime1.spellType &&
+                                                        84 != var9_ref_miLifetime1.spellType) {
+                                                        var10Lifetime1 = var9_ref_miLifetime1.x - this.x;
+                                                        var11Lifetime1 = -this.y + var9_ref_miLifetime1.y;
                                                         if (0 > var11Lifetime1 &&
                                                           Math.abs(var10Lifetime1) < 128) {
-                                                          if (46 != var9_ref_miLifetime1.field_I &&
-                                                            var9_ref_miLifetime1.field_I != 25) {
-                                                            var9_ref_miLifetime1.field_F = var9_ref_miLifetime1.field_F - 5;
+                                                          if (46 != var9_ref_miLifetime1.spellType &&
+                                                            var9_ref_miLifetime1.spellType != 25) {
+                                                            var9_ref_miLifetime1.velocityY = var9_ref_miLifetime1.velocityY - 5;
                                                           }
                                                           if (0 <= var10Lifetime1) {
-                                                            if (var9_ref_miLifetime1.field_u < 0) {
-                                                              var9_ref_miLifetime1.field_u = var9_ref_miLifetime1.field_u + 4;
+                                                            if (var9_ref_miLifetime1.velocityX < 0) {
+                                                              var9_ref_miLifetime1.velocityX = var9_ref_miLifetime1.velocityX + 4;
                                                             } else {
-                                                              var9_ref_miLifetime1.field_u = var9_ref_miLifetime1.field_u + 4;
+                                                              var9_ref_miLifetime1.velocityX = var9_ref_miLifetime1.velocityX + 4;
                                                             }
                                                             break regionExit7;
                                                           }
-                                                          if (var9_ref_miLifetime1.field_u <= 0) {
-                                                            var9_ref_miLifetime1.field_u = var9_ref_miLifetime1.field_u - 4;
+                                                          if (var9_ref_miLifetime1.velocityX <= 0) {
+                                                            var9_ref_miLifetime1.velocityX = var9_ref_miLifetime1.velocityX - 4;
                                                           } else {
-                                                            var9_ref_miLifetime1.field_u = var9_ref_miLifetime1.field_u - 4;
+                                                            var9_ref_miLifetime1.velocityX = var9_ref_miLifetime1.velocityX - 4;
                                                           }
                                                         }
                                                       }
                                                     }
                                                     var9_ref_miLifetime1 = (SpellProjectile) (MidiPcmStream.field_L.next(-18502));
                                                   }
-                                                  MidiPcmStream.field_L.setDeque((byte) 77, this.field_q.field_i);
+                                                  MidiPcmStream.field_L.setDeque((byte) 77, this.battle.units);
                                                   stackIn_1544_0Lifetime1 = MidiPcmStream.field_L.first(-78);
                                                   var9_ref_mlLifetime1Lifetime1 = (BattleUnit) (stackIn_1544_0Lifetime1);
                                                   while (var9_ref_mlLifetime1Lifetime1 != null) {
-                                                    if (var9_ref_mlLifetime1Lifetime1.field_z) {
-                                                      var10Lifetime1 = var9_ref_mlLifetime1Lifetime1.field_lb - this.field_v;
-                                                      var11Lifetime1 = -this.field_G + var9_ref_mlLifetime1Lifetime1.field_db;
+                                                    if (var9_ref_mlLifetime1Lifetime1.moving) {
+                                                      var10Lifetime1 = var9_ref_mlLifetime1Lifetime1.x - this.x;
+                                                      var11Lifetime1 = -this.y + var9_ref_mlLifetime1Lifetime1.y;
                                                       if (var11Lifetime1 < 0 &&
                                                         Math.abs(var10Lifetime1) < 128) {
                                                         if (0 > var10Lifetime1) {
-                                                          if (!(var9_ref_mlLifetime1Lifetime1.field_kb <= 0)) {
-                                                            if (var9_ref_mlLifetime1Lifetime1.field_kb < 20) {
-                                                              var9_ref_mlLifetime1Lifetime1.field_kb = -60;
+                                                          if (!(var9_ref_mlLifetime1Lifetime1.velocityX <= 0)) {
+                                                            if (var9_ref_mlLifetime1Lifetime1.velocityX < 20) {
+                                                              var9_ref_mlLifetime1Lifetime1.velocityX = -60;
                                                             } else {
-                                                              var9_ref_mlLifetime1Lifetime1.field_kb = var9_ref_mlLifetime1Lifetime1.field_kb - 8;
+                                                              var9_ref_mlLifetime1Lifetime1.velocityX = var9_ref_mlLifetime1Lifetime1.velocityX - 8;
                                                             }
                                                           }
                                                         } else {
-                                                          if (0 > var9_ref_mlLifetime1Lifetime1.field_kb) {
-                                                            if (var9_ref_mlLifetime1Lifetime1.field_kb > -20) {
-                                                              var9_ref_mlLifetime1Lifetime1.field_kb = 60;
+                                                          if (0 > var9_ref_mlLifetime1Lifetime1.velocityX) {
+                                                            if (var9_ref_mlLifetime1Lifetime1.velocityX > -20) {
+                                                              var9_ref_mlLifetime1Lifetime1.velocityX = 60;
                                                             } else {
-                                                              var9_ref_mlLifetime1Lifetime1.field_kb = var9_ref_mlLifetime1Lifetime1.field_kb + 8;
+                                                              var9_ref_mlLifetime1Lifetime1.velocityX = var9_ref_mlLifetime1Lifetime1.velocityX + 8;
                                                             }
                                                           }
                                                         }
-                                                        this.field_y = this.field_y + 1;
+                                                        this.ageTicks = this.ageTicks + 1;
                                                       }
                                                     }
                                                     var9_ref_mlLifetime1Lifetime1 = (BattleUnit) (MidiPcmStream.field_L.next(-18502));
@@ -5128,22 +5128,22 @@ final class SpellProjectile extends DualLinkNode {
                                                       regionExit10: {
                                                         regionExit11: {
                                                           if (148 == var9) {
-                                                            if (!this.field_t.isDead(-1) &&
-                                                              128 + this.field_q.field_H > this.field_t.field_db) {
+                                                            if (!this.owner.isDead(-1) &&
+                                                              128 + this.battle.arenaHeight > this.owner.y) {
                                                               this.field_x = this.field_x + 1;
                                                               if (this.field_x >= 256) {
                                                                 this.field_x = this.field_x - 256;
                                                               }
-                                                              this.field_v = this.field_t.field_lb;
-                                                              this.field_G = this.field_t.field_db;
-                                                              this.field_z = this.field_G << 4;
-                                                              this.field_o = this.field_v << 4;
+                                                              this.x = this.owner.x;
+                                                              this.y = this.owner.y;
+                                                              this.subpixelY = this.y << 4;
+                                                              this.subpixelX = this.x << 4;
                                                               if (var19 == 0) {
                                                                 return;
                                                               }
                                                               break regionExit11;
                                                             }
-                                                            if (this.field_q.getCurrentPlayer(false) == this.field_t.field_T) {
+                                                            if (this.battle.getCurrentPlayer(false) == this.owner.unitId) {
                                                             }
                                                             this.remove(0);
                                                             return;
@@ -5164,67 +5164,67 @@ final class SpellProjectile extends DualLinkNode {
                                                               var19 != 0)) {
                                                               if (var9 == 142 &&
                                                                 var19 == 0) {
-                                                                if (this.field_t == null) {
+                                                                if (this.owner == null) {
                                                                   this.remove(0);
                                                                   return;
                                                                 }
-                                                                if (this.field_t.isDead(-1)) {
+                                                                if (this.owner.isDead(-1)) {
                                                                   this.remove(0);
                                                                   return;
                                                                 }
-                                                                this.field_G = -240;
-                                                                if (100 > this.field_y) {
-                                                                  this.field_G = this.field_G - 2 * (100 - this.field_y);
+                                                                this.y = -240;
+                                                                if (100 > this.ageTicks) {
+                                                                  this.y = this.y - 2 * (100 - this.ageTicks);
                                                                 }
-                                                                if (400 < this.field_y) {
-                                                                  this.field_G = this.field_G - (this.field_y * 2 - 800);
+                                                                if (400 < this.ageTicks) {
+                                                                  this.y = this.y - (this.ageTicks * 2 - 800);
                                                                 }
-                                                                this.field_o = this.field_v << 4;
+                                                                this.subpixelX = this.x << 4;
                                                                 this.field_x = this.field_x + 1;
-                                                                this.field_z = this.field_G << 4;
+                                                                this.subpixelY = this.y << 4;
                                                                 if (100 < this.field_x) {
                                                                   this.field_x = this.field_x - 100;
                                                                 }
-                                                                if (this.field_y != 100 &&
-                                                                  200 != this.field_y &&
-                                                                  this.field_y != 300 &&
-                                                                  this.field_y != 400) {
-                                                                  if (this.field_y == 101 ||
-                                                                    this.field_y == 0 ||
-                                                                    this.field_y == 201 ||
-                                                                    this.field_y == 301 ||
-                                                                    this.field_y == 401 ||
-                                                                    this.field_C == null) {
-                                                                    this.field_C = new IsaacRandom(new int[]{this.field_q.field_Q, param0, this.field_v, this.field_G});
+                                                                if (this.ageTicks != 100 &&
+                                                                  200 != this.ageTicks &&
+                                                                  this.ageTicks != 300 &&
+                                                                  this.ageTicks != 400) {
+                                                                  if (this.ageTicks == 101 ||
+                                                                    this.ageTicks == 0 ||
+                                                                    this.ageTicks == 201 ||
+                                                                    this.ageTicks == 301 ||
+                                                                    this.ageTicks == 401 ||
+                                                                    this.random == null) {
+                                                                    this.random = new IsaacRandom(new int[]{this.battle.randomSeed, round, this.x, this.y});
                                                                     this.playSound(165, true);
                                                                   }
-                                                                  this.field_y = this.field_y + 1;
+                                                                  this.ageTicks = this.ageTicks + 1;
                                                                   var9 = 15;
-                                                                  if (this.field_y > 100) {
+                                                                  if (this.ageTicks > 100) {
                                                                     var9 = 7;
                                                                   }
-                                                                  if (200 < this.field_y) {
+                                                                  if (200 < this.ageTicks) {
                                                                     var9 = 3;
                                                                   }
-                                                                  if (this.field_y > 300) {
+                                                                  if (this.ageTicks > 300) {
                                                                     var9 = 1;
                                                                   }
-                                                                  if (this.field_y > 400 ||
-                                                                    (this.field_y & var9) == 0) {
-                                                                    var10Lifetime1 = -128 + (this.field_v + HuffmanCodec.randomBelow(this.field_C, -2147483648, 256));
-                                                                    var11Lifetime1 = 48 + (this.field_G + HuffmanCodec.randomBelow(this.field_C, -2147483648, 16));
-                                                                    var12Lifetime1 = HuffmanCodec.randomBelow(this.field_C, -2147483648, 8192);
-                                                                    var5 = this.spawnFromHere(var10Lifetime1, (BattleUnit) null, (byte) 81, 135, var11Lifetime1, this.field_q);
-                                                                    if (this.field_q.field_sb != null &&
-                                                                      null != this.field_q.field_sb[CacheEntry.field_n[7][1]]) {
-                                                                      IconHighlightPainter.playSample((int)(Math.random() * 500.0) + 200, false, this.field_q.field_sb[CacheEntry.field_n[7][1]], SceneWidgetNode.field_r[CacheEntry.field_n[7][1]] / 8);
+                                                                  if (this.ageTicks > 400 ||
+                                                                    (this.ageTicks & var9) == 0) {
+                                                                    var10Lifetime1 = -128 + (this.x + HuffmanCodec.randomBelow(this.random, -2147483648, 256));
+                                                                    var11Lifetime1 = 48 + (this.y + HuffmanCodec.randomBelow(this.random, -2147483648, 16));
+                                                                    var12Lifetime1 = HuffmanCodec.randomBelow(this.random, -2147483648, 8192);
+                                                                    var5 = this.spawnFromHere(var10Lifetime1, (BattleUnit) null, (byte) 81, 135, var11Lifetime1, this.battle);
+                                                                    if (this.battle.projectileSamples != null &&
+                                                                      null != this.battle.projectileSamples[CacheEntry.field_n[7][1]]) {
+                                                                      IconHighlightPainter.playSample((int)(Math.random() * 500.0) + 200, false, this.battle.projectileSamples[CacheEntry.field_n[7][1]], SceneWidgetNode.field_r[CacheEntry.field_n[7][1]] / 8);
                                                                     }
-                                                                    ((SpellProjectile) (var5)).field_u = GradientBarPainter.sine(113, var12Lifetime1) >> 11;
-                                                                    ((SpellProjectile) (var5)).field_F = (BevelBoxPainter.cosine(var12Lifetime1, -101) >> 11) + 32;
-                                                                    this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                                    ((SpellProjectile) (var5)).velocityX = GradientBarPainter.sine(113, var12Lifetime1) >> 11;
+                                                                    ((SpellProjectile) (var5)).velocityY = (BevelBoxPainter.cosine(var12Lifetime1, -101) >> 11) + 32;
+                                                                    this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                                                   }
                                                                 } else {
-                                                                  MidiPcmStream.field_L.setDeque((byte) 75, this.field_q.field_Kb);
+                                                                  MidiPcmStream.field_L.setDeque((byte) 75, this.battle.projectiles);
                                                                   var9_ref_miLifetime2 = (SpellProjectile) (MidiPcmStream.field_L.first(-43));
                                                                   while (true) {
                                                                     if (null != var9_ref_miLifetime2) {
@@ -5233,16 +5233,16 @@ final class SpellProjectile extends DualLinkNode {
                                                                       stackIn_2017_0 = stackOut_2016_0;
                                                                       stackIn_2042_1 = -139;
                                                                       if (((SpellProjectile) (Object) stackIn_2017_0).isAlive(stackIn_2042_1) &&
-                                                                        var9_ref_miLifetime2.field_t != this.field_t &&
-                                                                        30 != var9_ref_miLifetime2.field_I &&
-                                                                        var9_ref_miLifetime2.field_I != 84) {
-                                                                        var10Lifetime1 = var9_ref_miLifetime2.field_v - this.field_v;
-                                                                        var11Lifetime1 = var9_ref_miLifetime2.field_G - this.field_G;
-                                                                        if (var9_ref_miLifetime2.field_F * var11Lifetime1 + var10Lifetime1 * var9_ref_miLifetime2.field_u < 0) {
+                                                                        var9_ref_miLifetime2.owner != this.owner &&
+                                                                        30 != var9_ref_miLifetime2.spellType &&
+                                                                        var9_ref_miLifetime2.spellType != 84) {
+                                                                        var10Lifetime1 = var9_ref_miLifetime2.x - this.x;
+                                                                        var11Lifetime1 = var9_ref_miLifetime2.y - this.y;
+                                                                        if (var9_ref_miLifetime2.velocityY * var11Lifetime1 + var10Lifetime1 * var9_ref_miLifetime2.velocityX < 0) {
                                                                           var12Lifetime1 = var11Lifetime1 * var11Lifetime1 + var10Lifetime1 * var10Lifetime1;
                                                                           if (var12Lifetime1 < 65536 &&
                                                                             var12Lifetime1 > 0) {
-                                                                            var9_ref_miLifetime2.field_u = var9_ref_miLifetime2.field_u - Math.abs(var10Lifetime1) * var10Lifetime1 * 32 / var12Lifetime1;
+                                                                            var9_ref_miLifetime2.velocityX = var9_ref_miLifetime2.velocityX - Math.abs(var10Lifetime1) * var10Lifetime1 * 32 / var12Lifetime1;
                                                                           }
                                                                         }
                                                                       }
@@ -5252,77 +5252,77 @@ final class SpellProjectile extends DualLinkNode {
                                                                     break;
                                                                   }
                                                                   stackIn_2042_0Lifetime1 = this;
-                                                                  stackIn_2042_1Lifetime1 = -128 + this.field_v + (int)(Math.random() * 256.0);
-                                                                  var5 = this.spawnFromHere(stackIn_2042_1Lifetime1, (BattleUnit) null, (byte) 81, 132, this.field_G + 48 + (int)(Math.random() * 16.0), this.field_q);
+                                                                  stackIn_2042_1Lifetime1 = -128 + this.x + (int)(Math.random() * 256.0);
+                                                                  var5 = this.spawnFromHere(stackIn_2042_1Lifetime1, (BattleUnit) null, (byte) 81, 132, this.y + 48 + (int)(Math.random() * 16.0), this.battle);
                                                                   var9 = (int)(Math.random() * 256.0);
-                                                                  ((SpellProjectile) (var5)).field_u = 0;
+                                                                  ((SpellProjectile) (var5)).velocityX = 0;
                                                                   var10_double = 3.141592653589793 * (double)var9 / 128.0;
-                                                                  ((SpellProjectile) (var5)).field_F = 32 + (int)(Math.cos(var10_double) * 32.0);
+                                                                  ((SpellProjectile) (var5)).velocityY = 32 + (int)(Math.cos(var10_double) * 32.0);
                                                                   ((SpellProjectile) (var5)).field_x = 1;
-                                                                  this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                                  this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                                                 }
-                                                                if (this.field_y < 500) {
+                                                                if (this.ageTicks < 500) {
                                                                   return;
                                                                 }
                                                                 this.remove(0);
                                                                 return;
                                                               }
                                                               if (var9 == 136) {
-                                                                this.field_y = this.field_y + 1;
-                                                                if (this.field_y > 480) {
+                                                                this.ageTicks = this.ageTicks + 1;
+                                                                if (this.ageTicks > 480) {
                                                                   this.remove(0);
                                                                   return;
                                                                 }
-                                                                var9 = 31 * this.field_y % 480;
-                                                                var5 = this.spawnFromHere(-320, (BattleUnit) null, (byte) 81, 152, this.field_q.field_H - var9, this.field_q);
-                                                                ((SpellProjectile) (var5)).field_F = -var9;
-                                                                ((SpellProjectile) (var5)).field_u = 128;
-                                                                this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
-                                                                var5 = this.spawnFromHere(320 + this.field_q.field_y, (BattleUnit) null, (byte) 81, 152, this.field_q.field_H - var9, this.field_q);
-                                                                ((SpellProjectile) (var5)).field_u = -128;
-                                                                ((SpellProjectile) (var5)).field_F = -var9;
-                                                                this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                                var9 = 31 * this.ageTicks % 480;
+                                                                var5 = this.spawnFromHere(-320, (BattleUnit) null, (byte) 81, 152, this.battle.arenaHeight - var9, this.battle);
+                                                                ((SpellProjectile) (var5)).velocityY = -var9;
+                                                                ((SpellProjectile) (var5)).velocityX = 128;
+                                                                this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                                var5 = this.spawnFromHere(320 + this.battle.arenaWidth, (BattleUnit) null, (byte) 81, 152, this.battle.arenaHeight - var9, this.battle);
+                                                                ((SpellProjectile) (var5)).velocityX = -128;
+                                                                ((SpellProjectile) (var5)).velocityY = -var9;
+                                                                this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                                                 return;
                                                               }
                                                               if (var9 == 134) {
-                                                                if (this.field_t != null &&
-                                                                  0 >= this.field_t.field_ib) {
+                                                                if (this.owner != null &&
+                                                                  0 >= this.owner.health) {
                                                                   this.remove(0);
                                                                   return;
                                                                 }
-                                                                if (this.field_y != 100 &&
-                                                                  this.field_y != 200) {
-                                                                  this.field_y = this.field_y + 1;
+                                                                if (this.ageTicks != 100 &&
+                                                                  this.ageTicks != 200) {
+                                                                  this.ageTicks = this.ageTicks + 1;
                                                                 }
                                                                 var7 = -1;
-                                                                if (this.field_y == 102 ||
-                                                                  this.field_y == 202 ||
-                                                                  null == this.field_C) {
-                                                                  this.field_C = new IsaacRandom(new int[]{this.field_q.field_Q, param0, this.field_v, this.field_G});
+                                                                if (this.ageTicks == 102 ||
+                                                                  this.ageTicks == 202 ||
+                                                                  null == this.random) {
+                                                                  this.random = new IsaacRandom(new int[]{this.battle.randomSeed, round, this.x, this.y});
                                                                 }
                                                                 var7Lifetime4 = 132;
-                                                                if (100 <= this.field_y) {
-                                                                  if (this.field_y % 2 == 1 &&
-                                                                    this.field_y > 75) {
+                                                                if (100 <= this.ageTicks) {
+                                                                  if (this.ageTicks % 2 == 1 &&
+                                                                    this.ageTicks > 75) {
                                                                     var7Lifetime4 = 152;
-                                                                    if (var19 != 0 && (this.field_y % 2 == 1 &&
-                                                                      this.field_y > 75)) {
+                                                                    if (var19 != 0 && (this.ageTicks % 2 == 1 &&
+                                                                      this.ageTicks > 75)) {
                                                                       var7Lifetime4 = 152;
                                                                     }
                                                                   }
                                                                 } else {
-                                                                  if (this.field_y % 2 == 1 &&
-                                                                    this.field_y > 75) {
+                                                                  if (this.ageTicks % 2 == 1 &&
+                                                                    this.ageTicks > 75) {
                                                                     var7Lifetime4 = 152;
                                                                   }
                                                                 }
-                                                                if (this.field_y >= 300) {
+                                                                if (this.ageTicks >= 300) {
                                                                   this.remove(0);
                                                                   return;
                                                                 }
                                                                 var8 = 1;
                                                                 if (132 == var7Lifetime4) {
-                                                                  var8 = 2 + (-(this.field_y / 100) + 5);
+                                                                  var8 = 2 + (-(this.ageTicks / 100) + 5);
                                                                 }
                                                                 var9 = 0;
                                                                 while (var9 < var8) {
@@ -5330,159 +5330,159 @@ final class SpellProjectile extends DualLinkNode {
                                                                     return;
                                                                   }
                                                                   if (var7Lifetime4 != -1) {
-                                                                    var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, var7Lifetime4, this.field_G, this.field_q);
+                                                                    var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, var7Lifetime4, this.y, this.battle);
                                                                   }
                                                                   if (null != var5) {
                                                                     var10Lifetime1 = (int)(Math.random() * 8192.0);
                                                                     if (var7Lifetime4 != 132) {
-                                                                      var10Lifetime1 = HuffmanCodec.randomBelow(this.field_C, -2147483648, 8192);
+                                                                      var10Lifetime1 = HuffmanCodec.randomBelow(this.random, -2147483648, 8192);
                                                                     }
-                                                                    ((SpellProjectile) (var5)).field_u = GradientBarPainter.sine(-17, var10Lifetime1) >> 9;
-                                                                    ((SpellProjectile) (var5)).field_F = -256 + (BevelBoxPainter.cosine(var10Lifetime1, -101) >> 9);
+                                                                    ((SpellProjectile) (var5)).velocityX = GradientBarPainter.sine(-17, var10Lifetime1) >> 9;
+                                                                    ((SpellProjectile) (var5)).velocityY = -256 + (BevelBoxPainter.cosine(var10Lifetime1, -101) >> 9);
                                                                     if (var7Lifetime4 == 152) {
-                                                                      ((SpellProjectile) (var5)).field_u = ((SpellProjectile) (var5)).field_u >> 1;
-                                                                      ((SpellProjectile) (var5)).field_F = ((SpellProjectile) (var5)).field_F >> 1;
-                                                                      ((SpellProjectile) (var5)).field_F = ((SpellProjectile) (var5)).field_F - 96;
-                                                                      ((SpellProjectile) (var5)).field_y = HuffmanCodec.randomBelow(this.field_C, -2147483648, 200);
-                                                                      ((SpellProjectile) (var5)).field_v = ((SpellProjectile) (var5)).field_v - 2 * ((SpellProjectile) (var5)).field_u;
-                                                                      ((SpellProjectile) (var5)).field_o = ((SpellProjectile) (var5)).field_v << 4;
+                                                                      ((SpellProjectile) (var5)).velocityX = ((SpellProjectile) (var5)).velocityX >> 1;
+                                                                      ((SpellProjectile) (var5)).velocityY = ((SpellProjectile) (var5)).velocityY >> 1;
+                                                                      ((SpellProjectile) (var5)).velocityY = ((SpellProjectile) (var5)).velocityY - 96;
+                                                                      ((SpellProjectile) (var5)).ageTicks = HuffmanCodec.randomBelow(this.random, -2147483648, 200);
+                                                                      ((SpellProjectile) (var5)).x = ((SpellProjectile) (var5)).x - 2 * ((SpellProjectile) (var5)).velocityX;
+                                                                      ((SpellProjectile) (var5)).subpixelX = ((SpellProjectile) (var5)).x << 4;
                                                                     } else {
-                                                                      ((SpellProjectile) (var5)).field_F = ((SpellProjectile) (var5)).field_F >> 2;
-                                                                      ((SpellProjectile) (var5)).field_u = ((SpellProjectile) (var5)).field_u >> 1;
-                                                                      ((SpellProjectile) (var5)).field_F = ((SpellProjectile) (var5)).field_F - 16;
-                                                                      var11Lifetime1 = this.field_y * 48 / 500 + 48;
-                                                                      ((SpellProjectile) (var5)).field_v = ((SpellProjectile) (var5)).field_v + (int)((double)var11Lifetime1 * Math.random() - (double)(var11Lifetime1 / 2));
-                                                                      ((SpellProjectile) (var5)).field_v = ((SpellProjectile) (var5)).field_v - 2 * ((SpellProjectile) (var5)).field_u;
-                                                                      ((SpellProjectile) (var5)).field_G = ((SpellProjectile) (var5)).field_G + 16;
-                                                                      ((SpellProjectile) (var5)).field_o = ((SpellProjectile) (var5)).field_v << 4;
+                                                                      ((SpellProjectile) (var5)).velocityY = ((SpellProjectile) (var5)).velocityY >> 2;
+                                                                      ((SpellProjectile) (var5)).velocityX = ((SpellProjectile) (var5)).velocityX >> 1;
+                                                                      ((SpellProjectile) (var5)).velocityY = ((SpellProjectile) (var5)).velocityY - 16;
+                                                                      var11Lifetime1 = this.ageTicks * 48 / 500 + 48;
+                                                                      ((SpellProjectile) (var5)).x = ((SpellProjectile) (var5)).x + (int)((double)var11Lifetime1 * Math.random() - (double)(var11Lifetime1 / 2));
+                                                                      ((SpellProjectile) (var5)).x = ((SpellProjectile) (var5)).x - 2 * ((SpellProjectile) (var5)).velocityX;
+                                                                      ((SpellProjectile) (var5)).y = ((SpellProjectile) (var5)).y + 16;
+                                                                      ((SpellProjectile) (var5)).subpixelX = ((SpellProjectile) (var5)).x << 4;
                                                                       ((SpellProjectile) (var5)).field_x = 1;
-                                                                      ((SpellProjectile) (var5)).field_z = ((SpellProjectile) (var5)).field_G << 4;
-                                                                      ((SpellProjectile) (var5)).field_y = (int)(4.0 * Math.random() - 10.0);
+                                                                      ((SpellProjectile) (var5)).subpixelY = ((SpellProjectile) (var5)).y << 4;
+                                                                      ((SpellProjectile) (var5)).ageTicks = (int)(4.0 * Math.random() - 10.0);
                                                                     }
-                                                                    this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                                    this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                                                   }
                                                                   var9++;
                                                                 }
                                                                 return;
                                                               }
                                                               if (var9 == 36) {
-                                                                if (this.field_t != null &&
-                                                                  this.field_t.isDead(-1)) {
+                                                                if (this.owner != null &&
+                                                                  this.owner.isDead(-1)) {
                                                                   this.remove(0);
                                                                   return;
                                                                 }
-                                                                this.field_G = -240;
+                                                                this.y = -240;
                                                                 this.field_x = this.field_x + 1;
                                                                 if (100 < this.field_x) {
                                                                   this.field_x = this.field_x - 100;
                                                                 }
-                                                                var5 = this.spawnFromHere(this.field_v + ((int)(-50.0 + Math.random() * 100.0) + (int)(96.0 * Math.sin(0.01 * (6.28 * (double)this.field_x)))), (BattleUnit) null, (byte) 81, 112, 48 + (this.field_G + (int)(Math.random() * 8.0)), this.field_q);
-                                                                ((SpellProjectile) (var5)).field_u = (int)(-256.0 + Math.random() * 512.0);
-                                                                ((SpellProjectile) (var5)).field_F = -(int)(Math.random() * 512.0) + 192;
-                                                                this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
-                                                                if (this.field_y == 100) {
+                                                                var5 = this.spawnFromHere(this.x + ((int)(-50.0 + Math.random() * 100.0) + (int)(96.0 * Math.sin(0.01 * (6.28 * (double)this.field_x)))), (BattleUnit) null, (byte) 81, 112, 48 + (this.y + (int)(Math.random() * 8.0)), this.battle);
+                                                                ((SpellProjectile) (var5)).velocityX = (int)(-256.0 + Math.random() * 512.0);
+                                                                ((SpellProjectile) (var5)).velocityY = -(int)(Math.random() * 512.0) + 192;
+                                                                this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                                if (this.ageTicks == 100) {
                                                                   return;
                                                                 }
-                                                                if (200 == this.field_y) {
+                                                                if (200 == this.ageTicks) {
                                                                   return;
                                                                 }
-                                                                if (this.field_y == 201 ||
-                                                                  this.field_y == 101 ||
-                                                                  this.field_y == 0 ||
-                                                                  null == this.field_C) {
-                                                                  this.field_C = new IsaacRandom(new int[]{this.field_q.field_Q, param0, this.field_v, this.field_G});
+                                                                if (this.ageTicks == 201 ||
+                                                                  this.ageTicks == 101 ||
+                                                                  this.ageTicks == 0 ||
+                                                                  null == this.random) {
+                                                                  this.random = new IsaacRandom(new int[]{this.battle.randomSeed, round, this.x, this.y});
                                                                 }
-                                                                this.field_y = this.field_y + 1;
-                                                                if (this.field_y == 300) {
+                                                                this.ageTicks = this.ageTicks + 1;
+                                                                if (this.ageTicks == 300) {
                                                                   this.remove(0);
                                                                   return;
                                                                 }
-                                                                if (this.field_y % 15 != 10) {
+                                                                if (this.ageTicks % 15 != 10) {
                                                                   return;
                                                                 }
-                                                                var9 = HuffmanCodec.randomBelow(this.field_C, -2147483648, 320) - 160;
+                                                                var9 = HuffmanCodec.randomBelow(this.random, -2147483648, 320) - 160;
                                                                 this.playSound(100, true);
-                                                                var5 = this.spawnFromHere(this.field_v + var9, (BattleUnit) null, (byte) 81, 84, 48 + this.field_G, this.field_q);
-                                                                ((SpellProjectile) (var5)).field_u = 0;
+                                                                var5 = this.spawnFromHere(this.x + var9, (BattleUnit) null, (byte) 81, 84, 48 + this.y, this.battle);
+                                                                ((SpellProjectile) (var5)).velocityX = 0;
                                                                 ((SpellProjectile) (var5)).field_w = this.field_w;
-                                                                ((SpellProjectile) (var5)).field_y = 45;
-                                                                ((SpellProjectile) (var5)).field_F = 256;
-                                                                this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                                ((SpellProjectile) (var5)).ageTicks = 45;
+                                                                ((SpellProjectile) (var5)).velocityY = 256;
+                                                                this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                                                 return;
                                                               }
                                                               if (var9 != 19) {
                                                                 if (62 == var9 &&
                                                                   var19 == 0) {
-                                                                  if (this.field_t != null &&
-                                                                    !this.field_t.isDead(-1)) {
+                                                                  if (this.owner != null &&
+                                                                    !this.owner.isDead(-1)) {
                                                                     this.field_x = this.field_x + 1;
-                                                                    if (this.field_y != 100 &&
-                                                                      this.field_y != 200 &&
-                                                                      this.field_y != 300 &&
-                                                                      this.field_y != 400) {
-                                                                      this.field_y = this.field_y + 1;
+                                                                    if (this.ageTicks != 100 &&
+                                                                      this.ageTicks != 200 &&
+                                                                      this.ageTicks != 300 &&
+                                                                      this.ageTicks != 400) {
+                                                                      this.ageTicks = this.ageTicks + 1;
                                                                     }
                                                                     if (256 <= this.field_x) {
                                                                       this.field_x = this.field_x - 256;
                                                                     }
                                                                     var7Lifetime1 = -1;
-                                                                    if (this.field_y == 102 ||
-                                                                      this.field_y == 202 ||
-                                                                      this.field_y == 302 ||
-                                                                      this.field_y == 402 ||
-                                                                      null == this.field_C) {
-                                                                      this.field_C = new IsaacRandom(new int[]{this.field_q.field_Q, param0, this.field_v, this.field_G});
+                                                                    if (this.ageTicks == 102 ||
+                                                                      this.ageTicks == 202 ||
+                                                                      this.ageTicks == 302 ||
+                                                                      this.ageTicks == 402 ||
+                                                                      null == this.random) {
+                                                                      this.random = new IsaacRandom(new int[]{this.battle.randomSeed, round, this.x, this.y});
                                                                     }
-                                                                    if (this.field_y == 10) {
+                                                                    if (this.ageTicks == 10) {
                                                                       var7Lifetime1 = 63;
                                                                     }
-                                                                    if (this.field_y == 110) {
+                                                                    if (this.ageTicks == 110) {
                                                                       var7Lifetime1 = 63;
                                                                     }
-                                                                    if (this.field_y == 115) {
+                                                                    if (this.ageTicks == 115) {
                                                                       var7Lifetime1 = 63;
                                                                     }
-                                                                    if (this.field_y == 210) {
+                                                                    if (this.ageTicks == 210) {
                                                                       var7Lifetime1 = 63;
                                                                     }
-                                                                    if (this.field_y == 215) {
+                                                                    if (this.ageTicks == 215) {
                                                                       var7Lifetime1 = 63;
                                                                     }
-                                                                    if (this.field_y == 220) {
+                                                                    if (this.ageTicks == 220) {
                                                                       var7Lifetime1 = 63;
                                                                     }
-                                                                    if (310 == this.field_y) {
+                                                                    if (310 == this.ageTicks) {
                                                                       var7Lifetime1 = 63;
                                                                     }
-                                                                    if (this.field_y == 315) {
+                                                                    if (this.ageTicks == 315) {
                                                                       var7Lifetime1 = 63;
                                                                     }
-                                                                    if (this.field_y == 320) {
+                                                                    if (this.ageTicks == 320) {
                                                                       var7Lifetime1 = 63;
                                                                     }
-                                                                    if (325 == this.field_y) {
+                                                                    if (325 == this.ageTicks) {
                                                                       var7Lifetime1 = 63;
                                                                     }
-                                                                    if (410 == this.field_y) {
+                                                                    if (410 == this.ageTicks) {
                                                                       var7Lifetime1 = 64;
                                                                     }
-                                                                    if (500 == this.field_y) {
+                                                                    if (500 == this.ageTicks) {
                                                                       this.remove(0);
                                                                       return;
                                                                     }
                                                                     if (var7Lifetime1 != -1) {
-                                                                      var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, var7Lifetime1, -480, this.field_q);
+                                                                      var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, var7Lifetime1, -480, this.battle);
                                                                     }
                                                                     if (var5 == null) {
                                                                       return;
                                                                     }
-                                                                    var9 = HuffmanCodec.randomBelow(this.field_C, -2147483648, 8192);
-                                                                    ((SpellProjectile) (var5)).field_u = GradientBarPainter.sine(127, var9) >> 11;
-                                                                    ((SpellProjectile) (var5)).field_F = 0;
+                                                                    var9 = HuffmanCodec.randomBelow(this.random, -2147483648, 8192);
+                                                                    ((SpellProjectile) (var5)).velocityX = GradientBarPainter.sine(127, var9) >> 11;
+                                                                    ((SpellProjectile) (var5)).velocityY = 0;
                                                                     if (var7Lifetime1 == 64) {
-                                                                      ((SpellProjectile) (var5)).field_u = 0;
+                                                                      ((SpellProjectile) (var5)).velocityX = 0;
                                                                     }
-                                                                    this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                                    this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                                                     return;
                                                                   }
                                                                   this.remove(0);
@@ -5490,15 +5490,15 @@ final class SpellProjectile extends DualLinkNode {
                                                                 }
                                                                 if (var9 == 77 &&
                                                                   var19 == 0) {
-                                                                  this.field_y = this.field_y + 1;
-                                                                  if (this.field_y < this.field_t.field_ib) {
+                                                                  this.ageTicks = this.ageTicks + 1;
+                                                                  if (this.ageTicks < this.owner.health) {
                                                                     return;
                                                                   }
-                                                                  var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 101, this.field_G, this.field_q);
-                                                                  this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
-                                                                  this.field_t.field_db = 1000 + this.field_q.field_H;
-                                                                  if (this.field_t.field_ib >= 50) {
-                                                                    if (this.field_t.field_ib < 100) {
+                                                                  var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 101, this.y, this.battle);
+                                                                  this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                                  this.owner.y = 1000 + this.battle.arenaHeight;
+                                                                  if (this.owner.health >= 50) {
+                                                                    if (this.owner.health < 100) {
                                                                       this.playTypeSound(1, (byte) 37, 9);
                                                                     } else {
                                                                       this.playTypeSound(0, (byte) 37, 9);
@@ -5506,10 +5506,10 @@ final class SpellProjectile extends DualLinkNode {
                                                                   } else {
                                                                     this.playTypeSound(2, (byte) 37, 9);
                                                                   }
-                                                                  this.applyAreaEffect(this.field_t.field_ib, this.field_t.field_ib + this.field_t.field_Y, this.field_t.field_ib * 2 + this.field_t.field_Y, 8);
-                                                                  this.field_t.field_db = this.field_q.field_H + 128;
-                                                                  this.field_t.field_x = 1;
-                                                                  this.field_t.field_ib = 0;
+                                                                  this.applyAreaEffect(this.owner.health, this.owner.health + this.owner.size, this.owner.health * 2 + this.owner.size, 8);
+                                                                  this.owner.y = this.battle.arenaHeight + 128;
+                                                                  this.owner.pendingDamage = 1;
+                                                                  this.owner.health = 0;
                                                                   this.remove(0);
                                                                   return;
                                                                 }
@@ -5518,12 +5518,12 @@ final class SpellProjectile extends DualLinkNode {
                                                                   var9 != 78) {
                                                                   if (2 == var9 &&
                                                                     var19 == 0) {
-                                                                    this.field_y = this.field_y + 1;
-                                                                    if (25 > this.field_y) {
+                                                                    this.ageTicks = this.ageTicks + 1;
+                                                                    if (25 > this.ageTicks) {
                                                                       return;
                                                                     }
-                                                                    var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 101, this.field_G, this.field_q);
-                                                                    this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                                    var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 101, this.y, this.battle);
+                                                                    this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                                                     this.playTypeSound(0, (byte) 37, 9);
                                                                     this.applyAreaEffect(15, 256, 96, 8);
                                                                     this.remove(0);
@@ -5532,272 +5532,272 @@ final class SpellProjectile extends DualLinkNode {
                                                                   if (var9 == 74 &&
                                                                     var19 == 0) {
                                                                     var9 = 20;
-                                                                    this.field_y = this.field_y + 1;
-                                                                    if (this.field_t.field_jb == 27) {
+                                                                    this.ageTicks = this.ageTicks + 1;
+                                                                    if (this.owner.unitType == 27) {
                                                                       var9 = 50;
                                                                     }
-                                                                    if (null == this.field_C) {
-                                                                      this.field_C = new IsaacRandom(new int[]{this.field_q.field_Q, param0, this.field_v, this.field_G});
+                                                                    if (null == this.random) {
+                                                                      this.random = new IsaacRandom(new int[]{this.battle.randomSeed, round, this.x, this.y});
                                                                     }
-                                                                    if (var9 >= this.field_y &&
-                                                                      this.field_t.field_x <= 0) {
-                                                                      if (Math.abs(this.field_y) % 5 != 0) {
+                                                                    if (var9 >= this.ageTicks &&
+                                                                      this.owner.pendingDamage <= 0) {
+                                                                      if (Math.abs(this.ageTicks) % 5 != 0) {
                                                                         return;
                                                                       }
-                                                                      var5 = this.spawnFromHere(this.field_v, this.field_t, (byte) 81, 0, this.field_G, this.field_q);
-                                                                      ((SpellProjectile) (var5)).field_u = (this.field_u >> 1) + (HuffmanCodec.randomBelow(this.field_C, -2147483648, 65) - 32);
-                                                                      ((SpellProjectile) (var5)).field_F = -32 + (this.field_F >> 1) + HuffmanCodec.randomBelow(this.field_C, -2147483648, 65);
+                                                                      var5 = this.spawnFromHere(this.x, this.owner, (byte) 81, 0, this.y, this.battle);
+                                                                      ((SpellProjectile) (var5)).velocityX = (this.velocityX >> 1) + (HuffmanCodec.randomBelow(this.random, -2147483648, 65) - 32);
+                                                                      ((SpellProjectile) (var5)).velocityY = -32 + (this.velocityY >> 1) + HuffmanCodec.randomBelow(this.random, -2147483648, 65);
                                                                       ((SpellProjectile) (var5)).field_w = this.field_w;
-                                                                      this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                                      this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                                                       return;
                                                                     }
                                                                     this.remove(0);
                                                                     return;
                                                                   }
                                                                   if (var9 != 141) {
-                                                                    this.detonate(6016, param3, param2, param0);
+                                                                    this.detonate(6016, targetX, targetY, round);
                                                                     if (var19 == 0) {
                                                                       return;
                                                                     }
                                                                     break regionExit1;
                                                                   }
-                                                                  if (this.field_C == null) {
-                                                                    this.field_C = new IsaacRandom(new int[]{this.field_q.field_Q, param0, this.field_v, this.field_G});
+                                                                  if (this.random == null) {
+                                                                    this.random = new IsaacRandom(new int[]{this.battle.randomSeed, round, this.x, this.y});
                                                                   }
-                                                                  this.field_y = this.field_y + 1;
-                                                                  if (this.field_y % 5 == 4) {
+                                                                  this.ageTicks = this.ageTicks + 1;
+                                                                  if (this.ageTicks % 5 == 4) {
                                                                     this.playTypeSound(1, (byte) 37, 7);
                                                                   }
                                                                   var9 = 90;
-                                                                  if (this.field_y <= var9 && (null == this.field_t ||
-                                                                    !(0 < this.field_t.field_x))) {
-                                                                    if (this.field_y % 3 != 0) {
+                                                                  if (this.ageTicks <= var9 && (null == this.owner ||
+                                                                    !(0 < this.owner.pendingDamage))) {
+                                                                    if (this.ageTicks % 3 != 0) {
                                                                       return;
                                                                     }
-                                                                    var5 = this.spawnFromHere(-15 + (this.field_v + HuffmanCodec.randomBelow(this.field_C, -2147483648, 31)), this.field_t, (byte) 81, 135, this.field_G, this.field_q);
-                                                                    ((SpellProjectile) (var5)).field_u = 0 + (HuffmanCodec.randomBelow(this.field_C, -2147483648, 3) - 1);
-                                                                    ((SpellProjectile) (var5)).field_F = 64 - (-HuffmanCodec.randomBelow(this.field_C, -2147483648, 31) + 15);
-                                                                    this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                                    var5 = this.spawnFromHere(-15 + (this.x + HuffmanCodec.randomBelow(this.random, -2147483648, 31)), this.owner, (byte) 81, 135, this.y, this.battle);
+                                                                    ((SpellProjectile) (var5)).velocityX = 0 + (HuffmanCodec.randomBelow(this.random, -2147483648, 3) - 1);
+                                                                    ((SpellProjectile) (var5)).velocityY = 64 - (-HuffmanCodec.randomBelow(this.random, -2147483648, 31) + 15);
+                                                                    this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                                                     return;
                                                                   }
                                                                   this.remove(0);
                                                                   return;
                                                                 }
-                                                                this.field_y = this.field_y + 1;
-                                                                if (this.field_t != null) {
-                                                                  this.field_t.field_gb = this;
+                                                                this.ageTicks = this.ageTicks + 1;
+                                                                if (this.owner != null) {
+                                                                  this.owner.attachedProjectile = this;
                                                                 }
-                                                                if (this.field_y == 13) {
-                                                                  if (5 == this.field_t.field_jb) {
+                                                                if (this.ageTicks == 13) {
+                                                                  if (5 == this.owner.unitType) {
                                                                     this.playTypeSound(1, (byte) 37, 3);
-                                                                    var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 94, this.field_G, this.field_q);
-                                                                    this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                                    var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 94, this.y, this.battle);
+                                                                    this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                                                     this.applyAreaEffect(30, 256, 64, 8);
                                                                   }
-                                                                  if (this.field_t.field_jb == 2) {
+                                                                  if (this.owner.unitType == 2) {
                                                                     this.playTypeSound(1, (byte) 37, 1);
-                                                                    var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 86, this.field_G, this.field_q);
-                                                                    this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                                    var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 86, this.y, this.battle);
+                                                                    this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                                                     this.applyAreaEffect(30, 256, 64, 8);
                                                                   }
-                                                                  if (this.field_t.field_jb == 9) {
+                                                                  if (this.owner.unitType == 9) {
                                                                     this.playTypeSound(0, (byte) 37, 5);
-                                                                    var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 108, this.field_G, this.field_q);
-                                                                    this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                                    var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 108, this.y, this.battle);
+                                                                    this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                                                     this.applyAreaEffect(75, 256, 64, 8);
                                                                   }
-                                                                  if (this.field_t.field_jb == 39) {
+                                                                  if (this.owner.unitType == 39) {
                                                                     this.playTypeSound(0, (byte) 37, 0);
-                                                                    var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 163, this.field_G, this.field_q);
-                                                                    this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                                    var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 163, this.y, this.battle);
+                                                                    this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                                                     this.applyAreaEffect(50, 64, 96, 8);
                                                                   }
                                                                 }
-                                                                if (this.field_y < 25) {
+                                                                if (this.ageTicks < 25) {
                                                                   return;
                                                                 }
                                                                 this.remove(0);
                                                                 return;
                                                               }
-                                                              if (this.field_t != null &&
-                                                                this.field_t.isDead(-1)) {
+                                                              if (this.owner != null &&
+                                                                this.owner.isDead(-1)) {
                                                                 this.remove(0);
                                                                 return;
                                                               }
-                                                              if (this.field_y != 100 &&
-                                                                this.field_y != 200 &&
-                                                                this.field_y != 300 &&
-                                                                this.field_y != 400) {
-                                                                this.field_y = this.field_y + 1;
+                                                              if (this.ageTicks != 100 &&
+                                                                this.ageTicks != 200 &&
+                                                                this.ageTicks != 300 &&
+                                                                this.ageTicks != 400) {
+                                                                this.ageTicks = this.ageTicks + 1;
                                                               }
-                                                              if (102 == this.field_y ||
-                                                                this.field_y == 202 ||
-                                                                this.field_y == 302 ||
-                                                                this.field_y == 402 ||
-                                                                this.field_C == null) {
-                                                                this.field_C = new IsaacRandom(new int[]{this.field_q.field_Q, param0, this.field_v, this.field_G});
+                                                              if (102 == this.ageTicks ||
+                                                                this.ageTicks == 202 ||
+                                                                this.ageTicks == 302 ||
+                                                                this.ageTicks == 402 ||
+                                                                this.random == null) {
+                                                                this.random = new IsaacRandom(new int[]{this.battle.randomSeed, round, this.x, this.y});
                                                               }
                                                               var7Lifetime2 = -1;
                                                               var7Lifetime3 = 87;
                                                               if (0.5 > Math.random()) {
                                                                 var7Lifetime3 = 88;
                                                               }
-                                                              if (this.field_y == 10) {
+                                                              if (this.ageTicks == 10) {
                                                                 var7Lifetime3 = 67;
                                                               }
-                                                              if (15 == this.field_y) {
+                                                              if (15 == this.ageTicks) {
                                                                 var7Lifetime3 = 10;
                                                               }
-                                                              if (this.field_y == 20) {
+                                                              if (this.ageTicks == 20) {
                                                                 var7Lifetime3 = 10;
                                                               }
-                                                              if (this.field_y == 25) {
+                                                              if (this.ageTicks == 25) {
                                                                 var7Lifetime3 = 10;
                                                               }
-                                                              if (this.field_y == 30) {
+                                                              if (this.ageTicks == 30) {
                                                                 var7Lifetime3 = 10;
                                                               }
-                                                              if (this.field_y == 110) {
+                                                              if (this.ageTicks == 110) {
                                                                 var7Lifetime3 = 10;
                                                               }
-                                                              if (115 == this.field_y) {
+                                                              if (115 == this.ageTicks) {
                                                                 var7Lifetime3 = 10;
                                                               }
-                                                              if (this.field_y == 120) {
+                                                              if (this.ageTicks == 120) {
                                                                 var7Lifetime3 = 10;
                                                               }
-                                                              if (this.field_y == 125) {
+                                                              if (this.ageTicks == 125) {
                                                                 var7Lifetime3 = 10;
                                                               }
-                                                              if (130 == this.field_y) {
+                                                              if (130 == this.ageTicks) {
                                                                 var7Lifetime3 = 67;
                                                               }
-                                                              if (this.field_y == 210) {
+                                                              if (this.ageTicks == 210) {
                                                                 var7Lifetime3 = 10;
                                                               }
-                                                              if (215 == this.field_y) {
+                                                              if (215 == this.ageTicks) {
                                                                 var7Lifetime3 = 10;
                                                               }
-                                                              if (220 == this.field_y) {
+                                                              if (220 == this.ageTicks) {
                                                                 var7Lifetime3 = 10;
                                                               }
-                                                              if (this.field_y == 225) {
+                                                              if (this.ageTicks == 225) {
                                                                 var7Lifetime3 = 10;
                                                               }
-                                                              if (this.field_y == 230) {
+                                                              if (this.ageTicks == 230) {
                                                                 var7Lifetime3 = 67;
                                                               }
-                                                              if (this.field_y == 212) {
+                                                              if (this.ageTicks == 212) {
                                                                 var7Lifetime3 = 10;
                                                               }
-                                                              if (this.field_y == 217) {
+                                                              if (this.ageTicks == 217) {
                                                                 var7Lifetime3 = 10;
                                                               }
-                                                              if (this.field_y == 222) {
+                                                              if (this.ageTicks == 222) {
                                                                 var7Lifetime3 = 10;
                                                               }
-                                                              if (this.field_y == 227) {
+                                                              if (this.ageTicks == 227) {
                                                                 var7Lifetime3 = 10;
                                                               }
-                                                              if (this.field_y == 232) {
+                                                              if (this.ageTicks == 232) {
                                                                 var7Lifetime3 = 67;
                                                               }
-                                                              if (310 == this.field_y) {
+                                                              if (310 == this.ageTicks) {
                                                                 var7Lifetime3 = 10;
                                                               }
-                                                              if (this.field_y == 315) {
+                                                              if (this.ageTicks == 315) {
                                                                 var7Lifetime3 = 10;
                                                               }
-                                                              if (this.field_y == 320) {
+                                                              if (this.ageTicks == 320) {
                                                                 var7Lifetime3 = 10;
                                                               }
-                                                              if (this.field_y == 325) {
+                                                              if (this.ageTicks == 325) {
                                                                 var7Lifetime3 = 10;
                                                               }
-                                                              if (this.field_y == 330) {
+                                                              if (this.ageTicks == 330) {
                                                                 var7Lifetime3 = 67;
                                                               }
-                                                              if (this.field_y == 312) {
+                                                              if (this.ageTicks == 312) {
                                                                 var7Lifetime3 = 10;
                                                               }
-                                                              if (this.field_y == 317) {
+                                                              if (this.ageTicks == 317) {
                                                                 var7Lifetime3 = 10;
                                                               }
-                                                              if (322 == this.field_y) {
+                                                              if (322 == this.ageTicks) {
                                                                 var7Lifetime3 = 10;
                                                               }
-                                                              if (this.field_y == 327) {
+                                                              if (this.ageTicks == 327) {
                                                                 var7Lifetime3 = 10;
                                                               }
-                                                              if (this.field_y == 332) {
+                                                              if (this.ageTicks == 332) {
                                                                 var7Lifetime3 = 67;
                                                               }
-                                                              if (this.field_y == 314) {
+                                                              if (this.ageTicks == 314) {
                                                                 var7Lifetime3 = 10;
                                                               }
-                                                              if (this.field_y == 319) {
+                                                              if (this.ageTicks == 319) {
                                                                 var7Lifetime3 = 10;
                                                               }
-                                                              if (this.field_y == 324) {
+                                                              if (this.ageTicks == 324) {
                                                                 var7Lifetime3 = 10;
                                                               }
-                                                              if (this.field_y == 329) {
+                                                              if (this.ageTicks == 329) {
                                                                 var7Lifetime3 = 10;
                                                               }
-                                                              if (this.field_y == 334) {
+                                                              if (this.ageTicks == 334) {
                                                                 var7Lifetime3 = 67;
                                                               }
-                                                              if (402 == this.field_y) {
+                                                              if (402 == this.ageTicks) {
                                                                 var7Lifetime3 = 10;
                                                               }
-                                                              if (404 == this.field_y) {
+                                                              if (404 == this.ageTicks) {
                                                                 var7Lifetime3 = 10;
                                                               }
-                                                              if (this.field_y == 406) {
+                                                              if (this.ageTicks == 406) {
                                                                 var7Lifetime3 = 10;
                                                               }
-                                                              if (this.field_y == 408) {
+                                                              if (this.ageTicks == 408) {
                                                                 var7Lifetime3 = 10;
                                                               }
-                                                              if (409 == this.field_y) {
+                                                              if (409 == this.ageTicks) {
                                                                 var7Lifetime3 = 10;
                                                               }
-                                                              if (this.field_y == 410) {
+                                                              if (this.ageTicks == 410) {
                                                                 var7Lifetime3 = 10;
                                                               }
-                                                              if (this.field_y == 415) {
+                                                              if (this.ageTicks == 415) {
                                                                 var7Lifetime3 = 10;
                                                               }
-                                                              if (420 == this.field_y) {
+                                                              if (420 == this.ageTicks) {
                                                                 var7Lifetime3 = 10;
                                                               }
-                                                              if (this.field_y == 425) {
+                                                              if (this.ageTicks == 425) {
                                                                 var7Lifetime3 = 10;
                                                               }
-                                                              if (this.field_y == 430) {
+                                                              if (this.ageTicks == 430) {
                                                                 var7Lifetime3 = 10;
                                                               }
-                                                              if (412 == this.field_y) {
+                                                              if (412 == this.ageTicks) {
                                                                 var7Lifetime3 = 67;
                                                               }
-                                                              if (this.field_y == 417) {
+                                                              if (this.ageTicks == 417) {
                                                                 var7Lifetime3 = 67;
                                                               }
-                                                              if (this.field_y == 422) {
+                                                              if (this.ageTicks == 422) {
                                                                 var7Lifetime3 = 67;
                                                               }
-                                                              if (this.field_y == 427) {
+                                                              if (this.ageTicks == 427) {
                                                                 var7Lifetime3 = 67;
                                                               }
-                                                              if (this.field_y == 432) {
+                                                              if (this.ageTicks == 432) {
                                                                 var7Lifetime3 = 67;
                                                               }
-                                                              if (this.field_y % 100 != 0 &&
-                                                                this.field_y % 10 == 9) {
-                                                                var9 = this.field_y * 64 / 500 + 64;
-                                                                var10Lifetime1 = this.field_q.field_H;
-                                                                if (this.field_y < 100) {
-                                                                  var10Lifetime1 = var10Lifetime1 - (64 + 64 * this.field_y / 500) * this.field_y / 100;
+                                                              if (this.ageTicks % 100 != 0 &&
+                                                                this.ageTicks % 10 == 9) {
+                                                                var9 = this.ageTicks * 64 / 500 + 64;
+                                                                var10Lifetime1 = this.battle.arenaHeight;
+                                                                if (this.ageTicks < 100) {
+                                                                  var10Lifetime1 = var10Lifetime1 - (64 + 64 * this.ageTicks / 500) * this.ageTicks / 100;
                                                                   if (var19 != 0) {
                                                                     var10Lifetime1 = var10Lifetime1 - var9;
                                                                   }
@@ -5810,16 +5810,16 @@ final class SpellProjectile extends DualLinkNode {
                                                                 LoginStackHelpers.field_e.makeRasterTarget();
                                                                 SoftwareRasterizer.fillRectangle(0, 0, 512, 128, 0);
                                                                 MeshModel.field_M.drawScaled(0, 0, 4 * var9, var9);
-                                                                this.field_q.carveTerrainAndSprite(var10Lifetime1, -38, -(2 * var9) + this.field_v, LoginStackHelpers.field_e);
+                                                                this.battle.carveTerrainAndSprite(var10Lifetime1, -38, -(2 * var9) + this.x, LoginStackHelpers.field_e);
                                                               }
-                                                              if (this.field_y >= 500) {
+                                                              if (this.ageTicks >= 500) {
                                                                 this.remove(0);
                                                                 return;
                                                               }
                                                               var8Lifetime1 = 1;
                                                               if (var7Lifetime3 == 87 ||
                                                                 var7Lifetime3 == 88) {
-                                                                var8Lifetime1 = 7 - this.field_y / 100;
+                                                                var8Lifetime1 = 7 - this.ageTicks / 100;
                                                               }
                                                               var9 = 0;
                                                               while (var8Lifetime1 > var9) {
@@ -5827,17 +5827,17 @@ final class SpellProjectile extends DualLinkNode {
                                                                   return;
                                                                 }
                                                                 if (var7Lifetime3 != -1) {
-                                                                  var10Lifetime1 = 64 + this.field_y * 64 / 500;
-                                                                  if (this.field_y < 100) {
-                                                                    var10Lifetime1 = this.field_y * (64 * this.field_y / 500 + 64) / 100;
+                                                                  var10Lifetime1 = 64 + this.ageTicks * 64 / 500;
+                                                                  if (this.ageTicks < 100) {
+                                                                    var10Lifetime1 = this.ageTicks * (64 * this.ageTicks / 500 + 64) / 100;
                                                                   }
-                                                                  var5 = this.spawnFromHere(this.field_v, this.field_t, (byte) 81, var7Lifetime3, -var10Lifetime1 + this.field_G, this.field_q);
+                                                                  var5 = this.spawnFromHere(this.x, this.owner, (byte) 81, var7Lifetime3, -var10Lifetime1 + this.y, this.battle);
                                                                 }
                                                                 if (var5 != null) {
                                                                   var10Lifetime1 = (int)(8192.0 * Math.random());
                                                                   if (87 != var7Lifetime3 &&
                                                                     var7Lifetime3 != 88) {
-                                                                    var10Lifetime1 = HuffmanCodec.randomBelow(this.field_C, -2147483648, 8192);
+                                                                    var10Lifetime1 = HuffmanCodec.randomBelow(this.random, -2147483648, 8192);
                                                                   }
                                                                   if (var7Lifetime3 == 10) {
                                                                     this.playSound(76, true);
@@ -5845,109 +5845,109 @@ final class SpellProjectile extends DualLinkNode {
                                                                   if (var7Lifetime3 == 67) {
                                                                     this.playSound(83, true);
                                                                   }
-                                                                  ((SpellProjectile) (var5)).field_u = GradientBarPainter.sine(123, var10Lifetime1) >> 9;
-                                                                  ((SpellProjectile) (var5)).field_F = (BevelBoxPainter.cosine(var10Lifetime1, -101) >> 9) - 256;
+                                                                  ((SpellProjectile) (var5)).velocityX = GradientBarPainter.sine(123, var10Lifetime1) >> 9;
+                                                                  ((SpellProjectile) (var5)).velocityY = (BevelBoxPainter.cosine(var10Lifetime1, -101) >> 9) - 256;
                                                                   if (var7Lifetime3 == 10) {
-                                                                    ((SpellProjectile) (var5)).field_u = ((SpellProjectile) (var5)).field_u >> 1;
-                                                                    ((SpellProjectile) (var5)).field_F = ((SpellProjectile) (var5)).field_F - 64;
+                                                                    ((SpellProjectile) (var5)).velocityX = ((SpellProjectile) (var5)).velocityX >> 1;
+                                                                    ((SpellProjectile) (var5)).velocityY = ((SpellProjectile) (var5)).velocityY - 64;
                                                                   }
                                                                   ((SpellProjectile) (var5)).field_w = this.field_w;
                                                                   if (67 == var7Lifetime3 ||
                                                                     var7Lifetime3 == 13) {
-                                                                    ((SpellProjectile) (var5)).field_u = ((SpellProjectile) (var5)).field_u >> 2;
-                                                                    ((SpellProjectile) (var5)).field_F = ((SpellProjectile) (var5)).field_F - 128;
-                                                                    ((SpellProjectile) (var5)).field_y = HuffmanCodec.randomBelow(this.field_C, -2147483648, 200);
+                                                                    ((SpellProjectile) (var5)).velocityX = ((SpellProjectile) (var5)).velocityX >> 2;
+                                                                    ((SpellProjectile) (var5)).velocityY = ((SpellProjectile) (var5)).velocityY - 128;
+                                                                    ((SpellProjectile) (var5)).ageTicks = HuffmanCodec.randomBelow(this.random, -2147483648, 200);
                                                                   }
                                                                   if (var7Lifetime3 == 87 ||
                                                                     var7Lifetime3 == 88) {
-                                                                    ((SpellProjectile) (var5)).field_F = ((SpellProjectile) (var5)).field_F >> 2;
-                                                                    ((SpellProjectile) (var5)).field_u = ((SpellProjectile) (var5)).field_u >> 2;
-                                                                    var11Lifetime1 = 48 + this.field_y * 48 / 500;
-                                                                    ((SpellProjectile) (var5)).field_v = ((SpellProjectile) (var5)).field_v + (int)((double)(-(var11Lifetime1 / 2)) + (double)var11Lifetime1 * Math.random());
-                                                                    ((SpellProjectile) (var5)).field_G = ((SpellProjectile) (var5)).field_G + 16;
-                                                                    ((SpellProjectile) (var5)).field_o = ((SpellProjectile) (var5)).field_v << 4;
-                                                                    ((SpellProjectile) (var5)).field_z = ((SpellProjectile) (var5)).field_G << 4;
+                                                                    ((SpellProjectile) (var5)).velocityY = ((SpellProjectile) (var5)).velocityY >> 2;
+                                                                    ((SpellProjectile) (var5)).velocityX = ((SpellProjectile) (var5)).velocityX >> 2;
+                                                                    var11Lifetime1 = 48 + this.ageTicks * 48 / 500;
+                                                                    ((SpellProjectile) (var5)).x = ((SpellProjectile) (var5)).x + (int)((double)(-(var11Lifetime1 / 2)) + (double)var11Lifetime1 * Math.random());
+                                                                    ((SpellProjectile) (var5)).y = ((SpellProjectile) (var5)).y + 16;
+                                                                    ((SpellProjectile) (var5)).subpixelX = ((SpellProjectile) (var5)).x << 4;
+                                                                    ((SpellProjectile) (var5)).subpixelY = ((SpellProjectile) (var5)).y << 4;
                                                                     if (var7Lifetime3 == 87) {
                                                                       ((SpellProjectile) (var5)).field_x = 1;
                                                                     }
-                                                                    ((SpellProjectile) (var5)).field_y = (int)(-10.0 + Math.random() * 4.0);
+                                                                    ((SpellProjectile) (var5)).ageTicks = (int)(-10.0 + Math.random() * 4.0);
                                                                   }
-                                                                  this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                                  this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                                                 }
                                                                 var9++;
                                                               }
                                                               return;
                                                             }
-                                                            if (this.field_t == null) {
+                                                            if (this.owner == null) {
                                                               this.remove(0);
                                                               return;
                                                             }
-                                                            if (5 == this.field_t.field_jb) {
-                                                              this.field_v = this.field_t.field_lb;
-                                                              if (this.field_t.field_db >= (this.field_q.field_H + 128)) {
+                                                            if (5 == this.owner.unitType) {
+                                                              this.x = this.owner.x;
+                                                              if (this.owner.y >= (this.battle.arenaHeight + 128)) {
                                                                 this.remove(0);
                                                                 return;
                                                               }
                                                             }
-                                                            if (this.field_t.isDead(-1)) {
+                                                            if (this.owner.isDead(-1)) {
                                                               this.remove(0);
                                                               return;
                                                             }
-                                                            this.field_G = -240;
-                                                            if (this.field_y < 100) {
-                                                              this.field_G = this.field_G - 2 * (-this.field_y + 100);
+                                                            this.y = -240;
+                                                            if (this.ageTicks < 100) {
+                                                              this.y = this.y - 2 * (-this.ageTicks + 100);
                                                             }
-                                                            if (this.field_y > 400) {
-                                                              this.field_G = this.field_G - (this.field_y * 2 - 800);
+                                                            if (this.ageTicks > 400) {
+                                                              this.y = this.y - (this.ageTicks * 2 - 800);
                                                             }
-                                                            this.field_o = this.field_v << 4;
-                                                            this.field_z = this.field_G << 4;
+                                                            this.subpixelX = this.x << 4;
+                                                            this.subpixelY = this.y << 4;
                                                             this.field_x = this.field_x + 1;
                                                             if (this.field_x > 100) {
                                                               this.field_x = this.field_x - 100;
                                                             }
-                                                            if (100 != this.field_y &&
-                                                              this.field_y != 200 &&
-                                                              this.field_y != 300 &&
-                                                              400 != this.field_y) {
-                                                              if (this.field_y == 101 ||
-                                                                this.field_y == 0 ||
-                                                                this.field_y == 201 ||
-                                                                this.field_y == 301 ||
-                                                                this.field_y == 401 ||
-                                                                this.field_C == null) {
-                                                                this.field_C = new IsaacRandom(new int[]{this.field_q.field_Q, param0, this.field_v, this.field_G});
+                                                            if (100 != this.ageTicks &&
+                                                              this.ageTicks != 200 &&
+                                                              this.ageTicks != 300 &&
+                                                              400 != this.ageTicks) {
+                                                              if (this.ageTicks == 101 ||
+                                                                this.ageTicks == 0 ||
+                                                                this.ageTicks == 201 ||
+                                                                this.ageTicks == 301 ||
+                                                                this.ageTicks == 401 ||
+                                                                this.random == null) {
+                                                                this.random = new IsaacRandom(new int[]{this.battle.randomSeed, round, this.x, this.y});
                                                               }
-                                                              this.field_y = this.field_y + 1;
-                                                              if (this.field_t.field_jb != 5 ||
-                                                                this.field_y > 100) {
-                                                                if (71 != this.field_I) {
-                                                                  var9 = this.field_v - (-HuffmanCodec.randomBelow(this.field_C, -2147483648, 256) + 128);
-                                                                  var10Lifetime1 = this.field_G - (-HuffmanCodec.randomBelow(this.field_C, -2147483648, 16) - 48);
-                                                                  var11Lifetime1 = HuffmanCodec.randomBelow(this.field_C, -2147483648, 8192);
-                                                                  var5 = this.spawnFromHere(var9, (BattleUnit) null, (byte) 81, 46, var10Lifetime1, this.field_q);
-                                                                  ((SpellProjectile) (var5)).field_u = GradientBarPainter.sine(125, var11Lifetime1) >> 11;
-                                                                  ((SpellProjectile) (var5)).field_F = (BevelBoxPainter.cosine(var11Lifetime1, -104) >> 11) + 32;
-                                                                  this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                              this.ageTicks = this.ageTicks + 1;
+                                                              if (this.owner.unitType != 5 ||
+                                                                this.ageTicks > 100) {
+                                                                if (71 != this.spellType) {
+                                                                  var9 = this.x - (-HuffmanCodec.randomBelow(this.random, -2147483648, 256) + 128);
+                                                                  var10Lifetime1 = this.y - (-HuffmanCodec.randomBelow(this.random, -2147483648, 16) - 48);
+                                                                  var11Lifetime1 = HuffmanCodec.randomBelow(this.random, -2147483648, 8192);
+                                                                  var5 = this.spawnFromHere(var9, (BattleUnit) null, (byte) 81, 46, var10Lifetime1, this.battle);
+                                                                  ((SpellProjectile) (var5)).velocityX = GradientBarPainter.sine(125, var11Lifetime1) >> 11;
+                                                                  ((SpellProjectile) (var5)).velocityY = (BevelBoxPainter.cosine(var11Lifetime1, -104) >> 11) + 32;
+                                                                  this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                                                 } else {
-                                                                  var9 = this.field_v + HuffmanCodec.randomBelow(this.field_C, -2147483648, 192) - 96;
-                                                                  var10Lifetime1 = this.field_G + (48 + HuffmanCodec.randomBelow(this.field_C, -2147483648, 16));
-                                                                  var5 = this.spawnFromHere(var9, (BattleUnit) null, (byte) 81, 46, var10Lifetime1, this.field_q);
-                                                                  var11Lifetime1 = HuffmanCodec.randomBelow(this.field_C, -2147483648, 8192);
-                                                                  ((SpellProjectile) (var5)).field_u = GradientBarPainter.sine(-2, var11Lifetime1) >> 11;
-                                                                  ((SpellProjectile) (var5)).field_F = 32 + (BevelBoxPainter.cosine(var11Lifetime1, -128) >> 11);
-                                                                  this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
-                                                                  if (100 != this.field_y &&
-                                                                    this.field_y != 200 &&
-                                                                    this.field_y != 300 &&
-                                                                    400 != this.field_y) {
-                                                                    this.field_y = this.field_y + 1;
+                                                                  var9 = this.x + HuffmanCodec.randomBelow(this.random, -2147483648, 192) - 96;
+                                                                  var10Lifetime1 = this.y + (48 + HuffmanCodec.randomBelow(this.random, -2147483648, 16));
+                                                                  var5 = this.spawnFromHere(var9, (BattleUnit) null, (byte) 81, 46, var10Lifetime1, this.battle);
+                                                                  var11Lifetime1 = HuffmanCodec.randomBelow(this.random, -2147483648, 8192);
+                                                                  ((SpellProjectile) (var5)).velocityX = GradientBarPainter.sine(-2, var11Lifetime1) >> 11;
+                                                                  ((SpellProjectile) (var5)).velocityY = 32 + (BevelBoxPainter.cosine(var11Lifetime1, -128) >> 11);
+                                                                  this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                                  if (100 != this.ageTicks &&
+                                                                    this.ageTicks != 200 &&
+                                                                    this.ageTicks != 300 &&
+                                                                    400 != this.ageTicks) {
+                                                                    this.ageTicks = this.ageTicks + 1;
                                                                   }
                                                                 }
                                                               }
                                                             } else {
-                                                              if (this.field_I != 71) {
-                                                                MidiPcmStream.field_L.setDeque((byte) 100, this.field_q.field_Kb);
+                                                              if (this.spellType != 71) {
+                                                                MidiPcmStream.field_L.setDeque((byte) 100, this.battle.projectiles);
                                                                 var9_ref_miLifetime2 = (SpellProjectile) (MidiPcmStream.field_L.first(-123));
                                                                 while (true) {
                                                                   if (var9_ref_miLifetime2 != null) {
@@ -5957,16 +5957,16 @@ final class SpellProjectile extends DualLinkNode {
                                                                     stackIn_1893_1 = -139;
                                                                     if (var19 == 0) {
                                                                       if (((SpellProjectile) (Object) stackIn_1871_0).isAlive(stackIn_1893_1) &&
-                                                                        var9_ref_miLifetime2.field_t != this.field_t &&
-                                                                        30 != var9_ref_miLifetime2.field_I &&
-                                                                        var9_ref_miLifetime2.field_I != 84) {
-                                                                        var10Lifetime1 = var9_ref_miLifetime2.field_v - this.field_v;
-                                                                        var11Lifetime1 = -this.field_G + var9_ref_miLifetime2.field_G;
-                                                                        if (var9_ref_miLifetime2.field_F * var11Lifetime1 + var9_ref_miLifetime2.field_u * var10Lifetime1 < 0) {
+                                                                        var9_ref_miLifetime2.owner != this.owner &&
+                                                                        30 != var9_ref_miLifetime2.spellType &&
+                                                                        var9_ref_miLifetime2.spellType != 84) {
+                                                                        var10Lifetime1 = var9_ref_miLifetime2.x - this.x;
+                                                                        var11Lifetime1 = -this.y + var9_ref_miLifetime2.y;
+                                                                        if (var9_ref_miLifetime2.velocityY * var11Lifetime1 + var9_ref_miLifetime2.velocityX * var10Lifetime1 < 0) {
                                                                           var12Lifetime1 = var11Lifetime1 * var11Lifetime1 + var10Lifetime1 * var10Lifetime1;
                                                                           if (var12Lifetime1 < 65536 &&
                                                                             0 < var12Lifetime1) {
-                                                                            var9_ref_miLifetime2.field_u = var9_ref_miLifetime2.field_u + Math.abs(var10Lifetime1) * (32 * var10Lifetime1) / var12Lifetime1;
+                                                                            var9_ref_miLifetime2.velocityX = var9_ref_miLifetime2.velocityX + Math.abs(var10Lifetime1) * (32 * var10Lifetime1) / var12Lifetime1;
                                                                           }
                                                                         }
                                                                       }
@@ -5975,174 +5975,174 @@ final class SpellProjectile extends DualLinkNode {
                                                                     }
                                                                   } else {
                                                                     stackIn_1893_0 = this;
-                                                                    stackIn_1893_1 = this.field_v + (int)(256.0 * Math.random()) - 128;
+                                                                    stackIn_1893_1 = this.x + (int)(256.0 * Math.random()) - 128;
                                                                   }
                                                                   break;
                                                                 }
-                                                                var5 = this.spawnFromHere(stackIn_1893_1, (BattleUnit) null, (byte) 81, 95, this.field_G - (-48 - (int)(16.0 * Math.random())), this.field_q);
+                                                                var5 = this.spawnFromHere(stackIn_1893_1, (BattleUnit) null, (byte) 81, 95, this.y - (-48 - (int)(16.0 * Math.random())), this.battle);
                                                                 var9 = (int)(256.0 * Math.random());
                                                                 var10_doubleLifetime1 = (double)var9 * 3.141592653589793 / 128.0;
-                                                                ((SpellProjectile) (var5)).field_u = (int)(Math.sin(var10_doubleLifetime1) * 32.0);
-                                                                ((SpellProjectile) (var5)).field_F = 32 + (int)(32.0 * Math.cos(var10_doubleLifetime1));
+                                                                ((SpellProjectile) (var5)).velocityX = (int)(Math.sin(var10_doubleLifetime1) * 32.0);
+                                                                ((SpellProjectile) (var5)).velocityY = 32 + (int)(32.0 * Math.cos(var10_doubleLifetime1));
                                                                 ((SpellProjectile) (var5)).field_x = 1;
-                                                                this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                                this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                                               }
                                                             }
-                                                            if (71 == this.field_I) {
-                                                              if (this.field_y < 300) {
+                                                            if (71 == this.spellType) {
+                                                              if (this.ageTicks < 300) {
                                                                 return;
                                                               }
-                                                              this.field_y = this.field_y - 200;
+                                                              this.ageTicks = this.ageTicks - 200;
                                                               return;
                                                             }
-                                                            if (this.field_y < 500) {
+                                                            if (this.ageTicks < 500) {
                                                               return;
                                                             }
                                                             this.remove(0);
                                                             return;
                                                           }
                                                         }
-                                                        if (!this.field_t.isDead(-1) &&
-                                                          128 + this.field_q.field_H > this.field_t.field_db) {
-                                                          this.field_t.field_gb = this;
-                                                          if (this.field_t.field_x > 0) {
-                                                            if (this == this.field_t.field_gb) {
-                                                              this.field_t.field_gb = null;
+                                                        if (!this.owner.isDead(-1) &&
+                                                          128 + this.battle.arenaHeight > this.owner.y) {
+                                                          this.owner.attachedProjectile = this;
+                                                          if (this.owner.pendingDamage > 0) {
+                                                            if (this == this.owner.attachedProjectile) {
+                                                              this.owner.attachedProjectile = null;
                                                             }
                                                             this.remove(0);
                                                             return;
                                                           }
-                                                          this.field_v = this.field_t.field_lb;
-                                                          this.field_G = this.field_t.field_db;
-                                                          if (this.field_t.field_z) {
-                                                            if (this.field_t.field_kb < -4) {
-                                                              this.field_t.field_kb = 1 + this.field_t.field_kb / 2;
+                                                          this.x = this.owner.x;
+                                                          this.y = this.owner.y;
+                                                          if (this.owner.moving) {
+                                                            if (this.owner.velocityX < -4) {
+                                                              this.owner.velocityX = 1 + this.owner.velocityX / 2;
                                                             }
-                                                            if (this.field_t.field_eb < -16) {
-                                                              this.field_t.field_eb = this.field_t.field_eb / 2 + 1;
+                                                            if (this.owner.velocityY < -16) {
+                                                              this.owner.velocityY = this.owner.velocityY / 2 + 1;
                                                             }
-                                                            if (4 < this.field_t.field_kb) {
-                                                              this.field_t.field_kb = this.field_t.field_kb / 2 - 1;
+                                                            if (4 < this.owner.velocityX) {
+                                                              this.owner.velocityX = this.owner.velocityX / 2 - 1;
                                                             }
                                                           }
-                                                          this.field_o = this.field_v << 4;
-                                                          this.field_z = this.field_G << 4;
+                                                          this.subpixelX = this.x << 4;
+                                                          this.subpixelY = this.y << 4;
                                                           if (var19 == 0) {
                                                             return;
                                                           }
                                                         } else {
-                                                          if (~this.field_q.getCurrentPlayer(false) == ~this.field_t.field_T) {
+                                                          if (~this.battle.getCurrentPlayer(false) == ~this.owner.unitId) {
                                                           }
                                                           this.remove(0);
                                                           return;
                                                         }
                                                       }
-                                                      if (!this.field_t.isDead(-1) &&
-                                                        (128 + this.field_q.field_H) > this.field_t.field_db) {
-                                                        if (this.field_t.field_x > 0) {
-                                                          this.field_y = this.field_y + this.field_t.field_x;
-                                                          if (this.field_y > 50) {
-                                                            this.field_t.field_x = -50 + this.field_y;
+                                                      if (!this.owner.isDead(-1) &&
+                                                        (128 + this.battle.arenaHeight) > this.owner.y) {
+                                                        if (this.owner.pendingDamage > 0) {
+                                                          this.ageTicks = this.ageTicks + this.owner.pendingDamage;
+                                                          if (this.ageTicks > 50) {
+                                                            this.owner.pendingDamage = -50 + this.ageTicks;
                                                             if (var19 != 0) {
-                                                              this.field_t.field_x = 0;
+                                                              this.owner.pendingDamage = 0;
                                                             }
                                                           } else {
-                                                            this.field_t.field_x = 0;
+                                                            this.owner.pendingDamage = 0;
                                                           }
                                                         }
-                                                        if (this.field_y >= 50) {
+                                                        if (this.ageTicks >= 50) {
                                                           this.remove(0);
                                                           return;
                                                         }
-                                                        this.field_x = this.field_x + (this.field_y + 8);
+                                                        this.field_x = this.field_x + (this.ageTicks + 8);
                                                         if (256 <= this.field_x) {
                                                           this.field_x = this.field_x - 256;
                                                         }
-                                                        this.field_G = this.field_t.field_db;
-                                                        this.field_v = this.field_t.field_lb;
-                                                        this.field_z = this.field_G << 4;
-                                                        this.field_o = this.field_v << 4;
+                                                        this.y = this.owner.y;
+                                                        this.x = this.owner.x;
+                                                        this.subpixelY = this.y << 4;
+                                                        this.subpixelX = this.x << 4;
                                                         if (var19 == 0) {
                                                           return;
                                                         }
                                                       } else {
-                                                        if (this.field_q.getCurrentPlayer(false) == this.field_t.field_T) {
+                                                        if (this.battle.getCurrentPlayer(false) == this.owner.unitId) {
                                                         }
                                                         this.remove(0);
                                                         return;
                                                       }
                                                     }
-                                                    if (!this.field_t.isDead(-1) &&
-                                                      this.field_t.field_db < (128 + this.field_q.field_H)) {
+                                                    if (!this.owner.isDead(-1) &&
+                                                      this.owner.y < (128 + this.battle.arenaHeight)) {
                                                       this.field_x = this.field_x + 16;
-                                                      if (this.field_t.field_x > 0) {
-                                                        this.field_t.field_x = 0;
+                                                      if (this.owner.pendingDamage > 0) {
+                                                        this.owner.pendingDamage = 0;
                                                       }
                                                       if (this.field_x >= 256) {
                                                         this.field_x = this.field_x - 256;
                                                       }
-                                                      this.field_G = this.field_t.field_db;
-                                                      this.field_v = this.field_t.field_lb;
-                                                      this.field_o = this.field_v << 4;
-                                                      this.field_z = this.field_G << 4;
+                                                      this.y = this.owner.y;
+                                                      this.x = this.owner.x;
+                                                      this.subpixelX = this.x << 4;
+                                                      this.subpixelY = this.y << 4;
                                                       if (var19 == 0) {
                                                         return;
                                                       }
                                                     } else {
-                                                      if (this.field_q.getCurrentPlayer(false) != this.field_t.field_T) {
+                                                      if (this.battle.getCurrentPlayer(false) != this.owner.unitId) {
                                                       }
                                                       this.remove(0);
                                                       return;
                                                     }
                                                   }
-                                                  if (!this.field_t.isDead(-1) &&
-                                                    128 + this.field_q.field_H > this.field_t.field_db) {
+                                                  if (!this.owner.isDead(-1) &&
+                                                    128 + this.battle.arenaHeight > this.owner.y) {
                                                     this.field_x = this.field_x + 1;
                                                     if (16 <= this.field_x) {
                                                       this.field_x = this.field_x - 16;
                                                     }
-                                                    this.field_v = this.field_t.field_lb;
-                                                    this.field_G = this.field_t.field_db;
-                                                    this.field_z = this.field_G << 4;
-                                                    this.field_o = this.field_v << 4;
-                                                    if (this.field_y >= 250) {
+                                                    this.x = this.owner.x;
+                                                    this.y = this.owner.y;
+                                                    this.subpixelY = this.y << 4;
+                                                    this.subpixelX = this.x << 4;
+                                                    if (this.ageTicks >= 250) {
                                                       return;
                                                     }
-                                                    if (0 < this.field_y) {
-                                                      this.field_y = this.field_y + 1;
+                                                    if (0 < this.ageTicks) {
+                                                      this.ageTicks = this.ageTicks + 1;
                                                     }
-                                                    MidiPcmStream.field_L.setDeque((byte) 107, this.field_q.field_Kb);
+                                                    MidiPcmStream.field_L.setDeque((byte) 107, this.battle.projectiles);
                                                     var9_ref_miLifetime2Lifetime1 = (SpellProjectile) (MidiPcmStream.field_L.first(-32));
                                                     while (var9_ref_miLifetime2Lifetime1 != null) {
                                                       if (var9_ref_miLifetime2Lifetime1.isAlive(-139) &&
-                                                        var9_ref_miLifetime2Lifetime1.field_I != 30 &&
-                                                        var9_ref_miLifetime2Lifetime1.field_I != 93 &&
-                                                        var9_ref_miLifetime2Lifetime1.field_I != 84 &&
-                                                        118 != var9_ref_miLifetime2Lifetime1.field_I &&
-                                                        var9_ref_miLifetime2Lifetime1.field_I != 119) {
-                                                        var10Lifetime1 = -this.field_v + var9_ref_miLifetime2Lifetime1.field_v;
-                                                        var11Lifetime1 = var9_ref_miLifetime2Lifetime1.field_G - this.field_G;
-                                                        if (-this.field_t.field_Y > var11Lifetime1 &&
+                                                        var9_ref_miLifetime2Lifetime1.spellType != 30 &&
+                                                        var9_ref_miLifetime2Lifetime1.spellType != 93 &&
+                                                        var9_ref_miLifetime2Lifetime1.spellType != 84 &&
+                                                        118 != var9_ref_miLifetime2Lifetime1.spellType &&
+                                                        var9_ref_miLifetime2Lifetime1.spellType != 119) {
+                                                        var10Lifetime1 = -this.x + var9_ref_miLifetime2Lifetime1.x;
+                                                        var11Lifetime1 = var9_ref_miLifetime2Lifetime1.y - this.y;
+                                                        if (-this.owner.size > var11Lifetime1 &&
                                                           Math.abs(var10Lifetime1) < Math.abs(var11Lifetime1) &&
-                                                          var9_ref_miLifetime2Lifetime1.field_F * var11Lifetime1 + var9_ref_miLifetime2Lifetime1.field_u * var10Lifetime1 < 0) {
+                                                          var9_ref_miLifetime2Lifetime1.velocityY * var11Lifetime1 + var9_ref_miLifetime2Lifetime1.velocityX * var10Lifetime1 < 0) {
                                                           var12Lifetime1 = var11Lifetime1 * var11Lifetime1 + var10Lifetime1 * var10Lifetime1;
                                                           if (var12Lifetime1 < 65536) {
-                                                            this.field_y = this.field_y + 1;
+                                                            this.ageTicks = this.ageTicks + 1;
                                                             if (var12Lifetime1 > 0) {
-                                                              var9_ref_miLifetime2Lifetime1.field_u = var9_ref_miLifetime2Lifetime1.field_u + var10Lifetime1 * (32 * Math.abs(var10Lifetime1)) / var12Lifetime1;
-                                                              var9_ref_miLifetime2Lifetime1.field_F = var9_ref_miLifetime2Lifetime1.field_F + Math.abs(var11Lifetime1) * (var11Lifetime1 * 32) / var12Lifetime1;
+                                                              var9_ref_miLifetime2Lifetime1.velocityX = var9_ref_miLifetime2Lifetime1.velocityX + var10Lifetime1 * (32 * Math.abs(var10Lifetime1)) / var12Lifetime1;
+                                                              var9_ref_miLifetime2Lifetime1.velocityY = var9_ref_miLifetime2Lifetime1.velocityY + Math.abs(var11Lifetime1) * (var11Lifetime1 * 32) / var12Lifetime1;
                                                               if (0 < var10Lifetime1) {
-                                                                var9_ref_miLifetime2Lifetime1.field_u = var9_ref_miLifetime2Lifetime1.field_u + 5;
+                                                                var9_ref_miLifetime2Lifetime1.velocityX = var9_ref_miLifetime2Lifetime1.velocityX + 5;
                                                                 if (var19 != 0) {
-                                                                  var9_ref_miLifetime2Lifetime1.field_u = var9_ref_miLifetime2Lifetime1.field_u - 5;
+                                                                  var9_ref_miLifetime2Lifetime1.velocityX = var9_ref_miLifetime2Lifetime1.velocityX - 5;
                                                                 }
                                                               } else {
-                                                                var9_ref_miLifetime2Lifetime1.field_u = var9_ref_miLifetime2Lifetime1.field_u - 5;
+                                                                var9_ref_miLifetime2Lifetime1.velocityX = var9_ref_miLifetime2Lifetime1.velocityX - 5;
                                                               }
                                                             }
-                                                            if (var9_ref_miLifetime2Lifetime1.field_I == 46) {
-                                                              var9_ref_miLifetime2Lifetime1.field_I = 95;
-                                                              var9_ref_miLifetime2Lifetime1.field_y = 0;
+                                                            if (var9_ref_miLifetime2Lifetime1.spellType == 46) {
+                                                              var9_ref_miLifetime2Lifetime1.spellType = 95;
+                                                              var9_ref_miLifetime2Lifetime1.ageTicks = 0;
                                                               var9_ref_miLifetime2Lifetime1.field_H = 0;
                                                             }
                                                           }
@@ -6156,82 +6156,82 @@ final class SpellProjectile extends DualLinkNode {
                                                     }
                                                     return;
                                                   }
-                                                  if (~this.field_q.getCurrentPlayer(false) != ~this.field_t.field_T) {
+                                                  if (~this.battle.getCurrentPlayer(false) != ~this.owner.unitId) {
                                                   }
                                                   this.remove(0);
                                                   return;
                                                 }
-                                                if (this.field_t.isDead(-1)) {
+                                                if (this.owner.isDead(-1)) {
                                                   this.remove(0);
                                                   return;
                                                 }
                                                 this.field_x = this.field_x + 1;
-                                                if (this.field_y == -1) {
-                                                  this.field_y = 0;
+                                                if (this.ageTicks == -1) {
+                                                  this.ageTicks = 0;
                                                 }
                                                 if (this.field_x >= 16) {
                                                   this.field_x = this.field_x - 16;
                                                 }
-                                                while (this.field_G < this.field_q.field_H &&
-                                                  !this.field_q.spriteOverlapsTerrain(-this.field_r + this.field_G, 2, -this.field_r + this.field_v, this.field_p)) {
-                                                  this.field_z = this.field_z + 16;
-                                                  this.field_G = this.field_z >> 4;
-                                                  if (0 != this.field_y) {
+                                                while (this.y < this.battle.arenaHeight &&
+                                                  !this.battle.spriteOverlapsTerrain(-this.spriteRadius + this.y, 2, -this.spriteRadius + this.x, this.sprite)) {
+                                                  this.subpixelY = this.subpixelY + 16;
+                                                  this.y = this.subpixelY >> 4;
+                                                  if (0 != this.ageTicks) {
                                                     continue;
                                                   }
-                                                  this.field_y = -1;
+                                                  this.ageTicks = -1;
                                                   if (var19 != 0) {
                                                     return;
                                                   }
                                                 }
-                                                if (this.field_q.field_H > this.field_G) {
-                                                  if (this.field_y >= 250) {
+                                                if (this.battle.arenaHeight > this.y) {
+                                                  if (this.ageTicks >= 250) {
                                                     return;
                                                   }
-                                                  if (this.field_y > 0) {
-                                                    this.field_y = this.field_y + 1;
+                                                  if (this.ageTicks > 0) {
+                                                    this.ageTicks = this.ageTicks + 1;
                                                   }
-                                                  if (this.field_q.spriteOverlapsTerrain(-this.field_r + this.field_G, 2, -this.field_r + this.field_v, this.field_p) &&
+                                                  if (this.battle.spriteOverlapsTerrain(-this.spriteRadius + this.y, 2, -this.spriteRadius + this.x, this.sprite) &&
                                                     BitHelpers.field_b) {
-                                                    var5 = this.spawnFromHere(this.field_v, this.field_t, (byte) 81, 85, this.field_G, this.field_q);
-                                                    this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                    var5 = this.spawnFromHere(this.x, this.owner, (byte) 81, 85, this.y, this.battle);
+                                                    this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                                     this.playTypeSound(1, (byte) 37, 0);
                                                     this.applyAreaEffect(50, 64, 32, 8);
-                                                    this.field_y = 250;
+                                                    this.ageTicks = 250;
                                                   }
-                                                  MidiPcmStream.field_L.setDeque((byte) 31, this.field_q.field_Kb);
+                                                  MidiPcmStream.field_L.setDeque((byte) 31, this.battle.projectiles);
                                                   var9_ref_miLifetime3 = (SpellProjectile) (MidiPcmStream.field_L.first(-78));
                                                   while (var9_ref_miLifetime3 != null) {
                                                     if (var19 != 0) {
                                                       return;
                                                     }
                                                     if (var9_ref_miLifetime3.isAlive(-139) &&
-                                                      30 != var9_ref_miLifetime3.field_I &&
-                                                      var9_ref_miLifetime3.field_I != 93 &&
-                                                      var9_ref_miLifetime3.field_I != 84 &&
-                                                      118 != var9_ref_miLifetime3.field_I &&
-                                                      var9_ref_miLifetime3.field_I != 119) {
-                                                      var10Lifetime1 = -this.field_v + var9_ref_miLifetime3.field_v;
-                                                      var11Lifetime1 = var9_ref_miLifetime3.field_G - this.field_G;
+                                                      30 != var9_ref_miLifetime3.spellType &&
+                                                      var9_ref_miLifetime3.spellType != 93 &&
+                                                      var9_ref_miLifetime3.spellType != 84 &&
+                                                      118 != var9_ref_miLifetime3.spellType &&
+                                                      var9_ref_miLifetime3.spellType != 119) {
+                                                      var10Lifetime1 = -this.x + var9_ref_miLifetime3.x;
+                                                      var11Lifetime1 = var9_ref_miLifetime3.y - this.y;
                                                       if (var11Lifetime1 < 0 &&
                                                         Math.abs(var10Lifetime1) < Math.abs(var11Lifetime1) &&
-                                                        var9_ref_miLifetime3.field_F * var11Lifetime1 + var9_ref_miLifetime3.field_u * var10Lifetime1 < 0) {
+                                                        var9_ref_miLifetime3.velocityY * var11Lifetime1 + var9_ref_miLifetime3.velocityX * var10Lifetime1 < 0) {
                                                         var12Lifetime1 = var11Lifetime1 * var11Lifetime1 + var10Lifetime1 * var10Lifetime1;
                                                         if (var12Lifetime1 < 65536) {
-                                                          this.field_y = this.field_y + 1;
+                                                          this.ageTicks = this.ageTicks + 1;
                                                           if (0 < var12Lifetime1) {
-                                                            var9_ref_miLifetime3.field_u = var9_ref_miLifetime3.field_u + 32 * var10Lifetime1 * Math.abs(var10Lifetime1) / var12Lifetime1;
-                                                            var9_ref_miLifetime3.field_F = var9_ref_miLifetime3.field_F + Math.abs(var11Lifetime1) * 32 * var11Lifetime1 / var12Lifetime1;
+                                                            var9_ref_miLifetime3.velocityX = var9_ref_miLifetime3.velocityX + 32 * var10Lifetime1 * Math.abs(var10Lifetime1) / var12Lifetime1;
+                                                            var9_ref_miLifetime3.velocityY = var9_ref_miLifetime3.velocityY + Math.abs(var11Lifetime1) * 32 * var11Lifetime1 / var12Lifetime1;
                                                             if (var10Lifetime1 <= 0) {
-                                                              var9_ref_miLifetime3.field_u = var9_ref_miLifetime3.field_u - 5;
+                                                              var9_ref_miLifetime3.velocityX = var9_ref_miLifetime3.velocityX - 5;
                                                             } else {
-                                                              var9_ref_miLifetime3.field_u = var9_ref_miLifetime3.field_u + 5;
+                                                              var9_ref_miLifetime3.velocityX = var9_ref_miLifetime3.velocityX + 5;
                                                             }
                                                           }
-                                                          if (var9_ref_miLifetime3.field_I == 46) {
-                                                            var9_ref_miLifetime3.field_I = 95;
+                                                          if (var9_ref_miLifetime3.spellType == 46) {
+                                                            var9_ref_miLifetime3.spellType = 95;
                                                             var9_ref_miLifetime3.field_H = 0;
-                                                            var9_ref_miLifetime3.field_y = 0;
+                                                            var9_ref_miLifetime3.ageTicks = 0;
                                                           }
                                                         }
                                                       }
@@ -6244,71 +6244,71 @@ final class SpellProjectile extends DualLinkNode {
                                                 return;
                                               }
                                             }
-                                            if (null == this.field_t) {
+                                            if (null == this.owner) {
                                               this.remove(0);
                                               return;
                                             }
                                             regionExit12: {
-                                              this.field_t.field_gb = this;
-                                              this.field_y = this.field_y + 1;
-                                              if (0 == this.field_y % 2) {
-                                                if (this.field_y % 16 == 0) {
+                                              this.owner.attachedProjectile = this;
+                                              this.ageTicks = this.ageTicks + 1;
+                                              if (0 == this.ageTicks % 2) {
+                                                if (this.ageTicks % 16 == 0) {
                                                   this.playTypeSound(2, (byte) 37, 1);
                                                 }
-                                                var9 = param3 - this.field_t.field_lb;
-                                                var10Lifetime1 = (this.field_t.field_Y >> 1) + (-this.field_t.field_db + param2);
+                                                var9 = targetX - this.owner.x;
+                                                var10Lifetime1 = (this.owner.size >> 1) + (-this.owner.y + targetY);
                                                 var11Lifetime1 = ConnectionState.greatestCommonDivisor(var10Lifetime1, var9, false);
                                                 if (0 < var11Lifetime1 &&
-                                                  this.field_t.field_x <= 0) {
-                                                  if (this.field_I != 79) {
-                                                    this.field_u = var9 * 96 / var11Lifetime1;
-                                                    this.field_F = 96 * var10Lifetime1 / var11Lifetime1;
+                                                  this.owner.pendingDamage <= 0) {
+                                                  if (this.spellType != 79) {
+                                                    this.velocityX = var9 * 96 / var11Lifetime1;
+                                                    this.velocityY = 96 * var10Lifetime1 / var11Lifetime1;
                                                     if (var19 != 0) {
-                                                      this.field_F = 48 * var10Lifetime1 / var11Lifetime1;
-                                                      this.field_u = var9 * 48 / var11Lifetime1;
+                                                      this.velocityY = 48 * var10Lifetime1 / var11Lifetime1;
+                                                      this.velocityX = var9 * 48 / var11Lifetime1;
                                                     }
                                                   } else {
-                                                    this.field_F = 48 * var10Lifetime1 / var11Lifetime1;
-                                                    this.field_u = var9 * 48 / var11Lifetime1;
+                                                    this.velocityY = 48 * var10Lifetime1 / var11Lifetime1;
+                                                    this.velocityX = var9 * 48 / var11Lifetime1;
                                                   }
-                                                  if (this.field_u > 0) {
-                                                    this.field_t.field_E = 1;
+                                                  if (this.velocityX > 0) {
+                                                    this.owner.facing = 1;
                                                     if (var19 != 0) {
-                                                      this.field_t.field_E = -1;
+                                                      this.owner.facing = -1;
                                                     }
                                                   } else {
-                                                    this.field_t.field_E = -1;
+                                                    this.owner.facing = -1;
                                                   }
-                                                  this.field_q.eraseUnitMask(this.field_t, 0);
-                                                  this.field_t.field_R = this.field_t.field_db << 4;
-                                                  this.field_t.field_X = this.field_t.field_lb << 4;
-                                                  this.field_z = this.field_F + this.field_t.field_R;
-                                                  this.field_o = this.field_t.field_X + this.field_u;
-                                                  this.field_G = this.field_z >> 4;
-                                                  this.field_v = this.field_o >> 4;
-                                                  this.field_t.field_db = this.field_G;
-                                                  this.field_t.field_lb = this.field_v;
-                                                  this.field_t.field_R = this.field_t.field_db << 4;
-                                                  this.field_o = this.field_o + this.field_u;
-                                                  this.field_t.field_X = this.field_t.field_lb << 4;
-                                                  this.field_z = this.field_z + (this.field_F - (this.field_t.field_Y << 3));
-                                                  if (this.field_I == 98) {
-                                                    this.field_q.field_t = -(this.field_t.field_Y >> 1) + (this.field_t.field_db + var10Lifetime1);
-                                                    this.field_q.field_mb = this.field_t.field_lb + var9;
+                                                  this.battle.eraseUnitMask(this.owner, 0);
+                                                  this.owner.subpixelY = this.owner.y << 4;
+                                                  this.owner.subpixelX = this.owner.x << 4;
+                                                  this.subpixelY = this.velocityY + this.owner.subpixelY;
+                                                  this.subpixelX = this.owner.subpixelX + this.velocityX;
+                                                  this.y = this.subpixelY >> 4;
+                                                  this.x = this.subpixelX >> 4;
+                                                  this.owner.y = this.y;
+                                                  this.owner.x = this.x;
+                                                  this.owner.subpixelY = this.owner.y << 4;
+                                                  this.subpixelX = this.subpixelX + this.velocityX;
+                                                  this.owner.subpixelX = this.owner.x << 4;
+                                                  this.subpixelY = this.subpixelY + (this.velocityY - (this.owner.size << 3));
+                                                  if (this.spellType == 98) {
+                                                    this.battle.field_t = -(this.owner.size >> 1) + (this.owner.y + var10Lifetime1);
+                                                    this.battle.field_mb = this.owner.x + var9;
                                                   }
-                                                  this.field_G = this.field_z >> 4;
-                                                  this.field_v = this.field_o >> 4;
-                                                  var5 = this.spawnFromHere(this.field_v + (int)(-8.0 + 16.0 * Math.random()), (BattleUnit) null, (byte) 81, 90, this.field_G + (int)(Math.random() * 16.0 - 8.0), this.field_q);
-                                                  this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
-                                                  if (this.field_I == 79) {
-                                                    this.field_G = this.field_G - 2;
+                                                  this.y = this.subpixelY >> 4;
+                                                  this.x = this.subpixelX >> 4;
+                                                  var5 = this.spawnFromHere(this.x + (int)(-8.0 + 16.0 * Math.random()), (BattleUnit) null, (byte) 81, 90, this.y + (int)(Math.random() * 16.0 - 8.0), this.battle);
+                                                  this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                  if (this.spellType == 79) {
+                                                    this.y = this.y - 2;
                                                     this.applyAreaEffect(1, 32, 28, 8);
-                                                    this.field_G = this.field_G + 2;
+                                                    this.y = this.y + 2;
                                                     if (var19 == 0) {
                                                       break regionExit12;
                                                     }
                                                   }
-                                                  if ((this.field_I == 98)) {
+                                                  if ((this.spellType == 98)) {
                                                     this.applyAreaEffect(10, 5, 36, 8);
                                                   }
                                                   break regionExit12;
@@ -6317,23 +6317,23 @@ final class SpellProjectile extends DualLinkNode {
                                                 return;
                                               }
                                             }
-                                            if (this.field_y <= 150) {
-                                              if (this.field_y <= 50) {
+                                            if (this.ageTicks <= 150) {
+                                              if (this.ageTicks <= 50) {
                                                 return;
                                               }
-                                              if (this.field_I != 98) {
+                                              if (this.spellType != 98) {
                                                 return;
                                               }
                                             }
-                                            if (this.field_I == 98) {
-                                              this.field_t.field_eb = -64;
-                                              this.field_t.field_kb = 16 * this.field_t.field_E;
+                                            if (this.spellType == 98) {
+                                              this.owner.velocityY = -64;
+                                              this.owner.velocityX = 16 * this.owner.facing;
                                             }
                                             this.remove(0);
                                             return;
                                           }
                                           var9 = 1;
-                                          if (this.field_I == 30) {
+                                          if (this.spellType == 30) {
                                             var9 = 2;
                                           }
                                           var10Lifetime1 = 0;
@@ -6341,87 +6341,87 @@ final class SpellProjectile extends DualLinkNode {
                                             if (var19 != 0) {
                                               return;
                                             }
-                                            if (this.field_I == 93 &&
-                                              this.field_y < 20) {
-                                              this.field_y = this.field_y + 1;
+                                            if (this.spellType == 93 &&
+                                              this.ageTicks < 20) {
+                                              this.ageTicks = this.ageTicks + 1;
                                               return;
                                             }
-                                            if (this.field_y == 0) {
+                                            if (this.ageTicks == 0) {
                                               this.applyAreaEffect(0, 0, 16, 8);
                                             }
                                             boolean decompiledFrameRemainder0 = true;
-                                            if (20 == this.field_y ||
-                                              this.field_y == 0 &&
-                                              this.field_I == 30) {
-                                              if (this.field_t != null) {
-                                                this.field_q.eraseUnitMask(this.field_t, 0);
+                                            if (20 == this.ageTicks ||
+                                              this.ageTicks == 0 &&
+                                              this.spellType == 30) {
+                                              if (this.owner != null) {
+                                                this.battle.eraseUnitMask(this.owner, 0);
                                               }
-                                              if (this.field_I == 30) {
-                                                this.field_y = 1;
+                                              if (this.spellType == 30) {
+                                                this.ageTicks = 1;
                                               } else {
-                                                this.field_y = 21;
+                                                this.ageTicks = 21;
                                               }
-                                              var11Lifetime1 = this.field_o;
-                                              var12Lifetime1 = this.field_z;
+                                              var11Lifetime1 = this.subpixelX;
+                                              var12Lifetime1 = this.subpixelY;
                                               var13Lifetime1 = 0;
                                               while (var13Lifetime1 == 0) {
-                                                if (this.field_q.isSolidAt(this.field_G, this.field_v + 2, (byte) -83) ||
-                                                  this.field_q.isSolidAt(this.field_G, -2 + this.field_v, (byte) -83) ||
-                                                  this.field_q.isSolidAt(this.field_G - 2, this.field_v, (byte) -83) ||
-                                                  this.field_q.isSolidAt(2 + this.field_G, this.field_v, (byte) -83)) {
-                                                  if (this.field_I == 30) {
+                                                if (this.battle.isSolidAt(this.y, this.x + 2, (byte) -83) ||
+                                                  this.battle.isSolidAt(this.y, -2 + this.x, (byte) -83) ||
+                                                  this.battle.isSolidAt(this.y - 2, this.x, (byte) -83) ||
+                                                  this.battle.isSolidAt(2 + this.y, this.x, (byte) -83)) {
+                                                  if (this.spellType == 30) {
                                                     this.playTypeSound(2, (byte) 37, 2);
                                                     this.applyAreaEffect(5, 64, 8, 8);
-                                                    var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 100, this.field_G, this.field_q);
-                                                    this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                    var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 100, this.y, this.battle);
+                                                    this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                                   }
                                                   var13Lifetime1 = 1;
-                                                  if (93 == this.field_I) {
+                                                  if (93 == this.spellType) {
                                                     this.playTypeSound(0, (byte) 37, 2);
                                                     this.applyAreaEffect(75, 256, 32, 8);
-                                                    var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 99, this.field_G, this.field_q);
-                                                    this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                    var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 99, this.y, this.battle);
+                                                    this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                                   }
                                                 }
-                                                this.field_o = this.field_o + (this.field_u >> 1);
-                                                this.field_z = this.field_z + (this.field_F >> 1);
-                                                this.field_v = this.field_o >> 4;
-                                                this.field_G = this.field_z >> 4;
-                                                if (this.field_v < -640) {
+                                                this.subpixelX = this.subpixelX + (this.velocityX >> 1);
+                                                this.subpixelY = this.subpixelY + (this.velocityY >> 1);
+                                                this.x = this.subpixelX >> 4;
+                                                this.y = this.subpixelY >> 4;
+                                                if (this.x < -640) {
                                                   var13Lifetime1 = 1;
                                                 }
-                                                if (this.field_v > this.field_q.field_y + 640) {
+                                                if (this.x > this.battle.arenaWidth + 640) {
                                                   var13Lifetime1 = 1;
                                                 }
-                                                if (this.field_G > this.field_q.field_H) {
+                                                if (this.y > this.battle.arenaHeight) {
                                                   var13Lifetime1 = 1;
                                                 }
-                                                if (this.field_G >= -480) {
+                                                if (this.y >= -480) {
                                                   continue;
                                                 }
                                                 var13Lifetime1 = 1;
                                               }
-                                              if (this.field_I == 30 &&
-                                                null == this.field_t) {
-                                                var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 31, this.field_G, this.field_q);
-                                                ((SpellProjectile) (var5)).field_y = 950;
-                                                ((SpellProjectile) (var5)).field_u = 0;
+                                              if (this.spellType == 30 &&
+                                                null == this.owner) {
+                                                var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 31, this.y, this.battle);
+                                                ((SpellProjectile) (var5)).ageTicks = 950;
+                                                ((SpellProjectile) (var5)).velocityX = 0;
                                                 ((SpellProjectile) (var5)).field_w = this.field_w;
-                                                ((SpellProjectile) (var5)).field_F = 0;
-                                                this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                                ((SpellProjectile) (var5)).velocityY = 0;
+                                                this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                               }
-                                              if (null != this.field_t) {
-                                                this.field_q.stampUnitMask(-87, this.field_t);
+                                              if (null != this.owner) {
+                                                this.battle.stampUnitMask(-87, this.owner);
                                               }
-                                              this.field_F = this.field_z - var12Lifetime1;
-                                              this.field_u = this.field_o - var11Lifetime1;
+                                              this.velocityY = this.subpixelY - var12Lifetime1;
+                                              this.velocityX = this.subpixelX - var11Lifetime1;
                                               decompiledFrameRemainder0 = false;
                                             }
                                             else {
-                                              this.field_y = this.field_y + 1;
-                                              if ((this.field_y <= 30) &&
-                                                (decompiledFrameRemainder0 = !(this.field_y <= 10))) {
-                                                decompiledFrameRemainder0 = (this.field_I == 30);
+                                              this.ageTicks = this.ageTicks + 1;
+                                              if ((this.ageTicks <= 30) &&
+                                                (decompiledFrameRemainder0 = !(this.ageTicks <= 10))) {
+                                                decompiledFrameRemainder0 = (this.spellType == 30);
                                               }
                                               if (decompiledFrameRemainder0) {
                                                 this.remove(0);
@@ -6433,90 +6433,90 @@ final class SpellProjectile extends DualLinkNode {
                                           return;
                                         }
                                         this.updateFlightSound(5, (byte) 34);
-                                        if (this.field_I == 61) {
-                                          var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 109, this.field_G, this.field_q);
-                                          this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
-                                          if (this.field_t != null &&
-                                            this.field_y < 25) {
-                                            this.field_q.eraseUnitMask(this.field_t, 0);
+                                        if (this.spellType == 61) {
+                                          var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 109, this.y, this.battle);
+                                          this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
+                                          if (this.owner != null &&
+                                            this.ageTicks < 25) {
+                                            this.battle.eraseUnitMask(this.owner, 0);
                                           }
                                         }
-                                        if (63 == this.field_I) {
+                                        if (63 == this.spellType) {
                                           this.field_x = this.field_x + 12;
-                                          var5 = this.spawnFromHere(this.field_v + (int)(Math.sin((double)this.field_x * 3.14 / 128.0) * 24.0), (BattleUnit) null, (byte) 81, 109, this.field_G + (int)(Math.cos(3.14 * (double)this.field_x / 128.0) * 32.0), this.field_q);
-                                          this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                          var5 = this.spawnFromHere(this.x + (int)(Math.sin((double)this.field_x * 3.14 / 128.0) * 24.0), (BattleUnit) null, (byte) 81, 109, this.y + (int)(Math.cos(3.14 * (double)this.field_x / 128.0) * 32.0), this.battle);
+                                          this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                         }
-                                        if (this.field_I == 64) {
+                                        if (this.spellType == 64) {
                                           this.field_x = this.field_x + 12;
-                                          var5 = this.spawnFromHere(this.field_v + (int)(48.0 * Math.sin((double)this.field_x * 3.14 / 128.0)), (BattleUnit) null, (byte) 81, 109, this.field_G + (int)(Math.cos((double)this.field_x * 3.14 / 128.0) * 64.0), this.field_q);
-                                          this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                          var5 = this.spawnFromHere(this.x + (int)(48.0 * Math.sin((double)this.field_x * 3.14 / 128.0)), (BattleUnit) null, (byte) 81, 109, this.y + (int)(Math.cos((double)this.field_x * 3.14 / 128.0) * 64.0), this.battle);
+                                          this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                         }
-                                        if (this.field_I == 66) {
+                                        if (this.spellType == 66) {
                                           this.field_x = this.field_x + 12;
-                                          var5 = this.spawnFromHere(this.field_v + (int)(Math.sin((double)this.field_x * 3.14 / 128.0) * 24.0), (BattleUnit) null, (byte) 81, 109, this.field_G + (int)(Math.cos(3.14 * (double)this.field_x / 128.0) * 64.0), this.field_q);
-                                          this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
-                                          var5 = this.spawnFromHere(this.field_v - (int)(Math.sin((double)this.field_x * 3.14 / 128.0) * 64.0), (BattleUnit) null, (byte) 81, 109, this.field_G - (int)(Math.cos(3.14 * (double)this.field_x / 128.0) * 24.0), this.field_q);
-                                          this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
-                                          if (null != this.field_t &&
-                                            this.field_y < 25) {
-                                            this.field_q.eraseUnitMask(this.field_t, 0);
+                                          var5 = this.spawnFromHere(this.x + (int)(Math.sin((double)this.field_x * 3.14 / 128.0) * 24.0), (BattleUnit) null, (byte) 81, 109, this.y + (int)(Math.cos(3.14 * (double)this.field_x / 128.0) * 64.0), this.battle);
+                                          this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
+                                          var5 = this.spawnFromHere(this.x - (int)(Math.sin((double)this.field_x * 3.14 / 128.0) * 64.0), (BattleUnit) null, (byte) 81, 109, this.y - (int)(Math.cos(3.14 * (double)this.field_x / 128.0) * 24.0), this.battle);
+                                          this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
+                                          if (null != this.owner &&
+                                            this.ageTicks < 25) {
+                                            this.battle.eraseUnitMask(this.owner, 0);
                                           }
                                         }
-                                        this.field_o = this.field_o + this.field_u;
-                                        this.field_z = this.field_z + this.field_F;
-                                        this.field_G = this.field_z >> 4;
-                                        this.field_v = this.field_o >> 4;
-                                        this.field_F = this.field_F + 2;
-                                        if (!this.field_q.spriteOverlapsTerrain(this.field_G - this.field_r, 2, -this.field_r + this.field_v, this.field_p)) {
-                                          if (this.field_v < -640) {
+                                        this.subpixelX = this.subpixelX + this.velocityX;
+                                        this.subpixelY = this.subpixelY + this.velocityY;
+                                        this.y = this.subpixelY >> 4;
+                                        this.x = this.subpixelX >> 4;
+                                        this.velocityY = this.velocityY + 2;
+                                        if (!this.battle.spriteOverlapsTerrain(this.y - this.spriteRadius, 2, -this.spriteRadius + this.x, this.sprite)) {
+                                          if (this.x < -640) {
                                             this.remove(0);
                                             return;
                                           }
-                                          if (this.field_v > this.field_q.field_y + 640) {
+                                          if (this.x > this.battle.arenaWidth + 640) {
                                             this.remove(0);
                                             return;
                                           }
-                                          if (this.field_G > this.field_q.field_H) {
+                                          if (this.y > this.battle.arenaHeight) {
                                             this.remove(0);
                                             return;
                                           }
-                                          if (61 != this.field_I &&
-                                            this.field_I != 66) {
+                                          if (61 != this.spellType &&
+                                            this.spellType != 66) {
                                             return;
                                           }
-                                          if (this.field_t == null) {
+                                          if (this.owner == null) {
                                             return;
                                           }
-                                          if (this.field_y >= 25) {
+                                          if (this.ageTicks >= 25) {
                                             return;
                                           }
-                                          this.field_q.stampUnitMask(-63, this.field_t);
+                                          this.battle.stampUnitMask(-63, this.owner);
                                           return;
                                         }
                                         var9 = -1;
-                                        if (61 == this.field_I) {
+                                        if (61 == this.spellType) {
                                           this.applyAreaEffect(45, 64, 80, 8);
                                           var9 = 108;
                                           this.playTypeSound(2, (byte) 37, 5);
                                         }
-                                        if (63 == this.field_I) {
+                                        if (63 == this.spellType) {
                                           var9 = 108;
                                           this.applyAreaEffect(25, 192, 80, 8);
                                           this.playTypeSound(1, (byte) 37, 5);
                                         }
-                                        if (this.field_I == 64) {
+                                        if (this.spellType == 64) {
                                           this.applyAreaEffect(50, 192, 192, 8);
                                           var9 = 108;
                                           this.playTypeSound(0, (byte) 37, 5);
                                         }
-                                        if (this.field_I == 66) {
+                                        if (this.spellType == 66) {
                                           this.applyAreaEffect(25, 32, 64, 8);
                                           var9 = 108;
                                           this.playTypeSound(2, (byte) 37, 5);
                                         }
                                         if (var9 != -1) {
-                                          var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, var9, this.field_G, this.field_q);
-                                          this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                                          var5 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, var9, this.y, this.battle);
+                                          this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                                         }
                                         this.remove(0);
                                         return;
@@ -6529,15 +6529,15 @@ final class SpellProjectile extends DualLinkNode {
                           }
                         }
                         if (this.field_x == 1) {
-                          this.field_F = this.field_F + 4;
+                          this.velocityY = this.velocityY + 4;
                         }
-                        this.field_o = this.field_o + this.field_u;
-                        this.field_z = this.field_z + this.field_F;
-                        this.field_v = this.field_o >> 4;
-                        this.field_G = this.field_z >> 4;
-                        this.field_y = this.field_y + 1;
-                        if (4 < this.field_y) {
-                          this.field_y = this.field_y - 4;
+                        this.subpixelX = this.subpixelX + this.velocityX;
+                        this.subpixelY = this.subpixelY + this.velocityY;
+                        this.x = this.subpixelX >> 4;
+                        this.y = this.subpixelY >> 4;
+                        this.ageTicks = this.ageTicks + 1;
+                        if (4 < this.ageTicks) {
+                          this.ageTicks = this.ageTicks - 4;
                           this.field_H = this.field_H + 1;
                         }
                         if (this.field_H < 8) {
@@ -6546,8 +6546,8 @@ final class SpellProjectile extends DualLinkNode {
                         this.remove(0);
                         return;
                       }
-                      this.field_y = this.field_y + 1;
-                      if (this.field_y <= 32) {
+                      this.ageTicks = this.ageTicks + 1;
+                      if (this.ageTicks <= 32) {
                         return;
                       }
                       this.remove(0);
@@ -6555,38 +6555,38 @@ final class SpellProjectile extends DualLinkNode {
                     }
                   }
                   this.field_x = this.field_x + 1;
-                  if (this.field_y == 0) {
-                    fieldTemp$0 = this.field_u;
-                    this.field_u = this.field_u + 1;
+                  if (this.ageTicks == 0) {
+                    fieldTemp$0 = this.velocityX;
+                    this.velocityX = this.velocityX + 1;
                     if (20 < fieldTemp$0) {
-                      this.field_y = 1;
+                      this.ageTicks = 1;
                     }
                   }
-                  if (1 == this.field_y) {
-                    fieldTemp$1 = this.field_u;
-                    this.field_u = this.field_u - 1;
+                  if (1 == this.ageTicks) {
+                    fieldTemp$1 = this.velocityX;
+                    this.velocityX = this.velocityX - 1;
                     if (fieldTemp$1 < -20) {
-                      this.field_y = 0;
+                      this.ageTicks = 0;
                     }
                   }
-                  if (this.field_t != null) {
+                  if (this.owner != null) {
                     var9 = 0;
                     while (true) {
                       if (var9 < 10) {
-                        stackIn_748_0 = this.field_t.field_X;
-                        stackIn_748_1 = this.field_o;
+                        stackIn_748_0 = this.owner.subpixelX;
+                        stackIn_748_1 = this.subpixelX;
                         if (var19 == 0) {
                           if (stackIn_748_0 < stackIn_748_1) {
-                            this.field_o = this.field_o - 1;
+                            this.subpixelX = this.subpixelX - 1;
                           }
-                          if (this.field_t.field_X > this.field_o) {
-                            this.field_o = this.field_o + 1;
+                          if (this.owner.subpixelX > this.subpixelX) {
+                            this.subpixelX = this.subpixelX + 1;
                           }
-                          if (this.field_z > this.field_t.field_R - 500) {
-                            this.field_z = this.field_z - 1;
+                          if (this.subpixelY > this.owner.subpixelY - 500) {
+                            this.subpixelY = this.subpixelY - 1;
                           }
-                          if (this.field_z < (-500 + this.field_t.field_R)) {
-                            this.field_z = this.field_z + 1;
+                          if (this.subpixelY < (-500 + this.owner.subpixelY)) {
+                            this.subpixelY = this.subpixelY + 1;
                           }
                           var9++;
                           continue;
@@ -6598,55 +6598,55 @@ final class SpellProjectile extends DualLinkNode {
                       break;
                     }
                     if (stackIn_748_0 == stackIn_748_1) {
-                      this.field_F = this.field_F - 1;
+                      this.velocityY = this.velocityY - 1;
                     }
                     if (this.field_x > 2500) {
-                      this.field_F = this.field_F - 1;
+                      this.velocityY = this.velocityY - 1;
                       if (var19 != 0) {
-                        this.field_F = this.field_F - 1;
+                        this.velocityY = this.velocityY - 1;
                       }
                     }
                   } else {
-                    this.field_F = this.field_F - 1;
+                    this.velocityY = this.velocityY - 1;
                   }
-                  this.field_o = this.field_o + this.field_u;
-                  this.field_z = this.field_z + this.field_F;
-                  this.field_G = this.field_z >> 4;
-                  this.field_v = this.field_o >> 4;
+                  this.subpixelX = this.subpixelX + this.velocityX;
+                  this.subpixelY = this.subpixelY + this.velocityY;
+                  this.y = this.subpixelY >> 4;
+                  this.x = this.subpixelX >> 4;
                   if (this.field_x <= 3000) {
                     return;
                   }
                   this.remove(0);
                   return;
                 }
-                if (null != this.field_t &&
-                  0 == this.field_y &&
-                  this.field_I == 157) {
-                  this.field_z = -(this.field_t.field_Y << 3) + this.field_t.field_R;
-                  this.field_o = this.field_t.field_X;
-                  this.field_y = 1;
-                  this.field_v = this.field_o >> 4;
-                  this.field_G = this.field_z >> 4;
+                if (null != this.owner &&
+                  0 == this.ageTicks &&
+                  this.spellType == 157) {
+                  this.subpixelY = -(this.owner.size << 3) + this.owner.subpixelY;
+                  this.subpixelX = this.owner.subpixelX;
+                  this.ageTicks = 1;
+                  this.x = this.subpixelX >> 4;
+                  this.y = this.subpixelY >> 4;
                 }
                 var9 = 2048;
-                if ((null == this.field_t ||
-                  !this.field_t.isDead(-1)) && this.field_y != -1) {
+                if ((null == this.owner ||
+                  !this.owner.isDead(-1)) && this.ageTicks != -1) {
                   boolean decompiledFrameCompleted0 = true;
-                  if (null != this.field_t &&
-                    this.field_I == 157) {
-                    var10Lifetime1Lifetime1 = this.field_o;
-                    var11Lifetime1Lifetime1 = this.field_z;
-                    this.field_o = this.field_t.field_X;
-                    this.field_v = this.field_o >> 4;
-                    this.field_z = this.field_t.field_R - (this.field_t.field_Y << 3);
-                    this.field_G = this.field_z >> 4;
-                    if (~var10Lifetime1Lifetime1 != ~this.field_o ||
-                      ~this.field_z != ~var11Lifetime1Lifetime1) {
-                      MidiPcmStream.field_L.setDeque((byte) 38, this.field_q.field_r);
+                  if (null != this.owner &&
+                    this.spellType == 157) {
+                    var10Lifetime1Lifetime1 = this.subpixelX;
+                    var11Lifetime1Lifetime1 = this.subpixelY;
+                    this.subpixelX = this.owner.subpixelX;
+                    this.x = this.subpixelX >> 4;
+                    this.subpixelY = this.owner.subpixelY - (this.owner.size << 3);
+                    this.y = this.subpixelY >> 4;
+                    if (~var10Lifetime1Lifetime1 != ~this.subpixelX ||
+                      ~this.subpixelY != ~var11Lifetime1Lifetime1) {
+                      MidiPcmStream.field_L.setDeque((byte) 38, this.battle.field_r);
                       var12_ref_mi = (SpellProjectile) (MidiPcmStream.field_L.first(-62));
                       while (var12_ref_mi != null) {
-                        var13Lifetime1Lifetime1 = var12_ref_mi.field_o - var10Lifetime1Lifetime1;
-                        var14Lifetime1Lifetime1 = var12_ref_mi.field_z - var11Lifetime1Lifetime1;
+                        var13Lifetime1Lifetime1 = var12_ref_mi.subpixelX - var10Lifetime1Lifetime1;
+                        var14Lifetime1Lifetime1 = var12_ref_mi.subpixelY - var11Lifetime1Lifetime1;
                         stackIn_594_0 = (var14Lifetime1Lifetime1 >> 4) * var14Lifetime1Lifetime1 + var13Lifetime1Lifetime1 * (var13Lifetime1Lifetime1 >> 4);
                         stackIn_594_1 = var9 * (var9 >> 4);
                         if (var19 != 0) {
@@ -6654,10 +6654,10 @@ final class SpellProjectile extends DualLinkNode {
                           break;
                         }
                         if (stackIn_594_0 < stackIn_594_1) {
-                          var12_ref_mi.field_z = this.field_z + var14Lifetime1Lifetime1;
-                          var12_ref_mi.field_o = this.field_o + var13Lifetime1Lifetime1;
-                          var12_ref_mi.field_v = var12_ref_mi.field_o >> 4;
-                          var12_ref_mi.field_G = var12_ref_mi.field_z >> 4;
+                          var12_ref_mi.subpixelY = this.subpixelY + var14Lifetime1Lifetime1;
+                          var12_ref_mi.subpixelX = this.subpixelX + var13Lifetime1Lifetime1;
+                          var12_ref_mi.x = var12_ref_mi.subpixelX >> 4;
+                          var12_ref_mi.y = var12_ref_mi.subpixelY >> 4;
                         }
                         var12_ref_mi = (SpellProjectile) (MidiPcmStream.field_L.next(-18502));
                       }
@@ -6671,14 +6671,14 @@ final class SpellProjectile extends DualLinkNode {
                   if (stackIn_594_0 >= stackIn_594_1) {
                     this.field_x = this.field_x - 256;
                   }
-                  MidiPcmStream.field_L.setDeque((byte) 75, this.field_q.field_Kb);
+                  MidiPcmStream.field_L.setDeque((byte) 75, this.battle.projectiles);
                   var10_ref_mi = (SpellProjectile) (MidiPcmStream.field_L.first(-52));
                   while (null != var10_ref_mi) {
                     if (var10_ref_mi.shouldCameraFollow(-8209)) {
-                      var11Lifetime1Lifetime1 = this.field_o - var10_ref_mi.field_o;
-                      var12Lifetime1Lifetime1 = this.field_z - var10_ref_mi.field_z;
+                      var11Lifetime1Lifetime1 = this.subpixelX - var10_ref_mi.subpixelX;
+                      var12Lifetime1Lifetime1 = this.subpixelY - var10_ref_mi.subpixelY;
                       if (var9 * (var9 >> 4) > (var12Lifetime1Lifetime1 >> 4) * var12Lifetime1Lifetime1 + (var11Lifetime1Lifetime1 >> 4) * var11Lifetime1Lifetime1) {
-                        this.field_q.field_h.addLast(var10_ref_mi, 15893);
+                        this.battle.field_h.addLast(var10_ref_mi, 15893);
                       }
                     }
                     var10_ref_mi = (SpellProjectile) (MidiPcmStream.field_L.next(-18502));
@@ -6692,75 +6692,75 @@ final class SpellProjectile extends DualLinkNode {
                   }
                   break regionExit2;
                 }
-                var10_ref_oc = new IntrusiveDequeCursor(this.field_q.field_r);
+                var10_ref_oc = new IntrusiveDequeCursor(this.battle.field_r);
                 var11_ref_miLifetime1 = (SpellProjectile) (var10_ref_oc.first(-123));
                 while (var11_ref_miLifetime1 != null) {
-                  var12Lifetime1Lifetime2 = -var11_ref_miLifetime1.field_o + this.field_o;
-                  var13Lifetime1Lifetime2 = -var11_ref_miLifetime1.field_z + this.field_z;
+                  var12Lifetime1Lifetime2 = -var11_ref_miLifetime1.subpixelX + this.subpixelX;
+                  var13Lifetime1Lifetime2 = -var11_ref_miLifetime1.subpixelY + this.subpixelY;
                   if (var19 != 0) {
                     return;
                   }
                   if (((var9 >> 4) * var9) > (var13Lifetime1Lifetime2 * (var13Lifetime1Lifetime2 >> 4) + (var12Lifetime1Lifetime2 >> 4) * var12Lifetime1Lifetime2)) {
-                    this.field_q.field_kb.addLast(var11_ref_miLifetime1, -1);
+                    this.battle.spawnedProjectiles.addLast(var11_ref_miLifetime1, -1);
                   }
                   var11_ref_miLifetime1 = (SpellProjectile) (var10_ref_oc.next(-18502));
                 }
                 this.remove(0);
                 return;
               }
-              if (this.field_t != null &&
-                !this.field_t.isDead(-1) && (this.field_I != 111 ||
-                this.field_t.field_jb == 23 ||
-                this.field_t.field_jb == 16)) {
+              if (this.owner != null &&
+                !this.owner.isDead(-1) && (this.spellType != 111 ||
+                this.owner.unitType == 23 ||
+                this.owner.unitType == 16)) {
                 this.field_x = this.field_x + 1;
-                if (this.field_t.field_s != null ||
-                  111 == this.field_I) {
-                  this.field_v = this.field_t.field_lb;
-                  this.field_G = this.field_t.field_db - (this.field_t.field_Y >> 1);
+                if (this.owner.linkedUnit != null ||
+                  111 == this.spellType) {
+                  this.x = this.owner.x;
+                  this.y = this.owner.y - (this.owner.size >> 1);
                 }
                 if (this.field_x >= 32) {
                   this.field_x = this.field_x - 32;
                 }
                 var9 = 128;
-                if (null != this.field_t &&
-                  this.field_t.field_jb == 6) {
+                if (null != this.owner &&
+                  this.owner.unitType == 6) {
                   var9 = 64;
                 }
-                if (this.field_y >= 1) {
+                if (this.ageTicks >= 1) {
                   return;
                 }
-                MidiPcmStream.field_L.setDeque((byte) 27, this.field_q.field_i);
+                MidiPcmStream.field_L.setDeque((byte) 27, this.battle.units);
                 var10_ref_mlLifetime1 = (BattleUnit) (MidiPcmStream.field_L.first(-99));
                 while (null != var10_ref_mlLifetime1) {
                   if (var19 != 0) {
                     return;
                   }
-                  if (this.field_t != var10_ref_mlLifetime1 ||
-                    var10_ref_mlLifetime1.field_jb != 6 &&
-                    (16 != var10_ref_mlLifetime1.field_jb &&
-                    23 != var10_ref_mlLifetime1.field_jb ||
-                    this.field_I == 55)) {
-                    var11Lifetime2 = this.field_v - var10_ref_mlLifetime1.field_lb;
-                    var12Lifetime2 = this.field_G + (-var10_ref_mlLifetime1.field_db + var10_ref_mlLifetime1.field_Y / 2);
-                    if ((var10_ref_mlLifetime1.field_Y / 2 + var9) * (var9 + var10_ref_mlLifetime1.field_Y / 2) > var12Lifetime2 * var12Lifetime2 + var11Lifetime2 * var11Lifetime2 &&
-                      35 != var10_ref_mlLifetime1.field_jb &&
-                      var10_ref_mlLifetime1.field_ib > 0) {
-                      var13Lifetime2 = this.field_v;
-                      var14Lifetime2 = this.field_G;
-                      this.field_v = var10_ref_mlLifetime1.field_lb;
-                      this.field_G = var10_ref_mlLifetime1.field_db;
-                      var5 = this.spawnFromHere(this.field_v, this.field_t, (byte) 81, 104, this.field_G - var10_ref_mlLifetime1.field_Y / 2, this.field_q);
-                      this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
+                  if (this.owner != var10_ref_mlLifetime1 ||
+                    var10_ref_mlLifetime1.unitType != 6 &&
+                    (16 != var10_ref_mlLifetime1.unitType &&
+                    23 != var10_ref_mlLifetime1.unitType ||
+                    this.spellType == 55)) {
+                    var11Lifetime2 = this.x - var10_ref_mlLifetime1.x;
+                    var12Lifetime2 = this.y + (-var10_ref_mlLifetime1.y + var10_ref_mlLifetime1.size / 2);
+                    if ((var10_ref_mlLifetime1.size / 2 + var9) * (var9 + var10_ref_mlLifetime1.size / 2) > var12Lifetime2 * var12Lifetime2 + var11Lifetime2 * var11Lifetime2 &&
+                      35 != var10_ref_mlLifetime1.unitType &&
+                      var10_ref_mlLifetime1.health > 0) {
+                      var13Lifetime2 = this.x;
+                      var14Lifetime2 = this.y;
+                      this.x = var10_ref_mlLifetime1.x;
+                      this.y = var10_ref_mlLifetime1.y;
+                      var5 = this.spawnFromHere(this.x, this.owner, (byte) 81, 104, this.y - var10_ref_mlLifetime1.size / 2, this.battle);
+                      this.battle.onProjectileFinished(52, (SpellProjectile) (var5));
                       if (var11Lifetime2 < 0) {
-                        this.field_v = this.field_v + 8;
+                        this.x = this.x + 8;
                       } else {
-                        this.field_v = this.field_v - 8;
+                        this.x = this.x - 8;
                       }
-                      this.field_G = this.field_G + 8;
+                      this.y = this.y + 8;
                       this.applyAreaEffect(15, 32, 16, 8);
-                      this.field_y = this.field_y + 1;
-                      this.field_v = var13Lifetime2;
-                      this.field_G = var14Lifetime2;
+                      this.ageTicks = this.ageTicks + 1;
+                      this.x = var13Lifetime2;
+                      this.y = var14Lifetime2;
                     }
                   }
                   var10_ref_mlLifetime1 = (BattleUnit) (MidiPcmStream.field_L.next(-18502));
@@ -6771,11 +6771,11 @@ final class SpellProjectile extends DualLinkNode {
               return;
             }
           }
-          if (!this.field_t.isDead(-1)) {
-            this.field_v = this.field_t.field_lb;
-            this.field_G = this.field_t.field_db;
-            this.field_z = this.field_G << 4;
-            this.field_o = this.field_v << 4;
+          if (!this.owner.isDead(-1)) {
+            this.x = this.owner.x;
+            this.y = this.owner.y;
+            this.subpixelY = this.y << 4;
+            this.subpixelX = this.x << 4;
             if (var19 == 0) {
               return;
             }
@@ -6785,204 +6785,204 @@ final class SpellProjectile extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw CommonUiHelpers.wrapException((Throwable) (var5), "mi.NA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) (var5), "mi.NA(" + round + ',' + obfuscationGuard + ',' + targetY + ',' + targetX + ')');
         }
     }
 
-    final int getY(int param0) {
+    final int getY(int obfuscationGuard) {
         int stackIn_1_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
         try {
-          var2_int = -128 % ((-14 - param0) / 54);
-          stackIn_1_0 = this.field_G;
+          var2_int = -128 % ((-14 - obfuscationGuard) / 54);
+          stackIn_1_0 = this.y;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "mi.IA(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "mi.IA(" + obfuscationGuard + ')');
         }
     }
 
-    private final void initializeSprite(int param0) {
+    private final void initializeSprite(int obfuscationGuard) {
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
         try {
-          var2_int = 69 / ((param0 + 50) / 32);
+          var2_int = 69 / ((obfuscationGuard + 50) / 32);
           if (DateHelpers.field_a == null) {
             DateHelpers.field_a = new Sprite(15, 15);
             DateHelpers.field_a.makeRasterTarget();
             SoftwareRasterizer.fillCircle(7, 7, 7, 16777215);
           }
-          this.field_p = DateHelpers.field_a;
-          if (46 == this.field_I) {
+          this.sprite = DateHelpers.field_a;
+          if (46 == this.spellType) {
             if (null == AudioShutdownHelpers.field_g) {
               AudioShutdownHelpers.field_g = new Sprite(16, 16);
               AudioShutdownHelpers.field_g.makeRasterTarget();
               SoftwareRasterizer.fillRectangle(6, 6, 7, 7, 16777214);
             }
-            this.field_p = AudioShutdownHelpers.field_g;
+            this.sprite = AudioShutdownHelpers.field_g;
           }
-          if (this.field_I == 145) {
-            this.field_p = ScreenSwitchHelpers.field_f[9].toRgbSprite();
+          if (this.spellType == 145) {
+            this.sprite = ScreenSwitchHelpers.field_f[9].toRgbSprite();
           }
-          if (this.field_I == 16) {
-            this.field_p = ScreenSwitchHelpers.field_f[3].toRgbSprite();
+          if (this.spellType == 16) {
+            this.sprite = ScreenSwitchHelpers.field_f[3].toRgbSprite();
           }
-          if (this.field_I == 10) {
-            this.field_p = ScreenSwitchHelpers.field_f[1].toRgbSprite();
+          if (this.spellType == 10) {
+            this.sprite = ScreenSwitchHelpers.field_f[1].toRgbSprite();
           }
-          if (this.field_I == 11) {
-            this.field_p = ScreenSwitchHelpers.field_f[1].toRgbSprite();
+          if (this.spellType == 11) {
+            this.sprite = ScreenSwitchHelpers.field_f[1].toRgbSprite();
           }
-          if (13 == this.field_I) {
-            this.field_p = ScreenSwitchHelpers.field_f[2].toRgbSprite();
+          if (13 == this.spellType) {
+            this.sprite = ScreenSwitchHelpers.field_f[2].toRgbSprite();
           }
-          if (12 == this.field_I) {
-            this.field_p = ScreenSwitchHelpers.field_f[2].toRgbSprite();
+          if (12 == this.spellType) {
+            this.sprite = ScreenSwitchHelpers.field_f[2].toRgbSprite();
           }
-          if (this.field_I == 14) {
-            this.field_p = ScreenSwitchHelpers.field_f[4].toRgbSprite();
+          if (this.spellType == 14) {
+            this.sprite = ScreenSwitchHelpers.field_f[4].toRgbSprite();
           }
-          if (67 == this.field_I) {
-            this.field_p = ScreenSwitchHelpers.field_f[2].toRgbSprite();
+          if (67 == this.spellType) {
+            this.sprite = ScreenSwitchHelpers.field_f[2].toRgbSprite();
           }
-          if (this.field_I == 17) {
-            this.field_p = ScreenSwitchHelpers.field_f[3].toRgbSprite();
+          if (this.spellType == 17) {
+            this.sprite = ScreenSwitchHelpers.field_f[3].toRgbSprite();
           }
-          if (this.field_I == 18) {
-            this.field_p = ScreenSwitchHelpers.field_f[3].toRgbSprite();
+          if (this.spellType == 18) {
+            this.sprite = ScreenSwitchHelpers.field_f[3].toRgbSprite();
           }
-          if (this.field_I == 0) {
-            this.field_p = ScreenSwitchHelpers.field_f[12].toRgbSprite();
+          if (this.spellType == 0) {
+            this.sprite = ScreenSwitchHelpers.field_f[12].toRgbSprite();
           }
-          if (this.field_I == 24) {
-            this.field_p = DualLinkDeque.field_b[2].toRgbSprite();
+          if (this.spellType == 24) {
+            this.sprite = DualLinkDeque.field_b[2].toRgbSprite();
           }
-          if (this.field_I == 26) {
-            this.field_p = QuickChatPhrase.field_x[0];
+          if (this.spellType == 26) {
+            this.sprite = QuickChatPhrase.field_x[0];
           }
-          if (this.field_I == 23) {
-            this.field_p = DualLinkDeque.field_b[2].toRgbSprite();
+          if (this.spellType == 23) {
+            this.sprite = DualLinkDeque.field_b[2].toRgbSprite();
           }
-          if (this.field_I == 82) {
-            this.field_p = ScreenSwitchHelpers.field_f[4].toRgbSprite();
+          if (this.spellType == 82) {
+            this.sprite = ScreenSwitchHelpers.field_f[4].toRgbSprite();
           }
-          if (this.field_I == 25) {
-            this.field_p = DualLinkDeque.field_b[1].toRgbSprite();
+          if (this.spellType == 25) {
+            this.sprite = DualLinkDeque.field_b[1].toRgbSprite();
           }
-          if (this.field_I == 28) {
-            this.field_p = QuickChatPhrase.field_x[0];
+          if (this.spellType == 28) {
+            this.sprite = QuickChatPhrase.field_x[0];
           }
-          if (this.field_I == 21) {
-            this.field_p = ScreenSwitchHelpers.field_f[5].toRgbSprite();
+          if (this.spellType == 21) {
+            this.sprite = ScreenSwitchHelpers.field_f[5].toRgbSprite();
           }
-          if (this.field_I == 44 ||
-            this.field_I == 96) {
-            this.field_p = ScreenSwitchHelpers.field_f[10].toRgbSprite();
+          if (this.spellType == 44 ||
+            this.spellType == 96) {
+            this.sprite = ScreenSwitchHelpers.field_f[10].toRgbSprite();
           }
-          if (45 == this.field_I) {
-            this.field_p = ScreenSwitchHelpers.field_f[9].toRgbSprite();
+          if (45 == this.spellType) {
+            this.sprite = ScreenSwitchHelpers.field_f[9].toRgbSprite();
           }
-          if (this.field_I == 41) {
-            this.field_p = ScreenSwitchHelpers.field_f[8].toRgbSprite();
+          if (this.spellType == 41) {
+            this.sprite = ScreenSwitchHelpers.field_f[8].toRgbSprite();
           }
-          if (this.field_I == 42) {
-            this.field_p = ScreenSwitchHelpers.field_f[10].toRgbSprite();
+          if (this.spellType == 42) {
+            this.sprite = ScreenSwitchHelpers.field_f[10].toRgbSprite();
           }
-          if (this.field_I == 49) {
-            this.field_p = FlagSumHelpers.field_f[1];
+          if (this.spellType == 49) {
+            this.sprite = FlagSumHelpers.field_f[1];
           }
-          if (40 == this.field_I) {
-            this.field_p = ScreenSwitchHelpers.field_f[7].toRgbSprite();
+          if (40 == this.spellType) {
+            this.sprite = ScreenSwitchHelpers.field_f[7].toRgbSprite();
           }
-          if (76 == this.field_I) {
-            this.field_p = ScreenSwitchHelpers.field_f[9].toRgbSprite();
+          if (76 == this.spellType) {
+            this.sprite = ScreenSwitchHelpers.field_f[9].toRgbSprite();
           }
-          if (this.field_I == 43) {
-            this.field_p = ScreenSwitchHelpers.field_f[10].toRgbSprite();
+          if (this.spellType == 43) {
+            this.sprite = ScreenSwitchHelpers.field_f[10].toRgbSprite();
           }
-          if (33 == this.field_I) {
-            this.field_p = ScreenSwitchHelpers.field_f[11].toRgbSprite();
+          if (33 == this.spellType) {
+            this.sprite = ScreenSwitchHelpers.field_f[11].toRgbSprite();
           }
-          if (53 == this.field_I) {
-            this.field_p = ScreenSwitchHelpers.field_f[13].toRgbSprite();
+          if (53 == this.spellType) {
+            this.sprite = ScreenSwitchHelpers.field_f[13].toRgbSprite();
           }
-          if (this.field_I == 54) {
-            this.field_p = ScreenSwitchHelpers.field_f[14].toRgbSprite();
+          if (this.spellType == 54) {
+            this.sprite = ScreenSwitchHelpers.field_f[14].toRgbSprite();
           }
-          if (this.field_I == 50) {
-            this.field_p = ScreenSwitchHelpers.field_f[15].toRgbSprite();
+          if (this.spellType == 50) {
+            this.sprite = ScreenSwitchHelpers.field_f[15].toRgbSprite();
           }
-          if (this.field_I == 52) {
-            this.field_p = ScreenSwitchHelpers.field_f[15].toRgbSprite();
+          if (this.spellType == 52) {
+            this.sprite = ScreenSwitchHelpers.field_f[15].toRgbSprite();
           }
-          if (this.field_I == 133) {
-            this.field_p = DualLinkDeque.field_b[12].toRgbSprite();
+          if (this.spellType == 133) {
+            this.sprite = DualLinkDeque.field_b[12].toRgbSprite();
           }
-          if (145 == this.field_I) {
-            this.field_p = ScreenSwitchHelpers.field_f[24].toRgbSprite();
+          if (145 == this.spellType) {
+            this.sprite = ScreenSwitchHelpers.field_f[24].toRgbSprite();
           }
-          if (this.field_I == 146) {
-            this.field_p = ScreenSwitchHelpers.field_f[25].toRgbSprite();
+          if (this.spellType == 146) {
+            this.sprite = ScreenSwitchHelpers.field_f[25].toRgbSprite();
           }
-          if (this.field_I == 115) {
-            this.field_p = ScreenSwitchHelpers.field_f[20].toRgbSprite();
+          if (this.spellType == 115) {
+            this.sprite = ScreenSwitchHelpers.field_f[20].toRgbSprite();
           }
-          if (this.field_I == 116) {
-            this.field_p = ScreenSwitchHelpers.field_f[21].toRgbSprite();
+          if (this.spellType == 116) {
+            this.sprite = ScreenSwitchHelpers.field_f[21].toRgbSprite();
           }
-          if (this.field_I == 119) {
-            this.field_p = ScreenSwitchHelpers.field_f[22].toRgbSprite();
+          if (this.spellType == 119) {
+            this.sprite = ScreenSwitchHelpers.field_f[22].toRgbSprite();
           }
-          if (120 == this.field_I) {
-            this.field_p = DualLinkDeque.field_b[13].toRgbSprite();
+          if (120 == this.spellType) {
+            this.sprite = DualLinkDeque.field_b[13].toRgbSprite();
           }
-          if (this.field_I == 117) {
-            this.field_p = ScreenSwitchHelpers.field_f[20].toRgbSprite();
+          if (this.spellType == 117) {
+            this.sprite = ScreenSwitchHelpers.field_f[20].toRgbSprite();
           }
-          if (this.field_I == 122) {
-            this.field_p = ScreenSwitchHelpers.field_f[23].toRgbSprite();
+          if (this.spellType == 122) {
+            this.sprite = ScreenSwitchHelpers.field_f[23].toRgbSprite();
           }
-          if (this.field_I == 156) {
-            this.field_p = ScreenSwitchHelpers.field_f[28].toRgbSprite();
+          if (this.spellType == 156) {
+            this.sprite = ScreenSwitchHelpers.field_f[28].toRgbSprite();
           }
-          if (this.field_I == 164) {
-            this.field_p = ScreenSwitchHelpers.field_f[28].toRgbSprite();
+          if (this.spellType == 164) {
+            this.sprite = ScreenSwitchHelpers.field_f[28].toRgbSprite();
           }
-          if (159 == this.field_I) {
-            this.field_p = ScreenSwitchHelpers.field_f[29].toRgbSprite();
+          if (159 == this.spellType) {
+            this.sprite = ScreenSwitchHelpers.field_f[29].toRgbSprite();
           }
-          if (this.field_I == 165) {
-            this.field_p = DualLinkDeque.field_b[16].toRgbSprite();
+          if (this.spellType == 165) {
+            this.sprite = DualLinkDeque.field_b[16].toRgbSprite();
           }
-          if (this.field_I == 161) {
-            this.field_p = DualLinkDeque.field_b[17].toRgbSprite();
+          if (this.spellType == 161) {
+            this.sprite = DualLinkDeque.field_b[17].toRgbSprite();
           }
-          if (this.field_I == 158) {
-            this.field_p = DualLinkDeque.field_b[18].toRgbSprite();
+          if (this.spellType == 158) {
+            this.sprite = DualLinkDeque.field_b[18].toRgbSprite();
           }
-          if (this.field_I == 162) {
-            this.field_p = DualLinkDeque.field_b[19].toRgbSprite();
+          if (this.spellType == 162) {
+            this.sprite = DualLinkDeque.field_b[19].toRgbSprite();
           }
-          if (this.field_I == 160) {
-            this.field_p = FlagSumHelpers.field_f[3];
+          if (this.spellType == 160) {
+            this.sprite = FlagSumHelpers.field_f[3];
           }
-          if (this.field_I == 165) {
-            this.field_H = (1 + this.field_q.getRound((byte) -75) * 3) % (this.field_q.getPlayerCount(0) * 5) + 1 * this.field_q.getPlayerCount(0);
+          if (this.spellType == 165) {
+            this.field_H = (1 + this.battle.getRound((byte) -75) * 3) % (this.battle.getPlayerCount(0) * 5) + 1 * this.battle.getPlayerCount(0);
           }
-          this.field_r = this.field_p.field_n >> 1;
+          this.spriteRadius = this.sprite.field_n >> 1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "mi.FA(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2), "mi.FA(" + obfuscationGuard + ')');
         }
     }
 
-    final SpellProjectile copyForBattle(int param0, Battle param1) {
+    final SpellProjectile copyForBattle(int obfuscationGuard, Battle battle) {
         SpellProjectile var3 = null;
         RuntimeException var3_ref = null;
         SpellProjectile stackIn_3_0 = null;
@@ -6995,34 +6995,34 @@ final class SpellProjectile extends DualLinkNode {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = GameOptionType.acquireProjectile(param1, -108);
+          var3 = GameOptionType.acquireProjectile(battle, -108);
           stackIn_3_0 = var3;
-          if (this.field_C == null) {
+          if (this.random == null) {
             stackIn_4_1 = null;
           } else {
-            stackIn_4_1 = this.field_C.copy((byte) 64);
+            stackIn_4_1 = this.random.copy((byte) 64);
           }
-          stackIn_3_0.field_C = stackIn_4_1;
-          var3.field_I = this.field_I;
-          var3.field_o = this.field_o;
-          var3.field_v = this.field_v;
-          var3.field_G = this.field_G;
-          if (param0 != 21310) {
+          stackIn_3_0.random = stackIn_4_1;
+          var3.spellType = this.spellType;
+          var3.subpixelX = this.subpixelX;
+          var3.x = this.x;
+          var3.y = this.y;
+          if (obfuscationGuard != 21310) {
             field_m = (SceneWidget) null;
           }
-          var3.field_z = this.field_z;
+          var3.subpixelY = this.subpixelY;
           var3.initializeSprite(44);
-          var3.field_F = this.field_F;
+          var3.velocityY = this.velocityY;
           var3.field_H = this.field_H;
-          var3.field_y = this.field_y;
-          var3.field_u = this.field_u;
+          var3.ageTicks = this.ageTicks;
+          var3.velocityX = this.velocityX;
           stackIn_10_0 = var3;
-          if (this.field_t == null) {
+          if (this.owner == null) {
             stackIn_11_1 = null;
           } else {
-            stackIn_11_1 = param1.getUnitByOwner(this.field_t.field_T, true);
+            stackIn_11_1 = battle.getUnitByOwner(this.owner.unitId, true);
           }
-          stackIn_10_0.field_t = stackIn_11_1;
+          stackIn_10_0.owner = stackIn_11_1;
           var3.field_w = this.field_w;
           stackIn_12_0 = var3;
           return stackIn_12_0;
@@ -7030,8 +7030,8 @@ final class SpellProjectile extends DualLinkNode {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_16_0 = var3_ref;
-          stackIn_16_1 = new StringBuilder().append("mi.S(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_16_1 = new StringBuilder().append("mi.S(").append(obfuscationGuard).append(',');
+          if (battle == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
@@ -7040,7 +7040,7 @@ final class SpellProjectile extends DualLinkNode {
         }
     }
 
-    final void applyAreaEffect(int param0, int param1, int param2, int param3) {
+    final void applyAreaEffect(int damage, int knockback, int radius, int obfuscationGuard) {
         int stackIn_52_0 = 0;
         int stackIn_52_1 = 0;
         int stackIn_347_0 = 0;
@@ -7065,144 +7065,144 @@ final class SpellProjectile extends DualLinkNode {
         var15 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           var5_int = -1;
-          if (null != this.field_t) {
-            var5_int = this.field_t.field_u;
+          if (null != this.owner) {
+            var5_int = this.owner.ownerPlayer;
           }
-          if ((this.field_I == 10 ||
-            this.field_I == 11 ||
-            this.field_I == 12 ||
-            this.field_I == 13 ||
-            this.field_I == 14 ||
-            this.field_I == 67 ||
-            15 == this.field_I) &&
-            (null != this.field_t &&
-            this.field_q.field_x[this.field_t.field_u] == 0)) {
-            var6 = this.field_q.field_X[this.field_t.field_u] / 20;
-            param2 = param2 + var6 * param2 / 5;
-            param0 = param0 + var6 * param0 / 10;
+          if ((this.spellType == 10 ||
+            this.spellType == 11 ||
+            this.spellType == 12 ||
+            this.spellType == 13 ||
+            this.spellType == 14 ||
+            this.spellType == 67 ||
+            15 == this.spellType) &&
+            (null != this.owner &&
+            this.battle.playerSpellbook[this.owner.ownerPlayer] == 0)) {
+            var6 = this.battle.field_X[this.owner.ownerPlayer] / 20;
+            radius = radius + var6 * radius / 5;
+            damage = damage + var6 * damage / 10;
           }
           boolean decompiledFrameCompleted0 = true;
-          if (this.field_I == 0 ||
-            this.field_I == 2 ||
-            this.field_I == 3 ||
-            147 == this.field_I) {
-            EmailValidator.field_v.setDeque((byte) 116, this.field_q.field_Kb);
-            var6_ref_mi = (SpellProjectile) (EmailValidator.field_v.first(param3 ^ -40));
+          if (this.spellType == 0 ||
+            this.spellType == 2 ||
+            this.spellType == 3 ||
+            147 == this.spellType) {
+            EmailValidator.field_v.setDeque((byte) 116, this.battle.projectiles);
+            var6_ref_mi = (SpellProjectile) (EmailValidator.field_v.first(obfuscationGuard ^ -40));
             while (var6_ref_mi != null) {
               stackIn_52_0 = 148;
-              stackIn_52_1 = var6_ref_mi.field_I;
+              stackIn_52_1 = var6_ref_mi.spellType;
               if (var15 != 0) {
                 decompiledFrameCompleted0 = false;
                 break;
               }
               if (stackIn_52_0 == stackIn_52_1 &&
-                this.field_t == var6_ref_mi.field_t) {
-                param1 += 16;
-                param2 += 5;
-                param0 += 5;
+                this.owner == var6_ref_mi.owner) {
+                knockback += 16;
+                radius += 5;
+                damage += 5;
               }
-              var6_ref_mi = (SpellProjectile) (EmailValidator.field_v.next(param3 - 18510));
+              var6_ref_mi = (SpellProjectile) (EmailValidator.field_v.next(obfuscationGuard - 18510));
             }
           }
           if (decompiledFrameCompleted0) {
             stackIn_52_0 = -71;
-            stackIn_52_1 = ~this.field_I;
+            stackIn_52_1 = ~this.spellType;
           }
           if (stackIn_52_0 != stackIn_52_1 &&
-            this.field_I != 55 &&
-            this.field_I != 111 &&
-            this.field_I != 66 &&
-            this.field_I != 24 &&
-            this.field_I != 145 &&
-            this.field_I != 138) {
-            if (33 != this.field_I) {
-              var6Lifetime1 = param2 * 2 / 3;
-              if (this.field_I == 108) {
-                var6Lifetime1 = param2;
+            this.spellType != 55 &&
+            this.spellType != 111 &&
+            this.spellType != 66 &&
+            this.spellType != 24 &&
+            this.spellType != 145 &&
+            this.spellType != 138) {
+            if (33 != this.spellType) {
+              var6Lifetime1 = radius * 2 / 3;
+              if (this.spellType == 108) {
+                var6Lifetime1 = radius;
               }
-              if (0 == this.field_I) {
-                var6Lifetime1 = param2;
+              if (0 == this.spellType) {
+                var6Lifetime1 = radius;
               }
-              if (this.field_I == 2) {
-                var6Lifetime1 = param2;
+              if (this.spellType == 2) {
+                var6Lifetime1 = radius;
               }
-              if (this.field_I == 31) {
+              if (this.spellType == 31) {
                 var6Lifetime1 = var6Lifetime1 / 2;
               }
               if (16 > var6Lifetime1) {
                 var6Lifetime1 = 16;
               }
-              if (this.field_I == 30 ||
-                this.field_I == 16) {
-                var6Lifetime1 = param2;
+              if (this.spellType == 30 ||
+                this.spellType == 16) {
+                var6Lifetime1 = radius;
               }
-              this.field_q.refreshTerrainArea(this.field_v, var6Lifetime1, (byte) 51, this.field_G);
+              this.battle.refreshTerrainArea(this.x, var6Lifetime1, (byte) 51, this.y);
               if (var15 != 0) {
-                this.field_G = this.field_G + 32;
-                param2 += 32;
+                this.y = this.y + 32;
+                radius += 32;
               }
             } else {
-              this.field_G = this.field_G + 32;
-              param2 += 32;
+              this.y = this.y + 32;
+              radius += 32;
             }
-            if (this.field_I == 43) {
-              param2 += 16;
+            if (this.spellType == 43) {
+              radius += 16;
             }
-            if (41 == this.field_I ||
-              this.field_I == 13 ||
-              this.field_I == 12) {
-              param2 += 32;
-              param1 += 32;
-              this.field_G = this.field_G + 32;
+            if (41 == this.spellType ||
+              this.spellType == 13 ||
+              this.spellType == 12) {
+              radius += 32;
+              knockback += 32;
+              this.y = this.y + 32;
             }
           }
-          EmailValidator.field_v.setDeque((byte) 109, this.field_q.field_i);
+          EmailValidator.field_v.setDeque((byte) 109, this.battle.units);
           var6Lifetime2 = 1;
-          if (param3 != 8) {
-            this.field_F = -5;
+          if (obfuscationGuard != 8) {
+            this.velocityY = -5;
           }
           var7 = (BattleUnit) (EmailValidator.field_v.first(-46));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var7 == null))) {
             var6Lifetime3 = 1;
             stackIn_347_0 = -1;
-            stackIn_347_1 = ~var7.field_ib;
+            stackIn_347_1 = ~var7.health;
             if (var15 == 0) {
               if (stackIn_347_0 <= stackIn_347_1) {
                 var6Lifetime3 = 0;
               }
-              if ((this.field_I == 118 ||
-                this.field_I == 78 ||
-                this.field_I == 79 ||
-                this.field_I == 98 ||
-                this.field_I == 138) &&
-                this.field_t == var7) {
+              if ((this.spellType == 118 ||
+                this.spellType == 78 ||
+                this.spellType == 79 ||
+                this.spellType == 98 ||
+                this.spellType == 138) &&
+                this.owner == var7) {
                 var6Lifetime3 = 0;
               }
-              if ((0 == this.field_I ||
-                2 == this.field_I ||
-                this.field_I == 3 ||
-                147 == this.field_I) &&
-                (this.field_t == var7 &&
-                this.field_t.field_jb != 20 &&
-                this.field_t.field_jb != 27)) {
+              if ((0 == this.spellType ||
+                2 == this.spellType ||
+                this.spellType == 3 ||
+                147 == this.spellType) &&
+                (this.owner == var7 &&
+                this.owner.unitType != 20 &&
+                this.owner.unitType != 27)) {
                 var6Lifetime3 = 0;
               }
-              if ((this.field_I == 55 ||
-                this.field_I == 111) &&
-                var7.field_jb == 35) {
+              if ((this.spellType == 55 ||
+                this.spellType == 111) &&
+                var7.unitType == 35) {
                 var6Lifetime3 = 0;
               }
               if (var6Lifetime3 == 0) {
                 var6Lifetime3 = 1;
               } else {
-                var8 = param1;
+                var8 = knockback;
                 if ((var7.field_U ||
-                  16 == var7.field_jb) && 66 == this.field_I) {
+                  16 == var7.unitType) && 66 == this.spellType) {
                   var8 = 250;
                 }
-                var9 = var7.field_lb - this.field_v;
-                var10 = -this.field_G + (var7.field_db - (var7.field_Y >> 1));
+                var9 = var7.x - this.x;
+                var10 = -this.y + (var7.y - (var7.size >> 1));
                 var11 = ConnectionState.greatestCommonDivisor(var10, var9, false);
                 if (var11 == 0) {
                   var9 = 0;
@@ -7211,142 +7211,142 @@ final class SpellProjectile extends DualLinkNode {
                 }
                 var12 = 0;
                 var13 = 0;
-                if (var11 >= (param2 >> 1) + (var7.field_Y >> 1)) {
-                  if (!(((var7.field_Y >> 1) + param2) <= var11)) {
-                    var13 = param0 * (var11 - (var7.field_Y >> 1)) / param2;
-                    var12 = (var8 >> 1) + var8 * (var11 - ((param2 >> 1) + (var7.field_Y >> 1))) / param2;
+                if (var11 >= (radius >> 1) + (var7.size >> 1)) {
+                  if (!(((var7.size >> 1) + radius) <= var11)) {
+                    var13 = damage * (var11 - (var7.size >> 1)) / radius;
+                    var12 = (var8 >> 1) + var8 * (var11 - ((radius >> 1) + (var7.size >> 1))) / radius;
                   }
                 } else {
-                  var13 = param0;
+                  var13 = damage;
                   var12 = var8;
                   if (var13 > 5 &&
                     0 <= var5_int) {
-                    this.field_q.field_ab[var5_int] = this.field_q.field_ab[var5_int] + 1;
+                    this.battle.field_ab[var5_int] = this.battle.field_ab[var5_int] + 1;
                   }
                 }
-                if (var13 < param0 &&
-                  param0 <= 5 &&
-                  var11 < param2 + (var7.field_Y >> 1)) {
-                  var13 = param0;
+                if (var13 < damage &&
+                  damage <= 5 &&
+                  var11 < radius + (var7.size >> 1)) {
+                  var13 = damage;
                 }
-                if (!this.field_q.field_M) {
-                  if (0 == var7.field_jb) {
+                if (!this.battle.field_M) {
+                  if (0 == var7.unitType) {
                     var13 = 0;
                   }
                   var12 = 0;
                 }
-                if (this.field_I == 161 &&
-                  var7.field_jb != 37 &&
-                  var7.field_jb != 12 &&
-                  (16 + (var7.field_Y >> 1) + param2) > var11) {
+                if (this.spellType == 161 &&
+                  var7.unitType != 37 &&
+                  var7.unitType != 12 &&
+                  (16 + (var7.size >> 1) + radius) > var11) {
                   var14 = var7;
-                  var7 = (BattleUnit) (EmailValidator.field_v.first(param3 - 88));
+                  var7 = (BattleUnit) (EmailValidator.field_v.first(obfuscationGuard - 88));
                   while (var7 != null) {
-                    if (var7.field_jb == 37) {
-                      this.field_q.eraseUnitMask(var14, 0);
-                      var14.field_lb = var7.field_lb;
-                      var7.field_ib = 0;
-                      var7.field_x = 1;
-                      var14.field_X = var7.field_X;
-                      var14.field_R = var7.field_R;
-                      var14.field_z = true;
-                      var14.field_db = var7.field_db;
+                    if (var7.unitType == 37) {
+                      this.battle.eraseUnitMask(var14, 0);
+                      var14.x = var7.x;
+                      var7.health = 0;
+                      var7.pendingDamage = 1;
+                      var14.subpixelX = var7.subpixelX;
+                      var14.subpixelY = var7.subpixelY;
+                      var14.moving = true;
+                      var14.y = var7.y;
                       this.playTypeSound(2, (byte) 37, 8);
                       return;
                     }
-                    var7 = (BattleUnit) (EmailValidator.field_v.next(param3 ^ -18510));
+                    var7 = (BattleUnit) (EmailValidator.field_v.next(obfuscationGuard ^ -18510));
                   }
                   this.playTypeSound(0, (byte) 37, 8);
                   return;
                 }
-                if ((this.field_I == 55 ||
-                  111 == this.field_I) &&
-                  param2 + (var7.field_Y >> 1) > var11) {
+                if ((this.spellType == 55 ||
+                  111 == this.spellType) &&
+                  radius + (var7.size >> 1) > var11) {
                   var13 = 15;
                 }
-                if (this.field_I == 78 &&
-                  var11 < (var7.field_Y >> 1) + param2) {
+                if (this.spellType == 78 &&
+                  var11 < (var7.size >> 1) + radius) {
                   var13 = 30;
-                  if (9 == this.field_t.field_jb) {
+                  if (9 == this.owner.unitType) {
                     var13 = 75;
-                    if (~this.field_t.field_u == ~var7.field_u) {
-                      if (var7.field_jb != 17) {
+                    if (~this.owner.ownerPlayer == ~var7.ownerPlayer) {
+                      if (var7.unitType != 17) {
                       }
                       var13 = 0;
                     }
                   }
-                  if (39 == this.field_t.field_jb) {
+                  if (39 == this.owner.unitType) {
                     var13 = 50;
-                    if (var7.field_T == this.field_t.field_u) {
+                    if (var7.unitId == this.owner.ownerPlayer) {
                       var13 = 0;
                     }
                   }
                 }
-                if (this.field_I == 2 &&
-                  var11 < (param2 + (var7.field_Y >> 1))) {
-                  var13 = param0;
+                if (this.spellType == 2 &&
+                  var11 < (radius + (var7.size >> 1))) {
+                  var13 = damage;
                 }
-                if (this.field_I == 16 &&
-                  var11 < (var7.field_Y + param2)) {
+                if (this.spellType == 16 &&
+                  var11 < (var7.size + radius)) {
                   var13 = 5;
                 }
-                if (this.field_I == 138) {
-                  if (var11 < (param2 + (var7.field_Y >> 1))) {
-                    var13 = param0;
+                if (this.spellType == 138) {
+                  if (var11 < (radius + (var7.size >> 1))) {
+                    var13 = damage;
                   } else {
                     var13 = 0;
                   }
                 }
-                if (this.field_I == 70 &&
-                  ~this.field_t.field_u == ~var7.field_u) {
+                if (this.spellType == 70 &&
+                  ~this.owner.ownerPlayer == ~var7.ownerPlayer) {
                   var12 = 0;
                   var13 = 0;
                 }
-                if (this.field_I == 55 &&
-                  null != this.field_t &&
-                  this.field_t.field_jb == 6 &&
-                  var7 == this.field_t) {
+                if (this.spellType == 55 &&
+                  null != this.owner &&
+                  this.owner.unitType == 6 &&
+                  var7 == this.owner) {
                   var13 = 0;
                   var12 = 0;
                 }
                 if (var12 <= 0) {
-                  if (this.field_I == 16 &&
-                    !var7.field_z) {
-                    var7.field_z = true;
-                    var7.field_eb = 0;
-                    var7.field_kb = 0;
+                  if (this.spellType == 16 &&
+                    !var7.moving) {
+                    var7.moving = true;
+                    var7.velocityY = 0;
+                    var7.velocityX = 0;
                   }
                 } else {
-                  if (var7.field_jb == 7 ||
-                    var7.field_jb == 27) {
+                  if (var7.unitType == 7 ||
+                    var7.unitType == 27) {
                     var12 = var12 / 4;
                   }
-                  if (!var7.field_z) {
-                    var7.field_eb = 0;
-                    var7.field_kb = 0;
-                    var7.field_z = true;
+                  if (!var7.moving) {
+                    var7.velocityY = 0;
+                    var7.velocityX = 0;
+                    var7.moving = true;
                   }
-                  var7.field_kb = var7.field_kb + var9 * var12 / var11;
-                  var7.field_eb = var7.field_eb + ((var12 >> 1) * var10 / var11 - (var12 >> 1));
-                  if (this.field_I == 15) {
-                    var7.field_eb = var7.field_eb - 128;
+                  var7.velocityX = var7.velocityX + var9 * var12 / var11;
+                  var7.velocityY = var7.velocityY + ((var12 >> 1) * var10 / var11 - (var12 >> 1));
+                  if (this.spellType == 15) {
+                    var7.velocityY = var7.velocityY - 128;
                     if (var9 <= 0) {
-                      var7.field_eb = var7.field_eb - 16;
+                      var7.velocityY = var7.velocityY - 16;
                     } else {
-                      var7.field_kb = var7.field_kb + 16;
+                      var7.velocityX = var7.velocityX + 16;
                     }
                   }
-                  if (this.field_I == 120 &&
-                    12 != var7.field_jb) {
-                    if (this.field_t != null) {
-                      this.field_q.stampUnitMask(-107, this.field_t);
+                  if (this.spellType == 120 &&
+                    12 != var7.unitType) {
+                    if (this.owner != null) {
+                      this.battle.stampUnitMask(-107, this.owner);
                     }
-                    this.field_o = var7.field_X;
-                    this.field_G = var7.field_db;
-                    this.field_I = 121;
-                    this.field_z = var7.field_R;
-                    this.field_v = var7.field_lb;
-                    this.field_t = var7;
+                    this.subpixelX = var7.subpixelX;
+                    this.y = var7.y;
+                    this.spellType = 121;
+                    this.subpixelY = var7.subpixelY;
+                    this.x = var7.x;
+                    this.owner = var7;
                   }
                 }
                 if (0 < var13) {
@@ -7359,7 +7359,7 @@ final class SpellProjectile extends DualLinkNode {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            stackIn_347_0 = this.field_I;
+            stackIn_347_0 = this.spellType;
             stackIn_347_1 = 161;
           }
           if (stackIn_347_0 == stackIn_347_1) {
@@ -7369,11 +7369,11 @@ final class SpellProjectile extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw CommonUiHelpers.wrapException((Throwable) ((Object) var5), "mi.JA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var5), "mi.JA(" + damage + ',' + knockback + ',' + radius + ',' + obfuscationGuard + ')');
         }
     }
 
-    final static CoverageBitmapFont createCoverageFont(byte[] param0, int param1) {
+    final static CoverageBitmapFont createCoverageFont(byte[] data, int obfuscationGuard) {
         CoverageBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_2_0 = null;
@@ -7384,12 +7384,12 @@ final class SpellProjectile extends DualLinkNode {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null == param0) {
+          if (null == data) {
             stackIn_2_0 = null;
             return (CoverageBitmapFont) (stackIn_2_0);
           }
-          var2 = new CoverageBitmapFont(param0, BufferedMessage.field_l, SectorCacheStore.field_d, ChatLine.field_p, ServerMessage.field_i, PriceCaptionGlobals.field_c, AccountRegistrationPanel.field_I);
-          if (param1 < 43) {
+          var2 = new CoverageBitmapFont(data, BufferedMessage.field_l, SectorCacheStore.field_d, ChatLine.field_p, ServerMessage.field_i, PriceCaptionGlobals.field_c, AccountRegistrationPanel.field_I);
+          if (obfuscationGuard < 43) {
             stackIn_5_0 = (CoverageBitmapFont) null;
             return stackIn_5_0;
           }
@@ -7401,70 +7401,70 @@ final class SpellProjectile extends DualLinkNode {
           var2_ref = decompiledCaughtException;
           stackIn_11_0 = var2_ref;
           stackIn_11_1 = new StringBuilder().append("mi.U(");
-          if (param0 == null) {
+          if (data == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
-    private final void checkHeightEffects(int param0) {
+    private final void checkHeightEffects(int obfuscationGuard) {
         RuntimeException decompiledCaughtException = null;
         SpellProjectile var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         var3 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          if (param0 < 58) {
+          if (obfuscationGuard < 58) {
             SpellProjectile.releaseStatics(27);
           }
-          if (this.field_G < this.field_q.field_H / 4) {
-            if (this.field_G >= this.field_q.field_H / 5) {
-              this.field_q.carveTerrainAndSprite(-this.field_r + this.field_G, -87, -this.field_r + this.field_v, ScreenSwitchHelpers.field_f[16].toRgbSprite());
+          if (this.y < this.battle.arenaHeight / 4) {
+            if (this.y >= this.battle.arenaHeight / 5) {
+              this.battle.carveTerrainAndSprite(-this.spriteRadius + this.y, -87, -this.spriteRadius + this.x, ScreenSwitchHelpers.field_f[16].toRgbSprite());
               if (var3 == 0) {
                 return;
               }
             }
-            if (this.field_G < (this.field_q.field_H / 6)) {
-              if (this.field_G < this.field_q.field_H / 7) {
-                if (this.field_q.field_H / 8 > this.field_G) {
-                  var2 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 95, this.field_G, this.field_q);
-                  this.field_q.onProjectileFinished(52, var2);
+            if (this.y < (this.battle.arenaHeight / 6)) {
+              if (this.y < this.battle.arenaHeight / 7) {
+                if (this.battle.arenaHeight / 8 > this.y) {
+                  var2 = this.spawnFromHere(this.x, (BattleUnit) null, (byte) 81, 95, this.y, this.battle);
+                  this.battle.onProjectileFinished(52, var2);
                   if (var3 == 0) {
                     return;
                   }
                 }
-                this.field_q.carveTerrainAndSprite(this.field_G - this.field_r, -97, -this.field_r + this.field_v, ScreenSwitchHelpers.field_f[19].toRgbSprite());
+                this.battle.carveTerrainAndSprite(this.y - this.spriteRadius, -97, -this.spriteRadius + this.x, ScreenSwitchHelpers.field_f[19].toRgbSprite());
                 if (var3 == 0) {
                   return;
                 }
               }
-              this.field_q.carveTerrainAndSprite(-this.field_r + this.field_G, -5, this.field_v - this.field_r, ScreenSwitchHelpers.field_f[18].toRgbSprite());
+              this.battle.carveTerrainAndSprite(-this.spriteRadius + this.y, -5, this.x - this.spriteRadius, ScreenSwitchHelpers.field_f[18].toRgbSprite());
               if (var3 == 0) {
                 return;
               }
             }
-            this.field_q.carveTerrainAndSprite(this.field_G - this.field_r, -18, -this.field_r + this.field_v, ScreenSwitchHelpers.field_f[17].toRgbSprite());
+            this.battle.carveTerrainAndSprite(this.y - this.spriteRadius, -18, -this.spriteRadius + this.x, ScreenSwitchHelpers.field_f[17].toRgbSprite());
             if (var3 == 0) {
               return;
             }
           }
-          this.field_q.carveTerrainAndSprite(this.field_G - this.field_r, -34, -this.field_r + this.field_v, ScreenSwitchHelpers.field_f[6].toRgbSprite());
+          this.battle.carveTerrainAndSprite(this.y - this.spriteRadius, -34, -this.spriteRadius + this.x, ScreenSwitchHelpers.field_f[6].toRgbSprite());
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2_ref), "mi.EA(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2_ref), "mi.EA(" + obfuscationGuard + ')');
         }
     }
 
-    public static void releaseStatics(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
-          if (param0 != 2) {
+          if (obfuscationGuard != 2) {
             SpellProjectile.releaseStatics(-17);
           }
           field_E = null;
@@ -7476,11 +7476,11 @@ final class SpellProjectile extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw CommonUiHelpers.wrapException((Throwable) ((Object) var1), "mi.W(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var1), "mi.W(" + obfuscationGuard + ')');
         }
     }
 
-    private final void onHitUnit(int param0, boolean param1, int param2, BattleUnit param3) {
+    private final void onHitUnit(int attackerPlayer, boolean obfuscationGuard, int damage, BattleUnit unit) {
         BattleUnit stackIn_552_0 = null;
         BattleUnit stackIn_552_1 = null;
         BattleUnit stackIn_563_0 = null;
@@ -7512,421 +7512,421 @@ final class SpellProjectile extends DualLinkNode {
         var8 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           boolean decompiledFrameRemainder2 = true;
-          if (140 == this.field_I) {
-            if (param3.field_jb == 28) {
-              param3.field_J = false;
-              param3.field_jb = 29;
-              param3.buildSprites(12, true);
-              param2 = 0;
-              var5 = this.spawnFromHere(param3.field_lb, param3, (byte) 81, 137, param3.field_db - param3.field_Y / 2, this.field_q);
-              this.field_q.onProjectileFinished(52, var5);
+          if (140 == this.spellType) {
+            if (unit.unitType == 28) {
+              unit.field_J = false;
+              unit.unitType = 29;
+              unit.buildSprites(12, true);
+              damage = 0;
+              var5 = this.spawnFromHere(unit.x, unit, (byte) 81, 137, unit.y - unit.size / 2, this.battle);
+              this.battle.onProjectileFinished(52, var5);
               decompiledFrameRemainder2 = (var8 != 0);
             }
             if (decompiledFrameRemainder2) {
-              if (param3.field_jb != 29) {
-                if (param3.field_jb == 30) {
-                  param2 = 0;
+              if (unit.unitType != 29) {
+                if (unit.unitType == 30) {
+                  damage = 0;
                   if (var8 != 0) {
-                    param3.field_jb = 30;
-                    param3.field_J = false;
-                    param3.buildSprites(12, true);
-                    param2 = 0;
-                    var5Lifetime2 = this.spawnFromHere(param3.field_lb, param3, (byte) 81, 137, param3.field_db - param3.field_Y / 2, this.field_q);
-                    this.field_q.onProjectileFinished(52, var5Lifetime2);
+                    unit.unitType = 30;
+                    unit.field_J = false;
+                    unit.buildSprites(12, true);
+                    damage = 0;
+                    var5Lifetime2 = this.spawnFromHere(unit.x, unit, (byte) 81, 137, unit.y - unit.size / 2, this.battle);
+                    this.battle.onProjectileFinished(52, var5Lifetime2);
                   }
                 }
               } else {
-                param3.field_jb = 30;
-                param3.field_J = false;
-                param3.buildSprites(12, true);
-                param2 = 0;
-                var5Lifetime2 = this.spawnFromHere(param3.field_lb, param3, (byte) 81, 137, param3.field_db - param3.field_Y / 2, this.field_q);
-                this.field_q.onProjectileFinished(52, var5Lifetime2);
+                unit.unitType = 30;
+                unit.field_J = false;
+                unit.buildSprites(12, true);
+                damage = 0;
+                var5Lifetime2 = this.spawnFromHere(unit.x, unit, (byte) 81, 137, unit.y - unit.size / 2, this.battle);
+                this.battle.onProjectileFinished(52, var5Lifetime2);
               }
             }
           }
-          if ((20 == this.field_I ||
-            this.field_I == 80 ||
-            this.field_I == 165) &&
-            param3.field_q > 0) {
-            param2 = param2 * 2;
+          if ((20 == this.spellType ||
+            this.spellType == 80 ||
+            this.spellType == 165) &&
+            unit.field_q > 0) {
+            damage = damage * 2;
           }
           boolean decompiledFrameRemainder1 = true;
-          if (this.field_I == 0 ||
-            2 == this.field_I ||
-            3 == this.field_I ||
-            this.field_I == 77 ||
-            this.field_I == 147) {
-            if (param3.field_jb == 11) {
-              param3.field_x = param3.field_x - param2;
-              param2 = 0;
+          if (this.spellType == 0 ||
+            2 == this.spellType ||
+            3 == this.spellType ||
+            this.spellType == 77 ||
+            this.spellType == 147) {
+            if (unit.unitType == 11) {
+              unit.pendingDamage = unit.pendingDamage - damage;
+              damage = 0;
             }
-            if (param3.field_jb == 27) {
-              param3.field_x = -param2 / 2;
-              param2 = 0;
+            if (unit.unitType == 27) {
+              unit.pendingDamage = -damage / 2;
+              damage = 0;
             }
-            decompiledFrameRemainder1 = (param3.field_jb == 20);
+            decompiledFrameRemainder1 = (unit.unitType == 20);
             if (decompiledFrameRemainder1) {
-              param3.field_q = param3.field_q + param2;
-              param2 = 0;
-              if (param3.field_q > 100) {
-                param3.field_q = 100;
+              unit.field_q = unit.field_q + damage;
+              damage = 0;
+              if (unit.field_q > 100) {
+                unit.field_q = 100;
               }
-              decompiledFrameRemainder1 = (null != this.field_t);
+              decompiledFrameRemainder1 = (null != this.owner);
               if ((decompiledFrameRemainder1) &&
-                (decompiledFrameRemainder1 = (this.field_t.field_jb == 27)) &&
-                (decompiledFrameRemainder1 = (this.field_I == 2))) {
-                var5Lifetime1 = this.spawnFromHere(param3.field_lb, param3, (byte) 81, 155, param3.field_db - param3.field_Y / 2, this.field_q);
-                this.field_q.onProjectileFinished(52, var5Lifetime1);
+                (decompiledFrameRemainder1 = (this.owner.unitType == 27)) &&
+                (decompiledFrameRemainder1 = (this.spellType == 2))) {
+                var5Lifetime1 = this.spawnFromHere(unit.x, unit, (byte) 81, 155, unit.y - unit.size / 2, this.battle);
+                this.battle.onProjectileFinished(52, var5Lifetime1);
                 decompiledFrameRemainder1 = (var8 != 0);
               }
             }
           }
           if (decompiledFrameRemainder1) {
-            if ((this.field_I != 46) &&
-              (decompiledFrameRemainder1 = (45 == this.field_I ||
-              this.field_I == 76)) &&
-              (decompiledFrameRemainder1 = (param3.field_jb == 22 ||
-              param3.field_jb == 4 ||
-              5 == param3.field_jb ||
-              15 == param3.field_jb))) {
-              param2 = 0;
+            if ((this.spellType != 46) &&
+              (decompiledFrameRemainder1 = (45 == this.spellType ||
+              this.spellType == 76)) &&
+              (decompiledFrameRemainder1 = (unit.unitType == 22 ||
+              unit.unitType == 4 ||
+              5 == unit.unitType ||
+              15 == unit.unitType))) {
+              damage = 0;
               decompiledFrameRemainder1 = (var8 != 0);
             }
             if (decompiledFrameRemainder1) {
-              if (4 == param3.field_jb ||
-                param3.field_jb == 5 ||
-                param3.field_jb == 15) {
-                param2 = -1;
+              if (4 == unit.unitType ||
+                unit.unitType == 5 ||
+                unit.unitType == 15) {
+                damage = -1;
                 var5_int = 50;
-                if (param3.field_jb == 5) {
+                if (unit.unitType == 5) {
                   var5_int = 100;
                 }
-                if (param3.field_jb == 15) {
+                if (unit.unitType == 15) {
                   var5_int = 150;
                 }
-                if (var5_int < -param3.field_x + (-param2 + param3.field_ib)) {
-                  param2 = -var5_int + (param3.field_ib - param3.field_x);
+                if (var5_int < -unit.pendingDamage + (-damage + unit.health)) {
+                  damage = -var5_int + (unit.health - unit.pendingDamage);
                 }
               }
-              if (param3.field_jb == 22) {
-                if (75 > param3.field_q) {
-                  param3.field_q = param3.field_q + 1;
+              if (unit.unitType == 22) {
+                if (75 > unit.field_q) {
+                  unit.field_q = unit.field_q + 1;
                 }
-                param2 = 0;
+                damage = 0;
               }
             }
           }
-          if (1 < param2) {
+          if (1 < damage) {
             var5_intLifetime1 = 1;
-            if (param3.field_jb == 2) {
-              param2 -= 10;
+            if (unit.unitType == 2) {
+              damage -= 10;
             }
-            if (param3.field_jb == 27) {
-              param2 -= 5;
+            if (unit.unitType == 27) {
+              damage -= 5;
             }
-            if (1 == this.field_q.field_x[param3.field_u]) {
-              param2 = param2 - this.field_q.field_X[param3.field_u] / 20;
+            if (1 == this.battle.playerSpellbook[unit.ownerPlayer]) {
+              damage = damage - this.battle.field_X[unit.ownerPlayer] / 20;
             }
-            if (this.field_q.field_x[param3.field_u] == 7) {
-              if (this.field_I == 135) {
+            if (this.battle.playerSpellbook[unit.ownerPlayer] == 7) {
+              if (this.spellType == 135) {
                 var5_intLifetime1 = 0;
-                param2 = param2 - this.field_q.field_X[param3.field_u] / 20;
+                damage = damage - this.battle.field_X[unit.ownerPlayer] / 20;
               }
-              if (this.field_I == 133) {
-                param2 = param2 - this.field_q.field_X[param3.field_u] / 10;
+              if (this.spellType == 133) {
+                damage = damage - this.battle.field_X[unit.ownerPlayer] / 10;
                 var5_intLifetime1 = 0;
               }
             }
-            if (var5_intLifetime1 > param2) {
-              param2 = var5_intLifetime1;
+            if (var5_intLifetime1 > damage) {
+              damage = var5_intLifetime1;
             }
           }
-          if (param3.field_jb == 13 && (this.field_I == 16 ||
-            this.field_I == 15)) {
-            param2 = 0;
+          if (unit.unitType == 13 && (this.spellType == 16 ||
+            this.spellType == 15)) {
+            damage = 0;
           }
-          if (!param1) {
+          if (!obfuscationGuard) {
             return;
           }
-          if ((param3.field_jb == 3 ||
-            param3.field_jb == 14) &&
-            (30 == this.field_I ||
-            this.field_I == 31 ||
-            this.field_I == 33 ||
-            this.field_I == 70 ||
-            this.field_I == 93)) {
-            param2 = 0;
+          if ((unit.unitType == 3 ||
+            unit.unitType == 14) &&
+            (30 == this.spellType ||
+            this.spellType == 31 ||
+            this.spellType == 33 ||
+            this.spellType == 70 ||
+            this.spellType == 93)) {
+            damage = 0;
           }
-          if (param3.field_U) {
-            if (52 == this.field_I) {
-              param3.recordDamage(124, param2, this.field_n);
-              if (param0 >= 0) {
-                this.field_q.field_K[param0] = this.field_q.field_K[param0] + param2;
+          if (unit.field_U) {
+            if (52 == this.spellType) {
+              unit.recordDamage(124, damage, this.damageSourceId);
+              if (attackerPlayer >= 0) {
+                this.battle.field_K[attackerPlayer] = this.battle.field_K[attackerPlayer] + damage;
               }
-              if (param3.hasNoLinkedUnit(46)) {
-                this.field_q.field_db[param3.field_T] = this.field_q.field_db[param3.field_T] + param2;
+              if (unit.hasNoLinkedUnit(46)) {
+                this.battle.field_db[unit.unitId] = this.battle.field_db[unit.unitId] + damage;
               }
-              this.field_q.field_tb = this.field_q.field_tb + param2;
-              param2 = 0;
+              this.battle.field_tb = this.battle.field_tb + damage;
+              damage = 0;
             }
-            if (this.field_I == 54 ||
-              this.field_I == 55 ||
-              this.field_I == 111) {
-              param3.recordDamage(-19, -param2, this.field_n);
-              if (0 <= param0) {
-                this.field_q.field_g[param0] = this.field_q.field_g[param0] + param2;
+            if (this.spellType == 54 ||
+              this.spellType == 55 ||
+              this.spellType == 111) {
+              unit.recordDamage(-19, -damage, this.damageSourceId);
+              if (0 <= attackerPlayer) {
+                this.battle.field_g[attackerPlayer] = this.battle.field_g[attackerPlayer] + damage;
               }
-              if (param3.hasNoLinkedUnit(102)) {
-                this.field_q.field_s[param3.field_T] = this.field_q.field_s[param3.field_T] - param2;
+              if (unit.hasNoLinkedUnit(102)) {
+                this.battle.field_s[unit.unitId] = this.battle.field_s[unit.unitId] - damage;
               }
-              param2 = 0;
+              damage = 0;
             }
           }
-          if (param2 > 0 &&
-            this.field_t != null &&
-            !param3.field_U &&
-            param3.field_jb != 2 &&
-            param3.field_jb != 11 &&
-            param3.field_jb != 25 &&
-            param3.field_jb != 39 &&
-            param3.field_jb != 6 &&
-            param3.field_jb != 32) {
-            if (52 == this.field_I) {
-              if (param3 == this.field_t) {
-                param2 = 0;
+          if (damage > 0 &&
+            this.owner != null &&
+            !unit.field_U &&
+            unit.unitType != 2 &&
+            unit.unitType != 11 &&
+            unit.unitType != 25 &&
+            unit.unitType != 39 &&
+            unit.unitType != 6 &&
+            unit.unitType != 32) {
+            if (52 == this.spellType) {
+              if (unit == this.owner) {
+                damage = 0;
               }
-              var5_intLifetime2 = param2;
-              if (var5_intLifetime2 > this.field_t.field_ib) {
-                var5_intLifetime2 = this.field_t.field_ib;
+              var5_intLifetime2 = damage;
+              if (var5_intLifetime2 > this.owner.health) {
+                var5_intLifetime2 = this.owner.health;
               }
               if (0 > var5_intLifetime2) {
                 var5_intLifetime2 = 0;
               }
-              this.field_t.field_x = this.field_t.field_x - var5_intLifetime2;
-              this.field_q.field_g[param0] = this.field_q.field_g[param0] + var5_intLifetime2;
-              if (param3.hasNoLinkedUnit(121)) {
-                this.field_q.field_s[param3.field_T] = this.field_q.field_s[param3.field_T] + var5_intLifetime2;
+              this.owner.pendingDamage = this.owner.pendingDamage - var5_intLifetime2;
+              this.battle.field_g[attackerPlayer] = this.battle.field_g[attackerPlayer] + var5_intLifetime2;
+              if (unit.hasNoLinkedUnit(121)) {
+                this.battle.field_s[unit.unitId] = this.battle.field_s[unit.unitId] + var5_intLifetime2;
               }
               if ((var8 != 0) &&
-                (this.field_t.field_jb == 16)) {
-                this.field_t.field_x = this.field_t.field_x - (param2 >> 1);
-                this.field_q.field_p[param0] = this.field_q.field_p[param0] + (param2 >> 1);
-                this.field_q.field_g[param0] = this.field_q.field_g[param0] + (param2 >> 1);
-                if (param3.hasNoLinkedUnit(68)) {
-                  this.field_q.field_s[param3.field_T] = this.field_q.field_s[param3.field_T] + (param2 >> 1);
+                (this.owner.unitType == 16)) {
+                this.owner.pendingDamage = this.owner.pendingDamage - (damage >> 1);
+                this.battle.field_p[attackerPlayer] = this.battle.field_p[attackerPlayer] + (damage >> 1);
+                this.battle.field_g[attackerPlayer] = this.battle.field_g[attackerPlayer] + (damage >> 1);
+                if (unit.hasNoLinkedUnit(68)) {
+                  this.battle.field_s[unit.unitId] = this.battle.field_s[unit.unitId] + (damage >> 1);
                 }
               }
             } else {
-              if (this.field_t.field_jb == 16) {
-                this.field_t.field_x = this.field_t.field_x - (param2 >> 1);
-                this.field_q.field_p[param0] = this.field_q.field_p[param0] + (param2 >> 1);
-                this.field_q.field_g[param0] = this.field_q.field_g[param0] + (param2 >> 1);
-                if (param3.hasNoLinkedUnit(68)) {
-                  this.field_q.field_s[param3.field_T] = this.field_q.field_s[param3.field_T] + (param2 >> 1);
+              if (this.owner.unitType == 16) {
+                this.owner.pendingDamage = this.owner.pendingDamage - (damage >> 1);
+                this.battle.field_p[attackerPlayer] = this.battle.field_p[attackerPlayer] + (damage >> 1);
+                this.battle.field_g[attackerPlayer] = this.battle.field_g[attackerPlayer] + (damage >> 1);
+                if (unit.hasNoLinkedUnit(68)) {
+                  this.battle.field_s[unit.unitId] = this.battle.field_s[unit.unitId] + (damage >> 1);
                 }
               }
             }
           }
-          if (0 < param2 &&
-            this.field_t != null &&
-            null != this.field_t.field_s &&
-            this.field_t.field_s.field_jb == 16 &&
-            !param3.field_U &&
-            2 != param3.field_jb &&
-            param3.field_jb != 11 &&
-            param3.field_jb != 25 &&
-            39 != param3.field_jb &&
-            param3.field_jb != 6 &&
-            param3.field_jb != 32) {
-            this.field_t.field_s.field_x = this.field_t.field_s.field_x - (param2 >> 1);
-            this.field_q.field_p[param0] = this.field_q.field_p[param0] + (param2 >> 1);
-            this.field_q.field_g[param0] = this.field_q.field_g[param0] + (param2 >> 1);
-            if (param3.hasNoLinkedUnit(34)) {
-              this.field_q.field_s[param3.field_T] = this.field_q.field_s[param3.field_T] + (param2 >> 1);
+          if (0 < damage &&
+            this.owner != null &&
+            null != this.owner.linkedUnit &&
+            this.owner.linkedUnit.unitType == 16 &&
+            !unit.field_U &&
+            2 != unit.unitType &&
+            unit.unitType != 11 &&
+            unit.unitType != 25 &&
+            39 != unit.unitType &&
+            unit.unitType != 6 &&
+            unit.unitType != 32) {
+            this.owner.linkedUnit.pendingDamage = this.owner.linkedUnit.pendingDamage - (damage >> 1);
+            this.battle.field_p[attackerPlayer] = this.battle.field_p[attackerPlayer] + (damage >> 1);
+            this.battle.field_g[attackerPlayer] = this.battle.field_g[attackerPlayer] + (damage >> 1);
+            if (unit.hasNoLinkedUnit(34)) {
+              this.battle.field_s[unit.unitId] = this.battle.field_s[unit.unitId] + (damage >> 1);
             }
           }
           boolean decompiledFrameRemainder0 = true;
-          if (this.field_I == 66) {
-            if (param3.field_jb == 2 ||
-              param3.field_jb == 11 ||
-              param3.field_jb == 25 ||
-              param3.field_jb == 6 ||
-              param3.field_jb == 11 ||
-              param3.field_jb == 25 ||
-              39 == param3.field_jb ||
-              param3.field_jb == 6 ||
-              param3.field_jb == 32) {
-              param2 = 0;
+          if (this.spellType == 66) {
+            if (unit.unitType == 2 ||
+              unit.unitType == 11 ||
+              unit.unitType == 25 ||
+              unit.unitType == 6 ||
+              unit.unitType == 11 ||
+              unit.unitType == 25 ||
+              39 == unit.unitType ||
+              unit.unitType == 6 ||
+              unit.unitType == 32) {
+              damage = 0;
               decompiledFrameRemainder0 = (var8 != 0);
             }
-            if ((decompiledFrameRemainder0) && (!param3.field_U &&
-              param3.field_jb != 16)) {
-              param2 = -param2;
-              if (param3.field_p < -param2 + param3.field_ib) {
-                param2 = -param3.field_p + param3.field_ib;
-                if (0 < param2) {
-                  param2 = 0;
+            if ((decompiledFrameRemainder0) && (!unit.field_U &&
+              unit.unitType != 16)) {
+              damage = -damage;
+              if (unit.field_p < -damage + unit.health) {
+                damage = -unit.field_p + unit.health;
+                if (0 < damage) {
+                  damage = 0;
                 }
               }
             }
           }
-          if (this.field_I == 61 ||
-            this.field_I == 64 ||
-            this.field_I == 63 ||
-            this.field_I == 60 ||
-            this.field_I == 66) {
-            if (param3.field_U) {
-              param2 = param2 * 2;
+          if (this.spellType == 61 ||
+            this.spellType == 64 ||
+            this.spellType == 63 ||
+            this.spellType == 60 ||
+            this.spellType == 66) {
+            if (unit.field_U) {
+              damage = damage * 2;
             }
-            if (param3.hasNoLinkedUnit(62)) {
-              if (this.field_q.field_x[param3.field_T] == 4 &&
-                -param3.field_x + (-param2 + param3.field_ib) <= 0) {
-                this.field_q.field_X[param3.field_T] = 0;
+            if (unit.hasNoLinkedUnit(62)) {
+              if (this.battle.playerSpellbook[unit.unitId] == 4 &&
+                -unit.pendingDamage + (-damage + unit.health) <= 0) {
+                this.battle.field_X[unit.unitId] = 0;
               }
-              if (param3.field_jb == 16 &&
-                66 == this.field_I) {
-                this.field_q.refreshTerrainArea(this.field_v, 64, (byte) 51, this.field_G);
+              if (unit.unitType == 16 &&
+                66 == this.spellType) {
+                this.battle.refreshTerrainArea(this.x, 64, (byte) 51, this.y);
               }
             }
           }
-          param3.recordDamage(-7, param2, this.field_n);
-          if (0 >= param2) {
-            if (param0 >= 0) {
-              this.field_q.field_g[param0] = this.field_q.field_g[param0] - param2;
+          unit.recordDamage(-7, damage, this.damageSourceId);
+          if (0 >= damage) {
+            if (attackerPlayer >= 0) {
+              this.battle.field_g[attackerPlayer] = this.battle.field_g[attackerPlayer] - damage;
             }
-            if (param3.hasNoLinkedUnit(93)) {
-              this.field_q.field_s[param3.field_T] = this.field_q.field_s[param3.field_T] - param2;
+            if (unit.hasNoLinkedUnit(93)) {
+              this.battle.field_s[unit.unitId] = this.battle.field_s[unit.unitId] - damage;
             }
           } else {
-            if (this.field_I == 31 &&
-              param3.field_q > 0) {
+            if (this.spellType == 31 &&
+              unit.field_q > 0) {
               this.field_x = 0;
             }
-            if (param3.hasNoLinkedUnit(118)) {
-              this.field_q.field_db[param3.field_T] = this.field_q.field_db[param3.field_T] + param2;
+            if (unit.hasNoLinkedUnit(118)) {
+              this.battle.field_db[unit.unitId] = this.battle.field_db[unit.unitId] + damage;
             }
-            if (param3.field_jb != 12 &&
+            if (unit.unitType != 12 &&
               !this.field_w) {
-              this.field_q.field_tb = this.field_q.field_tb + param2;
-              if (param0 >= 0) {
-                if (~param3.field_T != ~param0) {
-                  this.field_q.field_K[param0] = this.field_q.field_K[param0] + param2;
+              this.battle.field_tb = this.battle.field_tb + damage;
+              if (attackerPlayer >= 0) {
+                if (~unit.unitId != ~attackerPlayer) {
+                  this.battle.field_K[attackerPlayer] = this.battle.field_K[attackerPlayer] + damage;
                   if (var8 != 0) {
-                    this.field_q.field_K[param0] = this.field_q.field_K[param0] - param2;
+                    this.battle.field_K[attackerPlayer] = this.battle.field_K[attackerPlayer] - damage;
                   }
                 } else {
-                  this.field_q.field_K[param0] = this.field_q.field_K[param0] - param2;
+                  this.battle.field_K[attackerPlayer] = this.battle.field_K[attackerPlayer] - damage;
                 }
               }
             }
             if (!this.field_w) {
             }
-            if (34 == param3.field_jb && (this.field_I == 145 ||
-              this.field_I == 146)) {
-              param3.field_ib = 0;
-              param3.updateTurnLogic(param0, 104);
+            if (34 == unit.unitType && (this.spellType == 145 ||
+              this.spellType == 146)) {
+              unit.health = 0;
+              unit.updateTurnLogic(attackerPlayer, 104);
             }
-            if (null == param3.field_s) {
-              if (-param3.field_x + param3.field_ib > 0) {
-                this.field_q.field_n[param3.field_T] = this.field_q.field_n[param3.field_T] + 1;
+            if (null == unit.linkedUnit) {
+              if (-unit.pendingDamage + unit.health > 0) {
+                this.battle.field_n[unit.unitId] = this.battle.field_n[unit.unitId] + 1;
               }
-              if (param0 >= 0) {
-                if (~this.field_q.field_C == ~param3.field_T &&
-                  ~param0 != ~this.field_q.field_C) {
-                  this.field_q.field_Fb[param0] = this.field_q.field_Fb[param0] + param2;
+              if (attackerPlayer >= 0) {
+                if (~this.battle.healthiestPlayer == ~unit.unitId &&
+                  ~attackerPlayer != ~this.battle.healthiestPlayer) {
+                  this.battle.field_Fb[attackerPlayer] = this.battle.field_Fb[attackerPlayer] + damage;
                 }
-                if (~param3.field_T == ~this.field_q.field_bb &&
-                  ~this.field_q.field_bb != ~param0) {
-                  this.field_q.field_gb[param0] = this.field_q.field_gb[param0] + param2;
+                if (~unit.unitId == ~this.battle.weakestPlayer &&
+                  ~this.battle.weakestPlayer != ~attackerPlayer) {
+                  this.battle.field_gb[attackerPlayer] = this.battle.field_gb[attackerPlayer] + damage;
                 }
               }
             }
-            if (param0 >= 0 &&
+            if (attackerPlayer >= 0 &&
               !this.field_w) {
-              if (this.field_I == 77) {
-                this.field_q.field_wb[param0] = this.field_q.field_wb[param0] + param2;
+              if (this.spellType == 77) {
+                this.battle.field_wb[attackerPlayer] = this.battle.field_wb[attackerPlayer] + damage;
               }
-              if (this.field_t.isFlyingType(-26)) {
-                this.field_q.field_Nb[param0] = this.field_q.field_Nb[param0] + param2;
+              if (this.owner.isFlyingType(-26)) {
+                this.battle.field_Nb[attackerPlayer] = this.battle.field_Nb[attackerPlayer] + damage;
               }
-              if (null != this.field_t.field_s) {
-                this.field_q.field_T[param0] = this.field_q.field_T[param0] + param2;
+              if (null != this.owner.linkedUnit) {
+                this.battle.field_T[attackerPlayer] = this.battle.field_T[attackerPlayer] + damage;
               }
-              if (null != this.field_t.field_s &&
-                this.field_t.field_s != this.field_q.getUnitByOwner(this.field_q.getCurrentPlayer(false), param1)) {
+              if (null != this.owner.linkedUnit &&
+                this.owner.linkedUnit != this.battle.getUnitByOwner(this.battle.getCurrentPlayer(false), obfuscationGuard)) {
               }
             }
           }
-          if ((this.field_I == 23 ||
-            this.field_I == 82) &&
-            75 < param3.field_x) {
-            param3.field_x = 75;
+          if ((this.spellType == 23 ||
+            this.spellType == 82) &&
+            75 < unit.pendingDamage) {
+            unit.pendingDamage = 75;
           }
           boolean decompiledFrameCompleted1 = true;
           boolean decompiledFrameCompleted0 = true;
           regionExit1: {
-            if ((this.field_I == 54 ||
-              55 == this.field_I ||
-              this.field_I == 53 ||
-              this.field_I == 111) && (-param3.field_x + param3.field_ib <= 0 &&
-              !param3.hasNoLinkedUnit(71) &&
-              12 != param3.field_jb &&
-              param3.field_jb != 2 &&
-              param3.field_jb != 6 &&
-              param3.field_jb != 11 &&
-              param3.field_jb != 25 &&
-              param3.field_jb != 32 &&
-              param3.field_jb != 39 &&
-              param3.field_q <= 0)) {
+            if ((this.spellType == 54 ||
+              55 == this.spellType ||
+              this.spellType == 53 ||
+              this.spellType == 111) && (-unit.pendingDamage + unit.health <= 0 &&
+              !unit.hasNoLinkedUnit(71) &&
+              12 != unit.unitType &&
+              unit.unitType != 2 &&
+              unit.unitType != 6 &&
+              unit.unitType != 11 &&
+              unit.unitType != 25 &&
+              unit.unitType != 32 &&
+              unit.unitType != 39 &&
+              unit.field_q <= 0)) {
               var5_intLifetime3 = 1;
-              if (17 == param3.field_jb ||
-                param3.field_jb == 9) {
-                var6 = new IntrusiveDequeCursor(this.field_q.field_Kb);
+              if (17 == unit.unitType ||
+                unit.unitType == 9) {
+                var6 = new IntrusiveDequeCursor(this.battle.projectiles);
                 var7 = (SpellProjectile) (var6.first(-77));
                 while (var7 != null) {
-                  stackIn_564_0 = var7.field_I;
+                  stackIn_564_0 = var7.spellType;
                   stackIn_564_1 = 106;
                   if (var8 != 0) {
                     decompiledFrameCompleted1 = false;
                     break;
                   }
                   if (stackIn_564_0 == stackIn_564_1 &&
-                    param3 == var7.field_t) {
+                    unit == var7.owner) {
                     var5_intLifetime3 = 0;
                   }
                   var7 = (SpellProjectile) (var6.next(-18502));
                 }
               }
-              if ((decompiledFrameCompleted1) && (!param3.field_U &&
+              if ((decompiledFrameCompleted1) && (!unit.field_U &&
                 var5_intLifetime3 != 0)) {
-                if (param3.isFlyingType(-26)) {
-                  param3.field_jb = 26;
+                if (unit.isFlyingType(-26)) {
+                  unit.unitType = 26;
                 }
-                if (param3.isAirborneOrHovering(32)) {
-                  var6_int = -this.field_v + param3.field_s.field_lb;
-                  var7_int = -(param3.field_s.field_Y / 2) + param3.field_Y / 2 + (param3.field_s.field_db - this.field_G);
-                  if (((param3.field_s.field_Y + param3.field_Y) * (param3.field_s.field_Y + param3.field_Y) >> 2) <= (var7_int * var7_int + var6_int * var6_int)) {
+                if (unit.isAirborneOrHovering(32)) {
+                  var6_int = -this.x + unit.linkedUnit.x;
+                  var7_int = -(unit.linkedUnit.size / 2) + unit.size / 2 + (unit.linkedUnit.y - this.y);
+                  if (((unit.linkedUnit.size + unit.size) * (unit.linkedUnit.size + unit.size) >> 2) <= (var7_int * var7_int + var6_int * var6_int)) {
                   }
                 }
-                param3.field_x = 0;
-                param3.field_U = true;
-                param3.field_s = this.field_q.getUnitByOwner(this.field_t.field_u, param1);
-                param3.field_u = this.field_t.field_u;
-                param3.field_J = false;
-                param3.buildSprites(12, true);
-                param3.field_ib = param3.field_ib / 4;
-                if (param3.field_jb == 9) {
-                  param3.field_jb = 7;
-                  var6Lifetime1 = new IntrusiveDequeCursor(this.field_q.field_i);
+                unit.pendingDamage = 0;
+                unit.field_U = true;
+                unit.linkedUnit = this.battle.getUnitByOwner(this.owner.ownerPlayer, obfuscationGuard);
+                unit.ownerPlayer = this.owner.ownerPlayer;
+                unit.field_J = false;
+                unit.buildSprites(12, true);
+                unit.health = unit.health / 4;
+                if (unit.unitType == 9) {
+                  unit.unitType = 7;
+                  var6Lifetime1 = new IntrusiveDequeCursor(this.battle.units);
                   var7_ref = (BattleUnit) (var6Lifetime1.first(-38));
                   while (var7_ref != null) {
-                    stackIn_552_0 = var7_ref.field_s;
-                    stackIn_552_1 = param3.field_s;
+                    stackIn_552_0 = var7_ref.linkedUnit;
+                    stackIn_552_1 = unit.linkedUnit;
                     if (var8 == 0) {
                       if (stackIn_552_0 == stackIn_552_1 &&
                         var7_ref.field_U &&
-                        17 == var7_ref.field_jb) {
+                        17 == var7_ref.unitType) {
                       }
                       var7_ref = (BattleUnit) (var6Lifetime1.next(-18502));
                       continue;
@@ -7934,27 +7934,27 @@ final class SpellProjectile extends DualLinkNode {
                     while (true) {
                       if (stackIn_552_0 == stackIn_552_1 &&
                         var7_ref.field_U &&
-                        var7_ref.field_jb == 7) {
+                        var7_ref.unitType == 7) {
                       }
                       var7_ref = (BattleUnit) (var6Lifetime1.next(-18502));
                       break regionExit1;
                     }
                   }
                 }
-                if (param3.field_jb == 17) {
-                  var6Lifetime1Lifetime1 = new IntrusiveDequeCursor(this.field_q.field_i);
+                if (unit.unitType == 17) {
+                  var6Lifetime1Lifetime1 = new IntrusiveDequeCursor(this.battle.units);
                   var7_refLifetime1 = (BattleUnit) (var6Lifetime1Lifetime1.first(-62));
                   while (null != var7_refLifetime1) {
-                    stackIn_563_0 = param3.field_s;
+                    stackIn_563_0 = unit.linkedUnit;
                     if (var8 != 0) {
                       decompiledFrameCompleted0 = false;
                       break;
                     }
                     stackIn_552_0Lifetime1 = stackIn_563_0;
-                    stackIn_552_1Lifetime1 = var7_refLifetime1.field_s;
+                    stackIn_552_1Lifetime1 = var7_refLifetime1.linkedUnit;
                     if (stackIn_552_0Lifetime1 == stackIn_552_1Lifetime1 &&
                       var7_refLifetime1.field_U &&
-                      var7_refLifetime1.field_jb == 7) {
+                      var7_refLifetime1.unitType == 7) {
                     }
                     var7_refLifetime1 = (BattleUnit) (var6Lifetime1Lifetime1.next(-18502));
                   }
@@ -7964,30 +7964,30 @@ final class SpellProjectile extends DualLinkNode {
           }
           if ((decompiledFrameCompleted1) &&
             (decompiledFrameCompleted0)) {
-            if (!this.field_q.field_Z) {
+            if (!this.battle.field_Z) {
               return;
             }
-            stackIn_563_0 = (BattleUnit) (param3);
+            stackIn_563_0 = (BattleUnit) (unit);
           }
           if (decompiledFrameCompleted1) {
-            stackIn_564_0 = -stackIn_563_0.field_x;
-            stackIn_564_1 = param3.field_ib;
+            stackIn_564_0 = -stackIn_563_0.pendingDamage;
+            stackIn_564_1 = unit.health;
           }
           if (stackIn_564_0 + stackIn_564_1 < 0 &&
-            param3.hasNoLinkedUnit(81) &&
-            !param3.isTower((byte) 104) &&
+            unit.hasNoLinkedUnit(81) &&
+            !unit.isTower((byte) 104) &&
             !this.field_w &&
-            this.field_t != null &&
-            Math.abs(-param3.field_X + this.field_t.field_X) > 10240) {
-            this.field_q.field_Z = false;
+            this.owner != null &&
+            Math.abs(-unit.subpixelX + this.owner.subpixelX) > 10240) {
+            this.battle.field_Z = false;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5_ref = decompiledCaughtException;
           stackIn_587_0 = var5_ref;
-          stackIn_587_1 = new StringBuilder().append("mi.I(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_587_1 = new StringBuilder().append("mi.I(").append(attackerPlayer).append(',').append(obfuscationGuard).append(',').append(damage).append(',');
+          if (unit == null) {
             stackIn_588_2 = "null";
           } else {
             stackIn_588_2 = "{...}";
@@ -8004,95 +8004,95 @@ final class SpellProjectile extends DualLinkNode {
           if (this.isPersistentType(125)) {
             return false;
           }
-          if (29 == this.field_I &&
+          if (29 == this.spellType &&
             this.field_H == 0 &&
-            this.field_y >= 30) {
+            this.ageTicks >= 30) {
             return false;
           }
-          if (68 == this.field_I && (250 <= this.field_y ||
-            0 == this.field_y)) {
+          if (68 == this.spellType && (250 <= this.ageTicks ||
+            0 == this.ageTicks)) {
             return false;
           }
-          if (15 == this.field_I && (this.field_y >= 250 ||
-            this.field_y == 0)) {
+          if (15 == this.spellType && (this.ageTicks >= 250 ||
+            this.ageTicks == 0)) {
             return false;
           }
-          if (this.field_I == 16 &&
-            300 <= this.field_y) {
+          if (this.spellType == 16 &&
+            300 <= this.ageTicks) {
             return false;
           }
-          if (this.field_I == 165 &&
-            this.field_y >= 300) {
+          if (this.spellType == 165 &&
+            this.ageTicks >= 300) {
             return false;
           }
-          if (this.field_I == 3 &&
-            this.field_y >= 25) {
+          if (this.spellType == 3 &&
+            this.ageTicks >= 25) {
             return false;
           }
-          if (this.field_I == 106) {
+          if (this.spellType == 106) {
             return false;
           }
-          if (this.field_I == 121) {
+          if (this.spellType == 121) {
             return false;
           }
-          if (this.field_I == 127) {
+          if (this.spellType == 127) {
             return false;
           }
-          if (148 == this.field_I) {
+          if (148 == this.spellType) {
             return false;
           }
-          if (this.field_I == 117) {
+          if (this.spellType == 117) {
             return false;
           }
-          if (this.field_I == 149) {
+          if (this.spellType == 149) {
             return false;
           }
-          if (param0 == ~this.field_I) {
+          if (param0 == ~this.spellType) {
             return false;
           }
-          if (this.field_I == 107) {
+          if (this.spellType == 107) {
             return false;
           }
-          if (this.field_I == 126) {
+          if (this.spellType == 126) {
             return false;
           }
-          if (this.field_I == 69 && (this.field_y >= 250 ||
-            this.field_y == 0)) {
+          if (this.spellType == 69 && (this.ageTicks >= 250 ||
+            this.ageTicks == 0)) {
             return false;
           }
-          if (70 == this.field_I) {
+          if (70 == this.spellType) {
             return false;
           }
-          if (55 == this.field_I) {
+          if (55 == this.spellType) {
             return false;
           }
-          if (this.field_I == 111) {
+          if (this.spellType == 111) {
             return false;
           }
-          if (56 == this.field_I) {
-            stackIn_118_0 = !(this.field_t.field_ib >= 250);
+          if (56 == this.spellType) {
+            stackIn_118_0 = !(this.owner.health >= 250);
             return stackIn_118_0;
           }
-          if (this.field_I == 157) {
+          if (this.spellType == 157) {
             return false;
           }
-          if (this.field_I == 168) {
+          if (this.spellType == 168) {
             return false;
           }
-          if (this.field_I == 123) {
+          if (this.spellType == 123) {
             return false;
           }
-          if ((this.field_I == 19 ||
-            this.field_I == 142 ||
-            this.field_I == 134 ||
-            62 == this.field_I ||
-            47 == this.field_I ||
-            this.field_I == 71 ||
-            this.field_I == 36) &&
-            (this.field_y == 100 ||
-            this.field_y == 200 ||
-            300 == this.field_y ||
-            this.field_y == 400)) {
+          if ((this.spellType == 19 ||
+            this.spellType == 142 ||
+            this.spellType == 134 ||
+            62 == this.spellType ||
+            47 == this.spellType ||
+            this.spellType == 71 ||
+            this.spellType == 36) &&
+            (this.ageTicks == 100 ||
+            this.ageTicks == 200 ||
+            300 == this.ageTicks ||
+            this.ageTicks == 400)) {
             return false;
           }
           return true;
@@ -8103,45 +8103,45 @@ final class SpellProjectile extends DualLinkNode {
         }
     }
 
-    private final void updateFlightSound(int param0, byte param1) {
+    private final void updateFlightSound(int param0, byte obfuscationGuard) {
         RuntimeException decompiledCaughtException = null;
         PcmSample var3 = null;
         RuntimeException var3_ref = null;
         try {
-          if (this.field_q.field_sb != null) {
-            var3 = this.field_q.field_sb[220];
-            if ((this.field_I == 11 ||
-              this.field_I == 44 ||
-              this.field_I == 18) && (this.field_y > 25 &&
-              this.field_y < 250)) {
-              var3 = this.field_q.field_sb[226];
+          if (this.battle.projectileSamples != null) {
+            var3 = this.battle.projectileSamples[220];
+            if ((this.spellType == 11 ||
+              this.spellType == 44 ||
+              this.spellType == 18) && (this.ageTicks > 25 &&
+              this.ageTicks < 250)) {
+              var3 = this.battle.projectileSamples[226];
             }
             if (null == var3) {
               return;
             }
-            this.field_J = this.field_J + 1;
-            if (this.field_D == null ||
-              this.field_D.isSamplePositionOutOfRange() ||
-              this.field_J > 5) {
-              this.field_J = 0;
-              this.field_D = this.createFlightSoundStream(var3, 19227);
-              if (this.field_D != null) {
-                ValidationHelpWidget.playEffectStream(this.field_D, (byte) 68);
+            this.flightSoundTicks = this.flightSoundTicks + 1;
+            if (this.flightSoundStream == null ||
+              this.flightSoundStream.isSamplePositionOutOfRange() ||
+              this.flightSoundTicks > 5) {
+              this.flightSoundTicks = 0;
+              this.flightSoundStream = this.createFlightSoundStream(var3, 19227);
+              if (this.flightSoundStream != null) {
+                ValidationHelpWidget.playEffectStream(this.flightSoundStream, (byte) 68);
               }
             }
           }
-          if (param1 != 34) {
+          if (obfuscationGuard != 34) {
             this.onHitUnit(34, true, -6, (BattleUnit) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw CommonUiHelpers.wrapException((Throwable) ((Object) var3_ref), "mi.D(" + param0 + ',' + param1 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var3_ref), "mi.D(" + param0 + ',' + obfuscationGuard + ')');
         }
     }
 
-    private final void drawUnitMarkers(byte param0) {
+    private final void drawUnitMarkers(byte obfuscationGuard) {
         int stackIn_14_0 = 0;
         int stackIn_16_0 = 0;
         int stackIn_20_0 = 0;
@@ -8165,16 +8165,16 @@ final class SpellProjectile extends DualLinkNode {
           var2 = ScreenSwitchHelpers.field_f[0].toRgbSprite();
           var3 = ScreenSwitchHelpers.field_f[5].toRgbSprite();
           var4 = DualLinkDeque.field_b[2].toRgbSprite();
-          var5 = new IntrusiveDequeCursor(this.field_q.field_i);
+          var5 = new IntrusiveDequeCursor(this.battle.units);
           var6_ref_ml = (BattleUnit) (var5.first(-36));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var6_ref_ml == null))) {
             stackIn_14_0 = 0;
             if (var12 == 0) {
-              if (stackIn_14_0 < var6_ref_ml.field_ib) {
-                this.field_q.stampUnitMask(-114, var6_ref_ml);
+              if (stackIn_14_0 < var6_ref_ml.health) {
+                this.battle.stampUnitMask(-114, var6_ref_ml);
               } else {
-                this.field_q.eraseUnitMask(var6_ref_ml, 0);
+                this.battle.eraseUnitMask(var6_ref_ml, 0);
               }
               var6_ref_ml = (BattleUnit) (var5.next(-18502));
               continue;
@@ -8185,7 +8185,7 @@ final class SpellProjectile extends DualLinkNode {
             stackIn_14_0 = 2;
           }
           var6 = stackIn_14_0;
-          var7 = 36 % ((-26 - param0) / 51);
+          var7 = 36 % ((-26 - obfuscationGuard) / 51);
           scanLoop1: while (true) {
             stackIn_16_0 = 0;
             if (stackIn_16_0 <= var6) {
@@ -8206,15 +8206,15 @@ final class SpellProjectile extends DualLinkNode {
                     stackIn_20_1 = var6;
                     if (stackIn_20_0 != stackIn_20_1) {
                       if (var6 == 1) {
-                        if (!this.field_q.spriteOverlapsTerrain(this.field_G - var11 - 8, 2, -8 + (var10 + this.field_v), var3)) {
-                          this.field_q.carveTerrainAndSprite(-8 + (-var11 + this.field_G), -90, this.field_v + var10 - 8, var3);
+                        if (!this.battle.spriteOverlapsTerrain(this.y - var11 - 8, 2, -8 + (var10 + this.x), var3)) {
+                          this.battle.carveTerrainAndSprite(-8 + (-var11 + this.y), -90, this.x + var10 - 8, var3);
                         }
-                      } else if (!this.field_q.spriteOverlapsTerrain(-var11 + (this.field_G - 16), 2, this.field_v + var10 - 16, var4)) {
-                        this.field_q.carveTerrainAndSprite(-16 - var11 + this.field_G, -11, this.field_v + var10 - 16, var4);
+                      } else if (!this.battle.spriteOverlapsTerrain(-var11 + (this.y - 16), 2, this.x + var10 - 16, var4)) {
+                        this.battle.carveTerrainAndSprite(-16 - var11 + this.y, -11, this.x + var10 - 16, var4);
                       }
                     } else {
-                      if (!this.field_q.spriteOverlapsTerrain(-8 - var11 + this.field_G, 2, var10 + this.field_v - 8, var2)) {
-                        this.field_q.carveTerrainAndSprite(-8 + this.field_G - var11, -43, -8 + var10 + this.field_v, var2);
+                      if (!this.battle.spriteOverlapsTerrain(-8 - var11 + this.y, 2, var10 + this.x - 8, var2)) {
+                        this.battle.carveTerrainAndSprite(-8 + this.y - var11, -43, -8 + var10 + this.x, var2);
                       }
                     }
                     var9 += 64;
@@ -8233,11 +8233,11 @@ final class SpellProjectile extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2_ref), "mi.C(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2_ref), "mi.C(" + obfuscationGuard + ')');
         }
     }
 
-    final void draw(int param0, int param1, int param2) {
+    final void draw(int offsetY, int obfuscationGuard, int offsetX) {
         Sprite stackIn_473_0 = null;
         int stackIn_473_1 = 0;
         int stackIn_474_2 = 0;
@@ -8275,11 +8275,11 @@ final class SpellProjectile extends DualLinkNode {
         int stackIn_948_1Lifetime1;
         var16 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          if (this.field_y < 20) {
-            if (!((this.field_I != 93) &&
-              (91 != this.field_I) &&
-              (this.field_I != 92) &&
-              (this.field_I != 113))) {
+          if (this.ageTicks < 20) {
+            if (!((this.spellType != 93) &&
+              (91 != this.spellType) &&
+              (this.spellType != 92) &&
+              (this.spellType != 113))) {
               return;
             }
           }
@@ -8325,17 +8325,17 @@ final class SpellProjectile extends DualLinkNode {
                                                                                         regionExit40: {
                                                                                           regionExit41: {
                                                                                             regionExit42: {
-                                                                                              var4_int = -47 % ((param1 - 8) / 33);
-                                                                                              var5 = this.field_I;
+                                                                                              var4_int = -47 % ((obfuscationGuard - 8) / 33);
+                                                                                              var5 = this.spellType;
                                                                                               if (var5 == 167) {
                                                                                                 var5 = 86;
                                                                                                 if ((this.field_x & 8) > 0) {
                                                                                                   var5++;
                                                                                                 }
                                                                                                 regionExit43: {
-                                                                                                  var6_int = this.field_v - (-param2 + 20);
-                                                                                                  var7 = param0 + this.field_G - 20;
-                                                                                                  if (this.field_u > 0) {
+                                                                                                  var6_int = this.x - (-offsetX + 20);
+                                                                                                  var7 = offsetY + this.y - 20;
+                                                                                                  if (this.velocityX > 0) {
                                                                                                     LoginLoadingHelpers.field_g[var5].drawTransparent(var6_int, var7);
                                                                                                     if (var16 == 0) {
                                                                                                       break regionExit43;
@@ -8345,7 +8345,7 @@ final class SpellProjectile extends DualLinkNode {
                                                                                                 }
                                                                                                 if (this.field_x < 200) {
                                                                                                   var8 = 65;
-                                                                                                  var9 = this.field_q.getArenaTheme(-31497);
+                                                                                                  var9 = this.battle.getArenaTheme(-31497);
                                                                                                   if (var9 == 6) {
                                                                                                     var8 = 70;
                                                                                                   }
@@ -8375,7 +8375,7 @@ final class SpellProjectile extends DualLinkNode {
                                                                                                   }
                                                                                                   stackIn_473_0 = LoginLoadingHelpers.field_g[var8];
                                                                                                   stackIn_473_1 = 20 + var6_int;
-                                                                                                  if (this.field_u <= 0) {
+                                                                                                  if (this.velocityX <= 0) {
                                                                                                     stackIn_474_2 = -4;
                                                                                                   } else {
                                                                                                     stackIn_474_2 = 0;
@@ -8383,7 +8383,7 @@ final class SpellProjectile extends DualLinkNode {
                                                                                                   ((Sprite) (Object) stackIn_473_0).drawQuarterSize(stackIn_473_1 - (-stackIn_474_2 - (int)(10.0 * Math.cos(0.2 * (double)this.field_x))), var7 + (int)(5.0 * Math.sin((double)this.field_x * 0.2)));
                                                                                                   stackIn_477_0 = LoginLoadingHelpers.field_g[var8].copyFlippedHorizontal();
                                                                                                   stackIn_477_1 = 20 + var6_int;
-                                                                                                  if (this.field_u <= 0) {
+                                                                                                  if (this.velocityX <= 0) {
                                                                                                     stackIn_478_2 = -4;
                                                                                                   } else {
                                                                                                     stackIn_478_2 = 0;
@@ -8629,7 +8629,7 @@ final class SpellProjectile extends DualLinkNode {
                                                                                                                                                       if (CheckboxPainter.field_p == null) {
                                                                                                                                                         return;
                                                                                                                                                       }
-                                                                                                                                                      CheckboxPainter.field_p[this.field_H].draw(param2 + (this.field_v - 50), this.field_G + (param0 - 50));
+                                                                                                                                                      CheckboxPainter.field_p[this.field_H].draw(offsetX + (this.x - 50), this.y + (offsetY - 50));
                                                                                                                                                       return;
                                                                                                                                                     } else {
                                                                                                                                                       if (var5 != 154) {
@@ -8751,7 +8751,7 @@ final class SpellProjectile extends DualLinkNode {
                                                                                                                                                     if (HighscoreEntry.field_j == null) {
                                                                                                                                                       return;
                                                                                                                                                     }
-                                                                                                                                                    HighscoreEntry.field_j[this.field_H].draw(-50 + (this.field_v + param2), -50 + (param0 + this.field_G));
+                                                                                                                                                    HighscoreEntry.field_j[this.field_H].draw(-50 + (this.x + offsetX), -50 + (offsetY + this.y));
                                                                                                                                                     if (var16 == 0) {
                                                                                                                                                       return;
                                                                                                                                                     }
@@ -8759,7 +8759,7 @@ final class SpellProjectile extends DualLinkNode {
                                                                                                                                                   if (DropdownItemList.field_cb == null) {
                                                                                                                                                     return;
                                                                                                                                                   }
-                                                                                                                                                  DropdownItemList.field_cb[this.field_H].draw(-50 + (param2 + this.field_v), param0 + (this.field_G - 50));
+                                                                                                                                                  DropdownItemList.field_cb[this.field_H].draw(-50 + (offsetX + this.x), offsetY + (this.y - 50));
                                                                                                                                                   if (var16 == 0) {
                                                                                                                                                     return;
                                                                                                                                                   }
@@ -8767,7 +8767,7 @@ final class SpellProjectile extends DualLinkNode {
                                                                                                                                                 if (DiskCacheRequest.field_H == null) {
                                                                                                                                                   return;
                                                                                                                                                 }
-                                                                                                                                                DiskCacheRequest.field_H[this.field_H].draw(this.field_v + param2 - 50, -50 + (param0 + this.field_G));
+                                                                                                                                                DiskCacheRequest.field_H[this.field_H].draw(this.x + offsetX - 50, -50 + (offsetY + this.y));
                                                                                                                                                 if (var16 == 0) {
                                                                                                                                                   return;
                                                                                                                                                 }
@@ -8778,7 +8778,7 @@ final class SpellProjectile extends DualLinkNode {
                                                                                                                                               if (this.field_H < 0) {
                                                                                                                                                 return;
                                                                                                                                               }
-                                                                                                                                              HotspotRegion.field_i[this.field_H].draw(-8 + this.field_v + param2, -8 + param0 + this.field_G);
+                                                                                                                                              HotspotRegion.field_i[this.field_H].draw(-8 + this.x + offsetX, -8 + offsetY + this.y);
                                                                                                                                               if (var16 == 0) {
                                                                                                                                                 return;
                                                                                                                                               }
@@ -8786,34 +8786,34 @@ final class SpellProjectile extends DualLinkNode {
                                                                                                                                             if (null == ResizableModalPanel.field_db) {
                                                                                                                                               return;
                                                                                                                                             }
-                                                                                                                                            ResizableModalPanel.field_db[this.field_H].draw(param2 + (this.field_v - 64), -128 + param0 + this.field_q.field_H);
+                                                                                                                                            ResizableModalPanel.field_db[this.field_H].draw(offsetX + (this.x - 64), -128 + offsetY + this.battle.arenaHeight);
                                                                                                                                             if (var16 == 0) {
                                                                                                                                               return;
                                                                                                                                             }
                                                                                                                                           }
-                                                                                                                                          if (this.field_F <= 0) {
+                                                                                                                                          if (this.velocityY <= 0) {
                                                                                                                                             return;
                                                                                                                                           }
                                                                                                                                           var5 = 0;
-                                                                                                                                          if ((this.field_q.field_N != null) &&
-                                                                                                                                            (this.field_t != null) &&
-                                                                                                                                            (this.field_t.field_s == null)) {
-                                                                                                                                            var5 = this.field_q.field_N[this.field_t.field_T][5] | (this.field_q.field_N[this.field_t.field_T][3] << 16 | this.field_q.field_N[this.field_t.field_T][4] << 8);
+                                                                                                                                          if ((this.battle.field_N != null) &&
+                                                                                                                                            (this.owner != null) &&
+                                                                                                                                            (this.owner.linkedUnit == null)) {
+                                                                                                                                            var5 = this.battle.field_N[this.owner.unitId][5] | (this.battle.field_N[this.owner.unitId][3] << 16 | this.battle.field_N[this.owner.unitId][4] << 8);
                                                                                                                                           }
-                                                                                                                                          var6_int = this.field_y - 64;
-                                                                                                                                          while (this.field_y > var6_int) {
-                                                                                                                                            var7 = var6_int * this.field_u / this.field_F + param2 + this.field_v;
-                                                                                                                                            var8 = this.field_G + (param0 + var6_int);
-                                                                                                                                            var9 = 14 * var6_int / this.field_F + 2;
-                                                                                                                                            var10 = 8 + 24 * var6_int / this.field_F;
+                                                                                                                                          var6_int = this.ageTicks - 64;
+                                                                                                                                          while (this.ageTicks > var6_int) {
+                                                                                                                                            var7 = var6_int * this.velocityX / this.velocityY + offsetX + this.x;
+                                                                                                                                            var8 = this.y + (offsetY + var6_int);
+                                                                                                                                            var9 = 14 * var6_int / this.velocityY + 2;
+                                                                                                                                            var10 = 8 + 24 * var6_int / this.velocityY;
                                                                                                                                             if (var16 != 0) {
                                                                                                                                               return;
                                                                                                                                             }
                                                                                                                                             if (var10 > 32) {
                                                                                                                                               var10 = 32;
                                                                                                                                             }
-                                                                                                                                            if (96 > -var6_int + this.field_F) {
-                                                                                                                                              var10 = 32 + this.field_F + (-var6_int - 96);
+                                                                                                                                            if (96 > -var6_int + this.velocityY) {
+                                                                                                                                              var10 = 32 + this.velocityY + (-var6_int - 96);
                                                                                                                                             }
                                                                                                                                             if ((var10 > 0) &&
                                                                                                                                               (0 < var5)) {
@@ -8829,7 +8829,7 @@ final class SpellProjectile extends DualLinkNode {
                                                                                                                                         if (null == ScreenTransitionHelpers.field_e) {
                                                                                                                                           return;
                                                                                                                                         }
-                                                                                                                                        ScreenTransitionHelpers.field_e[this.field_H].draw(param2 + (this.field_v - 50), -50 + (this.field_G + param0));
+                                                                                                                                        ScreenTransitionHelpers.field_e[this.field_H].draw(offsetX + (this.x - 50), -50 + (this.y + offsetY));
                                                                                                                                         if (var16 == 0) {
                                                                                                                                           return;
                                                                                                                                         }
@@ -8840,19 +8840,19 @@ final class SpellProjectile extends DualLinkNode {
                                                                                                                                       if (0 > this.field_H) {
                                                                                                                                         return;
                                                                                                                                       }
-                                                                                                                                      ArrayWidgetContainer.field_G[this.field_H].draw(-8 + this.field_v + param2, -8 + this.field_G + param0);
+                                                                                                                                      ArrayWidgetContainer.field_G[this.field_H].draw(-8 + this.x + offsetX, -8 + this.y + offsetY);
                                                                                                                                       if (var16 == 0) {
                                                                                                                                         return;
                                                                                                                                       }
                                                                                                                                     }
-                                                                                                                                    var5 = ButtonMenuDialog.highestOneBit((int)Math.sqrt((double)(this.field_u * this.field_u + this.field_F * this.field_F)) / 15, (byte) 124);
+                                                                                                                                    var5 = ButtonMenuDialog.highestOneBit((int)Math.sqrt((double)(this.velocityX * this.velocityX + this.velocityY * this.velocityY)) / 15, (byte) 124);
                                                                                                                                     var5++;
                                                                                                                                     var6 = new int[var5];
-                                                                                                                                    var6[0] = this.field_v + param2;
+                                                                                                                                    var6[0] = this.x + offsetX;
                                                                                                                                     var7_ref_int__ = new int[var5];
-                                                                                                                                    var7_ref_int__[0] = this.field_G + param0;
-                                                                                                                                    var6[-1 + var5] = -(this.field_u >> 4) + this.field_v + param2;
-                                                                                                                                    var7_ref_int__[-1 + var5] = -(this.field_F >> 4) + (param0 + this.field_G);
+                                                                                                                                    var7_ref_int__[0] = this.y + offsetY;
+                                                                                                                                    var6[-1 + var5] = -(this.velocityX >> 4) + this.x + offsetX;
+                                                                                                                                    var7_ref_int__[-1 + var5] = -(this.velocityY >> 4) + (offsetY + this.y);
                                                                                                                                     var8 = (var5 - 1) / 2;
                                                                                                                                     while (true) {
                                                                                                                                       regionExit69: {
@@ -8888,23 +8888,23 @@ final class SpellProjectile extends DualLinkNode {
                                                                                                                                       if (var16 != 0) {
                                                                                                                                         return;
                                                                                                                                       }
-                                                                                                                                      if (this.field_I != 112) {
-                                                                                                                                        if (this.field_I != 93) {
+                                                                                                                                      if (this.spellType != 112) {
+                                                                                                                                        if (this.spellType != 93) {
                                                                                                                                           if (var5 - 1 > var10) {
                                                                                                                                             SoftwareRasterizer.drawLine(var6[var10], var7_ref_int__[var10], var6[var10 + 1], var7_ref_int__[var10 + 1], 16777215);
                                                                                                                                           }
-                                                                                                                                          QuickChatPhraseCache.fillCircleMasked(8, (byte) 105, -(25 * (this.field_y * var10) / var5) + 255 >> 4, var6[var10], var7_ref_int__[var10]);
+                                                                                                                                          QuickChatPhraseCache.fillCircleMasked(8, (byte) 105, -(25 * (this.ageTicks * var10) / var5) + 255 >> 4, var6[var10], var7_ref_int__[var10]);
                                                                                                                                         } else {
                                                                                                                                           if (~(-1 + var5) < ~var10) {
                                                                                                                                             SoftwareRasterizer.drawLine(var6[var10], var7_ref_int__[var10], var6[1 + var10], var7_ref_int__[1 + var10], 16777215);
                                                                                                                                           }
-                                                                                                                                          QuickChatPhraseCache.fillCircleMasked(8, (byte) 125, 255 - var10 * (this.field_y * 25 - 500) / var5 >> 4, var6[var10], var7_ref_int__[var10]);
+                                                                                                                                          QuickChatPhraseCache.fillCircleMasked(8, (byte) 125, 255 - var10 * (this.ageTicks * 25 - 500) / var5 >> 4, var6[var10], var7_ref_int__[var10]);
                                                                                                                                         }
                                                                                                                                       } else {
                                                                                                                                         if (-1 + var5 > var10) {
-                                                                                                                                          SoftwareRasterizer.drawLineBlendedInclusive(var6[var10], var7_ref_int__[var10], var6[var10 + 1], var7_ref_int__[1 + var10], 16777215, -(this.field_y * 5 * var10 / var5) + 255 >> 4);
+                                                                                                                                          SoftwareRasterizer.drawLineBlendedInclusive(var6[var10], var7_ref_int__[var10], var6[var10 + 1], var7_ref_int__[1 + var10], 16777215, -(this.ageTicks * 5 * var10 / var5) + 255 >> 4);
                                                                                                                                         }
-                                                                                                                                        QuickChatPhraseCache.fillCircleMasked(8, (byte) 94, -(var10 * 5 * this.field_y / var5) + 255 >> 4, var6[var10], var7_ref_int__[var10]);
+                                                                                                                                        QuickChatPhraseCache.fillCircleMasked(8, (byte) 94, -(var10 * 5 * this.ageTicks / var5) + 255 >> 4, var6[var10], var7_ref_int__[var10]);
                                                                                                                                       }
                                                                                                                                       var10++;
                                                                                                                                       continue;
@@ -8916,13 +8916,13 @@ final class SpellProjectile extends DualLinkNode {
                                                                                                                                   var5 = 0;
                                                                                                                                   while (true) {
                                                                                                                                     if (5 > var5) {
-                                                                                                                                      QuickChatPhraseCache.fillCircleMasked(8, (byte) 66, 32, -16 + (param2 + this.field_v + (int)(Math.random() * 32.0)), param0 + this.field_G + ((int)(Math.random() * 32.0) - 16));
+                                                                                                                                      QuickChatPhraseCache.fillCircleMasked(8, (byte) 66, 32, -16 + (offsetX + this.x + (int)(Math.random() * 32.0)), offsetY + this.y + ((int)(Math.random() * 32.0) - 16));
                                                                                                                                       var5++;
                                                                                                                                       if (var16 == 0) {
                                                                                                                                         continue;
                                                                                                                                       }
                                                                                                                                     } else {
-                                                                                                                                      QuickChatPhraseCache.fillCircleMasked(16, (byte) 62, 64, param2 + this.field_v, param0 + this.field_G);
+                                                                                                                                      QuickChatPhraseCache.fillCircleMasked(16, (byte) 62, 64, offsetX + this.x, offsetY + this.y);
                                                                                                                                     }
                                                                                                                                     break;
                                                                                                                                   }
@@ -8932,125 +8932,125 @@ final class SpellProjectile extends DualLinkNode {
                                                                                                                                 }
                                                                                                                                 var5 = (int)(96.0 * Math.sin(0.01 * (6.28 * (double)this.field_x)));
                                                                                                                                 var6_int = (this.field_x & 12 & 15) >> 2;
-                                                                                                                                FlagSumHelpers.field_f[4 + var6_int].drawTransparent(this.field_v + param2 + (-64 + var5), param0 + this.field_G);
-                                                                                                                                FlagSumHelpers.field_f[4 + (3 & 3 + var6_int)].drawTransparent(-64 + this.field_v + (param2 - var5), this.field_G + param0);
-                                                                                                                                FlagSumHelpers.field_f[(3 & var6_int + 1) + 4].drawTransparentWithOpacity(-(6 * var5 / 10) + this.field_v + param2 - 64, this.field_G - (-param0 + 4), 192);
-                                                                                                                                FlagSumHelpers.field_f[4 + (3 & var6_int + 2)].drawTransparentWithOpacity(var5 * 4 / 10 + (-64 + (this.field_v + param2)), this.field_G - (-param0 + 8), 128);
-                                                                                                                                FlagSumHelpers.field_f[(var6_int + 3 & 3) + 4].drawTransparentWithOpacity(-64 + (param2 + this.field_v) - var5 * 2 / 10, this.field_G + param0 - 12, 96);
+                                                                                                                                FlagSumHelpers.field_f[4 + var6_int].drawTransparent(this.x + offsetX + (-64 + var5), offsetY + this.y);
+                                                                                                                                FlagSumHelpers.field_f[4 + (3 & 3 + var6_int)].drawTransparent(-64 + this.x + (offsetX - var5), this.y + offsetY);
+                                                                                                                                FlagSumHelpers.field_f[(3 & var6_int + 1) + 4].drawTransparentWithOpacity(-(6 * var5 / 10) + this.x + offsetX - 64, this.y - (-offsetY + 4), 192);
+                                                                                                                                FlagSumHelpers.field_f[4 + (3 & var6_int + 2)].drawTransparentWithOpacity(var5 * 4 / 10 + (-64 + (this.x + offsetX)), this.y - (-offsetY + 8), 128);
+                                                                                                                                FlagSumHelpers.field_f[(var6_int + 3 & 3) + 4].drawTransparentWithOpacity(-64 + (offsetX + this.x) - var5 * 2 / 10, this.y + offsetY - 12, 96);
                                                                                                                                 if (var16 == 0) {
                                                                                                                                   return;
                                                                                                                                 }
                                                                                                                               }
                                                                                                                               var5 = (int)(Math.sin((double)this.field_x * 6.28 * 0.01) * 96.0);
                                                                                                                               var6_int = (15 & (this.field_x & 12)) >> 2;
-                                                                                                                              FlagSumHelpers.field_f[4 + var6_int].drawTransparentWithOpacity(param2 + this.field_v - (64 - var5), this.field_G + param0, 64);
-                                                                                                                              FlagSumHelpers.field_f[4 + (3 & 3 + var6_int)].drawTransparentWithOpacity(-var5 - 64 + (param2 + this.field_v), param0 + this.field_G, 128);
-                                                                                                                              FlagSumHelpers.field_f[(1 + var6_int & 3) + 4].drawTransparentWithOpacity(-(6 * var5 / 10) + param2 + this.field_v - 64, -4 + param0 + this.field_G, 96);
-                                                                                                                              FlagSumHelpers.field_f[4 + (var6_int + 2 & 3)].drawTransparentWithOpacity(var5 * 4 / 10 + (this.field_v + param2 - 64), this.field_G + param0 - 8, 64);
-                                                                                                                              FlagSumHelpers.field_f[(var6_int + 3 & 3) + 4].drawTransparentWithOpacity(-64 + (param2 + this.field_v - 2 * var5 / 10), -12 + this.field_G + param0, 32);
+                                                                                                                              FlagSumHelpers.field_f[4 + var6_int].drawTransparentWithOpacity(offsetX + this.x - (64 - var5), this.y + offsetY, 64);
+                                                                                                                              FlagSumHelpers.field_f[4 + (3 & 3 + var6_int)].drawTransparentWithOpacity(-var5 - 64 + (offsetX + this.x), offsetY + this.y, 128);
+                                                                                                                              FlagSumHelpers.field_f[(1 + var6_int & 3) + 4].drawTransparentWithOpacity(-(6 * var5 / 10) + offsetX + this.x - 64, -4 + offsetY + this.y, 96);
+                                                                                                                              FlagSumHelpers.field_f[4 + (var6_int + 2 & 3)].drawTransparentWithOpacity(var5 * 4 / 10 + (this.x + offsetX - 64), this.y + offsetY - 8, 64);
+                                                                                                                              FlagSumHelpers.field_f[(var6_int + 3 & 3) + 4].drawTransparentWithOpacity(-64 + (offsetX + this.x - 2 * var5 / 10), -12 + this.y + offsetY, 32);
                                                                                                                               if (var16 == 0) {
                                                                                                                                 return;
                                                                                                                               }
                                                                                                                             }
                                                                                                                             var5 = (int)(Math.sin((double)this.field_x * 6.28 * 0.02) * 64.0);
                                                                                                                             var6_int = 3 & (12 & this.field_x) >> 2;
-                                                                                                                            FlagSumHelpers.field_f[var6_int + 4].drawTransparent(var5 + (-64 + param2 + this.field_v), param0 + this.field_G);
-                                                                                                                            FlagSumHelpers.field_f[4 + (3 & var6_int + 3)].drawTransparent(-var5 + (-64 + (param2 + this.field_v)), param0 + this.field_G);
-                                                                                                                            FlagSumHelpers.field_f[4 + (1 + var6_int & 3)].drawTransparentWithOpacity(-64 + (param2 + this.field_v - var5 * 6 / 10), this.field_G + param0 - 4, 192);
-                                                                                                                            FlagSumHelpers.field_f[4 + (var6_int + 2 & 3)].drawTransparentWithOpacity(-64 + (this.field_v + param2) + 4 * var5 / 10, param0 + this.field_G - 8, 128);
-                                                                                                                            FlagSumHelpers.field_f[4 + (3 & 3 + var6_int)].drawTransparentWithOpacity(-(2 * var5 / 10) + param2 + this.field_v - 64, this.field_G - (-param0 + 12), 96);
+                                                                                                                            FlagSumHelpers.field_f[var6_int + 4].drawTransparent(var5 + (-64 + offsetX + this.x), offsetY + this.y);
+                                                                                                                            FlagSumHelpers.field_f[4 + (3 & var6_int + 3)].drawTransparent(-var5 + (-64 + (offsetX + this.x)), offsetY + this.y);
+                                                                                                                            FlagSumHelpers.field_f[4 + (1 + var6_int & 3)].drawTransparentWithOpacity(-64 + (offsetX + this.x - var5 * 6 / 10), this.y + offsetY - 4, 192);
+                                                                                                                            FlagSumHelpers.field_f[4 + (var6_int + 2 & 3)].drawTransparentWithOpacity(-64 + (this.x + offsetX) + 4 * var5 / 10, offsetY + this.y - 8, 128);
+                                                                                                                            FlagSumHelpers.field_f[4 + (3 & 3 + var6_int)].drawTransparentWithOpacity(-(2 * var5 / 10) + offsetX + this.x - 64, this.y - (-offsetY + 12), 96);
                                                                                                                             if (var16 == 0) {
                                                                                                                               return;
                                                                                                                             }
                                                                                                                           }
                                                                                                                           var5 = (int)(Math.sin((double)this.field_x * 6.28 * 0.01) * 96.0);
                                                                                                                           var6_int = (this.field_x & 12) >> 2 & 3;
-                                                                                                                          FlagSumHelpers.field_f[4 + var6_int].drawTransparent(-64 + this.field_v - (-param2 - var5), this.field_G + param0);
-                                                                                                                          FlagSumHelpers.field_f[4 + (var6_int + 3 & 3)].drawTransparent(-var5 + param2 + (this.field_v - 64), this.field_G + param0);
-                                                                                                                          FlagSumHelpers.field_f[4 + (3 & var6_int + 1)].drawTransparentWithOpacity(this.field_v + param2 + (-64 - var5 * 6 / 10), this.field_G - (-param0 + 4), 192);
-                                                                                                                          FlagSumHelpers.field_f[4 + (3 & var6_int + 2)].drawTransparentWithOpacity(this.field_v + param2 - 64 + var5 * 4 / 10, -8 + (this.field_G + param0), 128);
-                                                                                                                          FlagSumHelpers.field_f[(3 + var6_int & 3) + 4].drawTransparentWithOpacity(param2 + this.field_v - (64 + var5 * 2 / 10), param0 + this.field_G - 12, 96);
+                                                                                                                          FlagSumHelpers.field_f[4 + var6_int].drawTransparent(-64 + this.x - (-offsetX - var5), this.y + offsetY);
+                                                                                                                          FlagSumHelpers.field_f[4 + (var6_int + 3 & 3)].drawTransparent(-var5 + offsetX + (this.x - 64), this.y + offsetY);
+                                                                                                                          FlagSumHelpers.field_f[4 + (3 & var6_int + 1)].drawTransparentWithOpacity(this.x + offsetX + (-64 - var5 * 6 / 10), this.y - (-offsetY + 4), 192);
+                                                                                                                          FlagSumHelpers.field_f[4 + (3 & var6_int + 2)].drawTransparentWithOpacity(this.x + offsetX - 64 + var5 * 4 / 10, -8 + (this.y + offsetY), 128);
+                                                                                                                          FlagSumHelpers.field_f[(3 + var6_int & 3) + 4].drawTransparentWithOpacity(offsetX + this.x - (64 + var5 * 2 / 10), offsetY + this.y - 12, 96);
                                                                                                                           if (var16 == 0) {
                                                                                                                             return;
                                                                                                                           }
                                                                                                                         }
                                                                                                                         if (this.field_x >= 128) {
-                                                                                                                          QuickChatPhraseCache.fillCircleMasked(128 + this.field_x, (byte) 63, 320 - this.field_x, param2 + this.field_v, this.field_G + param0);
+                                                                                                                          QuickChatPhraseCache.fillCircleMasked(128 + this.field_x, (byte) 63, 320 - this.field_x, offsetX + this.x, this.y + offsetY);
                                                                                                                           if (var16 == 0) {
                                                                                                                             return;
                                                                                                                           }
                                                                                                                         }
-                                                                                                                        QuickChatPhraseCache.fillCircleMasked(256 - this.field_x + 128, (byte) 72, this.field_x + 64, this.field_v + param2, param0 + this.field_G);
+                                                                                                                        QuickChatPhraseCache.fillCircleMasked(256 - this.field_x + 128, (byte) 72, this.field_x + 64, this.x + offsetX, offsetY + this.y);
                                                                                                                         if (var16 == 0) {
                                                                                                                           return;
                                                                                                                         }
                                                                                                                       }
-                                                                                                                      ChatLine.field_c[7 & this.field_v + this.field_G * 3].draw(-12 + param2 + this.field_v, param0 + this.field_G - 12);
-                                                                                                                      BufferedMessage.fillCircleOr(param0 + this.field_G, param2 + this.field_v, 256 - Math.abs(this.field_x), 2232, 16);
+                                                                                                                      ChatLine.field_c[7 & this.x + this.y * 3].draw(-12 + offsetX + this.x, offsetY + this.y - 12);
+                                                                                                                      BufferedMessage.fillCircleOr(offsetY + this.y, offsetX + this.x, 256 - Math.abs(this.field_x), 2232, 16);
                                                                                                                       if (var16 == 0) {
                                                                                                                         return;
                                                                                                                       }
                                                                                                                     }
-                                                                                                                    SoftwareRasterizer.fillRadialPaletteCircle(this.field_v + param2 << 4, param0 + this.field_G << 4, 112, 250 - this.field_x, StatusMessageHelpers.field_a);
+                                                                                                                    SoftwareRasterizer.fillRadialPaletteCircle(this.x + offsetX << 4, offsetY + this.y << 4, 112, 250 - this.field_x, StatusMessageHelpers.field_a);
                                                                                                                     if (var16 == 0) {
                                                                                                                       return;
                                                                                                                     }
                                                                                                                   }
-                                                                                                                  SoftwareRasterizer.fillRadialPaletteCircle(param2 + this.field_v << 4, param0 + this.field_G << 4, 112, 250, AccountCreationHelpers.field_g);
-                                                                                                                  SoftwareRasterizer.fillRadialPaletteCircle(-((this.field_F / 2 + this.field_u) / 4) + (param2 + this.field_v << 4), (param0 + this.field_G << 4) + (this.field_u / 2 - this.field_F) / 4, 80, 250, AccountCreationHelpers.field_g);
-                                                                                                                  SoftwareRasterizer.fillRadialPaletteCircle((this.field_v + param2 << 4) + (-this.field_u + this.field_F / 2) / 4, -((this.field_u / 2 + this.field_F) / 4) + (param0 + this.field_G << 4), 80, 250, AccountCreationHelpers.field_g);
+                                                                                                                  SoftwareRasterizer.fillRadialPaletteCircle(offsetX + this.x << 4, offsetY + this.y << 4, 112, 250, AccountCreationHelpers.field_g);
+                                                                                                                  SoftwareRasterizer.fillRadialPaletteCircle(-((this.velocityY / 2 + this.velocityX) / 4) + (offsetX + this.x << 4), (offsetY + this.y << 4) + (this.velocityX / 2 - this.velocityY) / 4, 80, 250, AccountCreationHelpers.field_g);
+                                                                                                                  SoftwareRasterizer.fillRadialPaletteCircle((this.x + offsetX << 4) + (-this.velocityX + this.velocityY / 2) / 4, -((this.velocityX / 2 + this.velocityY) / 4) + (offsetY + this.y << 4), 80, 250, AccountCreationHelpers.field_g);
                                                                                                                   if (var16 == 0) {
                                                                                                                     return;
                                                                                                                   }
                                                                                                                 }
-                                                                                                                ScreenSwitchHelpers.field_f[0].draw(-this.field_r + param2 + this.field_v, -8 + this.field_G - (-param0 - this.field_r));
+                                                                                                                ScreenSwitchHelpers.field_f[0].draw(-this.spriteRadius + offsetX + this.x, -8 + this.y - (-offsetY - this.spriteRadius));
                                                                                                                 if (var16 == 0) {
                                                                                                                   return;
                                                                                                                 }
                                                                                                               }
-                                                                                                              if ((0 == this.field_y) &&
-                                                                                                                (this.field_u != 0) &&
-                                                                                                                (this.field_F != 0)) {
-                                                                                                                var5 = (int)(Math.atan2((double)this.field_u, (double)this.field_F) * 32368.0 / 3.141592653589793);
+                                                                                                              if ((0 == this.ageTicks) &&
+                                                                                                                (this.velocityX != 0) &&
+                                                                                                                (this.velocityY != 0)) {
+                                                                                                                var5 = (int)(Math.atan2((double)this.velocityX, (double)this.velocityY) * 32368.0 / 3.141592653589793);
                                                                                                                 if (0 > var5) {
                                                                                                                   var5 = var5 + 65536;
                                                                                                                 }
                                                                                                                 this.field_x = var5;
                                                                                                               }
                                                                                                               var5 = this.field_x;
-                                                                                                              QuickChatPhrase.field_x[1].drawRotatedQuarterScale(4096, param0 + this.field_G, 41, param2 + this.field_v, var5);
-                                                                                                              if (this.field_y <= 0) {
+                                                                                                              QuickChatPhrase.field_x[1].drawRotatedQuarterScale(4096, offsetY + this.y, 41, offsetX + this.x, var5);
+                                                                                                              if (this.ageTicks <= 0) {
                                                                                                                 return;
                                                                                                               }
-                                                                                                              ChatPanel.field_a[(15 & this.field_y) >> 1].draw(-32 + this.field_v + param2, -32 + (param0 + this.field_G));
+                                                                                                              ChatPanel.field_a[(15 & this.ageTicks) >> 1].draw(-32 + this.x + offsetX, -32 + (offsetY + this.y));
                                                                                                               if (var16 == 0) {
                                                                                                                 return;
                                                                                                               }
                                                                                                             }
-                                                                                                            if ((0 != this.field_u) &&
-                                                                                                              (0 != this.field_F)) {
-                                                                                                              var5 = (int)(32368.0 * Math.atan2((double)this.field_u, (double)this.field_F) / 3.141592653589793);
+                                                                                                            if ((0 != this.velocityX) &&
+                                                                                                              (0 != this.velocityY)) {
+                                                                                                              var5 = (int)(32368.0 * Math.atan2((double)this.velocityX, (double)this.velocityY) / 3.141592653589793);
                                                                                                               if (0 > var5) {
                                                                                                                 var5 = var5 + 65536;
                                                                                                               }
                                                                                                               this.field_x = var5;
                                                                                                             }
                                                                                                             var5 = this.field_x;
-                                                                                                            QuickChatPhrase.field_x[8].drawRotatedQuarterScale(2048, param0 + this.field_G, 122, param2 + this.field_v, var5 + 32768);
+                                                                                                            QuickChatPhrase.field_x[8].drawRotatedQuarterScale(2048, offsetY + this.y, 122, offsetX + this.x, var5 + 32768);
                                                                                                             if (var16 == 0) {
                                                                                                               return;
                                                                                                             }
                                                                                                           }
-                                                                                                          if ((0 != this.field_u) &&
-                                                                                                            (this.field_F != 0)) {
-                                                                                                            var5 = (int)(32368.0 * Math.atan2((double)this.field_u, (double)this.field_F) / 3.141592653589793);
+                                                                                                          if ((0 != this.velocityX) &&
+                                                                                                            (this.velocityY != 0)) {
+                                                                                                            var5 = (int)(32368.0 * Math.atan2((double)this.velocityX, (double)this.velocityY) / 3.141592653589793);
                                                                                                             if (var5 < 0) {
                                                                                                               var5 = var5 + 65536;
                                                                                                             }
                                                                                                             this.field_x = var5;
                                                                                                           }
                                                                                                           var5 = this.field_x;
-                                                                                                          this.field_p.drawRotatedQuarterScale(4096, this.field_G + param0, 122, this.field_v + param2, var5 + 32768);
+                                                                                                          this.sprite.drawRotatedQuarterScale(4096, this.y + offsetY, 122, this.x + offsetX, var5 + 32768);
                                                                                                           if (var16 == 0) {
                                                                                                             return;
                                                                                                           }
@@ -9062,56 +9062,56 @@ final class SpellProjectile extends DualLinkNode {
                                                                                                         if (ArrayWidgetContainer.field_E.length <= var5) {
                                                                                                           var5 = -1 + ArrayWidgetContainer.field_E.length;
                                                                                                         }
-                                                                                                        ArrayWidgetContainer.field_E[var5].drawScaledAlpha(param2 + (this.field_v - 128), -128 + this.field_G + param0, 256, 256, 64);
+                                                                                                        ArrayWidgetContainer.field_E[var5].drawScaledAlpha(offsetX + (this.x - 128), -128 + this.y + offsetY, 256, 256, 64);
                                                                                                         if (var16 == 0) {
                                                                                                           return;
                                                                                                         }
                                                                                                       }
                                                                                                       regionExit70: {
-                                                                                                        if ((this.field_t != null) &&
-                                                                                                          (6 == this.field_t.field_jb)) {
-                                                                                                          if (this.field_y < 1) {
-                                                                                                            ValueListWidget.field_J[this.field_x >> 2].drawScaledAlpha(-64 + (this.field_v + param2), this.field_G - (-param0 + 64), 128, 128, 64);
+                                                                                                        if ((this.owner != null) &&
+                                                                                                          (6 == this.owner.unitType)) {
+                                                                                                          if (this.ageTicks < 1) {
+                                                                                                            ValueListWidget.field_J[this.field_x >> 2].drawScaledAlpha(-64 + (this.x + offsetX), this.y - (-offsetY + 64), 128, 128, 64);
                                                                                                             if (var16 == 0) {
                                                                                                               break regionExit70;
                                                                                                             }
                                                                                                           }
-                                                                                                          ValueListWidget.field_J[this.field_x >> 2].drawScaledAlpha(this.field_v - (-param2 + 64), this.field_G + (param0 - 64), 128, 128, 32);
+                                                                                                          ValueListWidget.field_J[this.field_x >> 2].drawScaledAlpha(this.x - (-offsetX + 64), this.y + (offsetY - 64), 128, 128, 32);
                                                                                                           if (var16 == 0) {
                                                                                                             break regionExit70;
                                                                                                           }
                                                                                                         }
-                                                                                                        if (this.field_y >= 1) {
-                                                                                                          ValueListWidget.field_J[this.field_x >> 2].drawScaledAlpha(-128 + (param2 + this.field_v), this.field_G + (param0 - 128), 256, 256, 32);
+                                                                                                        if (this.ageTicks >= 1) {
+                                                                                                          ValueListWidget.field_J[this.field_x >> 2].drawScaledAlpha(-128 + (offsetX + this.x), this.y + (offsetY - 128), 256, 256, 32);
                                                                                                           if (var16 == 0) {
                                                                                                             break regionExit70;
                                                                                                           }
                                                                                                         }
-                                                                                                        ValueListWidget.field_J[this.field_x >> 2].drawScaledAlpha(this.field_v + param2 - 128, -128 + this.field_G + param0, 256, 256, 64);
+                                                                                                        ValueListWidget.field_J[this.field_x >> 2].drawScaledAlpha(this.x + offsetX - 128, -128 + this.y + offsetY, 256, 256, 64);
                                                                                                       }
                                                                                                       var5 = 128;
-                                                                                                      if ((null != this.field_t) &&
-                                                                                                        (this.field_t.field_jb == 6)) {
+                                                                                                      if ((null != this.owner) &&
+                                                                                                        (this.owner.unitType == 6)) {
                                                                                                         var5 = 64;
                                                                                                       }
-                                                                                                      MidiPcmStream.field_L.setDeque((byte) 36, this.field_q.field_i);
+                                                                                                      MidiPcmStream.field_L.setDeque((byte) 36, this.battle.units);
                                                                                                       var6_ref = (BattleUnit) (MidiPcmStream.field_L.first(-68));
                                                                                                       while (var6_ref != null) {
                                                                                                         if (var16 != 0) {
                                                                                                           return;
                                                                                                         }
-                                                                                                        if (((this.field_t != var6_ref) ||
-                                                                                                          ((6 != var6_ref.field_jb) &&
-                                                                                                          (!(!((var6_ref.field_jb != 16) &&
-                                                                                                          (var6_ref.field_jb != 23))) ||
-                                                                                                          (55 == this.field_I))))) {
-                                                                                                          var7 = this.field_v - var6_ref.field_lb;
-                                                                                                          var8 = this.field_G - var6_ref.field_db + var6_ref.field_Y / 2;
-                                                                                                          if ((var7 * var7 + var8 * var8 < (var5 + var6_ref.field_Y / 2) * (var5 + var6_ref.field_Y / 2)) &&
-                                                                                                            (var6_ref.field_jb != 35)) {
+                                                                                                        if (((this.owner != var6_ref) ||
+                                                                                                          ((6 != var6_ref.unitType) &&
+                                                                                                          (!(!((var6_ref.unitType != 16) &&
+                                                                                                          (var6_ref.unitType != 23))) ||
+                                                                                                          (55 == this.spellType))))) {
+                                                                                                          var7 = this.x - var6_ref.x;
+                                                                                                          var8 = this.y - var6_ref.y + var6_ref.size / 2;
+                                                                                                          if ((var7 * var7 + var8 * var8 < (var5 + var6_ref.size / 2) * (var5 + var6_ref.size / 2)) &&
+                                                                                                            (var6_ref.unitType != 35)) {
                                                                                                             var9 = var6_ref.getSize(-8323) / 2;
-                                                                                                            var10 = param2 + var6_ref.field_lb;
-                                                                                                            var11 = var6_ref.field_db + param0 - var9;
+                                                                                                            var10 = offsetX + var6_ref.x;
+                                                                                                            var11 = var6_ref.y + offsetY - var9;
                                                                                                             ValueListWidget.field_J[this.field_x >> 2].drawScaledAlpha(-var9 + var10, -var9 + var11, var9 * 2, 2 * var9, 48);
                                                                                                           }
                                                                                                         }
@@ -9122,26 +9122,26 @@ final class SpellProjectile extends DualLinkNode {
                                                                                                         return;
                                                                                                       }
                                                                                                     }
-                                                                                                    ScreenSwitchHelpers.field_f[6].draw(-this.field_r + this.field_v + param2, -this.field_r + (param0 + this.field_G));
+                                                                                                    ScreenSwitchHelpers.field_f[6].draw(-this.spriteRadius + this.x + offsetX, -this.spriteRadius + (offsetY + this.y));
                                                                                                     if (var16 == 0) {
                                                                                                       return;
                                                                                                     }
                                                                                                   }
-                                                                                                  if (this.field_p == null) {
+                                                                                                  if (this.sprite == null) {
                                                                                                     return;
                                                                                                   }
-                                                                                                  this.field_p.drawTransparent(param2 + (this.field_v - this.field_r), this.field_G + param0 - this.field_r);
+                                                                                                  this.sprite.drawTransparent(offsetX + (this.x - this.spriteRadius), this.y + offsetY - this.spriteRadius);
                                                                                                   return;
                                                                                                 }
                                                                                               }
                                                                                               var5 = 0;
                                                                                               while (var5 < 5) {
-                                                                                                var6_int = -320 - (-param2 + 64);
-                                                                                                var7 = -128 + param0 + this.field_q.field_H;
-                                                                                                var8_double = 4.0 * ((double)var5 * 3.14) + (double)this.field_y;
-                                                                                                FlagSumHelpers.field_f[(this.field_y / 6 + var5) % 6 + 8].drawTransparent((int)(Math.sin(0.1 * var8_double) * 100.0) + var6_int, -(int)(80.0 * Math.cos(var8_double * 0.1)) + var7 + 60);
-                                                                                                var6_int = -64 + (320 + this.field_q.field_y + param2);
-                                                                                                FlagSumHelpers.field_f[(this.field_y / 6 + var5) % 6 + 8].drawHorizontalFlip(var6_int - (int)(100.0 * Math.sin(0.1 * var8_double)), var7 - ((int)(Math.cos(0.1 * var8_double) * 80.0) - 60));
+                                                                                                var6_int = -320 - (-offsetX + 64);
+                                                                                                var7 = -128 + offsetY + this.battle.arenaHeight;
+                                                                                                var8_double = 4.0 * ((double)var5 * 3.14) + (double)this.ageTicks;
+                                                                                                FlagSumHelpers.field_f[(this.ageTicks / 6 + var5) % 6 + 8].drawTransparent((int)(Math.sin(0.1 * var8_double) * 100.0) + var6_int, -(int)(80.0 * Math.cos(var8_double * 0.1)) + var7 + 60);
+                                                                                                var6_int = -64 + (320 + this.battle.arenaWidth + offsetX);
+                                                                                                FlagSumHelpers.field_f[(this.ageTicks / 6 + var5) % 6 + 8].drawHorizontalFlip(var6_int - (int)(100.0 * Math.sin(0.1 * var8_double)), var7 - ((int)(Math.cos(0.1 * var8_double) * 80.0) - 60));
                                                                                                 var5++;
                                                                                                 if (var16 != 0) {
                                                                                                   return;
@@ -9152,37 +9152,37 @@ final class SpellProjectile extends DualLinkNode {
                                                                                                 return;
                                                                                               }
                                                                                             }
-                                                                                            var5 = param2 + this.field_v;
-                                                                                            var6_int = this.field_G + param0;
+                                                                                            var5 = offsetX + this.x;
+                                                                                            var6_int = this.y + offsetY;
                                                                                             LoginLoadingHelpers.field_g[128].drawTransparent(-20 + var5, var6_int - 32);
                                                                                             if (var16 == 0) {
                                                                                               return;
                                                                                             }
                                                                                           }
-                                                                                          if (this.field_F >= 0) {
-                                                                                            var5 = this.field_v + param2;
-                                                                                            var6_int = param0 + this.field_G;
+                                                                                          if (this.velocityY >= 0) {
+                                                                                            var5 = this.x + offsetX;
+                                                                                            var6_int = offsetY + this.y;
                                                                                             DualLinkDeque.field_b[14].draw(var5 - 16, -12 + var6_int);
                                                                                             if (var16 == 0) {
                                                                                               return;
                                                                                             }
                                                                                           }
-                                                                                          var5 = param2 + this.field_v;
-                                                                                          var6_int = param0 + this.field_G;
+                                                                                          var5 = offsetX + this.x;
+                                                                                          var6_int = offsetY + this.y;
                                                                                           DualLinkDeque.field_b[15].draw(-16 + var5, -12 + var6_int);
                                                                                           if (var16 == 0) {
                                                                                             return;
                                                                                           }
                                                                                         }
-                                                                                        if (this.field_y <= 50) {
+                                                                                        if (this.ageTicks <= 50) {
                                                                                           return;
                                                                                         }
-                                                                                        var5 = -50 + this.field_y;
+                                                                                        var5 = -50 + this.ageTicks;
                                                                                         if (var5 > 15) {
                                                                                           var5 = 30 - var5;
                                                                                         }
-                                                                                        var6_int = 15 * this.field_u / 17 >> 4;
-                                                                                        var7 = this.field_F * 15 / 17 >> 4;
+                                                                                        var6_int = 15 * this.velocityX / 17 >> 4;
+                                                                                        var7 = this.velocityY * 15 / 17 >> 4;
                                                                                         var8 = 1;
                                                                                         while (~var8 > ~(var5 * 3 / 2)) {
                                                                                           if (var16 != 0) {
@@ -9198,7 +9198,7 @@ final class SpellProjectile extends DualLinkNode {
                                                                                           } else {
                                                                                             stackIn_512_1 = 22;
                                                                                           }
-                                                                                          ((IndexedSprite) (Object) stackIn_508_0[stackIn_512_1]).draw(-8 + this.field_v + param2 + var6_int * var8 / 23, var7 * var8 / 23 + this.field_G + (param0 - 8));
+                                                                                          ((IndexedSprite) (Object) stackIn_508_0[stackIn_512_1]).draw(-8 + this.x + offsetX + var6_int * var8 / 23, var7 * var8 / 23 + this.y + (offsetY - 8));
                                                                                           var8++;
                                                                                           continue;
                                                                                         }
@@ -9209,25 +9209,25 @@ final class SpellProjectile extends DualLinkNode {
                                                                                       if (this.field_x > 0) {
                                                                                         return;
                                                                                       }
-                                                                                      var5 = param2 + this.field_v;
-                                                                                      var6_int = this.field_G + param0 - this.field_y;
-                                                                                      this.field_p.drawTransparent(-8 + var5, -8 + var6_int);
+                                                                                      var5 = offsetX + this.x;
+                                                                                      var6_int = this.y + offsetY - this.ageTicks;
+                                                                                      this.sprite.drawTransparent(-8 + var5, -8 + var6_int);
                                                                                       if (var16 == 0) {
                                                                                         return;
                                                                                       }
                                                                                     }
-                                                                                    if (this.field_y < 256) {
-                                                                                      var5 = this.field_v + param2;
-                                                                                      var6_int = -16 + (param0 + this.field_G);
+                                                                                    if (this.ageTicks < 256) {
+                                                                                      var5 = this.x + offsetX;
+                                                                                      var6_int = -16 + (offsetY + this.y);
                                                                                       var7 = 0;
                                                                                       do {
                                                                                         if (!(var7 < 8)) {
                                                                                           BufferedMessage.fillCircleOr(var6_int, var5, 256, 2232, 16);
-                                                                                          var5 = this.field_v + param2 + this.field_u;
-                                                                                          var6_int = -16 + this.field_F + (this.field_G + param0);
+                                                                                          var5 = this.x + offsetX + this.velocityX;
+                                                                                          var6_int = -16 + this.velocityY + (this.y + offsetY);
                                                                                           break;
                                                                                         }
-                                                                                        var8_double = (double)(var7 * 32 + this.field_y) * 3.141592653589793 / 128.0;
+                                                                                        var8_double = (double)(var7 * 32 + this.ageTicks) * 3.141592653589793 / 128.0;
                                                                                         ChatLine.field_c[var7].drawQuarterSize((int)(Math.sin(var8_double) * 14.0) + (-2 + var5), (int)(Math.cos(var8_double) * 14.0) + (-2 + var6_int));
                                                                                         var7++;
                                                                                       } while (var16 == 0);
@@ -9237,7 +9237,7 @@ final class SpellProjectile extends DualLinkNode {
                                                                                           BufferedMessage.fillCircleOr(var6_int, var5, 256, 2232, 16);
                                                                                           break;
                                                                                         }
-                                                                                        var8_double = 3.141592653589793 * (double)(32 * var7 - this.field_y) / 128.0;
+                                                                                        var8_double = 3.141592653589793 * (double)(32 * var7 - this.ageTicks) / 128.0;
                                                                                         ChatLine.field_c[var7].drawQuarterSize((int)(14.0 * Math.sin(var8_double)) + var5 - 2, -2 + var6_int + (int)(Math.cos(var8_double) * 14.0));
                                                                                         var7++;
                                                                                       } while (var16 == 0);
@@ -9245,17 +9245,17 @@ final class SpellProjectile extends DualLinkNode {
                                                                                         return;
                                                                                       }
                                                                                     }
-                                                                                    var5 = this.field_v + param2;
-                                                                                    var6_int = -16 + (param0 + this.field_G);
+                                                                                    var5 = this.x + offsetX;
+                                                                                    var6_int = -16 + (offsetY + this.y);
                                                                                     var7 = 0;
                                                                                     do {
                                                                                       if (!(var7 < 8)) {
                                                                                         BufferedMessage.fillCircleOr(var6_int, var5, 32, 2232, 16);
-                                                                                        var5 = param2 + this.field_v + this.field_u;
-                                                                                        var6_int = -16 + this.field_F + param0 + this.field_G;
+                                                                                        var5 = offsetX + this.x + this.velocityX;
+                                                                                        var6_int = -16 + this.velocityY + offsetY + this.y;
                                                                                         break;
                                                                                       }
-                                                                                      var8_double = (double)(this.field_y + 32 * var7) * 3.141592653589793 / 128.0;
+                                                                                      var8_double = (double)(this.ageTicks + 32 * var7) * 3.141592653589793 / 128.0;
                                                                                       ChatLine.field_c[var7].drawQuarterSize((int)(14.0 * Math.sin(var8_double)) - 2 + var5, var6_int - (2 - (int)(14.0 * Math.cos(var8_double))));
                                                                                       var7++;
                                                                                     } while (var16 == 0);
@@ -9265,7 +9265,7 @@ final class SpellProjectile extends DualLinkNode {
                                                                                         BufferedMessage.fillCircleOr(var6_int, var5, 32, 2232, 16);
                                                                                         break;
                                                                                       }
-                                                                                      var8_double = 3.141592653589793 * (double)(var7 * 32 - this.field_y) / 128.0;
+                                                                                      var8_double = 3.141592653589793 * (double)(var7 * 32 - this.ageTicks) / 128.0;
                                                                                       ChatLine.field_c[var7].drawQuarterSize((int)(Math.sin(var8_double) * 14.0) - 2 + var5, (int)(14.0 * Math.cos(var8_double)) + (-2 + var6_int));
                                                                                       var7++;
                                                                                     } while (var16 == 0);
@@ -9273,20 +9273,20 @@ final class SpellProjectile extends DualLinkNode {
                                                                                       return;
                                                                                     }
                                                                                   }
-                                                                                  var5 = this.field_y;
-                                                                                  if (this.field_y > 118) {
-                                                                                    var5 = (15104 - this.field_y * 118) / 10;
+                                                                                  var5 = this.ageTicks;
+                                                                                  if (this.ageTicks > 118) {
+                                                                                    var5 = (15104 - this.ageTicks * 118) / 10;
                                                                                   }
-                                                                                  var6_int = -480 + param0;
+                                                                                  var6_int = -480 + offsetY;
                                                                                   while (true) {
-                                                                                    if (var6_int < param0 + (this.field_G + 16)) {
-                                                                                      QuickChatPhraseCache.fillCircleMasked(32, (byte) 99, var5 * 2, param2 + this.field_v, var6_int);
+                                                                                    if (var6_int < offsetY + (this.y + 16)) {
+                                                                                      QuickChatPhraseCache.fillCircleMasked(32, (byte) 99, var5 * 2, offsetX + this.x, var6_int);
                                                                                       var6_int += 16;
                                                                                       if (var16 == 0) {
                                                                                         continue;
                                                                                       }
                                                                                     } else {
-                                                                                      QuickChatPhraseCache.fillCircleMasked(var5 * 2, (byte) 103, 2 * var5, this.field_v + param2, this.field_G + param0);
+                                                                                      QuickChatPhraseCache.fillCircleMasked(var5 * 2, (byte) 103, 2 * var5, this.x + offsetX, this.y + offsetY);
                                                                                     }
                                                                                     break;
                                                                                   }
@@ -9294,16 +9294,16 @@ final class SpellProjectile extends DualLinkNode {
                                                                                     return;
                                                                                   }
                                                                                 }
-                                                                                var5 = this.field_y;
-                                                                                if (this.field_y > 118) {
-                                                                                  var5 = (-(this.field_y * 118) + 15104) / 10;
+                                                                                var5 = this.ageTicks;
+                                                                                if (this.ageTicks > 118) {
+                                                                                  var5 = (-(this.ageTicks * 118) + 15104) / 10;
                                                                                 }
                                                                                 {
                                                                                   boolean decompiledFrameCompleted0 = true;
-                                                                                  if (this.field_y < 128) {
-                                                                                    var6_int = -480 + param0;
-                                                                                    while (~(16 + this.field_G + param0) < ~var6_int) {
-                                                                                      QuickChatPhraseCache.fillCircleMasked(32, (byte) 81, 2 * var5, param2 + this.field_v, var6_int);
+                                                                                  if (this.ageTicks < 128) {
+                                                                                    var6_int = -480 + offsetY;
+                                                                                    while (~(16 + this.y + offsetY) < ~var6_int) {
+                                                                                      QuickChatPhraseCache.fillCircleMasked(32, (byte) 81, 2 * var5, offsetX + this.x, var6_int);
                                                                                       var6_int += 16;
                                                                                       if (var16 != 0) {
                                                                                         decompiledFrameCompleted0 = false;
@@ -9312,7 +9312,7 @@ final class SpellProjectile extends DualLinkNode {
                                                                                       continue;
                                                                                     }
                                                                                     if (decompiledFrameCompleted0) {
-                                                                                      BufferedMessage.fillCircleOr(param0 + this.field_G, param2 + this.field_v, var5 * 2, 2232, var5 * 2);
+                                                                                      BufferedMessage.fillCircleOr(offsetY + this.y, offsetX + this.x, var5 * 2, 2232, var5 * 2);
                                                                                     }
                                                                                   }
                                                                                 }
@@ -9320,23 +9320,23 @@ final class SpellProjectile extends DualLinkNode {
                                                                                   return;
                                                                                 }
                                                                               }
-                                                                              if (this.field_t == null) {
+                                                                              if (this.owner == null) {
                                                                                 return;
                                                                               }
                                                                               var5 = this.field_x;
                                                                               if (this.field_x > 128) {
                                                                                 var5 = -this.field_x + 256;
                                                                               }
-                                                                              var6_int = this.field_t.field_Y >> 1;
-                                                                              if (this.field_t.field_jb == 9) {
+                                                                              var6_int = this.owner.size >> 1;
+                                                                              if (this.owner.unitType == 9) {
                                                                                 var6_int = 24;
                                                                               }
-                                                                              QuickChatPhraseCache.fillCircleMasked(var6_int, (byte) 62, var5, this.field_v + param2, -var6_int + (this.field_G + param0));
+                                                                              QuickChatPhraseCache.fillCircleMasked(var6_int, (byte) 62, var5, this.x + offsetX, -var6_int + (this.y + offsetY));
                                                                               if (var16 == 0) {
                                                                                 return;
                                                                               }
                                                                             }
-                                                                            if (null == this.field_t) {
+                                                                            if (null == this.owner) {
                                                                               return;
                                                                             }
                                                                             var5 = 46;
@@ -9353,8 +9353,8 @@ final class SpellProjectile extends DualLinkNode {
                                                                                 var9 = -var5;
                                                                                 while (var5 > var9) {
                                                                                   var10 = var9 * var9 + var8 * var8;
-                                                                                  var11 = this.field_t.field_lb + var8 + param2;
-                                                                                  var12 = -(this.field_t.field_Y / 2) + var9 + (param0 + this.field_t.field_db);
+                                                                                  var11 = this.owner.x + var8 + offsetX;
+                                                                                  var12 = -(this.owner.size / 2) + var9 + (offsetY + this.owner.y);
                                                                                   var13 = 64 * (63 & SpriteState.field_v + var9 / 2) + (63 & var8 / 2 + SpriteState.field_v);
                                                                                   stackIn_593_0 = ~QuickChatPhrase.field_x[9].field_A.length;
                                                                                   stackIn_593_1 = ~var13;
@@ -9385,15 +9385,15 @@ final class SpellProjectile extends DualLinkNode {
                                                                               return;
                                                                             }
                                                                           }
-                                                                          if (this.field_t == null) {
+                                                                          if (this.owner == null) {
                                                                             return;
                                                                           }
-                                                                          var5 = this.field_t.field_Y >> 1;
+                                                                          var5 = this.owner.size >> 1;
                                                                           var8 = 512 * SpriteState.field_v;
                                                                           var9 = 0;
                                                                           while (var9 < 16) {
-                                                                            var6_int = (int)((double)(param2 + this.field_v) + Math.sin(0.12 * (double)SpriteState.field_v + 0.6 * (double)var9) * (double)var5);
-                                                                            var7 = (int)((double)(param0 + this.field_G - var5) + Math.cos((double)SpriteState.field_v * 0.12 + (double)var9 * 0.6) * (double)var5);
+                                                                            var6_int = (int)((double)(offsetX + this.x) + Math.sin(0.12 * (double)SpriteState.field_v + 0.6 * (double)var9) * (double)var5);
+                                                                            var7 = (int)((double)(offsetY + this.y - var5) + Math.cos((double)SpriteState.field_v * 0.12 + (double)var9 * 0.6) * (double)var5);
                                                                             ScreenSwitchHelpers.field_f[20].toRgbSprite().drawRotatedQuarterScale(4096 - 500 * var9, var7, -18, var6_int, var8);
                                                                             var9++;
                                                                             if (var16 != 0) {
@@ -9405,43 +9405,43 @@ final class SpellProjectile extends DualLinkNode {
                                                                             return;
                                                                           }
                                                                         }
-                                                                        if (null == this.field_t) {
+                                                                        if (null == this.owner) {
                                                                           return;
                                                                         }
-                                                                        var5 = this.field_t.field_Y >> 1;
+                                                                        var5 = this.owner.size >> 1;
                                                                         var8 = 512 * SpriteState.field_v;
-                                                                        var6_int = (int)((double)(this.field_v + param2) + Math.sin((double)SpriteState.field_v * 0.1 - 1.6) * (double)var5);
-                                                                        var7 = (int)((double)(-var5 + param0 + this.field_G) + (double)var5 * Math.cos(0.09 * (double)SpriteState.field_v - 1.6));
+                                                                        var6_int = (int)((double)(this.x + offsetX) + Math.sin((double)SpriteState.field_v * 0.1 - 1.6) * (double)var5);
+                                                                        var7 = (int)((double)(-var5 + offsetY + this.y) + (double)var5 * Math.cos(0.09 * (double)SpriteState.field_v - 1.6));
                                                                         DualLinkDeque.field_b[13].toRgbSprite().drawRotatedQuarterScale(2000, var7, 127, var6_int, var8);
-                                                                        var6_int = (int)((double)(this.field_v + param2) + (double)var5 * Math.sin((double)SpriteState.field_v * 0.1 - 0.8));
-                                                                        var7 = (int)((double)(this.field_G + param0 - var5) + (double)var5 * Math.cos(-0.8 + 0.09 * (double)SpriteState.field_v));
+                                                                        var6_int = (int)((double)(this.x + offsetX) + (double)var5 * Math.sin((double)SpriteState.field_v * 0.1 - 0.8));
+                                                                        var7 = (int)((double)(this.y + offsetY - var5) + (double)var5 * Math.cos(-0.8 + 0.09 * (double)SpriteState.field_v));
                                                                         DualLinkDeque.field_b[13].toRgbSprite().drawRotatedQuarterScale(2500, var7, 124, var6_int, var8);
-                                                                        var6_int = (int)((double)(this.field_v + param2) + Math.sin(0.1 * (double)SpriteState.field_v) * (double)var5);
-                                                                        var7 = (int)((double)(-var5 + this.field_G + param0) + (double)var5 * Math.cos((double)SpriteState.field_v * 0.09));
+                                                                        var6_int = (int)((double)(this.x + offsetX) + Math.sin(0.1 * (double)SpriteState.field_v) * (double)var5);
+                                                                        var7 = (int)((double)(-var5 + this.y + offsetY) + (double)var5 * Math.cos((double)SpriteState.field_v * 0.09));
                                                                         DualLinkDeque.field_b[13].toRgbSprite().drawRotatedQuarterScale(3000, var7, 123, var6_int, var8);
                                                                         if (var16 == 0) {
                                                                           return;
                                                                         }
                                                                       }
                                                                       var5 = 2000 * SpriteState.field_v;
-                                                                      this.field_p.drawRotatedQuarterScale(4096, param0 + this.field_G, -43, param2 + this.field_v, var5);
+                                                                      this.sprite.drawRotatedQuarterScale(4096, offsetY + this.y, -43, offsetX + this.x, var5);
                                                                       if (var16 == 0) {
                                                                         return;
                                                                       }
                                                                     }
-                                                                    if (null == this.field_t) {
+                                                                    if (null == this.owner) {
                                                                       return;
                                                                     }
                                                                     var5 = this.field_x;
                                                                     if (this.field_x > 128) {
                                                                       var5 = 256 - this.field_x;
                                                                     }
-                                                                    QuickChatPhraseCache.fillCircleMasked(this.field_t.field_Y >> 1, (byte) 70, 128 + var5, this.field_v + param2, -(this.field_t.field_Y >> 1) + this.field_G + param0);
+                                                                    QuickChatPhraseCache.fillCircleMasked(this.owner.size >> 1, (byte) 70, 128 + var5, this.x + offsetX, -(this.owner.size >> 1) + this.y + offsetY);
                                                                     var6_int = 0;
                                                                     while (3 > var6_int) {
-                                                                      var7 = (int)(Math.sin((double)(this.field_x + var6_int * 256 / 3) * 3.141592653589793 / 128.0) * (double)(this.field_t.field_Y >> 1));
-                                                                      var8 = (int)(Math.cos(3.141592653589793 * (double)(var6_int * 256 / 3 + this.field_x) / 128.0) * (double)(this.field_t.field_Y >> 1));
-                                                                      QuickChatPhraseCache.fillCircleMasked(this.field_t.field_Y >> 2, (byte) 68, var5 + 128, var7 + (param2 + this.field_v), -(this.field_t.field_Y >> 1) + var8 + param0 + this.field_G);
+                                                                      var7 = (int)(Math.sin((double)(this.field_x + var6_int * 256 / 3) * 3.141592653589793 / 128.0) * (double)(this.owner.size >> 1));
+                                                                      var8 = (int)(Math.cos(3.141592653589793 * (double)(var6_int * 256 / 3 + this.field_x) / 128.0) * (double)(this.owner.size >> 1));
+                                                                      QuickChatPhraseCache.fillCircleMasked(this.owner.size >> 2, (byte) 68, var5 + 128, var7 + (offsetX + this.x), -(this.owner.size >> 1) + var8 + offsetY + this.y);
                                                                       var6_int++;
                                                                       if (var16 != 0) {
                                                                         return;
@@ -9452,66 +9452,66 @@ final class SpellProjectile extends DualLinkNode {
                                                                       return;
                                                                     }
                                                                   }
-                                                                  QuickChatPhraseCache.fillCircleMasked(32, (byte) 88, 256, this.field_v + param2, param0 + this.field_G);
+                                                                  QuickChatPhraseCache.fillCircleMasked(32, (byte) 88, 256, this.x + offsetX, offsetY + this.y);
                                                                   if (var16 == 0) {
                                                                     return;
                                                                   }
                                                                 }
-                                                                QuickChatPhraseCache.fillCircleMasked(64, (byte) 97, 256, this.field_v + param2, param0 + this.field_G);
+                                                                QuickChatPhraseCache.fillCircleMasked(64, (byte) 97, 256, this.x + offsetX, offsetY + this.y);
                                                                 if (var16 == 0) {
                                                                   return;
                                                                 }
                                                               }
-                                                              QuickChatPhraseCache.fillCircleMasked(16, (byte) 94, 256, param2 + this.field_v, param0 + this.field_G);
+                                                              QuickChatPhraseCache.fillCircleMasked(16, (byte) 94, 256, offsetX + this.x, offsetY + this.y);
                                                               if (var16 == 0) {
                                                                 return;
                                                               }
                                                             }
-                                                            QuickChatPhraseCache.fillCircleMasked(8, (byte) 79, -(this.field_y << 3) + 256, param2 + this.field_v, this.field_G + param0);
+                                                            QuickChatPhraseCache.fillCircleMasked(8, (byte) 79, -(this.ageTicks << 3) + 256, offsetX + this.x, this.y + offsetY);
                                                             if (var16 == 0) {
                                                               return;
                                                             }
                                                           }
-                                                          QuickChatPhraseCache.fillCircleMasked(80, (byte) 120, -(this.field_y << 3) + 256, param2 + this.field_v, param0 + this.field_G);
-                                                          if (this.field_y >= 32) {
+                                                          QuickChatPhraseCache.fillCircleMasked(80, (byte) 120, -(this.ageTicks << 3) + 256, offsetX + this.x, offsetY + this.y);
+                                                          if (this.ageTicks >= 32) {
                                                             return;
                                                           }
-                                                          QuickChatPhraseCache.fillCircleMasked(32 * this.field_y + 60, (byte) 64, -(256 - (this.field_y << 3)), this.field_v + param2, param0 + this.field_G);
+                                                          QuickChatPhraseCache.fillCircleMasked(32 * this.ageTicks + 60, (byte) 64, -(256 - (this.ageTicks << 3)), this.x + offsetX, offsetY + this.y);
                                                           if (var16 == 0) {
                                                             return;
                                                           }
                                                         }
-                                                        BufferedMessage.fillCircleOr(param0 + this.field_G, param2 + this.field_v, 256, 2232, 8);
+                                                        BufferedMessage.fillCircleOr(offsetY + this.y, offsetX + this.x, 256, 2232, 8);
                                                         if (var16 == 0) {
                                                           return;
                                                         }
                                                       }
-                                                      BufferedMessage.fillCircleOr(param0 + this.field_G, this.field_v + param2, 256, 2232, 10);
-                                                      if (this.field_y <= 225) {
+                                                      BufferedMessage.fillCircleOr(offsetY + this.y, this.x + offsetX, 256, 2232, 10);
+                                                      if (this.ageTicks <= 225) {
                                                         return;
                                                       }
-                                                      BufferedMessage.fillCircleOr(this.field_G + param0, this.field_v + param2, (256 * this.field_y - 57600) / 25, 2232, 96);
+                                                      BufferedMessage.fillCircleOr(this.y + offsetY, this.x + offsetX, (256 * this.ageTicks - 57600) / 25, 2232, 96);
                                                       if (var16 == 0) {
                                                         return;
                                                       }
                                                     }
-                                                    BufferedMessage.fillCircleOr(param0 + this.field_G, param2 + this.field_v, 256 * this.field_y / 25, 2232, 96);
+                                                    BufferedMessage.fillCircleOr(offsetY + this.y, offsetX + this.x, 256 * this.ageTicks / 25, 2232, 96);
                                                     if (var16 == 0) {
                                                       return;
                                                     }
                                                   }
-                                                  if (this.field_t == null) {
+                                                  if (this.owner == null) {
                                                     return;
                                                   }
-                                                  BufferedMessage.fillCircleOr(this.field_G + param0, this.field_v + param2, this.field_y * 256 / this.field_t.field_ib, 2232, this.field_t.field_Y + 2 * this.field_t.field_ib);
+                                                  BufferedMessage.fillCircleOr(this.y + offsetY, this.x + offsetX, this.ageTicks * 256 / this.owner.health, 2232, this.owner.size + 2 * this.owner.health);
                                                   if (var16 == 0) {
                                                     return;
                                                   }
                                                 }
-                                                SoftwareRasterizer.fillCircleAlpha(param2 + this.field_v, param0 + this.field_G, 16, 0, 64);
-                                                SoftwareRasterizer.fillCircleAlpha(param2 + this.field_v, this.field_G + param0, 18, 0, 64);
-                                                SoftwareRasterizer.fillCircleAlpha(param2 + this.field_v, this.field_G + param0, 20, 0, 64);
-                                                SoftwareRasterizer.fillCircleAlpha(this.field_v + param2, this.field_G + param0, 22, 0, 64);
+                                                SoftwareRasterizer.fillCircleAlpha(offsetX + this.x, offsetY + this.y, 16, 0, 64);
+                                                SoftwareRasterizer.fillCircleAlpha(offsetX + this.x, this.y + offsetY, 18, 0, 64);
+                                                SoftwareRasterizer.fillCircleAlpha(offsetX + this.x, this.y + offsetY, 20, 0, 64);
+                                                SoftwareRasterizer.fillCircleAlpha(this.x + offsetX, this.y + offsetY, 22, 0, 64);
                                                 if (var16 == 0) {
                                                   return;
                                                 }
@@ -9519,7 +9519,7 @@ final class SpellProjectile extends DualLinkNode {
                                               if (null == DisplayNameForm.field_E) {
                                                 return;
                                               }
-                                              DisplayNameForm.field_E[this.field_H].draw(-50 + (this.field_v + param2), this.field_G - (-param0 + 50));
+                                              DisplayNameForm.field_E[this.field_H].draw(-50 + (this.x + offsetX), this.y - (-offsetY + 50));
                                               if (var16 == 0) {
                                                 return;
                                               }
@@ -9527,7 +9527,7 @@ final class SpellProjectile extends DualLinkNode {
                                             if (DiskCacheWorker.field_a == null) {
                                               return;
                                             }
-                                            DiskCacheWorker.field_a[this.field_H].draw(param2 + this.field_v - 50, -50 + param0 + this.field_G);
+                                            DiskCacheWorker.field_a[this.field_H].draw(offsetX + this.x - 50, -50 + offsetY + this.y);
                                             if (var16 == 0) {
                                               return;
                                             }
@@ -9535,7 +9535,7 @@ final class SpellProjectile extends DualLinkNode {
                                           if (null == MouseInputHandler.field_a) {
                                             return;
                                           }
-                                          MouseInputHandler.field_a[this.field_H].draw(-50 + this.field_v + param2, -50 + param0 + this.field_G);
+                                          MouseInputHandler.field_a[this.field_H].draw(-50 + this.x + offsetX, -50 + offsetY + this.y);
                                           if (var16 == 0) {
                                             return;
                                           }
@@ -9546,7 +9546,7 @@ final class SpellProjectile extends DualLinkNode {
                                         if (0 > this.field_H) {
                                           return;
                                         }
-                                        PaletteSpriteHelpers.field_k[this.field_H].draw(-8 + (this.field_v + param2), this.field_G - (-param0 + 8));
+                                        PaletteSpriteHelpers.field_k[this.field_H].draw(-8 + (this.x + offsetX), this.y - (-offsetY + 8));
                                         if (var16 == 0) {
                                           return;
                                         }
@@ -9557,7 +9557,7 @@ final class SpellProjectile extends DualLinkNode {
                                       if (this.field_H < 0) {
                                         return;
                                       }
-                                      DebouncedValidator.field_b[this.field_H].draw(-8 + (param2 + this.field_v), -8 + (param0 + this.field_G));
+                                      DebouncedValidator.field_b[this.field_H].draw(-8 + (offsetX + this.x), -8 + (offsetY + this.y));
                                       if (var16 == 0) {
                                         return;
                                       }
@@ -9568,7 +9568,7 @@ final class SpellProjectile extends DualLinkNode {
                                     if (0 > this.field_H) {
                                       return;
                                     }
-                                    FadingModalPanel.field_M[this.field_H].draw(-8 + (this.field_v + param2), -8 + this.field_G + param0);
+                                    FadingModalPanel.field_M[this.field_H].draw(-8 + (this.x + offsetX), -8 + this.y + offsetY);
                                     if (var16 == 0) {
                                       return;
                                     }
@@ -9576,16 +9576,16 @@ final class SpellProjectile extends DualLinkNode {
                                   if (null == AccountCreationHelpers.field_f) {
                                     return;
                                   }
-                                  if (null == this.field_t) {
+                                  if (null == this.owner) {
                                     return;
                                   }
-                                  if (this.field_y < 250) {
-                                    AccountCreationHelpers.field_f[this.field_x >> 2].draw(-25 + this.field_v + param2, -65 + (param0 + this.field_G));
+                                  if (this.ageTicks < 250) {
+                                    AccountCreationHelpers.field_f[this.field_x >> 2].draw(-25 + this.x + offsetX, -65 + (offsetY + this.y));
                                     if (var16 == 0) {
                                       return;
                                     }
                                   }
-                                  AccountCreationHelpers.field_f[this.field_x >> 2].drawAlpha(-25 + (param2 + this.field_v), param0 + (this.field_G - 65), 64);
+                                  AccountCreationHelpers.field_f[this.field_x >> 2].drawAlpha(-25 + (offsetX + this.x), offsetY + (this.y - 65), 64);
                                   if (var16 == 0) {
                                     return;
                                   }
@@ -9593,16 +9593,16 @@ final class SpellProjectile extends DualLinkNode {
                                 if (null == IterableNodeHashTable.field_a) {
                                   return;
                                 }
-                                if (this.field_t == null) {
+                                if (this.owner == null) {
                                   return;
                                 }
-                                if (this.field_y >= 250) {
-                                  IterableNodeHashTable.field_a[this.field_x >> 1].draw(param2 + (this.field_v - 24), -(this.field_t.field_Y >> 1) + this.field_G - (-param0 + 32));
+                                if (this.ageTicks >= 250) {
+                                  IterableNodeHashTable.field_a[this.field_x >> 1].draw(offsetX + (this.x - 24), -(this.owner.size >> 1) + this.y - (-offsetY + 32));
                                   if (var16 == 0) {
                                     return;
                                   }
                                 }
-                                IterableNodeHashTable.field_a[this.field_x >> 1].draw(param2 + this.field_v - 24, this.field_G + param0 + (-32 - (this.field_t.field_Y >> 1)));
+                                IterableNodeHashTable.field_a[this.field_x >> 1].draw(offsetX + this.x - 24, this.y + offsetY + (-32 - (this.owner.size >> 1)));
                                 if (var16 == 0) {
                                   return;
                                 }
@@ -9610,16 +9610,16 @@ final class SpellProjectile extends DualLinkNode {
                               if (ChatPanel.field_a == null) {
                                 return;
                               }
-                              if (this.field_t == null) {
+                              if (this.owner == null) {
                                 return;
                               }
-                              if (5 > this.field_y) {
-                                ChatPanel.field_a[this.field_x >> 1].draw(-32 + (param2 + this.field_v), this.field_G + param0 + (-32 - (this.field_t.field_Y >> 1)));
+                              if (5 > this.ageTicks) {
+                                ChatPanel.field_a[this.field_x >> 1].draw(-32 + (offsetX + this.x), this.y + offsetY + (-32 - (this.owner.size >> 1)));
                                 if (var16 == 0) {
                                   return;
                                 }
                               }
-                              ChatPanel.field_a[this.field_x >> 1].drawAlpha(-32 + (this.field_v + param2), this.field_G + (param0 + (-32 - (this.field_t.field_Y >> 1))), 64);
+                              ChatPanel.field_a[this.field_x >> 1].drawAlpha(-32 + (this.x + offsetX), this.y + (offsetY + (-32 - (this.owner.size >> 1))), 64);
                               if (var16 == 0) {
                                 return;
                               }
@@ -9627,13 +9627,13 @@ final class SpellProjectile extends DualLinkNode {
                             if (null == BirthDateEntryPanel.field_S) {
                               return;
                             }
-                            if (this.field_y < 250) {
-                              BirthDateEntryPanel.field_S[this.field_x >> 1].draw(param2 + this.field_v - 25, -64 + (this.field_G + param0));
+                            if (this.ageTicks < 250) {
+                              BirthDateEntryPanel.field_S[this.field_x >> 1].draw(offsetX + this.x - 25, -64 + (this.y + offsetY));
                               if (var16 == 0) {
                                 return;
                               }
                             }
-                            BirthDateEntryPanel.field_S[this.field_x >> 1].drawAlpha(-25 + param2 + this.field_v, this.field_G + param0 - 64, 64);
+                            BirthDateEntryPanel.field_S[this.field_x >> 1].drawAlpha(-25 + offsetX + this.x, this.y + offsetY - 64, 64);
                             if (var16 == 0) {
                               return;
                             }
@@ -9641,7 +9641,7 @@ final class SpellProjectile extends DualLinkNode {
                           if (StatusDialog.field_Tb == null) {
                             return;
                           }
-                          StatusDialog.field_Tb[this.field_H].draw(-50 + param2 + this.field_v, -50 + (param0 + this.field_G));
+                          StatusDialog.field_Tb[this.field_H].draw(-50 + offsetX + this.x, -50 + (offsetY + this.y));
                           if (var16 == 0) {
                             return;
                           }
@@ -9649,7 +9649,7 @@ final class SpellProjectile extends DualLinkNode {
                         if (null == ChatLine.field_l) {
                           return;
                         }
-                        ChatLine.field_l[this.field_H].draw(param2 + this.field_v - 50, -50 + (this.field_G + param0));
+                        ChatLine.field_l[this.field_H].draw(offsetX + this.x - 50, -50 + (this.y + offsetY));
                         if (var16 == 0) {
                           return;
                         }
@@ -9657,7 +9657,7 @@ final class SpellProjectile extends DualLinkNode {
                       if (null == MusicPatchNode.field_E) {
                         return;
                       }
-                      MusicPatchNode.field_E[this.field_H].draw(this.field_v - (-param2 + 50), -50 + param0 + this.field_G);
+                      MusicPatchNode.field_E[this.field_H].draw(this.x - (-offsetX + 50), -50 + offsetY + this.y);
                       if (var16 == 0) {
                         return;
                       }
@@ -9668,7 +9668,7 @@ final class SpellProjectile extends DualLinkNode {
                     if (this.field_H < 0) {
                       return;
                     }
-                    UrlHelpers.field_c[this.field_H].draw(-8 + (param2 + this.field_v), -8 + (this.field_G + param0));
+                    UrlHelpers.field_c[this.field_H].draw(-8 + (offsetX + this.x), -8 + (this.y + offsetY));
                     if (var16 == 0) {
                       return;
                     }
@@ -9676,7 +9676,7 @@ final class SpellProjectile extends DualLinkNode {
                   if (null == HuffmanCodec.field_j) {
                     return;
                   }
-                  HuffmanCodec.field_j[this.field_H].draw(-50 + (param2 + this.field_v), param0 + this.field_G - 50);
+                  HuffmanCodec.field_j[this.field_H].draw(-50 + (offsetX + this.x), offsetY + this.y - 50);
                   if (var16 == 0) {
                     return;
                   }
@@ -9684,7 +9684,7 @@ final class SpellProjectile extends DualLinkNode {
                 if (null == BirthDateEntryPanel.field_N) {
                   return;
                 }
-                BirthDateEntryPanel.field_N[this.field_H].draw(this.field_v + param2 - 50, -50 + param0 + this.field_G);
+                BirthDateEntryPanel.field_N[this.field_H].draw(this.x + offsetX - 50, -50 + offsetY + this.y);
                 if (var16 == 0) {
                   return;
                 }
@@ -9695,22 +9695,22 @@ final class SpellProjectile extends DualLinkNode {
               if (this.field_H < 0) {
                 return;
               }
-              CookieHelpers.field_j[this.field_H].draw(param2 + (this.field_v - 8), -8 + this.field_G + param0);
+              CookieHelpers.field_j[this.field_H].draw(offsetX + (this.x - 8), -8 + this.y + offsetY);
               if (var16 == 0) {
                 return;
               }
             }
             if (this.field_x != 0) {
-              var5_double = Math.sqrt((double)(this.field_F * this.field_F + this.field_u * this.field_u));
-              SoftwareRasterizer.fillCircleAlpha(this.field_v + param2, this.field_G + param0, 5, 35071, 96);
-              SoftwareRasterizer.fillCircleAlpha((int)(-((double)(6 * this.field_u) / var5_double) + (double)(this.field_v + param2)), (int)(-((double)(6 * this.field_F) / var5_double) + (double)(param0 + this.field_G)), 4, 35071, 64);
-              SoftwareRasterizer.fillCircleAlpha((int)(-((double)(8 * this.field_u) / var5_double) + (double)(param2 + this.field_v)), (int)((double)(param0 + this.field_G) - (double)(this.field_F * 8) / var5_double), 3, 35071, 64);
-              SoftwareRasterizer.fillCircleAlpha((int)(-((double)(this.field_u * 10) / var5_double) + (double)(this.field_v + param2)), (int)(-((double)(this.field_F * 10) / var5_double) + (double)(this.field_G + param0)), 2, 35071, 64);
-              SoftwareRasterizer.fillCircleAlpha((int)(-((double)(this.field_u * 12) / var5_double) + (double)(this.field_v + param2)), (int)(-((double)(12 * this.field_F) / var5_double) + (double)(this.field_G + param0)), 1, 35071, 64);
-              SoftwareRasterizer.fillCircleAlpha((int)(-((double)(6 * this.field_u) / var5_double) + (double)(this.field_v + param2)), (int)((double)(param0 + this.field_G) - (double)(this.field_F * 6) / var5_double), 3, 8978431, 32);
-              SoftwareRasterizer.fillCircleAlpha((int)((double)(this.field_v + param2) - (double)(8 * this.field_u) / var5_double), (int)((double)(this.field_G + param0) - (double)(this.field_F * 8) / var5_double), 2, 8978431, 32);
-              SoftwareRasterizer.fillCircleAlpha(param2 + this.field_v, param0 + this.field_G, 4, 8978431, 64);
-              SoftwareRasterizer.fillCircleAlpha(this.field_v - (-param2 + 1), -1 + param0 + this.field_G, 2, 16777215, 32);
+              var5_double = Math.sqrt((double)(this.velocityY * this.velocityY + this.velocityX * this.velocityX));
+              SoftwareRasterizer.fillCircleAlpha(this.x + offsetX, this.y + offsetY, 5, 35071, 96);
+              SoftwareRasterizer.fillCircleAlpha((int)(-((double)(6 * this.velocityX) / var5_double) + (double)(this.x + offsetX)), (int)(-((double)(6 * this.velocityY) / var5_double) + (double)(offsetY + this.y)), 4, 35071, 64);
+              SoftwareRasterizer.fillCircleAlpha((int)(-((double)(8 * this.velocityX) / var5_double) + (double)(offsetX + this.x)), (int)((double)(offsetY + this.y) - (double)(this.velocityY * 8) / var5_double), 3, 35071, 64);
+              SoftwareRasterizer.fillCircleAlpha((int)(-((double)(this.velocityX * 10) / var5_double) + (double)(this.x + offsetX)), (int)(-((double)(this.velocityY * 10) / var5_double) + (double)(this.y + offsetY)), 2, 35071, 64);
+              SoftwareRasterizer.fillCircleAlpha((int)(-((double)(this.velocityX * 12) / var5_double) + (double)(this.x + offsetX)), (int)(-((double)(12 * this.velocityY) / var5_double) + (double)(this.y + offsetY)), 1, 35071, 64);
+              SoftwareRasterizer.fillCircleAlpha((int)(-((double)(6 * this.velocityX) / var5_double) + (double)(this.x + offsetX)), (int)((double)(offsetY + this.y) - (double)(this.velocityY * 6) / var5_double), 3, 8978431, 32);
+              SoftwareRasterizer.fillCircleAlpha((int)((double)(this.x + offsetX) - (double)(8 * this.velocityX) / var5_double), (int)((double)(this.y + offsetY) - (double)(this.velocityY * 8) / var5_double), 2, 8978431, 32);
+              SoftwareRasterizer.fillCircleAlpha(offsetX + this.x, offsetY + this.y, 4, 8978431, 64);
+              SoftwareRasterizer.fillCircleAlpha(this.x - (-offsetX + 1), -1 + offsetY + this.y, 2, 16777215, 32);
               return;
             }
             if (null == ResizableModalPanel.field_db) {
@@ -9719,30 +9719,30 @@ final class SpellProjectile extends DualLinkNode {
             if (this.field_H < 0) {
               return;
             }
-            ResizableModalPanel.field_db[this.field_H].drawScaled(-8 + (param2 + this.field_v), -8 + (this.field_G + param0), 16, 16);
+            ResizableModalPanel.field_db[this.field_H].drawScaled(-8 + (offsetX + this.x), -8 + (this.y + offsetY), 16, 16);
             if (var16 == 0) {
               return;
             }
           }
-          var5_double = Math.sqrt((double)(this.field_F * this.field_F + this.field_u * this.field_u));
-          SoftwareRasterizer.fillCircleAlpha(param2 + this.field_v, this.field_G + param0, 6, 35071, 192);
-          SoftwareRasterizer.fillCircleAlpha((int)(-((double)(6 * this.field_u) / var5_double) + (double)(this.field_v + param2)), (int)((double)(param0 + this.field_G) - (double)(6 * this.field_F) / var5_double), 5, 35071, 128);
-          SoftwareRasterizer.fillCircleAlpha((int)(-((double)(this.field_u * 8) / var5_double) + (double)(param2 + this.field_v)), (int)((double)(param0 + this.field_G) - (double)(this.field_F * 8) / var5_double), 4, 35071, 128);
-          SoftwareRasterizer.fillCircleAlpha((int)(-((double)(this.field_u * 10) / var5_double) + (double)(this.field_v + param2)), (int)((double)(this.field_G + param0) - (double)(this.field_F * 10) / var5_double), 3, 35071, 128);
-          SoftwareRasterizer.fillCircleAlpha((int)((double)(this.field_v + param2) - (double)(this.field_u * 12) / var5_double), (int)((double)(this.field_G + param0) - (double)(12 * this.field_F) / var5_double), 2, 35071, 128);
-          SoftwareRasterizer.fillCircleAlpha((int)(-((double)(6 * this.field_u) / var5_double) + (double)(param2 + this.field_v)), (int)((double)(param0 + this.field_G) - (double)(6 * this.field_F) / var5_double), 4, 8978431, 64);
-          SoftwareRasterizer.fillCircleAlpha((int)((double)(param2 + this.field_v) - (double)(8 * this.field_u) / var5_double), (int)((double)(param0 + this.field_G) - (double)(8 * this.field_F) / var5_double), 3, 8978431, 64);
-          SoftwareRasterizer.fillCircleAlpha(this.field_v + param2, param0 + this.field_G, 5, 8978431, 128);
-          SoftwareRasterizer.fillCircleAlpha(-1 + this.field_v + param2, -1 + (this.field_G + param0), 3, 16777215, 64);
+          var5_double = Math.sqrt((double)(this.velocityY * this.velocityY + this.velocityX * this.velocityX));
+          SoftwareRasterizer.fillCircleAlpha(offsetX + this.x, this.y + offsetY, 6, 35071, 192);
+          SoftwareRasterizer.fillCircleAlpha((int)(-((double)(6 * this.velocityX) / var5_double) + (double)(this.x + offsetX)), (int)((double)(offsetY + this.y) - (double)(6 * this.velocityY) / var5_double), 5, 35071, 128);
+          SoftwareRasterizer.fillCircleAlpha((int)(-((double)(this.velocityX * 8) / var5_double) + (double)(offsetX + this.x)), (int)((double)(offsetY + this.y) - (double)(this.velocityY * 8) / var5_double), 4, 35071, 128);
+          SoftwareRasterizer.fillCircleAlpha((int)(-((double)(this.velocityX * 10) / var5_double) + (double)(this.x + offsetX)), (int)((double)(this.y + offsetY) - (double)(this.velocityY * 10) / var5_double), 3, 35071, 128);
+          SoftwareRasterizer.fillCircleAlpha((int)((double)(this.x + offsetX) - (double)(this.velocityX * 12) / var5_double), (int)((double)(this.y + offsetY) - (double)(12 * this.velocityY) / var5_double), 2, 35071, 128);
+          SoftwareRasterizer.fillCircleAlpha((int)(-((double)(6 * this.velocityX) / var5_double) + (double)(offsetX + this.x)), (int)((double)(offsetY + this.y) - (double)(6 * this.velocityY) / var5_double), 4, 8978431, 64);
+          SoftwareRasterizer.fillCircleAlpha((int)((double)(offsetX + this.x) - (double)(8 * this.velocityX) / var5_double), (int)((double)(offsetY + this.y) - (double)(8 * this.velocityY) / var5_double), 3, 8978431, 64);
+          SoftwareRasterizer.fillCircleAlpha(this.x + offsetX, offsetY + this.y, 5, 8978431, 128);
+          SoftwareRasterizer.fillCircleAlpha(-1 + this.x + offsetX, -1 + (this.y + offsetY), 3, 16777215, 64);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw CommonUiHelpers.wrapException((Throwable) ((Object) var4), "mi.B(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var4), "mi.B(" + offsetY + ',' + obfuscationGuard + ',' + offsetX + ')');
         }
     }
 
-    private final void drawOrbitEffect(int param0) {
+    private final void drawOrbitEffect(int obfuscationGuard) {
         int stackIn_11_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_15_1 = 0;
@@ -9762,14 +9762,14 @@ final class SpellProjectile extends DualLinkNode {
         try {
           var2 = new Sprite[]{ScreenSwitchHelpers.field_f[22].toRgbSprite(), ScreenSwitchHelpers.field_f[26].toRgbSprite(), ScreenSwitchHelpers.field_f[27].toRgbSprite()};
           var3 = DualLinkDeque.field_b[13].toRgbSprite();
-          if (param0 < 9) {
+          if (obfuscationGuard < 9) {
             this.field_x = 106;
           }
           var4 = 0;
           var5 = 64;
-          if (this.field_t != null &&
-            this.field_q.field_x[this.field_t.field_u] == 6) {
-            var5 = var5 + this.field_q.field_X[this.field_t.field_u] * 16 / 20;
+          if (this.owner != null &&
+            this.battle.playerSpellbook[this.owner.ownerPlayer] == 6) {
+            var5 = var5 + this.battle.field_X[this.owner.ownerPlayer] * 16 / 20;
           }
           var6 = 0;
           scanLoop1: while (true) {
@@ -9792,12 +9792,12 @@ final class SpellProjectile extends DualLinkNode {
                     stackIn_15_1 = var6;
                     if (stackIn_15_0 != stackIn_15_1) {
                       if (1 == var6 &&
-                        !this.field_q.spriteOverlapsTerrain(-var10 + (this.field_G - 8), 2, this.field_v - (-var9 + 8), var3)) {
-                        this.field_q.carveTerrainAndSprite(-8 - var10 + this.field_G, -12, var9 + this.field_v - 8, var3);
+                        !this.battle.spriteOverlapsTerrain(-var10 + (this.y - 8), 2, this.x - (-var9 + 8), var3)) {
+                        this.battle.carveTerrainAndSprite(-8 - var10 + this.y, -12, var9 + this.x - 8, var3);
                       }
                     } else {
-                      if (!this.field_q.spriteOverlapsTerrain(-8 + (-var10 + this.field_G), 2, var9 + (this.field_v - 8), var2[var4])) {
-                        this.field_q.carveTerrainAndSprite(-8 + (-var10 + this.field_G), -90, this.field_v + var9 - 8, var2[var4]);
+                      if (!this.battle.spriteOverlapsTerrain(-8 + (-var10 + this.y), 2, var9 + (this.x - 8), var2[var4])) {
+                        this.battle.carveTerrainAndSprite(-8 + (-var10 + this.y), -90, this.x + var9 - 8, var2[var4]);
                         var4++;
                         if (var2.length <= var4) {
                           var4 = var4 - var2.length;
@@ -9820,11 +9820,11 @@ final class SpellProjectile extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2_ref), "mi.HA(" + param0 + ')');
+          throw CommonUiHelpers.wrapException((Throwable) ((Object) var2_ref), "mi.HA(" + obfuscationGuard + ')');
         }
     }
 
-    SpellProjectile(int param0, int param1, int param2, int param3, BattleUnit param4, Battle param5) {
+    SpellProjectile(int spellType, int damageSourceId, int x, int y, BattleUnit owner, Battle battle) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -9833,20 +9833,20 @@ final class SpellProjectile extends DualLinkNode {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.initialize(-103, param0, param3, param2, param1, param5, param4);
+          this.initialize(-103, spellType, y, x, damageSourceId, battle, owner);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
           stackIn_6_0 = runtimeException;
-          stackIn_6_1 = new StringBuilder().append("mi.<init>(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          stackIn_6_1 = new StringBuilder().append("mi.<init>(").append(spellType).append(',').append(damageSourceId).append(',').append(x).append(',').append(y).append(',');
+          if (owner == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
           stackIn_10_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
-          if (param5 == null) {
+          if (battle == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
@@ -9855,21 +9855,21 @@ final class SpellProjectile extends DualLinkNode {
         }
     }
 
-    SpellProjectile(Battle param0) {
+    SpellProjectile(Battle battle) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_q = param0;
+          this.battle = battle;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
           stackIn_6_0 = runtimeException;
           stackIn_6_1 = new StringBuilder().append("mi.<init>(");
-          if (param0 == null) {
+          if (battle == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";

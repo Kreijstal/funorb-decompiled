@@ -172,104 +172,104 @@ final class ClientIOException extends IOException {
           }
           var4 = GradientBarButton.field_O.getUnitByOwner(0, true);
           if (var2 != null) {
-            GradientBarButton.field_O.setCurrentPlayer(-4207, ((BattleUnit) (var2)).field_T);
-            GradientBarButton.field_O.queueAction(((BattleUnit) (var2)).field_T, 157, (byte) 0, 0, 0, 0, 0, ((BattleUnit) (var2)).field_T, 0);
-            if (100 >= Math.abs(var4.field_lb - ((BattleUnit) (var2)).field_lb)) {
+            GradientBarButton.field_O.setCurrentPlayer(-4207, ((BattleUnit) (var2)).unitId);
+            GradientBarButton.field_O.queueAction(((BattleUnit) (var2)).unitId, 157, (byte) 0, 0, 0, 0, 0, ((BattleUnit) (var2)).unitId, 0);
+            if (100 >= Math.abs(var4.x - ((BattleUnit) (var2)).x)) {
               stackIn_24_0 = GradientBarButton.field_O;
-              stackIn_24_1 = ((BattleUnit) (var2)).field_T;
+              stackIn_24_1 = ((BattleUnit) (var2)).unitId;
               stackIn_24_2 = 158;
               stackIn_24_3 = -115;
               stackIn_24_4 = 32;
-              stackIn_24_5 = var4.field_lb;
-              stackIn_24_6 = var4.field_db;
+              stackIn_24_5 = var4.x;
+              stackIn_24_6 = var4.y;
               stackIn_24_7 = 0;
-              stackIn_24_8 = ((BattleUnit) (var2)).field_T;
-              if (var4.field_lb >= ((BattleUnit) (var2)).field_lb) {
+              stackIn_24_8 = ((BattleUnit) (var2)).unitId;
+              if (var4.x >= ((BattleUnit) (var2)).x) {
                 stackIn_25_9 = 0;
               } else {
                 stackIn_25_9 = 1;
               }
               ((Battle) (Object) stackIn_24_0).queueAction(stackIn_24_1, stackIn_24_2, (byte) stackIn_24_3, stackIn_24_4, stackIn_24_5, stackIn_24_6, stackIn_24_7, stackIn_24_8, stackIn_25_9);
               stackIn_27_0 = GradientBarButton.field_O;
-              stackIn_27_1 = ((BattleUnit) (var2)).field_T;
+              stackIn_27_1 = ((BattleUnit) (var2)).unitId;
               stackIn_27_2 = 158;
               stackIn_27_3 = 34;
               stackIn_27_4 = 0;
-              stackIn_27_5 = var4.field_lb;
-              stackIn_27_6 = var4.field_db;
+              stackIn_27_5 = var4.x;
+              stackIn_27_6 = var4.y;
               stackIn_27_7 = 0;
-              stackIn_27_8 = ((BattleUnit) (var2)).field_T;
-              if (var4.field_lb >= ((BattleUnit) (var2)).field_lb) {
+              stackIn_27_8 = ((BattleUnit) (var2)).unitId;
+              if (var4.x >= ((BattleUnit) (var2)).x) {
                 stackIn_28_9 = 5;
               } else {
                 stackIn_28_9 = 3;
               }
               ((Battle) (Object) stackIn_27_0).queueAction(stackIn_27_1, stackIn_27_2, (byte) stackIn_27_3, stackIn_27_4, stackIn_27_5, stackIn_27_6, stackIn_27_7, stackIn_27_8, stackIn_28_9);
               stackIn_30_0 = GradientBarButton.field_O;
-              stackIn_30_1 = ((BattleUnit) (var2)).field_T;
+              stackIn_30_1 = ((BattleUnit) (var2)).unitId;
               stackIn_30_2 = 158;
               stackIn_30_3 = -88;
               stackIn_30_4 = 0;
-              stackIn_30_5 = var4.field_lb;
-              stackIn_30_6 = var4.field_db;
+              stackIn_30_5 = var4.x;
+              stackIn_30_6 = var4.y;
               stackIn_30_7 = 0;
-              stackIn_30_8 = ((BattleUnit) (var2)).field_T;
-              if (var4.field_lb < ((BattleUnit) (var2)).field_lb) {
+              stackIn_30_8 = ((BattleUnit) (var2)).unitId;
+              if (var4.x < ((BattleUnit) (var2)).x) {
                 stackIn_31_9 = 2;
               } else {
                 stackIn_31_9 = 4;
               }
               ((Battle) (Object) stackIn_30_0).queueAction(stackIn_30_1, stackIn_30_2, (byte) stackIn_30_3, stackIn_30_4, stackIn_30_5, stackIn_30_6, stackIn_30_7, stackIn_30_8, stackIn_31_9);
-              GradientBarButton.field_O.queueAction(((BattleUnit) (var2)).field_T, 37, (byte) -100, 32, var4.field_lb, var4.field_db, var4.field_db, ((BattleUnit) (var2)).field_T, var4.field_lb);
+              GradientBarButton.field_O.queueAction(((BattleUnit) (var2)).unitId, 37, (byte) -100, 32, var4.x, var4.y, var4.y, ((BattleUnit) (var2)).unitId, var4.x);
             } else {
               stackIn_14_0 = GradientBarButton.field_O;
-              stackIn_14_1 = ((BattleUnit) (var2)).field_T;
+              stackIn_14_1 = ((BattleUnit) (var2)).unitId;
               stackIn_14_2 = 158;
               stackIn_14_3 = -92;
               stackIn_14_4 = 0;
-              stackIn_14_5 = var4.field_lb;
-              stackIn_14_6 = var4.field_db;
+              stackIn_14_5 = var4.x;
+              stackIn_14_6 = var4.y;
               stackIn_14_7 = 0;
-              stackIn_14_8 = ((BattleUnit) (var2)).field_T;
-              if (((BattleUnit) (var2)).field_lb <= var4.field_lb) {
+              stackIn_14_8 = ((BattleUnit) (var2)).unitId;
+              if (((BattleUnit) (var2)).x <= var4.x) {
                 stackIn_15_9 = 4;
               } else {
                 stackIn_15_9 = 2;
               }
               ((Battle) (Object) stackIn_14_0).queueAction(stackIn_14_1, stackIn_14_2, (byte) stackIn_14_3, stackIn_14_4, stackIn_14_5, stackIn_14_6, stackIn_14_7, stackIn_14_8, stackIn_15_9);
               stackIn_17_0 = GradientBarButton.field_O;
-              stackIn_17_1 = ((BattleUnit) (var2)).field_T;
+              stackIn_17_1 = ((BattleUnit) (var2)).unitId;
               stackIn_17_2 = 158;
               stackIn_17_3 = 83;
               stackIn_17_4 = 32;
-              stackIn_17_5 = var4.field_lb;
-              stackIn_17_6 = var4.field_db;
+              stackIn_17_5 = var4.x;
+              stackIn_17_6 = var4.y;
               stackIn_17_7 = 0;
-              stackIn_17_8 = ((BattleUnit) (var2)).field_T;
-              if (var4.field_lb >= ((BattleUnit) (var2)).field_lb) {
+              stackIn_17_8 = ((BattleUnit) (var2)).unitId;
+              if (var4.x >= ((BattleUnit) (var2)).x) {
                 stackIn_18_9 = 1;
               } else {
                 stackIn_18_9 = 0;
               }
               ((Battle) (Object) stackIn_17_0).queueAction(stackIn_17_1, stackIn_17_2, (byte) stackIn_17_3, stackIn_17_4, stackIn_17_5, stackIn_17_6, stackIn_17_7, stackIn_17_8, stackIn_18_9);
               stackIn_20_0 = GradientBarButton.field_O;
-              stackIn_20_1 = ((BattleUnit) (var2)).field_T;
+              stackIn_20_1 = ((BattleUnit) (var2)).unitId;
               stackIn_20_2 = 158;
               stackIn_20_3 = -117;
               stackIn_20_4 = 0;
-              stackIn_20_5 = var4.field_lb;
-              stackIn_20_6 = var4.field_db;
+              stackIn_20_5 = var4.x;
+              stackIn_20_6 = var4.y;
               stackIn_20_7 = 0;
-              stackIn_20_8 = ((BattleUnit) (var2)).field_T;
-              if (((BattleUnit) (var2)).field_lb <= var4.field_lb) {
+              stackIn_20_8 = ((BattleUnit) (var2)).unitId;
+              if (((BattleUnit) (var2)).x <= var4.x) {
                 stackIn_21_9 = 5;
               } else {
                 stackIn_21_9 = 3;
               }
               ((Battle) (Object) stackIn_20_0).queueAction(stackIn_20_1, stackIn_20_2, (byte) stackIn_20_3, stackIn_20_4, stackIn_20_5, stackIn_20_6, stackIn_20_7, stackIn_20_8, stackIn_21_9);
-              GradientBarButton.field_O.queueAction(((BattleUnit) (var2)).field_T, 36, (byte) 96, 64, var4.field_lb, var4.field_db, var4.field_db, ((BattleUnit) (var2)).field_T, var4.field_lb);
+              GradientBarButton.field_O.queueAction(((BattleUnit) (var2)).unitId, 36, (byte) 96, 64, var4.x, var4.y, var4.y, ((BattleUnit) (var2)).unitId, var4.x);
             }
-            GradientBarButton.field_O.queueAction(((BattleUnit) (var2)).field_T, 157, (byte) 27, 0, 0, 0, 0, ((BattleUnit) (var2)).field_T, 0);
+            GradientBarButton.field_O.queueAction(((BattleUnit) (var2)).unitId, 157, (byte) 27, 0, 0, 0, 0, ((BattleUnit) (var2)).unitId, 0);
           }
           GradientBarButton.field_O.setAnimating(true);
           GradientBarButton.field_O.setCurrentPlayer(-4207, 3);

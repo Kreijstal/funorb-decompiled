@@ -205,8 +205,8 @@ final class NameTable {
             var6_int = 0;
           }
           var7 = 1 + (param5 + param3);
-          if (param2 + param0.field_H < var7) {
-            var7 = -1 + param0.field_H;
+          if (param2 + param0.arenaHeight < var7) {
+            var7 = -1 + param0.arenaHeight;
           }
           var8 = var6_int;
           var9 = param3 * param3;
@@ -232,10 +232,10 @@ final class NameTable {
                   var14 = 0;
                 }
                 var15 = param4 + var10;
-                if (var15 > param0.field_y - 1) {
-                  var15 = param0.field_y - 1;
+                if (var15 > param0.arenaWidth - 1) {
+                  var15 = param0.arenaWidth - 1;
                 }
-                var16 = var8 * param0.field_y + var14;
+                var16 = var8 * param0.arenaWidth + var14;
                 incrementValue$2 = var11;
                 var11--;
                 var12 = var12 - (incrementValue$2 + var11);
@@ -271,10 +271,10 @@ final class NameTable {
               var14Lifetime1 = 0;
             }
             var15Lifetime1 = param4 + var10Lifetime1;
-            if (-1 + param0.field_y < var15Lifetime1) {
-              var15Lifetime1 = -1 + param0.field_y;
+            if (-1 + param0.arenaWidth < var15Lifetime1) {
+              var15Lifetime1 = -1 + param0.arenaWidth;
             }
-            var19 = var14Lifetime1 + var8 * param0.field_y;
+            var19 = var14Lifetime1 + var8 * param0.arenaWidth;
             var16Lifetime1 = var19;
             for (var17Lifetime1 = var14Lifetime1; var17Lifetime1 <= var15Lifetime1; var17Lifetime1++) {
               if (0 != param1.field_m[var19]) {
