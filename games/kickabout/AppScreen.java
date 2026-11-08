@@ -78,7 +78,7 @@ abstract class AppScreen {
           GameSoundEffect.field_b = param7;
           gg.field_Db = param6;
           GzipDecoder.field_f = param1;
-          wo.field_k = param5;
+          AlternateKeyedLoginCredentials.field_k = param5;
           or.field_c = param3;
           ParticipantStatus.field_t = (ArchiveNetworkClient) ((Object) new SocketArchiveNetworkClient());
           SplashScreen.field_i = new DiskCacheWorker(param2);
@@ -122,7 +122,7 @@ abstract class AppScreen {
           int var8Lifetime1;
           var9 = Kickabout.field_G;
           try {
-            if (op.field_y == null &&
+            if (SpriteButtonPainter.field_y == null &&
               !EmailSyntaxValidator.a(param3, (byte) -7)) {
               stackIn_6_0 = -1;
               return stackIn_6_0;
@@ -247,7 +247,7 @@ abstract class AppScreen {
               }
               ContextMenuItem.field_Db = false;
               if (var11 != null) {
-                mp.writeSettingsCookie(so.a(47), true, var11);
+                BlobSubmission.writeSettingsCookie(so.a(47), true, var11);
               }
               if (WeightedLruCache.field_d <= 0 &&
                 !fc.field_f) {
@@ -296,9 +296,9 @@ abstract class AppScreen {
             if (param0 != 0) {
               field_d = (IntrusiveDeque) null;
             }
-            if (op.field_y == null) {
+            if (SpriteButtonPainter.field_y == null) {
               if (ContextMenuItem.field_Db) {
-                if (30000L >= KeyedLoginCredentials.c(29680)) {
+                if (30000L >= KeyedLoginCredentials.millisSinceSessionStart(29680)) {
                   ListingRowCache.field_b = ic.field_e;
                 } else {
                   ListingRowCache.field_b = CheatCodeListener.field_h;

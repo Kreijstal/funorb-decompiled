@@ -10,7 +10,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonListen
     static int field_G;
     static UiLayoutNode field_E;
 
-    final static int a(ea param0, int[][][] param1, boolean param2) {
+    final static int a(ColorQuantizationBox param0, int[][][] param1, boolean param2) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -75,7 +75,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonListen
             var3_int = param0.length;
             this.field_H = new String[var3_int];
             for (var4_int = 0; var4_int < var3_int; var4_int++) {
-              this.field_H[var4_int] = hv.a(false, (CharSequence) ((Object) param0[var4_int])).replace(' ', ' ');
+              this.field_H[var4_int] = GoalkeeperAiSupport.normalizeBase37Name(false, (CharSequence) ((Object) param0[var4_int])).replace(' ', ' ');
             }
             if (param1 >= -27) {
               this.field_H = (String[]) null;

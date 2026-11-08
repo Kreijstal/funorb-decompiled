@@ -63,11 +63,11 @@ final class DelayedServerPacket extends IntrusiveNode {
     final static void b(int param0) {
         if (param0 <= 25) {
           DelayedServerPacket.a(111);
-          pc.field_c = nj.monotonicMillis(82);
+          pc.field_c = MonotonicClock.monotonicMillis(82);
           MeshObject.field_d = 0;
           return;
         }
-        pc.field_c = nj.monotonicMillis(82);
+        pc.field_c = MonotonicClock.monotonicMillis(82);
         MeshObject.field_d = 0;
     }
 
@@ -221,7 +221,7 @@ final class DelayedServerPacket extends IntrusiveNode {
 
     final static void a(int param0, int param1, int param2) {
         int var8 = 0;
-        long var3 = nj.monotonicMillis(-127);
+        long var3 = MonotonicClock.monotonicMillis(-127);
         int var8Lifetime1;
         if (var3 < PlayerStats.field_b) {
           return;

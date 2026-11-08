@@ -113,7 +113,7 @@ final class oa {
     }
 
     final static void a(byte param0, boolean param1) {
-        wd.field_l.renderWidgetPassesAndTooltip(0, 0, (byte) -114);
+        RankingsRequest.field_l.renderWidgetPassesAndTooltip(0, 0, (byte) -114);
         if (param0 > -98) {
           field_b = (UiLayoutNode) null;
         }

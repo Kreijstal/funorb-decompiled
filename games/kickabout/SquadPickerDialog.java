@@ -32,7 +32,7 @@ final class SquadPickerDialog extends MessageDialog {
           or.field_d.writeCircumfixedString(param1, (byte) -127);
           or.field_d.writeByte(102, param0);
           or.field_d.backpatchByteLength(62, -var3_int + or.field_d.field_n);
-          ri.field_t = 500;
+          BeveledTextPainter.field_t = 500;
           PlayerContextMenu.field_f = param2 ? true : false;
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "pq.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');

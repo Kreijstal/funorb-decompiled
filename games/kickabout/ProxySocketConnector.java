@@ -13,7 +13,7 @@ final class ProxySocketConnector extends SocketConnector {
     final static void a(int param0, int param1) {
         IntrusiveNode var2 = null;
         int var3 = 0;
-        mp var4 = null;
+        BlobSubmission var4 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         var3 = Kickabout.field_G;
@@ -21,10 +21,10 @@ final class ProxySocketConnector extends SocketConnector {
           if (param0 != -1) {
             return;
           }
-          var4 = (mp) (le.field_d.g(24009));
+          var4 = (BlobSubmission) (le.field_d.g(24009));
           while (var4 != null) {
-            KeyedLoginCredentials.a((byte) 20, param1, var4);
-            var4 = (mp) (le.field_d.c(33));
+            KeyedLoginCredentials.writeBlobSubmission((byte) 20, param1, var4);
+            var4 = (BlobSubmission) (le.field_d.c(33));
           }
           var2 = IterableDualLinkDeque.field_f.g(24009);
           while (var2 != null) {
@@ -63,7 +63,7 @@ final class ProxySocketConnector extends SocketConnector {
           if (param1 <= 0) {
             throw new IllegalArgumentException();
           }
-          if (rf.a(param1, 16)) {
+          if (SocialTabsPanel.isPowerOfTwoOrZero(param1, 16)) {
             stackIn_4_0 = (int)((long)param1 * (4294967295L & (long)param2.nextInt()) >> 32);
             return stackIn_4_0;
           }
@@ -103,10 +103,10 @@ final class ProxySocketConnector extends SocketConnector {
           while (true) {
             var3 = param0.a((byte) -106, param1);
             while (var3.field_a == 0) {
-              aj.a(10L, 1);
+              ThreadSleepSupport.sleepMillis(10L, 1);
             }
             if (var3.field_a != 1) {
-              aj.a(100L, 1);
+              ThreadSleepSupport.sleepMillis(100L, 1);
               continue;
             }
             break;
@@ -451,7 +451,7 @@ final class ProxySocketConnector extends SocketConnector {
           if (param1 <= 0) {
             throw new IllegalArgumentException();
           }
-          if (rf.a(param1, 16)) {
+          if (SocialTabsPanel.isPowerOfTwoOrZero(param1, 16)) {
             stackIn_4_0 = (int)((long)param1 * (4294967295L & (long)param2.nextInt()) >> 32);
             return stackIn_4_0;
           }

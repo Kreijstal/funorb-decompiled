@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mn implements WidgetPainter {
+final class IconButtonPainter implements WidgetPainter {
     static ValidationState field_c;
     static String field_d;
     static int[] field_b;

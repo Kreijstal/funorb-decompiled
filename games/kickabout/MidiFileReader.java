@@ -12,7 +12,7 @@ final class MidiFileReader {
     private int[] field_b;
     private int field_c;
 
-    final void c() {
+    final void clear() {
         this.field_a.field_f = null;
         this.field_d = null;
         this.field_b = null;
@@ -20,7 +20,7 @@ final class MidiFileReader {
         this.field_g = null;
     }
 
-    final void d() {
+    final void markTrackDone() {
         this.field_a.field_n = -1;
     }
 
@@ -32,7 +32,7 @@ final class MidiFileReader {
         this.field_a.field_n = this.field_b[param0];
     }
 
-    final long e(int param0) {
+    final long timeAtTick(int param0) {
         return this.field_f + (long)param0 * (long)this.field_c;
     }
 
@@ -120,11 +120,11 @@ final class MidiFileReader {
         }
     }
 
-    final boolean f() {
+    final boolean hasData() {
         return this.field_a.field_f != null;
     }
 
-    final int e() {
+    final int getTrackCount() {
         return this.field_b.length;
     }
 
@@ -160,7 +160,7 @@ final class MidiFileReader {
         this.field_g = new int[var2];
     }
 
-    private final int a(int param0) {
+    private final int readStatusMessage(int param0) {
         int var2;
         int var3;
         int var4;
@@ -198,7 +198,7 @@ final class MidiFileReader {
     }
 
     final int readMessage(int param0) {
-        int var2 = this.a(param0);
+        int var2 = this.readStatusMessage(param0);
         return var2;
     }
 

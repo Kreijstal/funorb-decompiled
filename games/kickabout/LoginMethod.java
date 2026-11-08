@@ -187,7 +187,7 @@ final class LoginMethod {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        dk.a(param2, -109, param1, param3 / param0, param3 % 3);
+        AchievementQuery.clipToGridCell(param2, -109, param1, param3 / param0, param3 % 3);
         SoftwareRasterizer.fillRoundedRectangleBlended(param2, param1, 156, 225, 10, 16777215, param4);
         TeamManagementScreen.e(126);
     }

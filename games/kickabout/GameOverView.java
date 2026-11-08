@@ -241,7 +241,7 @@ final class GameOverView extends MatchPhaseView {
           var3 = this.field_Q + 140;
           var4 = 360 + var2_int;
           CachedTextLayout.b(var4, param0 ^ 16777113, var3);
-          MusicPatch.a(param0 ^ 0);
+          MusicPatch.drawMatchMinimap(param0 ^ 0);
           var5 = this.field_u[this.field_h];
           var6 = this.field_u[1 - this.field_h];
           stackIn_4_0 = un.field_d;
@@ -707,7 +707,7 @@ final class GameOverView extends MatchPhaseView {
                 if (var7.power >= 100 &&
                   100 <= var7.speed &&
                   100 <= var7.tackle) {
-                  wq.a(-23 + this.field_o[var6_int].field_F, param1, 150, (byte) 32, hv.field_b, 100);
+                  wq.a(-23 + this.field_o[var6_int].field_F, param1, 150, (byte) 32, GoalkeeperAiSupport.field_b, 100);
                 } else {
                   var8 = Math.abs(this.field_j);
                   var8 = var8 | Math.abs(this.field_j) << 8;
@@ -1006,7 +1006,7 @@ final class GameOverView extends MatchPhaseView {
             param0.field_L &&
             (0 == this.field_m[0] ||
             this.field_m[1] == 0)) {
-            this.field_I[0] = ve.field_Q;
+            this.field_I[0] = FullscreenErrorDialog.field_Q;
           }
           boolean decompiledFrameCompleted1 = true;
           boolean decompiledFrameCompleted0 = true;
@@ -1440,7 +1440,7 @@ final class GameOverView extends MatchPhaseView {
               this.field_S = 2;
             }
           }
-          ii.a((byte) -127);
+          AchievementSubmission.a((byte) -127);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1737,7 +1737,7 @@ final class GameOverView extends MatchPhaseView {
             return (java.awt.Frame) (stackIn_5_0);
           }
           if (param5 == 0) {
-            var6 = kr.a((byte) 124, param4);
+            var6 = DisplayModeSupport.enumerateFullscreenModes((byte) 124, param4);
             if (var6 == null) {
               stackIn_9_0 = null;
               return (java.awt.Frame) (stackIn_9_0);
@@ -1780,7 +1780,7 @@ final class GameOverView extends MatchPhaseView {
             return stackIn_41_0;
           }
           while (var6_ref.field_a == 0) {
-            aj.a(10L, 1);
+            ThreadSleepSupport.sleepMillis(10L, 1);
             if (var9 == 0) {
               continue;
             }
@@ -1852,7 +1852,7 @@ final class GameOverView extends MatchPhaseView {
             if (0 == this.field_S ||
               this.field_S == 2 &&
               1 == this.field_mb) {
-              this.field_c[0].field_p = ni.field_e.toLowerCase();
+              this.field_c[0].field_p = HighScoreQuery.field_e.toLowerCase();
               decompiledFrameRemainder1 = (var15 != 0);
             }
             if (decompiledFrameRemainder1) {
@@ -1916,25 +1916,25 @@ final class GameOverView extends MatchPhaseView {
             if (this.field_K &&
               WidgetContainer.field_A == 1 &&
               this.field_ib == 0) {
-              ii.a((byte) -124);
+              AchievementSubmission.a((byte) -124);
               this.field_X = this.field_X - 596;
             }
             if (this.field_W &&
               WidgetContainer.field_A == 1 &&
               this.field_ib == -596) {
-              ii.a((byte) -119);
+              AchievementSubmission.a((byte) -119);
               this.field_X = this.field_X + 596;
             }
             if (this.field_C &&
               WidgetContainer.field_A == 1 &&
               -596 == this.field_ib) {
-              ii.a((byte) -117);
+              AchievementSubmission.a((byte) -117);
               this.field_X = this.field_X - 596;
             }
             if (this.field_D &&
               WidgetContainer.field_A == 1 &&
               this.field_ib == -1192) {
-              ii.a((byte) -125);
+              AchievementSubmission.a((byte) -125);
               this.field_X = this.field_X + 596;
             }
             if (this.field_y &&
@@ -1942,7 +1942,7 @@ final class GameOverView extends MatchPhaseView {
               this.field_P != 0 &&
               this.field_M > this.field_P) {
               if (WidgetContainer.field_A == 1) {
-                ii.a((byte) -118);
+                AchievementSubmission.a((byte) -118);
               }
               this.field_M = this.field_M - 32;
             }
@@ -1950,7 +1950,7 @@ final class GameOverView extends MatchPhaseView {
               1 == FootballerAgent.field_p &&
               this.field_M < 0) {
               if (WidgetContainer.field_A == 1) {
-                ii.a((byte) -122);
+                AchievementSubmission.a((byte) -122);
               }
               this.field_M = this.field_M + 32;
             }
@@ -1959,7 +1959,7 @@ final class GameOverView extends MatchPhaseView {
               this.field_lb != 0 &&
               this.field_M > this.field_lb) {
               if (WidgetContainer.field_A == 1) {
-                ii.a((byte) -121);
+                AchievementSubmission.a((byte) -121);
               }
               this.field_M = this.field_M - 32;
             }
@@ -1967,7 +1967,7 @@ final class GameOverView extends MatchPhaseView {
               FootballerAgent.field_p == 1 &&
               this.field_M < 0) {
               if (WidgetContainer.field_A == 1) {
-                ii.a((byte) -127);
+                AchievementSubmission.a((byte) -127);
               }
               this.field_M = this.field_M + 32;
             }
@@ -2020,7 +2020,7 @@ final class GameOverView extends MatchPhaseView {
             }
             break;
           }
-          var12 = nj.field_c;
+          var12 = MonotonicClock.field_c;
           if (var11 == 1) {
             var12 = ig.field_k;
           }

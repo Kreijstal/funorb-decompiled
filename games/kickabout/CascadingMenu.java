@@ -245,7 +245,7 @@ final class CascadingMenu extends UiLayoutNode {
         int var5;
         var5 = Kickabout.field_G;
         var2 = -45 % ((param0 - 92) / 32);
-        var3 = rp.getQuickChatCommandTypes(-27666);
+        var3 = PasswordFieldPainter.getQuickChatCommandTypes(-27666);
         for (var4 = 0; var3.length > var4; var4++) {
           if (param1 == var3[var4].id) {
             return var3[var4];

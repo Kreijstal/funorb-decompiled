@@ -239,7 +239,7 @@ final class AuctionSettingsDialog extends MessageDialog {
         un.field_d.d(InstrumentEnvelope.field_f.toLowerCase(), 130 + var4, 21 + var6, 16777215, -1);
         un.field_d.d(Kickabout.field_F.toLowerCase(), var4 + 130, var9 + 21, 16777215, -1);
         if (StrongCacheEntry.g(2368)) {
-          stackIn_8_0 = (nj.monotonicMillis(-51) % 500L < 250L) ? 1 : 0;
+          stackIn_8_0 = (MonotonicClock.monotonicMillis(-51) % 500L < 250L) ? 1 : 0;
         } else {
           stackIn_8_0 = 0;
         }
@@ -256,7 +256,7 @@ final class AuctionSettingsDialog extends MessageDialog {
           IsSixCommand.field_C.a('£', oa.field_b.field_s + 91, 53 + oa.field_b.field_J, 16777215);
         }
         oa.field_b.draw(94, var10 != 0 & this.field_I);
-        kr.field_a.a(false, (byte) 46);
+        DisplayModeSupport.field_a.a(false, (byte) 46);
         if (ad.field_f < QuickChatPhraseCache.field_c) {
           IsSixCommand.field_C.d(IntDoubleCommand.field_E, var4 + 130, 75 + var6 - 8, 16711680, -1);
         } else {
@@ -336,7 +336,7 @@ final class AuctionSettingsDialog extends MessageDialog {
           var8 = var7;
           var8.applyStyle(var9, (byte) -77);
           var7.updateInput(0, true);
-          var7.field_E = ni.field_k[var3_int];
+          var7.field_E = HighScoreQuery.field_k[var3_int];
           var8.field_mb = 18;
           var8.field_q = 240;
         }
@@ -374,9 +374,9 @@ final class AuctionSettingsDialog extends MessageDialog {
         StatChoiceDialog.field_F.field_R = null;
         StatChoiceDialog.field_F.a(-630, 5 + (-33 + (oa.field_b.field_q >> 1)), 8 + (oa.field_b.field_mb >> 1), 4 + (IsSixCommand.field_C.field_G + IsSixCommand.field_C.field_p), 67);
         oa.field_b.addChild((byte) -121, (UiLayoutNode) (StatChoiceDialog.field_F));
-        kr.field_a = new CheckboxLabelWidget(LoggedPlayer.field_k.toLowerCase(), un.field_d);
-        kr.field_a.field_J = 5;
-        kr.field_a.field_s = 5 + (oa.field_b.field_q - kr.field_a.field_q >> 1);
+        DisplayModeSupport.field_a = new CheckboxLabelWidget(LoggedPlayer.field_k.toLowerCase(), un.field_d);
+        DisplayModeSupport.field_a.field_J = 5;
+        DisplayModeSupport.field_a.field_s = 5 + (oa.field_b.field_q - DisplayModeSupport.field_a.field_q >> 1);
         AuctionBidDialog.field_I = eo.createButtonNode(false, 0);
         AccountMessagePanel.field_L = eo.createButtonNode(true, 0);
         hq.field_c = eo.createButtonNode(false, 0);
@@ -391,7 +391,7 @@ final class AuctionSettingsDialog extends MessageDialog {
         uq.field_b.addChild((byte) -125, AccountMessagePanel.field_L);
         oa.field_b.addChild((byte) -117, hq.field_c);
         oa.field_b.addChild((byte) -115, Trinket.field_a);
-        oa.field_b.addChild((byte) -113, (UiLayoutNode) (kr.field_a));
+        oa.field_b.addChild((byte) -113, (UiLayoutNode) (DisplayModeSupport.field_a));
         UnreadMessagesScreen.field_A.setText(Integer.toString(ad.field_f), -23174);
         StatChoiceDialog.field_F.setText(Integer.toString(AuctionBidDialog.field_L), -23174);
         this.field_F = true;
@@ -472,9 +472,9 @@ final class AuctionSettingsDialog extends MessageDialog {
         for (var3 = 0; var3 < 5; var3++) {
           if (of.field_d[var3].field_gb) {
             if (var3 == ee.field_d) {
-              IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, AuctionTableWidget.field_Jb, new String[]{ni.field_k[var3]}));
+              IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, AuctionTableWidget.field_Jb, new String[]{HighScoreQuery.field_k[var3]}));
             } else {
-              IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, TrinketPickerDialog.field_H, new String[]{ni.field_k[var3]}));
+              IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, TrinketPickerDialog.field_H, new String[]{HighScoreQuery.field_k[var3]}));
             }
           }
         }
@@ -541,16 +541,16 @@ final class AuctionSettingsDialog extends MessageDialog {
         stackIn_55_0 = hq.field_c;
         stackIn_56_1 = (AuctionBidDialog.field_L <= ad.field_f) ? false : true;
         stackIn_55_0.field_lb = stackIn_56_1 & ServerTextTemplate.field_e;
-        if (kr.field_a.field_gb) {
+        if (DisplayModeSupport.field_a.field_gb) {
           stackIn_60_0 = -67;
           if (ServerTextTemplate.field_e) {
             stackIn_61_1 = GeneratedPanelPainter.field_i;
           } else {
-            stackIn_61_1 = hh.field_c;
+            stackIn_61_1 = FullscreenFailureReason.field_c;
           }
           IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(stackIn_60_0, stackIn_61_1);
         }
-        if (kr.field_a.field_sb == 1) {
+        if (DisplayModeSupport.field_a.field_sb == 1) {
           stackIn_66_0 = !(ServerTextTemplate.field_e);
           ServerTextTemplate.field_e = stackIn_66_0;
           ShopPlayerSlot.c(61, -17);
@@ -560,7 +560,7 @@ final class AuctionSettingsDialog extends MessageDialog {
             StatChoiceDialog.field_F.setText("", -23174);
           }
         }
-        kr.field_a.field_Gb = ServerTextTemplate.field_e;
+        DisplayModeSupport.field_a.field_Gb = ServerTextTemplate.field_e;
         if (UnreadMessagesScreen.field_A.field_sb == 1) {
           this.field_I = false;
           this.field_F = true;
@@ -577,7 +577,7 @@ final class AuctionSettingsDialog extends MessageDialog {
         var5 = 5;
         for (var6 = 0; var6 < 3; var6++) {
           if (AccountMessagePanel.field_L.field_qb == 1) {
-            if (wo.field_o % var5 == 0) {
+            if (AlternateKeyedLoginCredentials.field_o % var5 == 0) {
               if (!ServerTextTemplate.field_e) {
                 stackIn_85_0 = IndexedSpriteState.field_g;
               } else {
@@ -605,7 +605,7 @@ final class AuctionSettingsDialog extends MessageDialog {
             var3 = 1;
           }
           if (1 == AuctionBidDialog.field_I.field_qb) {
-            if (wo.field_o % var5 == 0 &&
+            if (AlternateKeyedLoginCredentials.field_o % var5 == 0 &&
               QuickChatPhraseCache.field_c < ad.field_f) {
               ad.field_f = ad.field_f - 1;
               if (ad.field_f < QuickChatPhraseCache.field_c) {
@@ -617,7 +617,7 @@ final class AuctionSettingsDialog extends MessageDialog {
             var3 = 1;
           }
           if (Trinket.field_a.field_qb == 1) {
-            if (0 == wo.field_o % var5 &&
+            if (0 == AlternateKeyedLoginCredentials.field_o % var5 &&
               AuctionBidDialog.field_L < IndexedSpriteState.field_g) {
               AuctionBidDialog.field_L = AuctionBidDialog.field_L + 1;
               if (AuctionBidDialog.field_L > IndexedSpriteState.field_g) {
@@ -630,7 +630,7 @@ final class AuctionSettingsDialog extends MessageDialog {
           }
           boolean decompiledFrameRemainder1 = true;
           if (1 == hq.field_c.field_qb) {
-            if (wo.field_o % var5 == 0) {
+            if (AlternateKeyedLoginCredentials.field_o % var5 == 0) {
               if (ad.field_f >= AuctionBidDialog.field_L) {
                 var3 = 1;
                 decompiledFrameRemainder1 = false;
@@ -650,9 +650,9 @@ final class AuctionSettingsDialog extends MessageDialog {
           }
         }
         if (var3 == 0) {
-          wo.field_o = 0;
+          AlternateKeyedLoginCredentials.field_o = 0;
         } else {
-          wo.field_o = wo.field_o + 1;
+          AlternateKeyedLoginCredentials.field_o = AlternateKeyedLoginCredentials.field_o + 1;
         }
         if (var4 != 0) {
           this.field_F = false;

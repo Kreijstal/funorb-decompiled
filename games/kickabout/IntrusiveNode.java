@@ -142,7 +142,7 @@ class IntrusiveNode {
         if (param0 >= -52) {
           return -83;
         }
-        return mn.field_a;
+        return IconButtonPainter.field_a;
     }
 
     final static boolean a(int param0, char param1) {

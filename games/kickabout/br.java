@@ -17,7 +17,7 @@ final class br {
             var4 = var3;
           }
           var4 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ListingRowCache.field_e[35], new String[]{AvailabilityCheckRequest.field_c[param1], var3});
-          if (hv.field_a[param1] &&
+          if (GoalkeeperAiSupport.field_a[param1] &&
             !c.a(param1, 0, BufferedSocket.field_f)) {
             var4 = ContextMenuItem.field_Gb;
           }
@@ -31,7 +31,7 @@ final class br {
           var4 = var3;
         }
         var4 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ListingRowCache.field_e[35], new String[]{AvailabilityCheckRequest.field_c[param1], var3});
-        if (hv.field_a[param1] &&
+        if (GoalkeeperAiSupport.field_a[param1] &&
           !c.a(param1, 0, BufferedSocket.field_f)) {
           var4 = ContextMenuItem.field_Gb;
         }

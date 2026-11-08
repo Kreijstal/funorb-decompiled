@@ -110,7 +110,7 @@ final class ValidatedTextWidget extends TextInputWidget implements ValidationPro
           if (param0 < 16) {
             ValidatedTextWidget.n((byte) 103);
           }
-          ii.a(var2Lifetime1, 71);
+          AchievementSubmission.applyAndQueueManagerAction(var2Lifetime1, 71);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "mr.DB(" + param0 + ',' + param1 + ')');
         }

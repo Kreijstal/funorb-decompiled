@@ -34,7 +34,7 @@ final class SaveChangesDialog extends MessageDialog {
             var3 != 0) {
             return false;
           }
-          if (!MusicPatch.b(0)) {
+          if (!MusicPatch.tryAcquireChatSendPermit(0)) {
             return true;
           }
           String var5 = (String) null;

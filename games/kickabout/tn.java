@@ -4,7 +4,7 @@
 final class tn {
     static String[][] field_g;
     static String field_c;
-    static rf field_d;
+    static SocialTabsPanel field_d;
     static long field_a;
     static Sprite field_e;
     static int field_b;

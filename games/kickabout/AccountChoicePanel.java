@@ -89,7 +89,7 @@ final class AccountChoicePanel extends WidgetContainer implements ButtonListener
         this.field_E = new TextButton(ConsoleEvaluationException.field_f, (UiListener) null);
         this.field_J = new TextButton(vb.field_e, (UiListener) null);
         this.field_H = new TextButton(TrinketCountSortCriterion.field_o, (UiListener) null);
-        op var1 = new op();
+        SpriteButtonPainter var1 = new SpriteButtonPainter();
         this.field_E.field_r = (WidgetPainter) ((Object) var1);
         this.field_J.field_r = (WidgetPainter) ((Object) var1);
         this.field_H.field_r = (WidgetPainter) ((Object) var1);

@@ -261,7 +261,7 @@ class iv extends DualLinkNode {
           var16[21] = uq.field_e;
           var17 = new String[27];
           var17[23] = us.field_g.toLowerCase();
-          var17[24] = ii.field_h.toLowerCase();
+          var17[24] = AchievementSubmission.field_h.toLowerCase();
           var17[25] = ArchivePreloadEntry.field_b.toLowerCase();
           var17[14] = pr.field_b.toLowerCase();
           var17[20] = ScrollPane.field_Gb;
@@ -271,7 +271,7 @@ class iv extends DualLinkNode {
           var17[7] = fc.field_b;
           var17[21] = ss.field_f;
           var17[15] = ss.field_f;
-          var17[19] = wd.field_g;
+          var17[19] = RankingsRequest.field_g;
           var45 = new int[27];
           var45[23] = 440;
           var45[7] = 390;

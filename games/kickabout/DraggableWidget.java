@@ -18,12 +18,12 @@ final class DraggableWidget extends SingleChildContainer {
 
     final static void a(int param0, CoverageBitmapFont param1, byte param2) {
         try {
-          wo.field_m = 150;
+          AlternateKeyedLoginCredentials.field_m = 150;
           DirectByteStorage.field_o = param1;
           if (param2 != -46) {
             DraggableWidget.a(-114, (byte) -103, false, 80);
           }
-          TutorialChoiceDialog.field_J = wo.field_m + 20 + param0 >> 1;
+          TutorialChoiceDialog.field_J = AlternateKeyedLoginCredentials.field_m + 20 + param0 >> 1;
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "jg.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -69,7 +69,7 @@ final class DraggableWidget extends SingleChildContainer {
             PacketBuffer.a(-56, LobbyGameRecord.field_m);
             SoftwareRasterizer.clearFramebuffer();
             var7.c(4, 4);
-            nh.adjustSpriteHsv(LobbyGameRecord.field_m, 0.0, 1.3, 1.2);
+            SpritePixelSupport.adjustSpriteHsv(LobbyGameRecord.field_m, 0.0, 1.3, 1.2);
             eo.a(LobbyGameRecord.field_m, 65793);
             eo.a(LobbyGameRecord.field_m, 16777215);
             eo.a(LobbyGameRecord.field_m, 7829367);
@@ -80,7 +80,7 @@ final class DraggableWidget extends SingleChildContainer {
             for (var9 = 0; var9 < 255; var9++) {
               var8[var9] = 65793 * var9;
             }
-            nh.a(20, 40, -20 + SoftwareRasterizer.field_g, 40, 28, 40, var12);
+            SpritePixelSupport.a(20, 40, -20 + SoftwareRasterizer.field_g, 40, 28, 40, var12);
             TeamManagementScreen.e(119);
             TeamManagementScreen.e(param6 + 123);
             DualLinkNode.field_k = param0;
@@ -128,7 +128,7 @@ final class DraggableWidget extends SingleChildContainer {
           }
           if (param6 == 1) {
             this.field_D = -param1 + (-this.field_g + param4);
-            mp.field_g = this;
+            BlobSubmission.field_g = this;
             this.field_E = -param5 + param2 - this.field_t;
           }
           this.field_p = param6;

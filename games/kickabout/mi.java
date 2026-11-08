@@ -97,7 +97,7 @@ final class mi {
             field_d = -66;
           }
           IntDoubleCommand.field_A = param0;
-          var6 = te.a(-94, NameSuggestionsPanel.field_E, param4, ic.field_a, ve.field_S);
+          var6 = te.a(-94, NameSuggestionsPanel.field_E, param4, ic.field_a, FullscreenErrorDialog.field_S);
           ad.a(var6, (byte) -115);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

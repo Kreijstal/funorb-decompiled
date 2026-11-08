@@ -66,7 +66,7 @@ final class StripedProgressBar extends UiWidget {
           var3 = var10.readUnsignedByte((byte) -109);
           var10.p(-111);
           SaveChangesDialog.field_H = ds.a(var10, (byte) -4);
-          sm.field_l = new int[var3][];
+          HighScoreSubmission.field_l = new int[var3][];
           TrinketCountSortCriterion.field_n = new TriangleMesh[var3];
           for (var4 = 0; var4 < var3; var4++) {
             TrinketCountSortCriterion.field_n[var4] = NanoTickClock.a((byte) 80, var8);
@@ -82,7 +82,7 @@ final class StripedProgressBar extends UiWidget {
             var5.scale(6, 6, 256, 1, 6);
             var5.computeBounds(false);
             var6 = new int[]{var5.field_h + var5.field_y >> 1, var5.field_s + var5.field_x >> 1, var5.field_t + var5.field_w >> 1};
-            sm.field_l[var9] = var6;
+            HighScoreSubmission.field_l[var9] = var6;
             var5.translate(-var6[2], -var6[0], param0 ^ 49, -var6[1]);
             var9++;
           }

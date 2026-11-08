@@ -43,7 +43,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
           int var3_intLifetime1;
           var16 = Kickabout.field_G;
           if (null != this.field_x) {
-            var2_long = nj.monotonicMillis(-70);
+            var2_long = MonotonicClock.monotonicMillis(-70);
             var4 = (int)(-this.field_p + var2_long);
             this.field_p = var2_long;
             if (var4 > 200) {
@@ -363,7 +363,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
               }
             }
             this.field_f = 0;
-            this.field_p = nj.monotonicMillis(-119);
+            this.field_p = MonotonicClock.monotonicMillis(-119);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
             decompiledCaughtException = decompiledCaughtParameter3;

@@ -447,7 +447,7 @@ final class MyKitScreen extends TeamManagementScreen {
           this.field_U = -111;
         }
         if (this.field_db != null) {
-          var3 = ((int)(nj.monotonicMillis(75) % 5000L) << 11) / 5000;
+          var3 = ((int)(MonotonicClock.monotonicMillis(75) % 5000L) << 11) / 5000;
           TriangleRasterizer.useRasterClip();
           TriangleRasterizer.setProjectionCenter(532 + this.slideOffsetX, 410);
           var12 = OffscreenPlayerArrow.field_f;
@@ -481,7 +481,7 @@ final class MyKitScreen extends TeamManagementScreen {
         if (param0 <= 100) {
           MyKitScreen.ensureSoundLoaded(98, 120);
         }
-        if (!sk.field_d.field_k[0].a(1, 176400, vp.field_j, bq.field_a, ad.field_d[param1])) {
+        if (!sk.field_d.field_k[0].prepareTrackSamples(1, 176400, vp.field_j, bq.field_a, ad.field_d[param1])) {
           AnimationPlayer.a((byte) 113);
           return false;
         }

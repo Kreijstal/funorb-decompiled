@@ -28,25 +28,25 @@ final class ConsoleTokenCursor {
         int var12 = 0;
         var12 = Kickabout.field_G;
         try {
-          rp.field_x = param5;
+          PasswordFieldPainter.field_x = param5;
           AnimationPlayer.field_c = -1L;
           PlayerStatSortCriterion.field_p = param8;
           ss.field_j = param5.length;
           InstrumentNoteMask.field_k = false;
-          er.field_h = new byte[(7 + PlayerStatSortCriterion.field_p) / 8];
+          TextHotspotRegion.field_h = new byte[(7 + PlayerStatSortCriterion.field_p) / 8];
           PlayerContextMenu.field_i = null;
           ArchiveSource.field_b = null;
           var10_int = 0;
-          for (var11 = 0; var11 < rp.field_x.length; var11++) {
-            var10_int = var10_int + (rp.field_x[var11] & 255);
+          for (var11 = 0; var11 < PasswordFieldPainter.field_x.length; var11++) {
+            var10_int = var10_int + (PasswordFieldPainter.field_x[var11] & 255);
           }
           var10_int = (7 + var10_int) / 8;
-          rf.field_d = new byte[var10_int];
+          SocialTabsPanel.field_d = new byte[var10_int];
           if (null == param0.field_jb) {
             param0.field_jb = new IntrusiveDeque();
           }
-          rp.field_B = param0.field_jb;
-          rp.field_B.clear(22997);
+          PasswordFieldPainter.field_B = param0.field_jb;
+          PasswordFieldPainter.field_B.clear(22997);
           SquadPickerDialog.field_N = new DualLinkHashTable(param2);
           DelayedServerPacket.field_h = 0;
           mi.field_d = -1;

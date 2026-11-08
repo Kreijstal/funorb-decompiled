@@ -379,7 +379,7 @@ final class NamedValueContainer {
         RuntimeException var6 = null;
         LoginCredentials stackIn_2_0 = null;
         PasswordLoginCredentials stackIn_6_0 = null;
-        wo stackIn_10_0 = null;
+        AlternateKeyedLoginCredentials stackIn_10_0 = null;
         KeyedLoginCredentials stackIn_12_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -398,7 +398,7 @@ final class NamedValueContainer {
             return (LoginCredentials) ((Object) stackIn_6_0);
           }
           if (param3) {
-            stackIn_10_0 = new wo(param1, param0);
+            stackIn_10_0 = new AlternateKeyedLoginCredentials(param1, param0);
             return (LoginCredentials) ((Object) stackIn_10_0);
           }
           stackIn_12_0 = new KeyedLoginCredentials(param1, param0);

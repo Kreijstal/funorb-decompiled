@@ -195,7 +195,7 @@ class TextInputWidget extends TextButton {
             if (this.field_I != this.field_Q) {
               var8.drawSelection(param2, this.field_I, this.field_Q, (UiWidget) (this), 91, param3);
             }
-            var6 = nj.monotonicMillis(30);
+            var6 = MonotonicClock.monotonicMillis(30);
             if ((var6 - this.field_L) % 1000L < 500L) {
               var8.drawCaret(this.field_I, param2, param3, true, (UiWidget) (this));
             }
@@ -233,7 +233,7 @@ class TextInputWidget extends TextButton {
           this.field_S = param2;
           this.setInputText(param0, (byte) -17, true);
           this.field_H = true;
-          this.field_L = nj.monotonicMillis(-123);
+          this.field_L = MonotonicClock.monotonicMillis(-123);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ga.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -298,7 +298,7 @@ class TextInputWidget extends TextButton {
                 this.field_I = var6;
               }
             }
-            this.field_L = nj.monotonicMillis(param0 ^ -117);
+            this.field_L = MonotonicClock.monotonicMillis(param0 ^ -117);
           }
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ga.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
@@ -329,7 +329,7 @@ class TextInputWidget extends TextButton {
             stackIn_6_1 = var8_int;
           }
           this.moveCaret(stackIn_6_1, 20);
-          var8_long = nj.monotonicMillis(95);
+          var8_long = MonotonicClock.monotonicMillis(95);
           stackIn_9_1 = !(var8_long - this.field_J >= 250L);
           this.field_G = stackIn_9_1;
           if (this.field_G) {
@@ -370,7 +370,7 @@ class TextInputWidget extends TextButton {
           if (param1 >= -60) {
             field_O = (boolean[]) null;
           }
-          this.field_L = nj.monotonicMillis(101);
+          this.field_L = MonotonicClock.monotonicMillis(101);
           if (param0 == 60) {
             return false;
           }

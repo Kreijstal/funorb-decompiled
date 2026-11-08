@@ -34,7 +34,7 @@ abstract class TickClock {
         InstrumentEnvelope.field_c = null;
         MySquadScreen.field_N = null;
         ContentTransitionDialog.field_Y = null;
-        h.field_e = null;
+        QuickChatMenuBuilder.field_e = null;
         if (param0 >= -82) {
           TickClock.releaseStatics((byte) 24);
           if (null != jl.field_f) {
@@ -79,7 +79,7 @@ abstract class TickClock {
     final int a(byte param0, long param1) {
         long var4 = this.delayMillis((byte) -36);
         if (var4 > 0L) {
-          aj.a(var4, 1);
+          ThreadSleepSupport.sleepMillis(var4, 1);
         }
         if (param0 <= -51) {
           return this.advanceTicks(114, param1);

@@ -178,7 +178,7 @@ final class ServerTextTemplate {
             field_j = (Sprite[]) null;
           }
           var5 = param3.getFileId((byte) -104, param0, var4_int);
-          stackIn_3_0 = dk.a(var4_int, var5, (byte) -123, param3);
+          stackIn_3_0 = AchievementQuery.loadSpriteSheet(var4_int, var5, (byte) -123, param3);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

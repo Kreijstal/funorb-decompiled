@@ -305,7 +305,7 @@ final class KitStyleTile extends UiLayoutNode implements PopupCard {
         }
         if (this.field_gb) {
           if (this.field_Cb.field_k != -1) {
-            if (hv.field_a[this.field_Cb.field_k] &&
+            if (GoalkeeperAiSupport.field_a[this.field_Cb.field_k] &&
               !c.a(this.field_Cb.field_k, 0, BufferedSocket.field_f)) {
               IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, MyKitScreen.field_W.toLowerCase());
             } else {

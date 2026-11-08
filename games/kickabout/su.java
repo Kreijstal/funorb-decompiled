@@ -47,7 +47,7 @@ final class su {
             if (param0 != 27744) {
               field_a = (Sprite) null;
             }
-            ea.field_f.drawImage(param1, 10, param2, var4);
+            ColorQuantizationBox.field_f.drawImage(param1, 10, param2, var4);
             var4.dispose();
             return;
           } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -112,7 +112,7 @@ final class su {
         ByteStorage.field_d[AuctionsScreen.field_O] = AuctionsScreen.field_O;
         LobbyMatchPreview.field_m[AuctionsScreen.field_O] = param4;
         if (BlackFadeScreen.field_g >= param4) {
-          if (er.field_k <= param4) {
+          if (TextHotspotRegion.field_k <= param4) {
             AccountMessagePanel.field_G[AuctionsScreen.field_O] = param5;
             AgeValidator.field_j[AuctionsScreen.field_O] = param0;
             DropTargetWidget.field_B[AuctionsScreen.field_O] = param2;
@@ -150,7 +150,7 @@ final class su {
           var7 = stackIn_32_0;
         } else {
           TournamentLobbyScreen.field_V = param4;
-          if (er.field_k <= param4) {
+          if (TextHotspotRegion.field_k <= param4) {
             AccountMessagePanel.field_G[AuctionsScreen.field_O] = param5;
             AgeValidator.field_j[AuctionsScreen.field_O] = param0;
             DropTargetWidget.field_B[AuctionsScreen.field_O] = param2;

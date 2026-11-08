@@ -61,7 +61,7 @@ final class GeneratedPanelPainter extends NineSlicePanelPainter {
     }
 
     final static void b(byte param0) {
-        int var1 = (ea.field_a - 640) / 2;
+        int var1 = (ColorQuantizationBox.field_a - 640) / 2;
         int var2 = TextPromptDialog.field_Bb * TextPromptDialog.field_Bb;
         int var3 = var2 - ns.field_a * ns.field_a;
         if (param0 > 81) {

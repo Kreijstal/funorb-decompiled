@@ -152,10 +152,10 @@ final class PlayerStats implements PopupCard {
         var2.field_n = var2.field_n + 1;
         int var3 = var2.field_n;
         var2.writeByte(112, 2);
-        var2.writeBytes(param1, er.field_h.length, param1 ^ 1991220144, er.field_h);
+        var2.writeBytes(param1, TextHotspotRegion.field_h.length, param1 ^ 1991220144, TextHotspotRegion.field_h);
         var2.writeByte(param1 ^ 124, ConsoleExpression.field_l);
         var2.writeByte(124, MidiPcmStream.field_C);
-        var2.writeBytes(0, rf.field_d.length, param1 + 1991220144, rf.field_d);
+        var2.writeBytes(0, SocialTabsPanel.field_d.length, param1 + 1991220144, SocialTabsPanel.field_d);
         var2.backpatchByteLength(62, -var3 + var2.field_n);
     }
 
@@ -352,8 +352,8 @@ final class PlayerStats implements PopupCard {
     }
 
     final static void e(int param0) {
-        if (wd.field_l != null) {
-          wd.field_l.l(param0 ^ -5172);
+        if (RankingsRequest.field_l != null) {
+          RankingsRequest.field_l.l(param0 ^ -5172);
         }
         if (param0 != -1456) {
           PlayerStats.releaseStatics(3);
@@ -676,11 +676,11 @@ final class PlayerStats implements PopupCard {
     }
 
     final static boolean a(byte param0) {
-        kr.field_e = true;
+        DisplayModeSupport.field_e = true;
         if (param0 != -3) {
           return true;
         }
-        GoalStateAgent.field_g = 15000L + nj.monotonicMillis(param0 - 109);
+        GoalStateAgent.field_g = 15000L + MonotonicClock.monotonicMillis(param0 - 109);
         return vj.field_c == 11 ? true : false;
     }
 

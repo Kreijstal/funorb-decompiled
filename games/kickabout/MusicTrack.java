@@ -5,7 +5,7 @@ final class MusicTrack extends IntrusiveNode {
     byte[] field_e;
     IntrusiveNodeHashTable field_f;
 
-    final void b() {
+    final void buildNoteMasks() {
         int[] var1;
         int[] var2;
         MidiFileReader var4;
@@ -44,7 +44,7 @@ final class MusicTrack extends IntrusiveNode {
         var18[9] = 128;
         var22[9] = 128;
         var4 = new MidiFileReader(this.field_e);
-        var5 = var4.e();
+        var5 = var4.getTrackCount();
         for (var6 = 0; var6 < var5; var6++) {
           var4.seekTrack(var6);
           var4.readDelta(var6);
@@ -60,7 +60,7 @@ final class MusicTrack extends IntrusiveNode {
             var4.seekTrack(var6Lifetime1);
             var8 = var4.readMessage(var6Lifetime1);
             if (var8 == 1) {
-              var4.d();
+              var4.markTrackDone();
               var4.saveTrackPosition(var6Lifetime1);
               if (var4.isDone()) {
                 return;
@@ -112,7 +112,7 @@ final class MusicTrack extends IntrusiveNode {
         return new MusicTrack(new PacketBuffer(var3));
     }
 
-    final void a() {
+    final void releaseNoteMasks() {
         this.field_f = null;
     }
 

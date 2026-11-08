@@ -3,7 +3,7 @@
  */
 final class ds {
     static boolean[][] field_h;
-    static hh field_d;
+    static FullscreenFailureReason field_d;
     static int field_c;
     static UiLayoutNode[] field_a;
     static String field_e;
@@ -143,7 +143,7 @@ final class ds {
     }
 
     static {
-        field_d = new hh();
+        field_d = new FullscreenFailureReason();
         field_c = 225;
         field_e = "Send private message";
         field_g = false;

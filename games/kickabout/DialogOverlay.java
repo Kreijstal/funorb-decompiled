@@ -172,7 +172,7 @@ final class DialogOverlay implements OverlayLayer {
           stackIn_4_2 = (ig.field_f == ShopPlayerSlot.field_Jb);
           var7_int = ((ScrollPane) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_4_2, param0, 2, param1, (2 + sh.field_c) * 2) ? 1 : 0;
           var8 = ShopPlayerSlot.field_Jb.field_Ab.field_jb;
-          var9 = nj.monotonicMillis(97);
+          var9 = MonotonicClock.monotonicMillis(97);
           var11 = null;
           var12 = (GameSetupPanel) (var8.g(24009));
           while (var12 != null) {
@@ -184,7 +184,7 @@ final class DialogOverlay implements OverlayLayer {
               var14 = stackIn_8_0 | stackIn_8_1;
               var12.addChild((byte) -104, var12.field_Ib);
               var12.field_Ib.field_A = 1;
-              var12.field_Jb = new UiLayoutNode(0L, mp.field_f);
+              var12.field_Jb = new UiLayoutNode(0L, BlobSubmission.field_f);
               var12.addChild((byte) -116, var12.field_Jb);
               var12.field_kc = new UiLayoutNode(0L, AuctionSettingsDialog.field_J);
               var12.addChild((byte) -109, var12.field_kc);
@@ -192,7 +192,7 @@ final class DialogOverlay implements OverlayLayer {
               var12.field_jc = new UiLayoutNode(0L, AuctionSettingsDialog.field_J);
               var12.addChild((byte) -110, var12.field_jc);
               var12.field_jc.field_kb = 0;
-              var12.field_Hb = new UiLayoutNode(0L, mp.field_f);
+              var12.field_Hb = new UiLayoutNode(0L, BlobSubmission.field_f);
               var12.addChild((byte) -121, var12.field_Hb);
               var12.field_Hb.field_A = 2;
               stackIn_10_0 = var12;
@@ -206,7 +206,7 @@ final class DialogOverlay implements OverlayLayer {
               } else {
                 stackIn_11_1 = null;
                 stackIn_11_2 = null;
-                stackIn_11_4 = mp.field_f;
+                stackIn_11_4 = BlobSubmission.field_f;
               }
               stackIn_10_0.field_zb = new UiLayoutNode(stackIn_10_3, stackIn_11_4);
               var12.addChild((byte) -120, var12.field_zb);
@@ -248,7 +248,7 @@ final class DialogOverlay implements OverlayLayer {
               if (NetworkArchiveRequest.field_t) {
                 stackIn_32_1 = null;
                 stackIn_32_2 = null;
-                stackIn_32_4 = mp.field_f;
+                stackIn_32_4 = BlobSubmission.field_f;
               } else {
                 stackIn_32_1 = null;
                 stackIn_32_2 = null;
@@ -257,7 +257,7 @@ final class DialogOverlay implements OverlayLayer {
               stackIn_31_0.field_Zb = new UiLayoutNode(stackIn_31_3, stackIn_32_4);
               var12.addChild((byte) -104, var12.field_Zb);
               var12.field_Zb.field_A = 2;
-              var12.field_fc = new UiLayoutNode(0L, mp.field_f);
+              var12.field_fc = new UiLayoutNode(0L, BlobSubmission.field_f);
               var12.addChild((byte) -112, var12.field_fc);
               var12.field_dc = new UiLayoutNode(0L, ul.field_c);
               var12.addChild((byte) -127, var12.field_dc);
@@ -358,7 +358,7 @@ final class DialogOverlay implements OverlayLayer {
                   decompiledFrameRemainder1 = false;
                 }
                 else {
-                  var12.field_Lb.field_E = hh.field_e;
+                  var12.field_Lb.field_E = FullscreenFailureReason.field_e;
                 }
               } else {
                 if (var12.field_ac >= 0) {
@@ -366,7 +366,7 @@ final class DialogOverlay implements OverlayLayer {
                 } else {
                   if (var12.field_ic && (var12.field_Xb ||
                     var12.field_hc)) {
-                    var12.field_Lb.field_E = hh.field_e;
+                    var12.field_Lb.field_E = FullscreenFailureReason.field_e;
                     decompiledFrameRemainder1 = false;
                   }
                   else {

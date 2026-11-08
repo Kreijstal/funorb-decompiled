@@ -197,7 +197,7 @@ final class AuctionsHelpScreen extends PagedHelpScreen {
           if (param0 >= -35) {
             AuctionsHelpScreen.c(true);
           }
-          CheckboxPainter.field_c.a(-21174, ts.b(ArchiveManager.field_m, BytePlusOneCommand.field_A, 16756), ts.b(ReceivedAuctionItem.field_y, sm.field_q, 16756));
+          CheckboxPainter.field_c.a(-21174, ts.b(ArchiveManager.field_m, BytePlusOneCommand.field_A, 16756), ts.b(ReceivedAuctionItem.field_y, HighScoreSubmission.field_q, 16756));
           if (CheckboxPainter.field_c.c(-1)) {
             var1_int = 1;
           }

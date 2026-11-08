@@ -212,7 +212,7 @@ final class ContextMenuItem extends UiLayoutNode {
           if (TextButton.field_v != null) {
             TextButton.field_v.hideMenu(param1, false);
           }
-          nj.a(param1, -128);
+          MonotonicClock.drawActiveDialog(param1, -128);
           if (null != ck.field_b) {
             ck.field_b.draw(104, param1);
           }
@@ -223,7 +223,7 @@ final class ContextMenuItem extends UiLayoutNode {
         if (TextButton.field_v != null) {
           TextButton.field_v.hideMenu(param1, false);
         }
-        nj.a(param1, -128);
+        MonotonicClock.drawActiveDialog(param1, -128);
         if (null != ck.field_b) {
           ck.field_b.draw(104, param1);
         }

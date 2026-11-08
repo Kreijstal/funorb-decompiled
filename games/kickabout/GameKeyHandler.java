@@ -223,7 +223,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             }
             if (GzipDecoder.field_d >= 0 &&
               var2_int >= 0) {
-              mp.field_j[GzipDecoder.field_d] = var2_int;
+              BlobSubmission.field_j[GzipDecoder.field_d] = var2_int;
               GzipDecoder.field_d = 127 & 1 + GzipDecoder.field_d;
               if (GzipDecoder.field_d == ChatMessage.field_i) {
                 GzipDecoder.field_d = -1;
@@ -279,7 +279,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             }
             if (GzipDecoder.field_d >= 0 &&
               var2_int >= 0) {
-              mp.field_j[GzipDecoder.field_d] = ~var2_int;
+              BlobSubmission.field_j[GzipDecoder.field_d] = ~var2_int;
               GzipDecoder.field_d = GzipDecoder.field_d + 1 & 127;
               if (GzipDecoder.field_d == ChatMessage.field_i) {
                 GzipDecoder.field_d = -1;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class op extends TextWidgetPainter {
+final class SpriteButtonPainter extends TextWidgetPainter {
     static int[] field_z;
     static BufferedSocket field_y;
     private int field_s;
@@ -17,7 +17,7 @@ final class op extends TextWidgetPainter {
         IconLabel.field_Bb = 120;
         hq.field_d = -IconLabel.field_Bb + 480 - 21;
         if (param0 != -363021503) {
-          op.releaseStatics(110);
+          SpriteButtonPainter.releaseStatics(110);
         }
         int var1 = 24;
         int var2 = 96;
@@ -113,7 +113,7 @@ final class op extends TextWidgetPainter {
         field_z = null;
     }
 
-    public op() {
+    public SpriteButtonPainter() {
         this(2188450, 2591221, 9543);
     }
 
@@ -135,7 +135,7 @@ final class op extends TextWidgetPainter {
           var5 = 0;
           if (param1 <= 125) {
             var6 = (String) null;
-            op.a(72, (byte) -7, (String) null);
+            SpriteButtonPainter.a(72, (byte) -7, (String) null);
           }
           while (var5 < 4) {
             incrementValue$4 = var4;
@@ -161,7 +161,7 @@ final class op extends TextWidgetPainter {
         }
     }
 
-    private op(int param0, int param1, int param2) {
+    private SpriteButtonPainter(int param0, int param1, int param2) {
         this.field_r = IntrusiveDequeCursor.field_a;
         this.field_a = fj.field_b;
         this.field_s = param0;

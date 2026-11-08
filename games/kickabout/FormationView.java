@@ -14,9 +14,9 @@ final class FormationView extends MatchPhaseView {
     static String field_j;
 
     final static void b(byte param0) {
-        if (null != op.field_y) {
-          op.field_y.close(1);
-          op.field_y = null;
+        if (null != SpriteButtonPainter.field_y) {
+          SpriteButtonPainter.field_y.close(1);
+          SpriteButtonPainter.field_y = null;
         }
         if (param0 != -116) {
           field_o = (String) null;

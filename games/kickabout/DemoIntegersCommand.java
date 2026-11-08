@@ -75,9 +75,9 @@ final class DemoIntegersCommand extends ConsoleCommand {
           if (pg.field_b < TextPromptDialog.field_Bb) {
             pg.field_b = pg.field_b + 1;
           }
-          if (VerticalScrollbar.field_Ab != ea.field_f.field_e) {
-            c.field_c = c.field_c + (ea.field_f.field_e - VerticalScrollbar.field_Ab);
-            VerticalScrollbar.field_Ab = ea.field_f.field_e;
+          if (VerticalScrollbar.field_Ab != ColorQuantizationBox.field_f.field_e) {
+            c.field_c = c.field_c + (ColorQuantizationBox.field_f.field_e - VerticalScrollbar.field_Ab);
+            VerticalScrollbar.field_Ab = ColorQuantizationBox.field_f.field_e;
           }
           if (pg.field_b <= 0) {
             return;
@@ -96,7 +96,7 @@ final class DemoIntegersCommand extends ConsoleCommand {
             var6 = ValidatedTextWidget.field_W[var5_int];
             if (var6 != null) {
               if (var6.field_sb != 0) {
-                kr.a(var6, true, var5_int);
+                DisplayModeSupport.a(var6, true, var5_int);
               }
               var7 = r.a(0, var5_int);
               SocketConnector.field_b[var5_int].field_N = il.field_d[var7];

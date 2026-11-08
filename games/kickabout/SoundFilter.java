@@ -11,7 +11,7 @@ final class SoundFilter {
     private static float[][] field_f;
     static int[][] field_b;
 
-    private final static float a(float param0) {
+    private final static float pitchToAngularFrequency(float param0) {
         float var1 = 32.70319747924805f * (float)Math.pow(2.0, (double)param0);
         return var1 * 3.1415927410125732f / 11025.0f;
     }
@@ -27,7 +27,7 @@ final class SoundFilter {
         field_b = (int[][]) null;
     }
 
-    final void a(PacketBuffer param0, SoundEnvelope param1) {
+    final void decode(PacketBuffer param0, SoundEnvelope param1) {
         int var3;
         int var4;
         int var5;
@@ -98,11 +98,11 @@ final class SoundFilter {
           return 0;
         }
         var3Lifetime1 = this.interpolateRadius(param0, 0, param1);
-        field_f[param0][0] = -2.0f * var3Lifetime1 * (float)Math.cos((double)this.a(param0, 0, param1));
+        field_f[param0][0] = -2.0f * var3Lifetime1 * (float)Math.cos((double)this.interpolateAngularFrequency(param0, 0, param1));
         field_f[param0][1] = var3Lifetime1 * var3Lifetime1;
         for (var4 = 1; var4 < this.field_h[param0]; var4++) {
           var3Lifetime2 = this.interpolateRadius(param0, var4, param1);
-          var5 = -2.0f * var3Lifetime2 * (float)Math.cos((double)this.a(param0, var4, param1));
+          var5 = -2.0f * var3Lifetime2 * (float)Math.cos((double)this.interpolateAngularFrequency(param0, var4, param1));
           var6 = var3Lifetime2 * var3Lifetime2;
           field_f[param0][var4 * 2 + 1] = field_f[param0][var4 * 2 - 1] * var6;
           field_f[param0][var4 * 2] = field_f[param0][var4 * 2 - 1] * var5 + field_f[param0][var4 * 2 - 2] * var6;
@@ -127,10 +127,10 @@ final class SoundFilter {
         return this.field_h[param0] * 2;
     }
 
-    private final float a(int param0, int param1, float param2) {
+    private final float interpolateAngularFrequency(int param0, int param1, float param2) {
         float var4 = (float)this.field_e[param0][0][param1] + param2 * (float)(this.field_e[param0][1][param1] - this.field_e[param0][0][param1]);
         var4 = var4 * 0.0001220703125f;
-        return SoundFilter.a(var4);
+        return SoundFilter.pitchToAngularFrequency(var4);
     }
 
     SoundFilter() {

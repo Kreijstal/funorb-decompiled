@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rp extends ri {
+final class PasswordFieldPainter extends BeveledTextPainter {
     static String[] field_y;
     static volatile boolean field_A;
     static int field_w;
@@ -16,12 +16,12 @@ final class rp extends ri {
         ManagerAction var2Lifetime1;
         if (param0 == 65536) {
           var2 = new ManagerAction(1, new int[]{param1});
-          ii.a(var2, 69);
+          AchievementSubmission.applyAndQueueManagerAction(var2, 69);
           return;
         }
-        rp.a(false, -70);
+        PasswordFieldPainter.a(false, -70);
         var2Lifetime1 = new ManagerAction(1, new int[]{param1});
-        ii.a(var2Lifetime1, 69);
+        AchievementSubmission.applyAndQueueManagerAction(var2Lifetime1, 69);
     }
 
     final static int getDaysInMonth(int param0, int param1, int param2) {
@@ -58,14 +58,14 @@ final class rp extends ri {
         try {
           TournamentChampionDialog.field_I = TournamentChampionDialog.field_I + 65536;
           if (param1 != -587) {
-            rp.getQuickChatCommandTypes(-111);
+            PasswordFieldPainter.getQuickChatCommandTypes(-111);
           }
           while (UnreadMessagesScreen.a(vp.field_a, false, TournamentChampionDialog.field_I) >= 65536) {
             TournamentChampionDialog.field_I = TournamentChampionDialog.field_I - vp.field_a;
           }
           var2_int = -1;
-          if (wo.field_n != null) {
-            var2_int = wo.field_n.length;
+          if (AlternateKeyedLoginCredentials.field_n != null) {
+            var2_int = AlternateKeyedLoginCredentials.field_n.length;
           } else {
             if (null != StringCursor.field_b) {
               var2_int = StringCursor.field_b.length;
@@ -75,21 +75,21 @@ final class rp extends ri {
             boolean decompiledFrameRemainder0 = true;
             if (vp.field_f > ig.field_g) {
               ig.field_g = ig.field_g + 1;
-              if (vp.field_c < ig.field_g && (wo.field_n == null ||
-                wo.field_n[LoginCredentials.field_e] == null)) {
+              if (vp.field_c < ig.field_g && (AlternateKeyedLoginCredentials.field_n == null ||
+                AlternateKeyedLoginCredentials.field_n[LoginCredentials.field_e] == null)) {
                 ig.field_g = ig.field_g - 1;
                 decompiledFrameRemainder0 = false;
               }
               else {
                 if (ig.field_g >= vp.field_f &&
-                  null == wo.field_n[(LoginCredentials.field_e + 1) % var2_int]) {
+                  null == AlternateKeyedLoginCredentials.field_n[(LoginCredentials.field_e + 1) % var2_int]) {
                   ig.field_g = ig.field_g - 1;
                 }
               }
             }
             if (vp.field_f <= ig.field_g) {
               ig.field_g = ig.field_g - vp.field_f;
-              if (sm.field_m) {
+              if (HighScoreSubmission.field_m) {
                 LoginCredentials.field_e = LoginCredentials.field_e + 1;
                 if (LoginCredentials.field_e >= var2_int) {
                   LoginCredentials.field_e = LoginCredentials.field_e - var2_int;
@@ -102,7 +102,7 @@ final class rp extends ri {
               }
             }
             if (vp.field_c < ig.field_g) {
-              sm.field_m = true;
+              HighScoreSubmission.field_m = true;
             }
           }
           if (null != TextInputWidget.field_E) {
@@ -111,17 +111,17 @@ final class rp extends ri {
             if (0 != WidgetContainer.field_A &&
               ReceivedAuctionItem.field_y > var3 &&
               TextInputWidget.field_E.field_w + var3 > ReceivedAuctionItem.field_y) {
-              if (269 - TextInputWidget.field_E.field_q < sm.field_q &&
-                sm.field_q < 269) {
-                sm.field_m = false;
+              if (269 - TextInputWidget.field_E.field_q < HighScoreSubmission.field_q &&
+                HighScoreSubmission.field_q < 269) {
+                HighScoreSubmission.field_m = false;
                 ig.field_g = vp.field_f;
                 var4 = 1;
               }
-              if (sm.field_q > 586 &&
-                sm.field_q < TextInputWidget.field_E.field_q + 586) {
+              if (HighScoreSubmission.field_q > 586 &&
+                HighScoreSubmission.field_q < TextInputWidget.field_E.field_q + 586) {
                 ig.field_g = vp.field_f;
                 var4 = 1;
-                sm.field_m = true;
+                HighScoreSubmission.field_m = true;
               }
             }
             if (var4 == 0 &&
@@ -141,7 +141,7 @@ final class rp extends ri {
           if (!param0) {
             return 0;
           }
-          AuctionItem.field_l.a(-21174, vp.a(ArchiveManager.field_m, BytePlusOneCommand.field_A, (byte) 98), vp.a(ReceivedAuctionItem.field_y, sm.field_q, (byte) 69));
+          AuctionItem.field_l.a(-21174, vp.a(ArchiveManager.field_m, BytePlusOneCommand.field_A, (byte) 98), vp.a(ReceivedAuctionItem.field_y, HighScoreSubmission.field_q, (byte) 69));
           if (AuctionItem.field_l.c(-1)) {
             if (AuctionItem.field_l.selectedIndex == 0) {
               stackIn_58_0 = 3;
@@ -184,7 +184,7 @@ final class rp extends ri {
         }
     }
 
-    private rp(BitmapFont param0, int param1) {
+    private PasswordFieldPainter(BitmapFont param0, int param1) {
         super(param0, param1);
     }
 
@@ -217,13 +217,13 @@ final class rp extends ri {
 
     final static QuickChatCommandType[] getQuickChatCommandTypes(int param0) {
         if (param0 == -27666) {
-          return new QuickChatCommandType[]{DiskCacheWorker.field_c, IconLabel.field_yb, um.field_c, SocketArchiveNetworkClient.field_t, FormationAgent.field_h, ConsoleParseException.field_e, vp.field_o, MatchingTextValidator.field_j, DebugConsole.field_r, mn.field_e, LinkTextPainter.field_b, uq.field_d, BallAgent.field_z, StreetSceneryLoader.field_l};
+          return new QuickChatCommandType[]{DiskCacheWorker.field_c, IconLabel.field_yb, um.field_c, SocketArchiveNetworkClient.field_t, FormationAgent.field_h, ConsoleParseException.field_e, vp.field_o, MatchingTextValidator.field_j, DebugConsole.field_r, IconButtonPainter.field_e, LinkTextPainter.field_b, uq.field_d, BallAgent.field_z, StreetSceneryLoader.field_l};
         }
         field_A = true;
-        return new QuickChatCommandType[]{DiskCacheWorker.field_c, IconLabel.field_yb, um.field_c, SocketArchiveNetworkClient.field_t, FormationAgent.field_h, ConsoleParseException.field_e, vp.field_o, MatchingTextValidator.field_j, DebugConsole.field_r, mn.field_e, LinkTextPainter.field_b, uq.field_d, BallAgent.field_z, StreetSceneryLoader.field_l};
+        return new QuickChatCommandType[]{DiskCacheWorker.field_c, IconLabel.field_yb, um.field_c, SocketArchiveNetworkClient.field_t, FormationAgent.field_h, ConsoleParseException.field_e, vp.field_o, MatchingTextValidator.field_j, DebugConsole.field_r, IconButtonPainter.field_e, LinkTextPainter.field_b, uq.field_d, BallAgent.field_z, StreetSceneryLoader.field_l};
     }
 
-    rp(int param0) {
+    PasswordFieldPainter(int param0) {
         this(gf.field_a, param0);
     }
 
@@ -235,7 +235,7 @@ final class rp extends ri {
         field_D = null;
         field_x = null;
         if (param0 < 84) {
-          rp.getDaysInMonth(114, -72, -26);
+          PasswordFieldPainter.getDaysInMonth(114, -72, -26);
           return;
         }
     }

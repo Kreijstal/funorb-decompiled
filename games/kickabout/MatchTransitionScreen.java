@@ -27,14 +27,14 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
           return;
         }
         if (ih.field_c != gk.field_g) {
-          AnimationClip.a(hh.field_f, -76, TeamSelectionView.field_j, gk.field_g);
+          AnimationClip.a(FullscreenFailureReason.field_f, -76, TeamSelectionView.field_j, gk.field_g);
         } else {
-          if (hh.field_f != RankingsScreen.field_C) {
-            AnimationClip.a(hh.field_f, -76, TeamSelectionView.field_j, gk.field_g);
+          if (FullscreenFailureReason.field_f != RankingsScreen.field_C) {
+            AnimationClip.a(FullscreenFailureReason.field_f, -76, TeamSelectionView.field_j, gk.field_g);
           } else {
             stackIn_9_0 = (NanoTickClock.field_n) ? 0 : 1;
             if (stackIn_9_0 == (TeamSelectionView.field_j ? 1 : 0)) {
-              AnimationClip.a(hh.field_f, -76, TeamSelectionView.field_j, gk.field_g);
+              AnimationClip.a(FullscreenFailureReason.field_f, -76, TeamSelectionView.field_j, gk.field_g);
             }
           }
         }
@@ -304,7 +304,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
           MarkerSliderWidget.field_F.field_A = 1;
           MarkerSliderWidget.field_F.field_kb = ip.field_c.field_kb;
           if (fj.field_a > 0) {
-            ri.a(102, param4, param7, param6);
+            BeveledTextPainter.a(102, param4, param7, param6);
           }
           if (ee.field_b > 0) {
             SpriteState.a(param7, param6, -2, param9, param4);
@@ -320,16 +320,16 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
             SplashScreen.layoutPlayerRows(LineupView.field_u, param3, param2, param6, 92);
           }
         } else {
-          if (ea.field_a != SoftwareRasterizer.field_g) {
-            if (ea.field_f.field_e == SoftwareRasterizer.field_f &&
-              ea.field_f.field_a == SoftwareRasterizer.field_g) {
+          if (ColorQuantizationBox.field_a != SoftwareRasterizer.field_g) {
+            if (ColorQuantizationBox.field_f.field_e == SoftwareRasterizer.field_f &&
+              ColorQuantizationBox.field_f.field_a == SoftwareRasterizer.field_g) {
               if (null == PlayerContextMenu.field_i) {
                 if (ArchiveSource.field_b == null) {
                   CipherPacketBuffer.c(false);
                   if (param4) {
                     AuctionsHelpScreen.field_H = ModalPanel.field_B;
                   } else {
-                    AuctionsHelpScreen.field_H = (ea.field_a - 640) / 2;
+                    AuctionsHelpScreen.field_H = (ColorQuantizationBox.field_a - 640) / 2;
                   }
                   ParticipantStatus.a(param4, 1);
                   if (ns.field_a > 0) {
@@ -338,7 +338,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
                   MarkerSliderWidget.field_F.field_A = 1;
                   MarkerSliderWidget.field_F.field_kb = ip.field_c.field_kb;
                   if (fj.field_a > 0) {
-                    ri.a(102, param4, param7, param6);
+                    BeveledTextPainter.a(102, param4, param7, param6);
                   }
                   if (ee.field_b > 0) {
                     SpriteState.a(param7, param6, -2, param9, param4);
@@ -364,7 +364,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
               }
             }
             if (!param4) {
-              AuctionsHelpScreen.field_H = (ea.field_a - 640) / 2;
+              AuctionsHelpScreen.field_H = (ColorQuantizationBox.field_a - 640) / 2;
               ParticipantStatus.a(param4, 1);
               if (ns.field_a > 0) {
                 we.a(param7, param4, (byte) -119, param6);
@@ -372,7 +372,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
               MarkerSliderWidget.field_F.field_A = 1;
               MarkerSliderWidget.field_F.field_kb = ip.field_c.field_kb;
               if (fj.field_a > 0) {
-                ri.a(102, param4, param7, param6);
+                BeveledTextPainter.a(102, param4, param7, param6);
               }
               if (ee.field_b > 0) {
                 SpriteState.a(param7, param6, -2, param9, param4);
@@ -396,7 +396,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
               MarkerSliderWidget.field_F.field_A = 1;
               MarkerSliderWidget.field_F.field_kb = ip.field_c.field_kb;
               if (fj.field_a > 0) {
-                ri.a(102, param4, param7, param6);
+                BeveledTextPainter.a(102, param4, param7, param6);
               }
               if (ee.field_b > 0) {
                 SpriteState.a(param7, param6, -2, param9, param4);
@@ -414,15 +414,15 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
             }
           } else {
             if (SoftwareRasterizer.field_f != BufferedSocket.field_s &&
-              ea.field_f.field_e == SoftwareRasterizer.field_f &&
-              ea.field_f.field_a == SoftwareRasterizer.field_g) {
+              ColorQuantizationBox.field_f.field_e == SoftwareRasterizer.field_f &&
+              ColorQuantizationBox.field_f.field_a == SoftwareRasterizer.field_g) {
               if (null == PlayerContextMenu.field_i) {
                 if (ArchiveSource.field_b == null) {
                   CipherPacketBuffer.c(false);
                   if (param4) {
                     AuctionsHelpScreen.field_H = ModalPanel.field_B;
                   } else {
-                    AuctionsHelpScreen.field_H = (ea.field_a - 640) / 2;
+                    AuctionsHelpScreen.field_H = (ColorQuantizationBox.field_a - 640) / 2;
                   }
                   ParticipantStatus.a(param4, 1);
                   if (ns.field_a > 0) {
@@ -431,7 +431,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
                   MarkerSliderWidget.field_F.field_A = 1;
                   MarkerSliderWidget.field_F.field_kb = ip.field_c.field_kb;
                   if (fj.field_a > 0) {
-                    ri.a(102, param4, param7, param6);
+                    BeveledTextPainter.a(102, param4, param7, param6);
                   }
                   if (ee.field_b > 0) {
                     SpriteState.a(param7, param6, -2, param9, param4);
@@ -457,7 +457,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
               }
             }
             if (!param4) {
-              AuctionsHelpScreen.field_H = (ea.field_a - 640) / 2;
+              AuctionsHelpScreen.field_H = (ColorQuantizationBox.field_a - 640) / 2;
               ParticipantStatus.a(param4, 1);
               if (ns.field_a > 0) {
                 we.a(param7, param4, (byte) -119, param6);
@@ -465,7 +465,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
               MarkerSliderWidget.field_F.field_A = 1;
               MarkerSliderWidget.field_F.field_kb = ip.field_c.field_kb;
               if (fj.field_a > 0) {
-                ri.a(102, param4, param7, param6);
+                BeveledTextPainter.a(102, param4, param7, param6);
               }
               if (ee.field_b > 0) {
                 SpriteState.a(param7, param6, -2, param9, param4);
@@ -489,7 +489,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
               MarkerSliderWidget.field_F.field_A = 1;
               MarkerSliderWidget.field_F.field_kb = ip.field_c.field_kb;
               if (fj.field_a > 0) {
-                ri.a(102, param4, param7, param6);
+                BeveledTextPainter.a(102, param4, param7, param6);
                 if (ee.field_b > 0) {
                   SpriteState.a(param7, param6, -2, param9, param4);
                 }

@@ -197,7 +197,7 @@ final class ReceivedAuctionItem extends AuctionItem {
         int var3 = 0;
         var4 = Kickabout.field_G;
         try {
-          wo.a(ar.field_c, (RenderedFootballer) (NotCommand.field_F.getBallCarrier((byte) -96)), (byte) 118, 256);
+          AlternateKeyedLoginCredentials.drawFootballerOverlay(ar.field_c, (RenderedFootballer) (NotCommand.field_F.getBallCarrier((byte) -96)), (byte) 118, 256);
           if (param0 != 45) {
             ReceivedAuctionItem.i((byte) 21);
           }
@@ -207,7 +207,7 @@ final class ReceivedAuctionItem extends AuctionItem {
               var2 = (RenderedFootballer) (NotCommand.field_F.getControlledFootballer((byte) -60, var1_int));
               stackIn_14_0 = (RegistrationRequestDialog.field_kb != var1_int) ? 160 : 256;
               var3 = stackIn_14_0;
-              wo.a(MusicPatchNode.field_u[PlayingView.field_J], var2, (byte) -17, var3);
+              AlternateKeyedLoginCredentials.drawFootballerOverlay(MusicPatchNode.field_u[PlayingView.field_J], var2, (byte) -17, var3);
             }
           }
           return;

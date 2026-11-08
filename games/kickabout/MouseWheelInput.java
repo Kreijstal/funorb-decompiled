@@ -96,7 +96,7 @@ abstract class MouseWheelInput {
             var5 = 1;
             var4 = 1;
           }
-          hh.field_g = rf.a(var4 * var2, -125, var5 * var2);
+          FullscreenFailureReason.field_g = SocialTabsPanel.a(var4 * var2, -125, var5 * var2);
           return;
         }
         if (var3 < 105) {
@@ -145,7 +145,7 @@ abstract class MouseWheelInput {
             var5Lifetime1 = 1;
             var4Lifetime1 = 1;
           }
-          hh.field_g = rf.a(var4Lifetime1 * var2, -125, var5Lifetime1 * var2);
+          FullscreenFailureReason.field_g = SocialTabsPanel.a(var4Lifetime1 * var2, -125, var5Lifetime1 * var2);
           return;
         }
         if (var3 >= 120) {
@@ -193,7 +193,7 @@ abstract class MouseWheelInput {
             var5Lifetime2 = 1;
             var4Lifetime2 = 1;
           }
-          hh.field_g = rf.a(var4Lifetime2 * var2, -125, var5Lifetime2 * var2);
+          FullscreenFailureReason.field_g = SocialTabsPanel.a(var4Lifetime2 * var2, -125, var5Lifetime2 * var2);
           return;
         }
         var3 = 120 - var3;
@@ -246,7 +246,7 @@ abstract class MouseWheelInput {
           var5Lifetime3 = 1;
           var4Lifetime3 = 1;
         }
-        hh.field_g = rf.a(var4Lifetime3 * var2Lifetime1, -125, var5Lifetime3 * var2Lifetime1);
+        FullscreenFailureReason.field_g = SocialTabsPanel.a(var4Lifetime3 * var2Lifetime1, -125, var5Lifetime3 * var2Lifetime1);
         return;
     }
 

@@ -162,9 +162,9 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
         this.field_C.field_u = SortCriterion.field_b;
         this.field_C.a(6, new AccountNameAvailabilityValidator(this.field_C));
         this.field_B.field_y = false;
-        this.field_B.field_r = (WidgetPainter) ((Object) new op());
+        this.field_B.field_r = (WidgetPainter) ((Object) new SpriteButtonPainter());
         this.field_E.field_r = (WidgetPainter) ((Object) new LinkTextPainter());
-        this.field_C.field_r = (WidgetPainter) ((Object) new ri(10000536));
+        this.field_C.field_r = (WidgetPainter) ((Object) new BeveledTextPainter(10000536));
         int var3 = 20;
         int var4 = 4;
         int var5 = 200;

@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dl extends IntrusiveNode {
+final class LookupQuery extends IntrusiveNode {
     static String field_g;
-    int[] field_f;
-    int field_e;
+    int[] resultValues;
+    int tableId;
 
     public static void releaseStatics(byte param0) {
         field_g = null;
         int var1 = -50 % ((param0 - 23) / 48);
     }
 
-    private dl() throws Throwable {
+    private LookupQuery() throws Throwable {
         throw new Error();
     }
 

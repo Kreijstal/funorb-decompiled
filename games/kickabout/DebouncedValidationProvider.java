@@ -63,12 +63,12 @@ abstract class DebouncedValidationProvider implements ValidationSource {
         }
         if (param0 > -23) {
           field_c = (String) null;
-          if (nj.monotonicMillis(37) >= (350L + this.field_b)) {
+          if (MonotonicClock.monotonicMillis(37) >= (350L + this.field_b)) {
             return this.evaluateValidationMessage(-1);
           }
           return null;
         }
-        if (nj.monotonicMillis(37) >= (350L + this.field_b)) {
+        if (MonotonicClock.monotonicMillis(37) >= (350L + this.field_b)) {
           return this.evaluateValidationMessage(-1);
         }
         return null;
@@ -78,8 +78,8 @@ abstract class DebouncedValidationProvider implements ValidationSource {
         if (this.isInputEmpty((byte) -28)) {
           return Bzip2State.field_l;
         }
-        if (nj.monotonicMillis(-104) < 350L + this.field_b) {
-          return mn.field_c;
+        if (MonotonicClock.monotonicMillis(-104) < 350L + this.field_b) {
+          return IconButtonPainter.field_c;
         }
         if (param0 == -24407) {
           return this.evaluateValidationState(false);
@@ -129,7 +129,7 @@ abstract class DebouncedValidationProvider implements ValidationSource {
     }
 
     public final void validationChanged(int param0) {
-        this.field_b = nj.monotonicMillis(-122);
+        this.field_b = MonotonicClock.monotonicMillis(-122);
         int var2 = 76 % ((42 - param0) / 58);
     }
 

@@ -227,7 +227,7 @@ final class SellPlayerDialog extends MessageDialog {
     final void handleResult(int param0, int param1) {
         super.handleResult(97, param1);
         if (param1 == 0) {
-          rp.a(65536, this.field_I);
+          PasswordFieldPainter.a(65536, this.field_I);
         }
         if (param0 < 60) {
           field_G = 77;

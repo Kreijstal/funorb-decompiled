@@ -181,7 +181,7 @@ final class TextFieldNode extends UiLayoutNode {
         var7 = Kickabout.field_G;
         try {
           if (go.field_b != 0) {
-            var2_long = nj.monotonicMillis(param1 - 75);
+            var2_long = MonotonicClock.monotonicMillis(param1 - 75);
             var4 = go.field_b;
             if (0.0 != WhirlpoolHasher.field_a) {
               var4 = (int)((double)var4 + TrinketUnlockNotice.field_d.nextGaussian() * WhirlpoolHasher.field_a);
@@ -245,7 +245,7 @@ final class TextFieldNode extends UiLayoutNode {
         }
     }
 
-    final static void a(boolean param0, wd param1, int param2) {
+    final static void a(boolean param0, RankingsRequest param1, int param2) {
         CipherPacketBuffer var3 = null;
         try {
           var3 = or.field_d;
@@ -657,7 +657,7 @@ final class TextFieldNode extends UiLayoutNode {
           if (this.field_sb == 1) {
             this.a(var2, (byte) -112);
             this.field_Jb = true;
-            var3_long = nj.monotonicMillis(-69);
+            var3_long = MonotonicClock.monotonicMillis(-69);
             stackIn_14_1 = !(var3_long - this.field_Sb >= 250L);
             this.field_Hb = stackIn_14_1;
             if (this.field_Hb) {

@@ -122,7 +122,7 @@ final class cu {
 
     final static void a(byte param0, int param1, int param2) {
         ManagerAction var3 = new ManagerAction(3, new int[]{param1, param2});
-        ii.a(var3, 106);
+        AchievementSubmission.applyAndQueueManagerAction(var3, 106);
         if (25 == AuctionLogEntry.field_h.screenId) {
           ((MySquadScreen) (AuctionLogEntry.field_h)).refreshSelectedPlayer((byte) 84);
         }

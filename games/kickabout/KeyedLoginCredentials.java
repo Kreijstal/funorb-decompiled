@@ -7,11 +7,11 @@ class KeyedLoginCredentials extends LoginCredentials {
     static String field_h;
     static Sprite field_f;
 
-    final static void a(byte param0, int param1, mp param2) {
+    final static void writeBlobSubmission(byte param0, int param1, BlobSubmission param2) {
         CipherPacketBuffer var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
-        mp var5 = null;
+        BlobSubmission var5 = null;
         CipherPacketBuffer var6 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -24,21 +24,21 @@ class KeyedLoginCredentials extends LoginCredentials {
           var6.field_n = var6.field_n + 1;
           var4 = var6.field_n;
           var6.writeByte(116, 1);
-          if (null == param2.field_o) {
+          if (null == param2.payload) {
             var6.writeByte(102, 0);
           } else {
-            var6.writeByte(111, param2.field_o.length);
-            var6.writeBytes(0, param2.field_o.length, 1991220144, param2.field_o);
+            var6.writeByte(111, param2.payload.length);
+            var6.writeBytes(0, param2.payload.length, 1991220144, param2.payload);
           }
           var6.appendCrc32(var4, false);
           var6.field_n = var6.field_n - 4;
-          param2.field_m = var6.readInt(4);
+          param2.requestCrc = var6.readInt(4);
           var6.backpatchByteLength(param0 ^ 42, -var4 + var6.field_n);
           if (param0 == 20) {
             return;
           }
-          var5 = (mp) null;
-          KeyedLoginCredentials.a((byte) -56, 113, (mp) null);
+          var5 = (BlobSubmission) null;
+          KeyedLoginCredentials.writeBlobSubmission((byte) -56, 113, (BlobSubmission) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -59,8 +59,8 @@ class KeyedLoginCredentials extends LoginCredentials {
           param0.writeLong(this.field_g, -1781890008);
           param0.writeBase38Password((byte) -85, this.field_i);
           if (param1 != 17053) {
-            mp var4 = (mp) null;
-            KeyedLoginCredentials.a((byte) 56, -49, (mp) null);
+            BlobSubmission var4 = (BlobSubmission) null;
+            KeyedLoginCredentials.writeBlobSubmission((byte) 56, -49, (BlobSubmission) null);
           }
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "aa.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -78,12 +78,12 @@ class KeyedLoginCredentials extends LoginCredentials {
         field_f = null;
     }
 
-    final static long c(int param0) {
+    final static long millisSinceSessionStart(int param0) {
         if (param0 != 29680) {
-          KeyedLoginCredentials.c(42);
-          return nj.monotonicMillis(108) - IterableDualLinkDeque.field_c;
+          KeyedLoginCredentials.millisSinceSessionStart(42);
+          return MonotonicClock.monotonicMillis(108) - IterableDualLinkDeque.field_c;
         }
-        return nj.monotonicMillis(108) - IterableDualLinkDeque.field_c;
+        return MonotonicClock.monotonicMillis(108) - IterableDualLinkDeque.field_c;
     }
 
     LoginKind getLoginKind(byte param0) {

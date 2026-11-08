@@ -20,24 +20,24 @@ final class PromotionDialog extends MessageDialog {
 
     final static void a(int param0, byte param1) {
         int var3 = 0;
-        hr var4 = null;
-        dl var5 = null;
+        LookupRecordUpdate var4 = null;
+        LookupQuery var5 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         var3 = Kickabout.field_G;
         try {
-          var4 = (hr) (NamedValueContainer.field_c.g(24009));
+          var4 = (LookupRecordUpdate) (NamedValueContainer.field_c.g(24009));
           while (var4 != null) {
-            rf.a(var4, param0, true);
-            var4 = (hr) (NamedValueContainer.field_c.c(33));
+            SocialTabsPanel.writeLookupRecordUpdate(var4, param0, true);
+            var4 = (LookupRecordUpdate) (NamedValueContainer.field_c.c(33));
           }
           if (param1 >= -120) {
             PromotionDialog.h(96);
           }
-          var5 = (dl) (MidiPcmStream.field_M.g(24009));
+          var5 = (LookupQuery) (MidiPcmStream.field_M.g(24009));
           while (var5 != null) {
-            ByteStorage.a(param0, var5, (byte) -114);
-            var5 = (dl) (MidiPcmStream.field_M.c(33));
+            ByteStorage.writeLookupQuery(param0, var5, (byte) -114);
+            var5 = (LookupQuery) (MidiPcmStream.field_M.c(33));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -61,11 +61,11 @@ final class PromotionDialog extends MessageDialog {
         RuntimeException decompiledCaughtException = null;
         var3 = Kickabout.field_G;
         try {
-          wd.field_l.processPointerFrame(AuctionLogEntry.field_n, 31947, PacketBuffer.field_i, true);
+          RankingsRequest.field_l.processPointerFrame(AuctionLogEntry.field_n, 31947, PacketBuffer.field_i, true);
           var1_int = -43 % ((param0 + 39) / 43);
-          wd.field_l.n(2);
+          RankingsRequest.field_l.n(2);
           while (TexturedPanelPainter.$cfr$intArgs$b$c4997cb15529(-59)) {
-            wd.field_l.dispatchKeyInput(il.field_c, (byte) -88, FixedQuaternion.field_e);
+            RankingsRequest.field_l.dispatchKeyInput(il.field_c, (byte) -88, FixedQuaternion.field_e);
           }
           if (BlackFadeScreen.field_j != -1) {
             var2 = BlackFadeScreen.field_j;

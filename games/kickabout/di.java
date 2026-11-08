@@ -25,7 +25,7 @@ final class di {
             break;
           }
           var4 = ic.field_h.createOrderSwapAction(param2, -86, param0);
-          ii.a(var4, 85);
+          AchievementSubmission.applyAndQueueManagerAction(var4, 85);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

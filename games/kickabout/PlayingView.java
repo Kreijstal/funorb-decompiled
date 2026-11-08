@@ -1290,7 +1290,7 @@ final class PlayingView extends MatchPhaseView {
         if (this.field_a.field_X.goalCount < 40 &&
           !MyKitScreen.field_O) {
           ns.a(3585);
-          MusicPatch.a(16777215);
+          MusicPatch.drawMatchMinimap(16777215);
           if (this.isLocalParticipantActive((byte) 13)) {
             CommonGame.b(false);
           }
@@ -1381,7 +1381,7 @@ final class PlayingView extends MatchPhaseView {
               this.field_t[var4] = this.field_t[1 + var4];
             }
             this.field_t[7] = (byte)Character.toLowerCase(param0);
-            var4Lifetime1 = er.a(false, 8, this.field_t);
+            var4Lifetime1 = TextHotspotRegion.a(false, 8, this.field_t);
             var5 = -1;
             for (var6 = 0; NamedValueContainer.field_d.length > var6; var6++) {
               if (var4Lifetime1 == NamedValueContainer.field_d[var6]) {

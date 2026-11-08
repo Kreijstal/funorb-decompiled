@@ -6,7 +6,7 @@ final class ReverbCombFilter {
     int field_b;
     int[] field_c;
 
-    final void a() {
+    final void clear() {
         int var1 = 0;
         this.field_b = 0;
         for (var1 = 0; var1 < this.field_c.length; var1++) {

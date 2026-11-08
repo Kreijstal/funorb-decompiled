@@ -21,15 +21,15 @@ final class LobbyGameRecord {
     final static void a(int param0, int param1) {
         IntrusiveNode var2 = null;
         int var3 = 0;
-        ii var4 = null;
+        AchievementSubmission var4 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         var3 = Kickabout.field_G;
         try {
-          var4 = (ii) (il.field_a.g(24009));
+          var4 = (AchievementSubmission) (il.field_a.g(24009));
           while (var4 != null) {
-            te.a(param0, var4, (byte) -112);
-            var4 = (ii) (il.field_a.c(33));
+            te.writeAchievementSubmission(param0, var4, (byte) -112);
+            var4 = (AchievementSubmission) (il.field_a.c(33));
           }
           var2 = MatchScreen.field_j.g(24009);
           while (var2 != null) {
@@ -57,7 +57,7 @@ final class LobbyGameRecord {
         LobbyPlayerRow var1Lifetime1;
         var3 = Kickabout.field_G;
         try {
-          var1 = (LobbyPlayerRow) (rp.field_B.g(24009));
+          var1 = (LobbyPlayerRow) (PasswordFieldPainter.field_B.g(24009));
           while (var1 != null) {
             if (var1.field_Jb > 0) {
               var1.field_Jb = var1.field_Jb - 1;
@@ -68,7 +68,7 @@ final class LobbyGameRecord {
                 }
               }
             }
-            var1 = (LobbyPlayerRow) (rp.field_B.c(33));
+            var1 = (LobbyPlayerRow) (PasswordFieldPainter.field_B.c(33));
           }
           var1_ref = (GameSetupPanel) (SquadSlotWidget.field_yb.g(24009));
           while (var1_ref != null) {

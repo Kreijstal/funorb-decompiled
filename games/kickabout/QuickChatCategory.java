@@ -126,10 +126,10 @@ final class QuickChatCategory extends DualLinkNode {
               GoalStateAgent.field_l = stackIn_19_0 + stackIn_20_1;
             }
           }
-          if (RankingRowNode.field_Db + dc.field_d != param0) {
-            dc.field_d = -RankingRowNode.field_Db + param0;
+          if (RankingRowNode.field_Db + PortraitCacheOrder.field_d != param0) {
+            PortraitCacheOrder.field_d = -RankingRowNode.field_Db + param0;
           }
-          if (dc.field_d == 0) {
+          if (PortraitCacheOrder.field_d == 0) {
             if (CachedArchiveSource.field_s > 1) {
               CachedArchiveSource.field_s = CachedArchiveSource.field_s - 1;
             }
@@ -142,7 +142,7 @@ final class QuickChatCategory extends DualLinkNode {
             LoginDialog.field_cb.field_q + TextLayoutLine.field_e > ArrayWidgetContainer.field_x &&
             ArchiveNetworkClient.field_i < us.field_j &&
             AccountChoicePanel.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + LoginDialog.field_cb.field_w + MarkerSliderPainter.field_i.field_w) > us.field_j) {
-            ka.a(dc.field_d, RankingRowNode.field_Db, (byte) -113);
+            GameQuickChatResolver.a(PortraitCacheOrder.field_d, RankingRowNode.field_Db, (byte) -113);
           }
           return;
         }
@@ -156,10 +156,10 @@ final class QuickChatCategory extends DualLinkNode {
               stackIn_55_1 = var2Lifetime1;
             }
             GoalStateAgent.field_l = stackIn_54_0 + stackIn_55_1;
-            if (RankingRowNode.field_Db + dc.field_d != param0) {
-              dc.field_d = -RankingRowNode.field_Db + param0;
+            if (RankingRowNode.field_Db + PortraitCacheOrder.field_d != param0) {
+              PortraitCacheOrder.field_d = -RankingRowNode.field_Db + param0;
             }
-            if (dc.field_d == 0) {
+            if (PortraitCacheOrder.field_d == 0) {
               if (CachedArchiveSource.field_s > 1) {
                 CachedArchiveSource.field_s = CachedArchiveSource.field_s - 1;
               }
@@ -172,7 +172,7 @@ final class QuickChatCategory extends DualLinkNode {
               LoginDialog.field_cb.field_q + TextLayoutLine.field_e > ArrayWidgetContainer.field_x &&
               ArchiveNetworkClient.field_i < us.field_j &&
               AccountChoicePanel.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + LoginDialog.field_cb.field_w + MarkerSliderPainter.field_i.field_w) > us.field_j) {
-              ka.a(dc.field_d, RankingRowNode.field_Db, (byte) -113);
+              GameQuickChatResolver.a(PortraitCacheOrder.field_d, RankingRowNode.field_Db, (byte) -113);
             }
             return;
           }
@@ -185,8 +185,8 @@ final class QuickChatCategory extends DualLinkNode {
           }
           GoalStateAgent.field_l = stackIn_71_0 + stackIn_72_1;
         }
-        if (RankingRowNode.field_Db + dc.field_d == param0) {
-          if (dc.field_d == 0) {
+        if (RankingRowNode.field_Db + PortraitCacheOrder.field_d == param0) {
+          if (PortraitCacheOrder.field_d == 0) {
             if (CachedArchiveSource.field_s > 1) {
               CachedArchiveSource.field_s = CachedArchiveSource.field_s - 1;
             }
@@ -199,20 +199,20 @@ final class QuickChatCategory extends DualLinkNode {
             LoginDialog.field_cb.field_q + TextLayoutLine.field_e > ArrayWidgetContainer.field_x &&
             ArchiveNetworkClient.field_i < us.field_j &&
             AccountChoicePanel.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + LoginDialog.field_cb.field_w + MarkerSliderPainter.field_i.field_w) > us.field_j) {
-            ka.a(dc.field_d, RankingRowNode.field_Db, (byte) -113);
+            GameQuickChatResolver.a(PortraitCacheOrder.field_d, RankingRowNode.field_Db, (byte) -113);
             return;
           }
           return;
         }
-        dc.field_d = -RankingRowNode.field_Db + param0;
-        if (dc.field_d == 0) {
+        PortraitCacheOrder.field_d = -RankingRowNode.field_Db + param0;
+        if (PortraitCacheOrder.field_d == 0) {
           if (CachedArchiveSource.field_s > 1) {
             CachedArchiveSource.field_s = CachedArchiveSource.field_s - 1;
             if (ArrayWidgetContainer.field_x > TextLayoutLine.field_e &&
               LoginDialog.field_cb.field_q + TextLayoutLine.field_e > ArrayWidgetContainer.field_x &&
               ArchiveNetworkClient.field_i < us.field_j &&
               AccountChoicePanel.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + LoginDialog.field_cb.field_w + MarkerSliderPainter.field_i.field_w) > us.field_j) {
-              ka.a(dc.field_d, RankingRowNode.field_Db, (byte) -113);
+              GameQuickChatResolver.a(PortraitCacheOrder.field_d, RankingRowNode.field_Db, (byte) -113);
             }
             return;
           }
@@ -223,7 +223,7 @@ final class QuickChatCategory extends DualLinkNode {
               LoginDialog.field_cb.field_q + TextLayoutLine.field_e > ArrayWidgetContainer.field_x &&
               ArchiveNetworkClient.field_i < us.field_j &&
               AccountChoicePanel.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + LoginDialog.field_cb.field_w + MarkerSliderPainter.field_i.field_w) > us.field_j) {
-              ka.a(dc.field_d, RankingRowNode.field_Db, (byte) -113);
+              GameQuickChatResolver.a(PortraitCacheOrder.field_d, RankingRowNode.field_Db, (byte) -113);
             }
             return;
           }
@@ -236,7 +236,7 @@ final class QuickChatCategory extends DualLinkNode {
         }
         if (ArchiveNetworkClient.field_i < us.field_j &&
           AccountChoicePanel.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + LoginDialog.field_cb.field_w + MarkerSliderPainter.field_i.field_w) > us.field_j) {
-          ka.a(dc.field_d, RankingRowNode.field_Db, (byte) -113);
+          GameQuickChatResolver.a(PortraitCacheOrder.field_d, RankingRowNode.field_Db, (byte) -113);
           return;
         }
     }

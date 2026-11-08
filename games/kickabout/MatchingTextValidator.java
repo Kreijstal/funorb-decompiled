@@ -15,7 +15,7 @@ final class MatchingTextValidator extends TextFieldValidator {
         if (param2 < 93) {
           field_o = (String[]) null;
           var4 = new ManagerAction(2, new int[]{param1, param3, param0});
-          ii.a(var4, 73);
+          AchievementSubmission.applyAndQueueManagerAction(var4, 73);
           if (25 == AuctionLogEntry.field_h.screenId) {
             ((MySquadScreen) (AuctionLogEntry.field_h)).refreshSelectedPlayer((byte) 84);
             return;
@@ -23,7 +23,7 @@ final class MatchingTextValidator extends TextFieldValidator {
           return;
         }
         var4Lifetime1 = new ManagerAction(2, new int[]{param1, param3, param0});
-        ii.a(var4Lifetime1, 73);
+        AchievementSubmission.applyAndQueueManagerAction(var4Lifetime1, 73);
         if (25 != AuctionLogEntry.field_h.screenId) {
           return;
         }

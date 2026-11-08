@@ -47,7 +47,7 @@ final class ReflectionCheck extends IntrusiveNode {
           }
           for (var3_int = 0; 50 > var3_int; var3_int++) {
             if (param1.field_a.peekEvent() != null) {
-              aj.a(1L, 1);
+              ThreadSleepSupport.sleepMillis(1L, 1);
               continue;
             }
             break;

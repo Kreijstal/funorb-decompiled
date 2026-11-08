@@ -89,7 +89,7 @@ class UiLayoutNode extends iv {
             RasterBuffer.a(116, ChatMessage.field_b, 15, 15);
           }
           if (2 == ih.field_c) {
-            wd.a(15, 15, 124);
+            RankingsRequest.a(15, 15, 124);
           }
           TeamManagementScreen.e(param0 ^ 122);
         } catch (RuntimeException runtimeException) {
@@ -445,7 +445,7 @@ class UiLayoutNode extends iv {
             var5Lifetime1 = var5Lifetime1 - FootballerAgent.field_i.a(var16);
           } else {
             var18 = (CharSequence) ((Object) TrinketTile.field_Kb);
-            var14 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, MySquadScreen.field_F, new String[]{hv.a(false, var18)});
+            var14 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, MySquadScreen.field_F, new String[]{GoalkeeperAiSupport.normalizeBase37Name(false, var18)});
             var7Lifetime6 = var14;
             var7Lifetime6 = var14;
             var8 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, field_ib, new String[]{var12});
@@ -539,12 +539,12 @@ class UiLayoutNode extends iv {
         if (!ic.field_f &&
           param2 &&
           WidgetContainer.field_A != 0 &&
-          SoftwareRasterizer.field_b <= sm.field_q &&
-          SoftwareRasterizer.field_c > sm.field_q &&
+          SoftwareRasterizer.field_b <= HighScoreSubmission.field_q &&
+          SoftwareRasterizer.field_c > HighScoreSubmission.field_q &&
           ReceivedAuctionItem.field_y >= SoftwareRasterizer.field_e &&
           SoftwareRasterizer.field_h > ReceivedAuctionItem.field_y) {
           var12 = 1;
-          this.field_bb = -this.field_F + sm.field_q;
+          this.field_bb = -this.field_F + HighScoreSubmission.field_q;
           this.field_qb = WidgetContainer.field_A;
           this.field_sb = WidgetContainer.field_A;
           this.field_M = ReceivedAuctionItem.field_y - this.field_T;
@@ -791,9 +791,9 @@ class UiLayoutNode extends iv {
         var21 = var19 + this.field_D;
         var22 = this.field_B + var20;
         if (!this.field_ob) {
-          ea.a(this.field_T, this.field_mb, this.field_F, (byte) -102, var16, this.field_q);
+          ColorQuantizationBox.drawNineSlicePanel(this.field_T, this.field_mb, this.field_F, (byte) -102, var16, this.field_q);
         } else {
-          ea.a(param3, param10, param5, (byte) -117, var16, param7);
+          ColorQuantizationBox.drawNineSlicePanel(param3, param10, param5, (byte) -117, var16, param7);
         }
         if (var17 != null) {
           var23_int = this.field_F + var21;

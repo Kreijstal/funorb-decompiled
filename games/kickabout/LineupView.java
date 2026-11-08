@@ -356,7 +356,7 @@ final class LineupView extends MatchPhaseView {
           if (param1 != -60) {
             return;
           }
-          var3 = sm.field_q;
+          var3 = HighScoreSubmission.field_q;
           var4 = ReceivedAuctionItem.field_y;
           var13.field_j.layoutItems(0, 0, var3, var4, 0);
           return;
@@ -496,14 +496,14 @@ final class LineupView extends MatchPhaseView {
             if (var7 != -1) {
               var5 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ss.field_i, new String[]{Integer.toString(1 + var6), Integer.toString(var7 + 1)});
             } else {
-              var5 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, sm.field_p, new String[]{Integer.toString(var6 + 1)});
+              var5 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, HighScoreSubmission.field_p, new String[]{Integer.toString(var6 + 1)});
             }
           } else {
             var5 = ig.field_j;
           }
           ul.a(130, 1, 105, true, (byte) 26, 225, 18, 380, 1, var5);
         } else {
-          ul.a(230, 1, 105, true, (byte) -123, 210, 18, 390, 1, ni.field_q);
+          ul.a(230, 1, 105, true, (byte) -123, 210, 18, 390, 1, HighScoreQuery.field_q);
         }
         if (this.field_a.field_f) {
           un.field_d.a("FB", 5, 17, 16777215, -1);
@@ -576,7 +576,7 @@ final class LineupView extends MatchPhaseView {
     }
 
     private final void i(int param0, int param1) {
-        this.field_a.enqueueEvent(wd.createLineupEvent(18238, this.field_k, GameLoopApplet.field_E, param1, this.field_g), -121);
+        this.field_a.enqueueEvent(RankingsRequest.createLineupEvent(18238, this.field_k, GameLoopApplet.field_E, param1, this.field_g), -121);
         if (param0 != 74) {
           return;
         }

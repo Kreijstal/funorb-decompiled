@@ -9,7 +9,7 @@ abstract class SocketConnector {
     int field_a;
     static String field_d;
 
-    final static void a(int param0, int param1, int[] param2, ea param3) {
+    final static void a(int param0, int param1, int[] param2, ColorQuantizationBox param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;

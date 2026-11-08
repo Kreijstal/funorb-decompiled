@@ -230,7 +230,7 @@ abstract class SpriteState extends DualLinkNode {
                       BroadcastServerCommand.field_E[var16Lifetime1] != null) {
                       var18_int = BroadcastServerCommand.field_E[var16Lifetime1][var17_intLifetime1];
                       if (var18_int != 0 &&
-                        !fv.field_d) {
+                        !TooltipOverlay.field_d) {
                         var11_intLifetime1 = 1;
                       }
                       if (var18_int > var13_int) {
@@ -251,7 +251,7 @@ abstract class SpriteState extends DualLinkNode {
                           var14_intLifetime1 = var18_intLifetime1;
                         }
                         if (var18_intLifetime1 != 0 &&
-                          !fv.field_d) {
+                          !TooltipOverlay.field_d) {
                           var11_intLifetime1 = 1;
                         }
                       }
@@ -301,7 +301,7 @@ abstract class SpriteState extends DualLinkNode {
                   if ((var16Lifetime1Lifetime1 != 0)) {
                     GoalStateAgent.field_k.field_lb = false;
                     if (!(!GoalStateAgent.field_k.field_Q)) {
-                      if (ni.field_l.field_b.field_Db != 0) {
+                      if (HighScoreQuery.field_l.tabs.field_Db != 0) {
                         UrlRequest.field_e = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, TrinketSlot.field_Fb, new String[]{c.field_d});
                       } else {
                         UrlRequest.field_e = MusicPatchPcmStream.field_m;
@@ -347,14 +347,14 @@ abstract class SpriteState extends DualLinkNode {
               }
             }
             if (TextFieldNode.field_Ib != 0L) {
-              var9 = (int)(-nj.monotonicMillis(22) + TextFieldNode.field_Ib);
+              var9 = (int)(-MonotonicClock.monotonicMillis(22) + TextFieldNode.field_Ib);
               var9 = (var9 + 999) / 1000;
               if (var9 < 1) {
                 var9 = 1;
               }
               var8.field_E = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, gf.field_h, new String[]{Integer.toString(var9)});
             }
-            ka.field_c.field_E = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, DateOfBirthPanel.field_F, new String[]{Integer.toString(PlayerContextMenu.field_i.field_gc), Integer.toString(PlayerContextMenu.field_i.field_bc)});
+            GameQuickChatResolver.field_c.field_E = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, DateOfBirthPanel.field_F, new String[]{Integer.toString(PlayerContextMenu.field_i.field_gc), Integer.toString(PlayerContextMenu.field_i.field_bc)});
           }
           stackIn_156_0 = TrinketIcon.field_Cb;
           stackIn_156_1 = param2 ^ param2;
@@ -368,7 +368,7 @@ abstract class SpriteState extends DualLinkNode {
           stackIn_166_1 = 0;
           stackIn_167_2 = (param0) && (!param4) && (TrinketCatalog.field_b);
           ((UiLayoutNode) (Object) stackIn_166_0).updateInput(stackIn_166_1, stackIn_167_2);
-          ni.field_l.field_b.h((byte) 71);
+          HighScoreQuery.field_l.tabs.h((byte) 71);
           if (null != PlayerContextMenu.field_i) {
             if (TrinketUnlockNotice.field_b.field_sb != 0) {
               ContextMenu.a(PlayerContextMenu.field_i.h((byte) 73), (byte) -108, param1);

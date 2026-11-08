@@ -48,14 +48,14 @@ final class CheckboxPainter implements WidgetPainter {
           var1_int = uq.field_c;
           var2 = param0;
           if (ck.field_a == 2) {
-            var3_long = -PlayingView.field_o + nj.monotonicMillis(-50);
+            var3_long = -PlayingView.field_o + MonotonicClock.monotonicMillis(-50);
             var2 = (int)((10999L - var3_long) / 1000L);
             if (var2 < 0) {
               var2 = 0;
             }
           }
           for (var3 = 0; WeightedLruCache.field_c.length > var3; var3++) {
-            var4 = dk.field_g[var3];
+            var4 = AchievementQuery.field_g[var3];
             if (0 > var4) {
               var5 = MarkerSliderPainter.field_k;
             } else {
@@ -114,7 +114,7 @@ final class CheckboxPainter implements WidgetPainter {
                 stackIn_44_0 = LinkTextPainter.field_e;
               }
               var9 = stackIn_44_0;
-              var1_int = var1_int + aj.field_a;
+              var1_int = var1_int + ThreadSleepSupport.field_a;
               if (var9 != null) {
                 var9.drawPanel(-DiskCacheWorker.field_d + var8Lifetime1, PlayerModelPreview.field_j + (pr.field_d << 1), var1_int, var7Lifetime1 + (DiskCacheWorker.field_d << 1), param0 ^ 3);
               }
@@ -125,7 +125,7 @@ final class CheckboxPainter implements WidgetPainter {
               var1_int = var1_int + PlayArea.field_c;
             } else {
               MainMenuScreen.field_F.a(var6, var8Lifetime1, ConsoleExpression.field_g + var1_int, var5, -1);
-              var1_int = var1_int + (PlayerModelPreview.field_j + aj.field_a + pr.field_d);
+              var1_int = var1_int + (PlayerModelPreview.field_j + ThreadSleepSupport.field_a + pr.field_d);
             }
           }
           return;
@@ -186,7 +186,7 @@ final class CheckboxPainter implements WidgetPainter {
               }
             }
           } else {
-            var1Lifetime1 = ve.c(false);
+            var1Lifetime1 = FullscreenErrorDialog.c(false);
             if (var1Lifetime1 != -1) {
               DelayedServerPacket.a(100, 9863, var1Lifetime1);
               return;
@@ -359,7 +359,7 @@ final class CheckboxPainter implements WidgetPainter {
             }
             or.field_d.writeByte(105, param3);
             PlayerContextMenu.field_f = true;
-            ri.field_t = 500;
+            BeveledTextPainter.field_t = 500;
             return;
           }
           return;

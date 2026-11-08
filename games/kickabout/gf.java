@@ -24,7 +24,7 @@ final class gf {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 != 3231) {
-            gf.a((byte) 92);
+            gf.readAchievementResponse((byte) 92);
           }
           if (param0 == null) {
             return false;
@@ -55,7 +55,7 @@ final class gf {
         }
     }
 
-    final static void a(byte param0) {
+    final static void readAchievementResponse(byte param0) {
         int var8 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
@@ -68,11 +68,11 @@ final class gf {
         int var9 = 0;
         int[] var11 = null;
         int[] var12 = null;
-        dk var13 = null;
-        ii var14 = null;
+        AchievementQuery var13 = null;
+        AchievementSubmission var14 = null;
         CipherPacketBuffer var15 = null;
         Object var16 = null;
-        dk var16_ref = null;
+        AchievementQuery var16_ref = null;
         var16 = null;
         var9 = Kickabout.field_G;
         try {
@@ -89,18 +89,18 @@ final class gf {
             for (var8 = 0; var7 > var8; var8++) {
               var11[var8] = ((PacketBuffer) ((Object) var6)).readInt(4);
             }
-            var13 = (dk) (MatchScreen.field_j.g(24009));
+            var13 = (AchievementQuery) (MatchScreen.field_j.g(24009));
             if (var13 == null) {
               FormationView.b((byte) -116);
               return;
             }
-            var13.field_e = var4;
-            var13.field_f = true;
+            var13.resultValues = var4;
+            var13.complete = true;
             var13.c((byte) -109);
             return;
           }
           if (var3 == 1) {
-            var14 = (ii) (il.field_a.g(24009));
+            var14 = (AchievementSubmission) (il.field_a.g(24009));
             if (var14 != null) {
               var14.c((byte) -109);
               return;
@@ -113,13 +113,13 @@ final class gf {
             FormationView.b((byte) -116);
             return;
           }
-          var16_ref = (dk) (MatchScreen.field_j.g(24009));
+          var16_ref = (AchievementQuery) (MatchScreen.field_j.g(24009));
           if (var16_ref == null) {
             FormationView.b((byte) -116);
             return;
           }
-          var16_ref.field_e = CachedTextLayout.c(-23091);
-          var16_ref.field_f = true;
+          var16_ref.resultValues = CachedTextLayout.c(-23091);
+          var16_ref.complete = true;
           var16_ref.c((byte) -109);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

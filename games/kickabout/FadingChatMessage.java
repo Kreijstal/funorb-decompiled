@@ -9,7 +9,7 @@ final class FadingChatMessage extends IntrusiveNode {
     static int field_h;
     private int alpha;
 
-    final static void a(int param0, int param1, ni param2) {
+    final static void a(int param0, int param1, HighScoreQuery param2) {
         CipherPacketBuffer var3 = null;
         try {
           var3 = or.field_d;

@@ -487,7 +487,7 @@ final class mk {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != 6) {
-            mk.a(-72, 68);
+            mk.requestAchievementMask(-72, 68);
           }
           if (param1 != 0) {
             stackIn_5_0 = 1 << param1 - 1;
@@ -518,12 +518,12 @@ final class mk {
         }
     }
 
-    final static dk a(int param0, int param1) {
-        dk var2 = new dk();
+    final static AchievementQuery requestAchievementMask(int param0, int param1) {
+        AchievementQuery var2 = new AchievementQuery();
         MatchScreen.field_j.addLast(var2, 3);
         TextHotspotWidget.a((byte) -105, param0);
         if (param1 != 26731) {
-          mk.a(121, -110);
+          mk.requestAchievementMask(121, -110);
         }
         return var2;
     }

@@ -146,7 +146,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
         this.field_L.field_s = this.slideOffsetX;
         this.field_L.updateInput(0, param1);
         if (param1) {
-          var4_long = nj.monotonicMillis(73);
+          var4_long = MonotonicClock.monotonicMillis(73);
           if (var4_long >= (this.field_H + 10000L)) {
             this.requestAuctionPage(true, (byte) -127);
           }
@@ -592,7 +592,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
             return;
           }
           or.field_d.b(84, (byte) 112);
-          var2 = nj.monotonicMillis(-79);
+          var2 = MonotonicClock.monotonicMillis(-79);
           if (param0 != 30353) {
             this.field_J = -31L;
           }
@@ -619,7 +619,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
         if (this.field_R.field_gb) {
           IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, QuickChatPhraseDefinition.field_v);
         }
-        if ((3000L + this.field_J) >= nj.monotonicMillis(23)) {
+        if ((3000L + this.field_J) >= MonotonicClock.monotonicMillis(23)) {
           this.field_P.field_lb = false;
         } else {
           this.field_P.field_lb = true;
@@ -659,7 +659,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
           this.requestAuctionRefresh(48);
         }
         if (this.field_P.field_sb == 1) {
-          this.field_J = nj.monotonicMillis(-72);
+          this.field_J = MonotonicClock.monotonicMillis(-72);
           this.requestAuctionPage(false, (byte) -126);
           LoginKind.a((byte) 24);
         }
@@ -679,7 +679,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
           PlayerPortraitCacheEntry.field_g = null;
           var9 = wq.field_d == 0L ? gw.field_b : ArchiveSource.field_e;
           String var2 = var9;
-          var3 = new String[]{var9, rp.field_D};
+          var3 = new String[]{var9, PasswordFieldPainter.field_D};
           if (param0 != 10) {
             field_A = -58;
           }
@@ -784,7 +784,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
           or.field_d.a(3, 79, this.field_C);
           or.field_d.b(false);
           or.field_d.writeMedium(-5 + this.field_D, (byte) 109);
-          var3 = nj.monotonicMillis(-111);
+          var3 = MonotonicClock.monotonicMillis(-111);
           this.field_P.field_lb = true;
           this.field_H = var3;
           return;

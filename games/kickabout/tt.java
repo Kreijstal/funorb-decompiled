@@ -51,8 +51,8 @@ final class tt {
           var1 = un.field_e;
           var2 = var1.readUnsignedByte((byte) -115);
           if (var2 == 0) {
-            if (ni.field_m == null) {
-              ni.field_m = new DualLinkHashTable(128);
+            if (HighScoreQuery.field_m == null) {
+              HighScoreQuery.field_m = new DualLinkHashTable(128);
               StripedProgressBar.field_y = 0;
             }
             stackIn_12_0 = (var1.readUnsignedByte((byte) -110) != 1) ? 0 : 1;
@@ -74,12 +74,12 @@ final class tt {
             if (var6 == null) {
               var6 = AchievementsScreen.a(var7, 145);
               if (var6 != null) {
-                ni.field_m.a(var6, (byte) -4, (long)var8.hashCode());
+                HighScoreQuery.field_m.a(var6, (byte) -4, (long)var8.hashCode());
               }
             }
             if (var6 == null) {
               var6 = new gg();
-              ni.field_m.a(var6, (byte) -4, (long)var8.hashCode());
+              HighScoreQuery.field_m.a(var6, (byte) -4, (long)var8.hashCode());
               fieldTemp$0 = StripedProgressBar.field_y;
               StripedProgressBar.field_y = StripedProgressBar.field_y + 1;
               var6.field_Cb = fieldTemp$0;

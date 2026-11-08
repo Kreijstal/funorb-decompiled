@@ -56,7 +56,7 @@ final class FadingSoundPlayer extends IntrusiveNode {
         }
     }
 
-    final void b(int param0) {
+    final void detachPlayback(int param0) {
         if (this.field_r) {
           LobbyPlayerRow.a(this.stream, true);
         } else {
@@ -67,8 +67,8 @@ final class FadingSoundPlayer extends IntrusiveNode {
         }
     }
 
-    private final void a(byte param0) {
-        int var2 = this.field_i * mn.field_a >> 8;
+    private final void startPlayback(byte param0) {
+        int var2 = this.field_i * IconButtonPainter.field_a >> 8;
         if (param0 != 99) {
           this.stepFadeOut(81);
         }
@@ -92,7 +92,7 @@ final class FadingSoundPlayer extends IntrusiveNode {
         }
         if (this.field_t < this.field_u) {
           var2 = this.field_t * (this.field_x / this.field_u);
-          var2 = var2 * mn.field_a >> 8;
+          var2 = var2 * IconButtonPainter.field_a >> 8;
           this.stream.setVolume(var2 >> 8);
         }
         this.field_t = this.field_t + 1;
@@ -101,10 +101,10 @@ final class FadingSoundPlayer extends IntrusiveNode {
     private final void stepFadeOut(int param0) {
         int var3 = 0;
         int var2 = ((PcmSample) (this.stream.field_h)).field_i.length;
-        if (!(this.stream.g() < -(this.field_s << 9) + var2)) {
+        if (!(this.stream.getSamplePosition() < -(this.field_s << 9) + var2)) {
           if (this.field_l < this.field_s) {
             var3 = -(this.field_l * (this.field_x / this.field_s)) + this.field_x;
-            var3 = var3 * mn.field_a >> 8;
+            var3 = var3 * IconButtonPainter.field_a >> 8;
             this.stream.setVolume(var3 >> 8);
           }
           this.field_l = this.field_l + 1;
@@ -123,9 +123,9 @@ final class FadingSoundPlayer extends IntrusiveNode {
         this.field_g = true;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
-          FadingSoundPlayer.a(11);
+          FadingSoundPlayer.releaseStatics(11);
         }
         field_h = null;
         field_p = null;
@@ -138,7 +138,7 @@ final class FadingSoundPlayer extends IntrusiveNode {
           if (0 == this.startDelay) {
             this.c((byte) -109);
           } else {
-            this.a((byte) 99);
+            this.startPlayback((byte) 99);
           }
         }
         if (param0 >= -124) {
@@ -175,7 +175,7 @@ final class FadingSoundPlayer extends IntrusiveNode {
         this.field_r = param4 ? true : false;
         this.startDelay = 1;
         this.field_f = param2;
-        this.a((byte) 99);
+        this.startPlayback((byte) 99);
     }
 
     static {

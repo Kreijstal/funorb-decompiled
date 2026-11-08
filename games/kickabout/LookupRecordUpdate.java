@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hr extends IntrusiveNode {
+final class LookupRecordUpdate extends IntrusiveNode {
     static String field_f;
-    int field_i;
-    int field_j;
+    int recordId;
+    int tableId;
     static boolean[] field_h;
     int field_e;
     static boolean field_k;
@@ -14,13 +14,13 @@ final class hr extends IntrusiveNode {
     int field_n;
 
     final static void b(int param0) {
-        MarkerSliderPainter.field_n = param0 + Math.max(ConsoleTokenCursor.field_d.a(SoundStreamHandle.field_l), ConsoleTokenCursor.field_d.a(h.field_a));
+        MarkerSliderPainter.field_n = param0 + Math.max(ConsoleTokenCursor.field_d.a(SoundStreamHandle.field_l), ConsoleTokenCursor.field_d.a(QuickChatMenuBuilder.field_a));
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_m = (int[][][][]) null;
         if (param0 != 2) {
-          hr.a(-112);
+          LookupRecordUpdate.releaseStatics(-112);
         }
         field_h = null;
         field_f = null;
@@ -233,7 +233,7 @@ final class hr extends IntrusiveNode {
             }
           }
           if (param0 != -48) {
-            hr.a(-68);
+            LookupRecordUpdate.releaseStatics(-68);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -243,7 +243,7 @@ final class hr extends IntrusiveNode {
         }
     }
 
-    private hr() throws Throwable {
+    private LookupRecordUpdate() throws Throwable {
         throw new Error();
     }
 

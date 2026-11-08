@@ -698,16 +698,16 @@ class PacketBuffer extends IntrusiveNode {
         try {
           param1.c((byte) -109);
           var3 = -54 / ((param0 + 29) / 55);
-          var2 = (LobbyPlayerRow) (rp.field_B.g(24009));
+          var2 = (LobbyPlayerRow) (PasswordFieldPainter.field_B.g(24009));
           while (var2 != null) {
             if (var2.a(param1, (byte) -82)) {
-              var2 = (LobbyPlayerRow) (rp.field_B.c(33));
+              var2 = (LobbyPlayerRow) (PasswordFieldPainter.field_B.c(33));
               continue;
             }
             break;
           }
           if (var2 == null) {
-            rp.field_B.addLast(param1, 3);
+            PasswordFieldPainter.field_B.addLast(param1, 3);
           } else {
             ug.a(var2, 16737894, param1);
           }

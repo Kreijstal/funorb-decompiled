@@ -118,12 +118,12 @@ final class we {
           stackIn_22_2 = (param0) && (!param1) && (TextWidgetPainter.field_f);
           ((UiLayoutNode) (Object) stackIn_21_0).updateInput(stackIn_21_1, stackIn_22_2);
         }
-        tn.field_d.field_b.h((byte) 47);
+        tn.field_d.tabs.h((byte) 47);
         if (MouseWheelInput.field_a.field_sb != 0) {
           mg.field_f = true;
         }
         if (dr.field_d.field_sb != 0) {
-          if (fv.field_d) {
+          if (TooltipOverlay.field_d) {
             NodeHashTableIterator.a(-43, param3);
           } else {
             if (WeightedLruCache.field_d > 0) {

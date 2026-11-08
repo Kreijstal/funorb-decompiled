@@ -323,7 +323,7 @@ final class IsaacRandom {
     }
 
     final static void c(byte param0) {
-        cb.field_d.a(sk.field_d);
+        cb.field_d.setRootStream(sk.field_d);
         if (param0 > -91) {
           return;
         }

@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mp extends IntrusiveNode {
+final class BlobSubmission extends IntrusiveNode {
     static String field_k;
     static DraggableWidget field_g;
     static int[] field_j;
     static int[] field_p;
-    byte[] field_o;
+    byte[] payload;
     static long field_i;
     static String field_e;
     static String field_n;
     static ArchivePreloader field_h;
     static String field_l;
-    int field_m;
+    int requestCrc;
     static UiLayoutNode field_f;
 
     final static void writeSettingsCookie(java.applet.Applet param0, boolean param1, String param2) {
@@ -27,7 +27,7 @@ final class mp extends IntrusiveNode {
           RuntimeException var3_ref = null;
           String var4 = null;
           String var5 = null;
-          sm var6 = null;
+          HighScoreSubmission var6 = null;
           String var7 = null;
           String var8 = null;
           String var5Lifetime1;
@@ -46,14 +46,14 @@ final class mp extends IntrusiveNode {
               var5Lifetime2 = var4;
               var5Lifetime3 = var4;
               if (!param1) {
-                var6 = (sm) null;
-                mp.a(-99, 111, (sm) null);
+                var6 = (HighScoreSubmission) null;
+                BlobSubmission.writeHighScoreSubmission(-99, 111, (HighScoreSubmission) null);
               }
               var8 = var7 + "settings=" + param2 + "; version=1; path=/; domain=" + var4;
               var5Lifetime4 = var8;
               var5Lifetime5 = var8;
               if (0 != param2.length()) {
-                var5Lifetime6 = var8 + "; Expires=" + SoundCache.a(nj.monotonicMillis(118) + 94608000000L, -128) + "; Max-Age=" + 94608000L;
+                var5Lifetime6 = var8 + "; Expires=" + SoundCache.formatCookieExpiry(MonotonicClock.monotonicMillis(118) + 94608000000L, -128) + "; Max-Age=" + 94608000L;
               } else {
                 var5Lifetime6 = var8 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }
@@ -100,7 +100,7 @@ final class mp extends IntrusiveNode {
         field_i = 81L;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_p = null;
         field_h = null;
         if (param0 == 1) {
@@ -123,7 +123,7 @@ final class mp extends IntrusiveNode {
         field_l = null;
     }
 
-    final static void a(int param0, int param1, sm param2) {
+    final static void writeHighScoreSubmission(int param0, int param1, HighScoreSubmission param2) {
         int var5 = 0;
         int var6 = Kickabout.field_G;
         CipherPacketBuffer var7 = or.field_d;
@@ -154,7 +154,7 @@ final class mp extends IntrusiveNode {
         }
     }
 
-    private mp() throws Throwable {
+    private BlobSubmission() throws Throwable {
         throw new Error();
     }
 

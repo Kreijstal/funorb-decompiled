@@ -315,7 +315,7 @@ final class RotaryDialPainter implements WidgetPainter {
     }
 
     final static void a(boolean param0, boolean param1) {
-        er.a((byte) 71, param0);
+        TextHotspotRegion.drawContentTransition((byte) 71, param0);
         if (null != UrlRequest.field_e) {
           ar.a(15707, UrlRequest.field_e);
         }

@@ -343,18 +343,18 @@ final class RenderedBall extends BallAgent {
         try {
           var1_int = -78 % ((param0 + 26) / 53);
           if (null == EmailAvailabilityValidator.field_q) {
-            EmailAvailabilityValidator.field_q = mk.a(4, 26731);
+            EmailAvailabilityValidator.field_q = mk.requestAchievementMask(4, 26731);
           }
-          if (!EmailAvailabilityValidator.field_q.field_f) {
+          if (!EmailAvailabilityValidator.field_q.complete) {
             return false;
           }
           var6 = BufferedSocket.field_f;
-          var7 = EmailAvailabilityValidator.field_q.field_e;
+          var7 = EmailAvailabilityValidator.field_q.resultValues;
           for (var4 = 0; var4 < 8; var4++) {
             var6[var4] = PainterStyle.a(var6[var4], var7[var4]);
           }
           var8 = WelcomeDialog.field_F;
-          var9 = EmailAvailabilityValidator.field_q.field_e;
+          var9 = EmailAvailabilityValidator.field_q.resultValues;
           var10 = 0;
           var4Lifetime1 = var10;
           while (8 > var10) {
@@ -393,7 +393,7 @@ final class RenderedBall extends BallAgent {
         int var5 = 4 * InstrumentNoteMask.field_i >> 8;
         int var6 = -1 + WhirlpoolHasher.field_d.length;
         int var7 = (var2Lifetime1 * (var6 >> 1) >> 8) + (var6 >> 1);
-        nh.a(ug.a(0, this.field_N >> 16) + var4 << 4, IntKeyLookup.a((byte) -96, this.field_E >> 16) + var5 << 4, var3 << 4, var7, WhirlpoolHasher.field_d);
+        SpritePixelSupport.a(ug.a(0, this.field_N >> 16) + var4 << 4, IntKeyLookup.a((byte) -96, this.field_E >> 16) + var5 << 4, var3 << 4, var7, WhirlpoolHasher.field_d);
     }
 
     final void a(MatchAgent param0, int param1, int param2, int param3) {

@@ -117,7 +117,7 @@ class BallAgent extends MatchAgent {
               if (param3 < 0L) {
                 var7Lifetime4 = var9 + "; Discard;";
               } else {
-                var7Lifetime4 = var9 + "; Expires=" + SoundCache.a(nj.monotonicMillis(-121) + 1000L * param3, -102) + "; Max-Age=" + param3;
+                var7Lifetime4 = var9 + "; Expires=" + SoundCache.formatCookieExpiry(MonotonicClock.monotonicMillis(-121) + 1000L * param3, -102) + "; Max-Age=" + param3;
               }
               AppletJavaScriptBridge.evaluateScript("document.cookie=\"" + var7Lifetime4 + "\"", param1, (byte) 24);
               return;

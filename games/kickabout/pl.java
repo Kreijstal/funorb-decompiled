@@ -104,7 +104,7 @@ final class pl {
           }
           if ((decompiledFrameCompleted1) &&
             (decompiledFrameCompleted0)) {
-            stackIn_4_0 = rf.field_c;
+            stackIn_4_0 = SocialTabsPanel.field_c;
             if (param6 == -1) {
               stackIn_5_1 = 1;
             } else {
@@ -117,17 +117,17 @@ final class pl {
             if (param7) {
               if (param6 != -1) {
                 for (var10_int = 0; -1 + var16.length > var10_int; var10_int++) {
-                  if (0 == (rf.field_d[(var10_int + param0) / 8] & 1 << (7 & param0 + var10_int))) {
+                  if (0 == (SocialTabsPanel.field_d[(var10_int + param0) / 8] & 1 << (7 & param0 + var10_int))) {
                     continue;
                   }
                   var9 = 0;
                   break;
                 }
-                param0 = param0 + (255 & rp.field_x[param6]);
+                param0 = param0 + (255 & PasswordFieldPainter.field_x[param6]);
               } else {
                 var10_int = 0;
                 while (!(var10_int >= VertexNormal.field_d.length)) {
-                  if ((er.field_h[var10_int / 8] & 1 << (7 & var10_int)) == 0) {
+                  if ((TextHotspotRegion.field_h[var10_int / 8] & 1 << (7 & var10_int)) == 0) {
                     var10_int++;
                     continue;
                   }

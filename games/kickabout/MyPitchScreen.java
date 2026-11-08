@@ -122,7 +122,7 @@ final class MyPitchScreen extends TeamManagementScreen {
           for (var4Lifetime1 = 0; var4Lifetime1 < 3; var4Lifetime1++) {
             sh.field_g.c(30 + (var3 - var4Lifetime1), 241 - var4Lifetime1 * 2);
           }
-          IsSixCommand.field_C.a(fv.field_c, 70 + var3, 261, 16777215, -1);
+          IsSixCommand.field_C.a(TooltipOverlay.field_c, 70 + var3, 261, 16777215, -1);
           IsSixCommand.field_C.a(we.field_d, var3, 269, 348, 40, 16777215, -1, 1, 1, 0);
         }
         if (!this.field_I) {
@@ -130,7 +130,7 @@ final class MyPitchScreen extends TeamManagementScreen {
           for (var4Lifetime2 = 0; var4Lifetime2 < 3; var4Lifetime2++) {
             sh.field_g.c(-var4Lifetime2 + (30 + var3), -(2 * var4Lifetime2) + 348);
           }
-          IsSixCommand.field_C.a(fv.field_c, var3 + 70, 368, 16777215, -1);
+          IsSixCommand.field_C.a(TooltipOverlay.field_c, var3 + 70, 368, 16777215, -1);
           IsSixCommand.field_C.a(we.field_d, var3, 376, 348, 40, 16777215, -1, 1, 1, 0);
         }
         un.field_d.a(ca.field_a, this.slideOffsetX + 25, 115, 16777215, -1);
@@ -223,16 +223,16 @@ final class MyPitchScreen extends TeamManagementScreen {
             if (IterableDualLinkDeque.field_a == 2) {
               AnimationSkeleton.field_e = new BufferedSocket((java.net.Socket) (iv.field_o.field_b), PainterStyle.field_e);
               var2 = new PacketBuffer(13);
-              ImageProducerRasterBuffer.a(or.field_c, GzipDecoder.field_f, var2, -3210, wo.field_k);
+              ImageProducerRasterBuffer.a(or.field_c, GzipDecoder.field_f, var2, -3210, AlternateKeyedLoginCredentials.field_k);
               var2.writeByte(param0 + 52, 15);
               var2.writeInt(param0 ^ -44, gg.field_Db);
               AnimationSkeleton.field_e.write(13, (byte) -127, 0, var2.field_f);
               IterableDualLinkDeque.field_a = IterableDualLinkDeque.field_a + 1;
-              LoginRequiredDialog.field_I = 30000L + nj.monotonicMillis(93);
+              LoginRequiredDialog.field_I = 30000L + MonotonicClock.monotonicMillis(93);
             }
             if (IterableDualLinkDeque.field_a == 3) {
               if (AnimationSkeleton.field_e.a((byte) 63) <= 0) {
-                if (nj.monotonicMillis(param0 ^ 102) > LoginRequiredDialog.field_I) {
+                if (MonotonicClock.monotonicMillis(param0 ^ 102) > LoginRequiredDialog.field_I) {
                   stackIn_32_0 = vk.a(-126, -2);
                   return stackIn_32_0;
                 }

@@ -42,8 +42,8 @@ final class ThreeCommand extends ConsoleCommand {
           ThreeCommand.a(false, 111);
           NamedValueContainer.a(63, param0);
           if (gs.field_b) {
-            SoftwareRasterizer.darkenRectangle(ni.field_l.field_b.field_s, ni.field_l.field_b.field_J, ni.field_l.field_b.field_q, ni.field_l.field_b.field_mb);
-            ni.field_l.field_b.draw(122, param0);
+            SoftwareRasterizer.darkenRectangle(HighScoreQuery.field_l.tabs.field_s, HighScoreQuery.field_l.tabs.field_J, HighScoreQuery.field_l.tabs.field_q, HighScoreQuery.field_l.tabs.field_mb);
+            HighScoreQuery.field_l.tabs.draw(122, param0);
             PasswordLoginCredentials.a(param0, (byte) -93);
             return;
           }
@@ -55,8 +55,8 @@ final class ThreeCommand extends ConsoleCommand {
           PasswordLoginCredentials.a(param0, (byte) -93);
           return;
         }
-        SoftwareRasterizer.darkenRectangle(ni.field_l.field_b.field_s, ni.field_l.field_b.field_J, ni.field_l.field_b.field_q, ni.field_l.field_b.field_mb);
-        ni.field_l.field_b.draw(122, param0);
+        SoftwareRasterizer.darkenRectangle(HighScoreQuery.field_l.tabs.field_s, HighScoreQuery.field_l.tabs.field_J, HighScoreQuery.field_l.tabs.field_q, HighScoreQuery.field_l.tabs.field_mb);
+        HighScoreQuery.field_l.tabs.draw(122, param0);
         PasswordLoginCredentials.a(param0, (byte) -93);
     }
 
@@ -94,14 +94,14 @@ final class ThreeCommand extends ConsoleCommand {
             }
           }
         }
-        ServerMessageScreen.field_D.a(param5);
-        ServerMessageScreen.field_D.f(param4);
+        ServerMessageScreen.field_D.setInputGain(param5);
+        ServerMessageScreen.field_D.setFeedbackGain(param4);
         ServerMessageScreen.field_D.setDampingTimeMicros(param0);
         if (param1 > -10) {
           field_A = (int[]) null;
         }
         ServerMessageScreen.field_D.setWetGain(param6);
-        ServerMessageScreen.field_D.e(param3);
+        ServerMessageScreen.field_D.setDryGain(param3);
         ServerMessageScreen.field_D.setStereoWidth(param2);
     }
 

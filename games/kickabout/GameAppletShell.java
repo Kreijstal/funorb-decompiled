@@ -36,7 +36,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             !hp.field_b) {
             oo.field_f = true;
             if (is.field_c &&
-              -TextLine.field_e + nj.monotonicMillis(80) > 1000L) {
+              -TextLine.field_e + MonotonicClock.monotonicMillis(80) > 1000L) {
               var2 = param0.getClipBounds();
               if (var2 != null) {
                 if (var2.width < uk.field_a) {
@@ -99,7 +99,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         RuntimeException decompiledCaughtException = null;
         java.awt.Insets var6 = null;
         try {
-          var2_long = nj.monotonicMillis(85);
+          var2_long = MonotonicClock.monotonicMillis(85);
           var4 = mi.field_b[CachedArchiveSource.field_E];
           if (param0 >= -31) {
             field_n = (String) null;
@@ -200,7 +200,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           return;
         }
         try {
-          SquadPickerDialog.field_I = 4000L + nj.monotonicMillis(-58);
+          SquadPickerDialog.field_I = 4000L + MonotonicClock.monotonicMillis(-58);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ah.stop()");
         }
@@ -343,7 +343,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          er.field_l = false;
+          TextHotspotRegion.field_l = false;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -369,7 +369,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          er.field_l = true;
+          TextHotspotRegion.field_l = true;
           oo.field_f = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -440,14 +440,14 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           }
           ic.field_d.addFocusListener((java.awt.event.FocusListener) (this));
           ic.field_d.requestFocus();
-          er.field_l = true;
+          TextHotspotRegion.field_l = true;
           vb.field_k = true;
           oo.field_f = true;
           if (param0 >= -79) {
             this.run();
           }
           SquadGridWidget.field_Ib = false;
-          TextLine.field_e = nj.monotonicMillis(-95);
+          TextLine.field_e = MonotonicClock.monotonicMillis(-95);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -615,13 +615,13 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 }
                 SingleChildContainer.i(-1);
                 this.f((byte) -105);
-                ea.field_f = DelayedServerPacket.a(105, f.field_d, ReceivedAuctionItem.field_B, (java.awt.Component) ((Object) ic.field_d));
+                ColorQuantizationBox.field_f = DelayedServerPacket.a(105, f.field_d, ReceivedAuctionItem.field_B, (java.awt.Component) ((Object) ic.field_d));
                 this.onStartup((byte) -76);
                 SplashScreen.field_k = SumIntegersCommand.h(3);
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (SquadPickerDialog.field_I != 0L) {
-                    stackIn_99_0 = compareLongs(~nj.monotonicMillis(-51), ~SquadPickerDialog.field_I);
+                    stackIn_99_0 = compareLongs(~MonotonicClock.monotonicMillis(-51), ~SquadPickerDialog.field_I);
                     decompiledFrameRemainder0 = (var5 == 0);
                     if ((decompiledFrameRemainder0) &&
                       (stackIn_99_0 <= 0)) {
@@ -673,8 +673,8 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           return;
         }
         try {
-          SquadPickerDialog.field_I = nj.monotonicMillis(-99);
-          aj.a(5000L, 1);
+          SquadPickerDialog.field_I = MonotonicClock.monotonicMillis(-99);
+          ThreadSleepSupport.sleepMillis(5000L, 1);
           DelegatingCanvas.field_a = null;
           this.shutdownShell(false, (byte) -113);
         } catch (RuntimeException runtimeException) {
@@ -725,7 +725,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               var8 = oo.field_c.a(1, (byte) 110, (Runnable) (this));
               while (true) {
                 if (var8.field_a == 0) {
-                  aj.a(10L, 1);
+                  ThreadSleepSupport.sleepMillis(10L, 1);
                   if (var9 == 0) {
                     continue;
                   }
@@ -845,7 +845,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         Throwable decompiledCaughtException = null;
         Object var6 = null;
         try {
-          var2_long = nj.monotonicMillis(88);
+          var2_long = MonotonicClock.monotonicMillis(88);
           var4 = AudioService.field_d[gf.field_c];
           AudioService.field_d[gf.field_c] = var2_long;
           gf.field_c = 1 + gf.field_c & 31;
@@ -856,7 +856,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           }
           var6 = this;
           synchronized (var6) {
-            vb.field_k = er.field_l;
+            vb.field_k = TextHotspotRegion.field_l;
             if (!param0) {
               field_f = (String) null;
             }

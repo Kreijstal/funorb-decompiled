@@ -191,7 +191,7 @@ final class TournamentChampionDialog extends MessageDialog {
         }
         or.field_d.b(77, (byte) 85);
         or.field_d.writeByte(105, param0);
-        ri.field_t = param1;
+        BeveledTextPainter.field_t = param1;
         PlayerContextMenu.field_f = true;
     }
 

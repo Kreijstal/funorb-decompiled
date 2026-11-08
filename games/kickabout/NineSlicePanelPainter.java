@@ -12,7 +12,7 @@ class NineSlicePanelPainter {
     static String field_c;
 
     void drawPanel(int param0, int param1, int param2, int param3, int param4) {
-        ea.a(param2, param1, param0, (byte) 22, this.field_d, param3);
+        ColorQuantizationBox.drawNineSlicePanel(param2, param1, param0, (byte) 22, this.field_d, param3);
         if (param4 != 3) {
           PlayerStats var7 = (PlayerStats) null;
           NineSlicePanelPainter.a((byte) -66, -25, -85, (PlayerStats) null);

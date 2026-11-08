@@ -112,7 +112,7 @@ final class WhirlpoolHasher {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var9 = null;
         try {
-          h.field_e.field_E = param2;
+          QuickChatMenuBuilder.field_e.field_E = param2;
           if (NodeHashTableIterator.field_b == 2) {
             MySquadScreen.field_N.field_E = IntrusiveNodeHashTable.field_f;
           } else {
@@ -127,7 +127,7 @@ final class WhirlpoolHasher {
           InstrumentEnvelope.field_c.setBounds(true, InstrumentEnvelope.field_c.getPreferredWidth((byte) -99), 5, var10, param3);
           var11 = MySquadScreen.field_N.getPreferredWidth((byte) -19);
           MySquadScreen.field_N.setBounds(true, var11, -5 + (var9_int - var11), var10, param3);
-          h.field_e.setBounds(true, var9_int, 0, 0, param1);
+          QuickChatMenuBuilder.field_e.setBounds(true, var9_int, 0, 0, param1);
           var12 = 5 + (var10 + param3);
           PagedHelpScreen.field_D.setBounds(true, var9_int, 0, param1, var12);
           var12 = var12 + param1;
@@ -190,7 +190,7 @@ final class WhirlpoolHasher {
         try {
           var14 = param2.getText(27939);
           var8 = param1.getText(27939);
-          if (null == op.field_y &&
+          if (null == SpriteButtonPainter.field_y &&
             !EmailSyntaxValidator.a(false, (byte) 123)) {
             stackIn_5_0 = -1;
             return stackIn_5_0;
@@ -232,7 +232,7 @@ final class WhirlpoolHasher {
               InstrumentEnvelope.field_a.writeCircumfixedString(var14, (byte) -126);
               InstrumentEnvelope.field_a.writeCircumfixedString(var8, (byte) -126);
               var15 = (CharSequence) ((Object) param5);
-              InstrumentEnvelope.field_a.writeCircumfixedString(ri.a(var15, (byte) -100), (byte) -125);
+              InstrumentEnvelope.field_a.writeCircumfixedString(BeveledTextPainter.a(var15, (byte) -100), (byte) -125);
               InstrumentEnvelope.field_a.writeShort(-1207444472, param0);
               InstrumentEnvelope.field_a.writeByte(106, param3);
               InstrumentEnvelope.field_a.writeByte(125, var9);
@@ -302,7 +302,7 @@ final class WhirlpoolHasher {
             } else {
               var9_ref_String = un.field_e.a(true);
               if (var9_ref_String != null) {
-                mp.writeSettingsCookie(so.a(62), true, var9_ref_String);
+                BlobSubmission.writeSettingsCookie(so.a(62), true, var9_ref_String);
               }
             }
             FormationView.b((byte) -116);
@@ -314,9 +314,9 @@ final class WhirlpoolHasher {
             stackIn_56_0 = -108;
             return stackIn_56_0;
           }
-          if (null == op.field_y) {
+          if (null == SpriteButtonPainter.field_y) {
             if (ContextMenuItem.field_Db) {
-              if (30000L >= KeyedLoginCredentials.c(29680)) {
+              if (30000L >= KeyedLoginCredentials.millisSinceSessionStart(29680)) {
                 ListingRowCache.field_b = ic.field_e;
               } else {
                 ListingRowCache.field_b = CheatCodeListener.field_h;

@@ -8,7 +8,7 @@ final class sk {
     static Sprite[] field_a;
 
     final static void a(int param0, int param1) {
-        ea.a(vt.field_c.phaseTime, 5, true, 636, param1, -51);
+        ColorQuantizationBox.drawMatchTimer(vt.field_c.phaseTime, 5, true, 636, param1, -51);
         if (param0 != 1) {
           field_d = (MusicTrackMixer) null;
         }
@@ -17,9 +17,9 @@ final class sk {
     final static int a(byte param0) {
         if (param0 != 97) {
           field_a = (Sprite[]) null;
-          return wd.field_n[0];
+          return RankingsRequest.field_n[0];
         }
-        return wd.field_n[0];
+        return RankingsRequest.field_n[0];
     }
 
     final static void a(boolean param0) {
@@ -88,7 +88,7 @@ final class sk {
         float var11 = 0.0f;
         String var13 = null;
         String var12 = null;
-        long var3 = nj.monotonicMillis(108);
+        long var3 = MonotonicClock.monotonicMillis(108);
         if (var3 >= GameAppletShell.field_c) {
           GameAppletShell.field_c = var3 + 25L;
           var5 = (float)param2 / (float)param1;

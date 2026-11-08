@@ -425,7 +425,7 @@ final class eo {
     final static void a(LobbyGameRecord param0, String param1, String param2, int param3, int param4, int param5, int param6) {
         double var12 = 0.0;
         int var14 = 0;
-        double var7 = (double)nj.monotonicMillis(120);
+        double var7 = (double)MonotonicClock.monotonicMillis(120);
         double var12Lifetime1;
         int var14Lifetime1;
         param1 = TrinketIcon.a(param1, false);
@@ -585,7 +585,7 @@ final class eo {
           field_r[var0_int][1] = eo.b((Sprite) (field_r[var0_int][0]));
           field_r[var0_int][2] = field_i[var0_int];
           field_r[var0_int][3] = field_k[var0_int].copyArgb();
-          nh.adjustSpriteHsv(field_r[var0_int][3], 0.0, 0.0, 0.7);
+          SpritePixelSupport.adjustSpriteHsv(field_r[var0_int][3], 0.0, 0.0, 0.7);
         }
         for (var0_intLifetime1 = 0; var0_intLifetime1 < 3; var0_intLifetime1++) {
           for (var1 = 0; var1 < 4; var1++) {
@@ -598,8 +598,8 @@ final class eo {
           field_l[var0_intLifetime2] = (Sprite) ((Object) field_a.copyArgb());
           field_l[var0_intLifetime2].flipVertically();
         }
-        nh.adjustSpriteHsv(field_l[0], 0.321875, 1.0, 1.0);
-        nh.adjustSpriteHsv(field_l[2], 0.74375, 1.0, 1.0);
+        SpritePixelSupport.adjustSpriteHsv(field_l[0], 0.321875, 1.0, 1.0);
+        SpritePixelSupport.adjustSpriteHsv(field_l[2], 0.74375, 1.0, 1.0);
         var0 = TickClock.field_f.toLowerCase();
         if (ArchiveRequest.field_r != 3) {
           if (ArchiveRequest.field_r != 2) {
@@ -996,7 +996,7 @@ final class eo {
           param5 = param5 + (param2 - 100);
           param2 = 100;
         }
-        int var6 = (int)(nj.monotonicMillis(74) % 220L);
+        int var6 = (int)(MonotonicClock.monotonicMillis(74) % 220L);
         var6 = (var6 << 2) / 220;
         field_g.d(param0 - 1, param1 - 1);
         AuctionListing.a(param0 + param2, -22914, param0, param1 + 11, param1);

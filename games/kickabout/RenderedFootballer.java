@@ -138,7 +138,7 @@ final class RenderedFootballer extends FootballerAgent {
             var8 = Math.max(param2.field_F + 15, 66 + (param2.field_F - (IsSixCommand.field_C.a(var7) >> 1)));
             IsSixCommand.field_C.a(var7, var8, param2.field_T + 51, 16777215, -1);
             if (!param1) {
-              var9 = mp.field_l;
+              var9 = BlobSubmission.field_l;
               var10 = Math.max(param2.field_F + 15, param2.field_F - (-66 + (IsSixCommand.field_C.a(var9) >> 1)));
               IsSixCommand.field_C.a(var9, var10, 73 + param2.field_T, 13369344, 65793);
             }
@@ -399,9 +399,9 @@ final class RenderedFootballer extends FootballerAgent {
             }
           }
           if (this.field_ab) {
-            var9 = (double)(nj.monotonicMillis(95) % 1000L) / 1000.0;
-            var11 = (double)(nj.monotonicMillis(35) % 300L) / 300.0;
-            nh.adjustSpriteHsv(AvailabilityCheckRequest.field_f, var9, 1.0, var11 + 1.0);
+            var9 = (double)(MonotonicClock.monotonicMillis(95) % 1000L) / 1000.0;
+            var11 = (double)(MonotonicClock.monotonicMillis(35) % 300L) / 300.0;
+            SpritePixelSupport.adjustSpriteHsv(AvailabilityCheckRequest.field_f, var9, 1.0, var11 + 1.0);
           }
           AvailabilityCheckRequest.field_f.drawHalfSize(-64 + var3, -95 + var4);
           decompiledFrameRemainder0 = false;

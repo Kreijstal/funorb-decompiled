@@ -285,7 +285,7 @@ final class BufferedSocket implements Runnable {
           }
           if (null != this.field_p) {
             while (this.field_p.field_a == 0) {
-              aj.a(1L, 1);
+              ThreadSleepSupport.sleepMillis(1L, 1);
             }
             if (this.field_p.field_a == 1) {
               try {

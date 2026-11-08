@@ -5,7 +5,7 @@ final class go {
     static String field_a;
     static int field_b;
 
-    final static int a(ea param0, int param1, int param2, int[][][] param3) {
+    final static int a(ColorQuantizationBox param0, int param1, int param2, int[][][] param3) {
         RuntimeException var4 = null;
         int stackIn_2_0 = 0;
         int stackIn_5_0 = 0;

@@ -293,10 +293,10 @@ final class Trinket {
               }
               var6 = stackIn_49_0;
               CanvasResizePolicy.a(param0.field_U, param0.field_mb, param0.field_R, false, var6);
-              nh.a(BuyPitchDialog.field_F, var2_int - 48, var3 - 48);
+              SpritePixelSupport.a(BuyPitchDialog.field_F, var2_int - 48, var3 - 48);
               return;
             }
-            nh.a(var2_int << 4, var3 << 4, 28 * InstrumentNoteMask.field_i >> 4, 11, ClientUiOverlay.field_e);
+            SpritePixelSupport.a(var2_int << 4, var3 << 4, 28 * InstrumentNoteMask.field_i >> 4, 11, ClientUiOverlay.field_e);
             return;
           }
           return;
@@ -421,7 +421,7 @@ final class Trinket {
         boolean stackIn_19_0Lifetime1;
         var4 = Kickabout.field_G;
         try {
-          mn.field_a = param0;
+          IconButtonPainter.field_a = param0;
           var3 = -110 / ((67 - param1) / 54);
           var2 = (SoundStreamHandle) (LoginCredentials.field_a.g(24009));
           scanLoop1: while (true) {
@@ -431,7 +431,7 @@ final class Trinket {
               if (var4 != 0) {
                 while (true) {
                   if (stackIn_19_0) {
-                    var2.stream.b(var2.baseVolume * mn.field_a + 128 >> 8);
+                    var2.stream.setInternalVolume(var2.baseVolume * IconButtonPainter.field_a + 128 >> 8);
                   }
                   var2.c((byte) -109);
                   var2 = (SoundStreamHandle) (IndexedSpriteState.field_c.c(33));
@@ -445,7 +445,7 @@ final class Trinket {
                 }
                 if (stackIn_19_0 ||
                   var4 != 0) {
-                  var2.stream.b(128 + mn.field_a * var2.baseVolume >> 8);
+                  var2.stream.setInternalVolume(128 + IconButtonPainter.field_a * var2.baseVolume >> 8);
                 }
                 var2 = (SoundStreamHandle) (LoginCredentials.field_a.c(33));
                 if (var4 == 0) {
@@ -462,15 +462,15 @@ final class Trinket {
                 }
                 stackIn_19_0Lifetime1 = var2.owner.isLinked((byte) -113);
                 if (stackIn_19_0Lifetime1) {
-                  var2.stream.b(var2.baseVolume * mn.field_a + 128 >> 8);
+                  var2.stream.setInternalVolume(var2.baseVolume * IconButtonPainter.field_a + 128 >> 8);
                 } else {
                   var2.c((byte) -109);
                 }
                 var2 = (SoundStreamHandle) (IndexedSpriteState.field_c.c(33));
               }
             }
-            wd.field_n[1] = param0;
-            wd.field_n[2] = param0;
+            RankingsRequest.field_n[1] = param0;
+            RankingsRequest.field_n[2] = param0;
             break;
           }
           if (null != sk.field_d) {

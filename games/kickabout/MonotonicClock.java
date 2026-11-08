@@ -1,26 +1,26 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nj {
+final class MonotonicClock {
     static String field_c;
     static String field_b;
     static UiLayoutNode field_d;
     static String field_a;
 
-    final static void a(boolean param0, int param1) {
+    final static void drawActiveDialog(boolean param0, int param1) {
         if (param1 < -126) {
           if (StreetSceneryLoader.field_m != null) {
             StreetSceneryLoader.field_m.draw(73, param0);
           }
           return;
         }
-        nj.monotonicMillis(108);
+        MonotonicClock.monotonicMillis(108);
         if (StreetSceneryLoader.field_m != null) {
           StreetSceneryLoader.field_m.draw(73, param0);
         }
     }
 
-    final static String a(int param0, String param1, java.applet.Applet param2) {
+    final static String readCookie(int param0, String param1, java.applet.Applet param2) {
         try {
           int var5 = 0;
           String var3 = null;
@@ -101,7 +101,7 @@ final class nj {
         field_d = null;
     }
 
-    final static int a(int param0, int param1, int param2, int param3) {
+    final static int placePopupVertically(int param0, int param1, int param2, int param3) {
         if (param3 != 29079) {
           field_b = (String) null;
           if (param2 + (param1 + param0) <= SoftwareRasterizer.field_f) {

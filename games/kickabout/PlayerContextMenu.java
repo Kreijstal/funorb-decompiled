@@ -583,7 +583,7 @@ final class PlayerContextMenu {
                   param0 != 2 &&
                   !PacketBuffer.field_l) {
                   this.field_h = param2;
-                  this.field_j.addItem(0, 19, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, nj.field_a, new String[]{var5}));
+                  this.field_j.addItem(0, 19, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, MonotonicClock.field_a, new String[]{var5}));
                 }
               }
               if (var6 != null) {
@@ -595,7 +595,7 @@ final class PlayerContextMenu {
                   this.field_j.addItem(0, 18, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ee.field_c, new String[]{var5}));
                   if (param2 != null) {
                     this.field_h = param2;
-                    this.field_j.addItem(0, 19, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, nj.field_a, new String[]{var5}));
+                    this.field_j.addItem(0, 19, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, MonotonicClock.field_a, new String[]{var5}));
                   }
                 }
                 this.field_j.addItem(0, 5, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, Trinket.field_i, new String[]{var5}));

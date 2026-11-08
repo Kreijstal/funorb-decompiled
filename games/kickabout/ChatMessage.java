@@ -87,7 +87,7 @@ final class ChatMessage {
         this.field_m = PasswordValidator.field_l;
         this.field_d = MessageDialog.field_z;
         this.field_o = SellPlayerDialog.field_F;
-        this.field_q = hr.field_f;
+        this.field_q = LookupRecordUpdate.field_f;
     }
 
     ChatMessage(int param0, String param1, int param2, String param3, String param4) {

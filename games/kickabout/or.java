@@ -44,7 +44,7 @@ final class or {
         if (param1 != 1) {
           return;
         }
-        System.out.println("Error: " + aj.replaceAll(-1, "%0a", "\n", param0));
+        System.out.println("Error: " + ThreadSleepSupport.replaceAll(-1, "%0a", "\n", param0));
     }
 
     public static void releaseStatics(byte param0) {

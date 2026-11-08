@@ -263,7 +263,7 @@ final class ResourceArchive {
           param1 < this.field_d.field_e[param0]) {
           return true;
         }
-        if (rf.field_a) {
+        if (SocialTabsPanel.field_a) {
           throw new IllegalArgumentException(param0 + " " + param1);
         }
         return false;
@@ -336,7 +336,7 @@ final class ResourceArchive {
           this.field_d.field_e[param1] != 0) {
           return true;
         }
-        if (!rf.field_a) {
+        if (!SocialTabsPanel.field_a) {
           return false;
         }
         throw new IllegalArgumentException(Integer.toString(param1));
@@ -628,16 +628,16 @@ final class ResourceArchive {
           var3_int = 0;
           var4 = uq.field_c;
           while (WeightedLruCache.field_c.length > var3_int) {
-            var5 = dk.field_g[var3_int];
+            var5 = AchievementQuery.field_g[var3_int];
             if (var5 >= 0) {
               var6 = MatchTransitionScreen.a(10, WeightedLruCache.field_c[var3_int], true);
               var7 = -(var6 >> 1) + TeamManagementScreen.field_A;
-              var4 = var4 + aj.field_a;
+              var4 = var4 + ThreadSleepSupport.field_a;
               if (LoginText.rectangleContains(-DiskCacheWorker.field_d + var7, param1, param0, (byte) -124, var4, var6 + (DiskCacheWorker.field_d << 1), PlayerModelPreview.field_j + (pr.field_d << 1))) {
                 stackIn_9_0 = var5;
                 return stackIn_9_0;
               }
-              var4 = var4 + ((pr.field_d << 1) + aj.field_a + PlayerModelPreview.field_j);
+              var4 = var4 + ((pr.field_d << 1) + ThreadSleepSupport.field_a + PlayerModelPreview.field_j);
             } else {
               var4 = var4 + PlayArea.field_c;
             }
@@ -763,7 +763,7 @@ final class ResourceArchive {
             var9 = DebouncedValidationProvider.a(this.field_e[param0], false, param3 + 18826);
           }
           try {
-            var36 = hh.a(var9, (byte) -3);
+            var36 = FullscreenFailureReason.a(var9, (byte) -3);
             var27 = var36;
             var23 = var27;
             var43 = var23;
@@ -773,7 +773,7 @@ final class ResourceArchive {
             stackIn_35_0 = var11_ref_RuntimeException;
             stackIn_35_1 = new StringBuilder();
             stackIn_36_2 = (param1 != null);
-            throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(" ").append(param0).append(" ").append(var9.length).append(" ").append(er.a(false, var9.length, var9)).append(" ").append(er.a(false, var9.length - 2, var9)).append(" ").append(this.field_d.field_c[param0]).append(" ").append(this.field_d.field_g).toString());
+            throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(" ").append(param0).append(" ").append(var9.length).append(" ").append(TextHotspotRegion.a(false, var9.length, var9)).append(" ").append(TextHotspotRegion.a(false, var9.length - 2, var9)).append(" ").append(this.field_d.field_c[param0]).append(" ").append(this.field_d.field_g).toString());
           }
           if (this.field_b) {
             this.field_e[param0] = null;

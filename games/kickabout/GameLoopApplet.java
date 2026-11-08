@@ -68,7 +68,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
         int var2;
         int var3;
         int var4;
-        ii var5;
+        AchievementSubmission var5;
         var4 = Kickabout.field_G;
         if (SplashScreen.field_m != null &&
           SplashScreen.field_m.field_b) {
@@ -112,11 +112,11 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
         }
         if (!PlayArea.a(100)) {
           while (true) {
-            var5 = (ii) (ve.field_R.removeFirst((byte) 127));
+            var5 = (AchievementSubmission) (FullscreenErrorDialog.field_R.removeFirst((byte) 127));
             if (var5 == null) {
               break;
             }
-            LeaderboardParticipant.a(4, var5, 77);
+            LeaderboardParticipant.submitAchievement(4, var5, 77);
           }
         }
         if (param0 > -25) {
@@ -172,7 +172,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
               if (var3 != 2) {
                 if (3 != var3) {
                   if (var3 == 4) {
-                    ql.a((byte) 50, false, hh.field_b);
+                    ql.a((byte) 50, false, FullscreenFailureReason.field_b);
                     ProxySocketConnector.field_e = true;
                   }
                 } else {

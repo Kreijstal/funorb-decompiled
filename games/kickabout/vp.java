@@ -114,8 +114,8 @@ final class vp implements OverlayLayer {
         }
         if (param1 >= IntDoubleCommand.field_D &&
           IntDoubleCommand.field_D + TrinketCatalog.field_c.field_q > param1 &&
-          rp.field_w <= param0 &&
-          param0 < rp.field_w + TrinketCatalog.field_c.field_w) {
+          PasswordFieldPainter.field_w <= param0 &&
+          param0 < PasswordFieldPainter.field_w + TrinketCatalog.field_c.field_w) {
           return 0;
         }
         if (WelcomeDialog.field_G <= param1 &&

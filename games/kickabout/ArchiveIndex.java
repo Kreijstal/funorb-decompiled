@@ -97,7 +97,7 @@ final class ArchiveIndex {
         int var14Lifetime1Lifetime1;
         var17 = Kickabout.field_G;
         try {
-          var18 = new PacketBuffer(hh.a(param1, (byte) -3));
+          var18 = new PacketBuffer(FullscreenFailureReason.a(param1, (byte) -3));
           var4 = var18.readUnsignedByte((byte) -107);
           if (5 <= var4 &&
             var4 <= 7) {
@@ -271,7 +271,7 @@ final class ArchiveIndex {
     ArchiveIndex(byte[] param0, int param1, byte[] param2) {
         int var4_int = 0;
         try {
-          this.field_g = er.a(false, param0.length, param0);
+          this.field_g = TextHotspotRegion.a(false, param0.length, param0);
           if (this.field_g != param1) {
             throw new RuntimeException();
           }

@@ -89,13 +89,13 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         int var4 = Kickabout.field_G;
         int var3_intLifetime1;
         try {
-          PcmPlayerService.a(22050, true, 10);
-          wd.field_n = new int[3];
-          for (var3_int = 0; var3_int < wd.field_n.length; var3_int++) {
-            wd.field_n[var3_int] = 256;
+          PcmPlayerService.configureAudio(22050, true, 10);
+          RankingsRequest.field_n = new int[3];
+          for (var3_int = 0; var3_int < RankingsRequest.field_n.length; var3_int++) {
+            RankingsRequest.field_n[var3_int] = 256;
           }
-          cb.field_d = PcmPlayerService.a(param0, param2, 0, 22050);
-          pg.field_d = PcmPlayerService.a(param0, param2, 1, 1024);
+          cb.field_d = PcmPlayerService.createPlayer(param0, param2, 0, 22050);
+          pg.field_d = PcmPlayerService.createPlayer(param0, param2, 1, 1024);
           if (param1 != 23) {
             FullscreenFocusCanvas.releaseStatics((byte) 30);
           }
@@ -104,12 +104,12 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           var5 = 0;
           var3_intLifetime1 = var5;
           while (3 > var5) {
-            sk.field_d.a(var5, wd.field_n[var5], (byte) -85);
+            sk.field_d.a(var5, RankingsRequest.field_n[var5], (byte) -85);
             var5++;
           }
-          cb.field_d.a(sk.field_d);
+          cb.field_d.setRootStream(sk.field_d);
           pi.field_b = new PcmStreamMixer();
-          pg.field_d.a(pi.field_b);
+          pg.field_d.setRootStream(pi.field_b);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "vq.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

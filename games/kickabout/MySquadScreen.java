@@ -410,7 +410,7 @@ final class MySquadScreen extends TeamManagementScreen {
         this.field_W.field_E = ConsoleTokenCursor.field_f.toLowerCase();
         this.field_P.field_E = ConsoleParseException.field_d.toLowerCase();
         this.field_G.field_E = ca.field_d.toLowerCase();
-        this.field_X.field_E = mp.field_k.toLowerCase();
+        this.field_X.field_E = BlobSubmission.field_k.toLowerCase();
         this.field_Q = eo.a(NodeHashTableIterator.field_c, 7126504);
         this.field_K = new UiLayoutNode[]{};
         this.field_T = new TrinketSlot[]{};

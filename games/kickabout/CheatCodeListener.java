@@ -22,7 +22,7 @@ final class CheatCodeListener implements OverlayLayer {
         int var7 = Kickabout.field_G;
         int var3 = param1 != 0 ? 0 : 1;
         for (var4 = 0; 4 > var4; var4++) {
-          var11 = ih.a(21656, rp.field_z[param1][var4]);
+          var11 = ih.a(21656, PasswordFieldPainter.field_z[param1][var4]);
           var6 = MatchPhaseView.a(false, var4 % 3, var3, LongPlusOneCommand.field_B[-(2 * param1) + 12], var11[0], var4 % 3, var11[1], (byte) -89, -var4 + 3, false, LongPlusOneCommand.field_B[31]);
           this.field_i[var4] = new RenderedFootballer(var6, var3, true);
           this.field_i[var4].directionMask = 1;

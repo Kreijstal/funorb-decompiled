@@ -27,7 +27,7 @@ final class ConsoleEvaluationException extends Exception {
     }
 
     final static void a(int param0, int param1) {
-        int var2 = (-640 + ea.field_a) / 2;
+        int var2 = (-640 + ColorQuantizationBox.field_a) / 2;
         int var3 = TextPromptDialog.field_Bb * TextPromptDialog.field_Bb;
         int var4 = -(param1 * param1) + var3;
         TrinketIcon.field_Cb.setBounds(true, 199, var2 - var4 * 199 / var3, 90, -210 + (SoftwareRasterizer.field_f - 4));

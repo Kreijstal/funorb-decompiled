@@ -107,7 +107,7 @@ abstract class ModalPanel extends WidgetContainer {
             var2 = (ManagerAction) (MusicPatchNode.field_h.c(33));
           }
           var2Lifetime1 = new ManagerAction(4, new int[]{param0});
-          ii.a(var2Lifetime1, 102);
+          AchievementSubmission.applyAndQueueManagerAction(var2Lifetime1, 102);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ub.BC(" + param0 + ',' + param1 + ')');
         }

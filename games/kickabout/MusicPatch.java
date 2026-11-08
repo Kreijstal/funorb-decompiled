@@ -17,7 +17,7 @@ final class MusicPatch extends IntrusiveNode {
     PcmSample[] field_l;
     static int field_h;
 
-    final static boolean b(int param0) {
+    final static boolean tryAcquireChatSendPermit(int param0) {
         long var1;
         long var3;
         int var5;
@@ -26,7 +26,7 @@ final class MusicPatch extends IntrusiveNode {
         if (param0 != 0) {
           field_g = (int[]) null;
         }
-        var1 = nj.monotonicMillis(-128);
+        var1 = MonotonicClock.monotonicMillis(-128);
         var3 = var1 - pc.field_c;
         if (30000L < var3) {
           MeshObject.field_d = 0;
@@ -53,7 +53,7 @@ final class MusicPatch extends IntrusiveNode {
         return true;
     }
 
-    final static void a(int param0) {
+    final static void drawMatchMinimap(int param0) {
         int var3_int = 0;
         int stackIn_17_0 = 0;
         int stackIn_22_0 = 0;
@@ -83,7 +83,7 @@ final class MusicPatch extends IntrusiveNode {
           var1_int = -SquadPickerDialog.field_Q.field_o + PasswordLoginCredentials.field_i;
           var2 = hq.field_d;
           if (param0 != 16777215) {
-            MusicPatch.a(32);
+            MusicPatch.drawMatchMinimap(32);
           }
           SquadPickerDialog.field_Q.b(var1_int, var2, FriendsListPanel.a(false, (byte) 51));
           if (SocketArchiveNetworkClient.field_w != null) {
@@ -177,9 +177,9 @@ final class MusicPatch extends IntrusiveNode {
                   var6 = var9;
                   var9--;
                   if ((var9 & 1) == 0) {
-                    var7 = param0.b(10, var9 >> 2, param1);
+                    var7 = param0.getFlatSoundEffect(10, var9 >> 2, param1);
                   } else {
-                    var7 = param0.a(var9 >> 2, 10, param1);
+                    var7 = param0.getFlatVorbisSample(var9 >> 2, 10, param1);
                   }
                   if (var7 == null) {
                     var5_int = 0;
@@ -220,10 +220,10 @@ final class MusicPatch extends IntrusiveNode {
         }
     }
 
-    final static void a(byte param0) {
+    final static void showAccountChoice(byte param0) {
         we.field_a.a((byte) -124, (UiWidget) (new AccountChoicePanel()));
         if (param0 > -119) {
-          MusicPatch.b(114);
+          MusicPatch.tryAcquireChatSendPermit(114);
         }
     }
 
@@ -233,7 +233,7 @@ final class MusicPatch extends IntrusiveNode {
         field_i = null;
         field_g = null;
         if (param0 > -24) {
-          MusicPatch.a(72);
+          MusicPatch.drawMatchMinimap(72);
         }
     }
 

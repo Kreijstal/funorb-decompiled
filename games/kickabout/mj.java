@@ -34,9 +34,9 @@ final class mj {
           LineupView.field_x = Trinket.field_f.copyArgb();
           LoggedGoal.field_o = TrinketPickerDialog.field_J.copy();
           PlayerValueSortCriterion.field_p = LoginMethod.field_g.copy();
-          nh.adjustHsv(LineupView.field_x.field_y, var7[0], var7[1], var7[2]);
-          nh.adjustHsv(LoggedGoal.field_o.field_y, var7[0], var7[1], var7[2]);
-          nh.adjustHsv(PlayerValueSortCriterion.field_p.field_y, var7[0], var7[1], var7[2]);
+          SpritePixelSupport.adjustHsv(LineupView.field_x.field_y, var7[0], var7[1], var7[2]);
+          SpritePixelSupport.adjustHsv(LoggedGoal.field_o.field_y, var7[0], var7[1], var7[2]);
+          SpritePixelSupport.adjustHsv(PlayerValueSortCriterion.field_p.field_y, var7[0], var7[1], var7[2]);
           FadingSoundPlayer.field_p = eo.mirrorVertically(LineupView.field_x);
           ConsoleCommand.field_z = eo.mirrorHorizontally(FadingSoundPlayer.field_p);
           ByteStorage.field_b = eo.mirrorVertically(ConsoleCommand.field_z);

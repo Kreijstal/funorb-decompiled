@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fv implements OverlayLayer {
+final class TooltipOverlay implements OverlayLayer {
     static Sprite field_b;
     static String field_a;
     static boolean field_d;
@@ -71,7 +71,7 @@ final class fv implements OverlayLayer {
         }
     }
 
-    final static int a(int param0, byte param1) {
+    final static int loadSoundGroup(int param0, byte param1) {
         int var2_int = 0;
         int var3 = 0;
         int var4 = 0;
@@ -99,7 +99,7 @@ final class fv implements OverlayLayer {
           var4 = 0;
           if (param1 != 19) {
             var6 = (String) null;
-            fv.openUrlWithShell((byte) 41, (String) null);
+            TooltipOverlay.openUrlWithShell((byte) 41, (String) null);
           }
           while (var4 < TextFieldNode.field_Db.length) {
             if (param0 == TextFieldNode.field_Db[var4].field_c) {
@@ -160,7 +160,7 @@ final class fv implements OverlayLayer {
             if (0 >= SoundStreamHandle.field_h) {
               stackIn_21_2 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, DualLinkDequeIterator.field_b, new String[]{ad.formatCurrencyAmount(Math.abs(SoundStreamHandle.field_h), 26300)});
             } else {
-              stackIn_21_2 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ni.field_h, new String[]{ad.formatCurrencyAmount(Math.abs(SoundStreamHandle.field_h), 26300)});
+              stackIn_21_2 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, HighScoreQuery.field_h, new String[]{ad.formatCurrencyAmount(Math.abs(SoundStreamHandle.field_h), 26300)});
             }
             stackIn_20_0[stackIn_20_1] = stackIn_21_2;
           }

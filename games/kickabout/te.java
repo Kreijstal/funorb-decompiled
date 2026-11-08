@@ -24,7 +24,7 @@ final class te {
         }
     }
 
-    final static void a(int param0, ii param1, byte param2) {
+    final static void writeAchievementSubmission(int param0, AchievementSubmission param1, byte param2) {
         CipherPacketBuffer var5 = null;
         int var4 = 0;
         try {
@@ -160,8 +160,8 @@ final class te {
 
     final static void a(int param0, byte param1, int param2, boolean param3, int param4, boolean param5, int param6, boolean param7, int param8, boolean param9, int param10, boolean param11) {
         if (param1 > -64) {
-          ii var13 = (ii) null;
-          te.a(80, (ii) null, (byte) -28);
+          AchievementSubmission var13 = (AchievementSubmission) null;
+          te.writeAchievementSubmission(80, (AchievementSubmission) null, (byte) -28);
         }
         RenderedFootballer.a(-79, param4, param5, 16777215, param2, param8, param9, 16777215, param6, param3, param11, param7, param10, param0);
     }
@@ -174,8 +174,8 @@ final class te {
     /* Full JVM integer arguments; original narrow signature preserved. */
     final static void $cfr$intArgs$a$20586b1b86c8(int param0, int param1, int param2, boolean param3, int param4, boolean param5, int param6, boolean param7, int param8, boolean param9, int param10, boolean param11) {
         if (param1 > -64) {
-          ii var13 = (ii) null;
-          te.a(80, (ii) null, (byte) -28);
+          AchievementSubmission var13 = (AchievementSubmission) null;
+          te.writeAchievementSubmission(80, (AchievementSubmission) null, (byte) -28);
         }
         RenderedFootballer.a(-79, param4, param5, 16777215, param2, param8, param9, 16777215, param6, param3, param11, param7, param10, param0);
     }

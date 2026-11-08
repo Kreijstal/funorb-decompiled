@@ -93,9 +93,9 @@ final class vr {
           InstrumentNoteMask.field_k = false;
           PlayerContextMenu.field_i = null;
           ArchiveSource.field_b = null;
-          if (rp.field_B != null) {
-            rp.field_B.clear(param0 + 22999);
-            rp.field_B = null;
+          if (PasswordFieldPainter.field_B != null) {
+            PasswordFieldPainter.field_B.clear(param0 + 22999);
+            PasswordFieldPainter.field_B = null;
           }
           if (param0 != -2) {
             return;
@@ -175,7 +175,7 @@ final class vr {
         if (param0 != 3) {
           return -1;
         }
-        nh.adjustSpriteHsv(MeshObject.field_b[param1][param0], 0.0, 1.6, 1.0);
+        SpritePixelSupport.adjustSpriteHsv(MeshObject.field_b[param1][param0], 0.0, 1.6, 1.0);
         return -1;
     }
 

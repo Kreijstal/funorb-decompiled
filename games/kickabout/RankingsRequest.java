@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wd extends IntrusiveNode {
+final class RankingsRequest extends IntrusiveNode {
     static ModalStack field_l;
     static String field_g;
     int field_p;
@@ -109,7 +109,7 @@ final class wd extends IntrusiveNode {
         }
     }
 
-    wd() {
+    RankingsRequest() {
     }
 
     static {

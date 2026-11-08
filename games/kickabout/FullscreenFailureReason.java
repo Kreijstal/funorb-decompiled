@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hh {
+final class FullscreenFailureReason {
     static String field_e;
     static int[] field_g;
     static String field_a;
@@ -31,7 +31,7 @@ final class hh {
         byte[] var13 = null;
         try {
           if (param1 != -3) {
-            hh.releaseStatics((byte) 111);
+            FullscreenFailureReason.releaseStatics((byte) 111);
           }
           var9 = new PacketBuffer(param0);
           var3 = var9.readUnsignedByte((byte) -107);
@@ -90,7 +90,7 @@ final class hh {
           return;
         }
         byte[] var2 = (byte[]) null;
-        hh.a((byte[]) null, (byte) -12);
+        FullscreenFailureReason.a((byte[]) null, (byte) -12);
         field_g = null;
         field_e = null;
         field_b = null;

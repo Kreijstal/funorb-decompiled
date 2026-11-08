@@ -118,7 +118,7 @@ final class EmailSyntaxValidator extends TextFieldValidator {
           if (param0 != 25) {
             field_j = (String) null;
           }
-          stackIn_6_0 = dl.field_g;
+          stackIn_6_0 = LookupQuery.field_g;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -152,14 +152,14 @@ final class EmailSyntaxValidator extends TextFieldValidator {
           if (ArrayWidgetContainer.field_A.field_a == 0) {
             return false;
           }
-          long dupTemp$0 = nj.monotonicMillis(-100);
-          mp.field_i = dupTemp$0;
+          long dupTemp$0 = MonotonicClock.monotonicMillis(-100);
+          BlobSubmission.field_i = dupTemp$0;
           IterableDualLinkDeque.field_c = dupTemp$0;
           if (1 != ArrayWidgetContainer.field_A.field_a) {
             un.field_c = AudioService.field_h;
           } else {
             try {
-              op.field_y = new BufferedSocket((java.net.Socket) (ArrayWidgetContainer.field_A.field_b), LoginMethod.field_c);
+              SpriteButtonPainter.field_y = new BufferedSocket((java.net.Socket) (ArrayWidgetContainer.field_A.field_b), LoginMethod.field_c);
               or.field_d.field_n = 0;
               var2_ref_ml = un.field_e;
               un.field_c = sd.field_d;

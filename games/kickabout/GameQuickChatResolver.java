@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ka implements fg {
+final class GameQuickChatResolver implements QuickChatResolver {
     static UiLayoutNode field_c;
     static String field_d;
     static boolean field_b;
@@ -24,7 +24,7 @@ final class ka implements fg {
         try {
           vp.field_p = param1;
           if (param0 != 2) {
-            ka.a(122, 101, (byte) 60);
+            GameQuickChatResolver.a(122, 101, (byte) 60);
           }
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ka.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

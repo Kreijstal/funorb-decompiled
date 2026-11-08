@@ -371,7 +371,7 @@ final class CachedArchiveSource extends ArchiveSource {
                   if (!this.field_A) {
                     return;
                   }
-                  if (nj.monotonicMillis(-58) < this.field_y) {
+                  if (MonotonicClock.monotonicMillis(-58) < this.field_y) {
                     return;
                   }
                   var3_ref = (ArchiveRequest) (this.field_v.b(0));
@@ -402,7 +402,7 @@ final class CachedArchiveSource extends ArchiveSource {
             if (!this.field_A) {
               return;
             }
-            if (nj.monotonicMillis(-58) < this.field_y) {
+            if (MonotonicClock.monotonicMillis(-58) < this.field_y) {
               return;
             }
             var3_refLifetime1 = (ArchiveRequest) (this.field_v.b(0));
@@ -420,7 +420,7 @@ final class CachedArchiveSource extends ArchiveSource {
               var3_refLifetime1 = (ArchiveRequest) (this.field_v.a(-1));
             }
           }
-          this.field_y = 1000L + nj.monotonicMillis(116);
+          this.field_y = 1000L + MonotonicClock.monotonicMillis(116);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -261,7 +261,7 @@ final class TrinketSlot extends UiLayoutNode implements PopupCard {
           if (param1) {
             this.field_q = this.field_q >> 1;
             this.field_mb = this.field_mb >> 1;
-            this.field_N = (Sprite) ((Object) nh.downscaleArgbByHalf(this.field_Cb));
+            this.field_N = (Sprite) ((Object) SpritePixelSupport.downscaleArgbByHalf(this.field_Cb));
           }
           this.field_yb = ValidationState.field_b[this.field_Bb.field_h].toUpperCase();
           this.field_Hb = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, DebugConsole.field_u, new String[]{wq.field_a[this.field_Bb.field_k]}).toLowerCase();

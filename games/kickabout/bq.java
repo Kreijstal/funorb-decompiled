@@ -38,7 +38,7 @@ final class bq {
         var13 = Kickabout.field_G;
         try {
           BufferedSocket.field_s = SoftwareRasterizer.field_f;
-          ea.field_a = SoftwareRasterizer.field_g;
+          ColorQuantizationBox.field_a = SoftwareRasterizer.field_g;
           stackIn_3_0 = 127;
           if (param1) {
             stackIn_4_1 = fj.field_a;
@@ -46,8 +46,8 @@ final class bq {
             stackIn_4_1 = ee.field_b;
           }
           ConsoleEvaluationException.a(stackIn_3_0, stackIn_4_1);
-          ni.field_l.a(0, TrinketIcon.field_Cb.field_q, 0, -2 + (-40 + TrinketIcon.field_Cb.field_mb), (byte) -80);
-          ka.field_c.setBounds(true, AchievementsScreen.field_C.field_q, 0, 0, sh.field_c);
+          HighScoreQuery.field_l.layout(0, TrinketIcon.field_Cb.field_q, 0, -2 + (-40 + TrinketIcon.field_Cb.field_mb), (byte) -80);
+          GameQuickChatResolver.field_c.setBounds(true, AchievementsScreen.field_C.field_q, 0, 0, sh.field_c);
           stackIn_6_0 = BufferedSocket.field_u;
           stackIn_6_1 = true;
           stackIn_6_2 = AchievementsScreen.field_C.field_q;
@@ -91,10 +91,10 @@ final class bq {
                 var14 = qr.field_b[var6];
                 qr.field_b[var6].field_mb = 0;
                 var14.field_q = 0;
-                for (var8 = 0; rf.field_c[var6].length > var8; var8++) {
-                  if (rf.field_c[var6][var8] != null) {
-                    var9 = rf.field_c[var6][var8];
-                    rf.field_c[var6][var8].field_mb = 0;
+                for (var8 = 0; SocialTabsPanel.field_c[var6].length > var8; var8++) {
+                  if (SocialTabsPanel.field_c[var6][var8] != null) {
+                    var9 = SocialTabsPanel.field_c[var6][var8];
+                    SocialTabsPanel.field_c[var6][var8].field_mb = 0;
                     var9.field_q = 0;
                   }
                 }
@@ -103,10 +103,10 @@ final class bq {
                 var15 = qr.field_b[var6];
                 qr.field_b[var6].field_mb = 0;
                 var15.field_q = 0;
-                for (var8 = 0; rf.field_c[var6].length > var8; var8++) {
-                  if (null != rf.field_c[var6][var8]) {
-                    var9 = rf.field_c[var6][var8];
-                    rf.field_c[var6][var8].field_mb = 0;
+                for (var8 = 0; SocialTabsPanel.field_c[var6].length > var8; var8++) {
+                  if (null != SocialTabsPanel.field_c[var6][var8]) {
+                    var9 = SocialTabsPanel.field_c[var6][var8];
+                    SocialTabsPanel.field_c[var6][var8].field_mb = 0;
                     var9.field_q = 0;
                   }
                 }
@@ -131,10 +131,10 @@ final class bq {
                   var8_ref_hd.field_q = 0;
                   var16 = 0;
                   var9_int = var16;
-                  while (var16 < rf.field_c[var6].length) {
-                    if (null != rf.field_c[var6][var16]) {
-                      var10 = rf.field_c[var6][var16];
-                      rf.field_c[var6][var16].field_mb = 0;
+                  while (var16 < SocialTabsPanel.field_c[var6].length) {
+                    if (null != SocialTabsPanel.field_c[var6][var16]) {
+                      var10 = SocialTabsPanel.field_c[var6][var16];
+                      SocialTabsPanel.field_c[var6][var16].field_mb = 0;
                       var10.field_q = 0;
                     }
                     var16++;
@@ -143,20 +143,20 @@ final class bq {
                   qr.field_b[var6].setBounds(true, 103, 5, var5, var3);
                   var8 = 110;
                   if (!param1) {
-                    if (null != rf.field_c[var6][0]) {
-                      var9 = rf.field_c[var6][0];
-                      rf.field_c[var6][0].field_mb = 0;
+                    if (null != SocialTabsPanel.field_c[var6][0]) {
+                      var9 = SocialTabsPanel.field_c[var6][0];
+                      SocialTabsPanel.field_c[var6][0].field_mb = 0;
                       var9.field_q = 0;
                     }
                   } else {
-                    rf.field_c[var6][0].a(mj.field_b, 2, 38, var5, var8, 15114, var3);
+                    SocialTabsPanel.field_c[var6][0].a(mj.field_b, 2, 38, var5, var8, 15114, var3);
                     var8 += 40;
                   }
                   var9_int = -3 + (AuctionItem.field_p.field_q - var8);
-                  var10_int = rf.field_c[var6].length - 1;
+                  var10_int = SocialTabsPanel.field_c[var6].length - 1;
                   for (var11 = 0; var11 < var10_int; var11++) {
                     var12 = var11 * var9_int / var10_int;
-                    rf.field_c[var6][var11 + 1].a(mj.field_b, 2, -var12 + ((1 + var11) * var9_int / var10_int - 2), var5, var12 + var8, 15114, var3);
+                    SocialTabsPanel.field_c[var6][var11 + 1].a(mj.field_b, 2, -var12 + ((1 + var11) * var9_int / var10_int - 2), var5, var12 + var8, 15114, var3);
                   }
                   var5 = var5 + (var3 + 2);
                 }

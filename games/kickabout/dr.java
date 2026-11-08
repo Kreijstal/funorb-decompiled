@@ -43,7 +43,7 @@ final class dr {
           if (param0 >= -1) {
             dr.releaseStatics((byte) 127);
           }
-          var2_long = nj.monotonicMillis(-90);
+          var2_long = MonotonicClock.monotonicMillis(-90);
           if (cu.field_c != 0 &&
             DirectByteStorage.field_i < 0) {
             var4_ref_jm = (DelayedServerPacket) (ConsolePanel.field_i.g(24009));

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class DateInputValidator extends DebouncedValidationProvider implements TextInputListener, ft {
+final class DateInputValidator extends DebouncedValidationProvider implements TextInputListener, DateValidationMarker {
     DateInputWidget dateInput;
     static UiLayoutNode field_f;
     static int field_d;

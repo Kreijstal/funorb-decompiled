@@ -56,7 +56,7 @@ final class ValidationIndicator extends TextButton {
         int var5 = (this.field_n >> 1) + (param2 + this.field_t);
         int var6 = (this.field_i >> 1) + (this.field_g + param3);
         ValidationState var8 = this.field_J.getValidationState(param1 - 24472);
-        if (var8 == mn.field_c) {
+        if (var8 == IconButtonPainter.field_c) {
           var15 = LoggedPlayer.field_g[0];
           var9 = var15.field_o << 1;
           var10 = var15.field_v << 1;

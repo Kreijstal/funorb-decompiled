@@ -16,7 +16,7 @@ final class WorldSpriteDecoration {
         if (param0 != -14954) {
           field_d = (NineSlicePanelPainter) null;
         }
-        stackIn_6_0 = (op.field_y != null) && (RegistrationRequestDialog.field_rb == un.field_c);
+        stackIn_6_0 = (SpriteButtonPainter.field_y != null) && (RegistrationRequestDialog.field_rb == un.field_c);
         return stackIn_6_0;
     }
 

@@ -32,7 +32,7 @@ final class ph {
 
     final static void a(int param0) {
         if (null != cb.field_d) {
-          cb.field_d.c();
+          cb.field_d.shutdown();
           if (null == pg.field_d) {
             if (param0 == 4) {
               return;
@@ -40,7 +40,7 @@ final class ph {
             field_a = -35;
             return;
           }
-          pg.field_d.c();
+          pg.field_d.shutdown();
           if (param0 != 4) {
             field_a = -35;
             return;
@@ -48,7 +48,7 @@ final class ph {
           return;
         }
         if (null != pg.field_d) {
-          pg.field_d.c();
+          pg.field_d.shutdown();
           if (param0 == 4) {
             return;
           }

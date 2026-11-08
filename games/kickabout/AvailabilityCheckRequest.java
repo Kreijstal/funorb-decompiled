@@ -102,7 +102,7 @@ final class AvailabilityCheckRequest {
             var2 = (ManagerAction) (MusicPatchNode.field_h.c(33));
           }
           var2Lifetime1 = new ManagerAction(5, new int[]{param1});
-          ii.a(var2Lifetime1, 118);
+          AchievementSubmission.applyAndQueueManagerAction(var2Lifetime1, 118);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "kw.B(" + param0 + ',' + param1 + ')');
         }
@@ -160,7 +160,7 @@ final class AvailabilityCheckRequest {
               AvailabilityCheckRequest.releaseStatics((byte) -40);
             }
             vd.field_c = FootballerAgent.field_p;
-            TrinketIcon.field_yb = sm.field_q;
+            TrinketIcon.field_yb = HighScoreSubmission.field_q;
             ip.field_a = WidgetContainer.field_A;
             TabStrip.field_Eb = ReceivedAuctionItem.field_y;
             if (dr.field_a &&
@@ -177,7 +177,7 @@ final class AvailabilityCheckRequest {
                 AvailabilityCheckRequest.releaseStatics((byte) -40);
               }
               vd.field_c = FootballerAgent.field_p;
-              TrinketIcon.field_yb = sm.field_q;
+              TrinketIcon.field_yb = HighScoreSubmission.field_q;
               ip.field_a = WidgetContainer.field_A;
               TabStrip.field_Eb = ReceivedAuctionItem.field_y;
               if (dr.field_a &&
@@ -203,7 +203,7 @@ final class AvailabilityCheckRequest {
                 AvailabilityCheckRequest.releaseStatics((byte) -40);
               }
               vd.field_c = FootballerAgent.field_p;
-              TrinketIcon.field_yb = sm.field_q;
+              TrinketIcon.field_yb = HighScoreSubmission.field_q;
               ip.field_a = WidgetContainer.field_A;
               TabStrip.field_Eb = ReceivedAuctionItem.field_y;
               if (dr.field_a &&
@@ -242,7 +242,7 @@ final class AvailabilityCheckRequest {
               AvailabilityCheckRequest.releaseStatics((byte) -40);
             }
             vd.field_c = FootballerAgent.field_p;
-            TrinketIcon.field_yb = sm.field_q;
+            TrinketIcon.field_yb = HighScoreSubmission.field_q;
             ip.field_a = WidgetContainer.field_A;
             TabStrip.field_Eb = ReceivedAuctionItem.field_y;
             if (dr.field_a &&
@@ -270,7 +270,7 @@ final class AvailabilityCheckRequest {
                 AvailabilityCheckRequest.releaseStatics((byte) -40);
               }
               vd.field_c = FootballerAgent.field_p;
-              TrinketIcon.field_yb = sm.field_q;
+              TrinketIcon.field_yb = HighScoreSubmission.field_q;
               ip.field_a = WidgetContainer.field_A;
               TabStrip.field_Eb = ReceivedAuctionItem.field_y;
               if (dr.field_a &&
@@ -287,7 +287,7 @@ final class AvailabilityCheckRequest {
                   AvailabilityCheckRequest.releaseStatics((byte) -40);
                 }
                 vd.field_c = FootballerAgent.field_p;
-                TrinketIcon.field_yb = sm.field_q;
+                TrinketIcon.field_yb = HighScoreSubmission.field_q;
                 ip.field_a = WidgetContainer.field_A;
                 TabStrip.field_Eb = ReceivedAuctionItem.field_y;
                 if (dr.field_a &&
@@ -313,7 +313,7 @@ final class AvailabilityCheckRequest {
                   AvailabilityCheckRequest.releaseStatics((byte) -40);
                 }
                 vd.field_c = FootballerAgent.field_p;
-                TrinketIcon.field_yb = sm.field_q;
+                TrinketIcon.field_yb = HighScoreSubmission.field_q;
                 ip.field_a = WidgetContainer.field_A;
                 TabStrip.field_Eb = ReceivedAuctionItem.field_y;
                 if (dr.field_a &&
@@ -351,7 +351,7 @@ final class AvailabilityCheckRequest {
                 AvailabilityCheckRequest.releaseStatics((byte) -40);
               }
               vd.field_c = FootballerAgent.field_p;
-              TrinketIcon.field_yb = sm.field_q;
+              TrinketIcon.field_yb = HighScoreSubmission.field_q;
               ip.field_a = WidgetContainer.field_A;
               TabStrip.field_Eb = ReceivedAuctionItem.field_y;
               if (dr.field_a &&
@@ -369,7 +369,7 @@ final class AvailabilityCheckRequest {
                   AvailabilityCheckRequest.releaseStatics((byte) -40);
                 }
                 vd.field_c = FootballerAgent.field_p;
-                TrinketIcon.field_yb = sm.field_q;
+                TrinketIcon.field_yb = HighScoreSubmission.field_q;
                 ip.field_a = WidgetContainer.field_A;
                 TabStrip.field_Eb = ReceivedAuctionItem.field_y;
                 if (dr.field_a &&
@@ -406,7 +406,7 @@ final class AvailabilityCheckRequest {
                   AvailabilityCheckRequest.releaseStatics((byte) -40);
                 }
                 vd.field_c = FootballerAgent.field_p;
-                TrinketIcon.field_yb = sm.field_q;
+                TrinketIcon.field_yb = HighScoreSubmission.field_q;
                 ip.field_a = WidgetContainer.field_A;
                 TabStrip.field_Eb = ReceivedAuctionItem.field_y;
                 if (dr.field_a &&
@@ -422,7 +422,7 @@ final class AvailabilityCheckRequest {
                     AvailabilityCheckRequest.releaseStatics((byte) -40);
                   }
                   vd.field_c = FootballerAgent.field_p;
-                  TrinketIcon.field_yb = sm.field_q;
+                  TrinketIcon.field_yb = HighScoreSubmission.field_q;
                   ip.field_a = WidgetContainer.field_A;
                   TabStrip.field_Eb = ReceivedAuctionItem.field_y;
                   if (dr.field_a &&
@@ -448,7 +448,7 @@ final class AvailabilityCheckRequest {
                     AvailabilityCheckRequest.releaseStatics((byte) -40);
                   }
                   vd.field_c = FootballerAgent.field_p;
-                  TrinketIcon.field_yb = sm.field_q;
+                  TrinketIcon.field_yb = HighScoreSubmission.field_q;
                   ip.field_a = WidgetContainer.field_A;
                   TabStrip.field_Eb = ReceivedAuctionItem.field_y;
                   if (dr.field_a &&

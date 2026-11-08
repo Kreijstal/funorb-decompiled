@@ -20,7 +20,7 @@ final class VertexNormal {
           }
           pr.field_d = param3;
           DiskCacheWorker.field_d = param4;
-          aj.field_a = param1;
+          ThreadSleepSupport.field_a = param1;
           qn.field_a = param2;
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "rn.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');

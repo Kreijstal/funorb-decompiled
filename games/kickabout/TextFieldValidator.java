@@ -42,9 +42,9 @@ abstract class TextFieldValidator extends DebouncedValidationProvider implements
         var4 = stackIn_9_0;
         SortCriterion.field_d = var8.readString(-114);
         if (var4 != 0) {
-          hr.field_f = var8.readString(69);
+          LookupRecordUpdate.field_f = var8.readString(69);
         } else {
-          hr.field_f = SortCriterion.field_d;
+          LookupRecordUpdate.field_f = SortCriterion.field_d;
         }
         if (RegistrationRequestDialog.field_ob == 1) {
           WorldSpriteDecoration.field_f = var8.readUnsignedShort((byte) 81);
@@ -71,7 +71,7 @@ abstract class TextFieldValidator extends DebouncedValidationProvider implements
         try {
           var9 = TournamentLobbyScreen.field_j.getPhrase(-39, var5);
           ee.field_a = var9.getDisplayText((byte) -98);
-          if (hr.field_f.equals(ArchiveSource.field_e)) {
+          if (LookupRecordUpdate.field_f.equals(ArchiveSource.field_e)) {
             stackIn_22_0 = null;
           } else {
             stackIn_22_0 = var9.field_n;
@@ -229,9 +229,9 @@ abstract class TextFieldValidator extends DebouncedValidationProvider implements
         var4 = stackIn_9_0;
         SortCriterion.field_d = var8.readString(-114);
         if (var4 != 0) {
-          hr.field_f = var8.readString(69);
+          LookupRecordUpdate.field_f = var8.readString(69);
         } else {
-          hr.field_f = SortCriterion.field_d;
+          LookupRecordUpdate.field_f = SortCriterion.field_d;
         }
         if (RegistrationRequestDialog.field_ob == 1) {
           WorldSpriteDecoration.field_f = var8.readUnsignedShort((byte) 81);
@@ -258,7 +258,7 @@ abstract class TextFieldValidator extends DebouncedValidationProvider implements
         try {
           var9 = TournamentLobbyScreen.field_j.getPhrase(-39, var5);
           ee.field_a = var9.getDisplayText((byte) -98);
-          if (hr.field_f.equals(ArchiveSource.field_e)) {
+          if (LookupRecordUpdate.field_f.equals(ArchiveSource.field_e)) {
             stackIn_22_0 = null;
           } else {
             stackIn_22_0 = var9.field_n;

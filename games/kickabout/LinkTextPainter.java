@@ -44,7 +44,7 @@ final class LinkTextPainter implements WidgetPainter {
     final static boolean b(int param0) {
         if (param0 != 0) {
           field_f = (String) null;
-          if (null == op.field_y) {
+          if (null == SpriteButtonPainter.field_y) {
             return false;
           }
           if (un.field_c.a((byte) -96)) {
@@ -52,7 +52,7 @@ final class LinkTextPainter implements WidgetPainter {
           }
           return false;
         }
-        if (null == op.field_y) {
+        if (null == SpriteButtonPainter.field_y) {
           return false;
         }
         if (un.field_c.a((byte) -96)) {

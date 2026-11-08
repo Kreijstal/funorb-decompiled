@@ -113,7 +113,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
 
     final void r(int param0) {
         this.field_jb.setColors((byte) 21, 4210752, param0);
-        AccountMessagePanel var2 = new AccountMessagePanel(this, this.field_eb, ii.field_m);
+        AccountMessagePanel var2 = new AccountMessagePanel(this, this.field_eb, AchievementSubmission.field_m);
         var2.a((byte) 99, 15, TeamManagementScreen.field_E);
         this.a((byte) -124, (UiWidget) (var2));
     }

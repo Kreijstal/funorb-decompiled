@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hv {
+final class GoalkeeperAiSupport {
     static boolean[] field_a;
     static String field_b;
     static String field_d;
     static String[][] field_c;
 
-    final static String a(boolean param0, CharSequence param1) {
+    final static String normalizeBase37Name(boolean param0, CharSequence param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         String stackIn_2_0 = null;
@@ -165,13 +165,13 @@ final class hv {
         field_c = (String[][]) null;
     }
 
-    final static void a(BitmapFont param0, int param1) {
+    final static void initializeFadingChat(BitmapFont param0, int param1) {
         if (param1 != -448) {
           return;
         }
         try {
           AuctionLogEntry.field_e = param0;
-          AccountRegistrationPanel.field_D = h.a(17475);
+          AccountRegistrationPanel.field_D = QuickChatMenuBuilder.getNewestChatMessage(17475);
           AppScreen.field_d = new IntrusiveDeque();
           bk.field_c = new FadingChatMessage[6];
         } catch (RuntimeException runtimeException) {

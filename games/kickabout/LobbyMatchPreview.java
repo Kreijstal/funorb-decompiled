@@ -58,7 +58,7 @@ final class LobbyMatchPreview {
         if (this.field_e.field_f == 4) {
           PacketBuffer.a(-45, DraggableWidget.field_K);
           SoftwareRasterizer.clearFramebuffer();
-          ea.a(this.field_e.field_h, 0, false, DraggableWidget.field_K.field_q, 0, -52);
+          ColorQuantizationBox.drawMatchTimer(this.field_e.field_h, 0, false, DraggableWidget.field_K.field_q, 0, -52);
           TeamManagementScreen.e(119);
           DraggableWidget.field_K.b((-50 + PitchOptionTile.field_yb >> 1) + var2, (-20 + IconLabel.field_Bb >> 1) + var3, 96);
         }

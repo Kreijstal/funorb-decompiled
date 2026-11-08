@@ -22,7 +22,7 @@ final class FullscreenDisplayMode {
           return false;
         }
         if (1 <= param2 &&
-          rp.getDaysInMonth(param3, param1, -126) >= param2) {
+          PasswordFieldPainter.getDaysInMonth(param3, param1, -126) >= param2) {
           return true;
         }
         return false;

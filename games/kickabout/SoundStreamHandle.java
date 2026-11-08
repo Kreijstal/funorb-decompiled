@@ -30,7 +30,7 @@ final class SoundStreamHandle extends IntrusiveNode {
           this.stream = param0;
           this.baseVolume = param0.getTargetVolume();
           this.owner = param1;
-          this.stream.b(128 + mn.field_a * this.baseVolume >> 8);
+          this.stream.setInternalVolume(128 + IconButtonPainter.field_a * this.baseVolume >> 8);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ag.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

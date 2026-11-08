@@ -37,10 +37,10 @@ final class BufferedCacheFile {
           TextHotspotWidget.field_M = TextHotspotWidget.field_M + 1;
           BytePlusOneCommand.field_A = BuyPitchDialog.field_G;
           ArchiveManager.field_m = gf.field_b;
-          BytePlusOneCommand.field_C = rp.field_A;
-          rp.field_A = false;
+          BytePlusOneCommand.field_C = PasswordFieldPainter.field_A;
+          PasswordFieldPainter.field_A = false;
           WidgetContainer.field_A = ContextMenuItem.field_Fb;
-          sm.field_q = AuctionItem.field_w;
+          HighScoreSubmission.field_q = AuctionItem.field_w;
           ReceivedAuctionItem.field_y = UiWidget.field_l;
           ContextMenuItem.field_Fb = 0;
         }
@@ -158,7 +158,7 @@ final class BufferedCacheFile {
 
     final static void a(boolean param0, ResourceArchive param1, ResourceArchive param2, int param3) {
         try {
-          BytePlusOneCommand.a(CheckboxLabelWidget.field_Ab, kr.field_b, TrinketPickerDialog.field_F, uk.field_b, nj.field_d, param0, r.field_c, DoSomethingCommand.field_B, ul.field_c, ConsoleEvaluationException.field_e, 5, ip.field_c);
+          BytePlusOneCommand.a(CheckboxLabelWidget.field_Ab, DisplayModeSupport.field_b, TrinketPickerDialog.field_F, uk.field_b, MonotonicClock.field_d, param0, r.field_c, DoSomethingCommand.field_B, ul.field_c, ConsoleEvaluationException.field_e, 5, ip.field_c);
           il.field_d = ModalStack.a(param1, -127, "lobby", "chatfilter");
           IntrusiveDeque.field_h[2] = GeneratedPanelPainter.field_j;
           IntrusiveDeque.field_h[param3] = ClubState.field_Q;

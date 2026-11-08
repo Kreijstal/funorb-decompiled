@@ -149,11 +149,11 @@ final class ModalStack extends SingleChildContainer {
               stackIn_9_0 = stackOut_8_0;
               if (var19 == 0) {
                 if (stackIn_9_0.field_jb == null) {
-                  var7.field_Bb = new UiLayoutNode(0L, mp.field_f);
+                  var7.field_Bb = new UiLayoutNode(0L, BlobSubmission.field_f);
                   var7.addChild((byte) -112, var7.field_Bb);
                   var7.field_Ab = new UiLayoutNode(0L, AuctionSettingsDialog.field_J);
                   var7.addChild((byte) -122, var7.field_Ab);
-                  var7.field_Fb = new UiLayoutNode(0L, mp.field_f);
+                  var7.field_Fb = new UiLayoutNode(0L, BlobSubmission.field_f);
                   var7.addChild((byte) -117, var7.field_Fb);
                   var7.field_Ab.field_A = 2;
                   var7.invalidateChildren(false);

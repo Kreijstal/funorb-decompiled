@@ -593,7 +593,7 @@ final class DebugConsole extends ConsolePanel {
             }
           }
           var13 = TextButton.field_v;
-          var5 = sm.field_q;
+          var5 = HighScoreSubmission.field_q;
           if (param0 != 15) {
             field_x = (String) null;
           }

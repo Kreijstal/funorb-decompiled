@@ -93,7 +93,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
             if (!param0) {
               stackIn_12_2 = SquadGridWidget.field_Cb;
             } else {
-              stackIn_12_2 = fv.field_b;
+              stackIn_12_2 = TooltipOverlay.field_b;
             }
             var9_ref_ut = AnimationClip.a(stackIn_11_0, stackIn_11_1, stackIn_12_2);
             var15 = new Sprite(param3, var14.field_v);
@@ -123,8 +123,8 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
             var7_ref_int__[var12] = 263172 * var12;
             var12++;
           }
-          nh.a(10, 6, SoftwareRasterizer.field_g - 10, 6, 6, 8, var25);
-          nh.a(10, 8, SoftwareRasterizer.field_g - 10, 8, 6, 8, var25);
+          SpritePixelSupport.a(10, 6, SoftwareRasterizer.field_g - 10, 6, 6, 8, var25);
+          SpritePixelSupport.a(10, 8, SoftwareRasterizer.field_g - 10, 8, 6, 8, var25);
         } else if (1 == param2) {
           PacketBuffer.a(109, var5);
           var5.drawAdditive(0, 0, 60);
@@ -135,7 +135,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
           for (var8 = 0; var24.length > var8; var8++) {
             var7_ref_int__[var8] = 197379 * var8;
           }
-          nh.a(4, 6, SoftwareRasterizer.field_g - 4, 6, 8, -40 + var24.length, var24);
+          SpritePixelSupport.a(4, 6, SoftwareRasterizer.field_g - 4, 6, 8, -40 + var24.length, var24);
         } else if (2 == param2) {
           TeamManagementScreen.e(param1 ^ -69);
           TeamManagementScreen.e(123);
@@ -151,10 +151,10 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
           for (var9 = 0; var9 < var23.length; var9++) {
             var8_ref_int__[var9] = 197379 * var9;
           }
-          nh.a(4, 6, SoftwareRasterizer.field_g, 6, 8, -40 + var23.length, var23);
+          SpritePixelSupport.a(4, 6, SoftwareRasterizer.field_g, 6, 8, -40 + var23.length, var23);
         } else {
           if (3 == param2) {
-            nh.adjustSpriteHsv(var5, 0.0, 0.0, 0.7);
+            SpritePixelSupport.adjustSpriteHsv(var5, 0.0, 0.0, 0.7);
           }
         }
         TeamManagementScreen.e(117);
@@ -246,15 +246,15 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         this.field_N.a(6, new MatchingTextValidator(this.field_N, this.field_T));
         this.field_J.a(6, new AgeValidator(this.field_J));
         this.field_Q.field_y = false;
-        this.field_Q.field_r = (WidgetPainter) ((Object) new op());
+        this.field_Q.field_r = (WidgetPainter) ((Object) new SpriteButtonPainter());
         this.field_F.field_r = (WidgetPainter) ((Object) new LinkTextPainter());
-        this.field_E.field_r = (WidgetPainter) ((Object) new ri(10000536));
-        ri dupTemp$0 = new ri(10000536);
+        this.field_E.field_r = (WidgetPainter) ((Object) new BeveledTextPainter(10000536));
+        BeveledTextPainter dupTemp$0 = new BeveledTextPainter(10000536);
         this.field_K.field_r = (WidgetPainter) ((Object) dupTemp$0);
         this.field_S.field_r = (WidgetPainter) ((Object) dupTemp$0);
-        this.field_J.field_r = (WidgetPainter) ((Object) new ri(10000536));
-        this.field_O.field_r = (WidgetPainter) ((Object) new mn());
-        rp dupTemp$1 = new rp(10000536);
+        this.field_J.field_r = (WidgetPainter) ((Object) new BeveledTextPainter(10000536));
+        this.field_O.field_r = (WidgetPainter) ((Object) new IconButtonPainter());
+        PasswordFieldPainter dupTemp$1 = new PasswordFieldPainter(10000536);
         this.field_N.field_r = (WidgetPainter) ((Object) dupTemp$1);
         this.field_T.field_r = (WidgetPainter) ((Object) dupTemp$1);
         String var2 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, SquadGridWidget.field_Ab, new String[]{this.openLinkMarkup(true), this.closeLinkMarkup(6)});
@@ -517,7 +517,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
               discarded$1 = this.submitRegistration((byte) -104);
             }
           } else {
-            MusicPatch.a((byte) -125);
+            MusicPatch.showAccountChoice((byte) -125);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -647,7 +647,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
           if (var4 == PitchOptionTile.field_Bb) {
             return false;
           }
-          if (mn.field_c == var4) {
+          if (IconButtonPainter.field_c == var4) {
             return false;
           }
           if (var4 != Bzip2State.field_l) {

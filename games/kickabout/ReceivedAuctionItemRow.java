@@ -227,7 +227,7 @@ final class ReceivedAuctionItemRow extends ListRow {
             var4 = var4 + this.field_Db[3];
             var7Lifetime1 = this.field_y;
             if (this.field_Hb.field_j) {
-              this.field_X.d(ri.field_s, (this.field_Db[4] >> 1) + var4, 4 + this.field_T + (this.field_mb >> 1), 16711680, -1);
+              this.field_X.d(BeveledTextPainter.field_s, (this.field_Db[4] >> 1) + var4, 4 + this.field_T + (this.field_mb >> 1), 16711680, -1);
             } else {
               this.field_X.d(ql.field_c[this.field_Hb.field_s], (this.field_Db[4] >> 1) + var4, 4 + ((this.field_mb >> 1) + this.field_T), var7Lifetime1, -1);
             }
@@ -265,7 +265,7 @@ final class ReceivedAuctionItemRow extends ListRow {
         if (param1 > -16) {
           field_Mb = -60;
         }
-        int var3 = (int)(nj.monotonicMillis(75) % 600L);
+        int var3 = (int)(MonotonicClock.monotonicMillis(75) % 600L);
         var3 = var3 * 6 / 600;
         DialogOverlay.field_f[var3].c(param0 - 19, param2 - 23);
     }

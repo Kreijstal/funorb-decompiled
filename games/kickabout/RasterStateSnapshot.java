@@ -139,10 +139,10 @@ final class RasterStateSnapshot extends IntrusiveNode {
             var1.unlinkSecondary(-104);
             var1 = AvailabilityCheckRequest.field_b.a(0);
           }
-          var1Lifetime1 = ni.field_m.b((byte) 72);
+          var1Lifetime1 = HighScoreQuery.field_m.b((byte) 72);
           while (var1Lifetime1 != null) {
             var1Lifetime1.unlinkSecondary(param0 - 106);
-            var1Lifetime1 = ni.field_m.a(0);
+            var1Lifetime1 = HighScoreQuery.field_m.a(0);
           }
           ts.field_d = param0;
         } catch (RuntimeException runtimeException) {

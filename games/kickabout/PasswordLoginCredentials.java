@@ -29,14 +29,14 @@ final class PasswordLoginCredentials extends LoginCredentials {
         SoundStreamHandle var1Lifetime1;
         var2 = Kickabout.field_G;
         try {
-          cb.field_d.d();
+          cb.field_d.serviceOutput();
           if (param0 != -28) {
             PasswordLoginCredentials.c(-80);
           }
-          pg.field_d.d();
-          ri.field_r = ri.field_r - 1;
-          if (ri.field_r == 0) {
-            ri.field_r = 200;
+          pg.field_d.serviceOutput();
+          BeveledTextPainter.field_r = BeveledTextPainter.field_r - 1;
+          if (BeveledTextPainter.field_r == 0) {
+            BeveledTextPainter.field_r = 200;
             var1 = (SoundStreamHandle) (LoginCredentials.field_a.g(param0 + 24037));
             while (var1 != null) {
               if (!var1.owner.isLinked((byte) -113)) {
@@ -187,8 +187,8 @@ final class PasswordLoginCredentials extends LoginCredentials {
           if (wk.field_f != vj.field_a) {
             return false;
           }
-          var8 = new RegistrationRequestDialog(wd.field_l, param4);
-          wd.field_l.a(var8, false);
+          var8 = new RegistrationRequestDialog(RankingsRequest.field_l, param4);
+          RankingsRequest.field_l.a(var8, false);
           if (!wq.c((byte) 59)) {
             ArchiveIndex.field_a = null;
             ArchiveManager.field_c = param2;

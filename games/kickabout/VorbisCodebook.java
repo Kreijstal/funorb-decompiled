@@ -189,8 +189,8 @@ final class VorbisCodebook {
         this.buildHuffmanTree();
         var2Lifetime1 = VorbisSample.readBits(4);
         if (var2Lifetime1 > 0) {
-          var3 = VorbisSample.a(VorbisSample.readBits(32));
-          var4 = VorbisSample.a(VorbisSample.readBits(32));
+          var3 = VorbisSample.unpackFloat(VorbisSample.readBits(32));
+          var4 = VorbisSample.unpackFloat(VorbisSample.readBits(32));
           var5Lifetime1 = VorbisSample.readBits(4) + 1;
           stackIn_25_0 = (VorbisSample.readBit() == 0) ? 0 : 1;
           var6 = stackIn_25_0;

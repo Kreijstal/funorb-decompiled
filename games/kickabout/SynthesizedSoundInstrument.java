@@ -30,7 +30,7 @@ final class SynthesizedSoundInstrument {
     private static int[] field_g;
     private SoundEnvelope field_a;
 
-    final void a(PacketBuffer param0) {
+    final void decode(PacketBuffer param0) {
         int var3 = 0;
         int var4 = 0;
         this.field_u = new SoundEnvelope();
@@ -76,7 +76,7 @@ final class SynthesizedSoundInstrument {
         this.field_y = param0.readUnsignedShort((byte) 81);
         this.field_c = new SoundFilter();
         this.field_q = new SoundEnvelope();
-        this.field_c.a(param0, this.field_q);
+        this.field_c.decode(param0, this.field_q);
     }
 
     public static void releaseSynthesisBuffers() {
@@ -90,7 +90,7 @@ final class SynthesizedSoundInstrument {
         field_f = null;
     }
 
-    final int[] a(int param0, int param1) {
+    final int[] synthesize(int param0, int param1) {
         int stackIn_41_0 = 0;
         double var3;
         int var5;

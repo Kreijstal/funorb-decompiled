@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class aj {
+final class ThreadSleepSupport {
     static String field_b;
     static String field_c;
     static int field_a;
@@ -16,7 +16,7 @@ final class aj {
         field_c = null;
     }
 
-    final static void a(long param0, int param1) {
+    final static void sleepMillis(long param0, int param1) {
         if (param0 <= 0L) {
           return;
         }

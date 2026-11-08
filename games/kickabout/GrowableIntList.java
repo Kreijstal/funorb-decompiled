@@ -124,7 +124,7 @@ final class GrowableIntList {
               stackIn_25_0 = -1;
               return stackIn_25_0;
             }
-            var9 = fv.a(var8.field_j, (byte) 19);
+            var9 = TooltipOverlay.loadSoundGroup(var8.field_j, (byte) 19);
             if (var9 == -1) {
               var6 = var6 + var4;
               var8 = (IntValueNode) (var11.c(33));

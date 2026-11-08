@@ -566,7 +566,7 @@ final class CommonGame {
                   }
                   var8_int = stackIn_49_0;
                   if (var3 == 0) {
-                    hv.updateKeeperAI(true, this, var2_int);
+                    GoalkeeperAiSupport.updateKeeperAI(true, this, var2_int);
                   } else {
                     if (var8_int == 0) {
                       PitchOptionTile.updateOutfielderAI(this, (byte) -127, var3, var2_int);
@@ -1418,7 +1418,7 @@ final class CommonGame {
             if (this.field_V.modelId != 3) {
               stackIn_24_1 = 3;
             } else {
-              stackIn_24_1 = mp.field_p[this.surface];
+              stackIn_24_1 = BlobSubmission.field_p[this.surface];
             }
             stackIn_23_0.modelId = stackIn_24_1;
           }
@@ -1427,7 +1427,7 @@ final class CommonGame {
             if (this.field_V.modelId != 4) {
               stackIn_32_1 = 4;
             } else {
-              stackIn_32_1 = mp.field_p[this.surface];
+              stackIn_32_1 = BlobSubmission.field_p[this.surface];
             }
             stackIn_31_0.modelId = stackIn_32_1;
           }
@@ -1436,14 +1436,14 @@ final class CommonGame {
             if (this.field_V.modelId != 5) {
               stackIn_40_1 = 5;
             } else {
-              stackIn_40_1 = mp.field_p[this.surface];
+              stackIn_40_1 = BlobSubmission.field_p[this.surface];
             }
             stackIn_39_0.modelId = stackIn_40_1;
           }
           if (var3_int == 7) {
             stackIn_47_0 = this.field_V;
             if (this.field_V.modelId == 6) {
-              stackIn_48_1 = mp.field_p[this.surface];
+              stackIn_48_1 = BlobSubmission.field_p[this.surface];
             } else {
               stackIn_48_1 = 6;
             }
@@ -1457,7 +1457,7 @@ final class CommonGame {
             if (this.field_V.modelId != 7) {
               stackIn_59_1 = 7;
             } else {
-              stackIn_59_1 = mp.field_p[this.surface];
+              stackIn_59_1 = BlobSubmission.field_p[this.surface];
             }
             stackIn_58_0.modelId = stackIn_59_1;
           }
@@ -1466,7 +1466,7 @@ final class CommonGame {
             if (this.field_V.modelId != 8) {
               stackIn_67_1 = 8;
             } else {
-              stackIn_67_1 = mp.field_p[this.surface];
+              stackIn_67_1 = BlobSubmission.field_p[this.surface];
             }
             stackIn_66_0.modelId = stackIn_67_1;
           }
@@ -1782,7 +1782,7 @@ final class CommonGame {
                     !this.disableLocal) && (var5 == 0 ||
                     !this.disableOpponent)) {
                     var6.positionX = ts.a(var4_int, param0, var3_int, 448) << 16;
-                    var6.positionY = AudioService.a((byte) 21, var4_int, var3_int, param0) << 16;
+                    var6.positionY = AudioService.formationY((byte) 21, var4_int, var3_int, param0) << 16;
                     decompiledFrameRemainder0 = false;
                   }
                   else {
@@ -2694,7 +2694,7 @@ final class CommonGame {
                     continue;
                   }
                 } else {
-                  this.field_V.modelId = mp.field_p[this.surface];
+                  this.field_V.modelId = BlobSubmission.field_p[this.surface];
                   this.field_X = new GoalStateAgent();
                   this.placeKickoffPositions(1, 0);
                   this.a(2);
@@ -3292,7 +3292,7 @@ final class CommonGame {
           this.field_w = param8;
           this.field_L = param5;
           this.playerCount = this.field_S.length;
-          this.timeLimit = op.field_z[this.field_U];
+          this.timeLimit = SpriteButtonPainter.field_z[this.field_U];
           this.field_g = new ParticipantAgent[this.playerCount];
           this.participantStatus = new ParticipantStatus[this.playerCount];
           var10_int = 0;

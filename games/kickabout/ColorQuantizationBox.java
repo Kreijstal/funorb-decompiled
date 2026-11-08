@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ea {
+final class ColorQuantizationBox {
     static String field_b;
     int field_l;
     static String field_g;
@@ -20,12 +20,12 @@ final class ea {
         field_g = null;
         field_b = null;
         if (param0 >= -101) {
-          ea.a(-81, -90, false, -51, 67, -68);
+          ColorQuantizationBox.drawMatchTimer(-81, -90, false, -51, 67, -68);
         }
         field_j = null;
     }
 
-    final static void a(int param0, int param1, boolean param2, int param3, int param4, int param5) {
+    final static void drawMatchTimer(int param0, int param1, boolean param2, int param3, int param4, int param5) {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -71,7 +71,7 @@ final class ea {
             SoftwareRasterizer.clearFramebuffer();
           }
           var15 = un.field_d;
-          if (nj.monotonicMillis(107) % 1000L < 500L) {
+          if (MonotonicClock.monotonicMillis(107) % 1000L < 500L) {
             ((BitmapFont) ((Object) var15)).d(":", var11, var12, 16777215, -1);
           }
           ((BitmapFont) ((Object) var15)).c(Integer.toString(var7), var11 - 3, var12, 16777215, -1);
@@ -87,7 +87,7 @@ final class ea {
         }
     }
 
-    final static void a(int param0, int param1, int param2, byte param3, Sprite[] param4, int param5) {
+    final static void drawNineSlicePanel(int param0, int param1, int param2, byte param3, Sprite[] param4, int param5) {
         int var22 = 0;
         int stackIn_11_0 = 0;
         int stackIn_14_0 = 0;
@@ -252,7 +252,7 @@ final class ea {
         }
     }
 
-    final static void a(int param0, byte param1) {
+    final static void showMessageDialog(int param0, byte param1) {
         if (param1 <= 12) {
           return;
         }

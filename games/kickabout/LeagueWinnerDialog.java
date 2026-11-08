@@ -15,14 +15,14 @@ final class LeagueWinnerDialog extends MessageDialog {
         }
         if (param0 < 0) {
           if (param0 < -65536) {
-            return ve.field_T[134217728 / -param0] - 2048;
+            return FullscreenErrorDialog.field_T[134217728 / -param0] - 2048;
           }
-          return -ve.field_T[-param0 >> 5];
+          return -FullscreenErrorDialog.field_T[-param0 >> 5];
         }
         if (param0 <= 65536) {
-          return ve.field_T[param0 >> 5];
+          return FullscreenErrorDialog.field_T[param0 >> 5];
         }
-        return 2048 - ve.field_T[134217728 / param0];
+        return 2048 - FullscreenErrorDialog.field_T[134217728 / param0];
     }
 
     final static void g(int param0) {

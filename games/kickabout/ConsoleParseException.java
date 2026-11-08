@@ -63,7 +63,7 @@ final class ConsoleParseException extends Exception {
           ButtonMenuScreen.field_n = WeightedCacheEntry.field_s;
           jl.field_f = RotaryDialPainter.field_b;
           ContentTransitionDialog.field_Y = new UiLayoutNode(0L, param0);
-          h.field_e = new UiLayoutNode(0L, param1);
+          QuickChatMenuBuilder.field_e = new UiLayoutNode(0L, param1);
           PagedHelpScreen.field_D = new UiLayoutNode(0L, (UiLayoutNode) null);
           Kickabout.field_H = new UiLayoutNode(0L, param4);
           RotaryDialPainter.field_b = new UiLayoutNode(0L, param3);
@@ -76,7 +76,7 @@ final class ConsoleParseException extends Exception {
           }
           InstrumentEnvelope.field_c = new UiLayoutNode(0L, ArchiveRequest.field_o, rr.field_h);
           MySquadScreen.field_N = new UiLayoutNode(0L, ArchiveRequest.field_o);
-          ContentTransitionDialog.field_Y.addChild((byte) -111, h.field_e);
+          ContentTransitionDialog.field_Y.addChild((byte) -111, QuickChatMenuBuilder.field_e);
           ContentTransitionDialog.field_Y.addChild((byte) -121, PagedHelpScreen.field_D);
           PagedHelpScreen.field_D.addChild((byte) -119, Kickabout.field_H);
           PagedHelpScreen.field_D.addChild((byte) -104, InstrumentEnvelope.field_c);

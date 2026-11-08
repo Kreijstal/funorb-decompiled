@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kr {
+final class DisplayModeSupport {
     static String field_c;
     static boolean field_e;
     static UiLayoutNode field_b;
@@ -213,7 +213,7 @@ final class kr {
         }
     }
 
-    final static String a(CharSequence[] param0, boolean param1) {
+    final static String concatenate(CharSequence[] param0, boolean param1) {
         RuntimeException var2 = null;
         String stackIn_2_0 = null;
         String stackIn_4_0 = null;
@@ -242,7 +242,7 @@ final class kr {
         }
     }
 
-    final static FullscreenDisplayMode[] a(byte param0, PlatformTaskDispatcher param1) {
+    final static FullscreenDisplayMode[] enumerateFullscreenModes(byte param0, PlatformTaskDispatcher param1) {
         int var5 = 0;
         FullscreenDisplayMode[] stackIn_4_0 = null;
         FullscreenDisplayMode[] stackIn_10_0 = null;
@@ -267,7 +267,7 @@ final class kr {
           }
           var8 = param1.b(true);
           while (var8.field_a == 0) {
-            aj.a(10L, 1);
+            ThreadSleepSupport.sleepMillis(10L, 1);
           }
           if (2 == var8.field_a) {
             stackIn_10_0 = new FullscreenDisplayMode[]{};

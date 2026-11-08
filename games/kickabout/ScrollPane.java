@@ -300,7 +300,7 @@ final class ScrollPane extends UiLayoutNode {
         }
         if (!PlayArea.a(100)) {
           if (PlayerPortraitCacheEntry.field_g != null) {
-            LoginForm.a((byte) 70, 3, PlayerPortraitCacheEntry.field_g);
+            LoginForm.submitHighScore((byte) 70, 3, PlayerPortraitCacheEntry.field_g);
           }
           ImageProducerRasterBuffer.c((byte) -77);
           if (ProxySocketConnector.field_e) {

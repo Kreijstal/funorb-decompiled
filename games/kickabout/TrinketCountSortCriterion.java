@@ -132,10 +132,10 @@ final class TrinketCountSortCriterion extends SortCriterion {
           if (ck.field_a == 0) {
             var3_int = SpriteState.a(MeshObject.field_f, tt.field_a, -46, TeamManagementScreen.field_C, vp.field_k);
             var4 = 3 + var3_int;
-            dk.field_g = new int[var4];
+            AchievementQuery.field_g = new int[var4];
             WeightedLruCache.field_c = new String[var4];
             for (var5 = 0; var4 > var5; var5++) {
-              dk.field_g[var5] = -1;
+              AchievementQuery.field_g[var5] = -1;
             }
             sh.field_f = new int[2];
             for (var5 = 0; var5 < var3_int; var5++) {
@@ -143,18 +143,18 @@ final class TrinketCountSortCriterion extends SortCriterion {
             }
             WeightedLruCache.field_c[-3 + var4] = "";
             WeightedLruCache.field_c[var4 - 2] = ScrollContainer.field_Jb;
-            dk.field_g[-2 + var4] = 0;
+            AchievementQuery.field_g[-2 + var4] = 0;
             sh.field_f[0] = 4;
             WeightedLruCache.field_c[var4 - 1] = pg.field_c;
-            dk.field_g[-1 + var4] = 1;
+            AchievementQuery.field_g[-1 + var4] = 1;
             sh.field_f[1] = 5;
           } else if (ck.field_a == 1) {
             var3_int = SpriteState.a(MeshObject.field_f, tt.field_a, param1 ^ -44, TeamManagementScreen.field_C, vp.field_k);
             var4 = 2 + var3_int;
             WeightedLruCache.field_c = new String[var4];
-            dk.field_g = new int[var4];
+            AchievementQuery.field_g = new int[var4];
             for (var5 = 0; var5 < var4; var5++) {
-              dk.field_g[var5] = -1;
+              AchievementQuery.field_g[var5] = -1;
             }
             sh.field_f = new int[1];
             for (var5 = 0; var3_int > var5; var5++) {
@@ -162,7 +162,7 @@ final class TrinketCountSortCriterion extends SortCriterion {
             }
             WeightedLruCache.field_c[-2 + var4] = "";
             WeightedLruCache.field_c[var4 - 1] = pg.field_c;
-            dk.field_g[-1 + var4] = 0;
+            AchievementQuery.field_g[-1 + var4] = 0;
             sh.field_f[0] = 5;
           } else if (2 != ck.field_a) {
             if (ck.field_a == 3) {
@@ -173,9 +173,9 @@ final class TrinketCountSortCriterion extends SortCriterion {
               }
               var4 = 2 + var3_int;
               WeightedLruCache.field_c = new String[var4];
-              dk.field_g = new int[var4];
+              AchievementQuery.field_g = new int[var4];
               for (var5 = 0; var4 > var5; var5++) {
-                dk.field_g[var5] = -1;
+                AchievementQuery.field_g[var5] = -1;
               }
               sh.field_f = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
@@ -183,15 +183,15 @@ final class TrinketCountSortCriterion extends SortCriterion {
               }
               WeightedLruCache.field_c[-2 + var4] = "";
               WeightedLruCache.field_c[var4 - 1] = pg.field_c;
-              dk.field_g[-1 + var4] = 0;
+              AchievementQuery.field_g[-1 + var4] = 0;
               sh.field_f[0] = 5;
             } else if (ck.field_a == 4) {
               var3_int = SpriteState.a(MeshObject.field_f, AnimationSkeleton.field_n, -46, TeamManagementScreen.field_C, vp.field_k);
               var4 = var3_int + 2;
-              dk.field_g = new int[var4];
+              AchievementQuery.field_g = new int[var4];
               WeightedLruCache.field_c = new String[var4];
               for (var5 = 0; var4 > var5; var5++) {
-                dk.field_g[var5] = -1;
+                AchievementQuery.field_g[var5] = -1;
               }
               sh.field_f = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
@@ -199,7 +199,7 @@ final class TrinketCountSortCriterion extends SortCriterion {
               }
               WeightedLruCache.field_c[var4 - 2] = "";
               WeightedLruCache.field_c[var4 - 1] = pg.field_c;
-              dk.field_g[-1 + var4] = 0;
+              AchievementQuery.field_g[-1 + var4] = 0;
               sh.field_f[0] = 5;
             } else {
               if (ck.field_a != 5) {
@@ -208,9 +208,9 @@ final class TrinketCountSortCriterion extends SortCriterion {
               var3_int = SpriteState.a(MeshObject.field_f, dr.field_b, -46, TeamManagementScreen.field_C, vp.field_k);
               var4 = 3 + var3_int;
               WeightedLruCache.field_c = new String[var4];
-              dk.field_g = new int[var4];
+              AchievementQuery.field_g = new int[var4];
               for (var5 = 0; var4 > var5; var5++) {
-                dk.field_g[var5] = -1;
+                AchievementQuery.field_g[var5] = -1;
               }
               sh.field_f = new int[2];
               for (var5 = 0; var3_int > var5; var5++) {
@@ -218,10 +218,10 @@ final class TrinketCountSortCriterion extends SortCriterion {
               }
               WeightedLruCache.field_c[-3 + var4] = "";
               WeightedLruCache.field_c[var4 - 2] = mi.field_c;
-              dk.field_g[var4 - 2] = 0;
+              AchievementQuery.field_g[var4 - 2] = 0;
               sh.field_f[0] = 3;
               WeightedLruCache.field_c[-1 + var4] = pg.field_c;
-              dk.field_g[-1 + var4] = 1;
+              AchievementQuery.field_g[-1 + var4] = 1;
               sh.field_f[1] = 5;
             }
           } else {
@@ -270,16 +270,16 @@ final class TrinketCountSortCriterion extends SortCriterion {
             }
             var6 = stackIn_25_0;
             var7 = var6 + 7 + var5;
-            dk.field_g = new int[var7];
+            AchievementQuery.field_g = new int[var7];
             WeightedLruCache.field_c = new String[var7];
             for (var8 = 0; var8 < var7; var8++) {
-              dk.field_g[var8] = -1;
+              AchievementQuery.field_g[var8] = -1;
             }
             sh.field_f = new int[2];
-            WeightedLruCache.field_c[1] = mn.field_f;
+            WeightedLruCache.field_c[1] = IconButtonPainter.field_f;
             WeightedLruCache.field_c[0] = LoginText.field_a;
-            dk.field_g[1] = 0;
-            dk.field_g[3] = 1;
+            AchievementQuery.field_g[1] = 0;
+            AchievementQuery.field_g[3] = 1;
             WeightedLruCache.field_c[5] = "";
             WeightedLruCache.field_c[2] = vj.field_d;
             WeightedLruCache.field_c[4] = ChatMessage.field_k;
@@ -297,7 +297,7 @@ final class TrinketCountSortCriterion extends SortCriterion {
               stackIn_32_0[stackIn_32_1] = stackIn_33_2;
             }
             WeightedLruCache.field_c[var5 + 6] = null;
-            dk.field_g[6 + var5] = -2;
+            AchievementQuery.field_g[6 + var5] = -2;
             for (var8Lifetime3 = 0; var6 > var8Lifetime3; var8Lifetime3++) {
               stackIn_37_0 = WeightedLruCache.field_c;
               stackIn_37_1 = var8Lifetime3 + var5 + 7;
@@ -310,7 +310,7 @@ final class TrinketCountSortCriterion extends SortCriterion {
               }
               stackIn_37_0[stackIn_37_1] = stackIn_40_2;
             }
-            PlayingView.field_o = nj.monotonicMillis(90);
+            PlayingView.field_o = MonotonicClock.monotonicMillis(90);
           }
           DirectByteStorage.field_k.itemCount = sh.field_f.length;
           var3_intLifetime1 = 0;
@@ -320,7 +320,7 @@ final class TrinketCountSortCriterion extends SortCriterion {
           for (var4Lifetime1 = 0; WeightedLruCache.field_c.length > var4Lifetime1; var4Lifetime1++) {
             stackIn_90_0 = 10;
             stackIn_90_1 = WeightedLruCache.field_c[var4Lifetime1];
-            stackIn_91_2 = !(dk.field_g[var4Lifetime1] < 0);
+            stackIn_91_2 = !(AchievementQuery.field_g[var4Lifetime1] < 0);
             var5Lifetime1 = MatchTransitionScreen.a(stackIn_90_0, stackIn_90_1, stackIn_91_2);
             if (var3_intLifetime1 < var5Lifetime1) {
               var3_intLifetime1 = var5Lifetime1;
@@ -345,12 +345,12 @@ final class TrinketCountSortCriterion extends SortCriterion {
               }
             }
           }
-          BufferedSocket.field_j = DirectByteStorage.field_k.itemCount * (pr.field_d + aj.field_a << 1);
-          ka.field_a = -(var3_intLifetime1 >> 1) + TeamManagementScreen.field_A;
+          BufferedSocket.field_j = DirectByteStorage.field_k.itemCount * (pr.field_d + ThreadSleepSupport.field_a << 1);
+          GameQuickChatResolver.field_a = -(var3_intLifetime1 >> 1) + TeamManagementScreen.field_A;
           BufferedSocket.field_l = var3_intLifetime1 + (TeamManagementScreen.field_A - (var3_intLifetime1 >> 1));
           for (var4Lifetime2 = 0; var4Lifetime2 < WeightedLruCache.field_c.length; var4Lifetime2++) {
             stackIn_114_0 = BufferedSocket.field_j;
-            if (dk.field_g[var4Lifetime2] >= 0) {
+            if (AchievementQuery.field_g[var4Lifetime2] >= 0) {
               stackIn_115_1 = PlayerModelPreview.field_j;
             } else {
               stackIn_115_1 = PlayArea.field_c;
@@ -362,18 +362,18 @@ final class TrinketCountSortCriterion extends SortCriterion {
           var4Lifetime3 = 0;
           var5Lifetime3 = uq.field_c;
           while (WeightedLruCache.field_c.length > var4Lifetime3) {
-            var6Lifetime1 = dk.field_g[var4Lifetime3];
+            var6Lifetime1 = AchievementQuery.field_g[var4Lifetime3];
             if (var6Lifetime1 < 0) {
               var5Lifetime3 = var5Lifetime3 + PlayArea.field_c;
             } else {
               var7Lifetime2 = MatchTransitionScreen.a(10, WeightedLruCache.field_c[var4Lifetime3], true);
               var8Lifetime1 = TeamManagementScreen.field_A - (var7Lifetime2 >> 1);
-              var5Lifetime3 = var5Lifetime3 + aj.field_a;
+              var5Lifetime3 = var5Lifetime3 + ThreadSleepSupport.field_a;
               ld.field_j[var4Lifetime3] = new int[4];
               ld.field_j[var4Lifetime3][0] = -DiskCacheWorker.field_d + var8Lifetime1;
               ld.field_j[var4Lifetime3][1] = var5Lifetime3;
               ld.field_j[var4Lifetime3][2] = (DiskCacheWorker.field_d << 1) + var7Lifetime2;
-              var5Lifetime3 = var5Lifetime3 + (PlayerModelPreview.field_j + ((pr.field_d << 1) + aj.field_a));
+              var5Lifetime3 = var5Lifetime3 + (PlayerModelPreview.field_j + ((pr.field_d << 1) + ThreadSleepSupport.field_a));
               ld.field_j[var4Lifetime3][3] = PlayerModelPreview.field_j + (pr.field_d << 1);
             }
             var4Lifetime3++;

@@ -108,13 +108,13 @@ final class ic {
           if (AnimationClip.field_k == null) {
             var7 = sk.field_d;
             AnimationClip.field_k = new ReverbPcmStream(var7);
-            cb.field_d.a(AnimationClip.field_k);
+            cb.field_d.setRootStream(AnimationClip.field_k);
           }
-          AnimationClip.field_k.a(param3);
-          AnimationClip.field_k.f(param6);
+          AnimationClip.field_k.setInputGain(param3);
+          AnimationClip.field_k.setFeedbackGain(param6);
           AnimationClip.field_k.setDampingTimeMicros(param4);
           AnimationClip.field_k.setWetGain(param2);
-          AnimationClip.field_k.e(param0);
+          AnimationClip.field_k.setDryGain(param0);
           AnimationClip.field_k.setStereoWidth(param1);
           return;
         }

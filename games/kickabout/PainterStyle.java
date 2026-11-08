@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class PainterStyle {
-    static hh field_a;
+    static FullscreenFailureReason field_a;
     private int field_f;
     private int field_i;
     Sprite[] field_g;
@@ -367,7 +367,7 @@ final class PainterStyle {
             var8 = (PainterStyle) null;
             this.a((PainterStyle) null, 96);
           }
-          ea.a(param2 + param0.field_g, param0.field_i, param0.field_t + param3, (byte) 79, this.field_g, param0.field_n);
+          ColorQuantizationBox.drawNineSlicePanel(param2 + param0.field_g, param0.field_i, param0.field_t + param3, (byte) 79, this.field_g, param0.field_n);
           if (null != this.field_j) {
             var6_int = this.field_b + param0.field_t + param3;
             if (param1.field_e == 1) {
@@ -453,6 +453,6 @@ final class PainterStyle {
     }
 
     static {
-        field_a = new hh();
+        field_a = new FullscreenFailureReason();
     }
 }

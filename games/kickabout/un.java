@@ -35,7 +35,7 @@ final class un {
             return;
           }
           for (var3_int = 0; var3_int < 4; var3_int++) {
-            mn.field_b[var3_int] = 0;
+            IconButtonPainter.field_b[var3_int] = 0;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

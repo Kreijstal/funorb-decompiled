@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ii extends IntrusiveNode {
+final class AchievementSubmission extends IntrusiveNode {
     static String field_h;
     int field_j;
     static String field_m;
@@ -12,7 +12,7 @@ final class ii extends IntrusiveNode {
     int field_e;
     int field_k;
 
-    final static void b(int param0) {
+    final static void buildTrinketPreviewSprites(int param0) {
         int var1_int = 0;
         ModelMesh var2 = null;
         int var3 = 0;
@@ -37,7 +37,7 @@ final class ii extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_h = null;
         if (param0 != 84) {
           field_m = (String) null;
@@ -47,7 +47,7 @@ final class ii extends IntrusiveNode {
         field_m = null;
     }
 
-    final static void a(ManagerAction param0, int param1) {
+    final static void applyAndQueueManagerAction(ManagerAction param0, int param1) {
         try {
           ic.field_h.applyAction(param0, AuctionLogEntry.e(15137), 0);
           MusicPatchNode.field_h.addLast(param0, 3);
@@ -66,7 +66,7 @@ final class ii extends IntrusiveNode {
         }
     }
 
-    private ii() throws Throwable {
+    private AchievementSubmission() throws Throwable {
         throw new Error();
     }
 

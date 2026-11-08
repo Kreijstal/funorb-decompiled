@@ -30,7 +30,7 @@ final class MenuButton {
         if (param0 != -1) {
           return;
         }
-        ii.a((byte) -127);
+        AchievementSubmission.a((byte) -127);
         if (37 == this.kind) {
           ((ButtonMenuScreen) (AuctionLogEntry.field_h)).showTutorialTip((byte) 52);
         } else {
@@ -131,7 +131,7 @@ final class MenuButton {
                                                                                   if (this.kind != 32) {
                                                                                     if (49 == this.kind) {
                                                                                       if (!EmailSyntaxValidator.c((byte) -42)) {
-                                                                                        ea.a(39, (byte) 99);
+                                                                                        ColorQuantizationBox.showMessageDialog(39, (byte) 99);
                                                                                       } else {
                                                                                         stackIn_81_0 = !(ByteStorage.field_c);
                                                                                         ByteStorage.field_c = stackIn_81_0;
@@ -152,7 +152,7 @@ final class MenuButton {
                                                                                   }
                                                                                 } else {
                                                                                   ql.a((byte) 101, true, NineSlicePanelPainter.field_f);
-                                                                                  op.field_v = 2147483647;
+                                                                                  SpriteButtonPainter.field_v = 2147483647;
                                                                                 }
                                                                               } else {
                                                                                 AccountRequestDialog.field_ib = 1;
@@ -176,7 +176,7 @@ final class MenuButton {
                                                                 } else {
                                                                   UiWidget.h(0);
                                                                 }
-                                                                op.field_v = 2147483647;
+                                                                SpriteButtonPainter.field_v = 2147483647;
                                                               }
                                                             }
                                                           }
@@ -231,7 +231,7 @@ final class MenuButton {
                 }
               } else {
                 ButtonMenuScreen.a(16144);
-                op.field_v = -3;
+                SpriteButtonPainter.field_v = -3;
               }
             }
           }
@@ -277,9 +277,9 @@ final class MenuButton {
         if (this.field_r &&
           param2 &&
           param4 != this.field_f) {
-          param4 = param4 + (wo.field_m - TutorialChoiceDialog.field_J);
+          param4 = param4 + (AlternateKeyedLoginCredentials.field_m - TutorialChoiceDialog.field_J);
           var6 = DateInputWidget.k(param3 + 240);
-          var7 = param4 * var6 / wo.field_m;
+          var7 = param4 * var6 / AlternateKeyedLoginCredentials.field_m;
           if (var7 < 0) {
             var7 = 0;
           }
@@ -457,16 +457,16 @@ final class MenuButton {
         }
         if (this.field_r) {
           var5 = this.field_k >> 1;
-          param1 = param1 + (-20 + (-wo.field_m + TutorialChoiceDialog.field_J) - var5);
+          param1 = param1 + (-20 + (-AlternateKeyedLoginCredentials.field_m + TutorialChoiceDialog.field_J) - var5);
           var6 = param1 - (-var5 - 20);
-          SoftwareRasterizer.e(var6, param0 - 2, wo.field_m, 4, 65793);
+          SoftwareRasterizer.e(var6, param0 - 2, AlternateKeyedLoginCredentials.field_m, 4, 65793);
           if (this.kind != 17) {
             stackIn_46_0 = IntrusiveNode.b((byte) -61);
           } else {
             stackIn_46_0 = sk.a((byte) 97);
           }
           var7 = stackIn_46_0;
-          var8 = var7 * wo.field_m / DateInputWidget.k(256);
+          var8 = var7 * AlternateKeyedLoginCredentials.field_m / DateInputWidget.k(256);
           for (var9 = 0; var9 < var8 - 1; var9++) {
             var10 = (-var9 + var8 - 1 << 8) / var8 >> 1;
             if (this.kind == 17) {
@@ -609,7 +609,7 @@ final class MenuButton {
                 for (var8 = 0; var11.length > var8; var8++) {
                   var7[var8] = 131586 * var8;
                 }
-                nh.a(4, 6, -4 + SoftwareRasterizer.field_g, 6, 8, -40 + var11.length, var11);
+                SpritePixelSupport.a(4, 6, -4 + SoftwareRasterizer.field_g, 6, 8, -40 + var11.length, var11);
                 TeamManagementScreen.e(127);
                 TeamManagementScreen.e(125);
                 this.field_n[1] = (Sprite) ((Object) var6);

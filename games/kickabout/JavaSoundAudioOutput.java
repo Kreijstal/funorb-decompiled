@@ -22,11 +22,11 @@ final class JavaSoundAudioOutput extends PcmPlayerService {
         int var2 = 0;
         int var3 = 0;
         int var1 = 256;
-        if (field_o) {
+        if (stereo) {
           var1 = var1 << 1;
         }
         for (var2 = 0; var2 < var1; var2++) {
-          var3 = this.field_k[var2];
+          var3 = this.mixBuffer[var2];
           if ((var3 + 8388608 & -16777216) != 0) {
             var3 = 8388607 ^ var3 >> 31;
           }
@@ -36,8 +36,8 @@ final class JavaSoundAudioOutput extends PcmPlayerService {
         this.field_y.write(this.field_v, 0, var1 << 1);
     }
 
-    final int b() {
-        return this.field_w - (this.field_y.available() >> (field_o ? 2 : 1));
+    final int getBufferedFrameCount() {
+        return this.field_w - (this.field_y.available() >> (stereo ? 2 : 1));
     }
 
     final void initializeDevice(java.awt.Component param0) {
@@ -72,9 +72,9 @@ final class JavaSoundAudioOutput extends PcmPlayerService {
         stackIn_15_0 = this;
         stackIn_15_1 = null;
         stackIn_15_2 = null;
-        stackIn_15_3 = (float)field_i;
+        stackIn_15_3 = (float)sampleRate;
         stackIn_15_4 = 16;
-        if (!field_o) {
+        if (!stereo) {
           stackIn_16_1 = null;
           stackIn_16_2 = null;
           stackIn_16_5 = 1;
@@ -85,7 +85,7 @@ final class JavaSoundAudioOutput extends PcmPlayerService {
         }
         this.field_x = new javax.sound.sampled.AudioFormat(stackIn_15_3, stackIn_15_4, stackIn_16_5, true, false);
         stackIn_18_1 = 256;
-        if (!field_o) {
+        if (!stereo) {
           stackIn_19_2 = 1;
         } else {
           stackIn_19_2 = 2;
@@ -96,7 +96,7 @@ final class JavaSoundAudioOutput extends PcmPlayerService {
     final void openDevice(int param0) throws javax.sound.sampled.LineUnavailableException {
         javax.sound.sampled.DataLine.Info var2 = null;
         try {
-          var2 = new javax.sound.sampled.DataLine.Info(javax.sound.sampled.SourceDataLine.class, this.field_x, param0 << (field_o ? 2 : 1));
+          var2 = new javax.sound.sampled.DataLine.Info(javax.sound.sampled.SourceDataLine.class, this.field_x, param0 << (stereo ? 2 : 1));
           this.field_y = (javax.sound.sampled.SourceDataLine) ((Object) javax.sound.sampled.AudioSystem.getLine((javax.sound.sampled.Line.Info) ((Object) var2)));
           this.field_y.open();
           this.field_y.start();

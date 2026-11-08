@@ -118,22 +118,22 @@ final class SumIntegersCommand extends ConsoleCommand {
     final static void a(int param0, int param1) {
         int var3 = 0;
         int var4 = 0;
-        sm var5 = null;
-        ni var6 = null;
+        HighScoreSubmission var5 = null;
+        HighScoreQuery var6 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         var4 = Kickabout.field_G;
         try {
-          var5 = (sm) (FaceNormal.field_d.g(24009));
+          var5 = (HighScoreSubmission) (FaceNormal.field_d.g(24009));
           while (var5 != null) {
-            mp.a(50, param1, var5);
-            var5 = (sm) (FaceNormal.field_d.c(33));
+            BlobSubmission.writeHighScoreSubmission(50, param1, var5);
+            var5 = (HighScoreSubmission) (FaceNormal.field_d.c(33));
           }
           var3 = -93 % ((param0 - 72) / 43);
-          var6 = (ni) (ProxyAuthenticationRequiredException.field_g.g(24009));
+          var6 = (HighScoreQuery) (ProxyAuthenticationRequiredException.field_g.g(24009));
           while (var6 != null) {
             FadingChatMessage.a(param1, 112, var6);
-            var6 = (ni) (ProxyAuthenticationRequiredException.field_g.c(33));
+            var6 = (HighScoreQuery) (ProxyAuthenticationRequiredException.field_g.c(33));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dk extends IntrusiveNode {
+final class AchievementQuery extends IntrusiveNode {
     static int[] field_g;
-    int[] field_e;
-    boolean field_f;
+    int[] resultValues;
+    boolean complete;
     static String[] field_h;
 
-    final static Sprite[] a(int param0, int param1, byte param2, ResourceArchive param3) {
+    final static Sprite[] loadSpriteSheet(int param0, int param1, byte param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         RuntimeException stackIn_6_0 = null;
@@ -34,7 +34,7 @@ final class dk extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void clipToGridCell(int param0, int param1, int param2, int param3, int param4) {
         int var5;
         int var6;
         int var7;
@@ -63,7 +63,7 @@ final class dk extends IntrusiveNode {
                 var7++;
                 if (param1 > -95) {
                   var9 = (ResourceArchive) null;
-                  dk.a(72, -51, (byte) 107, (ResourceArchive) null);
+                  AchievementQuery.loadSpriteSheet(72, -51, (byte) 107, (ResourceArchive) null);
                 }
                 AuctionListing.a(var6, -22914, var5, var8, var7);
                 return;
@@ -73,7 +73,7 @@ final class dk extends IntrusiveNode {
                 return;
               }
               var9Lifetime2 = (ResourceArchive) null;
-              dk.a(72, -51, (byte) 107, (ResourceArchive) null);
+              AchievementQuery.loadSpriteSheet(72, -51, (byte) 107, (ResourceArchive) null);
               AuctionListing.a(var6, -22914, var5, var8, var7);
               return;
             }
@@ -91,12 +91,12 @@ final class dk extends IntrusiveNode {
         }
         if (param1 > -95) {
           var9Lifetime1 = (ResourceArchive) null;
-          dk.a(72, -51, (byte) 107, (ResourceArchive) null);
+          AchievementQuery.loadSpriteSheet(72, -51, (byte) 107, (ResourceArchive) null);
         }
         AuctionListing.a(var6, -22914, var5, var8, var7);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_h = null;
         field_g = null;
         if (param0 != 7571) {
@@ -104,8 +104,8 @@ final class dk extends IntrusiveNode {
         }
     }
 
-    dk() {
-        this.field_f = false;
+    AchievementQuery() {
+        this.complete = false;
     }
 
     static {

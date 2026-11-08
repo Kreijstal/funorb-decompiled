@@ -20,7 +20,7 @@ final class TabStrip extends UiLayoutNode {
           if (param1 != 63) {
             TabStrip.c(true);
           }
-          VerticalScrollbar.a(BlackFadeScreen.field_g, true, AuctionsScreen.field_O, er.field_k, 1, param0, 0);
+          VerticalScrollbar.a(BlackFadeScreen.field_g, true, AuctionsScreen.field_O, TextHotspotRegion.field_k, 1, param0, 0);
           for (var2_int = 0; var2_int < AuctionsScreen.field_O; var2_int++) {
             ByteStorage.field_d[var2_int + param0] = var2_int;
           }

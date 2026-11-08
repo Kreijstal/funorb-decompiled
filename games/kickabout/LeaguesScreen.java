@@ -111,8 +111,8 @@ final class LeaguesScreen extends ButtonMenuScreen {
         }
         boolean decompiledFrameRemainder0 = true;
         if (PlayerContextMenu.field_f) {
-          fieldTemp$0 = ri.field_t - 1;
-          ri.field_t = ri.field_t - 1;
+          fieldTemp$0 = BeveledTextPainter.field_t - 1;
+          BeveledTextPainter.field_t = BeveledTextPainter.field_t - 1;
           if (fieldTemp$0 > 0) {
             stackIn_29_0 = true;
             decompiledFrameRemainder0 = false;
@@ -294,7 +294,7 @@ final class LeaguesScreen extends ButtonMenuScreen {
         }
         stackIn_26_0 = MenuButton.field_e;
         stackIn_26_1 = 85;
-        stackIn_27_2 = (StrongCacheEntry.g(2368)) && (nj.monotonicMillis(127) % 500L < 250L);
+        stackIn_27_2 = (StrongCacheEntry.g(2368)) && (MonotonicClock.monotonicMillis(127) % 500L < 250L);
         ((UiLayoutNode) (Object) stackIn_26_0).draw(stackIn_26_1, stackIn_27_2);
         if (AuctionTableWidget.field_Hb.field_Db.field_jb != null) {
           AuctionListing.a(-2 + AuctionTableWidget.field_Hb.field_q + (AuctionTableWidget.field_Hb.field_F - 15), -22914, AuctionTableWidget.field_Hb.field_F, 12 + (AuctionTableWidget.field_Hb.field_T - (-AuctionTableWidget.field_Hb.field_mb + 15)), AuctionTableWidget.field_Hb.field_T);

@@ -239,7 +239,7 @@ abstract class MeshObject {
           }
           if (TickClock.field_j) {
             PlayerPortraitCacheEntry.field_g = null;
-            ve.field_R = new IntrusiveDeque();
+            FullscreenErrorDialog.field_R = new IntrusiveDeque();
             var9 = BufferedSocket.field_f;
             var7 = var9;
             var4 = var7;

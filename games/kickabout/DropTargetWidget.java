@@ -17,17 +17,17 @@ final class DropTargetWidget extends SingleChildContainer {
         DraggableWidget var7 = null;
         try {
           super.handlePointerRelease(param0, param1, param2, param3, param4, param5);
-          var7 = mp.field_g;
+          var7 = BlobSubmission.field_g;
           if (var7 != null &&
             this.containsPointer((byte) -81, param5, param0, param2, param1)) {
             if (this.field_k instanceof WidgetDropListener) {
               ((WidgetDropListener) (this.field_k)).dropped(var7, this, param4 + 14579);
-              mp.field_g = null;
+              BlobSubmission.field_g = null;
               return;
             }
             if (var7.field_k instanceof WidgetDropListener) {
               ((WidgetDropListener) (var7.field_k)).dropped(var7, this, 14578);
-              mp.field_g = null;
+              BlobSubmission.field_g = null;
               return;
             }
           }
@@ -50,8 +50,8 @@ final class DropTargetWidget extends SingleChildContainer {
           if (null == AvailabilityCheckRequest.field_b) {
             AvailabilityCheckRequest.field_b = new DualLinkHashTable(64);
           }
-          if (null == ni.field_m) {
-            ni.field_m = new DualLinkHashTable(64);
+          if (null == HighScoreQuery.field_m) {
+            HighScoreQuery.field_m = new DualLinkHashTable(64);
           }
           GameplayHelpScreen.field_I = param1.field_jb;
           qn.field_b = param2.field_jb;

@@ -4,7 +4,7 @@
 final class ReverbPcmStream extends PcmStream {
     private PcmStream field_r;
     private float field_s;
-    private float field_u;
+    private float inputGain;
     private int[] field_i;
     private ReverbCombFilter[] field_n;
     private ReverbAllPassFilter[] field_k;
@@ -14,8 +14,8 @@ final class ReverbPcmStream extends PcmStream {
     private float field_o;
     private float field_t;
     private float field_q;
-    private float field_w;
-    private float field_j;
+    private float dryGain;
+    private float feedbackGain;
     private float field_l;
 
     final synchronized void mixInto(int[] param0, int param1, int param2) {
@@ -79,17 +79,17 @@ final class ReverbPcmStream extends PcmStream {
           }
           var5 = 0;
           for (var6 = 0; var6 < 8; var6++) {
-            var5 = ReverbPcmStream.a(var5, this.field_m[var6].field_c, this.field_m[var6].field_a, var4);
+            var5 = ReverbPcmStream.scanNegativePeak(var5, this.field_m[var6].field_c, this.field_m[var6].field_a, var4);
           }
           for (var6Lifetime1 = 0; var6Lifetime1 < 4; var6Lifetime1++) {
-            var5 = ReverbPcmStream.a(var5, this.field_k[var6Lifetime1].field_a, this.field_k[var6Lifetime1].field_b, var4);
+            var5 = ReverbPcmStream.scanNegativePeak(var5, this.field_k[var6Lifetime1].field_a, this.field_k[var6Lifetime1].field_b, var4);
           }
-          if (PcmPlayerService.field_o) {
+          if (PcmPlayerService.stereo) {
             for (var6Lifetime2 = 0; var6Lifetime2 < 8; var6Lifetime2++) {
-              var5 = ReverbPcmStream.a(var5, this.field_n[var6Lifetime2].field_c, this.field_n[var6Lifetime2].field_a, var4);
+              var5 = ReverbPcmStream.scanNegativePeak(var5, this.field_n[var6Lifetime2].field_c, this.field_n[var6Lifetime2].field_a, var4);
             }
             for (var6Lifetime2Lifetime1 = 0; var6Lifetime2Lifetime1 < 4; var6Lifetime2Lifetime1++) {
-              var5 = ReverbPcmStream.a(var5, this.field_v[var6Lifetime2Lifetime1].field_a, this.field_v[var6Lifetime2Lifetime1].field_b, var4);
+              var5 = ReverbPcmStream.scanNegativePeak(var5, this.field_v[var6Lifetime2Lifetime1].field_a, this.field_v[var6Lifetime2Lifetime1].field_b, var4);
             }
             var4 = var4 << 1;
             param1 = param1 << 1;
@@ -108,11 +108,11 @@ final class ReverbPcmStream extends PcmStream {
             var6Lifetime4++;
             var5 = var5 >> 1;
           }
-          var7Lifetime1 = (int)(this.field_j * 4096.0f);
+          var7Lifetime1 = (int)(this.feedbackGain * 4096.0f);
           var8 = (int)(this.field_q * 4096.0f);
-          var9 = (int)(this.field_w * 4096.0f);
-          var10 = (int)(this.field_u * 65536.0f);
-          if (!PcmPlayerService.field_o) {
+          var9 = (int)(this.dryGain * 4096.0f);
+          var10 = (int)(this.inputGain * 65536.0f);
+          if (!PcmPlayerService.stereo) {
             var11 = (int)(this.field_t * 4096.0f);
             for (var12 = 0; var12 < var4; var12++) {
               var13 = this.field_i[var12] >> var6Lifetime4;
@@ -252,19 +252,19 @@ final class ReverbPcmStream extends PcmStream {
         this.field_p = (float)((double)this.field_t * Math.sqrt((double)(1.0f - this.field_o) * 0.5));
     }
 
-    final synchronized void e(float param0) {
-        this.field_w = param0;
+    final synchronized void setDryGain(float param0) {
+        this.dryGain = param0;
     }
 
     private final void synchronizeChannelMode() {
         int var1;
-        if (!PcmPlayerService.field_o) {
+        if (!PcmPlayerService.stereo) {
           if (this.field_n != null) {
             for (var1 = 0; var1 < 8; var1++) {
-              this.field_m[var1].a();
+              this.field_m[var1].clear();
             }
             for (var1 = 0; var1 < 4; var1++) {
-              this.field_k[var1].a();
+              this.field_k[var1].clear();
             }
             this.field_n = null;
             this.field_v = null;
@@ -273,35 +273,35 @@ final class ReverbPcmStream extends PcmStream {
         } else {
           if (this.field_n == null) {
             for (var1 = 0; var1 < 8; var1++) {
-              this.field_m[var1].a();
+              this.field_m[var1].clear();
             }
             for (var1 = 0; var1 < 4; var1++) {
-              this.field_k[var1].a();
+              this.field_k[var1].clear();
             }
             this.field_n = new ReverbCombFilter[8];
-            this.field_n[0] = new ReverbCombFilter(1139 * PcmPlayerService.field_i / 44100);
-            this.field_n[1] = new ReverbCombFilter(1211 * PcmPlayerService.field_i / 44100);
-            this.field_n[2] = new ReverbCombFilter(1300 * PcmPlayerService.field_i / 44100);
-            this.field_n[3] = new ReverbCombFilter(1379 * PcmPlayerService.field_i / 44100);
-            this.field_n[4] = new ReverbCombFilter(1445 * PcmPlayerService.field_i / 44100);
-            this.field_n[5] = new ReverbCombFilter(1514 * PcmPlayerService.field_i / 44100);
-            this.field_n[6] = new ReverbCombFilter(1580 * PcmPlayerService.field_i / 44100);
-            this.field_n[7] = new ReverbCombFilter(1640 * PcmPlayerService.field_i / 44100);
+            this.field_n[0] = new ReverbCombFilter(1139 * PcmPlayerService.sampleRate / 44100);
+            this.field_n[1] = new ReverbCombFilter(1211 * PcmPlayerService.sampleRate / 44100);
+            this.field_n[2] = new ReverbCombFilter(1300 * PcmPlayerService.sampleRate / 44100);
+            this.field_n[3] = new ReverbCombFilter(1379 * PcmPlayerService.sampleRate / 44100);
+            this.field_n[4] = new ReverbCombFilter(1445 * PcmPlayerService.sampleRate / 44100);
+            this.field_n[5] = new ReverbCombFilter(1514 * PcmPlayerService.sampleRate / 44100);
+            this.field_n[6] = new ReverbCombFilter(1580 * PcmPlayerService.sampleRate / 44100);
+            this.field_n[7] = new ReverbCombFilter(1640 * PcmPlayerService.sampleRate / 44100);
             this.field_v = new ReverbAllPassFilter[4];
-            this.field_v[0] = new ReverbAllPassFilter(579 * PcmPlayerService.field_i / 44100);
-            this.field_v[1] = new ReverbAllPassFilter(464 * PcmPlayerService.field_i / 44100);
-            this.field_v[2] = new ReverbAllPassFilter(364 * PcmPlayerService.field_i / 44100);
-            this.field_v[3] = new ReverbAllPassFilter(248 * PcmPlayerService.field_i / 44100);
+            this.field_v[0] = new ReverbAllPassFilter(579 * PcmPlayerService.sampleRate / 44100);
+            this.field_v[1] = new ReverbAllPassFilter(464 * PcmPlayerService.sampleRate / 44100);
+            this.field_v[2] = new ReverbAllPassFilter(364 * PcmPlayerService.sampleRate / 44100);
+            this.field_v[3] = new ReverbAllPassFilter(248 * PcmPlayerService.sampleRate / 44100);
             this.field_i = new int[512];
           }
         }
     }
 
-    final synchronized void f(float param0) {
-        this.field_j = param0;
+    final synchronized void setFeedbackGain(float param0) {
+        this.feedbackGain = param0;
     }
 
-    private final static int a(int param0, int[] param1, int param2, int param3) {
+    private final static int scanNegativePeak(int param0, int[] param1, int param2, int param3) {
         int var4 = 0;
         int var5;
         if (param3 > param1.length) {
@@ -325,7 +325,7 @@ final class ReverbPcmStream extends PcmStream {
 
     final synchronized void setDampingTimeMicros(float param0) {
         this.field_l = param0;
-        this.field_q = 1.0f - (float)Math.pow(0.5, 1000000.0 / (double)(this.field_l * (float)PcmPlayerService.field_i));
+        this.field_q = 1.0f - (float)Math.pow(0.5, 1000000.0 / (double)(this.field_l * (float)PcmPlayerService.sampleRate));
     }
 
     final synchronized void setWetGain(float param0) {
@@ -334,8 +334,8 @@ final class ReverbPcmStream extends PcmStream {
         this.field_p = (float)((double)this.field_t * Math.sqrt((double)(1.0f - this.field_o) * 0.5));
     }
 
-    final synchronized void a(float param0) {
-        this.field_u = param0;
+    final synchronized void setInputGain(float param0) {
+        this.inputGain = param0;
     }
 
     final PcmStream nextSubstream() {
@@ -358,27 +358,27 @@ final class ReverbPcmStream extends PcmStream {
 
     ReverbPcmStream(PcmStream param0) {
         this.field_m = new ReverbCombFilter[8];
-        this.field_m[0] = new ReverbCombFilter(1116 * PcmPlayerService.field_i / 44100);
-        this.field_m[1] = new ReverbCombFilter(1188 * PcmPlayerService.field_i / 44100);
-        this.field_m[2] = new ReverbCombFilter(1277 * PcmPlayerService.field_i / 44100);
-        this.field_m[3] = new ReverbCombFilter(1356 * PcmPlayerService.field_i / 44100);
-        this.field_m[4] = new ReverbCombFilter(1422 * PcmPlayerService.field_i / 44100);
-        this.field_m[5] = new ReverbCombFilter(1491 * PcmPlayerService.field_i / 44100);
-        this.field_m[6] = new ReverbCombFilter(1557 * PcmPlayerService.field_i / 44100);
-        this.field_m[7] = new ReverbCombFilter(1617 * PcmPlayerService.field_i / 44100);
+        this.field_m[0] = new ReverbCombFilter(1116 * PcmPlayerService.sampleRate / 44100);
+        this.field_m[1] = new ReverbCombFilter(1188 * PcmPlayerService.sampleRate / 44100);
+        this.field_m[2] = new ReverbCombFilter(1277 * PcmPlayerService.sampleRate / 44100);
+        this.field_m[3] = new ReverbCombFilter(1356 * PcmPlayerService.sampleRate / 44100);
+        this.field_m[4] = new ReverbCombFilter(1422 * PcmPlayerService.sampleRate / 44100);
+        this.field_m[5] = new ReverbCombFilter(1491 * PcmPlayerService.sampleRate / 44100);
+        this.field_m[6] = new ReverbCombFilter(1557 * PcmPlayerService.sampleRate / 44100);
+        this.field_m[7] = new ReverbCombFilter(1617 * PcmPlayerService.sampleRate / 44100);
         this.field_k = new ReverbAllPassFilter[4];
-        this.field_k[0] = new ReverbAllPassFilter(556 * PcmPlayerService.field_i / 44100);
-        this.field_k[1] = new ReverbAllPassFilter(441 * PcmPlayerService.field_i / 44100);
-        this.field_k[2] = new ReverbAllPassFilter(341 * PcmPlayerService.field_i / 44100);
-        this.field_k[3] = new ReverbAllPassFilter(225 * PcmPlayerService.field_i / 44100);
-        if (!PcmPlayerService.field_o) {
+        this.field_k[0] = new ReverbAllPassFilter(556 * PcmPlayerService.sampleRate / 44100);
+        this.field_k[1] = new ReverbAllPassFilter(441 * PcmPlayerService.sampleRate / 44100);
+        this.field_k[2] = new ReverbAllPassFilter(341 * PcmPlayerService.sampleRate / 44100);
+        this.field_k[3] = new ReverbAllPassFilter(225 * PcmPlayerService.sampleRate / 44100);
+        if (!PcmPlayerService.stereo) {
           this.field_i = new int[256];
         }
         this.synchronizeChannelMode();
-        this.a(0.04500000178813934f);
+        this.setInputGain(0.04500000178813934f);
         this.setWetGain(1.0f);
-        this.f(0.8399999737739563f);
-        this.e(1.0f);
+        this.setFeedbackGain(0.8399999737739563f);
+        this.setDryGain(1.0f);
         this.setDampingTimeMicros(7000.0f);
         this.setStereoWidth(1.0f);
         this.field_r = param0;

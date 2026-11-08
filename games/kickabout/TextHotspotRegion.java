@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class er extends IntrusiveNode {
+final class TextHotspotRegion extends IntrusiveNode {
     static int field_k;
     static byte[] field_h;
     static volatile boolean field_l;
-    int field_f;
-    int field_m;
-    int field_g;
-    int field_e;
-    int field_i;
-    er field_j;
+    int height;
+    int y;
+    int x;
+    int width;
+    int hotspotId;
+    TextHotspotRegion nextLineRegion;
 
-    final static void a(byte param0, boolean param1) {
+    final static void drawContentTransition(byte param0, boolean param1) {
         if (param0 <= 21) {
           field_k = 101;
           ContentTransitionDialog.field_Y.draw(97, param1);
@@ -21,7 +21,7 @@ final class er extends IntrusiveNode {
         ContentTransitionDialog.field_Y.draw(97, param1);
     }
 
-    final static double a(byte param0, ea param1) {
+    final static double computeColorBoxVariance(byte param0, ColorQuantizationBox param1) {
         double var2_double = 0.0;
         RuntimeException var2 = null;
         double var4 = 0.0;
@@ -88,16 +88,16 @@ final class er extends IntrusiveNode {
     public static void releaseStatics(byte param0) {
         field_h = null;
         if (param0 != -94) {
-          er.a((byte) -85, false);
+          TextHotspotRegion.drawContentTransition((byte) -85, false);
         }
     }
 
-    er(int param0, int param1, int param2, int param3, int param4) {
-        this.field_m = param2;
-        this.field_i = param0;
-        this.field_g = param1;
-        this.field_e = param3;
-        this.field_f = param4;
+    TextHotspotRegion(int param0, int param1, int param2, int param3, int param4) {
+        this.y = param2;
+        this.hotspotId = param0;
+        this.x = param1;
+        this.width = param3;
+        this.height = param4;
     }
 
     static {

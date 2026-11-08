@@ -41,7 +41,7 @@ final class QuickChatPhraseCache {
         }
     }
 
-    QuickChatPhraseCache(int param0, ResourceArchive param1, ResourceArchive param2, fg param3) {
+    QuickChatPhraseCache(int param0, ResourceArchive param1, ResourceArchive param2, QuickChatResolver param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

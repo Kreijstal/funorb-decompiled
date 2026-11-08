@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rf {
+final class SocialTabsPanel {
     static boolean field_a;
     static byte[] field_d;
-    TabStrip field_b;
+    TabStrip tabs;
     static ContextMenuItem[][] field_c;
 
-    final static void a(int param0, ResourceArchive param1, ResourceArchive param2, ResourceArchive param3) {
+    final static void loadCharacterAnimations(int param0, ResourceArchive param1, ResourceArchive param2, ResourceArchive param3) {
         int var5 = 0;
         int var6 = 0;
         int incrementValue$1 = 0;
@@ -49,7 +49,7 @@ final class rf {
           HelpTipDialog.field_I[3][0] = new AnimationClip(param2, "characters", "ka_scout_aggressive_tackle");
           if (param0 != 20113) {
             var9 = (ResourceArchive) null;
-            rf.a(103, (ResourceArchive) null, (ResourceArchive) null, (ResourceArchive) null);
+            SocialTabsPanel.loadCharacterAnimations(103, (ResourceArchive) null, (ResourceArchive) null, (ResourceArchive) null);
           }
           HelpTipDialog.field_I[3][1] = new AnimationClip(param2, "characters", "ka_scout_fall");
           HelpTipDialog.field_I[3][2] = new AnimationClip(param2, "characters", "ka_scout_fall_stand");
@@ -132,10 +132,10 @@ final class rf {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, byte param4) {
+    final void layout(int param0, int param1, int param2, int param3, byte param4) {
         int var6 = 24;
         int var7 = 5;
-        this.field_b.a(true, param3, param0, var6, var7, param2, param1);
+        this.tabs.a(true, param3, param0, var6, var7, param2, param1);
         MarkerSliderPainter.field_f.setBounds(true, TriangleMesh.field_R.field_q, 0, 0, sh.field_c);
         int var8 = 17 % ((-10 - param4) / 63);
         AlphaContainer.field_E.setBounds(true, -2 - TeamSelectionAgent.field_f + (TriangleMesh.field_R.field_q - 80) - 2, 0, 2 + sh.field_c, 18);
@@ -212,14 +212,14 @@ final class rf {
         }
     }
 
-    final static boolean a(int param0, int param1) {
+    final static boolean isPowerOfTwoOrZero(int param0, int param1) {
         if (param1 != 16) {
           field_c = (ContextMenuItem[][]) null;
         }
         return (param0 & -param0) == param0 ? true : false;
     }
 
-    final static void a(hr param0, int param1, boolean param2) {
+    final static void writeLookupRecordUpdate(LookupRecordUpdate param0, int param1, boolean param2) {
         CipherPacketBuffer var5 = null;
         int var4 = 0;
         try {
@@ -231,8 +231,8 @@ final class rf {
           var5.field_n = var5.field_n + 1;
           var4 = var5.field_n;
           var5.writeByte(125, 1);
-          var5.writeByte(113, param0.field_j);
-          var5.writeSignedSmart(-109, param0.field_i);
+          var5.writeByte(113, param0.tableId);
+          var5.writeSignedSmart(-109, param0.recordId);
           var5.writeInt(-65, param0.field_e);
           var5.writeInt(-84, param0.field_l);
           var5.writeInt(-74, param0.field_n);
@@ -265,13 +265,13 @@ final class rf {
         return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
     }
 
-    rf(String param0, UiLayoutNode param1) {
+    SocialTabsPanel(String param0, UiLayoutNode param1) {
         String[] var3 = null;
         UiLayoutNode[] var4 = null;
         try {
           var3 = new String[]{param0, ConsoleExpression.field_n, TrinketTile.field_Jb};
           var4 = new UiLayoutNode[]{param1, TriangleMesh.field_R, (UiLayoutNode) ((Object) TournamentChampionDialog.field_F)};
-          this.field_b = new TabStrip(0L, MatchingTextValidator.field_n, var3, MouseInputHandler.field_b, var4, 0);
+          this.tabs = new TabStrip(0L, MatchingTextValidator.field_n, var3, MouseInputHandler.field_b, var4, 0);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "rf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

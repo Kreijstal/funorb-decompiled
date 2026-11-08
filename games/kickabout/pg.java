@@ -8,10 +8,10 @@ final class pg {
     static String[] field_a;
 
     final static void a(int param0, boolean param1) {
-        ni.field_l = param1 ? new rf(TextHotspotWidget.field_H, DialogOverlay.field_e) : new rf(c.field_d, AchievementsScreen.field_C);
+        HighScoreQuery.field_l = param1 ? new SocialTabsPanel(TextHotspotWidget.field_H, DialogOverlay.field_e) : new SocialTabsPanel(c.field_d, AchievementsScreen.field_C);
         TrinketIcon.field_Cb = new UiLayoutNode(0L, (UiLayoutNode) null);
         if (param0 == -35) {
-          TrinketIcon.field_Cb.addChild((byte) -110, (UiLayoutNode) (ni.field_l.field_b));
+          TrinketIcon.field_Cb.addChild((byte) -110, (UiLayoutNode) (HighScoreQuery.field_l.tabs));
           TrinketIcon.field_Cb.addChild((byte) -126, TrinketUnlockNotice.field_b);
           tn.field_f = new UiLayoutNode(0L, ChatMessage.field_e);
           vj.field_g = new UiLayoutNode(0L, (UiLayoutNode) null);
@@ -23,7 +23,7 @@ final class pg {
           return;
         }
         field_c = (String) null;
-        TrinketIcon.field_Cb.addChild((byte) -110, (UiLayoutNode) (ni.field_l.field_b));
+        TrinketIcon.field_Cb.addChild((byte) -110, (UiLayoutNode) (HighScoreQuery.field_l.tabs));
         TrinketIcon.field_Cb.addChild((byte) -126, TrinketUnlockNotice.field_b);
         tn.field_f = new UiLayoutNode(0L, ChatMessage.field_e);
         vj.field_g = new UiLayoutNode(0L, (UiLayoutNode) null);
@@ -59,7 +59,7 @@ final class pg {
             }
             var2 = 1;
           }
-          DirectByteStorage.field_k.a(-21174, ResourceArchive.a(BytePlusOneCommand.field_A, ArchiveManager.field_m, (byte) -96), ResourceArchive.a(sm.field_q, ReceivedAuctionItem.field_y, (byte) -101));
+          DirectByteStorage.field_k.a(-21174, ResourceArchive.a(BytePlusOneCommand.field_A, ArchiveManager.field_m, (byte) -96), ResourceArchive.a(HighScoreSubmission.field_q, ReceivedAuctionItem.field_y, (byte) -101));
           if (DirectByteStorage.field_k.c(-1)) {
             var1_int = 1;
           }
@@ -84,7 +84,7 @@ final class pg {
           }
           if (var3 == 0 &&
             ck.field_a == 2) {
-            var4 = -PlayingView.field_o + nj.monotonicMillis(param0 ^ -51);
+            var4 = -PlayingView.field_o + MonotonicClock.monotonicMillis(param0 ^ -51);
             var6 = (int)((-var4 + 10999L) / 1000L);
             if (var6 <= 0) {
               TrinketCountSortCriterion.a(true, 6, 5);
@@ -189,7 +189,7 @@ final class pg {
             stackIn_2_0 = (RenderedFootballer) null;
             return stackIn_2_0;
           }
-          var5_long = nj.monotonicMillis(51);
+          var5_long = MonotonicClock.monotonicMillis(51);
           if (80L > -ClientUiOverlay.field_d + var5_long) {
             stackIn_5_0 = null;
             return (RenderedFootballer) (stackIn_5_0);

@@ -176,10 +176,10 @@ final class PlayerShopScreen extends TeamManagementScreen {
             var2 = sh.field_a.field_P[AccountRegistrationPanel.field_G][1 + var1_int];
             if (0 < var2.dashCooldown &&
               var2.action != 4) {
-              mn.field_b[var1_int] = 16;
+              IconButtonPainter.field_b[var1_int] = 16;
             } else {
-              if (0 < mn.field_b[var1_int]) {
-                mn.field_b[var1_int] = mn.field_b[var1_int] - 1;
+              if (0 < IconButtonPainter.field_b[var1_int]) {
+                IconButtonPainter.field_b[var1_int] = IconButtonPainter.field_b[var1_int] - 1;
               }
             }
             var1_int++;
@@ -261,7 +261,7 @@ final class PlayerShopScreen extends TeamManagementScreen {
         var3[2] = ClientException.field_a;
         var3[0] = GameModesHelpScreen.field_H;
         var3[4] = SortCriterion.field_k;
-        var3[3] = ri.field_u;
+        var3[3] = BeveledTextPainter.field_u;
         this.field_J = new ColumnTableWidget(MusicPatchNode.field_x, MainMenuScreen.field_D, var4, 50);
         this.field_J.a(369, (byte) -111, 54, 175);
         if (param0 != -38) {

@@ -169,8 +169,8 @@ final class ArchiveManager {
         try {
           CheckboxLabelWidget.field_Cb.field_E = param1;
           TextWidgetPainter.field_f = true;
-          var2_int = ea.field_f.field_a;
-          var3 = ea.field_f.field_e;
+          var2_int = ColorQuantizationBox.field_f.field_a;
+          var3 = ColorQuantizationBox.field_f.field_e;
           int var4 = 59 % ((param0 + 57) / 43);
           var5 = CheckboxLabelWidget.field_Cb.field_X.paragraphHeight(param1, 272, CheckboxLabelWidget.field_Cb.field_xb);
           var6 = -103 + var3 / 2 - var5 / 2;
@@ -275,7 +275,7 @@ final class ArchiveManager {
             }
             BlackFadeScreen.field_g = -2147483648;
             TournamentLobbyScreen.field_V = -2147483648;
-            er.field_k = 2147483647;
+            TextHotspotRegion.field_k = 2147483647;
             NanoTickClock.field_s = 2147483647;
             AuctionsScreen.field_O = 0;
             return;
@@ -366,7 +366,7 @@ final class ArchiveManager {
               }
               BlackFadeScreen.field_g = -2147483648;
               TournamentLobbyScreen.field_V = -2147483648;
-              er.field_k = 2147483647;
+              TextHotspotRegion.field_k = 2147483647;
               NanoTickClock.field_s = 2147483647;
               AuctionsScreen.field_O = 0;
               return;
@@ -459,7 +459,7 @@ final class ArchiveManager {
               }
               BlackFadeScreen.field_g = -2147483648;
               TournamentLobbyScreen.field_V = -2147483648;
-              er.field_k = 2147483647;
+              TextHotspotRegion.field_k = 2147483647;
               NanoTickClock.field_s = 2147483647;
               AuctionsScreen.field_O = 0;
               return;
@@ -481,7 +481,7 @@ final class ArchiveManager {
               ug.field_f.length >= param1) {
               BlackFadeScreen.field_g = -2147483648;
               TournamentLobbyScreen.field_V = -2147483648;
-              er.field_k = 2147483647;
+              TextHotspotRegion.field_k = 2147483647;
               NanoTickClock.field_s = 2147483647;
               AuctionsScreen.field_O = 0;
               return;
@@ -491,7 +491,7 @@ final class ArchiveManager {
         }
         BlackFadeScreen.field_g = -2147483648;
         TournamentLobbyScreen.field_V = -2147483648;
-        er.field_k = 2147483647;
+        TextHotspotRegion.field_k = 2147483647;
         NanoTickClock.field_s = 2147483647;
         AuctionsScreen.field_O = 0;
     }

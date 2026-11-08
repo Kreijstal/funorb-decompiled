@@ -101,7 +101,7 @@ final class ListingRowCache {
           }
           for (var5_int = 0; var5_int < 3; var5_int++) {
             for (var6 = 0; 3 > var6; var6++) {
-              dk.a(param2, -112, param1, var5_int, var6);
+              AchievementQuery.clipToGridCell(param2, -112, param1, var5_int, var6);
               SoftwareRasterizer.fillRoundedRectangleBlended(param2, param1, 156, 225, 10, 65793, 96);
               TeamManagementScreen.e(126);
             }
@@ -149,7 +149,7 @@ final class ListingRowCache {
         if (param2 > -83) {
           return;
         }
-        int var4 = PlayerPortraitCacheEntry.millisToMinutes(-1090519040, nj.monotonicMillis(85));
+        int var4 = PlayerPortraitCacheEntry.millisToMinutes(-1090519040, MonotonicClock.monotonicMillis(85));
         for (var5 = 0; var5 < 7; var5++) {
           var6 = (CachedListingRow) (AuctionListingDialog.field_L[var5].b(0));
           while (var6 != null) {

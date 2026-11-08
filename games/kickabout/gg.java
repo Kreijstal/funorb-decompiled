@@ -147,7 +147,7 @@ final class gg extends UiLayoutNode {
             if (ConsoleValue.field_c.length == 1) {
               stackIn_10_0 = FullscreenDisplayMode.field_g;
             } else {
-              stackIn_10_0 = ka.field_d;
+              stackIn_10_0 = GameQuickChatResolver.field_d;
             }
             ContextMenu.field_Jb = stackIn_10_0;
             var4 = 0;

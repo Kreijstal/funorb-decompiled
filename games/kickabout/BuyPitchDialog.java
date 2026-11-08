@@ -208,7 +208,7 @@ final class BuyPitchDialog extends MessageDialog {
         try {
           this.field_L = param0.field_Db;
           this.field_J = param0.field_zb;
-          var5 = h.field_b[this.field_L][this.field_J];
+          var5 = QuickChatMenuBuilder.field_b[this.field_L][this.field_J];
           String var2 = var5;
           var3 = param0.field_Eb;
           var4 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ListingRowCache.field_e[29], new String[]{var5, var3});
@@ -221,7 +221,7 @@ final class BuyPitchDialog extends MessageDialog {
     final void handleResult(int param0, int param1) {
         super.handleResult(84, param1);
         if (param1 == 0) {
-          ve.a(true, this.field_L, this.field_J);
+          FullscreenErrorDialog.a(true, this.field_L, this.field_J);
         }
         if (param0 > 60) {
           return;

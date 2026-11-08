@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ni extends IntrusiveNode {
-    static rf field_l;
+final class HighScoreQuery extends IntrusiveNode {
+    static SocialTabsPanel field_l;
     static String field_h;
     int field_j;
     static String field_e;
@@ -16,7 +16,7 @@ final class ni extends IntrusiveNode {
     static String field_n;
     static Sprite[][] field_f;
 
-    final static byte[] a(byte param0, String param1) {
+    final static byte[] loadNamedResource(byte param0, String param1) {
         RuntimeException var2 = null;
         String var3 = null;
         byte[] stackIn_3_0 = null;
@@ -27,7 +27,7 @@ final class ni extends IntrusiveNode {
         try {
           if (param0 > -49) {
             var3 = (String) null;
-            ni.a((byte) 34, (String) null);
+            HighScoreQuery.loadNamedResource((byte) 34, (String) null);
           }
           stackIn_3_0 = DraggableWidget.field_J.takeFileByName(param1, "", 4);
           return stackIn_3_0;
@@ -45,7 +45,7 @@ final class ni extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_k = null;
         field_l = null;
         field_m = null;
@@ -61,7 +61,7 @@ final class ni extends IntrusiveNode {
         }
     }
 
-    final static boolean a(int param0, int param1, int param2, int param3) {
+    final static boolean dispatchKeyInput(int param0, int param1, int param2, int param3) {
         if (param3 != -20859) {
           return false;
         }
@@ -80,7 +80,7 @@ final class ni extends IntrusiveNode {
         return false;
     }
 
-    private ni() throws Throwable {
+    private HighScoreQuery() throws Throwable {
         throw new Error();
     }
 

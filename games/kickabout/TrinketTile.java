@@ -54,7 +54,7 @@ final class TrinketTile extends UiLayoutNode {
           param1.field_c = 0;
           param1.field_b = false;
           ReceivedAuctionItem.field_x = new QuickChatCategoryCache(var3_int, param1, param1);
-          TournamentLobbyScreen.field_j = new QuickChatPhraseCache(var3_int, param1, param1, new ka());
+          TournamentLobbyScreen.field_j = new QuickChatPhraseCache(var3_int, param1, param1, new GameQuickChatResolver());
           if (param2 != -32) {
             TrinketTile.releaseStatics((byte) -19);
           }
@@ -66,7 +66,7 @@ final class TrinketTile extends UiLayoutNode {
           }
           TeamSelectionAgent.a((byte) -45, var4);
           var12 = (BitmapFont) null;
-          ve.field_S = su.a(5138823, 2245737, 1513239, true, 65793, (BitmapFont) null, 65793, 65793, 4020342, 8947848, 0, 1513239, 1127256);
+          FullscreenErrorDialog.field_S = su.a(5138823, 2245737, 1513239, true, 65793, (BitmapFont) null, 65793, 65793, 4020342, 8947848, 0, 1513239, 1127256);
           ic.field_a = su.a(0, 0, 0, true, 0, param0, 0, 0, 0, 0, 16764006, 0, 0);
           NameSuggestionsPanel.field_E = su.a(0, 0, 0, true, 0, param0, 0, 0, 0, 0, 16777215, 0, 0);
           var5 = SoftwareRasterizer.field_g;
@@ -78,7 +78,7 @@ final class TrinketTile extends UiLayoutNode {
             SoftwareRasterizer.drawVerticalLine(var8, 1 + var8, -(var8 << 1) + 14, 16777215);
           }
           SoftwareRasterizer.a(var16, var5, var6);
-          gk.field_h = h.a(param2 ^ -32, var4, ve.field_S, NameSuggestionsPanel.field_E, ic.field_a);
+          gk.field_h = QuickChatMenuBuilder.buildCategoryMenu(param2 ^ -32, var4, FullscreenErrorDialog.field_S, NameSuggestionsPanel.field_E, ic.field_a);
           LeaguesHelpScreen.field_E.field_jb = new IntrusiveDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

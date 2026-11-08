@@ -48,19 +48,19 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           }
           var3 = WorldSpriteDecoration.field_a[ih.field_c];
           double[] var2 = var3;
-          nh.adjustSpriteHsv(param0, var3[0], var3[1], var3[2]);
+          SpritePixelSupport.adjustSpriteHsv(param0, var3[0], var3[1], var3[2]);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "pd.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final static void a(byte param0, int param1, sm param2) {
+    final static void submitHighScore(byte param0, int param1, HighScoreSubmission param2) {
         try {
           if (param0 != 70) {
             LoginForm.a((byte) -2);
           }
           FaceNormal.field_d.addLast(param2, param0 - 67);
-          mp.a(125, param1, param2);
+          BlobSubmission.writeHighScoreSubmission(125, param1, param2);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "pd.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -104,7 +104,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
               if (this.field_F == param1) {
                 if (!this.field_H) {
                   if (this.field_C) {
-                    MusicPatch.a((byte) -124);
+                    MusicPatch.showAccountChoice((byte) -124);
                   } else {
                     PacketBuffer.g(4);
                   }
@@ -226,7 +226,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
         StringBuilder stackIn_62_1 = null;
         String stackIn_63_2 = null;
         RuntimeException decompiledCaughtException = null;
-        op var6 = null;
+        SpriteButtonPainter var6 = null;
         RuntimeException var6_ref = null;
         BitmapFont var7 = null;
         String var8 = null;
@@ -269,9 +269,9 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
             this.field_F = new TextButton(AccountNameAvailabilityValidator.field_o, (UiListener) null);
             this.field_N.field_y = false;
           }
-          this.field_N.field_r = (WidgetPainter) ((Object) new ri(10000536));
-          this.field_J.field_r = (WidgetPainter) ((Object) new rp(10000536));
-          var6 = new op();
+          this.field_N.field_r = (WidgetPainter) ((Object) new BeveledTextPainter(10000536));
+          this.field_J.field_r = (WidgetPainter) ((Object) new PasswordFieldPainter(10000536));
+          var6 = new SpriteButtonPainter();
           this.field_K.field_r = (WidgetPainter) ((Object) var6);
           if (this.field_F != null) {
             this.field_F.field_r = (WidgetPainter) ((Object) var6);
@@ -393,7 +393,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
         IndexedSprite[] var8 = null;
         IndexedSprite[] var9 = null;
         int var10 = 0;
-        sm var11 = null;
+        HighScoreSubmission var11 = null;
         Sprite var12 = null;
         IndexedSprite[] stackIn_8_0 = null;
         IndexedSprite[] stackIn_11_0 = null;
@@ -408,8 +408,8 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           var5 = 6 * AuctionItem.field_f >> 8;
           var6 = -15;
           if (param0 != -79) {
-            var11 = (sm) null;
-            LoginForm.a((byte) -91, 14, (sm) null);
+            var11 = (HighScoreSubmission) null;
+            LoginForm.submitHighScore((byte) -91, 14, (HighScoreSubmission) null);
           }
           for (var7 = 0; var7 < 4; var7++) {
             if ((var7 & 1) == 0) {

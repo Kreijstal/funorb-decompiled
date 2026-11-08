@@ -19,7 +19,7 @@ final class wq {
         if (param0 != 46) {
           field_c = (String) null;
         }
-        return BufferedSocket.field_l - ka.field_a;
+        return BufferedSocket.field_l - GameQuickChatResolver.field_a;
     }
 
     final static void a(int param0, int param1, int param2, byte param3, String param4, int param5) {
@@ -62,7 +62,7 @@ final class wq {
         var8 = Kickabout.field_G;
         try {
           var1_int = 0;
-          if (hr.field_k) {
+          if (LookupRecordUpdate.field_k) {
             var1_int++;
           }
           if (ListingRowCache.field_a) {
@@ -109,7 +109,7 @@ final class wq {
             IsSixCommand.field_C.c(var7, 620, var2, 16777215, 0);
             var2 += 20;
           }
-          if (hr.field_k) {
+          if (LookupRecordUpdate.field_k) {
             var9 = TexturedPanelPainter.field_h + " fps / " + NumericDateInputWidget.field_T + " lps";
             IsSixCommand.field_C.c(var9, 620, var2, 16777215, 0);
             var2 += 20;

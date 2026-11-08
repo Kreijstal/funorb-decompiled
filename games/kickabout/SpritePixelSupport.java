@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nh {
+final class SpritePixelSupport {
     private static int[] field_b;
     private static int field_c;
     private static int field_i;
@@ -117,7 +117,7 @@ final class nh {
           var5 <= 0) {
           return;
         }
-        nh.a(SoftwareRasterizer.field_a, param0.field_y, 0, var4, var3, var6, var5, var7, var8);
+        SpritePixelSupport.a(SoftwareRasterizer.field_a, param0.field_y, 0, var4, var3, var6, var5, var7, var8);
     }
 
     final static ArgbSprite a(Sprite param0) {
@@ -205,7 +205,7 @@ final class nh {
         field_d = (var11 - param0) * var7;
         field_f = (var11 - param0) * var8;
         field_b = param6;
-        nh.a(param0, param1, param4, 0, 0, var9, SoftwareRasterizer.field_a, var12 * SoftwareRasterizer.field_g + var11, param5, var7, var8, var12 - var14, var11 - var13, SoftwareRasterizer.field_g - (var13 - var11));
+        SpritePixelSupport.a(param0, param1, param4, 0, 0, var9, SoftwareRasterizer.field_a, var12 * SoftwareRasterizer.field_g + var11, param5, var7, var8, var12 - var14, var11 - var13, SoftwareRasterizer.field_g - (var13 - var11));
     }
 
     private final static int hsvToRgb(int param0) {
@@ -385,7 +385,7 @@ final class nh {
           var5 <= 0) {
           return;
         }
-        nh.b(SoftwareRasterizer.field_a, param0.field_y, 0, var4, var3, var6, var5, var7, var8);
+        SpritePixelSupport.b(SoftwareRasterizer.field_a, param0.field_y, 0, var4, var3, var6, var5, var7, var8);
     }
 
     final static void adjustHsv(int[] param0, double param1, double param2, double param3) {
@@ -400,7 +400,7 @@ final class nh {
         int var10Lifetime1;
         for (var8 = 0; var8 < param0.length; var8++) {
           var9 = param0[var8];
-          var10 = nh.rgbToHsv(var9);
+          var10 = SpritePixelSupport.rgbToHsv(var9);
           var11 = var10 >>> 19 & 8191;
           var12 = var10 >> 8 & 2047;
           var13 = var10 & 255;
@@ -414,7 +414,7 @@ final class nh {
             var13 = 255;
           }
           var10Lifetime1 = var11 << 19 | var12 << 8 | var13;
-          var14 = nh.hsvToRgb(var10Lifetime1);
+          var14 = SpritePixelSupport.hsvToRgb(var10Lifetime1);
           if (var14 == 0 &&
             (var9 & 16777215) != 0) {
             var14 = 65793;
@@ -462,7 +462,7 @@ final class nh {
         int var21 = var20 - var19;
         int var22 = var6 + var8 * SoftwareRasterizer.field_g;
         int var23 = SoftwareRasterizer.field_g + var6 - var7;
-        nh.a(0, 0, 0, 0, 0, var15, var5, var22, SoftwareRasterizer.field_a, param3, param4, var23, var13, var6 - var7, var16 + var10, var19, var21, var8 - var9);
+        SpritePixelSupport.a(0, 0, 0, 0, 0, var15, var5, var22, SoftwareRasterizer.field_a, param3, param4, var23, var13, var6 - var7, var16 + var10, var19, var21, var8 - var9);
     }
 
     final static Sprite toMaskedSprite(ArgbSprite param0) {
@@ -604,11 +604,11 @@ final class nh {
           var7 = var7 + var11 * var15Lifetime2;
           var14 = var14 + var15Lifetime2;
         }
-        nh.a(SoftwareRasterizer.field_a, param0.field_y, 0, var7, var8, var13Lifetime2, var14, param3, param4, var11, var12, var5);
+        SpritePixelSupport.a(SoftwareRasterizer.field_a, param0.field_y, 0, var7, var8, var13Lifetime2, var14, param3, param4, var11, var12, var5);
     }
 
     final static void adjustSpriteHsv(Sprite param0, double param1, double param2, double param3) {
-        nh.adjustHsv(param0.field_y, param1, param2, param3);
+        SpritePixelSupport.adjustHsv(param0.field_y, param1, param2, param3);
     }
 
     final static ArgbSprite downscaleArgbByHalf(ArgbSprite param0) {

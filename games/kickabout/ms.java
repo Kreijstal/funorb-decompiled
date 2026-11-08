@@ -18,7 +18,7 @@ final class ms {
     }
 
     final static void a(int param0, int param1) {
-        wd.field_n[param0] = param1;
+        RankingsRequest.field_n[param0] = param1;
         if (sk.field_d != null) {
           sk.field_d.a(0, param1, (byte) -85);
         }

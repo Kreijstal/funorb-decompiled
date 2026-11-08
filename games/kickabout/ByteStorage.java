@@ -12,7 +12,7 @@ abstract class ByteStorage {
 
     abstract void setBytes(byte[] param0, int param1);
 
-    final static void a(int param0, dl param1, byte param2) {
+    final static void writeLookupQuery(int param0, LookupQuery param1, byte param2) {
         CipherPacketBuffer var4 = null;
         try {
           int var3_int = -84 / ((param2 + 50) / 61);
@@ -20,7 +20,7 @@ abstract class ByteStorage {
           var4.b(param0, (byte) -80);
           var4.writeByte(125, 2);
           var4.writeByte(119, 0);
-          var4.writeByte(108, param1.field_e);
+          var4.writeByte(108, param1.tableId);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "pf.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

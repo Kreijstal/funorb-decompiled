@@ -147,7 +147,7 @@ final class AuctionLogEntry extends IntrusiveNode {
             return stackIn_5_0;
           }
           if (param0 == 7) {
-            stackIn_9_0 = fv.field_a;
+            stackIn_9_0 = TooltipOverlay.field_a;
             return stackIn_9_0;
           }
           if (param0 == 8) {

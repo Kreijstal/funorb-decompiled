@@ -76,7 +76,7 @@ final class pe {
             if (null != SplashScreen.field_m &&
               SplashScreen.field_m.field_b) {
               UiWidget.h(0);
-              ValidatedTextWidget.field_Z.a(new ve(ValidatedTextWidget.field_Z, PainterStyle.field_a), false);
+              ValidatedTextWidget.field_Z.a(new FullscreenErrorDialog(ValidatedTextWidget.field_Z, PainterStyle.field_a), false);
             }
             return;
           }

@@ -27,7 +27,7 @@ final class AgeValidator extends TextFieldValidator {
               GzipDecoder.field_d = ChatMessage.field_i;
             } else {
               while (GzipDecoder.field_d != ChatMessage.field_i) {
-                var2 = mp.field_j[ChatMessage.field_i];
+                var2 = BlobSubmission.field_j[ChatMessage.field_i];
                 ChatMessage.field_i = 1 + ChatMessage.field_i & 127;
                 if (var2 >= 0) {
                   GameplayHelpScreen.field_G[var2] = true;

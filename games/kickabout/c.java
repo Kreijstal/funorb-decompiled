@@ -38,10 +38,10 @@ final class c {
         try {
           IOException iOException = null;
           Throwable decompiledCaughtException = null;
-          if (op.field_y != null && (param0 < 0 ||
+          if (SpriteButtonPainter.field_y != null && (param0 < 0 ||
             un.field_c == RegistrationRequestDialog.field_rb)) {
             if (0 == or.field_d.field_n &&
-              (mp.field_i + 10000L) < nj.monotonicMillis(86)) {
+              (BlobSubmission.field_i + 10000L) < MonotonicClock.monotonicMillis(86)) {
               or.field_d.b(param0, (byte) 101);
             }
             if (param1) {
@@ -49,8 +49,8 @@ final class c {
             }
             if (or.field_d.field_n > 0) {
               try {
-                op.field_y.write(or.field_d.field_n, (byte) -127, 0, or.field_d.field_f);
-                mp.field_i = nj.monotonicMillis(-117);
+                SpriteButtonPainter.field_y.write(or.field_d.field_n, (byte) -127, 0, or.field_d.field_f);
+                BlobSubmission.field_i = MonotonicClock.monotonicMillis(-117);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;

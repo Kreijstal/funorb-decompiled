@@ -393,7 +393,7 @@ final class StatChoiceDialog extends MessageDialog {
             field_F = (TextFieldNode) null;
           }
           var3Lifetime1 = new ManagerAction(8, new int[]{param0, param2});
-          ii.a(var3Lifetime1, 76);
+          AchievementSubmission.applyAndQueueManagerAction(var3Lifetime1, 76);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "rt.C(" + param0 + ',' + param1 + ',' + param2 + ')');
         }

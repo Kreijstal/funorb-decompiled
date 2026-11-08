@@ -386,7 +386,7 @@ class UiWidget extends IntrusiveNode {
             this.handlePointerWheel(ArchiveManager.field_m, this, param2, BytePlusOneCommand.field_A, param0, StatefulTextPainter.field_v, param1 ^ 31923);
           }
           if (WidgetContainer.field_A != 0) {
-            if (this.handlePointerPress(true, param0, sm.field_q, this, ReceivedAuctionItem.field_y, param2, WidgetContainer.field_A)) {
+            if (this.handlePointerPress(true, param0, HighScoreSubmission.field_q, this, ReceivedAuctionItem.field_y, param2, WidgetContainer.field_A)) {
               param3 = false;
             } else {
               if (var5 != 0) {
@@ -397,12 +397,12 @@ class UiWidget extends IntrusiveNode {
           if (FootballerAgent.field_p == 0 &&
             TextFieldNode.field_Ob != 0) {
             this.handlePointerRelease(param0, ArchiveManager.field_m, BytePlusOneCommand.field_A, this, param1 ^ -31948, param2);
-            var6 = mp.field_g;
+            var6 = BlobSubmission.field_g;
             if (var6 != null) {
               if (var6.field_k instanceof WidgetDropListener) {
                 ((WidgetDropListener) (var6.field_k)).dropped(var6, (DropTargetWidget) null, 14578);
               }
-              mp.field_g = null;
+              BlobSubmission.field_g = null;
             }
           }
         } else {

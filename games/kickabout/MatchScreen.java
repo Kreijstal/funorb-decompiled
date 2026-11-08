@@ -223,7 +223,7 @@ final class MatchScreen extends AppScreen {
           }
           this.matchState.a(this.field_i, this.localSeat, var4, -6);
         }
-        ve.q(-28033);
+        FullscreenErrorDialog.q(-28033);
         if (this.field_E > 0) {
           this.field_E = this.field_E - 16;
         }
@@ -302,7 +302,7 @@ final class MatchScreen extends AppScreen {
           } else {
             this.matchState.disableOpponent = true;
           }
-          hv.a(ServerMessageScreen.field_E, -448);
+          GoalkeeperAiSupport.initializeFadingChat(ServerMessageScreen.field_E, -448);
           nc.a(this.matchState, (byte) -85, this.localSeat, this.isOnlineMatch);
           this.stateReceived = false;
           return;
@@ -338,7 +338,7 @@ final class MatchScreen extends AppScreen {
         }
         if (null != this.phaseController) {
           PacketBuffer.a(-44, WorldSpriteSequence.field_h);
-          hr.a((byte) -48);
+          LookupRecordUpdate.a((byte) -48);
           this.drawScreen(-5, false);
           TeamManagementScreen.e(122);
           this.field_E = 256;
@@ -581,8 +581,8 @@ final class MatchScreen extends AppScreen {
         PlayArea var5Lifetime1;
         var6 = Kickabout.field_G;
         if (param0 != ~this.matchState.phase) {
-          MidiPcmStream.a(true, (byte) -114);
-          MidiPcmStream.a(false, (byte) -114);
+          MidiPcmStream.drawGoalScenery(true, (byte) -114);
+          MidiPcmStream.drawGoalScenery(false, (byte) -114);
         }
         if (!this.stateReceived) {
           var3_ref_uo = IsSixCommand.field_C;

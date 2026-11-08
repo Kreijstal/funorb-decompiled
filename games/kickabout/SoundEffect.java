@@ -11,7 +11,7 @@ final class SoundEffect {
         return new PcmSample(22050, var1, 22050 * this.field_a / 1000, 22050 * this.field_b / 1000);
     }
 
-    final static SoundEffect a(ResourceArchive param0, int param1, int param2) {
+    final static SoundEffect load(ResourceArchive param0, int param1, int param2) {
         byte[] var3 = param0.b(param1, -32669, param2);
         if (var3 == null) {
           return null;
@@ -46,7 +46,7 @@ final class SoundEffect {
           if (this.field_c[var4] != null) {
             var5 = this.field_c[var4].field_w * 22050 / 1000;
             var6 = this.field_c[var4].field_y * 22050 / 1000;
-            var13 = this.field_c[var4].a(var5, this.field_c[var4].field_w);
+            var13 = this.field_c[var4].synthesize(var5, this.field_c[var4].field_w);
             for (var8 = 0; var8 < var5; var8++) {
               var9 = var3[var8 + var6] + (var13[var8] >> 8);
               if ((var9 + 128 & -256) != 0) {
@@ -68,7 +68,7 @@ final class SoundEffect {
           if (var3 != 0) {
             param0.field_n = param0.field_n - 1;
             this.field_c[var2] = new SynthesizedSoundInstrument();
-            this.field_c[var2].a(param0);
+            this.field_c[var2].decode(param0);
           }
         }
         this.field_a = param0.readUnsignedShort((byte) 81);

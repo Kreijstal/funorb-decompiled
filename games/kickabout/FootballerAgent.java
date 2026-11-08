@@ -569,7 +569,7 @@ class FootballerAgent extends MatchAgent {
             stackIn_6_0 = this.archetype;
           }
           var4_int = stackIn_6_0;
-          this.field_A = ea.field_j[var4_int] + (MenuButton.field_q[var4_int] - ea.field_j[var4_int]) * this.stats.effectiveSpeed(this.member, (byte) -84) / 100;
+          this.field_A = ColorQuantizationBox.field_j[var4_int] + (MenuButton.field_q[var4_int] - ColorQuantizationBox.field_j[var4_int]) * this.stats.effectiveSpeed(this.member, (byte) -84) / 100;
           if (this.stats.a((byte) 44, this.member)) {
             stackIn_9_0 = 0;
           } else {

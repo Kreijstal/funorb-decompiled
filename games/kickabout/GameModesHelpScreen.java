@@ -81,7 +81,7 @@ final class GameModesHelpScreen extends PagedHelpScreen {
           stackIn_28_0 = ((var4_int & 2) == 0) ? 0 : 1;
           var6 = stackIn_28_0;
           param3.field_Ob = param2.readUnsignedShort((byte) 81);
-          param3.field_Fb = nj.monotonicMillis(-128) - (long)param2.readInt(4);
+          param3.field_Fb = MonotonicClock.monotonicMillis(-128) - (long)param2.readInt(4);
           if (var5 != 0) {
             param3.field_ac = param2.readInt(4);
           } else {
@@ -462,7 +462,7 @@ final class GameModesHelpScreen extends PagedHelpScreen {
           }
         }
         if (this.pageIndex == 2) {
-          var4 = (double)(nj.monotonicMillis(61) >> 5);
+          var4 = (double)(MonotonicClock.monotonicMillis(61) >> 5);
           this.field_J = (int)(Math.sin(var4 * 3.141592653589793 / 256.0) * 140.0);
         }
     }

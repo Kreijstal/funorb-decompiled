@@ -45,12 +45,12 @@ final class MusicPatchPcmStream extends PcmStream {
         this.field_i.skipFrames(param0);
         var3 = (MusicPatchNode) (this.field_j.g(24009));
         while (var3 != null) {
-          stackIn_3_0 = this.field_l.a(-25102, var3);
+          stackIn_3_0 = this.field_l.removeNoteWithoutStream(-25102, var3);
           boolean decompiledFrameCompleted0 = true;
           if (!stackIn_3_0) {
             var2 = param0;
             while (var3.field_B < var2) {
-              this.a(var3.field_B, var3, (byte) -105);
+              this.skipNoteFrames(var3.field_B, var3, (byte) -105);
               var2 = var2 - var3.field_B;
               if (this.field_l.updateNote(-123, var2, 0, var3, (int[]) null)) {
                 decompiledFrameCompleted0 = false;
@@ -58,7 +58,7 @@ final class MusicPatchPcmStream extends PcmStream {
               }
             }
             if (decompiledFrameCompleted0) {
-              this.a(var2, var3, (byte) 46);
+              this.skipNoteFrames(var2, var3, (byte) 46);
               var3.field_B = var3.field_B - var2;
             }
           }
@@ -66,7 +66,7 @@ final class MusicPatchPcmStream extends PcmStream {
         }
     }
 
-    private final void a(int param0, MusicPatchNode param1, byte param2) {
+    private final void skipNoteFrames(int param0, MusicPatchNode param1, byte param2) {
         MidiPcmStream stackIn_7_0 = null;
         boolean stackIn_7_1 = false;
         MusicPatchNode stackIn_7_2 = null;
@@ -83,19 +83,19 @@ final class MusicPatchPcmStream extends PcmStream {
           var4_int = 65 / ((-22 - param2) / 49);
           if ((4 & this.field_l.field_i[param1.field_q]) != 0 &&
             param1.field_s < 0) {
-            var5 = this.field_l.field_o[param1.field_q] / PcmPlayerService.field_i;
+            var5 = this.field_l.field_o[param1.field_q] / PcmPlayerService.sampleRate;
             var6 = (1048575 + var5 - param1.field_r) / var5;
             param1.field_r = param0 * var5 + param1.field_r & 1048575;
             if (var6 <= param0) {
-              if (this.field_l.field_s[param1.field_q] == 0) {
-                param1.field_F = PcmSampleStream.b(param1.field_y, param1.field_F.getSampleStepMagnitude(), param1.field_F.getTargetVolume(), param1.field_F.k());
+              if (this.field_l.sampleOffsets[param1.field_q] == 0) {
+                param1.field_F = PcmSampleStream.createAtFixedStep(param1.field_y, param1.field_F.getSampleStepMagnitude(), param1.field_F.getTargetVolume(), param1.field_F.getPan());
               } else {
-                param1.field_F = PcmSampleStream.b(param1.field_y, param1.field_F.getSampleStepMagnitude(), 0, param1.field_F.k());
+                param1.field_F = PcmSampleStream.createAtFixedStep(param1.field_y, param1.field_F.getSampleStepMagnitude(), 0, param1.field_F.getPan());
                 stackIn_7_0 = this.field_l;
                 stackIn_7_1 = false;
                 stackIn_7_2 = (MusicPatchNode) (param1);
                 stackIn_8_3 = !(param1.field_g.field_r[param1.field_e] >= 0);
-                ((MidiPcmStream) (Object) stackIn_7_0).a(stackIn_7_1, stackIn_7_2, stackIn_8_3);
+                ((MidiPcmStream) (Object) stackIn_7_0).applySampleOffset(stackIn_7_1, stackIn_7_2, stackIn_8_3);
               }
               if (0 > param1.field_g.field_r[param1.field_e]) {
                 param1.field_F.setLoopCount(-1);
@@ -135,13 +135,13 @@ final class MusicPatchPcmStream extends PcmStream {
           this.field_i.mixInto(param0, param1, param2);
           var6 = (MusicPatchNode) (this.field_j.g(24009));
           while (var6 != null) {
-            stackIn_4_0 = this.field_l.a(-25102, var6);
+            stackIn_4_0 = this.field_l.removeNoteWithoutStream(-25102, var6);
             boolean decompiledFrameCompleted0 = true;
             if (!stackIn_4_0) {
               var5 = param2;
               var4_int = param1;
               while (var5 > var6.field_B) {
-                this.a(0, var6.field_B, var4_int, param0, var6, var5 + var4_int);
+                this.mixNoteFrames(0, var6.field_B, var4_int, param0, var6, var5 + var4_int);
                 var4_int = var4_int + var6.field_B;
                 var5 = var5 - var6.field_B;
                 if (this.field_l.updateNote(-30, var5, var4_int, var6, param0)) {
@@ -150,7 +150,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 }
               }
               if (decompiledFrameCompleted0) {
-                this.a(0, var5, var4_int, param0, var6, var5 + var4_int);
+                this.mixNoteFrames(0, var5, var4_int, param0, var6, var5 + var4_int);
                 var6.field_B = var6.field_B - var5;
               }
             }
@@ -443,7 +443,7 @@ final class MusicPatchPcmStream extends PcmStream {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int[] param3, MusicPatchNode param4, int param5) {
+    private final void mixNoteFrames(int param0, int param1, int param2, int[] param3, MusicPatchNode param4, int param5) {
         MidiPcmStream stackIn_11_0 = null;
         boolean stackIn_11_1 = false;
         MusicPatchNode stackIn_11_2 = null;
@@ -465,7 +465,7 @@ final class MusicPatchPcmStream extends PcmStream {
         try {
           if ((this.field_l.field_i[param4.field_q] & 4) != param0 &&
             0 > param4.field_s) {
-            var7_int = this.field_l.field_o[param4.field_q] / PcmPlayerService.field_i;
+            var7_int = this.field_l.field_o[param4.field_q] / PcmPlayerService.sampleRate;
             while (true) {
               var8 = (var7_int + 1048575 - param4.field_r) / var7_int;
               if (param1 < var8) {
@@ -476,22 +476,22 @@ final class MusicPatchPcmStream extends PcmStream {
               param1 = param1 - var8;
               param4.field_r = param4.field_r + (var7_int * var8 - 1048576);
               param2 = param2 + var8;
-              var9 = PcmPlayerService.field_i / 100;
+              var9 = PcmPlayerService.sampleRate / 100;
               var10 = 262144 / var7_int;
               if (var9 > var10) {
                 var9 = var10;
               }
               var11 = param4.field_F;
-              if (this.field_l.field_s[param4.field_q] != 0) {
-                param4.field_F = PcmSampleStream.b(param4.field_y, var11.getSampleStepMagnitude(), 0, var11.k());
+              if (this.field_l.sampleOffsets[param4.field_q] != 0) {
+                param4.field_F = PcmSampleStream.createAtFixedStep(param4.field_y, var11.getSampleStepMagnitude(), 0, var11.getPan());
                 stackIn_11_0 = this.field_l;
                 stackIn_11_1 = false;
                 stackIn_11_2 = (MusicPatchNode) (param4);
                 stackIn_12_3 = !(0 <= param4.field_g.field_r[param4.field_e]);
-                ((MidiPcmStream) (Object) stackIn_11_0).a(stackIn_11_1, stackIn_11_2, stackIn_12_3);
-                param4.field_F.c(var9, var11.getTargetVolume());
+                ((MidiPcmStream) (Object) stackIn_11_0).applySampleOffset(stackIn_11_1, stackIn_11_2, stackIn_12_3);
+                param4.field_F.rampInternalVolume(var9, var11.getTargetVolume());
               } else {
-                param4.field_F = PcmSampleStream.b(param4.field_y, var11.getSampleStepMagnitude(), var11.getTargetVolume(), var11.k());
+                param4.field_F = PcmSampleStream.createAtFixedStep(param4.field_y, var11.getSampleStepMagnitude(), var11.getTargetVolume(), var11.getPan());
               }
               if (param4.field_g.field_r[param4.field_e] < 0) {
                 param4.field_F.setLoopCount(-1);

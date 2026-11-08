@@ -117,7 +117,7 @@ final class AccountMessagePanel extends WidgetContainer implements ButtonListene
             return stackIn_2_0;
           }
           var4 = new TextButton(param0, param1);
-          var4.field_r = (WidgetPainter) ((Object) new op());
+          var4.field_r = (WidgetPainter) ((Object) new SpriteButtonPainter());
           var5 = -2 + this.field_i;
           this.setBounds(34 + this.field_i, 1, 0, this.field_n, 0);
           var4.setBounds(30, param2 ^ 78, 7, this.field_n - 14, var5);
@@ -189,7 +189,7 @@ final class AccountMessagePanel extends WidgetContainer implements ButtonListene
           return LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, po.field_g, new String[]{ad.formatCurrencyAmount(param2, 26300), ad.formatCurrencyAmount((int)((double)param2 * 0.9), 26300)});
         }
         if (param0 == 2) {
-          return rp.field_C;
+          return PasswordFieldPainter.field_C;
         }
         if (!param1) {
           throw new IllegalStateException();

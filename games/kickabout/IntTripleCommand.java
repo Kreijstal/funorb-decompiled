@@ -63,7 +63,7 @@ final class IntTripleCommand extends ConsoleCommand {
     }
 
     final static int h(int param0) {
-        int var1 = (int)(nj.monotonicMillis(-109) % 1440L) - 1000;
+        int var1 = (int)(MonotonicClock.monotonicMillis(-109) % 1440L) - 1000;
         if (var1 > 0) {
           return 256 - (var1 % 220 << 8) / 220;
         }
@@ -148,7 +148,7 @@ final class IntTripleCommand extends ConsoleCommand {
           return;
         }
         po.field_f = true;
-        wd.field_l.k(103);
+        RankingsRequest.field_l.k(103);
         MouseInputHandler.a(ul.field_a, 4, false);
     }
 

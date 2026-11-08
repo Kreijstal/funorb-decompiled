@@ -77,7 +77,7 @@ final class SquadSlotWidget extends UiLayoutNode {
           }
           return;
         }
-        PacketBuffer.a(85, dc.field_b);
+        PacketBuffer.a(85, PortraitCacheOrder.field_b);
         SoftwareRasterizer.clearFramebuffer();
         var5 = new int[4];
         var4 = var5;
@@ -90,13 +90,13 @@ final class SquadSlotWidget extends UiLayoutNode {
         this.field_Db.renderModel(var3[this.field_Eb.archetype], 0, SoftwareRasterizer.field_g >> 1, SoftwareRasterizer.field_f - 8, (byte) -122);
         TeamManagementScreen.e(117);
         if (this.field_zb) {
-          eo.a(dc.field_b, 1);
-          eo.a(dc.field_b, 2);
+          eo.a(PortraitCacheOrder.field_b, 1);
+          eo.a(PortraitCacheOrder.field_b, 2);
         } else {
           if (this.field_Kb) {
-            eo.a(dc.field_b, 1);
-            eo.a(dc.field_b, 2);
-            dc.field_b.drawHalfSize(this.field_F, this.field_T);
+            eo.a(PortraitCacheOrder.field_b, 1);
+            eo.a(PortraitCacheOrder.field_b, 2);
+            PortraitCacheOrder.field_b.drawHalfSize(this.field_F, this.field_T);
             if (this.field_Hb) {
               SoftwareRasterizer.fillRoundedRectangleBlended(this.field_F + 1, -22 + this.field_mb + this.field_T, this.field_q - 2, 19, 7, 65793, 170);
               PlayerContextMenu.a(this.field_F + 12, (byte) 126, this.field_T + (this.field_mb - 12));
@@ -111,7 +111,7 @@ final class SquadSlotWidget extends UiLayoutNode {
             return;
           }
         }
-        dc.field_b.drawHalfSize(this.field_F, this.field_T);
+        PortraitCacheOrder.field_b.drawHalfSize(this.field_F, this.field_T);
         if (this.field_Hb) {
           SoftwareRasterizer.fillRoundedRectangleBlended(this.field_F + 1, -22 + this.field_mb + this.field_T, this.field_q - 2, 19, 7, 65793, 170);
           PlayerContextMenu.a(this.field_F + 12, (byte) 126, this.field_T + (this.field_mb - 12));

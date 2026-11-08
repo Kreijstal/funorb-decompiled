@@ -25,16 +25,16 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
         field_Bb = null;
     }
 
-    final static wd a(int param0, byte param1, int param2, int param3) {
+    final static RankingsRequest a(int param0, byte param1, int param2, int param3) {
         int var5 = Kickabout.field_G;
-        wd var4 = (wd) (WorldDrawEntry.field_i.g(param1 + 23909));
+        RankingsRequest var4 = (RankingsRequest) (WorldDrawEntry.field_i.g(param1 + 23909));
         while (var4 != null) {
           if (var4.field_k == param2) {
             return var4;
           }
-          var4 = (wd) (WorldDrawEntry.field_i.c(33));
+          var4 = (RankingsRequest) (WorldDrawEntry.field_i.c(33));
         }
-        var4 = new wd();
+        var4 = new RankingsRequest();
         var4.field_p = param0;
         var4.field_k = param2;
         WorldDrawEntry.field_i.addLast(var4, 3);
@@ -195,7 +195,7 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
                 stackIn_77_3 = -2 + this.field_F - var6;
                 stackIn_78_4 = (var2 != 0) ? false : true;
                 DraggableWidget.a(stackIn_77_0, stackIn_77_1, stackIn_77_2, stackIn_77_3, stackIn_78_4, var3 != 0, 4);
-                ConsoleTokenCursor.field_d.d(h.field_b[this.field_Db][this.field_zb].toUpperCase(), this.field_F + (this.field_q >> 1), this.field_mb + this.field_T - 9, 16777215, -1);
+                ConsoleTokenCursor.field_d.d(QuickChatMenuBuilder.field_b[this.field_Db][this.field_zb].toUpperCase(), this.field_F + (this.field_q >> 1), this.field_mb + this.field_T - 9, 16777215, -1);
                 if (var2 == 0) {
                   IsSixCommand.field_C.d(this.field_Eb, -2 + ((this.field_q >> 1) + this.field_F), this.field_T + 40, 16777215, -1);
                 }
@@ -218,7 +218,7 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
               stackIn_90_3 = -2 + this.field_F - var6;
               stackIn_91_4 = (var2 != 0) ? false : true;
               DraggableWidget.a(stackIn_90_0, stackIn_90_1, stackIn_90_2, stackIn_90_3, stackIn_91_4, var3 != 0, 4);
-              ConsoleTokenCursor.field_d.d(h.field_b[this.field_Db][this.field_zb].toUpperCase(), this.field_F + (this.field_q >> 1), this.field_mb + this.field_T - 9, 16777215, -1);
+              ConsoleTokenCursor.field_d.d(QuickChatMenuBuilder.field_b[this.field_Db][this.field_zb].toUpperCase(), this.field_F + (this.field_q >> 1), this.field_mb + this.field_T - 9, 16777215, -1);
               if (var2 == 0) {
                 IsSixCommand.field_C.d(this.field_Eb, -2 + ((this.field_q >> 1) + this.field_F), this.field_T + 40, 16777215, -1);
               }
@@ -245,7 +245,7 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
             }
           }
         }
-        ConsoleTokenCursor.field_d.d(h.field_b[this.field_Db][this.field_zb].toUpperCase(), this.field_F + (this.field_q >> 1), this.field_mb + this.field_T - 9, 16777215, -1);
+        ConsoleTokenCursor.field_d.d(QuickChatMenuBuilder.field_b[this.field_Db][this.field_zb].toUpperCase(), this.field_F + (this.field_q >> 1), this.field_mb + this.field_T - 9, 16777215, -1);
         if (var2 == 0) {
           IsSixCommand.field_C.d(this.field_Eb, -2 + ((this.field_q >> 1) + this.field_F), this.field_T + 40, 16777215, -1);
         }
@@ -559,7 +559,7 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
                 stackIn_49_3 = var5;
                 stackIn_50_4 = (this.i(-29050)) ? false : true;
                 DraggableWidget.a(stackIn_49_0, stackIn_49_1, stackIn_49_2, stackIn_49_3, stackIn_50_4, false, param1 ^ 19);
-                ConsoleTokenCursor.field_d.d(h.field_b[this.field_Db][this.field_zb], -5 + param2, 8 + param0, 16777215, -1);
+                ConsoleTokenCursor.field_d.d(QuickChatMenuBuilder.field_b[this.field_Db][this.field_zb], -5 + param2, 8 + param0, 16777215, -1);
                 return;
               }
               var5 += 4;
@@ -620,7 +620,7 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
             }
           }
         }
-        ConsoleTokenCursor.field_d.d(h.field_b[this.field_Db][this.field_zb], -5 + param2, 8 + param0, 16777215, -1);
+        ConsoleTokenCursor.field_d.d(QuickChatMenuBuilder.field_b[this.field_Db][this.field_zb], -5 + param2, 8 + param0, 16777215, -1);
     }
 
     final static boolean updateOutfielderAI(CommonGame param0, byte param1, int param2, int param3) {
@@ -651,13 +651,13 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
             if (var4_int != 0) {
               return false;
             }
-            ri.updateIdleMovement((byte) -93, param2, param0, param3);
+            BeveledTextPainter.updateIdleMovement((byte) -93, param2, param0, param3);
           } else {
             var7 = 1 - param0.field_X.goalScorer;
             if (param0.disableOpponent) {
               var7 = 0;
             }
-            go.moveToTarget(AudioService.a((byte) 21, param2, param3, var7), param0, 0, param3, param2, ts.a(param2, var7, param3, 448));
+            go.moveToTarget(AudioService.formationY((byte) 21, param2, param3, var7), param0, 0, param3, param2, ts.a(param2, var7, param3, 448));
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -785,7 +785,7 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
             IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(stackIn_78_0, stackIn_79_1);
           } else {
             if (var5 != 0) {
-              IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ConsoleValue.field_e, new String[]{h.field_b[this.field_Db][this.field_zb], h.field_b[this.field_Db][this.field_zb - 1]}));
+              IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ConsoleValue.field_e, new String[]{QuickChatMenuBuilder.field_b[this.field_Db][this.field_zb], QuickChatMenuBuilder.field_b[this.field_Db][this.field_zb - 1]}));
               if (null != this.field_Ab) {
                 var6Lifetime2 = ResizableModalPanel.field_M[this.field_zb];
                 stackIn_59_0 = this.field_Ab;

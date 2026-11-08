@@ -8,7 +8,7 @@ final class ClientUiOverlay implements OverlayLayer {
     private int field_h;
     static long field_d;
     static String field_c;
-    static hh field_b;
+    static FullscreenFailureReason field_b;
     static String[] field_f;
 
     final static void pushRasterState(int param0) {
@@ -88,7 +88,7 @@ final class ClientUiOverlay implements OverlayLayer {
         return var1;
     }
 
-    final static int a(ea param0, boolean param1, ea param2) {
+    final static int a(ColorQuantizationBox param0, boolean param1, ColorQuantizationBox param2) {
         int stackIn_12_0 = 0;
         int stackIn_23_0 = 0;
         RuntimeException stackIn_26_0 = null;
@@ -376,6 +376,6 @@ final class ClientUiOverlay implements OverlayLayer {
         }
         field_c = "In an Exhibition Game you don't play with your normal team, but with premade level 50 players instead.";
         field_f = new String[]{"Showing by rating", "Showing by win percentage"};
-        field_b = new hh();
+        field_b = new FullscreenFailureReason();
     }
 }

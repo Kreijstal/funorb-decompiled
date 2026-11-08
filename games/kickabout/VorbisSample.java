@@ -192,7 +192,7 @@ final class VorbisSample extends IntrusiveNode {
         field_L = null;
     }
 
-    private final static void a(byte[] param0, int param1) {
+    private final static void setBitInput(byte[] param0, int param1) {
         field_G = param0;
         field_C = param1;
         field_h = 0;
@@ -229,7 +229,7 @@ final class VorbisSample extends IntrusiveNode {
         int var4Lifetime2;
         int var5Lifetime1;
         int var5Lifetime2;
-        VorbisSample.a(param0, 0);
+        VorbisSample.setBitInput(param0, 0);
         field_B = 1 << VorbisSample.readBits(4);
         field_i = 1 << VorbisSample.readBits(4);
         field_j = new float[field_i];
@@ -357,7 +357,7 @@ final class VorbisSample extends IntrusiveNode {
         return true;
     }
 
-    final static float a(int param0) {
+    final static float unpackFloat(int param0) {
         int var1 = param0 & 2097151;
         int var2 = param0 & -2147483648;
         int var3 = (param0 & 2145386496) >> 21;
@@ -514,7 +514,7 @@ final class VorbisSample extends IntrusiveNode {
         float var30Lifetime1Lifetime3;
         int var18_intLifetime1;
         int var18_intLifetime2;
-        VorbisSample.a(this.field_E[param0], 0);
+        VorbisSample.setBitInput(this.field_E[param0], 0);
         VorbisSample.readBit();
         var2 = VorbisSample.readBits(ResizableModalPanel.a(true, field_g.length - 1));
         var3 = field_K[var2] ? 1 : 0;

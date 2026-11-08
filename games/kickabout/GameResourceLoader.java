@@ -83,10 +83,10 @@ final class GameResourceLoader implements LoadingSequence {
           AnimationPlayer.a((byte) 49);
           return false;
         }
-        if (ni.field_i != null) {
+        if (HighScoreQuery.field_i != null) {
           CipherPacketBuffer.k(61, 1);
-          f.a(ni.field_i, (byte) -122);
-          ni.field_i = null;
+          f.a(HighScoreQuery.field_i, (byte) -122);
+          HighScoreQuery.field_i = null;
           AnimationPlayer.a((byte) 53);
           return false;
         }
@@ -117,7 +117,7 @@ final class GameResourceLoader implements LoadingSequence {
           sk.a(83, 100, 10);
           var6 = wa.a((byte) 100, "basic", var16, "orbcoin");
           LoggedGoal.a(var6, (ArgbSprite) (QuickChatPhraseDefinition.a("menu", QuickChatKeysHelpPanel.field_Cb, (byte) 77, "locked")), (ArgbSprite) (QuickChatPhraseDefinition.a("menu", QuickChatKeysHelpPanel.field_Cb, (byte) 77, "unachieved")), -123);
-          sh.field_g = nh.downscaleArgbByHalf(nh.a(var6));
+          sh.field_g = SpritePixelSupport.downscaleArgbByHalf(SpritePixelSupport.a(var6));
           AccountChoicePanel.field_B = (ArgbSprite) (QuickChatPhraseDefinition.a("menu", QuickChatKeysHelpPanel.field_Cb, (byte) 69, "divider"));
           tt.field_e = wa.a((byte) 122, "menu", QuickChatKeysHelpPanel.field_Cb, "button_left_shine");
           GameAppletShell.field_l = wa.a((byte) 106, "menu", QuickChatKeysHelpPanel.field_Cb, "button_middle_shine");
@@ -157,7 +157,7 @@ final class GameResourceLoader implements LoadingSequence {
           }
           ca.field_c = new ArgbSprite[4];
           for (var10_intLifetime2 = 0; var10_intLifetime2 < ca.field_c.length; var10_intLifetime2++) {
-            ca.field_c[var10_intLifetime2] = ri.a(ScrollContainer.field_Fb[var10_intLifetime2][0], param0);
+            ca.field_c[var10_intLifetime2] = BeveledTextPainter.a(ScrollContainer.field_Fb[var10_intLifetime2][0], param0);
           }
           ArchiveIndex.field_m = (ArgbSprite) (QuickChatPhraseDefinition.a("menu", QuickChatKeysHelpPanel.field_Cb, (byte) 96, "help_up"));
           QuickChatPhraseDefinition.a("menu", QuickChatKeysHelpPanel.field_Cb, (byte) 100, "help_dwn");
@@ -182,7 +182,7 @@ final class GameResourceLoader implements LoadingSequence {
           var11 = new Sprite[][]{eo.field_p, null, eo.field_m, eo.field_j};
           var12 = new Sprite[][]{eo.field_p, null, eo.field_m, eo.field_j};
           int[] var15 = (int[]) null;
-          uf.a(var11, StatefulTextPainter.field_y, ArchiveSource.field_c, true, ld.field_g, var10, var16, 16971, or.field_b, WorldSpriteSequence.field_e, var17, UrlRequest.field_c, rp.field_y, ld.field_h, Bzip2State.field_i, var12, (int[]) null, 8, 3, TextFieldValidator.field_i);
+          uf.a(var11, StatefulTextPainter.field_y, ArchiveSource.field_c, true, ld.field_g, var10, var16, 16971, or.field_b, WorldSpriteSequence.field_e, var17, UrlRequest.field_c, PasswordFieldPainter.field_y, ld.field_h, Bzip2State.field_i, var12, (int[]) null, 8, 3, TextFieldValidator.field_i);
           PlayArea.field_k = MusicPatchNode.field_k;
           IndexedSpriteState.field_e = FormationView.field_n;
           TextButton.field_z = MyKitScreen.field_Z;
@@ -203,32 +203,32 @@ final class GameResourceLoader implements LoadingSequence {
           CachedListingRow.field_k = new Sprite(ResourceArchive.field_f.takeFileByName("splash.jpg", "", 8), (java.awt.Component) ((Object) DropTargetWidget.l(64)));
           AccountTermsPanel.field_E = new Sprite(ResourceArchive.field_f.takeFileByName("botbar.png", "", 66), (java.awt.Component) ((Object) DropTargetWidget.l(64)));
           sk.a(-114, 23, 2);
-          LoginDialog.field_cb = nh.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("bank_top.png", "", 3), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
-          AccountChoicePanel.field_C = nh.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("bank_mid.png", "", 52), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
-          MarkerSliderPainter.field_i = nh.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("bank_bot.png", "", 123), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
-          TextHotspotWidget.field_L = nh.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("button_lrg.png", "", 91), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
-          DirectByteStorage.field_m = nh.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("button_sml.png", "", 81), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
+          LoginDialog.field_cb = SpritePixelSupport.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("bank_top.png", "", 3), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
+          AccountChoicePanel.field_C = SpritePixelSupport.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("bank_mid.png", "", 52), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
+          MarkerSliderPainter.field_i = SpritePixelSupport.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("bank_bot.png", "", 123), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
+          TextHotspotWidget.field_L = SpritePixelSupport.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("button_lrg.png", "", 91), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
+          DirectByteStorage.field_m = SpritePixelSupport.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("button_sml.png", "", 81), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
           sk.a(122, 23, 4);
           AccountChoicePanel.field_K = new ArgbSprite(ResourceArchive.field_f.takeFileByName("cone_1.png", "", 91), (java.awt.Component) ((Object) DropTargetWidget.l(64)));
           CheckboxPainter.field_o = new ArgbSprite(ResourceArchive.field_f.takeFileByName("cone_2.png", "", 91), (java.awt.Component) ((Object) DropTargetWidget.l(64)));
-          PlayerContextMenu.field_m = nh.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("button_left.png", "", 8), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
-          SetLagCommand.field_B = nh.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("button_middle.png", "", 97), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
+          PlayerContextMenu.field_m = SpritePixelSupport.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("button_left.png", "", 8), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
+          SetLagCommand.field_B = SpritePixelSupport.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("button_middle.png", "", 97), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
           sk.a(-114, 23, 6);
-          SquadGridWidget.field_Cb = nh.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("button_right.png", "", 90), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
+          SquadGridWidget.field_Cb = SpritePixelSupport.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("button_right.png", "", 90), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
           AuctionSettingsDialog.field_H = (Sprite) ((Object) new ArgbSprite(ResourceArchive.field_f.takeFileByName("stopwatch.png", "", 101), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
           sk.a(-58, 23, 8);
-          nh.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("thin_button_endl.png", "", 89), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
-          nh.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("thin_button_mid.png", "", 5), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
+          SpritePixelSupport.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("thin_button_endl.png", "", 89), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
+          SpritePixelSupport.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("thin_button_mid.png", "", 5), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
           sk.a(-105, 23, 10);
-          nh.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("thin_button_endr.png", "", 58), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
-          ContextMenu.field_zb = nh.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("small_button_L.png", "", 52), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
+          SpritePixelSupport.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("thin_button_endr.png", "", 58), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
+          ContextMenu.field_zb = SpritePixelSupport.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("small_button_L.png", "", 52), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
           sk.a(-61, 23, 12);
-          AccountRegistrationPanel.field_H = nh.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("small_button_mid.png", "", 53), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
-          fv.field_b = nh.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("small_button_R.png", "", 117), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
+          AccountRegistrationPanel.field_H = SpritePixelSupport.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("small_button_mid.png", "", 53), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
+          TooltipOverlay.field_b = SpritePixelSupport.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("small_button_R.png", "", 117), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
           sk.a(-85, 23, 14);
-          mg.field_g = nh.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("top_bar_Seg.png", "", 127), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
+          mg.field_g = SpritePixelSupport.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("top_bar_Seg.png", "", 127), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
           sk.a(-49, 23, 16);
-          ButtonMenuScreen.field_u = nh.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("top.png", "", 82), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
+          ButtonMenuScreen.field_u = SpritePixelSupport.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("top.png", "", 82), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
           sk.a(-98, 23, 18);
           Trinket.field_f = new ArgbSprite(ResourceArchive.field_f.takeFileByName("asphalt_corner.png", "", 6), (java.awt.Component) ((Object) DropTargetWidget.l(64)));
           TrinketPickerDialog.field_J = new Sprite(ResourceArchive.field_f.takeFileByName("asphalt_v.png", "", 69), (java.awt.Component) ((Object) DropTargetWidget.l(64)));
@@ -261,7 +261,7 @@ final class GameResourceLoader implements LoadingSequence {
           return true;
         }
         CipherPacketBuffer.k(61, 6);
-        rf.a(20113, ContextMenuItem.field_Eb, ListingRowCache.field_h, KitStyleTile.field_Bb);
+        SocialTabsPanel.loadCharacterAnimations(20113, ContextMenuItem.field_Eb, ListingRowCache.field_h, KitStyleTile.field_Bb);
         KitStyleTile.field_Bb = null;
         ContextMenuItem.field_Eb = null;
         ListingRowCache.field_h = null;
@@ -337,8 +337,8 @@ final class GameResourceLoader implements LoadingSequence {
           }
           var10 = ChatMessage.field_b[2];
           var11 = var10;
-          var2 = nh.toMaskedSprite((ArgbSprite) (c.field_e));
-          var3 = nh.toMaskedSprite((ArgbSprite) (CachedTextLayout.field_q));
+          var2 = SpritePixelSupport.toMaskedSprite((ArgbSprite) (c.field_e));
+          var3 = SpritePixelSupport.toMaskedSprite((ArgbSprite) (CachedTextLayout.field_q));
           if (RankingsScreen.field_C == 0) {
             IntValueNode.field_e = new WorldSpriteDecoration[30];
             var4 = 0;
@@ -506,7 +506,7 @@ final class GameResourceLoader implements LoadingSequence {
         TriangleRasterizer.a(0.6000000238418579f);
         g.b(false);
         Trinket.i(18);
-        ii.b(65280);
+        AchievementSubmission.buildTrinketPreviewSprites(65280);
         CipherPacketBuffer.k(61, 8);
         TrinketCatalog.buildTrinketTable(param0 - 12854);
         sk.a(118, 2, 1);
@@ -522,9 +522,9 @@ final class GameResourceLoader implements LoadingSequence {
         GameLoopApplet.n((byte) -10);
         CipherPacketBuffer.k(61, 10);
         TeamSelectionView.b((byte) -47);
-        rf.a((byte) -124);
+        SocialTabsPanel.a((byte) -124);
         sk.a(127, 4, 1);
-        op.a(param0 ^ -363033958);
+        SpriteButtonPainter.a(param0 ^ -363033958);
         sk.a(-69, 4, 2);
         Bzip2State.a(param0 - 12857);
         sk.a(-124, 4, 3);
@@ -541,7 +541,7 @@ final class GameResourceLoader implements LoadingSequence {
           }
           var3.addOutline(-16777216);
           var3.addOutline(2130706432);
-          MySquadScreen.field_U[var2] = (Sprite) ((Object) nh.downscaleArgbByHalf(var3));
+          MySquadScreen.field_U[var2] = (Sprite) ((Object) SpritePixelSupport.downscaleArgbByHalf(var3));
         }
         CipherPacketBuffer.k(61, 11);
         if (param0 != 12763) {
@@ -565,7 +565,7 @@ final class GameResourceLoader implements LoadingSequence {
         oa.registerOverlay(false, new DialogOverlay());
         oa.registerOverlay(false, new vp());
         oa.registerOverlay(false, new TrinketUnlockNotice());
-        oa.registerOverlay(false, new fv());
+        oa.registerOverlay(false, new TooltipOverlay());
     }
 
     final boolean pollMessageOfTheDay(int param0) {
@@ -642,7 +642,7 @@ final class GameResourceLoader implements LoadingSequence {
         IterableNodeHashTable.field_c = ImageProducerRasterBuffer.a((byte) -127, 7);
         d.field_b = ImageProducerRasterBuffer.a((byte) -128, 8);
         vp.field_j = ImageProducerRasterBuffer.a((byte) -127, 9);
-        ni.field_i = ImageProducerRasterBuffer.a((byte) -127, 10);
+        HighScoreQuery.field_i = ImageProducerRasterBuffer.a((byte) -127, 10);
         if (param0 != 7312) {
           this.field_d = false;
         }
@@ -653,40 +653,40 @@ final class GameResourceLoader implements LoadingSequence {
         ResourceArchive.field_f = ImageProducerRasterBuffer.a((byte) -126, 17);
         ResourceArchive var4 = CanvasResizePolicy.field_g;
         ResourceArchive var3 = IterableNodeHashTable.field_b;
-        mp.field_h = new ArchivePreloader(55);
-        mp.field_h.a(var4, BufferedSocket.field_q, -6869, "basic", CommonGame.field_M);
-        mp.field_h.a(ResourceArchive.field_f, BufferedSocket.field_q, -6869, "", CommonGame.field_M);
-        mp.field_h.a(var4, BufferedSocket.field_q, -6869, "arialish12", CommonGame.field_M);
-        mp.field_h.a(QuickChatKeysHelpPanel.field_Cb, TextLine.field_l, -6869, "fonts", CommonGame.field_M);
-        mp.field_h.a(EntityAfterimage.field_b, TextLine.field_l, -6869, "fonts", te.field_b);
-        mp.field_h.a(var3, TextLine.field_l, -6869, "arialish12", te.field_b);
-        mp.field_h.a(var3, TextLine.field_l, -6869, "lobby", te.field_b);
-        mp.field_h.a(QuickChatKeysHelpPanel.field_Cb, LoggedPossession.field_a, -6869, "menu", CommonGame.field_M);
-        mp.field_h.a(QuickChatKeysHelpPanel.field_Cb, sm.field_j, param0 - 14181, "hud", CommonGame.field_M);
-        mp.field_h.a(QuickChatKeysHelpPanel.field_Cb, StrongCacheEntry.field_B, -6869, "lobby", CommonGame.field_M);
-        mp.field_h.a(var4, StrongCacheEntry.field_B, -6869, "lobby", CommonGame.field_M);
+        BlobSubmission.field_h = new ArchivePreloader(55);
+        BlobSubmission.field_h.a(var4, BufferedSocket.field_q, -6869, "basic", CommonGame.field_M);
+        BlobSubmission.field_h.a(ResourceArchive.field_f, BufferedSocket.field_q, -6869, "", CommonGame.field_M);
+        BlobSubmission.field_h.a(var4, BufferedSocket.field_q, -6869, "arialish12", CommonGame.field_M);
+        BlobSubmission.field_h.a(QuickChatKeysHelpPanel.field_Cb, TextLine.field_l, -6869, "fonts", CommonGame.field_M);
+        BlobSubmission.field_h.a(EntityAfterimage.field_b, TextLine.field_l, -6869, "fonts", te.field_b);
+        BlobSubmission.field_h.a(var3, TextLine.field_l, -6869, "arialish12", te.field_b);
+        BlobSubmission.field_h.a(var3, TextLine.field_l, -6869, "lobby", te.field_b);
+        BlobSubmission.field_h.a(QuickChatKeysHelpPanel.field_Cb, LoggedPossession.field_a, -6869, "menu", CommonGame.field_M);
+        BlobSubmission.field_h.a(QuickChatKeysHelpPanel.field_Cb, HighScoreSubmission.field_j, param0 - 14181, "hud", CommonGame.field_M);
+        BlobSubmission.field_h.a(QuickChatKeysHelpPanel.field_Cb, StrongCacheEntry.field_B, -6869, "lobby", CommonGame.field_M);
+        BlobSubmission.field_h.a(var4, StrongCacheEntry.field_B, -6869, "lobby", CommonGame.field_M);
         if (ih.field_c == 0) {
-          mp.field_h.a(QuickChatKeysHelpPanel.field_Cb, pi.field_c, param0 - 14181, "park", CommonGame.field_M);
-          mp.field_h.a(QuickChatKeysHelpPanel.field_Cb, pi.field_c, param0 - 14181, "park_surface0", CommonGame.field_M);
+          BlobSubmission.field_h.a(QuickChatKeysHelpPanel.field_Cb, pi.field_c, param0 - 14181, "park", CommonGame.field_M);
+          BlobSubmission.field_h.a(QuickChatKeysHelpPanel.field_Cb, pi.field_c, param0 - 14181, "park_surface0", CommonGame.field_M);
         }
         if (ih.field_c == 1) {
-          mp.field_h.a(QuickChatKeysHelpPanel.field_Cb, th.field_b, -6869, "beach", CommonGame.field_M);
-          mp.field_h.a(QuickChatKeysHelpPanel.field_Cb, th.field_b, -6869, "beach_surface0", CommonGame.field_M);
+          BlobSubmission.field_h.a(QuickChatKeysHelpPanel.field_Cb, th.field_b, -6869, "beach", CommonGame.field_M);
+          BlobSubmission.field_h.a(QuickChatKeysHelpPanel.field_Cb, th.field_b, -6869, "beach_surface0", CommonGame.field_M);
         }
         if (ih.field_c == 2) {
-          mp.field_h.a(QuickChatKeysHelpPanel.field_Cb, h.field_d, param0 - 14181, "street", CommonGame.field_M);
-          mp.field_h.a(QuickChatKeysHelpPanel.field_Cb, h.field_d, -6869, "beach_surface0", CommonGame.field_M);
+          BlobSubmission.field_h.a(QuickChatKeysHelpPanel.field_Cb, QuickChatMenuBuilder.field_d, param0 - 14181, "street", CommonGame.field_M);
+          BlobSubmission.field_h.a(QuickChatKeysHelpPanel.field_Cb, QuickChatMenuBuilder.field_d, -6869, "beach_surface0", CommonGame.field_M);
         }
-        mp.field_h.a(IterableNodeHashTable.field_c, (byte) -115, us.field_f, TextLayoutLine.field_c);
-        mp.field_h.a(TextLayoutLine.field_c, d.field_b, -100);
-        mp.field_h.a(vp.field_j, (byte) -109, MyPitchScreen.field_H, SelectableTrinketIcon.field_yb);
-        mp.field_h.a(ni.field_i, (byte) -123, MyPitchScreen.field_H, SelectableTrinketIcon.field_yb);
-        mp.field_h.a(Kickabout.field_J, (byte) -124, CachedTextLayout.field_d, LobbyMatchPreview.field_n);
-        mp.field_h.a(KitStyleTile.field_Bb, (byte) -122, vp.field_l, cu.field_b);
-        mp.field_h.a(ContextMenuItem.field_Eb, (byte) -126, vp.field_l, cu.field_b);
-        mp.field_h.a(ListingRowCache.field_h, (byte) -106, vp.field_l, cu.field_b);
-        mp.field_h.a(MySquadScreen.field_H, (byte) -128, AvailabilityCheckRequest.field_g, Bzip2State.field_d);
-        mp.field_h.a(StatefulTextPainter.field_y, (byte) -116, CascadingMenu.field_Ib, TrinketUnlockNotice.field_e);
+        BlobSubmission.field_h.a(IterableNodeHashTable.field_c, (byte) -115, us.field_f, TextLayoutLine.field_c);
+        BlobSubmission.field_h.a(TextLayoutLine.field_c, d.field_b, -100);
+        BlobSubmission.field_h.a(vp.field_j, (byte) -109, MyPitchScreen.field_H, SelectableTrinketIcon.field_yb);
+        BlobSubmission.field_h.a(HighScoreQuery.field_i, (byte) -123, MyPitchScreen.field_H, SelectableTrinketIcon.field_yb);
+        BlobSubmission.field_h.a(Kickabout.field_J, (byte) -124, CachedTextLayout.field_d, LobbyMatchPreview.field_n);
+        BlobSubmission.field_h.a(KitStyleTile.field_Bb, (byte) -122, vp.field_l, cu.field_b);
+        BlobSubmission.field_h.a(ContextMenuItem.field_Eb, (byte) -126, vp.field_l, cu.field_b);
+        BlobSubmission.field_h.a(ListingRowCache.field_h, (byte) -106, vp.field_l, cu.field_b);
+        BlobSubmission.field_h.a(MySquadScreen.field_H, (byte) -128, AvailabilityCheckRequest.field_g, Bzip2State.field_d);
+        BlobSubmission.field_h.a(StatefulTextPainter.field_y, (byte) -116, CascadingMenu.field_Ib, TrinketUnlockNotice.field_e);
     }
 
     private final void a(int param0, ArgbSprite param1) {

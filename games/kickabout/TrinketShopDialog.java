@@ -204,7 +204,7 @@ final class TrinketShopDialog extends MessageDialog {
           MatchingTextValidator.a(var3, this.field_I, (byte) 123, this.field_F);
           ShopPlayerSlot.c(50, -110);
         } else {
-          ii.a((byte) -120);
+          AchievementSubmission.a((byte) -120);
         }
     }
 

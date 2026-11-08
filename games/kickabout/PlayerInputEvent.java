@@ -68,12 +68,12 @@ final class PlayerInputEvent extends DualLinkNode {
     final static void a(boolean param0) {
         String[][] dupTemp$0 = null;
         int[][] dupTemp$1 = null;
-        wd stackIn_35_0 = null;
+        RankingsRequest stackIn_35_0 = null;
         boolean stackIn_36_1 = false;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
-        wd var3 = null;
+        RankingsRequest var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6_int = 0;
@@ -94,10 +94,10 @@ final class PlayerInputEvent extends DualLinkNode {
         try {
           var14 = un.field_e;
           var2 = var14.readUnsignedByte((byte) -109);
-          var3 = (wd) (WorldDrawEntry.field_i.g(24009));
+          var3 = (RankingsRequest) (WorldDrawEntry.field_i.g(24009));
           while (var3 != null) {
             if (var2 != var3.field_k) {
-              var3 = (wd) (WorldDrawEntry.field_i.c(33));
+              var3 = (RankingsRequest) (WorldDrawEntry.field_i.c(33));
               continue;
             }
             break;

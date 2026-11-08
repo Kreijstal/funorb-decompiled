@@ -140,7 +140,7 @@ final class WorldDrawEntry extends IntrusiveNode {
             var2Lifetime1 = ug.a(param0 ^ 192, this.field_k);
             var3Lifetime1 = IntKeyLookup.a((byte) -110, (this.field_e.field_v >> 1) + this.field_g);
             var4Lifetime1 = InstrumentNoteMask.field_i << 4;
-            var5 = nj.monotonicMillis(param0 - 126);
+            var5 = MonotonicClock.monotonicMillis(param0 - 126);
             var7 = (int)(var5 % 1050L);
             if (var7 < 700) {
               var8 = (65536 + we.cosine((var7 << 13) / 700, false) >> 11) + 192;
@@ -155,7 +155,7 @@ final class WorldDrawEntry extends IntrusiveNode {
             return;
           }
           if (this.field_j == 3) {
-            MidiPcmStream.a(this.field_n, (byte) -114);
+            MidiPcmStream.drawGoalScenery(this.field_n, (byte) -114);
           } else {
             if (1 == this.field_j) {
               this.field_m.d(false);

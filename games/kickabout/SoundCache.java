@@ -11,7 +11,7 @@ final class SoundCache {
     static UiLayoutNode field_b;
     private IntrusiveNodeHashTable field_c;
 
-    private final PcmSample a(String param0, String param1, byte param2, int[] param3) {
+    private final PcmSample getNamedSoundEffect(String param0, String param1, byte param2, int[] param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -38,7 +38,7 @@ final class SoundCache {
           if (var6 < 0) {
             return null;
           }
-          stackIn_10_0 = this.a(var5_int, param3, var6, (byte) 125);
+          stackIn_10_0 = this.getSoundEffect(var5_int, param3, var6, (byte) 125);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -77,7 +77,7 @@ final class SoundCache {
         field_b = null;
     }
 
-    private final PcmSample a(int param0, int[] param1, int param2, byte param3) {
+    private final PcmSample getSoundEffect(int param0, int[] param1, int param2, byte param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;
@@ -108,7 +108,7 @@ final class SoundCache {
             return (PcmSample) (stackIn_7_0);
           }
           var10 = 85 / ((72 - param3) / 45);
-          var9 = SoundEffect.a(this.field_e, param0, param2);
+          var9 = SoundEffect.load(this.field_e, param0, param2);
           if (var9 == null) {
             return null;
           }
@@ -134,7 +134,7 @@ final class SoundCache {
         }
     }
 
-    private final PcmSample a(int[] param0, int param1, int param2, int param3) {
+    private final PcmSample getVorbisSample(int[] param0, int param1, int param2, int param3) {
         PcmSample stackIn_5_0 = null;
         Object stackIn_9_0 = null;
         Object stackIn_18_0 = null;
@@ -197,7 +197,7 @@ final class SoundCache {
         }
     }
 
-    final PcmSample a(String param0, boolean param1, String param2) {
+    final PcmSample getNamedSoundEffect(String param0, boolean param1, String param2) {
         RuntimeException var4 = null;
         PcmSample stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -210,7 +210,7 @@ final class SoundCache {
           if (!param1) {
             this.field_f = (IntrusiveNodeHashTable) null;
           }
-          stackIn_3_0 = this.a(param2, param0, (byte) -62, (int[]) null);
+          stackIn_3_0 = this.getNamedSoundEffect(param2, param0, (byte) -62, (int[]) null);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -232,7 +232,7 @@ final class SoundCache {
         }
     }
 
-    final static String a(long param0, int param1) {
+    final static String formatCookieExpiry(long param0, int param1) {
         SingleChildContainer.field_y.setTime(new Date(param0));
         int var3 = SingleChildContainer.field_y.get(7);
         int var4 = SingleChildContainer.field_y.get(5);
@@ -248,7 +248,7 @@ final class SoundCache {
         return cu.field_e[var3 - 1] + ", " + var4 / 10 + var4 % 10 + "-" + ChatMessage.field_a[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
     }
 
-    final PcmSample b(int param0, int param1, int[] param2) {
+    final PcmSample getFlatSoundEffect(int param0, int param1, int[] param2) {
         RuntimeException var4 = null;
         PcmSample stackIn_3_0 = null;
         PcmSample stackIn_8_0 = null;
@@ -258,7 +258,7 @@ final class SoundCache {
         RuntimeException decompiledCaughtException = null;
         try {
           if (1 == this.field_e.getGroupCapacity(123)) {
-            stackIn_3_0 = this.a(0, param2, param1, (byte) 117);
+            stackIn_3_0 = this.getSoundEffect(0, param2, param1, (byte) 117);
             return stackIn_3_0;
           }
           if (param0 != 10) {
@@ -267,7 +267,7 @@ final class SoundCache {
           if (1 != this.field_e.a(true, param1)) {
             throw new RuntimeException();
           }
-          stackIn_8_0 = this.a(param1, param2, 0, (byte) -35);
+          stackIn_8_0 = this.getSoundEffect(param1, param2, 0, (byte) -35);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -283,7 +283,7 @@ final class SoundCache {
         }
     }
 
-    final PcmSample a(int param0, int param1, int[] param2) {
+    final PcmSample getFlatVorbisSample(int param0, int param1, int[] param2) {
         RuntimeException var4 = null;
         PcmSample stackIn_2_0 = null;
         PcmSample stackIn_5_0 = null;
@@ -294,11 +294,11 @@ final class SoundCache {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.field_d.getGroupCapacity(126) == 1) {
-            stackIn_2_0 = this.a(param2, 0, 0, param0);
+            stackIn_2_0 = this.getVorbisSample(param2, 0, 0, param0);
             return stackIn_2_0;
           }
           if (this.field_d.a(true, param0) == 1) {
-            stackIn_5_0 = this.a(param2, 0, param0, 0);
+            stackIn_5_0 = this.getVorbisSample(param2, 0, param0, 0);
             return stackIn_5_0;
           }
           if (param1 == 10) {

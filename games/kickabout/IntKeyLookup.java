@@ -54,7 +54,7 @@ final class IntKeyLookup {
 
     final static void a(int param0) {
         GameSoundEffect.field_i = LeaguesHelpScreen.h(-117);
-        wd.field_l = new ModalStack();
+        RankingsRequest.field_l = new ModalStack();
         if (param0 < -59) {
           LobbyMatchPreview.a(true, true, (byte) -72);
           return;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ri extends TextWidgetPainter {
+class BeveledTextPainter extends TextWidgetPainter {
     static int field_t;
     static String field_s;
     static SortCriterion field_u;
@@ -36,7 +36,7 @@ class ri extends TextWidgetPainter {
           }
           var5 = 255 & 19 * ((1 + param3) * (1 + param1)) + param2.aiTick;
           if (param0 != -93) {
-            ri.a(113, false, true, 5);
+            BeveledTextPainter.a(113, false, true, 5);
           }
           var6 = var16.pixelX(param0 - 7);
           var7 = var16.pixelY(true);
@@ -246,7 +246,7 @@ class ri extends TextWidgetPainter {
           var10.field_y = 16777215;
           if (param2 > -51) {
             var19 = (CommonGame) null;
-            ri.updateIdleMovement((byte) -76, -14, (CommonGame) null, 71);
+            BeveledTextPainter.updateIdleMovement((byte) -76, -14, (CommonGame) null, 71);
           }
           var10.field_X = (BitmapFont) ((Object) ServerMessageScreen.field_E);
           var10.field_xb = sh.field_c;
@@ -298,13 +298,13 @@ class ri extends TextWidgetPainter {
           ip.field_c = new UiLayoutNode(0L, ConsoleEvaluationException.field_e);
           ip.field_c.field_R = NotCommand.a(16, false, 2236962, 2236962, false, (byte) -46);
           ip.field_c.field_kb = 2;
-          kr.field_b = new UiLayoutNode(0L, ConsoleEvaluationException.field_e);
-          kr.field_b.field_R = NotCommand.a(16, false, 1513239, 1513239, false, (byte) -46);
-          kr.field_b.field_kb = 2;
+          DisplayModeSupport.field_b = new UiLayoutNode(0L, ConsoleEvaluationException.field_e);
+          DisplayModeSupport.field_b.field_R = NotCommand.a(16, false, 1513239, 1513239, false, (byte) -46);
+          DisplayModeSupport.field_b.field_kb = 2;
           AuctionSettingsDialog.field_J = new UiLayoutNode(0L, ip.field_c);
           AuctionSettingsDialog.field_J.applyStyle(ul.field_c, (byte) -100);
-          mp.field_f = new UiLayoutNode(0L, kr.field_b);
-          mp.field_f.applyStyle(ul.field_c, (byte) -85);
+          BlobSubmission.field_f = new UiLayoutNode(0L, DisplayModeSupport.field_b);
+          BlobSubmission.field_f.applyStyle(ul.field_c, (byte) -85);
           var16 = ModalStack.a(param4, 108, "lobby", "button_mouseover");
           su.field_b = new ContextMenu(StrongCacheEntry.field_u, var12, ConsoleEvaluationException.field_e, ul.field_c, 3, 2, mj.field_b, 3, sh.field_c);
           MouseWheelInput.field_e = new UiLayoutNode(0L, ul.field_c);
@@ -333,7 +333,7 @@ class ri extends TextWidgetPainter {
           TextFieldNode.field_Qb.field_cb = 1;
           TextFieldNode.field_Qb.field_x = 1;
           TextFieldNode.field_Qb.field_O = 1;
-          dc.field_a = new UiLayoutNode(0L, TextFieldNode.field_Qb);
+          PortraitCacheOrder.field_a = new UiLayoutNode(0L, TextFieldNode.field_Qb);
           um.field_d = new UiLayoutNode(0L, ul.field_c);
           um.field_d.field_cb = 1;
           um.field_d.field_O = 1;
@@ -344,7 +344,7 @@ class ri extends TextWidgetPainter {
           DisplayNameForm.field_F = new UiLayoutNode(0L, um.field_d);
           LongPlusOneCommand.field_D = new UiLayoutNode(0L, TextFieldNode.field_Qb);
           TrinketPickerDialog.field_F = new UiLayoutNode(0L, um.field_d);
-          nj.field_d = new UiLayoutNode(0L, um.field_d);
+          MonotonicClock.field_d = new UiLayoutNode(0L, um.field_d);
           StreetSceneryLoader.field_f = new UiLayoutNode(0L, um.field_d);
           um.field_d.field_R = ClientException.a(ModalStack.a(param4, 81, "lobby", "smallbutton"), (byte) 47);
           um.field_d.field_S = ClientException.a(ModalStack.a(param4, -4, "lobby", "smallbutton_mouseover"), (byte) 68);
@@ -352,9 +352,9 @@ class ri extends TextWidgetPainter {
           um.field_d.field_u = dupTemp$0;
           um.field_d.field_rb = dupTemp$0;
           um.field_d.field_tb = ClientException.a(ModalStack.a(param4, 89, "lobby", "smallbutton_disabled"), (byte) 12);
-          dc.field_a.field_R = ClientException.a(ModalStack.a(param4, -31, "lobby", "mediumbutton"), (byte) -25);
-          dc.field_a.field_S = ClientException.a(ModalStack.a(param4, -122, "lobby", "mediumbutton_mouseover"), (byte) 52);
-          dc.field_a.field_rb = ClientException.a(ModalStack.a(param4, 62, "lobby", "mediumbutton_mouseheld"), (byte) 87);
+          PortraitCacheOrder.field_a.field_R = ClientException.a(ModalStack.a(param4, -31, "lobby", "mediumbutton"), (byte) -25);
+          PortraitCacheOrder.field_a.field_S = ClientException.a(ModalStack.a(param4, -122, "lobby", "mediumbutton_mouseover"), (byte) 52);
+          PortraitCacheOrder.field_a.field_rb = ClientException.a(ModalStack.a(param4, 62, "lobby", "mediumbutton_mouseheld"), (byte) 87);
           TextFieldNode.field_Qb.field_R = ClientException.a(ModalStack.a(param4, 87, "lobby", "bigbutton"), (byte) 7);
           TextFieldNode.field_Qb.field_S = ClientException.a(ModalStack.a(param4, 46, "lobby", "bigbutton_mouseover"), (byte) -127);
           TextFieldNode.field_Qb.field_rb = ClientException.a(ModalStack.a(param4, 29, "lobby", "bigbutton_mouseheld"), (byte) -103);
@@ -380,11 +380,11 @@ class ri extends TextWidgetPainter {
           dupTemp$2 = ClientException.a(ModalStack.a(param4, 11, "lobby", "chatbutton_active"), (byte) -124);
           TrinketPickerDialog.field_F.field_u = dupTemp$2;
           TrinketPickerDialog.field_F.field_rb = dupTemp$2;
-          nj.field_d.field_R = ClientException.a(ModalStack.a(param4, -123, "lobby", "chatfilterbutton"), (byte) 9);
-          nj.field_d.field_S = ClientException.a(ModalStack.a(param4, -127, "lobby", "chatfilterbutton_mouseover"), (byte) 33);
+          MonotonicClock.field_d.field_R = ClientException.a(ModalStack.a(param4, -123, "lobby", "chatfilterbutton"), (byte) 9);
+          MonotonicClock.field_d.field_S = ClientException.a(ModalStack.a(param4, -127, "lobby", "chatfilterbutton_mouseover"), (byte) 33);
           dupTemp$3 = ClientException.a(ModalStack.a(param4, -123, "lobby", "chatfilterbutton_active"), (byte) -121);
-          nj.field_d.field_u = dupTemp$3;
-          nj.field_d.field_rb = dupTemp$3;
+          MonotonicClock.field_d.field_u = dupTemp$3;
+          MonotonicClock.field_d.field_rb = dupTemp$3;
           var17 = ModalStack.a(param4, -121, "lobby", "checkbox");
           MatchPhaseView.field_d = new IconLabel(0L, var17[1], var17[0], 1, ul.field_c, (String) null);
           ScrollPane.field_Hb = new UiLayoutNode(0L, (UiLayoutNode) null);
@@ -482,7 +482,7 @@ class ri extends TextWidgetPainter {
           TeamManagementScreen.e(125);
           if (!param1) {
             var9 = (CharSequence) null;
-            ri.a((CharSequence) null, (byte) 122);
+            BeveledTextPainter.a((CharSequence) null, (byte) 122);
           }
           var11 = 0;
           var4Lifetime1 = var11;
@@ -518,7 +518,7 @@ class ri extends TextWidgetPainter {
         }
     }
 
-    ri(int param0) {
+    BeveledTextPainter(int param0) {
         this(gf.field_a, param0);
     }
 
@@ -587,7 +587,7 @@ class ri extends TextWidgetPainter {
               var11 = 0;
               while (true) {
                 if (var11 < VertexNormal.field_d.length) {
-                  stackIn_10_0 = ((er.field_h[var11 / 8] & 1 << (var11 & 7)) == 0) ? 0 : 1;
+                  stackIn_10_0 = ((TextHotspotRegion.field_h[var11 / 8] & 1 << (var11 & 7)) == 0) ? 0 : 1;
                   var12_int = stackIn_10_0;
                   if (var12_int != 0) {
                     var10_int++;
@@ -612,7 +612,7 @@ class ri extends TextWidgetPainter {
               TrinketUnlockNotice.field_b.field_lb = false;
               DialogOverlay.field_e.field_E = qr.field_c;
               if (var9 == 0) {
-                stackIn_54_0 = ea.field_g;
+                stackIn_54_0 = ColorQuantizationBox.field_g;
               } else {
                 stackIn_54_0 = PlayerArchetypeSortCriterion.field_s;
               }
@@ -695,7 +695,7 @@ class ri extends TextWidgetPainter {
                       }
                     }
                   }
-                  UrlRequest.field_e = "<col=A00000>" + op.field_t + "<br>" + DirectByteStorage.field_h + (String) (var10);
+                  UrlRequest.field_e = "<col=A00000>" + SpriteButtonPainter.field_t + "<br>" + DirectByteStorage.field_h + (String) (var10);
                 }
               }
             }
@@ -712,7 +712,7 @@ class ri extends TextWidgetPainter {
           stackIn_75_1 = 0;
           stackIn_76_2 = (param2) && (!param1) && (TrinketCatalog.field_b);
           ((UiLayoutNode) (Object) stackIn_75_0).updateInput(stackIn_75_1, stackIn_76_2);
-          ni.field_l.field_b.h((byte) 118);
+          HighScoreQuery.field_l.tabs.h((byte) 118);
           if (null != ArchiveSource.field_b) {
             stackIn_78_0 = 0;
             if (stackIn_78_0 != TrinketUnlockNotice.field_b.field_sb) {
@@ -720,7 +720,7 @@ class ri extends TextWidgetPainter {
             }
             if (GoalStateAgent.field_k.field_sb != 0) {
               if (InstrumentNoteMask.field_k) {
-                mp.a(param3, (byte) 79);
+                BlobSubmission.a(param3, (byte) 79);
               } else {
                 PlayerStats.a(param3, 0);
               }
@@ -735,7 +735,7 @@ class ri extends TextWidgetPainter {
         }
     }
 
-    ri(BitmapFont param0, int param1) {
+    BeveledTextPainter(BitmapFont param0, int param1) {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_G, -1, 2147483647, false);
     }
 

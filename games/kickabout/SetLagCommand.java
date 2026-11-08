@@ -153,17 +153,17 @@ final class SetLagCommand extends ConsoleCommand {
           if (un.field_e.field_n >= param1) {
             return true;
           }
-          if (op.field_y == null) {
+          if (SpriteButtonPainter.field_y == null) {
             return false;
           }
           try {
-            var2 = op.field_y.a((byte) 63);
+            var2 = SpriteButtonPainter.field_y.a((byte) 63);
             if (0 < var2) {
               if (param1 - un.field_e.field_n < var2) {
                 var2 = -un.field_e.field_n + param1;
               }
-              op.field_y.readFully(un.field_e.field_f, var2, un.field_e.field_n, -4847);
-              IterableDualLinkDeque.field_c = nj.monotonicMillis(-128);
+              SpriteButtonPainter.field_y.readFully(un.field_e.field_f, var2, un.field_e.field_n, -4847);
+              IterableDualLinkDeque.field_c = MonotonicClock.monotonicMillis(-128);
               un.field_e.field_n = un.field_e.field_n + var2;
               if (param1 > un.field_e.field_n) {
                 return false;
@@ -172,7 +172,7 @@ final class SetLagCommand extends ConsoleCommand {
               return true;
             }
             if (0 > var2 ||
-              !(30000L >= KeyedLoginCredentials.c(29680))) {
+              !(30000L >= KeyedLoginCredentials.millisSinceSessionStart(29680))) {
               FormationView.b((byte) -116);
             }
           } catch (java.io.IOException decompiledCaughtParameter0) {
@@ -198,7 +198,7 @@ final class SetLagCommand extends ConsoleCommand {
         }
         String var1 = TextFieldNode.a(-110);
         IsSixCommand.field_E = new LoginForm(var1, (String) null, param0, false, false);
-        wd.field_l.a(we.field_a, false);
+        RankingsRequest.field_l.a(we.field_a, false);
         we.field_a.a((byte) -126, (UiWidget) (IsSixCommand.field_E));
         we.field_a.finishTransition(4000);
     }

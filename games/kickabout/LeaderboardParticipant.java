@@ -78,7 +78,7 @@ final class LeaderboardParticipant {
         try {
           ok.field_b = param11;
           MouseInputHandler.field_f = param2;
-          ni.field_f = param10;
+          HighScoreQuery.field_f = param10;
           fh.field_a = param7;
           ThreeCommand.field_D = param5;
           ReceivedAuctionItem.field_D = param8;
@@ -97,7 +97,7 @@ final class LeaderboardParticipant {
           WidgetContainer.field_w[4] = TeamSelectionAgent.field_g;
           WidgetContainer.field_w[3] = bq.field_b;
           WidgetContainer.field_w[2] = LobbyMatchPreview.field_h;
-          WidgetContainer.field_w[1] = mn.field_d;
+          WidgetContainer.field_w[1] = IconButtonPainter.field_d;
           TickClock.field_d = new UiLayoutNode(0L, (UiLayoutNode) null);
           StatefulTextPainter.field_s = new UiLayoutNode(0L, TrinketIcon.field_zb, WorldSpriteDecoration.field_h);
           ck.field_c = new UiLayoutNode(0L, SquadPickerDialog.field_P, mt.field_b);
@@ -122,7 +122,7 @@ final class LeaderboardParticipant {
           if (param13 <= 23) {
             field_i = (String) null;
           }
-          TextWidgetPainter.field_n = new UiLayoutNode(0L, gw.field_a, aj.field_c);
+          TextWidgetPainter.field_n = new UiLayoutNode(0L, gw.field_a, ThreadSleepSupport.field_c);
           AuctionsHelpScreen.field_G = new UiLayoutNode(0L, gw.field_a, UiLayoutNode.field_C);
           DateInputWidget.field_D = new UiLayoutNode(0L, gw.field_a, ArchiveManager.field_j);
           RegistrationRequestDialog.field_lb = new UiLayoutNode(0L, SquadPickerDialog.field_P, ig.field_h);
@@ -140,7 +140,7 @@ final class LeaderboardParticipant {
           } else {
             stackIn_8_0 = null;
             stackIn_8_1 = null;
-            stackIn_8_4 = wo.field_l;
+            stackIn_8_4 = AlternateKeyedLoginCredentials.field_l;
           }
           LoginCredentials.field_b = new UiLayoutNode(stackIn_7_2, stackIn_7_3, ((String) (Object) stackIn_8_4).toUpperCase());
           af.field_d = new UiLayoutNode(0L, (UiLayoutNode) null);
@@ -162,7 +162,7 @@ final class LeaderboardParticipant {
           CheckboxLabelWidget.field_Cb = new UiLayoutNode(0L, ConsoleEvaluationException.field_e);
           CheckboxLabelWidget.field_Cb.field_p = 0;
           CheckboxLabelWidget.field_Cb.field_A = 1;
-          RandomAccessCacheFile.field_a = new UiLayoutNode(0L, dc.field_a, MatchScreen.field_x.toUpperCase());
+          RandomAccessCacheFile.field_a = new UiLayoutNode(0L, PortraitCacheOrder.field_a, MatchScreen.field_x.toUpperCase());
           TriangleMesh.field_j = new UiLayoutNode(0L, ChatMessage.field_e);
           TriangleMesh.field_j.addChild((byte) -112, CheckboxLabelWidget.field_Cb);
           TriangleMesh.field_j.addChild((byte) -113, RandomAccessCacheFile.field_a);
@@ -172,12 +172,12 @@ final class LeaderboardParticipant {
           var16 = DialogOverlay.field_e;
           var16.field_A = 1;
           AchievementsScreen.field_C = new UiLayoutNode(0L, (UiLayoutNode) null);
-          ka.field_c = new UiLayoutNode(0L, ConsoleEvaluationException.field_e);
-          ka.field_c.field_A = 1;
+          GameQuickChatResolver.field_c = new UiLayoutNode(0L, ConsoleEvaluationException.field_e);
+          GameQuickChatResolver.field_c.field_A = 1;
           BufferedSocket.field_u = new UiLayoutNode(0L, TrinketIcon.field_zb, WorldSpriteDecoration.field_h);
           DoSomethingCommand.field_D = new UiLayoutNode(0L, SquadPickerDialog.field_P, mt.field_b);
           ClientException.field_c = new ScrollPane(0L, new UiLayoutNode(0L, (UiLayoutNode) null), SoundCache.field_b, uk.field_b);
-          AchievementsScreen.field_C.addChild((byte) -114, ka.field_c);
+          AchievementsScreen.field_C.addChild((byte) -114, GameQuickChatResolver.field_c);
           AchievementsScreen.field_C.addChild((byte) -105, BufferedSocket.field_u);
           if (NetworkArchiveRequest.field_t) {
             AchievementsScreen.field_C.addChild((byte) -123, DoSomethingCommand.field_D);
@@ -187,44 +187,44 @@ final class LeaderboardParticipant {
           IterableDualLinkDeque.field_h = new UiLayoutNode(0L, LeaguesHelpScreen.field_H);
           sg.field_a = new UiLayoutNode(0L, AudioService.field_g);
           MouseInputHandler.field_d = new UiLayoutNode(0L, IntValueNode.field_i, IntDoubleCommand.field_F.toUpperCase());
-          rf.field_c = new ContextMenuItem[param4 + 4][];
+          SocialTabsPanel.field_c = new ContextMenuItem[param4 + 4][];
           qr.field_b = new UiLayoutNode[4 + param4];
-          qr.field_b[0] = new UiLayoutNode(0L, kr.field_b, mi.field_a);
-          rf.field_c[0] = new ContextMenuItem[6];
+          qr.field_b[0] = new UiLayoutNode(0L, DisplayModeSupport.field_b, mi.field_a);
+          SocialTabsPanel.field_c[0] = new ContextMenuItem[6];
           for (var17_int = 0; 5 > var17_int; var17_int++) {
-            rf.field_c[0][var17_int + 1] = new ContextMenuItem(0L, StreetSceneryLoader.field_f, (UiLayoutNode) null, ul.field_c, TextFieldValidator.field_d[var17_int], WidgetContainer.field_w[var17_int]);
+            SocialTabsPanel.field_c[0][var17_int + 1] = new ContextMenuItem(0L, StreetSceneryLoader.field_f, (UiLayoutNode) null, ul.field_c, TextFieldValidator.field_d[var17_int], WidgetContainer.field_w[var17_int]);
           }
           if (2 <= VertexNormal.field_d.length) {
-            qr.field_b[1] = new UiLayoutNode(0L, kr.field_b, Checkbox.field_H);
+            qr.field_b[1] = new UiLayoutNode(0L, DisplayModeSupport.field_b, Checkbox.field_H);
             array$0 = new ContextMenuItem[VertexNormal.field_d.length + 1];
-            rf.field_c[1] = array$0;
-            rf.field_c[1][0] = new ContextMenuItem(0L, StreetSceneryLoader.field_f, (UiLayoutNode) null, ul.field_c, (Sprite) null, FaceNormal.field_b);
+            SocialTabsPanel.field_c[1] = array$0;
+            SocialTabsPanel.field_c[1][0] = new ContextMenuItem(0L, StreetSceneryLoader.field_f, (UiLayoutNode) null, ul.field_c, (Sprite) null, FaceNormal.field_b);
             for (var17_intLifetime1 = 0; VertexNormal.field_d.length > var17_intLifetime1; var17_intLifetime1++) {
-              rf.field_c[1][1 + var17_intLifetime1] = new ContextMenuItem(0L, StreetSceneryLoader.field_f, (UiLayoutNode) null, ul.field_c, (Sprite) null, Integer.toString(VertexNormal.field_d[var17_intLifetime1]));
+              SocialTabsPanel.field_c[1][1 + var17_intLifetime1] = new ContextMenuItem(0L, StreetSceneryLoader.field_f, (UiLayoutNode) null, ul.field_c, (Sprite) null, Integer.toString(VertexNormal.field_d[var17_intLifetime1]));
             }
           }
-          qr.field_b[2] = new UiLayoutNode(0L, kr.field_b, GzipDecoder.field_b);
-          rf.field_c[2] = new ContextMenuItem[]{new ContextMenuItem(0L, StreetSceneryLoader.field_f, (UiLayoutNode) null, ul.field_c, (Sprite) null, FaceNormal.field_b), new ContextMenuItem(0L, StreetSceneryLoader.field_f, (UiLayoutNode) null, ul.field_c, MessageDialog.field_E[0], ScrollPane.field_Db), new ContextMenuItem(0L, StreetSceneryLoader.field_f, (UiLayoutNode) null, ul.field_c, MessageDialog.field_E[1], um.field_g)};
+          qr.field_b[2] = new UiLayoutNode(0L, DisplayModeSupport.field_b, GzipDecoder.field_b);
+          SocialTabsPanel.field_c[2] = new ContextMenuItem[]{new ContextMenuItem(0L, StreetSceneryLoader.field_f, (UiLayoutNode) null, ul.field_c, (Sprite) null, FaceNormal.field_b), new ContextMenuItem(0L, StreetSceneryLoader.field_f, (UiLayoutNode) null, ul.field_c, MessageDialog.field_E[0], ScrollPane.field_Db), new ContextMenuItem(0L, StreetSceneryLoader.field_f, (UiLayoutNode) null, ul.field_c, MessageDialog.field_E[1], um.field_g)};
           if (MouseInputHandler.field_f > 1) {
-            qr.field_b[3] = new UiLayoutNode(0L, kr.field_b, pc.field_b);
+            qr.field_b[3] = new UiLayoutNode(0L, DisplayModeSupport.field_b, pc.field_b);
             array$1 = new ContextMenuItem[1 + MouseInputHandler.field_f];
-            rf.field_c[3] = array$1;
-            rf.field_c[3][0] = new ContextMenuItem(0L, StreetSceneryLoader.field_f, (UiLayoutNode) null, ul.field_c, (Sprite) null, FaceNormal.field_b);
+            SocialTabsPanel.field_c[3] = array$1;
+            SocialTabsPanel.field_c[3][0] = new ContextMenuItem(0L, StreetSceneryLoader.field_f, (UiLayoutNode) null, ul.field_c, (Sprite) null, FaceNormal.field_b);
             for (var17_intLifetime2 = 0; MouseInputHandler.field_f > var17_intLifetime2; var17_intLifetime2++) {
-              rf.field_c[3][1 + var17_intLifetime2] = new ContextMenuItem(0L, StreetSceneryLoader.field_f, (UiLayoutNode) null, ul.field_c, (Sprite) null, ReceivedAuctionItem.field_D[var17_intLifetime2]);
+              SocialTabsPanel.field_c[3][1 + var17_intLifetime2] = new ContextMenuItem(0L, StreetSceneryLoader.field_f, (UiLayoutNode) null, ul.field_c, (Sprite) null, ReceivedAuctionItem.field_D[var17_intLifetime2]);
             }
           }
           for (var17_intLifetime3 = 0; param4 > var17_intLifetime3; var17_intLifetime3++) {
-            qr.field_b[4 + var17_intLifetime3] = new UiLayoutNode(0L, kr.field_b, ok.field_b[var17_intLifetime3]);
+            qr.field_b[4 + var17_intLifetime3] = new UiLayoutNode(0L, DisplayModeSupport.field_b, ok.field_b[var17_intLifetime3]);
             array$2 = new ContextMenuItem[TextLayoutLine.b(255, (int) NamedValueEntry.field_k[var17_intLifetime3]) + 1];
-            rf.field_c[var17_intLifetime3 + 4] = array$2;
-            rf.field_c[4 + var17_intLifetime3][0] = new ContextMenuItem(0L, StreetSceneryLoader.field_f, (UiLayoutNode) null, ul.field_c, (Sprite) null, FaceNormal.field_b);
+            SocialTabsPanel.field_c[var17_intLifetime3 + 4] = array$2;
+            SocialTabsPanel.field_c[4 + var17_intLifetime3][0] = new ContextMenuItem(0L, StreetSceneryLoader.field_f, (UiLayoutNode) null, ul.field_c, (Sprite) null, FaceNormal.field_b);
             for (var18 = 0; (255 & NamedValueEntry.field_k[var17_intLifetime3]) > var18; var18++) {
-              if (ni.field_f != null) {
-                if (null == ni.field_f[var17_intLifetime3]) {
+              if (HighScoreQuery.field_f != null) {
+                if (null == HighScoreQuery.field_f[var17_intLifetime3]) {
                   var19_ref = null;
                 } else {
-                  var19_ref = ni.field_f[var17_intLifetime3][var18];
+                  var19_ref = HighScoreQuery.field_f[var17_intLifetime3][var18];
                 }
               } else {
                 var19_ref = null;
@@ -238,18 +238,18 @@ final class LeaderboardParticipant {
               } else {
                 var20 = null;
               }
-              rf.field_c[4 + var17_intLifetime3][var18 + 1] = new ContextMenuItem(0L, StreetSceneryLoader.field_f, (UiLayoutNode) null, ul.field_c, (Sprite) (var19_ref), (String) (var20));
+              SocialTabsPanel.field_c[4 + var17_intLifetime3][var18 + 1] = new ContextMenuItem(0L, StreetSceneryLoader.field_f, (UiLayoutNode) null, ul.field_c, (Sprite) (var19_ref), (String) (var20));
             }
           }
           for (var17_intLifetime4 = 0; 4 + param4 > var17_intLifetime4; var17_intLifetime4++) {
             if (qr.field_b[var17_intLifetime4] != null) {
               qr.field_b[var17_intLifetime4].field_xb = 11;
             }
-            if (rf.field_c[var17_intLifetime4] != null) {
-              for (var18Lifetime1 = 0; var18Lifetime1 < rf.field_c[var17_intLifetime4].length; var18Lifetime1++) {
-                if (rf.field_c[var17_intLifetime4][var18Lifetime1] != null &&
-                  null != rf.field_c[var17_intLifetime4][var18Lifetime1].field_yb) {
-                  rf.field_c[var17_intLifetime4][var18Lifetime1].field_yb.field_xb = 11;
+            if (SocialTabsPanel.field_c[var17_intLifetime4] != null) {
+              for (var18Lifetime1 = 0; var18Lifetime1 < SocialTabsPanel.field_c[var17_intLifetime4].length; var18Lifetime1++) {
+                if (SocialTabsPanel.field_c[var17_intLifetime4][var18Lifetime1] != null &&
+                  null != SocialTabsPanel.field_c[var17_intLifetime4][var18Lifetime1].field_yb) {
+                  SocialTabsPanel.field_c[var17_intLifetime4][var18Lifetime1].field_yb.field_xb = 11;
                 }
               }
             }
@@ -270,9 +270,9 @@ final class LeaderboardParticipant {
               !(VertexNormal.field_d.length < 2)) && (var18Lifetime2 != 3 ||
               !(MouseInputHandler.field_f <= 1))) {
               sg.field_a.addChild((byte) -121, qr.field_b[var18Lifetime2]);
-              for (var19 = 0; var19 < rf.field_c[var18Lifetime2].length; var19++) {
-                if (rf.field_c[var18Lifetime2][var19] != null) {
-                  sg.field_a.addChild((byte) -115, (UiLayoutNode) (rf.field_c[var18Lifetime2][var19]));
+              for (var19 = 0; var19 < SocialTabsPanel.field_c[var18Lifetime2].length; var19++) {
+                if (SocialTabsPanel.field_c[var18Lifetime2][var19] != null) {
+                  sg.field_a.addChild((byte) -115, (UiLayoutNode) (SocialTabsPanel.field_c[var18Lifetime2][var19]));
                 }
               }
             }
@@ -281,7 +281,7 @@ final class LeaderboardParticipant {
           AuctionItem.field_p.addChild((byte) -124, GoalStateAgent.field_k);
           AuctionItem.field_p.addChild((byte) -108, MarkerSliderWidget.field_F);
           is.field_b = new UiLayoutNode(0L, AccountTermsPanel.field_H, po.field_b.toUpperCase());
-          BlackFadeScreen.field_i = new UiLayoutNode(0L, dc.field_a, bk.field_d.toUpperCase());
+          BlackFadeScreen.field_i = new UiLayoutNode(0L, PortraitCacheOrder.field_a, bk.field_d.toUpperCase());
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -560,13 +560,13 @@ final class LeaderboardParticipant {
         }
     }
 
-    final static void a(int param0, ii param1, int param2) {
+    final static void submitAchievement(int param0, AchievementSubmission param1, int param2) {
         if (param2 <= 22) {
           return;
         }
         try {
           il.field_a.addLast(param1, 3);
-          te.a(param0, param1, (byte) -112);
+          te.writeAchievementSubmission(param0, param1, (byte) -112);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "wp.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

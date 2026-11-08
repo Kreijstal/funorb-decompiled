@@ -3,7 +3,7 @@
  */
 final class EmailAvailabilityValidator extends TextFieldValidator {
     static RenderedFootballer field_k;
-    static dk field_q;
+    static AchievementQuery field_q;
     private boolean field_n;
     static String field_l;
     private String field_m;
@@ -42,7 +42,7 @@ final class EmailAvailabilityValidator extends TextFieldValidator {
             return stackIn_5_0;
           }
           if (this.validateText(param1, -5) != PitchOptionTile.field_Bb) {
-            stackIn_10_0 = dl.field_g;
+            stackIn_10_0 = LookupQuery.field_g;
             return stackIn_10_0;
           }
           stackIn_8_0 = ql.field_b;

@@ -53,13 +53,13 @@ final class TriangleMesh {
     final static void a(byte param0, boolean param1, boolean param2, String param3) {
         try {
           StripedProgressBar.a(param0 + 101);
-          wd.field_l.k(param0 + 225);
+          RankingsRequest.field_l.k(param0 + 225);
           if (param0 != -101) {
             field_R = (UiLayoutNode) null;
           }
           IsSixCommand.field_E = new LoginForm(ep.field_b, (String) null, AuctionBidDialog.field_G, param2, param1);
-          we.field_a = new LoginDialog(wd.field_l, IsSixCommand.field_E);
-          wd.field_l.a(we.field_a, false);
+          we.field_a = new LoginDialog(RankingsRequest.field_l, IsSixCommand.field_E);
+          RankingsRequest.field_l.a(we.field_a, false);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "kk.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -314,13 +314,13 @@ final class TriangleMesh {
     final static void $cfr$intArgs$a$842e35442ba4(int param0, boolean param1, boolean param2, String param3) {
         try {
           StripedProgressBar.a(param0 + 101);
-          wd.field_l.k(param0 + 225);
+          RankingsRequest.field_l.k(param0 + 225);
           if (param0 != -101) {
             field_R = (UiLayoutNode) null;
           }
           IsSixCommand.field_E = new LoginForm(ep.field_b, (String) null, AuctionBidDialog.field_G, param2, param1);
-          we.field_a = new LoginDialog(wd.field_l, IsSixCommand.field_E);
-          wd.field_l.a(we.field_a, false);
+          we.field_a = new LoginDialog(RankingsRequest.field_l, IsSixCommand.field_E);
+          RankingsRequest.field_l.a(we.field_a, false);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "kk.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

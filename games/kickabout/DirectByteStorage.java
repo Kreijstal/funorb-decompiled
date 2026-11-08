@@ -60,8 +60,8 @@ final class DirectByteStorage extends ByteStorage {
           this.field_f.get(var4);
           return var4;
         }
-        ea var3 = (ea) null;
-        DirectByteStorage.a((int[][][]) null, -84, 70, (ea) null, 83);
+        ColorQuantizationBox var3 = (ColorQuantizationBox) null;
+        DirectByteStorage.a((int[][][]) null, -84, 70, (ColorQuantizationBox) null, 83);
         var4Lifetime1 = new byte[this.field_f.capacity()];
         var2Lifetime1 = var4Lifetime1;
         this.field_f.position(0);
@@ -72,7 +72,7 @@ final class DirectByteStorage extends ByteStorage {
     DirectByteStorage() {
     }
 
-    final static int a(int[][][] param0, int param1, int param2, ea param3, int param4) {
+    final static int a(int[][][] param0, int param1, int param2, ColorQuantizationBox param3, int param4) {
         RuntimeException var5 = null;
         int stackIn_3_0 = 0;
         int stackIn_8_0 = 0;

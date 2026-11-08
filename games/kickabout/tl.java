@@ -32,8 +32,8 @@ final class tl {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
-        ni var4 = null;
-        sm var4_ref = null;
+        HighScoreQuery var4 = null;
+        HighScoreSubmission var4_ref = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -67,10 +67,10 @@ final class tl {
           }
           if (var2 == 0) {
             var3 = var28.readUnsignedShort((byte) 81);
-            var4 = (ni) (ProxyAuthenticationRequiredException.field_g.g(24009));
+            var4 = (HighScoreQuery) (ProxyAuthenticationRequiredException.field_g.g(24009));
             while (var4 != null) {
               if (var3 != var4.field_o) {
-                var4 = (ni) (ProxyAuthenticationRequiredException.field_g.c(33));
+                var4 = (HighScoreQuery) (ProxyAuthenticationRequiredException.field_g.c(33));
                 continue;
               }
               break;
@@ -163,10 +163,10 @@ final class tl {
           if (var2 == 1) {
             var3Lifetime1 = var28.readUnsignedShort((byte) 81);
             var28.readLong((byte) -124);
-            var4_ref = (sm) (FaceNormal.field_d.g(24009));
+            var4_ref = (HighScoreSubmission) (FaceNormal.field_d.g(24009));
             while (var4_ref != null) {
               if (var3Lifetime1 != var4_ref.field_k) {
-                var4_ref = (sm) (FaceNormal.field_d.c(param0 + 31));
+                var4_ref = (HighScoreSubmission) (FaceNormal.field_d.c(param0 + 31));
                 continue;
               }
               break;

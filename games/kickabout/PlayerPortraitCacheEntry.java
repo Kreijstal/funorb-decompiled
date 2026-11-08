@@ -7,7 +7,7 @@ final class PlayerPortraitCacheEntry {
     int field_e;
     int field_b;
     static int field_f;
-    static sm field_g;
+    static HighScoreSubmission field_g;
     static SortCriterion field_k;
     boolean field_j;
     PlayerStats playerStats;

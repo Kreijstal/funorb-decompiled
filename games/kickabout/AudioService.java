@@ -11,7 +11,7 @@ final class AudioService implements Runnable {
     static long[] field_d;
     volatile PcmPlayerService[] field_b;
 
-    final static AccountRegistrationResponse a(int param0, String param1) {
+    final static AccountRegistrationResponse pollAccountNameAvailability(int param0, String param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         Object stackIn_2_0 = null;
@@ -71,10 +71,10 @@ final class AudioService implements Runnable {
               var2 = this.field_b[var1_int];
               if (var2 == null) {
               } else {
-                var2.d();
+                var2.serviceOutput();
               }
             }
-            aj.a(10L, 1);
+            ThreadSleepSupport.sleepMillis(10L, 1);
             Object var5 = (Object) null;
             ReflectionCheck.a((byte) 41, this.field_f, (Object) null);
           }
@@ -86,7 +86,7 @@ final class AudioService implements Runnable {
         }
     }
 
-    final static int a(byte param0, int param1, int param2, int param3) {
+    final static int formationY(byte param0, int param1, int param2, int param3) {
         if (param0 != 21) {
           return 53;
         }
@@ -101,7 +101,7 @@ final class AudioService implements Runnable {
         return var4;
     }
 
-    final static int a(int param0) {
+    final static int pollResourceConnection(int param0) {
         FriendsListPanel.field_Ab.a(0);
         if (!ParticipantStatus.field_t.pollResponses((byte) -46)) {
           return MyPitchScreen.pollServerConnection((byte) 66);

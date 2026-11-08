@@ -477,7 +477,7 @@ final class TextPromptDialog extends UiLayoutNode {
             var23 = var19 + 13 + 13;
             var24 = 10 + (var17Lifetime5 + 24) + var22;
             var25 = StripedProgressBar.b(var23, param0, param2, 127);
-            var26 = nj.a(param1, param3, var24, 29079);
+            var26 = MonotonicClock.placePopupVertically(param1, param3, var24, 29079);
             this.setBounds(true, var23, var25, var26, var24);
             return;
           }
@@ -495,7 +495,7 @@ final class TextPromptDialog extends UiLayoutNode {
           var18Lifetime1 = var15_int + 13 + 13;
           var19Lifetime1 = var16Lifetime1 + 34;
           var20Lifetime1 = StripedProgressBar.b(var18Lifetime1, param0, param2, 127);
-          var21Lifetime1 = nj.a(param1, param3, var19Lifetime1, 29079);
+          var21Lifetime1 = MonotonicClock.placePopupVertically(param1, param3, var19Lifetime1, 29079);
           this.setBounds(true, var18Lifetime1, var20Lifetime1, var21Lifetime1, var19Lifetime1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

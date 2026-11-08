@@ -113,7 +113,7 @@ final class SplashScreen extends AppScreen {
                 null != BroadcastServerCommand.field_E[var9]) {
                 var11_int = BroadcastServerCommand.field_E[var9][var10_int];
                 if (0 != var11_int &&
-                  !fv.field_d) {
+                  !TooltipOverlay.field_d) {
                   var5_int = 1;
                 }
                 if (var11_int > var6) {
@@ -128,7 +128,7 @@ final class SplashScreen extends AppScreen {
                 null != so.field_f[var9]) {
                 var11_intLifetime1 = so.field_f[var9][var10_int];
                 if (0 != var11_intLifetime1 &&
-                  !fv.field_d) {
+                  !TooltipOverlay.field_d) {
                   var5_int = 1;
                 }
                 if (var11_intLifetime1 > var7) {
@@ -151,7 +151,7 @@ final class SplashScreen extends AppScreen {
           while (var12 != null) {
             var13 = 0;
             if (var12.field_jb == null) {
-              var12.field_Lb = new UiLayoutNode(0L, mp.field_f);
+              var12.field_Lb = new UiLayoutNode(0L, BlobSubmission.field_f);
               var12.addChild((byte) -120, var12.field_Lb);
               var12.field_Ob = new UiLayoutNode(0L, AuctionSettingsDialog.field_J);
               if (NetworkArchiveRequest.field_t) {
@@ -237,7 +237,7 @@ final class SplashScreen extends AppScreen {
               } else {
                 if (!var12.field_Gb) {
                   if (var12.field_Fb) {
-                    var12.field_Lb.field_E = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ni.field_p, new String[]{var20});
+                    var12.field_Lb.field_E = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, HighScoreQuery.field_p, new String[]{var20});
                     var12.field_Tb.field_E = AvailabilityCheckRequest.field_a;
                     var12.field_Hb.field_E = DemoIntegersCommand.field_A;
                   } else {
@@ -296,7 +296,7 @@ final class SplashScreen extends AppScreen {
                 }
               }
             }
-            var23 = kr.a(var20, var12.field_Mb, (byte) 73);
+            var23 = DisplayModeSupport.a(var20, var12.field_Mb, (byte) 73);
             var24 = var23;
             var30 = var24;
             var25 = var30;
@@ -318,7 +318,7 @@ final class SplashScreen extends AppScreen {
               !var12.h(-13356)) {
               if (var12.field_Tb.field_sb == 0) {
                 if (var12.field_Hb.field_sb == 0) {
-                  AccountNameAvailabilityValidator.a(ReceivedAuctionItem.field_y, sm.field_q, 0, 95, 0, var12, param0);
+                  AccountNameAvailabilityValidator.a(ReceivedAuctionItem.field_y, HighScoreSubmission.field_q, 0, 95, 0, var12, param0);
                 } else {
                   MenuSelection.a(64, param3, var12.field_Ab);
                 }
@@ -417,7 +417,7 @@ final class SplashScreen extends AppScreen {
                     BroadcastServerCommand.field_E[var27_int] != null) {
                     var30_int = BroadcastServerCommand.field_E[var27_int][var28];
                     if (var30_int != 0 &&
-                      !fv.field_d &&
+                      !TooltipOverlay.field_d &&
                       !var12.field_Cb) {
                       var29 = 1;
                     }
@@ -429,7 +429,7 @@ final class SplashScreen extends AppScreen {
                     null != so.field_f[var27_int]) {
                     var30_intLifetime1 = so.field_f[var27_int][var28];
                     if (0 != var30_intLifetime1 &&
-                      !fv.field_d &&
+                      !TooltipOverlay.field_d &&
                       !var12.field_Cb) {
                       var29 = 1;
                     }

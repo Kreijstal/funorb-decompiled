@@ -175,7 +175,7 @@ final class LeaguesHelpScreen extends PagedHelpScreen {
         int var5Lifetime1;
         var9 = Kickabout.field_G;
         try {
-          for (var1_int = 0; var1_int < mn.field_b.length; var1_int++) {
+          for (var1_int = 0; var1_int < IconButtonPainter.field_b.length; var1_int++) {
             var2_ref_gm = (RenderedFootballer) (sh.field_a.field_P[AccountRegistrationPanel.field_G][1 + var1_int]);
             var3 = null;
             var4 = 0;
@@ -184,9 +184,9 @@ final class LeaguesHelpScreen extends PagedHelpScreen {
               var4 = 72;
               var3 = LoginKind.field_b[var5];
             } else {
-              if (mn.field_b[var1_int] > 0) {
-                var4 = PlayerStatSortCriterion.field_n[-1 + mn.field_b[var1_int]];
-                var3 = TrinketUnlockNotice.field_a[mn.field_b[var1_int] - 1];
+              if (IconButtonPainter.field_b[var1_int] > 0) {
+                var4 = PlayerStatSortCriterion.field_n[-1 + IconButtonPainter.field_b[var1_int]];
+                var3 = TrinketUnlockNotice.field_a[IconButtonPainter.field_b[var1_int] - 1];
               }
             }
             if (var3 != null) {

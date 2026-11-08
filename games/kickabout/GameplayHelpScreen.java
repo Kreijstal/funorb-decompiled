@@ -50,7 +50,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
           var12.addChild((byte) -121, var5);
           var6 = ca.field_f[var4];
           for (var7 = 0; var7 < ca.field_f[var4]; var7++) {
-            if (hv.field_a[QuickChatKeysHelpPanel.field_Ab[var2 + var7]] &&
+            if (GoalkeeperAiSupport.field_a[QuickChatKeysHelpPanel.field_Ab[var2 + var7]] &&
               !c.a(QuickChatKeysHelpPanel.field_Ab[var7 + var2], 0, BufferedSocket.field_f)) {
               var6--;
             }
@@ -58,7 +58,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
           var7Lifetime1 = 0;
           for (var8 = 0; var8 < ca.field_f[var4]; var8++) {
             var9 = 0;
-            if (hv.field_a[QuickChatKeysHelpPanel.field_Ab[var2]] &&
+            if (GoalkeeperAiSupport.field_a[QuickChatKeysHelpPanel.field_Ab[var2]] &&
               !c.a(QuickChatKeysHelpPanel.field_Ab[var2], 0, BufferedSocket.field_f)) {
               var9 = 1;
             }
@@ -264,7 +264,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
         if (ArchiveManager.field_d < 0) {
           ic.a(280, QuickChatPhraseDefinition.field_q, false, (String) null, 240, false, true, 330 + this.slideOffsetX);
         } else {
-          ic.a(280, dr.field_c[ArchiveManager.field_d], false, dk.field_h[ArchiveManager.field_d], 240, false, true, this.slideOffsetX + 330);
+          ic.a(280, dr.field_c[ArchiveManager.field_d], false, AchievementQuery.field_h[ArchiveManager.field_d], 240, false, true, this.slideOffsetX + 330);
         }
         return;
     }
@@ -637,8 +637,8 @@ final class GameplayHelpScreen extends PagedHelpScreen {
             GeneratedPanelPainter.field_g[var3[var4][var5]].d(false).c(110 + (var2 + var5 * 40), 200);
           }
           var5Lifetime1 = 242;
-          for (var6 = 0; var6 < hv.field_c[var4].length; var6++) {
-            var5Lifetime1 = var5Lifetime1 + (10 + 16 * IsSixCommand.field_C.a(hv.field_c[var4][var6], 10 + var2, var5Lifetime1, 255, 1000, 16777215, -1, 0, 0, 16));
+          for (var6 = 0; var6 < GoalkeeperAiSupport.field_c[var4].length; var6++) {
+            var5Lifetime1 = var5Lifetime1 + (10 + 16 * IsSixCommand.field_C.a(GoalkeeperAiSupport.field_c[var4][var6], 10 + var2, var5Lifetime1, 255, 1000, 16777215, -1, 0, 0, 16));
           }
           var2 += 285;
         }

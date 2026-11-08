@@ -162,12 +162,12 @@ abstract class MatchPhaseView {
                 }
               }
             }
-            var20Lifetime4 = hr.field_m[param2][param8][param1].length;
+            var20Lifetime4 = LookupRecordUpdate.field_m[param2][param8][param1].length;
             for (var21Lifetime4 = 0; var21Lifetime4 < var20Lifetime4; var21Lifetime4++) {
-              var16Lifetime4 = (short)hr.field_m[param2][param8][0][var21Lifetime4];
+              var16Lifetime4 = (short)LookupRecordUpdate.field_m[param2][param8][0][var21Lifetime4];
               for (var22Lifetime3 = 0; var33.length > var22Lifetime3; var22Lifetime3++) {
                 if (~var33[var22Lifetime3] == ~var16Lifetime4) {
-                  var19[var22Lifetime3] = (short)hr.field_m[param2][param8][param1][var21Lifetime4];
+                  var19[var22Lifetime3] = (short)LookupRecordUpdate.field_m[param2][param8][param1][var21Lifetime4];
                 }
               }
             }

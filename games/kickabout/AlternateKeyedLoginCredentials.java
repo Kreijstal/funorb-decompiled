@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wo extends KeyedLoginCredentials {
+final class AlternateKeyedLoginCredentials extends KeyedLoginCredentials {
     static Sprite[] field_n;
     static int field_m;
     static int field_k;
@@ -9,7 +9,7 @@ final class wo extends KeyedLoginCredentials {
     static String[] field_j;
     static int field_o;
 
-    final static void a(ArgbSprite param0, RenderedFootballer param1, byte param2, int param3) {
+    final static void drawFootballerOverlay(ArgbSprite param0, RenderedFootballer param1, byte param2, int param3) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -39,7 +39,7 @@ final class wo extends KeyedLoginCredentials {
               param0.b(var7, var8, param3);
               return;
             }
-            nh.a(param0, var7, var8);
+            SpritePixelSupport.a(param0, var7, var8);
             return;
           }
           var9 = var5 * InstrumentNoteMask.field_i >> 8;
@@ -47,7 +47,7 @@ final class wo extends KeyedLoginCredentials {
             param0.drawScaledAlpha((-var9 + var5 >> 1) + var7, (var6 - var9 >> 1) + var8, var9, var9, param3);
             return;
           }
-          nh.a(param0, (-var9 + var5 >> 1) + var7, (var6 - var9 >> 1) + var8, var9, var9);
+          SpritePixelSupport.a(param0, (-var9 + var5 >> 1) + var7, (var6 - var9 >> 1) + var8, var9, var9);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -69,7 +69,7 @@ final class wo extends KeyedLoginCredentials {
         }
     }
 
-    wo(long param0, String param1) {
+    AlternateKeyedLoginCredentials(long param0, String param1) {
         super(param0, param1);
     }
 
@@ -80,11 +80,11 @@ final class wo extends KeyedLoginCredentials {
         return ReflectionCheck.field_j;
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_l = null;
         field_n = null;
         if (param0) {
-          wo.a(true);
+          AlternateKeyedLoginCredentials.releaseStatics(true);
           field_j = null;
           return;
         }

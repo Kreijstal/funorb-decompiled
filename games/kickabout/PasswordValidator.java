@@ -233,7 +233,7 @@ final class PasswordValidator extends TextFieldValidator {
         if (param4 != -55) {
           PasswordValidator.a(124L, false);
         }
-        int var5 = (int)(nj.monotonicMillis(-62) % 2000L * 100L) / 2000;
+        int var5 = (int)(MonotonicClock.monotonicMillis(-62) % 2000L * 100L) / 2000;
         var5 = (var5 + (param0 * 100 >> 16)) % 100;
         Sprite var6 = lt.field_c[var5];
         if (!param3) {

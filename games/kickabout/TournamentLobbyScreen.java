@@ -85,7 +85,7 @@ final class TournamentLobbyScreen extends AppScreen {
           if (param1 != -7465) {
             field_N = (r) null;
           }
-          var2 = nj.a(0, "jagex-last-login-method", param0);
+          var2 = MonotonicClock.readCookie(0, "jagex-last-login-method", param0);
           if (var2 == null) {
             stackIn_5_0 = GameModeDefinition.field_h;
             return stackIn_5_0;
@@ -127,7 +127,7 @@ final class TournamentLobbyScreen extends AppScreen {
         if (param0 == 52) {
           ph.field_a = 2;
         }
-        ii.a((byte) -121);
+        AchievementSubmission.a((byte) -121);
     }
 
     final void readPlayerNames(CipherPacketBuffer param0, boolean param1) {
@@ -199,7 +199,7 @@ final class TournamentLobbyScreen extends AppScreen {
         SoftwareRasterizer.fillRoundedRectangleBlended(-(this.field_A >> 1) + 320, var2, this.field_A, this.field_n, 8, 0, 128);
         SoftwareRasterizer.fillRoundedRectangleBlended(-(-20 + this.field_A >> 1) + 320, var2 + 10, this.field_A - 20, 30, 8, 65793, 128);
         un.field_d.d("<u=ffffff>" + LoggedPlayer.field_e[2].toUpperCase() + "</u> " + (null != this.field_r ? this.field_r : ""), 320, var2 + 30, 16777215, -1);
-        var2 = var2 + ii.field_l;
+        var2 = var2 + AchievementSubmission.field_l;
         int var3 = 22;
         int var4 = 80;
         int var5 = 618;
@@ -272,7 +272,7 @@ final class TournamentLobbyScreen extends AppScreen {
         if (!param1) {
           return;
         }
-        var14 = h.a(17475);
+        var14 = QuickChatMenuBuilder.getNewestChatMessage(17475);
         var4 = -84 / ((param0 - 38) / 60);
         if (this.field_g != var14) {
           stackIn_12_1 = (!QuickChatCategoryCache.field_e) && (this.field_g != var14) && (!SumIntegersCommand.a((byte) -66, var14.field_q));
@@ -293,7 +293,7 @@ final class TournamentLobbyScreen extends AppScreen {
           this.field_C = 560;
         }
         PlayerSurnameSortCriterion.field_o = -1;
-        dc.field_c = -1;
+        PortraitCacheOrder.field_c = -1;
         if (ph.field_a == 1) {
           if (-1 == PlayerSurnameSortCriterion.field_o) {
             if (null != this.field_T) {
@@ -389,7 +389,7 @@ final class TournamentLobbyScreen extends AppScreen {
             if (this.field_W == 3) {
               var5_intLifetime5 -= 14;
             }
-            if (dc.field_c != -1) {
+            if (PortraitCacheOrder.field_c != -1) {
               var5_intLifetime5 = 0;
             }
             var13 = 0;
@@ -400,7 +400,7 @@ final class TournamentLobbyScreen extends AppScreen {
                   this.field_z) {
                   this.field_y[var13].update(this.field_T[var5_intLifetime5], param1, -109);
                 }
-                if (-1 == dc.field_c) {
+                if (-1 == PortraitCacheOrder.field_c) {
                   var5_intLifetime5++;
                 }
               }
@@ -411,15 +411,15 @@ final class TournamentLobbyScreen extends AppScreen {
           if (ph.field_a == 2) {
             stackIn_84_1 = (param1) && (BytePlusOneCommand.field_A >= this.field_m) && (570 + this.field_m >= BytePlusOneCommand.field_A) && (ArchiveManager.field_m >= this.field_u) && (12 + this.field_u >= ArchiveManager.field_m);
             this.field_i = stackIn_84_1;
-            if (this.field_h != ii.field_l) {
-              var5_intLifetime5 = this.field_h - ii.field_l >> 3;
+            if (this.field_h != AchievementSubmission.field_l) {
+              var5_intLifetime5 = this.field_h - AchievementSubmission.field_l >> 3;
               if (var5_intLifetime5 != 0) {
-                ii.field_l = ii.field_l + var5_intLifetime5;
+                AchievementSubmission.field_l = AchievementSubmission.field_l + var5_intLifetime5;
               } else {
-                if (ii.field_l >= this.field_h) {
-                  ii.field_l = ii.field_l - 1;
+                if (AchievementSubmission.field_l >= this.field_h) {
+                  AchievementSubmission.field_l = AchievementSubmission.field_l - 1;
                 } else {
-                  ii.field_l = ii.field_l + 1;
+                  AchievementSubmission.field_l = AchievementSubmission.field_l + 1;
                 }
               }
             }
@@ -478,7 +478,7 @@ final class TournamentLobbyScreen extends AppScreen {
             }
             this.field_h = this.field_k;
           } else {
-            ii.field_l = 0;
+            AchievementSubmission.field_l = 0;
             this.field_h = 0;
           }
         }
@@ -588,7 +588,7 @@ final class TournamentLobbyScreen extends AppScreen {
         int[] var5 = null;
         int[] var2 = null;
         int var3 = 0;
-        this.field_h = ii.field_l;
+        this.field_h = AchievementSubmission.field_l;
         this.field_C = 560;
         this.field_L = 400;
         this.field_m = 32;
@@ -601,8 +601,8 @@ final class TournamentLobbyScreen extends AppScreen {
         this.field_s = 0;
         try {
           QuickChatCategoryCache.field_e = false;
-          hr.b(22);
-          op.a(-363021503);
+          LookupRecordUpdate.b(22);
+          SpriteButtonPainter.a(-363021503);
           var5 = new int[]{54, 53, 52, 12};
           var2 = var5;
           if (var2 != null) {
@@ -686,10 +686,10 @@ final class TournamentLobbyScreen extends AppScreen {
           this.field_x = param0.readUnsignedShort((byte) 81);
           stackIn_7_1 = (param0.readUnsignedByte((byte) -128) == 1);
           this.field_z = stackIn_7_1;
-          if (dc.field_c == -1) {
+          if (PortraitCacheOrder.field_c == -1) {
             stackIn_10_0 = (int)Math.pow(2.0, (double)this.field_W);
           } else {
-            stackIn_10_0 = dc.field_c;
+            stackIn_10_0 = PortraitCacheOrder.field_c;
           }
           var5Lifetime1 = stackIn_10_0;
           if (this.field_y == null ||
@@ -710,7 +710,7 @@ final class TournamentLobbyScreen extends AppScreen {
             if (this.field_W == 3) {
               var8 -= 14;
             }
-            if (dc.field_c != -1) {
+            if (PortraitCacheOrder.field_c != -1) {
               var8 = 0;
             }
             for (var9 = 0; var9 < var6; var9++) {
@@ -735,7 +735,7 @@ final class TournamentLobbyScreen extends AppScreen {
                 var17 = stackIn_44_0;
                 var14 = var17;
                 this.field_y[var9] = new LobbyMatchPreview(this.field_T[var8], new String[]{var16, var17}, var11, -15 + var12, var8);
-                if (dc.field_c == -1) {
+                if (PortraitCacheOrder.field_c == -1) {
                   var8++;
                 }
               }
@@ -773,7 +773,7 @@ final class TournamentLobbyScreen extends AppScreen {
                 var19 = stackIn_63_0;
                 var14Lifetime1 = var19;
                 this.field_y[var9Lifetime1 + var6] = new LobbyMatchPreview(this.field_T[var8], new String[]{var18, var19}, var11Lifetime1, var12Lifetime1 - 15, var8);
-                if (dc.field_c == -1) {
+                if (PortraitCacheOrder.field_c == -1) {
                   var8++;
                 }
               }
@@ -1232,7 +1232,7 @@ final class TournamentLobbyScreen extends AppScreen {
           cd.a((byte) -127, var4, var3);
           TeamManagementScreen.e(123);
         } else {
-          var5 = Math.abs(255 - (int)(nj.monotonicMillis(96) / 5L % 512L));
+          var5 = Math.abs(255 - (int)(MonotonicClock.monotonicMillis(96) / 5L % 512L));
           var6 = 0;
           var7 = Math.abs(255 - var5) | Math.abs(-var5 + 255) << 8 | Math.abs(255 - var5) << 16;
           AuctionListing.a(40 + (MarkerSliderPainter.field_n + var3), -22914, -2 + var3, var4, -16 + var4);

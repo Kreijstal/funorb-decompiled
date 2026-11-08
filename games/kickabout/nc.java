@@ -44,7 +44,7 @@ final class nc {
           if (100 > et.field_c) {
             et.field_c = 100;
           }
-          hr.b(22);
+          LookupRecordUpdate.b(22);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

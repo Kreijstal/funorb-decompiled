@@ -60,7 +60,7 @@ final class IntrusiveNodeHashTable {
           return;
         }
         RankingRowNode.field_Db = param0;
-        dc.field_d = 0;
+        PortraitCacheOrder.field_d = 0;
         CachedArchiveSource.field_s = 1;
     }
 

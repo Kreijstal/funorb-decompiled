@@ -160,10 +160,10 @@ final class CipherPacketBuffer extends PacketBuffer {
         int var2;
         int var3;
         ResourceArchive var4;
-        ea.field_a = SoftwareRasterizer.field_g;
+        ColorQuantizationBox.field_a = SoftwareRasterizer.field_g;
         BufferedSocket.field_s = SoftwareRasterizer.field_f;
         GeneratedPanelPainter.b((byte) 92);
-        tn.field_d.a(0, ss.field_c.field_q, 0, -2 + ss.field_c.field_mb - 40, (byte) -123);
+        tn.field_d.layout(0, ss.field_c.field_q, 0, -2 + ss.field_c.field_mb - 40, (byte) -123);
         ConsoleValue.field_a.setBounds(true, WhirlpoolHasher.field_m.field_q, 0, 0, sh.field_c);
         var1 = sh.field_c + 2;
         if (param0) {

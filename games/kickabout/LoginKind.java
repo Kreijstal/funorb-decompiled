@@ -42,13 +42,13 @@ final class LoginKind {
                 stackIn_10_1 = 1;
               }
               if ((stackIn_9_0 ? 1 : 0) != stackIn_10_1) {
-                dc.moveToFront(var6_int, (byte) 46);
+                PortraitCacheOrder.moveToFront(var6_int, (byte) 46);
                 stackIn_13_0 = NamedValueEntry.field_f[0].portrait;
                 return stackIn_13_0;
               }
             }
           }
-          var6_long = nj.monotonicMillis(-53);
+          var6_long = MonotonicClock.monotonicMillis(-53);
           if (-bk.field_b + var6_long < 80L) {
             return null;
           }
@@ -57,7 +57,7 @@ final class LoginKind {
           }
           bk.field_b = var6_long;
           NamedValueEntry.field_f[63].renderPortrait(param1 + 184, param3, param0, param2, param5, param4);
-          dc.moveToFront(63, (byte) 88);
+          PortraitCacheOrder.moveToFront(63, (byte) 88);
           stackIn_21_0 = NamedValueEntry.field_f[0].portrait;
           return stackIn_21_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

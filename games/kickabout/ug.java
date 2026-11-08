@@ -6,7 +6,7 @@ final class ug {
     static java.applet.Applet field_a;
     static Sprite[][] field_b;
     static String field_d;
-    static wd field_e;
+    static RankingsRequest field_e;
     static boolean[] field_f;
 
     public static void releaseStatics(int param0) {
@@ -94,9 +94,9 @@ final class ug {
           while (var6 != null) {
             var7 = 0;
             if (null == var6.field_jb) {
-              var6.field_Bb = new UiLayoutNode(0L, mp.field_f);
+              var6.field_Bb = new UiLayoutNode(0L, BlobSubmission.field_f);
               var6.addChild((byte) -109, var6.field_Bb);
-              var6.field_Fb = new UiLayoutNode(0L, mp.field_f);
+              var6.field_Fb = new UiLayoutNode(0L, BlobSubmission.field_f);
               var6.addChild((byte) -105, var6.field_Fb);
               var6.invalidateChildren(false);
               var7 = 1;
@@ -148,7 +148,7 @@ final class ug {
               var13_ref_String = IsSixCommand.field_D;
               var16.field_j.addItem(0, 7, var13_ref_String);
               var17 = TextButton.field_v;
-              var13 = sm.field_q;
+              var13 = HighScoreSubmission.field_q;
               var14 = ReceivedAuctionItem.field_y;
               var17.field_j.layoutItems(0, 0, var13, var14, 0);
             }

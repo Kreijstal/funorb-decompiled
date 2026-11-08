@@ -114,9 +114,9 @@ class AuctionItem extends IntrusiveNode {
             var8 = ImageProducerRasterBuffer.field_i[9] >> 2;
             var9 = ImageProducerRasterBuffer.field_i[10] >> 2;
             var10_int = ImageProducerRasterBuffer.field_i[11] >> 2;
-            var11 = hh.field_g[3] * var8 + var9 * hh.field_g[4] + var10_int * hh.field_g[5] >> 14;
-            var12 = var10_int * hh.field_g[8] + var9 * hh.field_g[7] + var8 * hh.field_g[6] >> 14;
-            var13 = var8 * hh.field_g[9] + hh.field_g[10] * var9 + hh.field_g[11] * var10_int >> 14;
+            var11 = FullscreenFailureReason.field_g[3] * var8 + var9 * FullscreenFailureReason.field_g[4] + var10_int * FullscreenFailureReason.field_g[5] >> 14;
+            var12 = var10_int * FullscreenFailureReason.field_g[8] + var9 * FullscreenFailureReason.field_g[7] + var8 * FullscreenFailureReason.field_g[6] >> 14;
+            var13 = var8 * FullscreenFailureReason.field_g[9] + FullscreenFailureReason.field_g[10] * var9 + FullscreenFailureReason.field_g[11] * var10_int >> 14;
             var2[var3] = var13 * var7 + var11 * var5 + var6 * var12 >> 16;
           }
           var3Lifetime1 = ImageProducerRasterBuffer.field_i[9] >> 8;
@@ -155,9 +155,9 @@ class AuctionItem extends IntrusiveNode {
             var18 = TrinketCountSortCriterion.field_n[var17];
             MouseWheelInput.a(var17, 1);
             for (var19 = 0; var19 < 3; var19++) {
-              hh.field_g[var19] = hh.field_g[var19] + sm.field_l[var16][var19];
+              FullscreenFailureReason.field_g[var19] = FullscreenFailureReason.field_g[var19] + HighScoreSubmission.field_l[var16][var19];
             }
-            Bzip2State.a(var18, false, hh.field_g, ImageProducerRasterBuffer.field_i, (byte) -96, false, true);
+            Bzip2State.a(var18, false, FullscreenFailureReason.field_g, ImageProducerRasterBuffer.field_i, (byte) -96, false, true);
             RotaryDialPainter.a(var8Lifetime1, var7Lifetime1, var13Lifetime1, var9Lifetime1, var14, (byte) -125, var18, var15);
           }
           return;

@@ -64,7 +64,7 @@ final class ss {
         if (br.a(param0 ^ 62)) {
           return true;
         }
-        if (ni.a(param3, param2, param1, -20859)) {
+        if (HighScoreQuery.dispatchKeyInput(param3, param2, param1, -20859)) {
           return true;
         }
         return false;

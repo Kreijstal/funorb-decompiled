@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class h {
+final class QuickChatMenuBuilder {
     static String[][] field_b;
     static String field_c;
     static String field_d;
@@ -9,7 +9,7 @@ final class h {
     static UiLayoutNode field_e;
     static String field_f;
 
-    final static CascadingMenu a(int param0, QuickChatCategory param1, UiLayoutNode param2, UiLayoutNode param3, UiLayoutNode param4) {
+    final static CascadingMenu buildCategoryMenu(int param0, QuickChatCategory param1, UiLayoutNode param2, UiLayoutNode param3, UiLayoutNode param4) {
         int var14 = 0;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
@@ -79,7 +79,7 @@ final class h {
               var13_ref_tc = ReceivedAuctionItem.field_x.getCategory(200, param1.subcategoryIds[var12]);
               var8[var12] = var13_ref_tc.description;
               var9[var12] = param1.subcategoryShortcuts[var12];
-              var11[var12] = h.a(0, var13_ref_tc, param2, param3, param4);
+              var11[var12] = QuickChatMenuBuilder.buildCategoryMenu(0, var13_ref_tc, param2, param3, param4);
             }
           }
           if (null != param1.phraseIds) {
@@ -137,7 +137,7 @@ final class h {
         }
     }
 
-    final static ChatMessage a(int param0) {
+    final static ChatMessage getNewestChatMessage(int param0) {
         if (vb.field_j == 0) {
           return null;
         }
@@ -147,7 +147,7 @@ final class h {
         return GrowableIntList.field_b[-1 + vb.field_j];
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_a = null;
         field_b = (String[][]) null;
         field_e = null;

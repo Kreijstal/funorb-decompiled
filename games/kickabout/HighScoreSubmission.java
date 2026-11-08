@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sm extends IntrusiveNode {
+final class HighScoreSubmission extends IntrusiveNode {
     int[] field_r;
     int field_h;
     int field_g;
@@ -17,7 +17,7 @@ final class sm extends IntrusiveNode {
     static int[][] field_o;
     int field_e;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_l = (int[][]) null;
         field_p = null;
         field_j = null;
@@ -27,7 +27,7 @@ final class sm extends IntrusiveNode {
         }
     }
 
-    final static void a(byte param0) {
+    final static void readLookupResponse(byte param0) {
         int var8 = 0;
         RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
@@ -35,10 +35,10 @@ final class sm extends IntrusiveNode {
         CipherPacketBuffer var2 = null;
         int var3 = 0;
         int var4 = 0;
-        dl var5 = null;
+        LookupQuery var5 = null;
         int var5_int = 0;
         int var6 = 0;
-        hr var6_ref_hr = null;
+        LookupRecordUpdate var6_ref_hr = null;
         int[] var7 = null;
         int var9 = 0;
         int[] var11 = null;
@@ -50,13 +50,13 @@ final class sm extends IntrusiveNode {
           var3 = var2.readUnsignedByte((byte) -123);
           var4 = var2.readUnsignedByte((byte) -112);
           if (0 == var3) {
-            var5 = (dl) (MidiPcmStream.field_M.g(24009));
+            var5 = (LookupQuery) (MidiPcmStream.field_M.g(24009));
             if (var5 == null) {
               FormationView.b((byte) -116);
               return;
             }
             var6 = -var2.field_n + ms.field_b;
-            var12 = var5.field_f;
+            var12 = var5.resultValues;
             var11 = var12;
             var7 = var11;
             if (var12.length << 2 < var6) {
@@ -74,11 +74,11 @@ final class sm extends IntrusiveNode {
             return;
           }
           var5_int = var2.readSignedSmart(85);
-          var6_ref_hr = (hr) (NamedValueContainer.field_c.g(24009));
+          var6_ref_hr = (LookupRecordUpdate) (NamedValueContainer.field_c.g(24009));
           while (var6_ref_hr != null) {
-            if (var6_ref_hr.field_j != var4 ||
-              var6_ref_hr.field_i != var5_int) {
-              var6_ref_hr = (hr) (NamedValueContainer.field_c.c(33));
+            if (var6_ref_hr.tableId != var4 ||
+              var6_ref_hr.recordId != var5_int) {
+              var6_ref_hr = (LookupRecordUpdate) (NamedValueContainer.field_c.c(33));
               continue;
             }
             break;
@@ -96,7 +96,7 @@ final class sm extends IntrusiveNode {
         }
     }
 
-    private sm() throws Throwable {
+    private HighScoreSubmission() throws Throwable {
         throw new Error();
     }
 

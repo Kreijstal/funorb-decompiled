@@ -254,8 +254,8 @@ final class IntDoubleCommand extends ConsoleCommand {
     final static void a(float param0, String param1, boolean param2, byte param3) {
         try {
           if (AnimationClip.field_d == null) {
-            AnimationClip.field_d = new LoadingProgressDialog(wd.field_l, CachedTextLayout.field_m);
-            wd.field_l.a(AnimationClip.field_d, false);
+            AnimationClip.field_d = new LoadingProgressDialog(RankingsRequest.field_l, CachedTextLayout.field_m);
+            RankingsRequest.field_l.a(AnimationClip.field_d, false);
           }
           if (param3 < 71) {
             IntDoubleCommand.a((byte) -14, 61, 24, 8, -65, -11, 102, -101);

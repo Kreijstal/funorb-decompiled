@@ -84,7 +84,7 @@ final class PlayerStatSortCriterion extends SortCriterion {
     }
 
     final static int a(boolean param0) {
-        wk.a(nj.monotonicMillis(-100), 0);
+        wk.a(MonotonicClock.monotonicMillis(-100), 0);
         if (param0) {
           PlayerStatSortCriterion.b((byte) -67);
         }

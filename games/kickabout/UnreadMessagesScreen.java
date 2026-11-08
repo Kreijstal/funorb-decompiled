@@ -23,7 +23,7 @@ final class UnreadMessagesScreen extends ButtonMenuScreen {
         int var4Lifetime1;
         super.updateScreen((byte) 117, param1);
         stackIn_3_0 = !(PlayerStats.a((byte) -3));
-        var3 = rp.a(stackIn_3_0, -587);
+        var3 = PasswordFieldPainter.a(stackIn_3_0, -587);
         if (var3 != 3) {
           if (var3 == 1) {
             DelayedServerPacket.a(0, false, -2);
@@ -83,7 +83,7 @@ final class UnreadMessagesScreen extends ButtonMenuScreen {
             } else {
               CachedTextLayout.field_m = ProxySocketConnector.field_h;
             }
-            CachedTextLayout.field_m = kr.a(new CharSequence[]{(CharSequence) ((Object) CachedTextLayout.field_m), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) LobbyPlayerRow.field_Kb)}, false);
+            CachedTextLayout.field_m = DisplayModeSupport.concatenate(new CharSequence[]{(CharSequence) ((Object) CachedTextLayout.field_m), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) LobbyPlayerRow.field_Kb)}, false);
           }
           WorldSpriteSequence.field_f.closeDialog(-105);
           fj.a(param0 ^ 44);
@@ -123,10 +123,10 @@ final class UnreadMessagesScreen extends ButtonMenuScreen {
               var3 = var3 + param0;
             }
             or.printError(var3, param2 ^ 0);
-            var7 = aj.replaceAll(-1, ":", "%3a", var3);
-            var8 = aj.replaceAll(param2 ^ -2, "@", "%40", var7);
-            var9 = aj.replaceAll(-1, "&", "%26", var8);
-            var10 = aj.replaceAll(-1, "#", "%23", var9);
+            var7 = ThreadSleepSupport.replaceAll(-1, ":", "%3a", var3);
+            var8 = ThreadSleepSupport.replaceAll(param2 ^ -2, "@", "%40", var7);
+            var9 = ThreadSleepSupport.replaceAll(-1, "&", "%26", var8);
+            var10 = ThreadSleepSupport.replaceAll(-1, "#", "%23", var9);
             if (null == ug.field_a) {
               return;
             }
@@ -146,7 +146,7 @@ final class UnreadMessagesScreen extends ButtonMenuScreen {
             }
             var4 = ((PlatformTaskDispatcher) (Object) stackIn_13_0).requestUrl(new java.net.URL(stackIn_13_3, ((StringBuilder) (Object) stackIn_13_4).append(stackIn_14_5).append("&v1=").append(PlatformTaskDispatcher.field_u).append("&v2=").append(PlatformTaskDispatcher.field_r).append("&e=").append(var10).toString()), (byte) -29);
             while (var4.field_a == 0) {
-              aj.a(1L, param2 + 0);
+              ThreadSleepSupport.sleepMillis(1L, param2 + 0);
             }
             if (param2 == var4.field_a) {
               var5 = (DataInputStream) (var4.field_b);

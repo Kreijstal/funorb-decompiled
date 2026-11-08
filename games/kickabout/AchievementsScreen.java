@@ -429,7 +429,7 @@ final class AchievementsScreen extends ButtonMenuScreen {
         RuntimeException var2_ref = null;
         var5 = Kickabout.field_G;
         try {
-          if (ni.field_m == null) {
+          if (HighScoreQuery.field_m == null) {
             return null;
           }
           var6 = (CharSequence) ((Object) param0);
@@ -440,7 +440,7 @@ final class AchievementsScreen extends ButtonMenuScreen {
           if (var2 == null) {
             var2 = param0;
           }
-          var3 = (gg) (ni.field_m.a(-3611, (long)var2.hashCode()));
+          var3 = (gg) (HighScoreQuery.field_m.a(-3611, (long)var2.hashCode()));
           while (var3 != null) {
             var7 = (CharSequence) ((Object) var3.field_Gb);
             var4 = MatchAgent.a(0, var7);
@@ -451,7 +451,7 @@ final class AchievementsScreen extends ButtonMenuScreen {
               stackIn_18_0 = var3;
               return stackIn_18_0;
             }
-            var3 = (gg) (ni.field_m.a((byte) 117));
+            var3 = (gg) (HighScoreQuery.field_m.a((byte) 117));
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

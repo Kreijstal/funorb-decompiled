@@ -11,29 +11,29 @@ class TextHotspotWidget extends TextButton {
     private IntrusiveDeque field_E;
     static volatile int field_M;
     static boolean field_F;
-    private er field_I;
+    private TextHotspotRegion field_I;
 
-    private final er b(int param0, int param1, int param2) {
-        er var4;
-        er var5;
+    private final TextHotspotRegion b(int param0, int param1, int param2) {
+        TextHotspotRegion var4;
+        TextHotspotRegion var5;
         int var6;
         var6 = Kickabout.field_G;
-        var4 = (er) (this.field_E.g(24009));
+        var4 = (TextHotspotRegion) (this.field_E.g(24009));
         if (param1 != 2) {
-          this.field_I = (er) null;
+          this.field_I = (TextHotspotRegion) null;
         }
         while (var4 != null) {
           var5 = var4;
           while (var5 != null) {
-            if (param0 >= var5.field_g &&
-              param2 >= var5.field_m &&
-              var5.field_g + var5.field_e > param0 &&
-              var5.field_m + var5.field_f >= param2) {
+            if (param0 >= var5.x &&
+              param2 >= var5.y &&
+              var5.x + var5.width > param0 &&
+              var5.y + var5.height >= param2) {
               return var4;
             }
-            var5 = var5.field_j;
+            var5 = var5.nextLineRegion;
           }
-          var4 = (er) (this.field_E.c(param1 ^ 35));
+          var4 = (TextHotspotRegion) (this.field_E.c(param1 ^ 35));
         }
         return null;
     }
@@ -53,10 +53,10 @@ class TextHotspotWidget extends TextButton {
         super.b(param0, param1, param2, param3);
         int var5 = -this.field_t + param1;
         int var6 = -this.field_g + param2;
-        er var7 = this.b(var5, 2, var6);
+        TextHotspotRegion var7 = this.b(var5, 2, var6);
         if (var7 != null &&
           null != this.field_k) {
-          ((TextHotspotListener) ((Object) this.field_k)).onHotspotClicked(this, param0, var7.field_i, 40);
+          ((TextHotspotListener) ((Object) this.field_k)).onHotspotClicked(this, param0, var7.hotspotId, 40);
         }
     }
 
@@ -127,10 +127,10 @@ class TextHotspotWidget extends TextButton {
         if (param0 != -1) {
           this.b(112, 119, -84, -8);
         }
-        if (this.field_I.field_i >= this.field_J.length) {
+        if (this.field_I.hotspotId >= this.field_J.length) {
           return null;
         }
-        return this.field_J[this.field_I.field_i];
+        return this.field_J[this.field_I.hotspotId];
     }
 
     void updatePointerState(byte param0, UiWidget param1, int param2, int param3) {
@@ -261,13 +261,13 @@ class TextHotspotWidget extends TextButton {
           return;
         }
         WidgetTextLayout var5 = (WidgetTextLayout) ((Object) this.field_r);
-        er var6 = this.field_I;
+        TextHotspotRegion var6 = this.field_I;
         if (var6 != null) {
           var7 = var5.textOriginX((UiWidget) (this), param2, -1);
           var8 = var5.textOriginY(true, (UiWidget) (this), param3);
           do {
-            RenderedBall.b(param1 - 63, 2 + var6.field_e, var6.field_m + (var8 - 2), var6.field_f + 2, -2 + (var7 + var6.field_g));
-            var6 = var6.field_j;
+            RenderedBall.b(param1 - 63, 2 + var6.width, var6.y + (var8 - 2), var6.height + 2, -2 + (var7 + var6.x));
+            var6 = var6.nextLineRegion;
           } while (var6 != null);
         }
     }
@@ -288,7 +288,7 @@ class TextHotspotWidget extends TextButton {
         TextLayoutLine var12;
         int var13;
         int var14;
-        er var15;
+        TextHotspotRegion var15;
         int var16;
         int var7Lifetime1;
         var16 = Kickabout.field_G;
@@ -329,9 +329,9 @@ class TextHotspotWidget extends TextButton {
               }
             }
             var14 = stackIn_14_0;
-            var15 = new er(var7Lifetime1, var13, var12.field_g, -var13 + var14, Math.max(var3.lineHeight((byte) -76), -var12.field_g + var12.field_d));
+            var15 = new TextHotspotRegion(var7Lifetime1, var13, var12.field_g, -var13 + var14, Math.max(var3.lineHeight((byte) -76), -var12.field_g + var12.field_d));
             if (var10 != null) {
-              ((er) (var10)).field_j = var15;
+              ((TextHotspotRegion) (var10)).nextLineRegion = var15;
             }
             var10 = var15;
             this.field_E.addLast(var15, param0 + 44);

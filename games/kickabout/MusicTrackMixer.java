@@ -84,7 +84,7 @@ final class MusicTrackMixer extends PcmStream {
                 this.field_i[var6_intLifetime1] = 0;
                 this.field_n[var6_intLifetime1] = 0;
                 if (this.field_p[var6_intLifetime1] != null) {
-                  this.field_k[var6_intLifetime1].b(21404);
+                  this.field_k[var6_intLifetime1].stop(21404);
                 }
                 this.field_p[var6_intLifetime1] = null;
               }
@@ -99,7 +99,7 @@ final class MusicTrackMixer extends PcmStream {
           if (var5Lifetime1 == 0) {
             return;
           }
-          if (!PcmPlayerService.field_o) {
+          if (!PcmPlayerService.stereo) {
             stackIn_39_0 = param2;
           } else {
             stackIn_39_0 = param2 << 1;
@@ -121,7 +121,7 @@ final class MusicTrackMixer extends PcmStream {
               this.field_k[var8Lifetime1].mixInto(this.field_j[var8Lifetime1], param1, param2);
             }
           }
-          if (PcmPlayerService.field_o) {
+          if (PcmPlayerService.stereo) {
             param1 = param1 << 1;
           }
           for (var8Lifetime2 = 0; var8Lifetime2 < var7Lifetime1; var8Lifetime2++) {
@@ -162,14 +162,14 @@ final class MusicTrackMixer extends PcmStream {
           if (param4 >= 0 &&
             this.field_o > param4) {
             if (null != this.field_p[param4]) {
-              this.field_k[param4].b(21404);
+              this.field_k[param4].stop(21404);
             }
             this.field_p[param4] = param2;
             if (param2 != null) {
               this.field_n[param4] = param5;
-              this.field_k[param4].d(-1, -1, param6);
-              this.field_k[param4].a(param0, 19134, param2);
-              this.field_k[param4].c(param1, 107342216);
+              this.field_k[param4].setChannelGain(-1, -1, param6);
+              this.field_k[param4].playTrack(param0, 19134, param2);
+              this.field_k[param4].setPlaybackTimeScale(param1, 107342216);
             }
             if (param3 != -9017) {
               field_m = (String) null;
@@ -195,7 +195,7 @@ final class MusicTrackMixer extends PcmStream {
         int var4 = 0;
         int var5 = Kickabout.field_G;
         for (var4 = param0; this.field_k.length > var4; var4++) {
-          this.field_k[var4].b(param2, param1, (byte) -73);
+          this.field_k[var4].setChannelProgram(param2, param1, (byte) -73);
         }
     }
 
@@ -282,7 +282,7 @@ final class MusicTrackMixer extends PcmStream {
               this.field_i[var6] = 0;
               this.field_n[var6] = 0;
               if (this.field_p[var6] != null) {
-                this.field_k[var6].b(21404);
+                this.field_k[var6].stop(21404);
               }
               this.field_p[var6] = null;
             }

@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ve extends ResizableModalPanel implements ButtonListener {
+final class FullscreenErrorDialog extends ResizableModalPanel implements ButtonListener {
     static String field_Q;
     static UiLayoutNode field_S;
     private TextButton field_U;
     static IntrusiveDeque field_R;
     static int[] field_T;
 
-    public static void j(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 <= 68) {
           return;
         }
@@ -18,13 +18,13 @@ final class ve extends ResizableModalPanel implements ButtonListener {
         field_R = null;
     }
 
-    private final void p(int param0) {
+    private final void dismiss(int param0) {
         if (!this.field_C) {
           return;
         }
         this.field_C = false;
         if (param0 <= 19) {
-          this.p(-32);
+          this.dismiss(-32);
         }
     }
 
@@ -87,7 +87,7 @@ final class ve extends ResizableModalPanel implements ButtonListener {
         }
     }
 
-    private final TextButton a(byte param0, UiListener param1, String param2) {
+    private final TextButton addButton(byte param0, UiListener param1, String param2) {
         TextButton var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -100,7 +100,7 @@ final class ve extends ResizableModalPanel implements ButtonListener {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new TextButton(param2, param1);
-          var4.field_r = (WidgetPainter) ((Object) new op());
+          var4.field_r = (WidgetPainter) ((Object) new SpriteButtonPainter());
           var5 = this.field_i - 6;
           if (param0 != -53) {
             field_S = (UiLayoutNode) null;
@@ -133,14 +133,14 @@ final class ve extends ResizableModalPanel implements ButtonListener {
 
     final static void a(boolean param0, int param1, int param2) {
         ManagerAction var3 = new ManagerAction(7, new int[]{param1, param2});
-        ii.a(var3, 109);
+        AchievementSubmission.applyAndQueueManagerAction(var3, 109);
         if (param0) {
           return;
         }
         field_Q = (String) null;
     }
 
-    ve(ModalStack param0, hh param1) {
+    FullscreenErrorDialog(ModalStack param0, FullscreenFailureReason param1) {
         super(param0, 200, 150);
         Object var3 = null;
         Object stackIn_12_0 = null;
@@ -176,7 +176,7 @@ final class ve extends ResizableModalPanel implements ButtonListener {
           var4.field_i = 80;
           var4.field_r = (WidgetPainter) ((Object) new TextWidgetPainter(EmailSyntaxValidator.field_k, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.a(-98, var4);
-          this.field_U = this.a((byte) -53, (UiListener) (this), pg.field_c);
+          this.field_U = this.addButton((byte) -53, (UiListener) (this), pg.field_c);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -213,7 +213,7 @@ final class ve extends ResizableModalPanel implements ButtonListener {
         int var2Lifetime1;
         var5 = Kickabout.field_G;
         try {
-          var8 = h.a(param0 + 45508);
+          var8 = QuickChatMenuBuilder.getNewestChatMessage(param0 + 45508);
           var1 = var8;
           if (var8 != null &&
             AccountRegistrationPanel.field_D != var8) {
@@ -280,12 +280,12 @@ final class ve extends ResizableModalPanel implements ButtonListener {
         try {
           if (param3 < 64) {
             var7 = (String) null;
-            discarded$1 = this.a((byte) -118, (UiListener) null, (String) null);
+            discarded$1 = this.addButton((byte) -118, (UiListener) null, (String) null);
           }
           if (param1 != this.field_U) {
             return;
           }
-          this.p(25);
+          this.dismiss(25);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

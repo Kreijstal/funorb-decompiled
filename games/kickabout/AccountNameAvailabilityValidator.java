@@ -33,7 +33,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
             return stackIn_5_0;
           }
           if (!param0.equals(this.field_k)) {
-            var3 = AudioService.a(param1 - 86, param0);
+            var3 = AudioService.pollAccountNameAvailability(param1 - 86, param0);
             if (var3 != null &&
               null == var3.message) {
               this.field_k = param0;
@@ -94,7 +94,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
             return stackIn_5_0;
           }
           if (!param1.equals(this.field_k)) {
-            var4 = AudioService.a(-37, param1);
+            var4 = AudioService.pollAccountNameAvailability(-37, param1);
             if (var4 == null) {
               return null;
             }
@@ -216,7 +216,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
               return;
             }
             if (PlatformTaskDispatcher.field_h.startsWith("win") &&
-              fv.openUrlWithShell((byte) -92, param1)) {
+              TooltipOverlay.openUrlWithShell((byte) -92, param1)) {
               return;
             }
             try {
@@ -297,19 +297,19 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        ea var14 = null;
-        ea var15 = null;
-        ea var16 = null;
-        ea var17 = null;
+        ColorQuantizationBox var14 = null;
+        ColorQuantizationBox var15 = null;
+        ColorQuantizationBox var16 = null;
+        ColorQuantizationBox var17 = null;
         int[] var18 = null;
         int var19 = 0;
         int var20 = 0;
         int var21 = 0;
         int var22 = 0;
-        ea[] var23 = null;
+        ColorQuantizationBox[] var23 = null;
         int[] var24 = null;
         int var25 = 0;
-        ea[] var26 = null;
+        ColorQuantizationBox[] var26 = null;
         double[] var27 = null;
         int[] var28 = null;
         double[] var29 = null;
@@ -328,11 +328,11 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
         try {
           EmailAvailabilityValidator.field_j = param1;
           FindingOpponentScreen.field_D = param1.length;
-          hh.field_d = param2;
-          var23 = new ea[256];
+          FullscreenFailureReason.field_d = param2;
+          var23 = new ColorQuantizationBox[256];
           var26 = var23;
           for (var4_int = 0; var4_int < 256; var4_int++) {
-            var23[var4_int] = new ea();
+            var23[var4_int] = new ColorQuantizationBox();
           }
           var4 = null;
           var29 = new double[256];
@@ -377,7 +377,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
           var17.field_d = 32;
           var16.field_l = 32;
           var8Lifetime1 = 1;
-          while (var8Lifetime1 < hh.field_d) {
+          while (var8Lifetime1 < FullscreenFailureReason.field_d) {
             if (ClientUiOverlay.a(var26[var8Lifetime1], false, var26[var10Lifetime1]) == 0) {
               var8Lifetime1--;
               var5[var10Lifetime1] = 0.0;
@@ -387,13 +387,13 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
               if (1 >= var26[var10Lifetime1].field_h) {
                 stackIn_21_2 = 0.0;
               } else {
-                stackIn_21_2 = er.a((byte) 108, var26[var10Lifetime1]);
+                stackIn_21_2 = TextHotspotRegion.computeColorBoxVariance((byte) 108, var26[var10Lifetime1]);
               }
               stackIn_20_0[stackIn_20_1] = stackIn_21_2;
               stackIn_23_0 = var5;
               stackIn_23_1 = var8Lifetime1;
               if (var26[var8Lifetime1].field_h > 1) {
-                stackIn_24_2 = er.a((byte) 108, var26[var8Lifetime1]);
+                stackIn_24_2 = TextHotspotRegion.computeColorBoxVariance((byte) 108, var26[var8Lifetime1]);
               } else {
                 stackIn_24_2 = 0.0;
               }
@@ -408,7 +408,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
               }
             }
             if (var6Lifetime1 <= 0.0) {
-              hh.field_d = var8Lifetime1 + 1;
+              FullscreenFailureReason.field_d = var8Lifetime1 + 1;
             } else {
               var8Lifetime1++;
               continue;
@@ -419,7 +419,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
           var28 = var30;
           var18 = var28;
           var24 = new int[35937];
-          for (var12Lifetime3 = 0; var12Lifetime3 < hh.field_d; var12Lifetime3++) {
+          for (var12Lifetime3 = 0; var12Lifetime3 < FullscreenFailureReason.field_d; var12Lifetime3++) {
             SocketConnector.a(var12Lifetime3, 1, var24, var26[var12Lifetime3]);
             var9Lifetime1 = NameSuggestionsPanel.a(var26[var12Lifetime3], RandomAccessCacheFile.field_i, true);
             if (var9Lifetime1 == 0) {
