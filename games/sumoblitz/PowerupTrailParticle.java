@@ -34,7 +34,7 @@ final class PowerupTrailParticle extends TimedSceneEffect {
             PowerupTrailParticle.releaseStatics(-79);
           }
           if (this.usePowerupTexture) {
-            am.field_j[this.textureIndex].a((float)this.x, (float)this.y, -200 + (2048 - (int)(2048.0 * ((this.initialLifetime - (double)this.remainingTicks) / this.initialLifetime))), 0, 3, 3 * this.remainingTicks << 24, 1);
+            CachedArchiveProvider.field_j[this.textureIndex].a((float)this.x, (float)this.y, -200 + (2048 - (int)(2048.0 * ((this.initialLifetime - (double)this.remainingTicks) / this.initialLifetime))), 0, 3, 3 * this.remainingTicks << 24, 1);
             return;
           }
           uc.field_a.a((float)this.x, (float)this.y, -200 - (int)(((double)(-this.remainingTicks) + this.initialLifetime) / this.initialLifetime * 2048.0) + 2048, 0, 3, this.remainingTicks * 2 << 24, 1);

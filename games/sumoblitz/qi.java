@@ -14,13 +14,13 @@ final class qi {
         var3 = Sumoblitz.field_L ? 1 : 0;
         try {
           var1 = InwardSparkParticle.field_v;
-          while (gd.b((byte) 125)) {
+          while (Js5Client.b((byte) 125)) {
             var1.g(8, param0 ^ 0);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
             sd.a(var1, param0 + 119);
-            InwardSparkParticle.field_v.c(var1.position - var2, -13745);
+            InwardSparkParticle.field_v.patchByteLength(var1.position - var2, -13745);
           }
           if (param0 == 8) {
             return;

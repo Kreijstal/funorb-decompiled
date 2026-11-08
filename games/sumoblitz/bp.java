@@ -129,52 +129,52 @@ abstract class bp implements ed {
           return -117;
         }
         if (dk.field_c == 0) {
-          if (!wd.field_j.b((byte) 127)) {
+          if (!wd.field_j.loadIndex((byte) 127)) {
             return 20;
           }
-          if (!wd.field_j.a("commonui", 100)) {
+          if (!wd.field_j.tryLoadNamedGroup("commonui", 100)) {
             return 40;
           }
-          if (!eb.field_f.b((byte) 127)) {
+          if (!eb.field_f.loadIndex((byte) 127)) {
             return 50;
           }
-          if (!eb.field_f.a("commonui", 100)) {
+          if (!eb.field_f.tryLoadNamedGroup("commonui", 100)) {
             return 60;
           }
-          if (!hw.field_a.b((byte) 127)) {
+          if (!hw.field_a.loadIndex((byte) 127)) {
             return 70;
           }
-          if (!hw.field_a.a(true)) {
+          if (!hw.field_a.tryLoadAllGroups(true)) {
             return 80;
           }
         } else {
           if (null != DropDownListWidget.field_H) {
-            if (!DropDownListWidget.field_H.b((byte) 127)) {
+            if (!DropDownListWidget.field_H.loadIndex((byte) 127)) {
               return 14;
             }
-            if (!DropDownListWidget.field_H.b((byte) -98, "")) {
+            if (!DropDownListWidget.field_H.hasGroupName((byte) -98, "")) {
               return 29;
             }
-            if (!DropDownListWidget.field_H.a("", 100)) {
+            if (!DropDownListWidget.field_H.tryLoadNamedGroup("", 100)) {
               return 29;
             }
           }
-          if (!wd.field_j.b((byte) 127)) {
+          if (!wd.field_j.loadIndex((byte) 127)) {
             return 43;
           }
-          if (!wd.field_j.a("commonui", param0 ^ 14268)) {
+          if (!wd.field_j.tryLoadNamedGroup("commonui", param0 ^ 14268)) {
             return 57;
           }
-          if (!eb.field_f.b((byte) 127)) {
+          if (!eb.field_f.loadIndex((byte) 127)) {
             return 71;
           }
-          if (!eb.field_f.a("commonui", 100)) {
+          if (!eb.field_f.tryLoadNamedGroup("commonui", 100)) {
             return 80;
           }
-          if (!hw.field_a.b((byte) 127)) {
+          if (!hw.field_a.loadIndex((byte) 127)) {
             return 82;
           }
-          if (!hw.field_a.a(true)) {
+          if (!hw.field_a.tryLoadAllGroups(true)) {
             return 86;
           }
         }

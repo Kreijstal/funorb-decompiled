@@ -1,34 +1,34 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ql extends rw {
-    byte[] field_x;
+final class CacheIoRequest extends ResourceRequest {
+    byte[] bytes;
     static int[] field_A;
-    int field_y;
-    wl field_w;
+    int operation;
+    SectorCacheStore store;
     static int[] field_z;
     static int field_B;
     static int field_v;
 
-    final byte[] d(boolean param0) {
-        if (param0) {
-          this.d(false);
-          if (!this.field_u) {
-            return this.field_x;
+    final byte[] completedBytes(boolean guard) {
+        if (guard) {
+          this.completedBytes(false);
+          if (!this.pending) {
+            return this.bytes;
           }
           throw new RuntimeException();
         }
-        if (!this.field_u) {
-          return this.field_x;
+        if (!this.pending) {
+          return this.bytes;
         }
         throw new RuntimeException();
     }
 
-    final int a(int param0) {
-        if (param0 != -1) {
+    final int loadPercent(int guard) {
+        if (guard != -1) {
           return -28;
         }
-        if (this.field_u) {
+        if (this.pending) {
           return 0;
         }
         return 100;
@@ -45,7 +45,7 @@ final class ql extends rw {
         field_A = null;
     }
 
-    ql() {
+    CacheIoRequest() {
     }
 
     static {

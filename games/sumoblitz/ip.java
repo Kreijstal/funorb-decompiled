@@ -41,7 +41,7 @@ final class ip extends ml {
             if (null != CompactMeshGeometry.field_o &&
               CompactMeshGeometry.field_o.field_a) {
               ib.d(1);
-              pu.field_e.pushDialog((byte) 113, new DisplayModeErrorDialog(pu.field_e, am.field_e));
+              pu.field_e.pushDialog((byte) 113, new DisplayModeErrorDialog(pu.field_e, CachedArchiveProvider.field_e));
             }
             return;
           }
@@ -51,7 +51,7 @@ final class ip extends ml {
           }
           pu.field_e.advanceDialogAnimations(-104);
           while (wd.c(-81)) {
-            pu.field_e.dispatchKey(np.field_c, tg.field_a, true);
+            pu.field_e.dispatchKey(WhirlpoolDigest.field_c, tg.field_a, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

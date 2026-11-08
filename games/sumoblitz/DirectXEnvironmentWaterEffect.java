@@ -205,8 +205,8 @@ final class DirectXEnvironmentWaterEffect extends ShaderEffect {
           this.field_j = false;
           return;
         }
-        this.field_g = this.field_h.field_Cc.a(param1.a("environment_mapped_water_v", "dx", -1));
-        this.field_i = this.field_h.field_Cc.b(param1.a("environment_mapped_water_f", "dx", -1));
+        this.field_g = this.field_h.field_Cc.a(param1.fetchNamedFile("environment_mapped_water_v", "dx", -1));
+        this.field_i = this.field_h.field_Cc.b(param1.fetchNamedFile("environment_mapped_water_f", "dx", -1));
         stackIn_14_1 = (null != this.field_g) && (null != this.field_i) && (this.field_k.a(-123));
         this.field_j = stackIn_14_1;
     }

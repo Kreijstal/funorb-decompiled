@@ -12,11 +12,11 @@ final class cs implements mw {
     private ft[] field_d;
 
     final static int g(int param0) {
-        wt.field_i.c((byte) 66);
+        wt.field_i.serviceProviders((byte) 66);
         if (param0 != -5) {
           return 63;
         }
-        if (jk.field_b.c((byte) 119)) {
+        if (jk.field_b.service((byte) 119)) {
           return 0;
         }
         return ji.a(true);

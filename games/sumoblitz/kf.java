@@ -74,24 +74,24 @@ final class kf extends DualLinkNode implements ft {
         var5 = Sumoblitz.field_L ? 1 : 0;
         try {
           var6 = new PacketBuffer(Drone.field_g);
-          var2 = var6.e(-31302);
+          var2 = var6.readUnsignedByte(-31302);
           if (var2 < 1) {
             return;
           }
-          bl.field_e = var6.e(-31302);
-          ResourceArchive.field_f = var6.e(-31302);
-          LegacyOpenGlEffectManager.field_i = var6.e(-31302);
-          hc.field_f = var6.e(-31302);
+          bl.field_e = var6.readUnsignedByte(-31302);
+          ResourceArchive.field_f = var6.readUnsignedByte(-31302);
+          LegacyOpenGlEffectManager.field_i = var6.readUnsignedByte(-31302);
+          hc.field_f = var6.readUnsignedByte(-31302);
           if (param0 <= 92) {
             return;
           }
           for (var3 = 0; 36 > var3; var3++) {
             if (25 > var3) {
-              go.field_j[var3] = var6.c((byte) 122);
-              ql.field_z[var3] = var6.a(255);
+              go.field_j[var3] = var6.readUnsignedMedium((byte) 122);
+              CacheIoRequest.field_z[var3] = var6.readUnsignedShort(255);
               if (var2 >= 2) {
-                var4 = var6.e(-31302);
-                ql.field_A[var3] = -1 + eb.a(4, var4);
+                var4 = var6.readUnsignedByte(-31302);
+                CacheIoRequest.field_A[var3] = -1 + eb.a(4, var4);
                 if (var2 >= 3) {
                   stackIn_16_0 = up.field_g;
                   stackIn_16_1 = var3;

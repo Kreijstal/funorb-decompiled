@@ -19,7 +19,7 @@ final class oq extends DualLinkNode {
         var4 = Sumoblitz.field_L ? 1 : 0;
         try {
           scanLoop1: while (true) {
-            var3_int = param0.e(-31302);
+            var3_int = param0.readUnsignedByte(-31302);
             if (0 == var3_int) {
               if (var4 == 0) {
                 break scanLoop1;
@@ -252,20 +252,20 @@ final class oq extends DualLinkNode {
             this.field_v = (String[]) null;
           }
           if (1 == param1) {
-            this.field_v = cn.a('<', param0.d(-1), -27224);
+            this.field_v = cn.a('<', param0.readCp1252String(-1), -27224);
             if (var9 == 0) {
               return;
             }
           }
           if (param1 == 2) {
-            var4_int = param0.e(-31302);
+            var4_int = param0.readUnsignedByte(-31302);
             this.field_u = new int[var4_int];
             var5 = 0;
             while (true) {
               if (var5 >= var4_int) {
                 return;
               }
-              this.field_u[var5] = param0.a(255);
+              this.field_u[var5] = param0.readUnsignedShort(255);
               var5++;
               if (var9 != 0) {
                 return;
@@ -273,12 +273,12 @@ final class oq extends DualLinkNode {
             }
           }
           if (param1 == 3) {
-            var4_intLifetime1 = param0.e(-31302);
+            var4_intLifetime1 = param0.readUnsignedByte(-31302);
             this.field_s = new int[var4_intLifetime1];
             this.field_t = new int[var4_intLifetime1][];
             var5Lifetime1 = 0;
             while (var4_intLifetime1 > var5Lifetime1) {
-              var6 = param0.a(255);
+              var6 = param0.readUnsignedShort(255);
               var7 = ij.a(10341, var6);
               if (var9 != 0) {
                 return;
@@ -289,7 +289,7 @@ final class oq extends DualLinkNode {
                 this.field_t[var5Lifetime1] = array$0;
                 var8 = 0;
                 while (!(var8 >= var7.field_f)) {
-                  this.field_t[var5Lifetime1][var8] = param0.a(255);
+                  this.field_t[var5Lifetime1][var8] = param0.readUnsignedShort(255);
                   var8++;
                 }
               }

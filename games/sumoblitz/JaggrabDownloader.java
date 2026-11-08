@@ -4,31 +4,31 @@
 import java.io.*;
 
 final class JaggrabDownloader implements Runnable {
-    private jr field_c;
+    private PlatformTask field_c;
     private DataInputStream field_h;
     private java.net.URL field_a;
     private PacketBuffer field_d;
     private int field_g;
-    private jr field_f;
-    private jr field_e;
+    private PlatformTask field_f;
+    private PlatformTask field_e;
     static int field_j;
     private PlatformTaskDispatcher field_b;
     static ck field_i;
 
     protected final void finalize() {
         if (this.field_e != null) {
-          if (null != this.field_e.field_d) {
+          if (null != this.field_e.result) {
             try {
-              ((DataInputStream) (this.field_e.field_d)).close();
+              ((DataInputStream) (this.field_e.result)).close();
             } catch (Exception exception) {
             }
           }
           this.field_e = null;
         }
         if (this.field_f != null) {
-          if (null != this.field_f.field_d) {
+          if (null != this.field_f.result) {
             try {
-              ((java.net.Socket) (this.field_f.field_d)).close();
+              ((java.net.Socket) (this.field_f.result)).close();
             } catch (Exception exception) {
             }
           }
@@ -59,10 +59,10 @@ final class JaggrabDownloader implements Runnable {
           if (this.field_e == null) {
             this.field_e = this.field_b.a((byte) 107, this.field_a);
           }
-          if (0 == this.field_e.field_c) {
+          if (0 == this.field_e.status) {
             return false;
           }
-          if (1 != this.field_e.field_c) {
+          if (1 != this.field_e.status) {
             this.field_e = null;
             this.field_g = this.field_g + 1;
             return false;
@@ -72,10 +72,10 @@ final class JaggrabDownloader implements Runnable {
           if (this.field_f == null) {
             this.field_f = this.field_b.a((byte) 51, this.field_a.getHost(), 443);
           }
-          if (this.field_f.field_c == 0) {
+          if (this.field_f.status == 0) {
             return false;
           }
-          if (this.field_f.field_c != 1) {
+          if (this.field_f.status != 1) {
             this.field_f = null;
             this.field_g = this.field_g + 1;
             return false;
@@ -85,10 +85,10 @@ final class JaggrabDownloader implements Runnable {
           if (null == this.field_c) {
             this.field_c = this.field_b.a(true, (Runnable) (this), 5);
           }
-          if (0 == this.field_c.field_c) {
+          if (0 == this.field_c.status) {
             return false;
           }
-          if (this.field_c.field_c == 1) {
+          if (this.field_c.status == 1) {
             return false;
           }
           this.finalize();
@@ -97,10 +97,10 @@ final class JaggrabDownloader implements Runnable {
         }
         try {
           if (0 == this.field_g) {
-            this.field_h = (DataInputStream) (this.field_e.field_d);
+            this.field_h = (DataInputStream) (this.field_e.result);
           }
           if (this.field_g == 1) {
-            var5 = (java.net.Socket) (this.field_f.field_d);
+            var5 = (java.net.Socket) (this.field_f.result);
             var5.setSoTimeout(10000);
             var4 = var5.getOutputStream();
             var4.write(17);
@@ -117,10 +117,10 @@ final class JaggrabDownloader implements Runnable {
           if (null == this.field_c) {
             this.field_c = this.field_b.a(true, (Runnable) (this), 5);
           }
-          if (0 == this.field_c.field_c) {
+          if (0 == this.field_c.status) {
             return false;
           }
-          if (this.field_c.field_c == 1) {
+          if (this.field_c.status == 1) {
             return false;
           }
           this.finalize();
@@ -130,10 +130,10 @@ final class JaggrabDownloader implements Runnable {
         if (null == this.field_c) {
           this.field_c = this.field_b.a(true, (Runnable) (this), 5);
         }
-        if (0 == this.field_c.field_c) {
+        if (0 == this.field_c.status) {
           return false;
         }
-        if (this.field_c.field_c != 1) {
+        if (this.field_c.status != 1) {
           this.finalize();
           this.field_g = this.field_g + 1;
         }

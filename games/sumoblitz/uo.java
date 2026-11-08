@@ -636,7 +636,7 @@ final class uo extends ShaderEffect {
           return;
         }
         if (var3 == null) {
-          this.field_b.a(fv.field_y, 0, true);
+          this.field_b.a(NetworkResourceRequest.field_y, 0, true);
           return;
         }
         if (param0) {
@@ -646,7 +646,7 @@ final class uo extends ShaderEffect {
           this.field_b.g(1, -114);
           this.field_b.a((byte) -83, lf.field_e, ua.field_n);
           this.field_b.a((byte) 101, 2, true, false, FontMetrics.field_a);
-          this.field_b.a(fv.field_y, 0, true);
+          this.field_b.a(NetworkResourceRequest.field_y, 0, true);
           var4 = this.field_b.B(0);
           var4.a(this.field_b.c(true), true);
           this.field_b.a(ip.field_y, 28880);
@@ -654,7 +654,7 @@ final class uo extends ShaderEffect {
           this.field_f = true;
           return;
         }
-        this.field_b.a(fv.field_y, 0, true);
+        this.field_b.a(NetworkResourceRequest.field_y, 0, true);
     }
 
     final boolean b(byte param0) {

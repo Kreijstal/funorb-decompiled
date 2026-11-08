@@ -72,7 +72,7 @@ class MenuScreen {
         var6 = 16777215 | param2 << 23;
         var7 = param2 << 24;
         var8 = 53;
-        var9 = gd.achievementsText;
+        var9 = Js5Client.achievementsText;
         if (param0) {
           var9 = sd.achievementsThisGameText;
         }
@@ -256,8 +256,8 @@ class MenuScreen {
           LegacyOpenGlEffect.field_c.a(480, var5, 0, 20 + var19Lifetime1, -(var19Lifetime1 / 2) + var8Lifetime2Lifetime2, (int[]) null, (ToolkitSprite[]) null, var13Lifetime1Lifetime2 + 8, var7, 0, SocketConnector.field_a.field_i, -8787, var17_ref_StringLifetime1, (SpriteMask) null, 1, 0);
           var8Lifetime2Lifetime3 = 390;
           var13Lifetime1Lifetime3 = 190;
-          qv.field_k.a(rb.achievementNames[var15], param2 << 24 | 5023231, var7, var13Lifetime1Lifetime3, var8Lifetime2Lifetime3, 0);
-          uq.field_a.a(rb.achievementNames[var15], var5, var7, var13Lifetime1Lifetime3, var8Lifetime2Lifetime3, 0);
+          qv.field_k.a(ArchiveProvider.achievementNames[var15], param2 << 24 | 5023231, var7, var13Lifetime1Lifetime3, var8Lifetime2Lifetime3, 0);
+          uq.field_a.a(ArchiveProvider.achievementNames[var15], var5, var7, var13Lifetime1Lifetime3, var8Lifetime2Lifetime3, 0);
           var20_int = 200;
           if (var18Lifetime1 != 0) {
             qw.field_a[var15].a(160, -30 + var20_int, 0, var5, 1);
@@ -478,11 +478,11 @@ class MenuScreen {
             }
           }
           var7 -= 8;
-          var18 = 9 + t.field_q + 128;
-          var19 = -(t.field_q >> 2) + ((var10 - var18 >> 1) + var7);
+          var18 = 9 + SocketJs5Client.field_q + 128;
+          var19 = -(SocketJs5Client.field_q >> 2) + ((var10 - var18 >> 1) + var7);
           var14_ref.a(-1, -24 + (var10 >> 1) + var7, var9.toUpperCase(), var16 + (var17 + var15_ref.field_i + var6_int), param4 << 24 | 5023231, 115);
           var13_ref.a(-1, -24 + var7 + (var10 >> 1), var9.toUpperCase(), var6_int + var15_ref.field_i - (-var17 - var16), var12, 127);
-          var19 = var19 + (16 + t.field_q);
+          var19 = var19 + (16 + SocketJs5Client.field_q);
           vm.field_a[1].a((float)(8 + (-2 + var19)), (float)(-2 + (var6_int + 3) + 10), 4096, 0, 1, 0, 2);
           vm.field_a[2].a((float)(vm.field_a[1].b() + (-2 + var19) + 8), (float)(var6_int + 3 - 2 + 10), 4096, 0, 1, 0, 2);
           vm.field_a[2].a((float)(vm.field_a[1].b() * 2 - 2 - 2 + (var19 + 10)), (float)(-2 + (var6_int + 3 + 10)), 4096, 0, 1, 0, 2);
@@ -1014,7 +1014,7 @@ class MenuScreen {
                       break regionExit2;
                     }
                     StrongCacheReference.switchMenuScreen(-7753, param0, 0);
-                    ll.a(17534);
+                    WhirlpoolTables.a(17534);
                     OpenGlTransparentWaterEffect.field_e = 0;
                     kh.field_e = 0;
                     OpenGlUnderwaterEffect.field_q.clear(115);
@@ -1085,8 +1085,8 @@ class MenuScreen {
                       break regionExit2;
                     }
                     {
-                      var6 = 9 + (t.field_q + 128);
-                      var7 = (this.b(param2, 49) + (this.f(-113, param2) - var6) >> 1) + (t.field_q + 8 - (t.field_q >> 2));
+                      var6 = 9 + (SocketJs5Client.field_q + 128);
+                      var7 = (this.b(param2, 49) + (this.f(-113, param2) - var6) >> 1) + (SocketJs5Client.field_q + 8 - (SocketJs5Client.field_q >> 2));
                       var8 = -var7 + ko.field_p << 1;
                       if (0 < var8) {
                         if (var8 < 256) {
@@ -1125,8 +1125,8 @@ class MenuScreen {
                       break regionExit2;
                     }
                     {
-                      var6 = 9 + (t.field_q + 128);
-                      var7 = 8 + ((-var6 + (this.b(param2, 35) + this.f(90, param2)) >> 1) + (t.field_q - (t.field_q >> 2)));
+                      var6 = 9 + (SocketJs5Client.field_q + 128);
+                      var7 = 8 + ((-var6 + (this.b(param2, 35) + this.f(90, param2)) >> 1) + (SocketJs5Client.field_q - (SocketJs5Client.field_q >> 2)));
                       var8 = -var7 + ko.field_p << 1;
                       if (var8 <= 0) {
                         lf.a(0, 0);
@@ -1387,7 +1387,7 @@ class MenuScreen {
           }
           stackIn_6_0 = (ul.field_f == 0) ? 3 : 1;
           var4_int = stackIn_6_0;
-          stackIn_9_0 = (ku.field_j < 2) ? 0 : 1;
+          stackIn_9_0 = (Bzip2State.field_j < 2) ? 0 : 1;
           var5 = stackIn_9_0;
           if (0 == this.screenId ||
             1 == this.screenId ||
@@ -1690,7 +1690,7 @@ class MenuScreen {
           mk.field_a == 1) {
           return false;
         }
-        if (ku.field_j < 2) {
+        if (Bzip2State.field_j < 2) {
         }
         return true;
     }
@@ -1766,7 +1766,7 @@ class MenuScreen {
           if (param1 != 100) {
             field_a = (ToolkitSprite[]) null;
           }
-          VorbisSample.decodeSetup(param0.a("", "headers.packvorbis", -1));
+          VorbisSample.decodeSetup(param0.fetchNamedFile("", "headers.packvorbis", -1));
           var2 = VorbisSample.load(param0, "jagex logo2.packvorbis", "");
           var2.decodeAll();
         } catch (RuntimeException runtimeException) {
@@ -1944,7 +1944,7 @@ class MenuScreen {
             var7_ref_of = mr.field_f;
             if (var7_ref_of.field_q) {
               if (var7_ref_of.field_o == null) {
-                var6 = wl.serviceUnavailableText;
+                var6 = SectorCacheStore.serviceUnavailableText;
                 if (var19 == 0) {
                   break regionExit2;
                 }

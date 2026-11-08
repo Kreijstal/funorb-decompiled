@@ -67,9 +67,9 @@ final class OpenGlEnvironmentWaterEffect extends ShaderEffect {
           if (param1 != null &&
             param0.field_Jc &&
             param0.field_Mc) {
-            var6 = ClientException.a(35633, param0, param1.a("environment_mapped_water_v", "gl", -1), -124);
+            var6 = ClientException.a(35633, param0, param1.fetchNamedFile("environment_mapped_water_v", "gl", -1), -124);
             var4 = var6;
-            var5 = ClientException.a(35632, param0, param1.a("environment_mapped_water_f", "gl", -1), -115);
+            var5 = ClientException.a(35632, param0, param1.fetchNamedFile("environment_mapped_water_f", "gl", -1), -115);
             this.field_j = ht.a(new qj[]{var6, var5}, param0, (byte) 109);
             stackIn_9_1 = (this.field_j != null) && (this.field_f.a(-128));
             this.field_e = stackIn_9_1;

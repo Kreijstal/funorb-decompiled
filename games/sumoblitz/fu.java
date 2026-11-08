@@ -22,14 +22,14 @@ final class fu extends InteractiveWidget {
           var3 = Sumoblitz.field_L ? 1 : 0;
           try {
             if (null != jk.field_b) {
-              jk.field_b.c(-106);
+              jk.field_b.closeConnection(-106);
             }
             if (FadingWidget.field_D != null) {
-              FadingWidget.field_D.b(109);
+              FadingWidget.field_D.shutdown(109);
             }
             if (null != bc.field_a) {
               try {
-                bc.field_a.b(-1);
+                bc.field_a.close(-1);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
@@ -42,7 +42,7 @@ final class fu extends InteractiveWidget {
               for (var1_int = 0; ProgressDialog.field_O.length > var1_int; var1_int++) {
                 if (null != ProgressDialog.field_O[var1_int]) {
                   try {
-                    ProgressDialog.field_O[var1_int].b(-1);
+                    ProgressDialog.field_O[var1_int].close(-1);
                   } catch (java.io.IOException decompiledCaughtParameter1) {
                     decompiledCaughtException = decompiledCaughtParameter1;
                     var2 = (IOException) (Object) decompiledCaughtException;
@@ -175,8 +175,8 @@ final class fu extends InteractiveWidget {
         try {
           if (NameSuggestionsPanel.field_E != null) {
             try {
-              NameSuggestionsPanel.field_E.a(-7564, 0L);
-              NameSuggestionsPanel.field_E.a(ig.field_a.payload, 24, (byte) -41, ig.field_a.position);
+              NameSuggestionsPanel.field_E.seek(-7564, 0L);
+              NameSuggestionsPanel.field_E.write(ig.field_a.payload, 24, (byte) -41, ig.field_a.position);
             } catch (Exception exception) {
             }
           }

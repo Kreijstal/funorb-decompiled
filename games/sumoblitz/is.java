@@ -29,9 +29,9 @@ final class is {
         oq var3 = (oq) (this.field_f.a((long)param0, 123));
         if (var3 == null) {
           if (param0 >= 32768) {
-            var4 = this.field_d.a((byte) 115, param0 & 32767, 1);
+            var4 = this.field_d.fetchFile((byte) 115, param0 & 32767, 1);
           } else {
-            var4 = this.field_e.a((byte) 109, param0, 1);
+            var4 = this.field_e.fetchFile((byte) 109, param0, 1);
           }
           var3 = new oq();
           if (var4 != null) {

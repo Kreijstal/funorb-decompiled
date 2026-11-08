@@ -23,8 +23,8 @@ final class o {
           bl.field_e = oh.levelIndex;
         }
         int var1 = iw.elapsedTicks;
-        if (!(var1 >= ql.field_z[oh.levelIndex])) {
-          ql.field_z[oh.levelIndex] = var1;
+        if (!(var1 >= CacheIoRequest.field_z[oh.levelIndex])) {
+          CacheIoRequest.field_z[oh.levelIndex] = var1;
         }
         if (go.field_j[oh.levelIndex] < FadingWidget.score) {
           go.field_j[oh.levelIndex] = FadingWidget.score;

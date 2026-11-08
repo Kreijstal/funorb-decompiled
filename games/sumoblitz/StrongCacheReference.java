@@ -27,8 +27,8 @@ final class StrongCacheReference extends CacheReferenceNode {
             var2 = var6;
             if (null != NameSuggestionsPanel.field_E) {
               try {
-                NameSuggestionsPanel.field_E.a(-7564, 0L);
-                NameSuggestionsPanel.field_E.a(var6, (byte) 124);
+                NameSuggestionsPanel.field_E.seek(-7564, 0L);
+                NameSuggestionsPanel.field_E.readFully(var6, (byte) 124);
                 for (var3_int = 0; var3_int < 24; var3_int++) {
                   if (var2[var3_int] == 0) {
                     continue;
@@ -49,7 +49,7 @@ final class StrongCacheReference extends CacheReferenceNode {
             if (!param1) {
               field_C = (int[]) null;
             }
-            param0.a(var2, (byte) -123, 24, 0);
+            param0.writeBytes(var2, (byte) -123, 24, 0);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

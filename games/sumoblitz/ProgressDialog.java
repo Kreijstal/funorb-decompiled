@@ -11,7 +11,7 @@ final class ProgressDialog extends ResizingDialog {
     static String waitingForGraphicsText;
     static String namesCannotStartOrText;
     private boolean field_S;
-    static gj[] field_O;
+    static BufferedCacheFile[] field_O;
 
     final static void a(String param0, String param1, int param2) {
         if (param2 != -1807) {

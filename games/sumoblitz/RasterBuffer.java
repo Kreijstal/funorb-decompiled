@@ -45,7 +45,7 @@ abstract class RasterBuffer {
         int var2;
         var2 = Sumoblitz.field_L ? 1 : 0;
         StatusMessagePanel.field_A = false;
-        t.field_s = null;
+        SocketJs5Client.field_s = null;
         if (pg.field_a) {
           hc.field_c.e(false);
           if (param0 == 2) {
@@ -57,11 +57,11 @@ abstract class RasterBuffer {
         var1 = jk.field_c;
         if (var1 > 0) {
           if (1 != var1) {
-            t.field_s = ic.a(ph.youHaveUnreadMessagesText, new String[]{Integer.toString(var1)}, (byte) -128);
+            SocketJs5Client.field_s = ic.a(ph.youHaveUnreadMessagesText, new String[]{Integer.toString(var1)}, (byte) -128);
           } else {
-            t.field_s = FullscreenMembershipDialog.youHave1UnreadText;
+            SocketJs5Client.field_s = FullscreenMembershipDialog.youHave1UnreadText;
           }
-          t.field_s = uo.a(false, new CharSequence[]{(CharSequence) ((Object) t.field_s), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) lv.visitTheAccountManagementText)});
+          SocketJs5Client.field_s = uo.a(false, new CharSequence[]{(CharSequence) ((Object) SocketJs5Client.field_s), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) lv.visitTheAccountManagementText)});
         }
         hc.field_c.n(param0 ^ -5);
         od.a(5178);

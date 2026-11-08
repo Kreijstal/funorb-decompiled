@@ -44,7 +44,7 @@ final class sj {
               var2 = 0;
             }
           }
-          for (var3 = 0; bf.field_c.length > var3; var3++) {
+          for (var3 = 0; IntIndexHashTable.field_c.length > var3; var3++) {
             var4 = eb.field_a[var3];
             if (0 <= var4) {
               if (nj.field_a.field_g != var4) {
@@ -55,7 +55,7 @@ final class sj {
             } else {
               var5 = ke.field_d;
             }
-            var6 = bf.field_c[var3];
+            var6 = IntIndexHashTable.field_c[var3];
             if (2 == DroneChargeParticle.field_s &&
               1 == var2) {
               if (no.field_b.length >= ResizingDialog.field_F.length) {
@@ -152,7 +152,7 @@ final class sj {
         int var3Lifetime1;
         var4 = Sumoblitz.field_L ? 1 : 0;
         if (param0 == -1) {
-          if (!t.field_p[param2] &&
+          if (!SocketJs5Client.field_p[param2] &&
             !wm.field_f[param2]) {
             var3 = param2;
             if (0 == var3) {
@@ -164,14 +164,14 @@ final class sj {
               }
               if (2 == param1) {
                 fq.field_f.a(-3388, 1);
-                t.field_p[param2] = true;
+                SocketJs5Client.field_p[param2] = true;
               }
               return;
             }
             if (1 == var3) {
               if (0 == param1) {
                 fq.field_f.a(param0 ^ 3387, 2);
-                t.field_p[param2] = true;
+                SocketJs5Client.field_p[param2] = true;
               }
               return;
             }
@@ -253,13 +253,13 @@ final class sj {
               }
               fq.field_f.a(-3388, 3);
             }
-            t.field_p[param2] = true;
+            SocketJs5Client.field_p[param2] = true;
             return;
           }
           return;
         }
         sj.a(-9);
-        if (t.field_p[param2]) {
+        if (SocketJs5Client.field_p[param2]) {
           return;
         }
         if (wm.field_f[param2]) {
@@ -364,7 +364,7 @@ final class sj {
             }
           }
         }
-        t.field_p[param2] = true;
+        SocketJs5Client.field_p[param2] = true;
         return;
     }
 

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class FadingWidget extends SingleChildWidget {
-    static ti field_D;
+    static CacheIoWorker field_D;
     static String field_C;
     static int score;
     static String nextText;

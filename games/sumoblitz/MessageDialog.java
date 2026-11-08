@@ -231,7 +231,7 @@ class MessageDialog extends ContentTransitionDialog implements WidgetActionListe
             }
             if (InwardSparkParticle.field_v.position > param0) {
               try {
-                DisplayModeConfirmationDialog.field_O.a(0, -2, InwardSparkParticle.field_v.payload, InwardSparkParticle.field_v.position);
+                DisplayModeConfirmationDialog.field_O.write(0, -2, InwardSparkParticle.field_v.payload, InwardSparkParticle.field_v.position);
                 ArchiveCatalog.field_a = wq.a(-21);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

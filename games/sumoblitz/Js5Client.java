@@ -3,22 +3,22 @@
  */
 import java.util.*;
 
-abstract class gd {
+abstract class Js5Client {
     static String achievementsText;
     static long[] field_k;
-    ro field_l;
+    SecondaryNodeQueue urgentQueued;
     static String field_a;
-    ro field_h;
-    ro field_f;
-    ro field_g;
-    long field_e;
-    int field_c;
-    PacketBuffer field_n;
-    PacketBuffer field_b;
-    volatile int field_d;
-    volatile int field_j;
-    byte field_m;
-    fv field_i;
+    SecondaryNodeQueue urgentInFlight;
+    SecondaryNodeQueue backgroundQueued;
+    SecondaryNodeQueue backgroundInFlight;
+    long lastServiceMillis;
+    int idleMillis;
+    PacketBuffer requestBuffer;
+    PacketBuffer responseHeader;
+    volatile int failureCount;
+    volatile int failureCode;
+    byte xorKey;
+    NetworkResourceRequest currentResponse;
 
     final static FontMetrics a(ResourceArchive param0, byte param1, String param2, String param3) {
         byte[] var4 = null;
@@ -36,7 +36,7 @@ abstract class gd {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5 = param0.a(param2, param3, -1);
+          var5 = param0.fetchNamedFile(param2, param3, -1);
           var4 = var5;
           if (var5 == null) {
             stackIn_2_0 = null;
@@ -74,28 +74,28 @@ abstract class gd {
         }
     }
 
-    final fv a(int param0, boolean param1, int param2, byte param3, byte param4) {
-        long var6 = (long)param2 + ((long)param0 << 32);
-        fv var8 = new fv();
-        var8.field_t = param1 ? true : false;
+    final NetworkResourceRequest requestGroup(int archiveId, boolean urgent, int groupId, byte guard, byte paddingBytes) {
+        long var6 = (long)groupId + ((long)archiveId << 32);
+        NetworkResourceRequest var8 = new NetworkResourceRequest();
+        var8.urgent = urgent ? true : false;
         var8.secondaryKey = var6;
-        var8.field_z = param4;
-        int var9 = -16 % ((0 - param3) / 43);
-        if (param1) {
-          if (!(this.d(-2115911413) < 20)) {
+        var8.paddingBytes = paddingBytes;
+        int var9 = -16 % ((0 - guard) / 43);
+        if (urgent) {
+          if (!(this.urgentRequestCount(-2115911413) < 20)) {
             throw new RuntimeException();
           }
-          this.field_l.a((DualLinkNode) (var8), (byte) -118);
+          this.urgentQueued.addLast((DualLinkNode) (var8), (byte) -118);
         } else {
-          if (!(this.a((byte) -120) < 20)) {
+          if (!(this.backgroundRequestCount((byte) -120) < 20)) {
             throw new RuntimeException();
           }
-          this.field_f.a((DualLinkNode) (var8), (byte) -107);
+          this.backgroundQueued.addLast((DualLinkNode) (var8), (byte) -107);
         }
         return var8;
     }
 
-    abstract void b(int param0);
+    abstract void invalidateConnection(int guard);
 
     final static void a(int param0, int param1, IntrusiveDeque param2, int param3, int param4, int param5) {
         float[] dupTemp$0 = null;
@@ -168,12 +168,12 @@ abstract class gd {
         }
     }
 
-    final boolean a(int param0) {
-        int var2 = 111 / ((param0 - 76) / 32);
-        return this.d(-2115911413) >= 20 ? true : false;
+    final boolean urgentQueueFull(int guard) {
+        int var2 = 111 / ((guard - 76) / 32);
+        return this.urgentRequestCount(-2115911413) >= 20 ? true : false;
     }
 
-    abstract void a(boolean param0, byte param1, Object param2);
+    abstract void attachConnection(boolean loggedIn, byte guard, Object connection);
 
     final static boolean b(byte param0) {
         int var2 = 0;
@@ -194,11 +194,11 @@ abstract class gd {
           }
           for (var2 = 0; var1.field_p > var2; var2++) {
             if (null != var4.field_o[var2] &&
-              var4.field_o[var2].field_c == 0) {
+              var4.field_o[var2].status == 0) {
               return false;
             }
             if (var4.field_s[var2] != null &&
-              var4.field_s[var2].field_c == 0) {
+              var4.field_s[var2].status == 0) {
               return false;
             }
           }
@@ -210,12 +210,12 @@ abstract class gd {
         }
     }
 
-    final int d(int param0) {
-        if (param0 == -2115911413) {
-          return this.field_l.a((byte) 2) + this.field_h.a((byte) 2);
+    final int urgentRequestCount(int guard) {
+        if (guard == -2115911413) {
+          return this.urgentQueued.size((byte) 2) + this.urgentInFlight.size((byte) 2);
         }
-        this.b(true);
-        return this.field_l.a((byte) 2) + this.field_h.a((byte) 2);
+        this.backgroundQueueFull(true);
+        return this.urgentQueued.size((byte) 2) + this.urgentInFlight.size((byte) 2);
     }
 
     final static lh a(byte param0, int param1) {
@@ -224,37 +224,37 @@ abstract class gd {
         if (param0 == -82) {
           var2 = new lh();
           no.field_d.addLast((IntrusiveNode) (var2), (byte) 39);
-          jg.b(param0 + 11126, param1);
+          GzipDecompressor.b(param0 + 11126, param1);
           return var2;
         }
         field_k = (long[]) null;
         var2Lifetime1 = new lh();
         no.field_d.addLast((IntrusiveNode) (var2Lifetime1), (byte) 39);
-        jg.b(param0 + 11126, param1);
+        GzipDecompressor.b(param0 + 11126, param1);
         return var2Lifetime1;
     }
 
-    final boolean b(boolean param0) {
-        if (param0) {
-          return this.a((byte) -100) >= 20 ? true : false;
+    final boolean backgroundQueueFull(boolean guard) {
+        if (guard) {
+          return this.backgroundRequestCount((byte) -100) >= 20 ? true : false;
         }
         String var3 = (String) null;
-        gd.a((ResourceArchive) null, (byte) -79, (String) null, (String) null);
-        return this.a((byte) -100) >= 20 ? true : false;
+        Js5Client.a((ResourceArchive) null, (byte) -79, (String) null, (String) null);
+        return this.backgroundRequestCount((byte) -100) >= 20 ? true : false;
     }
 
-    final int a(byte param0) {
-        if (param0 < -82) {
-          return this.field_f.a((byte) 2) + this.field_g.a((byte) 2);
+    final int backgroundRequestCount(byte guard) {
+        if (guard < -82) {
+          return this.backgroundQueued.size((byte) 2) + this.backgroundInFlight.size((byte) 2);
         }
-        this.field_n = (PacketBuffer) null;
-        return this.field_f.a((byte) 2) + this.field_g.a((byte) 2);
+        this.requestBuffer = (PacketBuffer) null;
+        return this.backgroundQueued.size((byte) 2) + this.backgroundInFlight.size((byte) 2);
     }
 
     public static void releaseStatics(boolean param0) {
         achievementsText = null;
         if (param0) {
-          gd.a((byte) -88, 27);
+          Js5Client.a((byte) -88, 27);
           field_a = null;
           field_k = null;
           return;
@@ -263,20 +263,20 @@ abstract class gd {
         field_k = null;
     }
 
-    abstract void c(int param0);
+    abstract void closeConnection(int guard);
 
-    abstract boolean c(byte param0);
+    abstract boolean service(byte guard);
 
-    gd() {
-        this.field_l = new ro();
-        this.field_h = new ro();
-        this.field_f = new ro();
-        this.field_g = new ro();
-        this.field_n = new PacketBuffer(6);
-        this.field_d = 0;
-        this.field_j = 0;
-        this.field_m = (byte) 0;
-        this.field_b = new PacketBuffer(10);
+    Js5Client() {
+        this.urgentQueued = new SecondaryNodeQueue();
+        this.urgentInFlight = new SecondaryNodeQueue();
+        this.backgroundQueued = new SecondaryNodeQueue();
+        this.backgroundInFlight = new SecondaryNodeQueue();
+        this.requestBuffer = new PacketBuffer(6);
+        this.failureCount = 0;
+        this.failureCode = 0;
+        this.xorKey = (byte) 0;
+        this.responseHeader = new PacketBuffer(10);
     }
 
     static {

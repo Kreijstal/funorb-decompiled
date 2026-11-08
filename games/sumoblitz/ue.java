@@ -120,9 +120,9 @@ final class ue extends TextWidgetRenderer {
             ue.releaseStatics(-111);
           }
           var28 = ig.field_a;
-          var2 = var28.e(-31302);
+          var2 = var28.readUnsignedByte(-31302);
           if (0 == var2) {
-            var3 = var28.a(255);
+            var3 = var28.readUnsignedShort(255);
             var4_ref_of = (of) (oi.field_b.first(74));
             while (var4_ref_of != null) {
               if (var3 != var4_ref_of.field_p) {
@@ -135,7 +135,7 @@ final class ue extends TextWidgetRenderer {
               kk.a((byte) -124);
               return;
             }
-            var5 = var28.e(-31302);
+            var5 = var28.readUnsignedByte(-31302);
             if (0 != var5) {
               var6_int = var4_ref_of.field_l;
               var7 = var4_ref_of.field_s;
@@ -143,10 +143,10 @@ final class ue extends TextWidgetRenderer {
               DraggableWidget.field_B[0].field_c = qv.field_o;
               DraggableWidget.field_B[0].field_b = false;
               for (var8_int = 1; var8_int < var5; var8_int++) {
-                DraggableWidget.field_B[var8_int].field_c = var28.d(-1);
+                DraggableWidget.field_B[var8_int].field_c = var28.readCp1252String(-1);
                 DraggableWidget.field_B[var8_int].field_b = false;
-                if (var28.e(-31302) == 1) {
-                  DraggableWidget.field_B[var8_int].field_a = var28.d(param0 + 69);
+                if (var28.readUnsignedByte(-31302) == 1) {
+                  DraggableWidget.field_B[var8_int].field_a = var28.readCp1252String(param0 + 69);
                 } else {
                   DraggableWidget.field_B[var8_int].field_a = null;
                 }
@@ -167,12 +167,12 @@ final class ue extends TextWidgetRenderer {
               var15 = 0;
               var16 = 0;
               var17 = 0;
-              var18 = var28.e(-31302);
+              var18 = var28.readUnsignedByte(-31302);
               if (var18 > 0) {
                 for (var19 = 0; var19 < var18; var19++) {
-                  var20 = var28.e(-31302);
+                  var20 = var28.readUnsignedByte(-31302);
                   var21 = DraggableWidget.field_B[var20].field_c;
-                  var22 = var28.a((byte) 113);
+                  var22 = var28.readLong((byte) 113);
                   var24 = var28.position;
                   if (var6_int > var19) {
                     var8[0][var12] = var21;
@@ -181,7 +181,7 @@ final class ue extends TextWidgetRenderer {
                     for (var25 = 0; var25 < var7; var25++) {
                       incrementValue$3 = var15;
                       var15++;
-                      var11[0][incrementValue$3] = var28.c(true);
+                      var11[0][incrementValue$3] = var28.readInt(true);
                     }
                     var12++;
                   }
@@ -195,7 +195,7 @@ final class ue extends TextWidgetRenderer {
                     for (var25Lifetime1 = 0; var25Lifetime1 < var7; var25Lifetime1++) {
                       incrementValue$4 = var16;
                       var16++;
-                      var11[1][incrementValue$4] = var28.c(true);
+                      var11[1][incrementValue$4] = var28.readInt(true);
                     }
                   }
                   if (var6_int > var14 &&
@@ -209,7 +209,7 @@ final class ue extends TextWidgetRenderer {
                     for (var25Lifetime2 = 0; var7 > var25Lifetime2; var25Lifetime2++) {
                       incrementValue$5 = var17;
                       var17++;
-                      var11[2][incrementValue$5] = var28.c(true);
+                      var11[2][incrementValue$5] = var28.readInt(true);
                     }
                   }
                 }
@@ -220,8 +220,8 @@ final class ue extends TextWidgetRenderer {
             return;
           }
           if (var2 == 1) {
-            var3Lifetime1 = var28.a(255);
-            var4 = var28.a((byte) 111);
+            var3Lifetime1 = var28.readUnsignedShort(255);
+            var4 = var28.readLong((byte) 111);
             var6 = (id) (ow.field_f.first(127));
             while (var6 != null) {
               if (var6.field_r != var3Lifetime1) {

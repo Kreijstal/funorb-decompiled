@@ -87,8 +87,8 @@ final class InwardSparkParticle extends TimedSceneEffect {
           if (ce.field_o != null) {
             ce.field_o.field_B.a(param1, false);
           }
-          if (ro.field_a != null) {
-            ro.field_a.field_E.a(param1, false);
+          if (SecondaryNodeQueue.field_a != null) {
+            SecondaryNodeQueue.field_a.field_E.a(param1, false);
           }
           if (param0 != 256) {
             field_y = (int[]) null;

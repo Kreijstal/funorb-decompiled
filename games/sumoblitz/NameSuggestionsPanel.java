@@ -5,7 +5,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetAction
     private oe field_A;
     static SpriteData[] field_F;
     private InteractiveWidget[] field_C;
-    static gj field_E;
+    static BufferedCacheFile field_E;
     static String orbPointsText;
     private String[] field_B;
 
@@ -154,7 +154,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetAction
     final static boolean a(byte param0) {
         boolean stackIn_6_0 = false;
         if (param0 >= -34) {
-          field_E = (gj) null;
+          field_E = (BufferedCacheFile) null;
         }
         stackIn_6_0 = (null != DisplayModeConfirmationDialog.field_O) && (kw.field_c.a(17704));
         return stackIn_6_0;
@@ -200,15 +200,15 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetAction
 
     final static void a(ResourceArchive param0, ResourceArchive param1, int param2, ResourceArchive param3) {
         ci.field_g = SpriteData.b(param3, "", "fontalpha");
-        SocketConnector.field_a = gd.a(param1, (byte) -79, "font", "");
+        SocketConnector.field_a = Js5Client.a(param1, (byte) -79, "font", "");
         mn.field_b = SpriteData.b(param3, "", "fontglow");
         hu.field_c = SocketConnector.field_a;
         OpenGlTransparentWaterEffect.field_i = SpriteData.b(param3, "", "smallfontalpha");
-        qr.field_a = gd.a(param1, (byte) -39, "smallfont", "");
+        qr.field_a = Js5Client.a(param1, (byte) -39, "smallfont", "");
         au.field_j = SpriteData.b(param3, "", "glowfontalpha");
         sv.field_a = qr.field_a;
         DropDownWidget.field_F = SpriteData.b(param3, "", "boldfontalpha");
-        ma.field_b = gd.a(param1, (byte) -36, "boldfont", "");
+        ma.field_b = Js5Client.a(param1, (byte) -36, "boldfont", "");
         ProxySocketConnector.field_f = SpriteData.b(param3, "", "boldglowfontalpha");
         sq.field_b = ma.field_b;
         field_F = SpriteData.b(param3, "", "menu_frame");
@@ -226,7 +226,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetAction
         }
         try {
           jj.field_c = SpriteData.b(param3, "", "statline_tab");
-          rw.field_r = SpriteData.b(param3, "", "statline_tab_flip");
+          ResourceRequest.field_r = SpriteData.b(param3, "", "statline_tab_flip");
           ok.field_d = SpriteData.b(param3, "", "button_off");
           hh.field_a = SpriteData.b(param3, "", "button_over");
           sk.field_c = SpriteData.b(param3, "", "button_on");

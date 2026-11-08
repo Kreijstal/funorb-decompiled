@@ -351,8 +351,8 @@ final class IntrusiveDequeCursor {
           return;
         }
         FadingWidget.score = FadingWidget.score + param0;
-        if (gj.a((byte) -84, 10) < 5) {
-          if (5 <= gj.a((byte) -84, 10)) {
+        if (BufferedCacheFile.a((byte) -84, 10) < 5) {
+          if (5 <= BufferedCacheFile.a((byte) -84, 10)) {
             kn.field_b = kn.field_b + param0;
             if (var2 >= 50000) {
               return;
@@ -367,7 +367,7 @@ final class IntrusiveDequeCursor {
           }
           ts.field_a = ts.field_a + param0;
         } else {
-          if (gj.a((byte) -84, 10) >= 5) {
+          if (BufferedCacheFile.a((byte) -84, 10) >= 5) {
             GraphicsToolkit.field_f = GraphicsToolkit.field_f - param0;
           } else {
             fb.field_a = fb.field_a - param0;

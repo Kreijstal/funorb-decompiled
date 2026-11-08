@@ -23,7 +23,7 @@ final class ls {
         try {
           jl.field_a.b((byte) 105);
           for (var1_int = 0; var1_int < 32; var1_int++) {
-            gd.field_k[var1_int] = 0L;
+            Js5Client.field_k[var1_int] = 0L;
           }
           for (var1_intLifetime1 = param0; var1_intLifetime1 < 32; var1_intLifetime1++) {
             fa.field_a[var1_intLifetime1] = 0L;
@@ -38,7 +38,7 @@ final class ls {
         if (param0 != -62) {
           return (String) null;
         }
-        return ig.field_a.d(-1);
+        return ig.field_a.readCp1252String(-1);
     }
 
     final static void a(int param0, int param1, int param2) {

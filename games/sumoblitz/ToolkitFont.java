@@ -511,7 +511,7 @@ abstract class ToolkitFont {
         jm.field_a = (LegacyBitmapFont) ((Object) vf.a(param1, true, "commonui", "arezzo12", param0));
         kw.field_b = (LegacyBitmapFont) ((Object) vf.a(param1, true, "commonui", "arezzo14", param0));
         tq.field_a = (LegacyBitmapFont) ((Object) vf.a(param1, true, "commonui", "arezzo14bold", param0));
-        Sprite var17 = new Sprite(param3.a("", "button.gif", -1), (java.awt.Component) ((Object) qn.field_f));
+        Sprite var17 = new Sprite(param3.fetchNamedFile("", "button.gif", -1), (java.awt.Component) ((Object) qn.field_f));
         ScrollPane.a((byte) 83, param0, "dropdown", "commonui");
         ne[] var5 = ShaderEffect.a("screen_options", param0, 73, "commonui");
         sb.field_d = new ne[4];

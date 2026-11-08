@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ll {
-    static long[] field_b;
-    static long[][] field_a;
+final class WhirlpoolTables {
+    static long[] roundConstants;
+    static long[][] roundTables;
     static String resumeGameText;
 
     public static void releaseStatics(int param0) {
-        field_a = (long[][]) null;
-        field_b = null;
+        roundTables = (long[][]) null;
+        roundConstants = null;
         if (param0 >= -107) {
-          field_b = (long[]) null;
+          roundConstants = (long[]) null;
           resumeGameText = null;
           return;
         }
@@ -22,19 +22,19 @@ final class ll {
         hc.field_f = 1;
         if (param0 >= 40) {
           ResourceArchive.field_f = 1;
-          la.a(ql.field_A, 0, 25, -1);
+          la.a(CacheIoRequest.field_A, 0, 25, -1);
           return;
         }
-        field_a = (long[][]) null;
+        roundTables = (long[][]) null;
         ResourceArchive.field_f = 1;
-        la.a(ql.field_A, 0, 25, -1);
+        la.a(CacheIoRequest.field_A, 0, 25, -1);
     }
 
     final static void a(int param0) {
-        ql.field_z = new int[25];
+        CacheIoRequest.field_z = new int[25];
         if (param0 == 17534) {
           hc.field_f = 1;
-          ql.field_A = new int[25];
+          CacheIoRequest.field_A = new int[25];
           go.field_j = new int[25];
           bl.field_e = -1;
           wm.field_f = new boolean[25];
@@ -42,13 +42,13 @@ final class ll {
           up.field_g = new boolean[25];
           LegacyOpenGlEffectManager.field_i = 1;
           qn.field_d = new boolean[25];
-          la.a(ql.field_z, 0, 25, 2147483647);
-          la.a(ql.field_A, 0, 25, -1);
+          la.a(CacheIoRequest.field_z, 0, 25, 2147483647);
+          la.a(CacheIoRequest.field_A, 0, 25, -1);
           return;
         }
-        field_a = (long[][]) null;
+        roundTables = (long[][]) null;
         hc.field_f = 1;
-        ql.field_A = new int[25];
+        CacheIoRequest.field_A = new int[25];
         go.field_j = new int[25];
         bl.field_e = -1;
         wm.field_f = new boolean[25];
@@ -56,8 +56,8 @@ final class ll {
         up.field_g = new boolean[25];
         LegacyOpenGlEffectManager.field_i = 1;
         qn.field_d = new boolean[25];
-        la.a(ql.field_z, 0, 25, 2147483647);
-        la.a(ql.field_A, 0, 25, -1);
+        la.a(CacheIoRequest.field_z, 0, 25, 2147483647);
+        la.a(CacheIoRequest.field_A, 0, 25, -1);
     }
 
     static {
@@ -69,8 +69,8 @@ final class ll {
         long var10 = 0L;
         long var12 = 0L;
         int var14 = 0;
-        field_b = new long[11];
-        field_a = new long[8][256];
+        roundConstants = new long[11];
+        roundTables = new long[8][256];
         int var0 = 0;
         while (var0 < 256) {
             var1 = "ᠣ웨螸ŏ㚦틵祯酒悼鮎ꌌ笵ᷠퟂ⹋﹗ᕷ㟥鿰䫚壉⤊놠殅뵝ჴ쬾է䆋Ᵹ闘ﯮ籦\udd17䞞쨭뼇굚茳挂ꩱ젙䧙守騦㊰햀뻍㑈ｺ遟⁨᪮둔錢擱猒䀈쏬\udba1贽需켫皂혛떯橐䗳ワ㽕ꋪ斺⿀\ude1c﵍鉵ڊ닦ฟ拔ꢖ暈╙葲㥌幸㢌톥댡鰞䏇ﰄ写洍﫟縤㮫츑轎럫㲁铷뤓ⳓ쐃噄義⪻셓\udc0b鵬ㅴ겉ᓡᘺ椉炶탭챂颤⡜".charAt(var0 / 2);
@@ -89,16 +89,16 @@ final class ll {
                 var10 = var10 ^ 285L;
             }
             var12 = var2 ^ var10;
-            field_a[0][var0] = ExpandingRingEffect.bitwiseOr(var12, ExpandingRingEffect.bitwiseOr(var4 << 8, ExpandingRingEffect.bitwiseOr(ExpandingRingEffect.bitwiseOr(ExpandingRingEffect.bitwiseOr(ExpandingRingEffect.bitwiseOr(var6 << 40, ExpandingRingEffect.bitwiseOr(var2 << 48, var2 << 56)), var2 << 32), var10 << 24), var8 << 16)));
+            roundTables[0][var0] = ExpandingRingEffect.bitwiseOr(var12, ExpandingRingEffect.bitwiseOr(var4 << 8, ExpandingRingEffect.bitwiseOr(ExpandingRingEffect.bitwiseOr(ExpandingRingEffect.bitwiseOr(ExpandingRingEffect.bitwiseOr(var6 << 40, ExpandingRingEffect.bitwiseOr(var2 << 48, var2 << 56)), var2 << 32), var10 << 24), var8 << 16)));
             for (var14 = 1; 8 > var14; var14++) {
-                field_a[var14][var0] = ExpandingRingEffect.bitwiseOr(field_a[var14 - 1][var0] >>> 8, field_a[var14 - 1][var0] << 56);
+                roundTables[var14][var0] = ExpandingRingEffect.bitwiseOr(roundTables[var14 - 1][var0] >>> 8, roundTables[var14 - 1][var0] << 56);
             }
             var0++;
         }
-        field_b[0] = 0L;
+        roundConstants[0] = 0L;
         for (var0 = 1; var0 <= 10; var0++) {
             var1 = 8 * (-1 + var0);
-            field_b[var0] = bi.a(bi.a(bi.a(bi.a(sd.a(4278190080L, field_a[4][4 + var1]), bi.a(sd.a(1095216660480L, field_a[3][var1 + 3]), bi.a(sd.a(280375465082880L, field_a[2][var1 + 2]), bi.a(sd.a(field_a[1][var1 + 1], 71776119061217280L), sd.a(field_a[0][var1], -72057594037927936L))))), sd.a(16711680L, field_a[5][var1 + 5])), sd.a(field_a[6][6 + var1], 65280L)), sd.a(field_a[7][7 + var1], 255L));
+            roundConstants[var0] = bi.a(bi.a(bi.a(bi.a(sd.a(4278190080L, roundTables[4][4 + var1]), bi.a(sd.a(1095216660480L, roundTables[3][var1 + 3]), bi.a(sd.a(280375465082880L, roundTables[2][var1 + 2]), bi.a(sd.a(roundTables[1][var1 + 1], 71776119061217280L), sd.a(roundTables[0][var1], -72057594037927936L))))), sd.a(16711680L, roundTables[5][var1 + 5])), sd.a(roundTables[6][6 + var1], 65280L)), sd.a(roundTables[7][7 + var1], 255L));
         }
         resumeGameText = "Resume Game";
     }

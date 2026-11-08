@@ -184,11 +184,11 @@ abstract class GameClientShell extends GameApplet {
         }
         if (mp.field_a == 2) {
           if (null != DropDownListWidget.field_H &&
-            DropDownListWidget.field_H.b((byte) 127)) {
-            if (!DropDownListWidget.field_H.b((byte) -99, "")) {
+            DropDownListWidget.field_H.loadIndex((byte) 127)) {
+            if (!DropDownListWidget.field_H.hasGroupName((byte) -99, "")) {
               DropDownListWidget.field_H = null;
             } else {
-              if (DropDownListWidget.field_H.a("", 100)) {
+              if (DropDownListWidget.field_H.tryLoadNamedGroup("", 100)) {
                 ni.a(7, DropDownListWidget.field_H);
                 DropDownListWidget.field_H = null;
                 ls.b(0);
@@ -238,8 +238,8 @@ abstract class GameClientShell extends GameApplet {
         }
         boolean decompiledFrameRemainder0 = true;
         if (mp.field_a == 11) {
-          if (vf.field_a != null && (!vf.field_a.b((byte) 127) ||
-            !vf.field_a.a(true))) {
+          if (vf.field_a != null && (!vf.field_a.loadIndex((byte) 127) ||
+            !vf.field_a.tryLoadAllGroups(true))) {
             NameSuggestionsPanel.a(20, 0.0f, lq.a(117, mm.field_c, ek.field_k, vf.field_a));
             decompiledFrameRemainder0 = false;
           }
@@ -285,7 +285,7 @@ abstract class GameClientShell extends GameApplet {
         if (ts.field_d) {
           return -1;
         }
-        var2 = jb.a(gi.c((byte) -2), this.field_z, (byte) 56, true, this.field_w, rw.c((byte) -97));
+        var2 = jb.a(gi.c((byte) -2), this.field_z, (byte) 56, true, this.field_w, ResourceRequest.c((byte) -97));
         if (-1 == var2) {
           return -1;
         }
@@ -396,7 +396,7 @@ abstract class GameClientShell extends GameApplet {
                             ByteArrayStorage.a(var3, (byte) 60);
                           }
                         } else {
-                          ro.a((byte) 127, ig.field_a, lt.field_m, gu.field_d);
+                          SecondaryNodeQueue.a((byte) 127, ig.field_a, lt.field_m, gu.field_d);
                         }
                       } else {
                         this.o(-1);
@@ -485,7 +485,7 @@ abstract class GameClientShell extends GameApplet {
     }
 
     private final void f(byte param0) {
-        int var2 = ig.field_a.e(-31302);
+        int var2 = ig.field_a.readUnsignedByte(-31302);
         int var3 = (var2 & 1) != 0 ? 1 : 0;
         int var4 = -1 + gu.field_d;
         byte[] var5 = new byte[var4];
@@ -633,7 +633,7 @@ abstract class GameClientShell extends GameApplet {
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = rs.a(oj.b(-98), gi.c((byte) -2), eu.a((byte) -97), of.c(-86), this.field_w, 119, rw.c((byte) -109));
+            var5_intLifetime1 = rs.a(oj.b(-98), gi.c((byte) -2), eu.a((byte) -97), of.c(-86), this.field_w, 119, ResourceRequest.c((byte) -109));
             if (var5_intLifetime1 != -1) {
               Sumoblitz.a(mn.field_g, param0 ^ 16984, var5_intLifetime1, MouseWheelInput.field_c);
               MouseWheelInput.field_c = null;
@@ -649,7 +649,7 @@ abstract class GameClientShell extends GameApplet {
             if (param2) {
               ts.field_d = false;
             } else {
-              var5_intLifetime2 = jb.a(gi.c((byte) -2), this.field_z, (byte) 21, false, this.field_w, rw.c((byte) -124));
+              var5_intLifetime2 = jb.a(gi.c((byte) -2), this.field_z, (byte) 21, false, this.field_w, ResourceRequest.c((byte) -124));
               if (-1 != var5_intLifetime2) {
                 if (var5_intLifetime2 == 0) {
                   km.field_k = lb.field_a;

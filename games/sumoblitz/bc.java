@@ -3,7 +3,7 @@
  */
 final class bc {
     static String lowText;
-    static gj field_a;
+    static BufferedCacheFile field_a;
     private static String field_z;
 
     public static void releaseStatics(int param0) {

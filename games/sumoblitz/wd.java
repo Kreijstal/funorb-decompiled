@@ -19,8 +19,8 @@ final class wd extends se {
 
     final void a(PacketBuffer param0, byte param1) {
         try {
-          param0.b(this.field_i, (byte) -105);
-          param0.a(this.field_g, 46);
+          param0.writeCircumfixedString(this.field_i, (byte) -105);
+          param0.writeBase38Name(this.field_g, 46);
           if (param1 >= -107) {
             PacketBuffer var4 = (PacketBuffer) null;
             this.a((PacketBuffer) null, (byte) 29);
@@ -73,7 +73,7 @@ final class wd extends se {
             return false;
           }
           tg.field_a = cp.field_c[bj.field_a];
-          np.field_c = SpriteMask.field_c[bj.field_a];
+          WhirlpoolDigest.field_c = SpriteMask.field_c[bj.field_a];
           bj.field_a = bj.field_a + 1 & 127;
           stackIn_7_0 = true;
         }

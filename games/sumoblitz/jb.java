@@ -9,8 +9,8 @@ class jb extends se {
 
     final void a(PacketBuffer param0, byte param1) {
         try {
-          param0.a(false, this.field_g);
-          param0.a(this.field_f, 27);
+          param0.writeLong(false, this.field_g);
+          param0.writeBase38Name(this.field_f, 27);
           if (param1 > -107) {
             PacketBuffer var4 = (PacketBuffer) null;
             this.a((PacketBuffer) null, (byte) -83);
@@ -35,7 +35,7 @@ class jb extends se {
         Throwable decompiledCaughtException = null;
         try {
           try {
-            var3_int = param0.e(false);
+            var3_int = param0.readUnsignedSmart(false);
             if (var3_int > param1) {
               var3_int = param1;
             }
@@ -81,7 +81,7 @@ class jb extends se {
           String var6Lifetime5;
           String var6Lifetime6;
           try {
-            bf.field_d = param1;
+            IntIndexHashTable.field_d = param1;
             try {
               int var4 = 82 / ((param0 + 62) / 49);
               var7 = param2.getParameter("cookieprefix");
@@ -161,14 +161,14 @@ class jb extends se {
                 kb.field_d = MouseInputHandler.a(false, param0, param5, (byte) -94);
               }
               InwardSparkParticle.field_v.position = 0;
-              InwardSparkParticle.field_v.b((byte) 42, 14);
-              InwardSparkParticle.field_v.b((byte) 96, kb.field_d.a((byte) 126).field_c);
+              InwardSparkParticle.field_v.writeByte((byte) 42, 14);
+              InwardSparkParticle.field_v.writeByte((byte) 96, kb.field_d.a((byte) 126).field_c);
               MessageDialog.a(0, -1);
               kw.field_c = gi.field_g;
             }
             if (kw.field_c == gi.field_g &&
               ju.b(-1, 1)) {
-              var6_int = ig.field_a.e(-31302);
+              var6_int = ig.field_a.readUnsignedByte(-31302);
               if (var6_int != 0) {
                 iw.field_a = var6_int;
                 gu.field_d = -1;
@@ -180,7 +180,7 @@ class jb extends se {
             }
             if (kw.field_c == sc.field_q &&
               ju.b(-1, 8)) {
-              oc.field_g = ig.field_a.a((byte) 127);
+              oc.field_g = ig.field_a.readLong((byte) 127);
               ig.field_a.position = 0;
               fb.a(param3, param1, -12793, param4, kb.field_d);
               kw.field_c = jj.field_f;
@@ -188,7 +188,7 @@ class jb extends se {
             boolean decompiledFrameRemainder0 = true;
             if (kw.field_c == jj.field_f &&
               ju.b(-1, 1)) {
-              var6_intLifetime1 = ig.field_a.e(-31302);
+              var6_intLifetime1 = ig.field_a.readUnsignedByte(-31302);
               iw.field_a = var6_intLifetime1;
               ig.field_a.position = 0;
               rp.field_b = null;
@@ -213,12 +213,12 @@ class jb extends se {
             }
             if (kw.field_c == MusicVoice.field_l &&
               lt.a((byte) 119)) {
-              lb.field_a = ig.field_a.a((byte) 114);
-              ku.field_j = ig.field_a.e(-31302);
-              ig.field_a.e(-31302);
-              ct.field_x = ig.field_a.a(255);
-              var6 = ig.field_a.g((byte) 92);
-              var7 = ig.field_a.e(-31302);
+              lb.field_a = ig.field_a.readLong((byte) 114);
+              Bzip2State.field_j = ig.field_a.readUnsignedByte(-31302);
+              ig.field_a.readUnsignedByte(-31302);
+              ct.field_x = ig.field_a.readUnsignedShort(255);
+              var6 = ig.field_a.readNullableString((byte) 92);
+              var7 = ig.field_a.readUnsignedByte(-31302);
               if ((var7 & 1) != 0) {
                 fu.f(24);
               }
@@ -231,19 +231,19 @@ class jb extends se {
                 }
               }
               if (gn.field_d) {
-                ig.field_a.e(-31302);
-                ig.field_a.e(-31302);
-                ig.field_a.c(true);
-                pl.field_y = ig.field_a.a(255);
+                ig.field_a.readUnsignedByte(-31302);
+                ig.field_a.readUnsignedByte(-31302);
+                ig.field_a.readInt(true);
+                pl.field_y = ig.field_a.readUnsignedShort(255);
                 sm.field_b = new byte[pl.field_y];
                 for (var8 = 0; var8 < pl.field_y; var8++) {
-                  sm.field_b[var8] = ig.field_a.d(true);
+                  sm.field_b[var8] = ig.field_a.readByte(true);
                 }
               }
-              qv.field_o = ig.field_a.d(-1);
+              qv.field_o = ig.field_a.readCp1252String(-1);
               var11 = (CharSequence) ((Object) qv.field_o);
               tc.field_f = uk.a(-1, var11);
-              jk.field_c = ig.field_a.e(-31302);
+              jk.field_c = ig.field_a.readUnsignedByte(-31302);
               kw.field_c = ga.field_j;
               if (kb.field_d.a((byte) 113) != pb.field_b) {
                 if (kb.field_d.a((byte) 89) == hh.field_c) {
@@ -295,7 +295,7 @@ class jb extends se {
               if (7 == iw.field_a) {
                 iw.field_a = 3;
               }
-              MouseWheelInput.field_c = ig.field_a.d(-1);
+              MouseWheelInput.field_c = ig.field_a.readCp1252String(-1);
               LimitedRandomAccessFile.field_g = false;
               stackIn_83_0 = iw.field_a;
               return stackIn_83_0;
@@ -366,8 +366,8 @@ class jb extends se {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param3.a(0, param0);
-          var5 = param3.a(var4_int, param1, (byte) 127);
+          var4_int = param3.groupId(0, param0);
+          var5 = param3.fileId(var4_int, param1, (byte) 127);
           var6 = -88 % ((-10 - param2) / 46);
           stackIn_1_0 = na.a(var5, -11481, param3, var4_int);
           return stackIn_1_0;

@@ -2,15 +2,15 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ArchiveCatalog {
-    private PacketBuffer field_d;
+    private PacketBuffer masterIndex;
     static SpriteData field_f;
-    private am[] field_e;
+    private CachedArchiveProvider[] providers;
     static long field_a;
-    private fv field_g;
-    private gd field_b;
-    private ti field_h;
-    private java.math.BigInteger field_i;
-    private java.math.BigInteger field_j;
+    private NetworkResourceRequest masterRequest;
+    private Js5Client networkClient;
+    private CacheIoWorker cacheWorker;
+    private java.math.BigInteger rsaExponent;
+    private java.math.BigInteger rsaModulus;
     static int field_c;
 
     final static void a(boolean param0, boolean param1) {
@@ -98,11 +98,11 @@ final class ArchiveCatalog {
         }
     }
 
-    final am a(boolean param0, int param1, wl param2, boolean param3, wl param4) {
-        am stackIn_12_0 = null;
+    final CachedArchiveProvider archiveProvider(boolean guard, int archiveId, SectorCacheStore indexCache, boolean discardCompleted, SectorCacheStore groupCache) {
+        CachedArchiveProvider stackIn_12_0 = null;
         PacketBuffer stackIn_19_0 = null;
         boolean stackIn_20_1 = false;
-        am stackIn_21_0 = null;
+        CachedArchiveProvider stackIn_21_0 = null;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;
@@ -113,29 +113,29 @@ final class ArchiveCatalog {
         RuntimeException var6 = null;
         int var7 = 0;
         byte[] var8 = null;
-        am var9 = null;
+        CachedArchiveProvider var9 = null;
         try {
-          if (this.field_d == null) {
+          if (this.masterIndex == null) {
             throw new RuntimeException();
           }
-          if (0 <= param1 &&
-            param1 < this.field_e.length) {
-            if (null != this.field_e[param1]) {
-              stackIn_12_0 = this.field_e[param1];
+          if (0 <= archiveId &&
+            archiveId < this.providers.length) {
+            if (null != this.providers[archiveId]) {
+              stackIn_12_0 = this.providers[archiveId];
               return stackIn_12_0;
             }
-            this.field_d.position = 72 * param1 + 6;
-            if (param0) {
+            this.masterIndex.position = 72 * archiveId + 6;
+            if (guard) {
               ArchiveCatalog.a((ResourceArchive) null, 4);
             }
-            var6_int = this.field_d.c(true);
-            stackIn_19_0 = this.field_d;
-            stackIn_20_1 = !(param0);
-            var7 = ((PacketBuffer) (Object) stackIn_19_0).c(stackIn_20_1);
+            var6_int = this.masterIndex.readInt(true);
+            stackIn_19_0 = this.masterIndex;
+            stackIn_20_1 = !(guard);
+            var7 = ((PacketBuffer) (Object) stackIn_19_0).readInt(stackIn_20_1);
             var8 = new byte[64];
-            this.field_d.a(var8, 64, 0, (byte) -99);
-            var9 = new am(param1, param4, param2, this.field_b, this.field_h, var6_int, var8, var7, param3);
-            this.field_e[param1] = var9;
+            this.masterIndex.readBytes(var8, 64, 0, (byte) -99);
+            var9 = new CachedArchiveProvider(archiveId, groupCache, indexCache, this.networkClient, this.cacheWorker, var6_int, var8, var7, discardCompleted);
+            this.providers[archiveId] = var9;
             stackIn_21_0 = var9;
             return stackIn_21_0;
           }
@@ -144,14 +144,14 @@ final class ArchiveCatalog {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
           stackIn_25_0 = var6;
-          stackIn_25_1 = new StringBuilder().append("rj.F(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_25_1 = new StringBuilder().append("rj.F(").append(guard).append(',').append(archiveId).append(',');
+          if (indexCache == null) {
             stackIn_26_2 = "null";
           } else {
             stackIn_26_2 = "{...}";
           }
-          stackIn_29_1 = ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          stackIn_29_1 = ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(discardCompleted).append(',');
+          if (groupCache == null) {
             stackIn_30_2 = "null";
           } else {
             stackIn_30_2 = "{...}";
@@ -160,7 +160,7 @@ final class ArchiveCatalog {
         }
     }
 
-    final boolean b(byte param0) {
+    final boolean loadMasterIndex(byte guard) {
         int stackIn_33_0 = 0;
         int stackIn_33_1 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -177,28 +177,28 @@ final class ArchiveCatalog {
         int var7Lifetime1;
         var8 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (null != this.field_d) {
+          if (null != this.masterIndex) {
             return true;
           }
-          if (null == this.field_g) {
-            if (this.field_b.a(44)) {
+          if (null == this.masterRequest) {
+            if (this.networkClient.urgentQueueFull(44)) {
               return false;
             }
-            this.field_g = this.field_b.a(255, true, 255, (byte) 47, (byte) 0);
+            this.masterRequest = this.networkClient.requestGroup(255, true, 255, (byte) 47, (byte) 0);
           }
-          if (this.field_g.field_u) {
+          if (this.masterRequest.pending) {
             return false;
           }
-          var2 = new PacketBuffer(this.field_g.d(false));
+          var2 = new PacketBuffer(this.masterRequest.completedBytes(false));
           var2.position = 5;
-          var3 = var2.e(-31302);
+          var3 = var2.readUnsignedByte(-31302);
           var2.position = var2.position + var3 * 72;
           var4 = new byte[var2.payload.length - var2.position];
-          var2.a(var4, var4.length, 0, (byte) -92);
-          if (this.field_i != null &&
-            null != this.field_j) {
+          var2.readBytes(var4, var4.length, 0, (byte) -92);
+          if (this.rsaExponent != null &&
+            null != this.rsaModulus) {
             var6 = new java.math.BigInteger(var4);
-            var7_ref_java_math_BigInteger = var6.modPow(this.field_i, this.field_j);
+            var7_ref_java_math_BigInteger = var6.modPow(this.rsaExponent, this.rsaModulus);
             var5 = var7_ref_java_math_BigInteger.toByteArray();
             if (var8 != 0) {
               var5 = var4;
@@ -209,7 +209,7 @@ final class ArchiveCatalog {
           if (var5.length != 65) {
             throw new RuntimeException();
           }
-          var6_array = gn.a(var2.payload, (byte) -120, 5, -5 + (var2.position - var4.length));
+          var6_array = gn.whirlpoolDigest(var2.payload, (byte) -120, 5, -5 + (var2.position - var4.length));
           var7 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var7 >= 64))) {
@@ -225,21 +225,21 @@ final class ArchiveCatalog {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            this.field_e = new am[var3];
-            this.field_d = var2;
+            this.providers = new CachedArchiveProvider[var3];
+            this.masterIndex = var2;
             stackIn_33_0 = 120;
-            stackIn_33_1 = (64 - param0) / 57;
+            stackIn_33_1 = (64 - guard) / 57;
           }
           var7Lifetime1 = stackIn_33_0 % stackIn_33_1;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var2_ref), "rj.A(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var2_ref), "rj.A(" + guard + ')');
         }
     }
 
-    final void c(byte param0) {
+    final void serviceProviders(byte guard) {
         RuntimeException runtimeException = null;
         int var2_int = 0;
         int var3 = 0;
@@ -247,15 +247,15 @@ final class ArchiveCatalog {
         RuntimeException decompiledCaughtException = null;
         var4 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (this.field_e == null) {
+          if (this.providers == null) {
             return;
           }
           var2_int = 0;
           boolean decompiledNaturalLoopExit0 = false;
-          while (!(decompiledNaturalLoopExit0 = (this.field_e.length <= var2_int))) {
+          while (!(decompiledNaturalLoopExit0 = (this.providers.length <= var2_int))) {
             if (var4 == 0) {
-              if (this.field_e[var2_int] != null) {
-                this.field_e[var2_int].b(-102);
+              if (this.providers[var2_int] != null) {
+                this.providers[var2_int].servicePriorityGroups(-102);
               }
               var2_int++;
               continue;
@@ -265,13 +265,13 @@ final class ArchiveCatalog {
           if (decompiledNaturalLoopExit0) {
             var2_int = 0;
           }
-          var3 = 39 % ((-36 - param0) / 62);
-          while (this.field_e.length > var2_int) {
+          var3 = 39 % ((-36 - guard) / 62);
+          while (this.providers.length > var2_int) {
             if (var4 != 0) {
               return;
             }
-            if (null != this.field_e[var2_int]) {
-              this.field_e[var2_int].c(-84);
+            if (null != this.providers[var2_int]) {
+              this.providers[var2_int].service(-84);
             }
             var2_int++;
           }
@@ -279,7 +279,7 @@ final class ArchiveCatalog {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "rj.G(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "rj.G(" + guard + ')');
         }
     }
 
@@ -606,7 +606,7 @@ final class ArchiveCatalog {
           }
           var2Lifetime13 = ke.a((byte) 107, "achieve");
           if (var2Lifetime13 != null) {
-            gd.achievementsText = MusicVoice.a(0, var2Lifetime13);
+            Js5Client.achievementsText = MusicVoice.a(0, var2Lifetime13);
           }
           var2Lifetime14 = ke.a((byte) 112, "thousandseperator");
           if (var2Lifetime14 != null) {
@@ -762,115 +762,115 @@ final class ArchiveCatalog {
           }
           var2Lifetime52 = ke.a((byte) 126, "achievement_names,0");
           if (var2Lifetime52 != null) {
-            rb.achievementNames[0] = MusicVoice.a(0, var2Lifetime52);
+            ArchiveProvider.achievementNames[0] = MusicVoice.a(0, var2Lifetime52);
           }
           var2Lifetime53 = ke.a((byte) 108, "achievement_names,1");
           if (null != var2Lifetime53) {
-            rb.achievementNames[1] = MusicVoice.a(0, var2Lifetime53);
+            ArchiveProvider.achievementNames[1] = MusicVoice.a(0, var2Lifetime53);
           }
           var2Lifetime54 = ke.a((byte) 112, "achievement_names,2");
           if (null != var2Lifetime54) {
-            rb.achievementNames[2] = MusicVoice.a(param1 + 5, var2Lifetime54);
+            ArchiveProvider.achievementNames[2] = MusicVoice.a(param1 + 5, var2Lifetime54);
           }
           var2Lifetime55 = ke.a((byte) 88, "achievement_names,3");
           if (null != var2Lifetime55) {
-            rb.achievementNames[3] = MusicVoice.a(jg.a(param1, -5), var2Lifetime55);
+            ArchiveProvider.achievementNames[3] = MusicVoice.a(GzipDecompressor.bitwiseXor(param1, -5), var2Lifetime55);
           }
           var2Lifetime56 = ke.a((byte) 103, "achievement_names,4");
           if (var2Lifetime56 != null) {
-            rb.achievementNames[4] = MusicVoice.a(0, var2Lifetime56);
+            ArchiveProvider.achievementNames[4] = MusicVoice.a(0, var2Lifetime56);
           }
           var2Lifetime57 = ke.a((byte) 92, "achievement_names,5");
           if (null != var2Lifetime57) {
-            rb.achievementNames[5] = MusicVoice.a(0, var2Lifetime57);
+            ArchiveProvider.achievementNames[5] = MusicVoice.a(0, var2Lifetime57);
           }
           var2Lifetime58 = ke.a((byte) 99, "achievement_names,6");
           if (null != var2Lifetime58) {
-            rb.achievementNames[6] = MusicVoice.a(0, var2Lifetime58);
+            ArchiveProvider.achievementNames[6] = MusicVoice.a(0, var2Lifetime58);
           }
           var2Lifetime59 = ke.a((byte) 95, "achievement_names,7");
           if (null != var2Lifetime59) {
-            rb.achievementNames[7] = MusicVoice.a(param1 + 5, var2Lifetime59);
+            ArchiveProvider.achievementNames[7] = MusicVoice.a(param1 + 5, var2Lifetime59);
           }
           var2Lifetime60 = ke.a((byte) 113, "achievement_names,8");
           if (null != var2Lifetime60) {
-            rb.achievementNames[8] = MusicVoice.a(0, var2Lifetime60);
+            ArchiveProvider.achievementNames[8] = MusicVoice.a(0, var2Lifetime60);
           }
           var2Lifetime61 = ke.a((byte) 122, "achievement_names,9");
           if (var2Lifetime61 != null) {
-            rb.achievementNames[9] = MusicVoice.a(0, var2Lifetime61);
+            ArchiveProvider.achievementNames[9] = MusicVoice.a(0, var2Lifetime61);
           }
           var2Lifetime62 = ke.a((byte) 95, "achievement_names,10");
           if (null != var2Lifetime62) {
-            rb.achievementNames[10] = MusicVoice.a(0, var2Lifetime62);
+            ArchiveProvider.achievementNames[10] = MusicVoice.a(0, var2Lifetime62);
           }
           var2Lifetime63 = ke.a((byte) 93, "achievement_names,11");
           if (null != var2Lifetime63) {
-            rb.achievementNames[11] = MusicVoice.a(0, var2Lifetime63);
+            ArchiveProvider.achievementNames[11] = MusicVoice.a(0, var2Lifetime63);
           }
           var2Lifetime64 = ke.a((byte) 104, "achievement_names,12");
           if (var2Lifetime64 != null) {
-            rb.achievementNames[12] = MusicVoice.a(param1 + 5, var2Lifetime64);
+            ArchiveProvider.achievementNames[12] = MusicVoice.a(param1 + 5, var2Lifetime64);
           }
           var2Lifetime65 = ke.a((byte) 104, "achievement_names,13");
           if (var2Lifetime65 != null) {
-            rb.achievementNames[13] = MusicVoice.a(0, var2Lifetime65);
+            ArchiveProvider.achievementNames[13] = MusicVoice.a(0, var2Lifetime65);
           }
           var2Lifetime66 = ke.a((byte) 116, "achievement_names,14");
           if (var2Lifetime66 != null) {
-            rb.achievementNames[14] = MusicVoice.a(0, var2Lifetime66);
+            ArchiveProvider.achievementNames[14] = MusicVoice.a(0, var2Lifetime66);
           }
           var2Lifetime67 = ke.a((byte) 97, "achievement_names,15");
           if (null != var2Lifetime67) {
-            rb.achievementNames[15] = MusicVoice.a(0, var2Lifetime67);
+            ArchiveProvider.achievementNames[15] = MusicVoice.a(0, var2Lifetime67);
           }
           var2Lifetime68 = ke.a((byte) 125, "achievement_names,16");
           if (null != var2Lifetime68) {
-            rb.achievementNames[16] = MusicVoice.a(0, var2Lifetime68);
+            ArchiveProvider.achievementNames[16] = MusicVoice.a(0, var2Lifetime68);
           }
           var2Lifetime69 = ke.a((byte) 109, "achievement_names,17");
           if (null != var2Lifetime69) {
-            rb.achievementNames[17] = MusicVoice.a(0, var2Lifetime69);
+            ArchiveProvider.achievementNames[17] = MusicVoice.a(0, var2Lifetime69);
           }
           var2Lifetime70 = ke.a((byte) 124, "achievement_names,18");
           if (null != var2Lifetime70) {
-            rb.achievementNames[18] = MusicVoice.a(jg.a(param1, -5), var2Lifetime70);
+            ArchiveProvider.achievementNames[18] = MusicVoice.a(GzipDecompressor.bitwiseXor(param1, -5), var2Lifetime70);
           }
           var2Lifetime71 = ke.a((byte) 104, "achievement_names,19");
           if (var2Lifetime71 != null) {
-            rb.achievementNames[19] = MusicVoice.a(jg.a(param1, -5), var2Lifetime71);
+            ArchiveProvider.achievementNames[19] = MusicVoice.a(GzipDecompressor.bitwiseXor(param1, -5), var2Lifetime71);
           }
           var2Lifetime72 = ke.a((byte) 114, "achievement_names,20");
           if (null != var2Lifetime72) {
-            rb.achievementNames[20] = MusicVoice.a(0, var2Lifetime72);
+            ArchiveProvider.achievementNames[20] = MusicVoice.a(0, var2Lifetime72);
           }
           var2Lifetime73 = ke.a((byte) 110, "achievement_names,21");
           if (var2Lifetime73 != null) {
-            rb.achievementNames[21] = MusicVoice.a(jg.a(param1, -5), var2Lifetime73);
+            ArchiveProvider.achievementNames[21] = MusicVoice.a(GzipDecompressor.bitwiseXor(param1, -5), var2Lifetime73);
           }
           var2Lifetime74 = ke.a((byte) 127, "achievement_names,22");
           if (var2Lifetime74 != null) {
-            rb.achievementNames[22] = MusicVoice.a(0, var2Lifetime74);
+            ArchiveProvider.achievementNames[22] = MusicVoice.a(0, var2Lifetime74);
           }
           var2Lifetime75 = ke.a((byte) 122, "achievement_names,23");
           if (null != var2Lifetime75) {
-            rb.achievementNames[23] = MusicVoice.a(0, var2Lifetime75);
+            ArchiveProvider.achievementNames[23] = MusicVoice.a(0, var2Lifetime75);
           }
           var2Lifetime76 = ke.a((byte) 98, "achievement_names,24");
           if (var2Lifetime76 != null) {
-            rb.achievementNames[24] = MusicVoice.a(jg.a(param1, -5), var2Lifetime76);
+            ArchiveProvider.achievementNames[24] = MusicVoice.a(GzipDecompressor.bitwiseXor(param1, -5), var2Lifetime76);
           }
           var2Lifetime77 = ke.a((byte) 95, "achievement_names,25");
           if (null != var2Lifetime77) {
-            rb.achievementNames[25] = MusicVoice.a(0, var2Lifetime77);
+            ArchiveProvider.achievementNames[25] = MusicVoice.a(0, var2Lifetime77);
           }
           var2Lifetime78 = ke.a((byte) 102, "achievement_names,26");
           if (var2Lifetime78 != null) {
-            rb.achievementNames[26] = MusicVoice.a(0, var2Lifetime78);
+            ArchiveProvider.achievementNames[26] = MusicVoice.a(0, var2Lifetime78);
           }
           var2Lifetime79 = ke.a((byte) 122, "achievement_names,27");
           if (var2Lifetime79 != null) {
-            rb.achievementNames[27] = MusicVoice.a(0, var2Lifetime79);
+            ArchiveProvider.achievementNames[27] = MusicVoice.a(0, var2Lifetime79);
           }
           var2Lifetime80 = ke.a((byte) 110, "achievement_criteria,0");
           if (var2Lifetime80 != null) {
@@ -890,7 +890,7 @@ final class ArchiveCatalog {
           }
           var2Lifetime84 = ke.a((byte) 92, "achievement_criteria,4");
           if (null != var2Lifetime84) {
-            DraggableWidget.achievementDescriptions[4] = MusicVoice.a(jg.a(param1, -5), var2Lifetime84);
+            DraggableWidget.achievementDescriptions[4] = MusicVoice.a(GzipDecompressor.bitwiseXor(param1, -5), var2Lifetime84);
           }
           var2Lifetime85 = ke.a((byte) 99, "achievement_criteria,5");
           if (var2Lifetime85 != null) {
@@ -953,7 +953,7 @@ final class ArchiveCatalog {
           }
           var2Lifetime99 = ke.a((byte) 100, "achievement_criteria,19");
           if (null != var2Lifetime99) {
-            DraggableWidget.achievementDescriptions[19] = MusicVoice.a(jg.a(param1, -5), var2Lifetime99);
+            DraggableWidget.achievementDescriptions[19] = MusicVoice.a(GzipDecompressor.bitwiseXor(param1, -5), var2Lifetime99);
           }
           var2Lifetime100 = ke.a((byte) 101, "achievement_criteria,20");
           if (null != var2Lifetime100) {
@@ -981,7 +981,7 @@ final class ArchiveCatalog {
           }
           var2Lifetime106 = ke.a((byte) 92, "achievement_criteria,26");
           if (null != var2Lifetime106) {
-            DraggableWidget.achievementDescriptions[26] = MusicVoice.a(jg.a(param1, -5), var2Lifetime106);
+            DraggableWidget.achievementDescriptions[26] = MusicVoice.a(GzipDecompressor.bitwiseXor(param1, -5), var2Lifetime106);
           }
           var2Lifetime107 = ke.a((byte) 92, "achievement_criteria,27");
           if (null != var2Lifetime107) {
@@ -997,7 +997,7 @@ final class ArchiveCatalog {
           }
           var2Lifetime110 = ke.a((byte) 117, "instructionsPageObjective,1");
           if (null != var2Lifetime110) {
-            GameInstructions.objectiveHelpLines[1] = MusicVoice.a(jg.a(param1, -5), var2Lifetime110);
+            GameInstructions.objectiveHelpLines[1] = MusicVoice.a(GzipDecompressor.bitwiseXor(param1, -5), var2Lifetime110);
           }
           var2Lifetime111 = ke.a((byte) 101, "instructionsPageObjective,2");
           if (null != var2Lifetime111) {
@@ -1041,7 +1041,7 @@ final class ArchiveCatalog {
           }
           var2Lifetime121 = ke.a((byte) 102, "instructionsPageEnemies,2");
           if (null != var2Lifetime121) {
-            GameInstructions.dronesHelpLines[2] = MusicVoice.a(jg.a(param1, -5), var2Lifetime121);
+            GameInstructions.dronesHelpLines[2] = MusicVoice.a(GzipDecompressor.bitwiseXor(param1, -5), var2Lifetime121);
           }
           var2Lifetime122 = ke.a((byte) 120, "instructionsPageEnemies,3");
           if (var2Lifetime122 != null) {
@@ -1049,7 +1049,7 @@ final class ArchiveCatalog {
           }
           var2Lifetime123 = ke.a((byte) 124, "instructionsPageEnemies,4");
           if (null != var2Lifetime123) {
-            GameInstructions.dronesHelpLines[4] = MusicVoice.a(jg.a(param1, -5), var2Lifetime123);
+            GameInstructions.dronesHelpLines[4] = MusicVoice.a(GzipDecompressor.bitwiseXor(param1, -5), var2Lifetime123);
           }
           var2Lifetime124 = ke.a((byte) 110, "instructionsPageEnemies,5");
           if (null != var2Lifetime124) {
@@ -1085,7 +1085,7 @@ final class ArchiveCatalog {
           }
           var2Lifetime132 = ke.a((byte) 90, "instructionsPagePowerups,1");
           if (null != var2Lifetime132) {
-            GameInstructions.upgradesHelpLines[1] = MusicVoice.a(jg.a(param1, -5), var2Lifetime132);
+            GameInstructions.upgradesHelpLines[1] = MusicVoice.a(GzipDecompressor.bitwiseXor(param1, -5), var2Lifetime132);
           }
           var2Lifetime133 = ke.a((byte) 99, "instructionsPagePowerups,2");
           if (var2Lifetime133 != null) {
@@ -1217,7 +1217,7 @@ final class ArchiveCatalog {
           }
           var2Lifetime165 = ke.a((byte) 92, "enemyModifiers,3");
           if (null != var2Lifetime165) {
-            l.enemyVariantNames[3] = MusicVoice.a(jg.a(param1, -5), var2Lifetime165);
+            l.enemyVariantNames[3] = MusicVoice.a(GzipDecompressor.bitwiseXor(param1, -5), var2Lifetime165);
           }
           var2Lifetime166 = ke.a((byte) 106, "enemyModifiers,4");
           if (null != var2Lifetime166) {
@@ -1245,7 +1245,7 @@ final class ArchiveCatalog {
           }
           var2Lifetime172 = ke.a((byte) 122, "powerupNames,3");
           if (null != var2Lifetime172) {
-            vu.powerupEffectNames[3] = MusicVoice.a(jg.a(param1, -5), var2Lifetime172);
+            vu.powerupEffectNames[3] = MusicVoice.a(GzipDecompressor.bitwiseXor(param1, -5), var2Lifetime172);
           }
           var2Lifetime173 = ke.a((byte) 96, "powerupNames,4");
           if (null != var2Lifetime173) {
@@ -1273,7 +1273,7 @@ final class ArchiveCatalog {
           }
           var2Lifetime179 = ke.a((byte) 122, "powerupShortNames,3");
           if (var2Lifetime179 != null) {
-            UpgradeStatNames.names[3] = MusicVoice.a(jg.a(param1, -5), var2Lifetime179);
+            UpgradeStatNames.names[3] = MusicVoice.a(GzipDecompressor.bitwiseXor(param1, -5), var2Lifetime179);
           }
           var2Lifetime180 = ke.a((byte) 93, "powerupShortNames,4");
           if (var2Lifetime180 != null) {
@@ -1301,7 +1301,7 @@ final class ArchiveCatalog {
           }
           var2Lifetime186 = ke.a((byte) 112, "terrainNames,3");
           if (null != var2Lifetime186) {
-            AudioServiceThread.padTypeNames[3] = MusicVoice.a(jg.a(param1, -5), var2Lifetime186);
+            AudioServiceThread.padTypeNames[3] = MusicVoice.a(GzipDecompressor.bitwiseXor(param1, -5), var2Lifetime186);
           }
           var2Lifetime187 = ke.a((byte) 127, "terrainNames,4");
           if (var2Lifetime187 != null) {
@@ -1441,11 +1441,11 @@ final class ArchiveCatalog {
           }
           var2Lifetime221 = ke.a((byte) 104, "tutorialSteps,11");
           if (var2Lifetime221 != null) {
-            LimitedRandomAccessFile.droneDescriptions[11] = MusicVoice.a(jg.a(param1, -5), var2Lifetime221);
+            LimitedRandomAccessFile.droneDescriptions[11] = MusicVoice.a(GzipDecompressor.bitwiseXor(param1, -5), var2Lifetime221);
           }
           var2Lifetime222 = ke.a((byte) 112, "tutorialSteps,12");
           if (var2Lifetime222 != null) {
-            LimitedRandomAccessFile.droneDescriptions[12] = MusicVoice.a(jg.a(param1, -5), var2Lifetime222);
+            LimitedRandomAccessFile.droneDescriptions[12] = MusicVoice.a(GzipDecompressor.bitwiseXor(param1, -5), var2Lifetime222);
           }
           var2Lifetime223 = ke.a((byte) 112, "tutorialSteps,13");
           if (null != var2Lifetime223) {
@@ -1485,11 +1485,11 @@ final class ArchiveCatalog {
           }
           var2Lifetime232 = ke.a((byte) 101, "tutorialSteps,22");
           if (null != var2Lifetime232) {
-            LimitedRandomAccessFile.droneDescriptions[22] = MusicVoice.a(jg.a(param1, -5), var2Lifetime232);
+            LimitedRandomAccessFile.droneDescriptions[22] = MusicVoice.a(GzipDecompressor.bitwiseXor(param1, -5), var2Lifetime232);
           }
           var2Lifetime233 = ke.a((byte) 113, "tutorialSteps,23");
           if (var2Lifetime233 != null) {
-            LimitedRandomAccessFile.droneDescriptions[23] = MusicVoice.a(jg.a(param1, -5), var2Lifetime233);
+            LimitedRandomAccessFile.droneDescriptions[23] = MusicVoice.a(GzipDecompressor.bitwiseXor(param1, -5), var2Lifetime233);
           }
           var2Lifetime234 = ke.a((byte) 102, "tutorialSteps,24");
           if (var2Lifetime234 != null) {
@@ -1525,7 +1525,7 @@ final class ArchiveCatalog {
           }
           var2Lifetime242 = ke.a((byte) 112, "tutorialSteps,32");
           if (null != var2Lifetime242) {
-            LimitedRandomAccessFile.droneDescriptions[32] = MusicVoice.a(jg.a(param1, -5), var2Lifetime242);
+            LimitedRandomAccessFile.droneDescriptions[32] = MusicVoice.a(GzipDecompressor.bitwiseXor(param1, -5), var2Lifetime242);
           }
           var2Lifetime243 = ke.a((byte) 89, "tutorialSteps,33");
           if (var2Lifetime243 != null) {
@@ -1545,7 +1545,7 @@ final class ArchiveCatalog {
           }
           var2Lifetime247 = ke.a((byte) 120, "tutorialSteps,37");
           if (var2Lifetime247 != null) {
-            LimitedRandomAccessFile.droneDescriptions[37] = MusicVoice.a(jg.a(param1, -5), var2Lifetime247);
+            LimitedRandomAccessFile.droneDescriptions[37] = MusicVoice.a(GzipDecompressor.bitwiseXor(param1, -5), var2Lifetime247);
           }
           Drone.field_J = null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1626,11 +1626,11 @@ final class ArchiveCatalog {
         }
     }
 
-    ArchiveCatalog(gd param0, ti param1) {
+    ArchiveCatalog(Js5Client param0, CacheIoWorker param1) {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
-    private ArchiveCatalog(gd param0, ti param1, java.math.BigInteger param2, java.math.BigInteger param3) {
+    private ArchiveCatalog(Js5Client param0, CacheIoWorker param1, java.math.BigInteger param2, java.math.BigInteger param3) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -1643,12 +1643,12 @@ final class ArchiveCatalog {
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_b = param0;
-          this.field_j = param3;
-          this.field_h = param1;
-          this.field_i = param2;
-          if (!this.field_b.a(-28)) {
-            this.field_g = this.field_b.a(255, true, 255, (byte) 57, (byte) 0);
+          this.networkClient = param0;
+          this.rsaModulus = param3;
+          this.cacheWorker = param1;
+          this.rsaExponent = param2;
+          if (!this.networkClient.urgentQueueFull(-28)) {
+            this.masterRequest = this.networkClient.requestGroup(255, true, 255, (byte) 57, (byte) 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

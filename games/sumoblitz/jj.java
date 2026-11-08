@@ -53,7 +53,7 @@ final class jj {
 
     final void a(boolean param0, java.applet.Applet param1) {
         try {
-          gj.a(31536000L, param1, param0, this.field_e, "jagex-last-login-method");
+          BufferedCacheFile.a(31536000L, param1, param0, this.field_e, "jagex-last-login-method");
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "jj.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

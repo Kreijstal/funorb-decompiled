@@ -17,8 +17,8 @@ final class DisplayModeErrorDialog extends ResizingDialog implements WidgetActio
         RuntimeException decompiledCaughtException = null;
         try {
           var3 = null;
-          if (ku.field_I != param1) {
-            if (am.field_e == param1) {
+          if (Bzip2State.field_I != param1) {
+            if (CachedArchiveProvider.field_e == param1) {
               this.height = this.height + 10;
               var3 = LimitedRandomAccessFile.field_c;
               if (CacheReferenceNode.a((byte) -96)) {
@@ -77,7 +77,7 @@ final class DisplayModeErrorDialog extends ResizingDialog implements WidgetActio
           if (param2 != 0) {
             field_P = 21;
           }
-          var4 = param0.c(-14296, param1);
+          var4 = param0.fetchFlatFile(-14296, param1);
           var3 = var4;
           if (var4 != null) {
             stackIn_6_0 = new MusicPatch(var4);

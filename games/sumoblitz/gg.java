@@ -92,20 +92,20 @@ final class gg extends DualLinkNode {
           db.droneSlotLimit = 1;
           GridWidgetContainer.livesRemaining = 3;
           an.waveIndex = 0;
-          ku.field_J = new wc[6];
+          Bzip2State.field_J = new wc[6];
           var1_int = 0;
           if (-1 != oh.levelIndex) {
             if (!MidiNoteMixer.field_r[oh.levelIndex]) {
               for (var2 = cj.field_e[oh.levelIndex]; var2 < 6 + cj.field_e[oh.levelIndex]; var2++) {
-                ku.field_J[var1_int] = IntrusiveDequeCursor.field_a[var2];
+                Bzip2State.field_J[var1_int] = IntrusiveDequeCursor.field_a[var2];
                 var1_int++;
               }
             } else {
-              ku.field_J = ((om) (ab.field_a.a(107, (long)oh.levelIndex))).a(-120);
+              Bzip2State.field_J = ((om) (ab.field_a.a(107, (long)oh.levelIndex))).a(-120);
             }
           }
           FadingWidget.score = 0;
-          if (5 >= gj.a((byte) -84, 10)) {
+          if (5 >= BufferedCacheFile.a((byte) -84, 10)) {
             fb.field_a = fb.field_a + iw.elapsedTicks;
           } else {
             GraphicsToolkit.field_f = GraphicsToolkit.field_f + iw.elapsedTicks;

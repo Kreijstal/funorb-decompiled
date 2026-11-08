@@ -37,8 +37,8 @@ abstract class ve extends IntrusiveNode {
           var5 = 50 / ((param0 + 9) / 58);
           jaggl.OpenGL.glBindProgramARB(param3, var4_int);
           jaggl.OpenGL.glProgramRawARB(param3, 34933, param2);
-          jaggl.OpenGL.glGetIntegerv(34379, jg.field_e, 0);
-          if (jg.field_e[0] == -1) {
+          jaggl.OpenGL.glGetIntegerv(34379, GzipDecompressor.field_e, 0);
+          if (GzipDecompressor.field_e[0] == -1) {
             jaggl.OpenGL.glBindProgramARB(param3, 0);
             stackIn_7_0 = new wg(param1, param3, var4_int);
             return stackIn_7_0;

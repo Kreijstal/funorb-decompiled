@@ -110,12 +110,12 @@ final class th extends WidgetContainer implements ca, WidgetActionListener {
           kh.field_e = kh.field_e | var3_int;
           OpenGlTransparentWaterEffect.field_e = OpenGlTransparentWaterEffect.field_e | var3_int;
           pl.field_v.addLast((IntrusiveNode) (new ge(param2)), (byte) 39);
-          if (gj.a((byte) -84, 10) >= 5) {
+          if (BufferedCacheFile.a((byte) -84, 10) >= 5) {
             fb.field_a = fb.field_a + iw.elapsedTicks;
           } else {
             GraphicsToolkit.field_f = GraphicsToolkit.field_f + iw.elapsedTicks;
           }
-          if (gj.a((byte) -84, 10) < 5) {
+          if (BufferedCacheFile.a((byte) -84, 10) < 5) {
             ts.field_a = ts.field_a - IntrusiveNodeHashTable.field_c;
           } else {
             kn.field_b = kn.field_b - IntrusiveNodeHashTable.field_c;
@@ -177,12 +177,12 @@ final class th extends WidgetContainer implements ca, WidgetActionListener {
             GraphicsToolkit.field_f = GraphicsToolkit.field_f - oh.levelIndex;
             ts.field_a = ts.field_a + nq.field_i;
           }
-          if (5 > gj.a((byte) -84, 10)) {
+          if (5 > BufferedCacheFile.a((byte) -84, 10)) {
             GraphicsToolkit.field_f = GraphicsToolkit.field_f - iw.elapsedTicks;
           } else {
             fb.field_a = fb.field_a - iw.elapsedTicks;
           }
-          if (gj.a((byte) -84, 10) >= 5) {
+          if (BufferedCacheFile.a((byte) -84, 10) >= 5) {
             kn.field_b = kn.field_b + IntrusiveNodeHashTable.field_c;
             return;
           }

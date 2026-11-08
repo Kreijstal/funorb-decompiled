@@ -26,14 +26,14 @@ final class MidiFileReader {
         int var3Lifetime1;
         this.buffer.payload = midiBytes;
         this.buffer.position = 10;
-        int var2 = this.buffer.a(255);
-        this.division = this.buffer.a(255);
+        int var2 = this.buffer.readUnsignedShort(255);
+        this.division = this.buffer.readUnsignedShort(255);
         this.tempo = 500000;
         this.trackStarts = new int[var2];
         int var3 = 0;
         while (var3 < var2) {
-          var4 = this.buffer.c(true);
-          var5 = this.buffer.c(true);
+          var4 = this.buffer.readInt(true);
+          var5 = this.buffer.readInt(true);
           if (var4 == 1297379947) {
             this.trackStarts[var3] = this.buffer.position;
             var3++;
@@ -111,7 +111,7 @@ final class MidiFileReader {
           var2 != 247) {
           return this.readMessageData(track, var2);
         }
-        var3 = this.buffer.f((byte) 93);
+        var3 = this.buffer.readVarInt((byte) 93);
         if (var2 == 247 &&
           var3 > 0) {
           var4 = this.buffer.payload[this.buffer.position] & 255;
@@ -129,7 +129,7 @@ final class MidiFileReader {
     }
 
     final void readTrackDelta(int track) {
-        int var2 = this.buffer.f((byte) 127);
+        int var2 = this.buffer.readVarInt((byte) 127);
         this.trackTicks[track] = this.trackTicks[track] + var2;
     }
 
@@ -146,14 +146,14 @@ final class MidiFileReader {
         int var3Lifetime1;
         int var4Lifetime1;
         if (status == 255) {
-          var3 = this.buffer.e(-31302);
-          var4 = this.buffer.f((byte) 105);
+          var3 = this.buffer.readUnsignedByte(-31302);
+          var4 = this.buffer.readVarInt((byte) 105);
           if (var3 == 47) {
             this.buffer.position = this.buffer.position + var4;
             return 1;
           }
           if (var3 == 81) {
-            var5 = this.buffer.c((byte) 124);
+            var5 = this.buffer.readUnsignedMedium((byte) 124);
             var4 -= 3;
             var6 = this.trackTicks[track];
             this.timeBase = this.timeBase + (long)var6 * (long)(this.tempo - var5);
@@ -167,10 +167,10 @@ final class MidiFileReader {
         var3Lifetime1 = messageLengths[status - 128];
         var4Lifetime1 = status;
         if (var3Lifetime1 >= 1) {
-          var4Lifetime1 = var4Lifetime1 | this.buffer.e(-31302) << 8;
+          var4Lifetime1 = var4Lifetime1 | this.buffer.readUnsignedByte(-31302) << 8;
         }
         if (var3Lifetime1 >= 2) {
-          var4Lifetime1 = var4Lifetime1 | this.buffer.e(-31302) << 16;
+          var4Lifetime1 = var4Lifetime1 | this.buffer.readUnsignedByte(-31302) << 16;
         }
         return var4Lifetime1;
     }

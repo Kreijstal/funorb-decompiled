@@ -15,7 +15,7 @@ final class pl extends PacketBuffer {
     final void g(int param0, int param1) {
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
-        this.payload[fieldTemp$0] = (byte)(param0 + this.field_t.a(jg.a(param1, 264)));
+        this.payload[fieldTemp$0] = (byte)(param0 + this.field_t.a(GzipDecompressor.bitwiseXor(param1, 264)));
         if (param1 != 8) {
           this.i((byte) 39);
         }
@@ -37,14 +37,14 @@ final class pl extends PacketBuffer {
           while (var4 < param0) {
             incrementValue$0 = var3;
             var3++;
-            var5 = var5 + ((this.payload[incrementValue$0] & am.field_z[var4]) << param0 - var4);
+            var5 = var5 + ((this.payload[incrementValue$0] & CachedArchiveProvider.field_z[var4]) << param0 - var4);
             param0 = param0 - var4;
             var4 = 8;
           }
           if (var4 == param0) {
-            var5 = var5 + (am.field_z[var4] & this.payload[var3]);
+            var5 = var5 + (CachedArchiveProvider.field_z[var4] & this.payload[var3]);
           } else {
-            var5 = var5 + (this.payload[var3] >> var4 - param0 & am.field_z[param0]);
+            var5 = var5 + (this.payload[var3] >> var4 - param0 & CachedArchiveProvider.field_z[param0]);
           }
           return var5;
         }

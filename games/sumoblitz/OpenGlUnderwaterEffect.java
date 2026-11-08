@@ -109,10 +109,10 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
         try {
           if (param1 != null &&
             param0.field_Ac) {
-            this.field_m = ve.a((byte) 83, param0, param1.a("uw_ground_unlit", "gl", -1), 34336);
-            this.field_j = ve.a((byte) 83, param0, param1.a("uw_ground_lit", "gl", -1), 34336);
-            this.field_f = ve.a((byte) 73, param0, param1.a("uw_model_unlit", "gl", -1), 34336);
-            this.field_g = ve.a((byte) -120, param0, param1.a("uw_model_lit", "gl", -1), 34336);
+            this.field_m = ve.a((byte) 83, param0, param1.fetchNamedFile("uw_ground_unlit", "gl", -1), 34336);
+            this.field_j = ve.a((byte) 83, param0, param1.fetchNamedFile("uw_ground_lit", "gl", -1), 34336);
+            this.field_f = ve.a((byte) 73, param0, param1.fetchNamedFile("uw_model_unlit", "gl", -1), 34336);
+            this.field_g = ve.a((byte) -120, param0, param1.fetchNamedFile("uw_model_lit", "gl", -1), 34336);
             stackIn_7_0 = (this.field_f == null) ? 0 : 1;
             if (this.field_j == null) {
               stackIn_10_1 = 0;

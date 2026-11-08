@@ -11,7 +11,7 @@ final class DirectXTransparentWaterEffect extends ShaderEffect {
         this.field_f.a(-103, (jagdx.IDirect3DVertexShader) null);
         this.field_b.a(jq.field_a, 0, 0);
         if (!param0) {
-          this.field_b.a(fv.field_y, 1, 0);
+          this.field_b.a(NetworkResourceRequest.field_y, 1, 0);
           this.field_b.a(mm.field_h, 2, 0);
           this.field_b.b(0, true);
           return;
@@ -131,7 +131,7 @@ final class DirectXTransparentWaterEffect extends ShaderEffect {
         if (param1 != null &&
           this.field_h.c(41) &&
           257 <= (65535 & this.field_f.field_Kc.VertexShaderVersion)) {
-          this.field_e = this.field_f.field_Cc.a(param1.a("transparent_water", "dx", -1));
+          this.field_e = this.field_f.field_Cc.a(param1.fetchNamedFile("transparent_water", "dx", -1));
         } else {
           this.field_e = null;
         }
@@ -163,7 +163,7 @@ final class DirectXTransparentWaterEffect extends ShaderEffect {
     final void a(boolean param0, int param1) {
         this.field_b.a(jq.field_a, 0, 0);
         this.field_b.a(mm.field_h, 1, 0);
-        this.field_b.a((byte) -125, 2, false, true, fv.field_y);
+        this.field_b.a((byte) -125, 2, false, true, NetworkResourceRequest.field_y);
         this.field_b.b(0, false);
         if (param1 == 20186) {
           this.field_f.a(-51, this.field_e);

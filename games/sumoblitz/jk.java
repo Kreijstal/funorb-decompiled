@@ -4,7 +4,7 @@
 final class jk {
     static int field_a;
     static int field_c;
-    static gd field_b;
+    static Js5Client field_b;
 
     final static ne a(int[] param0, ne param1, int param2) {
         ne var3 = null;

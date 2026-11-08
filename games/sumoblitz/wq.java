@@ -57,12 +57,12 @@ final class wq {
           return 4L;
         }
         long var1 = System.currentTimeMillis();
-        if (var1 >= sg.field_j) {
-          sg.field_j = var1;
+        if (var1 >= ArchiveIndex.field_j) {
+          ArchiveIndex.field_j = var1;
           return var1 + uv.field_n;
         }
-        uv.field_n = uv.field_n + (-var1 + sg.field_j);
-        sg.field_j = var1;
+        uv.field_n = uv.field_n + (-var1 + ArchiveIndex.field_j);
+        ArchiveIndex.field_j = var1;
         return var1 + uv.field_n;
     }
 
@@ -95,9 +95,9 @@ final class wq {
         int var4Lifetime1;
         var7 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var8 = new pl(param1.a("", "logo.fo3d", -1));
+          var8 = new pl(param1.fetchNamedFile("", "logo.fo3d", -1));
           var10 = var8;
-          var3 = var10.e(-31302);
+          var3 = var10.readUnsignedByte(-31302);
           var10.i((byte) 54);
           au.field_i = ok.a(-126, var10);
           mr.field_b = new CompactMeshGeometry[var3];

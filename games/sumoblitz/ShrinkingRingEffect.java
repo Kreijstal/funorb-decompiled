@@ -31,7 +31,7 @@ final class ShrinkingRingEffect extends TimedSceneEffect {
             var4 = (int)(8192.0 * ((double)this.remainingTicks / 30.0));
           }
           var4 = var4 * 2;
-          am.field_j[4].a((float)(this.x >> 8), (float)(this.y >> 8), var4, 0, 1, var3_int << 24, 1);
+          CachedArchiveProvider.field_j[4].a((float)(this.x >> 8), (float)(this.y >> 8), var4, 0, 1, var3_int << 24, 1);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "gb.C(" + (toolkit != null ? "{...}" : "null") + ',' + guard + ')');
         }

@@ -59,7 +59,7 @@ final class kk {
         ResourceArchive var2 = null;
         ResourceArchive var2Lifetime1;
         if (DisplayModeConfirmationDialog.field_O != null) {
-          DisplayModeConfirmationDialog.field_O.a((byte) -102);
+          DisplayModeConfirmationDialog.field_O.close((byte) -102);
           DisplayModeConfirmationDialog.field_O = null;
           if (param0 > -108) {
             var2 = (ResourceArchive) null;

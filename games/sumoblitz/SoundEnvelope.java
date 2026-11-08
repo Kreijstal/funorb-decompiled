@@ -43,19 +43,19 @@ final class SoundEnvelope {
 
     final void decodeSegments(PacketBuffer buffer) {
         int var2 = 0;
-        this.segmentCount = buffer.e(-31302);
+        this.segmentCount = buffer.readUnsignedByte(-31302);
         this.durations = new int[this.segmentCount];
         this.amplitudes = new int[this.segmentCount];
         for (var2 = 0; var2 < this.segmentCount; var2++) {
-          this.durations[var2] = buffer.a(255);
-          this.amplitudes[var2] = buffer.a(255);
+          this.durations[var2] = buffer.readUnsignedShort(255);
+          this.amplitudes[var2] = buffer.readUnsignedShort(255);
         }
     }
 
     final void decode(PacketBuffer buffer) {
-        this.waveform = buffer.e(-31302);
-        this.start = buffer.c(true);
-        this.end = buffer.c(true);
+        this.waveform = buffer.readUnsignedByte(-31302);
+        this.start = buffer.readInt(true);
+        this.end = buffer.readInt(true);
         this.decodeSegments(buffer);
     }
 

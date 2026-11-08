@@ -28,21 +28,21 @@ final class km extends IntrusiveNode {
           var9.g(param1, 8);
           var9.position = var9.position + 1;
           var4 = var9.position;
-          var9.b((byte) 55, 1);
+          var9.writeByte((byte) 55, 1);
           int var5 = 104 / ((30 - param0) / 34);
-          var9.b(-77, param2.field_r);
-          var9.b(-92, param2.field_l);
-          var9.b(123, param2.field_t);
-          var9.e(48, param2.field_n);
-          var9.e(48, param2.field_o);
-          var9.e(48, param2.field_p);
-          var9.e(48, param2.field_k);
-          var9.b((byte) 119, param2.field_q.length);
+          var9.writeShort(-77, param2.field_r);
+          var9.writeShort(-92, param2.field_l);
+          var9.writeShort(123, param2.field_t);
+          var9.writeInt(48, param2.field_n);
+          var9.writeInt(48, param2.field_o);
+          var9.writeInt(48, param2.field_p);
+          var9.writeInt(48, param2.field_k);
+          var9.writeByte((byte) 119, param2.field_q.length);
           for (var6 = 0; param2.field_q.length > var6; var6++) {
-            var8.e(48, param2.field_q[var6]);
+            var8.writeInt(48, param2.field_q[var6]);
           }
-          var9.a(var4, false);
-          var9.c(var9.position - var4, -13745);
+          var9.appendCrc32(var4, false);
+          var9.patchByteLength(var9.position - var4, -13745);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "km.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

@@ -1,49 +1,49 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ti implements Runnable {
+final class CacheIoWorker implements Runnable {
     static ToolkitSprite field_b;
-    private ro field_d;
-    private Thread field_a;
-    int field_e;
-    private boolean field_c;
+    private SecondaryNodeQueue requests;
+    private Thread thread;
+    int queuedCount;
+    private boolean stopping;
 
-    final ql a(wl param0, int param1, int param2) {
-        ql var4 = null;
+    final CacheIoRequest readImmediate(SectorCacheStore store, int guard, int groupId) {
+        CacheIoRequest var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
         Object var6 = null;
-        ql var7 = null;
+        CacheIoRequest var7 = null;
         int var9 = 0;
-        ql stackIn_9_0 = null;
-        ql stackIn_16_0 = null;
+        CacheIoRequest stackIn_9_0 = null;
+        CacheIoRequest stackIn_16_0 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
         Throwable decompiledCaughtException = null;
         var9 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var4 = new ql();
-          var5 = 29 % ((param1 + 44) / 48);
-          var4.field_y = 1;
-          var6 = this.field_d;
+          var4 = new CacheIoRequest();
+          var5 = 29 % ((guard + 44) / 48);
+          var4.operation = 1;
+          var6 = this.requests;
           synchronized (var6) {
-            var7 = (ql) (this.field_d.a(110));
+            var7 = (CacheIoRequest) (this.requests.first(110));
             while (var7 != null) {
-              if (~(long)param2 == ~var7.secondaryKey &&
-                var7.field_w == param0 &&
-                var7.field_y == 2) {
-                var4.field_u = false;
-                var4.field_x = var7.field_x;
+              if (~(long)groupId == ~var7.secondaryKey &&
+                var7.store == store &&
+                var7.operation == 2) {
+                var4.pending = false;
+                var4.bytes = var7.bytes;
                 stackIn_9_0 = var4;
                 return stackIn_9_0;
               }
-              var7 = (ql) (this.field_d.d(-2));
+              var7 = (CacheIoRequest) (this.requests.next(-2));
             }
           }
-          var4.field_x = param0.a(101, param2);
-          var4.field_t = true;
-          var4.field_u = false;
+          var4.bytes = store.read(101, groupId);
+          var4.urgent = true;
+          var4.pending = false;
           stackIn_16_0 = var4;
           return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -51,27 +51,27 @@ final class ti implements Runnable {
           var4_ref = (RuntimeException) (Object) decompiledCaughtException;
           stackIn_19_0 = var4_ref;
           stackIn_19_1 = new StringBuilder().append("ti.G(");
-          if (param0 == null) {
+          if (store == null) {
             stackIn_20_2 = "null";
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(guard).append(',').append(groupId).append(')').toString());
         }
     }
 
-    final void b(int param0) {
+    final void shutdown(int guard) {
         try {
-          this.field_c = true;
-          synchronized (this.field_d) {
-            this.field_d.notifyAll();
+          this.stopping = true;
+          synchronized (this.requests) {
+            this.requests.notifyAll();
           }
           try {
-            this.field_a.join();
+            this.thread.join();
           } catch (InterruptedException interruptedException) {
           }
-          this.field_a = null;
-          int var2 = -15 / ((49 - param0) / 40);
+          this.thread = null;
+          int var2 = -15 / ((49 - guard) / 40);
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -88,7 +88,7 @@ final class ti implements Runnable {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0) {
-            ti.releaseStatics(27);
+            CacheIoWorker.releaseStatics(27);
           }
           stackIn_3_0 = qc.a(param1, 38, false);
           return stackIn_3_0;
@@ -111,45 +111,45 @@ final class ti implements Runnable {
         field_b = null;
     }
 
-    private final void a(ql param0, boolean param1) {
+    private final void enqueue(CacheIoRequest request, boolean guard) {
         RuntimeException var3 = null;
-        wl var5 = null;
+        SectorCacheStore var5 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         Throwable decompiledCaughtException = null;
         Object var3_ref = null;
         try {
-          var3_ref = this.field_d;
+          var3_ref = this.requests;
           synchronized (var3_ref) {
-            this.field_d.a((DualLinkNode) (param0), (byte) -120);
-            this.field_e = this.field_e + 1;
-            this.field_d.notifyAll();
+            this.requests.addLast((DualLinkNode) (request), (byte) -120);
+            this.queuedCount = this.queuedCount + 1;
+            this.requests.notifyAll();
           }
-          if (param1) {
+          if (guard) {
             return;
           }
-          var5 = (wl) null;
-          this.a((wl) null, 93, 98);
+          var5 = (SectorCacheStore) null;
+          this.readImmediate((SectorCacheStore) null, 93, 98);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = (RuntimeException) (Object) decompiledCaughtException;
           stackIn_10_0 = var3;
           stackIn_10_1 = new StringBuilder().append("ti.C(");
-          if (param0 == null) {
+          if (request == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(guard).append(')').toString());
         }
     }
 
-    final ql a(int param0, byte[] param1, int param2, wl param3) {
-        ql var5 = null;
+    final CacheIoRequest enqueueWrite(int groupId, byte[] bytes, int operation, SectorCacheStore store) {
+        CacheIoRequest var5 = null;
         RuntimeException var5_ref = null;
-        ql stackIn_1_0 = null;
+        CacheIoRequest stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -157,27 +157,27 @@ final class ti implements Runnable {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5 = new ql();
-          var5.secondaryKey = (long)param0;
-          var5.field_w = param3;
-          var5.field_x = param1;
-          var5.field_t = false;
-          var5.field_y = param2;
-          this.a(var5, true);
+          var5 = new CacheIoRequest();
+          var5.secondaryKey = (long)groupId;
+          var5.store = store;
+          var5.bytes = bytes;
+          var5.urgent = false;
+          var5.operation = operation;
+          this.enqueue(var5, true);
           stackIn_1_0 = var5;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5_ref = decompiledCaughtException;
           stackIn_4_0 = var5_ref;
-          stackIn_4_1 = new StringBuilder().append("ti.B(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_4_1 = new StringBuilder().append("ti.B(").append(groupId).append(',');
+          if (bytes == null) {
             stackIn_5_2 = "null";
           } else {
             stackIn_5_2 = "{...}";
           }
-          stackIn_7_1 = ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_7_1 = ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(operation).append(',');
+          if (store == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
@@ -186,31 +186,31 @@ final class ti implements Runnable {
         }
     }
 
-    final ql a(int param0, int param1, wl param2) {
-        ql var4 = null;
+    final CacheIoRequest enqueueRead(int groupId, int guard, SectorCacheStore store) {
+        CacheIoRequest var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        ql stackIn_1_0 = null;
+        CacheIoRequest stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new ql();
-          var4.field_y = 3;
-          var4.secondaryKey = (long)param0;
-          var5 = 119 % ((56 - param1) / 55);
-          var4.field_t = false;
-          var4.field_w = param2;
-          this.a(var4, true);
+          var4 = new CacheIoRequest();
+          var4.operation = 3;
+          var4.secondaryKey = (long)groupId;
+          var5 = 119 % ((56 - guard) / 55);
+          var4.urgent = false;
+          var4.store = store;
+          this.enqueue(var4, true);
           stackIn_1_0 = var4;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
           stackIn_4_0 = var4_ref;
-          stackIn_4_1 = new StringBuilder().append("ti.D(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_4_1 = new StringBuilder().append("ti.D(").append(groupId).append(',').append(guard).append(',');
+          if (store == null) {
             stackIn_5_2 = "null";
           } else {
             stackIn_5_2 = "{...}";
@@ -219,22 +219,22 @@ final class ti implements Runnable {
         }
     }
 
-    ti(PlatformTaskDispatcher param0) {
-        jr var2 = null;
-        this.field_d = new ro();
-        this.field_c = false;
-        this.field_e = 0;
+    CacheIoWorker(PlatformTaskDispatcher taskDispatcher) {
+        PlatformTask var2 = null;
+        this.requests = new SecondaryNodeQueue();
+        this.stopping = false;
+        this.queuedCount = 0;
         try {
-          var2 = param0.a(true, (Runnable) (this), 5);
-          while (0 == var2.field_c) {
+          var2 = taskDispatcher.a(true, (Runnable) (this), 5);
+          while (0 == var2.status) {
             tg.a(10L, (byte) 119);
           }
-          if (var2.field_c == 2) {
+          if (var2.status == 2) {
             throw new RuntimeException();
           }
-          this.field_a = (Thread) (var2.field_d);
+          this.thread = (Thread) (var2.result);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ti.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ti.<init>(" + (taskDispatcher != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -243,26 +243,26 @@ final class ti implements Runnable {
           InterruptedException interruptedException = null;
           Object var2 = null;
           int var5 = 0;
-          ql var7 = null;
+          CacheIoRequest var7 = null;
           int decompiledRegionSelector0 = 0;
           Throwable decompiledCaughtException = null;
           Exception var2_ref = null;
           String var6 = null;
           var5 = Sumoblitz.field_L ? 1 : 0;
-          while (!this.field_c) {
-            var2 = this.field_d;
+          while (!this.stopping) {
+            var2 = this.requests;
             synchronized (var2) {
-              var7 = (ql) (this.field_d.b((byte) 72));
+              var7 = (CacheIoRequest) (this.requests.removeFirst((byte) 72));
               if (var7 == null) {
                 try {
-                  this.field_d.wait();
+                  this.requests.wait();
                 } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   interruptedException = (InterruptedException) (Object) decompiledCaughtException;
                 }
                 decompiledRegionSelector0 = 0;
               } else {
-                this.field_e = this.field_e - 1;
+                this.queuedCount = this.queuedCount - 1;
                 decompiledRegionSelector0 = 1;
               }
             }
@@ -270,15 +270,15 @@ final class ti implements Runnable {
               continue;
             }
             try {
-              if (var7.field_y == 2) {
-                var7.field_w.a(var7.field_x, (int)var7.secondaryKey, var7.field_x.length, 0);
-                var7.field_u = false;
+              if (var7.operation == 2) {
+                var7.store.write(var7.bytes, (int)var7.secondaryKey, var7.bytes.length, 0);
+                var7.pending = false;
               } else {
-                if (var7.field_y == 3) {
-                  var7.field_x = var7.field_w.a(85, (int)var7.secondaryKey);
-                  var7.field_u = false;
+                if (var7.operation == 3) {
+                  var7.bytes = var7.store.read(85, (int)var7.secondaryKey);
+                  var7.pending = false;
                 } else {
-                  var7.field_u = false;
+                  var7.pending = false;
                 }
               }
             } catch (java.lang.Exception decompiledCaughtParameter1) {
@@ -286,7 +286,7 @@ final class ti implements Runnable {
               var2_ref = (Exception) (Object) decompiledCaughtException;
               var6 = (String) null;
               IntrusiveNode.reportClientError((String) null, (Throwable) ((Object) var2_ref), 0);
-              var7.field_u = false;
+              var7.pending = false;
             }
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {

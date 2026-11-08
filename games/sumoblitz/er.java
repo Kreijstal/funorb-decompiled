@@ -28,10 +28,10 @@ final class er {
         MouseWheelInput.field_b = ResizingDialog.a(var2, IntrusiveNode.field_d, (byte) -11);
         CacheReferenceNode.field_y = ResizingDialog.a(var2, rc.field_i, (byte) -11);
         il.field_b = ResizingDialog.a(var2, hc.field_b, (byte) -11);
-        ti.field_b = ResizingDialog.a(var2, oi.field_d, (byte) -11);
+        CacheIoWorker.field_b = ResizingDialog.a(var2, oi.field_d, (byte) -11);
         vm.field_a = DroneDebris.createToolkitSprites(TextLayoutLine.field_c, var2, 28513);
         HudMessage.field_s = DroneDebris.createToolkitSprites(jj.field_c, var2, 28513);
-        SpriteState.field_B = DroneDebris.createToolkitSprites(rw.field_r, var2, 28513);
+        SpriteState.field_B = DroneDebris.createToolkitSprites(ResourceRequest.field_r, var2, 28513);
         SecondaryNodeDequeIterator.field_a = DroneDebris.createToolkitSprites(ok.field_d, var2, 28513);
         IntrusiveDeque.field_c = DroneDebris.createToolkitSprites(hh.field_a, var2, 28513);
         ok.field_j = DroneDebris.createToolkitSprites(sk.field_c, var2, 28513);
@@ -58,7 +58,7 @@ final class er {
           ResizingDialog.a(var2, df.field_d, (byte) -11);
           DroneDebris.createToolkitSprites(DroneChargeParticle.field_v, var2, 28513);
           uc.field_a = ResizingDialog.a(var2, FullscreenMembershipDialog.field_T, (byte) -11);
-          am.field_j = DroneDebris.createToolkitSprites(dq.field_v, var2, 28513);
+          CachedArchiveProvider.field_j = DroneDebris.createToolkitSprites(dq.field_v, var2, 28513);
           ua.field_g = DroneDebris.createToolkitSprites(kf.field_w, var2, 28513);
           ResizingDialog.a(var2, bj.field_g, (byte) -11);
           ResizingDialog.a(var2, ks.field_t, (byte) -11);
@@ -83,7 +83,7 @@ final class er {
           kk.field_f = ResizingDialog.a(var2, rs.field_e, (byte) -11);
           go.field_p = DroneDebris.createToolkitSprites(FullscreenMembershipDialog.field_S, var2, 28513);
           DroneDebris.createToolkitSprites(ByteArrayStorage.field_a, var2, 28513);
-          rb.field_a = DroneDebris.createToolkitSprites(ScrollViewport.field_C, var2, 28513);
+          ArchiveProvider.field_a = DroneDebris.createToolkitSprites(ScrollViewport.field_C, var2, 28513);
           uj.field_b = DroneDebris.createToolkitSprites(pc.field_b, var2, 28513);
           uc.field_e = DroneDebris.createToolkitSprites(ScrollPane.field_F, var2, 28513);
           o.field_b = DroneDebris.createToolkitSprites(om.field_m, var2, 28513);
@@ -107,7 +107,7 @@ final class er {
         ResizingDialog.a(var2, df.field_d, (byte) -11);
         DroneDebris.createToolkitSprites(DroneChargeParticle.field_v, var2, 28513);
         uc.field_a = ResizingDialog.a(var2, FullscreenMembershipDialog.field_T, (byte) -11);
-        am.field_j = DroneDebris.createToolkitSprites(dq.field_v, var2, 28513);
+        CachedArchiveProvider.field_j = DroneDebris.createToolkitSprites(dq.field_v, var2, 28513);
         ua.field_g = DroneDebris.createToolkitSprites(kf.field_w, var2, 28513);
         ResizingDialog.a(var2, bj.field_g, (byte) -11);
         ResizingDialog.a(var2, ks.field_t, (byte) -11);
@@ -132,7 +132,7 @@ final class er {
         kk.field_f = ResizingDialog.a(var2, rs.field_e, (byte) -11);
         go.field_p = DroneDebris.createToolkitSprites(FullscreenMembershipDialog.field_S, var2, 28513);
         DroneDebris.createToolkitSprites(ByteArrayStorage.field_a, var2, 28513);
-        rb.field_a = DroneDebris.createToolkitSprites(ScrollViewport.field_C, var2, 28513);
+        ArchiveProvider.field_a = DroneDebris.createToolkitSprites(ScrollViewport.field_C, var2, 28513);
         uj.field_b = DroneDebris.createToolkitSprites(pc.field_b, var2, 28513);
         uc.field_e = DroneDebris.createToolkitSprites(ScrollPane.field_F, var2, 28513);
         o.field_b = DroneDebris.createToolkitSprites(om.field_m, var2, 28513);
@@ -186,7 +186,7 @@ final class er {
                   !(var3.xQ8 + var3.radiusQ8 <= 157184) ||
                   !(116224 >= var3.radiusQ8 + var3.yQ8)) && !var3.isBlastActive(91)) {
                   if (1 != var3.variant) {
-                    ro.a(var3, (byte) 113);
+                    SecondaryNodeQueue.a(var3, (byte) 113);
                   } else {
                     if (-var3.radiusQ8 + var3.xQ8 < 6656) {
                       wr.a(-1, var3);
@@ -200,7 +200,7 @@ final class er {
                           if (var3.radiusQ8 + var3.yQ8 > 116224) {
                             wr.a(-1, var3);
                           } else {
-                            ro.a(var3, (byte) 113);
+                            SecondaryNodeQueue.a(var3, (byte) 113);
                           }
                         }
                       }

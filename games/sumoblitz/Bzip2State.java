@@ -1,41 +1,41 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ku {
-    int field_r;
-    int[] field_F;
+final class Bzip2State {
+    int outputPosition;
+    int[] minCodeLengths;
     int field_o;
-    int[][] field_y;
-    int field_k;
-    int field_i;
+    int[][] huffmanBases;
+    int totalOutput;
+    int bufferedBits;
     byte field_d;
-    byte[] field_p;
-    int field_H;
+    byte[] output;
+    int totalInput;
     static vf field_I;
     byte[] field_b;
     int[] field_t;
     int field_e;
-    int field_G;
-    int field_a;
-    boolean[] field_E;
-    boolean[] field_n;
-    byte[] field_l;
+    int bitBuffer;
+    int usedByteCount;
+    boolean[] inUse;
+    boolean[] inUse16;
+    byte[] selectors;
     int field_B;
     int field_x;
     int[] field_q;
-    byte[][] field_m;
+    byte[][] codeLengths;
     int field_s;
     static wc[] field_J;
     int field_g;
-    byte[] field_h;
-    int field_C;
-    int field_w;
+    byte[] input;
+    int outputRemaining;
+    int inputPosition;
     byte[] field_z;
-    byte[] field_u;
+    byte[] symbolsToBytes;
     int[] field_A;
-    int[][] field_f;
+    int[][] huffmanLimits;
     static int field_j;
-    int[][] field_v;
+    int[][] huffmanSymbols;
     int field_c;
 
     public static void releaseStatics(boolean param0) {
@@ -71,22 +71,22 @@ final class ku {
         }
     }
 
-    ku() {
-        this.field_r = 0;
-        this.field_y = new int[6][258];
+    Bzip2State() {
+        this.outputPosition = 0;
+        this.huffmanBases = new int[6][258];
         this.field_t = new int[16];
-        this.field_F = new int[6];
-        this.field_l = new byte[18002];
+        this.minCodeLengths = new int[6];
+        this.selectors = new byte[18002];
         this.field_b = new byte[18002];
-        this.field_E = new boolean[256];
-        this.field_m = new byte[6][258];
+        this.inUse = new boolean[256];
+        this.codeLengths = new byte[6][258];
         this.field_q = new int[257];
-        this.field_u = new byte[256];
+        this.symbolsToBytes = new byte[256];
         this.field_z = new byte[4096];
-        this.field_w = 0;
-        this.field_f = new int[6][258];
-        this.field_v = new int[6][258];
-        this.field_n = new boolean[16];
+        this.inputPosition = 0;
+        this.huffmanLimits = new int[6][258];
+        this.huffmanSymbols = new int[6][258];
+        this.inUse16 = new boolean[16];
         this.field_A = new int[256];
     }
 

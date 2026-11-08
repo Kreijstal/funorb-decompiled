@@ -13,7 +13,7 @@ final class k {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5 = param0.a((byte) 126, param1, param2);
+          var5 = param0.fetchFile((byte) 126, param1, param2);
           var4 = var5;
           if (param3 != -23046) {
             startGameText = (String) null;
@@ -45,8 +45,8 @@ final class k {
           }
           var3 = InwardSparkParticle.field_v;
           var3.g(param1, 8);
-          var3.b((byte) 111, param0.field_k);
-          var3.b(-10, param0.field_o);
+          var3.writeByte((byte) 111, param0.field_k);
+          var3.writeShort(-10, param0.field_o);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "k.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

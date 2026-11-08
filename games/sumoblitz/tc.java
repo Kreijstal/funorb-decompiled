@@ -36,7 +36,7 @@ final class tc extends na {
           }
           var5 = var4;
           if (ArrayWidgetContainer.a(var5, 30996)) {
-            stackIn_5_0 = sg.passwordsMustBeBetweenText;
+            stackIn_5_0 = ArchiveIndex.passwordsMustBeBetweenText;
             return stackIn_5_0;
           }
           if (me.a(false, var5)) {
@@ -64,7 +64,7 @@ final class tc extends na {
             return stackIn_22_0;
           }
           if (!wv.a(false, var5, var3)) {
-            return sg.passwordsMustBeBetweenText;
+            return ArchiveIndex.passwordsMustBeBetweenText;
           }
           stackIn_26_0 = vr.thisPasswordContainsYourText;
           return stackIn_26_0;

@@ -57,7 +57,7 @@ class IntrusiveNode {
           Throwable decompiledCaughtException = null;
           String var3 = null;
           Exception var3_ref = null;
-          jr var4 = null;
+          PlatformTask var4 = null;
           DataInputStream var5 = null;
           int var6 = 0;
           String var7 = null;
@@ -103,11 +103,11 @@ class IntrusiveNode {
               stackIn_15_6 = "" + km.field_k;
             }
             var4 = ((PlatformTaskDispatcher) (Object) stackIn_14_0).a((byte) stackIn_14_1, new java.net.URL(stackIn_14_4, ((StringBuilder) (Object) stackIn_14_5).append(stackIn_15_6).append("&v1=").append(PlatformTaskDispatcher.field_u).append("&v2=").append(PlatformTaskDispatcher.field_q).append("&e=").append(var10).toString()));
-            while (var4.field_c == 0) {
+            while (var4.status == 0) {
               tg.a(1L, (byte) 73);
             }
-            if (var4.field_c == 1) {
-              var5 = (DataInputStream) (var4.field_d);
+            if (var4.status == 1) {
+              var5 = (DataInputStream) (var4.result);
               var5.read();
               var5.close();
             }

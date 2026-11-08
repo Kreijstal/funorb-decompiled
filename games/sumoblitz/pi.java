@@ -55,26 +55,26 @@ final class pi {
           if (!param1) {
             param0.position = 0;
           }
-          var3_int = param0.e(-31302);
+          var3_int = param0.readUnsignedByte(-31302);
           var4 = 0;
           if (1 < var3_int) {
-            var4 = param0.e(-31302);
+            var4 = param0.readUnsignedByte(-31302);
           }
           var5 = new IntrusiveDeque();
           if (param2 <= 50) {
             pi.releaseStatics(116);
           }
-          var6 = param0.e(-31302);
+          var6 = param0.readUnsignedByte(-31302);
           var7 = 1;
           for (var8 = 0; var6 > var8; var8++) {
-            var9 = param0.e(-31302);
-            var10 = param0.c(true);
-            var11 = param0.c(true);
-            param0.c(true);
-            param0.c(true);
+            var9 = param0.readUnsignedByte(-31302);
+            var10 = param0.readInt(true);
+            var11 = param0.readInt(true);
+            param0.readInt(true);
+            param0.readInt(true);
             var12 = 0;
             if (var3_int > 2) {
-              var12 = param0.c(true);
+              var12 = param0.readInt(true);
             }
             var13 = FullscreenCanvas.a(var12, var10 >> 8, var11 >> 8, var9, (byte) -113);
             if (var9 == 2) {

@@ -74,7 +74,7 @@ final class ul {
         cd[] var4 = null;
         cd var6 = null;
         int var7 = 0;
-        jr var8 = null;
+        PlatformTask var8 = null;
         int[] var9 = null;
         int[] var10 = null;
         var7 = Sumoblitz.field_L ? 1 : 0;
@@ -87,14 +87,14 @@ final class ul {
             return stackIn_5_0;
           }
           var8 = param1.b((byte) 21);
-          while (var8.field_c == 0) {
+          while (var8.status == 0) {
             tg.a(10L, (byte) 80);
           }
-          if (var8.field_c == 2) {
+          if (var8.status == 2) {
             stackIn_12_0 = new cd[]{};
             return stackIn_12_0;
           }
-          var10 = (int[]) (var8.field_d);
+          var10 = (int[]) (var8.result);
           var9 = var10;
           var3 = var9;
           var4 = new cd[var10.length >> 2];
@@ -175,7 +175,7 @@ final class ul {
         if (param0 != 4025) {
           ul.a(102);
         }
-        ro.field_d = param1;
+        SecondaryNodeQueue.field_d = param1;
         ra.field_e = 1;
         qw.field_b = param2;
     }

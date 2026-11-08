@@ -159,10 +159,10 @@ final class VorbisSample extends IntrusiveNode {
         try {
           VorbisSample var4_ref = null;
           if (!VorbisSample.ensureSetup(param0)) {
-            param0.a(param1, -1158, param2);
+            param0.tryLoadNamedFile(param1, -1158, param2);
             return null;
           }
-          byte[] var3 = param0.a(param2, param1, -1);
+          byte[] var3 = param0.fetchNamedFile(param2, param1, -1);
           if (var3 == null) {
             return null;
           }
@@ -203,10 +203,10 @@ final class VorbisSample extends IntrusiveNode {
         try {
           VorbisSample var4_ref = null;
           if (!VorbisSample.ensureSetup(archive)) {
-            archive.a(groupId, false, fileId);
+            archive.tryLoadFile(groupId, false, fileId);
             return null;
           }
-          byte[] var3 = archive.a((byte) 112, fileId, groupId);
+          byte[] var3 = archive.fetchFile((byte) 112, fileId, groupId);
           if (var3 == null) {
             return null;
           }
@@ -254,15 +254,15 @@ final class VorbisSample extends IntrusiveNode {
         int var6_int = 0;
         byte[] var6 = null;
         PacketBuffer var2 = new PacketBuffer(bytes);
-        this.sampleRate = var2.c(true);
-        this.sampleCount = var2.c(true);
-        this.loopStart = var2.c(true);
-        this.loopEnd = var2.c(true);
+        this.sampleRate = var2.readInt(true);
+        this.sampleCount = var2.readInt(true);
+        this.loopStart = var2.readInt(true);
+        this.loopEnd = var2.readInt(true);
         if (this.loopEnd < 0) {
           this.loopEnd = ~this.loopEnd;
           this.pingPong = true;
         }
-        int var3 = var2.c(true);
+        int var3 = var2.readInt(true);
         if (var3 < 0) {
           throw new IOException();
         }
@@ -270,11 +270,11 @@ final class VorbisSample extends IntrusiveNode {
         for (var4 = 0; var4 < var3; var4++) {
           var5 = 0;
           do {
-            var6_int = var2.e(-31302);
+            var6_int = var2.readUnsignedByte(-31302);
             var5 = var5 + var6_int;
           } while (var6_int >= 255);
           var6 = new byte[var5];
-          var2.a(var6, var5, 0, (byte) -87);
+          var2.readBytes(var6, var5, 0, (byte) -87);
           this.packets[var4] = var6;
         }
     }
@@ -745,7 +745,7 @@ final class VorbisSample extends IntrusiveNode {
     private final static boolean ensureSetup(ResourceArchive archive) {
         byte[] var1 = null;
         if (!setupReady) {
-          var1 = archive.a((byte) 95, 0, 0);
+          var1 = archive.fetchFile((byte) 95, 0, 0);
           if (var1 == null) {
             return false;
           }

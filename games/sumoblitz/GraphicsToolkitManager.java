@@ -125,7 +125,7 @@ final class GraphicsToolkitManager {
               var7_int = var6.field_c;
               if (var7_int != 0) {
                 if (var7_int == 5) {
-                  if (!sn.field_d.b((byte) 127)) {
+                  if (!sn.field_d.loadIndex((byte) 127)) {
                     return;
                   }
                   var7_int = ig.a("hw3d", true);
@@ -161,7 +161,7 @@ final class GraphicsToolkitManager {
                 } else {
                   if (1 != var7_int) {
                     if (var7_int == 3) {
-                      if (!sn.field_d.b((byte) 127)) {
+                      if (!sn.field_d.loadIndex((byte) 127)) {
                         return;
                       }
                       var7_int = ig.a("jaclib", true);
@@ -198,7 +198,7 @@ final class GraphicsToolkitManager {
                       if (var7_int != 2) {
                         throw new IllegalStateException("UT" + var6.field_c);
                       }
-                      if (!sn.field_d.b((byte) 127)) {
+                      if (!sn.field_d.loadIndex((byte) 127)) {
                         return;
                       }
                       var7_int = ig.a("jaclib", true);
@@ -223,7 +223,7 @@ final class GraphicsToolkitManager {
                       }
                     }
                   } else {
-                    if (!sn.field_d.b((byte) 127)) {
+                    if (!sn.field_d.loadIndex((byte) 127)) {
                       return;
                     }
                     var7_int = ig.a("jaclib", true);

@@ -1393,7 +1393,7 @@ final class ni extends ShaderEffect {
                 }
                 var2 = rc.a("monthnames,3", (byte) -23);
                 if (null != var2) {
-                  lf.monthNames[3] = MusicVoice.a(jg.a(param0, 7), var2);
+                  lf.monthNames[3] = MusicVoice.a(GzipDecompressor.bitwiseXor(param0, 7), var2);
                 }
                 var2 = rc.a("monthnames,4", (byte) -23);
                 if (null != var2) {
@@ -1420,7 +1420,7 @@ final class ni extends ShaderEffect {
                 }
                 var2 = rc.a("monthnames,9", (byte) -23);
                 if (var2 != null) {
-                  lf.monthNames[9] = MusicVoice.a(jg.a(param0, 7), var2);
+                  lf.monthNames[9] = MusicVoice.a(GzipDecompressor.bitwiseXor(param0, 7), var2);
                 }
                 var2 = rc.a("monthnames,10", (byte) -23);
                 if (null != var2) {
@@ -1660,7 +1660,7 @@ final class ni extends ShaderEffect {
                 }
                 var2 = rc.a("create_alert_passlength", (byte) -23);
                 if (null != var2) {
-                  sg.passwordsMustBeBetweenText = MusicVoice.a(0, var2);
+                  ArchiveIndex.passwordsMustBeBetweenText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("create_alert_passcontainsname", (byte) -23);
                 if (var2 != null) {
@@ -1872,7 +1872,7 @@ final class ni extends ShaderEffect {
                 }
                 var2 = rc.a("loading_instruments", (byte) -23);
                 if (var2 != null) {
-                  sg.loadingInstrumentsText = MusicVoice.a(0, var2);
+                  ArchiveIndex.loadingInstrumentsText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("loading_levels", (byte) -23);
                 if (null != var2) {
@@ -2038,7 +2038,7 @@ final class ni extends ShaderEffect {
                 }
                 var2 = rc.a("resumegame", (byte) -23);
                 if (null != var2) {
-                  ll.resumeGameText = MusicVoice.a(0, var2);
+                  WhirlpoolTables.resumeGameText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("resumetutorial", (byte) -23);
                 if (var2 != null) {
@@ -2534,7 +2534,7 @@ final class ni extends ShaderEffect {
                 }
                 var2 = rc.a("quickchat_shortcut_help,3", (byte) -23);
                 if (null != var2) {
-                  IntrusiveNode.field_j[3] = MusicVoice.a(jg.a(param0, 7), var2);
+                  IntrusiveNode.field_j[3] = MusicVoice.a(GzipDecompressor.bitwiseXor(param0, 7), var2);
                 }
                 var2 = rc.a("quickchat_shortcut_help,4", (byte) -23);
                 if (null != var2) {
@@ -2566,7 +2566,7 @@ final class ni extends ShaderEffect {
                 }
                 var2 = rc.a("quickchat_shortcut_keys,5", (byte) -23);
                 if (null != var2) {
-                  dl.field_h[5] = MusicVoice.a(jg.a(param0, 7), var2);
+                  dl.field_h[5] = MusicVoice.a(GzipDecompressor.bitwiseXor(param0, 7), var2);
                 }
                 var2 = rc.a("keychar_the_character_under_questionmark", (byte) -23);
                 if (var2 != null) {
@@ -2614,7 +2614,7 @@ final class ni extends ShaderEffect {
                 }
                 var2 = rc.a("members_expansion_benefits,1", (byte) -23);
                 if (var2 != null) {
-                  mo.membershipBenefitLines[1] = MusicVoice.a(jg.a(param0, 7), var2);
+                  mo.membershipBenefitLines[1] = MusicVoice.a(GzipDecompressor.bitwiseXor(param0, 7), var2);
                 }
                 var2 = rc.a("members_expansion_benefits,2", (byte) -23);
                 if (null != var2) {
@@ -2826,7 +2826,7 @@ final class ni extends ShaderEffect {
                 }
                 var2 = rc.a("rating_mode_long_name,0", (byte) -23);
                 if (null != var2) {
-                  NodeHashTableIterator.leaderboardSortStatusLabels[0] = MusicVoice.a(jg.a(param0, 7), var2);
+                  NodeHashTableIterator.leaderboardSortStatusLabels[0] = MusicVoice.a(GzipDecompressor.bitwiseXor(param0, 7), var2);
                 }
                 var2 = rc.a("rating_mode_long_name,1", (byte) -23);
                 if (var2 != null) {
@@ -2870,7 +2870,7 @@ final class ni extends ShaderEffect {
                 }
                 var2 = rc.a("serviceunavailable", (byte) -23);
                 if (null != var2) {
-                  wl.serviceUnavailableText = MusicVoice.a(0, var2);
+                  SectorCacheStore.serviceUnavailableText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("createtouse", (byte) -23);
                 if (null != var2) {
@@ -2902,7 +2902,7 @@ final class ni extends ShaderEffect {
                 }
                 var2 = rc.a("mustlogin2,3", (byte) -23);
                 if (var2 != null) {
-                  pl.field_r[3] = MusicVoice.a(jg.a(param0, 7), var2);
+                  pl.field_r[3] = MusicVoice.a(GzipDecompressor.bitwiseXor(param0, 7), var2);
                 }
                 var2 = rc.a("mustlogin2,4", (byte) -23);
                 if (var2 != null) {
@@ -2914,7 +2914,7 @@ final class ni extends ShaderEffect {
                 }
                 var2 = rc.a("mustlogin2,6", (byte) -23);
                 if (null != var2) {
-                  pl.field_r[6] = MusicVoice.a(jg.a(param0, 7), var2);
+                  pl.field_r[6] = MusicVoice.a(GzipDecompressor.bitwiseXor(param0, 7), var2);
                 }
                 var2 = rc.a("mustlogin2,7", (byte) -23);
                 if (var2 != null) {
@@ -2946,7 +2946,7 @@ final class ni extends ShaderEffect {
                 }
                 var2 = rc.a("mustlogin3,7", (byte) -23);
                 if (var2 != null) {
-                  LabeledWidget.field_G[7] = MusicVoice.a(jg.a(param0, 7), var2);
+                  LabeledWidget.field_G[7] = MusicVoice.a(GzipDecompressor.bitwiseXor(param0, 7), var2);
                 }
                 var2 = rc.a("discard", (byte) -23);
                 if (null != var2) {
@@ -2954,7 +2954,7 @@ final class ni extends ShaderEffect {
                 }
                 var2 = rc.a("mustlogin4,1", (byte) -23);
                 if (null != var2) {
-                  kr.field_f[1] = MusicVoice.a(jg.a(param0, 7), var2);
+                  kr.field_f[1] = MusicVoice.a(GzipDecompressor.bitwiseXor(param0, 7), var2);
                 }
                 var2 = rc.a("mustlogin4,2", (byte) -23);
                 if (null != var2) {
@@ -3004,7 +3004,7 @@ final class ni extends ShaderEffect {
                 }
                 var2 = rc.a("mustlogin_alternate,5", (byte) -23);
                 if (null != var2) {
-                  ds.field_b[5] = MusicVoice.a(jg.a(param0, 7), var2);
+                  ds.field_b[5] = MusicVoice.a(GzipDecompressor.bitwiseXor(param0, 7), var2);
                 }
                 var2 = rc.a("mustlogin_alternate,6", (byte) -23);
                 if (null != var2) {
@@ -3060,7 +3060,7 @@ final class ni extends ShaderEffect {
                 }
                 var2 = rc.a("subscription_cost_monthly,11", (byte) -23);
                 if (null != var2) {
-                  fa.field_c[11] = MusicVoice.a(jg.a(param0, 7), var2);
+                  fa.field_c[11] = MusicVoice.a(GzipDecompressor.bitwiseXor(param0, 7), var2);
                 }
                 var2 = rc.a("subscription_cost_monthly,12", (byte) -23);
                 if (var2 != null) {
@@ -3148,7 +3148,7 @@ final class ni extends ShaderEffect {
         RuntimeException decompiledCaughtException = null;
         try {
           var5 = new Sprite[9];
-          dupTemp$2 = wg.a(param1, param4, jg.a(param2, 3));
+          dupTemp$2 = wg.a(param1, param4, GzipDecompressor.bitwiseXor(param2, 3));
           var5[6] = dupTemp$2;
           var5[3] = dupTemp$2;
           var5[2] = dupTemp$2;

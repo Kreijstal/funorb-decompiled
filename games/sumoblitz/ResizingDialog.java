@@ -204,7 +204,7 @@ abstract class ResizingDialog extends ModalDialog {
         java.awt.Frame var7 = null;
         int var9 = 0;
         cd[] var10 = null;
-        jr var11 = null;
+        PlatformTask var11 = null;
         var9 = Sumoblitz.field_L ? 1 : 0;
         try {
           if (!param1.a((byte) 125)) {
@@ -233,10 +233,10 @@ abstract class ResizingDialog extends ModalDialog {
             }
           }
           var11 = param1.a(false, param2, param3, param5, param4);
-          while (0 == var11.field_c) {
+          while (0 == var11.status) {
             tg.a(10L, (byte) 118);
           }
-          var7 = (java.awt.Frame) (var11.field_d);
+          var7 = (java.awt.Frame) (var11.result);
           if (var7 == null) {
             stackIn_35_0 = null;
             return (java.awt.Frame) (stackIn_35_0);
@@ -244,7 +244,7 @@ abstract class ResizingDialog extends ModalDialog {
           if (!param0) {
             field_H = (ToolkitSprite[]) null;
           }
-          if (var11.field_c != 2) {
+          if (var11.status != 2) {
             return var7;
           }
           OpenGlTransparentWaterEffect.a(var7, param1, false);

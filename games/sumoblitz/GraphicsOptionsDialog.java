@@ -272,7 +272,7 @@ final class GraphicsOptionsDialog extends ResizingDialog implements WidgetAction
                   if (var6_int == 0 &&
                     source == this.field_T) {
                     if (!this.field_R) {
-                      this.dialogLayer.pushDialog((byte) 98, new DisplayModeErrorDialog(this.dialogLayer, ku.field_I));
+                      this.dialogLayer.pushDialog((byte) 98, new DisplayModeErrorDialog(this.dialogLayer, Bzip2State.field_I));
                       return;
                     }
                     if (ct.field_x > 0) {

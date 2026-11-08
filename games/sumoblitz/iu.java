@@ -91,8 +91,8 @@ final class iu implements WidgetRenderer {
           }
           var3 = InwardSparkParticle.field_v;
           var3.g(param2, param0 ^ -9);
-          var3.b((byte) 85, param1.field_n);
-          var3.b((byte) 23, param1.field_l);
+          var3.writeByte((byte) 85, param1.field_n);
+          var3.writeByte((byte) 23, param1.field_l);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "iu.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

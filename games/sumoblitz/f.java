@@ -79,9 +79,9 @@ final class f extends us {
     final static boolean d(byte param0) {
         if (param0 != 63) {
           f.e(false);
-          return wt.field_i.b((byte) 126);
+          return wt.field_i.loadMasterIndex((byte) 126);
         }
-        return wt.field_i.b((byte) 126);
+        return wt.field_i.loadMasterIndex((byte) 126);
     }
 
     f(LegacyOpenGlGraphicsToolkit param0, int param1, int param2, int param3, int param4, boolean param5, byte[] param6, int param7) {
@@ -127,9 +127,9 @@ final class f extends us {
     final static String e(boolean param0) {
         if (param0) {
           field_s = (java.awt.Font) null;
-          return rb.field_c;
+          return ArchiveProvider.field_c;
         }
-        return rb.field_c;
+        return ArchiveProvider.field_c;
     }
 
     f(LegacyOpenGlGraphicsToolkit param0, int param1, int param2, int param3, int param4, int[] param5) {

@@ -348,55 +348,55 @@ final class CachedTextLayout extends TextLayout {
                 var9 = var9 | 1;
               }
               sd.field_e.position = 0;
-              sd.field_e.e(48, fd.field_d.nextInt());
-              sd.field_e.e(48, fd.field_d.nextInt());
-              sd.field_e.b(var15, (byte) -108);
-              sd.field_e.b(var8, (byte) -121);
+              sd.field_e.writeInt(48, fd.field_d.nextInt());
+              sd.field_e.writeInt(48, fd.field_d.nextInt());
+              sd.field_e.writeCircumfixedString(var15, (byte) -108);
+              sd.field_e.writeCircumfixedString(var8, (byte) -121);
               var17 = (CharSequence) ((Object) param6);
-              sd.field_e.b(kh.a(var17, 1457), (byte) -107);
-              sd.field_e.b(-69, param3);
-              sd.field_e.b((byte) 50, param1);
-              sd.field_e.b((byte) 50, var9);
-              InwardSparkParticle.field_v.b((byte) 114, 18);
+              sd.field_e.writeCircumfixedString(kh.a(var17, 1457), (byte) -107);
+              sd.field_e.writeShort(-69, param3);
+              sd.field_e.writeByte((byte) 50, param1);
+              sd.field_e.writeByte((byte) 50, var9);
+              InwardSparkParticle.field_v.writeByte((byte) 114, 18);
               InwardSparkParticle.field_v.position = InwardSparkParticle.field_v.position + 2;
               var10 = InwardSparkParticle.field_v.position;
               var11_ref_String = dv.a(-94, ra.c(2));
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
-              InwardSparkParticle.field_v.a(var11_ref_String, (byte) -115);
+              InwardSparkParticle.field_v.writeCp1252String(var11_ref_String, (byte) -115);
               ks.a(gh.field_a, oh.field_c, false, InwardSparkParticle.field_v, sd.field_e);
-              InwardSparkParticle.field_v.a(0, InwardSparkParticle.field_v.position - var10);
+              InwardSparkParticle.field_v.patchShortLength(0, InwardSparkParticle.field_v.position - var10);
             } else {
               sd.field_e.position = 0;
-              sd.field_e.e(48, fd.field_d.nextInt());
-              sd.field_e.e(48, fd.field_d.nextInt());
+              sd.field_e.writeInt(48, fd.field_d.nextInt());
+              sd.field_e.writeInt(48, fd.field_d.nextInt());
               stackIn_13_0 = sd.field_e;
               if (!param0.a(110)) {
                 stackIn_14_1 = "";
               } else {
                 stackIn_14_1 = var15;
               }
-              ((PacketBuffer) (Object) stackIn_13_0).b(stackIn_14_1, (byte) 120);
+              ((PacketBuffer) (Object) stackIn_13_0).writeCircumfixedString(stackIn_14_1, (byte) 120);
               stackIn_16_0 = sd.field_e;
               if (!param2.a(91)) {
                 stackIn_17_1 = "";
               } else {
                 stackIn_17_1 = var8;
               }
-              ((PacketBuffer) (Object) stackIn_16_0).b(stackIn_17_1, (byte) 101);
-              InwardSparkParticle.field_v.b((byte) 108, 16);
+              ((PacketBuffer) (Object) stackIn_16_0).writeCircumfixedString(stackIn_17_1, (byte) 101);
+              InwardSparkParticle.field_v.writeByte((byte) 108, 16);
               InwardSparkParticle.field_v.position = InwardSparkParticle.field_v.position + 1;
               var9 = InwardSparkParticle.field_v.position;
               ks.a(gh.field_a, oh.field_c, false, InwardSparkParticle.field_v, sd.field_e);
-              InwardSparkParticle.field_v.c(InwardSparkParticle.field_v.position - var9, -13745);
+              InwardSparkParticle.field_v.patchByteLength(InwardSparkParticle.field_v.position - var9, -13745);
             }
             MessageDialog.a(0, -1);
             kw.field_c = vf.field_c;
           }
           if (kw.field_c == vf.field_c &&
             ju.b(-1, 1)) {
-            var9Lifetime1 = ig.field_a.e(-31302);
+            var9Lifetime1 = ig.field_a.readUnsignedByte(-31302);
             ig.field_a.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
@@ -425,12 +425,12 @@ final class CachedTextLayout extends TextLayout {
           if (oi.field_a == kw.field_c) {
             var9Lifetime2 = 2;
             if (ju.b(-1, var9Lifetime2)) {
-              var10Lifetime1 = ig.field_a.a(255);
+              var10Lifetime1 = ig.field_a.readUnsignedShort(255);
               ig.field_a.position = 0;
               if (ju.b(-1, var10Lifetime1)) {
                 var11 = mn.field_g.length;
                 for (var12 = 0; var11 > var12; var12++) {
-                  mn.field_g[var12] = ig.field_a.g(-105);
+                  mn.field_g[var12] = ig.field_a.readCircumfixedString(-105);
                 }
                 kk.a((byte) -110);
                 LimitedRandomAccessFile.field_g = false;
@@ -442,9 +442,9 @@ final class CachedTextLayout extends TextLayout {
           if (fm.field_b == kw.field_c &&
             lt.a((byte) 119)) {
             if (iw.field_a != 255) {
-              MouseWheelInput.field_c = ig.field_a.d(-1);
+              MouseWheelInput.field_c = ig.field_a.readCp1252String(-1);
             } else {
-              var9_ref_String = ig.field_a.g((byte) 80);
+              var9_ref_String = ig.field_a.readNullableString((byte) 80);
               if (var9_ref_String != null) {
                 jb.a((byte) 97, var9_ref_String, ra.c(2));
               }

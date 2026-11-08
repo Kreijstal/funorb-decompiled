@@ -29,7 +29,7 @@ final class ke {
           if (param0 < 87) {
             field_a = (GameApplet) null;
           }
-          stackIn_3_0 = Drone.field_J.a(param1, "", -1);
+          stackIn_3_0 = Drone.field_J.fetchNamedFile(param1, "", -1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -49,7 +49,7 @@ final class ke {
         if (param0) {
           field_d = -5;
         }
-        if (null == ku.field_J) {
+        if (null == Bzip2State.field_J) {
           return;
         }
         if (-1 == oh.levelIndex) {
@@ -58,7 +58,7 @@ final class ke {
         if (an.waveIndex == -1) {
           return;
         }
-        if (an.waveIndex < ku.field_J.length) {
+        if (an.waveIndex < Bzip2State.field_J.length) {
           SocketConnector.field_c = 0;
           ig.b(120);
           uc.field_f = iw.elapsedTicks;

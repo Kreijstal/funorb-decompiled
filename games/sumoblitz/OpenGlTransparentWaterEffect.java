@@ -39,7 +39,7 @@ final class OpenGlTransparentWaterEffect extends ShaderEffect {
     }
 
     final static void a(java.awt.Frame param0, PlatformTaskDispatcher param1, boolean param2) {
-        jr var3 = null;
+        PlatformTask var3 = null;
         int var4 = 0;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -52,10 +52,10 @@ final class OpenGlTransparentWaterEffect extends ShaderEffect {
         try {
           while (true) {
             var3 = param1.a(param0, 19);
-            while (var3.field_c == 0) {
+            while (var3.status == 0) {
               tg.a(10L, (byte) 81);
             }
-            if (var3.field_c != 1) {
+            if (var3.status != 1) {
               tg.a(100L, (byte) 127);
               continue;
             }
@@ -198,7 +198,7 @@ final class OpenGlTransparentWaterEffect extends ShaderEffect {
                       if (var23 != 0) {
                         if (var4.variant == 2 &&
                           var4.variantCooldownTicks == 0) {
-                          ro.a(var2, (byte) 113);
+                          SecondaryNodeQueue.a(var2, (byte) 113);
                           var4.onVariantContact((byte) -55);
                         }
                         if (var4.variant == 3 &&
@@ -210,7 +210,7 @@ final class OpenGlTransparentWaterEffect extends ShaderEffect {
                       if (var22 != 0) {
                         if (var2.variant == 2 &&
                           var2.variantCooldownTicks == 0) {
-                          ro.a(var4, (byte) 113);
+                          SecondaryNodeQueue.a(var4, (byte) 113);
                           var2.onVariantContact((byte) -55);
                         }
                         if (3 == var2.variant &&
@@ -324,7 +324,7 @@ final class OpenGlTransparentWaterEffect extends ShaderEffect {
           if (param1 != null &&
             this.field_f.c(83) &&
             this.field_j.field_Ac) {
-            this.field_g = ve.a((byte) 103, this.field_j, param1.a("transparent_water", "gl", -1), 34336);
+            this.field_g = ve.a((byte) 103, this.field_j, param1.fetchNamedFile("transparent_water", "gl", -1), 34336);
             return;
           }
           this.field_g = null;

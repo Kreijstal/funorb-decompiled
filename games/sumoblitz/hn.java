@@ -21,7 +21,7 @@ final class hn extends kb implements fk {
 
     final static void a(byte param0, String param1) {
         try {
-          rb.field_c = param1;
+          ArchiveProvider.field_c = param1;
           rd.a(12, -78);
           if (param0 < 62) {
             field_k = (String) null;

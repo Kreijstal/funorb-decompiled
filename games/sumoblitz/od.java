@@ -107,7 +107,7 @@ final class od implements nr {
         rf.field_a.closeAllDialogs((byte) 117);
         if (param0 == 5178) {
           if (he.field_n == null) {
-            he.field_n = new ProgressDialog(rf.field_a, t.field_s);
+            he.field_n = new ProgressDialog(rf.field_a, SocketJs5Client.field_s);
           }
           rf.field_a.pushDialog((byte) 115, he.field_n);
           return;

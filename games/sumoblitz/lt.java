@@ -17,14 +17,14 @@ final class lt extends IntrusiveNode {
             if (!ju.b(-1, 1)) {
               return false;
             }
-            gu.field_d = ig.field_a.e(-31302);
+            gu.field_d = ig.field_a.readUnsignedByte(-31302);
             ig.field_a.position = 0;
           }
           if (gu.field_d == -2) {
             if (!ju.b(-1, 2)) {
               return false;
             }
-            gu.field_d = ig.field_a.a(255);
+            gu.field_d = ig.field_a.readUnsignedShort(255);
             ig.field_a.position = 0;
           }
           return ju.b(-1, gu.field_d);
@@ -33,14 +33,14 @@ final class lt extends IntrusiveNode {
           if (!ju.b(-1, 1)) {
             return false;
           }
-          gu.field_d = ig.field_a.e(-31302);
+          gu.field_d = ig.field_a.readUnsignedByte(-31302);
           ig.field_a.position = 0;
         }
         if (gu.field_d == -2) {
           if (!ju.b(-1, 2)) {
             return false;
           }
-          gu.field_d = ig.field_a.a(255);
+          gu.field_d = ig.field_a.readUnsignedShort(255);
           ig.field_a.position = 0;
         }
         return ju.b(-1, gu.field_d);

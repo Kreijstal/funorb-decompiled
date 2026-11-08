@@ -776,7 +776,7 @@ final class GameplaySession {
           if (param0 > -68) {
             field_k = -6;
           }
-          if (ku.field_j < 2) {
+          if (Bzip2State.field_j < 2) {
             return;
           }
           regionExit1: {
@@ -1094,15 +1094,15 @@ final class GameplaySession {
             fb.field_a = fb.field_a - 5;
             kn.field_b = kn.field_b - 3;
             iw.elapsedTicks = iw.elapsedTicks + 1;
-            if (gj.a((byte) -84, 10) >= 5) {
-              if (5 <= gj.a((byte) -84, 10)) {
+            if (BufferedCacheFile.a((byte) -84, 10) >= 5) {
+              if (5 <= BufferedCacheFile.a((byte) -84, 10)) {
                 kn.field_b = kn.field_b + 1;
                 decompiledFrameRemainder2 = (var6 != 0);
               }
               if (decompiledFrameRemainder2) {
                 ts.field_a = ts.field_a + 1;
                 if (var6 != 0) {
-                  if (gj.a((byte) -84, 10) >= 5) {
+                  if (BufferedCacheFile.a((byte) -84, 10) >= 5) {
                     fb.field_a = fb.field_a - 1;
                     GraphicsToolkit.field_f = GraphicsToolkit.field_f - 1;
                   } else {
@@ -1111,7 +1111,7 @@ final class GameplaySession {
                 }
               }
             } else {
-              if (gj.a((byte) -84, 10) >= 5) {
+              if (BufferedCacheFile.a((byte) -84, 10) >= 5) {
                 fb.field_a = fb.field_a - 1;
                 if (var6 != 0) {
                   GraphicsToolkit.field_f = GraphicsToolkit.field_f - 1;
@@ -1160,7 +1160,7 @@ final class GameplaySession {
               if (fa.field_b <= 0 &&
                 !var3_ref.isBlastActive(126)) {
                 if (wn.a(targetMarkerYQ8, var3_ref.radiusQ8, -105, var3_ref.xQ8, ua.targetMarkerXQ8, var3_ref.yQ8)) {
-                  ro.a(var3_ref, (byte) 113);
+                  SecondaryNodeQueue.a(var3_ref, (byte) 113);
                   if (ul.field_f == 0) {
                     rc.sceneEffects.addLast((IntrusiveNode) (new ExpandingRingEffect(ua.targetMarkerXQ8, targetMarkerYQ8, -1)), (byte) 39);
                   }
@@ -1180,7 +1180,7 @@ final class GameplaySession {
               gn.a(32, true);
             }
             if (fa.field_b == 30) {
-              gd.a(10, targetMarkerYQ8, rc.sceneEffects, 61, ua.targetMarkerXQ8, 16711680);
+              Js5Client.a(10, targetMarkerYQ8, rc.sceneEffects, 61, ua.targetMarkerXQ8, 16711680);
             }
           }
           var3_ref2 = (HudMessage) (ig.hudMessages.first(111));
@@ -1267,9 +1267,9 @@ final class GameplaySession {
             }
             if (decompiledFrameRemainder0) {
               if (SpriteMask.drones[0] != null &&
-                ku.field_J.length > an.waveIndex &&
+                Bzip2State.field_J.length > an.waveIndex &&
                 an.waveIndex != -1) {
-                var4_intLifetime1 = ku.field_J[an.waveIndex].a(0) + 3 >> 2;
+                var4_intLifetime1 = Bzip2State.field_J[an.waveIndex].a(0) + 3 >> 2;
                 var5Lifetime1 = 0;
                 while (true) {
                   if (db.droneSlotLimit > var5Lifetime1) {
@@ -1295,7 +1295,7 @@ final class GameplaySession {
                   if (!DroneDebris.field_C) {
                     break;
                   }
-                  if (~an.waveIndex != ~(-1 + ku.field_J.length)) {
+                  if (~an.waveIndex != ~(-1 + Bzip2State.field_J.length)) {
                     LimitedRandomAccessFile.field_b = iw.elapsedTicks;
                     rn.a(ff.warningText, 320, 225, 16711680, 28807);
                   }
@@ -1305,8 +1305,8 @@ final class GameplaySession {
                   break;
                 }
               }
-              if (null != ku.field_J &&
-                ku.field_J.length <= an.waveIndex &&
+              if (null != Bzip2State.field_J &&
+                Bzip2State.field_J.length <= an.waveIndex &&
                 jl.a(-62) &&
                 jc.b(true) == 0) {
                 o.a(0);
@@ -1344,11 +1344,11 @@ final class GameplaySession {
                 if (SoundCache.isLevelIndexTwentyFour(-102)) {
                   oh.levelIndex = oh.levelIndex + 1;
                 }
-                if (ku.field_J != null &&
-                  ku.field_J.length <= an.waveIndex &&
+                if (Bzip2State.field_J != null &&
+                  Bzip2State.field_J.length <= an.waveIndex &&
                   !jl.a(-36) &&
                   jc.b(true) == 0) {
-                  if (ku.a((byte) -94) > ps.field_e[20]) {
+                  if (Bzip2State.a((byte) -94) > ps.field_e[20]) {
                     th.b(24753, 235, 20);
                   }
                   if (DropDownWidget.field_C == 0) {
@@ -1698,7 +1698,7 @@ final class GameplaySession {
             MusicPatch.simulationPaused) && !MusicPatch.simulationPaused) {
             var4 = (PlayerDrone) (SpriteMask.drones[0]);
             if (!MessageDialog.arcadeMode &&
-              ku.field_J != null) {
+              Bzip2State.field_J != null) {
               HudMessage.field_s[0].a(55, 0);
               HudMessage.field_s[1].a(HudMessage.field_s[0].c() + 55, 0);
               var5 = 55 + HudMessage.field_s[1].c() * 2;

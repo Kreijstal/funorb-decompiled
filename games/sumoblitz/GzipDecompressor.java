@@ -3,32 +3,32 @@
  */
 import java.util.*;
 
-final class jg {
+final class GzipDecompressor {
     static int[] field_e;
     static boolean field_a;
-    private java.util.zip.Inflater field_c;
+    private java.util.zip.Inflater inflater;
     static int[] field_b;
     static volatile int field_d;
 
-    public jg() {
+    public GzipDecompressor() {
         this(-1, 1000000, 1000000);
     }
 
     final static void b(int param0, int param1) {
         pl var2 = InwardSparkParticle.field_v;
         var2.g(param1, 8);
-        var2.b((byte) 106, 1);
+        var2.writeByte((byte) 106, 1);
         if (param0 == 11044) {
-          var2.b((byte) 79, 0);
+          var2.writeByte((byte) 79, 0);
           return;
         }
     }
 
-    static int a(int param0, int param1) {
-        return param0 ^ param1;
+    static int bitwiseXor(int left, int right) {
+        return left ^ right;
     }
 
-    final void a(byte[] param0, byte param1, PacketBuffer param2) {
+    final void decompress(byte[] destination, byte guard, PacketBuffer source) {
         try {
           Exception exception = null;
           RuntimeException runtimeException = null;
@@ -39,24 +39,24 @@ final class jg {
           String stackIn_19_2 = null;
           Throwable decompiledCaughtException = null;
           try {
-            if (param2.payload[param2.position] == 31 &&
-              param2.payload[1 + param2.position] == -117) {
-              if (null == this.field_c) {
-                this.field_c = new java.util.zip.Inflater(true);
+            if (source.payload[source.position] == 31 &&
+              source.payload[1 + source.position] == -117) {
+              if (null == this.inflater) {
+                this.inflater = new java.util.zip.Inflater(true);
               }
-              if (param1 != -104) {
-                this.field_c = (java.util.zip.Inflater) null;
+              if (guard != -104) {
+                this.inflater = (java.util.zip.Inflater) null;
               }
               try {
-                this.field_c.setInput(param2.payload, 10 + param2.position, param2.payload.length + (-param2.position - 10 - 8));
-                this.field_c.inflate(param0);
+                this.inflater.setInput(source.payload, 10 + source.position, source.payload.length + (-source.position - 10 - 8));
+                this.inflater.inflate(destination);
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 exception = (Exception) (Object) decompiledCaughtException;
-                this.field_c.reset();
+                this.inflater.reset();
                 throw new RuntimeException("");
               }
-              this.field_c.reset();
+              this.inflater.reset();
               return;
             }
             throw new RuntimeException("");
@@ -65,13 +65,13 @@ final class jg {
             runtimeException = (RuntimeException) (Object) decompiledCaughtException;
             stackIn_15_0 = runtimeException;
             stackIn_15_1 = new StringBuilder().append("jg.C(");
-            if (param0 == null) {
+            if (destination == null) {
               stackIn_16_2 = "null";
             } else {
               stackIn_16_2 = "{...}";
             }
-            stackIn_18_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',');
-            if (param2 == null) {
+            stackIn_18_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(guard).append(',');
+            if (source == null) {
               stackIn_19_2 = "null";
             } else {
               stackIn_19_2 = "{...}";
@@ -85,7 +85,7 @@ final class jg {
         }
     }
 
-    private jg(int param0, int param1, int param2) {
+    private GzipDecompressor(int param0, int param1, int param2) {
     }
 
     public static void releaseStatics(byte param0) {

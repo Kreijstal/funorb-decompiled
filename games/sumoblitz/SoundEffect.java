@@ -52,7 +52,7 @@ final class SoundEffect {
     }
 
     final static SoundEffect load(ResourceArchive archive, int groupId, int fileId) {
-        byte[] var3 = archive.a((byte) 87, fileId, groupId);
+        byte[] var3 = archive.fetchFile((byte) 87, fileId, groupId);
         if (var3 == null) {
           return null;
         }
@@ -64,14 +64,14 @@ final class SoundEffect {
         int var3;
         this.instruments = new SoundInstrument[10];
         for (var2 = 0; var2 < 10; var2++) {
-          var3 = param0.e(-31302);
+          var3 = param0.readUnsignedByte(-31302);
           if (var3 != 0) {
             param0.position = param0.position - 1;
             this.instruments[var2] = new SoundInstrument();
             this.instruments[var2].decode(param0);
           }
         }
-        this.loopStartMillis = param0.a(255);
-        this.loopEndMillis = param0.a(255);
+        this.loopStartMillis = param0.readUnsignedShort(255);
+        this.loopEndMillis = param0.readUnsignedShort(255);
     }
 }

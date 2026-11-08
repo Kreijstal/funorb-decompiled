@@ -50,7 +50,7 @@ final class ad extends za {
         DirectByteArrayStorage.a(400, 38, 10, 2, new int[]{8, 9, 10, 21, 20, 5}, 2, 468);
         LegacyOpenGlEffectManager.field_g[2] = new MenuScreen(2);
         if (0 >= ct.field_x) {
-          if (!(2 > ku.field_j)) {
+          if (!(2 > Bzip2State.field_j)) {
             DirectByteArrayStorage.a(115, 38, 148, 2, new int[]{0, 23, 24, 3, 25, 2, 14, 11}, 0, 492);
             LegacyOpenGlEffectManager.field_g[0] = new MenuScreen(0);
           }
@@ -66,7 +66,7 @@ final class ad extends za {
           LegacyOpenGlEffectManager.field_g[1] = new MenuScreen(1);
           DirectByteArrayStorage.a(150, 38, 170, 2, new int[]{12, 13, 27, 4, 5}, 8, 470);
           LegacyOpenGlEffectManager.field_g[8] = new MenuScreen(8);
-          if (!(2 > ku.field_j)) {
+          if (!(2 > Bzip2State.field_j)) {
             DirectByteArrayStorage.a(115, 38, 148, 2, new int[]{0, 23, 24, 3, 25, 2, 14, 11}, 0, 492);
             LegacyOpenGlEffectManager.field_g[0] = new MenuScreen(0);
           }
@@ -77,7 +77,7 @@ final class ad extends za {
           ut.field_j = param0;
           return;
         }
-        if (!(2 > ku.field_j)) {
+        if (!(2 > Bzip2State.field_j)) {
           DirectByteArrayStorage.a(115, 38, 148, 2, new int[]{0, 23, 24, 3, 25, 2, 14, 11}, 0, 492);
           LegacyOpenGlEffectManager.field_g[0] = new MenuScreen(0);
         }
@@ -161,7 +161,7 @@ final class ad extends za {
               pt.field_a = false;
               var4 = 1;
             }
-            hh.a(true, bp.g(14296), bf.field_a, var4 != 0, dn.b(102));
+            hh.a(true, bp.g(14296), IntIndexHashTable.field_a, var4 != 0, dn.b(102));
             return;
           }
           if (!lf.b(-251)) {

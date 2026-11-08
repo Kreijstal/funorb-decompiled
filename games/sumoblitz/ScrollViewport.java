@@ -133,7 +133,7 @@ final class ScrollViewport extends SingleChildWidget {
     }
 
     final static void e(byte param0) {
-        qv.field_o = ig.field_a.d(-1);
+        qv.field_o = ig.field_a.readCp1252String(-1);
         int var1 = 74 % ((60 - param0) / 52);
         CharSequence var2 = (CharSequence) ((Object) qv.field_o);
         tc.field_f = uk.a(-1, var2);

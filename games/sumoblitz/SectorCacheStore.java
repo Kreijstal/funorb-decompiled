@@ -3,14 +3,14 @@
  */
 import java.io.*;
 
-final class wl {
+final class SectorCacheStore {
     static String serviceUnavailableText;
-    private gj field_c;
-    private int field_a;
-    private int field_d;
-    private gj field_e;
+    private BufferedCacheFile dataFile;
+    private int maxGroupLength;
+    private int archiveId;
+    private BufferedCacheFile indexFile;
 
-    private final boolean a(byte[] param0, boolean param1, int param2, int param3, int param4) {
+    private final boolean writeSectors(byte[] bytes, boolean overwrite, int length, int groupId, int guard) {
         try {
           RuntimeException stackIn_72_0 = null;
           StringBuilder stackIn_72_1 = null;
@@ -32,48 +32,48 @@ final class wl {
           int var16 = 0;
           var16 = Sumoblitz.field_L ? 1 : 0;
           try {
-            var6 = this.field_c;
+            var6 = this.dataFile;
             synchronized (var6) {
-              if (param4 != 255) {
+              if (guard != 255) {
                 return false;
               }
               try {
-                if (param1) {
-                  if (this.field_e.a((byte) -60) < (long)(param3 * 6 + 6)) {
+                if (overwrite) {
+                  if (this.indexFile.length((byte) -60) < (long)(groupId * 6 + 6)) {
                     return false;
                   }
-                  this.field_e.a(-7564, (long)(6 * param3));
-                  this.field_e.a(6, 0, HudMessage.field_t, -111);
+                  this.indexFile.seek(-7564, (long)(6 * groupId));
+                  this.indexFile.readFully(6, 0, HudMessage.field_t, -111);
                   var7_int = (HudMessage.field_t[3] << 16 & 16711680) + (HudMessage.field_t[4] << 8 & 65280) + (255 & HudMessage.field_t[5]);
                   if (0 >= var7_int ||
-                    !((this.field_c.a((byte) -60) / 520L) >= (long)var7_int)) {
+                    !((this.dataFile.length((byte) -60) / 520L) >= (long)var7_int)) {
                     return false;
                   }
                 } else {
-                  var7_int = (int)((this.field_c.a((byte) -60) + 519L) / 520L);
+                  var7_int = (int)((this.dataFile.length((byte) -60) + 519L) / 520L);
                   if (var7_int == 0) {
                     var7_int = 1;
                   }
                 }
-                HudMessage.field_t[1] = (byte)(param2 >> 8);
+                HudMessage.field_t[1] = (byte)(length >> 8);
                 HudMessage.field_t[4] = (byte)(var7_int >> 8);
                 HudMessage.field_t[5] = (byte)var7_int;
                 HudMessage.field_t[3] = (byte)(var7_int >> 16);
-                HudMessage.field_t[2] = (byte)param2;
-                HudMessage.field_t[0] = (byte)(param2 >> 16);
-                this.field_e.a(-7564, (long)(6 * param3));
-                this.field_e.a(HudMessage.field_t, 6, (byte) -50, 0);
+                HudMessage.field_t[2] = (byte)length;
+                HudMessage.field_t[0] = (byte)(length >> 16);
+                this.indexFile.seek(-7564, (long)(6 * groupId));
+                this.indexFile.write(HudMessage.field_t, 6, (byte) -50, 0);
                 var8 = 0;
                 var9 = 0;
                 scanLoop1: while (true) {
-                  if (param2 > var8) {
+                  if (length > var8) {
                     boolean decompiledFrameRemainder0 = true;
                     var10 = 0;
-                    if (param1) {
-                      this.field_c.a(-7564, (long)(var7_int * 520));
-                      if (param3 <= 65535) {
+                    if (overwrite) {
+                      this.dataFile.seek(-7564, (long)(var7_int * 520));
+                      if (groupId <= 65535) {
                         try {
-                          this.field_c.a(8, 0, HudMessage.field_t, -64);
+                          this.dataFile.readFully(8, 0, HudMessage.field_t, -64);
                           decompiledRegionSelector0 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter0) {
                           decompiledCaughtException = decompiledCaughtParameter0;
@@ -89,7 +89,7 @@ final class wl {
                         var12 = ((255 & HudMessage.field_t[2]) << 8) + (HudMessage.field_t[3] & 255);
                       } else {
                         try {
-                          this.field_c.a(10, 0, HudMessage.field_t, -108);
+                          this.dataFile.readFully(10, 0, HudMessage.field_t, -108);
                           decompiledRegionSelector1 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter1) {
                           decompiledCaughtException = decompiledCaughtParameter1;
@@ -104,11 +104,11 @@ final class wl {
                         var11 = (255 & HudMessage.field_t[3]) + (HudMessage.field_t[1] << 16 & 16711680) + ((HudMessage.field_t[0] & 255) << 24) + (65280 & HudMessage.field_t[2] << 8);
                         var12 = (255 & HudMessage.field_t[5]) + ((255 & HudMessage.field_t[4]) << 8);
                       }
-                      if ((param3 == var11 &&
+                      if ((groupId == var11 &&
                         var9 == var12 &&
-                        var13 == this.field_d) &&
+                        var13 == this.archiveId) &&
                         (decompiledFrameRemainder0 = (!(0 <= var10) ||
-                        !((long)var10 <= this.field_c.a((byte) -60) / 520L)))) {
+                        !((long)var10 <= this.dataFile.length((byte) -60) / 520L)))) {
                         return false;
                       }
                       if (decompiledFrameRemainder0) {
@@ -116,8 +116,8 @@ final class wl {
                       }
                     }
                     if (0 == var10) {
-                      param1 = false;
-                      var10 = (int)((519L + this.field_c.a((byte) -60)) / 520L);
+                      overwrite = false;
+                      var10 = (int)((519L + this.dataFile.length((byte) -60)) / 520L);
                       if (var10 == 0) {
                         var10++;
                       }
@@ -125,44 +125,44 @@ final class wl {
                         var10++;
                       }
                     }
-                    if (-var8 + param2 <= 512) {
+                    if (-var8 + length <= 512) {
                       var10 = 0;
                     }
-                    if (param3 <= 65535) {
+                    if (groupId <= 65535) {
                       HudMessage.field_t[4] = (byte)(var10 >> 16);
                       HudMessage.field_t[5] = (byte)(var10 >> 8);
                       HudMessage.field_t[2] = (byte)(var9 >> 8);
-                      HudMessage.field_t[0] = (byte)(param3 >> 8);
-                      HudMessage.field_t[7] = (byte)this.field_d;
+                      HudMessage.field_t[0] = (byte)(groupId >> 8);
+                      HudMessage.field_t[7] = (byte)this.archiveId;
                       HudMessage.field_t[6] = (byte)var10;
                       HudMessage.field_t[3] = (byte)var9;
-                      HudMessage.field_t[1] = (byte)param3;
-                      this.field_c.a(param4 - 7819, (long)(var7_int * 520));
-                      this.field_c.a(HudMessage.field_t, 8, (byte) 65, 0);
-                      var11 = -var8 + param2;
+                      HudMessage.field_t[1] = (byte)groupId;
+                      this.dataFile.seek(guard - 7819, (long)(var7_int * 520));
+                      this.dataFile.write(HudMessage.field_t, 8, (byte) 65, 0);
+                      var11 = -var8 + length;
                       if (var11 > 512) {
                         var11 = 512;
                       }
-                      this.field_c.a(param0, var11, (byte) -121, var8);
+                      this.dataFile.write(bytes, var11, (byte) -121, var8);
                       var8 = var8 + var11;
                     } else {
                       HudMessage.field_t[8] = (byte)var10;
                       HudMessage.field_t[7] = (byte)(var10 >> 8);
                       HudMessage.field_t[6] = (byte)(var10 >> 16);
-                      HudMessage.field_t[3] = (byte)param3;
-                      HudMessage.field_t[9] = (byte)this.field_d;
+                      HudMessage.field_t[3] = (byte)groupId;
+                      HudMessage.field_t[9] = (byte)this.archiveId;
                       HudMessage.field_t[5] = (byte)var9;
-                      HudMessage.field_t[0] = (byte)(param3 >> 24);
+                      HudMessage.field_t[0] = (byte)(groupId >> 24);
                       HudMessage.field_t[4] = (byte)(var9 >> 8);
-                      HudMessage.field_t[1] = (byte)(param3 >> 16);
-                      HudMessage.field_t[2] = (byte)(param3 >> 8);
-                      this.field_c.a(-7564, (long)(var7_int * 520));
-                      this.field_c.a(HudMessage.field_t, 10, (byte) 126, 0);
-                      var11 = param2 - var8;
+                      HudMessage.field_t[1] = (byte)(groupId >> 16);
+                      HudMessage.field_t[2] = (byte)(groupId >> 8);
+                      this.dataFile.seek(-7564, (long)(var7_int * 520));
+                      this.dataFile.write(HudMessage.field_t, 10, (byte) 126, 0);
+                      var11 = length - var8;
                       if (510 < var11) {
                         var11 = 510;
                       }
-                      this.field_c.a(param0, var11, (byte) 126, var8);
+                      this.dataFile.write(bytes, var11, (byte) 126, var8);
                       var8 = var8 + var11;
                     }
                     var9++;
@@ -183,12 +183,12 @@ final class wl {
             var6_ref = (RuntimeException) (Object) decompiledCaughtException;
             stackIn_72_0 = var6_ref;
             stackIn_72_1 = new StringBuilder().append("wl.A(");
-            if (param0 == null) {
+            if (bytes == null) {
               stackIn_73_2 = "null";
             } else {
               stackIn_73_2 = "{...}";
             }
-            throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+            throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(overwrite).append(',').append(length).append(',').append(groupId).append(',').append(guard).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -198,7 +198,7 @@ final class wl {
     }
 
     public final String toString() {
-        return "" + this.field_d;
+        return "" + this.archiveId;
     }
 
     public static void releaseStatics(byte param0) {
@@ -208,7 +208,7 @@ final class wl {
         }
     }
 
-    final byte[] a(int param0, int param1) {
+    final byte[] read(int guard, int groupId) {
         try {
           int var16 = 0;
           int incrementValue$2 = 0;
@@ -237,27 +237,27 @@ final class wl {
           Throwable decompiledCaughtException = null;
           int var9Lifetime1;
           var18 = Sumoblitz.field_L ? 1 : 0;
-          var3_ref = this.field_c;
+          var3_ref = this.dataFile;
           synchronized (var3_ref) {
             try {
-              if (this.field_e.a((byte) -60) < (long)(6 + param1 * 6)) {
+              if (this.indexFile.length((byte) -60) < (long)(6 + groupId * 6)) {
                 stackIn_3_0 = null;
                 return (byte[]) (stackIn_3_0);
               }
-              this.field_e.a(-7564, (long)(6 * param1));
-              this.field_e.a(6, 0, HudMessage.field_t, -104);
+              this.indexFile.seek(-7564, (long)(6 * groupId));
+              this.indexFile.readFully(6, 0, HudMessage.field_t, -104);
               var4_int = (65280 & HudMessage.field_t[1] << 8) + (((255 & HudMessage.field_t[0]) << 16) + (255 & HudMessage.field_t[2]));
               var5 = ((255 & HudMessage.field_t[3]) << 16) + (65280 & HudMessage.field_t[4] << 8) + (255 & HudMessage.field_t[5]);
               if (var4_int < 0) {
                 return null;
               }
-              if (this.field_a < var4_int) {
+              if (this.maxGroupLength < var4_int) {
                 return null;
               }
               if (var5 <= 0) {
                 return null;
               }
-              if (this.field_c.a((byte) -60) / 520L < (long)var5) {
+              if (this.dataFile.length((byte) -60) / 520L < (long)var5) {
                 return null;
               }
               var6 = new byte[var4_int];
@@ -268,14 +268,14 @@ final class wl {
                   stackIn_21_0 = null;
                   return (byte[]) (stackIn_21_0);
                 }
-                this.field_c.a(-7564, (long)(var5 * 520));
+                this.dataFile.seek(-7564, (long)(var5 * 520));
                 var9 = var4_int - var7;
-                if (param1 <= 65535) {
+                if (groupId <= 65535) {
                   var14 = 8;
                   if (var9 > 512) {
                     var9 = 512;
                   }
-                  this.field_c.a(var9 + var14, 0, HudMessage.field_t, -55);
+                  this.dataFile.readFully(var9 + var14, 0, HudMessage.field_t, -55);
                   var11 = (255 & HudMessage.field_t[3]) + ((255 & HudMessage.field_t[2]) << 8);
                   var13 = HudMessage.field_t[7] & 255;
                   var12 = (255 & HudMessage.field_t[6]) + (((255 & HudMessage.field_t[5]) << 8) + (16711680 & HudMessage.field_t[4] << 16));
@@ -285,26 +285,26 @@ final class wl {
                     var9 = 510;
                   }
                   var14 = 10;
-                  this.field_c.a(var9 + var14, 0, HudMessage.field_t, -93);
+                  this.dataFile.readFully(var9 + var14, 0, HudMessage.field_t, -93);
                   var10 = (HudMessage.field_t[3] & 255) + (HudMessage.field_t[2] << 8 & 65280) + ((HudMessage.field_t[1] & 255) << 16) + ((HudMessage.field_t[0] & 255) << 24);
                   var13 = HudMessage.field_t[9] & 255;
                   var12 = (HudMessage.field_t[8] & 255) + (HudMessage.field_t[7] << 8 & 65280) + ((HudMessage.field_t[6] & 255) << 16);
                   var11 = ((255 & HudMessage.field_t[4]) << 8) + (HudMessage.field_t[5] & 255);
                 }
-                if (var10 != param1) {
+                if (var10 != groupId) {
                   return null;
                 }
                 if (var11 != var8) {
                   return null;
                 }
-                if (var13 != this.field_d) {
+                if (var13 != this.archiveId) {
                   stackIn_37_0 = null;
                   return (byte[]) (stackIn_37_0);
                 }
                 if (var12 < 0) {
                   return null;
                 }
-                if ((long)var12 > this.field_c.a((byte) -60) / 520L) {
+                if ((long)var12 > this.dataFile.length((byte) -60) / 520L) {
                   return null;
                 }
                 var15 = var14 + var9;
@@ -316,7 +316,7 @@ final class wl {
                 var5 = var12;
                 var8++;
               }
-              var9Lifetime1 = 9 % ((-33 - param0) / 59);
+              var9Lifetime1 = 9 % ((-33 - guard) / 59);
               stackIn_50_0 = var6;
               return stackIn_50_0;
             } catch (java.io.IOException decompiledCaughtParameter0) {
@@ -333,7 +333,7 @@ final class wl {
         }
     }
 
-    final boolean a(byte[] param0, int param1, int param2, int param3) {
+    final boolean write(byte[] bytes, int groupId, int length, int guard) {
         Object var5 = null;
         RuntimeException var5_ref = null;
         int var6 = 0;
@@ -344,13 +344,13 @@ final class wl {
         String stackIn_13_2 = null;
         Throwable decompiledCaughtException = null;
         try {
-          var5 = this.field_c;
+          var5 = this.dataFile;
           synchronized (var5) {
-            if (param3 <= param2 &&
-              this.field_a >= param2) {
-              var6 = this.a(param0, true, param2, param1, 255) ? 1 : 0;
+            if (guard <= length &&
+              this.maxGroupLength >= length) {
+              var6 = this.writeSectors(bytes, true, length, groupId, 255) ? 1 : 0;
               if (var6 == 0) {
-                var6 = this.a(param0, false, param2, param1, 255) ? 1 : 0;
+                var6 = this.writeSectors(bytes, false, length, groupId, 255) ? 1 : 0;
               }
               stackIn_7_0 = var6;
             } else {
@@ -363,26 +363,26 @@ final class wl {
           var5_ref = (RuntimeException) (Object) decompiledCaughtException;
           stackIn_12_0 = var5_ref;
           stackIn_12_1 = new StringBuilder().append("wl.D(");
-          if (param0 == null) {
+          if (bytes == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(groupId).append(',').append(length).append(',').append(guard).append(')').toString());
         }
     }
 
-    wl(int param0, gj param1, gj param2, int param3) {
-        this.field_a = 65000;
-        this.field_c = null;
-        this.field_e = null;
+    SectorCacheStore(int archive, BufferedCacheFile data, BufferedCacheFile index, int maxLength) {
+        this.maxGroupLength = 65000;
+        this.dataFile = null;
+        this.indexFile = null;
         try {
-          this.field_e = param2;
-          this.field_c = param1;
-          this.field_d = param0;
-          this.field_a = param3;
+          this.indexFile = index;
+          this.dataFile = data;
+          this.archiveId = archive;
+          this.maxGroupLength = maxLength;
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "wl.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "wl.<init>(" + archive + ',' + (data != null ? "{...}" : "null") + ',' + (index != null ? "{...}" : "null") + ',' + maxLength + ')');
         }
     }
 

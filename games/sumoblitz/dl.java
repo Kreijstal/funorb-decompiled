@@ -224,7 +224,7 @@ final class dl extends eu {
             boolean decompiledFrameRemainder0 = true;
             if (param0.field_g == DroneDebris.field_D[var3].field_g) {
               var4 = DroneDebris.field_D[var3].c(-120);
-              if (ro.field_c < vp.field_c[var4]) {
+              if (SecondaryNodeQueue.field_c < vp.field_c[var4]) {
                 vp.field_c[var4] = vp.field_c[var4] - 1;
                 decompiledFrameRemainder0 = false;
               }

@@ -58,7 +58,7 @@ abstract class ab {
           }
           if (param6 <= 92) {
             var11 = (Object) null;
-            ab.a(false, (Object) null, -86);
+            ab.extractByteArray(false, (Object) null, -86);
           }
           var8Lifetime1 = 0;
           while (true) {
@@ -93,7 +93,7 @@ abstract class ab {
         }
     }
 
-    final static byte[] a(boolean param0, Object param1, int param2) {
+    final static byte[] extractByteArray(boolean copy, Object storage, int guard) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         ByteArrayStorage var4 = null;
@@ -106,39 +106,39 @@ abstract class ab {
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 == null) {
+          if (storage == null) {
             stackIn_2_0 = null;
             return (byte[]) (stackIn_2_0);
           }
-          if (param1 instanceof byte[]) {
-            var3 = (byte[]) (param1);
-            if (!param0) {
+          if (storage instanceof byte[]) {
+            var3 = (byte[]) (storage);
+            if (!copy) {
               stackIn_8_0 = var3;
               return stackIn_8_0;
             }
-            stackIn_6_0 = cp.a(var3, param2 ^ 0);
+            stackIn_6_0 = cp.a(var3, guard ^ 0);
             return stackIn_6_0;
           }
-          if (param2 != 0) {
+          if (guard != 0) {
             ab.releaseStatics(-28);
           }
-          if (!(param1 instanceof ByteArrayStorage)) {
+          if (!(storage instanceof ByteArrayStorage)) {
             throw new IllegalArgumentException();
           }
-          var4 = (ByteArrayStorage) (param1);
+          var4 = (ByteArrayStorage) (storage);
           stackIn_13_0 = var4.copyBytes(false);
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_17_0 = var3_ref;
-          stackIn_17_1 = new StringBuilder().append("ab.A(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_17_1 = new StringBuilder().append("ab.A(").append(copy).append(',');
+          if (storage == null) {
             stackIn_18_2 = "null";
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(guard).append(')').toString());
         }
     }
 

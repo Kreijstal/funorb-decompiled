@@ -17,45 +17,45 @@ final class ji {
           int var1_int = 0;
           IOException var1 = null;
           PacketBuffer var2 = null;
-          if (4 <= jk.field_b.field_d) {
-            if (jk.field_b.field_j == -1) {
+          if (4 <= jk.field_b.failureCount) {
+            if (jk.field_b.failureCode == -1) {
               return 3;
             }
-            if (jk.field_b.field_j == -2) {
+            if (jk.field_b.failureCode == -2) {
               return 4;
             }
             return 1;
           }
           try {
             if (cd.field_d == 0) {
-              BufferedSocket.field_p = CompactMeshGeometry.field_u.a((byte) 51, gd.field_a, SingleChildWidget.field_x);
+              BufferedSocket.field_p = CompactMeshGeometry.field_u.a((byte) 51, Js5Client.field_a, SingleChildWidget.field_x);
               cd.field_d = cd.field_d + 1;
             }
             if (!param0) {
               useThisAlternativeAsText = (String) null;
             }
             if (cd.field_d == 1) {
-              if (BufferedSocket.field_p.field_c == 2) {
+              if (BufferedSocket.field_p.status == 2) {
                 stackIn_16_0 = tm.a(-1, -84);
                 return stackIn_16_0;
               }
-              if (BufferedSocket.field_p.field_c == 1) {
+              if (BufferedSocket.field_p.status == 1) {
                 cd.field_d = cd.field_d + 1;
               }
             }
             if (cd.field_d == 2) {
-              InstrumentNoteMask.field_n = new BufferedSocket((java.net.Socket) (BufferedSocket.field_p.field_d), CompactMeshGeometry.field_u);
+              InstrumentNoteMask.field_n = new BufferedSocket((java.net.Socket) (BufferedSocket.field_p.result), CompactMeshGeometry.field_u);
               var2 = new PacketBuffer(13);
               sb.a(ow.field_e, 127, bt.field_d, rd.field_l, var2);
-              var2.b((byte) 127, 15);
-              var2.e(48, qq.field_P);
-              InstrumentNoteMask.field_n.a(0, -2, var2.payload, 13);
+              var2.writeByte((byte) 127, 15);
+              var2.writeInt(48, qq.field_P);
+              InstrumentNoteMask.field_n.write(0, -2, var2.payload, 13);
               cd.field_d = cd.field_d + 1;
               ShrinkingRingEffect.field_s = wq.a(-109) + 30000L;
             }
             if (cd.field_d == 3) {
-              if (InstrumentNoteMask.field_n.c(-91) > 0) {
-                var1_int = InstrumentNoteMask.field_n.a(-106);
+              if (InstrumentNoteMask.field_n.available(-91) > 0) {
+                var1_int = InstrumentNoteMask.field_n.readByte(-106);
                 if (var1_int != 0) {
                   stackIn_30_0 = tm.a(var1_int, -93);
                   return stackIn_30_0;
@@ -71,7 +71,7 @@ final class ji {
             if (cd.field_d != 4) {
               return -1;
             }
-            jk.field_b.a(vk.field_e, (byte) 114, InstrumentNoteMask.field_n);
+            jk.field_b.attachConnection(vk.field_e, (byte) 114, InstrumentNoteMask.field_n);
             BufferedSocket.field_p = null;
             InstrumentNoteMask.field_n = null;
             cd.field_d = 0;

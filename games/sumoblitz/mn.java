@@ -99,17 +99,17 @@ final class mn {
           return;
         }
         try {
-          var5.b((byte) 53, 1);
+          var5.writeByte((byte) 53, 1);
           if (null != param0.field_k) {
-            var5.b((byte) 72, param0.field_k.length);
-            var5.a(param0.field_k, (byte) -123, param0.field_k.length, 0);
+            var5.writeByte((byte) 72, param0.field_k.length);
+            var5.writeBytes(param0.field_k, (byte) -123, param0.field_k.length, 0);
           } else {
-            var5.b((byte) 52, 0);
+            var5.writeByte((byte) 52, 0);
           }
-          var5.a(var4, false);
+          var5.appendCrc32(var4, false);
           var5.position = var5.position - 4;
-          param0.field_m = var5.c(true);
-          var5.c(-var4 + var5.position, -13745);
+          param0.field_m = var5.readInt(true);
+          var5.patchByteLength(-var4 + var5.position, -13745);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "mn.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
@@ -121,25 +121,25 @@ final class mn {
         var3 = Sumoblitz.field_L ? 1 : 0;
         while (this.field_e < this.field_h) {
           var4 = this.field_l[this.field_e];
-          if (!var4.field_a.b((byte) 127)) {
+          if (!var4.field_a.loadIndex((byte) 127)) {
             this.a(0, -111, var4);
             return false;
           }
           if (var4.field_e >= 0 &&
-            !var4.field_a.b((byte) -110, var4.field_e)) {
-            this.a(var4.field_a.a(var4.field_e, (byte) 67), -75, var4);
+            !var4.field_a.tryLoadGroup((byte) -110, var4.field_e)) {
+            this.a(var4.field_a.groupLoadPercent(var4.field_e, (byte) 67), -75, var4);
             return false;
           }
           if (null != var4.field_h &&
-            !var4.field_a.a(var4.field_h, 100)) {
-            this.a(var4.field_a.a(var4.field_h, (byte) 33), -18, var4);
+            !var4.field_a.tryLoadNamedGroup(var4.field_h, 100)) {
+            this.a(var4.field_a.namedGroupLoadPercent(var4.field_h, (byte) 33), -18, var4);
             return false;
           }
           if (0 > var4.field_e &&
             var4.field_h == null &&
             null != var4.field_c &&
-            !var4.field_a.a(true)) {
-            this.a(var4.field_a.a(0), -113, var4);
+            !var4.field_a.tryLoadAllGroups(true)) {
+            this.a(var4.field_a.loadPercent(0), -113, var4);
             return false;
           }
           this.field_e = this.field_e + 1;

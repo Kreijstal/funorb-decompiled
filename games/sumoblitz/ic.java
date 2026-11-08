@@ -9,13 +9,13 @@ final class ic {
 
     final static void a(int param0) {
         if (param0 == 4) {
-          jk.field_b.field_d = 0;
-          jk.field_b.field_j = 0;
+          jk.field_b.failureCount = 0;
+          jk.field_b.failureCode = 0;
           return;
         }
         ic.a(7);
-        jk.field_b.field_d = 0;
-        jk.field_b.field_j = 0;
+        jk.field_b.failureCount = 0;
+        jk.field_b.failureCode = 0;
     }
 
     final void a(LegacyOpenGlGraphicsToolkit param0, boolean param1) {

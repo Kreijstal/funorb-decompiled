@@ -57,7 +57,7 @@ final class wr extends InteractiveWidget {
           var7 = 0;
           var8 = 0;
           var9 = 0;
-          var10 = ro.a(var4, var2_int, 26, 614, var5, false, 26, var6, 26);
+          var10 = SecondaryNodeQueue.a(var4, var2_int, 26, 614, var5, false, 26, var6, 26);
           if (var10 != -1) {
             if (-1.5707963267948966 < param1.facingRadians) {
               stackIn_8_0 = (param1.facingRadians < 1.5707963267948966) ? 1 : 0;
@@ -69,7 +69,7 @@ final class wr extends InteractiveWidget {
             var8 = var10;
           }
           if (var10 == -1) {
-            var10 = ro.a(var4, var2_int, 454, 614, var5, false, 454, var6, 26);
+            var10 = SecondaryNodeQueue.a(var4, var2_int, 454, 614, var5, false, 454, var6, 26);
             if (-1 != var10) {
               var8 = var10;
               var9 = 454;
@@ -82,7 +82,7 @@ final class wr extends InteractiveWidget {
             }
           }
           if (var10 == -1) {
-            var10 = ro.a(var4, var3, 26, 26, var5, false, 454, var6, 26);
+            var10 = SecondaryNodeQueue.a(var4, var3, 26, 26, var5, false, 454, var6, 26);
             if (var10 != -1) {
               stackIn_26_0 = (!(param1.facingRadians > 0.0)) ? 0 : 1;
               var7 = stackIn_26_0;
@@ -91,7 +91,7 @@ final class wr extends InteractiveWidget {
             }
           }
           if (param0 == var10) {
-            var10 = ro.a(var4, var3, 26, 614, var5, false, 454, var6, 614);
+            var10 = SecondaryNodeQueue.a(var4, var3, 26, 614, var5, false, 454, var6, 614);
             if (var10 != -1) {
               var9 = var10;
               var8 = 614;
@@ -105,11 +105,11 @@ final class wr extends InteractiveWidget {
           Math.asin((double)var11 / var13);
           if (!param1.isPlayerProtected(true)) {
             if (var7 == 0) {
-              ro.a(param1, (byte) 113);
+              SecondaryNodeQueue.a(param1, (byte) 113);
               return;
             }
             if (param1.armourHitsRemaining == 0) {
-              ro.a(param1, (byte) 113);
+              SecondaryNodeQueue.a(param1, (byte) 113);
               return;
             }
           }
@@ -250,30 +250,30 @@ final class wr extends InteractiveWidget {
           var17 = new Drone[100];
           var3 = var17;
           var4 = 1;
-          var5 = param1.e(-31302);
+          var5 = param1.readUnsignedByte(-31302);
           var6 = 0;
           if (var5 > 1) {
-            var6 = param1.e(-31302);
+            var6 = param1.readUnsignedByte(-31302);
           }
           var7 = param2 ? 1 : 0;
           if (var5 > 3) {
-            stackIn_11_0 = (param1.e(-31302) == 1) ? 1 : 0;
+            stackIn_11_0 = (param1.readUnsignedByte(-31302) == 1) ? 1 : 0;
             var7 = stackIn_11_0;
           }
-          var8 = param1.e(-31302);
+          var8 = param1.readUnsignedByte(-31302);
           for (var9 = 0; var9 < var8; var9++) {
-            var10 = param1.e(-31302);
-            var11 = param1.e(-31302);
+            var10 = param1.readUnsignedByte(-31302);
+            var11 = param1.readUnsignedByte(-31302);
             stackIn_16_0 = (PacketBuffer) (param1);
             stackIn_17_1 = !(param2);
-            var12 = ((PacketBuffer) (Object) stackIn_16_0).c(stackIn_17_1);
-            var13 = param1.c(true);
+            var12 = ((PacketBuffer) (Object) stackIn_16_0).readInt(stackIn_17_1);
+            var13 = param1.readInt(true);
             stackIn_19_0 = (PacketBuffer) (param1);
             stackIn_20_1 = !(param2);
-            ((PacketBuffer) (Object) stackIn_19_0).d(stackIn_20_1);
+            ((PacketBuffer) (Object) stackIn_19_0).readByte(stackIn_20_1);
             var14 = 0;
             if (var5 > 4) {
-              var14 = param1.e(-31302);
+              var14 = param1.readUnsignedByte(-31302);
             }
             if (var10 >= 0 &&
               var10 < 8 &&

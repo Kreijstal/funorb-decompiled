@@ -22,7 +22,7 @@ final class SoundCache {
           if (param1 < 16) {
             this.pcmSamples = (IntrusiveNodeHashTable) null;
           }
-          if (!this.vorbisArchive.b((byte) -125, "")) {
+          if (!this.vorbisArchive.hasGroupName((byte) -125, "")) {
             stackIn_6_0 = this.getVorbisByNames(88, param0, param2, "");
             return stackIn_6_0;
           }
@@ -131,12 +131,12 @@ final class SoundCache {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = this.soundEffectArchive.a(0, param3);
+          var5_int = this.soundEffectArchive.groupId(0, param3);
           if (var5_int < param1) {
             stackIn_2_0 = null;
             return (PcmSample) (stackIn_2_0);
           }
-          var6 = this.soundEffectArchive.a(var5_int, param0, (byte) 127);
+          var6 = this.soundEffectArchive.fileId(var5_int, param0, (byte) 127);
           if (var6 < 0) {
             return null;
           }
@@ -303,14 +303,14 @@ final class SoundCache {
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = this.vorbisArchive.a(0, param1);
+          var5_int = this.vorbisArchive.groupId(0, param1);
           if (param0 < 33) {
             SoundCache.isLevelIndexTwentyFour(30);
           }
           if (var5_int < 0) {
             return null;
           }
-          var6 = this.vorbisArchive.a(var5_int, param3, (byte) 127);
+          var6 = this.vorbisArchive.fileId(var5_int, param3, (byte) 127);
           if (var6 < 0) {
             return null;
           }
@@ -352,11 +352,11 @@ final class SoundCache {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.soundEffectArchive.b(true) == 1) {
+          if (this.soundEffectArchive.groupCapacity(true) == 1) {
             stackIn_3_0 = this.getSoundEffect(param1, 1026562700, 0, param0);
             return stackIn_3_0;
           }
-          if (this.soundEffectArchive.a((byte) -65, param0) == 1) {
+          if (this.soundEffectArchive.fileCapacity((byte) -65, param0) == 1) {
             stackIn_6_0 = this.getSoundEffect(param1, param2 + 1026551991, param0, 0);
             return stackIn_6_0;
           }
@@ -395,7 +395,7 @@ final class SoundCache {
             stackIn_2_0 = (PcmSample) null;
             return stackIn_2_0;
           }
-          if (!this.soundEffectArchive.b((byte) 116, "")) {
+          if (!this.soundEffectArchive.hasGroupName((byte) 116, "")) {
             stackIn_7_0 = this.getSoundEffectByNames("", 0, param2, param1);
             return stackIn_7_0;
           }
@@ -430,11 +430,11 @@ final class SoundCache {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.vorbisArchive.b(true) == 1) {
+          if (this.vorbisArchive.groupCapacity(true) == 1) {
             stackIn_2_0 = this.getVorbisSample(param2, 0, false, param1);
             return stackIn_2_0;
           }
-          if (1 == this.vorbisArchive.a((byte) -65, param2)) {
+          if (1 == this.vorbisArchive.fileCapacity((byte) -65, param2)) {
             stackIn_5_0 = this.getVorbisSample(0, param2, false, param1);
             return stackIn_5_0;
           }

@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class rw extends DualLinkNode {
-    boolean field_s;
-    volatile boolean field_u;
-    boolean field_t;
+abstract class ResourceRequest extends DualLinkNode {
+    boolean cleanupMarked;
+    volatile boolean pending;
+    boolean urgent;
     static SpriteData[] field_r;
 
     final static String c(byte param0) {
@@ -17,13 +17,13 @@ abstract class rw extends DualLinkNode {
         return kh.field_d;
     }
 
-    rw() {
-        this.field_u = true;
+    ResourceRequest() {
+        this.pending = true;
     }
 
-    abstract int a(int param0);
+    abstract int loadPercent(int guard);
 
-    abstract byte[] d(boolean param0);
+    abstract byte[] completedBytes(boolean guard);
 
     public static void releaseStatics(boolean param0) {
         field_r = null;

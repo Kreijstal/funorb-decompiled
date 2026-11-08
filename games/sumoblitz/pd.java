@@ -34,11 +34,11 @@ final class pd extends IntrusiveNode {
           }
           var3 = InwardSparkParticle.field_v;
           var3.g(param1, 8);
-          var3.b((byte) 103, 5);
-          var3.b((byte) 46, 0);
-          var3.b(117, param2.field_p);
-          var3.b((byte) 86, param2.field_l);
-          var3.b((byte) 121, param2.field_s);
+          var3.writeByte((byte) 103, 5);
+          var3.writeByte((byte) 46, 0);
+          var3.writeShort(117, param2.field_p);
+          var3.writeByte((byte) 86, param2.field_l);
+          var3.writeByte((byte) 121, param2.field_s);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "pd.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

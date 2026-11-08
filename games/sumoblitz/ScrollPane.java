@@ -208,9 +208,9 @@ final class ScrollPane extends ArrayWidgetContainer {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param1.a(0, param3);
+          var4_int = param1.groupId(0, param3);
           var5 = -112 / ((param0 + 84) / 40);
-          var6 = param1.a(var4_int, param2, (byte) 127);
+          var6 = param1.fileId(var4_int, param2, (byte) 127);
           stackIn_1_0 = iw.a(var6, var4_int, param1, -21834);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

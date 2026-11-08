@@ -28,7 +28,7 @@ final class wc {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 >= 25) {
-            stackIn_4_0 = param0.a(true);
+            stackIn_4_0 = param0.tryLoadAllGroups(true);
             return stackIn_4_0;
           }
           return false;

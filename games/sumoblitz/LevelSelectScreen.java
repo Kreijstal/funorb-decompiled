@@ -91,8 +91,8 @@ final class LevelSelectScreen extends MenuScreen {
             var13 = up.field_c;
             wo.a(var13, 84, var11, 0, 1, var10_ref_ha, 142, var12, 1, true);
             if (wm.field_f[this.field_i]) {
-              MessageDialog.field_db.a(InstrumentNoteMask.timeText.toLowerCase() + dp.b(ql.field_z[this.field_i], -23620), var4_int | 5023231, -1, 5 + var9Lifetime1, 42 + var8Lifetime1, 0);
-              LegacyOpenGlEffect.field_c.a(InstrumentNoteMask.timeText.toLowerCase() + dp.b(ql.field_z[this.field_i], -23620), 16777215 + var4_int, -1, var9Lifetime1 + 5, -8 + (var8Lifetime1 + 50), guard + 2355);
+              MessageDialog.field_db.a(InstrumentNoteMask.timeText.toLowerCase() + dp.b(CacheIoRequest.field_z[this.field_i], -23620), var4_int | 5023231, -1, 5 + var9Lifetime1, 42 + var8Lifetime1, 0);
+              LegacyOpenGlEffect.field_c.a(InstrumentNoteMask.timeText.toLowerCase() + dp.b(CacheIoRequest.field_z[this.field_i], -23620), 16777215 + var4_int, -1, var9Lifetime1 + 5, -8 + (var8Lifetime1 + 50), guard + 2355);
               MessageDialog.field_db.a(ps.scoreText.toLowerCase() + go.field_j[this.field_i], var4_int | 5023231, -1, 20 + var9Lifetime1, -8 + (var8Lifetime1 + 50), 0);
               LegacyOpenGlEffect.field_c.a(ps.scoreText.toLowerCase() + go.field_j[this.field_i], var4_int + 16777215, -1, var9Lifetime1 + 20, var8Lifetime1 + 42, guard + 2355);
               var10 = 0;
@@ -116,7 +116,7 @@ final class LevelSelectScreen extends MenuScreen {
               if (!qn.field_d[this.field_i]) {
                 return;
               }
-              stackIn_36_0 = ti.field_b;
+              stackIn_36_0 = CacheIoWorker.field_b;
               stackIn_36_1 = -45;
               stackIn_36_2 = var8Lifetime1;
               stackIn_36_3 = -(90 / var10 * var10);
@@ -185,7 +185,7 @@ final class LevelSelectScreen extends MenuScreen {
           ph.gameplaySession.startLevel(this.field_i, false, false);
           StrongCacheReference.switchMenuScreen(-7753, true, -1);
         }
-        if (2 <= ku.field_j &&
+        if (2 <= Bzip2State.field_j &&
           hw.field_b[82] &&
           hw.field_b[48]) {
           for (var5 = 0; var5 < 25; var5++) {

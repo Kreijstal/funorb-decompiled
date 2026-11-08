@@ -62,7 +62,7 @@ final class gu extends ka {
             this.field_i = new lr(IntrusiveNodeHashTable.a(false, this.field_e, this.field_c));
           }
           if (param3 ||
-            sg.a(this.field_c, this.field_e, 37)) {
+            ArchiveIndex.a(this.field_c, this.field_e, 37)) {
             this.field_k = new lr(om.a(this.field_c, this.field_e, (byte) -50));
           }
           if (param3 ||

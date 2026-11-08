@@ -323,7 +323,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           StringBuilder stackIn_25_1 = null;
           String stackIn_26_2 = null;
           Throwable decompiledCaughtException = null;
-          jr var8 = null;
+          PlatformTask var8 = null;
           Throwable var8_ref = null;
           RuntimeException var8_ref2 = null;
           int var9 = 0;
@@ -356,7 +356,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               CompactMeshGeometry.field_O = dupTemp$0;
               var8 = lt.field_m.a(true, (Runnable) (this), 1);
               while (true) {
-                if (var8.field_c == 0) {
+                if (var8.status == 0) {
                   tg.a(10L, (byte) 73);
                   if (var9 == 0) {
                     continue;
@@ -442,18 +442,18 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException decompiledCaughtException = null;
         try {
           var2_long = wq.a(-126);
-          var4 = gd.field_k[ql.field_B];
-          gd.field_k[ql.field_B] = var2_long;
+          var4 = Js5Client.field_k[CacheIoRequest.field_B];
+          Js5Client.field_k[CacheIoRequest.field_B] = var2_long;
           if (var4 != (long)param0 &&
             var4 < var2_long) {
             var6_int = (int)(var2_long - var4);
             DroneDebris.field_B = (32000 + (var6_int >> 1)) / var6_int;
           }
-          ql.field_B = 1 + ql.field_B & 31;
-          fieldTemp$1 = rb.field_b;
-          rb.field_b = rb.field_b + 1;
+          CacheIoRequest.field_B = 1 + CacheIoRequest.field_B & 31;
+          fieldTemp$1 = ArchiveProvider.field_b;
+          ArchiveProvider.field_b = ArchiveProvider.field_b + 1;
           if (fieldTemp$1 > 50) {
-            rb.field_b = rb.field_b - 50;
+            ArchiveProvider.field_b = ArchiveProvider.field_b - 50;
             pt.field_a = true;
             qn.field_f.setSize(gi.field_h, wq.field_b);
             qn.field_f.setVisible(true);
@@ -679,24 +679,24 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             return stackIn_3_0;
           }
           var1 = new PacketBuffer(30000);
-          var1.b((byte) 117, 3);
-          var1.b((byte) 90, bl.field_e);
-          var1.b((byte) 46, ResourceArchive.field_f);
-          var1.b((byte) 39, LegacyOpenGlEffectManager.field_i);
-          var1.b((byte) 52, hc.field_f);
+          var1.writeByte((byte) 117, 3);
+          var1.writeByte((byte) 90, bl.field_e);
+          var1.writeByte((byte) 46, ResourceArchive.field_f);
+          var1.writeByte((byte) 39, LegacyOpenGlEffectManager.field_i);
+          var1.writeByte((byte) 52, hc.field_f);
           var2 = 0;
           while (36 > var2) {
             if (var2 < 25) {
-              var1.d(go.field_j[var2], 112);
-              var1.b(-58, ql.field_z[var2]);
-              var3 = ql.field_A[var2] + 1;
+              var1.writeMedium(go.field_j[var2], 112);
+              var1.writeShort(-58, CacheIoRequest.field_z[var2]);
+              var3 = CacheIoRequest.field_A[var2] + 1;
               if (qn.field_d[var2]) {
                 var3 = var3 | 128;
               }
               if (up.field_g[var2]) {
                 var3 = var3 | 64;
               }
-              var1.b((byte) 105, var3);
+              var1.writeByte((byte) 105, var3);
             }
             var2++;
             if (var4 == 0) {
@@ -704,7 +704,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             }
             break;
           }
-          stackIn_16_0 = var1.d((byte) 120);
+          stackIn_16_0 = var1.copyWrittenBytes((byte) 120);
           return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

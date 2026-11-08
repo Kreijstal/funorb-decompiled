@@ -105,7 +105,7 @@ final class MusicTrack extends IntrusiveNode {
     }
 
     final static MusicTrack load(ResourceArchive param0, String param1) {
-        byte[] var2 = param0.a((byte) 121, param1);
+        byte[] var2 = param0.fetchFlatNamedFile((byte) 121, param1);
         if (var2 == null) {
           return null;
         }
@@ -217,8 +217,8 @@ final class MusicTrack extends IntrusiveNode {
         int var28Lifetime1;
         int var29Lifetime1;
         param0.position = param0.payload.length - 3;
-        var2 = param0.e(-31302);
-        var3 = param0.a(255);
+        var2 = param0.readUnsignedByte(-31302);
+        var3 = param0.readUnsignedShort(255);
         var4 = 14 + var2 * 10;
         param0.position = 0;
         var5 = 0;
@@ -233,7 +233,7 @@ final class MusicTrack extends IntrusiveNode {
         while (var13 < var2) {
           var14 = -1;
           while (true) {
-            var15 = param0.e(-31302);
+            var15 = param0.readUnsignedByte(-31302);
             if (var15 != var14) {
               var4++;
             }
@@ -282,7 +282,7 @@ final class MusicTrack extends IntrusiveNode {
         var13Lifetime1 = param0.position;
         var14Lifetime1 = var2 + var5 + var6 + var7 + var8 + var9 + var10 + var11 + var12;
         for (var15Lifetime1 = 0; var15Lifetime1 < var14Lifetime1; var15Lifetime1++) {
-          param0.f((byte) 88);
+          param0.readVarInt((byte) 88);
         }
         var4 = var4 + (param0.position - var13Lifetime1);
         var15Lifetime2 = param0.position;
@@ -300,7 +300,7 @@ final class MusicTrack extends IntrusiveNode {
         var27 = 0;
         var28 = 0;
         for (var29 = 0; var29 < var6; var29++) {
-          var28 = var28 + param0.e(-31302) & 127;
+          var28 = var28 + param0.readUnsignedByte(-31302) & 127;
           if (var28 != 0) {
             if (var28 != 32) {
               if (var28 != 1) {
@@ -416,8 +416,8 @@ final class MusicTrack extends IntrusiveNode {
         param0.position = param0.position + var5 * 3;
         this.midiBytes = new byte[var4];
         var51 = new PacketBuffer(this.midiBytes);
-        var51.e(48, 1297377380);
-        var51.e(48, 6);
+        var51.writeInt(48, 1297377380);
+        var51.writeInt(48, 6);
         stackIn_84_0 = var51;
         stackIn_84_1 = -48;
         if (var2 <= 1) {
@@ -425,9 +425,9 @@ final class MusicTrack extends IntrusiveNode {
         } else {
           stackIn_85_2 = 1;
         }
-        ((PacketBuffer) (Object) stackIn_84_0).b(stackIn_84_1, stackIn_85_2);
-        var51.b(-18, var2);
-        var51.b(126, var3);
+        ((PacketBuffer) (Object) stackIn_84_0).writeShort(stackIn_84_1, stackIn_85_2);
+        var51.writeShort(-18, var2);
+        var51.writeShort(126, var3);
         param0.position = var13Lifetime1;
         var52 = 0;
         var53 = 0;
@@ -443,13 +443,13 @@ final class MusicTrack extends IntrusiveNode {
           if (var60 >= var2) {
             return;
           }
-          var51.e(48, 1297379947);
+          var51.writeInt(48, 1297379947);
           var51.position = var51.position + 4;
           var61 = var51.position;
           var62 = -1;
           while (true) {
-            var63 = param0.f((byte) 126);
-            var51.f(var63, -21);
+            var63 = param0.readVarInt((byte) 126);
+            var51.writeVarInt(var63, -21);
             incrementValue$0 = var29Lifetime1;
             var29Lifetime1++;
             var64 = param0.payload[incrementValue$0] & 255;
@@ -458,35 +458,35 @@ final class MusicTrack extends IntrusiveNode {
             var62 = var64 & 15;
             if (var64 == 7) {
               if (var65 != 0) {
-                var51.b((byte) 93, 255);
+                var51.writeByte((byte) 93, 255);
               }
-              var51.b((byte) 45, 47);
-              var51.b((byte) 78, 0);
-              var51.a(true, var51.position - var61);
+              var51.writeByte((byte) 45, 47);
+              var51.writeByte((byte) 78, 0);
+              var51.patchIntLength(true, var51.position - var61);
               var60++;
               break;
             }
             if (var64 == 23) {
               if (var65 != 0) {
-                var51.b((byte) 39, 255);
+                var51.writeByte((byte) 39, 255);
               }
-              var51.b((byte) 101, 81);
-              var51.b((byte) 112, 3);
+              var51.writeByte((byte) 101, 81);
+              var51.writeByte((byte) 112, 3);
               incrementValue$25 = var50;
               var50++;
-              var51.b((byte) 18, (int) param0.payload[incrementValue$25]);
+              var51.writeByte((byte) 18, (int) param0.payload[incrementValue$25]);
               incrementValue$26 = var50;
               var50++;
-              var51.b((byte) 49, (int) param0.payload[incrementValue$26]);
+              var51.writeByte((byte) 49, (int) param0.payload[incrementValue$26]);
               incrementValue$27 = var50;
               var50++;
-              var51.b((byte) 119, (int) param0.payload[incrementValue$27]);
+              var51.writeByte((byte) 119, (int) param0.payload[incrementValue$27]);
               continue;
             }
             var52 = var52 ^ var64 >> 4;
             if (var62 == 0) {
               if (var65 != 0) {
-                var51.b((byte) 115, 144 + var52);
+                var51.writeByte((byte) 115, 144 + var52);
               }
               incrementValue$23 = var37;
               var37++;
@@ -494,13 +494,13 @@ final class MusicTrack extends IntrusiveNode {
               incrementValue$24 = var38;
               var38++;
               var54 = var54 + param0.payload[incrementValue$24];
-              var51.b((byte) 86, var53 & 127);
-              var51.b((byte) 26, var54 & 127);
+              var51.writeByte((byte) 86, var53 & 127);
+              var51.writeByte((byte) 26, var54 & 127);
               continue;
             }
             if (var62 == 1) {
               if (var65 != 0) {
-                var51.b((byte) 91, 128 + var52);
+                var51.writeByte((byte) 91, 128 + var52);
               }
               incrementValue$21 = var37;
               var37++;
@@ -508,14 +508,14 @@ final class MusicTrack extends IntrusiveNode {
               incrementValue$22 = var40;
               var40++;
               var55 = var55 + param0.payload[incrementValue$22];
-              var51.b((byte) 28, var53 & 127);
-              var51.b((byte) 58, var55 & 127);
+              var51.writeByte((byte) 28, var53 & 127);
+              var51.writeByte((byte) 58, var55 & 127);
               continue;
             }
             if (var62 != 2) {
               if (var62 == 3) {
                 if (var65 != 0) {
-                  var51.b((byte) 48, 224 + var52);
+                  var51.writeByte((byte) 48, 224 + var52);
                 }
                 incrementValue$5 = var45;
                 var45++;
@@ -523,18 +523,18 @@ final class MusicTrack extends IntrusiveNode {
                 incrementValue$6 = var33;
                 var33++;
                 var56 = var56 + (param0.payload[incrementValue$6] << 7);
-                var51.b((byte) 57, var56 & 127);
-                var51.b((byte) 108, var56 >> 7 & 127);
+                var51.writeByte((byte) 57, var56 & 127);
+                var51.writeByte((byte) 108, var56 >> 7 & 127);
                 continue;
               }
               if (var62 == 4) {
                 if (var65 != 0) {
-                  var51.b((byte) 120, 208 + var52);
+                  var51.writeByte((byte) 120, 208 + var52);
                 }
                 incrementValue$4 = var32;
                 var32++;
                 var57 = var57 + param0.payload[incrementValue$4];
-                var51.b((byte) 80, var57 & 127);
+                var51.writeByte((byte) 80, var57 & 127);
                 continue;
               }
               if (var62 != 5) {
@@ -542,15 +542,15 @@ final class MusicTrack extends IntrusiveNode {
                   throw new RuntimeException();
                 }
                 if (var65 != 0) {
-                  var51.b((byte) 77, 192 + var52);
+                  var51.writeByte((byte) 77, 192 + var52);
                 }
                 incrementValue$1 = var44;
                 var44++;
-                var51.b((byte) 19, (int) param0.payload[incrementValue$1]);
+                var51.writeByte((byte) 19, (int) param0.payload[incrementValue$1]);
                 continue;
               }
               if (var65 != 0) {
-                var51.b((byte) 127, 160 + var52);
+                var51.writeByte((byte) 127, 160 + var52);
               }
               incrementValue$2 = var37;
               var37++;
@@ -558,17 +558,17 @@ final class MusicTrack extends IntrusiveNode {
               incrementValue$3 = var31;
               var31++;
               var58 = var58 + param0.payload[incrementValue$3];
-              var51.b((byte) 45, var53 & 127);
-              var51.b((byte) 61, var58 & 127);
+              var51.writeByte((byte) 45, var53 & 127);
+              var51.writeByte((byte) 61, var58 & 127);
               continue;
             }
             if (var65 != 0) {
-              var51.b((byte) 94, 176 + var52);
+              var51.writeByte((byte) 94, 176 + var52);
             }
             incrementValue$7 = var15Lifetime2;
             var15Lifetime2++;
             var28Lifetime1 = var28Lifetime1 + param0.payload[incrementValue$7] & 127;
-            var51.b((byte) 84, var28Lifetime1);
+            var51.writeByte((byte) 84, var28Lifetime1);
             if (var28Lifetime1 != 0 &&
               var28Lifetime1 != 32) {
               if (var28Lifetime1 == 1) {
@@ -631,7 +631,7 @@ final class MusicTrack extends IntrusiveNode {
             }
             var66 = var66 + var70[var28Lifetime1];
             var70[var28Lifetime1] = var66;
-            var51.b((byte) 40, var66 & 127);
+            var51.writeByte((byte) 40, var66 & 127);
           }
         }
     }

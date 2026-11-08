@@ -20,15 +20,15 @@ abstract class r extends DualLinkNode {
         var7 = Sumoblitz.field_L ? 1 : 0;
         var8 = ig.field_a;
         var2 = var8;
-        var3 = var8.e(-31302);
+        var3 = var8.readUnsignedByte(-31302);
         jb.field_h = 127 & var3;
         stackIn_3_0 = (0 != (var3 & 128));
         is.field_a = stackIn_3_0;
-        wn.field_a = var8.e(-31302);
-        ReassignUpgradesScreen.field_j = var8.a((byte) 113);
+        wn.field_a = var8.readUnsignedByte(-31302);
+        ReassignUpgradesScreen.field_j = var8.readLong((byte) 113);
         if (2 == jb.field_h) {
-          eh.field_c = var8.a(255);
-          CacheReferenceNode.field_w = var8.c((byte) 126);
+          eh.field_c = var8.readUnsignedShort(255);
+          CacheReferenceNode.field_w = var8.readUnsignedMedium((byte) 126);
         } else {
           CacheReferenceNode.field_w = 0;
           eh.field_c = 0;
@@ -36,21 +36,21 @@ abstract class r extends DualLinkNode {
         if (param1 >= -51) {
           field_r = (int[]) null;
         }
-        stackIn_11_0 = (var8.e(-31302) != 1) ? 0 : 1;
+        stackIn_11_0 = (var8.readUnsignedByte(-31302) != 1) ? 0 : 1;
         var4 = stackIn_11_0;
-        wk.field_f = var8.d(-1);
+        wk.field_f = var8.readCp1252String(-1);
         if (var4 == 0) {
           fu.field_E = wk.field_f;
         } else {
-          fu.field_E = var8.d(-1);
+          fu.field_E = var8.readCp1252String(-1);
         }
         if (jb.field_h == 1) {
-          var8.a(255);
-          var8.d(-1);
+          var8.readUnsignedShort(255);
+          var8.readCp1252String(-1);
         } else {
           if (4 == jb.field_h) {
-            var8.a(255);
-            var8.d(-1);
+            var8.readUnsignedShort(255);
+            var8.readCp1252String(-1);
           }
         }
         if (!param0) {
@@ -58,7 +58,7 @@ abstract class r extends DualLinkNode {
           tm.field_c = null;
           return new br(param0);
         }
-        var5 = var8.a(255);
+        var5 = var8.readUnsignedShort(255);
         try {
           var9 = kb.field_c.a(var5, -32769);
           oi.field_c = var9.f(1118);

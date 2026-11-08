@@ -43,7 +43,7 @@ final class uk extends MessageDialog implements WidgetActionListener {
               var4 = param2.field_g;
               if (param2.field_e == 248) {
                 if (!param0) {
-                  gj.c(0);
+                  BufferedCacheFile.c(0);
                 }
                 var4 = rn.unfortunatelyYouAreNotText;
                 this.field_pb = true;

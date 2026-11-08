@@ -33,7 +33,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
     private mw field_Fb;
     private mw[] field_Hc;
     private int field_w;
-    private ro field_Db;
+    private SecondaryNodeQueue field_Db;
     private cm field_Tb;
     private mw field_hc;
     private mw[] field_dc;
@@ -576,7 +576,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
         this.field_Hc = new mw[4];
         this.field_w = -1;
         this.field_dc = new mw[4];
-        this.field_Db = new ro();
+        this.field_Db = new SecondaryNodeQueue();
         this.field_nc = new IntrusiveNodeHashTable(16);
         this.field_fb = new IntrusiveDeque();
         this.field_j = new IntrusiveDeque();
@@ -2070,7 +2070,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
                 var3 = var9;
                 this.field_ic = this.field_ic + var9.field_s;
                 while (this.field_ic > 2097152) {
-                  var4 = this.field_Db.c((byte) 126);
+                  var4 = this.field_Db.removeLast((byte) 126);
                   if (var4 != null) {
                     var10 = (kf) (var4);
                     var10.unlinkSecondary(-5106);
@@ -2083,7 +2083,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
                 }
                 this.field_nc.a(var9, -1, (long)(this.field_Tb.c() << 16 | this.field_Tb.a()));
               }
-              this.field_Db.a(var3, -4);
+              this.field_Db.addFirst(var3, -4);
               this.field_H.a(var3, 8, -14269);
             }
             this.field_H.a(this.field_Tb.field_g, -4610, 0);
@@ -2097,7 +2097,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
               var3_ref = var7;
               this.field_ic = this.field_ic + var7.field_v * 4;
               while (this.field_ic > 2097152) {
-                var4 = this.field_Db.c((byte) 126);
+                var4 = this.field_Db.removeLast((byte) 126);
                 if (var4 != null) {
                   var8 = (wh) (var4);
                   var8.unlinkSecondary(-5106);
@@ -2110,7 +2110,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
               }
               this.field_nc.a(var7, -1, (long)(this.field_Tb.c() << 16 | this.field_Tb.a()));
             }
-            this.field_Db.a(var3_ref, -4);
+            this.field_Db.addFirst(var3_ref, -4);
             this.field_y.setPbuffer(var3_ref.e(-106));
           }
           this.field_Z = param0.c();

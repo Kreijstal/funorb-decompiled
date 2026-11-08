@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class rb {
+abstract class ArchiveProvider {
     static String[] achievementNames;
     static String field_c;
     static int field_b;
@@ -35,10 +35,10 @@ abstract class rb {
         int var23 = 0;
         var23 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (null != jg.field_b) {
+          if (null != GzipDecompressor.field_b) {
             return;
           }
-          jg.field_b = new int[65536];
+          GzipDecompressor.field_b = new int[65536];
           var1_double = 0.7 + (-0.015 + 0.03 * Math.random());
           var3 = 0;
           if (param0 != -129) {
@@ -103,7 +103,7 @@ abstract class rb {
               var22 = (var20 << 8) + (var19 << 16) + (-16777216 + var21);
               incrementValue$0 = var3;
               var3++;
-              jg.field_b[incrementValue$0] = var22;
+              GzipDecompressor.field_b[incrementValue$0] = var22;
             }
           }
           return;
@@ -114,7 +114,7 @@ abstract class rb {
         }
     }
 
-    abstract sg b(byte param0);
+    abstract ArchiveIndex fetchIndex(byte guard);
 
     public static void releaseStatics(byte param0) {
         field_a = null;
@@ -125,9 +125,9 @@ abstract class rb {
         }
     }
 
-    abstract int a(int param0, int param1);
+    abstract int groupLoadPercent(int groupId, int guard);
 
-    abstract byte[] a(int param0, boolean param1);
+    abstract byte[] fetchGroup(int groupId, boolean guard);
 
     static {
         field_c = null;

@@ -6,7 +6,7 @@ final class ph {
     static GameplaySession gameplaySession;
     static String youHaveUnreadMessagesText;
     private DualLinkNode field_e;
-    private ro field_g;
+    private SecondaryNodeQueue field_g;
     private int field_f;
     static String usernameText;
     private IntrusiveNodeHashTable field_c;
@@ -17,7 +17,7 @@ final class ph {
           this.a((byte) -122, 80L);
         }
         if (var4 != null) {
-          this.field_g.a(var4, (byte) -114);
+          this.field_g.addLast(var4, (byte) -114);
         }
         return var4;
     }
@@ -33,20 +33,20 @@ final class ph {
           if (this.field_f != 0) {
             this.field_f = this.field_f - 1;
           } else {
-            var5 = this.field_g.b((byte) 72);
+            var5 = this.field_g.removeFirst((byte) 72);
             var5.unlink(false);
             var5.unlinkSecondary(-5106);
             if (this.field_e == var5) {
-              var5 = this.field_g.b((byte) 72);
+              var5 = this.field_g.removeFirst((byte) 72);
               var5.unlink(false);
               var5.unlinkSecondary(-5106);
             }
           }
           this.field_c.a(param1, -1, param0);
           if (param2 >= -114) {
-            this.field_g = (ro) null;
+            this.field_g = (SecondaryNodeQueue) null;
           }
-          this.field_g.a(param1, (byte) -109);
+          this.field_g.addLast(param1, (byte) -109);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -417,7 +417,7 @@ final class ph {
     ph(int param0) {
         int var2 = 0;
         this.field_e = new DualLinkNode();
-        this.field_g = new ro();
+        this.field_g = new SecondaryNodeQueue();
         this.field_f = param0;
         for (var2 = 1; param0 > var2 + var2; var2 = var2 + var2) {
         }

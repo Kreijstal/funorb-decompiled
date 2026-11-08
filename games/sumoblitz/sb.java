@@ -5,7 +5,7 @@ final class sb {
     static int field_c;
     static int field_a;
     static String openInPopupWindowText;
-    static jg field_b;
+    static GzipDecompressor gzipDecompressor;
     static ne[] field_d;
 
     final static GraphicsToolkit a(ResourceArchive param0, int param1, d param2, java.awt.Canvas param3, int param4) {
@@ -69,15 +69,15 @@ final class sb {
 
     final static void a(int param0, int param1, int param2, int param3, PacketBuffer param4) {
         try {
-          param4.b((byte) 122, 12);
-          param4.b(-42, 17);
+          param4.writeByte((byte) 122, 12);
+          param4.writeShort(-42, 17);
           if (param1 <= 77) {
             java.awt.Canvas var6 = (java.awt.Canvas) null;
             sb.a((ResourceArchive) null, -117, (d) null, (java.awt.Canvas) null, 97);
           }
-          param4.b(117, param3);
-          param4.b(117, param2);
-          param4.b((byte) 52, param0);
+          param4.writeShort(117, param3);
+          param4.writeShort(117, param2);
+          param4.writeByte((byte) 52, param0);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "sb.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
@@ -88,7 +88,7 @@ final class sb {
           field_c = 40;
         }
         openInPopupWindowText = null;
-        field_b = null;
+        gzipDecompressor = null;
         field_d = null;
     }
 
@@ -118,22 +118,22 @@ final class sb {
         int[] var25 = null;
         var11 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var2_int = param1.a(param0 + 9937, "waves/");
-          var23 = param1.a(var2_int, -25915);
+          var2_int = param1.groupId(param0 + 9937, "waves/");
+          var23 = param1.fileIds(var2_int, -25915);
           IntrusiveDequeCursor.field_a = new wc[41];
           var4 = new wc[41];
           for (var5_int = 0; var23.length > var5_int; var5_int++) {
-            var6_ref_fs = new PacketBuffer(param1.a((byte) 94, var23[var5_int], var2_int));
+            var6_ref_fs = new PacketBuffer(param1.fetchFile((byte) 94, var23[var5_int], var2_int));
             var6_ref_fs.position = var6_ref_fs.position + 1;
             var4[var5_int] = wr.a(true, var6_ref_fs, false);
             IntrusiveDequeCursor.field_a[var4[var5_int].field_a] = var4[var5_int];
           }
-          var2_int = param1.a(param0 ^ param0, "levels/");
-          var24 = param1.a(var2_int, -25915);
+          var2_int = param1.groupId(param0 ^ param0, "levels/");
+          var24 = param1.fileIds(var2_int, -25915);
           var5 = new vl[var24.length];
           EnemyDrone.field_S = new vl[25];
           for (var6 = 0; var24.length > var6; var6++) {
-            var14 = new PacketBuffer(param1.a((byte) 98, var24[var6], var2_int));
+            var14 = new PacketBuffer(param1.fetchFile((byte) 98, var24[var6], var2_int));
             var14.position = var14.position + 1;
             var5[var6] = pi.a(var14, true, 102);
             if (25 > var5[var6].field_e) {
@@ -143,7 +143,7 @@ final class sb {
           ab.field_a = new IntrusiveNodeHashTable(16);
           for (var6 = 0; 9 > var6; var6++) {
             try {
-              var2_int = param1.a(0, "engineered_levels/" + (1 + var6) + "/");
+              var2_int = param1.groupId(0, "engineered_levels/" + (1 + var6) + "/");
               decompiledRegionSelector0 = 0;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -152,12 +152,12 @@ final class sb {
             }
             if (decompiledRegionSelector0 == 0 &&
               var2_int != -1) {
-              var25 = param1.a(var2_int, -25915);
+              var25 = param1.fileIds(var2_int, -25915);
               var16 = new wc[var25.length];
               var7_array = var16;
               var8 = new wc[var25.length];
               for (var9 = 0; var9 < var25.length; var9++) {
-                var10 = new PacketBuffer(param1.a((byte) 106, var25[var9], var2_int));
+                var10 = new PacketBuffer(param1.fetchFile((byte) 106, var25[var9], var2_int));
                 var10.position = var10.position + 1;
                 var7_array[var9] = wr.a(true, var10, false);
                 var8[var16[var9].field_a] = var16[var9];
@@ -191,6 +191,6 @@ final class sb {
         field_a = 0;
         openInPopupWindowText = "Open in popup window";
         field_c = 250;
-        field_b = new jg();
+        gzipDecompressor = new GzipDecompressor();
     }
 }

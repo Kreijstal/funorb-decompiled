@@ -18,31 +18,31 @@ final class dn {
           return pi.field_b;
         }
         if (null != DropDownListWidget.field_H) {
-          if (!DropDownListWidget.field_H.b((byte) 127)) {
+          if (!DropDownListWidget.field_H.loadIndex((byte) 127)) {
             return ek.field_k;
           }
           return mm.field_c;
         }
-        if (!wd.field_j.b((byte) 127)) {
+        if (!wd.field_j.loadIndex((byte) 127)) {
           return ProgressDialog.waitingForGraphicsText;
         }
-        if (!wd.field_j.a("commonui", 100)) {
-          return es.loadingGraphicsText + " - " + wd.field_j.a("commonui", (byte) 33) + "%";
+        if (!wd.field_j.tryLoadNamedGroup("commonui", 100)) {
+          return es.loadingGraphicsText + " - " + wd.field_j.namedGroupLoadPercent("commonui", (byte) 33) + "%";
         }
         if (param0 <= 90) {
           dn.b(-125);
         }
-        if (!eb.field_f.b((byte) 127)) {
+        if (!eb.field_f.loadIndex((byte) 127)) {
           return ce.waitingForFontsText;
         }
-        if (!eb.field_f.a("commonui", 100)) {
-          return ow.loadingFontsText + " - " + eb.field_f.a("commonui", (byte) 33) + "%";
+        if (!eb.field_f.tryLoadNamedGroup("commonui", 100)) {
+          return ow.loadingFontsText + " - " + eb.field_f.namedGroupLoadPercent("commonui", (byte) 33) + "%";
         }
-        if (!hw.field_a.b((byte) 127)) {
+        if (!hw.field_a.loadIndex((byte) 127)) {
           return fl.waitingForExtraDataText;
         }
-        if (!hw.field_a.a(true)) {
-          return rd.loadingExtraDataText + " - " + hw.field_a.a(0) + "%";
+        if (!hw.field_a.tryLoadAllGroups(true)) {
+          return rd.loadingExtraDataText + " - " + hw.field_a.loadPercent(0) + "%";
         }
         return mm.pleaseWaitText;
     }

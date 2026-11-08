@@ -46,7 +46,7 @@ final class sk {
             var2 = var18;
             ab.field_b = DroneDebris.storeByteArray((byte) -121, var22, false);
           }
-          var23 = ab.a(false, ab.field_b, 0);
+          var23 = ab.extractByteArray(false, ab.field_b, 0);
           var20 = var23;
           var17 = var20;
           var2Lifetime1 = var17;
@@ -201,9 +201,9 @@ final class sk {
             }
             return;
           }
-          var15 = ab.a(false, pd.field_n, 0);
+          var15 = ab.extractByteArray(false, pd.field_n, 0);
           this.field_f = this.field_a.a(true, ps.field_c, 16, 128, var15, 128);
-          var16 = ab.a(false, mk.field_d, 0);
+          var16 = ab.extractByteArray(false, mk.field_d, 0);
           this.field_a.a(true, ps.field_c, 16, 128, var16, 128);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

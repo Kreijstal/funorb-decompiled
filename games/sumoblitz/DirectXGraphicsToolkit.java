@@ -440,7 +440,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         if (jq.field_a == param0) {
           return 2;
         }
-        if (fv.field_y == param0) {
+        if (NetworkResourceRequest.field_y == param0) {
           return 0;
         }
         if (param0 == FontMetrics.field_a) {
@@ -519,7 +519,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         if (JaggrabDownloader.field_i == param0) {
           return 1;
         }
-        if (np.field_h == param0) {
+        if (WhirlpoolDigest.field_h == param0) {
           return 4;
         }
         if (param0 == an.field_d) {

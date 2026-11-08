@@ -120,7 +120,7 @@ final class GridWidgetContainer extends ArrayWidgetContainer {
         int var6 = -72 % ((guard - 28) / 63);
     }
 
-    final static byte[] a(int param0, byte[] param1) {
+    final static byte[] decompressContainer(int guard, byte[] containerBytes) {
         byte[] stackIn_7_0 = null;
         byte[] stackIn_21_0 = null;
         RuntimeException stackIn_24_0 = null;
@@ -140,31 +140,31 @@ final class GridWidgetContainer extends ArrayWidgetContainer {
         byte[] var12 = null;
         byte[] var13 = null;
         try {
-          var9 = new PacketBuffer(param1);
-          var3 = var9.e(-31302);
-          var4 = var9.c(true);
+          var9 = new PacketBuffer(containerBytes);
+          var3 = var9.readUnsignedByte(-31302);
+          var4 = var9.readInt(true);
           if (0 <= var4 && (bn.field_R == 0 ||
             !(bn.field_R < var4))) {
-            if (~var3 == param0) {
+            if (~var3 == guard) {
               var12 = new byte[var4];
               var10 = var12;
               var5_ref_byte__ = var10;
-              var9.a(var12, var4, 0, (byte) -119);
+              var9.readBytes(var12, var4, 0, (byte) -119);
               stackIn_7_0 = var5_ref_byte__;
               return stackIn_7_0;
             }
-            var5 = var9.c(true);
+            var5 = var9.readInt(true);
             if (var5 >= 0 && (bn.field_R == 0 ||
               !(bn.field_R < var5))) {
               var13 = new byte[var5];
               var11 = var13;
               var6 = var11;
               if (var3 == 1) {
-                w.a(var13, var5, param1, var4, 9);
+                Bzip2Decompressor.decompress(var13, var5, containerBytes, var4, 9);
               } else {
-                var7 = sb.field_b;
+                var7 = sb.gzipDecompressor;
                 synchronized (var7) {
-                  sb.field_b.a(var13, (byte) -104, var9);
+                  sb.gzipDecompressor.decompress(var13, (byte) -104, var9);
                 }
               }
               stackIn_21_0 = var6;
@@ -177,8 +177,8 @@ final class GridWidgetContainer extends ArrayWidgetContainer {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (RuntimeException) (Object) decompiledCaughtException;
           stackIn_24_0 = var2;
-          stackIn_24_1 = new StringBuilder().append("nd.M(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_24_1 = new StringBuilder().append("nd.M(").append(guard).append(',');
+          if (containerBytes == null) {
             stackIn_25_2 = "null";
           } else {
             stackIn_25_2 = "{...}";
@@ -216,17 +216,17 @@ final class GridWidgetContainer extends ArrayWidgetContainer {
           if (param0 > -33) {
             GridWidgetContainer.a((byte) 116, false);
           }
-          if (tm.field_a.field_c == 0) {
+          if (tm.field_a.status == 0) {
             return false;
           }
           long dupTemp$0 = wq.a(-38);
           ArchiveCatalog.field_a = dupTemp$0;
           CacheReferenceNode.field_x = dupTemp$0;
-          if (tm.field_a.field_c != 1) {
+          if (tm.field_a.status != 1) {
             kw.field_c = lr.field_b;
           } else {
             try {
-              DisplayModeConfirmationDialog.field_O = new BufferedSocket((java.net.Socket) (tm.field_a.field_d), CacheReferenceNode.field_t);
+              DisplayModeConfirmationDialog.field_O = new BufferedSocket((java.net.Socket) (tm.field_a.result), CacheReferenceNode.field_t);
               var4 = ig.field_a;
               var5 = var4;
               InwardSparkParticle.field_v.position = 0;
@@ -235,7 +235,7 @@ final class GridWidgetContainer extends ArrayWidgetContainer {
               vb.field_I = param1 ? -2 : -1;
               ContentTransitionDialog.field_Q = param1 ? -2 : -1;
               kw.field_c = gg.field_t;
-              sb.a(s.field_o, 81, CacheReferenceNode.field_r, ql.field_v, InwardSparkParticle.field_v);
+              sb.a(s.field_o, 81, CacheReferenceNode.field_r, CacheIoRequest.field_v, InwardSparkParticle.field_v);
               MessageDialog.a(0, -1);
             } catch (IOException iOException) {
               kw.field_c = lr.field_b;

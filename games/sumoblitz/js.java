@@ -196,20 +196,20 @@ final class js extends WidgetContainer implements ca, WidgetActionListener, oe {
         var8 = Sumoblitz.field_L ? 1 : 0;
         try {
           var1 = ig.field_a;
-          var2 = var1.e(-31302);
+          var2 = var1.readUnsignedByte(-31302);
           if (var2 == 0) {
             if (io.field_b == null) {
               io.field_b = new ci(128);
               jb.field_e = 0;
             }
-            stackIn_11_0 = (var1.e(-31302) != 1) ? 0 : 1;
+            stackIn_11_0 = (var1.readUnsignedByte(-31302) != 1) ? 0 : 1;
             var3_int = stackIn_11_0;
-            var4_ref_String = var1.d(-1);
+            var4_ref_String = var1.readCp1252String(-1);
             if (var3_int != 0) {
-              var1.d(-1);
+              var1.readCp1252String(-1);
             }
             var5 = is.a((byte) 123, var4_ref_String);
-            var6 = var1.d(-1);
+            var6 = var1.readCp1252String(-1);
             var7 = uk.a(-1, (CharSequence) ((Object) var4_ref_String));
             if (var7 == null) {
               var7 = var4_ref_String;
@@ -253,9 +253,9 @@ final class js extends WidgetContainer implements ca, WidgetActionListener, oe {
               return;
             }
             wh.field_s = 1;
-            var3 = var1.d(-1);
+            var3 = var1.readCp1252String(-1);
             jm.field_d = ((String) (var3)).intern();
-            var4 = var1.e(-31302);
+            var4 = var1.readUnsignedByte(-31302);
             en.a((byte) 38, var4);
             return;
           }
@@ -263,12 +263,12 @@ final class js extends WidgetContainer implements ca, WidgetActionListener, oe {
             wr.field_G = new ci(128);
             hi.field_h = 0;
           }
-          var3Lifetime1 = var1.d(-1);
+          var3Lifetime1 = var1.readCp1252String(-1);
           if (((String) (var3Lifetime1)).equals("")) {
             var3Lifetime1 = null;
           }
-          var4_ref_StringLifetime1 = var1.d(-1);
-          var5_ref = var1.d(-1);
+          var4_ref_StringLifetime1 = var1.readCp1252String(-1);
+          var5_ref = var1.readCp1252String(-1);
           var6_ref = hu.a(var4_ref_StringLifetime1, (byte) 15);
           if (null == var6_ref) {
             var6_ref = hu.a(var5_ref, (byte) 71);

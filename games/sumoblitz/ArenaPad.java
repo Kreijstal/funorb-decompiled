@@ -192,7 +192,7 @@ final class ArenaPad extends IntrusiveNode {
                 var13 = Math.asin((double)var9Lifetime1 / var11);
                 var15 = var13 + 3.141592653589793;
                 if (!(Math.abs(-drone.facingRadians + var15) < 1.5707963267948966)) {
-                  ro.a(drone, (byte) 113);
+                  SecondaryNodeQueue.a(drone, (byte) 113);
                   this.triggerCooldownTicks = 200;
                   if (12 == oh.levelIndex) {
                     bn.field_P = true;
@@ -219,7 +219,7 @@ final class ArenaPad extends IntrusiveNode {
                 }
               }
               if (decompiledFrameRemainder7) {
-                ro.a(drone, (byte) 113);
+                SecondaryNodeQueue.a(drone, (byte) 113);
                 if (oh.levelIndex == 12) {
                   bn.field_P = true;
                 }
@@ -451,8 +451,8 @@ final class ArenaPad extends IntrusiveNode {
             (decompiledFrameRemainder4) &&
             (decompiledFrameRemainder3) &&
             (decompiledFrameRemainder2)) {
-            rb.field_a[0].a((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), 2048, this.orientation);
-            rb.field_a[(this.ageTicks >> 5) % rb.field_a.length].a((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), 2048, this.orientation, 1, 0, 2);
+            ArchiveProvider.field_a[0].a((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), 2048, this.orientation);
+            ArchiveProvider.field_a[(this.ageTicks >> 5) % ArchiveProvider.field_a.length].a((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), 2048, this.orientation, 1, 0, 2);
             decompiledFrameRemainder7 = (var4 != 0);
           }
           if ((decompiledFrameRemainder7) &&
@@ -613,19 +613,19 @@ final class ArenaPad extends IntrusiveNode {
           if (param1 < 30) {
             ArenaPad.releaseStatics(-34);
           }
-          DisplayModeConfirmationDialog.field_U = param0.a(255) << 5;
-          var2_int = param0.e(-31302);
+          DisplayModeConfirmationDialog.field_U = param0.readUnsignedShort(255) << 5;
+          var2_int = param0.readUnsignedByte(-31302);
           DisplayModeConfirmationDialog.field_U = DisplayModeConfirmationDialog.field_U + (var2_int >> 3);
           sd.field_f = 1835008 & var2_int << 18;
-          sd.field_f = sd.field_f + (param0.a(255) << 2);
-          var2_intLifetime1 = param0.e(-31302);
+          sd.field_f = sd.field_f + (param0.readUnsignedShort(255) << 2);
+          var2_intLifetime1 = param0.readUnsignedByte(-31302);
           sd.field_f = sd.field_f + (var2_intLifetime1 >> 6);
           ReassignUpgradesScreen.field_l = (63 & var2_intLifetime1) << 15;
-          ReassignUpgradesScreen.field_l = ReassignUpgradesScreen.field_l + (param0.e(-31302) << 7);
-          var2_intLifetime2 = param0.e(-31302);
+          ReassignUpgradesScreen.field_l = ReassignUpgradesScreen.field_l + (param0.readUnsignedByte(-31302) << 7);
+          var2_intLifetime2 = param0.readUnsignedByte(-31302);
           ch.field_d = 65536 & var2_intLifetime2 << 16;
           ReassignUpgradesScreen.field_l = ReassignUpgradesScreen.field_l + (var2_intLifetime2 >> 1);
-          ch.field_d = ch.field_d + param0.a(255);
+          ch.field_d = ch.field_d + param0.readUnsignedShort(255);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

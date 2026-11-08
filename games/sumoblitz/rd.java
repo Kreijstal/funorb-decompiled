@@ -6,15 +6,15 @@ final class rd extends IntrusiveNode {
     int[] field_k;
     static int field_q;
     byte[][][] field_u;
-    jr[] field_o;
+    PlatformTask[] field_o;
     int[] field_n;
     int field_p;
     int field_t;
-    jr[] field_s;
+    PlatformTask[] field_s;
     static int field_l;
     int[] field_r;
 
-    final static int a(byte[] param0, int param1, int param2, int param3) {
+    final static int crc32(byte[] bytes, int offset, int end, int guard) {
         int var5 = 0;
         int var4_int = 0;
         RuntimeException var4 = null;
@@ -28,12 +28,12 @@ final class rd extends IntrusiveNode {
         var6 = Sumoblitz.field_L ? 1 : 0;
         try {
           var4_int = -1;
-          if (param3 != 1001) {
+          if (guard != 1001) {
             stackIn_3_0 = 108;
             return stackIn_3_0;
           }
-          for (var5 = param1; var5 < param2; var5++) {
-            var4_int = InwardSparkParticle.field_y[255 & (var4_int ^ param0[var5])] ^ var4_int >>> 8;
+          for (var5 = offset; var5 < end; var5++) {
+            var4_int = InwardSparkParticle.field_y[255 & (var4_int ^ bytes[var5])] ^ var4_int >>> 8;
           }
           var4_int = ~var4_int;
           stackIn_8_0 = var4_int;
@@ -43,12 +43,12 @@ final class rd extends IntrusiveNode {
           var4 = decompiledCaughtException;
           stackIn_11_0 = var4;
           stackIn_11_1 = new StringBuilder().append("rd.B(");
-          if (param0 == null) {
+          if (bytes == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(offset).append(',').append(end).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -126,20 +126,20 @@ final class rd extends IntrusiveNode {
         String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param3.b((byte) 127) &&
-            param3.a("commonui", 100)) {
+          if (param3.loadIndex((byte) 127) &&
+            param3.tryLoadNamedGroup("commonui", 100)) {
             if (param1 < 120) {
               var5 = (PlatformTaskDispatcher) null;
               rd.a((Object) null, (PlatformTaskDispatcher) null, 63);
             }
-            if (!param0.b((byte) 127)) {
+            if (!param0.loadIndex((byte) 127)) {
               return false;
             }
-            if (!param0.a("commonui", 100)) {
+            if (!param0.tryLoadNamedGroup("commonui", 100)) {
               return false;
             }
-            if (param2.b((byte) 127) &&
-              param2.a("button.gif", 100)) {
+            if (param2.loadIndex((byte) 127) &&
+              param2.tryLoadNamedGroup("button.gif", 100)) {
               return true;
             }
             return false;

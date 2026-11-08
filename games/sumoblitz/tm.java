@@ -6,13 +6,13 @@ import java.io.*;
 final class tm implements WidgetRenderer {
     static String field_b;
     static int field_d;
-    static jr field_a;
+    static PlatformTask field_a;
     static int[] field_c;
 
     public final void renderWidget(UiWidget widget, int parentY, int guard, boolean isEnabled, int parentX) {
         try {
           if (guard != 5592405) {
-            field_a = (jr) null;
+            field_a = (PlatformTask) null;
           }
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "tm.A(" + (widget != null ? "{...}" : "null") + ',' + parentY + ',' + guard + ',' + isEnabled + ',' + parentX + ')');
@@ -32,7 +32,7 @@ final class tm implements WidgetRenderer {
           try {
             ig.field_a = new pl(param3);
             InwardSparkParticle.field_v = new pl(param8);
-            ql.field_v = param5;
+            CacheIoRequest.field_v = param5;
             vp.field_a = param7;
             jm.field_b = param13;
             ScrollPane.field_C = param9;
@@ -50,7 +50,7 @@ final class tm implements WidgetRenderer {
               return;
             }
             try {
-              NameSuggestionsPanel.field_E = new gj(CacheReferenceNode.field_t.field_n, 64, 0);
+              NameSuggestionsPanel.field_E = new BufferedCacheFile(CacheReferenceNode.field_t.field_n, 64, 0);
               return;
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -91,14 +91,14 @@ final class tm implements WidgetRenderer {
         SingleChildWidget.field_x = rl.field_q;
         rl.field_q = var2;
         if (param0 == 51) {
-          jk.field_b.field_j = 2;
-          jk.field_b.field_d = jk.field_b.field_d + 1;
-          if (jk.field_b.field_d < 2) {
-            if (jk.field_b.field_d >= 2) {
+          jk.field_b.failureCode = 2;
+          jk.field_b.failureCount = jk.field_b.failureCount + 1;
+          if (jk.field_b.failureCount < 2) {
+            if (jk.field_b.failureCount >= 2) {
               if (50 == param0) {
                 return 5;
               }
-              if (jk.field_b.field_d >= 4) {
+              if (jk.field_b.failureCount >= 4) {
                 return 1;
               }
               if (param1 < -80) {
@@ -106,7 +106,7 @@ final class tm implements WidgetRenderer {
               }
               return 65;
             }
-            if (jk.field_b.field_d >= 4) {
+            if (jk.field_b.failureCount >= 4) {
               return 1;
             }
             if (param1 >= -80) {
@@ -115,9 +115,9 @@ final class tm implements WidgetRenderer {
             return -1;
           }
           if (param0 != 51) {
-            if (jk.field_b.field_d >= 2) {
+            if (jk.field_b.failureCount >= 2) {
               if (50 != param0) {
-                if (jk.field_b.field_d >= 4) {
+                if (jk.field_b.failureCount >= 4) {
                   return 1;
                 }
                 if (param1 >= -80) {
@@ -127,7 +127,7 @@ final class tm implements WidgetRenderer {
               }
               return 5;
             }
-            if (jk.field_b.field_d >= 4) {
+            if (jk.field_b.failureCount >= 4) {
               return 1;
             }
             if (param1 >= -80) {
@@ -138,15 +138,15 @@ final class tm implements WidgetRenderer {
           return 2;
         }
         if (param0 != 50) {
-          jk.field_b.field_j = 1;
-          jk.field_b.field_d = jk.field_b.field_d + 1;
-          if (jk.field_b.field_d >= 2 &&
+          jk.field_b.failureCode = 1;
+          jk.field_b.failureCount = jk.field_b.failureCount + 1;
+          if (jk.field_b.failureCount >= 2 &&
             param0 == 51) {
             return 2;
           }
-          if (jk.field_b.field_d >= 2) {
+          if (jk.field_b.failureCount >= 2) {
             if (50 != param0) {
-              if (jk.field_b.field_d >= 4) {
+              if (jk.field_b.failureCount >= 4) {
                 return 1;
               }
               if (param1 >= -80) {
@@ -156,7 +156,7 @@ final class tm implements WidgetRenderer {
             }
             return 5;
           }
-          if (jk.field_b.field_d >= 4) {
+          if (jk.field_b.failureCount >= 4) {
             return 1;
           }
           if (param1 >= -80) {
@@ -164,15 +164,15 @@ final class tm implements WidgetRenderer {
           }
           return -1;
         }
-        jk.field_b.field_j = 5;
-        jk.field_b.field_d = jk.field_b.field_d + 1;
-        if (jk.field_b.field_d >= 2 &&
+        jk.field_b.failureCode = 5;
+        jk.field_b.failureCount = jk.field_b.failureCount + 1;
+        if (jk.field_b.failureCount >= 2 &&
           param0 == 51) {
           return 2;
         }
-        if (jk.field_b.field_d >= 2) {
+        if (jk.field_b.failureCount >= 2) {
           if (50 != param0) {
-            if (jk.field_b.field_d >= 4) {
+            if (jk.field_b.failureCount >= 4) {
               return 1;
             }
             if (param1 >= -80) {
@@ -182,7 +182,7 @@ final class tm implements WidgetRenderer {
           }
           return 5;
         }
-        if (jk.field_b.field_d >= 4) {
+        if (jk.field_b.failureCount >= 4) {
           return 1;
         }
         if (param1 >= -80) {

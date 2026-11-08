@@ -4,9 +4,9 @@
 import java.io.*;
 
 final class LimitedRandomAccessFile {
-    private RandomAccessFile field_h;
-    private long field_e;
-    private long field_f;
+    private RandomAccessFile file;
+    private long position;
+    private long maxLength;
     static jf field_i;
     static boolean field_g;
     static il field_a;
@@ -15,7 +15,7 @@ final class LimitedRandomAccessFile {
     static String field_c;
     static String[] droneDescriptions;
 
-    final int b(byte[] param0, int param1, int param2, int param3) throws IOException {
+    final int read(byte[] destination, int guard, int length, int offset) throws IOException {
         int var5_int = 0;
         RuntimeException var5 = null;
         PacketBuffer var6 = null;
@@ -25,13 +25,13 @@ final class LimitedRandomAccessFile {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = this.field_h.read(param0, param3, param2);
-          if (param1 != 2) {
+          var5_int = this.file.read(destination, offset, length);
+          if (guard != 2) {
             var6 = (PacketBuffer) null;
             LimitedRandomAccessFile.a((java.math.BigInteger) null, 49, (byte[]) null, (java.math.BigInteger) null, (byte) 29, (PacketBuffer) null, 22);
           }
           if (var5_int > 0) {
-            this.field_e = this.field_e + (long)var5_int;
+            this.position = this.position + (long)var5_int;
           }
           stackIn_6_0 = var5_int;
           return stackIn_6_0;
@@ -40,12 +40,12 @@ final class LimitedRandomAccessFile {
           var5 = decompiledCaughtException;
           stackIn_9_0 = var5;
           stackIn_9_1 = new StringBuilder().append("sr.C(");
-          if (param0 == null) {
+          if (destination == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(guard).append(',').append(length).append(',').append(offset).append(')').toString());
         }
     }
 
@@ -67,27 +67,27 @@ final class LimitedRandomAccessFile {
         }
     }
 
-    final void a(byte[] param0, int param1, int param2, int param3) throws IOException {
+    final void write(byte[] source, int offset, int length, int guard) throws IOException {
         try {
-          if ((this.field_e + (long)param2) > this.field_f) {
-            this.field_h.seek(this.field_f);
-            this.field_h.write(1);
+          if ((this.position + (long)length) > this.maxLength) {
+            this.file.seek(this.maxLength);
+            this.file.write(1);
             throw new EOFException();
           }
-          this.field_h.write(param0, param1, param2);
-          if (param3 != 1) {
-            this.field_e = -67L;
+          this.file.write(source, offset, length);
+          if (guard != 1) {
+            this.position = -67L;
           }
-          this.field_e = this.field_e + (long)param2;
+          this.position = this.position + (long)length;
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "sr.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "sr.F(" + (source != null ? "{...}" : "null") + ',' + offset + ',' + length + ',' + guard + ')');
         }
     }
 
-    final void a(byte param0, long param1) throws IOException {
-        this.field_h.seek(param1);
-        this.field_e = param1;
-        int var4 = -27 / ((-13 - param0) / 49);
+    final void seek(byte guard, long offset) throws IOException {
+        this.file.seek(offset);
+        this.position = offset;
+        int var4 = -27 / ((-13 - guard) / 49);
     }
 
     final static void a(java.math.BigInteger param0, int param1, byte[] param2, java.math.BigInteger param3, byte param4, PacketBuffer param5, int param6) {
@@ -127,28 +127,28 @@ final class LimitedRandomAccessFile {
             qc.field_c = new PacketBuffer(var7_int);
           }
           qc.field_c.position = 0;
-          qc.field_c.a(param2, (byte) -123, param1, param6);
-          qc.field_c.a((byte) -3, var7_int);
-          qc.field_c.a(var13, 104);
+          qc.field_c.writeBytes(param2, (byte) -123, param1, param6);
+          qc.field_c.padTo((byte) -3, var7_int);
+          qc.field_c.encryptXtea(var13, 104);
           if (sv.field_c == null ||
             !(100 <= sv.field_c.payload.length)) {
             sv.field_c = new PacketBuffer(100);
           }
           sv.field_c.position = 0;
-          sv.field_c.b((byte) 25, 10);
+          sv.field_c.writeByte((byte) 25, 10);
           var11 = 0;
           var9Lifetime1 = var11;
           while (var11 < 4) {
-            sv.field_c.e(48, var13[var11]);
+            sv.field_c.writeInt(48, var13[var11]);
             var11++;
           }
-          sv.field_c.b(125, param1);
-          sv.field_c.a((byte) 123, param0, param3);
-          param5.a(sv.field_c.payload, (byte) -123, sv.field_c.position, 0);
+          sv.field_c.writeShort(125, param1);
+          sv.field_c.encryptRsa((byte) 123, param0, param3);
+          param5.writeBytes(sv.field_c.payload, (byte) -123, sv.field_c.position, 0);
           if (param4 > -6) {
             return;
           }
-          param5.a(qc.field_c.payload, (byte) -123, qc.field_c.position, 0);
+          param5.writeBytes(qc.field_c.payload, (byte) -123, qc.field_c.position, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -182,53 +182,53 @@ final class LimitedRandomAccessFile {
         }
     }
 
-    final void b(int param0) throws IOException {
-        if (this.field_h != null) {
-          this.field_h.close();
-          this.field_h = null;
+    final void close(int guard) throws IOException {
+        if (this.file != null) {
+          this.file.close();
+          this.file = null;
         }
-        if (param0 != 0) {
+        if (guard != 0) {
           PacketBuffer var3 = (PacketBuffer) null;
           LimitedRandomAccessFile.a((java.math.BigInteger) null, 53, (byte[]) null, (java.math.BigInteger) null, (byte) 2, (PacketBuffer) null, 24);
         }
     }
 
-    final long a(int param0) throws IOException {
-        if (param0 <= 34) {
+    final long length(int guard) throws IOException {
+        if (guard <= 34) {
           PacketBuffer var3 = (PacketBuffer) null;
           LimitedRandomAccessFile.a((java.math.BigInteger) null, -30, (byte[]) null, (java.math.BigInteger) null, (byte) -2, (PacketBuffer) null, -103);
         }
-        return this.field_h.length();
+        return this.file.length();
     }
 
-    LimitedRandomAccessFile(File param0, String param1, long param2) throws IOException {
+    LimitedRandomAccessFile(File path, String mode, long lengthLimit) throws IOException {
         int var5_int = 0;
         try {
-          if (param2 == -1L) {
-            param2 = 9223372036854775807L;
+          if (lengthLimit == -1L) {
+            lengthLimit = 9223372036854775807L;
           }
-          if (param0.length() > param2) {
-            param0.delete();
+          if (path.length() > lengthLimit) {
+            path.delete();
           }
-          this.field_h = new RandomAccessFile(param0, param1);
-          this.field_e = 0L;
-          this.field_f = param2;
-          var5_int = this.field_h.read();
+          this.file = new RandomAccessFile(path, mode);
+          this.position = 0L;
+          this.maxLength = lengthLimit;
+          var5_int = this.file.read();
           if (var5_int != -1 &&
-            !param1.equals("r")) {
-            this.field_h.seek(0L);
-            this.field_h.write(var5_int);
+            !mode.equals("r")) {
+            this.file.seek(0L);
+            this.file.write(var5_int);
           }
-          this.field_h.seek(0L);
+          this.file.seek(0L);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "sr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "sr.<init>(" + (path != null ? "{...}" : "null") + ',' + (mode != null ? "{...}" : "null") + ',' + lengthLimit + ')');
         }
     }
 
     protected final void finalize() throws Throwable {
-        if (this.field_h != null) {
+        if (this.file != null) {
           System.out.println("");
-          this.b(0);
+          this.close(0);
         }
     }
 

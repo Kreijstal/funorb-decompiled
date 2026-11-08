@@ -125,10 +125,10 @@ final class dv implements WidgetRenderer {
               stackIn_13_0 = (String) null;
               return stackIn_13_0;
             }
-            if (bf.field_d == null) {
+            if (IntIndexHashTable.field_d == null) {
               return param1.getParameter("settings");
             }
-            stackIn_17_0 = bf.field_d;
+            stackIn_17_0 = IntIndexHashTable.field_d;
             return stackIn_17_0;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

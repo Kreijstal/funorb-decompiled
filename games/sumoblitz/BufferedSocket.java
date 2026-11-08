@@ -5,30 +5,30 @@ import java.io.*;
 
 final class BufferedSocket implements Runnable {
     static SpriteData field_n;
-    private byte[] field_e;
-    static jr field_p;
-    private int field_c;
-    private int field_j;
-    private boolean field_b;
-    private boolean field_l;
-    private OutputStream field_k;
+    private byte[] writeBuffer;
+    static PlatformTask field_p;
+    private int readPosition;
+    private int bufferCapacity;
+    private boolean writeError;
+    private boolean closed;
+    private OutputStream output;
     static String[] field_i;
     static String moreSuggestionsText;
-    private PlatformTaskDispatcher field_g;
-    private int field_a;
+    private PlatformTaskDispatcher taskDispatcher;
+    private int writePosition;
     static boolean field_f;
-    private java.net.Socket field_m;
-    private jr field_o;
-    private InputStream field_d;
+    private java.net.Socket socket;
+    private PlatformTask writerTask;
+    private InputStream input;
 
-    final int a(int param0) throws IOException {
-        if (param0 >= -84) {
-          this.field_e = (byte[]) null;
+    final int readByte(int guard) throws IOException {
+        if (guard >= -84) {
+          this.writeBuffer = (byte[]) null;
         }
-        if (this.field_l) {
+        if (this.closed) {
           return 0;
         }
-        return this.field_d.read();
+        return this.input.read();
     }
 
     public final void run() {
@@ -50,8 +50,8 @@ final class BufferedSocket implements Runnable {
               var3 = this;
               synchronized (var3) {
                 boolean decompiledFrameRemainder0 = true;
-                if (this.field_a == this.field_c) {
-                  if (this.field_l) {
+                if (this.writePosition == this.readPosition) {
+                  if (this.closed) {
                     decompiledRegionSelector0 = 0;
                     decompiledFrameRemainder0 = false;
                   }
@@ -65,52 +65,52 @@ final class BufferedSocket implements Runnable {
                   }
                 }
                 if (decompiledFrameRemainder0) {
-                  if (this.field_c > this.field_a) {
-                    var1_int = -this.field_c + this.field_j;
+                  if (this.readPosition > this.writePosition) {
+                    var1_int = -this.readPosition + this.bufferCapacity;
                   } else {
-                    var1_int = -this.field_c + this.field_a;
+                    var1_int = -this.readPosition + this.writePosition;
                   }
-                  var2 = this.field_c;
+                  var2 = this.readPosition;
                   decompiledRegionSelector0 = 1;
                 }
               }
               if (decompiledRegionSelector0 == 0) {
                 try {
-                  if (null != this.field_d) {
-                    this.field_d.close();
+                  if (null != this.input) {
+                    this.input.close();
                   }
-                  if (null != this.field_k) {
-                    this.field_k.close();
+                  if (null != this.output) {
+                    this.output.close();
                   }
-                  if (this.field_m != null) {
-                    this.field_m.close();
+                  if (this.socket != null) {
+                    this.socket.close();
                   }
                 } catch (java.io.IOException decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var1 = (IOException) (Object) decompiledCaughtException;
                 }
-                this.field_e = null;
+                this.writeBuffer = null;
                 break;
               }
               if (0 >= var1_int) {
                 continue;
               }
               try {
-                this.field_k.write(this.field_e, var2, var1_int);
+                this.output.write(this.writeBuffer, var2, var1_int);
               } catch (java.io.IOException decompiledCaughtParameter2) {
                 decompiledCaughtException = decompiledCaughtParameter2;
                 var3_ref = (IOException) (Object) decompiledCaughtException;
-                this.field_b = true;
+                this.writeError = true;
               }
-              this.field_c = (this.field_c + var1_int) % this.field_j;
+              this.readPosition = (this.readPosition + var1_int) % this.bufferCapacity;
               try {
-                if (this.field_a == this.field_c) {
-                  this.field_k.flush();
+                if (this.writePosition == this.readPosition) {
+                  this.output.flush();
                 }
               } catch (java.io.IOException decompiledCaughtParameter3) {
                 decompiledCaughtException = decompiledCaughtParameter3;
                 var3_ref = (IOException) (Object) decompiledCaughtException;
-                this.field_b = true;
+                this.writeError = true;
               }
             }
           } catch (java.lang.Exception decompiledCaughtParameter4) {
@@ -126,47 +126,47 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final void b(int param0) throws IOException {
-        if (this.field_l) {
+    final void checkWriteError(int guard) throws IOException {
+        if (this.closed) {
           return;
         }
-        int var2 = -72 / ((36 - param0) / 42);
-        if (this.field_b) {
-          this.field_b = false;
+        int var2 = -72 / ((36 - guard) / 42);
+        if (this.writeError) {
+          this.writeError = false;
           throw new IOException();
         }
     }
 
     protected final void finalize() {
-        this.a((byte) -97);
+        this.close((byte) -97);
     }
 
-    final void a(byte param0) {
+    final void close(byte guard) {
         try {
           int var4 = 0;
           var4 = Sumoblitz.field_L ? 1 : 0;
-          if (this.field_l) {
+          if (this.closed) {
             return;
           }
-          if (param0 >= -36) {
-            this.field_g = (PlatformTaskDispatcher) null;
+          if (guard >= -36) {
+            this.taskDispatcher = (PlatformTaskDispatcher) null;
           }
           synchronized (this) {
-            this.field_l = true;
+            this.closed = true;
             this.notifyAll();
           }
-          if (this.field_o != null) {
-            while (this.field_o.field_c == 0) {
+          if (this.writerTask != null) {
+            while (this.writerTask.status == 0) {
               tg.a(1L, (byte) 113);
             }
-            if (this.field_o.field_c == 1) {
+            if (this.writerTask.status == 1) {
               try {
-                ((Thread) (this.field_o.field_d)).join();
+                ((Thread) (this.writerTask.result)).join();
               } catch (InterruptedException interruptedException) {
               }
             }
           }
-          this.field_o = null;
+          this.writerTask = null;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -174,17 +174,17 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final int c(int param0) throws IOException {
-        if (param0 >= -22) {
+    final int available(int guard) throws IOException {
+        if (guard >= -22) {
           return 73;
         }
-        if (this.field_l) {
+        if (this.closed) {
           return 0;
         }
-        return this.field_d.available();
+        return this.input.available();
     }
 
-    final void a(int param0, int param1, byte[] param2, int param3) throws IOException {
+    final void write(int offset, int guard, byte[] source, int length) throws IOException {
         int var6 = 0;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
@@ -195,30 +195,30 @@ final class BufferedSocket implements Runnable {
         int var8 = 0;
         var8 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (this.field_l) {
+          if (this.closed) {
             return;
           }
-          if (this.field_b) {
-            this.field_b = false;
+          if (this.writeError) {
+            this.writeError = false;
             throw new IOException();
           }
-          if (null == this.field_e) {
-            this.field_e = new byte[this.field_j];
+          if (null == this.writeBuffer) {
+            this.writeBuffer = new byte[this.bufferCapacity];
           }
           var5 = this;
           synchronized (var5) {
-            if (param1 != -2) {
-              this.field_m = (java.net.Socket) null;
+            if (guard != -2) {
+              this.socket = (java.net.Socket) null;
             }
-            for (var6 = 0; var6 < param3; var6++) {
-              this.field_e[this.field_a] = param2[var6 + param0];
-              this.field_a = (this.field_a + 1) % this.field_j;
-              if (this.field_a == (-100 + this.field_c + this.field_j) % this.field_j) {
+            for (var6 = 0; var6 < length; var6++) {
+              this.writeBuffer[this.writePosition] = source[var6 + offset];
+              this.writePosition = (this.writePosition + 1) % this.bufferCapacity;
+              if (this.writePosition == (-100 + this.readPosition + this.bufferCapacity) % this.bufferCapacity) {
                 throw new IOException();
               }
             }
-            if (this.field_o == null) {
-              this.field_o = this.field_g.a(true, (Runnable) (this), 3);
+            if (this.writerTask == null) {
+              this.writerTask = this.taskDispatcher.a(true, (Runnable) (this), 3);
             }
             this.notifyAll();
           }
@@ -227,33 +227,33 @@ final class BufferedSocket implements Runnable {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5_ref = (RuntimeException) (Object) decompiledCaughtException;
           stackIn_25_0 = var5_ref;
-          stackIn_25_1 = new StringBuilder().append("dt.G(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_25_1 = new StringBuilder().append("dt.G(").append(offset).append(',').append(guard).append(',');
+          if (source == null) {
             stackIn_26_2 = "null";
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(length).append(')').toString());
         }
     }
 
-    BufferedSocket(java.net.Socket param0, PlatformTaskDispatcher param1) throws IOException {
-        this(param0, param1, 5000);
+    BufferedSocket(java.net.Socket connection, PlatformTaskDispatcher dispatcher) throws IOException {
+        this(connection, dispatcher, 5000);
     }
 
     private BufferedSocket(java.net.Socket param0, PlatformTaskDispatcher param1, int param2) throws IOException {
-        this.field_c = 0;
-        this.field_l = false;
-        this.field_b = false;
-        this.field_a = 0;
+        this.readPosition = 0;
+        this.closed = false;
+        this.writeError = false;
+        this.writePosition = 0;
         try {
-          this.field_m = param0;
-          this.field_g = param1;
-          this.field_m.setSoTimeout(30000);
-          this.field_m.setTcpNoDelay(true);
-          this.field_d = this.field_m.getInputStream();
-          this.field_k = this.field_m.getOutputStream();
-          this.field_j = param2;
+          this.socket = param0;
+          this.taskDispatcher = param1;
+          this.socket.setSoTimeout(30000);
+          this.socket.setTcpNoDelay(true);
+          this.input = this.socket.getInputStream();
+          this.output = this.socket.getOutputStream();
+          this.bufferCapacity = param2;
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "dt.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -269,7 +269,7 @@ final class BufferedSocket implements Runnable {
         field_n = null;
     }
 
-    final void a(int param0, int param1, int param2, byte[] param3) throws IOException {
+    final void readFully(int guard, int offset, int length, byte[] destination) throws IOException {
         int var5_int = 0;
         int var6 = 0;
         RuntimeException stackIn_15_0 = null;
@@ -279,27 +279,27 @@ final class BufferedSocket implements Runnable {
         RuntimeException var5 = null;
         var6 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (this.field_l) {
+          if (this.closed) {
             return;
           }
-          while (0 < param2) {
-            var5_int = this.field_d.read(param3, param1, param2);
+          while (0 < length) {
+            var5_int = this.input.read(destination, offset, length);
             if (0 >= var5_int) {
               throw new EOFException();
             }
-            param1 = param1 + var5_int;
-            param2 = param2 - var5_int;
+            offset = offset + var5_int;
+            length = length - var5_int;
           }
-          if (param0 > -12) {
-            this.field_b = true;
+          if (guard > -12) {
+            this.writeError = true;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_15_0 = var5;
-          stackIn_15_1 = new StringBuilder().append("dt.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_15_1 = new StringBuilder().append("dt.D(").append(guard).append(',').append(offset).append(',').append(length).append(',');
+          if (destination == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";

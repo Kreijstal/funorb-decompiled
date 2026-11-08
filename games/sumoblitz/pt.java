@@ -12,7 +12,7 @@ abstract class pt {
         if (param0) {
           Sumoblitz.field_H = Sumoblitz.field_H - 1;
           if (0 == Sumoblitz.field_H) {
-            jg.field_b = null;
+            GzipDecompressor.field_b = null;
           }
         }
         if (param2 != -1) {
@@ -72,8 +72,8 @@ abstract class pt {
           if (param0 != -22683) {
             return;
           }
-          var2 = var10.e(param0 - 8619);
-          var3 = var10.e(-31302);
+          var2 = var10.readUnsignedByte(param0 - 8619);
+          var3 = var10.readUnsignedByte(-31302);
           if (var2 == 0) {
             var4_ref_qv = (qv) (MenuScreen.field_b.first(-95));
             if (var4_ref_qv == null) {
@@ -88,13 +88,13 @@ abstract class pt {
               var5_int = var12.length << 2;
             }
             for (var7 = 0; var7 < var5_int; var7++) {
-              var6[var7 >> 2] = var6[var7 >> 2] + (var10.e(-31302) << eb.a(768, var7 << 8));
+              var6[var7 >> 2] = var6[var7 >> 2] + (var10.readUnsignedByte(-31302) << eb.a(768, var7 << 8));
             }
             var4_ref_qv.unlink(false);
             return;
           }
           if (1 == var2) {
-            var4 = var10.h(-2858);
+            var4 = var10.readSignedSmart(-2858);
             var5 = (lt) (em.field_d.first(-73));
             while (var5 != null) {
               if (var3 != var5.field_k ||
@@ -143,11 +143,11 @@ abstract class pt {
           if (!param3) {
             field_c = (java.util.zip.CRC32) null;
           }
-          if (!param1.b((byte) 127)) {
+          if (!param1.loadIndex((byte) 127)) {
             stackIn_5_0 = (String) (param2);
             return stackIn_5_0;
           }
-          stackIn_7_0 = param4 + " - " + param1.a(param0, (byte) 33) + "%";
+          stackIn_7_0 = param4 + " - " + param1.namedGroupLoadPercent(param0, (byte) 33) + "%";
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

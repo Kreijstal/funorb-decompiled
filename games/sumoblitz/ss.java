@@ -18,7 +18,7 @@ final class ss {
           wq.a(false, param2);
           lq.a(param2, -84);
           qt.b(true);
-          rw.a((byte) -90);
+          ResourceRequest.a((byte) -90);
           if (param1 < 125) {
             restartLevelText = (String) null;
           }
@@ -36,9 +36,9 @@ final class ss {
             restartLevelText = (String) null;
           }
           var3.g(param0, 8);
-          var3.b((byte) 16, 2);
-          var3.b((byte) 89, 0);
-          var3.b((byte) 82, param2.field_n);
+          var3.writeByte((byte) 16, 2);
+          var3.writeByte((byte) 89, 0);
+          var3.writeByte((byte) 82, param2.field_n);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ss.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

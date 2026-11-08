@@ -39,14 +39,14 @@ final class DisplayModeConfirmationDialog extends ResizingDialog implements Widg
           if (this.open &&
             null == CompactMeshGeometry.field_o) {
             this.e(true);
-            this.dialogLayer.pushDialog((byte) 97, new DisplayModeErrorDialog(this.dialogLayer, am.field_e));
+            this.dialogLayer.pushDialog((byte) 97, new DisplayModeErrorDialog(this.dialogLayer, CachedArchiveProvider.field_e));
           }
           if (null != CompactMeshGeometry.field_o) {
             if (!CompactMeshGeometry.field_o.field_a) {
               return;
             }
             this.e(true);
-            this.dialogLayer.pushDialog((byte) 122, new DisplayModeErrorDialog(this.dialogLayer, am.field_e));
+            this.dialogLayer.pushDialog((byte) 122, new DisplayModeErrorDialog(this.dialogLayer, CachedArchiveProvider.field_e));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -56,7 +56,7 @@ final class kr {
     final static void a(boolean param0, int param1, boolean param2) {
         if (param2) {
           Sumoblitz.field_H = Sumoblitz.field_H + 1;
-          rb.a(-129);
+          ArchiveProvider.a(-129);
           if (param1 > -16) {
             kr.releaseStatics(28);
             if (param0) {

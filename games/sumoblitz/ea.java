@@ -111,7 +111,7 @@ final class ea {
           return;
         }
         try {
-          ro.b(246);
+          SecondaryNodeQueue.b(246);
           vm.field_c = hm.field_a;
           ProxySocketConnector.field_e = hm.field_a;
         } catch (RuntimeException runtimeException) {

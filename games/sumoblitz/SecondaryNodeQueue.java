@@ -1,34 +1,34 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ro {
+final class SecondaryNodeQueue {
     static vq field_a;
     static int field_c;
     static int field_d;
-    private DualLinkNode field_e;
-    private DualLinkNode field_b;
+    private DualLinkNode sentinel;
+    private DualLinkNode cursor;
 
-    final DualLinkNode d(int param0) {
-        DualLinkNode var2 = this.field_b;
-        if (var2 == this.field_e) {
-          this.field_b = null;
+    final DualLinkNode next(int guard) {
+        DualLinkNode var2 = this.cursor;
+        if (var2 == this.sentinel) {
+          this.cursor = null;
           return null;
         }
-        if (param0 != -2) {
+        if (guard != -2) {
           return (DualLinkNode) null;
         }
-        this.field_b = var2.secondaryNext;
+        this.cursor = var2.secondaryNext;
         return var2;
     }
 
-    final int a(byte param0) {
+    final int size(byte guard) {
         int var4 = Sumoblitz.field_L ? 1 : 0;
-        if (param0 != 2) {
+        if (guard != 2) {
           return 62;
         }
         int var2 = 0;
-        DualLinkNode var3 = this.field_e.secondaryNext;
-        while (var3 != this.field_e) {
+        DualLinkNode var3 = this.sentinel.secondaryNext;
+        while (var3 != this.sentinel) {
           var2++;
           var3 = var3.secondaryNext;
         }
@@ -76,38 +76,38 @@ final class ro {
           try {
             var4_int = 65 / ((9 - param0) / 55);
             var5 = new rd();
-            var5.field_p = param1.e(-31302);
-            var5.field_t = param1.c(true);
-            var5.field_o = new jr[var5.field_p];
+            var5.field_p = param1.readUnsignedByte(-31302);
+            var5.field_t = param1.readInt(true);
+            var5.field_o = new PlatformTask[var5.field_p];
             var5.field_k = new int[var5.field_p];
             var5.field_u = new byte[var5.field_p][][];
-            var5.field_s = new jr[var5.field_p];
+            var5.field_s = new PlatformTask[var5.field_p];
             var5.field_n = new int[var5.field_p];
             var5.field_r = new int[var5.field_p];
             for (var6 = 0; var6 < var5.field_p; var6++) {
               try {
-                var7_int = param1.e(-31302);
+                var7_int = param1.readUnsignedByte(-31302);
                 if (var7_int != 0 &&
                   1 != var7_int &&
                   var7_int != 2) {
                   if (3 == var7_int ||
                     var7_int == 4) {
-                    var20 = param1.d(-1);
-                    var21 = param1.d(-1);
-                    var10 = param1.e(-31302);
+                    var20 = param1.readCp1252String(-1);
+                    var21 = param1.readCp1252String(-1);
+                    var10 = param1.readUnsignedByte(-31302);
                     var11 = new String[var10];
                     for (var12_int = 0; var10 > var12_int; var12_int++) {
-                      var11[var12_int] = param1.d(-1);
+                      var11[var12_int] = param1.readCp1252String(-1);
                     }
                     var22 = new byte[var10][];
                     var19 = var22;
                     var12 = var19;
                     if (var7_int == 3) {
                       for (var13_int = 0; var13_int < var10; var13_int++) {
-                        var14 = param1.c(true);
+                        var14 = param1.readInt(true);
                         array$0 = new byte[var14];
                         var12[var13_int] = array$0;
-                        param1.a(var22[var13_int], var14, 0, (byte) -33);
+                        param1.readBytes(var22[var13_int], var14, 0, (byte) -33);
                       }
                     }
                     var5.field_r[var6] = var7_int;
@@ -122,13 +122,13 @@ final class ro {
                     var5.field_u[var6] = var22;
                   }
                 } else {
-                  var17 = param1.d(-1);
+                  var17 = param1.readCp1252String(-1);
                   var8 = var17;
-                  var16 = param1.d(-1);
+                  var16 = param1.readCp1252String(-1);
                   var9 = var16;
                   var10 = 0;
                   if (var7_int == 1) {
-                    var10 = param1.c(true);
+                    var10 = param1.readInt(true);
                   }
                   var5.field_r[var6] = var7_int;
                   var5.field_n[var6] = var10;
@@ -188,7 +188,7 @@ final class ro {
         rf.field_a = new DialogLayer();
         sm.a((byte) 127, true, true);
         if (param0 != 246) {
-          ro.a(22, 45, -112, 42, -110, true, -91, 8, 90);
+          SecondaryNodeQueue.a(22, 45, -112, 42, -110, true, -91, 8, 90);
         }
     }
 
@@ -241,7 +241,7 @@ final class ro {
               param8 = param8 >> var9;
             }
             if (param5) {
-              ro.a(67, -70, -24, 44, 33, true, -93, 8, -123);
+              SecondaryNodeQueue.a(67, -70, -24, 44, 33, true, -93, 8, -123);
             }
             if (param7 <= 0) {
               return -1;
@@ -260,59 +260,59 @@ final class ro {
         return -1;
     }
 
-    final void a(DualLinkNode param0, byte param1) {
+    final void addLast(DualLinkNode node, byte guard) {
         try {
-          if (param0.secondaryPrevious != null) {
-            param0.unlinkSecondary(-5106);
+          if (node.secondaryPrevious != null) {
+            node.unlinkSecondary(-5106);
           }
-          param0.secondaryPrevious = this.field_e.secondaryPrevious;
-          if (param1 > -100) {
-            this.a((byte) 78);
+          node.secondaryPrevious = this.sentinel.secondaryPrevious;
+          if (guard > -100) {
+            this.size((byte) 78);
           }
-          param0.secondaryNext = this.field_e;
-          param0.secondaryPrevious.secondaryNext = param0;
-          param0.secondaryNext.secondaryPrevious = param0;
+          node.secondaryNext = this.sentinel;
+          node.secondaryPrevious.secondaryNext = node;
+          node.secondaryNext.secondaryPrevious = node;
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ro.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ro.H(" + (node != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 
-    final DualLinkNode a(int param0) {
-        DualLinkNode var2 = this.field_e.secondaryNext;
-        if (param0 < 8) {
-          this.field_e = (DualLinkNode) null;
+    final DualLinkNode first(int guard) {
+        DualLinkNode var2 = this.sentinel.secondaryNext;
+        if (guard < 8) {
+          this.sentinel = (DualLinkNode) null;
         }
-        if (this.field_e == var2) {
-          this.field_b = null;
+        if (this.sentinel == var2) {
+          this.cursor = null;
           return null;
         }
-        this.field_b = var2.secondaryNext;
+        this.cursor = var2.secondaryNext;
         return var2;
     }
 
-    final void a(DualLinkNode param0, int param1) {
+    final void addFirst(DualLinkNode node, int guard) {
         try {
-          if (param0.secondaryPrevious != null) {
-            param0.unlinkSecondary(-5106);
+          if (node.secondaryPrevious != null) {
+            node.unlinkSecondary(-5106);
           }
-          param0.secondaryPrevious = this.field_e;
-          param0.secondaryNext = this.field_e.secondaryNext;
-          if (param1 != -4) {
-            ro.releaseStatics(-24);
+          node.secondaryPrevious = this.sentinel;
+          node.secondaryNext = this.sentinel.secondaryNext;
+          if (guard != -4) {
+            SecondaryNodeQueue.releaseStatics(-24);
           }
-          param0.secondaryPrevious.secondaryNext = param0;
-          param0.secondaryNext.secondaryPrevious = param0;
+          node.secondaryPrevious.secondaryNext = node;
+          node.secondaryNext.secondaryPrevious = node;
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ro.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ro.B(" + (node != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 
-    final DualLinkNode b(byte param0) {
-        if (param0 != 72) {
+    final DualLinkNode removeFirst(byte guard) {
+        if (guard != 72) {
           return (DualLinkNode) null;
         }
-        DualLinkNode var2 = this.field_e.secondaryNext;
-        if (var2 == this.field_e) {
+        DualLinkNode var2 = this.sentinel.secondaryNext;
+        if (var2 == this.sentinel) {
           return null;
         }
         var2.unlinkSecondary(-5106);
@@ -359,22 +359,22 @@ final class ro {
         }
     }
 
-    final DualLinkNode c(byte param0) {
-        if (param0 != 126) {
-          this.field_e = (DualLinkNode) null;
+    final DualLinkNode removeLast(byte guard) {
+        if (guard != 126) {
+          this.sentinel = (DualLinkNode) null;
         }
-        DualLinkNode var2 = this.field_e.secondaryPrevious;
-        if (var2 == this.field_e) {
+        DualLinkNode var2 = this.sentinel.secondaryPrevious;
+        if (var2 == this.sentinel) {
           return null;
         }
-        var2.unlinkSecondary(param0 - 5232);
+        var2.unlinkSecondary(guard - 5232);
         return var2;
     }
 
-    public ro() {
-        this.field_e = new DualLinkNode();
-        this.field_e.secondaryPrevious = this.field_e;
-        this.field_e.secondaryNext = this.field_e;
+    public SecondaryNodeQueue() {
+        this.sentinel = new DualLinkNode();
+        this.sentinel.secondaryPrevious = this.sentinel;
+        this.sentinel.secondaryNext = this.sentinel;
     }
 
     static {

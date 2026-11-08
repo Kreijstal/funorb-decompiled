@@ -12,23 +12,23 @@ final class vf {
         if (null != hc.field_c) {
           hc.field_c.n(-7);
           if (param0 == -49) {
-            ro.field_a = new vq();
-            SlowBurstParticle.field_y.transitionToContent((byte) -94, ro.field_a);
+            SecondaryNodeQueue.field_a = new vq();
+            SlowBurstParticle.field_y.transitionToContent((byte) -94, SecondaryNodeQueue.field_a);
             return;
           }
           vf.a(3);
-          ro.field_a = new vq();
-          SlowBurstParticle.field_y.transitionToContent((byte) -94, ro.field_a);
+          SecondaryNodeQueue.field_a = new vq();
+          SlowBurstParticle.field_y.transitionToContent((byte) -94, SecondaryNodeQueue.field_a);
           return;
         }
         if (param0 != -49) {
           vf.a(3);
-          ro.field_a = new vq();
-          SlowBurstParticle.field_y.transitionToContent((byte) -94, ro.field_a);
+          SecondaryNodeQueue.field_a = new vq();
+          SlowBurstParticle.field_y.transitionToContent((byte) -94, SecondaryNodeQueue.field_a);
           return;
         }
-        ro.field_a = new vq();
-        SlowBurstParticle.field_y.transitionToContent((byte) -94, ro.field_a);
+        SecondaryNodeQueue.field_a = new vq();
+        SlowBurstParticle.field_y.transitionToContent((byte) -94, SecondaryNodeQueue.field_a);
     }
 
     final static bo a(ResourceArchive param0, boolean param1, String param2, String param3, ResourceArchive param4) {
@@ -50,8 +50,8 @@ final class vf {
           if (!param1) {
             field_c = (qr) null;
           }
-          var5_int = param4.a(0, param2);
-          var6 = param4.a(var5_int, param3, (byte) 126);
+          var5_int = param4.groupId(0, param2);
+          var6 = param4.fileId(var5_int, param3, (byte) 126);
           stackIn_3_0 = tf.a(param0, (byte) -71, var5_int, var6, param4);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

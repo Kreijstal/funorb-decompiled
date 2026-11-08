@@ -165,7 +165,7 @@ final class b {
             b.c((byte) -53);
           }
           var13 = ig.field_a;
-          var2 = var13.e(-31302);
+          var2 = var13.readUnsignedByte(-31302);
           if (var2 == 0) {
             var11 = lr.a(-14808);
             var17 = var11;
@@ -174,9 +174,9 @@ final class b {
             var10 = var11;
             var4 = var10;
             var5 = var13;
-            var6 = ((PacketBuffer) ((Object) var5)).e(param0 - 1218);
+            var6 = ((PacketBuffer) ((Object) var5)).readUnsignedByte(param0 - 1218);
             for (var7 = 0; var7 < var6; var7++) {
-              var10[var7] = ((PacketBuffer) ((Object) var5)).c(true);
+              var10[var7] = ((PacketBuffer) ((Object) var5)).readInt(true);
             }
             var16_ref = (eg) (wr.field_E.first(-120));
             if (var16_ref == null) {

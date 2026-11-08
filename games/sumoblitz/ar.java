@@ -82,7 +82,7 @@ class ar extends InteractiveWidget {
         var7 = Sumoblitz.field_L ? 1 : 0;
         try {
           var11 = ig.field_a;
-          var2 = var11.e(-31302);
+          var2 = var11.readUnsignedByte(-31302);
           var3 = 99 / ((-33 - param0) / 36);
           if (var2 == 0) {
             var10 = (lh) (no.field_d.first(-110));
@@ -90,18 +90,18 @@ class ar extends InteractiveWidget {
               kk.a((byte) -109);
               return;
             }
-            var5 = var11.e(-31302);
+            var5 = var11.readUnsignedByte(-31302);
             if (var5 != 0) {
               var13 = new byte[var5];
               var12 = var13;
               var9 = var12;
               var6 = var9;
-              var11.a(var13, var5, 0, (byte) -47);
+              var11.readBytes(var13, var5, 0, (byte) -47);
             } else {
               var6 = null;
             }
             var11.position = var11.position + 4;
-            if (!var11.e((byte) -9)) {
+            if (!var11.verifyTrailingCrc32((byte) -9)) {
               kk.a((byte) -127);
               return;
             }
@@ -110,7 +110,7 @@ class ar extends InteractiveWidget {
             var10.unlink(false);
           } else {
             if (var2 == 1) {
-              var4 = var11.c(true);
+              var4 = var11.readInt(true);
               var5_ref_db = (db) (jj.field_a.first(83));
               while (var5_ref_db != null) {
                 if (var4 != var5_ref_db.field_m) {

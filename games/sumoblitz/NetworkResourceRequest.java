@@ -1,28 +1,28 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fv extends rw {
+final class NetworkResourceRequest extends ResourceRequest {
     static float[] field_v;
     static mi field_y;
-    int field_x;
-    PacketBuffer field_w;
-    byte field_z;
+    int blockPosition;
+    PacketBuffer response;
+    byte paddingBytes;
 
-    public static void d(byte param0) {
+    public static void clearStaticState(byte guard) {
         field_y = null;
         field_v = null;
-        if (param0 != 62) {
+        if (guard != 62) {
           ResourceArchive var2 = (ResourceArchive) null;
-          fv.a(-52, (ResourceArchive) null, (ResourceArchive) null);
+          NetworkResourceRequest.a(-52, (ResourceArchive) null, (ResourceArchive) null);
         }
     }
 
-    final int a(int param0) {
-        if (this.field_w == null) {
+    final int loadPercent(int guard) {
+        if (this.response == null) {
           return 0;
         }
-        if (param0 == -1) {
-          return 100 * this.field_w.position / (-this.field_z + this.field_w.payload.length);
+        if (guard == -1) {
+          return 100 * this.response.position / (-this.paddingBytes + this.response.payload.length);
         }
         return 50;
     }
@@ -30,7 +30,7 @@ final class fv extends rw {
     final static void a(int param0, ResourceArchive param1, ResourceArchive param2) {
         try {
           if (param0 != 7966) {
-            fv.d((byte) 80);
+            NetworkResourceRequest.clearStaticState((byte) 80);
           }
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "fv.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -85,20 +85,20 @@ final class fv extends rw {
         }
     }
 
-    final byte[] d(boolean param0) {
-        if (param0) {
+    final byte[] completedBytes(boolean guard) {
+        if (guard) {
           return (byte[]) null;
         }
-        if (this.field_u) {
+        if (this.pending) {
           throw new RuntimeException();
         }
-        if (-this.field_z + this.field_w.payload.length <= this.field_w.position) {
-          return this.field_w.payload;
+        if (-this.paddingBytes + this.response.payload.length <= this.response.position) {
+          return this.response.payload;
         }
         throw new RuntimeException();
     }
 
-    fv() {
+    NetworkResourceRequest() {
     }
 
     static {

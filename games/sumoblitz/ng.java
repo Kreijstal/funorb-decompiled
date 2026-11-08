@@ -89,31 +89,31 @@ final class ng extends ShaderEffect {
           IOException var6 = null;
           Object var7 = null;
           Object var8 = null;
-          am var9 = null;
+          CachedArchiveProvider var9 = null;
           ResourceArchive stackIn_11_0 = null;
           Throwable decompiledCaughtException = null;
           try {
             var6_int = 100 % ((param1 + 29) / 42);
             var7 = null;
             if (CompactMeshGeometry.field_u.field_l != null) {
-              bc.field_a = new gj(CompactMeshGeometry.field_u.field_l, 5200, 0);
+              bc.field_a = new BufferedCacheFile(CompactMeshGeometry.field_u.field_l, 5200, 0);
               CompactMeshGeometry.field_u.field_l = null;
-              var7 = new wl(255, bc.field_a, new gj(CompactMeshGeometry.field_u.field_d, 12000, 0), 2097152);
+              var7 = new SectorCacheStore(255, bc.field_a, new BufferedCacheFile(CompactMeshGeometry.field_u.field_d, 12000, 0), 2097152);
             }
             var8 = null;
             if (null != bc.field_a) {
               if (null == ProgressDialog.field_O) {
-                ProgressDialog.field_O = new gj[CompactMeshGeometry.field_u.field_i.length];
+                ProgressDialog.field_O = new BufferedCacheFile[CompactMeshGeometry.field_u.field_i.length];
               }
               if (ProgressDialog.field_O[param3] == null) {
-                ProgressDialog.field_O[param3] = new gj(CompactMeshGeometry.field_u.field_i[param3], 12000, 0);
+                ProgressDialog.field_O[param3] = new BufferedCacheFile(CompactMeshGeometry.field_u.field_i[param3], 12000, 0);
                 CompactMeshGeometry.field_u.field_i[param3] = null;
               }
-              var8 = new wl(param3, bc.field_a, ProgressDialog.field_O[param3], 2097152);
+              var8 = new SectorCacheStore(param3, bc.field_a, ProgressDialog.field_O[param3], 2097152);
             }
-            var9 = wt.field_i.a(false, param3, (wl) (var7), param5, (wl) (var8));
+            var9 = wt.field_i.archiveProvider(false, param3, (SectorCacheStore) (var7), param5, (SectorCacheStore) (var8));
             if (param4) {
-              var9.c((byte) -81);
+              var9.enablePrefetch((byte) -81);
             }
             stackIn_11_0 = new ResourceArchive(var9, param2, param0);
             return stackIn_11_0;
@@ -248,10 +248,10 @@ final class ng extends ShaderEffect {
         ut var6;
         var4 = Sumoblitz.field_L ? 1 : 0;
         if (this.field_i == null) {
-          this.field_b.a(fv.field_y, 0, true);
+          this.field_b.a(NetworkResourceRequest.field_y, 0, true);
         } else {
           if (!param0) {
-            this.field_b.a(fv.field_y, 0, true);
+            this.field_b.a(NetworkResourceRequest.field_y, 0, true);
           } else {
             this.field_b.g(1, -118);
             this.field_b.a(param1 ^ 31584, nl.field_n);
@@ -265,12 +265,12 @@ final class ng extends ShaderEffect {
               this.field_b.a((byte) -83, lf.field_e, LoginForm.field_F);
               this.field_b.a(FontMetrics.field_a, 0, 0);
               this.field_b.a((byte) 102, 1, true, false, FontMetrics.field_a);
-              this.field_b.a(fv.field_y, 0, true);
+              this.field_b.a(NetworkResourceRequest.field_y, 0, true);
               this.field_b.a(this.field_b.field_D, param1 - 20079);
             } else {
               this.field_b.a((byte) -83, lf.field_e, LoginForm.field_F);
               this.field_b.a((byte) -66, 0, true, false, jq.field_a);
-              this.field_b.a(fv.field_y, 0, true);
+              this.field_b.a(NetworkResourceRequest.field_y, 0, true);
             }
             this.field_b.g(0, -113);
             this.field_h = true;

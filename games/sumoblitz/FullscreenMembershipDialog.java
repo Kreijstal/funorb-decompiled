@@ -23,7 +23,7 @@ final class FullscreenMembershipDialog extends ResizingDialog implements WidgetA
             this.field_P = (InteractiveWidget) null;
           }
           if (source == this.field_U) {
-            bf.a(0);
+            IntIndexHashTable.a(0);
             this.e(false);
             return;
           }
@@ -200,7 +200,7 @@ final class FullscreenMembershipDialog extends ResizingDialog implements WidgetA
             stackIn_12_0 = 5890;
             return stackIn_12_0;
           }
-          if (fv.field_y == param1) {
+          if (NetworkResourceRequest.field_y == param1) {
             stackIn_10_0 = 34167;
             return stackIn_10_0;
           }

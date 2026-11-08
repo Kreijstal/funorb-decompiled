@@ -34,7 +34,7 @@ final class lq {
         int var3 = 0;
         int var4 = 0;
         try {
-          var6 = new Sprite(param0.a("", "final_frame.jpg", -1), (java.awt.Component) ((Object) qn.field_f));
+          var6 = new Sprite(param0.fetchNamedFile("", "final_frame.jpg", -1), (java.awt.Component) ((Object) qn.field_f));
           var3 = var6.field_x;
           var4 = var6.field_u;
           GameApplet.j(103);
@@ -73,11 +73,11 @@ final class lq {
             stackIn_2_0 = (String) null;
             return stackIn_2_0;
           }
-          if (!param3.b((byte) 127)) {
+          if (!param3.loadIndex((byte) 127)) {
             stackIn_6_0 = (String) (param2);
             return stackIn_6_0;
           }
-          stackIn_8_0 = param1 + " - " + param3.a(0) + "%";
+          stackIn_8_0 = param1 + " - " + param3.loadPercent(0) + "%";
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

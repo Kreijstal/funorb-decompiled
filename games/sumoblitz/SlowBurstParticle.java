@@ -58,10 +58,10 @@ final class SlowBurstParticle extends TimedSceneEffect {
         DirectByteArrayStorage.a(370, 38, 200, 2, new int[]{31, 32}, 10, 440);
         DirectByteArrayStorage.a(240, 38, 200, 2, new int[]{28, 33}, 11, 440);
         DirectByteArrayStorage.a(370, 38, 200, 2, new int[]{33}, 12, 440);
-        t.field_q = (int)((double)ma.field_b.a(GameClientShell.field_u[12], 0) * 1.5);
+        SocketJs5Client.field_q = (int)((double)ma.field_b.a(GameClientShell.field_u[12], 0) * 1.5);
         int var1 = (int)((double)ma.field_b.a(GameClientShell.field_u[13], 0) * 1.5);
-        if (t.field_q < var1) {
-          t.field_q = var1;
+        if (SocketJs5Client.field_q < var1) {
+          SocketJs5Client.field_q = var1;
         }
         hg.field_o = new lg();
         return true;
@@ -143,7 +143,7 @@ final class SlowBurstParticle extends TimedSceneEffect {
           }
           var13 = ig.field_a;
           var15 = var13;
-          var2 = var15.e(-31302);
+          var2 = var15.readUnsignedByte(-31302);
           var3 = (km) (dk.field_a.first(122));
           while (var3 != null) {
             if (var2 != var3.field_n) {
@@ -156,12 +156,12 @@ final class SlowBurstParticle extends TimedSceneEffect {
             kk.a((byte) -115);
             return;
           }
-          var4 = var15.e(-31302);
+          var4 = var15.readUnsignedByte(-31302);
           if (var4 != 0) {
             var5 = var3.field_l;
             rf.field_b[0] = qv.field_o;
             for (var6_int = 1; var4 > var6_int; var6_int++) {
-              rf.field_b[var6_int] = var13.d(-1);
+              rf.field_b[var6_int] = var13.readCp1252String(-1);
             }
             tn.b(var4, -2147483648, var5);
             for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {

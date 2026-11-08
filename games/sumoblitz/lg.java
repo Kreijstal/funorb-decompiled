@@ -89,7 +89,7 @@ final class lg extends qt {
                 if (this.field_a == -1) {
                 } else {
                   if (0 == this.field_a) {
-                    ll.c(89);
+                    WhirlpoolTables.c(89);
                     UiWidget.d((byte) -83);
                     this.b((byte) -127);
                   } else {
@@ -106,7 +106,7 @@ final class lg extends qt {
               return;
             }
             if (0 == this.field_a) {
-              ll.c(89);
+              WhirlpoolTables.c(89);
               UiWidget.d((byte) -83);
               this.b((byte) -127);
               return;
@@ -121,7 +121,7 @@ final class lg extends qt {
             }
             if (this.field_a != -1) {
               if (0 == this.field_a) {
-                ll.c(89);
+                WhirlpoolTables.c(89);
                 UiWidget.d((byte) -83);
                 this.b((byte) -127);
                 return;
@@ -137,7 +137,7 @@ final class lg extends qt {
               return;
             }
             if (0 == this.field_a) {
-              ll.c(89);
+              WhirlpoolTables.c(89);
               UiWidget.d((byte) -83);
               this.b((byte) -127);
               return;
@@ -158,7 +158,7 @@ final class lg extends qt {
                 return;
               }
               if (0 == this.field_a) {
-                ll.c(89);
+                WhirlpoolTables.c(89);
                 UiWidget.d((byte) -83);
                 this.b((byte) -127);
                 return;
@@ -173,7 +173,7 @@ final class lg extends qt {
               return;
             }
             if (0 == this.field_a) {
-              ll.c(89);
+              WhirlpoolTables.c(89);
               UiWidget.d((byte) -83);
               this.b((byte) -127);
               return;
@@ -190,7 +190,7 @@ final class lg extends qt {
               return;
             }
             if (0 == this.field_a) {
-              ll.c(89);
+              WhirlpoolTables.c(89);
               UiWidget.d((byte) -83);
               this.b((byte) -127);
               return;
@@ -205,7 +205,7 @@ final class lg extends qt {
             return;
           }
           if (0 == this.field_a) {
-            ll.c(89);
+            WhirlpoolTables.c(89);
             UiWidget.d((byte) -83);
             this.b((byte) -127);
             return;

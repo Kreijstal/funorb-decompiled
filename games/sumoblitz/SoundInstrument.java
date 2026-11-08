@@ -257,7 +257,7 @@ final class SoundInstrument {
         this.pitchEnvelope.decode(buffer);
         this.volumeEnvelope = new SoundEnvelope();
         this.volumeEnvelope.decode(buffer);
-        int var2 = buffer.e(-31302);
+        int var2 = buffer.readUnsignedByte(-31302);
         if (var2 != 0) {
           buffer.position = buffer.position - 1;
           this.pitchModulation = new SoundEnvelope();
@@ -265,7 +265,7 @@ final class SoundInstrument {
           this.pitchModulationAmplitude = new SoundEnvelope();
           this.pitchModulationAmplitude.decode(buffer);
         }
-        var2 = buffer.e(-31302);
+        var2 = buffer.readUnsignedByte(-31302);
         if (var2 != 0) {
           buffer.position = buffer.position - 1;
           this.volumeModulation = new SoundEnvelope();
@@ -273,7 +273,7 @@ final class SoundInstrument {
           this.volumeModulationAmplitude = new SoundEnvelope();
           this.volumeModulationAmplitude.decode(buffer);
         }
-        var2 = buffer.e(-31302);
+        var2 = buffer.readUnsignedByte(-31302);
         if (var2 != 0) {
           buffer.position = buffer.position - 1;
           this.releaseEnvelope = new SoundEnvelope();
@@ -282,18 +282,18 @@ final class SoundInstrument {
           this.attackEnvelope.decode(buffer);
         }
         for (var3 = 0; var3 < 10; var3++) {
-          var4 = buffer.e(false);
+          var4 = buffer.readUnsignedSmart(false);
           if (var4 == 0) {
             break;
           }
           this.oscillatorVolumes[var3] = var4;
-          this.oscillatorPitchOffsets[var3] = buffer.h(-2858);
-          this.oscillatorDelays[var3] = buffer.e(false);
+          this.oscillatorPitchOffsets[var3] = buffer.readSignedSmart(-2858);
+          this.oscillatorDelays[var3] = buffer.readUnsignedSmart(false);
         }
-        this.echoDelayMillis = buffer.e(false);
-        this.echoDecayPercent = buffer.e(false);
-        this.durationMillis = buffer.a(255);
-        this.offsetMillis = buffer.a(255);
+        this.echoDelayMillis = buffer.readUnsignedSmart(false);
+        this.echoDecayPercent = buffer.readUnsignedSmart(false);
+        this.durationMillis = buffer.readUnsignedShort(255);
+        this.offsetMillis = buffer.readUnsignedShort(255);
         this.filter = new AudioFilter();
         this.filterEnvelope = new SoundEnvelope();
         this.filter.decode(buffer, this.filterEnvelope);

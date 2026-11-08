@@ -45,16 +45,16 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
           var4 = var3.c((byte) 50);
           var5 = 16386 + var2;
           var6 = var3.a(0) / 255.0f;
-          fv.field_v[0] = (float)var3.a((byte) 97);
-          fv.field_v[1] = (float)var3.d((byte) 109);
-          fv.field_v[2] = (float)var3.c(true);
-          fv.field_v[3] = 1.0f;
-          jaggl.OpenGL.glLightfv(var5, 4611, fv.field_v, 0);
-          fv.field_v[0] = var6 * (float)eb.a(var4 >> 16, 255);
-          fv.field_v[3] = 1.0f;
-          fv.field_v[1] = (float)eb.a(var4 >> 8, 255) * var6;
-          fv.field_v[2] = var6 * (float)eb.a(255, var4);
-          jaggl.OpenGL.glLightfv(var5, 4609, fv.field_v, 0);
+          NetworkResourceRequest.field_v[0] = (float)var3.a((byte) 97);
+          NetworkResourceRequest.field_v[1] = (float)var3.d((byte) 109);
+          NetworkResourceRequest.field_v[2] = (float)var3.c(true);
+          NetworkResourceRequest.field_v[3] = 1.0f;
+          jaggl.OpenGL.glLightfv(var5, 4611, NetworkResourceRequest.field_v, 0);
+          NetworkResourceRequest.field_v[0] = var6 * (float)eb.a(var4 >> 16, 255);
+          NetworkResourceRequest.field_v[3] = 1.0f;
+          NetworkResourceRequest.field_v[1] = (float)eb.a(var4 >> 8, 255) * var6;
+          NetworkResourceRequest.field_v[2] = var6 * (float)eb.a(255, var4);
+          jaggl.OpenGL.glLightfv(var5, 4609, NetworkResourceRequest.field_v, 0);
           jaggl.OpenGL.glLightf(var5, 4617, 1.0f / (float)(var3.c(0) * var3.c(0)));
           jaggl.OpenGL.glEnable(var5);
         }
@@ -153,16 +153,16 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
     }
 
     final void db(int param0) {
-        fv.field_v[3] = 1.0f;
-        fv.field_v[1] = this.field_jb * this.field_S;
-        fv.field_v[0] = this.field_S * this.field_J;
-        fv.field_v[2] = this.field_Xb * this.field_S;
-        jaggl.OpenGL.glLightfv(16384, 4609, fv.field_v, 0);
-        fv.field_v[3] = 1.0f;
-        fv.field_v[1] = -this.field_hb * this.field_jb;
-        fv.field_v[0] = this.field_J * -this.field_hb;
-        fv.field_v[2] = this.field_Xb * -this.field_hb;
-        jaggl.OpenGL.glLightfv(16385, 4609, fv.field_v, param0);
+        NetworkResourceRequest.field_v[3] = 1.0f;
+        NetworkResourceRequest.field_v[1] = this.field_jb * this.field_S;
+        NetworkResourceRequest.field_v[0] = this.field_S * this.field_J;
+        NetworkResourceRequest.field_v[2] = this.field_Xb * this.field_S;
+        jaggl.OpenGL.glLightfv(16384, 4609, NetworkResourceRequest.field_v, 0);
+        NetworkResourceRequest.field_v[3] = 1.0f;
+        NetworkResourceRequest.field_v[1] = -this.field_hb * this.field_jb;
+        NetworkResourceRequest.field_v[0] = this.field_J * -this.field_hb;
+        NetworkResourceRequest.field_v[2] = this.field_Xb * -this.field_hb;
+        jaggl.OpenGL.glLightfv(16385, 4609, NetworkResourceRequest.field_v, param0);
     }
 
     final void X(int param0) {
@@ -406,13 +406,13 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         }
         jaggl.OpenGL.glFogf(2915, this.field_E);
         jaggl.OpenGL.glFogf(2916, this.field_Tb);
-        fv.field_v[1] = (float)eb.a(65280, this.field_C) / 65280.0f;
+        NetworkResourceRequest.field_v[1] = (float)eb.a(65280, this.field_C) / 65280.0f;
         if (!param0) {
           return;
         }
-        fv.field_v[2] = (float)eb.a(255, this.field_C) / 255.0f;
-        fv.field_v[0] = (float)eb.a(this.field_C, 16711680) / 16711680.0f;
-        jaggl.OpenGL.glFogfv(2918, fv.field_v, 0);
+        NetworkResourceRequest.field_v[2] = (float)eb.a(255, this.field_C) / 255.0f;
+        NetworkResourceRequest.field_v[0] = (float)eb.a(this.field_C, 16711680) / 16711680.0f;
+        jaggl.OpenGL.glFogfv(2918, NetworkResourceRequest.field_v, 0);
     }
 
     final void GA(int param0) {
@@ -1011,11 +1011,11 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
     }
 
     final void ab(int param0) {
-        fv.field_v[3] = 1.0f;
-        fv.field_v[2] = this.field_T * this.field_Xb;
-        fv.field_v[1] = this.field_T * this.field_jb;
-        fv.field_v[0] = this.field_J * this.field_T;
-        jaggl.OpenGL.glLightModelfv(2899, fv.field_v, 0);
+        NetworkResourceRequest.field_v[3] = 1.0f;
+        NetworkResourceRequest.field_v[2] = this.field_T * this.field_Xb;
+        NetworkResourceRequest.field_v[1] = this.field_T * this.field_jb;
+        NetworkResourceRequest.field_v[0] = this.field_J * this.field_T;
+        jaggl.OpenGL.glLightModelfv(2899, NetworkResourceRequest.field_v, 0);
         if (param0 != 7) {
           int[] var3 = (int[]) null;
           this.SA(-42, 12, 8, 123, (int[]) null, 81, 90);
@@ -1176,7 +1176,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
             var5_int = 1;
           } else {
             if (rv.field_b != param3) {
-              if (np.field_h == param3) {
+              if (WhirlpoolDigest.field_h == param3) {
                 var6 = 3 * param2;
                 var5_int = 4;
               } else {
@@ -1272,11 +1272,11 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
     }
 
     final void r(int param0) {
-        fv.field_v[3] = (float)(this.field_Ub >>> 24) / 255.0f;
-        fv.field_v[2] = (float)eb.a(255, this.field_Ub) / 255.0f;
-        fv.field_v[0] = (float)eb.a(16711680, this.field_Ub) / 16711680.0f;
-        fv.field_v[param0] = (float)eb.a(this.field_Ub, 65280) / 65280.0f;
-        jaggl.OpenGL.glTexEnvfv(8960, 8705, fv.field_v, 0);
+        NetworkResourceRequest.field_v[3] = (float)(this.field_Ub >>> 24) / 255.0f;
+        NetworkResourceRequest.field_v[2] = (float)eb.a(255, this.field_Ub) / 255.0f;
+        NetworkResourceRequest.field_v[0] = (float)eb.a(16711680, this.field_Ub) / 16711680.0f;
+        NetworkResourceRequest.field_v[param0] = (float)eb.a(this.field_Ub, 65280) / 65280.0f;
+        jaggl.OpenGL.glTexEnvfv(8960, 8705, NetworkResourceRequest.field_v, 0);
     }
 
     final void a(int param0, boolean param1, byte param2, mi param3) {

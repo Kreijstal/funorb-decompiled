@@ -81,10 +81,10 @@ final class MusicVoice extends IntrusiveNode {
         pd var1 = (pd) (vu.field_g.first(103));
         if (var1 != null) {
           var2 = ig.field_a;
-          var2.c(true);
-          var2.c(true);
-          var2.c(true);
-          var2.c(true);
+          var2.readInt(true);
+          var2.readInt(true);
+          var2.readInt(true);
+          var2.readInt(true);
           var1.unlink(param0);
           return;
         }

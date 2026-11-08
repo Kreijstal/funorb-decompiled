@@ -68,7 +68,7 @@ final class eg extends IntrusiveNode {
           var16 = new PacketBuffer(param1);
           var17 = var16;
           var17.position = -2 + param1.length;
-          rl.field_n = var17.a(255);
+          rl.field_n = var17.readUnsignedShort(255);
           vg.field_k = new int[rl.field_n];
           ScrollViewport.field_B = new int[rl.field_n];
           SoundCache.field_d = new boolean[rl.field_n];
@@ -77,25 +77,25 @@ final class eg extends IntrusiveNode {
           er.field_h = new int[rl.field_n];
           fl.field_o = new byte[rl.field_n][];
           var17.position = -(rl.field_n * 8) - 7 + param1.length;
-          vf.field_d = var17.a(param0);
-          li.field_u = var17.a(255);
-          var3 = 1 + (var17.e(param0 - 31557) & 255);
+          vf.field_d = var17.readUnsignedShort(param0);
+          li.field_u = var17.readUnsignedShort(255);
+          var3 = 1 + (var17.readUnsignedByte(param0 - 31557) & 255);
           for (var4 = 0; var4 < rl.field_n; var4++) {
-            er.field_h[var4] = var16.a(255);
+            er.field_h[var4] = var16.readUnsignedShort(255);
           }
           for (var4Lifetime1 = 0; rl.field_n > var4Lifetime1; var4Lifetime1++) {
-            StrongCacheReference.field_C[var4Lifetime1] = var17.a(255);
+            StrongCacheReference.field_C[var4Lifetime1] = var17.readUnsignedShort(255);
           }
           for (var4Lifetime2 = 0; rl.field_n > var4Lifetime2; var4Lifetime2++) {
-            vg.field_k[var4Lifetime2] = var17.a(255);
+            vg.field_k[var4Lifetime2] = var17.readUnsignedShort(255);
           }
           for (var4Lifetime3 = 0; var4Lifetime3 < rl.field_n; var4Lifetime3++) {
-            ScrollViewport.field_B[var4Lifetime3] = var17.a(jg.a(param0, 0));
+            ScrollViewport.field_B[var4Lifetime3] = var17.readUnsignedShort(GzipDecompressor.bitwiseXor(param0, 0));
           }
           var17.position = -(8 * rl.field_n) + (-7 + param1.length - (-1 + var3) * 3);
           LegacyOpenGlEffectManager.field_l = new int[var3];
           for (var4Lifetime4 = 1; var3 > var4Lifetime4; var4Lifetime4++) {
-            LegacyOpenGlEffectManager.field_l[var4Lifetime4] = var17.c((byte) 121);
+            LegacyOpenGlEffectManager.field_l[var4Lifetime4] = var17.readUnsignedMedium((byte) 121);
             if (LegacyOpenGlEffectManager.field_l[var4Lifetime4] == 0) {
               LegacyOpenGlEffectManager.field_l[var4Lifetime4] = 1;
             }
@@ -115,14 +115,14 @@ final class eg extends IntrusiveNode {
               var9 = var19;
               fl.field_o[var4Lifetime5] = var21;
               var10 = 0;
-              var11 = var17.e(param0 - 31557);
+              var11 = var17.readUnsignedByte(param0 - 31557);
               if ((var11 & 1) == 0) {
                 for (var12 = 0; var7 > var12; var12++) {
-                  var8[var12] = var17.d(true);
+                  var8[var12] = var17.readByte(true);
                 }
                 if ((0 != (2 & var11))) {
                   for (var12Lifetime3 = 0; var7 > var12Lifetime3; var12Lifetime3++) {
-                    dupTemp$1 = var17.d(true);
+                    dupTemp$1 = var17.readByte(true);
                     var9[var12Lifetime3] = dupTemp$1;
                     var13 = dupTemp$1;
                     stackIn_30_0 = var10;
@@ -146,14 +146,14 @@ final class eg extends IntrusiveNode {
                     var12Lifetime1++;
                     break;
                   }
-                  var8[var12Lifetime1 + var5 * var13Lifetime1] = var17.d(true);
+                  var8[var12Lifetime1 + var5 * var13Lifetime1] = var17.readByte(true);
                   var13Lifetime1++;
                 }
               }
               if ((2 & var11) != 0) {
                 for (var12Lifetime2 = 0; var12Lifetime2 < var5; var12Lifetime2++) {
                   for (var13Lifetime2 = 0; var6 > var13Lifetime2; var13Lifetime2++) {
-                    dupTemp$0 = var17.d(true);
+                    dupTemp$0 = var17.readByte(true);
                     var9[var5 * var13Lifetime2 + var12Lifetime2] = dupTemp$0;
                     var14 = dupTemp$0;
                     stackIn_48_0 = var10;

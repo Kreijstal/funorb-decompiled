@@ -23,16 +23,16 @@ final class ig {
         int var10 = 0;
         var11 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (ku.field_J == null) {
+          if (Bzip2State.field_J == null) {
             return false;
           }
           if (an.waveIndex == -1) {
             return false;
           }
-          if (ku.field_J.length <= an.waveIndex) {
+          if (Bzip2State.field_J.length <= an.waveIndex) {
             return false;
           }
-          var12 = ku.field_J[an.waveIndex];
+          var12 = Bzip2State.field_J[an.waveIndex];
           var2 = var12.field_b;
           var3 = 0;
           var4 = 26 / ((67 - param0) / 42);
@@ -116,15 +116,15 @@ final class ig {
             return stackIn_14_0;
           }
           var3 = OpenGlUnderwaterEffect.field_n + var10;
-          if (!GraphicsToolkit.field_e.b("", var3, -1)) {
+          if (!GraphicsToolkit.field_e.hasFileName("", var3, -1)) {
             stackIn_17_0 = -1;
             return stackIn_17_0;
           }
-          if (!GraphicsToolkit.field_e.a(var3, 100)) {
-            stackIn_20_0 = GraphicsToolkit.field_e.a(var3, (byte) 33);
+          if (!GraphicsToolkit.field_e.tryLoadNamedGroup(var3, 100)) {
+            stackIn_20_0 = GraphicsToolkit.field_e.namedGroupLoadPercent(var3, (byte) 33);
             return stackIn_20_0;
           }
-          var15 = GraphicsToolkit.field_e.a("", var3, -1);
+          var15 = GraphicsToolkit.field_e.fetchNamedFile("", var3, -1);
           var13 = var15;
           var4 = var13;
           var5 = null;

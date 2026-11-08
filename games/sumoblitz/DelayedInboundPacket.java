@@ -147,12 +147,12 @@ final class DelayedInboundPacket extends IntrusiveNode {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param0.a(0, param1);
+          var4_int = param0.groupId(0, param1);
           if (param2 != -56) {
             stackIn_2_0 = (Sprite[]) null;
             return stackIn_2_0;
           }
-          var5 = param0.a(var4_int, param3, (byte) 126);
+          var5 = param0.fileId(var4_int, param3, (byte) 126);
           stackIn_4_0 = kr.a(19889, param0, var5, var4_int);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

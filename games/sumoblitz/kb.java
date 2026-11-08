@@ -45,12 +45,12 @@ abstract class kb {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param1.a(0, param3);
+          var4_int = param1.groupId(0, param3);
           if (!param2) {
             stackIn_2_0 = (Sprite[]) null;
             return stackIn_2_0;
           }
-          var5 = param1.a(var4_int, param0, (byte) 126);
+          var5 = param1.fileId(var4_int, param0, (byte) 126);
           stackIn_4_0 = tt.a((byte) -100, var5, param1, var4_int);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

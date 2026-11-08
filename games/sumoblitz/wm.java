@@ -81,7 +81,7 @@ final class wm {
           }
           var2 = no.field_d.first(-87);
           while (var2 != null) {
-            jg.b(11044, param1);
+            GzipDecompressor.b(11044, param1);
             var2 = no.field_d.next((byte) 18);
           }
           if (!param0) {

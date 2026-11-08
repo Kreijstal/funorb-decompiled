@@ -106,7 +106,7 @@ final class of extends IntrusiveNode {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = param0.e(-31302);
+          var2_int = param0.readUnsignedByte(-31302);
           stackIn_3_0 = (var2_int != 1) ? 0 : 1;
           var3 = stackIn_3_0;
           var4 = 88 / ((70 - param1) / 33);

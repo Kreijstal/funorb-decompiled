@@ -140,8 +140,8 @@ abstract class ShaderEffect {
           if (param2 < 28) {
             enterTheNameYouText = (String) null;
           }
-          var4_int = param1.a(0, param3);
-          var5 = param1.a(var4_int, param0, (byte) 127);
+          var4_int = param1.groupId(0, param3);
+          var5 = param1.fileId(var4_int, param0, (byte) 127);
           stackIn_3_0 = kk.a(var4_int, -1, var5, param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

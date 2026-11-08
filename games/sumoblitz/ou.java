@@ -45,8 +45,8 @@ final class ou extends na {
         }
         pl var2 = InwardSparkParticle.field_v;
         var2.g(param1, 8);
-        var2.b((byte) 116, 1);
-        var2.b((byte) 107, 2);
+        var2.writeByte((byte) 116, 1);
+        var2.writeByte((byte) 107, 2);
     }
 
     final String a(int param0, String param1) {
@@ -63,7 +63,7 @@ final class ou extends na {
         RuntimeException decompiledCaughtException = null;
         try {
           var5 = (CharSequence) ((Object) param1);
-          var3 = ti.a(false, var5);
+          var3 = CacheIoWorker.a(false, var5);
           if (param0 != 0) {
             ou.releaseStatics((byte) 14);
           }
@@ -211,36 +211,36 @@ final class ou extends na {
           if (0 == DroneChargeParticle.field_s) {
             var3_int = wo.a(GameInstructions.field_c, qq.field_R, hn.field_j, false, IntrusiveNode.fullscreenPlayIsAnText);
             var4 = 3 + var3_int;
-            bf.field_c = new String[var4];
+            IntIndexHashTable.field_c = new String[var4];
             eb.field_a = new int[var4];
             for (var5 = 0; var4 > var5; var5++) {
               eb.field_a[var5] = -1;
             }
             jo.field_b = new int[2];
             for (var5 = 0; var5 < var3_int; var5++) {
-              bf.field_c[var5] = GameInstructions.field_c[var5];
+              IntIndexHashTable.field_c[var5] = GameInstructions.field_c[var5];
             }
-            bf.field_c[-3 + var4] = "";
-            bf.field_c[-2 + var4] = AudioServiceThread.membersText;
+            IntIndexHashTable.field_c[-3 + var4] = "";
+            IntIndexHashTable.field_c[-2 + var4] = AudioServiceThread.membersText;
             eb.field_a[-2 + var4] = 0;
             jo.field_b[0] = 4;
-            bf.field_c[-1 + var4] = DraggableWidget.closeText;
+            IntIndexHashTable.field_c[-1 + var4] = DraggableWidget.closeText;
             eb.field_a[-1 + var4] = 1;
             jo.field_b[1] = 5;
           } else if (DroneChargeParticle.field_s == 1) {
             var3_int = wo.a(GameInstructions.field_c, qq.field_R, hn.field_j, false, IntrusiveNode.fullscreenPlayIsAnText);
             var4 = var3_int + 2;
             eb.field_a = new int[var4];
-            bf.field_c = new String[var4];
+            IntIndexHashTable.field_c = new String[var4];
             for (var5 = 0; var4 > var5; var5++) {
               eb.field_a[var5] = -1;
             }
             jo.field_b = new int[1];
             for (var5 = 0; var5 < var3_int; var5++) {
-              bf.field_c[var5] = GameInstructions.field_c[var5];
+              IntIndexHashTable.field_c[var5] = GameInstructions.field_c[var5];
             }
-            bf.field_c[-2 + var4] = "";
-            bf.field_c[-1 + var4] = DraggableWidget.closeText;
+            IntIndexHashTable.field_c[-2 + var4] = "";
+            IntIndexHashTable.field_c[-1 + var4] = DraggableWidget.closeText;
             eb.field_a[var4 - 1] = 0;
             jo.field_b[0] = 5;
           } else if (DroneChargeParticle.field_s != 2) {
@@ -252,32 +252,32 @@ final class ou extends na {
               }
               var4 = var3_int + 2;
               eb.field_a = new int[var4];
-              bf.field_c = new String[var4];
+              IntIndexHashTable.field_c = new String[var4];
               for (var5 = 0; var4 > var5; var5++) {
                 eb.field_a[var5] = -1;
               }
               jo.field_b = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
-                bf.field_c[var5] = GameInstructions.field_c[var5];
+                IntIndexHashTable.field_c[var5] = GameInstructions.field_c[var5];
               }
-              bf.field_c[-2 + var4] = "";
-              bf.field_c[-1 + var4] = DraggableWidget.closeText;
+              IntIndexHashTable.field_c[-2 + var4] = "";
+              IntIndexHashTable.field_c[-1 + var4] = DraggableWidget.closeText;
               eb.field_a[-1 + var4] = 0;
               jo.field_b[0] = 5;
             } else if (4 == DroneChargeParticle.field_s) {
               var3_int = wo.a(GameInstructions.field_c, qq.field_R, hn.field_j, false, LimitedRandomAccessFile.field_c);
               var4 = var3_int + 2;
-              bf.field_c = new String[var4];
+              IntIndexHashTable.field_c = new String[var4];
               eb.field_a = new int[var4];
               for (var5 = 0; var5 < var4; var5++) {
                 eb.field_a[var5] = -1;
               }
               jo.field_b = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
-                bf.field_c[var5] = GameInstructions.field_c[var5];
+                IntIndexHashTable.field_c[var5] = GameInstructions.field_c[var5];
               }
-              bf.field_c[-2 + var4] = "";
-              bf.field_c[var4 - 1] = DraggableWidget.closeText;
+              IntIndexHashTable.field_c[-2 + var4] = "";
+              IntIndexHashTable.field_c[var4 - 1] = DraggableWidget.closeText;
               eb.field_a[var4 - 1] = 0;
               jo.field_b[0] = 5;
             } else {
@@ -287,19 +287,19 @@ final class ou extends na {
               var3_int = wo.a(GameInstructions.field_c, qq.field_R, hn.field_j, false, ua.fullscreenModeWasCancelledText);
               var4 = 3 + var3_int;
               eb.field_a = new int[var4];
-              bf.field_c = new String[var4];
+              IntIndexHashTable.field_c = new String[var4];
               for (var5 = 0; var4 > var5; var5++) {
                 eb.field_a[var5] = -1;
               }
               jo.field_b = new int[2];
               for (var5 = 0; var5 < var3_int; var5++) {
-                bf.field_c[var5] = GameInstructions.field_c[var5];
+                IntIndexHashTable.field_c[var5] = GameInstructions.field_c[var5];
               }
-              bf.field_c[-3 + var4] = "";
-              bf.field_c[var4 - 2] = FullscreenMembershipDialog.tryAgainText;
+              IntIndexHashTable.field_c[-3 + var4] = "";
+              IntIndexHashTable.field_c[var4 - 2] = FullscreenMembershipDialog.tryAgainText;
               eb.field_a[-2 + var4] = 0;
               jo.field_b[0] = 3;
-              bf.field_c[var4 - 1] = DraggableWidget.closeText;
+              IntIndexHashTable.field_c[var4 - 1] = DraggableWidget.closeText;
               eb.field_a[var4 - 1] = 1;
               jo.field_b[1] = 5;
             }
@@ -349,24 +349,24 @@ final class ou extends na {
             }
             var6 = stackIn_34_0;
             var7 = var6 + 7 + var5;
-            bf.field_c = new String[var7];
+            IntIndexHashTable.field_c = new String[var7];
             eb.field_a = new int[var7];
             for (var8 = 0; var8 < var7; var8++) {
               eb.field_a[var8] = -1;
             }
             jo.field_b = new int[2];
-            bf.field_c[0] = fd.clickText;
-            bf.field_c[1] = km.acceptText;
+            IntIndexHashTable.field_c[0] = fd.clickText;
+            IntIndexHashTable.field_c[1] = km.acceptText;
             eb.field_a[1] = 0;
             jo.field_b[1] = 2;
             jo.field_b[0] = 5;
             eb.field_a[3] = 1;
-            bf.field_c[5] = "";
-            bf.field_c[3] = up.cancelText;
-            bf.field_c[2] = ws.toKeepFullscreenOrText;
-            bf.field_c[4] = oh.toReturnToTheText;
+            IntIndexHashTable.field_c[5] = "";
+            IntIndexHashTable.field_c[3] = up.cancelText;
+            IntIndexHashTable.field_c[2] = ws.toKeepFullscreenOrText;
+            IntIndexHashTable.field_c[4] = oh.toReturnToTheText;
             for (var8Lifetime2 = 0; var8Lifetime2 < var5; var8Lifetime2++) {
-              stackIn_41_0 = bf.field_c;
+              stackIn_41_0 = IntIndexHashTable.field_c;
               stackIn_41_1 = var8Lifetime2 + 6;
               if (ResizingDialog.field_F.length + (var8Lifetime2 - var5) < 0) {
                 stackIn_42_2 = "";
@@ -375,10 +375,10 @@ final class ou extends na {
               }
               stackIn_41_0[stackIn_41_1] = stackIn_42_2;
             }
-            bf.field_c[6 + var5] = null;
+            IntIndexHashTable.field_c[6 + var5] = null;
             eb.field_a[var5 + 6] = -2;
             for (var8Lifetime3 = 0; var6 > var8Lifetime3; var8Lifetime3++) {
-              stackIn_46_0 = bf.field_c;
+              stackIn_46_0 = IntIndexHashTable.field_c;
               stackIn_46_1 = var5 + (7 + var8Lifetime3);
               stackIn_46_2 = ~uw.field_b.length;
               stackIn_46_3 = ~var8Lifetime3;
@@ -393,9 +393,9 @@ final class ou extends na {
           }
           nj.field_a.field_e = jo.field_b.length;
           var3_intLifetime1 = 0;
-          for (var4Lifetime1 = 0; var4Lifetime1 < bf.field_c.length; var4Lifetime1++) {
+          for (var4Lifetime1 = 0; var4Lifetime1 < IntIndexHashTable.field_c.length; var4Lifetime1++) {
             stackIn_90_0 = -27;
-            stackIn_90_1 = bf.field_c[var4Lifetime1];
+            stackIn_90_1 = IntIndexHashTable.field_c[var4Lifetime1];
             stackIn_91_2 = !(eb.field_a[var4Lifetime1] < 0);
             var5Lifetime1 = MessageDialog.$cfr$intArgs$a$590e95718a07(stackIn_90_0, stackIn_90_1, stackIn_91_2);
             if (var5Lifetime1 > var3_intLifetime1) {
@@ -424,7 +424,7 @@ final class ou extends na {
           hu.field_b = -(var3_intLifetime1 >> 1) + oj.field_a;
           PlayingSound.field_n = var3_intLifetime1 + oj.field_a - (var3_intLifetime1 >> 1);
           rf.field_d = nj.field_a.field_e * (TextLayout.field_b + qc.field_a << 1);
-          for (var4Lifetime2 = 0; var4Lifetime2 < bf.field_c.length; var4Lifetime2++) {
+          for (var4Lifetime2 = 0; var4Lifetime2 < IntIndexHashTable.field_c.length; var4Lifetime2++) {
             stackIn_116_0 = rf.field_d;
             if (0 <= eb.field_a[var4Lifetime2]) {
               stackIn_117_1 = ga.field_h;
@@ -435,15 +435,15 @@ final class ou extends na {
           }
           hh.field_f = -(rf.field_d >> 1) + nv.field_b;
           var4Lifetime3 = -96 % ((param2 - 48) / 57);
-          ib.field_g = new int[bf.field_c.length][];
+          ib.field_g = new int[IntIndexHashTable.field_c.length][];
           var5Lifetime3 = 0;
           var6Lifetime1 = hh.field_f;
-          while (bf.field_c.length > var5Lifetime3) {
+          while (IntIndexHashTable.field_c.length > var5Lifetime3) {
             var7Lifetime2 = eb.field_a[var5Lifetime3];
             if (var7Lifetime2 < 0) {
               var6Lifetime1 = var6Lifetime1 + GameClientShell.field_t;
             } else {
-              var8Lifetime1 = MessageDialog.$cfr$intArgs$a$590e95718a07(-116, bf.field_c[var5Lifetime3], true);
+              var8Lifetime1 = MessageDialog.$cfr$intArgs$a$590e95718a07(-116, IntIndexHashTable.field_c[var5Lifetime3], true);
               var9 = -(var8Lifetime1 >> 1) + oj.field_a;
               var6Lifetime1 = var6Lifetime1 + qc.field_a;
               ib.field_g[var5Lifetime3] = new int[4];

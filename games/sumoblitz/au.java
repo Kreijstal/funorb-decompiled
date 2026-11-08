@@ -230,7 +230,7 @@ final class au extends LegacyOpenGlEffect {
           sl.field_d = ResourceArchive.field_i;
           ResourceArchive.field_i = false;
           hk.field_c = kb.field_i;
-          nb.field_a = jg.field_d;
+          nb.field_a = GzipDecompressor.field_d;
           if (param0 < 93) {
             au.d(-50);
           }

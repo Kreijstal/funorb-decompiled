@@ -24,23 +24,23 @@ final class fb {
           bk.field_e[2] = (int)(oc.field_g >> 32);
           sd.field_e.position = 0;
           bk.field_e[3] = (int)oc.field_g;
-          sd.field_e.e(48, bk.field_e[0]);
-          sd.field_e.e(48, bk.field_e[1]);
-          sd.field_e.e(48, bk.field_e[2]);
-          sd.field_e.e(48, bk.field_e[3]);
+          sd.field_e.writeInt(48, bk.field_e[0]);
+          sd.field_e.writeInt(48, bk.field_e[1]);
+          sd.field_e.writeInt(48, bk.field_e[2]);
+          sd.field_e.writeInt(48, bk.field_e[3]);
           StrongCacheReference.a(sd.field_e, true);
-          sd.field_e.b(param2 + 12917, param3);
+          sd.field_e.writeShort(param2 + 12917, param3);
           param4.a(sd.field_e, (byte) -113);
           InwardSparkParticle.field_v.position = 0;
           if (param0) {
-            InwardSparkParticle.field_v.b((byte) 89, 18);
+            InwardSparkParticle.field_v.writeByte((byte) 89, 18);
           } else {
-            InwardSparkParticle.field_v.b((byte) 96, 16);
+            InwardSparkParticle.field_v.writeByte((byte) 96, 16);
           }
           InwardSparkParticle.field_v.position = InwardSparkParticle.field_v.position + 2;
           var5_int = InwardSparkParticle.field_v.position;
-          InwardSparkParticle.field_v.e(48, MidiNoteMixer.field_p);
-          InwardSparkParticle.field_v.a(false, jm.field_b);
+          InwardSparkParticle.field_v.writeInt(48, MidiNoteMixer.field_p);
+          InwardSparkParticle.field_v.writeLong(false, jm.field_b);
           var6 = 0;
           if (qn.field_a) {
             var6 = var6 | 1;
@@ -54,17 +54,17 @@ final class fb {
           if (rp.field_b != null) {
             var6 = var6 | 16;
           }
-          InwardSparkParticle.field_v.b((byte) 108, var6);
+          InwardSparkParticle.field_v.writeByte((byte) 108, var6);
           var7 = dv.a(-22, ra.c(2));
           if (var7 == null) {
             var7 = "";
           }
-          InwardSparkParticle.field_v.a(var7, (byte) -106);
+          InwardSparkParticle.field_v.writeCp1252String(var7, (byte) -106);
           if (rp.field_b != null) {
-            InwardSparkParticle.field_v.b(rp.field_b, (byte) 19);
+            InwardSparkParticle.field_v.writeCircumfixedString(rp.field_b, (byte) 19);
           }
           ks.a(gh.field_a, oh.field_c, false, InwardSparkParticle.field_v, sd.field_e);
-          InwardSparkParticle.field_v.a(param2 + 12793, InwardSparkParticle.field_v.position - var5_int);
+          InwardSparkParticle.field_v.patchShortLength(param2 + 12793, InwardSparkParticle.field_v.position - var5_int);
           MessageDialog.a(param2 + 12793, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

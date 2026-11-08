@@ -267,10 +267,10 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
         this.field_l = param0;
         if (param1 != null &&
           (65535 & this.field_l.field_Kc.VertexShaderVersion) >= 257) {
-          this.field_f = this.field_l.field_Cc.a(param1.a("uw_ground_unlit", "dx", -1));
-          this.field_n = this.field_l.field_Cc.a(param1.a("uw_ground_lit", "dx", -1));
-          this.field_p = this.field_l.field_Cc.a(param1.a("uw_model_unlit", "dx", -1));
-          this.field_m = this.field_l.field_Cc.a(param1.a("uw_model_lit", "dx", -1));
+          this.field_f = this.field_l.field_Cc.a(param1.fetchNamedFile("uw_ground_unlit", "dx", -1));
+          this.field_n = this.field_l.field_Cc.a(param1.fetchNamedFile("uw_ground_lit", "dx", -1));
+          this.field_p = this.field_l.field_Cc.a(param1.fetchNamedFile("uw_model_unlit", "dx", -1));
+          this.field_m = this.field_l.field_Cc.a(param1.fetchNamedFile("uw_model_lit", "dx", -1));
           stackIn_6_0 = (this.field_n == null) ? 0 : 1;
           stackIn_9_1 = (this.field_f == null) ? 0 : 1;
           stackIn_11_0 = stackIn_6_0 & stackIn_9_1;

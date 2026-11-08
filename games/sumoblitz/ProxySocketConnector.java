@@ -337,11 +337,11 @@ final class ProxySocketConnector extends SocketConnector {
           if (param1 != 85) {
             emailIsValidText = (String) null;
           }
-          if (!param3.b((byte) 127)) {
+          if (!param3.loadIndex((byte) 127)) {
             stackIn_5_0 = (String) (param0);
             return stackIn_5_0;
           }
-          stackIn_7_0 = param4 + " - " + param3.a(param2, (byte) -114) + "%";
+          stackIn_7_0 = param4 + " - " + param3.groupLoadPercent(param2, (byte) -114) + "%";
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

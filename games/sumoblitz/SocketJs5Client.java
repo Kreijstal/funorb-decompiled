@@ -3,90 +3,90 @@
  */
 import java.io.*;
 
-final class t extends gd {
+final class SocketJs5Client extends Js5Client {
     static boolean[] field_p;
-    private BufferedSocket field_r;
+    private BufferedSocket socket;
     static String field_s;
     static int field_q;
 
-    final void a(boolean param0, byte param1, Object param2) {
+    final void attachConnection(boolean loggedIn, byte guard, Object connection) {
         try {
           RuntimeException stackIn_27_0 = null;
           StringBuilder stackIn_27_1 = null;
           String stackIn_28_2 = null;
           Throwable decompiledCaughtException = null;
           Exception var4 = null;
-          fv var4_ref = null;
+          NetworkResourceRequest var4_ref = null;
           IOException var4_ref2 = null;
           RuntimeException var4_ref3 = null;
           Exception var5 = null;
           int var6 = 0;
-          fv var4_refLifetime1;
+          NetworkResourceRequest var4_refLifetime1;
           var6 = Sumoblitz.field_L ? 1 : 0;
           try {
-            if (this.field_r != null) {
+            if (this.socket != null) {
               try {
-                this.field_r.a((byte) -67);
+                this.socket.close((byte) -67);
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var4 = (Exception) (Object) decompiledCaughtException;
               }
-              this.field_r = null;
+              this.socket = null;
             }
-            this.field_r = (BufferedSocket) (param2);
-            this.e(0);
-            this.a(71, param0);
-            this.field_i = null;
-            this.field_b.position = 0;
+            this.socket = (BufferedSocket) (connection);
+            this.sendConnectionPreamble(0);
+            this.sendLoginState(71, loggedIn);
+            this.currentResponse = null;
+            this.responseHeader.position = 0;
             while (true) {
-              var4_ref = (fv) (this.field_h.b((byte) 72));
+              var4_ref = (NetworkResourceRequest) (this.urgentInFlight.removeFirst((byte) 72));
               if (var4_ref != null) {
-                this.field_l.a((DualLinkNode) (var4_ref), (byte) -128);
+                this.urgentQueued.addLast((DualLinkNode) (var4_ref), (byte) -128);
                 continue;
               }
               break;
             }
             while (true) {
-              var4_refLifetime1 = (fv) (this.field_g.b((byte) 72));
+              var4_refLifetime1 = (NetworkResourceRequest) (this.backgroundInFlight.removeFirst((byte) 72));
               if (var4_refLifetime1 != null) {
-                this.field_f.a((DualLinkNode) (var4_refLifetime1), (byte) -101);
+                this.backgroundQueued.addLast((DualLinkNode) (var4_refLifetime1), (byte) -101);
                 continue;
               }
               break;
             }
-            if (param1 <= 90) {
+            if (guard <= 90) {
               return;
             }
-            if (this.field_m != 0) {
+            if (this.xorKey != 0) {
               try {
-                this.field_n.position = 0;
-                this.field_n.b((byte) 89, 4);
-                this.field_n.b((byte) 36, (int) this.field_m);
-                this.field_n.e(48, 0);
-                this.field_r.a(0, -2, this.field_n.payload, this.field_n.payload.length);
+                this.requestBuffer.position = 0;
+                this.requestBuffer.writeByte((byte) 89, 4);
+                this.requestBuffer.writeByte((byte) 36, (int) this.xorKey);
+                this.requestBuffer.writeInt(48, 0);
+                this.socket.write(0, -2, this.requestBuffer.payload, this.requestBuffer.payload.length);
               } catch (java.io.IOException decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
                 var4_ref2 = (IOException) (Object) decompiledCaughtException;
                 try {
-                  this.field_r.a((byte) -73);
+                  this.socket.close((byte) -73);
                 } catch (java.lang.Exception decompiledCaughtParameter2) {
                   decompiledCaughtException = decompiledCaughtParameter2;
                   var5 = (Exception) (Object) decompiledCaughtException;
                 }
-                this.field_r = null;
-                this.field_j = -2;
-                this.field_d = this.field_d + 1;
+                this.socket = null;
+                this.failureCode = -2;
+                this.failureCount = this.failureCount + 1;
               }
             }
-            this.field_c = 0;
-            this.field_e = wq.a(-78);
+            this.idleMillis = 0;
+            this.lastServiceMillis = wq.a(-78);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
             decompiledCaughtException = decompiledCaughtParameter3;
             var4_ref3 = (RuntimeException) (Object) decompiledCaughtException;
             stackIn_27_0 = var4_ref3;
-            stackIn_27_1 = new StringBuilder().append("t.F(").append(param0).append(',').append(param1).append(',');
-            if (param2 == null) {
+            stackIn_27_1 = new StringBuilder().append("t.F(").append(loggedIn).append(',').append(guard).append(',');
+            if (connection == null) {
               stackIn_28_2 = "null";
             } else {
               stackIn_28_2 = "{...}";
@@ -104,32 +104,32 @@ final class t extends gd {
         field_p = null;
         field_s = null;
         if (param0 != 1) {
-          t.releaseStatics(-122);
+          SocketJs5Client.releaseStatics(-122);
         }
     }
 
-    final void b(int param0) {
+    final void invalidateConnection(int guard) {
         try {
-          this.field_r.a((byte) -65);
+          this.socket.close((byte) -65);
         } catch (Exception exception) {
         }
-        this.field_j = -1;
-        this.field_d = this.field_d + 1;
-        this.field_r = null;
-        this.field_m = (byte)(int)(1.0 + Math.random() * 255.0);
-        if (param0 != 14702) {
+        this.failureCode = -1;
+        this.failureCount = this.failureCount + 1;
+        this.socket = null;
+        this.xorKey = (byte)(int)(1.0 + Math.random() * 255.0);
+        if (guard != 14702) {
           field_q = -47;
         }
     }
 
-    final boolean c(byte param0) {
+    final boolean service(byte guard) {
         try {
           int var2_int = 0;
           int stackIn_65_0 = 0;
           int stackIn_81_0 = 0;
           Throwable decompiledCaughtException = null;
           long var2_long = 0L;
-          fv var2 = null;
+          NetworkResourceRequest var2 = null;
           IOException var2_ref = null;
           int var3_int = 0;
           Exception var3 = null;
@@ -144,95 +144,95 @@ final class t extends gd {
           int var11 = 0;
           long var12 = 0L;
           Object var14 = null;
-          fv var14_ref = null;
+          NetworkResourceRequest var14_ref = null;
           int var15 = 0;
           int var16 = 0;
-          fv var2Lifetime1;
+          NetworkResourceRequest var2Lifetime1;
           var16 = Sumoblitz.field_L ? 1 : 0;
-          if (param0 <= 78) {
+          if (guard <= 78) {
             return false;
           }
-          if (this.field_r != null) {
+          if (this.socket != null) {
             var2_long = wq.a(-113);
-            var4 = (int)(var2_long - this.field_e);
+            var4 = (int)(var2_long - this.lastServiceMillis);
             if (var4 > 200) {
               var4 = 200;
             }
-            this.field_e = var2_long;
-            this.field_c = this.field_c + var4;
-            if (30000 < this.field_c) {
+            this.lastServiceMillis = var2_long;
+            this.idleMillis = this.idleMillis + var4;
+            if (30000 < this.idleMillis) {
               try {
-                this.field_r.a((byte) -72);
+                this.socket.close((byte) -72);
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var5_ref_Exception = (Exception) (Object) decompiledCaughtException;
               }
-              this.field_r = null;
+              this.socket = null;
             }
           }
-          if (this.field_r == null) {
-            if (this.d(-2115911413) != 0) {
+          if (this.socket == null) {
+            if (this.urgentRequestCount(-2115911413) != 0) {
               return false;
             }
-            if (0 == this.a((byte) -86)) {
+            if (0 == this.backgroundRequestCount((byte) -86)) {
               return true;
             }
             return false;
           }
           try {
-            this.field_r.b(-120);
-            var2 = (fv) (this.field_l.a(32));
+            this.socket.checkWriteError(-120);
+            var2 = (NetworkResourceRequest) (this.urgentQueued.first(32));
             while (var2 != null) {
-              this.field_n.position = 0;
-              this.field_n.b((byte) 55, 1);
-              this.field_n.b(var2.secondaryKey, 1105594440);
-              this.field_r.a(0, -2, this.field_n.payload, this.field_n.payload.length);
-              this.field_h.a((DualLinkNode) (var2), (byte) -107);
-              var2 = (fv) (this.field_l.d(-2));
+              this.requestBuffer.position = 0;
+              this.requestBuffer.writeByte((byte) 55, 1);
+              this.requestBuffer.writeLong40(var2.secondaryKey, 1105594440);
+              this.socket.write(0, -2, this.requestBuffer.payload, this.requestBuffer.payload.length);
+              this.urgentInFlight.addLast((DualLinkNode) (var2), (byte) -107);
+              var2 = (NetworkResourceRequest) (this.urgentQueued.next(-2));
             }
-            var2Lifetime1 = (fv) (this.field_f.a(37));
+            var2Lifetime1 = (NetworkResourceRequest) (this.backgroundQueued.first(37));
             while (var2Lifetime1 != null) {
-              this.field_n.position = 0;
-              this.field_n.b((byte) 86, 0);
-              this.field_n.b(var2Lifetime1.secondaryKey, 1105594440);
-              this.field_r.a(0, -2, this.field_n.payload, this.field_n.payload.length);
-              this.field_g.a((DualLinkNode) (var2Lifetime1), (byte) -103);
-              var2Lifetime1 = (fv) (this.field_f.d(-2));
+              this.requestBuffer.position = 0;
+              this.requestBuffer.writeByte((byte) 86, 0);
+              this.requestBuffer.writeLong40(var2Lifetime1.secondaryKey, 1105594440);
+              this.socket.write(0, -2, this.requestBuffer.payload, this.requestBuffer.payload.length);
+              this.backgroundInFlight.addLast((DualLinkNode) (var2Lifetime1), (byte) -103);
+              var2Lifetime1 = (NetworkResourceRequest) (this.backgroundQueued.next(-2));
             }
             for (var2_int = 0; var2_int < 100; var2_int++) {
-              var3_int = this.field_r.c(-128);
+              var3_int = this.socket.available(-128);
               if (var3_int < 0) {
                 throw new IOException();
               }
               if (var3_int != 0) {
-                this.field_c = 0;
+                this.idleMillis = 0;
                 var4 = 0;
-                if (this.field_i == null) {
+                if (this.currentResponse == null) {
                   var4 = 10;
                 } else {
-                  if (0 == this.field_i.field_x) {
+                  if (0 == this.currentResponse.blockPosition) {
                     var4 = 1;
                   }
                 }
                 if (var4 > 0) {
-                  var5 = -this.field_b.position + var4;
+                  var5 = -this.responseHeader.position + var4;
                   if (var3_int < var5) {
                     var5 = var3_int;
                   }
-                  this.field_r.a(-114, this.field_b.position, var5, this.field_b.payload);
-                  if (0 != this.field_m) {
+                  this.socket.readFully(-114, this.responseHeader.position, var5, this.responseHeader.payload);
+                  if (0 != this.xorKey) {
                     for (var6 = 0; var6 < var5; var6++) {
-                      this.field_b.payload[var6 + this.field_b.position] = (byte)jg.a((int) this.field_b.payload[var6 + this.field_b.position], (int) this.field_m);
+                      this.responseHeader.payload[var6 + this.responseHeader.position] = (byte)GzipDecompressor.bitwiseXor((int) this.responseHeader.payload[var6 + this.responseHeader.position], (int) this.xorKey);
                     }
                   }
-                  this.field_b.position = this.field_b.position + var5;
-                  if (this.field_b.position >= var4) {
-                    if (null == this.field_i) {
-                      this.field_b.position = 0;
-                      var6 = this.field_b.e(-31302);
-                      var7 = this.field_b.c(true);
-                      var8 = this.field_b.e(-31302);
-                      var9 = this.field_b.c(true);
+                  this.responseHeader.position = this.responseHeader.position + var5;
+                  if (this.responseHeader.position >= var4) {
+                    if (null == this.currentResponse) {
+                      this.responseHeader.position = 0;
+                      var6 = this.responseHeader.readUnsignedByte(-31302);
+                      var7 = this.responseHeader.readInt(true);
+                      var8 = this.responseHeader.readUnsignedByte(-31302);
+                      var9 = this.responseHeader.readInt(true);
                       var10 = 127 & var8;
                       stackIn_65_0 = (0 == (128 & var8)) ? 0 : 1;
                       boolean decompiledFrameRemainder0 = true;
@@ -241,24 +241,24 @@ final class t extends gd {
                       var12 = ((long)var6 << 32) + (long)var7;
                       var14 = null;
                       if (var11 != 0) {
-                        var14_ref = (fv) (this.field_g.a(64));
+                        var14_ref = (NetworkResourceRequest) (this.backgroundInFlight.first(64));
                         while (var14_ref != null) {
                           if (var14_ref.secondaryKey == var12) {
                             decompiledFrameCompleted0 = false;
                             break;
                           }
-                          var14_ref = (fv) (this.field_g.d(-2));
+                          var14_ref = (NetworkResourceRequest) (this.backgroundInFlight.next(-2));
                         }
                         decompiledFrameRemainder0 = !(decompiledFrameCompleted0);
                       }
                       if ((decompiledFrameRemainder0) &&
                         (decompiledFrameCompleted0)) {
-                        var14_ref = (fv) (this.field_h.a(66));
+                        var14_ref = (NetworkResourceRequest) (this.urgentInFlight.first(66));
                         while (var14_ref != null) {
                           if (~var12 == ~var14_ref.secondaryKey) {
                             break;
                           }
-                          var14_ref = (fv) (this.field_h.d(-2));
+                          var14_ref = (NetworkResourceRequest) (this.urgentInFlight.next(-2));
                         }
                       }
                       if (var14_ref == null) {
@@ -266,49 +266,49 @@ final class t extends gd {
                       }
                       stackIn_81_0 = (0 == var10) ? 5 : 9;
                       var15 = stackIn_81_0;
-                      this.field_i = var14_ref;
-                      this.field_i.field_w = new PacketBuffer(this.field_i.field_z + var15 + var9);
-                      this.field_i.field_w.b((byte) 37, var10);
-                      this.field_i.field_w.e(48, var9);
-                      this.field_i.field_x = 10;
-                      this.field_b.position = 0;
+                      this.currentResponse = var14_ref;
+                      this.currentResponse.response = new PacketBuffer(this.currentResponse.paddingBytes + var15 + var9);
+                      this.currentResponse.response.writeByte((byte) 37, var10);
+                      this.currentResponse.response.writeInt(48, var9);
+                      this.currentResponse.blockPosition = 10;
+                      this.responseHeader.position = 0;
                     } else {
-                      if (0 != this.field_i.field_x) {
+                      if (0 != this.currentResponse.blockPosition) {
                         throw new IOException();
                       }
-                      if (this.field_b.payload[0] == -1) {
-                        this.field_i.field_x = 1;
-                        this.field_b.position = 0;
+                      if (this.responseHeader.payload[0] == -1) {
+                        this.currentResponse.blockPosition = 1;
+                        this.responseHeader.position = 0;
                       } else {
-                        this.field_i = null;
+                        this.currentResponse = null;
                       }
                     }
                   }
                 } else {
-                  var5 = this.field_i.field_w.payload.length - this.field_i.field_z;
-                  var6 = -this.field_i.field_x + 512;
-                  if (var6 > var5 - this.field_i.field_w.position) {
-                    var6 = var5 - this.field_i.field_w.position;
+                  var5 = this.currentResponse.response.payload.length - this.currentResponse.paddingBytes;
+                  var6 = -this.currentResponse.blockPosition + 512;
+                  if (var6 > var5 - this.currentResponse.response.position) {
+                    var6 = var5 - this.currentResponse.response.position;
                   }
                   if (var3_int < var6) {
                     var6 = var3_int;
                   }
-                  this.field_r.a(-115, this.field_i.field_w.position, var6, this.field_i.field_w.payload);
-                  if (this.field_m != 0) {
+                  this.socket.readFully(-115, this.currentResponse.response.position, var6, this.currentResponse.response.payload);
+                  if (this.xorKey != 0) {
                     for (var7 = 0; var7 < var6; var7++) {
-                      this.field_i.field_w.payload[this.field_i.field_w.position + var7] = (byte)jg.a((int) this.field_i.field_w.payload[this.field_i.field_w.position + var7], (int) this.field_m);
+                      this.currentResponse.response.payload[this.currentResponse.response.position + var7] = (byte)GzipDecompressor.bitwiseXor((int) this.currentResponse.response.payload[this.currentResponse.response.position + var7], (int) this.xorKey);
                     }
                   }
-                  this.field_i.field_x = this.field_i.field_x + var6;
-                  this.field_i.field_w.position = this.field_i.field_w.position + var6;
-                  if (var5 != this.field_i.field_w.position) {
-                    if (this.field_i.field_x == 512) {
-                      this.field_i.field_x = 0;
+                  this.currentResponse.blockPosition = this.currentResponse.blockPosition + var6;
+                  this.currentResponse.response.position = this.currentResponse.response.position + var6;
+                  if (var5 != this.currentResponse.response.position) {
+                    if (this.currentResponse.blockPosition == 512) {
+                      this.currentResponse.blockPosition = 0;
                     }
                   } else {
-                    this.field_i.unlinkSecondary(-5106);
-                    this.field_i.field_u = false;
-                    this.field_i = null;
+                    this.currentResponse.unlinkSecondary(-5106);
+                    this.currentResponse.pending = false;
+                    this.currentResponse = null;
                   }
                 }
                 continue;
@@ -320,16 +320,16 @@ final class t extends gd {
             decompiledCaughtException = decompiledCaughtParameter1;
             var2_ref = (IOException) (Object) decompiledCaughtException;
             try {
-              this.field_r.a((byte) -60);
+              this.socket.close((byte) -60);
             } catch (java.lang.Exception decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               var3 = (Exception) (Object) decompiledCaughtException;
             }
-            this.field_r = null;
-            this.field_d = this.field_d + 1;
-            this.field_j = -2;
-            if (0 == this.d(-2115911413) &&
-              this.a((byte) -122) == 0) {
+            this.socket = null;
+            this.failureCount = this.failureCount + 1;
+            this.failureCode = -2;
+            if (0 == this.urgentRequestCount(-2115911413) &&
+              this.backgroundRequestCount((byte) -122) == 0) {
               return true;
             }
             return false;
@@ -341,7 +341,7 @@ final class t extends gd {
         }
     }
 
-    private final void a(int param0, boolean param1) {
+    private final void sendLoginState(int guard, boolean loggedIn) {
         try {
           IOException iOException = null;
           PacketBuffer stackIn_5_0 = null;
@@ -349,36 +349,36 @@ final class t extends gd {
           int stackIn_6_2 = 0;
           Throwable decompiledCaughtException = null;
           Exception var4 = null;
-          if (this.field_r == null) {
+          if (this.socket == null) {
             return;
           }
           try {
-            this.field_n.position = 0;
-            stackIn_5_0 = this.field_n;
+            this.requestBuffer.position = 0;
+            stackIn_5_0 = this.requestBuffer;
             stackIn_5_1 = 46;
-            if (!param1) {
+            if (!loggedIn) {
               stackIn_6_2 = 3;
             } else {
               stackIn_6_2 = 2;
             }
-            ((PacketBuffer) (Object) stackIn_5_0).b((byte) stackIn_5_1, stackIn_6_2);
-            this.field_n.b(0L, 1105594440);
-            if (param0 < 63) {
+            ((PacketBuffer) (Object) stackIn_5_0).writeByte((byte) stackIn_5_1, stackIn_6_2);
+            this.requestBuffer.writeLong40(0L, 1105594440);
+            if (guard < 63) {
               return;
             }
-            this.field_r.a(0, -2, this.field_n.payload, this.field_n.payload.length);
+            this.socket.write(0, -2, this.requestBuffer.payload, this.requestBuffer.payload.length);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             iOException = (IOException) (Object) decompiledCaughtException;
             try {
-              this.field_r.a((byte) -93);
+              this.socket.close((byte) -93);
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var4 = (Exception) (Object) decompiledCaughtException;
             }
-            this.field_j = -2;
-            this.field_d = this.field_d + 1;
-            this.field_r = null;
+            this.failureCode = -2;
+            this.failureCount = this.failureCount + 1;
+            this.socket = null;
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -387,32 +387,32 @@ final class t extends gd {
         }
     }
 
-    private final void e(int param0) {
+    private final void sendConnectionPreamble(int guard) {
         try {
           IOException iOException = null;
           Throwable decompiledCaughtException = null;
           Exception var3 = null;
-          if (this.field_r == null) {
+          if (this.socket == null) {
             return;
           }
           try {
-            this.field_n.position = param0;
-            this.field_n.b((byte) 19, 6);
-            this.field_n.d(3, param0 + 102);
-            this.field_n.b(param0 + 127, 0);
-            this.field_r.a(0, -2, this.field_n.payload, this.field_n.payload.length);
+            this.requestBuffer.position = guard;
+            this.requestBuffer.writeByte((byte) 19, 6);
+            this.requestBuffer.writeMedium(3, guard + 102);
+            this.requestBuffer.writeShort(guard + 127, 0);
+            this.socket.write(0, -2, this.requestBuffer.payload, this.requestBuffer.payload.length);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             iOException = (IOException) (Object) decompiledCaughtException;
             try {
-              this.field_r.a((byte) -94);
+              this.socket.close((byte) -94);
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var3 = (Exception) (Object) decompiledCaughtException;
             }
-            this.field_d = this.field_d + 1;
-            this.field_j = -2;
-            this.field_r = null;
+            this.failureCount = this.failureCount + 1;
+            this.failureCode = -2;
+            this.socket = null;
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -421,15 +421,15 @@ final class t extends gd {
         }
     }
 
-    public t() {
+    public SocketJs5Client() {
     }
 
-    final void c(int param0) {
-        if (param0 > -61) {
+    final void closeConnection(int guard) {
+        if (guard > -61) {
           field_q = 32;
         }
-        if (null != this.field_r) {
-          this.field_r.a((byte) -46);
+        if (null != this.socket) {
+          this.socket.close((byte) -46);
         }
     }
 

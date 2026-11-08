@@ -23,12 +23,12 @@ final class wg {
           if (param1 != 1882601153) {
             wg.a(78, -126, 77);
           }
-          while (bf.field_c.length > var3_int) {
+          while (IntIndexHashTable.field_c.length > var3_int) {
             var5 = eb.field_a[var3_int];
             if (var5 < 0) {
               var4 = var4 + GameClientShell.field_t;
             } else {
-              var6 = MessageDialog.$cfr$intArgs$a$590e95718a07(-59, bf.field_c[var3_int], true);
+              var6 = MessageDialog.$cfr$intArgs$a$590e95718a07(-59, IntIndexHashTable.field_c[var3_int], true);
               var7 = oj.field_a - (var6 >> 1);
               var4 = var4 + qc.field_a;
               if (oc.a(var4, (byte) 122, param2, var7 - dw.field_b, ga.field_h + (TextLayout.field_b << 1), param0, (dw.field_b << 1) + var6)) {

@@ -146,7 +146,7 @@ final class bw extends qt {
           }
           var3 = "rvnadlm";
           var4 = -1L;
-          gj.a(var4, param1, true, var3, var2);
+          BufferedCacheFile.a(var4, param1, true, var3, var2);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "bw.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

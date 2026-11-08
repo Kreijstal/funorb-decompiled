@@ -58,7 +58,7 @@ final class DroneChargeParticle extends TimedSceneEffect {
         }
         GameClientShell.field_u = new String[34];
         GameClientShell.field_u[16] = vp.discardText;
-        GameClientShell.field_u[1] = ll.resumeGameText;
+        GameClientShell.field_u[1] = WhirlpoolTables.resumeGameText;
         GameClientShell.field_u[5] = rf.menuText;
         GameClientShell.field_u[11] = RasterBuffer.quitText;
         GameClientShell.field_u[14] = kf.achievementsText;
@@ -165,19 +165,19 @@ final class DroneChargeParticle extends TimedSceneEffect {
         var5.g(param2, param0 ^ -105);
         var5.position = var5.position + 1;
         int var4 = var5.position;
-        var5.b((byte) 84, 1);
-        var5.b((byte) 103, param1.field_k);
+        var5.writeByte((byte) 84, 1);
+        var5.writeByte((byte) 103, param1.field_k);
         if (param0 != -97) {
           return;
         }
         try {
-          var5.a(param1.field_o, (byte) -17);
-          var5.e(48, param1.field_n);
-          var5.e(48, param1.field_p);
-          var5.e(48, param1.field_q);
-          var5.e(48, param1.field_l);
-          var5.a(var4, false);
-          var5.c(var5.position - var4, param0 - 13648);
+          var5.writeSignedSmart(param1.field_o, (byte) -17);
+          var5.writeInt(48, param1.field_n);
+          var5.writeInt(48, param1.field_p);
+          var5.writeInt(48, param1.field_q);
+          var5.writeInt(48, param1.field_l);
+          var5.appendCrc32(var4, false);
+          var5.patchByteLength(var5.position - var4, param0 - 13648);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "cl.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

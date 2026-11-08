@@ -23,7 +23,7 @@ abstract class se {
           rf.field_a.dispatchPointerInput(wr.field_F, GraphicsToolkit.field_b, true, param0 - 19887);
           rf.field_a.advanceDialogAnimations(-90);
           while (wd.c(param0 ^ -19954)) {
-            rf.field_a.dispatchKey(np.field_c, tg.field_a, true);
+            rf.field_a.dispatchKey(WhirlpoolDigest.field_c, tg.field_a, true);
           }
           if (iu.field_e != -1) {
             var1_int = iu.field_e;
