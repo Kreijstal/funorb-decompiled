@@ -5,12 +5,12 @@ final class mi extends DualLinkNode {
     int field_v;
     int field_F;
     static kc field_A;
-    private kd field_D;
+    private PcmSampleStream field_D;
     int field_z;
     private int field_n;
     private int field_J;
     int field_I;
-    static lg field_B;
+    static BinaryBitmapFont field_B;
     private nf field_q;
     private int field_x;
     ml field_t;
@@ -147,7 +147,7 @@ final class mi extends DualLinkNode {
         }
     }
 
-    final static void a(ha param0, int param1) {
+    final static void a(MusicTrack param0, int param1) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -477,7 +477,7 @@ final class mi extends DualLinkNode {
                                               this.field_u = 0;
                                               ce.field_k = 0;
                                               jo.field_b = false;
-                                              di.field_m = 0;
+                                              NodeHashTable.field_m = 0;
                                               var8 = 0;
                                               if (this.field_q.a(this.field_G + 1, -3 + this.field_v, (byte) -83)) {
                                                 var8++;
@@ -493,7 +493,7 @@ final class mi extends DualLinkNode {
                                               }
                                               if (0 < var8) {
                                                 ce.field_k = ce.field_k / var8;
-                                                di.field_m = di.field_m / var8;
+                                                NodeHashTable.field_m = NodeHashTable.field_m / var8;
                                               }
                                               if (0 == var8) {
                                                 this.field_y = 50;
@@ -538,7 +538,7 @@ final class mi extends DualLinkNode {
                                               this.field_G = this.field_z >> 4;
                                               jo.field_b = false;
                                               this.field_v = this.field_o >> 4;
-                                              di.field_m = 0;
+                                              NodeHashTable.field_m = 0;
                                               ce.field_k = 0;
                                               var10 = 0;
                                               if (this.field_q.a(this.field_G, -3 + this.field_v, (byte) -83)) {
@@ -558,7 +558,7 @@ final class mi extends DualLinkNode {
                                                 var10++;
                                               }
                                               if (var10 > 0) {
-                                                di.field_m = di.field_m / var10;
+                                                NodeHashTable.field_m = NodeHashTable.field_m / var10;
                                                 ce.field_k = ce.field_k / var10;
                                               }
                                               if (var9 != 0 &&
@@ -585,7 +585,7 @@ final class mi extends DualLinkNode {
                                                 this.field_z = this.field_z + (this.field_F + 4);
                                                 this.field_o = this.field_o + this.field_u;
                                                 jo.field_b = false;
-                                                di.field_m = 0;
+                                                NodeHashTable.field_m = 0;
                                                 ce.field_k = 0;
                                                 var10 = 0;
                                                 this.field_v = this.field_o >> 4;
@@ -607,7 +607,7 @@ final class mi extends DualLinkNode {
                                                 do {
                                                   if (stackIn_1293_0 < stackIn_1293_1) {
                                                     ce.field_k = ce.field_k / var10;
-                                                    di.field_m = di.field_m / var10;
+                                                    NodeHashTable.field_m = NodeHashTable.field_m / var10;
                                                   }
                                                   boolean decompiledFrameRemainder14 = true;
                                                   if (var10 <= 0 ||
@@ -629,7 +629,7 @@ final class mi extends DualLinkNode {
                                                       this.field_t = null;
                                                     }
                                                     var15 = -ce.field_k + this.field_G;
-                                                    var14 = this.field_v - di.field_m;
+                                                    var14 = this.field_v - NodeHashTable.field_m;
                                                     var16 = am.a(var15 << 4, var14 << 4, false);
                                                     if (16 > var16) {
                                                       var15 = -1;
@@ -1077,7 +1077,7 @@ final class mi extends DualLinkNode {
                                                           if (this.field_G < this.field_q.field_H / 5) {
                                                             var12_ref_ll = gj.field_f[19];
                                                           }
-                                                          this.field_p = var12_ref_ll.b();
+                                                          this.field_p = var12_ref_ll.toRgbSprite();
                                                           if (jo.field_b &&
                                                             16 == this.field_I) {
                                                             decompiledFrameCompleted35 = false;
@@ -1150,7 +1150,7 @@ final class mi extends DualLinkNode {
                                                               }
                                                             }
                                                           }
-                                                          var12 = -di.field_m + this.field_v;
+                                                          var12 = -NodeHashTable.field_m + this.field_v;
                                                           var13 = this.field_G - ce.field_k;
                                                           var14 = am.a(var13 << 4, var12 << 4, false);
                                                           if (var14 < 1) {
@@ -1219,7 +1219,7 @@ final class mi extends DualLinkNode {
                                                                     this.a(1, (byte) 37, 2);
                                                                     this.field_y = this.field_y + 50;
                                                                     var17 = this.field_v;
-                                                                    this.field_v = di.field_m;
+                                                                    this.field_v = NodeHashTable.field_m;
                                                                     var18 = this.field_G;
                                                                     this.field_G = ce.field_k;
                                                                     var5 = this.a(this.field_v, (ml) null, (byte) 81, 99, this.field_G, this.field_q);
@@ -1444,7 +1444,7 @@ final class mi extends DualLinkNode {
                                                               }
                                                             }
                                                           }
-                                                          var12 = -di.field_m + this.field_v;
+                                                          var12 = -NodeHashTable.field_m + this.field_v;
                                                           var13 = this.field_G - ce.field_k;
                                                           var14 = am.a(var13 << 4, var12 << 4, false);
                                                           if (var14 < 1) {
@@ -1513,7 +1513,7 @@ final class mi extends DualLinkNode {
                                                                     this.a(1, (byte) 37, 2);
                                                                     this.field_y = this.field_y + 50;
                                                                     var17 = this.field_v;
-                                                                    this.field_v = di.field_m;
+                                                                    this.field_v = NodeHashTable.field_m;
                                                                     var18 = this.field_G;
                                                                     this.field_G = ce.field_k;
                                                                     var5 = this.a(this.field_v, (ml) null, (byte) 81, 99, this.field_G, this.field_q);
@@ -1645,7 +1645,7 @@ final class mi extends DualLinkNode {
                                                           if (this.field_G < this.field_q.field_H / 5) {
                                                             var12_ref_ll = gj.field_f[19];
                                                           }
-                                                          this.field_p = var12_ref_ll.b();
+                                                          this.field_p = var12_ref_ll.toRgbSprite();
                                                         }
                                                       }
                                                       if ((decompiledFrameCompleted34) &&
@@ -1825,7 +1825,7 @@ final class mi extends DualLinkNode {
                                                         this.field_x = 5;
                                                         this.field_y = this.field_y + 50;
                                                         var12 = this.field_v;
-                                                        this.field_v = di.field_m;
+                                                        this.field_v = NodeHashTable.field_m;
                                                         var13 = this.field_G;
                                                         this.field_G = ce.field_k;
                                                         this.a(1, (byte) 37, 2);
@@ -1870,7 +1870,7 @@ final class mi extends DualLinkNode {
                                                       this.field_y = this.field_y + 50;
                                                       var17 = this.field_v;
                                                       var18 = this.field_G;
-                                                      this.field_v = di.field_m;
+                                                      this.field_v = NodeHashTable.field_m;
                                                       this.field_G = ce.field_k;
                                                       var5 = this.a(this.field_v, (ml) null, (byte) 81, 89, this.field_G, this.field_q);
                                                       this.field_q.b(52, (mi) (var5));
@@ -2004,7 +2004,7 @@ final class mi extends DualLinkNode {
                                                       break regionExit4;
                                                     }
                                                     if ((-32 + this.field_q.field_H) >= this.field_G &&
-                                                      !this.field_q.b(this.field_G - this.field_r + 1, 2, -this.field_r + this.field_v, gj.field_f[0].b())) {
+                                                      !this.field_q.b(this.field_G - this.field_r + 1, 2, -this.field_r + this.field_v, gj.field_f[0].toRgbSprite())) {
                                                       break regionExit4;
                                                     }
                                                     this.f(0);
@@ -2990,7 +2990,7 @@ final class mi extends DualLinkNode {
                       boolean decompiledSharedTail2 = !(!jo.field_b);
                       if (!decompiledSharedTail2) {
                         this.a(2, (byte) 37, 6);
-                        this.field_q.a(this.field_G - 8, param0 ^ -6121, -8 + this.field_v, gj.field_f[0].b());
+                        this.field_q.a(this.field_G - 8, param0 ^ -6121, -8 + this.field_v, gj.field_f[0].toRgbSprite());
                         var5 = this.a(this.field_v, this.field_t, (byte) 81, 117, this.field_G, this.field_q);
                         this.field_q.b(52, (mi) (var5));
                         decompiledSharedTail2 = (var19 != 0);
@@ -3049,7 +3049,7 @@ final class mi extends DualLinkNode {
                           }
                         } else {
                           this.field_G = ce.field_k;
-                          this.field_v = di.field_m;
+                          this.field_v = NodeHashTable.field_m;
                           var5 = this.a(this.field_v, (ml) null, (byte) 81, 94, this.field_G, this.field_q);
                           this.field_q.b(52, (mi) (var5));
                         }
@@ -3312,7 +3312,7 @@ final class mi extends DualLinkNode {
                   this.field_y = this.field_y + 1;
                   var6 = this.field_v;
                   var7 = this.field_G;
-                  this.field_v = di.field_m;
+                  this.field_v = NodeHashTable.field_m;
                   this.field_G = ce.field_k;
                   this.a(1, (byte) 37, 1);
                   var5 = this.a(this.field_v, (ml) null, (byte) 81, 89, this.field_G, this.field_q);
@@ -3538,13 +3538,13 @@ final class mi extends DualLinkNode {
         }
     }
 
-    private final kd a(wf param0, int param1) {
+    private final PcmSampleStream a(PcmSample param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
         Object stackIn_2_0 = null;
-        kd stackIn_9_0 = null;
+        PcmSampleStream stackIn_9_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -3552,7 +3552,7 @@ final class mi extends DualLinkNode {
         try {
           if (null == param0) {
             stackIn_2_0 = null;
-            return (kd) (stackIn_2_0);
+            return (PcmSampleStream) (stackIn_2_0);
           }
           var3_int = Math.abs(this.field_F) + Math.abs(this.field_u);
           if (param1 != 19227) {
@@ -3563,7 +3563,7 @@ final class mi extends DualLinkNode {
           if (512 > var3_int) {
             var5 = var5 * var3_int / 512;
           }
-          stackIn_9_0 = kd.a(param0, var4, var5);
+          stackIn_9_0 = PcmSampleStream.createAtRatePercent(param0, var4, var5);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -4031,8 +4031,8 @@ final class mi extends DualLinkNode {
                   if (this.field_y > 255) {
                     this.field_y = 0;
                   }
-                  gh.field_L.a((byte) 90, this.field_q.field_Kb);
-                  var5 = (mi) (gh.field_L.b(-69));
+                  MidiPcmStream.field_L.a((byte) 90, this.field_q.field_Kb);
+                  var5 = (mi) (MidiPcmStream.field_L.b(-69));
                   while (null != var5) {
                     stackIn_392_0 = var5;
                     boolean decompiledFrameRemainder2 = true;
@@ -4061,10 +4061,10 @@ final class mi extends DualLinkNode {
                         ((mi) (var5)).field_z = ((mi) (var5)).field_G << 4;
                       }
                     }
-                    var5 = (mi) (gh.field_L.d(-18502));
+                    var5 = (mi) (MidiPcmStream.field_L.d(-18502));
                   }
-                  gh.field_L.a((byte) 28, this.field_q.field_i);
-                  stackIn_392_0Lifetime1 = gh.field_L.b(-66);
+                  MidiPcmStream.field_L.a((byte) 28, this.field_q.field_i);
+                  stackIn_392_0Lifetime1 = MidiPcmStream.field_L.b(-66);
                   var9_ref_ml = (ml) (stackIn_392_0Lifetime1);
                   while (null != var9_ref_ml) {
                     boolean decompiledFrameRemainder1 = true;
@@ -4097,7 +4097,7 @@ final class mi extends DualLinkNode {
                         var9_ref_ml.field_R = var9_ref_ml.field_db << 4;
                       }
                     }
-                    var9_ref_ml = (ml) (gh.field_L.d(-18502));
+                    var9_ref_ml = (ml) (MidiPcmStream.field_L.d(-18502));
                   }
                   return;
                 }
@@ -4120,8 +4120,8 @@ final class mi extends DualLinkNode {
                 var5 = this.a(this.field_t.field_lb + (int)(Math.random() * 256.0 * Math.cos(var9_double)), (ml) null, (byte) 81, 100, this.field_t.field_db - (this.field_t.field_Y >> 1) + (int)(Math.random() * 256.0 * Math.sin(var9_double)), this.field_q);
                 this.field_q.b(52, (mi) (var5));
                 if (this.field_y % 15 == 1) {
-                  gh.field_L.a((byte) 39, this.field_q.field_i);
-                  var11_ref_ml = (ml) (gh.field_L.b(-59));
+                  MidiPcmStream.field_L.a((byte) 39, this.field_q.field_i);
+                  var11_ref_ml = (ml) (MidiPcmStream.field_L.b(-59));
                   while (var11_ref_ml != null) {
                     stackOut_430_0 = var11_ref_ml;
                     stackIn_472_0 = stackOut_430_0;
@@ -4166,10 +4166,10 @@ final class mi extends DualLinkNode {
                         }
                       }
                     }
-                    var11_ref_ml = (ml) (gh.field_L.d(-18502));
+                    var11_ref_ml = (ml) (MidiPcmStream.field_L.d(-18502));
                   }
-                  gh.field_L.a((byte) 122, this.field_q.field_Kb);
-                  stackIn_472_0Lifetime1 = gh.field_L.b(-109);
+                  MidiPcmStream.field_L.a((byte) 122, this.field_q.field_Kb);
+                  stackIn_472_0Lifetime1 = MidiPcmStream.field_L.b(-109);
                   var11_ref_mi = (mi) (stackIn_472_0Lifetime1);
                   while (var11_ref_mi != null) {
                     stackIn_539_0 = var11_ref_mi.field_I;
@@ -4224,7 +4224,7 @@ final class mi extends DualLinkNode {
                         }
                       }
                     }
-                    var11_ref_mi = (mi) (gh.field_L.d(-18502));
+                    var11_ref_mi = (mi) (MidiPcmStream.field_L.d(-18502));
                   }
                 }
                 stackIn_539_0Lifetime1 = -251;
@@ -4259,8 +4259,8 @@ final class mi extends DualLinkNode {
                           return;
                         }
                         var9 = 0;
-                        gh.field_L.a((byte) 69, this.field_q.field_i);
-                        var10_ref_ml = (ml) (gh.field_L.b(-111));
+                        MidiPcmStream.field_L.a((byte) 69, this.field_q.field_i);
+                        var10_ref_ml = (ml) (MidiPcmStream.field_L.b(-111));
                         while (var10_ref_ml != null) {
                           if (var19 != 0) {
                             return;
@@ -4272,7 +4272,7 @@ final class mi extends DualLinkNode {
                             var10_ref_ml.field_x = var10_ref_ml.field_x + 1;
                             var9 = 1;
                           }
-                          var10_ref_ml = (ml) (gh.field_L.d(-18502));
+                          var10_ref_ml = (ml) (MidiPcmStream.field_L.d(-18502));
                         }
                         if (var9 != 0) {
                           if (var19 == 0) {
@@ -4540,7 +4540,7 @@ final class mi extends DualLinkNode {
                                                       stackIn_951_2 = 27;
                                                     }
                                                   }
-                                                  ((mi) (stackIn_953_0)).field_p = ((IndexedSprite) (Object) stackIn_950_1[stackIn_951_2]).b();
+                                                  ((mi) (stackIn_953_0)).field_p = ((IndexedSprite) (Object) stackIn_950_1[stackIn_951_2]).toRgbSprite();
                                                   ((mi) (var5)).field_y = var18;
                                                   ((mi) (var5)).field_x = 2 * var14Lifetime1;
                                                   this.field_q.b(52, (mi) (var5));
@@ -4603,10 +4603,10 @@ final class mi extends DualLinkNode {
                                                 var5 = this.a(this.field_v + var10Lifetime1, (ml) null, (byte) 81, 95, this.field_G - var11Lifetime1, this.field_q);
                                                 this.field_q.b(52, (mi) (var5));
                                                 if (!this.field_q.b(this.field_G - var11Lifetime1 - this.field_r, 2, var10Lifetime1 + (this.field_v - this.field_r), ra.field_a)) {
-                                                  this.field_q.a(-var11Lifetime1 + this.field_G - 8, -125, -8 + (this.field_v + var10Lifetime1), gj.field_f[7].b());
+                                                  this.field_q.a(-var11Lifetime1 + this.field_G - 8, -125, -8 + (this.field_v + var10Lifetime1), gj.field_f[7].toRgbSprite());
                                                 }
                                                 if (!this.field_q.b(this.field_G + (-var11Lifetime1 - this.field_r), 2, -this.field_r + (-var10Lifetime1 + this.field_v), ra.field_a)) {
-                                                  this.field_q.a(-8 + this.field_G - var11Lifetime1, -44, -8 + (this.field_v - var10Lifetime1), gj.field_f[7].b());
+                                                  this.field_q.a(-8 + this.field_G - var11Lifetime1, -44, -8 + (this.field_v - var10Lifetime1), gj.field_f[7].toRgbSprite());
                                                 }
                                                 if (this.field_y <= 100) {
                                                   return;
@@ -4654,8 +4654,8 @@ final class mi extends DualLinkNode {
                                               }
                                               this.field_y = this.field_y + 1;
                                               if (this.field_y % 15 == 1) {
-                                                gh.field_L.a((byte) 28, this.field_q.field_i);
-                                                var9_ref_mlLifetime1 = (ml) (gh.field_L.b(-70));
+                                                MidiPcmStream.field_L.a((byte) 28, this.field_q.field_i);
+                                                var9_ref_mlLifetime1 = (ml) (MidiPcmStream.field_L.b(-70));
                                                 while (var9_ref_mlLifetime1 != null) {
                                                   stackOut_1133_0 = var9_ref_mlLifetime1.field_z;
                                                   stackIn_1159_0 = stackOut_1133_0 ? 1 : 0;
@@ -4676,7 +4676,7 @@ final class mi extends DualLinkNode {
                                                     var9_ref_mlLifetime1.field_x = var9_ref_mlLifetime1.field_x + 2;
                                                     var9_ref_mlLifetime1.field_z = true;
                                                   }
-                                                  var9_ref_mlLifetime1 = (ml) (gh.field_L.d(-18502));
+                                                  var9_ref_mlLifetime1 = (ml) (MidiPcmStream.field_L.d(-18502));
                                                 }
                                               }
                                               stackIn_1159_0Lifetime1 = this.field_y;
@@ -4787,8 +4787,8 @@ final class mi extends DualLinkNode {
                                                       if (0 < this.field_y) {
                                                         this.field_y = this.field_y + 1;
                                                       }
-                                                      gh.field_L.a((byte) 121, this.field_q.field_Kb);
-                                                      var9_ref_mi = (mi) (gh.field_L.b(-60));
+                                                      MidiPcmStream.field_L.a((byte) 121, this.field_q.field_Kb);
+                                                      var9_ref_mi = (mi) (MidiPcmStream.field_L.b(-60));
                                                       while (null != var9_ref_mi) {
                                                         stackOut_1284_0 = var9_ref_mi;
                                                         stackIn_1322_0 = stackOut_1284_0;
@@ -4825,7 +4825,7 @@ final class mi extends DualLinkNode {
                                                             }
                                                           }
                                                         }
-                                                        var9_ref_mi = (mi) (gh.field_L.d(-18502));
+                                                        var9_ref_mi = (mi) (MidiPcmStream.field_L.d(-18502));
                                                       }
                                                     }
                                                     if (decompiledFrameCompleted1) {
@@ -4852,8 +4852,8 @@ final class mi extends DualLinkNode {
                                                         this.field_t.field_gb.field_I != 121)) {
                                                         this.field_t.field_gb = this;
                                                       }
-                                                      gh.field_L.a((byte) 117, this.field_q.field_i);
-                                                      var9_ref_mlLifetime1Lifetime1 = (ml) (gh.field_L.b(-62));
+                                                      MidiPcmStream.field_L.a((byte) 117, this.field_q.field_i);
+                                                      var9_ref_mlLifetime1Lifetime1 = (ml) (MidiPcmStream.field_L.b(-62));
                                                       while (var9_ref_mlLifetime1Lifetime1 != null) {
                                                         if (var9_ref_mlLifetime1Lifetime1 != this.field_t &&
                                                           this.field_y == 0) {
@@ -4892,7 +4892,7 @@ final class mi extends DualLinkNode {
                                                             this.field_y = 1;
                                                           }
                                                         }
-                                                        var9_ref_mlLifetime1Lifetime1 = (ml) (gh.field_L.d(-18502));
+                                                        var9_ref_mlLifetime1Lifetime1 = (ml) (MidiPcmStream.field_L.d(-18502));
                                                       }
                                                     }
                                                     this.field_z = this.field_G << 4;
@@ -4913,8 +4913,8 @@ final class mi extends DualLinkNode {
                                                     }
                                                     this.field_G = this.field_t.field_db;
                                                     if (this.field_y < 5) {
-                                                      gh.field_L.a((byte) 116, this.field_q.field_i);
-                                                      var9_ref_mlLifetime1Lifetime1 = (ml) (gh.field_L.b(-57));
+                                                      MidiPcmStream.field_L.a((byte) 116, this.field_q.field_i);
+                                                      var9_ref_mlLifetime1Lifetime1 = (ml) (MidiPcmStream.field_L.b(-57));
                                                       while (var9_ref_mlLifetime1Lifetime1 != null) {
                                                         if (~this.field_t.field_u != ~var9_ref_mlLifetime1Lifetime1.field_u) {
                                                           var10Lifetime1 = -var9_ref_mlLifetime1Lifetime1.field_lb + this.field_v;
@@ -4952,7 +4952,7 @@ final class mi extends DualLinkNode {
                                                             this.field_G = var13Lifetime1;
                                                           }
                                                         }
-                                                        var9_ref_mlLifetime1Lifetime1 = (ml) (gh.field_L.d(-18502));
+                                                        var9_ref_mlLifetime1Lifetime1 = (ml) (MidiPcmStream.field_L.d(-18502));
                                                       }
                                                     }
                                                     this.field_z = this.field_G << 4;
@@ -5051,8 +5051,8 @@ final class mi extends DualLinkNode {
                                                   if (this.field_y > 0) {
                                                     this.field_y = this.field_y + 1;
                                                   }
-                                                  gh.field_L.a((byte) 51, this.field_q.field_Kb);
-                                                  var9_ref_miLifetime1 = (mi) (gh.field_L.b(-62));
+                                                  MidiPcmStream.field_L.a((byte) 51, this.field_q.field_Kb);
+                                                  var9_ref_miLifetime1 = (mi) (MidiPcmStream.field_L.b(-62));
                                                   while (null != var9_ref_miLifetime1) {
                                                     stackOut_1493_0 = var9_ref_miLifetime1;
                                                     stackIn_1544_0 = stackOut_1493_0;
@@ -5087,10 +5087,10 @@ final class mi extends DualLinkNode {
                                                         }
                                                       }
                                                     }
-                                                    var9_ref_miLifetime1 = (mi) (gh.field_L.d(-18502));
+                                                    var9_ref_miLifetime1 = (mi) (MidiPcmStream.field_L.d(-18502));
                                                   }
-                                                  gh.field_L.a((byte) 77, this.field_q.field_i);
-                                                  stackIn_1544_0Lifetime1 = gh.field_L.b(-78);
+                                                  MidiPcmStream.field_L.a((byte) 77, this.field_q.field_i);
+                                                  stackIn_1544_0Lifetime1 = MidiPcmStream.field_L.b(-78);
                                                   var9_ref_mlLifetime1Lifetime1 = (ml) (stackIn_1544_0Lifetime1);
                                                   while (var9_ref_mlLifetime1Lifetime1 != null) {
                                                     if (var9_ref_mlLifetime1Lifetime1.field_z) {
@@ -5118,7 +5118,7 @@ final class mi extends DualLinkNode {
                                                         this.field_y = this.field_y + 1;
                                                       }
                                                     }
-                                                    var9_ref_mlLifetime1Lifetime1 = (ml) (gh.field_L.d(-18502));
+                                                    var9_ref_mlLifetime1Lifetime1 = (ml) (MidiPcmStream.field_L.d(-18502));
                                                   }
                                                   return;
                                                 }
@@ -5224,8 +5224,8 @@ final class mi extends DualLinkNode {
                                                                     this.field_q.b(52, (mi) (var5));
                                                                   }
                                                                 } else {
-                                                                  gh.field_L.a((byte) 75, this.field_q.field_Kb);
-                                                                  var9_ref_miLifetime2 = (mi) (gh.field_L.b(-43));
+                                                                  MidiPcmStream.field_L.a((byte) 75, this.field_q.field_Kb);
+                                                                  var9_ref_miLifetime2 = (mi) (MidiPcmStream.field_L.b(-43));
                                                                   while (true) {
                                                                     if (null != var9_ref_miLifetime2) {
                                                                       stackOut_2016_0 = var9_ref_miLifetime2;
@@ -5246,7 +5246,7 @@ final class mi extends DualLinkNode {
                                                                           }
                                                                         }
                                                                       }
-                                                                      var9_ref_miLifetime2 = (mi) (gh.field_L.d(-18502));
+                                                                      var9_ref_miLifetime2 = (mi) (MidiPcmStream.field_L.d(-18502));
                                                                       continue;
                                                                     }
                                                                     break;
@@ -5807,9 +5807,9 @@ final class mi extends DualLinkNode {
                                                                 if (null == pn.field_e) {
                                                                   pn.field_e = new Sprite(512, 128);
                                                                 }
-                                                                pn.field_e.a();
-                                                                de.d(0, 0, 512, 128, 0);
-                                                                vg.field_M.b(0, 0, 4 * var9, var9);
+                                                                pn.field_e.makeRasterTarget();
+                                                                SoftwareRasterizer.fillRectangle(0, 0, 512, 128, 0);
+                                                                vg.field_M.drawScaled(0, 0, 4 * var9, var9);
                                                                 this.field_q.a(var10Lifetime1, -38, -(2 * var9) + this.field_v, pn.field_e);
                                                               }
                                                               if (this.field_y >= 500) {
@@ -5947,8 +5947,8 @@ final class mi extends DualLinkNode {
                                                               }
                                                             } else {
                                                               if (this.field_I != 71) {
-                                                                gh.field_L.a((byte) 100, this.field_q.field_Kb);
-                                                                var9_ref_miLifetime2 = (mi) (gh.field_L.b(-123));
+                                                                MidiPcmStream.field_L.a((byte) 100, this.field_q.field_Kb);
+                                                                var9_ref_miLifetime2 = (mi) (MidiPcmStream.field_L.b(-123));
                                                                 while (true) {
                                                                   if (var9_ref_miLifetime2 != null) {
                                                                     stackOut_1870_0 = var9_ref_miLifetime2;
@@ -5970,7 +5970,7 @@ final class mi extends DualLinkNode {
                                                                           }
                                                                         }
                                                                       }
-                                                                      var9_ref_miLifetime2 = (mi) (gh.field_L.d(-18502));
+                                                                      var9_ref_miLifetime2 = (mi) (MidiPcmStream.field_L.d(-18502));
                                                                       continue;
                                                                     }
                                                                   } else {
@@ -6111,8 +6111,8 @@ final class mi extends DualLinkNode {
                                                     if (0 < this.field_y) {
                                                       this.field_y = this.field_y + 1;
                                                     }
-                                                    gh.field_L.a((byte) 107, this.field_q.field_Kb);
-                                                    var9_ref_miLifetime2Lifetime1 = (mi) (gh.field_L.b(-32));
+                                                    MidiPcmStream.field_L.a((byte) 107, this.field_q.field_Kb);
+                                                    var9_ref_miLifetime2Lifetime1 = (mi) (MidiPcmStream.field_L.b(-32));
                                                     while (var9_ref_miLifetime2Lifetime1 != null) {
                                                       if (var9_ref_miLifetime2Lifetime1.h(-139) &&
                                                         var9_ref_miLifetime2Lifetime1.field_I != 30 &&
@@ -6148,7 +6148,7 @@ final class mi extends DualLinkNode {
                                                           }
                                                         }
                                                       }
-                                                      var9_ref_miLifetime2Lifetime1 = (mi) (gh.field_L.d(-18502));
+                                                      var9_ref_miLifetime2Lifetime1 = (mi) (MidiPcmStream.field_L.d(-18502));
                                                       if (var19 == 0) {
                                                         continue;
                                                       }
@@ -6199,8 +6199,8 @@ final class mi extends DualLinkNode {
                                                     this.a(50, 64, 32, 8);
                                                     this.field_y = 250;
                                                   }
-                                                  gh.field_L.a((byte) 31, this.field_q.field_Kb);
-                                                  var9_ref_miLifetime3 = (mi) (gh.field_L.b(-78));
+                                                  MidiPcmStream.field_L.a((byte) 31, this.field_q.field_Kb);
+                                                  var9_ref_miLifetime3 = (mi) (MidiPcmStream.field_L.b(-78));
                                                   while (var9_ref_miLifetime3 != null) {
                                                     if (var19 != 0) {
                                                       return;
@@ -6236,7 +6236,7 @@ final class mi extends DualLinkNode {
                                                         }
                                                       }
                                                     }
-                                                    var9_ref_miLifetime3 = (mi) (gh.field_L.d(-18502));
+                                                    var9_ref_miLifetime3 = (mi) (MidiPcmStream.field_L.d(-18502));
                                                   }
                                                   return;
                                                 }
@@ -6642,8 +6642,8 @@ final class mi extends DualLinkNode {
                     this.field_G = this.field_z >> 4;
                     if (~var10Lifetime1Lifetime1 != ~this.field_o ||
                       ~this.field_z != ~var11Lifetime1Lifetime1) {
-                      gh.field_L.a((byte) 38, this.field_q.field_r);
-                      var12_ref_mi = (mi) (gh.field_L.b(-62));
+                      MidiPcmStream.field_L.a((byte) 38, this.field_q.field_r);
+                      var12_ref_mi = (mi) (MidiPcmStream.field_L.b(-62));
                       while (var12_ref_mi != null) {
                         var13Lifetime1Lifetime1 = var12_ref_mi.field_o - var10Lifetime1Lifetime1;
                         var14Lifetime1Lifetime1 = var12_ref_mi.field_z - var11Lifetime1Lifetime1;
@@ -6659,7 +6659,7 @@ final class mi extends DualLinkNode {
                           var12_ref_mi.field_v = var12_ref_mi.field_o >> 4;
                           var12_ref_mi.field_G = var12_ref_mi.field_z >> 4;
                         }
-                        var12_ref_mi = (mi) (gh.field_L.d(-18502));
+                        var12_ref_mi = (mi) (MidiPcmStream.field_L.d(-18502));
                       }
                     }
                   }
@@ -6671,8 +6671,8 @@ final class mi extends DualLinkNode {
                   if (stackIn_594_0 >= stackIn_594_1) {
                     this.field_x = this.field_x - 256;
                   }
-                  gh.field_L.a((byte) 75, this.field_q.field_Kb);
-                  var10_ref_mi = (mi) (gh.field_L.b(-52));
+                  MidiPcmStream.field_L.a((byte) 75, this.field_q.field_Kb);
+                  var10_ref_mi = (mi) (MidiPcmStream.field_L.b(-52));
                   while (null != var10_ref_mi) {
                     if (var10_ref_mi.m(-8209)) {
                       var11Lifetime1Lifetime1 = this.field_o - var10_ref_mi.field_o;
@@ -6681,7 +6681,7 @@ final class mi extends DualLinkNode {
                         this.field_q.field_h.a(var10_ref_mi, 15893);
                       }
                     }
-                    var10_ref_mi = (mi) (gh.field_L.d(-18502));
+                    var10_ref_mi = (mi) (MidiPcmStream.field_L.d(-18502));
                     if (var19 == 0) {
                       continue;
                     }
@@ -6729,8 +6729,8 @@ final class mi extends DualLinkNode {
                 if (this.field_y >= 1) {
                   return;
                 }
-                gh.field_L.a((byte) 27, this.field_q.field_i);
-                var10_ref_mlLifetime1 = (ml) (gh.field_L.b(-99));
+                MidiPcmStream.field_L.a((byte) 27, this.field_q.field_i);
+                var10_ref_mlLifetime1 = (ml) (MidiPcmStream.field_L.b(-99));
                 while (null != var10_ref_mlLifetime1) {
                   if (var19 != 0) {
                     return;
@@ -6763,7 +6763,7 @@ final class mi extends DualLinkNode {
                       this.field_G = var14Lifetime2;
                     }
                   }
-                  var10_ref_mlLifetime1 = (ml) (gh.field_L.d(-18502));
+                  var10_ref_mlLifetime1 = (ml) (MidiPcmStream.field_L.d(-18502));
                 }
                 return;
               }
@@ -6813,159 +6813,159 @@ final class mi extends DualLinkNode {
           var2_int = 69 / ((param0 + 50) / 32);
           if (ra.field_a == null) {
             ra.field_a = new Sprite(15, 15);
-            ra.field_a.a();
-            de.i(7, 7, 7, 16777215);
+            ra.field_a.makeRasterTarget();
+            SoftwareRasterizer.fillCircle(7, 7, 7, 16777215);
           }
           this.field_p = ra.field_a;
           if (46 == this.field_I) {
             if (null == sb.field_g) {
               sb.field_g = new Sprite(16, 16);
-              sb.field_g.a();
-              de.d(6, 6, 7, 7, 16777214);
+              sb.field_g.makeRasterTarget();
+              SoftwareRasterizer.fillRectangle(6, 6, 7, 7, 16777214);
             }
             this.field_p = sb.field_g;
           }
           if (this.field_I == 145) {
-            this.field_p = gj.field_f[9].b();
+            this.field_p = gj.field_f[9].toRgbSprite();
           }
           if (this.field_I == 16) {
-            this.field_p = gj.field_f[3].b();
+            this.field_p = gj.field_f[3].toRgbSprite();
           }
           if (this.field_I == 10) {
-            this.field_p = gj.field_f[1].b();
+            this.field_p = gj.field_f[1].toRgbSprite();
           }
           if (this.field_I == 11) {
-            this.field_p = gj.field_f[1].b();
+            this.field_p = gj.field_f[1].toRgbSprite();
           }
           if (13 == this.field_I) {
-            this.field_p = gj.field_f[2].b();
+            this.field_p = gj.field_f[2].toRgbSprite();
           }
           if (12 == this.field_I) {
-            this.field_p = gj.field_f[2].b();
+            this.field_p = gj.field_f[2].toRgbSprite();
           }
           if (this.field_I == 14) {
-            this.field_p = gj.field_f[4].b();
+            this.field_p = gj.field_f[4].toRgbSprite();
           }
           if (67 == this.field_I) {
-            this.field_p = gj.field_f[2].b();
+            this.field_p = gj.field_f[2].toRgbSprite();
           }
           if (this.field_I == 17) {
-            this.field_p = gj.field_f[3].b();
+            this.field_p = gj.field_f[3].toRgbSprite();
           }
           if (this.field_I == 18) {
-            this.field_p = gj.field_f[3].b();
+            this.field_p = gj.field_f[3].toRgbSprite();
           }
           if (this.field_I == 0) {
-            this.field_p = gj.field_f[12].b();
+            this.field_p = gj.field_f[12].toRgbSprite();
           }
           if (this.field_I == 24) {
-            this.field_p = tg.field_b[2].b();
+            this.field_p = tg.field_b[2].toRgbSprite();
           }
           if (this.field_I == 26) {
             this.field_p = tk.field_x[0];
           }
           if (this.field_I == 23) {
-            this.field_p = tg.field_b[2].b();
+            this.field_p = tg.field_b[2].toRgbSprite();
           }
           if (this.field_I == 82) {
-            this.field_p = gj.field_f[4].b();
+            this.field_p = gj.field_f[4].toRgbSprite();
           }
           if (this.field_I == 25) {
-            this.field_p = tg.field_b[1].b();
+            this.field_p = tg.field_b[1].toRgbSprite();
           }
           if (this.field_I == 28) {
             this.field_p = tk.field_x[0];
           }
           if (this.field_I == 21) {
-            this.field_p = gj.field_f[5].b();
+            this.field_p = gj.field_f[5].toRgbSprite();
           }
           if (this.field_I == 44 ||
             this.field_I == 96) {
-            this.field_p = gj.field_f[10].b();
+            this.field_p = gj.field_f[10].toRgbSprite();
           }
           if (45 == this.field_I) {
-            this.field_p = gj.field_f[9].b();
+            this.field_p = gj.field_f[9].toRgbSprite();
           }
           if (this.field_I == 41) {
-            this.field_p = gj.field_f[8].b();
+            this.field_p = gj.field_f[8].toRgbSprite();
           }
           if (this.field_I == 42) {
-            this.field_p = gj.field_f[10].b();
+            this.field_p = gj.field_f[10].toRgbSprite();
           }
           if (this.field_I == 49) {
             this.field_p = md.field_f[1];
           }
           if (40 == this.field_I) {
-            this.field_p = gj.field_f[7].b();
+            this.field_p = gj.field_f[7].toRgbSprite();
           }
           if (76 == this.field_I) {
-            this.field_p = gj.field_f[9].b();
+            this.field_p = gj.field_f[9].toRgbSprite();
           }
           if (this.field_I == 43) {
-            this.field_p = gj.field_f[10].b();
+            this.field_p = gj.field_f[10].toRgbSprite();
           }
           if (33 == this.field_I) {
-            this.field_p = gj.field_f[11].b();
+            this.field_p = gj.field_f[11].toRgbSprite();
           }
           if (53 == this.field_I) {
-            this.field_p = gj.field_f[13].b();
+            this.field_p = gj.field_f[13].toRgbSprite();
           }
           if (this.field_I == 54) {
-            this.field_p = gj.field_f[14].b();
+            this.field_p = gj.field_f[14].toRgbSprite();
           }
           if (this.field_I == 50) {
-            this.field_p = gj.field_f[15].b();
+            this.field_p = gj.field_f[15].toRgbSprite();
           }
           if (this.field_I == 52) {
-            this.field_p = gj.field_f[15].b();
+            this.field_p = gj.field_f[15].toRgbSprite();
           }
           if (this.field_I == 133) {
-            this.field_p = tg.field_b[12].b();
+            this.field_p = tg.field_b[12].toRgbSprite();
           }
           if (145 == this.field_I) {
-            this.field_p = gj.field_f[24].b();
+            this.field_p = gj.field_f[24].toRgbSprite();
           }
           if (this.field_I == 146) {
-            this.field_p = gj.field_f[25].b();
+            this.field_p = gj.field_f[25].toRgbSprite();
           }
           if (this.field_I == 115) {
-            this.field_p = gj.field_f[20].b();
+            this.field_p = gj.field_f[20].toRgbSprite();
           }
           if (this.field_I == 116) {
-            this.field_p = gj.field_f[21].b();
+            this.field_p = gj.field_f[21].toRgbSprite();
           }
           if (this.field_I == 119) {
-            this.field_p = gj.field_f[22].b();
+            this.field_p = gj.field_f[22].toRgbSprite();
           }
           if (120 == this.field_I) {
-            this.field_p = tg.field_b[13].b();
+            this.field_p = tg.field_b[13].toRgbSprite();
           }
           if (this.field_I == 117) {
-            this.field_p = gj.field_f[20].b();
+            this.field_p = gj.field_f[20].toRgbSprite();
           }
           if (this.field_I == 122) {
-            this.field_p = gj.field_f[23].b();
+            this.field_p = gj.field_f[23].toRgbSprite();
           }
           if (this.field_I == 156) {
-            this.field_p = gj.field_f[28].b();
+            this.field_p = gj.field_f[28].toRgbSprite();
           }
           if (this.field_I == 164) {
-            this.field_p = gj.field_f[28].b();
+            this.field_p = gj.field_f[28].toRgbSprite();
           }
           if (159 == this.field_I) {
-            this.field_p = gj.field_f[29].b();
+            this.field_p = gj.field_f[29].toRgbSprite();
           }
           if (this.field_I == 165) {
-            this.field_p = tg.field_b[16].b();
+            this.field_p = tg.field_b[16].toRgbSprite();
           }
           if (this.field_I == 161) {
-            this.field_p = tg.field_b[17].b();
+            this.field_p = tg.field_b[17].toRgbSprite();
           }
           if (this.field_I == 158) {
-            this.field_p = tg.field_b[18].b();
+            this.field_p = tg.field_b[18].toRgbSprite();
           }
           if (this.field_I == 162) {
-            this.field_p = tg.field_b[19].b();
+            this.field_p = tg.field_b[19].toRgbSprite();
           }
           if (this.field_I == 160) {
             this.field_p = md.field_f[3];
@@ -7373,12 +7373,12 @@ final class mi extends DualLinkNode {
         }
     }
 
-    final static nc a(byte[] param0, int param1) {
-        nc var2 = null;
+    final static CoverageBitmapFont a(byte[] param0, int param1) {
+        CoverageBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_2_0 = null;
-        nc stackIn_5_0 = null;
-        nc stackIn_7_0 = null;
+        CoverageBitmapFont stackIn_5_0 = null;
+        CoverageBitmapFont stackIn_7_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -7386,14 +7386,14 @@ final class mi extends DualLinkNode {
         try {
           if (null == param0) {
             stackIn_2_0 = null;
-            return (nc) (stackIn_2_0);
+            return (CoverageBitmapFont) (stackIn_2_0);
           }
-          var2 = new nc(param0, hl.field_l, be.field_d, jg.field_p, ho.field_i, ph.field_c, ln.field_I);
+          var2 = new CoverageBitmapFont(param0, hl.field_l, be.field_d, jg.field_p, ho.field_i, ph.field_c, ln.field_I);
           if (param1 < 43) {
-            stackIn_5_0 = (nc) null;
+            stackIn_5_0 = (CoverageBitmapFont) null;
             return stackIn_5_0;
           }
-          dk.a(-18229);
+          CanvasRasterBuffer.a(-18229);
           stackIn_7_0 = var2;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -7422,7 +7422,7 @@ final class mi extends DualLinkNode {
           }
           if (this.field_G < this.field_q.field_H / 4) {
             if (this.field_G >= this.field_q.field_H / 5) {
-              this.field_q.a(-this.field_r + this.field_G, -87, -this.field_r + this.field_v, gj.field_f[16].b());
+              this.field_q.a(-this.field_r + this.field_G, -87, -this.field_r + this.field_v, gj.field_f[16].toRgbSprite());
               if (var3 == 0) {
                 return;
               }
@@ -7436,22 +7436,22 @@ final class mi extends DualLinkNode {
                     return;
                   }
                 }
-                this.field_q.a(this.field_G - this.field_r, -97, -this.field_r + this.field_v, gj.field_f[19].b());
+                this.field_q.a(this.field_G - this.field_r, -97, -this.field_r + this.field_v, gj.field_f[19].toRgbSprite());
                 if (var3 == 0) {
                   return;
                 }
               }
-              this.field_q.a(-this.field_r + this.field_G, -5, this.field_v - this.field_r, gj.field_f[18].b());
+              this.field_q.a(-this.field_r + this.field_G, -5, this.field_v - this.field_r, gj.field_f[18].toRgbSprite());
               if (var3 == 0) {
                 return;
               }
             }
-            this.field_q.a(this.field_G - this.field_r, -18, -this.field_r + this.field_v, gj.field_f[17].b());
+            this.field_q.a(this.field_G - this.field_r, -18, -this.field_r + this.field_v, gj.field_f[17].toRgbSprite());
             if (var3 == 0) {
               return;
             }
           }
-          this.field_q.a(this.field_G - this.field_r, -34, -this.field_r + this.field_v, gj.field_f[6].b());
+          this.field_q.a(this.field_G - this.field_r, -34, -this.field_r + this.field_v, gj.field_f[6].toRgbSprite());
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -8105,7 +8105,7 @@ final class mi extends DualLinkNode {
 
     private final void a(int param0, byte param1) {
         RuntimeException decompiledCaughtException = null;
-        wf var3 = null;
+        PcmSample var3 = null;
         RuntimeException var3_ref = null;
         try {
           if (this.field_q.field_sb != null) {
@@ -8121,7 +8121,7 @@ final class mi extends DualLinkNode {
             }
             this.field_J = this.field_J + 1;
             if (this.field_D == null ||
-              this.field_D.k() ||
+              this.field_D.isSamplePositionOutOfRange() ||
               this.field_J > 5) {
               this.field_J = 0;
               this.field_D = this.a(var3, 19227);
@@ -8162,9 +8162,9 @@ final class mi extends DualLinkNode {
         int var12 = 0;
         var12 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          var2 = gj.field_f[0].b();
-          var3 = gj.field_f[5].b();
-          var4 = tg.field_b[2].b();
+          var2 = gj.field_f[0].toRgbSprite();
+          var3 = gj.field_f[5].toRgbSprite();
+          var4 = tg.field_b[2].toRgbSprite();
           var5 = new oc(this.field_q.field_i);
           var6_ref_ml = (ml) (var5.b(-36));
           boolean decompiledNaturalLoopExit0 = false;
@@ -8336,12 +8336,12 @@ final class mi extends DualLinkNode {
                                                                                                   var6_int = this.field_v - (-param2 + 20);
                                                                                                   var7 = param0 + this.field_G - 20;
                                                                                                   if (this.field_u > 0) {
-                                                                                                    bb.field_g[var5].c(var6_int, var7);
+                                                                                                    bb.field_g[var5].drawTransparent(var6_int, var7);
                                                                                                     if (var16 == 0) {
                                                                                                       break regionExit43;
                                                                                                     }
                                                                                                   }
-                                                                                                  bb.field_g[var5].e(var6_int, var7);
+                                                                                                  bb.field_g[var5].drawHorizontalFlip(var6_int, var7);
                                                                                                 }
                                                                                                 if (this.field_x < 200) {
                                                                                                   var8 = 65;
@@ -8380,15 +8380,15 @@ final class mi extends DualLinkNode {
                                                                                                   } else {
                                                                                                     stackIn_474_2 = 0;
                                                                                                   }
-                                                                                                  ((Sprite) (Object) stackIn_473_0).f(stackIn_473_1 - (-stackIn_474_2 - (int)(10.0 * Math.cos(0.2 * (double)this.field_x))), var7 + (int)(5.0 * Math.sin((double)this.field_x * 0.2)));
-                                                                                                  stackIn_477_0 = bb.field_g[var8].b();
+                                                                                                  ((Sprite) (Object) stackIn_473_0).drawQuarterSize(stackIn_473_1 - (-stackIn_474_2 - (int)(10.0 * Math.cos(0.2 * (double)this.field_x))), var7 + (int)(5.0 * Math.sin((double)this.field_x * 0.2)));
+                                                                                                  stackIn_477_0 = bb.field_g[var8].copyFlippedHorizontal();
                                                                                                   stackIn_477_1 = 20 + var6_int;
                                                                                                   if (this.field_u <= 0) {
                                                                                                     stackIn_478_2 = -4;
                                                                                                   } else {
                                                                                                     stackIn_478_2 = 0;
                                                                                                   }
-                                                                                                  ((Sprite) (Object) stackIn_477_0).f(stackIn_477_1 - (-stackIn_478_2 + (int)(Math.cos((double)this.field_x * 0.2) * 10.0)), -(int)(Math.sin(0.2 * (double)this.field_x) * 5.0) + var7);
+                                                                                                  ((Sprite) (Object) stackIn_477_0).drawQuarterSize(stackIn_477_1 - (-stackIn_478_2 + (int)(Math.cos((double)this.field_x * 0.2) * 10.0)), -(int)(Math.sin(0.2 * (double)this.field_x) * 5.0) + var7);
                                                                                                 }
                                                                                                 if (var16 == 0) {
                                                                                                   return;
@@ -8629,7 +8629,7 @@ final class mi extends DualLinkNode {
                                                                                                                                                       if (si.field_p == null) {
                                                                                                                                                         return;
                                                                                                                                                       }
-                                                                                                                                                      si.field_p[this.field_H].a(param2 + (this.field_v - 50), this.field_G + (param0 - 50));
+                                                                                                                                                      si.field_p[this.field_H].draw(param2 + (this.field_v - 50), this.field_G + (param0 - 50));
                                                                                                                                                       return;
                                                                                                                                                     } else {
                                                                                                                                                       if (var5 != 154) {
@@ -8751,7 +8751,7 @@ final class mi extends DualLinkNode {
                                                                                                                                                     if (rf.field_j == null) {
                                                                                                                                                       return;
                                                                                                                                                     }
-                                                                                                                                                    rf.field_j[this.field_H].a(-50 + (this.field_v + param2), -50 + (param0 + this.field_G));
+                                                                                                                                                    rf.field_j[this.field_H].draw(-50 + (this.field_v + param2), -50 + (param0 + this.field_G));
                                                                                                                                                     if (var16 == 0) {
                                                                                                                                                       return;
                                                                                                                                                     }
@@ -8759,7 +8759,7 @@ final class mi extends DualLinkNode {
                                                                                                                                                   if (mb.field_cb == null) {
                                                                                                                                                     return;
                                                                                                                                                   }
-                                                                                                                                                  mb.field_cb[this.field_H].a(-50 + (param2 + this.field_v), param0 + (this.field_G - 50));
+                                                                                                                                                  mb.field_cb[this.field_H].draw(-50 + (param2 + this.field_v), param0 + (this.field_G - 50));
                                                                                                                                                   if (var16 == 0) {
                                                                                                                                                     return;
                                                                                                                                                   }
@@ -8767,7 +8767,7 @@ final class mi extends DualLinkNode {
                                                                                                                                                 if (ea.field_H == null) {
                                                                                                                                                   return;
                                                                                                                                                 }
-                                                                                                                                                ea.field_H[this.field_H].a(this.field_v + param2 - 50, -50 + (param0 + this.field_G));
+                                                                                                                                                ea.field_H[this.field_H].draw(this.field_v + param2 - 50, -50 + (param0 + this.field_G));
                                                                                                                                                 if (var16 == 0) {
                                                                                                                                                   return;
                                                                                                                                                 }
@@ -8778,7 +8778,7 @@ final class mi extends DualLinkNode {
                                                                                                                                               if (this.field_H < 0) {
                                                                                                                                                 return;
                                                                                                                                               }
-                                                                                                                                              vl.field_i[this.field_H].a(-8 + this.field_v + param2, -8 + param0 + this.field_G);
+                                                                                                                                              vl.field_i[this.field_H].draw(-8 + this.field_v + param2, -8 + param0 + this.field_G);
                                                                                                                                               if (var16 == 0) {
                                                                                                                                                 return;
                                                                                                                                               }
@@ -8786,7 +8786,7 @@ final class mi extends DualLinkNode {
                                                                                                                                             if (null == ob.field_db) {
                                                                                                                                               return;
                                                                                                                                             }
-                                                                                                                                            ob.field_db[this.field_H].a(param2 + (this.field_v - 64), -128 + param0 + this.field_q.field_H);
+                                                                                                                                            ob.field_db[this.field_H].draw(param2 + (this.field_v - 64), -128 + param0 + this.field_q.field_H);
                                                                                                                                             if (var16 == 0) {
                                                                                                                                               return;
                                                                                                                                             }
@@ -8817,7 +8817,7 @@ final class mi extends DualLinkNode {
                                                                                                                                             }
                                                                                                                                             if ((var10 > 0) &&
                                                                                                                                               (0 < var5)) {
-                                                                                                                                              de.c(var7, var8, var9, var5, var10);
+                                                                                                                                              SoftwareRasterizer.fillCircleAlpha(var7, var8, var9, var5, var10);
                                                                                                                                             }
                                                                                                                                             var6_int += 2;
                                                                                                                                             continue;
@@ -8829,7 +8829,7 @@ final class mi extends DualLinkNode {
                                                                                                                                         if (null == lf.field_e) {
                                                                                                                                           return;
                                                                                                                                         }
-                                                                                                                                        lf.field_e[this.field_H].a(param2 + (this.field_v - 50), -50 + (this.field_G + param0));
+                                                                                                                                        lf.field_e[this.field_H].draw(param2 + (this.field_v - 50), -50 + (this.field_G + param0));
                                                                                                                                         if (var16 == 0) {
                                                                                                                                           return;
                                                                                                                                         }
@@ -8840,7 +8840,7 @@ final class mi extends DualLinkNode {
                                                                                                                                       if (0 > this.field_H) {
                                                                                                                                         return;
                                                                                                                                       }
-                                                                                                                                      kl.field_G[this.field_H].a(-8 + this.field_v + param2, -8 + this.field_G + param0);
+                                                                                                                                      kl.field_G[this.field_H].draw(-8 + this.field_v + param2, -8 + this.field_G + param0);
                                                                                                                                       if (var16 == 0) {
                                                                                                                                         return;
                                                                                                                                       }
@@ -8891,18 +8891,18 @@ final class mi extends DualLinkNode {
                                                                                                                                       if (this.field_I != 112) {
                                                                                                                                         if (this.field_I != 93) {
                                                                                                                                           if (var5 - 1 > var10) {
-                                                                                                                                            de.b(var6[var10], var7_ref_int__[var10], var6[var10 + 1], var7_ref_int__[var10 + 1], 16777215);
+                                                                                                                                            SoftwareRasterizer.drawLine(var6[var10], var7_ref_int__[var10], var6[var10 + 1], var7_ref_int__[var10 + 1], 16777215);
                                                                                                                                           }
                                                                                                                                           gn.a(8, (byte) 105, -(25 * (this.field_y * var10) / var5) + 255 >> 4, var6[var10], var7_ref_int__[var10]);
                                                                                                                                         } else {
                                                                                                                                           if (~(-1 + var5) < ~var10) {
-                                                                                                                                            de.b(var6[var10], var7_ref_int__[var10], var6[1 + var10], var7_ref_int__[1 + var10], 16777215);
+                                                                                                                                            SoftwareRasterizer.drawLine(var6[var10], var7_ref_int__[var10], var6[1 + var10], var7_ref_int__[1 + var10], 16777215);
                                                                                                                                           }
                                                                                                                                           gn.a(8, (byte) 125, 255 - var10 * (this.field_y * 25 - 500) / var5 >> 4, var6[var10], var7_ref_int__[var10]);
                                                                                                                                         }
                                                                                                                                       } else {
                                                                                                                                         if (-1 + var5 > var10) {
-                                                                                                                                          de.b(var6[var10], var7_ref_int__[var10], var6[var10 + 1], var7_ref_int__[1 + var10], 16777215, -(this.field_y * 5 * var10 / var5) + 255 >> 4);
+                                                                                                                                          SoftwareRasterizer.drawLineBlendedInclusive(var6[var10], var7_ref_int__[var10], var6[var10 + 1], var7_ref_int__[1 + var10], 16777215, -(this.field_y * 5 * var10 / var5) + 255 >> 4);
                                                                                                                                         }
                                                                                                                                         gn.a(8, (byte) 94, -(var10 * 5 * this.field_y / var5) + 255 >> 4, var6[var10], var7_ref_int__[var10]);
                                                                                                                                       }
@@ -8932,44 +8932,44 @@ final class mi extends DualLinkNode {
                                                                                                                                 }
                                                                                                                                 var5 = (int)(96.0 * Math.sin(0.01 * (6.28 * (double)this.field_x)));
                                                                                                                                 var6_int = (this.field_x & 12 & 15) >> 2;
-                                                                                                                                md.field_f[4 + var6_int].c(this.field_v + param2 + (-64 + var5), param0 + this.field_G);
-                                                                                                                                md.field_f[4 + (3 & 3 + var6_int)].c(-64 + this.field_v + (param2 - var5), this.field_G + param0);
-                                                                                                                                md.field_f[(3 & var6_int + 1) + 4].f(-(6 * var5 / 10) + this.field_v + param2 - 64, this.field_G - (-param0 + 4), 192);
-                                                                                                                                md.field_f[4 + (3 & var6_int + 2)].f(var5 * 4 / 10 + (-64 + (this.field_v + param2)), this.field_G - (-param0 + 8), 128);
-                                                                                                                                md.field_f[(var6_int + 3 & 3) + 4].f(-64 + (param2 + this.field_v) - var5 * 2 / 10, this.field_G + param0 - 12, 96);
+                                                                                                                                md.field_f[4 + var6_int].drawTransparent(this.field_v + param2 + (-64 + var5), param0 + this.field_G);
+                                                                                                                                md.field_f[4 + (3 & 3 + var6_int)].drawTransparent(-64 + this.field_v + (param2 - var5), this.field_G + param0);
+                                                                                                                                md.field_f[(3 & var6_int + 1) + 4].drawTransparentWithOpacity(-(6 * var5 / 10) + this.field_v + param2 - 64, this.field_G - (-param0 + 4), 192);
+                                                                                                                                md.field_f[4 + (3 & var6_int + 2)].drawTransparentWithOpacity(var5 * 4 / 10 + (-64 + (this.field_v + param2)), this.field_G - (-param0 + 8), 128);
+                                                                                                                                md.field_f[(var6_int + 3 & 3) + 4].drawTransparentWithOpacity(-64 + (param2 + this.field_v) - var5 * 2 / 10, this.field_G + param0 - 12, 96);
                                                                                                                                 if (var16 == 0) {
                                                                                                                                   return;
                                                                                                                                 }
                                                                                                                               }
                                                                                                                               var5 = (int)(Math.sin((double)this.field_x * 6.28 * 0.01) * 96.0);
                                                                                                                               var6_int = (15 & (this.field_x & 12)) >> 2;
-                                                                                                                              md.field_f[4 + var6_int].f(param2 + this.field_v - (64 - var5), this.field_G + param0, 64);
-                                                                                                                              md.field_f[4 + (3 & 3 + var6_int)].f(-var5 - 64 + (param2 + this.field_v), param0 + this.field_G, 128);
-                                                                                                                              md.field_f[(1 + var6_int & 3) + 4].f(-(6 * var5 / 10) + param2 + this.field_v - 64, -4 + param0 + this.field_G, 96);
-                                                                                                                              md.field_f[4 + (var6_int + 2 & 3)].f(var5 * 4 / 10 + (this.field_v + param2 - 64), this.field_G + param0 - 8, 64);
-                                                                                                                              md.field_f[(var6_int + 3 & 3) + 4].f(-64 + (param2 + this.field_v - 2 * var5 / 10), -12 + this.field_G + param0, 32);
+                                                                                                                              md.field_f[4 + var6_int].drawTransparentWithOpacity(param2 + this.field_v - (64 - var5), this.field_G + param0, 64);
+                                                                                                                              md.field_f[4 + (3 & 3 + var6_int)].drawTransparentWithOpacity(-var5 - 64 + (param2 + this.field_v), param0 + this.field_G, 128);
+                                                                                                                              md.field_f[(1 + var6_int & 3) + 4].drawTransparentWithOpacity(-(6 * var5 / 10) + param2 + this.field_v - 64, -4 + param0 + this.field_G, 96);
+                                                                                                                              md.field_f[4 + (var6_int + 2 & 3)].drawTransparentWithOpacity(var5 * 4 / 10 + (this.field_v + param2 - 64), this.field_G + param0 - 8, 64);
+                                                                                                                              md.field_f[(var6_int + 3 & 3) + 4].drawTransparentWithOpacity(-64 + (param2 + this.field_v - 2 * var5 / 10), -12 + this.field_G + param0, 32);
                                                                                                                               if (var16 == 0) {
                                                                                                                                 return;
                                                                                                                               }
                                                                                                                             }
                                                                                                                             var5 = (int)(Math.sin((double)this.field_x * 6.28 * 0.02) * 64.0);
                                                                                                                             var6_int = 3 & (12 & this.field_x) >> 2;
-                                                                                                                            md.field_f[var6_int + 4].c(var5 + (-64 + param2 + this.field_v), param0 + this.field_G);
-                                                                                                                            md.field_f[4 + (3 & var6_int + 3)].c(-var5 + (-64 + (param2 + this.field_v)), param0 + this.field_G);
-                                                                                                                            md.field_f[4 + (1 + var6_int & 3)].f(-64 + (param2 + this.field_v - var5 * 6 / 10), this.field_G + param0 - 4, 192);
-                                                                                                                            md.field_f[4 + (var6_int + 2 & 3)].f(-64 + (this.field_v + param2) + 4 * var5 / 10, param0 + this.field_G - 8, 128);
-                                                                                                                            md.field_f[4 + (3 & 3 + var6_int)].f(-(2 * var5 / 10) + param2 + this.field_v - 64, this.field_G - (-param0 + 12), 96);
+                                                                                                                            md.field_f[var6_int + 4].drawTransparent(var5 + (-64 + param2 + this.field_v), param0 + this.field_G);
+                                                                                                                            md.field_f[4 + (3 & var6_int + 3)].drawTransparent(-var5 + (-64 + (param2 + this.field_v)), param0 + this.field_G);
+                                                                                                                            md.field_f[4 + (1 + var6_int & 3)].drawTransparentWithOpacity(-64 + (param2 + this.field_v - var5 * 6 / 10), this.field_G + param0 - 4, 192);
+                                                                                                                            md.field_f[4 + (var6_int + 2 & 3)].drawTransparentWithOpacity(-64 + (this.field_v + param2) + 4 * var5 / 10, param0 + this.field_G - 8, 128);
+                                                                                                                            md.field_f[4 + (3 & 3 + var6_int)].drawTransparentWithOpacity(-(2 * var5 / 10) + param2 + this.field_v - 64, this.field_G - (-param0 + 12), 96);
                                                                                                                             if (var16 == 0) {
                                                                                                                               return;
                                                                                                                             }
                                                                                                                           }
                                                                                                                           var5 = (int)(Math.sin((double)this.field_x * 6.28 * 0.01) * 96.0);
                                                                                                                           var6_int = (this.field_x & 12) >> 2 & 3;
-                                                                                                                          md.field_f[4 + var6_int].c(-64 + this.field_v - (-param2 - var5), this.field_G + param0);
-                                                                                                                          md.field_f[4 + (var6_int + 3 & 3)].c(-var5 + param2 + (this.field_v - 64), this.field_G + param0);
-                                                                                                                          md.field_f[4 + (3 & var6_int + 1)].f(this.field_v + param2 + (-64 - var5 * 6 / 10), this.field_G - (-param0 + 4), 192);
-                                                                                                                          md.field_f[4 + (3 & var6_int + 2)].f(this.field_v + param2 - 64 + var5 * 4 / 10, -8 + (this.field_G + param0), 128);
-                                                                                                                          md.field_f[(3 + var6_int & 3) + 4].f(param2 + this.field_v - (64 + var5 * 2 / 10), param0 + this.field_G - 12, 96);
+                                                                                                                          md.field_f[4 + var6_int].drawTransparent(-64 + this.field_v - (-param2 - var5), this.field_G + param0);
+                                                                                                                          md.field_f[4 + (var6_int + 3 & 3)].drawTransparent(-var5 + param2 + (this.field_v - 64), this.field_G + param0);
+                                                                                                                          md.field_f[4 + (3 & var6_int + 1)].drawTransparentWithOpacity(this.field_v + param2 + (-64 - var5 * 6 / 10), this.field_G - (-param0 + 4), 192);
+                                                                                                                          md.field_f[4 + (3 & var6_int + 2)].drawTransparentWithOpacity(this.field_v + param2 - 64 + var5 * 4 / 10, -8 + (this.field_G + param0), 128);
+                                                                                                                          md.field_f[(3 + var6_int & 3) + 4].drawTransparentWithOpacity(param2 + this.field_v - (64 + var5 * 2 / 10), param0 + this.field_G - 12, 96);
                                                                                                                           if (var16 == 0) {
                                                                                                                             return;
                                                                                                                           }
@@ -8985,25 +8985,25 @@ final class mi extends DualLinkNode {
                                                                                                                           return;
                                                                                                                         }
                                                                                                                       }
-                                                                                                                      jg.field_c[7 & this.field_v + this.field_G * 3].a(-12 + param2 + this.field_v, param0 + this.field_G - 12);
+                                                                                                                      jg.field_c[7 & this.field_v + this.field_G * 3].draw(-12 + param2 + this.field_v, param0 + this.field_G - 12);
                                                                                                                       hl.a(param0 + this.field_G, param2 + this.field_v, 256 - Math.abs(this.field_x), 2232, 16);
                                                                                                                       if (var16 == 0) {
                                                                                                                         return;
                                                                                                                       }
                                                                                                                     }
-                                                                                                                    de.a(this.field_v + param2 << 4, param0 + this.field_G << 4, 112, 250 - this.field_x, he.field_a);
+                                                                                                                    SoftwareRasterizer.fillRadialPaletteCircle(this.field_v + param2 << 4, param0 + this.field_G << 4, 112, 250 - this.field_x, he.field_a);
                                                                                                                     if (var16 == 0) {
                                                                                                                       return;
                                                                                                                     }
                                                                                                                   }
-                                                                                                                  de.a(param2 + this.field_v << 4, param0 + this.field_G << 4, 112, 250, cj.field_g);
-                                                                                                                  de.a(-((this.field_F / 2 + this.field_u) / 4) + (param2 + this.field_v << 4), (param0 + this.field_G << 4) + (this.field_u / 2 - this.field_F) / 4, 80, 250, cj.field_g);
-                                                                                                                  de.a((this.field_v + param2 << 4) + (-this.field_u + this.field_F / 2) / 4, -((this.field_u / 2 + this.field_F) / 4) + (param0 + this.field_G << 4), 80, 250, cj.field_g);
+                                                                                                                  SoftwareRasterizer.fillRadialPaletteCircle(param2 + this.field_v << 4, param0 + this.field_G << 4, 112, 250, cj.field_g);
+                                                                                                                  SoftwareRasterizer.fillRadialPaletteCircle(-((this.field_F / 2 + this.field_u) / 4) + (param2 + this.field_v << 4), (param0 + this.field_G << 4) + (this.field_u / 2 - this.field_F) / 4, 80, 250, cj.field_g);
+                                                                                                                  SoftwareRasterizer.fillRadialPaletteCircle((this.field_v + param2 << 4) + (-this.field_u + this.field_F / 2) / 4, -((this.field_u / 2 + this.field_F) / 4) + (param0 + this.field_G << 4), 80, 250, cj.field_g);
                                                                                                                   if (var16 == 0) {
                                                                                                                     return;
                                                                                                                   }
                                                                                                                 }
-                                                                                                                gj.field_f[0].a(-this.field_r + param2 + this.field_v, -8 + this.field_G - (-param0 - this.field_r));
+                                                                                                                gj.field_f[0].draw(-this.field_r + param2 + this.field_v, -8 + this.field_G - (-param0 - this.field_r));
                                                                                                                 if (var16 == 0) {
                                                                                                                   return;
                                                                                                                 }
@@ -9022,7 +9022,7 @@ final class mi extends DualLinkNode {
                                                                                                               if (this.field_y <= 0) {
                                                                                                                 return;
                                                                                                               }
-                                                                                                              i.field_a[(15 & this.field_y) >> 1].a(-32 + this.field_v + param2, -32 + (param0 + this.field_G));
+                                                                                                              i.field_a[(15 & this.field_y) >> 1].draw(-32 + this.field_v + param2, -32 + (param0 + this.field_G));
                                                                                                               if (var16 == 0) {
                                                                                                                 return;
                                                                                                               }
@@ -9062,7 +9062,7 @@ final class mi extends DualLinkNode {
                                                                                                         if (kl.field_E.length <= var5) {
                                                                                                           var5 = -1 + kl.field_E.length;
                                                                                                         }
-                                                                                                        kl.field_E[var5].c(param2 + (this.field_v - 128), -128 + this.field_G + param0, 256, 256, 64);
+                                                                                                        kl.field_E[var5].drawScaledAlpha(param2 + (this.field_v - 128), -128 + this.field_G + param0, 256, 256, 64);
                                                                                                         if (var16 == 0) {
                                                                                                           return;
                                                                                                         }
@@ -9071,31 +9071,31 @@ final class mi extends DualLinkNode {
                                                                                                         if ((this.field_t != null) &&
                                                                                                           (6 == this.field_t.field_jb)) {
                                                                                                           if (this.field_y < 1) {
-                                                                                                            wg.field_J[this.field_x >> 2].c(-64 + (this.field_v + param2), this.field_G - (-param0 + 64), 128, 128, 64);
+                                                                                                            wg.field_J[this.field_x >> 2].drawScaledAlpha(-64 + (this.field_v + param2), this.field_G - (-param0 + 64), 128, 128, 64);
                                                                                                             if (var16 == 0) {
                                                                                                               break regionExit70;
                                                                                                             }
                                                                                                           }
-                                                                                                          wg.field_J[this.field_x >> 2].c(this.field_v - (-param2 + 64), this.field_G + (param0 - 64), 128, 128, 32);
+                                                                                                          wg.field_J[this.field_x >> 2].drawScaledAlpha(this.field_v - (-param2 + 64), this.field_G + (param0 - 64), 128, 128, 32);
                                                                                                           if (var16 == 0) {
                                                                                                             break regionExit70;
                                                                                                           }
                                                                                                         }
                                                                                                         if (this.field_y >= 1) {
-                                                                                                          wg.field_J[this.field_x >> 2].c(-128 + (param2 + this.field_v), this.field_G + (param0 - 128), 256, 256, 32);
+                                                                                                          wg.field_J[this.field_x >> 2].drawScaledAlpha(-128 + (param2 + this.field_v), this.field_G + (param0 - 128), 256, 256, 32);
                                                                                                           if (var16 == 0) {
                                                                                                             break regionExit70;
                                                                                                           }
                                                                                                         }
-                                                                                                        wg.field_J[this.field_x >> 2].c(this.field_v + param2 - 128, -128 + this.field_G + param0, 256, 256, 64);
+                                                                                                        wg.field_J[this.field_x >> 2].drawScaledAlpha(this.field_v + param2 - 128, -128 + this.field_G + param0, 256, 256, 64);
                                                                                                       }
                                                                                                       var5 = 128;
                                                                                                       if ((null != this.field_t) &&
                                                                                                         (this.field_t.field_jb == 6)) {
                                                                                                         var5 = 64;
                                                                                                       }
-                                                                                                      gh.field_L.a((byte) 36, this.field_q.field_i);
-                                                                                                      var6_ref = (ml) (gh.field_L.b(-68));
+                                                                                                      MidiPcmStream.field_L.a((byte) 36, this.field_q.field_i);
+                                                                                                      var6_ref = (ml) (MidiPcmStream.field_L.b(-68));
                                                                                                       while (var6_ref != null) {
                                                                                                         if (var16 != 0) {
                                                                                                           return;
@@ -9112,17 +9112,17 @@ final class mi extends DualLinkNode {
                                                                                                             var9 = var6_ref.p(-8323) / 2;
                                                                                                             var10 = param2 + var6_ref.field_lb;
                                                                                                             var11 = var6_ref.field_db + param0 - var9;
-                                                                                                            wg.field_J[this.field_x >> 2].c(-var9 + var10, -var9 + var11, var9 * 2, 2 * var9, 48);
+                                                                                                            wg.field_J[this.field_x >> 2].drawScaledAlpha(-var9 + var10, -var9 + var11, var9 * 2, 2 * var9, 48);
                                                                                                           }
                                                                                                         }
-                                                                                                        var6_ref = (ml) (gh.field_L.d(-18502));
+                                                                                                        var6_ref = (ml) (MidiPcmStream.field_L.d(-18502));
                                                                                                         continue;
                                                                                                       }
                                                                                                       if (var16 == 0) {
                                                                                                         return;
                                                                                                       }
                                                                                                     }
-                                                                                                    gj.field_f[6].a(-this.field_r + this.field_v + param2, -this.field_r + (param0 + this.field_G));
+                                                                                                    gj.field_f[6].draw(-this.field_r + this.field_v + param2, -this.field_r + (param0 + this.field_G));
                                                                                                     if (var16 == 0) {
                                                                                                       return;
                                                                                                     }
@@ -9130,7 +9130,7 @@ final class mi extends DualLinkNode {
                                                                                                   if (this.field_p == null) {
                                                                                                     return;
                                                                                                   }
-                                                                                                  this.field_p.c(param2 + (this.field_v - this.field_r), this.field_G + param0 - this.field_r);
+                                                                                                  this.field_p.drawTransparent(param2 + (this.field_v - this.field_r), this.field_G + param0 - this.field_r);
                                                                                                   return;
                                                                                                 }
                                                                                               }
@@ -9139,9 +9139,9 @@ final class mi extends DualLinkNode {
                                                                                                 var6_int = -320 - (-param2 + 64);
                                                                                                 var7 = -128 + param0 + this.field_q.field_H;
                                                                                                 var8_double = 4.0 * ((double)var5 * 3.14) + (double)this.field_y;
-                                                                                                md.field_f[(this.field_y / 6 + var5) % 6 + 8].c((int)(Math.sin(0.1 * var8_double) * 100.0) + var6_int, -(int)(80.0 * Math.cos(var8_double * 0.1)) + var7 + 60);
+                                                                                                md.field_f[(this.field_y / 6 + var5) % 6 + 8].drawTransparent((int)(Math.sin(0.1 * var8_double) * 100.0) + var6_int, -(int)(80.0 * Math.cos(var8_double * 0.1)) + var7 + 60);
                                                                                                 var6_int = -64 + (320 + this.field_q.field_y + param2);
-                                                                                                md.field_f[(this.field_y / 6 + var5) % 6 + 8].e(var6_int - (int)(100.0 * Math.sin(0.1 * var8_double)), var7 - ((int)(Math.cos(0.1 * var8_double) * 80.0) - 60));
+                                                                                                md.field_f[(this.field_y / 6 + var5) % 6 + 8].drawHorizontalFlip(var6_int - (int)(100.0 * Math.sin(0.1 * var8_double)), var7 - ((int)(Math.cos(0.1 * var8_double) * 80.0) - 60));
                                                                                                 var5++;
                                                                                                 if (var16 != 0) {
                                                                                                   return;
@@ -9154,7 +9154,7 @@ final class mi extends DualLinkNode {
                                                                                             }
                                                                                             var5 = param2 + this.field_v;
                                                                                             var6_int = this.field_G + param0;
-                                                                                            bb.field_g[128].c(-20 + var5, var6_int - 32);
+                                                                                            bb.field_g[128].drawTransparent(-20 + var5, var6_int - 32);
                                                                                             if (var16 == 0) {
                                                                                               return;
                                                                                             }
@@ -9162,14 +9162,14 @@ final class mi extends DualLinkNode {
                                                                                           if (this.field_F >= 0) {
                                                                                             var5 = this.field_v + param2;
                                                                                             var6_int = param0 + this.field_G;
-                                                                                            tg.field_b[14].a(var5 - 16, -12 + var6_int);
+                                                                                            tg.field_b[14].draw(var5 - 16, -12 + var6_int);
                                                                                             if (var16 == 0) {
                                                                                               return;
                                                                                             }
                                                                                           }
                                                                                           var5 = param2 + this.field_v;
                                                                                           var6_int = param0 + this.field_G;
-                                                                                          tg.field_b[15].a(-16 + var5, -12 + var6_int);
+                                                                                          tg.field_b[15].draw(-16 + var5, -12 + var6_int);
                                                                                           if (var16 == 0) {
                                                                                             return;
                                                                                           }
@@ -9198,7 +9198,7 @@ final class mi extends DualLinkNode {
                                                                                           } else {
                                                                                             stackIn_512_1 = 22;
                                                                                           }
-                                                                                          ((IndexedSprite) (Object) stackIn_508_0[stackIn_512_1]).a(-8 + this.field_v + param2 + var6_int * var8 / 23, var7 * var8 / 23 + this.field_G + (param0 - 8));
+                                                                                          ((IndexedSprite) (Object) stackIn_508_0[stackIn_512_1]).draw(-8 + this.field_v + param2 + var6_int * var8 / 23, var7 * var8 / 23 + this.field_G + (param0 - 8));
                                                                                           var8++;
                                                                                           continue;
                                                                                         }
@@ -9211,7 +9211,7 @@ final class mi extends DualLinkNode {
                                                                                       }
                                                                                       var5 = param2 + this.field_v;
                                                                                       var6_int = this.field_G + param0 - this.field_y;
-                                                                                      this.field_p.c(-8 + var5, -8 + var6_int);
+                                                                                      this.field_p.drawTransparent(-8 + var5, -8 + var6_int);
                                                                                       if (var16 == 0) {
                                                                                         return;
                                                                                       }
@@ -9228,7 +9228,7 @@ final class mi extends DualLinkNode {
                                                                                           break;
                                                                                         }
                                                                                         var8_double = (double)(var7 * 32 + this.field_y) * 3.141592653589793 / 128.0;
-                                                                                        jg.field_c[var7].b((int)(Math.sin(var8_double) * 14.0) + (-2 + var5), (int)(Math.cos(var8_double) * 14.0) + (-2 + var6_int));
+                                                                                        jg.field_c[var7].drawQuarterSize((int)(Math.sin(var8_double) * 14.0) + (-2 + var5), (int)(Math.cos(var8_double) * 14.0) + (-2 + var6_int));
                                                                                         var7++;
                                                                                       } while (var16 == 0);
                                                                                       var7 = 0;
@@ -9238,7 +9238,7 @@ final class mi extends DualLinkNode {
                                                                                           break;
                                                                                         }
                                                                                         var8_double = 3.141592653589793 * (double)(32 * var7 - this.field_y) / 128.0;
-                                                                                        jg.field_c[var7].b((int)(14.0 * Math.sin(var8_double)) + var5 - 2, -2 + var6_int + (int)(Math.cos(var8_double) * 14.0));
+                                                                                        jg.field_c[var7].drawQuarterSize((int)(14.0 * Math.sin(var8_double)) + var5 - 2, -2 + var6_int + (int)(Math.cos(var8_double) * 14.0));
                                                                                         var7++;
                                                                                       } while (var16 == 0);
                                                                                       if (var16 == 0) {
@@ -9256,7 +9256,7 @@ final class mi extends DualLinkNode {
                                                                                         break;
                                                                                       }
                                                                                       var8_double = (double)(this.field_y + 32 * var7) * 3.141592653589793 / 128.0;
-                                                                                      jg.field_c[var7].b((int)(14.0 * Math.sin(var8_double)) - 2 + var5, var6_int - (2 - (int)(14.0 * Math.cos(var8_double))));
+                                                                                      jg.field_c[var7].drawQuarterSize((int)(14.0 * Math.sin(var8_double)) - 2 + var5, var6_int - (2 - (int)(14.0 * Math.cos(var8_double))));
                                                                                       var7++;
                                                                                     } while (var16 == 0);
                                                                                     var7 = 0;
@@ -9266,7 +9266,7 @@ final class mi extends DualLinkNode {
                                                                                         break;
                                                                                       }
                                                                                       var8_double = 3.141592653589793 * (double)(var7 * 32 - this.field_y) / 128.0;
-                                                                                      jg.field_c[var7].b((int)(Math.sin(var8_double) * 14.0) - 2 + var5, (int)(14.0 * Math.cos(var8_double)) + (-2 + var6_int));
+                                                                                      jg.field_c[var7].drawQuarterSize((int)(Math.sin(var8_double) * 14.0) - 2 + var5, (int)(14.0 * Math.cos(var8_double)) + (-2 + var6_int));
                                                                                       var7++;
                                                                                     } while (var16 == 0);
                                                                                     if (var16 == 0) {
@@ -9366,12 +9366,12 @@ final class mi extends DualLinkNode {
                                                                                   if (!((~var6_int < ~var10) &&
                                                                                     (~var10 < ~var7))) {
                                                                                     if (!(var7 < var10)) {
-                                                                                      de.e(var11, var12, 1, 1, 0, var15 * var10 / var7);
-                                                                                      de.g(var11, var12, 16711935, var10 * var14 / var7);
+                                                                                      SoftwareRasterizer.fillRectangleAlpha(var11, var12, 1, 1, 0, var15 * var10 / var7);
+                                                                                      SoftwareRasterizer.addPixelScaled(var11, var12, 16711935, var10 * var14 / var7);
                                                                                     }
                                                                                   } else {
-                                                                                    de.e(var11, var12, 1, 1, 0, -(var15 * (-var7 + var10) / (var6_int - var7)) + var15);
-                                                                                    de.g(var11, var12, 16711935, var14 - (var10 - var7) * var14 / (-var7 + var6_int));
+                                                                                    SoftwareRasterizer.fillRectangleAlpha(var11, var12, 1, 1, 0, -(var15 * (-var7 + var10) / (var6_int - var7)) + var15);
+                                                                                    SoftwareRasterizer.addPixelScaled(var11, var12, 16711935, var14 - (var10 - var7) * var14 / (-var7 + var6_int));
                                                                                   }
                                                                                   var9++;
                                                                                   continue;
@@ -9394,7 +9394,7 @@ final class mi extends DualLinkNode {
                                                                           while (var9 < 16) {
                                                                             var6_int = (int)((double)(param2 + this.field_v) + Math.sin(0.12 * (double)SpriteState.field_v + 0.6 * (double)var9) * (double)var5);
                                                                             var7 = (int)((double)(param0 + this.field_G - var5) + Math.cos((double)SpriteState.field_v * 0.12 + (double)var9 * 0.6) * (double)var5);
-                                                                            gj.field_f[20].b().a(4096 - 500 * var9, var7, -18, var6_int, var8);
+                                                                            gj.field_f[20].toRgbSprite().a(4096 - 500 * var9, var7, -18, var6_int, var8);
                                                                             var9++;
                                                                             if (var16 != 0) {
                                                                               return;
@@ -9412,13 +9412,13 @@ final class mi extends DualLinkNode {
                                                                         var8 = 512 * SpriteState.field_v;
                                                                         var6_int = (int)((double)(this.field_v + param2) + Math.sin((double)SpriteState.field_v * 0.1 - 1.6) * (double)var5);
                                                                         var7 = (int)((double)(-var5 + param0 + this.field_G) + (double)var5 * Math.cos(0.09 * (double)SpriteState.field_v - 1.6));
-                                                                        tg.field_b[13].b().a(2000, var7, 127, var6_int, var8);
+                                                                        tg.field_b[13].toRgbSprite().a(2000, var7, 127, var6_int, var8);
                                                                         var6_int = (int)((double)(this.field_v + param2) + (double)var5 * Math.sin((double)SpriteState.field_v * 0.1 - 0.8));
                                                                         var7 = (int)((double)(this.field_G + param0 - var5) + (double)var5 * Math.cos(-0.8 + 0.09 * (double)SpriteState.field_v));
-                                                                        tg.field_b[13].b().a(2500, var7, 124, var6_int, var8);
+                                                                        tg.field_b[13].toRgbSprite().a(2500, var7, 124, var6_int, var8);
                                                                         var6_int = (int)((double)(this.field_v + param2) + Math.sin(0.1 * (double)SpriteState.field_v) * (double)var5);
                                                                         var7 = (int)((double)(-var5 + this.field_G + param0) + (double)var5 * Math.cos((double)SpriteState.field_v * 0.09));
-                                                                        tg.field_b[13].b().a(3000, var7, 123, var6_int, var8);
+                                                                        tg.field_b[13].toRgbSprite().a(3000, var7, 123, var6_int, var8);
                                                                         if (var16 == 0) {
                                                                           return;
                                                                         }
@@ -9508,10 +9508,10 @@ final class mi extends DualLinkNode {
                                                     return;
                                                   }
                                                 }
-                                                de.c(param2 + this.field_v, param0 + this.field_G, 16, 0, 64);
-                                                de.c(param2 + this.field_v, this.field_G + param0, 18, 0, 64);
-                                                de.c(param2 + this.field_v, this.field_G + param0, 20, 0, 64);
-                                                de.c(this.field_v + param2, this.field_G + param0, 22, 0, 64);
+                                                SoftwareRasterizer.fillCircleAlpha(param2 + this.field_v, param0 + this.field_G, 16, 0, 64);
+                                                SoftwareRasterizer.fillCircleAlpha(param2 + this.field_v, this.field_G + param0, 18, 0, 64);
+                                                SoftwareRasterizer.fillCircleAlpha(param2 + this.field_v, this.field_G + param0, 20, 0, 64);
+                                                SoftwareRasterizer.fillCircleAlpha(this.field_v + param2, this.field_G + param0, 22, 0, 64);
                                                 if (var16 == 0) {
                                                   return;
                                                 }
@@ -9519,7 +9519,7 @@ final class mi extends DualLinkNode {
                                               if (null == sn.field_E) {
                                                 return;
                                               }
-                                              sn.field_E[this.field_H].a(-50 + (this.field_v + param2), this.field_G - (-param0 + 50));
+                                              sn.field_E[this.field_H].draw(-50 + (this.field_v + param2), this.field_G - (-param0 + 50));
                                               if (var16 == 0) {
                                                 return;
                                               }
@@ -9527,15 +9527,15 @@ final class mi extends DualLinkNode {
                                             if (pa.field_a == null) {
                                               return;
                                             }
-                                            pa.field_a[this.field_H].a(param2 + this.field_v - 50, -50 + param0 + this.field_G);
+                                            pa.field_a[this.field_H].draw(param2 + this.field_v - 50, -50 + param0 + this.field_G);
                                             if (var16 == 0) {
                                               return;
                                             }
                                           }
-                                          if (null == je.field_a) {
+                                          if (null == MouseInputHandler.field_a) {
                                             return;
                                           }
-                                          je.field_a[this.field_H].a(-50 + this.field_v + param2, -50 + param0 + this.field_G);
+                                          MouseInputHandler.field_a[this.field_H].draw(-50 + this.field_v + param2, -50 + param0 + this.field_G);
                                           if (var16 == 0) {
                                             return;
                                           }
@@ -9546,7 +9546,7 @@ final class mi extends DualLinkNode {
                                         if (0 > this.field_H) {
                                           return;
                                         }
-                                        wh.field_k[this.field_H].a(-8 + (this.field_v + param2), this.field_G - (-param0 + 8));
+                                        wh.field_k[this.field_H].draw(-8 + (this.field_v + param2), this.field_G - (-param0 + 8));
                                         if (var16 == 0) {
                                           return;
                                         }
@@ -9557,7 +9557,7 @@ final class mi extends DualLinkNode {
                                       if (this.field_H < 0) {
                                         return;
                                       }
-                                      ee.field_b[this.field_H].a(-8 + (param2 + this.field_v), -8 + (param0 + this.field_G));
+                                      ee.field_b[this.field_H].draw(-8 + (param2 + this.field_v), -8 + (param0 + this.field_G));
                                       if (var16 == 0) {
                                         return;
                                       }
@@ -9568,7 +9568,7 @@ final class mi extends DualLinkNode {
                                     if (0 > this.field_H) {
                                       return;
                                     }
-                                    vi.field_M[this.field_H].a(-8 + (this.field_v + param2), -8 + this.field_G + param0);
+                                    vi.field_M[this.field_H].draw(-8 + (this.field_v + param2), -8 + this.field_G + param0);
                                     if (var16 == 0) {
                                       return;
                                     }
@@ -9580,12 +9580,12 @@ final class mi extends DualLinkNode {
                                     return;
                                   }
                                   if (this.field_y < 250) {
-                                    cj.field_f[this.field_x >> 2].a(-25 + this.field_v + param2, -65 + (param0 + this.field_G));
+                                    cj.field_f[this.field_x >> 2].draw(-25 + this.field_v + param2, -65 + (param0 + this.field_G));
                                     if (var16 == 0) {
                                       return;
                                     }
                                   }
-                                  cj.field_f[this.field_x >> 2].a(-25 + (param2 + this.field_v), param0 + (this.field_G - 65), 64);
+                                  cj.field_f[this.field_x >> 2].drawAlpha(-25 + (param2 + this.field_v), param0 + (this.field_G - 65), 64);
                                   if (var16 == 0) {
                                     return;
                                   }
@@ -9597,12 +9597,12 @@ final class mi extends DualLinkNode {
                                   return;
                                 }
                                 if (this.field_y >= 250) {
-                                  pk.field_a[this.field_x >> 1].a(param2 + (this.field_v - 24), -(this.field_t.field_Y >> 1) + this.field_G - (-param0 + 32));
+                                  pk.field_a[this.field_x >> 1].draw(param2 + (this.field_v - 24), -(this.field_t.field_Y >> 1) + this.field_G - (-param0 + 32));
                                   if (var16 == 0) {
                                     return;
                                   }
                                 }
-                                pk.field_a[this.field_x >> 1].a(param2 + this.field_v - 24, this.field_G + param0 + (-32 - (this.field_t.field_Y >> 1)));
+                                pk.field_a[this.field_x >> 1].draw(param2 + this.field_v - 24, this.field_G + param0 + (-32 - (this.field_t.field_Y >> 1)));
                                 if (var16 == 0) {
                                   return;
                                 }
@@ -9614,12 +9614,12 @@ final class mi extends DualLinkNode {
                                 return;
                               }
                               if (5 > this.field_y) {
-                                i.field_a[this.field_x >> 1].a(-32 + (param2 + this.field_v), this.field_G + param0 + (-32 - (this.field_t.field_Y >> 1)));
+                                i.field_a[this.field_x >> 1].draw(-32 + (param2 + this.field_v), this.field_G + param0 + (-32 - (this.field_t.field_Y >> 1)));
                                 if (var16 == 0) {
                                   return;
                                 }
                               }
-                              i.field_a[this.field_x >> 1].a(-32 + (this.field_v + param2), this.field_G + (param0 + (-32 - (this.field_t.field_Y >> 1))), 64);
+                              i.field_a[this.field_x >> 1].drawAlpha(-32 + (this.field_v + param2), this.field_G + (param0 + (-32 - (this.field_t.field_Y >> 1))), 64);
                               if (var16 == 0) {
                                 return;
                               }
@@ -9628,12 +9628,12 @@ final class mi extends DualLinkNode {
                               return;
                             }
                             if (this.field_y < 250) {
-                              cn.field_S[this.field_x >> 1].a(param2 + this.field_v - 25, -64 + (this.field_G + param0));
+                              cn.field_S[this.field_x >> 1].draw(param2 + this.field_v - 25, -64 + (this.field_G + param0));
                               if (var16 == 0) {
                                 return;
                               }
                             }
-                            cn.field_S[this.field_x >> 1].a(-25 + param2 + this.field_v, this.field_G + param0 - 64, 64);
+                            cn.field_S[this.field_x >> 1].drawAlpha(-25 + param2 + this.field_v, this.field_G + param0 - 64, 64);
                             if (var16 == 0) {
                               return;
                             }
@@ -9641,7 +9641,7 @@ final class mi extends DualLinkNode {
                           if (ie.field_Tb == null) {
                             return;
                           }
-                          ie.field_Tb[this.field_H].a(-50 + param2 + this.field_v, -50 + (param0 + this.field_G));
+                          ie.field_Tb[this.field_H].draw(-50 + param2 + this.field_v, -50 + (param0 + this.field_G));
                           if (var16 == 0) {
                             return;
                           }
@@ -9649,15 +9649,15 @@ final class mi extends DualLinkNode {
                         if (null == jg.field_l) {
                           return;
                         }
-                        jg.field_l[this.field_H].a(param2 + this.field_v - 50, -50 + (this.field_G + param0));
+                        jg.field_l[this.field_H].draw(param2 + this.field_v - 50, -50 + (this.field_G + param0));
                         if (var16 == 0) {
                           return;
                         }
                       }
-                      if (null == o.field_E) {
+                      if (null == MusicPatchNode.field_E) {
                         return;
                       }
-                      o.field_E[this.field_H].a(this.field_v - (-param2 + 50), -50 + param0 + this.field_G);
+                      MusicPatchNode.field_E[this.field_H].draw(this.field_v - (-param2 + 50), -50 + param0 + this.field_G);
                       if (var16 == 0) {
                         return;
                       }
@@ -9668,7 +9668,7 @@ final class mi extends DualLinkNode {
                     if (this.field_H < 0) {
                       return;
                     }
-                    nm.field_c[this.field_H].a(-8 + (param2 + this.field_v), -8 + (this.field_G + param0));
+                    nm.field_c[this.field_H].draw(-8 + (param2 + this.field_v), -8 + (this.field_G + param0));
                     if (var16 == 0) {
                       return;
                     }
@@ -9676,7 +9676,7 @@ final class mi extends DualLinkNode {
                   if (null == u.field_j) {
                     return;
                   }
-                  u.field_j[this.field_H].a(-50 + (param2 + this.field_v), param0 + this.field_G - 50);
+                  u.field_j[this.field_H].draw(-50 + (param2 + this.field_v), param0 + this.field_G - 50);
                   if (var16 == 0) {
                     return;
                   }
@@ -9684,7 +9684,7 @@ final class mi extends DualLinkNode {
                 if (null == cn.field_N) {
                   return;
                 }
-                cn.field_N[this.field_H].a(this.field_v + param2 - 50, -50 + param0 + this.field_G);
+                cn.field_N[this.field_H].draw(this.field_v + param2 - 50, -50 + param0 + this.field_G);
                 if (var16 == 0) {
                   return;
                 }
@@ -9695,22 +9695,22 @@ final class mi extends DualLinkNode {
               if (this.field_H < 0) {
                 return;
               }
-              fd.field_j[this.field_H].a(param2 + (this.field_v - 8), -8 + this.field_G + param0);
+              fd.field_j[this.field_H].draw(param2 + (this.field_v - 8), -8 + this.field_G + param0);
               if (var16 == 0) {
                 return;
               }
             }
             if (this.field_x != 0) {
               var5_double = Math.sqrt((double)(this.field_F * this.field_F + this.field_u * this.field_u));
-              de.c(this.field_v + param2, this.field_G + param0, 5, 35071, 96);
-              de.c((int)(-((double)(6 * this.field_u) / var5_double) + (double)(this.field_v + param2)), (int)(-((double)(6 * this.field_F) / var5_double) + (double)(param0 + this.field_G)), 4, 35071, 64);
-              de.c((int)(-((double)(8 * this.field_u) / var5_double) + (double)(param2 + this.field_v)), (int)((double)(param0 + this.field_G) - (double)(this.field_F * 8) / var5_double), 3, 35071, 64);
-              de.c((int)(-((double)(this.field_u * 10) / var5_double) + (double)(this.field_v + param2)), (int)(-((double)(this.field_F * 10) / var5_double) + (double)(this.field_G + param0)), 2, 35071, 64);
-              de.c((int)(-((double)(this.field_u * 12) / var5_double) + (double)(this.field_v + param2)), (int)(-((double)(12 * this.field_F) / var5_double) + (double)(this.field_G + param0)), 1, 35071, 64);
-              de.c((int)(-((double)(6 * this.field_u) / var5_double) + (double)(this.field_v + param2)), (int)((double)(param0 + this.field_G) - (double)(this.field_F * 6) / var5_double), 3, 8978431, 32);
-              de.c((int)((double)(this.field_v + param2) - (double)(8 * this.field_u) / var5_double), (int)((double)(this.field_G + param0) - (double)(this.field_F * 8) / var5_double), 2, 8978431, 32);
-              de.c(param2 + this.field_v, param0 + this.field_G, 4, 8978431, 64);
-              de.c(this.field_v - (-param2 + 1), -1 + param0 + this.field_G, 2, 16777215, 32);
+              SoftwareRasterizer.fillCircleAlpha(this.field_v + param2, this.field_G + param0, 5, 35071, 96);
+              SoftwareRasterizer.fillCircleAlpha((int)(-((double)(6 * this.field_u) / var5_double) + (double)(this.field_v + param2)), (int)(-((double)(6 * this.field_F) / var5_double) + (double)(param0 + this.field_G)), 4, 35071, 64);
+              SoftwareRasterizer.fillCircleAlpha((int)(-((double)(8 * this.field_u) / var5_double) + (double)(param2 + this.field_v)), (int)((double)(param0 + this.field_G) - (double)(this.field_F * 8) / var5_double), 3, 35071, 64);
+              SoftwareRasterizer.fillCircleAlpha((int)(-((double)(this.field_u * 10) / var5_double) + (double)(this.field_v + param2)), (int)(-((double)(this.field_F * 10) / var5_double) + (double)(this.field_G + param0)), 2, 35071, 64);
+              SoftwareRasterizer.fillCircleAlpha((int)(-((double)(this.field_u * 12) / var5_double) + (double)(this.field_v + param2)), (int)(-((double)(12 * this.field_F) / var5_double) + (double)(this.field_G + param0)), 1, 35071, 64);
+              SoftwareRasterizer.fillCircleAlpha((int)(-((double)(6 * this.field_u) / var5_double) + (double)(this.field_v + param2)), (int)((double)(param0 + this.field_G) - (double)(this.field_F * 6) / var5_double), 3, 8978431, 32);
+              SoftwareRasterizer.fillCircleAlpha((int)((double)(this.field_v + param2) - (double)(8 * this.field_u) / var5_double), (int)((double)(this.field_G + param0) - (double)(this.field_F * 8) / var5_double), 2, 8978431, 32);
+              SoftwareRasterizer.fillCircleAlpha(param2 + this.field_v, param0 + this.field_G, 4, 8978431, 64);
+              SoftwareRasterizer.fillCircleAlpha(this.field_v - (-param2 + 1), -1 + param0 + this.field_G, 2, 16777215, 32);
               return;
             }
             if (null == ob.field_db) {
@@ -9719,21 +9719,21 @@ final class mi extends DualLinkNode {
             if (this.field_H < 0) {
               return;
             }
-            ob.field_db[this.field_H].b(-8 + (param2 + this.field_v), -8 + (this.field_G + param0), 16, 16);
+            ob.field_db[this.field_H].drawScaled(-8 + (param2 + this.field_v), -8 + (this.field_G + param0), 16, 16);
             if (var16 == 0) {
               return;
             }
           }
           var5_double = Math.sqrt((double)(this.field_F * this.field_F + this.field_u * this.field_u));
-          de.c(param2 + this.field_v, this.field_G + param0, 6, 35071, 192);
-          de.c((int)(-((double)(6 * this.field_u) / var5_double) + (double)(this.field_v + param2)), (int)((double)(param0 + this.field_G) - (double)(6 * this.field_F) / var5_double), 5, 35071, 128);
-          de.c((int)(-((double)(this.field_u * 8) / var5_double) + (double)(param2 + this.field_v)), (int)((double)(param0 + this.field_G) - (double)(this.field_F * 8) / var5_double), 4, 35071, 128);
-          de.c((int)(-((double)(this.field_u * 10) / var5_double) + (double)(this.field_v + param2)), (int)((double)(this.field_G + param0) - (double)(this.field_F * 10) / var5_double), 3, 35071, 128);
-          de.c((int)((double)(this.field_v + param2) - (double)(this.field_u * 12) / var5_double), (int)((double)(this.field_G + param0) - (double)(12 * this.field_F) / var5_double), 2, 35071, 128);
-          de.c((int)(-((double)(6 * this.field_u) / var5_double) + (double)(param2 + this.field_v)), (int)((double)(param0 + this.field_G) - (double)(6 * this.field_F) / var5_double), 4, 8978431, 64);
-          de.c((int)((double)(param2 + this.field_v) - (double)(8 * this.field_u) / var5_double), (int)((double)(param0 + this.field_G) - (double)(8 * this.field_F) / var5_double), 3, 8978431, 64);
-          de.c(this.field_v + param2, param0 + this.field_G, 5, 8978431, 128);
-          de.c(-1 + this.field_v + param2, -1 + (this.field_G + param0), 3, 16777215, 64);
+          SoftwareRasterizer.fillCircleAlpha(param2 + this.field_v, this.field_G + param0, 6, 35071, 192);
+          SoftwareRasterizer.fillCircleAlpha((int)(-((double)(6 * this.field_u) / var5_double) + (double)(this.field_v + param2)), (int)((double)(param0 + this.field_G) - (double)(6 * this.field_F) / var5_double), 5, 35071, 128);
+          SoftwareRasterizer.fillCircleAlpha((int)(-((double)(this.field_u * 8) / var5_double) + (double)(param2 + this.field_v)), (int)((double)(param0 + this.field_G) - (double)(this.field_F * 8) / var5_double), 4, 35071, 128);
+          SoftwareRasterizer.fillCircleAlpha((int)(-((double)(this.field_u * 10) / var5_double) + (double)(this.field_v + param2)), (int)((double)(this.field_G + param0) - (double)(this.field_F * 10) / var5_double), 3, 35071, 128);
+          SoftwareRasterizer.fillCircleAlpha((int)((double)(this.field_v + param2) - (double)(this.field_u * 12) / var5_double), (int)((double)(this.field_G + param0) - (double)(12 * this.field_F) / var5_double), 2, 35071, 128);
+          SoftwareRasterizer.fillCircleAlpha((int)(-((double)(6 * this.field_u) / var5_double) + (double)(param2 + this.field_v)), (int)((double)(param0 + this.field_G) - (double)(6 * this.field_F) / var5_double), 4, 8978431, 64);
+          SoftwareRasterizer.fillCircleAlpha((int)((double)(param2 + this.field_v) - (double)(8 * this.field_u) / var5_double), (int)((double)(param0 + this.field_G) - (double)(8 * this.field_F) / var5_double), 3, 8978431, 64);
+          SoftwareRasterizer.fillCircleAlpha(this.field_v + param2, param0 + this.field_G, 5, 8978431, 128);
+          SoftwareRasterizer.fillCircleAlpha(-1 + this.field_v + param2, -1 + (this.field_G + param0), 3, 16777215, 64);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -9760,8 +9760,8 @@ final class mi extends DualLinkNode {
         int var11 = 0;
         var11 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          var2 = new Sprite[]{gj.field_f[22].b(), gj.field_f[26].b(), gj.field_f[27].b()};
-          var3 = tg.field_b[13].b();
+          var2 = new Sprite[]{gj.field_f[22].toRgbSprite(), gj.field_f[26].toRgbSprite(), gj.field_f[27].toRgbSprite()};
+          var3 = tg.field_b[13].toRgbSprite();
           if (param0 < 9) {
             this.field_x = 106;
           }

@@ -7,7 +7,7 @@ final class ko extends IntrusiveNode {
     int field_i;
     static String field_g;
     static int field_k;
-    static dj field_j;
+    static BitmapFont field_j;
 
     final static void a(java.applet.Applet param0, byte param1) {
         try {
@@ -177,7 +177,7 @@ final class ko extends IntrusiveNode {
         if (param0 == 32) {
           return;
         }
-        field_j = (dj) null;
+        field_j = (BitmapFont) null;
     }
 
     final static IndexedSprite[] a(int param0, byte param1, int param2, ResourceArchive param3) {
@@ -246,7 +246,7 @@ final class ko extends IntrusiveNode {
           return true;
         }
         var3 = 1;
-        if (!di.field_j &&
+        if (!NodeHashTable.field_j &&
           null == tm.field_d) {
           var3 = 0;
         }
@@ -275,14 +275,14 @@ final class ko extends IntrusiveNode {
             if (!ClientException.a(-1, var4_ref_String)) {
               var5 = nj.field_c;
               if (0 == var5 &&
-                wi.field_f != null) {
+                DirectByteStorage.field_f != null) {
                 var5 = 1;
               }
               if (oh.a((byte) 117, var5) != 2) {
-                sd.a(-1, var4_ref_String, 82, param1, nj.field_c, so.field_p);
+                BufferedRandomAccessFile.a(-1, var4_ref_String, 82, param1, nj.field_c, so.field_p);
               } else {
                 ea.a(param2, 1, true, var5);
-                sd.a(-1, var4_ref_String, 82, param1, nj.field_c, so.field_p);
+                BufferedRandomAccessFile.a(-1, var4_ref_String, 82, param1, nj.field_c, so.field_p);
                 ue.b(10);
               }
             } else {
@@ -308,7 +308,7 @@ final class ko extends IntrusiveNode {
           return true;
         }
         var4 = ed.field_Bb;
-        if (!bg.a(-256, (char) var4)) {
+        if (!ByteStorage.a(-256, (char) var4)) {
           return false;
         }
         if (var3 == 0) {
@@ -320,39 +320,39 @@ final class ko extends IntrusiveNode {
         discarded$0 = hi.field_e.append((char) var4);
         var5Lifetime1 = 485;
         var17 = ah.field_b;
-        var16 = fg.a(var17, -2);
+        var16 = MusicPatch.a(var17, -2);
         var19 = var16;
         if (2 != nj.field_c) {
           var7Lifetime1 = "";
           if (0 != nj.field_c) {
             var57 = var7Lifetime1 + var19 + ": ";
-            var5Lifetime1 = var5Lifetime1 - oo.field_x.b(var57);
-            if (oo.field_x.b(hi.field_e.toString()) <= var5Lifetime1) {
+            var5Lifetime1 = var5Lifetime1 - oo.field_x.textWidth(var57);
+            if (oo.field_x.textWidth(hi.field_e.toString()) <= var5Lifetime1) {
               return true;
             }
             qj.a(-1 + hi.field_e.length(), hi.field_e, ' ', false);
             return true;
           }
-          if (wi.field_f == null &&
+          if (DirectByteStorage.field_f == null &&
             hm.field_c) {
             var7Lifetime1 = "[" + lj.field_p + "] ";
           }
-          if (null != wi.field_f) {
+          if (null != DirectByteStorage.field_f) {
             if (!oe.field_a) {
-              var60 = "[" + tj.a(-68, new String[]{wi.field_f.field_ic}, ul.field_j) + "] ";
+              var60 = "[" + tj.a(-68, new String[]{DirectByteStorage.field_f.field_ic}, Bzip2State.field_j) + "] ";
               var61 = var60 + var19 + ": ";
-              var5Lifetime1 = var5Lifetime1 - oo.field_x.b(var61);
-              if (oo.field_x.b(hi.field_e.toString()) <= var5Lifetime1) {
+              var5Lifetime1 = var5Lifetime1 - oo.field_x.textWidth(var61);
+              if (oo.field_x.textWidth(hi.field_e.toString()) <= var5Lifetime1) {
                 return true;
               }
               qj.a(-1 + hi.field_e.length(), hi.field_e, ' ', false);
               return true;
             }
             if (he.field_d == null) {
-              var58 = "[" + tj.a(-68, new String[]{wi.field_f.field_ic}, ul.field_j) + "] ";
+              var58 = "[" + tj.a(-68, new String[]{DirectByteStorage.field_f.field_ic}, Bzip2State.field_j) + "] ";
               var59 = var58 + var19 + ": ";
-              var5Lifetime1 = var5Lifetime1 - oo.field_x.b(var59);
-              if (oo.field_x.b(hi.field_e.toString()) <= var5Lifetime1) {
+              var5Lifetime1 = var5Lifetime1 - oo.field_x.textWidth(var59);
+              if (oo.field_x.textWidth(hi.field_e.toString()) <= var5Lifetime1) {
                 return true;
               }
               qj.a(-1 + hi.field_e.length(), hi.field_e, ' ', false);
@@ -361,20 +361,20 @@ final class ko extends IntrusiveNode {
             var7Lifetime1 = "[" + he.field_d + "] ";
           }
           var62 = var7Lifetime1 + var19 + ": ";
-          var5Lifetime1 = var5Lifetime1 - oo.field_x.b(var62);
+          var5Lifetime1 = var5Lifetime1 - oo.field_x.textWidth(var62);
         } else {
           var64 = (CharSequence) ((Object) so.field_p);
           var18 = tj.a(-45, new String[]{qo.a((byte) 84, var64)}, ge.field_n);
           var8 = tj.a(113, new String[]{var16}, pk.field_f);
-          var9 = oo.field_x.b(var18);
-          var10 = oo.field_x.b(var8);
+          var9 = oo.field_x.textWidth(var18);
+          var10 = oo.field_x.textWidth(var8);
           if (var10 >= var9) {
             var5Lifetime1 = var5Lifetime1 - var10;
           } else {
             var5Lifetime1 = var5Lifetime1 - var9;
           }
         }
-        if (oo.field_x.b(hi.field_e.toString()) <= var5Lifetime1) {
+        if (oo.field_x.textWidth(hi.field_e.toString()) <= var5Lifetime1) {
           return true;
         }
         qj.a(-1 + hi.field_e.length(), hi.field_e, ' ', false);
@@ -479,8 +479,8 @@ final class ko extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           var6 = new Sprite(param3 * 2, 2 * param3);
-          var6.a();
-          de.i(param3, param3, param3, param5);
+          var6.makeRasterTarget();
+          SoftwareRasterizer.fillCircle(param3, param3, param3, param5);
           stackIn_1_0 = fk.a(param0, -(param3 * 2) + param1, param4, param2 - param3, (byte) -1, var6);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

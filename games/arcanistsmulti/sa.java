@@ -48,7 +48,7 @@ final class sa extends kc {
           for (var12 = 0; var12 < me.field_L.length; var12++) {
             var13 = new kc(0L, param3, no.field_vb[var12]);
             var14 = new kc(0L, param3, me.field_L[var12]);
-            var15 = param3.field_Z.b(me.field_L[var12]);
+            var15 = param3.field_Z.textWidth(me.field_L[var12]);
             var13.a(65, 20, var10, 15, (byte) -120);
             if (var11 < var15) {
               var11 = var15;

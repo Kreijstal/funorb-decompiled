@@ -21,11 +21,11 @@ final class la implements ok {
           return;
         }
         if (!param1) {
-          de.b();
+          SoftwareRasterizer.clear();
           lm.a((byte) -29, param1);
           return;
         }
-        de.e(0, 0, de.field_e, de.field_j, 0, 192);
+        SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_e, SoftwareRasterizer.field_j, 0, 192);
         lm.a((byte) -29, param1);
     }
 

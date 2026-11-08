@@ -159,21 +159,21 @@ final class we {
           ue.field_c.a(param2, param4, (byte) -86, param6);
           ue.field_c.padTo(var7_int, (byte) 83);
           ue.field_c.a(param1 ^ 127, var13);
-          if (ji.field_b == null ||
-            !(ji.field_b.payload.length >= 100)) {
-            ji.field_b = new PacketBuffer(100);
+          if (KeyboardInputHandler.field_b == null ||
+            !(KeyboardInputHandler.field_b.payload.length >= 100)) {
+            KeyboardInputHandler.field_b = new PacketBuffer(100);
           }
-          ji.field_b.position = 0;
-          ji.field_b.writeByte(10, (byte) -33);
+          KeyboardInputHandler.field_b.position = 0;
+          KeyboardInputHandler.field_b.writeByte(10, (byte) -33);
           var11 = 0;
           var9Lifetime1 = var11;
           while (4 > var11) {
-            ji.field_b.writeInt(var13[var11], (byte) -101);
+            KeyboardInputHandler.field_b.writeInt(var13[var11], (byte) -101);
             var11++;
           }
-          ji.field_b.writeShort(param6, (byte) -60);
-          ji.field_b.a(param0, (byte) 95, param5);
-          param3.a(ji.field_b.payload, 0, (byte) -86, ji.field_b.position);
+          KeyboardInputHandler.field_b.writeShort(param6, (byte) -60);
+          KeyboardInputHandler.field_b.a(param0, (byte) 95, param5);
+          param3.a(KeyboardInputHandler.field_b.payload, 0, (byte) -86, KeyboardInputHandler.field_b.position);
           param3.a(ue.field_c.payload, param1, (byte) -86, ue.field_c.position);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

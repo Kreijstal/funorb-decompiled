@@ -16,7 +16,7 @@ final class nl extends kc {
         if (param1 != 19129) {
           return;
         }
-        gi.field_c = param0;
+        SoundCache.field_c = param0;
         mf.field_c = param2;
         if (ClientException.field_b != null) {
           ClientException.field_b.a(-118, param0, param2);
@@ -25,10 +25,10 @@ final class nl extends kc {
 
     final static hc f(byte param0) {
         if (param0 == 13) {
-          return new hc(k.a(param0 ^ 13), ga.b(3236));
+          return new hc(k.a(param0 ^ 13), ImageProducerRasterBuffer.b(3236));
         }
         field_Hb = (String) null;
-        return new hc(k.a(param0 ^ 13), ga.b(3236));
+        return new hc(k.a(param0 ^ 13), ImageProducerRasterBuffer.b(3236));
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {

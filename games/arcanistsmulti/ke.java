@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ke extends wn {
-    private dj field_L;
+    private BitmapFont field_L;
     static String field_E;
     private int field_G;
     static int[] field_M;
@@ -46,7 +46,7 @@ final class ke extends wn {
           return;
         }
         int var7 = !this.field_J ? 0 : -this.field_H + (this.field_v - this.field_G * 2);
-        this.field_L.a(this.field_N, this.field_G + (var7 + var5), this.field_G + var6, -this.field_G + this.field_H, this.field_k - this.field_G * 2, this.field_I, -1, this.field_J ? 0 : 2, 1, this.field_L.field_C);
+        this.field_L.drawParagraph(this.field_N, this.field_G + (var7 + var5), this.field_G + var6, -this.field_G + this.field_H, this.field_k - this.field_G * 2, this.field_I, -1, this.field_J ? 0 : 2, 1, this.field_L.field_C);
     }
 
     public static void f(int param0) {
@@ -65,7 +65,7 @@ final class ke extends wn {
         }
     }
 
-    final static void a(Sprite[] param0, boolean param1, dj param2, int param3, Sprite[] param4, int param5, int param6, int param7, int param8, int param9, int param10, String param11, boolean param12, int param13, int param14) {
+    final static void a(Sprite[] param0, boolean param1, BitmapFont param2, int param3, Sprite[] param4, int param5, int param6, int param7, int param8, int param9, int param10, String param11, boolean param12, int param13, int param14) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -81,10 +81,10 @@ final class ke extends wn {
         try {
           if (param14 != -21071) {
             var16 = (String) null;
-            ke.a((Sprite[]) null, true, (dj) null, -83, (Sprite[]) null, -13, 81, -125, 45, -81, 29, (String) null, true, 61, -12);
+            ke.a((Sprite[]) null, true, (BitmapFont) null, -83, (Sprite[]) null, -13, 81, -125, 45, -81, 29, (String) null, true, 61, -12);
           }
           kh.a(param6, param3, mj.field_r, param7, param8, param10, param13, param9, true, new ec(param4), param8, param13, param2, pn.field_d, ol.field_f, ql.field_a, param2, tg.field_d, new ec(param0), wm.field_I);
-          dk.a(param11, (byte) -72, param12, param5, param1);
+          CanvasRasterBuffer.a(param11, (byte) -72, param12, param5, param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -118,7 +118,7 @@ final class ke extends wn {
         }
     }
 
-    ke(int param0, int param1, int param2, int param3, qm param4, boolean param5, int param6, int param7, dj param8, int param9, String param10) {
+    ke(int param0, int param1, int param2, int param3, qm param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
         super(param0, param1, param2, param3, (pf) null, (wc) null);
         boolean stackIn_4_1 = false;
         int stackIn_10_0 = 0;
@@ -144,7 +144,7 @@ final class ke extends wn {
           this.field_I = param9;
           this.field_G = param7;
           var12_int = -this.field_G + this.field_H;
-          var13 = this.field_L.a(param10, var12_int, this.field_L.field_C) + this.field_G * 2;
+          var13 = this.field_L.paragraphHeight(param10, var12_int, this.field_L.field_C) + this.field_G * 2;
           if (var13 > param3) {
             this.a(var13, param1, param2, param0, -59);
           } else {

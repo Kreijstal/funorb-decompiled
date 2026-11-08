@@ -280,7 +280,7 @@ final class ho {
           var1 = wh.field_f.e(true);
         }
         if (0 == var1.length()) {
-          var1 = gi.a(0);
+          var1 = SoundCache.a(0);
         }
         int var2 = 101 / ((24 - param0) / 56);
         if (var1.length() == 0) {

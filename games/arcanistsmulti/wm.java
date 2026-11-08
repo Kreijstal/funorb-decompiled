@@ -28,9 +28,9 @@ final class wm extends wn {
         }
         if (this.field_v != 0 &&
           0 != this.field_k) {
-          io.field_n.a(param3 - (-this.field_j - this.field_k), this.field_v + this.field_n + param1, 3, param3 + this.field_j, this.field_n + param1);
+          MusicCrossfadeStream.field_n.a(param3 - (-this.field_j - this.field_k), this.field_v + this.field_n + param1, 3, param3 + this.field_j, this.field_n + param1);
           this.field_B.a((byte) -99, param1 + this.field_n, param2, param3 + this.field_j);
-          io.field_n.a(114);
+          MusicCrossfadeStream.field_n.a(114);
         }
     }
 
@@ -89,20 +89,20 @@ final class wm extends wn {
     }
 
     final static void g(int param0) {
-        ba.d(-123);
+        PatchEnvelopeSet.d(-123);
         if (param0 != 0) {
           field_I = -56;
         }
     }
 
     final static void g(byte param0) {
-        if (0 - sn.field_G != gi.field_a &&
-          -sn.field_G + 250 == gi.field_a) {
+        if (0 - sn.field_G != SoundCache.field_a &&
+          -sn.field_G + 250 == SoundCache.field_a) {
         }
         if (param0 != 27) {
           return;
         }
-        gi.field_a = gi.field_a + 1;
+        SoundCache.field_a = SoundCache.field_a + 1;
     }
 
     final boolean a(int param0, int param1, qm param2, int param3, int param4, int param5, int param6) {

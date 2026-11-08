@@ -43,8 +43,8 @@ final class hf {
           lm.field_e[param3] = param6;
           eo.field_b[param3] = param5;
           if (param2 != 0) {
-            dj var8 = (dj) null;
-            hf.a((String[]) null, (String) null, -76, (dj) null, 57);
+            BitmapFont var8 = (BitmapFont) null;
+            hf.a((String[]) null, (String) null, -76, (BitmapFont) null, 57);
           }
           tg.field_f[param3] = param4;
           sc.field_U[param3] = param0;
@@ -122,7 +122,7 @@ final class hf {
         }
     }
 
-    private final void a(int param0, int param1, int param2, dj param3, String param4, int param5, int[] param6, int param7) {
+    private final void a(int param0, int param1, int param2, BitmapFont param3, String param4, int param5, int[] param6, int param7) {
         int var9_int = 0;
         int var10 = 0;
         int var11 = 0;
@@ -140,10 +140,10 @@ final class hf {
         try {
           ec.a(65280);
           for (var9_int = param7; var9_int < param0; var9_int++) {
-            de.h(param2, var9_int, param1, 1 + var9_int);
+            SoftwareRasterizer.setClip(param2, var9_int, param1, 1 + var9_int);
             var10 = var9_int * param6.length / param0;
             var11 = param6[-var10 + param6.length - 1];
-            param3.a(param4, param2, param7, param1, param0, var11, -1, 1, 1, 0);
+            param3.drawParagraph(param4, param2, param7, param1, param0, var11, -1, 1, 1, 0);
           }
           oo.c(-15405);
           if (param5 != 23146) {
@@ -185,21 +185,21 @@ final class hf {
         int var2Lifetime3;
         int var3Lifetime1;
         var4 = ArcanistsMulti.field_G ? 1 : 0;
-        de.c(9, 9, 622, 47, 4540749, 65793);
-        de.d(9, 257, 622, 33, 2585);
-        de.c(9, 265, 622, 11, 2585, 1515566);
+        SoftwareRasterizer.fillVerticalGradient(9, 9, 622, 47, 4540749, 65793);
+        SoftwareRasterizer.fillRectangle(9, 257, 622, 33, 2585);
+        SoftwareRasterizer.fillVerticalGradient(9, 265, 622, 11, 2585, 1515566);
         var2 = 0;
         var3 = 14;
         while (var2 < 4) {
-          de.c(var3, 331, 117, 90, 460551, 3881787);
+          SoftwareRasterizer.fillVerticalGradient(var3, 331, 117, 90, 460551, 3881787);
           var2++;
           var3 += 121;
         }
         var2Lifetime1 = 0;
         var3Lifetime1 = 299;
         while (var2Lifetime1 < 2) {
-          de.c(508, var3Lifetime1, 127, 42, 1130115, 3365268);
-          de.d(508, 42 + var3Lifetime1, 127, 42, 12410);
+          SoftwareRasterizer.fillVerticalGradient(508, var3Lifetime1, 127, 42, 1130115, 3365268);
+          SoftwareRasterizer.fillRectangle(508, 42 + var3Lifetime1, 127, 42, 12410);
           var3Lifetime1 += 91;
           var2Lifetime1++;
         }
@@ -219,7 +219,7 @@ final class hf {
           fd.field_b = rm.a("", bb.field_a, "pump32", -119, an.field_o);
           fd.field_f = cg.a("benefit_orbs", (byte) 113, an.field_o, "members_expansion_screen");
           qf.field_b = cg.a("button_text", (byte) 116, an.field_o, "members_expansion_screen");
-          ji.field_c = nl.a((byte) 31, an.field_o, "button_highlights", "members_expansion_screen");
+          KeyboardInputHandler.field_c = nl.a((byte) 31, an.field_o, "button_highlights", "members_expansion_screen");
           an.field_o = null;
           bb.field_a = null;
         }
@@ -227,50 +227,50 @@ final class hf {
         if (null == be.field_j) {
           return;
         }
-        this.field_e.c(376, 339);
-        this.field_k.c(9, 9);
-        be.field_j.a(0, 0);
+        this.field_e.drawTransparent(376, 339);
+        this.field_k.drawTransparent(9, 9);
+        be.field_j.draw(0, 0);
         if (cg.field_Ib != null) {
-          cg.field_Ib.c(9, 257);
-          cg.field_Ib.e(558, 257);
+          cg.field_Ib.drawTransparent(9, 257);
+          cg.field_Ib.drawHorizontalFlip(558, 257);
           if (me.field_I > 257 &&
             290 > me.field_I) {
             var2Lifetime2 = 40 + (40 * hg.a(this.field_p << 4, -52) >> 16);
             if (var2Lifetime2 > 0) {
               if (an.field_g > 9 &&
                 an.field_g < 82) {
-                cg.field_Ib.b(8, 256, var2Lifetime2);
-                cg.field_Ib.b(10, 256, var2Lifetime2);
-                cg.field_Ib.b(8, 258, var2Lifetime2);
-                cg.field_Ib.b(10, 258, var2Lifetime2);
+                cg.field_Ib.drawAdditive(8, 256, var2Lifetime2);
+                cg.field_Ib.drawAdditive(10, 256, var2Lifetime2);
+                cg.field_Ib.drawAdditive(8, 258, var2Lifetime2);
+                cg.field_Ib.drawAdditive(10, 258, var2Lifetime2);
               } else {
                 if (an.field_g > 558 &&
                   631 > an.field_g) {
-                  cg.field_Ib.d();
-                  cg.field_Ib.b(557, 256, var2Lifetime2);
-                  cg.field_Ib.b(559, 256, var2Lifetime2);
-                  cg.field_Ib.b(557, 258, var2Lifetime2);
-                  cg.field_Ib.b(559, 258, var2Lifetime2);
-                  cg.field_Ib.d();
+                  cg.field_Ib.flipHorizontally();
+                  cg.field_Ib.drawAdditive(557, 256, var2Lifetime2);
+                  cg.field_Ib.drawAdditive(559, 256, var2Lifetime2);
+                  cg.field_Ib.drawAdditive(557, 258, var2Lifetime2);
+                  cg.field_Ib.drawAdditive(559, 258, var2Lifetime2);
+                  cg.field_Ib.flipHorizontally();
                 }
               }
             }
           }
         }
         var2Lifetime3 = 89 % ((-46 - param0) / 43);
-        this.field_g.c(16, 302);
-        li.field_F.a(this.field_a[this.field_l], 9, 257, 622, 33, 16754688, -1, 1, 1, 0);
-        fd.field_f.c(30, 330);
-        li.field_F.a(nf.field_qb[0], 17, 428, 111, 35, 16754688, -1, 1, 1, 0);
-        li.field_F.a(nf.field_qb[1], 138, 428, 111, 35, 16754688, -1, 1, 1, 0);
-        li.field_F.a(nf.field_qb[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
-        qf.field_b.c(508 + (127 - qf.field_b.field_n) / 2, 315);
+        this.field_g.drawTransparent(16, 302);
+        li.field_F.drawParagraph(this.field_a[this.field_l], 9, 257, 622, 33, 16754688, -1, 1, 1, 0);
+        fd.field_f.drawTransparent(30, 330);
+        li.field_F.drawParagraph(nf.field_qb[0], 17, 428, 111, 35, 16754688, -1, 1, 1, 0);
+        li.field_F.drawParagraph(nf.field_qb[1], 138, 428, 111, 35, 16754688, -1, 1, 1, 0);
+        li.field_F.drawParagraph(nf.field_qb[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
+        qf.field_b.drawTransparent(508 + (127 - qf.field_b.field_n) / 2, 315);
         if (0 != this.field_d.field_h) {
           if (this.field_d.field_h == 1) {
-            ji.field_c[1].c(508, 387);
+            KeyboardInputHandler.field_c[1].drawTransparent(508, 387);
           }
         } else {
-          ji.field_c[0].c(508, 299);
+          KeyboardInputHandler.field_c[0].drawTransparent(508, 299);
         }
     }
 
@@ -433,36 +433,36 @@ final class hf {
           }
           this.field_k = new Sprite(622, 47);
           fk.a(this.field_k, -23095);
-          de.c(0, 0, 622, 47, 4540749, 65793);
+          SoftwareRasterizer.fillVerticalGradient(0, 0, 622, 47, 4540749, 65793);
           var2 = 16448250;
           var3 = 10068666;
-          var15 = kb.a(var3, var2, param0 ^ 16128330);
+          var15 = BoundedRandomAccessFile.a(var3, var2, param0 ^ 16128330);
           this.a(47, 622, 0, fd.field_b, this.field_j, 23146, var15, 0);
           oo.c(-15405);
           this.field_g = new Sprite(475, 24);
           this.a(this.field_g, 0.75f, 0, 127, 24, var15, -4, fd.field_b, mm.field_r, 475);
-          var13 = kb.a(526344, 526344, 65535);
+          var13 = BoundedRandomAccessFile.a(526344, 526344, 65535);
           var11 = var13;
           var9 = var11;
           var5 = new Sprite(121, 122);
           fk.a(var5, param0 ^ -16170116);
-          de.c(0, 0, var5.field_q, var5.field_y / 2, param0, 16306250);
-          de.c(0, var5.field_y / 2, var5.field_q, var5.field_y, 16306250, 15568919);
+          SoftwareRasterizer.fillVerticalGradient(0, 0, var5.field_q, var5.field_y / 2, param0, 16306250);
+          SoftwareRasterizer.fillVerticalGradient(0, var5.field_y / 2, var5.field_q, var5.field_y, 16306250, 15568919);
           var6 = vc.field_l;
           var7 = ph.field_b;
           this.a(var5, 0.5f, 0, 127, var5.field_y, var13, -16, fd.field_b, var6, var5.field_q);
           this.a(var5, 0.5f, 0, 127, var5.field_y, var13, 20, fd.field_b, var7, var5.field_q);
-          this.a(var5, 0.699999988079071f, 0, 127, var5.field_y / 3, var9, 12 + (var5.field_y / 2 - fd.field_b.field_C), fd.field_b, gk.field_f[this.field_u], var5.field_q);
+          this.a(var5, 0.699999988079071f, 0, 127, var5.field_y / 3, var9, 12 + (var5.field_y / 2 - fd.field_b.field_C), fd.field_b, Js5ArchiveManager.field_f[this.field_u], var5.field_q);
           oo.c(-15405);
           this.field_e = new Sprite(121, 122);
           fk.a(this.field_e, param0 - 16204012);
-          var5.a(this.field_e.field_q / 2, this.field_e.field_y / 2, -2048, 4096);
+          var5.drawCenteredRotatedScaledBilinear(this.field_e.field_q / 2, this.field_e.field_y / 2, -2048, 4096);
           oo.c(param0 - 16196322);
           return;
         }
     }
 
-    private final void a(Sprite param0, float param1, int param2, int param3, int param4, int[] param5, int param6, dj param7, String param8, int param9) {
+    private final void a(Sprite param0, float param1, int param2, int param3, int param4, int[] param5, int param6, BitmapFont param7, String param8, int param9) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -485,11 +485,11 @@ final class hf {
           }
           var13 = new Sprite(var11_int, var12);
           fk.a(var13, -23095);
-          param0.c((int)((float)(-param2) / param1), (int)((float)(-param6) / param1), (int)((float)param0.field_q / param1), (int)((float)param0.field_y / param1));
+          param0.drawScaled((int)((float)(-param2) / param1), (int)((float)(-param6) / param1), (int)((float)param0.field_q / param1), (int)((float)param0.field_y / param1));
           this.a(var12, var11_int, 0, param7, param8, param3 ^ 23061, param5, 0);
           oo.c(param3 - 15532);
           fk.a(param0, -23095);
-          var13.d(param2, param6, param9, param4);
+          var13.drawScaledAveraged(param2, param6, param9, param4);
           oo.c(param3 ^ -15444);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -535,7 +535,7 @@ final class hf {
         var5 = ArcanistsMulti.field_G ? 1 : 0;
         if (null == this.field_i) {
           if (li.field_F != null) {
-            li.field_F.a(hn.field_l, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
+            li.field_F.drawParagraph(hn.field_l, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
           }
           return;
         }
@@ -545,10 +545,10 @@ final class hf {
         var6 = this.field_i[this.field_l];
         var2 = var6;
         if (var2 != null) {
-          var6.a(9, 58);
+          var6.draw(9, 58);
         } else {
           if (null != li.field_F) {
-            li.field_F.a(hn.field_l, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
+            li.field_F.drawParagraph(hn.field_l, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
           }
         }
         if (vf.field_o > this.field_s) {
@@ -578,7 +578,7 @@ final class hf {
         if (!param1) {
           return -60;
         }
-        while (65536 <= gh.a(vf.field_q, (byte) 96, this.field_c)) {
+        while (65536 <= MidiPcmStream.a(vf.field_q, (byte) 96, this.field_c)) {
           this.field_p = this.field_p + 1;
           this.field_c = this.field_c - vf.field_q;
         }
@@ -710,7 +710,7 @@ final class hf {
         return -1;
     }
 
-    final static int a(String[] args, String param1, int param2, dj param3, int param4) {
+    final static int a(String[] args, String param1, int param2, BitmapFont param3, int param4) {
         int var9 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -737,7 +737,7 @@ final class hf {
         int var6Lifetime1;
         var13 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          var5_int = param3.b(param1);
+          var5_int = param3.textWidth(param1);
           if (param4 != 21230) {
             field_q = (kc) null;
           }
@@ -757,7 +757,7 @@ final class hf {
             if (var10 == 32 ||
               var10 == 45) {
               var11 = param1.substring(var7, 1 + var9).trim();
-              var12 = param3.b(var11);
+              var12 = param3.textWidth(var11);
               if (param2 <= var12) {
                 var7 = 1 + var9;
                 incrementValue$1 = var6Lifetime1;

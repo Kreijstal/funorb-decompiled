@@ -123,7 +123,7 @@ final class bl extends ee implements bn, ak {
           var11 = new ij[var7];
           if (param3.field_p != null) {
             for (var12 = 0; var12 < param3.field_p.length; var12++) {
-              var13_ref_oo = bg.field_d.a(3, param3.field_p[var12]);
+              var13_ref_oo = ByteStorage.field_d.a(3, param3.field_p[var12]);
               var8[var12] = var13_ref_oo.field_w;
               var9[var12] = param3.field_n[var12];
               var11[var12] = bl.a(true, param1, param2, var13_ref_oo, param4);
@@ -260,12 +260,12 @@ final class bl extends ee implements bn, ak {
         }
     }
 
-    final static void a(kd param0, int param1) {
+    final static void a(PcmSampleStream param0, int param1) {
         try {
-          pc.field_e.a(param0);
+          pc.field_e.removeSubStream(param0);
           if (param1 < 119) {
-            kd var3 = (kd) null;
-            bl.a((kd) null, 64);
+            PcmSampleStream var3 = (PcmSampleStream) null;
+            bl.a((PcmSampleStream) null, 64);
           }
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "bl.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

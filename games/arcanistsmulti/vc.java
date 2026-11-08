@@ -3,7 +3,7 @@
  */
 final class vc {
     private int field_a;
-    static dj field_e;
+    static BitmapFont field_e;
     private int field_m;
     private boolean field_k;
     Sprite[] field_b;
@@ -113,7 +113,7 @@ final class vc {
     }
 
     final void a(int param0, mj param1, byte param2, qm param3, int param4) {
-        dj stackIn_19_0 = null;
+        BitmapFont stackIn_19_0 = null;
         String stackIn_19_1 = null;
         int stackIn_19_2 = 0;
         int stackIn_20_3 = 0;
@@ -154,7 +154,7 @@ final class vc {
             if (param1.field_a == 2) {
               var8 = var8 + (-this.field_d.field_w + param3.field_k);
             }
-            this.field_d.c(var7_int, var8);
+            this.field_d.drawTransparent(var7_int, var8);
           }
           var7 = param1.a(false, param3);
           if (var7 != null &&
@@ -186,7 +186,7 @@ final class vc {
             } else {
               stackIn_26_8 = 256;
             }
-            ((dj) (Object) stackIn_19_0).a(stackIn_19_1, stackIn_22_2, stackIn_25_3, stackIn_25_4, stackIn_25_5, stackIn_25_6, stackIn_25_7, stackIn_26_8, param1.field_i, param1.field_a, param1.field_h);
+            ((BitmapFont) (Object) stackIn_19_0).drawParagraphAlpha(stackIn_19_1, stackIn_22_2, stackIn_25_3, stackIn_25_4, stackIn_25_5, stackIn_25_6, stackIn_25_7, stackIn_26_8, param1.field_i, param1.field_a, param1.field_h);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -234,8 +234,8 @@ final class vc {
         int var3 = -12 % ((-49 - param0) / 62);
         int var2 = ea.field_F * ea.field_F;
         int var4 = -(ce.field_h * ce.field_h) + var2;
-        k.field_d.a(199, -(199 * var4 / var2) + var1, 90, -94 + (-120 + de.field_j), (byte) -120);
-        fn.field_e.a(438, 202 + (var1 + 438 * var4 / var2), 0, -120 + de.field_j - 4, (byte) -120);
+        k.field_d.a(199, -(199 * var4 / var2) + var1, 90, -94 + (-120 + SoftwareRasterizer.field_j), (byte) -120);
+        fn.field_e.a(438, 202 + (var1 + 438 * var4 / var2), 0, -120 + SoftwareRasterizer.field_j - 4, (byte) -120);
     }
 
     final void a(qm param0, int param1, vc param2, mj param3, int param4, int param5) {

@@ -18,7 +18,7 @@ abstract class qk extends ob {
         if (param0 < 57) {
           field_qb = (String) null;
         }
-        return qf.field_a == wi.field_f.field_Bb ? true : false;
+        return qf.field_a == DirectByteStorage.field_f.field_Bb ? true : false;
     }
 
     private final void d(int param0, qm param1) {

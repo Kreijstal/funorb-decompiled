@@ -4,7 +4,7 @@
 abstract class mg extends df implements el {
     private bl field_D;
     static String field_F;
-    static dj field_C;
+    static BitmapFont field_C;
     static ResourceArchive field_E;
 
     mg(int param0, int param1, int param2, int param3, pf param4) {
@@ -40,7 +40,7 @@ abstract class mg extends df implements el {
 
     public final pd a(int param0) {
         if (param0 != 0) {
-          field_C = (dj) null;
+          field_C = (BitmapFont) null;
           return (pd) ((Object) this.field_D);
         }
         return (pd) ((Object) this.field_D);

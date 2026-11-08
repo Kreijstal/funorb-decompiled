@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class jl {
-    static gh field_h;
+    static MidiPcmStream field_h;
     static String field_f;
     static String field_i;
     private int field_k;
@@ -33,7 +33,7 @@ final class jl {
           var2_int = ce.field_m.field_e;
           var3 = ce.field_m.field_m;
           var4 = -22 % ((-64 - param0) / 46);
-          var4Lifetime1 = la.field_c.field_Z.a(param1, 272, la.field_c.field_z);
+          var4Lifetime1 = la.field_c.field_Z.paragraphHeight(param1, 272, la.field_c.field_z);
           var5 = -103 + var3 / 2 - var4Lifetime1 / 2;
           gm.field_h.a(320, (-320 + var2_int) / 2, var5, -120 + var3 - 2 * var5, (byte) -120);
           gm.field_h.field_v = of.a(3, gm.field_h.field_I, 1, 2105376, 11579568, 8421504);
@@ -64,7 +64,7 @@ final class jl {
               return;
             }
             if (~this.field_m != ~param0) {
-              sf.a(this.field_j, param0 + 1, this.field_j, param0, this.field_m - param0);
+              ArraySupport.copyInts(this.field_j, param0 + 1, this.field_j, param0, this.field_m - param0);
             }
             this.field_m = this.field_m - 1;
             return;
@@ -140,7 +140,7 @@ final class jl {
             }
           }
           if (var2 == null &&
-            !di.field_j &&
+            !NodeHashTable.field_j &&
             tm.field_d == null) {
             var2 = oa.field_a;
           }
@@ -151,7 +151,7 @@ final class jl {
           }
           if (decompiledFrameRemainder0) {
             var3 = ah.field_b;
-            var3 = fg.a(var3, -2);
+            var3 = MusicPatch.a(var3, -2);
             var4 = "";
             var5 = "|";
             var6 = nj.field_c;
@@ -159,17 +159,17 @@ final class jl {
             if (var6 == 2) {
               var4 = tj.a(-99, new String[]{so.field_p}, ge.field_n);
               var8 = tj.a(-51, new String[]{var3}, pk.field_f);
-              var7 = -485 + (sa.field_Cb.field_x + wn.field_D.field_x + oo.field_x.b(var8)) - oo.field_x.b(var4);
+              var7 = -485 + (sa.field_Cb.field_x + wn.field_D.field_x + oo.field_x.textWidth(var8)) - oo.field_x.textWidth(var4);
               if (0 > var7) {
                 var7 = 0;
               }
             } else {
               if (0 == var6) {
-                if (wi.field_f == null &&
+                if (DirectByteStorage.field_f == null &&
                   hm.field_c) {
                   var4 = "[" + lj.field_p + "] ";
                 }
-                if (null != wi.field_f) {
+                if (null != DirectByteStorage.field_f) {
                   boolean decompiledSharedTail0 = (!(oe.field_a) ||
                     he.field_d == null);
                   if (!decompiledSharedTail0) {
@@ -177,7 +177,7 @@ final class jl {
                     decompiledSharedTail0 = (var10 != 0);
                   }
                   if (decompiledSharedTail0) {
-                    var4 = "[" + tj.a(param0 + 126, new String[]{wi.field_f.field_ic}, ul.field_j) + "] ";
+                    var4 = "[" + tj.a(param0 + 126, new String[]{DirectByteStorage.field_f.field_ic}, Bzip2State.field_j) + "] ";
                   }
                   var6 = 1;
                 }
@@ -202,7 +202,7 @@ final class jl {
                 var4 = "<col=999999>" + var4 + rk.field_N + "</col>";
                 var5 = "";
               }
-              var9 = oo.field_x.b(var4);
+              var9 = oo.field_x.textWidth(var4);
               if (!tk.f((byte) -113)) {
                 if (wn.field_D.field_C &&
                   (-wn.field_D.field_V + an.field_g) < var9) {
@@ -219,7 +219,7 @@ final class jl {
                 }
               }
             }
-            rb.a(wd.field_c[var6], var4 + dj.a(hi.field_e.toString()), var7, var5, -126);
+            rb.a(wd.field_c[var6], var4 + BitmapFont.escapeMarkup(hi.field_e.toString()), var7, var5, -126);
             if (!ef.field_r) {
               sa.field_Cb.field_C = false;
             }
@@ -385,7 +385,7 @@ final class jl {
             this.field_m = -38;
           }
           var3 = new int[this.b((byte) 115, param0)];
-          sf.a(this.field_j, 0, var3, 0, this.field_j.length);
+          ArraySupport.copyInts(this.field_j, 0, var3, 0, this.field_j.length);
           this.field_j = var3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

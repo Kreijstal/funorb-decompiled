@@ -165,7 +165,7 @@ class qm extends IntrusiveNode {
           return;
         }
         if (var5 != null) {
-          io.field_n.a(var5, (byte) 60, ka.field_p, IntrusiveNodeHashTable.field_p);
+          MusicCrossfadeStream.field_n.a(var5, (byte) 60, ka.field_p, IntrusiveNodeHashTable.field_p);
         }
     }
 
@@ -742,7 +742,7 @@ class qm extends IntrusiveNode {
     }
 
     qm(String param0, wc param1) {
-        this(param0, io.field_n.field_r, param1);
+        this(param0, MusicCrossfadeStream.field_n.field_r, param1);
     }
 
     protected qm() {

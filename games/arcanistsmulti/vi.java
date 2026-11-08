@@ -26,7 +26,7 @@ abstract class vi extends df {
             String var3 = (String) null;
             vi.a((byte) 16, (String) null);
           }
-          rj.field_i = param1;
+          AudioService.field_i = param1;
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "vi.SA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -85,14 +85,14 @@ abstract class vi extends df {
     abstract void a(int param0, byte param1, int param2);
 
     final void a(int param0, int param1, int param2) {
-        this.a(param2, -param2 + mf.field_c >> 1, param0, -param0 + gi.field_c >> 1, -112);
+        this.a(param2, -param2 + mf.field_c >> 1, param0, -param0 + SoundCache.field_c >> 1, -112);
         if (param1 != 0) {
           this.a((byte) -50, 71, 43, -75);
         }
     }
 
     vi(h param0, int param1, int param2) {
-        super(-param1 + gi.field_c >> 1, mf.field_c - param2 >> 1, param1, param2, (pf) null);
+        super(-param1 + SoundCache.field_c >> 1, mf.field_c - param2 >> 1, param1, param2, (pf) null);
         try {
           this.field_H = param0;
           this.field_G = false;
@@ -129,11 +129,11 @@ abstract class vi extends df {
           field_E = (Sprite[]) null;
         }
         fk.a(ed.field_vb, -23095);
-        de.b();
+        SoftwareRasterizer.clear();
         this.a(0, (byte) -117, 0);
         super.a((byte) -117, -param1 - this.field_n, param2, -this.field_j - param3);
         oo.c(-15405);
-        ed.field_vb.c(param1 + this.field_n, param3 + this.field_j, this.field_S);
+        ed.field_vb.drawAlpha(param1 + this.field_n, param3 + this.field_j, this.field_S);
     }
 
     boolean a(byte param0) {

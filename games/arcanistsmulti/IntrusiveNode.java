@@ -6,7 +6,7 @@ class IntrusiveNode {
     IntrusiveNode next;
     long key;
     static kc field_c;
-    static sd field_f;
+    static BufferedRandomAccessFile field_f;
     IntrusiveNode previous;
 
     final boolean isLinked(byte obfuscationGuard) {
@@ -93,7 +93,7 @@ class IntrusiveNode {
             }
             se.a((byte) -33, var4, var5);
             for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {
-              je.a(123, var15);
+              MouseInputHandler.a(123, var15);
               if (0 == var6_intLifetime1) {
                 var3.field_h = fo.field_a;
                 var3.field_k = kj.field_c;
@@ -111,7 +111,7 @@ class IntrusiveNode {
             dupTemp$1 = new int[2][4 * var5];
             var3.field_l = dupTemp$1;
             var7 = dupTemp$1;
-            var8 = je.field_b;
+            var8 = MouseInputHandler.field_b;
             var9 = 0;
             var10 = 0;
             while (var9 < var8) {
@@ -120,9 +120,9 @@ class IntrusiveNode {
               var7[0][4 * var10] = nf.field_z[var11];
               var7[0][var10 * 4 + 1] = hc.field_e[var11];
               var7[0][4 * var10 + 2] = tj.field_u[var11];
-              var7[0][3 + var10 * 4] = ba.field_o[var11];
-              if (je.a(16, bb.field_i[var11]) &&
-                tj.field_u[var11] + hc.field_e[var11] + ba.field_o[var11] == 0) {
+              var7[0][3 + var10 * 4] = PatchEnvelopeSet.field_o[var11];
+              if (MouseInputHandler.a(16, bb.field_i[var11]) &&
+                tj.field_u[var11] + hc.field_e[var11] + PatchEnvelopeSet.field_o[var11] == 0) {
                 var6[0][var10] = null;
                 var10--;
               }
@@ -138,9 +138,9 @@ class IntrusiveNode {
               var7[1][4 * var14] = nf.field_z[var11Lifetime1];
               var7[1][1 + var14 * 4] = hc.field_e[var11Lifetime1];
               var7[1][var14 * 4 + 2] = tj.field_u[var11Lifetime1];
-              var7[1][4 * var14 + 3] = ba.field_o[var11Lifetime1];
-              if (je.a(16, bb.field_i[var11Lifetime1]) &&
-                hc.field_e[var11Lifetime1] + tj.field_u[var11Lifetime1] + ba.field_o[var11Lifetime1] == 0) {
+              var7[1][4 * var14 + 3] = PatchEnvelopeSet.field_o[var11Lifetime1];
+              if (MouseInputHandler.a(16, bb.field_i[var11Lifetime1]) &&
+                hc.field_e[var11Lifetime1] + tj.field_u[var11Lifetime1] + PatchEnvelopeSet.field_o[var11Lifetime1] == 0) {
                 var6[1][var14] = null;
                 var14--;
               }

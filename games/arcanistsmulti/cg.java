@@ -32,7 +32,7 @@ final class cg extends kc {
           this.field_Qb = param1;
           this.field_Tb = param0;
           var5 = (CharSequence) ((Object) this.field_Tb);
-          gk.a(var5, -13);
+          Js5ArchiveManager.a(var5, -13);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "cg.F(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -141,7 +141,7 @@ final class cg extends kc {
           var3Lifetime1 = an.field_e[9] >> 8;
           var4 = an.field_e[10] >> 8;
           var5Lifetime1 = an.field_e[11] >> 8;
-          var6Lifetime1 = gi.field_a << 4;
+          var6Lifetime1 = SoundCache.field_a << 4;
           var7Lifetime1 = 0;
           var8Lifetime1 = of.a(param0 - 252566934, var6Lifetime1) >> 8;
           var9Lifetime1 = j.a(var6Lifetime1, -108) >> 8;
@@ -206,7 +206,7 @@ final class cg extends kc {
           this.field_Qb = param1;
           this.field_Tb = param0;
           var6 = (CharSequence) ((Object) this.field_Tb);
-          gk.a(var6, -13);
+          Js5ArchiveManager.a(var6, -13);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "cg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

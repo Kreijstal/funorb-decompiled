@@ -35,8 +35,8 @@ final class bo {
             stackIn_6_0 = nm.field_e;
             return stackIn_6_0;
           }
-          if (je.a(16, param0)) {
-            stackIn_9_0 = sd.field_l;
+          if (MouseInputHandler.a(16, param0)) {
+            stackIn_9_0 = BufferedRandomAccessFile.field_l;
             return stackIn_9_0;
           }
           if (kl.a(param0, 1)) {
@@ -105,8 +105,8 @@ final class bo {
             return false;
           }
           if (param2 < -32) {
-            var4 = tj.field_u[param1] + (hc.field_e[param1] + ba.field_o[param1]);
-            var5 = tj.field_u[param3] + hc.field_e[param3] + ba.field_o[param3];
+            var4 = tj.field_u[param1] + (hc.field_e[param1] + PatchEnvelopeSet.field_o[param1]);
+            var5 = tj.field_u[param3] + hc.field_e[param3] + PatchEnvelopeSet.field_o[param3];
             if (var5 > var4) {
               return true;
             }
@@ -116,8 +116,8 @@ final class bo {
             return !(param3 <= param1);
           }
           bo.a(true, 73, (byte) 32, -114);
-          var4Lifetime3 = tj.field_u[param1] + (hc.field_e[param1] + ba.field_o[param1]);
-          var5Lifetime3 = tj.field_u[param3] + hc.field_e[param3] + ba.field_o[param3];
+          var4Lifetime3 = tj.field_u[param1] + (hc.field_e[param1] + PatchEnvelopeSet.field_o[param1]);
+          var5Lifetime3 = tj.field_u[param3] + hc.field_e[param3] + PatchEnvelopeSet.field_o[param3];
           if (var5Lifetime3 > var4Lifetime3) {
             return true;
           }
@@ -139,8 +139,8 @@ final class bo {
           return false;
         }
         if (param2 < -32) {
-          var4Lifetime1 = tj.field_u[param1] + (hc.field_e[param1] + ba.field_o[param1]);
-          var5Lifetime1 = tj.field_u[param3] + hc.field_e[param3] + ba.field_o[param3];
+          var4Lifetime1 = tj.field_u[param1] + (hc.field_e[param1] + PatchEnvelopeSet.field_o[param1]);
+          var5Lifetime1 = tj.field_u[param3] + hc.field_e[param3] + PatchEnvelopeSet.field_o[param3];
           if (var5Lifetime1 > var4Lifetime1) {
             return true;
           }
@@ -150,8 +150,8 @@ final class bo {
           return !(param3 <= param1);
         }
         bo.a(true, 73, (byte) 32, -114);
-        var4Lifetime2 = tj.field_u[param1] + (hc.field_e[param1] + ba.field_o[param1]);
-        var5Lifetime2 = tj.field_u[param3] + hc.field_e[param3] + ba.field_o[param3];
+        var4Lifetime2 = tj.field_u[param1] + (hc.field_e[param1] + PatchEnvelopeSet.field_o[param1]);
+        var5Lifetime2 = tj.field_u[param3] + hc.field_e[param3] + PatchEnvelopeSet.field_o[param3];
         if (var5Lifetime2 > var4Lifetime2) {
           return true;
         }

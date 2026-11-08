@@ -14,7 +14,7 @@ final class r {
           ResourceArchive var2 = (ResourceArchive) null;
           r.a(51, -102, 48, (ResourceArchive) null);
         }
-        oc.a(112, nn.field_p, ArchiveProvider.field_a[0].field_n, dh.field_Gb, ga.field_r, ra.field_h);
+        oc.a(112, nn.field_p, ArchiveProvider.field_a[0].field_n, dh.field_Gb, ImageProducerRasterBuffer.field_r, ra.field_h);
     }
 
     final static Sprite a(int param0, int param1, int param2, ResourceArchive param3) {
@@ -77,13 +77,13 @@ final class r {
             return null;
           }
           if (pa.field_g == hb.field_Gb &&
-            param0.equals(ji.field_j)) {
+            param0.equals(KeyboardInputHandler.field_j)) {
             hb.field_Gb = uj.field_h;
             stackIn_11_0 = fh.field_i;
             return stackIn_11_0;
           }
           hb.field_Gb = sk.field_a;
-          ji.field_j = param0;
+          KeyboardInputHandler.field_j = param0;
           fh.field_i = null;
           stackIn_9_0 = null;
           return (ho) (stackIn_9_0);

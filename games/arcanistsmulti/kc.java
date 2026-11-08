@@ -46,7 +46,7 @@ class kc extends to {
     Sprite field_lb;
     int field_zb;
     boolean field_A;
-    dj field_Z;
+    BitmapFont field_Z;
     static String field_M;
     boolean field_ub;
     private int field_y;
@@ -88,11 +88,11 @@ class kc extends to {
         var26 = ArcanistsMulti.field_G ? 1 : 0;
         this.field_nb = param10 + this.field_db;
         this.field_V = this.field_T + param6;
-        var12 = de.field_i;
-        var13 = de.field_c;
-        var14 = de.field_h;
-        var15 = de.field_k;
-        de.a(this.field_V, this.field_nb, this.field_x + this.field_V, this.field_nb + this.field_I);
+        var12 = SoftwareRasterizer.field_i;
+        var13 = SoftwareRasterizer.field_c;
+        var14 = SoftwareRasterizer.field_h;
+        var15 = SoftwareRasterizer.field_k;
+        SoftwareRasterizer.intersectClip(this.field_V, this.field_nb, this.field_x + this.field_V, this.field_nb + this.field_I);
         param2 = param2 & this.field_ub;
         if (!this.field_E) {
           param8 = this.field_C;
@@ -191,9 +191,9 @@ class kc extends to {
             var25 = var25 + (-var17.field_w + this.field_I);
           }
           if (this.field_O >= 256) {
-            var17.c(var24_int, var25);
+            var17.drawTransparent(var24_int, var25);
           } else {
-            var17.c(var24_int, var25, this.field_O);
+            var17.drawAlpha(var24_int, var25, this.field_O);
           }
         }
         boolean decompiledFrameRemainder0 = true;
@@ -207,7 +207,7 @@ class kc extends to {
             null != this.field_L) {
             var24Lifetime2 = var27 + this.field_L;
           }
-          if (this.field_Z.b(var24Lifetime2) <= this.field_x - this.field_t * 2 &&
+          if (this.field_Z.textWidth(var24Lifetime2) <= this.field_x - this.field_t * 2 &&
             var24Lifetime2.indexOf("<br>") < 0) {
             if (this.field_gb != 1) {
               if (this.field_gb == 2) {
@@ -217,22 +217,22 @@ class kc extends to {
               var22 = var22 + (-this.field_Z.field_m + this.field_I - this.field_Z.field_C) / 2;
             }
             if (this.field_X == 0) {
-              this.field_Z.a(var24Lifetime2, var21 + (this.field_t + this.field_V), this.field_Z.field_C + (var22 + this.field_nb), var18, -1, this.field_u);
+              this.field_Z.drawLeftAlpha(var24Lifetime2, var21 + (this.field_t + this.field_V), this.field_Z.field_C + (var22 + this.field_nb), var18, -1, this.field_u);
             } else {
               if (1 == this.field_X) {
-                this.field_Z.b(var24Lifetime2, (this.field_x - 2 * this.field_t) / 2 + (this.field_t + this.field_V + var21), var22 + this.field_nb + this.field_Z.field_C, var18, -1, this.field_u);
+                this.field_Z.drawCenteredAlpha(var24Lifetime2, (this.field_x - 2 * this.field_t) / 2 + (this.field_t + this.field_V + var21), var22 + this.field_nb + this.field_Z.field_C, var18, -1, this.field_u);
               } else {
                 if (2 == this.field_X) {
-                  this.field_Z.c(var24Lifetime2, this.field_x - (this.field_t * 2 - this.field_t - this.field_V - var21), this.field_Z.field_C + var22 + this.field_nb, var18, -1, this.field_u);
+                  this.field_Z.drawRightAlpha(var24Lifetime2, this.field_x - (this.field_t * 2 - this.field_t - this.field_V - var21), this.field_Z.field_C + var22 + this.field_nb, var18, -1, this.field_u);
                 } else {
-                  this.field_Z.a(var24Lifetime2, this.field_t + (this.field_V + var21), this.field_nb + var22, this.field_x - this.field_t * 2, this.field_I, var18, -1, this.field_u, this.field_X, this.field_gb, this.field_z);
+                  this.field_Z.drawParagraphAlpha(var24Lifetime2, this.field_t + (this.field_V + var21), this.field_nb + var22, this.field_x - this.field_t * 2, this.field_I, var18, -1, this.field_u, this.field_X, this.field_gb, this.field_z);
                 }
               }
             }
             decompiledFrameRemainder0 = false;
           }
           else {
-            this.field_Z.a(var24Lifetime2, this.field_t + (this.field_V + var21), var22 + this.field_nb, this.field_x - 2 * this.field_t, this.field_I, var18, -1, this.field_u, this.field_X, this.field_gb, this.field_z);
+            this.field_Z.drawParagraphAlpha(var24Lifetime2, this.field_t + (this.field_V + var21), var22 + this.field_nb, this.field_x - 2 * this.field_t, this.field_I, var18, -1, this.field_u, this.field_X, this.field_gb, this.field_z);
           }
         }
         if (this.field_G != null) {
@@ -242,7 +242,7 @@ class kc extends to {
             var24_ref = (kc) (this.field_G.next(0));
           }
         }
-        de.h(var12, var13, var14, var15);
+        SoftwareRasterizer.setClip(var12, var13, var14, var15);
     }
 
     final void b(boolean param0, byte param1) {
@@ -251,7 +251,7 @@ class kc extends to {
         if (param1 < 28) {
           this.field_xb = (Sprite[]) null;
         }
-        this.a(de.field_e, 0, true, -1, de.field_j, 0);
+        this.a(SoftwareRasterizer.field_e, 0, true, -1, SoftwareRasterizer.field_j, 0);
     }
 
     final int a(int param0, int param1) {
@@ -264,7 +264,7 @@ class kc extends to {
         int var5_intLifetime1;
         if (this.field_rb != null &&
           null != this.field_Z) {
-          var5_int = this.field_Z.c(this.field_rb, param0);
+          var5_int = this.field_Z.getWrappedWidth(this.field_rb, param0);
           if (var5_int > var4) {
             var4 = var5_int;
           }
@@ -633,19 +633,19 @@ class kc extends to {
         this.field_I = this.field_I + var7Lifetime3;
         this.field_nb = this.field_db + param1;
         param2 = param2 & this.field_ub;
-        var8 = de.field_i;
-        var9 = de.field_c;
-        var10 = de.field_h;
-        var11 = de.field_k;
-        de.a(this.field_V, this.field_nb, this.field_V + this.field_x, this.field_nb + this.field_I);
+        var8 = SoftwareRasterizer.field_i;
+        var9 = SoftwareRasterizer.field_c;
+        var10 = SoftwareRasterizer.field_h;
+        var11 = SoftwareRasterizer.field_k;
+        SoftwareRasterizer.intersectClip(this.field_V, this.field_nb, this.field_V + this.field_x, this.field_nb + this.field_I);
         var12 = 0;
         if (!fd.field_i &&
           param2 &&
           re.field_r != 0 &&
-          de.field_i <= pb.field_h &&
-          de.field_h > pb.field_h &&
-          de.field_c <= ja.field_s &&
-          ja.field_s < de.field_k) {
+          SoftwareRasterizer.field_i <= pb.field_h &&
+          SoftwareRasterizer.field_h > pb.field_h &&
+          SoftwareRasterizer.field_c <= ja.field_s &&
+          ja.field_s < SoftwareRasterizer.field_k) {
           var12 = 1;
           this.field_cb = -this.field_V + pb.field_h;
           this.field_P = re.field_r;
@@ -657,7 +657,7 @@ class kc extends to {
           }
           this.field_U = 0;
         }
-        stackIn_30_1 = (!ui.field_v) && (an.field_g >= de.field_i) && (de.field_h > an.field_g) && (me.field_I >= de.field_c) && (de.field_k > me.field_I);
+        stackIn_30_1 = (!ui.field_v) && (an.field_g >= SoftwareRasterizer.field_i) && (SoftwareRasterizer.field_h > an.field_g) && (me.field_I >= SoftwareRasterizer.field_c) && (SoftwareRasterizer.field_k > me.field_I);
         this.field_A = stackIn_30_1;
         if (PacketBuffer.field_m == 0) {
           this.field_P = 0;
@@ -677,7 +677,7 @@ class kc extends to {
         if (var12 != 0) {
           fd.field_i = true;
         }
-        de.h(var8, var9, var10, var11);
+        SoftwareRasterizer.setClip(var8, var9, var10, var11);
         if (~this.field_P != param3 &&
           this.field_H) {
           this.field_db = me.field_I + (-this.field_y - param1);
@@ -713,7 +713,7 @@ class kc extends to {
     }
 
     final void a(boolean param0, boolean param1) {
-        this.a(false, false, param1, de.field_j, param0, de.field_e, 0, (byte) -78, false, false, 0);
+        this.a(false, false, param1, SoftwareRasterizer.field_j, param0, SoftwareRasterizer.field_e, 0, (byte) -78, false, false, 0);
     }
 
     protected kc() {

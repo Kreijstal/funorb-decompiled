@@ -452,7 +452,7 @@ class df extends qm implements a {
                 var12++;
               }
               if (var21 != null &&
-                je.a(16, var21)) {
+                MouseInputHandler.a(16, var21)) {
                 var8[1][var13] = ah.field_b;
                 var9[1][var13] = null;
                 var34[1][var13] = var22;
@@ -502,7 +502,7 @@ class df extends qm implements a {
             ((fj) (Object) stackIn_54_0).unlink(stackIn_55_1);
             return;
           }
-          jh.a((Throwable) null, "HS1: " + nn.g((byte) -25), (byte) 20);
+          DelegatingCanvas.a((Throwable) null, "HS1: " + nn.g((byte) -25), (byte) 20);
           ka.b(false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

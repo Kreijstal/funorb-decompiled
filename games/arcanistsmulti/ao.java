@@ -127,12 +127,12 @@ final class ao {
     final static void a(byte param0) {
         int var3 = 0;
         int var3Lifetime1;
-        fh.field_g = de.field_e;
-        ri.field_a = de.field_j;
+        fh.field_g = SoftwareRasterizer.field_e;
+        ri.field_a = SoftwareRasterizer.field_j;
         vc.a((byte) -128);
         aj.field_h.a(0, 0, -40 + (k.field_d.field_I - 2), k.field_d.field_x, 5);
-        kg.field_c.a(se.field_H.field_x, 0, 0, ga.field_r, (byte) -120);
-        int var1 = 2 + ga.field_r;
+        kg.field_c.a(se.field_H.field_x, 0, 0, ImageProducerRasterBuffer.field_r, (byte) -120);
+        int var1 = 2 + ImageProducerRasterBuffer.field_r;
         mj.field_s.a(se.field_H.field_x, 0, !fc.field_a ? 0 : var1, -(fc.field_a ? var1 : 0) + se.field_H.field_I, (byte) -120);
         ie.l((byte) 100);
         ii.field_b.a(k.field_d.field_x, 0, k.field_d.field_I - 40, 40, (byte) -120);
@@ -192,11 +192,11 @@ final class ao {
               var6 = lc.a(true, pm.field_f[var3_int], (byte) -97);
               var4 = var4 + ic.field_a;
               var7 = -(var6 >> 1) + af.field_Eb;
-              if (bj.a(param2, 39, var4, var6 + (f.field_h << 1), tm.field_b + (uk.field_d << 1), param1, var7 - f.field_h)) {
+              if (bj.a(param2, 39, var4, var6 + (f.field_h << 1), tm.field_b + (FullscreenFocusCanvas.field_d << 1), param1, var7 - f.field_h)) {
                 stackIn_10_0 = var5;
                 return stackIn_10_0;
               }
-              var4 = var4 + (tm.field_b + ((uk.field_d << 1) + ic.field_a));
+              var4 = var4 + (tm.field_b + ((FullscreenFocusCanvas.field_d << 1) + ic.field_a));
             }
             var3_int++;
           }

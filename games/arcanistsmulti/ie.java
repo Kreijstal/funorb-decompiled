@@ -94,7 +94,7 @@ final class ie extends ed implements vb {
         var5 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           try {
-            if (!dl.field_s.startsWith("win")) {
+            if (!PlatformTaskDispatcher.field_s.startsWith("win")) {
               return false;
             }
             if (!param1.startsWith("http://") &&

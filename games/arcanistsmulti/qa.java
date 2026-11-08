@@ -30,7 +30,7 @@ final class qa extends IntrusiveNode {
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;
         if (param0 != 0) {
-          var5[4] = ce.b(64, param0, hh.a((int) param4, 21490));
+          var5[4] = ce.b(64, param0, MouseWheelHandler.a((int) param4, 21490));
         }
         return var5;
     }
@@ -133,7 +133,7 @@ final class qa extends IntrusiveNode {
               if (fi.field_d.field_p) {
                 var3_int = hf.a(qg.field_a, of.field_l, eb.field_a, mg.field_C, 21230);
               } else {
-                var3_int = hf.a(qg.field_a, wi.field_j, eb.field_a, mg.field_C, param1 ^ -16571);
+                var3_int = hf.a(qg.field_a, DirectByteStorage.field_j, eb.field_a, mg.field_C, param1 ^ -16571);
               }
               var4 = var3_int + 2;
               ib.field_v = new String[var4];
@@ -202,9 +202,9 @@ final class qa extends IntrusiveNode {
               throw new IllegalStateException();
             }
             SpriteState.field_u = new String[var4];
-            sf.a(qg.field_a, 0, SpriteState.field_u, 0, var4);
+            ArraySupport.copyObjects(qg.field_a, 0, SpriteState.field_u, 0, var4);
             ik.field_c = new String[-1 + (-var4 + var3_int)];
-            sf.a(qg.field_a, var4 + 1, ik.field_c, 0, var3_int - var4 - 1);
+            ArraySupport.copyObjects(qg.field_a, var4 + 1, ik.field_c, 0, var3_int - var4 - 1);
             var4 = -1;
             var3_int = hf.a(qg.field_a, tj.a(param1 ^ -4656, new String[]{"<br><%0><br>"}, bo.field_b), eb.field_a, mg.field_C, 21230);
             for (var5 = 0; var3_int > var5; var5++) {
@@ -218,17 +218,17 @@ final class qa extends IntrusiveNode {
               throw new IllegalStateException();
             }
             lo.field_u = new String[var4];
-            sf.a(qg.field_a, 0, lo.field_u, 0, var4);
-            dk.field_c = new String[-1 + var3_int - var4];
-            sf.a(qg.field_a, 1 + var4, dk.field_c, 0, -var4 + var3_int - 1);
+            ArraySupport.copyObjects(qg.field_a, 0, lo.field_u, 0, var4);
+            CanvasRasterBuffer.field_c = new String[-1 + var3_int - var4];
+            ArraySupport.copyObjects(qg.field_a, 1 + var4, CanvasRasterBuffer.field_c, 0, -var4 + var3_int - 1);
             if (SpriteState.field_u.length >= lo.field_u.length) {
               stackIn_34_0 = SpriteState.field_u.length;
             } else {
               stackIn_34_0 = lo.field_u.length;
             }
             var5 = stackIn_34_0;
-            if (ik.field_c.length < dk.field_c.length) {
-              stackIn_37_0 = dk.field_c.length;
+            if (ik.field_c.length < CanvasRasterBuffer.field_c.length) {
+              stackIn_37_0 = CanvasRasterBuffer.field_c.length;
             } else {
               stackIn_37_0 = ik.field_c.length;
             }
@@ -265,8 +265,8 @@ final class qa extends IntrusiveNode {
             for (var8Lifetime3 = 0; var6 > var8Lifetime3; var8Lifetime3++) {
               stackIn_50_0 = ib.field_v;
               stackIn_50_1 = var8Lifetime3 + (var5 + 7);
-              if (var8Lifetime3 < dk.field_c.length) {
-                stackIn_51_2 = dk.field_c[var8Lifetime3];
+              if (var8Lifetime3 < CanvasRasterBuffer.field_c.length) {
+                stackIn_51_2 = CanvasRasterBuffer.field_c[var8Lifetime3];
               } else {
                 stackIn_51_2 = "";
               }

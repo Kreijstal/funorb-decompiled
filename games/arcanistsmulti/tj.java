@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class tj extends ArchiveProvider {
-    static lg field_t;
+    static BinaryBitmapFont field_t;
     static String field_y;
     private byte[] field_E;
     private int field_i;
     static Sprite[] field_A;
-    private di field_n;
+    private NodeHashTable field_n;
     private byte[] field_w;
     private int field_q;
     static int field_C;
@@ -272,7 +272,7 @@ final class tj extends ArchiveProvider {
         try {
           sc.a(false, false, param0);
           if (param1 >= -93) {
-            field_t = (lg) null;
+            field_t = (BinaryBitmapFont) null;
           }
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "tj.R(" + param0 + ',' + param1 + ')');
@@ -809,7 +809,7 @@ final class tj extends ArchiveProvider {
         String stackIn_30_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var10 = null;
-        this.field_n = new di(16);
+        this.field_n = new NodeHashTable(16);
         this.field_p = 0;
         this.field_m = new IntrusiveDeque();
         this.field_r = 0L;

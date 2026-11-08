@@ -112,15 +112,15 @@ final class mn extends rl {
               }
               var9 = stackIn_18_0;
               if (var9 != null) {
-                var9.a(var8 - f.field_h, var2, param0 ^ 114, var7 + (f.field_h << 1), tm.field_b + (uk.field_d << 1));
+                var9.a(var8 - f.field_h, var2, param0 ^ 114, var7 + (f.field_h << 1), tm.field_b + (FullscreenFocusCanvas.field_d << 1));
               }
-              var2 = var2 + uk.field_d;
+              var2 = var2 + FullscreenFocusCanvas.field_d;
             }
             if (0 <= var4) {
-              vd.field_c.a(var6, var8, mh.field_H + var2, var5, -1);
-              var2 = var2 + (ic.field_a + (uk.field_d + tm.field_b));
+              vd.field_c.drawText(var6, var8, mh.field_H + var2, var5, -1);
+              var2 = var2 + (ic.field_a + (FullscreenFocusCanvas.field_d + tm.field_b));
             } else {
-              ob.field_T.a(var6, var8, var2 + lj.field_k, var5, -1);
+              ob.field_T.drawText(var6, var8, var2 + lj.field_k, var5, -1);
               var2 = var2 + u.field_l;
             }
           }

@@ -24,7 +24,7 @@ final class ol {
           var1_int = kl.field_B[0];
           for (var2 = 1; var2 < kl.field_B.length; var2++) {
             var3 = kl.field_B[var2];
-            sf.a(w.field_Lb, var2 << 4, w.field_Lb, var1_int, var3);
+            ArraySupport.copyInts(w.field_Lb, var2 << 4, w.field_Lb, var1_int, var3);
             var1_int = var1_int + var3;
           }
           if (param0 != 91) {
@@ -100,12 +100,12 @@ final class ol {
         field_e = null;
     }
 
-    final static uk a(int param0, int param1, boolean param2, dl param3, int param4, int param5) {
+    final static FullscreenFocusCanvas a(int param0, int param1, boolean param2, PlatformTaskDispatcher param3, int param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
-        uk var7 = null;
+        FullscreenFocusCanvas var7 = null;
         java.awt.Frame var8 = null;
-        uk stackIn_6_0 = null;
+        FullscreenFocusCanvas stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -116,7 +116,7 @@ final class ol {
           if (var8 == null) {
             return null;
           }
-          var7 = new uk();
+          var7 = new FullscreenFocusCanvas();
           var7.field_b = var8;
           var7.field_b.add((java.awt.Component) ((Object) var7));
           var7.setBounds(0, 0, param5, param4);

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class ob extends vi {
-    static je field_hb;
+    static MouseInputHandler field_hb;
     private int field_U;
     private int field_W;
     private int field_fb;
@@ -11,7 +11,7 @@ abstract class ob extends vi {
     private int field_gb;
     static String field_X;
     static am field_eb;
-    static dj field_T;
+    static BitmapFont field_T;
     static v field_Y;
     static int field_ab;
     private int field_cb;
@@ -83,15 +83,15 @@ abstract class ob extends vi {
         int var12Lifetime1;
         int var13Lifetime1;
         var16 = ArcanistsMulti.field_G ? 1 : 0;
-        de.c(6 + param0, 35 + param2, this.field_v - 12, -40 + this.field_k, 2105376, 0);
+        SoftwareRasterizer.fillVerticalGradient(6 + param0, 35 + param2, this.field_v - 12, -40 + this.field_k, 2105376, 0);
         var4 = 35;
         var5 = 211;
         var6 = 194;
         var7 = 0;
         var8 = param2;
         while (var4 > var7) {
-          if (de.field_c <= var8 &&
-            de.field_k > var8) {
+          if (SoftwareRasterizer.field_c <= var8 &&
+            SoftwareRasterizer.field_k > var8) {
             var9 = var7 * (var6 - var5) / var4 + var5;
             var10 = 0;
             var11 = this.field_v;
@@ -104,7 +104,7 @@ abstract class ob extends vi {
                   }
                   var13 = (462 - var12) * var9 / 42;
                   var13 = var13 | (var13 << 8 | var13 << 16);
-                  de.field_l[de.field_e * var8 + param0 + var10] = var13;
+                  SoftwareRasterizer.field_l[SoftwareRasterizer.field_e * var8 + param0 + var10] = var13;
                 }
                 var10++;
               }
@@ -118,7 +118,7 @@ abstract class ob extends vi {
                   if (420 <= var14) {
                     var15 = var9 * (462 - var14) / 42;
                     var15 = var15 | (var15 << 16 | var15 << 8);
-                    de.field_l[var11 + (de.field_e * var8 + param0)] = var15;
+                    SoftwareRasterizer.field_l[var11 + (SoftwareRasterizer.field_e * var8 + param0)] = var15;
                   } else {
                     var12Lifetime1 = var11 + 1;
                   }
@@ -130,7 +130,7 @@ abstract class ob extends vi {
               var11 = var12Lifetime1;
             }
             var9 = var9 | (var9 << 16 | var9 << 8);
-            de.f(param0 + var10, var8, -var10 + var11, var9);
+            SoftwareRasterizer.drawHorizontalLine(param0 + var10, var8, -var10 + var11, var9);
           }
           var7++;
           var8++;
@@ -146,12 +146,12 @@ abstract class ob extends vi {
         while (var4Lifetime1 > var7Lifetime1) {
           var9Lifetime1 = var5Lifetime1 + var7Lifetime1 * (-var5Lifetime1 + var6Lifetime1) / var4Lifetime1;
           var9Lifetime1 = var9Lifetime1 | (var9Lifetime1 << 8 | var9Lifetime1 << 16);
-          de.f(param0, var8Lifetime1, 6, var9Lifetime1);
-          de.f(this.field_v + (param0 - 6), var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(param0, var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(this.field_v + (param0 - 6), var8Lifetime1, 6, var9Lifetime1);
           var7Lifetime1++;
           var8Lifetime1++;
         }
-        ci.field_e.c(-90 + (param0 + this.field_v), 10 + param2);
+        ci.field_e.drawTransparent(-90 + (param0 + this.field_v), 10 + param2);
         dd.a(2, 35 + param2, fk.field_g, this.field_v - 10, 5 + param0);
         dd.a(param1 ^ -119, param2 + this.field_k - 22, vi.field_E, this.field_v, param0);
         var4Lifetime2 = this.field_k - 79;
@@ -162,8 +162,8 @@ abstract class ob extends vi {
         while (var7Lifetime2 < var4Lifetime2) {
           var9Lifetime2 = (var6Lifetime2 - var5Lifetime2) * var7Lifetime2 / var4Lifetime2 + var5Lifetime2;
           var9Lifetime2 = var9Lifetime2 | (var9Lifetime2 << 8 | var9Lifetime2 << 16);
-          de.f(param0, var8Lifetime2, 6, var9Lifetime2);
-          de.f(this.field_v + (param0 - 6), var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRasterizer.drawHorizontalLine(param0, var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRasterizer.drawHorizontalLine(this.field_v + (param0 - 6), var8Lifetime2, 6, var9Lifetime2);
           var8Lifetime2++;
           var7Lifetime2++;
         }
@@ -258,7 +258,7 @@ abstract class ob extends vi {
     }
 
     static {
-        field_hb = new je();
+        field_hb = new MouseInputHandler();
         field_ib = "Player";
         field_ab = 0;
         field_Y = null;

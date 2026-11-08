@@ -76,7 +76,7 @@ abstract class kh {
           return;
         }
         try {
-          uk.field_d = param2;
+          FullscreenFocusCanvas.field_d = param2;
           f.field_h = param3;
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "kh.K(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
@@ -128,7 +128,7 @@ abstract class kh {
           }
           if (10 <= ih.field_f) {
             if (!rl.d(true)) {
-              de.b();
+              SoftwareRasterizer.clear();
               n.a(320, 240, param0 - 13);
               kn.a(param1, (byte) -101, 0, 0);
             } else {
@@ -145,7 +145,7 @@ abstract class kh {
               var3_int = 1;
               hj.field_d = false;
             }
-            io.a(qj.field_h, bb.b((byte) -126), var3_int != 0, ArchiveProvider.c((byte) -77), -6885);
+            MusicCrossfadeStream.a(qj.field_h, bb.b((byte) -126), var3_int != 0, ArchiveProvider.c((byte) -77), -6885);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -201,22 +201,22 @@ abstract class kh {
         RuntimeException var5 = null;
         var11 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          de.f(param1, param2, param0 + 1, 10000536);
-          de.f(param1, param3 + param2, param0 + 1, 12105912);
+          SoftwareRasterizer.drawHorizontalLine(param1, param2, param0 + 1, 10000536);
+          SoftwareRasterizer.drawHorizontalLine(param1, param3 + param2, param0 + 1, 12105912);
           var5_int = 1;
-          if (var5_int + param2 < de.field_c) {
-            var5_int = -param2 + de.field_c;
+          if (var5_int + param2 < SoftwareRasterizer.field_c) {
+            var5_int = -param2 + SoftwareRasterizer.field_c;
           }
           var7 = 63 / ((param4 - 26) / 52);
           var6 = param3;
-          if (var6 + param2 > de.field_k) {
-            var6 = de.field_k - param2;
+          if (var6 + param2 > SoftwareRasterizer.field_k) {
+            var6 = SoftwareRasterizer.field_k - param2;
           }
           for (var8 = var5_int; var6 > var8; var8++) {
             var9 = 152 + var8 * 48 / param3;
             var10 = var9 << 8 | var9 << 16 | var9;
-            de.field_l[param1 + de.field_e * (param2 + var8)] = var10;
-            de.field_l[de.field_e * (param2 + var8) + param1 + param0] = var10;
+            SoftwareRasterizer.field_l[param1 + SoftwareRasterizer.field_e * (param2 + var8)] = var10;
+            SoftwareRasterizer.field_l[SoftwareRasterizer.field_e * (param2 + var8) + param1 + param0] = var10;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -241,7 +241,7 @@ abstract class kh {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, boolean param8, ec param9, int param10, int param11, dj param12, int param13, ec param14, int param15, dj param16, int param17, ec param18, int param19) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, boolean param8, ec param9, int param10, int param11, BitmapFont param12, int param13, ec param14, int param15, BitmapFont param16, int param17, ec param18, int param19) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

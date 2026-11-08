@@ -135,7 +135,7 @@ abstract class ud extends GameAppletShell {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6 = (Exception) (Object) decompiledCaughtException;
             var10 = (String) null;
-            jh.a((Throwable) ((Object) var6), (String) null, (byte) 20);
+            DelegatingCanvas.a((Throwable) ((Object) var6), (String) null, (byte) 20);
             this.a("crash", (byte) -125);
           }
           return;
@@ -178,8 +178,8 @@ abstract class ud extends GameAppletShell {
           if (var4 == 1) {
             var5_int = e.a(nl.f((byte) 13), -67, h.g((byte) 126));
             if (var5_int != -1) {
-              fl.a(20657, me.field_E, ul.field_M, var5_int);
-              ul.field_M = null;
+              fl.a(20657, me.field_E, Bzip2State.field_M, var5_int);
+              Bzip2State.field_M = null;
               me.field_E = null;
             }
             var10 = dm.f(18727);
@@ -190,16 +190,16 @@ abstract class ud extends GameAppletShell {
           if (var4 == 2) {
             var5_intLifetime1 = tk.a(ho.a((byte) 93), jd.b(-94), ed.k(-952), hc.b((byte) -107), this.field_m, k.a(0), (byte) -110);
             if (var5_intLifetime1 != -1) {
-              pn.a(ul.field_M, var5_intLifetime1, -42, me.field_E);
+              pn.a(Bzip2State.field_M, var5_intLifetime1, -42, me.field_E);
               me.field_E = null;
-              ul.field_M = null;
+              Bzip2State.field_M = null;
             }
           }
           if (3 == var4) {
             if (u.field_b != -1 &&
               u.field_b != 0) {
               u.field_b = -1;
-              o.a((byte) -34);
+              MusicPatchNode.a((byte) -34);
             }
             if (param1) {
               kg.field_f = false;
@@ -223,7 +223,7 @@ abstract class ud extends GameAppletShell {
               qe.field_p = true;
               fj.field_j = 10;
             } else {
-              gh.a(2, cd.e(120));
+              MidiPcmStream.a(2, cd.e(120));
             }
           }
           if (5 == var4) {
@@ -237,7 +237,7 @@ abstract class ud extends GameAppletShell {
             hc.a(cd.e(116), 27901);
           }
           if (var4 == 8) {
-            gh.a(2, cd.e(118));
+            MidiPcmStream.a(2, cd.e(118));
           }
           if (var4 == 9) {
             g.a(cd.e(122), -10400);
@@ -263,7 +263,7 @@ abstract class ud extends GameAppletShell {
                   stackIn_71_1 = !(param0);
                   bc.a((String) (stackIn_70_0), stackIn_71_1);
                 } else {
-                  var7 = ba.a(0, var11.position, (byte) -123, var11.payload);
+                  var7 = PatchEnvelopeSet.a(0, var11.position, (byte) -123, var11.payload);
                   stackIn_66_0 = var7;
                   stackIn_67_1 = !(param0);
                   bc.a(stackIn_66_0, stackIn_67_1);
@@ -273,7 +273,7 @@ abstract class ud extends GameAppletShell {
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var5 = (Exception) (Object) decompiledCaughtException;
-              jh.a((Throwable) ((Object) var5), "S1", (byte) 20);
+              DelegatingCanvas.a((Throwable) ((Object) var5), "S1", (byte) 20);
               var9 = (String) null;
               bc.a((String) null, true);
               nf.field_P = null;
@@ -372,22 +372,22 @@ abstract class ud extends GameAppletShell {
     }
 
     private final void k(int param0) {
-        di.field_n[8] = -2;
-        di.field_n[12] = -1;
-        di.field_n[13] = -1;
-        di.field_n[18] = 1;
-        di.field_n[10] = -1;
-        di.field_n[17] = -1;
-        di.field_n[3] = -1;
-        di.field_n[2] = -2;
-        di.field_n[5] = -1;
-        di.field_n[param0] = -1;
-        di.field_n[11] = -1;
-        di.field_n[6] = -2;
-        di.field_n[4] = -1;
-        di.field_n[1] = 16;
-        di.field_n[9] = -1;
-        di.field_n[7] = -1;
+        NodeHashTable.field_n[8] = -2;
+        NodeHashTable.field_n[12] = -1;
+        NodeHashTable.field_n[13] = -1;
+        NodeHashTable.field_n[18] = 1;
+        NodeHashTable.field_n[10] = -1;
+        NodeHashTable.field_n[17] = -1;
+        NodeHashTable.field_n[3] = -1;
+        NodeHashTable.field_n[2] = -2;
+        NodeHashTable.field_n[5] = -1;
+        NodeHashTable.field_n[param0] = -1;
+        NodeHashTable.field_n[11] = -1;
+        NodeHashTable.field_n[6] = -2;
+        NodeHashTable.field_n[4] = -1;
+        NodeHashTable.field_n[1] = 16;
+        NodeHashTable.field_n[9] = -1;
+        NodeHashTable.field_n[7] = -1;
     }
 
     private final void b(boolean param0, int param1) {
@@ -461,7 +461,7 @@ abstract class ud extends GameAppletShell {
                                 hf.c(105);
                                 return;
                               }
-                              jh.a((Throwable) null, "MGS1: " + nn.g((byte) -25), (byte) 20);
+                              DelegatingCanvas.a((Throwable) null, "MGS1: " + nn.g((byte) -25), (byte) 20);
                               ka.b(false);
                               return;
                             }
@@ -485,7 +485,7 @@ abstract class ud extends GameAppletShell {
           }
           return;
         }
-        jh.a((Throwable) null, "MGS2: " + nn.g((byte) -25), (byte) 20);
+        DelegatingCanvas.a((Throwable) null, "MGS2: " + nn.g((byte) -25), (byte) 20);
         ka.b(false);
     }
 
@@ -608,7 +608,7 @@ abstract class ud extends GameAppletShell {
           if (u.field_b != -1 &&
             0 != u.field_b) {
             u.field_b = -1;
-            o.a((byte) -34);
+            MusicPatchNode.a((byte) -34);
           }
         }
         if (u.field_b == 0 &&
@@ -624,7 +624,7 @@ abstract class ud extends GameAppletShell {
         }
         if (1 == ih.field_f) {
           if (gm.field_f != 0) {
-            lh.field_g = sd.a(ce.field_n, (byte) 65);
+            lh.field_g = BufferedRandomAccessFile.a(ce.field_n, (byte) 65);
           }
           da.field_b = v.a((byte) -93, false, true, cj.field_d, 1);
           ea.field_C = v.a((byte) -93, false, true, dm.field_H, 1);
@@ -659,20 +659,20 @@ abstract class ud extends GameAppletShell {
           lh.field_n = false;
           th.a(da.field_b, ho.field_g, ea.field_C, (byte) -40, lk.field_d);
           if (af.field_Ib ||
-            null != ul.field_y) {
+            null != Bzip2State.field_y) {
             stackIn_101_0 = !(af.field_Ib);
-            stackIn_103_1 = ul.field_y;
+            stackIn_103_1 = Bzip2State.field_y;
             stackIn_104_2 = !(af.field_Ib);
             j.a(stackIn_101_0, stackIn_103_1, stackIn_104_2, false);
           }
           if (wa.field_Nb) {
             oo.g(4);
           }
-          if (null == gk.field_k) {
-            gk.field_k = ld.a(false);
+          if (null == Js5ArchiveManager.field_k) {
+            Js5ArchiveManager.field_k = ld.a(false);
             mb.field_P = sc.h((byte) -34);
           }
-          IsaacCipher.a(mb.field_P, gk.field_k, ho.field_g, 121);
+          IsaacCipher.a(mb.field_P, Js5ArchiveManager.field_k, ho.field_g, 121);
           ho.field_g = null;
           ea.field_C = null;
           da.field_b = null;
@@ -682,7 +682,7 @@ abstract class ud extends GameAppletShell {
         }
         if (ih.field_f == 10) {
           if (gm.field_f != 0) {
-            va.field_c = sd.a(sa.field_Bb, (byte) 94);
+            va.field_c = BufferedRandomAccessFile.a(sa.field_Bb, (byte) 94);
           }
           ih.field_f = 11;
         }
@@ -734,7 +734,7 @@ abstract class ud extends GameAppletShell {
           discarded$0 = this.a(false, true, false);
         }
         df.field_z.a(var5, (byte) 108, 0, var4);
-        jh.a(sc.a((byte) 113, var5), cd.e(127), var3 != 0, (byte) -116);
+        DelegatingCanvas.a(sc.a((byte) 113, var5), cd.e(127), var3 != 0, (byte) -116);
     }
 
     final void a(boolean param0, boolean param1, boolean param2, boolean param3, boolean param4, byte param5, boolean param6) {

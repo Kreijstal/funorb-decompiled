@@ -7,7 +7,7 @@ final class lh implements pf {
     private int field_m;
     private int field_l;
     private int field_b;
-    private dj field_j;
+    private BitmapFont field_j;
     static IntrusiveDeque field_c;
     private int field_i;
     static String field_h;
@@ -38,7 +38,7 @@ final class lh implements pf {
             stackIn_4_0 = (qm) (param0);
           }
           var12 = (wg) (stackIn_4_0);
-          de.d(param0.field_n + param2, param3 + param0.field_j, param0.field_v, param0.field_k, this.field_k);
+          SoftwareRasterizer.fillRectangle(param0.field_n + param2, param3 + param0.field_j, param0.field_v, param0.field_k, this.field_k);
           if (var12 == null) {
           }
           if (param1 != 5592405) {
@@ -47,14 +47,14 @@ final class lh implements pf {
           var7 = -(2 * var12.field_H) + param0.field_v;
           var8 = param0.field_n + param2 + var12.field_H;
           var9 = var12.field_L + (param0.field_j + param3);
-          de.b(var8, var9, var7 + var8, var9, this.field_b);
+          SoftwareRasterizer.drawLine(var8, var9, var7 + var8, var9, this.field_b);
           for (var10 = -1 + var12.c(false); 0 <= var10; var10--) {
-            de.i(var8 + var7 * var12.a(0, var10) / var12.g((byte) -102), var9, this.field_i, this.field_m);
+            SoftwareRasterizer.fillCircle(var8 + var7 * var12.a(0, var10) / var12.g((byte) -102), var9, this.field_i, this.field_m);
           }
           if (null == this.field_j) {
             return;
           }
-          this.field_j.b(var12.field_g, var8 + var7 / 2, var12.field_L + (this.field_j.field_H + var9), this.field_l, this.field_f);
+          this.field_j.drawCentered(var12.field_g, var8 + var7 / 2, var12.field_L + (this.field_j.field_H + var9), this.field_l, this.field_f);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -85,7 +85,7 @@ final class lh implements pf {
         field_g = null;
     }
 
-    lh(dj param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    lh(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         try {
           this.field_i = param5;
           this.field_f = param2;

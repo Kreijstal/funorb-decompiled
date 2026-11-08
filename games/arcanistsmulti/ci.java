@@ -9,7 +9,7 @@ final class ci {
     static pb field_d;
 
     final static void a(byte param0) {
-        io.field_n = oo.d(-9685);
+        MusicCrossfadeStream.field_n = oo.d(-9685);
         ClientException.field_b = new h();
         if (param0 > 49) {
           sc.a(true, false, true);

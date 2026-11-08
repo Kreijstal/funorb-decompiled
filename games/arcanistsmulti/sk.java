@@ -19,13 +19,13 @@ final class sk {
           }
           return null;
         }
-        if (oa.field_e > jh.field_f) {
+        if (oa.field_e > DelegatingCanvas.field_f) {
           if (param0 != -14150) {
             return (String) null;
           }
           return null;
         }
-        if (oa.field_e + qc.field_e > jh.field_f) {
+        if (oa.field_e + qc.field_e > DelegatingCanvas.field_f) {
           return cb.field_c;
         }
         if (param0 != -14150) {

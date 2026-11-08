@@ -191,7 +191,7 @@ final class tk extends DualLinkNode {
               !tc.field_A.field_rb.equals("")) {
               if (tc.field_A.field_rb.charAt(0) != 91) {
                 var7 = (CharSequence) ((Object) tc.field_A.field_rb);
-                var4 = gk.a(var7, param0 ^ -13);
+                var4 = Js5ArchiveManager.a(var7, param0 ^ -13);
               } else {
                 var4 = tc.field_A.field_rb;
               }

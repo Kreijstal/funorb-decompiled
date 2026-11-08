@@ -20,7 +20,7 @@ final class pn {
         if (param0 > -21) {
           field_d = -35;
         }
-        io.field_n = oo.d(-9685);
+        MusicCrossfadeStream.field_n = oo.d(-9685);
         pm.field_e = new h();
         ke.g((byte) 94);
     }

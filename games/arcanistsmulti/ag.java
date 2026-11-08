@@ -134,7 +134,7 @@ class ag extends qm {
     }
 
     ag(String param0, wc param1) {
-        this(param0, io.field_n.field_u, param1);
+        this(param0, MusicCrossfadeStream.field_n.field_u, param1);
     }
 
     ag(int param0, int param1, int param2, int param3, pf param4, wc param5) {
@@ -307,7 +307,7 @@ class ag extends qm {
         this.field_B = true;
         this.field_G = true;
         this.field_y = false;
-        this.field_r = io.field_n.field_y;
+        this.field_r = MusicCrossfadeStream.field_n.field_y;
     }
 
     static {

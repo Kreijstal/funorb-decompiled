@@ -58,10 +58,10 @@ final class dh extends kc {
           this.field_Ob.field_L = "|";
           this.field_Ib = new StringBuilder(12);
           var9_int = this.field_Cb.c(-25921);
-          this.field_Cb.a(var9_int, 5, 3, ga.field_r, (byte) -120);
-          this.field_Ob.a(var9_int, 5, 3 + ga.field_r, ga.field_r, (byte) -120);
+          this.field_Cb.a(var9_int, 5, 3, ImageProducerRasterBuffer.field_r, (byte) -120);
+          this.field_Ob.a(var9_int, 5, 3 + ImageProducerRasterBuffer.field_r, ImageProducerRasterBuffer.field_r, (byte) -120);
           var10 = 5 + (5 + var9_int);
-          var11 = 3 + (3 + 2 * ga.field_r);
+          var11 = 3 + (3 + 2 * ImageProducerRasterBuffer.field_r);
           var12 = ih.a(param0, var10, param2, 246);
           var13 = ql.a(10, param3, var11, param1);
           this.a(var10, var12, var13, var11, (byte) -120);
@@ -168,12 +168,12 @@ final class dh extends kc {
               var3_int++;
             }
           }
-          hk.field_p = new wj[9];
+          MusicPatchPcmStream.field_p = new wj[9];
           var9 = new int[9][gg.field_c];
           var8 = var9;
           var2 = var8;
           for (var3_intLifetime1 = 0; var3_intLifetime1 < 9; var3_intLifetime1++) {
-            hk.field_p[var3_intLifetime1] = new wj(go.field_j[8 * var3_intLifetime1].field_l);
+            MusicPatchPcmStream.field_p[var3_intLifetime1] = new wj(go.field_j[8 * var3_intLifetime1].field_l);
             var7 = 0;
             var4Lifetime1 = var7;
             while (var7 < go.field_j[var3_intLifetime1 * 8].field_l.length) {
@@ -188,7 +188,7 @@ final class dh extends kc {
             go.field_j[var3_intLifetime3].field_l = (int[]) (((Object[]) (var2))[var3_intLifetime3 / 8]);
           }
           kh.field_d = ti.field_I[3];
-          bg.field_e = fj.a("", -22612, param0, "slab");
+          ByteStorage.field_e = fj.a("", -22612, param0, "slab");
           uj.field_i = new Sprite[7];
           uj.field_i[0] = fj.a("", param1 - 22546, param0, "spells_universal_tower_64x32");
           if (param1 != -66) {
@@ -200,10 +200,10 @@ final class dh extends kc {
           uj.field_i[4] = fj.a("", -22612, param0, "light");
           var3 = fj.a("", param1 - 22546, param0, "nature");
           uj.field_i[5] = new Sprite(80, 95);
-          uj.field_i[5].a();
-          de.c(40, 16, 16, 1);
-          var3.c(0, 16);
-          uj.field_i[6] = fj.a("", hh.a((int) param1, 22546), param0, "clocktower");
+          uj.field_i[5].makeRasterTarget();
+          SoftwareRasterizer.drawCircleOutline(40, 16, 16, 1);
+          var3.drawTransparent(0, 16);
+          uj.field_i[6] = fj.a("", MouseWheelHandler.a((int) param1, 22546), param0, "clocktower");
           gj.field_f = pk.a("", 0, "16", param0);
           tg.field_b = pk.a("", 0, "32", param0);
           tk.field_x = qe.a(param0, "64", "", 122);
@@ -320,15 +320,15 @@ final class dh extends kc {
         var42 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           if (param3 >= 0 &&
-            id.field_b > param6) {
+            MeshRasterState.field_b > param6) {
             if (param16 < 0 &&
               param4 < 0 &&
               param10 < 0) {
               return;
             }
-            if (id.field_d <= param16 &&
-              param4 >= id.field_d &&
-              id.field_d <= param10) {
+            if (MeshRasterState.field_d <= param16 &&
+              param4 >= MeshRasterState.field_d &&
+              MeshRasterState.field_d <= param10) {
               return;
             }
             var34 = -param6 + param3;
@@ -462,22 +462,22 @@ final class dh extends kc {
                 }
               }
               if (decompiledFrameRemainder0) {
-                var36Lifetime2 = id.field_f[param6];
+                var36Lifetime2 = MeshRasterState.field_f[param6];
                 while (param6 < param8) {
                   var37 = var17_int >> 16;
-                  if (var37 < id.field_d) {
+                  if (var37 < MeshRasterState.field_d) {
                     var38 = -(var17_int >> 16) + (var18 >> 16);
                     if (var38 == 0) {
                       if (var37 >= 0 &&
-                        id.field_d > var37) {
+                        MeshRasterState.field_d > var37) {
                         gl.a(var29, var36Lifetime2 + var37, var38, 0, param7, var25, var21, 0, 0, (byte) 124);
                       }
                     } else {
                       var39 = (-var21 + var22) / var38;
                       var40 = (var26 - var25) / var38;
                       var41 = (-var29 + var30) / var38;
-                      if (var38 + var37 >= id.field_d) {
-                        var38 = id.field_d + (-var37 - 1);
+                      if (var38 + var37 >= MeshRasterState.field_d) {
+                        var38 = MeshRasterState.field_d + (-var37 - 1);
                       }
                       if (var37 < 0) {
                         gl.a(var29 - var41 * var37, var36Lifetime2, var38 + var37, var40, param7, var25 - var37 * var40, -(var39 * var37) + var21, var39, var41, (byte) 124);
@@ -487,7 +487,7 @@ final class dh extends kc {
                     }
                   }
                   param6++;
-                  if (id.field_b <= param6) {
+                  if (MeshRasterState.field_b <= param6) {
                     return;
                   }
                   var29 = var29 + var31;
@@ -496,7 +496,7 @@ final class dh extends kc {
                   var25 = var25 + var27;
                   var21 = var21 + var23;
                   var18 = var18 + var20;
-                  var36Lifetime2 = var36Lifetime2 + de.field_e;
+                  var36Lifetime2 = var36Lifetime2 + SoftwareRasterizer.field_e;
                   var26 = var26 + var28;
                   var17_int = var17_int + var19;
                 }
@@ -552,22 +552,22 @@ final class dh extends kc {
               var25 = var25 + var27 * param6;
               param6 = 0;
             }
-            var35Lifetime1 = id.field_f[param6];
+            var35Lifetime1 = MeshRasterState.field_f[param6];
             while (param3 > param6) {
               var36Lifetime1 = var17_int >> 16;
-              if (var36Lifetime1 < id.field_d) {
+              if (var36Lifetime1 < MeshRasterState.field_d) {
                 var37Lifetime1 = (var18 >> 16) - (var17_int >> 16);
                 if (var37Lifetime1 == 0) {
                   if (var36Lifetime1 >= 0 &&
-                    var36Lifetime1 < id.field_d) {
+                    var36Lifetime1 < MeshRasterState.field_d) {
                     gl.a(var29, var36Lifetime1 + var35Lifetime1, var37Lifetime1, 0, param7, var25, var21, 0, 0, (byte) 122);
                   }
                 } else {
                   var38Lifetime1 = (-var21 + var22) / var37Lifetime1;
                   var39Lifetime1 = (var26 - var25) / var37Lifetime1;
                   var40Lifetime1 = (var30 - var29) / var37Lifetime1;
-                  if (id.field_d <= var37Lifetime1 + var36Lifetime1) {
-                    var37Lifetime1 = -var36Lifetime1 + id.field_d - 1;
+                  if (MeshRasterState.field_d <= var37Lifetime1 + var36Lifetime1) {
+                    var37Lifetime1 = -var36Lifetime1 + MeshRasterState.field_d - 1;
                   }
                   if (var36Lifetime1 < 0) {
                     gl.a(-(var36Lifetime1 * var40Lifetime1) + var29, var35Lifetime1, var37Lifetime1 + var36Lifetime1, var39Lifetime1, param7, var25 - var39Lifetime1 * var36Lifetime1, -(var36Lifetime1 * var38Lifetime1) + var21, var38Lifetime1, var40Lifetime1, (byte) 123);
@@ -577,13 +577,13 @@ final class dh extends kc {
                 }
               }
               param6++;
-              if (param6 >= id.field_b) {
+              if (param6 >= MeshRasterState.field_b) {
                 return;
               }
               var26 = var26 + var28;
               var30 = var30 + var32;
               var22 = var22 + var24;
-              var35Lifetime1 = var35Lifetime1 + de.field_e;
+              var35Lifetime1 = var35Lifetime1 + SoftwareRasterizer.field_e;
               var29 = var29 + var31;
               var18 = var18 + var20;
               var17_int = var17_int + var19;

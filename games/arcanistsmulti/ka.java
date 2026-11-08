@@ -9,7 +9,7 @@ final class ka extends go {
     static String field_n;
     static String field_l;
     private java.net.ProxySelector field_o;
-    static uk field_m;
+    static FullscreenFocusCanvas field_m;
     static int field_p;
 
     final static boolean c(byte param0) {

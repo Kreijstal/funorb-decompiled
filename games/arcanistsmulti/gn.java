@@ -70,19 +70,19 @@ final class gn {
             field_j = (String) null;
           }
           var9 = param3 + param0;
-          if (var8 < de.field_i) {
-            var8 = de.field_i;
+          if (var8 < SoftwareRasterizer.field_i) {
+            var8 = SoftwareRasterizer.field_i;
           }
-          if (var7 > de.field_k) {
-            var7 = de.field_k;
+          if (var7 > SoftwareRasterizer.field_k) {
+            var7 = SoftwareRasterizer.field_k;
           }
-          if (var6 < de.field_c) {
-            var6 = de.field_c;
+          if (var6 < SoftwareRasterizer.field_c) {
+            var6 = SoftwareRasterizer.field_c;
           }
-          if (de.field_h < var9) {
-            var9 = de.field_h;
+          if (SoftwareRasterizer.field_h < var9) {
+            var9 = SoftwareRasterizer.field_h;
           }
-          var24 = de.field_l;
+          var24 = SoftwareRasterizer.field_l;
           var23 = var24;
           var10 = var23;
           for (var15 = var6; var7 > var15; var15++) {
@@ -95,7 +95,7 @@ final class gn {
                 if (var14 == 0) {
                   var14 = 1;
                 }
-                var11 = var16 + var15 * de.field_e;
+                var11 = var16 + var15 * SoftwareRasterizer.field_e;
                 if (param2 < 0) {
                   var17 = -((256 - param2) * var14 / var5_int) + (-param2 + 256);
                 } else {

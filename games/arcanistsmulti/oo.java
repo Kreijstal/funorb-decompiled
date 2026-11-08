@@ -14,7 +14,7 @@ final class oo extends DualLinkNode {
     static String[] field_v;
     static String field_q;
     static String field_E;
-    static dj field_x;
+    static BitmapFont field_x;
     static volatile long field_s;
     static String field_m;
     static String field_o;
@@ -121,8 +121,8 @@ final class oo extends DualLinkNode {
         if (var1 == null) {
           throw new IllegalStateException();
         }
-        de.a(var1.field_j, var1.field_o, var1.field_p);
-        de.h(var1.field_k, var1.field_g, var1.field_r, var1.field_h);
+        SoftwareRasterizer.setTarget(var1.field_j, var1.field_o, var1.field_p);
+        SoftwareRasterizer.setClip(var1.field_k, var1.field_g, var1.field_r, var1.field_h);
         var1.field_j = null;
         km.field_a.addLast(var1, -1);
         if (param0 != -15405) {
@@ -211,7 +211,7 @@ final class oo extends DualLinkNode {
     }
 
     final static void g(int param0) {
-        ba.c(0);
+        PatchEnvelopeSet.c(0);
         ee.a(param0, (byte) 30);
     }
 

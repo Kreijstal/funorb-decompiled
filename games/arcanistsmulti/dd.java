@@ -98,16 +98,16 @@ final class dd {
           var5_int = param2[0].field_n;
           var6 = param2[param0].field_n;
           var7 = param2[1].field_n;
-          param2[0].c(param4, param1);
-          param2[2].c(param3 + (param4 - var6), param1);
-          de.a(sl.field_H);
-          de.a(param4 + var5_int, param1, -var6 + (param4 + param3), param2[1].field_w + param1);
+          param2[0].drawTransparent(param4, param1);
+          param2[2].drawTransparent(param3 + (param4 - var6), param1);
+          SoftwareRasterizer.saveClip(sl.field_H);
+          SoftwareRasterizer.intersectClip(param4 + var5_int, param1, -var6 + (param4 + param3), param2[1].field_w + param1);
           var8 = param4 + var5_int;
           var9 = -var6 + param3 + param4;
           for (param4 = var8; var9 > param4; param4 = param4 + var7) {
-            param2[1].c(param4, param1);
+            param2[1].drawTransparent(param4, param1);
           }
-          de.b(sl.field_H);
+          SoftwareRasterizer.restoreClip(sl.field_H);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "dd.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
@@ -125,7 +125,7 @@ final class dd {
         try {
           var2_int = param0.length;
           var3 = new byte[var2_int];
-          sf.a(param0, param1, var3, 0, var2_int);
+          ArraySupport.copyBytes(param0, param1, var3, 0, var2_int);
           stackIn_1_0 = var3;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

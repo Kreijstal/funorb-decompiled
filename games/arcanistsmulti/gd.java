@@ -66,7 +66,7 @@ final class gd extends ob {
         try {
           this.field_jb = param1;
           if (null != this.field_jb) {
-            var3_int = go.field_k.a(this.field_jb, 260, go.field_k.field_C);
+            var3_int = go.field_k.paragraphHeight(this.field_jb, 260, go.field_k.field_C);
             this.a(300, 0, var3_int + 150);
           }
           this.field_ob = new om(13, 50, 274, 30, 15, 2113632, 4210752);
@@ -230,10 +230,10 @@ final class gd extends ob {
 
     final void a(int param0, byte param1, int param2) {
         super.a(param0, param1, param2);
-        go.field_k.b(this.field_lb, param0 + (this.field_v >> 1), 103 + param2, 16777215, -1);
+        go.field_k.drawCentered(this.field_lb, param0 + (this.field_v >> 1), 103 + param2, 16777215, -1);
         if (null != this.field_jb) {
-          de.f(param0 + 20, 113 + param2, 260, 8421504);
-          go.field_k.a(this.field_jb, 20 + param0, 8 + param2 + 120, 260, 100, 16777215, -1, 1, 0, go.field_k.field_C);
+          SoftwareRasterizer.drawHorizontalLine(param0 + 20, 113 + param2, 260, 8421504);
+          go.field_k.drawParagraph(this.field_jb, 20 + param0, 8 + param2 + 120, 260, 100, 16777215, -1, 1, 0, go.field_k.field_C);
         }
     }
 

@@ -187,15 +187,15 @@ final class w extends kc {
               discarded$0 = this.field_Db.append(param11);
             }
             var16Lifetime2 = 0;
-            var17 = param6.field_Z.b(ri.field_e);
+            var17 = param6.field_Z.textWidth(ri.field_e);
             if (var17 > var16Lifetime2) {
               var16Lifetime2 = var17;
             }
-            var17Lifetime2 = param6.field_Z.b(ul.field_s);
+            var17Lifetime2 = param6.field_Z.textWidth(Bzip2State.field_s);
             if (var16Lifetime2 < var17Lifetime2) {
               var16Lifetime2 = var17Lifetime2;
             }
-            var17Lifetime3 = param6.field_Z.b(ed.field_Db);
+            var17Lifetime3 = param6.field_Z.textWidth(ed.field_Db);
             if (var16Lifetime2 < var17Lifetime3) {
               var16Lifetime2 = var17Lifetime3;
             }
@@ -224,7 +224,7 @@ final class w extends kc {
               var17Lifetime5 = var18Lifetime3;
             }
             var18Lifetime4 = 0;
-            var18Lifetime4 = this.a(param6, var18Lifetime4, var28[1], ul.field_s, var16Lifetime2, (byte) 127);
+            var18Lifetime4 = this.a(param6, var18Lifetime4, var28[1], Bzip2State.field_s, var16Lifetime2, (byte) 127);
             var18Lifetime4 = this.a(var16Lifetime2, var18Lifetime4, var28[1], -104, this.field_Ob[16]);
             var18Lifetime4 = this.a(var16Lifetime2, var18Lifetime4, var28[1], -107, this.field_Ob[17]);
             var18Lifetime4 = this.a(var16Lifetime2, var18Lifetime4, var28[1], -117, this.field_Ob[18]);
@@ -255,16 +255,16 @@ final class w extends kc {
             this.field_Nb.a(var19 + 13 + 13, 0, 0, 24, (byte) -120);
             this.field_Gb.a(15, -20 + this.field_Nb.field_x, 5, 15, (byte) -120);
             var21 = 10;
-            this.field_Eb.a(var19, 13, var21, 2 * ga.field_r, (byte) -120);
-            var21 = var21 + 2 * ga.field_r;
-            this.field_Ib.a(var19, 13, var21, ga.field_r * 2, (byte) -120);
-            var21 = var21 + (ga.field_r * 2 + 10);
-            this.field_Mb.a(0, 0, var21, ga.field_r, (byte) -120);
-            var21 = var21 + (ga.field_r + 10);
+            this.field_Eb.a(var19, 13, var21, 2 * ImageProducerRasterBuffer.field_r, (byte) -120);
+            var21 = var21 + 2 * ImageProducerRasterBuffer.field_r;
+            this.field_Ib.a(var19, 13, var21, ImageProducerRasterBuffer.field_r * 2, (byte) -120);
+            var21 = var21 + (ImageProducerRasterBuffer.field_r * 2 + 10);
+            this.field_Mb.a(0, 0, var21, ImageProducerRasterBuffer.field_r, (byte) -120);
+            var21 = var21 + (ImageProducerRasterBuffer.field_r + 10);
             if (null != this.field_Kb) {
               var20Lifetime3 = this.field_Kb.a(4, (byte) -126);
-              this.field_Kb.a(13 + (-var20Lifetime3 + var19) / 2, ga.field_r, var20Lifetime3, var21, -31179, 4);
-              var21 = var21 + (ga.field_r + 10);
+              this.field_Kb.a(13 + (-var20Lifetime3 + var19) / 2, ImageProducerRasterBuffer.field_r, var20Lifetime3, var21, -31179, 4);
+              var21 = var21 + (ImageProducerRasterBuffer.field_r + 10);
             }
             var28[0].a(var16Lifetime2, 13, var21, var17Lifetime5, (byte) -120);
             var28[1].a(var16Lifetime2, 13 + var16Lifetime2 + 13, var21, var17Lifetime5, (byte) -120);
@@ -285,9 +285,9 @@ final class w extends kc {
           this.field_Pb.a(this.field_Eb, 109);
           var15_int = 226;
           var16Lifetime1 = 10;
-          var17Lifetime1 = this.field_Eb.field_Z.a(this.field_Eb.field_rb, var15_int);
-          this.field_Eb.a(var15_int, 13, var16Lifetime1, ga.field_r * var17Lifetime1, (byte) -120);
-          var16Lifetime1 = var16Lifetime1 + var17Lifetime1 * ga.field_r;
+          var17Lifetime1 = this.field_Eb.field_Z.wrappedLineCount(this.field_Eb.field_rb, var15_int);
+          this.field_Eb.a(var15_int, 13, var16Lifetime1, ImageProducerRasterBuffer.field_r * var17Lifetime1, (byte) -120);
+          var16Lifetime1 = var16Lifetime1 + var17Lifetime1 * ImageProducerRasterBuffer.field_r;
           this.field_Pb.a(13 + var15_int + 13, 0, 24, 10 + var16Lifetime1, (byte) -120);
           this.field_Pb.field_v = of.a(3, this.field_Pb.field_I, 1, 2105376, 11579568, 8421504);
           var18Lifetime1 = var15_int + 26;
@@ -476,7 +476,7 @@ final class w extends kc {
         try {
           var6_int = 2 / ((param3 + 64) / 34);
           param1 += 8;
-          var7 = param4.field_Z.a(param4.field_rb, -(param4.field_t * 2) + param0, param4.field_z);
+          var7 = param4.field_Z.paragraphHeight(param4.field_rb, -(param4.field_t * 2) + param0, param4.field_z);
           param4.a(param0, 0, param1, var7, (byte) -120);
           param1 = param1 + (var7 + 0);
           param2.a(param4, 89);
@@ -513,7 +513,7 @@ final class w extends kc {
         this.b(param0, (byte) 90);
         if (null != this.field_Mb) {
           this.field_Mb.field_rb = this.field_Db.toString();
-          this.field_Mb.field_T = (this.field_x - this.field_Mb.field_Z.b(this.field_Mb.field_rb)) / 2;
+          this.field_Mb.field_T = (this.field_x - this.field_Mb.field_Z.textWidth(this.field_Mb.field_rb)) / 2;
           if (null != this.field_Kb &&
             this.field_Kb.field_U != 0) {
             stackIn_8_0 = this.field_Kb;

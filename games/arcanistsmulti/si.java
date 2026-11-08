@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class si implements pf {
-    private dj field_h;
+    private BitmapFont field_h;
     private int field_o;
     static IndexedSprite[] field_p;
     static String field_q;
@@ -43,23 +43,23 @@ final class si implements pf {
             param4 = param4 & var11.field_B;
           }
           var7 = 5592405;
-          de.d(param0.field_n + param2, param3 + param0.field_j, param0.field_v, param0.field_k, this.field_m);
+          SoftwareRasterizer.fillRectangle(param0.field_n + param2, param3 + param0.field_j, param0.field_v, param0.field_k, this.field_m);
           if (param4) {
             var7 = 16777215;
           }
           var8 = param2 + param0.field_n + this.field_k;
           var9 = param3 + (param0.field_j + this.field_c);
-          de.g(var8, var9, this.field_f, this.field_d, param1);
-          de.d(var8, var9, this.field_f, this.field_d, var7);
+          SoftwareRasterizer.drawDropShadow(var8, var9, this.field_f, this.field_d, param1);
+          SoftwareRasterizer.fillRectangle(var8, var9, this.field_f, this.field_d, var7);
           if (var11.field_z) {
-            de.b(var8, var9, this.field_f + var8, this.field_d + var9, 1);
-            de.b(var8 + this.field_f, var9, var8, this.field_d + var9, 1);
+            SoftwareRasterizer.drawLine(var8, var9, this.field_f + var8, this.field_d + var9, 1);
+            SoftwareRasterizer.drawLine(var8 + this.field_f, var9, var8, this.field_d + var9, 1);
           }
           if (this.field_h == null) {
             return;
           }
           var10 = this.field_j + this.field_k + this.field_f;
-          this.field_h.a(param0.field_g, param0.field_n + param2 + var10, param0.field_j + (param3 + this.field_b), -this.field_j + (-var10 + param0.field_v), param0.field_k - (this.field_j << 1), this.field_e, this.field_i, this.field_a, this.field_o, 0);
+          this.field_h.drawParagraph(param0.field_g, param0.field_n + param2 + var10, param0.field_j + (param3 + this.field_b), -this.field_j + (-var10 + param0.field_v), param0.field_k - (this.field_j << 1), this.field_e, this.field_i, this.field_a, this.field_o, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -255,7 +255,7 @@ final class si implements pf {
         }
     }
 
-    si(dj param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    si(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         this.field_o = 1;
         this.field_a = 1;
         try {

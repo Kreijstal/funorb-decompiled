@@ -26,16 +26,16 @@ final class oa {
         String stackIn_29_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          ul.field_h = false;
+          Bzip2State.field_h = false;
           u.field_k = false;
           if (null != vf.field_k &&
             vf.field_k.field_G) {
             var3_int = 1;
             if (param1 == 8) {
-              if (hk.field_s) {
+              if (MusicPatchPcmStream.field_s) {
                 param2 = nj.field_f;
               } else {
-                param2 = ul.field_v;
+                param2 = Bzip2State.field_v;
               }
               param1 = 2;
               wh.field_f.a(26152, ge.field_g);
@@ -45,17 +45,17 @@ final class oa {
               ma.h(-90);
             }
             if (var3_int != 0) {
-              if (ul.field_h) {
+              if (Bzip2State.field_h) {
                 param2 = tj.a(114, new String[]{param2}, wa.field_Eb);
               }
-              if (di.field_h) {
+              if (NodeHashTable.field_h) {
                 param2 = si.field_n;
               }
               vf.field_k.a(true, param2, param1);
             }
             if (param1 != 256 &&
               param1 != 10 &&
-              !hk.field_s) {
+              !MusicPatchPcmStream.field_s) {
               wh.field_f.f(true);
             }
           }

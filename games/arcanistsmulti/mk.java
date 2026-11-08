@@ -8,7 +8,7 @@ final class mk extends ag {
     private int field_H;
     static oc field_J;
     static String field_K;
-    static gk field_O;
+    static Js5ArchiveManager field_O;
     static String field_R;
     static String field_N;
     static String[] field_P;
@@ -29,7 +29,7 @@ final class mk extends ag {
           field_P = null;
           return;
         }
-        field_O = (gk) null;
+        field_O = (Js5ArchiveManager) null;
         field_L = null;
         field_R = null;
         field_J = null;
@@ -96,29 +96,29 @@ final class mk extends ag {
             } else {
               if (var10 <= ArchiveIndex.field_o.field_y) {
                 fk.a(ArchiveIndex.field_o, -23095);
-                de.b();
+                SoftwareRasterizer.clear();
               } else {
                 ArchiveIndex.field_o = new Sprite(var9, var10);
                 fk.a(ArchiveIndex.field_o, -23095);
               }
             }
           }
-          var16.b(112, 144, var16.field_n << 4, var16.field_w << 4, -this.field_H << 10, 4096);
+          var16.drawRotatedAboutPivot(112, 144, var16.field_n << 4, var16.field_w << 4, -this.field_H << 10, 4096);
           oo.c(-15405);
-          ArchiveIndex.field_o.b(var5 - var16.field_n, var6 - var16.field_w, 256);
+          ArchiveIndex.field_o.drawAdditive(var5 - var16.field_n, var6 - var16.field_w, 256);
           return;
         }
         if (var8 != IsaacCipher.field_c) {
           if (ra.field_k == var8) {
             var14 = qk.field_lb[2];
-            var14.b(-(var14.field_q >> 1) + var5, -(var14.field_y >> 1) + var6, 256);
+            var14.drawAdditive(-(var14.field_q >> 1) + var5, -(var14.field_y >> 1) + var6, 256);
             return;
           }
           if (nn.field_s != var8) {
             return;
           }
           var13 = qk.field_lb[1];
-          var13.b(-(var13.field_q >> 1) + var5, -(var13.field_y >> 1) + var6, 256);
+          var13.drawAdditive(-(var13.field_q >> 1) + var5, -(var13.field_y >> 1) + var6, 256);
           return;
         }
         var15 = qk.field_lb[0];
@@ -134,16 +134,16 @@ final class mk extends ag {
           } else {
             if (var10Lifetime1 <= ArchiveIndex.field_o.field_y) {
               fk.a(ArchiveIndex.field_o, -23095);
-              de.b();
+              SoftwareRasterizer.clear();
             } else {
               ArchiveIndex.field_o = new Sprite(var9Lifetime1, var10Lifetime1);
               fk.a(ArchiveIndex.field_o, -23095);
             }
           }
         }
-        var15.b(112, 144, var15.field_n << 4, var15.field_w << 4, -this.field_H << 10, 4096);
+        var15.drawRotatedAboutPivot(112, 144, var15.field_n << 4, var15.field_w << 4, -this.field_H << 10, 4096);
         oo.c(-15405);
-        ArchiveIndex.field_o.b(var5 - var15.field_n, var6 - var15.field_w, 256);
+        ArchiveIndex.field_o.drawAdditive(var5 - var15.field_n, var6 - var15.field_w, 256);
     }
 
     final boolean a(int param0, qm param1) {

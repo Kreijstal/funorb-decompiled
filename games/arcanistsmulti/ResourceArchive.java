@@ -186,7 +186,7 @@ final class ResourceArchive {
                     var21 = var35[var20];
                   }
                   if (var21 == param0) {
-                    sf.a(var44, var17Lifetime4, var45, var14_intLifetime1, var19Lifetime2);
+                    ArraySupport.copyBytes(var44, var17Lifetime4, var45, var14_intLifetime1, var19Lifetime2);
                     var14_intLifetime1 = var14_intLifetime1 + var19Lifetime2;
                   }
                   var17Lifetime4 = var17Lifetime4 + var19Lifetime2;
@@ -225,7 +225,7 @@ final class ResourceArchive {
               var18Lifetime1 = 0;
               for (var19Lifetime1 = 0; var19Lifetime1 < var5_int; var19Lifetime1++) {
                 var18Lifetime1 = var18Lifetime1 + var32.readInt(-10674);
-                sf.a(var44, var16Lifetime3, var41[var19Lifetime1], var40[var19Lifetime1], var18Lifetime1);
+                ArraySupport.copyBytes(var44, var16Lifetime3, var41[var19Lifetime1], var40[var19Lifetime1], var18Lifetime1);
                 var14[var19Lifetime1] = var14[var19Lifetime1] + var18Lifetime1;
                 var16Lifetime3 = var16Lifetime3 + var18Lifetime1;
               }
@@ -372,7 +372,7 @@ final class ResourceArchive {
           param0 < this.field_i.field_i[param2]) {
           return true;
         }
-        if (ji.field_d) {
+        if (KeyboardInputHandler.field_d) {
           throw new IllegalArgumentException(param2 + " " + param0);
         }
         return false;
@@ -468,7 +468,7 @@ final class ResourceArchive {
           }
           return true;
         }
-        if (ji.field_d) {
+        if (KeyboardInputHandler.field_d) {
           throw new IllegalArgumentException(Integer.toString(param1));
         }
         return false;
@@ -879,7 +879,7 @@ final class ResourceArchive {
           if (11 == fj.field_j) {
             pe.h(7807);
           }
-          gi.a(ii.field_f, kl.field_C, af.field_Hb, (byte) -100);
+          SoundCache.a(ii.field_f, kl.field_C, af.field_Hb, (byte) -100);
           kn.a(param0, (byte) -112, 0, 0);
           if (param1 > -15) {
             var3 = (java.awt.Canvas) null;

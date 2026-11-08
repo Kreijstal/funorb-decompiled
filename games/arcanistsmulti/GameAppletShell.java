@@ -19,7 +19,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
 
     public final java.net.URL getCodeBase() {
         RuntimeException var1;
-        if (null != gk.field_c) {
+        if (null != Js5ArchiveManager.field_c) {
           return null;
         }
         if (bd.field_c != null &&
@@ -51,11 +51,11 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               boolean decompiledFrameRemainder3 = true;
               boolean decompiledFrameRemainder2 = true;
               boolean decompiledFrameCompleted0 = true;
-              if (dl.field_l != null) {
-                var1 = dl.field_l.toLowerCase();
+              if (PlatformTaskDispatcher.field_l != null) {
+                var1 = PlatformTaskDispatcher.field_l.toLowerCase();
                 if (((String) (var1)).indexOf("sun") != -1 ||
                   ((String) (var1)).indexOf("apple") != -1) {
-                  var2 = dl.field_c;
+                  var2 = PlatformTaskDispatcher.field_c;
                   if (var2.equals("1.1") ||
                     var2.startsWith("1.1.") ||
                     var2.equals("1.2") ||
@@ -97,8 +97,8 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 }
               }
               if (((decompiledFrameRemainder3) && (decompiledFrameCompleted0)) &&
-                (decompiledFrameRemainder2 = (null != dl.field_c))) {
-                stackIn_68_0 = dl.field_c.startsWith("1.");
+                (decompiledFrameRemainder2 = (null != PlatformTaskDispatcher.field_c))) {
+                stackIn_68_0 = PlatformTaskDispatcher.field_c.startsWith("1.");
               }
               if ((decompiledFrameRemainder3) &&
                 (decompiledFrameRemainder2) &&
@@ -107,8 +107,8 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 var2_int = 0;
                 while (true) {
                   boolean decompiledFrameRemainder1 = true;
-                  if (dl.field_c.length() > var1_int) {
-                    var3 = dl.field_c.charAt(var1_int);
+                  if (PlatformTaskDispatcher.field_c.length() > var1_int) {
+                    var3 = PlatformTaskDispatcher.field_c.charAt(var1_int);
                     stackIn_81_0 = ~var3;
                     stackIn_81_1 = -49;
                     decompiledFrameRemainder1 = (var5 == 0);
@@ -135,7 +135,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 if (bd.field_c != null) {
                   var1 = bd.field_c;
                 }
-                var2_ref = dl.field_f;
+                var2_ref = PlatformTaskDispatcher.field_f;
                 if (var2_ref != null) {
                   try {
                     var2_ref.invoke(var1, new Object[]{Boolean.TRUE});
@@ -146,7 +146,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 }
                 ee.b(true);
                 this.a(-11232);
-                ce.field_m = se.a(o.field_r, (java.awt.Component) ((Object) on.field_c), co.field_c, (byte) -123);
+                ce.field_m = se.a(MusicPatchNode.field_r, (java.awt.Component) ((Object) on.field_c), co.field_c, (byte) -123);
                 this.initializeClient((byte) -116);
                 tg.field_e = ki.e((byte) -126);
                 do {
@@ -178,7 +178,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             } catch (java.lang.Throwable decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var1 = decompiledCaughtException;
-              jh.a((Throwable) (var1), (String) null, (byte) 20);
+              DelegatingCanvas.a((Throwable) (var1), (String) null, (byte) 20);
               this.a("crash", (byte) -126);
             }
             this.a(true, 116);
@@ -262,7 +262,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         java.applet.AppletContext stackIn_10_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (gk.field_c != null) {
+          if (Js5ArchiveManager.field_c != null) {
             stackIn_2_0 = null;
             return (java.applet.AppletContext) (stackIn_2_0);
           }
@@ -429,8 +429,8 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           }
           boolean decompiledFrameRemainder0 = true;
           if (in.field_Eb == null) {
-            if (gk.field_c != null) {
-              var2 = gk.field_c;
+            if (Js5ArchiveManager.field_c != null) {
+              var2 = Js5ArchiveManager.field_c;
               decompiledFrameRemainder0 = (var4 != 0);
             }
             if (decompiledFrameRemainder0) {
@@ -451,12 +451,12 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             var2 = in.field_Eb;
           }
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
-          on.field_c = (java.awt.Canvas) ((Object) new jh((java.awt.Component) (this)));
+          on.field_c = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
           ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) on.field_c));
-          on.field_c.setSize(o.field_r, co.field_c);
+          on.field_c.setSize(MusicPatchNode.field_r, co.field_c);
           on.field_c.setVisible(true);
-          if (gk.field_c == var2) {
-            var3 = gk.field_c.getInsets();
+          if (Js5ArchiveManager.field_c == var2) {
+            var3 = Js5ArchiveManager.field_c.getInsets();
             on.field_c.setLocation(ta.field_e + var3.left, var3.top + ge.field_i);
             if (var4 != 0) {
               on.field_c.setLocation(ta.field_e, ge.field_i);
@@ -502,11 +502,11 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           if (fieldTemp$1 > 50) {
             hj.field_d = true;
             om.field_H = om.field_H - 50;
-            on.field_c.setSize(o.field_r, co.field_c);
+            on.field_c.setSize(MusicPatchNode.field_r, co.field_c);
             on.field_c.setVisible(true);
-            if (null != gk.field_c &&
+            if (null != Js5ArchiveManager.field_c &&
               in.field_Eb == null) {
-              var6 = gk.field_c.getInsets();
+              var6 = Js5ArchiveManager.field_c.getInsets();
               on.field_c.setLocation(var6.left + ta.field_e, var6.top + ge.field_i);
               if (ArcanistsMulti.field_G) {
                 on.field_c.setLocation(ta.field_e, ge.field_i);
@@ -585,7 +585,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         java.net.URL stackIn_12_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (gk.field_c != null) {
+          if (Js5ArchiveManager.field_c != null) {
             stackIn_2_0 = null;
             return (java.net.URL) (stackIn_2_0);
           }
@@ -648,7 +648,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             }
           }
           this.b(true);
-          if (null != gk.field_c) {
+          if (null != Js5ArchiveManager.field_c) {
             try {
               System.exit(0);
             } catch (java.lang.Throwable decompiledCaughtParameter3) {
@@ -740,12 +740,12 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
 
     final void a(int param0, int param1, String param2, int param3, int param4, int param5, int param6) {
         try {
-          dl dupTemp$0 = null;
+          PlatformTaskDispatcher dupTemp$0 = null;
           RuntimeException stackIn_24_0 = null;
           StringBuilder stackIn_24_1 = null;
           String stackIn_25_2 = null;
           Throwable decompiledCaughtException = null;
-          og var8 = null;
+          PlatformTask var8 = null;
           Throwable var8_ref = null;
           RuntimeException var8_ref2 = null;
           int var9 = 0;
@@ -765,15 +765,15 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               if (param3 != 11431) {
                 field_k = (int[]) null;
               }
-              ji.field_g = param4;
+              KeyboardInputHandler.field_g = param4;
               ta.field_e = 0;
-              o.field_r = param1;
+              MusicPatchNode.field_r = param1;
               tn.field_Eb = param1;
               co.field_c = param5;
               wh.field_c = param5;
               ge.field_i = 0;
-              hh.field_e = cd.e(104);
-              dupTemp$0 = new dl(param0, param2, param6, true);
+              MouseWheelHandler.field_e = cd.e(104);
+              dupTemp$0 = new PlatformTaskDispatcher(param0, param2, param6, true);
               fi.field_d = dupTemp$0;
               rb.field_k = dupTemp$0;
               var8 = fi.field_d.a(127, 1, (Runnable) (this));
@@ -789,7 +789,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var8_ref = decompiledCaughtException;
-              jh.a(var8_ref, (String) null, (byte) 20);
+              DelegatingCanvas.a(var8_ref, (String) null, (byte) 20);
               this.a("crash", (byte) -119);
             }
             return;
@@ -825,7 +825,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (gk.field_c != null) {
+          if (Js5ArchiveManager.field_c != null) {
             stackIn_4_0 = null;
             return (String) (stackIn_4_0);
           }

@@ -232,7 +232,7 @@ final class cj {
     final static void a(int param0) {
         if (param0 < -98) {
           if (oj.field_i) {
-            de.b(de.field_i, de.field_c, de.field_h - de.field_i, de.field_k - de.field_c);
+            SoftwareRasterizer.darkenRectangle(SoftwareRasterizer.field_i, SoftwareRasterizer.field_c, SoftwareRasterizer.field_h - SoftwareRasterizer.field_i, SoftwareRasterizer.field_k - SoftwareRasterizer.field_c);
             co.field_f.a(false, true);
           }
           return;
@@ -359,7 +359,7 @@ final class cj {
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
               ob.field_eb = ej.field_R;
-              ul.field_M = new String[-100 + var9Lifetime1];
+              Bzip2State.field_M = new String[-100 + var9Lifetime1];
             } else {
               if (var9Lifetime1 == 248) {
                 df.a(1, cd.e(param1 ^ -40));
@@ -370,7 +370,7 @@ final class cj {
                 return stackIn_36_0;
               }
               if (99 != var9Lifetime1) {
-                ob.field_eb = di.field_i;
+                ob.field_eb = NodeHashTable.field_i;
                 fj.field_h = -1;
                 on.field_g = var9Lifetime1;
               } else {
@@ -386,9 +386,9 @@ final class cj {
               var10Lifetime1 = df.field_z.readUnsignedShort(-98);
               df.field_z.position = 0;
               if (pe.a((byte) -86, var10Lifetime1)) {
-                var11 = ul.field_M.length;
+                var11 = Bzip2State.field_M.length;
                 for (var12 = 0; var11 > var12; var12++) {
-                  ul.field_M[var12] = df.field_z.e(-32461);
+                  Bzip2State.field_M[var12] = df.field_z.e(-32461);
                 }
                 ka.b(false);
                 bb.field_h = false;
@@ -397,7 +397,7 @@ final class cj {
               }
             }
           }
-          if (ob.field_eb == di.field_i &&
+          if (ob.field_eb == NodeHashTable.field_i &&
             pn.b(-12564)) {
             if (on.field_g != 255) {
               me.field_E = df.field_z.readString(param1 + 90);

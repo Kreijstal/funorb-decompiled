@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bb {
-    static sd[] field_b;
+    static BufferedRandomAccessFile[] field_b;
     static String field_e;
     static ResourceArchive field_a;
     static am field_c;
@@ -145,15 +145,15 @@ final class bb {
               0 < sn.field_K) {
               fieldTemp$24 = sn.field_K - 1;
               sn.field_K = sn.field_K - 1;
-              var2_ref_byte__ = jh.field_b[fieldTemp$24];
-              jh.field_b[sn.field_K] = null;
+              var2_ref_byte__ = DelegatingCanvas.field_b[fieldTemp$24];
+              DelegatingCanvas.field_b[sn.field_K] = null;
               return var2_ref_byte__;
             }
             if (null == vm.field_a) {
               return new byte[param0];
             }
-            for (var2 = 0; di.field_l.length > var2; var2++) {
-              if (di.field_l[var2] == param0 &&
+            for (var2 = 0; NodeHashTable.field_l.length > var2; var2++) {
+              if (NodeHashTable.field_l[var2] == param0 &&
                 DualLinkNode.field_g[var2] > 0) {
                 dupTemp$25 = DualLinkNode.field_g[var2] - 1;
                 arrayValue$26 = vm.field_a[var2];
@@ -170,15 +170,15 @@ final class bb {
               0 < sn.field_K) {
               fieldTemp$16 = sn.field_K - 1;
               sn.field_K = sn.field_K - 1;
-              var2_ref_byte__Lifetime6 = jh.field_b[fieldTemp$16];
-              jh.field_b[sn.field_K] = null;
+              var2_ref_byte__Lifetime6 = DelegatingCanvas.field_b[fieldTemp$16];
+              DelegatingCanvas.field_b[sn.field_K] = null;
               return var2_ref_byte__Lifetime6;
             }
             if (null == vm.field_a) {
               return new byte[param0];
             }
-            for (var2Lifetime4 = 0; di.field_l.length > var2Lifetime4; var2Lifetime4++) {
-              if (di.field_l[var2Lifetime4] == param0 &&
+            for (var2Lifetime4 = 0; NodeHashTable.field_l.length > var2Lifetime4; var2Lifetime4++) {
+              if (NodeHashTable.field_l[var2Lifetime4] == param0 &&
                 DualLinkNode.field_g[var2Lifetime4] > 0) {
                 dupTemp$17 = DualLinkNode.field_g[var2Lifetime4] - 1;
                 arrayValue$18 = vm.field_a[var2Lifetime4];
@@ -201,15 +201,15 @@ final class bb {
             0 < sn.field_K) {
             fieldTemp$19 = sn.field_K - 1;
             sn.field_K = sn.field_K - 1;
-            var2_ref_byte__Lifetime8 = jh.field_b[fieldTemp$19];
-            jh.field_b[sn.field_K] = null;
+            var2_ref_byte__Lifetime8 = DelegatingCanvas.field_b[fieldTemp$19];
+            DelegatingCanvas.field_b[sn.field_K] = null;
             return var2_ref_byte__Lifetime8;
           }
           if (null == vm.field_a) {
             return new byte[param0];
           }
-          for (var2Lifetime5 = 0; di.field_l.length > var2Lifetime5; var2Lifetime5++) {
-            if (di.field_l[var2Lifetime5] == param0 &&
+          for (var2Lifetime5 = 0; NodeHashTable.field_l.length > var2Lifetime5; var2Lifetime5++) {
+            if (NodeHashTable.field_l[var2Lifetime5] == param0 &&
               DualLinkNode.field_g[var2Lifetime5] > 0) {
               dupTemp$20 = DualLinkNode.field_g[var2Lifetime5] - 1;
               arrayValue$21 = vm.field_a[var2Lifetime5];
@@ -242,8 +242,8 @@ final class bb {
             if (null == vm.field_a) {
               return new byte[param0];
             }
-            for (var2Lifetime1 = 0; di.field_l.length > var2Lifetime1; var2Lifetime1++) {
-              if (di.field_l[var2Lifetime1] == param0 &&
+            for (var2Lifetime1 = 0; NodeHashTable.field_l.length > var2Lifetime1; var2Lifetime1++) {
+              if (NodeHashTable.field_l[var2Lifetime1] == param0 &&
                 DualLinkNode.field_g[var2Lifetime1] > 0) {
                 dupTemp$13 = DualLinkNode.field_g[var2Lifetime1] - 1;
                 arrayValue$14 = vm.field_a[var2Lifetime1];
@@ -258,15 +258,15 @@ final class bb {
           if (0 < sn.field_K) {
             fieldTemp$12 = sn.field_K - 1;
             sn.field_K = sn.field_K - 1;
-            var2_ref_byte__Lifetime2Lifetime1 = jh.field_b[fieldTemp$12];
-            jh.field_b[sn.field_K] = null;
+            var2_ref_byte__Lifetime2Lifetime1 = DelegatingCanvas.field_b[fieldTemp$12];
+            DelegatingCanvas.field_b[sn.field_K] = null;
             return var2_ref_byte__Lifetime2Lifetime1;
           }
           if (null == vm.field_a) {
             return new byte[param0];
           }
-          for (var2Lifetime1Lifetime1 = 0; di.field_l.length > var2Lifetime1Lifetime1; var2Lifetime1Lifetime1++) {
-            if (di.field_l[var2Lifetime1Lifetime1] == param0 &&
+          for (var2Lifetime1Lifetime1 = 0; NodeHashTable.field_l.length > var2Lifetime1Lifetime1; var2Lifetime1Lifetime1++) {
+            if (NodeHashTable.field_l[var2Lifetime1Lifetime1] == param0 &&
               DualLinkNode.field_g[var2Lifetime1Lifetime1] > 0) {
               dupTemp$10 = DualLinkNode.field_g[var2Lifetime1Lifetime1] - 1;
               arrayValue$11 = vm.field_a[var2Lifetime1Lifetime1];
@@ -283,13 +283,13 @@ final class bb {
             0 < sn.field_K) {
             fieldTemp$2 = sn.field_K - 1;
             sn.field_K = sn.field_K - 1;
-            var2_ref_byte__Lifetime3 = jh.field_b[fieldTemp$2];
-            jh.field_b[sn.field_K] = null;
+            var2_ref_byte__Lifetime3 = DelegatingCanvas.field_b[fieldTemp$2];
+            DelegatingCanvas.field_b[sn.field_K] = null;
             return var2_ref_byte__Lifetime3;
           }
           if (null != vm.field_a) {
-            for (var2Lifetime2 = 0; di.field_l.length > var2Lifetime2; var2Lifetime2++) {
-              if (di.field_l[var2Lifetime2] == param0 &&
+            for (var2Lifetime2 = 0; NodeHashTable.field_l.length > var2Lifetime2; var2Lifetime2++) {
+              if (NodeHashTable.field_l[var2Lifetime2] == param0 &&
                 DualLinkNode.field_g[var2Lifetime2] > 0) {
                 dupTemp$3 = DualLinkNode.field_g[var2Lifetime2] - 1;
                 arrayValue$4 = vm.field_a[var2Lifetime2];
@@ -313,13 +313,13 @@ final class bb {
           0 < sn.field_K) {
           fieldTemp$6 = sn.field_K - 1;
           sn.field_K = sn.field_K - 1;
-          var2_ref_byte__Lifetime5 = jh.field_b[fieldTemp$6];
-          jh.field_b[sn.field_K] = null;
+          var2_ref_byte__Lifetime5 = DelegatingCanvas.field_b[fieldTemp$6];
+          DelegatingCanvas.field_b[sn.field_K] = null;
           return var2_ref_byte__Lifetime5;
         }
         if (null != vm.field_a) {
-          for (var2Lifetime3 = 0; di.field_l.length > var2Lifetime3; var2Lifetime3++) {
-            if (di.field_l[var2Lifetime3] == param0 &&
+          for (var2Lifetime3 = 0; NodeHashTable.field_l.length > var2Lifetime3; var2Lifetime3++) {
+            if (NodeHashTable.field_l[var2Lifetime3] == param0 &&
               DualLinkNode.field_g[var2Lifetime3] > 0) {
               dupTemp$7 = DualLinkNode.field_g[var2Lifetime3] - 1;
               arrayValue$8 = vm.field_a[var2Lifetime3];
@@ -401,12 +401,12 @@ final class bb {
           return ra.field_d + " - " + ea.field_C.b("commonui", 104) + "%";
         }
         if (!ho.field_g.c(-10923)) {
-          return di.field_c;
+          return NodeHashTable.field_c;
         }
         if (!ho.field_g.a(123)) {
           return mm.field_t + " - " + ho.field_g.a((byte) 79) + "%";
         }
-        return ba.field_f;
+        return PatchEnvelopeSet.field_f;
     }
 
     final static void a(String param0, int param1, String param2) {

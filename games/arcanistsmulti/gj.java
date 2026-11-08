@@ -71,7 +71,7 @@ final class gj {
     final static boolean a(int param0) {
         if (param0 != 29372) {
           gj.a((byte) -21);
-          if (!hk.c(0)) {
+          if (!MusicPatchPcmStream.c(0)) {
             return false;
           }
           if ((SpriteState.field_v & 8) == 0) {
@@ -79,7 +79,7 @@ final class gj {
           }
           return false;
         }
-        if (!hk.c(0)) {
+        if (!MusicPatchPcmStream.c(0)) {
           return false;
         }
         if ((SpriteState.field_v & 8) == 0) {
@@ -100,7 +100,7 @@ final class gj {
           }
           var1_int = 0;
           while (true) {
-            var2 = bg.field_d.a(param0 + 16638, var1_int);
+            var2 = ByteStorage.field_d.a(param0 + 16638, var1_int);
             if (var2.field_A) {
               stackIn_6_0 = var2;
               return stackIn_6_0;

@@ -39,7 +39,7 @@ final class so {
           if (this.field_m != 0 &&
             PacketBuffer.field_m != 0) {
             if (0 >= this.field_e) {
-              this.field_e = o.field_g;
+              this.field_e = MusicPatchNode.field_g;
               this.field_e = this.field_e - 1;
               if (0 == re.field_r &&
                 PacketBuffer.field_m == 0) {
@@ -134,7 +134,7 @@ final class so {
           if (this.field_m != 0 &&
             PacketBuffer.field_m != 0) {
             if (0 >= this.field_e) {
-              this.field_e = o.field_g;
+              this.field_e = MusicPatchNode.field_g;
               this.field_e = this.field_e - 1;
               if (0 == re.field_r &&
                 PacketBuffer.field_m == 0) {
@@ -227,7 +227,7 @@ final class so {
         if (this.field_m != 0 &&
           PacketBuffer.field_m != 0) {
           if (0 >= this.field_e) {
-            this.field_e = o.field_g;
+            this.field_e = MusicPatchNode.field_g;
             this.field_e = this.field_e - 1;
             if (0 == re.field_r &&
               PacketBuffer.field_m == 0) {

@@ -8,7 +8,7 @@ final class ce extends IntrusiveNode {
     static String field_j;
     static String[] field_g;
     static fe field_i;
-    static dk field_m;
+    static CanvasRasterBuffer field_m;
     static int field_h;
     static int field_k;
 

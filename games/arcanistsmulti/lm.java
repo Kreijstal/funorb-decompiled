@@ -156,7 +156,7 @@ final class lm {
             }
             if (IndexedSpriteState.field_e[0][2].field_A) {
               if (!qk.k((byte) 111)) {
-                kh.field_c = tj.a(param3 ^ -111, new String[]{wi.field_f.field_ic}, ed.field_tb);
+                kh.field_c = tj.a(param3 ^ -111, new String[]{DirectByteStorage.field_f.field_ic}, ed.field_tb);
               } else {
                 kh.field_c = vh.field_m;
               }
@@ -174,10 +174,10 @@ final class lm {
             var6Lifetime4 = stackIn_47_0;
             if (var6Lifetime4 != 0) {
               var7 = rl.field_o;
-              for (var8_int = 0; gh.field_E.length > var8_int; var8_int++) {
-                gh.field_E[var8_int] = (byte) 0;
+              for (var8_int = 0; MidiPcmStream.field_E.length > var8_int; var8_int++) {
+                MidiPcmStream.field_E[var8_int] = (byte) 0;
               }
-              gh.field_E[var7 / 8] = (byte)fj.b((int) gh.field_E[var7 / 8], 1 << var7 % 8);
+              MidiPcmStream.field_E[var7 / 8] = (byte)fj.b((int) MidiPcmStream.field_E[var7 / 8], 1 << var7 % 8);
             }
             stackIn_55_0 = (!param0) ? 0 : -1;
             for (var7 = stackIn_55_0; var7 < ao.field_h.length; var7++) {
@@ -204,7 +204,7 @@ final class lm {
                             dupTemp$0 = IndexedSpriteState.field_e[1][var7 + 1];
                             stackIn_76_0 = dupTemp$0;
                             stackIn_76_1 = dupTemp$0.field_ab;
-                            stackIn_77_2 = ((gh.field_E[var9 / 8] & 1 << (7 & var9)) == 0);
+                            stackIn_77_2 = ((MidiPcmStream.field_E[var9 / 8] & 1 << (7 & var9)) == 0);
                             stackIn_76_0.field_ab = stackIn_76_1 & stackIn_77_2;
                           }
                           break regionExit1;
@@ -212,11 +212,11 @@ final class lm {
                       }
                       if (decompiledFrameRemainder0) {
                         if (-1 == var7) {
-                          for (var9 = 0; gh.field_E.length > var9; var9++) {
-                            gh.field_E[var9] = (byte) 0;
+                          for (var9 = 0; MidiPcmStream.field_E.length > var9; var9++) {
+                            MidiPcmStream.field_E[var9] = (byte) 0;
                           }
                         } else {
-                          gh.field_E[var7 / 8] = (byte)hh.a((int) gh.field_E[var7 / 8], 1 << dg.a(7, var7));
+                          MidiPcmStream.field_E[var7 / 8] = (byte)MouseWheelHandler.a((int) MidiPcmStream.field_E[var7 / 8], 1 << dg.a(7, var7));
                         }
                       }
                     } else {
@@ -237,7 +237,7 @@ final class lm {
                         dupTemp$1 = IndexedSpriteState.field_e[1][var7 + 1];
                         stackIn_89_0 = dupTemp$1;
                         stackIn_89_1 = dupTemp$1.field_ab;
-                        stackIn_90_2 = ((gh.field_E[var9 / 8] & 1 << (7 & var9)) == 0);
+                        stackIn_90_2 = ((MidiPcmStream.field_E[var9 / 8] & 1 << (7 & var9)) == 0);
                         stackIn_89_0.field_ab = stackIn_89_1 & stackIn_90_2;
                       }
                       break regionExit1;
@@ -245,7 +245,7 @@ final class lm {
                   }
                   stackIn_93_0 = IndexedSpriteState.field_e[1][var7 + 1];
                   stackIn_93_1 = 0;
-                  stackIn_93_2 = gh.field_E[var7 / 8];
+                  stackIn_93_2 = MidiPcmStream.field_E[var7 / 8];
                   stackIn_93_3 = 1 << (var7 & 7);
                   stackIn_96_1 = (stackIn_93_1 != (stackIn_93_2 & stackIn_93_3));
                   stackIn_93_0.field_ab = stackIn_96_1;
@@ -365,16 +365,16 @@ final class lm {
                     var10 = 1;
                   }
                 }
-                if (dk.field_a != null &&
-                  dk.field_a[var7] != null) {
-                  var16Lifetime2 = dk.field_a[var7][var9];
+                if (CanvasRasterBuffer.field_a != null &&
+                  CanvasRasterBuffer.field_a[var7] != null) {
+                  var16Lifetime2 = CanvasRasterBuffer.field_a[var7][var9];
                   if (var16Lifetime2 != 0 &&
                     !gm.field_c &&
                     0 >= ah.field_c) {
                     var10 = 1;
                   }
                   if (0 < var16Lifetime2 &&
-                    jh.field_e < var16Lifetime2) {
+                    DelegatingCanvas.field_e < var16Lifetime2) {
                     var11 = 1;
                   }
                 }
@@ -401,7 +401,7 @@ final class lm {
                 var10 = 0;
                 var12 = 0;
               }
-              bg.field_a = true;
+              ByteStorage.field_a = true;
               if (var10 == 0 &&
                 var11 == 0 &&
                 var12 == 0 &&
@@ -423,17 +423,17 @@ final class lm {
                   tk.field_q = new boolean[vf.field_l];
                   qa.field_l = new byte[vf.field_l];
                 }
-                bg.field_a = false;
-                nb.field_d = false;
+                ByteStorage.field_a = false;
+                GzipDecoder.field_d = false;
                 for (var17_int = 0; var17_int < var7; var17_int++) {
                   tk.field_q[var17_int] = false;
                 }
                 jm.a(-1, (byte) -25, param0, param2, var9, var7, -1, 0);
                 if (qf.field_d >= 2 &&
                   ri.field_b[12]) {
-                  bg.field_a = true;
+                  ByteStorage.field_a = true;
                 }
-                if (!bg.field_a) {
+                if (!ByteStorage.field_a) {
                   var16Lifetime1 = 1;
                 }
               }
@@ -452,7 +452,7 @@ final class lm {
                       ng.field_D[var18 / 8] = (byte)dg.a((int) ng.field_D[var18 / 8], ~(1 << dg.a(7, var18)));
                     }
                   } else {
-                    ng.field_D[(var9 + var6Lifetime3) / 8] = (byte)hh.a((int) ng.field_D[(var9 + var6Lifetime3) / 8], 1 << dg.a(7, var6Lifetime3 + var9));
+                    ng.field_D[(var9 + var6Lifetime3) / 8] = (byte)MouseWheelHandler.a((int) ng.field_D[(var9 + var6Lifetime3) / 8], 1 << dg.a(7, var6Lifetime3 + var9));
                   }
                 }
               }
@@ -489,7 +489,7 @@ final class lm {
                 if (var13 == 0) {
                   if (var10 == 0) {
                     if (var11 != 0) {
-                      var22_int = -jh.field_e + dk.field_a[var7][var9];
+                      var22_int = -DelegatingCanvas.field_e + CanvasRasterBuffer.field_a[var7][var9];
                       if (var22_int == 1) {
                         var21 = ta.field_a;
                       } else {
@@ -511,7 +511,7 @@ final class lm {
                       }
                     }
                     if (var14 != 0) {
-                      var22 = ji.field_a;
+                      var22 = KeyboardInputHandler.field_a;
                       if (var15 > 0 &&
                         ma.field_P != null &&
                         ma.field_P.length >= var15 &&
@@ -541,9 +541,9 @@ final class lm {
                   var21 = kl.field_D;
                 }
                 if (var4_int != 0 &&
-                  !bg.field_a) {
+                  !ByteStorage.field_a) {
                   var22 = null;
-                  if (nb.field_d) {
+                  if (GzipDecoder.field_d) {
                     var22 = "</col>" + w.field_Bb + "<col=A00000>";
                     var25Lifetime1 = var22;
                     var22 = var25Lifetime1;
@@ -608,7 +608,7 @@ final class lm {
                 }
               } else {
                 stackIn_325_0 = var17;
-                stackIn_326_1 = (bg.field_a) && ((byte)var9 == param2.field_Wb[var7]);
+                stackIn_326_1 = (ByteStorage.field_a) && ((byte)var9 == param2.field_Wb[var7]);
                 stackIn_325_0.field_ab = stackIn_326_1;
               }
               stackIn_343_0 = var17;

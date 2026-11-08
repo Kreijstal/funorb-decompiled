@@ -99,7 +99,7 @@ final class om extends qm {
             var5_ref_ko.unlink(true);
             return;
           }
-          jh.a((Throwable) null, "LR1: " + nn.g((byte) -25), (byte) 20);
+          DelegatingCanvas.a((Throwable) null, "LR1: " + nn.g((byte) -25), (byte) 20);
           ka.b(false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -134,13 +134,13 @@ final class om extends qm {
           var10 = var6 - var5;
           var11 = 128 + (int)(128.0 * (Math.sqrt((double)(var5 * var5 - var10 * var10)) / (double)var5));
           var12 = var11 >= 256 ? var8 | var9 : (-16711936 & var8 * var11 | var9 * var11 & 16711680) >>> 8;
-          de.f(var7, var6, this.field_z, var12);
-          de.f(var7 - 2 * this.field_z, var6, this.field_z, var12);
+          SoftwareRasterizer.drawHorizontalLine(var7, var6, this.field_z, var12);
+          SoftwareRasterizer.drawHorizontalLine(var7 - 2 * this.field_z, var6, this.field_z, var12);
           var8Lifetime1 = 16711935 & param0;
           var9Lifetime1 = param0 & 65280;
           var12Lifetime1 = var11 >= 256 ? var8Lifetime1 | var9Lifetime1 : (-16711936 & var11 * var8Lifetime1 | 16711680 & var11 * var9Lifetime1) >>> 8;
-          de.f(var7 + this.field_z, var6, this.field_z, var12Lifetime1);
-          de.f(-this.field_z + var7, var6, this.field_z, var12Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(var7 + this.field_z, var6, this.field_z, var12Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(-this.field_z + var7, var6, this.field_z, var12Lifetime1);
         }
         oo.c(-15405);
         return var14;
@@ -166,7 +166,7 @@ final class om extends qm {
               var6 = Math.sqrt(-var6 + 1.0);
               var8 = !(1.0 <= var6) ? (int)(255.0 * var6) : 255;
             }
-            de.a(var5, var4, var8 | var8 << 8 | var8 << 16);
+            SoftwareRasterizer.setPixel(var5, var4, var8 | var8 << 8 | var8 << 16);
           }
         }
         oo.c(-15405);
@@ -227,26 +227,26 @@ final class om extends qm {
           var5_int = param0 + this.field_v;
           da.a(-this.field_D.field_q + var5_int, this.field_k + param1, 122, this.field_D.field_q + param0, param1);
           for (var6 = param0 - this.field_G; var6 < var5_int; var6 = var6 + param2.field_q) {
-            param2.c(var6, param1);
+            param2.drawTransparent(var6, param1);
           }
           oo.c(-15405);
-          if (de.field_i <= this.field_D.field_q + param0) {
+          if (SoftwareRasterizer.field_i <= this.field_D.field_q + param0) {
             fk.a(this.field_A, -23095);
-            param2.c(-this.field_G, 0);
-            param2.c(-this.field_G + 2 * this.field_z, 0);
-            this.field_F.g(0, 0);
+            param2.drawTransparent(-this.field_G, 0);
+            param2.drawTransparent(-this.field_G + 2 * this.field_z, 0);
+            this.field_F.drawMultiply(0, 0);
             oo.c(param3 - 15405);
-            this.field_A.c(param0, param1);
+            this.field_A.drawTransparent(param0, param1);
           }
-          if (-this.field_D.field_q + var5_int <= de.field_h) {
+          if (-this.field_D.field_q + var5_int <= SoftwareRasterizer.field_h) {
             fk.a(this.field_A, -23095);
             for (var7 = this.field_G + this.field_v - this.field_D.field_q; var7 > 2 * this.field_z; var7 = var7 - 2 * this.field_z) {
             }
-            param2.c(-var7, 0);
-            param2.c(this.field_z * 2 - var7, 0);
-            this.field_D.g(0, 0);
+            param2.drawTransparent(-var7, 0);
+            param2.drawTransparent(this.field_z * 2 - var7, 0);
+            this.field_D.drawMultiply(0, 0);
             oo.c(param3 ^ -15405);
-            this.field_A.c(-this.field_D.field_q + var5_int, param1);
+            this.field_A.drawTransparent(-this.field_D.field_q + var5_int, param1);
             return;
           }
           return;
@@ -271,7 +271,7 @@ final class om extends qm {
           Sprite var3 = (Sprite) null;
           this.a(-100, -38, (Sprite) null, -12);
         }
-        this.field_F = this.field_D.b();
+        this.field_F = this.field_D.copyFlippedHorizontal();
         this.field_A = new Sprite(this.field_k >> 1, this.field_k);
     }
 

@@ -23,7 +23,7 @@ final class td extends df implements vb {
         if (param0 < -52) {
           var5 = param1 + this.field_n;
           var6 = this.field_j + param3;
-          ia.field_c.a(qe.field_j, 20 + var5, var6 + 20, this.field_v - 40, -50 + this.field_k, 16777215, -1, 1, 0, ia.field_c.field_C);
+          ia.field_c.drawParagraph(qe.field_j, 20 + var5, var6 + 20, this.field_v - 40, -50 + this.field_k, 16777215, -1, 1, 0, ia.field_c.field_C);
           super.a((byte) -60, param1, param2, param3);
           return;
         }
@@ -117,7 +117,7 @@ final class td extends df implements vb {
         int var3_int = 0;
         RuntimeException var3 = null;
         byte[] var4 = null;
-        bg var5 = null;
+        ByteStorage var5 = null;
         byte[] stackIn_7_0 = null;
         byte[] stackIn_9_0 = null;
         byte[] stackIn_12_0 = null;
@@ -131,10 +131,10 @@ final class td extends df implements vb {
           }
           var3_int = -76 / ((-73 - param1) / 52);
           if (!(param0 instanceof byte[])) {
-            if (!(param0 instanceof bg)) {
+            if (!(param0 instanceof ByteStorage)) {
               throw new IllegalArgumentException();
             }
-            var5 = (bg) (param0);
+            var5 = (ByteStorage) (param0);
             stackIn_12_0 = var5.b((byte) -43);
             return stackIn_12_0;
           }
@@ -245,35 +245,35 @@ final class td extends df implements vb {
           var7 = param3.field_j * var6_int + (param0 << 8);
           param5 = param5 + param3.field_f;
           param4 = param4 + param3.field_j;
-          var8 = param4 + param5 * de.field_e;
+          var8 = param4 + param5 * SoftwareRasterizer.field_e;
           var9 = 0;
           var10 = param3.field_c;
           var11 = param3.field_h;
-          var12 = de.field_e - var11;
+          var12 = SoftwareRasterizer.field_e - var11;
           var13 = 0;
-          if (de.field_c > param5) {
-            var14 = de.field_c - param5;
-            var8 = var8 + de.field_e * var14;
+          if (SoftwareRasterizer.field_c > param5) {
+            var14 = SoftwareRasterizer.field_c - param5;
+            var8 = var8 + SoftwareRasterizer.field_e * var14;
             var9 = var9 + var11 * var14;
-            param5 = de.field_c;
+            param5 = SoftwareRasterizer.field_c;
             var10 = var10 - var14;
           }
-          if (param4 < de.field_i) {
-            var14Lifetime1 = de.field_i - param4;
+          if (param4 < SoftwareRasterizer.field_i) {
+            var14Lifetime1 = SoftwareRasterizer.field_i - param4;
             var12 = var12 + var14Lifetime1;
             var8 = var8 + var14Lifetime1;
-            param4 = de.field_i;
+            param4 = SoftwareRasterizer.field_i;
             var13 = var13 + var14Lifetime1;
             var9 = var9 + var14Lifetime1;
             var7 = var7 + var6_int * var14Lifetime1;
             var11 = var11 - var14Lifetime1;
           }
-          if (var10 + param5 > de.field_k) {
-            var10 = var10 - (param5 + (var10 - de.field_k));
+          if (var10 + param5 > SoftwareRasterizer.field_k) {
+            var10 = var10 - (param5 + (var10 - SoftwareRasterizer.field_k));
           }
           var14Lifetime2 = 127 % ((-32 - param1) / 32);
-          if (var11 + param4 > de.field_h) {
-            var15 = param4 - (-var11 + de.field_h);
+          if (var11 + param4 > SoftwareRasterizer.field_h) {
+            var15 = param4 - (-var11 + SoftwareRasterizer.field_h);
             var13 = var13 + var15;
             var11 = var11 - var15;
             var12 = var12 + var15;
@@ -295,11 +295,11 @@ final class td extends df implements vb {
                   var18 = param3.field_l[255 & param3.field_m[incrementValue$0]];
                   if (var18 != 0) {
                     if (var16 <= 255) {
-                      var19 = de.field_l[var8];
+                      var19 = SoftwareRasterizer.field_l[var8];
                       var20 = (16711935 & var18) * var16 + var17 * (var19 & 16711935) >> 8 & 16711935;
-                      de.field_l[var8] = var20 + dg.a(65280, dg.a(65280, var18) * var16 + dg.a(var19, 65280) * var17 >> 8);
+                      SoftwareRasterizer.field_l[var8] = var20 + dg.a(65280, dg.a(65280, var18) * var16 + dg.a(var19, 65280) * var17 >> 8);
                     } else {
-                      de.field_l[var8] = var18;
+                      SoftwareRasterizer.field_l[var8] = var18;
                     }
                   }
                   var8++;

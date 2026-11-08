@@ -3,7 +3,7 @@
  */
 final class mb extends mh {
     int field_Y;
-    private dj field_M;
+    private BitmapFont field_M;
     int field_Q;
     static String field_R;
     static long[][] field_L;
@@ -167,7 +167,7 @@ final class mb extends mh {
         }
         int var5 = this.field_n + param1;
         int var6 = param3 + this.field_j;
-        de.d(var5, var6, this.field_v, this.field_k, 0);
+        SoftwareRasterizer.fillRectangle(var5, var6, this.field_v, this.field_k, 0);
         int var7 = this.field_Y;
         if (-1 != this.field_Q) {
           var7 = this.field_Q;
@@ -177,10 +177,10 @@ final class mb extends mh {
             var9 = this.field_W[var8];
             var10 = var9.toString();
             if (var8 == var7) {
-              de.e(var5 + 2, var6 + 4, this.field_v - 4, this.field_T, 2188450, 128);
+              SoftwareRasterizer.fillRectangleAlpha(var5 + 2, var6 + 4, this.field_v - 4, this.field_T, 2188450, 128);
             }
             var6 = var6 + this.field_T;
-            this.field_M.a(var10, var5 + 2, var6, 10000536, -1);
+            this.field_M.drawText(var10, var5 + 2, var6, 10000536, -1);
           }
           return;
         }
@@ -221,7 +221,7 @@ final class mb extends mh {
         }
     }
 
-    final static void a(int param0, Object param1, dl param2) {
+    final static void a(int param0, Object param1, PlatformTaskDispatcher param2) {
         int var3_int = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -232,7 +232,7 @@ final class mb extends mh {
         Exception var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
-        dl var5 = null;
+        PlatformTaskDispatcher var5 = null;
         var4 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           if (param2.field_a == null) {
@@ -247,8 +247,8 @@ final class mb extends mh {
           }
           try {
             if (param0 >= -48) {
-              var5 = (dl) null;
-              mb.a(-54, (Object) null, (dl) null);
+              var5 = (PlatformTaskDispatcher) null;
+              mb.a(-54, (Object) null, (PlatformTaskDispatcher) null);
             }
             if (param1 == null) {
               return;
@@ -280,7 +280,7 @@ final class mb extends mh {
         }
     }
 
-    mb(ti param0, dj param1, Object[] param2, int param3) {
+    mb(ti param0, BitmapFont param1, Object[] param2, int param3) {
         super(param0);
         try {
           this.field_X = param0;

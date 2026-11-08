@@ -473,7 +473,7 @@ class PacketBuffer extends IntrusiveNode {
         if (var4 == 0) {
           return "";
         }
-        return ba.a(var3, var4, (byte) -126, this.payload);
+        return PatchEnvelopeSet.a(var3, var4, (byte) -126, this.payload);
     }
 
     final String readString(int obfuscationGuard) {
@@ -489,7 +489,7 @@ class PacketBuffer extends IntrusiveNode {
         if (obfuscationGuard == ~var3) {
           return "";
         }
-        return ba.a(var2, var3, (byte) -124, this.payload);
+        return PatchEnvelopeSet.a(var2, var3, (byte) -124, this.payload);
     }
 
     final void a(byte param0, String param1) {
@@ -638,7 +638,7 @@ class PacketBuffer extends IntrusiveNode {
             throw new IllegalArgumentException("");
           }
           var5 = (CharSequence) ((Object) param0);
-          this.position = this.position + ji.a(0, this.payload, this.position, (byte) 89, var5, param0.length());
+          this.position = this.position + KeyboardInputHandler.a(0, this.payload, this.position, (byte) 89, var5, param0.length());
           fieldTemp$0 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$0] = (byte) 0;
@@ -664,7 +664,7 @@ class PacketBuffer extends IntrusiveNode {
           this.position = this.position + 1;
           this.payload[fieldTemp$0] = (byte) 0;
           var4 = (CharSequence) ((Object) param0);
-          this.position = this.position + ji.a(0, this.payload, this.position, (byte) 89, var4, param0.length());
+          this.position = this.position + KeyboardInputHandler.a(0, this.payload, this.position, (byte) 89, var4, param0.length());
           fieldTemp$1 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$1] = (byte) 0;
@@ -822,25 +822,25 @@ class PacketBuffer extends IntrusiveNode {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        co.field_e[je.field_b] = param2;
-        ki.field_r[je.field_b] = je.field_b;
-        nf.field_z[je.field_b] = param4;
+        co.field_e[MouseInputHandler.field_b] = param2;
+        ki.field_r[MouseInputHandler.field_b] = MouseInputHandler.field_b;
+        nf.field_z[MouseInputHandler.field_b] = param4;
         if (!(ao.field_g <= param4)) {
           ld.field_m = param4;
         }
         if (param4 > tm.field_g) {
           qa.field_m = param4;
         }
-        hc.field_e[je.field_b] = param1;
-        tj.field_u[je.field_b] = param5;
-        ba.field_o[je.field_b] = param3;
+        hc.field_e[MouseInputHandler.field_b] = param1;
+        tj.field_u[MouseInputHandler.field_b] = param5;
+        PatchEnvelopeSet.field_o[MouseInputHandler.field_b] = param3;
         int var6 = param3 + param5 + param1;
         int var7 = ~var6 != param0 ? param1 * 1000 / var6 : 0;
-        lm.field_i[je.field_b] = var7;
+        lm.field_i[MouseInputHandler.field_b] = var7;
         if (ld.field_m > var7) {
           ld.field_m = var7;
         }
-        je.field_b = je.field_b + 1;
+        MouseInputHandler.field_b = MouseInputHandler.field_b + 1;
         if (!(var7 <= qa.field_m)) {
           qa.field_m = var7;
         }

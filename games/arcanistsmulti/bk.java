@@ -61,9 +61,9 @@ final class bk extends ag {
     }
 
     private bk(String param0, wc param1) {
-        this(param0, io.field_n.field_u, param1);
+        this(param0, MusicCrossfadeStream.field_n.field_u, param1);
         try {
-          this.field_r = io.field_n.field_b;
+          this.field_r = MusicCrossfadeStream.field_n.field_b;
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "bk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -94,7 +94,7 @@ final class bk extends ag {
     private bk(String param0, pf param1, wc param2) {
         super(param0, param1, param2);
         try {
-          this.field_r = io.field_n.field_b;
+          this.field_r = MusicCrossfadeStream.field_n.field_b;
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "bk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

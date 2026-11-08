@@ -13,16 +13,16 @@ final class c {
         if (param3 >= param0) {
           if (param3 >= param5) {
             if (param5 <= param0) {
-              wg.a(param6, 2973, param7, param0, de.field_l, param3, param2, param5, param4);
+              wg.a(param6, 2973, param7, param0, SoftwareRasterizer.field_l, param3, param2, param5, param4);
               decompiledFrameRemainder0 = (var9 != 0);
             }
             if (decompiledFrameRemainder0) {
-              wg.a(param7, 2973, param6, param5, de.field_l, param3, param2, param0, param4);
+              wg.a(param7, 2973, param6, param5, SoftwareRasterizer.field_l, param3, param2, param0, param4);
               decompiledFrameRemainder0 = (var9 != 0);
             }
           }
           if (decompiledFrameRemainder0) {
-            wg.a(param4, 2973, param6, param3, de.field_l, param5, param2, param0, param7);
+            wg.a(param4, 2973, param6, param3, SoftwareRasterizer.field_l, param5, param2, param0, param7);
           }
         }
         if ((decompiledFrameRemainder0) &&
@@ -30,19 +30,19 @@ final class c {
           var9 != 0)) {
           if (param5 <= param0) {
             if (param5 > param3) {
-              wg.a(param7, 2973, param4, param5, de.field_l, param0, param2, param3, param6);
+              wg.a(param7, 2973, param4, param5, SoftwareRasterizer.field_l, param0, param2, param3, param6);
               if (var9 != 0) {
-                wg.a(param4, 2973, param7, param3, de.field_l, param0, param2, param5, param6);
-                wg.a(param6, 2973, param4, param0, de.field_l, param5, param2, param3, param7);
+                wg.a(param4, 2973, param7, param3, SoftwareRasterizer.field_l, param0, param2, param5, param6);
+                wg.a(param6, 2973, param4, param0, SoftwareRasterizer.field_l, param5, param2, param3, param7);
               }
             } else {
-              wg.a(param4, 2973, param7, param3, de.field_l, param0, param2, param5, param6);
+              wg.a(param4, 2973, param7, param3, SoftwareRasterizer.field_l, param0, param2, param5, param6);
               if (var9 != 0) {
-                wg.a(param6, 2973, param4, param0, de.field_l, param5, param2, param3, param7);
+                wg.a(param6, 2973, param4, param0, SoftwareRasterizer.field_l, param5, param2, param3, param7);
               }
             }
           } else {
-            wg.a(param6, 2973, param4, param0, de.field_l, param5, param2, param3, param7);
+            wg.a(param6, 2973, param4, param0, SoftwareRasterizer.field_l, param5, param2, param3, param7);
           }
         }
         if (param1 <= 60) {
@@ -125,14 +125,14 @@ final class c {
         var19 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           ej.a(16, oo.field_y);
-          if (wi.field_f != null) {
+          if (DirectByteStorage.field_f != null) {
             IntrusiveNodeHashTable.field_o.field_ub = true;
             var22 = go.field_d;
             var27 = var22;
             go.field_d.field_I = 0;
             var27.field_x = 0;
-            dk.field_k.field_I = 0;
-            var6 = dk.field_k;
+            CanvasRasterBuffer.field_k.field_I = 0;
+            var6 = CanvasRasterBuffer.field_k;
             var6.field_x = 0;
             var7 = jf.field_d;
             jf.field_d.field_I = 0;
@@ -141,7 +141,7 @@ final class c {
               nl.field_Db.field_rb = fb.field_c.toUpperCase();
               var9 = (2 + oh.field_h.field_x) / 2;
               go.field_d.a(-2 + var9, 0, -40 + oh.field_h.field_I, 40, (byte) -120);
-              if (wi.field_f.field_Rb < wi.field_f.field_dc) {
+              if (DirectByteStorage.field_f.field_Rb < DirectByteStorage.field_f.field_dc) {
                 go.field_d.field_rb = mb.field_O.toUpperCase();
                 go.field_d.field_ub = true;
                 if (var19 != 0) {
@@ -168,12 +168,12 @@ final class c {
                 }
                 go.field_d.field_rb = go.field_d.field_rb + "<br>" + var10_ref_String;
               }
-              dk.field_k.a(oh.field_h.field_x - var9, var9, -40 + oh.field_h.field_I, 40, (byte) -120);
-              dk.field_k.field_rb = nn.field_m.toUpperCase();
-              stackIn_19_0 = dk.field_k;
-              stackIn_20_1 = (param2) && (ba.field_a == 0L);
+              CanvasRasterBuffer.field_k.a(oh.field_h.field_x - var9, var9, -40 + oh.field_h.field_I, 40, (byte) -120);
+              CanvasRasterBuffer.field_k.field_rb = nn.field_m.toUpperCase();
+              stackIn_19_0 = CanvasRasterBuffer.field_k;
+              stackIn_20_1 = (param2) && (PatchEnvelopeSet.field_a == 0L);
               stackIn_19_0.field_ub = stackIn_20_1;
-              var8 = dk.field_k;
+              var8 = CanvasRasterBuffer.field_k;
               var10 = 2;
               if (null != um.field_a) {
                 if (qa.field_l == null) {
@@ -215,16 +215,16 @@ final class c {
                             stackIn_52_1 = ~var15;
                             if (stackIn_52_0 == stackIn_52_1) {
                               if (0 == var10) {
-                                stackIn_43_0 = wi.field_f.field_dc;
+                                stackIn_43_0 = DirectByteStorage.field_f.field_dc;
                               } else {
-                                stackIn_43_0 = wi.field_f.field_Rb;
+                                stackIn_43_0 = DirectByteStorage.field_f.field_Rb;
                               }
                               var17_int = stackIn_43_0;
                               if (~var17_int != ~var16) {
                                 break scanLoop2;
                               }
                             } else {
-                              if (~(wi.field_f.field_Wb[var15] & 255) != ~var16) {
+                              if (~(DirectByteStorage.field_f.field_Wb[var15] & 255) != ~var16) {
                                 break scanLoop2;
                               }
                             }
@@ -277,7 +277,7 @@ final class c {
               if ((var10 >= 2) &&
                 (decompiledFrameRemainder0 = (null != dh.field_Hb ||
                 null != pe.field_Fb ||
-                null != dk.field_a ||
+                null != CanvasRasterBuffer.field_a ||
                 ue.field_b != null))) {
                 var11_int = 0;
                 var12 = 0;
@@ -287,7 +287,7 @@ final class c {
                 var16 = 0;
                 boolean decompiledNaturalLoopExit0 = false;
                 while (!(decompiledNaturalLoopExit0 = (!(vf.field_l > var16)))) {
-                  var17_int = wi.field_f.field_Wb[var16] & 255;
+                  var17_int = DirectByteStorage.field_f.field_Wb[var16] & 255;
                   if (var19 == 0) {
                     if (dh.field_Hb != null &&
                       null != dh.field_Hb[var16] &&
@@ -309,9 +309,9 @@ final class c {
                       null != ue.field_b[var16]) {
                       var15 = var15 | ue.field_b[var16][var17_int];
                     }
-                    if (null != dk.field_a &&
-                      dk.field_a[var16] != null) {
-                      var18_intLifetime1 = dk.field_a[var16][var17_int];
+                    if (null != CanvasRasterBuffer.field_a &&
+                      CanvasRasterBuffer.field_a[var16] != null) {
+                      var18_intLifetime1 = CanvasRasterBuffer.field_a[var16][var17_int];
                       if (var18_intLifetime1 != 0 &&
                         !gm.field_c) {
                         var11_int = 1;
@@ -385,8 +385,8 @@ final class c {
                 }
                 if ((var16 == 0) &&
                   (decompiledFrameRemainder0 = (var19 != 0))) {
-                  dk.field_k.field_ub = false;
-                  decompiledFrameRemainder0 = !(!dk.field_k.field_A);
+                  CanvasRasterBuffer.field_k.field_ub = false;
+                  decompiledFrameRemainder0 = !(!CanvasRasterBuffer.field_k.field_A);
                   if (decompiledFrameRemainder0) {
                     var11 = null;
                     var12 = 0;
@@ -403,8 +403,8 @@ final class c {
                 if ((decompiledFrameRemainder3) &&
                   (decompiledFrameRemainder2) &&
                   (decompiledFrameRemainder0)) {
-                  dk.field_k.field_ub = false;
-                  if (dk.field_k.field_A) {
+                  CanvasRasterBuffer.field_k.field_ub = false;
+                  if (CanvasRasterBuffer.field_k.field_A) {
                     if (tn.field_Ob.field_c.field_Mb != 0) {
                       kh.field_c = tj.a(param3 ^ 119, new String[]{ec.field_b}, q.field_O);
                       if (var19 != 0) {
@@ -420,8 +420,8 @@ final class c {
               if ((decompiledFrameRemainder3) &&
                 (decompiledFrameRemainder2) &&
                 (decompiledFrameRemainder0)) {
-                dk.field_k.field_ub = false;
-                decompiledFrameRemainder0 = !(!dk.field_k.field_A);
+                CanvasRasterBuffer.field_k.field_ub = false;
+                decompiledFrameRemainder0 = !(!CanvasRasterBuffer.field_k.field_A);
                 if (decompiledFrameRemainder0) {
                   var11 = null;
                   var12 = 0;
@@ -477,28 +477,28 @@ final class c {
                 kh.field_c = "<col=A00000>" + var13_ref + "<br>" + var14;
               }
               if (var19 != 0) {
-                var9_ref_String = wi.field_f.field_ic;
-                nl.field_Db.field_rb = tj.a(param3 ^ 118, new String[]{var9_ref_String}, ul.field_j).toUpperCase();
+                var9_ref_String = DirectByteStorage.field_f.field_ic;
+                nl.field_Db.field_rb = tj.a(param3 ^ 118, new String[]{var9_ref_String}, Bzip2State.field_j).toUpperCase();
                 jf.field_d.a(oh.field_h.field_x, 0, oh.field_h.field_I - 40, 40, (byte) -120);
                 jf.field_d.field_rb = tj.a(param3 + 112, new String[]{var9_ref_String}, uf.field_b);
                 var8 = jf.field_d;
               }
             } else {
-              var9_ref_String = wi.field_f.field_ic;
-              nl.field_Db.field_rb = tj.a(param3 ^ 118, new String[]{var9_ref_String}, ul.field_j).toUpperCase();
+              var9_ref_String = DirectByteStorage.field_f.field_ic;
+              nl.field_Db.field_rb = tj.a(param3 ^ 118, new String[]{var9_ref_String}, Bzip2State.field_j).toUpperCase();
               jf.field_d.a(oh.field_h.field_x, 0, oh.field_h.field_I - 40, 40, (byte) -120);
               jf.field_d.field_rb = tj.a(param3 + 112, new String[]{var9_ref_String}, uf.field_b);
               var8 = jf.field_d;
             }
-            if (ba.field_a != 0L) {
-              var9 = (int)(ba.field_a - qj.b(param3 ^ -26570));
+            if (PatchEnvelopeSet.field_a != 0L) {
+              var9 = (int)(PatchEnvelopeSet.field_a - qj.b(param3 ^ -26570));
               var9 = (var9 + 999) / 1000;
               if (var9 < 1) {
                 var9 = 1;
               }
               var8.field_rb = tj.a(113, new String[]{Integer.toString(var9)}, ef.field_v);
             }
-            aj.field_d.field_rb = tj.a(116, new String[]{Integer.toString(wi.field_f.field_Rb), Integer.toString(wi.field_f.field_dc)}, IsaacCipher.field_h);
+            aj.field_d.field_rb = tj.a(116, new String[]{Integer.toString(DirectByteStorage.field_f.field_Rb), Integer.toString(DirectByteStorage.field_f.field_dc)}, IsaacCipher.field_h);
           }
           stackIn_182_0 = hl.field_m;
           stackIn_183_1 = (param4) && (!param1) && (!so.field_j);
@@ -513,20 +513,20 @@ final class c {
           if (param3 != 2) {
             return;
           }
-          if (wi.field_f != null) {
+          if (DirectByteStorage.field_f != null) {
             if (IntrusiveNodeHashTable.field_o.field_U != 0) {
-              qc.a(false, wi.field_f.h((byte) 94), param0);
+              qc.a(false, DirectByteStorage.field_f.h((byte) 94), param0);
             }
             if (0 != go.field_d.field_U) {
               so.field_j = true;
             }
-            if (dk.field_k.field_U != 0) {
+            if (CanvasRasterBuffer.field_k.field_U != 0) {
               bj.field_ub = true;
             }
             if (0 != gj.field_d.field_U) {
               so.field_j = false;
             }
-            lm.a(false, param0, wi.field_f, 0);
+            lm.a(false, param0, DirectByteStorage.field_f, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

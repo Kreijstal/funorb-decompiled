@@ -17,7 +17,7 @@ final class qc {
         dh.a(rl.field_h, 9, 6);
         dh.a(me.field_H, 9, 8);
         if (!ArcanistsMulti.i((byte) -77)) {
-          dh.a(gh.field_l, 9, 1);
+          dh.a(MidiPcmStream.field_l, 9, 1);
           dh.a(ql.field_b, 9, 2);
           dh.a(ResourceArchive.field_g, 9, 4);
         }
@@ -65,7 +65,7 @@ final class qc {
           if (param0 != 640) {
             field_c = (am) null;
           }
-          var4 = gk.a(param2, param0 - 653);
+          var4 = Js5ArchiveManager.a(param2, param0 - 653);
           if (var4 != null &&
             var4.length() >= 1) {
             if (!rk.a((byte) 127, var4.charAt(0)) &&

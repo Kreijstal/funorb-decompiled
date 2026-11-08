@@ -27,7 +27,7 @@ final class va implements pf {
           for (var6_int = 0; var6_int <= param0.field_k; var6_int++) {
             var7 = 48 * var6_int / param0.field_k + 152;
             var8 = var7 | (var7 << 8 | var7 << 16);
-            de.f(param0.field_n + param2, param3 - (-param0.field_j - var6_int), param0.field_v, var8);
+            SoftwareRasterizer.drawHorizontalLine(param0.field_n + param2, param3 - (-param0.field_j - var6_int), param0.field_v, var8);
           }
           if (param1 != 5592405) {
             return;
@@ -36,16 +36,16 @@ final class va implements pf {
             var7Lifetime1 = var6_intLifetime1 + (-5 - (param0.field_v >> 1) + (param0.field_n + param2) + param0.field_v);
             var8Lifetime1 = (param0.field_v >> 1) - var6_intLifetime1 * 2;
             var9 = var6_intLifetime1 + (param3 + param0.field_j + (-4 + param0.field_k >> 1));
-            if (var9 >= de.field_c &&
-              var9 < de.field_k) {
-              if (var7Lifetime1 > de.field_i) {
-                de.field_l[-1 + (de.field_e * var9 + var7Lifetime1)] = dg.a(16711422, de.field_l[de.field_e * var9 + var7Lifetime1 - 1]) >> 1;
+            if (var9 >= SoftwareRasterizer.field_c &&
+              var9 < SoftwareRasterizer.field_k) {
+              if (var7Lifetime1 > SoftwareRasterizer.field_i) {
+                SoftwareRasterizer.field_l[-1 + (SoftwareRasterizer.field_e * var9 + var7Lifetime1)] = dg.a(16711422, SoftwareRasterizer.field_l[SoftwareRasterizer.field_e * var9 + var7Lifetime1 - 1]) >> 1;
               }
-              if (de.field_h > var8Lifetime1 + var7Lifetime1) {
-                de.field_l[var9 * de.field_e + var7Lifetime1 + var8Lifetime1] = dg.a(16711422, de.field_l[de.field_e * var9 + var7Lifetime1 + var8Lifetime1]) >> 1;
+              if (SoftwareRasterizer.field_h > var8Lifetime1 + var7Lifetime1) {
+                SoftwareRasterizer.field_l[var9 * SoftwareRasterizer.field_e + var7Lifetime1 + var8Lifetime1] = dg.a(16711422, SoftwareRasterizer.field_l[SoftwareRasterizer.field_e * var9 + var7Lifetime1 + var8Lifetime1]) >> 1;
               }
             }
-            de.f(var7Lifetime1, var9, var8Lifetime1, 0);
+            SoftwareRasterizer.drawHorizontalLine(var7Lifetime1, var9, var8Lifetime1, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -82,7 +82,7 @@ final class va implements pf {
           nj.field_c = param4;
           so.field_p = param3;
           var7 = (CharSequence) ((Object) param3);
-          ua.field_S = gk.a(var7, param1 ^ -14);
+          ua.field_S = Js5ArchiveManager.a(var7, param1 ^ -14);
           gg.field_e = param0;
           var6 = ff.a(param2, 49, gl.field_c, mj.field_z, CipherPacketBuffer.field_p);
           ag.a(var6, (byte) -104);

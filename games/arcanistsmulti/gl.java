@@ -152,73 +152,73 @@ final class gl {
             }
             var18 = var14;
             var19 = var15;
-            de.a(ee.field_d);
+            SoftwareRasterizer.saveClip(ee.field_d);
             if (var19 < var18) {
               var19 = param5 + var8 * param0 / (var9 + var8);
               var18 = param5 + var8 * param0 / (var9 + var8);
             }
             if (null != param4[0]) {
-              de.a(param1, param5, var16, var18);
-              param4[0].c(param1, param5);
-              de.b(ee.field_d);
+              SoftwareRasterizer.intersectClip(param1, param5, var16, var18);
+              param4[0].drawTransparent(param1, param5);
+              SoftwareRasterizer.restoreClip(ee.field_d);
             }
             if (null != param4[2]) {
-              de.a(var17, param5, var10, var18);
-              param4[2].c(var13, param5);
-              de.b(ee.field_d);
+              SoftwareRasterizer.intersectClip(var17, param5, var10, var18);
+              param4[2].drawTransparent(var13, param5);
+              SoftwareRasterizer.restoreClip(ee.field_d);
             }
             if (null != param4[6]) {
-              de.a(param1, var19, var16, var11);
-              param4[6].c(param1, var15);
-              de.b(ee.field_d);
+              SoftwareRasterizer.intersectClip(param1, var19, var16, var11);
+              param4[6].drawTransparent(param1, var15);
+              SoftwareRasterizer.restoreClip(ee.field_d);
             }
             if (param4[8] != null) {
-              de.a(var17, var19, var10, var11);
-              param4[8].c(var13, var15);
-              de.b(ee.field_d);
+              SoftwareRasterizer.intersectClip(var17, var19, var10, var11);
+              param4[8].drawTransparent(var13, var15);
+              SoftwareRasterizer.restoreClip(ee.field_d);
             }
             if (param4[1] != null &&
               param4[1].field_n != 0) {
-              de.a(var16, param5, var17, var18);
+              SoftwareRasterizer.intersectClip(var16, param5, var17, var18);
               for (var20 = var12; var20 < var13; var20 = var20 + param4[1].field_n) {
-                param4[1].c(var20, param5);
+                param4[1].drawTransparent(var20, param5);
               }
-              de.b(ee.field_d);
+              SoftwareRasterizer.restoreClip(ee.field_d);
             }
             if (null != param4[7] &&
               param4[7].field_n != 0) {
-              de.a(var16, var19, var17, var11);
+              SoftwareRasterizer.intersectClip(var16, var19, var17, var11);
               for (var20Lifetime1 = var12; var13 > var20Lifetime1; var20Lifetime1 = var20Lifetime1 + param4[7].field_n) {
-                param4[7].c(var20Lifetime1, var15);
+                param4[7].drawTransparent(var20Lifetime1, var15);
               }
-              de.b(ee.field_d);
+              SoftwareRasterizer.restoreClip(ee.field_d);
             }
             if (null != param4[3] &&
               param4[3].field_w != 0) {
-              de.a(param1, var18, var16, var19);
+              SoftwareRasterizer.intersectClip(param1, var18, var16, var19);
               for (var20Lifetime2 = var14; var20Lifetime2 < var15; var20Lifetime2 = var20Lifetime2 + param4[3].field_w) {
-                param4[3].c(param1, var20Lifetime2);
+                param4[3].drawTransparent(param1, var20Lifetime2);
               }
-              de.b(ee.field_d);
+              SoftwareRasterizer.restoreClip(ee.field_d);
             }
             if (param4[5] != null &&
               param4[5].field_w != 0) {
-              de.a(var17, var18, var10, var19);
+              SoftwareRasterizer.intersectClip(var17, var18, var10, var19);
               for (var20Lifetime3 = var14; var20Lifetime3 < var15; var20Lifetime3 = var20Lifetime3 + param4[5].field_w) {
-                param4[5].c(var13, var20Lifetime3);
+                param4[5].drawTransparent(var13, var20Lifetime3);
               }
-              de.b(ee.field_d);
+              SoftwareRasterizer.restoreClip(ee.field_d);
             }
             if (null != param4[4] &&
               0 != param4[4].field_n &&
               param4[4].field_w != 0) {
-              de.a(var16, var18, var17, var19);
+              SoftwareRasterizer.intersectClip(var16, var18, var17, var19);
               for (var20Lifetime4 = var14; var15 > var20Lifetime4; var20Lifetime4 = var20Lifetime4 + param4[4].field_w) {
                 for (var21 = var12; var13 > var21; var21 = var21 + param4[4].field_n) {
-                  param4[4].c(var21, var20Lifetime4);
+                  param4[4].drawTransparent(var21, var20Lifetime4);
                 }
               }
-              de.b(ee.field_d);
+              SoftwareRasterizer.restoreClip(ee.field_d);
               return;
             }
             return;
@@ -243,7 +243,7 @@ final class gl {
         Sprite[] var4;
         var3 = ArcanistsMulti.field_G ? 1 : 0;
         if (param0 ||
-          wi.field_f == null) {
+          DirectByteStorage.field_f == null) {
           so.field_j = false;
         }
         if (param0) {
@@ -259,7 +259,7 @@ final class gl {
             ce.field_h = ce.field_h - 1;
           }
         } else {
-          if (wi.field_f == null) {
+          if (DirectByteStorage.field_f == null) {
             if (om.field_x == null) {
               so.field_j = false;
               if (sm.field_a > 0) {

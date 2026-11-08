@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class rb extends IntrusiveNode {
-    static dl field_k;
+    static PlatformTaskDispatcher field_k;
     String field_j;
     static Sprite[] field_o;
     static String field_l;
@@ -49,65 +49,65 @@ final class rb extends IntrusiveNode {
         Sprite var18 = null;
         Object var10 = null;
         Object var11 = null;
-        int[] var16 = de.field_l;
+        int[] var16 = SoftwareRasterizer.field_l;
         int[] var15 = var16;
         int[] var12 = var15;
         int[] var6 = var12;
-        int var7 = de.field_e;
-        int var8 = de.field_j;
+        int var7 = SoftwareRasterizer.field_e;
+        int var8 = SoftwareRasterizer.field_j;
         Sprite var9 = new Sprite(16, param5);
-        var9.a();
-        de.c(0, 0, 16, param5, param4, param3);
+        var9.makeRasterTarget();
+        SoftwareRasterizer.fillVerticalGradient(0, 0, 16, param5, param4, param3);
         if (param2 == 652) {
           var10 = null;
           var11 = null;
           if (param0) {
-            var19 = var9.g();
+            var19 = var9.copy();
             var10 = var19;
-            var19.a();
-            de.f(0, 0, 5, 0);
-            de.f(0, 1, 3, 0);
-            de.f(0, 2, 2, 0);
-            de.f(0, 3, 1, 0);
-            de.f(0, 4, 1, 0);
+            var19.makeRasterTarget();
+            SoftwareRasterizer.drawHorizontalLine(0, 0, 5, 0);
+            SoftwareRasterizer.drawHorizontalLine(0, 1, 3, 0);
+            SoftwareRasterizer.drawHorizontalLine(0, 2, 2, 0);
+            SoftwareRasterizer.drawHorizontalLine(0, 3, 1, 0);
+            SoftwareRasterizer.drawHorizontalLine(0, 4, 1, 0);
           }
           if (param1) {
-            var20 = var9.g();
+            var20 = var9.copy();
             var11 = var20;
-            var20.a();
-            de.f(11, 0, 5, 0);
-            de.f(13, 1, 3, 0);
-            de.f(14, 2, 2, 0);
-            de.f(15, 3, 1, 0);
-            de.f(15, 4, 1, 0);
+            var20.makeRasterTarget();
+            SoftwareRasterizer.drawHorizontalLine(11, 0, 5, 0);
+            SoftwareRasterizer.drawHorizontalLine(13, 1, 3, 0);
+            SoftwareRasterizer.drawHorizontalLine(14, 2, 2, 0);
+            SoftwareRasterizer.drawHorizontalLine(15, 3, 1, 0);
+            SoftwareRasterizer.drawHorizontalLine(15, 4, 1, 0);
           }
-          de.a(var16, var7, var8);
+          SoftwareRasterizer.setTarget(var16, var7, var8);
           return new Sprite[]{null, null, null, (Sprite) (var10), var9, (Sprite) (var11), null, null, null};
         }
         field_n = (String[]) null;
         var10 = null;
         var11 = null;
         if (param0) {
-          var17 = var9.g();
+          var17 = var9.copy();
           var10 = var17;
-          var17.a();
-          de.f(0, 0, 5, 0);
-          de.f(0, 1, 3, 0);
-          de.f(0, 2, 2, 0);
-          de.f(0, 3, 1, 0);
-          de.f(0, 4, 1, 0);
+          var17.makeRasterTarget();
+          SoftwareRasterizer.drawHorizontalLine(0, 0, 5, 0);
+          SoftwareRasterizer.drawHorizontalLine(0, 1, 3, 0);
+          SoftwareRasterizer.drawHorizontalLine(0, 2, 2, 0);
+          SoftwareRasterizer.drawHorizontalLine(0, 3, 1, 0);
+          SoftwareRasterizer.drawHorizontalLine(0, 4, 1, 0);
         }
         if (param1) {
-          var18 = var9.g();
+          var18 = var9.copy();
           var11 = var18;
-          var18.a();
-          de.f(11, 0, 5, 0);
-          de.f(13, 1, 3, 0);
-          de.f(14, 2, 2, 0);
-          de.f(15, 3, 1, 0);
-          de.f(15, 4, 1, 0);
+          var18.makeRasterTarget();
+          SoftwareRasterizer.drawHorizontalLine(11, 0, 5, 0);
+          SoftwareRasterizer.drawHorizontalLine(13, 1, 3, 0);
+          SoftwareRasterizer.drawHorizontalLine(14, 2, 2, 0);
+          SoftwareRasterizer.drawHorizontalLine(15, 3, 1, 0);
+          SoftwareRasterizer.drawHorizontalLine(15, 4, 1, 0);
         }
-        de.a(var16, var7, var8);
+        SoftwareRasterizer.setTarget(var16, var7, var8);
         return new Sprite[]{null, null, null, (Sprite) (var10), var9, (Sprite) (var11), null, null, null};
     }
 
@@ -259,7 +259,7 @@ final class rb extends IntrusiveNode {
           }
           if (var2 != 0) {
             if (var2 != 1) {
-              jh.a((Throwable) null, "A1: " + nn.g((byte) -25), (byte) 20);
+              DelegatingCanvas.a((Throwable) null, "A1: " + nn.g((byte) -25), (byte) 20);
               ka.b(false);
               return;
             }

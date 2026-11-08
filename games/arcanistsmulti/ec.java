@@ -41,7 +41,7 @@ final class ec {
         if (param0 != 65280) {
           return;
         }
-        var1.a(de.field_c, de.field_l, (byte) 27, de.field_k, de.field_h, de.field_j, de.field_e, de.field_i);
+        var1.a(SoftwareRasterizer.field_c, SoftwareRasterizer.field_l, (byte) 27, SoftwareRasterizer.field_k, SoftwareRasterizer.field_h, SoftwareRasterizer.field_j, SoftwareRasterizer.field_e, SoftwareRasterizer.field_i);
         lk.field_j.addLast(var1, -1);
     }
 

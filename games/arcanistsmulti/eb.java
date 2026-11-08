@@ -63,7 +63,7 @@ final class eb implements pf {
     }
 
     final static void a(int param0, boolean param1) {
-        ul.field_A = param0;
+        Bzip2State.field_A = param0;
         if (null != jl.field_h) {
           jl.field_h.a(param0, (byte) -66);
         }
@@ -119,7 +119,7 @@ final class eb implements pf {
           ArcanistsMulti.a(stackIn_2_0, (int[]) (stackIn_2_1), (dn) (stackIn_2_2), stackIn_2_3, stackIn_2_4, stackIn_2_5, stackIn_3_6, param1.field_g, param1.field_a);
           if (param1.field_m == param0 &&
             !lk.f(-1) &&
-            wi.field_f == null &&
+            DirectByteStorage.field_f == null &&
             null == om.field_x) {
             if (!ld.field_p) {
               var5 = eo.field_c;
@@ -132,8 +132,8 @@ final class eb implements pf {
           }
           if (param1.field_m == 1 &&
             !lk.f(-1) &&
-            null != wi.field_f &&
-            param1.field_q == wi.field_f.h((byte) 78)) {
+            null != DirectByteStorage.field_f &&
+            param1.field_q == DirectByteStorage.field_f.h((byte) 78)) {
             if (!ld.field_p) {
               var9 = eo.field_c;
               var10 = vk.field_v;

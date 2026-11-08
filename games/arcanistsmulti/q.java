@@ -64,13 +64,13 @@ final class q extends wn {
         Sprite[] var2Lifetime1;
         if (param1 == 0) {
           var2 = new Sprite[9];
-          var2[4] = ce.b(64, param0, hh.a(param1, 21385));
+          var2[4] = ce.b(64, param0, MouseWheelHandler.a(param1, 21385));
           return var2;
         }
         kc var3 = (kc) null;
         q.a((kc) null, false, (kc) null, (kc) null, (kc) null);
         var2Lifetime1 = new Sprite[9];
-        var2Lifetime1[4] = ce.b(64, param0, hh.a(param1, 21385));
+        var2Lifetime1[4] = ce.b(64, param0, MouseWheelHandler.a(param1, 21385));
         return var2Lifetime1;
     }
 

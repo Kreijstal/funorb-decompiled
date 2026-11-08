@@ -66,7 +66,7 @@ final class qe extends IntrusiveNode {
         }
     }
 
-    final static void a(dl param0, int param1, PacketBuffer param2, int param3) {
+    final static void a(PlatformTaskDispatcher param0, int param1, PacketBuffer param2, int param3) {
         try {
           int var5 = 0;
           int var11_int = 0;
@@ -109,8 +109,8 @@ final class qe extends IntrusiveNode {
             var18.field_p = new int[var18.field_s];
             var18.field_o = new int[var18.field_s];
             var18.field_l = new byte[var18.field_s][][];
-            var18.field_n = new og[var18.field_s];
-            var18.field_g = new og[var18.field_s];
+            var18.field_n = new PlatformTask[var18.field_s];
+            var18.field_g = new PlatformTask[var18.field_s];
             var18.field_j = new int[var18.field_s];
             for (var5 = param3; var5 < var18.field_s; var5++) {
               try {
@@ -125,7 +125,7 @@ final class qe extends IntrusiveNode {
                     var9 = param2.readUnsignedByte((byte) 53);
                     var10 = new String[var9];
                     for (var11_int = 0; var9 > var11_int; var11_int++) {
-                      var10[var11_int] = param2.readString(hh.a(param3, -1));
+                      var10[var11_int] = param2.readString(MouseWheelHandler.a(param3, -1));
                     }
                     var21 = new byte[var9][];
                     var19 = var21;
@@ -270,8 +270,8 @@ final class qe extends IntrusiveNode {
     }
 
     final static java.awt.Container a(int param0) {
-        if (gk.field_c != null) {
-          return (java.awt.Container) ((Object) gk.field_c);
+        if (Js5ArchiveManager.field_c != null) {
+          return (java.awt.Container) ((Object) Js5ArchiveManager.field_c);
         }
         if (param0 != -4) {
           field_o = 94;

@@ -39,19 +39,19 @@ final class sb {
           if (!(125 >= var4.field_h)) {
             var3 = var3 + (-125 + var4.field_h) * (12 + tj.field_t.field_C) / 25;
           }
-          tj.field_t.b(var4.field_j, var2, var3 - 2, 1052688, 1052688);
-          tj.field_t.b(var4.field_j, var2 - 2, var3, 1052688, 1052688);
-          tj.field_t.b(var4.field_j, -1 + var2, -1 + var3, 1052688, -1);
-          tj.field_t.b(var4.field_j, 1 + var2, 1 + var3, 1052688, -1);
-          tj.field_t.b(var4.field_j, var2, var3 + 2, 1052688, -1);
-          tj.field_t.b(var4.field_j, var2 + 2, var3, 1052688, -1);
-          tj.field_t.b(var4.field_j, var2, var3 - 1, 16777215, 12303291);
-          tj.field_t.b(var4.field_j, -1 + var2, var3, 14540253, 10066329);
-          tj.field_t.b(var4.field_j, var2, var3, var4.field_g, -1);
+          tj.field_t.drawCentered(var4.field_j, var2, var3 - 2, 1052688, 1052688);
+          tj.field_t.drawCentered(var4.field_j, var2 - 2, var3, 1052688, 1052688);
+          tj.field_t.drawCentered(var4.field_j, -1 + var2, -1 + var3, 1052688, -1);
+          tj.field_t.drawCentered(var4.field_j, 1 + var2, 1 + var3, 1052688, -1);
+          tj.field_t.drawCentered(var4.field_j, var2, var3 + 2, 1052688, -1);
+          tj.field_t.drawCentered(var4.field_j, var2 + 2, var3, 1052688, -1);
+          tj.field_t.drawCentered(var4.field_j, var2, var3 - 1, 16777215, 12303291);
+          tj.field_t.drawCentered(var4.field_j, -1 + var2, var3, 14540253, 10066329);
+          tj.field_t.drawCentered(var4.field_j, var2, var3, var4.field_g, -1);
         }
     }
 
-    final static void a(boolean param0, byte param1, ha param2, int param3) {
+    final static void a(boolean param0, byte param1, MusicTrack param2, int param3) {
         Object var4 = null;
         int var4_int = 0;
         RuntimeException stackIn_18_0 = null;
@@ -72,7 +72,7 @@ final class sb {
                 return;
               }
               jl.field_h.a((byte) -128);
-              oh.field_k.f();
+              oh.field_k.flushDeviceSafely();
               f.field_g = param2;
               if (f.field_g != null) {
                 jl.field_h.a((byte) -96, param0, f.field_g);
@@ -120,7 +120,7 @@ final class sb {
         try {
           var2_int = n.field_g.field_nb;
           if (bk.field_J.a(-31497) == 8) {
-            de.h(0, 0, 391, 480);
+            SoftwareRasterizer.setClip(0, 0, 391, 480);
           }
           stackIn_5_0 = fe.field_g;
           stackIn_5_1 = 0;
@@ -131,13 +131,13 @@ final class sb {
           } else {
             stackIn_6_4 = bm.field_g.field_I;
           }
-          ((Sprite) (Object) stackIn_5_0).d(stackIn_5_1, stackIn_5_2, stackIn_5_3[stackIn_6_4]);
-          pm.field_a.c(0, -pm.field_a.field_w + (lo.field_q + var2_int), 128);
+          ((Sprite) (Object) stackIn_5_0).drawTintedGrayscale(stackIn_5_1, stackIn_5_2, stackIn_5_3[stackIn_6_4]);
+          pm.field_a.drawAlpha(0, -pm.field_a.field_w + (lo.field_q + var2_int), 128);
           if (param1 >= -38) {
             return;
           }
-          uj.field_f.c(0, lo.field_q + (var2_int - uj.field_f.field_w));
-          de.a();
+          uj.field_f.drawTransparent(0, lo.field_q + (var2_int - uj.field_f.field_w));
+          SoftwareRasterizer.resetClip();
           if (mf.field_g != -4) {
             mf.field_g = -1;
           }
@@ -246,20 +246,20 @@ final class sb {
             }
             var4 = 0;
             var5Lifetime1 = 0;
-            var6 = mi.field_B.c(IntrusiveNodeHashTable.field_f, kl.field_A - 32);
-            var7 = 32 + mi.field_B.field_C * mi.field_B.a(IntrusiveNodeHashTable.field_f, -32 + var6);
+            var6 = mi.field_B.getWrappedWidth(IntrusiveNodeHashTable.field_f, kl.field_A - 32);
+            var7 = 32 + mi.field_B.field_C * mi.field_B.wrappedLineCount(IntrusiveNodeHashTable.field_f, -32 + var6);
             var6 += 32;
             var8 = Math.min(-var6 + an.field_f, an.field_f / 2 + 54);
-            de.e(-var4 + var8, var5Lifetime1 - var4, var6 + 2 * var4, var4 * 2 + var7, 16777215, 192);
+            SoftwareRasterizer.fillRectangleAlpha(-var4 + var8, var5Lifetime1 - var4, var6 + 2 * var4, var4 * 2 + var7, 16777215, 192);
             var4++;
-            de.a(-var4 + var8, var5Lifetime1 - var4, 2 * var4 + var6, 2 * var4 + var7, 4799269);
+            SoftwareRasterizer.drawRectangle(-var4 + var8, var5Lifetime1 - var4, 2 * var4 + var6, 2 * var4 + var7, 4799269);
             var4++;
-            de.a(var8 - var4, var5Lifetime1 - var4, var6 + var4 * 2, var4 * 2 + var7, 8547138);
+            SoftwareRasterizer.drawRectangle(var8 - var4, var5Lifetime1 - var4, var6 + var4 * 2, var4 * 2 + var7, 8547138);
             var4++;
-            de.a(var8 - var4, var5Lifetime1 - var4, var6 + 2 * var4, var4 * 2 + var7, 11768360);
+            SoftwareRasterizer.drawRectangle(var8 - var4, var5Lifetime1 - var4, var6 + 2 * var4, var4 * 2 + var7, 11768360);
             var4++;
-            de.a(var8 - var4, -var4 + var5Lifetime1, var6 + 2 * var4, 2 * var4 + var7, 0);
-            mi.field_B.a(IntrusiveNodeHashTable.field_f, 16 + var8, var5Lifetime1, -32 + var6, var7, 0, -1, 1, 1, mi.field_B.field_C);
+            SoftwareRasterizer.drawRectangle(var8 - var4, -var4 + var5Lifetime1, var6 + 2 * var4, 2 * var4 + var7, 0);
+            mi.field_B.drawParagraph(IntrusiveNodeHashTable.field_f, 16 + var8, var5Lifetime1, -32 + var6, var7, 0, -1, 1, 1, mi.field_B.field_C);
             var4++;
           }
           return;
@@ -272,10 +272,10 @@ final class sb {
 
     final static void a(int param0) {
         if (null != oh.field_k) {
-          oh.field_k.e();
+          oh.field_k.shutdown();
         }
         if (null != lf.field_a) {
-          lf.field_a.e();
+          lf.field_a.shutdown();
         }
         if (param0 != 8000) {
           field_b = (String) null;

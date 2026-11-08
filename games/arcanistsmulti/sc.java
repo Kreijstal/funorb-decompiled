@@ -65,12 +65,12 @@ final class sc extends ej {
             IsaacCipher.field_c != var6) {
             if (var6 == ra.field_k) {
               var19 = qk.field_lb[2];
-              var19.b(var9, var10 - (var19.field_y >> 1), 256);
+              var19.drawAdditive(var9, var10 - (var19.field_y >> 1), 256);
               return;
             }
             if (nn.field_s == var6) {
               var20 = qk.field_lb[1];
-              var20.b(var9, var10 - (var20.field_y >> 1), 256);
+              var20.drawAdditive(var9, var10 - (var20.field_y >> 1), 256);
               return;
             }
             return;
@@ -81,32 +81,32 @@ final class sc extends ej {
           if (null == this.field_Y) {
             this.field_Y = new Sprite(var11, var12);
             fk.a(this.field_Y, -23095);
-            var21.b(112, 144, var21.field_n << 4, var21.field_w << 4, -this.field_X << 10, 4096);
+            var21.drawRotatedAboutPivot(112, 144, var21.field_n << 4, var21.field_w << 4, -this.field_X << 10, 4096);
             oo.c(-15405);
-            this.field_Y.b(-(var21.field_n >> 1) + var9, var10 - var21.field_w, 256);
+            this.field_Y.drawAdditive(-(var21.field_n >> 1) + var9, var10 - var21.field_w, 256);
             return;
           }
           if (var11 > this.field_Y.field_q) {
             this.field_Y = new Sprite(var11, var12);
             fk.a(this.field_Y, -23095);
-            var21.b(112, 144, var21.field_n << 4, var21.field_w << 4, -this.field_X << 10, 4096);
+            var21.drawRotatedAboutPivot(112, 144, var21.field_n << 4, var21.field_w << 4, -this.field_X << 10, 4096);
             oo.c(-15405);
-            this.field_Y.b(-(var21.field_n >> 1) + var9, var10 - var21.field_w, 256);
+            this.field_Y.drawAdditive(-(var21.field_n >> 1) + var9, var10 - var21.field_w, 256);
             return;
           }
           if (this.field_Y.field_y >= var12) {
             fk.a(this.field_Y, -23095);
-            de.b();
-            var21.b(112, 144, var21.field_n << 4, var21.field_w << 4, -this.field_X << 10, 4096);
+            SoftwareRasterizer.clear();
+            var21.drawRotatedAboutPivot(112, 144, var21.field_n << 4, var21.field_w << 4, -this.field_X << 10, 4096);
             oo.c(-15405);
-            this.field_Y.b(-(var21.field_n >> 1) + var9, var10 - var21.field_w, 256);
+            this.field_Y.drawAdditive(-(var21.field_n >> 1) + var9, var10 - var21.field_w, 256);
             return;
           }
           this.field_Y = new Sprite(var11, var12);
           fk.a(this.field_Y, -23095);
-          var21.b(112, 144, var21.field_n << 4, var21.field_w << 4, -this.field_X << 10, 4096);
+          var21.drawRotatedAboutPivot(112, 144, var21.field_n << 4, var21.field_w << 4, -this.field_X << 10, 4096);
           oo.c(-15405);
-          this.field_Y.b(-(var21.field_n >> 1) + var9, var10 - var21.field_w, 256);
+          this.field_Y.drawAdditive(-(var21.field_n >> 1) + var9, var10 - var21.field_w, 256);
           return;
         }
         if (IsaacCipher.field_c == var6) {
@@ -134,32 +134,32 @@ final class sc extends ej {
             if (null == this.field_Y) {
               this.field_Y = new Sprite(var11Lifetime1, var12Lifetime1);
               fk.a(this.field_Y, -23095);
-              var23.b(112, 144, var23.field_n << 4, var23.field_w << 4, -this.field_X << 10, 4096);
+              var23.drawRotatedAboutPivot(112, 144, var23.field_n << 4, var23.field_w << 4, -this.field_X << 10, 4096);
               oo.c(-15405);
-              this.field_Y.b(-(var23.field_n >> 1) + var9Lifetime1, var10Lifetime1 - var23.field_w, 256);
+              this.field_Y.drawAdditive(-(var23.field_n >> 1) + var9Lifetime1, var10Lifetime1 - var23.field_w, 256);
               return;
             }
             if (var11Lifetime1 > this.field_Y.field_q) {
               this.field_Y = new Sprite(var11Lifetime1, var12Lifetime1);
               fk.a(this.field_Y, -23095);
-              var23.b(112, 144, var23.field_n << 4, var23.field_w << 4, -this.field_X << 10, 4096);
+              var23.drawRotatedAboutPivot(112, 144, var23.field_n << 4, var23.field_w << 4, -this.field_X << 10, 4096);
               oo.c(-15405);
-              this.field_Y.b(-(var23.field_n >> 1) + var9Lifetime1, var10Lifetime1 - var23.field_w, 256);
+              this.field_Y.drawAdditive(-(var23.field_n >> 1) + var9Lifetime1, var10Lifetime1 - var23.field_w, 256);
               return;
             }
             if (this.field_Y.field_y >= var12Lifetime1) {
               fk.a(this.field_Y, -23095);
-              de.b();
-              var23.b(112, 144, var23.field_n << 4, var23.field_w << 4, -this.field_X << 10, 4096);
+              SoftwareRasterizer.clear();
+              var23.drawRotatedAboutPivot(112, 144, var23.field_n << 4, var23.field_w << 4, -this.field_X << 10, 4096);
               oo.c(-15405);
-              this.field_Y.b(-(var23.field_n >> 1) + var9Lifetime1, var10Lifetime1 - var23.field_w, 256);
+              this.field_Y.drawAdditive(-(var23.field_n >> 1) + var9Lifetime1, var10Lifetime1 - var23.field_w, 256);
               return;
             }
             this.field_Y = new Sprite(var11Lifetime1, var12Lifetime1);
             fk.a(this.field_Y, -23095);
-            var23.b(112, 144, var23.field_n << 4, var23.field_w << 4, -this.field_X << 10, 4096);
+            var23.drawRotatedAboutPivot(112, 144, var23.field_n << 4, var23.field_w << 4, -this.field_X << 10, 4096);
             oo.c(-15405);
-            this.field_Y.b(-(var23.field_n >> 1) + var9Lifetime1, var10Lifetime1 - var23.field_w, 256);
+            this.field_Y.drawAdditive(-(var23.field_n >> 1) + var9Lifetime1, var10Lifetime1 - var23.field_w, 256);
             return;
           }
           if (IsaacCipher.field_c == var6) {
@@ -170,44 +170,44 @@ final class sc extends ej {
             if (null == this.field_Y) {
               this.field_Y = new Sprite(var11Lifetime1Lifetime1, var12Lifetime1Lifetime1);
               fk.a(this.field_Y, -23095);
-              var24.b(112, 144, var24.field_n << 4, var24.field_w << 4, -this.field_X << 10, 4096);
+              var24.drawRotatedAboutPivot(112, 144, var24.field_n << 4, var24.field_w << 4, -this.field_X << 10, 4096);
               oo.c(-15405);
-              this.field_Y.b(-(var24.field_n >> 1) + var9Lifetime1, var10Lifetime1 - var24.field_w, 256);
+              this.field_Y.drawAdditive(-(var24.field_n >> 1) + var9Lifetime1, var10Lifetime1 - var24.field_w, 256);
               return;
             }
             if (var11Lifetime1Lifetime1 > this.field_Y.field_q) {
               this.field_Y = new Sprite(var11Lifetime1Lifetime1, var12Lifetime1Lifetime1);
               fk.a(this.field_Y, -23095);
-              var24.b(112, 144, var24.field_n << 4, var24.field_w << 4, -this.field_X << 10, 4096);
+              var24.drawRotatedAboutPivot(112, 144, var24.field_n << 4, var24.field_w << 4, -this.field_X << 10, 4096);
               oo.c(-15405);
-              this.field_Y.b(-(var24.field_n >> 1) + var9Lifetime1, var10Lifetime1 - var24.field_w, 256);
+              this.field_Y.drawAdditive(-(var24.field_n >> 1) + var9Lifetime1, var10Lifetime1 - var24.field_w, 256);
               return;
             }
             if (this.field_Y.field_y < var12Lifetime1Lifetime1) {
               this.field_Y = new Sprite(var11Lifetime1Lifetime1, var12Lifetime1Lifetime1);
               fk.a(this.field_Y, -23095);
-              var24.b(112, 144, var24.field_n << 4, var24.field_w << 4, -this.field_X << 10, 4096);
+              var24.drawRotatedAboutPivot(112, 144, var24.field_n << 4, var24.field_w << 4, -this.field_X << 10, 4096);
               oo.c(-15405);
-              this.field_Y.b(-(var24.field_n >> 1) + var9Lifetime1, var10Lifetime1 - var24.field_w, 256);
+              this.field_Y.drawAdditive(-(var24.field_n >> 1) + var9Lifetime1, var10Lifetime1 - var24.field_w, 256);
               return;
             }
             fk.a(this.field_Y, -23095);
-            de.b();
-            var24.b(112, 144, var24.field_n << 4, var24.field_w << 4, -this.field_X << 10, 4096);
+            SoftwareRasterizer.clear();
+            var24.drawRotatedAboutPivot(112, 144, var24.field_n << 4, var24.field_w << 4, -this.field_X << 10, 4096);
             oo.c(-15405);
-            this.field_Y.b(-(var24.field_n >> 1) + var9Lifetime1, var10Lifetime1 - var24.field_w, 256);
+            this.field_Y.drawAdditive(-(var24.field_n >> 1) + var9Lifetime1, var10Lifetime1 - var24.field_w, 256);
             return;
           }
           if (var6 == ra.field_k) {
             var29 = qk.field_lb[2];
-            var29.b(var9Lifetime1, var10Lifetime1 - (var29.field_y >> 1), 256);
+            var29.drawAdditive(var9Lifetime1, var10Lifetime1 - (var29.field_y >> 1), 256);
             return;
           }
           if (nn.field_s != var6) {
             return;
           }
           var30 = qk.field_lb[1];
-          var30.b(var9Lifetime1, var10Lifetime1 - (var30.field_y >> 1), 256);
+          var30.drawAdditive(var9Lifetime1, var10Lifetime1 - (var30.field_y >> 1), 256);
           return;
         }
         this.field_Y = (Sprite) null;
@@ -219,14 +219,14 @@ final class sc extends ej {
           IsaacCipher.field_c != var6) {
           if (var6 == ra.field_k) {
             var32 = qk.field_lb[2];
-            var32.b(var9Lifetime2, var10Lifetime2 - (var32.field_y >> 1), 256);
+            var32.drawAdditive(var9Lifetime2, var10Lifetime2 - (var32.field_y >> 1), 256);
             return;
           }
           if (nn.field_s != var6) {
             return;
           }
           var33 = qk.field_lb[1];
-          var33.b(var9Lifetime2, var10Lifetime2 - (var33.field_y >> 1), 256);
+          var33.drawAdditive(var9Lifetime2, var10Lifetime2 - (var33.field_y >> 1), 256);
           return;
         }
         Sprite var34 = qk.field_lb[0];
@@ -235,32 +235,32 @@ final class sc extends ej {
         if (null == this.field_Y) {
           this.field_Y = new Sprite(var11Lifetime2, var12Lifetime2);
           fk.a(this.field_Y, -23095);
-          var34.b(112, 144, var34.field_n << 4, var34.field_w << 4, -this.field_X << 10, 4096);
+          var34.drawRotatedAboutPivot(112, 144, var34.field_n << 4, var34.field_w << 4, -this.field_X << 10, 4096);
           oo.c(-15405);
-          this.field_Y.b(-(var34.field_n >> 1) + var9Lifetime2, var10Lifetime2 - var34.field_w, 256);
+          this.field_Y.drawAdditive(-(var34.field_n >> 1) + var9Lifetime2, var10Lifetime2 - var34.field_w, 256);
           return;
         }
         if (var11Lifetime2 > this.field_Y.field_q) {
           this.field_Y = new Sprite(var11Lifetime2, var12Lifetime2);
           fk.a(this.field_Y, -23095);
-          var34.b(112, 144, var34.field_n << 4, var34.field_w << 4, -this.field_X << 10, 4096);
+          var34.drawRotatedAboutPivot(112, 144, var34.field_n << 4, var34.field_w << 4, -this.field_X << 10, 4096);
           oo.c(-15405);
-          this.field_Y.b(-(var34.field_n >> 1) + var9Lifetime2, var10Lifetime2 - var34.field_w, 256);
+          this.field_Y.drawAdditive(-(var34.field_n >> 1) + var9Lifetime2, var10Lifetime2 - var34.field_w, 256);
           return;
         }
         if (this.field_Y.field_y >= var12Lifetime2) {
           fk.a(this.field_Y, -23095);
-          de.b();
-          var34.b(112, 144, var34.field_n << 4, var34.field_w << 4, -this.field_X << 10, 4096);
+          SoftwareRasterizer.clear();
+          var34.drawRotatedAboutPivot(112, 144, var34.field_n << 4, var34.field_w << 4, -this.field_X << 10, 4096);
           oo.c(-15405);
-          this.field_Y.b(-(var34.field_n >> 1) + var9Lifetime2, var10Lifetime2 - var34.field_w, 256);
+          this.field_Y.drawAdditive(-(var34.field_n >> 1) + var9Lifetime2, var10Lifetime2 - var34.field_w, 256);
           return;
         }
         this.field_Y = new Sprite(var11Lifetime2, var12Lifetime2);
         fk.a(this.field_Y, -23095);
-        var34.b(112, 144, var34.field_n << 4, var34.field_w << 4, -this.field_X << 10, 4096);
+        var34.drawRotatedAboutPivot(112, 144, var34.field_n << 4, var34.field_w << 4, -this.field_X << 10, 4096);
         oo.c(-15405);
-        this.field_Y.b(-(var34.field_n >> 1) + var9Lifetime2, var10Lifetime2 - var34.field_w, 256);
+        this.field_Y.drawAdditive(-(var34.field_n >> 1) + var9Lifetime2, var10Lifetime2 - var34.field_w, 256);
     }
 
     private final static void c(boolean param0) {
@@ -285,7 +285,7 @@ final class sc extends ej {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 >= 85) {
-            stackIn_4_0 = ba.a(0, param1.length, (byte) -127, param1);
+            stackIn_4_0 = PatchEnvelopeSet.a(0, param1.length, (byte) -127, param1);
             return stackIn_4_0;
           }
           stackIn_2_0 = (String) null;
@@ -322,7 +322,7 @@ final class sc extends ej {
           return;
         }
         var2 = 0;
-        var3 = gi.field_a;
+        var3 = SoundCache.field_a;
         if (var3 < 5) {
           var2 = 8192 * (var3 * var3) / 1100;
           var4 = 1;
@@ -581,7 +581,7 @@ final class sc extends ej {
             return;
           }
           pn.field_c = new Sprite(param2 / 2, param1 / 2);
-          pn.field_c.a();
+          pn.field_c.makeRasterTarget();
           ql.a(param2, param1, 0);
           ce.field_m.a(true);
           uh.a(pn.field_c, param0 + 0);
@@ -594,7 +594,7 @@ final class sc extends ej {
               return;
             }
             pn.field_c = new Sprite(param2 / 2, param1 / 2);
-            pn.field_c.a();
+            pn.field_c.makeRasterTarget();
             ql.a(param2, param1, 0);
             ce.field_m.a(true);
             uh.a(pn.field_c, param0 + 0);
@@ -609,7 +609,7 @@ final class sc extends ej {
             return;
           }
           pn.field_c = new Sprite(param2 / 2, param1 / 2);
-          pn.field_c.a();
+          pn.field_c.makeRasterTarget();
           ql.a(param2, param1, 0);
           ce.field_m.a(true);
           uh.a(pn.field_c, param0 + 0);
@@ -621,7 +621,7 @@ final class sc extends ej {
             return;
           }
           pn.field_c = new Sprite(param2 / 2, param1 / 2);
-          pn.field_c.a();
+          pn.field_c.makeRasterTarget();
           ql.a(param2, param1, 0);
           ce.field_m.a(true);
           uh.a(pn.field_c, param0 + 0);
@@ -634,7 +634,7 @@ final class sc extends ej {
           return;
         }
         pn.field_c = new Sprite(param2 / 2, param1 / 2);
-        pn.field_c.a();
+        pn.field_c.makeRasterTarget();
         ql.a(param2, param1, 0);
         ce.field_m.a(true);
         uh.a(pn.field_c, param0 + 0);
@@ -651,7 +651,7 @@ final class sc extends ej {
         }
     }
 
-    final static fk a(kd param0, byte param1) {
+    final static fk a(PcmSampleStream param0, byte param1) {
         fk var2 = null;
         RuntimeException var2_ref = null;
         fk stackIn_2_0 = null;
@@ -663,7 +663,7 @@ final class sc extends ej {
         try {
           var2 = new fk(param0, param0);
           qn.field_mb.addLast(var2, -1);
-          pc.field_e.b(param0);
+          pc.field_e.addSubStream(param0);
           if (param1 == 68) {
             stackIn_4_0 = var2;
             return stackIn_4_0;

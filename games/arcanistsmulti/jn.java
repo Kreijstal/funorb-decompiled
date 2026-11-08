@@ -37,8 +37,8 @@ final class jn {
 
     final static void a(String param0, boolean param1, int param2) {
         u.field_k = true;
-        di.field_h = param1 ? true : false;
-        vf.field_k = new ed(ClientException.field_b, go.field_k, param0, hk.field_s, di.field_h);
+        NodeHashTable.field_h = param1 ? true : false;
+        vf.field_k = new ed(ClientException.field_b, go.field_k, param0, MusicPatchPcmStream.field_s, NodeHashTable.field_h);
         if (param2 != -1) {
           return;
         }
@@ -70,9 +70,9 @@ final class jn {
           sa.field_Db = param9;
           in.field_Nb = param4;
           vf.field_l = param4.length;
-          wi.field_f = null;
+          DirectByteStorage.field_f = null;
           om.field_x = null;
-          gh.field_E = new byte[(7 + sa.field_Db) / 8];
+          MidiPcmStream.field_E = new byte[(7 + sa.field_Db) / 8];
           dn.field_Db = false;
           var10_int = 0;
           for (var11 = 0; var11 < in.field_Nb.length; var11++) {
@@ -88,7 +88,7 @@ final class jn {
           bc.field_c = new IntrusiveNodeHashTable(param7);
           ki.field_q = 0;
           oe.field_b = 0;
-          jh.field_e = -1;
+          DelegatingCanvas.field_e = -1;
           sk.field_e = -1;
           if (null == param3.field_G) {
             param3.field_G = new IntrusiveDeque();
@@ -102,7 +102,7 @@ final class jn {
           ph.field_a = param5.field_G;
           ph.field_a.clear(-124);
           kn.field_qb = new IntrusiveNodeHashTable(param8);
-          ba.field_a = 0L;
+          PatchEnvelopeSet.field_a = 0L;
           if (param2 != -13173) {
             field_a = (int[]) null;
           }

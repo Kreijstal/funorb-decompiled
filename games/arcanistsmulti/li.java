@@ -9,7 +9,7 @@ final class li extends df implements vb {
     static String field_G;
     static byte[] field_E;
     private ag[] field_J;
-    static lg field_F;
+    static BinaryBitmapFont field_F;
 
     final static void a(int param0, int param1) {
         try {
@@ -32,13 +32,13 @@ final class li extends df implements vb {
         if (param2 != 0) {
           return;
         }
-        dj var5 = ia.field_c;
+        BitmapFont var5 = ia.field_c;
         if (param0 >= -52) {
           qm var6 = (qm) null;
           this.a((qm) null, (byte) -28, 'ￒ', -66);
         }
         if (null != this.field_K) {
-          var5.a(ji.field_f, this.field_n + param1, param3 + this.field_j, this.field_v, 20, 16777215, -1, 0, 0, var5.field_C + var5.field_m);
+          var5.drawParagraph(KeyboardInputHandler.field_f, this.field_n + param1, param3 + this.field_j, this.field_v, 20, 16777215, -1, 0, 0, var5.field_C + var5.field_m);
         }
     }
 
@@ -96,25 +96,25 @@ final class li extends df implements vb {
         int var6 = -var5 + an.field_j;
         int var7 = an.field_f - var1_int;
         int var8 = an.field_j - var1_int;
-        km.field_e.c(0, 0);
-        km.field_e.e(var4, 0);
-        km.field_e.d(0, var6);
+        km.field_e.drawTransparent(0, 0);
+        km.field_e.drawHorizontalFlip(var4, 0);
+        km.field_e.drawVerticalFlip(0, var6);
         if (param0 <= 68) {
           return;
         }
         try {
-          km.field_e.a(var4, var6);
-          de.h(var3, 0, var4, an.field_j);
+          km.field_e.drawRotated180(var4, var6);
+          SoftwareRasterizer.setClip(var3, 0, var4, an.field_j);
           for (var9 = var3; var4 > var9; var9 = var9 + var2) {
-            PacketBuffer.field_l.c(var9, 0);
-            PacketBuffer.field_l.d(var9, var8);
+            PacketBuffer.field_l.drawTransparent(var9, 0);
+            PacketBuffer.field_l.drawVerticalFlip(var9, var8);
           }
-          de.h(0, var5, an.field_f, var6);
+          SoftwareRasterizer.setClip(0, var5, an.field_f, var6);
           for (var9Lifetime1 = var5; var9Lifetime1 < var6; var9Lifetime1 = var9Lifetime1 + var2) {
-            hk.field_k.c(0, var9Lifetime1);
-            hk.field_k.e(var7, var9Lifetime1);
+            MusicPatchPcmStream.field_k.drawTransparent(0, var9Lifetime1);
+            MusicPatchPcmStream.field_k.drawHorizontalFlip(var7, var9Lifetime1);
           }
-          de.a();
+          SoftwareRasterizer.resetClip();
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "li.F(" + param0 + ')');
         }

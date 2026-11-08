@@ -257,15 +257,15 @@ final class ml extends DualLinkNode {
             this.field_q = 25;
             this.field_Y = uj.field_i[0].field_w;
             this.field_w = new Sprite(this.field_Y, this.field_Y);
-            this.field_w.a();
-            uj.field_i[0].a(this.field_Y / 2 - uj.field_i[0].field_n / 2, 0, 16777215);
+            this.field_w.makeRasterTarget();
+            uj.field_i[0].drawSilhouette(this.field_Y / 2 - uj.field_i[0].field_n / 2, 0, 16777215);
           }
           if (this.field_jb == 22) {
             this.field_q = 75;
             this.field_Y = uj.field_i[1].field_w;
             this.field_w = new Sprite(this.field_Y, this.field_Y);
-            this.field_w.a();
-            uj.field_i[1].a(-(uj.field_i[1].field_n / 2) + this.field_Y / 2, 0, 16777215);
+            this.field_w.makeRasterTarget();
+            uj.field_i[1].drawSilhouette(-(uj.field_i[1].field_n / 2) + this.field_Y / 2, 0, 16777215);
           }
           if (param0 != 6) {
             this.field_gb = (mi) null;
@@ -274,37 +274,37 @@ final class ml extends DualLinkNode {
             this.field_Y = uj.field_i[6].field_w;
             this.field_q = 75;
             this.field_w = new Sprite(this.field_Y, this.field_Y);
-            this.field_w.a();
-            uj.field_i[6].a(-(uj.field_i[6].field_n / 2) + this.field_Y / 2, 0, 16777215);
+            this.field_w.makeRasterTarget();
+            uj.field_i[6].drawSilhouette(-(uj.field_i[6].field_n / 2) + this.field_Y / 2, 0, 16777215);
           }
           if (this.field_jb == 21) {
             this.field_q = 100;
             this.field_Y = uj.field_i[2].field_w;
             this.field_w = new Sprite(this.field_Y, this.field_Y);
-            this.field_w.a();
-            uj.field_i[2].a(this.field_Y / 2 - uj.field_i[2].field_n / 2, 0, 16777215);
+            this.field_w.makeRasterTarget();
+            uj.field_i[2].drawSilhouette(this.field_Y / 2 - uj.field_i[2].field_n / 2, 0, 16777215);
           }
           if (this.field_jb == 23) {
             this.field_Y = uj.field_i[3].field_w;
             this.field_q = 75;
             this.field_w = new Sprite(this.field_Y, this.field_Y);
-            this.field_w.a();
-            uj.field_i[3].a(-(uj.field_i[3].field_n / 2) + this.field_Y / 2, 0, 16777215);
+            this.field_w.makeRasterTarget();
+            uj.field_i[3].drawSilhouette(-(uj.field_i[3].field_n / 2) + this.field_Y / 2, 0, 16777215);
           }
           if (this.field_jb == 24) {
             this.field_Y = uj.field_i[4].field_w;
             this.field_q = 75;
             this.field_w = new Sprite(this.field_Y, this.field_Y);
-            this.field_w.a();
-            uj.field_i[4].a(-(uj.field_i[4].field_n / 2) + this.field_Y / 2, 0, 16777215);
+            this.field_w.makeRasterTarget();
+            uj.field_i[4].drawSilhouette(-(uj.field_i[4].field_n / 2) + this.field_Y / 2, 0, 16777215);
           }
           if (this.field_jb == 35) {
             this.field_Y = -16 + (80 + uj.field_i[5].field_w);
             this.field_q = 75;
             this.field_w = new Sprite(this.field_Y, this.field_Y);
-            this.field_w.a();
-            uj.field_i[5].a(this.field_Y / 2 - uj.field_i[5].field_n / 2, 64, 16777215);
-            de.i(this.field_Y / 2, 80, 16, 16777215);
+            this.field_w.makeRasterTarget();
+            uj.field_i[5].drawSilhouette(this.field_Y / 2 - uj.field_i[5].field_n / 2, 64, 16777215);
+            SoftwareRasterizer.fillCircle(this.field_Y / 2, 80, 16, 16777215);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -641,9 +641,9 @@ final class ml extends DualLinkNode {
             }
           }
           if (12 == this.field_jb) {
-            de.h(param1, param0, this.field_L.field_y + param1, an.field_j);
-            go.field_j[29].a(-128 + var35[0], var35[1] - 256);
-            de.a();
+            SoftwareRasterizer.setClip(param1, param0, this.field_L.field_y + param1, an.field_j);
+            go.field_j[29].draw(-128 + var35[0], var35[1] - 256);
+            SoftwareRasterizer.resetClip();
           }
           regionExit1: {
             if (this.field_jb == 40) {
@@ -651,26 +651,26 @@ final class ml extends DualLinkNode {
               var8 = (int)(32.0 + 4.0 * Math.cos(2.0 * this.field_F));
               var9 = (int)(Math.cos(this.field_F) * 4.0);
               for (var10 = -8; 8 > var10; var10++) {
-                de.b(var10 / 4 + var41[0], var41[1], var9 + (var41[0] + var10), var41[1] - var8, 6303744);
+                SoftwareRasterizer.drawLine(var10 / 4 + var41[0], var41[1], var9 + (var41[0] + var10), var41[1] - var8, 6303744);
               }
-              de.b(var41[0] - 2, var41[1], var9 + (var41[0] - 8), var41[1] - var8, 0);
-              de.b(2 + var41[0], var41[1], 8 + var9 + var41[0], var41[1] - var8, 0);
-              de.b(var41[0] + 2, var41[1], var41[0] - 2, var41[1], 0);
-              de.i(var41[0] + var9, -var8 + var41[1], var7, 16777215);
-              de.c(var41[0] + var9, -var8 + var41[1], var7, 0);
-              de.i(var9 + var41[0], -var8 + var41[1], (int)((double)var7 * 0.66), 255);
-              de.i(var41[0] + var9, var41[1] - var8, (int)(0.33 * (double)var7), 16711680);
+              SoftwareRasterizer.drawLine(var41[0] - 2, var41[1], var9 + (var41[0] - 8), var41[1] - var8, 0);
+              SoftwareRasterizer.drawLine(2 + var41[0], var41[1], 8 + var9 + var41[0], var41[1] - var8, 0);
+              SoftwareRasterizer.drawLine(var41[0] + 2, var41[1], var41[0] - 2, var41[1], 0);
+              SoftwareRasterizer.fillCircle(var41[0] + var9, -var8 + var41[1], var7, 16777215);
+              SoftwareRasterizer.drawCircleOutline(var41[0] + var9, -var8 + var41[1], var7, 0);
+              SoftwareRasterizer.fillCircle(var9 + var41[0], -var8 + var41[1], (int)((double)var7 * 0.66), 255);
+              SoftwareRasterizer.fillCircle(var41[0] + var9, var41[1] - var8, (int)(0.33 * (double)var7), 16711680);
             } else {
               if (this.field_jb == 20) {
-                uj.field_i[0].c(-(uj.field_i[0].field_n / 2) + var41[0], var41[1] - this.field_Y);
+                uj.field_i[0].drawTransparent(-(uj.field_i[0].field_n / 2) + var41[0], var41[1] - this.field_Y);
                 if (this.field_I != null) {
-                  this.field_I.e(var41[0] - 16, var6 + var41[1] + (-(this.field_Y >> 1) - 32));
+                  this.field_I.drawHorizontalFlip(var41[0] - 16, var6 + var41[1] + (-(this.field_Y >> 1) - 32));
                 }
               } else {
                 if (this.field_jb == 22) {
-                  uj.field_i[1].c(-(uj.field_i[1].field_n / 2) + var35[0], -this.field_Y + var35[1]);
+                  uj.field_i[1].drawTransparent(-(uj.field_i[1].field_n / 2) + var35[0], -this.field_Y + var35[1]);
                   if (this.field_I != null) {
-                    this.field_I.e(var35[0] - 16, var6 + (-32 + (var35[1] - (this.field_Y >> 1))));
+                    this.field_I.drawHorizontalFlip(var35[0] - 16, var6 + (-32 + (var35[1] - (this.field_Y >> 1))));
                   }
                 } else {
                   if (this.field_jb != 38) {
@@ -678,32 +678,32 @@ final class ml extends DualLinkNode {
                       if (this.field_jb != 23) {
                         if (24 != this.field_jb) {
                           if (this.field_jb == 35) {
-                            uj.field_i[5].c(-(uj.field_i[5].field_n / 2) + var41[0], -this.field_Y + var41[1] + 64);
+                            uj.field_i[5].drawTransparent(-(uj.field_i[5].field_n / 2) + var41[0], -this.field_Y + var41[1] + 64);
                             if (this.field_E == -1) {
                               if (null != this.field_B) {
-                                this.field_B.e(-16 + (var41[0] - 8), -16 + (var41[1] - (this.field_Y >> 1)) + var6);
+                                this.field_B.drawHorizontalFlip(-16 + (var41[0] - 8), -16 + (var41[1] - (this.field_Y >> 1)) + var6);
                               }
                               if (this.field_bb != null) {
-                                this.field_bb.e(var41[0] - 16, -16 + var41[1] - (this.field_Y >> 1) + var6);
+                                this.field_bb.drawHorizontalFlip(var41[0] - 16, -16 + var41[1] - (this.field_Y >> 1) + var6);
                               }
                               if (null != this.field_fb) {
-                                this.field_fb.e(8 + (-16 + var41[0]), var41[1] - (this.field_Y >> 1) + (-16 + var6));
+                                this.field_fb.drawHorizontalFlip(8 + (-16 + var41[0]), var41[1] - (this.field_Y >> 1) + (-16 + var6));
                               }
                               if (null != this.field_I) {
-                                this.field_I.e(var41[0] - 16, var6 + (-32 + (var41[1] - (this.field_Y >> 1))));
+                                this.field_I.drawHorizontalFlip(var41[0] - 16, var6 + (-32 + (var41[1] - (this.field_Y >> 1))));
                               }
                             } else {
                               if (this.field_B != null) {
-                                this.field_B.c(8 + (-16 + var41[0]), var41[1] - (this.field_Y >> 1) - (16 - var6));
+                                this.field_B.drawTransparent(8 + (-16 + var41[0]), var41[1] - (this.field_Y >> 1) - (16 - var6));
                               }
                               if (null != this.field_bb) {
-                                this.field_bb.c(var41[0] - 16, -16 + (var41[1] - ((this.field_Y >> 1) - var6)));
+                                this.field_bb.drawTransparent(var41[0] - 16, -16 + (var41[1] - ((this.field_Y >> 1) - var6)));
                               }
                               if (null != this.field_fb) {
-                                this.field_fb.c(var41[0] - 24, -(this.field_Y >> 1) + var41[1] - 16 + var6);
+                                this.field_fb.drawTransparent(var41[0] - 24, -(this.field_Y >> 1) + var41[1] - 16 + var6);
                               }
                               if (null != this.field_I) {
-                                this.field_I.c(-16 + var41[0], var6 + (var41[1] - (this.field_Y >> 1) - 32));
+                                this.field_I.drawTransparent(-16 + var41[0], var6 + (var41[1] - (this.field_Y >> 1) - 32));
                               }
                             }
                             var7 = 255 & SpriteState.field_v;
@@ -734,9 +734,9 @@ final class ml extends DualLinkNode {
                                 }
                               }
                               if (this.field_E != -1) {
-                                ff.field_b[var7].a(var41[0] - (this.field_Y >> 1), var41[1] - this.field_Y);
+                                ff.field_b[var7].draw(var41[0] - (this.field_Y >> 1), var41[1] - this.field_Y);
                               } else {
-                                ff.field_b[var7].d(var41[0] - (this.field_Y >> 1), var41[1] - this.field_Y);
+                                ff.field_b[var7].drawFlippedHorizontal(var41[0] - (this.field_Y >> 1), var41[1] - this.field_Y);
                               }
                               break regionExit1;
                             }
@@ -762,9 +762,9 @@ final class ml extends DualLinkNode {
                                 }
                               }
                               if (-1 == this.field_E) {
-                                ub.field_e[var7].d(-(this.field_Y >> 1) + var41[0], var41[1] - this.field_Y);
+                                ub.field_e[var7].drawFlippedHorizontal(-(this.field_Y >> 1) + var41[0], var41[1] - this.field_Y);
                               } else {
-                                ub.field_e[var7].a(var41[0] - (this.field_Y >> 1), -this.field_Y + var41[1]);
+                                ub.field_e[var7].draw(var41[0] - (this.field_Y >> 1), -this.field_Y + var41[1]);
                               }
                               break regionExit1;
                             }
@@ -790,9 +790,9 @@ final class ml extends DualLinkNode {
                                 }
                               }
                               if (this.field_E != -1) {
-                                rc.field_d[var7].a(-(this.field_Y >> 1) + var41[0], -this.field_Y + var41[1]);
+                                rc.field_d[var7].draw(-(this.field_Y >> 1) + var41[0], -this.field_Y + var41[1]);
                               } else {
-                                rc.field_d[var7].d(-(this.field_Y >> 1) + var41[0], var41[1] - this.field_Y);
+                                rc.field_d[var7].drawFlippedHorizontal(-(this.field_Y >> 1) + var41[0], var41[1] - this.field_Y);
                               }
                               break regionExit1;
                             }
@@ -818,9 +818,9 @@ final class ml extends DualLinkNode {
                                 }
                               }
                               if (this.field_E != -1) {
-                                bk.field_L[var7].a(-(this.field_Y >> 1) + var41[0], var41[1] - this.field_Y);
+                                bk.field_L[var7].draw(-(this.field_Y >> 1) + var41[0], var41[1] - this.field_Y);
                               } else {
-                                bk.field_L[var7].d(var41[0] - (this.field_Y >> 1), var41[1] - this.field_Y);
+                                bk.field_L[var7].drawFlippedHorizontal(var41[0] - (this.field_Y >> 1), var41[1] - this.field_Y);
                               }
                               break regionExit1;
                             }
@@ -846,9 +846,9 @@ final class ml extends DualLinkNode {
                                 }
                               }
                               if (-1 == this.field_E) {
-                                ArchiveIndex.field_m[var7].d(-(this.field_Y >> 1) + var41[0], var41[1] - this.field_Y);
+                                ArchiveIndex.field_m[var7].drawFlippedHorizontal(-(this.field_Y >> 1) + var41[0], var41[1] - this.field_Y);
                               } else {
-                                ArchiveIndex.field_m[var7].a(var41[0] - (this.field_Y >> 1), var41[1] - this.field_Y);
+                                ArchiveIndex.field_m[var7].draw(var41[0] - (this.field_Y >> 1), var41[1] - this.field_Y);
                               }
                               break regionExit1;
                             }
@@ -871,7 +871,7 @@ final class ml extends DualLinkNode {
                                 } else {
                                   stackIn_149_1 = 4;
                                 }
-                                ((IndexedSprite) (Object) stackIn_148_0[stackIn_149_1 + var7]).d(-(this.field_Y >> 1) + var41[0], var41[1] - this.field_Y);
+                                ((IndexedSprite) (Object) stackIn_148_0[stackIn_149_1 + var7]).drawFlippedHorizontal(-(this.field_Y >> 1) + var41[0], var41[1] - this.field_Y);
                               } else {
                                 stackIn_143_0 = ra.field_c;
                                 if (!this.field_U) {
@@ -879,7 +879,7 @@ final class ml extends DualLinkNode {
                                 } else {
                                   stackIn_144_1 = 4;
                                 }
-                                ((IndexedSprite) (Object) stackIn_143_0[stackIn_144_1 + var7]).a(var41[0] - (this.field_Y >> 1), var41[1] - this.field_Y);
+                                ((IndexedSprite) (Object) stackIn_143_0[stackIn_144_1 + var7]).draw(var41[0] - (this.field_Y >> 1), var41[1] - this.field_Y);
                               }
                               break regionExit1;
                             }
@@ -908,9 +908,9 @@ final class ml extends DualLinkNode {
                                 var7 = 7;
                               }
                               if (-1 != this.field_E) {
-                                wl.field_U[var7].a(var41[0] - 24, -36 + var41[1]);
+                                wl.field_U[var7].draw(var41[0] - 24, -36 + var41[1]);
                               } else {
-                                wl.field_U[var7].d(var41[0] - 24, -36 + var41[1]);
+                                wl.field_U[var7].drawFlippedHorizontal(var41[0] - 24, -36 + var41[1]);
                               }
                               break regionExit1;
                             }
@@ -923,39 +923,39 @@ final class ml extends DualLinkNode {
                               this.field_jb != 30) {
                               if (this.field_ab == 3) {
                                 if (this.field_E != -1) {
-                                  this.field_bb.a(var41[0], -(this.field_Y >> 1) + var41[1], (int)(-this.field_F * 65536.0 / 6.28), 4096);
+                                  this.field_bb.drawCenteredRotatedScaledBilinear(var41[0], -(this.field_Y >> 1) + var41[1], (int)(-this.field_F * 65536.0 / 6.28), 4096);
                                 } else {
-                                  this.field_bb.b().a(var41[0], var41[1] - (this.field_Y >> 1), (int)(this.field_F * 65536.0 / 6.28), 4096);
+                                  this.field_bb.copyFlippedHorizontal().drawCenteredRotatedScaledBilinear(var41[0], var41[1] - (this.field_Y >> 1), (int)(this.field_F * 65536.0 / 6.28), 4096);
                                 }
                               } else {
                                 var7 = this.field_Y;
                                 if (this.field_E != -1) {
                                   if (null != this.field_B) {
-                                    this.field_B.c(this.field_r + var41[0] - (var7 >> 2), var41[1] - var7 - (-this.field_O - var6));
+                                    this.field_B.drawTransparent(this.field_r + var41[0] - (var7 >> 2), var41[1] - var7 - (-this.field_O - var6));
                                   }
                                   if (this.field_cb != null) {
-                                    this.field_cb.c(-(var7 >> 1) + (var41[0] + this.field_t), this.field_Z + (-var7 + var41[1]));
+                                    this.field_cb.drawTransparent(-(var7 >> 1) + (var41[0] + this.field_t), this.field_Z + (-var7 + var41[1]));
                                   }
                                   if (null != this.field_bb) {
-                                    this.field_bb.c(-(var7 >> 1) + var41[0], var41[1] - var7 + var6);
+                                    this.field_bb.drawTransparent(-(var7 >> 1) + var41[0], var41[1] - var7 + var6);
                                   }
                                   if (this.field_jb != 32) {
                                     if (this.field_jb != 37) {
                                       if (null != this.field_I) {
-                                        this.field_I.c(-(var7 >> 1) + var41[0], var6 + (-(3 * var7 / 2) + var41[1]));
+                                        this.field_I.drawTransparent(-(var7 >> 1) + var41[0], var6 + (-(3 * var7 / 2) + var41[1]));
                                       }
                                     } else {
                                       if (this.field_I != null) {
-                                        this.field_I.c(var41[0] - (var7 >> 1), var41[1] + (-(var7 * 3 / 2) + (var6 - 10)));
+                                        this.field_I.drawTransparent(var41[0] - (var7 >> 1), var41[1] + (-(var7 * 3 / 2) + (var6 - 10)));
                                       }
                                     }
                                   } else {
                                     if (this.field_I != null) {
-                                      this.field_I.c(var41[0] - (var7 >> 1) + 12, var6 + (var41[1] - var7 * 3 / 2));
+                                      this.field_I.drawTransparent(var41[0] - (var7 >> 1) + 12, var6 + (var41[1] - var7 * 3 / 2));
                                     }
                                   }
                                   if (this.field_Q != null) {
-                                    this.field_Q.c(var41[0] - (var7 >> 1) + this.field_y, this.field_o + var41[1] - var7);
+                                    this.field_Q.drawTransparent(var41[0] - (var7 >> 1) + this.field_y, this.field_o + var41[1] - var7);
                                   }
                                   if (this.field_ab == 0) {
                                     var8 = 0;
@@ -969,14 +969,14 @@ final class ml extends DualLinkNode {
                                       var11 = 256 - var11;
                                     }
                                     var11 += 64;
-                                    de.c(var9, var10, 12, var8, var11);
-                                    de.c(var9, var10, 10, var8, var11);
-                                    de.c(var9, var10, 8, var8, var11);
+                                    SoftwareRasterizer.fillCircleAlpha(var9, var10, 12, var8, var11);
+                                    SoftwareRasterizer.fillCircleAlpha(var9, var10, 10, var8, var11);
+                                    SoftwareRasterizer.fillCircleAlpha(var9, var10, 8, var8, var11);
                                     for (var12 = 0; var12 < 7; var12++) {
                                       var13_int = (int)(9.0 * Math.sin(3.14 * (0.1 * (double)SpriteState.field_v + (double)var12) / 3.5)) + var9;
                                       var14 = var10 + (int)(9.0 * Math.cos(3.14 * ((double)var12 + 0.1 * (double)SpriteState.field_v) / 3.5));
-                                      jg.field_c[var12].b(-2 + var13_int, -2 + var14);
-                                      de.c(var13_int, var14, 4, var8, 32);
+                                      jg.field_c[var12].drawQuarterSize(-2 + var13_int, -2 + var14);
+                                      SoftwareRasterizer.fillCircleAlpha(var13_int, var14, 4, var8, 32);
                                     }
                                   }
                                   if (this.field_ab == 1) {
@@ -988,10 +988,10 @@ final class ml extends DualLinkNode {
                                     this.field_L.b(52, var47);
                                   }
                                   if (this.field_fb != null) {
-                                    this.field_fb.c(this.field_n - (var7 >> 2) + var41[0] - (var7 >> 1), var6 - var7 + (var41[1] + this.field_N));
+                                    this.field_fb.drawTransparent(this.field_n - (var7 >> 2) + var41[0] - (var7 >> 1), var6 - var7 + (var41[1] + this.field_N));
                                   }
                                   if (((this.field_jb == 18)) &&
-                                    ((null != gi.field_m))) {
+                                    ((null != SoundCache.field_m))) {
                                     var8 = 0;
                                     if (this.field_F > 1.5) {
                                       var8 = 1;
@@ -1002,36 +1002,36 @@ final class ml extends DualLinkNode {
                                     if (4.5 < this.field_F) {
                                       var8 = 3;
                                     }
-                                    gi.field_m[var8].a(-48 + var41[0], -48 + var41[1]);
+                                    SoundCache.field_m[var8].draw(-48 + var41[0], -48 + var41[1]);
                                   }
                                   break regionExit1;
                                 }
                                 if (null != this.field_B) {
-                                  this.field_B.e(-(var7 >> 2) + (-(var7 >> 1) + var41[0]) - this.field_r, this.field_O + (-var7 + var41[1]) + var6);
+                                  this.field_B.drawHorizontalFlip(-(var7 >> 2) + (-(var7 >> 1) + var41[0]) - this.field_r, this.field_O + (-var7 + var41[1]) + var6);
                                 }
                                 if (this.field_cb != null) {
-                                  this.field_cb.e(-(var7 >> 1) + var41[0] - this.field_t, this.field_Z + (-var7 + var41[1]));
+                                  this.field_cb.drawHorizontalFlip(-(var7 >> 1) + var41[0] - this.field_t, this.field_Z + (-var7 + var41[1]));
                                 }
                                 if (this.field_bb != null) {
-                                  this.field_bb.e(var41[0] - (var7 >> 1), var6 + (-var7 + var41[1]));
+                                  this.field_bb.drawHorizontalFlip(var41[0] - (var7 >> 1), var6 + (-var7 + var41[1]));
                                 }
                                 if (this.field_jb == 32) {
                                   if (this.field_I != null) {
-                                    this.field_I.e(-12 - (var7 >> 1) + var41[0], var6 + (-(3 * var7 / 2) + var41[1]));
+                                    this.field_I.drawHorizontalFlip(-12 - (var7 >> 1) + var41[0], var6 + (-(3 * var7 / 2) + var41[1]));
                                   }
                                 } else {
                                   if (37 == this.field_jb) {
                                     if (this.field_I != null) {
-                                      this.field_I.e(var41[0] - (var7 >> 1), var41[1] + (-(var7 * 3 / 2) + (var6 - 10)));
+                                      this.field_I.drawHorizontalFlip(var41[0] - (var7 >> 1), var41[1] + (-(var7 * 3 / 2) + (var6 - 10)));
                                     }
                                   } else {
                                     if (null != this.field_I) {
-                                      this.field_I.e(-(var7 >> 1) + var41[0], var6 - 3 * var7 / 2 + var41[1]);
+                                      this.field_I.drawHorizontalFlip(-(var7 >> 1) + var41[0], var6 - 3 * var7 / 2 + var41[1]);
                                     }
                                   }
                                 }
                                 if (null != this.field_Q) {
-                                  this.field_Q.e(-this.field_y - (var7 >> 1) + var41[0], this.field_o + (-var7 + var41[1]));
+                                  this.field_Q.drawHorizontalFlip(-this.field_y - (var7 >> 1) + var41[0], this.field_o + (-var7 + var41[1]));
                                 }
                                 if (this.field_ab == 1) {
                                   gn.a(12, (byte) 117, 128, var41[0] + ((var7 >> 2) - this.field_n + 4), this.field_N + (8 + var41[1] + (-this.field_Y + var6)));
@@ -1053,21 +1053,21 @@ final class ml extends DualLinkNode {
                                     var11 = -var11 + 256;
                                   }
                                   var11 += 64;
-                                  de.c(var9, var10, 12, var8, var11);
-                                  de.c(var9, var10, 10, var8, var11);
-                                  de.c(var9, var10, 8, var8, var11);
+                                  SoftwareRasterizer.fillCircleAlpha(var9, var10, 12, var8, var11);
+                                  SoftwareRasterizer.fillCircleAlpha(var9, var10, 10, var8, var11);
+                                  SoftwareRasterizer.fillCircleAlpha(var9, var10, 8, var8, var11);
                                   for (var12 = 0; var12 < 7; var12++) {
                                     var13_intLifetime1 = var9 + (int)(9.0 * Math.sin(3.14 * ((double)var12 + 0.1 * (double)SpriteState.field_v) / 3.5));
                                     var14Lifetime2 = (int)(9.0 * Math.cos(((double)SpriteState.field_v * 0.1 + (double)var12) * 3.14 / 3.5)) + var10;
-                                    jg.field_c[var12].b(-2 + var13_intLifetime1, var14Lifetime2 - 2);
-                                    de.c(var13_intLifetime1, var14Lifetime2, 4, var8, 32);
+                                    jg.field_c[var12].drawQuarterSize(-2 + var13_intLifetime1, var14Lifetime2 - 2);
+                                    SoftwareRasterizer.fillCircleAlpha(var13_intLifetime1, var14Lifetime2, 4, var8, 32);
                                   }
                                 }
                                 if (null != this.field_fb) {
-                                  this.field_fb.e(-(var7 >> 2) + (var41[0] - this.field_n), this.field_N + (var41[1] - var7 + var6));
+                                  this.field_fb.drawHorizontalFlip(-(var7 >> 2) + (var41[0] - this.field_n), this.field_N + (var41[1] - var7 + var6));
                                 }
                                 if (((this.field_jb == 18)) &&
-                                  ((gi.field_m != null))) {
+                                  ((SoundCache.field_m != null))) {
                                   var8 = 0;
                                   if (this.field_F > 1.5) {
                                     var8 = 1;
@@ -1078,7 +1078,7 @@ final class ml extends DualLinkNode {
                                   if (this.field_F > 4.5) {
                                     var8 = 3;
                                   }
-                                  gi.field_m[var8].d(-32 + (var41[0] + 16), var41[1] - 48);
+                                  SoundCache.field_m[var8].drawFlippedHorizontal(-32 + (var41[0] + 16), var41[1] - 48);
                                 }
                               }
                               break regionExit1;
@@ -1096,7 +1096,7 @@ final class ml extends DualLinkNode {
                             }
                             var10 = var41[1] - var7 + (this.field_O + var6);
                             if (this.field_E == -1) {
-                              var8_ref_qb = var42.b();
+                              var8_ref_qb = var42.copyFlippedHorizontal();
                             }
                             boolean decompiledFrameRemainder0 = true;
                             var11Lifetime2 = 0;
@@ -1127,8 +1127,8 @@ final class ml extends DualLinkNode {
                                           var8_ref_qb = var44;
                                           var10 -= 32;
                                           var9 -= 32;
-                                          var44.a();
-                                          var12_ref_qb.b(512, 768, 1024, 1024, this.field_E * -this.field_gb.field_y * 8000, 4096);
+                                          var44.makeRasterTarget();
+                                          var12_ref_qb.drawRotatedAboutPivot(512, 768, 1024, 1024, this.field_E * -this.field_gb.field_y * 8000, 4096);
                                           ce.field_m.a(true);
                                         }
                                       } else {
@@ -1139,8 +1139,8 @@ final class ml extends DualLinkNode {
                                         var8_ref_qb = var43;
                                         var9 = var9 - this.field_Y / 2;
                                         var10 = var10 - this.field_Y / 2;
-                                        var43.a();
-                                        var12_ref_qbLifetime2.b(this.field_Y / 2 << 4, 3 * this.field_Y / 4 << 4, this.field_Y << 4, this.field_Y << 4, this.field_E * 4000 * -this.field_gb.field_y, 4096);
+                                        var43.makeRasterTarget();
+                                        var12_ref_qbLifetime2.drawRotatedAboutPivot(this.field_Y / 2 << 4, 3 * this.field_Y / 4 << 4, this.field_Y << 4, this.field_Y << 4, this.field_E * 4000 * -this.field_gb.field_y, 4096);
                                         ce.field_m.a(true);
                                       }
                                       decompiledFrameRemainder0 = false;
@@ -1153,8 +1153,8 @@ final class ml extends DualLinkNode {
                                       var10 -= 32;
                                       var45 = new Sprite(128, 128);
                                       var8_ref_qb = var45;
-                                      var45.a();
-                                      var12_ref_qbLifetime1.b(512, 768, 1024, 1024, this.field_E * 4000 * -this.field_gb.field_y, 4096);
+                                      var45.makeRasterTarget();
+                                      var12_ref_qbLifetime1.drawRotatedAboutPivot(512, 768, 1024, 1024, this.field_E * 4000 * -this.field_gb.field_y, 4096);
                                       ce.field_m.a(true);
                                     }
                                   }
@@ -1171,76 +1171,76 @@ final class ml extends DualLinkNode {
                             }
                             if (-1 == this.field_E) {
                               if (this.field_B != null) {
-                                this.field_B.e(-this.field_r + var41[0] - (var7 >> 1) - (var7 >> 2), this.field_O + (-var7 + (var41[1] + var6)));
+                                this.field_B.drawHorizontalFlip(-this.field_r + var41[0] - (var7 >> 1) - (var7 >> 2), this.field_O + (-var7 + (var41[1] + var6)));
                               }
                               if (this.field_cb != null) {
-                                this.field_cb.e(var41[0] - (var7 >> 1) - this.field_t, -var7 + (var41[1] + this.field_Z));
+                                this.field_cb.drawHorizontalFlip(var41[0] - (var7 >> 1) - this.field_t, -var7 + (var41[1] + this.field_Z));
                               }
                               if (this.field_bb != null) {
-                                this.field_bb.e(var41[0] - (var7 >> 1), -var7 + (var41[1] + var6));
+                                this.field_bb.drawHorizontalFlip(var41[0] - (var7 >> 1), -var7 + (var41[1] + var6));
                               }
                               if (this.field_I != null) {
                                 if (var11Lifetime2 == 0) {
-                                  this.field_I.e(var41[0] - (var7 >> 1), var41[1] - var7 * 3 / 2 + var6);
+                                  this.field_I.drawHorizontalFlip(var41[0] - (var7 >> 1), var41[1] - var7 * 3 / 2 + var6);
                                 } else {
                                   var12Lifetime2 = (int)(Math.sin(0.2 * (double)SpriteState.field_v) * (500.0 * Math.random() + 1000.0));
-                                  this.field_I.b().a(4096, var41[1] + (-(var7 * 3 / 4) + var6), 19, var41[0], var12Lifetime2);
+                                  this.field_I.copyFlippedHorizontal().a(4096, var41[1] + (-(var7 * 3 / 4) + var6), 19, var41[0], var12Lifetime2);
                                 }
                               }
                               if (this.field_Q != null) {
-                                this.field_Q.e(-this.field_y + (var41[0] - (var7 >> 1)), this.field_o + (var41[1] - var7));
+                                this.field_Q.drawHorizontalFlip(-this.field_y + (var41[0] - (var7 >> 1)), this.field_o + (var41[1] - var7));
                               }
                               if (this.field_fb != null) {
-                                var8_ref_qb.c(var9, var10);
+                                var8_ref_qb.drawTransparent(var9, var10);
                               }
                             } else {
                               if (this.field_B != null) {
-                                this.field_B.c(-(var7 >> 2) + (var41[0] + this.field_r), var6 + (var41[1] - var7 + this.field_O));
+                                this.field_B.drawTransparent(-(var7 >> 2) + (var41[0] + this.field_r), var6 + (var41[1] - var7 + this.field_O));
                               }
                               if (this.field_cb != null) {
-                                this.field_cb.c(-(var7 >> 1) + var41[0] + this.field_t, this.field_Z + (var41[1] - var7));
+                                this.field_cb.drawTransparent(-(var7 >> 1) + var41[0] + this.field_t, this.field_Z + (var41[1] - var7));
                               }
                               if (this.field_bb != null) {
-                                this.field_bb.c(var41[0] - (var7 >> 1), var6 - var7 + var41[1]);
+                                this.field_bb.drawTransparent(var41[0] - (var7 >> 1), var6 - var7 + var41[1]);
                               }
                               if (this.field_I != null) {
                                 if (var11Lifetime2 == 0) {
-                                  this.field_I.c(var41[0] - (var7 >> 1), var6 - var7 * 3 / 2 + var41[1]);
+                                  this.field_I.drawTransparent(var41[0] - (var7 >> 1), var6 - var7 * 3 / 2 + var41[1]);
                                 } else {
                                   var12Lifetime2 = -(int)(Math.sin((double)SpriteState.field_v * 0.2) * (500.0 * Math.random() + 1000.0));
                                   this.field_I.a(4096, -(3 * var7 / 4) + (var41[1] + var6), param2 ^ 1703903772, var41[0], var12Lifetime2);
                                 }
                               }
                               if (null != this.field_Q) {
-                                this.field_Q.c(-(var7 >> 1) + var41[0] + this.field_y, this.field_o + (-var7 + var41[1]));
+                                this.field_Q.drawTransparent(-(var7 >> 1) + var41[0] + this.field_y, this.field_o + (-var7 + var41[1]));
                               }
                               if (this.field_fb != null) {
-                                var8_ref_qb.c(var9, var10);
+                                var8_ref_qb.drawTransparent(var9, var10);
                               }
                             }
                           }
                         } else {
-                          uj.field_i[4].c(var41[0] - uj.field_i[4].field_n / 2, -this.field_Y + var41[1]);
+                          uj.field_i[4].drawTransparent(var41[0] - uj.field_i[4].field_n / 2, -this.field_Y + var41[1]);
                           if (this.field_I != null) {
-                            this.field_I.e(var41[0] - 16, var6 + var41[1] - (this.field_Y >> 1) - 32);
+                            this.field_I.drawHorizontalFlip(var41[0] - 16, var6 + var41[1] - (this.field_Y >> 1) - 32);
                           }
                         }
                       } else {
-                        uj.field_i[3].c(-(uj.field_i[3].field_n / 2) + var41[0], var41[1] - this.field_Y);
+                        uj.field_i[3].drawTransparent(-(uj.field_i[3].field_n / 2) + var41[0], var41[1] - this.field_Y);
                         if (this.field_I != null) {
-                          this.field_I.e(var41[0] - 16, var6 + (-32 + var41[1] - (this.field_Y >> 1)));
+                          this.field_I.drawHorizontalFlip(var41[0] - 16, var6 + (-32 + var41[1] - (this.field_Y >> 1)));
                         }
                       }
                     } else {
-                      uj.field_i[2].c(-(uj.field_i[2].field_n / 2) + var41[0], -this.field_Y + var41[1]);
+                      uj.field_i[2].drawTransparent(-(uj.field_i[2].field_n / 2) + var41[0], -this.field_Y + var41[1]);
                       if (null != this.field_I) {
-                        this.field_I.e(-16 + var41[0], var41[1] - (this.field_Y >> 1) + (-32 + var6));
+                        this.field_I.drawHorizontalFlip(-16 + var41[0], var41[1] - (this.field_Y >> 1) + (-32 + var6));
                       }
                     }
                   } else {
-                    uj.field_i[6].c(-(uj.field_i[6].field_n / 2) + var35[0], -this.field_Y + var35[1]);
+                    uj.field_i[6].drawTransparent(-(uj.field_i[6].field_n / 2) + var35[0], -this.field_Y + var35[1]);
                     if (null != this.field_I) {
-                      this.field_I.e(-16 + var35[0], var6 - (this.field_Y >> 1) + var35[1] - 32);
+                      this.field_I.drawHorizontalFlip(-16 + var35[0], var6 - (this.field_Y >> 1) + var35[1] - 32);
                     }
                   }
                 }
@@ -1256,9 +1256,9 @@ final class ml extends DualLinkNode {
               var9Lifetime1 = -this.field_Y + (var41[1] - 10);
               var10Lifetime1 = (int)(Math.cos(3.14 * (double)var7Lifetime1 / 1.5 + 0.125 * (double)SpriteState.field_v) * 8.0);
               if (var10Lifetime1 <= 0) {
-                bb.field_g[(3 * var7Lifetime1 + SpriteState.field_v / 7 & 1) + 86].e(var8Lifetime1 - 20, var9Lifetime1 - (-var10Lifetime1 + 20));
+                bb.field_g[(3 * var7Lifetime1 + SpriteState.field_v / 7 & 1) + 86].drawHorizontalFlip(var8Lifetime1 - 20, var9Lifetime1 - (-var10Lifetime1 + 20));
               } else {
-                bb.field_g[(1 & SpriteState.field_v / 7 + var7Lifetime1 * 3) + 86].c(var8Lifetime1 - 20, -20 + (var9Lifetime1 + var10Lifetime1));
+                bb.field_g[(1 & SpriteState.field_v / 7 + var7Lifetime1 * 3) + 86].drawTransparent(var8Lifetime1 - 20, -20 + (var9Lifetime1 + var10Lifetime1));
               }
             }
           }
@@ -1292,7 +1292,7 @@ final class ml extends DualLinkNode {
                 var13 = fc.field_e;
               }
               if (var7Lifetime2 == 5) {
-                var13 = ji.field_h;
+                var13 = KeyboardInputHandler.field_h;
                 var12Lifetime1 = 1;
               }
               if (var7Lifetime2 == 6) {
@@ -1347,15 +1347,15 @@ final class ml extends DualLinkNode {
               if (var12Lifetime1 != 0) {
                 var20 = SpriteState.field_v / var14Lifetime1 % java.lang.reflect.Array.getLength(var13);
                 var21 = new Sprite(((Sprite) (((Object[]) (var13))[0])).field_n, ((Sprite) (((Object[]) (var13))[0])).field_w);
-                var22 = de.field_l;
-                var23 = de.field_e;
-                var24 = de.field_j;
-                var21.a();
+                var22 = SoftwareRasterizer.field_l;
+                var23 = SoftwareRasterizer.field_e;
+                var24 = SoftwareRasterizer.field_j;
+                var21.makeRasterTarget();
                 pc.$cfr$intArgs$a$5f050b8899ac(var17, 0, var18, var15, 106, var16, (Sprite) (((Object[]) (var13))[var20]), 0);
-                de.field_e = var23;
-                de.field_j = var24;
-                de.field_l = var22;
-                de.a();
+                SoftwareRasterizer.field_e = var23;
+                SoftwareRasterizer.field_j = var24;
+                SoftwareRasterizer.field_l = var22;
+                SoftwareRasterizer.resetClip();
                 var25 = (int)(4.0 * Math.sin((double)(SpriteState.field_v >> 4)));
                 if (var7Lifetime2 == 4 ||
                   var7Lifetime2 == 6) {
@@ -1363,11 +1363,11 @@ final class ml extends DualLinkNode {
                 }
                 if (this.field_E < 0 &&
                   var7Lifetime2 != 4) {
-                  var21.e(-(((Sprite) (((Object[]) (var13))[var20])).field_n / 2) + var10Lifetime2, -var25 - ((Sprite) (((Object[]) (var13))[var20])).field_w + var11Lifetime1);
+                  var21.drawHorizontalFlip(-(((Sprite) (((Object[]) (var13))[var20])).field_n / 2) + var10Lifetime2, -var25 - ((Sprite) (((Object[]) (var13))[var20])).field_w + var11Lifetime1);
                 } else {
                   if (var7Lifetime2 != 4 ||
                     !((-1 + this.field_L.field_X[this.field_u]) % 5 - (-1 + (this.field_L.field_X[this.field_u] - 1) / 5) <= 0)) {
-                    var21.c(-(((Sprite) (((Object[]) (var13))[var20])).field_n / 2) + var10Lifetime2, -((Sprite) (((Object[]) (var13))[var20])).field_w + var11Lifetime1 - var25);
+                    var21.drawTransparent(-(((Sprite) (((Object[]) (var13))[var20])).field_n / 2) + var10Lifetime2, -((Sprite) (((Object[]) (var13))[var20])).field_w + var11Lifetime1 - var25);
                   }
                 }
               } else {
@@ -1387,11 +1387,11 @@ final class ml extends DualLinkNode {
                   var22_int = (int)(Math.sin((double)(SpriteState.field_v >> 2)) * 4.0);
                   var23 = -var22_int;
                 }
-                var28 = de.field_l;
-                var29 = de.field_e;
-                var30 = de.field_j;
+                var28 = SoftwareRasterizer.field_l;
+                var29 = SoftwareRasterizer.field_e;
+                var30 = SoftwareRasterizer.field_j;
                 var31 = new Sprite(64, 64);
-                var31.a();
+                var31.makeRasterTarget();
                 var32 = 20;
                 var33 = 32;
                 pc.$cfr$intArgs$a$5f050b8899ac(kg.field_d[2], var33 + var22_int, kg.field_d[3], kg.field_d[0], -127, kg.field_d[1], (Sprite) (((Object[]) (var13))[5]), var32 + var20);
@@ -1406,14 +1406,14 @@ final class ml extends DualLinkNode {
                 var33 += 6;
                 pc.$cfr$intArgs$a$5f050b8899ac(kg.field_d[2], var33 + var27, kg.field_d[3], kg.field_d[0], -91, kg.field_d[1], (Sprite) (((Object[]) (var13))[1]), var25 + var32);
                 pc.$cfr$intArgs$a$5f050b8899ac(kg.field_d[2], var33 + var23, kg.field_d[3], kg.field_d[0], 18, kg.field_d[1], (Sprite) (((Object[]) (var13))[0]), var32 + var21_int);
-                de.field_l = var28;
-                de.field_j = var30;
-                de.field_e = var29;
-                de.a();
+                SoftwareRasterizer.field_l = var28;
+                SoftwareRasterizer.field_j = var30;
+                SoftwareRasterizer.field_e = var29;
+                SoftwareRasterizer.resetClip();
                 if (0 > this.field_E) {
-                  var31.e(var10Lifetime2 - 32, -32 + var11Lifetime1);
+                  var31.drawHorizontalFlip(var10Lifetime2 - 32, -32 + var11Lifetime1);
                 } else {
-                  var31.c(var10Lifetime2 - 32, -32 + var11Lifetime1);
+                  var31.drawTransparent(var10Lifetime2 - 32, -32 + var11Lifetime1);
                 }
               }
             }
@@ -1430,13 +1430,13 @@ final class ml extends DualLinkNode {
               var7Lifetime3 = var7Lifetime3 + this.field_q;
             }
             var8Lifetime3 = tj.field_t.field_C / 2;
-            mi.field_B.a(Integer.toString(var7Lifetime3), -var8Lifetime3 + param1 + this.field_lb, -(var8Lifetime3 * 2) + (param0 + this.field_db) + (-this.field_Y - 2), var8Lifetime3 * 2, var8Lifetime3 * 2, (var5 | 8421504) ^ 8421504, 0, 1, 1, tj.field_t.field_C);
-            mi.field_B.a(Integer.toString(var7Lifetime3), -1 + (-var8Lifetime3 + (param1 + this.field_lb)), -this.field_Y + param0 + (this.field_db - var8Lifetime3 * 2 - 1), 2 * var8Lifetime3, var8Lifetime3 * 2, 8421504 ^ (var5 | 8421504), 0, 1, 1, tj.field_t.field_C);
-            mi.field_B.a(Integer.toString(var7Lifetime3), param1 + this.field_lb - var8Lifetime3, -(2 * var8Lifetime3) + (this.field_db + param0) - (this.field_Y + 1), var8Lifetime3 * 2, var8Lifetime3 * 2, var5, -1, 1, 1, tj.field_t.field_C);
+            mi.field_B.drawParagraph(Integer.toString(var7Lifetime3), -var8Lifetime3 + param1 + this.field_lb, -(var8Lifetime3 * 2) + (param0 + this.field_db) + (-this.field_Y - 2), var8Lifetime3 * 2, var8Lifetime3 * 2, (var5 | 8421504) ^ 8421504, 0, 1, 1, tj.field_t.field_C);
+            mi.field_B.drawParagraph(Integer.toString(var7Lifetime3), -1 + (-var8Lifetime3 + (param1 + this.field_lb)), -this.field_Y + param0 + (this.field_db - var8Lifetime3 * 2 - 1), 2 * var8Lifetime3, var8Lifetime3 * 2, 8421504 ^ (var5 | 8421504), 0, 1, 1, tj.field_t.field_C);
+            mi.field_B.drawParagraph(Integer.toString(var7Lifetime3), param1 + this.field_lb - var8Lifetime3, -(2 * var8Lifetime3) + (this.field_db + param0) - (this.field_Y + 1), var8Lifetime3 * 2, var8Lifetime3 * 2, var5, -1, 1, 1, tj.field_t.field_C);
             if (null == this.field_s &&
               this.field_T < this.field_L.field_q &&
               this.field_L.field_S[this.field_T] > 0) {
-              rb.field_o[-1 + this.field_L.field_S[this.field_T]].d(param1 + (this.field_lb - 15), -(var8Lifetime3 * 2) - this.field_Y + (param0 + this.field_db - 13), var5);
+              rb.field_o[-1 + this.field_L.field_S[this.field_T]].drawTintedGrayscale(param1 + (this.field_lb - 15), -(var8Lifetime3 * 2) - this.field_Y + (param0 + this.field_db - 13), var5);
             }
           }
           if (param2 != 1703903841) {
@@ -2072,9 +2072,9 @@ final class ml extends DualLinkNode {
               this.field_ib = 10;
               this.field_J = true;
               this.field_w = new Sprite(this.field_Y, this.field_Y);
-              this.field_w.a();
-              de.i(32, 32, 10, 16777215);
-              de.i(32, 63, 1, 16777215);
+              this.field_w.makeRasterTarget();
+              SoftwareRasterizer.fillCircle(32, 32, 10, 16777215);
+              SoftwareRasterizer.fillCircle(32, 63, 1, 16777215);
             } else {
               if (var12 == 12) {
                 this.field_J = true;
@@ -2082,25 +2082,25 @@ final class ml extends DualLinkNode {
                 this.field_z = true;
                 this.field_Y = 256;
                 this.field_w = new Sprite(this.field_Y, this.field_Y);
-                this.field_w.a();
-                go.field_j[29].a(0, 0);
-                de.d(0, -2 + (go.field_j[29].field_f + go.field_j[29].field_c), this.field_Y, this.field_Y, 0);
+                this.field_w.makeRasterTarget();
+                go.field_j[29].draw(0, 0);
+                SoftwareRasterizer.fillRectangle(0, -2 + (go.field_j[29].field_f + go.field_j[29].field_c), this.field_Y, this.field_Y, 0);
               } else {
                 if (var12 == 39) {
                   this.field_J = true;
                   this.field_Y = 100;
                   this.field_ib = 100;
                   this.field_w = new Sprite(this.field_Y, this.field_Y);
-                  this.field_w.a();
-                  de.i(this.field_Y >> 1, this.field_Y >> 1, this.field_Y >> 1, 16777215);
+                  this.field_w.makeRasterTarget();
+                  SoftwareRasterizer.fillCircle(this.field_Y >> 1, this.field_Y >> 1, this.field_Y >> 1, 16777215);
                 } else {
                   if (var12 == 13) {
                     this.field_J = true;
                     this.field_ib = 200;
                     this.field_Y = 100;
                     this.field_w = new Sprite(this.field_Y, this.field_Y);
-                    this.field_w.a();
-                    de.i(this.field_Y >> 1, this.field_Y >> 1, this.field_Y >> 1, 16777215);
+                    this.field_w.makeRasterTarget();
+                    SoftwareRasterizer.fillCircle(this.field_Y >> 1, this.field_Y >> 1, this.field_Y >> 1, 16777215);
                   } else {
                     if (var12 != 15) {
                       if (var12 != 14) {
@@ -2114,8 +2114,8 @@ final class ml extends DualLinkNode {
                               this.field_ab = 2;
                               if (param1) {
                                 this.field_w = new Sprite(this.field_Y, this.field_Y);
-                                this.field_w.a();
-                                de.i(this.field_Y >> 1, this.field_Y >> 1, this.field_Y >> 1, 16777215);
+                                this.field_w.makeRasterTarget();
+                                SoftwareRasterizer.fillCircle(this.field_Y >> 1, this.field_Y >> 1, this.field_Y >> 1, 16777215);
                               }
                               var25 = new int[]{28, 0, 29, 33, 47, 50, var7, 0, 0};
                               var13_ref_qb____ = new Sprite[][]{kc.field_kb, jd.field_j, ea.field_u, qe.field_i, hn.field_d, tj.field_A, bo.field_a, h.field_I, fn.field_b};
@@ -2129,7 +2129,7 @@ final class ml extends DualLinkNode {
                                 var24 = new int[]{255, 192, 255};
                                 var4 = var24;
                                 var20 = new Sprite(64, 96);
-                                var20.a();
+                                var20.makeRasterTarget();
                                 pc.$cfr$intArgs$a$5f050b8899ac(var21, 16, var22, var23, -8, var24, var13_ref_qb____[0][var25[1]], 0);
                                 pc.$cfr$intArgs$a$5f050b8899ac(var21, 32, var22, var23, -96, var24, var13_ref_qb____[4][var25[5]], 0);
                                 if (53 != var25[5] &&
@@ -2138,44 +2138,44 @@ final class ml extends DualLinkNode {
                                 }
                                 pc.$cfr$intArgs$a$5f050b8899ac(var21, 16, var22, var23, 25, var24, var13_ref_qb____[5][var25[4]], 0);
                                 this.field_I = new Sprite(64, 96);
-                                this.field_I.a();
-                                var20.a(32, 48, 0, 4096);
-                                this.field_I.e();
+                                this.field_I.makeRasterTarget();
+                                var20.drawCenteredRotatedScaledBilinear(32, 48, 0, 4096);
+                                this.field_I.trimTransparentBorders();
                                 var26 = new Sprite(64, 64);
-                                var26.a();
+                                var26.makeRasterTarget();
                                 pc.$cfr$intArgs$a$5f050b8899ac(var21, 0, var22, var23, 49, var24, var13_ref_qb____[1][var25[0]], 0);
                                 this.field_bb = new Sprite(64, 64);
-                                this.field_bb.a();
-                                var26.a(32, 32, 0, 4096);
-                                this.field_bb.e();
+                                this.field_bb.makeRasterTarget();
+                                var26.drawCenteredRotatedScaledBilinear(32, 32, 0, 4096);
+                                this.field_bb.trimTransparentBorders();
                                 var27 = new Sprite(64, 64);
-                                var27.a();
+                                var27.makeRasterTarget();
                                 pc.$cfr$intArgs$a$5f050b8899ac(var21, 0, var22, var23, -104, var24, var13_ref_qb____[7][0], 0);
                                 this.field_Q = new Sprite(64, 64);
-                                this.field_Q.a();
-                                var27.a(32, 32, 0, 4096);
-                                this.field_Q.e();
+                                this.field_Q.makeRasterTarget();
+                                var27.drawCenteredRotatedScaledBilinear(32, 32, 0, 4096);
+                                this.field_Q.trimTransparentBorders();
                                 var28 = new Sprite(64, 64);
-                                var28.a();
+                                var28.makeRasterTarget();
                                 pc.$cfr$intArgs$a$5f050b8899ac(var21, 0, var22, var23, -124, var24, var13_ref_qb____[8][0], 0);
                                 this.field_cb = new Sprite(64, 64);
-                                this.field_cb.a();
-                                var28.a(32, 32, 0, 4096);
-                                this.field_cb.e();
+                                this.field_cb.makeRasterTarget();
+                                var28.drawCenteredRotatedScaledBilinear(32, 32, 0, 4096);
+                                this.field_cb.trimTransparentBorders();
                                 var29 = new Sprite(64, 64);
-                                var29.a();
+                                var29.makeRasterTarget();
                                 pc.$cfr$intArgs$a$5f050b8899ac(var21, 0, var22, var23, -112, var24, var13_ref_qb____[2][var25[2]], 0);
                                 this.field_fb = new Sprite(64, 64);
-                                this.field_fb.a();
-                                var29.a(32, 32, 0, 4096);
-                                this.field_fb.e();
+                                this.field_fb.makeRasterTarget();
+                                var29.drawCenteredRotatedScaledBilinear(32, 32, 0, 4096);
+                                this.field_fb.trimTransparentBorders();
                                 var30 = new Sprite(64, 64);
-                                var30.a();
+                                var30.makeRasterTarget();
                                 pc.$cfr$intArgs$a$5f050b8899ac(var21, 0, var22, var23, -79, var24, var13_ref_qb____[3][var25[3]], 0);
                                 this.field_B = new Sprite(64, 64);
-                                this.field_B.a();
-                                var30.a(32, 32, 0, 4096);
-                                this.field_B.e();
+                                this.field_B.makeRasterTarget();
+                                var30.drawCenteredRotatedScaledBilinear(32, 32, 0, 4096);
+                                this.field_B.trimTransparentBorders();
                                 this.field_J = true;
                               } else {
                                 this.field_J = false;
@@ -2326,49 +2326,49 @@ final class ml extends DualLinkNode {
                                       if (this.field_jb != 7 &&
                                         this.field_jb != 9) {
                                         this.field_w = new Sprite(this.field_Y, this.field_Y);
-                                        this.field_w.a();
-                                        de.i(this.field_Y >> 1, this.field_Y >> 1, this.field_Y >> 1, 16777215);
+                                        this.field_w.makeRasterTarget();
+                                        SoftwareRasterizer.fillCircle(this.field_Y >> 1, this.field_Y >> 1, this.field_Y >> 1, 16777215);
                                       } else {
                                         this.field_w = new Sprite(48, 48);
-                                        this.field_w.a();
-                                        de.i(24, 24, 24, 16777215);
+                                        this.field_w.makeRasterTarget();
+                                        SoftwareRasterizer.fillCircle(24, 24, 24, 16777215);
                                       }
                                     }
                                     if (var11 == null) {
                                       this.field_J = false;
                                     } else {
                                       var39 = new Sprite(this.field_Y, 3 * this.field_Y / 2);
-                                      var39.a();
+                                      var39.makeRasterTarget();
                                       if (this.field_jb != 11 &&
                                         this.field_jb != 8 &&
                                         6 != this.field_jb &&
                                         this.field_jb != 25 &&
                                         this.field_U) {
-                                        pc.$cfr$intArgs$a$5f050b8899ac(var5, this.field_Y / 2, var6, var3, -111, var4, var11[6].b(), 0);
+                                        pc.$cfr$intArgs$a$5f050b8899ac(var5, this.field_Y / 2, var6, var3, -111, var4, var11[6].toRgbSprite(), 0);
                                       } else {
-                                        pc.$cfr$intArgs$a$5f050b8899ac(var5, this.field_Y / 2, var6, var3, -85, var4, var11[2].b(), 0);
+                                        pc.$cfr$intArgs$a$5f050b8899ac(var5, this.field_Y / 2, var6, var3, -85, var4, var11[2].toRgbSprite(), 0);
                                       }
-                                      this.field_I = var39.g();
+                                      this.field_I = var39.copy();
                                       var40 = new Sprite(this.field_Y, this.field_Y);
-                                      var40.a();
-                                      pc.$cfr$intArgs$a$5f050b8899ac(var5, 0, var6, var3, 70, var4, var11[3].b(), 0);
-                                      this.field_bb = var40.g();
+                                      var40.makeRasterTarget();
+                                      pc.$cfr$intArgs$a$5f050b8899ac(var5, 0, var6, var3, 70, var4, var11[3].toRgbSprite(), 0);
+                                      this.field_bb = var40.copy();
                                       var41 = new Sprite(this.field_Y, this.field_Y);
-                                      var41.a();
-                                      pc.$cfr$intArgs$a$5f050b8899ac(var5, 0, var6, var3, 33, var4, var11[1].b(), 0);
-                                      this.field_Q = var41.g();
+                                      var41.makeRasterTarget();
+                                      pc.$cfr$intArgs$a$5f050b8899ac(var5, 0, var6, var3, 33, var4, var11[1].toRgbSprite(), 0);
+                                      this.field_Q = var41.copy();
                                       var42 = new Sprite(this.field_Y, this.field_Y);
-                                      var42.a();
-                                      pc.$cfr$intArgs$a$5f050b8899ac(var5, 0, var6, var3, -127, var4, var11[4].b(), 0);
-                                      this.field_cb = var42.g();
+                                      var42.makeRasterTarget();
+                                      pc.$cfr$intArgs$a$5f050b8899ac(var5, 0, var6, var3, -127, var4, var11[4].toRgbSprite(), 0);
+                                      this.field_cb = var42.copy();
                                       var43 = new Sprite(this.field_Y, this.field_Y);
-                                      var43.a();
-                                      pc.$cfr$intArgs$a$5f050b8899ac(var5, 0, var6, var3, -4, var4, var11[0].b(), 0);
-                                      this.field_fb = var43.g();
+                                      var43.makeRasterTarget();
+                                      pc.$cfr$intArgs$a$5f050b8899ac(var5, 0, var6, var3, -4, var4, var11[0].toRgbSprite(), 0);
+                                      this.field_fb = var43.copy();
                                       var44 = new Sprite(this.field_Y, this.field_Y);
-                                      var44.a();
-                                      pc.$cfr$intArgs$a$5f050b8899ac(var5, 0, var6, var3, -86, var4, var11[5].b(), 0);
-                                      this.field_B = var44.g();
+                                      var44.makeRasterTarget();
+                                      pc.$cfr$intArgs$a$5f050b8899ac(var5, 0, var6, var3, -86, var4, var11[5].toRgbSprite(), 0);
+                                      this.field_B = var44.copy();
                                       this.field_J = true;
                                     }
                                     if (!(param1)) {
@@ -2380,8 +2380,8 @@ final class ml extends DualLinkNode {
                                   this.field_Y = 24;
                                   this.field_ib = 25;
                                   this.field_w = new Sprite(this.field_Y, this.field_Y);
-                                  this.field_w.a();
-                                  de.i(12, 12, 12, 16777215);
+                                  this.field_w.makeRasterTarget();
+                                  SoftwareRasterizer.fillCircle(12, 12, 12, 16777215);
                                   this.field_p = this.field_ib;
                                   this.field_Y = this.field_w.field_n;
                                   this.e((byte) 6);
@@ -2394,8 +2394,8 @@ final class ml extends DualLinkNode {
                               this.field_Y = 32;
                               if (param1) {
                                 this.field_w = new Sprite(this.field_Y, this.field_Y);
-                                this.field_w.a();
-                                de.i(this.field_Y >> 1, this.field_Y >> 1, this.field_Y >> 1, 16777215);
+                                this.field_w.makeRasterTarget();
+                                SoftwareRasterizer.fillCircle(this.field_Y >> 1, this.field_Y >> 1, this.field_Y >> 1, 16777215);
                               }
                               var8 = new int[]{var7, var7, var7, var7, var7, var7, var7, 0, 0};
                               if (this.field_L.field_N != null) {
@@ -2411,7 +2411,7 @@ final class ml extends DualLinkNode {
                                 this.field_J = false;
                               } else {
                                 var31 = new Sprite(64, 96);
-                                var31.a();
+                                var31.makeRasterTarget();
                                 if (this.field_jb != 16) {
                                   pc.$cfr$intArgs$a$5f050b8899ac(var19, 16, var32, var17, 78, var18, var9[0][var8[1]], 0);
                                   pc.$cfr$intArgs$a$5f050b8899ac(var19, 32, var32, var17, -91, var18, var9[4][var8[5]], 0);
@@ -2424,48 +2424,48 @@ final class ml extends DualLinkNode {
                                   pc.$cfr$intArgs$a$5f050b8899ac(var19, 16, var32, var17, 116, var18, tk.field_x[2], 0);
                                 }
                                 this.field_I = new Sprite(32, 48);
-                                this.field_I.a();
-                                var31.a(16, 24, 0, 2048);
-                                this.field_I.e();
+                                this.field_I.makeRasterTarget();
+                                var31.drawCenteredRotatedScaledBilinear(16, 24, 0, 2048);
+                                this.field_I.trimTransparentBorders();
                                 var33 = new Sprite(64, 64);
-                                var33.a();
+                                var33.makeRasterTarget();
                                 pc.$cfr$intArgs$a$5f050b8899ac(var19, 0, var32, var17, 91, var18, var9[1][var8[0]], 0);
                                 this.field_bb = new Sprite(32, 32);
-                                this.field_bb.a();
-                                var33.a(16, 16, 0, 2048);
-                                this.field_bb.e();
+                                this.field_bb.makeRasterTarget();
+                                var33.drawCenteredRotatedScaledBilinear(16, 16, 0, 2048);
+                                this.field_bb.trimTransparentBorders();
                                 var34 = new Sprite(64, 64);
-                                var34.a();
+                                var34.makeRasterTarget();
                                 pc.$cfr$intArgs$a$5f050b8899ac(var19, 0, var32, var17, 123, var18, var9[7][0], 0);
                                 this.field_Q = new Sprite(32, 32);
-                                this.field_Q.a();
+                                this.field_Q.makeRasterTarget();
                                 if (var8[0] != 46) {
-                                  var34.a(16, 16, 0, 2048);
+                                  var34.drawCenteredRotatedScaledBilinear(16, 16, 0, 2048);
                                 }
-                                this.field_Q.e();
+                                this.field_Q.trimTransparentBorders();
                                 var35 = new Sprite(64, 64);
-                                var35.a();
+                                var35.makeRasterTarget();
                                 pc.$cfr$intArgs$a$5f050b8899ac(var19, 0, var32, var17, -81, var18, var9[8][0], 0);
                                 this.field_cb = new Sprite(32, 32);
-                                this.field_cb.a();
+                                this.field_cb.makeRasterTarget();
                                 if (var8[0] != 46) {
-                                  var35.a(16, 16, 0, 2048);
+                                  var35.drawCenteredRotatedScaledBilinear(16, 16, 0, 2048);
                                 }
-                                this.field_cb.e();
+                                this.field_cb.trimTransparentBorders();
                                 var36 = new Sprite(64, 64);
-                                var36.a();
+                                var36.makeRasterTarget();
                                 pc.$cfr$intArgs$a$5f050b8899ac(var19, 0, var32, var17, 126, var18, var9[2][var8[2]], 0);
                                 this.field_fb = new Sprite(32, 32);
-                                this.field_fb.a();
-                                var36.a(16, 16, 0, 2048);
-                                this.field_fb.e();
+                                this.field_fb.makeRasterTarget();
+                                var36.drawCenteredRotatedScaledBilinear(16, 16, 0, 2048);
+                                this.field_fb.trimTransparentBorders();
                                 var37 = new Sprite(64, 64);
-                                var37.a();
+                                var37.makeRasterTarget();
                                 pc.$cfr$intArgs$a$5f050b8899ac(var19, 0, var32, var17, 14, var18, var9[3][var8[3]], 0);
                                 this.field_B = new Sprite(32, 32);
-                                this.field_B.a();
-                                var37.a(16, 16, 0, 2048);
-                                this.field_B.e();
+                                this.field_B.makeRasterTarget();
+                                var37.drawCenteredRotatedScaledBilinear(16, 16, 0, 2048);
+                                this.field_B.trimTransparentBorders();
                                 this.field_ab = -1;
                                 if (var8[2] == 27) {
                                   this.field_ab = 0;
@@ -2479,25 +2479,25 @@ final class ml extends DualLinkNode {
                                 if (var8[2] == 54) {
                                   this.field_ab = 3;
                                   var38 = new Sprite(64, 64);
-                                  var38.a();
+                                  var38.makeRasterTarget();
                                   var13 = 32;
                                   if (this.field_B != null) {
-                                    this.field_B.c(32 + (-(var13 >> 2) - 4), 48 - var13);
+                                    this.field_B.drawTransparent(32 + (-(var13 >> 2) - 4), 48 - var13);
                                   }
                                   if (this.field_cb != null) {
-                                    this.field_cb.c(-(var13 >> 1) + 32, -var13 + 48);
+                                    this.field_cb.drawTransparent(-(var13 >> 1) + 32, -var13 + 48);
                                   }
                                   if (this.field_bb != null) {
-                                    this.field_bb.c(-(var13 >> 1) + 32, -var13 + 48);
+                                    this.field_bb.drawTransparent(-(var13 >> 1) + 32, -var13 + 48);
                                   }
                                   if (null != this.field_I) {
-                                    this.field_I.c(-(var13 >> 1) + 32, 48 - var13 * 3 / 2);
+                                    this.field_I.drawTransparent(-(var13 >> 1) + 32, 48 - var13 * 3 / 2);
                                   }
                                   if (this.field_Q != null) {
-                                    this.field_Q.c(32 - (var13 >> 1), 48 - var13);
+                                    this.field_Q.drawTransparent(32 - (var13 >> 1), 48 - var13);
                                   }
                                   if (null != this.field_fb) {
-                                    this.field_fb.c(-4 - (var13 >> 1) + 32, 48 - var13);
+                                    this.field_fb.drawTransparent(-4 - (var13 >> 1) + 32, 48 - var13);
                                   }
                                   this.field_cb = null;
                                   this.field_B = null;
@@ -2513,32 +2513,32 @@ final class ml extends DualLinkNode {
                             this.field_J = true;
                             this.field_ib = 100;
                             this.field_w = new Sprite(this.field_Y, this.field_Y);
-                            this.field_w.a();
-                            de.i(this.field_Y >> 1, this.field_Y >> 1, this.field_Y >> 1, 16777215);
+                            this.field_w.makeRasterTarget();
+                            SoftwareRasterizer.fillCircle(this.field_Y >> 1, this.field_Y >> 1, this.field_Y >> 1, 16777215);
                           }
                         } else {
                           this.field_Y = 100;
                           this.field_ib = 150;
                           this.field_J = true;
                           this.field_w = new Sprite(this.field_Y, this.field_Y);
-                          this.field_w.a();
-                          de.i(this.field_Y >> 1, this.field_Y >> 1, this.field_Y >> 1, 16777215);
+                          this.field_w.makeRasterTarget();
+                          SoftwareRasterizer.fillCircle(this.field_Y >> 1, this.field_Y >> 1, this.field_Y >> 1, 16777215);
                         }
                       } else {
                         this.field_ib = 150;
                         this.field_J = true;
                         this.field_Y = 100;
                         this.field_w = new Sprite(this.field_Y, this.field_Y);
-                        this.field_w.a();
-                        de.i(this.field_Y >> 1, this.field_Y >> 1, this.field_Y >> 1, 16777215);
+                        this.field_w.makeRasterTarget();
+                        SoftwareRasterizer.fillCircle(this.field_Y >> 1, this.field_Y >> 1, this.field_Y >> 1, 16777215);
                       }
                     } else {
                       this.field_J = true;
                       this.field_Y = 100;
                       this.field_ib = 150;
                       this.field_w = new Sprite(this.field_Y, this.field_Y);
-                      this.field_w.a();
-                      de.i(this.field_Y >> 1, this.field_Y >> 1, this.field_Y >> 1, 16777215);
+                      this.field_w.makeRasterTarget();
+                      SoftwareRasterizer.fillCircle(this.field_Y >> 1, this.field_Y >> 1, this.field_Y >> 1, 16777215);
                     }
                   }
                 }
@@ -2648,7 +2648,7 @@ final class ml extends DualLinkNode {
           field_S = null;
           field_K = null;
           if (param0) {
-            ml.a((dj) null, 88, (byte) 54, (dj) null);
+            ml.a((BitmapFont) null, 88, (byte) 54, (BitmapFont) null);
           }
           field_V = null;
         } catch (RuntimeException runtimeException) {
@@ -2898,7 +2898,7 @@ final class ml extends DualLinkNode {
                     this.field_L.b(52, var35);
                     break regionExit1;
                   case 12:
-                    this.field_L.a(this.field_db - 256, -60, this.field_lb - 128, go.field_j[29].b());
+                    this.field_L.a(this.field_db - 256, -60, this.field_lb - 128, go.field_j[29].toRgbSprite());
                     break regionExit1;
                   case 28:
                   case 32:
@@ -3433,7 +3433,7 @@ final class ml extends DualLinkNode {
             var10Lifetime1 = this.field_kb;
             var11 = this.field_eb;
             var9_intLifetime1 = this.field_db - ce.field_k + (this.field_Y >> 1);
-            var8Lifetime1 = this.field_lb - di.field_m;
+            var8Lifetime1 = this.field_lb - NodeHashTable.field_m;
             var12 = am.a(var9_intLifetime1, var8Lifetime1, false);
             if (var12 < 1) {
               var8Lifetime1 = 0;
@@ -3751,8 +3751,8 @@ final class ml extends DualLinkNode {
               this.field_q = 0;
               this.field_Y = 32;
               this.field_w = new Sprite(this.field_Y, this.field_Y);
-              this.field_w.a();
-              de.i(this.field_Y >> 1, this.field_Y >> 1, this.field_Y >> 1, 16777215);
+              this.field_w.makeRasterTarget();
+              SoftwareRasterizer.fillCircle(this.field_Y >> 1, this.field_Y >> 1, this.field_Y >> 1, 16777215);
             }
             if (this.field_jb != 38) {
               this.field_M = 0;
@@ -4152,7 +4152,7 @@ final class ml extends DualLinkNode {
     final static void a(boolean param0, int param1) {
         try {
           if (param1 >= -100) {
-            ml.a((dj) null, -106, (byte) 51, (dj) null);
+            ml.a((BitmapFont) null, -106, (byte) 51, (BitmapFont) null);
           }
           eb.a(param0, -105);
         } catch (RuntimeException runtimeException) {
@@ -4344,8 +4344,8 @@ final class ml extends DualLinkNode {
               this.field_q = 0;
               this.field_z = true;
               this.field_w = new Sprite(this.field_Y, this.field_Y);
-              this.field_w.a();
-              de.i(this.field_Y >> 1, this.field_Y >> 1, this.field_Y >> 1, 16777215);
+              this.field_w.makeRasterTarget();
+              SoftwareRasterizer.fillCircle(this.field_Y >> 1, this.field_Y >> 1, this.field_Y >> 1, 16777215);
             }
           }
           if (this.t(107) &&
@@ -4479,11 +4479,11 @@ final class ml extends DualLinkNode {
             }
             var6 = 8421504 ^ (var4_int | 8421504);
             if (this.field_q > 0) {
-              this.field_w.a(this.field_lb - (this.field_Y >> 1) - (1 - param2), -this.field_Y + this.field_db + param1, var6);
-              this.field_w.a(param2 + (1 + this.field_lb) - (this.field_Y >> 1), param1 + this.field_db - this.field_Y, var6);
-              this.field_w.a(param2 + (this.field_lb - (this.field_Y >> 1)), -1 - this.field_Y + this.field_db + param1, var6);
-              this.field_w.a(param2 + (-(this.field_Y >> 1) + this.field_lb), param1 + (1 - this.field_Y + this.field_db), var6);
-              this.field_w.a(param2 + (this.field_lb - (this.field_Y >> 1)), param1 + (this.field_db - this.field_Y), var4_int);
+              this.field_w.drawSilhouette(this.field_lb - (this.field_Y >> 1) - (1 - param2), -this.field_Y + this.field_db + param1, var6);
+              this.field_w.drawSilhouette(param2 + (1 + this.field_lb) - (this.field_Y >> 1), param1 + this.field_db - this.field_Y, var6);
+              this.field_w.drawSilhouette(param2 + (this.field_lb - (this.field_Y >> 1)), -1 - this.field_Y + this.field_db + param1, var6);
+              this.field_w.drawSilhouette(param2 + (-(this.field_Y >> 1) + this.field_lb), param1 + (1 - this.field_Y + this.field_db), var6);
+              this.field_w.drawSilhouette(param2 + (this.field_lb - (this.field_Y >> 1)), param1 + (this.field_db - this.field_Y), var4_int);
             } else {
               var7 = this.field_Y;
               if (7 == this.field_jb ||
@@ -4492,7 +4492,7 @@ final class ml extends DualLinkNode {
               }
               var8 = param2 + this.field_lb;
               var9 = param1 + this.field_db - (var7 >> 1);
-              de.c(var8, var9, var7 >> 1, var4_int, 128);
+              SoftwareRasterizer.fillCircleAlpha(var8, var9, var7 >> 1, var4_int, 128);
               gn.a(var7 >> 1, (byte) 125, 128, var8, var9);
             }
             return;
@@ -4550,7 +4550,7 @@ final class ml extends DualLinkNode {
         }
     }
 
-    final static void a(dj param0, int param1, byte param2, dj param3) {
+    final static void a(BitmapFont param0, int param1, byte param2, BitmapFont param3) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -4567,7 +4567,7 @@ final class ml extends DualLinkNode {
             return;
           }
           ko.field_j = param0;
-          td.a(true, de.field_j / 2, de.field_e / 2);
+          td.a(true, SoftwareRasterizer.field_j / 2, SoftwareRasterizer.field_e / 2);
           e.b(1, param3.field_o, param0.field_m + param0.field_o, param0.field_o, param3.field_m + param3.field_o);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

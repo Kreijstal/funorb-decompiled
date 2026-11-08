@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class hg {
-    static og field_a;
+    static PlatformTask field_a;
     static String field_c;
     static kc field_e;
     static kc field_d;
@@ -21,7 +21,7 @@ abstract class hg {
 
     final static String a(int param0, char param1) {
         if (param0 != 3) {
-          field_a = (og) null;
+          field_a = (PlatformTask) null;
         }
         return String.valueOf(param1);
     }
@@ -56,7 +56,7 @@ abstract class hg {
           }
           stackIn_5_0 = dd.field_c.field_Db;
           stackIn_6_1 = (dd.field_h == dd.field_c.field_Db);
-          var3_int = ((dn) (Object) stackIn_5_0).a(stackIn_6_1, (byte) 98, ga.field_r + 2, 2, param0 * (ga.field_r * 3 + 6), param1) ? 1 : 0;
+          var3_int = ((dn) (Object) stackIn_5_0).a(stackIn_6_1, (byte) 98, ImageProducerRasterBuffer.field_r + 2, 2, param0 * (ImageProducerRasterBuffer.field_r * 3 + 6), param1) ? 1 : 0;
           var4 = dd.field_c.field_Eb.field_G;
           if (SpriteState.field_t != 2 &&
             SpriteState.field_t != 1) {
@@ -80,14 +80,14 @@ abstract class hg {
               var6.e((byte) 20);
             }
             var6.field_x = dd.field_c.field_Eb.field_x;
-            var6.field_Jb.a(var6.field_x, 0, 0, ga.field_r, (byte) -120);
+            var6.field_Jb.a(var6.field_x, 0, 0, ImageProducerRasterBuffer.field_r, (byte) -120);
             var8 = 0;
             if (var6.field_Gb != null &&
               !var6.field_Gb.equals("")) {
               var6.field_Mb.field_eb = 16737894;
               var6.field_Mb.field_W = eb.field_d;
               var8 = 1;
-              var6.field_Mb.a(eb.field_d.field_n + 3, 0, 0, ga.field_r, (byte) -120);
+              var6.field_Mb.a(eb.field_d.field_n + 3, 0, 0, ImageProducerRasterBuffer.field_r, (byte) -120);
             }
             var9 = 0;
             var10 = var6.field_x;
@@ -97,16 +97,16 @@ abstract class hg {
             }
             stackIn_21_0 = var6.field_Jb;
             if (var10 > 0) {
-              stackIn_22_1 = dj.a(var6.field_Jb.field_Z, var6.field_Cb, var10);
+              stackIn_22_1 = BitmapFont.truncateWithEllipsis(var6.field_Jb.field_Z, var6.field_Cb, var10);
             } else {
               stackIn_22_1 = var6.field_Cb;
             }
             stackIn_21_0.field_rb = stackIn_22_1;
             stackIn_25_0 = (var6.field_Jb.field_rb.equals(var6.field_Cb)) ? 0 : 1;
             var11 = stackIn_25_0;
-            var6.field_Jb.a(var10, var9, 0, ga.field_r, (byte) -120);
+            var6.field_Jb.a(var10, var9, 0, ImageProducerRasterBuffer.field_r, (byte) -120);
             if (var3_int == 0) {
-              var6.field_B = ga.field_r - var6.field_I;
+              var6.field_B = ImageProducerRasterBuffer.field_r - var6.field_I;
             }
             if (var7 != 0) {
               dd.field_c.field_Eb.a((byte) 125, (kc) (var5), var6, 2);
@@ -206,7 +206,7 @@ abstract class hg {
         if (param1 != -52) {
           hg.a(87, '|');
         }
-        return id.field_c[param0 & 2047];
+        return MeshRasterState.field_c[param0 & 2047];
     }
 
     final static boolean b(int param0) {
@@ -233,7 +233,7 @@ abstract class hg {
         }
         mh.g((byte) 45);
         ng.a((byte) -23);
-        ba.b(11670);
+        PatchEnvelopeSet.b(11670);
         if (tm.a(!param0 ? true : false)) {
           he.field_e.writeOpcode((byte) -107, 1);
           we.a(0, (byte) 94);
@@ -246,11 +246,11 @@ abstract class hg {
           if (param3 > -97) {
             field_b = 88;
           }
-          ul.a(md.field_b, mi.field_A, nj.field_d, ml.field_S, hh.field_c, param1, j.field_f, th.field_k, 27874, hh.field_d, IntrusiveNode.field_c, IntrusiveDeque.field_i);
+          Bzip2State.a(md.field_b, mi.field_A, nj.field_d, ml.field_S, MouseWheelHandler.field_c, param1, j.field_f, th.field_k, 27874, MouseWheelHandler.field_d, IntrusiveNode.field_c, IntrusiveDeque.field_i);
           ArchiveProvider.field_a = qe.a(param2, "chatfilter", "lobby", 119);
           cf.field_b[2] = ag.field_A;
           cf.field_b[1] = u.field_d;
-          cf.field_b[0] = nb.field_e;
+          cf.field_b[0] = GzipDecoder.field_e;
           hj.a(ea.field_w, param0, 3896);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "hg.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');

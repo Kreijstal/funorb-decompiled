@@ -134,9 +134,9 @@ class im extends bd {
     ch a(int param0) {
         if (param0 != 0) {
           field_i = (String) null;
-          return hk.field_m;
+          return MusicPatchPcmStream.field_m;
         }
-        return hk.field_m;
+        return MusicPatchPcmStream.field_m;
     }
 
     final static wa a(int param0, String param1) {
@@ -167,7 +167,7 @@ class im extends bd {
             return (wa) (stackIn_7_0);
           }
           var6 = (CharSequence) ((Object) param1);
-          var2 = gk.a(var6, -13);
+          var2 = Js5ArchiveManager.a(var6, -13);
           if (param0 != 0) {
             im.a((byte) 70);
           }
@@ -181,7 +181,7 @@ class im extends bd {
               return null;
             }
             var7 = (CharSequence) ((Object) var3.field_Cb);
-            var4 = gk.a(var7, -13);
+            var4 = Js5ArchiveManager.a(var7, -13);
             if (!var4.equals(var2)) {
               var3 = (wa) (ie.field_Qb.getNextWithSameKey(-107));
               continue;
@@ -214,7 +214,7 @@ class im extends bd {
         }
     }
 
-    final static void a(int param0, gh param1, dl param2, java.awt.Component param3, int param4, boolean param5) {
+    final static void a(int param0, MidiPcmStream param1, PlatformTaskDispatcher param2, java.awt.Component param3, int param4, boolean param5) {
         try {
           if (param4 != -22836) {
             field_f = (String) null;
@@ -225,10 +225,10 @@ class im extends bd {
         }
     }
 
-    final static nc a(ResourceArchive param0, int param1, ResourceArchive param2, int param3, int param4) {
+    final static CoverageBitmapFont a(ResourceArchive param0, int param1, ResourceArchive param2, int param3, int param4) {
         RuntimeException var5 = null;
         Object stackIn_2_0 = null;
-        nc stackIn_6_0 = null;
+        CoverageBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -238,7 +238,7 @@ class im extends bd {
         try {
           if (!fc.a(50, param0, param4, param1)) {
             stackIn_2_0 = null;
-            return (nc) (stackIn_2_0);
+            return (CoverageBitmapFont) (stackIn_2_0);
           }
           if (param3 < 44) {
             field_i = (String) null;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class f extends IntrusiveNode {
-    static ha field_g;
+    static MusicTrack field_g;
     byte[] field_k;
     int field_j;
     static String field_i;
@@ -72,7 +72,7 @@ final class f extends IntrusiveNode {
                 vh.field_t = vh.field_t + 1;
               }
               var10 = ArchiveIndex.a(3, var8_ref_jg);
-              var11 = var10 + dj.a(var8_ref_jg.field_e);
+              var11 = var10 + BitmapFont.escapeMarkup(var8_ref_jg.field_e);
               var12 = rm.a(var8_ref_jg, (byte) 106);
               var8_ref_jg.field_a = new kc(0L, nf.field_A, var11);
               var6 = var6 + param2;
@@ -109,19 +109,19 @@ final class f extends IntrusiveNode {
             ui.field_s = false;
             qo.field_f.field_Cb.field_db = qo.field_f.field_Hb.field_I - qo.field_f.field_Cb.field_I;
             qo.field_f.field_Cb.field_bb = 0;
-            di.field_j = true;
+            NodeHashTable.field_j = true;
           }
           if (ef.field_r &&
             tm.field_d != null) {
-            di.field_j = true;
+            NodeHashTable.field_j = true;
           }
           var9Lifetime1 = -qo.field_f.field_Cb.field_B - qo.field_f.field_Cb.field_I + qo.field_f.field_Hb.field_I;
-          if (di.field_j) {
+          if (NodeHashTable.field_j) {
             qo.field_f.field_Cb.field_bb = -qo.field_f.field_Cb.field_db + var9Lifetime1;
           }
           qo.field_f.a(param2, param1 * 2 * param2, 9860, true);
           stackIn_46_0 = (qo.field_f.field_Cb.field_db + qo.field_f.field_Cb.field_bb == var9Lifetime1);
-          di.field_j = stackIn_46_0;
+          NodeHashTable.field_j = stackIn_46_0;
           return (jg) (var4);
         }
         qo.field_f.field_Cb.field_db = qo.field_f.field_Cb.field_db + var8Lifetime1;
@@ -131,49 +131,49 @@ final class f extends IntrusiveNode {
           if (!ui.field_s) {
             if (ef.field_r &&
               tm.field_d != null) {
-              di.field_j = true;
+              NodeHashTable.field_j = true;
             }
             var9Lifetime2 = -qo.field_f.field_Cb.field_B - qo.field_f.field_Cb.field_I + qo.field_f.field_Hb.field_I;
-            if (di.field_j) {
+            if (NodeHashTable.field_j) {
               qo.field_f.field_Cb.field_bb = -qo.field_f.field_Cb.field_db + var9Lifetime2;
             }
             qo.field_f.a(param2, param1 * 2 * param2, 9860, true);
             stackIn_57_0 = (qo.field_f.field_Cb.field_db + qo.field_f.field_Cb.field_bb == var9Lifetime2);
-            di.field_j = stackIn_57_0;
+            NodeHashTable.field_j = stackIn_57_0;
           } else {
             ui.field_s = false;
             qo.field_f.field_Cb.field_db = qo.field_f.field_Hb.field_I - qo.field_f.field_Cb.field_I;
             qo.field_f.field_Cb.field_bb = 0;
-            di.field_j = true;
+            NodeHashTable.field_j = true;
             if (!ef.field_r) {
               var9Lifetime2 = -qo.field_f.field_Cb.field_B - qo.field_f.field_Cb.field_I + qo.field_f.field_Hb.field_I;
-              if (di.field_j) {
+              if (NodeHashTable.field_j) {
                 qo.field_f.field_Cb.field_bb = -qo.field_f.field_Cb.field_db + var9Lifetime2;
               }
               qo.field_f.a(param2, param1 * 2 * param2, 9860, true);
               stackIn_64_0 = (qo.field_f.field_Cb.field_db + qo.field_f.field_Cb.field_bb == var9Lifetime2);
-              di.field_j = stackIn_64_0;
+              NodeHashTable.field_j = stackIn_64_0;
             } else {
               if (tm.field_d != null) {
-                di.field_j = true;
+                NodeHashTable.field_j = true;
                 var9Lifetime2 = -qo.field_f.field_Cb.field_B - qo.field_f.field_Cb.field_I + qo.field_f.field_Hb.field_I;
-                if (di.field_j) {
+                if (NodeHashTable.field_j) {
                   qo.field_f.field_Cb.field_bb = -qo.field_f.field_Cb.field_db + var9Lifetime2;
                 }
                 qo.field_f.a(param2, param1 * 2 * param2, 9860, true);
                 stackIn_71_0 = (qo.field_f.field_Cb.field_db + qo.field_f.field_Cb.field_bb == var9Lifetime2);
-                di.field_j = stackIn_71_0;
+                NodeHashTable.field_j = stackIn_71_0;
               } else {
                 var9Lifetime2 = -qo.field_f.field_Cb.field_B - qo.field_f.field_Cb.field_I + qo.field_f.field_Hb.field_I;
-                if (!di.field_j) {
+                if (!NodeHashTable.field_j) {
                   qo.field_f.a(param2, param1 * 2 * param2, 9860, true);
                   stackIn_76_0 = (qo.field_f.field_Cb.field_db + qo.field_f.field_Cb.field_bb == var9Lifetime2);
-                  di.field_j = stackIn_76_0;
+                  NodeHashTable.field_j = stackIn_76_0;
                 } else {
                   qo.field_f.field_Cb.field_bb = -qo.field_f.field_Cb.field_db + var9Lifetime2;
                   qo.field_f.a(param2, param1 * 2 * param2, 9860, true);
                   stackIn_80_0 = (qo.field_f.field_Cb.field_db + qo.field_f.field_Cb.field_bb == var9Lifetime2);
-                  di.field_j = stackIn_80_0;
+                  NodeHashTable.field_j = stackIn_80_0;
                 }
               }
             }
@@ -184,74 +184,74 @@ final class f extends IntrusiveNode {
         if (!ui.field_s) {
           if (ef.field_r &&
             tm.field_d != null) {
-            di.field_j = true;
+            NodeHashTable.field_j = true;
             var9Lifetime3 = -qo.field_f.field_Cb.field_B - qo.field_f.field_Cb.field_I + qo.field_f.field_Hb.field_I;
-            if (!di.field_j) {
+            if (!NodeHashTable.field_j) {
               qo.field_f.a(param2, param1 * 2 * param2, 9860, true);
               stackIn_121_0 = (qo.field_f.field_Cb.field_db + qo.field_f.field_Cb.field_bb == var9Lifetime3);
-              di.field_j = stackIn_121_0;
+              NodeHashTable.field_j = stackIn_121_0;
             } else {
               qo.field_f.field_Cb.field_bb = -qo.field_f.field_Cb.field_db + var9Lifetime3;
               qo.field_f.a(param2, param1 * 2 * param2, 9860, true);
               stackIn_125_0 = (qo.field_f.field_Cb.field_db + qo.field_f.field_Cb.field_bb == var9Lifetime3);
-              di.field_j = stackIn_125_0;
+              NodeHashTable.field_j = stackIn_125_0;
             }
             return (jg) (var4);
           }
           var9Lifetime3Lifetime1 = -qo.field_f.field_Cb.field_B - qo.field_f.field_Cb.field_I + qo.field_f.field_Hb.field_I;
-          if (!di.field_j) {
+          if (!NodeHashTable.field_j) {
             qo.field_f.a(param2, param1 * 2 * param2, 9860, true);
             stackIn_131_0 = (qo.field_f.field_Cb.field_db + qo.field_f.field_Cb.field_bb == var9Lifetime3Lifetime1);
-            di.field_j = stackIn_131_0;
+            NodeHashTable.field_j = stackIn_131_0;
           } else {
             qo.field_f.field_Cb.field_bb = -qo.field_f.field_Cb.field_db + var9Lifetime3Lifetime1;
             qo.field_f.a(param2, param1 * 2 * param2, 9860, true);
             stackIn_135_0 = (qo.field_f.field_Cb.field_db + qo.field_f.field_Cb.field_bb == var9Lifetime3Lifetime1);
-            di.field_j = stackIn_135_0;
+            NodeHashTable.field_j = stackIn_135_0;
           }
           return (jg) (var4);
         }
         ui.field_s = false;
         qo.field_f.field_Cb.field_db = qo.field_f.field_Hb.field_I - qo.field_f.field_Cb.field_I;
         qo.field_f.field_Cb.field_bb = 0;
-        di.field_j = true;
+        NodeHashTable.field_j = true;
         if (!ef.field_r) {
           var9Lifetime4 = -qo.field_f.field_Cb.field_B - qo.field_f.field_Cb.field_I + qo.field_f.field_Hb.field_I;
-          if (!di.field_j) {
+          if (!NodeHashTable.field_j) {
             qo.field_f.a(param2, param1 * 2 * param2, 9860, true);
             stackIn_88_0 = (qo.field_f.field_Cb.field_db + qo.field_f.field_Cb.field_bb == var9Lifetime4);
-            di.field_j = stackIn_88_0;
+            NodeHashTable.field_j = stackIn_88_0;
           } else {
             qo.field_f.field_Cb.field_bb = -qo.field_f.field_Cb.field_db + var9Lifetime4;
             qo.field_f.a(param2, param1 * 2 * param2, 9860, true);
             stackIn_92_0 = (qo.field_f.field_Cb.field_db + qo.field_f.field_Cb.field_bb == var9Lifetime4);
-            di.field_j = stackIn_92_0;
+            NodeHashTable.field_j = stackIn_92_0;
           }
         } else {
           if (tm.field_d == null) {
             var9Lifetime4 = -qo.field_f.field_Cb.field_B - qo.field_f.field_Cb.field_I + qo.field_f.field_Hb.field_I;
-            if (!di.field_j) {
+            if (!NodeHashTable.field_j) {
               qo.field_f.a(param2, param1 * 2 * param2, 9860, true);
               stackIn_99_0 = (qo.field_f.field_Cb.field_db + qo.field_f.field_Cb.field_bb == var9Lifetime4);
-              di.field_j = stackIn_99_0;
+              NodeHashTable.field_j = stackIn_99_0;
             } else {
               qo.field_f.field_Cb.field_bb = -qo.field_f.field_Cb.field_db + var9Lifetime4;
               qo.field_f.a(param2, param1 * 2 * param2, 9860, true);
               stackIn_103_0 = (qo.field_f.field_Cb.field_db + qo.field_f.field_Cb.field_bb == var9Lifetime4);
-              di.field_j = stackIn_103_0;
+              NodeHashTable.field_j = stackIn_103_0;
             }
           } else {
-            di.field_j = true;
+            NodeHashTable.field_j = true;
             var9Lifetime4 = -qo.field_f.field_Cb.field_B - qo.field_f.field_Cb.field_I + qo.field_f.field_Hb.field_I;
-            if (!di.field_j) {
+            if (!NodeHashTable.field_j) {
               qo.field_f.a(param2, param1 * 2 * param2, 9860, true);
               stackIn_109_0 = (qo.field_f.field_Cb.field_db + qo.field_f.field_Cb.field_bb == var9Lifetime4);
-              di.field_j = stackIn_109_0;
+              NodeHashTable.field_j = stackIn_109_0;
             } else {
               qo.field_f.field_Cb.field_bb = -qo.field_f.field_Cb.field_db + var9Lifetime4;
               qo.field_f.a(param2, param1 * 2 * param2, 9860, true);
               stackIn_113_0 = (qo.field_f.field_Cb.field_db + qo.field_f.field_Cb.field_bb == var9Lifetime4);
-              di.field_j = stackIn_113_0;
+              NodeHashTable.field_j = stackIn_113_0;
             }
           }
         }

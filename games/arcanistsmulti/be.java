@@ -8,7 +8,7 @@ final class be {
     private int field_n;
     static int[] field_m;
     private int field_k;
-    private sd field_e;
+    private BufferedRandomAccessFile field_e;
     static int[] field_d;
     static IndexedSprite field_j;
     static boolean field_g;
@@ -16,7 +16,7 @@ final class be {
     static String field_a;
     static kc field_b;
     static int field_f;
-    private sd field_c;
+    private BufferedRandomAccessFile field_c;
     static kc field_l;
 
     final boolean a(byte[] param0, boolean param1, int param2, int param3) {
@@ -233,7 +233,7 @@ final class be {
             var6 = this.field_c;
             synchronized (var6) {
               if (param3 >= -73) {
-                this.field_e = (sd) null;
+                this.field_e = (BufferedRandomAccessFile) null;
               }
               try {
                 if (param1) {
@@ -395,7 +395,7 @@ final class be {
         }
     }
 
-    final static void a(int param0, vd param1, String param2, dj param3, byte param4) {
+    final static void a(int param0, vd param1, String param2, BitmapFont param3, byte param4) {
         int var7 = 0;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
@@ -420,7 +420,7 @@ final class be {
           for (var7 = 1; param2.length() > var7; var7++) {
             var8 = param2.charAt(var7);
             if (60 == var8) {
-              var6 = param1.field_f[0] + (var5_int >> 8) + param3.b(param2.substring(0, var7));
+              var6 = param1.field_f[0] + (var5_int >> 8) + param3.textWidth(param2.substring(0, var7));
             }
             if (var6 != -1) {
               param1.field_f[var7] = var6;
@@ -428,7 +428,7 @@ final class be {
               if (32 == var8) {
                 var5_int = var5_int + param0;
               }
-              param1.field_f[var7] = (var5_int >> 8) + param1.field_f[0] - (-param3.b(param2.substring(0, var7 + 1)) + param3.a((char) var8));
+              param1.field_f[var7] = (var5_int >> 8) + param1.field_f[0] - (-param3.textWidth(param2.substring(0, var7 + 1)) + param3.charWidth((char) var8));
             }
             if (var8 == 62) {
               var6 = -1;
@@ -523,7 +523,7 @@ final class be {
         }
     }
 
-    be(int param0, sd param1, sd param2, int param3) {
+    be(int param0, BufferedRandomAccessFile param1, BufferedRandomAccessFile param2, int param3) {
         this.field_e = null;
         this.field_n = 65000;
         this.field_c = null;

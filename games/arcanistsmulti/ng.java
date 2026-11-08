@@ -83,8 +83,8 @@ final class ng extends df implements pj, vb {
             var15 = go.field_d;
             var17 = var15;
             var17.field_x = 0;
-            dk.field_k.field_I = 0;
-            var5 = dk.field_k;
+            CanvasRasterBuffer.field_k.field_I = 0;
+            var5 = CanvasRasterBuffer.field_k;
             var5.field_x = 0;
             var6 = jf.field_d;
             jf.field_d.field_I = 0;
@@ -92,7 +92,7 @@ final class ng extends df implements pj, vb {
             nl.field_Db.field_rb = ri.field_c.toUpperCase();
             var7 = (oh.field_h.field_x + 2) / 2;
             jf.field_d.a(-2 + var7, 0, -40 + oh.field_h.field_I, 40, (byte) -120);
-            dk.field_k.a(-var7 + oh.field_h.field_x, var7, oh.field_h.field_I - 40, 40, (byte) -120);
+            CanvasRasterBuffer.field_k.a(-var7 + oh.field_h.field_x, var7, oh.field_h.field_I - 40, 40, (byte) -120);
             if (ao.field_h.length == 1 &&
               ao.field_h[0] == 2) {
               var8 = 0;
@@ -102,7 +102,7 @@ final class ng extends df implements pj, vb {
               var10 = 0;
               while (true) {
                 if (ao.field_h.length > var10) {
-                  stackIn_10_0 = ((gh.field_E[var10 / 8] & 1 << (var10 & 7)) == 0) ? 0 : 1;
+                  stackIn_10_0 = ((MidiPcmStream.field_E[var10 / 8] & 1 << (var10 & 7)) == 0) ? 0 : 1;
                   var11_int = stackIn_10_0;
                   if (var11_int != 0) {
                     var9_int++;
@@ -122,9 +122,9 @@ final class ng extends df implements pj, vb {
                 break;
               }
             }
-            dk.field_k.field_ub = true;
+            CanvasRasterBuffer.field_k.field_ub = true;
             if (!dn.field_Db) {
-              stackIn_33_0 = dk.field_k;
+              stackIn_33_0 = CanvasRasterBuffer.field_k;
               if (var8 == 0) {
                 stackIn_34_1 = ah.field_d;
               } else {
@@ -133,7 +133,7 @@ final class ng extends df implements pj, vb {
               stackIn_33_0.field_rb = ((String) (Object) stackIn_34_1).toUpperCase();
               stackIn_36_0 = vc.field_c;
               stackIn_36_1 = -96;
-              stackIn_36_2 = new String[]{dk.field_k.field_rb};
+              stackIn_36_2 = new String[]{CanvasRasterBuffer.field_k.field_rb};
               if (var8 == 0) {
                 stackIn_37_3 = bi.field_W;
               } else {
@@ -142,14 +142,14 @@ final class ng extends df implements pj, vb {
               stackIn_36_0.field_rb = tj.a(stackIn_36_1, stackIn_36_2, stackIn_37_3);
               jf.field_d.field_rb = me.field_R;
               IntrusiveNodeHashTable.field_o.field_ub = true;
-              bg.field_a = true;
+              ByteStorage.field_a = true;
               if (um.field_a != null) {
                 if (qa.field_l == null) {
                   qa.field_l = new byte[vf.field_l];
                   tk.field_q = new boolean[vf.field_l];
                 }
-                bg.field_a = false;
-                nb.field_d = false;
+                ByteStorage.field_a = false;
+                GzipDecoder.field_d = false;
                 var13 = 0;
                 var9_intLifetime1 = var13;
                 while (vf.field_l > var13) {
@@ -159,14 +159,14 @@ final class ng extends df implements pj, vb {
                 jm.a(-1, (byte) -25, true, om.field_x, -1, vf.field_l, -1, 0);
                 if (!(qf.field_d < 2) &&
                   ri.field_b[12]) {
-                  bg.field_a = true;
+                  ByteStorage.field_a = true;
                 }
               }
-              if (!bg.field_a) {
-                dk.field_k.field_ub = false;
-                if (dk.field_k.field_A) {
+              if (!ByteStorage.field_a) {
+                CanvasRasterBuffer.field_k.field_ub = false;
+                if (CanvasRasterBuffer.field_k.field_A) {
                   var9 = null;
-                  if (nb.field_d) {
+                  if (GzipDecoder.field_d) {
                     var9 = "<col=A00000>" + w.field_Bb + "</col>";
                     var11 = var9;
                     var9 = var11;
@@ -200,7 +200,7 @@ final class ng extends df implements pj, vb {
               var9 = var16;
               var9 = var16;
               var9 = var16;
-              var10Lifetime1 = jf.field_d.field_Z.b(var16) + 3 * jf.field_d.field_Z.a('.');
+              var10Lifetime1 = jf.field_d.field_Z.textWidth(var16) + 3 * jf.field_d.field_Z.charWidth('.');
               jf.field_d.field_X = 0;
               if (16 == (sb.field_e & 48)) {
                 var9 = var16 + ".";
@@ -213,7 +213,7 @@ final class ng extends df implements pj, vb {
                 var9 = (String) (var9) + "...";
               }
               jf.field_d.field_rb = (String) (var9);
-              dk.field_k.field_rb = sa.field_Eb.toUpperCase();
+              CanvasRasterBuffer.field_k.field_rb = sa.field_Eb.toUpperCase();
             }
           }
           stackIn_64_0 = hl.field_m;
@@ -230,7 +230,7 @@ final class ng extends df implements pj, vb {
             if (IntrusiveNodeHashTable.field_o.field_U != 0) {
               bc.a(param1, -14431);
             }
-            if (dk.field_k.field_U != 0) {
+            if (CanvasRasterBuffer.field_k.field_U != 0) {
               if (!dn.field_Db) {
                 fm.a(param1, true);
               } else {

@@ -183,7 +183,7 @@ final class ne {
           }
           if (param1.field_m == 0) {
             if (0 == on.field_h) {
-              this.field_l.a(12, fg.field_g, (byte) -26);
+              this.field_l.a(12, MusicPatch.field_g, (byte) -26);
             }
             this.field_l.a(13, jg.field_j, (byte) -26);
           }
@@ -218,7 +218,7 @@ final class ne {
             return;
           }
           if (this.field_d != qf.field_a &&
-            null != wi.field_f) {
+            null != DirectByteStorage.field_f) {
             if (!qk.k((byte) 98)) {
               return;
             }
@@ -226,18 +226,18 @@ final class ne {
             var4 = vf.a(this.field_d, 8192);
             var5 = this.a((byte) 32);
             if (var4 != null) {
-              if (!wi.field_f.field_Lb) {
+              if (!DirectByteStorage.field_f.field_Lb) {
                 this.field_l.a(1, tj.a(-18, new String[]{var5}, gg.field_a), (byte) -26);
                 return;
               }
-              if (wi.field_f.field_nc >= 0) {
+              if (DirectByteStorage.field_f.field_nc >= 0) {
                 this.field_l.a(1, tj.a(-18, new String[]{var5}, gg.field_a), (byte) -26);
                 return;
               }
             } else {
               if (var12 != null &&
-                wi.field_f.field_kc) {
-                if (wi.field_f.field_dc <= wi.field_f.field_Rb) {
+                DirectByteStorage.field_f.field_kc) {
+                if (DirectByteStorage.field_f.field_dc <= DirectByteStorage.field_f.field_Rb) {
                   return;
                 }
                 if (var12.field_Db) {
@@ -247,7 +247,7 @@ final class ne {
                 if (param1 &&
                   var12.field_Kb) {
                   this.field_l.a(0, tj.a(-55, new String[]{var5}, se.field_L), (byte) -26);
-                  this.field_l.a(1, tj.a(param0 + 54, new String[]{var5}, gh.field_z), (byte) -26);
+                  this.field_l.a(1, tj.a(param0 + 54, new String[]{var5}, MidiPcmStream.field_z), (byte) -26);
                   return;
                 }
                 this.field_l.a(0, tj.a(param0 + 48, new String[]{var5}, nh.field_x), (byte) -26);
@@ -263,7 +263,7 @@ final class ne {
         if (this.field_d == qf.field_a) {
           return;
         }
-        if (null == wi.field_f) {
+        if (null == DirectByteStorage.field_f) {
           return;
         }
         if (!qk.k((byte) 98)) {
@@ -273,8 +273,8 @@ final class ne {
         var4Lifetime1 = vf.a(this.field_d, 8192);
         var5 = this.a((byte) 32);
         if (var4Lifetime1 != null) {
-          if (wi.field_f.field_Lb &&
-            wi.field_f.field_nc < 0) {
+          if (DirectByteStorage.field_f.field_Lb &&
+            DirectByteStorage.field_f.field_nc < 0) {
             return;
           }
           this.field_l.a(1, tj.a(-18, new String[]{var5}, gg.field_a), (byte) -26);
@@ -283,10 +283,10 @@ final class ne {
         if (var11 == null) {
           return;
         }
-        if (!wi.field_f.field_kc) {
+        if (!DirectByteStorage.field_f.field_kc) {
           return;
         }
-        if (wi.field_f.field_dc <= wi.field_f.field_Rb) {
+        if (DirectByteStorage.field_f.field_dc <= DirectByteStorage.field_f.field_Rb) {
           return;
         }
         if (var11.field_Db) {
@@ -296,7 +296,7 @@ final class ne {
         if (param1 &&
           var11.field_Kb) {
           this.field_l.a(0, tj.a(-55, new String[]{var5}, se.field_L), (byte) -26);
-          this.field_l.a(1, tj.a(param0 + 54, new String[]{var5}, gh.field_z), (byte) -26);
+          this.field_l.a(1, tj.a(param0 + 54, new String[]{var5}, MidiPcmStream.field_z), (byte) -26);
           return;
         }
         this.field_l.a(0, tj.a(param0 + 48, new String[]{var5}, nh.field_x), (byte) -26);
@@ -313,7 +313,7 @@ final class ne {
         if (param0 != 3) {
           var5 = (Sprite[]) null;
           ne.a(39, -67, (Sprite[]) null, -123, 12, 116);
-          if (wi.field_f != null) {
+          if (DirectByteStorage.field_f != null) {
             return;
           }
           var8 = im.a(this.field_e, (byte) -103);
@@ -340,7 +340,7 @@ final class ne {
             return;
           }
         } else {
-          if (wi.field_f != null) {
+          if (DirectByteStorage.field_f != null) {
             return;
           }
           var7 = im.a(this.field_e, (byte) -103);
@@ -410,7 +410,7 @@ final class ne {
                 param0 != 2 &&
                 !wh.field_g) {
                 this.field_m = param1;
-                this.field_l.a(19, tj.a(-25, new String[]{var8}, gh.field_O), (byte) -26);
+                this.field_l.a(19, tj.a(-25, new String[]{var8}, MidiPcmStream.field_O), (byte) -26);
               }
             }
             if (var5 != null) {
@@ -422,7 +422,7 @@ final class ne {
                 this.field_l.a(18, tj.a(127, new String[]{var8}, bh.field_b), (byte) -26);
                 if (param1 != null) {
                   this.field_m = param1;
-                  this.field_l.a(19, tj.a(-98, new String[]{var8}, gh.field_O), (byte) -26);
+                  this.field_l.a(19, tj.a(-98, new String[]{var8}, MidiPcmStream.field_O), (byte) -26);
                 }
               }
               this.field_l.a(5, tj.a(param2 - 48, new String[]{var8}, ke.field_F), (byte) -26);
@@ -499,7 +499,7 @@ final class ne {
         var5 = ArcanistsMulti.field_G ? 1 : 0;
         if (!param2) {
           if (8 == param0) {
-            nb.a(this.field_h, this.field_d, -26510);
+            GzipDecoder.a(this.field_h, this.field_d, -26510);
             return true;
           }
           if (18 == param0) {
@@ -516,7 +516,7 @@ final class ne {
         } else {
           this.field_c = (kc) null;
           if (8 == param0) {
-            nb.a(this.field_h, this.field_d, -26510);
+            GzipDecoder.a(this.field_h, this.field_d, -26510);
             return true;
           }
           if (18 == param0) {
@@ -615,19 +615,19 @@ final class ne {
             var6_int = param2[0].field_n;
             var7 = param2[2].field_n;
             var8 = param2[1].field_n;
-            param2[0].e(param4, param3, param5);
-            param2[2].e(param4 + param1 - var7, param3, param5);
-            de.a(sl.field_H);
-            de.a(param4 + var6_int, param3, -var7 + (param1 + param4), param2[1].field_w + param3);
+            param2[0].drawWithOpacity(param4, param3, param5);
+            param2[2].drawWithOpacity(param4 + param1 - var7, param3, param5);
+            SoftwareRasterizer.saveClip(sl.field_H);
+            SoftwareRasterizer.intersectClip(param4 + var6_int, param3, -var7 + (param1 + param4), param2[1].field_w + param3);
             var9 = var6_int + param4;
             var10 = -var7 + param4 + param1;
             if (param0 > -30) {
               return;
             }
             for (param4 = var9; param4 < var10; param4 = param4 + var8) {
-              param2[1].e(param4, param3, param5);
+              param2[1].drawWithOpacity(param4, param3, param5);
             }
-            de.b(sl.field_H);
+            SoftwareRasterizer.restoreClip(sl.field_H);
             return;
           }
           return;

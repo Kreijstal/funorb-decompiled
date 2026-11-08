@@ -62,7 +62,7 @@ final class ae {
         int var2;
         int var3;
         no.h(-1);
-        if (null == wi.field_f) {
+        if (null == DirectByteStorage.field_f) {
           var2 = 0;
           regionExit1: {
             if (!hi.field_a) {
@@ -73,7 +73,7 @@ final class ae {
                 stackIn_7_2 = 15;
                 stackIn_7_3 = 0;
                 stackIn_7_4 = wn.field_y;
-                stackIn_8_5 = (hk.field_o <= 50) ? false : true;
+                stackIn_8_5 = (MusicPatchPcmStream.field_o <= 50) ? false : true;
                 fe.a(stackIn_7_0, stackIn_7_1, stackIn_7_2, stackIn_7_3, stackIn_7_4, stackIn_8_5, param1, var2 != 0, var3 != 0, true, 14, param0);
                 break regionExit1;
               }
@@ -87,11 +87,11 @@ final class ae {
             stackIn_20_2 = 15;
             stackIn_20_3 = 0;
             stackIn_20_4 = wn.field_y;
-            stackIn_21_5 = (hk.field_o <= 50) ? false : true;
+            stackIn_21_5 = (MusicPatchPcmStream.field_o <= 50) ? false : true;
             fe.a(stackIn_20_0, stackIn_20_1, stackIn_20_2, stackIn_20_3, stackIn_20_4, stackIn_21_5, param1, var2 != 0, var3 != 0, true, 14, param0);
           }
         } else {
-          if (aj.a(28139, wi.field_f.field_Rb)) {
+          if (aj.a(28139, DirectByteStorage.field_f.field_Rb)) {
             var2 = 1;
             if (!hi.field_a) {
               if (mj.field_w) {
@@ -101,7 +101,7 @@ final class ae {
                 stackIn_68_2 = 15;
                 stackIn_68_3 = 0;
                 stackIn_68_4 = wn.field_y;
-                stackIn_69_5 = (hk.field_o <= 50) ? false : true;
+                stackIn_69_5 = (MusicPatchPcmStream.field_o <= 50) ? false : true;
                 fe.a(stackIn_68_0, stackIn_68_1, stackIn_68_2, stackIn_68_3, stackIn_68_4, stackIn_69_5, param1, var2 != 0, var3 != 0, true, 14, param0);
                 if (bj.field_ub) {
                   he.field_e.writeOpcode((byte) -22, 57);
@@ -128,7 +128,7 @@ final class ae {
             stackIn_81_2 = 15;
             stackIn_81_3 = 0;
             stackIn_81_4 = wn.field_y;
-            stackIn_82_5 = (hk.field_o <= 50) ? false : true;
+            stackIn_82_5 = (MusicPatchPcmStream.field_o <= 50) ? false : true;
             fe.a(stackIn_81_0, stackIn_81_1, stackIn_81_2, stackIn_81_3, stackIn_81_4, stackIn_82_5, param1, var2 != 0, var3 != 0, true, 14, param0);
             if (bj.field_ub) {
               he.field_e.writeOpcode((byte) -22, 57);
@@ -154,7 +154,7 @@ final class ae {
               stackIn_38_2 = 15;
               stackIn_38_3 = 0;
               stackIn_38_4 = wn.field_y;
-              stackIn_39_5 = (hk.field_o <= 50) ? false : true;
+              stackIn_39_5 = (MusicPatchPcmStream.field_o <= 50) ? false : true;
               fe.a(stackIn_38_0, stackIn_38_1, stackIn_38_2, stackIn_38_3, stackIn_38_4, stackIn_39_5, param1, var2 != 0, var3 != 0, true, 14, param0);
               if (bj.field_ub) {
                 he.field_e.writeOpcode((byte) -22, 57);
@@ -181,7 +181,7 @@ final class ae {
           stackIn_51_2 = 15;
           stackIn_51_3 = 0;
           stackIn_51_4 = wn.field_y;
-          stackIn_52_5 = (hk.field_o <= 50) ? false : true;
+          stackIn_52_5 = (MusicPatchPcmStream.field_o <= 50) ? false : true;
           fe.a(stackIn_51_0, stackIn_51_1, stackIn_51_2, stackIn_51_3, stackIn_51_4, stackIn_52_5, param1, var2 != 0, var3 != 0, true, 14, param0);
         }
         if (bj.field_ub) {

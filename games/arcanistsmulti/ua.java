@@ -28,7 +28,7 @@ final class ua extends kl {
           0 < var5.length &&
           0 < param1) {
           for (var6 = 0; var4 > var6; var6++) {
-            sf.a(this.field_z, var6 * param1, var5, var6 * param2, Math.min(param1, param2));
+            ArraySupport.copyObjects(this.field_z, var6 * param1, var5, var6 * param2, Math.min(param1, param2));
           }
         }
         this.field_z = var5;
@@ -49,7 +49,7 @@ final class ua extends kl {
         int[] var5 = new int[var4 * param2];
         if (this.field_I != null && 0 < this.field_I.length && 0 < var5.length &&
           param1 > 0) {
-          sf.a(this.field_I, 0, var5, 0, var4 * Math.min(param1, param2));
+          ArraySupport.copyInts(this.field_I, 0, var5, 0, var4 * Math.min(param1, param2));
         }
         this.field_I = var5;
     }
@@ -61,7 +61,7 @@ final class ua extends kl {
           this.field_z.length > 0 &&
           var5.length > 0 &&
           param1 > 0) {
-          sf.a(this.field_z, 0, var5, 0, var4 * Math.min(param1, param0));
+          ArraySupport.copyObjects(this.field_z, 0, var5, 0, var4 * Math.min(param1, param0));
         }
         this.field_z = var5;
         if (param2 != -8734) {
@@ -143,7 +143,7 @@ final class ua extends kl {
         if (this.field_I != null && this.field_I.length > 0 && var5.length > 0 &&
           param1 > 0) {
           for (var6 = 0; var4 > var6; var6++) {
-            sf.a(this.field_I, var6 * param1, var5, var6 * param0, Math.min(param1, param0));
+            ArraySupport.copyInts(this.field_I, var6 * param1, var5, var6 * param0, Math.min(param1, param0));
           }
         }
         this.field_I = var5;
@@ -379,9 +379,9 @@ final class ua extends kl {
         try {
           var10 = new int[param5];
           int[] var8 = var10;
-          sf.a(var10, 0, param5, 1);
+          ArraySupport.fillInts(var10, 0, param5, 1);
           var9 = new int[param6];
-          sf.a(var9, 0, param6, 1);
+          ArraySupport.fillInts(var9, 0, param6, 1);
           this.a(var10, 9443);
           this.a(0, var9);
         } catch (RuntimeException runtimeException) {

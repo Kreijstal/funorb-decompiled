@@ -139,7 +139,7 @@ abstract class wn extends qm implements a {
               pe.a((byte) -86, 1)) {
               var6_intLifetime1 = df.field_z.readUnsignedByte((byte) -122);
               df.field_z.position = 0;
-              rj.field_i = null;
+              AudioService.field_i = null;
               on.field_g = var6_intLifetime1;
               if (var6_intLifetime1 != 0 &&
                 var6_intLifetime1 != 1) {
@@ -197,13 +197,13 @@ abstract class wn extends qm implements a {
               }
               ah.field_b = df.field_z.readString(-1);
               var11 = (CharSequence) ((Object) ah.field_b);
-              nm.field_b = gk.a(var11, -13);
+              nm.field_b = Js5ArchiveManager.a(var11, -13);
               dd.field_j = df.field_z.readUnsignedByte((byte) 65);
               ob.field_eb = qc.field_c;
               if (fd.field_e.a(0) == k.field_q) {
                 ea.field_y.a(cd.e(118), (byte) -93);
               } else {
-                if (fd.field_e.a(0) == hk.field_m) {
+                if (fd.field_e.a(0) == MusicPatchPcmStream.field_m) {
                   of.field_n.a(cd.e(120), (byte) -118);
                 }
               }
@@ -433,8 +433,8 @@ abstract class wn extends qm implements a {
 
     final int c(int param0) {
         if (param0 != 0) {
-          dj var3 = (dj) null;
-          wn.a((byte) 24, (dj) null);
+          BitmapFont var3 = (BitmapFont) null;
+          wn.a((byte) 24, (BitmapFont) null);
         }
         return this.field_B == null ? 0 : this.field_B.c(0);
     }
@@ -588,11 +588,11 @@ abstract class wn extends qm implements a {
         }
     }
 
-    final static void a(byte param0, dj param1) {
+    final static void a(byte param0, BitmapFont param1) {
         try {
           if (param0 != 111) {
-            dj var3 = (dj) null;
-            wn.a((byte) 9, (dj) null);
+            BitmapFont var3 = (BitmapFont) null;
+            wn.a((byte) 9, (BitmapFont) null);
           }
           mc.field_b = param1;
         } catch (RuntimeException runtimeException) {

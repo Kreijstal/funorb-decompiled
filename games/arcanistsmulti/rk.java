@@ -120,31 +120,31 @@ final class rk extends ag {
           }
           IntrusiveDeque.field_b.field_A[0] = 0;
           for (var5 = -3; var5 <= 3; var5++) {
-            IntrusiveDeque.field_b.a(-4, 0 + var5, 1);
-            IntrusiveDeque.field_b.a(4, var5 + 0, 1);
-            IntrusiveDeque.field_b.a(var5, -4, 1);
-            IntrusiveDeque.field_b.a(var5, 4, 1);
+            IntrusiveDeque.field_b.drawSilhouette(-4, 0 + var5, 1);
+            IntrusiveDeque.field_b.drawSilhouette(4, var5 + 0, 1);
+            IntrusiveDeque.field_b.drawSilhouette(var5, -4, 1);
+            IntrusiveDeque.field_b.drawSilhouette(var5, 4, 1);
           }
           for (var5 = -2; var5 <= 2; var5++) {
-            IntrusiveDeque.field_b.a(-3, var5 + 0, 13421772);
-            IntrusiveDeque.field_b.a(3, 0 + var5, 13421772);
-            IntrusiveDeque.field_b.a(var5, -3, 13421772);
-            IntrusiveDeque.field_b.a(var5, 3, 13421772);
+            IntrusiveDeque.field_b.drawSilhouette(-3, var5 + 0, 13421772);
+            IntrusiveDeque.field_b.drawSilhouette(3, 0 + var5, 13421772);
+            IntrusiveDeque.field_b.drawSilhouette(var5, -3, 13421772);
+            IntrusiveDeque.field_b.drawSilhouette(var5, 3, 13421772);
           }
           for (var5 = -1; var5 <= 1; var5++) {
-            IntrusiveDeque.field_b.a(-2, var5 + 0, 16777215);
-            IntrusiveDeque.field_b.a(2, 0 + var5, 16777215);
-            IntrusiveDeque.field_b.a(var5, -2, 16777215);
-            IntrusiveDeque.field_b.a(var5, 2, 16777215);
+            IntrusiveDeque.field_b.drawSilhouette(-2, var5 + 0, 16777215);
+            IntrusiveDeque.field_b.drawSilhouette(2, 0 + var5, 16777215);
+            IntrusiveDeque.field_b.drawSilhouette(var5, -2, 16777215);
+            IntrusiveDeque.field_b.drawSilhouette(var5, 2, 16777215);
           }
-          IntrusiveDeque.field_b.a(1, -1, 14540253);
+          IntrusiveDeque.field_b.drawSilhouette(1, -1, 14540253);
           if (param0 != 491697968) {
             return;
           }
-          IntrusiveDeque.field_b.a(1, 0, 13421772);
-          IntrusiveDeque.field_b.a(0, 1, 12303291);
-          IntrusiveDeque.field_b.a(1, 1, 11184810);
-          IntrusiveDeque.field_b.c(0, 0);
+          IntrusiveDeque.field_b.drawSilhouette(1, 0, 13421772);
+          IntrusiveDeque.field_b.drawSilhouette(0, 1, 12303291);
+          IntrusiveDeque.field_b.drawSilhouette(1, 1, 11184810);
+          IntrusiveDeque.field_b.drawTransparent(0, 0);
           if (-1 != var1_int) {
             var1_int = var1_int + IntrusiveDeque.field_b.field_x;
             var2 = var2 + IntrusiveDeque.field_b.field_o;
@@ -223,7 +223,7 @@ final class rk extends ag {
             return true;
           }
           String var5 = (String) null;
-          sd.a(hi.field_g, (String) null, 68, param1, qj.field_c, vh.field_A);
+          BufferedRandomAccessFile.a(hi.field_g, (String) null, 68, param1, qj.field_c, vh.field_A);
           return true;
         }
         return false;
@@ -251,7 +251,7 @@ final class rk extends ag {
           if (var9 * var9 + var10 * var10 >= this.field_V * this.field_V) {
             return true;
           }
-          var11 = Math.atan2((double)var10, (double)var9) - jh.field_h;
+          var11 = Math.atan2((double)var10, (double)var9) - DelegatingCanvas.field_h;
           if (0.0 > var11) {
             var11 = var11 - 3.141592653589793 / (double)this.field_P;
           } else {

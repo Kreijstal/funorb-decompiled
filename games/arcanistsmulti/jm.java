@@ -13,7 +13,7 @@ class jm implements pf, ac {
     int field_f;
     int field_h;
     int field_a;
-    dj field_g;
+    BitmapFont field_g;
     int field_e;
     int field_d;
     int field_o;
@@ -88,7 +88,7 @@ class jm implements pf, ac {
                 if (var8_int == 0) {
                   return;
                 }
-                bg.field_a = true;
+                ByteStorage.field_a = true;
                 return;
               }
               var19 = um.field_a[var9];
@@ -105,7 +105,7 @@ class jm implements pf, ac {
                   for (var12 = 0; var19.length > var12; var12 += 2) {
                     var13 = var19[var12];
                     if (var13 == -1) {
-                      nb.field_d = true;
+                      GzipDecoder.field_d = true;
                     } else {
                       if (param6 > var13) {
                         tk.field_q[var13] = true;
@@ -156,7 +156,7 @@ class jm implements pf, ac {
           if (param2) {
             if (param6 == -1) {
               for (var10_int = 0; ao.field_h.length > var10_int; var10_int++) {
-                if ((gh.field_E[var10_int / 8] & 1 << (7 & var10_int)) != 0) {
+                if ((MidiPcmStream.field_E[var10_int / 8] & 1 << (7 & var10_int)) != 0) {
                   var9 = 0;
                   decompiledFrameCompleted0 = false;
                   break;
@@ -196,7 +196,7 @@ class jm implements pf, ac {
                   param0 = var11;
                 }
                 jm.a(param0, (byte) -25, param2, param3, param4, param5, 1 + param6, param7);
-                if (bg.field_a) {
+                if (ByteStorage.field_a) {
                   return;
                 }
               }
@@ -225,9 +225,9 @@ class jm implements pf, ac {
                 var12 = stackIn_51_0;
               } else {
                 if (-1 == param6) {
-                  stackIn_42_0 = (ao.field_h[var11] != wi.field_f.field_dc) ? 0 : 1;
+                  stackIn_42_0 = (ao.field_h[var11] != DirectByteStorage.field_f.field_dc) ? 0 : 1;
                 } else {
-                  stackIn_42_0 = ((wi.field_f.field_Wb[param6] & 255) != var11) ? 0 : 1;
+                  stackIn_42_0 = ((DirectByteStorage.field_f.field_Wb[param6] & 255) != var11) ? 0 : 1;
                 }
                 var12 = stackIn_42_0;
               }
@@ -236,7 +236,7 @@ class jm implements pf, ac {
               jm.a(param0, (byte) -25, param2, param3, param4, param5, 1 + param6, param7);
               var10_intLifetime1 = 1;
             }
-            if (bg.field_a) {
+            if (ByteStorage.field_a) {
               return;
             }
             var11++;
@@ -304,7 +304,7 @@ class jm implements pf, ac {
             return;
           }
           if (param3 != 6600) {
-            this.field_g = (dj) null;
+            this.field_g = (BitmapFont) null;
           }
           if (param1.d(-2116)) {
             var17 = this.a(param1, -118);
@@ -337,7 +337,7 @@ class jm implements pf, ac {
                 stackIn_19_0 = var18.a(var9, param3 ^ 6600);
               }
               var15 = stackIn_19_0;
-              io.field_n.a(var13.field_e, var13.field_g + param1.field_i + this.field_f + (param0 + param1.field_j), this.field_e, -var14 + var15, this.field_e >>> 24, param3 - 6599, this.a(param2, param3 + 2693, var14, param1));
+              MusicCrossfadeStream.field_n.a(var13.field_e, var13.field_g + param1.field_i + this.field_f + (param0 + param1.field_j), this.field_e, -var14 + var15, this.field_e >>> 24, param3 - 6599, this.a(param2, param3 + 2693, var14, param1));
             }
             oo.c(param3 - 22005);
             return;
@@ -407,7 +407,7 @@ class jm implements pf, ac {
             var11 = this.a(param1, -13372, param4) + Math.max(0, var8.field_g);
             var12 = this.a(param1, -13372, param4) + Math.min(this.a(param4, false), Math.min(var8.field_e, var14.field_f.length > 1 + var7 ? var13.field_f[1 + var7].field_g : var8.field_e));
             da.a(param4.field_n + param2 + param4.field_v, param4.field_k + param4.field_j + param1, 116, param2 + param4.field_n, param1 + param4.field_j);
-            io.field_n.a(var10, var10, var12, this.field_o, var11, (byte) 102);
+            MusicCrossfadeStream.field_n.a(var10, var10, var12, this.field_o, var11, (byte) 102);
             oo.c(-15405);
           }
         } catch (RuntimeException runtimeException) {
@@ -561,7 +561,7 @@ class jm implements pf, ac {
         }
     }
 
-    jm(dj param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    jm(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
@@ -660,7 +660,7 @@ class jm implements pf, ac {
           var9_int = this.a(param4, (byte) 56);
           var10 = this.a(param4, false);
           if (this.field_n) {
-            this.field_g.a(this.a(false, param4), this.a(param6, 9293, param0, param4), this.a(param5, param3, (byte) 120, param4), var9_int, var10, param2, param7, this.field_i, this.field_a, this.field_h);
+            this.field_g.drawParagraph(this.a(false, param4), this.a(param6, 9293, param0, param4), this.a(param5, param3, (byte) 120, param4), var9_int, var10, param2, param7, this.field_i, this.field_a, this.field_h);
           } else {
             var12 = this.field_a;
             if (0 == var12) {
@@ -679,16 +679,16 @@ class jm implements pf, ac {
             if (var12Lifetime1 != 0 &&
               var12Lifetime1 != 3) {
               if (var12Lifetime1 == 1) {
-                this.field_g.b(this.a(false, param4), (var9_int >> 1) + this.a(param6, 9293, param0, param4), this.a(param5, param3, (byte) 120, param4) + var11, param2, param7);
+                this.field_g.drawCentered(this.a(false, param4), (var9_int >> 1) + this.a(param6, 9293, param0, param4), this.a(param5, param3, (byte) 120, param4) + var11, param2, param7);
               } else {
                 if ((var12Lifetime1 == 2)) {
-                  this.field_g.c(this.a(false, param4), this.a(param6, param1 - 13741, param0, param4) + var9_int, var11 + this.a(param5, param3, (byte) 120, param4), param2, param7);
+                  this.field_g.drawRightAlignedText(this.a(false, param4), this.a(param6, param1 - 13741, param0, param4) + var9_int, var11 + this.a(param5, param3, (byte) 120, param4), param2, param7);
                 }
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              this.field_g.a(this.a(false, param4), this.a(param6, 9293, param0, param4), var11 + this.a(param5, param3, (byte) 120, param4), param2, param7);
+              this.field_g.drawText(this.a(false, param4), this.a(param6, 9293, param0, param4), var11 + this.a(param5, param3, (byte) 120, param4), param2, param7);
             }
           }
           oo.c(param1 - 38439);
@@ -773,14 +773,14 @@ class jm implements pf, ac {
 
     final static void b(int param0) {
         int var1 = 0;
-        if (ul.field_A <= 32) {
+        if (Bzip2State.field_A <= 32) {
           eb.a(0, false);
         } else {
-          var1 = ul.field_A % 32;
+          var1 = Bzip2State.field_A % 32;
           if (var1 == 0) {
             var1 = 32;
           }
-          eb.a(ul.field_A - var1, false);
+          eb.a(Bzip2State.field_A - var1, false);
         }
         if (param0 < 29) {
           jm.b(-66);
@@ -877,7 +877,7 @@ class jm implements pf, ac {
         }
     }
 
-    jm(dj param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
+    jm(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
         try {
           this.field_g = param0;
           this.field_f = param3;

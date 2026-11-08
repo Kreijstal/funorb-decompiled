@@ -123,7 +123,7 @@ final class dg extends rl {
             field_u = 97;
           }
           var5 = (CharSequence) ((Object) param0);
-          var3 = uk.a(var5, (byte) -118);
+          var3 = FullscreenFocusCanvas.a(var5, (byte) -118);
           if (var3 != null) {
             stackIn_5_0 = var3;
             return stackIn_5_0;

@@ -68,7 +68,7 @@ final class vf extends IntrusiveNode {
           if (param2 != 14) {
             return null;
           }
-          stackIn_31_0 = tj.a(-17, new String[]{param1}, ji.field_k);
+          stackIn_31_0 = tj.a(-17, new String[]{param1}, KeyboardInputHandler.field_k);
           return stackIn_31_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

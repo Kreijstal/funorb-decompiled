@@ -32,7 +32,7 @@ final class pk implements Iterable {
           }
           var1[var2] = new Sprite(pb.field_g, gn.field_a, hl.field_l[var2], be.field_d[var2], jg.field_p[var2], ho.field_i[var2], var5);
         }
-        dk.a(-18229);
+        CanvasRasterBuffer.a(-18229);
         return var1;
     }
 

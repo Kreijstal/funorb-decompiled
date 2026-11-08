@@ -25,11 +25,11 @@ final class ge extends IntrusiveNode {
         field_n = null;
     }
 
-    final static lg a(byte[] param0, int param1) {
-        lg var2 = null;
+    final static BinaryBitmapFont a(byte[] param0, int param1) {
+        BinaryBitmapFont var2 = null;
         RuntimeException var2_ref = null;
-        lg stackIn_5_0 = null;
-        lg stackIn_7_0 = null;
+        BinaryBitmapFont stackIn_5_0 = null;
+        BinaryBitmapFont stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -39,11 +39,11 @@ final class ge extends IntrusiveNode {
             return null;
           }
           if (param1 != 3417) {
-            stackIn_5_0 = (lg) null;
+            stackIn_5_0 = (BinaryBitmapFont) null;
             return stackIn_5_0;
           }
-          var2 = new lg(param0, hl.field_l, be.field_d, jg.field_p, ho.field_i, ln.field_I);
-          dk.a(-18229);
+          var2 = new BinaryBitmapFont(param0, hl.field_l, be.field_d, jg.field_p, ho.field_i, ln.field_I);
+          CanvasRasterBuffer.a(-18229);
           stackIn_7_0 = var2;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

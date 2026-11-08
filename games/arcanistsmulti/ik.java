@@ -59,12 +59,12 @@ final class ik {
         int var2 = 34 / ((param1 - 24) / 48);
         hl.field_m.a(IntrusiveNodeHashTable.field_o, 55);
         nl.field_Fb = new kc(0L, mf.field_d);
-        gk.field_g = new kc(0L, (kc) null);
+        Js5ArchiveManager.field_g = new kc(0L, (kc) null);
         nl.field_Fb.a(hf.field_t, 61);
-        nl.field_Fb.a(gk.field_g, 89);
-        gk.field_g.a(mj.field_s, 25);
-        gk.field_g.a(gj.field_d, 43);
-        io.a(125, param0);
+        nl.field_Fb.a(Js5ArchiveManager.field_g, 89);
+        Js5ArchiveManager.field_g.a(mj.field_s, 25);
+        Js5ArchiveManager.field_g.a(gj.field_d, 43);
+        MusicCrossfadeStream.a(125, param0);
     }
 
     final static void a(int param0, int param1) {

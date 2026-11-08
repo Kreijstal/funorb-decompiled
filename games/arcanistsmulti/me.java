@@ -12,7 +12,7 @@ final class me extends df implements vb {
     static String field_N;
     static String field_E;
     static boolean field_C;
-    private dj field_D;
+    private BitmapFont field_D;
     private int field_K;
     static String[] field_L;
     static String field_P;
@@ -21,7 +21,7 @@ final class me extends df implements vb {
     private ag[] field_M;
     static int field_I;
 
-    me(ed param0, dj param1, String param2) {
+    me(ed param0, BitmapFont param1, String param2) {
         super(0, 0, 288, 0, (pf) null);
         int var4_int = 0;
         this.field_K = 0;
@@ -29,7 +29,7 @@ final class me extends df implements vb {
           this.field_D = param1;
           this.field_J = param2;
           this.field_G = param0;
-          var4_int = this.field_J == null ? 0 : this.field_D.a(this.field_J, 260, this.field_D.field_C);
+          var4_int = this.field_J == null ? 0 : this.field_D.paragraphHeight(this.field_J, 260, this.field_D.field_C);
           this.a(22 + var4_int, 0, 288, 0, -51);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "me.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -99,7 +99,7 @@ final class me extends df implements vb {
         if (param0 >= -52) {
           this.field_S = (int[]) null;
         }
-        this.field_D.a(this.field_J, this.field_n + param1 + 14, this.field_j + (param3 + 10), this.field_v - 28, this.field_k, 16777215, -1, 0, 0, this.field_D.field_C);
+        this.field_D.drawParagraph(this.field_J, this.field_n + param1 + 14, this.field_j + (param3 + 10), this.field_v - 28, this.field_k, 16777215, -1, 0, 0, this.field_D.field_C);
     }
 
     private final void a(int param0, int param1) {
@@ -138,7 +138,7 @@ final class me extends df implements vb {
 
     private final static IndexedSprite a(int param0) {
         IndexedSprite var1 = new IndexedSprite(pb.field_g, gn.field_a, hl.field_l[0], be.field_d[0], jg.field_p[0], ho.field_i[0], ln.field_I[param0], ph.field_c);
-        dk.a(-18229);
+        CanvasRasterBuffer.a(-18229);
         return var1;
     }
 
@@ -158,16 +158,16 @@ final class me extends df implements vb {
             var6 = null;
             var7 = null;
             if (null != ri.field_g.field_q) {
-              bm.field_e = new sd(ri.field_g.field_q, 5200, 0);
+              bm.field_e = new BufferedRandomAccessFile(ri.field_g.field_q, 5200, 0);
               ri.field_g.field_q = null;
-              var6 = new be(255, bm.field_e, new sd(ri.field_g.field_e, 12000, 0), 2097152);
+              var6 = new be(255, bm.field_e, new BufferedRandomAccessFile(ri.field_g.field_e, 12000, 0), 2097152);
             }
             if (bm.field_e != null) {
               if (bb.field_b == null) {
-                bb.field_b = new sd[ri.field_g.field_d.length];
+                bb.field_b = new BufferedRandomAccessFile[ri.field_g.field_d.length];
               }
               if (bb.field_b[param0] == null) {
-                bb.field_b[param0] = new sd(ri.field_g.field_d[param0], 12000, 0);
+                bb.field_b[param0] = new BufferedRandomAccessFile(ri.field_g.field_d[param0], 12000, 0);
                 ri.field_g.field_d[param0] = null;
               }
               var7 = new be(param0, bm.field_e, bb.field_b[param0], 2097152);

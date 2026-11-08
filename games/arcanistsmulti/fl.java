@@ -91,11 +91,11 @@ final class fl {
           var4 = var2.field_y;
           ec.a(65280);
           mi.field_E = new Sprite(var3, 3 * var4 / 4);
-          mi.field_E.a();
-          var2.h(0, 0);
+          mi.field_E.makeRasterTarget();
+          var2.drawOpaque(0, 0);
           gm.field_l = new Sprite(var3, -mi.field_E.field_y + var4);
-          gm.field_l.a();
-          var2.h(0, -mi.field_E.field_y);
+          gm.field_l.makeRasterTarget();
+          var2.drawOpaque(0, -mi.field_E.field_y);
           gm.field_l.field_o = mi.field_E.field_y;
           oo.c(-15405);
         } catch (RuntimeException runtimeException) {

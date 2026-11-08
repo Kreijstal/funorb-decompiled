@@ -188,8 +188,8 @@ final class uh extends IntrusiveNode {
         try {
           var2_int = 0;
           var3 = 0;
-          var4 = Math.min(param0.field_y, de.field_j / param1);
-          var5 = Math.min(param0.field_q, de.field_e / 2);
+          var4 = Math.min(param0.field_y, SoftwareRasterizer.field_j / param1);
+          var5 = Math.min(param0.field_q, SoftwareRasterizer.field_e / 2);
           var6 = 0;
           while (var4 > var6) {
             var7 = var2_int;
@@ -200,18 +200,18 @@ final class uh extends IntrusiveNode {
             var9 = 0;
             while (var5 > var9) {
               dupTemp$0 = param0.field_A[var8];
-              de.field_l[de.field_e + var7] = dupTemp$0;
-              de.field_l[var7] = dupTemp$0;
+              SoftwareRasterizer.field_l[SoftwareRasterizer.field_e + var7] = dupTemp$0;
+              SoftwareRasterizer.field_l[var7] = dupTemp$0;
               var7++;
               dupTemp$1 = param0.field_A[var8];
-              de.field_l[de.field_e + var7] = dupTemp$1;
-              de.field_l[var7] = dupTemp$1;
+              SoftwareRasterizer.field_l[SoftwareRasterizer.field_e + var7] = dupTemp$1;
+              SoftwareRasterizer.field_l[var7] = dupTemp$1;
               var7++;
               var8++;
               var9++;
             }
             var3 = var3 + param0.field_n;
-            var2_int = var2_int + de.field_e * 2;
+            var2_int = var2_int + SoftwareRasterizer.field_e * 2;
             var6++;
           }
           return;

@@ -79,7 +79,7 @@ final class hb extends kc {
                   wj.field_a.a(122, var13, var9);
                 }
               } else {
-                bf.a(var13, var5, param1, var4, 9);
+                Bzip2Decoder.decompress(var13, var5, param1, var4, 9);
               }
               stackIn_23_0 = var6;
               return stackIn_23_0;
@@ -143,7 +143,7 @@ final class hb extends kc {
         cb.field_c = null;
         oh.field_i = false;
         int var1 = 57 / ((param0 + 19) / 41);
-        jh.field_f = 0;
+        DelegatingCanvas.field_f = 0;
         ka.field_p = -1;
     }
 

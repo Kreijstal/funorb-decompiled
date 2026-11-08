@@ -236,7 +236,7 @@ final class bj extends ob implements vb {
           stackIn_4_0 = nl.field_Gb.field_Db;
           stackIn_5_1 = (dd.field_h == nl.field_Gb.field_Db);
           boolean decompiledFrameRemainder0 = true;
-          var3_int = ((dn) (Object) stackIn_4_0).a(stackIn_5_1, (byte) 98, ga.field_r + 2, 2, (3 * ga.field_r + 6) * param2, param0) ? 1 : 0;
+          var3_int = ((dn) (Object) stackIn_4_0).a(stackIn_5_1, (byte) 98, ImageProducerRasterBuffer.field_r + 2, 2, (3 * ImageProducerRasterBuffer.field_r + 6) * param2, param0) ? 1 : 0;
           var4 = nl.field_Gb.field_Eb.field_G;
           var5 = null;
           if (param1 == ~SpriteState.field_t) {
@@ -277,7 +277,7 @@ final class bj extends ob implements vb {
                     !var7.field_Gb.equals("")) {
                     var7.field_Mb.field_eb = var11;
                     var7.field_Mb.field_W = eb.field_d;
-                    var7.field_Mb.a(eb.field_d.field_n + 3, 0, var9, ga.field_r, (byte) -120);
+                    var7.field_Mb.a(eb.field_d.field_n + 3, 0, var9, ImageProducerRasterBuffer.field_r, (byte) -120);
                     var12 = 1;
                   }
                   var7.field_Fb.field_eb = var11;
@@ -298,10 +298,10 @@ final class bj extends ob implements vb {
                   if (var14 <= 0) {
                     stackIn_33_1 = var7.field_Cb;
                   } else {
-                    stackIn_33_1 = dj.a(var7.field_Jb.field_Z, var7.field_Cb, var14);
+                    stackIn_33_1 = BitmapFont.truncateWithEllipsis(var7.field_Jb.field_Z, var7.field_Cb, var14);
                   }
                   stackIn_32_0.field_rb = stackIn_33_1;
-                  var7.field_Jb.a(var14, var13, var9, ga.field_r, (byte) -120);
+                  var7.field_Jb.a(var14, var13, var9, ImageProducerRasterBuffer.field_r, (byte) -120);
                   stackIn_36_0 = var7.field_Fb;
                   if (var7.field_Lb == null) {
                     stackIn_37_1 = nk.field_o;
@@ -309,10 +309,10 @@ final class bj extends ob implements vb {
                     stackIn_37_1 = var7.field_Lb;
                   }
                   stackIn_36_0.field_rb = stackIn_37_1;
-                  var7.field_Fb.a(80, -80 + var7.field_x, var9, ga.field_r, (byte) -120);
+                  var7.field_Fb.a(80, -80 + var7.field_x, var9, ImageProducerRasterBuffer.field_r, (byte) -120);
                   stackIn_41_0 = (var7.field_Jb.field_rb.equals(var7.field_Cb)) ? 0 : 1;
                   var15 = stackIn_41_0;
-                  var9 = var9 + ga.field_r;
+                  var9 = var9 + ImageProducerRasterBuffer.field_r;
                   if (var3_int == 0) {
                     var7.field_B = var9 - var7.field_I;
                   }
@@ -366,7 +366,7 @@ final class bj extends ob implements vb {
             decompiledFrameRemainder0 = false;
           }
           else {
-            lj.field_j.field_rb = ba.field_f;
+            lj.field_j.field_rb = PatchEnvelopeSet.field_f;
             ec.field_d.field_ub = false;
             if (SpriteState.field_t == 1) {
               nl.field_Gb.field_Db.field_Hb.field_rb = le.field_db;

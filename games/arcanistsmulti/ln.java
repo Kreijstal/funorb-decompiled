@@ -227,7 +227,7 @@ final class ln extends df implements pj, vb, ro {
         var3 = var3 + (5 + this.a(var3, this.field_E, rm.field_p, 99, 170, le.field_A));
         var3 = var3 + (5 + this.a(var3, this.field_K, bj.field_kb, -67, 170, ch.field_h));
         var3 = var3 + this.a(ka.field_n, this.field_H, (byte) -71, 170, var3);
-        ke var4 = new ke(46, var3, this.field_v - 90, 25, this.field_F, true, this.field_v - 120, 5, vc.field_e, 11579568, rj.field_c);
+        ke var4 = new ke(46, var3, this.field_v - 90, 25, this.field_F, true, this.field_v - 120, 5, vc.field_e, 11579568, AudioService.field_c);
         this.c(-114, var4);
         var3 = var3 + var4.field_k;
         jm var5 = new jm(ia.field_c, 0, 0, 0, 0, 16777215, -1, 0, 0, ia.field_c.field_C, -1, 2147483647, true);
@@ -265,7 +265,7 @@ final class ln extends df implements pj, vb, ro {
             field_M = (int[]) null;
           }
           if (this.field_O == param4) {
-            ba.a(110);
+            PatchEnvelopeSet.a(110);
             return;
           }
           if (this.field_C != param4) {

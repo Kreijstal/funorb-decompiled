@@ -9,7 +9,7 @@ final class fi {
     static String field_f;
     static int field_e;
     static int[] field_c;
-    static dl field_d;
+    static PlatformTaskDispatcher field_d;
 
     public static void a(byte param0) {
         field_g = null;

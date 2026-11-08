@@ -43,14 +43,14 @@ final class tc extends ib {
     final static void a(byte param0) {
         h.field_K = new String[aj.field_g];
         h.field_K[9] = pa.field_c;
-        h.field_K[20] = bg.field_b;
+        h.field_K[20] = ByteStorage.field_b;
         h.field_K[18] = h.field_E;
         h.field_K[19] = ve.field_r;
         h.field_K[15] = gg.field_d;
         h.field_K[17] = lc.field_e;
         h.field_K[5] = aa.field_i;
         h.field_K[param0] = lf.field_h;
-        h.field_K[13] = wi.field_g;
+        h.field_K[13] = DirectByteStorage.field_g;
         h.field_K[7] = SpriteState.field_r;
         h.field_K[16] = kn.field_sb;
         h.field_K[4] = cc.field_c;
@@ -80,7 +80,7 @@ final class tc extends ib {
         field_z = null;
     }
 
-    private tc(dj param0, int param1) {
+    private tc(BitmapFont param0, int param1) {
         super(param0, param1);
     }
 
@@ -98,7 +98,7 @@ final class tc extends ib {
           if (nj.field_c == 2 &&
             ua.field_S != null) {
             var3 = (CharSequence) ((Object) param0);
-            if (!ua.field_S.equals(gk.a(var3, -13))) {
+            if (!ua.field_S.equals(Js5ArchiveManager.a(var3, -13))) {
               return false;
             }
             if (param1 == -31046) {
@@ -132,20 +132,20 @@ final class tc extends ib {
         if (param0 == 12657) {
           var3 = var2.position;
           var2.writeByte(5, (byte) -39);
-          var2.writeByte(wi.field_f.field_dc, (byte) -3);
-          var4 = wi.field_f.field_Pb + (wi.field_f.field_Fb << 6);
+          var2.writeByte(DirectByteStorage.field_f.field_dc, (byte) -3);
+          var4 = DirectByteStorage.field_f.field_Pb + (DirectByteStorage.field_f.field_Fb << 6);
           var2.writeByte(var4, (byte) -97);
-          var2.a(wi.field_f.field_Wb, 0, (byte) -86, wi.field_f.field_Wb.length);
+          var2.a(DirectByteStorage.field_f.field_Wb, 0, (byte) -86, DirectByteStorage.field_f.field_Wb.length);
           var2.writeByteLengthAtMark(var2.position - var3, (byte) 43);
           return;
         }
         field_E = (String) null;
         var3Lifetime1 = var2.position;
         var2.writeByte(5, (byte) -39);
-        var2.writeByte(wi.field_f.field_dc, (byte) -3);
-        var4Lifetime1 = wi.field_f.field_Pb + (wi.field_f.field_Fb << 6);
+        var2.writeByte(DirectByteStorage.field_f.field_dc, (byte) -3);
+        var4Lifetime1 = DirectByteStorage.field_f.field_Pb + (DirectByteStorage.field_f.field_Fb << 6);
         var2.writeByte(var4Lifetime1, (byte) -97);
-        var2.a(wi.field_f.field_Wb, 0, (byte) -86, wi.field_f.field_Wb.length);
+        var2.a(DirectByteStorage.field_f.field_Wb, 0, (byte) -86, DirectByteStorage.field_f.field_Wb.length);
         var2.writeByteLengthAtMark(var2.position - var3Lifetime1, (byte) 43);
     }
 

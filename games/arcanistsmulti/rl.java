@@ -44,10 +44,10 @@ abstract class rl extends ee implements bn {
 
     final static boolean d(boolean param0) {
         if (param0) {
-          return 250 < gi.field_a ? true : false;
+          return 250 < SoundCache.field_a ? true : false;
         }
         field_h = (int[]) null;
-        return 250 < gi.field_a ? true : false;
+        return 250 < SoundCache.field_a ? true : false;
     }
 
     public static void c(byte param0) {

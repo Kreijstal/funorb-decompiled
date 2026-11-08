@@ -38,7 +38,7 @@ abstract class ve extends DualLinkNode {
         String stackIn_36_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5_ref = null;
-        lg var7 = null;
+        BinaryBitmapFont var7 = null;
         kc var8 = null;
         kc var9 = null;
         kc var10 = null;
@@ -103,7 +103,7 @@ abstract class ve extends DualLinkNode {
               }
             }
           }
-          ga.field_r = 15;
+          ImageProducerRasterBuffer.field_r = 15;
           dh.field_Gb = 4;
           mm.field_p = 2;
           oc.field_i = 11;
@@ -111,20 +111,20 @@ abstract class ve extends DualLinkNode {
           var7 = rc.a(param4, -24755, "lobby", "largefont", param1);
           ea.field_w = rc.a(param4, param0 - 24755, "lobby", "generalfont", param1);
           th.field_k = rc.a(param4, -24755, "lobby", "chatfont", param1);
-          var7.a(var5, var24);
-          ea.field_w.a(var5, var24);
-          th.field_k.a(var5, var24);
+          var7.setInlineSprites(var5, var24);
+          ea.field_w.setInlineSprites(var5, var24);
+          th.field_k.setInlineSprites(var5, var24);
           var8 = new kc(0L, (kc) null);
-          var8.field_z = ga.field_r;
+          var8.field_z = ImageProducerRasterBuffer.field_r;
           var8.field_ob = 16777215;
-          var8.field_Z = (dj) ((Object) var7);
+          var8.field_Z = (BitmapFont) ((Object) var7);
           var8.field_gb = 1;
           var9 = var8;
           var9.field_X = 1;
           var10 = new kc(0L, (kc) null);
-          var10.field_Z = (dj) ((Object) ea.field_w);
+          var10.field_Z = (BitmapFont) ((Object) ea.field_w);
           var10.field_ob = 16777215;
-          var10.field_z = ga.field_r;
+          var10.field_z = ImageProducerRasterBuffer.field_r;
           var11 = var10;
           var10.field_gb = 1;
           var11.field_X = 1;
@@ -132,8 +132,8 @@ abstract class ve extends DualLinkNode {
           wa.field_Pb.field_v = ic.a(qe.a(param1, "heading", "lobby", 66), (byte) -86);
           md.field_b = new kc(0L, (kc) null);
           md.field_b.field_v = rb.a(false, false, param0 ^ 652, 4210752, 8421504, 120);
-          hh.field_c = new kc(0L, (kc) null);
-          hh.field_c.field_v = of.a(3, 114, 1, 1, 6316128, 6316128);
+          MouseWheelHandler.field_c = new kc(0L, (kc) null);
+          MouseWheelHandler.field_c.field_v = of.a(3, 114, 1, 1, 6316128, 6316128);
           ck.field_a = new kc(0L, (kc) null);
           ck.field_a.field_v = ic.a(qe.a(param1, "popup", "lobby", 69), (byte) -105);
           var12 = ic.a(qe.a(param1, "popup_mouseover", "lobby", param0 ^ 93), (byte) -105);
@@ -157,8 +157,8 @@ abstract class ve extends DualLinkNode {
           vf.field_i.field_v = rb.a(false, true, 652, 2039583, 3815994, 30);
           IntrusiveNode.field_c = new kc(0L, (kc) null);
           IntrusiveNode.field_c.field_ob = 13421772;
-          IntrusiveNode.field_c.field_Z = (dj) ((Object) ea.field_w);
-          IntrusiveNode.field_c.field_z = ga.field_r;
+          IntrusiveNode.field_c.field_Z = (BitmapFont) ((Object) ea.field_w);
+          IntrusiveNode.field_c.field_z = ImageProducerRasterBuffer.field_r;
           IntrusiveNode.field_c.field_gb = 1;
           nj.field_d = new kc(0L, IntrusiveNode.field_c);
           nj.field_d.field_zb = 16777215;
@@ -167,8 +167,8 @@ abstract class ve extends DualLinkNode {
           nj.field_d.field_ob = 16764006;
           nj.field_d.field_sb = 8421504;
           var15 = new kc(0L, nj.field_d);
-          var15.field_z = ga.field_r;
-          var15.field_Z = (dj) ((Object) var7);
+          var15.field_z = ImageProducerRasterBuffer.field_r;
+          var15.field_Z = (BitmapFont) ((Object) var7);
           var15.field_ob = 16777215;
           j.field_f = new kc(0L, IntrusiveNode.field_c);
           j.field_f.field_v = rb.a(false, false, 652, 2236962, 2236962, 16);
@@ -181,7 +181,7 @@ abstract class ve extends DualLinkNode {
           qa.field_j = new kc(0L, mi.field_A);
           qa.field_j.a(nj.field_d, (byte) 119);
           var16 = qe.a(param1, "button_mouseover", "lobby", param0 + 91);
-          ml.field_H = new pe(ck.field_a, var12, IntrusiveNode.field_c, nj.field_d, 3, 2, mm.field_p, 3, ga.field_r);
+          ml.field_H = new pe(ck.field_a, var12, IntrusiveNode.field_c, nj.field_d, 3, 2, mm.field_p, 3, ImageProducerRasterBuffer.field_r);
           rn.field_L = new kc(0L, nj.field_d);
           rn.field_L.field_Y = 1;
           rn.field_L.field_wb = 1;
@@ -219,7 +219,7 @@ abstract class ve extends DualLinkNode {
           sl.field_S = new kc(0L, hg.field_d);
           th.field_c = new kc(0L, ko.field_h);
           ml.field_S = new kc(0L, hg.field_d);
-          hh.field_d = new kc(0L, hg.field_d);
+          MouseWheelHandler.field_d = new kc(0L, hg.field_d);
           nf.field_j = new kc(0L, hg.field_d);
           hg.field_d.field_v = ic.a(qe.a(param1, "smallbutton", "lobby", param0 + 45), (byte) -86);
           hg.field_d.field_Ab = ic.a(qe.a(param1, "smallbutton_mouseover", "lobby", param0 ^ 107), (byte) -94);
@@ -255,11 +255,11 @@ abstract class ve extends DualLinkNode {
           dupTemp$2 = ic.a(qe.a(param1, "chatbutton_active", "lobby", 104), (byte) -128);
           ml.field_S.field_hb = dupTemp$2;
           ml.field_S.field_xb = dupTemp$2;
-          hh.field_d.field_v = ic.a(qe.a(param1, "chatfilterbutton", "lobby", param0 ^ 127), (byte) -79);
-          hh.field_d.field_Ab = ic.a(qe.a(param1, "chatfilterbutton_mouseover", "lobby", 47), (byte) -105);
+          MouseWheelHandler.field_d.field_v = ic.a(qe.a(param1, "chatfilterbutton", "lobby", param0 ^ 127), (byte) -79);
+          MouseWheelHandler.field_d.field_Ab = ic.a(qe.a(param1, "chatfilterbutton_mouseover", "lobby", 47), (byte) -105);
           dupTemp$3 = ic.a(qe.a(param1, "chatfilterbutton_active", "lobby", 49), (byte) -100);
-          hh.field_d.field_hb = dupTemp$3;
-          hh.field_d.field_xb = dupTemp$3;
+          MouseWheelHandler.field_d.field_hb = dupTemp$3;
+          MouseWheelHandler.field_d.field_xb = dupTemp$3;
           var17 = qe.a(param1, "checkbox", "lobby", 63);
           ec.field_g = new af(0L, var17[1], var17[0], 1, nj.field_d, (String) null);
           qe.field_m = new kc(0L, (kc) null);
@@ -317,7 +317,7 @@ abstract class ve extends DualLinkNode {
         }
     }
 
-    final static void a(byte param0, int param1, int param2, int param3, dl param4, int param5, int param6, int param7, String param8) {
+    final static void a(byte param0, int param1, int param2, int param3, PlatformTaskDispatcher param4, int param5, int param6, int param7, String param8) {
         try {
           ed.field_Hb = param2;
           ri.field_g = param4;
@@ -332,7 +332,7 @@ abstract class ve extends DualLinkNode {
           jd.field_g = param8;
           jl.field_c = (lk) ((Object) new ef());
           ed.field_yb = new pa(param4);
-          mk.field_O = new gk(jl.field_c, ed.field_yb);
+          mk.field_O = new Js5ArchiveManager(jl.field_c, ed.field_yb);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "ve.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');
         }

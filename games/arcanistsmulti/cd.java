@@ -43,7 +43,7 @@ final class cd extends jm {
         int var13 = 0;
         qm var14 = null;
         try {
-          de.a(param0.field_n + param2, param0.field_j + param3, param0.field_v, param0.field_k, 10197915);
+          SoftwareRasterizer.drawRectangle(param0.field_n + param2, param0.field_j + param3, param0.field_v, param0.field_k, 10197915);
           if (param4) {
             stackIn_6_0 = (((ag) (param0)).field_z) ? 1 : 0;
           } else {
@@ -69,8 +69,8 @@ final class cd extends jm {
           var11 = (param0.field_v - var10.field_h) / 2 + (param2 + param0.field_n);
           var12 = param0.field_j + param3 + (-var10.field_c + param0.field_k) / 2;
           var13 = param0.field_v / 2 + param0.field_n + param2;
-          var10.a(var11, var12);
-          this.field_g.b(this.a(false, param0), var13, param3, var9, -1);
+          var10.draw(var11, var12);
+          this.field_g.drawCentered(this.a(false, param0), var13, param3, var9, -1);
           if (param1 == 5592405) {
             return;
           }

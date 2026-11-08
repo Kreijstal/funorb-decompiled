@@ -28,7 +28,7 @@ final class ii implements pf {
           var8 = qk.field_lb[1];
           if (param0 instanceof ag &&
             ((ag) (param0)).field_z) {
-            var8.b((-var8.field_n + param0.field_v >> 1) + 1 + var6_int, (param0.field_k - var8.field_w >> 1) + (var7 + 1), 256);
+            var8.drawAdditive((-var8.field_n + param0.field_v >> 1) + 1 + var6_int, (param0.field_k - var8.field_w >> 1) + (var7 + 1), 256);
           }
           if (!param0.d(param1 ^ -5594391)) {
             return;
@@ -57,7 +57,7 @@ final class ii implements pf {
         return lo.field_q;
     }
 
-    final static fk a(int param0, boolean param1, wf param2, int param3) {
+    final static fk a(int param0, boolean param1, PcmSample param2, int param3) {
         RuntimeException var4 = null;
         fk stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -68,7 +68,7 @@ final class ii implements pf {
           if (param1) {
             ii.a((byte) 81);
           }
-          stackIn_3_0 = sc.a(kd.a(param2, param0, param3), (byte) 68);
+          stackIn_3_0 = sc.a(PcmSampleStream.createAtRatePercent(param2, param0, param3), (byte) 68);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -95,22 +95,22 @@ final class ii implements pf {
           var1_int = 53 / ((26 - param0) / 49);
           while (ib.b(false)) {
             if (IntrusiveDeque.field_d == 16) {
-              io.a(65, (byte) -84);
+              MusicCrossfadeStream.a(65, (byte) -84);
             }
             if (IntrusiveDeque.field_d == 17) {
-              io.a(73, (byte) 112);
+              MusicCrossfadeStream.a(73, (byte) 112);
             }
             if (IntrusiveDeque.field_d == 18) {
-              io.a(97, (byte) -93);
+              MusicCrossfadeStream.a(97, (byte) -93);
             }
             if (IntrusiveDeque.field_d == 19) {
-              io.a(69, (byte) 76);
+              MusicCrossfadeStream.a(69, (byte) 76);
             }
             if (IntrusiveDeque.field_d == 20) {
-              io.a(67, (byte) 89);
+              MusicCrossfadeStream.a(67, (byte) 89);
             }
             if (IntrusiveDeque.field_d == 21) {
-              io.a(17, (byte) 31);
+              MusicCrossfadeStream.a(17, (byte) 31);
             }
             if (IntrusiveDeque.field_d == 13 &&
               (ch.field_b & 64) > 0) {

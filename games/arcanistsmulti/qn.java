@@ -154,7 +154,7 @@ final class qn extends ob implements vb {
     final static void a(int param0, int param1, int param2, int param3, boolean param4, int param5, int param6) {
         String var7 = null;
         if (nj.field_c == 2) {
-          var7 = ji.field_e;
+          var7 = KeyboardInputHandler.field_e;
         } else {
           var7 = vk.field_v;
         }
@@ -226,7 +226,7 @@ final class qn extends ob implements vb {
         try {
           var3 = null;
           if (oo.field_C == param1) {
-            var3 = wi.field_j;
+            var3 = DirectByteStorage.field_j;
           } else {
             if (param1 != vi.field_C) {
               if (param1 == bh.field_c) {

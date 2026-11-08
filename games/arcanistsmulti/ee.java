@@ -97,7 +97,7 @@ abstract class ee implements pd {
               if (0 == var21[var14]) {
                 return false;
               }
-              di.field_m = di.field_m + (var10 - (-var11 + var17) << 1);
+              NodeHashTable.field_m = NodeHashTable.field_m + (var10 - (-var11 + var17) << 1);
               ce.field_k = ce.field_k + (-var16 + var12 + var13 << 1);
               if (var21[var14] == -1) {
                 jo.field_b = true;

@@ -49,7 +49,7 @@ final class km {
         this.field_f = param0 ? true : false;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, dj param4, int param5, byte param6, int param7, boolean param8, Sprite[] param9, int param10, Sprite[] param11) {
+    final static void a(int param0, int param1, int param2, int param3, BitmapFont param4, int param5, byte param6, int param7, boolean param8, Sprite[] param9, int param10, Sprite[] param11) {
         try {
           wj.a(param9, param3, 113, param1, param2, param0, param8, param7, param11, param10, param10, param5, param4, param4, param7);
           if (param6 != 40) {

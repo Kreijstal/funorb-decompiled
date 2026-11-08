@@ -14,7 +14,7 @@ final class ea extends ve {
     static ql field_y;
     int field_A;
     static int field_F;
-    static lg field_w;
+    static BinaryBitmapFont field_w;
     static IndexedSprite[] field_H;
     static Sprite[] field_u;
 

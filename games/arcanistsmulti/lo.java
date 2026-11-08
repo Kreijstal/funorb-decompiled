@@ -6,7 +6,7 @@ final class lo extends rl {
     static int field_q;
     static String[] field_u;
     static String field_s;
-    static gi field_w;
+    static SoundCache field_w;
     static String field_z;
     static String field_v;
     static kc field_y;

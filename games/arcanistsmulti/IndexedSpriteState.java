@@ -35,7 +35,7 @@ abstract class IndexedSpriteState {
         }
     }
 
-    abstract void a(int param0, int param1, int param2);
+    abstract void drawAlpha(int param0, int param1, int param2);
 
     public static void a(byte param0) {
         field_a = null;
@@ -46,7 +46,7 @@ abstract class IndexedSpriteState {
         field_e = (nl[][]) null;
     }
 
-    abstract void a(int param0, int param1);
+    abstract void draw(int param0, int param1);
 
     static {
         field_a = "Arcane Zero Shield blocks this spell in the first round.";

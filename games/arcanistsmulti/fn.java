@@ -17,7 +17,7 @@ final class fn {
         int var12 = 0;
         bi.field_U.field_rb = param1;
         if (nj.field_c == 2) {
-          ih.field_d.field_rb = dk.field_b;
+          ih.field_d.field_rb = CanvasRasterBuffer.field_b;
         } else {
           ih.field_d.field_rb = um.field_e;
         }
@@ -144,16 +144,16 @@ final class fn {
         int var10;
         int var11;
         var11 = ArcanistsMulti.field_G ? 1 : 0;
-        if (!param3 && (fh.field_g != de.field_e ||
-          ri.field_a != de.field_j) && (de.field_j == ce.field_m.field_m &&
-          de.field_e == ce.field_m.field_e)) {
-          if (wi.field_f != null) {
-            io.a(124, false);
+        if (!param3 && (fh.field_g != SoftwareRasterizer.field_e ||
+          ri.field_a != SoftwareRasterizer.field_j) && (SoftwareRasterizer.field_j == ce.field_m.field_m &&
+          SoftwareRasterizer.field_e == ce.field_m.field_e)) {
+          if (DirectByteStorage.field_f != null) {
+            MusicCrossfadeStream.a(124, false);
           } else {
             if (null == om.field_x) {
               ao.a((byte) -124);
             } else {
-              io.a(13, true);
+              MusicCrossfadeStream.a(13, true);
             }
           }
         }
@@ -175,7 +175,7 @@ final class fn {
           c.a(param7, param3, param0, 2, param1);
         }
         if (so.field_j &&
-          wi.field_f.field_Rb >= wi.field_f.field_dc) {
+          DirectByteStorage.field_f.field_Rb >= DirectByteStorage.field_f.field_dc) {
           mj.field_s.field_ub = false;
           nj.field_m.field_Hb.field_rb = ck.field_f;
           fc.a((byte) -103, nj.field_m.field_Cb);
@@ -269,12 +269,12 @@ final class fn {
             fn.a((byte) -126);
           }
           var8 = 0;
-          if (wi.field_f != null && (dh.field_Hb != null ||
+          if (DirectByteStorage.field_f != null && (dh.field_Hb != null ||
             pe.field_Fb != null ||
-            dk.field_a != null ||
+            CanvasRasterBuffer.field_a != null ||
             null != ue.field_b)) {
             for (var9 = 0; var9 < vf.field_l; var9++) {
-              var10_int = 255 & wi.field_f.field_Wb[var9];
+              var10_int = 255 & DirectByteStorage.field_f.field_Wb[var9];
               if (null != dh.field_Hb &&
                 null != dh.field_Hb[var9] &&
                 dh.field_Hb[var9][var10_int]) {
@@ -291,9 +291,9 @@ final class fn {
                   var6 = var11_int;
                 }
               }
-              if (null != dk.field_a &&
-                dk.field_a[var9] != null) {
-                var11_intLifetime1 = dk.field_a[var9][var10_int];
+              if (null != CanvasRasterBuffer.field_a &&
+                CanvasRasterBuffer.field_a[var9] != null) {
+                var11_intLifetime1 = CanvasRasterBuffer.field_a[var9][var10_int];
                 if (var7 < var11_intLifetime1) {
                   var7 = var11_intLifetime1;
                 }
@@ -310,7 +310,7 @@ final class fn {
           }
           stackIn_43_0 = (dn) (param1);
           stackIn_44_1 = (dd.field_h == param1);
-          stackIn_47_0 = (!((dn) (Object) stackIn_43_0).a(stackIn_44_1, (byte) 98, 2 * (ga.field_r + 2), 2, (8 + 4 * ga.field_r) * param0, param2)) ? 0 : 1;
+          stackIn_47_0 = (!((dn) (Object) stackIn_43_0).a(stackIn_44_1, (byte) 98, 2 * (ImageProducerRasterBuffer.field_r + 2), 2, (8 + 4 * ImageProducerRasterBuffer.field_r) * param0, param2)) ? 0 : 1;
           var9Lifetime1 = stackIn_47_0;
           var10 = param1.field_Cb.field_G;
           var11 = null;
@@ -363,7 +363,7 @@ final class fn {
             if (param1 == nj.field_m) {
               var21 += 42;
             }
-            var33 = dj.a(var12.field_Fb.field_Z, var32, var21);
+            var33 = BitmapFont.truncateWithEllipsis(var12.field_Fb.field_Z, var32, var21);
             var20 = var33;
             var20 = var33;
             var20 = var33;
@@ -402,7 +402,7 @@ final class fn {
               var12.field_Hb.field_J = var24_int;
               var12.field_Hb.field_eb = var24_int;
               if (lf.field_b == param1) {
-                if (!wi.field_f.field_Lb) {
+                if (!DirectByteStorage.field_f.field_Lb) {
                   var12.field_Ub.field_rb = ej.field_L;
                 }
               } else {
@@ -420,12 +420,12 @@ final class fn {
                 }
               }
               var25_int = 0;
-              if (null != wi.field_f &&
+              if (null != DirectByteStorage.field_f &&
                 qk.k((byte) 110) &&
                 ~qf.field_a != ~var12.field_Nb) {
                 if (var12.field_Hb.field_rb != null) {
                   var26 = var12.field_Hb.c(-25921) + dh.field_Gb * 2;
-                  var12.field_Hb.a(var26, var25_int, var19, ga.field_r, (byte) -120);
+                  var12.field_Hb.a(var26, var25_int, var19, ImageProducerRasterBuffer.field_r, (byte) -120);
                   var25_int = var25_int + var26;
                 }
                 if (null != var12.field_Ub.field_rb) {
@@ -434,7 +434,7 @@ final class fn {
                   } else {
                     var26Lifetime2 = var12.field_Ub.c(-25921) + dh.field_Gb * 2;
                   }
-                  var12.field_Ub.a(var26Lifetime2, var25_int, var19, ga.field_r, (byte) -120);
+                  var12.field_Ub.a(var26Lifetime2, var25_int, var19, ImageProducerRasterBuffer.field_r, (byte) -120);
                   var25_int = var25_int + var26Lifetime2;
                 }
               }
@@ -445,10 +445,10 @@ final class fn {
               } else {
                 stackIn_99_2 = 0;
               }
-              ((kc) (Object) stackIn_98_0).a(stackIn_98_1 - stackIn_99_2, var25_int, var19, ga.field_r, (byte) -120);
+              ((kc) (Object) stackIn_98_0).a(stackIn_98_1 - stackIn_99_2, var25_int, var19, ImageProducerRasterBuffer.field_r, (byte) -120);
               var12.field_Gb.field_rb = Integer.toString(var12.field_Pb);
-              var12.field_Gb.a(40, -40 + var12.field_x, var19, ga.field_r, (byte) -120);
-              var19 = var19 + ga.field_r;
+              var12.field_Gb.a(40, -40 + var12.field_x, var19, ImageProducerRasterBuffer.field_r, (byte) -120);
+              var19 = var19 + ImageProducerRasterBuffer.field_r;
               if (var12.field_Fb.field_C &&
                 var22 != 0) {
                 kh.field_c = var12.field_Qb;
@@ -472,11 +472,11 @@ final class fn {
             var25 = var30;
             var24Lifetime1 = var23;
             if (var23 != null) {
-              var24_intLifetime1 = var12.field_Cb.field_Z.a(var23, var12.field_x - (dh.field_Gb + dh.field_Gb));
+              var24_intLifetime1 = var12.field_Cb.field_Z.wrappedLineCount(var23, var12.field_x - (dh.field_Gb + dh.field_Gb));
               var12.field_Cb.field_rb = var23;
               var12.field_Cb.field_u = var12.field_Eb * 256 / vd.field_i;
-              var12.field_Cb.a(-(dh.field_Gb * 2) + var12.field_x, dh.field_Gb, var19, ga.field_r * var24_intLifetime1, (byte) -120);
-              var19 = var19 + var24_intLifetime1 * ga.field_r;
+              var12.field_Cb.a(-(dh.field_Gb * 2) + var12.field_x, dh.field_Gb, var19, ImageProducerRasterBuffer.field_r * var24_intLifetime1, (byte) -120);
+              var19 = var19 + var24_intLifetime1 * ImageProducerRasterBuffer.field_r;
             }
             if (var9Lifetime1 == 0) {
               var12.field_B = -var12.field_I + var19;
@@ -572,7 +572,7 @@ final class fn {
                 var25 = null;
                 var26Lifetime1 = 0;
                 for (var27_int = 0; var27_int < vf.field_l; var27_int++) {
-                  var28 = wi.field_f.field_Wb[var27_int] & 255;
+                  var28 = DirectByteStorage.field_f.field_Wb[var27_int] & 255;
                   var29 = 0;
                   if (null != dh.field_Hb &&
                     null != dh.field_Hb[var27_int] &&
@@ -592,9 +592,9 @@ final class fn {
                       var29 = 1;
                     }
                   }
-                  if (null != dk.field_a &&
-                    null != dk.field_a[var27_int]) {
-                    var30_intLifetime1 = dk.field_a[var27_int][var28];
+                  if (null != CanvasRasterBuffer.field_a &&
+                    null != CanvasRasterBuffer.field_a[var27_int]) {
+                    var30_intLifetime1 = CanvasRasterBuffer.field_a[var27_int][var28];
                     if (var30_intLifetime1 != 0 &&
                       !gm.field_c &&
                       !var12.field_Jb) {
@@ -640,7 +640,7 @@ final class fn {
                 }
                 if (lf.field_b == param1 &&
                   !qk.k((byte) 72)) {
-                  var27 = wi.field_f.field_ic;
+                  var27 = DirectByteStorage.field_f.field_ic;
                   var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + tj.a(126, new String[]{var27}, ArchiveProvider.field_c);
                 }
                 kh.field_c = (String) (var24Lifetime2);

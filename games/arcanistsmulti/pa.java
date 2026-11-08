@@ -228,7 +228,7 @@ final class pa implements Runnable {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2_ref = (Exception) (Object) decompiledCaughtException;
               var6 = (String) null;
-              jh.a((Throwable) ((Object) var2_ref), (String) null, (byte) 20);
+              DelegatingCanvas.a((Throwable) ((Object) var2_ref), (String) null, (byte) 20);
               var7.field_p = false;
             }
           }
@@ -240,10 +240,10 @@ final class pa implements Runnable {
     }
 
     final static void b(byte param0) {
-        hk.d(-24225);
-        ul.field_h = true;
+        MusicPatchPcmStream.d(-24225);
+        Bzip2State.field_h = true;
         int var1 = -24 % ((71 - param0) / 35);
-        hk.field_s = true;
+        MusicPatchPcmStream.field_s = true;
         ClientException.field_b.f(-126);
         jn.a(fi.field_a, false, -1);
     }
@@ -292,8 +292,8 @@ final class pa implements Runnable {
         }
     }
 
-    pa(dl param0) {
-        og var2 = null;
+    pa(PlatformTaskDispatcher param0) {
+        PlatformTask var2 = null;
         this.field_e = new tg();
         this.field_b = false;
         this.field_d = 0;

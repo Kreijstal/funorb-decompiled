@@ -35,259 +35,259 @@ final class pb extends IntrusiveNode {
         int var4Lifetime14;
         int var4Lifetime15;
         int var4Lifetime8Lifetime1;
-        eh.field_e.h(0, 0);
+        eh.field_e.drawOpaque(0, 0);
         int var1 = 32;
         int var2 = 80;
-        wm.field_H[15].c(var2, bo.field_d, 160, 64);
+        wm.field_H[15].drawScaled(var2, bo.field_d, 160, 64);
         if (null != hf.field_o) {
           var3 = 64 * hf.field_o.field_n / hf.field_o.field_w;
-          hf.field_o.c(-(var3 / 2) + 80 + var2, bo.field_d, var3, 64);
+          hf.field_o.drawScaled(-(var3 / 2) + 80 + var2, bo.field_d, var3, 64);
         }
-        wm.field_H[15].c(var2 + 160, bo.field_d, 224, 48);
-        wm.field_H[15].c(464, bo.field_d, 96, 48);
-        ih.field_e.c(464, 8 + bo.field_d);
+        wm.field_H[15].drawScaled(var2 + 160, bo.field_d, 224, 48);
+        wm.field_H[15].drawScaled(464, bo.field_d, 96, 48);
+        ih.field_e.drawTransparent(464, 8 + bo.field_d);
         var3Lifetime1 = 53;
-        mc.field_b.a(Integer.toString(var3Lifetime1), 464, 8 + bo.field_d, 32, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
-        mc.field_b.a("Orb coins Banked", 496, bo.field_d, 64, 48, 16777215, 0, 1, 1, mc.field_b.field_C);
-        wm.field_H[15].c(80, 128 + (64 + bo.field_d) + 32, 480, 64);
+        mc.field_b.drawParagraph(Integer.toString(var3Lifetime1), 464, 8 + bo.field_d, 32, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
+        mc.field_b.drawParagraph("Orb coins Banked", 496, bo.field_d, 64, 48, 16777215, 0, 1, 1, mc.field_b.field_C);
+        wm.field_H[15].drawScaled(80, 128 + (64 + bo.field_d) + 32, 480, 64);
         if ((1 & ch.field_b) <= 0) {
           if ((ch.field_b & 2) > 0) {
-            mc.field_b.a("SHOW MEMBER MESSAGE", 32, var1, 16777215, 0);
+            mc.field_b.drawText("SHOW MEMBER MESSAGE", 32, var1, 16777215, 0);
             var1 += 16;
             var4 = 64 + (128 + bo.field_d + 32);
-            wm.field_H[6].c(var2 + 16, var4 + 16, 216, 32);
-            mc.field_b.a("Purchase", var2 + 16, var4 + 16, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
+            wm.field_H[6].drawScaled(var2 + 16, var4 + 16, 216, 32);
+            mc.field_b.drawParagraph("Purchase", var2 + 16, var4 + 16, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
           }
           if ((ch.field_b & 4) > 0) {
-            mc.field_b.a("SHOW PURCHASE", 32, var1, 16777215, 0);
+            mc.field_b.drawText("SHOW PURCHASE", 32, var1, 16777215, 0);
             var1 += 16;
             var4Lifetime11 = 64 + (32 + bo.field_d) + 128;
-            wm.field_H[15].c(var2 + 16, 16 + var4Lifetime11, 216, 32);
-            mc.field_b.a("Purchase", var2 + 16, 16 + var4Lifetime11, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
+            wm.field_H[15].drawScaled(var2 + 16, 16 + var4Lifetime11, 216, 32);
+            mc.field_b.drawParagraph("Purchase", var2 + 16, 16 + var4Lifetime11, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
           }
           if (0 < (ch.field_b & 8)) {
-            mc.field_b.a("SHOW CONFIRM", 32, var1, 16777215, 0);
+            mc.field_b.drawText("SHOW CONFIRM", 32, var1, 16777215, 0);
             var1 += 16;
             var4Lifetime12 = bo.field_d + 32 + 192;
             var5 = 100;
-            wm.field_H[15].c(var2 + 16, 16 + var4Lifetime12, var5, 32);
-            mc.field_b.a("Yes", var2 + 16, var4Lifetime12 + 16, var5, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
-            wm.field_H[15].c(240 + var2 + 16 - (24 + var5), 16 + var4Lifetime12, var5, 32);
-            mc.field_b.a("No", -var5 + (-8 + (var2 + 240)), var4Lifetime12 + 16, var5, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
+            wm.field_H[15].drawScaled(var2 + 16, 16 + var4Lifetime12, var5, 32);
+            mc.field_b.drawParagraph("Yes", var2 + 16, var4Lifetime12 + 16, var5, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
+            wm.field_H[15].drawScaled(240 + var2 + 16 - (24 + var5), 16 + var4Lifetime12, var5, 32);
+            mc.field_b.drawParagraph("No", -var5 + (-8 + (var2 + 240)), var4Lifetime12 + 16, var5, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
           }
           if ((ch.field_b & 16) > 0) {
-            mc.field_b.a("SHOW WAIT", 32, var1, 16777215, 0);
+            mc.field_b.drawText("SHOW WAIT", 32, var1, 16777215, 0);
             var1 += 16;
             var4Lifetime13 = 128 + (bo.field_d + 32) + 64;
-            wm.field_H[6].c(328, var4Lifetime13 + 16, 216, 32);
-            mc.field_b.a("Cancel", 328, var4Lifetime13 + 16, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
-            mc.field_b.a("Please wait for confirmation of your purchase.", 16 + var2, var4Lifetime13, 216, 64, 16777215, 0, 1, 1, mc.field_b.field_C);
+            wm.field_H[6].drawScaled(328, var4Lifetime13 + 16, 216, 32);
+            mc.field_b.drawParagraph("Cancel", 328, var4Lifetime13 + 16, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
+            mc.field_b.drawParagraph("Please wait for confirmation of your purchase.", 16 + var2, var4Lifetime13, 216, 64, 16777215, 0, 1, 1, mc.field_b.field_C);
           }
           if (param0 != 2341) {
             pb.a(-26);
           }
           if ((ch.field_b & 32) > 0) {
-            mc.field_b.a("SHOW COMPLETE", 32, var1, 16777215, 0);
+            mc.field_b.drawText("SHOW COMPLETE", 32, var1, 16777215, 0);
             var1 += 16;
             var4Lifetime14 = 64 + (128 + bo.field_d) + 32;
-            mc.field_b.a("Purchase completed.", 16 + var2, var4Lifetime14, 216, 64, 16777215, 0, 1, 1, mc.field_b.field_C);
+            mc.field_b.drawParagraph("Purchase completed.", 16 + var2, var4Lifetime14, 216, 64, 16777215, 0, 1, 1, mc.field_b.field_C);
           }
           if (!((ch.field_b & 64) <= 0)) {
-            mc.field_b.a("SHOW EXIT", 32, var1, 16777215, 0);
+            mc.field_b.drawText("SHOW EXIT", 32, var1, 16777215, 0);
             var1 += 16;
             var4Lifetime15 = bo.field_d + 160 + 64;
-            wm.field_H[15].c(328, 16 + var4Lifetime15, 216, 32);
-            mc.field_b.a("Cancel", 328, var4Lifetime15 + 16, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
+            wm.field_H[15].drawScaled(328, 16 + var4Lifetime15, 216, 32);
+            mc.field_b.drawParagraph("Cancel", 328, var4Lifetime15 + 16, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
           }
           return;
         }
-        mc.field_b.a("SHOW INFOS", 32, var1, 16777215, 0);
+        mc.field_b.drawText("SHOW INFOS", 32, var1, 16777215, 0);
         var1 += 16;
         var4Lifetime1 = bo.field_d + 64;
-        wm.field_H[15].c(var2, var4Lifetime1, 160, 160);
-        de.d(3, 3, 16 + var2, 16 + var4Lifetime1, 128, 128);
-        de.a(-64 + (80 + var2) - 1, 15 + var4Lifetime1, 130, 130, 0);
-        wd.field_e.c(-64 + (var2 + 80), var4Lifetime1 + 16);
+        wm.field_H[15].drawScaled(var2, var4Lifetime1, 160, 160);
+        SoftwareRasterizer.blurRectangle(3, 3, 16 + var2, 16 + var4Lifetime1, 128, 128);
+        SoftwareRasterizer.drawRectangle(-64 + (80 + var2) - 1, 15 + var4Lifetime1, 130, 130, 0);
+        wd.field_e.drawTransparent(-64 + (var2 + 80), var4Lifetime1 + 16);
         var4Lifetime2 = 48 + bo.field_d;
         var5Lifetime1 = 176;
         int var6 = var2 + 160;
         int var7 = 320;
-        wm.field_H[6].c(var6, var4Lifetime2, var7, var5Lifetime1);
-        mc.field_b.a(sn.field_L, var6, var4Lifetime2 + 32, var7, 32 + mc.field_b.field_C, 16777215, 0, 1, 1, mc.field_b.field_C);
+        wm.field_H[6].drawScaled(var6, var4Lifetime2, var7, var5Lifetime1);
+        mc.field_b.drawParagraph(sn.field_L, var6, var4Lifetime2 + 32, var7, 32 + mc.field_b.field_C, 16777215, 0, 1, 1, mc.field_b.field_C);
         if ((2 & ch.field_b) > 0) {
-          mc.field_b.a("This item is only availiable to members.", var6, 64 + var4Lifetime2, var7, 80, 16777215, 0, 1, 1, mc.field_b.field_C);
-          ii.field_d.f(var6 - (-(var7 / 2) + 16), 80 + (var4Lifetime2 + 64));
+          mc.field_b.drawParagraph("This item is only availiable to members.", var6, 64 + var4Lifetime2, var7, 80, 16777215, 0, 1, 1, mc.field_b.field_C);
+          ii.field_d.drawQuarterSize(var6 - (-(var7 / 2) + 16), 80 + (var4Lifetime2 + 64));
           if ((ch.field_b & 2) > 0) {
-            mc.field_b.a("SHOW MEMBER MESSAGE", 32, var1, 16777215, 0);
+            mc.field_b.drawText("SHOW MEMBER MESSAGE", 32, var1, 16777215, 0);
             var1 += 16;
             var4Lifetime2 = 64 + (128 + bo.field_d + 32);
-            wm.field_H[6].c(var2 + 16, var4Lifetime2 + 16, 216, 32);
-            mc.field_b.a("Purchase", var2 + 16, var4Lifetime2 + 16, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
+            wm.field_H[6].drawScaled(var2 + 16, var4Lifetime2 + 16, 216, 32);
+            mc.field_b.drawParagraph("Purchase", var2 + 16, var4Lifetime2 + 16, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
           }
           if ((ch.field_b & 4) > 0) {
-            mc.field_b.a("SHOW PURCHASE", 32, var1, 16777215, 0);
+            mc.field_b.drawText("SHOW PURCHASE", 32, var1, 16777215, 0);
             var1 += 16;
             var4Lifetime2 = 64 + (32 + bo.field_d) + 128;
-            wm.field_H[15].c(var2 + 16, 16 + var4Lifetime2, 216, 32);
-            mc.field_b.a("Purchase", var2 + 16, 16 + var4Lifetime2, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
+            wm.field_H[15].drawScaled(var2 + 16, 16 + var4Lifetime2, 216, 32);
+            mc.field_b.drawParagraph("Purchase", var2 + 16, 16 + var4Lifetime2, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
           }
           if (0 < (ch.field_b & 8)) {
-            mc.field_b.a("SHOW CONFIRM", 32, var1, 16777215, 0);
+            mc.field_b.drawText("SHOW CONFIRM", 32, var1, 16777215, 0);
             var1 += 16;
             var4Lifetime2 = bo.field_d + 32 + 192;
             var5Lifetime2 = 100;
-            wm.field_H[15].c(var2 + 16, 16 + var4Lifetime2, var5Lifetime2, 32);
-            mc.field_b.a("Yes", var2 + 16, var4Lifetime2 + 16, var5Lifetime2, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
-            wm.field_H[15].c(240 + var2 + 16 - (24 + var5Lifetime2), 16 + var4Lifetime2, var5Lifetime2, 32);
-            mc.field_b.a("No", -var5Lifetime2 + (-8 + (var2 + 240)), var4Lifetime2 + 16, var5Lifetime2, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
+            wm.field_H[15].drawScaled(var2 + 16, 16 + var4Lifetime2, var5Lifetime2, 32);
+            mc.field_b.drawParagraph("Yes", var2 + 16, var4Lifetime2 + 16, var5Lifetime2, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
+            wm.field_H[15].drawScaled(240 + var2 + 16 - (24 + var5Lifetime2), 16 + var4Lifetime2, var5Lifetime2, 32);
+            mc.field_b.drawParagraph("No", -var5Lifetime2 + (-8 + (var2 + 240)), var4Lifetime2 + 16, var5Lifetime2, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
           }
           if ((ch.field_b & 16) > 0) {
-            mc.field_b.a("SHOW WAIT", 32, var1, 16777215, 0);
+            mc.field_b.drawText("SHOW WAIT", 32, var1, 16777215, 0);
             var1 += 16;
             var4Lifetime2 = 128 + (bo.field_d + 32) + 64;
-            wm.field_H[6].c(328, var4Lifetime2 + 16, 216, 32);
-            mc.field_b.a("Cancel", 328, var4Lifetime2 + 16, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
-            mc.field_b.a("Please wait for confirmation of your purchase.", 16 + var2, var4Lifetime2, 216, 64, 16777215, 0, 1, 1, mc.field_b.field_C);
+            wm.field_H[6].drawScaled(328, var4Lifetime2 + 16, 216, 32);
+            mc.field_b.drawParagraph("Cancel", 328, var4Lifetime2 + 16, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
+            mc.field_b.drawParagraph("Please wait for confirmation of your purchase.", 16 + var2, var4Lifetime2, 216, 64, 16777215, 0, 1, 1, mc.field_b.field_C);
           }
           if (param0 != 2341) {
             pb.a(-26);
           }
           if ((ch.field_b & 32) > 0) {
-            mc.field_b.a("SHOW COMPLETE", 32, var1, 16777215, 0);
+            mc.field_b.drawText("SHOW COMPLETE", 32, var1, 16777215, 0);
             var1 += 16;
             var4Lifetime2 = 64 + (128 + bo.field_d) + 32;
-            mc.field_b.a("Purchase completed.", 16 + var2, var4Lifetime2, 216, 64, 16777215, 0, 1, 1, mc.field_b.field_C);
+            mc.field_b.drawParagraph("Purchase completed.", 16 + var2, var4Lifetime2, 216, 64, 16777215, 0, 1, 1, mc.field_b.field_C);
           }
           if (!((ch.field_b & 64) <= 0)) {
-            mc.field_b.a("SHOW EXIT", 32, var1, 16777215, 0);
+            mc.field_b.drawText("SHOW EXIT", 32, var1, 16777215, 0);
             var1 += 16;
             var4Lifetime2 = bo.field_d + 160 + 64;
-            wm.field_H[15].c(328, 16 + var4Lifetime2, 216, 32);
-            mc.field_b.a("Cancel", 328, var4Lifetime2 + 16, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
+            wm.field_H[15].drawScaled(328, 16 + var4Lifetime2, 216, 32);
+            mc.field_b.drawParagraph("Cancel", 328, var4Lifetime2 + 16, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
           }
           return;
         }
         if (ClientException.field_j != null) {
-          mc.field_b.a(ClientException.field_j, var6, 64 + var4Lifetime2, var7, 80, 16777215, 0, 1, 1, mc.field_b.field_C);
+          mc.field_b.drawParagraph(ClientException.field_j, var6, 64 + var4Lifetime2, var7, 80, 16777215, 0, 1, 1, mc.field_b.field_C);
           var4Lifetime2 = -mc.field_b.field_C - 32 + (64 + (128 + (bo.field_d + 32)));
-          mc.field_b.a("Orb coins to purchase", var6 + 32 + 32, var4Lifetime2, var7 - 80, 32 + mc.field_b.field_C, 16777215, 0, 1, 1, mc.field_b.field_C);
-          ih.field_e.c(var6 + 16, -16 + mc.field_b.field_C / 2 + var4Lifetime2 + 16);
-          mc.field_b.a(Integer.toString(cb.field_f), var6 + 16, 16 + (mc.field_b.field_C / 2 + (var4Lifetime2 - 16)), 32, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
+          mc.field_b.drawParagraph("Orb coins to purchase", var6 + 32 + 32, var4Lifetime2, var7 - 80, 32 + mc.field_b.field_C, 16777215, 0, 1, 1, mc.field_b.field_C);
+          ih.field_e.drawTransparent(var6 + 16, -16 + mc.field_b.field_C / 2 + var4Lifetime2 + 16);
+          mc.field_b.drawParagraph(Integer.toString(cb.field_f), var6 + 16, 16 + (mc.field_b.field_C / 2 + (var4Lifetime2 - 16)), 32, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
           if ((ch.field_b & 2) > 0) {
-            mc.field_b.a("SHOW MEMBER MESSAGE", 32, var1, 16777215, 0);
+            mc.field_b.drawText("SHOW MEMBER MESSAGE", 32, var1, 16777215, 0);
             var1 += 16;
             var4Lifetime2 = 64 + (128 + bo.field_d + 32);
-            wm.field_H[6].c(var2 + 16, var4Lifetime2 + 16, 216, 32);
-            mc.field_b.a("Purchase", var2 + 16, var4Lifetime2 + 16, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
+            wm.field_H[6].drawScaled(var2 + 16, var4Lifetime2 + 16, 216, 32);
+            mc.field_b.drawParagraph("Purchase", var2 + 16, var4Lifetime2 + 16, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
           }
           if ((ch.field_b & 4) > 0) {
-            mc.field_b.a("SHOW PURCHASE", 32, var1, 16777215, 0);
+            mc.field_b.drawText("SHOW PURCHASE", 32, var1, 16777215, 0);
             var1 += 16;
             var4Lifetime2 = 64 + (32 + bo.field_d) + 128;
-            wm.field_H[15].c(var2 + 16, 16 + var4Lifetime2, 216, 32);
-            mc.field_b.a("Purchase", var2 + 16, 16 + var4Lifetime2, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
+            wm.field_H[15].drawScaled(var2 + 16, 16 + var4Lifetime2, 216, 32);
+            mc.field_b.drawParagraph("Purchase", var2 + 16, 16 + var4Lifetime2, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
           }
           if (0 < (ch.field_b & 8)) {
-            mc.field_b.a("SHOW CONFIRM", 32, var1, 16777215, 0);
+            mc.field_b.drawText("SHOW CONFIRM", 32, var1, 16777215, 0);
             var1 += 16;
             var4Lifetime2 = bo.field_d + 32 + 192;
             var5Lifetime3 = 100;
-            wm.field_H[15].c(var2 + 16, 16 + var4Lifetime2, var5Lifetime3, 32);
-            mc.field_b.a("Yes", var2 + 16, var4Lifetime2 + 16, var5Lifetime3, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
-            wm.field_H[15].c(240 + var2 + 16 - (24 + var5Lifetime3), 16 + var4Lifetime2, var5Lifetime3, 32);
-            mc.field_b.a("No", -var5Lifetime3 + (-8 + (var2 + 240)), var4Lifetime2 + 16, var5Lifetime3, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
+            wm.field_H[15].drawScaled(var2 + 16, 16 + var4Lifetime2, var5Lifetime3, 32);
+            mc.field_b.drawParagraph("Yes", var2 + 16, var4Lifetime2 + 16, var5Lifetime3, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
+            wm.field_H[15].drawScaled(240 + var2 + 16 - (24 + var5Lifetime3), 16 + var4Lifetime2, var5Lifetime3, 32);
+            mc.field_b.drawParagraph("No", -var5Lifetime3 + (-8 + (var2 + 240)), var4Lifetime2 + 16, var5Lifetime3, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
           }
           if ((ch.field_b & 16) > 0) {
-            mc.field_b.a("SHOW WAIT", 32, var1, 16777215, 0);
+            mc.field_b.drawText("SHOW WAIT", 32, var1, 16777215, 0);
             var1 += 16;
             var4Lifetime2 = 128 + (bo.field_d + 32) + 64;
-            wm.field_H[6].c(328, var4Lifetime2 + 16, 216, 32);
-            mc.field_b.a("Cancel", 328, var4Lifetime2 + 16, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
-            mc.field_b.a("Please wait for confirmation of your purchase.", 16 + var2, var4Lifetime2, 216, 64, 16777215, 0, 1, 1, mc.field_b.field_C);
+            wm.field_H[6].drawScaled(328, var4Lifetime2 + 16, 216, 32);
+            mc.field_b.drawParagraph("Cancel", 328, var4Lifetime2 + 16, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
+            mc.field_b.drawParagraph("Please wait for confirmation of your purchase.", 16 + var2, var4Lifetime2, 216, 64, 16777215, 0, 1, 1, mc.field_b.field_C);
           }
           if (param0 != 2341) {
             pb.a(-26);
           }
           if ((ch.field_b & 32) > 0) {
-            mc.field_b.a("SHOW COMPLETE", 32, var1, 16777215, 0);
+            mc.field_b.drawText("SHOW COMPLETE", 32, var1, 16777215, 0);
             var1 += 16;
             var4Lifetime2 = 64 + (128 + bo.field_d) + 32;
-            mc.field_b.a("Purchase completed.", 16 + var2, var4Lifetime2, 216, 64, 16777215, 0, 1, 1, mc.field_b.field_C);
+            mc.field_b.drawParagraph("Purchase completed.", 16 + var2, var4Lifetime2, 216, 64, 16777215, 0, 1, 1, mc.field_b.field_C);
           }
           if (!((ch.field_b & 64) <= 0)) {
-            mc.field_b.a("SHOW EXIT", 32, var1, 16777215, 0);
+            mc.field_b.drawText("SHOW EXIT", 32, var1, 16777215, 0);
             var1 += 16;
             var4Lifetime2 = bo.field_d + 160 + 64;
-            wm.field_H[15].c(328, 16 + var4Lifetime2, 216, 32);
-            mc.field_b.a("Cancel", 328, var4Lifetime2 + 16, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
+            wm.field_H[15].drawScaled(328, 16 + var4Lifetime2, 216, 32);
+            mc.field_b.drawParagraph("Cancel", 328, var4Lifetime2 + 16, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
           }
           return;
         }
         var4Lifetime3 = -mc.field_b.field_C - 32 + (64 + (128 + (bo.field_d + 32)));
-        mc.field_b.a("Orb coins to purchase", var6 + 32 + 32, var4Lifetime3, var7 - 80, 32 + mc.field_b.field_C, 16777215, 0, 1, 1, mc.field_b.field_C);
-        ih.field_e.c(var6 + 16, -16 + mc.field_b.field_C / 2 + var4Lifetime3 + 16);
-        mc.field_b.a(Integer.toString(cb.field_f), var6 + 16, 16 + (mc.field_b.field_C / 2 + (var4Lifetime3 - 16)), 32, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
+        mc.field_b.drawParagraph("Orb coins to purchase", var6 + 32 + 32, var4Lifetime3, var7 - 80, 32 + mc.field_b.field_C, 16777215, 0, 1, 1, mc.field_b.field_C);
+        ih.field_e.drawTransparent(var6 + 16, -16 + mc.field_b.field_C / 2 + var4Lifetime3 + 16);
+        mc.field_b.drawParagraph(Integer.toString(cb.field_f), var6 + 16, 16 + (mc.field_b.field_C / 2 + (var4Lifetime3 - 16)), 32, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
         if ((ch.field_b & 2) > 0) {
-          mc.field_b.a("SHOW MEMBER MESSAGE", 32, var1, 16777215, 0);
+          mc.field_b.drawText("SHOW MEMBER MESSAGE", 32, var1, 16777215, 0);
           var1 += 16;
           var4Lifetime4 = 64 + (128 + bo.field_d + 32);
-          wm.field_H[6].c(var2 + 16, var4Lifetime4 + 16, 216, 32);
-          mc.field_b.a("Purchase", var2 + 16, var4Lifetime4 + 16, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
+          wm.field_H[6].drawScaled(var2 + 16, var4Lifetime4 + 16, 216, 32);
+          mc.field_b.drawParagraph("Purchase", var2 + 16, var4Lifetime4 + 16, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
         }
         if ((ch.field_b & 4) > 0) {
-          mc.field_b.a("SHOW PURCHASE", 32, var1, 16777215, 0);
+          mc.field_b.drawText("SHOW PURCHASE", 32, var1, 16777215, 0);
           var1 += 16;
           var4Lifetime5 = 64 + (32 + bo.field_d) + 128;
-          wm.field_H[15].c(var2 + 16, 16 + var4Lifetime5, 216, 32);
-          mc.field_b.a("Purchase", var2 + 16, 16 + var4Lifetime5, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
+          wm.field_H[15].drawScaled(var2 + 16, 16 + var4Lifetime5, 216, 32);
+          mc.field_b.drawParagraph("Purchase", var2 + 16, 16 + var4Lifetime5, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
         }
         if (0 < (ch.field_b & 8)) {
-          mc.field_b.a("SHOW CONFIRM", 32, var1, 16777215, 0);
+          mc.field_b.drawText("SHOW CONFIRM", 32, var1, 16777215, 0);
           var1 += 16;
           var4Lifetime6 = bo.field_d + 32 + 192;
           var5Lifetime4 = 100;
-          wm.field_H[15].c(var2 + 16, 16 + var4Lifetime6, var5Lifetime4, 32);
-          mc.field_b.a("Yes", var2 + 16, var4Lifetime6 + 16, var5Lifetime4, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
-          wm.field_H[15].c(240 + var2 + 16 - (24 + var5Lifetime4), 16 + var4Lifetime6, var5Lifetime4, 32);
-          mc.field_b.a("No", -var5Lifetime4 + (-8 + (var2 + 240)), var4Lifetime6 + 16, var5Lifetime4, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
+          wm.field_H[15].drawScaled(var2 + 16, 16 + var4Lifetime6, var5Lifetime4, 32);
+          mc.field_b.drawParagraph("Yes", var2 + 16, var4Lifetime6 + 16, var5Lifetime4, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
+          wm.field_H[15].drawScaled(240 + var2 + 16 - (24 + var5Lifetime4), 16 + var4Lifetime6, var5Lifetime4, 32);
+          mc.field_b.drawParagraph("No", -var5Lifetime4 + (-8 + (var2 + 240)), var4Lifetime6 + 16, var5Lifetime4, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
         }
         if ((ch.field_b & 16) > 0) {
-          mc.field_b.a("SHOW WAIT", 32, var1, 16777215, 0);
+          mc.field_b.drawText("SHOW WAIT", 32, var1, 16777215, 0);
           var1 += 16;
           var4Lifetime7 = 128 + (bo.field_d + 32) + 64;
-          wm.field_H[6].c(328, var4Lifetime7 + 16, 216, 32);
-          mc.field_b.a("Cancel", 328, var4Lifetime7 + 16, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
-          mc.field_b.a("Please wait for confirmation of your purchase.", 16 + var2, var4Lifetime7, 216, 64, 16777215, 0, 1, 1, mc.field_b.field_C);
+          wm.field_H[6].drawScaled(328, var4Lifetime7 + 16, 216, 32);
+          mc.field_b.drawParagraph("Cancel", 328, var4Lifetime7 + 16, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
+          mc.field_b.drawParagraph("Please wait for confirmation of your purchase.", 16 + var2, var4Lifetime7, 216, 64, 16777215, 0, 1, 1, mc.field_b.field_C);
         }
         if (param0 == 2341) {
           if ((ch.field_b & 32) > 0) {
-            mc.field_b.a("SHOW COMPLETE", 32, var1, 16777215, 0);
+            mc.field_b.drawText("SHOW COMPLETE", 32, var1, 16777215, 0);
             var1 += 16;
             var4Lifetime8 = 64 + (128 + bo.field_d) + 32;
-            mc.field_b.a("Purchase completed.", 16 + var2, var4Lifetime8, 216, 64, 16777215, 0, 1, 1, mc.field_b.field_C);
+            mc.field_b.drawParagraph("Purchase completed.", 16 + var2, var4Lifetime8, 216, 64, 16777215, 0, 1, 1, mc.field_b.field_C);
           }
           if (!((ch.field_b & 64) <= 0)) {
-            mc.field_b.a("SHOW EXIT", 32, var1, 16777215, 0);
+            mc.field_b.drawText("SHOW EXIT", 32, var1, 16777215, 0);
             var1 += 16;
             var4Lifetime8Lifetime1 = bo.field_d + 160 + 64;
-            wm.field_H[15].c(328, 16 + var4Lifetime8Lifetime1, 216, 32);
-            mc.field_b.a("Cancel", 328, var4Lifetime8Lifetime1 + 16, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
+            wm.field_H[15].drawScaled(328, 16 + var4Lifetime8Lifetime1, 216, 32);
+            mc.field_b.drawParagraph("Cancel", 328, var4Lifetime8Lifetime1 + 16, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
           }
           return;
         }
         pb.a(-26);
         if ((ch.field_b & 32) > 0) {
-          mc.field_b.a("SHOW COMPLETE", 32, var1, 16777215, 0);
+          mc.field_b.drawText("SHOW COMPLETE", 32, var1, 16777215, 0);
           var1 += 16;
           var4Lifetime9 = 64 + (128 + bo.field_d) + 32;
-          mc.field_b.a("Purchase completed.", 16 + var2, var4Lifetime9, 216, 64, 16777215, 0, 1, 1, mc.field_b.field_C);
+          mc.field_b.drawParagraph("Purchase completed.", 16 + var2, var4Lifetime9, 216, 64, 16777215, 0, 1, 1, mc.field_b.field_C);
         }
         if (!((ch.field_b & 64) <= 0)) {
-          mc.field_b.a("SHOW EXIT", 32, var1, 16777215, 0);
+          mc.field_b.drawText("SHOW EXIT", 32, var1, 16777215, 0);
           var1 += 16;
           var4Lifetime10 = bo.field_d + 160 + 64;
-          wm.field_H[15].c(328, 16 + var4Lifetime10, 216, 32);
-          mc.field_b.a("Cancel", 328, var4Lifetime10 + 16, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
+          wm.field_H[15].drawScaled(328, 16 + var4Lifetime10, 216, 32);
+          mc.field_b.drawParagraph("Cancel", 328, var4Lifetime10 + 16, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
         }
     }
 

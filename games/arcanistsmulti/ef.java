@@ -323,7 +323,7 @@ final class ef extends lk {
                     var17 = 0;
                     var7 = var17;
                     while (var6 > var17) {
-                      this.field_n.field_A.payload[this.field_n.field_A.position + var17] = (byte)hh.a((int) this.field_n.field_A.payload[this.field_n.field_A.position + var17], (int) this.field_a);
+                      this.field_n.field_A.payload[this.field_n.field_A.position + var17] = (byte)MouseWheelHandler.a((int) this.field_n.field_A.payload[this.field_n.field_A.position + var17], (int) this.field_a);
                       var17++;
                     }
                   }
@@ -346,7 +346,7 @@ final class ef extends lk {
                   this.field_w.a(this.field_e.payload, (byte) -125, this.field_e.position, var5);
                   if (0 != this.field_a) {
                     for (var6 = 0; var5 > var6; var6++) {
-                      this.field_e.payload[this.field_e.position + var6] = (byte)hh.a((int) this.field_e.payload[this.field_e.position + var6], (int) this.field_a);
+                      this.field_e.payload[this.field_e.position + var6] = (byte)MouseWheelHandler.a((int) this.field_e.payload[this.field_e.position + var6], (int) this.field_a);
                     }
                   }
                   this.field_e.position = this.field_e.position + var5;

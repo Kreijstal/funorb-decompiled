@@ -210,7 +210,7 @@ final class na extends kc {
         int var1 = -86 % ((param0 + 14) / 33);
     }
 
-    final static void a(int param0, int param1, int param2, int param3, boolean param4, String param5, int param6, int param7, int param8, int param9, long param10, int param11, dl param12, boolean param13) {
+    final static void a(int param0, int param1, int param2, int param3, boolean param4, String param5, int param6, int param7, int param8, int param9, long param10, int param11, PlatformTaskDispatcher param12, boolean param13) {
         try {
           RuntimeException stackIn_15_0 = null;
           StringBuilder stackIn_15_1 = null;
@@ -241,7 +241,7 @@ final class na extends kc {
               return;
             }
             try {
-              IntrusiveNode.field_f = new sd(qg.field_b.field_n, 64, 0);
+              IntrusiveNode.field_f = new BufferedRandomAccessFile(qg.field_b.field_n, 64, 0);
               return;
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

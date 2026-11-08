@@ -34,7 +34,7 @@ final class tm {
           if (param0 != 5968) {
             return;
           }
-          id.a();
+          MeshRasterState.useRasterClip();
           tj.field_C = 11;
           vf.field_n = new int[260];
           for (var1_int = 0; var1_int < 256; var1_int++) {

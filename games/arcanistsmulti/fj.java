@@ -173,7 +173,7 @@ final class fj extends IntrusiveNode {
     }
 
     final static void c(int param0) {
-        if (!hk.field_s) {
+        if (!MusicPatchPcmStream.field_s) {
           throw new IllegalStateException();
         }
         if (param0 >= -107) {

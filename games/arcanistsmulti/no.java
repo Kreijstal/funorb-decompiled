@@ -117,7 +117,7 @@ final class no extends qk {
     }
 
     final static void b(int param0, byte param1, int param2) {
-        o.field_r = param2;
+        MusicPatchNode.field_r = param2;
         tn.field_Eb = param2;
         co.field_c = param0;
         wh.field_c = param0;

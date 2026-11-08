@@ -10,7 +10,7 @@ final class hj extends IOException {
     static String field_c;
     static int field_b;
 
-    final static void a(dj param0, ResourceArchive param1, int param2) {
+    final static void a(BitmapFont param0, ResourceArchive param1, int param2) {
         int var8 = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -26,7 +26,7 @@ final class hj extends IOException {
         int var9 = 0;
         Throwable var10 = null;
         Throwable var11 = null;
-        dj var12 = null;
+        BitmapFont var12 = null;
         int[] var16 = null;
         var9 = ArcanistsMulti.field_G ? 1 : 0;
         try {
@@ -34,36 +34,36 @@ final class hj extends IOException {
           co.field_f = new kc(0L, (kc) null);
           if (param1 == null) {
             var10 = (Throwable) null;
-            jh.a((Throwable) null, "QC1", (byte) 20);
+            DelegatingCanvas.a((Throwable) null, "QC1", (byte) 20);
             return;
           }
           param1.field_h = false;
           param1.field_f = 0;
-          bg.field_d = new kg(var3_int, param1, param1);
+          ByteStorage.field_d = new kg(var3_int, param1, param1);
           th.field_d = new gn(var3_int, param1, param1, new la());
           var4 = gj.b(param2 ^ -20419);
           if (var4 == null) {
             var11 = (Throwable) null;
-            jh.a((Throwable) null, "QC2", (byte) 20);
+            DelegatingCanvas.a((Throwable) null, "QC2", (byte) 20);
             return;
           }
           ff.a((byte) 91, var4);
-          var12 = (dj) null;
-          mj.field_z = ck.a(65793, 5138823, 65793, 8947848, 1513239, 4020342, 65793, (dj) null, 97, 0, 2245737, 1513239, 1127256);
+          var12 = (BitmapFont) null;
+          mj.field_z = ck.a(65793, 5138823, 65793, 8947848, 1513239, 4020342, 65793, (BitmapFont) null, 97, 0, 2245737, 1513239, 1127256);
           if (param2 != 3896) {
             return;
           }
           gl.field_c = ck.a(0, 0, 0, 0, 0, 0, 0, param0, 112, 16764006, 0, 0, 0);
           CipherPacketBuffer.field_p = ck.a(0, 0, 0, 0, 0, 0, 0, param0, 81, 16777215, 0, 0, 0);
-          var5 = de.field_e;
-          var6 = de.field_j;
-          var16 = de.field_l;
+          var5 = SoftwareRasterizer.field_e;
+          var6 = SoftwareRasterizer.field_j;
+          var16 = SoftwareRasterizer.field_l;
           ql.field_c = new Sprite(10, 14);
-          ql.field_c.a();
+          ql.field_c.makeRasterTarget();
           for (var8 = 2; var8 < 7; var8++) {
-            de.d(var8, 1 + var8, -(var8 << 1) + 14, 16777215);
+            SoftwareRasterizer.drawVerticalLine(var8, 1 + var8, -(var8 << 1) + 14, 16777215);
           }
-          de.a(var16, var5, var6);
+          SoftwareRasterizer.setTarget(var16, var5, var6);
           ag.field_C = bl.a(true, gl.field_c, CipherPacketBuffer.field_p, var4, mj.field_z);
           co.field_f.field_G = new IntrusiveDeque();
           return;

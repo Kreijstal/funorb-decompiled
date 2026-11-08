@@ -4,7 +4,7 @@
 final class cf {
     static int[] field_c;
     static String field_d;
-    static wf[] field_h;
+    static PcmSample[] field_h;
     static String field_e;
     static byte[][] field_g;
     static int[] field_a;
@@ -78,7 +78,7 @@ final class cf {
         field_d = "Yes";
         field_g = new byte[1000][];
         field_e = "Balls:";
-        field_h = new wf[228];
+        field_h = new PcmSample[228];
         field_a = new int[]{64, 65, 66};
         field_b = new String[3];
     }

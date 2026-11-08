@@ -5,7 +5,7 @@ final class sm {
     static Sprite field_d;
     static kc field_c;
     static String field_b;
-    static kd field_e;
+    static PcmSampleStream field_e;
     static int field_a;
 
     final static boolean a(int param0, String param1, String param2) {
@@ -76,7 +76,7 @@ final class sm {
               if (param0 < 0L) {
                 var7Lifetime4 = var9 + "; Discard;";
               } else {
-                var7Lifetime4 = var9 + "; Expires=" + di.a(param3 ^ 15478, qj.b(-26572) + 1000L * param0) + "; Max-Age=" + param0;
+                var7Lifetime4 = var9 + "; Expires=" + NodeHashTable.a(param3 ^ 15478, qj.b(-26572) + 1000L * param0) + "; Max-Age=" + param0;
               }
               ei.a("document.cookie=\"" + var7Lifetime4 + "\"", param2, 269);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -136,17 +136,17 @@ final class sm {
         int var2 = 101 % ((-45 - param0) / 42);
     }
 
-    final static void a(int param0, boolean param1, int param2, gh param3, java.awt.Component param4, int param5, dl param6, int param7) {
+    final static void a(int param0, boolean param1, int param2, MidiPcmStream param3, java.awt.Component param4, int param5, PlatformTaskDispatcher param6, int param7) {
         try {
-          lb.a(param2, param1, 10);
-          oh.field_k = lb.a(param6, param4, 0, param7);
-          lf.field_a = lb.a(param6, param4, 1, param5);
-          pc.field_e = new m();
+          AudioOutput.configure(param2, param1, 10);
+          oh.field_k = AudioOutput.create(param6, param4, 0, param7);
+          lf.field_a = AudioOutput.create(param6, param4, 1, param5);
+          pc.field_e = new PcmStreamMixer();
           qc.field_a = 1000 * param5 / param2;
-          lf.field_a.a(pc.field_e);
+          lf.field_a.setStream(pc.field_e);
           jl.field_h = param3;
-          jl.field_h.a(ul.field_A, (byte) -66);
-          oh.field_k.a(jl.field_h);
+          jl.field_h.a(Bzip2State.field_A, (byte) -66);
+          oh.field_k.setStream(jl.field_h);
           int var8_int = 110 % ((-25 - param0) / 48);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "sm.D(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');

@@ -4,7 +4,7 @@
 final class bm {
     static int field_h;
     static String field_a;
-    static sd field_e;
+    static BufferedRandomAccessFile field_e;
     static String field_c;
     static le field_g;
     static int[] field_d;

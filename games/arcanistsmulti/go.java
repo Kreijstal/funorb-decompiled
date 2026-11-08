@@ -8,7 +8,7 @@ abstract class go {
     static String field_f;
     static String field_h;
     String field_e;
-    static dj field_k;
+    static BitmapFont field_k;
     int field_b;
     static kc field_d;
     static am field_c;

@@ -174,7 +174,7 @@ final class pe extends kc {
           }
           stackIn_5_0 = ee.field_g;
           stackIn_6_1 = (dd.field_h == ee.field_g);
-          var7_int = ((dn) (Object) stackIn_5_0).a(stackIn_6_1, (byte) 98, (2 + ga.field_r) * 2, 2, param1 * (8 + ga.field_r * 4), param6) ? 1 : 0;
+          var7_int = ((dn) (Object) stackIn_5_0).a(stackIn_6_1, (byte) 98, (2 + ImageProducerRasterBuffer.field_r) * 2, 2, param1 * (8 + ImageProducerRasterBuffer.field_r * 4), param6) ? 1 : 0;
           var8 = ee.field_g.field_Cb.field_G;
           var9 = qj.b(-26572);
           var11 = null;
@@ -381,12 +381,12 @@ final class pe extends kc {
                 }
               }
               if (var12.field_Zb.field_rb == null) {
-                var12.field_Gb.a(68, 0, var31, ga.field_r, (byte) -120);
+                var12.field_Gb.a(68, 0, var31, ImageProducerRasterBuffer.field_r, (byte) -120);
               } else {
-                var12.field_Zb.a(68, 0, var31, ga.field_r, (byte) -120);
+                var12.field_Zb.a(68, 0, var31, ImageProducerRasterBuffer.field_r, (byte) -120);
               }
-              var12.field_jc.field_rb = dj.a(var12.field_jc.field_Z, var32, 78);
-              var12.field_jc.a(78, 70, var31, ga.field_r, (byte) -120);
+              var12.field_jc.field_rb = BitmapFont.truncateWithEllipsis(var12.field_jc.field_Z, var32, 78);
+              var12.field_jc.a(78, 70, var31, ImageProducerRasterBuffer.field_r, (byte) -120);
               if (var12.field_jc.field_C &&
                 !var12.field_jc.field_rb.equals(var32)) {
                 kh.field_c = var32;
@@ -394,19 +394,19 @@ final class pe extends kc {
               var12.field_Mb.field_rb = Integer.toString(var12.field_Rb);
               if (!var12.field_kc) {
                 var12.field_Mb.field_X = 1;
-                var12.field_Mb.a(48, 150, var31, ga.field_r, (byte) -120);
+                var12.field_Mb.a(48, 150, var31, ImageProducerRasterBuffer.field_r, (byte) -120);
               } else {
                 var12.field_Mb.field_X = 2;
                 var12.field_Eb.field_rb = "/" + var12.field_dc;
-                var33_int = (348 - var12.field_Eb.field_Z.b("/")) / 2;
-                var12.field_Mb.a(-150 + var33_int, 150, var31, ga.field_r, (byte) -120);
-                var12.field_Eb.a(198 - var33_int, var33_int, var31, ga.field_r, (byte) -120);
+                var33_int = (348 - var12.field_Eb.field_Z.textWidth("/")) / 2;
+                var12.field_Mb.a(-150 + var33_int, 150, var31, ImageProducerRasterBuffer.field_r, (byte) -120);
+                var12.field_Eb.a(198 - var33_int, var33_int, var31, ImageProducerRasterBuffer.field_r, (byte) -120);
               }
               var12.field_cc.field_rb = Integer.toString(var12.field_Db);
-              var12.field_cc.a(48, 200, var31, ga.field_r, (byte) -120);
+              var12.field_cc.a(48, 200, var31, ImageProducerRasterBuffer.field_r, (byte) -120);
               stackIn_69_0 = (!fc.field_a) ? 200 : 250;
               var33_intLifetime1 = stackIn_69_0;
-              var12.field_ec.a(365 - var33_intLifetime1 - 2, var33_intLifetime1, var31, ga.field_r, (byte) -120);
+              var12.field_ec.a(365 - var33_intLifetime1 - 2, var33_intLifetime1, var31, ImageProducerRasterBuffer.field_r, (byte) -120);
               var34_int = mm.field_p;
               if ((var14Lifetime1 & 1 << ma.field_U) != 0) {
                 var50_ref = IntrusiveNodeHashTable.field_b[var12.field_Pb];
@@ -489,8 +489,8 @@ final class pe extends kc {
                   var12.field_hc.field_rb = var39 + ":" + var38_int / 10 + var38_int % 10;
                 }
               }
-              var12.field_hc.a(-365 + var12.field_x, 365, var31, ga.field_r, (byte) -120);
-              var31 = var31 + ga.field_r;
+              var12.field_hc.a(-365 + var12.field_x, 365, var31, ImageProducerRasterBuffer.field_r, (byte) -120);
+              var31 = var31 + ImageProducerRasterBuffer.field_r;
               if (var12.field_Qb != null) {
                 var31 += 2;
                 var37 = new StringBuilder(64);
@@ -502,28 +502,28 @@ final class pe extends kc {
                 }
                 var38 = var37.toString();
                 var12.field_Vb.field_rb = var38;
-                var39Lifetime1 = var12.field_Vb.field_Z.a(var38, var12.field_x - 2 * var12.field_Vb.field_t);
-                var12.field_Vb.a(var12.field_x, 0, var31, var39Lifetime1 * ga.field_r, (byte) -120);
-                var31 = var31 + ga.field_r * var39Lifetime1;
+                var39Lifetime1 = var12.field_Vb.field_Z.wrappedLineCount(var38, var12.field_x - 2 * var12.field_Vb.field_t);
+                var12.field_Vb.a(var12.field_x, 0, var31, var39Lifetime1 * ImageProducerRasterBuffer.field_r, (byte) -120);
+                var31 = var31 + ImageProducerRasterBuffer.field_r * var39Lifetime1;
               }
               if (var12.field_Hb) {
-                var12.field_Ib.field_rb = tj.a(127, new String[]{var32}, dk.field_i);
-                var12.field_Ib.a(var12.field_x - dh.field_Gb * 2, dh.field_Gb, var31, ga.field_r, (byte) -120);
-                var31 = var31 + ga.field_r;
+                var12.field_Ib.field_rb = tj.a(127, new String[]{var32}, CanvasRasterBuffer.field_i);
+                var12.field_Ib.a(var12.field_x - dh.field_Gb * 2, dh.field_Gb, var31, ImageProducerRasterBuffer.field_r, (byte) -120);
+                var31 = var31 + ImageProducerRasterBuffer.field_r;
               }
               if (var12.field_Nb) {
                 var12.field_fc.field_rb = tj.a(param3 + 121, new String[]{var32}, fh.field_f);
-                var12.field_fc.a(-(2 * dh.field_Gb) + var12.field_x, dh.field_Gb, var31, ga.field_r, (byte) -120);
-                var31 = var31 + ga.field_r;
+                var12.field_fc.a(-(2 * dh.field_Gb) + var12.field_x, dh.field_Gb, var31, ImageProducerRasterBuffer.field_r, (byte) -120);
+                var31 = var31 + ImageProducerRasterBuffer.field_r;
               }
             }
             var33 = vf.a(-111, var32, var12.field_ac);
             if (var33 != null) {
-              var34_intLifetime1 = var12.field_Kb.field_Z.a(var33, -dh.field_Gb - dh.field_Gb + var12.field_x);
+              var34_intLifetime1 = var12.field_Kb.field_Z.wrappedLineCount(var33, -dh.field_Gb - dh.field_Gb + var12.field_x);
               var12.field_Kb.field_u = 256 * var12.field_bc / vd.field_i;
               var12.field_Kb.field_rb = var33;
-              var12.field_Kb.a(var12.field_x - 2 * dh.field_Gb, dh.field_Gb, var31, var34_intLifetime1 * ga.field_r, (byte) -120);
-              var31 = var31 + var34_intLifetime1 * ga.field_r;
+              var12.field_Kb.a(var12.field_x - 2 * dh.field_Gb, dh.field_Gb, var31, var34_intLifetime1 * ImageProducerRasterBuffer.field_r, (byte) -120);
+              var31 = var31 + var34_intLifetime1 * ImageProducerRasterBuffer.field_r;
             }
             if (var7_int == 0) {
               var12.field_B = var31 - var12.field_I;
@@ -593,7 +593,7 @@ final class pe extends kc {
                 continue;
               }
               if (0 == var12.field_Zb.field_U) {
-                je.a(949002930, var12, var32, param5);
+                MouseInputHandler.a(949002930, var12, var32, param5);
               } else {
                 if (var12.field_Lb && (!var12.field_kc ||
                   !var12.field_Ob &&

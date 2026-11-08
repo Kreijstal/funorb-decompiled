@@ -11,7 +11,7 @@ final class gg {
     static long field_e;
     static aj field_b;
     static String field_g;
-    static io field_h;
+    static MusicCrossfadeStream field_h;
 
     public static void b(int param0) {
         field_a = null;
@@ -61,10 +61,10 @@ final class gg {
             for (var7 = 0; var7 < var3; var7++) {
               var6[var7] = fj.b(ph.field_c[dg.a(255, (int) var20[var7])], dg.a(-16777216, var22[var7] << 24));
             }
-            var1[var2] = (Sprite) ((Object) new od(pb.field_g, gn.field_a, hl.field_l[var2], be.field_d[var2], jg.field_p[var2], ho.field_i[var2], var16));
+            var1[var2] = (Sprite) ((Object) new ArgbSprite(pb.field_g, gn.field_a, hl.field_l[var2], be.field_d[var2], jg.field_p[var2], ho.field_i[var2], var16));
           }
         }
-        dk.a(-18229);
+        CanvasRasterBuffer.a(-18229);
         return var1;
     }
 

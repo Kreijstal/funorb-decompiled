@@ -81,10 +81,10 @@ final class kn extends ob implements vb {
         }
     }
 
-    final static lg a(ResourceArchive param0, int param1, boolean param2, int param3, ResourceArchive param4) {
+    final static BinaryBitmapFont a(ResourceArchive param0, int param1, boolean param2, int param3, ResourceArchive param4) {
         RuntimeException var5 = null;
         Object stackIn_4_0 = null;
-        lg stackIn_6_0 = null;
+        BinaryBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -100,7 +100,7 @@ final class kn extends ob implements vb {
             return stackIn_6_0;
           }
           stackIn_4_0 = null;
-          return (lg) (stackIn_4_0);
+          return (BinaryBitmapFont) (stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
@@ -248,7 +248,7 @@ final class kn extends ob implements vb {
           this.c(-123, this.field_ob);
           this.field_jb = this.a(-1, ci.field_b, oa.field_d, (wc) (this));
           if (var2_intLifetime1 != 0) {
-            this.field_mb = this.a(-1, fo.field_f, fg.field_k, (wc) (this));
+            this.field_mb = this.a(-1, fo.field_f, MusicPatch.field_k, (wc) (this));
           }
           this.field_lb = this.a(-1, oj.field_g, qj.field_j, (wc) (this));
           if (var2_intLifetime1 != 0) {
@@ -470,7 +470,7 @@ final class kn extends ob implements vb {
           if (g.field_g.field_U != 0) {
             db.field_a = new w(g.field_g.field_V, g.field_g.field_nb, g.field_g.field_x, g.field_g.field_I, param0, mf.field_d, be.field_l, wj.field_b, IntrusiveNode.field_c, ec.field_g, nj.field_d, (String) null, 0L);
           }
-          var9 = f.a(16711422, param1, ga.field_r, dh.field_Gb);
+          var9 = f.a(16711422, param1, ImageProducerRasterBuffer.field_r, dh.field_Gb);
           if (var9 != null) {
             eb.a(0, var9);
           }
@@ -510,7 +510,7 @@ final class kn extends ob implements vb {
                   ob.field_Y.a(this.field_V[var2Lifetime2].field_e, this.field_V[var2Lifetime2].field_g, (byte) -64);
                 }
               }
-              nb.a(true, 5);
+              GzipDecoder.a(true, 5);
               this.field_H.b(new bj(this.field_H), 15637);
             }
           } else {

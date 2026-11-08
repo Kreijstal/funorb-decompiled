@@ -35,7 +35,7 @@ final class dm extends wn {
           fk.a(var8, -23095);
           this.field_B.a((byte) -128, 0, param2, 0);
           oo.c(-15405);
-          var8.c(param1 + this.field_n, this.field_j + param3, this.field_K);
+          var8.drawAlpha(param1 + this.field_n, this.field_j + param3, this.field_K);
           return;
         }
         dm.h((byte) -53);
@@ -43,7 +43,7 @@ final class dm extends wn {
         fk.a(var7, -23095);
         this.field_B.a((byte) -128, 0, param2, 0);
         oo.c(-15405);
-        var7.c(param1 + this.field_n, this.field_j + param3, this.field_K);
+        var7.drawAlpha(param1 + this.field_n, this.field_j + param3, this.field_K);
     }
 
     final static boolean h(byte param0) {

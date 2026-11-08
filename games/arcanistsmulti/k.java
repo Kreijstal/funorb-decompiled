@@ -5,7 +5,7 @@ import java.io.*;
 
 final class k implements Runnable {
     private int field_s;
-    private dl field_h;
+    private PlatformTaskDispatcher field_h;
     static kc field_d;
     static ch field_q;
     private boolean field_g;
@@ -16,7 +16,7 @@ final class k implements Runnable {
     private java.net.Socket field_e;
     private int field_n;
     private OutputStream field_r;
-    private og field_a;
+    private PlatformTask field_a;
     static String field_p;
     private int field_j;
     static String[] field_k;
@@ -84,7 +84,7 @@ final class k implements Runnable {
             param3 = param3 - var5_int;
           }
           if (param1 >= -122) {
-            this.field_a = (og) null;
+            this.field_a = (PlatformTask) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -273,7 +273,7 @@ final class k implements Runnable {
             decompiledCaughtException = decompiledCaughtParameter4;
             var1_ref = (Exception) (Object) decompiledCaughtException;
             var7 = (String) null;
-            jh.a((Throwable) ((Object) var1_ref), (String) null, (byte) 20);
+            DelegatingCanvas.a((Throwable) ((Object) var1_ref), (String) null, (byte) 20);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -282,7 +282,7 @@ final class k implements Runnable {
         }
     }
 
-    k(java.net.Socket param0, dl param1) throws IOException {
+    k(java.net.Socket param0, PlatformTaskDispatcher param1) throws IOException {
         this(param0, param1, 5000);
     }
 
@@ -326,7 +326,7 @@ final class k implements Runnable {
         return this.field_i.read();
     }
 
-    private k(java.net.Socket param0, dl param1, int param2) throws IOException {
+    private k(java.net.Socket param0, PlatformTaskDispatcher param1, int param2) throws IOException {
         this.field_s = 0;
         this.field_l = false;
         this.field_g = false;

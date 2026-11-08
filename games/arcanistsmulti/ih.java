@@ -26,14 +26,14 @@ final class ih {
     }
 
     final static int a(int param0, int param1, int param2, int param3) {
-        if (de.field_e >= param0 + param1) {
+        if (SoftwareRasterizer.field_e >= param0 + param1) {
           return param0;
         }
         if (0 <= -param1 + param0 + param2) {
           return -param1 + (param2 + param0);
         }
         if (param3 == 246) {
-          return -param1 + de.field_e;
+          return -param1 + SoftwareRasterizer.field_e;
         }
         return -40;
     }

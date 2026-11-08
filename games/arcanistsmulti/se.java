@@ -21,23 +21,23 @@ final class se extends wn {
         int var2 = -71 / ((param0 + 53) / 57);
     }
 
-    final static dk a(int param0, java.awt.Component param1, int param2, byte param3) {
+    final static CanvasRasterBuffer a(int param0, java.awt.Component param1, int param2, byte param3) {
         try {
           Class var4 = null;
           Throwable var4_ref = null;
           RuntimeException var4_ref2 = null;
-          dk var5 = null;
-          ga var5_ref = null;
-          dk stackIn_3_0 = null;
-          ga stackIn_5_0 = null;
+          CanvasRasterBuffer var5 = null;
+          ImageProducerRasterBuffer var5_ref = null;
+          CanvasRasterBuffer stackIn_3_0 = null;
+          ImageProducerRasterBuffer stackIn_5_0 = null;
           RuntimeException stackIn_8_0 = null;
           StringBuilder stackIn_8_1 = null;
           String stackIn_9_2 = null;
           Throwable decompiledCaughtException = null;
           try {
             try {
-              var4 = Class.forName("sh");
-              var5 = (dk) (var4.newInstance());
+              var4 = Class.forName("BufferedImageRasterBuffer");
+              var5 = (CanvasRasterBuffer) (var4.newInstance());
               var5.a(param2, param1, param3 ^ -123, param0);
               if (param3 != -123) {
                 field_E = 'ﾣ';
@@ -47,10 +47,10 @@ final class se extends wn {
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = decompiledCaughtException;
-              var5_ref = new ga();
-              ((dk) ((Object) var5_ref)).a(param2, param1, 0, param0);
+              var5_ref = new ImageProducerRasterBuffer();
+              ((CanvasRasterBuffer) ((Object) var5_ref)).a(param2, param1, 0, param0);
               stackIn_5_0 = var5_ref;
-              return (dk) ((Object) stackIn_5_0);
+              return (CanvasRasterBuffer) ((Object) stackIn_5_0);
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -202,9 +202,9 @@ final class se extends wn {
             !(param1 <= tj.field_u.length)) {
             tj.field_u = new int[param1 * 2];
           }
-          if (ba.field_o == null ||
-            !(param1 <= ba.field_o.length)) {
-            ba.field_o = new int[2 * param1];
+          if (PatchEnvelopeSet.field_o == null ||
+            !(param1 <= PatchEnvelopeSet.field_o.length)) {
+            PatchEnvelopeSet.field_o = new int[2 * param1];
           }
           if (lm.field_i == null ||
             !(param1 <= lm.field_i.length)) {
@@ -230,9 +230,9 @@ final class se extends wn {
                 !(param1 <= tj.field_u.length)) {
                 tj.field_u = new int[param1 * 2];
               }
-              if (ba.field_o == null ||
-                !(param1 <= ba.field_o.length)) {
-                ba.field_o = new int[2 * param1];
+              if (PatchEnvelopeSet.field_o == null ||
+                !(param1 <= PatchEnvelopeSet.field_o.length)) {
+                PatchEnvelopeSet.field_o = new int[2 * param1];
               }
               if (lm.field_i == null ||
                 !(param1 <= lm.field_i.length)) {
@@ -257,9 +257,9 @@ final class se extends wn {
                 !(param1 <= tj.field_u.length)) {
                 tj.field_u = new int[param1 * 2];
               }
-              if (ba.field_o == null ||
-                !(param1 <= ba.field_o.length)) {
-                ba.field_o = new int[2 * param1];
+              if (PatchEnvelopeSet.field_o == null ||
+                !(param1 <= PatchEnvelopeSet.field_o.length)) {
+                PatchEnvelopeSet.field_o = new int[2 * param1];
               }
               if (lm.field_i == null ||
                 !(param1 <= lm.field_i.length)) {
@@ -286,8 +286,8 @@ final class se extends wn {
               !(param1 <= tj.field_u.length)) {
               tj.field_u = new int[param1 * 2];
             }
-            if (ba.field_o == null) {
-              ba.field_o = new int[2 * param1];
+            if (PatchEnvelopeSet.field_o == null) {
+              PatchEnvelopeSet.field_o = new int[2 * param1];
               if (lm.field_i == null ||
                 !(param1 <= lm.field_i.length)) {
                 lm.field_i = new int[2 * param1];
@@ -325,8 +325,8 @@ final class se extends wn {
                 }
               }
             } else {
-              if (param1 > ba.field_o.length) {
-                ba.field_o = new int[2 * param1];
+              if (param1 > PatchEnvelopeSet.field_o.length) {
+                PatchEnvelopeSet.field_o = new int[2 * param1];
                 if (lm.field_i == null ||
                   !(param1 <= lm.field_i.length)) {
                   lm.field_i = new int[2 * param1];
@@ -407,7 +407,7 @@ final class se extends wn {
             }
           }
         }
-        je.field_b = 0;
+        MouseInputHandler.field_b = 0;
         qa.field_m = -2147483648;
         tm.field_g = -2147483648;
         ld.field_m = 2147483647;

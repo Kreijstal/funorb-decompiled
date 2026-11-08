@@ -554,7 +554,7 @@ final class u {
                     if (var7 == null) {
                       var7 = new cg(var26, var27, var3_longLifetime2);
                       kn.field_qb.put(var7, var3_longLifetime2, (byte) 121);
-                      wi.field_f.field_Rb = wi.field_f.field_Rb + 1;
+                      DirectByteStorage.field_f.field_Rb = DirectByteStorage.field_f.field_Rb + 1;
                     }
                     var7.field_Pb = ((PacketBuffer) ((Object) var1)).readUnsignedShort(-98);
                     var8 = ((PacketBuffer) ((Object) var1)).readVarInt(16);
@@ -582,32 +582,32 @@ final class u {
                       var14.field_Eb = vd.field_i;
                     }
                     var28.unlinkSecondary((byte) 88);
-                    wi.field_f.field_Rb = wi.field_f.field_Rb - 1;
+                    DirectByteStorage.field_f.field_Rb = DirectByteStorage.field_f.field_Rb - 1;
                     return;
                   }
                   if (var2 == 20) {
-                    dn.a(var1, wi.field_f, false, 2);
+                    dn.a(var1, DirectByteStorage.field_f, false, 2);
                     return;
                   }
                   if (var2 == 21) {
                     var3Lifetime5 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(-98);
                     if (var3Lifetime5 == 0) {
-                      ba.field_a = 0L;
+                      PatchEnvelopeSet.field_a = 0L;
                       return;
                     }
-                    ba.field_a = qj.b(-26572) + (long)var3Lifetime5;
+                    PatchEnvelopeSet.field_a = qj.b(-26572) + (long)var3Lifetime5;
                     return;
                   }
                   if (var2 == 22) {
                     sk.field_e = ((PacketBuffer) ((Object) var1)).readUnsignedShort(-98);
-                    jh.field_e = ((PacketBuffer) ((Object) var1)).readVarInt(121);
+                    DelegatingCanvas.field_e = ((PacketBuffer) ((Object) var1)).readVarInt(121);
                     return;
                   }
                   if (var2 == 23) {
                     qf.field_a = ((PacketBuffer) ((Object) var1)).readLong(-943038560);
                     return;
                   }
-                  jh.a((Throwable) null, "L1: " + nn.g((byte) -25), (byte) 20);
+                  DelegatingCanvas.a((Throwable) null, "L1: " + nn.g((byte) -25), (byte) 20);
                   ka.b(false);
                   return;
                 }
@@ -679,17 +679,17 @@ final class u {
             var3_ref_cgLifetime1 = (cg) (bc.field_c.a(-1));
           }
           if (var2 == 1 &&
-            wi.field_f != null) {
-            va.field_e = wi.field_f.field_ic;
+            DirectByteStorage.field_f != null) {
+            va.field_e = DirectByteStorage.field_f.field_ic;
           }
           if (var2 == 4) {
             var3Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(-98);
-            wi.field_f = new na(vf.field_l);
-            wi.field_f.a(46, (long)var3Lifetime1);
-            dn.a(var1, wi.field_f, false, 2);
-            ba.field_a = 0L;
+            DirectByteStorage.field_f = new na(vf.field_l);
+            DirectByteStorage.field_f.a(46, (long)var3Lifetime1);
+            dn.a(var1, DirectByteStorage.field_f, false, 2);
+            PatchEnvelopeSet.field_a = 0L;
           } else {
-            wi.field_f = null;
+            DirectByteStorage.field_f = null;
           }
           if (var2 != 2 &&
             var2 != 3) {
@@ -704,8 +704,8 @@ final class u {
             return;
           }
           dn.field_Db = true;
-          for (var3Lifetime2 = 0; gh.field_E.length > var3Lifetime2; var3Lifetime2++) {
-            gh.field_E[var3Lifetime2] = ((PacketBuffer) ((Object) var1)).readByte(6);
+          for (var3Lifetime2 = 0; MidiPcmStream.field_E.length > var3Lifetime2; var3Lifetime2++) {
+            MidiPcmStream.field_E[var3Lifetime2] = ((PacketBuffer) ((Object) var1)).readByte(6);
           }
           q.field_L = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) 32);
           q.field_N = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) 72);
@@ -870,11 +870,11 @@ final class u {
         RuntimeException var3 = null;
         try {
           if (1 == param1) {
-            stackIn_2_0 = tj.a(126, new String[]{param2}, kb.field_e);
+            stackIn_2_0 = tj.a(126, new String[]{param2}, BoundedRandomAccessFile.field_e);
             return stackIn_2_0;
           }
           if (param1 == 2) {
-            stackIn_6_0 = tj.a(-73, new String[]{param2}, rj.field_h);
+            stackIn_6_0 = tj.a(-73, new String[]{param2}, AudioService.field_h);
             return stackIn_6_0;
           }
           if (param1 == 3) {

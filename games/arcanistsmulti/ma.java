@@ -835,7 +835,7 @@ final class ma extends kl implements vb {
         if (param0 < 74) {
           return;
         }
-        dk.a(true, 14067);
+        CanvasRasterBuffer.a(true, 14067);
     }
 
     final static void h(int param0) {

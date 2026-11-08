@@ -11,7 +11,7 @@ final class ld extends im {
     static String field_k;
     static String field_o;
 
-    final static m a(boolean param0) {
+    final static PcmStreamMixer a(boolean param0) {
         if (param0) {
           ld.c((byte) -35);
           return pc.field_e;

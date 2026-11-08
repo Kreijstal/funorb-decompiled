@@ -112,7 +112,7 @@ final class kg {
             var4.field_Lb != null) {
             return true;
           }
-          stackIn_11_0 = (wi.field_f != null) && (vf.a(param0, 8192) != null);
+          stackIn_11_0 = (DirectByteStorage.field_f != null) && (vf.a(param0, 8192) != null);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

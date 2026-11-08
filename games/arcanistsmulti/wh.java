@@ -64,7 +64,7 @@ final class wh {
           var3[var4_int] = ph.field_c[dg.a(255, (int) var2[var4_int])];
         }
         Sprite var4 = new Sprite(pb.field_g, gn.field_a, hl.field_l[0], be.field_d[0], jg.field_p[0], ho.field_i[0], var3);
-        dk.a(-18229);
+        CanvasRasterBuffer.a(-18229);
         return var4;
     }
 

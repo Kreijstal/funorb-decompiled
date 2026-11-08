@@ -31,7 +31,7 @@ final class mf {
             return null;
           }
           var7 = (CharSequence) ((Object) param1);
-          var2 = gk.a(var7, -13);
+          var2 = Js5ArchiveManager.a(var7, -13);
           if (var2 == null) {
             var2 = param1;
           }
@@ -42,7 +42,7 @@ final class mf {
           var3 = (wa) (uc.field_c.get((long)var2.hashCode(), (byte) -64));
           while (var3 != null) {
             var8 = (CharSequence) ((Object) var3.field_Cb);
-            var4 = gk.a(var8, param0 - 12);
+            var4 = Js5ArchiveManager.a(var8, param0 - 12);
             if (var4 == null) {
               var4 = var3.field_Cb;
             }
@@ -79,7 +79,7 @@ final class mf {
           var2 = (fk) (qn.field_mb.first(12623));
           while (var2 != null) {
             if (var2.field_n.isLinked((byte) -119)) {
-              var2.field_m.c(si.field_l * var2.field_l + 128 >> 8);
+              var2.field_m.setVolumeQ6(si.field_l * var2.field_l + 128 >> 8);
             } else {
               var2.unlink(true);
             }
@@ -96,7 +96,7 @@ final class mf {
             if (!var2Lifetime1.field_n.isLinked((byte) -36)) {
               var2Lifetime1.unlink(true);
             } else {
-              var2Lifetime1.field_m.c(var2Lifetime1.field_l * si.field_l + 128 >> 8);
+              var2Lifetime1.field_m.setVolumeQ6(var2Lifetime1.field_l * si.field_l + 128 >> 8);
             }
             var2Lifetime1 = (fk) (he.field_f.next(0));
           }

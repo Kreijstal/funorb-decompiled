@@ -189,7 +189,7 @@ final class mj extends jm {
             return;
           }
           if (!param0) {
-            sf.a(this.field_q, 0, param1.field_q, 0, 6);
+            ArraySupport.copyObjects(this.field_q, 0, param1.field_q, 0, 6);
             return;
           }
           for (var4_int = 0; var4_int < 6; var4_int++) {

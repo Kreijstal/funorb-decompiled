@@ -67,14 +67,14 @@ final class ij extends kc {
               var5 = 32768 | this.field_Ib[param3];
               var6 = nj.field_c;
               if (var6 == 0 &&
-                null != wi.field_f) {
+                null != DirectByteStorage.field_f) {
                 var6 = 1;
               }
               if (oh.a((byte) 122, var6) == 2) {
                 ea.a(param2, 1, true, var6);
               }
               var8 = (String) null;
-              sd.a(var5, (String) null, 70, param1, nj.field_c, so.field_p);
+              BufferedRandomAccessFile.a(var5, (String) null, 70, param1, nj.field_c, so.field_p);
               ij.a(param0 ^ -13, nj.field_c, var5, gg.field_e, so.field_p);
               gb.a(14);
               cf.a(-113);
@@ -183,8 +183,8 @@ final class ij extends kc {
         String var12 = null;
         Object var14 = null;
         int var15 = 0;
-        dj var17 = null;
-        dj var18 = null;
+        BitmapFont var17 = null;
+        BitmapFont var18 = null;
         this.field_Hb = -1;
         try {
           this.field_Ib = param5;
@@ -210,7 +210,7 @@ final class ij extends kc {
             }
             this.field_Bb[var13] = new nl(0L, param2, (kc) null, param3, (Sprite) (var14), param6[var13]);
             this.a(this.field_Bb[var13], 90);
-            var15 = var17.b(param6[var13]);
+            var15 = var17.textWidth(param6[var13]);
             if (var15 > this.field_Kb) {
               this.field_Kb = var15;
             }

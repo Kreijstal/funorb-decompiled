@@ -61,11 +61,11 @@ final class rc {
         return null != tc.field_A ? true : false;
     }
 
-    final static lg a(ResourceArchive param0, int param1, String param2, String param3, ResourceArchive param4) {
+    final static BinaryBitmapFont a(ResourceArchive param0, int param1, String param2, String param3, ResourceArchive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        lg stackIn_3_0 = null;
+        BinaryBitmapFont stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

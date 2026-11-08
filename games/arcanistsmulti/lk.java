@@ -118,13 +118,13 @@ abstract class lk {
 
     final static void a(int param0, int param1, String param2, int param3, int param4, int param5) {
         try {
-          tj.field_t.a(param2, param1 + 1, 1 + tj.field_t.field_C + param0, (16711422 & param3) >> 1, 4144959 & param3 >> 2);
+          tj.field_t.drawText(param2, param1 + 1, 1 + tj.field_t.field_C + param0, (16711422 & param3) >> 1, 4144959 & param3 >> 2);
           if (param5 >= -104) {
             lk.f(68);
           }
-          tj.field_t.a(param2, param1, tj.field_t.field_C + (param0 - 1), param3, param3);
-          tj.field_t.a(param2, -1 + param1, tj.field_t.field_C + param0, param3, param3);
-          tj.field_t.a(param2, param1, param0 + tj.field_t.field_C, param4, -1);
+          tj.field_t.drawText(param2, param1, tj.field_t.field_C + (param0 - 1), param3, param3);
+          tj.field_t.drawText(param2, -1 + param1, tj.field_t.field_C + param0, param3, param3);
+          tj.field_t.drawText(param2, param1, param0 + tj.field_t.field_C, param4, -1);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "lk.R(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }

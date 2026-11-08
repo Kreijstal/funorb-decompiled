@@ -53,7 +53,7 @@ final class h extends wn {
     }
 
     public h() {
-        super(0, 0, gi.field_c, mf.field_c, (pf) null, (wc) null);
+        super(0, 0, SoundCache.field_c, mf.field_c, (pf) null, (wc) null);
         this.field_H = new IntrusiveDeque();
     }
 
@@ -82,7 +82,7 @@ final class h extends wn {
         try {
           nj.field_c = 2;
           var5 = (CharSequence) ((Object) param2);
-          ua.field_S = gk.a(var5, -13);
+          ua.field_S = Js5ArchiveManager.a(var5, -13);
           gg.field_e = param0;
           uc.a(3);
         } catch (RuntimeException runtimeException) {
@@ -149,17 +149,17 @@ final class h extends wn {
         try {
           var1 = new Sprite(540, 140);
           fk.a(var1, -23095);
-          id.a();
-          de.b();
-          gi.field_a = param0;
+          MeshRasterState.useRasterClip();
+          SoftwareRasterizer.clear();
+          SoundCache.field_a = param0;
           cg.f(252566882);
-          var2 = var1.g();
+          var2 = var1.copy();
           for (var3 = 0; var3 < 15; var3++) {
-            var2.a(-2, -2, 16777215);
-            de.d(4, 4, 0, 0, 540, 140);
+            var2.drawSilhouette(-2, -2, 16777215);
+            SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 540, 140);
           }
-          gi.field_k.a();
-          var1.b(0, 0);
+          SoundCache.field_k.makeRasterTarget();
+          var1.drawHalfSize(0, 0);
           oo.c(-15405);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "h.G(" + param0 + ')');

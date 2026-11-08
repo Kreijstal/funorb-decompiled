@@ -186,7 +186,7 @@ final class rg {
                 }
                 var2 = tj.a("ai1", -70);
                 if (var2 != null) {
-                  ga.field_n = sc.a((byte) 94, var2);
+                  ImageProducerRasterBuffer.field_n = sc.a((byte) 94, var2);
                 }
                 var2 = tj.a("ai2", -91);
                 if (null != var2) {
@@ -202,7 +202,7 @@ final class rg {
                 }
                 var2 = tj.a("youcanchangeyourcharacter", -75);
                 if (null != var2) {
-                  io.field_x = sc.a((byte) 118, var2);
+                  MusicCrossfadeStream.field_x = sc.a((byte) 118, var2);
                 }
                 var2 = tj.a("smittenmessage", -94);
                 if (var2 != null) {
@@ -2282,7 +2282,7 @@ final class rg {
                 }
                 var2 = tj.a("keycode_q", -96);
                 if (var2 != null) {
-                  bg.field_c = var2[0] & 255;
+                  ByteStorage.field_c = var2[0] & 255;
                 }
                 var2 = tj.a("keycode_c", param1 ^ -104);
                 if (null != var2) {
@@ -2298,7 +2298,7 @@ final class rg {
                 }
                 var2 = tj.a("spelselect", -82);
                 if (null != var2) {
-                  ji.field_l = sc.a((byte) 104, var2);
+                  KeyboardInputHandler.field_l = sc.a((byte) 104, var2);
                 }
                 var2 = tj.a("multiplayer", -101);
                 if (null != var2) {
@@ -2370,79 +2370,79 @@ final class rg {
                 }
                 var2 = tj.a("gameopt_tooltipnames,0,0", param1 - 92);
                 if (var2 != null) {
-                  jh.field_d[0][0] = sc.a((byte) 91, var2);
+                  DelegatingCanvas.field_d[0][0] = sc.a((byte) 91, var2);
                 }
                 var2 = tj.a("gameopt_tooltipnames,0,1", param1 ^ -123);
                 if (null != var2) {
-                  jh.field_d[0][1] = sc.a((byte) 111, var2);
+                  DelegatingCanvas.field_d[0][1] = sc.a((byte) 111, var2);
                 }
                 var2 = tj.a("gameopt_tooltipnames,0,2", -114);
                 if (var2 != null) {
-                  jh.field_d[0][2] = sc.a((byte) 101, var2);
+                  DelegatingCanvas.field_d[0][2] = sc.a((byte) 101, var2);
                 }
                 var2 = tj.a("gameopt_tooltipnames,0,3", param1 - 140);
                 if (null != var2) {
-                  jh.field_d[0][3] = sc.a((byte) 102, var2);
+                  DelegatingCanvas.field_d[0][3] = sc.a((byte) 102, var2);
                 }
                 var2 = tj.a("gameopt_tooltipnames,0,4", -73);
                 if (var2 != null) {
-                  jh.field_d[0][4] = sc.a((byte) 103, var2);
+                  DelegatingCanvas.field_d[0][4] = sc.a((byte) 103, var2);
                 }
                 var2 = tj.a("gameopt_tooltipnames,0,5", -119);
                 if (null != var2) {
-                  jh.field_d[0][5] = sc.a((byte) 118, var2);
+                  DelegatingCanvas.field_d[0][5] = sc.a((byte) 118, var2);
                 }
                 var2 = tj.a("gameopt_tooltipnames,0,6", -127);
                 if (null != var2) {
-                  jh.field_d[0][6] = sc.a((byte) 117, var2);
+                  DelegatingCanvas.field_d[0][6] = sc.a((byte) 117, var2);
                 }
                 var2 = tj.a("gameopt_tooltipnames,1,0", param1 ^ -84);
                 if (null != var2) {
-                  jh.field_d[1][0] = sc.a((byte) 115, var2);
+                  DelegatingCanvas.field_d[1][0] = sc.a((byte) 115, var2);
                 }
                 var2 = tj.a("gameopt_tooltipnames,1,1", -95);
                 if (var2 != null) {
-                  jh.field_d[1][1] = sc.a((byte) 90, var2);
+                  DelegatingCanvas.field_d[1][1] = sc.a((byte) 90, var2);
                 }
                 var2 = tj.a("gameopt_tooltipnames,1,2", -90);
                 if (var2 != null) {
-                  jh.field_d[1][2] = sc.a((byte) 86, var2);
+                  DelegatingCanvas.field_d[1][2] = sc.a((byte) 86, var2);
                 }
                 var2 = tj.a("gameopt_tooltipnames,1,3", -78);
                 if (null != var2) {
-                  jh.field_d[1][3] = sc.a((byte) 108, var2);
+                  DelegatingCanvas.field_d[1][3] = sc.a((byte) 108, var2);
                 }
                 var2 = tj.a("gameopt_tooltipnames,1,4", param1 ^ -71);
                 if (var2 != null) {
-                  jh.field_d[1][4] = sc.a((byte) 116, var2);
+                  DelegatingCanvas.field_d[1][4] = sc.a((byte) 116, var2);
                 }
                 var2 = tj.a("gameopt_tooltipnames,1,5", -105);
                 if (null != var2) {
-                  jh.field_d[1][5] = sc.a((byte) 121, var2);
+                  DelegatingCanvas.field_d[1][5] = sc.a((byte) 121, var2);
                 }
                 var2 = tj.a("gameopt_tooltipnames,1,6", param1 - 132);
                 if (null != var2) {
-                  jh.field_d[1][6] = sc.a((byte) 105, var2);
+                  DelegatingCanvas.field_d[1][6] = sc.a((byte) 105, var2);
                 }
                 var2 = tj.a("gameopt_tooltipnames,1,7", -76);
                 if (null != var2) {
-                  jh.field_d[1][7] = sc.a((byte) 107, var2);
+                  DelegatingCanvas.field_d[1][7] = sc.a((byte) 107, var2);
                 }
                 var2 = tj.a("gameopt_tooltipnames,1,8", -115);
                 if (null != var2) {
-                  jh.field_d[1][8] = sc.a((byte) 122, var2);
+                  DelegatingCanvas.field_d[1][8] = sc.a((byte) 122, var2);
                 }
                 var2 = tj.a("gameopt_tooltipnames,1,9", -86);
                 if (var2 != null) {
-                  jh.field_d[1][9] = sc.a((byte) 107, var2);
+                  DelegatingCanvas.field_d[1][9] = sc.a((byte) 107, var2);
                 }
                 var2 = tj.a("gameopt_tooltipnames,2,0", -86);
                 if (null != var2) {
-                  jh.field_d[2][0] = sc.a((byte) 87, var2);
+                  DelegatingCanvas.field_d[2][0] = sc.a((byte) 87, var2);
                 }
                 var2 = tj.a("gameopt_tooltipnames,2,1", -80);
                 if (var2 != null) {
-                  jh.field_d[2][1] = sc.a((byte) 127, var2);
+                  DelegatingCanvas.field_d[2][1] = sc.a((byte) 127, var2);
                 }
                 var2 = tj.a("instructions_pages,0", param1 ^ -121);
                 if (null != var2) {
@@ -2578,7 +2578,7 @@ final class rg {
                 }
                 var2 = tj.a("dsc3", -70);
                 if (null != var2) {
-                  gi.field_h = sc.a((byte) 99, var2);
+                  SoundCache.field_h = sc.a((byte) 99, var2);
                 }
                 var2 = tj.a("tit3", param1 - 94);
                 if (null != var2) {
@@ -2598,7 +2598,7 @@ final class rg {
                 }
                 var2 = tj.a("tit1", param1 ^ -66);
                 if (var2 != null) {
-                  rj.field_d = sc.a((byte) 96, var2);
+                  AudioService.field_d = sc.a((byte) 96, var2);
                 }
                 var2 = tj.a("dsc0", -115);
                 if (null != var2) {
@@ -2662,7 +2662,7 @@ final class rg {
                 }
                 var2 = tj.a("overdisc", param1 - 120);
                 if (null != var2) {
-                  gi.field_f = sc.a((byte) 116, var2);
+                  SoundCache.field_f = sc.a((byte) 116, var2);
                 }
                 var2 = tj.a("overbook", -104);
                 if (null != var2) {
@@ -2700,7 +2700,7 @@ final class rg {
                 }
                 var2 = tj.a("stonebook", param1 - 93);
                 if (var2 != null) {
-                  io.field_z = sc.a((byte) 97, var2);
+                  MusicCrossfadeStream.field_z = sc.a((byte) 97, var2);
                 }
                 var2 = tj.a("flamedisc", -88);
                 if (null != var2) {
@@ -2739,7 +2739,7 @@ final class rg {
                 }
                 var2 = tj.a("cogsdisc", param1 ^ -101);
                 if (var2 != null) {
-                  uk.field_f = sc.a((byte) 89, var2);
+                  FullscreenFocusCanvas.field_f = sc.a((byte) 89, var2);
                 }
                 var2 = tj.a("cogsbook", -107);
                 if (var2 != null) {
@@ -2759,7 +2759,7 @@ final class rg {
                 }
                 var2 = tj.a("buyfor2", -116);
                 if (null != var2) {
-                  gi.field_l = sc.a((byte) 99, var2);
+                  SoundCache.field_l = sc.a((byte) 99, var2);
                 }
                 var2 = tj.a("notenoughwands", param1 - 137);
                 if (null != var2) {
@@ -2795,7 +2795,7 @@ final class rg {
                 }
                 var2 = tj.a("mostbounce", -76);
                 if (var2 != null) {
-                  gk.field_a = sc.a((byte) 107, var2);
+                  Js5ArchiveManager.field_a = sc.a((byte) 107, var2);
                 }
                 var2 = tj.a("mostfit", -108);
                 if (var2 != null) {
@@ -2807,7 +2807,7 @@ final class rg {
                 }
                 var2 = tj.a("mostcruel", -98);
                 if (null != var2) {
-                  gi.field_i = sc.a((byte) 115, var2);
+                  SoundCache.field_i = sc.a((byte) 115, var2);
                 }
                 var2 = tj.a("mostresil", -111);
                 if (var2 != null) {
@@ -2947,7 +2947,7 @@ final class rg {
                 }
                 var2 = tj.a("spacewands", -124);
                 if (var2 != null) {
-                  dk.field_g = sc.a((byte) 86, var2);
+                  CanvasRasterBuffer.field_g = sc.a((byte) 86, var2);
                 }
                 var2 = tj.a("spacewand", param1 - 97);
                 if (null != var2) {
@@ -2955,7 +2955,7 @@ final class rg {
                 }
                 var2 = tj.a("ins39", param1 - 122);
                 if (null != var2) {
-                  hh.field_a = sc.a((byte) 102, var2);
+                  MouseWheelHandler.field_a = sc.a((byte) 102, var2);
                 }
                 var2 = tj.a("ins38", -103);
                 if (var2 != null) {
@@ -3263,7 +3263,7 @@ final class rg {
                 }
                 var2 = tj.a("tut34", -109);
                 if (var2 != null) {
-                  io.field_u = sc.a((byte) 108, var2);
+                  MusicCrossfadeStream.field_u = sc.a((byte) 108, var2);
                 }
                 var2 = tj.a("tut33", param1 - 122);
                 if (var2 != null) {
@@ -3287,7 +3287,7 @@ final class rg {
                 }
                 var2 = tj.a("tut28", param1 ^ -106);
                 if (var2 != null) {
-                  gh.field_o = sc.a((byte) 113, var2);
+                  MidiPcmStream.field_o = sc.a((byte) 113, var2);
                 }
                 var2 = tj.a("tut27", param1 - 147);
                 if (var2 != null) {
@@ -3315,7 +3315,7 @@ final class rg {
                 }
                 var2 = tj.a("tut21", -119);
                 if (null != var2) {
-                  nb.field_f = sc.a((byte) 115, var2);
+                  GzipDecoder.field_f = sc.a((byte) 115, var2);
                 }
                 var2 = tj.a("tut20", -71);
                 if (null != var2) {
@@ -3347,7 +3347,7 @@ final class rg {
                 }
                 var2 = tj.a("tut13", param1 - 124);
                 if (var2 != null) {
-                  wi.field_i = sc.a((byte) 115, var2);
+                  DirectByteStorage.field_i = sc.a((byte) 115, var2);
                 }
                 var2 = tj.a("tut12", -90);
                 if (null != var2) {
@@ -3447,7 +3447,7 @@ final class rg {
                 }
                 var2 = tj.a("unpack4", -126);
                 if (var2 != null) {
-                  ba.field_b = sc.a((byte) 88, var2);
+                  PatchEnvelopeSet.field_b = sc.a((byte) 88, var2);
                 }
                 var2 = tj.a("unpack3", -80);
                 if (var2 != null) {
@@ -3515,11 +3515,11 @@ final class rg {
                 }
                 var2 = tj.a("yaywecanswim", param1 ^ -103);
                 if (null != var2) {
-                  fg.field_i = sc.a((byte) 104, var2);
+                  MusicPatch.field_i = sc.a((byte) 104, var2);
                 }
                 var2 = tj.a("natureisgoodaswell", -128);
                 if (null != var2) {
-                  dk.field_f = sc.a((byte) 87, var2);
+                  CanvasRasterBuffer.field_f = sc.a((byte) 87, var2);
                 }
                 var2 = tj.a("morehealingwtf", param1 - 112);
                 if (var2 != null) {
@@ -3547,7 +3547,7 @@ final class rg {
                 }
                 var2 = tj.a("familarpowers", -85);
                 if (var2 != null) {
-                  nb.field_c = sc.a((byte) 100, var2);
+                  GzipDecoder.field_c = sc.a((byte) 100, var2);
                 }
                 var2 = tj.a("mustbeamemeberforanimals", param1 ^ -78);
                 if (var2 != null) {
@@ -3669,7 +3669,7 @@ final class rg {
                 }
                 var2 = tj.a("underdarkcaps", -89);
                 if (null != var2) {
-                  di.field_b = sc.a((byte) 127, var2);
+                  NodeHashTable.field_b = sc.a((byte) 127, var2);
                 }
                 var2 = tj.a("frostcaps", -80);
                 if (var2 != null) {

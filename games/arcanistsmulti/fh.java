@@ -44,8 +44,8 @@ final class fh implements Iterator {
         return var1;
     }
 
-    final static void a(int param0, dl param1, java.awt.Frame param2) {
-        og var3 = null;
+    final static void a(int param0, PlatformTaskDispatcher param1, java.awt.Frame param2) {
+        PlatformTask var3 = null;
         int var4 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;

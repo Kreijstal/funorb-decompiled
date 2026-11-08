@@ -44,7 +44,7 @@ final class ub {
             }
           } else {
             for (var7 = 0; var4_int > var7; var7++) {
-              param3[var7] = (byte)(var6 + param1.readBits(hh.a(param0, 28090), var5));
+              param3[var7] = (byte)(var6 + param1.readBits(MouseWheelHandler.a(param0, 28090), var5));
             }
           }
           stackIn_16_0 = (byte[]) (param3);

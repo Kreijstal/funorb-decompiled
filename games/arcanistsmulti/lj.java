@@ -52,7 +52,7 @@ final class lj extends hg {
         if (!param0) {
           lj.c(-97);
         }
-        return hk.field_s;
+        return MusicPatchPcmStream.field_s;
     }
 
     final int a(long param0, byte param1) {
@@ -101,7 +101,7 @@ final class lj extends hg {
         IntrusiveDeque.field_b = ea.field_E[var2];
         wm.field_H[var2] = null;
         wm.field_H[var2] = new Sprite(640, 480);
-        wm.field_H[var2].a();
+        wm.field_H[var2].makeRasterTarget();
         if (5 != param1 &&
           param1 != 3 &&
           param1 != 2 &&
@@ -114,44 +114,44 @@ final class lj extends hg {
         if (param1 == 0) {
           var8 = new Sprite(640, 480);
           var9 = var8;
-          var9.a();
+          var9.makeRasterTarget();
           ArcanistsMulti.a(param1, (byte) -26);
-          wm.field_H[var2].a();
-          var9.b(0, 0, 128);
+          wm.field_H[var2].makeRasterTarget();
+          var9.drawAdditive(0, 0, 128);
         }
         if (param1 == 0) {
           var3 = sc.field_U[param1] * wl.field_L[param1].length + tg.field_f[param1];
           var4 = new Sprite(640, 480);
-          var4.a();
-          o.field_F.c(-64 + lm.field_e[param1], var3 - 80);
-          j.field_a.c(eo.field_b[param1] - 110, -70 + var3);
-          pe.field_Ib.c(lm.field_e[param1] - 39, tg.field_f[param1] - 66);
-          rg.field_a.c(-150 + eo.field_b[param1], -80 + tg.field_f[param1]);
+          var4.makeRasterTarget();
+          MusicPatchNode.field_F.drawTransparent(-64 + lm.field_e[param1], var3 - 80);
+          j.field_a.drawTransparent(eo.field_b[param1] - 110, -70 + var3);
+          pe.field_Ib.drawTransparent(lm.field_e[param1] - 39, tg.field_f[param1] - 66);
+          rg.field_a.drawTransparent(-150 + eo.field_b[param1], -80 + tg.field_f[param1]);
           var5 = fj.a(ec.field_c, -22612, ue.field_d, "");
           if (ec.field_c.equals("underdark")) {
-            var5.a(0, -8 + (-var5.field_y + 480), 16777215);
+            var5.drawSilhouette(0, -8 + (-var5.field_y + 480), 16777215);
           } else {
             if (!ec.field_c.equals("clockwork")) {
-              var5.a(0, -var5.field_y + 480, 16777215);
+              var5.drawSilhouette(0, -var5.field_y + 480, 16777215);
             } else {
-              var5.a(0, 434 - var5.field_y, 16777215);
+              var5.drawSilhouette(0, 434 - var5.field_y, 16777215);
             }
           }
-          de.d(4, 4, 0, 0, 640, 480);
-          wm.field_H[var2].a();
-          var4.b(0, 0, 255);
-          o.field_F.c(lm.field_e[param1] - 64, var3 - 80);
-          j.field_a.c(eo.field_b[param1] - 110, -70 + var3);
-          pe.field_Ib.c(lm.field_e[param1] - 39, -66 + tg.field_f[param1]);
-          rg.field_a.c(-150 + eo.field_b[param1], tg.field_f[param1] - 80);
+          SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 640, 480);
+          wm.field_H[var2].makeRasterTarget();
+          var4.drawAdditive(0, 0, 255);
+          MusicPatchNode.field_F.drawTransparent(lm.field_e[param1] - 64, var3 - 80);
+          j.field_a.drawTransparent(eo.field_b[param1] - 110, -70 + var3);
+          pe.field_Ib.drawTransparent(lm.field_e[param1] - 39, -66 + tg.field_f[param1]);
+          rg.field_a.drawTransparent(-150 + eo.field_b[param1], tg.field_f[param1] - 80);
           if (!ec.field_c.equals("underdark")) {
             if (ec.field_c.equals("clockwork")) {
-              var5.c(0, 480 - var5.field_y - 46);
+              var5.drawTransparent(0, 480 - var5.field_y - 46);
             } else {
-              var5.c(0, -var5.field_y + 480);
+              var5.drawTransparent(0, -var5.field_y + 480);
             }
           } else {
-            var5.c(0, -8 - var5.field_y + 480);
+            var5.drawTransparent(0, -8 - var5.field_y + 480);
           }
         }
         if (param1 != 3) {
@@ -160,88 +160,88 @@ final class lj extends hg {
         }
         if (param1 == 6) {
           var10 = new Sprite(640, 480);
-          var10.a();
+          var10.makeRasterTarget();
           gl.a(371, 32, -27327, 576, kf.field_b, 63);
-          wm.field_H[var2].a();
-          var10.b(0, 0, 128);
+          wm.field_H[var2].makeRasterTarget();
+          var10.drawAdditive(0, 0, 128);
           bj.a(var10.field_A, 0);
-          var10.a();
-          gd.field_mb.c(-(gd.field_mb.field_n / 2) + 320, -5);
-          de.d(4, 4, 0, 0, 640, 480);
-          wm.field_H[var2].a();
-          var10.b(0, 0, 255);
-          gd.field_mb.c(-(gd.field_mb.field_n / 2) + 320, -5);
+          var10.makeRasterTarget();
+          gd.field_mb.drawTransparent(-(gd.field_mb.field_n / 2) + 320, -5);
+          SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 640, 480);
+          wm.field_H[var2].makeRasterTarget();
+          var10.drawAdditive(0, 0, 255);
+          gd.field_mb.drawTransparent(-(gd.field_mb.field_n / 2) + 320, -5);
         }
         if (7 == param1) {
           var11 = new Sprite(640, 480);
-          var11.a();
+          var11.makeRasterTarget();
           gl.a(385, 32, -27327, 576, kf.field_b, 63);
-          wm.field_H[var2].a();
-          var11.b(0, 0, 128);
+          wm.field_H[var2].makeRasterTarget();
+          var11.drawAdditive(0, 0, 128);
           bj.a(var11.field_A, 0);
-          var11.a();
-          gd.field_mb.c(320 - gd.field_mb.field_n / 2, -5);
-          de.d(4, 4, 0, 0, 640, 480);
-          wm.field_H[var2].a();
-          var11.b(0, 0, 255);
-          gd.field_mb.c(320 - gd.field_mb.field_n / 2, -5);
+          var11.makeRasterTarget();
+          gd.field_mb.drawTransparent(320 - gd.field_mb.field_n / 2, -5);
+          SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 640, 480);
+          wm.field_H[var2].makeRasterTarget();
+          var11.drawAdditive(0, 0, 255);
+          gd.field_mb.drawTransparent(320 - gd.field_mb.field_n / 2, -5);
         }
         if (param1 == 9) {
           var12 = new Sprite(640, 480);
-          var12.a();
+          var12.makeRasterTarget();
           gl.a(330, 32, -27327, 576, kf.field_b, 63);
-          wm.field_H[var2].a();
-          var12.b(0, 0, 128);
+          wm.field_H[var2].makeRasterTarget();
+          var12.drawAdditive(0, 0, 128);
           var13 = new Sprite(640, 480);
-          var13.a();
-          gd.field_mb.c(320 - gd.field_mb.field_n / 2, 35);
-          de.d(4, 4, 0, 0, 640, 480);
-          wm.field_H[var2].a();
-          var13.b(0, 0, 255);
-          gd.field_mb.c(-(gd.field_mb.field_n / 2) + 320, 35);
+          var13.makeRasterTarget();
+          gd.field_mb.drawTransparent(320 - gd.field_mb.field_n / 2, 35);
+          SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 640, 480);
+          wm.field_H[var2].makeRasterTarget();
+          var13.drawAdditive(0, 0, 255);
+          gd.field_mb.drawTransparent(-(gd.field_mb.field_n / 2) + 320, 35);
         }
         if (!param0) {
           lj.a(true, -39);
         }
         if (param1 == 8) {
           var14 = new Sprite(640, 480);
-          var14.a();
-          fe.field_o.a(0, 0, 16777215);
-          de.d(4, 4, 0, 0, 640, 480);
-          wm.field_H[var2].a();
-          var14.b(0, 0, 255);
-          fe.field_o.c(0, 0);
+          var14.makeRasterTarget();
+          fe.field_o.drawSilhouette(0, 0, 16777215);
+          SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 640, 480);
+          wm.field_H[var2].makeRasterTarget();
+          var14.drawAdditive(0, 0, 255);
+          fe.field_o.drawTransparent(0, 0);
           var15 = new Sprite(640, 480);
-          var15.a();
-          o.field_F.c(343, -2);
-          j.field_a.c(108, 6);
-          de.d(4, 4, 0, 0, 640, 480);
-          wm.field_H[var2].a();
-          var15.b(0, 0, 255);
-          o.field_F.c(343, -2);
-          j.field_a.c(108, 6);
+          var15.makeRasterTarget();
+          MusicPatchNode.field_F.drawTransparent(343, -2);
+          j.field_a.drawTransparent(108, 6);
+          SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 640, 480);
+          wm.field_H[var2].makeRasterTarget();
+          var15.drawAdditive(0, 0, 255);
+          MusicPatchNode.field_F.drawTransparent(343, -2);
+          j.field_a.drawTransparent(108, 6);
         }
         if (param1 == 11) {
           var16 = new Sprite(640, 480);
-          var16.a();
-          gd.field_mb.c(320 - gd.field_mb.field_n / 2 - 72, 10);
-          gd.field_mb.c(72 + (-(gd.field_mb.field_n / 2) + 320), 10);
-          de.d(4, 4, 0, 0, 640, 480);
-          wm.field_H[var2].a();
-          var16.b(0, 0, 255);
-          gd.field_mb.c(248 - gd.field_mb.field_n / 2, 10);
-          gd.field_mb.c(72 - gd.field_mb.field_n / 2 + 320, 10);
+          var16.makeRasterTarget();
+          gd.field_mb.drawTransparent(320 - gd.field_mb.field_n / 2 - 72, 10);
+          gd.field_mb.drawTransparent(72 + (-(gd.field_mb.field_n / 2) + 320), 10);
+          SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 640, 480);
+          wm.field_H[var2].makeRasterTarget();
+          var16.drawAdditive(0, 0, 255);
+          gd.field_mb.drawTransparent(248 - gd.field_mb.field_n / 2, 10);
+          gd.field_mb.drawTransparent(72 - gd.field_mb.field_n / 2 + 320, 10);
         }
         if (param1 == 12) {
           var17 = new Sprite(640, 480);
-          var17.a();
-          gd.field_mb.c(248 - gd.field_mb.field_n / 2, 0);
-          gd.field_mb.c(72 + (320 - gd.field_mb.field_n / 2), 0);
-          de.d(4, 4, 0, 0, 640, 480);
-          wm.field_H[var2].a();
-          var17.b(0, 0, 255);
-          gd.field_mb.c(320 - (gd.field_mb.field_n / 2 + 72), 0);
-          gd.field_mb.c(72 + (320 - gd.field_mb.field_n / 2), 0);
+          var17.makeRasterTarget();
+          gd.field_mb.drawTransparent(248 - gd.field_mb.field_n / 2, 0);
+          gd.field_mb.drawTransparent(72 + (320 - gd.field_mb.field_n / 2), 0);
+          SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 640, 480);
+          wm.field_H[var2].makeRasterTarget();
+          var17.drawAdditive(0, 0, 255);
+          gd.field_mb.drawTransparent(320 - (gd.field_mb.field_n / 2 + 72), 0);
+          gd.field_mb.drawTransparent(72 + (320 - gd.field_mb.field_n / 2), 0);
         }
         rk.g(491697968);
     }

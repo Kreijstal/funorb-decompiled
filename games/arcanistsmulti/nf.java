@@ -43,7 +43,7 @@ final class nf {
     private int field_nb;
     int field_C;
     private int field_m;
-    wf[] field_rb;
+    PcmSample[] field_rb;
     IntrusiveDeque field_Kb;
     private int field_Cb;
     int[] field_cb;
@@ -78,7 +78,7 @@ final class nf {
     private boolean field_eb;
     private int[][] field_v;
     boolean field_Z;
-    wf[] field_sb;
+    PcmSample[] field_sb;
     int[] field_T;
     int field_F;
     IntrusiveDeque field_r;
@@ -588,8 +588,8 @@ final class nf {
                       var16++;
                     }
                   }
-                  var7.a();
-                  de.d(0, 0, 512, 512, 0);
+                  var7.makeRasterTarget();
+                  SoftwareRasterizer.fillRectangle(0, 0, 512, 512, 0);
                   var16 = var5.field_f + 8 * var5.field_c / 10;
                   var17 = 1;
                   if (var4_int == 25) {
@@ -647,7 +647,7 @@ final class nf {
                     var4_int != 39) {
                     var17 = 0;
                   }
-                  var5.b().b(var5.field_h / 2 + var5.field_j << 4, var16 << 4, 4096, 4096, var15 << 3, 4096);
+                  var5.toRgbSprite().drawRotatedAboutPivot(var5.field_h / 2 + var5.field_j << 4, var16 << 4, 4096, 4096, var15 << 3, 4096);
                   this.a(false, -256 + var8, this.field_V, var17 != 0, -256 + var14, var7);
                   if (26 == var4_int) {
                     var8 += 24;
@@ -918,13 +918,13 @@ final class nf {
             }
             this.a(0, 120, mn.field_y, 0, this.field_V);
             var21 = go.field_j[0 + this.field_O * 8];
-            this.a(false, -32 + (var34[0] - 128), this.field_V, true, -var35[0] + (this.field_H - 256) - 120, var21.b());
+            this.a(false, -32 + (var34[0] - 128), this.field_V, true, -var35[0] + (this.field_H - 256) - 120, var21.toRgbSprite());
             var22 = go.field_j[this.field_O * 8 + 1];
-            this.a(false, -96 + var34[3], this.field_V, true, -376 + (this.field_H - var35[3]), var22.b());
+            this.a(false, -96 + var34[3], this.field_V, true, -376 + (this.field_H - var35[3]), var22.toRgbSprite());
             var23 = go.field_j[3 + this.field_O * 8];
-            this.a(false, var34[4] - 128, this.field_V, true, -32 + (-256 + this.field_H) - var35[4], var23.b());
-            var24 = var23.a();
-            this.a(false, -128 + var34[2], this.field_V, true, -256 + this.field_H + (-var35[2] - param1), var24.b());
+            this.a(false, var34[4] - 128, this.field_V, true, -32 + (-256 + this.field_H) - var35[4], var23.toRgbSprite());
+            var24 = var23.copyFlippedHorizontal();
+            this.a(false, -128 + var34[2], this.field_V, true, -256 + this.field_H + (-var35[2] - param1), var24.toRgbSprite());
             var10 = 0;
             do {
               if (var10 >= 3) {
@@ -932,20 +932,20 @@ final class nf {
                 break;
               }
               var25 = go.field_j[8 * this.field_O + 2];
-              this.a(false, 3 + (var34[var10] - 128), this.field_V, true, -256 + this.field_H - var35[var10], var25.b());
+              this.a(false, 3 + (var34[var10] - 128), this.field_V, true, -256 + this.field_H - var35[var10], var25.toRgbSprite());
               var26 = go.field_j[uj.a(param0, 4, (byte) -39) - (-4 - this.field_O * 8)];
-              this.a(false, -192 + var34[var10] + 3, this.field_V, true, -160 + this.field_H, var26.b());
+              this.a(false, -192 + var34[var10] + 3, this.field_V, true, -160 + this.field_H, var26.toRgbSprite());
               var27 = go.field_j[4 + (uj.a(param0, 4, (byte) -100) + this.field_O * 8)];
-              this.a(false, 3 + (-64 + var34[var10]), this.field_V, true, this.field_H - 160, var27.b());
+              this.a(false, 3 + (-64 + var34[var10]), this.field_V, true, this.field_H - 160, var27.toRgbSprite());
               var10++;
             } while (var18 == 0);
             while (var10 < 6) {
               var28 = go.field_j[this.field_O * 8 + 2];
-              this.a(false, 3 + var34[var10] - 128, this.field_V, true, -256 + (this.field_H - var35[var10]), var28.b());
+              this.a(false, 3 + var34[var10] - 128, this.field_V, true, -256 + (this.field_H - var35[var10]), var28.toRgbSprite());
               var29 = go.field_j[4 + (uj.a(param0, 4, (byte) -56) + this.field_O * 8)];
-              this.a(false, 3 + (var34[var10] - 192), this.field_V, true, -160 + this.field_H, var29.b());
+              this.a(false, 3 + (var34[var10] - 192), this.field_V, true, -160 + this.field_H, var29.toRgbSprite());
               var30 = go.field_j[4 + (uj.a(param0, 4, (byte) -127) + 8 * this.field_O)];
-              this.a(false, 3 + (var34[var10] - 64), this.field_V, true, this.field_H - 160, var30.b());
+              this.a(false, 3 + (var34[var10] - 64), this.field_V, true, this.field_H - 160, var30.toRgbSprite());
               var10++;
               if (var18 == 0) {
                 continue;
@@ -981,7 +981,7 @@ final class nf {
                   var40[var12] = var14;
                   var41[var12] = var15;
                   var12++;
-                  this.a(false, var14, this.field_V, false, var15, var33.b());
+                  this.a(false, var14, this.field_V, false, var15, var33.toRgbSprite());
                 }
                 var13++;
                 continue scanLoop2;
@@ -1287,15 +1287,15 @@ final class nf {
           this.field_jb = param1.field_jb;
           this.field_J = param1.field_J;
           this.field_f = param1.field_f;
-          sf.a(param1.field_V.field_m, 0, this.field_V.field_m, 0, this.field_V.field_m.length);
-          sf.a(param1.field_Jb.field_m, 0, this.field_Jb.field_m, 0, this.field_Jb.field_m.length);
+          ArraySupport.copyBytes(param1.field_V.field_m, 0, this.field_V.field_m, 0, this.field_V.field_m.length);
+          ArraySupport.copyBytes(param1.field_Jb.field_m, 0, this.field_Jb.field_m, 0, this.field_Jb.field_m.length);
           var3_int = 0;
           do {
             if (var3_int >= this.field_v.length) {
               var3_int = 0;
               break;
             }
-            sf.a(param1.field_v[var3_int], 0, this.field_v[var3_int], 0, 16);
+            ArraySupport.copyInts(param1.field_v[var3_int], 0, this.field_v[var3_int], 0, 16);
             var3_int++;
           } while (var5 == 0);
           do {
@@ -1303,7 +1303,7 @@ final class nf {
               var3_int = 0;
               break;
             }
-            sf.a(param1.field_lb[var3_int], 0, this.field_lb[var3_int], 0, 16);
+            ArraySupport.copyInts(param1.field_lb[var3_int], 0, this.field_lb[var3_int], 0, 16);
             var3_int++;
           } while (var5 == 0);
           do {
@@ -1311,12 +1311,12 @@ final class nf {
               var3_int = 0;
               break;
             }
-            sf.a(param1.field_vb[var3_int], 0, this.field_vb[var3_int], 0, 16);
+            ArraySupport.copyInts(param1.field_vb[var3_int], 0, this.field_vb[var3_int], 0, 16);
             var3_int++;
           } while (var5 == 0);
           scanLoop1: while (true) {
             if (this.field_L.length > var3_int) {
-              sf.a(param1.field_L[var3_int], 0, this.field_L[var3_int], 0, 16);
+              ArraySupport.copyBooleans(param1.field_L[var3_int], 0, this.field_L[var3_int], 0, 16);
               var3_int++;
               if (var5 == 0) {
                 continue;
@@ -1418,46 +1418,46 @@ final class nf {
               var3_int = 0;
               break;
             }
-            sf.a(param1.field_N[var3_int], 0, this.field_N[var3_int], 0, 18);
+            ArraySupport.copyInts(param1.field_N[var3_int], 0, this.field_N[var3_int], 0, 18);
             var3_int++;
           } while (var5 == 0);
           do {
             if (var3_int >= this.field_v.length) {
-              sf.a(param1.field_x, 0, this.field_x, 0, this.field_x.length);
-              sf.a(param1.field_X, 0, this.field_X, 0, this.field_X.length);
-              sf.a(param1.field_Ab, 0, this.field_Ab, 0, this.field_Ab.length);
-              sf.a(param1.field_o, 0, this.field_o, 0, this.field_o.length);
-              sf.a(param1.field_K, 0, this.field_K, 0, this.field_K.length);
-              sf.a(param1.field_g, 0, this.field_g, 0, this.field_g.length);
-              sf.a(param1.field_db, 0, this.field_db, 0, this.field_db.length);
-              sf.a(param1.field_s, 0, this.field_s, 0, this.field_s.length);
-              sf.a(param1.field_ib, 0, this.field_ib, 0, this.field_ib.length);
-              sf.a(param1.field_ob, 0, this.field_ob, 0, this.field_ob.length);
-              sf.a(param1.field_U, 0, this.field_U, 0, this.field_U.length);
-              sf.a(param1.field_ab, 0, this.field_ab, 0, this.field_ab.length);
-              sf.a(param1.field_Eb, 0, this.field_Eb, 0, this.field_Eb.length);
-              sf.a(param1.field_wb, 0, this.field_wb, 0, this.field_wb.length);
-              sf.a(param1.field_Nb, 0, this.field_Nb, 0, this.field_Nb.length);
+              ArraySupport.copyInts(param1.field_x, 0, this.field_x, 0, this.field_x.length);
+              ArraySupport.copyInts(param1.field_X, 0, this.field_X, 0, this.field_X.length);
+              ArraySupport.copyInts(param1.field_Ab, 0, this.field_Ab, 0, this.field_Ab.length);
+              ArraySupport.copyInts(param1.field_o, 0, this.field_o, 0, this.field_o.length);
+              ArraySupport.copyInts(param1.field_K, 0, this.field_K, 0, this.field_K.length);
+              ArraySupport.copyInts(param1.field_g, 0, this.field_g, 0, this.field_g.length);
+              ArraySupport.copyInts(param1.field_db, 0, this.field_db, 0, this.field_db.length);
+              ArraySupport.copyInts(param1.field_s, 0, this.field_s, 0, this.field_s.length);
+              ArraySupport.copyInts(param1.field_ib, 0, this.field_ib, 0, this.field_ib.length);
+              ArraySupport.copyInts(param1.field_ob, 0, this.field_ob, 0, this.field_ob.length);
+              ArraySupport.copyInts(param1.field_U, 0, this.field_U, 0, this.field_U.length);
+              ArraySupport.copyInts(param1.field_ab, 0, this.field_ab, 0, this.field_ab.length);
+              ArraySupport.copyInts(param1.field_Eb, 0, this.field_Eb, 0, this.field_Eb.length);
+              ArraySupport.copyInts(param1.field_wb, 0, this.field_wb, 0, this.field_wb.length);
+              ArraySupport.copyInts(param1.field_Nb, 0, this.field_Nb, 0, this.field_Nb.length);
               break;
             }
-            sf.a(param1.field_v[var3_int], 0, this.field_v[var3_int], 0, 16);
+            ArraySupport.copyInts(param1.field_v[var3_int], 0, this.field_v[var3_int], 0, 16);
             var3_int++;
           } while (var5 == 0);
           if (param0 <= 71) {
             return;
           }
-          sf.a(param1.field_T, 0, this.field_T, 0, this.field_T.length);
-          sf.a(param1.field_n, 0, this.field_n, 0, this.field_n.length);
-          sf.a(param1.field_gb, 0, this.field_gb, 0, this.field_gb.length);
-          sf.a(param1.field_Fb, 0, this.field_Fb, 0, this.field_Fb.length);
-          sf.a(param1.field_Ob, 0, this.field_Ob, 0, this.field_Ob.length);
-          sf.a(param1.field_c, 0, this.field_c, 0, this.field_c.length);
-          sf.a(param1.field_b, 0, this.field_b, 0, this.field_b.length);
-          sf.a(param1.field_u, 0, this.field_u, 0, this.field_u.length);
-          sf.a(param1.field_R, 0, this.field_R, 0, this.field_R.length);
-          sf.a(param1.field_cb, 0, this.field_cb, 0, this.field_cb.length);
-          sf.a(param1.field_a, 0, this.field_a, 0, this.field_a.length);
-          sf.a(param1.field_p, 0, this.field_p, 0, this.field_p.length);
+          ArraySupport.copyInts(param1.field_T, 0, this.field_T, 0, this.field_T.length);
+          ArraySupport.copyInts(param1.field_n, 0, this.field_n, 0, this.field_n.length);
+          ArraySupport.copyInts(param1.field_gb, 0, this.field_gb, 0, this.field_gb.length);
+          ArraySupport.copyInts(param1.field_Fb, 0, this.field_Fb, 0, this.field_Fb.length);
+          ArraySupport.copyInts(param1.field_Ob, 0, this.field_Ob, 0, this.field_Ob.length);
+          ArraySupport.copyInts(param1.field_c, 0, this.field_c, 0, this.field_c.length);
+          ArraySupport.copyInts(param1.field_b, 0, this.field_b, 0, this.field_b.length);
+          ArraySupport.copyBooleans(param1.field_u, 0, this.field_u, 0, this.field_u.length);
+          ArraySupport.copyInts(param1.field_R, 0, this.field_R, 0, this.field_R.length);
+          ArraySupport.copyInts(param1.field_cb, 0, this.field_cb, 0, this.field_cb.length);
+          ArraySupport.copyInts(param1.field_a, 0, this.field_a, 0, this.field_a.length);
+          ArraySupport.copyInts(param1.field_p, 0, this.field_p, 0, this.field_p.length);
           this.field_t = param1.field_t;
           this.field_mb = param1.field_mb;
           this.field_nb = param1.field_nb;
@@ -2088,18 +2088,18 @@ final class nf {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          param3 = param3 - bg.field_e.field_w;
+          param3 = param3 - ByteStorage.field_e.field_w;
           if (param2 != 30882) {
             this.field_Kb = (IntrusiveDeque) null;
           }
-          param0 = param0 - bg.field_e.field_n / 2;
+          param0 = param0 - ByteStorage.field_e.field_n / 2;
           if (0 <= param0 &&
-            param0 <= this.field_y - bg.field_e.field_n &&
+            param0 <= this.field_y - ByteStorage.field_e.field_n &&
             param3 >= 0) {
-            if ((this.field_H - bg.field_e.field_w) < param3) {
+            if ((this.field_H - ByteStorage.field_e.field_w) < param3) {
               return false;
             }
-            stackIn_12_0 = !(this.b(param3, 2, param0, bg.field_e));
+            stackIn_12_0 = !(this.b(param3, 2, param0, ByteStorage.field_e));
             return stackIn_12_0;
           }
           return false;
@@ -3097,7 +3097,7 @@ final class nf {
             if (param1 + var6.field_k >= -5 + this.field_H) {
               return false;
             }
-            stackIn_14_0 = !(this.b(param1, param3 + 7, param2, var6.b())) || !(jo.field_b);
+            stackIn_14_0 = !(this.b(param1, param3 + 7, param2, var6.toRgbSprite())) || !(jo.field_b);
             return stackIn_14_0;
           }
           return false;
@@ -3523,12 +3523,12 @@ final class nf {
         int var5;
         int stackIn_11_0 = 0;
         var5 = ArcanistsMulti.field_G ? 1 : 0;
-        gh.field_D.a((byte) 102, this.field_i);
+        MidiPcmStream.field_D.a((byte) 102, this.field_i);
         var3 = 0;
         if (param0 >= -101) {
           discarded$1 = this.c((jd) null, -100);
         }
-        var4 = (ml) (gh.field_D.b(-107));
+        var4 = (ml) (MidiPcmStream.field_D.b(-107));
         while (var4 != null) {
           stackIn_11_0 = 12;
           if (var5 != 0) {
@@ -3539,7 +3539,7 @@ final class nf {
             param1 == var4.field_u) {
             var3++;
           }
-          var4 = (ml) (gh.field_D.d(-18502));
+          var4 = (ml) (MidiPcmStream.field_D.d(-18502));
         }
         return var3;
     }
@@ -3633,8 +3633,8 @@ final class nf {
         var3 = 0;
         var4 = this.field_q;
         var7 = new Sprite(36, 36);
-        var7.a();
-        de.i(18, 18, 16, 16777215);
+        var7.makeRasterTarget();
+        SoftwareRasterizer.fillCircle(18, 18, 16, 16777215);
         if (this.field_d) {
           var8 = 0;
           var9 = this.field_q;
@@ -5260,7 +5260,7 @@ final class nf {
               var7 = param4.field_q >> 1;
               break;
             }
-            var27[var7] = (byte)hk.field_p[this.field_O].a(param4.field_A[var7], 510);
+            var27[var7] = (byte)MusicPatchPcmStream.field_p[this.field_O].a(param4.field_A[var7], 510);
             var7++;
           } while (var26 == 0);
           var8 = param4.field_y >> 1;
@@ -5334,7 +5334,7 @@ final class nf {
                     var23 = var23 + (var31[var25] >> 8 & 255);
                     var25++;
                   }
-                  param3.field_m[var21] = (byte)hk.field_p[this.field_O].a(fj.b(fj.b(var23 >> 2 << 8, var22 >> 2 << 16), var24 >> 2), 510);
+                  param3.field_m[var21] = (byte)MusicPatchPcmStream.field_p[this.field_O].a(fj.b(fj.b(var23 >> 2 << 8, var22 >> 2 << 16), var24 >> 2), 510);
                   var19 += 2;
                   continue scanLoop2;
                 }
@@ -5542,7 +5542,7 @@ final class nf {
                 (32 + var10) < var8 &&
                 var10 < var7_int &&
                 var7_int < this.field_y - var10) {
-                o.a(mn.field_y, (byte) -47, var10, (byte) -5, var8, var7_int, this);
+                MusicPatchNode.a(mn.field_y, (byte) -47, var10, (byte) -5, var8, var7_int, this);
                 var6 = var8;
               }
               if (var8 < 32 + var10) {
@@ -5586,7 +5586,7 @@ final class nf {
                 var25[var10] = var11;
                 var26[var10] = var12;
                 var10++;
-                this.a(false, var11, this.field_V, false, var12, var7.b());
+                this.a(false, var11, this.field_V, false, var12, var7.toRgbSprite());
               }
               var5++;
               continue scanLoop4;
@@ -5730,7 +5730,7 @@ final class nf {
                     var21 = var21 + (var27[var24] >> 16);
                     var24++;
                   }
-                  param1.field_m[var20] = (byte)hk.field_p[this.field_O].a(fj.b(var23 >> 2, fj.b(var21 >> 2 << 16, var22 >> 2 << 8)), 510);
+                  param1.field_m[var20] = (byte)MusicPatchPcmStream.field_p[this.field_O].a(fj.b(var23 >> 2, fj.b(var21 >> 2 << 16, var22 >> 2 << 8)), 510);
                   var18 += 2;
                   continue scanLoop2;
                 }
@@ -6514,14 +6514,14 @@ final class nf {
           var16 = var8 * this.field_y / var4.length;
           var17 = var12 * this.field_y / var4.length;
           var18 = new Sprite(20, 20);
-          var18.a();
-          gj.field_f[5].a(2, 2);
+          var18.makeRasterTarget();
+          gj.field_f[5].draw(2, 2);
           var19 = 0;
           do {
             if (!(var19 < var18.field_A.length)) {
-              var18.d(0, 0, 9584406);
-              var18.d(1);
-              var18.d(1);
+              var18.drawTintedGrayscale(0, 0, 9584406);
+              var18.addOutline(1);
+              var18.addOutline(1);
               var19 = -var14 + var15;
               break;
             }
@@ -6832,7 +6832,7 @@ final class nf {
             var13 = var16;
             var14 = 0;
             while (var14 < param5.field_A.length) {
-              var13[var14] = (byte)hk.field_p[this.field_O].a(param5.field_A[var14], 510);
+              var13[var14] = (byte)MusicPatchPcmStream.field_p[this.field_O].a(param5.field_A[var14], 510);
               var14++;
               if (var15 != 0) {
                 return;
@@ -7618,7 +7618,7 @@ final class nf {
                   if (stackIn_320_0 != 0 &&
                     this.field_v[var24][var25_int] < 156 &&
                     this.field_v[var24][var25_int] != 119) {
-                    this.field_vb[var24][var25_int] = hh.field_b[this.field_v[var24][var25_int]];
+                    this.field_vb[var24][var25_int] = MouseWheelHandler.field_b[this.field_v[var24][var25_int]];
                     if (-1 == this.field_vb[var24][var25_int]) {
                       this.field_vb[var24][var25_int] = 1;
                     } else if (0 == this.field_vb[var24][var25_int]) {
@@ -8229,8 +8229,8 @@ final class nf {
           }
           if (decompiledFrameRemainder1) {
             if (stackIn_541_0.field_I != null) {
-              var12.field_I.a();
-              de.d(0, 0, var12.field_I.field_n, var12.field_I.field_w, 0);
+              var12.field_I.makeRasterTarget();
+              SoftwareRasterizer.fillRectangle(0, 0, var12.field_I.field_n, var12.field_I.field_w, 0);
               if (null != tk.field_x) {
                 var48 = new int[]{255, 0, 0};
                 var24_ref_int__ = var48;
@@ -8274,13 +8274,13 @@ final class nf {
                   var27_ref_int__[2] = this.field_N[var28_int][11];
                 }
                 var29 = new Sprite(64, 96);
-                var29.a();
+                var29.makeRasterTarget();
                 pc.$cfr$intArgs$a$5f050b8899ac(var50, 16, var51, var48, 80, var49, tk.field_x[2], 0);
-                var12.field_I.f();
-                var12.field_I.a();
-                de.d(0, 0, 32, 48, 0);
-                var29.a(16, 24, 0, 2048);
-                var12.field_I.e();
+                var12.field_I.normalizeCanvas();
+                var12.field_I.makeRasterTarget();
+                SoftwareRasterizer.fillRectangle(0, 0, 32, 48, 0);
+                var29.drawCenteredRotatedScaledBilinear(16, 24, 0, 2048);
+                var12.field_I.trimTransparentBorders();
               }
             }
             var24_ref_miLifetime17Lifetime1 = j.a(var12, var12.field_db, (byte) 32, this, var10, var12.field_lb, 111);
@@ -8518,8 +8518,8 @@ final class nf {
                 var12.field_R = var12.field_db << 4;
                 var12.field_jb = 0;
                 var12.field_w = new Sprite(var12.field_Y, var12.field_Y);
-                var12.field_w.a();
-                de.i(var12.field_Y >> 1, var12.field_Y >> 1, var12.field_Y >> 1, 16777215);
+                var12.field_w.makeRasterTarget();
+                SoftwareRasterizer.fillCircle(var12.field_Y >> 1, var12.field_Y >> 1, var12.field_Y >> 1, 16777215);
               }
               if (var12.field_jb == 19) {
                 var12.field_jb = 0;
@@ -8709,8 +8709,8 @@ final class nf {
             this.b(52, var25Lifetime19);
           }
           if (30 == var10) {
-            this.a(false, var8 - (bg.field_e.field_n >> 1), this.field_V, true, var9 - bg.field_e.field_w, bg.field_e);
-            this.a(-(bg.field_e.field_n >> 1) + var8, (byte) -91, -bg.field_e.field_w + var9, this.field_Jb, bg.field_e);
+            this.a(false, var8 - (ByteStorage.field_e.field_n >> 1), this.field_V, true, var9 - ByteStorage.field_e.field_w, ByteStorage.field_e);
+            this.a(-(ByteStorage.field_e.field_n >> 1) + var8, (byte) -91, -ByteStorage.field_e.field_w + var9, this.field_Jb, ByteStorage.field_e);
             this.field_D = true;
           }
           this.field_mb = var8;
@@ -8872,7 +8872,7 @@ final class nf {
                   var9 > (var11 + 32) &&
                   var11 < var8 &&
                   -var11 + this.field_y > var8) {
-                  o.a(mn.field_y, (byte) -47, var11, (byte) -5, var9, var8, this);
+                  MusicPatchNode.a(mn.field_y, (byte) -47, var11, (byte) -5, var9, var8, this);
                   var6 = var9;
                 }
                 if (var9 < 32 + var11) {
@@ -9257,7 +9257,7 @@ final class nf {
             }
             if (stackIn_45_0 == stackIn_45_1) {
               this.field_L[param2][var4] = true;
-              if (hh.field_b[param1] != -1) {
+              if (MouseWheelHandler.field_b[param1] != -1) {
                 if (this.field_vb[param2][var4] > 0 && (-1 == mj.field_p ||
                   param1 == 5)) {
                   dupTemp$0 = this.field_vb[param2];
@@ -9341,7 +9341,7 @@ final class nf {
         if (param2 != 51) {
           this.field_D = false;
         }
-        o.a(this.field_V, (byte) -47, param1, (byte) 0, param3, param0, this);
+        MusicPatchNode.a(this.field_V, (byte) -47, param1, (byte) 0, param3, param0, this);
         hj.a(this.field_Jb, param1, param3, this, (byte) 0, param0, param2 ^ -95);
     }
 
@@ -9436,7 +9436,7 @@ final class nf {
         this.field_nb = 0;
         this.field_Y = -1;
         try {
-          gh.field_D = new oc();
+          MidiPcmStream.field_D = new oc();
           n.field_d = new oc();
           u.field_f = new oc();
           mk.field_J = new oc();
@@ -9675,7 +9675,7 @@ final class nf {
                   this.field_v[var15][var16Lifetime1Lifetime1] >= 156) {
                   this.field_v[var15][var16Lifetime1Lifetime1] = -1;
                 } else {
-                  this.field_vb[var15][var16Lifetime1Lifetime1] = hh.field_b[this.field_v[var15][var16Lifetime1Lifetime1]];
+                  this.field_vb[var15][var16Lifetime1Lifetime1] = MouseWheelHandler.field_b[this.field_v[var15][var16Lifetime1Lifetime1]];
                   if (-1 == this.field_vb[var15][var16Lifetime1Lifetime1]) {
                     this.field_vb[var15][var16Lifetime1Lifetime1] = 1;
                   } else {
@@ -9785,8 +9785,8 @@ final class nf {
         if (param0 != 12) {
           this.f(-25);
         }
-        gh.field_D.a((byte) 78, this.field_i);
-        var3 = (ml) (gh.field_D.b(-43));
+        MidiPcmStream.field_D.a((byte) 78, this.field_i);
+        var3 = (ml) (MidiPcmStream.field_D.b(-43));
         while (var3 != null) {
           stackIn_11_0 = 12;
           if (var4 != 0) {
@@ -9796,7 +9796,7 @@ final class nf {
             null != var3.field_s) {
             var2++;
           }
-          var3 = (ml) (gh.field_D.d(param0 ^ -18506));
+          var3 = (ml) (MidiPcmStream.field_D.d(param0 ^ -18506));
         }
         return var2;
     }

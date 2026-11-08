@@ -8,7 +8,7 @@ final class lf {
     static String field_h;
     static String field_i;
     static String field_d;
-    static lb field_a;
+    static AudioOutput field_a;
     static dn field_b;
     static int field_g;
 
@@ -28,12 +28,12 @@ final class lf {
           }
           var1_int = si.field_g;
           si.field_g = mn.field_r;
-          cb.field_b = io.field_A;
+          cb.field_b = MusicCrossfadeStream.field_A;
           km.field_c = 0;
           if (si.field_g == -1 &&
             5 == var1_int &&
             null != SpriteState.field_z) {
-            SpriteState.field_z.field_z = SpriteState.field_z.field_z - (250 - o.field_s);
+            SpriteState.field_z.field_z = SpriteState.field_z.field_z - (250 - MusicPatchNode.field_s);
           }
           if (si.field_g == 0 ||
             si.field_g == -4 ||
@@ -47,13 +47,13 @@ final class lf {
             }
           }
           if (si.field_g == 3) {
-            o.field_s = 0;
+            MusicPatchNode.field_s = 0;
           }
           if (si.field_g == 5) {
-            o.field_s = 0;
+            MusicPatchNode.field_s = 0;
           }
           if (-1 == si.field_g) {
-            o.field_s = 0;
+            MusicPatchNode.field_s = 0;
           }
           if (0 == si.field_g) {
             vl.d((byte) 112);
@@ -61,7 +61,7 @@ final class lf {
           if (fi.field_h) {
             if (null != SpriteState.field_z ||
               r.field_b != null) {
-              mi.a(jh.field_c[0], 3);
+              mi.a(DelegatingCanvas.field_c[0], 3);
             }
             r.field_b = null;
             SpriteState.field_z = null;

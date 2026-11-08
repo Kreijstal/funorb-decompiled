@@ -340,7 +340,7 @@ final class ig {
         try {
           if (ce.field_h > 0 &&
             IntrusiveNode.field_d) {
-            de.b(0, 0, de.field_e, n.field_g.field_nb);
+            SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_e, n.field_g.field_nb);
             gm.field_h.a(param1, true);
           }
           if (sm.field_a <= param0 &&
@@ -348,7 +348,7 @@ final class ig {
             return;
           }
           if (so.field_j) {
-            de.b(0, 0, de.field_e, n.field_g.field_nb);
+            SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_e, n.field_g.field_nb);
             nl.field_Fb.a(param1, true);
           }
           return;

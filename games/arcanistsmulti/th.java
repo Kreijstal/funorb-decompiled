@@ -7,7 +7,7 @@ final class th {
     static gn field_d;
     static String field_i;
     static int[] field_g;
-    static lg field_k;
+    static BinaryBitmapFont field_k;
     static String field_j;
     private we field_e;
     static kc field_c;

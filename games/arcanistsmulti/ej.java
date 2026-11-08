@@ -227,10 +227,10 @@ class ej extends ag {
         boolean stackIn_25_1 = false;
         kc stackIn_28_0 = null;
         boolean stackIn_29_1 = false;
-        da.a(640 + de.field_e >> 1, de.field_j, param0 ^ -11846, -640 + de.field_e >> 1, 0);
+        da.a(640 + SoftwareRasterizer.field_e >> 1, SoftwareRasterizer.field_j, param0 ^ -11846, -640 + SoftwareRasterizer.field_e >> 1, 0);
         if (ce.field_h > 0) {
           if (null != oo.field_t) {
-            oo.field_t.h(k.field_d.field_T, 0);
+            oo.field_t.drawOpaque(k.field_d.field_T, 0);
           }
           stackIn_7_0 = k.field_d;
           stackIn_8_1 = (param1) && (!IntrusiveNode.field_d);
@@ -245,7 +245,7 @@ class ej extends ag {
         if (!(sm.field_a <= 0) ||
           !(0 >= oo.field_y)) {
           if (oo.field_t != null) {
-            oo.field_t.h(hl.field_m.field_T, 0);
+            oo.field_t.drawOpaque(hl.field_m.field_T, 0);
           }
           stackIn_24_0 = hl.field_m;
           stackIn_25_1 = (param1) && (!so.field_j);
@@ -285,8 +285,8 @@ class ej extends ag {
           return;
         }
         int var4 = var3 - param1 * param1;
-        hl.field_m.a(199, -(var4 * 199 / var3) + var2, 90, -4 + de.field_j - 120 - 90, (byte) -120);
-        oh.field_h.a(438, 202 + (var2 + 438 * var4 / var3), 0, -4 + de.field_j - 120, (byte) -120);
+        hl.field_m.a(199, -(var4 * 199 / var3) + var2, 90, -4 + SoftwareRasterizer.field_j - 120 - 90, (byte) -120);
+        oh.field_h.a(438, 202 + (var2 + 438 * var4 / var3), 0, -4 + SoftwareRasterizer.field_j - 120, (byte) -120);
     }
 
     String b(boolean param0) {
@@ -325,7 +325,7 @@ class ej extends ag {
         int stackIn_9_1 = 0;
         int stackIn_9_2 = 0;
         int stackIn_10_3 = 0;
-        lg stackIn_12_0;
+        BinaryBitmapFont stackIn_12_0;
         String stackIn_12_1;
         int stackIn_12_2;
         int stackIn_12_3;
@@ -404,8 +404,8 @@ class ej extends ag {
           } else {
             stackIn_4_3 = 16777215;
           }
-          de.i(stackIn_3_0, stackIn_3_1, stackIn_3_2, stackIn_4_3);
-          de.c(var6, var7, 9, 0);
+          SoftwareRasterizer.fillCircle(stackIn_3_0, stackIn_3_1, stackIn_3_2, stackIn_4_3);
+          SoftwareRasterizer.drawCircleOutline(var6, var7, 9, 0);
           if (bm.field_g.field_I >= 0) {
             stackIn_7_0 = bm.field_g.field_I;
           } else {
@@ -421,8 +421,8 @@ class ej extends ag {
           } else {
             stackIn_10_3 = var9 >> 1 & 8355711;
           }
-          de.i(stackIn_9_0, stackIn_9_1, stackIn_9_2, stackIn_10_3);
-          de.c(var6, var7, 7, 0);
+          SoftwareRasterizer.fillCircle(stackIn_9_0, stackIn_9_1, stackIn_9_2, stackIn_10_3);
+          SoftwareRasterizer.drawCircleOutline(var6, var7, 7, 0);
           stackIn_12_0 = mi.field_B;
           stackIn_12_1 = "?";
           stackIn_12_2 = var6;
@@ -432,19 +432,19 @@ class ej extends ag {
           } else {
             stackIn_13_4 = 16777215;
           }
-          ((lg) (Object) stackIn_12_0).b(stackIn_12_1, stackIn_12_2, stackIn_12_3, stackIn_13_4, 0);
+          ((BinaryBitmapFont) (Object) stackIn_12_0).drawCentered(stackIn_12_1, stackIn_12_2, stackIn_12_3, stackIn_13_4, 0);
           var10 = -an.field_g + var6;
           var11 = var7 - me.field_I;
           if (var11 * var11 + var10 * var10 < 81 &&
             param1) {
             mf.field_g = -2;
-            de.c(var6, var7, 9, 16777215, 128);
+            SoftwareRasterizer.fillCircleAlpha(var6, var7, 9, 16777215, 128);
             var18 = mk.field_L;
-            mi.field_B.a(var18, 5 + var6, -1 + var7, 0, 0);
-            mi.field_B.a(var18, var6 + 4, var7, 0, 0);
-            mi.field_B.a(var18, 5 + var6 + 1, var7, 0, 0);
-            mi.field_B.a(var18, var6 + 5, 1 + var7, 0, 0);
-            mi.field_B.a(var18, 5 + var6, var7, 16777215, 0);
+            mi.field_B.drawText(var18, 5 + var6, -1 + var7, 0, 0);
+            mi.field_B.drawText(var18, var6 + 4, var7, 0, 0);
+            mi.field_B.drawText(var18, 5 + var6 + 1, var7, 0, 0);
+            mi.field_B.drawText(var18, var6 + 5, 1 + var7, 0, 0);
+            mi.field_B.drawText(var18, 5 + var6, var7, 16777215, 0);
           }
           if (bk.field_J.a(-31497) == 8 &&
             12 < lm.field_f.length) {
@@ -469,41 +469,41 @@ class ej extends ag {
                 }
               }
               boolean decompiledFrameRemainder0 = true;
-              de.c(2 + var3, var4 + 2, var5, 0, 128);
-              de.i(var3, var4, var5, 13680256);
-              de.i(var3, var4, -3 + var5, 16777215);
-              de.c(var3, var4, var5, 0);
-              de.c(var3, var4, var5 - 3, 0);
-              bb.field_g[dd.field_f[lm.field_f[var12]]].b(var3 - 9, -9 + var4);
+              SoftwareRasterizer.fillCircleAlpha(2 + var3, var4 + 2, var5, 0, 128);
+              SoftwareRasterizer.fillCircle(var3, var4, var5, 13680256);
+              SoftwareRasterizer.fillCircle(var3, var4, -3 + var5, 16777215);
+              SoftwareRasterizer.drawCircleOutline(var3, var4, var5, 0);
+              SoftwareRasterizer.drawCircleOutline(var3, var4, var5 - 3, 0);
+              bb.field_g[dd.field_f[lm.field_f[var12]]].drawHalfSize(var3 - 9, -9 + var4);
               if (bk.field_J.a(lm.field_f[var12], true, bm.field_g.field_bb)) {
                 var13 = bk.field_J.a(lm.field_f[var12], bk.field_J.d(false), param0 - 770226943);
                 if (var13 > 0 &&
-                  0 < hh.field_b[lm.field_f[var12]]) {
+                  0 < MouseWheelHandler.field_b[lm.field_f[var12]]) {
                   var23 = Integer.toString(var13);
-                  mi.field_B.c(var23, var3 + (var5 / 2 - 1), 10 + var4, 0, 0);
-                  mi.field_B.c(var23, var3 + var5 / 2, -1 + (10 + var4), 0, 0);
-                  mi.field_B.c(var23, var5 / 2 + var3, var4 + 10, 16777215, 0);
+                  mi.field_B.drawRightAlignedText(var23, var3 + (var5 / 2 - 1), 10 + var4, 0, 0);
+                  mi.field_B.drawRightAlignedText(var23, var3 + var5 / 2, -1 + (10 + var4), 0, 0);
+                  mi.field_B.drawRightAlignedText(var23, var5 / 2 + var3, var4 + 10, 16777215, 0);
                 }
               } else {
-                de.c(var3, var4, var5, 0, 192);
+                SoftwareRasterizer.fillCircleAlpha(var3, var4, var5, 0, 192);
                 var13 = bk.field_J.a(lm.field_f[var12], bk.field_J.d(false), -770226943);
                 if (bk.field_J.field_f) {
                   if (lm.field_f[var12] != 11) {
-                    bb.field_g[90].b(var3 - 9, var4 - 9);
+                    bb.field_g[90].drawHalfSize(var3 - 9, var4 - 9);
                   }
                 } else {
                   if (var13 <= 0 &&
                     lm.field_f[var12] != 37) {
-                    if (hh.field_b[lm.field_f[var12]] == -1) {
+                    if (MouseWheelHandler.field_b[lm.field_f[var12]] == -1) {
                       var14_int = bk.field_J.b(lm.field_f[var12], param0 - 102, bk.field_J.d(false));
                       if (!(var14_int <= 0)) {
                         var21 = Integer.toString(var14_int);
-                        mi.field_B.c(var21, -1 + var3 + var5 / 2, 10 + var4, 0, 0);
-                        mi.field_B.c(var21, var5 / 2 + var3, 10 + (var4 - 1), 0, 0);
-                        mi.field_B.c(var21, var5 / 2 + var3, var4 + 10, 16711680, 0);
+                        mi.field_B.drawRightAlignedText(var21, -1 + var3 + var5 / 2, 10 + var4, 0, 0);
+                        mi.field_B.drawRightAlignedText(var21, var5 / 2 + var3, 10 + (var4 - 1), 0, 0);
+                        mi.field_B.drawRightAlignedText(var21, var5 / 2 + var3, var4 + 10, 16711680, 0);
                       }
                     } else {
-                      if (hh.field_b[lm.field_f[var12]] == 0 &&
+                      if (MouseWheelHandler.field_b[lm.field_f[var12]] == 0 &&
                         150 != lm.field_f[var12] &&
                         104 != lm.field_f[var12] &&
                         lm.field_f[var12] != 11) {
@@ -513,16 +513,16 @@ class ej extends ag {
                           lm.field_f[var12] == 130) && var19.c(false)) {
                           var14 = "X";
                         }
-                        mi.field_B.c(var14, var3 + var5 / 2 - 1, 10 + var4, 0, 0);
-                        mi.field_B.c(var14, var5 / 2 + var3, 10 + var4 - 1, 0, 0);
-                        mi.field_B.c(var14, var5 / 2 + var3, 10 + var4, 16711680, 0);
+                        mi.field_B.drawRightAlignedText(var14, var3 + var5 / 2 - 1, 10 + var4, 0, 0);
+                        mi.field_B.drawRightAlignedText(var14, var5 / 2 + var3, 10 + var4 - 1, 0, 0);
+                        mi.field_B.drawRightAlignedText(var14, var5 / 2 + var3, 10 + var4, 16711680, 0);
                       } else {
                         if ((var13 == -1)) {
                           var20 = "X";
                           var14 = var20;
-                          mi.field_B.c(var20, var5 / 2 + var3 - 1, var4 + 10, 0, 0);
-                          mi.field_B.c(var20, var5 / 2 + var3, 10 + (var4 - 1), 0, 0);
-                          mi.field_B.c(var14, var3 + var5 / 2, var4 + 10, 16711680, 0);
+                          mi.field_B.drawRightAlignedText(var20, var5 / 2 + var3 - 1, var4 + 10, 0, 0);
+                          mi.field_B.drawRightAlignedText(var20, var5 / 2 + var3, 10 + (var4 - 1), 0, 0);
+                          mi.field_B.drawRightAlignedText(var14, var3 + var5 / 2, var4 + 10, 16711680, 0);
                         }
                       }
                     }
@@ -531,18 +531,18 @@ class ej extends ag {
                   else {
                     if (le.field_d[lm.field_f[var12]] - bk.field_J.n((byte) -75) / bk.field_J.s(0) > 0) {
                       var22 = Integer.toString(le.field_d[lm.field_f[var12]] - bk.field_J.n((byte) -75) / bk.field_J.s(0));
-                      mi.field_B.c(var22, -1 + var3 + var5 / 2, 10 + var4, 0, 0);
-                      mi.field_B.c(var22, var5 / 2 + var3, -1 + var4 + 10, 0, 0);
-                      mi.field_B.c(var22, var5 / 2 + var3, 10 + var4, 16711680, 0);
+                      mi.field_B.drawRightAlignedText(var22, -1 + var3 + var5 / 2, 10 + var4, 0, 0);
+                      mi.field_B.drawRightAlignedText(var22, var5 / 2 + var3, -1 + var4 + 10, 0, 0);
+                      mi.field_B.drawRightAlignedText(var22, var5 / 2 + var3, 10 + var4, 16711680, 0);
                     } else {
                       var14Lifetime2 = "X";
                       if (lm.field_f[var12] == 87 ||
                         116 == lm.field_f[var12]) {
                         var14Lifetime2 = Integer.toString(var13);
                       }
-                      mi.field_B.c(var14Lifetime2, -1 + var3 + var5 / 2, 10 + var4, 0, 0);
-                      mi.field_B.c(var14Lifetime2, var3 + var5 / 2, -1 + var4 + 10, 0, 0);
-                      mi.field_B.c(var14Lifetime2, var3 + var5 / 2, 10 + var4, 16711680, 0);
+                      mi.field_B.drawRightAlignedText(var14Lifetime2, -1 + var3 + var5 / 2, 10 + var4, 0, 0);
+                      mi.field_B.drawRightAlignedText(var14Lifetime2, var3 + var5 / 2, -1 + var4 + 10, 0, 0);
+                      mi.field_B.drawRightAlignedText(var14Lifetime2, var3 + var5 / 2, 10 + var4, 16711680, 0);
                     }
                   }
                 }
@@ -560,10 +560,10 @@ class ej extends ag {
           if (ti.field_N != -1) {
             var3Lifetime1 = 22;
             var4Lifetime1 = lo.field_q + 387 + (-480 + var2_int);
-            bb.field_g[dd.field_f[ti.field_N]].c(var3Lifetime1, var4Lifetime1);
+            bb.field_g[dd.field_f[ti.field_N]].drawTransparent(var3Lifetime1, var4Lifetime1);
             var3Lifetime1Lifetime1 = 75;
             var4Lifetime1Lifetime1 = var2_int - 480 + 430;
-            tj.field_t.a(tc.field_w[ti.field_N], var3Lifetime1Lifetime1, var4Lifetime1Lifetime1, 16777215, 0);
+            tj.field_t.drawText(tc.field_w[ti.field_N], var3Lifetime1Lifetime1, var4Lifetime1Lifetime1, 16777215, 0);
           }
           regionExit1: {
             if (mf.field_g > -1) {
@@ -582,19 +582,19 @@ class ej extends ag {
                 var3Lifetime2Lifetime1 = 90 + 26 * mf.field_g;
               }
               var5Lifetime1 = 24;
-              de.c(var3Lifetime2Lifetime1 + 2, 2 + var4Lifetime2Lifetime1, var5Lifetime1, 0, 128);
-              de.i(var3Lifetime2Lifetime1, var4Lifetime2Lifetime1, var5Lifetime1, 13680256);
-              de.i(var3Lifetime2Lifetime1, var4Lifetime2Lifetime1, var5Lifetime1 - 3, 16777215);
-              de.c(var3Lifetime2Lifetime1, var4Lifetime2Lifetime1, var5Lifetime1, 0);
-              de.c(var3Lifetime2Lifetime1, var4Lifetime2Lifetime1, var5Lifetime1 - 3, 0);
-              bb.field_g[dd.field_f[lm.field_f[mf.field_g]]].c(-20 + var3Lifetime2Lifetime1, -20 + var4Lifetime2Lifetime1);
+              SoftwareRasterizer.fillCircleAlpha(var3Lifetime2Lifetime1 + 2, 2 + var4Lifetime2Lifetime1, var5Lifetime1, 0, 128);
+              SoftwareRasterizer.fillCircle(var3Lifetime2Lifetime1, var4Lifetime2Lifetime1, var5Lifetime1, 13680256);
+              SoftwareRasterizer.fillCircle(var3Lifetime2Lifetime1, var4Lifetime2Lifetime1, var5Lifetime1 - 3, 16777215);
+              SoftwareRasterizer.drawCircleOutline(var3Lifetime2Lifetime1, var4Lifetime2Lifetime1, var5Lifetime1, 0);
+              SoftwareRasterizer.drawCircleOutline(var3Lifetime2Lifetime1, var4Lifetime2Lifetime1, var5Lifetime1 - 3, 0);
+              bb.field_g[dd.field_f[lm.field_f[mf.field_g]]].drawTransparent(-20 + var3Lifetime2Lifetime1, -20 + var4Lifetime2Lifetime1);
               var24 = tc.field_w[lm.field_f[mf.field_g]];
               var12_ref_String = var24;
-              mi.field_B.b(var12_ref_String, var3Lifetime2Lifetime1, var4Lifetime2Lifetime1 + (-1 - var5Lifetime1), 0, 0);
-              mi.field_B.b(var12_ref_String, -1 + var3Lifetime2Lifetime1, var4Lifetime2Lifetime1 - var5Lifetime1, 0, 0);
-              mi.field_B.b(var24, var3Lifetime2Lifetime1 + 1, var4Lifetime2Lifetime1 - var5Lifetime1, 0, 0);
-              mi.field_B.b(var12_ref_String, var3Lifetime2Lifetime1, var4Lifetime2Lifetime1 + 1 - var5Lifetime1, 0, 0);
-              mi.field_B.b(var12_ref_String, var3Lifetime2Lifetime1, -var5Lifetime1 + var4Lifetime2Lifetime1, 16777215, 0);
+              mi.field_B.drawCentered(var12_ref_String, var3Lifetime2Lifetime1, var4Lifetime2Lifetime1 + (-1 - var5Lifetime1), 0, 0);
+              mi.field_B.drawCentered(var12_ref_String, -1 + var3Lifetime2Lifetime1, var4Lifetime2Lifetime1 - var5Lifetime1, 0, 0);
+              mi.field_B.drawCentered(var24, var3Lifetime2Lifetime1 + 1, var4Lifetime2Lifetime1 - var5Lifetime1, 0, 0);
+              mi.field_B.drawCentered(var12_ref_String, var3Lifetime2Lifetime1, var4Lifetime2Lifetime1 + 1 - var5Lifetime1, 0, 0);
+              mi.field_B.drawCentered(var12_ref_String, var3Lifetime2Lifetime1, -var5Lifetime1 + var4Lifetime2Lifetime1, 16777215, 0);
               var12Lifetime1 = bk.field_J.a(lm.field_f[mf.field_g], bk.field_J.d(false), -770226943);
               if (bk.field_J.a(lm.field_f[mf.field_g], true, bm.field_g.field_bb)) {
                 if (var12Lifetime1 > 0) {
@@ -605,17 +605,17 @@ class ej extends ag {
                     stackIn_185_1 = tk.field_s;
                   }
                   var14Lifetime1 = ((StringBuilder) (Object) stackIn_184_0).append(stackIn_185_1).toString();
-                  if (-1 == hh.field_b[lm.field_f[mf.field_g]]) {
+                  if (-1 == MouseWheelHandler.field_b[lm.field_f[mf.field_g]]) {
                     var14Lifetime1 = mj.field_x;
                   }
-                  mi.field_B.a(var14Lifetime1, var5Lifetime1 + var3Lifetime2Lifetime1, -1 + var4Lifetime2Lifetime1, 0, 0);
-                  mi.field_B.a(var14Lifetime1, var3Lifetime2Lifetime1 - (-var5Lifetime1 + 1), var4Lifetime2Lifetime1, 0, 0);
-                  mi.field_B.a(var14Lifetime1, var3Lifetime2Lifetime1 + var5Lifetime1 + 1, var4Lifetime2Lifetime1, 0, 0);
-                  mi.field_B.a(var14Lifetime1, var5Lifetime1 + var3Lifetime2Lifetime1, 1 + var4Lifetime2Lifetime1, 0, 0);
-                  mi.field_B.a(var14Lifetime1, var5Lifetime1 + var3Lifetime2Lifetime1, var4Lifetime2Lifetime1, 16777215, 0);
+                  mi.field_B.drawText(var14Lifetime1, var5Lifetime1 + var3Lifetime2Lifetime1, -1 + var4Lifetime2Lifetime1, 0, 0);
+                  mi.field_B.drawText(var14Lifetime1, var3Lifetime2Lifetime1 - (-var5Lifetime1 + 1), var4Lifetime2Lifetime1, 0, 0);
+                  mi.field_B.drawText(var14Lifetime1, var3Lifetime2Lifetime1 + var5Lifetime1 + 1, var4Lifetime2Lifetime1, 0, 0);
+                  mi.field_B.drawText(var14Lifetime1, var5Lifetime1 + var3Lifetime2Lifetime1, 1 + var4Lifetime2Lifetime1, 0, 0);
+                  mi.field_B.drawText(var14Lifetime1, var5Lifetime1 + var3Lifetime2Lifetime1, var4Lifetime2Lifetime1, 16777215, 0);
                 }
               } else {
-                de.c(var3Lifetime2Lifetime1, var4Lifetime2Lifetime1, var5Lifetime1, 0, 192);
+                SoftwareRasterizer.fillCircleAlpha(var3Lifetime2Lifetime1, var4Lifetime2Lifetime1, var5Lifetime1, 0, 192);
                 if (11 != lm.field_f[mf.field_g] && ((93 != lm.field_f[mf.field_g] ||
                   bk.field_J.a(bm.field_g.field_bb, true).o(-22625) == 33) &&
                   (lm.field_f[mf.field_g] != 95 ||
@@ -623,28 +623,28 @@ class ej extends ag {
                   if (bk.field_J.field_f &&
                     !bk.field_J.d((byte) 66, lm.field_f[mf.field_g])) {
                     var31 = IndexedSpriteState.field_a;
-                    if (8 + mi.field_B.b(var31) + var5Lifetime1 + var3Lifetime2Lifetime1 > 640) {
-                      var3Lifetime2Lifetime1 = 640 + (-var5Lifetime1 - mi.field_B.b(var31) - 8);
+                    if (8 + mi.field_B.textWidth(var31) + var5Lifetime1 + var3Lifetime2Lifetime1 > 640) {
+                      var3Lifetime2Lifetime1 = 640 + (-var5Lifetime1 - mi.field_B.textWidth(var31) - 8);
                     }
-                    mi.field_B.a(var31, var5Lifetime1 + var3Lifetime2Lifetime1, -1 + var4Lifetime2Lifetime1, 0, 0);
-                    mi.field_B.a(var31, var5Lifetime1 + (var3Lifetime2Lifetime1 - 1), var4Lifetime2Lifetime1, 0, 0);
-                    mi.field_B.a(var31, 1 + (var5Lifetime1 + var3Lifetime2Lifetime1), var4Lifetime2Lifetime1, 0, 0);
-                    mi.field_B.a(var31, var3Lifetime2Lifetime1 + var5Lifetime1, 1 + var4Lifetime2Lifetime1, 0, 0);
-                    mi.field_B.a(var31, var3Lifetime2Lifetime1 + var5Lifetime1, var4Lifetime2Lifetime1, 16777215, 0);
+                    mi.field_B.drawText(var31, var5Lifetime1 + var3Lifetime2Lifetime1, -1 + var4Lifetime2Lifetime1, 0, 0);
+                    mi.field_B.drawText(var31, var5Lifetime1 + (var3Lifetime2Lifetime1 - 1), var4Lifetime2Lifetime1, 0, 0);
+                    mi.field_B.drawText(var31, 1 + (var5Lifetime1 + var3Lifetime2Lifetime1), var4Lifetime2Lifetime1, 0, 0);
+                    mi.field_B.drawText(var31, var3Lifetime2Lifetime1 + var5Lifetime1, 1 + var4Lifetime2Lifetime1, 0, 0);
+                    mi.field_B.drawText(var31, var3Lifetime2Lifetime1 + var5Lifetime1, var4Lifetime2Lifetime1, 16777215, 0);
                   } else {
                     if (lm.field_f[mf.field_g] == 150) {
                       var30 = bj.field_jb;
-                      if (var5Lifetime1 + (var3Lifetime2Lifetime1 - (-mi.field_B.b(var30) - 8)) > 640) {
-                        var3Lifetime2Lifetime1 = -8 - (mi.field_B.b(var30) + var5Lifetime1) + 640;
+                      if (var5Lifetime1 + (var3Lifetime2Lifetime1 - (-mi.field_B.textWidth(var30) - 8)) > 640) {
+                        var3Lifetime2Lifetime1 = -8 - (mi.field_B.textWidth(var30) + var5Lifetime1) + 640;
                       }
-                      mi.field_B.a(var30, var5Lifetime1 + var3Lifetime2Lifetime1, -1 + var4Lifetime2Lifetime1, 0, 0);
-                      mi.field_B.a(var30, var3Lifetime2Lifetime1 + var5Lifetime1 - 1, var4Lifetime2Lifetime1, 0, 0);
-                      mi.field_B.a(var30, 1 + var3Lifetime2Lifetime1 + var5Lifetime1, var4Lifetime2Lifetime1, 0, 0);
-                      mi.field_B.a(var30, var5Lifetime1 + var3Lifetime2Lifetime1, 1 + var4Lifetime2Lifetime1, 0, 0);
-                      mi.field_B.a(var30, var3Lifetime2Lifetime1 + var5Lifetime1, var4Lifetime2Lifetime1, 16777215, 0);
+                      mi.field_B.drawText(var30, var5Lifetime1 + var3Lifetime2Lifetime1, -1 + var4Lifetime2Lifetime1, 0, 0);
+                      mi.field_B.drawText(var30, var3Lifetime2Lifetime1 + var5Lifetime1 - 1, var4Lifetime2Lifetime1, 0, 0);
+                      mi.field_B.drawText(var30, 1 + var3Lifetime2Lifetime1 + var5Lifetime1, var4Lifetime2Lifetime1, 0, 0);
+                      mi.field_B.drawText(var30, var5Lifetime1 + var3Lifetime2Lifetime1, 1 + var4Lifetime2Lifetime1, 0, 0);
+                      mi.field_B.drawText(var30, var3Lifetime2Lifetime1 + var5Lifetime1, var4Lifetime2Lifetime1, 16777215, 0);
                     } else {
                       if (var12Lifetime1 > 0) {
-                        if ((hh.field_b[lm.field_f[mf.field_g]] != 0)) {
+                        if ((MouseWheelHandler.field_b[lm.field_f[mf.field_g]] != 0)) {
                           var14_intLifetime1 = le.field_d[lm.field_f[mf.field_g]] - bk.field_J.n((byte) -75) / bk.field_J.s(0);
                           if (var14_intLifetime1 > 0) {
                             stackIn_166_0 = new StringBuilder().append(var14_intLifetime1);
@@ -654,14 +654,14 @@ class ej extends ag {
                               stackIn_167_1 = tg.field_g;
                             }
                             var29 = ((StringBuilder) (Object) stackIn_166_0).append(stackIn_167_1).toString();
-                            if (640 < mi.field_B.b(var29) + (var5Lifetime1 + var3Lifetime2Lifetime1 + 8)) {
-                              var3Lifetime2Lifetime1 = -var5Lifetime1 - mi.field_B.b(var29) - 8 + 640;
+                            if (640 < mi.field_B.textWidth(var29) + (var5Lifetime1 + var3Lifetime2Lifetime1 + 8)) {
+                              var3Lifetime2Lifetime1 = -var5Lifetime1 - mi.field_B.textWidth(var29) - 8 + 640;
                             }
-                            mi.field_B.a(var29, var3Lifetime2Lifetime1 + var5Lifetime1, -1 + var4Lifetime2Lifetime1, 0, 0);
-                            mi.field_B.a(var29, var5Lifetime1 + (var3Lifetime2Lifetime1 - 1), var4Lifetime2Lifetime1, 0, 0);
-                            mi.field_B.a(var29, var3Lifetime2Lifetime1 + var5Lifetime1 + 1, var4Lifetime2Lifetime1, 0, 0);
-                            mi.field_B.a(var29, var3Lifetime2Lifetime1 + var5Lifetime1, 1 + var4Lifetime2Lifetime1, 0, 0);
-                            mi.field_B.a(var29, var5Lifetime1 + var3Lifetime2Lifetime1, var4Lifetime2Lifetime1, 16777215, 0);
+                            mi.field_B.drawText(var29, var3Lifetime2Lifetime1 + var5Lifetime1, -1 + var4Lifetime2Lifetime1, 0, 0);
+                            mi.field_B.drawText(var29, var5Lifetime1 + (var3Lifetime2Lifetime1 - 1), var4Lifetime2Lifetime1, 0, 0);
+                            mi.field_B.drawText(var29, var3Lifetime2Lifetime1 + var5Lifetime1 + 1, var4Lifetime2Lifetime1, 0, 0);
+                            mi.field_B.drawText(var29, var3Lifetime2Lifetime1 + var5Lifetime1, 1 + var4Lifetime2Lifetime1, 0, 0);
+                            mi.field_B.drawText(var29, var5Lifetime1 + var3Lifetime2Lifetime1, var4Lifetime2Lifetime1, 16777215, 0);
                             break regionExit1;
                           }
                           var15 = qa.field_k;
@@ -692,17 +692,17 @@ class ej extends ag {
                           if (lm.field_f[mf.field_g] == 4) {
                             var15 = "Being entangled blocks this spell.";
                           }
-                          if (mi.field_B.b(var15) + var5Lifetime1 + (var3Lifetime2Lifetime1 + 8) > 640) {
-                            var3Lifetime2Lifetime1 = -8 - mi.field_B.b(var15) - (var5Lifetime1 - 640);
+                          if (mi.field_B.textWidth(var15) + var5Lifetime1 + (var3Lifetime2Lifetime1 + 8) > 640) {
+                            var3Lifetime2Lifetime1 = -8 - mi.field_B.textWidth(var15) - (var5Lifetime1 - 640);
                           }
-                          mi.field_B.a(var15, var3Lifetime2Lifetime1 + var5Lifetime1, var4Lifetime2Lifetime1 - 1, 0, 0);
-                          mi.field_B.a(var15, -1 + var5Lifetime1 + var3Lifetime2Lifetime1, var4Lifetime2Lifetime1, 0, 0);
-                          mi.field_B.a(var15, var3Lifetime2Lifetime1 - (-var5Lifetime1 - 1), var4Lifetime2Lifetime1, 0, 0);
-                          mi.field_B.a(var15, var5Lifetime1 + var3Lifetime2Lifetime1, 1 + var4Lifetime2Lifetime1, 0, 0);
-                          mi.field_B.a(var15, var3Lifetime2Lifetime1 + var5Lifetime1, var4Lifetime2Lifetime1, 16777215, 0);
+                          mi.field_B.drawText(var15, var3Lifetime2Lifetime1 + var5Lifetime1, var4Lifetime2Lifetime1 - 1, 0, 0);
+                          mi.field_B.drawText(var15, -1 + var5Lifetime1 + var3Lifetime2Lifetime1, var4Lifetime2Lifetime1, 0, 0);
+                          mi.field_B.drawText(var15, var3Lifetime2Lifetime1 - (-var5Lifetime1 - 1), var4Lifetime2Lifetime1, 0, 0);
+                          mi.field_B.drawText(var15, var5Lifetime1 + var3Lifetime2Lifetime1, 1 + var4Lifetime2Lifetime1, 0, 0);
+                          mi.field_B.drawText(var15, var3Lifetime2Lifetime1 + var5Lifetime1, var4Lifetime2Lifetime1, 16777215, 0);
                         }
                       } else {
-                        if (hh.field_b[lm.field_f[mf.field_g]] == -1) {
+                        if (MouseWheelHandler.field_b[lm.field_f[mf.field_g]] == -1) {
                           var14_intLifetime1Lifetime1 = bk.field_J.b(lm.field_f[mf.field_g], -102, bk.field_J.d(false));
                           if (!(var14_intLifetime1Lifetime1 <= 0)) {
                             stackIn_132_0 = new StringBuilder().append(var14_intLifetime1Lifetime1);
@@ -712,17 +712,17 @@ class ej extends ag {
                               stackIn_133_1 = tg.field_g;
                             }
                             var27 = ((StringBuilder) (Object) stackIn_132_0).append(stackIn_133_1).toString();
-                            if (var5Lifetime1 + (var3Lifetime2Lifetime1 + mi.field_B.b(var27)) + 8 > 640) {
-                              var3Lifetime2Lifetime1 = -8 - (var5Lifetime1 + (mi.field_B.b(var27) - 640));
+                            if (var5Lifetime1 + (var3Lifetime2Lifetime1 + mi.field_B.textWidth(var27)) + 8 > 640) {
+                              var3Lifetime2Lifetime1 = -8 - (var5Lifetime1 + (mi.field_B.textWidth(var27) - 640));
                             }
-                            mi.field_B.a(var27, var3Lifetime2Lifetime1 + var5Lifetime1, -1 + var4Lifetime2Lifetime1, 0, 0);
-                            mi.field_B.a(var27, var5Lifetime1 + (var3Lifetime2Lifetime1 - 1), var4Lifetime2Lifetime1, 0, 0);
-                            mi.field_B.a(var27, var3Lifetime2Lifetime1 + var5Lifetime1 + 1, var4Lifetime2Lifetime1, 0, 0);
-                            mi.field_B.a(var27, var3Lifetime2Lifetime1 + var5Lifetime1, 1 + var4Lifetime2Lifetime1, 0, 0);
-                            mi.field_B.a(var27, var5Lifetime1 + var3Lifetime2Lifetime1, var4Lifetime2Lifetime1, 16777215, 0);
+                            mi.field_B.drawText(var27, var3Lifetime2Lifetime1 + var5Lifetime1, -1 + var4Lifetime2Lifetime1, 0, 0);
+                            mi.field_B.drawText(var27, var5Lifetime1 + (var3Lifetime2Lifetime1 - 1), var4Lifetime2Lifetime1, 0, 0);
+                            mi.field_B.drawText(var27, var3Lifetime2Lifetime1 + var5Lifetime1 + 1, var4Lifetime2Lifetime1, 0, 0);
+                            mi.field_B.drawText(var27, var3Lifetime2Lifetime1 + var5Lifetime1, 1 + var4Lifetime2Lifetime1, 0, 0);
+                            mi.field_B.drawText(var27, var5Lifetime1 + var3Lifetime2Lifetime1, var4Lifetime2Lifetime1, 16777215, 0);
                           }
                         } else {
-                          if (hh.field_b[lm.field_f[mf.field_g]] != 0) {
+                          if (MouseWheelHandler.field_b[lm.field_f[mf.field_g]] != 0) {
                             if (!(0 <= var12Lifetime1)) {
                               var14Lifetime1 = qa.field_k;
                               var25 = bk.field_J.a(bm.field_g.field_bb, true);
@@ -732,11 +732,11 @@ class ej extends ag {
                               if (16 == var25.o(-22625)) {
                                 var14Lifetime1 = oi.field_a;
                               }
-                              mi.field_B.a(var14Lifetime1, var5Lifetime1 + var3Lifetime2Lifetime1, var4Lifetime2Lifetime1 - 1, 0, 0);
-                              mi.field_B.a(var14Lifetime1, var5Lifetime1 + var3Lifetime2Lifetime1 - 1, var4Lifetime2Lifetime1, 0, 0);
-                              mi.field_B.a(var14Lifetime1, var5Lifetime1 + (var3Lifetime2Lifetime1 + 1), var4Lifetime2Lifetime1, 0, 0);
-                              mi.field_B.a(var14Lifetime1, var5Lifetime1 + var3Lifetime2Lifetime1, 1 + var4Lifetime2Lifetime1, 0, 0);
-                              mi.field_B.a(var14Lifetime1, var3Lifetime2Lifetime1 + var5Lifetime1, var4Lifetime2Lifetime1, 16777215, 0);
+                              mi.field_B.drawText(var14Lifetime1, var5Lifetime1 + var3Lifetime2Lifetime1, var4Lifetime2Lifetime1 - 1, 0, 0);
+                              mi.field_B.drawText(var14Lifetime1, var5Lifetime1 + var3Lifetime2Lifetime1 - 1, var4Lifetime2Lifetime1, 0, 0);
+                              mi.field_B.drawText(var14Lifetime1, var5Lifetime1 + (var3Lifetime2Lifetime1 + 1), var4Lifetime2Lifetime1, 0, 0);
+                              mi.field_B.drawText(var14Lifetime1, var5Lifetime1 + var3Lifetime2Lifetime1, 1 + var4Lifetime2Lifetime1, 0, 0);
+                              mi.field_B.drawText(var14Lifetime1, var3Lifetime2Lifetime1 + var5Lifetime1, var4Lifetime2Lifetime1, 16777215, 0);
                             }
                           } else {
                             var14_intLifetime1Lifetime2 = le.field_d[lm.field_f[mf.field_g]] - bk.field_J.n((byte) -75) / bk.field_J.s(0);
@@ -764,11 +764,11 @@ class ej extends ag {
                             if (var26.o(-22625) == 16) {
                               var15Lifetime1 = oi.field_a;
                             }
-                            mi.field_B.a(var15Lifetime1, var3Lifetime2Lifetime1 + var5Lifetime1, var4Lifetime2Lifetime1 - 1, 0, 0);
-                            mi.field_B.a(var15Lifetime1, -1 + (var5Lifetime1 + var3Lifetime2Lifetime1), var4Lifetime2Lifetime1, 0, 0);
-                            mi.field_B.a(var15Lifetime1, 1 + var3Lifetime2Lifetime1 + var5Lifetime1, var4Lifetime2Lifetime1, 0, 0);
-                            mi.field_B.a(var15Lifetime1, var5Lifetime1 + var3Lifetime2Lifetime1, 1 + var4Lifetime2Lifetime1, 0, 0);
-                            mi.field_B.a(var15Lifetime1, var3Lifetime2Lifetime1 + var5Lifetime1, var4Lifetime2Lifetime1, 16777215, 0);
+                            mi.field_B.drawText(var15Lifetime1, var3Lifetime2Lifetime1 + var5Lifetime1, var4Lifetime2Lifetime1 - 1, 0, 0);
+                            mi.field_B.drawText(var15Lifetime1, -1 + (var5Lifetime1 + var3Lifetime2Lifetime1), var4Lifetime2Lifetime1, 0, 0);
+                            mi.field_B.drawText(var15Lifetime1, 1 + var3Lifetime2Lifetime1 + var5Lifetime1, var4Lifetime2Lifetime1, 0, 0);
+                            mi.field_B.drawText(var15Lifetime1, var5Lifetime1 + var3Lifetime2Lifetime1, 1 + var4Lifetime2Lifetime1, 0, 0);
+                            mi.field_B.drawText(var15Lifetime1, var3Lifetime2Lifetime1 + var5Lifetime1, var4Lifetime2Lifetime1, 16777215, 0);
                           }
                         }
                       }
@@ -780,14 +780,14 @@ class ej extends ag {
                 var14Lifetime1 = var32;
                 var14Lifetime1 = var32;
                 var14Lifetime1 = var32;
-                if (mi.field_B.b(var32) + var5Lifetime1 + var3Lifetime2Lifetime1 + 8 > 640) {
-                  var3Lifetime2Lifetime1 = -mi.field_B.b(var32) - (var5Lifetime1 + 8) + 640;
+                if (mi.field_B.textWidth(var32) + var5Lifetime1 + var3Lifetime2Lifetime1 + 8 > 640) {
+                  var3Lifetime2Lifetime1 = -mi.field_B.textWidth(var32) - (var5Lifetime1 + 8) + 640;
                 }
-                mi.field_B.a(var32, var5Lifetime1 + var3Lifetime2Lifetime1, -1 + var4Lifetime2Lifetime1, 0, 0);
-                mi.field_B.a(var14Lifetime1, -1 + (var3Lifetime2Lifetime1 + var5Lifetime1), var4Lifetime2Lifetime1, 0, 0);
-                mi.field_B.a(var32, 1 + (var3Lifetime2Lifetime1 + var5Lifetime1), var4Lifetime2Lifetime1, 0, 0);
-                mi.field_B.a(var32, var5Lifetime1 + var3Lifetime2Lifetime1, 1 + var4Lifetime2Lifetime1, 0, 0);
-                mi.field_B.a(var14Lifetime1, var5Lifetime1 + var3Lifetime2Lifetime1, var4Lifetime2Lifetime1, 16777215, 0);
+                mi.field_B.drawText(var32, var5Lifetime1 + var3Lifetime2Lifetime1, -1 + var4Lifetime2Lifetime1, 0, 0);
+                mi.field_B.drawText(var14Lifetime1, -1 + (var3Lifetime2Lifetime1 + var5Lifetime1), var4Lifetime2Lifetime1, 0, 0);
+                mi.field_B.drawText(var32, 1 + (var3Lifetime2Lifetime1 + var5Lifetime1), var4Lifetime2Lifetime1, 0, 0);
+                mi.field_B.drawText(var32, var5Lifetime1 + var3Lifetime2Lifetime1, 1 + var4Lifetime2Lifetime1, 0, 0);
+                mi.field_B.drawText(var14Lifetime1, var5Lifetime1 + var3Lifetime2Lifetime1, var4Lifetime2Lifetime1, 16777215, 0);
               }
             }
           }

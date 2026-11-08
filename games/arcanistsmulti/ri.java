@@ -5,7 +5,7 @@ final class ri {
     static String field_c;
     static boolean field_f;
     static boolean[] field_b;
-    static dl field_g;
+    static PlatformTaskDispatcher field_g;
     static String field_d;
     static int field_a;
     static String field_e;
@@ -17,12 +17,12 @@ final class ri {
     final static void a(int param0, int param1, int param2) {
         co.field_c = param2;
         wh.field_c = param2;
-        o.field_r = param0;
+        MusicPatchNode.field_r = param0;
         tn.field_Eb = param0;
         jm.field_j = true;
         ce.field_m = null;
         int[] var4 = (int[]) null;
-        de.a((int[]) null, 0, 0);
+        SoftwareRasterizer.setTarget((int[]) null, 0, 0);
         ce.field_m = se.a(param0, (java.awt.Component) ((Object) on.field_c), param2, (byte) -123);
         ce.field_m.a(true);
         ho.a((byte) 51, param2 / param1, param0 / 2);

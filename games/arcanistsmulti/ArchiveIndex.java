@@ -133,7 +133,7 @@ final class ArchiveIndex {
                 this.field_t[var10Lifetime1] = -1;
               }
               for (var10Lifetime1Lifetime1 = 0; var10Lifetime1Lifetime1 < this.field_w; var10Lifetime1Lifetime1++) {
-                this.field_t[this.field_r[var10Lifetime1Lifetime1]] = var17.readInt(hh.a(param1, -10686));
+                this.field_t[this.field_r[var10Lifetime1Lifetime1]] = var17.readInt(MouseWheelHandler.a(param1, -10686));
               }
               this.field_l = new n(this.field_t);
             }
@@ -224,7 +224,7 @@ final class ArchiveIndex {
                   } else {
                     var14Lifetime1 = var13Lifetime1Lifetime1;
                   }
-                  this.field_q[var11Lifetime1][var14Lifetime1] = var17.readInt(hh.a(param1, -10686));
+                  this.field_q[var11Lifetime1][var14Lifetime1] = var17.readInt(MouseWheelHandler.a(param1, -10686));
                 }
                 this.field_c[var11Lifetime1] = new n(this.field_q[var11Lifetime1]);
               }
@@ -297,7 +297,7 @@ final class ArchiveIndex {
               var3 = "[" + lj.field_p + "] ";
             }
             if (param1.field_m == 1) {
-              var3 = "[" + tj.a(-44, new String[]{param1.field_o}, ul.field_j) + "] ";
+              var3 = "[" + tj.a(-44, new String[]{param1.field_o}, Bzip2State.field_j) + "] ";
             }
             if (param1.field_m == 4 &&
               null != he.field_d) {

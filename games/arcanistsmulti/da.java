@@ -9,7 +9,7 @@ final class da {
     static String field_e;
     static int field_c;
 
-    final static void a(ha param0, boolean param1, byte param2) {
+    final static void a(MusicTrack param0, boolean param1, byte param2) {
         try {
           if (param2 != -119) {
             field_a = (String) null;
@@ -23,12 +23,12 @@ final class da {
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         if (param2 >= 115) {
           ec.a(65280);
-          de.a(param3, param4, param0, param1);
+          SoftwareRasterizer.intersectClip(param3, param4, param0, param1);
           return;
         }
         field_d = (ln) null;
         ec.a(65280);
-        de.a(param3, param4, param0, param1);
+        SoftwareRasterizer.intersectClip(param3, param4, param0, param1);
     }
 
     final static void a(IntrusiveNode param0, int param1, IntrusiveNode param2) {
@@ -58,8 +58,8 @@ final class da {
     }
 
     final static void a(byte param0) {
-        ff.field_c = tj.field_t.b(ce.field_g[20]);
-        int var1 = tj.field_t.b(ce.field_g[21]);
+        ff.field_c = tj.field_t.textWidth(ce.field_g[20]);
+        int var1 = tj.field_t.textWidth(ce.field_g[21]);
         if (param0 != -101) {
           da.a(6);
           if (ff.field_c < var1) {

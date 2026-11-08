@@ -433,10 +433,10 @@ final class e extends df implements bn, vb {
         RuntimeException var5 = null;
         try {
           if (null != this.field_E) {
-            ia.field_c.a(this.field_E, 20 + this.field_n + param1, 15 + (this.field_j + param3), this.field_v - 40, this.field_k, 16777215, -1, 1, 0, ia.field_c.field_C);
+            ia.field_c.drawParagraph(this.field_E, 20 + this.field_n + param1, 15 + (this.field_j + param3), this.field_v - 40, this.field_k, 16777215, -1, 1, 0, ia.field_c.field_C);
           }
           if (this.field_J != null) {
-            de.f(param1 + 10, param3 + 134, this.field_v - 20, 4210752);
+            SoftwareRasterizer.drawHorizontalLine(param1 + 10, param3 + 134, this.field_v - 20, 4210752);
           }
           super.a((byte) -62, param1, param2, param3);
           if (param0 >= -52) {
@@ -467,7 +467,7 @@ final class e extends df implements bn, vb {
         RuntimeException decompiledCaughtException = null;
         mm var6 = null;
         RuntimeException var6_ref = null;
-        dj var7 = null;
+        BitmapFont var7 = null;
         String var8 = null;
         ql var9 = null;
         ke var10 = null;
@@ -550,7 +550,7 @@ final class e extends df implements bn, vb {
           this.field_j = 15;
           var7 = ia.field_c;
           if (this.field_E != null) {
-            this.field_j = this.field_j + (5 + var7.a(this.field_E, -40 + this.field_v, var7.field_C));
+            this.field_j = this.field_j + (5 + var7.paragraphHeight(this.field_E, -40 + this.field_v, var7.field_C));
           }
           var8 = jl.field_b;
           var9 = oj.a(122, cd.e(117));
@@ -674,7 +674,7 @@ final class e extends df implements bn, vb {
               }
               if (!this.field_F) {
                 if (this.field_N) {
-                  ba.a(123);
+                  PatchEnvelopeSet.a(123);
                   if (var7 == 0) {
                     return;
                   }
@@ -684,7 +684,7 @@ final class e extends df implements bn, vb {
                   return;
                 }
               }
-              kb.b(28579);
+              BoundedRandomAccessFile.b(28579);
               if (var7 == 0) {
                 return;
               }

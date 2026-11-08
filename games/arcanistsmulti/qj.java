@@ -53,15 +53,15 @@ final class qj {
         }
     }
 
-    final static hh a(byte param0) {
+    final static MouseWheelHandler a(byte param0) {
         try {
-          hh stackIn_1_0 = null;
+          MouseWheelHandler stackIn_1_0 = null;
           Throwable decompiledCaughtException = null;
           int var1_int = 0;
           Throwable var1 = null;
           try {
             var1_int = -52 % ((param0 - 15) / 60);
-            stackIn_1_0 = (hh) (Class.forName("po").newInstance());
+            stackIn_1_0 = (MouseWheelHandler) (Class.forName("MouseWheelInput").newInstance());
             return stackIn_1_0;
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

@@ -15,7 +15,7 @@ class ed extends qk implements vb {
     private boolean field_Gb;
     static int field_Cb;
     private om field_ub;
-    private dj field_wb;
+    private BitmapFont field_wb;
     static Sprite field_vb;
     static int field_Hb;
 
@@ -70,7 +70,7 @@ class ed extends qk implements vb {
         pn.c(-11090);
     }
 
-    ed(h param0, dj param1, String param2, boolean param3, boolean param4) {
+    ed(h param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
         super(param0, new me((ed) null, param1, param2), 77, 10, 10);
         try {
           this.field_wb = param1;
@@ -111,7 +111,7 @@ class ed extends qk implements vb {
           if (null == r.field_b) {
             var2 = 25 % ((38 - param1) / 34);
             if (cb.field_b &&
-              io.field_A) {
+              MusicCrossfadeStream.field_A) {
               if (hi.field_a &&
                 ef.field_r) {
                 stackIn_93_0 = 1;
@@ -141,7 +141,7 @@ class ed extends qk implements vb {
           if (!cb.field_b) {
             return;
           }
-          if (!io.field_A) {
+          if (!MusicCrossfadeStream.field_A) {
             return;
           }
           if (hi.field_a &&
@@ -174,7 +174,7 @@ class ed extends qk implements vb {
           if (!cb.field_b) {
             return;
           }
-          if (!io.field_A) {
+          if (!MusicCrossfadeStream.field_A) {
             return;
           }
           if (hi.field_a &&
@@ -193,7 +193,7 @@ class ed extends qk implements vb {
           if (!cb.field_b) {
             return;
           }
-          if (!io.field_A) {
+          if (!MusicCrossfadeStream.field_A) {
             return;
           }
           if (!hi.field_a) {
@@ -238,7 +238,7 @@ class ed extends qk implements vb {
 
     final void g(boolean param0) {
         this.field_ub.b(4210752, param0, 2121792);
-        me var2 = new me(this, this.field_wb, ul.field_k);
+        me var2 = new me(this, this.field_wb, Bzip2State.field_k);
         var2.a(r.field_e, (byte) 3, 15);
         this.a((byte) -92, (qm) (var2));
     }
@@ -322,10 +322,10 @@ class ed extends qk implements vb {
             return ln.field_Q;
           }
           if (hb.field_Gb == sk.field_a) {
-            return ji.field_j;
+            return KeyboardInputHandler.field_j;
           }
           if (!wn.field_z.a((byte) -81)) {
-            return ji.field_j;
+            return KeyboardInputHandler.field_j;
           }
           return ge.field_g;
         }
@@ -333,23 +333,23 @@ class ed extends qk implements vb {
           return ln.field_Q;
         }
         if (hb.field_Gb == sk.field_a) {
-          return ji.field_j;
+          return KeyboardInputHandler.field_j;
         }
         if (!wn.field_z.a((byte) -81)) {
-          return ji.field_j;
+          return KeyboardInputHandler.field_j;
         }
         return ge.field_g;
     }
 
     final static void a(byte param0, ResourceArchive param1) {
-        ai var2 = null;
+        VorbisSample var2 = null;
         try {
-          ai.a(param1.a("", "headers.packvorbis", -1));
+          VorbisSample.decodeSetup(param1.a("", "headers.packvorbis", -1));
           if (param0 != -17) {
             field_tb = (String) null;
           }
-          var2 = ai.a(param1, "jagex logo2.packvorbis", "");
-          var2.c();
+          var2 = VorbisSample.loadNamed(param1, "jagex logo2.packvorbis", "");
+          var2.decodeAllToPcm();
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "ed.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -391,7 +391,7 @@ class ed extends qk implements vb {
           return;
         }
         if (pm.field_b != null) {
-          de.b(de.field_i, de.field_c, -de.field_i + de.field_h, de.field_k - de.field_c);
+          SoftwareRasterizer.darkenRectangle(SoftwareRasterizer.field_i, SoftwareRasterizer.field_c, -SoftwareRasterizer.field_i + SoftwareRasterizer.field_h, SoftwareRasterizer.field_k - SoftwareRasterizer.field_c);
           pm.field_b.a(param1, true);
         }
     }

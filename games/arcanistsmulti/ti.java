@@ -8,7 +8,7 @@ final class ti extends df implements vb {
     static String field_F;
     private ag field_O;
     static int field_N;
-    dj field_Q;
+    BitmapFont field_Q;
     private ag field_E;
     static String field_C;
     boolean field_G;
@@ -389,16 +389,16 @@ final class ti extends df implements vb {
         ce.field_g[19] = tm.field_f;
         ce.field_g[21] = th.field_i;
         ce.field_g[6] = mb.field_Z;
-        ce.field_g[20] = sd.field_g;
+        ce.field_g[20] = BufferedRandomAccessFile.field_g;
         ce.field_g[18] = mj.field_y;
         if (param0 != -90) {
-          wf var2 = (wf) null;
-          ti.a((byte) 106, 40, (wf) null);
+          PcmSample var2 = (PcmSample) null;
+          ti.a((byte) 106, 40, (PcmSample) null);
         }
         ce.field_g[2] = r.field_e;
         ce.field_g[26] = mn.field_w;
         ce.field_g[17] = ui.field_q;
-        ce.field_g[28] = ji.field_l;
+        ce.field_g[28] = KeyboardInputHandler.field_l;
         ce.field_g[9] = ed.field_xb;
         ce.field_g[7] = se.field_J;
         ce.field_g[4] = da.field_a;
@@ -469,7 +469,7 @@ final class ti extends df implements vb {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 0) {
-            this.field_Q = (dj) null;
+            this.field_Q = (BitmapFont) null;
           }
           param1.d((byte) 29);
           this.field_D = "";
@@ -514,7 +514,7 @@ final class ti extends df implements vb {
         }
     }
 
-    final static fk a(byte param0, int param1, wf param2) {
+    final static fk a(byte param0, int param1, PcmSample param2) {
         RuntimeException var3 = null;
         fk stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -525,7 +525,7 @@ final class ti extends df implements vb {
           if (param0 != -30) {
             field_I = (IndexedSprite[]) null;
           }
-          stackIn_3_0 = sc.a(kd.a(param2, 100, param1), (byte) 68);
+          stackIn_3_0 = sc.a(PcmSampleStream.createAtRatePercent(param2, 100, param1), (byte) 68);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

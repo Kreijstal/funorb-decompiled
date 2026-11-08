@@ -1,0 +1,105 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.event.FocusListener {
+    private static int[] field_a;
+    static PcmSample[] field_g;
+    volatile boolean field_e;
+    static String field_c;
+    java.awt.Frame field_b;
+    static String field_f;
+    static int field_d;
+
+    public final void focusLost(java.awt.event.FocusEvent param0) {
+        try {
+          this.field_e = true;
+        } catch (RuntimeException runtimeException) {
+          throw aa.a((Throwable) ((Object) runtimeException), "uk.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    final static String a(CharSequence param0, byte param1) {
+        RuntimeException var2 = null;
+        CharSequence var3 = null;
+        String stackIn_3_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param1 != -118) {
+            var3 = (CharSequence) null;
+            FullscreenFocusCanvas.a((CharSequence) null, (byte) 121);
+          }
+          stackIn_3_0 = vk.a(false, param0, -123);
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_6_0 = var2;
+          stackIn_6_1 = new StringBuilder().append("uk.C(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    final void a(PlatformTaskDispatcher param0, byte param1) {
+        try {
+          if (param1 != 67) {
+            field_f = (String) null;
+          }
+          fh.a(100, param0, this.field_b);
+        } catch (RuntimeException runtimeException) {
+          throw aa.a((Throwable) ((Object) runtimeException), "uk.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+        }
+    }
+
+    public final void paint(java.awt.Graphics param0) {
+    }
+
+    public final void focusGained(java.awt.event.FocusEvent param0) {
+    }
+
+    public final void update(java.awt.Graphics param0) {
+    }
+
+    public static void a(int param0) {
+        field_c = null;
+        field_g = null;
+        field_f = null;
+        field_a = null;
+        int var1 = -33 / ((51 - param0) / 56);
+    }
+
+    FullscreenFocusCanvas() {
+    }
+
+    static {
+        int var0 = 0;
+        long var4 = 0L;
+        long var6 = 0L;
+        int var3 = 0;
+        int var2 = 0;
+        int var1 = 0;
+        field_g = new PcmSample[79];
+        field_c = "Orb coins: <%0>";
+        field_a = new int[98304];
+        for (var0 = 92682; var0 >= 46341; var0--) {
+          var4 = (long)(-1 + (var0 << 1));
+          var6 = (long)(1 + (var0 << 1));
+          var3 = (int)((var6 * var6 >> 18) - 32768L);
+          var2 = (int)(-32768L + (var4 * var4 >> 18));
+          if (var3 >= field_a.length) {
+            var3 = field_a.length - 1;
+          }
+          for (var1 = 0 <= var2 ? var2 : 0; var3 >= var1; var1++) {
+            field_a[var1] = var0;
+          }
+        }
+        field_f = "Cog spells deal with changing the course of time and manipulating your opponents.";
+    }
+}

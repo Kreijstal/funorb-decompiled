@@ -115,8 +115,8 @@ final class co {
           rk.field_O.field_Hb = rk.field_O.field_H >> 1;
           rk.field_O.field_hb = rk.field_O.field_y >> 1;
           rk.field_O.b(649860712, true);
-          if (jh.field_c[rk.field_O.a(-31497) + 1] != null) {
-            mi.a(jh.field_c[rk.field_O.a(-31497) + 1], 3);
+          if (DelegatingCanvas.field_c[rk.field_O.a(-31497) + 1] != null) {
+            mi.a(DelegatingCanvas.field_c[rk.field_O.a(-31497) + 1], 3);
           }
           qn.field_ob.m(413355681);
           rk.field_O.a((byte) -96);
@@ -176,11 +176,11 @@ final class co {
                         for (var2 = 0; var2 < 16; var2++) {
                           var3 = b.field_f[var2];
                           if (var3 != -1) {
-                            var4 = hh.field_b[var3];
-                            if (hh.field_b[var3] == -1) {
+                            var4 = MouseWheelHandler.field_b[var3];
+                            if (MouseWheelHandler.field_b[var3] == -1) {
                               var4 = 1;
                             }
-                            if (hh.field_b[var3] == 0) {
+                            if (MouseWheelHandler.field_b[var3] == 0) {
                               var4 = -1;
                             }
                             rk.field_O.a(0, var2, var4, 27, var3);

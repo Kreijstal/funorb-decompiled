@@ -64,8 +64,8 @@ final class ql {
         int var9Lifetime2;
         var13 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          if (de.field_e != 0 &&
-            de.field_j != 0) {
+          if (SoftwareRasterizer.field_e != 0 &&
+            SoftwareRasterizer.field_j != 0) {
             if (640 >= param0) {
               stackIn_10_0 = (param1 > 480) ? 1 : 0;
             } else {
@@ -77,17 +77,17 @@ final class ql {
             var6 = sm.field_d;
             var7 = var6.field_A.length;
             if (var3_int == 0) {
-              de.c(0, 0, 640, 480, var4, var5);
+              SoftwareRasterizer.fillVerticalGradient(0, 0, 640, 480, var4, var5);
             } else {
               var8 = uc.field_a + 480;
               if (uc.field_a > 1) {
                 var9 = gf.a((uc.field_a * 1024 + 491520) / 480, (byte) 16, var5, var4);
-                de.c(0, 0, param0 / 2, uc.field_a / 2, var9, var4);
+                SoftwareRasterizer.fillVerticalGradient(0, 0, param0 / 2, uc.field_a / 2, var9, var4);
               }
-              de.c(0, uc.field_a / 2, param0 / 2, 240, var4, var5);
+              SoftwareRasterizer.fillVerticalGradient(0, uc.field_a / 2, param0 / 2, 240, var4, var5);
               if (param1 - var8 > 1) {
                 var9Lifetime2 = gf.a((491520 + (param1 - var8) * 1024) / 480, (byte) 14, var4, var5);
-                de.c(0, var8 / 2, param0 / 2, (param1 - var8) / 2, var5, var9Lifetime2);
+                SoftwareRasterizer.fillVerticalGradient(0, var8 / 2, param0 / 2, (param1 - var8) / 2, var5, var9Lifetime2);
               }
             }
             var8Lifetime1 = param2;
@@ -111,7 +111,7 @@ final class ql {
                 var11 = (-var9Lifetime1 + var10) % var6.field_y * var6.field_q;
                 var11 = dh.a(var11, true, var6.field_A.length);
                 for (var12 = var8Lifetime1; param0 > var12; var12++) {
-                  de.g(var12, var10, 6035051, -(var6.field_A[var11] & 255) + 255 >> 2);
+                  SoftwareRasterizer.addPixelScaled(var12, var10, 6035051, -(var6.field_A[var11] & 255) + 255 >> 2);
                   var11++;
                   if (var11 >= var6.field_A.length) {
                     var11 = 0;
@@ -124,7 +124,7 @@ final class ql {
               var11Lifetime1 = var6.field_q * ((-var9Lifetime1 + var10Lifetime1) % var6.field_y);
               var11Lifetime1 = dh.a(var11Lifetime1, true, var6.field_A.length);
               for (var12Lifetime1 = var8Lifetime1; param0 > var12Lifetime1; var12Lifetime1 += 2) {
-                de.g(var12Lifetime1 / 2, var10Lifetime1 / 2, 6035051, -(var6.field_A[var11Lifetime1] & 255) + 255 >> 2);
+                SoftwareRasterizer.addPixelScaled(var12Lifetime1 / 2, var10Lifetime1 / 2, 6035051, -(var6.field_A[var11Lifetime1] & 255) + 255 >> 2);
                 var11Lifetime1++;
                 if (var11Lifetime1 >= var6.field_A.length) {
                   var11Lifetime1 = 0;
@@ -220,7 +220,7 @@ final class ql {
     }
 
     final static int a(int param0, int param1, int param2, int param3) {
-        if (de.field_j >= param2 + (param1 + param3)) {
+        if (SoftwareRasterizer.field_j >= param2 + (param1 + param3)) {
           return param3 + param1;
         }
         if (param0 != 10) {
@@ -229,7 +229,7 @@ final class ql {
         if (param3 - param2 >= 0) {
           return param3 - param2;
         }
-        return de.field_j - param2;
+        return SoftwareRasterizer.field_j - param2;
     }
 
     ql(String param0) {
@@ -243,7 +243,7 @@ final class ql {
     final static void a(boolean param0) {
         ah.field_b = df.field_z.readString(-1);
         CharSequence var2 = (CharSequence) ((Object) ah.field_b);
-        nm.field_b = gk.a(var2, -13);
+        nm.field_b = Js5ArchiveManager.a(var2, -13);
         if (!param0) {
           field_b = (int[]) null;
         }

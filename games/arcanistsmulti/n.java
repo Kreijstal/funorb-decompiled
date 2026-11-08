@@ -62,29 +62,29 @@ final class n {
         int var7Lifetime7;
         int var7Lifetime3Lifetime1;
         var8 = ArcanistsMulti.field_G ? 1 : 0;
-        if (0 > gi.field_a) {
+        if (0 > SoundCache.field_a) {
           return;
         }
         var3 = -135 + param0;
         var4 = param1 - 35;
         var5 = 256;
-        if (gi.field_a < 75) {
-          var5 = (gi.field_a << 8) / 75;
+        if (SoundCache.field_a < 75) {
+          var5 = (SoundCache.field_a << 8) / 75;
         }
-        if (gi.field_a > 200) {
-          var5 = (-gi.field_a + 250 << 8) / 50;
+        if (SoundCache.field_a > 200) {
+          var5 = (-SoundCache.field_a + 250 << 8) / 50;
         }
         fk.a(rc.field_h, -23095);
-        id.a();
-        de.b();
+        MeshRasterState.useRasterClip();
+        SoftwareRasterizer.clear();
         cg.f(252566882);
         if (var5 < 256) {
-          de.e(0, 0, de.field_e, de.field_j, 0, -var5 + 256);
+          SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_e, SoftwareRasterizer.field_j, 0, -var5 + 256);
         }
         oo.c(-15405);
-        if (gi.field_a < 150) {
-          rc.field_h.b(var3, var4);
-          var6 = -125 + gi.field_a;
+        if (SoundCache.field_a < 150) {
+          rc.field_h.drawHalfSize(var3, var4);
+          var6 = -125 + SoundCache.field_a;
           if (param2 != 1) {
             return;
           }
@@ -92,87 +92,87 @@ final class n {
             var6 < 50) {
             if (var6 < 20) {
               var7 = 256 * var6 / 20;
-              gi.field_k.b(var3, var4, var7);
+              SoundCache.field_k.drawAdditive(var3, var4, var7);
             } else {
               if (30 > var6) {
-                gi.field_k.b(var3, var4, 256);
+                SoundCache.field_k.drawAdditive(var3, var4, 256);
               } else {
                 var7 = (50 - var6) * 256 / 20;
-                gi.field_k.b(var3, var4, var7);
+                SoundCache.field_k.drawAdditive(var3, var4, var7);
               }
             }
           }
-          var6Lifetime3 = gi.field_a - 140;
+          var6Lifetime3 = SoundCache.field_a - 140;
           if (var6Lifetime3 > 0) {
             var7Lifetime7 = 256;
             if (20 > var6Lifetime3) {
               var7Lifetime7 = 256 * var6Lifetime3 / 20;
             }
-            gm.field_l.c(var3 + 15, var4 + 10, var5 * var7Lifetime7 >> 8);
+            gm.field_l.drawAlpha(var3 + 15, var4 + 10, var5 * var7Lifetime7 >> 8);
           }
           return;
         }
-        mi.field_E.c(15 + var3, var4 + 10, var5);
-        var6Lifetime1 = -125 + gi.field_a;
+        mi.field_E.drawAlpha(15 + var3, var4 + 10, var5);
+        var6Lifetime1 = -125 + SoundCache.field_a;
         if (param2 != 1) {
           return;
         }
         if (0 >= var6Lifetime1) {
-          var6Lifetime1 = gi.field_a - 140;
+          var6Lifetime1 = SoundCache.field_a - 140;
           if (var6Lifetime1 > 0) {
             var7Lifetime1 = 256;
             if (20 > var6Lifetime1) {
               var7Lifetime1 = 256 * var6Lifetime1 / 20;
             }
-            gm.field_l.c(var3 + 15, var4 + 10, var5 * var7Lifetime1 >> 8);
+            gm.field_l.drawAlpha(var3 + 15, var4 + 10, var5 * var7Lifetime1 >> 8);
           }
           return;
         }
         if (var6Lifetime1 >= 50) {
-          var6Lifetime1 = gi.field_a - 140;
+          var6Lifetime1 = SoundCache.field_a - 140;
           if (var6Lifetime1 > 0) {
             var7Lifetime2 = 256;
             if (20 > var6Lifetime1) {
               var7Lifetime2 = 256 * var6Lifetime1 / 20;
             }
-            gm.field_l.c(var3 + 15, var4 + 10, var5 * var7Lifetime2 >> 8);
+            gm.field_l.drawAlpha(var3 + 15, var4 + 10, var5 * var7Lifetime2 >> 8);
           }
           return;
         }
         if (var6Lifetime1 < 20) {
           var7Lifetime3 = 256 * var6Lifetime1 / 20;
-          gi.field_k.b(var3, var4, var7Lifetime3);
-          var6Lifetime1 = gi.field_a - 140;
+          SoundCache.field_k.drawAdditive(var3, var4, var7Lifetime3);
+          var6Lifetime1 = SoundCache.field_a - 140;
           if (var6Lifetime1 > 0) {
             var7Lifetime3Lifetime1 = 256;
             if (20 > var6Lifetime1) {
               var7Lifetime3Lifetime1 = 256 * var6Lifetime1 / 20;
             }
-            gm.field_l.c(var3 + 15, var4 + 10, var5 * var7Lifetime3Lifetime1 >> 8);
+            gm.field_l.drawAlpha(var3 + 15, var4 + 10, var5 * var7Lifetime3Lifetime1 >> 8);
           }
           return;
         }
         if (30 > var6Lifetime1) {
-          gi.field_k.b(var3, var4, 256);
-          var6Lifetime1 = gi.field_a - 140;
+          SoundCache.field_k.drawAdditive(var3, var4, 256);
+          var6Lifetime1 = SoundCache.field_a - 140;
           if (var6Lifetime1 > 0) {
             var7Lifetime4 = 256;
             if (20 > var6Lifetime1) {
               var7Lifetime4 = 256 * var6Lifetime1 / 20;
             }
-            gm.field_l.c(var3 + 15, var4 + 10, var5 * var7Lifetime4 >> 8);
+            gm.field_l.drawAlpha(var3 + 15, var4 + 10, var5 * var7Lifetime4 >> 8);
           }
           return;
         }
         var7Lifetime5 = (50 - var6Lifetime1) * 256 / 20;
-        gi.field_k.b(var3, var4, var7Lifetime5);
-        var6Lifetime2 = gi.field_a - 140;
+        SoundCache.field_k.drawAdditive(var3, var4, var7Lifetime5);
+        var6Lifetime2 = SoundCache.field_a - 140;
         if (var6Lifetime2 > 0) {
           var7Lifetime6 = 256;
           if (20 > var6Lifetime2) {
             var7Lifetime6 = 256 * var6Lifetime2 / 20;
           }
-          gm.field_l.c(var3 + 15, var4 + 10, var5 * var7Lifetime6 >> 8);
+          gm.field_l.drawAlpha(var3 + 15, var4 + 10, var5 * var7Lifetime6 >> 8);
         }
         return;
     }

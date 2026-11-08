@@ -4,11 +4,11 @@
 final class mc {
     static int field_c;
     static Sprite[] field_a;
-    static dj field_b;
+    static BitmapFont field_b;
 
     final static void a(int param0, int param1, int param2, boolean param3) {
         ib.a(param3, 2);
-        kb.a(param3, param0, -32507, param1);
+        BoundedRandomAccessFile.a(param3, param0, -32507, param1);
         if (param2 > -79) {
           mc.a(55);
         }

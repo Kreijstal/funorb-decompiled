@@ -4,7 +4,7 @@
 final class fd {
     static bd field_e;
     static boolean field_a;
-    static nc field_b;
+    static CoverageBitmapFont field_b;
     static boolean field_i;
     static String[] field_g;
     static long field_d;

@@ -72,7 +72,7 @@ final class wl extends mg {
         }
         if (!param0) {
           fe.field_p = rm.a(var8, 80, -79);
-          ga.field_s = null;
+          ImageProducerRasterBuffer.field_s = null;
           return new jg(param0);
         }
         var5 = var8.readUnsignedShort(-98);
@@ -84,13 +84,13 @@ final class wl extends mg {
           } else {
             stackIn_24_0 = var9.field_u;
           }
-          ga.field_s = stackIn_24_0;
+          ImageProducerRasterBuffer.field_s = stackIn_24_0;
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (Exception) (Object) decompiledCaughtException;
-          jh.a((Throwable) ((Object) var6), "CC1", (byte) 20);
+          DelegatingCanvas.a((Throwable) ((Object) var6), "CC1", (byte) 20);
           fe.field_p = null;
-          ga.field_s = null;
+          ImageProducerRasterBuffer.field_s = null;
           return new jg(param0);
         }
         return new jg(param0);
@@ -208,7 +208,7 @@ final class wl extends mg {
           return;
         }
         try {
-          vc.field_e.b(param1, (param2.field_v >> 1) + (param4 + param2.field_n), -5 + (param2.field_j + param0), 16777215, -1);
+          vc.field_e.drawCentered(param1, (param2.field_v >> 1) + (param4 + param2.field_n), -5 + (param2.field_j + param0), 16777215, -1);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "wl.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }

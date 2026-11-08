@@ -151,7 +151,7 @@ final class j implements pf {
               ub.field_b = go.field_g;
             } else {
               while (ub.field_b != go.field_g) {
-                var2 = dk.field_d[go.field_g];
+                var2 = CanvasRasterBuffer.field_d[go.field_g];
                 go.field_g = 1 + go.field_g & 127;
                 if (var2 >= 0) {
                   ri.field_b[var2] = true;
@@ -192,18 +192,18 @@ final class j implements pf {
           if (param0.d(-2116)) {
             oj.a(-32171, var7 + 2, var6_int + 2, -4 + param0.field_k, param0.field_v - 4);
           }
-          de.h(var6_int, var7, -2 + (var6_int + param0.field_v), param0.field_k + var7);
+          SoftwareRasterizer.setClip(var6_int, var7, -2 + (var6_int + param0.field_v), param0.field_k + var7);
           var8 = this.field_d.field_P.g(126);
           if (var8 != null) {
             var9 = var8.toString();
-            this.field_d.field_Q.a(var9, var6_int + 2, -1 + (this.field_d.field_Q.field_C + param0.field_k >> 1) + var7, 10000536, -1);
+            this.field_d.field_Q.drawText(var9, var6_int + 2, -1 + (this.field_d.field_Q.field_C + param0.field_k >> 1) + var7, 10000536, -1);
             if (this.field_d.d(-2116) &&
               var9.startsWith(this.field_d.field_D)) {
-              var10 = this.field_d.field_Q.b(this.field_d.field_D);
-              de.e(var6_int + 2, 2 + var7, var10, -4 + param0.field_k, 2188450, 100);
+              var10 = this.field_d.field_Q.textWidth(this.field_d.field_D);
+              SoftwareRasterizer.fillRectangleAlpha(var6_int + 2, 2 + var7, var10, -4 + param0.field_k, 2188450, 100);
             }
           }
-          de.a();
+          SoftwareRasterizer.resetClip();
           if (param1 != 5592405) {
             var11 = (String) null;
             j.a(false, (String) null, true, false);
@@ -233,12 +233,12 @@ final class j implements pf {
 
     final static void a(boolean param0, String param1, boolean param2, boolean param3) {
         try {
-          hk.d(-24225);
+          MusicPatchPcmStream.d(-24225);
           ClientException.field_b.f(-117);
           if (param3) {
             j.a(-101, 37, 87);
           }
-          wh.field_f = new e(ge.field_g, (String) null, hk.field_s, param0, param2);
+          wh.field_f = new e(ge.field_g, (String) null, MusicPatchPcmStream.field_s, param0, param2);
           g.field_e = new no(ClientException.field_b, wh.field_f);
           ClientException.field_b.b(g.field_e, 15637);
         } catch (RuntimeException runtimeException) {

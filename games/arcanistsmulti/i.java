@@ -43,9 +43,9 @@ final class i {
           for (var6 = 0; var6 < var1; var6++) {
             var5[var6] = fj.b(dg.a(255, (int) var17[var6]) << 24, ph.field_c[dg.a((int) var16[var6], 255)]);
           }
-          var3 = new od(pb.field_g, gn.field_a, hl.field_l[0], be.field_d[0], jg.field_p[0], ho.field_i[0], var13);
+          var3 = new ArgbSprite(pb.field_g, gn.field_a, hl.field_l[0], be.field_d[0], jg.field_p[0], ho.field_i[0], var13);
         }
-        dk.a(-18229);
+        CanvasRasterBuffer.a(-18229);
         return (Sprite) (var3);
     }
 
@@ -53,10 +53,10 @@ final class i {
         int var6 = 24;
         int var7 = param4;
         this.field_c.a(param0, param2, var7, var6, 0, param3, param1);
-        lj.field_j.a(ec.field_d.field_x, 0, 0, ga.field_r, (byte) -120);
-        ClientException.field_d.a(-80 + (-2 + ec.field_d.field_x) - (nn.field_p + 2), 0, 2 + ga.field_r, 18, (byte) -120);
-        nk.field_n.a(nn.field_p + 82, ec.field_d.field_x - (nn.field_p + 2) - 80, ga.field_r + 2, 18, (byte) -120);
-        nl.field_Gb.a(20, 2, ec.field_d.field_I - ga.field_r - 2 - 20, ec.field_d.field_x, 2 + ga.field_r + 20, 0, -16624, nn.field_p);
+        lj.field_j.a(ec.field_d.field_x, 0, 0, ImageProducerRasterBuffer.field_r, (byte) -120);
+        ClientException.field_d.a(-80 + (-2 + ec.field_d.field_x) - (nn.field_p + 2), 0, 2 + ImageProducerRasterBuffer.field_r, 18, (byte) -120);
+        nk.field_n.a(nn.field_p + 82, ec.field_d.field_x - (nn.field_p + 2) - 80, ImageProducerRasterBuffer.field_r + 2, 18, (byte) -120);
+        nl.field_Gb.a(20, 2, ec.field_d.field_I - ImageProducerRasterBuffer.field_r - 2 - 20, ec.field_d.field_x, 2 + ImageProducerRasterBuffer.field_r + 20, 0, -16624, nn.field_p);
         dd.field_c.a(2, 20, nn.field_p, false);
     }
 

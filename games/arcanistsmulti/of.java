@@ -4,7 +4,7 @@
 final class of implements pf {
     private int field_g;
     private int field_i;
-    private dj field_d;
+    private BitmapFont field_d;
     private int field_f;
     private int field_h;
     static ql field_n;
@@ -44,36 +44,36 @@ final class of implements pf {
     final static Sprite[] a(int param0, int param1, int param2, int param3, int param4, int param5) {
         Sprite var21 = null;
         Sprite var20 = null;
-        int[] var19 = de.field_l;
+        int[] var19 = SoftwareRasterizer.field_l;
         int[] var18 = var19;
         int[] var16 = var18;
         int[] var6 = var16;
-        int var7 = de.field_e;
-        int var8 = de.field_j;
+        int var7 = SoftwareRasterizer.field_e;
+        int var8 = SoftwareRasterizer.field_j;
         Sprite var9 = new Sprite(param0, -(2 * param0) + param1);
-        var9.a();
-        de.c(0, 0, param0, -(2 * param0) + param1, param4, param5);
+        var9.makeRasterTarget();
+        SoftwareRasterizer.fillVerticalGradient(0, 0, param0, -(2 * param0) + param1, param4, param5);
         Sprite var10 = new Sprite(param0, param0);
-        var10.a();
-        de.d(0, 0, param0, param0, param4);
+        var10.makeRasterTarget();
+        SoftwareRasterizer.fillRectangle(0, 0, param0, param0, param4);
         Sprite var11 = new Sprite(16, param0);
-        var11.a();
-        de.d(0, 0, 16, param0, param4);
+        var11.makeRasterTarget();
+        SoftwareRasterizer.fillRectangle(0, 0, 16, param0, param4);
         Sprite var12 = new Sprite(param0, param0);
-        var12.a();
-        de.d(0, 0, param0, param0, param5);
+        var12.makeRasterTarget();
+        SoftwareRasterizer.fillRectangle(0, 0, param0, param0, param5);
         Sprite var13 = new Sprite(16, param0);
-        var13.a();
-        de.d(0, 0, 16, param0, param5);
+        var13.makeRasterTarget();
+        SoftwareRasterizer.fillRectangle(0, 0, 16, param0, param5);
         Object var14 = null;
         if (param2 == 1) {
           if (param3 > 0) {
             var21 = new Sprite(16, 16);
             var14 = var21;
-            var21.a();
-            de.d(0, 0, 16, 16, param3);
+            var21.makeRasterTarget();
+            SoftwareRasterizer.fillRectangle(0, 0, 16, 16, param3);
           }
-          de.a(var19, var7, var8);
+          SoftwareRasterizer.setTarget(var19, var7, var8);
           return new Sprite[]{var10, var11, var10, var9, (Sprite) (var14), var9, var12, var13, var12};
         }
         ResourceArchive var15 = (ResourceArchive) null;
@@ -81,10 +81,10 @@ final class of implements pf {
         if (param3 > 0) {
           var20 = new Sprite(16, 16);
           var14 = var20;
-          var20.a();
-          de.d(0, 0, 16, 16, param3);
+          var20.makeRasterTarget();
+          SoftwareRasterizer.fillRectangle(0, 0, 16, 16, param3);
         }
-        de.a(var19, var7, var8);
+        SoftwareRasterizer.setTarget(var19, var7, var8);
         return new Sprite[]{var10, var11, var10, var9, (Sprite) (var14), var9, var12, var13, var12};
     }
 
@@ -157,26 +157,26 @@ final class of implements pf {
           }
           if (var14 != null) {
           }
-          de.d(param2 + param0.field_n, param3 + param0.field_j, param0.field_v, param0.field_k, this.field_b);
+          SoftwareRasterizer.fillRectangle(param2 + param0.field_n, param3 + param0.field_j, param0.field_v, param0.field_k, this.field_b);
           var7 = param0.field_n + (param2 + var14.field_T);
           var8 = var14.field_U + (param3 + param0.field_j);
-          de.i(var7, var8, var14.field_V, this.field_m);
+          SoftwareRasterizer.fillCircle(var7, var8, var14.field_V, this.field_m);
           if (var14.field_M != -1) {
             var9 = 3.141592653589793 * (double)var14.field_M * 2.0 / (double)var14.field_P;
             var11 = (int)(-Math.sin(var9) * (double)var14.field_V);
             var12 = (int)(Math.cos(var9) * (double)var14.field_V);
-            de.i(var11 + var7, var8 + var12, 1, this.field_o);
+            SoftwareRasterizer.fillCircle(var11 + var7, var8 + var12, 1, this.field_o);
           }
-          de.i(var7, var8, 2, 1);
+          SoftwareRasterizer.fillCircle(var7, var8, 2, 1);
           var9Lifetime1 = 3.141592653589793 * (double)var14.field_Q * 2.0 / (double)var14.field_P;
           var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var14.field_V);
           var12Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var14.field_V);
-          de.b(var7, var8, var7 + var11Lifetime1, var12Lifetime1 + var8, 1);
+          SoftwareRasterizer.drawLine(var7, var8, var7 + var11Lifetime1, var12Lifetime1 + var8, 1);
           if (null == this.field_d) {
             return;
           }
           var13 = this.field_g + (var14.field_V + var14.field_T);
-          this.field_d.a(param0.field_g, var13 + (param2 + param0.field_n), this.field_i + (param3 + param0.field_j), -var13 - this.field_g + param0.field_v, -(this.field_g << 1) + param0.field_k, this.field_h, this.field_f, 1, 1, 0);
+          this.field_d.drawParagraph(param0.field_g, var13 + (param2 + param0.field_n), this.field_i + (param3 + param0.field_j), -var13 - this.field_g + param0.field_v, -(this.field_g << 1) + param0.field_k, this.field_h, this.field_f, 1, 1, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -204,7 +204,7 @@ final class of implements pf {
         field_a = null;
     }
 
-    of(dj param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    of(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         try {
           this.field_f = param4;
           this.field_g = param1;

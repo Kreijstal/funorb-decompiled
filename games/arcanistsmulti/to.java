@@ -43,10 +43,10 @@ class to extends DualLinkNode {
           ej.a(-11837, param0);
           var2_int = 125 / ((25 - param1) / 59);
           if (ua.field_J) {
-            de.b(tn.field_Ob.field_c.field_T, tn.field_Ob.field_c.field_db, tn.field_Ob.field_c.field_x, tn.field_Ob.field_c.field_I);
+            SoftwareRasterizer.darkenRectangle(tn.field_Ob.field_c.field_T, tn.field_Ob.field_c.field_db, tn.field_Ob.field_c.field_x, tn.field_Ob.field_c.field_I);
             tn.field_Ob.field_c.a(param0, true);
           }
-          bg.a(param0, (byte) -73);
+          ByteStorage.a(param0, (byte) -73);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -316,8 +316,8 @@ class to extends DualLinkNode {
           var9 = var24Lifetime1 * param1[5] + (param1[3] * var22Lifetime1 + param1[4] * var23Lifetime1) >> 16 - tj.field_C;
           var10 = var24Lifetime1 * param1[8] + (param1[7] * var23Lifetime1 + var22Lifetime1 * param1[6]) >> 16 - tj.field_C;
           var11 = var24Lifetime1 * param1[11] + (var23Lifetime1 * param1[10] + param1[9] * var22Lifetime1) >> 16;
-          var22Lifetime2 = id.field_i;
-          var23Lifetime2 = id.field_g;
+          var22Lifetime2 = MeshRasterState.field_i;
+          var23Lifetime2 = MeshRasterState.field_g;
           var24Lifetime2 = 0;
           scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
@@ -352,7 +352,7 @@ class to extends DualLinkNode {
                   ResourceArchive.field_a[var24Lifetime2] = -2147483648;
                 }
                 if (param6) {
-                  ba.field_k[var24Lifetime2] = var28Lifetime1 >> tj.field_C;
+                  PatchEnvelopeSet.field_k[var24Lifetime2] = var28Lifetime1 >> tj.field_C;
                   vf.field_v[var24Lifetime2] = var29Lifetime1 >> tj.field_C;
                   gm.field_g[var24Lifetime2] = var30Lifetime1;
                 }

@@ -205,7 +205,7 @@ class rn extends ag {
         try {
           dn.field_Db = false;
           om.field_x = null;
-          wi.field_f = null;
+          DirectByteStorage.field_f = null;
           if (param0 >= -97) {
             var3 = (CipherPacketBuffer) null;
             rn.a(true, (CipherPacketBuffer) null);
@@ -279,7 +279,7 @@ class rn extends ag {
         this.field_O = -1;
         this.field_P = 0L;
         try {
-          this.field_r = io.field_n.field_l;
+          this.field_r = MusicCrossfadeStream.field_n.field_l;
           this.field_H = param2;
           this.a(true, param0, false);
           this.field_M = true;

@@ -6,7 +6,7 @@ final class ch {
     static String field_f;
     static int field_b;
     int field_g;
-    static ji field_a;
+    static KeyboardInputHandler field_a;
     static kc field_d;
     static String field_e;
     static String field_h;
@@ -34,7 +34,7 @@ final class ch {
     static {
         field_f = "Unfortunately there was a focus problem while setting fullscreen mode. You could try disabling any multiple monitor drivers or window enhancements, if you have any enabled, or try a different resolution.";
         field_e = "Selection:";
-        field_a = new ji();
+        field_a = new KeyboardInputHandler();
         field_h = "Player Name: ";
     }
 }

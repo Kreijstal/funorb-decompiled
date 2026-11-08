@@ -65,12 +65,12 @@ final class IntrusiveNodeHashTable {
         return this.a(-1);
     }
 
-    final static fg a(byte param0, ResourceArchive param1, int param2) {
+    final static MusicPatch a(byte param0, ResourceArchive param1, int param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
         Object stackIn_4_0 = null;
-        fg stackIn_6_0 = null;
+        MusicPatch stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -82,11 +82,11 @@ final class IntrusiveNodeHashTable {
           var4 = param1.d(param2, 31662);
           var3 = var4;
           if (var4 != null) {
-            stackIn_6_0 = new fg(var4);
+            stackIn_6_0 = new MusicPatch(var4);
             return stackIn_6_0;
           }
           stackIn_4_0 = null;
-          return (fg) (stackIn_4_0);
+          return (MusicPatch) (stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
@@ -127,11 +127,11 @@ final class IntrusiveNodeHashTable {
         if (param0 != -1) {
           field_b = (Sprite[]) null;
           ff.a(true, kf.field_a, (byte) -97, on.field_d);
-          di.field_h = true;
+          NodeHashTable.field_h = true;
           return;
         }
         ff.a(true, kf.field_a, (byte) -97, on.field_d);
-        di.field_h = true;
+        NodeHashTable.field_h = true;
     }
 
     final static int b(int param0) {
@@ -223,7 +223,7 @@ final class IntrusiveNodeHashTable {
                 return stackIn_21_0;
               }
             } else {
-              if (-1 == rj.field_e.indexOf(var4)) {
+              if (-1 == AudioService.field_e.indexOf(var4)) {
                 stackIn_25_0 = n.field_b;
                 return stackIn_25_0;
               }
@@ -332,8 +332,8 @@ final class IntrusiveNodeHashTable {
         fk var1Lifetime1;
         var2 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          oh.field_k.g();
-          lf.field_a.g();
+          oh.field_k.serviceOutput();
+          lf.field_a.serviceOutput();
           if (param0 != 200) {
             field_a = (Sprite[]) null;
           }

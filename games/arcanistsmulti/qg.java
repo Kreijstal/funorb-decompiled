@@ -3,7 +3,7 @@
  */
 final class qg extends RuntimeException {
     static int field_c;
-    static dl field_b;
+    static PlatformTaskDispatcher field_b;
     static String[] field_a;
 
     final static void a(int param0, String param1) {
@@ -24,7 +24,7 @@ final class qg extends RuntimeException {
             ln.field_J = me.field_I;
           }
           boolean decompiledFrameRemainder0 = true;
-          jh.field_f = jh.field_f + 1;
+          DelegatingCanvas.field_f = DelegatingCanvas.field_f + 1;
           if (param1 != null) {
             decompiledFrameRemainder0 = !(param1.equals(cb.field_c));
           } else {
@@ -32,8 +32,8 @@ final class qg extends RuntimeException {
           }
           if (decompiledFrameRemainder0) {
             if (!oh.field_i) {
-              if (jh.field_f >= oa.field_e) {
-                stackIn_17_0 = (jh.field_f < qc.field_e + oa.field_e) ? 1 : 0;
+              if (DelegatingCanvas.field_f >= oa.field_e) {
+                stackIn_17_0 = (DelegatingCanvas.field_f < qc.field_e + oa.field_e) ? 1 : 0;
               } else {
                 stackIn_17_0 = 0;
               }
@@ -42,15 +42,15 @@ final class qg extends RuntimeException {
             }
             var2_int = stackIn_17_0;
             if (param1 == null) {
-              jh.field_f = 0;
+              DelegatingCanvas.field_f = 0;
             } else {
               if (oh.field_i) {
-                jh.field_f = oa.field_e;
+                DelegatingCanvas.field_f = oa.field_e;
               } else {
                 if (var2_int == 0) {
-                  jh.field_f = 0;
+                  DelegatingCanvas.field_f = 0;
                 } else {
-                  jh.field_f = oa.field_e;
+                  DelegatingCanvas.field_f = oa.field_e;
                 }
               }
             }
@@ -67,19 +67,19 @@ final class qg extends RuntimeException {
           var2_intLifetime1 = -49 / ((param0 + 45) / 60);
           cb.field_c = param1;
           if (!oh.field_i &&
-            oa.field_e > jh.field_f &&
+            oa.field_e > DelegatingCanvas.field_f &&
             ArchiveProvider.field_d) {
             IntrusiveNodeHashTable.field_p = rl.field_m;
             ka.field_p = ln.field_J;
-            jh.field_f = 0;
+            DelegatingCanvas.field_f = 0;
           }
           rl.field_m = -1;
           ln.field_J = -1;
           if (oh.field_i) {
-            if (mk.field_Q != jh.field_f) {
+            if (mk.field_Q != DelegatingCanvas.field_f) {
               return;
             }
-            jh.field_f = 0;
+            DelegatingCanvas.field_f = 0;
             oh.field_i = false;
           }
           return;

@@ -352,7 +352,7 @@ final class dn extends kc {
           if (param3) {
             var6 = var6 | 8;
           }
-          if (null != rj.field_i) {
+          if (null != AudioService.field_i) {
             var6 = var6 | 16;
           }
           he.field_e.writeByte(var6, (byte) -54);
@@ -361,8 +361,8 @@ final class dn extends kc {
             var7 = "";
           }
           he.field_e.a(var7, param2 ^ 23377);
-          if (rj.field_i != null) {
-            he.field_e.a(rj.field_i, (byte) -110);
+          if (AudioService.field_i != null) {
+            he.field_e.a(AudioService.field_i, (byte) -110);
           }
           vd.a(false, he.field_e, nl.field_Jb, jf.field_a, q.field_K);
           if (param2 != 116) {

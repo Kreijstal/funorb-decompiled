@@ -38,7 +38,7 @@ final class ui extends rl {
           }
           var5 = var4;
           if (bd.a((byte) -68, var5)) {
-            stackIn_8_0 = ji.field_i;
+            stackIn_8_0 = KeyboardInputHandler.field_i;
             return stackIn_8_0;
           }
           if (ko.a(-128, var5)) {
@@ -54,7 +54,7 @@ final class ui extends rl {
             return stackIn_17_0;
           }
           if (var6.length() <= 0) {
-            stackIn_32_0 = hk.field_r;
+            stackIn_32_0 = MusicPatchPcmStream.field_r;
             return stackIn_32_0;
           }
           if (hm.a(var5, var6, -1)) {
@@ -66,7 +66,7 @@ final class ui extends rl {
             return stackIn_26_0;
           }
           if (!w.a(var6, var5, 0)) {
-            return ji.field_i;
+            return KeyboardInputHandler.field_i;
           }
           stackIn_30_0 = rg.field_f;
           return stackIn_30_0;

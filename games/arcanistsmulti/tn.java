@@ -188,23 +188,23 @@ final class tn extends kc {
         var17 = ArcanistsMulti.field_G ? 1 : 0;
         if (param3 >= param11) {
           if (param6 > param3) {
-            dh.a(param10, param5, 127, param6, param9, param13, param11, de.field_l, param3, param2, param12, param7, param8, param0, param14, param15, param1);
+            dh.a(param10, param5, 127, param6, param9, param13, param11, SoftwareRasterizer.field_l, param3, param2, param12, param7, param8, param0, param14, param15, param1);
           } else {
             if (param6 <= param11) {
-              dh.a(param5, param7, 109, param3, param1, param0, param6, de.field_l, param11, param13, param9, param10, param15, param2, param8, param14, param12);
+              dh.a(param5, param7, 109, param3, param1, param0, param6, SoftwareRasterizer.field_l, param11, param13, param9, param10, param15, param2, param8, param14, param12);
             } else {
-              dh.a(param5, param10, 97, param3, param12, param0, param11, de.field_l, param6, param2, param9, param7, param14, param13, param8, param15, param1);
+              dh.a(param5, param10, 97, param3, param12, param0, param11, SoftwareRasterizer.field_l, param6, param2, param9, param7, param14, param13, param8, param15, param1);
             }
           }
         } else {
           if (param6 <= param11) {
             if (param3 >= param6) {
-              dh.a(param7, param5, 89, param11, param9, param2, param6, de.field_l, param3, param13, param1, param10, param8, param0, param15, param14, param12);
+              dh.a(param7, param5, 89, param11, param9, param2, param6, SoftwareRasterizer.field_l, param3, param13, param1, param10, param8, param0, param15, param14, param12);
             } else {
-              dh.a(param7, param10, 95, param11, param12, param2, param3, de.field_l, param6, param0, param1, param5, param14, param13, param15, param8, param9);
+              dh.a(param7, param10, 95, param11, param12, param2, param3, SoftwareRasterizer.field_l, param6, param0, param1, param5, param14, param13, param15, param8, param9);
             }
           } else {
-            dh.a(param10, param7, 127, param6, param1, param13, param3, de.field_l, param11, param0, param12, param5, param15, param2, param14, param8, param9);
+            dh.a(param10, param7, 127, param6, param1, param13, param3, SoftwareRasterizer.field_l, param11, param0, param12, param5, param15, param2, param14, param8, param9);
           }
         }
         if (param4 >= -104) {

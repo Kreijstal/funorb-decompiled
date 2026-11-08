@@ -9,7 +9,7 @@ abstract class nn extends DualLinkNode {
     static int field_p;
     static int[][] field_n;
     int field_r;
-    static og field_o;
+    static PlatformTask field_o;
 
     abstract boolean f(byte param0);
 
@@ -135,7 +135,7 @@ abstract class nn extends DualLinkNode {
           sk.field_f = qe.a(param8, "opentome", "lobby", 71);
           ec.field_i = qe.a(param8, "allowspectators", "lobby", 88);
           vm.field_c = new String[5];
-          vm.field_c[4] = io.field_C;
+          vm.field_c[4] = MusicCrossfadeStream.field_C;
           vm.field_c[1] = ne.field_a;
           vm.field_c[0] = wm.field_F;
           vm.field_c[2] = um.field_d;
@@ -161,8 +161,8 @@ abstract class nn extends DualLinkNode {
           ad.field_c = new kc(0L, ia.field_a);
           tj.field_o = new kc(0L, vf.field_u, of.field_k);
           hg.field_e = new kc(0L, rn.field_S, lc.field_c);
-          ci.field_a = new kc(0L, rn.field_S, ba.field_c);
-          lo.field_r = new kc(0L, rn.field_S, dk.field_h);
+          ci.field_a = new kc(0L, rn.field_S, PatchEnvelopeSet.field_c);
+          lo.field_r = new kc(0L, rn.field_S, CanvasRasterBuffer.field_h);
           vc.field_j = new kc(0L, rn.field_S, g.field_b);
           jo.field_a = new kc(0L, vf.field_i, kh.field_a);
           ee.field_g = new dn(0L, new kc(0L, (kc) null), am.field_c, IntrusiveDeque.field_i);
@@ -175,7 +175,7 @@ abstract class nn extends DualLinkNode {
           if (fc.field_a) {
             stackIn_6_0 = null;
             stackIn_6_1 = null;
-            stackIn_6_4 = ga.field_t;
+            stackIn_6_4 = ImageProducerRasterBuffer.field_t;
           } else {
             stackIn_6_0 = null;
             stackIn_6_1 = null;
@@ -225,7 +225,7 @@ abstract class nn extends DualLinkNode {
           IntrusiveNodeHashTable.field_o = new kc(0L, th.field_c, gb.field_a.toUpperCase());
           nl.field_Db = new kc(0L, wa.field_Pb);
           mi.field_m = new kc(0L, ia.field_a);
-          ib.field_s = new kc(0L, dd.field_b, o.field_o.toUpperCase());
+          ib.field_s = new kc(0L, dd.field_b, MusicPatchNode.field_o.toUpperCase());
           IndexedSpriteState.field_e = new nl[param2 + 4][];
           wd.field_g = new kc[4 + param2];
           wd.field_g[0] = new kc(0L, mi.field_A, gg.field_i);
@@ -294,7 +294,7 @@ abstract class nn extends DualLinkNode {
             }
           }
           go.field_d = new kc(0L, ko.field_h);
-          dk.field_k = new kc(0L, ko.field_h);
+          CanvasRasterBuffer.field_k = new kc(0L, ko.field_h);
           jf.field_d = new kc(0L, j.field_f);
           jf.field_d.a(IntrusiveNode.field_c, (byte) 119);
           var17 = jf.field_d;
@@ -317,7 +317,7 @@ abstract class nn extends DualLinkNode {
             }
           }
           oh.field_h.a(go.field_d, 13);
-          oh.field_h.a(dk.field_k, 23);
+          oh.field_h.a(CanvasRasterBuffer.field_k, 23);
           oh.field_h.a(jf.field_d, 110);
           hf.field_t = new kc(0L, be.field_l, mb.field_O.toUpperCase());
           gj.field_d = new kc(0L, gn.field_c, f.field_i.toUpperCase());

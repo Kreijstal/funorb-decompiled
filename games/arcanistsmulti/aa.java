@@ -31,16 +31,16 @@ final class aa extends IntrusiveNode {
           ci.field_e = fj.a("commonui", -22612, param3, "jagex_logo_grey");
           af.field_Jb = qe.a(param3, "button", "commonui", 86);
           qk.field_lb = nl.a((byte) 31, param3, "validation", "commonui");
-          vc.field_e = (dj) ((Object) rm.a("arezzo12", param1, "commonui", -119, param3));
-          ia.field_c = (dj) ((Object) rm.a("arezzo14", param1, "commonui", -120, param3));
-          go.field_k = (dj) ((Object) rm.a("arezzo14bold", param1, "commonui", -123, param3));
+          vc.field_e = (BitmapFont) ((Object) rm.a("arezzo12", param1, "commonui", -119, param3));
+          ia.field_c = (BitmapFont) ((Object) rm.a("arezzo14", param1, "commonui", -120, param3));
+          go.field_k = (BitmapFont) ((Object) rm.a("arezzo14bold", param1, "commonui", -123, param3));
           var17 = new Sprite(param2.a("", "button.gif", -1), (java.awt.Component) ((Object) on.field_c));
           af.a("dropdown", "commonui", 19412, param3);
           var5 = pk.a("commonui", 0, "screen_options", param3);
-          fg.field_k = new IndexedSprite[4];
+          MusicPatch.field_k = new IndexedSprite[4];
           oa.field_d = new IndexedSprite[4];
           qj.field_j = new IndexedSprite[4];
-          var6 = new IndexedSprite[][]{oa.field_d, fg.field_k, qj.field_j};
+          var6 = new IndexedSprite[][]{oa.field_d, MusicPatch.field_k, qj.field_j};
           var19 = new int[4][];
           var16 = var19;
           var7 = var16;
@@ -64,18 +64,18 @@ final class aa extends IntrusiveNode {
           }
           var9Lifetime1 = var17.field_y;
           ec.a(65280);
-          var17.a();
-          de.e(0, 0, de.field_e, de.field_j);
+          var17.makeRasterTarget();
+          SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.field_e, SoftwareRasterizer.field_j);
           var15 = new Sprite(var9Lifetime1, var9Lifetime1);
           var18 = var15;
-          var18.a();
-          var17.h(0, 0);
+          var18.makeRasterTarget();
+          var17.drawOpaque(0, 0);
           var11 = new Sprite(var9Lifetime1, var9Lifetime1);
-          var11.a();
-          var17.h(-var17.field_q + var9Lifetime1, 0);
+          var11.makeRasterTarget();
+          var17.drawOpaque(-var17.field_q + var9Lifetime1, 0);
           var12 = new Sprite(-(var9Lifetime1 * 2) + var17.field_q, var9Lifetime1);
-          var12.a();
-          var17.h(-var9Lifetime1, 0);
+          var12.makeRasterTarget();
+          var17.drawOpaque(-var9Lifetime1, 0);
           oo.c(-15405);
           af.field_Jb = new Sprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
@@ -103,7 +103,7 @@ final class aa extends IntrusiveNode {
         field_h = null;
     }
 
-    final static uj[] a(dl param0, byte param1) {
+    final static uj[] a(PlatformTaskDispatcher param0, byte param1) {
         int var5 = 0;
         uj[] stackIn_4_0 = null;
         uj[] stackIn_10_0 = null;
@@ -118,7 +118,7 @@ final class aa extends IntrusiveNode {
         uj[] var4 = null;
         uj var6 = null;
         int var7 = 0;
-        og var8 = null;
+        PlatformTask var8 = null;
         int[] var9 = null;
         int[] var10 = null;
         var7 = ArcanistsMulti.field_G ? 1 : 0;

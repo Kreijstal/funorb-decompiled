@@ -4,7 +4,7 @@
 final class gm implements pf {
     static int[] field_g;
     static String field_i;
-    private dj field_m;
+    private BitmapFont field_m;
     static Sprite field_l;
     static IntrusiveDeque field_j;
     static String field_n;
@@ -71,9 +71,9 @@ final class gm implements pf {
             stackIn_5_0 = 3249872;
           }
           var6_int = stackIn_5_0;
-          this.field_m.a("<u=" + Integer.toString(var6_int, 16) + ">" + param0.field_g + "</u>", param2 + param0.field_n, param3 + param0.field_j, param0.field_v, param0.field_k, var6_int, -1, this.field_k, this.field_e, this.field_m.field_C + this.field_m.field_m);
+          this.field_m.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param0.field_g + "</u>", param2 + param0.field_n, param3 + param0.field_j, param0.field_v, param0.field_k, var6_int, -1, this.field_k, this.field_e, this.field_m.field_C + this.field_m.field_m);
           if (param0.d(-2116)) {
-            var7 = this.field_m.b(param0.field_g);
+            var7 = this.field_m.textWidth(param0.field_g);
             var8 = this.field_m.field_C + this.field_m.field_m;
             var9 = param0.field_n + param2;
             if (this.field_k == 2) {
@@ -118,7 +118,7 @@ final class gm implements pf {
         this.field_m = ia.field_c;
     }
 
-    gm(dj param0, int param1, int param2) {
+    gm(BitmapFont param0, int param1, int param2) {
         try {
           this.field_m = param0;
           this.field_k = param1;

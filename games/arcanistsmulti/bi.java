@@ -15,18 +15,18 @@ final class bi extends rn implements el {
         RuntimeException decompiledCaughtException = null;
         var3 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          nb.a(true, ao.field_g, -24595, 0, je.field_b, param1, tm.field_g);
-          for (var2_int = 0; je.field_b > var2_int; var2_int++) {
+          GzipDecoder.a(true, ao.field_g, -24595, 0, MouseInputHandler.field_b, param1, tm.field_g);
+          for (var2_int = 0; MouseInputHandler.field_b > var2_int; var2_int++) {
             ki.field_r[var2_int + param1] = var2_int;
           }
           if (param0 > -103) {
             field_U = (kc) null;
           }
-          nb.a(false, ld.field_m, -24595, param1, param1 + je.field_b, param1 + param1, qa.field_m);
-          if (param1 >= je.field_b) {
+          GzipDecoder.a(false, ld.field_m, -24595, param1, param1 + MouseInputHandler.field_b, param1 + param1, qa.field_m);
+          if (param1 >= MouseInputHandler.field_b) {
             return;
           }
-          je.field_b = param1;
+          MouseInputHandler.field_b = param1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -36,9 +36,9 @@ final class bi extends rn implements el {
     }
 
     final static Object a(boolean param0, int param1, byte[] param2) {
-        wi var3 = null;
+        DirectByteStorage var3 = null;
         RuntimeException var3_ref = null;
-        wi stackIn_8_0 = null;
+        DirectByteStorage stackIn_8_0 = null;
         byte[] stackIn_11_0 = null;
         byte[] stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
@@ -53,8 +53,8 @@ final class bi extends rn implements el {
             return null;
           }
           if (136 < param2.length) {
-            var3 = new wi();
-            ((bg) ((Object) var3)).a(110, param2);
+            var3 = new DirectByteStorage();
+            ((ByteStorage) ((Object) var3)).a(110, param2);
             stackIn_8_0 = var3;
             return stackIn_8_0;
           }

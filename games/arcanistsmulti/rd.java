@@ -11,10 +11,10 @@ final class rd implements qi {
 
     final static ma b(int param0) {
         if (param0 == -15438) {
-          return new ma(0, 0, io.field_n.field_p, 0, (pf) null, io.field_n.field_x, io.field_n.field_g, io.field_n.field_p, io.field_n.field_p, io.field_n.field_z, io.field_n.field_j, false, true, 32768, 0);
+          return new ma(0, 0, MusicCrossfadeStream.field_n.field_p, 0, (pf) null, MusicCrossfadeStream.field_n.field_x, MusicCrossfadeStream.field_n.field_g, MusicCrossfadeStream.field_n.field_p, MusicCrossfadeStream.field_n.field_p, MusicCrossfadeStream.field_n.field_z, MusicCrossfadeStream.field_n.field_j, false, true, 32768, 0);
         }
         field_f = (String) null;
-        return new ma(0, 0, io.field_n.field_p, 0, (pf) null, io.field_n.field_x, io.field_n.field_g, io.field_n.field_p, io.field_n.field_p, io.field_n.field_z, io.field_n.field_j, false, true, 32768, 0);
+        return new ma(0, 0, MusicCrossfadeStream.field_n.field_p, 0, (pf) null, MusicCrossfadeStream.field_n.field_x, MusicCrossfadeStream.field_n.field_g, MusicCrossfadeStream.field_n.field_p, MusicCrossfadeStream.field_n.field_p, MusicCrossfadeStream.field_n.field_z, MusicCrossfadeStream.field_n.field_j, false, true, 32768, 0);
     }
 
     public static void a(int param0) {

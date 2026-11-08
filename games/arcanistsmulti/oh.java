@@ -2,16 +2,16 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class oh extends IntrusiveNode {
-    og[] field_n;
+    PlatformTask[] field_n;
     int[] field_p;
-    og[] field_g;
+    PlatformTask[] field_g;
     static String field_q;
     int field_m;
     int[] field_o;
     int field_s;
     static hb field_r;
     static boolean field_i;
-    static lb field_k;
+    static AudioOutput field_k;
     int[] field_j;
     byte[][][] field_l;
     static kc field_h;

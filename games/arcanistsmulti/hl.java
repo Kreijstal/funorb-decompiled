@@ -40,19 +40,19 @@ final class hl extends IntrusiveNode {
           var7 = param4 + param0;
           var8 = -param4 + param1;
           var9 = param1 + param4;
-          if (var8 < de.field_i) {
-            var8 = de.field_i;
+          if (var8 < SoftwareRasterizer.field_i) {
+            var8 = SoftwareRasterizer.field_i;
           }
-          if (de.field_h < var9) {
-            var9 = de.field_h;
+          if (SoftwareRasterizer.field_h < var9) {
+            var9 = SoftwareRasterizer.field_h;
           }
-          if (var6 < de.field_c) {
-            var6 = de.field_c;
+          if (var6 < SoftwareRasterizer.field_c) {
+            var6 = SoftwareRasterizer.field_c;
           }
-          if (var7 > de.field_k) {
-            var7 = de.field_k;
+          if (var7 > SoftwareRasterizer.field_k) {
+            var7 = SoftwareRasterizer.field_k;
           }
-          var24 = de.field_l;
+          var24 = SoftwareRasterizer.field_l;
           var23 = var24;
           var10 = var23;
           if (param3 != 2232) {
@@ -68,7 +68,7 @@ final class hl extends IntrusiveNode {
                 if (var14 == 0) {
                   var14 = 1;
                 }
-                var11 = var16 + var15 * de.field_e;
+                var11 = var16 + var15 * SoftwareRasterizer.field_e;
                 var17 = 256 + param2 * var14 / var5_int - param2;
                 var18 = var24[var11];
                 var19 = var18 >> 16 & 255;

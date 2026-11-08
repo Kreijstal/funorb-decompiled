@@ -25,12 +25,12 @@ final class v {
     private int field_i;
     private int field_r;
 
-    final uk a(int param0) {
-        this.field_j = o.field_r;
+    final FullscreenFocusCanvas a(int param0) {
+        this.field_j = MusicPatchNode.field_r;
         this.field_r = co.field_c;
         this.field_a.a(this.field_m, this.field_c, 120);
         jm.field_j = false;
-        uk var2 = ol.a(0, 0, false, fi.field_d, this.field_c, this.field_m);
+        FullscreenFocusCanvas var2 = ol.a(0, 0, false, fi.field_d, this.field_c, this.field_m);
         if (param0 > 116) {
           if (var2 == null) {
             this.a(true);
@@ -153,7 +153,7 @@ final class v {
               }
             }
           }
-          if (o.field_r != var2) {
+          if (MusicPatchNode.field_r != var2) {
             this.field_a.a(var2, var3, 121);
           } else {
             if (co.field_c != var3) {
@@ -161,7 +161,7 @@ final class v {
             }
           }
           if (this.field_d > 0) {
-            ta.field_e = (-o.field_r + this.field_d) / 2;
+            ta.field_e = (-MusicPatchNode.field_r + this.field_d) / 2;
           }
           return;
         }
@@ -248,7 +248,7 @@ final class v {
             }
           }
         }
-        if (o.field_r != var2) {
+        if (MusicPatchNode.field_r != var2) {
           this.field_a.a(var2, var3Lifetime1, 121);
         } else {
           if (co.field_c != var3Lifetime1) {
@@ -256,7 +256,7 @@ final class v {
           }
         }
         if (this.field_d > 0) {
-          ta.field_e = (-o.field_r + this.field_d) / 2;
+          ta.field_e = (-MusicPatchNode.field_r + this.field_d) / 2;
         }
         return;
     }
@@ -363,11 +363,11 @@ final class v {
             }
             return;
           }
-          if (this.field_d > o.field_r) {
-            ta.field_e = (-o.field_r + this.field_d) / 2;
+          if (this.field_d > MusicPatchNode.field_r) {
+            ta.field_e = (-MusicPatchNode.field_r + this.field_d) / 2;
           } else {
             if (this.field_d <= 0) {
-              if (this.field_o == o.field_r &&
+              if (this.field_o == MusicPatchNode.field_r &&
                 this.field_e == co.field_c) {
                 return;
               }
@@ -397,15 +397,15 @@ final class v {
             }
             return;
           }
-          if (this.field_d > o.field_r) {
-            ta.field_e = (-o.field_r + this.field_d) / 2;
+          if (this.field_d > MusicPatchNode.field_r) {
+            ta.field_e = (-MusicPatchNode.field_r + this.field_d) / 2;
           } else {
             if (this.field_d > 0) {
               ta.field_e = 0;
             }
           }
         }
-        if (this.field_o == o.field_r &&
+        if (this.field_o == MusicPatchNode.field_r &&
           this.field_e == co.field_c) {
           return;
         }

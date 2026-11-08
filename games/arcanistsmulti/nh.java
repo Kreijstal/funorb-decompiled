@@ -8,7 +8,7 @@ final class nh extends nn {
     static String field_y;
     private Object field_A;
     static String field_u;
-    static hh field_w;
+    static MouseWheelHandler field_w;
     static String field_v;
 
     nh(Object param0, int param1) {
@@ -156,7 +156,7 @@ final class nh extends nn {
             }
             var6 = mf.a(-1, var4_ref_String);
             var7_ref = var1.readString(-1);
-            var8 = gk.a((CharSequence) ((Object) var4_ref_String), -13);
+            var8 = Js5ArchiveManager.a((CharSequence) ((Object) var4_ref_String), -13);
             if (null == var8) {
               var8 = var4_ref_String;
             }
@@ -196,7 +196,7 @@ final class nh extends nn {
               if (param0 < 20) {
                 field_u = (String) null;
               }
-              jh.a((Throwable) null, "F1: " + nn.g((byte) -25), (byte) 20);
+              DelegatingCanvas.a((Throwable) null, "F1: " + nn.g((byte) -25), (byte) 20);
               ka.b(false);
               return;
             }
@@ -221,12 +221,12 @@ final class nh extends nn {
           if (var6Lifetime1 == null) {
             var6Lifetime1 = im.a(0, var5Lifetime1);
             if (var6Lifetime1 != null) {
-              ie.field_Qb.put(var6Lifetime1, (long)gk.a((CharSequence) ((Object) var4_ref_StringLifetime1), -13).hashCode(), (byte) 119);
+              ie.field_Qb.put(var6Lifetime1, (long)Js5ArchiveManager.a((CharSequence) ((Object) var4_ref_StringLifetime1), -13).hashCode(), (byte) 119);
             }
           }
           if (null == var6Lifetime1) {
             var6Lifetime1 = new wa();
-            ie.field_Qb.put(var6Lifetime1, (long)gk.a((CharSequence) ((Object) var4_ref_StringLifetime1), -13).hashCode(), (byte) 110);
+            ie.field_Qb.put(var6Lifetime1, (long)Js5ArchiveManager.a((CharSequence) ((Object) var4_ref_StringLifetime1), -13).hashCode(), (byte) 110);
             fieldTemp$0 = rc.field_m;
             rc.field_m = rc.field_m + 1;
             var6Lifetime1.field_Bb = fieldTemp$0;

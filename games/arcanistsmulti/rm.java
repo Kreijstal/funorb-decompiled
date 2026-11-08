@@ -203,7 +203,7 @@ final class rm {
             this.field_n = this.field_n + 1;
             this.field_b[fieldTemp$1] = (byte) 0;
           }
-          sf.a(this.field_g, 0, this.field_b, 32, 32);
+          ArraySupport.copyBytes(this.field_g, 0, this.field_b, 32, 32);
           if (param0 < 73) {
             this.field_n = -98;
           }
@@ -344,7 +344,7 @@ final class rm {
             }
             var4 = new byte[var3_int];
             param0.position = param0.position + kh.field_g.a(0, (byte) -126, var4, var3_int, param0.payload, param0.position);
-            var5 = ba.a(0, var3_int, (byte) -124, var4);
+            var5 = PatchEnvelopeSet.a(0, var3_int, (byte) -124, var4);
             if (param2 < -55) {
               stackIn_7_0 = var5;
               return stackIn_7_0;
@@ -404,11 +404,11 @@ final class rm {
         }
     }
 
-    final static nc a(String param0, ResourceArchive param1, String param2, int param3, ResourceArchive param4) {
+    final static CoverageBitmapFont a(String param0, ResourceArchive param1, String param2, int param3, ResourceArchive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        nc stackIn_3_0 = null;
+        CoverageBitmapFont stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

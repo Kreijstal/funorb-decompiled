@@ -19,7 +19,7 @@ final class fm {
           var5.position = var5.position + 1;
           var3 = var5.position;
           var5.writeByte(2, (byte) -12);
-          var5.a(gh.field_E, 0, (byte) -86, gh.field_E.length);
+          var5.a(MidiPcmStream.field_E, 0, (byte) -86, MidiPcmStream.field_E.length);
           var5.writeByte(q.field_L, (byte) -14);
           var5.writeByte(q.field_N, (byte) -3);
           var5.a(ng.field_D, 0, (byte) -86, ng.field_D.length);
@@ -32,7 +32,7 @@ final class fm {
         var4.position = var4.position + 1;
         var3Lifetime1 = var4.position;
         var4.writeByte(2, (byte) -12);
-        var4.a(gh.field_E, 0, (byte) -86, gh.field_E.length);
+        var4.a(MidiPcmStream.field_E, 0, (byte) -86, MidiPcmStream.field_E.length);
         var4.writeByte(q.field_L, (byte) -14);
         var4.writeByte(q.field_N, (byte) -3);
         var4.a(ng.field_D, 0, (byte) -86, ng.field_D.length);

@@ -4,7 +4,7 @@
 final class fk extends IntrusiveNode {
     static long field_k;
     static String field_i;
-    kd field_m;
+    PcmSampleStream field_m;
     static Sprite[] field_g;
     IntrusiveNode field_n;
     int field_l;
@@ -77,7 +77,7 @@ final class fk extends IntrusiveNode {
           param1 = param1 + param5.field_o;
           ce.field_k = 0;
           var6_int = 0;
-          di.field_m = 0;
+          NodeHashTable.field_m = 0;
           jo.field_b = false;
           if (param4 != -1) {
             field_k = -23L;
@@ -126,7 +126,7 @@ final class fk extends IntrusiveNode {
                 if (var27[var13] != 0) {
                   if (var25[var15] != 0) {
                     ce.field_k = ce.field_k + (var12 + (var11 - var19));
-                    di.field_m = di.field_m + (-var20 + (var10 + var9));
+                    NodeHashTable.field_m = NodeHashTable.field_m + (-var20 + (var10 + var9));
                     var6_int++;
                     if (-1 == var27[var13]) {
                       jo.field_b = true;
@@ -134,7 +134,7 @@ final class fk extends IntrusiveNode {
                   }
                   if (var18[var15 + 1] != 0) {
                     ce.field_k = ce.field_k + (-var19 + var11 + var12);
-                    di.field_m = di.field_m + (-var20 + (var9 + var10 + 1));
+                    NodeHashTable.field_m = NodeHashTable.field_m + (-var20 + (var9 + var10 + 1));
                     if (var27[var13] == -1) {
                       jo.field_b = true;
                     }
@@ -142,14 +142,14 @@ final class fk extends IntrusiveNode {
                   }
                   if (0 != var18[var15 + var7]) {
                     ce.field_k = ce.field_k + (1 - var19 + (var12 + var11));
-                    di.field_m = di.field_m + (-var20 + var10 + var9);
+                    NodeHashTable.field_m = NodeHashTable.field_m + (-var20 + var10 + var9);
                     var6_int++;
                     if (var27[var13] == -1) {
                       jo.field_b = true;
                     }
                   }
                   if (var18[1 + (var15 + var7)] != 0) {
-                    di.field_m = di.field_m + (-var20 + (var10 + (var9 + 1)));
+                    NodeHashTable.field_m = NodeHashTable.field_m + (-var20 + (var10 + (var9 + 1)));
                     ce.field_k = ce.field_k + (1 + (-var19 + (var12 + var11)));
                     var6_int++;
                     if (-1 == var27[var13]) {
@@ -169,7 +169,7 @@ final class fk extends IntrusiveNode {
             if (var6_int <= 0) {
               return false;
             }
-            di.field_m = di.field_m / var6_int;
+            NodeHashTable.field_m = NodeHashTable.field_m / var6_int;
             ce.field_k = ce.field_k / var6_int;
             return true;
           }
@@ -207,7 +207,7 @@ final class fk extends IntrusiveNode {
         for (var2 = param0; h.field_J > var2; var2++) {
           var1[var2] = new IndexedSprite(pb.field_g, gn.field_a, hl.field_l[var2], be.field_d[var2], jg.field_p[var2], ho.field_i[var2], ln.field_I[var2], ph.field_c);
         }
-        dk.a(-18229);
+        CanvasRasterBuffer.a(-18229);
         return var1;
     }
 
@@ -218,7 +218,7 @@ final class fk extends IntrusiveNode {
             fk.a((Sprite) null, -12);
           }
           ec.a(65280);
-          de.a(param0.field_A, param0.field_n, param0.field_w);
+          SoftwareRasterizer.setTarget(param0.field_A, param0.field_n, param0.field_w);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "fk.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -276,7 +276,7 @@ final class fk extends IntrusiveNode {
             var11.unlink(true);
           } else {
             if (var2 != 2) {
-              jh.a((Throwable) null, "A1: " + nn.g((byte) -25), (byte) 20);
+              DelegatingCanvas.a((Throwable) null, "A1: " + nn.g((byte) -25), (byte) 20);
               ka.b(false);
             } else {
               var14 = (fe) (i.field_e.first(12623));
@@ -312,7 +312,7 @@ final class fk extends IntrusiveNode {
             try {
               var3 = new java.net.URL(param0.getCodeBase(), param2);
               var3 = nm.a(param0, var3, -31843);
-              jh.a(var3.toString(), param0, true, (byte) -109);
+              DelegatingCanvas.a(var3.toString(), param0, true, (byte) -109);
               if (param1) {
                 field_i = (String) null;
               }
@@ -358,25 +358,25 @@ final class fk extends IntrusiveNode {
         try {
           var2_int = an.field_g;
           var3 = me.field_I;
-          var4 = IntrusiveNode.field_c.field_Z.a(param1, 500);
-          var5 = 6 + IntrusiveNode.field_c.field_Z.c(param1, 500);
-          var6 = 2 + var4 * ga.field_r;
+          var4 = IntrusiveNode.field_c.field_Z.wrappedLineCount(param1, 500);
+          var5 = 6 + IntrusiveNode.field_c.field_Z.getWrappedWidth(param1, 500);
+          var6 = 2 + var4 * ImageProducerRasterBuffer.field_r;
           var7 = ih.a(var2_int, var5, 12, 246);
           var8 = ql.a(param0 + 10, 20, var6, var3);
-          de.a(var7, var8, var5, var6, 0);
-          de.d(var7 + 1, 1 + var8, -2 + var5, -2 + var6, 16777088);
-          IntrusiveNode.field_c.field_Z.a(param1, var7 + 3, 1 + (var8 + oc.field_i - IntrusiveNode.field_c.field_Z.field_C), 500, 1000, 0, -1, param0, 0, ga.field_r);
+          SoftwareRasterizer.drawRectangle(var7, var8, var5, var6, 0);
+          SoftwareRasterizer.fillRectangle(var7 + 1, 1 + var8, -2 + var5, -2 + var6, 16777088);
+          IntrusiveNode.field_c.field_Z.drawParagraph(param1, var7 + 3, 1 + (var8 + oc.field_i - IntrusiveNode.field_c.field_Z.field_C), 500, 1000, 0, -1, param0, 0, ImageProducerRasterBuffer.field_r);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "fk.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    fk(kd param0, IntrusiveNode param1) {
+    fk(PcmSampleStream param0, IntrusiveNode param1) {
         try {
           this.field_m = param0;
-          this.field_l = param0.f();
+          this.field_l = param0.getTargetVolume();
           this.field_n = param1;
-          this.field_m.c(si.field_l * this.field_l + 128 >> 8);
+          this.field_m.setVolumeQ6(si.field_l * this.field_l + 128 >> 8);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "fk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

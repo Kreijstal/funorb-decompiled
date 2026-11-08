@@ -7,13 +7,13 @@ final class hn implements Runnable {
     private int field_b;
     private PacketBuffer field_h;
     static String field_c;
-    private og field_j;
+    private PlatformTask field_j;
     static IntrusiveDeque field_q;
     private java.net.URL field_m;
     static String field_l;
-    private og field_a;
-    private dl field_n;
-    private og field_g;
+    private PlatformTask field_a;
+    private PlatformTaskDispatcher field_n;
+    private PlatformTask field_g;
     static int[] field_k;
     static String field_o;
     static String field_i;
@@ -308,7 +308,7 @@ final class hn implements Runnable {
         this.field_g = null;
     }
 
-    hn(dl param0, java.net.URL param1, int param2) {
+    hn(PlatformTaskDispatcher param0, java.net.URL param1, int param2) {
         try {
           this.field_m = param1;
           this.field_n = param0;

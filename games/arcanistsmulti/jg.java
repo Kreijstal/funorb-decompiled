@@ -100,7 +100,7 @@ final class jg {
         this.field_q = mc.field_c;
         this.field_d = i.field_f;
         if (param0) {
-          this.field_f = ga.field_s;
+          this.field_f = ImageProducerRasterBuffer.field_s;
         } else {
           this.field_f = null;
         }

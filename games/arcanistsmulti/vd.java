@@ -7,7 +7,7 @@ final class vd {
     int field_g;
     static int field_k;
     static int field_l;
-    static dj field_c;
+    static BitmapFont field_c;
     static Sprite field_b;
     static String field_j;
     static IntrusiveDeque field_d;
@@ -39,7 +39,7 @@ final class vd {
           java.math.BigInteger var5 = (java.math.BigInteger) null;
           vd.a(true, (PacketBuffer) null, (java.math.BigInteger) null, (PacketBuffer) null, (java.math.BigInteger) null);
         }
-        qn.a(ra.field_h, -115, ga.field_r, param2, param3, param0, dh.field_Gb);
+        qn.a(ra.field_h, -115, ImageProducerRasterBuffer.field_r, param2, param3, param0, dh.field_Gb);
     }
 
     final static void a(boolean param0, PacketBuffer param1, java.math.BigInteger param2, PacketBuffer param3, java.math.BigInteger param4) {

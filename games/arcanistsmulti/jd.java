@@ -248,8 +248,8 @@ final class jd {
           this.field_f = (int[]) null;
         }
         var2.field_b = this.field_b;
-        sf.a(this.field_a, 0, var2.field_a, 0, 256);
-        sf.a(this.field_f, 0, var2.field_f, 0, 256);
+        ArraySupport.copyInts(this.field_a, 0, var2.field_a, 0, 256);
+        ArraySupport.copyInts(this.field_f, 0, var2.field_f, 0, 256);
         var2.field_d = this.field_d;
         var2.field_k = this.field_k;
         var2.field_h = this.field_h;

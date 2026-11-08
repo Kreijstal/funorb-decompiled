@@ -122,8 +122,8 @@ final class eh {
             stackIn_3_0 = fn.field_h;
             return stackIn_3_0;
           }
-          if (je.a(16, param2)) {
-            stackIn_7_0 = sd.field_l;
+          if (MouseInputHandler.a(16, param2)) {
+            stackIn_7_0 = BufferedRandomAccessFile.field_l;
             return stackIn_7_0;
           }
           if (SpriteState.field_t != 2) {
@@ -139,7 +139,7 @@ final class eh {
             return stackIn_19_0;
           }
           if (kl.a(param2, 1)) {
-            stackIn_23_0 = tj.a(114, new String[]{param2}, ga.field_q);
+            stackIn_23_0 = tj.a(114, new String[]{param2}, ImageProducerRasterBuffer.field_q);
             return stackIn_23_0;
           }
           var6 = he.field_e;
@@ -220,15 +220,15 @@ final class eh {
           field_b = (String) null;
         }
         if (sk.field_e >= 0) {
-          kg.field_c.field_rb = tj.a(-14, new String[]{Integer.toString(sk.field_e)}, gi.field_j);
+          kg.field_c.field_rb = tj.a(-14, new String[]{Integer.toString(sk.field_e)}, SoundCache.field_j);
         } else {
           kg.field_c.field_rb = null;
         }
         stackIn_11_0 = k.field_d;
-        stackIn_12_1 = (param0) && (!param1) && (!IntrusiveNode.field_d) && (null == wi.field_f) && (om.field_x == null);
+        stackIn_12_1 = (param0) && (!param1) && (!IntrusiveNode.field_d) && (null == DirectByteStorage.field_f) && (om.field_x == null);
         ((kc) (Object) stackIn_11_0).b(stackIn_12_1, (byte) 75);
         stackIn_18_0 = fn.field_e;
-        stackIn_19_1 = (param0) && (!param1) && (!IntrusiveNode.field_d) && (null == wi.field_f) && (null == om.field_x);
+        stackIn_19_1 = (param0) && (!param1) && (!IntrusiveNode.field_d) && (null == DirectByteStorage.field_f) && (null == om.field_x);
         ((kc) (Object) stackIn_18_0).b(stackIn_19_1, (byte) 121);
         stackIn_23_0 = gm.field_h;
         stackIn_24_1 = (param0) && (!param1) && (IntrusiveNode.field_d);
