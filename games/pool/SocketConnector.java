@@ -17,7 +17,7 @@ abstract class SocketConnector {
         return new java.net.Socket(this.field_c, this.field_a);
     }
 
-    abstract java.net.Socket a(byte param0) throws IOException;
+    abstract java.net.Socket connect(byte obfuscationGuard) throws IOException;
 
     public static void releaseStatics(int param0) {
         if (param0 != 16857) {

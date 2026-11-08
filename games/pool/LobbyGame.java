@@ -544,13 +544,13 @@ final class LobbyGame extends UiComponent {
           for (var7 = 1; param0.length() > var7; var7++) {
             var8 = param0.charAt(var7);
             if (var8 == 60) {
-              var6 = (var5_int >> 8) + param1.caretXs[0] + param4.b(param0.substring(0, var7));
+              var6 = (var5_int >> 8) + param1.caretXs[0] + param4.stringWidth(param0.substring(0, var7));
             }
             if (var6 == -1) {
               if (var8 == 32) {
                 var5_int = var5_int + param3;
               }
-              param1.caretXs[var7] = param1.caretXs[0] + (var5_int >> 8) + param4.b(param0.substring(0, 1 + var7)) - param4.measureCharacterAdvance((char) var8);
+              param1.caretXs[var7] = param1.caretXs[0] + (var5_int >> 8) + param4.stringWidth(param0.substring(0, 1 + var7)) - param4.measureCharacterAdvance((char) var8);
             } else {
               param1.caretXs[var7] = var6;
             }

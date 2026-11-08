@@ -43,8 +43,8 @@ final class TextLineLayout {
         return this.caretXs.length - 1;
     }
 
-    final static java.awt.Canvas a(byte param0) {
-        if (param0 > -34) {
+    final static java.awt.Canvas getActiveCanvas(byte obfuscationGuard) {
+        if (obfuscationGuard > -34) {
           return (java.awt.Canvas) null;
         }
         return null == MatchingTextValidator.field_u ? TimeTrialSelectScreen.field_K : (java.awt.Canvas) ((Object) MatchingTextValidator.field_u);
@@ -80,7 +80,7 @@ final class TextLineLayout {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 18) {
-            TextLineLayout.a((byte) -44);
+            TextLineLayout.getActiveCanvas((byte) -44);
           }
           if (MarkerSliderPainter.field_i.isEmpty(0)) {
             stackIn_12_0 = TextHotspotRegion.a(true, param3, param2, param0);

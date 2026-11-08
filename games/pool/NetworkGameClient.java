@@ -222,7 +222,7 @@ abstract class NetworkGameClient extends GameApplet {
             this.dispatchAccountPacket(91);
           }
           if (var4 == 12) {
-            LoginForm.a(AccountTextSupport.b(true), NanoTickClock.getApplet(109), false);
+            LoginForm.a(AccountTextSupport.getAccountStatusMessage(true), NanoTickClock.getApplet(109), false);
           }
           if (13 == var4) {
             try {
@@ -312,7 +312,7 @@ abstract class NetworkGameClient extends GameApplet {
                 IntKeyLookup.a(199);
                 break;
               case 6:
-                MenuLabelSupport.a((byte) 106);
+                MenuLabelSupport.readRankingsResponse((byte) 106);
                 break;
               case 8:
                 ReflectionRequestSupport.readReflectionCheckRequest((byte) 34, ScrollPane.field_Pb, StatefulTextPainter.field_s, PlayerContextMenu.field_e);
@@ -410,10 +410,10 @@ abstract class NetworkGameClient extends GameApplet {
           if (!MarkerSliderPainter.field_i.isEmpty(0)) {
             ByteRecordSubmission.field_m = ByteRecordSubmission.field_m + 1;
             if (GameApplet.field_l != null) {
-              GameApplet.field_l.a(false, 50, ByteRecordSubmission.field_m);
+              GameApplet.field_l.rotateAroundZStep(false, 50, ByteRecordSubmission.field_m);
             }
             if (null != ServerListLauncher.field_b) {
-              ServerListLauncher.field_b.a(false, 50, ByteRecordSubmission.field_m);
+              ServerListLauncher.field_b.rotateAroundZStep(false, 50, ByteRecordSubmission.field_m);
             }
             var6 = (AnimatedNotification) (MarkerSliderPainter.field_i.last((byte) 80));
             var2 = var6;
@@ -533,14 +533,14 @@ abstract class NetworkGameClient extends GameApplet {
         }
     }
 
-    final void l(byte param0) {
+    final void serviceStartupAndAccountFlow(byte obfuscationGuard) {
         int discarded$42 = 0;
         int discarded$43 = 0;
         int var3;
         boolean stackIn_10_1 = false;
         boolean stackIn_11_2 = false;
         var3 = Pool.field_O;
-        if (param0 > -64) {
+        if (obfuscationGuard > -64) {
           return;
         }
         if (DebouncedValidationProvider.a(true)) {
@@ -564,7 +564,7 @@ abstract class NetworkGameClient extends GameApplet {
 
     private final void readSessionCookieResponse(int param0) {
         if (param0 != 6) {
-          this.l((byte) -16);
+          this.serviceStartupAndAccountFlow((byte) -16);
         }
         String var2 = BallDebugOverlay.readPacketString(false);
         NameEntryPopup.setSessionCookie(NanoTickClock.getApplet(115), -18788, var2);
@@ -667,7 +667,7 @@ abstract class NetworkGameClient extends GameApplet {
           var3 = CachedArchiveSource.getTargetFramesPerSecond(-21282) * 1200;
           if (this.field_C ||
             !(var3 >= LogoMaterial.a(-21055)) &&
-            !(PaletteFontLoader.a((byte) 119) <= var3)) {
+            !(PaletteFontLoader.getMouseIdleTicks((byte) 119) <= var3)) {
             this.field_C = false;
             ShotEvent.closeClientSocket(-80);
             DebugTuningSupport.requestAccountInterface(param0 + 15);
@@ -800,7 +800,7 @@ abstract class NetworkGameClient extends GameApplet {
             stackIn_102_0 = -122;
             stackIn_103_1 = !(LinkButtonPainter.field_g);
             stackIn_106_2 = !(LinkButtonPainter.field_g);
-            ScoreboardNameRecord.a(stackIn_102_0, stackIn_103_1, stackIn_106_2, InstructionsScreen.field_J);
+            ScoreboardNameRecord.initializeLoginDialog(stackIn_102_0, stackIn_103_1, stackIn_106_2, InstructionsScreen.field_J);
           }
           if (Under13NoticePanel.field_T) {
             PoolGameModel.showAccountProgressForResult(4);

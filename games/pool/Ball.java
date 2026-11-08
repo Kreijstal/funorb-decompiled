@@ -264,14 +264,14 @@ final class Ball {
           SpaceObject.field_d.addSubstream(GradientPaletteSupport.field_h);
           UsernameSuggestionsPanel.field_R = new IntrusiveDeque();
         }
-        GradientPaletteSupport.field_h.a(param1);
-        GradientPaletteSupport.field_h.f(param4);
+        GradientPaletteSupport.field_h.setInputGain(param1);
+        GradientPaletteSupport.field_h.setFeedbackGain(param4);
         GradientPaletteSupport.field_h.setDampingTimeMicros(param5);
         GradientPaletteSupport.field_h.setWetGain(param0);
         if (param6 != -1) {
           field_J = (QuickChatDynamicCommand) null;
         }
-        GradientPaletteSupport.field_h.d(param2);
+        GradientPaletteSupport.field_h.setDryGain(param2);
         GradientPaletteSupport.field_h.setStereoWidth(param3);
     }
 
@@ -350,8 +350,8 @@ final class Ball {
               if (0 != var2_intLifetime1) {
                 this.field_l = ArchiveProvider.divideFixed16(var2_intLifetime1, (byte) -100, (long)this.field_l);
                 this.field_h = ArchiveProvider.divideFixed16(var2_intLifetime1, (byte) -107, (long)this.field_h);
-                this.field_a = -ArchiveProvider.divideFixed16(PasswordValidator.field_w, (byte) -117, (long)(ReflectionRequestSupport.a(this.field_h * 8, 0, PasswordValidator.field_q, ClientUiResourceState.field_g) / 50));
-                this.field_y = ArchiveProvider.divideFixed16(PasswordValidator.field_w, (byte) -118, (long)(ReflectionRequestSupport.a(this.field_l * 8, 0, PasswordValidator.field_q, ClientUiResourceState.field_g) / 50));
+                this.field_a = -ArchiveProvider.divideFixed16(PasswordValidator.field_w, (byte) -117, (long)(ReflectionRequestSupport.multiplyThreeFixed16(this.field_h * 8, 0, PasswordValidator.field_q, ClientUiResourceState.field_g) / 50));
+                this.field_y = ArchiveProvider.divideFixed16(PasswordValidator.field_w, (byte) -118, (long)(ReflectionRequestSupport.multiplyThreeFixed16(this.field_l * 8, 0, PasswordValidator.field_q, ClientUiResourceState.field_g) / 50));
                 this.field_d = NameEntryPopup.multiplyFixed16(ReflectionReplySupport.field_l, false, this.angularVelocityZ) - this.angularVelocityZ;
                 this.angularVelocityZ = this.angularVelocityZ + this.field_d;
                 this.angularVelocityY = this.angularVelocityY + this.field_y;
@@ -395,11 +395,11 @@ final class Ball {
                       }
                       this.velocityX = this.velocityX + this.field_A;
                       this.velocityY = this.velocityY + this.field_u;
-                      this.field_a = -ArchiveProvider.divideFixed16(PasswordValidator.field_w, (byte) -87, (long)(ReflectionRequestSupport.a(this.field_h * 8, 0, PasswordValidator.field_q, LogoFinalFrameLoader.field_f) / 50));
-                      this.field_y = ArchiveProvider.divideFixed16(PasswordValidator.field_w, (byte) -122, (long)(ReflectionRequestSupport.a(8 * this.field_l, 0, PasswordValidator.field_q, LogoFinalFrameLoader.field_f) / 50));
+                      this.field_a = -ArchiveProvider.divideFixed16(PasswordValidator.field_w, (byte) -87, (long)(ReflectionRequestSupport.multiplyThreeFixed16(this.field_h * 8, 0, PasswordValidator.field_q, LogoFinalFrameLoader.field_f) / 50));
+                      this.field_y = ArchiveProvider.divideFixed16(PasswordValidator.field_w, (byte) -122, (long)(ReflectionRequestSupport.multiplyThreeFixed16(8 * this.field_l, 0, PasswordValidator.field_q, LogoFinalFrameLoader.field_f) / 50));
                       this.field_d = NameEntryPopup.multiplyFixed16(ReflectionReplySupport.field_l, false, this.angularVelocityZ) - this.angularVelocityZ;
-                      this.velocityX = this.velocityX + ReflectionRequestSupport.a(this.angularVelocityZ, 0, -this.velocityY, MusicVoice.field_l);
-                      this.velocityY = this.velocityY + ReflectionRequestSupport.a(this.angularVelocityZ, 0, this.velocityX, MusicVoice.field_l);
+                      this.velocityX = this.velocityX + ReflectionRequestSupport.multiplyThreeFixed16(this.angularVelocityZ, 0, -this.velocityY, MusicVoice.field_l);
+                      this.velocityY = this.velocityY + ReflectionRequestSupport.multiplyThreeFixed16(this.angularVelocityZ, 0, this.velocityX, MusicVoice.field_l);
                       this.angularVelocityY = this.angularVelocityY + this.field_y;
                       this.angularVelocityZ = this.angularVelocityZ + this.field_d;
                       this.angularVelocityX = this.angularVelocityX + this.field_a;

@@ -41,7 +41,7 @@ final class OptionsScreen extends MenuScreen {
                 if (var3_int >= 24) {
                   throw new IOException();
                 }
-                destination.a(var2, (byte) 0, offset, 24);
+                destination.writeBytes(var2, (byte) 0, offset, 24);
                 decompiledRegionSelector0 = 0;
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -55,7 +55,7 @@ final class OptionsScreen extends MenuScreen {
                 return;
               }
             }
-            destination.a(var2, (byte) 0, offset, 24);
+            destination.writeBytes(var2, (byte) 0, offset, 24);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -119,7 +119,7 @@ final class OptionsScreen extends MenuScreen {
           var8[0] = param5;
           var8[2] = param2;
           param4[0 + param0] = SceneNodeFactory.createSceneNode(param6, var8, (byte) 101);
-          var9 = TransformRotationSupport.rotateTransformHalfTurnZ((byte) 10, LobbyPanelLayoutSupport.a((byte) 94, var8));
+          var9 = TransformRotationSupport.rotateTransformHalfTurnZ((byte) 10, LobbyPanelLayoutSupport.copyTransform((byte) 94, var8));
           var7Lifetime1 = var9;
           param4[param0 + 1] = SceneNodeFactory.createSceneNode(param6, var9, (byte) 101);
         } catch (RuntimeException runtimeException) {

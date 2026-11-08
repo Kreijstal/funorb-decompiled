@@ -125,7 +125,7 @@ final class DebugTuningSupport {
             if (decompiledFrameRemainder0) {
               if (JaggrabDownloader.field_j.position > 0) {
                 try {
-                  Atan2Support.field_c.a(JaggrabDownloader.field_j.payload, (byte) 70, JaggrabDownloader.field_j.position, 0);
+                  Atan2Support.field_c.write(JaggrabDownloader.field_j.payload, (byte) 70, JaggrabDownloader.field_j.position, 0);
                   AccountCreationForm.field_Q = MonotonicClock.monotonicTimeMillis((byte) -111);
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;

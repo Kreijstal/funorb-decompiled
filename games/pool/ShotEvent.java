@@ -87,7 +87,7 @@ final class ShotEvent extends IntrusiveNode {
         try {
           var4_int = param0 * CollisionContact.field_h.baselineHeight;
           var5 = param2 * CollisionContact.field_h.baselineHeight;
-          CollisionContact.field_h.d(param3.ballIndex + ": " + param3.describe((byte) 115), var4_int, var5, 16777215, 3355443);
+          CollisionContact.field_h.drawLeft(param3.ballIndex + ": " + param3.describe((byte) 115), var4_int, var5, 16777215, 3355443);
           if (param3.field_i != null) {
             param2++;
             param2 = ShotEvent.drawBallEventDebug(1 + param0, 30409, param2, param3.field_i);
@@ -119,7 +119,7 @@ final class ShotEvent extends IntrusiveNode {
     final static void closeClientSocket(int obfuscationGuard) {
         int var1 = 24 / ((-10 - obfuscationGuard) / 49);
         if (null != Atan2Support.field_c) {
-          Atan2Support.field_c.c(-96);
+          Atan2Support.field_c.close(-96);
           Atan2Support.field_c = null;
         }
     }

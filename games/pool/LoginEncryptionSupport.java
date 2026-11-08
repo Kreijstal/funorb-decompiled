@@ -70,7 +70,7 @@ final class LoginEncryptionSupport {
         int[] var12 = null;
         int var9Lifetime1;
         try {
-          var7_int = GrowableIntListFactory.a(8, param4);
+          var7_int = GrowableIntListFactory.alignUpToEight(8, param4);
           if (null == AwtEventQueueSupport.field_a) {
             AwtEventQueueSupport.field_a = new java.security.SecureRandom();
           }
@@ -85,9 +85,9 @@ final class LoginEncryptionSupport {
             LoginTextSupport.field_f = new PacketBuffer(var7_int);
           }
           LoginTextSupport.field_f.position = 0;
-          LoginTextSupport.field_f.a(param1, (byte) 0, param5, param4);
+          LoginTextSupport.field_f.writeBytes(param1, (byte) 0, param5, param4);
           LoginTextSupport.field_f.padWithZeros(var7_int, (byte) -8);
-          LoginTextSupport.field_f.a(32052, var12);
+          LoginTextSupport.field_f.xteaEncrypt(32052, var12);
           if (BeveledFrameSpriteFactory.field_b == null ||
             !(100 <= BeveledFrameSpriteFactory.field_b.payload.length)) {
             BeveledFrameSpriteFactory.field_b = new PacketBuffer(100);
@@ -101,9 +101,9 @@ final class LoginEncryptionSupport {
             var10++;
           }
           BeveledFrameSpriteFactory.field_b.writeShort((byte) -81, param4);
-          BeveledFrameSpriteFactory.field_b.a(param2, 116, param0);
-          param3.a(BeveledFrameSpriteFactory.field_b.payload, (byte) 0, 0, BeveledFrameSpriteFactory.field_b.position);
-          param3.a(LoginTextSupport.field_f.payload, (byte) 0, 0, LoginTextSupport.field_f.position);
+          BeveledFrameSpriteFactory.field_b.encryptRsa(param2, 116, param0);
+          param3.writeBytes(BeveledFrameSpriteFactory.field_b.payload, (byte) 0, 0, BeveledFrameSpriteFactory.field_b.position);
+          param3.writeBytes(LoginTextSupport.field_f.payload, (byte) 0, 0, LoginTextSupport.field_f.position);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

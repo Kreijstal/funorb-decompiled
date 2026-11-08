@@ -146,7 +146,7 @@ final class ThemeSelectScreen extends MenuScreen {
           }
           var1[var2] = new Sprite(DialRenderer.field_c, AccountStateQuery.field_r, AchievementsScreen.field_I[var2], LoginRequestSupport.field_d[var2], LinkButtonPainter.field_a[var2], AccountTextSupport.field_f[var2], var11);
         }
-        OpacityWidget.h(-1);
+        OpacityWidget.releaseSpriteDecoderArrays(-1);
         return var1;
     }
 
@@ -156,7 +156,7 @@ final class ThemeSelectScreen extends MenuScreen {
         if (!(this.g(1) <= param0)) {
           var7 = !this.isButtonEnabled(param0, true) ? MatchingTextValidator.field_t[param0] : TutorialSelectScreen.field_K[param0];
           var8 = -var7.field_z + (-param2 + param1) >> 1;
-          var7.a(param2 + var8, var8 + param5);
+          var7.drawAt(param2 + var8, var8 + param5);
         }
         if (this.isButtonEnabled(param0, true)) {
         }

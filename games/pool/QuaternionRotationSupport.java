@@ -72,8 +72,8 @@ final class QuaternionRotationSupport {
         return stackIn_26_0;
     }
 
-    final static void b(int param0) {
-        if (param0 != 0) {
+    final static void clearScreenForTransition(int obfuscationGuard) {
+        if (obfuscationGuard != 0) {
           return;
         }
         if (MatchingTextValidator.field_w != GameRules.field_b) {
@@ -87,7 +87,7 @@ final class QuaternionRotationSupport {
         throw new Error();
     }
 
-    final void a(boolean param0, int param1, int param2) {
+    final void rotateAroundZStep(boolean param0, int param1, int param2) {
         Quaternion var4 = new Quaternion();
         if (!param0) {
           var4.setFromAxisAngle(66, 0, 0, 65536, 64);

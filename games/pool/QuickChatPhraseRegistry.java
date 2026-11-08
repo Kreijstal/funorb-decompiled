@@ -253,10 +253,10 @@ final class QuickChatPhraseRegistry {
         return var7;
     }
 
-    final static void a(int param0, int param1, int param2, byte param3, int param4) {
-        int var5 = 35 / ((-27 - param3) / 38);
+    final static void pushRasterClip(int left, int top, int right, byte obfuscationGuard, int bottom) {
+        int var5 = 35 / ((-27 - obfuscationGuard) / 38);
         RasterStateSupport.pushRasterSnapshot((byte) -106);
-        SoftwareRasterizer.intersectClip(param0, param1, param2, param4);
+        SoftwareRasterizer.intersectClip(left, top, right, bottom);
     }
 
     public static void releaseStatics(byte param0) {

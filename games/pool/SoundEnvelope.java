@@ -14,11 +14,11 @@ final class SoundEnvelope {
     private int amplitudeQ15;
     int field_b;
 
-    final void b(PacketBuffer param0) {
-        this.field_b = param0.readUnsignedByte(-67);
-        this.field_f = param0.readInt(true);
-        this.field_a = param0.readInt(true);
-        this.decodeSegments(param0);
+    final void decode(PacketBuffer buffer) {
+        this.field_b = buffer.readUnsignedByte(-67);
+        this.field_f = buffer.readInt(true);
+        this.field_a = buffer.readInt(true);
+        this.decodeSegments(buffer);
     }
 
     final void decodeSegments(PacketBuffer param0) {

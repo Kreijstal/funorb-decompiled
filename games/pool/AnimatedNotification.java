@@ -117,7 +117,7 @@ final class AnimatedNotification extends IntrusiveNode {
           var10 = new String[16];
           var11 = CollisionContact.field_h.wrapText(param2, new int[]{320}, var10);
           for (var12 = 0; var11 > var12; var12++) {
-            var13 = CollisionContact.field_h.b(var10[var12]);
+            var13 = CollisionContact.field_h.stringWidth(var10[var12]);
             if (var9 < var13) {
               var9 = var13;
             }

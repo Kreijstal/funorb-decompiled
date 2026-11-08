@@ -253,7 +253,7 @@ final class DialWidget extends ButtonWidget {
         int var9 = 0;
         int var10 = 0;
         try {
-          var7_int = param4.b(param1) + 6;
+          var7_int = param4.stringWidth(param1) + 6;
           var8 = param4.maxDescent + param4.maxAscent + 6;
           var9 = param2 - var7_int / 2;
           if (var9 >= 0) {

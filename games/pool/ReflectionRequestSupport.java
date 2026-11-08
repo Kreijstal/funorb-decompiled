@@ -70,12 +70,12 @@ final class ReflectionRequestSupport {
                   var7_int != 2) {
                   if (var7_int == 3 ||
                     var7_int == 4) {
-                    var21 = param3.j(-21);
-                    var22 = param3.j(-26);
+                    var21 = param3.readNullTerminatedString(-21);
+                    var22 = param3.readNullTerminatedString(-26);
                     var10 = param3.readUnsignedByte(-84);
                     var11 = new String[var10];
                     for (var12_int = 0; var10 > var12_int; var12_int++) {
-                      var11[var12_int] = param3.j(-49);
+                      var11[var12_int] = param3.readNullTerminatedString(-49);
                     }
                     var23 = new byte[var10][];
                     var20 = var23;
@@ -85,7 +85,7 @@ final class ReflectionRequestSupport {
                         var14 = param3.readInt(true);
                         array$0 = new byte[var14];
                         var12[var13_int] = array$0;
-                        param3.a(0, (byte) -124, var23[var13_int], var14);
+                        param3.readBytes(0, (byte) -124, var23[var13_int], var14);
                       }
                     }
                     var19.field_m[var6] = var7_int;
@@ -100,9 +100,9 @@ final class ReflectionRequestSupport {
                     var19.field_w[var6] = var23;
                   }
                 } else {
-                  var16 = param3.j(-98);
+                  var16 = param3.readNullTerminatedString(-98);
                   var8 = var16;
-                  var17 = param3.j(-46);
+                  var17 = param3.readNullTerminatedString(-46);
                   var9 = var17;
                   var10 = 0;
                   if (var7_int == 1) {
@@ -161,11 +161,11 @@ final class ReflectionRequestSupport {
         }
     }
 
-    final static int a(int param0, int param1, int param2, int param3) {
-        if (param1 != 0) {
+    final static int multiplyThreeFixed16(int first, int obfuscationGuard, int second, int third) {
+        if (obfuscationGuard != 0) {
           return -51;
         }
-        return NameEntryPopup.multiplyFixed16(param3, false, NameEntryPopup.multiplyFixed16(param2, false, param0));
+        return NameEntryPopup.multiplyFixed16(third, false, NameEntryPopup.multiplyFixed16(second, false, first));
     }
 
     final void a(int param0, int param1, int param2, int param3, byte param4) {

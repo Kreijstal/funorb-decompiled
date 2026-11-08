@@ -10,8 +10,8 @@ final class AccountTextSupport {
     static String tutorialNineBallFinal;
     static UiComponent field_b;
 
-    final static String b(boolean param0) {
-        if (!param0) {
+    final static String getAccountStatusMessage(boolean obfuscationGuard) {
+        if (!obfuscationGuard) {
           return (String) null;
         }
         return ChatInputSupport.field_g;
@@ -27,7 +27,7 @@ final class AccountTextSupport {
           field_f = null;
           return;
         }
-        AccountTextSupport.b(false);
+        AccountTextSupport.getAccountStatusMessage(false);
         field_f = null;
     }
 

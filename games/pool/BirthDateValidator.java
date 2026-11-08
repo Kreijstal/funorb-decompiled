@@ -48,7 +48,7 @@ final class BirthDateValidator extends DebouncedValidationProvider implements Te
           var3 = this.dateInput.getMonthIndex(25);
           var5 = -15 / ((-30 - param0) / 45);
           var4 = this.dateInput.getYear(119);
-          var6 = HighscoresScreen.h(36);
+          var6 = HighscoresScreen.currentYear(36);
           if (var4 >= 1890 &&
             var6 - 3 >= var4) {
             if (QuickChatMenu.a((byte) 123, var4, var3, var2_int)) {
@@ -65,8 +65,8 @@ final class BirthDateValidator extends DebouncedValidationProvider implements Te
         return AnimatedNotification.createAlertInvaliddate;
     }
 
-    final static boolean h(int param0) {
-        if (param0 != -3) {
+    final static boolean handleNamePopupKey(int obfuscationGuard) {
+        if (obfuscationGuard != -3) {
           return true;
         }
         if (null == PasswordInputPainter.field_C) {
@@ -95,7 +95,7 @@ final class BirthDateValidator extends DebouncedValidationProvider implements Te
           var2_int = this.dateInput.getDay((byte) -119);
           var3 = this.dateInput.getMonthIndex(param0 ^ -14827);
           var4 = this.dateInput.getYear(49);
-          var5 = HighscoresScreen.h(param0 + 14872);
+          var5 = HighscoresScreen.currentYear(param0 + 14872);
           if (1890 > var4) {
             stackIn_4_0 = AchievementProtocolSupport.field_d;
             return stackIn_4_0;
@@ -132,7 +132,7 @@ final class BirthDateValidator extends DebouncedValidationProvider implements Te
 
     public final boolean isInputEmpty(int param0) {
         if (param0 != -3) {
-          BirthDateValidator.h(41);
+          BirthDateValidator.handleNamePopupKey(41);
           return this.dateInput.isDateIncomplete((byte) 114);
         }
         return this.dateInput.isDateIncomplete((byte) 114);

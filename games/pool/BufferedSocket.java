@@ -25,7 +25,7 @@ final class BufferedSocket implements Runnable {
         this(param0, param1, 5000);
     }
 
-    final void a(int param0, int param1, int param2, byte[] param3) throws IOException {
+    final void readFully(int length, int obfuscationGuard, int offset, byte[] destination) throws IOException {
         int var5_int = 0;
         RuntimeException var5 = null;
         RuntimeException stackIn_13_0 = null;
@@ -36,15 +36,15 @@ final class BufferedSocket implements Runnable {
           if (this.field_h) {
             return;
           }
-          while (0 < param0) {
-            var5_int = this.field_l.read(param3, param2, param0);
+          while (0 < length) {
+            var5_int = this.field_l.read(destination, offset, length);
             if (0 >= var5_int) {
               throw new EOFException();
             }
-            param0 = param0 - var5_int;
-            param2 = param2 + var5_int;
+            length = length - var5_int;
+            offset = offset + var5_int;
           }
-          if (param1 == 0) {
+          if (obfuscationGuard == 0) {
             return;
           }
           this.field_n = (java.net.Socket) null;
@@ -53,8 +53,8 @@ final class BufferedSocket implements Runnable {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_13_0 = var5;
-          stackIn_13_1 = new StringBuilder().append("vb.H(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_13_1 = new StringBuilder().append("vb.H(").append(length).append(',').append(obfuscationGuard).append(',').append(offset).append(',');
+          if (destination == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
@@ -74,23 +74,23 @@ final class BufferedSocket implements Runnable {
         field_f = 57;
     }
 
-    final int a(int param0) throws IOException {
+    final int readByte(int obfuscationGuard) throws IOException {
         if (this.field_h) {
           return 0;
         }
-        if (param0 != 14528) {
+        if (obfuscationGuard != 14528) {
           BufferedSocket.releaseStatics(false);
           return this.field_l.read();
         }
         return this.field_l.read();
     }
 
-    final void e(int param0) throws IOException {
+    final void checkWriteError(int obfuscationGuard) throws IOException {
         if (this.field_h) {
           return;
         }
-        if (param0 != 0) {
-          this.c(-107);
+        if (obfuscationGuard != 0) {
+          this.close(-107);
           if (this.field_e) {
             this.field_e = false;
             throw new IOException();
@@ -263,7 +263,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final int readByte(int param0) throws IOException {
+    final int availableBytes(int param0) throws IOException {
         if (this.field_h) {
           return 0;
         }
@@ -279,7 +279,7 @@ final class BufferedSocket implements Runnable {
         return SpaceObject.field_d;
     }
 
-    final void c(int param0) {
+    final void close(int obfuscationGuard) {
         try {
           InterruptedException var2 = null;
           Throwable decompiledCaughtException = null;
@@ -289,7 +289,7 @@ final class BufferedSocket implements Runnable {
           }
           var2_ref = this;
           synchronized (var2_ref) {
-            if (param0 >= -82) {
+            if (obfuscationGuard >= -82) {
               this.field_e = false;
             }
             this.field_h = true;
@@ -320,10 +320,10 @@ final class BufferedSocket implements Runnable {
     }
 
     protected final void finalize() {
-        this.c(-119);
+        this.close(-119);
     }
 
-    final static BallEvent a(int param0, Ball param1) {
+    final static BallEvent resetBallEventChain(int obfuscationGuard, Ball ball) {
         BallEvent dupTemp$1 = null;
         RuntimeException var2 = null;
         String var3 = null;
@@ -333,20 +333,20 @@ final class BufferedSocket implements Runnable {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 != -6584) {
+          if (obfuscationGuard != -6584) {
             var3 = (String) null;
             BufferedSocket.a(false, (String) null, (byte) 126, (AccountCreationForm) null, -39, (String) null, (String) null);
           }
           dupTemp$1 = new BallEvent(0, (BallEvent) null);
-          param1.field_q = dupTemp$1;
+          ball.field_q = dupTemp$1;
           stackIn_3_0 = dupTemp$1;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_6_0 = var2;
-          stackIn_6_1 = new StringBuilder().append("vb.D(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_6_1 = new StringBuilder().append("vb.D(").append(obfuscationGuard).append(',');
+          if (ball == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
@@ -355,7 +355,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final void a(byte[] param0, byte param1, int param2, int param3) throws IOException {
+    final void write(byte[] source, byte obfuscationGuard, int length, int offset) throws IOException {
         int var7 = 0;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
@@ -368,7 +368,7 @@ final class BufferedSocket implements Runnable {
           if (this.field_h) {
             return;
           }
-          var5_int = 17 / ((param1 + 12) / 58);
+          var5_int = 17 / ((obfuscationGuard + 12) / 58);
           if (this.field_e) {
             this.field_e = false;
             throw new IOException();
@@ -378,8 +378,8 @@ final class BufferedSocket implements Runnable {
           }
           var6 = this;
           synchronized (var6) {
-            for (var7 = 0; param2 > var7; var7++) {
-              this.field_j[this.field_i] = param0[param3 + var7];
+            for (var7 = 0; length > var7; var7++) {
+              this.field_j[this.field_i] = source[offset + var7];
               this.field_i = (this.field_i + 1) % this.field_k;
               if ((this.field_k + (this.field_a - 100)) % this.field_k == this.field_i) {
                 throw new IOException();
@@ -396,12 +396,12 @@ final class BufferedSocket implements Runnable {
           var5 = (RuntimeException) (Object) decompiledCaughtException;
           stackIn_24_0 = var5;
           stackIn_24_1 = new StringBuilder().append("vb.I(");
-          if (param0 == null) {
+          if (source == null) {
             stackIn_25_2 = "null";
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(obfuscationGuard).append(',').append(length).append(',').append(offset).append(')').toString());
         }
     }
 

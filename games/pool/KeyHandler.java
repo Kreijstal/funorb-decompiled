@@ -199,7 +199,7 @@ final class KeyHandler implements java.awt.event.KeyListener, java.awt.event.Foc
     final static IndexedSprite a(byte param0) {
         int var2 = 77 % ((20 - param0) / 41);
         IndexedSprite var1 = new IndexedSprite(DialRenderer.field_c, AccountStateQuery.field_r, AchievementsScreen.field_I[0], LoginRequestSupport.field_d[0], LinkButtonPainter.field_a[0], AccountTextSupport.field_f[0], LimitedRandomAccessFile.field_b[0], IntrusiveNode.field_h);
-        OpacityWidget.h(-1);
+        OpacityWidget.releaseSpriteDecoderArrays(-1);
         return var1;
     }
 

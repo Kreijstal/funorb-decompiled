@@ -620,10 +620,10 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
             field_H = 62;
           }
           if (!useAlternateFont) {
-            stackIn_6_0 = TransformRotationSupport.field_f.b(text);
+            stackIn_6_0 = TransformRotationSupport.field_f.stringWidth(text);
             return stackIn_6_0;
           }
-          stackIn_4_0 = ProgressBarWidget.field_R.b(text);
+          stackIn_4_0 = ProgressBarWidget.field_R.stringWidth(text);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -19,7 +19,7 @@ final class MembershipBenefitsScreen extends MenuScreen {
         int var3;
         Sprite var4;
         var3 = Pool.field_O;
-        ChatMessage.field_l.a(0, 0);
+        ChatMessage.field_l.drawAt(0, 0);
         if (LocalGameSetupScreen.loadMembershipBenefitsAssets((byte) 109)) {
           MembershipBenefitsLoader.loadBenefitsScreenAssets(-2);
           if (!RankingsRequest.field_l) {

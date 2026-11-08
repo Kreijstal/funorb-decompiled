@@ -175,10 +175,10 @@ final class MeshColorSupport {
         }
         try {
           var4 = AlignedIconLabel.field_Lb.font.countWrappedLines(param0, 500);
-          var5 = 6 + AlignedIconLabel.field_Lb.font.a(param0, 500);
+          var5 = 6 + AlignedIconLabel.field_Lb.font.maxWrappedLineWidth(param0, 500);
           var6 = 2 + var4 * ArchiveIndex.field_x;
           var7 = DebugTuningSupport.adjustWidthForRightEdge(var5, 12, var2_int, 0);
-          var8 = OpacityWidget.a(var6, var3, -1, 20);
+          var8 = OpacityWidget.placePopupVertically(var6, var3, -1, 20);
           SoftwareRasterizer.drawRectangle(var7, var8, var5, var6, 0);
           SoftwareRasterizer.fillRectangle(1 + var7, 1 + var8, var5 - 2, -2 + var6, 16777088);
           AlignedIconLabel.field_Lb.font.drawParagraph(param0, 3 + var7, QuickChatPhraseRegistry.field_b + (var8 + 1 - AlignedIconLabel.field_Lb.font.maxAscent), 500, 1000, 0, -1, 0, 0, ArchiveIndex.field_x);

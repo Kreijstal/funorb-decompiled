@@ -32,8 +32,8 @@ final class TextPairLoginPayload extends LoginPayload {
     final void writePayload(byte param0, PacketBuffer param1) {
         try {
           int var3_int = -92 / ((22 - param0) / 51);
-          param1.a(false, this.loginText);
-          param1.a(this.base38Text, 109);
+          param1.writeNullCircumfixedString(false, this.loginText);
+          param1.writeBase38Name(this.base38Text, 109);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ca.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

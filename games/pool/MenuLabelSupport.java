@@ -14,7 +14,7 @@ final class MenuLabelSupport {
         DebugTuningSlider.field_c.setScrollPaneBounds(TranslatedUiText.field_n, -20 + QuickChatMenuSupport.field_e.height, (byte) -112, 2, QuickChatMenuSupport.field_e.width, 0, 20);
     }
 
-    final static void a(byte param0) {
+    final static void readRankingsResponse(byte obfuscationGuard) {
         String[][] dupTemp$0 = null;
         int[][] dupTemp$1 = null;
         RuntimeException decompiledCaughtException = null;
@@ -43,7 +43,7 @@ final class MenuLabelSupport {
           var13 = PlayerContextMenu.field_e;
           var15 = var13;
           var2 = var15.readUnsignedByte(-113);
-          if (param0 < 93) {
+          if (obfuscationGuard < 93) {
             return;
           }
           var3 = (RankingsRequest) (AccountTextSupport.field_c.last((byte) 100));
@@ -63,11 +63,11 @@ final class MenuLabelSupport {
             var5 = var3.field_o;
             CollisionContact.field_e[0] = ResourceArchive.field_j;
             for (var6_int = 1; var6_int < var4; var6_int++) {
-              CollisionContact.field_e[var6_int] = var13.j(-36);
+              CollisionContact.field_e[var6_int] = var13.readNullTerminatedString(-36);
             }
-            FaceBucketSupport.a(var4, var5, false);
+            RankingsBufferSupport.allocateRankingsArrays(var4, var5, false);
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {
-              QuickChatCategoryDefinition.b((byte) 125, var15);
+              QuickChatCategoryDefinition.readRankingRecordFields((byte) 125, var15);
               if (0 == var6_intLifetime1) {
                 var3.field_t = BufferedSocket.field_f;
                 var3.field_w = DialRenderer.field_n;
@@ -78,7 +78,7 @@ final class MenuLabelSupport {
                 MusicCrossfadeStream.a(DialRenderer.field_n, var6_intLifetime1, true, BufferedSocket.field_f, IntKeyLookup.field_a, BirthDatePromptPanel.field_F);
               }
             }
-            NetworkArchiveRequest.a(true, var5);
+            NetworkArchiveRequest.sortRankingsViews(true, var5);
             dupTemp$0 = new String[2][var5];
             var3.field_n = dupTemp$0;
             var6 = dupTemp$0;
@@ -128,7 +128,7 @@ final class MenuLabelSupport {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "da.D(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "da.D(" + obfuscationGuard + ')');
         }
     }
 

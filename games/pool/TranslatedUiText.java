@@ -3229,7 +3229,7 @@ final class TranslatedUiText {
           if (var4 != 0 ||
             var6 != 0) {
             var5_array = new byte[var4];
-            var1.a(0, (byte) -121, var5_array, var4);
+            var1.readBytes(0, (byte) -121, var5_array, var4);
           }
           var1.position = var1.position + 4;
           if (!var1.verifyChecksum(false)) {

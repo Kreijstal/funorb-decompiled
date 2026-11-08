@@ -110,7 +110,7 @@ final class PolarTableScene extends ModelTableScene {
         var9 = Pool.field_O;
         try {
           var4 = param1.gameModel.balls;
-          var37 = LobbyPanelLayoutSupport.a((byte) 53, param1.viewMatrix);
+          var37 = LobbyPanelLayoutSupport.copyTransform((byte) 53, param1.viewMatrix);
           var14 = var37;
           var5 = var14;
           var36 = var5;
@@ -1116,10 +1116,10 @@ final class PolarTableScene extends ModelTableScene {
         }
     }
 
-    final void b(boolean param0) {
+    final void resetForGame(boolean obfuscationGuard) {
         int var2 = 0;
         int var3 = Pool.field_O;
-        super.b(param0);
+        super.resetForGame(obfuscationGuard);
         DebugTuningSlider.field_f = 0;
         for (var2 = 0; var2 < this.field_U.length; var2++) {
           this.field_U[var2].a(-40);

@@ -91,9 +91,9 @@ final class MonotonicClock {
             var2 != 4) {
             if (var2 == 5) {
               var4_long = ((PacketBuffer) ((Object) var1)).readLong(-412303328);
-              var23 = ((PacketBuffer) ((Object) var1)).j(-68);
-              var22 = ((PacketBuffer) ((Object) var1)).j(-104);
-              var24 = ((PacketBuffer) ((Object) var1)).j(-29);
+              var23 = ((PacketBuffer) ((Object) var1)).readNullTerminatedString(-68);
+              var22 = ((PacketBuffer) ((Object) var1)).readNullTerminatedString(-104);
+              var24 = ((PacketBuffer) ((Object) var1)).readNullTerminatedString(-29);
               var25 = LobbyPlayerLookupSupport.findLobbyPlayer(0, var4_long);
               var9_ref_im = var25;
               stackIn_44_0 = (var22.equals("")) ? 0 : 1;
@@ -209,9 +209,9 @@ final class MonotonicClock {
                   var2 != 17) {
                   if (var2 == 18) {
                     var4_longLifetime2 = ((PacketBuffer) ((Object) var1)).readLong(-412303328);
-                    var28 = ((PacketBuffer) ((Object) var1)).j(-46);
-                    var29 = ((PacketBuffer) ((Object) var1)).j(-40);
-                    var8 = QuickChatHelpDialog.b(var4_longLifetime2, 0);
+                    var28 = ((PacketBuffer) ((Object) var1)).readNullTerminatedString(-46);
+                    var29 = ((PacketBuffer) ((Object) var1)).readNullTerminatedString(-40);
+                    var8 = QuickChatHelpDialog.findLobbyPlayer(var4_longLifetime2, 0);
                     if (var8 == null) {
                       var8 = new LobbyPlayer(var28, var29, var4_longLifetime2);
                       LobbyPlayer.field_Qb.put(-6946, var4_longLifetime2, var8);
@@ -231,7 +231,7 @@ final class MonotonicClock {
                   if (var2 == 19) {
                     var4_longLifetime2 = ((PacketBuffer) ((Object) var1)).readLong(-412303328);
                     var6Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(-128);
-                    var20 = QuickChatHelpDialog.b(var4_longLifetime2, 0);
+                    var20 = QuickChatHelpDialog.findLobbyPlayer(var4_longLifetime2, 0);
                     var27 = var20;
                     if (var27 == null) {
                       return;

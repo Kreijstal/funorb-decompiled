@@ -10,9 +10,9 @@ final class OpacityWidget extends SingleChildWidget {
     static String benefitsPrice;
     static String statusWantsToDraw;
 
-    final static void h(int param0) {
+    final static void releaseSpriteDecoderArrays(int obfuscationGuard) {
         IntrusiveNode.field_h = null;
-        if (param0 != -1) {
+        if (obfuscationGuard != -1) {
           benefitsPrice = (String) null;
         }
         LimitedRandomAccessFile.field_b = (byte[][]) null;
@@ -238,8 +238,8 @@ final class OpacityWidget extends SingleChildWidget {
         }
     }
 
-    final static boolean h(byte param0) {
-        int var1 = 26 % ((-52 - param0) / 32);
+    final static boolean isNamePopupOpen(byte obfuscationGuard) {
+        int var1 = 26 % ((-52 - obfuscationGuard) / 32);
         return PasswordInputPainter.field_C != null ? true : false;
     }
 
@@ -283,7 +283,7 @@ final class OpacityWidget extends SingleChildWidget {
         this.opacity = 256;
     }
 
-    final static int a(int param0, int param1, int param2, int param3) {
+    final static int placePopupVertically(int param0, int param1, int param2, int param3) {
         if (param3 + (param1 + param0) <= SoftwareRasterizer.height) {
           return param3 + param1;
         }
@@ -325,7 +325,7 @@ final class OpacityWidget extends SingleChildWidget {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < 25) {
-            OpacityWidget.a(-81, 49, -78, -118);
+            OpacityWidget.placePopupVertically(-81, 49, -78, -118);
           }
           stackIn_3_0 = ThemeSelectScreen.a(-116, param2, param1, (byte) 0);
           return stackIn_3_0;

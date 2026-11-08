@@ -52,7 +52,7 @@ final class Js5ArchiveManager {
             var6_int = this.masterIndex.readInt(true);
             var7 = this.masterIndex.readInt(true);
             var13 = new byte[64];
-            this.masterIndex.a(0, (byte) -115, var13, 64);
+            this.masterIndex.readBytes(0, (byte) -115, var13, 64);
             var9 = new CachedArchiveSource(param2, param1, param4, this.transport, this.diskWorker, var6_int, var13, var7, param0);
             this.providers[param2] = var9;
             if (param3 != 0) {
@@ -171,7 +171,7 @@ final class Js5ArchiveManager {
         var13 = new byte[-var10.position + var10.payload.length];
         var11 = var13;
         var4 = var11;
-        var10.a(0, (byte) -125, var4, var13.length);
+        var10.readBytes(0, (byte) -125, var4, var13.length);
         if (this.rsaExponent != null &&
           null != this.rsaModulus) {
           var12 = new java.math.BigInteger(var13);
@@ -201,10 +201,10 @@ final class Js5ArchiveManager {
         var2.position = var2.position + 1;
         int var4 = var2.position;
         var2.writeByte(2, false);
-        var2.a(RenderingInitializationSupport.field_c, (byte) 0, 0, RenderingInitializationSupport.field_c.length);
+        var2.writeBytes(RenderingInitializationSupport.field_c, (byte) 0, 0, RenderingInitializationSupport.field_c.length);
         var2.writeByte(SceneNodeEntry.field_l, false);
         var2.writeByte(FreePlayRules.field_l, false);
-        var2.a(AgeValidator.field_s, (byte) 0, 0, AgeValidator.field_s.length);
+        var2.writeBytes(AgeValidator.field_s, (byte) 0, 0, AgeValidator.field_s.length);
         var2.writeByteLengthPrefix(var2.position - var4, true);
     }
 

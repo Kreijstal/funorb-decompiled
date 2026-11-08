@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class FaceBucketSupport {
+final class RankingsBufferSupport {
     static boolean field_f;
     static String tutorialEightBallAfterfirstpot;
     static int field_b;
@@ -9,7 +9,7 @@ final class FaceBucketSupport {
     static int keycodeDefaultRight1;
     static MeshBuilder field_e;
 
-    final static Sprite[] a(Sprite[] param0, byte param1) {
+    final static Sprite[] alignPanelEdgeSprites(Sprite[] sprites, byte obfuscationGuard) {
         RuntimeException var2 = null;
         Sprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -17,30 +17,30 @@ final class FaceBucketSupport {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          param0[3].field_y = param0[3].field_A;
-          if (param1 != -29) {
+          sprites[3].field_y = sprites[3].field_A;
+          if (obfuscationGuard != -29) {
             tutorialEightBallAfterfirstpot = (String) null;
           }
-          param0[1].field_w = param0[1].field_z;
-          param0[5].field_y = param0[5].field_A;
-          param0[7].field_w = param0[7].field_z;
-          stackIn_3_0 = (Sprite[]) (param0);
+          sprites[1].field_w = sprites[1].field_z;
+          sprites[5].field_y = sprites[5].field_A;
+          sprites[7].field_w = sprites[7].field_z;
+          stackIn_3_0 = (Sprite[]) (sprites);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_6_0 = var2;
           stackIn_6_1 = new StringBuilder().append("gn.A(");
-          if (param0 == null) {
+          if (sprites == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
-    final static void a(int param0, int param1, boolean param2) {
+    final static void allocateRankingsArrays(int param0, int param1, boolean param2) {
         if (StateIconLabel.field_Nb == null) {
           StateIconLabel.field_Nb = new int[param0 * 2];
           if (TickClock.field_g == null ||

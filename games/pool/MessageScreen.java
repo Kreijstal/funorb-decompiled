@@ -100,9 +100,9 @@ final class MessageScreen extends MenuScreen {
           if (var7 == null) {
             var7 = "";
           }
-          JaggrabDownloader.field_j.a(-9946, var7);
+          JaggrabDownloader.field_j.writeNullTerminatedString(-9946, var7);
           if (null != CheckboxWidget.field_N) {
-            JaggrabDownloader.field_j.a(false, CheckboxWidget.field_N);
+            JaggrabDownloader.field_j.writeNullCircumfixedString(false, CheckboxWidget.field_N);
           }
           ArchiveIndex.writeEncryptedBuffer((byte) 93, ArchiveLoadSequence.field_l, FontPaletteSupport.field_b, UiWidget.field_q, JaggrabDownloader.field_j);
           JaggrabDownloader.field_j.writeShortLengthPrefix(JaggrabDownloader.field_j.position - var5_int, (byte) -92);

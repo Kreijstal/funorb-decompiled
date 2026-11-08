@@ -243,7 +243,7 @@ final class IntrusiveNodeHashTable implements Iterable {
               if (null == var8_ref_pn.field_u) {
                 MidiNoteMixer.field_r = MidiNoteMixer.field_r + 1;
               }
-              var10 = PacketBuffer.a((byte) -24, var8_ref_pn);
+              var10 = PacketBuffer.formatChatPrefix((byte) -24, var8_ref_pn);
               var11 = var10 + BitmapFont.escapeMarkup(var8_ref_pn.field_f);
               var12 = QuickChatHelpDialog.a(var8_ref_pn, -55);
               var8_ref_pn.field_u = new UiComponent(0L, TickClock.field_h, var11);

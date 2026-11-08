@@ -132,7 +132,7 @@ final class DisplayModeSupport {
         int[] var10 = null;
         var7 = Pool.field_O;
         try {
-          if (!param1.a((byte) 110)) {
+          if (!param1.supportsFullscreen((byte) 110)) {
             stackIn_3_0 = new FullscreenDisplayMode[]{};
             return stackIn_3_0;
           }

@@ -17,7 +17,7 @@ final class LabeledChildWidget extends SingleChildWidget {
     static UiComponent field_R;
     static String field_S;
 
-    final static void a(int param0, String param1, int param2, boolean param3, int param4) {
+    final static void enqueueMessageLine(int param0, String param1, int param2, boolean param3, int param4) {
         ChatMessageLine var5 = null;
         try {
           if (param0 != 8) {

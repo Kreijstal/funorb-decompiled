@@ -202,7 +202,7 @@ public final class Pool extends NetworkGameClient {
               DateInputWidget.field_U = DateInputWidget.field_U + 1;
             }
           }
-          QuickChatHelpDialog.b(5938, DateInputWidget.field_U);
+          QuickChatHelpDialog.positionSlidingPanelByProgress(5938, DateInputWidget.field_U);
           if (null != LoginForm.field_U.last((byte) 99)) {
             fieldTemp$0 = IntrusiveDequeCursor.field_h + 1;
             IntrusiveDequeCursor.field_h = IntrusiveDequeCursor.field_h + 1;
@@ -377,9 +377,9 @@ public final class Pool extends NetworkGameClient {
         int var4_intLifetime1;
         int var4_intLifetime2;
         var10 = field_O;
-        var11 = TextLineLayout.a((byte) -126);
+        var11 = TextLineLayout.getActiveCanvas((byte) -126);
         if (StartupInterfaceSupport.a((byte) -123)) {
-          KeyHandler.a((byte) -55, AccountCreationDialog.m(0), var11);
+          KeyHandler.a((byte) -55, AccountCreationDialog.hasCanvasFocus(0), var11);
           return;
         }
         if (!MeshSymmetrySupport.field_d) {
@@ -424,7 +424,7 @@ public final class Pool extends NetworkGameClient {
           !AppletUrlSupport.field_c) {
           if (GameRules.field_b == MatchingTextValidator.field_w &&
             MatchingTextValidator.field_w == -2) {
-            ChatMessage.field_l.a(0, 0);
+            ChatMessage.field_l.drawAt(0, 0);
           }
           ViewportController.a(InputIdleSupport.isCaretBlinkOn((byte) 79), (byte) 50);
         }
@@ -455,7 +455,7 @@ public final class Pool extends NetworkGameClient {
             }
           }
           IsaacCipher.field_f[var3.field_l].drawScaled(8, var4_intLifetime1, 32, 32);
-          FreePlayRules.field_e.d(RenderingInitializationSupport.achievementNames[var3.field_l], 48, var4_intLifetime1 + FreePlayRules.field_e.maxAscent, 4, 1);
+          FreePlayRules.field_e.drawLeft(RenderingInitializationSupport.achievementNames[var3.field_l], 48, var4_intLifetime1 + FreePlayRules.field_e.maxAscent, 4, 1);
         }
         if (LookupQuery.isClientNoticeOpen(1)) {
           SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
@@ -483,14 +483,14 @@ public final class Pool extends NetworkGameClient {
           }
         }
         if ((32L & LinkButtonPainter.field_i) != 0L) {
-          CollisionContact.field_h.d(Integer.toString(LookupProtocolSupport.field_g), 640 - CollisionContact.field_h.maxAscent * 2, 475 - CollisionContact.field_h.maxDescent, 16777215, 1);
+          CollisionContact.field_h.drawLeft(Integer.toString(LookupProtocolSupport.field_g), 640 - CollisionContact.field_h.maxAscent * 2, 475 - CollisionContact.field_h.maxDescent, 16777215, 1);
         }
         if ((LinkButtonPainter.field_i & 64L) != 0L) {
           var4 = Runtime.getRuntime().totalMemory();
           var6 = Runtime.getRuntime().freeMemory();
           var8 = (int)(var4 - var6) / 1024;
           var9 = (int)(var4 / 1024L);
-          CollisionContact.field_h.d(var8 + "/" + var9, -((CollisionContact.field_h.maxAscent + CollisionContact.field_h.maxDescent) * 4) + (640 - 2 * CollisionContact.field_h.maxAscent), -((CollisionContact.field_h.maxDescent + CollisionContact.field_h.maxAscent) * 3 / 2) - 5 + 480 - CollisionContact.field_h.maxDescent, 16777215, 1);
+          CollisionContact.field_h.drawLeft(var8 + "/" + var9, -((CollisionContact.field_h.maxAscent + CollisionContact.field_h.maxDescent) * 4) + (640 - 2 * CollisionContact.field_h.maxAscent), -((CollisionContact.field_h.maxDescent + CollisionContact.field_h.maxAscent) * 3 / 2) - 5 + 480 - CollisionContact.field_h.maxDescent, 16777215, 1);
         }
         ButtonWidget.a(0, 0, (byte) 85, var11);
         return;
@@ -656,7 +656,7 @@ public final class Pool extends NetworkGameClient {
         WorldPointProjectionSupport.releaseStatics((byte) 33);
         QuickChatHelpDialog.releaseStatics(56);
         BrowserUrlSupport.releaseStatics(-69);
-        FaceBucketSupport.releaseStatics(1);
+        RankingsBufferSupport.releaseStatics(1);
         SpriteSheetLoadSupport.releaseStatics((byte) 43);
         LoginPayloadKind.releaseStatics(param0 ^ -91);
         LoginPayload.releaseStatics(param0 ^ 17031);
@@ -988,7 +988,7 @@ public final class Pool extends NetworkGameClient {
             PoolGameModel.applyPendingScreenTransition(-124);
             AlternateLongAndTextLoginPayload.field_p = false;
             GameRules.field_b = 20;
-            ThreeSliceButtonPainter.field_B = PlayerContextMenu.field_e.j(-49);
+            ThreeSliceButtonPainter.field_B = PlayerContextMenu.field_e.readNullTerminatedString(-49);
             continue;
           }
           if (Bzip2DecoderState.field_c == 14) {
@@ -1284,7 +1284,7 @@ public final class Pool extends NetworkGameClient {
         int var3Lifetime1;
         var5 = field_O;
         LogoMaterial.a(-21055);
-        MessageDialogContent.field_P = PaletteFontLoader.a((byte) 64);
+        MessageDialogContent.field_P = PaletteFontLoader.getMouseIdleTicks((byte) 64);
         Bzip2DecoderState.a((byte) -92);
         if (MatchingTextValidator.field_u != null &&
           MatchingTextValidator.field_u.focusLost) {
@@ -1301,7 +1301,7 @@ public final class Pool extends NetworkGameClient {
         SocialListEntry.field_Tb = SocialListEntry.field_Tb + 1;
         var2 = 56 / ((param0 - 29) / 60);
         if (StartupInterfaceSupport.a((byte) -84)) {
-          this.l((byte) -75);
+          this.serviceStartupAndAccountFlow((byte) -75);
           if (StartupInterfaceSupport.a((byte) -111)) {
             if (!DebouncedValidationProvider.a(true)) {
               return;
@@ -1614,7 +1614,7 @@ public final class Pool extends NetworkGameClient {
             ArchiveLoadStep.field_m = LoginMethod.field_h;
             DualLinkNode.field_s = true;
             Pocket.field_j = PolarBallSkin.field_m;
-            DraggableWidget.a(200, -77);
+            DraggableWidget.initializeChatHistory(200, -77);
             BallDebugOverlay.readAppletParameters(0, 0, 37, DialRenderer.textBenefits, (java.applet.Applet) (this), 16777215);
             QuickChatMenu.field_Zb = null;
             Ball.field_z = null;

@@ -205,7 +205,7 @@ abstract class GameRules {
             PoolMatchController.field_gb = DebouncedValidationProvider.a(param2, true, param3);
           } else {
             stackIn_6_0 = !(ButtonPainter.field_b >= 13);
-            PoolMatchController.field_gb = GradientPaletteSupport.a(stackIn_6_0, -30914);
+            PoolMatchController.field_gb = GradientPaletteSupport.createLoginResponse(stackIn_6_0, -30914);
             var5 = (String[]) null;
             UsernameSuggestionSupport.setNameSuggestions(108, (String[]) null);
           }

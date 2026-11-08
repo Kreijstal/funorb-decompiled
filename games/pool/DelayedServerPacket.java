@@ -82,7 +82,7 @@ final class DelayedServerPacket extends IntrusiveNode {
           var6.writeByte(1, false);
           if (null != param1.field_p) {
             var6.writeByte(param1.field_p.length, false);
-            var6.a(param1.field_p, (byte) 0, 0, param1.field_p.length);
+            var6.writeBytes(param1.field_p, (byte) 0, 0, param1.field_p.length);
           } else {
             var6.writeByte(0, false);
           }

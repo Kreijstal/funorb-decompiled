@@ -120,7 +120,7 @@ final class AlphaFont extends BitmapFont {
           param4 > 0) {
           var11 = var11 - var10 * param3;
           if (!param6) {
-            AlphaFont.a(SoftwareRasterizer.pixels, this.field_U[param0], param5, var12, var8, var10, param3, param4, var9, var11);
+            AlphaFont.blendGlyphStrided(SoftwareRasterizer.pixels, this.field_U[param0], param5, var12, var8, var10, param3, param4, var9, var11);
           } else {
             BinaryBitmapFont.blitBinaryGlyph(SoftwareRasterizer.pixels, this.field_U[param0], param5, var12, var8, var10, param3, param4, var9, var11);
           }
@@ -134,7 +134,7 @@ final class AlphaFont extends BitmapFont {
         this.field_U = AlphaFont.convertToCoverage(param5, param6);
     }
 
-    private final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blendGlyphStrided(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -231,7 +231,7 @@ final class AlphaFont extends BitmapFont {
           param4 > 0) {
           var12 = var12 - var11 * param3;
           if (!param7) {
-            AlphaFont.a(SoftwareRasterizer.pixels, this.field_U[param0], param5, var13, var9, var11, param3, param4, var10, var12, param6);
+            AlphaFont.blendGlyphStridedAlpha(SoftwareRasterizer.pixels, this.field_U[param0], param5, var13, var9, var11, param3, param4, var10, var12, param6);
           } else {
             BinaryBitmapFont.blitBinaryGlyphWithAlpha(SoftwareRasterizer.pixels, this.field_U[param0], param5, var13, var9, var11, param3, param4, var10, var12, param6);
           }
@@ -287,7 +287,7 @@ final class AlphaFont extends BitmapFont {
         }
     }
 
-    private final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
+    private final static void blendGlyphStridedAlpha(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;

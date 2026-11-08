@@ -28,7 +28,7 @@ final class LobbyPanelLayoutSupport {
         return 112;
     }
 
-    final static int[] a(byte param0, int[] param1) {
+    final static int[] copyTransform(byte obfuscationGuard, int[] transform) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int[] stackIn_1_0 = null;
@@ -37,15 +37,15 @@ final class LobbyPanelLayoutSupport {
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = 125 / ((20 - param0) / 32);
-          stackIn_1_0 = new int[]{param1[0], param1[1], param1[2], param1[3], param1[4], param1[5], param1[6], param1[7], param1[8], param1[9], param1[10], param1[11]};
+          var2_int = 125 / ((20 - obfuscationGuard) / 32);
+          stackIn_1_0 = new int[]{transform[0], transform[1], transform[2], transform[3], transform[4], transform[5], transform[6], transform[7], transform[8], transform[9], transform[10], transform[11]};
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_4_0 = var2;
-          stackIn_4_1 = new StringBuilder().append("f.D(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_4_1 = new StringBuilder().append("f.D(").append(obfuscationGuard).append(',');
+          if (transform == null) {
             stackIn_5_2 = "null";
           } else {
             stackIn_5_2 = "{...}";

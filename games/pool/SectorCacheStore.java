@@ -559,7 +559,7 @@ final class SectorCacheStore {
                   BirthDateValidator.field_n[var8] = PlayerContextMenu.field_e.readByte((byte) 105);
                 }
               }
-              ResourceArchive.field_j = PlayerContextMenu.field_e.j(-22);
+              ResourceArchive.field_j = PlayerContextMenu.field_e.readNullTerminatedString(-22);
               var13 = (CharSequence) ((Object) ResourceArchive.field_j);
               HighScoreSubmission.field_y = TutorialController.normalizeDisplayName(101, var13);
               Js5Transport.field_l = PlayerContextMenu.field_e.readUnsignedByte(-126);
@@ -621,7 +621,7 @@ final class SectorCacheStore {
               if (Bzip2DecoderState.field_c == 7) {
                 Bzip2DecoderState.field_c = 3;
               }
-              LoginTextValue.field_g = PlayerContextMenu.field_e.j(-51);
+              LoginTextValue.field_g = PlayerContextMenu.field_e.readNullTerminatedString(-51);
               ArchiveLoadStep.field_e = false;
               stackIn_98_0 = Bzip2DecoderState.field_c;
               return stackIn_98_0;

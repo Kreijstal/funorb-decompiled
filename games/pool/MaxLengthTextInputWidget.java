@@ -118,14 +118,14 @@ final class MaxLengthTextInputWidget extends TextInputWidget implements Validati
             }
             stackIn_10_0 = (1 != var1.readUnsignedByte(-91)) ? 0 : 1;
             var3_int = stackIn_10_0;
-            var4_ref_String = var1.j(param0 - 29836);
+            var4_ref_String = var1.readNullTerminatedString(param0 - 29836);
             if (var3_int != 0) {
-              var5 = var1.j(-70);
+              var5 = var1.readNullTerminatedString(-70);
             } else {
               var5 = var4_ref_String;
             }
             var6 = CheckboxPainter.a(var4_ref_String, 1);
-            var7 = var1.j(-17);
+            var7 = var1.readNullTerminatedString(-17);
             var8 = TutorialController.normalizeDisplayName(117, (CharSequence) ((Object) var4_ref_String));
             if (var8 == null) {
               var8 = var4_ref_String;
@@ -171,7 +171,7 @@ final class MaxLengthTextInputWidget extends TextInputWidget implements Validati
               return;
             }
             ChatInputSupport.field_a = 1;
-            var3 = var1.j(-118);
+            var3 = var1.readNullTerminatedString(-118);
             LocalGameSetupScreen.field_J = ((String) (var3)).intern();
             var4 = var1.readUnsignedByte(-84);
             DialRenderer.a((byte) 78, var4);
@@ -181,12 +181,12 @@ final class MaxLengthTextInputWidget extends TextInputWidget implements Validati
             AimTarget.field_b = new DualLinkNodeHashTable(128);
             AccountWelcomePanel.field_S = 0;
           }
-          var3Lifetime1 = var1.j(-101);
+          var3Lifetime1 = var1.readNullTerminatedString(-101);
           if (((String) (var3Lifetime1)).equals("")) {
             var3Lifetime1 = null;
           }
-          var4_ref_StringLifetime1 = var1.j(-70);
-          var5Lifetime1 = var1.j(-54);
+          var4_ref_StringLifetime1 = var1.readNullTerminatedString(-70);
+          var5Lifetime1 = var1.readNullTerminatedString(-54);
           var6Lifetime1 = UsernameSuggestionSupport.a(param0 - 29667, var4_ref_StringLifetime1);
           if (var6Lifetime1 == null) {
             var6Lifetime1 = UsernameSuggestionSupport.a(92, var5Lifetime1);

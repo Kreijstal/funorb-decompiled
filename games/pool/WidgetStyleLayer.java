@@ -116,7 +116,7 @@ final class WidgetStyleLayer {
         int var7 = 0;
         int var8 = 0;
         try {
-          var5_int = param3.b(param4);
+          var5_int = param3.stringWidth(param4);
           var6 = param3.maxDescent + param3.field_L;
           var7 = TimeTrialSelectScreen.field_H;
           if (6 + var7 + var5_int > SoftwareRasterizer.width) {
@@ -128,7 +128,7 @@ final class WidgetStyleLayer {
           }
           SoftwareRasterizer.drawRectangle(var7, var8, var5_int + 6, var6 + 6, param1);
           SoftwareRasterizer.fillRectangle(1 + var7, var8 + 1, var5_int + param2, 4 + var6, param0);
-          param3.d(param4, var7 + 3, param3.field_L + (var8 + 3), param1, -1);
+          param3.drawLeft(param4, var7 + 3, param3.field_L + (var8 + 3), param1, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

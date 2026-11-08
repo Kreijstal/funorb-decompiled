@@ -30,7 +30,7 @@ final class JaggrabDownloader implements Runnable {
           }
           if (this.field_e == 0) {
             if (this.field_a == null) {
-              this.field_a = this.field_b.a(this.field_i, 1);
+              this.field_a = this.field_b.openUrlStream(this.field_i, 1);
             }
             if (this.field_a.field_f == 0) {
               return false;
@@ -121,7 +121,7 @@ final class JaggrabDownloader implements Runnable {
           ProjectedVertex.field_d = param8.vertexZ;
           CollisionContact.field_r = param8.vertexY;
           HighScoreRequest.field_w = param1.vertexX;
-          FaceBucketSupport.field_e = param8;
+          RankingsBufferSupport.field_e = param8;
           TranslatedUiText.field_b = param1.faceVertexC;
           ReflectionReplySupport.field_d = param1.faceVertexA;
           QuickChatMenu.field_Yb = param8.vertexX;

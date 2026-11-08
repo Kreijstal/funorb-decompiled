@@ -24,7 +24,7 @@ final class TimeTrialSelectScreen extends MenuScreen {
             ProgressDialog.m(8421504);
             return true;
           }
-          if (BirthDateValidator.h(-3)) {
+          if (BirthDateValidator.handleNamePopupKey(-3)) {
             return true;
           }
           if (Pool.handleKeyPress(param3, param2, param1, -80)) {
@@ -39,7 +39,7 @@ final class TimeTrialSelectScreen extends MenuScreen {
             ProgressDialog.m(8421504);
             return true;
           }
-          if (BirthDateValidator.h(-3)) {
+          if (BirthDateValidator.handleNamePopupKey(-3)) {
             return true;
           }
           if (Pool.handleKeyPress(param3, param2, param1, -80)) {
@@ -49,7 +49,7 @@ final class TimeTrialSelectScreen extends MenuScreen {
         }
         TimeTrialSelectScreen.f(118);
         if (null == AccountMenuText.field_b) {
-          if (BirthDateValidator.h(-3)) {
+          if (BirthDateValidator.handleNamePopupKey(-3)) {
             return true;
           }
           if (Pool.handleKeyPress(param3, param2, param1, -80)) {
@@ -62,7 +62,7 @@ final class TimeTrialSelectScreen extends MenuScreen {
           ProgressDialog.m(8421504);
           return true;
         }
-        if (BirthDateValidator.h(-3)) {
+        if (BirthDateValidator.handleNamePopupKey(-3)) {
           return true;
         }
         if (!Pool.handleKeyPress(param3, param2, param1, -80)) {

@@ -348,7 +348,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           var6 = (ChatMessageLine) (var5.last((byte) -92));
           while (true) {
             if (var6 == null) {
-              LabeledChildWidget.a(8, param0, param1, param3, param4);
+              LabeledChildWidget.enqueueMessageLine(8, param0, param1, param3, param4);
               if (param2 != -6) {
                 createOptinNewsTooltip = (String) null;
               }

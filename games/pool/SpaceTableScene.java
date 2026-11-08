@@ -175,9 +175,9 @@ final class SpaceTableScene extends ModelTableScene {
           if (var3_int > 0) {
             var4 = (int)(-param0.camera.getYaw(true) * (double)this.field_B.field_z / 2.0 / 3.141592653589793);
             var5 = -this.field_B.field_A + var3_int;
-            this.field_B.a(-this.field_B.field_z + var4, var5);
+            this.field_B.drawAt(-this.field_B.field_z + var4, var5);
             if (-640 + this.field_B.field_z > var4) {
-              this.field_B.a(var4, var5);
+              this.field_B.drawAt(var4, var5);
             }
           }
           return;
@@ -206,7 +206,7 @@ final class SpaceTableScene extends ModelTableScene {
 
     final void loadBackdrop(int param0, ResourceArchive param1) {
         try {
-          this.field_B = new Sprite(param1.getFileByName(false, "nebula.jpg", ""), (java.awt.Component) ((Object) TextLineLayout.a((byte) -73)));
+          this.field_B = new Sprite(param1.getFileByName(false, "nebula.jpg", ""), (java.awt.Component) ((Object) TextLineLayout.getActiveCanvas((byte) -73)));
           if (param0 != 5) {
             waitingforFonts = (String) null;
           }
@@ -248,8 +248,8 @@ final class SpaceTableScene extends ModelTableScene {
         }
     }
 
-    final void b(boolean param0) {
-        super.b(param0);
+    final void resetForGame(boolean obfuscationGuard) {
+        super.resetForGame(obfuscationGuard);
         int var2 = -220 - LoginTextSupport.field_g;
         TextInputValidator.field_h.translate(0, (byte) -97, var2, 0);
         LoginTextSupport.field_g = LoginTextSupport.field_g + var2;
@@ -452,7 +452,7 @@ final class SpaceTableScene extends ModelTableScene {
         try {
           var25 = param1.gameModel.balls;
           var3 = var25;
-          var57 = LobbyPanelLayoutSupport.a((byte) 109, param1.viewMatrix);
+          var57 = LobbyPanelLayoutSupport.copyTransform((byte) 109, param1.viewMatrix);
           var24 = var57;
           var4 = var24;
           var52 = var4;
@@ -586,7 +586,7 @@ final class SpaceTableScene extends ModelTableScene {
             }
           }
           NodeHashTableIterator.field_k.a(PoolUiText.field_d, PasswordValidator.field_t[1], 4096, (byte) 113, PasswordValidator.field_t[0]);
-          var16 = LobbyPanelLayoutSupport.a((byte) -68, var57);
+          var16 = LobbyPanelLayoutSupport.copyTransform((byte) -68, var57);
           var94 = var16;
           var16[0] = var16[0] - 2304;
           var16[1] = var16[1] - 1152;

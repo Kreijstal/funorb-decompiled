@@ -190,8 +190,8 @@ abstract class TableScene {
         }
     }
 
-    void b(boolean param0) {
-        if (param0) {
+    void resetForGame(boolean obfuscationGuard) {
+        if (obfuscationGuard) {
           this.field_g = (int[][]) null;
         }
         this.playTableSound(10, 256, (byte) 62, 128);

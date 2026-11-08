@@ -732,12 +732,12 @@ final class MeshRenderSupport {
             if (param21 != null) {
               fieldTemp$24 = param21.field_o;
               MusicPatchEnvelope.field_h.field_o = param21.field_o;
-              FaceBucketSupport.field_e.field_o = fieldTemp$24;
-              if (null == FaceBucketSupport.field_e.field_p ||
-                !(FaceBucketSupport.field_e.field_p.length >= param19)) {
-                FaceBucketSupport.field_e.field_C = new short[param19];
-                FaceBucketSupport.field_e.field_H = new short[param19];
-                FaceBucketSupport.field_e.field_p = new short[param19];
+              RankingsBufferSupport.field_e.field_o = fieldTemp$24;
+              if (null == RankingsBufferSupport.field_e.field_p ||
+                !(RankingsBufferSupport.field_e.field_p.length >= param19)) {
+                RankingsBufferSupport.field_e.field_C = new short[param19];
+                RankingsBufferSupport.field_e.field_H = new short[param19];
+                RankingsBufferSupport.field_e.field_p = new short[param19];
               }
               if (null == MusicPatchEnvelope.field_h.field_p ||
                 !(param19 <= MusicPatchEnvelope.field_h.field_p.length)) {
@@ -761,7 +761,7 @@ final class MeshRenderSupport {
                         CollisionContact.field_r[var34Lifetime1] = param13[var33Lifetime3];
                         ProjectedVertex.field_d[var34Lifetime1] = param10[var33Lifetime3];
                       }
-                      FaceBucketSupport.field_e.field_p[var38Lifetime1] = (short)var34Lifetime1;
+                      RankingsBufferSupport.field_e.field_p[var38Lifetime1] = (short)var34Lifetime1;
                       var34Lifetime1 = var25[var33Lifetime3];
                       if (var34Lifetime1 < 0) {
                         fieldTemp$26 = DebugTuningSupport.field_a;
@@ -784,7 +784,7 @@ final class MeshRenderSupport {
                         CollisionContact.field_r[var34Lifetime1] = param13[var33Lifetime3];
                         ProjectedVertex.field_d[var34Lifetime1] = param10[var33Lifetime3];
                       }
-                      FaceBucketSupport.field_e.field_H[var38Lifetime1] = (short)var34Lifetime1;
+                      RankingsBufferSupport.field_e.field_H[var38Lifetime1] = (short)var34Lifetime1;
                       var34Lifetime1 = var25[var33Lifetime3];
                       if (var34Lifetime1 < 0) {
                         fieldTemp$28 = DebugTuningSupport.field_a;
@@ -807,7 +807,7 @@ final class MeshRenderSupport {
                         CollisionContact.field_r[var34Lifetime1] = param13[var33Lifetime3];
                         ProjectedVertex.field_d[var34Lifetime1] = param10[var33Lifetime3];
                       }
-                      FaceBucketSupport.field_e.field_C[var38Lifetime1] = (short)var34Lifetime1;
+                      RankingsBufferSupport.field_e.field_C[var38Lifetime1] = (short)var34Lifetime1;
                       var34Lifetime1 = var25[var33Lifetime3];
                       if (var34Lifetime1 < 0) {
                         fieldTemp$30 = DebugTuningSupport.field_a;
@@ -822,13 +822,13 @@ final class MeshRenderSupport {
                     } else {
                       dupTemp$31 = param21.field_p[var38Lifetime1];
                       MusicPatchEnvelope.field_h.field_p[var38Lifetime1] = dupTemp$31;
-                      FaceBucketSupport.field_e.field_p[var38Lifetime1] = dupTemp$31;
+                      RankingsBufferSupport.field_e.field_p[var38Lifetime1] = dupTemp$31;
                       dupTemp$32 = param21.field_H[var38Lifetime1];
                       MusicPatchEnvelope.field_h.field_H[var38Lifetime1] = dupTemp$32;
-                      FaceBucketSupport.field_e.field_H[var38Lifetime1] = dupTemp$32;
+                      RankingsBufferSupport.field_e.field_H[var38Lifetime1] = dupTemp$32;
                       dupTemp$33 = param21.field_C[var38Lifetime1];
                       MusicPatchEnvelope.field_h.field_C[var38Lifetime1] = dupTemp$33;
-                      FaceBucketSupport.field_e.field_C[var38Lifetime1] = dupTemp$33;
+                      RankingsBufferSupport.field_e.field_C[var38Lifetime1] = dupTemp$33;
                     }
                     var38Lifetime1++;
                     continue;
@@ -836,28 +836,28 @@ final class MeshRenderSupport {
                 } else {
                   fieldTemp$34 = param21.field_E;
                   MusicPatchEnvelope.field_h.field_E = param21.field_E;
-                  FaceBucketSupport.field_e.field_E = fieldTemp$34;
+                  RankingsBufferSupport.field_e.field_E = fieldTemp$34;
                   fieldTemp$35 = param21.field_T;
                   MusicPatchEnvelope.field_h.field_T = param21.field_T;
-                  FaceBucketSupport.field_e.field_T = fieldTemp$35;
+                  RankingsBufferSupport.field_e.field_T = fieldTemp$35;
                   fieldTemp$36 = param21.field_F;
                   MusicPatchEnvelope.field_h.field_F = param21.field_F;
-                  FaceBucketSupport.field_e.field_F = fieldTemp$36;
+                  RankingsBufferSupport.field_e.field_F = fieldTemp$36;
                   fieldTemp$37 = param21.field_j;
                   MusicPatchEnvelope.field_h.field_j = param21.field_j;
-                  FaceBucketSupport.field_e.field_j = fieldTemp$37;
+                  RankingsBufferSupport.field_e.field_j = fieldTemp$37;
                   fieldTemp$38 = param21.field_R;
                   MusicPatchEnvelope.field_h.field_R = param21.field_R;
-                  FaceBucketSupport.field_e.field_R = fieldTemp$38;
+                  RankingsBufferSupport.field_e.field_R = fieldTemp$38;
                   fieldTemp$39 = param21.field_i;
                   MusicPatchEnvelope.field_h.field_i = param21.field_i;
-                  FaceBucketSupport.field_e.field_i = fieldTemp$39;
+                  RankingsBufferSupport.field_e.field_i = fieldTemp$39;
                   fieldTemp$40 = param21.field_z;
                   MusicPatchEnvelope.field_h.field_z = param21.field_z;
-                  FaceBucketSupport.field_e.field_z = fieldTemp$40;
+                  RankingsBufferSupport.field_e.field_z = fieldTemp$40;
                   fieldTemp$41 = param21.field_h;
                   MusicPatchEnvelope.field_h.field_h = param21.field_h;
-                  FaceBucketSupport.field_e.field_h = fieldTemp$41;
+                  RankingsBufferSupport.field_e.field_h = fieldTemp$41;
                 }
                 break;
               }

@@ -48,7 +48,7 @@ abstract class IndexedSpriteState {
         }
     }
 
-    final static void sortVisibleFaces(int param0, int param1, int param2, int param3, int param4, byte param5, boolean param6) {
+    final static void sortRankingIndices(int param0, int param1, int param2, int param3, int param4, byte param5, boolean param6) {
         int var11 = 0;
         int incrementValue$0 = 0;
         int stackIn_27_0 = 0;
@@ -104,15 +104,15 @@ abstract class IndexedSpriteState {
                 }
               }
             }
-            IndexedSpriteState.sortVisibleFaces(var9, var8, param2, param3, param4, (byte) -95, param6);
-            IndexedSpriteState.sortVisibleFaces(param0, param1, var8, var10, param4, (byte) -99, param6);
+            IndexedSpriteState.sortRankingIndices(var9, var8, param2, param3, param4, (byte) -95, param6);
+            IndexedSpriteState.sortRankingIndices(param0, param1, var8, var10, param4, (byte) -99, param6);
             return;
           }
           for (var7_intLifetime1 = param1 - 1; var7_intLifetime1 > param2; var7_intLifetime1--) {
             for (var8Lifetime1 = param2; var8Lifetime1 < var7_intLifetime1; var8Lifetime1++) {
               var9Lifetime1 = NetworkGameClient.field_H[var8Lifetime1];
               var10Lifetime1 = NetworkGameClient.field_H[var8Lifetime1 + 1];
-              if (CanvasInputSupport.a(var9Lifetime1, param6, var10Lifetime1, 0)) {
+              if (CanvasInputSupport.rankingComesAfter(var9Lifetime1, param6, var10Lifetime1, 0)) {
                 NetworkGameClient.field_H[var8Lifetime1] = var10Lifetime1;
                 NetworkGameClient.field_H[var8Lifetime1 + 1] = var9Lifetime1;
               }

@@ -113,7 +113,7 @@ class DualLinkNode extends IntrusiveNode {
         int var6Lifetime1;
         var13 = Pool.field_O;
         try {
-          var5_int = param3.b(param2);
+          var5_int = param3.stringWidth(param2);
           if (param0 >= var5_int &&
             param2.indexOf("<br>") == -1) {
             param1[0] = param2;
@@ -130,7 +130,7 @@ class DualLinkNode extends IntrusiveNode {
             if (32 == var10 ||
               45 == var10) {
               var11 = param2.substring(var7, var9 + 1).trim();
-              var12 = param3.b(var11);
+              var12 = param3.stringWidth(var11);
               if (param0 <= var12) {
                 var7 = var9 + 1;
                 incrementValue$1 = var6Lifetime1;

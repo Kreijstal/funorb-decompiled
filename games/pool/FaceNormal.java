@@ -63,7 +63,7 @@ final class FaceNormal {
                       var4 = text.toLowerCase();
                       break;
                     }
-                    if (var12 > 0 && (ContextMenu.a(var4.charAt(var12 - 1), obfuscationGuard ^ 22991) ||
+                    if (var12 > 0 && (ContextMenu.isAsciiLetter(var4.charAt(var12 - 1), obfuscationGuard ^ 22991) ||
                       var4.charAt(var12 - 1) == 35)) {
                       if (var4.charAt(var12 - 1) != 35) {
                         discarded$0 = ((StringBuilder) (var5)).append(text.substring(var11, 1 + var12));
@@ -75,7 +75,7 @@ final class FaceNormal {
                       continue;
                     }
                     if (var4.length() > var12 + var10 &&
-                      ContextMenu.a(var4.charAt(var12 + var10), 22987)) {
+                      ContextMenu.isAsciiLetter(var4.charAt(var12 + var10), 22987)) {
                       discarded$3 = ((StringBuilder) (var5)).append(text.substring(var11, var12 + 1));
                       var11 = 1 + var12;
                       continue;

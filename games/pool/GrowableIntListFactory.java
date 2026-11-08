@@ -34,13 +34,13 @@ final class GrowableIntListFactory {
         field_k = null;
     }
 
-    final static int a(int param0, int param1) {
+    final static int alignUpToEight(int obfuscationGuard, int value) {
         int var2 = 0;
-        if ((param1 & 7) != 0) {
-          var2 = 8 - (param1 & 7);
+        if ((value & 7) != 0) {
+          var2 = 8 - (value & 7);
         }
-        int var3 = param1 + var2;
-        if (param0 != 8) {
+        int var3 = value + var2;
+        if (obfuscationGuard != 8) {
           return -16;
         }
         return var3;

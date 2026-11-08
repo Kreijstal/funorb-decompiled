@@ -98,7 +98,7 @@ class UiComponent extends UiComponentNode {
         int var3 = 0;
         if (null != this.text &&
           this.font != null) {
-          var4_int = this.font.a(this.text, param1);
+          var4_int = this.font.maxWrappedLineWidth(this.text, param1);
           if (var4_int > var3) {
             var3 = var4_int;
           }
@@ -428,7 +428,7 @@ class UiComponent extends UiComponentNode {
             null != this.textSuffix) {
             var23Lifetime2 = var25 + this.textSuffix;
           }
-          if (this.font.b(var23Lifetime2) <= this.width - this.textInset * 2 &&
+          if (this.font.stringWidth(var23Lifetime2) <= this.width - this.textInset * 2 &&
             var23Lifetime2.indexOf("<br>") < 0) {
             if (this.verticalAlignment != 1) {
               if (this.verticalAlignment == 2) {

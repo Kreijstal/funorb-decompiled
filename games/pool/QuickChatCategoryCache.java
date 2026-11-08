@@ -216,22 +216,22 @@ final class QuickChatCategoryCache {
         }
         stackIn_9_0 = (var8.readUnsignedByte(obfuscationGuard ^ 94) != 1) ? 0 : 1;
         var4 = stackIn_9_0;
-        LabeledChildWidget.field_S = var8.j(-105);
+        LabeledChildWidget.field_S = var8.readNullTerminatedString(-105);
         if (obfuscationGuard != -31) {
           QuickChatCategoryCache.b((byte) -81);
         }
         if (var4 == 0) {
           ArchiveProvider.field_f = LabeledChildWidget.field_S;
         } else {
-          ArchiveProvider.field_f = var8.j(obfuscationGuard ^ 82);
+          ArchiveProvider.field_f = var8.readNullTerminatedString(obfuscationGuard ^ 82);
         }
         if (MeshBase.field_d == 1) {
           MeshColorSupport.field_b = var8.readUnsignedShort(-1034);
-          LookupRetrySupport.field_g = var8.j(-49);
+          LookupRetrySupport.field_g = var8.readNullTerminatedString(-49);
         } else {
           if (4 == MeshBase.field_d) {
             MeshColorSupport.field_b = var8.readUnsignedShort(-1034);
-            LookupRetrySupport.field_g = var8.j(-49);
+            LookupRetrySupport.field_g = var8.readNullTerminatedString(-49);
           } else {
             MeshColorSupport.field_b = 0;
             LookupRetrySupport.field_g = null;
@@ -363,22 +363,22 @@ final class QuickChatCategoryCache {
         }
         stackIn_9_0 = (var8.readUnsignedByte(param0 ^ 94) != 1) ? 0 : 1;
         var4 = stackIn_9_0;
-        LabeledChildWidget.field_S = var8.j(-105);
+        LabeledChildWidget.field_S = var8.readNullTerminatedString(-105);
         if (param0 != -31) {
           QuickChatCategoryCache.b((byte) -81);
         }
         if (var4 == 0) {
           ArchiveProvider.field_f = LabeledChildWidget.field_S;
         } else {
-          ArchiveProvider.field_f = var8.j(param0 ^ 82);
+          ArchiveProvider.field_f = var8.readNullTerminatedString(param0 ^ 82);
         }
         if (MeshBase.field_d == 1) {
           MeshColorSupport.field_b = var8.readUnsignedShort(-1034);
-          LookupRetrySupport.field_g = var8.j(-49);
+          LookupRetrySupport.field_g = var8.readNullTerminatedString(-49);
         } else {
           if (4 == MeshBase.field_d) {
             MeshColorSupport.field_b = var8.readUnsignedShort(-1034);
-            LookupRetrySupport.field_g = var8.j(-49);
+            LookupRetrySupport.field_g = var8.readNullTerminatedString(-49);
           } else {
             MeshColorSupport.field_b = 0;
             LookupRetrySupport.field_g = null;

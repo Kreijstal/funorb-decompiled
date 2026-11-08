@@ -14,7 +14,7 @@ final class CanvasInputSupport {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          HighscoresScreen.a((java.awt.Component) ((Object) param0), (byte) -39);
+          HighscoresScreen.detachKeyListeners((java.awt.Component) ((Object) param0), (byte) -39);
           QuickChatDynamicCommand.detachMouseListeners((java.awt.Component) ((Object) param0), false);
           if (param1 != 0) {
             return;
@@ -38,60 +38,60 @@ final class CanvasInputSupport {
         }
     }
 
-    final static boolean a(int param0, boolean param1, int param2, int param3) {
+    final static boolean rankingComesAfter(int leftIndex, boolean alternatePrimaryKey, int rightIndex, int obfuscationGuard) {
         int var4;
         int var5;
         java.awt.Canvas var6;
         int var4Lifetime1;
         int var5Lifetime1;
-        if (param3 != 0) {
+        if (obfuscationGuard != 0) {
           var6 = (java.awt.Canvas) null;
           CanvasInputSupport.detachInputListeners((java.awt.Canvas) null, -1);
         }
-        if (!param1) {
-          if (VertexNormal.field_c[param0] < VertexNormal.field_c[param2]) {
+        if (!alternatePrimaryKey) {
+          if (VertexNormal.field_c[leftIndex] < VertexNormal.field_c[rightIndex]) {
             return true;
           }
-          if (VertexNormal.field_c[param2] < VertexNormal.field_c[param0]) {
+          if (VertexNormal.field_c[rightIndex] < VertexNormal.field_c[leftIndex]) {
             return false;
           }
-          if (TickClock.field_g[param2] > TickClock.field_g[param0]) {
+          if (TickClock.field_g[rightIndex] > TickClock.field_g[leftIndex]) {
             return true;
           }
-          if (TickClock.field_g[param2] < TickClock.field_g[param0]) {
+          if (TickClock.field_g[rightIndex] < TickClock.field_g[leftIndex]) {
             return false;
           }
-          var4 = LoginTextSupport.field_d[param0] + (MenuScreen.field_y[param0] + TextInputPainter.field_s[param0]);
-          var5 = LoginTextSupport.field_d[param2] + (MenuScreen.field_y[param2] + TextInputPainter.field_s[param2]);
+          var4 = LoginTextSupport.field_d[leftIndex] + (MenuScreen.field_y[leftIndex] + TextInputPainter.field_s[leftIndex]);
+          var5 = LoginTextSupport.field_d[rightIndex] + (MenuScreen.field_y[rightIndex] + TextInputPainter.field_s[rightIndex]);
           if (var5 > var4) {
             return true;
           }
           if (var4 > var5) {
             return false;
           }
-          return !(param0 >= param2);
+          return !(leftIndex >= rightIndex);
         }
-        if (TickClock.field_g[param2] > TickClock.field_g[param0]) {
+        if (TickClock.field_g[rightIndex] > TickClock.field_g[leftIndex]) {
           return true;
         }
-        if (TickClock.field_g[param2] < TickClock.field_g[param0]) {
+        if (TickClock.field_g[rightIndex] < TickClock.field_g[leftIndex]) {
           return false;
         }
-        if (VertexNormal.field_c[param2] > VertexNormal.field_c[param0]) {
+        if (VertexNormal.field_c[rightIndex] > VertexNormal.field_c[leftIndex]) {
           return true;
         }
-        if (VertexNormal.field_c[param2] < VertexNormal.field_c[param0]) {
+        if (VertexNormal.field_c[rightIndex] < VertexNormal.field_c[leftIndex]) {
           return false;
         }
-        var4Lifetime1 = LoginTextSupport.field_d[param0] + (MenuScreen.field_y[param0] + TextInputPainter.field_s[param0]);
-        var5Lifetime1 = LoginTextSupport.field_d[param2] + (MenuScreen.field_y[param2] + TextInputPainter.field_s[param2]);
+        var4Lifetime1 = LoginTextSupport.field_d[leftIndex] + (MenuScreen.field_y[leftIndex] + TextInputPainter.field_s[leftIndex]);
+        var5Lifetime1 = LoginTextSupport.field_d[rightIndex] + (MenuScreen.field_y[rightIndex] + TextInputPainter.field_s[rightIndex]);
         if (var5Lifetime1 > var4Lifetime1) {
           return true;
         }
         if (var4Lifetime1 > var5Lifetime1) {
           return false;
         }
-        return !(param0 >= param2);
+        return !(leftIndex >= rightIndex);
     }
 
     public final String toString() {

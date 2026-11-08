@@ -114,7 +114,7 @@ final class UiTheme {
             var7 = this.tooltipFont.maxAscent + this.tooltipFont.maxDescent;
           }
           var8 = SoftwareRasterizer.width >> 2;
-          var9 = this.tooltipFont.b(param2);
+          var9 = this.tooltipFont.stringWidth(param2);
           if (param1 != 10066329) {
             return;
           }
@@ -135,7 +135,7 @@ final class UiTheme {
             var9 = 0;
             var10 = var10 + var7 * (var11Lifetime1 - 1);
             for (var13Lifetime2 = 0; var11Lifetime1 > var13Lifetime2; var13Lifetime2++) {
-              var14 = this.tooltipFont.b(GrowableIntListFactory.field_k[var13Lifetime2]);
+              var14 = this.tooltipFont.stringWidth(GrowableIntListFactory.field_k[var13Lifetime2]);
               if (var14 > var9) {
                 var9 = var14;
               }
@@ -207,7 +207,7 @@ final class UiTheme {
         int var7 = 0;
         int var8 = 0;
         try {
-          var5_int = this.tooltipFont.b(param0);
+          var5_int = this.tooltipFont.stringWidth(param0);
           var6 = this.tooltipFont.maxDescent + this.tooltipFont.field_L;
           if (param2 > -62) {
             this.tooltipBackgroundColor = -110;
@@ -222,7 +222,7 @@ final class UiTheme {
           }
           SoftwareRasterizer.drawRectangle(var7, var8, 6 + var5_int, 6 + var6, this.tooltipTextColor);
           SoftwareRasterizer.fillRectangle(1 + var7, var8 + 1, var5_int + 4, var6 + 4, this.tooltipBackgroundColor);
-          this.tooltipFont.d(param0, var7 + 3, this.tooltipFont.field_L + (var8 + 3), this.tooltipTextColor, -1);
+          this.tooltipFont.drawLeft(param0, var7 + 3, this.tooltipFont.field_L + (var8 + 3), this.tooltipTextColor, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

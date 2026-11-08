@@ -13,7 +13,7 @@ final class HighscoresScreen extends MenuScreen {
     static boolean field_N;
     static Sprite field_M;
 
-    private final boolean g(int param0, int param1) {
+    private final boolean isRankingFilterSelected(int itemIndex, int obfuscationGuard) {
         int var3;
         int var4;
         boolean stackIn_14_0 = false;
@@ -22,10 +22,10 @@ final class HighscoresScreen extends MenuScreen {
         boolean stackIn_26_0 = false;
         boolean stackIn_30_0 = false;
         var4 = Pool.field_O;
-        if (param1 != 53) {
+        if (obfuscationGuard != 53) {
           return true;
         }
-        var3 = this.itemIds[param0];
+        var3 = this.itemIds[itemIndex];
         if (14 == var3) {
           stackIn_14_0 = (MembershipBenefitsScreen.field_J == 0);
           return stackIn_14_0;
@@ -96,8 +96,8 @@ final class HighscoresScreen extends MenuScreen {
                     var8 = 16764057;
                   }
                   var10 = var3[var7];
-                  CollisionContact.field_h.c(var7 + 1 + ". ", 190, var5, var8, -1);
-                  CollisionContact.field_h.d(var10, 190, var5, var8, -1);
+                  CollisionContact.field_h.drawRight(var7 + 1 + ". ", 190, var5, var8, -1);
+                  CollisionContact.field_h.drawLeft(var10, 190, var5, var8, -1);
                   var2 = "";
                   CollisionContact.field_h.drawCentered(ArchiveProvider.formatTimeSpan(-var9, (byte) -80), 440, var5, var8, -1);
                 }
@@ -107,7 +107,7 @@ final class HighscoresScreen extends MenuScreen {
                 (!(0 <= var6)) &&
                 ((DebugSliderInputSupport.field_d.field_l == StrongCacheEntry.field_O))) {
                 var7Lifetime1 = DebugSliderInputSupport.field_d.field_z[0];
-                CollisionContact.field_h.d(ResourceArchive.field_j, 190, var5, 16764057, -1);
+                CollisionContact.field_h.drawLeft(ResourceArchive.field_j, 190, var5, 16764057, -1);
                 CollisionContact.field_h.drawCentered(ArchiveProvider.formatTimeSpan(-var7Lifetime1, (byte) -80), 440, var5, 16764057, -1);
               }
               break regionExit1;
@@ -202,11 +202,11 @@ final class HighscoresScreen extends MenuScreen {
         }
     }
 
-    final static int a(float param0, int param1) {
-        if (param1 != -4) {
+    final static int floatToFixed16(float value, int obfuscationGuard) {
+        if (obfuscationGuard != -4) {
           field_P = -95;
         }
-        return ButtonPainter.floatToFixed(16, param0, (byte) 127);
+        return ButtonPainter.floatToFixed(16, value, (byte) 127);
     }
 
     final int getButtonHeight(byte param0, int param1) {
@@ -220,34 +220,34 @@ final class HighscoresScreen extends MenuScreen {
         return 36;
     }
 
-    final static void a(byte param0, boolean param1, int param2, String param3) {
+    final static void enqueueStatusMessage(byte param0, boolean param1, int param2, String param3) {
         if (param0 < 116) {
           return;
         }
         try {
-          LabeledChildWidget.a(8, param3, param1 ? 13421772 : 16762114, param1, param2);
+          LabeledChildWidget.enqueueMessageLine(8, param3, param1 ? 13421772 : 16762114, param1, param2);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "em.QA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static int h(int param0) {
-        if (param0 != 36) {
+    final static int currentYear(int obfuscationGuard) {
+        if (obfuscationGuard != 36) {
           HighscoresScreen.a(4, (byte) -14, 28);
         }
         return 1900 + new Date().getYear();
     }
 
-    final static void a(java.awt.Component param0, byte param1) {
-        param0.removeKeyListener(ReflectionReplySupport.field_a);
-        if (param1 != -39) {
+    final static void detachKeyListeners(java.awt.Component component, byte obfuscationGuard) {
+        component.removeKeyListener(ReflectionReplySupport.field_a);
+        if (obfuscationGuard != -39) {
           return;
         }
         try {
-          param0.removeFocusListener(ReflectionReplySupport.field_a);
+          component.removeFocusListener(ReflectionReplySupport.field_a);
           MessageDialog.field_xb = -1;
         } catch (RuntimeException runtimeException) {
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "em.AB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "em.AB(" + (component != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -544,7 +544,7 @@ final class HighscoresScreen extends MenuScreen {
         if (param1 != -34) {
           field_J = (ScrollPaneWithFooter) null;
         }
-        return this.g(param0, 53) ? ModelOriginSupport.field_s : super.getButtonFrameSprites(param0, -34);
+        return this.isRankingFilterSelected(param0, 53) ? ModelOriginSupport.field_s : super.getButtonFrameSprites(param0, -34);
     }
 
     public static void clearSharedReferences(int param0) {
@@ -561,12 +561,12 @@ final class HighscoresScreen extends MenuScreen {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$c9c3307e6488(int param0, boolean param1, int param2, String param3) {
+    final static void enqueueStatusMessageIntArgs(int param0, boolean param1, int param2, String param3) {
         if (param0 < 116) {
           return;
         }
         try {
-          LabeledChildWidget.a(8, param3, param1 ? 13421772 : 16762114, param1, param2);
+          LabeledChildWidget.enqueueMessageLine(8, param3, param1 ? 13421772 : 16762114, param1, param2);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "em.QA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

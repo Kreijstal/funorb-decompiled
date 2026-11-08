@@ -46,7 +46,7 @@ final class AudioService implements Runnable {
         if (PlasmaBallSkin.field_m != null) {
           PlasmaBallSkin.field_m.a(param1, 12887);
         }
-        LoginPayload.a(-113, param1);
+        LoginPayload.drawNamePopup(-113, param1);
         if (param0 != 0) {
           field_f = 63;
         }

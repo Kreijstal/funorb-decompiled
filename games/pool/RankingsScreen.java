@@ -79,9 +79,9 @@ final class RankingsScreen extends MenuScreen {
         }
         try {
           if (param0 != -1) {
-            CollisionContact.field_h.c(param0 + 1 + ". ", 90, param7, param6, -1);
+            CollisionContact.field_h.drawRight(param0 + 1 + ". ", 90, param7, param6, -1);
           }
-          CollisionContact.field_h.d(param8, 95, param7, param6, -1);
+          CollisionContact.field_h.drawLeft(param8, 95, param7, param6, -1);
           var12 = Integer.toString(param4);
           CollisionContact.field_h.drawCentered(var12, LongAndTextLoginPayload.field_i[0], param7, param6, -1);
           var13 = var10_int >= 50 ? "50+" : Integer.toString(var10_int);

@@ -28,7 +28,7 @@ final class LoginTextValue {
           }
           if (param1 == 255) {
             stackIn_7_0 = !(ButtonPainter.field_b >= 13);
-            QuickChatCategoryDefinition.field_B = GradientPaletteSupport.a(stackIn_7_0, param3 - 30898);
+            QuickChatCategoryDefinition.field_B = GradientPaletteSupport.createLoginResponse(stackIn_7_0, param3 - 30898);
             return;
           }
           if (param1 < 100) {

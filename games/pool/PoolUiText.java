@@ -1142,7 +1142,7 @@ final class PoolUiText {
                 }
                 var2 = LocalGameSetupScreen.loadMenuResource("tutorial_eight_ball_afterfirstpot", (byte) 60);
                 if (var2 != null) {
-                  FaceBucketSupport.tutorialEightBallAfterfirstpot = Cp1252DecodingSupport.decodeBytesToString(var2, 126);
+                  RankingsBufferSupport.tutorialEightBallAfterfirstpot = Cp1252DecodingSupport.decodeBytesToString(var2, 126);
                 }
                 var2 = LocalGameSetupScreen.loadMenuResource("tutorial_eight_ball_aftergrouppot", (byte) 68);
                 if (null != var2) {
@@ -1718,7 +1718,7 @@ final class PoolUiText {
                 }
                 var2 = LocalGameSetupScreen.loadMenuResource("keycode_default_right1", (byte) 38);
                 if (null != var2) {
-                  FaceBucketSupport.keycodeDefaultRight1 = var2[0] & 255;
+                  RankingsBufferSupport.keycodeDefaultRight1 = var2[0] & 255;
                 }
                 var2 = LocalGameSetupScreen.loadMenuResource("keycode_default_right2", (byte) 91);
                 if (var2 != null) {

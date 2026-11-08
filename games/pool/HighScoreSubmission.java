@@ -90,7 +90,7 @@ final class HighScoreSubmission extends IntrusiveNode {
         int var1;
         boolean stackIn_7_0 = false;
         var1 = 38 / ((param0 - 45) / 37);
-        stackIn_7_0 = (null != PlasmaBallSkin.field_m) || (OpacityWidget.h((byte) 86)) || (AccountMenuText.field_b != null) || (DraggableWidget.i(-1));
+        stackIn_7_0 = (null != PlasmaBallSkin.field_m) || (OpacityWidget.isNamePopupOpen((byte) 86)) || (AccountMenuText.field_b != null) || (DraggableWidget.isQuickChatOverlayOpen(-1));
         return stackIn_7_0;
     }
 

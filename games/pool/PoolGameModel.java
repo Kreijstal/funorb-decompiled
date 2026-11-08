@@ -1202,7 +1202,7 @@ final class PoolGameModel {
         var4.angularVelocityX = NameEntryPopup.multiplyFixed16(-NameEntryPopup.multiplyFixed16(var14, false, var21), false, var22);
         var4.angularVelocityY = NameEntryPopup.multiplyFixed16(NameEntryPopup.multiplyFixed16(var13, false, var21), false, var22);
         var4.angularVelocityZ = NameEntryPopup.multiplyFixed16(NameEntryPopup.multiplyFixed16(var14, false, var19) - NameEntryPopup.multiplyFixed16(var13, false, var20), false, var22);
-        Ball.field_i = BufferedSocket.a(-6584, this.balls[0]);
+        Ball.field_i = BufferedSocket.resetBallEventChain(-6584, this.balls[0]);
     }
 
     final static void applyPendingScreenTransition(int param0) {

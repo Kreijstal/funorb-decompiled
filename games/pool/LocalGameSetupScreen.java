@@ -146,12 +146,12 @@ final class LocalGameSetupScreen extends MenuScreen {
           }
           AccountDisplayNameSupport.field_g = WidgetStyleLayer.loadSprite("benefits", (byte) 118, "members_benefits_logo", ViewportController.field_q);
           QuickChatMenu.field_Rb = WidgetStyleLayer.loadSprite("benefits", (byte) 69, "members_benefits_price", ViewportController.field_q);
-          var5 = new Sprite(MonotonicClock.field_h.getFileByName(false, "members_benefits_screenshots.jpg", "benefits/"), (java.awt.Component) ((Object) TextLineLayout.a((byte) -67)));
+          var5 = new Sprite(MonotonicClock.field_h.getFileByName(false, "members_benefits_screenshots.jpg", "benefits/"), (java.awt.Component) ((Object) TextLineLayout.getActiveCanvas((byte) -67)));
           ShotEvent.field_o = new Sprite[3];
           for (var2 = 0; var2 < ShotEvent.field_o.length; var2++) {
             var3 = new Sprite(var5.field_w, var5.field_y / ShotEvent.field_o.length);
             var3.bindAsRenderTarget();
-            var5.a(0, -var2 * var5.field_y / ShotEvent.field_o.length);
+            var5.drawAt(0, -var2 * var5.field_y / ShotEvent.field_o.length);
             ShotEvent.field_o[var2] = var3;
           }
           if (obfuscationGuard != 109) {

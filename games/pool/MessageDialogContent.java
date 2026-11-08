@@ -332,7 +332,7 @@ final class MessageDialogContent extends WidgetContainer implements ButtonActiva
               var9 = var14;
               var9 = var14;
               var9 = var14;
-              var10Lifetime1 = TextHotspotRegion.field_o.font.b(var14) + 3 * TextHotspotRegion.field_o.font.measureCharacterAdvance('.');
+              var10Lifetime1 = TextHotspotRegion.field_o.font.stringWidth(var14) + 3 * TextHotspotRegion.field_o.font.measureCharacterAdvance('.');
               if ((48 & MultiHandleSliderWidget.field_V) == 16) {
                 var9 = var14 + ".";
               }

@@ -26,7 +26,7 @@ final class ClassicBallSkin extends BallSkin {
         if (param0 != 16) {
           return -57;
         }
-        return SingleChildWidget.a(param1, 16, 1);
+        return SingleChildWidget.doubleToFixed(param1, 16, 1);
     }
 
     final void loadBallMeshes(ResourceArchive param0, byte param1) {

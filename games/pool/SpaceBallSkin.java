@@ -50,7 +50,7 @@ final class SpaceBallSkin extends BallSkin {
         var2.writeByte(HighscoresScreen.field_L.field_Nb, false);
         int var4 = HighscoresScreen.field_L.field_ac + (HighscoresScreen.field_L.field_Yb << 6);
         var2.writeByte(var4, false);
-        var2.a(HighscoresScreen.field_L.settings, (byte) 0, 0, HighscoresScreen.field_L.settings.length);
+        var2.writeBytes(HighscoresScreen.field_L.settings, (byte) 0, 0, HighscoresScreen.field_L.settings.length);
         var2.writeByteLengthPrefix(-var3 + var2.position, true);
     }
 

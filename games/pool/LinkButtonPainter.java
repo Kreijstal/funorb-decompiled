@@ -71,7 +71,7 @@ final class LinkButtonPainter implements WidgetPainter {
           var6_int = stackIn_6_0;
           this.font.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param4.widgetText + "</u>", param1 + param4.widgetX, param3 + param4.widgetY, param4.widgetWidth, param4.widgetHeight, var6_int, -1, this.horizontalAlignment, this.verticalAlignment, this.font.maxDescent + this.font.maxAscent);
           if (param4.hasKeyboardFocus(-52)) {
-            var7 = this.font.b(param4.widgetText);
+            var7 = this.font.stringWidth(param4.widgetText);
             var8 = this.font.maxAscent + this.font.maxDescent;
             var9 = param4.widgetX + param1;
             var10 = param3 + param4.widgetY;

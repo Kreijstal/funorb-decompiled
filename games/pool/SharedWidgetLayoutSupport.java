@@ -345,7 +345,7 @@ final class SharedWidgetLayoutSupport {
               if (var12.field_Dc) {
                 var12.field_nc.text = "/" + var12.field_Nb;
                 var12.field_Lb.horizontalAlignment = 2;
-                var33_int = (348 - var12.field_nc.font.b("/")) / 2;
+                var33_int = (348 - var12.field_nc.font.stringWidth("/")) / 2;
                 var12.field_Lb.setBounds(var31, 2147483647, 150, -150 + var33_int, ArchiveIndex.field_x);
                 var12.field_nc.setBounds(var31, param1 ^ 2147483647, var33_int, -var33_int + 198, ArchiveIndex.field_x);
               } else {

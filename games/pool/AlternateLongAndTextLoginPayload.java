@@ -157,7 +157,7 @@ final class AlternateLongAndTextLoginPayload extends LongAndTextLoginPayload {
           var8 = var7.position;
           var7.writeByte(param4, false);
           if (2 == param4) {
-            var7.a(-9946, param3);
+            var7.writeNullTerminatedString(-9946, param3);
           }
           if (param1 == null) {
             var7.writeShort((byte) -81, param5);

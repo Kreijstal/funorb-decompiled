@@ -200,7 +200,7 @@ final class PlasmaTableScene extends TableScene {
         int var9Lifetime3;
         int var9Lifetime4;
         int var14Lifetime1;
-        var16 = LobbyPanelLayoutSupport.a((byte) 100, param0);
+        var16 = LobbyPanelLayoutSupport.copyTransform((byte) 100, param0);
         var15 = var16;
         param0 = var15;
         param0[0] = param0[0] - 2304;
@@ -211,7 +211,7 @@ final class PlasmaTableScene extends TableScene {
         var1 = 65536 / SoftwareRasterizer.width;
         ClassicBallSkin.field_l = ClassicBallSkin.field_l & 127;
         EmailAvailabilityValidator.field_x = -64 + ClassicBallSkin.field_l;
-        FaceBucketSupport.field_b = 0 + ClassicBallSkin.field_l;
+        RankingsBufferSupport.field_b = 0 + ClassicBallSkin.field_l;
         stackIn_2_0 = LimitedRandomAccessFile.field_i;
         if (ClassicBallSkin.field_l >= 16) {
           stackIn_3_1 = ClassicBallSkin.field_l >> 1;
@@ -223,7 +223,7 @@ final class PlasmaTableScene extends TableScene {
         ArchiveLoadSequence.field_g = 128 + ClassicBallSkin.field_l;
         ProjectedLineSupport.field_g = LimitedRandomAccessFile.field_i[64 + (ClassicBallSkin.field_l >> 1)];
         DateInputWidget.field_Y = 192 + ClassicBallSkin.field_l;
-        FaceBucketSupport.field_d = 256 + ClassicBallSkin.field_l;
+        RankingsBufferSupport.field_d = 256 + ClassicBallSkin.field_l;
         ChatMessage.field_s = LimitedRandomAccessFile.field_i[128 + (ClassicBallSkin.field_l >> 1)];
         UsernameSuggestionsPanel.field_O = 320 + ClassicBallSkin.field_l;
         BrowserUrlSupport.field_c = 384 + ClassicBallSkin.field_l;
@@ -343,7 +343,7 @@ final class PlasmaTableScene extends TableScene {
               var12 <= DisplayNamePanel.field_V) {
               param1 = LoginTextValue.a(false, var12);
               if (param1 > EmailAvailabilityValidator.field_x &&
-                param1 < FaceBucketSupport.field_b) {
+                param1 < RankingsBufferSupport.field_b) {
                 param1 = (param1 - EmailAvailabilityValidator.field_x - 32) * 255 >> 5;
                 if (param1 < 0) {
                   param1 = -param1;
@@ -375,7 +375,7 @@ final class PlasmaTableScene extends TableScene {
                   SoftwareRasterizer.pixels[param8] = param3 - param2 | param2 - (param2 >>> 8);
                 } else {
                   if (param1 > DateInputWidget.field_Y &&
-                    param1 < FaceBucketSupport.field_d) {
+                    param1 < RankingsBufferSupport.field_d) {
                     param1 = (param1 - DateInputWidget.field_Y - 32) * 255 >> 5;
                     if (param1 < 0) {
                       param1 = -param1;
@@ -578,7 +578,7 @@ final class PlasmaTableScene extends TableScene {
         int[] var13 = null;
         var8 = Pool.field_O;
         try {
-          var9 = LobbyPanelLayoutSupport.a((byte) 96, param1);
+          var9 = LobbyPanelLayoutSupport.copyTransform((byte) 96, param1);
           var13 = var9;
           var9[0] = var9[0] - 2304;
           var9[1] = var9[1] - 1152;
@@ -992,9 +992,9 @@ final class PlasmaTableScene extends TableScene {
           var13 = var16;
           var4 = var13;
           this.prepareBallDrawOrder(false, var16, var14);
-          QuaternionRotationSupport.b(0);
+          QuaternionRotationSupport.clearScreenForTransition(0);
           PlasmaTableScene.a(var16);
-          var17 = LobbyPanelLayoutSupport.a((byte) 77, var16);
+          var17 = LobbyPanelLayoutSupport.copyTransform((byte) 77, var16);
           var15 = var17;
           var5_ref_int__ = var15;
           var5_ref_int__[0] = var5_ref_int__[0] - 2304;

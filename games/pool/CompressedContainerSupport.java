@@ -34,7 +34,7 @@ final class CompressedContainerSupport implements QuickChatResolverMarker {
             !(var4 > SpriteResourceSupport.field_b))) {
             if (param0 == var3) {
               var5_ref_byte__ = new byte[var4];
-              var2.a(0, (byte) -121, var5_ref_byte__, var4);
+              var2.readBytes(0, (byte) -121, var5_ref_byte__, var4);
               stackIn_12_0 = var5_ref_byte__;
               return stackIn_12_0;
             }

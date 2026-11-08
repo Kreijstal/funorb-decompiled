@@ -242,7 +242,7 @@ final class BrowserCookieSupport {
           if (!DualLinkNode.field_s &&
             UsernameSuggestionsPanel.field_V <= 0 && (!(TutorialController.field_i >= 2) ||
             !TextLineLayout.field_c[12])) {
-            FaceBucketSupport.field_f = true;
+            RankingsBufferSupport.field_f = true;
             decompiledFrameRemainder0 = false;
           }
           else {

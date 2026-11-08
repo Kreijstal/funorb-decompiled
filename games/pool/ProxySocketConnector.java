@@ -14,7 +14,7 @@ final class ProxySocketConnector extends SocketConnector {
         field_e = null;
         if (param0 != 15296) {
           String var2 = (String) null;
-          ProxySocketConnector.a((byte) -15, 68L, (String) null);
+          ProxySocketConnector.beginPrivateChat((byte) -15, 68L, (String) null);
         }
     }
 
@@ -61,7 +61,7 @@ final class ProxySocketConnector extends SocketConnector {
             if (param0 == -6589) {
               return null;
             }
-            ProxySocketConnector.a(false);
+            ProxySocketConnector.showLoginDialog(false);
             stackIn_23_0 = null;
             return (java.net.Socket) (stackIn_23_0);
           }
@@ -89,7 +89,7 @@ final class ProxySocketConnector extends SocketConnector {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6_ref = (Exception) (Object) decompiledCaughtException;
           }
-          stackIn_16_0 = this.a(var4.getPort(), (byte) 25, (String) (var5), var4.getHostName());
+          stackIn_16_0 = this.openHttpTunnel(var4.getPort(), (byte) 25, (String) (var5), var4.getHostName());
           return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
@@ -105,7 +105,7 @@ final class ProxySocketConnector extends SocketConnector {
         }
     }
 
-    private final java.net.Socket a(int param0, byte param1, String param2, String param3) throws IOException {
+    private final java.net.Socket openHttpTunnel(int proxyPort, byte obfuscationGuard, String authorizationHeaders, String proxyHost) throws IOException {
         java.net.Socket stackIn_12_0 = null;
         Object stackIn_27_0 = null;
         RuntimeException stackIn_30_0 = null;
@@ -131,15 +131,15 @@ final class ProxySocketConnector extends SocketConnector {
         String var8Lifetime2Lifetime2;
         var12 = Pool.field_O;
         try {
-          var13 = new java.net.Socket(param3, param0);
+          var13 = new java.net.Socket(proxyHost, proxyPort);
           var13.setSoTimeout(10000);
           var6 = var13.getOutputStream();
-          if (param2 != null) {
-            var6.write(("CONNECT " + this.field_c + ":" + this.field_a + " HTTP/1.0\n" + param2 + "\n\n").getBytes(java.nio.charset.Charset.forName("ISO-8859-1")));
+          if (authorizationHeaders != null) {
+            var6.write(("CONNECT " + this.field_c + ":" + this.field_a + " HTTP/1.0\n" + authorizationHeaders + "\n\n").getBytes(java.nio.charset.Charset.forName("ISO-8859-1")));
           } else {
             var6.write(("CONNECT " + this.field_c + ":" + this.field_a + " HTTP/1.0\n\n").getBytes(java.nio.charset.Charset.forName("ISO-8859-1")));
           }
-          if (param1 != 25) {
+          if (obfuscationGuard != 25) {
             ProxySocketConnector.releaseStatics(-94);
           }
           boolean decompiledFrameRemainder0 = true;
@@ -193,14 +193,14 @@ final class ProxySocketConnector extends SocketConnector {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_30_0 = var5;
-          stackIn_30_1 = new StringBuilder().append("kr.F(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_30_1 = new StringBuilder().append("kr.F(").append(proxyPort).append(',').append(obfuscationGuard).append(',');
+          if (authorizationHeaders == null) {
             stackIn_31_2 = "null";
           } else {
             stackIn_31_2 = "{...}";
           }
           stackIn_33_1 = ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',');
-          if (param3 == null) {
+          if (proxyHost == null) {
             stackIn_34_2 = "null";
           } else {
             stackIn_34_2 = "{...}";
@@ -213,7 +213,7 @@ final class ProxySocketConnector extends SocketConnector {
         this.field_f = java.net.ProxySelector.getDefault();
     }
 
-    final java.net.Socket a(byte param0) throws IOException {
+    final java.net.Socket connect(byte obfuscationGuard) throws IOException {
         int var9 = 0;
         int stackIn_6_0 = 0;
         java.net.ProxySelector stackIn_10_0;
@@ -251,7 +251,7 @@ final class ProxySocketConnector extends SocketConnector {
         }
         stackIn_6_0 = (this.field_a != 443) ? 0 : 1;
         var5 = stackIn_6_0;
-        if (param0 > -94) {
+        if (obfuscationGuard > -94) {
           return (java.net.Socket) null;
         }
         try {
@@ -317,7 +317,7 @@ final class ProxySocketConnector extends SocketConnector {
         return this.openDirectSocket(5101);
     }
 
-    final static void a(boolean param0) {
+    final static void showLoginDialog(boolean param0) {
         String var1 = null;
         if (ProjectedVertex.field_e) {
           if (MeshBoundsSupport.field_d != null) {
@@ -333,20 +333,20 @@ final class ProxySocketConnector extends SocketConnector {
         throw new IllegalStateException();
     }
 
-    final static void a(byte param0, long param1, String param2) {
+    final static void beginPrivateChat(byte obfuscationGuard, long recipientId, String recipientName) {
         CharSequence var5 = null;
         try {
-          if (param0 >= -58) {
+          if (obfuscationGuard >= -58) {
             field_e = (IntegerSyntaxSupport) null;
           }
-          ArrayWidgetGroup.field_I = param2;
+          ArrayWidgetGroup.field_I = recipientName;
           CookieDateSupport.field_b = 2;
-          var5 = (CharSequence) ((Object) param2);
+          var5 = (CharSequence) ((Object) recipientName);
           ResourceArchive.field_a = TutorialController.normalizeDisplayName(88, var5);
-          QuickChatMenuSupport.field_d = param1;
+          QuickChatMenuSupport.field_d = recipientId;
           DualLinkNode.field_p = true;
         } catch (RuntimeException runtimeException) {
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "kr.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "kr.A(" + obfuscationGuard + ',' + recipientId + ',' + (recipientName != null ? "{...}" : "null") + ')');
         }
     }
 

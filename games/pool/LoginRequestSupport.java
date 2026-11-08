@@ -78,7 +78,7 @@ final class LoginRequestSupport {
               } else {
                 stackIn_18_2 = "";
               }
-              ((PacketBuffer) (Object) stackIn_17_0).a(stackIn_17_1, stackIn_18_2);
+              ((PacketBuffer) (Object) stackIn_17_0).writeNullCircumfixedString(stackIn_17_1, stackIn_18_2);
               stackIn_20_0 = FontPaletteSupport.field_b;
               stackIn_20_1 = false;
               if (!param5.isIncludedInLookupRequest(true)) {
@@ -86,7 +86,7 @@ final class LoginRequestSupport {
               } else {
                 stackIn_21_2 = var8;
               }
-              ((PacketBuffer) (Object) stackIn_20_0).a(stackIn_20_1, stackIn_21_2);
+              ((PacketBuffer) (Object) stackIn_20_0).writeNullCircumfixedString(stackIn_20_1, stackIn_21_2);
               JaggrabDownloader.field_j.writeByte(16, false);
               JaggrabDownloader.field_j.position = JaggrabDownloader.field_j.position + 1;
               var9 = JaggrabDownloader.field_j.position;
@@ -100,10 +100,10 @@ final class LoginRequestSupport {
               FontPaletteSupport.field_b.position = 0;
               FontPaletteSupport.field_b.writeInt(true, ValidationIconWidget.field_P.nextInt());
               FontPaletteSupport.field_b.writeInt(true, ValidationIconWidget.field_P.nextInt());
-              FontPaletteSupport.field_b.a(false, var13);
-              FontPaletteSupport.field_b.a(false, var8);
+              FontPaletteSupport.field_b.writeNullCircumfixedString(false, var13);
+              FontPaletteSupport.field_b.writeNullCircumfixedString(false, var8);
               var14 = (CharSequence) ((Object) param0);
-              FontPaletteSupport.field_b.a(false, DelegatingCanvas.normalizeUsername(-28, var14));
+              FontPaletteSupport.field_b.writeNullCircumfixedString(false, DelegatingCanvas.normalizeUsername(-28, var14));
               FontPaletteSupport.field_b.writeShort((byte) -81, param2);
               FontPaletteSupport.field_b.writeByte(param6, false);
               FontPaletteSupport.field_b.writeByte(var9, false);
@@ -114,7 +114,7 @@ final class LoginRequestSupport {
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
-              JaggrabDownloader.field_j.a(-9946, var11_ref_String);
+              JaggrabDownloader.field_j.writeNullTerminatedString(-9946, var11_ref_String);
               ArchiveIndex.writeEncryptedBuffer((byte) 93, ArchiveLoadSequence.field_l, FontPaletteSupport.field_b, UiWidget.field_q, JaggrabDownloader.field_j);
               JaggrabDownloader.field_j.writeShortLengthPrefix(-var10 + JaggrabDownloader.field_j.position, (byte) -92);
             }
@@ -169,7 +169,7 @@ final class LoginRequestSupport {
           if (RankingsScreen.field_J == HighScoreRequest.field_l &&
             PacketAvailabilitySupport.hasCompletePacket((byte) 39)) {
             if (Bzip2DecoderState.field_c != 255) {
-              LoginTextValue.field_g = PlayerContextMenu.field_e.j(-122);
+              LoginTextValue.field_g = PlayerContextMenu.field_e.readNullTerminatedString(-122);
             } else {
               var9_ref_String = PlayerContextMenu.field_e.readNullableString(110);
               if (var9_ref_String != null) {

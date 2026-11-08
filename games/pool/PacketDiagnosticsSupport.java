@@ -192,7 +192,7 @@ final class PacketDiagnosticsSupport {
 
     final static void a(int param0, boolean param1, boolean param2) {
         String var4 = (String) null;
-        ScoreboardNameRecord.a(-124, param1, param2, (String) null);
+        ScoreboardNameRecord.initializeLoginDialog(-124, param1, param2, (String) null);
         int var3 = -51 / ((param0 - 59) / 47);
     }
 

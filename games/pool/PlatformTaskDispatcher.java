@@ -154,7 +154,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     }
                     try {
                       if (false) throw (ProxyAuthenticationRequiredException) null;
-                      var9.field_e = ProxyConnectorSupport.createProxyConnector(114, (String) (var9.field_g), var9.field_a).a((byte) -108);
+                      var9.field_e = ProxyConnectorSupport.createProxyConnector(114, (String) (var9.field_g), var9.field_a).connect((byte) -108);
                     } catch (ProxyAuthenticationRequiredException decompiledCaughtParameter1) {
                       decompiledCaughtException = decompiledCaughtParameter1;
                       var3_ref = (ProxyAuthenticationRequiredException) (Object) decompiledCaughtException;
@@ -395,8 +395,8 @@ final class PlatformTaskDispatcher implements Runnable {
         return this.queueRequest(6, (param1 << 16) + param0, false, (Object) null, (param3 << 16) + param2);
     }
 
-    final boolean a(byte param0) {
-        if (param0 < 104) {
+    final boolean supportsFullscreen(byte obfuscationGuard) {
+        if (obfuscationGuard < 104) {
           return false;
         }
         if (!this.field_k) {
@@ -494,11 +494,11 @@ final class PlatformTaskDispatcher implements Runnable {
         }
     }
 
-    final AsyncRequest a(java.net.URL param0, int param1) {
-        if (param1 != 1) {
+    final AsyncRequest openUrlStream(java.net.URL url, int obfuscationGuard) {
+        if (obfuscationGuard != 1) {
           field_h = -125L;
         }
-        return this.queueRequest(4, 0, false, param0, 0);
+        return this.queueRequest(4, 0, false, url, 0);
     }
 
     PlatformTaskDispatcher(int param0, String param1, int param2, boolean param3) throws Exception {

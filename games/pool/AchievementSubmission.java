@@ -112,9 +112,9 @@ final class AchievementSubmission extends IntrusiveNode {
           JaggrabDownloader.field_j.writeCipheredOpcode(false, 10);
           PauseMenuScreen.field_H = false;
         }
-        if (FaceBucketSupport.field_f) {
+        if (RankingsBufferSupport.field_f) {
           ChatMessage.a((byte) 75, AccountStateQuery.ratedMembersonly);
-          FaceBucketSupport.field_f = false;
+          RankingsBufferSupport.field_f = false;
         }
         if (param0 >= 7) {
           return;

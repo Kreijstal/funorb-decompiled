@@ -79,7 +79,7 @@ final class ProjectedLineSupport {
             return (AlphaFont) (stackIn_2_0);
           }
           var2 = new AlphaFont(param0, AchievementsScreen.field_I, LoginRequestSupport.field_d, LinkButtonPainter.field_a, AccountTextSupport.field_f, IntrusiveNode.field_h, LimitedRandomAccessFile.field_b);
-          OpacityWidget.h(-1);
+          OpacityWidget.releaseSpriteDecoderArrays(-1);
           if (!param1) {
             pleasewaitDotdotdot = (String) null;
           }

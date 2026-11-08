@@ -31,7 +31,7 @@ class LongAndTextLoginPayload extends LoginPayload {
         try {
           param1.writeLong(this.longValue, (byte) -90);
           int var3_int = 6 % ((param0 - 22) / 51);
-          param1.a(this.text, 103);
+          param1.writeBase38Name(this.text, 103);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "se.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

@@ -10,7 +10,7 @@ final class InputIdleSupport {
     final static boolean isCaretBlinkOn(byte obfuscationGuard) {
         if (obfuscationGuard <= 72) {
           mbExclusive2 = (String) null;
-          if (!AccountCreationDialog.m(0)) {
+          if (!AccountCreationDialog.hasCanvasFocus(0)) {
             return false;
           }
           if ((SocialListEntry.field_Tb & 8) == 0) {
@@ -18,7 +18,7 @@ final class InputIdleSupport {
           }
           return false;
         }
-        if (!AccountCreationDialog.m(0)) {
+        if (!AccountCreationDialog.hasCanvasFocus(0)) {
           return false;
         }
         if ((SocialListEntry.field_Tb & 8) == 0) {

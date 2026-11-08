@@ -192,7 +192,7 @@ final class GlowParticle {
             if (var6 == 2) {
               var4 = AccountWelcomePanel.substituteTemplateArguments(new String[]{ArrayWidgetGroup.field_I}, -1, SpriteSheetLoadSupport.privatequickchatToX);
               var8 = AccountWelcomePanel.substituteTemplateArguments(new String[]{var3}, -1, UiComponent.privatequickchatFromX);
-              var7 = TimeTrialSelectScreen.field_J.width - (-NineBallRules.field_j.width + (485 - RatingTextState.field_c.b(var8) + RatingTextState.field_c.b(var4)));
+              var7 = TimeTrialSelectScreen.field_J.width - (-NineBallRules.field_j.width + (485 - RatingTextState.field_c.stringWidth(var8) + RatingTextState.field_c.stringWidth(var4)));
               if (var7 < 0) {
                 var7 = 0;
               }
@@ -233,7 +233,7 @@ final class GlowParticle {
                 var5 = "";
                 var4 = "<col=999999>" + var4 + ArchiveBootstrapSupport.clickToQuickchat + "</col>";
               }
-              var9 = RatingTextState.field_c.b(var4);
+              var9 = RatingTextState.field_c.stringWidth(var4);
               if (!MenuSelection.b(obfuscationGuard ^ -2)) {
                 if (TimeTrialSelectScreen.field_J.activeInside &&
                   -TimeTrialSelectScreen.field_J.screenX + ReflectionReplySupport.field_i < var9) {

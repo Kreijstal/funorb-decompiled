@@ -134,7 +134,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
             }
             var10 = var18.lineOfCaret(var8, param4 ^ 154888568);
             var11 = var18.lineOfCaret(var9, 0);
-            QuickChatPhraseRegistry.a(param2 + param5.widgetX, param5.widgetY + param3, param5.widgetX + (param2 + param5.widgetWidth), (byte) -118, param5.widgetY + (param3 + param5.widgetHeight));
+            QuickChatPhraseRegistry.pushRasterClip(param2 + param5.widgetX, param5.widgetY + param3, param5.widgetX + (param2 + param5.widgetWidth), (byte) -118, param5.widgetY + (param3 + param5.widgetHeight));
             for (var12 = var10; var12 <= var11; var12++) {
               var13 = var17.field_b[var12];
               if (var10 != var12) {
@@ -615,7 +615,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
               stackIn_4_3 = var14.field_b[var7 + 1].top;
             }
             var12 = stackIn_3_0 + Math.min(stackIn_3_1, Math.min(stackIn_3_2, stackIn_4_3));
-            QuickChatPhraseRegistry.a(param4.widgetX + param3, param4.widgetY + param1, param4.widgetX + param3 + param4.widgetWidth, (byte) -125, param4.widgetHeight + param4.widgetY + param1);
+            QuickChatPhraseRegistry.pushRasterClip(param4.widgetX + param3, param4.widgetY + param1, param4.widgetX + param3 + param4.widgetWidth, (byte) -125, param4.widgetHeight + param4.widgetY + param1);
             VerticalScrollbar.field_Sb.drawLine(-1, var10, var12, this.caretColor, var10, var11);
             TriangleMesh.a(param0 + 114);
           }
@@ -715,7 +715,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         int var12Lifetime1;
         var13 = Pool.field_O;
         try {
-          QuickChatPhraseRegistry.a(param2.widgetX + param6, param5 + param2.widgetY, param2.widgetWidth + param2.widgetX + param6, (byte) 85, param2.widgetY + param5 + param2.widgetHeight);
+          QuickChatPhraseRegistry.pushRasterClip(param2.widgetX + param6, param5 + param2.widgetY, param2.widgetWidth + param2.widgetX + param6, (byte) 85, param2.widgetY + param5 + param2.widgetHeight);
           var9_int = this.contentWidth((byte) 26, param2);
           var10 = this.contentHeight(param2, param7 + 19);
           if (param7 != -22) {
@@ -743,13 +743,13 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
                 this.font.drawCentered(this.getWidgetText(-1, param2), this.textOriginX(param3, (byte) 11, param6, param2) + (var9_int >> 1), this.textOriginY(param2, param0, param5, (byte) 125) + var11, param1, param4);
               } else {
                 if ((var12Lifetime1 == 2)) {
-                  this.font.c(this.getWidgetText(-1, param2), this.textOriginX(param3, (byte) 11, param6, param2) + var9_int, this.textOriginY(param2, param0, param5, (byte) 106) + var11, param1, param4);
+                  this.font.drawRight(this.getWidgetText(-1, param2), this.textOriginX(param3, (byte) 11, param6, param2) + var9_int, this.textOriginY(param2, param0, param5, (byte) 106) + var11, param1, param4);
                 }
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              this.font.d(this.getWidgetText(param7 ^ 21, param2), this.textOriginX(param3, (byte) 11, param6, param2), var11 + this.textOriginY(param2, param0, param5, (byte) 92), param1, param4);
+              this.font.drawLeft(this.getWidgetText(param7 ^ 21, param2), this.textOriginX(param3, (byte) 11, param6, param2), var11 + this.textOriginY(param2, param0, param5, (byte) 92), param1, param4);
             }
           } else {
             this.font.drawParagraph(this.getWidgetText(param7 ^ 21, param2), this.textOriginX(param3, (byte) 11, param6, param2), this.textOriginY(param2, param0, param5, (byte) 70), var9_int, var10, param1, param4, this.horizontalAlignment, this.verticalAlignment, this.field_b);

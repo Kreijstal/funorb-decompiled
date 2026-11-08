@@ -123,7 +123,7 @@ final class HotspotRectangle extends IntrusiveNode {
           }
           for (var2_int = 0; var2_int < param1.length(); var2_int++) {
             var3 = param1.charAt(var2_int);
-            if (!ContextMenu.a((char) var3, 22987) &&
+            if (!ContextMenu.isAsciiLetter((char) var3, 22987) &&
               !LobbyGame.a((char) var3, (byte) 120)) {
               return true;
             }
@@ -204,7 +204,7 @@ final class HotspotRectangle extends IntrusiveNode {
         int var9Lifetime1;
         var13 = Pool.field_O;
         try {
-          var6_int = param2.b(param3);
+          var6_int = param2.stringWidth(param3);
           var7 = param2.maxDescent + param2.maxAscent;
           var8 = 1;
           if (var6_int > param1) {
@@ -217,7 +217,7 @@ final class HotspotRectangle extends IntrusiveNode {
             var7 = var7 * var8Lifetime1;
             var6_int = 0;
             for (var11 = 0; var11 < var8Lifetime1; var11++) {
-              var12 = param2.b(StateIconLabel.field_Mb[var11]);
+              var12 = param2.stringWidth(StateIconLabel.field_Mb[var11]);
               if (var12 > var6_int) {
                 var6_int = var12;
               }

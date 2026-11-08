@@ -198,7 +198,7 @@ final class BallDebugOverlay implements SceneDrawable {
         if (param0) {
           field_j = (char[]) null;
         }
-        return PlayerContextMenu.field_e.j(-125);
+        return PlayerContextMenu.field_e.readNullTerminatedString(-125);
     }
 
     public static void releaseStatics(byte param0) {

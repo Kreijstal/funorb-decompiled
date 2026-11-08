@@ -213,7 +213,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
             stackIn_3_0 = (UiWidget) (param4);
           }
           var11 = (ButtonWidget) (stackIn_3_0);
-          QuickChatPhraseRegistry.a(param1 + param4.widgetX, param4.widgetY + param3, param4.widgetWidth + (param4.widgetX + param1), (byte) 85, param4.widgetHeight + (param4.widgetY + param3));
+          QuickChatPhraseRegistry.pushRasterClip(param1 + param4.widgetX, param4.widgetY + param3, param4.widgetWidth + (param4.widgetX + param1), (byte) 85, param4.widgetHeight + (param4.widgetY + param3));
           if (var11 != null) {
             param0 = param0 & var11.enabled;
           }

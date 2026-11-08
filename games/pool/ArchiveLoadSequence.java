@@ -137,9 +137,9 @@ final class ArchiveLoadSequence {
         }
     }
 
-    final static LobbyGame a(int param0, int param1) {
-        int var2 = 8 / ((73 - param1) / 46);
-        return LoginEncryptionSupport.field_a == null ? null : (LobbyGame) (LoginEncryptionSupport.field_a.findFirst((long)param0, false));
+    final static LobbyGame findLobbyGame(int gameId, int obfuscationGuard) {
+        int var2 = 8 / ((73 - obfuscationGuard) / 46);
+        return LoginEncryptionSupport.field_a == null ? null : (LobbyGame) (LoginEncryptionSupport.field_a.findFirst((long)gameId, false));
     }
 
     private ArchiveLoadSequence() throws Throwable {

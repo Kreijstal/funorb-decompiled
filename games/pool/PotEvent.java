@@ -15,9 +15,9 @@ final class PotEvent extends IntrusiveNode {
     final static int doubleToFixed3(int obfuscationGuard, double value) {
         if (obfuscationGuard != 4885) {
           PotEvent.fixed16ToDouble((byte) -24, 59L);
-          return SingleChildWidget.a(value, 3, 1);
+          return SingleChildWidget.doubleToFixed(value, 3, 1);
         }
-        return SingleChildWidget.a(value, 3, 1);
+        return SingleChildWidget.doubleToFixed(value, 3, 1);
     }
 
     final static void setTuhstatbutCookie(int obfuscationGuard, java.applet.Applet applet) {

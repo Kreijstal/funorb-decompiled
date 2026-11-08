@@ -593,8 +593,8 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3) {
-        if (param2 != 8192) {
+    private final void handlePolyphonicPressure(int pressure, int note, int obfuscationGuard, int channel) {
+        if (obfuscationGuard != 8192) {
           this.field_q = (int[]) null;
         }
     }
@@ -758,15 +758,15 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final long c(byte param0) {
-        if (param0 >= -46) {
+    final long getPlaybackMicros(byte obfuscationGuard) {
+        if (obfuscationGuard >= -46) {
           this.field_t = 53;
         }
         return this.field_ab / (long)this.midiReader.field_f;
     }
 
-    private final void c(byte param0, int param1, int param2) {
-        if (param0 != -62) {
+    private final void handleChannelPressure(byte obfuscationGuard, int channel, int pressure) {
+        if (obfuscationGuard != -62) {
           this.instrumentPatches = (IterableNodeHashTable) null;
         }
     }
@@ -934,7 +934,7 @@ final class MidiPcmStream extends PcmStream {
           var4Lifetime2 = param0 & 15;
           var5Lifetime2 = (param0 & 32765) >> 8;
           var6Lifetime2 = (param0 & 8339384) >> 16;
-          this.a(var6Lifetime2, var5Lifetime2, param1 ^ -8314, var4Lifetime2);
+          this.handlePolyphonicPressure(var6Lifetime2, var5Lifetime2, param1 ^ -8314, var4Lifetime2);
           return;
         }
         if (176 != var3) {
@@ -947,7 +947,7 @@ final class MidiPcmStream extends PcmStream {
           if (var3 == 208) {
             var4Lifetime3Lifetime1 = 15 & param0;
             var5Lifetime3Lifetime1 = (param0 & 32677) >> 8;
-            this.c((byte) -62, var4Lifetime3Lifetime1, var5Lifetime3Lifetime1);
+            this.handleChannelPressure((byte) -62, var4Lifetime3Lifetime1, var5Lifetime3Lifetime1);
             return;
           }
           if (var3 == 224) {

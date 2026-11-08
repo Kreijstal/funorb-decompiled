@@ -53,7 +53,7 @@ final class MembershipBenefitsLoader {
           var5.position = var5.position + 1;
           var6 = var5.position;
           var5.writeByte(3, false);
-          var5.a(-9946, param2);
+          var5.writeNullTerminatedString(-9946, param2);
           var5.writeByteLengthPrefix(-var6 + var5.position, true);
           stackIn_15_0 = null;
           return (String) (stackIn_15_0);
@@ -205,7 +205,7 @@ final class MembershipBenefitsLoader {
             var3Lifetime1 = SoftwareRasterizer.height;
             SoftwareRasterizer.saveClip(AgeValidator.field_o);
             var14 = AccountWelcomePanel.substituteTemplateArguments(new String[]{FontPaletteSupport.subscriptionCostMonthly[VertexTransformSupport.field_e]}, param0 ^ 1, OpacityWidget.benefitsPrice);
-            var5 = DebugTuningSupport.field_d.a(var14, AppletUrlSupport.field_h);
+            var5 = DebugTuningSupport.field_d.maxWrappedLineWidth(var14, AppletUrlSupport.field_h);
             var6Lifetime1 = DebugTuningSupport.field_d.measureWrappedHeight(var14, AppletUrlSupport.field_h, DebugTuningSupport.field_d.maxAscent + DebugTuningSupport.field_d.maxDescent);
             var7Lifetime1 = LongAndTextLoginPayload.field_h + (-var5 + AppletUrlSupport.field_h) / 2;
             var8 = AccountDisplayNameSupport.field_c + (-var6Lifetime1 + IsaacCipher.field_e) / 2;
@@ -290,12 +290,12 @@ final class MembershipBenefitsLoader {
             var2Lifetime3 = SoftwareRasterizer.width;
             var3Lifetime3 = SoftwareRasterizer.height;
             SoftwareRasterizer.saveClip(AgeValidator.field_o);
-            var4 = 6 + SceneNode.field_h.a(PlasmaTableScene.mbCaptionTitle, 640);
+            var4 = 6 + SceneNode.field_h.maxWrappedLineWidth(PlasmaTableScene.mbCaptionTitle, 640);
             var5Lifetime1 = var4 + Camera.field_c.field_w + 20;
             var6Lifetime2 = -(var5Lifetime1 / 2) + 427;
             var7Lifetime2 = 20 + (var6Lifetime2 + Camera.field_c.field_w);
             ProgressDialog.field_gb.bindAsRenderTarget();
-            SceneNode.field_h.d(PlasmaTableScene.mbCaptionTitle, -ProgressDialog.field_gb.field_G + var7Lifetime2, SceneNode.field_h.maxDescent + (-ProgressDialog.field_gb.field_B + 155 + SceneNode.field_h.maxAscent), 16777215, -1);
+            SceneNode.field_h.drawLeft(PlasmaTableScene.mbCaptionTitle, -ProgressDialog.field_gb.field_G + var7Lifetime2, SceneNode.field_h.maxDescent + (-ProgressDialog.field_gb.field_B + 155 + SceneNode.field_h.maxAscent), 16777215, -1);
             MembershipBenefitsScreen.a(1, 3, 50, ProgressDialog.field_gb, 4, var4, var7Lifetime2 - ProgressDialog.field_gb.field_G - 4, -ProgressDialog.field_gb.field_B + 155);
             var8Lifetime1 = 155 - ProgressDialog.field_gb.field_B - (-SceneNode.field_h.maxAscent + (-3 + Camera.field_c.field_y - SceneNode.field_h.maxDescent)) / 2;
             Camera.field_c.draw(var6Lifetime2 - ProgressDialog.field_gb.field_G, var8Lifetime1);

@@ -129,10 +129,10 @@ final class ChoiceButtonSupport {
               var1_int = var1_int + NineBallRules.field_h;
             }
             if (var4 < 0) {
-              TransformRotationSupport.field_f.d(var6, var8Lifetime1, ModelTableScene.field_K + var1_int, var5, -1);
+              TransformRotationSupport.field_f.drawLeft(var6, var8Lifetime1, ModelTableScene.field_K + var1_int, var5, -1);
               var1_int = var1_int + ShotRecord.field_y;
             } else {
-              ProgressBarWidget.field_R.d(var6, var8Lifetime1, var1_int + Camera.field_b, var5, -1);
+              ProgressBarWidget.field_R.drawLeft(var6, var8Lifetime1, var1_int + Camera.field_b, var5, -1);
               var1_int = var1_int + (WidgetContainer.field_I + IterableDualLinkDeque.field_e + NineBallRules.field_h);
             }
             var3++;

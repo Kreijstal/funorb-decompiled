@@ -9,15 +9,15 @@ final class QuickChatHelpDialog extends UiComponent {
     static String cannotAddYourself;
     private UiComponent closeButton;
 
-    final static boolean f(int param0) {
+    final static boolean pushBallSnapshot(int obfuscationGuard) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
         var2 = Pool.field_O;
         try {
-          if (param0 != -13164) {
-            QuickChatHelpDialog.f(89);
+          if (obfuscationGuard != -13164) {
+            QuickChatHelpDialog.pushBallSnapshot(89);
           }
           UiComponentNode.field_y = UiComponentNode.field_y + 1;
           if (Ball.field_B.length <= UiComponentNode.field_y) {
@@ -31,17 +31,17 @@ final class QuickChatHelpDialog extends UiComponent {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "fn.G(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "fn.G(" + obfuscationGuard + ')');
         }
     }
 
-    final static LobbyPlayer b(long param0, int param1) {
-        if (param1 == 0) {
-          return (LobbyPlayer) (LobbyPlayer.field_Qb.findFirst(param0, false));
+    final static LobbyPlayer findLobbyPlayer(long playerId, int obfuscationGuard) {
+        if (obfuscationGuard == 0) {
+          return (LobbyPlayer) (LobbyPlayer.field_Qb.findFirst(playerId, false));
         }
         String var4 = (String) null;
         QuickChatHelpDialog.a((String) null, -19, (String) null, -83, true, (String) null, -49);
-        return (LobbyPlayer) (LobbyPlayer.field_Qb.findFirst(param0, false));
+        return (LobbyPlayer) (LobbyPlayer.field_Qb.findFirst(playerId, false));
     }
 
     final boolean updateAndPollDismissal(byte param0, boolean param1) {
@@ -61,7 +61,7 @@ final class QuickChatHelpDialog extends UiComponent {
         return true;
     }
 
-    final static BinaryBitmapFont a(byte param0, byte[] param1) {
+    final static BinaryBitmapFont createDecodedBinaryFont(byte obfuscationGuard, byte[] metrics) {
         BinaryBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_2_0 = null;
@@ -71,14 +71,14 @@ final class QuickChatHelpDialog extends UiComponent {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 == null) {
+          if (metrics == null) {
             stackIn_2_0 = null;
             return (BinaryBitmapFont) (stackIn_2_0);
           }
-          var2 = new BinaryBitmapFont(param1, AchievementsScreen.field_I, LoginRequestSupport.field_d, LinkButtonPainter.field_a, AccountTextSupport.field_f, LimitedRandomAccessFile.field_b);
-          OpacityWidget.h(-1);
-          if (param0 < 119) {
-            QuickChatHelpDialog.f(-82);
+          var2 = new BinaryBitmapFont(metrics, AchievementsScreen.field_I, LoginRequestSupport.field_d, LinkButtonPainter.field_a, AccountTextSupport.field_f, LimitedRandomAccessFile.field_b);
+          OpacityWidget.releaseSpriteDecoderArrays(-1);
+          if (obfuscationGuard < 119) {
+            QuickChatHelpDialog.pushBallSnapshot(-82);
           }
           stackIn_6_0 = var2;
           return stackIn_6_0;
@@ -86,8 +86,8 @@ final class QuickChatHelpDialog extends UiComponent {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
           stackIn_9_0 = var2_ref;
-          stackIn_9_1 = new StringBuilder().append("fn.F(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_9_1 = new StringBuilder().append("fn.F(").append(obfuscationGuard).append(',');
+          if (metrics == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
@@ -152,11 +152,11 @@ final class QuickChatHelpDialog extends UiComponent {
         }
     }
 
-    final static void b(int param0, int param1) {
+    final static void positionSlidingPanelByProgress(int obfuscationGuard, int progress) {
         int var2 = BufferedFile.field_h * BufferedFile.field_h;
-        int var3 = -(param1 * param1) + var2;
+        int var3 = -(progress * progress) + var2;
         SlidingPanelSupport.positionSlidingPanel(-24, SoftwareRasterizer.height - 120 + var3 * 120 / var2);
-        if (param0 == 5938) {
+        if (obfuscationGuard == 5938) {
           return;
         }
         musicColon = (String) null;
@@ -264,7 +264,7 @@ final class QuickChatHelpDialog extends UiComponent {
           for (var12 = 0; LookupQuery.quickchatShortcutHelp.length > var12; var12++) {
             var13 = new UiComponent(0L, param3, ValidationMessageWidget.quickchatShortcutKeys[var12]);
             var14 = new UiComponent(0L, param3, LookupQuery.quickchatShortcutHelp[var12]);
-            var15 = param3.font.b(LookupQuery.quickchatShortcutHelp[var12]);
+            var15 = param3.font.stringWidth(LookupQuery.quickchatShortcutHelp[var12]);
             var13.setBounds(var10, 2147483647, 20, 65, 15);
             if (var11 < var15) {
               var11 = var15;

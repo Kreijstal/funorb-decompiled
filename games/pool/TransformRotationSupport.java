@@ -87,14 +87,14 @@ final class TransformRotationSupport {
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new Sprite(4 + FreePlayRules.field_e.b(param2), FreePlayRules.field_e.maxAscent - (-FreePlayRules.field_e.maxDescent - 4));
+          var3 = new Sprite(4 + FreePlayRules.field_e.stringWidth(param2), FreePlayRules.field_e.maxAscent - (-FreePlayRules.field_e.maxDescent - 4));
           var4 = new int[4];
           var5 = SoftwareRasterizer.pixels;
           var6 = SoftwareRasterizer.width;
           var7 = SoftwareRasterizer.height;
           SoftwareRasterizer.saveClip(var4);
           var3.bindAsRenderTarget();
-          FreePlayRules.field_e.d(param2, 2, FreePlayRules.field_e.maxAscent + 2, param0, -1);
+          FreePlayRules.field_e.drawLeft(param2, 2, FreePlayRules.field_e.maxAscent + 2, param0, -1);
           var3.addOutline(4144959);
           var3.addOutline(65793);
           SoftwareRasterizer.setTarget(var5, var6, var7);

@@ -714,16 +714,16 @@ final class PoolMatchController {
           SoftwareRasterizer.grayscaleRectangle(stackIn_20_0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
           var10_ref = new Sprite(var9, var9);
           var10_ref.bindAsRenderTarget();
-          var4.a(0, 0);
+          var4.drawAt(0, 0);
           var11 = new Sprite(var9, var9);
           var11.bindAsRenderTarget();
-          var4.a(var9 - var4.field_z, 0);
+          var4.drawAt(var9 - var4.field_z, 0);
           if (param1 != -22764) {
             PoolMatchController.loadInterfaceAssets(26, false, (ResourceArchive) null, (ResourceArchive) null, (ResourceArchive) null);
           }
           var12 = new Sprite(var4.field_z - var9 * 2, var9);
           var12.bindAsRenderTarget();
-          var4.a(-var9, 0);
+          var4.drawAt(-var9, 0);
           TriangleMesh.a(112);
           BirthDatePromptPanel.field_S = new Sprite[]{var10_ref, var12, var11};
           return;
@@ -828,7 +828,7 @@ final class PoolMatchController {
             SoftwareRasterizer.restoreClip(ReflectionCheck.field_s);
             BeveledFrameSpriteFactory.field_f.draw(var4, var5);
             if ((2L & LinkButtonPainter.field_i) != 0L) {
-              CollisionContact.field_h.c("power=" + this.cuePower + ", bar_filled=" + var6, var4, var5, 16777215, 1);
+              CollisionContact.field_h.drawRight("power=" + this.cuePower + ", bar_filled=" + var6, var4, var5, 16777215, 1);
             }
           }
           return;
@@ -1173,11 +1173,11 @@ final class PoolMatchController {
             this.hoveredBallIndex != 0 ||
             !(this.isLocalPlayersTurn(-1)));
           if (!decompiledSharedTail0) {
-            StatefulTextPainter.field_s.setCursorVisible(false, (byte) 106, (java.awt.Component) ((Object) TextLineLayout.a((byte) -46)));
+            StatefulTextPainter.field_s.setCursorVisible(false, (byte) 106, (java.awt.Component) ((Object) TextLineLayout.getActiveCanvas((byte) -46)));
             decompiledSharedTail0 = (var9 != 0);
           }
           if (decompiledSharedTail0) {
-            StatefulTextPainter.field_s.setCursorVisible(true, (byte) 106, (java.awt.Component) ((Object) TextLineLayout.a((byte) -83)));
+            StatefulTextPainter.field_s.setCursorVisible(true, (byte) 106, (java.awt.Component) ((Object) TextLineLayout.getActiveCanvas((byte) -83)));
           }
           this.fadeShotModeOverlay(-114);
           var4_int = LobbyPanelLayoutSupport.field_g;
@@ -1212,20 +1212,20 @@ final class PoolMatchController {
                   }
                   var5_ref_String = this.formatPlayerGroupMessage(HuffmanCodec.playerYouFirstListAreOut, ShotRecord.playerIsOut, LobbyPlayerLookupSupport.playerX2AreOut, TextInputWidget.playerYouX2AreOut, (byte) 61, var6, SpriteSheetLoadSupport.playerListAreOut, TextLineLayout.playerYouAreOut);
                   if (var5_ref_String != null) {
-                    HighscoresScreen.$cfr$intArgs$a$c9c3307e6488(127, false, 1, var5_ref_String);
+                    HighscoresScreen.enqueueStatusMessageIntArgs(127, false, 1, var5_ref_String);
                   }
                   var5_ref_String = this.formatPlayerGroupMessage(DraggableWidget.playerYouFirstListHaveResigned, VertexNormal.mpXHasresigned, GrowableIntListFactory.playerX2HaveResigned, WireframeQuad.playerYouX2HaveResigned, (byte) 61, this.gameModel.field_p & ~var6, Pocket.playerListHaveResigned, ClientInputResetSupport.mpYouresigned);
                   if (var5_ref_String != null) {
-                    HighscoresScreen.$cfr$intArgs$a$c9c3307e6488(124, false, 1, var5_ref_String);
+                    HighscoresScreen.enqueueStatusMessageIntArgs(124, false, 1, var5_ref_String);
                   }
                   var5_ref_String = this.formatPlayerGroupMessage(CueStick.playerYouFirstListAreOfferingDraw, DiskCacheWorker.mpXWantstodraw, DualLinkNode.playerX2AreOfferingDraw, QuickChatMenu.playerYouX2AreOfferingDraw, (byte) 61, this.gameModel.field_x, StrongCacheEntry.playerListAreOfferingDraw, MembershipBenefitsLoader.mpYouofferdraw);
                   if (var5_ref_String != null) {
-                    HighscoresScreen.$cfr$intArgs$a$c9c3307e6488(119, false, 1, var5_ref_String);
+                    HighscoresScreen.enqueueStatusMessageIntArgs(119, false, 1, var5_ref_String);
                   }
                 } else {
                   var5_ref_String = this.formatPlayerGroupMessage(UiComponentNode.playerYouFirstListAreOfferingRematch, ModelInstance.mpXOffersrematch, SupportPageLauncher.playerX2AreOfferingRematch, Ball.playerYouX2AreOfferingRematch, (byte) 61, this.gameModel.field_b, QuickChatCategoryCache.playerListAreOfferingRematch, TickClock.mpYouofferrematch);
                   if (var5_ref_String != null) {
-                    HighscoresScreen.$cfr$intArgs$a$c9c3307e6488(122, false, 1, var5_ref_String);
+                    HighscoresScreen.enqueueStatusMessageIntArgs(122, false, 1, var5_ref_String);
                   }
                 }
                 if (0 == var4.phase) {
@@ -1235,14 +1235,14 @@ final class PoolMatchController {
                     var6 = fieldTemp$2;
                     if (var6 == 0 &&
                       var9 == 0) {
-                      HighscoresScreen.$cfr$intArgs$a$c9c3307e6488(119, true, 1, PasswordInputPainter.tickerHintZoom);
+                      HighscoresScreen.enqueueStatusMessageIntArgs(119, true, 1, PasswordInputPainter.tickerHintZoom);
                       break regionExit2;
                     } else {
                       if (1 != var6) {
                         break regionExit2;
                       }
                     }
-                    HighscoresScreen.$cfr$intArgs$a$c9c3307e6488(119, true, 1, SceneNodeEntry.tickerHintRotate);
+                    HighscoresScreen.enqueueStatusMessageIntArgs(119, true, 1, SceneNodeEntry.tickerHintRotate);
                     if (var9 == 0) {
                       break regionExit2;
                     }
@@ -1273,22 +1273,22 @@ final class PoolMatchController {
                                   break;
                               }
                             }
-                            HighscoresScreen.$cfr$intArgs$a$c9c3307e6488(118, true, 1, tickerHintLeaveShotMode);
+                            HighscoresScreen.enqueueStatusMessageIntArgs(118, true, 1, tickerHintLeaveShotMode);
                             if (var9 == 0) {
                               break regionExit2;
                             }
                           }
-                          HighscoresScreen.$cfr$intArgs$a$c9c3307e6488(126, true, 1, FullscreenErrorDialog.tickerHintSetPower);
+                          HighscoresScreen.enqueueStatusMessageIntArgs(126, true, 1, FullscreenErrorDialog.tickerHintSetPower);
                           if (var9 == 0) {
                             break regionExit2;
                           }
                         }
-                        HighscoresScreen.$cfr$intArgs$a$c9c3307e6488(119, true, 1, QuickChatCategoryDefinition.tickerHintShoot);
+                        HighscoresScreen.enqueueStatusMessageIntArgs(119, true, 1, QuickChatCategoryDefinition.tickerHintShoot);
                         if (var9 == 0) {
                           break regionExit2;
                         }
                       }
-                      HighscoresScreen.$cfr$intArgs$a$c9c3307e6488(117, true, 1, HighscoresScreen.tickerHintShotModeAim);
+                      HighscoresScreen.enqueueStatusMessageIntArgs(117, true, 1, HighscoresScreen.tickerHintShotModeAim);
                       if (var9 == 0) {
                         break regionExit2;
                       }
@@ -1296,7 +1296,7 @@ final class PoolMatchController {
                     if (var4.ballInHandMode == 0) {
                       break regionExit2;
                     }
-                    HighscoresScreen.$cfr$intArgs$a$c9c3307e6488(119, true, 1, CachedArchiveSource.tickerHintMoveCueball);
+                    HighscoresScreen.enqueueStatusMessageIntArgs(119, true, 1, CachedArchiveSource.tickerHintMoveCueball);
                     if (var9 == 0) {
                       break regionExit2;
                     }
@@ -1308,7 +1308,7 @@ final class PoolMatchController {
                   var6 = fieldTemp$4;
                   if (var6 == 0 &&
                     var9 == 0) {
-                    HighscoresScreen.$cfr$intArgs$a$c9c3307e6488(127, true, 1, VertexNormal.tickerHintEnterShotMode);
+                    HighscoresScreen.enqueueStatusMessageIntArgs(127, true, 1, VertexNormal.tickerHintEnterShotMode);
                     break regionExit2;
                   } else if (var6 != 1 ||
                     var9 != 0) {
@@ -1320,16 +1320,16 @@ final class PoolMatchController {
                   }
                   if ((decompiledFrameRemainder2) &&
                     (decompiledFrameRemainder1)) {
-                    HighscoresScreen.$cfr$intArgs$a$c9c3307e6488(117, true, 1, PasswordInputPainter.tickerHintZoom);
+                    HighscoresScreen.enqueueStatusMessageIntArgs(117, true, 1, PasswordInputPainter.tickerHintZoom);
                     break regionExit2;
                   }
                   if (decompiledFrameRemainder2) {
-                    HighscoresScreen.$cfr$intArgs$a$c9c3307e6488(127, true, 1, SceneNodeEntry.tickerHintRotate);
+                    HighscoresScreen.enqueueStatusMessageIntArgs(127, true, 1, SceneNodeEntry.tickerHintRotate);
                     if (var9 == 0) {
                       break regionExit2;
                     }
                   }
-                  HighscoresScreen.$cfr$intArgs$a$c9c3307e6488(119, true, 1, CollisionContact.tickerHintAim);
+                  HighscoresScreen.enqueueStatusMessageIntArgs(119, true, 1, CollisionContact.tickerHintAim);
                 }
               }
             }
@@ -1805,7 +1805,7 @@ final class PoolMatchController {
             if (var2 == null) {
               return;
             }
-            CollisionContact.field_h.d((String) (var2), 40, 400, 13421772, 3355443);
+            CollisionContact.field_h.drawLeft((String) (var2), 40, 400, 13421772, 3355443);
             return;
           }
           return;
@@ -2132,7 +2132,7 @@ final class PoolMatchController {
             var5 = this.buildPlayerStatusLines(true);
             var6 = 0;
             for (var7 = 0; var7 < var5.length; var7++) {
-              var8 = CollisionContact.field_h.b(var5[var7]);
+              var8 = CollisionContact.field_h.stringWidth(var5[var7]);
               if (var8 > var6) {
                 var6 = var8;
               }
@@ -2637,14 +2637,14 @@ final class PoolMatchController {
           var6 = (ShotRecord) (var5.first(0));
           while (var6 != null) {
             if (var6.phase >= 3) {
-              CollisionContact.field_h.d(var6.describeChoices(true), param0, var4_int, 16724787, 1);
+              CollisionContact.field_h.drawLeft(var6.describeChoices(true), param0, var4_int, 16724787, 1);
               var4_int = var4_int - 5 * (CollisionContact.field_h.maxDescent + CollisionContact.field_h.maxAscent) / 4;
               if (CollisionContact.field_h.maxAscent >= var4_int) {
                 return;
               }
             }
             if (var6.phase >= 2) {
-              CollisionContact.field_h.d(var6.describeOutcome(param2 ^ 26864), param0, var4_int, 16724787, 1);
+              CollisionContact.field_h.drawLeft(var6.describeOutcome(param2 ^ 26864), param0, var4_int, 16724787, 1);
               var4_int = var4_int - (CollisionContact.field_h.maxAscent + CollisionContact.field_h.maxDescent) * 5 / 4;
               if (CollisionContact.field_h.maxAscent >= var4_int) {
                 return;
@@ -2653,7 +2653,7 @@ final class PoolMatchController {
             if (!(1 > var6.phase) ||
               var6.power != -1) {
               if (var6.phase != 0) {
-                CollisionContact.field_h.d(var6.describeAim(0), param0, var4_int, 16750899, 1);
+                CollisionContact.field_h.drawLeft(var6.describeAim(0), param0, var4_int, 16750899, 1);
               } else {
                 CollisionContact.field_h.drawLeftAlpha(var6.describeAim(0), param0, var4_int, 16750899, 1, 128);
               }
@@ -2663,7 +2663,7 @@ final class PoolMatchController {
               }
             }
             if (var6.phase >= 0) {
-              CollisionContact.field_h.d(var6.describe(param2 ^ 26, this.gameModel), param0, var4_int, 10092339, 1);
+              CollisionContact.field_h.drawLeft(var6.describe(param2 ^ 26, this.gameModel), param0, var4_int, 10092339, 1);
               var4_int = var4_int - (CollisionContact.field_h.maxDescent + CollisionContact.field_h.maxAscent) * 5 / 4;
               if (CollisionContact.field_h.maxAscent >= var4_int) {
                 return;
@@ -2724,7 +2724,7 @@ final class PoolMatchController {
             var3 = (ShotEvent) (param0.field_R.last((byte) -54));
             while (var3 != null) {
               var4 = AccountWelcomePanel.substituteTemplateArguments(new String[]{this.gameModel.field_h[param0.playerIndex]}, -1, ChoiceButtonSupport.shotMessages[var3.field_q]);
-              HighscoresScreen.$cfr$intArgs$a$c9c3307e6488(120, false, 1, var4);
+              HighscoresScreen.enqueueStatusMessageIntArgs(120, false, 1, var4);
               var3 = (ShotEvent) (param0.field_R.previous((byte) -5));
             }
           }
@@ -2765,7 +2765,7 @@ final class PoolMatchController {
           } else {
             stackIn_7_0 = -1;
           }
-          if (!TextLineLayout.field_c[FaceBucketSupport.keycodeDefaultRight1] &&
+          if (!TextLineLayout.field_c[RankingsBufferSupport.keycodeDefaultRight1] &&
             !TextLineLayout.field_c[ResourceArchive.keycodeDefaultRight2]) {
             stackIn_14_1 = 0;
           } else {
@@ -3273,7 +3273,7 @@ final class PoolMatchController {
             dupTemp$2 = this.gameModel.field_h[param1];
             this.playerNameCache[param1] = dupTemp$2;
             var3 = dupTemp$2;
-            this.playerNameWidths[param1] = CollisionContact.field_h.b(this.playerNameCache[param1]);
+            this.playerNameWidths[param1] = CollisionContact.field_h.stringWidth(this.playerNameCache[param1]);
           }
           if (param0 != -30360) {
             this.viewMatrixDirty = true;
@@ -3452,7 +3452,7 @@ final class PoolMatchController {
                 if (PasswordValidator.field_r.position == 30 &&
                   InputIdleSupport.crc64(PasswordValidator.field_r.payload, (byte) -83, 30) == 1099305073022L) {
                   this.cheatMode = true;
-                  HighscoresScreen.$cfr$intArgs$a$c9c3307e6488(121, false, 1, BallDebugOverlay.decodeBase37Name((byte) -119, 64525515431L));
+                  HighscoresScreen.enqueueStatusMessageIntArgs(121, false, 1, BallDebugOverlay.decodeBase37Name((byte) -119, 64525515431L));
                 }
                 PasswordValidator.field_r = null;
                 if (var7 != 0) {
@@ -3545,7 +3545,7 @@ final class PoolMatchController {
               stackIn_75_2 = 0;
             }
             AccountCreationDialog.a(stackIn_74_0, stackIn_74_1, stackIn_75_2, false);
-            StatefulTextPainter.field_s.setCursorVisible(true, (byte) 106, (java.awt.Component) ((Object) TextLineLayout.a((byte) -100)));
+            StatefulTextPainter.field_s.setCursorVisible(true, (byte) 106, (java.awt.Component) ((Object) TextLineLayout.getActiveCanvas((byte) -100)));
             return;
           }
           if (!HighScoreSubmission.c(-62)) {
@@ -3587,7 +3587,7 @@ final class PoolMatchController {
                 TextLineLayout.field_c[86] &&
                 TextLineLayout.field_c[81]) {
                 this.cheatMode = true;
-                HighscoresScreen.$cfr$intArgs$a$c9c3307e6488(118, false, 1, "Cheat mode enabled.");
+                HighscoresScreen.enqueueStatusMessageIntArgs(118, false, 1, "Cheat mode enabled.");
               }
             }
           }
@@ -3785,12 +3785,12 @@ final class PoolMatchController {
             if (!this.usesDetailedTurnLabel((byte) -102) &&
               !this.gameModel.rules.showsTargetBall(114) &&
               !(this.gameModel.rules instanceof KillerRules)) {
-              CollisionContact.field_h.d(var5, var6, AccountStateQuery.field_q, 16777215, 0);
+              CollisionContact.field_h.drawLeft(var5, var6, AccountStateQuery.field_q, 16777215, 0);
               var6 = var6 + this.playerNameWidths[var4];
             } else {
               var7_ref_String = AccountWelcomePanel.substituteTemplateArguments(new String[]{var5}, -1, this.getPlayerColonText(2));
-              CollisionContact.field_h.d(var7_ref_String, var6, AccountStateQuery.field_q, 16777215, 0);
-              var6 = var6 + CollisionContact.field_h.b(var7_ref_String);
+              CollisionContact.field_h.drawLeft(var7_ref_String, var6, AccountStateQuery.field_q, 16777215, 0);
+              var6 = var6 + CollisionContact.field_h.stringWidth(var7_ref_String);
             }
             if (this.gameModel.rules.showsTargetBall(119)) {
               LogoJingleLoader.field_b.sprite = this.gameModel.rules.targetBallSprite(var3, 1);
@@ -3798,8 +3798,8 @@ final class PoolMatchController {
             }
             if (this.gameModel.rules instanceof KillerRules) {
               var7_ref_StringLifetime1 = Integer.toString(((KillerRules) (this.gameModel.rules)).field_e[var4]);
-              CollisionContact.field_h.d(var7_ref_StringLifetime1, var6, AccountStateQuery.field_q, 16777215, 0);
-              var6 = var6 + CollisionContact.field_h.b(var7_ref_StringLifetime1);
+              CollisionContact.field_h.drawLeft(var7_ref_StringLifetime1, var6, AccountStateQuery.field_q, 16777215, 0);
+              var6 = var6 + CollisionContact.field_h.stringWidth(var7_ref_StringLifetime1);
             }
             if (this.gameModel.field_o) {
               if (param1 ||
@@ -3883,7 +3883,7 @@ final class PoolMatchController {
               }
               var8 = AccountWelcomePanel.substituteTemplateArguments(new String[]{var8}, -1, ModelInstance.mpTimeremaining);
               if (var9 == -1) {
-                CollisionContact.field_h.d(var8, MidiPcmStream.field_H + 4, AccountStateQuery.field_q, 16777215, 0);
+                CollisionContact.field_h.drawLeft(var8, MidiPcmStream.field_H + 4, AccountStateQuery.field_q, 16777215, 0);
               } else {
                 CollisionContact.field_h.drawLeftAlpha(var8, 4 + MidiPcmStream.field_H, AccountStateQuery.field_q, 16777215, 0, (UiComponentNode.sineFixed(var9, (byte) -64) >> 11) + 191);
               }
@@ -3929,13 +3929,13 @@ final class PoolMatchController {
             IntrusiveNode.a(2, var3, var4);
             var2[var5_int] = (float)DualLinkDequeIterator.field_g;
           }
-          CollisionContact.field_h.d("audio falloff start=" + LoginPayload.field_a + " speed=" + DropTargetWidget.a((long)QuickChatPhraseDefinition.field_G, 3, true, 8) + " (" + QuickChatPhraseDefinition.field_G + ")" + ", slope=" + StartupInterfaceSupport.field_e, 10, 50, 65280, 3355443);
+          CollisionContact.field_h.drawLeft("audio falloff start=" + LoginPayload.field_a + " speed=" + DropTargetWidget.a((long)QuickChatPhraseDefinition.field_G, 3, true, 8) + " (" + QuickChatPhraseDefinition.field_G + ")" + ", slope=" + StartupInterfaceSupport.field_e, 10, 50, 65280, 3355443);
           SoftwareRasterizer.drawLine(0, 440, 0, 445, 65280);
-          CollisionContact.field_h.d("camera", 1, 460, 65280, 1);
+          CollisionContact.field_h.drawLeft("camera", 1, 460, 65280, 1);
           SoftwareRasterizer.drawLine(SoftwareRasterizer.width / 2, 440, SoftwareRasterizer.width / 2, 445, 65280);
           CollisionContact.field_h.drawCentered("table length dist", SoftwareRasterizer.width / 2, 460, 65280, 1);
           SoftwareRasterizer.drawLine(-1 + SoftwareRasterizer.width, 440, SoftwareRasterizer.width - 1, 445, 65280);
-          CollisionContact.field_h.c("2x table length dist", -1 + SoftwareRasterizer.width, 460, 65280, 1);
+          CollisionContact.field_h.drawRight("2x table length dist", -1 + SoftwareRasterizer.width, 460, 65280, 1);
           var5 = -16.0f;
           var6 = 300.0f;
           for (var7 = 1; var7 < 640; var7++) {
@@ -4203,10 +4203,10 @@ final class PoolMatchController {
             this.dragLastMouseY = DebouncedValidationProvider.field_f;
             this.dragLastMouseX = ReflectionReplySupport.field_i;
             if (var9 != 0) {
-              StatefulTextPainter.field_s.setCursorPosition((java.awt.Component) ((Object) TextLineLayout.a((byte) -54)), this.dragLastMouseX, -80, this.dragLastMouseY);
+              StatefulTextPainter.field_s.setCursorPosition((java.awt.Component) ((Object) TextLineLayout.getActiveCanvas((byte) -54)), this.dragLastMouseX, -80, this.dragLastMouseY);
             }
           } else {
-            StatefulTextPainter.field_s.setCursorPosition((java.awt.Component) ((Object) TextLineLayout.a((byte) -54)), this.dragLastMouseX, -80, this.dragLastMouseY);
+            StatefulTextPainter.field_s.setCursorPosition((java.awt.Component) ((Object) TextLineLayout.getActiveCanvas((byte) -54)), this.dragLastMouseX, -80, this.dragLastMouseY);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4520,7 +4520,7 @@ final class PoolMatchController {
                   SoftwareRasterizer.clipRight > var9Lifetime3 &&
                   var10Lifetime3 > SoftwareRasterizer.clipTop &&
                   var10Lifetime3 < SoftwareRasterizer.clipBottom) {
-                  CollisionContact.field_h.d("point " + var3_intLifetime8, var9Lifetime3, var10Lifetime3, 14522879, 3355443);
+                  CollisionContact.field_h.drawLeft("point " + var3_intLifetime8, var9Lifetime3, var10Lifetime3, 14522879, 3355443);
                   SoftwareRasterizer.drawLine(-4 + var9Lifetime3, var10Lifetime3, var9Lifetime3 + 4, var10Lifetime3, 16768409);
                   SoftwareRasterizer.drawLine(var9Lifetime3, var10Lifetime3 - 4, var9Lifetime3, var10Lifetime3 + 4, 16768409);
                 }
@@ -4561,19 +4561,19 @@ final class PoolMatchController {
             }
           }
           if (0L != (32768L & LinkButtonPainter.field_i)) {
-            CollisionContact.field_h.d(LobbyGame.field_gc.describeLighting((byte) 123), 10, 50, 16772795, 1);
-            CollisionContact.field_h.d(LobbyGame.field_gc.describeAmbientLight((byte) 32), 10, 70, 16772795, 1);
+            CollisionContact.field_h.drawLeft(LobbyGame.field_gc.describeLighting((byte) 123), 10, 50, 16772795, 1);
+            CollisionContact.field_h.drawLeft(LobbyGame.field_gc.describeAmbientLight((byte) 32), 10, 70, 16772795, 1);
             ProjectedLineSupport.drawProjectedLine(16772795, 1, this.viewMatrix, new float[]{KillerRules.fixed3ToFloat(2304, 3), KillerRules.fixed3ToFloat(1152, param0 - 297), 0.0f}, new float[]{KillerRules.fixed3ToFloat(LobbyGame.field_gc.field_q + 2304, 3), KillerRules.fixed3ToFloat(1152 + LobbyGame.field_gc.field_e, 3), KillerRules.fixed3ToFloat(0 + LobbyGame.field_gc.field_u, 3)});
           }
           if ((LinkButtonPainter.field_i & 4194304L) != 0L) {
             var3_ref = "extra_model_dist=" + ChatReplacementSupport.field_a + "; extra_model_dist_scatter=" + IntLookupQuery.field_l + "; extra_model_z=" + LobbyGame.field_vc + "; num_extra_models=" + MenuSelectionSupport.field_a;
-            CollisionContact.field_h.d(var3_ref, 10, 70, 15650047, 1);
+            CollisionContact.field_h.drawLeft(var3_ref, 10, 70, 15650047, 1);
           }
           if ((LinkButtonPainter.field_i & 65536L) != 0L) {
-            CollisionContact.field_h.d("Generated balls: Segments=" + MatchingTextValidator.field_v + ", slices=" + ViewportController.field_b + ", polys/ball=" + MatchingTextValidator.field_v * (ViewportController.field_b * 2), 10, 70, 16772795, 1);
+            CollisionContact.field_h.drawLeft("Generated balls: Segments=" + MatchingTextValidator.field_v + ", slices=" + ViewportController.field_b + ", polys/ball=" + MatchingTextValidator.field_v * (ViewportController.field_b * 2), 10, 70, 16772795, 1);
             var3_intLifetime1 = -CollisionContact.field_h.maxDescent + 480 - 4;
             for (var4Lifetime1 = 0; var4Lifetime1 < LinkButtonPainter.field_f.length; var4Lifetime1++) {
-              CollisionContact.field_h.d(var4Lifetime1 + ": " + LinkButtonPainter.field_f[var4Lifetime1] + " dist=" + GrowableIntList.field_d[var4Lifetime1], 300, var3_intLifetime1, 16772829, 0);
+              CollisionContact.field_h.drawLeft(var4Lifetime1 + ": " + LinkButtonPainter.field_f[var4Lifetime1] + " dist=" + GrowableIntList.field_d[var4Lifetime1], 300, var3_intLifetime1, 16772829, 0);
               var3_intLifetime1 = var3_intLifetime1 - 3 * CollisionContact.field_h.maxAscent / 2;
             }
           }
@@ -4585,18 +4585,18 @@ final class PoolMatchController {
           }
           if (0L != (8192L & LinkButtonPainter.field_i)) {
             var3_intLifetime2 = 476 - CollisionContact.field_h.maxDescent;
-            CollisionContact.field_h.d("currentplayer " + this.gameModel.field_A + ", extra shots " + this.gameModel.field_z + ", extra visits " + this.gameModel.field_y, 300, var3_intLifetime2, 16772829, 0);
+            CollisionContact.field_h.drawLeft("currentplayer " + this.gameModel.field_A + ", extra shots " + this.gameModel.field_z + ", extra visits " + this.gameModel.field_y, 300, var3_intLifetime2, 16772829, 0);
             var3_intLifetime2 = var3_intLifetime2 - CollisionContact.field_h.maxAscent * 3 / 2;
           }
           if ((2L & LinkButtonPainter.field_i) != 0L) {
             var3_intLifetime3 = -4 - CollisionContact.field_h.maxDescent + 480;
-            CollisionContact.field_h.d("cur cam ang " + (int)(this.camera.getYaw(true) * 180.0 / 3.141592653589793) + ", " + (int)(180.0 * this.camera.getPitch((byte) 106) / 3.141592653589793) + ", dist " + this.camera.getDistance(param0 ^ 292), 300, var3_intLifetime3, 16772829, 0);
+            CollisionContact.field_h.drawLeft("cur cam ang " + (int)(this.camera.getYaw(true) * 180.0 / 3.141592653589793) + ", " + (int)(180.0 * this.camera.getPitch((byte) 106) / 3.141592653589793) + ", dist " + this.camera.getDistance(param0 ^ 292), 300, var3_intLifetime3, 16772829, 0);
             var3_intLifetime3 = var3_intLifetime3 - 3 * CollisionContact.field_h.maxAscent / 2;
-            CollisionContact.field_h.d("drag " + this.mouseDragMode + ", prev=" + this.dragLastMouseX + ", " + this.dragLastMouseY, 300, var3_intLifetime3, 16772829, 0);
+            CollisionContact.field_h.drawLeft("drag " + this.mouseDragMode + ", prev=" + this.dragLastMouseX + ", " + this.dragLastMouseY, 300, var3_intLifetime3, 16772829, 0);
             var3_intLifetime3 = var3_intLifetime3 - 3 * CollisionContact.field_h.maxAscent / 2;
-            CollisionContact.field_h.d("cur tgt " + this.camera.targetX / 576.0 + ", " + this.camera.targetY / 288.0 + ", " + (this.camera.targetZ + 8.0) / 512.0, 300, var3_intLifetime3, 16772829, 0);
+            CollisionContact.field_h.drawLeft("cur tgt " + this.camera.targetX / 576.0 + ", " + this.camera.targetY / 288.0 + ", " + (this.camera.targetZ + 8.0) / 512.0, 300, var3_intLifetime3, 16772829, 0);
             var3_intLifetime3 = var3_intLifetime3 - CollisionContact.field_h.maxAscent * 3 / 2;
-            CollisionContact.field_h.d("cur pos " + this.camera.eyeX / 576.0 + ", " + this.camera.eyeY / 288.0 + ", " + this.camera.eyeZ / 512.0, 300, var3_intLifetime3, 16772829, 0);
+            CollisionContact.field_h.drawLeft("cur pos " + this.camera.eyeX / 576.0 + ", " + this.camera.eyeY / 288.0 + ", " + this.camera.eyeZ / 512.0, 300, var3_intLifetime3, 16772829, 0);
             var3_intLifetime3 = var3_intLifetime3 - 3 * CollisionContact.field_h.maxAscent / 2;
             var4_ref_qe = new ShotRecord();
             var5_ref_qe = var4_ref_qe;
@@ -4606,9 +4606,9 @@ final class PoolMatchController {
             var5_ref_qe.field_H = (byte)var6_ref_kj.field_e;
             var5_ref_qe.field_D = (byte)var6_ref_kj.field_d;
             var5_ref_qe.aimAngle = (short)((var6_ref_kj.azimuth + 1024) % 2048);
-            CollisionContact.field_h.d(var4_ref_qe.describeAim(param0 - 300), 300, var3_intLifetime3, 16772829, 0);
+            CollisionContact.field_h.drawLeft(var4_ref_qe.describeAim(param0 - 300), 300, var3_intLifetime3, 16772829, 0);
             var3_intLifetime3 = var3_intLifetime3 - CollisionContact.field_h.maxAscent * 3 / 2;
-            CollisionContact.field_h.d("cue ang " + this.cueAim.azimuth + ", " + this.cueAim.polarAngle + ", power " + this.cuePower + ", loc " + MouseWheelInput.field_c.field_l[0] + ",  " + MouseWheelInput.field_c.field_l[1] + ", " + MouseWheelInput.field_c.field_l[2], 300, var3_intLifetime3, 16772829, 0);
+            CollisionContact.field_h.drawLeft("cue ang " + this.cueAim.azimuth + ", " + this.cueAim.polarAngle + ", power " + this.cuePower + ", loc " + MouseWheelInput.field_c.field_l[0] + ",  " + MouseWheelInput.field_c.field_l[1] + ", " + MouseWheelInput.field_c.field_l[2], 300, var3_intLifetime3, 16772829, 0);
             var3_intLifetime3 = var3_intLifetime3 - CollisionContact.field_h.maxAscent * 3 / 2;
             stackIn_88_0 = CollisionContact.field_h;
             stackIn_88_1 = new StringBuilder().append("shot_camera_strategy  ").append(this.shotCameraStrategy);
@@ -4617,9 +4617,9 @@ final class PoolMatchController {
             } else {
               stackIn_89_2 = "";
             }
-            ((BinaryBitmapFont) (Object) stackIn_88_0).d(((StringBuilder) (Object) stackIn_88_1).append(stackIn_89_2).toString(), 300, var3_intLifetime3, 16772829, 0);
+            ((BinaryBitmapFont) (Object) stackIn_88_0).drawLeft(((StringBuilder) (Object) stackIn_88_1).append(stackIn_89_2).toString(), 300, var3_intLifetime3, 16772829, 0);
             var3_intLifetime3 = var3_intLifetime3 - 3 * CollisionContact.field_h.maxAscent / 2;
-            CollisionContact.field_h.d("camera_location " + this.cameraPresetIndex, 300, var3_intLifetime3, 16772829, 0);
+            CollisionContact.field_h.drawLeft("camera_location " + this.cameraPresetIndex, 300, var3_intLifetime3, 16772829, 0);
           }
           if ((2048L & LinkButtonPainter.field_i) != 0L) {
             stackIn_96_0 = CollisionContact.field_h;
@@ -4628,25 +4628,25 @@ final class PoolMatchController {
             } else {
               stackIn_97_1 = "|>";
             }
-            ((BinaryBitmapFont) (Object) stackIn_96_0).d(stackIn_97_1, -(CollisionContact.field_h.maxAscent * 2) + 640, -10 + (480 + (-(2 * CollisionContact.field_h.maxDescent) - CollisionContact.field_h.maxAscent)), 16777215, 1);
+            ((BinaryBitmapFont) (Object) stackIn_96_0).drawLeft(stackIn_97_1, -(CollisionContact.field_h.maxAscent * 2) + 640, -10 + (480 + (-(2 * CollisionContact.field_h.maxDescent) - CollisionContact.field_h.maxAscent)), 16777215, 1);
           }
           if ((128L & LinkButtonPainter.field_i) != 0L) {
             this.drawShotListsDebug((byte) -28);
           }
           if ((16777216L & LinkButtonPainter.field_i) != 0L) {
             if (RankingsScreen.field_N.isReady(-11414)) {
-              var3_long = RankingsScreen.field_N.c((byte) -93);
+              var3_long = RankingsScreen.field_N.getPlaybackMicros((byte) -93);
               var5Lifetime2 = (int)(var3_long / 1000L);
               var6Lifetime1 = var5Lifetime2 / 1000;
               var5Lifetime2 = var5Lifetime2 % 1000;
               var7Lifetime2 = var6Lifetime1 / 60;
-              CollisionContact.field_h.d("midip: ", 10, 380, 13421823, 1118515);
+              CollisionContact.field_h.drawLeft("midip: ", 10, 380, 13421823, 1118515);
               var6Lifetime1 = var6Lifetime1 % 60;
-              CollisionContact.field_h.c(Integer.toString(var7Lifetime2), 68, 380, 13421823, 1118515);
-              CollisionContact.field_h.c(Integer.toString(var6Lifetime1), 85, 380, 13421823, 1118515);
-              CollisionContact.field_h.c(Integer.toString(var5Lifetime2), 110, 380, 13421823, 1118515);
+              CollisionContact.field_h.drawRight(Integer.toString(var7Lifetime2), 68, 380, 13421823, 1118515);
+              CollisionContact.field_h.drawRight(Integer.toString(var6Lifetime1), 85, 380, 13421823, 1118515);
+              CollisionContact.field_h.drawRight(Integer.toString(var5Lifetime2), 110, 380, 13421823, 1118515);
             } else {
-              CollisionContact.field_h.d("midip: stopped", 10, 380, 13421823, 1118515);
+              CollisionContact.field_h.drawLeft("midip: stopped", 10, 380, 13421823, 1118515);
             }
           }
           if ((1048576L & LinkButtonPainter.field_i) != 0L) {
@@ -4660,7 +4660,7 @@ final class PoolMatchController {
                 for (var8Lifetime2 = 1; var6_ref_tc.size((byte) 112) > var8Lifetime2; var8Lifetime2++) {
                   var7_ref_String = var7_ref_String + ", " + var6_ref_tc.get(var8Lifetime2, param0 + 1929);
                 }
-                CollisionContact.field_h.d(var7_ref_String, var3_intLifetime4, var4Lifetime2, 10066329, 8947848);
+                CollisionContact.field_h.drawLeft(var7_ref_String, var3_intLifetime4, var4Lifetime2, 10066329, 8947848);
                 var4Lifetime2 = var4Lifetime2 + CollisionContact.field_h.baselineHeight;
               }
             }
@@ -4680,7 +4680,7 @@ final class PoolMatchController {
                 var5_ref_String = var5_ref_String + " [this game]";
               }
               if (RenderingInitializationSupport.achievementNames[var4Lifetime3] != var5_ref_String) {
-                CollisionContact.field_h.d(var5_ref_String, 40, var3_intLifetime5, 16764074, 1);
+                CollisionContact.field_h.drawLeft(var5_ref_String, 40, var3_intLifetime5, 16764074, 1);
                 var3_intLifetime5 = var3_intLifetime5 + CollisionContact.field_h.baselineHeight;
               }
               var4Lifetime3++;
@@ -4702,11 +4702,11 @@ final class PoolMatchController {
                   var11 = stackIn_154_0;
                   for (var12 = 0; var12 < var4_ref_qeLifetime1.field_U.length; var12++) {
                     var13 = "+" + var4_ref_qeLifetime1.field_U[var12];
-                    CollisionContact.field_h.d(var13, var11, var7Lifetime3, 16777215, 1);
-                    var11 = var11 + CollisionContact.field_h.b(var13);
+                    CollisionContact.field_h.drawLeft(var13, var11, var7Lifetime3, 16777215, 1);
+                    var11 = var11 + CollisionContact.field_h.stringWidth(var13);
                     var10Lifetime1 = var10Lifetime1 + var4_ref_qeLifetime1.field_U[var12];
                   }
-                  CollisionContact.field_h.d(" =" + var10Lifetime1, var11, var7Lifetime3, 16764074, 1);
+                  CollisionContact.field_h.drawLeft(" =" + var10Lifetime1, var11, var7Lifetime3, 16764074, 1);
                   if ((1 & var4_ref_qeLifetime1.playerIndex) == 0) {
                     var5Lifetime4 = var5Lifetime4 + var10Lifetime1;
                   } else {
@@ -4719,8 +4719,8 @@ final class PoolMatchController {
               }
               break;
             }
-            CollisionContact.field_h.d("p1=" + var5Lifetime4, var8Lifetime3, var7Lifetime3, 16764074, 1);
-            CollisionContact.field_h.d("p2=" + var6Lifetime2, var9Lifetime1, var7Lifetime3, 16764074, 1);
+            CollisionContact.field_h.drawLeft("p1=" + var5Lifetime4, var8Lifetime3, var7Lifetime3, 16764074, 1);
+            CollisionContact.field_h.drawLeft("p2=" + var6Lifetime2, var9Lifetime1, var7Lifetime3, 16764074, 1);
             var7Lifetime3 = var7Lifetime3 + CollisionContact.field_h.baselineHeight;
           }
           if ((LinkButtonPainter.field_i & 262144L) != 0L &&
@@ -4750,7 +4750,7 @@ final class PoolMatchController {
                 } else {
                   stackIn_187_4 = 4145151;
                 }
-                BirthDateInputWidget.a(stackIn_182_0, stackIn_182_1, stackIn_182_2, stackIn_183_3, stackIn_187_4, this.viewMatrix, var3_intLifetime6 + (UiComponentNode.sineFixed(var6_ref_df.angleStart, (byte) -120) * (var6_ref_df.distance >> 13) >> 16), -64, (EightBallRules.sineLookup((byte) -128, var6_ref_df.angleStart) * (var6_ref_df.distance >> 13) >> 16) + var4Lifetime4, var3_intLifetime6);
+                BirthDateInputWidget.drawProjectedLine(stackIn_182_0, stackIn_182_1, stackIn_182_2, stackIn_183_3, stackIn_187_4, this.viewMatrix, var3_intLifetime6 + (UiComponentNode.sineFixed(var6_ref_df.angleStart, (byte) -120) * (var6_ref_df.distance >> 13) >> 16), -64, (EightBallRules.sineLookup((byte) -128, var6_ref_df.angleStart) * (var6_ref_df.distance >> 13) >> 16) + var4Lifetime4, var3_intLifetime6);
                 stackIn_190_0 = 7;
                 stackIn_190_1 = var4Lifetime4;
                 stackIn_190_2 = -64;
@@ -4764,7 +4764,7 @@ final class PoolMatchController {
                 } else {
                   stackIn_195_4 = 4161535;
                 }
-                BirthDateInputWidget.a(stackIn_190_0, stackIn_190_1, stackIn_190_2, stackIn_191_3, stackIn_195_4, this.viewMatrix, (UiComponentNode.sineFixed(var6_ref_df.angleEnd, (byte) 92) * (var6_ref_df.distance >> 13) >> 16) + var3_intLifetime6, -64, var4Lifetime4 + (EightBallRules.sineLookup((byte) -128, var6_ref_df.angleEnd) * (var6_ref_df.distance >> 13) >> 16), var3_intLifetime6);
+                BirthDateInputWidget.drawProjectedLine(stackIn_190_0, stackIn_190_1, stackIn_190_2, stackIn_191_3, stackIn_195_4, this.viewMatrix, (UiComponentNode.sineFixed(var6_ref_df.angleEnd, (byte) 92) * (var6_ref_df.distance >> 13) >> 16) + var3_intLifetime6, -64, var4Lifetime4 + (EightBallRules.sineLookup((byte) -128, var6_ref_df.angleEnd) * (var6_ref_df.distance >> 13) >> 16), var3_intLifetime6);
               }
             }
           }
@@ -4772,14 +4772,14 @@ final class PoolMatchController {
             var3_intLifetime7 = 480 - CollisionContact.field_h.maxDescent - 4;
             if (this.gameModel.rules instanceof EightBallRules) {
               var4_ref_af = (EightBallRules) (this.gameModel.rules);
-              CollisionContact.field_h.d("groups allocations: {" + var4_ref_af.field_g[0] + ", " + var4_ref_af.field_g[1] + "}", 300, var3_intLifetime7, 16772829, 0);
+              CollisionContact.field_h.drawLeft("groups allocations: {" + var4_ref_af.field_g[0] + ", " + var4_ref_af.field_g[1] + "}", 300, var3_intLifetime7, 16772829, 0);
               var3_intLifetime7 = var3_intLifetime7 - CollisionContact.field_h.maxAscent * 3 / 2;
             }
-            CollisionContact.field_h.d("shot mode: " + this.shotModeActive, 300, var3_intLifetime7, 16772829, 0);
+            CollisionContact.field_h.drawLeft("shot mode: " + this.shotModeActive, 300, var3_intLifetime7, 16772829, 0);
             var3_intLifetime7 = var3_intLifetime7 - 3 * CollisionContact.field_h.maxAscent / 2;
-            CollisionContact.field_h.d("ruleset: " + this.gameModel.rules.getClass().getName(), 300, var3_intLifetime7, 16772829, 0);
+            CollisionContact.field_h.drawLeft("ruleset: " + this.gameModel.rules.getClass().getName(), 300, var3_intLifetime7, 16772829, 0);
             var3_intLifetime7 = var3_intLifetime7 - CollisionContact.field_h.maxAscent * 3 / 2;
-            CollisionContact.field_h.d("cg.currentplayer: " + this.gameModel.field_A, 300, var3_intLifetime7, 16772829, 0);
+            CollisionContact.field_h.drawLeft("cg.currentplayer: " + this.gameModel.field_A, 300, var3_intLifetime7, 16772829, 0);
             var3_intLifetime7 = var3_intLifetime7 - 3 * CollisionContact.field_h.maxAscent / 2;
             var4Lifetime5 = 0;
             var5Lifetime6 = 0;
@@ -5021,7 +5021,7 @@ final class PoolMatchController {
             LobbyGame.field_gc.buildTableGeometry(this.gameModel, 21894);
           }
           LobbyGame.field_gc.createDebugOverlays(this.gameModel, 0);
-          LobbyGame.field_gc.b(false);
+          LobbyGame.field_gc.resetForGame(false);
           if (PoolGameModel.field_B[param0] == TransformRotationSupport.field_a) {
             if (TransformRotationSupport.field_a.field_j == null ||
               TransformRotationSupport.field_a.field_j.length != this.gameModel.balls.length) {
@@ -6993,7 +6993,7 @@ final class PoolMatchController {
               } else {
                 stackIn_623_3 = "Radial sorting";
               }
-              HighscoresScreen.$cfr$intArgs$a$c9c3307e6488(stackIn_622_0, stackIn_622_1, stackIn_622_2, stackIn_623_3);
+              HighscoresScreen.enqueueStatusMessageIntArgs(stackIn_622_0, stackIn_622_1, stackIn_622_2, stackIn_623_3);
               if (var8 == 0) {
                 return;
               }
@@ -7576,7 +7576,7 @@ final class PoolMatchController {
             (decompiledFrameRemainder22) &&
             (decompiledFrameRemainder21) &&
             (decompiledFrameRemainder20)) {
-            HighscoresScreen.$cfr$intArgs$a$c9c3307e6488(123, false, 2, "Test message in the ticker!");
+            HighscoresScreen.enqueueStatusMessageIntArgs(123, false, 2, "Test message in the ticker!");
             if (var8 == 0) {
               return;
             }
@@ -8331,7 +8331,7 @@ final class PoolMatchController {
               var8.angularVelocityX = NameEntryPopup.multiplyFixed16(-NameEntryPopup.multiplyFixed16(var18, false, var25), false, var26);
               var8.angularVelocityY = NameEntryPopup.multiplyFixed16(NameEntryPopup.multiplyFixed16(var17, false, var25), false, var26);
               var8.angularVelocityZ = NameEntryPopup.multiplyFixed16(NameEntryPopup.multiplyFixed16(var18, false, var23) - NameEntryPopup.multiplyFixed16(var17, false, var24), false, var26);
-              QuickChatHelpDialog.f(-13164);
+              QuickChatHelpDialog.pushBallSnapshot(-13164);
               scanLoop1: do {
                 NodeHashTableIterator.field_s = -1;
                 Base37Support.field_b = 0;
@@ -8350,7 +8350,7 @@ final class PoolMatchController {
                   dupTemp$0 = FadingDialog.detectAndApplyBallCollisions(var3_ref_al.cushionSegments, var5, ShotPreviewState.field_a, var3_ref_al.field_e, 0);
                   var5 = dupTemp$0;
                   if (dupTemp$0 != -1) {
-                    if (QuickChatHelpDialog.f(-13164)) {
+                    if (QuickChatHelpDialog.pushBallSnapshot(-13164)) {
                       continue;
                     }
                     break scanLoop1;
@@ -8373,7 +8373,7 @@ final class PoolMatchController {
                 }
                 if (decompiledNaturalLoopExit0) {
                   var3_ref_al.potBallsInPockets(6582, ShotPreviewState.field_a, var4_ref_qe);
-                  stackIn_52_0 = QuickChatHelpDialog.f(-13164);
+                  stackIn_52_0 = QuickChatHelpDialog.pushBallSnapshot(-13164);
                 }
                 if (!stackIn_52_0) {
                   break scanLoop1;

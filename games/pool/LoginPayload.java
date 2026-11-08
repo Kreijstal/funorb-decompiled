@@ -80,11 +80,11 @@ abstract class LoginPayload {
         }
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void drawNamePopup(int obfuscationGuard, boolean active) {
         if (null != PasswordInputPainter.field_C) {
-          PasswordInputPainter.field_C.drawRoot((byte) -79, param1);
+          PasswordInputPainter.field_C.drawRoot((byte) -79, active);
         }
-        if (param0 >= -81) {
+        if (obfuscationGuard >= -81) {
           String var3 = (String) null;
           LoginPayload.a(false, (String) null, -73);
         }
@@ -253,7 +253,7 @@ abstract class LoginPayload {
             }
             var3_int = 1;
             if (param2 == 10) {
-              GradientPaletteSupport.a(-984040272);
+              GradientPaletteSupport.showDisplayNameForm(-984040272);
               var3_int = 0;
             }
             if (var3_int != 0) {

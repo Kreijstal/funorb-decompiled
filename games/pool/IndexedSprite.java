@@ -179,7 +179,7 @@ final class IndexedSprite extends IndexedSpriteState {
         IndexedSprite.blendPaletteRowsWithAlpha(SoftwareRasterizer.pixels, this.field_j, this.field_i, var5, var4, var7, var6, var8, var9, param2);
     }
 
-    final void a() {
+    final void flipHorizontally() {
         int var3 = 0;
         int var4 = 0;
         int incrementValue$0 = 0;

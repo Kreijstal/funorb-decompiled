@@ -19,17 +19,17 @@ final class GradientPaletteSupport {
         int var4 = 5 / ((param0 + 30) / 63);
     }
 
-    final static void a(int param0) {
+    final static void showDisplayNameForm(int obfuscationGuard) {
         if (MeshBoundsSupport.field_d != null) {
           MeshBoundsSupport.field_d.dismissDialog(17);
         }
         ScoreboardNameRecord.field_a = new DisplayNamePanel();
-        if (param0 == -984040272) {
-          RasterSnapshot.field_n.replaceContent(ScoreboardNameRecord.field_a, param0 + 984040302);
+        if (obfuscationGuard == -984040272) {
+          RasterSnapshot.field_n.replaceContent(ScoreboardNameRecord.field_a, obfuscationGuard + 984040302);
           return;
         }
         field_c = 99;
-        RasterSnapshot.field_n.replaceContent(ScoreboardNameRecord.field_a, param0 + 984040302);
+        RasterSnapshot.field_n.replaceContent(ScoreboardNameRecord.field_a, obfuscationGuard + 984040302);
     }
 
     public static void releaseStatics(int param0) {
@@ -43,7 +43,7 @@ final class GradientPaletteSupport {
           field_i = null;
           return;
         }
-        GradientPaletteSupport.a(false, -31);
+        GradientPaletteSupport.createLoginResponse(false, -31);
         field_e = null;
         field_d = (Sprite[][]) null;
         field_b = null;
@@ -120,7 +120,7 @@ final class GradientPaletteSupport {
         }
     }
 
-    final static LoginResponse a(boolean param0, int param1) {
+    final static LoginResponse createLoginResponse(boolean param0, int param1) {
         LoginResponse var2 = new LoginResponse(true);
         var2.field_e = param0 ? true : false;
         if (param1 == -30914) {
@@ -148,7 +148,7 @@ final class GradientPaletteSupport {
           if (param0 != 16908) {
             field_f = -3;
           }
-          OpacityWidget.h(-1);
+          OpacityWidget.releaseSpriteDecoderArrays(-1);
           stackIn_6_0 = var2;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

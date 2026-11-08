@@ -71,7 +71,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
         }
         this.dialogOpen = false;
         if (this.field_sb) {
-          ProxySocketConnector.a(false);
+          ProxySocketConnector.showLoginDialog(false);
           return;
         }
         if (!this.field_tb) {

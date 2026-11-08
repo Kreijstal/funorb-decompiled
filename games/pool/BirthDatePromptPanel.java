@@ -137,10 +137,10 @@ final class BirthDatePromptPanel extends ArrayWidgetGroup implements ButtonActiv
               var2 = var2 + TriangleMesh.field_B;
             }
             if (var4 >= 0) {
-              HotspotRectangle.field_t.d(var6, var8, var2 + AvailabilityQueryResult.field_g, var5, -1);
+              HotspotRectangle.field_t.drawLeft(var6, var8, var2 + AvailabilityQueryResult.field_g, var5, -1);
               var2 = var2 + (LobbyGame.field_yc + (TriangleMesh.field_B + LookupQuery.field_m));
             } else {
-              QuickChatMenu.field_ec.d(var6, var8, LookupProtocolSupport.field_h + var2, var5, -1);
+              QuickChatMenu.field_ec.drawLeft(var6, var8, LookupProtocolSupport.field_h + var2, var5, -1);
               var2 = var2 + MenuScreen.field_u;
             }
           }
@@ -224,7 +224,7 @@ final class BirthDatePromptPanel extends ArrayWidgetGroup implements ButtonActiv
     final void renderWidget(int param0, byte param1, int param2, int param3) {
         int var5 = 17 % ((-42 - param1) / 53);
         super.renderWidget(param0, (byte) 110, param2, param3);
-        PoolUiText.field_a.d(WireframeQuad.dobEnterforchat, this.widgetX + (param2 + 4), 4 + (param3 + this.widgetY) + PoolUiText.field_a.maxAscent, 16777215, -1);
+        PoolUiText.field_a.drawLeft(WireframeQuad.dobEnterforchat, this.widgetX + (param2 + 4), 4 + (param3 + this.widgetY) + PoolUiText.field_a.maxAscent, 16777215, -1);
     }
 
     final void f(byte param0) {

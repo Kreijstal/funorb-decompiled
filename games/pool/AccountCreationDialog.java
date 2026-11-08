@@ -10,11 +10,11 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
     static int[] field_Hb;
     private AccountCreationForm field_Cb;
 
-    final static boolean m(int param0) {
-        if (param0 == 0) {
+    final static boolean hasCanvasFocus(int obfuscationGuard) {
+        if (obfuscationGuard == 0) {
           return null == MatchingTextValidator.field_u ? MeshBase.field_e : true;
         }
-        AccountCreationDialog.m(71);
+        AccountCreationDialog.hasCanvasFocus(71);
         return null == MatchingTextValidator.field_u ? MeshBase.field_e : true;
     }
 
@@ -171,7 +171,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
 
     final static void a(int param0, int param1, int param2, boolean param3) {
         int var4;
-        StatefulTextPainter.field_s.setCursorVisible(true, (byte) 106, (java.awt.Component) ((Object) TextLineLayout.a((byte) -37)));
+        StatefulTextPainter.field_s.setCursorVisible(true, (byte) 106, (java.awt.Component) ((Object) TextLineLayout.getActiveCanvas((byte) -37)));
         ThemeSelectScreen.field_P = 0;
         GameRules.field_b = param1;
         if (param0 != -3405) {

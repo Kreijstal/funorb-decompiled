@@ -13,26 +13,26 @@ final class NetworkArchiveRequest extends ArchiveRequest {
         return TimeTrialSelectScreen.field_I == IntegerRecordProtocolSupport.field_e ? true : false;
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void sortRankingsViews(boolean alternatePrimaryKey, int limit) {
         int var2_int = 0;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         var3 = Pool.field_O;
         try {
-          IndexedSpriteState.sortVisibleFaces(ArchiveRequest.field_z, MenuScreenBase.field_c, 0, LogoJingleLoader.field_a, param1, (byte) -63, param0);
+          IndexedSpriteState.sortRankingIndices(ArchiveRequest.field_z, MenuScreenBase.field_c, 0, LogoJingleLoader.field_a, limit, (byte) -63, alternatePrimaryKey);
           for (var2_int = 0; var2_int < MenuScreenBase.field_c; var2_int++) {
-            NetworkGameClient.field_H[var2_int + param1] = var2_int;
+            NetworkGameClient.field_H[var2_int + limit] = var2_int;
           }
-          IndexedSpriteState.sortVisibleFaces(DiskCacheWorker.field_d, MenuScreenBase.field_c + param1, param1, SpriteSheetLoadSupport.field_c, param1 + param1, (byte) -74, false);
-          if (MenuScreenBase.field_c > param1) {
-            MenuScreenBase.field_c = param1;
+          IndexedSpriteState.sortRankingIndices(DiskCacheWorker.field_d, MenuScreenBase.field_c + limit, limit, SpriteSheetLoadSupport.field_c, limit + limit, (byte) -74, false);
+          if (MenuScreenBase.field_c > limit) {
+            MenuScreenBase.field_c = limit;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "sp.F(" + param0 + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "sp.F(" + alternatePrimaryKey + ',' + limit + ')');
         }
     }
 

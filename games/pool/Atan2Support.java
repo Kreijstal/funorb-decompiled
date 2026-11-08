@@ -60,7 +60,7 @@ final class Atan2Support {
           var5.position = var5.position + 1;
           var4 = var5.position;
           var5.writeByte(param2, false);
-          var5.a(param2 - 9948, param1);
+          var5.writeNullTerminatedString(param2 - 9948, param1);
           var5.writeByteLengthPrefix(var5.position - var4, true);
           stackIn_23_0 = null;
           return (String) (stackIn_23_0);

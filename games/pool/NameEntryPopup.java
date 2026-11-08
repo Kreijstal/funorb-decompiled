@@ -25,7 +25,7 @@ final class NameEntryPopup extends UiComponent {
         if (obfuscationGuard != 89) {
           NameEntryPopup.createDecodedSprite((byte) 30);
         }
-        OpacityWidget.h(-1);
+        OpacityWidget.releaseSpriteDecoderArrays(-1);
         return var4;
     }
 
@@ -62,7 +62,7 @@ final class NameEntryPopup extends UiComponent {
           var10 = 5 + (5 + var9_int);
           var11 = 3 + (2 * ArchiveIndex.field_x + 3);
           var12 = DebugTuningSupport.adjustWidthForRightEdge(var10, param2, param0, 0);
-          var13 = OpacityWidget.a(var11, param1, -1, param3);
+          var13 = OpacityWidget.placePopupVertically(var11, param1, -1, param3);
           this.setBounds(var13, 2147483647, var12, var10, var11);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -223,7 +223,7 @@ final class NameEntryPopup extends UiComponent {
             !(this.nameBuffer.length() <= 0)) {
             discarded$0 = this.nameBuffer.append((char) var2);
           }
-          if (ContextMenu.a((char) var2, 22987) ||
+          if (ContextMenu.isAsciiLetter((char) var2, 22987) ||
             LobbyGame.a((char) var2, (byte) 85)) {
             discarded$1 = this.nameBuffer.append((char) var2);
           }

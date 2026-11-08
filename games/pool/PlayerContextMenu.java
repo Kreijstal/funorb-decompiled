@@ -205,7 +205,7 @@ final class PlayerContextMenu {
             }
           }
         } else {
-          ProxySocketConnector.a((byte) -75, this.field_l, this.field_m);
+          ProxySocketConnector.beginPrivateChat((byte) -75, this.field_l, this.field_m);
         }
         if (param1 >= 57) {
           return true;
@@ -298,7 +298,7 @@ final class PlayerContextMenu {
           null != HighscoresScreen.field_L &&
           TikiTableScene.isLocalGameOwner((byte) 85)) {
           var6 = LobbyPlayerLookupSupport.findLobbyPlayer(param0 ^ 124, this.field_l);
-          var4 = QuickChatHelpDialog.b(this.field_l, 0);
+          var4 = QuickChatHelpDialog.findLobbyPlayer(this.field_l, 0);
           var5 = this.getTargetName(3);
           if (var4 != null) {
             if (!HighscoresScreen.field_L.field_ec ||
@@ -398,7 +398,7 @@ final class PlayerContextMenu {
         String var3;
         LobbyGame var4;
         if (null == HighscoresScreen.field_L) {
-          var4 = ArchiveLoadSequence.a(this.field_b, 125);
+          var4 = ArchiveLoadSequence.findLobbyGame(this.field_b, 125);
           if (var4 != null) {
             var3 = var4.field_Ob;
             if (var4.field_Xb) {

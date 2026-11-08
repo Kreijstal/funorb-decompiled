@@ -25,12 +25,12 @@ final class SocketArchiveNetworkClient extends Js5Transport {
             }
             this.outgoingControl.writeMedium(3, 99);
             this.outgoingControl.writeShort((byte) -81, 0);
-            this.socket.a(this.outgoingControl.payload, (byte) -105, this.outgoingControl.payload.length, 0);
+            this.socket.write(this.outgoingControl.payload, (byte) -105, this.outgoingControl.payload.length, 0);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             iOException = (IOException) (Object) decompiledCaughtException;
             try {
-              this.socket.c(-114);
+              this.socket.close(-114);
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var3 = (Exception) (Object) decompiledCaughtException;
@@ -48,7 +48,7 @@ final class SocketArchiveNetworkClient extends Js5Transport {
 
     final void resetAfterValidationFailure(byte param0) {
         try {
-          this.socket.c(-98);
+          this.socket.close(-98);
         } catch (Exception exception) {
         }
         this.field_a = -1;
@@ -111,7 +111,7 @@ final class SocketArchiveNetworkClient extends Js5Transport {
                   while (-1 != var16) {
                     boolean decompiledFrameRemainder0 = true;
                     if (var16 > 0) {
-                      decompiledFrameRemainder0 = !(ContextMenu.a(var10.charAt(-1 + var16), 22987));
+                      decompiledFrameRemainder0 = !(ContextMenu.isAsciiLetter(var10.charAt(-1 + var16), 22987));
                       if ((decompiledFrameRemainder0) &&
                         (35 == var10.charAt(-1 + var16))) {
                         var16 = var10.indexOf(var14, var16 + 1);
@@ -119,7 +119,7 @@ final class SocketArchiveNetworkClient extends Js5Transport {
                       }
                     }
                     if ((decompiledFrameRemainder0) && (!(var10.length() > var15 + var16) ||
-                      !ContextMenu.a(var10.charAt(var16 + var15), 22987))) {
+                      !ContextMenu.isAsciiLetter(var10.charAt(var16 + var15), 22987))) {
                       var17 = var15 + var16;
                       var18 = 0;
                       var19 = new TextHotspotRegion(var11);
@@ -132,22 +132,22 @@ final class SocketArchiveNetworkClient extends Js5Transport {
                           var24 = param0[(-1 + (var21 + param0.length)) % param0.length];
                           if (var18 <= var16 &&
                             var18 + var23 > var16) {
-                            var25 = param4.b(var8[var21].substring(0, var16 - var18));
+                            var25 = param4.stringWidth(var8[var21].substring(0, var16 - var18));
                             var20.field_r = 1 + param4.maxAscent + param4.maxDescent;
                             var20.field_m = param6 + var25;
                             var20.field_q = var22;
                             if (var17 >= var18 &&
                               var23 + var18 >= var17) {
-                              var20.field_l = param4.b(var8[var21].substring(-var18 + var16, var17 - var18));
+                              var20.field_l = param4.stringWidth(var8[var21].substring(-var18 + var16, var17 - var18));
                               break scanLoop1;
                             }
-                            var20.field_l = param4.b(var8[var21].substring(var16 - var18));
+                            var20.field_l = param4.stringWidth(var8[var21].substring(var16 - var18));
                             var20.next = new TextHotspotRegion(var20.field_p);
                             var20 = var20.next;
                           } else {
                             if (var18 <= var17 &&
                               var17 < var23 + var18) {
-                              var25 = param4.b(var8[var21].substring(0, -var18 + var17));
+                              var25 = param4.stringWidth(var8[var21].substring(0, -var18 + var17));
                               var20.field_m = param6;
                               var20.field_l = var25;
                               var20.field_q = var22;
@@ -241,12 +241,12 @@ final class SocketArchiveNetworkClient extends Js5Transport {
             }
             ((PacketBuffer) (Object) stackIn_6_0).writeByte(stackIn_7_1, false);
             this.outgoingControl.writeLong40(0L, 24136);
-            this.socket.a(this.outgoingControl.payload, (byte) -102, this.outgoingControl.payload.length, 0);
+            this.socket.write(this.outgoingControl.payload, (byte) -102, this.outgoingControl.payload.length, 0);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             iOException = (IOException) (Object) decompiledCaughtException;
             try {
-              this.socket.c(-83);
+              this.socket.close(-83);
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var4 = (Exception) (Object) decompiledCaughtException;
@@ -279,7 +279,7 @@ final class SocketArchiveNetworkClient extends Js5Transport {
           try {
             if (this.socket != null) {
               try {
-                this.socket.c(-112);
+                this.socket.close(-112);
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var4 = (Exception) (Object) decompiledCaughtException;
@@ -313,12 +313,12 @@ final class SocketArchiveNetworkClient extends Js5Transport {
                 this.outgoingControl.writeByte(4, false);
                 this.outgoingControl.writeByte((int) this.field_c, false);
                 this.outgoingControl.writeInt(true, 0);
-                this.socket.a(this.outgoingControl.payload, (byte) -102, this.outgoingControl.payload.length, 0);
+                this.socket.write(this.outgoingControl.payload, (byte) -102, this.outgoingControl.payload.length, 0);
               } catch (java.io.IOException decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
                 var4_ref2 = (IOException) (Object) decompiledCaughtException;
                 try {
-                  this.socket.c(-127);
+                  this.socket.close(-127);
                 } catch (java.lang.Exception decompiledCaughtParameter2) {
                   decompiledCaughtException = decompiledCaughtParameter2;
                   var5 = (Exception) (Object) decompiledCaughtException;
@@ -399,7 +399,7 @@ final class SocketArchiveNetworkClient extends Js5Transport {
             this.field_m = this.field_m + var4;
             if (this.field_m > 30000) {
               try {
-                this.socket.c(-100);
+                this.socket.close(-100);
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var5_ref_Exception = (Exception) (Object) decompiledCaughtException;
@@ -415,13 +415,13 @@ final class SocketArchiveNetworkClient extends Js5Transport {
             return false;
           }
           try {
-            this.socket.e(0);
+            this.socket.checkWriteError(0);
             var2 = (NetworkArchiveRequest) (this.urgentPending.first((byte) -22));
             while (var2 != null) {
               this.outgoingControl.position = 0;
               this.outgoingControl.writeByte(1, false);
               this.outgoingControl.writeLong40(var2.field_m, 24136);
-              this.socket.a(this.outgoingControl.payload, (byte) -97, this.outgoingControl.payload.length, 0);
+              this.socket.write(this.outgoingControl.payload, (byte) -97, this.outgoingControl.payload.length, 0);
               this.urgentInFlight.addLast(var2, false);
               var2 = (NetworkArchiveRequest) (this.urgentPending.next((byte) -116));
             }
@@ -430,7 +430,7 @@ final class SocketArchiveNetworkClient extends Js5Transport {
               this.outgoingControl.position = 0;
               this.outgoingControl.writeByte(0, false);
               this.outgoingControl.writeLong40(var2Lifetime1.field_m, 24136);
-              this.socket.a(this.outgoingControl.payload, (byte) 55, this.outgoingControl.payload.length, 0);
+              this.socket.write(this.outgoingControl.payload, (byte) 55, this.outgoingControl.payload.length, 0);
               this.prefetchInFlight.addLast(var2Lifetime1, false);
               var2Lifetime1 = (NetworkArchiveRequest) (this.prefetchPending.next((byte) -112));
             }
@@ -439,7 +439,7 @@ final class SocketArchiveNetworkClient extends Js5Transport {
               SocketArchiveNetworkClient.a((int[]) null, 69, (String) null, 35, (BitmapFont) null, true, -63);
             }
             for (var2_int = 0; 100 > var2_int; var2_int++) {
-              var3_int = this.socket.readByte(75);
+              var3_int = this.socket.availableBytes(75);
               if (0 > var3_int) {
                 throw new IOException();
               }
@@ -462,7 +462,7 @@ final class SocketArchiveNetworkClient extends Js5Transport {
                   if (var3_int < var6) {
                     var6 = var3_int;
                   }
-                  this.socket.a(var6, param0 + -2147483648, this.currentRequest.responseBuffer.position, this.currentRequest.responseBuffer.payload);
+                  this.socket.readFully(var6, param0 + -2147483648, this.currentRequest.responseBuffer.position, this.currentRequest.responseBuffer.payload);
                   if (this.field_c != 0) {
                     for (var7 = 0; var7 < var6; var7++) {
                       this.currentRequest.responseBuffer.payload[var7 + this.currentRequest.responseBuffer.position] = (byte)TutorialFactory.bitwiseXor((int) this.currentRequest.responseBuffer.payload[var7 + this.currentRequest.responseBuffer.position], (int) this.field_c);
@@ -484,7 +484,7 @@ final class SocketArchiveNetworkClient extends Js5Transport {
                   if (var3_int < var5) {
                     var5 = var3_int;
                   }
-                  this.socket.a(var5, 0, this.incomingHeader.position, this.incomingHeader.payload);
+                  this.socket.readFully(var5, 0, this.incomingHeader.position, this.incomingHeader.payload);
                   if (this.field_c != 0) {
                     for (var6 = 0; var5 > var6; var6++) {
                       this.incomingHeader.payload[this.incomingHeader.position + var6] = (byte)TutorialFactory.bitwiseXor((int) this.incomingHeader.payload[this.incomingHeader.position + var6], (int) this.field_c);
@@ -559,7 +559,7 @@ final class SocketArchiveNetworkClient extends Js5Transport {
             decompiledCaughtException = decompiledCaughtParameter1;
             var2_ref = (IOException) (Object) decompiledCaughtException;
             try {
-              this.socket.c(-128);
+              this.socket.close(-128);
             } catch (java.lang.Exception decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               var3 = (Exception) (Object) decompiledCaughtException;
@@ -582,7 +582,7 @@ final class SocketArchiveNetworkClient extends Js5Transport {
 
     final void closeSocket(byte param0) {
         if (null != this.socket) {
-          this.socket.c(-102);
+          this.socket.close(-102);
         }
         if (param0 >= -24) {
           this.socket = (BufferedSocket) null;
@@ -717,13 +717,13 @@ final class SocketArchiveNetworkClient extends Js5Transport {
               ArrayWidgetGroup.a(var2, true, DebugTuningSlider.field_k, TextInputPainter.field_v, UiWidget.field_B);
               var2.writeByte(15, false);
               var2.writeInt(true, SpaceObject.field_f);
-              TransformRotationSupport.field_h.a(var2.payload, (byte) 72, 13, 0);
+              TransformRotationSupport.field_h.write(var2.payload, (byte) 72, 13, 0);
               MonotonicClock.field_e = MonotonicClock.field_e + 1;
               MembershipBenefitsLoader.field_d = MonotonicClock.monotonicTimeMillis((byte) -105) + 30000L;
             }
             if (MonotonicClock.field_e == 3) {
-              if (0 < TransformRotationSupport.field_h.readByte(72)) {
-                var1_int = TransformRotationSupport.field_h.a(14528);
+              if (0 < TransformRotationSupport.field_h.availableBytes(72)) {
+                var1_int = TransformRotationSupport.field_h.readByte(14528);
                 if (var1_int != 0) {
                   stackIn_27_0 = Under13NoticePanel.a(false, var1_int);
                   return stackIn_27_0;

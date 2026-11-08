@@ -307,7 +307,7 @@ final class QuickChatMenu extends UiComponent {
             }
             this.items[var13] = new AlignedIconLabel(0L, param2, (UiComponent) null, param3, (Sprite) (var14), param6[var13]);
             this.addChild(-126, this.items[var13]);
-            var15 = var17.b(param6[var13]);
+            var15 = var17.stringWidth(param6[var13]);
             if (var15 > this.contentWidth) {
               this.contentWidth = var15;
             }

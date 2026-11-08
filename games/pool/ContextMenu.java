@@ -44,15 +44,15 @@ final class ContextMenu extends UiComponent {
         return true;
     }
 
-    final static boolean a(char param0, int param1) {
+    final static boolean isAsciiLetter(char character, int obfuscationGuard) {
         boolean stackIn_10_0 = false;
-        if (param1 != 22987) {
+        if (obfuscationGuard != 22987) {
           field_Xb = (String) null;
         }
-        stackIn_10_0 = ((!(param0 < 65) &&
-          !(param0 > 90)) ||
-          (!(param0 < 97) &&
-          !(param0 > 122)));
+        stackIn_10_0 = ((!(character < 65) &&
+          !(character > 90)) ||
+          (!(character < 97) &&
+          !(character > 122)));
         return stackIn_10_0;
     }
 
@@ -99,7 +99,7 @@ final class ContextMenu extends UiComponent {
         var6 = var6 + 2 * this.borderInsetX;
         var7Lifetime1 = this.itemCount * this.itemHeight + this.borderInsetY + this.borderInsetY;
         var8Lifetime1 = DebugTuningSupport.adjustWidthForRightEdge(var6, param0, param2, 0);
-        var9 = OpacityWidget.a(var7Lifetime1, param4, param3 - 1, param1);
+        var9 = OpacityWidget.placePopupVertically(var7Lifetime1, param4, param3 - 1, param1);
         this.setBounds(var9, 2147483647, var8Lifetime1, var6, var7Lifetime1);
         for (var10 = param3; this.itemCount > var10; var10++) {
           this.items[var10].setIconLabelBounds(this.borderInsetX, true, this.itemInsetX, this.itemHeight, this.iconLabelGap, var6 - this.borderInsetX * 2, this.borderInsetY + this.itemHeight * var10);

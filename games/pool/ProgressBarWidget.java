@@ -137,7 +137,7 @@ final class ProgressBarWidget extends UiWidget {
         int var7 = 0;
         try {
           var5_int = param1 + this.widgetWidth;
-          QuickChatPhraseRegistry.a(param1 + this.field_U.field_z, param2, var5_int - this.field_U.field_z, (byte) 31, param2 + this.widgetHeight);
+          QuickChatPhraseRegistry.pushRasterClip(param1 + this.field_U.field_z, param2, var5_int - this.field_U.field_z, (byte) 31, param2 + this.widgetHeight);
           for (var6 = -this.stripeOffset + param1; var5_int > var6; var6 = var6 + param3.field_z) {
             param3.draw(var6, param2);
           }
@@ -229,7 +229,7 @@ final class ProgressBarWidget extends UiWidget {
         int var7 = this.widgetY + param3;
         this.drawRoundedStripes(false, var5, var7, this.stripeSprites[0]);
         if (this.fillFractionQ16 < 65536) {
-          QuickChatPhraseRegistry.a(var5 + (this.widgetWidth * this.fillFractionQ16 >> 16), var7, this.widgetWidth + var5, (byte) -116, var7 + this.widgetHeight);
+          QuickChatPhraseRegistry.pushRasterClip(var5 + (this.widgetWidth * this.fillFractionQ16 >> 16), var7, this.widgetWidth + var5, (byte) -116, var7 + this.widgetHeight);
           this.drawRoundedStripes(false, var5, var7, this.stripeSprites[1]);
           TriangleMesh.a(112);
         }

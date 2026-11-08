@@ -160,7 +160,7 @@ final class MultiHandleSliderWidget extends ButtonWidget {
           var4 = var6.position;
           var6.writeByte(0, false);
           var5 = -59 % ((-53 - param2) / 33);
-          var6.a(-9946, param0);
+          var6.writeNullTerminatedString(-9946, param0);
           var6.writeByteLengthPrefix(var6.position - var4, true);
           stackIn_28_0 = null;
           return (String) (stackIn_28_0);

@@ -23,7 +23,7 @@ final class EmailAvailabilityValidator extends TextInputValidator {
         for (var2 = param0; PacketAvailabilitySupport.field_d > var2; var2++) {
           var1[var2] = new IndexedSprite(DialRenderer.field_c, AccountStateQuery.field_r, AchievementsScreen.field_I[var2], LoginRequestSupport.field_d[var2], LinkButtonPainter.field_a[var2], AccountTextSupport.field_f[var2], LimitedRandomAccessFile.field_b[var2], IntrusiveNode.field_h);
         }
-        OpacityWidget.h(-1);
+        OpacityWidget.releaseSpriteDecoderArrays(-1);
         return var1;
     }
 

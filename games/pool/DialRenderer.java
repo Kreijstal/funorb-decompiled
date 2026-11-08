@@ -30,7 +30,7 @@ final class DialRenderer implements WidgetPainter {
         if (2 < ResourceArchive.field_e) {
           ResourceArchive.field_e = 2;
           if (param0 != 78) {
-            DialRenderer.a(111, (byte) -79, -26);
+            DialRenderer.projectY(111, (byte) -79, -26);
             return;
           }
           return;
@@ -38,7 +38,7 @@ final class DialRenderer implements WidgetPainter {
         if (param0 == 78) {
           return;
         }
-        DialRenderer.a(111, (byte) -79, -26);
+        DialRenderer.projectY(111, (byte) -79, -26);
     }
 
     public final void paintWidget(boolean param0, int param1, byte param2, int param3, UiWidget param4) {
@@ -81,12 +81,12 @@ final class DialRenderer implements WidgetPainter {
         }
     }
 
-    final static int a(int param0, byte param1, int param2) {
-        if (param1 > 65) {
-          return (TriangleRasterizer.projectionCenterY + SoftwareRasterizer.clipTop << 2) + (param2 << 11) / param0;
+    final static int projectY(int depth, byte obfuscationGuard, int y) {
+        if (obfuscationGuard > 65) {
+          return (TriangleRasterizer.projectionCenterY + SoftwareRasterizer.clipTop << 2) + (y << 11) / depth;
         }
         messageGame = (String) null;
-        return (TriangleRasterizer.projectionCenterY + SoftwareRasterizer.clipTop << 2) + (param2 << 11) / param0;
+        return (TriangleRasterizer.projectionCenterY + SoftwareRasterizer.clipTop << 2) + (y << 11) / depth;
     }
 
     public static void releaseStatics(int param0) {

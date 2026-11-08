@@ -46,12 +46,12 @@ final class DraggableWidget extends SingleChildWidget {
         this.layoutTargetX = this.widgetX;
     }
 
-    final static void a(int param0, int param1) {
-        QuickChatPhraseDefinition.field_E = param0;
+    final static void initializeChatHistory(int capacity, int obfuscationGuard) {
+        QuickChatPhraseDefinition.field_E = capacity;
         MusicPatch.field_l = new int[3];
-        RankingsProtocolSupport.field_e = new ChatMessage[param0 * 15];
+        RankingsProtocolSupport.field_e = new ChatMessage[capacity * 15];
         IntrusiveDequeCursor.field_e = 0;
-        if (param1 > -43) {
+        if (obfuscationGuard > -43) {
           field_V = 16;
         }
     }
@@ -270,8 +270,8 @@ final class DraggableWidget extends SingleChildWidget {
         }
     }
 
-    final static boolean i(int param0) {
-        if (param0 != -1) {
+    final static boolean isQuickChatOverlayOpen(int obfuscationGuard) {
+        if (obfuscationGuard != -1) {
           field_S = (String[]) null;
           if (null == CollisionContact.field_f) {
             return ArrayWidgetGroup.field_H ? true : false;

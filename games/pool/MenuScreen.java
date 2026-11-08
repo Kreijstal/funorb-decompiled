@@ -43,9 +43,9 @@ class MenuScreen extends MenuScreenBase {
         }
         if (this.drawsBackground) {
           if (this.framedPanel) {
-            ChatMessage.field_l.a(0, 0);
+            ChatMessage.field_l.drawAt(0, 0);
           } else {
-            IntrusiveNodeHashTable.field_b[BrowserCookieSupport.field_h].a(0, 0);
+            IntrusiveNodeHashTable.field_b[BrowserCookieSupport.field_h].drawAt(0, 0);
             DebugSliderInputSupport.field_g = DebugSliderInputSupport.field_g + 1;
             if (!(0 >= DebugSliderInputSupport.field_g)) {
               var2 = (BrowserCookieSupport.field_h + 1) % IntrusiveNodeHashTable.field_b.length;
@@ -642,7 +642,7 @@ class MenuScreen extends MenuScreenBase {
                                                                           LinkButtonPainter.a(param0 ^ -16470);
                                                                         }
                                                                         if (!(!this.selection.isRightArrow(-1))) {
-                                                                          CipherPacketBuffer.n(param0 + 4941);
+                                                                          CipherPacketBuffer.increaseMusicVolume(param0 + 4941);
                                                                         }
                                                                       } else {
                                                                         if (var6 == 6) {
@@ -892,7 +892,7 @@ class MenuScreen extends MenuScreenBase {
             var15 = 0;
             var16 = param0.maxAscent;
             while (var15 < var9) {
-              param0.d(var18[var15], 0, var16, param6, -1);
+              param0.drawLeft(var18[var15], 0, var16, param6, -1);
               var15++;
               var16 = var16 + param1[var15 % param1.length];
             }

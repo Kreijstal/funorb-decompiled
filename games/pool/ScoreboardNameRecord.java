@@ -10,7 +10,7 @@ final class ScoreboardNameRecord {
     static DisplayNamePanel field_a;
     boolean field_c;
 
-    final static void a(int param0, boolean param1, boolean param2, String param3) {
+    final static void initializeLoginDialog(int param0, boolean param1, boolean param2, String param3) {
         try {
           OptionsScreen.resetAccountFormState(-1);
           TabbedPane.field_Ub.hideAllDialogs(-22216);

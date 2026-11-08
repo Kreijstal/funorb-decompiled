@@ -27,7 +27,7 @@ final class DialogLayer extends SingleChildWidget {
             return false;
           }
           try {
-            var2_int = Atan2Support.field_c.readByte(107);
+            var2_int = Atan2Support.field_c.availableBytes(107);
             if (param0 < 27) {
               connectionlostWithreason = (String) null;
             }
@@ -35,7 +35,7 @@ final class DialogLayer extends SingleChildWidget {
               if (var2_int > param1 - PlayerContextMenu.field_e.position) {
                 var2_int = param1 - PlayerContextMenu.field_e.position;
               }
-              Atan2Support.field_c.a(var2_int, 0, PlayerContextMenu.field_e.position, PlayerContextMenu.field_e.payload);
+              Atan2Support.field_c.readFully(var2_int, 0, PlayerContextMenu.field_e.position, PlayerContextMenu.field_e.payload);
               MenuScreen.field_v = MonotonicClock.monotonicTimeMillis((byte) -97);
               PlayerContextMenu.field_e.position = PlayerContextMenu.field_e.position + var2_int;
               if (param1 > PlayerContextMenu.field_e.position) {

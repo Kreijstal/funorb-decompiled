@@ -77,7 +77,7 @@ final class AccountStateQuery extends IntrusiveNode {
             null != var4.serverName) {
             return true;
           }
-          stackIn_10_0 = (null != HighscoresScreen.field_L) && (QuickChatHelpDialog.b(param1, 0) != null);
+          stackIn_10_0 = (null != HighscoresScreen.field_L) && (QuickChatHelpDialog.findLobbyPlayer(param1, 0) != null);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -143,7 +143,7 @@ final class AccountStateQuery extends IntrusiveNode {
             ratedMembersonly = (String) null;
           }
           for (var4 = 0; var4 < var5.length; var4++) {
-            var5[var4] = SingleChildWidget.a(param2[var4], param0, 1);
+            var5[var4] = SingleChildWidget.doubleToFixed(param2[var4], param0, 1);
           }
           stackIn_6_0 = var5;
           return stackIn_6_0;

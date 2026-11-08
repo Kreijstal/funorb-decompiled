@@ -276,7 +276,7 @@ final class LogoMaterial {
             var10 = (PlatformTaskDispatcher) null;
             LogoMaterial.a(-1, (PlatformTaskDispatcher) null, -62, true, 71, -112);
           }
-          if (!param1.a((byte) 126)) {
+          if (!param1.supportsFullscreen((byte) 126)) {
             return null;
           }
           if (param5 == 0) {

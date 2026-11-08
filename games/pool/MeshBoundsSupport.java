@@ -288,7 +288,7 @@ final class MeshBoundsSupport {
           stackIn_22_0.field_Yb = stackIn_23_1;
           stackIn_26_0 = (0 == (4 & var4_int)) ? 0 : 1;
           var6 = stackIn_26_0;
-          buffer.a(0, (byte) -127, game.settings, game.settings.length);
+          buffer.readBytes(0, (byte) -127, game.settings, game.settings.length);
           stackIn_29_0 = ((var4_int & 2) == 0) ? 0 : 1;
           var7 = stackIn_29_0;
           game.field_pc = buffer.readUnsignedShort(-1034);
@@ -300,12 +300,12 @@ final class MeshBoundsSupport {
           }
           game.field_Zb = buffer.readLong(-412303328);
           var8 = buffer.position;
-          game.field_Ob = buffer.j(-57);
+          game.field_Ob = buffer.readNullTerminatedString(-57);
           if (var7 != 0) {
             buffer.position = var8;
             game.playerNames = new String[game.field_mc];
             for (var9 = 0; game.field_mc > var9; var9++) {
-              game.playerNames[var9] = buffer.j(-72);
+              game.playerNames[var9] = buffer.readNullTerminatedString(-72);
             }
             return;
           }

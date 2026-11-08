@@ -23,11 +23,11 @@ final class FreePlayRules extends GameRules {
           LobbyGame.field_Vb.width = 320;
           LobbyGame.field_Vb.contentOffsetX = LobbyGame.field_Vb.frameSprites[3].field_z;
           var1 = LobbyGame.field_Vb.font.measureWrappedHeight(LobbyGame.field_Vb.text, -LobbyGame.field_Vb.frameSprites[3].field_z + (LobbyGame.field_Vb.width - LobbyGame.field_Vb.frameSprites[5].field_z), 2 + LobbyGame.field_Vb.font.baselineHeight);
-          NanoTickClock.field_t.width = NanoTickClock.field_t.font.b(NanoTickClock.field_t.text) + NanoTickClock.field_t.frameSprites[3].field_z + NanoTickClock.field_t.frameSprites[5].field_z;
+          NanoTickClock.field_t.width = NanoTickClock.field_t.font.stringWidth(NanoTickClock.field_t.text) + NanoTickClock.field_t.frameSprites[3].field_z + NanoTickClock.field_t.frameSprites[5].field_z;
           NanoTickClock.field_t.localX = LobbyGame.field_Vb.frameSprites[3].field_z;
           NanoTickClock.field_t.height = 20;
           NanoTickClock.field_t.localY = var1 + LobbyGame.field_Vb.frameSprites[1].field_A + 3;
-          MonotonicClock.field_b.width = MonotonicClock.field_b.font.b(MonotonicClock.field_b.text) - (-MonotonicClock.field_b.frameSprites[3].field_z - MonotonicClock.field_b.frameSprites[5].field_z);
+          MonotonicClock.field_b.width = MonotonicClock.field_b.font.stringWidth(MonotonicClock.field_b.text) - (-MonotonicClock.field_b.frameSprites[3].field_z - MonotonicClock.field_b.frameSprites[5].field_z);
           MonotonicClock.field_b.height = NanoTickClock.field_t.height;
           MonotonicClock.field_b.localY = 3 + var1 + LobbyGame.field_Vb.frameSprites[1].field_A;
           MonotonicClock.field_b.localX = -LobbyGame.field_Vb.frameSprites[5].field_z + (LobbyGame.field_Vb.width - MonotonicClock.field_b.width);

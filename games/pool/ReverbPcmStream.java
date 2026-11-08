@@ -7,19 +7,19 @@ final class ReverbPcmStream extends PcmStream {
     private PcmStream inputStream;
     private float dampingStep;
     private float dampingTimeMicros;
-    private float field_v;
+    private float inputGain;
     private float sameChannelGain;
     private float wetGain;
     private ReverbCombFilter[] field_t;
-    private float field_z;
+    private float feedbackGain;
     private float stereoWidth;
     private ReverbCombFilter[] field_x;
     private ReverbDelayBuffer[] field_E;
-    private float field_p;
+    private float dryGain;
     private ReverbDelayBuffer[] field_F;
 
-    final synchronized void a(float param0) {
-        this.field_v = param0;
+    final synchronized void setInputGain(float gain) {
+        this.inputGain = gain;
     }
 
     final int getSchedulingCost() {
@@ -38,8 +38,8 @@ final class ReverbPcmStream extends PcmStream {
         }
     }
 
-    final synchronized void f(float param0) {
-        this.field_z = param0;
+    final synchronized void setFeedbackGain(float gain) {
+        this.feedbackGain = gain;
     }
 
     final PcmStream firstChildStream() {
@@ -95,7 +95,7 @@ final class ReverbPcmStream extends PcmStream {
         int var21Lifetime1;
         int var21Lifetime2;
         int var6Lifetime2Lifetime1;
-        this.e();
+        this.ensureChannelBuffers();
         param2 = param2 + param1;
         while (param1 < param2) {
           var4 = param2 - param1;
@@ -136,10 +136,10 @@ final class ReverbPcmStream extends PcmStream {
             var6Lifetime4++;
             var5 = var5 >> 1;
           }
-          var7Lifetime1 = (int)(this.field_z * 4096.0f);
+          var7Lifetime1 = (int)(this.feedbackGain * 4096.0f);
           var8 = (int)(this.dampingStep * 4096.0f);
-          var9 = (int)(this.field_p * 4096.0f);
-          var10 = (int)(this.field_v * 65536.0f);
+          var9 = (int)(this.dryGain * 4096.0f);
+          var10 = (int)(this.inputGain * 65536.0f);
           if (!AudioOutput.stereo) {
             var11 = (int)(this.wetGain * 4096.0f);
             for (var12 = 0; var12 < var4; var12++) {
@@ -274,7 +274,7 @@ final class ReverbPcmStream extends PcmStream {
         }
     }
 
-    private final void e() {
+    private final void ensureChannelBuffers() {
         int var1;
         if (!AudioOutput.stereo) {
           if (this.field_t != null) {
@@ -352,8 +352,8 @@ final class ReverbPcmStream extends PcmStream {
         return param0;
     }
 
-    final synchronized void d(float param0) {
-        this.field_p = param0;
+    final synchronized void setDryGain(float gain) {
+        this.dryGain = gain;
     }
 
     ReverbPcmStream(PcmStream param0) {
@@ -374,11 +374,11 @@ final class ReverbPcmStream extends PcmStream {
         if (!AudioOutput.stereo) {
           this.field_u = new int[256];
         }
-        this.e();
-        this.a(0.04500000178813934f);
+        this.ensureChannelBuffers();
+        this.setInputGain(0.04500000178813934f);
         this.setWetGain(1.0f);
-        this.f(0.8399999737739563f);
-        this.d(1.0f);
+        this.setFeedbackGain(0.8399999737739563f);
+        this.setDryGain(1.0f);
         this.setDampingTimeMicros(7000.0f);
         this.setStereoWidth(1.0f);
         this.inputStream = param0;

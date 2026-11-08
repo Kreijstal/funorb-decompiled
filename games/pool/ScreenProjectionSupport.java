@@ -107,7 +107,7 @@ final class ScreenProjectionSupport {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var10 = new Sprite(4 + ModernTableScene.field_Z.b(param2), 4 + ModernTableScene.field_Z.maxAscent + ModernTableScene.field_Z.maxDescent);
+          var10 = new Sprite(4 + ModernTableScene.field_Z.stringWidth(param2), 4 + ModernTableScene.field_Z.maxAscent + ModernTableScene.field_Z.maxDescent);
           var10.field_G = -2;
           var10.field_B = -2;
           var16 = new int[4];
@@ -116,7 +116,7 @@ final class ScreenProjectionSupport {
           var7 = SoftwareRasterizer.height;
           SoftwareRasterizer.saveClip(var16);
           var10.bindAsRenderTarget();
-          ModernTableScene.field_Z.d(param2, 2, 2 + ModernTableScene.field_Z.maxAscent, param1, -1);
+          ModernTableScene.field_Z.drawLeft(param2, 2, 2 + ModernTableScene.field_Z.maxAscent, param1, -1);
           var10.addOutline(4144959);
           SoftwareRasterizer.setTarget(var17, var6, var7);
           SoftwareRasterizer.restoreClip(var16);

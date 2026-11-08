@@ -45,32 +45,32 @@ final class SoundTone {
         int var3 = 0;
         int var4 = 0;
         this.field_j = new SoundEnvelope();
-        this.field_j.b(param0);
+        this.field_j.decode(param0);
         this.field_c = new SoundEnvelope();
-        this.field_c.b(param0);
+        this.field_c.decode(param0);
         int var2 = param0.readUnsignedByte(-98);
         if (var2 != 0) {
           param0.position = param0.position - 1;
           this.field_h = new SoundEnvelope();
-          this.field_h.b(param0);
+          this.field_h.decode(param0);
           this.field_i = new SoundEnvelope();
-          this.field_i.b(param0);
+          this.field_i.decode(param0);
         }
         var2 = param0.readUnsignedByte(-95);
         if (var2 != 0) {
           param0.position = param0.position - 1;
           this.field_g = new SoundEnvelope();
-          this.field_g.b(param0);
+          this.field_g.decode(param0);
           this.field_t = new SoundEnvelope();
-          this.field_t.b(param0);
+          this.field_t.decode(param0);
         }
         var2 = param0.readUnsignedByte(-83);
         if (var2 != 0) {
           param0.position = param0.position - 1;
           this.field_e = new SoundEnvelope();
-          this.field_e.b(param0);
+          this.field_e.decode(param0);
           this.field_d = new SoundEnvelope();
-          this.field_d.b(param0);
+          this.field_d.decode(param0);
         }
         for (var3 = 0; var3 < 10; var3++) {
           var4 = param0.readUnsignedSmart((byte) -115);

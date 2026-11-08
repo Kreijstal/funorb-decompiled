@@ -130,7 +130,7 @@ abstract class ModelTableScene extends TableScene {
           var9[1] = param2 + this.field_M[param5][1];
           var9[2] = param3 + this.field_M[param5][2];
           param6[param1 - 0] = new ModelInstance((ModelMesh) (this.createModelMeshWithBallTransform(var13, this.field_O[param5], -97)), var13);
-          var14 = TransformRotationSupport.rotateTransformHalfTurnZ((byte) 78, LobbyPanelLayoutSupport.a((byte) 69, var13));
+          var14 = TransformRotationSupport.rotateTransformHalfTurnZ((byte) 78, LobbyPanelLayoutSupport.copyTransform((byte) 69, var13));
           var12 = var14;
           var10 = var12;
           var8Lifetime1 = var10;

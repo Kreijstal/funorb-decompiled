@@ -84,7 +84,7 @@ final class ReportAbuseDialog extends UiComponent {
         this.updateRoot(param0, false);
         if (this.nameDisplay != null) {
           this.nameDisplay.text = this.reportedName.toString();
-          this.nameDisplay.localX = (this.width - this.nameDisplay.font.b(this.nameDisplay.text)) / 2;
+          this.nameDisplay.localX = (this.width - this.nameDisplay.font.stringWidth(this.nameDisplay.text)) / 2;
           if (this.muteControl != null &&
             this.muteControl.pressedButton != 0) {
             stackIn_6_0 = this.muteControl;
@@ -270,15 +270,15 @@ final class ReportAbuseDialog extends UiComponent {
               discarded$0 = this.reportedName.append(param11);
             }
             var16Lifetime2 = 0;
-            var17 = param6.font.b(ShotRecord.rulePillar0);
+            var17 = param6.font.stringWidth(ShotRecord.rulePillar0);
             if (var16Lifetime2 < var17) {
               var16Lifetime2 = var17;
             }
-            var17Lifetime2 = param6.font.b(HotspotRectangle.rulePillar1);
+            var17Lifetime2 = param6.font.stringWidth(HotspotRectangle.rulePillar1);
             if (var17Lifetime2 > var16Lifetime2) {
               var16Lifetime2 = var17Lifetime2;
             }
-            var17Lifetime3 = param6.font.b(MembershipBenefitsScreen.rulePillar2);
+            var17Lifetime3 = param6.font.stringWidth(MembershipBenefitsScreen.rulePillar2);
             if (var17Lifetime3 > var16Lifetime2) {
               var16Lifetime2 = var17Lifetime3;
             }
@@ -358,7 +358,7 @@ final class ReportAbuseDialog extends UiComponent {
             var23 = 13 + var19 + 13;
             var24 = 10 + var17Lifetime5 + (var22 + 24);
             var25 = DebugTuningSupport.adjustWidthForRightEdge(var23, param2, param0, 0);
-            var26 = OpacityWidget.a(var24, param1, -1, param3);
+            var26 = OpacityWidget.placePopupVertically(var24, param1, -1, param3);
             this.setBounds(var26, 2147483647, var25, var23, var24);
             return;
           }
@@ -376,7 +376,7 @@ final class ReportAbuseDialog extends UiComponent {
           var18Lifetime1 = var15_int + 13 + 13;
           var19Lifetime1 = 34 + var16Lifetime1;
           var20Lifetime1 = DebugTuningSupport.adjustWidthForRightEdge(var18Lifetime1, param2, param0, 0);
-          var21Lifetime1 = OpacityWidget.a(var19Lifetime1, param1, -1, param3);
+          var21Lifetime1 = OpacityWidget.placePopupVertically(var19Lifetime1, param1, -1, param3);
           this.setBounds(var21Lifetime1, 2147483647, var20Lifetime1, var18Lifetime1, var19Lifetime1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -451,12 +451,12 @@ final class ReportAbuseDialog extends UiComponent {
         FontPaletteSupport.field_b.writeByte(param3, false);
         FontPaletteSupport.field_b.writeByte(param2, false);
         FontPaletteSupport.field_b.writeShort((byte) -81, param1);
-        FontPaletteSupport.field_b.a(ArchiveLoadSequence.field_l, 124, UiWidget.field_q);
+        FontPaletteSupport.field_b.encryptRsa(ArchiveLoadSequence.field_l, 124, UiWidget.field_q);
         JaggrabDownloader.field_j.writeCipheredOpcode(false, 18);
         int fieldTemp$0 = JaggrabDownloader.field_j.position + 1;
         JaggrabDownloader.field_j.position = JaggrabDownloader.field_j.position + 1;
         int var4 = fieldTemp$0;
-        JaggrabDownloader.field_j.a(FontPaletteSupport.field_b.payload, (byte) 0, 0, FontPaletteSupport.field_b.position);
+        JaggrabDownloader.field_j.writeBytes(FontPaletteSupport.field_b.payload, (byte) 0, 0, FontPaletteSupport.field_b.position);
         JaggrabDownloader.field_j.writeByteLengthPrefix(-var4 + JaggrabDownloader.field_j.position, true);
     }
 
@@ -542,10 +542,10 @@ final class ReportAbuseDialog extends UiComponent {
             ReportAbuseDialog.releaseStatics((byte) 15);
           }
           if (!param0) {
-            stackIn_6_0 = QuickChatMenu.field_ec.b(param2);
+            stackIn_6_0 = QuickChatMenu.field_ec.stringWidth(param2);
             return stackIn_6_0;
           }
-          stackIn_4_0 = HotspotRectangle.field_t.b(param2);
+          stackIn_4_0 = HotspotRectangle.field_t.stringWidth(param2);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

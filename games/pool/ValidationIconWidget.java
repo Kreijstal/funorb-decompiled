@@ -22,7 +22,7 @@ final class ValidationIconWidget extends ButtonWidget {
           int var8 = 55 % ((param5 + 38) / 51);
           var7_int = JaggrabDownloader.field_j.position;
           JaggrabDownloader.field_j.writeLong(param4, (byte) -79);
-          JaggrabDownloader.field_j.a(-9946, param1);
+          JaggrabDownloader.field_j.writeNullTerminatedString(-9946, param1);
           JaggrabDownloader.field_j.writeByte(param2, false);
           JaggrabDownloader.field_j.writeByte(!param0 ? 0 : 1, false);
           JaggrabDownloader.field_j.writeByteLengthPrefix(JaggrabDownloader.field_j.position - var7_int, true);

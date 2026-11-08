@@ -276,7 +276,7 @@ abstract class ContentTransitionDialog extends ResizableDialog {
           }
           var3 = new ArgbSprite(DialRenderer.field_c, AccountStateQuery.field_r, AchievementsScreen.field_I[0], LoginRequestSupport.field_d[0], LinkButtonPainter.field_a[0], AccountTextSupport.field_f[0], var14);
         }
-        OpacityWidget.h(-1);
+        OpacityWidget.releaseSpriteDecoderArrays(-1);
         return (Sprite) (var3);
     }
 
@@ -372,7 +372,7 @@ abstract class ContentTransitionDialog extends ResizableDialog {
             var1[var2] = (Sprite) ((Object) new ArgbSprite(DialRenderer.field_c, AccountStateQuery.field_r, AchievementsScreen.field_I[var2], LoginRequestSupport.field_d[var2], LinkButtonPainter.field_a[var2], AccountTextSupport.field_f[var2], var13));
           }
         }
-        OpacityWidget.h(-1);
+        OpacityWidget.releaseSpriteDecoderArrays(-1);
         return var1;
     }
 

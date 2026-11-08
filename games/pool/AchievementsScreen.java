@@ -103,7 +103,7 @@ final class AchievementsScreen extends MenuScreen {
         }
         var6Lifetime1 = stackIn_37_0;
         if (var6Lifetime1 != -1) {
-          ModernTableScene.field_Z.d(RenderingInitializationSupport.achievementNames[var6Lifetime1], 225, ModernTableScene.field_Z.maxAscent + 215, 16777215, -1);
+          ModernTableScene.field_Z.drawLeft(RenderingInitializationSupport.achievementNames[var6Lifetime1], 225, ModernTableScene.field_Z.maxAscent + 215, 16777215, -1);
           stackIn_41_0 = (!ButtonWidget.a(var15, -13671, var6Lifetime1)) ? 0 : 1;
           var7Lifetime1 = stackIn_41_0;
           stackIn_46_0 = CollisionContact.field_h;
@@ -117,7 +117,7 @@ final class AchievementsScreen extends MenuScreen {
               stackIn_47_1 = FontPaletteSupport.notyetachieved;
             }
           }
-          ((BinaryBitmapFont) (Object) stackIn_46_0).d(stackIn_47_1, 225, CollisionContact.field_h.maxAscent + 240, 13412966, -1);
+          ((BinaryBitmapFont) (Object) stackIn_46_0).drawLeft(stackIn_47_1, 225, CollisionContact.field_h.maxAscent + 240, 13412966, -1);
           if (var7Lifetime1 != 0) {
             IsaacCipher.field_f[var6Lifetime1].draw(85, 225);
           } else {
@@ -150,9 +150,9 @@ final class AchievementsScreen extends MenuScreen {
             stackIn_65_1 = TickClock.secretachievement;
           }
           ((BinaryBitmapFont) (Object) stackIn_64_0).drawParagraph(stackIn_65_1, 225, 260, 260, 70, 13421772, -1, 0, 1, var8);
-          CollisionContact.field_h.d(Under13NoticePanel.orbpointsColon + WidgetContainer.field_J[var6Lifetime1] * 100, 225, 340 + CollisionContact.field_h.maxAscent, 13421772, -1);
-          CollisionContact.field_h.d(CheckboxWidget.orbcoinsColon, 345, CollisionContact.field_h.maxAscent + 340, 13421772, -1);
-          var10 = 345 + CollisionContact.field_h.b(CheckboxWidget.orbcoinsColon);
+          CollisionContact.field_h.drawLeft(Under13NoticePanel.orbpointsColon + WidgetContainer.field_J[var6Lifetime1] * 100, 225, 340 + CollisionContact.field_h.maxAscent, 13421772, -1);
+          CollisionContact.field_h.drawLeft(CheckboxWidget.orbcoinsColon, 345, CollisionContact.field_h.maxAscent + 340, 13421772, -1);
+          var10 = 345 + CollisionContact.field_h.stringWidth(CheckboxWidget.orbcoinsColon);
           var11 = (-TransformRotationSupport.field_k.field_A + CollisionContact.field_h.maxDescent + CollisionContact.field_h.maxAscent >> 1) + 340;
           for (var12 = 0; WidgetContainer.field_J[var6Lifetime1] > var12; var12++) {
             TransformRotationSupport.field_k.draw(var10, var11);
@@ -275,7 +275,7 @@ final class AchievementsScreen extends MenuScreen {
         return (2 * (param0 / 27) + (param0 % 27 < 13 ? 0 : 1)) * 36 + 130;
     }
 
-    private final void a(boolean param0, byte param1) {
+    private final void handleAchievementPointer(boolean param0, byte param1) {
         int var3;
         LobbyGame.field_Gc = this.findIconAt(ReflectionReplySupport.field_i, param0, DebouncedValidationProvider.field_f, false);
         if (MatchingTextValidator.field_s == 1) {
@@ -337,10 +337,10 @@ final class AchievementsScreen extends MenuScreen {
         if (this.screenId != 17) {
           if (this.screenId == 18 ||
             MatchingTextValidator.field_w == 19) {
-            this.a(true, (byte) -98);
+            this.handleAchievementPointer(true, (byte) -98);
           }
         } else {
-          this.a(false, (byte) -98);
+          this.handleAchievementPointer(false, (byte) -98);
         }
         if (ScrollPaneWithFooter.field_Lb != null &&
           null != PolarObject.field_g &&

@@ -8,8 +8,8 @@ final class PaletteFontLoader {
     static String pressf10toquickchat;
     static int field_d;
 
-    final static int a(byte param0) {
-        if (param0 < 33) {
+    final static int getMouseIdleTicks(byte obfuscationGuard) {
+        if (obfuscationGuard < 33) {
           return 3;
         }
         return PoolUiText.field_g;

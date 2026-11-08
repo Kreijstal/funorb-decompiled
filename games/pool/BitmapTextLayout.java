@@ -111,7 +111,7 @@ final class BitmapTextLayout extends TextLayout {
           this.field_k = param3;
           var6 = this.createSingleLine(param2, param0, true, param1);
           var6.caretXs[0] = param4;
-          var6.caretXs[param1.length()] = param4 + param2.b(param1);
+          var6.caretXs[param1.length()] = param4 + param2.stringWidth(param1);
           LobbyGame.a(param1, var6, 6110, 0, param2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -218,7 +218,7 @@ final class BitmapTextLayout extends TextLayout {
           this.field_s = 1;
           this.field_i = param0;
           var6 = this.createSingleLine(param0, param2, true, param3);
-          var7 = param0.b(param3);
+          var7 = param0.stringWidth(param3);
           var6.caretXs[0] = param1 - (var7 >> 1);
           var6.caretXs[param3.length()] = (var7 >> 1) + param1;
           LobbyGame.a(param3, var6, 6110, 0, param0);
@@ -272,7 +272,7 @@ final class BitmapTextLayout extends TextLayout {
           this.field_i = param1;
           this.field_s = 2;
           var6 = this.createSingleLine(param1, param3, true, param0);
-          var6.caretXs[0] = param4 - param1.b(param0);
+          var6.caretXs[0] = param4 - param1.stringWidth(param0);
           var6.caretXs[param0.length()] = param4;
           LobbyGame.a(param0, var6, 6110, 0, param1);
           return;
@@ -408,12 +408,12 @@ final class BitmapTextLayout extends TextLayout {
             var14 = new TextLineLayout(stackIn_63_2, stackIn_63_3, stackIn_64_4);
             var14.caretXs[0] = 0;
             if (null != var13) {
-              var14.caretXs[var13.length()] = param2.b(var13);
+              var14.caretXs[var13.length()] = param2.stringWidth(var13);
               stackIn_70_0 = var13;
               stackIn_70_1 = var14;
               stackIn_70_2 = 6110;
               if (param0 == 3) {
-                stackIn_71_3 = this.a(param2.b(var13), (byte) 105, var13, param5);
+                stackIn_71_3 = this.a(param2.stringWidth(var13), (byte) 105, var13, param5);
               } else {
                 stackIn_71_3 = 0;
               }

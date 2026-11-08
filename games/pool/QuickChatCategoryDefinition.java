@@ -83,7 +83,7 @@ final class QuickChatCategoryDefinition extends DualLinkNode {
               }
             }
           } else {
-            this.title = param1.j(-119);
+            this.title = param1.readNullTerminatedString(-119);
           }
           if (param0 >= -109) {
             gameoptNeedchanging1 = (String) null;
@@ -163,29 +163,29 @@ final class QuickChatCategoryDefinition extends DualLinkNode {
         }
     }
 
-    final static void b(byte param0, PacketBuffer param1) {
+    final static void readRankingRecordFields(byte obfuscationGuard, PacketBuffer buffer) {
         int var2_int = 0;
         int var2_intLifetime1;
         int var2_intLifetime2;
         try {
-          IntKeyLookup.field_a = param1.readUnsignedShort(-1034) << 5;
-          var2_int = param1.readUnsignedByte(-74);
+          IntKeyLookup.field_a = buffer.readUnsignedShort(-1034) << 5;
+          var2_int = buffer.readUnsignedByte(-74);
           BirthDatePromptPanel.field_F = (var2_int & 7) << 18;
           IntKeyLookup.field_a = IntKeyLookup.field_a + (var2_int >> 3);
-          BirthDatePromptPanel.field_F = BirthDatePromptPanel.field_F + (param1.readUnsignedShort(-1034) << 2);
-          var2_intLifetime1 = param1.readUnsignedByte(-115);
+          BirthDatePromptPanel.field_F = BirthDatePromptPanel.field_F + (buffer.readUnsignedShort(-1034) << 2);
+          var2_intLifetime1 = buffer.readUnsignedByte(-115);
           DialRenderer.field_n = (63 & var2_intLifetime1) << 15;
           BirthDatePromptPanel.field_F = BirthDatePromptPanel.field_F + (var2_intLifetime1 >> 6);
-          if (param0 <= 112) {
+          if (obfuscationGuard <= 112) {
             gameoptNeedchanging1 = (String) null;
           }
-          DialRenderer.field_n = DialRenderer.field_n + (param1.readUnsignedByte(-75) << 7);
-          var2_intLifetime2 = param1.readUnsignedByte(-61);
+          DialRenderer.field_n = DialRenderer.field_n + (buffer.readUnsignedByte(-75) << 7);
+          var2_intLifetime2 = buffer.readUnsignedByte(-61);
           DialRenderer.field_n = DialRenderer.field_n + (var2_intLifetime2 >> 1);
           BufferedSocket.field_f = (var2_intLifetime2 & 1) << 16;
-          BufferedSocket.field_f = BufferedSocket.field_f + param1.readUnsignedShort(-1034);
+          BufferedSocket.field_f = BufferedSocket.field_f + buffer.readUnsignedShort(-1034);
         } catch (RuntimeException runtimeException) {
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "sf.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "sf.B(" + obfuscationGuard + ',' + (buffer != null ? "{...}" : "null") + ')');
         }
     }
 

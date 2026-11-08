@@ -343,7 +343,7 @@ final class DebugTuningSlider {
     }
 
     DebugTuningSlider(float param0, float param1, int param2) {
-        this.configureSlider(HighscoresScreen.a(param1, -4), HighscoresScreen.a(param0, -4), param2, -6);
+        this.configureSlider(HighscoresScreen.floatToFixed16(param1, -4), HighscoresScreen.floatToFixed16(param0, -4), param2, -6);
     }
 
     private final void adjustValue(int delta, boolean obfuscationGuard) {

@@ -131,7 +131,7 @@ final class TutorialFactory {
         SceneNode.field_g[1].field_d.addFirst((byte) -59, new TutorialStep(MessageDialog.tutorialEightBallStartPlaceCueball, 40, 13, 128));
         SceneNode.field_g[1].field_d.addFirst((byte) -43, new TutorialStep(LogoFinalFrameLoader.tutorialEightBallBreak, 1, 8, 0));
         SceneNode.field_g[1].field_d.addFirst((byte) 99, new TutorialStep(RankingsRequest.tutorialEightBallAfterbreak, 1, 9, 0));
-        SceneNode.field_g[1].field_d.addFirst((byte) 87, new TutorialStep(FaceBucketSupport.tutorialEightBallAfterfirstpot, 7, 11, 0));
+        SceneNode.field_g[1].field_d.addFirst((byte) 87, new TutorialStep(RankingsBufferSupport.tutorialEightBallAfterfirstpot, 7, 11, 0));
         SceneNode.field_g[1].field_d.addFirst((byte) 99, new TutorialStep(ChatMessageLine.tutorialEightBallAftergrouppot, 1, 12, 0));
         SceneNode.field_g[1].field_d.addFirst((byte) -6, new TutorialStep(MusicPatch.tutorialEightBallComplete, 1, -1, 0));
         SceneNode.field_g[1].updateStepCount(false);

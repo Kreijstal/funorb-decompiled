@@ -165,7 +165,7 @@ final class ArchiveIndex {
             if (var7 != 0) {
               for (var10Lifetime3 = 0; var10Lifetime3 < this.groupCount; var10Lifetime3++) {
                 var21 = new byte[64];
-                var17.a(0, (byte) -118, var21, 64);
+                var17.readBytes(0, (byte) -118, var21, 64);
                 this.field_a[this.groupIds[var10Lifetime3]] = var21;
               }
             }

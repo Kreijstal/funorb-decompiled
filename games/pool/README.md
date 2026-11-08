@@ -2,8 +2,8 @@
 
 This directory is the single published Java tree. The scripts and reviewed rules live in dekobloko-work/readable; the reverse dictionary is ../../decompilation/pool-naming.json.
 
-Resolved declarations: 431/431 classes and 2797/3530 methods have readable names; 339 constructors follow their class names.
-Remaining: 0 opaque class names and 733 opaque method names. The complete naming goal is still in progress.
+Resolved declarations: 431/431 classes and 2893/3530 methods have readable names; 339 constructors follow their class names.
+Remaining: 0 opaque class names and 637 opaque method names. The complete naming goal is still in progress.
 Audit with `node readable/naming-coverage.mjs pool` in dekobloko-work; it exits unsuccessfully while opaque names remain.
 
 Start at `Pool` and `PoolMatchController`; `PoolGameModel`, `Ball`, `Pocket`, `CushionSegment`, `ShotRecord` and the `GameRules` implementations describe gameplay. `TableScene`, the table themes and `BallSkin` implementations handle its presentation.

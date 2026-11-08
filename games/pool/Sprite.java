@@ -130,39 +130,39 @@ class Sprite extends SpriteState {
         }
     }
 
-    void a(int param0, int param1) {
+    void drawAt(int x, int y) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
-        param0 = param0 + this.field_G;
-        param1 = param1 + this.field_B;
-        int var3 = param0 + param1 * SoftwareRasterizer.width;
+        x = x + this.field_G;
+        y = y + this.field_B;
+        int var3 = x + y * SoftwareRasterizer.width;
         int var4 = 0;
         int var5 = this.field_A;
         int var6 = this.field_z;
         int var7 = SoftwareRasterizer.width - var6;
         int var8 = 0;
-        if (param1 < SoftwareRasterizer.clipTop) {
-          var9 = SoftwareRasterizer.clipTop - param1;
+        if (y < SoftwareRasterizer.clipTop) {
+          var9 = SoftwareRasterizer.clipTop - y;
           var5 = var5 - var9;
-          param1 = SoftwareRasterizer.clipTop;
+          y = SoftwareRasterizer.clipTop;
           var4 = var4 + var9 * var6;
           var3 = var3 + var9 * SoftwareRasterizer.width;
         }
-        if (param1 + var5 > SoftwareRasterizer.clipBottom) {
-          var5 = var5 - (param1 + var5 - SoftwareRasterizer.clipBottom);
+        if (y + var5 > SoftwareRasterizer.clipBottom) {
+          var5 = var5 - (y + var5 - SoftwareRasterizer.clipBottom);
         }
-        if (param0 < SoftwareRasterizer.clipLeft) {
-          var9Lifetime1 = SoftwareRasterizer.clipLeft - param0;
+        if (x < SoftwareRasterizer.clipLeft) {
+          var9Lifetime1 = SoftwareRasterizer.clipLeft - x;
           var6 = var6 - var9Lifetime1;
-          param0 = SoftwareRasterizer.clipLeft;
+          x = SoftwareRasterizer.clipLeft;
           var4 = var4 + var9Lifetime1;
           var3 = var3 + var9Lifetime1;
           var8 = var8 + var9Lifetime1;
           var7 = var7 + var9Lifetime1;
         }
-        if (param0 + var6 > SoftwareRasterizer.clipRight) {
-          var9Lifetime2 = param0 + var6 - SoftwareRasterizer.clipRight;
+        if (x + var6 > SoftwareRasterizer.clipRight) {
+          var9Lifetime2 = x + var6 - SoftwareRasterizer.clipRight;
           var6 = var6 - var9Lifetime2;
           var8 = var8 + var9Lifetime2;
           var7 = var7 + var9Lifetime2;
@@ -1522,7 +1522,7 @@ class Sprite extends SpriteState {
         this.field_B = 0;
     }
 
-    private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
+    private final static void blitScaled(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
@@ -1657,7 +1657,7 @@ class Sprite extends SpriteState {
             var7 = var7 + var11 * var15Lifetime2;
             var14 = var14 + var15Lifetime2;
           }
-          Sprite.b(SoftwareRasterizer.pixels, this.field_D, 0, var7, var8, var13Lifetime2, var14, destinationWidth, destinationHeight, var11, var12, var5);
+          Sprite.blitScaled(SoftwareRasterizer.pixels, this.field_D, 0, var7, var8, var13Lifetime2, var14, destinationWidth, destinationHeight, var11, var12, var5);
           return;
         }
     }
@@ -2325,7 +2325,7 @@ class Sprite extends SpriteState {
             var8 = var8 + var12 * var16Lifetime2;
             var15 = var15 + var16Lifetime2;
           }
-          Sprite.a(SoftwareRasterizer.pixels, this.field_D, 0, var8, var9, var14Lifetime2, var15, destinationWidth, destinationHeight, var12, var13, var6, alpha256);
+          Sprite.blitScaledAlpha(SoftwareRasterizer.pixels, this.field_D, 0, var8, var9, var14Lifetime2, var15, destinationWidth, destinationHeight, var12, var13, var6, alpha256);
           return;
         }
     }
@@ -2443,7 +2443,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
+    private final static void blitScaledAlpha(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
         int var15 = 0;
         int var16 = 0;
         int var17 = 0;

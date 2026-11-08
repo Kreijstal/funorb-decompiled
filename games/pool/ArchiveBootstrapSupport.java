@@ -72,7 +72,7 @@ final class ArchiveBootstrapSupport {
             var8 += 128;
           }
           var6.writeByte(var8, param5);
-          var6.a(param3, (byte) 0, 0, param3.length);
+          var6.writeBytes(param3, (byte) 0, 0, param3.length);
           var6.writeByteLengthPrefix(var6.position - var7, !param5 ? true : false);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "je.D(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');

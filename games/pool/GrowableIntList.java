@@ -190,7 +190,7 @@ final class GrowableIntList {
               stackIn_15_2 = null;
               stackIn_15_5 = IntrusiveNode.field_j;
             }
-            var4 = ((PlatformTaskDispatcher) (Object) stackIn_14_0).a(new java.net.URL(stackIn_14_3, ((StringBuilder) (Object) stackIn_14_4).append(stackIn_15_5).append("&v1=").append(PlatformTaskDispatcher.field_o).append("&v2=").append(PlatformTaskDispatcher.field_t).append("&e=").append(var9).toString()), 1);
+            var4 = ((PlatformTaskDispatcher) (Object) stackIn_14_0).openUrlStream(new java.net.URL(stackIn_14_3, ((StringBuilder) (Object) stackIn_14_4).append(stackIn_15_5).append("&v1=").append(PlatformTaskDispatcher.field_o).append("&v2=").append(PlatformTaskDispatcher.field_t).append("&e=").append(var9).toString()), 1);
             while (var4.field_f == 0) {
               SoundCache.sleepMillis(-100, 1L);
             }

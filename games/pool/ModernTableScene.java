@@ -112,7 +112,7 @@ final class ModernTableScene extends ModelTableScene {
                   stackIn_40_2 = 0;
                 }
                 AccountCreationDialog.a(stackIn_39_0, stackIn_39_1, stackIn_40_2, false);
-                StatefulTextPainter.field_s.setCursorVisible(true, (byte) 106, (java.awt.Component) ((Object) TextLineLayout.a((byte) -113)));
+                StatefulTextPainter.field_s.setCursorVisible(true, (byte) 106, (java.awt.Component) ((Object) TextLineLayout.getActiveCanvas((byte) -113)));
               }
             }
           }
@@ -205,7 +205,7 @@ final class ModernTableScene extends ModelTableScene {
         try {
           var20 = param1.gameModel.balls;
           var3 = var20;
-          var36 = LobbyPanelLayoutSupport.a((byte) -56, param1.viewMatrix);
+          var36 = LobbyPanelLayoutSupport.copyTransform((byte) -56, param1.viewMatrix);
           var19 = var36;
           var4 = var19;
           var35 = var4;
@@ -273,7 +273,7 @@ final class ModernTableScene extends ModelTableScene {
           var24 = this.field_R;
           var55 = GzipDecoder.field_d;
           var24.sortModelsByDepth((byte) -113, 0, var24.field_j.length, var55);
-          QuaternionRotationSupport.b(param0 + 55);
+          QuaternionRotationSupport.clearScreenForTransition(param0 + 55);
           this.a(false, param1);
           var56 = new int[3];
           ViewportController.a(ChatInputSupport.field_l[PolarTableScene.field_lb].transform[0], var56, GzipDecoder.field_d, ChatInputSupport.field_l[PolarTableScene.field_lb].transform[1], ChatInputSupport.field_l[PolarTableScene.field_lb].transform[2], (byte) 9);
@@ -847,9 +847,9 @@ final class ModernTableScene extends ModelTableScene {
             stackIn_7_1 = !(param0);
             var4 = (int)(-((Camera) (Object) stackIn_6_0).getYaw(stackIn_7_1) * (double)this.field_B.field_z / 2.0 / 3.141592653589793);
             var5 = -this.field_B.field_A + var3_int;
-            this.field_B.a(-this.field_B.field_z + var4, var5);
+            this.field_B.drawAt(-this.field_B.field_z + var4, var5);
             if (var4 < this.field_B.field_z - 640) {
-              this.field_B.a(var4, var5);
+              this.field_B.drawAt(var4, var5);
             }
           }
           return;

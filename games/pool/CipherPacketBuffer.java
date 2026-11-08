@@ -74,15 +74,15 @@ final class CipherPacketBuffer extends PacketBuffer {
         this.payload[fieldTemp$0] = (byte)(this.opcodeCipher.a((byte) 7) + param1);
     }
 
-    final static void n(int param0) {
+    final static void increaseMusicVolume(int obfuscationGuard) {
         int var1 = 0;
         if (TranslatedUiText.field_h >= 224) {
           QuickChatPhraseDefinition.setMusicVolume(256, 3815994);
         } else {
           var1 = TranslatedUiText.field_h % 32;
-          QuickChatPhraseDefinition.setMusicVolume(32 + (TranslatedUiText.field_h - var1), param0 ^ -3807027);
+          QuickChatPhraseDefinition.setMusicVolume(32 + (TranslatedUiText.field_h - var1), obfuscationGuard ^ -3807027);
         }
-        if (param0 != -11529) {
+        if (obfuscationGuard != -11529) {
           CipherPacketBuffer.a(true, -4, 116, -60, false);
         }
     }

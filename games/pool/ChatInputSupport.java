@@ -143,7 +143,7 @@ final class ChatInputSupport {
             boolean decompiledFrameRemainder1 = true;
             if (CookieDateSupport.field_b != 0) {
               var67 = var8Lifetime1 + var66 + ": ";
-              var6Lifetime1 = var6Lifetime1 - RatingTextState.field_c.b(var67);
+              var6Lifetime1 = var6Lifetime1 - RatingTextState.field_c.stringWidth(var67);
             } else {
               if (null == HighscoresScreen.field_L) {
                 if (!JaggrabDownloader.field_l) {
@@ -152,14 +152,14 @@ final class ChatInputSupport {
                     if (!CollisionContact.field_c) {
                       var70 = "[" + AccountWelcomePanel.substituteTemplateArguments(new String[]{HighscoresScreen.field_L.field_Ob}, -1, xsGame) + "] ";
                       var71 = var70 + var66 + ": ";
-                      var6Lifetime1 = var6Lifetime1 - RatingTextState.field_c.b(var71);
+                      var6Lifetime1 = var6Lifetime1 - RatingTextState.field_c.stringWidth(var71);
                       decompiledFrameRemainder0 = false;
                     }
                     else {
                       if (PlayerContextMenu.field_g == null) {
                         var68 = "[" + AccountWelcomePanel.substituteTemplateArguments(new String[]{HighscoresScreen.field_L.field_Ob}, -1, xsGame) + "] ";
                         var69 = var68 + var66 + ": ";
-                        var6Lifetime1 = var6Lifetime1 - RatingTextState.field_c.b(var69);
+                        var6Lifetime1 = var6Lifetime1 - RatingTextState.field_c.stringWidth(var69);
                         decompiledFrameRemainder0 = false;
                       }
                       else {
@@ -169,7 +169,7 @@ final class ChatInputSupport {
                   }
                   if (decompiledFrameRemainder0) {
                     var72 = var8Lifetime1 + var66 + ": ";
-                    var6Lifetime1 = var6Lifetime1 - RatingTextState.field_c.b(var72);
+                    var6Lifetime1 = var6Lifetime1 - RatingTextState.field_c.stringWidth(var72);
                   }
                   decompiledFrameRemainder1 = false;
                 }
@@ -182,14 +182,14 @@ final class ChatInputSupport {
                   if (!CollisionContact.field_c) {
                     var75 = "[" + AccountWelcomePanel.substituteTemplateArguments(new String[]{HighscoresScreen.field_L.field_Ob}, -1, xsGame) + "] ";
                     var76 = var75 + var66 + ": ";
-                    var6Lifetime1 = var6Lifetime1 - RatingTextState.field_c.b(var76);
+                    var6Lifetime1 = var6Lifetime1 - RatingTextState.field_c.stringWidth(var76);
                     decompiledFrameRemainder1 = false;
                   }
                   else {
                     if (PlayerContextMenu.field_g == null) {
                       var73 = "[" + AccountWelcomePanel.substituteTemplateArguments(new String[]{HighscoresScreen.field_L.field_Ob}, -1, xsGame) + "] ";
                       var74 = var73 + var66 + ": ";
-                      var6Lifetime1 = var6Lifetime1 - RatingTextState.field_c.b(var74);
+                      var6Lifetime1 = var6Lifetime1 - RatingTextState.field_c.stringWidth(var74);
                       decompiledFrameRemainder1 = false;
                     }
                     else {
@@ -199,11 +199,11 @@ final class ChatInputSupport {
                 }
                 if (decompiledFrameRemainder1) {
                   var77 = var8Lifetime1 + var66 + ": ";
-                  var6Lifetime1 = var6Lifetime1 - RatingTextState.field_c.b(var77);
+                  var6Lifetime1 = var6Lifetime1 - RatingTextState.field_c.stringWidth(var77);
                 }
               }
             }
-            if (RatingTextState.field_c.b(Base37Support.field_c.toString()) > var6Lifetime1) {
+            if (RatingTextState.field_c.stringWidth(Base37Support.field_c.toString()) > var6Lifetime1) {
               TikiTableScene.resizeStringBuilder(' ', -1 + Base37Support.field_c.length(), -2790, Base37Support.field_c);
             }
             return true;
@@ -211,17 +211,17 @@ final class ChatInputSupport {
           var89 = (CharSequence) ((Object) ArrayWidgetGroup.field_I);
           var78 = AccountWelcomePanel.substituteTemplateArguments(new String[]{WidgetContainer.normalizeBase37Name(false, var89)}, -1, SpriteSheetLoadSupport.privatequickchatToX);
           var79 = AccountWelcomePanel.substituteTemplateArguments(new String[]{var16}, -1, UiComponent.privatequickchatFromX);
-          var10 = RatingTextState.field_c.b(var78);
-          var11 = RatingTextState.field_c.b(var79);
+          var10 = RatingTextState.field_c.stringWidth(var78);
+          var11 = RatingTextState.field_c.stringWidth(var79);
           if (var10 <= var11) {
             var6Lifetime1 = var6Lifetime1 - var11;
-            if (RatingTextState.field_c.b(Base37Support.field_c.toString()) > var6Lifetime1) {
+            if (RatingTextState.field_c.stringWidth(Base37Support.field_c.toString()) > var6Lifetime1) {
               TikiTableScene.resizeStringBuilder(' ', -1 + Base37Support.field_c.length(), -2790, Base37Support.field_c);
             }
             return true;
           }
           var6Lifetime1 = var6Lifetime1 - var10;
-          if (RatingTextState.field_c.b(Base37Support.field_c.toString()) <= var6Lifetime1) {
+          if (RatingTextState.field_c.stringWidth(Base37Support.field_c.toString()) <= var6Lifetime1) {
             return true;
           }
           TikiTableScene.resizeStringBuilder(' ', -1 + Base37Support.field_c.length(), -2790, Base37Support.field_c);

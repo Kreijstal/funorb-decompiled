@@ -101,8 +101,8 @@ abstract class DateInputWidget extends WidgetContainer implements ValidationProv
         LocalGameSetupScreen discarded$20 = new LocalGameSetupScreen(6, 180, 460, 160, 24, new int[]{28, 27, 64, 63, 45, 44, 46, 8, 65});
         ThemeSelectScreen discarded$21 = new ThemeSelectScreen(7, 180, 460, 160, 24, new int[]{29, 30, 31, 32, 33, 8});
         TutorialSelectScreen discarded$22 = new TutorialSelectScreen(AimTarget.field_i, 1, 180, 460, 160, 24, new int[]{40, 41, 42, 8});
-        Ball.field_H = FreePlayRules.field_e.b(TranslatedUiText.field_f[20]) + 10;
-        var1 = 10 + FreePlayRules.field_e.b(TranslatedUiText.field_f[21]);
+        Ball.field_H = FreePlayRules.field_e.stringWidth(TranslatedUiText.field_f[20]) + 10;
+        var1 = 10 + FreePlayRules.field_e.stringWidth(TranslatedUiText.field_f[21]);
         if (!(Ball.field_H >= var1)) {
           Ball.field_H = var1;
         }

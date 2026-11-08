@@ -54,7 +54,7 @@ final class CueStick {
         var9 = Pool.field_O;
         try {
           BrowserCookieWriter.a(param0, true);
-          FaceBucketSupport.mirrorAlongZ(param0, 5);
+          RankingsBufferSupport.mirrorAlongZ(param0, 5);
           param0.computeBounds();
           while (1500 > -param0.field_V + param0.field_x) {
             for (var3_int = 0; param0.vertexCount > var3_int; var3_int++) {
@@ -222,13 +222,13 @@ final class CueStick {
         UiComponent stackIn_28_0 = null;
         int stackIn_28_1 = 0;
         boolean stackIn_29_2 = false;
-        QuickChatPhraseRegistry.a(-640 + SoftwareRasterizer.width >> 1, 0, SoftwareRasterizer.width + 640 >> 1, (byte) -88, SoftwareRasterizer.height);
+        QuickChatPhraseRegistry.pushRasterClip(-640 + SoftwareRasterizer.width >> 1, 0, SoftwareRasterizer.width + 640 >> 1, (byte) -88, SoftwareRasterizer.height);
         if (param1 <= 116) {
           return;
         }
         if (NodeHashTableIterator.field_a > 0) {
           if (null != KillerBallSkin.field_n) {
-            KillerBallSkin.field_n.a(BufferedFile.field_a.localX, 0);
+            KillerBallSkin.field_n.drawAt(BufferedFile.field_a.localX, 0);
           }
           stackIn_9_0 = BufferedFile.field_a;
           stackIn_9_1 = -79;
@@ -242,7 +242,7 @@ final class CueStick {
         if (!(PoolMatchController.field_z <= 0) ||
           !(LogoMaterial.field_b <= 0)) {
           if (null != KillerBallSkin.field_n) {
-            KillerBallSkin.field_n.a(SceneNode.field_k.localX, 0);
+            KillerBallSkin.field_n.drawAt(SceneNode.field_k.localX, 0);
           }
           stackIn_24_0 = SceneNode.field_k;
           stackIn_24_1 = -79;

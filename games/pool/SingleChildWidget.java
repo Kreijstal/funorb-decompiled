@@ -28,7 +28,7 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
           muChatPublic = null;
           return;
         }
-        SingleChildWidget.a(0.4757129525911979, 55, -32);
+        SingleChildWidget.doubleToFixed(0.4757129525911979, 55, -32);
         muChatPublic = null;
     }
 
@@ -221,7 +221,7 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
           var3.trimY = param0.trimY;
           var3.fullHeight = param0.fullHeight;
           if (param1 <= 23) {
-            SingleChildWidget.a(0.5253398849342288, -86, 126);
+            SingleChildWidget.doubleToFixed(0.5253398849342288, -86, 126);
           }
           var3.width = param0.width;
           var3.field_j = param0.field_j;
@@ -498,11 +498,11 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
         }
     }
 
-    final static int a(double param0, int param1, int param2) {
-        if (param2 != 1) {
+    final static int doubleToFixed(double value, int fractionalBits, int obfuscationGuard) {
+        if (obfuscationGuard != 1) {
           return -6;
         }
-        return (int)(0.5 + (double)(1 << param1) * param0);
+        return (int)(0.5 + (double)(1 << fractionalBits) * value);
     }
 
     static {

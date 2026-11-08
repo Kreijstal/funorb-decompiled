@@ -850,7 +850,7 @@ final class TikiTableScene extends ModelTableScene {
         try {
           var21 = param1.gameModel.balls;
           var3 = var21;
-          var30 = LobbyPanelLayoutSupport.a((byte) -119, param1.viewMatrix);
+          var30 = LobbyPanelLayoutSupport.copyTransform((byte) -119, param1.viewMatrix);
           var18 = var30;
           var4 = var18;
           var28 = var4;

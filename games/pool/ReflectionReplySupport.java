@@ -142,7 +142,7 @@ final class ReflectionReplySupport {
                       param0.writeByte(4, false);
                     } else {
                       param0.writeByte(2, false);
-                      param0.a(-9946, (String) (var10));
+                      param0.writeNullTerminatedString(-9946, (String) (var10));
                     }
                   } else {
                     if (var6_int == 4) {

@@ -173,12 +173,12 @@ abstract class MouseWheelInput {
               MusicCrossfadeStream.field_y[0].field_f = ResourceArchive.field_j;
               var7 = var4.field_v;
               for (var8_int = 1; var5 > var8_int; var8_int++) {
-                MusicCrossfadeStream.field_y[var8_int].field_f = var27.j(-76);
+                MusicCrossfadeStream.field_y[var8_int].field_f = var27.readNullTerminatedString(-76);
                 MusicCrossfadeStream.field_y[var8_int].field_c = false;
                 if (1 != var27.readUnsignedByte(-60)) {
                   MusicCrossfadeStream.field_y[var8_int].field_b = null;
                 } else {
-                  MusicCrossfadeStream.field_y[var8_int].field_b = var27.j(-126);
+                  MusicCrossfadeStream.field_y[var8_int].field_b = var27.readNullTerminatedString(-126);
                 }
               }
               dupTemp$0 = new String[3][var6];
