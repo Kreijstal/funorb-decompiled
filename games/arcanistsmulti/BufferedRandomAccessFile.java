@@ -282,7 +282,7 @@ final class BufferedRandomAccessFile {
             var5_long = this.field_d;
             if (param2 != -39) {
               var15 = (String) null;
-              BufferedRandomAccessFile.a(10, (String) null, -35, 66, 53, (String) null);
+              BufferedRandomAccessFile.sendReport(10, (String) null, -35, 66, 53, (String) null);
             }
             var7 = param3;
             var8 = param0;
@@ -400,7 +400,7 @@ final class BufferedRandomAccessFile {
     final void seek(long param0, int param1) throws IOException {
         if (param1 >= -85) {
           String var5 = (String) null;
-          BufferedRandomAccessFile.a(-98, (String) null, 53, 5, -83, (String) null);
+          BufferedRandomAccessFile.sendReport(-98, (String) null, 53, 5, -83, (String) null);
         }
         if (0L <= param0) {
           this.field_d = param0;
@@ -409,7 +409,7 @@ final class BufferedRandomAccessFile {
         throw new IOException();
     }
 
-    final static void a(int param0, String param1, int param2, int param3, int param4, String param5) {
+    final static void sendReport(int param0, String param1, int param2, int param3, int param4, String param5) {
         CipherPacketBuffer var9 = null;
         int var7 = 0;
         try {
@@ -418,7 +418,7 @@ final class BufferedRandomAccessFile {
           var9.position = var9.position + 1;
           if (param2 <= 60) {
             String var8 = (String) null;
-            BufferedRandomAccessFile.a(-27, (String) null, 28, 54, -6, (String) null);
+            BufferedRandomAccessFile.sendReport(-27, (String) null, 28, 54, -6, (String) null);
           }
           var7 = var9.position;
           var9.writeByte(param4, (byte) -71);
@@ -428,7 +428,7 @@ final class BufferedRandomAccessFile {
           if (param1 == null) {
             var9.writeShort(param0, (byte) -119);
           } else {
-            DelegatingCanvas.a(var9, (byte) 127, param1);
+            DelegatingCanvas.writeCompressedString(var9, (byte) 127, param1);
           }
           var9.writeByteLengthAtMark(-var7 + var9.position, (byte) 43);
         } catch (RuntimeException runtimeException) {

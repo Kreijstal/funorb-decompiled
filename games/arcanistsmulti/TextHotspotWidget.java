@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class TextHotspotWidget extends TextButton {
-    private vl field_K;
+    private HotspotRegion field_K;
     static String field_Q;
     private IntrusiveDeque field_O;
     private String[] field_I;
@@ -24,13 +24,13 @@ class TextHotspotWidget extends TextButton {
           TextHotspotWidget.releaseStatics(-92);
         }
         WidgetTextLayout var9 = (WidgetTextLayout) ((Object) this.field_r);
-        vl var6 = this.field_K;
+        HotspotRegion var6 = this.field_K;
         if (var6 == null) {
         } else {
           var7 = var9.getTextX((UiComponent) (this), (byte) -90, param1);
           var8 = var9.getTextY(param3, -13372, (UiComponent) (this));
           do {
-            oj.a(-32171, var8 - (-var6.field_m + 2), var7 + (var6.field_o - 2), var6.field_n + 2, var6.field_g + 2);
+            oj.drawLoginMethodPanel(-32171, var8 - (-var6.field_m + 2), var7 + (var6.field_o - 2), var6.field_n + 2, var6.field_g + 2);
             var6 = var6.field_h;
           } while (var6 != null);
         }
@@ -61,7 +61,7 @@ class TextHotspotWidget extends TextButton {
         }
     }
 
-    final void a(int param0, int param1, String param2) {
+    final void setHotspotTooltip(int param0, int param1, String param2) {
         int var5 = 0;
         RuntimeException runtimeException = null;
         String[] var4 = null;
@@ -126,7 +126,7 @@ class TextHotspotWidget extends TextButton {
         field_M = null;
     }
 
-    final void g(byte param0) {
+    final void rebuildHotspots(byte param0) {
         int var11 = 0;
         int stackIn_9_0 = 0;
         int stackIn_14_0 = 0;
@@ -142,7 +142,7 @@ class TextHotspotWidget extends TextButton {
         TextLine var12;
         int var13;
         int var14;
-        vl var15;
+        HotspotRegion var15;
         int var16;
         int var7Lifetime1;
         var16 = ArcanistsMulti.field_G ? 1 : 0;
@@ -183,9 +183,9 @@ class TextHotspotWidget extends TextButton {
               stackIn_14_0 = var4.characterOffset(var2, param0 - 63);
             }
             var14 = stackIn_14_0;
-            var15 = new vl(var7Lifetime1, var13, var12.field_g, var14 - var13, Math.max(var3.lineHeight(27184), var12.field_e - var12.field_g));
+            var15 = new HotspotRegion(var7Lifetime1, var13, var12.field_g, var14 - var13, Math.max(var3.lineHeight(27184), var12.field_e - var12.field_g));
             if (var10 != null) {
-              ((vl) (var10)).field_h = var15;
+              ((HotspotRegion) (var10)).field_h = var15;
             }
             this.field_O.addLast(var15, -1);
             var10 = var15;
@@ -193,15 +193,15 @@ class TextHotspotWidget extends TextButton {
         }
     }
 
-    private final vl a(int param0, byte param1, int param2) {
-        vl var4;
-        vl var5;
+    private final HotspotRegion hotspotAt(int param0, byte param1, int param2) {
+        HotspotRegion var4;
+        HotspotRegion var5;
         int var6;
         var6 = ArcanistsMulti.field_G ? 1 : 0;
         if (param1 != 102) {
-          return (vl) null;
+          return (HotspotRegion) null;
         }
-        var4 = (vl) (this.field_O.first(12623));
+        var4 = (HotspotRegion) (this.field_O.first(12623));
         while (var4 != null) {
           var5 = var4;
           while (var5 != null) {
@@ -213,7 +213,7 @@ class TextHotspotWidget extends TextButton {
             }
             var5 = var5.field_h;
           }
-          var4 = (vl) (this.field_O.next(0));
+          var4 = (HotspotRegion) (this.field_O.next(0));
         }
         return null;
     }
@@ -229,8 +229,8 @@ class TextHotspotWidget extends TextButton {
         boolean stackIn_29_1 = false;
         da.clipToRectangle(640 + SoftwareRasterizer.field_e >> 1, SoftwareRasterizer.field_j, param0 ^ -11846, -640 + SoftwareRasterizer.field_e >> 1, 0);
         if (ce.field_h > 0) {
-          if (null != oo.field_t) {
-            oo.field_t.drawOpaque(BufferedSocket.field_d.field_T, 0);
+          if (null != QuickChatCategory.field_t) {
+            QuickChatCategory.field_t.drawOpaque(BufferedSocket.field_d.field_T, 0);
           }
           stackIn_7_0 = BufferedSocket.field_d;
           stackIn_8_1 = (param1) && (!IntrusiveNode.field_d);
@@ -243,9 +243,9 @@ class TextHotspotWidget extends TextButton {
           field_Q = (String) null;
         }
         if (!(sm.field_a <= 0) ||
-          !(0 >= oo.field_y)) {
-          if (oo.field_t != null) {
-            oo.field_t.drawOpaque(hl.field_m.field_T, 0);
+          !(0 >= QuickChatCategory.field_y)) {
+          if (QuickChatCategory.field_t != null) {
+            QuickChatCategory.field_t.drawOpaque(hl.field_m.field_T, 0);
           }
           stackIn_24_0 = hl.field_m;
           stackIn_25_1 = (param1) && (!MenuInputState.field_j);
@@ -254,7 +254,7 @@ class TextHotspotWidget extends TextButton {
           stackIn_29_1 = (param1) && (!MenuInputState.field_j);
           ((SceneWidget) (Object) stackIn_28_0).drawFullScreen(stackIn_29_1, true);
         }
-        oo.popClipState(-15405);
+        QuickChatCategory.popClipState(-15405);
     }
 
     final static void postPendingMessage(int param0) {
@@ -262,7 +262,7 @@ class TextHotspotWidget extends TextButton {
         if (null != va.field_e) {
           var2 = va.field_e;
           String var1 = var2;
-          GrowableIntList.a(99, CachedArchiveProvider.formatTemplate(-118, new String[]{var2}, i.field_b));
+          GrowableIntList.showTextOverlay(99, CachedArchiveProvider.formatTemplate(-118, new String[]{var2}, i.field_b));
           va.field_e = null;
         }
         if (param0 < 94) {
@@ -272,9 +272,9 @@ class TextHotspotWidget extends TextButton {
 
     final void setBounds(int param0, int param1, int param2, int param3, int param4) {
         super.setBounds(param0, param1, param2, param3, -111);
-        this.g((byte) 63);
+        this.rebuildHotspots((byte) 63);
         if (param4 >= -49) {
-          this.field_K = (vl) null;
+          this.field_K = (HotspotRegion) null;
         }
     }
 
@@ -602,7 +602,7 @@ class TextHotspotWidget extends TextButton {
                   if (1 >= var12Lifetime1) {
                     stackIn_185_1 = PasswordFieldPainter.field_z;
                   } else {
-                    stackIn_185_1 = tk.field_s;
+                    stackIn_185_1 = QuickChatPhrase.field_s;
                   }
                   var14Lifetime1 = ((StringBuilder) (Object) stackIn_184_0).append(stackIn_185_1).toString();
                   if (-1 == MouseWheelHandler.field_b[lm.field_f[mf.field_g]]) {
@@ -676,7 +676,7 @@ class TextHotspotWidget extends TextButton {
                             var15 = oi.field_a;
                           }
                           if (cf.field_f) {
-                            var15 = tk.field_p;
+                            var15 = QuickChatPhrase.field_p;
                           }
                           if (lm.field_f[mf.field_g] == 87 &&
                             var28.getType(-22625) != 19) {
@@ -751,7 +751,7 @@ class TextHotspotWidget extends TextButton {
                               var15Lifetime1 = "";
                             }
                             if (lm.field_f[mf.field_g] == 104) {
-                              var15Lifetime1 = tk.field_p;
+                              var15Lifetime1 = QuickChatPhrase.field_p;
                             }
                             var26 = Checkbox.field_J.getUnitByOwner(bm.field_g.field_bb, true);
                             if ((lm.field_f[mf.field_g] == 124 ||
@@ -807,7 +807,7 @@ class TextHotspotWidget extends TextButton {
         super.activate(-114, param1, param2, param3);
         int var5 = -this.field_n + param1;
         int var6 = -this.field_j + param3;
-        vl var7 = this.a(var5, (byte) 102, var6);
+        HotspotRegion var7 = this.hotspotAt(var5, (byte) 102, var6);
         if (var7 != null &&
           this.field_o != null) {
           ((TextHotspotListener) ((Object) this.field_o)).onHotspotClicked(param2, this, -1607, var7.field_j);
@@ -828,7 +828,7 @@ class TextHotspotWidget extends TextButton {
           if (this.field_w) {
             var5_int = -param1 + (EmailLoginCredentials.field_g - this.field_n);
             var6 = -this.field_j + MenuButtonPanel.field_I - param3;
-            this.field_K = this.a(var5_int, (byte) 102, var6);
+            this.field_K = this.hotspotAt(var5_int, (byte) 102, var6);
           }
           if (param2 != 170) {
             field_Q = (String) null;

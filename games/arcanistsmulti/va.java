@@ -62,7 +62,7 @@ final class va implements WidgetPainter {
         }
     }
 
-    final static boolean a(long param0, int param1, int[] param2, String param3, int param4) {
+    final static boolean openQuickChatForName(long param0, int param1, int[] param2, String param3, int param4) {
         SceneTabbedPanel var6 = null;
         RuntimeException var6_ref = null;
         CharSequence var7 = null;
@@ -73,7 +73,7 @@ final class va implements WidgetPainter {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!wj.a(param3, param2, param4, 2, param0)) {
+          if (!wj.canMessage(param3, param2, param4, 2, param0)) {
             return false;
           }
           if (param4 == param1) {
@@ -82,7 +82,7 @@ final class va implements WidgetPainter {
           nj.field_c = param4;
           MenuInputState.field_p = param3;
           var7 = (CharSequence) ((Object) param3);
-          GridContainer.field_S = Js5ArchiveManager.a(var7, param1 ^ -14);
+          GridContainer.field_S = Js5ArchiveManager.normalizeNameForLookup(var7, param1 ^ -14);
           gg.field_e = param0;
           var6 = ff.createQuickChatPanel(param2, 49, gl.field_c, StatefulTextPainter.field_z, CipherPacketBuffer.field_p);
           TextButton.openQuickChatMenu(var6, (byte) -104);

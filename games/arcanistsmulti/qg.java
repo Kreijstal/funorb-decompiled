@@ -6,7 +6,7 @@ final class qg extends RuntimeException {
     static PlatformTaskDispatcher field_b;
     static String[] field_a;
 
-    final static void a(int param0, String param1) {
+    final static void setPointerTarget(int param0, String param1) {
         int stackIn_17_0 = 0;
         RuntimeException stackIn_43_0 = null;
         StringBuilder stackIn_43_1 = null;
@@ -108,7 +108,7 @@ final class qg extends RuntimeException {
     qg() {
     }
 
-    final static boolean a(int param0) {
+    final static boolean hasMenuPage(int param0) {
         if (param0 > -61) {
           return true;
         }

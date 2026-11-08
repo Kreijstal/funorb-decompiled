@@ -9,7 +9,7 @@ final class fm {
     static UiTheme field_c;
     long field_d;
 
-    final static void a(int param0, boolean param1) {
+    final static void sendSavedSettings(int param0, boolean param1) {
         CipherPacketBuffer var5 = null;
         int var3 = 0;
         int var3Lifetime1;
@@ -26,7 +26,7 @@ final class fm {
           var5.writeByteLengthAtMark(var5.position - var3, (byte) 43);
           return;
         }
-        fm.a(48, false);
+        fm.sendSavedSettings(48, false);
         CipherPacketBuffer var4 = he.field_e;
         var4.writeOpcode((byte) -57, param0);
         var4.position = var4.position + 1;

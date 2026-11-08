@@ -303,7 +303,7 @@ final class pb extends IntrusiveNode {
         field_m = null;
     }
 
-    final static void a(int param0, int param1, f param2) {
+    final static void sendChatLine(int param0, int param1, f param2) {
         CipherPacketBuffer var6 = null;
         int var4 = 0;
         try {
@@ -313,7 +313,7 @@ final class pb extends IntrusiveNode {
           var6.position = var6.position + 1;
           if (param0 != 32) {
             f var5 = (f) null;
-            pb.a(-102, -101, (f) null);
+            pb.sendChatLine(-102, -101, (f) null);
           }
           var4 = var6.position;
           var6.writeByte(1, (byte) -89);

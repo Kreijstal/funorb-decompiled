@@ -9,7 +9,7 @@ final class gl {
     static SceneWidget field_c;
     static String field_f;
 
-    final static void a(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6, int param7, int param8, byte param9) {
+    final static void fillMaskedRows(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6, int param7, int param8, byte param9) {
         int[] var10 = null;
         int var11 = 0;
         int var12 = 0;
@@ -31,7 +31,7 @@ final class gl {
             if (0 > param2) {
               if (param9 < 116) {
                 var17 = (int[]) null;
-                gl.a(-42, -39, 14, -51, (int[]) null, 44, -111, -12, -52, (byte) 102);
+                gl.fillMaskedRows(-42, -39, 14, -51, (int[]) null, 44, -111, -12, -52, (byte) 102);
               }
               return;
             }
@@ -118,7 +118,7 @@ final class gl {
             }
             var6_int = stackIn_10_0;
             if (param2 != -27327) {
-              gl.a(true, -7);
+              gl.updateTransitionTimers(true, -7);
             }
             if (null != param4[5]) {
               stackIn_15_0 = param4[5].field_n;
@@ -238,7 +238,7 @@ final class gl {
         }
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void updateTransitionTimers(boolean param0, int param1) {
         int var3;
         Sprite[] var4;
         var3 = ArcanistsMulti.field_G ? 1 : 0;
@@ -249,8 +249,8 @@ final class gl {
         if (param0) {
           if (ce.field_h <= 0) {
             if (sm.field_a <= 0) {
-              if (0 < oo.field_y) {
-                oo.field_y = oo.field_y - 1;
+              if (0 < QuickChatCategory.field_y) {
+                QuickChatCategory.field_y = QuickChatCategory.field_y - 1;
               }
             } else {
               sm.field_a = sm.field_a - 1;
@@ -265,12 +265,12 @@ final class gl {
               if (sm.field_a > 0) {
                 sm.field_a = sm.field_a - 1;
               } else {
-                if (oo.field_y > 0) {
-                  oo.field_y = oo.field_y - 1;
+                if (QuickChatCategory.field_y > 0) {
+                  QuickChatCategory.field_y = QuickChatCategory.field_y - 1;
                 } else {
                   if (ce.field_h < DiskCacheRequest.field_F) {
                     if (ce.field_h == 0) {
-                      ik.a((byte) -85);
+                      ik.buildLobbyRoot((byte) -85);
                     }
                     ce.field_h = ce.field_h + 1;
                   }
@@ -280,15 +280,15 @@ final class gl {
               if (ce.field_h > 0) {
                 ce.field_h = ce.field_h - 1;
               } else {
-                if (oo.field_y <= 0) {
+                if (QuickChatCategory.field_y <= 0) {
                   if (DiskCacheRequest.field_F > sm.field_a) {
                     if (0 == sm.field_a) {
-                      ik.a(true, -115);
+                      ik.buildChatPanel(true, -115);
                     }
                     sm.field_a = sm.field_a + 1;
                   }
                 } else {
-                  oo.field_y = oo.field_y - 1;
+                  QuickChatCategory.field_y = QuickChatCategory.field_y - 1;
                 }
               }
             }
@@ -297,11 +297,11 @@ final class gl {
               if (sm.field_a > 0) {
                 sm.field_a = sm.field_a - 1;
               } else {
-                if (oo.field_y < DiskCacheRequest.field_F) {
-                  if (oo.field_y == 0) {
-                    ik.a(false, 95);
+                if (QuickChatCategory.field_y < DiskCacheRequest.field_F) {
+                  if (QuickChatCategory.field_y == 0) {
+                    ik.buildChatPanel(false, 95);
                   }
-                  oo.field_y = oo.field_y + 1;
+                  QuickChatCategory.field_y = QuickChatCategory.field_y + 1;
                 }
               }
             } else {

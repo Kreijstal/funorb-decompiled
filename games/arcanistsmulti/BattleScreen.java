@@ -80,7 +80,7 @@ final class BattleScreen {
           }
           if (qg.field_c != -1) {
             var1_int = qg.field_c;
-            DebouncedValidator.a(-1, (byte) 30);
+            DebouncedValidator.setPendingMessageId(-1, (byte) 30);
             stackIn_9_0 = var1_int;
             return stackIn_9_0;
           }
@@ -96,7 +96,7 @@ final class BattleScreen {
             stackIn_18_0 = 1;
             return stackIn_18_0;
           }
-          if (!SingleChildContainer.field_z.a((byte) -88)) {
+          if (!SingleChildContainer.field_z.isComplete((byte) -88)) {
             stackIn_21_0 = 1;
             return stackIn_21_0;
           }
@@ -388,7 +388,7 @@ final class BattleScreen {
           if (var16 != null &&
             0 == (1 << param2 & (this.field_a | this.field_J)) &&
             var16.field_I != null && (param2 == 0 ||
-            !qg.a(param3 - 99) ||
+            !qg.hasMenuPage(param3 - 99) ||
             StatefulTextPainter.field_p == 6)) {
             var6 = var16.getStatusTimer(-126);
             if (0 > var6) {
@@ -773,7 +773,7 @@ final class BattleScreen {
               CachedArchiveProvider.field_t.drawText("Backup c-sum" + this.field_w.countUnitsWithDebugOverlay(4), 64, 96, 65535, 0);
             }
           }
-          sb.b(param5 ^ 47);
+          sb.drawTimedMessage(param5 ^ 47);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -817,13 +817,13 @@ final class BattleScreen {
             }
             WhirlpoolHasher.field_k = WhirlpoolHasher.field_k + 1;
           }
-          if (td.e(true) &&
+          if (td.hasMembership(true) &&
             ri.field_b[82] &&
             ri.field_b[86] &&
             IntrusiveDeque.field_d == 12) {
             he.field_e.writeOpcode((byte) -59, 67);
             he.field_e.writeInt(0, (byte) -101);
-            we.a(0, (byte) 113);
+            we.sendKeepAlive(0, (byte) 113);
           }
           if ((!this.field_V.isTurnFinished((byte) 89) ||
             this.field_V.isWaitingForInput(39)) &&
@@ -844,7 +844,7 @@ final class BattleScreen {
           if (this.field_ab) {
             stackIn_32_0 = var2_int;
             if (!SocketJs5Transport.field_r &&
-              !pn.a((byte) 119) &&
+              !pn.hasOpenOverlay((byte) 119) &&
               this.field_V.getCurrentPlayer(false) == this.field_I) {
               stackIn_33_1 = 1;
             } else {
@@ -901,7 +901,7 @@ final class BattleScreen {
                 }
                 fieldTemp$0 = this.field_p + 1;
                 this.field_p = this.field_p + 1;
-                ClientException.a(stackIn_71_0, stackIn_72_1, (byte) 11, 158, this.field_r, 1, this.field_bb, var4, fieldTemp$0);
+                ClientException.sendGameSettings(stackIn_71_0, stackIn_72_1, (byte) 11, 158, this.field_r, 1, this.field_bb, var4, fieldTemp$0);
               }
               var5.setMarkerValue(0, 2);
               this.field_m.followUnit(-119, var5);
@@ -923,7 +923,7 @@ final class BattleScreen {
                 }
                 fieldTemp$1 = this.field_p + 1;
                 this.field_p = this.field_p + 1;
-                ClientException.a(stackIn_84_0, stackIn_85_1, (byte) 11, 158, this.field_r, 1, this.field_bb, var4, fieldTemp$1);
+                ClientException.sendGameSettings(stackIn_84_0, stackIn_85_1, (byte) 11, 158, this.field_r, 1, this.field_bb, var4, fieldTemp$1);
               }
               var5.setMarkerValue(param0 - 1, 3);
               this.field_m.followUnit(-90, var5);
@@ -941,7 +941,7 @@ final class BattleScreen {
           }
           this.field_O = false;
           if (!this.field_ab &&
-            qg.a(-79)) {
+            qg.hasMenuPage(-79)) {
             MeshModel.handleZoomKeys((byte) 86);
           }
           if (13 != IntrusiveDeque.field_d) {
@@ -958,7 +958,7 @@ final class BattleScreen {
             }
           }
           var4Lifetime1 = var3Lifetime1;
-          gj.a(false, true, var4Lifetime1, mn.field_r);
+          gj.switchScreen(false, true, var4Lifetime1, mn.field_r);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1065,7 +1065,7 @@ final class BattleScreen {
         }
     }
 
-    public static void f(byte param0) {
+    public static void releaseStatics(byte param0) {
         try {
           field_E = null;
           field_db = null;
@@ -1173,8 +1173,8 @@ final class BattleScreen {
               ArrayWidgetContainer.field_A = 270;
             }
           }
-          if (qg.a(-114)) {
-            DelegatingCanvas.a(-3, var4 != 0);
+          if (qg.hasMenuPage(-114)) {
+            DelegatingCanvas.updateBattleTurn(-3, var4 != 0);
           }
           if (this.field_H) {
             this.drawSpellbookPanel(8);
@@ -1207,7 +1207,7 @@ final class BattleScreen {
             StatefulTextPainter.field_p == 7) && (10 != this.field_V.field_x[this.field_I] &&
             this.field_I == this.field_bb)) {
             var6 = 30;
-            var7Lifetime1 = -150 + (var3_int + ii.a((byte) -117));
+            var7Lifetime1 = -150 + (var3_int + ii.getHoldTimer((byte) -117));
             var8 = 0;
             if ((-var7Lifetime1 + MenuButtonPanel.field_I + 24) * (-var7Lifetime1 + (MenuButtonPanel.field_I + 24)) + (-var6 + EmailLoginCredentials.field_g) * (-var6 + EmailLoginCredentials.field_g) < 1296) {
               mf.field_g = -4;
@@ -1301,7 +1301,7 @@ final class BattleScreen {
               SpellProjectile.field_B.drawCentered(var12, var6, var7Lifetime1, 16777215, -1);
             }
           }
-          sb.a(param1, -58);
+          sb.drawSideBar(param1, -58);
           if (null == IntrusiveNodeHashTable.field_f) {
             this.drawTurnBar(-25343);
           }
@@ -1539,7 +1539,7 @@ final class BattleScreen {
                   SoftwareRasterizer.fillCircle(var11_int, var12_int, 14 + (var9.getSize(-8323) >> 1) >> this.field_K, (var2_intLifetime1 | 8421504) ^ 8421504);
                   SoftwareRasterizer.fillCircle(var11_int, var12_int, var9.getSize(param0 - 8331) >> 1 >> this.field_K, var2_intLifetime1);
                   SoftwareRasterizer.drawCircleOutline(var11_int, var12_int, 14 + (var9.getSize(-8323) >> 1) >> this.field_K, 8421504 ^ (var2_intLifetime1 | 8421504));
-                  gn.a(14 + (var9.getSize(-8323) >> 1) >> this.field_K, (byte) 72, 255, var11_int, var12_int);
+                  QuickChatPhraseCache.fillCircleMasked(14 + (var9.getSize(-8323) >> 1) >> this.field_K, (byte) 72, 255, var11_int, var12_int);
                   if (var9.getOwnerId(param0 + 17563) == this.field_V.getCurrentPlayer(false)) {
                     if (this.field_K == 4) {
                       DualLinkDeque.field_b[3].drawQuarterSize(-3 + var11_int, var12_int - (var9.getSize(-8323) >> this.field_K + 1) - 8);
@@ -1554,7 +1554,7 @@ final class BattleScreen {
               if (this.field_K != 2) {
                 SoftwareRasterizer.resetClip();
               } else {
-                i.b(90);
+                i.resetFadeTimer(90);
                 DropdownList.field_N = -1;
                 EmptyPainter.field_b = null;
                 var10Lifetime1 = this.field_V.getPlayerCount(param0 ^ 8);
@@ -1641,7 +1641,7 @@ final class BattleScreen {
           if (eo.field_c != null) {
             eo.field_c.draw(param0 ^ -22718, param1);
           }
-          KeyboardInputHandler.a(param1, (byte) -101);
+          KeyboardInputHandler.drawPasswordScene(param1, (byte) -101);
           if (db.field_a != null) {
             db.field_a.drawFullScreen(param1, true);
           }
@@ -1750,7 +1750,7 @@ final class BattleScreen {
                 var11_int = -param1 + (this.field_s + (EmailLoginCredentials.field_f >> 1));
                 var12 = -param2 + (this.field_r + ((var4_int >> 1) - (var9_intLifetime1 >> 1)));
                 SoftwareRasterizer.fillCircleAlpha(var11_int, var12, var9_intLifetime1 >> 1, var10Lifetime2, 128);
-                gn.a(var9_intLifetime1 >> 1, (byte) 100, 128 + Math.abs(-16 + (this.field_P & 31)) * 3, var11_int, var12);
+                QuickChatPhraseCache.fillCircleMasked(var9_intLifetime1 >> 1, (byte) 100, 128 + Math.abs(-16 + (this.field_P & 31)) * 3, var11_int, var12);
                 if (this.field_V.isTurnFinished((byte) 89)) {
                   return;
                 }
@@ -1767,7 +1767,7 @@ final class BattleScreen {
                 var11_intLifetime1 = (EmailLoginCredentials.field_f >> 1) + (this.field_s - param1);
                 var12Lifetime1 = (var4_int >> 1) - param2 + this.field_V.field_H + (-16 - (var9_intLifetime2 >> 1));
                 SoftwareRasterizer.fillCircleAlpha(var11_intLifetime1, var12Lifetime1, var9_intLifetime2 >> 1, var10Lifetime3, 128);
-                gn.a(var9_intLifetime2 >> 1, (byte) 78, 3 * Math.abs(-16 + (this.field_P & 31)) + 128, var11_intLifetime1, var12Lifetime1);
+                QuickChatPhraseCache.fillCircleMasked(var9_intLifetime2 >> 1, (byte) 78, 3 * Math.abs(-16 + (this.field_P & 31)) + 128, var11_intLifetime1, var12Lifetime1);
                 if (this.field_V.isTurnFinished((byte) 89)) {
                   return;
                 }
@@ -1806,7 +1806,7 @@ final class BattleScreen {
                   var11_intLifetime2 = (EmailLoginCredentials.field_f >> 1) + (-param1 + this.field_s);
                   var12Lifetime2 = -(var10Lifetime4 >> 1) + (-param2 + this.field_r + (var4_int >> 1));
                   SoftwareRasterizer.fillCircleAlpha(var11_intLifetime2, var12Lifetime2, var10Lifetime4 >> 1, var9_intLifetime3, 128);
-                  gn.a(var10Lifetime4 >> 1, (byte) 94, Math.abs((31 & this.field_P) - 16) * 3 + 128, var11_intLifetime2, var12Lifetime2);
+                  QuickChatPhraseCache.fillCircleMasked(var10Lifetime4 >> 1, (byte) 94, Math.abs((31 & this.field_P) - 16) * 3 + 128, var11_intLifetime2, var12Lifetime2);
                   if (this.field_V.isTurnFinished((byte) 89)) {
                     return;
                   }
@@ -1845,11 +1845,11 @@ final class BattleScreen {
                   var11_intLifetime2Lifetime1 = (EmailLoginCredentials.field_f >> 1) - param1 + var7Lifetime1;
                   var12Lifetime2Lifetime1 = (var4_int >> 1) + var8Lifetime1 - param2 - (var6.getSize(-8323) + 32);
                   SoftwareRasterizer.fillCircleAlpha(var11_intLifetime2Lifetime1, var12Lifetime2Lifetime1, var10Lifetime4 >> 1, var9_intLifetime3Lifetime2, 128);
-                  gn.a(var10Lifetime4 >> 1, (byte) 63, 128 + 3 * Math.abs((this.field_P & 31) - 16), var11_intLifetime2Lifetime1, var12Lifetime2Lifetime1);
+                  QuickChatPhraseCache.fillCircleMasked(var10Lifetime4 >> 1, (byte) 63, 128 + 3 * Math.abs((this.field_P & 31) - 16), var11_intLifetime2Lifetime1, var12Lifetime2Lifetime1);
                   var13 = this.field_s - param1 + (EmailLoginCredentials.field_f >> 1);
                   var14 = (var4_int >> 1) + (this.field_r - param2) - (var10Lifetime4 >> 1);
                   SoftwareRasterizer.fillCircleAlpha(var13, var14, var10Lifetime4 >> 1, var9_intLifetime3Lifetime2, 128);
-                  gn.a(var10Lifetime4 >> 1, (byte) 125, 128 + Math.abs(-16 + (this.field_P & 31)) * 3, var13, var14);
+                  QuickChatPhraseCache.fillCircleMasked(var10Lifetime4 >> 1, (byte) 125, 128 + Math.abs(-16 + (this.field_P & 31)) * 3, var13, var14);
                   if (this.field_V.isTurnFinished((byte) 89)) {
                     return;
                   }
@@ -1922,12 +1922,12 @@ final class BattleScreen {
                 SoftwareRasterizer.setClip(-param1 + (EmailLoginCredentials.field_f >> 1), -param2 + (var4_int >> 1), (EmailLoginCredentials.field_f >> 1) + (-param1 + this.field_V.field_y), (var4_int >> 1) + (-param2 + this.field_V.field_H));
                 var11_intLifetime3 = -param1 + (var7Lifetime1 + (EmailLoginCredentials.field_f >> 1));
                 var12Lifetime3 = (var4_int >> 1) + var8Lifetime1 + (-param2 - (var9_intLifetime4 >> 1));
-                gn.a((var9_intLifetime4 >> 1) + 128, (byte) 88, -(128 + Math.abs(-16 + (31 & this.field_P)) * 3), var11_intLifetime3, var12Lifetime3);
+                QuickChatPhraseCache.fillCircleMasked((var9_intLifetime4 >> 1) + 128, (byte) 88, -(128 + Math.abs(-16 + (31 & this.field_P)) * 3), var11_intLifetime3, var12Lifetime3);
                 SoftwareRasterizer.resetClip();
                 var13Lifetime1 = (EmailLoginCredentials.field_f >> 1) + this.field_s - param1;
                 var14Lifetime1 = -(var9_intLifetime4 >> 1) + ((var4_int >> 1) + (-param2 + this.field_r));
                 SoftwareRasterizer.fillCircleAlpha(var13Lifetime1, var14Lifetime1, var9_intLifetime4 >> 1, var10Lifetime5, 128);
-                gn.a(var9_intLifetime4 >> 1, (byte) 73, Math.abs(-16 + (31 & this.field_P)) * 3 + 128, var13Lifetime1, var14Lifetime1);
+                QuickChatPhraseCache.fillCircleMasked(var9_intLifetime4 >> 1, (byte) 73, Math.abs(-16 + (31 & this.field_P)) * 3 + 128, var13Lifetime1, var14Lifetime1);
                 if (this.field_V.isTurnFinished((byte) 89)) {
                   return;
                 }
@@ -2261,7 +2261,7 @@ final class BattleScreen {
           if (param5 != -30) {
             this.field_r = 83;
           }
-          ResizableModalPanel.a(20, this.field_f, param2);
+          ResizableModalPanel.sendGameOption(20, this.field_f, param2);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "le.L(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
@@ -2341,7 +2341,7 @@ final class BattleScreen {
           if (this.field_ab) {
             fieldTemp$1 = this.field_p + 1;
             this.field_p = this.field_p + 1;
-            ClientException.a(this.field_V.getRound((byte) -75), this.field_R, (byte) 11, 158, this.field_r, this.field_h, this.field_bb, 0, fieldTemp$1);
+            ClientException.sendGameSettings(this.field_V.getRound((byte) -75), this.field_R, (byte) 11, 158, this.field_r, this.field_h, this.field_bb, 0, fieldTemp$1);
           }
           if (param0 != 2000) {
             this.field_T = false;
@@ -2506,7 +2506,7 @@ final class BattleScreen {
         try {
           SoftwareRasterizer.clear();
           var5_int = 0;
-          param0 = param0 + ue.b((byte) -32);
+          param0 = param0 + ue.getSelectedOption((byte) -32);
           var7 = EmailLoginCredentials.field_j;
           var7Lifetime1 = IntKeyLookup.field_g.field_nb;
           var8 = this.field_V.getTerrainOffset(true);
@@ -2569,7 +2569,7 @@ final class BattleScreen {
             var10Lifetime2 = (int)((double)var10Lifetime2 + (Math.sin((double)ge.field_r * 3.141592653589793 / 64.0) * 8.0 + 32.0));
             SoftwareRasterizer.drawVerticalLineAlpha(var9Lifetime2, -var10Lifetime2 + (-param3 + this.field_V.field_H + (var7Lifetime1 >> 1)), var10Lifetime2, param2 | 16448, 128);
           }
-          if (td.e(true) &&
+          if (td.hasMembership(true) &&
             this.field_T) {
             this.field_V.getTerrainMask((byte) 69).drawScaled((EmailLoginCredentials.field_f >> 1) - param0, -param3 + (var7Lifetime1 >> 1), this.field_V.field_y, this.field_V.field_H);
           } else {
@@ -2878,7 +2878,7 @@ final class BattleScreen {
           var4 = 0;
           if (!this.field_V.isTurnFinished((byte) 89) &&
             !this.field_V.hasPendingActions(-45) && (!SocketJs5Transport.field_r &&
-            !pn.a((byte) 110) ||
+            !pn.hasOpenOverlay((byte) 110) ||
             !this.field_ab)) {
             var5 = this.field_V.field_y >> this.field_K;
             var6 = this.field_V.field_H >> this.field_K;
@@ -2913,7 +2913,7 @@ final class BattleScreen {
           if ((this.field_V.getCurrentPlayer(false) == this.field_I &&
             !(this.field_z <= 1) || !this.field_ab) && (!this.field_V.isAnimating(true))) {
             if ((this.field_ab) &&
-              (decompiledFrameRemainder0 = !(pn.a((byte) -51)))) {
+              (decompiledFrameRemainder0 = !(pn.hasOpenOverlay((byte) -51)))) {
               decompiledFrameRemainder0 = !(SocketJs5Transport.field_r);
             }
             if ((decompiledFrameRemainder0) &&
@@ -2956,7 +2956,7 @@ final class BattleScreen {
           var9 = this.field_V.getUnitByOwner(param2, true);
           if ((var9 == null ||
             !(0 >= ((this.field_J | this.field_a) & 1 << var9.getOwnerId(17571)))) && (0 == param2 ||
-            !qg.a(-113) ||
+            !qg.hasMenuPage(-113) ||
             WhirlpoolHasher.field_k == 6)) {
             var5 = 16777215;
             var8 = this.field_V.field_k[param2];
@@ -3134,7 +3134,7 @@ final class BattleScreen {
           }
           this.field_o = false;
           if (!SocketJs5Transport.field_r &&
-            !pn.a((byte) 111) && (ri.field_b[69] ||
+            !pn.hasOpenOverlay((byte) 111) && (ri.field_b[69] ||
             ri.field_b[ao.field_f])) {
             this.field_t = false;
             this.field_m.followUnit(-96, this.field_V.getUnitByOwner(this.field_bb, true));
@@ -3142,7 +3142,7 @@ final class BattleScreen {
           if (0 < this.field_V.field_G) {
             this.field_V.field_G = this.field_V.field_G - 1;
           }
-          vl.a(128);
+          HotspotRegion.updateFadeLevel(128);
           if (this.field_Z > 0) {
             this.field_Z = this.field_Z - 1;
           }
@@ -3165,7 +3165,7 @@ final class BattleScreen {
           }
           var3_int = 0;
           LoginPanel.tickMessageTimer((byte) -49);
-          if (dm.h((byte) 97)) {
+          if (dm.isMessageQueueIdle((byte) 97)) {
             this.stepBattle((byte) -106);
             if (!this.field_V.isTurnFinished((byte) 89) &&
               this.field_V.isTurnActive(4) &&
@@ -3202,7 +3202,7 @@ final class BattleScreen {
                   this.setSeenBit((byte) 79, 56, 199);
                 }
               }
-              gj.a(true, true, 3, mn.field_r);
+              gj.switchScreen(true, true, 3, mn.field_r);
             }
           } else {
             var3_int = 1;
@@ -3250,15 +3250,15 @@ final class BattleScreen {
               this.field_V.refreshUnits((byte) -20);
               if (!this.field_ab &&
                 this.field_V.isGameOver(this.field_J, -93)) {
-                if (!qg.a(-102)) {
-                  gj.a(false, true, -1, mn.field_r);
+                if (!qg.hasMenuPage(-102)) {
+                  gj.switchScreen(false, true, -1, mn.field_r);
                 } else {
-                  mh.i((byte) 74);
+                  mh.endTurnInput((byte) 74);
                 }
               }
               if (!this.field_ab &&
                 5 == StatefulTextPainter.field_p) {
-                PacketBuffer.j(13805);
+                PacketBuffer.updateTowerCount(13805);
               }
             }
           }
@@ -3281,13 +3281,13 @@ final class BattleScreen {
               this.beginNextTurn(false);
               if (StatefulTextPainter.field_p == 6 &&
                 this.field_V.getCurrentPlayer(false) != 0) {
-                hj.a(-20602);
+                hj.updateAiTargets(-20602);
               } else {
                 this.field_V.queueAction(this.field_V.getCurrentPlayer(false), 157, (byte) 36, 0, 0, 0, 0, this.field_V.getCurrentPlayer(false), 0);
               }
             } else {
-              if (qg.a(-96)) {
-                ik.b(0);
+              if (qg.hasMenuPage(-96)) {
+                ik.resetCurrentPlayer(0);
                 this.beginNextTurn(false);
               } else {
                 this.beginNextTurn(false);
@@ -3306,7 +3306,7 @@ final class BattleScreen {
           this.field_x = this.field_x - 1;
           if (fieldTemp$0 <= 0) {
             if (this.field_W == this.field_V.getRound((byte) -75)) {
-              ResizableModalPanel.a(20, this.field_f, this.field_W);
+              ResizableModalPanel.sendGameOption(20, this.field_f, this.field_W);
             }
             this.field_x = 50;
           }
@@ -3357,7 +3357,7 @@ final class BattleScreen {
         PacketBuffer var3 = null;
         try {
           stackIn_3_0 = this.field_V;
-          stackIn_3_1 = qg.a(-81);
+          stackIn_3_1 = qg.hasMenuPage(-81);
           if (this.field_t) {
             stackIn_4_2 = null;
           } else {
@@ -3391,7 +3391,7 @@ final class BattleScreen {
           }
           if (68 == param1) {
             this.field_D = param0.readUnsignedByte((byte) -90);
-            jg.a(-3);
+            jg.updateTurnCaptions(-3);
             return true;
           }
           if (param1 == 69) {
@@ -3400,12 +3400,12 @@ final class BattleScreen {
           }
           if (70 == param1) {
             this.field_b = param0.readUnsignedByte((byte) 48);
-            ArchiveIndex.a((byte) 121);
+            ArchiveIndex.updatePlayerCaptions((byte) 121);
             return true;
           }
           if (71 == param1) {
             this.field_a = param0.readUnsignedByte((byte) -86);
-            ArchiveIndex.a((byte) 121);
+            ArchiveIndex.updatePlayerCaptions((byte) 121);
             return true;
           }
           if (param1 == 61) {
@@ -3553,7 +3553,7 @@ final class BattleScreen {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4_ref = null;
         try {
-          if (DirectByteStorage.a(param1, ad.field_f, param0 ^ 79)) {
+          if (DirectByteStorage.isBitSet(param1, ad.field_f, param0 ^ 79)) {
             return;
           }
           var6 = ad.field_f;
@@ -3708,7 +3708,7 @@ final class BattleScreen {
             1 < this.field_z)) {
             if (!this.field_ab) {
               stackIn_60_0 = 1;
-            } else if (pn.a((byte) 127)) {
+            } else if (pn.hasOpenOverlay((byte) 127)) {
               stackIn_60_0 = 0;
             } else if (!SocketJs5Transport.field_r) {
               stackIn_60_0 = 1;
@@ -3725,9 +3725,9 @@ final class BattleScreen {
               if (var6.getDisplayedHealth(param1 ^ -20367) > 0 &&
                 null == var6.getLinkedUnit(24501)) {
                 if ((!(this.field_ab)) &&
-                  (!(!qg.a(-92))) &&
+                  (!(!qg.hasMenuPage(-92))) &&
                   ((StatefulTextPainter.field_p != 7))) {
-                  WhirlpoolHasher.a(var6, true);
+                  WhirlpoolHasher.resetTutorialUnit(var6, true);
                 }
                 decompiledFrameRemainder3 = false;
               }
@@ -3862,7 +3862,7 @@ final class BattleScreen {
                   if (this.field_ab) {
                     fieldTemp$0 = this.field_p + 1;
                     this.field_p = this.field_p + 1;
-                    ClientException.a(this.field_V.getRound((byte) -75), 0, (byte) 11, 159, 0, 1, this.field_bb, 0, fieldTemp$0);
+                    ClientException.sendGameSettings(this.field_V.getRound((byte) -75), 0, (byte) 11, 159, 0, 1, this.field_bb, 0, fieldTemp$0);
                   }
                   this.field_V.onPlayerDefeated(this.field_bb, false);
                 }
@@ -4046,7 +4046,7 @@ final class BattleScreen {
           }
           if (!this.field_ab) {
             var3_int = param1 ? 1 : 0;
-            gj.a(var3_int != 0, true, 0, mn.field_r);
+            gj.switchScreen(var3_int != 0, true, 0, mn.field_r);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4429,7 +4429,7 @@ final class BattleScreen {
             if (this.field_k) {
               he.field_e.writeOpcode((byte) -67, 67);
               he.field_e.writeInt(var4, (byte) -101);
-              we.a(0, (byte) 93);
+              we.sendKeepAlive(0, (byte) 93);
             }
             ProxySocketConnector.closeActiveConnection(false);
           }
@@ -4492,7 +4492,7 @@ final class BattleScreen {
               var7 = -param2 + (EmailLoginCredentials.field_f >> 1) + var6Lifetime1.getX(-88);
               var8 = -48 + (var4_int >> 1) - param0 + var6Lifetime1.getY((byte) 115) + (-var6Lifetime1.getSize(-8323) - this.field_M);
               SoftwareRasterizer.fillCircle(var7, var8, 20, 16777215);
-              gn.a(20, (byte) 99, 192, var7, var8);
+              QuickChatPhraseCache.fillCircleMasked(20, (byte) 99, 192, var7, var8);
               SoftwareRasterizer.drawCircleOutline(var7, var8, 20, 0);
               bb.field_g[dd.field_f[DropdownList.field_N]].drawTransparent(var7 - 20, var8 - 20);
             }
@@ -4719,11 +4719,11 @@ final class BattleScreen {
           } else {
             this.field_V.setAnimating(true);
           }
-          if (!qg.a(-127)) {
+          if (!qg.hasMenuPage(-127)) {
             if (!this.field_V.isGameOver(this.field_J, -89)) {
               return;
             }
-            gj.a(false, true, -1, mn.field_r);
+            gj.switchScreen(false, true, -1, mn.field_r);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4769,7 +4769,7 @@ final class BattleScreen {
           if (null != this.field_w) {
             this.field_w.beginTurn(var3_int, (byte) 60, var4);
           }
-          gj.a(false, true, param1, mn.field_r);
+          gj.switchScreen(false, true, param1, mn.field_r);
           this.field_o = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4841,7 +4841,7 @@ final class BattleScreen {
           this.field_V.field_hb = this.field_V.field_y >> 1;
           this.field_V.regenerateTerrain(88);
           this.field_V.renderTerrainSprite(true);
-          ue.a((byte) -117, this);
+          ue.startBattleScreen((byte) -117, this);
           this.field_W = -1;
           this.field_x = 0;
           this.field_f = null;
@@ -4849,11 +4849,11 @@ final class BattleScreen {
           this.field_cb = new IntrusiveDeque();
           if (!this.field_ab) {
             BufferedSocket.setActiveBattleScreen(this, true);
-            UiContainer.a((byte) 83, 0);
+            UiContainer.selectMenuPage((byte) 83, 0);
             this.field_V.field_sb = cf.field_h;
             this.field_V.field_rb = FullscreenFocusCanvas.field_g;
           } else {
-            CachedArchiveProvider.c(63);
+            CachedArchiveProvider.clearBattleReferences(63);
             this.field_w = new Battle(false, false, param1, param2, param3, param4, param9, param10, param6, param7, param8, var15_int, param13);
             this.field_w.regenerateTerrain(63);
             this.field_w.renderTerrainSprite(true);

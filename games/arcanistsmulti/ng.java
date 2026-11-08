@@ -25,7 +25,7 @@ final class ng extends UiContainer implements TextHotspotListener, ButtonListene
         }
     }
 
-    private final String g(int param0) {
+    private final String getLinkOpenMarkup(int param0) {
         if (param0 != -7) {
           UiComponent var3 = (UiComponent) null;
           this.handleKeyInput((UiComponent) null, (byte) 70, 'ﾘ', 107);
@@ -33,14 +33,14 @@ final class ng extends UiContainer implements TextHotspotListener, ButtonListene
         return "<u=2164A2><col=2164A2>";
     }
 
-    private final String g(byte param0) {
+    private final String getLinkCloseMarkup(byte param0) {
         if (param0 != 94) {
           field_H = (String) null;
         }
         return "</col></u>";
     }
 
-    final static void a(boolean param0, int param1, boolean param2, int param3) {
+    final static void drawRankingsPanel(boolean param0, int param1, boolean param2, int param3) {
         int stackIn_10_0 = 0;
         String stackIn_24_0 = null;
         SceneWidget stackIn_33_0 = null;
@@ -137,7 +137,7 @@ final class ng extends UiContainer implements TextHotspotListener, ButtonListene
               if (var8 == 0) {
                 stackIn_37_3 = ValidatedTextWidget.field_W;
               } else {
-                stackIn_37_3 = km.field_g;
+                stackIn_37_3 = NameCheckRequest.field_g;
               }
               stackIn_36_0.field_rb = CachedArchiveProvider.formatTemplate(stackIn_36_1, stackIn_36_2, stackIn_37_3);
               NodeHashTableIterator.field_d.field_rb = MenuButtonPanel.field_R;
@@ -146,17 +146,17 @@ final class ng extends UiContainer implements TextHotspotListener, ButtonListene
               if (um.field_a != null) {
                 if (qa.field_l == null) {
                   qa.field_l = new byte[vf.field_l];
-                  tk.field_q = new boolean[vf.field_l];
+                  QuickChatPhrase.field_q = new boolean[vf.field_l];
                 }
                 ByteStorage.field_a = false;
                 GzipDecoder.field_d = false;
                 var13 = 0;
                 var9_intLifetime1 = var13;
                 while (vf.field_l > var13) {
-                  tk.field_q[var13] = false;
+                  QuickChatPhrase.field_q[var13] = false;
                   var13++;
                 }
-                TextWidgetPainter.a(-1, (byte) -25, true, om.field_x, -1, vf.field_l, -1, 0);
+                TextWidgetPainter.drawGameOptions(-1, (byte) -25, true, om.field_x, -1, vf.field_l, -1, 0);
                 if (!(qf.field_d < 2) &&
                   ri.field_b[12]) {
                   ByteStorage.field_a = true;
@@ -174,7 +174,7 @@ final class ng extends UiContainer implements TextHotspotListener, ButtonListene
                     var9 = var11Lifetime1;
                   }
                   for (var10Lifetime1 = 0; var10Lifetime1 < vf.field_l; var10Lifetime1++) {
-                    if (tk.field_q[var10Lifetime1]) {
+                    if (QuickChatPhrase.field_q[var10Lifetime1]) {
                       var11_ref = "<col=A00000>" + ResizableModalPanel.field_bb[var10Lifetime1] + "</col>";
                       var9 = var11_ref;
                       var9 = var11_ref;
@@ -232,12 +232,12 @@ final class ng extends UiContainer implements TextHotspotListener, ButtonListene
             }
             if (CanvasRasterBuffer.field_k.field_U != 0) {
               if (!SceneScrollPane.field_Db) {
-                fm.a(param1, true);
+                fm.sendSavedSettings(param1, true);
               } else {
-                uc.a(param1, (byte) -96);
+                uc.sendByteRequest(param1, (byte) -96);
               }
             }
-            lm.a(true, param1, om.field_x, 0);
+            lm.drawGameDetails(true, param1, om.field_x, 0);
           }
           if (param3 <= 105) {
             ng.sleep(false, -75L);
@@ -259,10 +259,10 @@ final class ng extends UiContainer implements TextHotspotListener, ButtonListene
         RuntimeException var6 = null;
         try {
           if (!param0) {
-            discarded$1 = this.g(-67);
+            discarded$1 = this.getLinkOpenMarkup(-67);
           }
           if (this.field_F == param4) {
-            IntrusiveNodeHashTable.g(-1);
+            IntrusiveNodeHashTable.openLoginFlow(-1);
             this.field_E.dismiss(77);
           }
           return;
@@ -394,13 +394,13 @@ final class ng extends UiContainer implements TextHotspotListener, ButtonListene
           this.field_E = param0;
           this.field_F = new TextButton(qn.field_lb, (UiListener) null);
           this.field_F.field_r = (WidgetPainter) ((Object) new MenuButtonPainter());
-          var7 = CachedArchiveProvider.formatTemplate(125, new String[]{this.g(-7), this.g((byte) 94)}, GameApplet.field_r);
+          var7 = CachedArchiveProvider.formatTemplate(125, new String[]{this.getLinkOpenMarkup(-7), this.getLinkCloseMarkup((byte) 94)}, GameApplet.field_r);
           var3 = 20;
           var4 = new TextWidgetPainter(ia.field_c, 0, 0, 0, 0, 16777215, -1, 3, 0, ia.field_c.field_C, -1, 2147483647, true);
           this.field_J = new TextHotspotWidget(var7, var4);
           this.field_J.field_q = "";
-          this.field_J.a(0, 0, MenuButtonPainter.field_s);
-          this.field_J.a(1, 0, MenuButtonPainter.field_s);
+          this.field_J.setHotspotTooltip(0, 0, MenuButtonPainter.field_s);
+          this.field_J.setHotspotTooltip(1, 0, MenuButtonPainter.field_s);
           this.field_J.field_o = (UiListener) (this);
           this.field_J.field_v = -40 + this.field_v;
           this.field_J.setBoundsToPreferredHeight(26, (byte) -4, this.field_v - 40, var3);

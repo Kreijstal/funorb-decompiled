@@ -229,7 +229,7 @@ final class SoundCache {
         }
     }
 
-    final static String a(int param0) {
+    final static String getStoredUsername(int param0) {
         if (param0 != 0) {
           String var2 = (String) null;
           SoundCache.showLoadingProgress(true, (String) null, 0.18466001749038696f, (byte) 40);

@@ -233,8 +233,8 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
         TextWidgetPainter var5 = new TextWidgetPainter(ia.field_c, 0, 0, 0, 0, 16777215, -1, 0, 0, ia.field_c.field_C, -1, 2147483647, true);
         this.field_S = new TextHotspotWidget(var2, var5);
         this.field_S.field_q = "";
-        this.field_S.a(0, 0, MenuButtonPainter.field_s);
-        this.field_S.a(1, 0, MenuButtonPainter.field_s);
+        this.field_S.setHotspotTooltip(0, 0, MenuButtonPainter.field_s);
+        this.field_S.setHotspotTooltip(1, 0, MenuButtonPainter.field_s);
         this.field_S.field_o = (UiListener) (this);
         this.field_S.setBoundsToPreferredHeight(46, (byte) -4, this.field_v - 90, var3);
         var3 = var3 + (this.field_S.field_k + 15);
@@ -444,7 +444,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
         if (param0 != -7) {
           return;
         }
-        ((NameValidator) (this.field_K.getValidationProvider(0))).e(126);
+        ((NameValidator) (this.field_K.getValidationProvider(0))).resetLookup(126);
     }
 
     private final int addFieldWithStatusIcon(String param0, UiComponent param1, byte param2, int param3, int param4) {

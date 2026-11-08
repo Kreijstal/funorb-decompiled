@@ -45,7 +45,7 @@ final class DiskCacheWorker implements Runnable {
           var4.field_z = param0.readEntry(param1, -93);
           var4.field_p = false;
           if (param2 != -6833) {
-            DiskCacheWorker.c((byte) 25);
+            DiskCacheWorker.getContextScrollContent((byte) 25);
           }
           var4.field_q = true;
           stackIn_17_0 = var4;
@@ -72,7 +72,7 @@ final class DiskCacheWorker implements Runnable {
           field_c = null;
           return;
         }
-        DiskCacheWorker.b((byte) 43);
+        DiskCacheWorker.beginLogout((byte) 43);
         field_g = null;
         field_a = null;
         field_c = null;
@@ -228,7 +228,7 @@ final class DiskCacheWorker implements Runnable {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2_ref = (Exception) (Object) decompiledCaughtException;
               var6 = (String) null;
-              DelegatingCanvas.a((Throwable) ((Object) var2_ref), (String) null, (byte) 20);
+              DelegatingCanvas.reportError((Throwable) ((Object) var2_ref), (String) null, (byte) 20);
               var7.field_p = false;
             }
           }
@@ -239,18 +239,18 @@ final class DiskCacheWorker implements Runnable {
         }
     }
 
-    final static void b(byte param0) {
-        MusicPatchPcmStream.d(-24225);
+    final static void beginLogout(byte param0) {
+        MusicPatchPcmStream.resetAudioState(-24225);
         Bzip2State.field_h = true;
         int var1 = -24 % ((71 - param0) / 35);
         MusicPatchPcmStream.field_s = true;
         ClientException.field_b.deactivatePanels(-126);
-        jn.a(fi.field_a, false, -1);
+        jn.openAccountDialog(fi.field_a, false, -1);
     }
 
-    final static SceneWidget c(byte param0) {
+    final static SceneWidget getContextScrollContent(byte param0) {
         if (param0 > -83) {
-          DiskCacheWorker.b((byte) -7);
+          DiskCacheWorker.beginLogout((byte) -7);
           return ContextActionMenu.getScrollContent(0);
         }
         return ContextActionMenu.getScrollContent(0);

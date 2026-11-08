@@ -61,13 +61,13 @@ class ed extends ContentTransitionDialog implements ButtonListener {
           return;
         }
         if (this.field_Ab) {
-          fj.c(-120);
+          fj.showLoginAfterLogout(-120);
           return;
         }
         if (!this.field_Fb) {
           return;
         }
-        pn.c(-11090);
+        pn.showDefaultLoginPanel(-11090);
     }
 
     ed(ModalPanelStack param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
@@ -86,7 +86,7 @@ class ed extends ContentTransitionDialog implements ButtonListener {
         }
     }
 
-    final static void a(boolean param0, byte param1) {
+    final static void drawCurrentScreenView(boolean param0, byte param1) {
         int stackIn_12_0 = 0;
         int stackIn_16_0 = 0;
         boolean stackIn_17_1 = false;
@@ -120,14 +120,14 @@ class ed extends ContentTransitionDialog implements ButtonListener {
               }
               var3 = stackIn_93_0;
               stackIn_97_0 = 0;
-              stackIn_98_1 = (param0) && (gj.a(29372)) && (var3 == 0);
-              ui.a(stackIn_97_0, stackIn_98_1);
+              stackIn_98_1 = (param0) && (gj.isAudioEnabled(29372)) && (var3 == 0);
+              ui.drawOverlaysWithFlags(stackIn_97_0, stackIn_98_1);
               if (var3 != 0) {
                 if (!param0) {
                   BattleUnit.applyMusicVolume(false, -101);
                   return;
                 }
-                if (!gj.a(29372)) {
+                if (!gj.isAudioEnabled(29372)) {
                   BattleUnit.applyMusicVolume(false, -101);
                   return;
                 }
@@ -152,15 +152,15 @@ class ed extends ContentTransitionDialog implements ButtonListener {
           }
           var3Lifetime2 = stackIn_74_0;
           stackIn_78_0 = 0;
-          stackIn_79_1 = (param0) && (gj.a(29372)) && (var3Lifetime2 == 0);
-          ui.a(stackIn_78_0, stackIn_79_1);
+          stackIn_79_1 = (param0) && (gj.isAudioEnabled(29372)) && (var3Lifetime2 == 0);
+          ui.drawOverlaysWithFlags(stackIn_78_0, stackIn_79_1);
           if (var3Lifetime2 == 0) {
             return;
           }
           if (!param0) {
             BattleUnit.applyMusicVolume(false, -101);
           } else {
-            if (!gj.a(29372)) {
+            if (!gj.isAudioEnabled(29372)) {
               BattleUnit.applyMusicVolume(false, -101);
             } else {
               BattleUnit.applyMusicVolume(true, -101);
@@ -185,8 +185,8 @@ class ed extends ContentTransitionDialog implements ButtonListener {
           }
           var3Lifetime1 = stackIn_12_0;
           stackIn_16_0 = 0;
-          stackIn_17_1 = (param0) && (gj.a(29372)) && (var3Lifetime1 == 0);
-          ui.a(stackIn_16_0, stackIn_17_1);
+          stackIn_17_1 = (param0) && (gj.isAudioEnabled(29372)) && (var3Lifetime1 == 0);
+          ui.drawOverlaysWithFlags(stackIn_16_0, stackIn_17_1);
         } else {
           r.field_b.drawBattleView(param0, -26449);
           var2Lifetime1 = 25 % ((38 - param1) / 34);
@@ -199,14 +199,14 @@ class ed extends ContentTransitionDialog implements ButtonListener {
           if (!hi.field_a) {
             var3Lifetime1 = 0;
             stackIn_36_0 = 0;
-            stackIn_37_1 = (param0) && (gj.a(29372)) && (var3Lifetime1 == 0);
-            ui.a(stackIn_36_0, stackIn_37_1);
+            stackIn_37_1 = (param0) && (gj.isAudioEnabled(29372)) && (var3Lifetime1 == 0);
+            ui.drawOverlaysWithFlags(stackIn_36_0, stackIn_37_1);
           } else {
             stackIn_50_0 = (!SocketJs5Transport.field_r) ? 0 : 1;
             var3Lifetime1 = stackIn_50_0;
             stackIn_54_0 = 0;
-            stackIn_55_1 = (param0) && (gj.a(29372)) && (var3Lifetime1 == 0);
-            ui.a(stackIn_54_0, stackIn_55_1);
+            stackIn_55_1 = (param0) && (gj.isAudioEnabled(29372)) && (var3Lifetime1 == 0);
+            ui.drawOverlaysWithFlags(stackIn_54_0, stackIn_55_1);
           }
         }
         if (var3Lifetime1 == 0) {
@@ -215,7 +215,7 @@ class ed extends ContentTransitionDialog implements ButtonListener {
         if (!param0) {
           BattleUnit.applyMusicVolume(false, -101);
         } else {
-          if (!gj.a(29372)) {
+          if (!gj.isAudioEnabled(29372)) {
             BattleUnit.applyMusicVolume(false, -101);
           } else {
             BattleUnit.applyMusicVolume(true, -101);
@@ -324,7 +324,7 @@ class ed extends ContentTransitionDialog implements ButtonListener {
           if (hb.field_Gb == sk.field_a) {
             return KeyboardInputHandler.field_j;
           }
-          if (!SingleChildContainer.field_z.a((byte) -81)) {
+          if (!SingleChildContainer.field_z.isComplete((byte) -81)) {
             return KeyboardInputHandler.field_j;
           }
           return ge.field_g;
@@ -335,7 +335,7 @@ class ed extends ContentTransitionDialog implements ButtonListener {
         if (hb.field_Gb == sk.field_a) {
           return KeyboardInputHandler.field_j;
         }
-        if (!SingleChildContainer.field_z.a((byte) -81)) {
+        if (!SingleChildContainer.field_z.isComplete((byte) -81)) {
           return KeyboardInputHandler.field_j;
         }
         return ge.field_g;
@@ -369,7 +369,7 @@ class ed extends ContentTransitionDialog implements ButtonListener {
             fk.openUrl(IconButtonPainter.getApplet(104), false, "tochangedisplayname.ws");
             return;
           }
-          DebouncedValidator.a(3, (byte) 30);
+          DebouncedValidator.setPendingMessageId(3, (byte) 30);
           this.dismiss(77);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -396,12 +396,12 @@ class ed extends ContentTransitionDialog implements ButtonListener {
         }
     }
 
-    final static void j(int param0) {
+    final static void animateOverlayPosition(int param0) {
         int var1 = DiskCacheRequest.field_F * DiskCacheRequest.field_F;
         int var2 = -(jo.field_e * jo.field_e) + var1;
         int var3 = (-Scrollbar.field_N + TextLine.field_k) * var2 / var1 + Scrollbar.field_N;
         IntKeyLookup.field_g.setBounds(640, sa.field_Hb, var3, param0, (byte) -120);
-        IsaacRandom.a(5, TextLine.field_k - 24, (byte) 19, 640, MenuButtonPainter.field_p, 0, SceneTextInput.field_Gb);
+        IsaacRandom.layoutQuickChatMenu(5, TextLine.field_k - 24, (byte) 19, 640, MenuButtonPainter.field_p, 0, SceneTextInput.field_Gb);
     }
 
     static {

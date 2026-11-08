@@ -31,7 +31,7 @@ final class UiTheme {
     static String field_m;
     static IntrusiveDeque field_a;
 
-    final static String a(int param0, int param1, CharSequence[] param2, boolean param3) {
+    final static String joinNames(int param0, int param1, CharSequence[] param2, boolean param3) {
         int var6_int = 0;
         int var7 = 0;
         StringBuilder discarded$0 = null;
@@ -118,10 +118,10 @@ final class UiTheme {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
+    final void clipToRectangle(int param0, int param1, int param2, int param3, int param4) {
         da.clipToRectangle(param1, param0, 126, param4, param3);
         if (param2 != 3) {
-          this.a(35, 119, -25, 90, 75, 85, 23);
+          this.fillRectangleAlpha(35, 119, -25, 90, 75, 85, 23);
         }
     }
 
@@ -231,7 +231,7 @@ final class UiTheme {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, byte param5) {
+    final void drawLine(int param0, int param1, int param2, int param3, int param4, byte param5) {
         SoftwareRasterizer.drawLine(param1, param4, param0, param2, param3);
         if (param5 <= 48) {
           UiTheme.releaseStatics(127);
@@ -445,15 +445,15 @@ final class UiTheme {
         }
     }
 
-    final void a(int param0) {
-        oo.popClipState(-15405);
+    final void popClip(int param0) {
+        QuickChatCategory.popClipState(-15405);
         if (param0 <= 86) {
           String var3 = (String) null;
           this.drawText((String) null, (byte) -95, 123, -107);
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final void fillRectangleAlpha(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         if (param5 != 1) {
           return;
         }

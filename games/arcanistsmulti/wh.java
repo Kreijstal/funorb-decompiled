@@ -44,11 +44,11 @@ final class wh {
         field_a = null;
     }
 
-    final static void a(byte param0, boolean param1) {
+    final static void setDisplayFlag(byte param0, boolean param1) {
         if (param0 != 117) {
           wh.createSpriteFromPalette(89);
         }
-        SingleChildContainer.field_z.a(param1, (byte) -127);
+        SingleChildContainer.field_z.complete(param1, (byte) -127);
     }
 
     final static Sprite createSpriteFromPalette(int param0) {
@@ -63,7 +63,7 @@ final class wh {
         for (var4_int = 0; var4_int < var1; var4_int++) {
           var3[var4_int] = ph.field_c[NameValidator.bitAnd(255, (int) var2[var4_int])];
         }
-        Sprite var4 = new Sprite(pb.field_g, gn.field_a, hl.field_l[0], SectorCacheStore.field_d[0], jg.field_p[0], ho.field_i[0], var3);
+        Sprite var4 = new Sprite(pb.field_g, QuickChatPhraseCache.field_a, hl.field_l[0], SectorCacheStore.field_d[0], jg.field_p[0], ho.field_i[0], var3);
         CanvasRasterBuffer.releaseDecodeArrays(-18229);
         return var4;
     }

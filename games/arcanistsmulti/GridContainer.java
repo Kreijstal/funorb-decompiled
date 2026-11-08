@@ -34,7 +34,7 @@ final class GridContainer extends ArrayWidgetContainer {
         this.field_z = var5;
     }
 
-    final static void g(int param0) {
+    final static void openConfirmDialog(int param0) {
         pm.field_b = new sa(mf.field_d, SectorCacheStore.field_l, wj.field_b, IntrusiveNode.field_c, ec.field_g, nj.field_d);
         if (param0 != -19741) {
           field_J = true;
@@ -354,7 +354,7 @@ final class GridContainer extends ArrayWidgetContainer {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = 27 / ((-52 - param1) / 40);
-          stackIn_1_0 = UiTheme.a(param0.length, 0, param0, true);
+          stackIn_1_0 = UiTheme.joinNames(param0.length, 0, param0, true);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

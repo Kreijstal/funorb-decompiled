@@ -23,12 +23,12 @@ final class IconTextSceneWidget extends SceneWidget {
         }
     }
 
-    final static ConditionalTextValue f(byte param0) {
+    final static ConditionalTextValue createConnectionCaption(byte param0) {
         if (param0 == 13) {
-          return new ConditionalTextValue(BufferedSocket.a(param0 ^ 13), ImageProducerRasterBuffer.b(3236));
+          return new ConditionalTextValue(BufferedSocket.getConnectionCaption(param0 ^ 13), ImageProducerRasterBuffer.isConnectionClosed(3236));
         }
         field_Hb = (String) null;
-        return new ConditionalTextValue(BufferedSocket.a(param0 ^ 13), ImageProducerRasterBuffer.b(3236));
+        return new ConditionalTextValue(BufferedSocket.getConnectionCaption(param0 ^ 13), ImageProducerRasterBuffer.isConnectionClosed(3236));
     }
 
     final void setBoundsAndLayout(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
@@ -71,7 +71,7 @@ final class IconTextSceneWidget extends SceneWidget {
           }
           var4_int = param1.getGroupProgressByName(param3, param0 ^ 65);
           var5 = param1.getFileId(param2, (byte) 29, var4_int);
-          stackIn_3_0 = om.a(var5, var4_int, (byte) -123, param1);
+          stackIn_3_0 = om.loadSprites(var5, var4_int, (byte) -123, param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

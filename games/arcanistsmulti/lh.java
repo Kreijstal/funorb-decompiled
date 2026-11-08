@@ -48,8 +48,8 @@ final class lh implements WidgetPainter {
           var8 = param0.field_n + param2 + var12.field_H;
           var9 = var12.field_L + (param0.field_j + param3);
           SoftwareRasterizer.drawLine(var8, var9, var7 + var8, var9, this.field_b);
-          for (var10 = -1 + var12.c(false); 0 <= var10; var10--) {
-            SoftwareRasterizer.fillCircle(var8 + var7 * var12.a(0, var10) / var12.g((byte) -102), var9, this.field_i, this.field_m);
+          for (var10 = -1 + var12.getValueCount(false); 0 <= var10; var10--) {
+            SoftwareRasterizer.fillCircle(var8 + var7 * var12.getValueAt(0, var10) / var12.getSelectedValue((byte) -102), var9, this.field_i, this.field_m);
           }
           if (null == this.field_j) {
             return;

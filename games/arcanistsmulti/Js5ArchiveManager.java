@@ -15,7 +15,7 @@ final class Js5ArchiveManager {
     static PcmStreamMixer field_k;
     static String field_a;
 
-    final boolean b(byte param0) {
+    final boolean loadMasterIndex(byte param0) {
         int var7 = 0;
         int var3;
         byte[] var4;
@@ -62,7 +62,7 @@ final class Js5ArchiveManager {
         if (65 != var5.length) {
           throw new RuntimeException();
         }
-        var15 = CacheEntry.a(var10.position - (var13.length + 5), (byte) -93, var10.payload, 5);
+        var15 = CacheEntry.computeWhirlpoolDigest(var10.position - (var13.length + 5), (byte) -93, var10.payload, 5);
         for (var7 = 0; var7 < 64; var7++) {
           if (var15[var7] != var5[1 + var7]) {
             throw new RuntimeException();
@@ -77,7 +77,7 @@ final class Js5ArchiveManager {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
-    final CachedArchiveProvider a(SectorCacheStore param0, boolean param1, int param2, SectorCacheStore param3, int param4) {
+    final CachedArchiveProvider createProvider(SectorCacheStore param0, boolean param1, int param2, SectorCacheStore param3, int param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
@@ -199,7 +199,7 @@ final class Js5ArchiveManager {
         }
     }
 
-    final void a(int param0) {
+    final void processProviders(int param0) {
         int var2;
         int var3;
         CachedArchiveProvider stackIn_15_0 = null;
@@ -216,7 +216,7 @@ final class Js5ArchiveManager {
         }
         if (param0 != -8456) {
           var4 = (CharSequence) null;
-          Js5ArchiveManager.a((CharSequence) null, 112);
+          Js5ArchiveManager.normalizeNameForLookup((CharSequence) null, 112);
         }
         for (var2Lifetime1 = 0; this.field_b.length > var2Lifetime1; var2Lifetime1++) {
           stackIn_15_0 = this.field_b[var2Lifetime1];
@@ -226,7 +226,7 @@ final class Js5ArchiveManager {
         }
     }
 
-    final static String a(CharSequence param0, int param1) {
+    final static String normalizeNameForLookup(CharSequence param0, int param1) {
         int var6 = 0;
         StringBuilder discarded$0 = null;
         Object stackIn_27_0 = null;
@@ -251,7 +251,7 @@ final class Js5ArchiveManager {
           var2_int = 0;
           var3 = param0.length();
           while (var3 > var2_int) {
-            if (rk.a((byte) 120, param0.charAt(var2_int))) {
+            if (rk.isNameSeparator((byte) 120, param0.charAt(var2_int))) {
               var2_int++;
               continue;
             }
@@ -261,7 +261,7 @@ final class Js5ArchiveManager {
             field_g = (SceneWidget) null;
           }
           while (var2_int < var3) {
-            if (rk.a((byte) -16, param0.charAt(-1 + var3))) {
+            if (rk.isNameSeparator((byte) -16, param0.charAt(-1 + var3))) {
               var3--;
               continue;
             }

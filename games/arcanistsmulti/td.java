@@ -9,7 +9,7 @@ final class td extends UiContainer implements ButtonListener {
     static String field_D;
     private TextButton field_F;
 
-    final static void a(boolean param0, int param1, int param2) {
+    final static void storeLayoutValues(boolean param0, int param1, int param2) {
         TextLine.field_l = param2;
         SceneWidgetNode.field_p = param1;
         if (!param0) {
@@ -71,13 +71,13 @@ final class td extends UiContainer implements ButtonListener {
             return;
           }
           if (param4 == this.field_C) {
-            PacketBuffer.k(970210916);
+            PacketBuffer.openRegistration(970210916);
             return;
           }
           if (this.field_H != param4) {
             return;
           }
-          oo.g(4);
+          QuickChatCategory.showLoadingWithMessage(4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -93,7 +93,7 @@ final class td extends UiContainer implements ButtonListener {
         }
     }
 
-    final static boolean a(int param0) {
+    final static boolean isConnectedToLobby(int param0) {
         if (param0 > -76) {
           td.releaseStatics((byte) 111);
           if (null == CredentialKind.field_c) {
@@ -206,14 +206,14 @@ final class td extends UiContainer implements ButtonListener {
         }
     }
 
-    final static boolean e(boolean param0) {
+    final static boolean hasMembership(boolean param0) {
         if (!param0) {
           return true;
         }
         return qf.field_d >= 2 ? true : false;
     }
 
-    final static void a(int param0, byte param1, int param2, IndexedSprite param3, int param4, int param5) {
+    final static void drawShadedMaskRow(int param0, byte param1, int param2, IndexedSprite param3, int param4, int param5) {
         int incrementValue$0 = 0;
         RuntimeException stackIn_34_0 = null;
         StringBuilder stackIn_34_1 = null;

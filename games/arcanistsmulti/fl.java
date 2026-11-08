@@ -7,7 +7,7 @@ final class fl {
     static boolean field_a;
     static String[] field_b;
 
-    final static void a(int param0, String param1, String[] param2, int param3) {
+    final static void handleNameCheckReply(int param0, String param1, String[] param2, int param3) {
         RuntimeException var4 = null;
         int var5 = 0;
         String[] var6 = null;
@@ -26,7 +26,7 @@ final class fl {
           hb.field_Gb = DiskCacheWorker.field_g;
           if (param0 != 20657) {
             var6 = (String[]) null;
-            fl.a(49, (String) null, (String[]) null, 7);
+            fl.handleNameCheckReply(49, (String) null, (String[]) null, 7);
           }
           if (param3 != 255) {
             if (100 <= param3 &&
@@ -41,7 +41,7 @@ final class fl {
           }
           stackIn_6_0 = param0 ^ 12212;
           stackIn_7_1 = !(13 <= UiComponent.field_u);
-          SecondaryNodeDequeIterator.field_i = oj.a(stackIn_6_0, stackIn_7_1);
+          SecondaryNodeDequeIterator.field_i = oj.createMessageWithFlag(stackIn_6_0, stackIn_7_1);
           var7 = (String[]) null;
           ao.setNameSuggestions((String[]) null, -127);
           return;
@@ -97,7 +97,7 @@ final class fl {
           LinkButtonPainter.field_l.makeRasterTarget();
           var2.drawOpaque(0, -SpellProjectile.field_E.field_y);
           LinkButtonPainter.field_l.field_o = SpellProjectile.field_E.field_y;
-          oo.popClipState(-15405);
+          QuickChatCategory.popClipState(-15405);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "fl.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

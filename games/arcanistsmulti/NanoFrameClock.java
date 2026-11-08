@@ -19,10 +19,10 @@ final class NanoFrameClock extends FrameClock {
     static int[] field_n;
     static String field_p;
 
-    final static void a(int param0, ec param1, int param2, int param3) {
+    final static void noOperation(int param0, ec param1, int param2, int param3) {
         try {
           if (param3 < 60) {
-            NanoFrameClock.b(false);
+            NanoFrameClock.isLoggedIn(false);
           }
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "lj.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
@@ -48,7 +48,7 @@ final class NanoFrameClock extends FrameClock {
         }
     }
 
-    final static boolean b(boolean param0) {
+    final static boolean isLoggedIn(boolean param0) {
         if (!param0) {
           NanoFrameClock.releaseStatics(-97);
         }
@@ -109,7 +109,7 @@ final class NanoFrameClock extends FrameClock {
           param1 != 1 && (param1 != 7 ||
           null == SpriteState.field_z &&
           null == r.field_b)) {
-          LoginMethod.a(640, 480, 0);
+          LoginMethod.drawBackgroundGradient(640, 480, 0);
         }
         if (param1 == 0) {
           var8 = new Sprite(640, 480);
@@ -243,7 +243,7 @@ final class NanoFrameClock extends FrameClock {
           LoadingProgressDialog.field_mb.drawTransparent(320 - (LoadingProgressDialog.field_mb.field_n / 2 + 72), 0);
           LoadingProgressDialog.field_mb.drawTransparent(72 + (320 - LoadingProgressDialog.field_mb.field_n / 2), 0);
         }
-        rk.g(491697968);
+        rk.drawCursor(491697968);
     }
 
     public static void releaseStatics(int param0) {
@@ -258,7 +258,7 @@ final class NanoFrameClock extends FrameClock {
         field_q = null;
         if (param0 != -80) {
           ec var2 = (ec) null;
-          NanoFrameClock.a(-21, (ec) null, -125, -127);
+          NanoFrameClock.noOperation(-21, (ec) null, -125, -127);
         }
     }
 

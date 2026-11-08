@@ -8,7 +8,7 @@ final class f extends IntrusiveNode {
     static String field_i;
     static int field_h;
 
-    final static jg a(int param0, int param1, int param2, int param3) {
+    final static jg findChatLineAt(int param0, int param1, int param2, int param3) {
         boolean stackIn_46_0 = false;
         boolean stackIn_57_0 = false;
         boolean stackIn_64_0 = false;
@@ -55,9 +55,9 @@ final class f extends IntrusiveNode {
           var9 = 0;
           if (!wh.field_g &&
             var5 < hj.field_b) {
-            var10_int = ReflectionCheckRequest.a((byte) 126, var8_ref_jg.field_m);
-            if (var8_ref_jg.b(-84) >= var10_int && (var8_ref_jg.field_i ||
-              !sa.a(var8_ref_jg.field_n, 320))) {
+            var10_int = ReflectionCheckRequest.getChatMode((byte) 126, var8_ref_jg.field_m);
+            if (var8_ref_jg.getStatusIcon(-84) >= var10_int && (var8_ref_jg.field_i ||
+              !sa.isFriend(var8_ref_jg.field_n, 320))) {
               var9 = 1;
             }
           }
@@ -73,13 +73,13 @@ final class f extends IntrusiveNode {
               }
               var10 = ArchiveIndex.formatChatLine(3, var8_ref_jg);
               var11 = var10 + BitmapFont.escapeMarkup(var8_ref_jg.field_e);
-              var12 = WhirlpoolHasher.a(var8_ref_jg, (byte) 106);
+              var12 = WhirlpoolHasher.getChatLineColour(var8_ref_jg, (byte) 106);
               var8_ref_jg.field_a = new SceneWidget(0L, Battle.field_A, var11);
               var6 = var6 + param2;
               var8_ref_jg.field_a.field_ob = var12;
               var8_ref_jg.field_a.field_J = var12 + (-((var12 & 16711422) >> 1) + ((16711422 & Battle.field_A.field_J) >> 1));
               var8_ref_jg.field_a.field_eb = var12 + (-(var12 >> 1 & 8355711) + (Battle.field_A.field_eb >> 1 & 8355711));
-              var8_ref_jg.field_a.field_Z = oo.field_x;
+              var8_ref_jg.field_a.field_Z = QuickChatCategory.field_x;
               var5++;
             }
           }
@@ -99,7 +99,7 @@ final class f extends IntrusiveNode {
         var8Lifetime1 = var6 - (var7Lifetime1 - qo.field_f.field_Cb.field_B) + qo.field_f.field_Cb.field_I;
         qo.field_f.field_Cb.field_I = qo.field_f.field_Cb.field_I - var8Lifetime1;
         if (param0 != 16711422) {
-          f.a(-105, 114, -71, 4);
+          f.findChatLineAt(-105, 114, -71, 4);
           qo.field_f.field_Cb.field_db = qo.field_f.field_Cb.field_db + var8Lifetime1;
           if (ui.field_s) {
             qo.field_f.field_Cb.field_I = var7Lifetime1;
@@ -274,19 +274,19 @@ final class f extends IntrusiveNode {
         field_g = null;
     }
 
-    final static void a(boolean param0, int param1, int param2, boolean param3, byte param4, int param5, boolean param6, int param7, int param8, boolean param9, boolean param10, int param11, int param12, int param13) {
+    final static void drawChatArea(boolean param0, int param1, int param2, boolean param3, byte param4, int param5, boolean param6, int param7, int param8, boolean param9, boolean param10, int param11, int param12, int param13) {
         TextLayout.field_c = null;
         TextHotspotWidget.postPendingMessage(101);
-        param3 = ChatInputWidget.a(0, param8, param1, param11, param3, param2, param13);
-        fn.a(param9, param3, param7, param0, param5, param12, param10, param13, param6, 83);
-        IntrusiveNodeHashTable.a(1, param10, param7);
+        param3 = ChatInputWidget.processOverlayInput(0, param8, param1, param11, param3, param2, param13);
+        fn.drawLobbyFrame(param9, param3, param7, param0, param5, param12, param10, param13, param6, 83);
+        IntrusiveNodeHashTable.openLobbyRowMenu(1, param10, param7);
         if (param4 >= -28) {
           f.releaseStatics(-1);
         } else {
-          OptionsDialog.a(param1, param7, false, param3);
+          OptionsDialog.updateSlidingPanels(param1, param7, false, param3);
           return;
         }
-        OptionsDialog.a(param1, param7, false, param3);
+        OptionsDialog.updateSlidingPanels(param1, param7, false, param3);
     }
 
     static {

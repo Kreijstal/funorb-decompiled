@@ -18,7 +18,7 @@ final class of implements WidgetPainter {
     private int field_m;
     static String field_k;
 
-    final static void b(int param0, int param1) {
+    final static void sendAllListRequests(int param0, int param1) {
         int var3 = 0;
         nk var4 = null;
         RuntimeException decompiledCaughtException = null;
@@ -30,7 +30,7 @@ final class of implements WidgetPainter {
           }
           var4 = (nk) (ContextActionMenu.field_Lb.first(12623));
           while (var4 != null) {
-            fj.a(-26971, var4, param0);
+            fj.sendListRequest(-26971, var4, param0);
             var4 = (nk) (ContextActionMenu.field_Lb.next(param1 - 16));
           }
           return;
@@ -41,7 +41,7 @@ final class of implements WidgetPainter {
         }
     }
 
-    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static Sprite[] createGradientFrame(int param0, int param1, int param2, int param3, int param4, int param5) {
         Sprite var21 = null;
         Sprite var20 = null;
         int[] var19 = SoftwareRasterizer.field_l;
@@ -77,7 +77,7 @@ final class of implements WidgetPainter {
           return new Sprite[]{var10, var11, var10, var9, (Sprite) (var14), var9, var12, var13, var12};
         }
         ResourceArchive var15 = (ResourceArchive) null;
-        of.a(90, (byte) 7, (ResourceArchive) null, 120);
+        of.loadSprites(90, (byte) 7, (ResourceArchive) null, 120);
         if (param3 > 0) {
           var20 = new Sprite(16, 16);
           var14 = var20;
@@ -97,7 +97,7 @@ final class of implements WidgetPainter {
         return param1 >= 6144 ? -ge.field_l[-param1 + 8192] : -ge.field_l[-4096 + param1];
     }
 
-    final static Sprite[] a(int param0, byte param1, ResourceArchive param2, int param3) {
+    final static Sprite[] loadSprites(int param0, byte param1, ResourceArchive param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
@@ -108,7 +108,7 @@ final class of implements WidgetPainter {
         RuntimeException decompiledCaughtException = null;
         try {
           var4_int = -94 % ((param1 + 80) / 35);
-          if (fc.a(-125, param2, param0, param3)) {
+          if (fc.decodeSpriteSheet(-125, param2, param0, param3)) {
             stackIn_4_0 = IterableNodeHashTable.createDecodedSprites((byte) -116);
             return stackIn_4_0;
           }

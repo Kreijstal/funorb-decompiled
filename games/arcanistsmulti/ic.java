@@ -16,7 +16,7 @@ final class ic {
         field_c = null;
     }
 
-    final static Sprite[] a(Sprite[] param0, byte param1) {
+    final static Sprite[] clearTrimOffsets(Sprite[] param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         Sprite var3 = null;

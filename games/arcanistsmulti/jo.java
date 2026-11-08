@@ -8,15 +8,15 @@ final class jo {
     static boolean field_b;
     static int field_e;
 
-    final static void a(boolean param0) {
+    final static void updateTransitionCounters(boolean param0) {
         int var2;
         var2 = ArcanistsMulti.field_G ? 1 : 0;
         if (ce.field_h <= 0) {
           if (sm.field_a > 0) {
             sm.field_a = sm.field_a - 1;
           } else {
-            if (oo.field_y > 0) {
-              oo.field_y = oo.field_y - 1;
+            if (QuickChatCategory.field_y > 0) {
+              QuickChatCategory.field_y = QuickChatCategory.field_y - 1;
             }
           }
         } else {
@@ -31,8 +31,8 @@ final class jo {
         if (sm.field_a > 0) {
           TextHotspotWidget.positionZoomedPanels(16, sm.field_a);
         }
-        if (oo.field_y > 0) {
-          TextHotspotWidget.positionZoomedPanels(16, oo.field_y);
+        if (QuickChatCategory.field_y > 0) {
+          TextHotspotWidget.positionZoomedPanels(16, QuickChatCategory.field_y);
         }
     }
 

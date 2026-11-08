@@ -68,8 +68,8 @@ abstract class TextLayout {
         }
     }
 
-    private final static void a(ec param0, ec param1, int param2, int param3, int param4, int param5) {
-        kg.field_h = param1;
+    private final static void setFrameStyles(ec param0, ec param1, int param2, int param3, int param4, int param5) {
+        QuickChatCategoryCache.field_h = param1;
         vf.field_s = param0;
         ic.field_a = param5;
         if (param4 != -1) {
@@ -111,7 +111,7 @@ abstract class TextLayout {
         return this.field_f.length;
     }
 
-    final static void a(byte param0, java.awt.Canvas param1, boolean param2) {
+    final static void drawLoadingFrame(byte param0, java.awt.Canvas param1, boolean param2) {
         int var3_int = 0;
         int var4 = 0;
         java.awt.Canvas var5 = null;
@@ -124,12 +124,12 @@ abstract class TextLayout {
         try {
           if (param0 != 14) {
             var5 = (java.awt.Canvas) null;
-            TextLayout.a((byte) 126, (java.awt.Canvas) null, true);
+            TextLayout.drawLoadingFrame((byte) 126, (java.awt.Canvas) null, true);
           }
           if (10 <= ih.field_f) {
-            if (!TextFieldValidator.d(true)) {
+            if (!TextFieldValidator.isIntroFinished(true)) {
               SoftwareRasterizer.clear();
-              IntKeyLookup.a(320, 240, param0 - 13);
+              IntKeyLookup.drawLogoIntro(320, 240, param0 - 13);
               OptionsDialog.paintCanvasNow(param1, (byte) -101, 0, 0);
             } else {
               if (fj.field_j != 0) {
@@ -241,7 +241,7 @@ abstract class TextLayout {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, boolean param8, ec param9, int param10, int param11, BitmapFont param12, int param13, ec param14, int param15, BitmapFont param16, int param17, ec param18, int param19) {
+    final static void configureLobbyStyles(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, boolean param8, ec param9, int param10, int param11, BitmapFont param12, int param13, ec param14, int param15, BitmapFont param16, int param17, ec param18, int param19) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -261,11 +261,11 @@ abstract class TextLayout {
           }
           TextLine.field_c = param12;
           ResizableModalPanel.field_T = param16;
-          BevelTextPainter.a(param4, param6, param10, param11, 109);
-          sk.a(param14, -28995, param2, param17);
-          TextLayout.a(param9, param18, param7, param3, -1, param1);
-          ho.a((byte) 101, param0, param5);
-          OptionsDialog.a(param13, param19, param15, (byte) -43);
+          BevelTextPainter.storeTimingParameters(param4, param6, param10, param11, 109);
+          sk.setCameraFrame(param14, -28995, param2, param17);
+          TextLayout.setFrameStyles(param9, param18, param7, param3, -1, param1);
+          ho.setScrollPosition((byte) 101, param0, param5);
+          OptionsDialog.storeLoginMethodLayout(param13, param19, param15, (byte) -43);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

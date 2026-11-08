@@ -15,7 +15,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
     static int field_K;
     private TextButton field_I;
 
-    private final int a(String param0, int param1, byte param2, UiComponent param3, String param4, int param5, int param6) {
+    private final int addFieldWithHelp(String param0, int param1, byte param2, UiComponent param3, String param4, int param5, int param6) {
         int discarded$1 = 0;
         RuntimeException var8 = null;
         ValidationHelpWidget var9 = null;
@@ -33,7 +33,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
         try {
           if (param2 != -123) {
             var10 = (String) null;
-            discarded$1 = this.a((String) null, -25, (byte) -96, (UiComponent) null, (String) null, 57, 33);
+            discarded$1 = this.addFieldWithHelp((String) null, -25, (byte) -96, (UiComponent) null, (String) null, 57, 33);
           }
           var11 = new LabeledField(20, param5, 120 + param6, 25, param3, false, 120, 3, ia.field_c, 16777215, param0);
           this.addChild(-108, var11);
@@ -110,7 +110,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
         }
     }
 
-    private final int a(int param0, String param1, int param2, UiComponent param3, String param4, int param5) {
+    private final int addFieldWithHelpDefault(int param0, String param1, int param2, UiComponent param3, String param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -125,7 +125,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
           if (param5 >= -9) {
             this.field_O = (TextButton) null;
           }
-          stackIn_3_0 = this.a(param4, 35, (byte) -123, param3, param1, param0, param2);
+          stackIn_3_0 = this.addFieldWithHelp(param4, 35, (byte) -123, param3, param1, param0, param2);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -167,7 +167,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
         if (param0 != -7) {
           return;
         }
-        ((NameValidator) (this.field_D.getValidationProvider(0))).e(127);
+        ((NameValidator) (this.field_D.getValidationProvider(0))).resetLookup(127);
     }
 
     public static void releaseStatics(byte param0) {
@@ -235,7 +235,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
         var2.setBounds(50, var3, 270, 20, -85);
         this.addChild(-85, var2);
         var3 += 50;
-        var3 = var3 + (5 + this.a(var3, bj.field_kb, 170, this.field_D, CredentialKind.field_h, -124));
+        var3 = var3 + (5 + this.addFieldWithHelpDefault(var3, bj.field_kb, 170, this.field_D, CredentialKind.field_h, -124));
         this.field_O.setBounds(40, var3, var5, -var5 + 496 >> 1, -67);
         this.field_I.setBounds(40, var3 + 15, 60, 3 + var4, -126);
         this.field_I.field_o = (UiListener) (this);
@@ -252,7 +252,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
         if (!this.isReadyToSubmit(16777215)) {
           return;
         }
-        he.a(1, this.field_D.field_g);
+        he.showStatusMessage(1, this.field_D.field_g);
         if (!param0) {
           field_G = -57;
         }
@@ -320,7 +320,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
         }
     }
 
-    final static void a(int param0, IndexedSprite param1, int param2, int param3, Battle param4, boolean param5, int param6, byte param7) {
+    final static void carveMask(int param0, IndexedSprite param1, int param2, int param3, Battle param4, boolean param5, int param6, byte param7) {
         int incrementValue$4 = 0;
         int incrementValue$3 = 0;
         int incrementValue$5 = 0;

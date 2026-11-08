@@ -10,7 +10,7 @@ final class VorbisResidue {
     private int field_a;
     private int field_b;
 
-    final void a(float[] param0, int param1, boolean param2) {
+    final void decode(float[] param0, int param1, boolean param2) {
         int var8 = 0;
         int var17 = 0;
         int var16 = 0;

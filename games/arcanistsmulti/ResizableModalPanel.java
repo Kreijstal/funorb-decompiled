@@ -219,14 +219,14 @@ abstract class ResizableModalPanel extends FadingModalPanel {
     }
 
     boolean isFullyFadedOut(byte param0) {
-        this.a(109);
+        this.finishResize(109);
         if (param0 != 45) {
           return false;
         }
         return super.isFullyFadedOut((byte) 45);
     }
 
-    void a(int param0) {
+    void finishResize(int param0) {
         if (param0 < 89) {
           return;
         }
@@ -238,7 +238,7 @@ abstract class ResizableModalPanel extends FadingModalPanel {
         this.onResizeFinished(false);
     }
 
-    final static void a(int param0, ge param1, int param2) {
+    final static void sendGameOption(int param0, ge param1, int param2) {
         if (param0 != 20) {
           return;
         }

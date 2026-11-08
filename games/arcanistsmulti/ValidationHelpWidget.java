@@ -51,7 +51,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
           var17 = DiskCacheRequest.field_D;
           if (!var17.equals(this.field_g)) {
             this.field_g = var17;
-            this.g((byte) 63);
+            this.rebuildHotspots((byte) 63);
           }
           super.drawLayer((byte) -58, param1, param2, param3);
           if (param0 > -52) {
@@ -82,7 +82,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
             this.field_Y = new Sprite(var11, var12);
             fk.setSpriteRasterTarget(this.field_Y, -23095);
             var21.drawRotatedAboutPivot(112, 144, var21.field_n << 4, var21.field_w << 4, -this.field_X << 10, 4096);
-            oo.popClipState(-15405);
+            QuickChatCategory.popClipState(-15405);
             this.field_Y.drawAdditive(-(var21.field_n >> 1) + var9, var10 - var21.field_w, 256);
             return;
           }
@@ -90,7 +90,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
             this.field_Y = new Sprite(var11, var12);
             fk.setSpriteRasterTarget(this.field_Y, -23095);
             var21.drawRotatedAboutPivot(112, 144, var21.field_n << 4, var21.field_w << 4, -this.field_X << 10, 4096);
-            oo.popClipState(-15405);
+            QuickChatCategory.popClipState(-15405);
             this.field_Y.drawAdditive(-(var21.field_n >> 1) + var9, var10 - var21.field_w, 256);
             return;
           }
@@ -98,14 +98,14 @@ final class ValidationHelpWidget extends TextHotspotWidget {
             fk.setSpriteRasterTarget(this.field_Y, -23095);
             SoftwareRasterizer.clear();
             var21.drawRotatedAboutPivot(112, 144, var21.field_n << 4, var21.field_w << 4, -this.field_X << 10, 4096);
-            oo.popClipState(-15405);
+            QuickChatCategory.popClipState(-15405);
             this.field_Y.drawAdditive(-(var21.field_n >> 1) + var9, var10 - var21.field_w, 256);
             return;
           }
           this.field_Y = new Sprite(var11, var12);
           fk.setSpriteRasterTarget(this.field_Y, -23095);
           var21.drawRotatedAboutPivot(112, 144, var21.field_n << 4, var21.field_w << 4, -this.field_X << 10, 4096);
-          oo.popClipState(-15405);
+          QuickChatCategory.popClipState(-15405);
           this.field_Y.drawAdditive(-(var21.field_n >> 1) + var9, var10 - var21.field_w, 256);
           return;
         }
@@ -119,7 +119,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         }
         if (!var5.equals(this.field_g)) {
           this.field_g = var5;
-          this.g((byte) 63);
+          this.rebuildHotspots((byte) 63);
         }
         super.drawLayer((byte) -58, param1, param2, param3);
         if (param0 <= -52) {
@@ -135,7 +135,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
               this.field_Y = new Sprite(var11Lifetime1, var12Lifetime1);
               fk.setSpriteRasterTarget(this.field_Y, -23095);
               var23.drawRotatedAboutPivot(112, 144, var23.field_n << 4, var23.field_w << 4, -this.field_X << 10, 4096);
-              oo.popClipState(-15405);
+              QuickChatCategory.popClipState(-15405);
               this.field_Y.drawAdditive(-(var23.field_n >> 1) + var9Lifetime1, var10Lifetime1 - var23.field_w, 256);
               return;
             }
@@ -143,7 +143,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
               this.field_Y = new Sprite(var11Lifetime1, var12Lifetime1);
               fk.setSpriteRasterTarget(this.field_Y, -23095);
               var23.drawRotatedAboutPivot(112, 144, var23.field_n << 4, var23.field_w << 4, -this.field_X << 10, 4096);
-              oo.popClipState(-15405);
+              QuickChatCategory.popClipState(-15405);
               this.field_Y.drawAdditive(-(var23.field_n >> 1) + var9Lifetime1, var10Lifetime1 - var23.field_w, 256);
               return;
             }
@@ -151,14 +151,14 @@ final class ValidationHelpWidget extends TextHotspotWidget {
               fk.setSpriteRasterTarget(this.field_Y, -23095);
               SoftwareRasterizer.clear();
               var23.drawRotatedAboutPivot(112, 144, var23.field_n << 4, var23.field_w << 4, -this.field_X << 10, 4096);
-              oo.popClipState(-15405);
+              QuickChatCategory.popClipState(-15405);
               this.field_Y.drawAdditive(-(var23.field_n >> 1) + var9Lifetime1, var10Lifetime1 - var23.field_w, 256);
               return;
             }
             this.field_Y = new Sprite(var11Lifetime1, var12Lifetime1);
             fk.setSpriteRasterTarget(this.field_Y, -23095);
             var23.drawRotatedAboutPivot(112, 144, var23.field_n << 4, var23.field_w << 4, -this.field_X << 10, 4096);
-            oo.popClipState(-15405);
+            QuickChatCategory.popClipState(-15405);
             this.field_Y.drawAdditive(-(var23.field_n >> 1) + var9Lifetime1, var10Lifetime1 - var23.field_w, 256);
             return;
           }
@@ -171,7 +171,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
               this.field_Y = new Sprite(var11Lifetime1Lifetime1, var12Lifetime1Lifetime1);
               fk.setSpriteRasterTarget(this.field_Y, -23095);
               var24.drawRotatedAboutPivot(112, 144, var24.field_n << 4, var24.field_w << 4, -this.field_X << 10, 4096);
-              oo.popClipState(-15405);
+              QuickChatCategory.popClipState(-15405);
               this.field_Y.drawAdditive(-(var24.field_n >> 1) + var9Lifetime1, var10Lifetime1 - var24.field_w, 256);
               return;
             }
@@ -179,7 +179,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
               this.field_Y = new Sprite(var11Lifetime1Lifetime1, var12Lifetime1Lifetime1);
               fk.setSpriteRasterTarget(this.field_Y, -23095);
               var24.drawRotatedAboutPivot(112, 144, var24.field_n << 4, var24.field_w << 4, -this.field_X << 10, 4096);
-              oo.popClipState(-15405);
+              QuickChatCategory.popClipState(-15405);
               this.field_Y.drawAdditive(-(var24.field_n >> 1) + var9Lifetime1, var10Lifetime1 - var24.field_w, 256);
               return;
             }
@@ -187,14 +187,14 @@ final class ValidationHelpWidget extends TextHotspotWidget {
               this.field_Y = new Sprite(var11Lifetime1Lifetime1, var12Lifetime1Lifetime1);
               fk.setSpriteRasterTarget(this.field_Y, -23095);
               var24.drawRotatedAboutPivot(112, 144, var24.field_n << 4, var24.field_w << 4, -this.field_X << 10, 4096);
-              oo.popClipState(-15405);
+              QuickChatCategory.popClipState(-15405);
               this.field_Y.drawAdditive(-(var24.field_n >> 1) + var9Lifetime1, var10Lifetime1 - var24.field_w, 256);
               return;
             }
             fk.setSpriteRasterTarget(this.field_Y, -23095);
             SoftwareRasterizer.clear();
             var24.drawRotatedAboutPivot(112, 144, var24.field_n << 4, var24.field_w << 4, -this.field_X << 10, 4096);
-            oo.popClipState(-15405);
+            QuickChatCategory.popClipState(-15405);
             this.field_Y.drawAdditive(-(var24.field_n >> 1) + var9Lifetime1, var10Lifetime1 - var24.field_w, 256);
             return;
           }
@@ -236,7 +236,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
           this.field_Y = new Sprite(var11Lifetime2, var12Lifetime2);
           fk.setSpriteRasterTarget(this.field_Y, -23095);
           var34.drawRotatedAboutPivot(112, 144, var34.field_n << 4, var34.field_w << 4, -this.field_X << 10, 4096);
-          oo.popClipState(-15405);
+          QuickChatCategory.popClipState(-15405);
           this.field_Y.drawAdditive(-(var34.field_n >> 1) + var9Lifetime2, var10Lifetime2 - var34.field_w, 256);
           return;
         }
@@ -244,7 +244,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
           this.field_Y = new Sprite(var11Lifetime2, var12Lifetime2);
           fk.setSpriteRasterTarget(this.field_Y, -23095);
           var34.drawRotatedAboutPivot(112, 144, var34.field_n << 4, var34.field_w << 4, -this.field_X << 10, 4096);
-          oo.popClipState(-15405);
+          QuickChatCategory.popClipState(-15405);
           this.field_Y.drawAdditive(-(var34.field_n >> 1) + var9Lifetime2, var10Lifetime2 - var34.field_w, 256);
           return;
         }
@@ -252,27 +252,27 @@ final class ValidationHelpWidget extends TextHotspotWidget {
           fk.setSpriteRasterTarget(this.field_Y, -23095);
           SoftwareRasterizer.clear();
           var34.drawRotatedAboutPivot(112, 144, var34.field_n << 4, var34.field_w << 4, -this.field_X << 10, 4096);
-          oo.popClipState(-15405);
+          QuickChatCategory.popClipState(-15405);
           this.field_Y.drawAdditive(-(var34.field_n >> 1) + var9Lifetime2, var10Lifetime2 - var34.field_w, 256);
           return;
         }
         this.field_Y = new Sprite(var11Lifetime2, var12Lifetime2);
         fk.setSpriteRasterTarget(this.field_Y, -23095);
         var34.drawRotatedAboutPivot(112, 144, var34.field_n << 4, var34.field_w << 4, -this.field_X << 10, 4096);
-        oo.popClipState(-15405);
+        QuickChatCategory.popClipState(-15405);
         this.field_Y.drawAdditive(-(var34.field_n >> 1) + var9Lifetime2, var10Lifetime2 - var34.field_w, 256);
     }
 
-    private final static void c(boolean param0) {
+    private final static void openDropTargets(boolean param0) {
         if (!param0) {
           return;
         }
-        DropTargetWidget.a(IntrusiveNode.field_c, false, SectorCacheStore.field_l, mf.field_d, ConnectionState.field_c);
+        DropTargetWidget.buildAccountScene(IntrusiveNode.field_c, false, SectorCacheStore.field_l, mf.field_d, ConnectionState.field_c);
     }
 
     final static void showLoginPanelWithOptions(boolean param0, boolean param1, boolean param2) {
         String var4 = (String) null;
-        BevelBoxPainter.a(param2, (String) null, param0, param1);
+        BevelBoxPainter.openLoginPanel(param2, (String) null, param0, param1);
     }
 
     final static String decodeString(byte param0, byte[] param1) {
@@ -373,7 +373,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
             var5 = 1;
             var4 = 1;
           }
-          tn.field_Gb = ri.a(var2 * var5, (byte) 66, var4 * var2);
+          tn.field_Gb = ri.buildRotationMatrix(var2 * var5, (byte) 66, var4 * var2);
           return;
         }
         if (var3 < 105) {
@@ -426,7 +426,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
             var5Lifetime1 = 1;
             var4Lifetime1 = 1;
           }
-          tn.field_Gb = ri.a(var2 * var5Lifetime1, (byte) 66, var4Lifetime1 * var2);
+          tn.field_Gb = ri.buildRotationMatrix(var2 * var5Lifetime1, (byte) 66, var4Lifetime1 * var2);
           return;
         }
         if (120 <= var3) {
@@ -478,7 +478,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
             var5Lifetime2 = 1;
             var4Lifetime2 = 1;
           }
-          tn.field_Gb = ri.a(var2 * var5Lifetime2, (byte) 66, var4Lifetime2 * var2);
+          tn.field_Gb = ri.buildRotationMatrix(var2 * var5Lifetime2, (byte) 66, var4Lifetime2 * var2);
           return;
         }
         var3 = -var3 + 120;
@@ -531,7 +531,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
           var5Lifetime3 = 1;
           var4Lifetime3 = 1;
         }
-        tn.field_Gb = ri.a(var2Lifetime1 * var5Lifetime3, (byte) 66, var4Lifetime3 * var2Lifetime1);
+        tn.field_Gb = ri.buildRotationMatrix(var2Lifetime1 * var5Lifetime3, (byte) 66, var4Lifetime3 * var2Lifetime1);
         return;
     }
 
@@ -571,7 +571,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         }
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void renderTiledBackground(int param0, int param1, int param2) {
         if (param0 != 2) {
           return;
         }
@@ -582,7 +582,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
           }
           pn.field_c = new Sprite(param2 / 2, param1 / 2);
           pn.field_c.makeRasterTarget();
-          LoginMethod.a(param2, param1, 0);
+          LoginMethod.drawBackgroundGradient(param2, param1, 0);
           ce.field_m.makeRasterTarget(true);
           ClipState.tileSprite(pn.field_c, param0 + 0);
           return;
@@ -595,7 +595,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
             }
             pn.field_c = new Sprite(param2 / 2, param1 / 2);
             pn.field_c.makeRasterTarget();
-            LoginMethod.a(param2, param1, 0);
+            LoginMethod.drawBackgroundGradient(param2, param1, 0);
             ce.field_m.makeRasterTarget(true);
             ClipState.tileSprite(pn.field_c, param0 + 0);
             return;
@@ -610,7 +610,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
           }
           pn.field_c = new Sprite(param2 / 2, param1 / 2);
           pn.field_c.makeRasterTarget();
-          LoginMethod.a(param2, param1, 0);
+          LoginMethod.drawBackgroundGradient(param2, param1, 0);
           ce.field_m.makeRasterTarget(true);
           ClipState.tileSprite(pn.field_c, param0 + 0);
           return;
@@ -622,7 +622,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
           }
           pn.field_c = new Sprite(param2 / 2, param1 / 2);
           pn.field_c.makeRasterTarget();
-          LoginMethod.a(param2, param1, 0);
+          LoginMethod.drawBackgroundGradient(param2, param1, 0);
           ce.field_m.makeRasterTarget(true);
           ClipState.tileSprite(pn.field_c, param0 + 0);
           return;
@@ -635,7 +635,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         }
         pn.field_c = new Sprite(param2 / 2, param1 / 2);
         pn.field_c.makeRasterTarget();
-        LoginMethod.a(param2, param1, 0);
+        LoginMethod.drawBackgroundGradient(param2, param1, 0);
         ce.field_m.makeRasterTarget(true);
         ClipState.tileSprite(pn.field_c, param0 + 0);
     }
@@ -709,14 +709,14 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         }
     }
 
-    final static void i(byte param0) {
-        ValidationHelpWidget.c(true);
+    final static void openDropTargetsTwice(byte param0) {
+        ValidationHelpWidget.openDropTargets(true);
         if (param0 >= -13) {
-          ValidationHelpWidget.c(true);
+          ValidationHelpWidget.openDropTargets(true);
         }
     }
 
-    final static int h(byte param0) {
+    final static int getSelectedIndex(byte param0) {
         if (param0 != -34) {
           ValidationHelpWidget.releaseStatics(-11);
           return qc.field_a;

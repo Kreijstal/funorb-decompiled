@@ -44,12 +44,12 @@ final class IntrusiveDeque {
         return var2;
     }
 
-    final static void a(byte param0) {
+    final static void startReconnect(byte param0) {
         if (!qe.field_p) {
           throw new IllegalStateException();
         }
         lh.field_n = true;
-        CachedArchiveProvider.a(true, (byte) -125);
+        CachedArchiveProvider.showLoginPanelDefault(true, (byte) -125);
         if (param0 != 4) {
           field_d = 12;
         }
@@ -126,7 +126,7 @@ final class IntrusiveDeque {
         return var2;
     }
 
-    final static void a(byte[] param0, int param1, int param2, int param3, int param4, int param5, int param6, byte[] param7, int param8, boolean param9) {
+    final static void blitMaskedBytes(byte[] param0, int param1, int param2, int param3, int param4, int param5, int param6, byte[] param7, int param8, boolean param9) {
         int var12 = 0;
         int incrementValue$3 = 0;
         int incrementValue$5 = 0;

@@ -14,7 +14,7 @@ final class ho {
     boolean field_f;
     static String field_d;
 
-    final static void a(int param0, CipherPacketBuffer param1) {
+    final static void answerReflectionCheck(int param0, CipherPacketBuffer param1) {
         try {
           int var5 = 0;
           int var10_int = 0;
@@ -224,7 +224,7 @@ final class ho {
         }
     }
 
-    final static void a(byte param0, int param1, int param2) {
+    final static void setScrollPosition(byte param0, int param1, int param2) {
         if (param0 <= 36) {
           return;
         }
@@ -232,14 +232,14 @@ final class ho {
         af.field_Eb = param2;
     }
 
-    final static void a(int param0) {
-        IntrusiveDequeCursor.a(false);
+    final static void closeOverlays(int param0) {
+        IntrusiveDequeCursor.closePlayerMenu(false);
         if (param0 != 0) {
           return;
         }
-        AlternateUsernameCredentials.c((byte) 13);
+        AlternateUsernameCredentials.clearPasswordScene((byte) 13);
         db.field_a = null;
-        SecondaryNodeDeque.a(14);
+        SecondaryNodeDeque.closeQuickChat(14);
     }
 
     final static ho createWithLines(byte param0, String[] param1) {
@@ -274,13 +274,13 @@ final class ho {
         }
     }
 
-    final static String b(byte param0) {
+    final static String getLoginUsername(byte param0) {
         String var1 = "";
         if (null != wh.field_f) {
           var1 = wh.field_f.getUsername(true);
         }
         if (0 == var1.length()) {
-          var1 = SoundCache.a(0);
+          var1 = SoundCache.getStoredUsername(0);
         }
         int var2 = 101 / ((24 - param0) / 56);
         if (var1.length() == 0) {
@@ -289,7 +289,7 @@ final class ho {
         return var1;
     }
 
-    final static boolean a(byte param0) {
+    final static boolean isMembersOnly(byte param0) {
         int var1 = -61 / ((12 - param0) / 47);
         return bj.field_mb;
     }

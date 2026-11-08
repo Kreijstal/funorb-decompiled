@@ -968,7 +968,7 @@ final class SpellProjectile extends DualLinkNode {
                                                   this.applyAreaEffect(25, 64, 12, param0 - 6008);
                                                   this.field_I = 26;
                                                   this.field_F = this.field_F / 2;
-                                                  this.field_p = tk.field_x[0];
+                                                  this.field_p = QuickChatPhrase.field_x[0];
                                                   this.field_u = this.field_u / 2;
                                                   this.field_y = 50;
                                                   this.field_r = this.field_p.field_n / 2;
@@ -2566,8 +2566,8 @@ final class SpellProjectile extends DualLinkNode {
                         if (this.field_y > 150) {
                           var7 = param2 - this.field_G;
                         }
-                        var8 = on.a(var6, var7, (byte) -110);
-                        var9 = on.a(this.field_u, this.field_F, (byte) -89);
+                        var8 = on.computeAngle(var6, var7, (byte) -110);
+                        var9 = on.computeAngle(this.field_u, this.field_F, (byte) -89);
                         var10 = -4096 + (8191 & -var9 + var8 + 4096);
                         var11 = ConnectionState.greatestCommonDivisor(this.field_F, this.field_u, false);
                         if (var10 < -1024 ||
@@ -2639,8 +2639,8 @@ final class SpellProjectile extends DualLinkNode {
                           boolean decompiledFrameRemainder4 = true;
                           var6 = -this.field_v + param1;
                           var7 = param2 - this.field_G;
-                          var8 = on.a(var6, var7, (byte) -90);
-                          var9 = on.a(this.field_u, this.field_F, (byte) 57);
+                          var8 = on.computeAngle(var6, var7, (byte) -90);
+                          var9 = on.computeAngle(this.field_u, this.field_F, (byte) 57);
                           var10 = -4096 + (var8 - (var9 - 4096) & 8191);
                           var11 = ConnectionState.greatestCommonDivisor(this.field_F, this.field_u, false);
                           if (0 == this.field_I) {
@@ -6862,7 +6862,7 @@ final class SpellProjectile extends DualLinkNode {
             this.field_p = DualLinkDeque.field_b[2].toRgbSprite();
           }
           if (this.field_I == 26) {
-            this.field_p = tk.field_x[0];
+            this.field_p = QuickChatPhrase.field_x[0];
           }
           if (this.field_I == 23) {
             this.field_p = DualLinkDeque.field_b[2].toRgbSprite();
@@ -6874,7 +6874,7 @@ final class SpellProjectile extends DualLinkNode {
             this.field_p = DualLinkDeque.field_b[1].toRgbSprite();
           }
           if (this.field_I == 28) {
-            this.field_p = tk.field_x[0];
+            this.field_p = QuickChatPhrase.field_x[0];
           }
           if (this.field_I == 21) {
             this.field_p = gj.field_f[5].toRgbSprite();
@@ -7418,7 +7418,7 @@ final class SpellProjectile extends DualLinkNode {
         var3 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           if (param0 < 58) {
-            SpellProjectile.g(27);
+            SpellProjectile.releaseStatics(27);
           }
           if (this.field_G < this.field_q.field_H / 4) {
             if (this.field_G >= this.field_q.field_H / 5) {
@@ -7460,12 +7460,12 @@ final class SpellProjectile extends DualLinkNode {
         }
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
           if (param0 != 2) {
-            SpellProjectile.g(-17);
+            SpellProjectile.releaseStatics(-17);
           }
           field_E = null;
           field_m = null;
@@ -8772,13 +8772,13 @@ final class SpellProjectile extends DualLinkNode {
                                                                                                                                                   return;
                                                                                                                                                 }
                                                                                                                                               }
-                                                                                                                                              if (vl.field_i == null) {
+                                                                                                                                              if (HotspotRegion.field_i == null) {
                                                                                                                                                 return;
                                                                                                                                               }
                                                                                                                                               if (this.field_H < 0) {
                                                                                                                                                 return;
                                                                                                                                               }
-                                                                                                                                              vl.field_i[this.field_H].draw(-8 + this.field_v + param2, -8 + param0 + this.field_G);
+                                                                                                                                              HotspotRegion.field_i[this.field_H].draw(-8 + this.field_v + param2, -8 + param0 + this.field_G);
                                                                                                                                               if (var16 == 0) {
                                                                                                                                                 return;
                                                                                                                                               }
@@ -8893,18 +8893,18 @@ final class SpellProjectile extends DualLinkNode {
                                                                                                                                           if (var5 - 1 > var10) {
                                                                                                                                             SoftwareRasterizer.drawLine(var6[var10], var7_ref_int__[var10], var6[var10 + 1], var7_ref_int__[var10 + 1], 16777215);
                                                                                                                                           }
-                                                                                                                                          gn.a(8, (byte) 105, -(25 * (this.field_y * var10) / var5) + 255 >> 4, var6[var10], var7_ref_int__[var10]);
+                                                                                                                                          QuickChatPhraseCache.fillCircleMasked(8, (byte) 105, -(25 * (this.field_y * var10) / var5) + 255 >> 4, var6[var10], var7_ref_int__[var10]);
                                                                                                                                         } else {
                                                                                                                                           if (~(-1 + var5) < ~var10) {
                                                                                                                                             SoftwareRasterizer.drawLine(var6[var10], var7_ref_int__[var10], var6[1 + var10], var7_ref_int__[1 + var10], 16777215);
                                                                                                                                           }
-                                                                                                                                          gn.a(8, (byte) 125, 255 - var10 * (this.field_y * 25 - 500) / var5 >> 4, var6[var10], var7_ref_int__[var10]);
+                                                                                                                                          QuickChatPhraseCache.fillCircleMasked(8, (byte) 125, 255 - var10 * (this.field_y * 25 - 500) / var5 >> 4, var6[var10], var7_ref_int__[var10]);
                                                                                                                                         }
                                                                                                                                       } else {
                                                                                                                                         if (-1 + var5 > var10) {
                                                                                                                                           SoftwareRasterizer.drawLineBlendedInclusive(var6[var10], var7_ref_int__[var10], var6[var10 + 1], var7_ref_int__[1 + var10], 16777215, -(this.field_y * 5 * var10 / var5) + 255 >> 4);
                                                                                                                                         }
-                                                                                                                                        gn.a(8, (byte) 94, -(var10 * 5 * this.field_y / var5) + 255 >> 4, var6[var10], var7_ref_int__[var10]);
+                                                                                                                                        QuickChatPhraseCache.fillCircleMasked(8, (byte) 94, -(var10 * 5 * this.field_y / var5) + 255 >> 4, var6[var10], var7_ref_int__[var10]);
                                                                                                                                       }
                                                                                                                                       var10++;
                                                                                                                                       continue;
@@ -8916,13 +8916,13 @@ final class SpellProjectile extends DualLinkNode {
                                                                                                                                   var5 = 0;
                                                                                                                                   while (true) {
                                                                                                                                     if (5 > var5) {
-                                                                                                                                      gn.a(8, (byte) 66, 32, -16 + (param2 + this.field_v + (int)(Math.random() * 32.0)), param0 + this.field_G + ((int)(Math.random() * 32.0) - 16));
+                                                                                                                                      QuickChatPhraseCache.fillCircleMasked(8, (byte) 66, 32, -16 + (param2 + this.field_v + (int)(Math.random() * 32.0)), param0 + this.field_G + ((int)(Math.random() * 32.0) - 16));
                                                                                                                                       var5++;
                                                                                                                                       if (var16 == 0) {
                                                                                                                                         continue;
                                                                                                                                       }
                                                                                                                                     } else {
-                                                                                                                                      gn.a(16, (byte) 62, 64, param2 + this.field_v, param0 + this.field_G);
+                                                                                                                                      QuickChatPhraseCache.fillCircleMasked(16, (byte) 62, 64, param2 + this.field_v, param0 + this.field_G);
                                                                                                                                     }
                                                                                                                                     break;
                                                                                                                                   }
@@ -8975,18 +8975,18 @@ final class SpellProjectile extends DualLinkNode {
                                                                                                                           }
                                                                                                                         }
                                                                                                                         if (this.field_x >= 128) {
-                                                                                                                          gn.a(128 + this.field_x, (byte) 63, 320 - this.field_x, param2 + this.field_v, this.field_G + param0);
+                                                                                                                          QuickChatPhraseCache.fillCircleMasked(128 + this.field_x, (byte) 63, 320 - this.field_x, param2 + this.field_v, this.field_G + param0);
                                                                                                                           if (var16 == 0) {
                                                                                                                             return;
                                                                                                                           }
                                                                                                                         }
-                                                                                                                        gn.a(256 - this.field_x + 128, (byte) 72, this.field_x + 64, this.field_v + param2, param0 + this.field_G);
+                                                                                                                        QuickChatPhraseCache.fillCircleMasked(256 - this.field_x + 128, (byte) 72, this.field_x + 64, this.field_v + param2, param0 + this.field_G);
                                                                                                                         if (var16 == 0) {
                                                                                                                           return;
                                                                                                                         }
                                                                                                                       }
                                                                                                                       jg.field_c[7 & this.field_v + this.field_G * 3].draw(-12 + param2 + this.field_v, param0 + this.field_G - 12);
-                                                                                                                      hl.a(param0 + this.field_G, param2 + this.field_v, 256 - Math.abs(this.field_x), 2232, 16);
+                                                                                                                      hl.fillCircleOr(param0 + this.field_G, param2 + this.field_v, 256 - Math.abs(this.field_x), 2232, 16);
                                                                                                                       if (var16 == 0) {
                                                                                                                         return;
                                                                                                                       }
@@ -9018,7 +9018,7 @@ final class SpellProjectile extends DualLinkNode {
                                                                                                                 this.field_x = var5;
                                                                                                               }
                                                                                                               var5 = this.field_x;
-                                                                                                              tk.field_x[1].a(4096, param0 + this.field_G, 41, param2 + this.field_v, var5);
+                                                                                                              QuickChatPhrase.field_x[1].drawRotatedQuarterScale(4096, param0 + this.field_G, 41, param2 + this.field_v, var5);
                                                                                                               if (this.field_y <= 0) {
                                                                                                                 return;
                                                                                                               }
@@ -9036,7 +9036,7 @@ final class SpellProjectile extends DualLinkNode {
                                                                                                               this.field_x = var5;
                                                                                                             }
                                                                                                             var5 = this.field_x;
-                                                                                                            tk.field_x[8].a(2048, param0 + this.field_G, 122, param2 + this.field_v, var5 + 32768);
+                                                                                                            QuickChatPhrase.field_x[8].drawRotatedQuarterScale(2048, param0 + this.field_G, 122, param2 + this.field_v, var5 + 32768);
                                                                                                             if (var16 == 0) {
                                                                                                               return;
                                                                                                             }
@@ -9050,7 +9050,7 @@ final class SpellProjectile extends DualLinkNode {
                                                                                                             this.field_x = var5;
                                                                                                           }
                                                                                                           var5 = this.field_x;
-                                                                                                          this.field_p.a(4096, this.field_G + param0, 122, this.field_v + param2, var5 + 32768);
+                                                                                                          this.field_p.drawRotatedQuarterScale(4096, this.field_G + param0, 122, this.field_v + param2, var5 + 32768);
                                                                                                           if (var16 == 0) {
                                                                                                             return;
                                                                                                           }
@@ -9222,7 +9222,7 @@ final class SpellProjectile extends DualLinkNode {
                                                                                       var7 = 0;
                                                                                       do {
                                                                                         if (!(var7 < 8)) {
-                                                                                          hl.a(var6_int, var5, 256, 2232, 16);
+                                                                                          hl.fillCircleOr(var6_int, var5, 256, 2232, 16);
                                                                                           var5 = this.field_v + param2 + this.field_u;
                                                                                           var6_int = -16 + this.field_F + (this.field_G + param0);
                                                                                           break;
@@ -9234,7 +9234,7 @@ final class SpellProjectile extends DualLinkNode {
                                                                                       var7 = 0;
                                                                                       do {
                                                                                         if (!(var7 < 8)) {
-                                                                                          hl.a(var6_int, var5, 256, 2232, 16);
+                                                                                          hl.fillCircleOr(var6_int, var5, 256, 2232, 16);
                                                                                           break;
                                                                                         }
                                                                                         var8_double = 3.141592653589793 * (double)(32 * var7 - this.field_y) / 128.0;
@@ -9250,7 +9250,7 @@ final class SpellProjectile extends DualLinkNode {
                                                                                     var7 = 0;
                                                                                     do {
                                                                                       if (!(var7 < 8)) {
-                                                                                        hl.a(var6_int, var5, 32, 2232, 16);
+                                                                                        hl.fillCircleOr(var6_int, var5, 32, 2232, 16);
                                                                                         var5 = param2 + this.field_v + this.field_u;
                                                                                         var6_int = -16 + this.field_F + param0 + this.field_G;
                                                                                         break;
@@ -9262,7 +9262,7 @@ final class SpellProjectile extends DualLinkNode {
                                                                                     var7 = 0;
                                                                                     do {
                                                                                       if (!(var7 < 8)) {
-                                                                                        hl.a(var6_int, var5, 32, 2232, 16);
+                                                                                        hl.fillCircleOr(var6_int, var5, 32, 2232, 16);
                                                                                         break;
                                                                                       }
                                                                                       var8_double = 3.141592653589793 * (double)(var7 * 32 - this.field_y) / 128.0;
@@ -9280,13 +9280,13 @@ final class SpellProjectile extends DualLinkNode {
                                                                                   var6_int = -480 + param0;
                                                                                   while (true) {
                                                                                     if (var6_int < param0 + (this.field_G + 16)) {
-                                                                                      gn.a(32, (byte) 99, var5 * 2, param2 + this.field_v, var6_int);
+                                                                                      QuickChatPhraseCache.fillCircleMasked(32, (byte) 99, var5 * 2, param2 + this.field_v, var6_int);
                                                                                       var6_int += 16;
                                                                                       if (var16 == 0) {
                                                                                         continue;
                                                                                       }
                                                                                     } else {
-                                                                                      gn.a(var5 * 2, (byte) 103, 2 * var5, this.field_v + param2, this.field_G + param0);
+                                                                                      QuickChatPhraseCache.fillCircleMasked(var5 * 2, (byte) 103, 2 * var5, this.field_v + param2, this.field_G + param0);
                                                                                     }
                                                                                     break;
                                                                                   }
@@ -9303,7 +9303,7 @@ final class SpellProjectile extends DualLinkNode {
                                                                                   if (this.field_y < 128) {
                                                                                     var6_int = -480 + param0;
                                                                                     while (~(16 + this.field_G + param0) < ~var6_int) {
-                                                                                      gn.a(32, (byte) 81, 2 * var5, param2 + this.field_v, var6_int);
+                                                                                      QuickChatPhraseCache.fillCircleMasked(32, (byte) 81, 2 * var5, param2 + this.field_v, var6_int);
                                                                                       var6_int += 16;
                                                                                       if (var16 != 0) {
                                                                                         decompiledFrameCompleted0 = false;
@@ -9312,7 +9312,7 @@ final class SpellProjectile extends DualLinkNode {
                                                                                       continue;
                                                                                     }
                                                                                     if (decompiledFrameCompleted0) {
-                                                                                      hl.a(param0 + this.field_G, param2 + this.field_v, var5 * 2, 2232, var5 * 2);
+                                                                                      hl.fillCircleOr(param0 + this.field_G, param2 + this.field_v, var5 * 2, 2232, var5 * 2);
                                                                                     }
                                                                                   }
                                                                                 }
@@ -9331,7 +9331,7 @@ final class SpellProjectile extends DualLinkNode {
                                                                               if (this.field_t.field_jb == 9) {
                                                                                 var6_int = 24;
                                                                               }
-                                                                              gn.a(var6_int, (byte) 62, var5, this.field_v + param2, -var6_int + (this.field_G + param0));
+                                                                              QuickChatPhraseCache.fillCircleMasked(var6_int, (byte) 62, var5, this.field_v + param2, -var6_int + (this.field_G + param0));
                                                                               if (var16 == 0) {
                                                                                 return;
                                                                               }
@@ -9356,12 +9356,12 @@ final class SpellProjectile extends DualLinkNode {
                                                                                   var11 = this.field_t.field_lb + var8 + param2;
                                                                                   var12 = -(this.field_t.field_Y / 2) + var9 + (param0 + this.field_t.field_db);
                                                                                   var13 = 64 * (63 & SpriteState.field_v + var9 / 2) + (63 & var8 / 2 + SpriteState.field_v);
-                                                                                  stackIn_593_0 = ~tk.field_x[9].field_A.length;
+                                                                                  stackIn_593_0 = ~QuickChatPhrase.field_x[9].field_A.length;
                                                                                   stackIn_593_1 = ~var13;
                                                                                   if (stackIn_593_0 >= stackIn_593_1) {
                                                                                     var13 = 0;
                                                                                   }
-                                                                                  var14 = tk.field_x[9].field_A[var13] & 255;
+                                                                                  var14 = QuickChatPhrase.field_x[9].field_A[var13] & 255;
                                                                                   var15 = 255 - var14;
                                                                                   if (!((~var6_int < ~var10) &&
                                                                                     (~var10 < ~var7))) {
@@ -9394,7 +9394,7 @@ final class SpellProjectile extends DualLinkNode {
                                                                           while (var9 < 16) {
                                                                             var6_int = (int)((double)(param2 + this.field_v) + Math.sin(0.12 * (double)SpriteState.field_v + 0.6 * (double)var9) * (double)var5);
                                                                             var7 = (int)((double)(param0 + this.field_G - var5) + Math.cos((double)SpriteState.field_v * 0.12 + (double)var9 * 0.6) * (double)var5);
-                                                                            gj.field_f[20].toRgbSprite().a(4096 - 500 * var9, var7, -18, var6_int, var8);
+                                                                            gj.field_f[20].toRgbSprite().drawRotatedQuarterScale(4096 - 500 * var9, var7, -18, var6_int, var8);
                                                                             var9++;
                                                                             if (var16 != 0) {
                                                                               return;
@@ -9412,19 +9412,19 @@ final class SpellProjectile extends DualLinkNode {
                                                                         var8 = 512 * SpriteState.field_v;
                                                                         var6_int = (int)((double)(this.field_v + param2) + Math.sin((double)SpriteState.field_v * 0.1 - 1.6) * (double)var5);
                                                                         var7 = (int)((double)(-var5 + param0 + this.field_G) + (double)var5 * Math.cos(0.09 * (double)SpriteState.field_v - 1.6));
-                                                                        DualLinkDeque.field_b[13].toRgbSprite().a(2000, var7, 127, var6_int, var8);
+                                                                        DualLinkDeque.field_b[13].toRgbSprite().drawRotatedQuarterScale(2000, var7, 127, var6_int, var8);
                                                                         var6_int = (int)((double)(this.field_v + param2) + (double)var5 * Math.sin((double)SpriteState.field_v * 0.1 - 0.8));
                                                                         var7 = (int)((double)(this.field_G + param0 - var5) + (double)var5 * Math.cos(-0.8 + 0.09 * (double)SpriteState.field_v));
-                                                                        DualLinkDeque.field_b[13].toRgbSprite().a(2500, var7, 124, var6_int, var8);
+                                                                        DualLinkDeque.field_b[13].toRgbSprite().drawRotatedQuarterScale(2500, var7, 124, var6_int, var8);
                                                                         var6_int = (int)((double)(this.field_v + param2) + Math.sin(0.1 * (double)SpriteState.field_v) * (double)var5);
                                                                         var7 = (int)((double)(-var5 + this.field_G + param0) + (double)var5 * Math.cos((double)SpriteState.field_v * 0.09));
-                                                                        DualLinkDeque.field_b[13].toRgbSprite().a(3000, var7, 123, var6_int, var8);
+                                                                        DualLinkDeque.field_b[13].toRgbSprite().drawRotatedQuarterScale(3000, var7, 123, var6_int, var8);
                                                                         if (var16 == 0) {
                                                                           return;
                                                                         }
                                                                       }
                                                                       var5 = 2000 * SpriteState.field_v;
-                                                                      this.field_p.a(4096, param0 + this.field_G, -43, param2 + this.field_v, var5);
+                                                                      this.field_p.drawRotatedQuarterScale(4096, param0 + this.field_G, -43, param2 + this.field_v, var5);
                                                                       if (var16 == 0) {
                                                                         return;
                                                                       }
@@ -9436,12 +9436,12 @@ final class SpellProjectile extends DualLinkNode {
                                                                     if (this.field_x > 128) {
                                                                       var5 = 256 - this.field_x;
                                                                     }
-                                                                    gn.a(this.field_t.field_Y >> 1, (byte) 70, 128 + var5, this.field_v + param2, -(this.field_t.field_Y >> 1) + this.field_G + param0);
+                                                                    QuickChatPhraseCache.fillCircleMasked(this.field_t.field_Y >> 1, (byte) 70, 128 + var5, this.field_v + param2, -(this.field_t.field_Y >> 1) + this.field_G + param0);
                                                                     var6_int = 0;
                                                                     while (3 > var6_int) {
                                                                       var7 = (int)(Math.sin((double)(this.field_x + var6_int * 256 / 3) * 3.141592653589793 / 128.0) * (double)(this.field_t.field_Y >> 1));
                                                                       var8 = (int)(Math.cos(3.141592653589793 * (double)(var6_int * 256 / 3 + this.field_x) / 128.0) * (double)(this.field_t.field_Y >> 1));
-                                                                      gn.a(this.field_t.field_Y >> 2, (byte) 68, var5 + 128, var7 + (param2 + this.field_v), -(this.field_t.field_Y >> 1) + var8 + param0 + this.field_G);
+                                                                      QuickChatPhraseCache.fillCircleMasked(this.field_t.field_Y >> 2, (byte) 68, var5 + 128, var7 + (param2 + this.field_v), -(this.field_t.field_Y >> 1) + var8 + param0 + this.field_G);
                                                                       var6_int++;
                                                                       if (var16 != 0) {
                                                                         return;
@@ -9452,50 +9452,50 @@ final class SpellProjectile extends DualLinkNode {
                                                                       return;
                                                                     }
                                                                   }
-                                                                  gn.a(32, (byte) 88, 256, this.field_v + param2, param0 + this.field_G);
+                                                                  QuickChatPhraseCache.fillCircleMasked(32, (byte) 88, 256, this.field_v + param2, param0 + this.field_G);
                                                                   if (var16 == 0) {
                                                                     return;
                                                                   }
                                                                 }
-                                                                gn.a(64, (byte) 97, 256, this.field_v + param2, param0 + this.field_G);
+                                                                QuickChatPhraseCache.fillCircleMasked(64, (byte) 97, 256, this.field_v + param2, param0 + this.field_G);
                                                                 if (var16 == 0) {
                                                                   return;
                                                                 }
                                                               }
-                                                              gn.a(16, (byte) 94, 256, param2 + this.field_v, param0 + this.field_G);
+                                                              QuickChatPhraseCache.fillCircleMasked(16, (byte) 94, 256, param2 + this.field_v, param0 + this.field_G);
                                                               if (var16 == 0) {
                                                                 return;
                                                               }
                                                             }
-                                                            gn.a(8, (byte) 79, -(this.field_y << 3) + 256, param2 + this.field_v, this.field_G + param0);
+                                                            QuickChatPhraseCache.fillCircleMasked(8, (byte) 79, -(this.field_y << 3) + 256, param2 + this.field_v, this.field_G + param0);
                                                             if (var16 == 0) {
                                                               return;
                                                             }
                                                           }
-                                                          gn.a(80, (byte) 120, -(this.field_y << 3) + 256, param2 + this.field_v, param0 + this.field_G);
+                                                          QuickChatPhraseCache.fillCircleMasked(80, (byte) 120, -(this.field_y << 3) + 256, param2 + this.field_v, param0 + this.field_G);
                                                           if (this.field_y >= 32) {
                                                             return;
                                                           }
-                                                          gn.a(32 * this.field_y + 60, (byte) 64, -(256 - (this.field_y << 3)), this.field_v + param2, param0 + this.field_G);
+                                                          QuickChatPhraseCache.fillCircleMasked(32 * this.field_y + 60, (byte) 64, -(256 - (this.field_y << 3)), this.field_v + param2, param0 + this.field_G);
                                                           if (var16 == 0) {
                                                             return;
                                                           }
                                                         }
-                                                        hl.a(param0 + this.field_G, param2 + this.field_v, 256, 2232, 8);
+                                                        hl.fillCircleOr(param0 + this.field_G, param2 + this.field_v, 256, 2232, 8);
                                                         if (var16 == 0) {
                                                           return;
                                                         }
                                                       }
-                                                      hl.a(param0 + this.field_G, this.field_v + param2, 256, 2232, 10);
+                                                      hl.fillCircleOr(param0 + this.field_G, this.field_v + param2, 256, 2232, 10);
                                                       if (this.field_y <= 225) {
                                                         return;
                                                       }
-                                                      hl.a(this.field_G + param0, this.field_v + param2, (256 * this.field_y - 57600) / 25, 2232, 96);
+                                                      hl.fillCircleOr(this.field_G + param0, this.field_v + param2, (256 * this.field_y - 57600) / 25, 2232, 96);
                                                       if (var16 == 0) {
                                                         return;
                                                       }
                                                     }
-                                                    hl.a(param0 + this.field_G, param2 + this.field_v, 256 * this.field_y / 25, 2232, 96);
+                                                    hl.fillCircleOr(param0 + this.field_G, param2 + this.field_v, 256 * this.field_y / 25, 2232, 96);
                                                     if (var16 == 0) {
                                                       return;
                                                     }
@@ -9503,7 +9503,7 @@ final class SpellProjectile extends DualLinkNode {
                                                   if (this.field_t == null) {
                                                     return;
                                                   }
-                                                  hl.a(this.field_G + param0, this.field_v + param2, this.field_y * 256 / this.field_t.field_ib, 2232, this.field_t.field_Y + 2 * this.field_t.field_ib);
+                                                  hl.fillCircleOr(this.field_G + param0, this.field_v + param2, this.field_y * 256 / this.field_t.field_ib, 2232, this.field_t.field_Y + 2 * this.field_t.field_ib);
                                                   if (var16 == 0) {
                                                     return;
                                                   }

@@ -14,7 +14,7 @@ final class rf extends IntrusiveNode {
     int field_h;
     static String field_g;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 > 33) {
           field_g = null;
           field_k = null;

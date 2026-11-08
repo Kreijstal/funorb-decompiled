@@ -94,37 +94,37 @@ final class wj {
               return;
             }
             if ((var7Lifetime1 & 511) >= 64 &&
-              this.a(var7Lifetime1 + 131008, var6, var7Lifetime1, (byte) 114)) {
+              this.addColour(var7Lifetime1 + 131008, var6, var7Lifetime1, (byte) 114)) {
               incrementValue$5 = var5;
               var5++;
               var3[NameValidator.bitAnd(incrementValue$5, 511)] = var7Lifetime1 + 131008;
             }
             if ((var7Lifetime1 & 511) < 448 &&
-              this.a(131136 + var7Lifetime1, var6, var7Lifetime1, (byte) 114)) {
+              this.addColour(131136 + var7Lifetime1, var6, var7Lifetime1, (byte) 114)) {
               incrementValue$6 = var5;
               var5++;
               var3[NameValidator.bitAnd(511, incrementValue$6)] = var7Lifetime1 + 131136;
             }
             if ((var7Lifetime1 & 63) >= 8 &&
-              this.a(262136 + var7Lifetime1, var6, var7Lifetime1, (byte) 114)) {
+              this.addColour(262136 + var7Lifetime1, var6, var7Lifetime1, (byte) 114)) {
               incrementValue$7 = var5;
               var5++;
               var3[NameValidator.bitAnd(incrementValue$7, 511)] = 262136 + var7Lifetime1;
             }
             if ((63 & var7Lifetime1) < 56 &&
-              this.a(var7Lifetime1 + 262152, var6, var7Lifetime1, (byte) 114)) {
+              this.addColour(var7Lifetime1 + 262152, var6, var7Lifetime1, (byte) 114)) {
               incrementValue$8 = var5;
               var5++;
               var3[NameValidator.bitAnd(511, incrementValue$8)] = 262152 + var7Lifetime1;
             }
             if ((var7Lifetime1 & 7) > 0 &&
-              this.a(65535 + var7Lifetime1, var6, var7Lifetime1, (byte) 114)) {
+              this.addColour(65535 + var7Lifetime1, var6, var7Lifetime1, (byte) 114)) {
               incrementValue$9 = var5;
               var5++;
               var3[NameValidator.bitAnd(511, incrementValue$9)] = var7Lifetime1 + 65535;
             }
             if ((var7Lifetime1 & 7) < 7 &&
-              this.a(var7Lifetime1 + 65537, var6, var7Lifetime1, (byte) 114)) {
+              this.addColour(var7Lifetime1 + 65537, var6, var7Lifetime1, (byte) 114)) {
               incrementValue$10 = var5;
               var5++;
               var3[NameValidator.bitAnd(511, incrementValue$10)] = var7Lifetime1 + 65537;
@@ -145,7 +145,7 @@ final class wj {
         }
     }
 
-    final static void a(Sprite[] param0, int param1, int param2, int param3, int param4, int param5, boolean param6, int param7, Sprite[] param8, int param9, int param10, int param11, BitmapFont param12, BitmapFont param13, int param14) {
+    final static void drawFramedPanel(Sprite[] param0, int param1, int param2, int param3, int param4, int param5, boolean param6, int param7, Sprite[] param8, int param9, int param10, int param11, BitmapFont param12, BitmapFont param13, int param14) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -160,9 +160,9 @@ final class wj {
         try {
           MidiPcmStream.drawFramedTextPanel(ClientException.field_c, param13, param9, param12, param1, param5, SceneWidgetNode.field_m, 480, param7, 0, 0, param3, (Sprite[]) null, param14, param11, (byte) -105, param4, param0, ScrollContainer.field_T, param8, param10);
           if (param2 < 108) {
-            wj.a(-97);
+            wj.releaseStatics(-97);
           }
-          GzipDecoder.a(param6, 5);
+          GzipDecoder.toggleFullscreen(param6, 5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -196,7 +196,7 @@ final class wj {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
@@ -215,7 +215,7 @@ final class wj {
         }
     }
 
-    final int a(int param0, int param1) {
+    final int lookupColour(int param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int[] var4 = null;
@@ -270,7 +270,7 @@ final class wj {
         }
     }
 
-    final static boolean a(String param0, int[] param1, int param2, int param3, long param4) {
+    final static boolean canMessage(String param0, int[] param1, int param2, int param3, long param4) {
         RuntimeException var6 = null;
         boolean stackIn_13_0 = false;
         RuntimeException stackIn_17_0 = null;
@@ -285,7 +285,7 @@ final class wj {
           }
           boolean decompiledFrameRemainder0 = true;
           if (null != param1 && (2 != param2 ||
-            kg.a(param4, true, param0))) {
+            QuickChatCategoryCache.isFriendOrMember(param4, true, param0))) {
             stackIn_13_0 = true;
             decompiledFrameRemainder0 = false;
           }
@@ -313,7 +313,7 @@ final class wj {
         }
     }
 
-    private final boolean a(int param0, int[] param1, int param2, byte param3) {
+    private final boolean addColour(int param0, int[] param1, int param2, byte param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;

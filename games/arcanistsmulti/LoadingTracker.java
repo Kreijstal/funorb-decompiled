@@ -53,7 +53,7 @@ final class LoadingTracker {
         }
     }
 
-    final static boolean c(int param0) {
+    final static boolean hasPasswordScene(int param0) {
         if (param0 == -1321) {
           return null != PasswordFieldPainter.field_A ? true : false;
         }
@@ -116,7 +116,7 @@ final class LoadingTracker {
         }
     }
 
-    final static void a(ec param0, int param1, int param2, int param3, ec param4, int param5) {
+    final static void setFrameLayout(ec param0, int param1, int param2, int param3, ec param4, int param5) {
         try {
           la.field_d = param2;
           da.field_c = param5;
@@ -147,7 +147,7 @@ final class LoadingTracker {
         field_f = null;
     }
 
-    final static void a(int param0, int param1) {
+    final static void setScrollTarget(int param0, int param1) {
         int var2 = 0;
         int var3 = 0;
         int var2Lifetime1;
@@ -160,7 +160,7 @@ final class LoadingTracker {
             param0 = param0 + var3 * (TextLine.field_k - param0) / var2;
           }
           IntKeyLookup.field_g.setBounds(640, sa.field_Hb, param0, 120, (byte) -120);
-          IsaacRandom.a(5, TextLine.field_k - 24, (byte) 19, 640, MenuButtonPainter.field_p, 0, SceneTextInput.field_Gb);
+          IsaacRandom.layoutQuickChatMenu(5, TextLine.field_k - 24, (byte) 19, 640, MenuButtonPainter.field_p, 0, SceneTextInput.field_Gb);
           return;
         }
         CharSequence var4 = (CharSequence) null;
@@ -172,16 +172,16 @@ final class LoadingTracker {
           param0 = param0 + var3Lifetime1 * (TextLine.field_k - param0) / var2Lifetime1;
         }
         IntKeyLookup.field_g.setBounds(640, sa.field_Hb, param0, 120, (byte) -120);
-        IsaacRandom.a(5, TextLine.field_k - 24, (byte) 19, 640, MenuButtonPainter.field_p, 0, SceneTextInput.field_Gb);
+        IsaacRandom.layoutQuickChatMenu(5, TextLine.field_k - 24, (byte) 19, 640, MenuButtonPainter.field_p, 0, SceneTextInput.field_Gb);
     }
 
-    final static boolean b(int param0) {
+    final static boolean canSubmitDate(int param0) {
         if (param0 != -1) {
           CharSequence var2 = (CharSequence) null;
           LoadingTracker.parseIntegerRadix((byte) 9, (CharSequence) null, 44);
-          return ri.a(-97);
+          return ri.startLogoutTimer(-97);
         }
-        return ri.a(-97);
+        return ri.startLogoutTimer(-97);
     }
 
     final static int parseIntegerRadix(byte param0, CharSequence param1, int param2) {
@@ -218,7 +218,7 @@ final class LoadingTracker {
         var3 = ArcanistsMulti.field_G ? 1 : 0;
         if (param0 <= 78) {
           var4 = (ec) null;
-          LoadingTracker.a((ec) null, -3, -38, 35, (ec) null, -83);
+          LoadingTracker.setFrameLayout((ec) null, -3, -38, 35, (ec) null, -83);
         }
         while (this.field_q < this.field_e) {
           var5 = this.field_c[this.field_q];

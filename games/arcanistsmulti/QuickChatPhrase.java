@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tk extends DualLinkNode {
+final class QuickChatPhrase extends DualLinkNode {
     private int[] field_t;
     static String field_o;
     static Sprite[] field_x;
@@ -47,7 +47,7 @@ final class tk extends DualLinkNode {
                 this.field_v = new int[var4_int][];
                 for (var5 = 0; var5 < var4_int; var5++) {
                   var6 = param1.readUnsignedShort(param0 - 94);
-                  var7 = no.a(var6, 0);
+                  var7 = no.findEntryById(var6, 0);
                   if (var7 != null) {
                     this.field_t[var5] = var6;
                     array$0 = new int[var7.field_e];
@@ -123,10 +123,10 @@ final class tk extends DualLinkNode {
         return null != ResizableViewResizeListener.field_a ? true : false;
     }
 
-    final static int a(int param0, int param1) {
+    final static int scaleSignedValue(int param0, int param1) {
         if (param0 != -4) {
           String var3 = (String) null;
-          tk.a(true, 5, (String) null, (String) null, 9, (String) null, (byte) 92);
+          QuickChatPhrase.submitAccountCreation(true, 5, (String) null, (String) null, 9, (String) null, (byte) 92);
         }
         if (param1 < 0) {
           if (param1 >= -65536) {
@@ -174,14 +174,14 @@ final class tk extends DualLinkNode {
         return var2.toString();
     }
 
-    final static void a(int param0, boolean param1, int param2) {
+    final static void processQuickChatInput(int param0, boolean param1, int param2) {
         int var3;
         String var4;
         Object var5;
         String var6;
         CharSequence var7;
         if (param0 != 0) {
-          tk.releaseStatics(-48);
+          QuickChatPhrase.releaseStatics(-48);
         }
         if (PasswordFieldPainter.field_A != null) {
           var3 = PasswordFieldPainter.field_A.processTextInput(false, param1);
@@ -191,7 +191,7 @@ final class tk extends DualLinkNode {
               !PasswordFieldPainter.field_A.field_rb.equals("")) {
               if (PasswordFieldPainter.field_A.field_rb.charAt(0) != 91) {
                 var7 = (CharSequence) ((Object) PasswordFieldPainter.field_A.field_rb);
-                var4 = Js5ArchiveManager.a(var7, param0 ^ -13);
+                var4 = Js5ArchiveManager.normalizeNameForLookup(var7, param0 ^ -13);
               } else {
                 var4 = PasswordFieldPainter.field_A.field_rb;
               }
@@ -200,13 +200,13 @@ final class tk extends DualLinkNode {
                 var5 = bo.getNameErrorMessage(var4, (byte) -26, param2);
               }
               if (1 == TextLine.field_h) {
-                var5 = oe.a(var4, 29140, param2);
+                var5 = oe.getIgnoreNameError(var4, 29140, param2);
               }
               if (TextLine.field_h == 2) {
                 var5 = ValidationState.getDisplayNameError((byte) -48, param2, var4);
               }
               if (TextLine.field_h == 3) {
-                var5 = MembershipOfferScreen.a(var4, var4, param2, param0 ^ 10068666);
+                var5 = MembershipOfferScreen.getFriendNameError(var4, var4, param2, param0 ^ 10068666);
               }
               if (var5 != null) {
                 var6 = (String) null;
@@ -222,7 +222,7 @@ final class tk extends DualLinkNode {
         }
     }
 
-    final static int a(boolean param0, int param1, String param2, String param3, int param4, String param5, byte param6) {
+    final static int submitAccountCreation(boolean param0, int param1, String param2, String param3, int param4, String param5, byte param6) {
         ConditionalTextValue var7 = null;
         RuntimeException var7_ref = null;
         ConditionalTextValue var8 = null;
@@ -285,7 +285,7 @@ final class tk extends DualLinkNode {
         field_q = null;
     }
 
-    tk() {
+    QuickChatPhrase() {
     }
 
     static {

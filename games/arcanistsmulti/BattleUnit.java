@@ -107,7 +107,7 @@ final class BattleUnit extends DualLinkNode {
           var3 = 0;
           var4 = -72 / ((param1 - 4) / 62);
           for (var5 = 0; var2_int > var5; var5++) {
-            var3 = fe.a((byte) 74, param0.charAt(var5)) + ((var3 << 5) - var3);
+            var3 = fe.encodeCp1252Char((byte) 74, param0.charAt(var5)) + ((var3 << 5) - var3);
           }
           stackIn_5_0 = var3;
           return stackIn_5_0;
@@ -710,7 +710,7 @@ final class BattleUnit extends DualLinkNode {
                             if (128 < var7) {
                               var7 = 256 - var7;
                             }
-                            gn.a(128, (byte) 114, -320 - var7, var41[0], -48 + var41[1]);
+                            QuickChatPhraseCache.fillCircleMasked(128, (byte) 114, -320 - var7, var41[0], -48 + var41[1]);
                           } else {
                             if (this.field_jb == 26 &&
                               ff.field_b != null) {
@@ -980,7 +980,7 @@ final class BattleUnit extends DualLinkNode {
                                     }
                                   }
                                   if (this.field_ab == 1) {
-                                    gn.a(12, (byte) 73, 128, -4 + (this.field_n - (var7 >> 2)) + var41[0], var6 + this.field_N + var41[1] + (-this.field_Y + 8));
+                                    QuickChatPhraseCache.fillCircleMasked(12, (byte) 73, 128, -4 + (this.field_n - (var7 >> 2)) + var41[0], var6 + this.field_N + var41[1] + (-this.field_Y + 8));
                                     var8 = -4 - (var7 >> 2) + (this.field_n + (int)(-6.0 + 13.0 * Math.random()));
                                     var9 = -this.field_Y + 8 + this.field_N - (-var6 - (int)(-18.0 + 13.0 * Math.random()) - (-6 + Math.abs(-this.field_n + var8 + (var7 >> 2) + 4)));
                                     var47 = aj.spawnProjectile((BattleUnit) null, this.field_db + var9, false, 109, this.field_L, this.field_lb + var8);
@@ -1034,7 +1034,7 @@ final class BattleUnit extends DualLinkNode {
                                   this.field_Q.drawHorizontalFlip(-this.field_y - (var7 >> 1) + var41[0], this.field_o + (-var7 + var41[1]));
                                 }
                                 if (this.field_ab == 1) {
-                                  gn.a(12, (byte) 117, 128, var41[0] + ((var7 >> 2) - this.field_n + 4), this.field_N + (8 + var41[1] + (-this.field_Y + var6)));
+                                  QuickChatPhraseCache.fillCircleMasked(12, (byte) 117, 128, var41[0] + ((var7 >> 2) - this.field_n + 4), this.field_N + (8 + var41[1] + (-this.field_Y + var6)));
                                   var8 = -this.field_n + (var7 >> 2) - (-4 - (int)(13.0 * Math.random() - 6.0));
                                   var9 = this.field_N - this.field_Y + 8 - (-var6 - (int)(Math.random() * 13.0 - 18.0) - (-6 + Math.abs(-4 + (var8 - (var7 >> 2)) + this.field_n)));
                                   var46 = aj.spawnProjectile((BattleUnit) null, this.field_db + var9, false, 109, this.field_L, this.field_lb + var8);
@@ -1184,7 +1184,7 @@ final class BattleUnit extends DualLinkNode {
                                   this.field_I.drawHorizontalFlip(var41[0] - (var7 >> 1), var41[1] - var7 * 3 / 2 + var6);
                                 } else {
                                   var12Lifetime2 = (int)(Math.sin(0.2 * (double)SpriteState.field_v) * (500.0 * Math.random() + 1000.0));
-                                  this.field_I.copyFlippedHorizontal().a(4096, var41[1] + (-(var7 * 3 / 4) + var6), 19, var41[0], var12Lifetime2);
+                                  this.field_I.copyFlippedHorizontal().drawRotatedQuarterScale(4096, var41[1] + (-(var7 * 3 / 4) + var6), 19, var41[0], var12Lifetime2);
                                 }
                               }
                               if (this.field_Q != null) {
@@ -1208,7 +1208,7 @@ final class BattleUnit extends DualLinkNode {
                                   this.field_I.drawTransparent(var41[0] - (var7 >> 1), var6 - var7 * 3 / 2 + var41[1]);
                                 } else {
                                   var12Lifetime2 = -(int)(Math.sin((double)SpriteState.field_v * 0.2) * (500.0 * Math.random() + 1000.0));
-                                  this.field_I.a(4096, -(3 * var7 / 4) + (var41[1] + var6), param2 ^ 1703903772, var41[0], var12Lifetime2);
+                                  this.field_I.drawRotatedQuarterScale(4096, -(3 * var7 / 4) + (var41[1] + var6), param2 ^ 1703903772, var41[0], var12Lifetime2);
                                 }
                               }
                               if (null != this.field_Q) {
@@ -1394,18 +1394,18 @@ final class BattleUnit extends DualLinkNode {
                 var31.makeRasterTarget();
                 var32 = 20;
                 var33 = 32;
-                pc.drawTexturedSpriteIntGuard(kg.field_d[2], var33 + var22_int, kg.field_d[3], kg.field_d[0], -127, kg.field_d[1], (Sprite) (((Object[]) (var13))[5]), var32 + var20);
-                pc.drawTexturedSpriteIntGuard(kg.field_d[2], var26 + var33, kg.field_d[3], kg.field_d[0], -95, kg.field_d[1], (Sprite) (((Object[]) (var13))[4]), var24 + var32);
-                pc.drawTexturedSpriteIntGuard(kg.field_d[2], var33, kg.field_d[3], kg.field_d[0], 64, kg.field_d[1], (Sprite) (((Object[]) (var13))[3]), var32);
+                pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var33 + var22_int, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -127, QuickChatCategoryCache.field_d[1], (Sprite) (((Object[]) (var13))[5]), var32 + var20);
+                pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var26 + var33, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -95, QuickChatCategoryCache.field_d[1], (Sprite) (((Object[]) (var13))[4]), var24 + var32);
+                pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var33, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], 64, QuickChatCategoryCache.field_d[1], (Sprite) (((Object[]) (var13))[3]), var32);
                 var33 -= 3;
                 var33 -= 6;
-                pc.drawTexturedSpriteIntGuard(kg.field_d[2], var33, kg.field_d[3], kg.field_d[0], 58, kg.field_d[1], (Sprite) (((Object[]) (var13))[2]), var32);
+                pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var33, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], 58, QuickChatCategoryCache.field_d[1], (Sprite) (((Object[]) (var13))[2]), var32);
                 var33 += 6;
                 var33 -= 6;
                 var33 += 3;
                 var33 += 6;
-                pc.drawTexturedSpriteIntGuard(kg.field_d[2], var33 + var27, kg.field_d[3], kg.field_d[0], -91, kg.field_d[1], (Sprite) (((Object[]) (var13))[1]), var25 + var32);
-                pc.drawTexturedSpriteIntGuard(kg.field_d[2], var33 + var23, kg.field_d[3], kg.field_d[0], 18, kg.field_d[1], (Sprite) (((Object[]) (var13))[0]), var32 + var21_int);
+                pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var33 + var27, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -91, QuickChatCategoryCache.field_d[1], (Sprite) (((Object[]) (var13))[1]), var25 + var32);
+                pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var33 + var23, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], 18, QuickChatCategoryCache.field_d[1], (Sprite) (((Object[]) (var13))[0]), var32 + var21_int);
                 SoftwareRasterizer.field_l = var28;
                 SoftwareRasterizer.field_j = var30;
                 SoftwareRasterizer.field_e = var29;
@@ -2118,7 +2118,7 @@ final class BattleUnit extends DualLinkNode {
                                 SoftwareRasterizer.fillCircle(this.field_Y >> 1, this.field_Y >> 1, this.field_Y >> 1, 16777215);
                               }
                               var25 = new int[]{28, 0, 29, 33, 47, 50, var7, 0, 0};
-                              var13_ref_qb____ = new Sprite[][]{SceneWidget.field_kb, IsaacRandom.field_j, DiskCacheRequest.field_u, qe.field_i, hn.field_d, CachedArchiveProvider.field_A, bo.field_a, ModalPanelStack.field_I, fn.field_b};
+                              var13_ref_qb____ = new Sprite[][]{SceneWidget.field_kb, IsaacRandom.field_j, DiskCacheRequest.field_u, qe.field_i, JaggrabDownloader.field_d, CachedArchiveProvider.field_A, bo.field_a, ModalPanelStack.field_I, fn.field_b};
                               if (SceneWidget.field_kb != null) {
                                 var23 = new int[]{204, 170, 238};
                                 var3 = var23;
@@ -2406,7 +2406,7 @@ final class BattleUnit extends DualLinkNode {
                                   var16++;
                                 }
                               }
-                              var9 = new Sprite[][]{SceneWidget.field_kb, IsaacRandom.field_j, DiskCacheRequest.field_u, qe.field_i, hn.field_d, CachedArchiveProvider.field_A, bo.field_a, ModalPanelStack.field_I, fn.field_b};
+                              var9 = new Sprite[][]{SceneWidget.field_kb, IsaacRandom.field_j, DiskCacheRequest.field_u, qe.field_i, JaggrabDownloader.field_d, CachedArchiveProvider.field_A, bo.field_a, ModalPanelStack.field_I, fn.field_b};
                               if (SceneWidget.field_kb == null) {
                                 this.field_J = false;
                               } else {
@@ -2421,7 +2421,7 @@ final class BattleUnit extends DualLinkNode {
                                   }
                                   pc.drawTexturedSpriteIntGuard(var19, 16, var32, var17, 13, var18, var9[5][var8[4]], 0);
                                 } else {
-                                  pc.drawTexturedSpriteIntGuard(var19, 16, var32, var17, 116, var18, tk.field_x[2], 0);
+                                  pc.drawTexturedSpriteIntGuard(var19, 16, var32, var17, 116, var18, QuickChatPhrase.field_x[2], 0);
                                 }
                                 this.field_I = new Sprite(32, 48);
                                 this.field_I.makeRasterTarget();
@@ -2640,7 +2640,7 @@ final class BattleUnit extends DualLinkNode {
         }
     }
 
-    public static void h(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         try {
           field_H = null;
           field_m = null;
@@ -4154,7 +4154,7 @@ final class BattleUnit extends DualLinkNode {
           if (param1 >= -100) {
             BattleUnit.setFonts((BitmapFont) null, -106, (byte) 51, (BitmapFont) null);
           }
-          EmptyPainter.a(param0, -105);
+          EmptyPainter.drawSceneAndTooltip(param0, -105);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "ml.V(" + param0 + ',' + param1 + ')');
         }
@@ -4287,12 +4287,12 @@ final class BattleUnit extends DualLinkNode {
                 return;
               }
               var3 = nm.appendSessionParameters(param1, var4, -31843).getFile();
-              ei.a("updatelinks", param1, (byte) 114, new Object[]{"home", var3 + "home.ws"});
-              ei.a("updatelinks", param1, (byte) 114, new Object[]{"gamelist", var3 + "togamelist.ws"});
-              ei.a("updatelinks", param1, (byte) 114, new Object[]{"serverlist", var3 + "toserverlist.ws"});
-              ei.a("updatelinks", param1, (byte) 114, new Object[]{"options", var3 + "options.ws"});
-              ei.a("updatelinks", param1, (byte) 114, new Object[]{"terms", var3 + "terms.ws"});
-              ei.a("updatelinks", param1, (byte) 114, new Object[]{"privacy", var3 + "privacy.ws"});
+              JavaScriptBridge.callFunctionWithArgs("updatelinks", param1, (byte) 114, new Object[]{"home", var3 + "home.ws"});
+              JavaScriptBridge.callFunctionWithArgs("updatelinks", param1, (byte) 114, new Object[]{"gamelist", var3 + "togamelist.ws"});
+              JavaScriptBridge.callFunctionWithArgs("updatelinks", param1, (byte) 114, new Object[]{"serverlist", var3 + "toserverlist.ws"});
+              JavaScriptBridge.callFunctionWithArgs("updatelinks", param1, (byte) 114, new Object[]{"options", var3 + "options.ws"});
+              JavaScriptBridge.callFunctionWithArgs("updatelinks", param1, (byte) 114, new Object[]{"terms", var3 + "terms.ws"});
+              JavaScriptBridge.callFunctionWithArgs("updatelinks", param1, (byte) 114, new Object[]{"privacy", var3 + "privacy.ws"});
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = decompiledCaughtException;
@@ -4493,7 +4493,7 @@ final class BattleUnit extends DualLinkNode {
               var8 = param2 + this.field_lb;
               var9 = param1 + this.field_db - (var7 >> 1);
               SoftwareRasterizer.fillCircleAlpha(var8, var9, var7 >> 1, var4_int, 128);
-              gn.a(var7 >> 1, (byte) 125, 128, var8, var9);
+              QuickChatPhraseCache.fillCircleMasked(var7 >> 1, (byte) 125, 128, var8, var9);
             }
             return;
           }
@@ -4567,8 +4567,8 @@ final class BattleUnit extends DualLinkNode {
             return;
           }
           ko.field_j = param0;
-          td.a(true, SoftwareRasterizer.field_j / 2, SoftwareRasterizer.field_e / 2);
-          LoginPanel.b(1, param3.field_o, param0.field_m + param0.field_o, param0.field_o, param3.field_m + param3.field_o);
+          td.storeLayoutValues(true, SoftwareRasterizer.field_j / 2, SoftwareRasterizer.field_e / 2);
+          LoginPanel.storeLoginLayout(1, param3.field_o, param0.field_m + param0.field_o, param0.field_o, param3.field_m + param3.field_o);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

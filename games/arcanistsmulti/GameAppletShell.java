@@ -178,7 +178,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             } catch (java.lang.Throwable decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var1 = decompiledCaughtException;
-              DelegatingCanvas.a((Throwable) (var1), (String) null, (byte) 20);
+              DelegatingCanvas.reportError((Throwable) (var1), (String) null, (byte) 20);
               this.showErrorPage("crash", (byte) -126);
             }
             this.shutdown(true, 116);
@@ -224,7 +224,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             !jg.field_r) {
             hj.field_d = true;
             if (EmailLoginCredentials.field_l &&
-              1000L < qj.monotonicTimeMillis(-26572) - oo.field_s) {
+              1000L < qj.monotonicTimeMillis(-26572) - QuickChatCategory.field_s) {
               var2 = param0.getClipBounds();
               if (var2 != null) {
                 if (var2.width < tn.field_Eb) {
@@ -321,7 +321,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             this.field_d = true;
             System.out.println("error_game_" + param0);
             try {
-              ei.a(IconButtonPainter.getApplet(126), 114, "loggedout");
+              JavaScriptBridge.callFunction(IconButtonPainter.getApplet(126), 114, "loggedout");
               if (param1 >= -115) {
                 field_k = (int[]) null;
               }
@@ -355,7 +355,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_g = null;
         field_k = null;
         if (param0) {
@@ -473,7 +473,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             this.releaseGameStatics(true);
           }
           TextWidgetPainter.field_j = false;
-          oo.field_s = qj.monotonicTimeMillis(-26572);
+          QuickChatCategory.field_s = qj.monotonicTimeMillis(-26572);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -753,8 +753,8 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           try {
             try {
               if (null != IsaacCipher.field_k) {
-                kg.field_b = kg.field_b + 1;
-                if (kg.field_b < 3) {
+                QuickChatCategoryCache.field_b = QuickChatCategoryCache.field_b + 1;
+                if (QuickChatCategoryCache.field_b < 3) {
                   this.getAppletContext().showDocument(this.getDocumentBase(), "_self");
                   return;
                 }
@@ -789,7 +789,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var8_ref = decompiledCaughtException;
-              DelegatingCanvas.a(var8_ref, (String) null, (byte) 20);
+              DelegatingCanvas.reportError(var8_ref, (String) null, (byte) 20);
               this.showErrorPage("crash", (byte) -119);
             }
             return;

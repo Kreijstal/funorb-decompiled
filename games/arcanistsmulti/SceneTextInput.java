@@ -206,7 +206,7 @@ final class SceneTextInput extends SceneWidget {
           ScreenDisplayMode.field_i[6] = fj.loadSprite("", MouseWheelHandler.a((int) param1, 22546), param0, "clocktower");
           gj.field_f = IterableNodeHashTable.loadIndexedSpritesByName("", 0, "16", param0);
           DualLinkDeque.field_b = IterableNodeHashTable.loadIndexedSpritesByName("", 0, "32", param0);
-          tk.field_x = qe.loadSpriteSheet(param0, "64", "", 122);
+          QuickChatPhrase.field_x = qe.loadSpriteSheet(param0, "64", "", 122);
           md.field_f = qe.loadSpriteSheet(param0, "128", "", 46);
           MeshModel.field_M = af.loadIndexedSpriteByName("volcano", "", 19412, param0);
           return;
@@ -470,7 +470,7 @@ final class SceneTextInput extends SceneWidget {
                     if (var38 == 0) {
                       if (var37 >= 0 &&
                         MeshRasterState.field_d > var37) {
-                        gl.a(var29, var36Lifetime2 + var37, var38, 0, param7, var25, var21, 0, 0, (byte) 124);
+                        gl.fillMaskedRows(var29, var36Lifetime2 + var37, var38, 0, param7, var25, var21, 0, 0, (byte) 124);
                       }
                     } else {
                       var39 = (-var21 + var22) / var38;
@@ -480,9 +480,9 @@ final class SceneTextInput extends SceneWidget {
                         var38 = MeshRasterState.field_d + (-var37 - 1);
                       }
                       if (var37 < 0) {
-                        gl.a(var29 - var41 * var37, var36Lifetime2, var38 + var37, var40, param7, var25 - var37 * var40, -(var39 * var37) + var21, var39, var41, (byte) 124);
+                        gl.fillMaskedRows(var29 - var41 * var37, var36Lifetime2, var38 + var37, var40, param7, var25 - var37 * var40, -(var39 * var37) + var21, var39, var41, (byte) 124);
                       } else {
-                        gl.a(var29, var37 + var36Lifetime2, var38, var40, param7, var25, var21, var39, var41, (byte) 120);
+                        gl.fillMaskedRows(var29, var37 + var36Lifetime2, var38, var40, param7, var25, var21, var39, var41, (byte) 120);
                       }
                     }
                   }
@@ -560,7 +560,7 @@ final class SceneTextInput extends SceneWidget {
                 if (var37Lifetime1 == 0) {
                   if (var36Lifetime1 >= 0 &&
                     var36Lifetime1 < MeshRasterState.field_d) {
-                    gl.a(var29, var36Lifetime1 + var35Lifetime1, var37Lifetime1, 0, param7, var25, var21, 0, 0, (byte) 122);
+                    gl.fillMaskedRows(var29, var36Lifetime1 + var35Lifetime1, var37Lifetime1, 0, param7, var25, var21, 0, 0, (byte) 122);
                   }
                 } else {
                   var38Lifetime1 = (-var21 + var22) / var37Lifetime1;
@@ -570,9 +570,9 @@ final class SceneTextInput extends SceneWidget {
                     var37Lifetime1 = -var36Lifetime1 + MeshRasterState.field_d - 1;
                   }
                   if (var36Lifetime1 < 0) {
-                    gl.a(-(var36Lifetime1 * var40Lifetime1) + var29, var35Lifetime1, var37Lifetime1 + var36Lifetime1, var39Lifetime1, param7, var25 - var39Lifetime1 * var36Lifetime1, -(var36Lifetime1 * var38Lifetime1) + var21, var38Lifetime1, var40Lifetime1, (byte) 123);
+                    gl.fillMaskedRows(-(var36Lifetime1 * var40Lifetime1) + var29, var35Lifetime1, var37Lifetime1 + var36Lifetime1, var39Lifetime1, param7, var25 - var39Lifetime1 * var36Lifetime1, -(var36Lifetime1 * var38Lifetime1) + var21, var38Lifetime1, var40Lifetime1, (byte) 123);
                   } else {
-                    gl.a(var29, var36Lifetime1 + var35Lifetime1, var37Lifetime1, var39Lifetime1, param7, var25, var21, var38Lifetime1, var40Lifetime1, (byte) 118);
+                    gl.fillMaskedRows(var29, var36Lifetime1 + var35Lifetime1, var37Lifetime1, var39Lifetime1, param7, var25, var21, var38Lifetime1, var40Lifetime1, (byte) 118);
                   }
                 }
               }
@@ -628,7 +628,7 @@ final class SceneTextInput extends SceneWidget {
             this.field_Ib.length() > 0) {
             discarded$2 = this.field_Ib.append((char) var2);
           }
-          if (ClipState.a((char) var2, (byte) -127) ||
+          if (ClipState.isTextureCharacter((char) var2, (byte) -127) ||
             LoginPanel.isDigit(30, (char) var2)) {
             discarded$3 = this.field_Ib.append((char) var2);
           }

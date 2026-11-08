@@ -41,12 +41,12 @@ final class ra {
           return;
         }
         SceneWidget var2 = (SceneWidget) null;
-        ra.a((SceneWidget) null, 47, (SceneWidget) null);
+        ra.linkScenes((SceneWidget) null, 47, (SceneWidget) null);
         field_e = null;
         field_l = null;
     }
 
-    final static void a(SceneWidget param0, int param1, SceneWidget param2) {
+    final static void linkScenes(SceneWidget param0, int param1, SceneWidget param2) {
         try {
           if (null == param0.field_G) {
             param0.field_G = new IntrusiveDeque();
@@ -64,8 +64,8 @@ final class ra {
           if (param1 != 64) {
             field_e = (String) null;
           }
-          oo.field_B = param2.field_G;
-          qn.i(65);
+          QuickChatCategory.field_B = param2.field_G;
+          qn.clearLobbyEntries(65);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "ra.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

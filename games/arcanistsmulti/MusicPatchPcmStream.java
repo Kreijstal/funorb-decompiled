@@ -65,7 +65,7 @@ final class MusicPatchPcmStream extends PcmStream {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_m = null;
         if (!param0) {
           field_r = null;
@@ -181,11 +181,11 @@ final class MusicPatchPcmStream extends PcmStream {
         }
     }
 
-    final static boolean c(int param0) {
+    final static boolean isMusicAllowed(int param0) {
         if (param0 == 0) {
           return null == ProxySocketConnector.field_m ? ie.field_Pb : true;
         }
-        MusicPatchPcmStream.c(-43);
+        MusicPatchPcmStream.isMusicAllowed(-43);
         return null == ProxySocketConnector.field_m ? ie.field_Pb : true;
     }
 
@@ -234,7 +234,7 @@ final class MusicPatchPcmStream extends PcmStream {
             }
           }
           if (param1 != 0) {
-            MusicPatchPcmStream.c(-38);
+            MusicPatchPcmStream.isMusicAllowed(-38);
           }
           param0.field_n.skip(param2);
           return;
@@ -284,17 +284,17 @@ final class MusicPatchPcmStream extends PcmStream {
         }
     }
 
-    final static void d(int param0) {
+    final static void resetAudioState(int param0) {
         HuffmanCodec.field_k = false;
         field_s = false;
         if (param0 == -24225) {
-          DebouncedValidator.a(-1, (byte) 30);
+          DebouncedValidator.setPendingMessageId(-1, (byte) 30);
           SceneScrollbar.field_Gb = ScreenDisplayMode.field_h;
           hb.field_Gb = ScreenDisplayMode.field_h;
           return;
         }
-        MusicPatchPcmStream.b(true);
-        DebouncedValidator.a(-1, (byte) 30);
+        MusicPatchPcmStream.releaseStatics(true);
+        DebouncedValidator.setPendingMessageId(-1, (byte) 30);
         SceneScrollbar.field_Gb = ScreenDisplayMode.field_h;
         hb.field_Gb = ScreenDisplayMode.field_h;
     }

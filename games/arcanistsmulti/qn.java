@@ -33,7 +33,7 @@ final class qn extends ResizableModalPanel implements ButtonListener {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param0) {
-            qn.a(-13, -64, -6, 93, true, 96, 127);
+            qn.updateMessage(-13, -64, -6, 93, true, 96, 127);
           }
           if (this.field_V != param4) {
             return;
@@ -100,19 +100,19 @@ final class qn extends ResizableModalPanel implements ButtonListener {
         }
     }
 
-    final static void a(int param0, ResourceArchive param1, ResourceArchive param2) {
+    final static void setSoundArchives(int param0, ResourceArchive param1, ResourceArchive param2) {
         try {
           bb.field_a = param2;
           EmailLoginCredentials.field_o = param1;
           if (param0 != -24539) {
-            qn.a(-80, (byte) 86);
+            qn.isValidOption(-80, (byte) 86);
           }
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "qn.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void i(int param0) {
+    final static void clearLobbyEntries(int param0) {
         DualLinkNode var1 = null;
         int var2 = ArcanistsMulti.field_G ? 1 : 0;
         DualLinkNode var1Lifetime1;
@@ -121,7 +121,7 @@ final class qn extends ResizableModalPanel implements ButtonListener {
           ie.field_Nb = null;
           pc.field_b = 0;
           TextLine.field_d.clear(-124);
-          oo.field_B.clear(-124);
+          QuickChatCategory.field_B.clear(-124);
           var1 = ie.field_Qb.firstInTraversal(-118);
           while (var1 != null) {
             var1.unlinkSecondary((byte) 88);
@@ -151,7 +151,7 @@ final class qn extends ResizableModalPanel implements ButtonListener {
         this.field_G = false;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, boolean param4, int param5, int param6) {
+    final static void updateMessage(int param0, int param1, int param2, int param3, boolean param4, int param5, int param6) {
         String var7 = null;
         if (nj.field_c == 2) {
           var7 = KeyboardInputHandler.field_e;
@@ -159,15 +159,15 @@ final class qn extends ResizableModalPanel implements ButtonListener {
           var7 = Js5NetworkRequest.field_v;
         }
         if (param1 <= -50) {
-          uf.a(param5, param2, param6, param4, -7361, var7, param3, param0);
+          uf.updateLobbyInput(param5, param2, param6, param4, -7361, var7, param3, param0);
           return;
         }
         ResourceArchive var8 = (ResourceArchive) null;
-        qn.a(10, (ResourceArchive) null, (ResourceArchive) null);
-        uf.a(param5, param2, param6, param4, -7361, var7, param3, param0);
+        qn.setSoundArchives(10, (ResourceArchive) null, (ResourceArchive) null);
+        uf.updateLobbyInput(param5, param2, param6, param4, -7361, var7, param3, param0);
     }
 
-    final static boolean a(int param0, byte param1) {
+    final static boolean isValidOption(int param0, byte param1) {
         if (param1 >= -6) {
           return false;
         }
@@ -225,7 +225,7 @@ final class qn extends ResizableModalPanel implements ButtonListener {
         UiComponent var4 = null;
         try {
           var3 = null;
-          if (oo.field_C == param1) {
+          if (QuickChatCategory.field_C == param1) {
             var3 = DirectByteStorage.field_j;
           } else {
             if (param1 != FadingModalPanel.field_C) {

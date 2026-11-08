@@ -50,7 +50,7 @@ final class ko extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, SceneWidget param1, byte param2) {
+    final static void openListEntryMenu(int param0, SceneWidget param1, byte param2) {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -153,7 +153,7 @@ final class ko extends IntrusiveNode {
           var37.field_l.openAt(var6, var7, -29466, var5, var4);
           if (param2 > -51) {
             var8 = (ResourceArchive) null;
-            ko.a(99, (byte) -116, 31, (ResourceArchive) null);
+            ko.loadIndexedSprites(99, (byte) -116, 31, (ResourceArchive) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -180,7 +180,7 @@ final class ko extends IntrusiveNode {
         field_j = (BitmapFont) null;
     }
 
-    final static IndexedSprite[] a(int param0, byte param1, int param2, ResourceArchive param3) {
+    final static IndexedSprite[] loadIndexedSprites(int param0, byte param1, int param2, ResourceArchive param3) {
         RuntimeException var4 = null;
         IndexedSprite[] stackIn_2_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -192,8 +192,8 @@ final class ko extends IntrusiveNode {
             stackIn_2_0 = (IndexedSprite[]) null;
             return stackIn_2_0;
           }
-          if (fc.a(19, param3, param0, param2)) {
-            return fk.c(0);
+          if (fc.decodeSpriteSheet(19, param3, param0, param2)) {
+            return fk.createDecodedIndexedSprites(0);
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -210,7 +210,7 @@ final class ko extends IntrusiveNode {
         }
     }
 
-    final static boolean a(int param0, int param1, int param2) {
+    final static boolean drawChatInputLine(int param0, int param1, int param2) {
         StringBuilder discarded$0 = null;
         int var3;
         int var4;
@@ -255,7 +255,7 @@ final class ko extends IntrusiveNode {
           var3 = 0;
         }
         if (nj.field_c == 2 &&
-          !wm.c(false)) {
+          !wm.isLoginNameValid(false)) {
           var3 = 0;
         }
         if (84 == IntrusiveDeque.field_d) {
@@ -263,11 +263,11 @@ final class ko extends IntrusiveNode {
             if (0 == nj.field_c) {
               return true;
             }
-            ue.b(10);
+            ue.clearChatInput(10);
             return true;
           }
           if (hi.field_e.length() <= 0) {
-            ue.b(10);
+            ue.clearChatInput(10);
           } else {
             var4_ref_String = hi.field_e.toString();
             var7 = var4_ref_String;
@@ -278,12 +278,12 @@ final class ko extends IntrusiveNode {
                 DirectByteStorage.field_f != null) {
                 var5 = 1;
               }
-              if (ReflectionCheckRequest.a((byte) 117, var5) != 2) {
-                BufferedRandomAccessFile.a(-1, var4_ref_String, 82, param1, nj.field_c, MenuInputState.field_p);
+              if (ReflectionCheckRequest.getChatMode((byte) 117, var5) != 2) {
+                BufferedRandomAccessFile.sendReport(-1, var4_ref_String, 82, param1, nj.field_c, MenuInputState.field_p);
               } else {
-                DiskCacheRequest.a(param2, 1, true, var5);
-                BufferedRandomAccessFile.a(-1, var4_ref_String, 82, param1, nj.field_c, MenuInputState.field_p);
-                ue.b(10);
+                DiskCacheRequest.updateChatModeSetting(param2, 1, true, var5);
+                BufferedRandomAccessFile.sendReport(-1, var4_ref_String, 82, param1, nj.field_c, MenuInputState.field_p);
+                ue.clearChatInput(10);
               }
             } else {
               var13 = (String) null;
@@ -292,7 +292,7 @@ final class ko extends IntrusiveNode {
               var15 = (String) null;
               var14 = (String) null;
               ao.addChatMessage(0, (byte) 73, TextTableInitializer.field_b, (String) null, 2, (String) null);
-              ue.b(10);
+              ue.clearChatInput(10);
             }
           }
           return true;
@@ -326,8 +326,8 @@ final class ko extends IntrusiveNode {
           var7Lifetime1 = "";
           if (0 != nj.field_c) {
             var57 = var7Lifetime1 + var19 + ": ";
-            var5Lifetime1 = var5Lifetime1 - oo.field_x.textWidth(var57);
-            if (oo.field_x.textWidth(hi.field_e.toString()) <= var5Lifetime1) {
+            var5Lifetime1 = var5Lifetime1 - QuickChatCategory.field_x.textWidth(var57);
+            if (QuickChatCategory.field_x.textWidth(hi.field_e.toString()) <= var5Lifetime1) {
               return true;
             }
             qj.padToLength(-1 + hi.field_e.length(), hi.field_e, ' ', false);
@@ -341,8 +341,8 @@ final class ko extends IntrusiveNode {
             if (!oe.field_a) {
               var60 = "[" + CachedArchiveProvider.formatTemplate(-68, new String[]{DirectByteStorage.field_f.field_ic}, Bzip2State.field_j) + "] ";
               var61 = var60 + var19 + ": ";
-              var5Lifetime1 = var5Lifetime1 - oo.field_x.textWidth(var61);
-              if (oo.field_x.textWidth(hi.field_e.toString()) <= var5Lifetime1) {
+              var5Lifetime1 = var5Lifetime1 - QuickChatCategory.field_x.textWidth(var61);
+              if (QuickChatCategory.field_x.textWidth(hi.field_e.toString()) <= var5Lifetime1) {
                 return true;
               }
               qj.padToLength(-1 + hi.field_e.length(), hi.field_e, ' ', false);
@@ -351,8 +351,8 @@ final class ko extends IntrusiveNode {
             if (he.field_d == null) {
               var58 = "[" + CachedArchiveProvider.formatTemplate(-68, new String[]{DirectByteStorage.field_f.field_ic}, Bzip2State.field_j) + "] ";
               var59 = var58 + var19 + ": ";
-              var5Lifetime1 = var5Lifetime1 - oo.field_x.textWidth(var59);
-              if (oo.field_x.textWidth(hi.field_e.toString()) <= var5Lifetime1) {
+              var5Lifetime1 = var5Lifetime1 - QuickChatCategory.field_x.textWidth(var59);
+              if (QuickChatCategory.field_x.textWidth(hi.field_e.toString()) <= var5Lifetime1) {
                 return true;
               }
               qj.padToLength(-1 + hi.field_e.length(), hi.field_e, ' ', false);
@@ -361,20 +361,20 @@ final class ko extends IntrusiveNode {
             var7Lifetime1 = "[" + he.field_d + "] ";
           }
           var62 = var7Lifetime1 + var19 + ": ";
-          var5Lifetime1 = var5Lifetime1 - oo.field_x.textWidth(var62);
+          var5Lifetime1 = var5Lifetime1 - QuickChatCategory.field_x.textWidth(var62);
         } else {
           var64 = (CharSequence) ((Object) MenuInputState.field_p);
           var18 = CachedArchiveProvider.formatTemplate(-45, new String[]{qo.normalizeName((byte) 84, var64)}, ge.field_n);
           var8 = CachedArchiveProvider.formatTemplate(113, new String[]{var16}, IterableNodeHashTable.field_f);
-          var9 = oo.field_x.textWidth(var18);
-          var10 = oo.field_x.textWidth(var8);
+          var9 = QuickChatCategory.field_x.textWidth(var18);
+          var10 = QuickChatCategory.field_x.textWidth(var8);
           if (var10 >= var9) {
             var5Lifetime1 = var5Lifetime1 - var10;
           } else {
             var5Lifetime1 = var5Lifetime1 - var9;
           }
         }
-        if (oo.field_x.textWidth(hi.field_e.toString()) <= var5Lifetime1) {
+        if (QuickChatCategory.field_x.textWidth(hi.field_e.toString()) <= var5Lifetime1) {
           return true;
         }
         qj.padToLength(-1 + hi.field_e.length(), hi.field_e, ' ', false);
@@ -442,7 +442,7 @@ final class ko extends IntrusiveNode {
         try {
           for (var2_int = 0; param1.length() > var2_int; var2_int++) {
             var3 = param1.charAt(var2_int);
-            if (!ClipState.a((char) var3, (byte) -122) &&
+            if (!ClipState.isTextureCharacter((char) var3, (byte) -122) &&
               !LoginPanel.isDigit(30, (char) var3)) {
               return true;
             }
@@ -481,7 +481,7 @@ final class ko extends IntrusiveNode {
           var6 = new Sprite(param3 * 2, 2 * param3);
           var6.makeRasterTarget();
           SoftwareRasterizer.fillCircle(param3, param3, param3, param5);
-          stackIn_1_0 = fk.a(param0, -(param3 * 2) + param1, param4, param2 - param3, (byte) -1, var6);
+          stackIn_1_0 = fk.spriteHitsMask(param0, -(param3 * 2) + param1, param4, param2 - param3, (byte) -1, var6);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

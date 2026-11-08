@@ -11,7 +11,7 @@ final class GzipDecoder {
     static String field_f;
     static boolean field_d;
 
-    final static void a(boolean param0, int param1) {
+    final static void toggleFullscreen(boolean param0, int param1) {
         int var2;
         int var3;
         var3 = ArcanistsMulti.field_G ? 1 : 0;
@@ -36,7 +36,7 @@ final class GzipDecoder {
         }
         if (null == ResizableModalPanel.field_Y &&
           ri.field_f) {
-          qa.a(param0, -4693, var2);
+          qa.showNoticeByType(param0, -4693, var2);
         }
     }
 
@@ -47,7 +47,7 @@ final class GzipDecoder {
         field_f = null;
     }
 
-    final static void a(boolean param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final static void sortRankingRange(boolean param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int var11 = 0;
         int incrementValue$0 = 0;
         int stackIn_23_0 = 0;
@@ -100,8 +100,8 @@ final class GzipDecoder {
                 }
               }
             }
-            GzipDecoder.a(param0, var9, param2, param3, var8, param5, param6);
-            GzipDecoder.a(param0, param1, param2 + 0, var8, param4, param5, var10);
+            GzipDecoder.sortRankingRange(param0, var9, param2, param3, var8, param5, param6);
+            GzipDecoder.sortRankingRange(param0, param1, param2 + 0, var8, param4, param5, var10);
             return;
           }
           for (var7_intLifetime1 = param4 - 1; param3 < var7_intLifetime1; var7_intLifetime1--) {
@@ -122,7 +122,7 @@ final class GzipDecoder {
         }
     }
 
-    final static void a(String param0, long param1, int param2) {
+    final static void setLoginNameAndHash(String param0, long param1, int param2) {
         CharSequence var5 = null;
         try {
           nj.field_c = 2;
@@ -131,7 +131,7 @@ final class GzipDecoder {
             field_a = -55;
           }
           var5 = (CharSequence) ((Object) param0);
-          GridContainer.field_S = Js5ArchiveManager.a(var5, -13);
+          GridContainer.field_S = Js5ArchiveManager.normalizeNameForLookup(var5, -13);
           gg.field_e = param1;
           SocketJs5Transport.field_r = true;
         } catch (RuntimeException runtimeException) {
@@ -139,7 +139,7 @@ final class GzipDecoder {
         }
     }
 
-    final void a(int param0, byte[] param1, PacketBuffer param2) {
+    final void decompress(int param0, byte[] param1, PacketBuffer param2) {
         try {
           Exception exception = null;
           RuntimeException runtimeException = null;

@@ -57,7 +57,7 @@ class UsernameCredentials extends LoginCredentials {
         return null == nk.field_q ? null : (LobbyGameEntry) (nk.field_q.get((long)param0, (byte) -102));
     }
 
-    final static void d(int param0) {
+    final static void clearSpriteSlots(int param0) {
         int[] var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -109,7 +109,7 @@ class UsernameCredentials extends LoginCredentials {
             fieldTemp$0 = var2.position + 1;
             var2.position = var2.position + 1;
             var3 = fieldTemp$0;
-            ho.a(-5534, var2);
+            ho.answerReflectionCheck(-5534, var2);
             he.field_e.writeByteLengthAtMark(var2.position - var3, (byte) 43);
           }
           return;
@@ -167,7 +167,7 @@ class UsernameCredentials extends LoginCredentials {
             return (wa) (stackIn_7_0);
           }
           var6 = (CharSequence) ((Object) param1);
-          var2 = Js5ArchiveManager.a(var6, -13);
+          var2 = Js5ArchiveManager.normalizeNameForLookup(var6, -13);
           if (param0 != 0) {
             UsernameCredentials.releaseStatics((byte) 70);
           }
@@ -181,7 +181,7 @@ class UsernameCredentials extends LoginCredentials {
               return null;
             }
             var7 = (CharSequence) ((Object) var3.field_Cb);
-            var4 = Js5ArchiveManager.a(var7, -13);
+            var4 = Js5ArchiveManager.normalizeNameForLookup(var7, -13);
             if (!var4.equals(var2)) {
               var3 = (wa) (ie.field_Qb.getNextWithSameKey(-107));
               continue;
@@ -236,7 +236,7 @@ class UsernameCredentials extends LoginCredentials {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!fc.a(50, param0, param4, param1)) {
+          if (!fc.decodeSpriteSheet(50, param0, param4, param1)) {
             stackIn_2_0 = null;
             return (CoverageBitmapFont) (stackIn_2_0);
           }

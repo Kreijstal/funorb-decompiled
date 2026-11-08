@@ -51,7 +51,7 @@ final class ContextActionMenu extends SceneWidget {
           try {
             if (false) throw (IOException) null;
             if (var2_int >= 0 &&
-              rk.a(-66) <= 30000L) {
+              rk.timeSinceLastInput(-66) <= 30000L) {
               return false;
             }
             ProxySocketConnector.closeActiveConnection(false);
@@ -218,7 +218,7 @@ final class ContextActionMenu extends SceneWidget {
                 var12.field_ec.addChild(var12.field_Ub, 76);
               }
               var12.field_Cb = new SceneWidget(0L, (SceneWidget) null);
-              if ((var14 & 1 << gn.field_k) != 0) {
+              if ((var14 & 1 << QuickChatPhraseCache.field_k) != 0) {
                 var12.field_ec.addChild(var12.field_Cb, 125);
               }
               var12.field_Jb = new SceneWidget(0L, (SceneWidget) null);
@@ -414,7 +414,7 @@ final class ContextActionMenu extends SceneWidget {
                 var12.field_Ub.setBounds(var50_ref.field_n, var34_int, 0, var12.field_ec.field_I, (byte) -120);
                 var34_int = var34_int + (var50_ref.field_n + MenuButtonPainter.field_p);
               }
-              if ((1 << gn.field_k & var14Lifetime1) != 0) {
+              if ((1 << QuickChatPhraseCache.field_k & var14Lifetime1) != 0) {
                 if (!var12.field_Ob) {
                   stackIn_80_0 = (var12.field_Hb) ? 1 : 0;
                 } else {
@@ -517,7 +517,7 @@ final class ContextActionMenu extends SceneWidget {
                 var31 = var31 + ImageProducerRasterBuffer.field_r;
               }
             }
-            var33 = vf.a(-111, var32, var12.field_ac);
+            var33 = vf.formatChatPrefix(-111, var32, var12.field_ac);
             if (var33 != null) {
               var34_intLifetime1 = var12.field_Kb.field_Z.wrappedLineCount(var33, -SceneTextInput.field_Gb - SceneTextInput.field_Gb + var12.field_x);
               var12.field_Kb.field_u = 256 * var12.field_bc / TextLine.field_i;
@@ -593,16 +593,16 @@ final class ContextActionMenu extends SceneWidget {
                 continue;
               }
               if (0 == var12.field_Zb.field_U) {
-                MouseInputHandler.a(949002930, var12, var32, param5);
+                MouseInputHandler.openGameInfo(949002930, var12, var32, param5);
               } else {
                 if (var12.field_Lb && (!var12.field_kc ||
                   !var12.field_Ob &&
                   !var12.field_Hb)) {
-                  qe.a(var12.getSortKey((byte) 78), (byte) -35, param0);
+                  qe.sendShortSettingRequest(var12.getSortKey((byte) 78), (byte) -35, param0);
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  ScreenDisplayMode.a(var12.getSortKey((byte) 76), (byte) -122, param0);
+                  ScreenDisplayMode.sendScreenRequest(var12.getSortKey((byte) 76), (byte) -122, param0);
                 }
               }
             }
@@ -633,16 +633,16 @@ final class ContextActionMenu extends SceneWidget {
     final static boolean handleEscapeForOverlays(int param0, int param1, byte param2, int param3) {
         if (null != eo.field_c &&
           eo.field_c.handleEscape((byte) 49)) {
-          IntrusiveDequeCursor.a(false);
+          IntrusiveDequeCursor.closePlayerMenu(false);
           return true;
         }
         if (db.field_a != null &&
           db.field_a.handleEscape((byte) 2)) {
           db.field_a = null;
-          IntrusiveDequeCursor.a(false);
+          IntrusiveDequeCursor.closePlayerMenu(false);
           return true;
         }
-        if (lo.e(false)) {
+        if (lo.handlePasswordKey(false)) {
           return true;
         }
         if (ValidationState.routeKeyInput(false, param1, param3, param0)) {
@@ -692,7 +692,7 @@ final class ContextActionMenu extends SceneWidget {
         return this.field_Cb;
     }
 
-    final static void h(int param0) {
+    final static void noOperation(int param0) {
         if (param0 != 7807) {
           field_Jb = false;
         }
@@ -844,7 +844,7 @@ final class ContextActionMenu extends SceneWidget {
 
     public static void releaseStatics(int param0) {
         if (param0 != 0) {
-          ContextActionMenu.h(-36);
+          ContextActionMenu.noOperation(-36);
         }
         field_Nb = null;
         field_Fb = (int[][]) null;

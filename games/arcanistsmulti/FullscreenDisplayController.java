@@ -27,10 +27,10 @@ final class FullscreenDisplayController {
           }
           this.field_a = null;
         }
-        this.a((java.awt.Frame) null, (byte) 16);
+        this.setFullScreenWindow((java.awt.Frame) null, (byte) 16);
     }
 
-    private final void a(java.awt.Frame param0, byte param1) {
+    private final void setFullScreenWindow(java.awt.Frame param0, byte param1) {
         if (param1 != 16) {
           this.field_b = (java.awt.GraphicsDevice) null;
         }
@@ -49,7 +49,7 @@ final class FullscreenDisplayController {
         }
         param0.setUndecorated(true);
         param0.enableInputMethods(false);
-        this.a(param0, (byte) 16);
+        this.setFullScreenWindow(param0, (byte) 16);
         if (param4 == 0) {
           var6 = this.field_a.getRefreshRate();
           var7 = this.field_b.getDisplayModes();

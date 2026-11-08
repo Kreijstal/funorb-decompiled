@@ -34,26 +34,26 @@ final class TextLine {
         return 0;
     }
 
-    final static void a(int param0, int param1, int param2, boolean param3) {
+    final static void updateChatView(int param0, int param1, int param2, boolean param3) {
         if (param1 < 120) {
           java.math.BigInteger var5 = (java.math.BigInteger) null;
-          TextLine.a(true, (PacketBuffer) null, (java.math.BigInteger) null, (PacketBuffer) null, (java.math.BigInteger) null);
+          TextLine.writeSecureBlock(true, (PacketBuffer) null, (java.math.BigInteger) null, (PacketBuffer) null, (java.math.BigInteger) null);
         }
-        qn.a(ra.field_h, -115, ImageProducerRasterBuffer.field_r, param2, param3, param0, SceneTextInput.field_Gb);
+        qn.updateMessage(ra.field_h, -115, ImageProducerRasterBuffer.field_r, param2, param3, param0, SceneTextInput.field_Gb);
     }
 
-    final static void a(boolean param0, PacketBuffer param1, java.math.BigInteger param2, PacketBuffer param3, java.math.BigInteger param4) {
+    final static void writeSecureBlock(boolean param0, PacketBuffer param1, java.math.BigInteger param2, PacketBuffer param3, java.math.BigInteger param4) {
         try {
           we.writeSecureLoginBlock(param4, 0, param3.payload, param1, 0, param2, param3.position);
           if (param0) {
-            TextLine.a(-96, -100, -118, true);
+            TextLine.updateChatView(-96, -100, -118, true);
           }
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "vd.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void a(jg param0, byte param1) {
+    final static void appendChatLineToHistory(jg param0, byte param1) {
         int dupTemp$3 = 0;
         int dupTemp$0 = 0;
         int var3 = 0;
@@ -81,17 +81,17 @@ final class TextLine {
           }
           for (var2_intLifetime1 = 0; var2_intLifetime1 < SecondaryNodeDeque.field_f; var2_intLifetime1++) {
             if (g.field_d[var2_intLifetime1].field_m == param0.field_m) {
-              dupTemp$3 = g.field_d[var2_intLifetime1].b(-62);
+              dupTemp$3 = g.field_d[var2_intLifetime1].getStatusIcon(-62);
               bm.field_d[dupTemp$3] = bm.field_d[dupTemp$3] + 1;
             }
           }
-          dupTemp$0 = param0.b(-21);
+          dupTemp$0 = param0.getStatusIcon(-21);
           bm.field_d[dupTemp$0] = bm.field_d[dupTemp$0] + 1;
           var2_intLifetime2 = 0;
           for (var3 = 0; var3 < SecondaryNodeDeque.field_f; var3++) {
             boolean decompiledFrameRemainder0 = true;
             if (param0.field_m == g.field_d[var3].field_m) {
-              var4 = g.field_d[var3].b(-109);
+              var4 = g.field_d[var3].getStatusIcon(-109);
               if (bm.field_d[var4] > hj.field_b) {
                 bm.field_d[var4] = bm.field_d[var4] - 1;
                 decompiledFrameRemainder0 = false;
@@ -129,7 +129,7 @@ final class TextLine {
         field_c = null;
         if (param0 != 0) {
           jg var2 = (jg) null;
-          TextLine.a((jg) null, (byte) -101);
+          TextLine.appendChatLineToHistory((jg) null, (byte) -101);
         }
         field_d = null;
     }

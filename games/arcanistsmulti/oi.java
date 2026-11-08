@@ -11,7 +11,7 @@ final class oi {
         field_a = null;
     }
 
-    final static int b(int param0) {
+    final static int alwaysOne(int param0) {
         int var1 = 55 % ((-41 - param0) / 59);
         return 1;
     }

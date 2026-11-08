@@ -573,7 +573,7 @@ final class DropdownList extends UiContainer implements ButtonListener {
         this.field_P.setBounds(var2, 0, this.field_v, 0, -50);
         this.field_H = new ScrollContainer(0, 0, 0, 0, new EmptyPainter(), this.field_P, (WidgetPainter) null);
         if (var4 != 0) {
-          this.field_H.setScrollbar(true, 1, FixedViewResizeListener.b(-15438));
+          this.field_H.setScrollbar(true, 1, FixedViewResizeListener.createScrollbar(-15438));
         }
         this.field_H.setBounds(this.field_k - this.field_K, this.field_K, this.field_v, 0, -114);
         this.field_G = true;

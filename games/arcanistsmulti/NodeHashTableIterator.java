@@ -150,7 +150,7 @@ final class NodeHashTableIterator implements Iterator {
               } else {
                 var5Lifetime6 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }
-              ei.a("document.cookie=\"" + var5Lifetime6 + "\"", param1, param2 ^ 269);
+              JavaScriptBridge.evaluate("document.cookie=\"" + var5Lifetime6 + "\"", param1, param2 ^ 269);
             } catch (Throwable throwable) {
             }
             BattleUnit.updateBrowserLinks(-122, param1);

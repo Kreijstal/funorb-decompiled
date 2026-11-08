@@ -17,7 +17,7 @@ abstract class SpriteState extends DualLinkNode {
     int field_y;
     static int[] field_s;
 
-    final static void a(PacketBuffer param0, int param1, int param2, int param3, int param4) {
+    final static void writeSpriteRequest(PacketBuffer param0, int param1, int param2, int param3, int param4) {
         try {
           param0.writeByte(12, (byte) -120);
           param0.writeShort(17, (byte) -59);
@@ -41,7 +41,7 @@ abstract class SpriteState extends DualLinkNode {
 
     abstract void rotateNearest(int param0, int param1, int param2, int param3, int param4, int param5);
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
+    final void drawRotatedQuarterScale(int param0, int param1, int param2, int param3, int param4) {
         int var8 = 116 / ((81 - param2) / 39);
         int var6 = this.field_n << 3;
         param3 = (var6 & 15) + (param3 << 4);

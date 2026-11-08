@@ -7,7 +7,7 @@ final class EmptyPainter implements WidgetPainter {
     static String field_c;
     static int field_a;
 
-    final static nk a(boolean param0, int param1, int param2, int param3) {
+    final static nk findOrCreateListRequest(boolean param0, int param1, int param2, int param3) {
         nk var6 = null;
         int var5 = ArcanistsMulti.field_G ? 1 : 0;
         nk var4 = (nk) (ContextActionMenu.field_Lb.first(12623));
@@ -23,7 +23,7 @@ final class EmptyPainter implements WidgetPainter {
           var6.field_p = param2;
           var6.field_t = param1;
           ContextActionMenu.field_Lb.addLast(var6, -1);
-          fj.a(-26971, var6, param3);
+          fj.sendListRequest(-26971, var6, param3);
           return var6;
         }
         EmptyPainter.releaseStatics((byte) -57);
@@ -38,7 +38,7 @@ final class EmptyPainter implements WidgetPainter {
         var7.field_p = param2;
         var7.field_t = param1;
         ContextActionMenu.field_Lb.addLast(var7, -1);
-        fj.a(-26971, var7, param3);
+        fj.sendListRequest(-26971, var7, param3);
         return var7;
     }
 
@@ -55,7 +55,7 @@ final class EmptyPainter implements WidgetPainter {
         try {
           if (param1 != 5592405) {
             jg var7 = (jg) null;
-            EmptyPainter.a(-82, (jg) null);
+            EmptyPainter.openChatLineMenu(-82, (jg) null);
           }
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "eb.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
@@ -74,13 +74,13 @@ final class EmptyPainter implements WidgetPainter {
           return;
         }
         jg var3 = (jg) null;
-        EmptyPainter.a(84, (jg) null);
+        EmptyPainter.openChatLineMenu(84, (jg) null);
         if (gg.field_h != null) {
           gg.field_h.setFadeStep(2, param0);
         }
     }
 
-    final static void a(int param0, jg param1) {
+    final static void openChatLineMenu(int param0, jg param1) {
         int stackIn_2_0;
         Object stackIn_2_1;
         Object stackIn_2_2;
@@ -118,7 +118,7 @@ final class EmptyPainter implements WidgetPainter {
           }
           ArcanistsMulti.openInfoPanel(stackIn_2_0, (int[]) (stackIn_2_1), (SceneScrollPane) (stackIn_2_2), stackIn_2_3, stackIn_2_4, stackIn_2_5, stackIn_3_6, param1.field_g, param1.field_a);
           if (param1.field_m == param0 &&
-            !Js5Transport.f(-1) &&
+            !Js5Transport.isChatMode(-1) &&
             DirectByteStorage.field_f == null &&
             null == om.field_x) {
             if (!AlternateUsernameCredentials.field_p) {
@@ -131,7 +131,7 @@ final class EmptyPainter implements WidgetPainter {
             var7.field_l.addAction(20, var8, (byte) -26);
           }
           if (param1.field_m == 1 &&
-            !Js5Transport.f(-1) &&
+            !Js5Transport.isChatMode(-1) &&
             null != DirectByteStorage.field_f &&
             param1.field_q == DirectByteStorage.field_f.getSortKey((byte) 78)) {
             if (!AlternateUsernameCredentials.field_p) {
@@ -167,7 +167,7 @@ final class EmptyPainter implements WidgetPainter {
         }
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void drawSceneAndTooltip(boolean param0, int param1) {
         if (param1 > -81) {
           return;
         }
@@ -183,7 +183,7 @@ final class EmptyPainter implements WidgetPainter {
           StatefulTextPainter.field_r = param3;
           int var4_int = -103 / ((param2 - 31) / 55);
           DualLinkDeque.field_d = param1;
-          ResourceArchive.b(403300833);
+          ResourceArchive.drawPointerSprite(403300833);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "eb.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }

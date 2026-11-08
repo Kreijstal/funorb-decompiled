@@ -40,7 +40,7 @@ final class AudioService implements Runnable {
             decompiledCaughtException = decompiledCaughtParameter0;
             var1 = (Exception) (Object) decompiledCaughtException;
             var5 = (String) null;
-            DelegatingCanvas.a((Throwable) ((Object) var1), (String) null, (byte) 20);
+            DelegatingCanvas.reportError((Throwable) ((Object) var1), (String) null, (byte) 20);
             decompiledRegionSelector0 = 1;
           }
           if (decompiledRegionSelector0 == 0) {

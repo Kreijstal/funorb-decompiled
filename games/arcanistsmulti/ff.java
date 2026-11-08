@@ -10,11 +10,11 @@ final class ff {
     static String field_g;
     static String field_e;
 
-    final static void initializeDefaultResponse(byte param0, oo param1) {
+    final static void initializeDefaultResponse(byte param0, QuickChatCategory param1) {
         try {
           if (param0 != 91) {
-            oo var3 = (oo) null;
-            ff.initializeDefaultResponse((byte) -45, (oo) null);
+            QuickChatCategory var3 = (QuickChatCategory) null;
+            ff.initializeDefaultResponse((byte) -45, (QuickChatCategory) null);
           }
           param1.field_D = new int[]{-1};
           param1.field_z = new char[]{(char)63};
@@ -23,7 +23,7 @@ final class ff {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_d = null;
         if (param0 == 46) {
           field_a = null;
@@ -48,7 +48,7 @@ final class ff {
         char[] var7 = null;
         SceneTabbedPanel[] var8 = null;
         int var9 = 0;
-        tk var11 = null;
+        QuickChatPhrase var11 = null;
         int var12 = 0;
         char[] var13 = null;
         char[] var14 = null;
@@ -127,8 +127,8 @@ final class ff {
         if (param0 > 25) {
           return qa.createFrameSprites(param3, param1, 1, param2, (byte) 123);
         }
-        oo var5 = (oo) null;
-        ff.initializeDefaultResponse((byte) -74, (oo) null);
+        QuickChatCategory var5 = (QuickChatCategory) null;
+        ff.initializeDefaultResponse((byte) -74, (QuickChatCategory) null);
         return qa.createFrameSprites(param3, param1, 1, param2, (byte) 123);
     }
 
@@ -136,7 +136,7 @@ final class ff {
         try {
           ge.field_g = param3;
           UiTheme.field_o = param1;
-          jn.a(bj.field_qb, param0, -1);
+          jn.openAccountDialog(bj.field_qb, param0, -1);
           if (param2 != -97) {
             field_c = 14;
           }

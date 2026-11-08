@@ -36,7 +36,7 @@ final class bb {
           }
           var9 = new ie(ClientException.field_b, param3);
           ClientException.field_b.pushPanel(var9, 15637);
-          if (ArchiveIndex.b(63)) {
+          if (ArchiveIndex.hasStatusCookie(63)) {
             var9.showMessageById(248);
             return true;
           }

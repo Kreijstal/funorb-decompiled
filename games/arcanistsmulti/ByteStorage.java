@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class ByteStorage {
-    static kg field_d;
+    static QuickChatCategoryCache field_d;
     static String field_b;
     static int field_c;
     static boolean field_a;
@@ -101,11 +101,11 @@ abstract class ByteStorage {
           if (param0 > qf.field_d) {
             return;
           }
-          if (GridContainer.field_P + ta.a(true, param1) > NodeHashTableIterator.field_j) {
+          if (GridContainer.field_P + ta.classifyLowBits(true, param1) > NodeHashTableIterator.field_j) {
             return;
           }
           if ((cb.field_e & 1L << param1) == 0L) {
-            GridContainer.field_P = GridContainer.field_P + ta.a(true, param1);
+            GridContainer.field_P = GridContainer.field_P + ta.classifyLowBits(true, param1);
             nm.field_h = -1;
             cb.field_e = cb.field_e | 1L << param1;
             return;
@@ -122,11 +122,11 @@ abstract class ByteStorage {
         if (param0 > qf.field_d) {
           return;
         }
-        if (GridContainer.field_P + ta.a(true, param1) > NodeHashTableIterator.field_j) {
+        if (GridContainer.field_P + ta.classifyLowBits(true, param1) > NodeHashTableIterator.field_j) {
           return;
         }
         if ((cb.field_e & 1L << param1) == 0L) {
-          GridContainer.field_P = GridContainer.field_P + ta.a(true, param1);
+          GridContainer.field_P = GridContainer.field_P + ta.classifyLowBits(true, param1);
           nm.field_h = -1;
           cb.field_e = cb.field_e | 1L << param1;
           return;

@@ -207,7 +207,7 @@ final class IsaacRandom {
         }
     }
 
-    final static void a(int param0, int param1, byte param2, int param3, int param4, int param5, int param6) {
+    final static void layoutQuickChatMenu(int param0, int param1, byte param2, int param3, int param4, int param5, int param6) {
         co.field_f.setBounds(param3, param0, param5, param1, (byte) -120);
         if (null != CacheEntry.field_q) {
           CacheEntry.field_q.layout(param6, -ng.field_K + param6, param1, true, param1, param4);
@@ -233,9 +233,9 @@ final class IsaacRandom {
         return SceneTextInput.floorMod(var4, true, param0);
     }
 
-    final static int b(int param0) {
+    final static int getUiValue(int param0) {
         if (param0 >= -6) {
-          IsaacRandom.b(1);
+          IsaacRandom.getUiValue(1);
         }
         return UiComponent.field_u;
     }

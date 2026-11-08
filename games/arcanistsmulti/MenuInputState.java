@@ -34,7 +34,7 @@ final class MenuInputState {
             this.field_l = true;
             this.field_h = param1;
             this.field_m = WrappedTextLayout.field_r;
-            this.field_e = hn.field_p;
+            this.field_e = JaggrabDownloader.field_p;
           }
           if (this.field_m != 0 &&
             PacketBuffer.field_m != 0) {
@@ -223,7 +223,7 @@ final class MenuInputState {
         this.field_l = true;
         this.field_h = param1;
         this.field_m = WrappedTextLayout.field_r;
-        this.field_e = hn.field_p;
+        this.field_e = JaggrabDownloader.field_p;
         if (this.field_m != 0 &&
           PacketBuffer.field_m != 0) {
           if (0 >= this.field_e) {

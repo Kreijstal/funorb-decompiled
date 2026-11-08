@@ -12,7 +12,7 @@ final class lm {
     static int[] field_i;
     static String field_d;
 
-    final static void a(boolean param0, int param1, LobbyGameEntry param2, int param3) {
+    final static void drawGameDetails(boolean param0, int param1, LobbyGameEntry param2, int param3) {
         IconTextSceneWidget dupTemp$0 = null;
         IconTextSceneWidget dupTemp$1 = null;
         int var17_int = 0;
@@ -126,7 +126,7 @@ final class lm {
             stackIn_12_0 = (SceneScrollPane.field_Db) ? 0 : 1;
             var4_int = stackIn_12_0;
           } else {
-            if (ContentTransitionDialog.k((byte) 106)) {
+            if (ContentTransitionDialog.isOwnGameSelected((byte) 106)) {
               stackIn_8_0 = (!param2.field_Lb) ? 1 : 0;
             } else {
               stackIn_8_0 = 0;
@@ -155,7 +155,7 @@ final class lm {
               stackIn_33_0.field_ab = stackIn_34_1;
             }
             if (IndexedSpriteState.field_e[0][2].field_A) {
-              if (!ContentTransitionDialog.k((byte) 111)) {
+              if (!ContentTransitionDialog.isOwnGameSelected((byte) 111)) {
                 TextLayout.field_c = CachedArchiveProvider.formatTemplate(param3 ^ -111, new String[]{DirectByteStorage.field_f.field_ic}, ed.field_tb);
               } else {
                 TextLayout.field_c = UiTheme.field_m;
@@ -420,15 +420,15 @@ final class lm {
                 null != um.field_a && (!param0 ||
                 !SceneScrollPane.field_Db)) {
                 if (qa.field_l == null) {
-                  tk.field_q = new boolean[vf.field_l];
+                  QuickChatPhrase.field_q = new boolean[vf.field_l];
                   qa.field_l = new byte[vf.field_l];
                 }
                 ByteStorage.field_a = false;
                 GzipDecoder.field_d = false;
                 for (var17_int = 0; var17_int < var7; var17_int++) {
-                  tk.field_q[var17_int] = false;
+                  QuickChatPhrase.field_q[var17_int] = false;
                 }
-                TextWidgetPainter.a(-1, (byte) -25, param0, param2, var9, var7, -1, 0);
+                TextWidgetPainter.drawGameOptions(-1, (byte) -25, param0, param2, var9, var7, -1, 0);
                 if (qf.field_d >= 2 &&
                   ri.field_b[12]) {
                   ByteStorage.field_a = true;
@@ -553,7 +553,7 @@ final class lm {
                   }
                   var23 = 0;
                   for (var24 = 0; var24 < var7; var24++) {
-                    if (tk.field_q[var24]) {
+                    if (QuickChatPhrase.field_q[var24]) {
                       var25_refLifetime1 = "</col>" + ResizableModalPanel.field_bb[var24] + "<col=A00000>";
                       var22 = var25_refLifetime1;
                       var21 = var22;
@@ -576,7 +576,7 @@ final class lm {
                 }
                 if (var21 != null) {
                   var32 = "<col=A00000>" + (String) (var21);
-                  var33 = ui.a("<br><col=A00000>", "<br>", (byte) -38, var32);
+                  var33 = ui.replaceKey("<br><col=A00000>", "<br>", (byte) -38, var32);
                   if (var20 != null) {
                     var20 = (String) (var20) + "<br>" + var33;
                   } else {
@@ -621,7 +621,7 @@ final class lm {
             if (param0) {
               return;
             }
-            PasswordFieldPainter.b(12657, param1);
+            PasswordFieldPainter.sendSavedLayout(12657, param1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -34,7 +34,7 @@ final class i {
           for (var5_int = 0; var5_int < var1; var5_int++) {
             var8[var5_int] = ph.field_c[NameValidator.bitAnd((int) var16[var5_int], 255)];
           }
-          var3 = new Sprite(pb.field_g, gn.field_a, hl.field_l[0], SectorCacheStore.field_d[0], jg.field_p[0], ho.field_i[0], var8);
+          var3 = new Sprite(pb.field_g, QuickChatPhraseCache.field_a, hl.field_l[0], SectorCacheStore.field_d[0], jg.field_p[0], ho.field_i[0], var8);
         } else {
           var17 = FadingModalPanel.field_O[0];
           var13 = new int[var1];
@@ -43,13 +43,13 @@ final class i {
           for (var6 = 0; var6 < var1; var6++) {
             var5[var6] = fj.bitOr(NameValidator.bitAnd(255, (int) var17[var6]) << 24, ph.field_c[NameValidator.bitAnd((int) var16[var6], 255)]);
           }
-          var3 = new ArgbSprite(pb.field_g, gn.field_a, hl.field_l[0], SectorCacheStore.field_d[0], jg.field_p[0], ho.field_i[0], var13);
+          var3 = new ArgbSprite(pb.field_g, QuickChatPhraseCache.field_a, hl.field_l[0], SectorCacheStore.field_d[0], jg.field_p[0], ho.field_i[0], var13);
         }
         CanvasRasterBuffer.releaseDecodeArrays(-18229);
         return (Sprite) (var3);
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
+    final void layoutChatColumns(int param0, int param1, int param2, int param3, int param4) {
         int var6 = 24;
         int var7 = param4;
         this.field_c.setBoundsAndLayout(param0, param2, var7, var6, 0, param3, param1);
@@ -72,7 +72,7 @@ final class i {
         field_g = null;
     }
 
-    final static void a(IndexedSprite param0, int param1, int param2, byte param3, Battle param4, Sprite param5, int param6) {
+    final static void stampSpriteMaskColour(IndexedSprite param0, int param1, int param2, byte param3, Battle param4, Sprite param5, int param6) {
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
@@ -160,7 +160,7 @@ final class i {
         }
     }
 
-    final static void a(int param0) {
+    final static void openPendingDialog(int param0) {
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
@@ -256,7 +256,7 @@ final class i {
         }
     }
 
-    final static void b(int param0) {
+    final static void resetFadeTimer(int param0) {
         lo.field_q = 200;
         int var1 = 63 % ((-66 - param0) / 47);
         UiTheme.field_n = false;

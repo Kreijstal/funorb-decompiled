@@ -13,7 +13,7 @@ final class lo extends TextFieldValidator {
     static SceneWidget field_r;
     static String field_t;
 
-    final static boolean e(boolean param0) {
+    final static boolean handlePasswordKey(boolean param0) {
         if (param0) {
           return false;
         }
@@ -84,7 +84,7 @@ final class lo extends TextFieldValidator {
           field_u = null;
           return;
         }
-        lo.e(false);
+        lo.handlePasswordKey(false);
         field_x = null;
         field_w = null;
         field_v = null;

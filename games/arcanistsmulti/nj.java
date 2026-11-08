@@ -17,17 +17,17 @@ final class nj {
     static int[] field_n;
     static SceneScrollPane field_m;
 
-    final static km a(String param0, int param1) {
+    final static NameCheckRequest createNameCheckRequest(String param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
-        km stackIn_1_0 = null;
+        NameCheckRequest stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = -25 % ((param1 + 12) / 54);
-          stackIn_1_0 = new km(param0);
+          stackIn_1_0 = new NameCheckRequest(param0);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -80,7 +80,7 @@ final class oj {
         field_c = null;
     }
 
-    final static ho a(int param0, boolean param1) {
+    final static ho createMessageWithFlag(int param0, boolean param1) {
         ho var2 = null;
         if (param0 == 32517) {
           var2 = new ho(true);
@@ -90,7 +90,7 @@ final class oj {
         return (ho) null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void drawLoginMethodPanel(int param0, int param1, int param2, int param3, int param4) {
         int stackIn_4_0 = 0;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;

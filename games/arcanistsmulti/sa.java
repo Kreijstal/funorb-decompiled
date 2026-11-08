@@ -64,7 +64,7 @@ final class sa extends SceneWidget {
           this.field_Fb.setBounds(15, -20 + var17.field_x, 5, 15, (byte) -120);
           var8.setBounds(this.field_x, 0, var17.field_I, this.field_I - var17.field_I, (byte) -120);
           var9.setBounds(this.field_x, 0, 20, 15, (byte) -120);
-          var8.field_v = of.a(3, var8.field_I, 1, 2105376, 11579568, 8421504);
+          var8.field_v = of.createGradientFrame(3, var8.field_I, 1, 2105376, 11579568, 8421504);
           var17.addChild(this.field_Fb, 27);
           var8.addChild(var9, 126);
           this.addChild(var17, 21);
@@ -116,7 +116,7 @@ final class sa extends SceneWidget {
         }
     }
 
-    final static boolean a(String param0, int param1) {
+    final static boolean isFriend(String param0, int param1) {
         RuntimeException var2 = null;
         String var3 = null;
         boolean stackIn_5_0 = false;
@@ -127,9 +127,9 @@ final class sa extends SceneWidget {
         try {
           if (param1 != 320) {
             var3 = (String) null;
-            sa.a((String) null, 69);
+            sa.isFriend((String) null, 69);
           }
-          stackIn_5_0 = (mf.a(-1, param0) != null);
+          stackIn_5_0 = (mf.findFriendByName(-1, param0) != null);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -145,7 +145,7 @@ final class sa extends SceneWidget {
         }
     }
 
-    final boolean c(boolean param0, byte param1) {
+    final boolean processInput(boolean param0, byte param1) {
         boolean stackIn_9_0 = false;
         this.updateInputFullScreen(true, (byte) 46);
         if (param1 != 48) {

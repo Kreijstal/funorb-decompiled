@@ -33,7 +33,7 @@ final class ii implements WidgetPainter {
           if (!param0.isFocused(param1 ^ -5594391)) {
             return;
           }
-          oj.a(param1 - 5624576, var7 + 2, var6_int + 2, param0.field_k - 4, -4 + param0.field_v);
+          oj.drawLoginMethodPanel(param1 - 5624576, var7 + 2, var6_int + 2, param0.field_k - 4, -4 + param0.field_v);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -49,7 +49,7 @@ final class ii implements WidgetPainter {
         }
     }
 
-    final static int a(byte param0) {
+    final static int getHoldTimer(byte param0) {
         if (param0 >= -109) {
           field_c = -37;
           return lo.field_q;
@@ -66,7 +66,7 @@ final class ii implements WidgetPainter {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1) {
-            ii.a((byte) 81);
+            ii.getHoldTimer((byte) 81);
           }
           stackIn_3_0 = ValidationHelpWidget.playEffectStream(PcmSampleStream.createAtRatePercent(param2, param0, param3), (byte) 68);
           return stackIn_3_0;
@@ -84,7 +84,7 @@ final class ii implements WidgetPainter {
         }
     }
 
-    final static int a(int param0) {
+    final static int handleOptionKeys(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -95,22 +95,22 @@ final class ii implements WidgetPainter {
           var1_int = 53 / ((26 - param0) / 49);
           while (BevelTextPainter.pollKeyEvent(false)) {
             if (IntrusiveDeque.field_d == 16) {
-              MusicCrossfadeStream.a(65, (byte) -84);
+              MusicCrossfadeStream.renderBlurredBackground(65, (byte) -84);
             }
             if (IntrusiveDeque.field_d == 17) {
-              MusicCrossfadeStream.a(73, (byte) 112);
+              MusicCrossfadeStream.renderBlurredBackground(73, (byte) 112);
             }
             if (IntrusiveDeque.field_d == 18) {
-              MusicCrossfadeStream.a(97, (byte) -93);
+              MusicCrossfadeStream.renderBlurredBackground(97, (byte) -93);
             }
             if (IntrusiveDeque.field_d == 19) {
-              MusicCrossfadeStream.a(69, (byte) 76);
+              MusicCrossfadeStream.renderBlurredBackground(69, (byte) 76);
             }
             if (IntrusiveDeque.field_d == 20) {
-              MusicCrossfadeStream.a(67, (byte) 89);
+              MusicCrossfadeStream.renderBlurredBackground(67, (byte) 89);
             }
             if (IntrusiveDeque.field_d == 21) {
-              MusicCrossfadeStream.a(17, (byte) 31);
+              MusicCrossfadeStream.renderBlurredBackground(17, (byte) 31);
             }
             if (IntrusiveDeque.field_d == 13 &&
               (CredentialKind.field_b & 64) > 0) {
@@ -122,7 +122,7 @@ final class ii implements WidgetPainter {
               continue;
             }
           }
-          vf.field_g.setItemBounds(TextFieldValidator.a(MenuButtonPanel.field_I, EmailLoginCredentials.field_g, -123), TextFieldValidator.a(ja.field_s, pb.field_h, -74), -97);
+          vf.field_g.setItemBounds(TextFieldValidator.unsupportedLookup(MenuButtonPanel.field_I, EmailLoginCredentials.field_g, -123), TextFieldValidator.unsupportedLookup(ja.field_s, pb.field_h, -74), -97);
           if (!vf.field_g.isActivatePressed(true)) {
           }
           var2 = 0;

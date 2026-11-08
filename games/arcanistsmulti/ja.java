@@ -61,7 +61,7 @@ final class ja extends TextFieldValidator {
     }
 
     final ValidationState validateText(String param0, int param1) {
-        km var3 = null;
+        NameCheckRequest var3 = null;
         int var3_int = 0;
         RuntimeException var3_ref = null;
         ValidationState stackIn_2_0 = null;
@@ -77,13 +77,13 @@ final class ja extends TextFieldValidator {
             return stackIn_2_0;
           }
           if (!param0.equals(this.field_q)) {
-            var3 = BevelTextPainter.a(2, param0);
-            if (!var3.a((byte) -111)) {
+            var3 = BevelTextPainter.createNameCheck(2, param0);
+            if (!var3.isComplete((byte) -111)) {
               stackIn_7_0 = IsaacCipher.field_c;
               return stackIn_7_0;
             }
             this.field_q = param0;
-            this.field_x = var3.a(-21813);
+            this.field_x = var3.isAvailable(-21813);
           }
           var3_int = 75 / ((-50 - param1) / 36);
           if (!this.field_x) {
@@ -106,9 +106,9 @@ final class ja extends TextFieldValidator {
         }
     }
 
-    final static SceneWidget d(byte param0) {
+    final static SceneWidget getStatusContent(byte param0) {
         if (param0 != 90) {
-          ja.d((byte) -69);
+          ja.getStatusContent((byte) -69);
           return lf.field_b.field_Cb;
         }
         return lf.field_b.field_Cb;

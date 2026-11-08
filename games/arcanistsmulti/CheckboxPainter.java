@@ -99,20 +99,20 @@ final class CheckboxPainter implements WidgetPainter {
         return param0;
     }
 
-    final static int a(byte param0) {
+    final static int getConnectionStage(byte param0) {
         if (param0 != 116) {
           field_q = (String) null;
-          ValidationStatusIcon.field_O.a(-8456);
+          ValidationStatusIcon.field_O.processProviders(-8456);
           if (GrowableIntList.field_c.process(param0 - 3261)) {
             return 0;
           }
-          return SceneWidgetNode.d(true);
+          return SceneWidgetNode.getConnectionStage(true);
         }
-        ValidationStatusIcon.field_O.a(-8456);
+        ValidationStatusIcon.field_O.processProviders(-8456);
         if (GrowableIntList.field_c.process(param0 - 3261)) {
           return 0;
         }
-        return SceneWidgetNode.d(true);
+        return SceneWidgetNode.getConnectionStage(true);
     }
 
     final static java.net.URL appendUrlSettings(byte param0, String param1, String param2, int param3, java.net.URL param4) {

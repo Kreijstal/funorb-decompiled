@@ -14,7 +14,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
     static Sprite[] field_lb;
     static String field_pb;
 
-    final static boolean k(byte param0) {
+    final static boolean isOwnGameSelected(byte param0) {
         if (param0 < 57) {
           field_qb = (String) null;
         }
@@ -157,7 +157,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
         this.field_sb.field_K = 0;
     }
 
-    final void a(int param0) {
+    final void finishResize(int param0) {
         if (param0 < 89) {
           UiComponent var3 = (UiComponent) null;
           this.setContent((byte) -74, (UiComponent) null);
@@ -170,7 +170,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
           this.field_rb = null;
           this.field_sb.field_K = 256;
         }
-        super.a(126);
+        super.finishResize(126);
     }
 
     public static void releaseStatics(int param0) {
@@ -186,7 +186,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
         if (param0 != 45) {
           this.field_ob = -74;
         }
-        this.a(127);
+        this.finishResize(127);
         return super.isFullyFadedOut((byte) 45);
     }
 

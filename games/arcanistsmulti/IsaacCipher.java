@@ -15,7 +15,7 @@ final class IsaacCipher {
     static ValidationState field_c;
     static int[][] field_d;
 
-    final static void a(byte param0, int param1, int param2, int param3, BitmapFont param4, int param5, int param6, int param7, int param8, int param9, int param10, ec param11, int param12, BitmapFont param13, ec param14, int param15, int param16, int param17, int param18, ec param19, int param20) {
+    final static void configureLobbyLayout(byte param0, int param1, int param2, int param3, BitmapFont param4, int param5, int param6, int param7, int param8, int param9, int param10, ec param11, int param12, BitmapFont param13, ec param14, int param15, int param16, int param17, int param18, ec param19, int param20) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -34,11 +34,11 @@ final class IsaacCipher {
           if (param0 < 85) {
             return;
           }
-          LoginPanel.b(1, param8, param12, param1, param2);
-          td.a(true, param17, param5);
-          LoadingTracker.a(param14, 120, param16, param15, param19, param18);
-          NanoFrameClock.a(param10, param11, param7, 69);
-          FadingModalPanel.a(-1, param6, param20, param9);
+          LoginPanel.storeLoginLayout(1, param8, param12, param1, param2);
+          td.storeLayoutValues(true, param17, param5);
+          LoadingTracker.setFrameLayout(param14, 120, param16, param15, param19, param18);
+          NanoFrameClock.noOperation(param10, param11, param7, 69);
+          FadingModalPanel.storeLayoutValues(-1, param6, param20, param9);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -78,7 +78,7 @@ final class IsaacCipher {
         }
     }
 
-    final static void a(int param0, PcmStreamMixer param1, ResourceArchive param2, int param3) {
+    final static void initializeIntro(int param0, PcmStreamMixer param1, ResourceArchive param2, int param3) {
         try {
           DisplayNameForm.field_G = param0 * LinkButtonPainter.getFramesPerSecond(-2) / 1000;
           ed.loadJagexLogoSound((byte) -17, param2);
@@ -86,7 +86,7 @@ final class IsaacCipher {
           int var4_int = 88 % ((81 - param3) / 36);
           fl.loadFinalFrameImage(-2389, param2);
           tm.buildIntensityTable(5968);
-          ModalPanelStack.j(0);
+          ModalPanelStack.renderLogoBanner(0);
           SoundCache.field_a = -DisplayNameForm.field_G + 0;
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "ug.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');

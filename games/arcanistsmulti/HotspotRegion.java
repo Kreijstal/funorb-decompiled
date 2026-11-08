@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vl extends IntrusiveNode {
+final class HotspotRegion extends IntrusiveNode {
     int field_o;
     int field_j;
     int field_m;
     int field_g;
-    vl field_h;
+    HotspotRegion field_h;
     static String field_k;
     static String field_l;
     int field_n;
     static IndexedSprite[] field_i;
 
-    final static void d(byte param0) {
+    final static void sendStatusBlock(byte param0) {
         int incrementValue$0 = 0;
         int var6 = 0;
         int incrementValue$3 = 0;
@@ -58,9 +58,9 @@ final class vl extends IntrusiveNode {
             }
             var5 = -1;
             for (var6 = 0; var6 < var4.length; var6++) {
-              if (~var4[var6][0] == ~kg.field_d[var3][0] &&
-                var4[var6][1] == kg.field_d[var3][1] &&
-                kg.field_d[var3][2] == var4[var6][2]) {
+              if (~var4[var6][0] == ~QuickChatCategoryCache.field_d[var3][0] &&
+                var4[var6][1] == QuickChatCategoryCache.field_d[var3][1] &&
+                QuickChatCategoryCache.field_d[var3][2] == var4[var6][2]) {
                 var5 = (byte)var6;
               }
             }
@@ -88,7 +88,7 @@ final class vl extends IntrusiveNode {
             var1[incrementValue$1] = (byte)b.field_f[var3Lifetime2];
           }
           if (!MenuScreen.getSessionFlag((byte) 112)) {
-            DualLinkNode.a(6, -25866, var10);
+            DualLinkNode.createPendingRequest(6, -25866, var10);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -98,7 +98,7 @@ final class vl extends IntrusiveNode {
         }
     }
 
-    final static void a(byte param0, SceneTabbedPanel param1) {
+    final static void addQuickChatMenu(byte param0, SceneTabbedPanel param1) {
         try {
           int var2_int = 72 % ((param0 - 77) / 38);
           co.field_f.addChild(param1, 9);
@@ -116,7 +116,7 @@ final class vl extends IntrusiveNode {
         }
     }
 
-    final static String a(byte param0, CharSequence param1) {
+    final static String truncateName(byte param0, CharSequence param1) {
         int var5 = 0;
         int var2_int = 0;
         int var3 = 0;
@@ -171,7 +171,7 @@ final class vl extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0) {
+    final static void updateFadeLevel(int param0) {
         if (!UiTheme.field_n) {
           lo.field_q = (1600 + lo.field_q * 120) / 128;
         } else {
@@ -179,11 +179,11 @@ final class vl extends IntrusiveNode {
         }
         if (param0 != 128) {
           SceneTabbedPanel var2 = (SceneTabbedPanel) null;
-          vl.a((byte) 37, (SceneTabbedPanel) null);
+          HotspotRegion.addQuickChatMenu((byte) 37, (SceneTabbedPanel) null);
         }
     }
 
-    vl(int param0, int param1, int param2, int param3, int param4) {
+    HotspotRegion(int param0, int param1, int param2, int param3, int param4) {
         this.field_o = param1;
         this.field_j = param0;
         this.field_n = param4;

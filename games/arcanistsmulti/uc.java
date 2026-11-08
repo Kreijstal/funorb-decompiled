@@ -7,12 +7,12 @@ final class uc {
     static SceneWidget field_d;
     static int field_a;
 
-    final static SceneWidget b(int param0) {
+    final static SceneWidget getListContent(int param0) {
         int var1 = 103 % ((param0 - 47) / 39);
         return IconTextSceneWidget.field_Gb.field_Eb;
     }
 
-    final static void a(int param0, byte param1) {
+    final static void sendByteRequest(int param0, byte param1) {
         CipherPacketBuffer var2 = he.field_e;
         var2.writeOpcode((byte) -81, param0);
         var2.writeByte(1, (byte) -101);
@@ -22,19 +22,19 @@ final class uc {
         }
     }
 
-    final static void a(int param0) {
+    final static void openQuickChat(int param0) {
         if (param0 != 3) {
           return;
         }
         TextButton.openQuickChatMenu(TextButton.field_C, (byte) -104);
     }
 
-    final static void c(int param0) {
+    final static void closeQuickChatIfOpen(int param0) {
         if (oj.field_i) {
-          SecondaryNodeDeque.a(param0 + 11);
+          SecondaryNodeDeque.closeQuickChat(param0 + 11);
         }
         if (param0 != 3) {
-          uc.a(-77);
+          uc.openQuickChat(-77);
           return;
         }
     }

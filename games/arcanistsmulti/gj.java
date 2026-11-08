@@ -10,7 +10,7 @@ final class gj {
     static int[] field_g;
     static SceneWidget field_d;
 
-    final static void a(boolean param0, boolean param1, int param2, int param3) {
+    final static void switchScreen(boolean param0, boolean param1, int param2, int param3) {
         int var4;
         th.field_f = param3;
         if (param1) {
@@ -21,7 +21,7 @@ final class gj {
             param2 = 9;
           }
           mn.field_r = param2;
-          km.field_c = 0;
+          NameCheckRequest.field_c = 0;
           if (SceneTabbedPanel.isNonNegative(mn.field_r, 10)) {
             var4 = 0;
             if (mn.field_r == 10) {
@@ -38,7 +38,7 @@ final class gj {
             param2 = 9;
           }
           mn.field_r = param2;
-          km.field_c = 0;
+          NameCheckRequest.field_c = 0;
           if (SceneTabbedPanel.isNonNegative(mn.field_r, 10)) {
             var4 = 0;
             if (mn.field_r == 10) {
@@ -62,16 +62,16 @@ final class gj {
         }
     }
 
-    final static void a(byte param0) {
+    final static void resetLoginMode(byte param0) {
         int var1 = -117 / ((param0 - 6) / 51);
         nj.field_c = 0;
-        uc.a(3);
+        uc.openQuickChat(3);
     }
 
-    final static boolean a(int param0) {
+    final static boolean isAudioEnabled(int param0) {
         if (param0 != 29372) {
-          gj.a((byte) -21);
-          if (!MusicPatchPcmStream.c(0)) {
+          gj.resetLoginMode((byte) -21);
+          if (!MusicPatchPcmStream.isMusicAllowed(0)) {
             return false;
           }
           if ((SpriteState.field_v & 8) == 0) {
@@ -79,7 +79,7 @@ final class gj {
           }
           return false;
         }
-        if (!MusicPatchPcmStream.c(0)) {
+        if (!MusicPatchPcmStream.isMusicAllowed(0)) {
           return false;
         }
         if ((SpriteState.field_v & 8) == 0) {
@@ -88,10 +88,10 @@ final class gj {
         return false;
     }
 
-    final static oo b(int param0) {
+    final static QuickChatCategory findFirstActiveDefinition(int param0) {
         int var1_int = 0;
-        oo var2 = null;
-        oo stackIn_6_0 = null;
+        QuickChatCategory var2 = null;
+        QuickChatCategory stackIn_6_0 = null;
         Throwable decompiledCaughtException = null;
         IllegalArgumentException var1 = null;
         try {
@@ -100,7 +100,7 @@ final class gj {
           }
           var1_int = 0;
           while (true) {
-            var2 = ByteStorage.field_d.a(param0 + 16638, var1_int);
+            var2 = ByteStorage.field_d.getCategory(param0 + 16638, var1_int);
             if (var2.field_A) {
               stackIn_6_0 = var2;
               return stackIn_6_0;

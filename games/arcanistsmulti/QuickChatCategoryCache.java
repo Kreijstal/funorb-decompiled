@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kg {
+final class QuickChatCategoryCache {
     static int field_b;
     static boolean field_f;
     private WeightedLruCache field_g;
@@ -21,12 +21,12 @@ final class kg {
         }
     }
 
-    final oo a(int param0, int param1) {
+    final QuickChatCategory getCategory(int param0, int param1) {
         byte[] var4 = null;
         if (param0 != 3) {
-          return (oo) null;
+          return (QuickChatCategory) null;
         }
-        oo var3 = (oo) (this.field_g.get((long)param1, false));
+        QuickChatCategory var3 = (QuickChatCategory) (this.field_g.get((long)param1, false));
         if (var3 != null) {
           return var3;
         }
@@ -35,11 +35,11 @@ final class kg {
         } else {
           var4 = this.field_e.getFile(param1, param0 + 26216, 0);
         }
-        oo var5 = new oo();
+        QuickChatCategory var5 = new QuickChatCategory();
         if (var4 != null) {
           var5.decode((byte) 116, new PacketBuffer(var4));
           if (param1 >= 32768) {
-            var5.f(-94);
+            var5.markExtended(-94);
             this.field_g.putUnitWeight(var5, (long)param1, -65);
             return var5;
           }
@@ -50,12 +50,12 @@ final class kg {
           this.field_g.putUnitWeight(var5, (long)param1, -65);
           return var5;
         }
-        var5.f(-94);
+        var5.markExtended(-94);
         this.field_g.putUnitWeight(var5, (long)param1, -65);
         return var5;
     }
 
-    kg(int param0, ResourceArchive param1, ResourceArchive param2) {
+    QuickChatCategoryCache(int param0, ResourceArchive param1, ResourceArchive param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -95,7 +95,7 @@ final class kg {
         }
     }
 
-    final static boolean a(long param0, boolean param1, String param2) {
+    final static boolean isFriendOrMember(long param0, boolean param1, String param2) {
         wa var4 = null;
         RuntimeException var4_ref = null;
         boolean stackIn_11_0 = false;
@@ -112,7 +112,7 @@ final class kg {
             var4.field_Lb != null) {
             return true;
           }
-          stackIn_11_0 = (DirectByteStorage.field_f != null) && (vf.a(param0, 8192) != null);
+          stackIn_11_0 = (DirectByteStorage.field_f != null) && (vf.lookupSocialEntry(param0, 8192) != null);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

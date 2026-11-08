@@ -28,7 +28,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
     private boolean field_z;
     private long field_r;
 
-    final static fe a(int param0, int param1) {
+    final static fe createPendingTask(int param0, int param1) {
         fe var2 = null;
         RuntimeException var2_ref = null;
         fe stackIn_3_0 = null;
@@ -36,10 +36,10 @@ final class CachedArchiveProvider extends ArchiveProvider {
         try {
           var2 = new fe();
           if (param1 != -21402) {
-            CachedArchiveProvider.b(68);
+            CachedArchiveProvider.releaseStatics(68);
           }
           i.field_e.addLast(var2, -1);
-          SecondaryNodeDeque.a(param0, true);
+          SecondaryNodeDeque.sendTwoByteRequest(param0, true);
           stackIn_3_0 = var2;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -250,9 +250,9 @@ final class CachedArchiveProvider extends ArchiveProvider {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 >= -69) {
-            CachedArchiveProvider.a(118, 80);
+            CachedArchiveProvider.createPendingTask(118, 80);
           }
-          stackIn_3_0 = gn.field_e.getNamedFile(param0, "", -1);
+          stackIn_3_0 = QuickChatPhraseCache.field_e.getNamedFile(param0, "", -1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -268,7 +268,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
         }
     }
 
-    final static void a(boolean param0, byte param1) {
+    final static void showLoginPanelDefault(boolean param0, byte param1) {
         try {
           ValidationHelpWidget.showLoginPanelWithOptions(false, false, param0);
           if (param1 >= -93) {
@@ -522,7 +522,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
         }
     }
 
-    final static void c(int param0) {
+    final static void clearBattleReferences(int param0) {
         try {
           rk.field_O = null;
           if (param0 < 62) {
@@ -626,7 +626,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
                 if (this.field_k.field_k != null &&
                   null != this.field_k.field_k[param2]) {
                   var31 = this.field_k.field_k[param2];
-                  var30 = CacheEntry.a(-2 + var19.length, (byte) -93, var19, 0);
+                  var30 = CacheEntry.computeWhirlpoolDigest(-2 + var19.length, (byte) -93, var19, 0);
                   var12 = 0;
                   var10 = var12;
                   while (64 > var12) {
@@ -678,7 +678,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
               if (this.field_k.field_k != null &&
                 this.field_k.field_k[param2] != null) {
                 var29 = this.field_k.field_k[param2];
-                var28 = CacheEntry.a(var19.length - 2, (byte) -93, var19, 0);
+                var28 = CacheEntry.computeWhirlpoolDigest(var19.length - 2, (byte) -93, var19, 0);
                 for (var10 = 0; var10 < 64; var10++) {
                   if (var28[var10] != var29[var10]) {
                     throw new RuntimeException();
@@ -749,13 +749,13 @@ final class CachedArchiveProvider extends ArchiveProvider {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         try {
           field_A = null;
           field_u = null;
           field_o = null;
           if (param0 < 65) {
-            CachedArchiveProvider.a(true, (byte) -36);
+            CachedArchiveProvider.showLoginPanelDefault(true, (byte) -36);
           }
           field_t = null;
           field_y = null;

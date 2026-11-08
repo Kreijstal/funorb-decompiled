@@ -12,25 +12,25 @@ final class SecondaryNodeDeque implements Iterable {
     static String field_e;
     static String field_a;
 
-    final static void a(byte param0) {
-        MembershipOfferScreen.a(29, new int[]{0, 1, 27, 5, 14, 4, 22, 15, 19}, param0 ^ -9, 0, 146, 577, 250);
-        MembershipOfferScreen.a(31, new int[]{2, 20, 21, 5, 9}, 0, 1, 320, 288, 32);
-        MembershipOfferScreen.a(31, new int[]{2, 20, 21, 5, 10, 11, 13}, 0, 2, 320, 288, 32);
-        MembershipOfferScreen.a(31, new int[]{12, 13}, 0, 3, 32, 288, 32);
-        MembershipOfferScreen.a(31, new int[]{2, 20, 21, 5, 13}, 0, 4, 320, 288, 32);
-        MembershipOfferScreen.a(31, new int[]{29}, 0, 5, 410, 480, 160);
-        MembershipOfferScreen.a(31, new int[]{23, 8}, 0, 6, 410, 480, 160);
-        MembershipOfferScreen.a(31, new int[]{25, 8, 26}, param0 ^ -9, 7, 430, 540, 70);
-        MembershipOfferScreen.a(31, new int[]{25, 8, 26, 23}, param0 ^ -9, 8, 400, 480, 160);
-        MembershipOfferScreen.a(31, new int[]{7}, 0, 9, 400, 540, 290);
-        MembershipOfferScreen.a(31, new int[]{7, 23}, 0, 10, 200, 540, 50);
-        MembershipOfferScreen.a(31, new int[]{7, 28}, 0, 11, 430, 540, 110);
-        MembershipOfferScreen.a(31, new int[]{7, 27}, param0 + 9, 12, 430, 540, 110);
-        MembershipOfferScreen.a(31, new int[]{7}, 0, 13, 430, 420, 220);
+    final static void defineMenuScreens(byte param0) {
+        MembershipOfferScreen.defineScreenLayout(29, new int[]{0, 1, 27, 5, 14, 4, 22, 15, 19}, param0 ^ -9, 0, 146, 577, 250);
+        MembershipOfferScreen.defineScreenLayout(31, new int[]{2, 20, 21, 5, 9}, 0, 1, 320, 288, 32);
+        MembershipOfferScreen.defineScreenLayout(31, new int[]{2, 20, 21, 5, 10, 11, 13}, 0, 2, 320, 288, 32);
+        MembershipOfferScreen.defineScreenLayout(31, new int[]{12, 13}, 0, 3, 32, 288, 32);
+        MembershipOfferScreen.defineScreenLayout(31, new int[]{2, 20, 21, 5, 13}, 0, 4, 320, 288, 32);
+        MembershipOfferScreen.defineScreenLayout(31, new int[]{29}, 0, 5, 410, 480, 160);
+        MembershipOfferScreen.defineScreenLayout(31, new int[]{23, 8}, 0, 6, 410, 480, 160);
+        MembershipOfferScreen.defineScreenLayout(31, new int[]{25, 8, 26}, param0 ^ -9, 7, 430, 540, 70);
+        MembershipOfferScreen.defineScreenLayout(31, new int[]{25, 8, 26, 23}, param0 ^ -9, 8, 400, 480, 160);
+        MembershipOfferScreen.defineScreenLayout(31, new int[]{7}, 0, 9, 400, 540, 290);
+        MembershipOfferScreen.defineScreenLayout(31, new int[]{7, 23}, 0, 10, 200, 540, 50);
+        MembershipOfferScreen.defineScreenLayout(31, new int[]{7, 28}, 0, 11, 430, 540, 110);
+        MembershipOfferScreen.defineScreenLayout(31, new int[]{7, 27}, param0 + 9, 12, 430, 540, 110);
+        MembershipOfferScreen.defineScreenLayout(31, new int[]{7}, 0, 13, 430, 420, 220);
         if (param0 == -9) {
-          MembershipOfferScreen.a(31, new int[]{25, 26, 30, 29, 7}, 0, 14, 430, 420, 220);
-          MembershipOfferScreen.a(29, new int[]{20, 21, 6, 7}, 0, 15, 146, 577, 250);
-          MembershipOfferScreen.a(31, new int[]{7}, 0, 16, 200, 540, 50);
+          MembershipOfferScreen.defineScreenLayout(31, new int[]{25, 26, 30, 29, 7}, 0, 14, 430, 420, 220);
+          MembershipOfferScreen.defineScreenLayout(29, new int[]{20, 21, 6, 7}, 0, 15, 146, 577, 250);
+          MembershipOfferScreen.defineScreenLayout(31, new int[]{7}, 0, 16, 200, 540, 50);
           return;
         }
     }
@@ -87,7 +87,7 @@ final class SecondaryNodeDeque implements Iterable {
             try {
               var9 = param0.getParameter("cookieprefix");
               var3 = var9 + "settings";
-              var4 = (String) (ei.a(param0, 119, "getcookies"));
+              var4 = (String) (JavaScriptBridge.callFunction(param0, 119, "getcookies"));
               var5 = ValidationState.split(false, ';', var4);
               for (var6 = 0; var5.length > var6; var6++) {
                 var7 = var5[var6].indexOf('=');
@@ -126,7 +126,7 @@ final class SecondaryNodeDeque implements Iterable {
         }
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void sendTwoByteRequest(int param0, boolean param1) {
         CipherPacketBuffer var2 = null;
         if (param1) {
           var2 = he.field_e;
@@ -169,7 +169,7 @@ final class SecondaryNodeDeque implements Iterable {
         field_a = null;
     }
 
-    final static void a(int param0) {
+    final static void closeQuickChat(int param0) {
         oj.field_i = false;
         if (CacheEntry.field_q != null) {
           CacheEntry.field_q.clearTabStates(-111);
@@ -178,7 +178,7 @@ final class SecondaryNodeDeque implements Iterable {
           java.applet.Applet var2 = (java.applet.Applet) null;
           SecondaryNodeDeque.getSettingsCookie((java.applet.Applet) null, 114);
           if (nj.field_c != 0) {
-            ue.b(10);
+            ue.clearChatInput(10);
             ng.field_K = 0;
             return;
           }
@@ -189,7 +189,7 @@ final class SecondaryNodeDeque implements Iterable {
           ng.field_K = 0;
           return;
         }
-        ue.b(10);
+        ue.clearChatInput(10);
         ng.field_K = 0;
     }
 

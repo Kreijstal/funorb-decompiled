@@ -78,7 +78,7 @@ final class sm {
               } else {
                 var7Lifetime4 = var9 + "; Expires=" + NodeHashTable.formatGmtDate(param3 ^ 15478, qj.monotonicTimeMillis(-26572) + 1000L * param0) + "; Max-Age=" + param0;
               }
-              ei.a("document.cookie=\"" + var7Lifetime4 + "\"", param2, 269);
+              JavaScriptBridge.evaluate("document.cookie=\"" + var7Lifetime4 + "\"", param2, 269);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = decompiledCaughtException;
@@ -86,7 +86,7 @@ final class sm {
             if (param3 == -15367) {
               return;
             }
-            sm.a(51, -15);
+            sm.requireFifty(51, -15);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -119,7 +119,7 @@ final class sm {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_b = null;
         field_e = null;
         field_c = null;
@@ -129,7 +129,7 @@ final class sm {
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void requireFifty(int param0, int param1) {
         if (param1 != 50) {
           throw new IllegalArgumentException();
         }

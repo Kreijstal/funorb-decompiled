@@ -9,7 +9,7 @@ final class FixedViewResizeListener implements ViewResizeListener {
     static String field_d;
     static int[] field_e;
 
-    final static Scrollbar b(int param0) {
+    final static Scrollbar createScrollbar(int param0) {
         if (param0 == -15438) {
           return new Scrollbar(0, 0, MusicCrossfadeStream.field_n.field_p, 0, (WidgetPainter) null, MusicCrossfadeStream.field_n.field_x, MusicCrossfadeStream.field_n.field_g, MusicCrossfadeStream.field_n.field_p, MusicCrossfadeStream.field_n.field_p, MusicCrossfadeStream.field_n.field_z, MusicCrossfadeStream.field_n.field_j, false, true, 32768, 0);
         }
@@ -28,7 +28,7 @@ final class FixedViewResizeListener implements ViewResizeListener {
     }
 
     public final void onViewResized(int param0, int param1, int param2) {
-        ri.a(param0, 2, param1);
+        ri.initializeRaster(param0, 2, param1);
         int var4 = 27 / ((59 - param2) / 47);
     }
 

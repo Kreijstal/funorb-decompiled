@@ -10,7 +10,7 @@ final class dm extends SingleChildContainer {
     static SceneWidget field_E;
     static String field_F;
 
-    final static void g(byte param0) {
+    final static void clearValidationState(byte param0) {
         ValidationState.field_e = null;
         int var1 = -115 / ((param0 - 8) / 53);
     }
@@ -34,19 +34,19 @@ final class dm extends SingleChildContainer {
           var8 = new Sprite(this.field_B.field_v, this.field_B.field_k);
           fk.setSpriteRasterTarget(var8, -23095);
           this.field_B.drawLayer((byte) -128, 0, param2, 0);
-          oo.popClipState(-15405);
+          QuickChatCategory.popClipState(-15405);
           var8.drawAlpha(param1 + this.field_n, this.field_j + param3, this.field_K);
           return;
         }
-        dm.h((byte) -53);
+        dm.isMessageQueueIdle((byte) -53);
         Sprite var7 = new Sprite(this.field_B.field_v, this.field_B.field_k);
         fk.setSpriteRasterTarget(var7, -23095);
         this.field_B.drawLayer((byte) -128, 0, param2, 0);
-        oo.popClipState(-15405);
+        QuickChatCategory.popClipState(-15405);
         var7.drawAlpha(param1 + this.field_n, this.field_j + param3, this.field_K);
     }
 
-    final static boolean h(byte param0) {
+    final static boolean isMessageQueueIdle(byte param0) {
         int var2 = 0;
         rb var1 = (rb) (pb.field_m.first(12623));
         int var2Lifetime1;
@@ -80,7 +80,7 @@ final class dm extends SingleChildContainer {
     final static Boolean takePendingFlag(int param0) {
         Boolean var1 = kj.field_e;
         if (param0 != 18727) {
-          dm.h((byte) 104);
+          dm.isMessageQueueIdle((byte) 104);
           kj.field_e = null;
           return var1;
         }

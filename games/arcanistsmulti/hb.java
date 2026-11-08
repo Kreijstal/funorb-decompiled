@@ -31,7 +31,7 @@ final class hb extends SceneWidget {
         }
     }
 
-    final static byte[] a(boolean param0, byte[] param1) {
+    final static byte[] decompressContainer(boolean param0, byte[] param1) {
         byte[] stackIn_9_0 = null;
         byte[] stackIn_23_0 = null;
         RuntimeException stackIn_26_0 = null;
@@ -76,7 +76,7 @@ final class hb extends SceneWidget {
               if (var3 != 1) {
                 var7 = wj.field_a;
                 synchronized (var7) {
-                  wj.field_a.a(122, var13, var9);
+                  wj.field_a.decompress(122, var13, var9);
                 }
               } else {
                 Bzip2Decoder.decompress(var13, var5, param1, var4, 9);
@@ -115,7 +115,7 @@ final class hb extends SceneWidget {
         this.field_Lb.field_x = -var5 + this.field_x;
     }
 
-    final static void a(cm param0, int param1, byte param2) {
+    final static void sendStatsReport(cm param0, int param1, byte param2) {
         CipherPacketBuffer var6 = null;
         int var4 = 0;
         try {
@@ -138,7 +138,7 @@ final class hb extends SceneWidget {
         }
     }
 
-    final static void f(byte param0) {
+    final static void resetLobbyState(byte param0) {
         IntrusiveNodeHashTable.field_p = -1;
         cb.field_c = null;
         ReflectionCheckRequest.field_i = false;
@@ -157,7 +157,7 @@ final class hb extends SceneWidget {
           return;
         }
         cm var10 = (cm) null;
-        hb.a((cm) null, -57, (byte) -106);
+        hb.sendStatsReport((cm) null, -57, (byte) -106);
         this.layoutColumns(param1, param0, param7, false);
     }
 

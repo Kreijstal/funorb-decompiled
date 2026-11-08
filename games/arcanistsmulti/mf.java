@@ -11,7 +11,7 @@ final class mf {
     static int field_a;
     static String field_h;
 
-    final static wa a(int param0, String param1) {
+    final static wa findFriendByName(int param0, String param1) {
         String var2 = null;
         wa var3 = null;
         String var4 = null;
@@ -31,18 +31,18 @@ final class mf {
             return null;
           }
           var7 = (CharSequence) ((Object) param1);
-          var2 = Js5ArchiveManager.a(var7, -13);
+          var2 = Js5ArchiveManager.normalizeNameForLookup(var7, -13);
           if (var2 == null) {
             var2 = param1;
           }
           if (param0 != -1) {
             var6 = (String) null;
-            mf.a(-34, (String) null);
+            mf.findFriendByName(-34, (String) null);
           }
           var3 = (wa) (uc.field_c.get((long)var2.hashCode(), (byte) -64));
           while (var3 != null) {
             var8 = (CharSequence) ((Object) var3.field_Cb);
-            var4 = Js5ArchiveManager.a(var8, param0 - 12);
+            var4 = Js5ArchiveManager.normalizeNameForLookup(var8, param0 - 12);
             if (var4 == null) {
               var4 = var3.field_Cb;
             }

@@ -8,7 +8,7 @@ final class IconButtonPainter extends TextWidgetPainter {
     static String field_s;
 
     final static void resetNameValidation(int param0) {
-        mn.e(98);
+        mn.restoreSavedLayout(98);
         if (param0 != 16777215) {
           field_q = (String) null;
         }

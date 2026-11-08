@@ -10,7 +10,7 @@ final class hl extends IntrusiveNode {
     static int[] field_l;
     PacketBuffer field_j;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void fillCircleOr(int param0, int param1, int param2, int param3, int param4) {
         int var15 = 0;
         int var16 = 0;
         RuntimeException decompiledCaughtException = null;

@@ -273,7 +273,7 @@ final class BufferedSocket implements Runnable {
             decompiledCaughtException = decompiledCaughtParameter4;
             var1_ref = (Exception) (Object) decompiledCaughtException;
             var7 = (String) null;
-            DelegatingCanvas.a((Throwable) ((Object) var1_ref), (String) null, (byte) 20);
+            DelegatingCanvas.reportError((Throwable) ((Object) var1_ref), (String) null, (byte) 20);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -286,18 +286,18 @@ final class BufferedSocket implements Runnable {
         this(param0, param1, 5000);
     }
 
-    final static String a(int param0) {
+    final static String getConnectionCaption(int param0) {
         if (SceneScrollbar.field_Gb == sk.field_a) {
           return on.field_d;
         }
         if (param0 != 0) {
           field_k = (String[]) null;
         }
-        if (!SingleChildContainer.field_z.a((byte) -106)) {
-          return SingleChildContainer.field_z.a(true);
+        if (!SingleChildContainer.field_z.isComplete((byte) -106)) {
+          return SingleChildContainer.field_z.getName(true);
         }
         if (hb.field_Gb == sk.field_a) {
-          return SingleChildContainer.field_z.a(true);
+          return SingleChildContainer.field_z.getName(true);
         }
         return ge.field_g;
     }

@@ -69,7 +69,7 @@ final class ub {
         }
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void sendChatSettings(int param0, boolean param1) {
         CipherPacketBuffer var2 = he.field_e;
         if (param1) {
           return;
@@ -91,7 +91,7 @@ final class ub {
         field_c = null;
     }
 
-    final static void a(byte param0, int param1) {
+    final static void sendQueuedStats(byte param0, int param1) {
         IntrusiveNode var2 = null;
         int var3 = 0;
         cm var4 = null;
@@ -104,12 +104,12 @@ final class ub {
           }
           var4 = (cm) (cc.field_e.first(12623));
           while (var4 != null) {
-            hb.a(var4, param1, (byte) 93);
+            hb.sendStatsReport(var4, param1, (byte) 93);
             var4 = (cm) (cc.field_e.next(0));
           }
           var2 = i.field_e.first(12623);
           while (var2 != null) {
-            SecondaryNodeDeque.a(param1, true);
+            SecondaryNodeDeque.sendTwoByteRequest(param1, true);
             var2 = i.field_e.next(0);
           }
           return;

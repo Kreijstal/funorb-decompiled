@@ -187,7 +187,7 @@ final class DraggableWidget extends SingleChildContainer {
         }
     }
 
-    final static void a(byte param0, int param1, int param2) {
+    final static void growRankingArrays(byte param0, int param1, int param2) {
         if (co.field_e == null ||
           !(param1 <= co.field_e.length)) {
           co.field_e = new int[param1 * 2];

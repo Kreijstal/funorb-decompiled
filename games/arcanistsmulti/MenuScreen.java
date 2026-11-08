@@ -474,7 +474,7 @@ final class MenuScreen {
                   var4 += 20;
                   bb.field_g[133].drawHalfSize(var4, var3);
                   var3 += 20;
-                  var2 = hn.field_i;
+                  var2 = JaggrabDownloader.field_i;
                   var3 += 30;
                   SpellProjectile.field_B.drawParagraph(var2, var10, var3 - 65, 286, 60, 0, -1, 0, 1, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C);
                   var4 = var7;
@@ -644,7 +644,7 @@ final class MenuScreen {
                     SoftwareRasterizer.drawRoundedRectangle(125 + var4, var3 + 105, 40, 15, 6, 16776960);
                     SoftwareRasterizer.fillRoundedRectangleBlended(125 + var4, var3 + 105, 40, 15, 6, 16776960, 64);
                     var3 += 140;
-                    var2 = tk.field_m;
+                    var2 = QuickChatPhrase.field_m;
                     var4 = ValidatedTextWidget.field_I + 64;
                     var3 = var3 + (SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C) * SpellProjectile.field_B.drawParagraph(var2, var4, var3, 512, 128, 0, -1, 0, 0, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C);
                     var2 = tn.field_Kb;
@@ -663,29 +663,29 @@ final class MenuScreen {
                     var20 = new Sprite(128, 128);
                     var20.makeRasterTarget();
                     SoftwareRasterizer.fillCircle(64, 64, 32, 7829367);
-                    gn.a(32, (byte) 62, 128, 64, 64);
-                    pc.drawTexturedSpriteIntGuard(kg.field_d[2], var17 + var3, kg.field_d[3], kg.field_d[0], 118, kg.field_d[1], qe.field_i[MenuInputState.field_c[3]], var4 + var16);
+                    QuickChatPhraseCache.fillCircleMasked(32, (byte) 62, 128, 64, 64);
+                    pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var17 + var3, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], 118, QuickChatCategoryCache.field_d[1], qe.field_i[MenuInputState.field_c[3]], var4 + var16);
                     if (MenuInputState.field_c[0] != 46) {
-                      pc.drawTexturedSpriteIntGuard(kg.field_d[2], var3 + var13_int, kg.field_d[3], kg.field_d[0], -123, kg.field_d[1], fn.field_b[0], var4 + var12_int);
+                      pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var3 + var13_int, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -123, QuickChatCategoryCache.field_d[1], fn.field_b[0], var4 + var12_int);
                     }
-                    pc.drawTexturedSpriteIntGuard(kg.field_d[2], var3, kg.field_d[3], kg.field_d[0], 109, kg.field_d[1], IsaacRandom.field_j[MenuInputState.field_c[0]], var4);
+                    pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var3, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], 109, QuickChatCategoryCache.field_d[1], IsaacRandom.field_j[MenuInputState.field_c[0]], var4);
                     var3 -= 8;
                     var3 -= 16;
-                    pc.drawTexturedSpriteIntGuard(kg.field_d[2], var3, kg.field_d[3], kg.field_d[0], 47, kg.field_d[1], SceneWidget.field_kb[MenuInputState.field_c[1]], var4);
+                    pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var3, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], 47, QuickChatCategoryCache.field_d[1], SceneWidget.field_kb[MenuInputState.field_c[1]], var4);
                     var3 += 16;
-                    pc.drawTexturedSpriteIntGuard(kg.field_d[2], var3, kg.field_d[3], kg.field_d[0], -99, kg.field_d[1], hn.field_d[MenuInputState.field_c[5]], var4);
+                    pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var3, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -99, QuickChatCategoryCache.field_d[1], JaggrabDownloader.field_d[MenuInputState.field_c[5]], var4);
                     if (MenuInputState.field_c[5] != 53 &&
                       MenuInputState.field_c[5] != 55) {
-                      pc.drawTexturedSpriteIntGuard(kg.field_d[2], var3, kg.field_d[3], kg.field_d[0], -90, kg.field_d[1], bo.field_a[0], var4);
+                      pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var3, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -90, QuickChatCategoryCache.field_d[1], bo.field_a[0], var4);
                     }
                     var3 -= 16;
-                    pc.drawTexturedSpriteIntGuard(kg.field_d[2], var3, kg.field_d[3], kg.field_d[0], -80, kg.field_d[1], CachedArchiveProvider.field_A[MenuInputState.field_c[4]], var4);
+                    pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var3, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -80, QuickChatCategoryCache.field_d[1], CachedArchiveProvider.field_A[MenuInputState.field_c[4]], var4);
                     var3 += 8;
                     var3 += 16;
                     if (46 != MenuInputState.field_c[0]) {
-                      pc.drawTexturedSpriteIntGuard(kg.field_d[2], var3 + var15, kg.field_d[3], kg.field_d[0], -117, kg.field_d[1], ModalPanelStack.field_I[0], var14 + var4);
+                      pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var3 + var15, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -117, QuickChatCategoryCache.field_d[1], ModalPanelStack.field_I[0], var14 + var4);
                     }
-                    pc.drawTexturedSpriteIntGuard(kg.field_d[2], var3 + var19, kg.field_d[3], kg.field_d[0], 20, kg.field_d[1], DiskCacheRequest.field_u[MenuInputState.field_c[2]], var4 + var18);
+                    pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var3 + var19, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], 20, QuickChatCategoryCache.field_d[1], DiskCacheRequest.field_u[MenuInputState.field_c[2]], var4 + var18);
                     ce.field_m.makeRasterTarget(true);
                     var21 = 320 + ValidatedTextWidget.field_I;
                     var22 = 350 + uc.field_a;
@@ -776,7 +776,7 @@ final class MenuScreen {
                           } else {
                             if (var12_int != 9) {
                               if (var12_int == 10) {
-                                var2 = oo.field_q;
+                                var2 = QuickChatCategory.field_q;
                                 var3 = var3 + (8 + CachedArchiveProvider.field_t.field_C * CachedArchiveProvider.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, CachedArchiveProvider.field_t.field_C));
                                 this.drawPlayerTile(var3, var4, (byte) -47, 4);
                                 var2 = ValidationHelpWidget.field_S;
@@ -836,7 +836,7 @@ final class MenuScreen {
                               var2 = ah.field_e;
                               SpellProjectile.field_B.drawParagraph(var2, ValidatedTextWidget.field_I + 320, var3, 256, 120, 0, -1, 0, 1, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m);
                               bb.field_g[17].drawTransparent(var4, var3 + 80);
-                              var2 = hn.field_o;
+                              var2 = JaggrabDownloader.field_o;
                               var3 += 128;
                               var3 = var3 + (8 + CachedArchiveProvider.field_t.field_C * CachedArchiveProvider.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, CachedArchiveProvider.field_t.field_C));
                               this.drawPlayerTile(var3, var4, (byte) -71, 2);
@@ -852,10 +852,10 @@ final class MenuScreen {
                       if (ArcanistsMulti.i((byte) -92)) {
                         var12_int = ValidatedTextWidget.field_I + (74 + CachedArchiveProvider.field_t.textWidth(var2));
                         ii.field_d.drawScaled(var12_int, -2 + var3, 32, 32);
-                        SpellProjectile.field_B.drawText(tk.field_o, 40 + var12_int, var3 + (CachedArchiveProvider.field_t.field_C + SpellProjectile.field_B.field_C) / 2, 16711680, -1);
+                        SpellProjectile.field_B.drawText(QuickChatPhrase.field_o, 40 + var12_int, var3 + (CachedArchiveProvider.field_t.field_C + SpellProjectile.field_B.field_C) / 2, 16711680, -1);
                       }
                       var3 = var3 + (CachedArchiveProvider.field_t.field_C * CachedArchiveProvider.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, CachedArchiveProvider.field_t.field_C) + 8);
-                      var2 = km.field_b;
+                      var2 = NameCheckRequest.field_b;
                       var3 = var3 + ((SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m) * SpellProjectile.field_B.drawParagraph(var2, var5, var3, 512, 352, 0, -1, 0, 0, SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C) + 8);
                       var2 = MouseWheelHandler.field_a;
                       var3 = var3 + ((SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m) * SpellProjectile.field_B.drawParagraph(var2, 32 + var5, var3, 448, 480, 16777215, 0, 1, 0, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m) + 16);
@@ -881,7 +881,7 @@ final class MenuScreen {
                       var3 -= 32;
                       WhirlpoolHasher.field_o[9].drawHalfSize(64 + ValidatedTextWidget.field_I, var3);
                       WhirlpoolHasher.field_o[2].drawHalfSize(ValidatedTextWidget.field_I + 64, var3);
-                      tk.field_x[4].drawHalfSize(56 + ValidatedTextWidget.field_I, var3);
+                      QuickChatPhrase.field_x[4].drawHalfSize(56 + ValidatedTextWidget.field_I, var3);
                       var3 += 16;
                       var3 = var3 + ((SpellProjectile.field_B.field_m + SpellProjectile.field_B.field_C) * SpellProjectile.field_B.drawParagraph(var2, 136 + ValidatedTextWidget.field_I, var3, 440, EmailLoginCredentials.field_j, 0, -1, 0, 0, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m) + 16);
                     }
@@ -927,7 +927,7 @@ final class MenuScreen {
           if (stackIn_94_0Lifetime1 < stackIn_94_1Lifetime1) {
             discarded$0 = this.isItemUnlocked(-45, -88);
           }
-          CachedArchiveProvider.field_t.drawRightAlignedText(Bzip2State.a(SecondaryNodeDequeIterator.field_e, (byte) 69), 590 + ValidatedTextWidget.field_I, uc.field_a + 112, 0, -1);
+          CachedArchiveProvider.field_t.drawRightAlignedText(Bzip2State.formatPageNumber(SecondaryNodeDequeIterator.field_e, (byte) 69), 590 + ValidatedTextWidget.field_I, uc.field_a + 112, 0, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1344,7 +1344,7 @@ final class MenuScreen {
                         if (this.field_h == 5) {
                             /* Inlined CFG state: 35. */
                             {
-                                var4 = hn.field_d;
+                                var4 = JaggrabDownloader.field_d;
                                 statePc = 36;
                                 continue scanLoop1;
                             }
@@ -1960,18 +1960,18 @@ final class MenuScreen {
                         var2_int += 20;
                         var3 += 40;
                         var3 = var3 - var29;
-                        pc.drawTexturedSpriteIntGuard(kg.field_d[2], var20 + var3, kg.field_d[3], kg.field_d[0], -82, kg.field_d[1], (Sprite) (((Object[]) (var16_ref))[5]), var19 + var2_int);
-                        pc.drawTexturedSpriteIntGuard(kg.field_d[2], var3 + var22, kg.field_d[3], kg.field_d[0], -105, kg.field_d[1], (Sprite) (((Object[]) (var16_ref))[4]), var21 + var2_int);
-                        pc.drawTexturedSpriteIntGuard(kg.field_d[2], var3, kg.field_d[3], kg.field_d[0], 75, kg.field_d[1], (Sprite) (((Object[]) (var16_ref))[3]), var2_int);
+                        pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var20 + var3, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -82, QuickChatCategoryCache.field_d[1], (Sprite) (((Object[]) (var16_ref))[5]), var19 + var2_int);
+                        pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var3 + var22, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -105, QuickChatCategoryCache.field_d[1], (Sprite) (((Object[]) (var16_ref))[4]), var21 + var2_int);
+                        pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var3, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], 75, QuickChatCategoryCache.field_d[1], (Sprite) (((Object[]) (var16_ref))[3]), var2_int);
                         var3 -= 3;
                         var3 -= 6;
-                        pc.drawTexturedSpriteIntGuard(kg.field_d[2], var3, kg.field_d[3], kg.field_d[0], -77, kg.field_d[1], (Sprite) (((Object[]) (var16_ref))[2]), var2_int);
+                        pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var3, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -77, QuickChatCategoryCache.field_d[1], (Sprite) (((Object[]) (var16_ref))[2]), var2_int);
                         var3 += 6;
                         var3 -= 6;
                         var3 += 3;
                         var3 += 6;
-                        pc.drawTexturedSpriteIntGuard(kg.field_d[2], var26 + var3, kg.field_d[3], kg.field_d[0], 51, kg.field_d[1], (Sprite) (((Object[]) (var16_ref))[1]), var2_int + var25);
-                        pc.drawTexturedSpriteIntGuard(kg.field_d[2], var24 + var3, kg.field_d[3], kg.field_d[0], 37, kg.field_d[1], (Sprite) (((Object[]) (var16_ref))[0]), var23 + var2_int);
+                        pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var26 + var3, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], 51, QuickChatCategoryCache.field_d[1], (Sprite) (((Object[]) (var16_ref))[1]), var2_int + var25);
+                        pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var24 + var3, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], 37, QuickChatCategoryCache.field_d[1], (Sprite) (((Object[]) (var16_ref))[0]), var23 + var2_int);
                         var2_int = var17_int;
                         var3 = var18_int;
                         statePc = 111;
@@ -1991,7 +1991,7 @@ final class MenuScreen {
                             /* Inlined CFG state: 105. */
                             {
                                 var17_int = fo.field_k / 10 % java.lang.reflect.Array.getLength(var16_ref);
-                                pc.drawTexturedSpriteIntGuard(kg.field_d[2], var3 - ((Sprite) (((Object[]) (var16_ref))[var17_int])).field_w - (-32 + (int)(Math.sin(this.field_f) * 4.0)), kg.field_d[3], kg.field_d[0], 100, kg.field_d[1], (Sprite) (((Object[]) (var16_ref))[var17_int]), 32 + (-(((Sprite) (((Object[]) (var16_ref))[var17_int])).field_n / 2) + var2_int));
+                                pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var3 - ((Sprite) (((Object[]) (var16_ref))[var17_int])).field_w - (-32 + (int)(Math.sin(this.field_f) * 4.0)), QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], 100, QuickChatCategoryCache.field_d[1], (Sprite) (((Object[]) (var16_ref))[var17_int]), 32 + (-(((Sprite) (((Object[]) (var16_ref))[var17_int])).field_n / 2) + var2_int));
                                 statePc = 111;
                                 continue scanLoop1;
                             }
@@ -2020,7 +2020,7 @@ final class MenuScreen {
                             /* Inlined CFG state: 110. */
                             {
                                 var17_int = fo.field_k / 10 % java.lang.reflect.Array.getLength(var16_ref);
-                                pc.drawTexturedSpriteIntGuard(kg.field_d[2], 64 - ((Sprite) (((Object[]) (var16_ref))[var17_int])).field_w + var3, kg.field_d[3], kg.field_d[0], 117, kg.field_d[1], (Sprite) (((Object[]) (var16_ref))[var17_int]), 32 + (-(((Sprite) (((Object[]) (var16_ref))[var17_int])).field_n / 2) + var2_int));
+                                pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], 64 - ((Sprite) (((Object[]) (var16_ref))[var17_int])).field_w + var3, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], 117, QuickChatCategoryCache.field_d[1], (Sprite) (((Object[]) (var16_ref))[var17_int]), 32 + (-(((Sprite) (((Object[]) (var16_ref))[var17_int])).field_n / 2) + var2_int));
                                 statePc = 111;
                                 continue scanLoop1;
                             }
@@ -2284,11 +2284,11 @@ final class MenuScreen {
                         if (var18_int >= 6) {
                             /* Inlined CFG state: 140. */
                             {
-                                pc.drawTexturedSpriteIntGuard(kg.field_d[2], var12 + var3, kg.field_d[3], kg.field_d[0], -121, kg.field_d[1], qe.field_i[MenuInputState.field_c[3]], var2_int + var10);
+                                pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var12 + var3, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -121, QuickChatCategoryCache.field_d[1], qe.field_i[MenuInputState.field_c[3]], var2_int + var10);
                                 if (46 != MenuInputState.field_c[0]) {
                                     /* Inlined CFG state: 143. */
                                     {
-                                        pc.drawTexturedSpriteIntGuard(kg.field_d[2], var8 + var3, kg.field_d[3], kg.field_d[0], 105, kg.field_d[1], fn.field_b[0], var6 + var2_int);
+                                        pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var8 + var3, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], 105, QuickChatCategoryCache.field_d[1], fn.field_b[0], var6 + var2_int);
                                         statePc = 144;
                                         continue scanLoop1;
                                     }
@@ -2320,12 +2320,12 @@ final class MenuScreen {
                 }
                 case 144: {
                     try {
-                        pc.drawTexturedSpriteIntGuard(kg.field_d[2], var3, kg.field_d[3], kg.field_d[0], -92, kg.field_d[1], IsaacRandom.field_j[MenuInputState.field_c[0]], var2_int);
+                        pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var3, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -92, QuickChatCategoryCache.field_d[1], IsaacRandom.field_j[MenuInputState.field_c[0]], var2_int);
                         var3 -= 8;
                         var3 -= 16;
-                        pc.drawTexturedSpriteIntGuard(kg.field_d[2], var3, kg.field_d[3], kg.field_d[0], 75, kg.field_d[1], SceneWidget.field_kb[MenuInputState.field_c[1]], var2_int);
+                        pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var3, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], 75, QuickChatCategoryCache.field_d[1], SceneWidget.field_kb[MenuInputState.field_c[1]], var2_int);
                         var3 += 16;
-                        pc.drawTexturedSpriteIntGuard(kg.field_d[2], var3, kg.field_d[3], kg.field_d[0], -80, kg.field_d[1], hn.field_d[MenuInputState.field_c[5]], var2_int);
+                        pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var3, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -80, QuickChatCategoryCache.field_d[1], JaggrabDownloader.field_d[MenuInputState.field_c[5]], var2_int);
                         if (MenuInputState.field_c[5] == 53) {
                             statePc = 150;
                             continue scanLoop1;
@@ -2335,7 +2335,7 @@ final class MenuScreen {
                                 if (MenuInputState.field_c[5] != 55) {
                                     /* Inlined CFG state: 149. */
                                     {
-                                        pc.drawTexturedSpriteIntGuard(kg.field_d[2], var3, kg.field_d[3], kg.field_d[0], -99, kg.field_d[1], bo.field_a[0], var2_int);
+                                        pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var3, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -99, QuickChatCategoryCache.field_d[1], bo.field_a[0], var2_int);
                                         statePc = 150;
                                         continue scanLoop1;
                                     }
@@ -2360,7 +2360,7 @@ final class MenuScreen {
                 case 150: {
                     try {
                         var3 -= 16;
-                        pc.drawTexturedSpriteIntGuard(kg.field_d[2], var3, kg.field_d[3], kg.field_d[0], -109, kg.field_d[1], CachedArchiveProvider.field_A[MenuInputState.field_c[4]], var2_int);
+                        pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var3, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -109, QuickChatCategoryCache.field_d[1], CachedArchiveProvider.field_A[MenuInputState.field_c[4]], var2_int);
                         var3 += 8;
                         var3 += 16;
                         if (46 == MenuInputState.field_c[0]) {
@@ -2369,7 +2369,7 @@ final class MenuScreen {
                         } else {
                             /* Inlined CFG state: 151. */
                             {
-                                pc.drawTexturedSpriteIntGuard(kg.field_d[2], var3 + var7, kg.field_d[3], kg.field_d[0], -127, kg.field_d[1], ModalPanelStack.field_I[0], var2_int + var5);
+                                pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var3 + var7, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -127, QuickChatCategoryCache.field_d[1], ModalPanelStack.field_I[0], var2_int + var5);
                                 statePc = 153;
                                 continue scanLoop1;
                             }
@@ -2385,7 +2385,7 @@ final class MenuScreen {
                 }
                 case 153: {
                     try {
-                        pc.drawTexturedSpriteIntGuard(kg.field_d[2], var11 + var3, kg.field_d[3], kg.field_d[0], -95, kg.field_d[1], DiskCacheRequest.field_u[MenuInputState.field_c[2]], var9 + var2_int);
+                        pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var11 + var3, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -95, QuickChatCategoryCache.field_d[1], DiskCacheRequest.field_u[MenuInputState.field_c[2]], var9 + var2_int);
                         var18_int = 0;
                         statePc = 154;
                         continue scanLoop1;
@@ -2523,7 +2523,7 @@ final class MenuScreen {
                 }
                 case 177: {
                     try {
-                        if (this.field_n >= -27 + mb.a(this.field_h, 813231272)) {
+                        if (this.field_n >= -27 + mb.getKeyCodeForSlot(this.field_h, 813231272)) {
                             /* Inlined CFG state: 189. */
                             {
                                 this.field_b.drawSilhouette(590 + ValidatedTextWidget.field_I, uc.field_a + 182, 0);
@@ -2626,7 +2626,7 @@ final class MenuScreen {
                 }
                 case 194: {
                     try {
-                        var18_int = mb.a(this.field_h, 813231272);
+                        var18_int = mb.getKeyCodeForSlot(this.field_h, 813231272);
                         statePc = 195;
                         continue scanLoop1;
                     } catch (Throwable stateCaught_194) {
@@ -2802,7 +2802,7 @@ final class MenuScreen {
                         } else {
                             /* Inlined CFG state: 208. */
                             {
-                                stackIn_205_0 = mb.a(this.field_h, 813231272);
+                                stackIn_205_0 = mb.getKeyCodeForSlot(this.field_h, 813231272);
                                 stackIn_209_0 = stackIn_205_0;
                                 stackIn_205_1 = var21;
                                 stackIn_209_1 = stackIn_205_1;
@@ -6101,7 +6101,7 @@ final class MenuScreen {
                                                                 {
                                                                 }
                                                                 {
-                                                                    gn.a(15, (byte) 101, 128, var2_int - (1 + (-(var23 * var22) - 17)), var24 * var22 + (var3 + 16));
+                                                                    QuickChatPhraseCache.fillCircleMasked(15, (byte) 101, 128, var2_int - (1 + (-(var23 * var22) - 17)), var24 * var22 + (var3 + 16));
                                                                     this.field_i = var21;
                                                                     this.field_m = 0;
                                                                     if (var26 == 0) {
@@ -6223,7 +6223,7 @@ final class MenuScreen {
                         CachedArchiveProvider.field_t.drawParagraph(gg.field_f, -1 + (32 + ValidatedTextWidget.field_I + 7), 389 + uc.field_a, 166, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
                         CachedArchiveProvider.field_t.drawParagraph(gg.field_f, ValidatedTextWidget.field_I + 39, uc.field_a + 390 - 2, 166, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
                         CachedArchiveProvider.field_t.drawParagraph(gg.field_f, ValidatedTextWidget.field_I + 39, uc.field_a + 390 - 1, 166, 29, 12569299, -1, 1, 1, CachedArchiveProvider.field_t.field_C);
-                        if (kg.field_d[3] != hi.field_b[0]) {
+                        if (QuickChatCategoryCache.field_d[3] != hi.field_b[0]) {
                             statePc = 684;
                         } else {
                             statePc = 679;
@@ -6240,7 +6240,7 @@ final class MenuScreen {
                 }
                 case 679: {
                     try {
-                        if (kg.field_d[0] != AlternateUsernameCredentials.field_n[2]) {
+                        if (QuickChatCategoryCache.field_d[0] != AlternateUsernameCredentials.field_n[2]) {
                             statePc = 684;
                             continue scanLoop1;
                         } else {
@@ -6250,7 +6250,7 @@ final class MenuScreen {
                                 {
                                 }
                                 {
-                                    kg.field_d[0] = AlternateUsernameCredentials.field_n[3];
+                                    QuickChatCategoryCache.field_d[0] = AlternateUsernameCredentials.field_n[3];
                                     statePc = 684;
                                     continue scanLoop1;
                                 }
@@ -6267,16 +6267,16 @@ final class MenuScreen {
                 }
                 case 684: {
                     try {
-                        if (kg.field_d[3] != hi.field_b[0]) {
+                        if (QuickChatCategoryCache.field_d[3] != hi.field_b[0]) {
                             statePc = 690;
                             continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 685. */
                             {
-                                if (kg.field_d[1] == GameApplet.field_z[2]) {
+                                if (QuickChatCategoryCache.field_d[1] == GameApplet.field_z[2]) {
                                     /* Inlined CFG state: 689. */
                                     {
-                                        kg.field_d[1] = GameApplet.field_z[3];
+                                        QuickChatCategoryCache.field_d[1] = GameApplet.field_z[3];
                                         statePc = 690;
                                         continue scanLoop1;
                                     }
@@ -6300,16 +6300,16 @@ final class MenuScreen {
                 }
                 case 690: {
                     try {
-                        if (kg.field_d[3] != hi.field_b[2]) {
+                        if (QuickChatCategoryCache.field_d[3] != hi.field_b[2]) {
                             statePc = 696;
                             continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 691. */
                             {
-                                if (kg.field_d[0] == AlternateUsernameCredentials.field_n[12]) {
+                                if (QuickChatCategoryCache.field_d[0] == AlternateUsernameCredentials.field_n[12]) {
                                     /* Inlined CFG state: 695. */
                                     {
-                                        kg.field_d[0] = AlternateUsernameCredentials.field_n[13];
+                                        QuickChatCategoryCache.field_d[0] = AlternateUsernameCredentials.field_n[13];
                                         statePc = 696;
                                         continue scanLoop1;
                                     }
@@ -6333,16 +6333,16 @@ final class MenuScreen {
                 }
                 case 696: {
                     try {
-                        if (kg.field_d[3] != hi.field_b[2]) {
+                        if (QuickChatCategoryCache.field_d[3] != hi.field_b[2]) {
                             statePc = 702;
                             continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 697. */
                             {
-                                if (GameApplet.field_z[12] == kg.field_d[1]) {
+                                if (GameApplet.field_z[12] == QuickChatCategoryCache.field_d[1]) {
                                     /* Inlined CFG state: 701. */
                                     {
-                                        kg.field_d[1] = GameApplet.field_z[13];
+                                        QuickChatCategoryCache.field_d[1] = GameApplet.field_z[13];
                                         statePc = 702;
                                         continue scanLoop1;
                                     }
@@ -6366,13 +6366,13 @@ final class MenuScreen {
                 }
                 case 702: {
                     try {
-                        if (hi.field_b[3] != kg.field_d[3]) {
+                        if (hi.field_b[3] != QuickChatCategoryCache.field_d[3]) {
                             statePc = 708;
                             continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 703. */
                             {
-                                if (GameApplet.field_z[12] != kg.field_d[1]) {
+                                if (GameApplet.field_z[12] != QuickChatCategoryCache.field_d[1]) {
                                     statePc = 708;
                                     continue scanLoop1;
                                 } else {
@@ -6382,7 +6382,7 @@ final class MenuScreen {
                                         {
                                         }
                                         {
-                                            kg.field_d[1] = GameApplet.field_z[14];
+                                            QuickChatCategoryCache.field_d[1] = GameApplet.field_z[14];
                                             statePc = 708;
                                             continue scanLoop1;
                                         }
@@ -6401,13 +6401,13 @@ final class MenuScreen {
                 }
                 case 708: {
                     try {
-                        if (hi.field_b[3] != kg.field_d[3]) {
+                        if (hi.field_b[3] != QuickChatCategoryCache.field_d[3]) {
                             statePc = 714;
                             continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 709. */
                             {
-                                if (AlternateUsernameCredentials.field_n[12] != kg.field_d[0]) {
+                                if (AlternateUsernameCredentials.field_n[12] != QuickChatCategoryCache.field_d[0]) {
                                     statePc = 714;
                                     continue scanLoop1;
                                 } else {
@@ -6417,7 +6417,7 @@ final class MenuScreen {
                                         {
                                         }
                                         {
-                                            kg.field_d[0] = AlternateUsernameCredentials.field_n[14];
+                                            QuickChatCategoryCache.field_d[0] = AlternateUsernameCredentials.field_n[14];
                                             statePc = 714;
                                             continue scanLoop1;
                                         }
@@ -6436,16 +6436,16 @@ final class MenuScreen {
                 }
                 case 714: {
                     try {
-                        if (kg.field_d[3] != hi.field_b[3]) {
+                        if (QuickChatCategoryCache.field_d[3] != hi.field_b[3]) {
                             statePc = 720;
                             continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 715. */
                             {
-                                if (GameApplet.field_z[13] == kg.field_d[1]) {
+                                if (GameApplet.field_z[13] == QuickChatCategoryCache.field_d[1]) {
                                     /* Inlined CFG state: 719. */
                                     {
-                                        kg.field_d[1] = GameApplet.field_z[14];
+                                        QuickChatCategoryCache.field_d[1] = GameApplet.field_z[14];
                                         statePc = 720;
                                         continue scanLoop1;
                                     }
@@ -6469,16 +6469,16 @@ final class MenuScreen {
                 }
                 case 720: {
                     try {
-                        if (hi.field_b[3] != kg.field_d[3]) {
+                        if (hi.field_b[3] != QuickChatCategoryCache.field_d[3]) {
                             statePc = 726;
                             continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 721. */
                             {
-                                if (AlternateUsernameCredentials.field_n[13] == kg.field_d[0]) {
+                                if (AlternateUsernameCredentials.field_n[13] == QuickChatCategoryCache.field_d[0]) {
                                     /* Inlined CFG state: 725. */
                                     {
-                                        kg.field_d[0] = AlternateUsernameCredentials.field_n[14];
+                                        QuickChatCategoryCache.field_d[0] = AlternateUsernameCredentials.field_n[14];
                                         statePc = 726;
                                         continue scanLoop1;
                                     }
@@ -6597,7 +6597,7 @@ final class MenuScreen {
                                         } else {
                                             /* Inlined CFG state: 733. */
                                             {
-                                                if (kg.field_d[3] == hi.field_b[0]) {
+                                                if (QuickChatCategoryCache.field_d[3] == hi.field_b[0]) {
                                                     /* Inlined CFG state: 737. */
                                                     {
                                                         var26 = 0;
@@ -6634,7 +6634,7 @@ final class MenuScreen {
                         } else {
                             /* Inlined CFG state: 739. */
                             {
-                                if (kg.field_d[3] != hi.field_b[2]) {
+                                if (QuickChatCategoryCache.field_d[3] != hi.field_b[2]) {
                                     statePc = 743;
                                     continue scanLoop1;
                                 } else {
@@ -6669,7 +6669,7 @@ final class MenuScreen {
                         } else {
                             /* Inlined CFG state: 744. */
                             {
-                                if (kg.field_d[3] != hi.field_b[3]) {
+                                if (QuickChatCategoryCache.field_d[3] != hi.field_b[3]) {
                                     statePc = 748;
                                     continue scanLoop1;
                                 } else {
@@ -6704,7 +6704,7 @@ final class MenuScreen {
                         } else {
                             /* Inlined CFG state: 749. */
                             {
-                                if (kg.field_d[3] == hi.field_b[3]) {
+                                if (QuickChatCategoryCache.field_d[3] == hi.field_b[3]) {
                                     /* Inlined CFG state: 753. */
                                     {
                                         var26 = 0;
@@ -6854,7 +6854,7 @@ final class MenuScreen {
                 }
                 case 773: {
                     try {
-                        if (AlternateUsernameCredentials.field_n[var25] == kg.field_d[0]) {
+                        if (AlternateUsernameCredentials.field_n[var25] == QuickChatCategoryCache.field_d[0]) {
                             /* Inlined CFG state: 776. */
                             {
                                 SoftwareRasterizer.drawThickRectangleAlpha(var2_int - 1, var3 - 1, 17, 17, 2, 16777215, 128);
@@ -6979,7 +6979,7 @@ final class MenuScreen {
                                         } else {
                                             /* Inlined CFG state: 786. */
                                             {
-                                                if (kg.field_d[3] == hi.field_b[0]) {
+                                                if (QuickChatCategoryCache.field_d[3] == hi.field_b[0]) {
                                                     /* Inlined CFG state: 790. */
                                                     {
                                                         var26 = 0;
@@ -7016,7 +7016,7 @@ final class MenuScreen {
                         } else {
                             /* Inlined CFG state: 792. */
                             {
-                                if (kg.field_d[3] == hi.field_b[2]) {
+                                if (QuickChatCategoryCache.field_d[3] == hi.field_b[2]) {
                                     /* Inlined CFG state: 796. */
                                     {
                                         var26 = 0;
@@ -7049,7 +7049,7 @@ final class MenuScreen {
                         } else {
                             /* Inlined CFG state: 798. */
                             {
-                                if (kg.field_d[3] == hi.field_b[3]) {
+                                if (QuickChatCategoryCache.field_d[3] == hi.field_b[3]) {
                                     /* Inlined CFG state: 802. */
                                     {
                                         var26 = 0;
@@ -7082,7 +7082,7 @@ final class MenuScreen {
                         } else {
                             /* Inlined CFG state: 804. */
                             {
-                                if (hi.field_b[3] == kg.field_d[3]) {
+                                if (hi.field_b[3] == QuickChatCategoryCache.field_d[3]) {
                                     /* Inlined CFG state: 808. */
                                     {
                                         var26 = 0;
@@ -7221,7 +7221,7 @@ final class MenuScreen {
                 }
                 case 827: {
                     try {
-                        if (kg.field_d[1] == GameApplet.field_z[var25]) {
+                        if (QuickChatCategoryCache.field_d[1] == GameApplet.field_z[var25]) {
                             /* Inlined CFG state: 830. */
                             {
                                 SoftwareRasterizer.drawThickRectangleAlpha(var2_int - 1, var3 - 1, 17, 17, 2, 16777215, 128);
@@ -7430,7 +7430,7 @@ final class MenuScreen {
                 }
                 case 855: {
                     try {
-                        if (kg.field_d[2] != IsaacCipher.field_d[var27]) {
+                        if (QuickChatCategoryCache.field_d[2] != IsaacCipher.field_d[var27]) {
                             statePc = 858;
                             continue scanLoop1;
                         } else {
@@ -7602,7 +7602,7 @@ final class MenuScreen {
                 }
                 case 878: {
                     try {
-                        if (hi.field_b[var27] != kg.field_d[3]) {
+                        if (hi.field_b[var27] != QuickChatCategoryCache.field_d[3]) {
                             statePc = 881;
                             continue scanLoop1;
                         } else {
@@ -7694,7 +7694,7 @@ final class MenuScreen {
                   var6 = param0 ? 1 : 0;
                   stackIn_134_0 = var6;
                   stackIn_135_1 = !(param2);
-                  gj.a(stackIn_134_0 != 0, stackIn_135_1, 0, mn.field_r);
+                  gj.switchScreen(stackIn_134_0 != 0, stackIn_135_1, 0, mn.field_r);
                   MusicCrossfadeStream.field_A = false;
                   fi.field_h = true;
                   return;
@@ -7704,7 +7704,7 @@ final class MenuScreen {
                     return;
                   }
                   var6 = param0 ? 1 : 0;
-                  gj.a(var6 != 0, true, 10, mn.field_r);
+                  gj.switchScreen(var6 != 0, true, 10, mn.field_r);
                   tn.field_Cb = true;
                   return;
                 }
@@ -7716,7 +7716,7 @@ final class MenuScreen {
                     var6 = param0 ? 1 : 0;
                     stackIn_155_0 = var6;
                     stackIn_156_1 = !(param2);
-                    gj.a(stackIn_155_0 != 0, stackIn_156_1, 15, mn.field_r);
+                    gj.switchScreen(stackIn_155_0 != 0, stackIn_156_1, 15, mn.field_r);
                     return;
                   }
                   if (15 == var6) {
@@ -7726,7 +7726,7 @@ final class MenuScreen {
                         return;
                       }
                       var6 = param0 ? 1 : 0;
-                      gj.a(var6 != 0, true, 16, mn.field_r);
+                      gj.switchScreen(var6 != 0, true, 16, mn.field_r);
                       return;
                     }
                   } else {
@@ -7736,7 +7736,7 @@ final class MenuScreen {
                       }
                       SecondaryNodeDequeIterator.field_e = 0;
                       var6 = param0 ? 1 : 0;
-                      gj.a(var6 != 0, true, 7, mn.field_r);
+                      gj.switchScreen(var6 != 0, true, 7, mn.field_r);
                       return;
                     }
                     if (8 == var6) {
@@ -7745,7 +7745,7 @@ final class MenuScreen {
                       }
                       var6 = th.field_f;
                       var7 = param0 ? 1 : 0;
-                      gj.a(var7 != 0, true, var6, mn.field_r);
+                      gj.switchScreen(var7 != 0, true, var6, mn.field_r);
                       return;
                     }
                     if (var6 != 4) {
@@ -7755,7 +7755,7 @@ final class MenuScreen {
                             return;
                           }
                           var6 = param0 ? 1 : 0;
-                          gj.a(var6 != 0, true, 12, mn.field_r);
+                          gj.switchScreen(var6 != 0, true, 12, mn.field_r);
                           return;
                         }
                         if (20 == var6) {
@@ -7793,7 +7793,7 @@ final class MenuScreen {
                           if (this.field_g.isRightPressed(-65) &&
                             CheckboxPainter.field_l < 256) {
                             var5 = 1;
-                            IndexedSpriteState.a(false);
+                            IndexedSpriteState.stepEffectVolumeUp(false);
                           }
                           if (var5 == 0) {
                             return;
@@ -7841,7 +7841,7 @@ final class MenuScreen {
                           }
                           if (var6 == 6) {
                             if (this.field_g.isActivatePressed(true)) {
-                              NumericDateInputWidget.f(!param2);
+                              NumericDateInputWidget.initializeLoginStackQuiet(!param2);
                               return;
                             }
                           } else {
@@ -7852,7 +7852,7 @@ final class MenuScreen {
                                 }
                                 SpriteState.field_z.sendTurnCommand59(true);
                                 var6 = param0 ? 1 : 0;
-                                gj.a(var6 != 0, true, -1, mn.field_r);
+                                gj.switchScreen(var6 != 0, true, -1, mn.field_r);
                                 return;
                               }
                               if (var6 != 11) {
@@ -7864,7 +7864,7 @@ final class MenuScreen {
                                   }
                                   SpriteState.field_z.sendTurnCommand61((byte) -61);
                                   var6 = param0 ? 1 : 0;
-                                  gj.a(var6 != 0, true, -1, mn.field_r);
+                                  gj.switchScreen(var6 != 0, true, -1, mn.field_r);
                                   return;
                                 }
                                 if (var6 != 13) {
@@ -7908,7 +7908,7 @@ final class MenuScreen {
                                                 this.field_g.field_h = 1;
                                               }
                                             }
-                                            UiContainer.a((byte) 120, var6);
+                                            UiContainer.selectMenuPage((byte) 120, var6);
                                             return;
                                           }
                                         }
@@ -7933,7 +7933,7 @@ final class MenuScreen {
                                                   this.field_g.field_h = 0;
                                                 }
                                               }
-                                              UiContainer.a((byte) -127, var6);
+                                              UiContainer.selectMenuPage((byte) -127, var6);
                                               return;
                                             }
                                           }
@@ -7948,7 +7948,7 @@ final class MenuScreen {
                                               if (!this.field_g.isActivatePressed(true)) {
                                                 return;
                                               }
-                                              UiContainer.a((byte) 89, 7);
+                                              UiContainer.selectMenuPage((byte) 89, 7);
                                               return;
                                             }
                                             if (var6 != 29) {
@@ -7958,7 +7958,7 @@ final class MenuScreen {
                                               return;
                                             }
                                             var6 = param0 ? 1 : 0;
-                                            gj.a(var6 != 0, true, -1, mn.field_r);
+                                            gj.switchScreen(var6 != 0, true, -1, mn.field_r);
                                           }
                                         }
                                       }
@@ -7971,7 +7971,7 @@ final class MenuScreen {
                                           return;
                                         }
                                         if (decompiledFrameRemainder0) {
-                                          Bzip2State.a(GameApplet.field_o, (byte) 45, this.field_l);
+                                          Bzip2State.setLobbyMode(GameApplet.field_o, (byte) 45, this.field_l);
                                           return;
                                         }
                                       }
@@ -7983,10 +7983,10 @@ final class MenuScreen {
                                   if (((MenuInputState) (Object) stackIn_309_0).isActivatePressed(stackIn_310_1)) {
                                     if (hi.field_a) {
                                       var6 = param0 ? 1 : 0;
-                                      gj.a(var6 != 0, true, -5, mn.field_r);
+                                      gj.switchScreen(var6 != 0, true, -5, mn.field_r);
                                     }
                                     if (StatefulTextPainter.field_w) {
-                                      qe.a(0, (byte) -35, 11);
+                                      qe.sendShortSettingRequest(0, (byte) -35, 11);
                                     }
                                     fi.field_h = true;
                                     return;
@@ -7996,7 +7996,7 @@ final class MenuScreen {
                                 if (this.field_g.isActivatePressed(true)) {
                                   SpriteState.field_z.sendTurnCommand60(26873);
                                   var6 = param0 ? 1 : 0;
-                                  gj.a(var6 != 0, true, -1, mn.field_r);
+                                  gj.switchScreen(var6 != 0, true, -1, mn.field_r);
                                   return;
                                 }
                               }
@@ -8015,14 +8015,14 @@ final class MenuScreen {
                         stackIn_188_1 = !(param2);
                         if (((MenuInputState) (Object) stackIn_187_0).isActivatePressed(stackIn_188_1)) {
                           var6 = param0 ? 1 : 0;
-                          gj.a(var6 != 0, true, 11, mn.field_r);
+                          gj.switchScreen(var6 != 0, true, 11, mn.field_r);
                           return;
                         }
                       }
                     } else {
                       if (this.field_g.isActivatePressed(true)) {
                         var6 = param0 ? 1 : 0;
-                        gj.a(var6 != 0, true, 6, mn.field_r);
+                        gj.switchScreen(var6 != 0, true, 6, mn.field_r);
                         return;
                       }
                     }
@@ -8032,7 +8032,7 @@ final class MenuScreen {
                     return;
                   }
                   var6 = param0 ? 1 : 0;
-                  gj.a(var6 != 0, true, 8, mn.field_r);
+                  gj.switchScreen(var6 != 0, true, 8, mn.field_r);
                   if (!param0) {
                     this.field_g.field_h = 1;
                     return;
@@ -8043,24 +8043,24 @@ final class MenuScreen {
                   var6 = param0 ? 1 : 0;
                   stackIn_125_0 = var6;
                   stackIn_126_1 = !(param2);
-                  gj.a(stackIn_125_0 != 0, stackIn_126_1, -1, mn.field_r);
+                  gj.switchScreen(stackIn_125_0 != 0, stackIn_126_1, -1, mn.field_r);
                   return;
                 }
               }
             } else {
               if (this.field_g.isActivatePressed(true)) {
                 if (MenuScreen.getSessionFlag((byte) 112)) {
-                  LabeledField.a(ResizableViewResizeListener.field_h, param0, SpellProjectile.field_B, 1, ArchiveRequest.field_t, 0, EmailLoginCredentials.field_j / 2, 16, SpellProjectile.field_B.field_o, 10, EmailLoginCredentials.field_f / 2, GameApplet.field_o, true, SpellProjectile.field_B.field_o + SpellProjectile.field_B.field_m, -21071);
+                  LabeledField.showFramedNotice(ResizableViewResizeListener.field_h, param0, SpellProjectile.field_B, 1, ArchiveRequest.field_t, 0, EmailLoginCredentials.field_j / 2, 16, SpellProjectile.field_B.field_o, 10, EmailLoginCredentials.field_f / 2, GameApplet.field_o, true, SpellProjectile.field_B.field_o + SpellProjectile.field_B.field_m, -21071);
                 } else {
                   var6 = param0 ? 1 : 0;
-                  gj.a(var6 != 0, true, -4, mn.field_r);
+                  gj.switchScreen(var6 != 0, true, -4, mn.field_r);
                 }
               }
             }
           } else {
             if (this.field_g.isActivatePressed(true)) {
               var6 = param0 ? 1 : 0;
-              gj.a(var6 != 0, true, -3, mn.field_r);
+              gj.switchScreen(var6 != 0, true, -3, mn.field_r);
             }
           }
           return;
@@ -8110,7 +8110,7 @@ final class MenuScreen {
           }
           if (3 == StatefulTextPainter.field_p) {
             var3 = SoundCache.field_h;
-            var2 = hn.field_c;
+            var2 = JaggrabDownloader.field_c;
             bb.field_g[4].drawTransparent(var5 - 28, var4);
           }
           if (StatefulTextPainter.field_p == 4) {
@@ -8124,7 +8124,7 @@ final class MenuScreen {
             bb.field_g[75].drawTransparent(-28 + var5, var4 - 48);
           }
           if (StatefulTextPainter.field_p == 6) {
-            var2 = gn.field_j;
+            var2 = QuickChatPhraseCache.field_j;
             SpriteState.field_z.field_z = 6050;
             var3 = LobbyGameEntry.field_lc;
             bb.field_g[0].drawTransparent(var5 - 48, var4);
@@ -8625,7 +8625,7 @@ final class MenuScreen {
           var9 = new int[]{0, 255, 0};
           var10 = new int[]{0, 0, 255};
           var11 = new int[]{255, 255, 255};
-          var12 = new Sprite[][]{SceneWidget.field_kb, IsaacRandom.field_j, DiskCacheRequest.field_u, qe.field_i, hn.field_d, CachedArchiveProvider.field_A, bo.field_a, ModalPanelStack.field_I, fn.field_b};
+          var12 = new Sprite[][]{SceneWidget.field_kb, IsaacRandom.field_j, DiskCacheRequest.field_u, qe.field_i, JaggrabDownloader.field_d, CachedArchiveProvider.field_A, bo.field_a, ModalPanelStack.field_I, fn.field_b};
           var13 = new double[]{-0.75, 0.75, -0.5, 0.5, -0.25, 0.25};
           var14 = 0;
           while (true) {
@@ -8751,7 +8751,7 @@ final class MenuScreen {
                 if (5 == (-6 + var26) / 12) {
                   SoftwareRasterizer.fillCircleAlpha(10 + var15, var16 + 10, 10, 65280, 256);
                 }
-                gn.a(10, (byte) 99, 256, var15 + 10, var16 + 10);
+                QuickChatPhraseCache.fillCircleMasked(10, (byte) 99, 256, var15 + 10, var16 + 10);
                 stackIn_85_0 = (var23Lifetime2 != 0) ? 0 : 1;
                 var23Lifetime2 = stackIn_85_0;
                 bb.field_g[dd.field_f[var26]].drawHalfSize(var15, var16);
@@ -8896,7 +8896,7 @@ final class MenuScreen {
           var10 = new int[]{0, 255, 0};
           var11 = new int[]{0, 0, 255};
           var12 = new int[]{255, 255, 255};
-          var13 = new Sprite[][]{SceneWidget.field_kb, IsaacRandom.field_j, DiskCacheRequest.field_u, qe.field_i, hn.field_d, CachedArchiveProvider.field_A, bo.field_a, ModalPanelStack.field_I, fn.field_b};
+          var13 = new Sprite[][]{SceneWidget.field_kb, IsaacRandom.field_j, DiskCacheRequest.field_u, qe.field_i, JaggrabDownloader.field_d, CachedArchiveProvider.field_A, bo.field_a, ModalPanelStack.field_I, fn.field_b};
           var14 = new StringBuilder(20);
           if (null != var2.field_w) {
             var2.field_V = var2.field_w;
@@ -8924,56 +8924,56 @@ final class MenuScreen {
             var16 = 0;
             incrementValue$5 = var16;
             var16++;
-            var15 = Js5Transport.a(var15, 10, incrementValue$5, lo.field_v);
+            var15 = Js5Transport.appendPlayerStat(var15, 10, incrementValue$5, lo.field_v);
             incrementValue$6 = var16;
             var16++;
-            var15 = Js5Transport.a(var15, 10, incrementValue$6, tm.field_e);
+            var15 = Js5Transport.appendPlayerStat(var15, 10, incrementValue$6, tm.field_e);
             incrementValue$7 = var16;
             var16++;
-            var15 = Js5Transport.a(var15, 10, incrementValue$7, qa.field_p);
+            var15 = Js5Transport.appendPlayerStat(var15, 10, incrementValue$7, qa.field_p);
             incrementValue$8 = var16;
             var16++;
-            var15 = Js5Transport.a(var15, 10, incrementValue$8, TextHotspotWidget.field_N);
+            var15 = Js5Transport.appendPlayerStat(var15, 10, incrementValue$8, TextHotspotWidget.field_N);
             incrementValue$9 = var16;
             var16++;
-            var15 = Js5Transport.a(var15, 10, incrementValue$9, ArchiveProvider.field_e);
+            var15 = Js5Transport.appendPlayerStat(var15, 10, incrementValue$9, ArchiveProvider.field_e);
             incrementValue$10 = var16;
             var16++;
-            var15 = Js5Transport.a(var15, 10, incrementValue$10, SectorCacheStore.field_a);
+            var15 = Js5Transport.appendPlayerStat(var15, 10, incrementValue$10, SectorCacheStore.field_a);
             incrementValue$11 = var16;
             var16++;
-            var15 = Js5Transport.a(var15, 10, incrementValue$11, DropTargetWidget.field_J);
+            var15 = Js5Transport.appendPlayerStat(var15, 10, incrementValue$11, DropTargetWidget.field_J);
             incrementValue$12 = var16;
             var16++;
-            var15 = Js5Transport.a(var15, 10, incrementValue$12, PacketBuffer.field_h);
+            var15 = Js5Transport.appendPlayerStat(var15, 10, incrementValue$12, PacketBuffer.field_h);
             incrementValue$13 = var16;
             var16++;
-            var15 = Js5Transport.a(var15, 10, incrementValue$13, ed.field_Eb);
+            var15 = Js5Transport.appendPlayerStat(var15, 10, incrementValue$13, ed.field_Eb);
             incrementValue$14 = var16;
             var16++;
-            var15 = Js5Transport.a(var15, 10, incrementValue$14, ResizableModalPanel.field_X);
+            var15 = Js5Transport.appendPlayerStat(var15, 10, incrementValue$14, ResizableModalPanel.field_X);
             incrementValue$15 = var16;
             var16++;
-            var15 = Js5Transport.a(var15, 10, incrementValue$15, ao.field_a);
+            var15 = Js5Transport.appendPlayerStat(var15, 10, incrementValue$15, ao.field_a);
             incrementValue$16 = var16;
             var16++;
-            var15 = Js5Transport.a(var15, 10, incrementValue$16, co.field_b);
+            var15 = Js5Transport.appendPlayerStat(var15, 10, incrementValue$16, co.field_b);
             incrementValue$17 = var16;
             var16++;
-            var15 = Js5Transport.a(var15, 10, incrementValue$17, SoundCache.field_i);
+            var15 = Js5Transport.appendPlayerStat(var15, 10, incrementValue$17, SoundCache.field_i);
             incrementValue$18 = var16;
             var16++;
-            var15 = Js5Transport.a(var15, 10, incrementValue$18, nj.field_i);
+            var15 = Js5Transport.appendPlayerStat(var15, 10, incrementValue$18, nj.field_i);
             incrementValue$19 = var16;
             var16++;
-            var15 = Js5Transport.a(var15, 10, incrementValue$19, rk.field_S);
+            var15 = Js5Transport.appendPlayerStat(var15, 10, incrementValue$19, rk.field_S);
             incrementValue$20 = var16;
             var16++;
-            var15 = Js5Transport.a(var15, 10, incrementValue$20, Js5ArchiveManager.field_a);
+            var15 = Js5Transport.appendPlayerStat(var15, 10, incrementValue$20, Js5ArchiveManager.field_a);
             if (Js5Transport.isFeatureEnabled(0, (byte) -36)) {
               incrementValue$21 = var16;
               var16++;
-              var15 = Js5Transport.a(var15, 10, incrementValue$21, NanoFrameClock.field_q);
+              var15 = Js5Transport.appendPlayerStat(var15, 10, incrementValue$21, NanoFrameClock.field_q);
             }
           } else {
             var15 = nj.field_b;
@@ -9022,7 +9022,7 @@ final class MenuScreen {
               for (var25 = -48; var25 < 48; var25++) {
                 SoftwareRasterizer.setClip(0, var25 + (var23 - 16), EmailLoginCredentials.field_f, 24 + var23 + var25);
                 SoftwareRasterizer.fillCircle(var22, -4 + (-(var25 / 2) + var23 - 16), 28, 13484723);
-                gn.a(48, (byte) 90, 32, var22, -16 + (-(var25 / 2) + var23 - 4));
+                QuickChatPhraseCache.fillCircleMasked(48, (byte) 90, 32, var22, -16 + (-(var25 / 2) + var23 - 4));
                 SoftwareRasterizer.drawCircleOutline(var22, -16 - var25 / 2 + var23 - 4, 28, 0);
               }
               var23 -= 16;
@@ -9302,14 +9302,14 @@ final class MenuScreen {
             return;
           }
           if (null == nj.field_e) {
-            nj.field_e = EmptyPainter.a(true, 10, 0, 7);
+            nj.field_e = EmptyPainter.findOrCreateListRequest(true, 10, 0, 7);
           }
           var2_int = 125 + uc.field_a - 16;
           var2_int += 16;
           var3 = 0;
           SpellProjectile.field_B.drawCentered(FixedViewResizeListener.field_d, no.field_tb[0] + ValidatedTextWidget.field_I, var2_int, var3, -1);
           SpellProjectile.field_B.drawCentered(TextHotspotWidget.field_H, no.field_tb[1] + ValidatedTextWidget.field_I, var2_int, var3, -1);
-          SpellProjectile.field_B.drawCentered(oo.field_o, no.field_tb[2] + ValidatedTextWidget.field_I, var2_int, var3, -1);
+          SpellProjectile.field_B.drawCentered(QuickChatCategory.field_o, no.field_tb[2] + ValidatedTextWidget.field_I, var2_int, var3, -1);
           SpellProjectile.field_B.drawCentered(fc.field_d, no.field_tb[3] + ValidatedTextWidget.field_I, var2_int, var3, -1);
           SpellProjectile.field_B.drawCentered(ScrollContainer.field_N, no.field_tb[4] + ValidatedTextWidget.field_I, var2_int, var3, -1);
           if (!param0) {
@@ -9521,7 +9521,7 @@ final class MenuScreen {
             var18 = 0;
           } else {
             if (NumericDateInputWidget.field_L[this.field_l].length > 1) {
-              var17 = km.blendColourStep(param2, NumericDateInputWidget.field_L[this.field_l].length, -1422079448, var16, var15Lifetime1);
+              var17 = NameCheckRequest.blendColourStep(param2, NumericDateInputWidget.field_L[this.field_l].length, -1422079448, var16, var15Lifetime1);
             }
           }
           Js5Transport.drawShadowedText(var9, var10, var5, var18, var17, param0 ^ -15);
@@ -9840,7 +9840,7 @@ final class MenuScreen {
               }
               if (var13_int != 0) {
                 var14_double = 0.5 * (3.14 * Math.sin((double)SpriteState.field_v * 0.1)) + 3.14;
-                tk.field_x[10].a(2048, (int)(16.0 * Math.cos(var14_double)) + var11 + 16, 125, var10 + ((int)(Math.sin(var14_double) * 32.0) + 32), 0);
+                QuickChatPhrase.field_x[10].drawRotatedQuarterScale(2048, (int)(16.0 * Math.cos(var14_double)) + var11 + 16, 125, var10 + ((int)(Math.sin(var14_double) * 32.0) + 32), 0);
               }
             }
             boolean decompiledFrameRemainder2 = true;
@@ -9866,8 +9866,8 @@ final class MenuScreen {
                       var16_double = (double)(SpriteState.field_v & 255) * 3.141592653589793 / 128.0;
                       var18 = (int)(4096.0 + 256.0 * Math.cos(4.0 * var16_double) - 256.0);
                       var19 = (int)(0.0 + 5000.0 * Math.sin(2.0 * var16_double));
-                      tk.field_x[4].a(var18, uc.field_a + 300, param0 ^ 0, 148 + ValidatedTextWidget.field_I, var19);
-                      gn.a(16, (byte) 111, 128, -(8 * var18 / 4096) + (148 + ValidatedTextWidget.field_I), -(var18 * 8 / 4096) + 300 + uc.field_a);
+                      QuickChatPhrase.field_x[4].drawRotatedQuarterScale(var18, uc.field_a + 300, param0 ^ 0, 148 + ValidatedTextWidget.field_I, var19);
+                      QuickChatPhraseCache.fillCircleMasked(16, (byte) 111, 128, -(8 * var18 / 4096) + (148 + ValidatedTextWidget.field_I), -(var18 * 8 / 4096) + 300 + uc.field_a);
                     }
                   }
                   if (!(!SpellProjectile.isPointerInRect(256, 178 + uc.field_a, 256, -8, ValidatedTextWidget.field_I + 26))) {
@@ -10235,7 +10235,7 @@ final class MenuScreen {
                     }
                     if (this.field_m == 3) {
                       var24Lifetime3 = -16 + (32 + (ValidatedTextWidget.field_I - 6) + 122 + (int)(Math.cos(var20_double) * (double)var14));
-                      gn.a((int)(Math.cos((double)SpriteState.field_v * 0.1) * 4.0) + 20, (byte) 105, 128 + (int)(Math.sin((double)SpriteState.field_v * 0.1) * 64.0), var24Lifetime3 + 16, 16 + var23);
+                      QuickChatPhraseCache.fillCircleMasked((int)(Math.cos((double)SpriteState.field_v * 0.1) * 4.0) + 20, (byte) 105, 128 + (int)(Math.sin((double)SpriteState.field_v * 0.1) * 64.0), var24Lifetime3 + 16, 16 + var23);
                     }
                   }
                 }
@@ -10273,7 +10273,7 @@ final class MenuScreen {
                     var31++;
                   }
                   if ((var24Lifetime1 != 0)) {
-                    gn.a(24, (byte) 63, -128, var22 + 16, var23 + 16);
+                    QuickChatPhraseCache.fillCircleMasked(24, (byte) 63, -128, var22 + 16, var23 + 16);
                     SoftwareRasterizer.drawCircleOutline(var22 + 16, var23 + 16, 24, 0);
                   }
                   decompiledFrameRemainder3 = false;
@@ -10321,11 +10321,11 @@ final class MenuScreen {
               var27 = (int)(2048.0 + Math.cos(var25 * 4.0) * 256.0 - 256.0);
               var28 = (int)(5000.0 * Math.sin(var25 * 2.0) + 0.0);
               if (16 + var22 < 148) {
-                tk.field_x[4].a(var27, var23, -4, var22, var28);
-                gn.a(8, (byte) 118, 128, var22 - var27 * 8 / 4096, var23 - 8 * var27 / 4096);
+                QuickChatPhrase.field_x[4].drawRotatedQuarterScale(var27, var23, -4, var22, var28);
+                QuickChatPhraseCache.fillCircleMasked(8, (byte) 118, 128, var22 - var27 * 8 / 4096, var23 - 8 * var27 / 4096);
               } else {
-                tk.field_x[4].a(var27, var23, -41, 32 + var22, var28);
-                gn.a(8, (byte) 126, 128, -(var27 * 8 / 4096) + var22 + 32, var23 - 8 * var27 / 4096);
+                QuickChatPhrase.field_x[4].drawRotatedQuarterScale(var27, var23, -41, 32 + var22, var28);
+                QuickChatPhraseCache.fillCircleMasked(8, (byte) 126, 128, -(var27 * 8 / 4096) + var22 + 32, var23 - 8 * var27 / 4096);
               }
             }
             if (~bc.field_b == ~this.field_h && (~var13_intLifetime4 == ~mf.field_a &&
@@ -10335,7 +10335,7 @@ final class MenuScreen {
               var25Lifetime1 = Math.cos(3.141592653589793 * (double)(SpriteState.field_v & 255) / 64.0) * 5.0 + 32.0;
               var27Lifetime1 = (int)(Math.cos(var20_double) * var25Lifetime1) + (16 + var22);
               var28Lifetime1 = (int)(var25Lifetime1 * Math.sin(var20_double)) + 16 + var23;
-              tk.field_x[10].a(2048, var28Lifetime1, 120, var27Lifetime1, 0);
+              QuickChatPhrase.field_x[10].drawRotatedQuarterScale(2048, var28Lifetime1, 120, var27Lifetime1, 0);
             }
             var13_intLifetime4++;
           }
@@ -10392,7 +10392,7 @@ final class MenuScreen {
               SpellProjectile.field_B.drawParagraph(var37, 8 + (290 + ValidatedTextWidget.field_I), uc.field_a + 340 - 8, 307, 128, 0, -1, 1, 0, SpellProjectile.field_B.field_C);
               return;
             }
-            var13 = vl.field_l;
+            var13 = HotspotRegion.field_l;
             if (0 < this.field_h) {
               var13 = tn.field_Ib;
               if (this.field_h == 9 && (ad.field_d == 0 ||
@@ -10425,7 +10425,7 @@ final class MenuScreen {
                   var14_ref_String = UiContainer.field_x;
                 }
                 if (Math.abs(this.field_i) == 4) {
-                  var13 = tk.field_r;
+                  var13 = QuickChatPhrase.field_r;
                   var14_ref_String = SecondaryNodeDequeIterator.field_d;
                 }
                 if (Math.abs(this.field_i) == 5) {
@@ -10438,11 +10438,11 @@ final class MenuScreen {
                 }
                 if (Math.abs(this.field_i) == 7) {
                   var14_ref_String = Battle.field_e;
-                  var13 = tk.field_w;
+                  var13 = QuickChatPhrase.field_w;
                 }
                 if (Math.abs(this.field_i) == 8) {
                   var13 = SpellProjectile.field_s;
-                  var14_ref_String = oo.field_r;
+                  var14_ref_String = QuickChatCategory.field_r;
                 }
                 if (Math.abs(this.field_i) == 9) {
                   var13 = FullscreenFocusCanvas.field_f;
@@ -10486,7 +10486,7 @@ final class MenuScreen {
                       var15_ref_String = Battle.field_e;
                     }
                     if (this.field_h == 8) {
-                      var15_ref_String = oo.field_r;
+                      var15_ref_String = QuickChatCategory.field_r;
                     }
                     if (this.field_h == 9) {
                       var15_ref_String = BevelBoxPainter.field_c;
@@ -10507,7 +10507,7 @@ final class MenuScreen {
                     array$4 = new String[stackIn_770_1Lifetime1];
                     array$4[0] = var15_ref_String;
                     array$4[1] = Integer.toString(var16Lifetime4Lifetime1);
-                    var13 = CachedArchiveProvider.formatTemplate(stackIn_770_0Lifetime1, array$4, vl.field_k);
+                    var13 = CachedArchiveProvider.formatTemplate(stackIn_770_0Lifetime1, array$4, HotspotRegion.field_k);
                     decompiledFrameRemainder0 = false;
                   }
                   else {
@@ -10539,7 +10539,7 @@ final class MenuScreen {
                         var14_ref_String = Battle.field_e;
                       }
                       if (Math.abs(this.field_h) == 8) {
-                        var14_ref_String = oo.field_r;
+                        var14_ref_String = QuickChatCategory.field_r;
                         var13 = DropTargetWidget.field_H + var3;
                       }
                       CachedArchiveProvider.field_t.drawParagraph(var14_ref_String, 290 + (ValidatedTextWidget.field_I + 21 - 1), 302 + uc.field_a, 281, 29, 13158, 13158, 1, 1, CachedArchiveProvider.field_t.field_C);
@@ -10596,7 +10596,7 @@ final class MenuScreen {
               }
             }
             if ((tn.field_Ib == var13 ||
-              var13 == vl.field_l) &&
+              var13 == HotspotRegion.field_l) &&
               (153 <= NodeHashTableIterator.field_j &&
               10 > ad.field_d)) {
               var13 = DropdownList.field_F;
@@ -10627,15 +10627,15 @@ final class MenuScreen {
                       var17_double = (double)(SpriteState.field_v & 255) * 3.141592653589793 / 128.0;
                       var19Lifetime3 = (int)(-256.0 + (Math.cos(4.0 * var17_double) * 256.0 + 4096.0)) / 2;
                       var20Lifetime1 = (int)(0.0 + 5000.0 * Math.sin(2.0 * var17_double));
-                      tk.field_x[4].drawCenteredRotatedScaledBilinear(var15Lifetime3Lifetime2, var16Lifetime4Lifetime2, var20Lifetime1, var19Lifetime3);
-                      gn.a(8, (byte) 71, 128, var15Lifetime3Lifetime2 - var19Lifetime3 * 8 / 4096, var16Lifetime4Lifetime2 - 8 * var19Lifetime3 / 4096);
+                      QuickChatPhrase.field_x[4].drawCenteredRotatedScaledBilinear(var15Lifetime3Lifetime2, var16Lifetime4Lifetime2, var20Lifetime1, var19Lifetime3);
+                      QuickChatPhraseCache.fillCircleMasked(8, (byte) 71, 128, var15Lifetime3Lifetime2 - var19Lifetime3 * 8 / 4096, var16Lifetime4Lifetime2 - 8 * var19Lifetime3 / 4096);
                     } else {
                       var17_double = 3.141592653589793 * (double)(255 & SpriteState.field_v) / 128.0;
                       var19Lifetime3 = (int)(-256.0 + (256.0 * Math.cos(var17_double * 4.0) + 4096.0)) / 2;
                       var20Lifetime1 = (int)(5000.0 * Math.sin(2.0 * var17_double) + 0.0);
-                      tk.field_x[4].drawCenteredRotatedScaledBilinear(var15Lifetime3Lifetime2, var16Lifetime4Lifetime2, var20Lifetime1, var19Lifetime3);
+                      QuickChatPhrase.field_x[4].drawCenteredRotatedScaledBilinear(var15Lifetime3Lifetime2, var16Lifetime4Lifetime2, var20Lifetime1, var19Lifetime3);
                       SoftwareRasterizer.fillCircleAlpha(var15Lifetime3Lifetime2, var16Lifetime4Lifetime2, 33 * var19Lifetime3 / 4096, 0, 128);
-                      gn.a(8, (byte) 99, 128, -(var19Lifetime3 * 8 / 4096) + var15Lifetime3Lifetime2, var16Lifetime4Lifetime2 - var19Lifetime3 * 8 / 4096);
+                      QuickChatPhraseCache.fillCircleMasked(8, (byte) 99, 128, -(var19Lifetime3 * 8 / 4096) + var15Lifetime3Lifetime2, var16Lifetime4Lifetime2 - var19Lifetime3 * 8 / 4096);
                       SoftwareRasterizer.fillCircleAlpha(var15Lifetime3Lifetime2, var16Lifetime4Lifetime2, var19Lifetime3 * 32 / 4096, 0, 128);
                     }
                   }
@@ -10754,10 +10754,10 @@ final class MenuScreen {
         int var3 = 0;
         var3 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          if (td.e(true)) {
+          if (td.hasMembership(true)) {
             if (ri.field_b[82] &&
               ri.field_b[28]) {
-              gj.a(false, true, 10, mn.field_r);
+              gj.switchScreen(false, true, 10, mn.field_r);
             }
             if (ri.field_b[82] &&
               ri.field_b[70]) {
@@ -11256,7 +11256,7 @@ final class MenuScreen {
             for (var8 = -var5; var8 < var5; var8++) {
               SoftwareRasterizer.setClip(0, var8 + var7, EmailLoginCredentials.field_f, var8 + var7 + 1);
               SoftwareRasterizer.fillCircleAlpha(var6, -4 - var8 / 2 + var7, var5, var4, 192);
-              gn.a(var5, (byte) 126, 100, var6, -(var8 / 2) + (var7 - 4));
+              QuickChatPhraseCache.fillCircleMasked(var5, (byte) 126, 100, var6, -(var8 / 2) + (var7 - 4));
             }
             SoftwareRasterizer.resetClip();
           }
@@ -11271,9 +11271,9 @@ final class MenuScreen {
           if (14 != this.field_l) {
             boolean decompiledFrameRemainder0 = true;
             ce.field_m.makeRasterTarget(true);
-            if (!qn.a(this.field_l, (byte) -32) && (!(640 >= EmailLoginCredentials.field_f) ||
+            if (!qn.isValidOption(this.field_l, (byte) -32) && (!(640 >= EmailLoginCredentials.field_f) ||
               !(480 >= EmailLoginCredentials.field_j))) {
-              ValidationHelpWidget.a(param0 ^ -47, EmailLoginCredentials.field_j, EmailLoginCredentials.field_f);
+              ValidationHelpWidget.renderTiledBackground(param0 ^ -47, EmailLoginCredentials.field_j, EmailLoginCredentials.field_f);
               decompiledFrameRemainder0 = false;
             }
             else {
@@ -11350,28 +11350,28 @@ final class MenuScreen {
             var16 = 160;
             var17 = new Sprite(128, 256);
             var17.makeRasterTarget();
-            pc.drawTexturedSpriteIntGuard(kg.field_d[2], -var11 + var16 + var8Lifetime1Lifetime1, kg.field_d[3], kg.field_d[0], -116, kg.field_d[1], qe.field_i[MenuInputState.field_c[3]], var7Lifetime1 + var15);
+            pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], -var11 + var16 + var8Lifetime1Lifetime1, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -116, QuickChatCategoryCache.field_d[1], qe.field_i[MenuInputState.field_c[3]], var7Lifetime1 + var15);
             if (46 != MenuInputState.field_c[0]) {
-              pc.drawTexturedSpriteIntGuard(kg.field_d[2], -(var11 / 2) + var4Lifetime2 + var16, kg.field_d[3], kg.field_d[0], -81, kg.field_d[1], fn.field_b[0], var3Lifetime2 + var15);
+              pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], -(var11 / 2) + var4Lifetime2 + var16, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -81, QuickChatCategoryCache.field_d[1], fn.field_b[0], var3Lifetime2 + var15);
             }
-            pc.drawTexturedSpriteIntGuard(kg.field_d[2], -var11 + var16, kg.field_d[3], kg.field_d[0], 68, kg.field_d[1], IsaacRandom.field_j[MenuInputState.field_c[0]], var15);
+            pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], -var11 + var16, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], 68, QuickChatCategoryCache.field_d[1], IsaacRandom.field_j[MenuInputState.field_c[0]], var15);
             var16 -= 8;
             var16 -= 16;
-            pc.drawTexturedSpriteIntGuard(kg.field_d[2], -var11 + var16, kg.field_d[3], kg.field_d[0], 43, kg.field_d[1], SceneWidget.field_kb[MenuInputState.field_c[1]], var15);
+            pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], -var11 + var16, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], 43, QuickChatCategoryCache.field_d[1], SceneWidget.field_kb[MenuInputState.field_c[1]], var15);
             var16 += 16;
-            pc.drawTexturedSpriteIntGuard(kg.field_d[2], -var11 + var16, kg.field_d[3], kg.field_d[0], 45, kg.field_d[1], hn.field_d[MenuInputState.field_c[5]], var15);
+            pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], -var11 + var16, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], 45, QuickChatCategoryCache.field_d[1], JaggrabDownloader.field_d[MenuInputState.field_c[5]], var15);
             if (53 != MenuInputState.field_c[5] &&
               MenuInputState.field_c[5] != 55) {
-              pc.drawTexturedSpriteIntGuard(kg.field_d[2], -var11 + var16, kg.field_d[3], kg.field_d[0], -125, kg.field_d[1], bo.field_a[var14], var15);
+              pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], -var11 + var16, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -125, QuickChatCategoryCache.field_d[1], bo.field_a[var14], var15);
             }
             var16 -= 16;
-            pc.drawTexturedSpriteIntGuard(kg.field_d[2], -var11 + var16, kg.field_d[3], kg.field_d[0], 2, kg.field_d[1], CachedArchiveProvider.field_A[MenuInputState.field_c[4]], var15);
+            pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], -var11 + var16, QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], 2, QuickChatCategoryCache.field_d[1], CachedArchiveProvider.field_A[MenuInputState.field_c[4]], var15);
             var16 += 8;
             var16 += 16;
             if (MenuInputState.field_c[0] != 46) {
-              pc.drawTexturedSpriteIntGuard(kg.field_d[2], var16 + (var6Lifetime1 - var11 / 2), kg.field_d[3], kg.field_d[0], -92, kg.field_d[1], ModalPanelStack.field_I[0], var15 + var5Lifetime2);
+              pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var16 + (var6Lifetime1 - var11 / 2), QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -92, QuickChatCategoryCache.field_d[1], ModalPanelStack.field_I[0], var15 + var5Lifetime2);
             }
-            pc.drawTexturedSpriteIntGuard(kg.field_d[2], var10Lifetime1 + (var16 - var11), kg.field_d[3], kg.field_d[0], -111, kg.field_d[1], DiskCacheRequest.field_u[MenuInputState.field_c[2]], var9 + var15);
+            pc.drawTexturedSpriteIntGuard(QuickChatCategoryCache.field_d[2], var10Lifetime1 + (var16 - var11), QuickChatCategoryCache.field_d[3], QuickChatCategoryCache.field_d[0], -111, QuickChatCategoryCache.field_d[1], DiskCacheRequest.field_u[MenuInputState.field_c[2]], var9 + var15);
             ce.field_m.makeRasterTarget(true);
             var18 = EmailLoginCredentials.field_f - 256;
             var19 = EmailLoginCredentials.field_j - 128;
@@ -11769,11 +11769,11 @@ final class MenuScreen {
           }
           fo.field_k = fo.field_k + 1;
           if (cc.hasPendingValidation((byte) 118)) {
-            var2_int = ii.a(89);
+            var2_int = ii.handleOptionKeys(89);
             if (var2_int != 2) {
               return;
             }
-            dm.g((byte) -96);
+            dm.clearValidationState((byte) -96);
           }
           if (!TextLayout.field_b &&
             !IntrusiveDequeCursor.field_g) {
@@ -11788,10 +11788,10 @@ final class MenuScreen {
                     2 != this.field_l &&
                     3 != this.field_l &&
                     this.field_l != 4) {
-                    gj.a(false, true, th.field_f, th.field_f);
+                    gj.switchScreen(false, true, th.field_f, th.field_f);
                     continue;
                   }
-                  gj.a(false, true, -1, mn.field_r);
+                  gj.switchScreen(false, true, -1, mn.field_r);
                   continue;
                 }
                 this.handleShortcutKeys(111);
@@ -11816,7 +11816,7 @@ final class MenuScreen {
             if (!(MusicPatchNode.field_s <= 100) ||
               PacketBuffer.field_m != 0 ||
               ri.field_b[84]) {
-              gj.a(false, true, 0, mn.field_r);
+              gj.switchScreen(false, true, 0, mn.field_r);
             }
           }
           if (this.field_l == 8) {
@@ -11825,19 +11825,19 @@ final class MenuScreen {
           if (16 == this.field_l) {
             var2 = SceneWidgetNode.field_s;
             stackIn_71_0 = var2;
-            stackIn_72_1 = (!LoadingTracker.b(-1)) && (~mn.field_r == ~this.field_l);
+            stackIn_72_1 = (!LoadingTracker.canSubmitDate(-1)) && (~mn.field_r == ~this.field_l);
             var3 = ((MembershipOfferScreen) (Object) stackIn_71_0).advanceAnimation(stackIn_72_1, true);
             if (var3 != 3 && (var3 == 1 ||
               var3 == 2)) {
               stackIn_85_0 = (var3 != 2) ? 0 : 1;
               var4 = stackIn_85_0;
-              gj.a(var4 != 0, true, 0, mn.field_r);
+              gj.switchScreen(var4 != 0, true, 0, mn.field_r);
             }
           }
           if (this.field_l == 5) {
             MusicPatchNode.field_s = MusicPatchNode.field_s + 1;
             if (MusicPatchNode.field_s > 250) {
-              gj.a(true, true, -1, mn.field_r);
+              gj.switchScreen(true, true, -1, mn.field_r);
             }
           }
           if (3 == this.field_l) {
@@ -11957,16 +11957,16 @@ final class MenuScreen {
                 this.field_n = 0;
               }
               if (this.field_m == 2) {
-                kg.field_d[0] = AlternateUsernameCredentials.field_n[this.field_i];
+                QuickChatCategoryCache.field_d[0] = AlternateUsernameCredentials.field_n[this.field_i];
               }
               if (3 == this.field_m) {
-                kg.field_d[1] = GameApplet.field_z[this.field_i];
+                QuickChatCategoryCache.field_d[1] = GameApplet.field_z[this.field_i];
               }
               if (4 == this.field_m) {
-                kg.field_d[2] = IsaacCipher.field_d[this.field_i];
+                QuickChatCategoryCache.field_d[2] = IsaacCipher.field_d[this.field_i];
               }
               if (this.field_m == 5) {
-                kg.field_d[3] = hi.field_b[this.field_i];
+                QuickChatCategoryCache.field_d[3] = hi.field_b[this.field_i];
               }
               if (this.field_m == 7) {
                 MenuInputState.field_c[0] = (int)(12.0 * Math.random());
@@ -11975,10 +11975,10 @@ final class MenuScreen {
                 MenuInputState.field_c[3] = (int)(12.0 * Math.random());
                 MenuInputState.field_c[4] = (int)(3.0 * (14.0 * Math.random()));
                 MenuInputState.field_c[5] = (int)(3.0 * (14.0 * Math.random()));
-                kg.field_d[0] = AlternateUsernameCredentials.field_n[(int)(Math.random() * (double)AlternateUsernameCredentials.field_n.length)];
-                kg.field_d[1] = GameApplet.field_z[(int)(Math.random() * (double)GameApplet.field_z.length)];
-                kg.field_d[2] = IsaacCipher.field_d[(int)(Math.random() * (double)IsaacCipher.field_d.length)];
-                stackIn_217_0 = kg.field_d;
+                QuickChatCategoryCache.field_d[0] = AlternateUsernameCredentials.field_n[(int)(Math.random() * (double)AlternateUsernameCredentials.field_n.length)];
+                QuickChatCategoryCache.field_d[1] = GameApplet.field_z[(int)(Math.random() * (double)GameApplet.field_z.length)];
+                QuickChatCategoryCache.field_d[2] = IsaacCipher.field_d[(int)(Math.random() * (double)IsaacCipher.field_d.length)];
+                stackIn_217_0 = QuickChatCategoryCache.field_d;
                 stackIn_217_1 = 3;
                 stackIn_217_2 = hi.field_b;
                 stackIn_217_3 = (int)(Math.random() * (double)hi.field_b.length);

@@ -50,7 +50,7 @@ final class LobbyGameEntry extends SceneWidget {
         if (param0 < 46) {
           return 4;
         }
-        return (int)this.b(false);
+        return (int)this.getSecondaryKey(false);
     }
 
     public static void releaseStatics(byte param0) {
@@ -61,7 +61,7 @@ final class LobbyGameEntry extends SceneWidget {
           field_gc = null;
           return;
         }
-        LobbyGameEntry.i((byte) 112);
+        LobbyGameEntry.clearStatusCookieForApplet((byte) 112);
         field_lc = null;
         field_Tb = null;
         field_Sb = null;
@@ -194,7 +194,7 @@ final class LobbyGameEntry extends SceneWidget {
         }
     }
 
-    final static void a(long param0, int param1, int param2) {
+    final static void sendNameRequest(long param0, int param1, int param2) {
         int var5 = 89 / ((param1 - 3) / 62);
         CipherPacketBuffer var4 = he.field_e;
         var4.writeOpcode((byte) -99, param2);
@@ -205,8 +205,8 @@ final class LobbyGameEntry extends SceneWidget {
         var4.writeByteLengthAtMark(-var6 + var4.position, (byte) 43);
     }
 
-    final static void i(byte param0) {
-        UiContainer.a(1, IconButtonPainter.getApplet(108));
+    final static void clearStatusCookieForApplet(byte param0) {
+        UiContainer.clearStatusCookie(1, IconButtonPainter.getApplet(108));
         int var1 = -86 % ((param0 + 14) / 33);
     }
 
@@ -273,9 +273,9 @@ final class LobbyGameEntry extends SceneWidget {
         }
     }
 
-    final static SceneWidget f(byte param0) {
+    final static SceneWidget getEntryListContent(byte param0) {
         if (param0 <= 13) {
-          LobbyGameEntry.i((byte) 105);
+          LobbyGameEntry.clearStatusCookieForApplet((byte) 105);
           return nj.field_m.field_Cb;
         }
         return nj.field_m.field_Cb;

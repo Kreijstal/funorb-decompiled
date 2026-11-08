@@ -23,7 +23,7 @@ final class sb {
         field_d = null;
     }
 
-    final static void b(int param0) {
+    final static void drawTimedMessage(int param0) {
         int var2 = 0;
         int var3 = 0;
         if (param0 <= 42) {
@@ -62,7 +62,7 @@ final class sb {
         RuntimeException var4_ref2 = null;
         try {
           if (null != gg.field_h) {
-            on.a(1048576, param3, param0, true, param2);
+            on.changeMusic(1048576, param3, param0, true, param2);
           }
           if (null != GrowableIntList.field_h) {
             var4_ref = ReflectionCheckRequest.field_k;
@@ -95,7 +95,7 @@ final class sb {
         }
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void drawSideBar(boolean param0, int param1) {
         Sprite stackIn_5_0;
         int stackIn_5_1;
         int stackIn_5_2;

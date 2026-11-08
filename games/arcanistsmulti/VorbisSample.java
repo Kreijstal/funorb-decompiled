@@ -368,7 +368,7 @@ final class VorbisSample extends IntrusiveNode {
         for (var17_intLifetime1 = 0; var17_intLifetime1 < var14.field_b; var17_intLifetime1++) {
           var42 = field_k[var14.field_d[var17_intLifetime1]];
           var52 = field_D;
-          var42.a(var52, var4 >> 1, var16Lifetime1 != 0);
+          var42.decode(var52, var4 >> 1, var16Lifetime1 != 0);
         }
         if (var15 == 0) {
           var17_intLifetime2 = var14.field_c;

@@ -12,8 +12,8 @@ final class db {
         throw new IllegalStateException();
     }
 
-    final static SceneWidget a(boolean param0) {
-        if (oo.field_y > 0) {
+    final static SceneWidget getActiveOverlayWidget(boolean param0) {
+        if (QuickChatCategory.field_y > 0) {
           return SpellProjectile.field_m;
         }
         if (sm.field_a > 0) {
@@ -38,7 +38,7 @@ final class db {
         var6 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           if (param1) {
-            db.a(true);
+            db.getActiveOverlayWidget(true);
           }
           var4_int = -1;
           for (var5 = param3; param0 > var5; var5++) {

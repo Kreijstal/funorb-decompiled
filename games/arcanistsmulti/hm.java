@@ -48,7 +48,7 @@ final class hm {
         }
     }
 
-    final static void b(int param0) {
+    final static void noOperation(int param0) {
         if (param0 != 0) {
           hm.decodeCp1252Char((byte) 69, 72);
         }

@@ -5,7 +5,7 @@ final class uf {
     static String field_b;
     static IntrusiveDeque field_a;
 
-    final static void a(int param0, int param1, int param2, boolean param3, int param4, String param5, int param6, int param7) {
+    final static void updateLobbyInput(int param0, int param1, int param2, boolean param3, int param4, String param5, int param6, int param7) {
         try {
           if (CredentialKind.field_d.field_U != 0) {
             if (wh.field_g) {
@@ -13,7 +13,7 @@ final class uf {
               if (!AlternateUsernameCredentials.field_p) {
                 SocketJs5Transport.field_r = true;
               } else {
-                gj.a((byte) -124);
+                gj.resetLoginMode((byte) -124);
               }
             }
           }
@@ -21,7 +21,7 @@ final class uf {
             field_b = (String) null;
           }
           if (SocketJs5Transport.field_r) {
-            fn.a(20, param5, param1, param1, (byte) -104, param2, param7, param0, param6);
+            fn.layoutChatPanel(20, param5, param1, param1, (byte) -104, param2, param7, param0, param6);
             tm.field_d.updateInputFullScreen(param3, (byte) 52);
             if (param3) {
               if (MembershipOfferScreen.field_f.field_U != 0) {
@@ -30,7 +30,7 @@ final class uf {
               if (0 == ih.field_d.field_U) {
                 return;
               }
-              ue.b(10);
+              ue.clearChatInput(10);
               SocketJs5Transport.field_r = false;
             }
           }

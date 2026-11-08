@@ -10,11 +10,11 @@ class PacketBuffer extends IntrusiveNode {
     static String field_i;
     static Sprite field_l;
 
-    final static SceneWidget f(byte param0) {
+    final static SceneWidget getStatusContent(byte param0) {
         if (param0 != -125) {
           field_i = (String) null;
         }
-        return ja.d((byte) 90);
+        return ja.getStatusContent((byte) 90);
     }
 
     final int readUnsignedSmart(int param0) {
@@ -291,7 +291,7 @@ class PacketBuffer extends IntrusiveNode {
         }
     }
 
-    final static void j(int param0) {
+    final static void updateTowerCount(int param0) {
         IntrusiveDeque var1 = null;
         int var2 = 0;
         BattleUnit var3 = null;
@@ -555,7 +555,7 @@ class PacketBuffer extends IntrusiveNode {
         }
     }
 
-    final static void k(int param0) {
+    final static void openRegistration(int param0) {
         da.field_d = new AccountRegistrationPanel();
         g.field_e.setContent((byte) -92, (UiComponent) (da.field_d));
         if (param0 != 970210916) {
@@ -638,7 +638,7 @@ class PacketBuffer extends IntrusiveNode {
             throw new IllegalArgumentException("");
           }
           var5 = (CharSequence) ((Object) param0);
-          this.position = this.position + KeyboardInputHandler.a(0, this.payload, this.position, (byte) 89, var5, param0.length());
+          this.position = this.position + KeyboardInputHandler.encodeCp1252Into(0, this.payload, this.position, (byte) 89, var5, param0.length());
           fieldTemp$0 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$0] = (byte) 0;
@@ -664,7 +664,7 @@ class PacketBuffer extends IntrusiveNode {
           this.position = this.position + 1;
           this.payload[fieldTemp$0] = (byte) 0;
           var4 = (CharSequence) ((Object) param0);
-          this.position = this.position + KeyboardInputHandler.a(0, this.payload, this.position, (byte) 89, var4, param0.length());
+          this.position = this.position + KeyboardInputHandler.encodeCp1252Into(0, this.payload, this.position, (byte) 89, var4, param0.length());
           fieldTemp$1 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$1] = (byte) 0;
@@ -702,7 +702,7 @@ class PacketBuffer extends IntrusiveNode {
         return var2;
     }
 
-    final static void d(byte param0) {
+    final static void initializeScreens(byte param0) {
         int var1_int = 0;
         int var3 = ArcanistsMulti.field_G ? 1 : 0;
         try {
@@ -714,10 +714,10 @@ class PacketBuffer extends IntrusiveNode {
           mn.field_r = 13;
           CheckboxPainter.field_g = 13;
           qn.setTargetFrameRate(16, 50);
-          sm.a(-107, 50);
+          sm.requireFifty(-107, 50);
           if (!MenuScreen.getSessionFlag((byte) 112)) {
-            ce.field_i = CachedArchiveProvider.a(4, -21402);
-            ci.field_d = AlternateUsernameCredentials.a(6, false);
+            ce.field_i = CachedArchiveProvider.createPendingTask(4, -21402);
+            ci.field_d = AlternateUsernameCredentials.queueResponse(6, false);
           }
           Checkbox.resetTimers(2);
         } catch (RuntimeException runtimeException) {
@@ -792,7 +792,7 @@ class PacketBuffer extends IntrusiveNode {
         this.position = this.position + 1;
         this.payload[fieldTemp$1] = (byte)value;
         if (obfuscationGuard > -53) {
-          PacketBuffer.d((byte) 112);
+          PacketBuffer.initializeScreens((byte) 112);
         }
     }
 
@@ -821,7 +821,7 @@ class PacketBuffer extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void addRankingRow(int param0, int param1, int param2, int param3, int param4, int param5) {
         co.field_e[MouseInputHandler.field_b] = param2;
         ki.field_r[MouseInputHandler.field_b] = MouseInputHandler.field_b;
         Battle.field_z[MouseInputHandler.field_b] = param4;

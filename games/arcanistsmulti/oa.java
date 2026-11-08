@@ -18,7 +18,7 @@ final class oa {
         field_a = null;
     }
 
-    final static void a(boolean param0, int param1, String param2) {
+    final static void handleLoginResult(boolean param0, int param1, String param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_28_0 = null;

@@ -28,7 +28,7 @@ abstract class ArchiveProvider {
         field_f = null;
     }
 
-    final static void e(byte param0) {
+    final static void clearLayoutRows(byte param0) {
         int[] var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -68,7 +68,7 @@ abstract class ArchiveProvider {
           return 0;
         }
         if (param0 != -77) {
-          ArchiveProvider.e((byte) -108);
+          ArchiveProvider.clearLayoutRows((byte) -108);
         }
         if (LinkButtonPainter.field_f == 0) {
           if (!da.field_b.ensureIndex(-10923)) {
@@ -123,7 +123,7 @@ abstract class ArchiveProvider {
         return 100;
     }
 
-    final static String b(byte param0) {
+    final static String getModalCaption(byte param0) {
         if (param0 < 95) {
           ArchiveProvider.releaseStatics((byte) 55);
           return FadingModalPanel.field_F;
@@ -137,7 +137,7 @@ abstract class ArchiveProvider {
 
     abstract byte[] getGroupData(int param0, boolean param1);
 
-    final static void a(int param0) {
+    final static void leaveResizableMode(int param0) {
         if (ResizableModalPanel.field_Y != null) {
           ResizableModalPanel.field_Y.field_l = false;
           NameSuggestionsPanel.notifyBrowserResizing(0, param0 + 30267);

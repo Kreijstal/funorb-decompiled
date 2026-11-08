@@ -13,7 +13,7 @@ abstract class CacheEntry extends DualLinkNode {
 
     abstract boolean isSoftReference(byte param0);
 
-    final static String g(byte param0) {
+    final static String getVersionCaption(byte param0) {
         int var2 = 0;
         String var1;
         int var3;
@@ -64,7 +64,7 @@ abstract class CacheEntry extends DualLinkNode {
         field_n = (int[][]) null;
     }
 
-    final static void a(byte[] param0, int[] param1, int param2, Sprite[][] param3, int param4, String[] param5, String[][] param6, String[] param7, ResourceArchive param8, byte[] param9, String[] param10, String[][] param11, int param12, Sprite[][] param13, int param14) {
+    final static void initializeGameOptions(byte[] param0, int[] param1, int param2, Sprite[][] param3, int param4, String[] param5, String[][] param6, String[] param7, ResourceArchive param8, byte[] param9, String[] param10, String[][] param11, int param12, Sprite[][] param13, int param14) {
         IconTextSceneWidget[] array$0 = null;
         IconTextSceneWidget[] array$1 = null;
         IconTextSceneWidget[] array$2 = null;
@@ -154,8 +154,8 @@ abstract class CacheEntry extends DualLinkNode {
           var24 = var23;
           nj.field_m.field_Hb.field_gb = 1;
           var24.field_X = 1;
-          kg.field_c = new SceneWidget(0L, IntrusiveNode.field_c);
-          kg.field_c.field_X = 1;
+          QuickChatCategoryCache.field_c = new SceneWidget(0L, IntrusiveNode.field_c);
+          QuickChatCategoryCache.field_c.field_X = 1;
           ii.field_b = new SceneWidget(0L, th.field_c, DropdownList.field_M.toUpperCase());
           sm.field_c = new SceneWidget(0L, wa.field_Pb, hb.field_Ib.toUpperCase());
           ad.field_c = new SceneWidget(0L, ia.field_a);
@@ -201,7 +201,7 @@ abstract class CacheEntry extends DualLinkNode {
           la.field_c = new SceneWidget(0L, IntrusiveNode.field_c);
           la.field_c.field_gb = 0;
           la.field_c.field_X = 1;
-          dm.field_E = new SceneWidget(0L, gn.field_c, UsernameCredentials.field_f.toUpperCase());
+          dm.field_E = new SceneWidget(0L, QuickChatPhraseCache.field_c, UsernameCredentials.field_f.toUpperCase());
           LinkButtonPainter.field_h = new SceneWidget(0L, mf.field_d);
           LinkButtonPainter.field_h.addChild(la.field_c, 110);
           LinkButtonPainter.field_h.addChild(dm.field_E, 121);
@@ -320,7 +320,7 @@ abstract class CacheEntry extends DualLinkNode {
           ReflectionCheckRequest.field_h.addChild(CanvasRasterBuffer.field_k, 23);
           ReflectionCheckRequest.field_h.addChild(NodeHashTableIterator.field_d, 110);
           MembershipOfferScreen.field_t = new SceneWidget(0L, SectorCacheStore.field_l, mb.field_O.toUpperCase());
-          gj.field_d = new SceneWidget(0L, gn.field_c, f.field_i.toUpperCase());
+          gj.field_d = new SceneWidget(0L, QuickChatPhraseCache.field_c, f.field_i.toUpperCase());
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -398,7 +398,7 @@ abstract class CacheEntry extends DualLinkNode {
 
     abstract Object getValue(byte param0);
 
-    final static byte[] a(int param0, byte param1, byte[] param2, int param3) {
+    final static byte[] computeWhirlpoolDigest(int param0, byte param1, byte[] param2, int param3) {
         int var5_int = 0;
         byte[] var4 = null;
         int var7 = 0;
@@ -426,7 +426,7 @@ abstract class CacheEntry extends DualLinkNode {
           }
           var5 = new WhirlpoolHasher();
           if (param1 != -93) {
-            CacheEntry.a((byte[]) null, (int[]) null, 89, (Sprite[][]) null, -13, (String[]) null, (String[][]) null, (String[]) null, (ResourceArchive) null, (byte[]) null, (String[]) null, (String[][]) null, 28, (Sprite[][]) null, -101);
+            CacheEntry.initializeGameOptions((byte[]) null, (int[]) null, 89, (Sprite[][]) null, -13, (String[]) null, (String[][]) null, (String[]) null, (ResourceArchive) null, (byte[]) null, (String[]) null, (String[][]) null, 28, (Sprite[][]) null, -101);
           }
           var5.reset(-23645);
           var5.update((long)(8 * param0), 8, var4);

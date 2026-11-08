@@ -45,7 +45,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         }
     }
 
-    final static void a(int param0, byte param1, boolean param2, LobbyGameEntry param3, int param4, int param5, int param6, int param7) {
+    final static void drawGameOptions(int param0, byte param1, boolean param2, LobbyGameEntry param3, int param4, int param5, int param6, int param7) {
         IconTextSceneWidget[][] stackIn_6_0 = null;
         int stackIn_7_1 = 0;
         int stackIn_26_0 = 0;
@@ -108,7 +108,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
                       GzipDecoder.field_d = true;
                     } else {
                       if (param6 > var13) {
-                        tk.field_q[var13] = true;
+                        QuickChatPhrase.field_q[var13] = true;
                       }
                     }
                   }
@@ -195,7 +195,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
                 } else {
                   param0 = var11;
                 }
-                TextWidgetPainter.a(param0, (byte) -25, param2, param3, param4, param5, 1 + param6, param7);
+                TextWidgetPainter.drawGameOptions(param0, (byte) -25, param2, param3, param4, param5, 1 + param6, param7);
                 if (ByteStorage.field_a) {
                   return;
                 }
@@ -233,7 +233,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
               }
             }
             if (var12 != 0) {
-              TextWidgetPainter.a(param0, (byte) -25, param2, param3, param4, param5, 1 + param6, param7);
+              TextWidgetPainter.drawGameOptions(param0, (byte) -25, param2, param3, param4, param5, 1 + param6, param7);
               var10_intLifetime1 = 1;
             }
             if (ByteStorage.field_a) {
@@ -337,9 +337,9 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
                 stackIn_19_0 = var18.characterOffset(var9, param3 ^ 6600);
               }
               var15 = stackIn_19_0;
-              MusicCrossfadeStream.field_n.a(var13.field_e, var13.field_g + param1.field_i + this.field_f + (param0 + param1.field_j), this.field_e, -var14 + var15, this.field_e >>> 24, param3 - 6599, this.textOriginX(param2, param3 + 2693, var14, param1));
+              MusicCrossfadeStream.field_n.fillRectangleAlpha(var13.field_e, var13.field_g + param1.field_i + this.field_f + (param0 + param1.field_j), this.field_e, -var14 + var15, this.field_e >>> 24, param3 - 6599, this.textOriginX(param2, param3 + 2693, var14, param1));
             }
-            oo.popClipState(param3 - 22005);
+            QuickChatCategory.popClipState(param3 - 22005);
             return;
           }
           return;
@@ -407,8 +407,8 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
             var11 = this.getTextY(param1, -13372, param4) + Math.max(0, var8.field_g);
             var12 = this.getTextY(param1, -13372, param4) + Math.min(this.getAvailableHeight(param4, false), Math.min(var8.field_e, var14.field_f.length > 1 + var7 ? var13.field_f[1 + var7].field_g : var8.field_e));
             da.clipToRectangle(param4.field_n + param2 + param4.field_v, param4.field_k + param4.field_j + param1, 116, param2 + param4.field_n, param1 + param4.field_j);
-            MusicCrossfadeStream.field_n.a(var10, var10, var12, this.field_o, var11, (byte) 102);
-            oo.popClipState(-15405);
+            MusicCrossfadeStream.field_n.drawLine(var10, var10, var12, this.field_o, var11, (byte) 102);
+            QuickChatCategory.popClipState(-15405);
           }
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "jm.U(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
@@ -691,7 +691,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
               this.field_g.drawText(this.getDisplayText(false, param4), this.textOriginX(param6, 9293, param0, param4), var11 + this.textOriginY(param5, param3, (byte) 120, param4), param2, param7);
             }
           }
-          oo.popClipState(param1 - 38439);
+          QuickChatCategory.popClipState(param1 - 38439);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

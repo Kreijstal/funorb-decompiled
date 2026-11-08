@@ -9,7 +9,7 @@ final class TextTableInitializer {
     static String field_c;
     static int[] field_d;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
@@ -19,7 +19,7 @@ final class TextTableInitializer {
           field_d = null;
           field_e = null;
           if (param0 != 35) {
-            TextTableInitializer.a(59);
+            TextTableInitializer.releaseStatics(59);
           }
           field_a = null;
           return;
@@ -30,13 +30,13 @@ final class TextTableInitializer {
         }
     }
 
-    final static boolean a(int param0, int param1, int param2) {
+    final static boolean handleQuickChatKey(int param0, int param1, int param2) {
         RuntimeException var3 = null;
         boolean stackIn_13_0 = false;
         RuntimeException decompiledCaughtException = null;
         try {
           if (~IntrusiveDeque.field_d == param1) {
-            uc.c(3);
+            uc.closeQuickChatIfOpen(3);
             return true;
           }
           if (102 == IntrusiveDeque.field_d) {
@@ -52,7 +52,7 @@ final class TextTableInitializer {
         }
     }
 
-    final static boolean a(int param0, int param1, int param2, int param3) {
+    final static boolean handleEscapeKey(int param0, int param1, int param2, int param3) {
         int stackIn_23_0 = 0;
         boolean stackIn_35_0 = false;
         RuntimeException decompiledCaughtException = null;
@@ -60,7 +60,7 @@ final class TextTableInitializer {
         RuntimeException var4 = null;
         try {
           if (param2 != 13) {
-            TextTableInitializer.a(-21, -66, -84, -38);
+            TextTableInitializer.handleEscapeKey(-21, -66, -84, -38);
           }
           if (pm.field_b != null &&
             13 == IntrusiveDeque.field_d) {
@@ -73,26 +73,26 @@ final class TextTableInitializer {
               IntrusiveDeque.field_d != 10 &&
               IntrusiveDeque.field_d != 11) {
               if (80 == IntrusiveDeque.field_d &&
-                tn.g((byte) 111)) {
+                tn.isNotMember((byte) 111)) {
                 SocketJs5Transport.field_r = true;
                 return true;
               }
               return false;
             }
-            stackIn_35_0 = TextTableInitializer.a(param1, -14, param3);
+            stackIn_35_0 = TextTableInitializer.handleQuickChatKey(param1, -14, param3);
             return stackIn_35_0;
           }
-          if (!tn.g((byte) -40)) {
+          if (!tn.isNotMember((byte) -40)) {
             return false;
           }
-          var4_int = ko.a(param2 - 121, param0, param3) ? 1 : 0;
+          var4_int = ko.drawChatInputLine(param2 - 121, param0, param3) ? 1 : 0;
           if (IntrusiveDeque.field_d == 80 ||
             IntrusiveDeque.field_d == 84) {
             var4_int = 1;
             SocketJs5Transport.field_r = false;
           }
           if (IntrusiveDeque.field_d == 13) {
-            ue.b(10);
+            ue.clearChatInput(10);
             var4_int = 1;
             SocketJs5Transport.field_r = false;
           }
@@ -131,7 +131,7 @@ final class TextTableInitializer {
                 this.var4 = 0;
             }
             void runChunk0() throws java.lang.RuntimeException {
-                gn.field_e = param0;
+                QuickChatPhraseCache.field_e = param0;
                 var2 = CachedArchiveProvider.loadNamedFile("text_game_name", param1 ^ -75);
                 if (null != var2) {
                   ValidationHelpWidget.decodeString((byte) 92, var2);
@@ -2514,7 +2514,7 @@ final class TextTableInitializer {
                 }
                 var2 = CachedArchiveProvider.loadNamedFile("wands_membersonly", -101);
                 if (var2 != null) {
-                  tk.field_o = ValidationHelpWidget.decodeString((byte) 91, var2);
+                  QuickChatPhrase.field_o = ValidationHelpWidget.decodeString((byte) 91, var2);
                 }
                 var2 = CachedArchiveProvider.loadNamedFile("youhavenoplatipusesavailaible", param1 ^ -113);
                 if (null != var2) {
@@ -2558,7 +2558,7 @@ final class TextTableInitializer {
                 }
                 var2 = CachedArchiveProvider.loadNamedFile("tit6", param1 ^ -93);
                 if (var2 != null) {
-                  gn.field_j = ValidationHelpWidget.decodeString((byte) 125, var2);
+                  QuickChatPhraseCache.field_j = ValidationHelpWidget.decodeString((byte) 125, var2);
                 }
                 var2 = CachedArchiveProvider.loadNamedFile("dsc5", -113);
                 if (var2 != null) {
@@ -2582,7 +2582,7 @@ final class TextTableInitializer {
                 }
                 var2 = CachedArchiveProvider.loadNamedFile("tit3", param1 - 94);
                 if (null != var2) {
-                  hn.field_c = ValidationHelpWidget.decodeString((byte) 111, var2);
+                  JaggrabDownloader.field_c = ValidationHelpWidget.decodeString((byte) 111, var2);
                 }
                 var2 = CachedArchiveProvider.loadNamedFile("dsc2", -109);
                 if (null != var2) {
@@ -2654,7 +2654,7 @@ final class TextTableInitializer {
                 }
                 var2 = CachedArchiveProvider.loadNamedFile("level3locked", -124);
                 if (null != var2) {
-                  vl.field_k = ValidationHelpWidget.decodeString((byte) 104, var2);
+                  HotspotRegion.field_k = ValidationHelpWidget.decodeString((byte) 104, var2);
                 }
                 var2 = CachedArchiveProvider.loadNamedFile("thisislevel2locked", -113);
                 if (null != var2) {
@@ -2680,7 +2680,7 @@ final class TextTableInitializer {
                 }
                 var2 = CachedArchiveProvider.loadNamedFile("frostdisc", -113);
                 if (var2 != null) {
-                  tk.field_r = ValidationHelpWidget.decodeString((byte) 103, var2);
+                  QuickChatPhrase.field_r = ValidationHelpWidget.decodeString((byte) 103, var2);
                 }
                 var2 = CachedArchiveProvider.loadNamedFile("frostbook", -70);
                 if (null != var2) {
@@ -2720,7 +2720,7 @@ final class TextTableInitializer {
                 }
                 var2 = CachedArchiveProvider.loadNamedFile("naturedisc", param1 ^ -124);
                 if (null != var2) {
-                  tk.field_w = ValidationHelpWidget.decodeString((byte) 123, var2);
+                  QuickChatPhrase.field_w = ValidationHelpWidget.decodeString((byte) 123, var2);
                 }
                 if (param1 != 22) {
                   field_e = (String) null;
@@ -2735,7 +2735,7 @@ final class TextTableInitializer {
                 }
                 var2 = CachedArchiveProvider.loadNamedFile("oceanbook", -92);
                 if (null != var2) {
-                  oo.field_r = ValidationHelpWidget.decodeString((byte) 117, var2);
+                  QuickChatCategory.field_r = ValidationHelpWidget.decodeString((byte) 117, var2);
                 }
                 var2 = CachedArchiveProvider.loadNamedFile("cogsdisc", param1 ^ -101);
                 if (var2 != null) {
@@ -2751,7 +2751,7 @@ final class TextTableInitializer {
                 }
                 var2 = CachedArchiveProvider.loadNamedFile("choosespells", -111);
                 if (null != var2) {
-                  vl.field_l = ValidationHelpWidget.decodeString((byte) 121, var2);
+                  HotspotRegion.field_l = ValidationHelpWidget.decodeString((byte) 121, var2);
                 }
                 var2 = CachedArchiveProvider.loadNamedFile("buyfor3", -86);
                 if (null != var2) {
@@ -2903,7 +2903,7 @@ final class TextTableInitializer {
                 }
                 var2 = CachedArchiveProvider.loadNamedFile("ins50", -122);
                 if (var2 != null) {
-                  oo.field_q = ValidationHelpWidget.decodeString((byte) 94, var2);
+                  QuickChatCategory.field_q = ValidationHelpWidget.decodeString((byte) 94, var2);
                 }
                 var2 = CachedArchiveProvider.loadNamedFile("ins49", param1 ^ -75);
                 if (null != var2) {
@@ -2911,7 +2911,7 @@ final class TextTableInitializer {
                 }
                 var2 = CachedArchiveProvider.loadNamedFile("ins48", -83);
                 if (null != var2) {
-                  hn.field_o = ValidationHelpWidget.decodeString((byte) 93, var2);
+                  JaggrabDownloader.field_o = ValidationHelpWidget.decodeString((byte) 93, var2);
                 }
                 var2 = CachedArchiveProvider.loadNamedFile("ins47", param1 - 120);
                 if (var2 != null) {
@@ -2959,7 +2959,7 @@ final class TextTableInitializer {
                 }
                 var2 = CachedArchiveProvider.loadNamedFile("ins38", -103);
                 if (var2 != null) {
-                  km.field_b = ValidationHelpWidget.decodeString((byte) 91, var2);
+                  NameCheckRequest.field_b = ValidationHelpWidget.decodeString((byte) 91, var2);
                 }
                 var2 = CachedArchiveProvider.loadNamedFile("ins37", -75);
                 if (var2 != null) {
@@ -2971,7 +2971,7 @@ final class TextTableInitializer {
                 }
                 var2 = CachedArchiveProvider.loadNamedFile("ins35", -77);
                 if (null != var2) {
-                  tk.field_m = ValidationHelpWidget.decodeString((byte) 121, var2);
+                  QuickChatPhrase.field_m = ValidationHelpWidget.decodeString((byte) 121, var2);
                 }
                 var2 = CachedArchiveProvider.loadNamedFile("ins34", -119);
                 if (var2 != null) {
@@ -3027,7 +3027,7 @@ final class TextTableInitializer {
                 }
                 var2 = CachedArchiveProvider.loadNamedFile("ins22", -103);
                 if (var2 != null) {
-                  hn.field_i = ValidationHelpWidget.decodeString((byte) 110, var2);
+                  JaggrabDownloader.field_i = ValidationHelpWidget.decodeString((byte) 110, var2);
                 }
                 var2 = CachedArchiveProvider.loadNamedFile("ins21", -103);
                 if (var2 != null) {
@@ -3151,7 +3151,7 @@ final class TextTableInitializer {
                 }
                 var2 = CachedArchiveProvider.loadNamedFile("chargesleft", -91);
                 if (var2 != null) {
-                  tk.field_s = ValidationHelpWidget.decodeString((byte) 107, var2);
+                  QuickChatPhrase.field_s = ValidationHelpWidget.decodeString((byte) 107, var2);
                 }
                 var2 = CachedArchiveProvider.loadNamedFile("turnleft", param1 - 105);
                 if (var2 != null) {
@@ -3167,7 +3167,7 @@ final class TextTableInitializer {
                 }
                 var2 = CachedArchiveProvider.loadNamedFile("unitcapreached", -108);
                 if (var2 != null) {
-                  tk.field_p = ValidationHelpWidget.decodeString((byte) 104, var2);
+                  QuickChatPhrase.field_p = ValidationHelpWidget.decodeString((byte) 104, var2);
                 }
                 var2 = CachedArchiveProvider.loadNamedFile("shiningpowerblocks", -106);
                 if (var2 != null) {
@@ -3295,7 +3295,7 @@ final class TextTableInitializer {
                 }
                 var2 = CachedArchiveProvider.loadNamedFile("tut26", -107);
                 if (null != var2) {
-                  gn.field_f = ValidationHelpWidget.decodeString((byte) 105, var2);
+                  QuickChatPhraseCache.field_f = ValidationHelpWidget.decodeString((byte) 105, var2);
                 }
                 var2 = CachedArchiveProvider.loadNamedFile("tut25", -115);
                 if (null != var2) {
@@ -3695,7 +3695,7 @@ final class TextTableInitializer {
                 if (var2 != null) {
                   ArchiveIndex.field_j = ValidationHelpWidget.decodeString((byte) 116, var2);
                 }
-                gn.field_e = null;
+                QuickChatPhraseCache.field_e = null;
             }
             void run() {
                 var3 = ArcanistsMulti.field_G ? 1 : 0;

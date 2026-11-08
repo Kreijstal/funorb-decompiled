@@ -49,7 +49,7 @@ final class ui extends TextFieldValidator {
             stackIn_14_0 = ko.field_g;
             return stackIn_14_0;
           }
-          if (this.a(52, param0)) {
+          if (this.isSimilarToPassword(52, param0)) {
             stackIn_17_0 = wj.field_c;
             return stackIn_17_0;
           }
@@ -65,7 +65,7 @@ final class ui extends TextFieldValidator {
             stackIn_26_0 = cj.field_e;
             return stackIn_26_0;
           }
-          if (!ChatInputWidget.a(var6, var5, 0)) {
+          if (!ChatInputWidget.passwordContainsName(var6, var5, 0)) {
             return KeyboardInputHandler.field_i;
           }
           stackIn_30_0 = TextTableInitializer.field_f;
@@ -84,11 +84,11 @@ final class ui extends TextFieldValidator {
         }
     }
 
-    final static void a(int param0, boolean param1) {
-        mn.a(param1, param0 - 95);
+    final static void drawOverlaysWithFlags(int param0, boolean param1) {
+        mn.setOverlayFlags(param1, param0 - 95);
         BattleScreen.drawOverlays(param0 ^ 1, param1);
         if (param0 != 0) {
-          ui.a(115, false);
+          ui.drawOverlaysWithFlags(115, false);
         }
     }
 
@@ -137,7 +137,7 @@ final class ui extends TextFieldValidator {
             stackIn_5_0 = ra.field_k;
             return stackIn_5_0;
           }
-          if (!this.a(49, param0)) {
+          if (!this.isSimilarToPassword(49, param0)) {
             return CacheEntry.field_s;
           }
           stackIn_9_0 = ra.field_k;
@@ -156,7 +156,7 @@ final class ui extends TextFieldValidator {
         }
     }
 
-    private final boolean a(int param0, String param1) {
+    private final boolean isSimilarToPassword(int param0, String param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -204,7 +204,7 @@ final class ui extends TextFieldValidator {
         }
     }
 
-    final static String a(String param0, String param1, byte param2, String param3) {
+    final static String replaceKey(String param0, String param1, byte param2, String param3) {
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;

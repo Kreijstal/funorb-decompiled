@@ -32,7 +32,7 @@ final class SocialListEntry extends SceneWidget {
           this.field_Qb = param1;
           this.field_Tb = param0;
           var5 = (CharSequence) ((Object) this.field_Tb);
-          Js5ArchiveManager.a(var5, -13);
+          Js5ArchiveManager.normalizeNameForLookup(var5, -13);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "cg.F(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -119,12 +119,12 @@ final class SocialListEntry extends SceneWidget {
         var19 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           EmailLoginCredentials.field_e = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
-          var1_int = oo.field_u.length;
+          var1_int = QuickChatCategory.field_u.length;
           var21 = new int[var1_int];
           var20 = var21;
           var2 = var20;
           for (var3 = 0; var1_int > var3; var3++) {
-            var4_ref_vg = oo.field_u[var3];
+            var4_ref_vg = QuickChatCategory.field_u[var3];
             var4_ref_vg.computeBounds((byte) 62);
             ValidationHelpWidget.computeIntroShake(var3, 14130);
             var5 = var4_ref_vg.field_k + var4_ref_vg.field_i >> 1;
@@ -165,20 +165,20 @@ final class SocialListEntry extends SceneWidget {
           var13Lifetime1 = (int)((double)var13Lifetime1 * var10Lifetime1);
           var14 = (int)((double)var14 * var10Lifetime1);
           var12Lifetime1 = (int)((double)var12Lifetime1 * var10Lifetime1);
-          for (var15 = 0; oo.field_u.length > var15; var15++) {
+          for (var15 = 0; QuickChatCategory.field_u.length > var15; var15++) {
             var16 = 0;
-            for (var17_int = 1; oo.field_u.length > var17_int; var17_int++) {
+            for (var17_int = 1; QuickChatCategory.field_u.length > var17_int; var17_int++) {
               if (var21[var17_int] > var21[var16]) {
                 var16 = var17_int;
               }
             }
             var21[var16] = -2147483648;
-            var17 = oo.field_u[var16];
+            var17 = QuickChatCategory.field_u[var16];
             ValidationHelpWidget.computeIntroShake(var16, param0 ^ 252570192);
             for (var18 = 0; var18 < 3; var18++) {
-              tn.field_Gb[var18] = tn.field_Gb[var18] + gn.field_g[var15][var18];
+              tn.field_Gb[var18] = tn.field_Gb[var18] + QuickChatPhraseCache.field_g[var15][var18];
             }
-            SceneWidgetNode.a((byte) -61, EmailLoginCredentials.field_e, tn.field_Gb, true, var17, false, false);
+            SceneWidgetNode.projectModel((byte) -61, EmailLoginCredentials.field_e, tn.field_Gb, true, var17, false, false);
             cj.drawModel(var8Lifetime1, var13Lifetime1, var12Lifetime1, 20133, var17, var9Lifetime1, var7Lifetime1, var14);
           }
           return;
@@ -206,7 +206,7 @@ final class SocialListEntry extends SceneWidget {
           this.field_Qb = param1;
           this.field_Tb = param0;
           var6 = (CharSequence) ((Object) this.field_Tb);
-          Js5ArchiveManager.a(var6, -13);
+          Js5ArchiveManager.normalizeNameForLookup(var6, -13);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "cg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -278,7 +278,7 @@ final class SocialListEntry extends SceneWidget {
           }
           var4_int = param2.getGroupProgressByName(param3, -79);
           var5 = param2.getFileId(param0, (byte) 54, var4_int);
-          stackIn_3_0 = hj.a(var4_int, param2, var5, (byte) -10);
+          stackIn_3_0 = hj.loadFirstSprite(var4_int, param2, var5, (byte) -10);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

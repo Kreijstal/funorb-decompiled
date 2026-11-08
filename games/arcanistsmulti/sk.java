@@ -12,7 +12,7 @@ final class sk {
     static String field_i;
     static Sprite[] field_f;
 
-    final static String a(int param0) {
+    final static String getTooltipText(int param0) {
         if (ReflectionCheckRequest.field_i) {
           if (param0 != -14150) {
             return (String) null;
@@ -34,11 +34,11 @@ final class sk {
         return null;
     }
 
-    final static void a(ec param0, int param1, int param2, int param3) {
+    final static void setCameraFrame(ec param0, int param1, int param2, int param3) {
         try {
           StatefulTextPainter.field_r = param2;
           if (param1 != -28995) {
-            sk.a(-70);
+            sk.getTooltipText(-70);
           }
           CameraFollowTarget.field_f = param0;
           DualLinkDeque.field_d = param3;

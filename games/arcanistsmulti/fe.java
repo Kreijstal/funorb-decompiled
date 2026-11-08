@@ -13,7 +13,7 @@ final class fe extends IntrusiveNode {
     static String field_k;
     static int field_j;
 
-    final static byte a(byte param0, char param1) {
+    final static byte encodeCp1252Char(byte param0, char param1) {
         int var2;
         int var3;
         int var2Lifetime1;
@@ -142,7 +142,7 @@ final class fe extends IntrusiveNode {
           }
           return (byte) var2;
         }
-        fe.a(true, -66, 87, 84, 125, false, 83, true, false, true, -66, true);
+        fe.drawChatAreaWhite(true, -66, 87, 84, 125, false, 83, true, false, true, -66, true);
         if (0 >= param1) {
           if (160 > param1) {
             if (8364 == param1) {
@@ -610,13 +610,13 @@ final class fe extends IntrusiveNode {
           field_n = null;
           return;
         }
-        fe.a((byte) -127, 'ﾎ');
+        fe.encodeCp1252Char((byte) -127, 'ﾎ');
         field_p = null;
         field_n = null;
     }
 
-    final static void a(boolean param0, int param1, int param2, int param3, int param4, boolean param5, int param6, boolean param7, boolean param8, boolean param9, int param10, boolean param11) {
-        f.a(param8, param3, param2, param11, (byte) -38, 16777215, param9, param4, param10, param7, param5, param6, 16777215, param1);
+    final static void drawChatAreaWhite(boolean param0, int param1, int param2, int param3, int param4, boolean param5, int param6, boolean param7, boolean param8, boolean param9, int param10, boolean param11) {
+        f.drawChatArea(param8, param3, param2, param11, (byte) -38, 16777215, param9, param4, param10, param7, param5, param6, 16777215, param1);
         if (!param0) {
           field_h = (IndexedSprite[]) null;
         }

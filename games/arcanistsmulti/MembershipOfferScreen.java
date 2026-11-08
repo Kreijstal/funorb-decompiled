@@ -27,7 +27,7 @@ final class MembershipOfferScreen {
     public static void releaseStatics(boolean param0) {
         if (param0) {
           int[] var2 = (int[]) null;
-          MembershipOfferScreen.a(91, (int[]) null, -18, -89, -119, 34, 118);
+          MembershipOfferScreen.defineScreenLayout(91, (int[]) null, -18, -89, -119, 34, 118);
         }
         field_m = null;
         field_o = null;
@@ -37,7 +37,7 @@ final class MembershipOfferScreen {
         field_q = null;
     }
 
-    final static void a(int param0, int[] param1, int param2, int param3, int param4, int param5, int param6) {
+    final static void defineScreenLayout(int param0, int[] param1, int param2, int param3, int param4, int param5, int param6) {
         try {
           NumericDateInputWidget.field_L[param3] = param1;
           lm.field_e[param3] = param6;
@@ -114,7 +114,7 @@ final class MembershipOfferScreen {
         }
     }
 
-    final static void c(int param0) {
+    final static void readMembershipFlag(int param0) {
         wh.field_g = false;
         AlternateUsernameCredentials.field_p = UiContainer.field_z.readUnsignedByte((byte) 88) == 0 ? true : false;
         if (param0 < 15) {
@@ -145,7 +145,7 @@ final class MembershipOfferScreen {
             var11 = param6[-var10 + param6.length - 1];
             param3.drawParagraph(param4, param2, param7, param1, param0, var11, -1, 1, 1, 0);
           }
-          oo.popClipState(-15405);
+          QuickChatCategory.popClipState(-15405);
           if (param5 != 23146) {
             this.field_u = 61;
           }
@@ -274,7 +274,7 @@ final class MembershipOfferScreen {
         }
     }
 
-    final static String a(String param0, String param1, int param2, int param3) {
+    final static String getFriendNameError(String param0, String param1, int param2, int param3) {
         RuntimeException var4 = null;
         CipherPacketBuffer var5 = null;
         int var6 = 0;
@@ -300,7 +300,7 @@ final class MembershipOfferScreen {
             stackIn_5_0 = rk.field_L;
             return stackIn_5_0;
           }
-          var7 = mf.a(-1, param1);
+          var7 = mf.findFriendByName(-1, param1);
           if (var7 == null) {
             stackIn_9_0 = CachedArchiveProvider.formatTemplate(param3 ^ 10068676, new String[]{param1}, BufferedSocket.field_f);
             return stackIn_9_0;
@@ -438,7 +438,7 @@ final class MembershipOfferScreen {
           var3 = 10068666;
           var15 = BoundedRandomAccessFile.buildPaletteRamp(var3, var2, param0 ^ 16128330);
           this.drawGradientParagraph(47, 622, 0, fd.field_b, this.field_j, 23146, var15, 0);
-          oo.popClipState(-15405);
+          QuickChatCategory.popClipState(-15405);
           this.field_g = new Sprite(475, 24);
           this.drawScaledCaption(this.field_g, 0.75f, 0, 127, 24, var15, -4, fd.field_b, MenuButtonPainter.field_r, 475);
           var13 = BoundedRandomAccessFile.buildPaletteRamp(526344, 526344, 65535);
@@ -453,11 +453,11 @@ final class MembershipOfferScreen {
           this.drawScaledCaption(var5, 0.5f, 0, 127, var5.field_y, var13, -16, fd.field_b, var6, var5.field_q);
           this.drawScaledCaption(var5, 0.5f, 0, 127, var5.field_y, var13, 20, fd.field_b, var7, var5.field_q);
           this.drawScaledCaption(var5, 0.699999988079071f, 0, 127, var5.field_y / 3, var9, 12 + (var5.field_y / 2 - fd.field_b.field_C), fd.field_b, Js5ArchiveManager.field_f[this.field_u], var5.field_q);
-          oo.popClipState(-15405);
+          QuickChatCategory.popClipState(-15405);
           this.field_e = new Sprite(121, 122);
           fk.setSpriteRasterTarget(this.field_e, param0 - 16204012);
           var5.drawCenteredRotatedScaledBilinear(this.field_e.field_q / 2, this.field_e.field_y / 2, -2048, 4096);
-          oo.popClipState(param0 - 16196322);
+          QuickChatCategory.popClipState(param0 - 16196322);
           return;
         }
     }
@@ -487,10 +487,10 @@ final class MembershipOfferScreen {
           fk.setSpriteRasterTarget(var13, -23095);
           param0.drawScaled((int)((float)(-param2) / param1), (int)((float)(-param6) / param1), (int)((float)param0.field_q / param1), (int)((float)param0.field_y / param1));
           this.drawGradientParagraph(var12, var11_int, 0, param7, param8, param3 ^ 23061, param5, 0);
-          oo.popClipState(param3 - 15532);
+          QuickChatCategory.popClipState(param3 - 15532);
           fk.setSpriteRasterTarget(param0, -23095);
           var13.drawScaledAveraged(param2, param6, param9, param4);
-          oo.popClipState(param3 ^ -15444);
+          QuickChatCategory.popClipState(param3 ^ -15444);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -535,7 +535,7 @@ final class MembershipOfferScreen {
         var5 = ArcanistsMulti.field_G ? 1 : 0;
         if (null == this.field_i) {
           if (NameSuggestionsPanel.field_F != null) {
-            NameSuggestionsPanel.field_F.drawParagraph(hn.field_l, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
+            NameSuggestionsPanel.field_F.drawParagraph(JaggrabDownloader.field_l, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
           }
           return;
         }
@@ -548,7 +548,7 @@ final class MembershipOfferScreen {
           var6.draw(9, 58);
         } else {
           if (null != NameSuggestionsPanel.field_F) {
-            NameSuggestionsPanel.field_F.drawParagraph(hn.field_l, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
+            NameSuggestionsPanel.field_F.drawParagraph(JaggrabDownloader.field_l, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
           }
         }
         if (vf.field_o > this.field_s) {
@@ -558,9 +558,9 @@ final class MembershipOfferScreen {
             var3 = (60 + var7.field_g) * this.field_s / vf.field_o;
             var4 = var3 - 30;
             if (!this.field_h) {
-              td.a(-256 * var4 / 30, (byte) -115, (-var4 + var7.field_g) * 256 / 30, var7, 9, 58);
+              td.drawShadedMaskRow(-256 * var4 / 30, (byte) -115, (-var4 + var7.field_g) * 256 / 30, var7, 9, 58);
             } else {
-              td.a(256 * (-var4 + var7.field_g) / 30, (byte) 70, var4 * -256 / 30, var7, 9, 58);
+              td.drawShadedMaskRow(256 * (-var4 + var7.field_g) / 30, (byte) 70, var4 * -256 / 30, var7, 9, 58);
             }
           }
         }

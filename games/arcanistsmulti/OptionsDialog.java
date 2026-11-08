@@ -95,7 +95,7 @@ final class OptionsDialog extends ResizableModalPanel implements ButtonListener 
           if (!param2) {
             OptionsDialog.releaseStatics(-104);
           }
-          if (fc.a(-123, param0, param1, param3)) {
+          if (fc.decodeSpriteSheet(-123, param0, param1, param3)) {
             stackIn_6_0 = ge.createBinaryFont(param4.getFile(param3, 26219, param1), 3417);
             return stackIn_6_0;
           }
@@ -213,7 +213,7 @@ final class OptionsDialog extends ResizableModalPanel implements ButtonListener 
           this.field_wb = stackIn_40_1;
           if (var2_intLifetime1 == 0) {
             if (null != ResizableModalPanel.field_Y) {
-              stackIn_48_0 = (ResizableModalPanel.field_Y.b(false)) ? 1 : 0;
+              stackIn_48_0 = (ResizableModalPanel.field_Y.isOverMaximumSize(false)) ? 1 : 0;
             } else {
               stackIn_48_0 = 0;
             }
@@ -324,7 +324,7 @@ final class OptionsDialog extends ResizableModalPanel implements ButtonListener 
         }
     }
 
-    final static void a(int param0, int param1, int param2, byte param3) {
+    final static void storeLoginMethodLayout(int param0, int param1, int param2, byte param3) {
         LoginMethod.field_a = param2;
         pn.field_d = param0;
         wm.field_I = param1;
@@ -423,7 +423,7 @@ final class OptionsDialog extends ResizableModalPanel implements ButtonListener 
         }
     }
 
-    final static void a(int param0, int param1, boolean param2, boolean param3) {
+    final static void updateSlidingPanels(int param0, int param1, boolean param2, boolean param3) {
         int var4_int = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
@@ -444,7 +444,7 @@ final class OptionsDialog extends ResizableModalPanel implements ButtonListener 
           if (jo.field_e <= 0) {
             return;
           }
-          ed.j(120);
+          ed.animateOverlayPosition(120);
           IntKeyLookup.field_g.updateInputFullScreen(param3, (byte) 60);
           if (param2) {
             field_tb = (long[]) null;
@@ -460,9 +460,9 @@ final class OptionsDialog extends ResizableModalPanel implements ButtonListener 
             var5 = mn.field_s[var4_int];
             if (var5 != null) {
               if (var5.field_U != 0) {
-                ko.a(var4_int, var5, (byte) -86);
+                ko.openListEntryMenu(var4_int, var5, (byte) -86);
               }
-              var6 = ReflectionCheckRequest.a((byte) 119, var4_int);
+              var6 = ReflectionCheckRequest.getChatMode((byte) 119, var4_int);
               ia.field_b[var4_int].field_W = ArchiveProvider.field_a[var6];
               IntrusiveDequeCursor.field_f[var4_int].field_rb = cf.field_b[var6];
             }
@@ -470,11 +470,11 @@ final class OptionsDialog extends ResizableModalPanel implements ButtonListener 
           if (g.field_g.field_U != 0) {
             db.field_a = new ChatInputWidget(g.field_g.field_V, g.field_g.field_nb, g.field_g.field_x, g.field_g.field_I, param0, mf.field_d, SectorCacheStore.field_l, wj.field_b, IntrusiveNode.field_c, ec.field_g, nj.field_d, (String) null, 0L);
           }
-          var9 = f.a(16711422, param1, ImageProducerRasterBuffer.field_r, SceneTextInput.field_Gb);
+          var9 = f.findChatLineAt(16711422, param1, ImageProducerRasterBuffer.field_r, SceneTextInput.field_Gb);
           if (var9 != null) {
-            EmptyPainter.a(0, var9);
+            EmptyPainter.openChatLineMenu(0, var9);
           }
-          var8 = GrowableIntList.b(0);
+          var8 = GrowableIntList.getChatInputCaption(0);
           if (var8 != null) {
             TextLayout.field_c = var8;
           }
@@ -495,7 +495,7 @@ final class OptionsDialog extends ResizableModalPanel implements ButtonListener 
         var3 = ArcanistsMulti.field_G ? 1 : 0;
         if (this.field_jb == this.field_xb) {
           HuffmanCodec.restoreWindowedMode(6);
-          ArchiveProvider.a(-30267);
+          ArchiveProvider.leaveResizableMode(-30267);
         } else {
           if (this.field_xb != this.field_mb) {
             if (this.field_xb != this.field_lb) {
@@ -510,12 +510,12 @@ final class OptionsDialog extends ResizableModalPanel implements ButtonListener 
                   ResizableModalPanel.field_Y.setWindowedSize(this.field_V[var2Lifetime2].field_e, this.field_V[var2Lifetime2].field_g, (byte) -64);
                 }
               }
-              GzipDecoder.a(true, 5);
+              GzipDecoder.toggleFullscreen(true, 5);
               this.field_H.pushPanel(new bj(this.field_H), 15637);
             }
           } else {
             HuffmanCodec.restoreWindowedMode(6);
-            LinkButtonPainter.a((byte) -127);
+            LinkButtonPainter.enterResizableMode((byte) -127);
           }
         }
         if (decompiledFrameRemainder0) {
@@ -525,7 +525,7 @@ final class OptionsDialog extends ResizableModalPanel implements ButtonListener 
 
     }
 
-    final static void g(boolean param0) {
+    final static void resetConnectionAttempts(boolean param0) {
         if (param0) {
           ResourceArchive var2 = (ResourceArchive) null;
           OptionsDialog.loadBinaryFont((ResourceArchive) null, -48, false, -99, (ResourceArchive) null);
@@ -563,7 +563,7 @@ final class OptionsDialog extends ResizableModalPanel implements ButtonListener 
                   if (var6_int == 0 &&
                     param4 == this.field_lb) {
                     if (!this.field_yb) {
-                      this.field_H.pushPanel(new qn(this.field_H, oo.field_C), 15637);
+                      this.field_H.pushPanel(new qn(this.field_H, QuickChatCategory.field_C), 15637);
                     } else {
                       if (ah.field_c > 0) {
                         this.selectButton(param4, 0);

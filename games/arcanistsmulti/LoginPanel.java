@@ -25,7 +25,7 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -20626) {
-            LoginPanel.a(12);
+            LoginPanel.releaseStatics(12);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -165,7 +165,7 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
         }
     }
 
-    final static void b(int param0, int param1, int param2, int param3, int param4) {
+    final static void storeLoginLayout(int param0, int param1, int param2, int param3, int param4) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
@@ -182,7 +182,7 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_C = null;
         field_I = null;
         if (param0 != -1) {
@@ -252,7 +252,7 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
           SceneScrollPane.field_Ib = new boolean[ModalPanelStack.field_J];
           var2.position = param0.length - (7 + ModalPanelStack.field_J * 8);
           pb.field_g = var2.readUnsignedShort(-98);
-          gn.field_a = var2.readUnsignedShort(-98);
+          QuickChatPhraseCache.field_a = var2.readUnsignedShort(-98);
           var3 = 1 + (var2.readUnsignedByte((byte) -103) & 255);
           var4 = 0;
           do {
@@ -440,7 +440,7 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
           }
           super.drawLayer((byte) -62, param1, param2, param3);
           if (param0 >= -52) {
-            LoginPanel.a(-70);
+            LoginPanel.releaseStatics(-70);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -641,7 +641,7 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (NanoFrameClock.b(true) ||
+          if (NanoFrameClock.isLoggedIn(true) ||
             !(this.field_O.field_g.length() <= 0) &&
             !(this.field_G.field_g.length() <= 0)) {
             UsernameCredentials.setLoginPanelTexts(this.field_O.field_g, 0, this.field_G.field_g);
@@ -679,17 +679,17 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
                     return;
                   }
                 }
-                kj.a(21744);
+                kj.setPendingMessage(21744);
                 if (var7 == 0) {
                   return;
                 }
               }
-              BoundedRandomAccessFile.b(28579);
+              BoundedRandomAccessFile.setPendingMessage(28579);
               if (var7 == 0) {
                 return;
               }
             }
-            PacketBuffer.k(970210916);
+            PacketBuffer.openRegistration(970210916);
             if (var7 == 0) {
               return;
             }

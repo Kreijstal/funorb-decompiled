@@ -331,7 +331,7 @@ final class bj extends ResizableModalPanel implements ButtonListener {
                       var16 = var7.field_Cb;
                       ArcanistsMulti.openInfoPanel(-26335, (int[]) null, IconTextSceneWidget.field_Gb.field_Db, var16, 0L, -1, -1, (String) null, var7);
                       if (var7.field_Lb != null &&
-                        !PasswordFieldPainter.a(eo.field_c.field_h, -31046) &&
+                        !PasswordFieldPainter.isLoginName(eo.field_c.field_h, -31046) &&
                         !wh.field_g) {
                         if (!AlternateUsernameCredentials.field_p) {
                           var17 = eo.field_c;
@@ -371,10 +371,10 @@ final class bj extends ResizableModalPanel implements ButtonListener {
             if (SpriteState.field_t == 1) {
               IconTextSceneWidget.field_Gb.field_Db.field_Hb.field_rb = BattleScreen.field_db;
               if (var19 != 0) {
-                IconTextSceneWidget.field_Gb.field_Db.field_Hb.field_rb = hn.field_l;
+                IconTextSceneWidget.field_Gb.field_Db.field_Hb.field_rb = JaggrabDownloader.field_l;
               }
             } else {
-              IconTextSceneWidget.field_Gb.field_Db.field_Hb.field_rb = hn.field_l;
+              IconTextSceneWidget.field_Gb.field_Db.field_Hb.field_rb = JaggrabDownloader.field_l;
             }
             fc.resetChildOffsets((byte) -77, IconTextSceneWidget.field_Gb.field_Eb);
           }
@@ -553,7 +553,7 @@ final class bj extends ResizableModalPanel implements ButtonListener {
           if (var3_int >= 12) {
             return false;
           }
-          if (rk.a((byte) -51, param0) &&
+          if (rk.isNameSeparator((byte) -51, param0) &&
             var3_int == 0) {
             return false;
           }

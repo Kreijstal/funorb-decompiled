@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class km {
+final class NameCheckRequest {
     private String field_h;
     static int field_c;
     static IntrusiveDeque field_a;
@@ -34,14 +34,14 @@ final class km {
         return var7;
     }
 
-    final boolean a(int param0) {
+    final boolean isAvailable(int param0) {
         if (param0 != -21813) {
           return false;
         }
         return this.field_f;
     }
 
-    final void a(boolean param0, byte param1) {
+    final void complete(boolean param0, byte param1) {
         if (param1 >= -24) {
           return;
         }
@@ -49,18 +49,18 @@ final class km {
         this.field_f = param0 ? true : false;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, BitmapFont param4, int param5, byte param6, int param7, boolean param8, Sprite[] param9, int param10, Sprite[] param11) {
+    final static void drawFramedText(int param0, int param1, int param2, int param3, BitmapFont param4, int param5, byte param6, int param7, boolean param8, Sprite[] param9, int param10, Sprite[] param11) {
         try {
-          wj.a(param9, param3, 113, param1, param2, param0, param8, param7, param11, param10, param10, param5, param4, param4, param7);
+          wj.drawFramedPanel(param9, param3, 113, param1, param2, param0, param8, param7, param11, param10, param10, param5, param4, param4, param7);
           if (param6 != 40) {
-            km.blendColourStep(-75, -88, -28, -51, 45);
+            NameCheckRequest.blendColourStep(-75, -88, -28, -51, 45);
           }
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "km.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + (param9 != null ? "{...}" : "null") + ',' + param10 + ',' + (param11 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final String a(boolean param0) {
+    final String getName(boolean param0) {
         if (!param0) {
           return (String) null;
         }
@@ -73,7 +73,7 @@ final class km {
         vf.field_o = param0 * param1 / 150;
     }
 
-    final boolean a(byte param0) {
+    final boolean isComplete(byte param0) {
         if (param0 >= -70) {
           field_c = -47;
           return this.field_d;
@@ -87,11 +87,11 @@ final class km {
         field_e = null;
         field_a = null;
         if (param0 != 400) {
-          km.blendColourStep(16, -52, 108, -102, -114);
+          NameCheckRequest.blendColourStep(16, -52, 108, -102, -114);
         }
     }
 
-    km(String param0) {
+    NameCheckRequest(String param0) {
         this.field_d = false;
         this.field_f = false;
         try {

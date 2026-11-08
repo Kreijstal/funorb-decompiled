@@ -8,7 +8,7 @@ final class pi {
     static int field_a;
     static SceneWidget field_d;
 
-    final static void a(boolean param0) {
+    final static void resetRequestQueue(boolean param0) {
         la.field_b = new IntrusiveDeque();
         if (!param0) {
           pi.releaseStatics((byte) 83);
@@ -19,7 +19,7 @@ final class pi {
         field_e = null;
         field_d = null;
         if (param0 > -19) {
-          pi.a(true);
+          pi.resetRequestQueue(true);
           field_b = null;
           return;
         }

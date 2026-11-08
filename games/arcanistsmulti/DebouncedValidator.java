@@ -23,13 +23,13 @@ abstract class DebouncedValidator implements ValidationProvider {
           return;
         }
         IndexedSprite var2 = (IndexedSprite) null;
-        DebouncedValidator.a((IndexedSprite) null, -106, -125, 14);
+        DebouncedValidator.isMaskSetAt((IndexedSprite) null, -106, -125, 14);
         field_d = null;
         field_b = null;
         field_f = null;
     }
 
-    final static boolean a(IndexedSprite param0, int param1, int param2, int param3) {
+    final static boolean isMaskSetAt(IndexedSprite param0, int param1, int param2, int param3) {
         int stackIn_14_0 = 0;
         int stackIn_20_0 = 0;
         RuntimeException stackIn_35_0 = null;
@@ -172,7 +172,7 @@ abstract class DebouncedValidator implements ValidationProvider {
                   return;
                 }
                 var5 = (IndexedSprite) null;
-                DebouncedValidator.a((IndexedSprite) null, 125, 14, -99);
+                DebouncedValidator.isMaskSetAt((IndexedSprite) null, 125, 14, -99);
                 return;
               }
             }
@@ -184,7 +184,7 @@ abstract class DebouncedValidator implements ValidationProvider {
             return;
           }
           var5 = (IndexedSprite) null;
-          DebouncedValidator.a((IndexedSprite) null, 125, 14, -99);
+          DebouncedValidator.isMaskSetAt((IndexedSprite) null, 125, 14, -99);
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -192,7 +192,7 @@ abstract class DebouncedValidator implements ValidationProvider {
         }
     }
 
-    final static boolean a(byte param0, CharSequence param1) {
+    final static boolean isValidName(byte param0, CharSequence param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         boolean stackIn_1_0 = false;
@@ -220,9 +220,9 @@ abstract class DebouncedValidator implements ValidationProvider {
 
     abstract ValidationState computeState(byte param0);
 
-    final static void a(int param0, byte param1) {
+    final static void setPendingMessageId(int param0, byte param1) {
         if (param1 != 30) {
-          DebouncedValidator.a(-79, (byte) -26);
+          DebouncedValidator.setPendingMessageId(-79, (byte) -26);
           qg.field_c = param0;
           return;
         }

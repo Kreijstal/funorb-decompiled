@@ -12,12 +12,12 @@ class SceneWidgetNode extends DualLinkNode {
     static int field_p;
     static int field_m;
 
-    public static void c(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
           if (param0) {
-            SceneWidgetNode.d(true);
+            SceneWidgetNode.getConnectionStage(true);
           }
           field_s = null;
           field_o = null;
@@ -32,12 +32,12 @@ class SceneWidgetNode extends DualLinkNode {
         }
     }
 
-    final static void a(boolean param0, byte param1) {
+    final static void drawLetterboxedLobby(boolean param0, byte param1) {
         RuntimeException runtimeException = null;
         int var2_int = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (pn.a((byte) 111)) {
+          if (pn.hasOpenOverlay((byte) 111)) {
             param0 = false;
           }
           TextHotspotWidget.drawLetterboxedScene(-11837, param0);
@@ -58,7 +58,7 @@ class SceneWidgetNode extends DualLinkNode {
     SceneWidgetNode() {
     }
 
-    final static void a(byte[] param0, boolean param1, int[] param2, int param3, int param4) {
+    final static void unpackLayoutRows(byte[] param0, boolean param1, int[] param2, int param3, int param4) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         byte dupTemp$2 = 0;
@@ -130,7 +130,7 @@ class SceneWidgetNode extends DualLinkNode {
         }
     }
 
-    final static int d(boolean param0) {
+    final static int getConnectionStage(boolean param0) {
         try {
           int stackIn_5_0 = 0;
           int stackIn_8_0 = 0;
@@ -160,7 +160,7 @@ class SceneWidgetNode extends DualLinkNode {
               return stackIn_8_0;
             }
             if (!param0) {
-              SceneWidgetNode.a((byte[]) null, false, (int[]) null, -92, -42);
+              SceneWidgetNode.unpackLayoutRows((byte[]) null, false, (int[]) null, -92, -42);
             }
             try {
               if (0 == ClipState.field_m) {
@@ -169,7 +169,7 @@ class SceneWidgetNode extends DualLinkNode {
               }
               if (ClipState.field_m == 1) {
                 if (FrameClock.field_a.field_e == 2) {
-                  stackIn_23_0 = FrameClock.a((byte) 110, -1);
+                  stackIn_23_0 = FrameClock.applyLoginResponse((byte) 110, -1);
                   return stackIn_23_0;
                 }
                 if (FrameClock.field_a.field_e == 1) {
@@ -179,7 +179,7 @@ class SceneWidgetNode extends DualLinkNode {
               if (ClipState.field_m == 2) {
                 td.field_E = new BufferedSocket((java.net.Socket) (FrameClock.field_a.field_g), ri.field_g);
                 var1 = new PacketBuffer(13);
-                SpriteState.a(var1, PlayerActionMenu.field_b, BevelTextPainter.field_u, ce.field_o, 123);
+                SpriteState.writeSpriteRequest(var1, PlayerActionMenu.field_b, BevelTextPainter.field_u, ce.field_o, 123);
                 var1.writeByte(15, (byte) -28);
                 var1.writeInt(hd.field_a, (byte) -101);
                 td.field_E.write(13, 0, (byte) 126, var1.payload);
@@ -191,7 +191,7 @@ class SceneWidgetNode extends DualLinkNode {
                 if (td.field_E.available(0) > 0) {
                   var1_int = td.field_E.read((byte) 120);
                   if (var1_int != 0) {
-                    stackIn_39_0 = FrameClock.a((byte) 110, var1_int);
+                    stackIn_39_0 = FrameClock.applyLoginResponse((byte) 110, var1_int);
                     return stackIn_39_0;
                   }
                   ClipState.field_m = ClipState.field_m + 1;
@@ -199,7 +199,7 @@ class SceneWidgetNode extends DualLinkNode {
                 }
                 if ((decompiledFrameRemainder0) &&
                   (qj.monotonicTimeMillis(-26572) > GameApplet.field_E)) {
-                  stackIn_47_0 = FrameClock.a((byte) 110, -2);
+                  stackIn_47_0 = FrameClock.applyLoginResponse((byte) 110, -2);
                   return stackIn_47_0;
                 }
               }
@@ -216,7 +216,7 @@ class SceneWidgetNode extends DualLinkNode {
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var1_ref = (IOException) (Object) decompiledCaughtException;
-              stackIn_54_0 = FrameClock.a((byte) 110, -3);
+              stackIn_54_0 = FrameClock.applyLoginResponse((byte) 110, -3);
               return stackIn_54_0;
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -231,7 +231,7 @@ class SceneWidgetNode extends DualLinkNode {
         }
     }
 
-    final static void a(byte param0, int[] param1, int[] param2, boolean param3, MeshModel param4, boolean param5, boolean param6) {
+    final static void projectModel(byte param0, int[] param1, int[] param2, boolean param3, MeshModel param4, boolean param5, boolean param6) {
         int stackIn_57_0 = 0;
         int stackIn_57_1 = 0;
         int stackIn_66_0 = 0;
@@ -433,7 +433,7 @@ class SceneWidgetNode extends DualLinkNode {
             stackIn_66_0 = param5 ? 1 : 0;
             break;
           }
-          WeightedLruCache.a(stackIn_66_0 != 0, param4, var8, (byte) -79, var7_int);
+          WeightedLruCache.drawModelFaces(stackIn_66_0 != 0, param4, var8, (byte) -79, var7_int);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

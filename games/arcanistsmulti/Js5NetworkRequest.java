@@ -11,7 +11,7 @@ final class Js5NetworkRequest extends ArchiveRequest {
     static String field_v;
     static String field_z;
 
-    final static void c(boolean param0) {
+    final static void setPaused(boolean param0) {
         sb.field_a = param0 ? true : false;
     }
 
@@ -49,7 +49,7 @@ final class Js5NetworkRequest extends ArchiveRequest {
     Js5NetworkRequest() {
     }
 
-    final static String a(boolean param0, CharSequence param1, int param2) {
+    final static String normalizeEmailOrName(boolean param0, CharSequence param1, int param2) {
         String var3 = null;
         int var4 = 0;
         int var5 = 0;

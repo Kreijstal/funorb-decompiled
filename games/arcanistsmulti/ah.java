@@ -12,7 +12,7 @@ final class ah {
     final static void beginAccountFlow(Sprite[] param0, int param1, int param2, int param3, Sprite[] param4, BitmapFont param5, int param6, int param7, int param8, int param9, int param10) {
         try {
           int var11_int = -49 % ((13 - param10) / 58);
-          fk.d(-11);
+          fk.requestLogout(-11);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "ah.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ')');
         }

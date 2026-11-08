@@ -29,7 +29,7 @@ final class ReflectionCheckRequest extends IntrusiveNode {
         field_r = null;
     }
 
-    final static int a(byte param0, int param1) {
+    final static int getChatMode(byte param0, int param1) {
         int var2 = 0;
         if (param0 >= 114) {
           if (param1 == 0) {

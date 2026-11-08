@@ -7,7 +7,7 @@ final class gf extends ResizableModalPanel implements ButtonListener {
     static String field_jb;
     static String field_V;
 
-    final static void a(IndexedSprite[] param0, boolean param1, byte param2, ResourceArchive param3, byte[] param4, String[][] param5, byte[] param6, ResourceArchive param7, int param8, ResourceArchive param9, int[] param10, int param11, int param12, Sprite[][] param13, Sprite[][] param14, String[] param15, String[] param16, int[] param17, String[][] param18) {
+    final static void initializeGameAssetsReordered(IndexedSprite[] param0, boolean param1, byte param2, ResourceArchive param3, byte[] param4, String[][] param5, byte[] param6, ResourceArchive param7, int param8, ResourceArchive param9, int[] param10, int param11, int param12, Sprite[][] param13, Sprite[][] param14, String[] param15, String[] param16, int[] param17, String[][] param18) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -45,7 +45,7 @@ final class gf extends ResizableModalPanel implements ButtonListener {
             gf.blendColours(83, (byte) 102, 89, -126);
           }
           var20 = (String[]) null;
-          LoadingProgressDialog.a(param10, param0, param14, param12, param5, param15, param8, param9, param4, (String[]) null, param7, param16, 17292, param13, param1, 1, param18, param3, param6, param17);
+          LoadingProgressDialog.initializeGameAssets(param10, param0, param14, param12, param5, param15, param8, param9, param4, (String[]) null, param7, param16, 17292, param13, param1, 1, param18, param3, param6, param17);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -261,7 +261,7 @@ final class gf extends ResizableModalPanel implements ButtonListener {
         return var8Lifetime2 | (var7Lifetime1 << 8 | var6 << 16);
     }
 
-    final static int a(int param0, int param1) {
+    final static int log2Floor(int param0, int param1) {
         if (param1 != -266740663) {
           field_jb = (String) null;
           if (65536L <= (long)param0) {
@@ -491,7 +491,7 @@ final class gf extends ResizableModalPanel implements ButtonListener {
         RuntimeException var6 = null;
         try {
           if (this.field_lb == param4) {
-            IntrusiveDeque.a((byte) 4);
+            IntrusiveDeque.startReconnect((byte) 4);
             this.close(48);
           } else {
             if (this.field_kb == param4) {

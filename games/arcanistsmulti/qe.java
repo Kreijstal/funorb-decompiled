@@ -211,7 +211,7 @@ final class qe extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, byte param1, int param2) {
+    final static void sendShortSettingRequest(int param0, byte param1, int param2) {
         CipherPacketBuffer var3 = he.field_e;
         var3.writeOpcode((byte) -49, param2);
         var3.writeByte(3, (byte) -76);
@@ -241,7 +241,7 @@ final class qe extends IntrusiveNode {
           if (param3 < 40) {
             field_p = true;
           }
-          stackIn_3_0 = of.a(var4_int, (byte) -38, param0, var5);
+          stackIn_3_0 = of.loadSprites(var4_int, (byte) -38, param0, var5);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -43,7 +43,7 @@ final class IntKeyLookup {
         }
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void drawLogoIntro(int param0, int param1, int param2) {
         int var3;
         int var4;
         int var5;
@@ -81,7 +81,7 @@ final class IntKeyLookup {
         if (var5 < 256) {
           SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_e, SoftwareRasterizer.field_j, 0, -var5 + 256);
         }
-        oo.popClipState(-15405);
+        QuickChatCategory.popClipState(-15405);
         if (SoundCache.field_a < 150) {
           LoadingTracker.field_h.drawHalfSize(var3, var4);
           var6 = -125 + SoundCache.field_a;

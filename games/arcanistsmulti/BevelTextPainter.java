@@ -10,7 +10,7 @@ class BevelTextPainter extends TextWidgetPainter {
     static int field_u;
     static String field_p;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void storeTimingParameters(int param0, int param1, int param2, int param3, int param4) {
         NanoFrameClock.field_k = param2;
         HuffmanCodec.field_l = param1;
         tm.field_b = param3;
@@ -20,7 +20,7 @@ class BevelTextPainter extends TextWidgetPainter {
         mh.field_H = param0;
     }
 
-    final static void a(int param0, int param1) {
+    final static void sendByteRequest(int param0, int param1) {
         CipherPacketBuffer var2 = he.field_e;
         var2.writeOpcode((byte) -79, param0);
         var2.writeByte(1, (byte) -92);
@@ -40,7 +40,7 @@ class BevelTextPainter extends TextWidgetPainter {
           field_v = null;
           return;
         }
-        BevelTextPainter.a(127, -74);
+        BevelTextPainter.sendByteRequest(127, -74);
         field_p = null;
         field_q = null;
         field_s = null;
@@ -56,34 +56,34 @@ class BevelTextPainter extends TextWidgetPainter {
         Throwable decompiledCaughtException = null;
         var1_ref = CredentialKind.field_a;
         synchronized (var1_ref) {
-          if (gn.field_b == Js5NetworkRequest.field_u) {
+          if (QuickChatPhraseCache.field_b == Js5NetworkRequest.field_u) {
             return false;
           }
           IntrusiveDeque.field_d = ViewportController.field_p[Js5NetworkRequest.field_u];
           ed.field_Bb = qa.field_i[Js5NetworkRequest.field_u];
           Js5NetworkRequest.field_u = 1 + Js5NetworkRequest.field_u & 127;
           if (param0) {
-            BevelTextPainter.a(false, -118);
+            BevelTextPainter.sendToggleState(false, -118);
           }
           stackIn_7_0 = true;
         }
         return stackIn_7_0;
     }
 
-    final static km a(int param0, String param1) {
+    final static NameCheckRequest createNameCheck(int param0, String param1) {
         RuntimeException var2 = null;
-        km stackIn_7_0 = null;
+        NameCheckRequest stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 2) {
-            BevelTextPainter.a(false, 33);
+            BevelTextPainter.sendToggleState(false, 33);
           }
-          if (SingleChildContainer.field_z.a((byte) -94) &&
-            !param1.equals(SingleChildContainer.field_z.a(true))) {
-            SingleChildContainer.field_z = nj.a(param1, -100);
+          if (SingleChildContainer.field_z.isComplete((byte) -94) &&
+            !param1.equals(SingleChildContainer.field_z.getName(true))) {
+            SingleChildContainer.field_z = nj.createNameCheckRequest(param1, -100);
           }
           stackIn_7_0 = SingleChildContainer.field_z;
           return stackIn_7_0;
@@ -101,26 +101,26 @@ class BevelTextPainter extends TextWidgetPainter {
         }
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void sendToggleState(boolean param0, int param1) {
         if (pm.field_b == null) {
           if (param1 == 2) {
             return;
           }
-          BevelTextPainter.a(41, -89);
+          BevelTextPainter.sendByteRequest(41, -89);
           return;
         }
-        if (!pm.field_b.c(param0, (byte) 48)) {
+        if (!pm.field_b.processInput(param0, (byte) 48)) {
           if (param1 == 2) {
             return;
           }
-          BevelTextPainter.a(41, -89);
+          BevelTextPainter.sendByteRequest(41, -89);
           return;
         }
         pm.field_b = null;
         if (param1 == 2) {
           return;
         }
-        BevelTextPainter.a(41, -89);
+        BevelTextPainter.sendByteRequest(41, -89);
     }
 
     BevelTextPainter(BitmapFont param0, int param1) {

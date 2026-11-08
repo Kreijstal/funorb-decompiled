@@ -33,12 +33,12 @@ final class DualLinkDeque {
         return this.field_h == this.field_h.secondaryNext ? true : false;
     }
 
-    final static boolean a(int param0, int param1, int param2, int param3) {
+    final static boolean isMaskSet(int param0, int param1, int param2, int param3) {
         if (param1 >= 22) {
-          return TextTableInitializer.a(param0, param2, 13, param3);
+          return TextTableInitializer.handleEscapeKey(param0, param2, 13, param3);
         }
-        DualLinkDeque.a(101, false, -57, -39);
-        return TextTableInitializer.a(param0, param2, 13, param3);
+        DualLinkDeque.updateRootInputResult(101, false, -57, -39);
+        return TextTableInitializer.handleEscapeKey(param0, param2, 13, param3);
     }
 
     final DualLinkNode next(int param0) {
@@ -138,7 +138,7 @@ final class DualLinkDeque {
         this.field_h.secondaryNext = this.field_h;
     }
 
-    final static int a(int param0, boolean param1, int param2, int param3) {
+    final static int updateRootInputResult(int param0, boolean param1, int param2, int param3) {
         if (param3 != 17) {
           return -27;
         }

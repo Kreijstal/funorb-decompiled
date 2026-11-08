@@ -43,7 +43,7 @@ final class dd {
           if (sm.passwordContainsName(22230, param1, param2)) {
             return false;
           }
-          if (!ChatInputWidget.a(param2, param1, 0)) {
+          if (!ChatInputWidget.passwordContainsName(param2, param1, 0)) {
             return true;
           }
           return false;

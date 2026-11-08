@@ -137,7 +137,7 @@ final class MenuButtonPanel extends UiContainer implements ButtonListener {
     }
 
     private final static IndexedSprite createDecodedIndexedSprite(int param0) {
-        IndexedSprite var1 = new IndexedSprite(pb.field_g, gn.field_a, hl.field_l[0], SectorCacheStore.field_d[0], jg.field_p[0], ho.field_i[0], AccountRegistrationPanel.field_I[param0], ph.field_c);
+        IndexedSprite var1 = new IndexedSprite(pb.field_g, QuickChatPhraseCache.field_a, hl.field_l[0], SectorCacheStore.field_d[0], jg.field_p[0], ho.field_i[0], AccountRegistrationPanel.field_I[param0], ph.field_c);
         CanvasRasterBuffer.releaseDecodeArrays(-18229);
         return var1;
     }
@@ -172,7 +172,7 @@ final class MenuButtonPanel extends UiContainer implements ButtonListener {
               }
               var7 = new SectorCacheStore(param0, bm.field_e, bb.field_b[param0], 2097152);
             }
-            var8 = ValidationStatusIcon.field_O.a((SectorCacheStore) (var6), param5, -113, (SectorCacheStore) (var7), param0);
+            var8 = ValidationStatusIcon.field_O.createProvider((SectorCacheStore) (var6), param5, -113, (SectorCacheStore) (var7), param0);
             if (param3) {
               var8.enablePrefetch((byte) 53);
             }
@@ -202,7 +202,7 @@ final class MenuButtonPanel extends UiContainer implements ButtonListener {
           if (param1 != 31027) {
             MenuButtonPanel.createDecodedIndexedSprite(50);
           }
-          if (fc.a(-120, param0, param2, param3)) {
+          if (fc.decodeSpriteSheet(-120, param0, param2, param3)) {
             stackIn_6_0 = MenuButtonPanel.createDecodedIndexedSprite(0);
             return stackIn_6_0;
           }
@@ -244,7 +244,7 @@ final class MenuButtonPanel extends UiContainer implements ButtonListener {
             }
             var7 = this.field_S[var6_int];
             if (var7 != -1) {
-              DebouncedValidator.a(this.field_S[var6_int], (byte) 30);
+              DebouncedValidator.setPendingMessageId(this.field_S[var6_int], (byte) 30);
             } else {
               this.field_G.dismiss(77);
             }

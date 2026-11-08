@@ -19,13 +19,13 @@ final class ie extends ed implements ButtonListener {
     static String field_Nb;
     static IntrusiveNodeHashTable field_Qb;
 
-    final static boolean a(int param0, boolean param1) {
+    final static boolean pollStatusSocket(int param0, boolean param1) {
         long dupTemp$2 = 0L;
         if (CacheEntry.field_o == null) {
           CacheEntry.field_o = qg.field_b.queueDirectSocketOpen(ng.field_G, true, ProxySocketConnector.field_q);
         }
         if (param0 >= -35) {
-          ie.l((byte) 23);
+          ie.layoutTopBar((byte) 23);
         }
         if (CacheEntry.field_o.field_e == 0) {
           return false;
@@ -49,7 +49,7 @@ final class ie extends ed implements ButtonListener {
           return;
         }
         try {
-          IntrusiveNodeHashTable.g(-1);
+          IntrusiveNodeHashTable.openLoginFlow(-1);
           this.dismiss(77);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "ie.U(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
@@ -74,7 +74,7 @@ final class ie extends ed implements ButtonListener {
           !this.field_Ob) {
           var2 = ContextActionMenu.getCurrentMessage(false);
           if (var2 != null) {
-            this.a(var2, (byte) 119, false);
+            this.showMessageLines(var2, (byte) 119, false);
           }
         }
         return super.updateFade((byte) 83);
@@ -144,10 +144,10 @@ final class ie extends ed implements ButtonListener {
     }
 
     final void showMessageById(int param0) {
-        this.a(CipherPacketBuffer.createMessage(0, param0, g.field_c), (byte) 124, true);
+        this.showMessageLines(CipherPacketBuffer.createMessage(0, param0, g.field_c), (byte) 124, true);
     }
 
-    private final void a(ho param0, byte param1, boolean param2) {
+    private final void showMessageLines(ho param0, byte param1, boolean param2) {
         RuntimeException stackIn_34_0 = null;
         StringBuilder stackIn_34_1 = null;
         String stackIn_35_2 = null;
@@ -167,7 +167,7 @@ final class ie extends ed implements ButtonListener {
               var4 = param0.field_e;
               if (param0.field_a == 248) {
                 if (!param2) {
-                  LobbyGameEntry.i((byte) 105);
+                  LobbyGameEntry.clearStatusCookieForApplet((byte) 105);
                 }
                 var4 = g.field_c;
                 this.field_Wb = true;
@@ -223,7 +223,7 @@ final class ie extends ed implements ButtonListener {
         }
     }
 
-    final static void l(byte param0) {
+    final static void layoutTopBar(byte param0) {
         uc.field_d.setBounds(-(!fc.field_a ? 0 : 40 + (2 + (CacheEntry.field_p + 2))) + StatefulTextPainter.field_s.field_x, 0, 0, 18, (byte) -120);
         StrongCacheEntry.field_z.setBounds(CacheEntry.field_p + 42, -40 + (-CacheEntry.field_p + StatefulTextPainter.field_s.field_x) - 2, 0, 18, (byte) -120);
         nj.field_m.setBoundsAndLayout(20, CacheEntry.field_p, StatefulTextPainter.field_s.field_x, false, 0, StatefulTextPainter.field_s.field_I - 20, 2);

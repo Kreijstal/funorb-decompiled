@@ -233,7 +233,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
         var1.reset(-17238);
     }
 
-    final static void a(int param0, SocialListEntry param1, int param2, int param3, SceneScrollPane param4, int param5, int param6) {
+    final static void openSocialEntryMenu(int param0, SocialListEntry param1, int param2, int param3, SceneScrollPane param4, int param5, int param6) {
         RuntimeException var7 = null;
         int var8 = 0;
         int var9 = 0;
@@ -348,7 +348,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
             }
           }
           this.field_t.paint(param3, this, (byte) 110, param0, param2);
-          oo.popClipState(-15405);
+          QuickChatCategory.popClipState(-15405);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -18,7 +18,7 @@ final class rk extends TextButton {
     int field_U;
     int field_V;
 
-    final static void g(int param0) {
+    final static void drawCursor(int param0) {
         int var16 = 0;
         int var20 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -149,31 +149,31 @@ final class rk extends TextButton {
             var1_int = var1_int + IntrusiveDeque.field_b.field_x;
             var2 = var2 + IntrusiveDeque.field_b.field_o;
             for (var5 = 0; var5 < 50; var5++) {
-              gn.a(2, (byte) 92, 50 - var5, var1_int, var5 + var2);
-              gn.a(2, (byte) 93, -var5 + 50, var1_int, -var5 + var2);
-              gn.a(2, (byte) 76, -var5 + 50, var5 + var1_int, var2);
-              gn.a(2, (byte) 87, -var5 + 50, -var5 + var1_int, var2);
+              QuickChatPhraseCache.fillCircleMasked(2, (byte) 92, 50 - var5, var1_int, var5 + var2);
+              QuickChatPhraseCache.fillCircleMasked(2, (byte) 93, -var5 + 50, var1_int, -var5 + var2);
+              QuickChatPhraseCache.fillCircleMasked(2, (byte) 76, -var5 + 50, var5 + var1_int, var2);
+              QuickChatPhraseCache.fillCircleMasked(2, (byte) 87, -var5 + 50, -var5 + var1_int, var2);
             }
             for (var5 = 0; var5 < 100; var5++) {
               var6 = (int)(Math.sin(3.141592653589793 * (double)var5 / 50.0) * 40.0 + (double)var1_int);
               var7 = (int)(Math.cos((double)var5 * 3.141592653589793 / 50.0) * 40.0 + (double)var2);
-              gn.a(2, (byte) 61, 16, var6, var7);
+              QuickChatPhraseCache.fillCircleMasked(2, (byte) 61, 16, var6, var7);
             }
-            gn.a(16, (byte) 99, 32, var1_int, var2);
+            QuickChatPhraseCache.fillCircleMasked(16, (byte) 99, 32, var1_int, var2);
           }
           if (var3 != -1) {
             var4 = var4 + IntrusiveDeque.field_b.field_o;
             var3 = var3 + IntrusiveDeque.field_b.field_x;
             for (var5 = 0; var5 < 30; var5++) {
-              gn.a(2, (byte) 72, -var5 + 30, var3, var4 + var5);
-              gn.a(2, (byte) 72, 30 - var5, var3, var4 - var5);
-              gn.a(2, (byte) 88, -var5 + 30, var3 + var5, var4);
-              gn.a(2, (byte) 109, -var5 + 30, var3 - var5, var4);
+              QuickChatPhraseCache.fillCircleMasked(2, (byte) 72, -var5 + 30, var3, var4 + var5);
+              QuickChatPhraseCache.fillCircleMasked(2, (byte) 72, 30 - var5, var3, var4 - var5);
+              QuickChatPhraseCache.fillCircleMasked(2, (byte) 88, -var5 + 30, var3 + var5, var4);
+              QuickChatPhraseCache.fillCircleMasked(2, (byte) 109, -var5 + 30, var3 - var5, var4);
             }
             for (var5 = 0; var5 < 100; var5++) {
               var6 = (int)((double)var3 + 20.0 * Math.sin(3.141592653589793 * (double)var5 / 50.0));
               var7 = (int)(20.0 * Math.cos((double)var5 * 3.141592653589793 / 50.0) + (double)var4);
-              gn.a(2, (byte) 126, 8, var6, var7);
+              QuickChatPhraseCache.fillCircleMasked(2, (byte) 126, 8, var6, var7);
             }
           }
           IntrusiveDeque.field_b.field_A[0] = 16777215;
@@ -185,34 +185,34 @@ final class rk extends TextButton {
         }
     }
 
-    final static void f(int param0) {
+    final static void clearCursorSprites(int param0) {
         SpriteState.field_m = null;
         int var1 = 91 % ((param0 - 47) / 56);
         ik.field_e = null;
     }
 
-    final static boolean a(byte param0, int param1, int param2) {
+    final static boolean handleLobbyKey(byte param0, int param1, int param2) {
         int var3 = -66 / ((param0 - 8) / 46);
         int var4 = om.field_x != null ? 1 : 0;
         if (IntrusiveDeque.field_d == 9 &&
-          wj.a(of.field_c, ao.field_e, LoadingProgressDialog.field_rb, 2, fo.field_h)) {
+          wj.canMessage(of.field_c, ao.field_e, LoadingProgressDialog.field_rb, 2, fo.field_h)) {
           if (2 != LoadingProgressDialog.field_rb &&
             var4 != 0) {
             return false;
           }
-          return va.a(fo.field_h, 1, ao.field_e, of.field_c, LoadingProgressDialog.field_rb);
+          return va.openQuickChatForName(fo.field_h, 1, ao.field_e, of.field_c, LoadingProgressDialog.field_rb);
         }
         if (IntrusiveDeque.field_d == 10) {
           if (var4 != 0) {
             return false;
           }
-          gj.a((byte) 103);
+          gj.resetLoginMode((byte) 103);
           return true;
         }
         if (IntrusiveDeque.field_d == 11 &&
           bo.field_c) {
           if (2 == qj.field_c &&
-            !kg.a(rf.field_n, true, UiTheme.field_A)) {
+            !QuickChatCategoryCache.isFriendOrMember(rf.field_n, true, UiTheme.field_A)) {
             return false;
           }
           if (qj.field_c != 2 &&
@@ -223,7 +223,7 @@ final class rk extends TextButton {
             return true;
           }
           String var5 = (String) null;
-          BufferedRandomAccessFile.a(hi.field_g, (String) null, 68, param1, qj.field_c, UiTheme.field_A);
+          BufferedRandomAccessFile.sendReport(hi.field_g, (String) null, 68, param1, qj.field_c, UiTheme.field_A);
           return true;
         }
         return false;
@@ -281,7 +281,7 @@ final class rk extends TextButton {
         }
     }
 
-    final static boolean a(byte param0, char param1) {
+    final static boolean isNameSeparator(byte param0, char param1) {
         int var2;
         boolean stackIn_7_0 = false;
         var2 = 50 / ((65 - param0) / 52);
@@ -303,9 +303,9 @@ final class rk extends TextButton {
         field_N = null;
     }
 
-    final static long a(int param0) {
+    final static long timeSinceLastInput(int param0) {
         if (param0 >= -45) {
-          rk.a((byte) -44, 74, 126);
+          rk.handleLobbyKey((byte) -44, 74, 126);
         }
         return -hi.field_d + qj.monotonicTimeMillis(-26572);
     }

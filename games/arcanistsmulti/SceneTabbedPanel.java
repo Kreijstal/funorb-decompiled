@@ -23,7 +23,7 @@ final class SceneTabbedPanel extends SceneWidget {
     private SceneTabbedPanel field_Sb;
     private int[] field_Ib;
 
-    private final static void a(int param0, int param1, int param2, long param3, String param4) {
+    private final static void storeInviteRequest(int param0, int param1, int param2, long param3, String param4) {
         rf.field_n = param3;
         UiTheme.field_A = param4;
         qj.field_c = param1;
@@ -57,12 +57,12 @@ final class SceneTabbedPanel extends SceneWidget {
             this.setTabSpacing(-99, 0);
             this.field_Hb = param3;
             this.field_Sb = this.field_Fb[this.field_Hb];
-            vl.a((byte) 121, this.field_Sb);
+            HotspotRegion.addQuickChatMenu((byte) 121, this.field_Sb);
             this.field_Sb.setTabSpacing(-111, 12);
           } else {
             if (this.field_Ib[param3] == -1) {
-              GridContainer.g(-19741);
-              SecondaryNodeDeque.a(14);
+              GridContainer.openConfirmDialog(-19741);
+              SecondaryNodeDeque.closeQuickChat(14);
             } else {
               var5 = 32768 | this.field_Ib[param3];
               var6 = nj.field_c;
@@ -70,13 +70,13 @@ final class SceneTabbedPanel extends SceneWidget {
                 null != DirectByteStorage.field_f) {
                 var6 = 1;
               }
-              if (ReflectionCheckRequest.a((byte) 122, var6) == 2) {
-                DiskCacheRequest.a(param2, 1, true, var6);
+              if (ReflectionCheckRequest.getChatMode((byte) 122, var6) == 2) {
+                DiskCacheRequest.updateChatModeSetting(param2, 1, true, var6);
               }
               var8 = (String) null;
-              BufferedRandomAccessFile.a(var5, (String) null, 70, param1, nj.field_c, MenuInputState.field_p);
-              SceneTabbedPanel.a(param0 ^ -13, nj.field_c, var5, gg.field_e, MenuInputState.field_p);
-              SecondaryNodeDeque.a(14);
+              BufferedRandomAccessFile.sendReport(var5, (String) null, 70, param1, nj.field_c, MenuInputState.field_p);
+              SceneTabbedPanel.storeInviteRequest(param0 ^ -13, nj.field_c, var5, gg.field_e, MenuInputState.field_p);
+              SecondaryNodeDeque.closeQuickChat(14);
               cf.resetIdleTimer(-113);
             }
           }
@@ -343,7 +343,7 @@ final class SceneTabbedPanel extends SceneWidget {
         if (null == this.field_Sb &&
           this == CacheEntry.field_q &&
           var4 != 0) {
-          SecondaryNodeDeque.a(14);
+          SecondaryNodeDeque.closeQuickChat(14);
           return true;
         }
         var5 = ed.field_Bb;

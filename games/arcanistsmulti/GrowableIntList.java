@@ -16,7 +16,7 @@ final class GrowableIntList {
     static String[] field_g;
     private int field_m;
 
-    final static void a(int param0, String param1) {
+    final static void showTextOverlay(int param0, String param1) {
         RuntimeException runtimeException = null;
         int var2_int = 0;
         int var3 = 0;
@@ -36,7 +36,7 @@ final class GrowableIntList {
           var4Lifetime1 = la.field_c.field_Z.paragraphHeight(param1, 272, la.field_c.field_z);
           var5 = -103 + var3 / 2 - var4Lifetime1 / 2;
           LinkButtonPainter.field_h.setBounds(320, (-320 + var2_int) / 2, var5, -120 + var3 - 2 * var5, (byte) -120);
-          LinkButtonPainter.field_h.field_v = of.a(3, LinkButtonPainter.field_h.field_I, 1, 2105376, 11579568, 8421504);
+          LinkButtonPainter.field_h.field_v = of.createGradientFrame(3, LinkButtonPainter.field_h.field_I, 1, 2105376, 11579568, 8421504);
           la.field_c.setBounds(-24 + (LinkButtonPainter.field_h.field_x - 24), 24, 16, -20 + (LinkButtonPainter.field_h.field_I - 24), (byte) -120);
           dm.field_E.setBounds(80, 120, LinkButtonPainter.field_h.field_I - 44, 24, (byte) -120);
           return;
@@ -97,7 +97,7 @@ final class GrowableIntList {
         }
     }
 
-    final static String b(int param0) {
+    final static String getChatInputCaption(int param0) {
         String stackIn_3_0 = null;
         String stackIn_63_0 = null;
         Object stackIn_103_0 = null;
@@ -125,18 +125,18 @@ final class GrowableIntList {
             var2 = fn.field_i;
           }
           if (2 == nj.field_c &&
-            !wm.c(false)) {
-            boolean decompiledSharedTail1 = !(!ArrayWidgetContainer.a(GridContainer.field_S, 1));
+            !wm.isLoginNameValid(false)) {
+            boolean decompiledSharedTail1 = !(!ArrayWidgetContainer.hasEntryNamed(GridContainer.field_S, 1));
             if (!decompiledSharedTail1) {
               var2 = CachedArchiveProvider.formatTemplate(125, new String[]{MenuInputState.field_p}, qc.field_b);
               decompiledSharedTail1 = (var10 != 0);
             }
             if (decompiledSharedTail1) {
-              var2 = CachedArchiveProvider.formatTemplate(-41, new String[]{MenuInputState.field_p}, oo.field_m);
+              var2 = CachedArchiveProvider.formatTemplate(-41, new String[]{MenuInputState.field_p}, QuickChatCategory.field_m);
             }
             if (oj.field_i) {
               ao.addChatMessage(0, (byte) 83, (String) (var2), (String) null, 2, (String) null);
-              uc.c(3);
+              uc.closeQuickChatIfOpen(3);
             }
           }
           if (var2 == null &&
@@ -146,7 +146,7 @@ final class GrowableIntList {
           }
           boolean decompiledFrameRemainder0 = true;
           if (null != var2) {
-            rb.a(ArchiveIndex.field_u, (String) (var2), 0, (String) null, param0 ^ -96);
+            rb.showSavedLayout(ArchiveIndex.field_u, (String) (var2), 0, (String) null, param0 ^ -96);
             decompiledFrameRemainder0 = (var10 != 0);
           }
           if (decompiledFrameRemainder0) {
@@ -159,7 +159,7 @@ final class GrowableIntList {
             if (var6 == 2) {
               var4 = CachedArchiveProvider.formatTemplate(-99, new String[]{MenuInputState.field_p}, ge.field_n);
               var8 = CachedArchiveProvider.formatTemplate(-51, new String[]{var3}, IterableNodeHashTable.field_f);
-              var7 = -485 + (sa.field_Cb.field_x + SingleChildContainer.field_D.field_x + oo.field_x.textWidth(var8)) - oo.field_x.textWidth(var4);
+              var7 = -485 + (sa.field_Cb.field_x + SingleChildContainer.field_D.field_x + QuickChatCategory.field_x.textWidth(var8)) - QuickChatCategory.field_x.textWidth(var4);
               if (0 > var7) {
                 var7 = 0;
               }
@@ -182,7 +182,7 @@ final class GrowableIntList {
                   var6 = 1;
                 }
               }
-              if (tk.hasResizableListener((byte) -128)) {
+              if (QuickChatPhrase.hasResizableListener((byte) -128)) {
                 stackIn_63_0 = ": ";
               } else {
                 stackIn_63_0 = "<img=3>: ";
@@ -202,8 +202,8 @@ final class GrowableIntList {
                 var4 = "<col=999999>" + var4 + rk.field_N + "</col>";
                 var5 = "";
               }
-              var9 = oo.field_x.textWidth(var4);
-              if (!tk.hasResizableListener((byte) -113)) {
+              var9 = QuickChatCategory.field_x.textWidth(var4);
+              if (!QuickChatPhrase.hasResizableListener((byte) -113)) {
                 if (SingleChildContainer.field_D.field_C &&
                   (-SingleChildContainer.field_D.field_V + EmailLoginCredentials.field_g) < var9) {
                   if (!wh.field_g) {
@@ -215,11 +215,11 @@ final class GrowableIntList {
                 if (SingleChildContainer.field_D.field_U != 0 &&
                   SingleChildContainer.field_D.field_cb < var9 &&
                   !wh.field_g) {
-                  gj.a((byte) 104);
+                  gj.resetLoginMode((byte) 104);
                 }
               }
             }
-            rb.a(ResizableViewResizeListener.field_c[var6], var4 + BitmapFont.escapeMarkup(hi.field_e.toString()), var7, var5, -126);
+            rb.showSavedLayout(ResizableViewResizeListener.field_c[var6], var4 + BitmapFont.escapeMarkup(hi.field_e.toString()), var7, var5, -126);
             if (!SocketJs5Transport.field_r) {
               sa.field_Cb.field_C = false;
             }
@@ -310,7 +310,7 @@ final class GrowableIntList {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {

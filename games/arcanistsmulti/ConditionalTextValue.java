@@ -16,7 +16,7 @@ final class ConditionalTextValue {
         this(param0, false);
     }
 
-    final static String b(byte param0) {
+    final static String getAccountCaption(byte param0) {
         if (param0 >= -105) {
           field_d = (String) null;
           if (sk.field_a != SceneScrollbar.field_Gb) {
@@ -105,7 +105,7 @@ final class ConditionalTextValue {
         }
     }
 
-    final static boolean a(int param0) {
+    final static boolean isAccountMenuOpen(int param0) {
         if (param0 == -1) {
           return hb.field_Gb == sk.field_a ? true : false;
         }

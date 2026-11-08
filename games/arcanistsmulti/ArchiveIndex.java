@@ -74,7 +74,7 @@ final class ArchiveIndex {
         int var13Lifetime1Lifetime1;
         var16 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          var17 = new PacketBuffer(hb.a(false, param0));
+          var17 = new PacketBuffer(hb.decompressContainer(false, param0));
           var4 = var17.readUnsignedByte((byte) 31);
           if (var4 >= 5 &&
             var4 <= 7) {
@@ -369,12 +369,12 @@ final class ArchiveIndex {
         }
     }
 
-    final static boolean b(int param0) {
+    final static boolean hasStatusCookie(int param0) {
         int var1 = 60 % ((8 - param0) / 48);
         return WrappedTextLayout.hasStatusCookie((byte) -68, IconButtonPainter.getApplet(122));
     }
 
-    final static void a(byte param0) {
+    final static void updatePlayerCaptions(byte param0) {
         int var2;
         var2 = ArcanistsMulti.field_G ? 1 : 0;
         if (null == SpriteState.field_z) {
@@ -425,7 +425,7 @@ final class ArchiveIndex {
             if (param2.length != 64) {
               throw new RuntimeException();
             }
-            this.field_x = CacheEntry.a(param0.length, (byte) -93, param0, 0);
+            this.field_x = CacheEntry.computeWhirlpoolDigest(param0.length, (byte) -93, param0, 0);
             for (var4_int = 0; var4_int < 64; var4_int++) {
               if (this.field_x[var4_int] != param2[var4_int]) {
                 throw new RuntimeException();

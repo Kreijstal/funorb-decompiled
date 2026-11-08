@@ -80,9 +80,9 @@ final class cj {
           if (var45.field_H != null &&
             1 < var45.field_F) {
             var61 = var45.field_H;
-            SceneWidgetNode.a(var61, false, SpriteState.field_s, 0, 0);
+            SceneWidgetNode.unpackLayoutRows(var61, false, SpriteState.field_s, 0, 0);
           } else {
-            CameraFollowTarget.a((byte) 91);
+            CameraFollowTarget.mergeLayoutTables((byte) 91);
           }
           var55 = new int[param4.field_A];
           var50 = var55;
@@ -289,7 +289,7 @@ final class cj {
           var11_ref_StringLifetime2 = var8;
           var11_ref_StringLifetime3 = var8;
           if (CredentialKind.field_c == null &&
-            !ie.a(-89, false)) {
+            !ie.pollStatusSocket(-89, false)) {
             stackIn_6_0 = -1;
             return stackIn_6_0;
           }
@@ -321,7 +321,7 @@ final class cj {
               he.field_e.writeByte(16, (byte) -75);
               he.field_e.position = he.field_e.position + 1;
               var9 = he.field_e.position;
-              TextLine.a(false, he.field_e, IconTextSceneWidget.field_Jb, NodeHashTableIterator.field_a, DropTargetWidget.field_K);
+              TextLine.writeSecureBlock(false, he.field_e, IconTextSceneWidget.field_Jb, NodeHashTableIterator.field_a, DropTargetWidget.field_K);
               he.field_e.writeByteLengthAtMark(he.field_e.position - var9, (byte) 43);
             } else {
               var9 = 0;
@@ -334,7 +334,7 @@ final class cj {
               NodeHashTableIterator.field_a.writeVersionedString(var15, (byte) -100);
               NodeHashTableIterator.field_a.writeVersionedString(var8, (byte) -96);
               var17 = (CharSequence) ((Object) param6);
-              NodeHashTableIterator.field_a.writeVersionedString(vl.a((byte) 106, var17), (byte) -92);
+              NodeHashTableIterator.field_a.writeVersionedString(HotspotRegion.truncateName((byte) 106, var17), (byte) -92);
               NodeHashTableIterator.field_a.writeShort(param4, (byte) -73);
               NodeHashTableIterator.field_a.writeByte(param2, (byte) -118);
               NodeHashTableIterator.field_a.writeByte(var9, (byte) -62);
@@ -346,10 +346,10 @@ final class cj {
                 var11_ref_StringLifetime4 = "";
               }
               he.field_e.writeString(var11_ref_StringLifetime4, 23333);
-              TextLine.a(false, he.field_e, IconTextSceneWidget.field_Jb, NodeHashTableIterator.field_a, DropTargetWidget.field_K);
+              TextLine.writeSecureBlock(false, he.field_e, IconTextSceneWidget.field_Jb, NodeHashTableIterator.field_a, DropTargetWidget.field_K);
               he.field_e.writeShortLengthAtMark(he.field_e.position - var10, -19571);
             }
-            we.a(-1, (byte) 113);
+            we.sendKeepAlive(-1, (byte) 113);
             ResizableModalPanel.field_eb = sb.field_f;
           }
           if (ResizableModalPanel.field_eb == sb.field_f &&
@@ -362,7 +362,7 @@ final class cj {
               Bzip2State.field_M = new String[-100 + var9Lifetime1];
             } else {
               if (var9Lifetime1 == 248) {
-                UiContainer.a(1, IconButtonPainter.getApplet(param1 ^ -40));
+                UiContainer.clearStatusCookie(1, IconButtonPainter.getApplet(param1 ^ -40));
                 MenuButtonPanel.field_E = fo.field_c;
                 ProxySocketConnector.closeActiveConnection(false);
                 bb.field_h = false;
@@ -374,7 +374,7 @@ final class cj {
                 fj.field_h = -1;
                 on.field_g = var9Lifetime1;
               } else {
-                ContextActionMenu.hasIncomingBytes((byte) -86, oi.b(88));
+                ContextActionMenu.hasIncomingBytes((byte) -86, oi.alwaysOne(88));
                 kj.field_e = new Boolean(jo.readByteMatches(UiContainer.field_z, param1 + 89));
                 UiContainer.field_z.position = 0;
               }
@@ -398,7 +398,7 @@ final class cj {
             }
           }
           if (ResizableModalPanel.field_eb == NodeHashTable.field_i &&
-            pn.b(-12564)) {
+            pn.readServerStatus(-12564)) {
             if (on.field_g != 255) {
               MenuButtonPanel.field_E = UiContainer.field_z.readString(param1 + 90);
             } else {
@@ -414,7 +414,7 @@ final class cj {
           }
           if (null == CredentialKind.field_c) {
             if (bb.field_h) {
-              if (rk.a(-78) <= 30000L) {
+              if (rk.timeSinceLastInput(-78) <= 30000L) {
                 MenuButtonPanel.field_E = NumericDateInputWidget.field_R;
               } else {
                 MenuButtonPanel.field_E = DualLinkDeque.field_a;

@@ -101,7 +101,7 @@ final class fj extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, nk param1, int param2) {
+    final static void sendListRequest(int param0, nk param1, int param2) {
         CipherPacketBuffer var3 = null;
         try {
           var3 = he.field_e;
@@ -172,22 +172,22 @@ final class fj extends IntrusiveNode {
         throw new Error();
     }
 
-    final static void c(int param0) {
+    final static void showLoginAfterLogout(int param0) {
         if (!MusicPatchPcmStream.field_s) {
           throw new IllegalStateException();
         }
         if (param0 >= -107) {
           nk var2 = (nk) null;
-          fj.a(-37, (nk) null, 73);
+          fj.sendListRequest(-37, (nk) null, 73);
         }
         if (null != vf.field_k) {
           vf.field_k.dismiss(77);
         }
-        String var1 = ho.b((byte) 103);
+        String var1 = ho.getLoginUsername((byte) 103);
         wh.field_f = new LoginPanel(var1, (String) null, true, false, false);
         ClientException.field_b.pushPanel(g.field_e, 15637);
         g.field_e.setContent((byte) -92, (UiComponent) (wh.field_f));
-        g.field_e.a(111);
+        g.field_e.finishResize(111);
     }
 
     public static void releaseStatics(int param0) {
@@ -231,7 +231,7 @@ final class fj extends IntrusiveNode {
         }
         if (param1 != 29797) {
           var3 = (nk) null;
-          fj.a(-58, (nk) null, 1);
+          fj.sendListRequest(-58, (nk) null, 1);
         }
         var2Lifetime1 = 2;
         if (param0 < -65536) {

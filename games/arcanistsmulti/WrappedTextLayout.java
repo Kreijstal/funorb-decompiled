@@ -165,7 +165,7 @@ final class WrappedTextLayout extends TextLayout {
             }
             try {
               var9 = "tuhstatbut";
-              var3 = (String) (ei.a(param1, param0 + 171, "getcookies"));
+              var3 = (String) (JavaScriptBridge.callFunction(param1, param0 + 171, "getcookies"));
               var4 = ValidationState.split(false, ';', var3);
               if (param0 != -68) {
                 var8 = (java.applet.Applet) null;

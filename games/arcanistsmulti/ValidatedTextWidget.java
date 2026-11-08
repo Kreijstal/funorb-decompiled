@@ -15,14 +15,14 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
         RuntimeException decompiledCaughtException = null;
         var3 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          GzipDecoder.a(true, ao.field_g, -24595, 0, MouseInputHandler.field_b, param1, tm.field_g);
+          GzipDecoder.sortRankingRange(true, ao.field_g, -24595, 0, MouseInputHandler.field_b, param1, tm.field_g);
           for (var2_int = 0; MouseInputHandler.field_b > var2_int; var2_int++) {
             ki.field_r[var2_int + param1] = var2_int;
           }
           if (param0 > -103) {
             field_U = (SceneWidget) null;
           }
-          GzipDecoder.a(false, AlternateUsernameCredentials.field_m, -24595, param1, param1 + MouseInputHandler.field_b, param1 + param1, qa.field_m);
+          GzipDecoder.sortRankingRange(false, AlternateUsernameCredentials.field_m, -24595, param1, param1 + MouseInputHandler.field_b, param1 + param1, qa.field_m);
           if (param1 >= MouseInputHandler.field_b) {
             return;
           }
@@ -85,7 +85,7 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
             return null;
           }
           if (this.field_q != null) {
-            ih.a(this.field_v - (this.field_V - EmailLoginCredentials.field_g), MenuButtonPanel.field_I, (byte) 69);
+            ih.storePointerOrigin(this.field_v - (this.field_V - EmailLoginCredentials.field_g), MenuButtonPanel.field_I, (byte) 69);
             return this.field_q;
           }
           return null;
@@ -94,7 +94,7 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
           return null;
         }
         if (this.field_q != null) {
-          ih.a(this.field_v - (this.field_V - EmailLoginCredentials.field_g), MenuButtonPanel.field_I, (byte) 69);
+          ih.storePointerOrigin(this.field_v - (this.field_V - EmailLoginCredentials.field_g), MenuButtonPanel.field_I, (byte) 69);
           return this.field_q;
         }
         return null;

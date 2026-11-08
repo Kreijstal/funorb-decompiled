@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oo extends DualLinkNode {
+final class QuickChatCategory extends DualLinkNode {
     static int field_y;
     static ih field_C;
     char[] field_n;
@@ -124,13 +124,13 @@ final class oo extends DualLinkNode {
         SoftwareRasterizer.setTarget(var1.field_j, var1.field_o, var1.field_p);
         SoftwareRasterizer.setClip(var1.field_k, var1.field_g, var1.field_r, var1.field_h);
         var1.field_j = null;
-        km.field_a.addLast(var1, -1);
+        NameCheckRequest.field_a.addLast(var1, -1);
         if (param0 != -15405) {
-          oo.g(-25);
+          QuickChatCategory.showLoadingWithMessage(-25);
         }
     }
 
-    final static UiTheme d(int param0) {
+    final static UiTheme getDefaultTheme(int param0) {
         if (null == fm.field_c) {
           fm.field_c = new UiTheme();
           fm.field_c.initialize((byte) -105, ia.field_c);
@@ -149,7 +149,7 @@ final class oo extends DualLinkNode {
         return fm.field_c;
     }
 
-    final void f(int param0) {
+    final void markExtended(int param0) {
         int var4 = 0;
         int var2 = 0;
         int var3 = ArcanistsMulti.field_G ? 1 : 0;
@@ -206,13 +206,13 @@ final class oo extends DualLinkNode {
         }
     }
 
-    oo() {
+    QuickChatCategory() {
         this.field_A = false;
     }
 
-    final static void g(int param0) {
+    final static void showLoadingWithMessage(int param0) {
         PatchEnvelopeSet.showLoadingDialog(0);
-        DebouncedValidator.a(param0, (byte) 30);
+        DebouncedValidator.setPendingMessageId(param0, (byte) 30);
     }
 
     static {

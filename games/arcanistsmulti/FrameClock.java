@@ -26,7 +26,7 @@ abstract class FrameClock {
         return String.valueOf(param1);
     }
 
-    final static void a(int param0, boolean param1, boolean param2) {
+    final static void drawGameListView(int param0, boolean param1, boolean param2) {
         SceneScrollPane stackIn_5_0 = null;
         boolean stackIn_6_1 = false;
         SceneWidget stackIn_21_0 = null;
@@ -61,7 +61,7 @@ abstract class FrameClock {
           if (SpriteState.field_t != 2 &&
             SpriteState.field_t != 1) {
             dd.field_c.field_ub = false;
-            dd.field_c.field_Db.field_Hb.field_rb = hn.field_l;
+            dd.field_c.field_Db.field_Hb.field_rb = JaggrabDownloader.field_l;
             fc.resetChildOffsets((byte) -104, dd.field_c.field_Eb);
             return;
           }
@@ -167,7 +167,7 @@ abstract class FrameClock {
         }
     }
 
-    final static int a(byte param0, int param1) {
+    final static int applyLoginResponse(byte param0, int param1) {
         int var3 = ArcanistsMulti.field_G ? 1 : 0;
         ClipState.field_m = 0;
         td.field_E = null;
@@ -209,16 +209,16 @@ abstract class FrameClock {
         return MeshRasterState.field_c[param0 & 2047];
     }
 
-    final static boolean b(int param0) {
+    final static boolean isMessageShowing(int param0) {
         if (param0 != 0) {
           return true;
         }
-        return ValidationStatusIcon.field_O.b((byte) -52);
+        return ValidationStatusIcon.field_O.loadMasterIndex((byte) -52);
     }
 
     public static void releaseStatics(byte param0) {
         if (param0 >= -97) {
-          FrameClock.a(48, true, false);
+          FrameClock.drawGameListView(48, true, false);
         }
         field_d = null;
         field_e = null;
@@ -226,17 +226,17 @@ abstract class FrameClock {
         field_a = null;
     }
 
-    final static void a(boolean param0) {
+    final static void reattachInput(boolean param0) {
         HuffmanCodec.restoreWindowedMode(6);
         if (on.field_c != null) {
           UiComponent.attachInputListeners(on.field_c, (byte) 91);
         }
-        mh.g((byte) 45);
+        mh.clearKeyQueue((byte) 45);
         ng.clearPendingMouseHandler((byte) -23);
         PatchEnvelopeSet.closeNetworkResources(11670);
-        if (tm.a(!param0 ? true : false)) {
+        if (tm.isLobbyConnected(!param0 ? true : false)) {
           he.field_e.writeOpcode((byte) -107, 1);
-          we.a(0, (byte) 94);
+          we.sendKeepAlive(0, (byte) 94);
         }
         ProxySocketConnector.closeActiveConnection(param0);
     }
@@ -246,12 +246,12 @@ abstract class FrameClock {
           if (param3 > -97) {
             field_b = 88;
           }
-          Bzip2State.a(md.field_b, SpellProjectile.field_A, nj.field_d, BattleUnit.field_S, MouseWheelHandler.field_c, param1, BevelBoxPainter.field_f, th.field_k, 27874, MouseWheelHandler.field_d, IntrusiveNode.field_c, IntrusiveDeque.field_i);
+          Bzip2State.initializeLobbyWidgets(md.field_b, SpellProjectile.field_A, nj.field_d, BattleUnit.field_S, MouseWheelHandler.field_c, param1, BevelBoxPainter.field_f, th.field_k, 27874, MouseWheelHandler.field_d, IntrusiveNode.field_c, IntrusiveDeque.field_i);
           ArchiveProvider.field_a = qe.loadSpriteSheet(param2, "chatfilter", "lobby", 119);
           cf.field_b[2] = TextButton.field_A;
           cf.field_b[1] = HuffmanCodec.field_d;
           cf.field_b[0] = GzipDecoder.field_e;
-          hj.a(DiskCacheRequest.field_w, param0, 3896);
+          hj.initializeQuickChat(DiskCacheRequest.field_w, param0, 3896);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "hg.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

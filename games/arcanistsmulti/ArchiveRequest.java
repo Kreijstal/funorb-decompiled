@@ -11,7 +11,7 @@ abstract class ArchiveRequest extends DualLinkNode {
     static String field_s;
     static int field_m;
 
-    final static void a(int param0, ResourceArchive param1, int[] param2, IndexedSprite[] param3, ResourceArchive param4) {
+    final static void loadLobbySprites(int param0, ResourceArchive param1, int[] param2, IndexedSprite[] param3, ResourceArchive param4) {
         Sprite[] dupTemp$0 = null;
         Sprite[] dupTemp$1 = null;
         Sprite[] dupTemp$2 = null;
@@ -129,32 +129,32 @@ abstract class ArchiveRequest extends DualLinkNode {
           var10.field_gb = 1;
           var11.field_X = 1;
           wa.field_Pb = new SceneWidget(0L, var8);
-          wa.field_Pb.field_v = ic.a(qe.loadSpriteSheet(param1, "heading", "lobby", 66), (byte) -86);
+          wa.field_Pb.field_v = ic.clearTrimOffsets(qe.loadSpriteSheet(param1, "heading", "lobby", 66), (byte) -86);
           md.field_b = new SceneWidget(0L, (SceneWidget) null);
-          md.field_b.field_v = rb.a(false, false, param0 ^ 652, 4210752, 8421504, 120);
+          md.field_b.field_v = rb.createGradientButton(false, false, param0 ^ 652, 4210752, 8421504, 120);
           MouseWheelHandler.field_c = new SceneWidget(0L, (SceneWidget) null);
-          MouseWheelHandler.field_c.field_v = of.a(3, 114, 1, 1, 6316128, 6316128);
+          MouseWheelHandler.field_c.field_v = of.createGradientFrame(3, 114, 1, 1, 6316128, 6316128);
           ck.field_a = new SceneWidget(0L, (SceneWidget) null);
-          ck.field_a.field_v = ic.a(qe.loadSpriteSheet(param1, "popup", "lobby", 69), (byte) -105);
-          var12 = ic.a(qe.loadSpriteSheet(param1, "popup_mouseover", "lobby", param0 ^ 93), (byte) -105);
+          ck.field_a.field_v = ic.clearTrimOffsets(qe.loadSpriteSheet(param1, "popup", "lobby", 69), (byte) -105);
+          var12 = ic.clearTrimOffsets(qe.loadSpriteSheet(param1, "popup_mouseover", "lobby", param0 ^ 93), (byte) -105);
           var13 = qe.loadSpriteSheet(param1, "button", "lobby", 63);
-          var14 = ic.a(qe.loadSpriteSheet(param1, "tab_active", "lobby", 110), (byte) -85);
+          var14 = ic.clearTrimOffsets(qe.loadSpriteSheet(param1, "tab_active", "lobby", 110), (byte) -85);
           SectorCacheStore.field_l = new SceneWidget(0L, var8);
           SectorCacheStore.field_l.field_v = var14;
           wj.field_b = new SceneWidget(0L, (SceneWidget) null);
           wj.field_b.field_W = fj.loadSprite("lobby", -22612, param1, "closebutton");
           wj.field_b.field_lb = fj.loadSprite("lobby", -22612, param1, "closebutton_mouseover");
           dd.field_b = new SceneWidget(0L, var8);
-          dd.field_b.field_v = rb.a(true, true, 652, 2039583, 3815994, 40);
+          dd.field_b.field_v = rb.createGradientButton(true, true, 652, 2039583, 3815994, 40);
           vf.field_u = new SceneWidget(0L, var10);
           vf.field_u.field_t = 2;
-          vf.field_u.field_v = rb.a(true, false, 652, 2039583, 3815994, 30);
+          vf.field_u.field_v = rb.createGradientButton(true, false, 652, 2039583, 3815994, 30);
           EditableTextWidget.field_S = new SceneWidget(0L, var10);
           EditableTextWidget.field_S.field_t = 2;
-          EditableTextWidget.field_S.field_v = rb.a(false, false, param0 ^ 652, 2039583, 3815994, 30);
+          EditableTextWidget.field_S.field_v = rb.createGradientButton(false, false, param0 ^ 652, 2039583, 3815994, 30);
           vf.field_i = new SceneWidget((long)param0, var10);
           vf.field_i.field_t = 2;
-          vf.field_i.field_v = rb.a(false, true, 652, 2039583, 3815994, 30);
+          vf.field_i.field_v = rb.createGradientButton(false, true, 652, 2039583, 3815994, 30);
           IntrusiveNode.field_c = new SceneWidget(0L, (SceneWidget) null);
           IntrusiveNode.field_c.field_ob = 13421772;
           IntrusiveNode.field_c.field_Z = (BitmapFont) ((Object) DiskCacheRequest.field_w);
@@ -171,10 +171,10 @@ abstract class ArchiveRequest extends DualLinkNode {
           var15.field_Z = (BitmapFont) ((Object) var7);
           var15.field_ob = 16777215;
           BevelBoxPainter.field_f = new SceneWidget(0L, IntrusiveNode.field_c);
-          BevelBoxPainter.field_f.field_v = rb.a(false, false, 652, 2236962, 2236962, 16);
+          BevelBoxPainter.field_f.field_v = rb.createGradientButton(false, false, 652, 2236962, 2236962, 16);
           BevelBoxPainter.field_f.field_t = 2;
           SpellProjectile.field_A = new SceneWidget(0L, IntrusiveNode.field_c);
-          SpellProjectile.field_A.field_v = rb.a(false, false, 652, 1513239, 1513239, 16);
+          SpellProjectile.field_A.field_v = rb.createGradientButton(false, false, 652, 1513239, 1513239, 16);
           SpellProjectile.field_A.field_t = 2;
           BattleScreen.field_E = new SceneWidget(0L, BevelBoxPainter.field_f);
           BattleScreen.field_E.applyStyle(nj.field_d, (byte) 118);
@@ -195,20 +195,20 @@ abstract class ArchiveRequest extends DualLinkNode {
           EditableTextWidget.field_L.field_X = 1;
           ub.field_c = new SceneWidget(0L, nj.field_d);
           ub.field_c.field_X = 1;
-          ub.field_c.field_v = ic.a(qe.loadSpriteSheet(param1, "tab_inactive", "lobby", 52), (byte) -124);
-          ub.field_c.field_Ab = ic.a(qe.loadSpriteSheet(param1, "tab_mouseover", "lobby", 50), (byte) -99);
+          ub.field_c.field_v = ic.clearTrimOffsets(qe.loadSpriteSheet(param1, "tab_inactive", "lobby", 52), (byte) -124);
+          ub.field_c.field_Ab = ic.clearTrimOffsets(qe.loadSpriteSheet(param1, "tab_mouseover", "lobby", 50), (byte) -99);
           ub.field_c.field_hb = var14;
           mn.field_t = new SceneWidget(0L, (SceneWidget) null);
-          mn.field_t.field_v = of.a(3, 206, param0 + 1, -1, 1856141, 1127256);
+          mn.field_t.field_v = of.createGradientFrame(3, 206, param0 + 1, -1, 1856141, 1127256);
           ia.field_a = new SceneWidget(0L, (SceneWidget) null);
-          ia.field_a.field_v = of.a(3, 290, 1, -1, 11579568, 6052956);
+          ia.field_a.field_v = of.createGradientFrame(3, 290, 1, -1, 11579568, 6052956);
           ko.field_h = new SceneWidget(0L, var15);
           ko.field_h.field_S = 1;
           ko.field_h.field_Y = 1;
           ko.field_h.field_wb = 1;
           ko.field_h.field_ib = 1;
           ko.field_h.field_X = 1;
-          gn.field_c = new SceneWidget(0L, ko.field_h);
+          QuickChatPhraseCache.field_c = new SceneWidget(0L, ko.field_h);
           FrameClock.field_d = new SceneWidget(0L, nj.field_d);
           FrameClock.field_d.field_ib = 1;
           FrameClock.field_d.field_S = 1;
@@ -221,43 +221,43 @@ abstract class ArchiveRequest extends DualLinkNode {
           BattleUnit.field_S = new SceneWidget(0L, FrameClock.field_d);
           MouseWheelHandler.field_d = new SceneWidget(0L, FrameClock.field_d);
           Battle.field_j = new SceneWidget(0L, FrameClock.field_d);
-          FrameClock.field_d.field_v = ic.a(qe.loadSpriteSheet(param1, "smallbutton", "lobby", param0 + 45), (byte) -86);
-          FrameClock.field_d.field_Ab = ic.a(qe.loadSpriteSheet(param1, "smallbutton_mouseover", "lobby", param0 ^ 107), (byte) -94);
-          dupTemp$0 = ic.a(qe.loadSpriteSheet(param1, "smallbutton_active", "lobby", 90), (byte) -104);
+          FrameClock.field_d.field_v = ic.clearTrimOffsets(qe.loadSpriteSheet(param1, "smallbutton", "lobby", param0 + 45), (byte) -86);
+          FrameClock.field_d.field_Ab = ic.clearTrimOffsets(qe.loadSpriteSheet(param1, "smallbutton_mouseover", "lobby", param0 ^ 107), (byte) -94);
+          dupTemp$0 = ic.clearTrimOffsets(qe.loadSpriteSheet(param1, "smallbutton_active", "lobby", 90), (byte) -104);
           FrameClock.field_d.field_hb = dupTemp$0;
           FrameClock.field_d.field_xb = dupTemp$0;
-          FrameClock.field_d.field_K = ic.a(qe.loadSpriteSheet(param1, "smallbutton_disabled", "lobby", 127), (byte) -117);
-          gn.field_c.field_v = ic.a(qe.loadSpriteSheet(param1, "mediumbutton", "lobby", 57), (byte) -83);
-          gn.field_c.field_Ab = ic.a(qe.loadSpriteSheet(param1, "mediumbutton_mouseover", "lobby", 89), (byte) -76);
-          gn.field_c.field_xb = ic.a(qe.loadSpriteSheet(param1, "mediumbutton_mouseheld", "lobby", param0 + 44), (byte) -73);
-          ko.field_h.field_v = ic.a(qe.loadSpriteSheet(param1, "bigbutton", "lobby", 106), (byte) -121);
-          ko.field_h.field_Ab = ic.a(qe.loadSpriteSheet(param1, "bigbutton_mouseover", "lobby", 124), (byte) -95);
-          ko.field_h.field_xb = ic.a(qe.loadSpriteSheet(param1, "bigbutton_mouseheld", "lobby", 61), (byte) -107);
-          ko.field_h.field_K = ic.a(qe.loadSpriteSheet(param1, "bigbutton_disabled", "lobby", 112), (byte) -87);
-          BattleUnit.field_V.field_v = ic.a(qe.loadSpriteSheet(param1, "greenbutton", "lobby", 94), (byte) -78);
-          BattleUnit.field_V.field_Ab = ic.a(qe.loadSpriteSheet(param1, "greenbutton_mouseover", "lobby", 43), (byte) -79);
-          BattleUnit.field_V.field_xb = ic.a(qe.loadSpriteSheet(param1, "greenbutton_mouseheld", "lobby", param0 ^ 50), (byte) -118);
-          ScrollContainer.field_S.field_v = ic.a(qe.loadSpriteSheet(param1, "redbutton", "lobby", 55), (byte) -93);
-          ScrollContainer.field_S.field_Ab = ic.a(qe.loadSpriteSheet(param1, "redbutton_mouseover", "lobby", 86), (byte) -109);
-          ScrollContainer.field_S.field_xb = ic.a(qe.loadSpriteSheet(param1, "redbutton_mouseheld", "lobby", 44), (byte) -115);
-          th.field_c.field_v = ic.a(qe.loadSpriteSheet(param1, "backbutton", "lobby", param0 + 107), (byte) -82);
-          th.field_c.field_Ab = ic.a(qe.loadSpriteSheet(param1, "backbutton_mouseover", "lobby", param0 ^ 107), (byte) -128);
-          th.field_c.field_xb = ic.a(qe.loadSpriteSheet(param1, "backbutton_mouseheld", "lobby", 76), (byte) -102);
-          th.field_c.field_K = ic.a(qe.loadSpriteSheet(param1, "backbutton_disabled", "lobby", 70), (byte) -113);
-          Battle.field_j.field_v = ic.a(qe.loadSpriteSheet(param1, "gameoptionbutton", "lobby", 84), (byte) -128);
-          Battle.field_j.field_Ab = ic.a(qe.loadSpriteSheet(param1, "gameoptionbutton_mouseover", "lobby", param0 + 67), (byte) -83);
-          dupTemp$1 = ic.a(qe.loadSpriteSheet(param1, "gameoptionbutton_active", "lobby", 100), (byte) -93);
+          FrameClock.field_d.field_K = ic.clearTrimOffsets(qe.loadSpriteSheet(param1, "smallbutton_disabled", "lobby", 127), (byte) -117);
+          QuickChatPhraseCache.field_c.field_v = ic.clearTrimOffsets(qe.loadSpriteSheet(param1, "mediumbutton", "lobby", 57), (byte) -83);
+          QuickChatPhraseCache.field_c.field_Ab = ic.clearTrimOffsets(qe.loadSpriteSheet(param1, "mediumbutton_mouseover", "lobby", 89), (byte) -76);
+          QuickChatPhraseCache.field_c.field_xb = ic.clearTrimOffsets(qe.loadSpriteSheet(param1, "mediumbutton_mouseheld", "lobby", param0 + 44), (byte) -73);
+          ko.field_h.field_v = ic.clearTrimOffsets(qe.loadSpriteSheet(param1, "bigbutton", "lobby", 106), (byte) -121);
+          ko.field_h.field_Ab = ic.clearTrimOffsets(qe.loadSpriteSheet(param1, "bigbutton_mouseover", "lobby", 124), (byte) -95);
+          ko.field_h.field_xb = ic.clearTrimOffsets(qe.loadSpriteSheet(param1, "bigbutton_mouseheld", "lobby", 61), (byte) -107);
+          ko.field_h.field_K = ic.clearTrimOffsets(qe.loadSpriteSheet(param1, "bigbutton_disabled", "lobby", 112), (byte) -87);
+          BattleUnit.field_V.field_v = ic.clearTrimOffsets(qe.loadSpriteSheet(param1, "greenbutton", "lobby", 94), (byte) -78);
+          BattleUnit.field_V.field_Ab = ic.clearTrimOffsets(qe.loadSpriteSheet(param1, "greenbutton_mouseover", "lobby", 43), (byte) -79);
+          BattleUnit.field_V.field_xb = ic.clearTrimOffsets(qe.loadSpriteSheet(param1, "greenbutton_mouseheld", "lobby", param0 ^ 50), (byte) -118);
+          ScrollContainer.field_S.field_v = ic.clearTrimOffsets(qe.loadSpriteSheet(param1, "redbutton", "lobby", 55), (byte) -93);
+          ScrollContainer.field_S.field_Ab = ic.clearTrimOffsets(qe.loadSpriteSheet(param1, "redbutton_mouseover", "lobby", 86), (byte) -109);
+          ScrollContainer.field_S.field_xb = ic.clearTrimOffsets(qe.loadSpriteSheet(param1, "redbutton_mouseheld", "lobby", 44), (byte) -115);
+          th.field_c.field_v = ic.clearTrimOffsets(qe.loadSpriteSheet(param1, "backbutton", "lobby", param0 + 107), (byte) -82);
+          th.field_c.field_Ab = ic.clearTrimOffsets(qe.loadSpriteSheet(param1, "backbutton_mouseover", "lobby", param0 ^ 107), (byte) -128);
+          th.field_c.field_xb = ic.clearTrimOffsets(qe.loadSpriteSheet(param1, "backbutton_mouseheld", "lobby", 76), (byte) -102);
+          th.field_c.field_K = ic.clearTrimOffsets(qe.loadSpriteSheet(param1, "backbutton_disabled", "lobby", 70), (byte) -113);
+          Battle.field_j.field_v = ic.clearTrimOffsets(qe.loadSpriteSheet(param1, "gameoptionbutton", "lobby", 84), (byte) -128);
+          Battle.field_j.field_Ab = ic.clearTrimOffsets(qe.loadSpriteSheet(param1, "gameoptionbutton_mouseover", "lobby", param0 + 67), (byte) -83);
+          dupTemp$1 = ic.clearTrimOffsets(qe.loadSpriteSheet(param1, "gameoptionbutton_active", "lobby", 100), (byte) -93);
           Battle.field_j.field_hb = dupTemp$1;
           Battle.field_j.field_xb = dupTemp$1;
-          Battle.field_j.field_K = ic.a(qe.loadSpriteSheet(param1, "gameoptionbutton_disabled", "lobby", 93), (byte) -114);
-          BattleUnit.field_S.field_v = ic.a(qe.loadSpriteSheet(param1, "chatbutton", "lobby", 120), (byte) -112);
-          BattleUnit.field_S.field_Ab = ic.a(qe.loadSpriteSheet(param1, "chatbutton_mouseover", "lobby", param0 ^ 94), (byte) -115);
-          dupTemp$2 = ic.a(qe.loadSpriteSheet(param1, "chatbutton_active", "lobby", 104), (byte) -128);
+          Battle.field_j.field_K = ic.clearTrimOffsets(qe.loadSpriteSheet(param1, "gameoptionbutton_disabled", "lobby", 93), (byte) -114);
+          BattleUnit.field_S.field_v = ic.clearTrimOffsets(qe.loadSpriteSheet(param1, "chatbutton", "lobby", 120), (byte) -112);
+          BattleUnit.field_S.field_Ab = ic.clearTrimOffsets(qe.loadSpriteSheet(param1, "chatbutton_mouseover", "lobby", param0 ^ 94), (byte) -115);
+          dupTemp$2 = ic.clearTrimOffsets(qe.loadSpriteSheet(param1, "chatbutton_active", "lobby", 104), (byte) -128);
           BattleUnit.field_S.field_hb = dupTemp$2;
           BattleUnit.field_S.field_xb = dupTemp$2;
-          MouseWheelHandler.field_d.field_v = ic.a(qe.loadSpriteSheet(param1, "chatfilterbutton", "lobby", param0 ^ 127), (byte) -79);
-          MouseWheelHandler.field_d.field_Ab = ic.a(qe.loadSpriteSheet(param1, "chatfilterbutton_mouseover", "lobby", 47), (byte) -105);
-          dupTemp$3 = ic.a(qe.loadSpriteSheet(param1, "chatfilterbutton_active", "lobby", 49), (byte) -100);
+          MouseWheelHandler.field_d.field_v = ic.clearTrimOffsets(qe.loadSpriteSheet(param1, "chatfilterbutton", "lobby", param0 ^ 127), (byte) -79);
+          MouseWheelHandler.field_d.field_Ab = ic.clearTrimOffsets(qe.loadSpriteSheet(param1, "chatfilterbutton_mouseover", "lobby", 47), (byte) -105);
+          dupTemp$3 = ic.clearTrimOffsets(qe.loadSpriteSheet(param1, "chatfilterbutton_active", "lobby", 49), (byte) -100);
           MouseWheelHandler.field_d.field_hb = dupTemp$3;
           MouseWheelHandler.field_d.field_xb = dupTemp$3;
           var17 = qe.loadSpriteSheet(param1, "checkbox", "lobby", 63);
@@ -268,10 +268,10 @@ abstract class ArchiveRequest extends DualLinkNode {
           qe.field_m.field_xb = pm.createCentreOnlyFrame(param0 + 77, fj.loadSprite("lobby", -22612, param1, "slideregion_mouseheld"));
           qe.field_m.field_K = pm.createCentreOnlyFrame(53, fj.loadSprite("lobby", param0 - 22612, param1, "slideregion_disabled"));
           SectorCacheStore.field_b = new SceneWidget(0L, (SceneWidget) null);
-          SectorCacheStore.field_b.field_v = ic.a(qe.loadSpriteSheet(param1, "dragbar", "lobby", 113), (byte) -109);
-          SectorCacheStore.field_b.field_Ab = ic.a(qe.loadSpriteSheet(param1, "dragbar_mouseover", "lobby", 85), (byte) -120);
-          SectorCacheStore.field_b.field_xb = ic.a(qe.loadSpriteSheet(param1, "dragbar_mouseheld", "lobby", 73), (byte) -84);
-          SectorCacheStore.field_b.field_K = ic.a(qe.loadSpriteSheet(param1, "dragbar_disabled", "lobby", 64), (byte) -102);
+          SectorCacheStore.field_b.field_v = ic.clearTrimOffsets(qe.loadSpriteSheet(param1, "dragbar", "lobby", 113), (byte) -109);
+          SectorCacheStore.field_b.field_Ab = ic.clearTrimOffsets(qe.loadSpriteSheet(param1, "dragbar_mouseover", "lobby", 85), (byte) -120);
+          SectorCacheStore.field_b.field_xb = ic.clearTrimOffsets(qe.loadSpriteSheet(param1, "dragbar_mouseheld", "lobby", 73), (byte) -84);
+          SectorCacheStore.field_b.field_K = ic.clearTrimOffsets(qe.loadSpriteSheet(param1, "dragbar_disabled", "lobby", 64), (byte) -102);
           pi.field_d = new SceneWidget(0L, (SceneWidget) null);
           pi.field_d.field_W = fj.loadSprite("lobby", -22612, param1, "upbutton");
           pi.field_d.field_lb = fj.loadSprite("lobby", param0 - 22612, param1, "upbutton_mouseover");
@@ -317,7 +317,7 @@ abstract class ArchiveRequest extends DualLinkNode {
         }
     }
 
-    final static void a(byte param0, int param1, int param2, int param3, PlatformTaskDispatcher param4, int param5, int param6, int param7, String param8) {
+    final static void initializeNetworking(byte param0, int param1, int param2, int param3, PlatformTaskDispatcher param4, int param5, int param6, int param7, String param8) {
         try {
           ed.field_Hb = param2;
           ri.field_g = param4;
@@ -352,7 +352,7 @@ abstract class ArchiveRequest extends DualLinkNode {
         field_o = null;
     }
 
-    final static void a(int param0, boolean param1, byte param2) {
+    final static void updateChatInput(int param0, boolean param1, byte param2) {
         int var4 = 0;
         int var3 = 0;
         int var3Lifetime1;
@@ -361,10 +361,10 @@ abstract class ArchiveRequest extends DualLinkNode {
           if (var3 != -2) {
             if (var3 != -1) {
               var4 = db.field_a.isSendActive((byte) 122) ? 1 : 0;
-              fn.a(118, var4 != 0, db.field_a.getText((byte) 51), db.field_a.field_Fb, var3, param0);
+              fn.sendPrivateMessage(118, var4 != 0, db.field_a.getText((byte) 51), db.field_a.field_Fb, var3, param0);
             }
             db.field_a = null;
-            IntrusiveDequeCursor.a(false);
+            IntrusiveDequeCursor.closePlayerMenu(false);
           }
         }
         var3Lifetime1 = 66 / ((param2 + 32) / 62);

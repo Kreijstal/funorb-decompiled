@@ -8,13 +8,13 @@ final class r {
     static String field_c;
     static String field_e;
 
-    final static void a(boolean param0) {
-        ed.j(120);
+    final static void refreshOverlay(boolean param0) {
+        ed.animateOverlayPosition(120);
         if (param0) {
           ResourceArchive var2 = (ResourceArchive) null;
           r.loadSpriteFromGroup(51, -102, 48, (ResourceArchive) null);
         }
-        IntrusiveDequeCursor.a(112, CacheEntry.field_p, ArchiveProvider.field_a[0].field_n, SceneTextInput.field_Gb, ImageProducerRasterBuffer.field_r, ra.field_h);
+        IntrusiveDequeCursor.layoutLobbyPanels(112, CacheEntry.field_p, ArchiveProvider.field_a[0].field_n, SceneTextInput.field_Gb, ImageProducerRasterBuffer.field_r, ra.field_h);
     }
 
     final static Sprite loadSpriteFromGroup(int param0, int param1, int param2, ResourceArchive param3) {
@@ -26,7 +26,7 @@ final class r {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!fc.a(-126, param3, param2, param1)) {
+          if (!fc.decodeSpriteSheet(-126, param3, param2, param1)) {
             stackIn_2_0 = null;
             return (Sprite) (stackIn_2_0);
           }
@@ -57,11 +57,11 @@ final class r {
         field_d = null;
         if (param0 != 8) {
           String var2 = (String) null;
-          r.a((String) null, 56);
+          r.matchPendingMessage((String) null, 56);
         }
     }
 
-    final static ho a(String param0, int param1) {
+    final static ho matchPendingMessage(String param0, int param1) {
         RuntimeException var2 = null;
         Object stackIn_9_0 = null;
         ho stackIn_11_0 = null;

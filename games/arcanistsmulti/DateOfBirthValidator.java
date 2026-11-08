@@ -54,7 +54,7 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
         int var1 = -117 / ((-16 - param0) / 36);
     }
 
-    final static SceneTabbedPanel createQuickChatMenu(boolean param0, SceneWidget param1, SceneWidget param2, oo param3, SceneWidget param4) {
+    final static SceneTabbedPanel createQuickChatMenu(boolean param0, SceneWidget param1, SceneWidget param2, QuickChatCategory param3, SceneWidget param4) {
         int var14 = 0;
         Object stackIn_3_0 = null;
         int stackIn_7_0 = 0;
@@ -80,10 +80,10 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
         int[] var10 = null;
         SceneTabbedPanel[] var11 = null;
         int var12 = 0;
-        oo var13_ref_oo = null;
+        QuickChatCategory var13_ref_oo = null;
         int var13 = 0;
         int var15 = 0;
-        tk var16 = null;
+        QuickChatPhrase var16 = null;
         int var17 = 0;
         int[] var18 = null;
         char[] var19 = null;
@@ -123,7 +123,7 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
           var11 = new SceneTabbedPanel[var7];
           if (param3.field_p != null) {
             for (var12 = 0; var12 < param3.field_p.length; var12++) {
-              var13_ref_oo = ByteStorage.field_d.a(3, param3.field_p[var12]);
+              var13_ref_oo = ByteStorage.field_d.getCategory(3, param3.field_p[var12]);
               var8[var12] = var13_ref_oo.field_w;
               var9[var12] = param3.field_n[var12];
               var11[var12] = DateOfBirthValidator.createQuickChatMenu(true, param1, param2, var13_ref_oo, param4);

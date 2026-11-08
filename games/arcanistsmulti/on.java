@@ -13,7 +13,7 @@ final class on {
     static String field_i;
     static String field_b;
 
-    final static void a(int param0, int param1, boolean param2, boolean param3, MusicTrack param4) {
+    final static void changeMusic(int param0, int param1, boolean param2, boolean param3, MusicTrack param4) {
         MusicCrossfadeStream stackIn_3_0 = null;
         boolean stackIn_4_1 = false;
         RuntimeException stackIn_11_0 = null;
@@ -43,13 +43,13 @@ final class on {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
           field_c = null;
           if (param0 != 3) {
-            on.a(-25);
+            on.releaseStatics(-25);
           }
           field_b = null;
           field_i = null;
@@ -63,7 +63,7 @@ final class on {
         }
     }
 
-    final static int a(int param0, int param1, byte param2) {
+    final static int computeAngle(int param0, int param1, byte param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_5_0 = 0;
@@ -119,7 +119,7 @@ final class on {
         }
     }
 
-    static long a(long param0, long param1) {
+    static long longAnd(long param0, long param1) {
         long stackIn_1_0 = 0L;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
@@ -133,7 +133,7 @@ final class on {
         }
     }
 
-    final static void a(byte param0, ResourceArchive param1) {
+    final static void initializeLoginMessages(byte param0, ResourceArchive param1) {
         class $CfrPartitionedBody {
             RuntimeException stackIn_2624_0;
             StringBuilder stackIn_2624_1;
@@ -176,7 +176,7 @@ final class on {
                 }
                 var2 = MusicPatch.loadNamedFile("error_js5crc", (byte) -45);
                 if (null != var2) {
-                  hn.field_e = ValidationHelpWidget.decodeString((byte) 88, var2);
+                  JaggrabDownloader.field_e = ValidationHelpWidget.decodeString((byte) 88, var2);
                 }
                 var2 = MusicPatch.loadNamedFile("error_js5io", (byte) -45);
                 if (null != var2) {
@@ -628,7 +628,7 @@ final class on {
                 }
                 var2 = MusicPatch.loadNamedFile("rated_game_tips_setup_plural", (byte) -45);
                 if (var2 != null) {
-                  km.field_g = ValidationHelpWidget.decodeString((byte) 110, var2);
+                  NameCheckRequest.field_g = ValidationHelpWidget.decodeString((byte) 110, var2);
                 }
                 var2 = MusicPatch.loadNamedFile("waiting_to_start_hint", (byte) -45);
                 if (null != var2) {
@@ -788,7 +788,7 @@ final class on {
                 }
                 var2 = MusicPatch.loadNamedFile("loading", (byte) -45);
                 if (null != var2) {
-                  hn.field_l = ValidationHelpWidget.decodeString((byte) 102, var2);
+                  JaggrabDownloader.field_l = ValidationHelpWidget.decodeString((byte) 102, var2);
                 }
                 var2 = MusicPatch.loadNamedFile("offline", (byte) -45);
                 if (var2 != null) {
@@ -868,7 +868,7 @@ final class on {
                 }
                 var2 = MusicPatch.loadNamedFile("privatechat_friend_offline", (byte) -45);
                 if (var2 != null) {
-                  oo.field_m = ValidationHelpWidget.decodeString((byte) 98, var2);
+                  QuickChatCategory.field_m = ValidationHelpWidget.decodeString((byte) 98, var2);
                 }
                 var2 = MusicPatch.loadNamedFile("privatechat_friend_notlisted", (byte) -45);
                 if (var2 != null) {
@@ -1802,7 +1802,7 @@ final class on {
                 }
                 var2 = MusicPatch.loadNamedFile("unable_to_delete_friend", (byte) -45);
                 if (var2 != null) {
-                  oo.field_E = ValidationHelpWidget.decodeString((byte) 98, var2);
+                  QuickChatCategory.field_E = ValidationHelpWidget.decodeString((byte) 98, var2);
                 }
                 var2 = MusicPatch.loadNamedFile("unable_to_delete_ignore", (byte) -45);
                 if (null != var2) {
@@ -2656,7 +2656,7 @@ final class on {
                 }
                 var2 = MusicPatch.loadNamedFile("rating_won", (byte) -45);
                 if (null != var2) {
-                  oo.field_o = ValidationHelpWidget.decodeString((byte) 88, var2);
+                  QuickChatCategory.field_o = ValidationHelpWidget.decodeString((byte) 88, var2);
                 }
                 var2 = MusicPatch.loadNamedFile("rating_lost", (byte) -45);
                 if (null != var2) {
@@ -2700,19 +2700,19 @@ final class on {
                 }
                 var2 = MusicPatch.loadNamedFile("reconnect_lost_seq,0", (byte) -45);
                 if (var2 != null) {
-                  oo.field_v[0] = ValidationHelpWidget.decodeString((byte) 115, var2);
+                  QuickChatCategory.field_v[0] = ValidationHelpWidget.decodeString((byte) 115, var2);
                 }
                 var2 = MusicPatch.loadNamedFile("reconnect_lost_seq,1", (byte) -45);
                 if (null != var2) {
-                  oo.field_v[1] = ValidationHelpWidget.decodeString((byte) 117, var2);
+                  QuickChatCategory.field_v[1] = ValidationHelpWidget.decodeString((byte) 117, var2);
                 }
                 var2 = MusicPatch.loadNamedFile("reconnect_lost_seq,2", (byte) -45);
                 if (var2 != null) {
-                  oo.field_v[2] = ValidationHelpWidget.decodeString((byte) 93, var2);
+                  QuickChatCategory.field_v[2] = ValidationHelpWidget.decodeString((byte) 93, var2);
                 }
                 var2 = MusicPatch.loadNamedFile("reconnect_lost_seq,3", (byte) -45);
                 if (var2 != null) {
-                  oo.field_v[3] = ValidationHelpWidget.decodeString((byte) 110, var2);
+                  QuickChatCategory.field_v[3] = ValidationHelpWidget.decodeString((byte) 110, var2);
                 }
                 var2 = MusicPatch.loadNamedFile("reconnect_lost", (byte) -45);
                 if (var2 != null) {

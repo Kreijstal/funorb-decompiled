@@ -14,7 +14,7 @@ class IntrusiveNode {
           return false;
         }
         if (obfuscationGuard > -31) {
-          IntrusiveNode.b(-104);
+          IntrusiveNode.readLobbyListUpdate(-104);
         }
         return true;
     }
@@ -35,12 +35,12 @@ class IntrusiveNode {
     public static void releaseStatics(byte param0) {
         field_f = null;
         if (param0 != -115) {
-          IntrusiveNode.b(117);
+          IntrusiveNode.readLobbyListUpdate(117);
         }
         field_c = null;
     }
 
-    final static void b(int param0) {
+    final static void readLobbyListUpdate(int param0) {
         String[][] dupTemp$0 = null;
         int[][] dupTemp$1 = null;
         RuntimeException decompiledCaughtException = null;
@@ -91,17 +91,17 @@ class IntrusiveNode {
             for (var6_int = 1; var6_int < var4; var6_int++) {
               bb.field_i[var6_int] = var13.readString(-1);
             }
-            DraggableWidget.a((byte) -33, var4, var5);
+            DraggableWidget.growRankingArrays((byte) -33, var4, var5);
             for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {
-              MouseInputHandler.a(123, var15);
+              MouseInputHandler.readTimestamp(123, var15);
               if (0 == var6_intLifetime1) {
                 var3.field_h = fo.field_a;
                 var3.field_k = kj.field_c;
                 var3.field_i = qj.field_g;
                 var3.field_s = IntrusiveDequeCursor.field_j;
-                PacketBuffer.a(-1, kj.field_c, var6_intLifetime1, fo.field_a, qj.field_g, IntrusiveDequeCursor.field_j);
+                PacketBuffer.addRankingRow(-1, kj.field_c, var6_intLifetime1, fo.field_a, qj.field_g, IntrusiveDequeCursor.field_j);
               } else {
-                PacketBuffer.a(-1, kj.field_c, var6_intLifetime1, fo.field_a, qj.field_g, IntrusiveDequeCursor.field_j);
+                PacketBuffer.addRankingRow(-1, kj.field_c, var6_intLifetime1, fo.field_a, qj.field_g, IntrusiveDequeCursor.field_j);
               }
             }
             ValidatedTextWidget.rebuildIndexTable((byte) -113, var5);
@@ -121,7 +121,7 @@ class IntrusiveNode {
               var7[0][var10 * 4 + 1] = ConditionalTextValue.field_e[var11];
               var7[0][4 * var10 + 2] = CachedArchiveProvider.field_u[var11];
               var7[0][3 + var10 * 4] = PatchEnvelopeSet.field_o[var11];
-              if (MouseInputHandler.a(16, bb.field_i[var11]) &&
+              if (MouseInputHandler.isCurrentUser(16, bb.field_i[var11]) &&
                 CachedArchiveProvider.field_u[var11] + ConditionalTextValue.field_e[var11] + PatchEnvelopeSet.field_o[var11] == 0) {
                 var6[0][var10] = null;
                 var10--;
@@ -139,7 +139,7 @@ class IntrusiveNode {
               var7[1][1 + var14 * 4] = ConditionalTextValue.field_e[var11Lifetime1];
               var7[1][var14 * 4 + 2] = CachedArchiveProvider.field_u[var11Lifetime1];
               var7[1][4 * var14 + 3] = PatchEnvelopeSet.field_o[var11Lifetime1];
-              if (MouseInputHandler.a(16, bb.field_i[var11Lifetime1]) &&
+              if (MouseInputHandler.isCurrentUser(16, bb.field_i[var11Lifetime1]) &&
                 ConditionalTextValue.field_e[var11Lifetime1] + CachedArchiveProvider.field_u[var11Lifetime1] + PatchEnvelopeSet.field_o[var11Lifetime1] == 0) {
                 var6[1][var14] = null;
                 var14--;

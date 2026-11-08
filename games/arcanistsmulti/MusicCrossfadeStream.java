@@ -353,7 +353,7 @@ final class MusicCrossfadeStream extends PcmStream {
           param2.setChannelVolume(-1, (byte) 69, param0);
           param2.setTempoScale(param3, (byte) -118);
           if (param1 != -13) {
-            MusicCrossfadeStream.a(-10, true);
+            MusicCrossfadeStream.layoutZoomedLobby(-10, true);
           }
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "io.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
@@ -383,7 +383,7 @@ final class MusicCrossfadeStream extends PcmStream {
         return null;
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void layoutZoomedLobby(int param0, boolean param1) {
         int var7 = 0;
         int var12 = 0;
         int stackIn_3_0 = 0;
@@ -417,12 +417,12 @@ final class MusicCrossfadeStream extends PcmStream {
           ri.field_a = SoftwareRasterizer.field_j;
           stackIn_3_0 = 16;
           if (!param1) {
-            stackIn_4_1 = oo.field_y;
+            stackIn_4_1 = QuickChatCategory.field_y;
           } else {
             stackIn_4_1 = sm.field_a;
           }
           TextHotspotWidget.positionZoomedPanels(stackIn_3_0, stackIn_4_1);
-          tn.field_Ob.a(0, 0, -42 + hl.field_m.field_I, hl.field_m.field_x, 5);
+          tn.field_Ob.layoutChatColumns(0, 0, -42 + hl.field_m.field_I, hl.field_m.field_x, 5);
           aj.field_d.setBounds(Checkbox.field_M.field_x, 0, 0, ImageProducerRasterBuffer.field_r, (byte) -120);
           stackIn_6_0 = qc.field_d;
           stackIn_6_1 = Checkbox.field_M.field_x;
@@ -539,10 +539,10 @@ final class MusicCrossfadeStream extends PcmStream {
           IconTextSceneWidget.field_Fb.setBounds(360, -360 + SoftwareRasterizer.field_e >> 1, 10, -14 + (-120 + (SoftwareRasterizer.field_j - 10)), (byte) -120);
           MembershipOfferScreen.field_t.setBounds(IconTextSceneWidget.field_Fb.field_x, 0, 0, 24, (byte) -120);
           Js5ArchiveManager.field_g.setBounds(IconTextSceneWidget.field_Fb.field_x, 0, 24, -24 + IconTextSceneWidget.field_Fb.field_I, (byte) -120);
-          Js5ArchiveManager.field_g.field_v = of.a(3, Js5ArchiveManager.field_g.field_I, 1, 1, 11579568, 8421504);
+          Js5ArchiveManager.field_g.field_v = of.createGradientFrame(3, Js5ArchiveManager.field_g.field_I, 1, 1, 11579568, 8421504);
           StatefulTextPainter.field_s.setBounds(-10 + Js5ArchiveManager.field_g.field_x, 5, 5, -2 + (-34 + Js5ArchiveManager.field_g.field_I), (byte) -120);
           gj.field_d.setBounds(80, (-80 + Js5ArchiveManager.field_g.field_x) / 2, Js5ArchiveManager.field_g.field_I - 5 - 24, 24, (byte) -120);
-          ie.l((byte) 112);
+          ie.layoutTopBar((byte) 112);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -646,7 +646,7 @@ final class MusicCrossfadeStream extends PcmStream {
         throw new Error();
     }
 
-    final static void a(int param0, byte param1) {
+    final static void renderBlurredBackground(int param0, byte param1) {
         int var3 = 0;
         int var2_int = 0;
         int var4 = ArcanistsMulti.field_G ? 1 : 0;
@@ -666,7 +666,7 @@ final class MusicCrossfadeStream extends PcmStream {
             }
           }
           var2_intLifetime1 = -44 % ((-45 - param1) / 34);
-          vf.field_g.reset(true, 0, false, TextFieldValidator.a(MenuButtonPanel.field_I, EmailLoginCredentials.field_g, -121));
+          vf.field_g.reset(true, 0, false, TextFieldValidator.unsupportedLookup(MenuButtonPanel.field_I, EmailLoginCredentials.field_g, -121));
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "io.H(" + param0 + ',' + param1 + ')');
         }

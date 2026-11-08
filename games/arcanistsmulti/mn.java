@@ -63,7 +63,7 @@ final class mn extends TextFieldValidator {
         field_s = null;
     }
 
-    final static void d(int param0) {
+    final static void drawLoginMethodButtons(int param0) {
         int var3 = 0;
         boolean stackIn_13_0 = false;
         ec stackIn_18_0 = null;
@@ -106,7 +106,7 @@ final class mn extends TextFieldValidator {
             if (var4 >= 0) {
               var2 = var2 + ic.field_a;
               if (NumericDateInputWidget.field_S.field_h != var4) {
-                stackIn_18_0 = kg.field_h;
+                stackIn_18_0 = QuickChatCategoryCache.field_h;
               } else {
                 stackIn_18_0 = vf.field_s;
               }
@@ -191,7 +191,7 @@ final class mn extends TextFieldValidator {
         }
     }
 
-    final static void e(int param0) {
+    final static void restoreSavedLayout(int param0) {
         if (null != ResizableViewResizeListener.field_a) {
           SingleChildContainer.field_D = ResizableViewResizeListener.field_a;
           sa.field_Cb = lo.field_y;
@@ -204,16 +204,16 @@ final class mn extends TextFieldValidator {
         tm.field_d = null;
         ValidatedTextWidget.field_U = null;
         if (param0 < 78) {
-          mn.e(18);
+          mn.restoreSavedLayout(18);
         }
         SocketJs5Transport.field_r = true;
         MembershipOfferScreen.field_f = null;
         ih.field_d = null;
     }
 
-    final static void a(boolean param0, int param1) {
-        SceneWidgetNode.a(param0, (byte) 124);
-        ClipState.a(param0, 116);
+    final static void setOverlayFlags(boolean param0, int param1) {
+        SceneWidgetNode.drawLetterboxedLobby(param0, (byte) 124);
+        ClipState.drawDimmedScene(param0, 116);
         int var2 = -38 / ((28 - param1) / 55);
     }
 

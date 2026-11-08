@@ -13,7 +13,7 @@ final class ta {
     String field_g;
     static boolean field_d;
 
-    final static int a(boolean param0, int param1) {
+    final static int classifyLowBits(boolean param0, int param1) {
         int var2 = 7 & 6 + param1;
         if (!param0) {
           field_b = true;

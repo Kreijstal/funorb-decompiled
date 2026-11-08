@@ -76,7 +76,7 @@ final class aa extends IntrusiveNode {
           var12 = new Sprite(-(var9Lifetime1 * 2) + var17.field_q, var9Lifetime1);
           var12.makeRasterTarget();
           var17.drawOpaque(-var9Lifetime1, 0);
-          oo.popClipState(-15405);
+          QuickChatCategory.popClipState(-15405);
           af.field_Jb = new Sprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "aa.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');

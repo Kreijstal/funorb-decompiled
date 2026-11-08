@@ -74,7 +74,7 @@ final class fd {
           var8 = ArcanistsMulti.field_G ? 1 : 0;
           try {
             try {
-              var3 = (String) (ei.a(param1, 118, "getcookies"));
+              var3 = (String) (JavaScriptBridge.callFunction(param1, 118, "getcookies"));
               var4 = ValidationState.split(false, ';', var3);
               var5 = 0;
               var6 = -80 / ((param0 + 36) / 40);

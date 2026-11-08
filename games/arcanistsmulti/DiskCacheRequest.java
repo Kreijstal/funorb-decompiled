@@ -18,7 +18,7 @@ final class DiskCacheRequest extends ArchiveRequest {
     static IndexedSprite[] field_H;
     static Sprite[] field_u;
 
-    final static void a(int param0, int param1, boolean param2, int param3) {
+    final static void updateChatModeSetting(int param0, int param1, boolean param2, int param3) {
         if (!param2) {
           DiskCacheRequest.releaseStatics((byte) 111);
           if (0 == param3) {
@@ -32,7 +32,7 @@ final class DiskCacheRequest extends ArchiveRequest {
                 }
                 hd.field_b = param1;
                 ui.field_s = true;
-                ub.a(param0, false);
+                ub.sendChatSettings(param0, false);
                 return;
               }
               if (ra.field_m == param1) {
@@ -44,37 +44,37 @@ final class DiskCacheRequest extends ArchiveRequest {
                 }
                 hd.field_b = param1;
                 ui.field_s = true;
-                ub.a(param0, false);
+                ub.sendChatSettings(param0, false);
                 return;
               }
               ui.field_s = true;
               ra.field_m = param1;
-              ub.a(param0, false);
+              ub.sendChatSettings(param0, false);
               if (2 != param3) {
                 return;
               }
               if (param1 != hd.field_b) {
                 hd.field_b = param1;
                 ui.field_s = true;
-                ub.a(param0, false);
+                ub.sendChatSettings(param0, false);
                 return;
               }
               return;
             }
             ui.field_s = true;
             on.field_h = param1;
-            ub.a(param0, !param2 ? true : false);
+            ub.sendChatSettings(param0, !param2 ? true : false);
           }
           if (param3 == 1 &&
             ra.field_m != param1) {
             ui.field_s = true;
             ra.field_m = param1;
-            ub.a(param0, false);
+            ub.sendChatSettings(param0, false);
             if (2 == param3 &&
               param1 != hd.field_b) {
               hd.field_b = param1;
               ui.field_s = true;
-              ub.a(param0, false);
+              ub.sendChatSettings(param0, false);
               return;
             }
             return;
@@ -87,7 +87,7 @@ final class DiskCacheRequest extends ArchiveRequest {
           }
           hd.field_b = param1;
           ui.field_s = true;
-          ub.a(param0, false);
+          ub.sendChatSettings(param0, false);
           return;
         }
         if (0 == param3) {
@@ -96,12 +96,12 @@ final class DiskCacheRequest extends ArchiveRequest {
               ra.field_m != param1) {
               ui.field_s = true;
               ra.field_m = param1;
-              ub.a(param0, false);
+              ub.sendChatSettings(param0, false);
               if (2 == param3 &&
                 param1 != hd.field_b) {
                 hd.field_b = param1;
                 ui.field_s = true;
-                ub.a(param0, false);
+                ub.sendChatSettings(param0, false);
                 return;
               }
               return;
@@ -110,25 +110,25 @@ final class DiskCacheRequest extends ArchiveRequest {
               param1 != hd.field_b) {
               hd.field_b = param1;
               ui.field_s = true;
-              ub.a(param0, false);
+              ub.sendChatSettings(param0, false);
               return;
             }
             return;
           }
           ui.field_s = true;
           on.field_h = param1;
-          ub.a(param0, !param2 ? true : false);
+          ub.sendChatSettings(param0, !param2 ? true : false);
         }
         if (param3 == 1 &&
           ra.field_m != param1) {
           ui.field_s = true;
           ra.field_m = param1;
-          ub.a(param0, false);
+          ub.sendChatSettings(param0, false);
           if (2 == param3 &&
             param1 != hd.field_b) {
             hd.field_b = param1;
             ui.field_s = true;
-            ub.a(param0, false);
+            ub.sendChatSettings(param0, false);
             return;
           }
           return;
@@ -137,7 +137,7 @@ final class DiskCacheRequest extends ArchiveRequest {
           param1 != hd.field_b) {
           hd.field_b = param1;
           ui.field_s = true;
-          ub.a(param0, false);
+          ub.sendChatSettings(param0, false);
           return;
         }
     }

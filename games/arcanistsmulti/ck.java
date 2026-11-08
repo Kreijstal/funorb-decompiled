@@ -21,15 +21,15 @@ final class ck {
         RuntimeException decompiledCaughtException = null;
         try {
           var13 = new SceneWidget(0L, (SceneWidget) null);
-          var13.field_v = fk.a(param0, 43, param4);
+          var13.field_v = fk.createSolidFrame(param0, 43, param4);
           if (param8 < 56) {
             var14 = (BitmapFont) null;
             ck.createTextComponent(-51, 34, -67, 14, 71, -24, 60, (BitmapFont) null, 32, -82, -98, 65, 2);
           }
-          var13.field_Ab = fk.a(param11, 58, param3);
-          var13.field_xb = fk.a(param12, 38, param10);
-          var13.field_hb = fk.a(param5, 110, param1);
-          var13.field_K = fk.a(param6, 58, param2);
+          var13.field_Ab = fk.createSolidFrame(param11, 58, param3);
+          var13.field_xb = fk.createSolidFrame(param12, 38, param10);
+          var13.field_hb = fk.createSolidFrame(param5, 110, param1);
+          var13.field_K = fk.createSolidFrame(param6, 58, param2);
           var13.field_Z = param7;
           var13.field_ob = param9;
           stackIn_3_0 = var13;

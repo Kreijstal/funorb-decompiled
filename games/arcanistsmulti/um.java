@@ -25,7 +25,7 @@ final class um {
         field_c = null;
     }
 
-    final static boolean a(byte param0) {
+    final static boolean isPaused(byte param0) {
         if (param0 != -5) {
           return false;
         }
@@ -47,7 +47,7 @@ final class um {
             if (param0.length() == 0) {
               var5 = var8 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
             }
-            ei.a("document.cookie=\"" + var5 + "\"", param1, 269);
+            JavaScriptBridge.evaluate("document.cookie=\"" + var5 + "\"", param1, 269);
             if (param2 != 13680) {
               java.applet.Applet var6 = (java.applet.Applet) null;
               um.setSessionCookie((String) null, (java.applet.Applet) null, -110);

@@ -12,7 +12,7 @@ final class no extends ContentTransitionDialog {
           param0.addMouseListener(ResizableModalPanel.field_hb);
           param0.addMouseMotionListener(ResizableModalPanel.field_hb);
           if (param1 != 0) {
-            no.b(-101, (byte) -112, -11);
+            no.setViewSize(-101, (byte) -112, -11);
           }
           param0.addFocusListener(ResizableModalPanel.field_hb);
         } catch (RuntimeException runtimeException) {
@@ -23,14 +23,14 @@ final class no extends ContentTransitionDialog {
     public static void releaseStatics(byte param0) {
         field_ub = null;
         if (param0 != -11) {
-          no.b(-63, (byte) 100, -16);
+          no.setViewSize(-63, (byte) 100, -16);
         }
         field_wb = null;
         field_vb = null;
         field_tb = null;
     }
 
-    final static aj a(int param0, int param1) {
+    final static aj findEntryById(int param0, int param1) {
         int var3 = 0;
         aj[] var2;
         int var4;
@@ -50,7 +50,7 @@ final class no extends ContentTransitionDialog {
         super(param0, param1, 33, 20, 30);
     }
 
-    final static void h(int param0) {
+    final static void tickSocialEntries(int param0) {
         int stackIn_25_0 = 0;
         int stackIn_25_1 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -116,7 +116,7 @@ final class no extends ContentTransitionDialog {
         }
     }
 
-    final static void b(int param0, byte param1, int param2) {
+    final static void setViewSize(int param0, byte param1, int param2) {
         MusicPatchNode.field_r = param2;
         tn.field_Eb = param2;
         co.field_c = param0;

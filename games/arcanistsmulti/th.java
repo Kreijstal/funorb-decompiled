@@ -4,7 +4,7 @@
 final class th {
     static int field_f;
     private fm[] field_h;
-    static gn field_d;
+    static QuickChatPhraseCache field_d;
     static String field_i;
     static int[] field_g;
     static BinaryBitmapFont field_k;
@@ -82,7 +82,7 @@ final class th {
           }
         }
         if (param4 != -32573) {
-          field_d = (gn) null;
+          field_d = (QuickChatPhraseCache) null;
         }
         for (var11Lifetime1 = 0; var11Lifetime1 < param7; var11Lifetime1++) {
           for (var12Lifetime2 = 0; var12Lifetime2 < var9; var12Lifetime2++) {
@@ -115,8 +115,8 @@ final class th {
 
     final static void initializeUi(ResourceArchive param0, ResourceArchive param1, ResourceArchive param2, byte param3, boolean param4) {
         try {
-          SingleChildContainer.field_z = nj.a("", param3 + 133);
-          SingleChildContainer.field_z.a(false, (byte) -59);
+          SingleChildContainer.field_z = nj.createNameCheckRequest("", param3 + 133);
+          SingleChildContainer.field_z.complete(false, (byte) -59);
           aa.loadCommonUiSprites(param3 ^ -121, param2, param1, param0);
           ci.initializeModalStack((byte) 50);
           hb.field_Gb = ScreenDisplayMode.field_h;
@@ -139,7 +139,7 @@ final class th {
         if (-1L != this.field_h[param1].field_f) {
           return false;
         }
-        this.field_h[param1].field_f = this.field_e.a(0);
+        this.field_h[param1].field_f = this.field_e.currentTime(0);
         return true;
     }
 
@@ -152,13 +152,13 @@ final class th {
         field_b = null;
         if (param0 != -113) {
           IndexedSprite var2 = (IndexedSprite) null;
-          th.a((Battle) null, (IndexedSprite) null, -127, -97, -25, -84);
+          th.drawMaskShape((Battle) null, (IndexedSprite) null, -127, -97, -25, -84);
         }
         field_j = null;
         field_c = null;
     }
 
-    final static void a(Battle param0, IndexedSprite param1, int param2, int param3, int param4, int param5) {
+    final static void drawMaskShape(Battle param0, IndexedSprite param1, int param2, int param3, int param4, int param5) {
         int incrementValue$2 = 0;
         int incrementValue$3 = 0;
         int incrementValue$0 = 0;

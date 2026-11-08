@@ -18,7 +18,7 @@ final class NumericDateInputWidget extends DateInputWidget {
     static int field_K;
     static String field_P;
 
-    final static jg a(boolean param0, int param1) {
+    final static jg readChatMessage(boolean param0, int param1) {
         boolean stackIn_3_0 = false;
         int stackIn_9_0 = 0;
         int[] stackIn_24_0 = null;
@@ -30,7 +30,7 @@ final class NumericDateInputWidget extends DateInputWidget {
         Exception var6 = null;
         int var7 = 0;
         CipherPacketBuffer var8 = null;
-        tk var9 = null;
+        QuickChatPhrase var9 = null;
         var7 = ArcanistsMulti.field_G ? 1 : 0;
         var8 = UiContainer.field_z;
         var2 = var8;
@@ -88,7 +88,7 @@ final class NumericDateInputWidget extends DateInputWidget {
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (Exception) (Object) decompiledCaughtException;
-          DelegatingCanvas.a((Throwable) ((Object) var6), "CC1", (byte) 20);
+          DelegatingCanvas.reportError((Throwable) ((Object) var6), "CC1", (byte) 20);
           fe.field_p = null;
           ImageProducerRasterBuffer.field_s = null;
           return new jg(param0);
@@ -167,7 +167,7 @@ final class NumericDateInputWidget extends DateInputWidget {
           field_I = null;
           return;
         }
-        NumericDateInputWidget.a(false, 47);
+        NumericDateInputWidget.readChatMessage(false, 47);
         field_P = null;
         field_N = null;
         field_H = null;
@@ -179,10 +179,10 @@ final class NumericDateInputWidget extends DateInputWidget {
         field_I = null;
     }
 
-    final static void f(boolean param0) {
-        pn.a(-47);
+    final static void initializeLoginStackQuiet(boolean param0) {
+        pn.initializeLoginStack(-47);
         if (!param0) {
-          NumericDateInputWidget.a(false, -104);
+          NumericDateInputWidget.readChatMessage(false, -104);
         }
     }
 

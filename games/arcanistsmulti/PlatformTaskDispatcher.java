@@ -216,14 +216,14 @@ final class PlatformTaskDispatcher implements Runnable {
                         if (!this.field_j) {
                           Class.forName("FullscreenDisplayController").getMethod("enter", new Class[]{java.awt.Frame.class, Integer.TYPE, Integer.TYPE, Integer.TYPE, Integer.TYPE}).invoke(this.field_g, new Object[]{var14, new Integer(var8.field_c >>> 16), new Integer(var8.field_c & 65535), new Integer(var8.field_a >> 16), new Integer(var8.field_a & 65535)});
                         } else {
-                          this.field_u.a(18, var8.field_a >> 16, var8.field_c & 65535, var14, var8.field_c >>> 16, var8.field_a & 65535);
+                          this.field_u.enterFullscreen(18, var8.field_a >> 16, var8.field_c & 65535, var14, var8.field_c >>> 16, var8.field_a & 65535);
                         }
                         break;
                       case 7:
                         if (!this.field_j) {
                           Class.forName("FullscreenDisplayController").getMethod("exit", new Class[]{}).invoke(this.field_g, new Object[]{});
                         } else {
-                          this.field_u.a((java.awt.Frame) (var8.field_b), (byte) 6);
+                          this.field_u.restoreDisplayMode((java.awt.Frame) (var8.field_b), (byte) 6);
                         }
                         break;
                       case 12:
@@ -296,7 +296,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         if (!this.field_j) {
                           var8.field_g = Class.forName("FullscreenDisplayController").getMethod("listmodes", new Class[]{}).invoke(this.field_g, new Object[]{});
                         } else {
-                          var8.field_g = this.field_u.a(0);
+                          var8.field_g = this.field_u.enumerateDisplayModes(0);
                         }
                         break;
                       case 3:

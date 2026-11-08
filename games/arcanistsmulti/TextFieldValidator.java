@@ -42,7 +42,7 @@ abstract class TextFieldValidator extends DebouncedValidator implements TextInpu
         return this.messageForText(this.field_k.field_g, (byte) -120);
     }
 
-    final static boolean d(boolean param0) {
+    final static boolean isIntroFinished(boolean param0) {
         if (param0) {
           return 250 < SoundCache.field_a ? true : false;
         }
@@ -60,7 +60,7 @@ abstract class TextFieldValidator extends DebouncedValidator implements TextInpu
           field_l = null;
           return;
         }
-        TextFieldValidator.d(true);
+        TextFieldValidator.isIntroFinished(true);
         field_i = null;
         field_l = null;
     }
@@ -78,7 +78,7 @@ abstract class TextFieldValidator extends DebouncedValidator implements TextInpu
 
     abstract String messageForText(String param0, byte param1);
 
-    final static int a(int param0, int param1, int param2) {
+    final static int unsupportedLookup(int param0, int param1, int param2) {
         if (param2 > -70) {
           field_l = (long[]) null;
           return -1;

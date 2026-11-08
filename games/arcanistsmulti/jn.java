@@ -6,7 +6,7 @@ final class jn {
     static int[] field_a;
     static int[] field_c;
 
-    final static void a(byte param0, int param1) {
+    final static void refreshRequests(byte param0, int param1) {
         IntrusiveNode var2 = null;
         int var3 = 0;
         f var4 = null;
@@ -16,16 +16,16 @@ final class jn {
         try {
           var4 = (f) (cm.field_l.first(12623));
           while (var4 != null) {
-            pb.a(32, param1, var4);
+            pb.sendChatLine(32, param1, var4);
             var4 = (f) (cm.field_l.next(0));
           }
           if (param0 != -64) {
             field_c = (int[]) null;
           }
-          var2 = hn.field_q.first(12623);
+          var2 = JaggrabDownloader.field_q.first(12623);
           while (var2 != null) {
-            ik.a(param1, 0);
-            var2 = hn.field_q.next(0);
+            ik.sendByteRequest(param1, 0);
+            var2 = JaggrabDownloader.field_q.next(0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -35,7 +35,7 @@ final class jn {
         }
     }
 
-    final static void a(String param0, boolean param1, int param2) {
+    final static void openAccountDialog(String param0, boolean param1, int param2) {
         HuffmanCodec.field_k = true;
         NodeHashTable.field_h = param1 ? true : false;
         vf.field_k = new ed(ClientException.field_b, SocketConnector.field_k, param0, MusicPatchPcmStream.field_s, NodeHashTable.field_h);
@@ -49,7 +49,7 @@ final class jn {
         }
     }
 
-    final static void a(int param0, SceneWidget param1, int param2, SceneWidget param3, byte[] param4, SceneWidget param5, int param6, int param7, int param8, int param9) {
+    final static void initializeLobbyState(int param0, SceneWidget param1, int param2, SceneWidget param3, byte[] param4, SceneWidget param5, int param6, int param7, int param8, int param9) {
         int var11 = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -144,7 +144,7 @@ final class jn {
         field_a = null;
         field_c = null;
         if (param0 > -38) {
-          jn.a((byte) 117, -75);
+          jn.refreshRequests((byte) 117, -75);
         }
         field_b = null;
     }

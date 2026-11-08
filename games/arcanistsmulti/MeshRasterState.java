@@ -25,7 +25,7 @@ final class MeshRasterState {
         field_a = null;
     }
 
-    private final static void a(int param0, int param1, int param2, int param3) {
+    private final static void setClipBounds(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         field_d = param2 - param0;
         field_b = param3 - param1;
@@ -41,7 +41,7 @@ final class MeshRasterState {
     }
 
     final static void useRasterClip() {
-        MeshRasterState.a(SoftwareRasterizer.field_i, SoftwareRasterizer.field_c, SoftwareRasterizer.field_h, SoftwareRasterizer.field_k);
+        MeshRasterState.setClipBounds(SoftwareRasterizer.field_i, SoftwareRasterizer.field_c, SoftwareRasterizer.field_h, SoftwareRasterizer.field_k);
     }
 
     static {

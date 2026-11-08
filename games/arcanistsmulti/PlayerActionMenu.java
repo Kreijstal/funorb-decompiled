@@ -40,7 +40,7 @@ final class PlayerActionMenu {
           return true;
         }
         if (param0 == 5) {
-          var4_refLifetime1 = oe.a(this.field_h, 29140, param2);
+          var4_refLifetime1 = oe.getIgnoreNameError(this.field_h, 29140, param2);
           var5Lifetime1 = 61 / ((11 - param1) / 63);
           if (var4_refLifetime1 != null) {
             var6Lifetime1 = (String) null;
@@ -61,7 +61,7 @@ final class PlayerActionMenu {
         if (param0 != 7) {
           return false;
         }
-        var4_refLifetime3 = MembershipOfferScreen.a(this.field_h, this.field_k, param2, 10068666);
+        var4_refLifetime3 = MembershipOfferScreen.getFriendNameError(this.field_h, this.field_k, param2, 10068666);
         var5Lifetime3 = 61 / ((11 - param1) / 63);
         if (var4_refLifetime3 != null) {
           var6Lifetime3 = (String) null;
@@ -219,11 +219,11 @@ final class PlayerActionMenu {
           }
           if (this.field_d != qf.field_a &&
             null != DirectByteStorage.field_f) {
-            if (!ContentTransitionDialog.k((byte) 98)) {
+            if (!ContentTransitionDialog.isOwnGameSelected((byte) 98)) {
               return;
             }
             var12 = fn.lookupEntry(this.field_d, 110);
-            var4 = vf.a(this.field_d, 8192);
+            var4 = vf.lookupSocialEntry(this.field_d, 8192);
             var5 = this.getDisplayName((byte) 32);
             if (var4 != null) {
               if (!DirectByteStorage.field_f.field_Lb) {
@@ -266,11 +266,11 @@ final class PlayerActionMenu {
         if (null == DirectByteStorage.field_f) {
           return;
         }
-        if (!ContentTransitionDialog.k((byte) 98)) {
+        if (!ContentTransitionDialog.isOwnGameSelected((byte) 98)) {
           return;
         }
         var11 = fn.lookupEntry(this.field_d, 110);
-        var4Lifetime1 = vf.a(this.field_d, 8192);
+        var4Lifetime1 = vf.lookupSocialEntry(this.field_d, 8192);
         var5 = this.getDisplayName((byte) 32);
         if (var4Lifetime1 != null) {
           if (DirectByteStorage.field_f.field_Lb &&
@@ -401,7 +401,7 @@ final class PlayerActionMenu {
             var8 = this.getDisplayName((byte) 32);
             var4 = var8;
             var5 = UsernameCredentials.findEntryByName(param2 ^ 13, this.field_h);
-            var6 = sa.a(this.field_h, param2 ^ 333) ? 1 : 0;
+            var6 = sa.isFriend(this.field_h, param2 ^ 333) ? 1 : 0;
             if (var5 == null &&
               var6 == 0) {
               this.field_l.addAction(4, CachedArchiveProvider.formatTemplate(param2 - 80, new String[]{var8}, ArcanistsMulti.field_F), (byte) -26);
@@ -414,7 +414,7 @@ final class PlayerActionMenu {
               }
             }
             if (var5 != null) {
-              if (!PasswordFieldPainter.a(this.field_h, -31046) &&
+              if (!PasswordFieldPainter.isLoginName(this.field_h, -31046) &&
                 !wh.field_g) {
                 if (!AlternateUsernameCredentials.field_p) {
                   this.field_l.addAction(8, CachedArchiveProvider.formatTemplate(-94, new String[]{var8}, mb.field_S), (byte) -26);
@@ -457,22 +457,22 @@ final class PlayerActionMenu {
           return false;
         }
         if (param2 == 0) {
-          qo.a(param0, (byte) -102, this.field_d);
+          qo.sendLongRequest(param0, (byte) -102, this.field_d);
           return true;
         }
         if (param2 == 1) {
-          LobbyGameEntry.a(this.field_d, 126, param0);
+          LobbyGameEntry.sendNameRequest(this.field_d, 126, param0);
           return true;
         }
         if (param2 == 2) {
-          ScreenDisplayMode.a(this.field_e, (byte) -123, param0);
+          ScreenDisplayMode.sendScreenRequest(this.field_e, (byte) -123, param0);
         } else {
           if (param2 == 3) {
-            qc.a(false, this.field_e, param0);
+            qc.sendShortRequest(false, this.field_e, param0);
             return true;
           }
           if (10 == param2) {
-            qe.a(this.field_e, (byte) -35, param0);
+            qe.sendShortSettingRequest(this.field_e, (byte) -35, param0);
             return true;
           }
           if (param2 == 15) {
@@ -499,58 +499,58 @@ final class PlayerActionMenu {
         var5 = ArcanistsMulti.field_G ? 1 : 0;
         if (!param2) {
           if (8 == param0) {
-            GzipDecoder.a(this.field_h, this.field_d, -26510);
+            GzipDecoder.setLoginNameAndHash(this.field_h, this.field_d, -26510);
             return true;
           }
           if (18 == param0) {
-            ModalPanelStack.a(this.field_d, -30687, this.field_h);
+            ModalPanelStack.setLoginName(this.field_d, -30687, this.field_h);
             return true;
           }
           if (param0 == 11) {
             stackIn_31_0 = param1;
             stackIn_31_1 = 0;
             stackIn_32_2 = (param2) ? false : true;
-            DiskCacheRequest.a(stackIn_31_0, stackIn_31_1, stackIn_32_2, this.field_i);
+            DiskCacheRequest.updateChatModeSetting(stackIn_31_0, stackIn_31_1, stackIn_32_2, this.field_i);
             return true;
           }
         } else {
           this.field_c = (SceneWidget) null;
           if (8 == param0) {
-            GzipDecoder.a(this.field_h, this.field_d, -26510);
+            GzipDecoder.setLoginNameAndHash(this.field_h, this.field_d, -26510);
             return true;
           }
           if (18 == param0) {
-            ModalPanelStack.a(this.field_d, -30687, this.field_h);
+            ModalPanelStack.setLoginName(this.field_d, -30687, this.field_h);
             return true;
           }
           if (param0 == 11) {
             stackIn_8_0 = param1;
             stackIn_8_1 = 0;
             stackIn_9_2 = (param2) ? false : true;
-            DiskCacheRequest.a(stackIn_8_0, stackIn_8_1, stackIn_9_2, this.field_i);
+            DiskCacheRequest.updateChatModeSetting(stackIn_8_0, stackIn_8_1, stackIn_9_2, this.field_i);
             return true;
           }
         }
         if (param0 == 12) {
-          DiskCacheRequest.a(param1, 1, true, this.field_i);
+          DiskCacheRequest.updateChatModeSetting(param1, 1, true, this.field_i);
           return true;
         }
         if (param0 == 13) {
-          DiskCacheRequest.a(param1, 2, true, this.field_i);
+          DiskCacheRequest.updateChatModeSetting(param1, 2, true, this.field_i);
           return true;
         }
         if (param0 == 14) {
-          BevelBoxPainter.a(param2);
+          BevelBoxPainter.resetLoginState(param2);
           return true;
         }
         if (param0 == 20) {
-          gj.a((byte) -61);
+          gj.resetLoginMode((byte) -61);
           return true;
         }
         if (19 != param0) {
           return false;
         }
-        va.a(this.field_d, 1, this.field_m, this.field_h, this.field_i);
+        va.openQuickChatForName(this.field_d, 1, this.field_m, this.field_h, this.field_i);
         return true;
     }
 

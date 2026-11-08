@@ -40,7 +40,7 @@ final class PasswordFieldPainter extends BevelTextPainter {
         }
     }
 
-    final static void a(byte param0) {
+    final static void initializeCaptionTable(byte param0) {
         ModalPanelStack.field_K = new String[aj.field_g];
         ModalPanelStack.field_K[9] = DiskCacheWorker.field_c;
         ModalPanelStack.field_K[20] = ByteStorage.field_b;
@@ -84,7 +84,7 @@ final class PasswordFieldPainter extends BevelTextPainter {
         super(param0, param1);
     }
 
-    final static boolean a(String param0, int param1) {
+    final static boolean isLoginName(String param0, int param1) {
         RuntimeException var2 = null;
         CharSequence var3 = null;
         RuntimeException stackIn_16_0 = null;
@@ -98,7 +98,7 @@ final class PasswordFieldPainter extends BevelTextPainter {
           if (nj.field_c == 2 &&
             GridContainer.field_S != null) {
             var3 = (CharSequence) ((Object) param0);
-            if (!GridContainer.field_S.equals(Js5ArchiveManager.a(var3, -13))) {
+            if (!GridContainer.field_S.equals(Js5ArchiveManager.normalizeNameForLookup(var3, -13))) {
               return false;
             }
             if (param1 == -31046) {
@@ -121,7 +121,7 @@ final class PasswordFieldPainter extends BevelTextPainter {
         }
     }
 
-    final static void b(int param0, int param1) {
+    final static void sendSavedLayout(int param0, int param1) {
         int var3 = 0;
         int var4 = 0;
         CipherPacketBuffer var2 = he.field_e;

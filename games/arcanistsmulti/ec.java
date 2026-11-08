@@ -34,7 +34,7 @@ final class ec {
     }
 
     final static void pushClipState(int param0) {
-        ClipState var1 = (ClipState) (km.field_a.removeLast(true));
+        ClipState var1 = (ClipState) (NameCheckRequest.field_a.removeLast(true));
         if (var1 == null) {
           var1 = new ClipState();
         }
@@ -45,7 +45,7 @@ final class ec {
         Js5Transport.field_j.addLast(var1, -1);
     }
 
-    final static void a(byte[] param0, byte param1) {
+    final static void applyColourTheme(byte[] param0, byte param1) {
         int incrementValue$7 = 0;
         int incrementValue$8 = 0;
         int incrementValue$9 = 0;
@@ -82,10 +82,10 @@ final class ec {
           }
           if (34 == param0.length) {
             var2_int = 0;
-            kg.field_d[0] = AlternateUsernameCredentials.field_n[0];
-            kg.field_d[2] = IsaacCipher.field_d[0];
-            kg.field_d[1] = GameApplet.field_z[0];
-            kg.field_d[3] = hi.field_b[0];
+            QuickChatCategoryCache.field_d[0] = AlternateUsernameCredentials.field_n[0];
+            QuickChatCategoryCache.field_d[2] = IsaacCipher.field_d[0];
+            QuickChatCategoryCache.field_d[1] = GameApplet.field_z[0];
+            QuickChatCategoryCache.field_d[3] = hi.field_b[0];
             incrementValue$7 = var2_int;
             var2_int++;
             incrementValue$8 = var2_int;
@@ -97,7 +97,7 @@ final class ec {
               if (~(AlternateUsernameCredentials.field_n[var4][0] << 16) == ~(var3 & 16711680) &&
                 AlternateUsernameCredentials.field_n[var4][1] << 8 == (65280 & var3) &&
                 (var3 & 255) == AlternateUsernameCredentials.field_n[var4][2]) {
-                kg.field_d[0] = AlternateUsernameCredentials.field_n[var4];
+                QuickChatCategoryCache.field_d[0] = AlternateUsernameCredentials.field_n[var4];
               }
             }
             incrementValue$10 = var2_int;
@@ -111,7 +111,7 @@ final class ec {
               if ((16711680 & var3) == GameApplet.field_z[var4][0] << 16 &&
                 (var3 & 65280) == GameApplet.field_z[var4][1] << 8 &&
                 (var3 & 255) == GameApplet.field_z[var4][2]) {
-                kg.field_d[1] = GameApplet.field_z[var4];
+                QuickChatCategoryCache.field_d[1] = GameApplet.field_z[var4];
               }
             }
             incrementValue$13 = var2_int;
@@ -125,7 +125,7 @@ final class ec {
               if (~(IsaacCipher.field_d[var4][0] << 16) == ~(var3 & 16711680) &&
                 IsaacCipher.field_d[var4][1] << 8 == (65280 & var3) &&
                 IsaacCipher.field_d[var4][2] == (var3 & 255)) {
-                kg.field_d[2] = IsaacCipher.field_d[var4];
+                QuickChatCategoryCache.field_d[2] = IsaacCipher.field_d[var4];
               }
             }
             incrementValue$16 = var2_int;
@@ -139,7 +139,7 @@ final class ec {
               if (~(hi.field_b[var4][0] << 16) == ~(var3 & 16711680) &&
                 hi.field_b[var4][1] << 8 == (var3 & 65280) &&
                 (var3 & 255) == hi.field_b[var4][2]) {
-                kg.field_d[3] = hi.field_b[var4];
+                QuickChatCategoryCache.field_d[3] = hi.field_b[var4];
               }
             }
             for (var4 = 0; var4 < 6; var4++) {
@@ -192,16 +192,16 @@ final class ec {
             if (var3 >= 0) {
               incrementValue$1 = var2_int;
               var2_int++;
-              kg.field_d[0] = AlternateUsernameCredentials.field_n[NameValidator.bitAnd((int) param0[incrementValue$1], 255)];
+              QuickChatCategoryCache.field_d[0] = AlternateUsernameCredentials.field_n[NameValidator.bitAnd((int) param0[incrementValue$1], 255)];
               incrementValue$2 = var2_int;
               var2_int++;
-              kg.field_d[1] = GameApplet.field_z[NameValidator.bitAnd(255, (int) param0[incrementValue$2])];
+              QuickChatCategoryCache.field_d[1] = GameApplet.field_z[NameValidator.bitAnd(255, (int) param0[incrementValue$2])];
               incrementValue$3 = var2_int;
               var2_int++;
-              kg.field_d[2] = IsaacCipher.field_d[NameValidator.bitAnd((int) param0[incrementValue$3], 255)];
+              QuickChatCategoryCache.field_d[2] = IsaacCipher.field_d[NameValidator.bitAnd((int) param0[incrementValue$3], 255)];
               incrementValue$4 = var2_int;
               var2_int++;
-              kg.field_d[3] = hi.field_b[NameValidator.bitAnd(255, (int) param0[incrementValue$4])];
+              QuickChatCategoryCache.field_d[3] = hi.field_b[NameValidator.bitAnd(255, (int) param0[incrementValue$4])];
               for (var4 = 0; var4 < 6; var4++) {
                 incrementValue$6 = var2_int;
                 var2_int++;

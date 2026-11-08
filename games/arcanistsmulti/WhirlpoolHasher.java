@@ -42,7 +42,7 @@ final class WhirlpoolHasher {
         var2 = 0;
         var3 = 0;
         while (var2 < 8) {
-          this.field_e[var2] = TextLayout.longXor(on.a((long)this.field_b[var3 + 7], 255L), TextLayout.longXor(on.a(255L, (long)this.field_b[6 + var3]) << 8, TextLayout.longXor(TextLayout.longXor(on.a(4278190080L, (long)this.field_b[4 + var3] << 24), TextLayout.longXor(on.a(1095216660480L, (long)this.field_b[var3 + 3] << 32), TextLayout.longXor(TextLayout.longXor((long)this.field_b[var3] << 56, on.a((long)this.field_b[var3 + 1], 255L) << 48), on.a((long)this.field_b[var3 + 2], 255L) << 40))), on.a(255L, (long)this.field_b[5 + var3]) << 16)));
+          this.field_e[var2] = TextLayout.longXor(on.longAnd((long)this.field_b[var3 + 7], 255L), TextLayout.longXor(on.longAnd(255L, (long)this.field_b[6 + var3]) << 8, TextLayout.longXor(TextLayout.longXor(on.longAnd(4278190080L, (long)this.field_b[4 + var3] << 24), TextLayout.longXor(on.longAnd(1095216660480L, (long)this.field_b[var3 + 3] << 32), TextLayout.longXor(TextLayout.longXor((long)this.field_b[var3] << 56, on.longAnd((long)this.field_b[var3 + 1], 255L) << 48), on.longAnd((long)this.field_b[var3 + 2], 255L) << 40))), on.longAnd(255L, (long)this.field_b[5 + var3]) << 16)));
           var2++;
           var3 += 8;
         }
@@ -238,7 +238,7 @@ final class WhirlpoolHasher {
         }
     }
 
-    final static int a(jg param0, byte param1) {
+    final static int getChatLineColour(jg param0, byte param1) {
         int var2_int = 0;
         int var3 = 0;
         int var4 = 0;
@@ -319,7 +319,7 @@ final class WhirlpoolHasher {
         }
         if (param0 != -23645) {
           BattleUnit var4 = (BattleUnit) null;
-          WhirlpoolHasher.a((BattleUnit) null, false);
+          WhirlpoolHasher.resetTutorialUnit((BattleUnit) null, false);
         }
     }
 
@@ -371,7 +371,7 @@ final class WhirlpoolHasher {
         }
     }
 
-    final static void a(BattleUnit param0, boolean param1) {
+    final static void resetTutorialUnit(BattleUnit param0, boolean param1) {
         jg var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -387,7 +387,7 @@ final class WhirlpoolHasher {
           }
           if (!param1) {
             var3 = (jg) null;
-            WhirlpoolHasher.a((jg) null, (byte) -20);
+            WhirlpoolHasher.getChatLineColour((jg) null, (byte) -20);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

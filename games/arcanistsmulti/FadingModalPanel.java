@@ -20,11 +20,11 @@ abstract class FadingModalPanel extends UiContainer {
     static Sprite[] field_E;
     static String field_R;
 
-    final static void a(byte param0, String param1) {
+    final static void setServiceName(byte param0, String param1) {
         try {
           if (param0 < 58) {
             String var3 = (String) null;
-            FadingModalPanel.a((byte) 16, (String) null);
+            FadingModalPanel.setServiceName((byte) 16, (String) null);
           }
           AudioService.field_i = param1;
         } catch (RuntimeException runtimeException) {
@@ -37,11 +37,11 @@ abstract class FadingModalPanel extends UiContainer {
           return this.field_G ? this != this.field_H.getActivePanel(7213) ? 0 : 256 : 0;
         }
         String var3 = (String) null;
-        FadingModalPanel.a((byte) -57, (String) null);
+        FadingModalPanel.setServiceName((byte) -57, (String) null);
         return this.field_G ? this != this.field_H.getActivePanel(7213) ? 0 : 256 : 0;
     }
 
-    final static void a(int param0, int param1, int param2, int param3) {
+    final static void storeLayoutValues(int param0, int param1, int param2, int param3) {
         SceneWidgetNode.field_m = param3;
         if (param0 != -1) {
           return;
@@ -67,7 +67,7 @@ abstract class FadingModalPanel extends UiContainer {
           return;
         }
         String var2 = (String) null;
-        FadingModalPanel.a((byte) 8, (String) null);
+        FadingModalPanel.setServiceName((byte) 8, (String) null);
         field_O = (byte[][]) null;
         field_Q = null;
         field_K = null;
@@ -132,7 +132,7 @@ abstract class FadingModalPanel extends UiContainer {
         SoftwareRasterizer.clear();
         this.drawPanel(0, (byte) -117, 0);
         super.drawLayer((byte) -117, -param1 - this.field_n, param2, -this.field_j - param3);
-        oo.popClipState(-15405);
+        QuickChatCategory.popClipState(-15405);
         ed.field_vb.drawAlpha(param1 + this.field_n, param3 + this.field_j, this.field_S);
     }
 

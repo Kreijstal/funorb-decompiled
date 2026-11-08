@@ -13,13 +13,13 @@ final class LabeledField extends SingleChildContainer {
     private String field_N;
     private boolean field_J;
 
-    final static void g(byte param0) {
+    final static void openOptionsDialog(byte param0) {
         pm.field_e.deactivatePanels(param0 ^ -36);
         if (param0 == 94) {
           pm.field_e.pushPanel(new OptionsDialog(pm.field_e), 15637);
           return;
         }
-        LabeledField.g((byte) 118);
+        LabeledField.openOptionsDialog((byte) 118);
         pm.field_e.pushPanel(new OptionsDialog(pm.field_e), 15637);
     }
 
@@ -58,14 +58,14 @@ final class LabeledField extends SingleChildContainer {
         field_F = null;
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void clearOrDimScreen(boolean param0, int param1) {
         la.clearOrDimScreen(param0, true, (byte) -96);
         if (param1 != 4474111) {
           field_M = (int[]) null;
         }
     }
 
-    final static void a(Sprite[] param0, boolean param1, BitmapFont param2, int param3, Sprite[] param4, int param5, int param6, int param7, int param8, int param9, int param10, String param11, boolean param12, int param13, int param14) {
+    final static void showFramedNotice(Sprite[] param0, boolean param1, BitmapFont param2, int param3, Sprite[] param4, int param5, int param6, int param7, int param8, int param9, int param10, String param11, boolean param12, int param13, int param14) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -81,9 +81,9 @@ final class LabeledField extends SingleChildContainer {
         try {
           if (param14 != -21071) {
             var16 = (String) null;
-            LabeledField.a((Sprite[]) null, true, (BitmapFont) null, -83, (Sprite[]) null, -13, 81, -125, 45, -81, 29, (String) null, true, 61, -12);
+            LabeledField.showFramedNotice((Sprite[]) null, true, (BitmapFont) null, -83, (Sprite[]) null, -13, 81, -125, 45, -81, 29, (String) null, true, 61, -12);
           }
-          TextLayout.a(param6, param3, StatefulTextPainter.field_r, param7, param8, param10, param13, param9, true, new ec(param4), param8, param13, param2, pn.field_d, CameraFollowTarget.field_f, LoginMethod.field_a, param2, DualLinkDeque.field_d, new ec(param0), wm.field_I);
+          TextLayout.configureLobbyStyles(param6, param3, StatefulTextPainter.field_r, param7, param8, param10, param13, param9, true, new ec(param4), param8, param13, param2, pn.field_d, CameraFollowTarget.field_f, LoginMethod.field_a, param2, DualLinkDeque.field_d, new ec(param0), wm.field_I);
           CanvasRasterBuffer.showNoticeDialog(param11, (byte) -72, param12, param5, param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -184,9 +184,9 @@ final class LabeledField extends SingleChildContainer {
         }
     }
 
-    final static boolean g(int param0) {
+    final static boolean alwaysTrue(int param0) {
         if (param0 > -8) {
-          LabeledField.a(false, 117);
+          LabeledField.clearOrDimScreen(false, 117);
           return true;
         }
         return true;

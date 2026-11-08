@@ -21,27 +21,27 @@ final class fk extends IntrusiveNode {
         field_h = null;
     }
 
-    final static Sprite[] a(int param0, int param1, int param2) {
+    final static Sprite[] createSolidFrame(int param0, int param1, int param2) {
         if (param1 <= 27) {
           Sprite var4 = (Sprite) null;
-          fk.a((Battle) null, -111, (IndexedSprite) null, 35, (byte) -40, (Sprite) null);
+          fk.spriteHitsMask((Battle) null, -111, (IndexedSprite) null, 35, (byte) -40, (Sprite) null);
         }
         return LoginMethod.createSolidFrame(1, (byte) 127, param2, param0);
     }
 
-    final static void d(int param0) {
+    final static void requestLogout(int param0) {
         if (param0 != -11) {
           field_h = (int[]) null;
         }
         if (fj.field_j == 10 ||
-          !LabeledField.g(-115)) {
-          DiskCacheWorker.b((byte) 108);
+          !LabeledField.alwaysTrue(-115)) {
+          DiskCacheWorker.beginLogout((byte) 108);
           fj.field_j = 11;
         }
         ii.field_f = true;
     }
 
-    final static boolean a(Battle param0, int param1, IndexedSprite param2, int param3, byte param4, Sprite param5) {
+    final static boolean spriteHitsMask(Battle param0, int param1, IndexedSprite param2, int param3, byte param4, Sprite param5) {
         int var19 = 0;
         int var20 = 0;
         int stackIn_16_0 = 0;
@@ -200,12 +200,12 @@ final class fk extends IntrusiveNode {
         }
     }
 
-    final static IndexedSprite[] c(int param0) {
+    final static IndexedSprite[] createDecodedIndexedSprites(int param0) {
         int var2 = 0;
         int var3 = ArcanistsMulti.field_G ? 1 : 0;
         IndexedSprite[] var1 = new IndexedSprite[ModalPanelStack.field_J];
         for (var2 = param0; ModalPanelStack.field_J > var2; var2++) {
-          var1[var2] = new IndexedSprite(pb.field_g, gn.field_a, hl.field_l[var2], SectorCacheStore.field_d[var2], jg.field_p[var2], ho.field_i[var2], AccountRegistrationPanel.field_I[var2], ph.field_c);
+          var1[var2] = new IndexedSprite(pb.field_g, QuickChatPhraseCache.field_a, hl.field_l[var2], SectorCacheStore.field_d[var2], jg.field_p[var2], ho.field_i[var2], AccountRegistrationPanel.field_I[var2], ph.field_c);
         }
         CanvasRasterBuffer.releaseDecodeArrays(-18229);
         return var1;
@@ -224,7 +224,7 @@ final class fk extends IntrusiveNode {
         }
     }
 
-    final static void a(byte param0) {
+    final static void readAchievementUpdate(byte param0) {
         int var7 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
@@ -276,7 +276,7 @@ final class fk extends IntrusiveNode {
             var11.unlink(true);
           } else {
             if (var2 != 2) {
-              DelegatingCanvas.a((Throwable) null, "A1: " + CacheEntry.g((byte) -25), (byte) 20);
+              DelegatingCanvas.reportError((Throwable) null, "A1: " + CacheEntry.getVersionCaption((byte) -25), (byte) 20);
               ProxySocketConnector.closeActiveConnection(false);
             } else {
               var14 = (fe) (i.field_e.first(12623));
@@ -312,7 +312,7 @@ final class fk extends IntrusiveNode {
             try {
               var3 = new java.net.URL(param0.getCodeBase(), param2);
               var3 = nm.appendSessionParameters(param0, var3, -31843);
-              DelegatingCanvas.a(var3.toString(), param0, true, (byte) -109);
+              DelegatingCanvas.openExternalUrl(var3.toString(), param0, true, (byte) -109);
               if (param1) {
                 field_i = (String) null;
               }

@@ -68,15 +68,15 @@ final class IntrusiveDequeCursor {
         }
     }
 
-    final static boolean a(int param0) {
+    final static boolean canShowAdvert(int param0) {
         boolean stackIn_9_0 = false;
         if (param0 != -15576) {
-          IntrusiveDequeCursor.a(-109, -10, 3, -53, 6, 89);
+          IntrusiveDequeCursor.layoutLobbyPanels(-109, -10, 3, -53, 6, 89);
         }
         boolean decompiledFrameRemainder0 = true;
         if (ih.field_f >= 20 &&
-          ue.a(125) && (!(0 < dd.field_j) ||
-          LabeledField.g(param0 ^ 15587))) {
+          ue.isReadyForLobby(125) && (!(0 < dd.field_j) ||
+          LabeledField.alwaysTrue(param0 ^ 15587))) {
           stackIn_9_0 = false;
           decompiledFrameRemainder0 = false;
         }
@@ -128,11 +128,11 @@ final class IntrusiveDequeCursor {
         field_f = null;
         field_b = null;
         if (param0) {
-          IntrusiveDequeCursor.a(-17, -79, -45, -100, -45, 122);
+          IntrusiveDequeCursor.layoutLobbyPanels(-17, -79, -45, -100, -45, 122);
         }
     }
 
-    final static void a(boolean param0) {
+    final static void closePlayerMenu(boolean param0) {
         if (eo.field_c != null &&
           eo.field_c.field_c != null) {
           eo.field_c.field_c.field_ab = false;
@@ -140,13 +140,13 @@ final class IntrusiveDequeCursor {
         dd.field_h = null;
         eo.field_c = null;
         if (param0) {
-          IntrusiveDequeCursor.a(-89);
+          IntrusiveDequeCursor.canShowAdvert(-89);
         }
     }
 
     final IntrusiveNode first(int param0) {
         if (param0 > -30) {
-          IntrusiveDequeCursor.a(-35);
+          IntrusiveDequeCursor.canShowAdvert(-35);
         }
         IntrusiveNode var2 = this.field_e.sentinel.next;
         if (this.field_e.sentinel == var2) {
@@ -157,7 +157,7 @@ final class IntrusiveDequeCursor {
         return var2;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void layoutLobbyPanels(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var12 = 0;
         int var6_int = 0;
         int var7 = 0;
@@ -204,7 +204,7 @@ final class IntrusiveDequeCursor {
             }
           }
           if (param0 <= 79) {
-            IntrusiveDequeCursor.a(true);
+            IntrusiveDequeCursor.closePlayerMenu(true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

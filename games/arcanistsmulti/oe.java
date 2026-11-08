@@ -7,7 +7,7 @@ final class oe {
     static IndexedSprite[] field_d;
     static int[] field_c;
 
-    final static int a(int param0, int param1, int param2) {
+    final static int daysInMonth(int param0, int param1, int param2) {
         if (~param2 != param0) {
           return ub.field_i[param2];
         }
@@ -28,7 +28,7 @@ final class oe {
         field_c = null;
     }
 
-    final static String a(String param0, int param1, int param2) {
+    final static String getIgnoreNameError(String param0, int param1, int param2) {
         String stackIn_4_0 = null;
         String stackIn_8_0 = null;
         String stackIn_12_0 = null;
@@ -53,7 +53,7 @@ final class oe {
             return stackIn_4_0;
           }
           if (SpriteState.field_t != 2) {
-            stackIn_8_0 = oo.field_E;
+            stackIn_8_0 = QuickChatCategory.field_E;
             return stackIn_8_0;
           }
           var8 = UsernameCredentials.findEntryByName(0, param0);

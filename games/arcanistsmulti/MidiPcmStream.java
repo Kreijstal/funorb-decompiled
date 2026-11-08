@@ -518,7 +518,7 @@ final class MidiPcmStream extends PcmStream {
         RuntimeException var21 = null;
         java.applet.Applet var22 = null;
         try {
-          IsaacCipher.a((byte) 100, param8, param2, param7, param3, param14, param18, param10, param13, param6, param9, new ec(param12), param20, param1, new ec(param17), param11, param4, param16, param5, new ec(param19), param0);
+          IsaacCipher.configureLobbyLayout((byte) 100, param8, param2, param7, param3, param14, param18, param10, param13, param6, param9, new ec(param12), param20, param1, new ec(param17), param11, param4, param16, param5, new ec(param19), param0);
           if (param15 >= -99) {
             var22 = (java.applet.Applet) null;
             MidiPcmStream.logoutAndReload(125, (java.applet.Applet) null);

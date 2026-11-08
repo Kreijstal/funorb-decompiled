@@ -89,7 +89,7 @@ final class Battle {
     private boolean[][] field_L;
     private boolean field_ub;
     int[] field_Fb;
-    static hn field_P;
+    static JaggrabDownloader field_P;
     int[] field_gb;
     int[] field_g;
     private int field_O;
@@ -210,7 +210,7 @@ final class Battle {
           if (param1 != 2) {
             Battle.releaseStatics(-29);
           }
-          stackIn_3_0 = fk.a(this, param0, this.field_Jb, param2, (byte) -1, param3);
+          stackIn_3_0 = fk.spriteHitsMask(this, param0, this.field_Jb, param2, (byte) -1, param3);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -322,7 +322,7 @@ final class Battle {
                           stackIn_37_0 = -1;
                           stackIn_37_1 = ~DropdownList.field_I[this.field_O].field_m[var9];
                           if (stackIn_37_0 != stackIn_37_1) {
-                            DisplayNameForm.a(var7, this.field_V, 0, 125, this, false, var8 - var4, DropdownList.field_I[this.field_O].field_m[var9]);
+                            DisplayNameForm.carveMask(var7, this.field_V, 0, 125, this, false, var8 - var4, DropdownList.field_I[this.field_O].field_m[var9]);
                           }
                           var8++;
                           var9 += 128;
@@ -341,7 +341,7 @@ final class Battle {
                           stackIn_23_1 = stackOut_42_1;
                           stackIn_43_1 = stackOut_42_1;
                           if (stackIn_23_0 != stackIn_43_1) {
-                            DisplayNameForm.a(var7, this.field_V, 0, 125, this, false, var8, DropdownList.field_I[this.field_O].field_m[var9Lifetime1]);
+                            DisplayNameForm.carveMask(var7, this.field_V, 0, 125, this, false, var8, DropdownList.field_I[this.field_O].field_m[var9Lifetime1]);
                           }
                           var8++;
                           var9Lifetime1 += 128;
@@ -386,7 +386,7 @@ final class Battle {
                     mn.field_y.field_m[var5 + 1] == 0) {
                     var8Lifetime2 = (var7Lifetime2 & 127) + var3 - 128;
                     if (DropdownList.field_I[this.field_O].field_m[var8Lifetime2] != 0) {
-                      DisplayNameForm.a(var7Lifetime2, this.field_V, 0, 12, this, false, var6, DropdownList.field_I[this.field_O].field_m[var8Lifetime2]);
+                      DisplayNameForm.carveMask(var7Lifetime2, this.field_V, 0, 12, this, false, var6, DropdownList.field_I[this.field_O].field_m[var8Lifetime2]);
                     }
                   }
                   var5++;
@@ -470,7 +470,7 @@ final class Battle {
         IndexedSprite var20 = null;
         var19 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          var4_int = ScreenDisplayMode.a(param1, 8, (byte) -61) + 8 * this.field_O;
+          var4_int = ScreenDisplayMode.randomBelow(param1, 8, (byte) -61) + 8 * this.field_O;
           var6 = -115 % ((param2 + 59) / 54);
           var5 = SocketConnector.field_j[var4_int];
           var7 = new Sprite(512, 512);
@@ -532,14 +532,14 @@ final class Battle {
                     decompiledFrameRemainder1 = !((2 * var5.field_c) < (var12 + var11));
                   }
                   if (decompiledFrameRemainder1) {
-                    var4_int = ScreenDisplayMode.a(param1, 8, (byte) -26) + 8 * this.field_O;
+                    var4_int = ScreenDisplayMode.randomBelow(param1, 8, (byte) -26) + 8 * this.field_O;
                     var5 = SocketConnector.field_j[var4_int];
                     break regionExit3;
                   }
                   var9 = 1;
                   var14 = (var12 + var11) / 2;
                   var15 = 0;
-                  var15 = -on.a(var5.field_h / 2, (-var11 + var12) / 4, (byte) 98);
+                  var15 = -on.computeAngle(var5.field_h / 2, (-var11 + var12) / 4, (byte) 98);
                   var15 = var15 & 8191;
                   if (4096 <= var15) {
                     var14 = var12;
@@ -577,14 +577,14 @@ final class Battle {
                           break;
                       }
                     }
-                    DisplayNameForm.a(var8, mn.field_y, var5.field_c / 2, 124, this, false, -(var5.field_c / 4) + var14, (byte) 0);
-                    DisplayNameForm.a(var8, this.field_V, var5.field_c / 2, 122, this, false, -(var5.field_c / 4) + var14, (byte) 0);
+                    DisplayNameForm.carveMask(var8, mn.field_y, var5.field_c / 2, 124, this, false, -(var5.field_c / 4) + var14, (byte) 0);
+                    DisplayNameForm.carveMask(var8, this.field_V, var5.field_c / 2, 122, this, false, -(var5.field_c / 4) + var14, (byte) 0);
                     var16 = -var5.field_h / 3;
                     while (!(var16 >= (var5.field_h / 3))) {
                       var17 = (var16 * BevelBoxPainter.cosine(var15, -111) >> 16) + var8;
                       var18 = var14 + var5.field_c * 4 / 10 - (of.sine(127, var15) * var16 >> 16);
-                      DisplayNameForm.a(var17, mn.field_y, 2 * var5.field_c / 10, -58, this, false, var18, (byte) -5);
-                      DisplayNameForm.a(var17, this.field_V, 2 * var5.field_c / 10, 124, this, false, var18, (byte) -5);
+                      DisplayNameForm.carveMask(var17, mn.field_y, 2 * var5.field_c / 10, -58, this, false, var18, (byte) -5);
+                      DisplayNameForm.carveMask(var17, this.field_V, 2 * var5.field_c / 10, 124, this, false, var18, (byte) -5);
                       var16++;
                     }
                   }
@@ -657,7 +657,7 @@ final class Battle {
                   var10 < 50) {
                   continue scanLoop2;
                 }
-                var4_int = ScreenDisplayMode.a(param1, 8, (byte) -83) + this.field_O * 8;
+                var4_int = ScreenDisplayMode.randomBelow(param1, 8, (byte) -83) + this.field_O * 8;
                 var20 = SocketConnector.field_j[var4_int];
                 var8 = var8 + var20.field_h / 2;
                 stackIn_7_0 = 26;
@@ -665,7 +665,7 @@ final class Battle {
                 if (stackIn_7_0 == stackIn_7_1) {
                   var8 += 24;
                 }
-                var8 = var8 + (32 + ScreenDisplayMode.a(param1, 128, (byte) -62));
+                var8 = var8 + (32 + ScreenDisplayMode.randomBelow(param1, 128, (byte) -62));
                 continue scanLoop1;
               }
             }
@@ -844,12 +844,12 @@ final class Battle {
           var34 = new int[6];
           var19 = var34;
           var5 = var19;
-          var5[0] = var4 * 3 / 2 + ScreenDisplayMode.a(param0, -(3 * var4) + (this.field_y >> 1), (byte) -90);
-          var5[1] = var34[0] - (ScreenDisplayMode.a(param0, var4 / 2, (byte) -39) + var4 / 2);
-          var5[2] = var4 / 2 + var34[0] + ScreenDisplayMode.a(param0, var4 / 2, (byte) -97);
-          var5[3] = 3 * var4 / 2 + (ScreenDisplayMode.a(param0, -(var4 * 3) + (this.field_y >> 1), (byte) -32) + (this.field_y >> 1));
-          var5[4] = -(var4 / 2) + (var34[3] - ScreenDisplayMode.a(param0, var4 / 2, (byte) -44));
-          var5[5] = var4 / 2 + var34[3] + ScreenDisplayMode.a(param0, var4 / 2, (byte) -83);
+          var5[0] = var4 * 3 / 2 + ScreenDisplayMode.randomBelow(param0, -(3 * var4) + (this.field_y >> 1), (byte) -90);
+          var5[1] = var34[0] - (ScreenDisplayMode.randomBelow(param0, var4 / 2, (byte) -39) + var4 / 2);
+          var5[2] = var4 / 2 + var34[0] + ScreenDisplayMode.randomBelow(param0, var4 / 2, (byte) -97);
+          var5[3] = 3 * var4 / 2 + (ScreenDisplayMode.randomBelow(param0, -(var4 * 3) + (this.field_y >> 1), (byte) -32) + (this.field_y >> 1));
+          var5[4] = -(var4 / 2) + (var34[3] - ScreenDisplayMode.randomBelow(param0, var4 / 2, (byte) -44));
+          var5[5] = var4 / 2 + var34[3] + ScreenDisplayMode.randomBelow(param0, var4 / 2, (byte) -83);
           var7 = var3_int;
           if (var7 < 257) {
             var7 = 257;
@@ -859,8 +859,8 @@ final class Battle {
           var8 = var20;
           var35[3] = var7;
           var35[0] = var7;
-          var8[1] = 128 + ScreenDisplayMode.a(param0, var7 - 256, (byte) -113);
-          var8[4] = ScreenDisplayMode.a(param0, -256 + var7, (byte) -125) + 128;
+          var8[1] = 128 + ScreenDisplayMode.randomBelow(param0, var7 - 256, (byte) -113);
+          var8[4] = ScreenDisplayMode.randomBelow(param0, -256 + var7, (byte) -125) + 128;
           var8[2] = var35[0] - var35[1];
           var8[5] = var35[3] - var35[4];
           var9 = 0;
@@ -933,18 +933,18 @@ final class Battle {
               }
               var25 = SocketConnector.field_j[8 * this.field_O + 2];
               this.stampSpriteMask(false, 3 + (var34[var10] - 128), this.field_V, true, -256 + this.field_H - var35[var10], var25.toRgbSprite());
-              var26 = SocketConnector.field_j[ScreenDisplayMode.a(param0, 4, (byte) -39) - (-4 - this.field_O * 8)];
+              var26 = SocketConnector.field_j[ScreenDisplayMode.randomBelow(param0, 4, (byte) -39) - (-4 - this.field_O * 8)];
               this.stampSpriteMask(false, -192 + var34[var10] + 3, this.field_V, true, -160 + this.field_H, var26.toRgbSprite());
-              var27 = SocketConnector.field_j[4 + (ScreenDisplayMode.a(param0, 4, (byte) -100) + this.field_O * 8)];
+              var27 = SocketConnector.field_j[4 + (ScreenDisplayMode.randomBelow(param0, 4, (byte) -100) + this.field_O * 8)];
               this.stampSpriteMask(false, 3 + (-64 + var34[var10]), this.field_V, true, this.field_H - 160, var27.toRgbSprite());
               var10++;
             } while (var18 == 0);
             while (var10 < 6) {
               var28 = SocketConnector.field_j[this.field_O * 8 + 2];
               this.stampSpriteMask(false, 3 + var34[var10] - 128, this.field_V, true, -256 + (this.field_H - var35[var10]), var28.toRgbSprite());
-              var29 = SocketConnector.field_j[4 + (ScreenDisplayMode.a(param0, 4, (byte) -56) + this.field_O * 8)];
+              var29 = SocketConnector.field_j[4 + (ScreenDisplayMode.randomBelow(param0, 4, (byte) -56) + this.field_O * 8)];
               this.stampSpriteMask(false, 3 + (var34[var10] - 192), this.field_V, true, -160 + this.field_H, var29.toRgbSprite());
-              var30 = SocketConnector.field_j[4 + (ScreenDisplayMode.a(param0, 4, (byte) -127) + 8 * this.field_O)];
+              var30 = SocketConnector.field_j[4 + (ScreenDisplayMode.randomBelow(param0, 4, (byte) -127) + 8 * this.field_O)];
               this.stampSpriteMask(false, 3 + (var34[var10] - 64), this.field_V, true, this.field_H - 160, var30.toRgbSprite());
               var10++;
               if (var18 == 0) {
@@ -960,9 +960,9 @@ final class Battle {
               stackIn_48_0 = 1000;
               stackIn_48_1 = var13;
               if (stackIn_48_0 > stackIn_48_1) {
-                var33 = SocketConnector.field_j[4 + (ScreenDisplayMode.a(param0, 4, (byte) -60) + this.field_O * 8)];
-                var14 = ScreenDisplayMode.a(param0, -256 + this.field_y, (byte) -115);
-                var15 = ScreenDisplayMode.a(param0, -256 + this.field_H, (byte) -68);
+                var33 = SocketConnector.field_j[4 + (ScreenDisplayMode.randomBelow(param0, 4, (byte) -60) + this.field_O * 8)];
+                var14 = ScreenDisplayMode.randomBelow(param0, -256 + this.field_y, (byte) -115);
+                var15 = ScreenDisplayMode.randomBelow(param0, -256 + this.field_H, (byte) -68);
                 var16 = 1;
                 if (var18 != 0) {
                   return null;
@@ -1560,14 +1560,14 @@ final class Battle {
           var6_int = 0;
           do {
             if ((var11.length - 1) <= var6_int) {
-              var9[1 + ScreenDisplayMode.a(param1, -2 + var11.length, (byte) -71)] = this.field_H * 3 / 8 - ScreenDisplayMode.a(param1, 2 * this.field_H / 8, (byte) -104);
-              var9[ScreenDisplayMode.a(param1, -2 + var11.length, (byte) -103) + 1] = this.field_H * 3 / 8 - ScreenDisplayMode.a(param1, 2 * this.field_H / 8, (byte) -127);
-              var9[1 + ScreenDisplayMode.a(param1, -2 + var11.length, (byte) -119)] = this.field_H * 3 / 8 - ScreenDisplayMode.a(param1, 2 * this.field_H / 8, (byte) -91);
-              var9[ScreenDisplayMode.a(param1, var11.length - 2, (byte) -34) + 1] = this.field_H * 3 / param0 - ScreenDisplayMode.a(param1, this.field_H * 2 / 8, (byte) -59);
+              var9[1 + ScreenDisplayMode.randomBelow(param1, -2 + var11.length, (byte) -71)] = this.field_H * 3 / 8 - ScreenDisplayMode.randomBelow(param1, 2 * this.field_H / 8, (byte) -104);
+              var9[ScreenDisplayMode.randomBelow(param1, -2 + var11.length, (byte) -103) + 1] = this.field_H * 3 / 8 - ScreenDisplayMode.randomBelow(param1, 2 * this.field_H / 8, (byte) -127);
+              var9[1 + ScreenDisplayMode.randomBelow(param1, -2 + var11.length, (byte) -119)] = this.field_H * 3 / 8 - ScreenDisplayMode.randomBelow(param1, 2 * this.field_H / 8, (byte) -91);
+              var9[ScreenDisplayMode.randomBelow(param1, var11.length - 2, (byte) -34) + 1] = this.field_H * 3 / param0 - ScreenDisplayMode.randomBelow(param1, this.field_H * 2 / 8, (byte) -59);
               var9[0] = 64 + this.field_H;
               break;
             }
-            var9[var6_int] = 7 * this.field_H / 8 - ScreenDisplayMode.a(param1, this.field_H * 2 / 8, (byte) -113);
+            var9[var6_int] = 7 * this.field_H / 8 - ScreenDisplayMode.randomBelow(param1, this.field_H * 2 / 8, (byte) -113);
             var6_int++;
           } while (var8 == 0);
           var9[-1 + var11.length] = var11[0];
@@ -1596,7 +1596,7 @@ final class Battle {
                   if (var4 == 0) {
                     stackIn_21_3 = 0;
                   } else {
-                    stackIn_21_3 = ScreenDisplayMode.a(param1, var4, (byte) -57);
+                    stackIn_21_3 = ScreenDisplayMode.randomBelow(param1, var4, (byte) -57);
                   }
                   stackIn_20_0[stackIn_20_1] = stackIn_20_2 + stackIn_21_3;
                   var6[2 * var7] = var5[var7];
@@ -1899,7 +1899,7 @@ final class Battle {
           var6 = 0;
           scanLoop1: while (true) {
             if (var17.length > var6) {
-              var5[var6] = this.field_H - (ScreenDisplayMode.a(param0, this.field_H / 3, (byte) -126) + Math.abs((this.field_y / 2 - this.field_y * var6 / var17.length) * this.field_H / this.field_y));
+              var5[var6] = this.field_H - (ScreenDisplayMode.randomBelow(param0, this.field_H / 3, (byte) -126) + Math.abs((this.field_y / 2 - this.field_y * var6 / var17.length) * this.field_H / this.field_y));
               var6++;
               if (var13 == 0) {
                 continue;
@@ -1929,7 +1929,7 @@ final class Battle {
                       stackIn_11_1 = -1 + 2 * var6;
                       stackIn_11_2 = (var5[var6] + var5[-1 + var6]) / 2;
                       if (var4 > 0) {
-                        stackIn_17_3 = ScreenDisplayMode.a(param0, var4, (byte) -33);
+                        stackIn_17_3 = ScreenDisplayMode.randomBelow(param0, var4, (byte) -33);
                       } else {
                         stackIn_17_3 = 0;
                       }
@@ -1961,8 +1961,8 @@ final class Battle {
               var18[1][-1 + var18[0].length] = var18[1][0];
               break;
             }
-            var18[0][var6] = (-(2 * ScreenDisplayMode.a(param0, 450, (byte) -74)) + 1400) / 3;
-            var18[1][var6] = 2 * (700 - ScreenDisplayMode.a(param0, 450, (byte) -27)) / 3;
+            var18[0][var6] = (-(2 * ScreenDisplayMode.randomBelow(param0, 450, (byte) -74)) + 1400) / 3;
+            var18[1][var6] = 2 * (700 - ScreenDisplayMode.randomBelow(param0, 450, (byte) -27)) / 3;
             var6++;
           } while (var13 == 0);
           var8 = 0;
@@ -2000,7 +2000,7 @@ final class Battle {
                         if (0 >= var4Lifetime1) {
                           stackIn_43_3 = 0;
                         } else {
-                          stackIn_43_3 = ScreenDisplayMode.a(param0, var4Lifetime1, (byte) -37);
+                          stackIn_43_3 = ScreenDisplayMode.randomBelow(param0, var4Lifetime1, (byte) -37);
                         }
                         stackIn_37_0[stackIn_37_1] = stackIn_37_2 + (stackIn_43_3 - var4Lifetime1 / 2);
                         var9_ref_int__[var6 * 2] = var18[var8][var6];
@@ -2850,22 +2850,22 @@ final class Battle {
           return;
         }
         var12 = new IsaacRandom(new int[]{this.field_Q, this.field_jb});
-        var3 = ScreenDisplayMode.a(var12, 2, (byte) -68);
+        var3 = ScreenDisplayMode.randomBelow(var12, 2, (byte) -68);
         if (var3 != 0) {
-          var3 = -128 + this.field_y - ScreenDisplayMode.a(var12, (this.field_jb - this.getTurnTimeLimit(4)) / this.field_q * 128 + 1, (byte) -57);
+          var3 = -128 + this.field_y - ScreenDisplayMode.randomBelow(var12, (this.field_jb - this.getTurnTimeLimit(4)) / this.field_q * 128 + 1, (byte) -57);
           if (!(var3 >= 128)) {
-            var3 = 128 + ScreenDisplayMode.a(var12, -256 + this.field_y, (byte) -32);
+            var3 = 128 + ScreenDisplayMode.randomBelow(var12, -256 + this.field_y, (byte) -32);
             if (var11 != 0) {
-              var3 = 128 + ScreenDisplayMode.a(var12, 128 * ((this.field_jb - this.getTurnTimeLimit(4)) / this.field_q) + 1, (byte) -66);
+              var3 = 128 + ScreenDisplayMode.randomBelow(var12, 128 * ((this.field_jb - this.getTurnTimeLimit(4)) / this.field_q) + 1, (byte) -66);
               if ((-128 + this.field_y) < var3) {
-                var3 = ScreenDisplayMode.a(var12, -256 + this.field_y, (byte) -31) + 128;
+                var3 = ScreenDisplayMode.randomBelow(var12, -256 + this.field_y, (byte) -31) + 128;
               }
             }
           }
         } else {
-          var3 = 128 + ScreenDisplayMode.a(var12, 128 * ((this.field_jb - this.getTurnTimeLimit(4)) / this.field_q) + 1, (byte) -66);
+          var3 = 128 + ScreenDisplayMode.randomBelow(var12, 128 * ((this.field_jb - this.getTurnTimeLimit(4)) / this.field_q) + 1, (byte) -66);
           if ((-128 + this.field_y) < var3) {
-            var3 = ScreenDisplayMode.a(var12, -256 + this.field_y, (byte) -31) + 128;
+            var3 = ScreenDisplayMode.randomBelow(var12, -256 + this.field_y, (byte) -31) + 128;
           }
         }
         boolean decompiledFrameRemainder6 = true;
@@ -2933,8 +2933,8 @@ final class Battle {
               stackIn_68_1Lifetime1 = this.field_mb;
               decompiledFrameRemainder6 = (stackIn_68_0Lifetime1 == stackIn_68_1Lifetime1);
               if (decompiledFrameRemainder6) {
-                this.field_mb = 128 + ScreenDisplayMode.a(var12, this.field_y - 256, (byte) -121);
-                this.field_t = 128 + ScreenDisplayMode.a(var12, this.field_H - 128, (byte) -32);
+                this.field_mb = 128 + ScreenDisplayMode.randomBelow(var12, this.field_y - 256, (byte) -121);
+                this.field_t = 128 + ScreenDisplayMode.randomBelow(var12, this.field_H - 128, (byte) -32);
                 decompiledFrameRemainder7 = false;
               }
             }
@@ -2960,7 +2960,7 @@ final class Battle {
             (decompiledFrameRemainder3) &&
             (decompiledFrameRemainder2)) {
             var6 = this.field_H / 2;
-            var7_int = gf.a((480 + var6) * 32 / 4, -266740663);
+            var7_int = gf.log2Floor((480 + var6) * 32 / 4, -266740663);
             var8Lifetime2 = -96 + 192 * (1 & var3);
             var9Lifetime1 = 1;
             var10Lifetime1 = 0;
@@ -2990,7 +2990,7 @@ final class Battle {
             (decompiledFrameRemainder4) &&
             (decompiledFrameRemainder3)) {
             var6 = this.field_H / 2;
-            var7_intLifetime1 = gf.a((15360 + 32 * var6) / 4, param0 ^ 266757658);
+            var7_intLifetime1 = gf.log2Floor((15360 + 32 * var6) / 4, param0 ^ 266757658);
             var8Lifetime1 = (var3 & 1) * 192 - 96;
             var16 = BevelBoxPainter.createProjectile(var5, -544, (byte) -117, this, 58, var3 - var7_intLifetime1 * var8Lifetime1 / 16, 49);
             var16.field_w = true;
@@ -3174,7 +3174,7 @@ final class Battle {
           }
           if (var9 > 0 &&
             var8 > 0) {
-            IntrusiveDeque.a(param2.field_m, var9, var7, 111, var6_int, var11, var8, param4.field_m, var10, true);
+            IntrusiveDeque.blitMaskedBytes(param2.field_m, var9, var7, 111, var6_int, var11, var8, param4.field_m, var10, true);
             return;
           }
           return;
@@ -3810,7 +3810,7 @@ final class Battle {
             stackIn_131_0 = -1;
             if (stackIn_131_0 == ~(1 & var12Lifetime1)) {
               if (0 != var3) {
-                var14Lifetime1 = ScreenDisplayMode.a(var24, var3, (byte) -110);
+                var14Lifetime1 = ScreenDisplayMode.randomBelow(var24, var3, (byte) -110);
                 fieldTemp$1 = this.field_nb;
                 this.field_nb = this.field_nb + 1;
                 this.addUnit((byte) -123, new BattleUnit(var13Lifetime1, var28[var14Lifetime1], var29[var14Lifetime1], fieldTemp$1, this, var12Lifetime1));
@@ -3818,20 +3818,20 @@ final class Battle {
                 var5[var14Lifetime1] = var28[var3];
                 var6[var14Lifetime1] = var29[var3];
               } else {
-                var14Lifetime1 = ScreenDisplayMode.a(var24, var12Lifetime1, (byte) -123);
+                var14Lifetime1 = ScreenDisplayMode.randomBelow(var24, var12Lifetime1, (byte) -123);
                 var25 = this.getUnitByOwner(var14Lifetime1, true);
                 fieldTemp$2 = this.field_nb;
                 this.field_nb = this.field_nb + 1;
                 this.addUnit((byte) -124, new BattleUnit(var13Lifetime1, var25.field_lb, -32 + var25.field_db, fieldTemp$2, this, var12Lifetime1));
               }
             } else if (var8 == 0) {
-              var14Lifetime1 = ScreenDisplayMode.a(var24, var12Lifetime1, (byte) -81);
+              var14Lifetime1 = ScreenDisplayMode.randomBelow(var24, var12Lifetime1, (byte) -81);
               var26 = this.getUnitByOwner(var14Lifetime1, true);
               fieldTemp$3 = this.field_nb;
               this.field_nb = this.field_nb + 1;
               this.addUnit((byte) -122, new BattleUnit(var13Lifetime1, var26.field_lb, var26.field_db - 32, fieldTemp$3, this, var12Lifetime1));
             } else {
-              var14Lifetime1 = ScreenDisplayMode.a(var24, var8, (byte) -53);
+              var14Lifetime1 = ScreenDisplayMode.randomBelow(var24, var8, (byte) -53);
               var8--;
               fieldTemp$4 = this.field_nb;
               this.field_nb = this.field_nb + 1;
@@ -3937,7 +3937,7 @@ final class Battle {
               var9 = 27;
             }
             if (var3 != 0) {
-              var10 = ScreenDisplayMode.a(var24, var3, (byte) -79);
+              var10 = ScreenDisplayMode.randomBelow(var24, var3, (byte) -79);
               fieldTemp$7 = this.field_nb;
               this.field_nb = this.field_nb + 1;
               this.addUnit((byte) -127, new BattleUnit(var9, var18[var10], var19[var10], fieldTemp$7, this, var8));
@@ -3945,7 +3945,7 @@ final class Battle {
               var18[var10] = var18[var3];
               var19[var10] = var19[var3];
             } else {
-              var10 = ScreenDisplayMode.a(var24, var8, (byte) -124);
+              var10 = ScreenDisplayMode.randomBelow(var24, var8, (byte) -124);
               var27 = this.getUnitByOwner(var10, true);
               fieldTemp$8 = this.field_nb;
               this.field_nb = this.field_nb + 1;
@@ -3959,7 +3959,7 @@ final class Battle {
 
     final int[] getPlayerSpellSlots(int param0, int param1) {
         if (param0 != 3) {
-          field_P = (hn) null;
+          field_P = (JaggrabDownloader) null;
         }
         return this.field_v[param1];
     }
@@ -4122,12 +4122,12 @@ final class Battle {
           do {
             if (var5 >= (-1 + var16.length)) {
               var4[-1 + var16.length] = var16[0];
-              var5 = ScreenDisplayMode.a(param1, var16.length - 4, (byte) -103) + 2;
-              var4[var5] = this.field_H + (-100 - ScreenDisplayMode.a(param1, 250, (byte) -34));
+              var5 = ScreenDisplayMode.randomBelow(param1, var16.length - 4, (byte) -103) + 2;
+              var4[var5] = this.field_H + (-100 - ScreenDisplayMode.randomBelow(param1, 250, (byte) -34));
               var4[var5 - 1] = (var4[var5 - 1] + var16[var5]) / 2;
               break;
             }
-            var4[var5] = this.field_H / 2 - ScreenDisplayMode.a(param1, this.field_H / 2, (byte) -26);
+            var4[var5] = this.field_H / 2 - ScreenDisplayMode.randomBelow(param1, this.field_H / 2, (byte) -26);
             var5++;
           } while (var12 == 0);
           var4[1 + var5] = (var4[param0 + var5] + var16[var5]) / 2;
@@ -4150,7 +4150,7 @@ final class Battle {
                   stackIn_10_1 = -1 + var5 * 2;
                   stackIn_10_2 = (var4[var5 - 1] + var4[var5]) / 2;
                   if (var3_int != 0) {
-                    stackIn_17_3 = ScreenDisplayMode.a(param1, var3_int, (byte) -30);
+                    stackIn_17_3 = ScreenDisplayMode.randomBelow(param1, var3_int, (byte) -30);
                   } else {
                     stackIn_17_3 = 0;
                   }
@@ -4170,12 +4170,12 @@ final class Battle {
           var6_array = var14;
           var5 = 0;
           while (var17[0].length > var5) {
-            var17[0][var5] = this.field_H - ScreenDisplayMode.a(param1, this.field_H - 250, (byte) -103);
-            var17[1][var5] = this.field_H - ScreenDisplayMode.a(param1, -200 + this.field_H, (byte) -100);
-            var17[2][var5] = this.field_H - ScreenDisplayMode.a(param1, -150 + this.field_H, (byte) -107);
-            var17[3][var5] = this.field_H - ScreenDisplayMode.a(param1, this.field_H - 100, (byte) -121);
-            var17[4][var5] = this.field_H - ScreenDisplayMode.a(param1, -50 + this.field_H, (byte) -60);
-            var17[5][var5] = this.field_H - ScreenDisplayMode.a(param1, this.field_H, (byte) -60);
+            var17[0][var5] = this.field_H - ScreenDisplayMode.randomBelow(param1, this.field_H - 250, (byte) -103);
+            var17[1][var5] = this.field_H - ScreenDisplayMode.randomBelow(param1, -200 + this.field_H, (byte) -100);
+            var17[2][var5] = this.field_H - ScreenDisplayMode.randomBelow(param1, -150 + this.field_H, (byte) -107);
+            var17[3][var5] = this.field_H - ScreenDisplayMode.randomBelow(param1, this.field_H - 100, (byte) -121);
+            var17[4][var5] = this.field_H - ScreenDisplayMode.randomBelow(param1, -50 + this.field_H, (byte) -60);
+            var17[5][var5] = this.field_H - ScreenDisplayMode.randomBelow(param1, this.field_H, (byte) -60);
             var5++;
             if (var12 == 0) {
               continue;
@@ -4211,7 +4211,7 @@ final class Battle {
                         if (var3_intLifetime1 == 0) {
                           stackIn_36_3 = 0;
                         } else {
-                          stackIn_36_3 = ScreenDisplayMode.a(param1, var3_intLifetime1, (byte) -78);
+                          stackIn_36_3 = ScreenDisplayMode.randomBelow(param1, var3_intLifetime1, (byte) -78);
                         }
                         stackIn_29_0[stackIn_29_1] = stackIn_29_2 + stackIn_36_3;
                         var8_ref_int__[2 * var5] = var17[var7][var5];
@@ -4909,12 +4909,12 @@ final class Battle {
           do {
             if (var5 >= var17.length - 1) {
               var4[-1 + var17.length] = var17[0];
-              var5 = ScreenDisplayMode.a(param1, -4 + var17.length, (byte) -80) + 2;
-              var4[var5] = -100 + this.field_H - ScreenDisplayMode.a(param1, 250, (byte) -82);
+              var5 = ScreenDisplayMode.randomBelow(param1, -4 + var17.length, (byte) -80) + 2;
+              var4[var5] = -100 + this.field_H - ScreenDisplayMode.randomBelow(param1, 250, (byte) -82);
               var4[var5 - 1] = (var17[var5] + var4[-1 + var5]) / 2;
               break;
             }
-            var4[var5] = this.field_H / 2 + 150 - ScreenDisplayMode.a(param1, -100 + this.field_H / 2, (byte) -24);
+            var4[var5] = this.field_H / 2 + 150 - ScreenDisplayMode.randomBelow(param1, -100 + this.field_H / 2, (byte) -24);
             var5++;
           } while (var12 == 0);
           var4[var5 + 1] = (var17[var5] + var4[1 + var5]) / 2;
@@ -4940,7 +4940,7 @@ final class Battle {
                   if (0 == var3_int) {
                     stackIn_17_3 = 0;
                   } else {
-                    stackIn_17_3 = ScreenDisplayMode.a(param1, var3_int, (byte) -81);
+                    stackIn_17_3 = ScreenDisplayMode.randomBelow(param1, var3_int, (byte) -81);
                   }
                   stackIn_10_0[stackIn_10_1] = stackIn_10_2 - (-stackIn_17_3 + var3_int / 2);
                   var13[2 * var5] = var4[var5];
@@ -4990,12 +4990,12 @@ final class Battle {
               var18[5][var18[0].length - 1] = var18[5][0];
               break;
             }
-            var18[0][var5] = this.field_H - 250 - ScreenDisplayMode.a(param1, this.field_H - 300, (byte) -73);
-            var18[1][var5] = -200 + (this.field_H - ScreenDisplayMode.a(param1, this.field_H - 250, (byte) -30));
-            var18[2][var5] = -150 + (this.field_H - ScreenDisplayMode.a(param1, -200 + this.field_H, (byte) -39));
-            var18[3][var5] = this.field_H - 100 - ScreenDisplayMode.a(param1, -150 + this.field_H, (byte) -122);
-            var18[4][var5] = this.field_H - 50 - ScreenDisplayMode.a(param1, -100 + this.field_H, (byte) -54);
-            var18[5][var5] = this.field_H - ScreenDisplayMode.a(param1, -50 + this.field_H, (byte) -117);
+            var18[0][var5] = this.field_H - 250 - ScreenDisplayMode.randomBelow(param1, this.field_H - 300, (byte) -73);
+            var18[1][var5] = -200 + (this.field_H - ScreenDisplayMode.randomBelow(param1, this.field_H - 250, (byte) -30));
+            var18[2][var5] = -150 + (this.field_H - ScreenDisplayMode.randomBelow(param1, -200 + this.field_H, (byte) -39));
+            var18[3][var5] = this.field_H - 100 - ScreenDisplayMode.randomBelow(param1, -150 + this.field_H, (byte) -122);
+            var18[4][var5] = this.field_H - 50 - ScreenDisplayMode.randomBelow(param1, -100 + this.field_H, (byte) -54);
+            var18[5][var5] = this.field_H - ScreenDisplayMode.randomBelow(param1, -50 + this.field_H, (byte) -117);
             var5++;
           } while (var12 == 0);
           var7Lifetime1 = 0;
@@ -5026,7 +5026,7 @@ final class Battle {
                         stackIn_45_2 = -(var3_intLifetime1 / 2);
                         stackIn_51_3 = (var18[var7Lifetime1][-1 + var5] + var18[var7Lifetime1][var5]) / 2;
                         if (var3_intLifetime1 != 0) {
-                          stackIn_52_4 = ScreenDisplayMode.a(param1, var3_intLifetime1, (byte) -83);
+                          stackIn_52_4 = ScreenDisplayMode.randomBelow(param1, var3_intLifetime1, (byte) -83);
                         } else {
                           stackIn_52_4 = 0;
                         }
@@ -5260,7 +5260,7 @@ final class Battle {
               var7 = param4.field_q >> 1;
               break;
             }
-            var27[var7] = (byte)MusicPatchPcmStream.field_p[this.field_O].a(param4.field_A[var7], 510);
+            var27[var7] = (byte)MusicPatchPcmStream.field_p[this.field_O].lookupColour(param4.field_A[var7], 510);
             var7++;
           } while (var26 == 0);
           var8 = param4.field_y >> 1;
@@ -5334,7 +5334,7 @@ final class Battle {
                     var23 = var23 + (var31[var25] >> 8 & 255);
                     var25++;
                   }
-                  param3.field_m[var21] = (byte)MusicPatchPcmStream.field_p[this.field_O].a(fj.bitOr(fj.bitOr(var23 >> 2 << 8, var22 >> 2 << 16), var24 >> 2), 510);
+                  param3.field_m[var21] = (byte)MusicPatchPcmStream.field_p[this.field_O].lookupColour(fj.bitOr(fj.bitOr(var23 >> 2 << 8, var22 >> 2 << 16), var24 >> 2), 510);
                   var19 += 2;
                   continue scanLoop2;
                 }
@@ -5464,7 +5464,7 @@ final class Battle {
               var20[0] = 0;
               break;
             }
-            var16[var5] = 10 * this.field_H / 8 - ScreenDisplayMode.a(param1, this.field_H, (byte) -65);
+            var16[var5] = 10 * this.field_H / 8 - ScreenDisplayMode.randomBelow(param1, this.field_H, (byte) -65);
             var5++;
           } while (var15 == 0);
           var16[var20.length - 1] = var20[0];
@@ -5508,7 +5508,7 @@ final class Battle {
           var6 = stackIn_20_0;
           scanLoop2: while (true) {
             var5++;
-            var7_int = ScreenDisplayMode.a(param1, this.field_y / 2, (byte) -94) + this.field_y / 4;
+            var7_int = ScreenDisplayMode.randomBelow(param1, this.field_y / 2, (byte) -94) + this.field_y / 4;
             var8 = 2;
             scanLoop3: while (true) {
               var9 = this.field_y * var8 + var7_int;
@@ -5536,13 +5536,13 @@ final class Battle {
               }
               break;
             }
-            var10 = (this.field_H - var8) * 64 / this.field_H + ScreenDisplayMode.a(param1, 16, (byte) -37);
+            var10 = (this.field_H - var8) * 64 / this.field_H + ScreenDisplayMode.randomBelow(param1, 16, (byte) -37);
             do {
               if (this.field_H > var8 &&
                 (32 + var10) < var8 &&
                 var10 < var7_int &&
                 var7_int < this.field_y - var10) {
-                MusicPatchNode.a(mn.field_y, (byte) -47, var10, (byte) -5, var8, var7_int, this);
+                MusicPatchNode.carveTerrain(mn.field_y, (byte) -47, var10, (byte) -5, var8, var7_int, this);
                 var6 = var8;
               }
               if (var8 < 32 + var10) {
@@ -5568,9 +5568,9 @@ final class Battle {
             stackIn_47_0 = -11;
             stackIn_47_1 = ~var5;
             if (stackIn_47_0 < stackIn_47_1) {
-              var7 = SocketConnector.field_j[4 + (ScreenDisplayMode.a(param1, 4, (byte) -124) + this.field_O * 8)];
-              var11 = ScreenDisplayMode.a(param1, this.field_y - 256, (byte) -69);
-              var12 = ScreenDisplayMode.a(param1, -256 + this.field_H, (byte) -86);
+              var7 = SocketConnector.field_j[4 + (ScreenDisplayMode.randomBelow(param1, 4, (byte) -124) + this.field_O * 8)];
+              var11 = ScreenDisplayMode.randomBelow(param1, this.field_y - 256, (byte) -69);
+              var12 = ScreenDisplayMode.randomBelow(param1, -256 + this.field_H, (byte) -86);
               var13 = 1;
               var14 = 0;
               while (var14 < var10) {
@@ -5730,7 +5730,7 @@ final class Battle {
                     var21 = var21 + (var27[var24] >> 16);
                     var24++;
                   }
-                  param1.field_m[var20] = (byte)MusicPatchPcmStream.field_p[this.field_O].a(fj.bitOr(var23 >> 2, fj.bitOr(var21 >> 2 << 16, var22 >> 2 << 8)), 510);
+                  param1.field_m[var20] = (byte)MusicPatchPcmStream.field_p[this.field_O].lookupColour(fj.bitOr(var23 >> 2, fj.bitOr(var21 >> 2 << 16, var22 >> 2 << 8)), 510);
                   var18 += 2;
                   continue scanLoop2;
                 }
@@ -6398,42 +6398,42 @@ final class Battle {
               var25[19] = 64 + this.field_H;
               break;
             }
-            var25[var5] = 64 + (this.field_H - ScreenDisplayMode.a(param1, 256, (byte) -123));
+            var25[var5] = 64 + (this.field_H - ScreenDisplayMode.randomBelow(param1, 256, (byte) -123));
             var5++;
           } while (var24 == 0);
-          var6 = ScreenDisplayMode.a(param1, 5, (byte) -110) + 1;
-          var7 = -2 + (ScreenDisplayMode.a(param1, 5, (byte) -90) + 10);
-          var8 = -6 + ScreenDisplayMode.a(param1, 5, (byte) -80) + 20;
+          var6 = ScreenDisplayMode.randomBelow(param1, 5, (byte) -110) + 1;
+          var7 = -2 + (ScreenDisplayMode.randomBelow(param1, 5, (byte) -90) + 10);
+          var8 = -6 + ScreenDisplayMode.randomBelow(param1, 5, (byte) -80) + 20;
           if (var6 <= 1) {
-            var25[3 + var6] = this.field_H * 6 / 8 - ScreenDisplayMode.a(param1, this.field_H * 3 / 8, (byte) -69);
+            var25[3 + var6] = this.field_H * 6 / 8 - ScreenDisplayMode.randomBelow(param1, this.field_H * 3 / 8, (byte) -69);
           }
           if (var6 > 1 ||
             var24 != 0) {
-            var25[-1 + var6] = this.field_H * 6 / 8 - ScreenDisplayMode.a(param1, 5 * this.field_H / 8, (byte) -28);
+            var25[-1 + var6] = this.field_H * 6 / 8 - ScreenDisplayMode.randomBelow(param1, 5 * this.field_H / 8, (byte) -28);
           }
-          var25[var6] = 6 * this.field_H / 8 - ScreenDisplayMode.a(param1, this.field_H * 5 / 8, (byte) -30);
-          var25[var6 + 1] = this.field_H * 6 / 8 - ScreenDisplayMode.a(param1, this.field_H * 5 / 8, (byte) -23);
-          var25[var6 + 2] = 6 * this.field_H / 8 - ScreenDisplayMode.a(param1, 4 * this.field_H / 8, (byte) -27);
+          var25[var6] = 6 * this.field_H / 8 - ScreenDisplayMode.randomBelow(param1, this.field_H * 5 / 8, (byte) -30);
+          var25[var6 + 1] = this.field_H * 6 / 8 - ScreenDisplayMode.randomBelow(param1, this.field_H * 5 / 8, (byte) -23);
+          var25[var6 + 2] = 6 * this.field_H / 8 - ScreenDisplayMode.randomBelow(param1, 4 * this.field_H / 8, (byte) -27);
           var9 = var27[var6];
-          var25[var8 - 1] = 6 * this.field_H / 8 - ScreenDisplayMode.a(param1, this.field_H * 5 / 8, (byte) -54);
-          var25[var8 - 2] = this.field_H * 6 / 8 - ScreenDisplayMode.a(param1, 4 * this.field_H / 8, (byte) -93);
-          var25[var8] = 6 * this.field_H / 8 - ScreenDisplayMode.a(param1, 5 * this.field_H / 8, (byte) -97);
+          var25[var8 - 1] = 6 * this.field_H / 8 - ScreenDisplayMode.randomBelow(param1, this.field_H * 5 / 8, (byte) -54);
+          var25[var8 - 2] = this.field_H * 6 / 8 - ScreenDisplayMode.randomBelow(param1, 4 * this.field_H / 8, (byte) -93);
+          var25[var8] = 6 * this.field_H / 8 - ScreenDisplayMode.randomBelow(param1, 5 * this.field_H / 8, (byte) -97);
           if (var8 >= 17) {
-            var25[var8 - 3] = 6 * this.field_H / 8 - ScreenDisplayMode.a(param1, 3 * this.field_H / 8, (byte) -115);
+            var25[var8 - 3] = 6 * this.field_H / 8 - ScreenDisplayMode.randomBelow(param1, 3 * this.field_H / 8, (byte) -115);
           }
           if (var8 < 17 ||
             var24 != 0) {
-            var25[1 + var8] = 6 * this.field_H / 8 - ScreenDisplayMode.a(param1, this.field_H * 5 / 8, (byte) -57);
+            var25[1 + var8] = 6 * this.field_H / 8 - ScreenDisplayMode.randomBelow(param1, this.field_H * 5 / 8, (byte) -57);
           }
           var10 = var27[var8];
-          var25[-2 + var7] = 6 * this.field_H / 8 - ScreenDisplayMode.a(param1, this.field_H * 3 / 8, (byte) -100);
-          var25[-1 + var7] = 6 * this.field_H / 8 - ScreenDisplayMode.a(param1, this.field_H * 4 / 8, (byte) -95);
-          var25[var7] = 6 * this.field_H / 8 - ScreenDisplayMode.a(param1, 5 * this.field_H / 8, (byte) -74);
+          var25[-2 + var7] = 6 * this.field_H / 8 - ScreenDisplayMode.randomBelow(param1, this.field_H * 3 / 8, (byte) -100);
+          var25[-1 + var7] = 6 * this.field_H / 8 - ScreenDisplayMode.randomBelow(param1, this.field_H * 4 / 8, (byte) -95);
+          var25[var7] = 6 * this.field_H / 8 - ScreenDisplayMode.randomBelow(param1, 5 * this.field_H / 8, (byte) -74);
           if (param0 != -22070) {
             this.field_y = 13;
           }
-          var25[1 + var7] = 6 * this.field_H / 8 - ScreenDisplayMode.a(param1, this.field_H * 4 / 8, (byte) -114);
-          var25[var7 + 2] = 6 * this.field_H / 8 - ScreenDisplayMode.a(param1, this.field_H * 3 / 8, (byte) -30);
+          var25[1 + var7] = 6 * this.field_H / 8 - ScreenDisplayMode.randomBelow(param1, this.field_H * 4 / 8, (byte) -114);
+          var25[var7 + 2] = 6 * this.field_H / 8 - ScreenDisplayMode.randomBelow(param1, this.field_H * 3 / 8, (byte) -30);
           var11 = var27[var7];
           var25[(var7 + var6) / 2] = 64 + this.field_H;
           var25[(var7 + var8) / 2] = this.field_H + 64;
@@ -6662,7 +6662,7 @@ final class Battle {
               var4[var9.length - 2] = var4[-2 + var9.length] / 2;
               break;
             }
-            var4[var5] = this.field_H * 6 / 8 - ScreenDisplayMode.a(param0, this.field_H * 5 / 8, (byte) -125);
+            var4[var5] = this.field_H * 6 / 8 - ScreenDisplayMode.randomBelow(param0, this.field_H * 5 / 8, (byte) -125);
             var5++;
           } while (var7 == 0);
           var4[var9.length - 1] = var9[0];
@@ -6729,7 +6729,7 @@ final class Battle {
         if (param2 != -83) {
           this.carveTerrainWithSprite(1, (byte) 42, 71, (IndexedSprite) null, (Sprite) null);
         }
-        return DebouncedValidator.a(this.field_Jb, param0, param1, 96);
+        return DebouncedValidator.isMaskSetAt(this.field_Jb, param0, param1, 96);
     }
 
     private final void clearProjectiles(byte param0) {
@@ -6832,13 +6832,13 @@ final class Battle {
             var13 = var16;
             var14 = 0;
             while (var14 < param5.field_A.length) {
-              var13[var14] = (byte)MusicPatchPcmStream.field_p[this.field_O].a(param5.field_A[var14], 510);
+              var13[var14] = (byte)MusicPatchPcmStream.field_p[this.field_O].lookupColour(param5.field_A[var14], 510);
               var14++;
               if (var15 != 0) {
                 return;
               }
             }
-            IntrusiveDeque.a(var17, var10, var8, 115, var7_int, var12, var9, param2.field_m, var11, param3);
+            IntrusiveDeque.blitMaskedBytes(var17, var10, var8, 115, var7_int, var12, var9, param2.field_m, var11, param3);
             return;
           }
           return;
@@ -7906,7 +7906,7 @@ final class Battle {
             var12.field_jb = 23;
             var12.initializeAppearance((byte) 6);
             this.refreshTerrainArea(var12.field_lb, 10 + (var12.field_Y >> 1), (byte) 51, -(var12.field_Y >> 1) + (var12.field_db - 10));
-            i.a(this.field_V, -var12.field_Y + var12.field_db, -(var12.field_Y >> 1) + var12.field_lb, (byte) 0, this, var12.field_w, 0);
+            i.stampSpriteMaskColour(this.field_V, -var12.field_Y + var12.field_db, -(var12.field_Y >> 1) + var12.field_lb, (byte) 0, this, var12.field_w, 0);
             this.updateAllUnits((byte) 86);
             var11Lifetime2 = 0;
             this.field_D = true;
@@ -7921,7 +7921,7 @@ final class Battle {
             var12.field_jb = 24;
             var12.initializeAppearance((byte) 6);
             this.refreshTerrainArea(var12.field_lb, 10 + (var12.field_Y >> 1), (byte) 51, -10 + (var12.field_db - (var12.field_Y >> 1)));
-            i.a(this.field_V, var12.field_db - var12.field_Y, var12.field_lb - (var12.field_Y >> 1), (byte) 0, this, var12.field_w, 0);
+            i.stampSpriteMaskColour(this.field_V, var12.field_db - var12.field_Y, var12.field_lb - (var12.field_Y >> 1), (byte) 0, this, var12.field_w, 0);
             this.updateAllUnits((byte) 86);
             this.field_D = true;
             var11Lifetime3 = 0;
@@ -7933,7 +7933,7 @@ final class Battle {
             var12.field_jb = 35;
             var12.initializeAppearance((byte) 6);
             this.refreshTerrainArea(var12.field_lb, (var12.field_Y >> 1) + 10, (byte) 51, -10 + (-(var12.field_Y >> 1) + var12.field_db));
-            i.a(this.field_V, -var12.field_Y + var12.field_db, var12.field_lb - (var12.field_Y >> 1), (byte) 0, this, var12.field_w, 0);
+            i.stampSpriteMaskColour(this.field_V, -var12.field_Y + var12.field_db, var12.field_lb - (var12.field_Y >> 1), (byte) 0, this, var12.field_w, 0);
             this.updateAllUnits((byte) 86);
             this.field_D = true;
             var11Lifetime4 = 0;
@@ -7943,7 +7943,7 @@ final class Battle {
           boolean decompiledFrameCompleted10 = true;
           if (var10 == 61) {
             this.consumeSpellCharge((byte) 80, var10, var4);
-            var24Lifetime1 = gf.a((var9 + 480) * 32 / 4, -266740663);
+            var24Lifetime1 = gf.log2Floor((var9 + 480) * 32 / 4, -266740663);
             var25_intLifetime1 = -96 + 192 * (1 & var8);
             var26 = 1;
             var27 = 0;
@@ -8231,7 +8231,7 @@ final class Battle {
             if (stackIn_541_0.field_I != null) {
               var12.field_I.makeRasterTarget();
               SoftwareRasterizer.fillRectangle(0, 0, var12.field_I.field_n, var12.field_I.field_w, 0);
-              if (null != tk.field_x) {
+              if (null != QuickChatPhrase.field_x) {
                 var48 = new int[]{255, 0, 0};
                 var24_ref_int__ = var48;
                 var49 = new int[]{0, 255, 0};
@@ -8275,7 +8275,7 @@ final class Battle {
                 }
                 var29 = new Sprite(64, 96);
                 var29.makeRasterTarget();
-                pc.drawTexturedSpriteIntGuard(var50, 16, var51, var48, 80, var49, tk.field_x[2], 0);
+                pc.drawTexturedSpriteIntGuard(var50, 16, var51, var48, 80, var49, QuickChatPhrase.field_x[2], 0);
                 var12.field_I.normalizeCanvas();
                 var12.field_I.makeRasterTarget();
                 SoftwareRasterizer.fillRectangle(0, 0, 32, 48, 0);
@@ -8298,7 +8298,7 @@ final class Battle {
           }
           if (var10 == 58) {
             this.consumeSpellCharge((byte) 80, var10, var4);
-            var24Lifetime3 = gf.a((480 + var9) * 32 / 4, -266740663);
+            var24Lifetime3 = gf.log2Floor((480 + var9) * 32 / 4, -266740663);
             var25_intLifetime2 = -96 + (var8 & 1) * 192;
             var26_ref_mi = BevelBoxPainter.createProjectile(var12, -544, (byte) -128, this, var10, var8 - var24Lifetime3 * var25_intLifetime2 / 16, 49);
             var26_ref_mi.field_u = var25_intLifetime2;
@@ -8314,7 +8314,7 @@ final class Battle {
           }
           if (var10 == 34) {
             this.consumeSpellCharge((byte) 80, var10, var4);
-            var24Lifetime4 = gf.a((var9 + 480) * 32 / 4, -266740663);
+            var24Lifetime4 = gf.log2Floor((var9 + 480) * 32 / 4, -266740663);
             var25_intLifetime3 = (1 & var8) * 192 - 96;
             var26_ref_miLifetime1 = BevelBoxPainter.createProjectile(var12, -544, (byte) -119, this, var10, var8 - var24Lifetime4 * var25_intLifetime3 / 16, 28);
             var26_ref_miLifetime1.field_u = var25_intLifetime3;
@@ -8325,7 +8325,7 @@ final class Battle {
           boolean decompiledFrameCompleted4 = true;
           if (var10 == 20) {
             this.consumeSpellCharge((byte) 80, var10, var4);
-            var24Lifetime5 = gf.a((var9 + 480) * 32 / 4, -266740663);
+            var24Lifetime5 = gf.log2Floor((var9 + 480) * 32 / 4, -266740663);
             var25_intLifetime4 = (1 & var8) * 192 - 96;
             var26Lifetime1 = 5;
             if (0 == this.field_x[var4]) {
@@ -8350,7 +8350,7 @@ final class Battle {
           boolean decompiledFrameCompleted3 = true;
           if (var10 == 105) {
             this.consumeSpellCharge((byte) 80, var10, var4);
-            var24Lifetime6 = gf.a((15360 + var9 * 32) / 4, -266740663);
+            var24Lifetime6 = gf.log2Floor((15360 + var9 * 32) / 4, -266740663);
             var25_intLifetime5 = -96 + 192 * (var8 & 1);
             var26Lifetime2 = 0;
             while (var26Lifetime2 < 5) {
@@ -8371,7 +8371,7 @@ final class Battle {
           boolean decompiledFrameCompleted2 = true;
           if (var10 == 21) {
             this.consumeSpellCharge((byte) 80, var10, var4);
-            var24Lifetime7 = gf.a(32 * (var9 + 480) / 4, -266740663);
+            var24Lifetime7 = gf.log2Floor(32 * (var9 + 480) / 4, -266740663);
             var25_intLifetime6 = -96 + 192 * (1 & var8);
             var26Lifetime3 = 5;
             if (this.field_x[var4] == 0) {
@@ -8665,7 +8665,7 @@ final class Battle {
             var12.field_jb = 20;
             var12.initializeAppearance((byte) 6);
             this.refreshTerrainArea(var12.field_lb, 10 + (var12.field_Y >> 1), (byte) 51, var12.field_db + (-(var12.field_Y >> 1) - 10));
-            i.a(this.field_V, var12.field_db - var12.field_Y, -(var12.field_Y >> 1) + var12.field_lb, (byte) 0, this, var12.field_w, 0);
+            i.stampSpriteMaskColour(this.field_V, var12.field_db - var12.field_Y, -(var12.field_Y >> 1) + var12.field_lb, (byte) 0, this, var12.field_w, 0);
             this.updateAllUnits((byte) 86);
             var11Lifetime7 = 0;
             this.field_D = true;
@@ -8677,7 +8677,7 @@ final class Battle {
             var12.field_jb = 38;
             var12.initializeAppearance((byte) 6);
             this.refreshTerrainArea(var12.field_lb, (var12.field_Y >> 1) + 10, (byte) 51, -10 + (-(var12.field_Y >> 1) + var12.field_db));
-            i.a(this.field_V, var12.field_db - var12.field_Y, -(var12.field_Y >> 1) + var12.field_lb, (byte) 0, this, var12.field_w, 0);
+            i.stampSpriteMaskColour(this.field_V, var12.field_db - var12.field_Y, -(var12.field_Y >> 1) + var12.field_lb, (byte) 0, this, var12.field_w, 0);
             this.updateAllUnits((byte) 86);
             var11Lifetime8 = 0;
             this.field_D = true;
@@ -8689,7 +8689,7 @@ final class Battle {
             var12.field_jb = 22;
             var12.initializeAppearance((byte) 6);
             this.refreshTerrainArea(var12.field_lb, 10 + (var12.field_Y >> 1), (byte) 51, var12.field_db + (-(var12.field_Y >> 1) - 10));
-            i.a(this.field_V, -var12.field_Y + var12.field_db, -(var12.field_Y >> 1) + var12.field_lb, (byte) 0, this, var12.field_w, 0);
+            i.stampSpriteMaskColour(this.field_V, -var12.field_Y + var12.field_db, -(var12.field_Y >> 1) + var12.field_lb, (byte) 0, this, var12.field_w, 0);
             this.updateAllUnits((byte) 86);
             var11Lifetime9 = 0;
             this.field_D = true;
@@ -8701,7 +8701,7 @@ final class Battle {
             var12.field_jb = 21;
             var12.initializeAppearance((byte) 6);
             this.refreshTerrainArea(var12.field_lb, 10 + (var12.field_Y >> 1), (byte) 51, -(var12.field_Y >> 1) + var12.field_db - 10);
-            i.a(this.field_V, var12.field_db - var12.field_Y, -(var12.field_Y >> 1) + var12.field_lb, (byte) 0, this, var12.field_w, 0);
+            i.stampSpriteMaskColour(this.field_V, var12.field_db - var12.field_Y, -(var12.field_Y >> 1) + var12.field_lb, (byte) 0, this, var12.field_w, 0);
             this.updateAllUnits((byte) 86);
             this.field_D = true;
             var11Lifetime10 = 0;
@@ -8781,14 +8781,14 @@ final class Battle {
           var7 = 0;
           do {
             if (var7 >= -1 + var15.length) {
-              var13[1 + ScreenDisplayMode.a(param1, var15.length - 2, (byte) -26)] = 32 + this.field_H;
-              var13[ScreenDisplayMode.a(param1, var15.length - 2, (byte) -111) + 1] = this.field_H + 32;
-              var13[ScreenDisplayMode.a(param1, -2 + var15.length, (byte) -111) + 1] = this.field_H + 32;
-              var13[1 + ScreenDisplayMode.a(param1, var15.length - 2, (byte) -81)] = 32 + this.field_H;
+              var13[1 + ScreenDisplayMode.randomBelow(param1, var15.length - 2, (byte) -26)] = 32 + this.field_H;
+              var13[ScreenDisplayMode.randomBelow(param1, var15.length - 2, (byte) -111) + 1] = this.field_H + 32;
+              var13[ScreenDisplayMode.randomBelow(param1, -2 + var15.length, (byte) -111) + 1] = this.field_H + 32;
+              var13[1 + ScreenDisplayMode.randomBelow(param1, var15.length - 2, (byte) -81)] = 32 + this.field_H;
               var13[0] = this.field_H + 64;
               break;
             }
-            var13[var7] = 7 * this.field_H / 8 - ScreenDisplayMode.a(param1, this.field_H * 2 / 8, (byte) -25);
+            var13[var7] = 7 * this.field_H / 8 - ScreenDisplayMode.randomBelow(param1, this.field_H * 2 / 8, (byte) -25);
             var7++;
           } while (var12 == 0);
           var13[-1 + var15.length] = var15[0];
@@ -8818,7 +8818,7 @@ final class Battle {
                   if (var4 == 0) {
                     stackIn_21_3 = 0;
                   } else {
-                    stackIn_21_3 = ScreenDisplayMode.a(param1, var4, (byte) -62);
+                    stackIn_21_3 = ScreenDisplayMode.randomBelow(param1, var4, (byte) -62);
                   }
                   stackIn_20_0[stackIn_20_1] = stackIn_20_2 + stackIn_21_3;
                   var6_ref_int__[2 * var7] = var5[var7];
@@ -8835,7 +8835,7 @@ final class Battle {
             var7 = 0;
             scanLoop1: while (true) {
               var7++;
-              var8 = ScreenDisplayMode.a(param1, this.field_y, (byte) -36);
+              var8 = ScreenDisplayMode.randomBelow(param1, this.field_y, (byte) -36);
               var9 = 2;
               var10 = var8 + this.field_y * var9;
               scanLoop2: while (true) {
@@ -8863,7 +8863,7 @@ final class Battle {
                   }
                 }
                 stackIn_36_0 = 64 * (-var9 + this.field_H) / this.field_H;
-                stackIn_36_1 = ScreenDisplayMode.a(param1, 16, (byte) -34);
+                stackIn_36_1 = ScreenDisplayMode.randomBelow(param1, 16, (byte) -34);
                 break;
               }
               var11 = stackIn_36_0 + stackIn_36_1;
@@ -8872,7 +8872,7 @@ final class Battle {
                   var9 > (var11 + 32) &&
                   var11 < var8 &&
                   -var11 + this.field_y > var8) {
-                  MusicPatchNode.a(mn.field_y, (byte) -47, var11, (byte) -5, var9, var8, this);
+                  MusicPatchNode.carveTerrain(mn.field_y, (byte) -47, var11, (byte) -5, var9, var8, this);
                   var6 = var9;
                 }
                 if (var9 < 32 + var11) {
@@ -9337,12 +9337,12 @@ final class Battle {
         if (!this.field_eb) {
           return;
         }
-        th.a(this, this.field_V, -1, 4 + param1, param0, param3);
+        th.drawMaskShape(this, this.field_V, -1, 4 + param1, param0, param3);
         if (param2 != 51) {
           this.field_D = false;
         }
-        MusicPatchNode.a(this.field_V, (byte) -47, param1, (byte) 0, param3, param0, this);
-        hj.a(this.field_Jb, param1, param3, this, (byte) 0, param0, param2 ^ -95);
+        MusicPatchNode.carveTerrain(this.field_V, (byte) -47, param1, (byte) 0, param3, param0, this);
+        hj.carveHalfResolutionMask(this.field_Jb, param1, param3, this, (byte) 0, param0, param2 ^ -95);
     }
 
     final boolean canStandAt(int param0, BattleUnit param1, int param2, int param3) {

@@ -97,11 +97,11 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
         return this.field_p == param0;
     }
 
-    final static boolean b(int param0) {
+    final static boolean isConnectionClosed(int param0) {
         if (param0 != 3236) {
           return false;
         }
-        return !SingleChildContainer.field_z.a((byte) -84) ? true : false;
+        return !SingleChildContainer.field_z.isComplete((byte) -84) ? true : false;
     }
 
     public final synchronized void removeConsumer(java.awt.image.ImageConsumer param0) {

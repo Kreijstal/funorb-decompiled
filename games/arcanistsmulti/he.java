@@ -25,13 +25,13 @@ final class he {
         field_d = null;
     }
 
-    final static void a(int param0, String param1) {
+    final static void showStatusMessage(int param0, String param1) {
         if (param0 != 1) {
           return;
         }
         try {
-          FadingModalPanel.a((byte) 84, param1);
-          jn.a(bj.field_qb, false, param0 - 2);
+          FadingModalPanel.setServiceName((byte) 84, param1);
+          jn.openAccountDialog(bj.field_qb, false, param0 - 2);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "he.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

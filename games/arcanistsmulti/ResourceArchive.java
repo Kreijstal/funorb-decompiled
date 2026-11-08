@@ -129,7 +129,7 @@ final class ResourceArchive {
               var23 = (String) null;
               this.hasGroupName(false, (String) null);
             }
-            var37 = hb.a(false, var9);
+            var37 = hb.decompressContainer(false, var9);
             var28 = var37;
             var24 = var28;
             var44 = var24;
@@ -395,14 +395,14 @@ final class ResourceArchive {
         return false;
     }
 
-    final static void b(int param0) {
+    final static void drawPointerSprite(int param0) {
         if (param0 != 403300833) {
           field_a = (int[]) null;
         }
-        int var1 = mb.j((byte) 19);
-        int var2 = IntrusiveNodeHashTable.b(25117);
+        int var1 = mb.getListOffset((byte) 19);
+        int var2 = IntrusiveNodeHashTable.getPointerOriginY(25117);
         CameraFollowTarget.field_f.draw(-StatefulTextPainter.field_r + Checkbox.field_I, -DualLinkDeque.field_d + qe.field_o, -98, var1 + (StatefulTextPainter.field_r << 1), (DualLinkDeque.field_d << 1) + var2);
-        mn.d(-1);
+        mn.drawLoginMethodButtons(-1);
     }
 
     final int getGroupCount(byte param0) {
@@ -877,7 +877,7 @@ final class ResourceArchive {
         RuntimeException var2 = null;
         try {
           if (11 == fj.field_j) {
-            ContextActionMenu.h(7807);
+            ContextActionMenu.noOperation(7807);
           }
           SoundCache.showLoadingProgress(ii.field_f, ArrayWidgetContainer.field_C, af.field_Hb, (byte) -100);
           OptionsDialog.paintCanvasNow(param0, (byte) -112, 0, 0);

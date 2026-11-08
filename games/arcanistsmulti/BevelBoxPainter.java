@@ -106,7 +106,7 @@ final class BevelBoxPainter implements WidgetPainter {
         }
     }
 
-    final static void b(int param0) {
+    final static void saveRandomData(int param0) {
         try {
           if (null != IntrusiveNode.field_f) {
             try {
@@ -124,7 +124,7 @@ final class BevelBoxPainter implements WidgetPainter {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void resetLoginState(boolean param0) {
         nj.field_c = 0;
         if (param0) {
           BevelBoxPainter.integerPower(121, 53, 31);
@@ -132,7 +132,7 @@ final class BevelBoxPainter implements WidgetPainter {
         SocketJs5Transport.field_r = true;
     }
 
-    final static void a(int param0) {
+    final static void updateKeyRepeat(int param0) {
         Object var1 = null;
         int var2 = 0;
         int var4 = 0;
@@ -143,7 +143,7 @@ final class BevelBoxPainter implements WidgetPainter {
           var1 = CredentialKind.field_a;
           synchronized (var1) {
             FrameClock.field_b = FrameClock.field_b + 1;
-            Js5NetworkRequest.field_u = gn.field_b;
+            Js5NetworkRequest.field_u = QuickChatPhraseCache.field_b;
             if (0 > ub.field_b) {
               for (var2 = 0; var2 < 112; var2++) {
                 ri.field_b[var2] = false;
@@ -160,7 +160,7 @@ final class BevelBoxPainter implements WidgetPainter {
                 ri.field_b[~var2] = false;
               }
             }
-            gn.field_b = pi.field_a;
+            QuickChatPhraseCache.field_b = pi.field_a;
             if (param0 != 24) {
               field_e = (String) null;
             }
@@ -190,7 +190,7 @@ final class BevelBoxPainter implements WidgetPainter {
           var7 = param0.field_j + param3;
           TextLayout.drawBevelBox(param0.field_v, var6_int, var7, param0.field_k, 83);
           if (param0.isFocused(-2116)) {
-            oj.a(-32171, var7 + 2, var6_int + 2, -4 + param0.field_k, param0.field_v - 4);
+            oj.drawLoginMethodPanel(-32171, var7 + 2, var6_int + 2, -4 + param0.field_k, param0.field_v - 4);
           }
           SoftwareRasterizer.setClip(var6_int, var7, -2 + (var6_int + param0.field_v), param0.field_k + var7);
           var8 = this.field_d.field_P.getSelectedItem(126);
@@ -206,7 +206,7 @@ final class BevelBoxPainter implements WidgetPainter {
           SoftwareRasterizer.resetClip();
           if (param1 != 5592405) {
             var11 = (String) null;
-            BevelBoxPainter.a(false, (String) null, true, false);
+            BevelBoxPainter.openLoginPanel(false, (String) null, true, false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -231,9 +231,9 @@ final class BevelBoxPainter implements WidgetPainter {
         }
     }
 
-    final static void a(boolean param0, String param1, boolean param2, boolean param3) {
+    final static void openLoginPanel(boolean param0, String param1, boolean param2, boolean param3) {
         try {
-          MusicPatchPcmStream.d(-24225);
+          MusicPatchPcmStream.resetAudioState(-24225);
           ClientException.field_b.deactivatePanels(-117);
           if (param3) {
             BevelBoxPainter.integerPower(-101, 37, 87);

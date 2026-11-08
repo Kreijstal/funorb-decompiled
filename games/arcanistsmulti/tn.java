@@ -108,7 +108,7 @@ final class tn extends SceneWidget {
         if (param0 > 11) {
           return false;
         }
-        stackIn_10_0 = (1 <= param3) && (oe.a(-2, param2, param0) >= param3);
+        stackIn_10_0 = (1 <= param3) && (oe.daysInMonth(-2, param2, param0) >= param3);
         return stackIn_10_0;
     }
 
@@ -178,7 +178,7 @@ final class tn extends SceneWidget {
         }
     }
 
-    final static boolean g(byte param0) {
+    final static boolean isNotMember(byte param0) {
         int var1 = 93 / ((49 - param0) / 60);
         return !AlternateUsernameCredentials.field_p ? true : false;
     }

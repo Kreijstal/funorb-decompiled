@@ -37,7 +37,7 @@ final class BoundedRandomAccessFile {
         return var3;
     }
 
-    final static void a(boolean param0, int param1, int param2, int param3) {
+    final static void updateQuickChat(boolean param0, int param1, int param2, int param3) {
         int var4;
         int var5;
         int var5Lifetime1;
@@ -52,7 +52,7 @@ final class BoundedRandomAccessFile {
         if (WrappedTextLayout.field_r != 0 &&
           var4 == 0) {
           param0 = false;
-          uc.c(3);
+          uc.closeQuickChatIfOpen(3);
         }
         if (!param0) {
           if (var4 == 0) {
@@ -128,7 +128,7 @@ final class BoundedRandomAccessFile {
 
     final long length(int param0) throws IOException {
         if (param0 != -2775) {
-          BoundedRandomAccessFile.a(true, 53, -119, -107);
+          BoundedRandomAccessFile.updateQuickChat(true, 53, -119, -107);
           return this.field_d.length();
         }
         return this.field_d.length();
@@ -192,8 +192,8 @@ final class BoundedRandomAccessFile {
         }
     }
 
-    final static void b(int param0) {
-        DebouncedValidator.a(17, (byte) 30);
+    final static void setPendingMessage(int param0) {
+        DebouncedValidator.setPendingMessageId(17, (byte) 30);
         if (param0 != 28579) {
           field_e = (String) null;
         }

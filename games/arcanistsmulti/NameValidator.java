@@ -37,12 +37,12 @@ final class NameValidator extends TextFieldValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = (CharSequence) ((Object) param0);
-          if (!DebouncedValidator.a((byte) 127, var4)) {
+          if (!DebouncedValidator.isValidName((byte) 127, var4)) {
             stackIn_2_0 = ra.field_k;
             return stackIn_2_0;
           }
           if (!param0.equals(this.field_r)) {
-            var3 = r.a(param0, 256);
+            var3 = r.matchPendingMessage(param0, 256);
             if (var3 != null &&
               null == var3.field_e) {
               this.field_r = param0;
@@ -73,14 +73,14 @@ final class NameValidator extends TextFieldValidator {
         }
     }
 
-    final void e(int param0) {
+    final void resetLookup(int param0) {
         this.field_r = null;
         if (param0 <= 123) {
           this.field_w = false;
         }
     }
 
-    final static void d(byte param0) {
+    final static void updateScrollAnimation(byte param0) {
         if (param0 > -52) {
           return;
         }
@@ -94,7 +94,7 @@ final class NameValidator extends TextFieldValidator {
         if (0 >= jo.field_e) {
           return;
         }
-        ed.j(120);
+        ed.animateOverlayPosition(120);
     }
 
     static int bitAnd(int param0, int param1) {
@@ -123,13 +123,13 @@ final class NameValidator extends TextFieldValidator {
             field_u = 97;
           }
           var5 = (CharSequence) ((Object) param0);
-          var3 = FullscreenFocusCanvas.a(var5, (byte) -118);
+          var3 = FullscreenFocusCanvas.formatName(var5, (byte) -118);
           if (var3 != null) {
             stackIn_5_0 = var3;
             return stackIn_5_0;
           }
           if (!param0.equals(this.field_r)) {
-            var4 = r.a(param0, 256);
+            var4 = r.matchPendingMessage(param0, 256);
             if (var4 == null) {
               return null;
             }

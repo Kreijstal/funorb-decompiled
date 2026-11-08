@@ -84,15 +84,15 @@ final class ValidationState {
           return AccountRegistrationPanel.field_U.processKey(ed.field_Bb, (byte) 123, IntrusiveDeque.field_d);
         }
         if (oj.field_i) {
-          return TextTableInitializer.a(param3, -14, param2);
+          return TextTableInitializer.handleQuickChatKey(param3, -14, param2);
         }
-        if (rk.a((byte) -60, param3, param2)) {
+        if (rk.handleLobbyKey((byte) -60, param3, param2)) {
           return true;
         }
         if (AlternateUsernameCredentials.field_p) {
           return false;
         }
-        return ko.a(-110, param1, param2);
+        return ko.drawChatInputLine(-110, param1, param2);
     }
 
     public final String toString() {
@@ -122,7 +122,7 @@ final class ValidationState {
             stackIn_3_0 = fn.field_h;
             return stackIn_3_0;
           }
-          if (MouseInputHandler.a(16, param2)) {
+          if (MouseInputHandler.isCurrentUser(16, param2)) {
             stackIn_7_0 = BufferedRandomAccessFile.field_l;
             return stackIn_7_0;
           }
@@ -130,7 +130,7 @@ final class ValidationState {
             stackIn_11_0 = FadingModalPanel.field_K;
             return stackIn_11_0;
           }
-          if (sa.a(param2, 320)) {
+          if (sa.isFriend(param2, 320)) {
             stackIn_15_0 = CachedArchiveProvider.formatTemplate(119, new String[]{param2}, ValidationHelpWidget.field_bb);
             return stackIn_15_0;
           }
@@ -138,7 +138,7 @@ final class ValidationState {
             stackIn_19_0 = StrongCacheEntry.field_u;
             return stackIn_19_0;
           }
-          if (ArrayWidgetContainer.a(param2, 1)) {
+          if (ArrayWidgetContainer.hasEntryNamed(param2, 1)) {
             stackIn_23_0 = CachedArchiveProvider.formatTemplate(114, new String[]{param2}, ImageProducerRasterBuffer.field_q);
             return stackIn_23_0;
           }
@@ -220,9 +220,9 @@ final class ValidationState {
           field_b = (String) null;
         }
         if (sk.field_e >= 0) {
-          kg.field_c.field_rb = CachedArchiveProvider.formatTemplate(-14, new String[]{Integer.toString(sk.field_e)}, SoundCache.field_j);
+          QuickChatCategoryCache.field_c.field_rb = CachedArchiveProvider.formatTemplate(-14, new String[]{Integer.toString(sk.field_e)}, SoundCache.field_j);
         } else {
-          kg.field_c.field_rb = null;
+          QuickChatCategoryCache.field_c.field_rb = null;
         }
         stackIn_11_0 = BufferedSocket.field_d;
         stackIn_12_1 = (param0) && (!param1) && (!IntrusiveNode.field_d) && (null == DirectByteStorage.field_f) && (om.field_x == null);
@@ -253,7 +253,7 @@ final class ValidationState {
             }
           }
           if (decompiledFrameRemainder0) {
-            BevelTextPainter.a(param3, 0);
+            BevelTextPainter.sendByteRequest(param3, 0);
           }
         }
         if (0 != GrowableIntList.field_a.field_U) {

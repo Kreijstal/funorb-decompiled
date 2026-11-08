@@ -6,7 +6,7 @@ final class DisplayModeEnumerator implements com.ms.directX.IEnumModesCallback {
     private static int[] field_c;
     private com.ms.directX.DirectDraw field_a;
 
-    final void a(java.awt.Frame param0, byte param1) {
+    final void restoreDisplayMode(java.awt.Frame param0, byte param1) {
         this.field_a.restoreDisplayMode();
         this.field_a.setCooperativeLevel((java.awt.Component) ((Object) param0), 8);
         if (param1 != 6) {
@@ -14,7 +14,7 @@ final class DisplayModeEnumerator implements com.ms.directX.IEnumModesCallback {
         }
     }
 
-    final int[] a(int param0) {
+    final int[] enumerateDisplayModes(int param0) {
         this.field_a.enumDisplayModes(0, (com.ms.directX.DDSurfaceDesc) null, (com.ms.com.IUnknown) null, (com.ms.directX.IEnumModesCallback) (this));
         field_c = new int[field_b];
         field_b = param0;
@@ -26,7 +26,7 @@ final class DisplayModeEnumerator implements com.ms.directX.IEnumModesCallback {
         return var3;
     }
 
-    final void a(int param0, int param1, int param2, java.awt.Frame param3, int param4, int param5) {
+    final void enterFullscreen(int param0, int param1, int param2, java.awt.Frame param3, int param4, int param5) {
         param3.setVisible(true);
         com.ms.awt.WComponentPeer var7 = (com.ms.awt.WComponentPeer) null;
         int var8 = var7.getHwnd();
@@ -41,7 +41,7 @@ final class DisplayModeEnumerator implements com.ms.directX.IEnumModesCallback {
           return;
         }
         java.awt.Frame var9 = (java.awt.Frame) null;
-        this.a((java.awt.Frame) null, (byte) 119);
+        this.restoreDisplayMode((java.awt.Frame) null, (byte) 119);
         com.ms.win32.User32.SetWindowLong(var8, -16, -2147483648);
         com.ms.win32.User32.SetWindowLong(var8, -20, 8);
         this.field_a.setCooperativeLevel((java.awt.Component) ((Object) param3), 17);

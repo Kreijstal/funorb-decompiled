@@ -12,7 +12,7 @@ final class CameraFollowTarget {
     static String field_c;
     static String field_b;
 
-    final static void a(byte param0) {
+    final static void mergeLayoutTables(byte param0) {
         int var2 = 0;
         int var1_int = 0;
         int var3 = 0;
@@ -38,7 +38,7 @@ final class CameraFollowTarget {
         }
     }
 
-    final static void a(int param0, int[] param1, boolean param2, int param3, int param4) {
+    final static void fillInts(int param0, int[] param1, boolean param2, int param3, int param4) {
         int[] var5 = null;
         int var6 = 0;
         int var7 = 0;
@@ -85,7 +85,7 @@ final class CameraFollowTarget {
         this.field_h = null;
         if (param0 != 0) {
           int[] var3 = (int[]) null;
-          CameraFollowTarget.a(-9, (int[]) null, false, -58, 111);
+          CameraFollowTarget.fillInts(-9, (int[]) null, false, -58, 111);
         }
     }
 
@@ -95,7 +95,7 @@ final class CameraFollowTarget {
         field_c = null;
         field_a = null;
         if (param0 != -23971) {
-          CameraFollowTarget.a((byte) -20);
+          CameraFollowTarget.mergeLayoutTables((byte) -20);
         }
         field_e = null;
     }

@@ -7,7 +7,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
     static SceneWidget field_D;
     static String field_x;
     static String field_A;
-    static km field_z;
+    static NameCheckRequest field_z;
     static int field_y;
     static int field_C;
     UiComponent field_B;
@@ -44,7 +44,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
         field_x = null;
         if (param0 != 23123) {
           String var2 = (String) null;
-          SingleChildContainer.a(-25, -49, false, (String) null, false, (String) null);
+          SingleChildContainer.performLogin(-25, -49, false, (String) null, false, (String) null);
         }
         field_A = null;
         field_D = null;
@@ -59,7 +59,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
         }
     }
 
-    final static int a(int param0, int param1, boolean param2, String param3, boolean param4, String param5) {
+    final static int performLogin(int param0, int param1, boolean param2, String param3, boolean param4, String param5) {
         try {
           int stackIn_4_0 = 0;
           int stackIn_7_0 = 0;
@@ -94,7 +94,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
           var9 = ArcanistsMulti.field_G ? 1 : 0;
           try {
             if (null == CredentialKind.field_c &&
-              !ie.a(-62, param4)) {
+              !ie.pollStatusSocket(-62, param4)) {
               stackIn_4_0 = -1;
               return stackIn_4_0;
             }
@@ -112,7 +112,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
               he.field_e.position = 0;
               he.field_e.writeByte(14, (byte) -105);
               he.field_e.writeByte(fd.field_e.getCredentialKind(0).field_g, (byte) -106);
-              we.a(-1, (byte) 86);
+              we.sendKeepAlive(-1, (byte) 86);
               ResizableModalPanel.field_eb = ContextActionMenu.field_Db;
             }
             if (ResizableModalPanel.field_eb == ContextActionMenu.field_Db &&
@@ -161,7 +161,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
               }
             }
             if (ResizableModalPanel.field_eb == bb.field_c &&
-              pn.b(-12564)) {
+              pn.readServerStatus(-12564)) {
               fk.field_k = UiContainer.field_z.readLong(-943038560);
               fn.field_f = param5;
               qf.field_d = UiContainer.field_z.readUnsignedByte((byte) 115);
@@ -170,7 +170,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
               var6 = UiContainer.field_z.readOptionalString(103);
               var7 = UiContainer.field_z.readUnsignedByte((byte) -94);
               if ((1 & var7) != 0) {
-                BevelBoxPainter.b(-69);
+                BevelBoxPainter.saveRandomData(-69);
               }
               if (!param4) {
                 stackIn_46_0 = ((4 & var7) != 0);
@@ -197,7 +197,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
               }
               ah.field_b = UiContainer.field_z.readString(-1);
               var11 = (CharSequence) ((Object) ah.field_b);
-              nm.field_b = Js5ArchiveManager.a(var11, -13);
+              nm.field_b = Js5ArchiveManager.normalizeNameForLookup(var11, -13);
               dd.field_j = UiContainer.field_z.readUnsignedByte((byte) 65);
               ResizableModalPanel.field_eb = qc.field_c;
               if (fd.field_e.getCredentialKind(0) == BufferedSocket.field_q) {
@@ -214,14 +214,14 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
               if (0 >= ah.field_c &&
                 !fd.field_a) {
                 try {
-                  ei.a(IconButtonPainter.getApplet(125), 108, "unzap");
+                  JavaScriptBridge.callFunction(IconButtonPainter.getApplet(125), 108, "unzap");
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               } else {
                 try {
-                  ei.a("zap", IconButtonPainter.getApplet(113), (byte) 114, new Object[]{TextFieldValidator.decodeBase37(fk.field_k, 29424)});
+                  JavaScriptBridge.callFunctionWithArgs("zap", IconButtonPainter.getApplet(113), (byte) 114, new Object[]{TextFieldValidator.decodeBase37(fk.field_k, 29424)});
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;
@@ -239,7 +239,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
               return stackIn_85_0;
             }
             if (ResizableModalPanel.field_eb == lf.field_f &&
-              pn.b(-12564)) {
+              pn.readServerStatus(-12564)) {
               ProxySocketConnector.closeActiveConnection(false);
               if (7 == on.field_g &&
                 !bb.field_h) {
@@ -257,7 +257,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
             }
             if (null == CredentialKind.field_c) {
               if (bb.field_h) {
-                if (rk.a(-68) <= 30000L) {
+                if (rk.timeSinceLastInput(-68) <= 30000L) {
                   MenuButtonPanel.field_E = NumericDateInputWidget.field_R;
                 } else {
                   MenuButtonPanel.field_E = DualLinkDeque.field_a;

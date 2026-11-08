@@ -229,7 +229,7 @@ final class ClipState extends IntrusiveNode {
         }
     }
 
-    final static boolean a(char param0, byte param1) {
+    final static boolean isTextureCharacter(char param0, byte param1) {
         RuntimeException var2 = null;
         boolean stackIn_16_0 = false;
         RuntimeException decompiledCaughtException = null;
@@ -249,7 +249,7 @@ final class ClipState extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
@@ -301,12 +301,12 @@ final class ClipState extends IntrusiveNode {
         }
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void drawDimmedScene(boolean param0, int param1) {
         try {
-          if (pn.a((byte) -120)) {
+          if (pn.hasOpenOverlay((byte) -120)) {
             param0 = false;
           }
-          WeightedLruCache.a(0, param0);
+          WeightedLruCache.drawModalScenes(0, param0);
           int var2_int = 32 % ((param1 - 18) / 50);
           cj.drawModalDimOverlay(-127);
         } catch (RuntimeException runtimeException) {
@@ -322,7 +322,7 @@ final class ClipState extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           FadingModalPanel.field_F = param1;
-          DebouncedValidator.a(12, (byte) 30);
+          DebouncedValidator.setPendingMessageId(12, (byte) 30);
           if (param0 <= 125) {
             field_l = (String) null;
           }

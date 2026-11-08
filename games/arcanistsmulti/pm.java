@@ -15,7 +15,7 @@ final class pm {
         if (Character.isISOControl(param0)) {
           return false;
         }
-        if (hn.a(param0, 17769)) {
+        if (JaggrabDownloader.isAlphanumeric(param0, 17769)) {
           return true;
         }
         if (param0 == (char)param1) {
@@ -33,7 +33,7 @@ final class pm {
         return true;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == 0) {
           field_h = null;
           field_e = null;

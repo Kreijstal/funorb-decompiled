@@ -43,7 +43,7 @@ final class Bzip2State {
     int field_N;
     static String[] field_M;
 
-    final static String a(int param0, byte param1) {
+    final static String formatPageNumber(int param0, byte param1) {
         RuntimeException var2 = null;
         String stackIn_2_0 = null;
         String stackIn_4_0 = null;
@@ -62,7 +62,7 @@ final class Bzip2State {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_s = null;
         field_M = null;
         field_j = null;
@@ -78,7 +78,7 @@ final class Bzip2State {
         }
     }
 
-    final static void a(SceneWidget param0, SceneWidget param1, SceneWidget param2, SceneWidget param3, SceneWidget param4, boolean param5, SceneWidget param6, BitmapFont param7, int param8, SceneWidget param9, SceneWidget param10, SceneScrollbar param11) {
+    final static void initializeLobbyWidgets(SceneWidget param0, SceneWidget param1, SceneWidget param2, SceneWidget param3, SceneWidget param4, boolean param5, SceneWidget param6, BitmapFont param7, int param8, SceneWidget param9, SceneWidget param10, SceneScrollbar param11) {
         String stackIn_13_0 = null;
         int stackIn_35_0 = 0;
         int stackIn_35_1 = 0;
@@ -116,7 +116,7 @@ final class Bzip2State {
         int var20 = 0;
         var20 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          oo.field_x = param7;
+          QuickChatCategory.field_x = param7;
           ResizableViewResizeListener.field_c[3] = 16736511;
           Battle.field_A = param2;
           ResizableViewResizeListener.field_c[2] = 9474303;
@@ -150,7 +150,7 @@ final class Bzip2State {
           CredentialKind.field_d = new SceneWidget(0L, param6);
           NanoFrameClock.field_t.addChild(CredentialKind.field_d, 61);
           SingleChildContainer.field_D = new SceneWidget(0L, param10);
-          SingleChildContainer.field_D.field_Z = oo.field_x;
+          SingleChildContainer.field_D.field_Z = QuickChatCategory.field_x;
           CredentialKind.field_d.addChild(SingleChildContainer.field_D, 24);
           CredentialKind.field_d.markTreeDirty((byte) 20);
           sa.field_Cb = new SceneWidget(0L, (SceneWidget) null);
@@ -206,7 +206,7 @@ final class Bzip2State {
             g.field_g = new SceneWidget(0L, param3);
             g.field_g.field_rb = qn.field_nb;
             IntKeyLookup.field_g.addChild(g.field_g, 56);
-            if (!td.a(-91) ||
+            if (!td.isConnectedToLobby(-91) ||
               wh.field_g) {
               AccountRegistrationPanel.field_U = new BirthDateEntryPanel(0, 0, 0, 0);
             }
@@ -285,7 +285,7 @@ final class Bzip2State {
         }
     }
 
-    final static void a(String param0, byte param1, int param2) {
+    final static void setLobbyMode(String param0, byte param1, int param2) {
         RuntimeException runtimeException = null;
         int var3_int = 0;
         RuntimeException stackIn_5_0 = null;

@@ -21,7 +21,7 @@ final class jg {
     String field_o;
     String field_g;
 
-    final int b(int param0) {
+    final int getStatusIcon(int param0) {
         if (this.field_i) {
           return 2;
         }
@@ -33,7 +33,7 @@ final class jg {
           return 1;
         }
         if (SpriteState.field_t == 2 &&
-          ArrayWidgetContainer.a(this.field_n, 1)) {
+          ArrayWidgetContainer.hasEntryNamed(this.field_n, 1)) {
           return 1;
         }
         if (param0 <= -19) {
@@ -43,7 +43,7 @@ final class jg {
         return 0;
     }
 
-    final static void a(int param0) {
+    final static void updateTurnCaptions(int param0) {
         int var2 = ArcanistsMulti.field_G ? 1 : 0;
         if (null == SpriteState.field_z) {
           return;

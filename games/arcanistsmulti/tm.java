@@ -62,12 +62,12 @@ final class tm {
         param0 = param0 + (param0 >>> 8);
         param0 = param0 + (param0 >>> 16);
         if (param1 > -13) {
-          tm.a(true);
+          tm.isLobbyConnected(true);
         }
         return 255 & param0;
     }
 
-    final static boolean a(boolean param0) {
+    final static boolean isLobbyConnected(boolean param0) {
         boolean stackIn_6_0 = false;
         if (!param0) {
           tm.bitCount(126, (byte) -31);

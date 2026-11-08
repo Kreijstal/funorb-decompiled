@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class hn implements Runnable {
+final class JaggrabDownloader implements Runnable {
     private int field_b;
     private PacketBuffer field_h;
     static String field_c;
@@ -34,7 +34,7 @@ final class hn implements Runnable {
         field_q = null;
     }
 
-    final PacketBuffer b(int param0) {
+    final PacketBuffer getResponse(int param0) {
         if (param0 != 21496) {
           return (PacketBuffer) null;
         }
@@ -44,7 +44,7 @@ final class hn implements Runnable {
         return this.field_h;
     }
 
-    final synchronized boolean c(int param0) {
+    final synchronized boolean poll(int param0) {
         int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
         IOException var2 = null;
@@ -137,12 +137,12 @@ final class hn implements Runnable {
         return false;
     }
 
-    final static boolean a(char param0, int param1) {
+    final static boolean isAlphanumeric(char param0, int param1) {
         boolean stackIn_28_0 = false;
         boolean stackIn_50_0 = false;
         boolean stackIn_64_0 = false;
         if (param1 != 17769) {
-          hn.a('f', 28);
+          JaggrabDownloader.isAlphanumeric('f', 28);
           if (param0 < 48) {
             if (param0 >= 65 &&
               param0 <= 90) {
@@ -228,7 +228,7 @@ final class hn implements Runnable {
               break;
             }
             if (this.field_h.payload.length == this.field_h.position) {
-              throw hn.<RuntimeException>sneakyThrow(new Exception("HG1: " + this.field_h.payload.length + " " + this.field_m));
+              throw JaggrabDownloader.<RuntimeException>sneakyThrow(new Exception("HG1: " + this.field_h.payload.length + " " + this.field_m));
             }
             var1 = this;
             synchronized (var1) {
@@ -253,7 +253,7 @@ final class hn implements Runnable {
         }
     }
 
-    final static boolean a(byte param0) {
+    final static boolean isLoginReady(byte param0) {
         int var1 = 85 % ((param0 - 10) / 60);
         if (!NodeHashTableIterator.field_e) {
           if (!MenuScreen.getSessionFlag((byte) 112)) {
@@ -268,7 +268,7 @@ final class hn implements Runnable {
           return true;
         }
         if (SectorCacheStore.field_g) {
-          if (kg.field_a) {
+          if (QuickChatCategoryCache.field_a) {
             return true;
           }
           return MenuScreen.getSessionFlag((byte) 112) ? true : false;
@@ -308,7 +308,7 @@ final class hn implements Runnable {
         this.field_g = null;
     }
 
-    hn(PlatformTaskDispatcher param0, java.net.URL param1, int param2) {
+    JaggrabDownloader(PlatformTaskDispatcher param0, java.net.URL param1, int param2) {
         try {
           this.field_m = param1;
           this.field_n = param0;

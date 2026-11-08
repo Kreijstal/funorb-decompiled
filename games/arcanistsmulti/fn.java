@@ -12,7 +12,7 @@ final class fn {
     static Sprite[] field_b;
     static String field_d;
 
-    final static void a(int param0, String param1, int param2, int param3, byte param4, int param5, int param6, int param7, int param8) {
+    final static void layoutChatPanel(int param0, String param1, int param2, int param3, byte param4, int param5, int param6, int param7, int param8) {
         int var11 = 0;
         int var12 = 0;
         ValidatedTextWidget.field_U.field_rb = param1;
@@ -37,7 +37,7 @@ final class fn {
           ValidatedTextWidget.field_U.setBounds(var9_int, 0, 0, param0, (byte) -120);
           var12 = var10 + param3 + 5;
           SceneScrollbar.field_Jb.setBounds(var9_int, 0, param0, var12, (byte) -120);
-          SceneScrollbar.field_Jb.field_v = of.a(3, SceneScrollbar.field_Jb.field_I, 1, 2105376, 11579568, 8421504);
+          SceneScrollbar.field_Jb.field_v = of.createGradientFrame(3, SceneScrollbar.field_Jb.field_I, 1, 2105376, 11579568, 8421504);
           var12 = var12 + param0;
           tm.field_d.setBounds(var9_int, -(var9_int / 2) + param7, param8 - var12 / 2, var12, (byte) -120);
         } catch (RuntimeException runtimeException) {
@@ -45,7 +45,7 @@ final class fn {
         }
     }
 
-    final static void a(int param0, byte param1) {
+    final static void resetChatHistory(int param0, byte param1) {
         SecondaryNodeDeque.field_f = 0;
         if (param1 >= -98) {
           return;
@@ -140,7 +140,7 @@ final class fn {
         }
     }
 
-    final static void a(boolean param0, boolean param1, int param2, boolean param3, int param4, int param5, boolean param6, int param7, boolean param8, int param9) {
+    final static void drawLobbyFrame(boolean param0, boolean param1, int param2, boolean param3, int param4, int param5, boolean param6, int param7, boolean param8, int param9) {
         int var10;
         int var11;
         var11 = ArcanistsMulti.field_G ? 1 : 0;
@@ -148,12 +148,12 @@ final class fn {
           ri.field_a != SoftwareRasterizer.field_j) && (SoftwareRasterizer.field_j == ce.field_m.field_m &&
           SoftwareRasterizer.field_e == ce.field_m.field_e)) {
           if (DirectByteStorage.field_f != null) {
-            MusicCrossfadeStream.a(124, false);
+            MusicCrossfadeStream.layoutZoomedLobby(124, false);
           } else {
             if (null == om.field_x) {
               ao.layoutLobby((byte) -124);
             } else {
-              MusicCrossfadeStream.a(13, true);
+              MusicCrossfadeStream.layoutZoomedLobby(13, true);
             }
           }
         }
@@ -162,16 +162,16 @@ final class fn {
         } else {
           sa.field_Hb = LoginCredentials.field_a;
         }
-        gl.a(param3, 0);
+        gl.updateTransitionTimers(param3, 0);
         if (ce.field_h > 0) {
           ValidationState.updateStatusTexts(param1, param3, 4, param7);
         }
         NodeHashTableIterator.field_d.field_X = 1;
         NodeHashTableIterator.field_d.field_t = BevelBoxPainter.field_f.field_t;
         if (sm.field_a > 0) {
-          ng.a(param3, param7, param1, 118);
+          ng.drawRankingsPanel(param3, param7, param1, 118);
         }
-        if (oo.field_y > 0) {
+        if (QuickChatCategory.field_y > 0) {
           c.drawChatPanel(param7, param3, param0, 2, param1);
         }
         if (MenuInputState.field_j &&
@@ -182,11 +182,11 @@ final class fn {
         } else {
           nj.field_m.field_Hb.field_rb = null;
           StatefulTextPainter.field_s.field_ub = true;
-          fn.a(param2, nj.field_m, param6, param7, true);
+          fn.drawGameList(param2, nj.field_m, param6, param7, true);
         }
         var10 = -105 / ((-23 - param9) / 50);
         ContextActionMenu.drawLobby(param7, param2, param5, 0, param4, param8, param6);
-        fn.a(param2, lf.field_b, param6, param7, true);
+        fn.drawGameList(param2, lf.field_b, param6, param7, true);
         sb.field_e = sb.field_e + 1;
     }
 
@@ -197,7 +197,7 @@ final class fn {
         return (SocialListEntry) (bc.field_c.get(param0, (byte) -63));
     }
 
-    private final static void a(int param0, SceneScrollPane param1, boolean param2, int param3, boolean param4) {
+    private final static void drawGameList(int param0, SceneScrollPane param1, boolean param2, int param3, boolean param4) {
         int var27_int = 0;
         SceneScrollPane stackIn_43_0 = null;
         boolean stackIn_44_1 = false;
@@ -421,7 +421,7 @@ final class fn {
               }
               var25_int = 0;
               if (null != DirectByteStorage.field_f &&
-                ContentTransitionDialog.k((byte) 110) &&
+                ContentTransitionDialog.isOwnGameSelected((byte) 110) &&
                 ~qf.field_a != ~var12.field_Nb) {
                 if (var12.field_Hb.field_rb != null) {
                   var26 = var12.field_Hb.getContentWidth(-25921) + SceneTextInput.field_Gb * 2;
@@ -487,12 +487,12 @@ final class fn {
             if (var12.field_U != 0 &&
               !var12.isUnlisted(183874081)) {
               if (var12.field_Hb.field_U != 0) {
-                qo.a(param3, (byte) -85, var12.field_Nb);
+                qo.sendLongRequest(param3, (byte) -85, var12.field_Nb);
               } else {
                 if (var12.field_Ub.field_U == 0) {
-                  StatefulTextPainter.a(0, var12, 3, pb.field_h, param1, 0, ja.field_s);
+                  StatefulTextPainter.openSocialEntryMenu(0, var12, 3, pb.field_h, param1, 0, ja.field_s);
                 } else {
-                  LobbyGameEntry.a(var12.field_Nb, -89, param3);
+                  LobbyGameEntry.sendNameRequest(var12.field_Nb, -89, param3);
                 }
               }
             }
@@ -625,7 +625,7 @@ final class fn {
                   }
                 }
                 if (lf.field_b == param1 &&
-                  ContentTransitionDialog.k((byte) 101)) {
+                  ContentTransitionDialog.isOwnGameSelected((byte) 101)) {
                   if (var26Lifetime1 == 0) {
                     var24Lifetime2 = var34 + "<br>" + CachedArchiveProvider.formatTemplate(119, new String[]{(String) (var25)}, MeshModel.field_t);
                   } else {
@@ -639,7 +639,7 @@ final class fn {
                   }
                 }
                 if (lf.field_b == param1 &&
-                  !ContentTransitionDialog.k((byte) 72)) {
+                  !ContentTransitionDialog.isOwnGameSelected((byte) 72)) {
                   var27 = DirectByteStorage.field_f.field_ic;
                   var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + CachedArchiveProvider.formatTemplate(126, new String[]{var27}, ArchiveProvider.field_c);
                 }
@@ -663,7 +663,7 @@ final class fn {
         }
     }
 
-    final static void a(int param0, boolean param1, String param2, long param3, int param4, int param5) {
+    final static void sendPrivateMessage(int param0, boolean param1, String param2, long param3, int param4, int param5) {
         int var7_int = 0;
         try {
           he.field_e.writeOpcode((byte) -48, param5);

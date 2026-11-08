@@ -13,7 +13,7 @@ final class rb extends IntrusiveNode {
     int field_g;
     int field_h;
 
-    final static void a(String param0, boolean param1, float param2) {
+    final static void setCaptionAndScale(String param0, boolean param1, float param2) {
         ArrayWidgetContainer.field_C = param0;
         if (param1) {
           return;
@@ -35,14 +35,14 @@ final class rb extends IntrusiveNode {
           field_k = null;
           return;
         }
-        rb.c(-120);
+        rb.readAchievementList(-120);
         field_l = null;
         field_n = null;
         field_p = null;
         field_k = null;
     }
 
-    final static Sprite[] a(boolean param0, boolean param1, int param2, int param3, int param4, int param5) {
+    final static Sprite[] createGradientButton(boolean param0, boolean param1, int param2, int param3, int param4, int param5) {
         Sprite var19 = null;
         Sprite var20 = null;
         Sprite var17 = null;
@@ -111,7 +111,7 @@ final class rb extends IntrusiveNode {
         return new Sprite[]{null, null, null, (Sprite) (var10), var9, (Sprite) (var11), null, null, null};
     }
 
-    final static void a(byte[] param0, ResourceArchive param1, IndexedSprite[] param2, Sprite[][] param3, boolean param4, String[][] param5, String[][] param6, int param7, ResourceArchive param8, int[] param9, Sprite[][] param10, byte[] param11, byte param12, int[] param13, int param14, String[] param15, ResourceArchive param16) {
+    final static void initializeGameAssetsFromBytes(byte[] param0, ResourceArchive param1, IndexedSprite[] param2, Sprite[][] param3, boolean param4, String[][] param5, String[][] param6, int param7, ResourceArchive param8, int[] param9, Sprite[][] param10, byte[] param11, byte param12, int[] param13, int param14, String[] param15, ResourceArchive param16) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -145,7 +145,7 @@ final class rb extends IntrusiveNode {
         String[] var18 = null;
         try {
           var18 = (String[]) null;
-          gf.a(param2, param4, (byte) 74, param16, param0, param6, param11, param8, param7, param1, param9, 1, param14, param10, param3, param15, (String[]) null, param13, param5);
+          gf.initializeGameAssetsReordered(param2, param4, (byte) 74, param16, param0, param6, param11, param8, param7, param1, param9, 1, param14, param10, param3, param15, (String[]) null, param13, param5);
           var17_int = 85 / ((param12 + 27) / 32);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -234,7 +234,7 @@ final class rb extends IntrusiveNode {
         }
     }
 
-    final static void c(int param0) {
+    final static void readAchievementList(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -255,11 +255,11 @@ final class rb extends IntrusiveNode {
           var2 = var10.readUnsignedByte((byte) 81);
           if (param0 > -22) {
             var7 = (String) null;
-            rb.a(-32, (String) null, 120, (String) null, -69);
+            rb.showSavedLayout(-32, (String) null, 120, (String) null, -69);
           }
           if (var2 != 0) {
             if (var2 != 1) {
-              DelegatingCanvas.a((Throwable) null, "A1: " + CacheEntry.g((byte) -25), (byte) 20);
+              DelegatingCanvas.reportError((Throwable) null, "A1: " + CacheEntry.getVersionCaption((byte) -25), (byte) 20);
               ProxySocketConnector.closeActiveConnection(false);
               return;
             }
@@ -279,7 +279,7 @@ final class rb extends IntrusiveNode {
             ProxySocketConnector.closeActiveConnection(false);
             return;
           }
-          var9 = (pb) (hn.field_q.first(12623));
+          var9 = (pb) (JaggrabDownloader.field_q.first(12623));
           if (var9 == null) {
             ProxySocketConnector.closeActiveConnection(false);
             return;
@@ -310,7 +310,7 @@ final class rb extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, String param1, int param2, String param3, int param4) {
+    final static void showSavedLayout(int param0, String param1, int param2, String param3, int param4) {
         try {
           SingleChildContainer.field_D.field_x = SingleChildContainer.field_D.field_x + sa.field_Cb.field_x;
           SingleChildContainer.field_D.field_ob = param0;

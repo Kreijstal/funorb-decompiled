@@ -39,7 +39,7 @@ final class om extends UiComponent {
         this.rebuildSprites(-385446591);
     }
 
-    final static void g(byte param0) {
+    final static void readLobbyRatings(byte param0) {
         int var7 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
@@ -99,7 +99,7 @@ final class om extends UiComponent {
             var5_ref_ko.unlink(true);
             return;
           }
-          DelegatingCanvas.a((Throwable) null, "LR1: " + CacheEntry.g((byte) -25), (byte) 20);
+          DelegatingCanvas.reportError((Throwable) null, "LR1: " + CacheEntry.getVersionCaption((byte) -25), (byte) 20);
           ProxySocketConnector.closeActiveConnection(false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -142,7 +142,7 @@ final class om extends UiComponent {
           SoftwareRasterizer.drawHorizontalLine(var7 + this.field_z, var6, this.field_z, var12Lifetime1);
           SoftwareRasterizer.drawHorizontalLine(-this.field_z + var7, var6, this.field_z, var12Lifetime1);
         }
-        oo.popClipState(-15405);
+        QuickChatCategory.popClipState(-15405);
         return var14;
     }
 
@@ -169,11 +169,11 @@ final class om extends UiComponent {
             SoftwareRasterizer.setPixel(var5, var4, var8 | var8 << 8 | var8 << 16);
           }
         }
-        oo.popClipState(-15405);
+        QuickChatCategory.popClipState(-15405);
         return var3;
     }
 
-    final static Sprite[] a(int param0, int param1, byte param2, ResourceArchive param3) {
+    final static Sprite[] loadSprites(int param0, int param1, byte param2, ResourceArchive param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         Sprite[] stackIn_5_0 = null;
@@ -183,7 +183,7 @@ final class om extends UiComponent {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!fc.a(-124, param3, param1, param0)) {
+          if (!fc.decodeSpriteSheet(-124, param3, param1, param0)) {
             stackIn_2_0 = null;
             return (Sprite[]) (stackIn_2_0);
           }
@@ -207,7 +207,7 @@ final class om extends UiComponent {
         }
     }
 
-    private final void a(int param0, int param1, Sprite param2, int param3) {
+    private final void drawCapsule(int param0, int param1, Sprite param2, int param3) {
         int var6 = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -222,20 +222,20 @@ final class om extends UiComponent {
         try {
           if (param3 != 0) {
             var9 = (Sprite) null;
-            this.a(-69, 9, (Sprite) null, -92);
+            this.drawCapsule(-69, 9, (Sprite) null, -92);
           }
           var5_int = param0 + this.field_v;
           da.clipToRectangle(-this.field_D.field_q + var5_int, this.field_k + param1, 122, this.field_D.field_q + param0, param1);
           for (var6 = param0 - this.field_G; var6 < var5_int; var6 = var6 + param2.field_q) {
             param2.drawTransparent(var6, param1);
           }
-          oo.popClipState(-15405);
+          QuickChatCategory.popClipState(-15405);
           if (SoftwareRasterizer.field_i <= this.field_D.field_q + param0) {
             fk.setSpriteRasterTarget(this.field_A, -23095);
             param2.drawTransparent(-this.field_G, 0);
             param2.drawTransparent(-this.field_G + 2 * this.field_z, 0);
             this.field_F.drawMultiply(0, 0);
-            oo.popClipState(param3 - 15405);
+            QuickChatCategory.popClipState(param3 - 15405);
             this.field_A.drawTransparent(param0, param1);
           }
           if (-this.field_D.field_q + var5_int <= SoftwareRasterizer.field_h) {
@@ -245,7 +245,7 @@ final class om extends UiComponent {
             param2.drawTransparent(-var7, 0);
             param2.drawTransparent(this.field_z * 2 - var7, 0);
             this.field_D.drawMultiply(0, 0);
-            oo.popClipState(param3 ^ -15405);
+            QuickChatCategory.popClipState(param3 ^ -15405);
             this.field_A.drawTransparent(-this.field_D.field_q + var5_int, param1);
             return;
           }
@@ -269,7 +269,7 @@ final class om extends UiComponent {
         this.field_D = this.createEndCapSprite(1);
         if (param0 != -385446591) {
           Sprite var3 = (Sprite) null;
-          this.a(-100, -38, (Sprite) null, -12);
+          this.drawCapsule(-100, -38, (Sprite) null, -12);
         }
         this.field_F = this.field_D.copyFlippedHorizontal();
         this.field_A = new Sprite(this.field_k >> 1, this.field_k);
@@ -298,11 +298,11 @@ final class om extends UiComponent {
         }
         int var5 = param1 + this.field_n;
         int var6 = this.field_j + param3;
-        this.a(var5, var6, this.field_N[0], 0);
+        this.drawCapsule(var5, var6, this.field_N[0], 0);
         if (this.field_O < 65536) {
           da.clipToRectangle(this.field_v + var5, var6 + this.field_k, 122, (this.field_v * this.field_O >> 16) + var5, var6);
-          this.a(var5, var6, this.field_N[1], 0);
-          oo.popClipState(-15405);
+          this.drawCapsule(var5, var6, this.field_N[1], 0);
+          QuickChatCategory.popClipState(-15405);
         }
     }
 

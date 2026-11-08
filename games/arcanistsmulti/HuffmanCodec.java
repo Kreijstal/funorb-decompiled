@@ -329,7 +329,7 @@ final class HuffmanCodec {
           if (0 >= param2) {
             throw new IllegalArgumentException();
           }
-          if (ScreenDisplayMode.a(-2147483648, param2)) {
+          if (ScreenDisplayMode.isPowerOfTwo(-2147483648, param2)) {
             stackIn_5_0 = (int)(((long)param0.nextInt((byte) -46) & 4294967295L) * (long)param2 >> 32);
             return stackIn_5_0;
           }
@@ -550,7 +550,7 @@ final class HuffmanCodec {
                     var3_longLifetime2 = ((PacketBuffer) ((Object) var1)).readLong(-943038560);
                     var26 = ((PacketBuffer) ((Object) var1)).readString(-1);
                     var27 = ((PacketBuffer) ((Object) var1)).readString(-1);
-                    var7 = vf.a(var3_longLifetime2, 8192);
+                    var7 = vf.lookupSocialEntry(var3_longLifetime2, 8192);
                     if (var7 == null) {
                       var7 = new SocialListEntry(var26, var27, var3_longLifetime2);
                       OptionsDialog.field_qb.put(var7, var3_longLifetime2, (byte) 121);
@@ -570,7 +570,7 @@ final class HuffmanCodec {
                   if (19 == var2) {
                     var3_longLifetime2 = ((PacketBuffer) ((Object) var1)).readLong(-943038560);
                     var5Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) -111);
-                    var14 = vf.a(var3_longLifetime2, 8192);
+                    var14 = vf.lookupSocialEntry(var3_longLifetime2, 8192);
                     var28 = var14;
                     if (var14 == null) {
                       return;
@@ -607,7 +607,7 @@ final class HuffmanCodec {
                     qf.field_a = ((PacketBuffer) ((Object) var1)).readLong(-943038560);
                     return;
                   }
-                  DelegatingCanvas.a((Throwable) null, "L1: " + CacheEntry.g((byte) -25), (byte) 20);
+                  DelegatingCanvas.reportError((Throwable) null, "L1: " + CacheEntry.getVersionCaption((byte) -25), (byte) 20);
                   ProxySocketConnector.closeActiveConnection(false);
                   return;
                 }
@@ -685,7 +685,7 @@ final class HuffmanCodec {
           if (var2 == 4) {
             var3Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(-98);
             DirectByteStorage.field_f = new LobbyGameEntry(vf.field_l);
-            DirectByteStorage.field_f.a(46, (long)var3Lifetime1);
+            DirectByteStorage.field_f.setSecondaryKey(46, (long)var3Lifetime1);
             SceneScrollPane.readGameEntry(var1, DirectByteStorage.field_f, false, 2);
             PatchEnvelopeSet.field_a = 0L;
           } else {
@@ -728,7 +728,7 @@ final class HuffmanCodec {
           return;
         }
         UiComponent.attachInputListeners(ProxySocketConnector.field_m, (byte) 122);
-        ProxySocketConnector.field_m.a(fi.field_d, (byte) 67);
+        ProxySocketConnector.field_m.closeFrame(fi.field_d, (byte) 67);
         ProxySocketConnector.field_m = null;
         if (ResizableModalPanel.field_Y != null) {
           ResizableModalPanel.field_Y.restoreWindowedSize(true);

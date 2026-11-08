@@ -79,7 +79,7 @@ final class MenuButtonPainter extends TextWidgetPainter {
         this.field_x = param0;
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_r = null;
         field_t = null;
         field_v = null;

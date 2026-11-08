@@ -15,7 +15,7 @@ final class DropTargetWidget extends SingleChildContainer {
     static int field_N;
     static int field_L;
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_I = null;
         field_E = null;
         field_F = null;
@@ -68,13 +68,13 @@ final class DropTargetWidget extends SingleChildContainer {
           return var2;
         }
         SceneWidget var3 = (SceneWidget) null;
-        DropTargetWidget.a((SceneWidget) null, false, (SceneWidget) null, (SceneWidget) null, (SceneWidget) null);
+        DropTargetWidget.buildAccountScene((SceneWidget) null, false, (SceneWidget) null, (SceneWidget) null, (SceneWidget) null);
         var2Lifetime1 = new Sprite[9];
         var2Lifetime1[4] = ce.createFilledSprite(64, param0, MouseWheelHandler.a(param1, 21385));
         return var2Lifetime1;
     }
 
-    final static void a(SceneWidget param0, boolean param1, SceneWidget param2, SceneWidget param3, SceneWidget param4) {
+    final static void buildAccountScene(SceneWidget param0, boolean param1, SceneWidget param2, SceneWidget param3, SceneWidget param4) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -105,7 +105,7 @@ final class DropTargetWidget extends SingleChildContainer {
             var5 = rk.field_N;
           }
           var7 = (String) null;
-          rb.a(ArchiveIndex.field_u, var5, 0, (String) null, 97);
+          rb.showSavedLayout(ArchiveIndex.field_u, var5, 0, (String) null, 97);
           lo.field_y = sa.field_Cb;
           ResizableViewResizeListener.field_a = SingleChildContainer.field_D;
           SingleChildContainer.field_D.field_J = ArchiveIndex.field_u + (-(8355711 & ArchiveIndex.field_u >> 1) + ((16711422 & Battle.field_A.field_J) >> 1));
@@ -116,7 +116,7 @@ final class DropTargetWidget extends SingleChildContainer {
           SceneScrollbar.field_Jb = new SceneWidget(0L, (SceneWidget) null);
           ck.field_d = new SceneWidget(0L, param4);
           SingleChildContainer.field_D = new SceneWidget(0L, param0);
-          SingleChildContainer.field_D.field_Z = oo.field_x;
+          SingleChildContainer.field_D.field_Z = QuickChatCategory.field_x;
           ck.field_d.addChild(SingleChildContainer.field_D, 41);
           sa.field_Cb = new SceneWidget(0L, lo.field_y);
           ck.field_d.addChild(sa.field_Cb, 97);

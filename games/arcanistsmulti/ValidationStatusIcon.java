@@ -104,7 +104,7 @@ final class ValidationStatusIcon extends TextButton {
             }
           }
           var16.drawRotatedAboutPivot(112, 144, var16.field_n << 4, var16.field_w << 4, -this.field_H << 10, 4096);
-          oo.popClipState(-15405);
+          QuickChatCategory.popClipState(-15405);
           ArchiveIndex.field_o.drawAdditive(var5 - var16.field_n, var6 - var16.field_w, 256);
           return;
         }
@@ -142,7 +142,7 @@ final class ValidationStatusIcon extends TextButton {
           }
         }
         var15.drawRotatedAboutPivot(112, 144, var15.field_n << 4, var15.field_w << 4, -this.field_H << 10, 4096);
-        oo.popClipState(-15405);
+        QuickChatCategory.popClipState(-15405);
         ArchiveIndex.field_o.drawAdditive(var5 - var15.field_n, var6 - var15.field_w, 256);
     }
 

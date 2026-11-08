@@ -13,16 +13,16 @@ final class c {
         if (param3 >= param0) {
           if (param3 >= param5) {
             if (param5 <= param0) {
-              wg.a(param6, 2973, param7, param0, SoftwareRasterizer.field_l, param3, param2, param5, param4);
+              wg.drawMeshTriangleFlat(param6, 2973, param7, param0, SoftwareRasterizer.field_l, param3, param2, param5, param4);
               decompiledFrameRemainder0 = (var9 != 0);
             }
             if (decompiledFrameRemainder0) {
-              wg.a(param7, 2973, param6, param5, SoftwareRasterizer.field_l, param3, param2, param0, param4);
+              wg.drawMeshTriangleFlat(param7, 2973, param6, param5, SoftwareRasterizer.field_l, param3, param2, param0, param4);
               decompiledFrameRemainder0 = (var9 != 0);
             }
           }
           if (decompiledFrameRemainder0) {
-            wg.a(param4, 2973, param6, param3, SoftwareRasterizer.field_l, param5, param2, param0, param7);
+            wg.drawMeshTriangleFlat(param4, 2973, param6, param3, SoftwareRasterizer.field_l, param5, param2, param0, param7);
           }
         }
         if ((decompiledFrameRemainder0) &&
@@ -30,19 +30,19 @@ final class c {
           var9 != 0)) {
           if (param5 <= param0) {
             if (param5 > param3) {
-              wg.a(param7, 2973, param4, param5, SoftwareRasterizer.field_l, param0, param2, param3, param6);
+              wg.drawMeshTriangleFlat(param7, 2973, param4, param5, SoftwareRasterizer.field_l, param0, param2, param3, param6);
               if (var9 != 0) {
-                wg.a(param4, 2973, param7, param3, SoftwareRasterizer.field_l, param0, param2, param5, param6);
-                wg.a(param6, 2973, param4, param0, SoftwareRasterizer.field_l, param5, param2, param3, param7);
+                wg.drawMeshTriangleFlat(param4, 2973, param7, param3, SoftwareRasterizer.field_l, param0, param2, param5, param6);
+                wg.drawMeshTriangleFlat(param6, 2973, param4, param0, SoftwareRasterizer.field_l, param5, param2, param3, param7);
               }
             } else {
-              wg.a(param4, 2973, param7, param3, SoftwareRasterizer.field_l, param0, param2, param5, param6);
+              wg.drawMeshTriangleFlat(param4, 2973, param7, param3, SoftwareRasterizer.field_l, param0, param2, param5, param6);
               if (var9 != 0) {
-                wg.a(param6, 2973, param4, param0, SoftwareRasterizer.field_l, param5, param2, param3, param7);
+                wg.drawMeshTriangleFlat(param6, 2973, param4, param0, SoftwareRasterizer.field_l, param5, param2, param3, param7);
               }
             }
           } else {
-            wg.a(param6, 2973, param4, param0, SoftwareRasterizer.field_l, param5, param2, param3, param7);
+            wg.drawMeshTriangleFlat(param6, 2973, param4, param0, SoftwareRasterizer.field_l, param5, param2, param3, param7);
           }
         }
         if (param1 <= 60) {
@@ -124,7 +124,7 @@ final class c {
         var18 = null;
         var19 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          TextHotspotWidget.positionZoomedPanels(16, oo.field_y);
+          TextHotspotWidget.positionZoomedPanels(16, QuickChatCategory.field_y);
           if (DirectByteStorage.field_f != null) {
             IntrusiveNodeHashTable.field_o.field_ub = true;
             var22 = SocketConnector.field_d;
@@ -137,7 +137,7 @@ final class c {
             var7 = NodeHashTableIterator.field_d;
             NodeHashTableIterator.field_d.field_I = 0;
             var7.field_x = 0;
-            if (ContentTransitionDialog.k((byte) 105)) {
+            if (ContentTransitionDialog.isOwnGameSelected((byte) 105)) {
               IconTextSceneWidget.field_Db.field_rb = fb.field_c.toUpperCase();
               var9 = (2 + ReflectionCheckRequest.field_h.field_x) / 2;
               SocketConnector.field_d.setBounds(-2 + var9, 0, -40 + ReflectionCheckRequest.field_h.field_I, 40, (byte) -120);
@@ -177,7 +177,7 @@ final class c {
               var10 = 2;
               if (null != um.field_a) {
                 if (qa.field_l == null) {
-                  tk.field_q = new boolean[vf.field_l];
+                  QuickChatPhrase.field_q = new boolean[vf.field_l];
                   qa.field_l = new byte[vf.field_l];
                 }
                 var11_int = 0;
@@ -186,7 +186,7 @@ final class c {
                     var10 = 0;
                     break;
                   }
-                  tk.field_q[var11_int] = false;
+                  QuickChatPhrase.field_q[var11_int] = false;
                   var11_int++;
                 } while (var19 == 0);
                 scanLoop1: while (true) {
@@ -248,7 +248,7 @@ final class c {
                             }
                             var15 += 2;
                           }
-                          tk.field_q[var14_int] = true;
+                          QuickChatPhrase.field_q[var14_int] = true;
                           break;
                         }
                         var12++;
@@ -393,7 +393,7 @@ final class c {
                     var13_intLifetime2 = 0;
                     decompiledFrameRemainder3 = !(var13_intLifetime2 >= vf.field_l);
                     if (decompiledFrameRemainder3) {
-                      stackOut_135_0 = tk.field_q[var13_intLifetime2];
+                      stackOut_135_0 = QuickChatPhrase.field_q[var13_intLifetime2];
                       stackIn_161_0 = stackOut_135_0 ? 1 : 0;
                       stackIn_136_0 = stackOut_135_0;
                       decompiledFrameRemainder2 = false;
@@ -427,7 +427,7 @@ final class c {
                   var12 = 0;
                   var13_intLifetime1 = 0;
                   while (!(var13_intLifetime1 >= vf.field_l)) {
-                    stackOut_153_0 = tk.field_q[var13_intLifetime1];
+                    stackOut_153_0 = QuickChatPhrase.field_q[var13_intLifetime1];
                     stackIn_161_0 = stackOut_153_0 ? 1 : 0;
                     stackIn_154_0 = stackOut_153_0;
                     if (var19 != 0) {
@@ -515,7 +515,7 @@ final class c {
           }
           if (DirectByteStorage.field_f != null) {
             if (IntrusiveNodeHashTable.field_o.field_U != 0) {
-              qc.a(false, DirectByteStorage.field_f.getSortKey((byte) 94), param0);
+              qc.sendShortRequest(false, DirectByteStorage.field_f.getSortKey((byte) 94), param0);
             }
             if (0 != SocketConnector.field_d.field_U) {
               MenuInputState.field_j = true;
@@ -526,7 +526,7 @@ final class c {
             if (0 != gj.field_d.field_U) {
               MenuInputState.field_j = false;
             }
-            lm.a(false, param0, DirectByteStorage.field_f, 0);
+            lm.drawGameDetails(false, param0, DirectByteStorage.field_f, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

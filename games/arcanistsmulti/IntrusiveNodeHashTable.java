@@ -123,7 +123,7 @@ final class IntrusiveNodeHashTable {
         return null;
     }
 
-    final static void g(int param0) {
+    final static void openLoginFlow(int param0) {
         if (param0 != -1) {
           field_b = (Sprite[]) null;
           ff.setLoginContext(true, kf.field_a, (byte) -97, on.field_d);
@@ -134,14 +134,14 @@ final class IntrusiveNodeHashTable {
         NodeHashTable.field_h = true;
     }
 
-    final static int b(int param0) {
+    final static int getPointerOriginY(int param0) {
         if (param0 != 25117) {
           return -35;
         }
         return ih.field_b;
     }
 
-    final static void a(int param0, boolean param1, int param2) {
+    final static void openLobbyRowMenu(int param0, boolean param1, int param2) {
         wa var3 = null;
         PlayerActionMenu var4 = null;
         String var5_ref_String = null;
@@ -167,7 +167,7 @@ final class IntrusiveNodeHashTable {
             var6 = ja.field_s;
             var4Lifetime2.field_l.openAt(0, 0, param0 - 29467, var6, var5);
           }
-          FrameClock.a(param2, param1, false);
+          FrameClock.drawGameListView(param2, param1, false);
           return;
         }
         var3Lifetime1 = bj.createLobbyRow(param1, -3, param2);
@@ -181,7 +181,7 @@ final class IntrusiveNodeHashTable {
           var6Lifetime1 = ja.field_s;
           var4Lifetime1Lifetime1.field_l.openAt(0, 0, param0 - 29467, var6Lifetime1, var5Lifetime1);
         }
-        FrameClock.a(param2, param1, false);
+        FrameClock.drawGameListView(param2, param1, false);
     }
 
     final static ri validateEmailDomain(String param0, int param1) {
@@ -247,7 +247,7 @@ final class IntrusiveNodeHashTable {
     public static void releaseStatics(int param0) {
         field_l = null;
         if (param0 != 0) {
-          IntrusiveNodeHashTable.b(31);
+          IntrusiveNodeHashTable.getPointerOriginY(31);
           field_d = null;
           field_j = null;
           field_a = null;
@@ -278,7 +278,7 @@ final class IntrusiveNodeHashTable {
           node.secondaryPrevious.secondaryNext = node;
           node.secondaryNext.secondaryPrevious = node;
           if (obfuscationGuard <= 106) {
-            IntrusiveNodeHashTable.a(109, true, 64);
+            IntrusiveNodeHashTable.openLobbyRowMenu(109, true, 64);
           }
           node.secondaryKey = key;
         } catch (RuntimeException runtimeException) {

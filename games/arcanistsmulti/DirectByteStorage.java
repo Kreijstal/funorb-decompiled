@@ -9,7 +9,7 @@ final class DirectByteStorage extends ByteStorage {
     private java.nio.ByteBuffer field_k;
     static String field_j;
 
-    final static boolean a(int param0, int[] param1, int param2) {
+    final static boolean isBitSet(int param0, int[] param1, int param2) {
         RuntimeException var3 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -66,7 +66,7 @@ final class DirectByteStorage extends ByteStorage {
           return var4;
         }
         int[] var3 = (int[]) null;
-        DirectByteStorage.a(20, (int[]) null, -59);
+        DirectByteStorage.isBitSet(20, (int[]) null, -59);
         this.field_k.position(0);
         this.field_k.get(var4);
         return var4;

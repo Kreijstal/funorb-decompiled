@@ -52,7 +52,7 @@ final class gg {
             for (var6_int = 0; var3 > var6_int; var6_int++) {
               var9[var6_int] = ph.field_c[NameValidator.bitAnd(255, (int) var20[var6_int])];
             }
-            var1[var2] = new Sprite(pb.field_g, gn.field_a, hl.field_l[var2], SectorCacheStore.field_d[var2], jg.field_p[var2], ho.field_i[var2], var21);
+            var1[var2] = new Sprite(pb.field_g, QuickChatPhraseCache.field_a, hl.field_l[var2], SectorCacheStore.field_d[var2], jg.field_p[var2], ho.field_i[var2], var21);
           } else {
             var22 = FadingModalPanel.field_O[var2];
             var16 = new int[var3];
@@ -61,7 +61,7 @@ final class gg {
             for (var7 = 0; var7 < var3; var7++) {
               var6[var7] = fj.bitOr(ph.field_c[NameValidator.bitAnd(255, (int) var20[var7])], NameValidator.bitAnd(-16777216, var22[var7] << 24));
             }
-            var1[var2] = (Sprite) ((Object) new ArgbSprite(pb.field_g, gn.field_a, hl.field_l[var2], SectorCacheStore.field_d[var2], jg.field_p[var2], ho.field_i[var2], var16));
+            var1[var2] = (Sprite) ((Object) new ArgbSprite(pb.field_g, QuickChatPhraseCache.field_a, hl.field_l[var2], SectorCacheStore.field_d[var2], jg.field_p[var2], ho.field_i[var2], var16));
           }
         }
         CanvasRasterBuffer.releaseDecodeArrays(-18229);

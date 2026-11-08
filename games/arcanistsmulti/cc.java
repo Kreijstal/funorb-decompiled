@@ -22,9 +22,9 @@ final class cc {
           return -113;
         }
         if (param1 < param0) {
-          return -tk.a(-4, (param1 << 16) / param0) + 2048;
+          return -QuickChatPhrase.scaleSignedValue(-4, (param1 << 16) / param0) + 2048;
         }
-        return tk.a(-4, (param0 << 16) / param1);
+        return QuickChatPhrase.scaleSignedValue(-4, (param0 << 16) / param1);
     }
 
     final static boolean hasPendingValidation(byte param0) {

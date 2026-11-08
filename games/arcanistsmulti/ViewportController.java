@@ -44,12 +44,12 @@ final class ViewportController {
         return var2;
     }
 
-    final static SceneWidget b(byte param0) {
+    final static SceneWidget getListContent(byte param0) {
         if (param0 <= 112) {
-          ViewportController.a((byte) -59, true, false, -83, -46);
-          return uc.b(115);
+          ViewportController.openArchive((byte) -59, true, false, -83, -46);
+          return uc.getListContent(115);
         }
-        return uc.b(115);
+        return uc.getListContent(115);
     }
 
     final boolean isSizeAllowed(int param0, int param1, int param2) {
@@ -288,15 +288,15 @@ final class ViewportController {
         return false;
     }
 
-    final static ResourceArchive a(byte param0, boolean param1, boolean param2, int param3, int param4) {
+    final static ResourceArchive openArchive(byte param0, boolean param1, boolean param2, int param3, int param4) {
         if (param0 == -93) {
           return MenuButtonPanel.createResourceArchive(param3, param2, param0 + 2097245, param1, param4, false);
         }
-        ViewportController.a((byte) -92, false, true, 53, 6);
+        ViewportController.openArchive((byte) -92, false, true, 53, 6);
         return MenuButtonPanel.createResourceArchive(param3, param2, param0 + 2097245, param1, param4, false);
     }
 
-    final boolean b(boolean param0) {
+    final boolean isOverMaximumSize(boolean param0) {
         if (param0) {
           this.setWindowedSize(-12, -65, (byte) -64);
           if (ah.field_c <= 0) {

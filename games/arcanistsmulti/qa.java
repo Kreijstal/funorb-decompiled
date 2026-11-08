@@ -46,7 +46,7 @@ final class qa extends IntrusiveNode {
         field_k = null;
     }
 
-    final static void a(boolean param0, int param1, int param2) {
+    final static void showNoticeByType(boolean param0, int param1, int param2) {
         int stackIn_34_0 = 0;
         int stackIn_37_0 = 0;
         String[] stackIn_44_0 = null;
@@ -101,17 +101,17 @@ final class qa extends IntrusiveNode {
             for (var5 = 0; var5 < var4; var5++) {
               oe.field_c[var5] = -1;
             }
-            hn.field_k = new int[2];
+            JaggrabDownloader.field_k = new int[2];
             for (var5 = 0; var5 < var3_int; var5++) {
               BevelTextPainter.field_v[var5] = qg.field_a[var5];
             }
             BevelTextPainter.field_v[var4 - 3] = "";
             BevelTextPainter.field_v[-2 + var4] = la.field_e;
             oe.field_c[var4 - 2] = 0;
-            hn.field_k[0] = 4;
+            JaggrabDownloader.field_k[0] = 4;
             BevelTextPainter.field_v[-1 + var4] = dd.field_e;
             oe.field_c[var4 - 1] = 1;
-            hn.field_k[1] = 5;
+            JaggrabDownloader.field_k[1] = 5;
           } else if (SocketConnector.field_i == 1) {
             var3_int = MembershipOfferScreen.splitIntoTwoLines(qg.field_a, IntrusiveDequeCursor.field_d, EmptyPainter.field_a, DateInputWidget.field_C, param1 + 25923);
             var4 = 2 + var3_int;
@@ -120,14 +120,14 @@ final class qa extends IntrusiveNode {
             for (var5 = 0; var4 > var5; var5++) {
               oe.field_c[var5] = -1;
             }
-            hn.field_k = new int[1];
+            JaggrabDownloader.field_k = new int[1];
             for (var5 = 0; var5 < var3_int; var5++) {
               BevelTextPainter.field_v[var5] = qg.field_a[var5];
             }
             BevelTextPainter.field_v[var4 - 2] = "";
             BevelTextPainter.field_v[var4 - 1] = dd.field_e;
             oe.field_c[-1 + var4] = 0;
-            hn.field_k[0] = 5;
+            JaggrabDownloader.field_k[0] = 5;
           } else if (SocketConnector.field_i != 2) {
             if (SocketConnector.field_i == 3) {
               if (fi.field_d.field_p) {
@@ -141,14 +141,14 @@ final class qa extends IntrusiveNode {
               for (var5 = 0; var4 > var5; var5++) {
                 oe.field_c[var5] = -1;
               }
-              hn.field_k = new int[1];
+              JaggrabDownloader.field_k = new int[1];
               for (var5 = 0; var5 < var3_int; var5++) {
                 BevelTextPainter.field_v[var5] = qg.field_a[var5];
               }
               BevelTextPainter.field_v[var4 - 2] = "";
               BevelTextPainter.field_v[var4 - 1] = dd.field_e;
               oe.field_c[var4 - 1] = 0;
-              hn.field_k[0] = 5;
+              JaggrabDownloader.field_k[0] = 5;
             } else if (SocketConnector.field_i == 4) {
               var3_int = MembershipOfferScreen.splitIntoTwoLines(qg.field_a, ki.field_w, EmptyPainter.field_a, DateInputWidget.field_C, 21230);
               var4 = 2 + var3_int;
@@ -157,14 +157,14 @@ final class qa extends IntrusiveNode {
               for (var5 = 0; var4 > var5; var5++) {
                 oe.field_c[var5] = -1;
               }
-              hn.field_k = new int[1];
+              JaggrabDownloader.field_k = new int[1];
               for (var5 = 0; var5 < var3_int; var5++) {
                 BevelTextPainter.field_v[var5] = qg.field_a[var5];
               }
               BevelTextPainter.field_v[var4 - 2] = "";
               BevelTextPainter.field_v[var4 - 1] = dd.field_e;
               oe.field_c[-1 + var4] = 0;
-              hn.field_k[0] = 5;
+              JaggrabDownloader.field_k[0] = 5;
             } else {
               if (SocketConnector.field_i != 5) {
                 throw new IllegalArgumentException();
@@ -176,17 +176,17 @@ final class qa extends IntrusiveNode {
               for (var5 = 0; var5 < var4; var5++) {
                 oe.field_c[var5] = -1;
               }
-              hn.field_k = new int[2];
+              JaggrabDownloader.field_k = new int[2];
               for (var5 = 0; var5 < var3_int; var5++) {
                 BevelTextPainter.field_v[var5] = qg.field_a[var5];
               }
               BevelTextPainter.field_v[var4 - 3] = "";
               BevelTextPainter.field_v[-2 + var4] = ScrollContainer.field_R;
               oe.field_c[var4 - 2] = 0;
-              hn.field_k[0] = 3;
+              JaggrabDownloader.field_k[0] = 3;
               BevelTextPainter.field_v[-1 + var4] = dd.field_e;
               oe.field_c[-1 + var4] = 1;
-              hn.field_k[1] = 5;
+              JaggrabDownloader.field_k[1] = 5;
             }
           } else {
             var3_int = MembershipOfferScreen.splitIntoTwoLines(qg.field_a, CachedArchiveProvider.formatTemplate(-112, new String[]{"<br><%0><br>"}, dm.field_F), EmptyPainter.field_a, DateInputWidget.field_C, param1 + 25923);
@@ -242,14 +242,14 @@ final class qa extends IntrusiveNode {
             BevelTextPainter.field_v[1] = AccountRegistrationPanel.field_R;
             oe.field_c[1] = 0;
             BevelTextPainter.field_v[0] = PasswordFieldPainter.field_C;
-            hn.field_k = new int[2];
+            JaggrabDownloader.field_k = new int[2];
             BevelTextPainter.field_v[4] = we.field_d;
             BevelTextPainter.field_v[5] = "";
             BevelTextPainter.field_v[2] = NameSuggestionsPanel.field_G;
             BevelTextPainter.field_v[3] = ki.field_t;
             oe.field_c[3] = 1;
-            hn.field_k[0] = 5;
-            hn.field_k[1] = 2;
+            JaggrabDownloader.field_k[0] = 5;
+            JaggrabDownloader.field_k[1] = 2;
             for (var8Lifetime2 = 0; var8Lifetime2 < var5; var8Lifetime2++) {
               stackIn_44_0 = BevelTextPainter.field_v;
               stackIn_44_1 = 6 + var8Lifetime2;
@@ -274,7 +274,7 @@ final class qa extends IntrusiveNode {
             }
             qj.monotonicTimeMillis(-26572);
           }
-          hi.field_h.field_f = hn.field_k.length;
+          hi.field_h.field_f = JaggrabDownloader.field_k.length;
           var3_intLifetime1 = 0;
           for (var4Lifetime1 = 0; BevelTextPainter.field_v.length > var4Lifetime1; var4Lifetime1++) {
             stackIn_93_0 = !(0 > oe.field_c[var4Lifetime1]);
@@ -350,7 +350,7 @@ final class qa extends IntrusiveNode {
         this.field_n = param0;
     }
 
-    final static boolean a(boolean param0, wa param1, wa param2) {
+    final static boolean sortsBefore(boolean param0, wa param1, wa param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

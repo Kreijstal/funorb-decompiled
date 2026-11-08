@@ -41,7 +41,7 @@ abstract class Js5Transport {
         return this.field_f.size((byte) -123) + this.field_m.size((byte) -90);
     }
 
-    final static boolean f(int param0) {
+    final static boolean isChatMode(int param0) {
         if (!SocketJs5Transport.field_r) {
           return false;
         }
@@ -53,7 +53,7 @@ abstract class Js5Transport {
 
     final static boolean isFeatureEnabled(int param0, byte param1) {
         if (param1 > -3) {
-          Js5Transport.f(-108);
+          Js5Transport.isChatMode(-108);
           if (-1 == param0) {
             return true;
           }
@@ -69,7 +69,7 @@ abstract class Js5Transport {
 
     abstract void setConnection(boolean param0, boolean param1, Object param2);
 
-    final static String a(String param0, int param1, int param2, String param3) {
+    final static String appendPlayerStat(String param0, int param1, int param2, String param3) {
         BattleScreen var4 = null;
         RuntimeException var4_ref = null;
         Battle var5 = null;
@@ -120,7 +120,7 @@ abstract class Js5Transport {
         try {
           CachedArchiveProvider.field_t.drawText(param2, param1 + 1, 1 + CachedArchiveProvider.field_t.field_C + param0, (16711422 & param3) >> 1, 4144959 & param3 >> 2);
           if (param5 >= -104) {
-            Js5Transport.f(68);
+            Js5Transport.isChatMode(68);
           }
           CachedArchiveProvider.field_t.drawText(param2, param1, CachedArchiveProvider.field_t.field_C + (param0 - 1), param3, param3);
           CachedArchiveProvider.field_t.drawText(param2, -1 + param1, CachedArchiveProvider.field_t.field_C + param0, param3, param3);

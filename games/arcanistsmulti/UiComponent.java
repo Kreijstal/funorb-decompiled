@@ -160,7 +160,7 @@ class UiComponent extends IntrusiveNode {
           }
           break;
         }
-        var5 = sk.a(-14150);
+        var5 = sk.getTooltipText(-14150);
         if (!param1) {
           return;
         }
@@ -268,7 +268,7 @@ class UiComponent extends IntrusiveNode {
             this.blur((byte) 29);
           }
           la.field_f = PacketBuffer.field_m;
-          qg.a(38, this.getTooltip(false));
+          qg.setPointerTarget(38, this.getTooltip(false));
           return param2;
         }
         if (SingleChildContainer.field_y == 0) {
@@ -290,7 +290,7 @@ class UiComponent extends IntrusiveNode {
               }
             }
             la.field_f = PacketBuffer.field_m;
-            qg.a(38, this.getTooltip(false));
+            qg.setPointerTarget(38, this.getTooltip(false));
             return param2;
           }
           if (!this.handlePointerPress(ja.field_s, WrappedTextLayout.field_r, this, param1, 10, pb.field_h, param0)) {
@@ -314,7 +314,7 @@ class UiComponent extends IntrusiveNode {
                 }
               }
               la.field_f = PacketBuffer.field_m;
-              qg.a(38, this.getTooltip(false));
+              qg.setPointerTarget(38, this.getTooltip(false));
               return param2;
             }
             this.blur((byte) 29);
@@ -326,12 +326,12 @@ class UiComponent extends IntrusiveNode {
           }
           if (0 != PacketBuffer.field_m) {
             la.field_f = PacketBuffer.field_m;
-            qg.a(38, this.getTooltip(false));
+            qg.setPointerTarget(38, this.getTooltip(false));
             return param2;
           }
           if (la.field_f == 0) {
             la.field_f = PacketBuffer.field_m;
-            qg.a(38, this.getTooltip(false));
+            qg.setPointerTarget(38, this.getTooltip(false));
             return param2;
           }
           this.handlePointerRelease(MenuButtonPanel.field_I, -20592, EmailLoginCredentials.field_g, param1, param0, this);
@@ -348,7 +348,7 @@ class UiComponent extends IntrusiveNode {
             this.blur((byte) 29);
           }
           la.field_f = PacketBuffer.field_m;
-          qg.a(38, this.getTooltip(false));
+          qg.setPointerTarget(38, this.getTooltip(false));
           return param2;
         }
         if (var5 == 0) {
@@ -370,7 +370,7 @@ class UiComponent extends IntrusiveNode {
               }
             }
             la.field_f = PacketBuffer.field_m;
-            qg.a(38, this.getTooltip(false));
+            qg.setPointerTarget(38, this.getTooltip(false));
             return param2;
           }
           if (!this.handlePointerPress(ja.field_s, WrappedTextLayout.field_r, this, param1, 10, pb.field_h, param0)) {
@@ -393,18 +393,18 @@ class UiComponent extends IntrusiveNode {
               }
             }
             la.field_f = PacketBuffer.field_m;
-            qg.a(38, this.getTooltip(false));
+            qg.setPointerTarget(38, this.getTooltip(false));
             return param2;
           }
           param2 = false;
           if (0 != PacketBuffer.field_m) {
             la.field_f = PacketBuffer.field_m;
-            qg.a(38, this.getTooltip(false));
+            qg.setPointerTarget(38, this.getTooltip(false));
             return param2;
           }
           if (la.field_f == 0) {
             la.field_f = PacketBuffer.field_m;
-            qg.a(38, this.getTooltip(false));
+            qg.setPointerTarget(38, this.getTooltip(false));
             return param2;
           }
           this.handlePointerRelease(MenuButtonPanel.field_I, -20592, EmailLoginCredentials.field_g, param1, param0, this);
@@ -421,7 +421,7 @@ class UiComponent extends IntrusiveNode {
             this.blur((byte) 29);
           }
           la.field_f = PacketBuffer.field_m;
-          qg.a(38, this.getTooltip(false));
+          qg.setPointerTarget(38, this.getTooltip(false));
           return param2;
         }
         this.handleMouseWheel(param1, param0, EmailLoginCredentials.field_g, MenuButtonPanel.field_I, SingleChildContainer.field_y, 0, this);
@@ -443,7 +443,7 @@ class UiComponent extends IntrusiveNode {
             }
           }
           la.field_f = PacketBuffer.field_m;
-          qg.a(38, this.getTooltip(false));
+          qg.setPointerTarget(38, this.getTooltip(false));
           return param2;
         }
         if (!this.handlePointerPress(ja.field_s, WrappedTextLayout.field_r, this, param1, 10, pb.field_h, param0)) {
@@ -456,12 +456,12 @@ class UiComponent extends IntrusiveNode {
         }
         if (0 != PacketBuffer.field_m) {
           la.field_f = PacketBuffer.field_m;
-          qg.a(38, this.getTooltip(false));
+          qg.setPointerTarget(38, this.getTooltip(false));
           return param2;
         }
         if (la.field_f == 0) {
           la.field_f = PacketBuffer.field_m;
-          qg.a(38, this.getTooltip(false));
+          qg.setPointerTarget(38, this.getTooltip(false));
           return param2;
         }
         this.handlePointerRelease(MenuButtonPanel.field_I, -20592, EmailLoginCredentials.field_g, param1, param0, this);
@@ -478,7 +478,7 @@ class UiComponent extends IntrusiveNode {
           this.blur((byte) 29);
         }
         la.field_f = PacketBuffer.field_m;
-        qg.a(38, this.getTooltip(false));
+        qg.setPointerTarget(38, this.getTooltip(false));
         return param2;
     }
 

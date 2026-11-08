@@ -134,7 +134,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
         }
     }
 
-    final static void a(boolean param0, byte param1) {
+    final static void drawPasswordScene(boolean param0, byte param1) {
         if (param1 != -101) {
           field_e = (String) null;
         }
@@ -146,22 +146,22 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
     public final void focusGained(java.awt.event.FocusEvent param0) {
     }
 
-    final static void a(int param0, boolean param1, int param2, boolean param3) {
+    final static void drawScreenBorder(int param0, boolean param1, int param2, boolean param3) {
         int var5;
         var5 = ArcanistsMulti.field_G ? 1 : 0;
         if (param2 == -1) {
-          ed.a(param1, (byte) 106);
+          ed.drawCurrentScreenView(param1, (byte) 106);
         } else {
           if (-2 == param2 &&
             ValidatedTextWidget.field_I > 3) {
-            ValidationHelpWidget.a(2, EmailLoginCredentials.field_j, EmailLoginCredentials.field_f);
+            ValidationHelpWidget.renderTiledBackground(2, EmailLoginCredentials.field_j, EmailLoginCredentials.field_f);
             SoftwareRasterizer.fillRectangle(ValidatedTextWidget.field_I - 3, 0, 646, EmailLoginCredentials.field_j, 0);
           } else {
             if (-2 == param2) {
               SoftwareRasterizer.clear();
             } else {
               if (param3) {
-                ed.a(false, (byte) 81);
+                ed.drawCurrentScreenView(false, (byte) 81);
                 SoftwareRasterizer.darkenRectangle(0, 0, EmailLoginCredentials.field_f, EmailLoginCredentials.field_j);
               }
               ArchiveProvider.field_f[param2].draw((byte) -45);
@@ -173,7 +173,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
         }
     }
 
-    final static int a(int param0, byte[] param1, int param2, byte param3, CharSequence param4, int param5) {
+    final static int encodeCp1252Into(int param0, byte[] param1, int param2, byte param3, CharSequence param4, int param5) {
         int var7 = 0;
         int stackIn_69_0 = 0;
         RuntimeException stackIn_72_0 = null;

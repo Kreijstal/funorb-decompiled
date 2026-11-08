@@ -10,7 +10,7 @@ final class WeightedLruCache {
     private SecondaryNodeDeque field_b;
     private IterableNodeHashTable field_c;
 
-    final static void a(boolean param0, MeshModel param1, int param2, byte param3, int param4) {
+    final static void drawModelFaces(boolean param0, MeshModel param1, int param2, byte param3, int param4) {
         byte dupTemp$0 = 0;
         boolean stackIn_10_0 = false;
         int stackIn_30_0 = 0;
@@ -49,11 +49,11 @@ final class WeightedLruCache {
         try {
           var5_int = GrowableIntList.highestBitIndex(param3, (-param4 + param2) * 3);
           var6 = param4 * 3;
-          ArchiveProvider.e((byte) -79);
+          ArchiveProvider.clearLayoutRows((byte) -79);
           var7 = -10 + var5_int;
           if (param1.field_F > 0 &&
             param1.field_H != null) {
-            UsernameCredentials.d(-24000);
+            UsernameCredentials.clearSpriteSlots(-24000);
           }
           CameraFollowTarget.field_i = 0;
           var8 = 0;
@@ -322,7 +322,7 @@ final class WeightedLruCache {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
           return;
         }
@@ -334,7 +334,7 @@ final class WeightedLruCache {
         }
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void drawModalScenes(int param0, boolean param1) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
@@ -344,7 +344,7 @@ final class WeightedLruCache {
             LinkButtonPainter.field_h.drawFullScreen(param1, true);
           }
           if (sm.field_a <= param0 &&
-            oo.field_y <= 0) {
+            QuickChatCategory.field_y <= 0) {
             return;
           }
           if (MenuInputState.field_j) {

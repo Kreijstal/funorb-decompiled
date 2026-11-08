@@ -133,7 +133,7 @@ final class fc {
         field_e = null;
     }
 
-    final static boolean a(int param0, ResourceArchive param1, int param2, int param3) {
+    final static boolean decodeSpriteSheet(int param0, ResourceArchive param1, int param2, int param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;

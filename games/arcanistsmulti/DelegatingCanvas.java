@@ -13,7 +13,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
     static int field_f;
     static MusicTrack[] field_c;
 
-    final static void a(String param0, java.applet.Applet param1, boolean param2, byte param3) {
+    final static void openExternalUrl(String param0, java.applet.Applet param1, boolean param2, byte param3) {
         try {
           int var4_int = 0;
           if (PlatformTaskDispatcher.field_s.startsWith("win") &&
@@ -24,7 +24,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
           try {
             param1.getAppletContext().showDocument(new java.net.URL(param0), "_blank");
           } catch (java.net.MalformedURLException malformedURLException) {
-            DelegatingCanvas.a((Throwable) null, "MGR1: " + param0, (byte) 20);
+            DelegatingCanvas.reportError((Throwable) null, "MGR1: " + param0, (byte) 20);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -33,7 +33,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         }
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void updateBattleTurn(int param0, boolean param1) {
         BattleUnit dupTemp$0 = null;
         int var3;
         BattleUnit var4;
@@ -48,7 +48,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
               if (WhirlpoolHasher.field_k == 2) {
                 qn.field_ob.field_B = true;
                 IntrusiveNodeHashTable.field_f = ic.field_c;
-                i.b(-127);
+                i.resetFadeTimer(-127);
                 ArrayWidgetContainer.field_A = 400;
               } else {
                 if (WhirlpoolHasher.field_k != 3) {
@@ -85,12 +85,12 @@ final class DelegatingCanvas extends java.awt.Canvas {
             } else {
               IntrusiveNodeHashTable.field_f = CipherPacketBuffer.field_s;
               qn.field_ob.field_B = true;
-              i.b(1);
+              i.resetFadeTimer(1);
             }
           } else {
             IntrusiveNodeHashTable.field_f = WidgetStyleLayer.field_f;
             qn.field_ob.field_B = true;
-            i.b(97);
+            i.resetFadeTimer(97);
             ArrayWidgetContainer.field_A = 400;
           }
         }
@@ -101,7 +101,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
           if (WhirlpoolHasher.field_k == 0) {
             IntrusiveNodeHashTable.field_f = WrappedTextLayout.field_m;
             qn.field_ob.field_B = true;
-            i.b(-115);
+            i.resetFadeTimer(-115);
             ArrayWidgetContainer.field_A = 400;
           } else {
             if (WhirlpoolHasher.field_k == 1) {
@@ -143,7 +143,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
           if (WhirlpoolHasher.field_k == 0) {
             IntrusiveNodeHashTable.field_f = td.field_D;
             qn.field_ob.field_B = true;
-            i.b(-128);
+            i.resetFadeTimer(-128);
             ArrayWidgetContainer.field_A = 400;
           } else {
             if (WhirlpoolHasher.field_k != 1) {
@@ -249,16 +249,16 @@ final class DelegatingCanvas extends java.awt.Canvas {
             if (WhirlpoolHasher.field_k == 1) {
               IntrusiveNodeHashTable.field_f = TextButton.field_x;
               qn.field_ob.field_B = true;
-              i.b(param0 - 113);
+              i.resetFadeTimer(param0 - 113);
               ArrayWidgetContainer.field_A = 500;
             } else {
               if (2 == WhirlpoolHasher.field_k) {
-                IntrusiveNodeHashTable.field_f = gn.field_f;
+                IntrusiveNodeHashTable.field_f = QuickChatPhraseCache.field_f;
                 if (rk.field_O.getUnitByOwner(0, true).field_lb > 1300) {
                   WhirlpoolHasher.field_k = 3;
                 }
                 ArrayWidgetContainer.field_A = 300;
-                i.b(-128);
+                i.resetFadeTimer(-128);
               } else {
                 if (WhirlpoolHasher.field_k != 3) {
                   if (WhirlpoolHasher.field_k != 4) {
@@ -312,7 +312,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
           } else {
             qn.field_ob.field_B = true;
             IntrusiveNodeHashTable.field_f = qe.field_n;
-            i.b(19);
+            i.resetFadeTimer(19);
             ArrayWidgetContainer.field_A = 400;
           }
           if (rk.field_O.getUnitByOwner(0, true).field_db > 800) {
@@ -328,7 +328,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
                 WhirlpoolHasher.field_k = -WhirlpoolHasher.field_k;
               }
             }
-            i.b(param0 + 36);
+            i.resetFadeTimer(param0 + 36);
             ArrayWidgetContainer.field_A = 400;
           }
         }
@@ -337,7 +337,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
           qn.field_ob.field_H = false;
           qn.field_ob.field_g = false;
           if (rk.field_O.getUnitByOwner(0, true) == null) {
-            gj.a(true, true, 14, mn.field_r);
+            gj.switchScreen(true, true, 14, mn.field_r);
             co.resetBattleState(114);
             return;
           }
@@ -456,7 +456,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         }
         if (StatefulTextPainter.field_p == 6) {
           if (null == rk.field_O.getUnitByOwner(0, true)) {
-            gj.a(true, true, 14, mn.field_r);
+            gj.switchScreen(true, true, 14, mn.field_r);
             co.resetBattleState(108);
             return;
           }
@@ -464,7 +464,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
             IntrusiveNodeHashTable.field_f = GameAppletShell.field_g;
             qn.field_ob.field_B = true;
             qn.field_ob.field_z = 1500;
-            i.b(45);
+            i.resetFadeTimer(45);
             qn.field_ob.field_H = false;
             qn.field_ob.field_X = false;
             ArrayWidgetContainer.field_A = 400;
@@ -474,7 +474,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
               IntrusiveNodeHashTable.field_f = bh.field_a;
               qn.field_ob.field_B = true;
               qn.field_ob.field_z = 1500;
-              i.b(param0 - 115);
+              i.resetFadeTimer(param0 - 115);
               qn.field_ob.field_X = false;
               qn.field_ob.field_H = false;
             } else {
@@ -484,14 +484,14 @@ final class DelegatingCanvas extends java.awt.Canvas {
                   qn.field_ob.field_z = 6000;
                   IntrusiveNodeHashTable.field_f = GrowableIntList.field_e;
                   qn.field_ob.field_B = true;
-                  i.b(86);
+                  i.resetFadeTimer(86);
                 } else {
                   if (WhirlpoolHasher.field_k == 4) {
                     qn.field_ob.field_z = 6000;
                     qn.field_ob.field_B = true;
                     IntrusiveNodeHashTable.field_f = bb.field_d;
                     ArrayWidgetContainer.field_A = 280;
-                    i.b(-18);
+                    i.resetFadeTimer(-18);
                   } else {
                     if (WhirlpoolHasher.field_k != 5 &&
                       WhirlpoolHasher.field_k == 6) {
@@ -499,7 +499,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
                       IntrusiveNodeHashTable.field_f = IntrusiveNodeHashTable.field_l;
                       qn.field_ob.field_X = false;
                       qn.field_ob.field_B = true;
-                      i.b(-115);
+                      i.resetFadeTimer(-115);
                     }
                   }
                 }
@@ -507,7 +507,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
                 qn.field_ob.field_B = true;
                 IntrusiveNodeHashTable.field_f = fk.field_i;
                 qn.field_ob.field_z = 1500;
-                i.b(120);
+                i.resetFadeTimer(120);
                 qn.field_ob.field_X = false;
               }
             }
@@ -520,7 +520,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
           return;
         }
         if (null == rk.field_O.getUnitByOwner(0, true)) {
-          gj.a(true, true, 14, mn.field_r);
+          gj.switchScreen(true, true, 14, mn.field_r);
           co.resetBattleState(113);
           return;
         }
@@ -568,7 +568,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         }
     }
 
-    final static int a(PacketBuffer param0, byte param1, String param2) {
+    final static int writeCompressedString(PacketBuffer param0, byte param1, String param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         byte[] var4 = null;
@@ -611,7 +611,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         }
     }
 
-    final static void a(Throwable param0, String param1, byte param2) {
+    final static void reportError(Throwable param0, String param1, byte param2) {
         try {
           PlatformTaskDispatcher stackIn_14_0;
           boolean stackIn_14_1;
@@ -645,7 +645,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
             DraggableWidget.printError((byte) -125, var3);
             if (param2 != 20) {
               var7 = (java.applet.Applet) null;
-              DelegatingCanvas.a((String) null, (java.applet.Applet) null, true, (byte) 83);
+              DelegatingCanvas.openExternalUrl((String) null, (java.applet.Applet) null, true, (byte) 83);
             }
             var3 = CheckboxPainter.replaceAll(var3, ":", "%3a", (byte) 107);
             var3 = CheckboxPainter.replaceAll(var3, "@", "%40", (byte) 125);

@@ -28,9 +28,9 @@ final class wm extends SingleChildContainer {
         }
         if (this.field_v != 0 &&
           0 != this.field_k) {
-          MusicCrossfadeStream.field_n.a(param3 - (-this.field_j - this.field_k), this.field_v + this.field_n + param1, 3, param3 + this.field_j, this.field_n + param1);
+          MusicCrossfadeStream.field_n.clipToRectangle(param3 - (-this.field_j - this.field_k), this.field_v + this.field_n + param1, 3, param3 + this.field_j, this.field_n + param1);
           this.field_B.drawLayer((byte) -99, param1 + this.field_n, param2, param3 + this.field_j);
-          MusicCrossfadeStream.field_n.a(114);
+          MusicCrossfadeStream.field_n.popClip(114);
         }
     }
 
@@ -41,11 +41,11 @@ final class wm extends SingleChildContainer {
         this.field_B.refreshLayout((byte) 87);
     }
 
-    final static boolean c(boolean param0) {
+    final static boolean isLoginNameValid(boolean param0) {
         if (param0) {
           wm.statusColour(-119, (byte) 118);
         }
-        return kg.a(gg.field_e, true, GridContainer.field_S);
+        return QuickChatCategoryCache.isFriendOrMember(gg.field_e, true, GridContainer.field_S);
     }
 
     wm(int param0, int param1, int param2, int param3, WidgetPainter param4, UiComponent param5) {
@@ -88,14 +88,14 @@ final class wm extends SingleChildContainer {
         return 3153936;
     }
 
-    final static void g(int param0) {
+    final static void finishLoadingDialog(int param0) {
         PatchEnvelopeSet.finishLoadingDialog(-123);
         if (param0 != 0) {
           field_I = -56;
         }
     }
 
-    final static void g(byte param0) {
+    final static void advanceIntroTimer(byte param0) {
         if (0 - DisplayNameForm.field_G != SoundCache.field_a &&
           -DisplayNameForm.field_G + 250 == SoundCache.field_a) {
         }

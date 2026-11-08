@@ -18,7 +18,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         }
     }
 
-    final static String a(CharSequence param0, byte param1) {
+    final static String formatName(CharSequence param0, byte param1) {
         RuntimeException var2 = null;
         CharSequence var3 = null;
         String stackIn_3_0 = null;
@@ -29,9 +29,9 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         try {
           if (param1 != -118) {
             var3 = (CharSequence) null;
-            FullscreenFocusCanvas.a((CharSequence) null, (byte) 121);
+            FullscreenFocusCanvas.formatName((CharSequence) null, (byte) 121);
           }
-          stackIn_3_0 = Js5NetworkRequest.a(false, param0, -123);
+          stackIn_3_0 = Js5NetworkRequest.normalizeEmailOrName(false, param0, -123);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -47,7 +47,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         }
     }
 
-    final void a(PlatformTaskDispatcher param0, byte param1) {
+    final void closeFrame(PlatformTaskDispatcher param0, byte param1) {
         try {
           if (param1 != 67) {
             field_f = (String) null;

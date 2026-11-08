@@ -19,7 +19,7 @@ final class vf extends IntrusiveNode {
     static String field_h;
     static String field_j;
 
-    final static String a(int param0, String param1, int param2) {
+    final static String formatChatPrefix(int param0, String param1, int param2) {
         RuntimeException var3 = null;
         String stackIn_3_0 = null;
         String stackIn_6_0 = null;
@@ -84,7 +84,7 @@ final class vf extends IntrusiveNode {
         }
     }
 
-    final static SocialListEntry a(long param0, int param1) {
+    final static SocialListEntry lookupSocialEntry(long param0, int param1) {
         if (param1 != 8192) {
           field_h = (String) null;
           return (SocialListEntry) (OptionsDialog.field_qb.get(param0, (byte) -121));
@@ -106,7 +106,7 @@ final class vf extends IntrusiveNode {
           field_k = null;
           return;
         }
-        vf.a(-96L, -109);
+        vf.lookupSocialEntry(-96L, -109);
         field_v = null;
         field_k = null;
     }
@@ -122,7 +122,7 @@ final class vf extends IntrusiveNode {
     static {
         field_g = new MenuInputState(1);
         field_p = "Press '<col=ffffff><%0></col>' or '<col=ffffff><%1></col>' to cycle through your minions or to centre on your Arcanist.<br>  Use the '<col=ffffff>Arrow keys</col>' to scroll around the map.";
-        km.configureSpeed(100, 50);
+        NameCheckRequest.configureSpeed(100, 50);
         field_v = new int[8192];
         field_h = "Spellbook not acquired";
     }

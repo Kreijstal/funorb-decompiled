@@ -29,7 +29,7 @@ final class lf {
           var1_int = CheckboxPainter.field_g;
           CheckboxPainter.field_g = mn.field_r;
           cb.field_b = MusicCrossfadeStream.field_A;
-          km.field_c = 0;
+          NameCheckRequest.field_c = 0;
           if (CheckboxPainter.field_g == -1 &&
             5 == var1_int &&
             null != SpriteState.field_z) {
@@ -56,7 +56,7 @@ final class lf {
             MusicPatchNode.field_s = 0;
           }
           if (0 == CheckboxPainter.field_g) {
-            vl.d((byte) 112);
+            HotspotRegion.sendStatusBlock((byte) 112);
           }
           if (fi.field_h) {
             if (null != SpriteState.field_z ||
@@ -77,9 +77,9 @@ final class lf {
             return;
           }
           if (wa.field_Kb) {
-            ho.a(0);
-            EditableTextWidget.i((byte) -123);
-            qn.i(param0 ^ 110);
+            ho.closeOverlays(0);
+            EditableTextWidget.disconnectLobby((byte) -123);
+            qn.clearLobbyEntries(param0 ^ 110);
             wa.field_Kb = false;
           }
           pm.field_c = (int)(480.0 * Math.random());
@@ -105,12 +105,12 @@ final class lf {
         field_i = null;
     }
 
-    final static void b(int param0) {
+    final static void updateScrollAndTransition(int param0) {
         if (param0 != -4) {
           field_d = (String) null;
         }
-        NameValidator.d((byte) -74);
-        jo.a(true);
+        NameValidator.updateScrollAnimation((byte) -74);
+        jo.updateTransitionCounters(true);
     }
 
     static {

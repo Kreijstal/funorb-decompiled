@@ -19,16 +19,16 @@ final class ChatInputWidget extends SceneWidget {
     static String field_Jb;
     private SceneWidget[] field_Ob;
 
-    final static boolean a(int param0, int param1, int param2, int param3, boolean param4, int param5, int param6) {
-        if (pn.a((byte) -123)) {
-          mc.a(param3, param5, -113, param4);
+    final static boolean processOverlayInput(int param0, int param1, int param2, int param3, boolean param4, int param5, int param6) {
+        if (pn.hasOpenOverlay((byte) -123)) {
+          mc.updateQuickChatInput(param3, param5, -113, param4);
           if (null != eo.field_c &&
             eo.field_c.processInput(param4, param2, param6, param3, param0 ^ 12815)) {
             param4 = false;
-            IntrusiveDequeCursor.a(false);
+            IntrusiveDequeCursor.closePlayerMenu(false);
           }
-          tk.a(0, param4, param3);
-          ArchiveRequest.a(param1, param4, (byte) 59);
+          QuickChatPhrase.processQuickChatInput(0, param4, param3);
+          ArchiveRequest.updateChatInput(param1, param4, (byte) 59);
           param4 = false;
         }
         if (param0 != 0) {
@@ -271,7 +271,7 @@ final class ChatInputWidget extends SceneWidget {
             var28[2].setBounds(var16Lifetime2, 39 + 2 * var16Lifetime2, var21, var17Lifetime5, (byte) -120);
             var22 = var21;
             this.field_Pb.setBounds(var19 + 26, 0, 24, 10 + (var22 + var17Lifetime5), (byte) -120);
-            this.field_Pb.field_v = of.a(3, this.field_Pb.field_I, 1, 2105376, 11579568, 8421504);
+            this.field_Pb.field_v = of.createGradientFrame(3, this.field_Pb.field_I, 1, 2105376, 11579568, 8421504);
             var23 = 13 + (13 + var19);
             var24 = 34 + var22 + var17Lifetime5;
             var25 = ih.clampToScreenX(param0, var23, param2, 246);
@@ -289,7 +289,7 @@ final class ChatInputWidget extends SceneWidget {
           this.field_Eb.setBounds(var15_int, 13, var16Lifetime1, ImageProducerRasterBuffer.field_r * var17Lifetime1, (byte) -120);
           var16Lifetime1 = var16Lifetime1 + var17Lifetime1 * ImageProducerRasterBuffer.field_r;
           this.field_Pb.setBounds(13 + var15_int + 13, 0, 24, 10 + var16Lifetime1, (byte) -120);
-          this.field_Pb.field_v = of.a(3, this.field_Pb.field_I, 1, 2105376, 11579568, 8421504);
+          this.field_Pb.field_v = of.createGradientFrame(3, this.field_Pb.field_I, 1, 2105376, 11579568, 8421504);
           var18Lifetime1 = var15_int + 26;
           var19Lifetime1 = 34 + var16Lifetime1;
           var20Lifetime1 = ih.clampToScreenX(param0, var18Lifetime1, param2, 246);
@@ -417,7 +417,7 @@ final class ChatInputWidget extends SceneWidget {
         field_Lb = null;
     }
 
-    final static boolean a(String param0, String param1, int param2) {
+    final static boolean passwordContainsName(String param0, String param1, int param2) {
         String var3 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;

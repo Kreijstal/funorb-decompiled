@@ -6,15 +6,15 @@ final class mc {
     static Sprite[] field_a;
     static BitmapFont field_b;
 
-    final static void a(int param0, int param1, int param2, boolean param3) {
-        BevelTextPainter.a(param3, 2);
-        BoundedRandomAccessFile.a(param3, param0, -32507, param1);
+    final static void updateQuickChatInput(int param0, int param1, int param2, boolean param3) {
+        BevelTextPainter.sendToggleState(param3, 2);
+        BoundedRandomAccessFile.updateQuickChat(param3, param0, -32507, param1);
         if (param2 > -79) {
           mc.releaseStatics(55);
         }
     }
 
-    final static SceneWidget a(byte param0) {
+    final static SceneWidget getValidatorContent(byte param0) {
         if (param0 != 21) {
           return (SceneWidget) null;
         }

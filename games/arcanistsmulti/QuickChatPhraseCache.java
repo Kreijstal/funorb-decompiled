@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gn {
+final class QuickChatPhraseCache {
     private WeightedLruCache field_i;
     static String field_j;
     private ResourceArchive field_h;
@@ -14,16 +14,16 @@ final class gn {
     static int field_a;
     static String field_f;
 
-    final tk getDefinition(int param0, byte param1) {
+    final QuickChatPhrase getDefinition(int param0, byte param1) {
         byte[] var4 = null;
-        tk var3 = (tk) (this.field_i.get((long)param0, false));
+        QuickChatPhrase var3 = (QuickChatPhrase) (this.field_i.get((long)param0, false));
         if (var3 == null) {
           if (param0 >= 32768) {
             var4 = this.field_d.getFile(32767 & param0, 26219, 1);
           } else {
             var4 = this.field_h.getFile(param0, 26219, 1);
           }
-          var3 = new tk();
+          var3 = new QuickChatPhrase();
           if (var4 != null) {
             var3.decode(new PacketBuffer(var4), -22034);
           }
@@ -37,7 +37,7 @@ final class gn {
         return var3;
     }
 
-    final static void a(int param0, byte param1, int param2, int param3, int param4) {
+    final static void fillCircleMasked(int param0, byte param1, int param2, int param3, int param4) {
         int var15 = 0;
         int var16 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -160,7 +160,7 @@ final class gn {
         field_g = (int[][]) null;
     }
 
-    gn(int param0, ResourceArchive param1, ResourceArchive param2, ok param3) {
+    QuickChatPhraseCache(int param0, ResourceArchive param1, ResourceArchive param2, ok param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;

@@ -8,7 +8,7 @@ final class wg extends TextButton {
     private GrowableIntList field_I;
     int field_H;
 
-    final int g(byte param0) {
+    final int getSelectedValue(byte param0) {
         if (param0 != -102) {
           UiComponent var3 = (UiComponent) null;
           this.handlePointerPress(-7, 91, (UiComponent) null, 21, -15, 11, 120);
@@ -23,14 +23,14 @@ final class wg extends TextButton {
         field_J = null;
     }
 
-    final int c(boolean param0) {
+    final int getValueCount(boolean param0) {
         if (param0) {
-          this.c(true);
+          this.getValueCount(true);
         }
         return this.field_I.size(1);
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6, int param7, int param8) {
+    final static void drawMeshTriangleFlat(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6, int param7, int param8) {
         RuntimeException stackIn_80_0 = null;
         StringBuilder stackIn_80_1 = null;
         String stackIn_81_2 = null;
@@ -110,16 +110,16 @@ final class wg extends TextButton {
                     if (var18 == 0) {
                       if (0 <= var17 &&
                         var17 < MeshRasterState.field_d) {
-                        CameraFollowTarget.a(var16Lifetime2 + var17, param4, false, param6, var18);
+                        CameraFollowTarget.fillInts(var16Lifetime2 + var17, param4, false, param6, var18);
                       }
                     } else {
                       if (var17 + var18 >= MeshRasterState.field_d) {
                         var18 = -1 + (MeshRasterState.field_d - var17);
                       }
                       if (var17 >= 0) {
-                        CameraFollowTarget.a(var17 + var16Lifetime2, param4, false, param6, var18);
+                        CameraFollowTarget.fillInts(var17 + var16Lifetime2, param4, false, param6, var18);
                       } else {
-                        CameraFollowTarget.a(var16Lifetime2, param4, false, param6, var18 + var17);
+                        CameraFollowTarget.fillInts(var16Lifetime2, param4, false, param6, var18 + var17);
                       }
                     }
                   }
@@ -188,16 +188,16 @@ final class wg extends TextButton {
                 if (var17Lifetime1 == 0) {
                   if (0 <= var16Lifetime1 &&
                     var16Lifetime1 < MeshRasterState.field_d) {
-                    CameraFollowTarget.a(var16Lifetime1 + var15Lifetime1, param4, false, param6, var17Lifetime1);
+                    CameraFollowTarget.fillInts(var16Lifetime1 + var15Lifetime1, param4, false, param6, var17Lifetime1);
                   }
                 } else {
                   if (var16Lifetime1 + var17Lifetime1 >= MeshRasterState.field_d) {
                     var17Lifetime1 = -var16Lifetime1 + MeshRasterState.field_d - 1;
                   }
                   if (var16Lifetime1 >= 0) {
-                    CameraFollowTarget.a(var16Lifetime1 + var15Lifetime1, param4, false, param6, var17Lifetime1);
+                    CameraFollowTarget.fillInts(var16Lifetime1 + var15Lifetime1, param4, false, param6, var17Lifetime1);
                   } else {
-                    CameraFollowTarget.a(var15Lifetime1, param4, false, param6, var16Lifetime1 + var17Lifetime1);
+                    CameraFollowTarget.fillInts(var15Lifetime1, param4, false, param6, var16Lifetime1 + var17Lifetime1);
                   }
                 }
               }
@@ -290,7 +290,7 @@ final class wg extends TextButton {
         }
     }
 
-    final int a(int param0, int param1) {
+    final int getValueAt(int param0, int param1) {
         if (param0 <= param1 &&
           this.field_I.size(param0 ^ 1) > param1) {
           return this.field_I.get(31103, param1);

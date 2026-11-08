@@ -69,7 +69,7 @@ final class ConnectionState {
               UiContainer.field_z.position = 0;
               fj.field_h = param1[MenuInputState.field_d];
             }
-            if (!pn.b(-12564)) {
+            if (!pn.readServerStatus(-12564)) {
               return false;
             }
             if (ResizableModalPanel.field_ab == 0) {
@@ -124,7 +124,7 @@ final class ConnectionState {
           field_a = (String) null;
         }
         lh.field_n = true;
-        CachedArchiveProvider.a(false, (byte) -106);
+        CachedArchiveProvider.showLoginPanelDefault(false, (byte) -106);
         fj.field_j = 0;
     }
 

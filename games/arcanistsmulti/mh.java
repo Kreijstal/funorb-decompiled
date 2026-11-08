@@ -7,24 +7,24 @@ class mh extends TextButton {
     static long field_K;
     static String field_I;
 
-    final static void i(byte param0) {
+    final static void endTurnInput(byte param0) {
         rk.field_O.clearTurnActive(-256);
         if (StatefulTextPainter.field_p >= 6) {
           if (7 != StatefulTextPainter.field_p) {
-            gj.a(true, true, 14, mn.field_r);
-            UiContainer.a((byte) 120, StatefulTextPainter.field_p + 1);
+            gj.switchScreen(true, true, 14, mn.field_r);
+            UiContainer.selectMenuPage((byte) 120, StatefulTextPainter.field_p + 1);
           }
         } else {
           if (co.countUnitsOfType40(-20675) == 0 &&
             7 != StatefulTextPainter.field_p) {
-            gj.a(true, true, 14, mn.field_r);
-            UiContainer.a((byte) 120, StatefulTextPainter.field_p + 1);
+            gj.switchScreen(true, true, 14, mn.field_r);
+            UiContainer.selectMenuPage((byte) 120, StatefulTextPainter.field_p + 1);
           }
         }
         if (param0 == 74) {
           return;
         }
-        mh.g((byte) 11);
+        mh.clearKeyQueue((byte) 11);
     }
 
     final boolean focusNext(int param0, UiComponent param1) {
@@ -67,12 +67,12 @@ class mh extends TextButton {
         field_I = null;
     }
 
-    final static void g(byte param0) {
+    final static void clearKeyQueue(byte param0) {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
         if (param0 != 45) {
-          mh.i((byte) -22);
+          mh.endTurnInput((byte) -22);
         }
         if (null == CredentialKind.field_a) {
           return;

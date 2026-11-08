@@ -8,7 +8,7 @@ final class ik {
     static java.awt.Image field_e;
     static String[] field_c;
 
-    final static ri a(int param0, String param1) {
+    final static ri parseDigits(int param0, String param1) {
         int var3 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -52,7 +52,7 @@ final class ik {
         }
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void buildChatPanel(boolean param0, int param1) {
         tn.field_Ob = !param0 ? new i(ec.field_b, Checkbox.field_M) : new i(CipherPacketBuffer.field_r, WidgetStyleLayer.field_c);
         hl.field_m = new SceneWidget(0L, (SceneWidget) null);
         hl.field_m.addChild(tn.field_Ob.field_c, 89);
@@ -64,10 +64,10 @@ final class ik {
         IconTextSceneWidget.field_Fb.addChild(Js5ArchiveManager.field_g, 89);
         Js5ArchiveManager.field_g.addChild(StatefulTextPainter.field_s, 25);
         Js5ArchiveManager.field_g.addChild(gj.field_d, 43);
-        MusicCrossfadeStream.a(125, param0);
+        MusicCrossfadeStream.layoutZoomedLobby(125, param0);
     }
 
-    final static void a(int param0, int param1) {
+    final static void sendByteRequest(int param0, int param1) {
         CipherPacketBuffer var2 = he.field_e;
         var2.writeOpcode((byte) -66, param0);
         var2.writeByte(1, (byte) -127);
@@ -84,7 +84,7 @@ final class ik {
         field_e = null;
     }
 
-    final static void b(int param0) {
+    final static void resetCurrentPlayer(int param0) {
         if (param0 != 0) {
           field_d = (int[]) null;
         }
@@ -93,13 +93,13 @@ final class ik {
         }
     }
 
-    final static void a(byte param0) {
+    final static void buildLobbyRoot(byte param0) {
         if (param0 != -85) {
           return;
         }
         DraggableWidget.field_H = new SceneWidget(0L, (SceneWidget) null);
         if (fc.field_a) {
-          DraggableWidget.field_H.addChild(kg.field_c, 14);
+          DraggableWidget.field_H.addChild(QuickChatCategoryCache.field_c, 14);
         }
         DraggableWidget.field_H.addChild(StatefulTextPainter.field_s, 39);
         aj.field_h = new i(NanoFrameClock.field_p, DraggableWidget.field_H);

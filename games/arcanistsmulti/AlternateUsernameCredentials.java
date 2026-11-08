@@ -11,9 +11,9 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
     static String field_k;
     static String field_o;
 
-    final static PcmStreamMixer a(boolean param0) {
+    final static PcmStreamMixer getEffectMixer(boolean param0) {
         if (param0) {
-          AlternateUsernameCredentials.c((byte) -35);
+          AlternateUsernameCredentials.clearPasswordScene((byte) -35);
           return pc.field_e;
         }
         return pc.field_e;
@@ -23,14 +23,14 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
         super(param0, param1);
     }
 
-    final static pb a(int param0, boolean param1) {
+    final static pb queueResponse(int param0, boolean param1) {
         pb var2 = new pb();
-        hn.field_q.addLast(var2, -1);
-        ik.a(param0, 0);
+        JaggrabDownloader.field_q.addLast(var2, -1);
+        ik.sendByteRequest(param0, 0);
         if (!param1) {
           return var2;
         }
-        AlternateUsernameCredentials.a(15, true);
+        AlternateUsernameCredentials.queueResponse(15, true);
         return var2;
     }
 
@@ -41,7 +41,7 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
         return fe.field_n;
     }
 
-    final static void c(byte param0) {
+    final static void clearPasswordScene(byte param0) {
         if (param0 != 13) {
           field_m = 5;
           PasswordFieldPainter.field_A = null;
@@ -60,10 +60,10 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
         int var1 = -71 / ((param0 + 50) / 40);
     }
 
-    final static void a(cm param0, int param1, int param2) {
+    final static void queueStatsReport(cm param0, int param1, int param2) {
         try {
           cc.field_e.addLast(param0, -1);
-          hb.a(param0, param2, (byte) 92);
+          hb.sendStatsReport(param0, param2, (byte) 92);
           if (param1 < 89) {
             field_o = (String) null;
           }

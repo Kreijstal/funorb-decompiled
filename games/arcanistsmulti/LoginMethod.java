@@ -8,7 +8,7 @@ final class LoginMethod {
     static int[] field_b;
     private String field_d;
 
-    final static void a(jg param0, byte param1) {
+    final static void addChatLine(jg param0, byte param1) {
         int var2_int = 0;
         jg var3 = null;
         int var4 = ArcanistsMulti.field_G ? 1 : 0;
@@ -35,13 +35,13 @@ final class LoginMethod {
             LoadingProgressDialog.field_rb = param0.field_m;
             of.field_c = param0.field_n;
           }
-          TextLine.a(param0, (byte) -74);
+          TextLine.appendChatLineToHistory(param0, (byte) -74);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "ql.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void drawBackgroundGradient(int param0, int param1, int param2) {
         int stackIn_10_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
@@ -154,11 +154,11 @@ final class LoginMethod {
         field_e = null;
     }
 
-    final static SceneWidget a(int param0) {
+    final static SceneWidget getValidatorContent(int param0) {
         if (param0 != 1) {
           return (SceneWidget) null;
         }
-        return mc.a((byte) 21);
+        return mc.getValidatorContent((byte) 21);
     }
 
     final static Sprite[] createSolidFrame(int param0, byte param1, int param2, int param3) {
@@ -240,10 +240,10 @@ final class LoginMethod {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void readLoginName(boolean param0) {
         ah.field_b = UiContainer.field_z.readString(-1);
         CharSequence var2 = (CharSequence) ((Object) ah.field_b);
-        nm.field_b = Js5ArchiveManager.a(var2, -13);
+        nm.field_b = Js5ArchiveManager.normalizeNameForLookup(var2, -13);
         if (!param0) {
           field_b = (int[]) null;
         }

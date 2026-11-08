@@ -14,7 +14,7 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
     final static void notifyBrowserResizing(int param0, int param1) {
         try {
           try {
-            ei.a("resizing", IconButtonPainter.getApplet(113), (byte) 114, new Object[]{new Integer(param0)});
+            JavaScriptBridge.callFunctionWithArgs("resizing", IconButtonPainter.getApplet(113), (byte) 114, new Object[]{new Integer(param0)});
           } catch (Throwable throwable) {
           }
           if (param1 != 0) {
@@ -90,20 +90,20 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
         }
         int var1_int = PacketBuffer.field_l.field_w;
         int var2 = PacketBuffer.field_l.field_n;
-        int var3 = km.field_e.field_n;
+        int var3 = NameCheckRequest.field_e.field_n;
         int var4 = -var3 + EmailLoginCredentials.field_f;
-        int var5 = km.field_e.field_w;
+        int var5 = NameCheckRequest.field_e.field_w;
         int var6 = -var5 + EmailLoginCredentials.field_j;
         int var7 = EmailLoginCredentials.field_f - var1_int;
         int var8 = EmailLoginCredentials.field_j - var1_int;
-        km.field_e.drawTransparent(0, 0);
-        km.field_e.drawHorizontalFlip(var4, 0);
-        km.field_e.drawVerticalFlip(0, var6);
+        NameCheckRequest.field_e.drawTransparent(0, 0);
+        NameCheckRequest.field_e.drawHorizontalFlip(var4, 0);
+        NameCheckRequest.field_e.drawVerticalFlip(0, var6);
         if (param0 <= 68) {
           return;
         }
         try {
-          km.field_e.drawRotated180(var4, var6);
+          NameCheckRequest.field_e.drawRotated180(var4, var6);
           SoftwareRasterizer.setClip(var3, 0, var4, EmailLoginCredentials.field_j);
           for (var9 = var3; var4 > var9; var9 = var9 + var2) {
             PacketBuffer.field_l.drawTransparent(var9, 0);

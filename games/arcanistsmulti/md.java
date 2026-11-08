@@ -24,7 +24,7 @@ final class md {
           }
           for (var4 = 0; var4 < 58; var4++) {
             if ((param1 & 1L << var4) != 0L) {
-              var3_int = var3_int + ta.a(true, var4);
+              var3_int = var3_int + ta.classifyLowBits(true, var4);
             }
           }
           stackIn_11_0 = var3_int;

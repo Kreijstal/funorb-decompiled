@@ -14,7 +14,7 @@ abstract class IndexedSpriteState {
     int field_j;
     int field_g;
 
-    final static void a(boolean param0) {
+    final static void stepEffectVolumeUp(boolean param0) {
         int var1 = 0;
         int var1Lifetime1;
         if (!param0) {

@@ -10,7 +10,7 @@ final class hj extends IOException {
     static String field_c;
     static int field_b;
 
-    final static void a(BitmapFont param0, ResourceArchive param1, int param2) {
+    final static void initializeQuickChat(BitmapFont param0, ResourceArchive param1, int param2) {
         int var8 = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -20,7 +20,7 @@ final class hj extends IOException {
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        oo var4 = null;
+        QuickChatCategory var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var9 = 0;
@@ -34,17 +34,17 @@ final class hj extends IOException {
           co.field_f = new SceneWidget(0L, (SceneWidget) null);
           if (param1 == null) {
             var10 = (Throwable) null;
-            DelegatingCanvas.a((Throwable) null, "QC1", (byte) 20);
+            DelegatingCanvas.reportError((Throwable) null, "QC1", (byte) 20);
             return;
           }
           param1.field_h = false;
           param1.field_f = 0;
-          ByteStorage.field_d = new kg(var3_int, param1, param1);
-          th.field_d = new gn(var3_int, param1, param1, new la());
-          var4 = gj.b(param2 ^ -20419);
+          ByteStorage.field_d = new QuickChatCategoryCache(var3_int, param1, param1);
+          th.field_d = new QuickChatPhraseCache(var3_int, param1, param1, new la());
+          var4 = gj.findFirstActiveDefinition(param2 ^ -20419);
           if (var4 == null) {
             var11 = (Throwable) null;
-            DelegatingCanvas.a((Throwable) null, "QC2", (byte) 20);
+            DelegatingCanvas.reportError((Throwable) null, "QC2", (byte) 20);
             return;
           }
           ff.initializeDefaultResponse((byte) 91, var4);
@@ -87,7 +87,7 @@ final class hj extends IOException {
         }
     }
 
-    final static void a(int param0) {
+    final static void updateAiTargets(int param0) {
         Battle stackIn_14_0;
         int stackIn_14_1;
         int stackIn_14_2;
@@ -285,13 +285,13 @@ final class hj extends IOException {
         field_a = null;
         if (param0 <= 93) {
           Battle var2 = (Battle) null;
-          hj.a((IndexedSprite) null, -60, 88, (Battle) null, (byte) -107, -114, 54);
+          hj.carveHalfResolutionMask((IndexedSprite) null, -60, 88, (Battle) null, (byte) -107, -114, 54);
         }
         field_c = null;
         field_e = null;
     }
 
-    final static void a(IndexedSprite param0, int param1, int param2, Battle param3, byte param4, int param5, int param6) {
+    final static void carveHalfResolutionMask(IndexedSprite param0, int param1, int param2, Battle param3, byte param4, int param5, int param6) {
         int incrementValue$4 = 0;
         int incrementValue$3 = 0;
         int incrementValue$5 = 0;
@@ -458,7 +458,7 @@ final class hj extends IOException {
         super(param0);
     }
 
-    final static Sprite a(int param0, ResourceArchive param1, int param2, byte param3) {
+    final static Sprite loadFirstSprite(int param0, ResourceArchive param1, int param2, byte param3) {
         RuntimeException var4 = null;
         Object stackIn_4_0 = null;
         Sprite stackIn_6_0 = null;
@@ -470,7 +470,7 @@ final class hj extends IOException {
           if (param3 != -10) {
             field_b = -93;
           }
-          if (fc.a(-124, param1, param0, param2)) {
+          if (fc.decodeSpriteSheet(-124, param1, param0, param2)) {
             stackIn_6_0 = i.createFirstDecodedSprite(false);
             return stackIn_6_0;
           }

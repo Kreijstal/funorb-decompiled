@@ -9,16 +9,16 @@ final class kj {
     static Boolean field_e;
     static String field_b;
 
-    final static void a(int param0) {
+    final static void setPendingMessage(int param0) {
         if (param0 != 21744) {
           field_d = (String) null;
-          DebouncedValidator.a(4, (byte) 30);
+          DebouncedValidator.setPendingMessageId(4, (byte) 30);
           return;
         }
-        DebouncedValidator.a(4, (byte) 30);
+        DebouncedValidator.setPendingMessageId(4, (byte) 30);
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_d = null;
         field_a = null;
         if (param0) {

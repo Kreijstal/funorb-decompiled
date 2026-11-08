@@ -16,13 +16,13 @@ final class pn {
         field_b = (Sprite[][]) null;
     }
 
-    final static void a(int param0) {
+    final static void initializeLoginStack(int param0) {
         if (param0 > -21) {
           field_d = -35;
         }
-        MusicCrossfadeStream.field_n = oo.d(-9685);
+        MusicCrossfadeStream.field_n = QuickChatCategory.getDefaultTheme(-9685);
         pm.field_e = new ModalPanelStack();
-        LabeledField.g((byte) 94);
+        LabeledField.openOptionsDialog((byte) 94);
     }
 
     final static String reverseString(int param0, String param1) {
@@ -66,7 +66,7 @@ final class pn {
         }
     }
 
-    final static void c(int param0) {
+    final static void showDefaultLoginPanel(int param0) {
         if (param0 != -11090) {
           return;
         }
@@ -74,15 +74,15 @@ final class pn {
         bb.showLoginPanel(on.field_d, -3, (String) null);
     }
 
-    final static boolean a(byte param0) {
+    final static boolean hasOpenOverlay(byte param0) {
         int var1;
         boolean stackIn_7_0 = false;
         var1 = 75 / ((param0 - 48) / 54);
-        stackIn_7_0 = (eo.field_c != null) || (LoadingTracker.c(-1321)) || (null != db.field_a) || (we.a((byte) -80));
+        stackIn_7_0 = (eo.field_c != null) || (LoadingTracker.hasPasswordScene(-1321)) || (null != db.field_a) || (we.hasOpenDialog((byte) -80));
         return stackIn_7_0;
     }
 
-    final static void a(String[] args, int param1, int param2, String param3) {
+    final static void handleRegistrationReply(String[] args, int param1, int param2, String param3) {
         int var5 = 0;
         int stackIn_6_0 = 0;
         boolean stackIn_7_1 = false;
@@ -109,7 +109,7 @@ final class pn {
           } else {
             stackIn_6_0 = 32517;
             stackIn_7_1 = !(UiComponent.field_u >= 13);
-            i.field_i = oj.a(stackIn_6_0, stackIn_7_1);
+            i.field_i = oj.createMessageWithFlag(stackIn_6_0, stackIn_7_1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -132,7 +132,7 @@ final class pn {
         }
     }
 
-    final static boolean b(int param0) {
+    final static boolean readServerStatus(int param0) {
         if (-1 == fj.field_h) {
           if (!ContextActionMenu.hasIncomingBytes((byte) -86, 1)) {
             return false;
@@ -181,7 +181,7 @@ final class pn {
             var4 = param1.substring(1 + var2_int);
             var5 = pm.validateEmailLocalPart((byte) -58, var3);
             if (var5 == null) {
-              return DualLinkNode.a(32752, var4);
+              return DualLinkNode.validateEmailText(32752, var4);
             }
             stackIn_13_0 = var5;
             return stackIn_13_0;

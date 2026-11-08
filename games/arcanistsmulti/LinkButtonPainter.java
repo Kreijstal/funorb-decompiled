@@ -39,7 +39,7 @@ final class LinkButtonPainter implements WidgetPainter {
         return (int)(1000000000L / fd.field_d);
     }
 
-    final static void a(byte param0) {
+    final static void enterResizableMode(byte param0) {
         if (ResizableModalPanel.field_Y != null) {
           ResizableModalPanel.field_Y.field_l = true;
           NameSuggestionsPanel.notifyBrowserResizing(1, 0);
@@ -91,7 +91,7 @@ final class LinkButtonPainter implements WidgetPainter {
             } else {
               var10 = var10 + (-var8 + param0.field_k);
             }
-            oj.a(param1 ^ -5581056, var10 + 2, -2 + var9, var8, 4 + var7);
+            oj.drawLoginMethodPanel(param1 ^ -5581056, var10 + 2, -2 + var9, var8, 4 + var7);
           }
           if (param1 == 5592405) {
             return;

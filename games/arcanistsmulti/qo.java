@@ -10,7 +10,7 @@ final class qo {
     static int[] field_a;
     static String field_g;
 
-    final static void a(int param0, byte param1, long param2) {
+    final static void sendLongRequest(int param0, byte param1, long param2) {
         CipherPacketBuffer var4 = he.field_e;
         var4.writeOpcode((byte) -75, param0);
         var4.position = var4.position + 1;
@@ -41,7 +41,7 @@ final class qo {
         }
     }
 
-    final static void a(int param0, int param1, int param2, byte param3) {
+    final static void writeLoginHandshake(int param0, int param1, int param2, byte param3) {
         int fieldTemp$0 = 0;
         int var4 = 0;
         int var4Lifetime1;
@@ -62,7 +62,7 @@ final class qo {
           he.field_e.writeByteLengthAtMark(he.field_e.position - var4, (byte) 43);
           return;
         }
-        qo.a(5, 14, 54, (byte) 68);
+        qo.writeLoginHandshake(5, 14, 54, (byte) 68);
         NodeHashTableIterator.field_a.writeByte(param1, (byte) -50);
         NodeHashTableIterator.field_a.writeShort(param2, (byte) -66);
         NodeHashTableIterator.field_a.rsaEncrypt(DropTargetWidget.field_K, (byte) 98, IconTextSceneWidget.field_Jb);
@@ -141,7 +141,7 @@ final class qo {
           if (Character.isISOControl(param0)) {
             return false;
           }
-          if (hn.a(param0, 17769)) {
+          if (JaggrabDownloader.isAlphanumeric(param0, 17769)) {
             return true;
           }
           var6 = ih.field_c;

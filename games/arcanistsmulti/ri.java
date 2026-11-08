@@ -14,7 +14,7 @@ final class ri {
         throw new IllegalStateException();
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void initializeRaster(int param0, int param1, int param2) {
         co.field_c = param2;
         wh.field_c = param2;
         MusicPatchNode.field_r = param0;
@@ -25,13 +25,13 @@ final class ri {
         SoftwareRasterizer.setTarget((int[]) null, 0, 0);
         ce.field_m = DraggableWidget.createRasterBuffer(param0, (java.awt.Component) ((Object) on.field_c), param2, (byte) -123);
         ce.field_m.makeRasterTarget(true);
-        ho.a((byte) 51, param2 / param1, param0 / 2);
+        ho.setScrollPosition((byte) 51, param2 / param1, param0 / 2);
         IconTextSceneWidget.setViewSize(param0, param1 ^ 19131, param2);
         MenuScreen.setScreenSize(param2, param0, false);
-        td.a(true, param2 / 2, param0 / 2);
+        td.storeLayoutValues(true, param2 / 2, param0 / 2);
     }
 
-    final static int[] a(int param0, byte param1, int param2) {
+    final static int[] buildRotationMatrix(int param0, byte param1, int param2) {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -57,13 +57,13 @@ final class ri {
         return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
     }
 
-    final static boolean a(int param0) {
+    final static boolean startLogoutTimer(int param0) {
         oj.field_h = true;
         tn.field_Hb = qj.monotonicTimeMillis(-26572) + 15000L;
         if (param0 <= -87) {
           return fj.field_j == 11 ? true : false;
         }
-        ri.a(50, -118, -15);
+        ri.initializeRaster(50, -118, -15);
         return fj.field_j == 11 ? true : false;
     }
 

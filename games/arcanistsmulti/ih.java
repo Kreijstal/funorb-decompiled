@@ -19,7 +19,7 @@ final class ih {
         }
     }
 
-    final static void a(int param0, int param1, byte param2) {
+    final static void storePointerOrigin(int param0, int param1, byte param2) {
         TextFieldValidator.field_m = param0;
         int var3 = -78 % ((param2 - 8) / 55);
         AccountRegistrationPanel.field_J = param1;

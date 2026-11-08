@@ -10,7 +10,7 @@ final class qc {
     static int field_a;
     static SceneWidget field_d;
 
-    final static void a(boolean param0) {
+    final static void configureViewport(boolean param0) {
         hi.installViewController(-123, param0);
         ResizableModalPanel.field_Y.setMinimumSize(480, 8110, 640);
         ResizableModalPanel.field_Y.setMaximumSize((byte) -119, 1024, 1280);
@@ -23,7 +23,7 @@ final class qc {
         }
     }
 
-    final static void a(boolean param0, int param1, int param2) {
+    final static void sendShortRequest(boolean param0, int param1, int param2) {
         CipherPacketBuffer var3 = he.field_e;
         var3.writeOpcode((byte) -38, param2);
         if (!param0) {
@@ -65,15 +65,15 @@ final class qc {
           if (param0 != 640) {
             field_c = (ConnectionState) null;
           }
-          var4 = Js5ArchiveManager.a(param2, param0 - 653);
+          var4 = Js5ArchiveManager.normalizeNameForLookup(param2, param0 - 653);
           if (var4 != null &&
             var4.length() >= 1) {
-            if (!rk.a((byte) 127, var4.charAt(0)) &&
-              !rk.a((byte) 121, var4.charAt(-1 + var4.length()))) {
+            if (!rk.isNameSeparator((byte) 127, var4.charAt(0)) &&
+              !rk.isNameSeparator((byte) 121, var4.charAt(-1 + var4.length()))) {
               var5 = 0;
               for (var6 = 0; param2.length() > var6; var6++) {
                 var7 = param2.charAt(var6);
-                if (!rk.a((byte) -63, (char) var7)) {
+                if (!rk.isNameSeparator((byte) -63, (char) var7)) {
                   var5 = 0;
                 } else {
                   var5++;

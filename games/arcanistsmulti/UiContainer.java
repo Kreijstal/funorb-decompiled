@@ -127,7 +127,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         }
     }
 
-    final static void a(int param0, java.applet.Applet param1) {
+    final static void clearStatusCookie(int param0, java.applet.Applet param1) {
         String var2 = null;
         String var3 = null;
         long var4 = 0L;
@@ -275,7 +275,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         }
     }
 
-    final static void a(byte param0, int param1) {
+    final static void selectMenuPage(byte param0, int param1) {
         int var2 = 2 / ((-54 - param0) / 54);
         StatefulTextPainter.field_p = param1;
         pn.field_c = null;
@@ -342,7 +342,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         }
     }
 
-    final static void d(boolean param0) {
+    final static void readHighscoreUpdate(boolean param0) {
         int var8_int = 0;
         int var19 = 0;
         int incrementValue$0 = 0;
@@ -452,7 +452,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
                 var12++;
               }
               if (var21 != null &&
-                MouseInputHandler.a(16, var21)) {
+                MouseInputHandler.isCurrentUser(16, var21)) {
                 var8[1][var13] = ah.field_b;
                 var9[1][var13] = null;
                 var34[1][var13] = var22;
@@ -502,7 +502,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
             ((fj) (Object) stackIn_54_0).unlink(stackIn_55_1);
             return;
           }
-          DelegatingCanvas.a((Throwable) null, "HS1: " + CacheEntry.g((byte) -25), (byte) 20);
+          DelegatingCanvas.reportError((Throwable) null, "HS1: " + CacheEntry.getVersionCaption((byte) -25), (byte) 20);
           ProxySocketConnector.closeActiveConnection(false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -685,7 +685,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
 
     public static void releaseStatics(boolean param0) {
         if (!param0) {
-          UiContainer.a((byte) -32, -73);
+          UiContainer.selectMenuPage((byte) -32, -73);
         }
         field_x = null;
         field_A = null;

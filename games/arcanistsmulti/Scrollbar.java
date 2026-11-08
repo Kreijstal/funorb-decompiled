@@ -731,7 +731,7 @@ final class Scrollbar extends ArrayWidgetContainer implements ButtonListener {
         }
     }
 
-    final static gl[] a(byte param0, CipherPacketBuffer param1) {
+    final static gl[] readPackedEntries(byte param0, CipherPacketBuffer param1) {
         gl[] stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -831,7 +831,7 @@ final class Scrollbar extends ArrayWidgetContainer implements ButtonListener {
         this.field_db.field_j = (this.field_L * (-var3 + var4) >> 16) + var3;
     }
 
-    final static void i(int param0) {
+    final static void drawLoadingOverlay(int param0) {
         if (param0 < 74) {
           return;
         }

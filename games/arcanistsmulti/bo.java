@@ -35,11 +35,11 @@ final class bo {
             stackIn_6_0 = nm.field_e;
             return stackIn_6_0;
           }
-          if (MouseInputHandler.a(16, param0)) {
+          if (MouseInputHandler.isCurrentUser(16, param0)) {
             stackIn_9_0 = BufferedRandomAccessFile.field_l;
             return stackIn_9_0;
           }
-          if (ArrayWidgetContainer.a(param0, 1)) {
+          if (ArrayWidgetContainer.hasEntryNamed(param0, 1)) {
             stackIn_13_0 = CachedArchiveProvider.formatTemplate(-30, new String[]{param0}, gj.field_e);
             return stackIn_13_0;
           }
@@ -55,7 +55,7 @@ final class bo {
           if (param1 != -26) {
             bo.releaseStatics(9);
           }
-          if (sa.a(param0, 320)) {
+          if (sa.isFriend(param0, 320)) {
             stackIn_26_0 = CachedArchiveProvider.formatTemplate(125, new String[]{param0}, r.field_a);
             return stackIn_26_0;
           }

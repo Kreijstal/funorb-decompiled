@@ -59,11 +59,11 @@ final class PatchEnvelopeSet {
           var3_int = param1.length();
           if (1 <= var3_int &&
             var3_int <= 12) {
-            var4 = Js5ArchiveManager.a(param1, -13);
+            var4 = Js5ArchiveManager.normalizeNameForLookup(param1, -13);
             if (var4 != null &&
               var4.length() >= 1) {
-              if (!rk.a((byte) 117, var4.charAt(0)) &&
-                !rk.a((byte) 118, var4.charAt(-1 + var4.length()))) {
+              if (!rk.isNameSeparator((byte) 117, var4.charAt(0)) &&
+                !rk.isNameSeparator((byte) 118, var4.charAt(-1 + var4.length()))) {
                 var5 = 0;
                 var6 = 0;
                 if (!param2) {
@@ -72,7 +72,7 @@ final class PatchEnvelopeSet {
                 }
                 while (var6 < param1.length()) {
                   var7 = param1.charAt(var6);
-                  if (rk.a((byte) 123, (char) var7)) {
+                  if (rk.isNameSeparator((byte) 123, (char) var7)) {
                     var5++;
                   } else {
                     var5 = 0;
@@ -178,7 +178,7 @@ final class PatchEnvelopeSet {
         if (ci.field_c != null) {
           ci.field_c.markComplete((byte) 61);
         }
-        hb.f((byte) -102);
+        hb.resetLobbyState((byte) -102);
     }
 
     final static String decodeCp1252String(int param0, int param1, byte param2, byte[] param3) {

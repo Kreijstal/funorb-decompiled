@@ -19,7 +19,7 @@ final class BirthDateEntryPanel extends ArrayWidgetContainer implements ButtonLi
           return;
         }
         try {
-          qo.a(this.field_P.getDay(32), this.field_P.getMonth(72), this.field_P.getYear(param0), (byte) -126);
+          qo.writeLoginHandshake(this.field_P.getDay(32), this.field_P.getMonth(72), this.field_P.getYear(param0), (byte) -126);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "cn.U(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

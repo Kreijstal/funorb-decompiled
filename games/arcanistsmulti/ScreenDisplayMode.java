@@ -12,7 +12,7 @@ final class ScreenDisplayMode {
     int field_a;
     static co field_h;
 
-    final static int a(IsaacRandom param0, int param1, byte param2) {
+    final static int randomBelow(IsaacRandom param0, int param1, byte param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -27,7 +27,7 @@ final class ScreenDisplayMode {
           if (param1 <= 0) {
             throw new IllegalArgumentException();
           }
-          if (ScreenDisplayMode.a(-2147483648, param1)) {
+          if (ScreenDisplayMode.isPowerOfTwo(-2147483648, param1)) {
             stackIn_5_0 = (int)((long)param1 * ((long)param0.nextInt((byte) -46) & 4294967295L) >> 32);
             return stackIn_5_0;
           }
@@ -67,7 +67,7 @@ final class ScreenDisplayMode {
         field_f = (Sprite) null;
     }
 
-    final static void a(int param0, byte param1, int param2) {
+    final static void sendScreenRequest(int param0, byte param1, int param2) {
         CipherPacketBuffer var3 = he.field_e;
         var3.writeOpcode((byte) -32, param2);
         var3.writeByte(3, (byte) -54);
@@ -75,12 +75,12 @@ final class ScreenDisplayMode {
         var3.writeShort(param0, (byte) -93);
         if (param1 >= -92) {
           IsaacRandom var4 = (IsaacRandom) null;
-          ScreenDisplayMode.a((IsaacRandom) null, 16, (byte) 39);
+          ScreenDisplayMode.randomBelow((IsaacRandom) null, 16, (byte) 39);
           return;
         }
     }
 
-    final static boolean a(int param0, int param1) {
+    final static boolean isPowerOfTwo(int param0, int param1) {
         if (param0 == -2147483648) {
           return param1 == (param1 & -param1) ? true : false;
         }

@@ -12,12 +12,12 @@ final class ProxySocketConnector extends SocketConnector {
     static FullscreenFocusCanvas field_m;
     static int field_p;
 
-    final static boolean c(byte param0) {
+    final static boolean canStartGame(byte param0) {
         boolean stackIn_7_0 = false;
         if (param0 != -44) {
           return true;
         }
-        stackIn_7_0 = (fj.field_j >= 10) && (!qe.field_p) && (!td.a(-97));
+        stackIn_7_0 = (fj.field_j >= 10) && (!qe.field_p) && (!td.isConnectedToLobby(-97));
         return stackIn_7_0;
     }
 
@@ -361,7 +361,7 @@ final class ProxySocketConnector extends SocketConnector {
         }
     }
 
-    final static int a(boolean param0, byte param1, GameApplet param2) {
+    final static int pollLogin(boolean param0, byte param1, GameApplet param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;

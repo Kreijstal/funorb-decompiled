@@ -56,7 +56,7 @@ final class ao {
         RuntimeException decompiledCaughtException = null;
         try {
           var6 = new jg(param4, param3, param0, param5, param2);
-          TextLine.a(var6, (byte) -74);
+          TextLine.appendChatLineToHistory(var6, (byte) -74);
           if (param1 > 68) {
             return;
           }
@@ -130,11 +130,11 @@ final class ao {
         SecondaryNodeDequeIterator.field_g = SoftwareRasterizer.field_e;
         ri.field_a = SoftwareRasterizer.field_j;
         WidgetStyleLayer.layoutCenteredPanels((byte) -128);
-        aj.field_h.a(0, 0, -40 + (BufferedSocket.field_d.field_I - 2), BufferedSocket.field_d.field_x, 5);
-        kg.field_c.setBounds(DraggableWidget.field_H.field_x, 0, 0, ImageProducerRasterBuffer.field_r, (byte) -120);
+        aj.field_h.layoutChatColumns(0, 0, -40 + (BufferedSocket.field_d.field_I - 2), BufferedSocket.field_d.field_x, 5);
+        QuickChatCategoryCache.field_c.setBounds(DraggableWidget.field_H.field_x, 0, 0, ImageProducerRasterBuffer.field_r, (byte) -120);
         int var1 = 2 + ImageProducerRasterBuffer.field_r;
         StatefulTextPainter.field_s.setBounds(DraggableWidget.field_H.field_x, 0, !fc.field_a ? 0 : var1, -(fc.field_a ? var1 : 0) + DraggableWidget.field_H.field_I, (byte) -120);
-        ie.l((byte) 100);
+        ie.layoutTopBar((byte) 100);
         ii.field_b.setBounds(BufferedSocket.field_d.field_x, 0, BufferedSocket.field_d.field_I - 40, 40, (byte) -120);
         sm.field_c.setBounds(fn.field_e.field_x, 0, 0, 30, (byte) -120);
         ad.field_c.setBounds(fn.field_e.field_x, 0, 30, -30 + (-40 + (fn.field_e.field_I - 2)), (byte) -120);

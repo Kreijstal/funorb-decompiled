@@ -364,12 +364,12 @@ final class SceneScrollPane extends SceneWidget {
           if (AudioService.field_i != null) {
             he.field_e.writeVersionedString(AudioService.field_i, (byte) -110);
           }
-          TextLine.a(false, he.field_e, IconTextSceneWidget.field_Jb, NodeHashTableIterator.field_a, DropTargetWidget.field_K);
+          TextLine.writeSecureBlock(false, he.field_e, IconTextSceneWidget.field_Jb, NodeHashTableIterator.field_a, DropTargetWidget.field_K);
           if (param2 != 116) {
             SceneScrollPane.releaseStatics(-40);
           }
           he.field_e.writeShortLengthAtMark(he.field_e.position - var5_int, -19571);
-          we.a(-1, (byte) 104);
+          we.sendKeepAlive(-1, (byte) 104);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -428,12 +428,12 @@ final class SceneScrollPane extends SceneWidget {
         }
     }
 
-    final static SceneWidget f(byte param0) {
+    final static SceneWidget getGameListContent(byte param0) {
         if (param0 >= -45) {
-          SceneScrollPane.f((byte) 61);
-          return LobbyGameEntry.f((byte) 111);
+          SceneScrollPane.getGameListContent((byte) 61);
+          return LobbyGameEntry.getEntryListContent((byte) 111);
         }
-        return LobbyGameEntry.f((byte) 111);
+        return LobbyGameEntry.getEntryListContent((byte) 111);
     }
 
     static {

@@ -327,7 +327,7 @@ abstract class ArrayWidgetContainer extends UiComponent implements UiContainerMa
         }
     }
 
-    final static boolean a(String param0, int param1) {
+    final static boolean hasEntryNamed(String param0, int param1) {
         RuntimeException var2 = null;
         String var3 = null;
         boolean stackIn_5_0 = false;
@@ -338,7 +338,7 @@ abstract class ArrayWidgetContainer extends UiComponent implements UiContainerMa
         try {
           if (param1 != 1) {
             var3 = (String) null;
-            ArrayWidgetContainer.a((String) null, -51);
+            ArrayWidgetContainer.hasEntryNamed((String) null, -51);
           }
           stackIn_5_0 = (UsernameCredentials.findEntryByName(0, param0) != null);
           return stackIn_5_0;
@@ -668,7 +668,7 @@ abstract class ArrayWidgetContainer extends UiComponent implements UiContainerMa
           return null;
         }
         var7 = (String) null;
-        ArrayWidgetContainer.a((String) null, 33);
+        ArrayWidgetContainer.hasEntryNamed((String) null, 33);
         return null;
     }
 

@@ -174,7 +174,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         }
     }
 
-    final static void a(int param0, PacketBuffer param1) {
+    final static void readTimestamp(int param0, PacketBuffer param1) {
         int var2_int = 0;
         int var2_intLifetime1;
         int var2_intLifetime2;
@@ -198,7 +198,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         }
     }
 
-    final static boolean a(int param0, String param1) {
+    final static boolean isCurrentUser(int param0, String param1) {
         RuntimeException var2 = null;
         CharSequence var3 = null;
         boolean stackIn_3_0 = false;
@@ -211,7 +211,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             field_b = 108;
           }
           var3 = (CharSequence) ((Object) param1);
-          stackIn_3_0 = nm.field_b.equals(Js5ArchiveManager.a(var3, -13));
+          stackIn_3_0 = nm.field_b.equals(Js5ArchiveManager.normalizeNameForLookup(var3, -13));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -227,7 +227,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         }
     }
 
-    final static void a(int param0, LobbyGameEntry param1, String param2, boolean param3) {
+    final static void openGameInfo(int param0, LobbyGameEntry param1, String param2, boolean param3) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -273,7 +273,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             return;
           }
           var7 = (PacketBuffer) null;
-          MouseInputHandler.a(68, (PacketBuffer) null);
+          MouseInputHandler.readTimestamp(68, (PacketBuffer) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

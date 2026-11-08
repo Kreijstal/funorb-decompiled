@@ -15,7 +15,7 @@ final class ia {
         field_a = null;
     }
 
-    final static void a(int param0, int param1) {
+    final static void updateRootInputWrapper(int param0, int param1) {
         if (param0 != -14296) {
           field_b = (SceneWidget[]) null;
           BattleScreen.updateRootInput(param0 + 12303);

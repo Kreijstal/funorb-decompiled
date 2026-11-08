@@ -10,7 +10,7 @@ final class we {
     static String field_d;
     static String field_a;
 
-    final static void a(int param0, byte param1) {
+    final static void sendKeepAlive(int param0, byte param1) {
         try {
           Throwable decompiledCaughtException = null;
           IOException var2 = null;
@@ -61,7 +61,7 @@ final class we {
         field_a = null;
     }
 
-    final static int b(int param0) {
+    final static int processKeyEvents(int param0) {
         int var1_int = 0;
         int var3 = 0;
         int stackIn_17_0 = 0;
@@ -71,7 +71,7 @@ final class we {
         var3 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           if (param0 != -3) {
-            we.a((byte) -29);
+            we.hasOpenDialog((byte) -29);
           }
           var1_int = 0;
           while (BevelTextPainter.pollKeyEvent(false)) {
@@ -90,7 +90,7 @@ final class we {
             0 <= NumericDateInputWidget.field_S.field_h) {
             var2 = cf.field_c[NumericDateInputWidget.field_S.field_h];
             if (var2 == 2) {
-              Js5NetworkRequest.c(false);
+              Js5NetworkRequest.setPaused(false);
             }
           }
           stackIn_17_0 = var2;
@@ -102,7 +102,7 @@ final class we {
         }
     }
 
-    final static boolean a(byte param0) {
+    final static boolean hasOpenDialog(byte param0) {
         if (param0 != -80) {
           we.releaseStatics(84);
           if (null == pm.field_b) {
@@ -212,7 +212,7 @@ final class we {
         throw new Error();
     }
 
-    final long a(int param0) {
+    final long currentTime(int param0) {
         if (param0 != 0) {
           field_a = (String) null;
           return qj.monotonicTimeMillis(-26572);

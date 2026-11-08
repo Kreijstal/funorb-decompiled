@@ -79,7 +79,7 @@ final class LoadingProgressDialog extends ResizableModalPanel {
         }
     }
 
-    final static void a(int[] param0, IndexedSprite[] param1, Sprite[][] param2, int param3, String[][] param4, String[] param5, int param6, ResourceArchive param7, byte[] param8, String[] param9, ResourceArchive param10, String[] param11, int param12, Sprite[][] param13, boolean param14, int param15, String[][] param16, ResourceArchive param17, byte[] param18, int[] param19) {
+    final static void initializeGameAssets(int[] param0, IndexedSprite[] param1, Sprite[][] param2, int param3, String[][] param4, String[] param5, int param6, ResourceArchive param7, byte[] param8, String[] param9, ResourceArchive param10, String[] param11, int param12, Sprite[][] param13, boolean param14, int param15, String[][] param16, ResourceArchive param17, byte[] param18, int[] param19) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -114,13 +114,13 @@ final class LoadingProgressDialog extends ResizableModalPanel {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var20 = null;
         try {
-          ArchiveRequest.a(param12 ^ param12, param17, param0, param1, param10);
+          ArchiveRequest.loadLobbySprites(param12 ^ param12, param17, param0, param1, param10);
           gf.loadDisplayNameSprites((byte) 72, param17);
-          CacheEntry.a(param8, param19, param3, param2, param6, param9, param4, param11, param17, param18, param5, param16, param15, param13, param12 - 17290);
+          CacheEntry.initializeGameOptions(param8, param19, param3, param2, param6, param9, param4, param11, param17, param18, param5, param16, param15, param13, param12 - 17290);
           FrameClock.initializeChatFilter(param7, param14, param17, (byte) -103);
-          PasswordFieldPainter.a((byte) 6);
-          ik.a((byte) -85);
-          r.a(false);
+          PasswordFieldPainter.initializeCaptionTable((byte) 6);
+          ik.buildLobbyRoot((byte) -85);
+          r.refreshOverlay(false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

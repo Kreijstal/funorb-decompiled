@@ -33,11 +33,11 @@ class EditableTextWidget extends TextButton {
         return var2;
     }
 
-    final static void m(int param0) {
+    final static void pollOrbCoinData(int param0) {
         int var1;
         if (!ContextActionMenu.field_Jb) {
           if (ce.field_i == null) {
-            ce.field_i = CachedArchiveProvider.a(4, -21402);
+            ce.field_i = CachedArchiveProvider.createPendingTask(4, -21402);
           }
           if (ce.field_i.field_l) {
             ad.field_f = ko.orArrays(ad.field_f, ce.field_i.field_i, true);
@@ -64,10 +64,10 @@ class EditableTextWidget extends TextButton {
         }
         if (!SectorCacheStore.field_g) {
           if (null == ci.field_d) {
-            ci.field_d = AlternateUsernameCredentials.a(6, false);
+            ci.field_d = AlternateUsernameCredentials.queueResponse(6, false);
           }
           if (ci.field_d.field_k) {
-            ec.a(ci.field_d.field_j, (byte) -49);
+            ec.applyColourTheme(ci.field_d.field_j, (byte) -49);
             ci.field_d = null;
             SectorCacheStore.field_g = true;
           }
@@ -78,14 +78,14 @@ class EditableTextWidget extends TextButton {
           ta.field_b = true;
         }
         if (la.field_a) {
-          kg.field_a = true;
+          QuickChatCategoryCache.field_a = true;
         }
         if (ContextActionMenu.field_Jb &&
           SectorCacheStore.field_g &&
-          kg.field_a &&
+          QuickChatCategoryCache.field_a &&
           NodeHashTableIterator.field_e) {
-          wm.g(0);
-          qc.a(false);
+          wm.finishLoadingDialog(0);
+          qc.configureViewport(false);
         }
     }
 
@@ -195,7 +195,7 @@ class EditableTextWidget extends TextButton {
         this.notifyTextChanged(-22706);
     }
 
-    final static void i(byte param0) {
+    final static void disconnectLobby(byte param0) {
         int var2 = 0;
         CipherPacketBuffer var3 = null;
         SocialListEntry var4 = null;
@@ -208,7 +208,7 @@ class EditableTextWidget extends TextButton {
           DirectByteStorage.field_f = null;
           if (param0 >= -97) {
             var3 = (CipherPacketBuffer) null;
-            EditableTextWidget.a(true, (CipherPacketBuffer) null);
+            EditableTextWidget.decodeMeshModel(true, (CipherPacketBuffer) null);
           }
           if (null != LinkButtonPainter.field_j) {
             LinkButtonPainter.field_j.clear(-124);
@@ -291,7 +291,7 @@ class EditableTextWidget extends TextButton {
 
     public static void releaseStatics(int param0) {
         if (param0 != 1) {
-          EditableTextWidget.m(-26);
+          EditableTextWidget.pollOrbCoinData(-26);
         }
         field_L = null;
         field_K = null;
@@ -580,7 +580,7 @@ class EditableTextWidget extends TextButton {
         }
     }
 
-    final static MeshModel a(boolean param0, CipherPacketBuffer param1) {
+    final static MeshModel decodeMeshModel(boolean param0, CipherPacketBuffer param1) {
         int var7 = 0;
         MeshModel stackIn_25_0 = null;
         RuntimeException stackIn_28_0 = null;

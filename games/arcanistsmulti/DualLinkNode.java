@@ -18,7 +18,7 @@ class DualLinkNode extends IntrusiveNode {
         field_g = null;
     }
 
-    final static ri a(int param0, String param1) {
+    final static ri validateEmailText(int param0, String param1) {
         int var5 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -66,7 +66,7 @@ class DualLinkNode extends IntrusiveNode {
               return stackIn_21_0;
             }
           }
-          stackIn_24_0 = ik.a(param0 - 32810, var3[var3.length - 1]);
+          stackIn_24_0 = ik.parseDigits(param0 - 32810, var3[var3.length - 1]);
           return stackIn_24_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -82,7 +82,7 @@ class DualLinkNode extends IntrusiveNode {
         }
     }
 
-    final static f a(int param0, int param1, byte[] param2) {
+    final static f createPendingRequest(int param0, int param1, byte[] param2) {
         f var3 = null;
         RuntimeException var3_ref = null;
         f stackIn_2_0 = null;
@@ -98,7 +98,7 @@ class DualLinkNode extends IntrusiveNode {
           }
           var3 = new f(param2);
           cm.field_l.addLast(var3, -1);
-          pb.a(32, param0, var3);
+          pb.sendChatLine(32, param0, var3);
           stackIn_4_0 = var3;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -128,14 +128,14 @@ class DualLinkNode extends IntrusiveNode {
         this.secondaryPrevious = null;
     }
 
-    final long b(boolean param0) {
+    final long getSecondaryKey(boolean param0) {
         if (param0) {
           return 111L;
         }
         return this.secondaryKey;
     }
 
-    final void a(int param0, long param1) {
+    final void setSecondaryKey(int param0, long param1) {
         if (param0 != 46) {
           return;
         }
