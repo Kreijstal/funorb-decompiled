@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 interface WidgetTextLayout {
-    public abstract kh a(UiComponent param0, int param1);
+    public abstract TextLayout a(UiComponent param0, int param1);
 
     public abstract int a(UiComponent param0, byte param1, int param2);
 

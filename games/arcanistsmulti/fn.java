@@ -31,7 +31,7 @@ final class fn {
         try {
           var10 = var10 + (param6 + param2);
           sa.field_Cb.a(sa.field_Cb.field_x, SingleChildContainer.field_D.field_x, 0, param2, (byte) -120);
-          hf.field_f.a(hf.field_f.c(-25921), 5, var10, param3, (byte) -120);
+          MembershipOfferScreen.field_f.a(MembershipOfferScreen.field_f.c(-25921), 5, var10, param3, (byte) -120);
           var11 = ih.field_d.c(-25921);
           ih.field_d.a(var11, -5 + (var9_int - var11), var10, param3, (byte) -120);
           bi.field_U.a(var9_int, 0, 0, param0, (byte) -120);
@@ -46,7 +46,7 @@ final class fn {
     }
 
     final static void a(int param0, byte param1) {
-        gb.field_f = 0;
+        SecondaryNodeDeque.field_f = 0;
         if (param1 >= -98) {
           return;
         }
@@ -284,7 +284,7 @@ final class fn {
                 pe.field_Fb[var9] != null) {
                 var11_int = pe.field_Fb[var9][var10_int];
                 if (var11_int != 0 &&
-                  !gm.field_c) {
+                  !LinkButtonPainter.field_c) {
                   var5_int = 1;
                 }
                 if (var11_int > var6) {
@@ -298,7 +298,7 @@ final class fn {
                   var7 = var11_intLifetime1;
                 }
                 if (0 != var11_intLifetime1 &&
-                  !gm.field_c) {
+                  !LinkButtonPainter.field_c) {
                   var5_int = 1;
                 }
               }
@@ -451,10 +451,10 @@ final class fn {
               var19 = var19 + ImageProducerRasterBuffer.field_r;
               if (var12.field_Fb.field_C &&
                 var22 != 0) {
-                kh.field_c = var12.field_Qb;
+                TextLayout.field_c = var12.field_Qb;
                 if (((null != rf.field_p)) &&
                   ((rf.field_p[var12.field_Mb] != null))) {
-                  kh.field_c = kh.field_c + " - " + rf.field_p[var12.field_Mb];
+                  TextLayout.field_c = TextLayout.field_c + " - " + rf.field_p[var12.field_Mb];
                 }
                 decompiledFrameRemainder0 = false;
               }
@@ -462,7 +462,7 @@ final class fn {
                 if (var12.field_Fb.field_C &&
                   rf.field_p != null &&
                   null != rf.field_p[var12.field_Mb]) {
-                  kh.field_c = rf.field_p[var12.field_Mb];
+                  TextLayout.field_c = rf.field_p[var12.field_Mb];
                 }
               }
             }
@@ -584,7 +584,7 @@ final class fn {
                     pe.field_Fb[var27_int] != null) {
                     var30_int = pe.field_Fb[var27_int][var28];
                     if (var30_int != 0 &&
-                      !gm.field_c &&
+                      !LinkButtonPainter.field_c &&
                       !var12.field_Jb) {
                       var29 = 1;
                     }
@@ -596,7 +596,7 @@ final class fn {
                     null != CanvasRasterBuffer.field_a[var27_int]) {
                     var30_intLifetime1 = CanvasRasterBuffer.field_a[var27_int][var28];
                     if (var30_intLifetime1 != 0 &&
-                      !gm.field_c &&
+                      !LinkButtonPainter.field_c &&
                       !var12.field_Jb) {
                       var29 = 1;
                     }
@@ -643,7 +643,7 @@ final class fn {
                   var27 = DirectByteStorage.field_f.field_ic;
                   var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + tj.a(126, new String[]{var27}, ArchiveProvider.field_c);
                 }
-                kh.field_c = (String) (var24Lifetime2);
+                TextLayout.field_c = (String) (var24Lifetime2);
               }
             }
             var12 = (cg) (var10.next(0));

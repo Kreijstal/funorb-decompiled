@@ -306,7 +306,7 @@ final class uh extends IntrusiveNode {
           if (pn.a((byte) -120)) {
             param0 = false;
           }
-          ig.a(0, param0);
+          WeightedLruCache.a(0, param0);
           int var2_int = 32 % ((param1 - 18) / 50);
           cj.drawModalDimOverlay(-127);
         } catch (RuntimeException runtimeException) {

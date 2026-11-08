@@ -209,24 +209,24 @@ abstract class ArchiveRequest extends DualLinkNode {
           ko.field_h.field_ib = 1;
           ko.field_h.field_X = 1;
           gn.field_c = new kc(0L, ko.field_h);
-          hg.field_d = new kc(0L, nj.field_d);
-          hg.field_d.field_ib = 1;
-          hg.field_d.field_S = 1;
-          hg.field_d.field_Y = 1;
-          hg.field_d.field_X = 1;
-          hg.field_d.field_wb = 1;
-          ml.field_V = new kc(0L, hg.field_d);
-          sl.field_S = new kc(0L, hg.field_d);
+          FrameClock.field_d = new kc(0L, nj.field_d);
+          FrameClock.field_d.field_ib = 1;
+          FrameClock.field_d.field_S = 1;
+          FrameClock.field_d.field_Y = 1;
+          FrameClock.field_d.field_X = 1;
+          FrameClock.field_d.field_wb = 1;
+          ml.field_V = new kc(0L, FrameClock.field_d);
+          sl.field_S = new kc(0L, FrameClock.field_d);
           th.field_c = new kc(0L, ko.field_h);
-          ml.field_S = new kc(0L, hg.field_d);
-          MouseWheelHandler.field_d = new kc(0L, hg.field_d);
-          nf.field_j = new kc(0L, hg.field_d);
-          hg.field_d.field_v = ic.a(qe.a(param1, "smallbutton", "lobby", param0 + 45), (byte) -86);
-          hg.field_d.field_Ab = ic.a(qe.a(param1, "smallbutton_mouseover", "lobby", param0 ^ 107), (byte) -94);
+          ml.field_S = new kc(0L, FrameClock.field_d);
+          MouseWheelHandler.field_d = new kc(0L, FrameClock.field_d);
+          nf.field_j = new kc(0L, FrameClock.field_d);
+          FrameClock.field_d.field_v = ic.a(qe.a(param1, "smallbutton", "lobby", param0 + 45), (byte) -86);
+          FrameClock.field_d.field_Ab = ic.a(qe.a(param1, "smallbutton_mouseover", "lobby", param0 ^ 107), (byte) -94);
           dupTemp$0 = ic.a(qe.a(param1, "smallbutton_active", "lobby", 90), (byte) -104);
-          hg.field_d.field_hb = dupTemp$0;
-          hg.field_d.field_xb = dupTemp$0;
-          hg.field_d.field_K = ic.a(qe.a(param1, "smallbutton_disabled", "lobby", 127), (byte) -117);
+          FrameClock.field_d.field_hb = dupTemp$0;
+          FrameClock.field_d.field_xb = dupTemp$0;
+          FrameClock.field_d.field_K = ic.a(qe.a(param1, "smallbutton_disabled", "lobby", 127), (byte) -117);
           gn.field_c.field_v = ic.a(qe.a(param1, "mediumbutton", "lobby", 57), (byte) -83);
           gn.field_c.field_Ab = ic.a(qe.a(param1, "mediumbutton_mouseover", "lobby", 89), (byte) -76);
           gn.field_c.field_xb = ic.a(qe.a(param1, "mediumbutton_mouseheld", "lobby", param0 + 44), (byte) -73);
@@ -263,10 +263,10 @@ abstract class ArchiveRequest extends DualLinkNode {
           var17 = qe.a(param1, "checkbox", "lobby", 63);
           ec.field_g = new af(0L, var17[1], var17[0], 1, nj.field_d, (String) null);
           qe.field_m = new kc(0L, (kc) null);
-          qe.field_m.field_v = pm.a(115, fj.loadSprite("lobby", -22612, param1, "slideregion"));
-          qe.field_m.field_Ab = pm.a(82, fj.loadSprite("lobby", param0 ^ -22612, param1, "slideregion_mouseover"));
-          qe.field_m.field_xb = pm.a(param0 + 77, fj.loadSprite("lobby", -22612, param1, "slideregion_mouseheld"));
-          qe.field_m.field_K = pm.a(53, fj.loadSprite("lobby", param0 - 22612, param1, "slideregion_disabled"));
+          qe.field_m.field_v = pm.createCentreOnlyFrame(115, fj.loadSprite("lobby", -22612, param1, "slideregion"));
+          qe.field_m.field_Ab = pm.createCentreOnlyFrame(82, fj.loadSprite("lobby", param0 ^ -22612, param1, "slideregion_mouseover"));
+          qe.field_m.field_xb = pm.createCentreOnlyFrame(param0 + 77, fj.loadSprite("lobby", -22612, param1, "slideregion_mouseheld"));
+          qe.field_m.field_K = pm.createCentreOnlyFrame(53, fj.loadSprite("lobby", param0 - 22612, param1, "slideregion_disabled"));
           SectorCacheStore.field_b = new kc(0L, (kc) null);
           SectorCacheStore.field_b.field_v = ic.a(qe.a(param1, "dragbar", "lobby", 113), (byte) -109);
           SectorCacheStore.field_b.field_Ab = ic.a(qe.a(param1, "dragbar_mouseover", "lobby", 85), (byte) -120);
@@ -283,7 +283,7 @@ abstract class ArchiveRequest extends DualLinkNode {
           db.field_b.field_vb = fj.loadSprite("lobby", -22612, param1, "downbutton_mouseheld");
           db.field_b.field_R = fj.loadSprite("lobby", -22612, param1, "downbutton_disabled");
           IntrusiveDeque.field_i = new in(0L, pi.field_d, db.field_b, qe.field_m, SectorCacheStore.field_b);
-          oh.field_r = new hb(0L, (kc) null, am.field_c, IntrusiveDeque.field_i, hg.field_d, (String) null, (String) null);
+          oh.field_r = new hb(0L, (kc) null, am.field_c, IntrusiveDeque.field_i, FrameClock.field_d, (String) null, (String) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -329,10 +329,10 @@ abstract class ArchiveRequest extends DualLinkNode {
           if (param0 > -55) {
             ArchiveRequest.releaseStatics(116);
           }
-          jd.field_g = param8;
-          jl.field_c = (Js5Transport) ((Object) new SocketJs5Transport());
-          ed.field_yb = new pa(param4);
-          mk.field_O = new Js5ArchiveManager(jl.field_c, ed.field_yb);
+          IsaacRandom.field_g = param8;
+          GrowableIntList.field_c = (Js5Transport) ((Object) new SocketJs5Transport());
+          ed.field_yb = new DiskCacheWorker(param4);
+          mk.field_O = new Js5ArchiveManager(GrowableIntList.field_c, ed.field_yb);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "ve.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');
         }

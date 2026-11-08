@@ -446,7 +446,7 @@ final class vh {
     }
 
     final void a(int param0) {
-        oo.c(-15405);
+        oo.popClipState(-15405);
         if (param0 <= 86) {
           String var3 = (String) null;
           this.a((String) null, (byte) -95, 123, -107);

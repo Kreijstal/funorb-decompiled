@@ -309,7 +309,7 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
             stackIn_42_1 = 1;
           }
           if (stackIn_42_0 != stackIn_42_1) {
-            LoginPanel.a((hc) null, -42, (hc) null);
+            LoginPanel.a((ConditionalTextValue) null, -42, (ConditionalTextValue) null);
           }
           var4 = 0;
           while (true) {
@@ -528,23 +528,23 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
             this.field_L.field_q = fo.field_e;
             if (var11 != 0) {
               if (!this.field_N) {
-                this.field_L.field_r = (WidgetPainter) ((Object) new gm());
+                this.field_L.field_r = (WidgetPainter) ((Object) new LinkButtonPainter());
                 this.field_L.field_q = hj.field_c;
-                this.field_L.field_r = (WidgetPainter) ((Object) new gm());
+                this.field_L.field_r = (WidgetPainter) ((Object) new LinkButtonPainter());
               } else {
                 this.field_L.field_q = hj.field_c;
-                this.field_L.field_r = (WidgetPainter) ((Object) new gm());
+                this.field_L.field_r = (WidgetPainter) ((Object) new LinkButtonPainter());
               }
             }
           } else {
             boolean decompiledSharedTail2 = (this.field_N);
             if (!decompiledSharedTail2) {
-              this.field_L.field_r = (WidgetPainter) ((Object) new gm());
+              this.field_L.field_r = (WidgetPainter) ((Object) new LinkButtonPainter());
               decompiledSharedTail2 = (var11 != 0);
             }
             if (decompiledSharedTail2) {
               this.field_L.field_q = hj.field_c;
-              this.field_L.field_r = (WidgetPainter) ((Object) new gm());
+              this.field_L.field_r = (WidgetPainter) ((Object) new LinkButtonPainter());
             }
           }
           this.field_j = 15;
@@ -552,8 +552,8 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
           if (this.field_E != null) {
             this.field_j = this.field_j + (5 + var7.paragraphHeight(this.field_E, -40 + this.field_v, var7.field_C));
           }
-          var8 = jl.field_b;
-          var9 = oj.a(122, cd.getApplet(117));
+          var8 = GrowableIntList.field_b;
+          var9 = oj.readLastLoginMethod(122, cd.getApplet(117));
           if (var9 == DiskCacheRequest.field_y) {
             var8 = cn.field_H;
             if ((var11 != 0) &&
@@ -641,7 +641,7 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (lj.b(true) ||
+          if (NanoFrameClock.b(true) ||
             !(this.field_O.field_g.length() <= 0) &&
             !(this.field_G.field_g.length() <= 0)) {
             UsernameCredentials.a(this.field_O.field_g, 0, this.field_G.field_g);
@@ -796,7 +796,7 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
         }
     }
 
-    final static int a(hc param0, int param1, hc param2) {
+    final static int a(ConditionalTextValue param0, int param1, ConditionalTextValue param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;

@@ -33,7 +33,7 @@ final class aa extends IntrusiveNode {
           qk.field_lb = nl.a((byte) 31, param3, "validation", "commonui");
           vc.field_e = (BitmapFont) ((Object) rm.a("arezzo12", param1, "commonui", -119, param3));
           ia.field_c = (BitmapFont) ((Object) rm.a("arezzo14", param1, "commonui", -120, param3));
-          go.field_k = (BitmapFont) ((Object) rm.a("arezzo14bold", param1, "commonui", -123, param3));
+          SocketConnector.field_k = (BitmapFont) ((Object) rm.a("arezzo14bold", param1, "commonui", -123, param3));
           var17 = new Sprite(param2.a("", "button.gif", -1), (java.awt.Component) ((Object) on.field_c));
           af.a("dropdown", "commonui", 19412, param3);
           var5 = pk.a("commonui", 0, "screen_options", param3);
@@ -76,7 +76,7 @@ final class aa extends IntrusiveNode {
           var12 = new Sprite(-(var9Lifetime1 * 2) + var17.field_q, var9Lifetime1);
           var12.makeRasterTarget();
           var17.drawOpaque(-var9Lifetime1, 0);
-          oo.c(-15405);
+          oo.popClipState(-15405);
           af.field_Jb = new Sprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "aa.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');

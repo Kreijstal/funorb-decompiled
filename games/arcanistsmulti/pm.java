@@ -11,7 +11,7 @@ final class pm {
     static sa field_b;
     static int field_c;
 
-    final static boolean a(char param0, int param1) {
+    final static boolean isAllowedEmailCharacter(char param0, int param1) {
         if (Character.isISOControl(param0)) {
           return false;
         }
@@ -54,7 +54,7 @@ final class pm {
         field_f = null;
     }
 
-    final static ri a(byte param0, String param1) {
+    final static ri validateEmailLocalPart(byte param0, String param1) {
         ri stackIn_3_0 = null;
         ri stackIn_7_0 = null;
         ri stackIn_11_0 = null;
@@ -89,7 +89,7 @@ final class pm {
           }
           if (param1.charAt(0) == 34) {
             if (34 != param1.charAt(-1 + var2_int)) {
-              stackIn_11_0 = n.field_b;
+              stackIn_11_0 = IntKeyLookup.field_b;
               return stackIn_11_0;
             }
             var3 = 0;
@@ -101,7 +101,7 @@ final class pm {
               } else {
                 if (var5 == 34 &&
                   var3 == 0) {
-                  stackIn_25_0 = n.field_b;
+                  stackIn_25_0 = IntKeyLookup.field_b;
                   return stackIn_25_0;
                 }
                 var3 = 0;
@@ -125,13 +125,13 @@ final class pm {
                 decompiledFrameRemainder0 = false;
               }
               else {
-                stackIn_42_0 = n.field_b;
+                stackIn_42_0 = IntKeyLookup.field_b;
                 return stackIn_42_0;
               }
             }
             if (decompiledFrameRemainder0) {
               if (ArchiveProvider.field_b.indexOf(var5Lifetime1) == -1) {
-                stackIn_47_0 = n.field_b;
+                stackIn_47_0 = IntKeyLookup.field_b;
                 return stackIn_47_0;
               }
               var3Lifetime1 = 0;
@@ -152,7 +152,7 @@ final class pm {
         }
     }
 
-    final static Sprite[] a(int param0, Sprite param1) {
+    final static Sprite[] createCentreOnlyFrame(int param0, Sprite param1) {
         Sprite[] var2 = null;
         RuntimeException var2_ref = null;
         Sprite[] var3 = null;
@@ -184,7 +184,7 @@ final class pm {
         }
     }
 
-    final static void a(ScreenDisplayMode[] param0, int param1) {
+    final static void sortDisplayModes(ScreenDisplayMode[] param0, int param1) {
         int var3 = 0;
         int var2_int = 0;
         ScreenDisplayMode var4 = null;

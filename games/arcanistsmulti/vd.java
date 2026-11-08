@@ -79,7 +79,7 @@ final class vd {
             bm.field_d[var2_int] = 0;
             var2_int++;
           }
-          for (var2_intLifetime1 = 0; var2_intLifetime1 < gb.field_f; var2_intLifetime1++) {
+          for (var2_intLifetime1 = 0; var2_intLifetime1 < SecondaryNodeDeque.field_f; var2_intLifetime1++) {
             if (g.field_d[var2_intLifetime1].field_m == param0.field_m) {
               dupTemp$3 = g.field_d[var2_intLifetime1].b(-62);
               bm.field_d[dupTemp$3] = bm.field_d[dupTemp$3] + 1;
@@ -88,7 +88,7 @@ final class vd {
           dupTemp$0 = param0.b(-21);
           bm.field_d[dupTemp$0] = bm.field_d[dupTemp$0] + 1;
           var2_intLifetime2 = 0;
-          for (var3 = 0; var3 < gb.field_f; var3++) {
+          for (var3 = 0; var3 < SecondaryNodeDeque.field_f; var3++) {
             boolean decompiledFrameRemainder0 = true;
             if (param0.field_m == g.field_d[var3].field_m) {
               var4 = g.field_d[var3].b(-109);
@@ -103,9 +103,9 @@ final class vd {
               g.field_d[incrementValue$2] = g.field_d[var3];
             }
           }
-          gb.field_f = var2_intLifetime2;
-          fieldTemp$1 = gb.field_f;
-          gb.field_f = gb.field_f + 1;
+          SecondaryNodeDeque.field_f = var2_intLifetime2;
+          fieldTemp$1 = SecondaryNodeDeque.field_f;
+          SecondaryNodeDeque.field_f = SecondaryNodeDeque.field_f + 1;
           g.field_d[fieldTemp$1] = param0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

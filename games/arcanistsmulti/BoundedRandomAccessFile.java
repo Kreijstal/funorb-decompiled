@@ -48,7 +48,7 @@ final class BoundedRandomAccessFile {
           return;
         }
         co.field_f.b(param0, (byte) 75);
-        var4 = nn.field_q.f((byte) 93) ? 1 : 0;
+        var4 = CacheEntry.field_q.f((byte) 93) ? 1 : 0;
         if (re.field_r != 0 &&
           var4 == 0) {
           param0 = false;
@@ -56,7 +56,7 @@ final class BoundedRandomAccessFile {
         }
         if (!param0) {
           if (var4 == 0) {
-            var5 = nn.field_q.f(0) + nn.field_q.field_V;
+            var5 = CacheEntry.field_q.f(0) + CacheEntry.field_q.field_V;
             if (var5 > 640) {
               ng.field_K = ng.field_K + 5;
               return;
@@ -72,12 +72,12 @@ final class BoundedRandomAccessFile {
           }
           co.field_f.b(param0, (byte) 66);
         } else {
-          nn.field_q.a(param1, -10284, param3);
+          CacheEntry.field_q.a(param1, -10284, param3);
           if (var4 != 0) {
             co.field_f.b(param0, (byte) 66);
           }
         }
-        var5Lifetime1 = nn.field_q.f(0) + nn.field_q.field_V;
+        var5Lifetime1 = CacheEntry.field_q.f(0) + CacheEntry.field_q.field_V;
         if (var5Lifetime1 > 640) {
           ng.field_K = ng.field_K + 5;
           return;

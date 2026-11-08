@@ -23,7 +23,7 @@ final class fl {
         RuntimeException decompiledCaughtException = null;
         var5 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          hb.field_Gb = pa.field_g;
+          hb.field_Gb = DiskCacheWorker.field_g;
           if (param0 != 20657) {
             var6 = (String[]) null;
             fl.a(49, (String) null, (String[]) null, 7);
@@ -33,7 +33,7 @@ final class fl {
               param3 <= 105) {
               var8 = param2;
               ao.a(var8, param0 ^ -20688);
-              fh.field_i = ho.a((byte) 120, param2);
+              fh.field_i = ho.createWithLines((byte) 120, param2);
               return;
             }
             fh.field_i = CipherPacketBuffer.a(param0 - 20657, param3, param1);
@@ -93,11 +93,11 @@ final class fl {
           mi.field_E = new Sprite(var3, 3 * var4 / 4);
           mi.field_E.makeRasterTarget();
           var2.drawOpaque(0, 0);
-          gm.field_l = new Sprite(var3, -mi.field_E.field_y + var4);
-          gm.field_l.makeRasterTarget();
+          LinkButtonPainter.field_l = new Sprite(var3, -mi.field_E.field_y + var4);
+          LinkButtonPainter.field_l.makeRasterTarget();
           var2.drawOpaque(0, -mi.field_E.field_y);
-          gm.field_l.field_o = mi.field_E.field_y;
-          oo.c(-15405);
+          LinkButtonPainter.field_l.field_o = mi.field_E.field_y;
+          oo.popClipState(-15405);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "fl.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

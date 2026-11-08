@@ -12,7 +12,7 @@ final class nm {
     static String field_a;
     static String field_b;
 
-    final static String a(int param0, String param1, ResourceArchive param2, String param3, String param4) {
+    final static String formatArchiveProgress(int param0, String param1, ResourceArchive param2, String param3, String param4) {
         RuntimeException var5 = null;
         String stackIn_2_0 = null;
         String stackIn_6_0 = null;
@@ -68,7 +68,7 @@ final class nm {
         }
     }
 
-    final static java.net.URL a(java.applet.Applet param0, java.net.URL param1, int param2) {
+    final static java.net.URL appendSessionParameters(java.applet.Applet param0, java.net.URL param1, int param2) {
         Object var3 = null;
         Object var4 = null;
         java.net.URL stackIn_9_0 = null;

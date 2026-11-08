@@ -165,7 +165,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     }
                     try {
                       if (false) throw (hj) null;
-                      var8.field_g = ka.a((String) (var8.field_b), var8.field_c, 0).b((byte) -128);
+                      var8.field_g = ProxySocketConnector.create((String) (var8.field_b), var8.field_c, 0).openSocket((byte) -128);
                     } catch (hj decompiledCaughtParameter1) {
                       decompiledCaughtException = decompiledCaughtParameter1;
                       var3_ref = (hj) (Object) decompiledCaughtException;
@@ -579,14 +579,14 @@ final class PlatformTaskDispatcher implements Runnable {
             exception = (Exception) (Object) decompiledCaughtException;
           }
         }
-        nd.a(field_i, field_r, true);
+        CacheFileLocator.initialize(field_i, field_r, true);
         if (this.field_p) {
-          this.field_n = new BoundedRandomAccessFile(nd.a("random.dat", -3, field_r, (String) null), "rw", 25L);
-          this.field_q = new BoundedRandomAccessFile(nd.a((byte) 67, "main_file_cache.dat2"), "rw", 314572800L);
-          this.field_e = new BoundedRandomAccessFile(nd.a((byte) 67, "main_file_cache.idx255"), "rw", 1048576L);
+          this.field_n = new BoundedRandomAccessFile(CacheFileLocator.resolveCacheFile("random.dat", -3, field_r, (String) null), "rw", 25L);
+          this.field_q = new BoundedRandomAccessFile(CacheFileLocator.getCacheFile((byte) 67, "main_file_cache.dat2"), "rw", 314572800L);
+          this.field_e = new BoundedRandomAccessFile(CacheFileLocator.getCacheFile((byte) 67, "main_file_cache.idx255"), "rw", 1048576L);
           this.field_d = new BoundedRandomAccessFile[param2];
           for (var5_int = 0; var5_int < param2; var5_int++) {
-            this.field_d[var5_int] = new BoundedRandomAccessFile(nd.a((byte) 67, "main_file_cache.idx" + var5_int), "rw", 1048576L);
+            this.field_d[var5_int] = new BoundedRandomAccessFile(CacheFileLocator.getCacheFile((byte) 67, "main_file_cache.idx" + var5_int), "rw", 1048576L);
           }
           if (this.field_j) {
             try {

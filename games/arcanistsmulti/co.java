@@ -270,7 +270,7 @@ final class co {
           }
           var6 = rk.field_O.a(0, true);
           if (var6 != null) {
-            qn.field_ob.field_m.a(-88, var6);
+            qn.field_ob.field_m.followUnit(-88, var6);
             qn.field_ob.field_bb = var6.field_T;
           } else {
             qn.field_ob.field_bb = -1;

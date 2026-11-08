@@ -27,13 +27,13 @@ final class mn extends TextFieldValidator {
           if (this.field_u instanceof ValidationProviderSource) {
             var4 = ((ValidationProviderSource) ((Object) this.field_u)).getValidationProvider(0);
             if (var4 != null &&
-              var4.getValidationState(-88) != nn.field_s) {
+              var4.getValidationState(-88) != CacheEntry.field_s) {
               stackIn_5_0 = ra.field_k;
               return stackIn_5_0;
             }
           }
           if (param0.equals(this.field_u.field_g)) {
-            stackIn_9_0 = nn.field_s;
+            stackIn_9_0 = CacheEntry.field_s;
           } else {
             stackIn_9_0 = ra.field_k;
           }
@@ -120,7 +120,7 @@ final class mn extends TextFieldValidator {
               vd.field_c.drawText(var6, var8, mh.field_H + var2, var5, -1);
               var2 = var2 + (ic.field_a + (FullscreenFocusCanvas.field_d + tm.field_b));
             } else {
-              ob.field_T.drawText(var6, var8, var2 + lj.field_k, var5, -1);
+              ob.field_T.drawText(var6, var8, var2 + NanoFrameClock.field_k, var5, -1);
               var2 = var2 + u.field_l;
             }
           }
@@ -157,7 +157,7 @@ final class mn extends TextFieldValidator {
           if (this.field_u instanceof ValidationProviderSource) {
             var3 = ((ValidationProviderSource) ((Object) this.field_u)).getValidationProvider(0);
             if (var3 != null) {
-              if (var3.getValidationState(-69) == nn.field_s &&
+              if (var3.getValidationState(-69) == CacheEntry.field_s &&
                 !param0.equals(this.field_u.field_g)) {
                 stackIn_7_0 = lf.field_i;
                 return stackIn_7_0;
@@ -207,7 +207,7 @@ final class mn extends TextFieldValidator {
           mn.e(18);
         }
         SocketJs5Transport.field_r = true;
-        hf.field_f = null;
+        MembershipOfferScreen.field_f = null;
         ih.field_d = null;
     }
 

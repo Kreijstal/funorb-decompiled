@@ -250,7 +250,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           if (param1.field_Lb && (2 == param1.field_Fb ||
             !(qf.field_d < 2))) {
             var9 = eo.field_c;
-            var10 = tj.a(param0 - 949002960, new String[]{param2}, gm.field_i);
+            var10 = tj.a(param0 - 949002960, new String[]{param2}, LinkButtonPainter.field_i);
             var9.field_l.a(10, var10, (byte) -26);
           }
           eo.field_c.a(param0 ^ 949002929);

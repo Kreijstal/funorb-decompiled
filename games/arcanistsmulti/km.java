@@ -11,7 +11,7 @@ final class km {
     static Sprite field_e;
     static String field_g;
 
-    final static int a(int param0, int param1, int param2, int param3, int param4) {
+    final static int blendColourStep(int param0, int param1, int param2, int param3, int param4) {
         if (1 >= param1) {
           return param3;
         }
@@ -53,7 +53,7 @@ final class km {
         try {
           wj.a(param9, param3, 113, param1, param2, param0, param8, param7, param11, param10, param10, param5, param4, param4, param7);
           if (param6 != 40) {
-            km.a(-75, -88, -28, -51, 45);
+            km.blendColourStep(-75, -88, -28, -51, 45);
           }
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "km.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + (param9 != null ? "{...}" : "null") + ',' + param10 + ',' + (param11 != null ? "{...}" : "null") + ')');
@@ -67,7 +67,7 @@ final class km {
         return this.field_h;
     }
 
-    final static void a(int param0, int param1) {
+    final static void configureSpeed(int param0, int param1) {
         vf.field_q = (param1 << 16) / 150;
         vf.field_m = 400 * param1 / 150;
         vf.field_o = param0 * param1 / 150;
@@ -87,7 +87,7 @@ final class km {
         field_e = null;
         field_a = null;
         if (param0 != 400) {
-          km.a(16, -52, 108, -102, -114);
+          km.blendColourStep(16, -52, 108, -102, -114);
         }
     }
 

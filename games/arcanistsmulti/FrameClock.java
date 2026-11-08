@@ -1,25 +1,25 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class hg {
+abstract class FrameClock {
     static PlatformTask field_a;
     static String field_c;
     static kc field_e;
     static kc field_d;
     static volatile int field_b;
 
-    final int a(long param0, int param1) {
-        long var4 = this.a((byte) 52);
+    final int sleepAndCountTicks(long param0, int param1) {
+        long var4 = this.nanosUntilNextTick((byte) 52);
         if (var4 > 0L) {
           ao.a(var4, 1);
         }
         if (param1 != -1) {
           field_e = (kc) null;
         }
-        return this.a(param0, (byte) -44);
+        return this.waitForTicks(param0, (byte) -44);
     }
 
-    final static String a(int param0, char param1) {
+    final static String charToString(int param0, char param1) {
         if (param0 != 3) {
           field_a = (PlatformTask) null;
         }
@@ -52,7 +52,7 @@ abstract class hg {
         var15 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           if (param2) {
-            hg.a(-89, '\002');
+            FrameClock.charToString(-89, '\002');
           }
           stackIn_5_0 = dd.field_c.field_Db;
           stackIn_6_1 = (dd.field_h == dd.field_c.field_Db);
@@ -113,11 +113,11 @@ abstract class hg {
             }
             if (null != var6.field_Mb &&
               var6.field_Mb.field_C) {
-              kh.field_c = var6.field_Gb;
+              TextLayout.field_c = var6.field_Gb;
             } else {
               if (var6.field_Jb.field_C &&
                 var11 != 0) {
-                kh.field_c = var6.field_Cb;
+                TextLayout.field_c = var6.field_Cb;
               }
             }
             var5 = var6;
@@ -150,16 +150,16 @@ abstract class hg {
         }
     }
 
-    abstract long a(byte param0);
+    abstract long nanosUntilNextTick(byte param0);
 
-    abstract int a(long param0, byte param1);
+    abstract int waitForTicks(long param0, byte param1);
 
-    final static void a(int param0, java.awt.Component param1) {
+    final static void attachKeyboardInput(int param0, java.awt.Component param1) {
         try {
           param1.setFocusTraversalKeysEnabled(false);
           param1.addKeyListener(CredentialKind.field_a);
           if (param0 != 1) {
-            hg.a(36, -123);
+            FrameClock.sinTable(36, -123);
           }
           param1.addFocusListener(CredentialKind.field_a);
         } catch (RuntimeException runtimeException) {
@@ -175,25 +175,25 @@ abstract class hg {
         int var2 = ed.field_Hb;
         ed.field_Hb = qe.field_h;
         if (param1 == 51) {
-          jl.field_c.field_o = 2;
+          GrowableIntList.field_c.field_o = 2;
         } else {
           if (param1 != 50) {
-            jl.field_c.field_o = 1;
+            GrowableIntList.field_c.field_o = 1;
           } else {
-            jl.field_c.field_o = 5;
+            GrowableIntList.field_c.field_o = 5;
           }
         }
-        jl.field_c.field_i = jl.field_c.field_i + 1;
+        GrowableIntList.field_c.field_i = GrowableIntList.field_c.field_i + 1;
         qe.field_h = var2;
-        if (jl.field_c.field_i >= 2 &&
+        if (GrowableIntList.field_c.field_i >= 2 &&
           param1 == 51) {
           return 2;
         }
-        if (jl.field_c.field_i >= 2 &&
+        if (GrowableIntList.field_c.field_i >= 2 &&
           param1 == 50) {
           return 5;
         }
-        if (!(jl.field_c.field_i < 4)) {
+        if (!(GrowableIntList.field_c.field_i < 4)) {
           return 1;
         }
         if (param0 != 110) {
@@ -202,9 +202,9 @@ abstract class hg {
         return -1;
     }
 
-    final static int a(int param0, int param1) {
+    final static int sinTable(int param0, int param1) {
         if (param1 != -52) {
-          hg.a(87, '|');
+          FrameClock.charToString(87, '|');
         }
         return MeshRasterState.field_c[param0 & 2047];
     }
@@ -218,7 +218,7 @@ abstract class hg {
 
     public static void releaseStatics(byte param0) {
         if (param0 >= -97) {
-          hg.a(48, true, false);
+          FrameClock.a(48, true, false);
         }
         field_d = null;
         field_e = null;
@@ -238,10 +238,10 @@ abstract class hg {
           he.field_e.writeOpcode((byte) -107, 1);
           we.a(0, (byte) 94);
         }
-        ka.b(param0);
+        ProxySocketConnector.closeActiveConnection(param0);
     }
 
-    final static void a(ResourceArchive param0, boolean param1, ResourceArchive param2, byte param3) {
+    final static void initializeChatFilter(ResourceArchive param0, boolean param1, ResourceArchive param2, byte param3) {
         try {
           if (param3 > -97) {
             field_b = 88;
@@ -257,7 +257,7 @@ abstract class hg {
         }
     }
 
-    abstract void a(int param0);
+    abstract void reset(int param0);
 
     static {
         field_c = "Create a free account to start using this feature";

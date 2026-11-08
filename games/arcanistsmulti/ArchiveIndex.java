@@ -20,12 +20,12 @@ final class ArchiveIndex {
     int field_p;
     static int[] field_a;
     static String field_s;
-    n[] field_c;
+    IntKeyLookup[] field_c;
     int field_g;
     int[] field_y;
     int field_f;
     int[] field_b;
-    n field_l;
+    IntKeyLookup field_l;
     static String field_v;
 
     private final void a(byte[] param0, int param1) {
@@ -135,7 +135,7 @@ final class ArchiveIndex {
               for (var10Lifetime1Lifetime1 = 0; var10Lifetime1Lifetime1 < this.field_w; var10Lifetime1Lifetime1++) {
                 this.field_t[this.field_r[var10Lifetime1Lifetime1]] = var17.readInt(MouseWheelHandler.a(param1, -10686));
               }
-              this.field_l = new n(this.field_t);
+              this.field_l = new IntKeyLookup(this.field_t);
             }
             for (var10Lifetime2 = 0; this.field_w > var10Lifetime2; var10Lifetime2++) {
               this.field_h[this.field_r[var10Lifetime2]] = var17.readInt(-10674);
@@ -208,7 +208,7 @@ final class ArchiveIndex {
               }
             }
             if (var6 != 0) {
-              this.field_c = new n[var9 + 1];
+              this.field_c = new IntKeyLookup[var9 + 1];
               this.field_q = new int[var9 + 1][];
               for (var10Lifetime5 = 0; var10Lifetime5 < this.field_w; var10Lifetime5++) {
                 var11Lifetime1 = this.field_r[var10Lifetime5];
@@ -226,7 +226,7 @@ final class ArchiveIndex {
                   }
                   this.field_q[var11Lifetime1][var14Lifetime1] = var17.readInt(MouseWheelHandler.a(param1, -10686));
                 }
-                this.field_c[var11Lifetime1] = new n(this.field_q[var11Lifetime1]);
+                this.field_c[var11Lifetime1] = new IntKeyLookup(this.field_q[var11Lifetime1]);
               }
               return;
             }
@@ -294,7 +294,7 @@ final class ArchiveIndex {
           if (param1.field_m != 2) {
             if (0 == param1.field_m &&
               hm.field_c) {
-              var3 = "[" + lj.field_p + "] ";
+              var3 = "[" + NanoFrameClock.field_p + "] ";
             }
             if (param1.field_m == 1) {
               var3 = "[" + tj.a(-44, new String[]{param1.field_o}, Bzip2State.field_j) + "] ";
@@ -425,7 +425,7 @@ final class ArchiveIndex {
             if (param2.length != 64) {
               throw new RuntimeException();
             }
-            this.field_x = nn.a(param0.length, (byte) -93, param0, 0);
+            this.field_x = CacheEntry.a(param0.length, (byte) -93, param0, 0);
             for (var4_int = 0; var4_int < 64; var4_int++) {
               if (this.field_x[var4_int] != param2[var4_int]) {
                 throw new RuntimeException();

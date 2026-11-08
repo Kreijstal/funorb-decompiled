@@ -41,7 +41,7 @@ final class ui extends TextFieldValidator {
             stackIn_8_0 = KeyboardInputHandler.field_i;
             return stackIn_8_0;
           }
-          if (ko.a(-128, var5)) {
+          if (ko.hasDisallowedCharacter(-128, var5)) {
             stackIn_11_0 = cm.field_h;
             return stackIn_11_0;
           }
@@ -57,7 +57,7 @@ final class ui extends TextFieldValidator {
             stackIn_32_0 = MusicPatchPcmStream.field_r;
             return stackIn_32_0;
           }
-          if (hm.a(var5, var6, -1)) {
+          if (hm.containsNameVariant(var5, var6, -1)) {
             stackIn_22_0 = rg.field_f;
             return stackIn_22_0;
           }
@@ -138,7 +138,7 @@ final class ui extends TextFieldValidator {
             return stackIn_5_0;
           }
           if (!this.a(49, param0)) {
-            return nn.field_s;
+            return CacheEntry.field_s;
           }
           stackIn_9_0 = ra.field_k;
           return stackIn_9_0;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class re extends kh {
+final class re extends TextLayout {
     static String[] field_t;
     private boolean field_n;
     static Sprite[] field_j;
@@ -307,7 +307,7 @@ final class re extends kh {
               if (param4 != 3) {
                 stackIn_43_0 = 0;
               } else {
-                stackIn_43_0 = this.a(var13, false, param7, param1.textWidth(var13));
+                stackIn_43_0 = this.countSpacesOutsideTags(var13, false, param7, param1.textWidth(var13));
               }
               SectorCacheStore.a(stackIn_43_0, var14, var13, param1, (byte) 35);
             }

@@ -12,7 +12,7 @@ final class oj {
     static int field_e;
     static String field_d;
 
-    final static ql a(int param0, java.applet.Applet param1) {
+    final static ql readLastLoginMethod(int param0, java.applet.Applet param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         ql[] var3 = null;
@@ -169,7 +169,7 @@ final class oj {
           }
           if (param0 != -32171) {
             var14 = (java.applet.Applet) null;
-            oj.a(82, (java.applet.Applet) null);
+            oj.readLastLoginMethod(82, (java.applet.Applet) null);
           }
           if (var5_int >= SoftwareRasterizer.field_i &&
             var5_int < SoftwareRasterizer.field_h) {

@@ -72,7 +72,7 @@ final class bk extends TextButton {
     final static void a(int param0) {
         int var1_int = 0;
         int var2 = ArcanistsMulti.field_G ? 1 : 0;
-        tg.field_e.a(-12619);
+        tg.field_e.reset(-12619);
         for (var1_int = 0; 32 > var1_int; var1_int++) {
           TextFieldValidator.field_l[var1_int] = 0L;
         }

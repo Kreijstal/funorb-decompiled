@@ -259,8 +259,8 @@ final class rb extends IntrusiveNode {
           }
           if (var2 != 0) {
             if (var2 != 1) {
-              DelegatingCanvas.a((Throwable) null, "A1: " + nn.g((byte) -25), (byte) 20);
-              ka.b(false);
+              DelegatingCanvas.a((Throwable) null, "A1: " + CacheEntry.g((byte) -25), (byte) 20);
+              ProxySocketConnector.closeActiveConnection(false);
               return;
             }
             var3 = var10.readInt(-10674);
@@ -276,12 +276,12 @@ final class rb extends IntrusiveNode {
               var4_ref_f.unlink(true);
               return;
             }
-            ka.b(false);
+            ProxySocketConnector.closeActiveConnection(false);
             return;
           }
           var9 = (pb) (hn.field_q.first(12623));
           if (var9 == null) {
-            ka.b(false);
+            ProxySocketConnector.closeActiveConnection(false);
             return;
           }
           var4 = var10.readUnsignedByte((byte) -100);
@@ -296,7 +296,7 @@ final class rb extends IntrusiveNode {
           }
           var10.position = var10.position + 4;
           if (!var10.verifyCrc32(true)) {
-            ka.b(false);
+            ProxySocketConnector.closeActiveConnection(false);
             return;
           }
           var9.field_k = true;

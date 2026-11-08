@@ -30,7 +30,7 @@ final class hj extends IOException {
         int[] var16 = null;
         var9 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          var3_int = gm.field_f;
+          var3_int = LinkButtonPainter.field_f;
           co.field_f = new kc(0L, (kc) null);
           if (param1 == null) {
             var10 = (Throwable) null;
@@ -471,7 +471,7 @@ final class hj extends IOException {
             field_b = -93;
           }
           if (fc.a(-124, param1, param0, param2)) {
-            stackIn_6_0 = i.a(false);
+            stackIn_6_0 = i.createFirstDecodedSprite(false);
             return stackIn_6_0;
           }
           stackIn_4_0 = null;

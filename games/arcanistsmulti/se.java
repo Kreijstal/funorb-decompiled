@@ -194,9 +194,9 @@ final class se extends SingleChildContainer {
         }
         if (nf.field_z == null) {
           nf.field_z = new int[param1 * 2];
-          if (null == hc.field_e ||
-            !(param1 <= hc.field_e.length)) {
-            hc.field_e = new int[2 * param1];
+          if (null == ConditionalTextValue.field_e ||
+            !(param1 <= ConditionalTextValue.field_e.length)) {
+            ConditionalTextValue.field_e = new int[2 * param1];
           }
           if (tj.field_u == null ||
             !(param1 <= tj.field_u.length)) {
@@ -224,8 +224,8 @@ final class se extends SingleChildContainer {
         } else {
           if (nf.field_z.length < param1) {
             nf.field_z = new int[param1 * 2];
-            if (null == hc.field_e) {
-              hc.field_e = new int[2 * param1];
+            if (null == ConditionalTextValue.field_e) {
+              ConditionalTextValue.field_e = new int[2 * param1];
               if (tj.field_u == null ||
                 !(param1 <= tj.field_u.length)) {
                 tj.field_u = new int[param1 * 2];
@@ -250,8 +250,8 @@ final class se extends SingleChildContainer {
                 wh.field_e = new boolean[2 * param1];
               }
             } else {
-              if (param1 > hc.field_e.length) {
-                hc.field_e = new int[2 * param1];
+              if (param1 > ConditionalTextValue.field_e.length) {
+                ConditionalTextValue.field_e = new int[2 * param1];
               }
               if (tj.field_u == null ||
                 !(param1 <= tj.field_u.length)) {
@@ -278,9 +278,9 @@ final class se extends SingleChildContainer {
               }
             }
           } else {
-            if (null == hc.field_e ||
-              !(param1 <= hc.field_e.length)) {
-              hc.field_e = new int[2 * param1];
+            if (null == ConditionalTextValue.field_e ||
+              !(param1 <= ConditionalTextValue.field_e.length)) {
+              ConditionalTextValue.field_e = new int[2 * param1];
             }
             if (tj.field_u == null ||
               !(param1 <= tj.field_u.length)) {

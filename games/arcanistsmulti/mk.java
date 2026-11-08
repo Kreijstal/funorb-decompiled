@@ -104,7 +104,7 @@ final class mk extends TextButton {
             }
           }
           var16.drawRotatedAboutPivot(112, 144, var16.field_n << 4, var16.field_w << 4, -this.field_H << 10, 4096);
-          oo.c(-15405);
+          oo.popClipState(-15405);
           ArchiveIndex.field_o.drawAdditive(var5 - var16.field_n, var6 - var16.field_w, 256);
           return;
         }
@@ -114,7 +114,7 @@ final class mk extends TextButton {
             var14.drawAdditive(-(var14.field_q >> 1) + var5, -(var14.field_y >> 1) + var6, 256);
             return;
           }
-          if (nn.field_s != var8) {
+          if (CacheEntry.field_s != var8) {
             return;
           }
           var13 = qk.field_lb[1];
@@ -142,7 +142,7 @@ final class mk extends TextButton {
           }
         }
         var15.drawRotatedAboutPivot(112, 144, var15.field_n << 4, var15.field_w << 4, -this.field_H << 10, 4096);
-        oo.c(-15405);
+        oo.popClipState(-15405);
         ArchiveIndex.field_o.drawAdditive(var5 - var15.field_n, var6 - var15.field_w, 256);
     }
 

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jd {
+final class IsaacRandom {
     private int[] field_a;
     private int field_k;
     private int field_d;
@@ -14,11 +14,11 @@ final class jd {
     static String field_g;
     private int field_h;
 
-    final int c(byte param0) {
+    final int nextInt(byte param0) {
         int fieldTemp$0 = this.field_b;
         this.field_b = this.field_b - 1;
         if (fieldTemp$0 == 0) {
-          this.a((byte) -103);
+          this.generateResults((byte) -103);
           this.field_b = 255;
         }
         if (param0 != -46) {
@@ -30,7 +30,7 @@ final class jd {
     public static void releaseStatics(byte param0) {
         field_j = null;
         if (param0 != -109) {
-          jd.releaseStatics((byte) -44);
+          IsaacRandom.releaseStatics((byte) -44);
         }
         field_i = null;
         field_g = null;
@@ -38,7 +38,7 @@ final class jd {
         field_e = null;
     }
 
-    private final void a(int param0) {
+    private final void initializeState(int param0) {
         int var2 = 0;
         int var11 = ArcanistsMulti.field_G ? 1 : 0;
         int var2Lifetime1;
@@ -164,11 +164,11 @@ final class jd {
           this.field_f[var2Lifetime2 + 6] = var9;
           this.field_f[var2Lifetime2 + 7] = var10;
         }
-        this.a((byte) -126);
+        this.generateResults((byte) -126);
         this.field_b = 256;
     }
 
-    private final void a(byte param0) {
+    private final void generateResults(byte param0) {
         int var2 = 0;
         int dupTemp$1 = 0;
         int dupTemp$2 = 0;
@@ -209,15 +209,15 @@ final class jd {
 
     final static void a(int param0, int param1, byte param2, int param3, int param4, int param5, int param6) {
         co.field_f.a(param3, param0, param5, param1, (byte) -120);
-        if (null != nn.field_q) {
-          nn.field_q.a(param6, -ng.field_K + param6, param1, true, param1, param4);
+        if (null != CacheEntry.field_q) {
+          CacheEntry.field_q.a(param6, -ng.field_K + param6, param1, true, param1, param4);
         }
         if (param2 != 19) {
           field_e = (String) null;
         }
     }
 
-    final int a(int param0, byte param1) {
+    final int nextIntBelow(int param0, byte param1) {
         int var4 = 0;
         int var5 = ArcanistsMulti.field_G ? 1 : 0;
         if (param1 != -116) {
@@ -228,20 +228,20 @@ final class jd {
         }
         int var3 = 2147483647 - (int)(4294967296L % (long)param0);
         do {
-          var4 = this.c((byte) -46);
+          var4 = this.nextInt((byte) -46);
         } while (var3 < var4);
         return dh.floorMod(var4, true, param0);
     }
 
     final static int b(int param0) {
         if (param0 >= -6) {
-          jd.b(1);
+          IsaacRandom.b(1);
         }
         return UiComponent.field_u;
     }
 
-    final jd b(byte param0) {
-        jd var2 = new jd();
+    final IsaacRandom copy(byte param0) {
+        IsaacRandom var2 = new IsaacRandom();
         var2.field_f = new int[256];
         var2.field_a = new int[256];
         if (param0 <= 22) {
@@ -256,10 +256,10 @@ final class jd {
         return var2;
     }
 
-    private jd() {
+    private IsaacRandom() {
     }
 
-    jd(int[] param0) {
+    IsaacRandom(int[] param0) {
         int var2_int = 0;
         try {
           this.field_a = new int[256];
@@ -267,7 +267,7 @@ final class jd {
           for (var2_int = 0; var2_int < param0.length; var2_int++) {
             this.field_a[var2_int] = param0[var2_int];
           }
-          this.a(1046142536);
+          this.initializeState(1046142536);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "jd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

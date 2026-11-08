@@ -40,7 +40,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
         RuntimeException var2 = null;
         try {
           if (null != CredentialKind.field_a) {
-            hg.field_b = 0;
+            FrameClock.field_b = 0;
             var2_int = param0.getKeyCode();
             if (0 <= var2_int &&
               var2_int < sb.field_h.length) {
@@ -52,7 +52,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
               var2_int >= 0) {
               CanvasRasterBuffer.field_d[ub.field_b] = ~var2_int;
               ub.field_b = 127 & ub.field_b + 1;
-              if (ub.field_b == go.field_g) {
+              if (ub.field_b == SocketConnector.field_g) {
                 ub.field_b = -1;
               }
             }
@@ -84,7 +84,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
         int var3Lifetime1;
         try {
           if (null != CredentialKind.field_a) {
-            hg.field_b = 0;
+            FrameClock.field_b = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
               var2_int < sb.field_h.length) {
@@ -99,7 +99,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
               var2_int >= 0) {
               CanvasRasterBuffer.field_d[ub.field_b] = var2_int;
               ub.field_b = 127 & ub.field_b + 1;
-              if (ub.field_b == go.field_g) {
+              if (ub.field_b == SocketConnector.field_g) {
                 ub.field_b = -1;
               }
             }
@@ -328,7 +328,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
           if (null != CredentialKind.field_a) {
             var2_int = param0.getKeyChar();
             if (var2_int != 0 && var2_int != 65535 &&
-              hf.a((char) var2_int, (byte) 123)) {
+              MembershipOfferScreen.isTypeableCharacter((char) var2_int, (byte) 123)) {
               var3 = 1 + pi.field_a & 127;
               if (var3 != Js5NetworkRequest.field_u) {
                 v.field_p[pi.field_a] = -1;

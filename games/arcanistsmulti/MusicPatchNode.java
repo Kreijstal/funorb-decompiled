@@ -57,8 +57,8 @@ final class MusicPatchNode extends IntrusiveNode {
     }
 
     final static void a(byte param0) {
-        jl.field_c.field_i = 0;
-        jl.field_c.field_o = 0;
+        GrowableIntList.field_c.field_i = 0;
+        GrowableIntList.field_c.field_o = 0;
         if (param0 != -34) {
           MusicPatchNode.c(false);
         }

@@ -429,11 +429,11 @@ final class MusicCrossfadeStream extends PcmStream {
           if (!fc.field_a) {
             stackIn_7_2 = 0;
           } else {
-            stackIn_7_2 = nn.field_p + 2 + 42;
+            stackIn_7_2 = CacheEntry.field_p + 2 + 42;
           }
           ((kc) (Object) stackIn_6_0).a(stackIn_6_1 - stackIn_7_2, 0, ImageProducerRasterBuffer.field_r + 2, 18, (byte) -120);
-          hf.field_q.a(nn.field_p + 42, -40 + (bk.field_M.field_x - nn.field_p - 2), ImageProducerRasterBuffer.field_r + 2, 18, (byte) -120);
-          lf.field_b.a(ImageProducerRasterBuffer.field_r + 22, nn.field_p, bk.field_M.field_x, false, 0, bk.field_M.field_I - (ImageProducerRasterBuffer.field_r + 2) - 20, 2);
+          MembershipOfferScreen.field_q.a(CacheEntry.field_p + 42, -40 + (bk.field_M.field_x - CacheEntry.field_p - 2), ImageProducerRasterBuffer.field_r + 2, 18, (byte) -120);
+          lf.field_b.a(ImageProducerRasterBuffer.field_r + 22, CacheEntry.field_p, bk.field_M.field_x, false, 0, bk.field_M.field_I - (ImageProducerRasterBuffer.field_r + 2) - 20, 2);
           var2_int = -29 / ((84 - param0) / 36);
           IntrusiveNodeHashTable.field_o.a(hl.field_m.field_x, 0, -40 + hl.field_m.field_I, 40, (byte) -120);
           nl.field_Db.a(oh.field_h.field_x, 0, 0, 30, (byte) -120);
@@ -537,7 +537,7 @@ final class MusicCrossfadeStream extends PcmStream {
             }
           }
           nl.field_Fb.a(360, -360 + SoftwareRasterizer.field_e >> 1, 10, -14 + (-120 + (SoftwareRasterizer.field_j - 10)), (byte) -120);
-          hf.field_t.a(nl.field_Fb.field_x, 0, 0, 24, (byte) -120);
+          MembershipOfferScreen.field_t.a(nl.field_Fb.field_x, 0, 0, 24, (byte) -120);
           Js5ArchiveManager.field_g.a(nl.field_Fb.field_x, 0, 24, -24 + nl.field_Fb.field_I, (byte) -120);
           Js5ArchiveManager.field_g.field_v = of.a(3, Js5ArchiveManager.field_g.field_I, 1, 1, 11579568, 8421504);
           mj.field_s.a(-10 + Js5ArchiveManager.field_g.field_x, 5, 5, -2 + (-34 + Js5ArchiveManager.field_g.field_I), (byte) -120);

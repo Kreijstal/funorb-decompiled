@@ -3,7 +3,7 @@
  */
 final class tg {
     static String field_g;
-    static hg field_e;
+    static FrameClock field_e;
     static String field_a;
     static int[] field_f;
     private DualLinkNode field_h;

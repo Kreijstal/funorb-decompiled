@@ -10,7 +10,7 @@ final class pb extends IntrusiveNode {
     static String field_i;
     static String field_l;
 
-    final static void a(int param0) {
+    final static void drawOrbCoinScreen(int param0) {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -39,9 +39,9 @@ final class pb extends IntrusiveNode {
         int var1 = 32;
         int var2 = 80;
         wm.field_H[15].drawScaled(var2, bo.field_d, 160, 64);
-        if (null != hf.field_o) {
-          var3 = 64 * hf.field_o.field_n / hf.field_o.field_w;
-          hf.field_o.drawScaled(-(var3 / 2) + 80 + var2, bo.field_d, var3, 64);
+        if (null != MembershipOfferScreen.field_o) {
+          var3 = 64 * MembershipOfferScreen.field_o.field_n / MembershipOfferScreen.field_o.field_w;
+          MembershipOfferScreen.field_o.drawScaled(-(var3 / 2) + 80 + var2, bo.field_d, var3, 64);
         }
         wm.field_H[15].drawScaled(var2 + 160, bo.field_d, 224, 48);
         wm.field_H[15].drawScaled(464, bo.field_d, 96, 48);
@@ -84,7 +84,7 @@ final class pb extends IntrusiveNode {
             mc.field_b.drawParagraph("Please wait for confirmation of your purchase.", 16 + var2, var4Lifetime13, 216, 64, 16777215, 0, 1, 1, mc.field_b.field_C);
           }
           if (param0 != 2341) {
-            pb.a(-26);
+            pb.drawOrbCoinScreen(-26);
           }
           if ((CredentialKind.field_b & 32) > 0) {
             mc.field_b.drawText("SHOW COMPLETE", 32, var1, 16777215, 0);
@@ -150,7 +150,7 @@ final class pb extends IntrusiveNode {
             mc.field_b.drawParagraph("Please wait for confirmation of your purchase.", 16 + var2, var4Lifetime2, 216, 64, 16777215, 0, 1, 1, mc.field_b.field_C);
           }
           if (param0 != 2341) {
-            pb.a(-26);
+            pb.drawOrbCoinScreen(-26);
           }
           if ((CredentialKind.field_b & 32) > 0) {
             mc.field_b.drawText("SHOW COMPLETE", 32, var1, 16777215, 0);
@@ -206,7 +206,7 @@ final class pb extends IntrusiveNode {
             mc.field_b.drawParagraph("Please wait for confirmation of your purchase.", 16 + var2, var4Lifetime2, 216, 64, 16777215, 0, 1, 1, mc.field_b.field_C);
           }
           if (param0 != 2341) {
-            pb.a(-26);
+            pb.drawOrbCoinScreen(-26);
           }
           if ((CredentialKind.field_b & 32) > 0) {
             mc.field_b.drawText("SHOW COMPLETE", 32, var1, 16777215, 0);
@@ -275,7 +275,7 @@ final class pb extends IntrusiveNode {
           }
           return;
         }
-        pb.a(-26);
+        pb.drawOrbCoinScreen(-26);
         if ((CredentialKind.field_b & 32) > 0) {
           mc.field_b.drawText("SHOW COMPLETE", 32, var1, 16777215, 0);
           var1 += 16;

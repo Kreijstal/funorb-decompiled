@@ -271,13 +271,13 @@ class TextButton extends UiComponent {
         if (param0 == null) {
           return;
         }
-        nn.field_q = param0;
+        CacheEntry.field_q = param0;
         co.field_f.field_G.clear(param1 + 185);
         if (param1 != -104) {
           return;
         }
         try {
-          co.field_f.a(nn.field_q, 60);
+          co.field_f.a(CacheEntry.field_q, 60);
           oj.field_i = true;
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "ag.QA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

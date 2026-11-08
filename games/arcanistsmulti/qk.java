@@ -79,11 +79,11 @@ abstract class qk extends ob {
           this.a((byte) 113);
         }
         if (null != this.field_rb) {
-          if (this.field_rb == hc.field_i) {
+          if (this.field_rb == ConditionalTextValue.field_i) {
             fieldTemp$1 = this.field_jb + 1;
             this.field_jb = this.field_jb + 1;
             if (fieldTemp$1 == this.field_kb) {
-              this.field_rb = hc.field_h;
+              this.field_rb = ConditionalTextValue.field_h;
               this.b(this.field_V.field_v + 12, 116, this.field_nb, this.field_V.field_k + 12 + this.field_mb);
               this.field_jb = 0;
               this.field_sb.field_K = 0;
@@ -144,7 +144,7 @@ abstract class qk extends ob {
     }
 
     final void e(boolean param0) {
-        if (this.field_rb == hc.field_i) {
+        if (this.field_rb == ConditionalTextValue.field_i) {
           return;
         }
         this.field_rb = mj.field_u;
@@ -199,10 +199,10 @@ abstract class qk extends ob {
         RuntimeException var3 = null;
         try {
           this.field_V = param1;
-          if (this.field_rb != hc.field_h) {
-            if (hc.field_i != this.field_rb) {
+          if (this.field_rb != ConditionalTextValue.field_h) {
+            if (ConditionalTextValue.field_i != this.field_rb) {
               this.field_jb = 0;
-              this.field_rb = hc.field_i;
+              this.field_rb = ConditionalTextValue.field_i;
             }
           } else {
             this.b(this.field_V.field_v + 12, 117, this.field_nb, this.field_mb + (12 + this.field_V.field_k));

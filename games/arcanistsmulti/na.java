@@ -226,10 +226,10 @@ final class na extends kc {
             md.field_c = param8;
             ho.field_c = param10;
             q.field_P = param2;
-            ka.field_q = param5;
+            ProxySocketConnector.field_q = param5;
             fl.field_a = param13;
             vf.field_r = param1;
-            gm.field_d = param0;
+            LinkButtonPainter.field_d = param0;
             ng.field_G = param11;
             Js5Transport.field_d = param4;
             if (param3 != 0) {

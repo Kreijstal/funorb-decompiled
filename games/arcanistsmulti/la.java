@@ -16,20 +16,20 @@ final class la implements ok {
         field_c = null;
     }
 
-    final static void a(boolean param0, boolean param1, byte param2) {
+    final static void clearOrDimScreen(boolean param0, boolean param1, byte param2) {
         if (param2 >= -22) {
           return;
         }
         if (!param1) {
           SoftwareRasterizer.clear();
-          lm.a((byte) -29, param1);
+          lm.drawRootContainer((byte) -29, param1);
           return;
         }
         SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_e, SoftwareRasterizer.field_j, 0, 192);
-        lm.a((byte) -29, param1);
+        lm.drawRootContainer((byte) -29, param1);
     }
 
-    final static int[] b(byte param0) {
+    final static int[] newEightInts(byte param0) {
         if (param0 != 12) {
           return (int[]) null;
         }

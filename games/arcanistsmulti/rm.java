@@ -42,7 +42,7 @@ final class rm {
         var2 = 0;
         var3 = 0;
         while (var2 < 8) {
-          this.field_e[var2] = kh.a(on.a((long)this.field_b[var3 + 7], 255L), kh.a(on.a(255L, (long)this.field_b[6 + var3]) << 8, kh.a(kh.a(on.a(4278190080L, (long)this.field_b[4 + var3] << 24), kh.a(on.a(1095216660480L, (long)this.field_b[var3 + 3] << 32), kh.a(kh.a((long)this.field_b[var3] << 56, on.a((long)this.field_b[var3 + 1], 255L) << 48), on.a((long)this.field_b[var3 + 2], 255L) << 40))), on.a(255L, (long)this.field_b[5 + var3]) << 16)));
+          this.field_e[var2] = TextLayout.longXor(on.a((long)this.field_b[var3 + 7], 255L), TextLayout.longXor(on.a(255L, (long)this.field_b[6 + var3]) << 8, TextLayout.longXor(TextLayout.longXor(on.a(4278190080L, (long)this.field_b[4 + var3] << 24), TextLayout.longXor(on.a(1095216660480L, (long)this.field_b[var3 + 3] << 32), TextLayout.longXor(TextLayout.longXor((long)this.field_b[var3] << 56, on.a((long)this.field_b[var3 + 1], 255L) << 48), on.a((long)this.field_b[var3 + 2], 255L) << 40))), on.a(255L, (long)this.field_b[5 + var3]) << 16)));
           var2++;
           var3 += 8;
         }
@@ -51,7 +51,7 @@ final class rm {
           dupTemp$0 = this.field_i[var3Lifetime1];
           arrayValue$1 = this.field_e[var3Lifetime1];
           this.field_c[var3Lifetime1] = dupTemp$0;
-          this.field_f[var3Lifetime1] = kh.a(arrayValue$1, dupTemp$0);
+          this.field_f[var3Lifetime1] = TextLayout.longXor(arrayValue$1, dupTemp$0);
         }
         for (var2Lifetime2 = 1; var2Lifetime2 <= 10; var2Lifetime2++) {
           for (var3Lifetime2 = 0; var3Lifetime2 < 8; var3Lifetime2++) {
@@ -59,7 +59,7 @@ final class rm {
             var4 = 0;
             var5 = 56;
             while (var4 < 8) {
-              this.field_j[var3Lifetime2] = kh.a(this.field_j[var3Lifetime2], mb.field_L[var4][NameValidator.bitAnd(255, (int)(this.field_c[NameValidator.bitAnd(7, -var4 + var3Lifetime2)] >>> var5))]);
+              this.field_j[var3Lifetime2] = TextLayout.longXor(this.field_j[var3Lifetime2], mb.field_L[var4][NameValidator.bitAnd(255, (int)(this.field_c[NameValidator.bitAnd(7, -var4 + var3Lifetime2)] >>> var5))]);
               var4++;
               var5 -= 8;
             }
@@ -67,14 +67,14 @@ final class rm {
           for (var3Lifetime2Lifetime1 = 0; 8 > var3Lifetime2Lifetime1; var3Lifetime2Lifetime1++) {
             this.field_c[var3Lifetime2Lifetime1] = this.field_j[var3Lifetime2Lifetime1];
           }
-          this.field_c[0] = kh.a(this.field_c[0], mb.field_V[var2Lifetime2]);
+          this.field_c[0] = TextLayout.longXor(this.field_c[0], mb.field_V[var2Lifetime2]);
           for (var3Lifetime2Lifetime2 = 0; var3Lifetime2Lifetime2 < 8; var3Lifetime2Lifetime2++) {
             this.field_j[var3Lifetime2Lifetime2] = this.field_c[var3Lifetime2Lifetime2];
             var7 = 0;
             var4Lifetime1 = var7;
             var5Lifetime1 = 56;
             while (8 > var7) {
-              this.field_j[var3Lifetime2Lifetime2] = kh.a(this.field_j[var3Lifetime2Lifetime2], mb.field_L[var7][NameValidator.bitAnd((int)(this.field_f[NameValidator.bitAnd(7, var3Lifetime2Lifetime2 - var7)] >>> var5Lifetime1), 255)]);
+              this.field_j[var3Lifetime2Lifetime2] = TextLayout.longXor(this.field_j[var3Lifetime2Lifetime2], mb.field_L[var7][NameValidator.bitAnd((int)(this.field_f[NameValidator.bitAnd(7, var3Lifetime2Lifetime2 - var7)] >>> var5Lifetime1), 255)]);
               var7++;
               var5Lifetime1 -= 8;
             }
@@ -84,7 +84,7 @@ final class rm {
           }
         }
         for (var2Lifetime3 = 0; var2Lifetime3 < 8; var2Lifetime3++) {
-          this.field_i[var2Lifetime3] = kh.a(this.field_i[var2Lifetime3], kh.a(this.field_e[var2Lifetime3], this.field_f[var2Lifetime3]));
+          this.field_i[var2Lifetime3] = TextLayout.longXor(this.field_i[var2Lifetime3], TextLayout.longXor(this.field_e[var2Lifetime3], this.field_f[var2Lifetime3]));
         }
     }
 
@@ -343,7 +343,7 @@ final class rm {
               var3_int = param1;
             }
             var4 = new byte[var3_int];
-            param0.position = param0.position + kh.field_g.a(0, (byte) -126, var4, var3_int, param0.payload, param0.position);
+            param0.position = param0.position + TextLayout.field_g.a(0, (byte) -126, var4, var3_int, param0.payload, param0.position);
             var5 = PatchEnvelopeSet.decodeCp1252String(0, var3_int, (byte) -124, var4);
             if (param2 < -55) {
               stackIn_7_0 = var5;

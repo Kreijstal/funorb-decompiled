@@ -73,7 +73,7 @@ final class mm extends jm {
 
     private mm(int param0, int param1, int param2) {
         this.field_q = param1;
-        this.field_g = go.field_k;
+        this.field_g = SocketConnector.field_k;
         this.field_u = af.field_Jb;
         this.field_w = param2;
         this.field_x = param0;

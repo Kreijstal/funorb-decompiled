@@ -24,7 +24,7 @@ final class ii implements WidgetPainter {
             return;
           }
           var7 = param3 + param0.field_j;
-          kh.a(param0.field_v, var6_int, var7, param0.field_k, param1 - 5592532);
+          TextLayout.drawBevelBox(param0.field_v, var6_int, var7, param0.field_k, param1 - 5592532);
           var8 = qk.field_lb[1];
           if (param0 instanceof TextButton &&
             ((TextButton) (param0)).field_z) {
@@ -57,7 +57,7 @@ final class ii implements WidgetPainter {
         return lo.field_q;
     }
 
-    final static fk a(int param0, boolean param1, PcmSample param2, int param3) {
+    final static fk playSample(int param0, boolean param1, PcmSample param2, int param3) {
         RuntimeException var4 = null;
         fk stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;

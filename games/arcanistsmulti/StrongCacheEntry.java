@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nh extends nn {
+final class StrongCacheEntry extends CacheEntry {
     static String field_x;
     static kc field_z;
     static String field_B;
@@ -11,7 +11,7 @@ final class nh extends nn {
     static MouseWheelHandler field_w;
     static String field_v;
 
-    nh(Object param0, int param1) {
+    StrongCacheEntry(Object param0, int param1) {
         super(param1);
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
@@ -48,7 +48,7 @@ final class nh extends nn {
         }
     }
 
-    final boolean f(byte param0) {
+    final boolean isSoftReference(byte param0) {
         RuntimeException var2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -74,7 +74,7 @@ final class nh extends nn {
         }
     }
 
-    final Object e(byte param0) {
+    final Object getValue(byte param0) {
         RuntimeException var2 = null;
         Object stackIn_4_0 = null;
         RuntimeException decompiledCaughtException = null;
@@ -101,7 +101,7 @@ final class nh extends nn {
           field_w = null;
           field_z = null;
           if (param0 > -97) {
-            nh.i((byte) 63);
+            StrongCacheEntry.i((byte) 63);
           }
           field_x = null;
           field_B = null;
@@ -196,8 +196,8 @@ final class nh extends nn {
               if (param0 < 20) {
                 field_u = (String) null;
               }
-              DelegatingCanvas.a((Throwable) null, "F1: " + nn.g((byte) -25), (byte) 20);
-              ka.b(false);
+              DelegatingCanvas.a((Throwable) null, "F1: " + CacheEntry.g((byte) -25), (byte) 20);
+              ProxySocketConnector.closeActiveConnection(false);
               return;
             }
             SpriteState.field_t = 1;

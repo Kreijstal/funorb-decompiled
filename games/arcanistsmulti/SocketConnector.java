@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-abstract class go {
+abstract class SocketConnector {
     static IndexedSprite[] field_j;
     static String field_f;
     static String field_h;
@@ -16,7 +16,7 @@ abstract class go {
     static int field_g;
     static String field_a;
 
-    abstract java.net.Socket b(byte param0) throws IOException;
+    abstract java.net.Socket openSocket(byte param0) throws IOException;
 
     public static void releaseStatics(boolean param0) {
         if (param0) {
@@ -31,12 +31,12 @@ abstract class go {
         field_j = null;
     }
 
-    final java.net.Socket a(byte param0) throws IOException {
+    final java.net.Socket openDirectSocket(byte param0) throws IOException {
         int var2 = 62 / ((37 - param0) / 52);
         return new java.net.Socket(this.field_e, this.field_b);
     }
 
-    final static byte[] a(CharSequence param0, byte param1) {
+    final static byte[] encodeCp1252(CharSequence param0, byte param1) {
         int var4 = 0;
         byte[] stackIn_69_0 = null;
         RuntimeException stackIn_72_0 = null;
@@ -51,7 +51,7 @@ abstract class go {
         var6 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           if (param1 != -82) {
-            go.releaseStatics(true);
+            SocketConnector.releaseStatics(true);
           }
           var2_int = param0.length();
           var3 = new byte[var2_int];

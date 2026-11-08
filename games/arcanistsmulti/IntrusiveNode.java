@@ -81,7 +81,7 @@ class IntrusiveNode {
             break;
           }
           if (var3 == null) {
-            ka.b(false);
+            ProxySocketConnector.closeActiveConnection(false);
             return;
           }
           var4 = var15.readUnsignedByte((byte) -97);
@@ -118,11 +118,11 @@ class IntrusiveNode {
               var11 = ki.field_r[var9];
               var6[0][var10] = bb.field_i[var11];
               var7[0][4 * var10] = nf.field_z[var11];
-              var7[0][var10 * 4 + 1] = hc.field_e[var11];
+              var7[0][var10 * 4 + 1] = ConditionalTextValue.field_e[var11];
               var7[0][4 * var10 + 2] = tj.field_u[var11];
               var7[0][3 + var10 * 4] = PatchEnvelopeSet.field_o[var11];
               if (MouseInputHandler.a(16, bb.field_i[var11]) &&
-                tj.field_u[var11] + hc.field_e[var11] + PatchEnvelopeSet.field_o[var11] == 0) {
+                tj.field_u[var11] + ConditionalTextValue.field_e[var11] + PatchEnvelopeSet.field_o[var11] == 0) {
                 var6[0][var10] = null;
                 var10--;
               }
@@ -136,11 +136,11 @@ class IntrusiveNode {
               var11Lifetime1 = ki.field_r[var9Lifetime1 + var5];
               var6[1][var14] = bb.field_i[var11Lifetime1];
               var7[1][4 * var14] = nf.field_z[var11Lifetime1];
-              var7[1][1 + var14 * 4] = hc.field_e[var11Lifetime1];
+              var7[1][1 + var14 * 4] = ConditionalTextValue.field_e[var11Lifetime1];
               var7[1][var14 * 4 + 2] = tj.field_u[var11Lifetime1];
               var7[1][4 * var14 + 3] = PatchEnvelopeSet.field_o[var11Lifetime1];
               if (MouseInputHandler.a(16, bb.field_i[var11Lifetime1]) &&
-                hc.field_e[var11Lifetime1] + tj.field_u[var11Lifetime1] + PatchEnvelopeSet.field_o[var11Lifetime1] == 0) {
+                ConditionalTextValue.field_e[var11Lifetime1] + tj.field_u[var11Lifetime1] + PatchEnvelopeSet.field_o[var11Lifetime1] == 0) {
                 var6[1][var14] = null;
                 var14--;
               }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pa implements Runnable {
+final class DiskCacheWorker implements Runnable {
     private tg field_e;
     static IndexedSprite[] field_a;
     static String field_c;
@@ -11,7 +11,7 @@ final class pa implements Runnable {
     static co field_g;
     static String field_f;
 
-    final DiskCacheRequest a(SectorCacheStore param0, int param1, int param2) {
+    final DiskCacheRequest read(SectorCacheStore param0, int param1, int param2) {
         DiskCacheRequest var4 = null;
         RuntimeException var4_ref = null;
         Object var5 = null;
@@ -45,7 +45,7 @@ final class pa implements Runnable {
           var4.field_z = param0.readEntry(param1, -93);
           var4.field_p = false;
           if (param2 != -6833) {
-            pa.c((byte) 25);
+            DiskCacheWorker.c((byte) 25);
           }
           var4.field_q = true;
           stackIn_17_0 = var4;
@@ -72,13 +72,13 @@ final class pa implements Runnable {
           field_c = null;
           return;
         }
-        pa.b((byte) 43);
+        DiskCacheWorker.b((byte) 43);
         field_g = null;
         field_a = null;
         field_c = null;
     }
 
-    final DiskCacheRequest a(int param0, int param1, byte[] param2, SectorCacheStore param3) {
+    final DiskCacheRequest queueWrite(int param0, int param1, byte[] param2, SectorCacheStore param3) {
         DiskCacheRequest var5 = null;
         RuntimeException var5_ref = null;
         DiskCacheRequest stackIn_2_0 = null;
@@ -100,7 +100,7 @@ final class pa implements Runnable {
           var5.field_A = 2;
           var5.secondaryKey = (long)param0;
           var5.field_z = param2;
-          this.a((byte) 100, var5);
+          this.enqueue((byte) 100, var5);
           stackIn_4_0 = var5;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -123,7 +123,7 @@ final class pa implements Runnable {
         }
     }
 
-    final void a(byte param0) {
+    final void stop(byte param0) {
         try {
           this.field_b = true;
           synchronized (this.field_e) {
@@ -146,7 +146,7 @@ final class pa implements Runnable {
         }
     }
 
-    private final void a(byte param0, DiskCacheRequest param1) {
+    private final void enqueue(byte param0, DiskCacheRequest param1) {
         RuntimeException var3 = null;
         SectorCacheStore var5 = null;
         RuntimeException stackIn_10_0 = null;
@@ -165,7 +165,7 @@ final class pa implements Runnable {
             return;
           }
           var5 = (SectorCacheStore) null;
-          this.a((SectorCacheStore) null, 118, 120);
+          this.read((SectorCacheStore) null, 118, 120);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -250,13 +250,13 @@ final class pa implements Runnable {
 
     final static kc c(byte param0) {
         if (param0 > -83) {
-          pa.b((byte) -7);
+          DiskCacheWorker.b((byte) -7);
           return pe.f(0);
         }
         return pe.f(0);
     }
 
-    final DiskCacheRequest a(int param0, boolean param1, SectorCacheStore param2) {
+    final DiskCacheRequest queueRead(int param0, boolean param1, SectorCacheStore param2) {
         DiskCacheRequest var4 = null;
         RuntimeException var4_ref = null;
         DiskCacheRequest stackIn_2_0 = null;
@@ -275,7 +275,7 @@ final class pa implements Runnable {
           var4.secondaryKey = (long)param0;
           var4.field_q = false;
           var4.field_x = param2;
-          this.a((byte) 84, var4);
+          this.enqueue((byte) 84, var4);
           stackIn_4_0 = var4;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -292,7 +292,7 @@ final class pa implements Runnable {
         }
     }
 
-    pa(PlatformTaskDispatcher param0) {
+    DiskCacheWorker(PlatformTaskDispatcher param0) {
         PlatformTask var2 = null;
         this.field_e = new tg();
         this.field_b = false;

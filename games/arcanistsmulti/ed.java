@@ -8,7 +8,7 @@ class ed extends qk implements ButtonListener {
     private boolean field_Ab;
     static String field_Eb;
     static String field_Db;
-    static pa field_yb;
+    static DiskCacheWorker field_yb;
     private boolean field_zb;
     private boolean field_Fb;
     static int[] field_Ib;
@@ -237,7 +237,7 @@ class ed extends qk implements ButtonListener {
     }
 
     final void g(boolean param0) {
-        this.field_ub.b(4210752, param0, 2121792);
+        this.field_ub.setColours(4210752, param0, 2121792);
         me var2 = new me(this, this.field_wb, Bzip2State.field_k);
         var2.a(r.field_e, (byte) 3, 15);
         this.a((byte) -92, (UiComponent) (var2));
@@ -265,7 +265,7 @@ class ed extends qk implements ButtonListener {
           this.field_Gb = stackIn_6_1;
           stackIn_9_1 = (256 == param2);
           this.field_zb = stackIn_9_1;
-          this.field_ub.b(4210752, param0, 8405024);
+          this.field_ub.setColours(4210752, param0, 8405024);
           var6 = new me(this, this.field_wb, param1);
           var4 = var6;
           if (5 != param2) {
@@ -400,8 +400,8 @@ class ed extends qk implements ButtonListener {
         int var1 = DiskCacheRequest.field_F * DiskCacheRequest.field_F;
         int var2 = -(jo.field_e * jo.field_e) + var1;
         int var3 = (-ma.field_N + vd.field_k) * var2 / var1 + ma.field_N;
-        n.field_g.a(640, sa.field_Hb, var3, param0, (byte) -120);
-        jd.a(5, vd.field_k - 24, (byte) 19, 640, mm.field_p, 0, dh.field_Gb);
+        IntKeyLookup.field_g.a(640, sa.field_Hb, var3, param0, (byte) -120);
+        IsaacRandom.a(5, vd.field_k - 24, (byte) 19, 640, mm.field_p, 0, dh.field_Gb);
     }
 
     static {

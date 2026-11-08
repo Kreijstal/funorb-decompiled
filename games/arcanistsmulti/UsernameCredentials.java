@@ -22,7 +22,7 @@ class UsernameCredentials extends LoginCredentials {
             try {
               var2 = new java.net.URL(param1.getCodeBase(), "quit.ws");
               var3 = 13 % ((param0 + 29) / 56);
-              param1.getAppletContext().showDocument(nm.a(param1, var2, -31843), "_top");
+              param1.getAppletContext().showDocument(nm.appendSessionParameters(param1, var2, -31843), "_top");
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

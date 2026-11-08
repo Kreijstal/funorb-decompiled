@@ -9,7 +9,7 @@ final class md {
     static int field_c;
     static String[] field_a;
 
-    final static int a(boolean param0, long param1) {
+    final static int sumFlaggedValues(boolean param0, long param1) {
         int var4 = 0;
         int var3_int = 0;
         int var5 = 0;

@@ -56,7 +56,7 @@ final class NameValidator extends TextFieldValidator {
           if (!this.field_w) {
             stackIn_13_0 = ra.field_k;
           } else {
-            stackIn_13_0 = nn.field_s;
+            stackIn_13_0 = CacheEntry.field_s;
           }
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

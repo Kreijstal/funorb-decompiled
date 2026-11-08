@@ -10,7 +10,7 @@ final class Js5ArchiveManager {
     private Js5NetworkRequest field_h;
     private tj[] field_b;
     static String[] field_f;
-    private pa field_e;
+    private DiskCacheWorker field_e;
     static kc field_g;
     static PcmStreamMixer field_k;
     static String field_a;
@@ -57,12 +57,12 @@ final class Js5ArchiveManager {
           var5 = var4;
         }
         if (param0 != -52) {
-          this.field_e = (pa) null;
+          this.field_e = (DiskCacheWorker) null;
         }
         if (65 != var5.length) {
           throw new RuntimeException();
         }
-        var15 = nn.a(var10.position - (var13.length + 5), (byte) -93, var10.payload, 5);
+        var15 = CacheEntry.a(var10.position - (var13.length + 5), (byte) -93, var10.payload, 5);
         for (var7 = 0; var7 < 64; var7++) {
           if (var15[var7] != var5[1 + var7]) {
             throw new RuntimeException();
@@ -73,7 +73,7 @@ final class Js5ArchiveManager {
         return true;
     }
 
-    Js5ArchiveManager(Js5Transport param0, pa param1) {
+    Js5ArchiveManager(Js5Transport param0, DiskCacheWorker param1) {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
@@ -146,7 +146,7 @@ final class Js5ArchiveManager {
         field_a = null;
     }
 
-    private Js5ArchiveManager(Js5Transport param0, pa param1, java.math.BigInteger param2, java.math.BigInteger param3) {
+    private Js5ArchiveManager(Js5Transport param0, DiskCacheWorker param1, java.math.BigInteger param2, java.math.BigInteger param3) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

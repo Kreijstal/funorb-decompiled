@@ -30,10 +30,10 @@ public final class ArcanistsMulti extends ud {
         try {
           var2_int = 115 / ((obfuscationGuard + 83) / 41);
           sb.a(8000);
-          if (null != ka.field_m) {
+          if (null != ProxySocketConnector.field_m) {
             u.b(6);
           }
-          hg.a(false);
+          FrameClock.a(false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -177,12 +177,12 @@ public final class ArcanistsMulti extends ud {
           SectorCacheStore.a(1497225488);
           MusicPatchPcmStream.field_o = ao.a(true);
           IntrusiveNodeHashTable.e(200);
-          if (null != ka.field_m &&
-            ka.field_m.field_e) {
+          if (null != ProxySocketConnector.field_m &&
+            ProxySocketConnector.field_m.field_e) {
             u.b(6);
           }
           stackIn_10_1 = true;
-          stackIn_11_2 = (null != ka.field_m);
+          stackIn_11_2 = (null != ProxySocketConnector.field_m);
           this.a(stackIn_10_1, stackIn_11_2);
           EmailLoginCredentials.field_j = ce.field_m.field_m;
           EmailLoginCredentials.field_f = ce.field_m.field_e;
@@ -229,12 +229,12 @@ public final class ArcanistsMulti extends ud {
                 }
               }
               if (decompiledFrameRemainder0) {
-                stackIn_59_0 = (ka.field_m != null);
-                var2_intLifetime2 = ka.a(stackIn_59_0, (byte) 22, (ud) (this));
+                stackIn_59_0 = (ProxySocketConnector.field_m != null);
+                var2_intLifetime2 = ProxySocketConnector.a(stackIn_59_0, (byte) 22, (ud) (this));
                 if (2364824 != var2_intLifetime2) {
                   if (1 == var2_intLifetime2 ||
                     2 == var2_intLifetime2) {
-                    if (ka.field_m != null) {
+                    if (ProxySocketConnector.field_m != null) {
                       u.b(6);
                     }
                     if (2 == var2_intLifetime2) {
@@ -301,24 +301,24 @@ public final class ArcanistsMulti extends ud {
                   continue;
                 }
                 if (on.field_g == 9) {
-                  lf.a((byte) 80);
-                  kh.field_b = false;
+                  lf.switchToRequestedScreen((byte) 80);
+                  TextLayout.field_b = false;
                   mn.field_r = 9;
                   jm.field_b = UiContainer.field_z.readString(-1);
                   continue;
                 }
                 if (on.field_g == 14) {
-                  lf.a((byte) 80);
+                  lf.switchToRequestedScreen((byte) 80);
                   jn.a(150, dn.f((byte) -112), -13173, ql.a(1), li.field_E, PacketBuffer.f((byte) -125), 1024, wh.a(1000, 678231216), wh.a(6, 678231216), ArchiveIndex.field_a.length);
-                  ra.a(v.b((byte) 115), 64, pa.c((byte) -122));
+                  ra.a(v.b((byte) 115), 64, DiskCacheWorker.c((byte) -122));
                   mn.field_r = -2;
                   wa.field_Ob = true;
-                  kh.field_b = false;
+                  TextLayout.field_b = false;
                   continue;
                 }
                 if (15 == on.field_g) {
                   if (wa.field_Ob) {
-                    lf.a((byte) 80);
+                    lf.switchToRequestedScreen((byte) 80);
                     ho.a(0);
                     cn.c(true);
                     hi.field_a = false;
@@ -330,7 +330,7 @@ public final class ArcanistsMulti extends ud {
                     mn.field_r = 0;
                     bc.a((byte) -50);
                   }
-                  kh.field_b = false;
+                  TextLayout.field_b = false;
                   IntrusiveDequeCursor.field_g = false;
                   continue;
                 }
@@ -385,14 +385,14 @@ public final class ArcanistsMulti extends ud {
                     }
                     cb.field_e = cb.field_e | var3_long;
                   }
-                  ua.field_P = md.a(false, cb.field_e);
+                  ua.field_P = md.sumFlaggedValues(false, cb.field_e);
                   nm.field_h = -1;
                   la.field_a = true;
                   continue;
                 }
                 if (on.field_g == 57 ||
                   on.field_g == 58) {
-                  lf.a((byte) 80);
+                  lf.switchToRequestedScreen((byte) 80);
                   var2_intLifetime1 = UiContainer.field_z.readUnsignedByte((byte) -124);
                   var3 = UiContainer.field_z.readUnsignedByte((byte) -101);
                   stackIn_173_0 = (0 == UiContainer.field_z.readUnsignedByte((byte) 106)) ? 0 : 1;
@@ -521,7 +521,7 @@ public final class ArcanistsMulti extends ud {
                 if (on.field_g == 59) {
                   if (hi.field_a ||
                     mj.field_w) {
-                    lf.a((byte) 80);
+                    lf.switchToRequestedScreen((byte) 80);
                     if (hi.field_a &&
                       SpriteState.field_z != null) {
                       SpriteState.field_z.a(-112, false);
@@ -565,7 +565,7 @@ public final class ArcanistsMulti extends ud {
             if (ao.field_d) {
               vh.field_t = 0;
             }
-            if (ka.c((byte) -44)) {
+            if (ProxySocketConnector.c((byte) -44)) {
               var3Lifetime1 = this.e(118);
               if (var3Lifetime1 == 0 ||
                 var3Lifetime1 == 1) {
@@ -578,7 +578,7 @@ public final class ArcanistsMulti extends ud {
                 }
                 pi.a(true);
                 if (var3Lifetime1 == 1) {
-                  kh.field_b = true;
+                  TextLayout.field_b = true;
                   IntrusiveDequeCursor.field_g = true;
                 }
                 if (var3Lifetime1 != 1 ||
@@ -596,7 +596,7 @@ public final class ArcanistsMulti extends ud {
                     } else {
                       gj.a(false, true, 0, mn.field_r);
                     }
-                    lf.a((byte) 80);
+                    lf.switchToRequestedScreen((byte) 80);
                     ArchiveProvider.field_f[si.field_g].a(false, 0, (byte) -123);
                     mj.field_w = false;
                     wa.field_Ob = false;
@@ -604,18 +604,18 @@ public final class ArcanistsMulti extends ud {
                     bc.a((byte) -50);
                   }
                   IntrusiveDequeCursor.field_g = false;
-                  kh.field_b = false;
+                  TextLayout.field_b = false;
                 }}
               var4Lifetime1 = 0;
               if (var3Lifetime1 == 2) {
                 var4Lifetime1 = 1;
               }
               if (wa.field_Ob ||
-                kh.field_b ||
+                TextLayout.field_b ||
                 IntrusiveDequeCursor.field_g) {
                 var4Lifetime1 = 1;
               }
-              if (!ka.c((byte) -44)) {
+              if (!ProxySocketConnector.c((byte) -44)) {
                 var4Lifetime1 = 0;
               }
               if (var4Lifetime1 != 0 &&
@@ -746,7 +746,7 @@ public final class ArcanistsMulti extends ud {
                               if (ue.field_d.c(-10923) &&
                                 ue.field_d.a("", -24417)) {
                                 if (!ue.field_d.a(ec.field_c, -24417)) {
-                                  rb.a(nm.a(17153, gd.field_nb, ue.field_d, sc.field_Z, ec.field_c), false, 40.0f);
+                                  rb.a(nm.formatArchiveProgress(17153, gd.field_nb, ue.field_d, sc.field_Z, ec.field_c), false, 40.0f);
                                   return false;
                                 }
                                 if (so.field_k.c(-10923) &&
@@ -776,13 +776,13 @@ public final class ArcanistsMulti extends ud {
                                 rb.a(qe.a(gd.field_nb, 113, so.field_k, sc.field_Z), false, 45.0f);
                                 return false;
                               }
-                              rb.a(nm.a(17153, gd.field_nb, ue.field_d, sc.field_Z, ""), false, 35.0f);
+                              rb.a(nm.formatArchiveProgress(17153, gd.field_nb, ue.field_d, sc.field_Z, ""), false, 35.0f);
                               return false;
                             }
-                            rb.a(qe.a(ii.field_e, 96, tc.field_x, kh.field_e), false, 32.0f);
+                            rb.a(qe.a(ii.field_e, 96, tc.field_x, TextLayout.field_e), false, 32.0f);
                             return false;
                           }
-                          rb.a(qe.a(ii.field_e, 76, ki.field_s, kh.field_e), false, 29.0f);
+                          rb.a(qe.a(ii.field_e, 76, ki.field_s, TextLayout.field_e), false, 29.0f);
                           return false;
                         }
                         rb.a(qe.a(mj.field_v, 76, mg.field_E, fn.field_a), false, 23.0f);
@@ -791,19 +791,19 @@ public final class ArcanistsMulti extends ud {
                       rb.a(qe.a(mj.field_v, 122, vg.field_l, fn.field_a), false, 20.0f);
                       return false;
                     }
-                    rb.a(nm.a(17153, ra.field_d, ud.field_D, wh.field_a, "lobby"), false, 17.0f);
+                    rb.a(nm.formatArchiveProgress(17153, ra.field_d, ud.field_D, wh.field_a, "lobby"), false, 17.0f);
                     return false;
                   }
-                  rb.a(nm.a(17153, gd.field_nb, rc.field_a, sc.field_Z, "lobby"), false, 14.0f);
+                  rb.a(nm.formatArchiveProgress(17153, gd.field_nb, rc.field_a, sc.field_Z, "lobby"), false, 14.0f);
                   return false;
                 }
-                rb.a(nm.a(17153, ra.field_d, ud.field_D, wh.field_a, "roman20"), false, 11.0f);
+                rb.a(nm.formatArchiveProgress(17153, ra.field_d, ud.field_D, wh.field_a, "roman20"), false, 11.0f);
                 return false;
               }
-              rb.a(nm.a(17153, gd.field_nb, rc.field_a, sc.field_Z, "roman20"), false, 8.0f);
+              rb.a(nm.formatArchiveProgress(17153, gd.field_nb, rc.field_a, sc.field_Z, "roman20"), false, 8.0f);
               return false;
             }
-            rb.a(nm.a(17153, gd.field_nb, rc.field_a, sc.field_Z, "basic"), false, 5.0f);
+            rb.a(nm.formatArchiveProgress(17153, gd.field_nb, rc.field_a, sc.field_Z, "basic"), false, 5.0f);
             return false;
           }
           if (tc.field_x != null &&
@@ -816,10 +816,10 @@ public final class ArcanistsMulti extends ud {
           }
           var3_intLifetime1 = -84 / ((14 - param0) / 56);
           if (null != so.field_k) {
-            if (hf.field_o == null) {
+            if (MembershipOfferScreen.field_o == null) {
               rb.a(hi.field_c, false, 90.0f);
               this.updateClient((byte) -89);
-              hf.field_o = fj.loadSprite("", -22612, ue.field_d, "funorblogo");
+              MembershipOfferScreen.field_o = fj.loadSprite("", -22612, ue.field_d, "funorblogo");
               IntrusiveDeque.field_b = fj.loadSprite("", -22612, ue.field_d, "newlogo");
               g.field_a = fj.loadSprite("", -22612, ue.field_d, "newlogostars");
               sm.field_d = fj.loadSprite("", -22612, ue.field_d, "newlogostars2");
@@ -871,7 +871,7 @@ public final class ArcanistsMulti extends ud {
               } while (var9 == 0);
               boolean decompiledNaturalLoopExit0 = false;
               while (!(decompiledNaturalLoopExit0 = (15 <= var4_int))) {
-                lj.a(true, var4_int);
+                NanoFrameClock.renderThemeBackground(true, var4_int);
                 stackIn_188_0 = 0;
                 if (var9 == 0) {
                   if (stackIn_188_0 < var4_int &&
@@ -903,7 +903,7 @@ public final class ArcanistsMulti extends ud {
               ii.field_d = fj.loadSprite("basic", -22612, rc.field_a, "locked");
               NodeHashTable.field_d = fj.loadSprite("basic", -22612, rc.field_a, "orbcoin");
               kc.field_kb = qe.a(ue.field_d, "heads", "", 95);
-              jd.field_j = qe.a(ue.field_d, "bodies", "", 67);
+              IsaacRandom.field_j = qe.a(ue.field_d, "bodies", "", 67);
               DiskCacheRequest.field_u = qe.a(ue.field_d, "phands", "", 58);
               qe.field_i = qe.a(ue.field_d, "mhands", "", 57);
               hn.field_d = qe.a(ue.field_d, "beards", "", 106);
@@ -998,7 +998,7 @@ public final class ArcanistsMulti extends ud {
               rb.a(li.field_E, ua.field_K, var4, var5, true, DelegatingCanvas.field_d, rm.field_l, 6, ud.field_D, (int[]) null, var6, cn.field_O, (byte) -67, ArchiveIndex.field_a, 3, aj.field_a, rc.field_a);
               fn.a(200, (byte) -106);
               um.field_a = qf.field_c;
-              gm.field_c = false;
+              LinkButtonPainter.field_c = false;
               dh.field_Hb = co.field_a;
               qn.a(-24539, rc.field_a, ud.field_D);
               ud.field_D = null;
@@ -1006,7 +1006,7 @@ public final class ArcanistsMulti extends ud {
               if (lc.a((byte) 112) ||
                 !(0 < ah.field_c)) {
                 var8 = pk.a("", 0, "expansion_screens", ue.field_d);
-                to.field_s = new hf((java.applet.Applet) (this), SectorCacheStore.field_i, var8, dh.field_Kb);
+                to.field_s = new MembershipOfferScreen((java.applet.Applet) (this), SectorCacheStore.field_i, var8, dh.field_Kb);
               }
               bk.a(2);
               return false;
@@ -1166,7 +1166,7 @@ public final class ArcanistsMulti extends ud {
           jg.releaseStatics(-25776);
           mf.releaseStatics(-1);
           md.releaseStatics((byte) 115);
-          hg.releaseStatics((byte) -105);
+          FrameClock.releaseStatics((byte) -105);
           CanvasRasterBuffer.releaseStatics(false);
           rc.releaseStatics(-1);
           FullscreenFocusCanvas.releaseStatics(115);
@@ -1176,9 +1176,9 @@ public final class ArcanistsMulti extends ud {
           le.f((byte) 95);
           pm.a(0);
           kf.releaseStatics((byte) -121);
-          hf.releaseStatics(false);
+          MembershipOfferScreen.releaseStatics(false);
           Js5Transport.releaseStatics(11959);
-          pa.releaseStatics(32336);
+          DiskCacheWorker.releaseStatics(32336);
           Js5ArchiveManager.releaseStatics((byte) -90);
           BufferedRandomAccessFile.releaseStatics(-1);
           k.releaseStatics(11138);
@@ -1207,7 +1207,7 @@ public final class ArcanistsMulti extends ud {
           mi.g(2);
           IntrusiveDequeCursor.releaseStatics(false);
           hi.releaseStatics((byte) 60);
-          jd.releaseStatics((byte) -109);
+          IsaacRandom.releaseStatics((byte) -109);
           VorbisSample.releaseStatics();
           VorbisFloor.releaseStatics();
           SynthInstrument.releaseStatics();
@@ -1224,7 +1224,7 @@ public final class ArcanistsMulti extends ud {
           td.releaseStatics((byte) 115);
           LoginPanel.a(-1);
           sn.releaseStatics((byte) 127);
-          hc.releaseStatics((byte) -60);
+          ConditionalTextValue.releaseStatics((byte) -60);
           vh.releaseStatics(-60);
           fb.releaseStatics(!param0);
           pc.releaseStatics(false);
@@ -1284,7 +1284,7 @@ public final class ArcanistsMulti extends ud {
           jm.releaseStatics(63);
           UiComponent.releaseStatics((byte) -17);
           SingleChildContainer.releaseStatics(23123);
-          kh.releaseStatics(6481);
+          TextLayout.releaseStatics(6481);
           kn.releaseStatics(3);
           ScreenDisplayMode.releaseStatics(true);
           qo.releaseStatics(6);
@@ -1316,7 +1316,7 @@ public final class ArcanistsMulti extends ud {
           pi.releaseStatics((byte) -68);
           DelegatingCanvas.releaseStatics((byte) 87);
           eo.releaseStatics(-14449);
-          n.releaseStatics(8577);
+          IntKeyLookup.releaseStatics(8577);
           ByteStorage.a((byte) -79);
           Bzip2Decoder.releaseSharedState();
           Bzip2State.a(4);
@@ -1331,10 +1331,10 @@ public final class ArcanistsMulti extends ud {
           gn.releaseStatics((byte) -122);
           oo.releaseStatics(31908);
           tk.releaseStatics(-1016755547);
-          ig.a(0);
-          go.releaseStatics(false);
+          WeightedLruCache.a(0);
+          SocketConnector.releaseStatics(false);
           hj.releaseStatics((byte) 111);
-          lj.releaseStatics(-80);
+          NanoFrameClock.releaseStatics(-80);
           ImageProducerRasterBuffer.releaseStatics((byte) -109);
           vf.releaseStatics(27494);
           ia.releaseStatics(!param0);
@@ -1367,7 +1367,7 @@ public final class ArcanistsMulti extends ud {
           nj.releaseStatics((byte) -72);
           mg.releaseStatics(42);
           sl.releaseStatics(123);
-          jl.c(-125);
+          GrowableIntList.c(-125);
           re.releaseStatics(0);
           se.releaseStatics(-114);
           q.f(-1764031359);
@@ -1377,11 +1377,11 @@ public final class ArcanistsMulti extends ud {
           ma.releaseStatics((byte) 54);
           DirectByteStorage.releaseStatics(92);
           pk.releaseStatics(-14987);
-          gb.releaseStatics((byte) 33);
-          nn.releaseStatics(63);
+          SecondaryNodeDeque.releaseStatics((byte) 33);
+          CacheEntry.releaseStatics(63);
           aj.releaseStatics(20028);
-          nh.h((byte) -102);
-          ka.releaseStatics(-1);
+          StrongCacheEntry.h((byte) -102);
+          ProxySocketConnector.releaseStatics(-1);
           sm.a(false);
           jf.releaseStatics((byte) -120);
           fh.releaseStatics((byte) 88);
@@ -1389,7 +1389,7 @@ public final class ArcanistsMulti extends ud {
           nk.releaseStatics(30025);
           ce.releaseStatics(false);
           mm.d(2188450);
-          gm.releaseStatics(-9922);
+          LinkButtonPainter.releaseStatics(-9922);
           ib.releaseStatics(true);
           tc.releaseStatics((byte) 25);
           ii.releaseStatics((byte) 106);
@@ -1400,7 +1400,7 @@ public final class ArcanistsMulti extends ud {
           on.a(3);
           wa.releaseStatics((byte) -121);
           ta.releaseStatics(5);
-          ol.releaseStatics(-23971);
+          CameraFollowTarget.releaseStatics(-23971);
           hl.releaseStatics(-1513388336);
           fe.releaseStatics(32369);
           cm.releaseStatics(49);
@@ -1523,7 +1523,7 @@ public final class ArcanistsMulti extends ud {
                     gj.a(false, true, -4, mn.field_r);
                   }
                   if (ij.b(mn.field_r, 10)) {
-                    lf.a((byte) 80);
+                    lf.switchToRequestedScreen((byte) 80);
                   }
                 }
                 ii.field_a = ub.field_h;
@@ -1557,7 +1557,7 @@ public final class ArcanistsMulti extends ud {
                 km.field_c = km.field_c + 1;
                 decompiledFrameRemainder1 = (km.field_c == 32);
                 if (decompiledFrameRemainder1) {
-                  lf.a((byte) 80);
+                  lf.switchToRequestedScreen((byte) 80);
                   decompiledFrameRemainder1 = (var13 != 0);
                 }
               }
@@ -1610,7 +1610,7 @@ public final class ArcanistsMulti extends ud {
               }
             }
             if ((decompiledFrameCompleted0) && (wa.field_Ob &&
-              !kh.field_b &&
+              !TextLayout.field_b &&
               !IntrusiveDequeCursor.field_g)) {
               var5_int = var4;
               if (hi.field_a &&
@@ -1624,7 +1624,7 @@ public final class ArcanistsMulti extends ud {
               }
               if (hi.field_a &&
                 null != SpriteState.field_z) {
-                nh.a((byte) -66, 320, 180, var5_int != 0);
+                StrongCacheEntry.a((byte) -66, 320, 180, var5_int != 0);
                 SpriteState.field_z.a(true, var4 != 0);
               }
               while (true) {
@@ -1790,7 +1790,7 @@ public final class ArcanistsMulti extends ud {
               he.field_e.writeByte(b.field_f[var3_int], (byte) -47);
               var3_int++;
             } while (var13 == 0);
-            kh.field_b = true;
+            TextLayout.field_b = true;
           }
           if (mn.field_r == -5) {
             qc.a(false, DirectByteStorage.field_f.h((byte) 72), 11);
@@ -1816,7 +1816,7 @@ public final class ArcanistsMulti extends ud {
         try {
           this.a(true, 14, 19, 0, 5000, 9, 11, 8);
           ri.field_f = false;
-          gb.a((byte) -9);
+          SecondaryNodeDeque.a((byte) -9);
           la.field_a = false;
           nm.field_h = -1;
           jf.field_j = 0;
@@ -1917,10 +1917,10 @@ public final class ArcanistsMulti extends ud {
         int var5Lifetime2;
         var20 = field_G ? 1 : 0;
         try {
-          if (null == ka.field_m) {
+          if (null == ProxySocketConnector.field_m) {
             stackIn_5_0 = on.field_c;
           } else {
-            stackIn_5_0 = ka.field_m;
+            stackIn_5_0 = ProxySocketConnector.field_m;
           }
           var2 = stackIn_5_0;
           ce.field_m.a(true);
@@ -1928,7 +1928,7 @@ public final class ArcanistsMulti extends ud {
             ArcanistsMulti.a(66, (int[]) null, (dn) null, (String) null, 78L, -15, 110, (String) null, (kc) null);
           }
           if (IntrusiveDequeCursor.a(-15576)) {
-            kh.a((byte) 14, (java.awt.Canvas) (var2), MusicPatchPcmStream.c(0));
+            TextLayout.a((byte) 14, (java.awt.Canvas) (var2), MusicPatchPcmStream.c(0));
             return;
           }
           if (!ue.field_e) {
@@ -2047,7 +2047,7 @@ public final class ArcanistsMulti extends ud {
               var15.makeRasterTarget();
               pc.$cfr$intArgs$a$5f050b8899ac(kg.field_d[2], var8 + var13, kg.field_d[3], kg.field_d[0], 116, kg.field_d[1], qe.field_i[so.field_c[3]], var12 + var7);
               pc.$cfr$intArgs$a$5f050b8899ac(kg.field_d[2], var13 + var4Lifetime3, kg.field_d[3], kg.field_d[0], -87, kg.field_d[1], fn.field_b[0], var3_intLifetime1 + var12);
-              pc.$cfr$intArgs$a$5f050b8899ac(kg.field_d[2], var13, kg.field_d[3], kg.field_d[0], 80, kg.field_d[1], jd.field_j[so.field_c[0]], var12);
+              pc.$cfr$intArgs$a$5f050b8899ac(kg.field_d[2], var13, kg.field_d[3], kg.field_d[0], 80, kg.field_d[1], IsaacRandom.field_j[so.field_c[0]], var12);
               var13 -= 8;
               var13 -= 16;
               pc.$cfr$intArgs$a$5f050b8899ac(kg.field_d[2], var13, kg.field_d[3], kg.field_d[0], -87, kg.field_d[1], kc.field_kb[so.field_c[1]], var12);
@@ -2153,7 +2153,7 @@ public final class ArcanistsMulti extends ud {
           }
           boolean decompiledSharedTail0 = !(rc.b(obfuscationGuard ^ 88));
           if (!decompiledSharedTail0) {
-            if (null != ka.field_m) {
+            if (null != ProxySocketConnector.field_m) {
               stackIn_125_0 = true;
             } else {
               stackIn_125_0 = ie.field_Pb;
@@ -2248,7 +2248,7 @@ public final class ArcanistsMulti extends ud {
     final static void a(int param0, byte param1) {
         try {
           int var2_int = 84 % ((param1 - 57) / 54);
-          gl.a(28 + sc.field_U[param0] * wl.field_L[param0].length, -8 + lm.field_e[param0], -27327, 14 - (-eo.field_b[param0] + lm.field_e[param0]), kf.field_b, tg.field_f[param0] - 16);
+          gl.drawNineSliceFrame(28 + sc.field_U[param0] * wl.field_L[param0].length, -8 + lm.field_e[param0], -27327, 14 - (-eo.field_b[param0] + lm.field_e[param0]), kf.field_b, tg.field_f[param0] - 16);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "ArcanistsMulti.OA(" + param0 + ',' + param1 + ')');
         }
@@ -2281,7 +2281,7 @@ public final class ArcanistsMulti extends ud {
               tc.field_x.a(true, "arcanists_titlescreen", "")) {
               DelegatingCanvas.field_c[0] = MusicTrack.a(tc.field_x, "", "arcanists_titlescreen");
               jo.field_c = 1;
-              jl.field_h.a(0, lo.field_w, ki.field_s, DelegatingCanvas.field_c[0], -123);
+              GrowableIntList.field_h.a(0, lo.field_w, ki.field_s, DelegatingCanvas.field_c[0], -123);
               mi.a(DelegatingCanvas.field_c[0], 3);
             }
             return;
@@ -2335,7 +2335,7 @@ public final class ArcanistsMulti extends ud {
                   }
                   if (SingleChildContainer.field_C == 8 &&
                     ue.field_d.a(true, "cyclopstest", "streamed")) {
-                    gb.field_c = pk.a("streamed", 0, "cyclopstest", ue.field_d);
+                    SecondaryNodeDeque.field_c = pk.a("streamed", 0, "cyclopstest", ue.field_d);
                     SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                     if (var3 == 0) {
                       return;
@@ -2697,7 +2697,7 @@ public final class ArcanistsMulti extends ud {
                   return;
                 }
               }
-              pa.field_a = pk.a("streamed", 0, "smokeexplosion", ue.field_d);
+              DiskCacheWorker.field_a = pk.a("streamed", 0, "smokeexplosion", ue.field_d);
               SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
               if (var3 == 0) {
                 return;
@@ -2720,7 +2720,7 @@ public final class ArcanistsMulti extends ud {
               }
             }
             if (jo.field_c == 2) {
-              jl.field_h.a(0, lo.field_w, ki.field_s, DelegatingCanvas.field_c[4], -105);
+              GrowableIntList.field_h.a(0, lo.field_w, ki.field_s, DelegatingCanvas.field_c[4], -105);
               jo.field_c = 3;
               if (var3 == 0) {
                 return;
@@ -2754,7 +2754,7 @@ public final class ArcanistsMulti extends ud {
                           !tc.field_x.a(true, "arcanists_graveyard", "")) {
                           if (jo.field_c == 12) {
                             jo.field_c = 13;
-                            jl.field_h.a(0, lo.field_w, ki.field_s, DelegatingCanvas.field_c[6], param0 ^ -15414);
+                            GrowableIntList.field_h.a(0, lo.field_w, ki.field_s, DelegatingCanvas.field_c[6], param0 ^ -15414);
                             if (var3 == 0) {
                               return;
                             }
@@ -2766,7 +2766,7 @@ public final class ArcanistsMulti extends ud {
                                 !tc.field_x.a(true, "arcanists_beach_cove", "")) {
                                 if (jo.field_c == 16) {
                                   jo.field_c = 17;
-                                  jl.field_h.a(0, lo.field_w, ki.field_s, DelegatingCanvas.field_c[8], 50);
+                                  GrowableIntList.field_h.a(0, lo.field_w, ki.field_s, DelegatingCanvas.field_c[8], 50);
                                   if (var3 == 0) {
                                     return;
                                   }
@@ -2777,8 +2777,8 @@ public final class ArcanistsMulti extends ud {
                                     return;
                                   }
                                   jo.field_c = 19;
-                                  jl.field_h.a(0, lo.field_w, ki.field_s, DelegatingCanvas.field_c[9], param0 - 15554);
-                                  jl.field_h.c(125);
+                                  GrowableIntList.field_h.a(0, lo.field_w, ki.field_s, DelegatingCanvas.field_c[9], param0 - 15554);
+                                  GrowableIntList.field_h.c(125);
                                   ki.field_s = null;
                                   tc.field_x = null;
                                   lo.field_w = null;
@@ -2799,7 +2799,7 @@ public final class ArcanistsMulti extends ud {
                               }
                             }
                             jo.field_c = 15;
-                            jl.field_h.a(0, lo.field_w, ki.field_s, DelegatingCanvas.field_c[7], -116);
+                            GrowableIntList.field_h.a(0, lo.field_w, ki.field_s, DelegatingCanvas.field_c[7], -116);
                             if (var3 == 0) {
                               return;
                             }
@@ -2817,7 +2817,7 @@ public final class ArcanistsMulti extends ud {
                         }
                       }
                       jo.field_c = 11;
-                      jl.field_h.a(0, lo.field_w, ki.field_s, DelegatingCanvas.field_c[5], -109);
+                      GrowableIntList.field_h.a(0, lo.field_w, ki.field_s, DelegatingCanvas.field_c[5], -109);
                       if (var3 == 0) {
                         return;
                       }
@@ -2829,7 +2829,7 @@ public final class ArcanistsMulti extends ud {
                     }
                   }
                   jo.field_c = 9;
-                  jl.field_h.a(0, lo.field_w, ki.field_s, DelegatingCanvas.field_c[3], 52);
+                  GrowableIntList.field_h.a(0, lo.field_w, ki.field_s, DelegatingCanvas.field_c[3], 52);
                   if (var3 == 0) {
                     return;
                   }
@@ -2841,13 +2841,13 @@ public final class ArcanistsMulti extends ud {
                 }
               }
               jo.field_c = 7;
-              jl.field_h.a(0, lo.field_w, ki.field_s, DelegatingCanvas.field_c[2], -115);
+              GrowableIntList.field_h.a(0, lo.field_w, ki.field_s, DelegatingCanvas.field_c[2], -115);
               if (var3 == 0) {
                 return;
               }
             }
             jo.field_c = 5;
-            jl.field_h.a(0, lo.field_w, ki.field_s, DelegatingCanvas.field_c[1], param0 - 15553);
+            GrowableIntList.field_h.a(0, lo.field_w, ki.field_s, DelegatingCanvas.field_c[1], param0 - 15553);
             return;
           }
           if (!ck.field_b.c(-10923)) {
@@ -2998,14 +2998,14 @@ public final class ArcanistsMulti extends ud {
               if (SectorCacheStore.field_f != 18) {
                 if (SectorCacheStore.field_f == 19) {
                   SectorCacheStore.field_f = 20;
-                  this.a(148, nn.field_n[0][1], SoundEffect.loadNamed(wh.field_l, "spell_impact", "arcanists_spellbook_flame_impact_2").toPcmSample(), to.field_r, false, cf.field_h);
+                  this.a(148, CacheEntry.field_n[0][1], SoundEffect.loadNamed(wh.field_l, "spell_impact", "arcanists_spellbook_flame_impact_2").toPcmSample(), to.field_r, false, cf.field_h);
                   if (var3 == 0) {
                     return;
                   }
                 }
                 if (SectorCacheStore.field_f == 20) {
                   SectorCacheStore.field_f = 21;
-                  this.a(55, nn.field_n[0][2], SoundEffect.loadNamed(wh.field_l, "spell_impact", "arcanists_spellbook_flame_impact_3").toPcmSample(), to.field_r, false, cf.field_h);
+                  this.a(55, CacheEntry.field_n[0][2], SoundEffect.loadNamed(wh.field_l, "spell_impact", "arcanists_spellbook_flame_impact_3").toPcmSample(), to.field_r, false, cf.field_h);
                   if (var3 == 0) {
                     return;
                   }
@@ -3014,7 +3014,7 @@ public final class ArcanistsMulti extends ud {
                   if (SectorCacheStore.field_f != 22) {
                     if (SectorCacheStore.field_f == 23) {
                       SectorCacheStore.field_f = 24;
-                      this.a(232, nn.field_n[3][2], SoundEffect.loadNamed(wh.field_l, "spell_impact", "arcanists_spellbook_frost_impact_3").toPcmSample(), to.field_r, false, cf.field_h);
+                      this.a(232, CacheEntry.field_n[3][2], SoundEffect.loadNamed(wh.field_l, "spell_impact", "arcanists_spellbook_frost_impact_3").toPcmSample(), to.field_r, false, cf.field_h);
                       if (var3 == 0) {
                         return;
                       }
@@ -3023,28 +3023,28 @@ public final class ArcanistsMulti extends ud {
                       if (SectorCacheStore.field_f != 25) {
                         if (SectorCacheStore.field_f == 26) {
                           SectorCacheStore.field_f = 27;
-                          this.a(166, nn.field_n[2][2], SoundEffect.loadNamed(wh.field_l, "spell_impact", "arcanists_spellbook_storm_impact_3").toPcmSample(), to.field_r, false, cf.field_h);
+                          this.a(166, CacheEntry.field_n[2][2], SoundEffect.loadNamed(wh.field_l, "spell_impact", "arcanists_spellbook_storm_impact_3").toPcmSample(), to.field_r, false, cf.field_h);
                           if (var3 == 0) {
                             return;
                           }
                         }
                         if (SectorCacheStore.field_f == 27) {
                           SectorCacheStore.field_f = 28;
-                          this.a(67, nn.field_n[1][0], SoundEffect.loadNamed(wh.field_l, "spell_impact", "arcanists_spellbook_rock_impact_1").toPcmSample(), to.field_r, false, cf.field_h);
+                          this.a(67, CacheEntry.field_n[1][0], SoundEffect.loadNamed(wh.field_l, "spell_impact", "arcanists_spellbook_rock_impact_1").toPcmSample(), to.field_r, false, cf.field_h);
                           if (var3 == 0) {
                             return;
                           }
                         }
                         if (SectorCacheStore.field_f == 28) {
                           SectorCacheStore.field_f = 29;
-                          this.a(83, nn.field_n[1][1], SoundEffect.loadNamed(wh.field_l, "spell_impact", "arcanists_spellbook_rock_impact_2").toPcmSample(), to.field_r, false, cf.field_h);
+                          this.a(83, CacheEntry.field_n[1][1], SoundEffect.loadNamed(wh.field_l, "spell_impact", "arcanists_spellbook_rock_impact_2").toPcmSample(), to.field_r, false, cf.field_h);
                           if (var3 == 0) {
                             return;
                           }
                         }
                         if (29 == SectorCacheStore.field_f) {
                           SectorCacheStore.field_f = 30;
-                          this.a(85, nn.field_n[1][2], SoundEffect.loadNamed(wh.field_l, "spell_impact", "arcanists_spellbook_rock_impact_3").toPcmSample(), to.field_r, false, cf.field_h);
+                          this.a(85, CacheEntry.field_n[1][2], SoundEffect.loadNamed(wh.field_l, "spell_impact", "arcanists_spellbook_rock_impact_3").toPcmSample(), to.field_r, false, cf.field_h);
                           if (var3 == 0) {
                             return;
                           }
@@ -3053,14 +3053,14 @@ public final class ArcanistsMulti extends ud {
                           if (SectorCacheStore.field_f != 31) {
                             if (SectorCacheStore.field_f == 32) {
                               SectorCacheStore.field_f = 33;
-                              this.a(136, nn.field_n[5][2], VorbisSample.loadNamed(ck.field_b, "spell_impact", "arcanists_spellbook_overlight_impact_3").decodeAllToPcm(), to.field_r, false, cf.field_h);
+                              this.a(136, CacheEntry.field_n[5][2], VorbisSample.loadNamed(ck.field_b, "spell_impact", "arcanists_spellbook_overlight_impact_3").decodeAllToPcm(), to.field_r, false, cf.field_h);
                               if (var3 == 0) {
                                 return;
                               }
                             }
                             if (SectorCacheStore.field_f == 33) {
                               SectorCacheStore.field_f = 34;
-                              this.a(59, nn.field_n[4][0], VorbisSample.loadNamed(ck.field_b, "spell_impact", "arcanists_spellbook_underdark_impact_1").decodeAllToPcm(), to.field_r, false, cf.field_h);
+                              this.a(59, CacheEntry.field_n[4][0], VorbisSample.loadNamed(ck.field_b, "spell_impact", "arcanists_spellbook_underdark_impact_1").decodeAllToPcm(), to.field_r, false, cf.field_h);
                               if (var3 == 0) {
                                 return;
                               }
@@ -3069,7 +3069,7 @@ public final class ArcanistsMulti extends ud {
                               if (SectorCacheStore.field_f != 35) {
                                 if (SectorCacheStore.field_f == 36) {
                                   SectorCacheStore.field_f = 37;
-                                  this.a(255, nn.field_n[7][2], SoundEffect.loadNamed(wh.field_l, "spell_impact", "arcanists_clam_impact_individual").toPcmSample(), to.field_r, false, cf.field_h);
+                                  this.a(255, CacheEntry.field_n[7][2], SoundEffect.loadNamed(wh.field_l, "spell_impact", "arcanists_clam_impact_individual").toPcmSample(), to.field_r, false, cf.field_h);
                                   if (var3 == 0) {
                                     return;
                                   }
@@ -3079,14 +3079,14 @@ public final class ArcanistsMulti extends ud {
                                     if (SectorCacheStore.field_f != 39) {
                                       if (40 == SectorCacheStore.field_f) {
                                         SectorCacheStore.field_f = 41;
-                                        this.a(255, nn.field_n[6][1], SoundEffect.loadNamed(wh.field_l, "spell_impact", "arcanists_impact_nature_vinebomb").toPcmSample(), to.field_r, false, cf.field_h);
+                                        this.a(255, CacheEntry.field_n[6][1], SoundEffect.loadNamed(wh.field_l, "spell_impact", "arcanists_impact_nature_vinebomb").toPcmSample(), to.field_r, false, cf.field_h);
                                         if (var3 == 0) {
                                           return;
                                         }
                                       }
                                       if (SectorCacheStore.field_f == 41) {
                                         SectorCacheStore.field_f = 42;
-                                        this.a(255, nn.field_n[6][0], SoundEffect.loadNamed(wh.field_l, "spell_impact", "arcanists_spellbook_nature_impact_flurry_of_arrows").toPcmSample(), to.field_r, false, cf.field_h);
+                                        this.a(255, CacheEntry.field_n[6][0], SoundEffect.loadNamed(wh.field_l, "spell_impact", "arcanists_spellbook_nature_impact_flurry_of_arrows").toPcmSample(), to.field_r, false, cf.field_h);
                                         if (var3 == 0) {
                                           return;
                                         }
@@ -3096,85 +3096,85 @@ public final class ArcanistsMulti extends ud {
                                           return;
                                         }
                                         SectorCacheStore.field_f = 44;
-                                        this.a(255, nn.field_n[8][0], SoundEffect.loadNamed(wh.field_l, "spell_impact", "arcanists_cog_calling_bell_hit").toPcmSample(), to.field_r, false, cf.field_h);
+                                        this.a(255, CacheEntry.field_n[8][0], SoundEffect.loadNamed(wh.field_l, "spell_impact", "arcanists_cog_calling_bell_hit").toPcmSample(), to.field_r, false, cf.field_h);
                                         if (var3 == 0) {
                                           return;
                                         }
                                       }
                                       SectorCacheStore.field_f = 43;
-                                      this.a(255, nn.field_n[8][2], SoundEffect.loadNamed(wh.field_l, "spell_impact", "arcanists_cog_calling_bell_does_nothing").toPcmSample(), to.field_r, false, cf.field_h);
+                                      this.a(255, CacheEntry.field_n[8][2], SoundEffect.loadNamed(wh.field_l, "spell_impact", "arcanists_cog_calling_bell_does_nothing").toPcmSample(), to.field_r, false, cf.field_h);
                                       if (var3 == 0) {
                                         return;
                                       }
                                     }
                                     SectorCacheStore.field_f = 40;
-                                    this.a(255, nn.field_n[6][2], SoundEffect.loadNamed(wh.field_l, "spell_impact", "arcanists_spellbook_nature_impact_thornball").toPcmSample(), to.field_r, false, cf.field_h);
+                                    this.a(255, CacheEntry.field_n[6][2], SoundEffect.loadNamed(wh.field_l, "spell_impact", "arcanists_spellbook_nature_impact_thornball").toPcmSample(), to.field_r, false, cf.field_h);
                                     if (var3 == 0) {
                                       return;
                                     }
                                   }
                                   SectorCacheStore.field_f = 39;
-                                  this.a(255, nn.field_n[7][0], SoundEffect.loadNamed(wh.field_l, "spell_impact", "arcanists_brine_bomb_explode").toPcmSample(), to.field_r, false, cf.field_h);
+                                  this.a(255, CacheEntry.field_n[7][0], SoundEffect.loadNamed(wh.field_l, "spell_impact", "arcanists_brine_bomb_explode").toPcmSample(), to.field_r, false, cf.field_h);
                                   if (var3 == 0) {
                                     return;
                                   }
                                 }
                                 SectorCacheStore.field_f = 38;
-                                this.a(255, nn.field_n[7][1], SoundEffect.loadNamed(wh.field_l, "spell_impact", "arcanists_waterball_pop").toPcmSample(), to.field_r, false, cf.field_h);
+                                this.a(255, CacheEntry.field_n[7][1], SoundEffect.loadNamed(wh.field_l, "spell_impact", "arcanists_waterball_pop").toPcmSample(), to.field_r, false, cf.field_h);
                                 if (var3 == 0) {
                                   return;
                                 }
                               }
                               SectorCacheStore.field_f = 36;
-                              this.a(104, nn.field_n[4][2], VorbisSample.loadNamed(ck.field_b, "spell_impact", "arcanists_spellbook_underdark_impact_3").decodeAllToPcm(), to.field_r, false, cf.field_h);
+                              this.a(104, CacheEntry.field_n[4][2], VorbisSample.loadNamed(ck.field_b, "spell_impact", "arcanists_spellbook_underdark_impact_3").decodeAllToPcm(), to.field_r, false, cf.field_h);
                               if (var3 == 0) {
                                 return;
                               }
                             }
                             SectorCacheStore.field_f = 35;
-                            this.a(136, nn.field_n[4][1], VorbisSample.loadNamed(ck.field_b, "spell_impact", "arcanists_spellbook_underdark_impact_2").decodeAllToPcm(), to.field_r, false, cf.field_h);
+                            this.a(136, CacheEntry.field_n[4][1], VorbisSample.loadNamed(ck.field_b, "spell_impact", "arcanists_spellbook_underdark_impact_2").decodeAllToPcm(), to.field_r, false, cf.field_h);
                             if (var3 == 0) {
                               return;
                             }
                           }
                           SectorCacheStore.field_f = 32;
-                          this.a(65, nn.field_n[5][1], VorbisSample.loadNamed(ck.field_b, "spell_impact", "arcanists_spellbook_overlight_impact_2").decodeAllToPcm(), to.field_r, false, cf.field_h);
+                          this.a(65, CacheEntry.field_n[5][1], VorbisSample.loadNamed(ck.field_b, "spell_impact", "arcanists_spellbook_overlight_impact_2").decodeAllToPcm(), to.field_r, false, cf.field_h);
                           if (var3 == 0) {
                             return;
                           }
                         }
                         SectorCacheStore.field_f = 31;
-                        this.a(80, nn.field_n[5][0], VorbisSample.loadNamed(ck.field_b, "spell_impact", "arcanists_spellbook_overlight_impact_1").decodeAllToPcm(), to.field_r, false, cf.field_h);
+                        this.a(80, CacheEntry.field_n[5][0], VorbisSample.loadNamed(ck.field_b, "spell_impact", "arcanists_spellbook_overlight_impact_1").decodeAllToPcm(), to.field_r, false, cf.field_h);
                         if (var3 == 0) {
                           return;
                         }
                       }
                       SectorCacheStore.field_f = 26;
-                      this.a(90, nn.field_n[2][1], SoundEffect.loadNamed(wh.field_l, "spell_impact", "arcanists_spellbook_storm_impact_2").toPcmSample(), to.field_r, false, cf.field_h);
+                      this.a(90, CacheEntry.field_n[2][1], SoundEffect.loadNamed(wh.field_l, "spell_impact", "arcanists_spellbook_storm_impact_2").toPcmSample(), to.field_r, false, cf.field_h);
                       if (var3 == 0) {
                         return;
                       }
                     }
                     SectorCacheStore.field_f = 25;
-                    this.a(107, nn.field_n[2][0], SoundEffect.loadNamed(wh.field_l, "spell_impact", "arcanists_spellbook_storm_impact_1").toPcmSample(), to.field_r, false, cf.field_h);
+                    this.a(107, CacheEntry.field_n[2][0], SoundEffect.loadNamed(wh.field_l, "spell_impact", "arcanists_spellbook_storm_impact_1").toPcmSample(), to.field_r, false, cf.field_h);
                     if (var3 == 0) {
                       return;
                     }
                   }
                   SectorCacheStore.field_f = 23;
-                  this.a(130, nn.field_n[3][1], VorbisSample.loadNamed(ck.field_b, "spell_impact", "arcanists_spellbook_frost_impact_2").decodeAllToPcm(), to.field_r, false, cf.field_h);
+                  this.a(130, CacheEntry.field_n[3][1], VorbisSample.loadNamed(ck.field_b, "spell_impact", "arcanists_spellbook_frost_impact_2").decodeAllToPcm(), to.field_r, false, cf.field_h);
                   if (var3 == 0) {
                     return;
                   }
                 }
                 SectorCacheStore.field_f = 22;
-                this.a(76, nn.field_n[3][0], SoundEffect.loadNamed(wh.field_l, "spell_impact", "arcanists_spellbook_frost_impact_1").toPcmSample(), to.field_r, false, cf.field_h);
+                this.a(76, CacheEntry.field_n[3][0], SoundEffect.loadNamed(wh.field_l, "spell_impact", "arcanists_spellbook_frost_impact_1").toPcmSample(), to.field_r, false, cf.field_h);
                 if (var3 == 0) {
                   return;
                 }
               }
               SectorCacheStore.field_f = 19;
-              this.a(61, nn.field_n[0][0], VorbisSample.loadNamed(ck.field_b, "spell_impact", "arcanists_spellbook_flame_impact_1").decodeAllToPcm(), to.field_r, false, cf.field_h);
+              this.a(61, CacheEntry.field_n[0][0], VorbisSample.loadNamed(ck.field_b, "spell_impact", "arcanists_spellbook_flame_impact_1").decodeAllToPcm(), to.field_r, false, cf.field_h);
               return;
             }
             if (44 == SectorCacheStore.field_f &&
@@ -3207,7 +3207,7 @@ public final class ArcanistsMulti extends ud {
             if (SectorCacheStore.field_f == 45 &&
               ck.field_b.a("spell_cast_universal", -24417) &&
               wh.field_l.a("spell_cast_universal", -24417)) {
-              pi.field_e = go.field_h;
+              pi.field_e = SocketConnector.field_h;
               SectorCacheStore.field_f = 46;
               this.a(120, 64, VorbisSample.loadNamed(ck.field_b, "spell_cast_universal", "arcanists_cast_01_arcane_arrow").decodeAllToPcm(), to.field_r, false, cf.field_h);
               this.a(110, 72, VorbisSample.loadNamed(ck.field_b, "spell_cast_universal", "arcanists_cast_06_arcane_glyph").decodeAllToPcm(), to.field_r, false, cf.field_h);
@@ -3381,8 +3381,8 @@ public final class ArcanistsMulti extends ud {
               this.a(255, 181, SoundEffect.loadNamed(wh.field_l, "spell_cast_cogs", "arcanists_cog_clockwork_bomb_loop_cast").toPcmSample(), to.field_r, false, cf.field_h);
               this.a(255, 182, VorbisSample.loadNamed(ck.field_b, "spell_cast_cogs", "arcanists_cog_steam_dragon_cast").decodeAllToPcm(), to.field_r, false, cf.field_h);
               this.a(255, 183, VorbisSample.loadNamed(ck.field_b, "spell_cast_cogs", "arcanists_cog_redo_cast").decodeAllToPcm(), to.field_r, false, cf.field_h);
-              cf.field_h[218] = cf.field_h[nn.field_n[8][0]];
-              to.field_r[218] = to.field_r[nn.field_n[8][0]];
+              cf.field_h[218] = cf.field_h[CacheEntry.field_n[8][0]];
+              to.field_r[218] = to.field_r[CacheEntry.field_n[8][0]];
               return;
             }
             if (SectorCacheStore.field_f == 55) {
@@ -3438,8 +3438,8 @@ public final class ArcanistsMulti extends ud {
                 this.a(178, IndexedSpriteState.field_i[2], VorbisSample.loadNamed(ck.field_b, "wraith", "arcanists_wraith_hit").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);
                 this.a(166, IndexedSpriteState.field_i[1], VorbisSample.loadNamed(ck.field_b, "wraith", "arcanists_wraith_death").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);
                 this.a(255, 219, VorbisSample.loadNamed(ck.field_b, "steam_dragon", "arcanists_cog_steam_dragon_attack").decodeAllToPcm(), to.field_r, false, cf.field_h);
-                this.a(79, lj.field_g[0], VorbisSample.loadNamed(ck.field_b, "footmen", "arcanists_imp_yes_master").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);
-                FullscreenFocusCanvas.field_g[lj.field_g[2]] = null;
+                this.a(79, NanoFrameClock.field_g[0], VorbisSample.loadNamed(ck.field_b, "footmen", "arcanists_imp_yes_master").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);
+                FullscreenFocusCanvas.field_g[NanoFrameClock.field_g[2]] = null;
                 this.a(115, 184, VorbisSample.loadNamed(ck.field_b, "footmen", "arcanists_imp_im_gonna_go_boom").decodeAllToPcm(), to.field_r, false, cf.field_h);
                 this.a(167, mb.field_U[0], VorbisSample.loadNamed(ck.field_b, "frost_giant", "arcanists_frost_giant_select").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);
                 this.a(149, mb.field_U[2], VorbisSample.loadNamed(ck.field_b, "frost_giant", "arcanists_frost_giant_hit").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);
@@ -3455,9 +3455,9 @@ public final class ArcanistsMulti extends ud {
                 to.field_r[201] = to.field_r[187];
                 cf.field_h[201] = cf.field_h[187];
                 cf.field_h[103] = cf.field_h[103];
-                this.a(176, lj.field_n[0], VorbisSample.loadNamed(ck.field_b, "storm_dragon", "arcanists_storm_dragon_select").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);
-                this.a(182, lj.field_n[2], VorbisSample.loadNamed(ck.field_b, "storm_dragon", "arcanists_storm_dragon_hit").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);
-                this.a(202, lj.field_n[1], VorbisSample.loadNamed(ck.field_b, "storm_dragon", "arcanists_storm_dragon_death").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);
+                this.a(176, NanoFrameClock.field_n[0], VorbisSample.loadNamed(ck.field_b, "storm_dragon", "arcanists_storm_dragon_select").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);
+                this.a(182, NanoFrameClock.field_n[2], VorbisSample.loadNamed(ck.field_b, "storm_dragon", "arcanists_storm_dragon_hit").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);
+                this.a(202, NanoFrameClock.field_n[1], VorbisSample.loadNamed(ck.field_b, "storm_dragon", "arcanists_storm_dragon_death").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);
                 this.a(154, 193, VorbisSample.loadNamed(ck.field_b, "storm_dragon", "arcanists_storm_dragon_breath").decodeAllToPcm(), to.field_r, false, cf.field_h);
                 this.a(190, gd.field_pb[0], VorbisSample.loadNamed(ck.field_b, "frost_dragon", "arcanists_frost_dragon_select").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);
                 this.a(256, gd.field_pb[2], VorbisSample.loadNamed(ck.field_b, "frost_dragon", "arcanists_frost_dragon_hit").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);

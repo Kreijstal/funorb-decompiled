@@ -755,7 +755,7 @@ final class ma extends ArrayWidgetContainer implements ButtonListener {
           var3 = param1.readBits(28089, 12);
           var4 = new gl[var3];
           for (var5 = 0; var3 > var5; var5++) {
-            if (hd.a(param1, (byte) 112)) {
+            if (hd.readBitFlag(param1, (byte) 112)) {
               var6 = new gl();
               param1.readBits(28089, 24);
               param1.readBits(28089, 24);

@@ -38,7 +38,7 @@ final class jn {
     final static void a(String param0, boolean param1, int param2) {
         u.field_k = true;
         NodeHashTable.field_h = param1 ? true : false;
-        vf.field_k = new ed(ClientException.field_b, go.field_k, param0, MusicPatchPcmStream.field_s, NodeHashTable.field_h);
+        vf.field_k = new ed(ClientException.field_b, SocketConnector.field_k, param0, MusicPatchPcmStream.field_s, NodeHashTable.field_h);
         if (param2 != -1) {
           return;
         }
@@ -83,8 +83,8 @@ final class jn {
           if (param1.field_G == null) {
             param1.field_G = new IntrusiveDeque();
           }
-          gm.field_j = param1.field_G;
-          gm.field_j.clear(-124);
+          LinkButtonPainter.field_j = param1.field_G;
+          LinkButtonPainter.field_j.clear(-124);
           bc.field_c = new IntrusiveNodeHashTable(param7);
           ki.field_q = 0;
           oe.field_b = 0;

@@ -120,12 +120,12 @@ final class q extends SingleChildContainer {
           ck.field_d.a(SingleChildContainer.field_D, 41);
           sa.field_Cb = new kc(0L, lo.field_y);
           ck.field_d.a(sa.field_Cb, 97);
-          hf.field_f = new kc(0L, nf.field_A, fe.field_k);
+          MembershipOfferScreen.field_f = new kc(0L, nf.field_A, fe.field_k);
           ih.field_d = new kc(0L, nf.field_A);
           tm.field_d.a(bi.field_U, 65);
           tm.field_d.a(in.field_Jb, 126);
           in.field_Jb.a(ck.field_d, 115);
-          in.field_Jb.a(hf.field_f, 81);
+          in.field_Jb.a(MembershipOfferScreen.field_f, 81);
           in.field_Jb.a(ih.field_d, 69);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

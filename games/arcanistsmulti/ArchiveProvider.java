@@ -70,7 +70,7 @@ abstract class ArchiveProvider {
         if (param0 != -77) {
           ArchiveProvider.e((byte) -108);
         }
-        if (gm.field_f == 0) {
+        if (LinkButtonPainter.field_f == 0) {
           if (!da.field_b.c(-10923)) {
             return 20;
           }

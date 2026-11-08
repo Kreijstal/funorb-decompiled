@@ -831,7 +831,7 @@ class PacketBuffer extends IntrusiveNode {
         if (param4 > tm.field_g) {
           qa.field_m = param4;
         }
-        hc.field_e[MouseInputHandler.field_b] = param1;
+        ConditionalTextValue.field_e[MouseInputHandler.field_b] = param1;
         tj.field_u[MouseInputHandler.field_b] = param5;
         PatchEnvelopeSet.field_o[MouseInputHandler.field_b] = param3;
         int var6 = param3 + param5 + param1;

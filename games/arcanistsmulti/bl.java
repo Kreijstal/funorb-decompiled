@@ -19,7 +19,7 @@ final class bl extends DebouncedValidator implements TextInputListener, ak {
         var8 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           var3_int = 0;
-          var4 = hf.field_r;
+          var4 = MembershipOfferScreen.field_r;
           while (var3_int < ib.field_v.length) {
             var5 = oe.field_c[var3_int];
             if (var5 < 0) {
@@ -139,7 +139,7 @@ final class bl extends DebouncedValidator implements TextInputListener, ak {
                 var9[var12Lifetime1 + var14] = param3.field_z[var14];
                 var10[var12Lifetime1 + var14] = param3.field_D[var14];
               } else {
-                var16 = th.field_d.a(var15, (byte) -70);
+                var16 = th.field_d.getDefinition(var15, (byte) -70);
                 var8[var14 + var12Lifetime1] = var16.c(true);
                 var9[var12Lifetime1 + var14] = param3.field_z[var14];
                 if (var9[var12Lifetime1 + var14] <= 0) {
@@ -340,7 +340,7 @@ final class bl extends DebouncedValidator implements TextInputListener, ak {
           var2 = (NumberFormatException) (Object) decompiledCaughtException;
           return ra.field_k;
         }
-        return nn.field_s;
+        return CacheEntry.field_s;
     }
 
     public bl() {

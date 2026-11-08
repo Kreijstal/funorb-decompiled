@@ -61,7 +61,7 @@ final class ne {
         if (param0 != 7) {
           return false;
         }
-        var4_refLifetime3 = hf.a(this.field_h, this.field_k, param2, 10068666);
+        var4_refLifetime3 = MembershipOfferScreen.a(this.field_h, this.field_k, param2, 10068666);
         var5Lifetime3 = 61 / ((11 - param1) / 63);
         if (var4_refLifetime3 != null) {
           var6Lifetime3 = (String) null;
@@ -189,7 +189,7 @@ final class ne {
           }
           if (param1.field_m == 1) {
             if (ra.field_m == 0) {
-              this.field_l.a(12, go.field_a, (byte) -26);
+              this.field_l.a(12, SocketConnector.field_a, (byte) -26);
             }
             this.field_l.a(13, dm.field_J, (byte) -26);
           }
@@ -197,7 +197,7 @@ final class ne {
             if (hd.field_b == 0) {
               this.field_l.a(12, va.field_d, (byte) -26);
             }
-            this.field_l.a(13, ol.field_c, (byte) -26);
+            this.field_l.a(13, CameraFollowTarget.field_c, (byte) -26);
           }
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "ne.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -250,7 +250,7 @@ final class ne {
                   this.field_l.a(1, tj.a(param0 + 54, new String[]{var5}, MidiPcmStream.field_z), (byte) -26);
                   return;
                 }
-                this.field_l.a(0, tj.a(param0 + 48, new String[]{var5}, nh.field_x), (byte) -26);
+                this.field_l.a(0, tj.a(param0 + 48, new String[]{var5}, StrongCacheEntry.field_x), (byte) -26);
                 return;
               }
             }
@@ -299,7 +299,7 @@ final class ne {
           this.field_l.a(1, tj.a(param0 + 54, new String[]{var5}, MidiPcmStream.field_z), (byte) -26);
           return;
         }
-        this.field_l.a(0, tj.a(param0 + 48, new String[]{var5}, nh.field_x), (byte) -26);
+        this.field_l.a(0, tj.a(param0 + 48, new String[]{var5}, StrongCacheEntry.field_x), (byte) -26);
     }
 
     final void a(int param0) {

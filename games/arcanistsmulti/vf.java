@@ -122,7 +122,7 @@ final class vf extends IntrusiveNode {
     static {
         field_g = new so(1);
         field_p = "Press '<col=ffffff><%0></col>' or '<col=ffffff><%1></col>' to cycle through your minions or to centre on your Arcanist.<br>  Use the '<col=ffffff>Arrow keys</col>' to scroll around the map.";
-        km.a(100, 50);
+        km.configureSpeed(100, 50);
         field_v = new int[8192];
         field_h = "Spellbook not acquired";
     }

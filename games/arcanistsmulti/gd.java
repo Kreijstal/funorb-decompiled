@@ -34,10 +34,10 @@ final class gd extends ob {
           stackIn_5_1 = (param2);
           this.field_sb = stackIn_5_1;
           if (this.field_sb) {
-            this.field_ob.b(4210752, true, 8405024);
+            this.field_ob.setColours(4210752, true, 8405024);
             this.field_ob.field_I = true;
           } else {
-            this.field_ob.b(4210752, true, 2113632);
+            this.field_ob.setColours(4210752, true, 2113632);
             if (this.field_V) {
               this.field_ob.field_I = false;
             }
@@ -66,7 +66,7 @@ final class gd extends ob {
         try {
           this.field_jb = param1;
           if (null != this.field_jb) {
-            var3_int = go.field_k.paragraphHeight(this.field_jb, 260, go.field_k.field_C);
+            var3_int = SocketConnector.field_k.paragraphHeight(this.field_jb, 260, SocketConnector.field_k.field_C);
             this.a(300, 0, var3_int + 150);
           }
           this.field_ob = new om(13, 50, 274, 30, 15, 2113632, 4210752);
@@ -116,8 +116,8 @@ final class gd extends ob {
         try {
           ArchiveRequest.a(param12 ^ param12, param17, param0, param1, param10);
           gf.a((byte) 72, param17);
-          nn.a(param8, param19, param3, param2, param6, param9, param4, param11, param17, param18, param5, param16, param15, param13, param12 - 17290);
-          hg.a(param7, param14, param17, (byte) -103);
+          CacheEntry.a(param8, param19, param3, param2, param6, param9, param4, param11, param17, param18, param5, param16, param15, param13, param12 - 17290);
+          FrameClock.initializeChatFilter(param7, param14, param17, (byte) -103);
           tc.a((byte) 6);
           ik.a((byte) -85);
           r.a(false);
@@ -230,10 +230,10 @@ final class gd extends ob {
 
     final void a(int param0, byte param1, int param2) {
         super.a(param0, param1, param2);
-        go.field_k.drawCentered(this.field_lb, param0 + (this.field_v >> 1), 103 + param2, 16777215, -1);
+        SocketConnector.field_k.drawCentered(this.field_lb, param0 + (this.field_v >> 1), 103 + param2, 16777215, -1);
         if (null != this.field_jb) {
           SoftwareRasterizer.drawHorizontalLine(param0 + 20, 113 + param2, 260, 8421504);
-          go.field_k.drawParagraph(this.field_jb, 20 + param0, 8 + param2 + 120, 260, 100, 16777215, -1, 1, 0, go.field_k.field_C);
+          SocketConnector.field_k.drawParagraph(this.field_jb, 20 + param0, 8 + param2 + 120, 260, 100, 16777215, -1, 1, 0, SocketConnector.field_k.field_C);
         }
     }
 

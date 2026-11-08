@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class kh {
+abstract class TextLayout {
     static String field_e;
     static String field_a;
     static u field_g;
@@ -10,7 +10,7 @@ abstract class kh {
     static boolean field_b;
     static IndexedSprite field_d;
 
-    final int a(String param0, boolean param1, int param2, int param3) {
+    final int countSpacesOutsideTags(String param0, boolean param1, int param2, int param3) {
         int var8 = 0;
         int var5_int = 0;
         int var6 = 0;
@@ -83,7 +83,7 @@ abstract class kh {
         }
     }
 
-    final int a(byte param0) {
+    final int height(byte param0) {
         int var2;
         int stackIn_5_0 = 0;
         var2 = 20 % ((param0 - 4) / 53);
@@ -96,7 +96,7 @@ abstract class kh {
         return stackIn_5_0;
     }
 
-    final int a(byte param0, int param1) {
+    final int lineForCharacter(byte param0, int param1) {
         int var4 = 0;
         vd var5 = null;
         int var6 = ArcanistsMulti.field_G ? 1 : 0;
@@ -124,18 +124,18 @@ abstract class kh {
         try {
           if (param0 != 14) {
             var5 = (java.awt.Canvas) null;
-            kh.a((byte) 126, (java.awt.Canvas) null, true);
+            TextLayout.a((byte) 126, (java.awt.Canvas) null, true);
           }
           if (10 <= ih.field_f) {
             if (!TextFieldValidator.d(true)) {
               SoftwareRasterizer.clear();
-              n.a(320, 240, param0 - 13);
+              IntKeyLookup.a(320, 240, param0 - 13);
               kn.a(param1, (byte) -101, 0, 0);
             } else {
               if (fj.field_j != 0) {
                 ResourceArchive.a(param1, (byte) -39);
               } else {
-                la.a(param2, false, (byte) -72);
+                la.clearOrDimScreen(param2, false, (byte) -72);
                 kn.a(param1, (byte) -97, 0, 0);
               }
             }
@@ -162,7 +162,7 @@ abstract class kh {
         }
     }
 
-    final int b(byte param0) {
+    final int maxLineWidth(byte param0) {
         int var4 = 0;
         int var2;
         vd[] var3;
@@ -189,7 +189,7 @@ abstract class kh {
         return var2;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void drawBevelBox(int param0, int param1, int param2, int param3, int param4) {
         int var8 = 0;
         int var5_int = 0;
         int var6 = 0;
@@ -226,7 +226,7 @@ abstract class kh {
         }
     }
 
-    static long a(long param0, long param1) {
+    static long longXor(long param0, long param1) {
         return param0 ^ param1;
     }
 
@@ -263,7 +263,7 @@ abstract class kh {
           ob.field_T = param16;
           ib.a(param4, param6, param10, param11, 109);
           sk.a(param14, -28995, param2, param17);
-          kh.a(param9, param18, param7, param3, -1, param1);
+          TextLayout.a(param9, param18, param7, param3, -1, param1);
           ho.a((byte) 101, param0, param5);
           kn.a(param13, param19, param15, (byte) -43);
           return;
@@ -305,7 +305,7 @@ abstract class kh {
         }
     }
 
-    final int a(int param0, int param1, boolean param2) {
+    final int characterAt(int param0, int param1, boolean param2) {
         int var5 = 0;
         vd var6 = null;
         int var7 = 0;
@@ -340,7 +340,7 @@ abstract class kh {
         return -1;
     }
 
-    final int a(int param0, int param1) {
+    final int characterOffset(int param0, int param1) {
         int var4 = 0;
         vd var5 = null;
         int var6 = ArcanistsMulti.field_G ? 1 : 0;

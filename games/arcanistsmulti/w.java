@@ -274,7 +274,7 @@ final class w extends kc {
             this.field_Pb.field_v = of.a(3, this.field_Pb.field_I, 1, 2105376, 11579568, 8421504);
             var23 = 13 + (13 + var19);
             var24 = 34 + var22 + var17Lifetime5;
-            var25 = ih.a(param0, var23, param2, 246);
+            var25 = ih.clampToScreenX(param0, var23, param2, 246);
             var26 = ql.a(10, param3, var24, param1);
             this.a(var23, var25, var26, var24, (byte) -120);
             return;
@@ -292,7 +292,7 @@ final class w extends kc {
           this.field_Pb.field_v = of.a(3, this.field_Pb.field_I, 1, 2105376, 11579568, 8421504);
           var18Lifetime1 = var15_int + 26;
           var19Lifetime1 = 34 + var16Lifetime1;
-          var20Lifetime1 = ih.a(param0, var18Lifetime1, param2, 246);
+          var20Lifetime1 = ih.clampToScreenX(param0, var18Lifetime1, param2, 246);
           var21Lifetime1 = ql.a(10, param3, var19Lifetime1, param1);
           this.a(var18Lifetime1, var20Lifetime1, var21Lifetime1, var19Lifetime1, (byte) -120);
           return;
@@ -432,7 +432,7 @@ final class w extends kc {
           if (param2 != 0) {
             field_Jb = (String) null;
           }
-          var3 = pn.a(param2 ^ 8671, param0);
+          var3 = pn.reverseString(param2 ^ 8671, param0);
           stackIn_7_0 = (param1.indexOf(param0) != -1) || (param1.indexOf(var3) != -1);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

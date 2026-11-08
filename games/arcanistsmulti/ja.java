@@ -41,7 +41,7 @@ final class ja extends TextFieldValidator {
             return stackIn_5_0;
           }
           if (this.validateText(param0, -90) != ra.field_k) {
-            stackIn_10_0 = nh.field_v;
+            stackIn_10_0 = StrongCacheEntry.field_v;
             return stackIn_10_0;
           }
           stackIn_8_0 = oj.field_b;
@@ -89,7 +89,7 @@ final class ja extends TextFieldValidator {
           if (!this.field_x) {
             stackIn_12_0 = ra.field_k;
           } else {
-            stackIn_12_0 = nn.field_s;
+            stackIn_12_0 = CacheEntry.field_s;
           }
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

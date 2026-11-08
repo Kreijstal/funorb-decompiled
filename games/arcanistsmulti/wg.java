@@ -5,7 +5,7 @@ final class wg extends TextButton {
     private int field_K;
     int field_L;
     static Sprite[] field_J;
-    private jl field_I;
+    private GrowableIntList field_I;
     int field_H;
 
     final int g(byte param0) {
@@ -27,7 +27,7 @@ final class wg extends TextButton {
         if (param0) {
           this.c(true);
         }
-        return this.field_I.a(1);
+        return this.field_I.size(1);
     }
 
     final static void a(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6, int param7, int param8) {
@@ -110,16 +110,16 @@ final class wg extends TextButton {
                     if (var18 == 0) {
                       if (0 <= var17 &&
                         var17 < MeshRasterState.field_d) {
-                        ol.a(var16Lifetime2 + var17, param4, false, param6, var18);
+                        CameraFollowTarget.a(var16Lifetime2 + var17, param4, false, param6, var18);
                       }
                     } else {
                       if (var17 + var18 >= MeshRasterState.field_d) {
                         var18 = -1 + (MeshRasterState.field_d - var17);
                       }
                       if (var17 >= 0) {
-                        ol.a(var17 + var16Lifetime2, param4, false, param6, var18);
+                        CameraFollowTarget.a(var17 + var16Lifetime2, param4, false, param6, var18);
                       } else {
-                        ol.a(var16Lifetime2, param4, false, param6, var18 + var17);
+                        CameraFollowTarget.a(var16Lifetime2, param4, false, param6, var18 + var17);
                       }
                     }
                   }
@@ -188,16 +188,16 @@ final class wg extends TextButton {
                 if (var17Lifetime1 == 0) {
                   if (0 <= var16Lifetime1 &&
                     var16Lifetime1 < MeshRasterState.field_d) {
-                    ol.a(var16Lifetime1 + var15Lifetime1, param4, false, param6, var17Lifetime1);
+                    CameraFollowTarget.a(var16Lifetime1 + var15Lifetime1, param4, false, param6, var17Lifetime1);
                   }
                 } else {
                   if (var16Lifetime1 + var17Lifetime1 >= MeshRasterState.field_d) {
                     var17Lifetime1 = -var16Lifetime1 + MeshRasterState.field_d - 1;
                   }
                   if (var16Lifetime1 >= 0) {
-                    ol.a(var16Lifetime1 + var15Lifetime1, param4, false, param6, var17Lifetime1);
+                    CameraFollowTarget.a(var16Lifetime1 + var15Lifetime1, param4, false, param6, var17Lifetime1);
                   } else {
-                    ol.a(var15Lifetime1, param4, false, param6, var16Lifetime1 + var17Lifetime1);
+                    CameraFollowTarget.a(var15Lifetime1, param4, false, param6, var16Lifetime1 + var17Lifetime1);
                   }
                 }
               }
@@ -259,8 +259,8 @@ final class wg extends TextButton {
             if (param1 == 2) {
               var11 = 2147483647;
               var12 = -1;
-              for (var13 = 0; var13 < this.field_I.a(1); var13++) {
-                var14 = -var9 + this.field_I.c(31103, var13);
+              for (var13 = 0; var13 < this.field_I.size(1); var13++) {
+                var14 = -var9 + this.field_I.get(31103, var13);
                 var14 = var14 * var14;
                 if (var14 < var11) {
                   var11 = var14;
@@ -270,10 +270,10 @@ final class wg extends TextButton {
               if (var12 < 0) {
                 return true;
               }
-              this.field_I.b(var12, -11292);
+              this.field_I.removeAt(var12, -11292);
             }
           } else {
-            this.field_I.a(var9, 1);
+            this.field_I.add(var9, 1);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -292,8 +292,8 @@ final class wg extends TextButton {
 
     final int a(int param0, int param1) {
         if (param0 <= param1 &&
-          this.field_I.a(param0 ^ 1) > param1) {
-          return this.field_I.c(31103, param1);
+          this.field_I.size(param0 ^ 1) > param1) {
+          return this.field_I.get(31103, param1);
         }
         return -1;
     }

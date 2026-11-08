@@ -33,7 +33,7 @@ final class ik {
             }
           }
           if (param0 == -58) {
-            stackIn_14_0 = n.field_b;
+            stackIn_14_0 = IntKeyLookup.field_b;
             return stackIn_14_0;
           }
           stackIn_12_0 = (ri) null;
@@ -60,7 +60,7 @@ final class ik {
         hl.field_m.a(IntrusiveNodeHashTable.field_o, 55);
         nl.field_Fb = new kc(0L, mf.field_d);
         Js5ArchiveManager.field_g = new kc(0L, (kc) null);
-        nl.field_Fb.a(hf.field_t, 61);
+        nl.field_Fb.a(MembershipOfferScreen.field_t, 61);
         nl.field_Fb.a(Js5ArchiveManager.field_g, 89);
         Js5ArchiveManager.field_g.a(mj.field_s, 25);
         Js5ArchiveManager.field_g.a(gj.field_d, 43);
@@ -102,7 +102,7 @@ final class ik {
           se.field_H.a(kg.field_c, 14);
         }
         se.field_H.a(mj.field_s, 39);
-        aj.field_h = new i(lj.field_p, se.field_H);
+        aj.field_h = new i(NanoFrameClock.field_p, se.field_H);
         k.field_d = new kc(0L, (kc) null);
         k.field_d.a(aj.field_h.field_c, param0 ^ -74);
         k.field_d.a(ii.field_b, param0 ^ -54);

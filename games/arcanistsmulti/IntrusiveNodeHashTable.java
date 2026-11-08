@@ -167,7 +167,7 @@ final class IntrusiveNodeHashTable {
             var6 = ja.field_s;
             var4Lifetime2.field_l.a(0, 0, param0 - 29467, var6, var5);
           }
-          hg.a(param2, param1, false);
+          FrameClock.a(param2, param1, false);
           return;
         }
         var3Lifetime1 = bj.a(param1, -3, param2);
@@ -181,7 +181,7 @@ final class IntrusiveNodeHashTable {
           var6Lifetime1 = ja.field_s;
           var4Lifetime1Lifetime1.field_l.a(0, 0, param0 - 29467, var6Lifetime1, var5Lifetime1);
         }
-        hg.a(param2, param1, false);
+        FrameClock.a(param2, param1, false);
     }
 
     final static ri a(String param0, int param1) {
@@ -219,12 +219,12 @@ final class IntrusiveNodeHashTable {
             if (var4 == 45) {
               if (0 == var3 ||
                 var3 == var2_int - 1) {
-                stackIn_21_0 = n.field_b;
+                stackIn_21_0 = IntKeyLookup.field_b;
                 return stackIn_21_0;
               }
             } else {
               if (-1 == AudioService.field_e.indexOf(var4)) {
-                stackIn_25_0 = n.field_b;
+                stackIn_25_0 = IntKeyLookup.field_b;
                 return stackIn_25_0;
               }
             }
@@ -357,8 +357,8 @@ final class IntrusiveNodeHashTable {
               }
             }
           }
-          if (null != jl.field_h) {
-            stackIn_19_0 = jl.field_h.e((byte) -8);
+          if (null != GrowableIntList.field_h) {
+            stackIn_19_0 = GrowableIntList.field_h.e((byte) -8);
             if (!stackIn_19_0) {
               f.field_g = null;
               return;

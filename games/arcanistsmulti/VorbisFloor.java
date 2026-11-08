@@ -179,7 +179,7 @@ final class VorbisFloor {
         var2 = this.field_a.length;
         System.arraycopy(this.field_a, 0, field_h, 0, var2);
         var3 = field_b[this.field_k - 1];
-        var4 = jl.a((byte) -79, var3 - 1);
+        var4 = GrowableIntList.highestBitIndex((byte) -79, var3 - 1);
         field_i[0] = VorbisSample.readBits(var4);
         field_i[1] = VorbisSample.readBits(var4);
         var5 = 2;

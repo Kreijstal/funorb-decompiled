@@ -139,20 +139,20 @@ final class ao {
         sm.field_c.a(fn.field_e.field_x, 0, 0, 30, (byte) -120);
         ad.field_c.a(fn.field_e.field_x, 0, 30, -30 + (-40 + (fn.field_e.field_I - 2)), (byte) -120);
         tj.field_o.a(68, 5, 5, 30, (byte) -120);
-        hg.field_e.a(78, 75, 5, 30, (byte) -120);
+        FrameClock.field_e.a(78, 75, 5, 30, (byte) -120);
         ci.field_a.a(48, 155, 5, 30, (byte) -120);
         lo.field_r.a(48, 205, 5, 30, (byte) -120);
         int var2 = !fc.field_a ? 200 : 250;
         vc.field_j.a(-var2 + 363, 5 + var2, 5, 30, (byte) -120);
         jo.field_a.a(-10 + fn.field_e.field_x - 365, 370, 5, 30, (byte) -120);
-        DebouncedValidator.field_g.a(37, nn.field_p, -5 + (-5 + ad.field_c.field_x), false, 5, -5 + (ad.field_c.field_I - 5) - 32, 2);
+        DebouncedValidator.field_g.a(37, CacheEntry.field_p, -5 + (-5 + ad.field_c.field_x), false, 5, -5 + (ad.field_c.field_I - 5) - 32, 2);
         if (param0 <= -111) {
           var3 = (fn.field_e.field_x + 2) / 2;
           of.field_a.a(-2 + var3, 0, fn.field_e.field_I - 40, 40, (byte) -120);
           if (!fc.field_a) {
             var3 = 0;
           }
-          jl.field_a.a(fn.field_e.field_x - var3, var3, fn.field_e.field_I - 40, 40, (byte) -120);
+          GrowableIntList.field_a.a(fn.field_e.field_x - var3, var3, fn.field_e.field_I - 40, 40, (byte) -120);
           return;
         }
         ao.a((byte) 81);
@@ -161,7 +161,7 @@ final class ao {
         if (!fc.field_a) {
           var3Lifetime1 = 0;
         }
-        jl.field_a.a(fn.field_e.field_x - var3Lifetime1, var3Lifetime1, fn.field_e.field_I - 40, 40, (byte) -120);
+        GrowableIntList.field_a.a(fn.field_e.field_x - var3Lifetime1, var3Lifetime1, fn.field_e.field_I - 40, 40, (byte) -120);
     }
 
     final static int a(int param0, int param1, int param2) {

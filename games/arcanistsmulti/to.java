@@ -7,7 +7,7 @@ class to extends DualLinkNode {
     static Sprite field_q;
     static String field_n;
     static int[] field_r;
-    static hf field_s;
+    static MembershipOfferScreen field_s;
     static String field_o;
     static int field_p;
     static int field_m;
@@ -147,12 +147,12 @@ class to extends DualLinkNode {
           IOException var1_ref = null;
           RuntimeException var1_ref2 = null;
           try {
-            if (4 <= jl.field_c.field_i) {
-              if (jl.field_c.field_o == -1) {
+            if (4 <= GrowableIntList.field_c.field_i) {
+              if (GrowableIntList.field_c.field_o == -1) {
                 stackIn_5_0 = 3;
                 return stackIn_5_0;
               }
-              if (jl.field_c.field_o != -2) {
+              if (GrowableIntList.field_c.field_o != -2) {
                 stackIn_10_0 = 1;
                 return stackIn_10_0;
               }
@@ -164,20 +164,20 @@ class to extends DualLinkNode {
             }
             try {
               if (0 == uh.field_m) {
-                hg.field_a = ri.field_g.a(ed.field_Hb, true, jd.field_g);
+                FrameClock.field_a = ri.field_g.a(ed.field_Hb, true, IsaacRandom.field_g);
                 uh.field_m = uh.field_m + 1;
               }
               if (uh.field_m == 1) {
-                if (hg.field_a.field_e == 2) {
-                  stackIn_23_0 = hg.a((byte) 110, -1);
+                if (FrameClock.field_a.field_e == 2) {
+                  stackIn_23_0 = FrameClock.a((byte) 110, -1);
                   return stackIn_23_0;
                 }
-                if (hg.field_a.field_e == 1) {
+                if (FrameClock.field_a.field_e == 1) {
                   uh.field_m = uh.field_m + 1;
                 }
               }
               if (uh.field_m == 2) {
-                td.field_E = new k((java.net.Socket) (hg.field_a.field_g), ri.field_g);
+                td.field_E = new k((java.net.Socket) (FrameClock.field_a.field_g), ri.field_g);
                 var1 = new PacketBuffer(13);
                 SpriteState.a(var1, ne.field_b, ib.field_u, ce.field_o, 123);
                 var1.writeByte(15, (byte) -28);
@@ -191,7 +191,7 @@ class to extends DualLinkNode {
                 if (td.field_E.b(0) > 0) {
                   var1_int = td.field_E.a((byte) 120);
                   if (var1_int != 0) {
-                    stackIn_39_0 = hg.a((byte) 110, var1_int);
+                    stackIn_39_0 = FrameClock.a((byte) 110, var1_int);
                     return stackIn_39_0;
                   }
                   uh.field_m = uh.field_m + 1;
@@ -199,7 +199,7 @@ class to extends DualLinkNode {
                 }
                 if ((decompiledFrameRemainder0) &&
                   (qj.b(-26572) > ud.field_E)) {
-                  stackIn_47_0 = hg.a((byte) 110, -2);
+                  stackIn_47_0 = FrameClock.a((byte) 110, -2);
                   return stackIn_47_0;
                 }
               }
@@ -207,8 +207,8 @@ class to extends DualLinkNode {
                 stackIn_52_0 = -1;
                 return stackIn_52_0;
               }
-              jl.field_c.a(CipherPacketBuffer.field_n, true, td.field_E);
-              hg.field_a = null;
+              GrowableIntList.field_c.a(CipherPacketBuffer.field_n, true, td.field_E);
+              FrameClock.field_a = null;
               td.field_E = null;
               uh.field_m = 0;
               stackIn_50_0 = 0;
@@ -216,7 +216,7 @@ class to extends DualLinkNode {
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var1_ref = (IOException) (Object) decompiledCaughtException;
-              stackIn_54_0 = hg.a((byte) 110, -3);
+              stackIn_54_0 = FrameClock.a((byte) 110, -3);
               return stackIn_54_0;
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -354,7 +354,7 @@ class to extends DualLinkNode {
                 if (param6) {
                   PatchEnvelopeSet.field_k[var24Lifetime2] = var28Lifetime1 >> tj.field_C;
                   vf.field_v[var24Lifetime2] = var29Lifetime1 >> tj.field_C;
-                  gm.field_g[var24Lifetime2] = var30Lifetime1;
+                  LinkButtonPainter.field_g[var24Lifetime2] = var30Lifetime1;
                 }
                 var24Lifetime2++;
                 continue;
@@ -433,7 +433,7 @@ class to extends DualLinkNode {
             stackIn_66_0 = param5 ? 1 : 0;
             break;
           }
-          ig.a(stackIn_66_0 != 0, param4, var8, (byte) -79, var7_int);
+          WeightedLruCache.a(stackIn_66_0 != 0, param4, var8, (byte) -79, var7_int);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

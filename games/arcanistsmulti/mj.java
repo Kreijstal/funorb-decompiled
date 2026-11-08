@@ -348,7 +348,7 @@ final class mj extends jm {
             }
           }
           this.field_t.a(param3, this, (byte) 110, param0, param2);
-          oo.c(-15405);
+          oo.popClipState(-15405);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

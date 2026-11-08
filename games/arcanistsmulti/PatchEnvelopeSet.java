@@ -135,11 +135,11 @@ final class PatchEnvelopeSet {
           int var1_int = 0;
           int var3 = ArcanistsMulti.field_G ? 1 : 0;
           try {
-            if (jl.field_c != null) {
-              jl.field_c.c(param0 ^ 16700264);
+            if (GrowableIntList.field_c != null) {
+              GrowableIntList.field_c.c(param0 ^ 16700264);
             }
             if (null != ed.field_yb) {
-              ed.field_yb.a((byte) 90);
+              ed.field_yb.stop((byte) 90);
             }
             if (null != bm.field_e) {
               try {

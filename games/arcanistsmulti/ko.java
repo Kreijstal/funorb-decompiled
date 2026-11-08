@@ -9,7 +9,7 @@ final class ko extends IntrusiveNode {
     static int field_k;
     static BitmapFont field_j;
 
-    final static void a(java.applet.Applet param0, byte param1) {
+    final static void openSubscribePage(java.applet.Applet param0, byte param1) {
         try {
           java.net.URL var2 = null;
           RuntimeException stackIn_8_0 = null;
@@ -24,7 +24,7 @@ final class ko extends IntrusiveNode {
               if (param1 >= -56) {
                 return;
               }
-              param0.getAppletContext().showDocument(nm.a(param0, var2, -31843), "_top");
+              param0.getAppletContext().showDocument(nm.appendSessionParameters(param0, var2, -31843), "_top");
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2_ref = (Exception) (Object) decompiledCaughtException;
@@ -142,7 +142,7 @@ final class ko extends IntrusiveNode {
             var31.field_l.a((byte) -32, 12, var32, var33);
             var34 = eo.field_c;
             var35 = ArchiveProvider.field_a[2];
-            var36 = ol.field_c;
+            var36 = CameraFollowTarget.field_c;
             var34.field_l.a((byte) -32, 13, var35, var36);
           }
           var37 = eo.field_c;
@@ -335,7 +335,7 @@ final class ko extends IntrusiveNode {
           }
           if (DirectByteStorage.field_f == null &&
             hm.field_c) {
-            var7Lifetime1 = "[" + lj.field_p + "] ";
+            var7Lifetime1 = "[" + NanoFrameClock.field_p + "] ";
           }
           if (null != DirectByteStorage.field_f) {
             if (!oe.field_a) {
@@ -381,7 +381,7 @@ final class ko extends IntrusiveNode {
         return true;
     }
 
-    final static int[] a(int[] param0, int[] param1, boolean param2) {
+    final static int[] orArrays(int[] param0, int[] param1, boolean param2) {
         int[] var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -400,7 +400,7 @@ final class ko extends IntrusiveNode {
           var4 = 0;
           if (!param2) {
             var6 = (IndexedSprite) null;
-            ko.a((nf) null, -45, 124, 15, (IndexedSprite) null, 88);
+            ko.circleHitsMask((nf) null, -45, 124, 15, (IndexedSprite) null, 88);
           }
           while (var4 < 8) {
             var3[var4] = fj.bitOr(param0[var4], param1[var4]);
@@ -428,7 +428,7 @@ final class ko extends IntrusiveNode {
         }
     }
 
-    final static boolean a(int param0, String param1) {
+    final static boolean hasDisallowedCharacter(int param0, String param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -467,7 +467,7 @@ final class ko extends IntrusiveNode {
         throw new Error();
     }
 
-    final static boolean a(nf param0, int param1, int param2, int param3, IndexedSprite param4, int param5) {
+    final static boolean circleHitsMask(nf param0, int param1, int param2, int param3, IndexedSprite param4, int param5) {
         Sprite var6 = null;
         RuntimeException var6_ref = null;
         boolean stackIn_1_0 = false;

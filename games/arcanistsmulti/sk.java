@@ -40,7 +40,7 @@ final class sk {
           if (param1 != -28995) {
             sk.a(-70);
           }
-          ol.field_f = param0;
+          CameraFollowTarget.field_f = param0;
           tg.field_d = param3;
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "sk.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');

@@ -120,14 +120,14 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
               var6_int = UiContainer.field_z.readUnsignedByte((byte) -123);
               UiContainer.field_z.position = 0;
               if (0 == var6_int) {
-                ob.field_eb = go.field_c;
+                ob.field_eb = SocketConnector.field_c;
               } else {
                 on.field_g = var6_int;
                 fj.field_h = -1;
                 ob.field_eb = lf.field_f;
               }
             }
-            if (ob.field_eb == go.field_c &&
+            if (ob.field_eb == SocketConnector.field_c &&
               pe.a((byte) -86, 8)) {
               of.field_j = UiContainer.field_z.readLong(-943038560);
               UiContainer.field_z.position = 0;
@@ -149,7 +149,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  ka.b(false);
+                  ProxySocketConnector.closeActiveConnection(false);
                   bb.field_h = false;
                   stackIn_34_0 = var6_intLifetime1;
                   return stackIn_34_0;
@@ -240,7 +240,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
             }
             if (ob.field_eb == lf.field_f &&
               pn.b(-12564)) {
-              ka.b(false);
+              ProxySocketConnector.closeActiveConnection(false);
               if (7 == on.field_g &&
                 !bb.field_h) {
                 bb.field_h = true;

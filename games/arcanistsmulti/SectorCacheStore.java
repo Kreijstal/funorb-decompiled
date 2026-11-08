@@ -205,7 +205,7 @@ final class SectorCacheStore {
         if (param0 != 1497225488) {
           return -32;
         }
-        return hg.field_b;
+        return FrameClock.field_b;
     }
 
     private final boolean writeEntrySectors(int param0, boolean param1, int param2, byte param3, byte[] param4) {

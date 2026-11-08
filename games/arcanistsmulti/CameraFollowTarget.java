@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ol {
+final class CameraFollowTarget {
     static int field_g;
     static int field_i;
     static String field_a;
@@ -52,7 +52,7 @@ final class ol {
         var8 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           if (param2) {
-            ol.releaseStatics(64);
+            CameraFollowTarget.releaseStatics(64);
           }
           while (true) {
             param4--;
@@ -80,12 +80,12 @@ final class ol {
         }
     }
 
-    final void a(int param0) {
+    final void clearTarget(int param0) {
         this.field_d = null;
         this.field_h = null;
         if (param0 != 0) {
           int[] var3 = (int[]) null;
-          ol.a(-9, (int[]) null, false, -58, 111);
+          CameraFollowTarget.a(-9, (int[]) null, false, -58, 111);
         }
     }
 
@@ -95,12 +95,12 @@ final class ol {
         field_c = null;
         field_a = null;
         if (param0 != -23971) {
-          ol.a((byte) -20);
+          CameraFollowTarget.a((byte) -20);
         }
         field_e = null;
     }
 
-    final static FullscreenFocusCanvas a(int param0, int param1, boolean param2, PlatformTaskDispatcher param3, int param4, int param5) {
+    final static FullscreenFocusCanvas createFullscreenCanvas(int param0, int param1, boolean param2, PlatformTaskDispatcher param3, int param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
         FullscreenFocusCanvas var7 = null;
@@ -141,7 +141,7 @@ final class ol {
         }
     }
 
-    final void a(int param0, ml param1) {
+    final void followUnit(int param0, ml param1) {
         try {
           this.field_h = null;
           if (param0 > -79) {
@@ -153,7 +153,7 @@ final class ol {
         }
     }
 
-    final void a(mi param0, int param1) {
+    final void followProjectile(mi param0, int param1) {
         try {
           if (param1 >= -122) {
             field_b = (String) null;

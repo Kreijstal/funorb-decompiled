@@ -34,7 +34,7 @@ final class dm extends SingleChildContainer {
           var8 = new Sprite(this.field_B.field_v, this.field_B.field_k);
           fk.setSpriteRasterTarget(var8, -23095);
           this.field_B.drawLayer((byte) -128, 0, param2, 0);
-          oo.c(-15405);
+          oo.popClipState(-15405);
           var8.drawAlpha(param1 + this.field_n, this.field_j + param3, this.field_K);
           return;
         }
@@ -42,7 +42,7 @@ final class dm extends SingleChildContainer {
         Sprite var7 = new Sprite(this.field_B.field_v, this.field_B.field_k);
         fk.setSpriteRasterTarget(var7, -23095);
         this.field_B.drawLayer((byte) -128, 0, param2, 0);
-        oo.c(-15405);
+        oo.popClipState(-15405);
         var7.drawAlpha(param1 + this.field_n, this.field_j + param3, this.field_K);
     }
 

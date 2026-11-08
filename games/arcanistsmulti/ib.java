@@ -11,7 +11,7 @@ class ib extends jm {
     static String field_p;
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        lj.field_k = param2;
+        NanoFrameClock.field_k = param2;
         u.field_l = param1;
         tm.field_b = param3;
         if (param4 < 92) {
@@ -130,7 +130,7 @@ class ib extends jm {
     public final void a(UiComponent param0, int param1, int param2, int param3, boolean param4) {
         try {
           if (param4) {
-            kh.a(param0.field_v, param0.field_n + param2, param3 + param0.field_j, param0.field_k, 82);
+            TextLayout.drawBevelBox(param0.field_v, param0.field_n + param2, param3 + param0.field_j, param0.field_k, 82);
           }
           super.a(param0, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {

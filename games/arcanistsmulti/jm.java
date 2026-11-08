@@ -296,8 +296,8 @@ class jm implements WidgetPainter, WidgetTextLayout {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        kh var17 = null;
-        kh var18 = null;
+        TextLayout var17 = null;
+        TextLayout var18 = null;
         var16 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           if (param4 == param5) {
@@ -316,13 +316,13 @@ class jm implements WidgetPainter, WidgetTextLayout {
               var8 = param4;
               var9 = param5;
             }
-            var10 = var18.a((byte) -67, var8);
-            var11 = var18.a((byte) 77, var9);
+            var10 = var18.lineForCharacter((byte) -67, var8);
+            var11 = var18.lineForCharacter((byte) 77, var9);
             da.clipToRectangle(param2 + param1.field_n + param1.field_v, param1.field_j + param0 + param1.field_k, 123, param2 + param1.field_n, param1.field_j + param0);
             for (var12 = var10; var12 <= var11; var12++) {
               var13 = var17.field_f[var12];
               if (~var12 == ~var10) {
-                stackIn_14_0 = var18.a(var8, 0);
+                stackIn_14_0 = var18.characterOffset(var8, 0);
               } else {
                 stackIn_14_0 = var13.field_f[0];
               }
@@ -334,12 +334,12 @@ class jm implements WidgetPainter, WidgetTextLayout {
                   stackIn_19_0 = var13.field_f[var13.field_f.length - 1];
                 }
               } else {
-                stackIn_19_0 = var18.a(var9, param3 ^ 6600);
+                stackIn_19_0 = var18.characterOffset(var9, param3 ^ 6600);
               }
               var15 = stackIn_19_0;
               MusicCrossfadeStream.field_n.a(var13.field_e, var13.field_g + param1.field_i + this.field_f + (param0 + param1.field_j), this.field_e, -var14 + var15, this.field_e >>> 24, param3 - 6599, this.a(param2, param3 + 2693, var14, param1));
             }
-            oo.c(param3 - 22005);
+            oo.popClipState(param3 - 22005);
             return;
           }
           return;
@@ -385,8 +385,8 @@ class jm implements WidgetPainter, WidgetTextLayout {
     }
 
     public final void a(int param0, int param1, int param2, int param3, UiComponent param4) {
-        kh var13 = null;
-        kh var14 = null;
+        TextLayout var13 = null;
+        TextLayout var14 = null;
         int var7 = 0;
         vd var8 = null;
         int var9 = 0;
@@ -400,15 +400,15 @@ class jm implements WidgetPainter, WidgetTextLayout {
           if (param4.isFocused(-2116)) {
             var13 = this.a(param4, -128);
             var14 = var13;
-            var7 = var14.a((byte) -109, param3);
+            var7 = var14.lineForCharacter((byte) -109, param3);
             var8 = var13.field_f[var7];
-            var9 = var14.a(param3, 0);
+            var9 = var14.characterOffset(param3, 0);
             var10 = this.a(param2, 9293, var9, param4);
             var11 = this.a(param1, -13372, param4) + Math.max(0, var8.field_g);
             var12 = this.a(param1, -13372, param4) + Math.min(this.a(param4, false), Math.min(var8.field_e, var14.field_f.length > 1 + var7 ? var13.field_f[1 + var7].field_g : var8.field_e));
             da.clipToRectangle(param4.field_n + param2 + param4.field_v, param4.field_k + param4.field_j + param1, 116, param2 + param4.field_n, param1 + param4.field_j);
             MusicCrossfadeStream.field_n.a(var10, var10, var12, this.field_o, var11, (byte) 102);
-            oo.c(-15405);
+            oo.popClipState(-15405);
           }
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "jm.U(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
@@ -448,7 +448,7 @@ class jm implements WidgetPainter, WidgetTextLayout {
         try {
           this.a(param1, -35);
           if (param5 == 2454) {
-            stackIn_4_0 = param1.field_s.a(-this.a(param4, -13372, param1) + param2, -this.a(param1, (byte) -105, param0) + param3, true);
+            stackIn_4_0 = param1.field_s.characterAt(-this.a(param4, -13372, param1) + param2, -this.a(param1, (byte) -105, param0) + param3, true);
             return stackIn_4_0;
           }
           stackIn_2_0 = -110;
@@ -545,7 +545,7 @@ class jm implements WidgetPainter, WidgetTextLayout {
         try {
           this.a(param1, -123);
           var3_int = -79 / ((76 - param0) / 39);
-          stackIn_1_0 = param1.field_s.b((byte) 71) + this.field_m + this.field_l;
+          stackIn_1_0 = param1.field_s.maxLineWidth((byte) 71) + this.field_m + this.field_l;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -580,7 +580,7 @@ class jm implements WidgetPainter, WidgetTextLayout {
         var7 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           if (null == param1.field_s) {
-            param1.field_s = (kh) ((Object) new re());
+            param1.field_s = (TextLayout) ((Object) new re());
           }
           var3_int = this.a(param1, (byte) 71);
           var4 = this.a(param1, false);
@@ -691,7 +691,7 @@ class jm implements WidgetPainter, WidgetTextLayout {
               this.field_g.drawText(this.a(false, param4), this.a(param6, 9293, param0, param4), var11 + this.a(param5, param3, (byte) 120, param4), param2, param7);
             }
           }
-          oo.c(param1 - 38439);
+          oo.popClipState(param1 - 38439);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -707,10 +707,10 @@ class jm implements WidgetPainter, WidgetTextLayout {
         }
     }
 
-    public final kh a(UiComponent param0, int param1) {
+    public final TextLayout a(UiComponent param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
-        kh stackIn_7_0 = null;
+        TextLayout stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -718,7 +718,7 @@ class jm implements WidgetPainter, WidgetTextLayout {
         try {
           var3_int = 58 % ((-83 - param1) / 35);
           if (param0.field_s == null) {
-            param0.field_s = (kh) ((Object) new re());
+            param0.field_s = (TextLayout) ((Object) new re());
           }
           if (this.field_n) {
             ((re) (param0.field_s)).a((byte) 119, this.field_g, this.a(param0, false), this.field_h, this.field_i, this.field_a, this.a(false, param0), this.a(param0, (byte) -62));
@@ -752,7 +752,7 @@ class jm implements WidgetPainter, WidgetTextLayout {
         try {
           this.a(param0, 6);
           if (param1 == 1) {
-            stackIn_4_0 = param0.field_s.a((byte) -54) + (this.field_f + this.field_d);
+            stackIn_4_0 = param0.field_s.height((byte) -54) + (this.field_f + this.field_d);
             return stackIn_4_0;
           }
           stackIn_2_0 = -42;

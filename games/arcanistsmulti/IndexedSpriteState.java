@@ -19,19 +19,19 @@ abstract class IndexedSpriteState {
         int var1Lifetime1;
         if (!param0) {
           if (224 <= si.field_l) {
-            mf.a(256, 21298);
+            mf.setSoundEffectVolume(256, 21298);
           } else {
             var1 = si.field_l % 32;
-            mf.a(si.field_l + 32 - var1, 21298);
+            mf.setSoundEffectVolume(si.field_l + 32 - var1, 21298);
           }
           return;
         }
         field_b = (String) null;
         if (224 <= si.field_l) {
-          mf.a(256, 21298);
+          mf.setSoundEffectVolume(256, 21298);
         } else {
           var1Lifetime1 = si.field_l % 32;
-          mf.a(si.field_l + 32 - var1Lifetime1, 21298);
+          mf.setSoundEffectVolume(si.field_l + 32 - var1Lifetime1, 21298);
         }
     }
 

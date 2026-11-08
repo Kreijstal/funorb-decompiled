@@ -239,10 +239,10 @@ final class ho {
         }
         AlternateUsernameCredentials.c((byte) 13);
         db.field_a = null;
-        gb.a(14);
+        SecondaryNodeDeque.a(14);
     }
 
-    final static ho a(byte param0, String[] param1) {
+    final static ho createWithLines(byte param0, String[] param1) {
         ho var2 = null;
         RuntimeException var2_ref = null;
         ho stackIn_2_0 = null;

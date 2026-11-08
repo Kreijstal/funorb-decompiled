@@ -198,7 +198,7 @@ final class sn extends UiContainer implements ro, ButtonListener {
           }
           var4 = var3.getValidationState(param0 - 392);
           if (param0 == 315) {
-            stackIn_10_0 = (var4 == nn.field_s);
+            stackIn_10_0 = (var4 == CacheEntry.field_s);
             return stackIn_10_0;
           }
           return true;
@@ -227,7 +227,7 @@ final class sn extends UiContainer implements ro, ButtonListener {
         this.field_D.a(new NameValidator(this.field_D), (byte) 69);
         this.field_O.field_B = false;
         this.field_O.field_r = (WidgetPainter) ((Object) new mm());
-        this.field_I.field_r = (WidgetPainter) ((Object) new gm());
+        this.field_I.field_r = (WidgetPainter) ((Object) new LinkButtonPainter());
         this.field_D.field_r = (WidgetPainter) ((Object) new ib(10000536));
         int var3 = 20;
         int var4 = 4;

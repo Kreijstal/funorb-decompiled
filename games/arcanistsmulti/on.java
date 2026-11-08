@@ -252,7 +252,7 @@ final class on {
                 }
                 var2 = MusicPatch.a("mu_chat_lobby", (byte) -45);
                 if (var2 != null) {
-                  lj.field_p = sc.a((byte) 92, var2);
+                  NanoFrameClock.field_p = sc.a((byte) 92, var2);
                 }
                 var2 = MusicPatch.a("mu_chat_public", (byte) -45);
                 if (null != var2) {
@@ -292,7 +292,7 @@ final class on {
                 }
                 var2 = MusicPatch.a("mu_x_lost_con", (byte) -45);
                 if (var2 != null) {
-                  gm.field_n = sc.a((byte) 127, var2);
+                  LinkButtonPainter.field_n = sc.a((byte) 127, var2);
                 }
                 var2 = MusicPatch.a("mu_x_cannot_join_full", (byte) -45);
                 if (null != var2) {
@@ -376,7 +376,7 @@ final class on {
                 }
                 var2 = MusicPatch.a("mu_lobby_location", (byte) -45);
                 if (null != var2) {
-                  hc.field_d = sc.a((byte) 98, var2);
+                  ConditionalTextValue.field_d = sc.a((byte) 98, var2);
                 }
                 var2 = MusicPatch.a("mu_gamelist_all_games", (byte) -45);
                 if (var2 != null) {
@@ -404,7 +404,7 @@ final class on {
                 }
                 var2 = MusicPatch.a("mu_gamelist_elapsed_time", (byte) -45);
                 if (var2 != null) {
-                  kh.field_a = sc.a((byte) 122, var2);
+                  TextLayout.field_a = sc.a((byte) 122, var2);
                 }
                 var2 = MusicPatch.a("mu_play_rated", (byte) -45);
                 if (null != var2) {
@@ -432,7 +432,7 @@ final class on {
                 }
                 var2 = MusicPatch.a("mu_options_allow_spectate", (byte) -45);
                 if (null != var2) {
-                  gb.field_b = sc.a((byte) 101, var2);
+                  SecondaryNodeDeque.field_b = sc.a((byte) 101, var2);
                 }
                 var2 = MusicPatch.a("mu_options_ratedgametype", (byte) -45);
                 if (var2 != null) {
@@ -444,7 +444,7 @@ final class on {
                 }
                 var2 = MusicPatch.a("no", (byte) -45);
                 if (null != var2) {
-                  nh.field_B = sc.a((byte) 95, var2);
+                  StrongCacheEntry.field_B = sc.a((byte) 95, var2);
                 }
                 var2 = MusicPatch.a("mu_invite_players", (byte) -45);
                 if (var2 != null) {
@@ -520,7 +520,7 @@ final class on {
                 }
                 var2 = MusicPatch.a("mu_gameopt_invite_x_to_game", (byte) -45);
                 if (null != var2) {
-                  nh.field_x = sc.a((byte) 123, var2);
+                  StrongCacheEntry.field_x = sc.a((byte) 123, var2);
                 }
                 var2 = MusicPatch.a("report_x_for_abuse", (byte) -45);
                 if (null != var2) {
@@ -556,7 +556,7 @@ final class on {
                 }
                 var2 = MusicPatch.a("mu_chat_game_friends_only", (byte) -45);
                 if (null != var2) {
-                  go.field_a = sc.a((byte) 115, var2);
+                  SocketConnector.field_a = sc.a((byte) 115, var2);
                 }
                 var2 = MusicPatch.a("mu_chat_game_friends", (byte) -45);
                 if (null != var2) {
@@ -580,7 +580,7 @@ final class on {
                 }
                 var2 = MusicPatch.a("mu_chat_invisible_and_silent_mode", (byte) -45);
                 if (null != var2) {
-                  ol.field_c = sc.a((byte) 121, var2);
+                  CameraFollowTarget.field_c = sc.a((byte) 121, var2);
                 }
                 var2 = MusicPatch.a("you_have_been_removed_from_xs_game", (byte) -45);
                 if (var2 != null) {
@@ -600,7 +600,7 @@ final class on {
                 }
                 var2 = MusicPatch.a("unrated_game", (byte) -45);
                 if (var2 != null) {
-                  n.field_h = sc.a((byte) 91, var2);
+                  IntKeyLookup.field_h = sc.a((byte) 91, var2);
                 }
                 var2 = MusicPatch.a("rated_game_tips", (byte) -45);
                 if (null != var2) {
@@ -668,7 +668,7 @@ final class on {
                 }
                 var2 = MusicPatch.a("message_lobby", (byte) -45);
                 if (null != var2) {
-                  jd.field_i = sc.a((byte) 103, var2);
+                  IsaacRandom.field_i = sc.a((byte) 103, var2);
                 }
                 var2 = MusicPatch.a("quickchat_lobby", (byte) -45);
                 if (var2 != null) {
@@ -712,11 +712,11 @@ final class on {
                 }
                 var2 = MusicPatch.a("status_concluded", (byte) -45);
                 if (var2 != null) {
-                  nh.field_y = sc.a((byte) 106, var2);
+                  StrongCacheEntry.field_y = sc.a((byte) 106, var2);
                 }
                 var2 = MusicPatch.a("status_spectate", (byte) -45);
                 if (null != var2) {
-                  ol.field_b = sc.a((byte) 93, var2);
+                  CameraFollowTarget.field_b = sc.a((byte) 93, var2);
                 }
                 var2 = MusicPatch.a("status_playing", (byte) -45);
                 if (null != var2) {
@@ -772,7 +772,7 @@ final class on {
                 }
                 var2 = MusicPatch.a("spectate_xs_game", (byte) -45);
                 if (var2 != null) {
-                  gm.field_i = sc.a((byte) 93, var2);
+                  LinkButtonPainter.field_i = sc.a((byte) 93, var2);
                 }
                 var2 = MusicPatch.a("hide_players_in_xs_game", (byte) -45);
                 if (null != var2) {
@@ -808,7 +808,7 @@ final class on {
                 }
                 var2 = MusicPatch.a("multiconst_similar_rating", (byte) -45);
                 if (var2 != null) {
-                  lj.field_m = sc.a((byte) 110, var2);
+                  NanoFrameClock.field_m = sc.a((byte) 110, var2);
                 }
                 var2 = MusicPatch.a("multiconst_open", (byte) -45);
                 if (null != var2) {
@@ -888,7 +888,7 @@ final class on {
                 }
                 var2 = MusicPatch.a("runescapeclan", (byte) -45);
                 if (var2 != null) {
-                  n.field_c = sc.a((byte) 121, var2);
+                  IntKeyLookup.field_c = sc.a((byte) 121, var2);
                 }
                 var2 = MusicPatch.a("rated_membersonly", (byte) -45);
                 if (null != var2) {
@@ -908,7 +908,7 @@ final class on {
                 }
                 var2 = MusicPatch.a("gameopt_needrating", (byte) -45);
                 if (null != var2) {
-                  hf.field_m = sc.a((byte) 94, var2);
+                  MembershipOfferScreen.field_m = sc.a((byte) 94, var2);
                 }
                 var2 = MusicPatch.a("gameopt_unratedonly", (byte) -45);
                 if (var2 != null) {
@@ -1062,7 +1062,7 @@ final class on {
                 }
                 var2 = MusicPatch.a("rule_0_1", (byte) -45);
                 if (null != var2) {
-                  pa.field_c = sc.a((byte) 113, var2);
+                  DiskCacheWorker.field_c = sc.a((byte) 113, var2);
                 }
                 var2 = MusicPatch.a("rule_0_2", (byte) -45);
                 if (null != var2) {
@@ -1538,7 +1538,7 @@ final class on {
                 }
                 var2 = MusicPatch.a("create_age", (byte) -45);
                 if (null != var2) {
-                  ka.field_n = sc.a((byte) 116, var2);
+                  ProxySocketConnector.field_n = sc.a((byte) 116, var2);
                 }
                 var2 = MusicPatch.a("create_u13_email", (byte) -45);
                 if (var2 != null) {
@@ -1590,7 +1590,7 @@ final class on {
                 }
                 var2 = MusicPatch.a("login_username_email", (byte) -45);
                 if (null != var2) {
-                  jl.field_b = sc.a((byte) 121, var2);
+                  GrowableIntList.field_b = sc.a((byte) 121, var2);
                 }
                 var2 = MusicPatch.a("login_username", (byte) -45);
                 if (var2 != null) {
@@ -1778,7 +1778,7 @@ final class on {
                 }
                 var2 = MusicPatch.a("create_emailvalid", (byte) -45);
                 if (var2 != null) {
-                  nh.field_v = sc.a((byte) 125, var2);
+                  StrongCacheEntry.field_v = sc.a((byte) 125, var2);
                 }
                 var2 = MusicPatch.a("create_account_success", (byte) -45);
                 if (var2 != null) {
@@ -1822,7 +1822,7 @@ final class on {
                 }
                 var2 = MusicPatch.a("ignorelistfull", (byte) -45);
                 if (null != var2) {
-                  nh.field_u = sc.a((byte) 91, var2);
+                  StrongCacheEntry.field_u = sc.a((byte) 91, var2);
                 }
                 var2 = MusicPatch.a("ignorelistdupe", (byte) -45);
                 if (var2 != null) {
@@ -1896,7 +1896,7 @@ final class on {
                 }
                 var2 = MusicPatch.a("waitingfor_music", (byte) -45);
                 if (var2 != null) {
-                  kh.field_e = sc.a((byte) 113, var2);
+                  TextLayout.field_e = sc.a((byte) 113, var2);
                 }
                 var2 = MusicPatch.a("waitingfor_instruments", (byte) -45);
                 if (var2 != null) {
@@ -2100,7 +2100,7 @@ final class on {
                 }
                 var2 = MusicPatch.a("startgame", (byte) -45);
                 if (null != var2) {
-                  nn.field_m = sc.a((byte) 90, var2);
+                  CacheEntry.field_m = sc.a((byte) 90, var2);
                 }
                 var2 = MusicPatch.a("newgame", (byte) -45);
                 if (null != var2) {
@@ -2208,7 +2208,7 @@ final class on {
                 }
                 var2 = MusicPatch.a("returntolobby", (byte) -45);
                 if (null != var2) {
-                  gb.field_a = sc.a((byte) 100, var2);
+                  SecondaryNodeDeque.field_a = sc.a((byte) 100, var2);
                 }
                 var2 = MusicPatch.a("cont", (byte) -45);
                 if (null != var2) {
@@ -2504,7 +2504,7 @@ final class on {
                 }
                 var2 = MusicPatch.a("mp_youofferdraw", (byte) -45);
                 if (null != var2) {
-                  nn.field_t = sc.a((byte) 98, var2);
+                  CacheEntry.field_t = sc.a((byte) 98, var2);
                 }
                 var2 = MusicPatch.a("mp_youresigned", (byte) -45);
                 if (var2 != null) {
@@ -2572,7 +2572,7 @@ final class on {
                 }
                 var2 = MusicPatch.a("mp_showchat_unread2", (byte) -45);
                 if (var2 != null) {
-                  ig.field_d = sc.a((byte) 94, var2);
+                  WeightedLruCache.field_d = sc.a((byte) 94, var2);
                 }
                 var2 = MusicPatch.a("click_to_quickchat", (byte) -45);
                 if (null != var2) {
@@ -2640,7 +2640,7 @@ final class on {
                 }
                 var2 = MusicPatch.a("keychar_the_character_under_questionmark", (byte) -45);
                 if (var2 != null) {
-                  se.field_E = hm.a(var2[0], 46);
+                  se.field_E = hm.decodeCp1252Char(var2[0], 46);
                 }
                 var2 = MusicPatch.a("rating_noratings", (byte) -45);
                 if (null != var2) {
@@ -2946,7 +2946,7 @@ final class on {
                 }
                 var2 = MusicPatch.a("createtouse", (byte) -45);
                 if (var2 != null) {
-                  hg.field_c = sc.a((byte) 88, var2);
+                  FrameClock.field_c = sc.a((byte) 88, var2);
                 }
                 if (param0 != -84) {
                   finished = true; return;
@@ -3061,31 +3061,31 @@ final class on {
                 }
                 var2 = MusicPatch.a("mustlogin_alternate,1", (byte) -45);
                 if (null != var2) {
-                  jl.field_g[1] = sc.a((byte) 86, var2);
+                  GrowableIntList.field_g[1] = sc.a((byte) 86, var2);
                 }
                 var2 = MusicPatch.a("mustlogin_alternate,2", (byte) -45);
                 if (var2 != null) {
-                  jl.field_g[2] = sc.a((byte) 99, var2);
+                  GrowableIntList.field_g[2] = sc.a((byte) 99, var2);
                 }
                 var2 = MusicPatch.a("mustlogin_alternate,3", (byte) -45);
                 if (null != var2) {
-                  jl.field_g[3] = sc.a((byte) 91, var2);
+                  GrowableIntList.field_g[3] = sc.a((byte) 91, var2);
                 }
                 var2 = MusicPatch.a("mustlogin_alternate,4", (byte) -45);
                 if (null != var2) {
-                  jl.field_g[4] = sc.a((byte) 89, var2);
+                  GrowableIntList.field_g[4] = sc.a((byte) 89, var2);
                 }
                 var2 = MusicPatch.a("mustlogin_alternate,5", (byte) -45);
                 if (null != var2) {
-                  jl.field_g[5] = sc.a((byte) 112, var2);
+                  GrowableIntList.field_g[5] = sc.a((byte) 112, var2);
                 }
                 var2 = MusicPatch.a("mustlogin_alternate,6", (byte) -45);
                 if (null != var2) {
-                  jl.field_g[6] = sc.a((byte) 98, var2);
+                  GrowableIntList.field_g[6] = sc.a((byte) 98, var2);
                 }
                 var2 = MusicPatch.a("mustlogin_alternate,7", (byte) -45);
                 if (null != var2) {
-                  jl.field_g[7] = sc.a((byte) 101, var2);
+                  GrowableIntList.field_g[7] = sc.a((byte) 101, var2);
                 }
                 var2 = MusicPatch.a("subscription_cost_monthly,0", (byte) -45);
                 if (var2 != null) {

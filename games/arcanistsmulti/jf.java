@@ -28,10 +28,10 @@ final class jf implements Iterator {
         try {
           var2_int = 63 / ((64 - param1) / 44);
           param0.unlink(true);
-          var3 = (cg) (gm.field_j.first(12623));
+          var3 = (cg) (LinkButtonPainter.field_j.first(12623));
           while (var3 != null) {
             if (var3.a((byte) 121, param0)) {
-              var3 = (cg) (gm.field_j.next(0));
+              var3 = (cg) (LinkButtonPainter.field_j.next(0));
               continue;
             }
             break;
@@ -40,7 +40,7 @@ final class jf implements Iterator {
             da.insertBefore(var3, 20, param0);
             return;
           }
-          gm.field_j.addLast(param0, -1);
+          LinkButtonPainter.field_j.addLast(param0, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

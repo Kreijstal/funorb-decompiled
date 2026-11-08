@@ -398,7 +398,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
               break;
             }
             if (var4_ref == null) {
-              ka.b(false);
+              ProxySocketConnector.closeActiveConnection(false);
               return;
             }
             var5 = var27.readUnsignedByte((byte) 112);
@@ -494,7 +494,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
               break;
             }
             if (var4 == null) {
-              ka.b(false);
+              ProxySocketConnector.closeActiveConnection(false);
               return;
             }
             stackIn_54_0 = var4;
@@ -502,8 +502,8 @@ class UiContainer extends UiComponent implements UiContainerMarker {
             ((fj) (Object) stackIn_54_0).unlink(stackIn_55_1);
             return;
           }
-          DelegatingCanvas.a((Throwable) null, "HS1: " + nn.g((byte) -25), (byte) 20);
-          ka.b(false);
+          DelegatingCanvas.a((Throwable) null, "HS1: " + CacheEntry.g((byte) -25), (byte) 20);
+          ProxySocketConnector.closeActiveConnection(false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

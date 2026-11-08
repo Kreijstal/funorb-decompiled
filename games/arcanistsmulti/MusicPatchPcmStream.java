@@ -183,10 +183,10 @@ final class MusicPatchPcmStream extends PcmStream {
 
     final static boolean c(int param0) {
         if (param0 == 0) {
-          return null == ka.field_m ? ie.field_Pb : true;
+          return null == ProxySocketConnector.field_m ? ie.field_Pb : true;
         }
         MusicPatchPcmStream.c(-43);
-        return null == ka.field_m ? ie.field_Pb : true;
+        return null == ProxySocketConnector.field_m ? ie.field_Pb : true;
     }
 
     final PcmStream firstSubStream() {

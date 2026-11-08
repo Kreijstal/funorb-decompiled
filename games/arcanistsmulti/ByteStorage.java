@@ -134,10 +134,10 @@ abstract class ByteStorage {
     }
 
     final static void a(boolean param0, byte param1) {
-        n.field_g.a(param0, true);
+        IntKeyLookup.field_g.a(param0, true);
         cn var2 = ln.field_U;
         if (var2 != null) {
-          var2.drawLayersAndTooltip(n.field_g.field_V, true, n.field_g.field_nb);
+          var2.drawLayersAndTooltip(IntKeyLookup.field_g.field_V, true, IntKeyLookup.field_g.field_nb);
           if (param1 > -11) {
             ByteStorage.a(97, -65);
             return;

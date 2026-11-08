@@ -65,7 +65,7 @@ final class ValidationState {
         ce var1 = (ce) (lh.field_c.first(12623));
         int var2 = -104 % ((-41 - param0) / 40);
         if (var1 == null) {
-          ka.b(false);
+          ProxySocketConnector.closeActiveConnection(false);
           return;
         }
         CipherPacketBuffer var3 = UiContainer.field_z;
@@ -135,7 +135,7 @@ final class ValidationState {
             return stackIn_15_0;
           }
           if (pc.field_b >= 100) {
-            stackIn_19_0 = nh.field_u;
+            stackIn_19_0 = StrongCacheEntry.field_u;
             return stackIn_19_0;
           }
           if (ArrayWidgetContainer.a(param2, 1)) {
@@ -230,7 +230,7 @@ final class ValidationState {
         stackIn_18_0 = fn.field_e;
         stackIn_19_1 = (param0) && (!param1) && (!IntrusiveNode.field_d) && (null == DirectByteStorage.field_f) && (null == om.field_x);
         ((kc) (Object) stackIn_18_0).b(stackIn_19_1, (byte) 121);
-        stackIn_23_0 = gm.field_h;
+        stackIn_23_0 = LinkButtonPainter.field_h;
         stackIn_24_1 = (param0) && (!param1) && (IntrusiveNode.field_d);
         ((kc) (Object) stackIn_23_0).b(stackIn_24_1, (byte) 115);
         aj.field_h.field_c.h((byte) 100);
@@ -239,7 +239,7 @@ final class ValidationState {
         }
         boolean decompiledFrameRemainder0 = true;
         if (of.field_a.field_U != 0) {
-          if (!gm.field_c &&
+          if (!LinkButtonPainter.field_c &&
             0 >= ah.field_c) {
             if (2 > qf.field_d) {
               me.field_C = true;
@@ -256,7 +256,7 @@ final class ValidationState {
             ib.a(param3, 0);
           }
         }
-        if (0 != jl.field_a.field_U) {
+        if (0 != GrowableIntList.field_a.field_U) {
           if (ao.field_h.length == 1 &&
             SocketJs5Transport.field_t != ao.field_h[0]) {
             SocketJs5Transport.field_t = ao.field_h[0];

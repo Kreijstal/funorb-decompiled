@@ -22,7 +22,7 @@ final class dd {
         String stackIn_34_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (ko.a(63, param1)) {
+          if (ko.hasDisallowedCharacter(63, param1)) {
             return false;
           }
           if (LoginPanel.b(-12055, param1)) {
@@ -34,7 +34,7 @@ final class dd {
           if (param2.length() == 0) {
             return true;
           }
-          if (hm.a(param1, param2, param0 - 100)) {
+          if (hm.containsNameVariant(param1, param2, param0 - 100)) {
             return false;
           }
           if (param0 != 99) {

@@ -67,7 +67,7 @@ final class mf {
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void setSoundEffectVolume(int param0, int param1) {
         fk var2 = null;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;

@@ -24,7 +24,7 @@ final class tc extends ib {
           if (param0) {
             field_D = (boolean[]) null;
           }
-          stackIn_3_0 = jo.a(0, '*', param1.field_g.length());
+          stackIn_3_0 = jo.repeatCharacter(0, '*', param1.field_g.length());
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -42,7 +42,7 @@ final class tc extends ib {
 
     final static void a(byte param0) {
         h.field_K = new String[aj.field_g];
-        h.field_K[9] = pa.field_c;
+        h.field_K[9] = DiskCacheWorker.field_c;
         h.field_K[20] = ByteStorage.field_b;
         h.field_K[18] = h.field_E;
         h.field_K[19] = ArchiveRequest.field_r;

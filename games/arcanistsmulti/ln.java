@@ -209,7 +209,7 @@ final class ln extends UiContainer implements pj, ButtonListener, ro {
         this.field_H.a(new lo(this.field_H), (byte) 39);
         this.field_C.field_B = false;
         this.field_C.field_r = (WidgetPainter) ((Object) new mm());
-        this.field_O.field_r = (WidgetPainter) ((Object) new gm());
+        this.field_O.field_r = (WidgetPainter) ((Object) new LinkButtonPainter());
         this.field_K.field_r = (WidgetPainter) ((Object) new ib(10000536));
         ib dupTemp$0 = new ib(10000536);
         this.field_D.field_r = (WidgetPainter) ((Object) dupTemp$0);
@@ -226,7 +226,7 @@ final class ln extends UiContainer implements pj, ButtonListener, ro {
         var3 = var3 + this.a(this.field_P, ValidationState.field_a, var3, 170, 126);
         var3 = var3 + (5 + this.a(var3, this.field_E, rm.field_p, 99, 170, le.field_A));
         var3 = var3 + (5 + this.a(var3, this.field_K, bj.field_kb, -67, 170, CredentialKind.field_h));
-        var3 = var3 + this.a(ka.field_n, this.field_H, (byte) -71, 170, var3);
+        var3 = var3 + this.a(ProxySocketConnector.field_n, this.field_H, (byte) -71, 170, var3);
         ke var4 = new ke(46, var3, this.field_v - 90, 25, this.field_F, true, this.field_v - 120, 5, vc.field_e, 11579568, AudioService.field_c);
         this.addChild(-114, var4);
         var3 = var3 + var4.field_k;

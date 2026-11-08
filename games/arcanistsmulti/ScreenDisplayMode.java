@@ -12,7 +12,7 @@ final class ScreenDisplayMode {
     int field_a;
     static co field_h;
 
-    final static int a(jd param0, int param1, byte param2) {
+    final static int a(IsaacRandom param0, int param1, byte param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -28,7 +28,7 @@ final class ScreenDisplayMode {
             throw new IllegalArgumentException();
           }
           if (ScreenDisplayMode.a(-2147483648, param1)) {
-            stackIn_5_0 = (int)((long)param1 * ((long)param0.c((byte) -46) & 4294967295L) >> 32);
+            stackIn_5_0 = (int)((long)param1 * ((long)param0.nextInt((byte) -46) & 4294967295L) >> 32);
             return stackIn_5_0;
           }
           var3_int = -(int)(4294967296L % (long)param1) + -2147483648;
@@ -37,7 +37,7 @@ final class ScreenDisplayMode {
             return stackIn_8_0;
           }
           do {
-            var4 = param0.c((byte) -46);
+            var4 = param0.nextInt((byte) -46);
           } while (var4 >= var3_int);
           stackIn_12_0 = dh.floorMod(var4, true, param1);
           return stackIn_12_0;
@@ -74,8 +74,8 @@ final class ScreenDisplayMode {
         var3.writeByte(8, (byte) -85);
         var3.writeShort(param0, (byte) -93);
         if (param1 >= -92) {
-          jd var4 = (jd) null;
-          ScreenDisplayMode.a((jd) null, 16, (byte) 39);
+          IsaacRandom var4 = (IsaacRandom) null;
+          ScreenDisplayMode.a((IsaacRandom) null, 16, (byte) 39);
           return;
         }
     }

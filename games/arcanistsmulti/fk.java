@@ -35,7 +35,7 @@ final class fk extends IntrusiveNode {
         }
         if (fj.field_j == 10 ||
           !ke.g(-115)) {
-          pa.b((byte) 108);
+          DiskCacheWorker.b((byte) 108);
           fj.field_j = 11;
         }
         ii.field_f = true;
@@ -248,7 +248,7 @@ final class fk extends IntrusiveNode {
           var13 = UiContainer.field_z;
           var2 = var13.readUnsignedByte((byte) 54);
           if (var2 == 0) {
-            var10 = la.b((byte) 12);
+            var10 = la.newEightInts((byte) 12);
             var3 = var10;
             var9 = var10;
             var4 = var9;
@@ -259,7 +259,7 @@ final class fk extends IntrusiveNode {
             }
             var12 = (fe) (i.field_e.first(param0 ^ -12637));
             if (var12 == null) {
-              ka.b(false);
+              ProxySocketConnector.closeActiveConnection(false);
               return;
             }
             var12.field_l = true;
@@ -270,21 +270,21 @@ final class fk extends IntrusiveNode {
           if (var2 == 1) {
             var11 = (cm) (cc.field_e.first(12623));
             if (var11 == null) {
-              ka.b(false);
+              ProxySocketConnector.closeActiveConnection(false);
               return;
             }
             var11.unlink(true);
           } else {
             if (var2 != 2) {
-              DelegatingCanvas.a((Throwable) null, "A1: " + nn.g((byte) -25), (byte) 20);
-              ka.b(false);
+              DelegatingCanvas.a((Throwable) null, "A1: " + CacheEntry.g((byte) -25), (byte) 20);
+              ProxySocketConnector.closeActiveConnection(false);
             } else {
               var14 = (fe) (i.field_e.first(12623));
               if (var14 == null) {
-                ka.b(false);
+                ProxySocketConnector.closeActiveConnection(false);
                 return;
               }
-              var14.field_i = la.b((byte) 12);
+              var14.field_i = la.newEightInts((byte) 12);
               var14.field_l = true;
               var14.unlink(true);
             }
@@ -311,7 +311,7 @@ final class fk extends IntrusiveNode {
           try {
             try {
               var3 = new java.net.URL(param0.getCodeBase(), param2);
-              var3 = nm.a(param0, var3, -31843);
+              var3 = nm.appendSessionParameters(param0, var3, -31843);
               DelegatingCanvas.a(var3.toString(), param0, true, (byte) -109);
               if (param1) {
                 field_i = (String) null;
@@ -361,7 +361,7 @@ final class fk extends IntrusiveNode {
           var4 = IntrusiveNode.field_c.field_Z.wrappedLineCount(param1, 500);
           var5 = 6 + IntrusiveNode.field_c.field_Z.getWrappedWidth(param1, 500);
           var6 = 2 + var4 * ImageProducerRasterBuffer.field_r;
-          var7 = ih.a(var2_int, var5, 12, 246);
+          var7 = ih.clampToScreenX(var2_int, var5, 12, 246);
           var8 = ql.a(param0 + 10, 20, var6, var3);
           SoftwareRasterizer.drawRectangle(var7, var8, var5, var6, 0);
           SoftwareRasterizer.fillRectangle(var7 + 1, 1 + var8, -2 + var5, -2 + var6, 16777088);

@@ -13,7 +13,7 @@ final class ec {
     static Sprite[] field_i;
 
     final void draw(int param0, int param1, int param2, int param3, int param4) {
-        gl.a(param4, param0, -27327, param3, this.field_f, param1);
+        gl.drawNineSliceFrame(param4, param0, -27327, param3, this.field_f, param1);
         if (param2 >= -85) {
           field_d = (kc) null;
         }

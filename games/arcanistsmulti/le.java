@@ -35,7 +35,7 @@ final class le {
     static int field_q;
     private int[] field_l;
     private boolean field_U;
-    ol field_m;
+    CameraFollowTarget field_m;
     int field_bb;
     private int field_R;
     private int field_Q;
@@ -133,13 +133,13 @@ final class le {
             IntrusiveDeque.field_c = var4_int + this.field_V.field_y;
             this.field_n = 0;
           }
-          if (ol.field_g < param1) {
+          if (CameraFollowTarget.field_g < param1) {
             this.field_S = 0;
-            ol.field_g = param1;
+            CameraFollowTarget.field_g = param1;
           }
-          if (param0 < ol.field_g) {
+          if (param0 < CameraFollowTarget.field_g) {
             this.field_S = 0;
-            ol.field_g = param0;
+            CameraFollowTarget.field_g = param0;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -190,13 +190,13 @@ final class le {
           if (null != this.field_m.field_h) {
             if (this.field_m.field_h.h(param0 - 17747)) {
               IntrusiveDeque.field_c = IntrusiveDeque.field_c * 7 + this.field_m.field_h.c(param0 - 17583) >> 3;
-              ol.field_g = 7 * ol.field_g + this.field_m.field_h.e(52) >> 3;
+              CameraFollowTarget.field_g = 7 * CameraFollowTarget.field_g + this.field_m.field_h.e(52) >> 3;
             }
           } else {
             if (this.field_m.field_d != null && (this.field_m.field_d.f(true) ||
               this.field_m.field_d.y(param0 - 37) == this.field_bb)) {
               IntrusiveDeque.field_c = IntrusiveDeque.field_c * 7 + this.field_m.field_d.f(64) >> 3;
-              ol.field_g = 7 * ol.field_g + this.field_m.field_d.i((byte) -53) >> 3;
+              CameraFollowTarget.field_g = 7 * CameraFollowTarget.field_g + this.field_m.field_d.i((byte) -53) >> 3;
             }
           }
           if (param0 != 17608) {
@@ -223,9 +223,9 @@ final class le {
             return;
           }
           if (var2 != null) {
-            this.field_m.a(-110, var2);
+            this.field_m.followUnit(-110, var2);
           } else {
-            this.field_m.a(0);
+            this.field_m.clearTarget(0);
           }
           this.field_s = -1000;
           this.field_t = false;
@@ -255,7 +255,7 @@ final class le {
         int var8Lifetime1;
         var9 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          var5_int = n.field_g.field_nb;
+          var5_int = IntKeyLookup.field_g.field_nb;
           var6 = var5_int / 2 + this.field_V.field_H - param0;
           for (var7 = 0; var7 < EmailLoginCredentials.field_f; var7++) {
             var8 = (int)Math.abs(18.0 * Math.cos(3.141592653589793 * (double)(param3 + (var7 + ge.field_r * 4)) / 64.0));
@@ -603,16 +603,16 @@ final class le {
             var8_int = 15597806;
           }
           if (null != this.field_V.m((byte) 69)) {
-            this.a(IntrusiveDeque.field_c, (byte) -121, var8_int, ol.field_g);
-            this.b(IntrusiveDeque.field_c, -98, ol.field_g);
-            this.c(ol.field_g, 0, IntrusiveDeque.field_c);
-            this.a(-8, IntrusiveDeque.field_c, ol.field_g);
-            var9_int = n.field_g.field_nb;
+            this.a(IntrusiveDeque.field_c, (byte) -121, var8_int, CameraFollowTarget.field_g);
+            this.b(IntrusiveDeque.field_c, -98, CameraFollowTarget.field_g);
+            this.c(CameraFollowTarget.field_g, 0, IntrusiveDeque.field_c);
+            this.a(-8, IntrusiveDeque.field_c, CameraFollowTarget.field_g);
+            var9_int = IntKeyLookup.field_g.field_nb;
             var16 = this.field_V.e(param5 - 184);
             if (var16 != null) {
               var11_ref = (mi) (var16.first(12623));
               while (var11_ref != null) {
-                ((mi) (var11_ref)).a(-ol.field_g + (var9_int >> 1), 41, -IntrusiveDeque.field_c + (EmailLoginCredentials.field_f >> 1));
+                ((mi) (var11_ref)).a(-CameraFollowTarget.field_g + (var9_int >> 1), 41, -IntrusiveDeque.field_c + (EmailLoginCredentials.field_f >> 1));
                 var11_ref = (mi) (var16.next(0));
               }
             }
@@ -621,11 +621,11 @@ final class le {
               0 == (SpriteState.field_v & 16)) {
               var11_refLifetime3 = (mi) (var17.first(param5 + 12527));
               while (var11_refLifetime3 != null) {
-                ((mi) (var11_refLifetime3)).a((var9_int >> 1) - ol.field_g, -108, -IntrusiveDeque.field_c + (EmailLoginCredentials.field_f >> 1));
+                ((mi) (var11_refLifetime3)).a((var9_int >> 1) - CameraFollowTarget.field_g, -108, -IntrusiveDeque.field_c + (EmailLoginCredentials.field_f >> 1));
                 var11_refLifetime3 = (mi) (var17.next(0));
               }
             }
-            this.a(ol.field_g, var8_int, 12224, IntrusiveDeque.field_c);
+            this.a(CameraFollowTarget.field_g, var8_int, 12224, IntrusiveDeque.field_c);
             this.b(-113, param0);
           }
           if (param3 &&
@@ -680,7 +680,7 @@ final class le {
             }
           }
           if (!this.field_V.n(param5 ^ 100)) {
-            var9_intLifetime2 = -64 + n.field_g.field_nb - 10;
+            var9_intLifetime2 = -64 + IntKeyLookup.field_g.field_nb - 10;
             for (var10Lifetime1 = 0; this.field_V.s(0) > var10Lifetime1; var10Lifetime1++) {
               regionExit1: {
                 if (this.field_I == var10Lifetime1) {
@@ -698,7 +698,7 @@ final class le {
                       if ((this.field_D & 1 << var10Lifetime1) == 0) {
                         break regionExit1;
                       }
-                      var11_refLifetime2 = nn.field_t;
+                      var11_refLifetime2 = CacheEntry.field_t;
                     } else {
                       var11_refLifetime2 = null;
                     }
@@ -856,8 +856,8 @@ final class le {
             this.field_g = true;
           }
           if (var2_int != 0) {
-            var3 = n.field_g.field_nb;
-            var4 = ol.field_g + (me.field_I - (var3 >> 1));
+            var3 = IntKeyLookup.field_g.field_nb;
+            var4 = CameraFollowTarget.field_g + (me.field_I - (var3 >> 1));
             if (this.field_u > 0) {
               var4 = this.field_c;
             }
@@ -904,7 +904,7 @@ final class le {
                 ClientException.a(stackIn_71_0, stackIn_72_1, (byte) 11, 158, this.field_r, 1, this.field_bb, var4, fieldTemp$0);
               }
               var5.c(0, 2);
-              this.field_m.a(-119, var5);
+              this.field_m.followUnit(-119, var5);
               ti.field_N = -1;
               eb.field_b = null;
             }
@@ -926,7 +926,7 @@ final class le {
                 ClientException.a(stackIn_84_0, stackIn_85_1, (byte) 11, 158, this.field_r, 1, this.field_bb, var4, fieldTemp$1);
               }
               var5.c(param0 - 1, 3);
-              this.field_m.a(-90, var5);
+              this.field_m.followUnit(-90, var5);
               ti.field_N = -1;
               eb.field_b = null;
             }
@@ -1132,7 +1132,7 @@ final class le {
           this.field_X = true;
           this.field_g = true;
           IntrusiveNodeHashTable.field_f = null;
-          var3_int = n.field_g.field_nb;
+          var3_int = IntKeyLookup.field_g.field_nb;
           var4 = 0;
           if (this.field_I == this.field_V.d(false)) {
             var5_ref_ml = this.field_V.a(this.field_bb, true);
@@ -1221,7 +1221,7 @@ final class le {
                 }
               }
               if (this.field_V.field_X[this.field_I] < var9) {
-                if (hc.field_f) {
+                if (ConditionalTextValue.field_f) {
                   IntrusiveNodeHashTable.field_f = vm.field_d[this.field_V.field_x[this.field_I] + 128 + 12];
                   if (this.field_V.field_x[this.field_I] == 8) {
                     IntrusiveNodeHashTable.field_f = vm.field_d[156];
@@ -1232,13 +1232,13 @@ final class le {
                 }
                 if (this.field_V.a(this.field_V.d(false), true).m(-20357) <= 20) {
                   var8 = 0;
-                  if (hc.field_f) {
+                  if (ConditionalTextValue.field_f) {
                     IntrusiveNodeHashTable.field_f = IntrusiveNodeHashTable.field_f + hm.field_b;
                   }
                 }
               } else {
                 var8 = 0;
-                if (hc.field_f) {
+                if (ConditionalTextValue.field_f) {
                   IntrusiveNodeHashTable.field_f = vm.field_d[128 + (this.field_V.field_x[this.field_I] + 12)] + rc.field_i;
                   if (8 == this.field_V.field_x[this.field_I]) {
                     IntrusiveNodeHashTable.field_f = vm.field_d[156] + rc.field_i;
@@ -1376,7 +1376,7 @@ final class le {
                     var10Lifetime1 = am.field_a;
                   }
                 } else {
-                  var10Lifetime1 = tj.a(120, new String[]{Integer.toString(vh.field_t)}, ig.field_d);
+                  var10Lifetime1 = tj.a(120, new String[]{Integer.toString(vh.field_t)}, WeightedLruCache.field_d);
                 }
               }
               mi.field_B.drawText(var10Lifetime1, 5 + var6, var7Lifetime2 - 1, 0, 0);
@@ -1508,7 +1508,7 @@ final class le {
                 var4 = this.field_V.field_H >> this.field_K;
               }
             } else {
-              var5 = n.field_g.field_nb;
+              var5 = IntKeyLookup.field_g.field_nb;
             }
             var6 = 5;
             var7 = 1;
@@ -1523,7 +1523,7 @@ final class le {
             SoftwareRasterizer.setClip(EmailLoginCredentials.field_f - (var3 + var6), -var4 + (var5 - var6), -var6 + EmailLoginCredentials.field_f, -var6 + var5);
             SoftwareRasterizer.fillVerticalGradient(-var6 - var3 + EmailLoginCredentials.field_f, var5 - (var4 + var6), var3, var4, GzipDecoder.field_a, cg.field_Lb);
             this.field_V.m((byte) 69).drawScaled(-var6 + (-var3 + EmailLoginCredentials.field_f), -var4 + var5 - var6, var3, var4);
-            SoftwareRasterizer.drawRectangleAlpha(EmailLoginCredentials.field_f - var3 - (var6 - (-(EmailLoginCredentials.field_f >> 1) + IntrusiveDeque.field_c >> this.field_K)), (ol.field_g - (var5 >> 1) >> this.field_K) + var5 + (-var4 - var6), EmailLoginCredentials.field_f >> this.field_K, var5 >> this.field_K, 16777215, 128);
+            SoftwareRasterizer.drawRectangleAlpha(EmailLoginCredentials.field_f - var3 - (var6 - (-(EmailLoginCredentials.field_f >> 1) + IntrusiveDeque.field_c >> this.field_K)), (CameraFollowTarget.field_g - (var5 >> 1) >> this.field_K) + var5 + (-var4 - var6), EmailLoginCredentials.field_f >> this.field_K, var5 >> this.field_K, 16777215, 128);
             var8 = this.field_V.g((byte) 61);
             if (var8 != null &&
               !var8.isEmpty(true)) {
@@ -1635,8 +1635,8 @@ final class le {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (kh.field_c != null) {
-            fk.drawTooltipBox(0, kh.field_c);
+          if (TextLayout.field_c != null) {
+            fk.drawTooltipBox(0, TextLayout.field_c);
           }
           if (eo.field_c != null) {
             eo.field_c.a(param0 ^ -22718, param1);
@@ -1708,7 +1708,7 @@ final class le {
         var15 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           var5 = -120 / ((param0 - 58) / 53);
-          var4_int = n.field_g.field_nb;
+          var4_int = IntKeyLookup.field_g.field_nb;
           if (ti.field_N >= 0 &&
             ti.field_N != -1 &&
             null == eb.field_b) {
@@ -1732,12 +1732,12 @@ final class le {
             var8Lifetime1 = var6.i((byte) -5);
             if (this.field_s != -1000) {
               if (ti.field_N == 78) {
-                var9_int = -(go.field_j[29].field_g / 2) + ((EmailLoginCredentials.field_f >> 1) + (this.field_s - param1));
-                var10 = (var4_int >> 1) + this.field_r - param2 - go.field_j[29].field_k;
+                var9_int = -(SocketConnector.field_j[29].field_g / 2) + ((EmailLoginCredentials.field_f >> 1) + (this.field_s - param1));
+                var10 = (var4_int >> 1) + this.field_r - param2 - SocketConnector.field_j[29].field_k;
                 if (!this.field_V.a(var6, this.field_r, this.field_s, -5)) {
-                  go.field_j[29].toRgbSprite().drawSilhouette(var9_int, var10, 16711680);
+                  SocketConnector.field_j[29].toRgbSprite().drawSilhouette(var9_int, var10, 16711680);
                 }
-                go.field_j[29].drawAlpha(var9_int, var10, 64);
+                SocketConnector.field_j[29].drawAlpha(var9_int, var10, 64);
                 return;
               }
               if (ti.field_N == 4) {
@@ -2102,7 +2102,7 @@ final class le {
           if (param1 > -50) {
             this.field_p = -101;
           }
-          var4_int = n.field_g.field_nb;
+          var4_int = IntKeyLookup.field_g.field_nb;
           var5 = this.field_V.g((byte) 115);
           if (var5 != null) {
             var6 = (ml) (var5.first(12623));
@@ -2147,9 +2147,9 @@ final class le {
           if (param0 != -7) {
             return;
           }
-          var3_int = n.field_g.field_nb;
+          var3_int = IntKeyLookup.field_g.field_nb;
           var4 = -(EmailLoginCredentials.field_f >> 1) + (IntrusiveDeque.field_c + EmailLoginCredentials.field_g);
-          var5 = -(var3_int >> 1) + ol.field_g + me.field_I;
+          var5 = -(var3_int >> 1) + CameraFollowTarget.field_g + me.field_I;
           if (this.field_u > 0) {
             var5 = this.field_c;
             var4 = this.field_e;
@@ -2202,9 +2202,9 @@ final class le {
                 var17 = var17 | (255 & var15 * 10) << 16;
               }
               if (10 >= var15) {
-                SoftwareRasterizer.fillCircleAlpha((EmailLoginCredentials.field_f >> 1) + (var13 + var6 - IntrusiveDeque.field_c), var14 + var7 - (ol.field_g - (var3_int >> 1)), 1600 / (200 - var15 * 100 / 100), var17, var15);
+                SoftwareRasterizer.fillCircleAlpha((EmailLoginCredentials.field_f >> 1) + (var13 + var6 - IntrusiveDeque.field_c), var14 + var7 - (CameraFollowTarget.field_g - (var3_int >> 1)), 1600 / (200 - var15 * 100 / 100), var17, var15);
               } else {
-                SoftwareRasterizer.fillCircleAlpha((EmailLoginCredentials.field_f >> 1) + var6 - (-var13 + IntrusiveDeque.field_c), (var3_int >> 1) + var14 + var7 - ol.field_g, 1600 / (200 - var15 * 100 / 100), var17, 10);
+                SoftwareRasterizer.fillCircleAlpha((EmailLoginCredentials.field_f >> 1) + var6 - (-var13 + IntrusiveDeque.field_c), (var3_int >> 1) + var14 + var7 - CameraFollowTarget.field_g, 1600 / (200 - var15 * 100 / 100), var17, 10);
               }
             }
             return;
@@ -2278,23 +2278,23 @@ final class le {
         int var4Lifetime2;
         var5 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          var2_int = n.field_g.field_nb;
+          var2_int = IntKeyLookup.field_g.field_nb;
           var3 = 16777215;
           if (0 < this.field_V.field_G) {
             var3 = 16711680;
           }
-          SoftwareRasterizer.fillRectangleAlpha((EmailLoginCredentials.field_f >> 1) - IntrusiveDeque.field_c - 8, (var2_int >> 1) + (-ol.field_g - 8), 8, 8, var3, 64);
-          SoftwareRasterizer.fillRectangleAlpha(-IntrusiveDeque.field_c - (-(EmailLoginCredentials.field_f >> 1) - this.field_V.field_y), -8 + (-ol.field_g + (var2_int >> 1)), 8, 8, var3, 64);
-          SoftwareRasterizer.setClip(-IntrusiveDeque.field_c + (EmailLoginCredentials.field_f >> 1), -8 + (var2_int >> 1) + (-ol.field_g + param0), this.field_V.field_y + (-IntrusiveDeque.field_c + (EmailLoginCredentials.field_f >> 1)), EmailLoginCredentials.field_j);
+          SoftwareRasterizer.fillRectangleAlpha((EmailLoginCredentials.field_f >> 1) - IntrusiveDeque.field_c - 8, (var2_int >> 1) + (-CameraFollowTarget.field_g - 8), 8, 8, var3, 64);
+          SoftwareRasterizer.fillRectangleAlpha(-IntrusiveDeque.field_c - (-(EmailLoginCredentials.field_f >> 1) - this.field_V.field_y), -8 + (-CameraFollowTarget.field_g + (var2_int >> 1)), 8, 8, var3, 64);
+          SoftwareRasterizer.setClip(-IntrusiveDeque.field_c + (EmailLoginCredentials.field_f >> 1), -8 + (var2_int >> 1) + (-CameraFollowTarget.field_g + param0), this.field_V.field_y + (-IntrusiveDeque.field_c + (EmailLoginCredentials.field_f >> 1)), EmailLoginCredentials.field_j);
           for (var4 = ((255 & SpriteState.field_v) >> 2) - 64; 8 + this.field_V.field_y >= var4; var4 += 64) {
-            SoftwareRasterizer.fillRectangleAlpha((EmailLoginCredentials.field_f >> 1) + (-IntrusiveDeque.field_c + var4), (var2_int >> 1) + (0 - ol.field_g) - 8, 32, 8, var3, 64);
+            SoftwareRasterizer.fillRectangleAlpha((EmailLoginCredentials.field_f >> 1) + (-IntrusiveDeque.field_c + var4), (var2_int >> 1) + (0 - CameraFollowTarget.field_g) - 8, 32, 8, var3, 64);
           }
-          SoftwareRasterizer.setClip(-IntrusiveDeque.field_c + (EmailLoginCredentials.field_f >> 1) - 8, (var2_int >> 1) + 0 - ol.field_g, (EmailLoginCredentials.field_f >> 1) + (-IntrusiveDeque.field_c + this.field_V.field_y) + 8, EmailLoginCredentials.field_j);
+          SoftwareRasterizer.setClip(-IntrusiveDeque.field_c + (EmailLoginCredentials.field_f >> 1) - 8, (var2_int >> 1) + 0 - CameraFollowTarget.field_g, (EmailLoginCredentials.field_f >> 1) + (-IntrusiveDeque.field_c + this.field_V.field_y) + 8, EmailLoginCredentials.field_j);
           for (var4Lifetime1 = -64 - ((SpriteState.field_v & 255) >> 2); var4Lifetime1 <= this.field_V.field_H; var4Lifetime1 += 64) {
-            SoftwareRasterizer.fillRectangleAlpha(-8 + (-IntrusiveDeque.field_c + 0) + (EmailLoginCredentials.field_f >> 1), var4Lifetime1 - (ol.field_g - ((var2_int >> 1) - 4)), 8, 32, var3, 64);
+            SoftwareRasterizer.fillRectangleAlpha(-8 + (-IntrusiveDeque.field_c + 0) + (EmailLoginCredentials.field_f >> 1), var4Lifetime1 - (CameraFollowTarget.field_g - ((var2_int >> 1) - 4)), 8, 32, var3, 64);
           }
           for (var4Lifetime2 = -64 + (SpriteState.field_v >> 2 & 63); var4Lifetime2 <= this.field_V.field_H; var4Lifetime2 += 64) {
-            SoftwareRasterizer.fillRectangleAlpha((EmailLoginCredentials.field_f >> 1) + (this.field_V.field_y - IntrusiveDeque.field_c), -4 + ((var2_int >> 1) + (var4Lifetime2 - ol.field_g)), 8, 32, var3, 64);
+            SoftwareRasterizer.fillRectangleAlpha((EmailLoginCredentials.field_f >> 1) + (this.field_V.field_y - IntrusiveDeque.field_c), -4 + ((var2_int >> 1) + (var4Lifetime2 - CameraFollowTarget.field_g)), 8, 32, var3, 64);
           }
           SoftwareRasterizer.resetClip();
           return;
@@ -2379,9 +2379,9 @@ final class le {
             this.field_bb = this.field_V.d(false);
             var5 = this.field_V.a(this.field_V.d(false), true);
             if (var5 == null) {
-              this.field_m.a(0);
+              this.field_m.clearTarget(0);
             } else {
-              this.field_m.a(-111, var5);
+              this.field_m.followUnit(-111, var5);
             }
             this.field_t = false;
             this.field_s = -1000;
@@ -2508,7 +2508,7 @@ final class le {
           var5_int = 0;
           param0 = param0 + ue.b((byte) -32);
           var7 = EmailLoginCredentials.field_j;
-          var7Lifetime1 = n.field_g.field_nb;
+          var7Lifetime1 = IntKeyLookup.field_g.field_nb;
           var8 = this.field_V.b(true);
           var6 = -(param3 + 240) * (-EmailLoginCredentials.field_j + 960) / 1440;
           var5_intLifetime1 = (EmailLoginCredentials.field_f - 1280) * (var8 + param0) / (2 * var8 + this.field_V.field_y);
@@ -2731,7 +2731,7 @@ final class le {
           var3 = (ml) (var7.first(param0 + 20398));
           while (var3 != null) {
             if (var3.i(-52)) {
-              this.field_m.a(-105, var3);
+              this.field_m.followUnit(-105, var3);
               return;
             }
             var3 = (ml) (var7.next(0));
@@ -2744,7 +2744,7 @@ final class le {
           var5 = (mi) (var4.first(param0 + 20398));
           while (var5 != null) {
             if (var5.d(6)) {
-              this.field_m.a(var5, -126);
+              this.field_m.followProjectile(var5, -126);
               return;
             }
             var5 = (mi) (var4.next(0));
@@ -2759,7 +2759,7 @@ final class le {
           }
           while (var3Lifetime1 != null) {
             if (var3Lifetime1.f(true)) {
-              this.field_m.a(param0 ^ 7725, var3Lifetime1);
+              this.field_m.followUnit(param0 ^ 7725, var3Lifetime1);
               return;
             }
             var3Lifetime1 = (ml) (var7.next(0));
@@ -2800,7 +2800,7 @@ final class le {
               vh.field_t = 0;
             }
           }
-          var2_int = n.field_g.field_nb;
+          var2_int = IntKeyLookup.field_g.field_nb;
           if (this.field_I < 0) {
             stackIn_17_0 = (!ao.field_d) ? 1 : 0;
           } else {
@@ -2811,7 +2811,7 @@ final class le {
           if ((ri.field_b[96] ||
             var3 != 0 &&
             ri.field_b[ClientException.field_a]) && -16 < this.field_n) {
-            this.field_m.a(param0 + 0);
+            this.field_m.clearTarget(param0 + 0);
             this.field_n = this.field_n - 2;
             this.field_t = true;
             decompiledFrameRemainder5 = false;
@@ -2825,7 +2825,7 @@ final class le {
           if ((ri.field_b[97] ||
             var3 != 0 &&
             ri.field_b[qo.field_b]) && this.field_n < 16) {
-            this.field_m.a(0);
+            this.field_m.clearTarget(0);
             this.field_n = this.field_n + 2;
             this.field_t = true;
             decompiledFrameRemainder4 = false;
@@ -2839,7 +2839,7 @@ final class le {
           if ((ri.field_b[98] ||
             var3 != 0 &&
             ri.field_b[fi.field_e]) && -16 < this.field_S) {
-            this.field_m.a(0);
+            this.field_m.clearTarget(0);
             this.field_S = this.field_S - 2;
             this.field_t = true;
             decompiledFrameRemainder3 = false;
@@ -2853,7 +2853,7 @@ final class le {
           if ((ri.field_b[99] ||
             var3 != 0 &&
             ri.field_b[cm.field_j]) && 16 > this.field_S) {
-            this.field_m.a(0);
+            this.field_m.clearTarget(0);
             this.field_t = true;
             this.field_S = this.field_S + 2;
             decompiledFrameRemainder2 = false;
@@ -2863,7 +2863,7 @@ final class le {
               this.field_S = this.field_S - 1;
             }
           }
-          ol.field_g = ol.field_g + this.field_S;
+          CameraFollowTarget.field_g = CameraFollowTarget.field_g + this.field_S;
           IntrusiveDeque.field_c = IntrusiveDeque.field_c + this.field_n;
           if (eb.field_b != null) {
             this.field_M = 2000;
@@ -2892,7 +2892,7 @@ final class le {
               if (PacketBuffer.field_m == 1) {
                 IntrusiveDeque.field_c = 4 - EmailLoginCredentials.field_f + (var5 + EmailLoginCredentials.field_g) << this.field_K;
                 this.field_t = true;
-                ol.field_g = me.field_I - (-4 - var6) - var7 << this.field_K;
+                CameraFollowTarget.field_g = me.field_I - (-4 - var6) - var7 << this.field_K;
               }
               this.field_u = 0;
               var4 = 1;
@@ -2969,7 +2969,7 @@ final class le {
               }
             } else {
               if (0 >= (1 << param2 & this.field_a)) {
-                var6Lifetime1 = tj.a(122, new String[]{var8}, jl.field_i);
+                var6Lifetime1 = tj.a(122, new String[]{var8}, GrowableIntList.field_i);
               } else {
                 var6Lifetime1 = tj.a(param1 - 14, new String[]{var8}, cn.field_Q);
               }
@@ -3014,7 +3014,7 @@ final class le {
           if (param1 != -82) {
             discarded$0 = this.j(-127);
           }
-          var5_int = n.field_g.field_nb;
+          var5_int = IntKeyLookup.field_g.field_nb;
           var6 = param2.f(-99);
           var7 = param2.i((byte) 120);
           var8 = param2.p(-8323);
@@ -3069,9 +3069,9 @@ final class le {
                 }
               }
               if (var15 <= 25) {
-                SoftwareRasterizer.fillCircleAlpha(-IntrusiveDeque.field_c + var13 + (var6 + (EmailLoginCredentials.field_f >> 1)), -ol.field_g + var7 + (var14 + (var5_int >> 1)), 1600 / (200 - 100 * var15 / 100), var17, 10 * var15);
+                SoftwareRasterizer.fillCircleAlpha(-IntrusiveDeque.field_c + var13 + (var6 + (EmailLoginCredentials.field_f >> 1)), -CameraFollowTarget.field_g + var7 + (var14 + (var5_int >> 1)), 1600 / (200 - 100 * var15 / 100), var17, 10 * var15);
               } else {
-                SoftwareRasterizer.fillCircle(-IntrusiveDeque.field_c + var13 + var6 + (EmailLoginCredentials.field_f >> 1), (var5_int >> 1) + (-ol.field_g + (var14 + var7)), 1600 / (200 - var15 * 100 / 100), var17);
+                SoftwareRasterizer.fillCircle(-IntrusiveDeque.field_c + var13 + var6 + (EmailLoginCredentials.field_f >> 1), (var5_int >> 1) + (-CameraFollowTarget.field_g + (var14 + var7)), 1600 / (200 - var15 * 100 / 100), var17);
               }
             }
           }
@@ -3137,7 +3137,7 @@ final class le {
             !pn.a((byte) 111) && (ri.field_b[69] ||
             ri.field_b[ao.field_f])) {
             this.field_t = false;
-            this.field_m.a(-96, this.field_V.a(this.field_bb, true));
+            this.field_m.followUnit(-96, this.field_V.a(this.field_bb, true));
           }
           if (0 < this.field_V.field_G) {
             this.field_V.field_G = this.field_V.field_G - 1;
@@ -3213,7 +3213,7 @@ final class le {
           }
           if (this.field_I > 0 && (ri.field_b[69] ||
             ri.field_b[ao.field_f] ||
-            ri.field_b[ig.field_g] ||
+            ri.field_b[WeightedLruCache.field_g] ||
             ri.field_b[UsernameCredentials.field_g] ||
             ri.field_b[84] ||
             ri.field_b[82] ||
@@ -3237,9 +3237,9 @@ final class le {
               this.field_bb = this.field_V.d(false);
               var9 = this.field_V.a(this.field_bb, param0);
               if (var9 != null) {
-                this.field_m.a(-89, var9);
+                this.field_m.followUnit(-89, var9);
               } else {
-                this.field_m.a(0);
+                this.field_m.clearTarget(0);
               }
               this.field_t = false;
               this.field_s = -1000;
@@ -3294,7 +3294,7 @@ final class le {
               }
             }
           }
-          var4Lifetime1 = n.field_g.field_nb;
+          var4Lifetime1 = IntKeyLookup.field_g.field_nb;
           var5Lifetime1 = -var4Lifetime1 / 2;
           var6Lifetime1 = this.field_V.field_H - var4Lifetime1 / 2 + 64;
           this.a(var6Lifetime1, var5Lifetime1, param0);
@@ -3351,7 +3351,7 @@ final class le {
     private final void c(byte param0) {
         nf stackIn_3_0 = null;
         boolean stackIn_3_1 = false;
-        ol stackIn_4_2 = null;
+        CameraFollowTarget stackIn_4_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         PacketBuffer var3 = null;
@@ -3646,12 +3646,12 @@ final class le {
         int var9Lifetime1Lifetime2;
         var15 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          var3_int = n.field_g.field_nb;
+          var3_int = IntKeyLookup.field_g.field_nb;
           if (param1 != 10) {
             this.a(41, 48, 1, -100);
           }
           var4 = EmailLoginCredentials.field_g - (-IntrusiveDeque.field_c + (EmailLoginCredentials.field_f >> 1));
-          var5 = -(var3_int >> 1) + me.field_I + ol.field_g;
+          var5 = -(var3_int >> 1) + me.field_I + CameraFollowTarget.field_g;
           if (this.field_u > 0) {
             var4 = this.field_e;
             var5 = this.field_c;
@@ -3739,7 +3739,7 @@ final class le {
               }
             }
             boolean decompiledFrameRemainder1 = true;
-            if (var7 != 0 && (ri.field_b[ig.field_g] ||
+            if (var7 != 0 && (ri.field_b[WeightedLruCache.field_g] ||
               ri.field_b[ko.field_k])) {
               stackIn_79_0 = 1;
               decompiledFrameRemainder1 = false;
@@ -3796,7 +3796,7 @@ final class le {
                 this.field_h = this.field_h + 1;
                 this.field_R = 0;
                 var6.c(0, -1);
-                this.field_m.a(-80, var6);
+                this.field_m.followUnit(-80, var6);
                 eb.field_b = null;
                 ti.field_N = -1;
               }
@@ -3817,7 +3817,7 @@ final class le {
                 this.field_R = 1;
                 this.field_h = this.field_h + 1;
                 var6.c(param1 - 10, 1);
-                this.field_m.a(param1 ^ -106, var6);
+                this.field_m.followUnit(param1 ^ -106, var6);
                 eb.field_b = null;
                 ti.field_N = -1;
               }
@@ -3845,8 +3845,8 @@ final class le {
                 this.field_s = -1000;
               }
               if (mf.field_g == -2) {
-                stackIn_151_0 = !(hc.field_f);
-                hc.field_f = stackIn_151_0;
+                stackIn_151_0 = !(ConditionalTextValue.field_f);
+                ConditionalTextValue.field_f = stackIn_151_0;
               }
               if (mf.field_g == -4) {
                 var8Lifetime1 = 100;
@@ -3911,7 +3911,7 @@ final class le {
                 if (this.field_u < 100) {
                   this.field_u = this.field_u + 1;
                   if (1 == this.field_u) {
-                    this.field_c = -(var3_int >> 1) + ol.field_g + me.field_I;
+                    this.field_c = -(var3_int >> 1) + CameraFollowTarget.field_g + me.field_I;
                     this.field_e = -(EmailLoginCredentials.field_f >> 1) + IntrusiveDeque.field_c + EmailLoginCredentials.field_g;
                   }
                 }
@@ -4173,7 +4173,7 @@ final class le {
                     var10.m(-20357) != var11.m(-20357))) {
                     this.field_V.a((byte) 125, this.field_w);
                     this.field_V.e((byte) 72);
-                    this.field_m.a(-86, this.field_V.a(this.field_bb, true));
+                    this.field_m.followUnit(-86, this.field_V.a(this.field_bb, true));
                   }
                 }
               } else {
@@ -4260,9 +4260,9 @@ final class le {
         int var16Lifetime1;
         var19 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          var3_int = n.field_g.field_nb;
+          var3_int = IntKeyLookup.field_g.field_nb;
           var4 = EmailLoginCredentials.field_g + (IntrusiveDeque.field_c - (EmailLoginCredentials.field_f >> 1));
-          var5 = -(var3_int >> 1) + me.field_I + ol.field_g;
+          var5 = -(var3_int >> 1) + me.field_I + CameraFollowTarget.field_g;
           if (0 < this.field_u) {
             var4 = this.field_e;
             var5 = this.field_c;
@@ -4376,22 +4376,22 @@ final class le {
                   var18 = var18 | 16711680 & var16 * 10 << 16;
                 }
                 if (var16 <= 25) {
-                  SoftwareRasterizer.fillCircleAlpha(-IntrusiveDeque.field_c + (var6 + var14 + (EmailLoginCredentials.field_f >> 1)), (var3_int >> 1) - ol.field_g + var15 + var7, 1600 / (200 - var16 * 100 / 100), var18, var16);
+                  SoftwareRasterizer.fillCircleAlpha(-IntrusiveDeque.field_c + (var6 + var14 + (EmailLoginCredentials.field_f >> 1)), (var3_int >> 1) - CameraFollowTarget.field_g + var15 + var7, 1600 / (200 - var16 * 100 / 100), var18, var16);
                 } else {
-                  SoftwareRasterizer.fillCircleAlpha((EmailLoginCredentials.field_f >> 1) + (-IntrusiveDeque.field_c + var6) + var14, (var3_int >> 1) - ol.field_g + var15 + var7, 1600 / (200 - var16 * 100 / 100), var18, 25);
+                  SoftwareRasterizer.fillCircleAlpha((EmailLoginCredentials.field_f >> 1) + (-IntrusiveDeque.field_c + var6) + var14, (var3_int >> 1) - CameraFollowTarget.field_g + var15 + var7, 1600 / (200 - var16 * 100 / 100), var18, 25);
                 }
               }
               return;
             }
             var15Lifetime1 = var8 / 2;
             var16Lifetime1 = 100 + var15Lifetime1;
-            var14Lifetime1 = (var3_int >> 1) - ol.field_g + var10 * (var16Lifetime1 - 50) / var11 + (-var15Lifetime1 + var7);
+            var14Lifetime1 = (var3_int >> 1) - CameraFollowTarget.field_g + var10 * (var16Lifetime1 - 50) / var11 + (-var15Lifetime1 + var7);
             var13Lifetime1 = (EmailLoginCredentials.field_f >> 1) + (var9 * (-50 + var16Lifetime1) / var11 + var6) - IntrusiveDeque.field_c;
             tg.field_b[4].draw(-16 + var13Lifetime1, -16 + var14Lifetime1);
-            var14Lifetime2 = (var3_int >> 1) + ((var16Lifetime1 - 50 - 16) * var10 / var11 - (var15Lifetime1 - var7 + ol.field_g));
+            var14Lifetime2 = (var3_int >> 1) + ((var16Lifetime1 - 50 - 16) * var10 / var11 - (var15Lifetime1 - var7 + CameraFollowTarget.field_g));
             var13Lifetime2 = -IntrusiveDeque.field_c + (var9 * (-50 + (var16Lifetime1 - 16)) / var11 + var6) + (EmailLoginCredentials.field_f >> 1);
             tg.field_b[4].drawHalfSize(var13Lifetime2 - 8, var14Lifetime2 - 8);
-            var14Lifetime3 = (var3_int >> 1) + var7 - var15Lifetime1 + (var10 * (-24 + (var16Lifetime1 - 50)) / var11 - ol.field_g);
+            var14Lifetime3 = (var3_int >> 1) + var7 - var15Lifetime1 + (var10 * (-24 + (var16Lifetime1 - 50)) / var11 - CameraFollowTarget.field_g);
             var13Lifetime3 = -IntrusiveDeque.field_c + var6 + var9 * (-24 + var16Lifetime1 - 50) / var11 + (EmailLoginCredentials.field_f >> 1);
             tg.field_b[4].drawQuarterSize(var13Lifetime3 - 4, var14Lifetime3 - 4);
           }
@@ -4431,7 +4431,7 @@ final class le {
               he.field_e.writeInt(var4, (byte) -101);
               we.a(0, (byte) 93);
             }
-            ka.b(false);
+            ProxySocketConnector.closeActiveConnection(false);
           }
           if (!this.field_k) {
             this.field_V.c(-1);
@@ -4471,7 +4471,7 @@ final class le {
           if (param1 != 0) {
             return;
           }
-          var4_int = n.field_g.field_nb;
+          var4_int = IntKeyLookup.field_g.field_nb;
           var5 = this.field_V.g((byte) 70);
           if (var5 == null) {
             return;
@@ -4606,7 +4606,7 @@ final class le {
             }
             break;
           }
-          this.field_m.a(param0 - 10886, var4);
+          this.field_m.followUnit(param0 - 10886, var4);
           stackIn_33_0 = var4;
           return stackIn_33_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4845,7 +4845,7 @@ final class le {
           this.field_W = -1;
           this.field_x = 0;
           this.field_f = null;
-          this.field_m = new ol();
+          this.field_m = new CameraFollowTarget();
           this.field_cb = new IntrusiveDeque();
           if (!this.field_ab) {
             k.a(this, true);

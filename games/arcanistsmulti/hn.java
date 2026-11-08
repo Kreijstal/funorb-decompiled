@@ -91,7 +91,7 @@ final class hn implements Runnable {
               var3 = var4.getOutputStream();
               var3.write(17);
               var5 = (CharSequence) ((Object) ("JAGGRAB " + this.field_m.getFile() + "\n\n"));
-              var3.write(go.a(var5, (byte) -82));
+              var3.write(SocketConnector.encodeCp1252(var5, (byte) -82));
               this.field_f = new DataInputStream(var4.getInputStream());
             }
             this.field_h.position = 0;

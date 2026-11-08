@@ -41,7 +41,7 @@ final class SoundCache {
             String var5 = (String) null;
             SoundCache.a(true, (String) null, -0.9587674736976624f, (byte) 42);
           }
-          lm.a((byte) -120, true);
+          lm.drawRootContainer((byte) -120, true);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "gi.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }

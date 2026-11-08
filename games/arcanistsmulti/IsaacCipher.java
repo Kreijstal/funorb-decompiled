@@ -37,7 +37,7 @@ final class IsaacCipher {
           LoginPanel.b(1, param8, param12, param1, param2);
           td.a(true, param17, param5);
           rc.a(param14, 120, param16, param15, param19, param18);
-          lj.a(param10, param11, param7, 69);
+          NanoFrameClock.a(param10, param11, param7, 69);
           vi.a(-1, param6, param20, param9);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -80,7 +80,7 @@ final class IsaacCipher {
 
     final static void a(int param0, PcmStreamMixer param1, ResourceArchive param2, int param3) {
         try {
-          sn.field_G = param0 * gm.b(-2) / 1000;
+          sn.field_G = param0 * LinkButtonPainter.getFramesPerSecond(-2) / 1000;
           ed.loadJagexLogoSound((byte) -17, param2);
           ArcanistsMulti.a(param2, (byte) -80);
           int var4_int = 88 % ((81 - param3) / 36);

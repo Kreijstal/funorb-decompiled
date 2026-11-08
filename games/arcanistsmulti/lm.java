@@ -156,9 +156,9 @@ final class lm {
             }
             if (IndexedSpriteState.field_e[0][2].field_A) {
               if (!qk.k((byte) 111)) {
-                kh.field_c = tj.a(param3 ^ -111, new String[]{DirectByteStorage.field_f.field_ic}, ed.field_tb);
+                TextLayout.field_c = tj.a(param3 ^ -111, new String[]{DirectByteStorage.field_f.field_ic}, ed.field_tb);
               } else {
-                kh.field_c = vh.field_m;
+                TextLayout.field_c = vh.field_m;
               }
             }
           } else {
@@ -315,7 +315,7 @@ final class lm {
                 }
                 var8 = stackIn_151_0;
                 if (var8 != null) {
-                  kh.field_c = var8;
+                  TextLayout.field_c = var8;
                 }
               }
               stackIn_155_0 = var29;
@@ -342,8 +342,8 @@ final class lm {
                 var9 >= 0) {
                 if (null != ue.field_b &&
                   ue.field_b[var7] != null &&
-                  (~n.field_a & ue.field_b[var7][var9]) > 0) {
-                  var15 = bj.a(ue.field_b[var7][var9] & ~n.field_a, (byte) 104);
+                  (~IntKeyLookup.field_a & ue.field_b[var7][var9]) > 0) {
+                  var15 = bj.a(ue.field_b[var7][var9] & ~IntKeyLookup.field_a, (byte) 104);
                   var14 = 1;
                 }
                 if (dh.field_Hb != null &&
@@ -360,7 +360,7 @@ final class lm {
                     var12 = 1;
                   }
                   if (var16 != 0 &&
-                    !gm.field_c &&
+                    !LinkButtonPainter.field_c &&
                     ah.field_c <= 0) {
                     var10 = 1;
                   }
@@ -369,7 +369,7 @@ final class lm {
                   CanvasRasterBuffer.field_a[var7] != null) {
                   var16Lifetime2 = CanvasRasterBuffer.field_a[var7][var9];
                   if (var16Lifetime2 != 0 &&
-                    !gm.field_c &&
+                    !LinkButtonPainter.field_c &&
                     0 >= ah.field_c) {
                     var10 = 1;
                   }
@@ -462,11 +462,11 @@ final class lm {
               }
               if (0 <= var9 &&
                 var17.field_A) {
-                if (null == lj.field_o) {
+                if (null == NanoFrameClock.field_o) {
                   var18_ref = null;
                 } else {
-                  if (lj.field_o[var7] != null) {
-                    var18_ref = lj.field_o[var7][var9];
+                  if (NanoFrameClock.field_o[var7] != null) {
+                    var18_ref = NanoFrameClock.field_o[var7][var9];
                   } else {
                     var18_ref = null;
                   }
@@ -497,7 +497,7 @@ final class lm {
                       }
                     }
                     if (var12 != 0) {
-                      var31 = tj.a(123, new String[]{Integer.toString(sk.field_e), Integer.toString(pe.field_Fb[var7][var9])}, hf.field_m);
+                      var31 = tj.a(123, new String[]{Integer.toString(sk.field_e), Integer.toString(pe.field_Fb[var7][var9])}, MembershipOfferScreen.field_m);
                       var22 = var31;
                       var25 = var22;
                       var22 = var25;
@@ -584,7 +584,7 @@ final class lm {
                   }
                 }
                 if (var20 != null) {
-                  kh.field_c = (String) (var20);
+                  TextLayout.field_c = (String) (var20);
                 }
               }
               if (param0) {
@@ -653,7 +653,7 @@ final class lm {
         field_b = null;
     }
 
-    final static void a(byte param0, boolean param1) {
+    final static void drawRootContainer(byte param0, boolean param1) {
         ClientException.field_b.drawLayersAndTooltip(0, true, 0);
         if (param0 > -7) {
           field_c = (String) null;

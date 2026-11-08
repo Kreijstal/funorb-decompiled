@@ -40,7 +40,7 @@ class EditableTextWidget extends TextButton {
             ce.field_i = tj.a(4, -21402);
           }
           if (ce.field_i.field_l) {
-            ad.field_f = ko.a(ad.field_f, ce.field_i.field_i, true);
+            ad.field_f = ko.orArrays(ad.field_f, ce.field_i.field_i, true);
             ce.field_i = null;
             pe.field_Jb = true;
           }
@@ -210,9 +210,9 @@ class EditableTextWidget extends TextButton {
             var3 = (CipherPacketBuffer) null;
             EditableTextWidget.a(true, (CipherPacketBuffer) null);
           }
-          if (null != gm.field_j) {
-            gm.field_j.clear(-124);
-            gm.field_j = null;
+          if (null != LinkButtonPainter.field_j) {
+            LinkButtonPainter.field_j.clear(-124);
+            LinkButtonPainter.field_j = null;
           }
           bc.field_c = null;
           if (null != vh.field_a) {
@@ -436,7 +436,7 @@ class EditableTextWidget extends TextButton {
     }
 
     private final void updateScrollOffset(byte param0) {
-        kh var3;
+        TextLayout var3;
         int var4;
         int var5;
         int var6;
@@ -454,7 +454,7 @@ class EditableTextWidget extends TextButton {
         }
         var9 = (WidgetTextLayout) ((Object) this.field_r);
         var3 = var9.a((UiComponent) (this), -46);
-        var4 = var3.b((byte) 121);
+        var4 = var3.maxLineWidth((byte) 121);
         var5 = var9.a((UiComponent) (this), (byte) 101);
         if (param0 > -38) {
           return;
@@ -464,7 +464,7 @@ class EditableTextWidget extends TextButton {
           this.field_i = 0;
           this.field_h = 0;
         } else {
-          var7 = this.field_h + var3.a(this.field_N, 0);
+          var7 = this.field_h + var3.characterOffset(this.field_N, 0);
           if (-var6 + var5 >= var7) {
             if (var7 < var6) {
               this.field_h = this.field_h + (-var7 + var6);
@@ -600,8 +600,8 @@ class EditableTextWidget extends TextButton {
           if (var2_int > 0) {
             throw new IllegalStateException("" + var2_int);
           }
-          var3 = hd.a(param1, (byte) 118) ? 1 : 0;
-          var4 = hd.a(param1, (byte) 126) ? 1 : 0;
+          var3 = hd.readBitFlag(param1, (byte) 118) ? 1 : 0;
+          var4 = hd.readBitFlag(param1, (byte) 126) ? 1 : 0;
           if (!param0) {
             field_K = (String) null;
           }
@@ -631,10 +631,10 @@ class EditableTextWidget extends TextButton {
             var5.field_s = eo.readPackedShorts(param1, var5.field_s, 16, 16);
             var5.field_h = eo.readPackedShorts(param1, var5.field_h, 16, 16);
           }
-          if (hd.a(param1, (byte) 126)) {
+          if (hd.readBitFlag(param1, (byte) 126)) {
             var5.field_z = eo.readPackedShorts(param1, var5.field_z, 16, 16);
           }
-          if (hd.a(param1, (byte) 120)) {
+          if (hd.readBitFlag(param1, (byte) 120)) {
             var5.field_H = ub.a(3, param1, 16, var5.field_H);
             var6 = 0;
             for (var7 = 0; var7 < var5.field_H.length; var7++) {

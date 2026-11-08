@@ -7,7 +7,7 @@ final class no extends qk {
     static int[] field_tb;
     static String[] field_vb;
 
-    final static void a(java.awt.Component param0, int param1) {
+    final static void attachMouseInput(java.awt.Component param0, int param1) {
         try {
           param0.addMouseListener(ob.field_hb);
           param0.addMouseMotionListener(ob.field_hb);
@@ -61,7 +61,7 @@ final class no extends qk {
         cg var1Lifetime1;
         var2 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          var1 = (cg) (gm.field_j.first(param0 + 12624));
+          var1 = (cg) (LinkButtonPainter.field_j.first(param0 + 12624));
           while (var1 != null) {
             if (var1.field_Eb > 0) {
               var1.field_Eb = var1.field_Eb - 1;
@@ -72,7 +72,7 @@ final class no extends qk {
                 }
               }
             }
-            var1 = (cg) (gm.field_j.next(0));
+            var1 = (cg) (LinkButtonPainter.field_j.next(0));
           }
           var1_ref = (na) (vh.field_a.first(param0 + 12624));
           while (var1_ref != null) {

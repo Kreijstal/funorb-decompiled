@@ -185,7 +185,7 @@ final class li extends UiContainer implements ButtonListener {
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        gm var4 = null;
+        LinkButtonPainter var4 = null;
         int var6 = 0;
         int var7 = 0;
         var7 = ArcanistsMulti.field_G ? 1 : 0;
@@ -198,7 +198,7 @@ final class li extends UiContainer implements ButtonListener {
             for (var4_int = 0; var4_int < var3_int; var4_int++) {
               this.field_K[var4_int] = qo.a((byte) 80, (CharSequence) ((Object) param0[var4_int])).replace(' ', ' ');
             }
-            var4 = new gm(ia.field_c, 0, 1);
+            var4 = new LinkButtonPainter(ia.field_c, 0, 1);
             this.field_J = new TextButton[var3_int + 1];
             for (var5 = 0; var5 < var3_int; var5++) {
               this.field_J[var5] = new TextButton(this.field_K[var5], (UiListener) (this));

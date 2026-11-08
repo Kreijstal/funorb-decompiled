@@ -131,14 +131,14 @@ final class h extends SingleChildContainer {
         return null;
     }
 
-    final static hc g(byte param0) {
+    final static ConditionalTextValue g(byte param0) {
         int var1 = -73 % ((param0 - 82) / 43);
         String var2 = ed.k(-952);
         if (var2 != null &&
           !(var2.indexOf('@') < 0)) {
           var2 = "";
         }
-        return new hc(ed.k(-952), hc.a(-1));
+        return new ConditionalTextValue(ed.k(-952), ConditionalTextValue.a(-1));
     }
 
     final static void j(int param0) {
@@ -160,7 +160,7 @@ final class h extends SingleChildContainer {
           }
           SoundCache.field_k.makeRasterTarget();
           var1.drawHalfSize(0, 0);
-          oo.c(-15405);
+          oo.popClipState(-15405);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "h.G(" + param0 + ')');
         }

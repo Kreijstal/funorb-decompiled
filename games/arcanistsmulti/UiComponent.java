@@ -12,7 +12,7 @@ class UiComponent extends IntrusiveNode {
     int field_n;
     String field_g;
     int field_v;
-    kh field_s;
+    TextLayout field_s;
     int field_j;
     static int field_u;
     static String field_p;
@@ -165,7 +165,7 @@ class UiComponent extends IntrusiveNode {
           return;
         }
         if (var5 != null) {
-          MusicCrossfadeStream.field_n.a(var5, (byte) 60, ka.field_p, IntrusiveNodeHashTable.field_p);
+          MusicCrossfadeStream.field_n.a(var5, (byte) 60, ProxySocketConnector.field_p, IntrusiveNodeHashTable.field_p);
         }
     }
 
@@ -732,8 +732,8 @@ class UiComponent extends IntrusiveNode {
         try {
           fj.detachKeyboardInput((java.awt.Component) ((Object) param0), 115);
           so.a((java.awt.Component) ((Object) param0), 0);
-          if (null != nh.field_w) {
-            nh.field_w.a((java.awt.Component) ((Object) param0), (byte) -22);
+          if (null != StrongCacheEntry.field_w) {
+            StrongCacheEntry.field_w.a((java.awt.Component) ((Object) param0), (byte) -22);
           }
           int var2_int = 17 / ((-7 - param1) / 49);
         } catch (RuntimeException runtimeException) {

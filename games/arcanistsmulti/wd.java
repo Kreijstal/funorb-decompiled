@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wd implements qi {
+final class wd implements ViewResizeListener {
     static Sprite field_e;
     static String field_i;
     static Sprite[] field_h;

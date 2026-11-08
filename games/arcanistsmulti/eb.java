@@ -64,8 +64,8 @@ final class eb implements WidgetPainter {
 
     final static void setMusicVolume(int param0, boolean param1) {
         Bzip2State.field_A = param0;
-        if (null != jl.field_h) {
-          jl.field_h.a(param0, (byte) -66);
+        if (null != GrowableIntList.field_h) {
+          GrowableIntList.field_h.a(param0, (byte) -66);
         }
         if (!param1) {
           if (gg.field_h != null) {
@@ -123,7 +123,7 @@ final class eb implements WidgetPainter {
             null == om.field_x) {
             if (!AlternateUsernameCredentials.field_p) {
               var5 = eo.field_c;
-              var6 = jd.field_i;
+              var6 = IsaacRandom.field_i;
               var5.field_l.a(14, var6, (byte) -26);
             }
             var7 = eo.field_c;
@@ -172,14 +172,14 @@ final class eb implements WidgetPainter {
           return;
         }
         mj.a(-6578, param0);
-        if (null != kh.field_c) {
-          fk.drawTooltipBox(0, kh.field_c);
+        if (null != TextLayout.field_c) {
+          fk.drawTooltipBox(0, TextLayout.field_c);
         }
     }
 
     final static void setFrameSprites(Sprite[] param0, int param1, int param2, int param3) {
         try {
-          ol.field_f = new ec(param0);
+          CameraFollowTarget.field_f = new ec(param0);
           mj.field_r = param3;
           int var4_int = -103 / ((param2 - 31) / 55);
           tg.field_d = param1;

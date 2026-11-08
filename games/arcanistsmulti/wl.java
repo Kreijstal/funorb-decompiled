@@ -77,7 +77,7 @@ final class wl extends mg {
         }
         var5 = var8.readUnsignedShort(-98);
         try {
-          var9 = th.field_d.a(var5, (byte) -119);
+          var9 = th.field_d.getDefinition(var5, (byte) -119);
           fe.field_p = var9.c(true);
           if (ff.field_a.equals(ah.field_b)) {
             stackIn_24_0 = null;

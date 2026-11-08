@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class nn extends DualLinkNode {
+abstract class CacheEntry extends DualLinkNode {
     static String field_t;
     static ij field_q;
     static ValidationState field_s;
@@ -11,7 +11,7 @@ abstract class nn extends DualLinkNode {
     int field_r;
     static PlatformTask field_o;
 
-    abstract boolean f(byte param0);
+    abstract boolean isSoftReference(byte param0);
 
     final static String g(byte param0) {
         int var2 = 0;
@@ -24,7 +24,7 @@ abstract class nn extends DualLinkNode {
         String var8;
         var5 = ArcanistsMulti.field_G ? 1 : 0;
         if (param0 != -25) {
-          nn.releaseStatics(-47);
+          CacheEntry.releaseStatics(-47);
         }
         var6 = "(" + ArchiveRequest.field_m + " " + nf.field_W + " " + se.field_I + ") " + on.field_g;
         var1 = var6;
@@ -121,7 +121,7 @@ abstract class nn extends DualLinkNode {
           le.field_q = param12;
           fl.field_b = param7;
           pn.field_b = param13;
-          lj.field_o = param6;
+          NanoFrameClock.field_o = param6;
           SocketJs5Transport.field_t = param4;
           ao.field_h = param1;
           qa.field_o = param11;
@@ -129,7 +129,7 @@ abstract class nn extends DualLinkNode {
           nk.field_m = param3;
           ob.field_bb = param10;
           ml.field_m = param9;
-          gb.field_d = param0;
+          SecondaryNodeDeque.field_d = param0;
           IntrusiveNodeHashTable.field_b = qe.a(param8, "gameprivacy", "lobby", 92);
           re.field_j = qe.a(param8, "ratedgame", "lobby", 81);
           sk.field_f = qe.a(param8, "opentome", "lobby", 71);
@@ -139,14 +139,14 @@ abstract class nn extends DualLinkNode {
           vm.field_c[1] = ne.field_a;
           vm.field_c[0] = wm.field_F;
           vm.field_c[2] = um.field_d;
-          vm.field_c[3] = lj.field_m;
+          vm.field_c[3] = NanoFrameClock.field_m;
           mj.field_s = new kc(0L, (kc) null);
           uc.field_d = new kc(0L, vf.field_u, hb.field_Bb);
-          nh.field_z = new kc(0L, vf.field_i, SocketJs5Transport.field_q);
+          StrongCacheEntry.field_z = new kc(0L, vf.field_i, SocketJs5Transport.field_q);
           nj.field_m = new dn(0L, new kc(0L, (kc) null), am.field_c, IntrusiveDeque.field_i);
           mj.field_s.a(uc.field_d, param14 + 87);
           if (fc.field_a) {
-            mj.field_s.a(nh.field_z, 41);
+            mj.field_s.a(StrongCacheEntry.field_z, 41);
           }
           mj.field_s.a(nj.field_m, 47);
           nj.field_m.field_Hb.a(IntrusiveNode.field_c, (byte) 126);
@@ -160,11 +160,11 @@ abstract class nn extends DualLinkNode {
           sm.field_c = new kc(0L, wa.field_Pb, hb.field_Ib.toUpperCase());
           ad.field_c = new kc(0L, ia.field_a);
           tj.field_o = new kc(0L, vf.field_u, of.field_k);
-          hg.field_e = new kc(0L, EditableTextWidget.field_S, lc.field_c);
+          FrameClock.field_e = new kc(0L, EditableTextWidget.field_S, lc.field_c);
           ci.field_a = new kc(0L, EditableTextWidget.field_S, PatchEnvelopeSet.field_c);
           lo.field_r = new kc(0L, EditableTextWidget.field_S, CanvasRasterBuffer.field_h);
           vc.field_j = new kc(0L, EditableTextWidget.field_S, g.field_b);
-          jo.field_a = new kc(0L, vf.field_i, kh.field_a);
+          jo.field_a = new kc(0L, vf.field_i, TextLayout.field_a);
           DebouncedValidator.field_g = new dn(0L, new kc(0L, (kc) null), am.field_c, IntrusiveDeque.field_i);
           of.field_a = new kc(0L, ko.field_h, fi.field_f.toUpperCase());
           of.field_a.field_ub = fc.field_a;
@@ -181,12 +181,12 @@ abstract class nn extends DualLinkNode {
             stackIn_6_1 = null;
             stackIn_6_4 = sl.field_K;
           }
-          jl.field_a = new kc(stackIn_5_2, stackIn_5_3, ((String) (Object) stackIn_6_4).toUpperCase());
+          GrowableIntList.field_a = new kc(stackIn_5_2, stackIn_5_3, ((String) (Object) stackIn_6_4).toUpperCase());
           fn.field_e = new kc(0L, (kc) null);
           fn.field_e.a(sm.field_c, 23);
           fn.field_e.a(ad.field_c, 36);
           ad.field_c.a(tj.field_o, 106);
-          ad.field_c.a(hg.field_e, 50);
+          ad.field_c.a(FrameClock.field_e, 50);
           ad.field_c.a(ci.field_a, param14 + 20);
           if (fc.field_a) {
             ad.field_c.a(lo.field_r, 44);
@@ -197,14 +197,14 @@ abstract class nn extends DualLinkNode {
           if (fc.field_a) {
             fn.field_e.a(of.field_a, 20);
           }
-          fn.field_e.a(jl.field_a, 15);
+          fn.field_e.a(GrowableIntList.field_a, 15);
           la.field_c = new kc(0L, IntrusiveNode.field_c);
           la.field_c.field_gb = 0;
           la.field_c.field_X = 1;
           dm.field_E = new kc(0L, gn.field_c, UsernameCredentials.field_f.toUpperCase());
-          gm.field_h = new kc(0L, mf.field_d);
-          gm.field_h.a(la.field_c, 110);
-          gm.field_h.a(dm.field_E, 121);
+          LinkButtonPainter.field_h = new kc(0L, mf.field_d);
+          LinkButtonPainter.field_h.a(la.field_c, 110);
+          LinkButtonPainter.field_h.a(dm.field_E, 121);
           vc.field_c = new kc(0L, am.field_c);
           vc.field_c.a(IntrusiveNode.field_c, (byte) 119);
           vc.field_c.field_gb = 1;
@@ -214,15 +214,15 @@ abstract class nn extends DualLinkNode {
           aj.field_d = new kc(0L, IntrusiveNode.field_c);
           aj.field_d.field_X = 1;
           qc.field_d = new kc(0L, vf.field_u, hb.field_Bb);
-          hf.field_q = new kc(0L, vf.field_i, SocketJs5Transport.field_q);
+          MembershipOfferScreen.field_q = new kc(0L, vf.field_i, SocketJs5Transport.field_q);
           lf.field_b = new dn(0L, new kc(0L, (kc) null), am.field_c, IntrusiveDeque.field_i);
           bk.field_M.a(aj.field_d, 30);
           bk.field_M.a(qc.field_d, 51);
           if (fc.field_a) {
-            bk.field_M.a(hf.field_q, param14 + 10);
+            bk.field_M.a(MembershipOfferScreen.field_q, param14 + 10);
           }
           bk.field_M.a(lf.field_b, 31);
-          IntrusiveNodeHashTable.field_o = new kc(0L, th.field_c, gb.field_a.toUpperCase());
+          IntrusiveNodeHashTable.field_o = new kc(0L, th.field_c, SecondaryNodeDeque.field_a.toUpperCase());
           nl.field_Db = new kc(0L, wa.field_Pb);
           mi.field_m = new kc(0L, ia.field_a);
           ib.field_s = new kc(0L, dd.field_b, MusicPatchNode.field_o.toUpperCase());
@@ -242,8 +242,8 @@ abstract class nn extends DualLinkNode {
               IndexedSpriteState.field_e[1][var17_intLifetime1 + 1] = new nl(0L, nf.field_j, (kc) null, nj.field_d, (Sprite) null, Integer.toString(ao.field_h[var17_intLifetime1]));
             }
           }
-          wd.field_g[2] = new kc(0L, mi.field_A, gb.field_b);
-          IndexedSpriteState.field_e[param14] = new nl[]{new nl(0L, nf.field_j, (kc) null, nj.field_d, (Sprite) null, ij.field_Rb), new nl(0L, nf.field_j, (kc) null, nj.field_d, ec.field_i[0], nh.field_B), new nl(0L, nf.field_j, (kc) null, nj.field_d, ec.field_i[1], cf.field_d)};
+          wd.field_g[2] = new kc(0L, mi.field_A, SecondaryNodeDeque.field_b);
+          IndexedSpriteState.field_e[param14] = new nl[]{new nl(0L, nf.field_j, (kc) null, nj.field_d, (Sprite) null, ij.field_Rb), new nl(0L, nf.field_j, (kc) null, nj.field_d, ec.field_i[0], StrongCacheEntry.field_B), new nl(0L, nf.field_j, (kc) null, nj.field_d, ec.field_i[1], cf.field_d)};
           if (le.field_q > 1) {
             wd.field_g[3] = new kc(0L, mi.field_A, fm.field_e);
             array$1 = new nl[le.field_q + 1];
@@ -255,10 +255,10 @@ abstract class nn extends DualLinkNode {
           }
           for (var17_intLifetime3 = 0; param2 > var17_intLifetime3; var17_intLifetime3++) {
             wd.field_g[var17_intLifetime3 + 4] = new kc(0L, mi.field_A, ob.field_bb[var17_intLifetime3]);
-            array$2 = new nl[1 + NameValidator.bitAnd((int) gb.field_d[var17_intLifetime3], 255)];
+            array$2 = new nl[1 + NameValidator.bitAnd((int) SecondaryNodeDeque.field_d[var17_intLifetime3], 255)];
             IndexedSpriteState.field_e[var17_intLifetime3 + 4] = array$2;
             IndexedSpriteState.field_e[4 + var17_intLifetime3][0] = new nl(0L, nf.field_j, (kc) null, nj.field_d, (Sprite) null, ij.field_Rb);
-            for (var18 = 0; var18 < (gb.field_d[var17_intLifetime3] & 255); var18++) {
+            for (var18 = 0; var18 < (SecondaryNodeDeque.field_d[var17_intLifetime3] & 255); var18++) {
               if (null == pn.field_b) {
                 var19_ref = null;
               } else {
@@ -268,11 +268,11 @@ abstract class nn extends DualLinkNode {
                   var19_ref = null;
                 }
               }
-              if (lj.field_o == null) {
+              if (NanoFrameClock.field_o == null) {
                 var20 = null;
               } else {
-                if (null != lj.field_o[var17_intLifetime3]) {
-                  var20 = lj.field_o[var17_intLifetime3][var18];
+                if (null != NanoFrameClock.field_o[var17_intLifetime3]) {
+                  var20 = NanoFrameClock.field_o[var17_intLifetime3][var18];
                 } else {
                   var20 = null;
                 }
@@ -293,7 +293,7 @@ abstract class nn extends DualLinkNode {
               }
             }
           }
-          go.field_d = new kc(0L, ko.field_h);
+          SocketConnector.field_d = new kc(0L, ko.field_h);
           CanvasRasterBuffer.field_k = new kc(0L, ko.field_h);
           jf.field_d = new kc(0L, j.field_f);
           jf.field_d.a(IntrusiveNode.field_c, (byte) 119);
@@ -316,10 +316,10 @@ abstract class nn extends DualLinkNode {
               }
             }
           }
-          oh.field_h.a(go.field_d, 13);
+          oh.field_h.a(SocketConnector.field_d, 13);
           oh.field_h.a(CanvasRasterBuffer.field_k, 23);
           oh.field_h.a(jf.field_d, 110);
-          hf.field_t = new kc(0L, SectorCacheStore.field_l, mb.field_O.toUpperCase());
+          MembershipOfferScreen.field_t = new kc(0L, SectorCacheStore.field_l, mb.field_O.toUpperCase());
           gj.field_d = new kc(0L, gn.field_c, f.field_i.toUpperCase());
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -396,7 +396,7 @@ abstract class nn extends DualLinkNode {
         }
     }
 
-    abstract Object e(byte param0);
+    abstract Object getValue(byte param0);
 
     final static byte[] a(int param0, byte param1, byte[] param2, int param3) {
         int var5_int = 0;
@@ -426,7 +426,7 @@ abstract class nn extends DualLinkNode {
           }
           var5 = new rm();
           if (param1 != -93) {
-            nn.a((byte[]) null, (int[]) null, 89, (Sprite[][]) null, -13, (String[]) null, (String[][]) null, (String[]) null, (ResourceArchive) null, (byte[]) null, (String[]) null, (String[][]) null, 28, (Sprite[][]) null, -101);
+            CacheEntry.a((byte[]) null, (int[]) null, 89, (Sprite[][]) null, -13, (String[]) null, (String[][]) null, (String[]) null, (ResourceArchive) null, (byte[]) null, (String[]) null, (String[][]) null, 28, (Sprite[][]) null, -101);
           }
           var5.c(-23645);
           var5.a((long)(8 * param0), 8, var4);
@@ -450,7 +450,7 @@ abstract class nn extends DualLinkNode {
         }
     }
 
-    nn(int param0) {
+    CacheEntry(int param0) {
         this.field_r = param0;
     }
 

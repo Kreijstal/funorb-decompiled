@@ -92,9 +92,9 @@ final class qa extends IntrusiveNode {
           if (param1 != -4693) {
             field_m = -4;
           }
-          go.field_i = param2;
-          if (go.field_i == 0) {
-            var3_int = hf.a(qg.field_a, IntrusiveDequeCursor.field_d, eb.field_a, mg.field_C, param1 + 25923);
+          SocketConnector.field_i = param2;
+          if (SocketConnector.field_i == 0) {
+            var3_int = MembershipOfferScreen.splitIntoTwoLines(qg.field_a, IntrusiveDequeCursor.field_d, eb.field_a, mg.field_C, param1 + 25923);
             var4 = 3 + var3_int;
             ib.field_v = new String[var4];
             oe.field_c = new int[var4];
@@ -112,8 +112,8 @@ final class qa extends IntrusiveNode {
             ib.field_v[-1 + var4] = dd.field_e;
             oe.field_c[var4 - 1] = 1;
             hn.field_k[1] = 5;
-          } else if (go.field_i == 1) {
-            var3_int = hf.a(qg.field_a, IntrusiveDequeCursor.field_d, eb.field_a, mg.field_C, param1 + 25923);
+          } else if (SocketConnector.field_i == 1) {
+            var3_int = MembershipOfferScreen.splitIntoTwoLines(qg.field_a, IntrusiveDequeCursor.field_d, eb.field_a, mg.field_C, param1 + 25923);
             var4 = 2 + var3_int;
             ib.field_v = new String[var4];
             oe.field_c = new int[var4];
@@ -128,12 +128,12 @@ final class qa extends IntrusiveNode {
             ib.field_v[var4 - 1] = dd.field_e;
             oe.field_c[-1 + var4] = 0;
             hn.field_k[0] = 5;
-          } else if (go.field_i != 2) {
-            if (go.field_i == 3) {
+          } else if (SocketConnector.field_i != 2) {
+            if (SocketConnector.field_i == 3) {
               if (fi.field_d.field_p) {
-                var3_int = hf.a(qg.field_a, of.field_l, eb.field_a, mg.field_C, 21230);
+                var3_int = MembershipOfferScreen.splitIntoTwoLines(qg.field_a, of.field_l, eb.field_a, mg.field_C, 21230);
               } else {
-                var3_int = hf.a(qg.field_a, DirectByteStorage.field_j, eb.field_a, mg.field_C, param1 ^ -16571);
+                var3_int = MembershipOfferScreen.splitIntoTwoLines(qg.field_a, DirectByteStorage.field_j, eb.field_a, mg.field_C, param1 ^ -16571);
               }
               var4 = var3_int + 2;
               ib.field_v = new String[var4];
@@ -149,8 +149,8 @@ final class qa extends IntrusiveNode {
               ib.field_v[var4 - 1] = dd.field_e;
               oe.field_c[var4 - 1] = 0;
               hn.field_k[0] = 5;
-            } else if (go.field_i == 4) {
-              var3_int = hf.a(qg.field_a, ki.field_w, eb.field_a, mg.field_C, 21230);
+            } else if (SocketConnector.field_i == 4) {
+              var3_int = MembershipOfferScreen.splitIntoTwoLines(qg.field_a, ki.field_w, eb.field_a, mg.field_C, 21230);
               var4 = 2 + var3_int;
               oe.field_c = new int[var4];
               ib.field_v = new String[var4];
@@ -166,10 +166,10 @@ final class qa extends IntrusiveNode {
               oe.field_c[-1 + var4] = 0;
               hn.field_k[0] = 5;
             } else {
-              if (go.field_i != 5) {
+              if (SocketConnector.field_i != 5) {
                 throw new IllegalArgumentException();
               }
-              var3_int = hf.a(qg.field_a, fl.field_d, eb.field_a, mg.field_C, param1 + 25923);
+              var3_int = MembershipOfferScreen.splitIntoTwoLines(qg.field_a, fl.field_d, eb.field_a, mg.field_C, param1 + 25923);
               var4 = 3 + var3_int;
               ib.field_v = new String[var4];
               oe.field_c = new int[var4];
@@ -189,7 +189,7 @@ final class qa extends IntrusiveNode {
               hn.field_k[1] = 5;
             }
           } else {
-            var3_int = hf.a(qg.field_a, tj.a(-112, new String[]{"<br><%0><br>"}, dm.field_F), eb.field_a, mg.field_C, param1 + 25923);
+            var3_int = MembershipOfferScreen.splitIntoTwoLines(qg.field_a, tj.a(-112, new String[]{"<br><%0><br>"}, dm.field_F), eb.field_a, mg.field_C, param1 + 25923);
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(qg.field_a[var5])) {
@@ -206,7 +206,7 @@ final class qa extends IntrusiveNode {
             ik.field_c = new String[-1 + (-var4 + var3_int)];
             ArraySupport.copyObjects(qg.field_a, var4 + 1, ik.field_c, 0, var3_int - var4 - 1);
             var4 = -1;
-            var3_int = hf.a(qg.field_a, tj.a(param1 ^ -4656, new String[]{"<br><%0><br>"}, bo.field_b), eb.field_a, mg.field_C, 21230);
+            var3_int = MembershipOfferScreen.splitIntoTwoLines(qg.field_a, tj.a(param1 ^ -4656, new String[]{"<br><%0><br>"}, bo.field_b), eb.field_a, mg.field_C, 21230);
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(qg.field_a[var5])) {
                 continue;
@@ -283,7 +283,7 @@ final class qa extends IntrusiveNode {
               var3_intLifetime1 = var5Lifetime1;
             }
           }
-          if (go.field_i == 2) {
+          if (SocketConnector.field_i == 2) {
             var10 = SpriteState.field_u;
             var4_ref_String__ = var10;
             for (var5Lifetime2 = 0; var10.length > var5Lifetime2; var5Lifetime2++) {
@@ -312,10 +312,10 @@ final class qa extends IntrusiveNode {
             }
             rd.field_a = stackIn_114_0 + stackIn_115_1;
           }
-          hf.field_r = to.field_p - (rd.field_a >> 1);
+          MembershipOfferScreen.field_r = to.field_p - (rd.field_a >> 1);
           wh.field_d = new int[ib.field_v.length][];
           var4Lifetime3 = 0;
-          var5Lifetime3 = hf.field_r;
+          var5Lifetime3 = MembershipOfferScreen.field_r;
           while (var4Lifetime3 < ib.field_v.length) {
             var6Lifetime1 = oe.field_c[var4Lifetime3];
             if (0 <= var6Lifetime1) {
@@ -333,7 +333,7 @@ final class qa extends IntrusiveNode {
             }
             var4Lifetime3++;
           }
-          if (go.field_i == 2) {
+          if (SocketConnector.field_i == 2) {
             hi.field_h.a(param0, -1, false, -1);
           } else {
             hi.field_h.a(param0, 0, false, bl.a(me.field_I, (byte) 70, EmailLoginCredentials.field_g));

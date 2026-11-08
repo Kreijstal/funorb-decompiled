@@ -6,7 +6,7 @@ final class hd {
     static int field_a;
     static int field_b;
 
-    final static boolean a(CharSequence param0, byte param1, boolean param2) {
+    final static boolean isValidNameText(CharSequence param0, byte param1, boolean param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -23,7 +23,7 @@ final class hd {
             return false;
           }
           for (var3_int = 0; var3_int < param0.length(); var3_int++) {
-            if (!pm.a(param0.charAt(var3_int), 45)) {
+            if (!pm.isAllowedEmailCharacter(param0.charAt(var3_int), 45)) {
               return false;
             }
           }
@@ -49,7 +49,7 @@ final class hd {
         }
     }
 
-    final static boolean a(CipherPacketBuffer param0, byte param1) {
+    final static boolean readBitFlag(CipherPacketBuffer param0, byte param1) {
         RuntimeException var2 = null;
         CipherPacketBuffer var3 = null;
         boolean stackIn_5_0 = false;
@@ -60,7 +60,7 @@ final class hd {
         try {
           if (param1 <= 108) {
             var3 = (CipherPacketBuffer) null;
-            hd.a((CipherPacketBuffer) null, (byte) -121);
+            hd.readBitFlag((CipherPacketBuffer) null, (byte) -121);
           }
           stackIn_5_0 = (param0.readBits(28089, 1) == 1);
           return stackIn_5_0;

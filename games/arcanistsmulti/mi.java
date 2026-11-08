@@ -17,7 +17,7 @@ final class mi extends DualLinkNode {
     int field_o;
     int field_H;
     boolean field_w;
-    private jd field_C;
+    private IsaacRandom field_C;
     int field_y;
     private Sprite field_p;
     static Sprite field_E;
@@ -217,12 +217,12 @@ final class mi extends DualLinkNode {
         boolean stackOut_2218_0;
         Object var5 = null;
         int var6 = 0;
-        jd var6_ref_jd = null;
+        IsaacRandom var6_ref_jd = null;
         int var7 = 0;
-        jd var7_ref_jd = null;
+        IsaacRandom var7_ref_jd = null;
         int var8 = 0;
         int var9 = 0;
-        jd var9_ref_jd = null;
+        IsaacRandom var9_ref_jd = null;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -272,16 +272,16 @@ final class mi extends DualLinkNode {
                     }
                     this.field_G = this.field_q.field_H;
                     this.a(this.field_H, this.field_H, this.field_H, 8);
-                    var6_ref_jd = new jd(new int[]{this.field_q.field_Q, param3, this.field_v, this.field_G});
+                    var6_ref_jd = new IsaacRandom(new int[]{this.field_q.field_Q, param3, this.field_v, this.field_G});
                     var7 = 0;
                     while (40 > var7) {
                       var5 = this.a(this.field_v, (ml) null, (byte) 81, 135, this.field_G, this.field_q);
-                      var8 = 8191 & var6_ref_jd.c((byte) -46);
+                      var8 = 8191 & var6_ref_jd.nextInt((byte) -46);
                       if (0 == this.field_u) {
                         this.field_u = 1;
                       }
-                      ((mi) (var5)).field_u = this.field_u + Math.abs((127 & var6_ref_jd.c((byte) -46)) * of.a(param0 - 5896, var8) >> 17) * this.field_u / Math.abs(this.field_u);
-                      ((mi) (var5)).field_F = -Math.abs(this.field_F) - Math.abs((var6_ref_jd.c((byte) -46) & 127) * j.a(var8, param0 - 6134) >> 17);
+                      ((mi) (var5)).field_u = this.field_u + Math.abs((127 & var6_ref_jd.nextInt((byte) -46)) * of.a(param0 - 5896, var8) >> 17) * this.field_u / Math.abs(this.field_u);
+                      ((mi) (var5)).field_F = -Math.abs(this.field_F) - Math.abs((var6_ref_jd.nextInt((byte) -46) & 127) * j.a(var8, param0 - 6134) >> 17);
                       this.field_q.b(param0 ^ 6068, (mi) (var5));
                       var7++;
                     }
@@ -318,16 +318,16 @@ final class mi extends DualLinkNode {
                     this.field_q.a(param0 ^ -6129, this.field_t);
                     return;
                   }
-                  var6_ref_jd = new jd(new int[]{this.field_q.field_Q, param3, this.field_v, this.field_G});
+                  var6_ref_jd = new IsaacRandom(new int[]{this.field_q.field_Q, param3, this.field_v, this.field_G});
                   var7 = 0;
                   while (var7 < 17) {
                     var5 = this.a(this.field_v, (ml) null, (byte) 81, 135, this.field_G, this.field_q);
-                    var8 = (var6_ref_jd.c((byte) -46) & 8191) * 3 / 2;
+                    var8 = (var6_ref_jd.nextInt((byte) -46) & 8191) * 3 / 2;
                     if (this.field_u == 0) {
                       this.field_u = 1;
                     }
-                    ((mi) (var5)).field_u = this.field_u + Math.abs((var6_ref_jd.c((byte) -46) & 127) * of.a(113, var8) >> 17) * this.field_u / Math.abs(this.field_u);
-                    ((mi) (var5)).field_F = this.field_F - (-((127 & var6_ref_jd.c((byte) -46)) * j.a(var8, param0 ^ -6134) >> 17) + 64);
+                    ((mi) (var5)).field_u = this.field_u + Math.abs((var6_ref_jd.nextInt((byte) -46) & 127) * of.a(113, var8) >> 17) * this.field_u / Math.abs(this.field_u);
+                    ((mi) (var5)).field_F = this.field_F - (-((127 & var6_ref_jd.nextInt((byte) -46)) * j.a(var8, param0 ^ -6134) >> 17) + 64);
                     this.field_q.b(52, (mi) (var5));
                     var7++;
                   }
@@ -1302,14 +1302,14 @@ final class mi extends DualLinkNode {
                                                               this.field_I == 152) {
                                                               if ((this.field_I != 143) &&
                                                                 (decompiledFrameRemainder10 = (null != this.field_q.field_sb)) &&
-                                                                (decompiledFrameRemainder10 = (this.field_q.field_sb[nn.field_n[7][1]] != null))) {
-                                                                ii.a(200 + (int)(Math.random() * 500.0), false, this.field_q.field_sb[nn.field_n[7][1]], to.field_r[nn.field_n[7][1]] / 4);
+                                                                (decompiledFrameRemainder10 = (this.field_q.field_sb[CacheEntry.field_n[7][1]] != null))) {
+                                                                ii.playSample(200 + (int)(Math.random() * 500.0), false, this.field_q.field_sb[CacheEntry.field_n[7][1]], to.field_r[CacheEntry.field_n[7][1]] / 4);
                                                                 decompiledFrameRemainder10 = (var19 != 0);
                                                               }
                                                               if ((decompiledFrameRemainder10) &&
                                                                 (null != this.field_q.field_sb) &&
-                                                                (this.field_q.field_sb[nn.field_n[7][0]] != null)) {
-                                                                ii.a((int)(Math.random() * 500.0) + 200, false, this.field_q.field_sb[nn.field_n[7][0]], to.field_r[nn.field_n[7][0]] / 8);
+                                                                (this.field_q.field_sb[CacheEntry.field_n[7][0]] != null)) {
+                                                                ii.playSample((int)(Math.random() * 500.0) + 200, false, this.field_q.field_sb[CacheEntry.field_n[7][0]], to.field_r[CacheEntry.field_n[7][0]] / 8);
                                                                 if (var19 != 0) {
                                                                   this.a(1, (byte) 37, 3);
                                                                 }
@@ -1596,14 +1596,14 @@ final class mi extends DualLinkNode {
                                                               this.field_I == 152) {
                                                               if ((this.field_I != 143) &&
                                                                 (decompiledFrameRemainder7 = (null != this.field_q.field_sb)) &&
-                                                                (decompiledFrameRemainder7 = (this.field_q.field_sb[nn.field_n[7][1]] != null))) {
-                                                                ii.a(200 + (int)(Math.random() * 500.0), false, this.field_q.field_sb[nn.field_n[7][1]], to.field_r[nn.field_n[7][1]] / 4);
+                                                                (decompiledFrameRemainder7 = (this.field_q.field_sb[CacheEntry.field_n[7][1]] != null))) {
+                                                                ii.playSample(200 + (int)(Math.random() * 500.0), false, this.field_q.field_sb[CacheEntry.field_n[7][1]], to.field_r[CacheEntry.field_n[7][1]] / 4);
                                                                 decompiledFrameRemainder7 = (var19 != 0);
                                                               }
                                                               if ((decompiledFrameRemainder7) &&
                                                                 (null != this.field_q.field_sb) &&
-                                                                (this.field_q.field_sb[nn.field_n[7][0]] != null)) {
-                                                                ii.a((int)(Math.random() * 500.0) + 200, false, this.field_q.field_sb[nn.field_n[7][0]], to.field_r[nn.field_n[7][0]] / 8);
+                                                                (this.field_q.field_sb[CacheEntry.field_n[7][0]] != null)) {
+                                                                ii.playSample((int)(Math.random() * 500.0) + 200, false, this.field_q.field_sb[CacheEntry.field_n[7][0]], to.field_r[CacheEntry.field_n[7][0]] / 8);
                                                                 if (var19 != 0) {
                                                                   this.a(1, (byte) 37, 3);
                                                                 }
@@ -2194,8 +2194,8 @@ final class mi extends DualLinkNode {
                                             }
                                             if (this.field_I == 143) {
                                               if (null != this.field_q.field_sb &&
-                                                null != this.field_q.field_sb[nn.field_n[7][2]]) {
-                                                ii.a((int)(Math.random() * 50.0) + 100, false, this.field_q.field_sb[nn.field_n[7][2]], to.field_r[nn.field_n[7][2]] / 2);
+                                                null != this.field_q.field_sb[CacheEntry.field_n[7][2]]) {
+                                                ii.playSample((int)(Math.random() * 50.0) + 100, false, this.field_q.field_sb[CacheEntry.field_n[7][2]], to.field_r[CacheEntry.field_n[7][2]] / 2);
                                               }
                                               var5 = this.a(-32 + this.field_v, (ml) null, (byte) 81, 131, this.field_G, this.field_q);
                                               this.field_q.b(param0 - 5964, (mi) (var5));
@@ -2226,7 +2226,7 @@ final class mi extends DualLinkNode {
                                               this.a(0, (byte) 37, 0);
                                               var5 = this.a(this.field_v, (ml) null, (byte) 81, 86, this.field_G, this.field_q);
                                               this.field_q.b(52, (mi) (var5));
-                                              var7_ref_jd = new jd(new int[]{this.field_q.field_Q, param3, this.field_v, this.field_G});
+                                              var7_ref_jd = new IsaacRandom(new int[]{this.field_q.field_Q, param3, this.field_v, this.field_G});
                                               var8 = 0;
                                               while (var8 < 5) {
                                                 var5 = this.a(this.field_v, this.field_t, (byte) 81, 14, this.field_G, this.field_q);
@@ -2245,7 +2245,7 @@ final class mi extends DualLinkNode {
                                             }
                                             if (41 == this.field_I) {
                                               this.a(0, (byte) 37, 3);
-                                              var7_ref_jd = new jd(new int[]{this.field_q.field_Q, param3, this.field_v, this.field_G});
+                                              var7_ref_jd = new IsaacRandom(new int[]{this.field_q.field_Q, param3, this.field_v, this.field_G});
                                               var8 = 0;
                                               do {
                                                 if (var8 >= 5) {
@@ -2843,7 +2843,7 @@ final class mi extends DualLinkNode {
                       var5 = this.a(this.field_v, (ml) null, (byte) 81, 94, this.field_G, this.field_q);
                       this.field_q.b(param0 ^ 6068, (mi) (var5));
                       this.a(50, 96, 48, 8);
-                      var9_ref_jd = new jd(new int[]{this.field_q.field_Q, param3, this.field_v, this.field_G});
+                      var9_ref_jd = new IsaacRandom(new int[]{this.field_q.field_Q, param3, this.field_v, this.field_G});
                       var10 = 0;
                       while (var10 < 15) {
                         var5 = this.a(this.field_v, (ml) null, (byte) 81, 76, this.field_G, this.field_q);
@@ -3033,7 +3033,7 @@ final class mi extends DualLinkNode {
                     }
                     if (this.field_I == 49) {
                       this.a(0, (byte) 37, 3);
-                      var9_ref_jd = new jd(new int[]{this.field_q.field_Q, param3, this.field_v, this.field_G});
+                      var9_ref_jd = new IsaacRandom(new int[]{this.field_q.field_Q, param3, this.field_v, this.field_G});
                       var10 = 0;
                       while (true) {
                         if (var10 < 10) {
@@ -3070,7 +3070,7 @@ final class mi extends DualLinkNode {
                       this.field_z = var7;
                       this.field_v = this.field_o >> 4;
                       this.field_G = this.field_z >> 4;
-                      var9_ref_jd = new jd(new int[]{this.field_q.field_Q, param3, this.field_v, this.field_G});
+                      var9_ref_jd = new IsaacRandom(new int[]{this.field_q.field_Q, param3, this.field_v, this.field_G});
                       var10 = 0;
                       do {
                         if (var10 >= 5) {
@@ -3103,7 +3103,7 @@ final class mi extends DualLinkNode {
                       var5 = this.a(this.field_v, (ml) null, (byte) 81, 89, this.field_G, this.field_q);
                       this.field_q.b(52, (mi) (var5));
                       this.a(40, 96, 48, param0 - 6008);
-                      var9_ref_jd = new jd(new int[]{this.field_q.field_Q, param3, this.field_v, this.field_G});
+                      var9_ref_jd = new IsaacRandom(new int[]{this.field_q.field_Q, param3, this.field_v, this.field_G});
                       var10 = 0;
                       while (var10 < 7) {
                         var5 = this.a(this.field_v, (ml) null, (byte) 81, 20, this.field_G, this.field_q);
@@ -3125,7 +3125,7 @@ final class mi extends DualLinkNode {
                       var5 = this.a(this.field_v, (ml) null, (byte) 81, 94, this.field_G, this.field_q);
                       this.field_q.b(52, (mi) (var5));
                       this.a(25, 128, 48, 8);
-                      var9_ref_jd = new jd(new int[]{this.field_q.field_Q, param3, this.field_v, this.field_G});
+                      var9_ref_jd = new IsaacRandom(new int[]{this.field_q.field_Q, param3, this.field_v, this.field_G});
                     }
                     if (decompiledFrameRemainder3) {
                       var10 = 0;
@@ -3155,7 +3155,7 @@ final class mi extends DualLinkNode {
                           var5 = this.a(this.field_v, (ml) null, (byte) 81, 94, this.field_G, this.field_q);
                           this.field_q.b(52, (mi) (var5));
                           this.a(25, 96, 48, param0 - 6008);
-                          var9_ref_jd = new jd(new int[]{this.field_q.field_Q, param3, this.field_v, this.field_G});
+                          var9_ref_jd = new IsaacRandom(new int[]{this.field_q.field_Q, param3, this.field_v, this.field_G});
                           var10 = 0;
                           while (var10 < 4) {
                             var5 = this.a(this.field_v, (ml) null, (byte) 81, 76, this.field_G, this.field_q);
@@ -3176,7 +3176,7 @@ final class mi extends DualLinkNode {
                           var5 = this.a(this.field_v, (ml) null, (byte) 81, 94, this.field_G, this.field_q);
                           this.field_q.b(52, (mi) (var5));
                           this.a(10, 64, 32, 8);
-                          var9_ref_jd = new jd(new int[]{this.field_q.field_Q, param3, this.field_v, this.field_G});
+                          var9_ref_jd = new IsaacRandom(new int[]{this.field_q.field_Q, param3, this.field_v, this.field_G});
                         }
                         if (decompiledFrameRemainder0) {
                           var10 = 0;
@@ -3199,7 +3199,7 @@ final class mi extends DualLinkNode {
                           var5 = this.a(this.field_v, (ml) null, (byte) 81, 94, this.field_G, this.field_q);
                           this.field_q.b(param0 - 5964, (mi) (var5));
                           this.a(25, 64, 32, 8);
-                          var9_ref_jd = new jd(new int[]{this.field_q.field_Q, param3, this.field_v, this.field_G});
+                          var9_ref_jd = new IsaacRandom(new int[]{this.field_q.field_Q, param3, this.field_v, this.field_G});
                         }
                         if (decompiledFrameRemainder1) {
                           var10 = 0;
@@ -3282,13 +3282,13 @@ final class mi extends DualLinkNode {
                       return;
                     }
                   } else {
-                    var6_ref_jd = new jd(new int[]{this.field_q.field_Q, param3, this.field_v, this.field_G});
+                    var6_ref_jd = new IsaacRandom(new int[]{this.field_q.field_Q, param3, this.field_v, this.field_G});
                     var7 = 0;
                     while (var7 < 45) {
                       var5 = this.a(this.field_v, (ml) null, (byte) 81, 46, this.field_G, this.field_q);
-                      var8 = var6_ref_jd.c((byte) -46) & 8191;
-                      ((mi) (var5)).field_u = this.field_u + ((var6_ref_jd.c((byte) -46) & 127) * of.a(-122, var8) >> 16);
-                      ((mi) (var5)).field_F = this.field_F + ((127 & var6_ref_jd.c((byte) -46)) * j.a(var8, param0 - 6140) >> 16);
+                      var8 = var6_ref_jd.nextInt((byte) -46) & 8191;
+                      ((mi) (var5)).field_u = this.field_u + ((var6_ref_jd.nextInt((byte) -46) & 127) * of.a(-122, var8) >> 16);
+                      ((mi) (var5)).field_F = this.field_F + ((127 & var6_ref_jd.nextInt((byte) -46)) * j.a(var8, param0 - 6140) >> 16);
                       this.field_q.b(52, (mi) (var5));
                       var7++;
                       if (var19 != 0) {
@@ -3321,7 +3321,7 @@ final class mi extends DualLinkNode {
                   this.field_v = var6;
                   this.field_G = var7;
                   if (this.field_C == null) {
-                    this.field_C = new jd(new int[]{this.field_q.field_Q, param3, this.field_v, this.field_G});
+                    this.field_C = new IsaacRandom(new int[]{this.field_q.field_Q, param3, this.field_v, this.field_G});
                   }
                   var8 = 0;
                   while (true) {
@@ -3369,7 +3369,7 @@ final class mi extends DualLinkNode {
           }
           this.field_y = this.field_y + 1;
           if (null == this.field_C) {
-            this.field_C = new jd(new int[]{this.field_q.field_Q, param3, this.field_v, this.field_G});
+            this.field_C = new IsaacRandom(new int[]{this.field_q.field_Q, param3, this.field_v, this.field_G});
           }
           var6 = 50;
           if (84 == this.field_I &&
@@ -3587,8 +3587,8 @@ final class mi extends DualLinkNode {
             this.field_F = 10;
           }
           if (null != this.field_q.field_sb &&
-            this.field_q.field_sb[nn.field_n[param2][param0]] != null) {
-            ti.a((byte) -30, to.field_r[nn.field_n[param2][param0]], this.field_q.field_sb[nn.field_n[param2][param0]]);
+            this.field_q.field_sb[CacheEntry.field_n[param2][param0]] != null) {
+            ti.a((byte) -30, to.field_r[CacheEntry.field_n[param2][param0]], this.field_q.field_sb[CacheEntry.field_n[param2][param0]]);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4645,7 +4645,7 @@ final class mi extends DualLinkNode {
                                               var19 == 0) {
                                               uc.field_b = -3 + (7 & this.field_y);
                                               if (0 == this.field_y) {
-                                                this.field_C = new jd(new int[]{this.field_q.field_Q, param0, this.field_v, this.field_G});
+                                                this.field_C = new IsaacRandom(new int[]{this.field_q.field_Q, param0, this.field_v, this.field_G});
                                               }
                                               if (this.field_y == 50 &&
                                                 this.field_q.field_sb != null &&
@@ -4701,7 +4701,7 @@ final class mi extends DualLinkNode {
                                               if (1 == (7 & this.field_y)) {
                                                 if (this.field_y == 1 ||
                                                   this.field_y == 33) {
-                                                  this.field_C = new jd(new int[]{this.field_q.field_Q, param0, this.field_v, this.field_G});
+                                                  this.field_C = new IsaacRandom(new int[]{this.field_q.field_Q, param0, this.field_v, this.field_G});
                                                 }
                                                 var9 = u.a(this.field_C, -2147483648, 8192);
                                                 var5 = this.a(this.field_v, (ml) null, (byte) 81, 21, this.field_G, this.field_q);
@@ -5195,7 +5195,7 @@ final class mi extends DualLinkNode {
                                                                     this.field_y == 301 ||
                                                                     this.field_y == 401 ||
                                                                     this.field_C == null) {
-                                                                    this.field_C = new jd(new int[]{this.field_q.field_Q, param0, this.field_v, this.field_G});
+                                                                    this.field_C = new IsaacRandom(new int[]{this.field_q.field_Q, param0, this.field_v, this.field_G});
                                                                     this.a(165, true);
                                                                   }
                                                                   this.field_y = this.field_y + 1;
@@ -5216,8 +5216,8 @@ final class mi extends DualLinkNode {
                                                                     var12Lifetime1 = u.a(this.field_C, -2147483648, 8192);
                                                                     var5 = this.a(var10Lifetime1, (ml) null, (byte) 81, 135, var11Lifetime1, this.field_q);
                                                                     if (this.field_q.field_sb != null &&
-                                                                      null != this.field_q.field_sb[nn.field_n[7][1]]) {
-                                                                      ii.a((int)(Math.random() * 500.0) + 200, false, this.field_q.field_sb[nn.field_n[7][1]], to.field_r[nn.field_n[7][1]] / 8);
+                                                                      null != this.field_q.field_sb[CacheEntry.field_n[7][1]]) {
+                                                                      ii.playSample((int)(Math.random() * 500.0) + 200, false, this.field_q.field_sb[CacheEntry.field_n[7][1]], to.field_r[CacheEntry.field_n[7][1]] / 8);
                                                                     }
                                                                     ((mi) (var5)).field_u = of.a(113, var12Lifetime1) >> 11;
                                                                     ((mi) (var5)).field_F = (j.a(var12Lifetime1, -101) >> 11) + 32;
@@ -5298,7 +5298,7 @@ final class mi extends DualLinkNode {
                                                                 if (this.field_y == 102 ||
                                                                   this.field_y == 202 ||
                                                                   null == this.field_C) {
-                                                                  this.field_C = new jd(new int[]{this.field_q.field_Q, param0, this.field_v, this.field_G});
+                                                                  this.field_C = new IsaacRandom(new int[]{this.field_q.field_Q, param0, this.field_v, this.field_G});
                                                                 }
                                                                 var7Lifetime4 = 132;
                                                                 if (100 <= this.field_y) {
@@ -5390,7 +5390,7 @@ final class mi extends DualLinkNode {
                                                                   this.field_y == 101 ||
                                                                   this.field_y == 0 ||
                                                                   null == this.field_C) {
-                                                                  this.field_C = new jd(new int[]{this.field_q.field_Q, param0, this.field_v, this.field_G});
+                                                                  this.field_C = new IsaacRandom(new int[]{this.field_q.field_Q, param0, this.field_v, this.field_G});
                                                                 }
                                                                 this.field_y = this.field_y + 1;
                                                                 if (this.field_y == 300) {
@@ -5431,7 +5431,7 @@ final class mi extends DualLinkNode {
                                                                       this.field_y == 302 ||
                                                                       this.field_y == 402 ||
                                                                       null == this.field_C) {
-                                                                      this.field_C = new jd(new int[]{this.field_q.field_Q, param0, this.field_v, this.field_G});
+                                                                      this.field_C = new IsaacRandom(new int[]{this.field_q.field_Q, param0, this.field_v, this.field_G});
                                                                     }
                                                                     if (this.field_y == 10) {
                                                                       var7Lifetime1 = 63;
@@ -5537,7 +5537,7 @@ final class mi extends DualLinkNode {
                                                                       var9 = 50;
                                                                     }
                                                                     if (null == this.field_C) {
-                                                                      this.field_C = new jd(new int[]{this.field_q.field_Q, param0, this.field_v, this.field_G});
+                                                                      this.field_C = new IsaacRandom(new int[]{this.field_q.field_Q, param0, this.field_v, this.field_G});
                                                                     }
                                                                     if (var9 >= this.field_y &&
                                                                       this.field_t.field_x <= 0) {
@@ -5562,7 +5562,7 @@ final class mi extends DualLinkNode {
                                                                     break regionExit1;
                                                                   }
                                                                   if (this.field_C == null) {
-                                                                    this.field_C = new jd(new int[]{this.field_q.field_Q, param0, this.field_v, this.field_G});
+                                                                    this.field_C = new IsaacRandom(new int[]{this.field_q.field_Q, param0, this.field_v, this.field_G});
                                                                   }
                                                                   this.field_y = this.field_y + 1;
                                                                   if (this.field_y % 5 == 4) {
@@ -5635,7 +5635,7 @@ final class mi extends DualLinkNode {
                                                                 this.field_y == 302 ||
                                                                 this.field_y == 402 ||
                                                                 this.field_C == null) {
-                                                                this.field_C = new jd(new int[]{this.field_q.field_Q, param0, this.field_v, this.field_G});
+                                                                this.field_C = new IsaacRandom(new int[]{this.field_q.field_Q, param0, this.field_v, this.field_G});
                                                               }
                                                               var7Lifetime2 = -1;
                                                               var7Lifetime3 = 87;
@@ -5916,7 +5916,7 @@ final class mi extends DualLinkNode {
                                                                 this.field_y == 301 ||
                                                                 this.field_y == 401 ||
                                                                 this.field_C == null) {
-                                                                this.field_C = new jd(new int[]{this.field_q.field_Q, param0, this.field_v, this.field_G});
+                                                                this.field_C = new IsaacRandom(new int[]{this.field_q.field_Q, param0, this.field_v, this.field_G});
                                                               }
                                                               this.field_y = this.field_y + 1;
                                                               if (this.field_t.field_jb != 5 ||
@@ -6986,7 +6986,7 @@ final class mi extends DualLinkNode {
         mi var3 = null;
         RuntimeException var3_ref = null;
         mi stackIn_3_0 = null;
-        jd stackIn_4_1 = null;
+        IsaacRandom stackIn_4_1 = null;
         mi stackIn_10_0 = null;
         ml stackIn_11_1 = null;
         mi stackIn_12_0 = null;
@@ -7000,7 +7000,7 @@ final class mi extends DualLinkNode {
           if (this.field_C == null) {
             stackIn_4_1 = null;
           } else {
-            stackIn_4_1 = this.field_C.b((byte) 64);
+            stackIn_4_1 = this.field_C.copy((byte) 64);
           }
           stackIn_3_0.field_C = stackIn_4_1;
           var3.field_I = this.field_I;
@@ -9524,10 +9524,10 @@ final class mi extends DualLinkNode {
                                                 return;
                                               }
                                             }
-                                            if (pa.field_a == null) {
+                                            if (DiskCacheWorker.field_a == null) {
                                               return;
                                             }
-                                            pa.field_a[this.field_H].draw(param2 + this.field_v - 50, -50 + param0 + this.field_G);
+                                            DiskCacheWorker.field_a[this.field_H].draw(param2 + this.field_v - 50, -50 + param0 + this.field_G);
                                             if (var16 == 0) {
                                               return;
                                             }

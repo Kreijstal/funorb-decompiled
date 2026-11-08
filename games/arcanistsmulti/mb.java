@@ -334,7 +334,7 @@ final class mb extends mh {
         var0 = var15;
         while (10 >= var15) {
             var1 = -8 + var15 * 8;
-            field_V[var15] = kh.a(on.a(field_L[7][7 + var1], 255L), kh.a(on.a(field_L[6][var1 + 6], 65280L), kh.a(kh.a(kh.a(kh.a(on.a(280375465082880L, field_L[2][var1 + 2]), kh.a(on.a(field_L[0][var1], -72057594037927936L), on.a(71776119061217280L, field_L[1][1 + var1]))), on.a(field_L[3][3 + var1], 1095216660480L)), on.a(4278190080L, field_L[4][var1 + 4])), on.a(16711680L, field_L[5][var1 + 5]))));
+            field_V[var15] = TextLayout.longXor(on.a(field_L[7][7 + var1], 255L), TextLayout.longXor(on.a(field_L[6][var1 + 6], 65280L), TextLayout.longXor(TextLayout.longXor(TextLayout.longXor(TextLayout.longXor(on.a(280375465082880L, field_L[2][var1 + 2]), TextLayout.longXor(on.a(field_L[0][var1], -72057594037927936L), on.a(71776119061217280L, field_L[1][1 + var1]))), on.a(field_L[3][3 + var1], 1095216660480L)), on.a(4278190080L, field_L[4][var1 + 4])), on.a(16711680L, field_L[5][var1 + 5]))));
             var15++;
         }
         field_S = "Send private message to <%0>";

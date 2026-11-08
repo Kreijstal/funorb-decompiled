@@ -31,7 +31,7 @@ final class g {
         field_f = null;
     }
 
-    final static void a(java.applet.Applet param0, int param1) {
+    final static void openSupportPage(java.applet.Applet param0, int param1) {
         try {
           java.net.URL var2 = null;
           Exception var2_ref = null;
@@ -46,7 +46,7 @@ final class g {
                 return;
               }
               var2 = new java.net.URL(param0.getCodeBase(), "tosupport.ws");
-              param0.getAppletContext().showDocument(nm.a(param0, var2, -31843), "_top");
+              param0.getAppletContext().showDocument(nm.appendSessionParameters(param0, var2, -31843), "_top");
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

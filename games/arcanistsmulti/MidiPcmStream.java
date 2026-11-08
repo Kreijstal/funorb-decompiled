@@ -1166,7 +1166,7 @@ final class MidiPcmStream extends PcmStream {
             MidiPcmStream.a(87, (java.applet.Applet) null);
           }
           um.a("", param1, 13680);
-          mc.a(param0 ^ 30451, param1);
+          mc.reloadPage(param0 ^ 30451, param1);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "gh.U(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -1305,7 +1305,7 @@ final class MidiPcmStream extends PcmStream {
     final static void a(int param0, u param1) {
         try {
           int var2_int = 66 / ((param0 + 27) / 62);
-          kh.field_g = param1;
+          TextLayout.field_g = param1;
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "gh.GA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

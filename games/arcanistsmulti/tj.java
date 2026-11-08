@@ -11,7 +11,7 @@ final class tj extends ArchiveProvider {
     private byte[] field_w;
     private int field_q;
     static int field_C;
-    private pa field_s;
+    private DiskCacheWorker field_s;
     static int[] field_u;
     private int field_v;
     static kc field_o;
@@ -39,7 +39,7 @@ final class tj extends ArchiveProvider {
             tj.b(68);
           }
           i.field_e.addLast(var2, -1);
-          gb.a(param0, true);
+          SecondaryNodeDeque.a(param0, true);
           stackIn_3_0 = var2;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -506,7 +506,7 @@ final class tj extends ArchiveProvider {
               return (ArchiveIndex) (stackIn_31_0);
             }
             if (null != this.field_D) {
-              this.field_s.a(this.field_i, 93, var7, this.field_D);
+              this.field_s.queueWrite(this.field_i, 93, var7, this.field_D);
             }
           }
           this.field_x = null;
@@ -590,12 +590,12 @@ final class tj extends ArchiveProvider {
                 if (null == this.field_F) {
                   throw new RuntimeException();
                 }
-                var4 = this.field_s.a(param2, true, this.field_F);
+                var4 = this.field_s.queueRead(param2, true, this.field_F);
               }
             } else {
               if (this.field_F != null &&
                 this.field_E[param2] != -1) {
-                var4 = this.field_s.a(this.field_F, param2, -6833);
+                var4 = this.field_s.read(this.field_F, param2, -6833);
               } else {
                 if (this.field_B.c((byte) -91)) {
                   return null;
@@ -626,7 +626,7 @@ final class tj extends ArchiveProvider {
                 if (this.field_k.field_k != null &&
                   null != this.field_k.field_k[param2]) {
                   var31 = this.field_k.field_k[param2];
-                  var30 = nn.a(-2 + var19.length, (byte) -93, var19, 0);
+                  var30 = CacheEntry.a(-2 + var19.length, (byte) -93, var19, 0);
                   var12 = 0;
                   var10 = var12;
                   while (64 > var12) {
@@ -678,7 +678,7 @@ final class tj extends ArchiveProvider {
               if (this.field_k.field_k != null &&
                 this.field_k.field_k[param2] != null) {
                 var29 = this.field_k.field_k[param2];
-                var28 = nn.a(var19.length - 2, (byte) -93, var19, 0);
+                var28 = CacheEntry.a(var19.length - 2, (byte) -93, var19, 0);
                 for (var10 = 0; var10 < 64; var10++) {
                   if (var28[var10] != var29[var10]) {
                     throw new RuntimeException();
@@ -708,7 +708,7 @@ final class tj extends ArchiveProvider {
           var5[var19.length - 2] = (byte)(this.field_k.field_y[param2] >>> 8);
           var5[-1 + var19.length] = (byte)this.field_k.field_y[param2];
           if (this.field_F != null) {
-            this.field_s.a(param2, 115, var19, this.field_F);
+            this.field_s.queueWrite(param2, 115, var19, this.field_F);
             if (this.field_E[param2] != 1) {
               this.field_E[param2] = (byte) 1;
             }
@@ -786,7 +786,7 @@ final class tj extends ArchiveProvider {
         }
     }
 
-    tj(int param0, SectorCacheStore param1, SectorCacheStore param2, Js5Transport param3, pa param4, int param5, byte[] param6, int param7, boolean param8) {
+    tj(int param0, SectorCacheStore param1, SectorCacheStore param2, Js5Transport param3, DiskCacheWorker param4, int param5, byte[] param6, int param7, boolean param8) {
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -831,7 +831,7 @@ final class tj extends ArchiveProvider {
           this.field_q = param5;
           this.field_B = param3;
           if (this.field_D != null) {
-            this.field_x = (ArchiveRequest) ((Object) this.field_s.a(this.field_D, this.field_i, -6833));
+            this.field_x = (ArchiveRequest) ((Object) this.field_s.read(this.field_D, this.field_i, -6833));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

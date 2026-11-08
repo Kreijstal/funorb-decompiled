@@ -24,7 +24,7 @@ final class uf {
             fn.a(20, param5, param1, param1, (byte) -104, param2, param7, param0, param6);
             tm.field_d.b(param3, (byte) 52);
             if (param3) {
-              if (hf.field_f.field_U != 0) {
+              if (MembershipOfferScreen.field_f.field_U != 0) {
                 SocketJs5Transport.field_r = false;
               }
               if (0 == ih.field_d.field_U) {

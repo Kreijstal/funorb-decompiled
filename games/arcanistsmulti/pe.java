@@ -54,9 +54,9 @@ final class pe extends kc {
               rk.a(-66) <= 30000L) {
               return false;
             }
-            ka.b(false);
+            ProxySocketConnector.closeActiveConnection(false);
           } catch (IOException iOException) {
-            ka.b(false);
+            ProxySocketConnector.closeActiveConnection(false);
           }
           return false;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -226,7 +226,7 @@ final class pe extends kc {
                 var12.field_ec.a(var12.field_Jb, 44);
               }
               var12.field_Xb = new kc(0L, (kc) null);
-              if (0 != (var14 & 1 << gm.field_a)) {
+              if (0 != (var14 & 1 << LinkButtonPainter.field_a)) {
                 var12.field_ec.a(var12.field_Xb, 37);
               }
               var45 = var12.field_Ub;
@@ -351,7 +351,7 @@ final class pe extends kc {
               boolean decompiledFrameRemainder1 = true;
               if (var12.field_Lb) {
                 if (var12.field_nc >= 0) {
-                  var12.field_Gb.field_rb = nh.field_y;
+                  var12.field_Gb.field_rb = StrongCacheEntry.field_y;
                 } else {
                   if (var12.field_kc && (var12.field_Ob ||
                     var12.field_Hb)) {
@@ -362,7 +362,7 @@ final class pe extends kc {
                     if (2 != var12.field_Fb) {
                       var12.field_Gb.field_rb = ArrayWidgetContainer.field_x;
                     } else {
-                      var12.field_Zb.field_rb = ol.field_b;
+                      var12.field_Zb.field_rb = CameraFollowTarget.field_b;
                     }
                   }
                 }
@@ -389,7 +389,7 @@ final class pe extends kc {
               var12.field_jc.a(78, 70, var31, ImageProducerRasterBuffer.field_r, (byte) -120);
               if (var12.field_jc.field_C &&
                 !var12.field_jc.field_rb.equals(var32)) {
-                kh.field_c = var32;
+                TextLayout.field_c = var32;
               }
               var12.field_Mb.field_rb = Integer.toString(var12.field_Rb);
               if (!var12.field_kc) {
@@ -438,7 +438,7 @@ final class pe extends kc {
                 var12.field_Jb.a(var52_ref.field_n, var34_int, 0, var12.field_ec.field_I, (byte) -120);
                 var34_int = var34_int + (var52_ref.field_n + mm.field_p);
               }
-              if ((var14Lifetime1 & 1 << gm.field_a) != 0) {
+              if ((var14Lifetime1 & 1 << LinkButtonPainter.field_a) != 0) {
                 stackIn_90_0 = re.field_j;
                 if (var12.field_oc) {
                   stackIn_91_1 = 1;
@@ -543,27 +543,27 @@ final class pe extends kc {
                   var35 = null;
                 }
                 if (var35 != null) {
-                  kh.field_c = ob.field_bb[var34_intLifetime2] + " - " + (String) (var35);
+                  TextLayout.field_c = ob.field_bb[var34_intLifetime2] + " - " + (String) (var35);
                 } else {
-                  kh.field_c = ob.field_bb[var34_intLifetime2];
+                  TextLayout.field_c = ob.field_bb[var34_intLifetime2];
                 }
               }
             }
             if (var12.field_Ub.field_C) {
               if (var12.field_Pb == 1) {
-                var34 = n.field_c;
+                var34 = IntKeyLookup.field_c;
               } else {
                 var34 = vm.field_c[var12.field_Pb];
               }
-              kh.field_c = on.field_a + " - " + var34;
+              TextLayout.field_c = on.field_a + " - " + var34;
             }
             if (var12.field_Xb.field_C) {
               if (var12.field_oc) {
                 stackIn_154_0 = ri.field_c;
               } else {
-                stackIn_154_0 = n.field_h;
+                stackIn_154_0 = IntKeyLookup.field_h;
               }
-              kh.field_c = stackIn_154_0;
+              TextLayout.field_c = stackIn_154_0;
             }
             if (var12.field_Cb.field_C) {
               if (!var12.field_Ob &&
@@ -576,7 +576,7 @@ final class pe extends kc {
               } else {
                 stackIn_163_0 = qo.field_g;
               }
-              kh.field_c = stackIn_163_0;
+              TextLayout.field_c = stackIn_163_0;
             }
             if (var12.field_Jb.field_C) {
               if (2 == var12.field_Fb) {
@@ -584,7 +584,7 @@ final class pe extends kc {
               } else {
                 stackIn_168_0 = bh.field_d;
               }
-              kh.field_c = stackIn_168_0;
+              TextLayout.field_c = stackIn_168_0;
             }
             boolean decompiledFrameRemainder0 = true;
             if (0 != var12.field_U) {
@@ -659,7 +659,7 @@ final class pe extends kc {
         if (in.field_Gb == ScreenDisplayMode.field_h) {
           throw new IllegalStateException();
         }
-        if (pa.field_g == in.field_Gb) {
+        if (DiskCacheWorker.field_g == in.field_Gb) {
           in.field_Gb = ScreenDisplayMode.field_h;
           return i.field_i;
         }
@@ -882,7 +882,7 @@ final class pe extends kc {
         if (param2 != -29466) {
           return;
         }
-        var8Lifetime1 = ih.a(param4, var6, param0, 246);
+        var8Lifetime1 = ih.clampToScreenX(param4, var6, param0, 246);
         var9 = ql.a(10, param1, var7Lifetime1, param3);
         this.a(var6, var8Lifetime1, var9, var7Lifetime1, (byte) -120);
         for (var10 = 0; var10 < this.field_Kb; var10++) {

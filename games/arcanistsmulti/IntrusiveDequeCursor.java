@@ -173,8 +173,8 @@ final class IntrusiveDequeCursor {
         var14 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           var6_int = 16 - (-param3 - 485 - (2 + param1));
-          lj.field_t.a(var6_int - 6, 3, 3, n.field_g.field_I - 6, (byte) -120);
-          var7 = -5 + lj.field_t.field_I;
+          NanoFrameClock.field_t.a(var6_int - 6, 3, 3, IntKeyLookup.field_g.field_I - 6, (byte) -120);
+          var7 = -5 + NanoFrameClock.field_t.field_I;
           CredentialKind.field_d.a(2 + (485 + param3) + param1, 5, -param4 + var7, param4, (byte) -120);
           SingleChildContainer.field_D.a(-sa.field_Cb.field_x - param3 + CredentialKind.field_d.field_x, param3, 0, param4, (byte) -120);
           sa.field_Cb.a(sa.field_Cb.field_x, param3 + SingleChildContainer.field_D.field_x, 0, param4, (byte) -120);
@@ -183,16 +183,16 @@ final class IntrusiveDequeCursor {
           if (ln.field_U != null) {
             ln.field_U.setBounds(qo.field_f.field_I, qo.field_f.field_db, qo.field_f.field_x, qo.field_f.field_T, -104);
           }
-          var8 = -param3 + (n.field_g.field_x - var6_int);
+          var8 = -param3 + (IntKeyLookup.field_g.field_x - var6_int);
           var9 = var8 / 2;
           var10 = var9 - (-param2 - param3);
           var11 = 0;
           for (var12 = 0; var12 < 6; var12++) {
             if (var12 >= 5 ||
               null != mn.field_s[var12]) {
-              var13 = (2 + (n.field_g.field_I - 6)) * var11 / (1 + lf.field_g) + 3;
+              var13 = (2 + (IntKeyLookup.field_g.field_I - 6)) * var11 / (1 + lf.field_g) + 3;
               var11++;
-              var7Lifetime1 = (-6 + n.field_g.field_I + 2) * var11 / (lf.field_g + 1) + 3 - 2 - var13;
+              var7Lifetime1 = (-6 + IntKeyLookup.field_g.field_I + 2) * var11 / (lf.field_g + 1) + 3 - 2 - var13;
               if (var12 >= 5) {
                 g.field_g.a(var8, var6_int, var13, var7Lifetime1, (byte) -120);
               } else {

@@ -11,7 +11,7 @@ final class qc {
     static kc field_d;
 
     final static void a(boolean param0) {
-        hi.a(-123, param0);
+        hi.installViewController(-123, param0);
         ob.field_Y.b(480, 8110, 640);
         ob.field_Y.a((byte) -119, 1024, 1280);
         dh.defineScreen(TextFieldValidator.field_h, 9, 6);

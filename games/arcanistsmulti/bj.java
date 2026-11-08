@@ -76,7 +76,7 @@ final class bj extends ob implements ButtonListener {
           this.field_rb.field_v = this.field_v;
           this.field_rb.field_n = 0;
           this.field_rb.field_k = 80;
-          this.field_rb.field_r = (WidgetPainter) ((Object) new jm(go.field_k, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          this.field_rb.field_r = (WidgetPainter) ((Object) new jm(SocketConnector.field_k, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild(-108, this.field_rb);
           this.field_nb = this.a((UiListener) (this), ln.field_R, true);
           this.field_lb = this.a((UiListener) (this), ki.field_t, true);
@@ -177,12 +177,12 @@ final class bj extends ob implements ButtonListener {
             this.field_rb.field_g = "" + var7;
           }
           if (this.field_G &&
-            ka.field_m == null) {
+            ProxySocketConnector.field_m == null) {
             this.k((byte) 116);
             this.field_H.b(new qn(this.field_H, vi.field_C), 15637);
           }
-          if (ka.field_m != null &&
-            ka.field_m.field_e) {
+          if (ProxySocketConnector.field_m != null &&
+            ProxySocketConnector.field_m.field_e) {
             this.k((byte) 122);
             this.field_H.b(new qn(this.field_H, vi.field_C), 15637);
           }
@@ -241,7 +241,7 @@ final class bj extends ob implements ButtonListener {
           var5 = null;
           if (param1 == ~SpriteState.field_t) {
             ec.field_d.field_ub = true;
-            lj.field_j.field_rb = tj.a(param1 - 94, new String[]{ie.field_Nb}, LoginPanel.field_C);
+            NanoFrameClock.field_j.field_rb = tj.a(param1 - 94, new String[]{ie.field_Nb}, LoginPanel.field_C);
             nl.field_Gb.field_Db.field_Hb.field_rb = null;
             var6 = null;
             var7 = (wa) (var4.first(param1 ^ -12622));
@@ -325,7 +325,7 @@ final class bj extends ob implements ButtonListener {
                     if (var7.field_U == 0) {
                       if (var7.field_Jb.field_C &&
                         var15 != 0) {
-                        kh.field_c = var7.field_Cb;
+                        TextLayout.field_c = var7.field_Cb;
                       }
                     } else {
                       var16 = var7.field_Cb;
@@ -345,7 +345,7 @@ final class bj extends ob implements ButtonListener {
                       var5 = var7;
                     }
                   } else {
-                    kh.field_c = var7.field_Gb;
+                    TextLayout.field_c = var7.field_Gb;
                   }
                   var7 = (wa) (var4.next(0));
                   continue;
@@ -366,7 +366,7 @@ final class bj extends ob implements ButtonListener {
             decompiledFrameRemainder0 = false;
           }
           else {
-            lj.field_j.field_rb = PatchEnvelopeSet.field_f;
+            NanoFrameClock.field_j.field_rb = PatchEnvelopeSet.field_f;
             ec.field_d.field_ub = false;
             if (SpriteState.field_t == 1) {
               nl.field_Gb.field_Db.field_Hb.field_rb = le.field_db;

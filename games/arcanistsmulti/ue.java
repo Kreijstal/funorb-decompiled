@@ -37,7 +37,7 @@ final class ue {
             ue.b(-27);
           }
           mf.field_g = -1;
-          hc.field_f = true;
+          ConditionalTextValue.field_f = true;
           ti.field_N = -1;
           bk.field_J = param1.field_V;
           bm.field_g = param1;

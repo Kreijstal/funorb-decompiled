@@ -62,7 +62,7 @@ final class ij extends kc {
           } else {
             if (this.field_Ib[param3] == -1) {
               ua.g(-19741);
-              gb.a(14);
+              SecondaryNodeDeque.a(14);
             } else {
               var5 = 32768 | this.field_Ib[param3];
               var6 = nj.field_c;
@@ -76,7 +76,7 @@ final class ij extends kc {
               var8 = (String) null;
               BufferedRandomAccessFile.a(var5, (String) null, 70, param1, nj.field_c, so.field_p);
               ij.a(param0 ^ -13, nj.field_c, var5, gg.field_e, so.field_p);
-              gb.a(14);
+              SecondaryNodeDeque.a(14);
               cf.a(-113);
             }
           }
@@ -201,7 +201,7 @@ final class ij extends kc {
           var12 = "</col>";
           for (var13 = 0; this.field_Jb > var13; var13++) {
             if (this.field_Lb[var13] > 0) {
-              param6[var13] = var11 + hg.a(3, this.field_Lb[var13]).toUpperCase() + ": " + var12 + param6[var13];
+              param6[var13] = var11 + FrameClock.charToString(3, this.field_Lb[var13]).toUpperCase() + ": " + var12 + param6[var13];
             }
             var14 = null;
             if (this.field_Fb[var13] != null ||
@@ -341,9 +341,9 @@ final class ij extends kc {
           return this.field_Sb.b(100, param1, param2);
         }
         if (null == this.field_Sb &&
-          this == nn.field_q &&
+          this == CacheEntry.field_q &&
           var4 != 0) {
-          gb.a(14);
+          SecondaryNodeDeque.a(14);
           return true;
         }
         var5 = ed.field_Bb;

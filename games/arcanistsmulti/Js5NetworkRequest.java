@@ -74,7 +74,7 @@ final class Js5NetworkRequest extends ArchiveRequest {
             if (var5 >= param1.length()) {
               return null;
             }
-            if (pm.a(param1.charAt(var5), 45)) {
+            if (pm.isAllowedEmailCharacter(param1.charAt(var5), 45)) {
               var5++;
               continue;
             }

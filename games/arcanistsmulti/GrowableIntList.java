@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jl {
+final class GrowableIntList {
     static MidiPcmStream field_h;
     static String field_f;
     static String field_i;
@@ -35,10 +35,10 @@ final class jl {
           var4 = -22 % ((-64 - param0) / 46);
           var4Lifetime1 = la.field_c.field_Z.paragraphHeight(param1, 272, la.field_c.field_z);
           var5 = -103 + var3 / 2 - var4Lifetime1 / 2;
-          gm.field_h.a(320, (-320 + var2_int) / 2, var5, -120 + var3 - 2 * var5, (byte) -120);
-          gm.field_h.field_v = of.a(3, gm.field_h.field_I, 1, 2105376, 11579568, 8421504);
-          la.field_c.a(-24 + (gm.field_h.field_x - 24), 24, 16, -20 + (gm.field_h.field_I - 24), (byte) -120);
-          dm.field_E.a(80, 120, gm.field_h.field_I - 44, 24, (byte) -120);
+          LinkButtonPainter.field_h.a(320, (-320 + var2_int) / 2, var5, -120 + var3 - 2 * var5, (byte) -120);
+          LinkButtonPainter.field_h.field_v = of.a(3, LinkButtonPainter.field_h.field_I, 1, 2105376, 11579568, 8421504);
+          la.field_c.a(-24 + (LinkButtonPainter.field_h.field_x - 24), 24, 16, -20 + (LinkButtonPainter.field_h.field_I - 24), (byte) -120);
+          dm.field_E.a(80, 120, LinkButtonPainter.field_h.field_I - 44, 24, (byte) -120);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -54,7 +54,7 @@ final class jl {
         }
     }
 
-    final void b(int param0, int param1) {
+    final void removeAt(int param0, int param1) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
@@ -77,7 +77,7 @@ final class jl {
         }
     }
 
-    final int c(int param0, int param1) {
+    final int get(int param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_8_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -167,7 +167,7 @@ final class jl {
               if (0 == var6) {
                 if (DirectByteStorage.field_f == null &&
                   hm.field_c) {
-                  var4 = "[" + lj.field_p + "] ";
+                  var4 = "[" + NanoFrameClock.field_p + "] ";
                 }
                 if (null != DirectByteStorage.field_f) {
                   boolean decompiledSharedTail0 = (!(oe.field_a) ||
@@ -236,15 +236,15 @@ final class jl {
         }
     }
 
-    final void a(int param0, int param1) {
+    final void add(int param0, int param1) {
         try {
-          this.a(false, param1 + this.field_m, param0);
+          this.set(false, param1 + this.field_m, param0);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "jl.B(" + param0 + ',' + param1 + ')');
         }
     }
 
-    final static Class a(String param0, int param1) throws ClassNotFoundException {
+    final static Class classForDescriptor(String param0, int param1) throws ClassNotFoundException {
         int var2_int = 0;
         RuntimeException var2 = null;
         Class stackIn_2_0 = null;
@@ -334,7 +334,7 @@ final class jl {
         }
     }
 
-    final static int a(byte param0, int param1) {
+    final static int highestBitIndex(byte param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int stackIn_11_0 = 0;
@@ -376,7 +376,7 @@ final class jl {
         }
     }
 
-    private final void a(int param0, byte param1) {
+    private final void growTo(int param0, byte param1) {
         int[] var3 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
@@ -384,7 +384,7 @@ final class jl {
           if (param1 <= 12) {
             this.field_m = -38;
           }
-          var3 = new int[this.b((byte) 115, param0)];
+          var3 = new int[this.capacityFor((byte) 115, param0)];
           ArraySupport.copyInts(this.field_j, 0, var3, 0, this.field_j.length);
           this.field_j = var3;
           return;
@@ -395,7 +395,7 @@ final class jl {
         }
     }
 
-    final int a(int param0) {
+    final int size(int param0) {
         RuntimeException var2 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -414,18 +414,18 @@ final class jl {
         }
     }
 
-    private final void a(boolean param0, int param1, int param2) {
+    private final void set(boolean param0, int param1, int param2) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
           if (param0) {
-            this.a(-96, -127);
+            this.add(-96, -127);
           }
           if (param1 > this.field_m) {
             this.field_m = param1;
           }
           if (this.field_j.length <= param1) {
-            this.a(param1, (byte) 14);
+            this.growTo(param1, (byte) 14);
           }
           this.field_j[param1] = param2;
           return;
@@ -436,7 +436,7 @@ final class jl {
         }
     }
 
-    private final int b(byte param0, int param1) {
+    private final int capacityFor(byte param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -479,7 +479,7 @@ final class jl {
         }
     }
 
-    private jl() throws Throwable {
+    private GrowableIntList() throws Throwable {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {

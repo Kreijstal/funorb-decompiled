@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lj extends hg {
+final class NanoFrameClock extends FrameClock {
     static String field_m;
     private int field_r;
     static String[][] field_o;
@@ -22,15 +22,15 @@ final class lj extends hg {
     final static void a(int param0, ec param1, int param2, int param3) {
         try {
           if (param3 < 60) {
-            lj.b(false);
+            NanoFrameClock.b(false);
           }
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "lj.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    final long a(byte param0) {
-        this.field_f = this.field_f + this.c((byte) 10);
+    final long nanosUntilNextTick(byte param0) {
+        this.field_f = this.field_f + this.measureElapsedNanos((byte) 10);
         if (this.field_i > this.field_f) {
           return (-this.field_f + this.field_i) / 1000000L;
         }
@@ -38,7 +38,7 @@ final class lj extends hg {
         return 0L;
     }
 
-    final void a(int param0) {
+    final void reset(int param0) {
         if (param0 != -12619) {
           field_u = (int[]) null;
         }
@@ -50,12 +50,12 @@ final class lj extends hg {
 
     final static boolean b(boolean param0) {
         if (!param0) {
-          lj.releaseStatics(-97);
+          NanoFrameClock.releaseStatics(-97);
         }
         return MusicPatchPcmStream.field_s;
     }
 
-    final int a(long param0, byte param1) {
+    final int waitForTicks(long param0, byte param1) {
         int var4;
         int var5;
         var5 = ArcanistsMulti.field_G ? 1 : 0;
@@ -80,7 +80,7 @@ final class lj extends hg {
         return var4;
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void renderThemeBackground(boolean param0, int param1) {
         int var2;
         int var3;
         Sprite var4;
@@ -161,7 +161,7 @@ final class lj extends hg {
         if (param1 == 6) {
           var10 = new Sprite(640, 480);
           var10.makeRasterTarget();
-          gl.a(371, 32, -27327, 576, kf.field_b, 63);
+          gl.drawNineSliceFrame(371, 32, -27327, 576, kf.field_b, 63);
           wm.field_H[var2].makeRasterTarget();
           var10.drawAdditive(0, 0, 128);
           bj.a(var10.field_A, 0);
@@ -175,7 +175,7 @@ final class lj extends hg {
         if (7 == param1) {
           var11 = new Sprite(640, 480);
           var11.makeRasterTarget();
-          gl.a(385, 32, -27327, 576, kf.field_b, 63);
+          gl.drawNineSliceFrame(385, 32, -27327, 576, kf.field_b, 63);
           wm.field_H[var2].makeRasterTarget();
           var11.drawAdditive(0, 0, 128);
           bj.a(var11.field_A, 0);
@@ -189,7 +189,7 @@ final class lj extends hg {
         if (param1 == 9) {
           var12 = new Sprite(640, 480);
           var12.makeRasterTarget();
-          gl.a(330, 32, -27327, 576, kf.field_b, 63);
+          gl.drawNineSliceFrame(330, 32, -27327, 576, kf.field_b, 63);
           wm.field_H[var2].makeRasterTarget();
           var12.drawAdditive(0, 0, 128);
           var13 = new Sprite(640, 480);
@@ -201,7 +201,7 @@ final class lj extends hg {
           gd.field_mb.drawTransparent(-(gd.field_mb.field_n / 2) + 320, 35);
         }
         if (!param0) {
-          lj.a(true, -39);
+          NanoFrameClock.renderThemeBackground(true, -39);
         }
         if (param1 == 8) {
           var14 = new Sprite(640, 480);
@@ -258,11 +258,11 @@ final class lj extends hg {
         field_q = null;
         if (param0 != -80) {
           ec var2 = (ec) null;
-          lj.a(-21, (ec) null, -125, -127);
+          NanoFrameClock.a(-21, (ec) null, -125, -127);
         }
     }
 
-    private final long c(byte param0) {
+    private final long measureElapsedNanos(byte param0) {
         int var9 = 0;
         int var10 = ArcanistsMulti.field_G ? 1 : 0;
         long var2 = System.nanoTime();
@@ -284,7 +284,7 @@ final class lj extends hg {
         return var6 / (long)this.field_l;
     }
 
-    lj() {
+    NanoFrameClock() {
         this.field_r = 0;
         this.field_h = new long[10];
         this.field_i = 0L;

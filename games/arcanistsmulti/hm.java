@@ -7,7 +7,7 @@ final class hm {
     static String field_d;
     static boolean field_c;
 
-    final static boolean a(String param0, String param1, int param2) {
+    final static boolean containsNameVariant(String param0, String param1, int param2) {
         String var3 = null;
         boolean stackIn_15_0 = false;
         RuntimeException stackIn_18_0 = null;
@@ -21,7 +21,7 @@ final class hm {
           if (param2 != -1) {
             return true;
           }
-          var3 = pn.a(8671, param1);
+          var3 = pn.reverseString(8671, param1);
           if (param0.indexOf(param1) == -1 &&
             param0.indexOf(var3) == -1) {
             stackIn_15_0 = (param0.startsWith(param1)) || (param0.startsWith(var3)) || (param0.endsWith(param1)) || (param0.endsWith(var3));
@@ -50,11 +50,11 @@ final class hm {
 
     final static void b(int param0) {
         if (param0 != 0) {
-          hm.a((byte) 69, 72);
+          hm.decodeCp1252Char((byte) 69, 72);
         }
     }
 
-    final static char a(byte param0, int param1) {
+    final static char decodeCp1252Char(byte param0, int param1) {
         int var4 = 0;
         int var2 = -108 / ((-55 - param1) / 44);
         int var3 = param0 & 255;

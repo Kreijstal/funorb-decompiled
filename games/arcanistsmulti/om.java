@@ -25,10 +25,10 @@ final class om extends UiComponent {
           this.field_G = 79;
         }
         super.setBounds(param0, param1, param2, param3, -125);
-        this.e(-385446591);
+        this.rebuildSprites(-385446591);
     }
 
-    final void b(int param0, boolean param1, int param2) {
+    final void setColours(int param0, boolean param1, int param2) {
         if (!param1) {
           this.drawLayer((byte) 89, 89, 4, 126);
         }
@@ -36,7 +36,7 @@ final class om extends UiComponent {
         this.field_J = (16711422 & param0) >> 1;
         this.field_K = (16711422 & param2) >> 1;
         this.field_C = param2;
-        this.e(-385446591);
+        this.rebuildSprites(-385446591);
     }
 
     final static void g(byte param0) {
@@ -65,7 +65,7 @@ final class om extends UiComponent {
           if (var2 == 0) {
             var4 = (aa) (ArchiveRequest.field_o.first(12623));
             if (var4 == null) {
-              ka.b(false);
+              ProxySocketConnector.closeActiveConnection(false);
               return;
             }
             var5 = -var9.position + fj.field_h;
@@ -93,14 +93,14 @@ final class om extends UiComponent {
               break;
             }
             if (var5_ref_ko == null) {
-              ka.b(false);
+              ProxySocketConnector.closeActiveConnection(false);
               return;
             }
             var5_ref_ko.unlink(true);
             return;
           }
-          DelegatingCanvas.a((Throwable) null, "LR1: " + nn.g((byte) -25), (byte) 20);
-          ka.b(false);
+          DelegatingCanvas.a((Throwable) null, "LR1: " + CacheEntry.g((byte) -25), (byte) 20);
+          ProxySocketConnector.closeActiveConnection(false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -109,7 +109,7 @@ final class om extends UiComponent {
         }
     }
 
-    private final Sprite a(int param0, int param1, int param2) {
+    private final Sprite createGradientSprite(int param0, int param1, int param2) {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -142,11 +142,11 @@ final class om extends UiComponent {
           SoftwareRasterizer.drawHorizontalLine(var7 + this.field_z, var6, this.field_z, var12Lifetime1);
           SoftwareRasterizer.drawHorizontalLine(-this.field_z + var7, var6, this.field_z, var12Lifetime1);
         }
-        oo.c(-15405);
+        oo.popClipState(-15405);
         return var14;
     }
 
-    private final Sprite a(int param0) {
+    private final Sprite createEndCapSprite(int param0) {
         int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;
@@ -169,7 +169,7 @@ final class om extends UiComponent {
             SoftwareRasterizer.setPixel(var5, var4, var8 | var8 << 8 | var8 << 16);
           }
         }
-        oo.c(-15405);
+        oo.popClipState(-15405);
         return var3;
     }
 
@@ -188,7 +188,7 @@ final class om extends UiComponent {
             return (Sprite[]) (stackIn_2_0);
           }
           if (param2 <= -117) {
-            stackIn_7_0 = gg.a(0);
+            stackIn_7_0 = gg.createDecodedSprites(0);
             return stackIn_7_0;
           }
           stackIn_5_0 = (Sprite[]) null;
@@ -229,13 +229,13 @@ final class om extends UiComponent {
           for (var6 = param0 - this.field_G; var6 < var5_int; var6 = var6 + param2.field_q) {
             param2.drawTransparent(var6, param1);
           }
-          oo.c(-15405);
+          oo.popClipState(-15405);
           if (SoftwareRasterizer.field_i <= this.field_D.field_q + param0) {
             fk.setSpriteRasterTarget(this.field_A, -23095);
             param2.drawTransparent(-this.field_G, 0);
             param2.drawTransparent(-this.field_G + 2 * this.field_z, 0);
             this.field_F.drawMultiply(0, 0);
-            oo.c(param3 - 15405);
+            oo.popClipState(param3 - 15405);
             this.field_A.drawTransparent(param0, param1);
           }
           if (-this.field_D.field_q + var5_int <= SoftwareRasterizer.field_h) {
@@ -245,7 +245,7 @@ final class om extends UiComponent {
             param2.drawTransparent(-var7, 0);
             param2.drawTransparent(this.field_z * 2 - var7, 0);
             this.field_D.drawMultiply(0, 0);
-            oo.c(param3 ^ -15405);
+            oo.popClipState(param3 ^ -15405);
             this.field_A.drawTransparent(-this.field_D.field_q + var5_int, param1);
             return;
           }
@@ -264,9 +264,9 @@ final class om extends UiComponent {
         }
     }
 
-    private final void e(int param0) {
-        this.field_N = new Sprite[]{this.a(this.field_y, param0 + 385441412, this.field_C), this.a(this.field_J, -5179, this.field_K)};
-        this.field_D = this.a(1);
+    private final void rebuildSprites(int param0) {
+        this.field_N = new Sprite[]{this.createGradientSprite(this.field_y, param0 + 385441412, this.field_C), this.createGradientSprite(this.field_J, -5179, this.field_K)};
+        this.field_D = this.createEndCapSprite(1);
         if (param0 != -385446591) {
           Sprite var3 = (Sprite) null;
           this.a(-100, -38, (Sprite) null, -12);
@@ -302,7 +302,7 @@ final class om extends UiComponent {
         if (this.field_O < 65536) {
           da.clipToRectangle(this.field_v + var5, var6 + this.field_k, 122, (this.field_v * this.field_O >> 16) + var5, var6);
           this.a(var5, var6, this.field_N[1], 0);
-          oo.c(-15405);
+          oo.popClipState(-15405);
         }
     }
 

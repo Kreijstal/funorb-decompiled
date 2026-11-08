@@ -62,7 +62,7 @@ final class qg extends RuntimeException {
               }
             }
             IntrusiveNodeHashTable.field_p = TextFieldValidator.field_m;
-            ka.field_p = ln.field_J;
+            ProxySocketConnector.field_p = ln.field_J;
           }
           var2_intLifetime1 = -49 / ((param0 + 45) / 60);
           cb.field_c = param1;
@@ -70,7 +70,7 @@ final class qg extends RuntimeException {
             oa.field_e > DelegatingCanvas.field_f &&
             ArchiveProvider.field_d) {
             IntrusiveNodeHashTable.field_p = TextFieldValidator.field_m;
-            ka.field_p = ln.field_J;
+            ProxySocketConnector.field_p = ln.field_J;
             DelegatingCanvas.field_f = 0;
           }
           TextFieldValidator.field_m = -1;

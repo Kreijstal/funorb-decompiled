@@ -142,17 +142,17 @@ final class j implements WidgetPainter {
         try {
           var1 = CredentialKind.field_a;
           synchronized (var1) {
-            hg.field_b = hg.field_b + 1;
+            FrameClock.field_b = FrameClock.field_b + 1;
             Js5NetworkRequest.field_u = gn.field_b;
             if (0 > ub.field_b) {
               for (var2 = 0; var2 < 112; var2++) {
                 ri.field_b[var2] = false;
               }
-              ub.field_b = go.field_g;
+              ub.field_b = SocketConnector.field_g;
             } else {
-              while (ub.field_b != go.field_g) {
-                var2 = CanvasRasterBuffer.field_d[go.field_g];
-                go.field_g = 1 + go.field_g & 127;
+              while (ub.field_b != SocketConnector.field_g) {
+                var2 = CanvasRasterBuffer.field_d[SocketConnector.field_g];
+                SocketConnector.field_g = 1 + SocketConnector.field_g & 127;
                 if (var2 >= 0) {
                   ri.field_b[var2] = true;
                   continue;
@@ -188,7 +188,7 @@ final class j implements WidgetPainter {
         try {
           var6_int = param0.field_n + param2;
           var7 = param0.field_j + param3;
-          kh.a(param0.field_v, var6_int, var7, param0.field_k, 83);
+          TextLayout.drawBevelBox(param0.field_v, var6_int, var7, param0.field_k, 83);
           if (param0.isFocused(-2116)) {
             oj.a(-32171, var7 + 2, var6_int + 2, -4 + param0.field_k, param0.field_v - 4);
           }

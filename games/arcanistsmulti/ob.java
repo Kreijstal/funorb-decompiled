@@ -48,9 +48,9 @@ abstract class ob extends vi {
           if (var1 == 0) {
             var1 = 32;
           }
-          mf.a(si.field_l - var1, 21298);
+          mf.setSoundEffectVolume(si.field_l - var1, 21298);
         } else {
-          mf.a(0, 21298);
+          mf.setSoundEffectVolume(0, 21298);
         }
     }
 

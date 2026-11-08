@@ -96,7 +96,7 @@ final class kn extends ob implements ButtonListener {
             kn.releaseStatics(-104);
           }
           if (fc.a(-123, param0, param1, param3)) {
-            stackIn_6_0 = ge.a(param4.b(param3, 26219, param1), 3417);
+            stackIn_6_0 = ge.createBinaryFont(param4.b(param3, 26219, param1), 3417);
             return stackIn_6_0;
           }
           stackIn_4_0 = null;
@@ -201,7 +201,7 @@ final class kn extends ob implements ButtonListener {
                 this.field_V[incrementValue$0] = var3_ref_uj__[var5];
               }
             }
-            pm.a(this.field_V, -1);
+            pm.sortDisplayModes(this.field_V, -1);
           }
           stackIn_31_1 = !(0 >= this.field_V.length);
           this.field_yb = stackIn_31_1;
@@ -268,7 +268,7 @@ final class kn extends ob implements ButtonListener {
             var6_int = -1 + var5_ref_String__.length;
             for (var7_int = 0; var7_int < this.field_V.length; var7_int++) {
               var8 = this.field_V[var7_int];
-              if (null != ka.field_m &&
+              if (null != ProxySocketConnector.field_m &&
                 ob.field_Y.field_m == var8.field_g &&
                 ob.field_Y.field_c == var8.field_e) {
                 var6_int = var7_int;
@@ -445,7 +445,7 @@ final class kn extends ob implements ButtonListener {
             return;
           }
           ed.j(120);
-          n.field_g.b(param3, (byte) 60);
+          IntKeyLookup.field_g.b(param3, (byte) 60);
           if (param2) {
             field_tb = (long[]) null;
           }
@@ -453,7 +453,7 @@ final class kn extends ob implements ButtonListener {
             if (!wh.field_g) {
               ln.field_U = null;
             } else {
-              ln.field_U.processPointerInput(n.field_g.field_V, n.field_g.field_nb, param3, (byte) -104);
+              ln.field_U.processPointerInput(IntKeyLookup.field_g.field_V, IntKeyLookup.field_g.field_nb, param3, (byte) -104);
             }
           }
           for (var4_int = 0; var4_int < 5; var4_int++) {
@@ -474,9 +474,9 @@ final class kn extends ob implements ButtonListener {
           if (var9 != null) {
             eb.a(0, var9);
           }
-          var8 = jl.b(0);
+          var8 = GrowableIntList.b(0);
           if (var8 != null) {
-            kh.field_c = var8;
+            TextLayout.field_c = var8;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -515,7 +515,7 @@ final class kn extends ob implements ButtonListener {
             }
           } else {
             u.b(6);
-            gm.a((byte) -127);
+            LinkButtonPainter.a((byte) -127);
           }
         }
         if (decompiledFrameRemainder0) {
@@ -669,7 +669,7 @@ final class kn extends ob implements ButtonListener {
         if (param0 != 2) {
           return (TextButton) null;
         }
-        if (null != ka.field_m) {
+        if (null != ProxySocketConnector.field_m) {
           return this.field_lb;
         }
         if (null != ob.field_Y &&

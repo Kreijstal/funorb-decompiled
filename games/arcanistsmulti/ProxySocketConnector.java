@@ -4,7 +4,7 @@
 import java.io.*;
 import java.util.*;
 
-final class ka extends go {
+final class ProxySocketConnector extends SocketConnector {
     static String field_q;
     static String field_n;
     static String field_l;
@@ -21,25 +21,25 @@ final class ka extends go {
         return stackIn_7_0;
     }
 
-    final static go a(String param0, int param1, int param2) {
-        ka var3 = null;
+    final static SocketConnector create(String param0, int param1, int param2) {
+        ProxySocketConnector var3 = null;
         RuntimeException var3_ref = null;
-        go stackIn_2_0 = null;
-        ka stackIn_4_0 = null;
+        SocketConnector stackIn_2_0 = null;
+        ProxySocketConnector stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new ka();
-          ((go) ((Object) var3)).field_e = param0;
+          var3 = new ProxySocketConnector();
+          ((SocketConnector) ((Object) var3)).field_e = param0;
           if (param2 != 0) {
-            stackIn_2_0 = (go) null;
+            stackIn_2_0 = (SocketConnector) null;
             return stackIn_2_0;
           }
-          ((go) ((Object) var3)).field_b = param1;
+          ((SocketConnector) ((Object) var3)).field_b = param1;
           stackIn_4_0 = var3;
-          return (go) ((Object) stackIn_4_0);
+          return (SocketConnector) ((Object) stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
@@ -54,7 +54,7 @@ final class ka extends go {
         }
     }
 
-    final java.net.Socket b(byte param0) throws IOException {
+    final java.net.Socket openSocket(byte param0) throws IOException {
         int var9 = 0;
         int stackIn_6_0 = 0;
         java.net.ProxySelector stackIn_9_0;
@@ -124,7 +124,7 @@ final class ka extends go {
         } catch (java.net.URISyntaxException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (java.net.URISyntaxException) (Object) decompiledCaughtException;
-          return this.a((byte) -18);
+          return this.openDirectSocket((byte) -18);
         }
         var3.addAll((Collection) ((Object) var4));
         var6_array = var3.toArray();
@@ -138,7 +138,7 @@ final class ka extends go {
           var11 = (java.net.Proxy) (var10);
           try {
             if (false) throw (hj) null;
-            var12 = this.a(-8973, var11);
+            var12 = this.connectThroughProxy(-8973, var11);
             if (var12 != null) {
               stackIn_25_0 = var12;
               return stackIn_25_0;
@@ -153,19 +153,19 @@ final class ka extends go {
           }
         }
         if (var7 == null) {
-          return this.a((byte) -58);
+          return this.openDirectSocket((byte) -58);
         }
-        throw ka.<RuntimeException>$cfr$sneakyThrow((Throwable) var7);
+        throw ProxySocketConnector.<RuntimeException>$cfr$sneakyThrow((Throwable) var7);
     }
 
-    final static void b(boolean param0) {
+    final static void closeActiveConnection(boolean param0) {
         if (CredentialKind.field_c != null) {
           CredentialKind.field_c.d(-23482);
           CredentialKind.field_c = null;
         }
         if (param0) {
           String var2 = (String) null;
-          ka.a((String) null, 106, 116);
+          ProxySocketConnector.create((String) null, 106, 116);
         }
     }
 
@@ -179,7 +179,7 @@ final class ka extends go {
         field_q = null;
     }
 
-    private final java.net.Socket a(byte param0, String param1, int param2, String param3) throws IOException {
+    private final java.net.Socket connectViaHttpProxy(byte param0, String param1, int param2, String param3) throws IOException {
         java.net.Socket stackIn_9_0 = null;
         Object stackIn_27_0 = null;
         RuntimeException stackIn_30_0 = null;
@@ -273,7 +273,7 @@ final class ka extends go {
         }
     }
 
-    private final java.net.Socket a(int param0, java.net.Proxy param1) throws IOException {
+    private final java.net.Socket connectThroughProxy(int param0, java.net.Proxy param1) throws IOException {
         java.net.Socket stackIn_2_0 = null;
         java.net.Socket stackIn_5_0 = null;
         Object stackIn_8_0 = null;
@@ -303,7 +303,7 @@ final class ka extends go {
             return stackIn_2_0;
           }
           if (param1.type() == java.net.Proxy.Type.DIRECT) {
-            stackIn_5_0 = this.a((byte) -44);
+            stackIn_5_0 = this.openDirectSocket((byte) -44);
             return stackIn_5_0;
           }
           var3 = param1.address();
@@ -345,7 +345,7 @@ final class ka extends go {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6_ref = (Exception) (Object) decompiledCaughtException;
           }
-          stackIn_18_0 = this.a((byte) 49, (String) (var5), var4.getPort(), var4.getHostName());
+          stackIn_18_0 = this.connectViaHttpProxy((byte) 49, (String) (var5), var4.getPort(), var4.getHostName());
           return stackIn_18_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
@@ -387,7 +387,7 @@ final class ka extends go {
         }
     }
 
-    ka() {
+    ProxySocketConnector() {
         this.field_o = java.net.ProxySelector.getDefault();
     }
 

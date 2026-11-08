@@ -50,7 +50,7 @@ final class f extends IntrusiveNode {
         qo.field_f.field_Cb.field_G.clear(param0 ^ -16711298);
         var5 = 0;
         var6 = 0;
-        for (var7 = gb.field_f - 1; var7 >= 0; var7--) {
+        for (var7 = SecondaryNodeDeque.field_f - 1; var7 >= 0; var7--) {
           var8_ref_jg = g.field_d[var7];
           var9 = 0;
           if (!wh.field_g &&
@@ -85,7 +85,7 @@ final class f extends IntrusiveNode {
           }
         }
         var7Lifetime1 = 0;
-        for (var8 = 0; gb.field_f > var8; var8++) {
+        for (var8 = 0; SecondaryNodeDeque.field_f > var8; var8++) {
           var9_ref_jg = g.field_d[var8];
           if (null != var9_ref_jg.field_a) {
             qo.field_f.field_Cb.a(var9_ref_jg.field_a, 110);
@@ -275,7 +275,7 @@ final class f extends IntrusiveNode {
     }
 
     final static void a(boolean param0, int param1, int param2, boolean param3, byte param4, int param5, boolean param6, int param7, int param8, boolean param9, boolean param10, int param11, int param12, int param13) {
-        kh.field_c = null;
+        TextLayout.field_c = null;
         ej.a(101);
         param3 = w.a(0, param8, param1, param11, param3, param2, param13);
         fn.a(param9, param3, param7, param0, param5, param12, param10, param13, param6, 83);

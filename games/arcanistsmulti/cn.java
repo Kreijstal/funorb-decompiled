@@ -15,7 +15,7 @@ final class cn extends ArrayWidgetContainer implements ButtonListener {
     static String field_Q;
 
     public final void a(boolean param0, int param1, int param2, int param3, TextButton param4) {
-        if (this.field_P.getValidationProvider(0).getValidationState(-114) != nn.field_s) {
+        if (this.field_P.getValidationProvider(0).getValidationState(-114) != CacheEntry.field_s) {
           return;
         }
         try {
@@ -28,7 +28,7 @@ final class cn extends ArrayWidgetContainer implements ButtonListener {
     final void updatePointer(UiComponent param0, int param1, int param2, int param3) {
         try {
           super.updatePointer(param0, param1, param2, param3);
-          this.field_L.field_B = this.field_P.getValidationProvider(0).getValidationState(param2 - 287) == nn.field_s ? true : false;
+          this.field_L.field_B = this.field_P.getValidationProvider(0).getValidationState(param2 - 287) == CacheEntry.field_s ? true : false;
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "cn.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
@@ -118,10 +118,10 @@ final class cn extends ArrayWidgetContainer implements ButtonListener {
           if (!param0) {
             field_O = (byte[]) null;
           }
-          for (var1_int = 0; gb.field_f > var1_int; var1_int++) {
+          for (var1_int = 0; SecondaryNodeDeque.field_f > var1_int; var1_int++) {
             g.field_d[var1_int] = null;
           }
-          gb.field_f = 0;
+          SecondaryNodeDeque.field_f = 0;
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "cn.F(" + param0 + ')');
         }

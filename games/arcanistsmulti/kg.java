@@ -4,7 +4,7 @@
 final class kg {
     static int field_b;
     static boolean field_f;
-    private ig field_g;
+    private WeightedLruCache field_g;
     private ResourceArchive field_e;
     static ec field_h;
     static kc field_c;
@@ -26,7 +26,7 @@ final class kg {
         if (param0 != 3) {
           return (oo) null;
         }
-        oo var3 = (oo) (this.field_g.a((long)param1, false));
+        oo var3 = (oo) (this.field_g.get((long)param1, false));
         if (var3 != null) {
           return var3;
         }
@@ -37,21 +37,21 @@ final class kg {
         }
         oo var5 = new oo();
         if (var4 != null) {
-          var5.a((byte) 116, new PacketBuffer(var4));
+          var5.decode((byte) 116, new PacketBuffer(var4));
           if (param1 >= 32768) {
             var5.f(-94);
-            this.field_g.a(var5, (long)param1, -65);
+            this.field_g.putUnitWeight(var5, (long)param1, -65);
             return var5;
           }
-          this.field_g.a(var5, (long)param1, -65);
+          this.field_g.putUnitWeight(var5, (long)param1, -65);
           return var5;
         }
         if (param1 < 32768) {
-          this.field_g.a(var5, (long)param1, -65);
+          this.field_g.putUnitWeight(var5, (long)param1, -65);
           return var5;
         }
         var5.f(-94);
-        this.field_g.a(var5, (long)param1, -65);
+        this.field_g.putUnitWeight(var5, (long)param1, -65);
         return var5;
     }
 
@@ -63,7 +63,7 @@ final class kg {
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
-        this.field_g = new ig(64);
+        this.field_g = new WeightedLruCache(64);
         try {
           this.field_i = param2;
           this.field_e = param1;

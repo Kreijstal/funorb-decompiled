@@ -14,7 +14,7 @@ final class r {
           ResourceArchive var2 = (ResourceArchive) null;
           r.a(51, -102, 48, (ResourceArchive) null);
         }
-        IntrusiveDequeCursor.a(112, nn.field_p, ArchiveProvider.field_a[0].field_n, dh.field_Gb, ImageProducerRasterBuffer.field_r, ra.field_h);
+        IntrusiveDequeCursor.a(112, CacheEntry.field_p, ArchiveProvider.field_a[0].field_n, dh.field_Gb, ImageProducerRasterBuffer.field_r, ra.field_h);
     }
 
     final static Sprite a(int param0, int param1, int param2, ResourceArchive param3) {
@@ -76,7 +76,7 @@ final class r {
           if (sk.field_a == hb.field_Gb) {
             return null;
           }
-          if (pa.field_g == hb.field_Gb &&
+          if (DiskCacheWorker.field_g == hb.field_Gb &&
             param0.equals(KeyboardInputHandler.field_j)) {
             hb.field_Gb = ScreenDisplayMode.field_h;
             stackIn_11_0 = fh.field_i;

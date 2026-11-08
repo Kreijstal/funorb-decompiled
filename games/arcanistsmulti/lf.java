@@ -12,7 +12,7 @@ final class lf {
     static dn field_b;
     static int field_g;
 
-    final static void a(byte param0) {
+    final static void switchToRequestedScreen(byte param0) {
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
         int var1_int = 0;

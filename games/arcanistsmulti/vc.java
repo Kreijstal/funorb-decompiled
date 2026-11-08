@@ -137,7 +137,7 @@ final class vc {
         String var7 = null;
         int var8 = 0;
         try {
-          gl.a(param3.field_k, param4 + param3.field_n, -27327, param3.field_v, this.field_b, param3.field_j + param0);
+          gl.drawNineSliceFrame(param3.field_k, param4 + param3.field_n, -27327, param3.field_v, this.field_b, param3.field_j + param0);
           var6_int = -37 / ((38 - param2) / 59);
           if (null != this.field_d) {
             var7_int = param3.field_n + param4 + this.field_g;

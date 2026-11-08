@@ -329,7 +329,7 @@ final class dn extends kc {
           jf.field_a.writeInt(hj.field_a[1], (byte) -101);
           jf.field_a.writeInt(hj.field_a[2], (byte) -101);
           jf.field_a.writeInt(hj.field_a[3], (byte) -101);
-          i.a(jf.field_a, 24);
+          i.writeRandomData(jf.field_a, 24);
           jf.field_a.writeShort(param4, (byte) -62);
           param1.writeTo(jf.field_a, param2 - 55);
           he.field_e.position = 0;
@@ -340,7 +340,7 @@ final class dn extends kc {
           }
           he.field_e.position = he.field_e.position + 2;
           var5_int = he.field_e.position;
-          he.field_e.writeInt(gm.field_d, (byte) -101);
+          he.field_e.writeInt(LinkButtonPainter.field_d, (byte) -101);
           he.field_e.writeLong(ho.field_c, (byte) 36);
           var6 = 0;
           if (Js5Transport.field_d) {
@@ -356,7 +356,7 @@ final class dn extends kc {
             var6 = var6 | 16;
           }
           he.field_e.writeByte(var6, (byte) -54);
-          var7 = gb.a(cd.getApplet(param2 ^ 3), -120);
+          var7 = SecondaryNodeDeque.getSettingsCookie(cd.getApplet(param2 ^ 3), -120);
           if (var7 == null) {
             var7 = "";
           }

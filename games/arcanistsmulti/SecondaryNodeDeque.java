@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class gb implements Iterable {
+final class SecondaryNodeDeque implements Iterable {
     static IndexedSprite[] field_c;
     static String field_b;
     DualLinkNode field_g;
@@ -13,29 +13,29 @@ final class gb implements Iterable {
     static String field_a;
 
     final static void a(byte param0) {
-        hf.a(29, new int[]{0, 1, 27, 5, 14, 4, 22, 15, 19}, param0 ^ -9, 0, 146, 577, 250);
-        hf.a(31, new int[]{2, 20, 21, 5, 9}, 0, 1, 320, 288, 32);
-        hf.a(31, new int[]{2, 20, 21, 5, 10, 11, 13}, 0, 2, 320, 288, 32);
-        hf.a(31, new int[]{12, 13}, 0, 3, 32, 288, 32);
-        hf.a(31, new int[]{2, 20, 21, 5, 13}, 0, 4, 320, 288, 32);
-        hf.a(31, new int[]{29}, 0, 5, 410, 480, 160);
-        hf.a(31, new int[]{23, 8}, 0, 6, 410, 480, 160);
-        hf.a(31, new int[]{25, 8, 26}, param0 ^ -9, 7, 430, 540, 70);
-        hf.a(31, new int[]{25, 8, 26, 23}, param0 ^ -9, 8, 400, 480, 160);
-        hf.a(31, new int[]{7}, 0, 9, 400, 540, 290);
-        hf.a(31, new int[]{7, 23}, 0, 10, 200, 540, 50);
-        hf.a(31, new int[]{7, 28}, 0, 11, 430, 540, 110);
-        hf.a(31, new int[]{7, 27}, param0 + 9, 12, 430, 540, 110);
-        hf.a(31, new int[]{7}, 0, 13, 430, 420, 220);
+        MembershipOfferScreen.a(29, new int[]{0, 1, 27, 5, 14, 4, 22, 15, 19}, param0 ^ -9, 0, 146, 577, 250);
+        MembershipOfferScreen.a(31, new int[]{2, 20, 21, 5, 9}, 0, 1, 320, 288, 32);
+        MembershipOfferScreen.a(31, new int[]{2, 20, 21, 5, 10, 11, 13}, 0, 2, 320, 288, 32);
+        MembershipOfferScreen.a(31, new int[]{12, 13}, 0, 3, 32, 288, 32);
+        MembershipOfferScreen.a(31, new int[]{2, 20, 21, 5, 13}, 0, 4, 320, 288, 32);
+        MembershipOfferScreen.a(31, new int[]{29}, 0, 5, 410, 480, 160);
+        MembershipOfferScreen.a(31, new int[]{23, 8}, 0, 6, 410, 480, 160);
+        MembershipOfferScreen.a(31, new int[]{25, 8, 26}, param0 ^ -9, 7, 430, 540, 70);
+        MembershipOfferScreen.a(31, new int[]{25, 8, 26, 23}, param0 ^ -9, 8, 400, 480, 160);
+        MembershipOfferScreen.a(31, new int[]{7}, 0, 9, 400, 540, 290);
+        MembershipOfferScreen.a(31, new int[]{7, 23}, 0, 10, 200, 540, 50);
+        MembershipOfferScreen.a(31, new int[]{7, 28}, 0, 11, 430, 540, 110);
+        MembershipOfferScreen.a(31, new int[]{7, 27}, param0 + 9, 12, 430, 540, 110);
+        MembershipOfferScreen.a(31, new int[]{7}, 0, 13, 430, 420, 220);
         if (param0 == -9) {
-          hf.a(31, new int[]{25, 26, 30, 29, 7}, 0, 14, 430, 420, 220);
-          hf.a(29, new int[]{20, 21, 6, 7}, 0, 15, 146, 577, 250);
-          hf.a(31, new int[]{7}, 0, 16, 200, 540, 50);
+          MembershipOfferScreen.a(31, new int[]{25, 26, 30, 29, 7}, 0, 14, 430, 420, 220);
+          MembershipOfferScreen.a(29, new int[]{20, 21, 6, 7}, 0, 15, 146, 577, 250);
+          MembershipOfferScreen.a(31, new int[]{7}, 0, 16, 200, 540, 50);
           return;
         }
     }
 
-    final DualLinkNode b(int param0) {
+    final DualLinkNode removeFirst(int param0) {
         DualLinkNode var2 = null;
         DualLinkNode var2Lifetime1;
         if (param0 != 31) {
@@ -59,7 +59,7 @@ final class gb implements Iterable {
         return (Iterator) ((Object) new fh(this));
     }
 
-    final static String a(java.applet.Applet param0, int param1) {
+    final static String getSettingsCookie(java.applet.Applet param0, int param1) {
         try {
           int var6 = 0;
           String var3 = null;
@@ -137,7 +137,7 @@ final class gb implements Iterable {
         }
     }
 
-    final void a(byte param0, DualLinkNode param1) {
+    final void addLast(byte param0, DualLinkNode param1) {
         if (null != param1.secondaryPrevious) {
           param1.unlinkSecondary((byte) 88);
         }
@@ -154,7 +154,7 @@ final class gb implements Iterable {
         }
     }
 
-    gb() {
+    SecondaryNodeDeque() {
         this.field_g = new DualLinkNode();
         this.field_g.secondaryNext = this.field_g;
         this.field_g.secondaryPrevious = this.field_g;
@@ -171,12 +171,12 @@ final class gb implements Iterable {
 
     final static void a(int param0) {
         oj.field_i = false;
-        if (nn.field_q != null) {
-          nn.field_q.e(-111);
+        if (CacheEntry.field_q != null) {
+          CacheEntry.field_q.e(-111);
         }
         if (param0 != 14) {
           java.applet.Applet var2 = (java.applet.Applet) null;
-          gb.a((java.applet.Applet) null, 114);
+          SecondaryNodeDeque.getSettingsCookie((java.applet.Applet) null, 114);
           if (nj.field_c != 0) {
             ue.b(10);
             ng.field_K = 0;

@@ -17,7 +17,7 @@ final class ql {
         }
         if (param0.field_d != 0 ||
           param0.field_k != 0) {
-          for (var2_int = 0; gb.field_f > var2_int; var2_int++) {
+          for (var2_int = 0; SecondaryNodeDeque.field_f > var2_int; var2_int++) {
             var3 = g.field_d[var2_int];
             if (var3.field_m == 2 &&
               (var3.field_d == param0.field_d && param0.field_k == var3.field_k)) {

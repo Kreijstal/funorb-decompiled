@@ -132,7 +132,7 @@ abstract class vi extends UiContainer {
         SoftwareRasterizer.clear();
         this.a(0, (byte) -117, 0);
         super.drawLayer((byte) -117, -param1 - this.field_n, param2, -this.field_j - param3);
-        oo.c(-15405);
+        oo.popClipState(-15405);
         ed.field_vb.drawAlpha(param1 + this.field_n, param3 + this.field_j, this.field_S);
     }
 

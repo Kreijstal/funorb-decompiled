@@ -53,7 +53,7 @@ final class lo extends TextFieldValidator {
           var4 = 27 / ((-50 - param1) / 36);
           if (var3_int > 0 &&
             var3_int <= 130) {
-            return nn.field_s;
+            return CacheEntry.field_s;
           }
           stackIn_7_0 = ra.field_k;
           return stackIn_7_0;

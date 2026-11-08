@@ -132,7 +132,7 @@ class ej extends TextButton {
         int stackIn_14_0 = 0;
         int var2;
         WidgetTextLayout var3;
-        kh var4;
+        TextLayout var4;
         int var5;
         String var6;
         int var7;
@@ -162,15 +162,15 @@ class ej extends TextButton {
           var6 = this.field_g.substring(var5 + 9, var7);
           var7Lifetime1 = Integer.parseInt(var6);
           var2 = this.field_g.indexOf("</hotspot>", var5);
-          var8 = var4.a((byte) 104, var5);
-          var9 = var4.a((byte) 79, var2);
+          var8 = var4.lineForCharacter((byte) 104, var5);
+          var9 = var4.lineForCharacter((byte) 79, var2);
           var10 = null;
           for (var11 = var8; var9 >= var11; var11++) {
             var12 = var4.field_f[var11];
             if (~var11 != ~var8) {
               stackIn_9_0 = var12.field_f[0];
             } else {
-              stackIn_9_0 = var4.a(var5, 0);
+              stackIn_9_0 = var4.characterOffset(var5, 0);
             }
             var13 = stackIn_9_0;
             if (var9 != var11) {
@@ -180,7 +180,7 @@ class ej extends TextButton {
                 stackIn_14_0 = 0;
               }
             } else {
-              stackIn_14_0 = var4.a(var2, param0 - 63);
+              stackIn_14_0 = var4.characterOffset(var2, param0 - 63);
             }
             var14 = stackIn_14_0;
             var15 = new vl(var7Lifetime1, var13, var12.field_g, var14 - var13, Math.max(var3.a(27184), var12.field_e - var12.field_g));
@@ -254,7 +254,7 @@ class ej extends TextButton {
           stackIn_29_1 = (param1) && (!so.field_j);
           ((kc) (Object) stackIn_28_0).a(stackIn_29_1, true);
         }
-        oo.c(-15405);
+        oo.popClipState(-15405);
     }
 
     final static void a(int param0) {
@@ -262,7 +262,7 @@ class ej extends TextButton {
         if (null != va.field_e) {
           var2 = va.field_e;
           String var1 = var2;
-          jl.a(99, tj.a(-118, new String[]{var2}, i.field_b));
+          GrowableIntList.a(99, tj.a(-118, new String[]{var2}, i.field_b));
           va.field_e = null;
         }
         if (param0 < 94) {
@@ -390,7 +390,7 @@ class ej extends TextButton {
         int var14_intLifetime1Lifetime2;
         var17 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          var2_int = n.field_g.field_nb;
+          var2_int = IntKeyLookup.field_g.field_nb;
           var3 = 90;
           var4 = lo.field_q - 30 + var2_int;
           var5 = 13;
@@ -399,7 +399,7 @@ class ej extends TextButton {
           stackIn_3_0 = var6;
           stackIn_3_1 = var7;
           stackIn_3_2 = 9;
-          if (!hc.field_f) {
+          if (!ConditionalTextValue.field_f) {
             stackIn_4_3 = 8421504;
           } else {
             stackIn_4_3 = 16777215;
@@ -416,7 +416,7 @@ class ej extends TextButton {
           stackIn_9_0 = var6;
           stackIn_9_1 = var7;
           stackIn_9_2 = 7;
-          if (hc.field_f) {
+          if (ConditionalTextValue.field_f) {
             stackIn_10_3 = var9;
           } else {
             stackIn_10_3 = var9 >> 1 & 8355711;
@@ -427,7 +427,7 @@ class ej extends TextButton {
           stackIn_12_1 = "?";
           stackIn_12_2 = var6;
           stackIn_12_3 = var7 - (-(mi.field_B.field_C / 2) + mi.field_B.field_m / 2);
-          if (!hc.field_f) {
+          if (!ConditionalTextValue.field_f) {
             stackIn_13_4 = 8421504;
           } else {
             stackIn_13_4 = 16777215;
@@ -568,7 +568,7 @@ class ej extends TextButton {
           regionExit1: {
             if (mf.field_g > -1) {
               var3Lifetime2 = 75;
-              if (hc.field_f) {
+              if (ConditionalTextValue.field_f) {
                 ArrayWidgetContainer.field_A = 256;
                 IntrusiveNodeHashTable.field_f = vm.field_d[lm.field_f[mf.field_g]];
               }
@@ -680,14 +680,14 @@ class ej extends TextButton {
                           }
                           if (lm.field_f[mf.field_g] == 87 &&
                             var28.o(-22625) != 19) {
-                            var15 = hc.field_g;
+                            var15 = ConditionalTextValue.field_g;
                           }
                           if (lm.field_f[mf.field_g] == 87 &&
                             var28.o(param0 - 22625) == 19) {
                             var15 = rc.field_l;
                           }
                           if (lm.field_f[mf.field_g] == 116) {
-                            var15 = hc.field_g;
+                            var15 = ConditionalTextValue.field_g;
                           }
                           if (lm.field_f[mf.field_g] == 4) {
                             var15 = "Being entangled blocks this spell.";

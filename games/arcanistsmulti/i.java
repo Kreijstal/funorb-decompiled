@@ -14,7 +14,7 @@ final class i {
     tn field_c;
     static int field_d;
 
-    final static Sprite a(boolean param0) {
+    final static Sprite createFirstDecodedSprite(boolean param0) {
         int var5_int = 0;
         byte[] var17 = null;
         int[] var13 = null;
@@ -53,11 +53,11 @@ final class i {
         int var6 = 24;
         int var7 = param4;
         this.field_c.a(param0, param2, var7, var6, 0, param3, param1);
-        lj.field_j.a(ec.field_d.field_x, 0, 0, ImageProducerRasterBuffer.field_r, (byte) -120);
-        ClientException.field_d.a(-80 + (-2 + ec.field_d.field_x) - (nn.field_p + 2), 0, 2 + ImageProducerRasterBuffer.field_r, 18, (byte) -120);
-        nk.field_n.a(nn.field_p + 82, ec.field_d.field_x - (nn.field_p + 2) - 80, ImageProducerRasterBuffer.field_r + 2, 18, (byte) -120);
-        nl.field_Gb.a(20, 2, ec.field_d.field_I - ImageProducerRasterBuffer.field_r - 2 - 20, ec.field_d.field_x, 2 + ImageProducerRasterBuffer.field_r + 20, 0, -16624, nn.field_p);
-        dd.field_c.a(2, 20, nn.field_p, false);
+        NanoFrameClock.field_j.a(ec.field_d.field_x, 0, 0, ImageProducerRasterBuffer.field_r, (byte) -120);
+        ClientException.field_d.a(-80 + (-2 + ec.field_d.field_x) - (CacheEntry.field_p + 2), 0, 2 + ImageProducerRasterBuffer.field_r, 18, (byte) -120);
+        nk.field_n.a(CacheEntry.field_p + 82, ec.field_d.field_x - (CacheEntry.field_p + 2) - 80, ImageProducerRasterBuffer.field_r + 2, 18, (byte) -120);
+        nl.field_Gb.a(20, 2, ec.field_d.field_I - ImageProducerRasterBuffer.field_r - 2 - 20, ec.field_d.field_x, 2 + ImageProducerRasterBuffer.field_r + 20, 0, -16624, CacheEntry.field_p);
+        dd.field_c.a(2, 20, CacheEntry.field_p, false);
     }
 
     public static void releaseStatics(byte param0) {
@@ -167,8 +167,8 @@ final class i {
         var2 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           if (!bj.g(false)) {
-            if (ka.field_m != null &&
-              ka.field_m.field_e) {
+            if (ProxySocketConnector.field_m != null &&
+              ProxySocketConnector.field_m.field_e) {
               u.b(param0 ^ 6);
               pm.field_e.b(new qn(pm.field_e, vi.field_C), 15637);
             }
@@ -190,7 +190,7 @@ final class i {
         }
     }
 
-    final static void a(PacketBuffer param0, int param1) {
+    final static void writeRandomData(PacketBuffer param0, int param1) {
         try {
           int var4 = 0;
           byte[] var2 = null;

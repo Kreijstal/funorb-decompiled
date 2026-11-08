@@ -21,22 +21,22 @@ final class ie extends ed implements ButtonListener {
 
     final static boolean a(int param0, boolean param1) {
         long dupTemp$2 = 0L;
-        if (nn.field_o == null) {
-          nn.field_o = qg.field_b.a(ng.field_G, true, ka.field_q);
+        if (CacheEntry.field_o == null) {
+          CacheEntry.field_o = qg.field_b.a(ng.field_G, true, ProxySocketConnector.field_q);
         }
         if (param0 >= -35) {
           ie.l((byte) 23);
         }
-        if (nn.field_o.field_e == 0) {
+        if (CacheEntry.field_o.field_e == 0) {
           return false;
         }
         dupTemp$2 = qj.b(-26572);
         fo.field_d = dupTemp$2;
         hi.field_d = dupTemp$2;
-        if (nn.field_o.field_e != 1) {
+        if (CacheEntry.field_o.field_e != 1) {
         }
         ob.field_eb = nl.field_Ib;
-        nn.field_o = null;
+        CacheEntry.field_o = null;
         return true;
     }
 
@@ -57,7 +57,7 @@ final class ie extends ed implements ButtonListener {
     }
 
     ie(h param0, ln param1) {
-        super(param0, go.field_k, qe.field_l, false, false);
+        super(param0, SocketConnector.field_k, qe.field_l, false, false);
         try {
           this.field_Kb = param1;
         } catch (RuntimeException runtimeException) {
@@ -181,7 +181,7 @@ final class ie extends ed implements ButtonListener {
           } else {
             var4 = aa.field_h;
           }
-          var5 = new me((ed) (this), go.field_k, var4);
+          var5 = new me((ed) (this), SocketConnector.field_k, var4);
           if (param0.field_f) {
             if (param0.field_h) {
               this.a((byte) -92, (UiComponent) (new ng(this)));
@@ -224,9 +224,9 @@ final class ie extends ed implements ButtonListener {
     }
 
     final static void l(byte param0) {
-        uc.field_d.a(-(!fc.field_a ? 0 : 40 + (2 + (nn.field_p + 2))) + mj.field_s.field_x, 0, 0, 18, (byte) -120);
-        nh.field_z.a(nn.field_p + 42, -40 + (-nn.field_p + mj.field_s.field_x) - 2, 0, 18, (byte) -120);
-        nj.field_m.a(20, nn.field_p, mj.field_s.field_x, false, 0, mj.field_s.field_I - 20, 2);
+        uc.field_d.a(-(!fc.field_a ? 0 : 40 + (2 + (CacheEntry.field_p + 2))) + mj.field_s.field_x, 0, 0, 18, (byte) -120);
+        StrongCacheEntry.field_z.a(CacheEntry.field_p + 42, -40 + (-CacheEntry.field_p + mj.field_s.field_x) - 2, 0, 18, (byte) -120);
+        nj.field_m.a(20, CacheEntry.field_p, mj.field_s.field_x, false, 0, mj.field_s.field_I - 20, 2);
         int var1 = -112 % ((param0 - 45) / 37);
     }
 

@@ -433,7 +433,7 @@ final class nf {
         }
     }
 
-    private final void a(int[] param0, jd param1, byte param2) {
+    private final void a(int[] param0, IsaacRandom param1, byte param2) {
         int stackIn_7_0 = 0;
         int stackIn_7_1 = 0;
         byte stackIn_9_1 = 0;
@@ -472,7 +472,7 @@ final class nf {
         try {
           var4_int = ScreenDisplayMode.a(param1, 8, (byte) -61) + 8 * this.field_O;
           var6 = -115 % ((param2 + 59) / 54);
-          var5 = go.field_j[var4_int];
+          var5 = SocketConnector.field_j[var4_int];
           var7 = new Sprite(512, 512);
           var8 = 128;
           scanLoop1: while (var8 < -128 + this.field_y) {
@@ -521,7 +521,7 @@ final class nf {
                   var13 = stackIn_18_0 - stackIn_18_1;
                   if (tc.field_D[var4_int]) {
                     stackIn_21_0 = Math.abs(var11 - var12);
-                    if (ig.field_a[var4_int]) {
+                    if (WeightedLruCache.field_a[var4_int]) {
                       stackIn_22_1 = var5.field_h / 2;
                     } else {
                       stackIn_22_1 = var5.field_h;
@@ -533,7 +533,7 @@ final class nf {
                   }
                   if (decompiledFrameRemainder1) {
                     var4_int = ScreenDisplayMode.a(param1, 8, (byte) -26) + 8 * this.field_O;
-                    var5 = go.field_j[var4_int];
+                    var5 = SocketConnector.field_j[var4_int];
                     break regionExit3;
                   }
                   var9 = 1;
@@ -548,7 +548,7 @@ final class nf {
                     var8 = var8 - var5.field_h / 4;
                     var14 = var11;
                   }
-                  if (!ig.field_a[var4_int]) {
+                  if (!WeightedLruCache.field_a[var4_int]) {
                     var15 = 0;
                   }
                   regionExit4: {
@@ -658,7 +658,7 @@ final class nf {
                   continue scanLoop2;
                 }
                 var4_int = ScreenDisplayMode.a(param1, 8, (byte) -83) + this.field_O * 8;
-                var20 = go.field_j[var4_int];
+                var20 = SocketConnector.field_j[var4_int];
                 var8 = var8 + var20.field_h / 2;
                 stackIn_7_0 = 26;
                 stackIn_7_1 = var4_int;
@@ -792,7 +792,7 @@ final class nf {
         return this.field_fb != null ? true : false;
     }
 
-    private final int[] c(jd param0, int param1) {
+    private final int[] c(IsaacRandom param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -917,11 +917,11 @@ final class nf {
               this.field_V.field_l = ti.field_I[this.field_O].field_l;
             }
             this.a(0, 120, mn.field_y, 0, this.field_V);
-            var21 = go.field_j[0 + this.field_O * 8];
+            var21 = SocketConnector.field_j[0 + this.field_O * 8];
             this.a(false, -32 + (var34[0] - 128), this.field_V, true, -var35[0] + (this.field_H - 256) - 120, var21.toRgbSprite());
-            var22 = go.field_j[this.field_O * 8 + 1];
+            var22 = SocketConnector.field_j[this.field_O * 8 + 1];
             this.a(false, -96 + var34[3], this.field_V, true, -376 + (this.field_H - var35[3]), var22.toRgbSprite());
-            var23 = go.field_j[3 + this.field_O * 8];
+            var23 = SocketConnector.field_j[3 + this.field_O * 8];
             this.a(false, var34[4] - 128, this.field_V, true, -32 + (-256 + this.field_H) - var35[4], var23.toRgbSprite());
             var24 = var23.copyFlippedHorizontal();
             this.a(false, -128 + var34[2], this.field_V, true, -256 + this.field_H + (-var35[2] - param1), var24.toRgbSprite());
@@ -931,20 +931,20 @@ final class nf {
                 var10 = 3;
                 break;
               }
-              var25 = go.field_j[8 * this.field_O + 2];
+              var25 = SocketConnector.field_j[8 * this.field_O + 2];
               this.a(false, 3 + (var34[var10] - 128), this.field_V, true, -256 + this.field_H - var35[var10], var25.toRgbSprite());
-              var26 = go.field_j[ScreenDisplayMode.a(param0, 4, (byte) -39) - (-4 - this.field_O * 8)];
+              var26 = SocketConnector.field_j[ScreenDisplayMode.a(param0, 4, (byte) -39) - (-4 - this.field_O * 8)];
               this.a(false, -192 + var34[var10] + 3, this.field_V, true, -160 + this.field_H, var26.toRgbSprite());
-              var27 = go.field_j[4 + (ScreenDisplayMode.a(param0, 4, (byte) -100) + this.field_O * 8)];
+              var27 = SocketConnector.field_j[4 + (ScreenDisplayMode.a(param0, 4, (byte) -100) + this.field_O * 8)];
               this.a(false, 3 + (-64 + var34[var10]), this.field_V, true, this.field_H - 160, var27.toRgbSprite());
               var10++;
             } while (var18 == 0);
             while (var10 < 6) {
-              var28 = go.field_j[this.field_O * 8 + 2];
+              var28 = SocketConnector.field_j[this.field_O * 8 + 2];
               this.a(false, 3 + var34[var10] - 128, this.field_V, true, -256 + (this.field_H - var35[var10]), var28.toRgbSprite());
-              var29 = go.field_j[4 + (ScreenDisplayMode.a(param0, 4, (byte) -56) + this.field_O * 8)];
+              var29 = SocketConnector.field_j[4 + (ScreenDisplayMode.a(param0, 4, (byte) -56) + this.field_O * 8)];
               this.a(false, 3 + (var34[var10] - 192), this.field_V, true, -160 + this.field_H, var29.toRgbSprite());
-              var30 = go.field_j[4 + (ScreenDisplayMode.a(param0, 4, (byte) -127) + 8 * this.field_O)];
+              var30 = SocketConnector.field_j[4 + (ScreenDisplayMode.a(param0, 4, (byte) -127) + 8 * this.field_O)];
               this.a(false, 3 + (var34[var10] - 64), this.field_V, true, this.field_H - 160, var30.toRgbSprite());
               var10++;
               if (var18 == 0) {
@@ -960,7 +960,7 @@ final class nf {
               stackIn_48_0 = 1000;
               stackIn_48_1 = var13;
               if (stackIn_48_0 > stackIn_48_1) {
-                var33 = go.field_j[4 + (ScreenDisplayMode.a(param0, 4, (byte) -60) + this.field_O * 8)];
+                var33 = SocketConnector.field_j[4 + (ScreenDisplayMode.a(param0, 4, (byte) -60) + this.field_O * 8)];
                 var14 = ScreenDisplayMode.a(param0, -256 + this.field_y, (byte) -115);
                 var15 = ScreenDisplayMode.a(param0, -256 + this.field_H, (byte) -68);
                 var16 = 1;
@@ -1528,7 +1528,7 @@ final class nf {
         return gj.field_a[this.field_F];
     }
 
-    private final int[] a(int param0, jd param1) {
+    private final int[] a(int param0, IsaacRandom param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -1670,7 +1670,7 @@ final class nf {
           stackIn_15_0 = param1 ? 1 : 0;
         }
         if (stackIn_15_0 != 1) {
-          discarded$1 = this.d(67, (jd) null);
+          discarded$1 = this.d(67, (IsaacRandom) null);
         }
     }
 
@@ -1845,7 +1845,7 @@ final class nf {
         return 10 * this.field_q;
     }
 
-    private final int[] b(jd param0, int param1) {
+    private final int[] b(IsaacRandom param0, int param1) {
         int[] stackIn_11_0 = null;
         int stackIn_11_1 = 0;
         int stackIn_11_2 = 0;
@@ -2183,7 +2183,7 @@ final class nf {
 
     private final boolean a(int param0, int param1, int param2, int param3) {
         int var5 = -106 / ((9 - param3) / 60);
-        return ko.a(this, param2, param0, param1, this.field_Jb, 16777215);
+        return ko.circleHitsMask(this, param2, param0, param1, this.field_Jb, 16777215);
     }
 
     private final boolean c(int param0, int param1, int param2) {
@@ -2260,7 +2260,7 @@ final class nf {
         double var4_double = 0.0;
         mi var5_ref_mi = null;
         double var5_double = 0.0;
-        jd var5_ref_jd = null;
+        IsaacRandom var5_ref_jd = null;
         int var5 = 0;
         double var6_double = 0.0;
         int var6_int = 0;
@@ -2568,8 +2568,8 @@ final class nf {
             this.field_Gb = true;
           }
           if (var3_ref.field_I == 123) {
-            n.field_d.setDeque((byte) 41, this.field_i);
-            var4Lifetime1 = (ml) (n.field_d.first(-96));
+            IntKeyLookup.field_d.setDeque((byte) 41, this.field_i);
+            var4Lifetime1 = (ml) (IntKeyLookup.field_d.first(-96));
             while (var4Lifetime1 != null) {
               stackIn_150_0 = ~((ml) (var4Lifetime1)).field_jb;
               stackIn_150_1 = -34;
@@ -2636,7 +2636,7 @@ final class nf {
                   break;
                 }
               }
-              var4Lifetime1 = (ml) (n.field_d.next(-18502));
+              var4Lifetime1 = (ml) (IntKeyLookup.field_d.next(-18502));
             }
           }
           stackIn_150_0Lifetime1 = 149;
@@ -2652,7 +2652,7 @@ final class nf {
               var33 = var3_ref.field_t;
               var38 = var33;
               if (var38 != null) {
-                var5_ref_jd = new jd(new int[]{this.field_Q, this.field_jb, var33.field_lb, var33.field_db});
+                var5_ref_jd = new IsaacRandom(new int[]{this.field_Q, this.field_jb, var33.field_lb, var33.field_db});
                 var6_int = 0;
                 while (var6_int < 5) {
                   var39 = j.a((ml) null, var38.field_db - var38.field_Y / 2, (byte) 51, this, 95, var38.field_lb, 116);
@@ -2829,7 +2829,7 @@ final class nf {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        jd var12 = null;
+        IsaacRandom var12 = null;
         mi var13 = null;
         mi var14 = null;
         mi var15 = null;
@@ -2849,7 +2849,7 @@ final class nf {
         if (param0 != -17837) {
           return;
         }
-        var12 = new jd(new int[]{this.field_Q, this.field_jb});
+        var12 = new IsaacRandom(new int[]{this.field_Q, this.field_jb});
         var3 = ScreenDisplayMode.a(var12, 2, (byte) -68);
         if (var3 != 0) {
           var3 = -128 + this.field_y - ScreenDisplayMode.a(var12, (this.field_jb - this.l(4)) / this.field_q * 128 + 1, (byte) -57);
@@ -3085,7 +3085,7 @@ final class nf {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          var6 = go.field_j[29];
+          var6 = SocketConnector.field_j[29];
           param1 = param1 - var6.field_k;
           if (param3 != -5) {
             discarded$1 = this.c(-47, -85, 123);
@@ -3294,7 +3294,7 @@ final class nf {
         int[] discarded$1 = null;
         boolean stackIn_7_0 = false;
         if (param0 != -128) {
-          discarded$1 = this.a(-37, (jd) null);
+          discarded$1 = this.a(-37, (IsaacRandom) null);
         }
         stackIn_7_0 = (this.j((byte) -94)) || !(this.field_Db.isEmpty(true));
         return stackIn_7_0;
@@ -3313,7 +3313,7 @@ final class nf {
         var3 = ArcanistsMulti.field_G ? 1 : 0;
         var2 = 0;
         scanLoop1: while (true) {
-          this.a(false, (ol) null, 106);
+          this.a(false, (CameraFollowTarget) null, 106);
           if (!this.d((byte) -128) &&
             !this.field_zb &&
             var3 == 0) {
@@ -3526,7 +3526,7 @@ final class nf {
         MidiPcmStream.field_D.setDeque((byte) 102, this.field_i);
         var3 = 0;
         if (param0 >= -101) {
-          discarded$1 = this.c((jd) null, -100);
+          discarded$1 = this.c((IsaacRandom) null, -100);
         }
         var4 = (ml) (MidiPcmStream.field_D.first(-107));
         while (var4 != null) {
@@ -3596,7 +3596,7 @@ final class nf {
         int[] var21 = null;
         int[] var22 = null;
         int[] var23 = null;
-        jd var24 = null;
+        IsaacRandom var24 = null;
         ml var25 = null;
         ml var26 = null;
         ml var27 = null;
@@ -3625,9 +3625,9 @@ final class nf {
         int var13Lifetime2;
         int var14Lifetime2;
         var16 = ArcanistsMulti.field_G ? 1 : 0;
-        var24 = new jd(new int[]{this.field_Q, -2});
+        var24 = new IsaacRandom(new int[]{this.field_Q, -2});
         if (!param0) {
-          discarded$0 = this.d(-68, (jd) null);
+          discarded$0 = this.d(-68, (IsaacRandom) null);
         }
         boolean decompiledFrameRemainder3 = true;
         var3 = 0;
@@ -3657,7 +3657,7 @@ final class nf {
                     boolean decompiledFrameRemainder1 = true;
                     if (stackIn_33_0 == 0) {
                       var14 = this.field_H - 64;
-                      while (kk.a(var7, var13 - 18, var14 - 34, this.field_V, 0, 0)) {
+                      while (kk.spriteOverlapsMask(var7, var13 - 18, var14 - 34, this.field_V, 0, 0)) {
                         stackIn_16_0 = var14;
                         stackIn_16_1 = 64;
                         if (stackIn_16_0 >= stackIn_16_1) {
@@ -3679,7 +3679,7 @@ final class nf {
                     else {
                       var14 = 64;
                       while (true) {
-                        if (!kk.a(var7, var13 - 18, var14 - 33, this.field_V, 0, 0)) {
+                        if (!kk.spriteOverlapsMask(var7, var13 - 18, var14 - 33, this.field_V, 0, 0)) {
                           stackIn_27_0 = ~(this.field_H - 64);
                           stackIn_27_1 = ~var14;
                           if (stackIn_27_0 <= stackIn_27_1) {
@@ -3736,7 +3736,7 @@ final class nf {
                       boolean decompiledFrameRemainder2 = true;
                       if (stackIn_67_0 == stackIn_67_1) {
                         var14Lifetime2 = -64 + this.field_H;
-                        while (kk.a(var7, var13Lifetime2 - 18, var14Lifetime2 - 34, this.field_V, 0, 0)) {
+                        while (kk.spriteOverlapsMask(var7, var13Lifetime2 - 18, var14Lifetime2 - 34, this.field_V, 0, 0)) {
                           stackIn_49_0 = -65;
                           stackIn_49_1 = ~var14Lifetime2;
                           if (stackIn_49_0 >= stackIn_49_1) {
@@ -3758,7 +3758,7 @@ final class nf {
                       else {
                         var14Lifetime2 = 64;
                         while (true) {
-                          if (!kk.a(var7, var13Lifetime2 - 18, var14Lifetime2 - 33, this.field_V, 0, 0)) {
+                          if (!kk.spriteOverlapsMask(var7, var13Lifetime2 - 18, var14Lifetime2 - 33, this.field_V, 0, 0)) {
                             stackIn_61_0 = ~(this.field_H - 64);
                             stackIn_61_1 = ~var14Lifetime2;
                             if (stackIn_61_0 <= stackIn_61_1) {
@@ -3864,7 +3864,7 @@ final class nf {
                     boolean decompiledFrameRemainder0 = true;
                     if (stackIn_115_0 == stackIn_115_1) {
                       var10 = this.field_H - 64;
-                      while (kk.a(var7, -18 + var9, var10 - 34, this.field_V, 0, 0)) {
+                      while (kk.spriteOverlapsMask(var7, -18 + var9, var10 - 34, this.field_V, 0, 0)) {
                         stackIn_98_0 = 64;
                         stackIn_98_1 = var10;
                         if (stackIn_98_0 <= stackIn_98_1) {
@@ -3886,7 +3886,7 @@ final class nf {
                     else {
                       var10 = 64;
                       while (true) {
-                        if (!kk.a(var7, -18 + var9, 1 + var10 - 34, this.field_V, 0, 0)) {
+                        if (!kk.spriteOverlapsMask(var7, -18 + var9, 1 + var10 - 34, this.field_V, 0, 0)) {
                           stackIn_109_0 = ~var10;
                           stackIn_109_1 = ~(-64 + this.field_H);
                           if (stackIn_109_0 >= stackIn_109_1) {
@@ -3964,7 +3964,7 @@ final class nf {
         return this.field_v[param1];
     }
 
-    final void a(boolean param0, ol param1, int param2) {
+    final void a(boolean param0, CameraFollowTarget param1, int param2) {
         int[] discarded$0 = null;
         int stackIn_4_0 = 0;
         mi stackIn_10_0 = null;
@@ -4038,7 +4038,7 @@ final class nf {
             stackIn_30_0 = param2;
           }
           if (stackIn_30_0 < 103) {
-            discarded$0 = this.b(126, (jd) null);
+            discarded$0 = this.b(126, (IsaacRandom) null);
           }
           this.p((byte) 78);
           if (this.field_Gb) {
@@ -4067,7 +4067,7 @@ final class nf {
         }
     }
 
-    private final int[] c(int param0, jd param1) {
+    private final int[] c(int param0, IsaacRandom param1) {
         int[] stackIn_10_0 = null;
         int stackIn_10_1 = 0;
         int stackIn_10_2 = 0;
@@ -4630,7 +4630,7 @@ final class nf {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        jd var16 = null;
+        IsaacRandom var16 = null;
         int var4_intLifetime1;
         int var5Lifetime1;
         int var6Lifetime1;
@@ -4638,7 +4638,7 @@ final class nf {
         if (param0 != 649860712) {
           this.field_Jb = (IndexedSprite) null;
         }
-        var16 = new jd(new int[]{this.field_Q, -1});
+        var16 = new IsaacRandom(new int[]{this.field_Q, -1});
         this.field_O = this.field_xb;
         if (this.field_O == 9) {
           this.field_O = dh.floorMod(this.field_Q, true, 8);
@@ -4657,9 +4657,9 @@ final class nf {
             this.field_y != mn.field_y.field_g ||
             mn.field_y.field_k != this.field_H) {
             mn.field_y = new IndexedSprite(this.field_y, this.field_H, gg.field_c);
-            decompiledFrameRemainder2 = (null != go.field_j);
+            decompiledFrameRemainder2 = (null != SocketConnector.field_j);
             if (decompiledFrameRemainder2) {
-              mn.field_y.field_l = go.field_j[8 * this.field_O].field_l;
+              mn.field_y.field_l = SocketConnector.field_j[8 * this.field_O].field_l;
               decompiledFrameRemainder2 = (var15 != 0);
             }
           }
@@ -4696,9 +4696,9 @@ final class nf {
             this.field_y != mn.field_y.field_g ||
             mn.field_y.field_k != this.field_H) {
             mn.field_y = new IndexedSprite(this.field_y, this.field_H, gg.field_c);
-            decompiledFrameRemainder2 = (null != go.field_j);
+            decompiledFrameRemainder2 = (null != SocketConnector.field_j);
             if (decompiledFrameRemainder2) {
-              mn.field_y.field_l = go.field_j[8 * this.field_O].field_l;
+              mn.field_y.field_l = SocketConnector.field_j[8 * this.field_O].field_l;
               decompiledFrameRemainder2 = (var15 != 0);
             }
           }
@@ -4717,10 +4717,10 @@ final class nf {
         if ((decompiledFrameRemainder2) &&
           (decompiledFrameCompleted1) &&
           (decompiledFrameCompleted0)) {
-          decompiledFrameRemainder2 = (go.field_j != null);
+          decompiledFrameRemainder2 = (SocketConnector.field_j != null);
         }
         if (decompiledFrameRemainder2) {
-          mn.field_y.field_l = go.field_j[this.field_O * 8].field_l;
+          mn.field_y.field_l = SocketConnector.field_j[this.field_O * 8].field_l;
         }
         boolean decompiledFrameRemainder3 = true;
         boolean decompiledFrameRemainder0 = true;
@@ -4849,7 +4849,7 @@ final class nf {
         this.field_eb = param2 ? true : false;
     }
 
-    private final int[] b(byte param0, jd param1) {
+    private final int[] b(byte param0, IsaacRandom param1) {
         int[] stackIn_10_0 = null;
         int stackIn_10_1 = 0;
         int stackIn_10_2 = 0;
@@ -5416,7 +5416,7 @@ final class nf {
         return 0;
     }
 
-    private final int[] b(int param0, jd param1) {
+    private final int[] b(int param0, IsaacRandom param1) {
         int[] stackIn_10_0 = null;
         int stackIn_10_1 = 0;
         int stackIn_10_2 = 0;
@@ -5488,7 +5488,7 @@ final class nf {
                   stackIn_10_2 = -(var3_int / 2);
                   stackIn_16_3 = (var4[-1 + var5] + var4[var5]) / 2;
                   if (var3_int != 0) {
-                    stackIn_17_4 = param1.a(var3_int, (byte) -116);
+                    stackIn_17_4 = param1.nextIntBelow(var3_int, (byte) -116);
                   } else {
                     stackIn_17_4 = 0;
                   }
@@ -5568,7 +5568,7 @@ final class nf {
             stackIn_47_0 = -11;
             stackIn_47_1 = ~var5;
             if (stackIn_47_0 < stackIn_47_1) {
-              var7 = go.field_j[4 + (ScreenDisplayMode.a(param1, 4, (byte) -124) + this.field_O * 8)];
+              var7 = SocketConnector.field_j[4 + (ScreenDisplayMode.a(param1, 4, (byte) -124) + this.field_O * 8)];
               var11 = ScreenDisplayMode.a(param1, this.field_y - 256, (byte) -69);
               var12 = ScreenDisplayMode.a(param1, -256 + this.field_H, (byte) -86);
               var13 = 1;
@@ -6343,7 +6343,7 @@ final class nf {
         return stackIn_10_0;
     }
 
-    private final int[] d(int param0, jd param1) {
+    private final int[] d(int param0, IsaacRandom param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int[] var4 = null;
@@ -6459,7 +6459,7 @@ final class nf {
                   if (0 == var3_int) {
                     stackIn_27_4 = 0;
                   } else {
-                    stackIn_27_4 = param1.a(var3_int, (byte) -116);
+                    stackIn_27_4 = param1.nextIntBelow(var3_int, (byte) -116);
                   }
                   stackIn_20_0[stackIn_20_1] = stackIn_20_2 + (stackIn_26_3 + stackIn_27_4);
                   var12_ref_int__[var5 * 2] = var4[var5];
@@ -6628,7 +6628,7 @@ final class nf {
         }
     }
 
-    private final int[] a(jd param0, int param1) {
+    private final int[] a(IsaacRandom param0, int param1) {
         int[] stackIn_11_0 = null;
         int stackIn_11_1 = 0;
         int stackIn_11_2 = 0;
@@ -6686,7 +6686,7 @@ final class nf {
                   if (var3_int == 0) {
                     stackIn_18_3 = 0;
                   } else {
-                    stackIn_18_3 = param0.a(var3_int, (byte) -116);
+                    stackIn_18_3 = param0.nextIntBelow(var3_int, (byte) -116);
                   }
                   stackIn_11_0[stackIn_11_1] = stackIn_11_2 + stackIn_18_3 - var3_int / 2;
                   var6[2 * var5] = var4[var5];
@@ -6873,7 +6873,7 @@ final class nf {
         return stackIn_9_0;
     }
 
-    private final void a(int param0, ol param1) {
+    private final void a(int param0, CameraFollowTarget param1) {
         int stackIn_312_0 = 0;
         int stackIn_312_1 = 0;
         int stackIn_320_0 = 0;
@@ -7115,7 +7115,7 @@ final class nf {
           }
           if (var10 == 157) {
             if (param1 != null) {
-              param1.a(-85, var12);
+              param1.followUnit(-85, var12);
               if (this.field_sb != null &&
                 this.field_sb[225] != null) {
                 ti.a((byte) -30, to.field_r[225], this.field_sb[225]);
@@ -7597,7 +7597,7 @@ final class nf {
             }
             var11Lifetime1 = 0;
             if (param1 != null) {
-              param1.a(var24_ref_mi, -126);
+              param1.followProjectile(var24_ref_mi, -126);
             }
           }
           boolean decompiledFrameCompleted11 = true;
@@ -7982,8 +7982,8 @@ final class nf {
           boolean decompiledFrameCompleted9 = true;
           if (var10 == 7) {
             this.a((byte) 80, var10, var4);
-            n.field_d.setDeque((byte) 96, this.field_i);
-            var24_ref_mlLifetime22 = (ml) (n.field_d.first(-74));
+            IntKeyLookup.field_d.setDeque((byte) 96, this.field_i);
+            var24_ref_mlLifetime22 = (ml) (IntKeyLookup.field_d.first(-74));
             while (var24_ref_mlLifetime22 != null) {
               stackIn_456_0 = -12;
               stackIn_456_1 = ~var24_ref_mlLifetime22.field_jb;
@@ -8002,7 +8002,7 @@ final class nf {
                 var24_ref_mlLifetime22.field_ib = 0;
                 var24_ref_mlLifetime22.d(var4, 116);
               }
-              var24_ref_mlLifetime22 = (ml) (n.field_d.next(-18502));
+              var24_ref_mlLifetime22 = (ml) (IntKeyLookup.field_d.next(-18502));
             }
             if (decompiledFrameCompleted9) {
               this.field_D = true;
@@ -8021,8 +8021,8 @@ final class nf {
           boolean decompiledFrameCompleted8 = true;
           if (var10 == 94) {
             this.a((byte) 80, var10, var4);
-            n.field_d.setDeque((byte) 83, this.field_Kb);
-            var24_ref_miLifetime15 = (mi) (n.field_d.first(-105));
+            IntKeyLookup.field_d.setDeque((byte) 83, this.field_Kb);
+            var24_ref_miLifetime15 = (mi) (IntKeyLookup.field_d.first(-105));
             while (var24_ref_miLifetime15 != null) {
               stackIn_470_0 = ~var24_ref_miLifetime15.field_I;
               stackIn_470_1 = -127;
@@ -8036,7 +8036,7 @@ final class nf {
               if (var24_ref_miLifetime15.field_I == 117) {
                 var24_ref_miLifetime15.a(0, 0, 16, 8);
               }
-              var24_ref_miLifetime15 = (mi) (n.field_d.next(-18502));
+              var24_ref_miLifetime15 = (mi) (IntKeyLookup.field_d.next(-18502));
             }
             if (decompiledFrameCompleted8) {
               var24_ref_miLifetime15Lifetime1 = j.a(var12, 0, (byte) -125, this, var10, var8, 126);
@@ -8051,8 +8051,8 @@ final class nf {
           boolean decompiledFrameCompleted7 = true;
           if (stackIn_470_0 == stackIn_470_1) {
             this.a((byte) 80, var10, var4);
-            n.field_d.setDeque((byte) 67, this.field_Kb);
-            var24_ref_miLifetime16 = (mi) (n.field_d.first(-57));
+            IntKeyLookup.field_d.setDeque((byte) 67, this.field_Kb);
+            var24_ref_miLifetime16 = (mi) (IntKeyLookup.field_d.first(-57));
             while (var24_ref_miLifetime16 != null) {
               stackIn_480_0 = -124;
               stackIn_480_1 = ~var24_ref_miLifetime16.field_I;
@@ -8063,7 +8063,7 @@ final class nf {
               if (stackIn_480_0 == stackIn_480_1) {
                 var24_ref_miLifetime16.f(0);
               }
-              var24_ref_miLifetime16 = (mi) (n.field_d.next(-18502));
+              var24_ref_miLifetime16 = (mi) (IntKeyLookup.field_d.next(-18502));
             }
             if (decompiledFrameCompleted7) {
               var24_ref_miLifetime16Lifetime1 = j.a(var12, var9, (byte) -105, this, var10, var8, 123);
@@ -8078,9 +8078,9 @@ final class nf {
           boolean decompiledFrameCompleted6 = true;
           if (stackIn_480_0 == stackIn_480_1) {
             this.a((byte) 80, var10, var4);
-            n.field_d.setDeque((byte) 40, this.field_Kb);
+            IntKeyLookup.field_d.setDeque((byte) 40, this.field_Kb);
             var24Lifetime2 = 0;
-            var25Lifetime4 = (mi) (n.field_d.first(-83));
+            var25Lifetime4 = (mi) (IntKeyLookup.field_d.first(-83));
             while (var25Lifetime4 != null) {
               stackIn_524_0 = var25Lifetime4.field_I;
               stackIn_524_1 = 123;
@@ -8091,11 +8091,11 @@ final class nf {
               if (stackIn_524_0 == stackIn_524_1) {
                 var25Lifetime4.f(0);
               }
-              var25Lifetime4 = (mi) (n.field_d.next(-18502));
+              var25Lifetime4 = (mi) (IntKeyLookup.field_d.next(-18502));
             }
             if (decompiledFrameCompleted6) {
-              n.field_d.setDeque((byte) 69, this.field_i);
-              var25_ref = (ml) (n.field_d.first(-50));
+              IntKeyLookup.field_d.setDeque((byte) 69, this.field_i);
+              var25_ref = (ml) (IntKeyLookup.field_d.first(-50));
               while (true) {
                 if (var25_ref != null) {
                   stackIn_522_0 = -34;
@@ -8165,7 +8165,7 @@ final class nf {
                         break;
                       }
                     }
-                    var25_ref = (ml) (n.field_d.next(-18502));
+                    var25_ref = (ml) (IntKeyLookup.field_d.next(-18502));
                     continue;
                   }
                 } else {
@@ -8185,8 +8185,8 @@ final class nf {
           boolean decompiledFrameCompleted5 = true;
           if (stackIn_524_0 == stackIn_524_1) {
             this.a((byte) 80, var10, var4);
-            n.field_d.setDeque((byte) 99, this.field_i);
-            var24_ref_mlLifetime23 = (ml) (n.field_d.first(-113));
+            IntKeyLookup.field_d.setDeque((byte) 99, this.field_i);
+            var24_ref_mlLifetime23 = (ml) (IntKeyLookup.field_d.first(-113));
             while (var24_ref_mlLifetime23 != null) {
               stackIn_541_0 = var24_ref_mlLifetime23.field_s;
               if (var47 != 0) {
@@ -8203,7 +8203,7 @@ final class nf {
                 var24_ref_mlLifetime23.field_ib = 0;
                 var24_ref_mlLifetime23.d(var4, 24);
               }
-              var24_ref_mlLifetime23 = (ml) (n.field_d.next(-18502));
+              var24_ref_mlLifetime23 = (ml) (IntKeyLookup.field_d.next(-18502));
             }
             if (decompiledFrameCompleted5) {
               this.field_D = true;
@@ -8604,8 +8604,8 @@ final class nf {
             var25Lifetime15.a(0, 0, 64, 8);
             var25Lifetime15.field_v = var12.field_lb;
             var25Lifetime15.field_G = var12.field_db;
-            n.field_d.setDeque((byte) 83, this.field_i);
-            var28_ref = (ml) (n.field_d.first(-44));
+            IntKeyLookup.field_d.setDeque((byte) 83, this.field_i);
+            var28_ref = (ml) (IntKeyLookup.field_d.first(-44));
             while (var28_ref != null) {
               stackIn_689_0 = var28_ref;
               stackIn_689_1 = var12;
@@ -8631,7 +8631,7 @@ final class nf {
                   var28_ref.field_R = var28_ref.field_db << 4;
                 }
               }
-              var28_ref = (ml) (n.field_d.next(-18502));
+              var28_ref = (ml) (IntKeyLookup.field_d.next(-18502));
             }
             if (decompiledFrameCompleted0) {
               this.field_D = true;
@@ -8741,7 +8741,7 @@ final class nf {
         }
     }
 
-    private final int[] a(byte param0, jd param1) {
+    private final int[] a(byte param0, IsaacRandom param1) {
         int stackIn_9_0 = 0;
         int stackIn_9_1 = 0;
         int[] stackIn_20_0 = null;
@@ -9000,7 +9000,7 @@ final class nf {
             var4 = gj.field_c[param1.field_jb];
             if (param1.field_jb == 17 &&
               param1.field_U) {
-              var4 = lj.field_u;
+              var4 = NanoFrameClock.field_u;
             }
             if (param1.field_jb == 10) {
               stackIn_87_0 = 1;
@@ -9297,7 +9297,7 @@ final class nf {
           break;
         }
         if (stackIn_45_0 != stackIn_45_1) {
-          discarded$3 = this.c(18, (jd) null);
+          discarded$3 = this.c(18, (IsaacRandom) null);
         }
         return;
     }
@@ -9437,7 +9437,7 @@ final class nf {
         this.field_Y = -1;
         try {
           MidiPcmStream.field_D = new IntrusiveDequeCursor();
-          n.field_d = new IntrusiveDequeCursor();
+          IntKeyLookup.field_d = new IntrusiveDequeCursor();
           u.field_f = new IntrusiveDequeCursor();
           mk.field_J = new IntrusiveDequeCursor();
           ge.field_p = new IntrusiveDequeCursor();

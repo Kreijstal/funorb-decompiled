@@ -31,7 +31,7 @@ final class uc {
 
     final static void c(int param0) {
         if (oj.field_i) {
-          gb.a(param0 + 11);
+          SecondaryNodeDeque.a(param0 + 11);
         }
         if (param0 != 3) {
           uc.a(-77);

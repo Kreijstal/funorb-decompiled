@@ -272,7 +272,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
                             IntrusiveNodeHashTable.field_f = ScreenDisplayMode.field_b;
                           }
                         } else {
-                          IntrusiveNodeHashTable.field_f = jd.field_c;
+                          IntrusiveNodeHashTable.field_f = IsaacRandom.field_c;
                           if (rk.field_O.a(0, true).field_lb < 516) {
                             rm.field_k = 6;
                           }
@@ -359,13 +359,13 @@ final class DelegatingCanvas extends java.awt.Canvas {
                   if (rm.field_k != 4) {
                     if (rm.field_k != 5) {
                       if (rm.field_k == 6) {
-                        IntrusiveNodeHashTable.field_f = ol.field_e;
+                        IntrusiveNodeHashTable.field_f = CameraFollowTarget.field_e;
                         if (co.countUnitsOfType40(param0 - 20672) <= 1) {
                           rm.field_k = 7;
                         }
                       } else {
                         if (rm.field_k == 7) {
-                          IntrusiveNodeHashTable.field_f = pa.field_f;
+                          IntrusiveNodeHashTable.field_f = DiskCacheWorker.field_f;
                         }
                       }
                     } else {
@@ -482,7 +482,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
                 if (3 == rm.field_k) {
                   ArrayWidgetContainer.field_A = 280;
                   qn.field_ob.field_z = 6000;
-                  IntrusiveNodeHashTable.field_f = jl.field_e;
+                  IntrusiveNodeHashTable.field_f = GrowableIntList.field_e;
                   qn.field_ob.field_B = true;
                   i.b(86);
                 } else {
@@ -586,9 +586,9 @@ final class DelegatingCanvas extends java.awt.Canvas {
             field_h = 0.05152737468678133;
           }
           var5 = (CharSequence) ((Object) param2);
-          var4 = go.a(var5, (byte) -82);
+          var4 = SocketConnector.encodeCp1252(var5, (byte) -82);
           param0.writeUnsignedSmart(var4.length, (byte) -124);
-          param0.position = param0.position + kh.field_g.a(param0.payload, var4.length, var4, param0.position, 1, 0);
+          param0.position = param0.position + TextLayout.field_g.a(param0.payload, var4.length, var4, param0.position, 1, 0);
           stackIn_3_0 = -var3_int + param0.position;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

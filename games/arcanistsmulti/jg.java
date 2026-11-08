@@ -82,7 +82,7 @@ final class jg {
         }
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int floorDivide(int param0, int param1, int param2) {
         if (param1 != -271087521) {
           return -96;
         }

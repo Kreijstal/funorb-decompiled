@@ -140,15 +140,15 @@ final class Bzip2State {
           var14[5] = 7368816;
           var16 = new Sprite[9];
           var16[4] = var12;
-          n.field_g = new kc(0L, param0);
-          lj.field_t = new kc(0L, param4);
-          n.field_g.a(lj.field_t, param8 ^ 27890);
+          IntKeyLookup.field_g = new kc(0L, param0);
+          NanoFrameClock.field_t = new kc(0L, param4);
+          IntKeyLookup.field_g.a(NanoFrameClock.field_t, param8 ^ 27890);
           var17 = new kc(0L, (kc) null);
           var17.field_G = new IntrusiveDeque();
           qo.field_f = new dn(0L, var17, param1, param11);
-          lj.field_t.a(qo.field_f, 96);
+          NanoFrameClock.field_t.a(qo.field_f, 96);
           CredentialKind.field_d = new kc(0L, param6);
-          lj.field_t.a(CredentialKind.field_d, 61);
+          NanoFrameClock.field_t.a(CredentialKind.field_d, 61);
           SingleChildContainer.field_D = new kc(0L, param10);
           SingleChildContainer.field_D.field_Z = oo.field_x;
           CredentialKind.field_d.a(SingleChildContainer.field_D, 24);
@@ -169,7 +169,7 @@ final class Bzip2State {
               boolean decompiledFrameRemainder0 = true;
               if (stackIn_35_0 == stackIn_35_1) {
                 if (hm.field_c) {
-                  stackIn_13_0 = lj.field_p;
+                  stackIn_13_0 = NanoFrameClock.field_p;
                 } else {
                   stackIn_13_0 = UiComponent.field_m;
                 }
@@ -194,7 +194,7 @@ final class Bzip2State {
                 mn.field_s[var18].a(ia.field_b[var18], 81);
                 mn.field_s[var18].a(IntrusiveDequeCursor.field_f[var18], 102);
                 mn.field_s[var18].e((byte) 20);
-                n.field_g.a(mn.field_s[var18], 73);
+                IntKeyLookup.field_g.a(mn.field_s[var18], 73);
                 lf.field_g = lf.field_g + 1;
               }
               var18++;
@@ -205,7 +205,7 @@ final class Bzip2State {
           if (decompiledNaturalLoopExit0) {
             g.field_g = new kc(0L, param3);
             g.field_g.field_rb = qn.field_nb;
-            n.field_g.a(g.field_g, 56);
+            IntKeyLookup.field_g.a(g.field_g, 56);
             if (!td.a(-91) ||
               wh.field_g) {
               ln.field_U = new cn(0, 0, 0, 0);

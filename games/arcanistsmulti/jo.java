@@ -36,7 +36,7 @@ final class jo {
         }
     }
 
-    final static String a(int param0, char param1, int param2) {
+    final static String repeatCharacter(int param0, char param1, int param2) {
         int var4 = 0;
         int var5 = ArcanistsMulti.field_G ? 1 : 0;
         char[] var6 = new char[param2];
@@ -47,7 +47,7 @@ final class jo {
         return new String(var6);
     }
 
-    final static boolean a(PacketBuffer param0, int param1) {
+    final static boolean readByteMatches(PacketBuffer param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -77,7 +77,7 @@ final class jo {
         }
     }
 
-    final static int a(int param0, byte param1, int param2) {
+    final static int reverseBits(int param0, byte param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -104,7 +104,7 @@ final class jo {
 
     public static void releaseStatics(int param0) {
         if (param0 != 0) {
-          jo.a(68, (byte) 21, -121);
+          jo.reverseBits(68, (byte) 21, -121);
         }
         field_d = null;
         field_a = null;

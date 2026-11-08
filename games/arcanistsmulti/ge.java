@@ -25,7 +25,7 @@ final class ge extends IntrusiveNode {
         field_n = null;
     }
 
-    final static BinaryBitmapFont a(byte[] param0, int param1) {
+    final static BinaryBitmapFont createBinaryFont(byte[] param0, int param1) {
         BinaryBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         BinaryBitmapFont stackIn_5_0 = null;

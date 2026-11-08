@@ -25,7 +25,7 @@ final class ih {
         ln.field_J = param1;
     }
 
-    final static int a(int param0, int param1, int param2, int param3) {
+    final static int clampToScreenX(int param0, int param1, int param2, int param3) {
         if (SoftwareRasterizer.field_e >= param0 + param1) {
           return param0;
         }

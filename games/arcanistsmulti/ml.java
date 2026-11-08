@@ -642,7 +642,7 @@ final class ml extends DualLinkNode {
           }
           if (12 == this.field_jb) {
             SoftwareRasterizer.setClip(param1, param0, this.field_L.field_y + param1, EmailLoginCredentials.field_j);
-            go.field_j[29].draw(-128 + var35[0], var35[1] - 256);
+            SocketConnector.field_j[29].draw(-128 + var35[0], var35[1] - 256);
             SoftwareRasterizer.resetClip();
           }
           regionExit1: {
@@ -2083,8 +2083,8 @@ final class ml extends DualLinkNode {
                 this.field_Y = 256;
                 this.field_w = new Sprite(this.field_Y, this.field_Y);
                 this.field_w.makeRasterTarget();
-                go.field_j[29].draw(0, 0);
-                SoftwareRasterizer.fillRectangle(0, -2 + (go.field_j[29].field_f + go.field_j[29].field_c), this.field_Y, this.field_Y, 0);
+                SocketConnector.field_j[29].draw(0, 0);
+                SoftwareRasterizer.fillRectangle(0, -2 + (SocketConnector.field_j[29].field_f + SocketConnector.field_j[29].field_c), this.field_Y, this.field_Y, 0);
               } else {
                 if (var12 == 39) {
                   this.field_J = true;
@@ -2118,7 +2118,7 @@ final class ml extends DualLinkNode {
                                 SoftwareRasterizer.fillCircle(this.field_Y >> 1, this.field_Y >> 1, this.field_Y >> 1, 16777215);
                               }
                               var25 = new int[]{28, 0, 29, 33, 47, 50, var7, 0, 0};
-                              var13_ref_qb____ = new Sprite[][]{kc.field_kb, jd.field_j, DiskCacheRequest.field_u, qe.field_i, hn.field_d, tj.field_A, bo.field_a, h.field_I, fn.field_b};
+                              var13_ref_qb____ = new Sprite[][]{kc.field_kb, IsaacRandom.field_j, DiskCacheRequest.field_u, qe.field_i, hn.field_d, tj.field_A, bo.field_a, h.field_I, fn.field_b};
                               if (kc.field_kb != null) {
                                 var23 = new int[]{204, 170, 238};
                                 var3 = var23;
@@ -2268,7 +2268,7 @@ final class ml extends DualLinkNode {
                                     }
                                     if (this.field_jb == 3) {
                                       this.field_Y = 64;
-                                      var11 = gb.field_c;
+                                      var11 = SecondaryNodeDeque.field_c;
                                       this.field_ib = 75;
                                     }
                                     if (8 == this.field_jb) {
@@ -2406,7 +2406,7 @@ final class ml extends DualLinkNode {
                                   var16++;
                                 }
                               }
-                              var9 = new Sprite[][]{kc.field_kb, jd.field_j, DiskCacheRequest.field_u, qe.field_i, hn.field_d, tj.field_A, bo.field_a, h.field_I, fn.field_b};
+                              var9 = new Sprite[][]{kc.field_kb, IsaacRandom.field_j, DiskCacheRequest.field_u, qe.field_i, hn.field_d, tj.field_A, bo.field_a, h.field_I, fn.field_b};
                               if (kc.field_kb == null) {
                                 this.field_J = false;
                               } else {
@@ -2898,7 +2898,7 @@ final class ml extends DualLinkNode {
                     this.field_L.b(52, var35);
                     break regionExit1;
                   case 12:
-                    this.field_L.a(this.field_db - 256, -60, this.field_lb - 128, go.field_j[29].toRgbSprite());
+                    this.field_L.a(this.field_db - 256, -60, this.field_lb - 128, SocketConnector.field_j[29].toRgbSprite());
                     break regionExit1;
                   case 28:
                   case 32:
@@ -2962,7 +2962,7 @@ final class ml extends DualLinkNode {
           }
           if (null != this.field_L.field_rb &&
             null != this.field_L.field_rb[param2]) {
-            ii.a(param1, false, this.field_L.field_rb[param2], 100 * tm.field_a[param2] / param1);
+            ii.playSample(param1, false, this.field_L.field_rb[param2], 100 * tm.field_a[param2] / param1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4204,13 +4204,13 @@ final class ml extends DualLinkNode {
             this.b(-30225, IndexedSpriteState.field_i[param1]);
           }
           if (this.field_jb == 11) {
-            this.b(-30225, lj.field_g[param1]);
+            this.b(-30225, NanoFrameClock.field_g[param1]);
           }
           if (this.field_jb == 5) {
             this.b(-30225, mb.field_U[param1]);
           }
           if (this.field_jb == 14) {
-            this.b(-30225, lj.field_n[param1]);
+            this.b(-30225, NanoFrameClock.field_n[param1]);
           }
           if (this.field_jb == 15) {
             this.b(-30225, gd.field_pb[param1]);
@@ -4286,7 +4286,7 @@ final class ml extends DualLinkNode {
               if (param0 >= -59) {
                 return;
               }
-              var3 = nm.a(param1, var4, -31843).getFile();
+              var3 = nm.appendSessionParameters(param1, var4, -31843).getFile();
               ei.a("updatelinks", param1, (byte) 114, new Object[]{"home", var3 + "home.ws"});
               ei.a("updatelinks", param1, (byte) 114, new Object[]{"gamelist", var3 + "togamelist.ws"});
               ei.a("updatelinks", param1, (byte) 114, new Object[]{"serverlist", var3 + "toserverlist.ws"});

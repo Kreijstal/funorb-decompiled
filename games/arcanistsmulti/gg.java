@@ -27,7 +27,7 @@ final class gg {
         field_f = null;
     }
 
-    final static Sprite[] a(int param0) {
+    final static Sprite[] createDecodedSprites(int param0) {
         int var2 = 0;
         int var6_int = 0;
         int var7 = 0;

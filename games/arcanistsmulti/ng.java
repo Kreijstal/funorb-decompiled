@@ -79,8 +79,8 @@ final class ng extends UiContainer implements pj, ButtonListener {
         try {
           ej.a(16, sm.field_a);
           if (null != om.field_x) {
-            go.field_d.field_I = 0;
-            var15 = go.field_d;
+            SocketConnector.field_d.field_I = 0;
+            var15 = SocketConnector.field_d;
             var17 = var15;
             var17.field_x = 0;
             CanvasRasterBuffer.field_k.field_I = 0;
@@ -185,7 +185,7 @@ final class ng extends UiContainer implements pj, ButtonListener {
                       }
                     }
                   }
-                  kh.field_c = "<col=A00000>" + nm.field_f + "<br>" + cd.field_s + (String) (var9);
+                  TextLayout.field_c = "<col=A00000>" + nm.field_f + "<br>" + cd.field_s + (String) (var9);
                 }
               }
             } else {

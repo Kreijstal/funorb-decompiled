@@ -148,7 +148,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 this.a(-11232);
                 ce.field_m = se.a(MusicPatchNode.field_r, (java.awt.Component) ((Object) on.field_c), co.field_c, (byte) -123);
                 this.initializeClient((byte) -116);
-                tg.field_e = ki.e((byte) -126);
+                tg.field_e = ki.createFrameClock((byte) -126);
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (wd.field_b != 0L) {
@@ -160,7 +160,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    LoginPanel.field_Q = tg.field_e.a(fd.field_d, -1);
+                    LoginPanel.field_Q = tg.field_e.sleepAndCountTicks(fd.field_d, -1);
                     stackIn_100_0 = 0;
                   }
                   var3 = stackIn_100_0;

@@ -23,7 +23,7 @@ final class sm {
             return true;
           }
           param2 = fb.replaceCharacter(false, '_', param2, "");
-          var3 = pn.a(8671, param1);
+          var3 = pn.reverseString(8671, param1);
           stackIn_8_0 = (param2.indexOf(param1) != -1) || (param2.indexOf(var3) != -1);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -144,9 +144,9 @@ final class sm {
           pc.field_e = new PcmStreamMixer();
           qc.field_a = 1000 * param5 / param2;
           lf.field_a.setStream(pc.field_e);
-          jl.field_h = param3;
-          jl.field_h.a(Bzip2State.field_A, (byte) -66);
-          oh.field_k.setStream(jl.field_h);
+          GrowableIntList.field_h = param3;
+          GrowableIntList.field_h.a(Bzip2State.field_A, (byte) -66);
+          oh.field_k.setStream(GrowableIntList.field_h);
           int var8_int = 110 % ((-25 - param0) / 48);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "sm.D(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');

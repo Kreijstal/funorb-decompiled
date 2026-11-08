@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ig {
+final class WeightedLruCache {
     static boolean[] field_a;
     private int field_e;
     static String field_d;
     static int field_g;
     private int field_f;
-    private gb field_b;
+    private SecondaryNodeDeque field_b;
     private pk field_c;
 
     final static void a(boolean param0, vg param1, int param2, byte param3, int param4) {
@@ -47,7 +47,7 @@ final class ig {
         int var13Lifetime1;
         var19 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          var5_int = jl.a(param3, (-param4 + param2) * 3);
+          var5_int = GrowableIntList.highestBitIndex(param3, (-param4 + param2) * 3);
           var6 = param4 * 3;
           ArchiveProvider.e((byte) -79);
           var7 = -10 + var5_int;
@@ -55,7 +55,7 @@ final class ig {
             param1.field_H != null) {
             UsernameCredentials.d(-24000);
           }
-          ol.field_i = 0;
+          CameraFollowTarget.field_i = 0;
           var8 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (!(param1.field_G > var8)))) {
@@ -112,7 +112,7 @@ final class ig {
                           dupTemp$0 = param1.field_H[var8];
                           SpriteState.field_s[dupTemp$0] = SpriteState.field_s[dupTemp$0] + 1;
                         }
-                        ol.field_i = ol.field_i + 1;
+                        CameraFollowTarget.field_i = CameraFollowTarget.field_i + 1;
                         break;
                       }
                     }
@@ -156,9 +156,9 @@ final class ig {
         }
     }
 
-    private final void a(byte param0, int param1, long param2, Object param3) {
-        nn var6 = null;
-        nh var6_ref = null;
+    private final void put(byte param0, int param1, long param2, Object param3) {
+        CacheEntry var6 = null;
+        StrongCacheEntry var6_ref = null;
         int var7 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -170,22 +170,22 @@ final class ig {
           if (param1 > this.field_e) {
             throw new IllegalStateException();
           }
-          this.a(-104, param2);
+          this.remove(-104, param2);
           this.field_f = this.field_f - param1;
           while (this.field_f < 0) {
-            var6 = (nn) (this.field_b.b(31));
-            this.a(var6, 2147483647);
+            var6 = (CacheEntry) (this.field_b.removeFirst(31));
+            this.removeEntry(var6, 2147483647);
             if (var7 == 0) {
               continue;
             }
             break;
           }
-          var6_ref = new nh(param3, param1);
+          var6_ref = new StrongCacheEntry(param3, param1);
           this.field_c.a((byte) -68, var6_ref, param2);
-          this.field_b.a((byte) 37, var6_ref);
-          ((nn) ((Object) var6_ref)).secondaryKey = 0L;
+          this.field_b.addLast((byte) 37, var6_ref);
+          ((CacheEntry) ((Object) var6_ref)).secondaryKey = 0L;
           if (param0 >= -99) {
-            this.a((byte) -27, 45, 65L, (Object) null);
+            this.put((byte) -27, 45, 65L, (Object) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -202,27 +202,27 @@ final class ig {
         }
     }
 
-    private final void a(int param0, long param1) {
-        nn var4 = null;
+    private final void remove(int param0, long param1) {
+        CacheEntry var4 = null;
         if (param0 > -43) {
           return;
         }
         try {
-          var4 = (nn) (this.field_c.a((byte) -79, param1));
-          this.a(var4, 2147483647);
+          var4 = (CacheEntry) (this.field_c.a((byte) -79, param1));
+          this.removeEntry(var4, 2147483647);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "ig.B(" + param0 + ',' + param1 + ')');
         }
     }
 
-    final void a(Object param0, long param1, int param2) {
+    final void putUnitWeight(Object param0, long param1, int param2) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.a((byte) -102, 1, param1, param0);
+          this.put((byte) -102, 1, param1, param0);
           if (param2 >= -59) {
             this.field_c = (pk) null;
           }
@@ -241,7 +241,7 @@ final class ig {
         }
     }
 
-    private final void a(nn param0, int param1) {
+    private final void removeEntry(CacheEntry param0, int param1) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -254,7 +254,7 @@ final class ig {
             this.field_f = this.field_f + param0.field_r;
           }
           if (param1 != 2147483647) {
-            this.a((byte) 22, 41, 61L, (Object) null);
+            this.put((byte) 22, 41, 61L, (Object) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -271,23 +271,23 @@ final class ig {
         }
     }
 
-    final Object a(long param0, boolean param1) {
-        nn var4 = null;
+    final Object get(long param0, boolean param1) {
+        CacheEntry var4 = null;
         RuntimeException var4_ref = null;
         Object var5 = null;
-        nh var6 = null;
+        StrongCacheEntry var6 = null;
         Object stackIn_2_0 = null;
         Object stackIn_5_0 = null;
         Object stackIn_10_0 = null;
         Object stackIn_17_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = (nn) (this.field_c.a((byte) 118, param0));
+          var4 = (CacheEntry) (this.field_c.a((byte) 118, param0));
           if (var4 == null) {
             stackIn_2_0 = null;
             return stackIn_2_0;
           }
-          var5 = var4.e((byte) 110);
+          var5 = var4.getValue((byte) 110);
           if (param1) {
             stackIn_5_0 = (Object) null;
             return stackIn_5_0;
@@ -299,17 +299,17 @@ final class ig {
             stackIn_10_0 = null;
             return stackIn_10_0;
           }
-          boolean decompiledSharedTail0 = !(!var4.f((byte) 96));
+          boolean decompiledSharedTail0 = !(!var4.isSoftReference((byte) 96));
           if (!decompiledSharedTail0) {
-            this.field_b.a((byte) 37, var4);
+            this.field_b.addLast((byte) 37, var4);
             var4.secondaryKey = 0L;
             decompiledSharedTail0 = (ArcanistsMulti.field_G);
           }
           if (decompiledSharedTail0) {
-            var6 = new nh(var5, var4.field_r);
+            var6 = new StrongCacheEntry(var5, var4.field_r);
             this.field_c.a((byte) -99, var6, var4.key);
-            this.field_b.a((byte) 37, var6);
-            ((nn) ((Object) var6)).secondaryKey = 0L;
+            this.field_b.addLast((byte) 37, var6);
+            ((CacheEntry) ((Object) var6)).secondaryKey = 0L;
             var4.unlink(true);
             var4.unlinkSecondary((byte) 88);
           }
@@ -340,15 +340,15 @@ final class ig {
         try {
           if (ce.field_h > 0 &&
             IntrusiveNode.field_d) {
-            SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_e, n.field_g.field_nb);
-            gm.field_h.a(param1, true);
+            SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_e, IntKeyLookup.field_g.field_nb);
+            LinkButtonPainter.field_h.a(param1, true);
           }
           if (sm.field_a <= param0 &&
             oo.field_y <= 0) {
             return;
           }
           if (so.field_j) {
-            SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_e, n.field_g.field_nb);
+            SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_e, IntKeyLookup.field_g.field_nb);
             nl.field_Fb.a(param1, true);
           }
           return;
@@ -359,17 +359,17 @@ final class ig {
         }
     }
 
-    ig(int param0) {
+    WeightedLruCache(int param0) {
         this(param0, param0);
     }
 
-    private ig(int param0, int param1) {
+    private WeightedLruCache(int param0, int param1) {
         RuntimeException runtimeException = null;
         int var3_int = 0;
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
         var4 = ArcanistsMulti.field_G ? 1 : 0;
-        this.field_b = new gb();
+        this.field_b = new SecondaryNodeDeque();
         try {
           this.field_e = param0;
           this.field_f = param0;

@@ -25,7 +25,7 @@ final class pn {
         ke.g((byte) 94);
     }
 
-    final static String a(int param0, String param1) {
+    final static String reverseString(int param0, String param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         char[] var3 = null;
@@ -98,11 +98,11 @@ final class pn {
           if (param2 >= -35) {
             return;
           }
-          in.field_Gb = pa.field_g;
+          in.field_Gb = DiskCacheWorker.field_g;
           if (255 != param1) {
             if (param1 >= 100 &&
               param1 <= 105) {
-              i.field_i = ho.a((byte) 102, args);
+              i.field_i = ho.createWithLines((byte) 102, args);
               return;
             }
             i.field_i = CipherPacketBuffer.a(0, param1, param3);
@@ -153,7 +153,7 @@ final class pn {
         return pe.a((byte) -86, fj.field_h);
     }
 
-    final static ri a(byte param0, String param1) {
+    final static ri validateEmailAddress(byte param0, String param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String var3 = null;
@@ -179,7 +179,7 @@ final class pn {
             }
             var3 = param1.substring(0, var2_int);
             var4 = param1.substring(1 + var2_int);
-            var5 = pm.a((byte) -58, var3);
+            var5 = pm.validateEmailLocalPart((byte) -58, var3);
             if (var5 == null) {
               return DualLinkNode.a(32752, var4);
             }

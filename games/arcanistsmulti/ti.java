@@ -404,7 +404,7 @@ final class ti extends UiContainer implements ButtonListener {
         ce.field_g[4] = da.field_a;
         ce.field_g[5] = he.field_b;
         ce.field_g[11] = ResourceArchive.field_d;
-        ce.field_g[1] = ol.field_a;
+        ce.field_g[1] = CameraFollowTarget.field_a;
         ce.field_g[30] = IntrusiveNodeHashTable.field_d;
         ce.field_g[29] = me.field_Q;
         ce.field_g[8] = null;
@@ -412,7 +412,7 @@ final class ti extends UiContainer implements ButtonListener {
         ce.field_g[22] = he.field_g;
         ce.field_g[15] = SectorCacheStore.field_i;
         ce.field_g[24] = lh.field_a;
-        ce.field_g[13] = gb.field_a;
+        ce.field_g[13] = SecondaryNodeDeque.field_a;
         ce.field_g[25] = CipherPacketBuffer.field_q;
     }
 

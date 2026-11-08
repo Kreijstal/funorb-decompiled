@@ -4,25 +4,25 @@
 import java.io.*;
 import java.util.*;
 
-public class nd {
+public class CacheFileLocator {
     private static Hashtable field_e;
     private static int field_a;
     private static String field_b;
     private static String field_d;
     private static boolean field_c;
 
-    private nd() throws Throwable {
+    private CacheFileLocator() throws Throwable {
         throw new Error();
     }
 
-    public static File a(byte param0, String param1) {
+    public static File getCacheFile(byte param0, String param1) {
         if (param0 != 67) {
           return (File) null;
         }
-        return nd.a(param1, -3, field_a, field_b);
+        return CacheFileLocator.resolveCacheFile(param1, -3, field_a, field_b);
     }
 
-    public static void a(String param0, int param1, boolean param2) {
+    public static void initialize(String param0, int param1, boolean param2) {
         Exception exception = null;
         Throwable decompiledCaughtException = null;
         field_a = param1;
@@ -43,7 +43,7 @@ public class nd {
         field_d = "~/";
     }
 
-    public static File a(String param0, int param1, int param2, String param3) {
+    public static File resolveCacheFile(String param0, int param1, int param2, String param3) {
         return net.alterorb.launcher.Hook.cacheRedirect(param3, param0);
     }
 

@@ -64,18 +64,18 @@ final class sb {
           if (null != gg.field_h) {
             on.a(1048576, param3, param0, true, param2);
           }
-          if (null != jl.field_h) {
+          if (null != GrowableIntList.field_h) {
             var4_ref = oh.field_k;
             synchronized (var4_ref) {
-              jl.field_h.b(-1, (byte) 69, param3);
+              GrowableIntList.field_h.b(-1, (byte) 69, param3);
               if (f.field_g == param2) {
                 return;
               }
-              jl.field_h.a((byte) -128);
+              GrowableIntList.field_h.a((byte) -128);
               oh.field_k.flushDeviceSafely();
               f.field_g = param2;
               if (f.field_g != null) {
-                jl.field_h.a((byte) -96, param0, f.field_g);
+                GrowableIntList.field_h.a((byte) -96, param0, f.field_g);
               }
             }
           }
@@ -118,7 +118,7 @@ final class sb {
         int var5Lifetime1;
         var9 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          var2_int = n.field_g.field_nb;
+          var2_int = IntKeyLookup.field_g.field_nb;
           if (bk.field_J.a(-31497) == 8) {
             SoftwareRasterizer.setClip(0, 0, 391, 480);
           }
@@ -150,7 +150,7 @@ final class sb {
               if (17 == var5) {
                 var3 = gj.field_c[var4_ref_ml.o(-22625)];
                 if (var4_ref_ml.q(26)) {
-                  var3 = lj.field_u;
+                  var3 = NanoFrameClock.field_u;
                 }
               } else {
                 if (var5 != 10) {

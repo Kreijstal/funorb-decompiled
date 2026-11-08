@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class n {
+final class IntKeyLookup {
     static String field_c;
     private int[] field_f;
     static ri field_b;
@@ -22,21 +22,21 @@ final class n {
           return;
         }
         java.awt.Canvas var2 = (java.awt.Canvas) null;
-        n.a((java.awt.Canvas) null, (byte) -117);
+        IntKeyLookup.attachInputHandlers((java.awt.Canvas) null, (byte) -117);
         field_g = null;
         field_e = null;
         field_d = null;
     }
 
-    final static void a(java.awt.Canvas param0, byte param1) {
-        hg.a(1, (java.awt.Component) ((Object) param0));
+    final static void attachInputHandlers(java.awt.Canvas param0, byte param1) {
+        FrameClock.attachKeyboardInput(1, (java.awt.Component) ((Object) param0));
         if (param1 < 115) {
           return;
         }
         try {
-          no.a((java.awt.Component) ((Object) param0), 0);
-          if (null != nh.field_w) {
-            nh.field_w.a(-15238, (java.awt.Component) ((Object) param0));
+          no.attachMouseInput((java.awt.Component) ((Object) param0), 0);
+          if (null != StrongCacheEntry.field_w) {
+            StrongCacheEntry.field_w.a(-15238, (java.awt.Component) ((Object) param0));
           }
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "n.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -81,7 +81,7 @@ final class n {
         if (var5 < 256) {
           SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_e, SoftwareRasterizer.field_j, 0, -var5 + 256);
         }
-        oo.c(-15405);
+        oo.popClipState(-15405);
         if (SoundCache.field_a < 150) {
           rc.field_h.drawHalfSize(var3, var4);
           var6 = -125 + SoundCache.field_a;
@@ -108,7 +108,7 @@ final class n {
             if (20 > var6Lifetime3) {
               var7Lifetime7 = 256 * var6Lifetime3 / 20;
             }
-            gm.field_l.drawAlpha(var3 + 15, var4 + 10, var5 * var7Lifetime7 >> 8);
+            LinkButtonPainter.field_l.drawAlpha(var3 + 15, var4 + 10, var5 * var7Lifetime7 >> 8);
           }
           return;
         }
@@ -124,7 +124,7 @@ final class n {
             if (20 > var6Lifetime1) {
               var7Lifetime1 = 256 * var6Lifetime1 / 20;
             }
-            gm.field_l.drawAlpha(var3 + 15, var4 + 10, var5 * var7Lifetime1 >> 8);
+            LinkButtonPainter.field_l.drawAlpha(var3 + 15, var4 + 10, var5 * var7Lifetime1 >> 8);
           }
           return;
         }
@@ -135,7 +135,7 @@ final class n {
             if (20 > var6Lifetime1) {
               var7Lifetime2 = 256 * var6Lifetime1 / 20;
             }
-            gm.field_l.drawAlpha(var3 + 15, var4 + 10, var5 * var7Lifetime2 >> 8);
+            LinkButtonPainter.field_l.drawAlpha(var3 + 15, var4 + 10, var5 * var7Lifetime2 >> 8);
           }
           return;
         }
@@ -148,7 +148,7 @@ final class n {
             if (20 > var6Lifetime1) {
               var7Lifetime3Lifetime1 = 256 * var6Lifetime1 / 20;
             }
-            gm.field_l.drawAlpha(var3 + 15, var4 + 10, var5 * var7Lifetime3Lifetime1 >> 8);
+            LinkButtonPainter.field_l.drawAlpha(var3 + 15, var4 + 10, var5 * var7Lifetime3Lifetime1 >> 8);
           }
           return;
         }
@@ -160,7 +160,7 @@ final class n {
             if (20 > var6Lifetime1) {
               var7Lifetime4 = 256 * var6Lifetime1 / 20;
             }
-            gm.field_l.drawAlpha(var3 + 15, var4 + 10, var5 * var7Lifetime4 >> 8);
+            LinkButtonPainter.field_l.drawAlpha(var3 + 15, var4 + 10, var5 * var7Lifetime4 >> 8);
           }
           return;
         }
@@ -172,12 +172,12 @@ final class n {
           if (20 > var6Lifetime2) {
             var7Lifetime6 = 256 * var6Lifetime2 / 20;
           }
-          gm.field_l.drawAlpha(var3 + 15, var4 + 10, var5 * var7Lifetime6 >> 8);
+          LinkButtonPainter.field_l.drawAlpha(var3 + 15, var4 + 10, var5 * var7Lifetime6 >> 8);
         }
         return;
     }
 
-    final int a(int param0, int param1) {
+    final int get(int param0, int param1) {
         int var3;
         int var4;
         int var5;
@@ -198,7 +198,7 @@ final class n {
         }
     }
 
-    n(int[] param0) {
+    IntKeyLookup(int[] param0) {
         int var2_int = 0;
         int var3 = 0;
         int var4 = 0;

@@ -143,10 +143,10 @@ final class qe extends IntrusiveNode {
                     var17 = 0;
                     var13Lifetime1 = var17;
                     while (var9 > var17) {
-                      var12[var17] = jl.a(var10[var17], 33);
+                      var12[var17] = GrowableIntList.classForDescriptor(var10[var17], 33);
                       var17++;
                     }
-                    var18.field_g[var5] = param0.a(-30176, var8, var12, jl.a(var20, -110));
+                    var18.field_g[var5] = param0.a(-30176, var8, var12, GrowableIntList.classForDescriptor(var20, -110));
                     var18.field_l[var5] = var21;
                   }
                 } else {
@@ -160,7 +160,7 @@ final class qe extends IntrusiveNode {
                   }
                   var18.field_o[var5] = var6_int;
                   var18.field_p[var5] = var9;
-                  var18.field_n[var5] = param0.a((byte) -95, var15, jl.a(var16, -100));
+                  var18.field_n[var5] = param0.a((byte) -95, var15, GrowableIntList.classForDescriptor(var16, -100));
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

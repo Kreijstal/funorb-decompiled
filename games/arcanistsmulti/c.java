@@ -127,9 +127,9 @@ final class c {
           ej.a(16, oo.field_y);
           if (DirectByteStorage.field_f != null) {
             IntrusiveNodeHashTable.field_o.field_ub = true;
-            var22 = go.field_d;
+            var22 = SocketConnector.field_d;
             var27 = var22;
-            go.field_d.field_I = 0;
+            SocketConnector.field_d.field_I = 0;
             var27.field_x = 0;
             CanvasRasterBuffer.field_k.field_I = 0;
             var6 = CanvasRasterBuffer.field_k;
@@ -140,19 +140,19 @@ final class c {
             if (qk.k((byte) 105)) {
               nl.field_Db.field_rb = fb.field_c.toUpperCase();
               var9 = (2 + oh.field_h.field_x) / 2;
-              go.field_d.a(-2 + var9, 0, -40 + oh.field_h.field_I, 40, (byte) -120);
+              SocketConnector.field_d.a(-2 + var9, 0, -40 + oh.field_h.field_I, 40, (byte) -120);
               if (DirectByteStorage.field_f.field_Rb < DirectByteStorage.field_f.field_dc) {
-                go.field_d.field_rb = mb.field_O.toUpperCase();
-                go.field_d.field_ub = true;
+                SocketConnector.field_d.field_rb = mb.field_O.toUpperCase();
+                SocketConnector.field_d.field_ub = true;
                 if (var19 != 0) {
-                  go.field_d.field_rb = ck.field_f.toUpperCase();
-                  go.field_d.field_ub = false;
+                  SocketConnector.field_d.field_rb = ck.field_f.toUpperCase();
+                  SocketConnector.field_d.field_ub = false;
                 }
               } else {
-                go.field_d.field_rb = ck.field_f.toUpperCase();
-                go.field_d.field_ub = false;
+                SocketConnector.field_d.field_rb = ck.field_f.toUpperCase();
+                SocketConnector.field_d.field_ub = false;
               }
-              go.field_d.field_v = ko.field_h.field_v;
+              SocketConnector.field_d.field_v = ko.field_h.field_v;
               if (0 < oe.field_b) {
                 if (oe.field_b != 1) {
                   var10_ref_String = tj.a(-36, new String[]{Integer.toString(oe.field_b)}, mm.field_y);
@@ -164,12 +164,12 @@ final class c {
                 }
                 if ((16 & sb.field_e) == 0 &&
                   !so.field_j) {
-                  go.field_d.field_v = ko.field_h.field_Ab;
+                  SocketConnector.field_d.field_v = ko.field_h.field_Ab;
                 }
-                go.field_d.field_rb = go.field_d.field_rb + "<br>" + var10_ref_String;
+                SocketConnector.field_d.field_rb = SocketConnector.field_d.field_rb + "<br>" + var10_ref_String;
               }
               CanvasRasterBuffer.field_k.a(oh.field_h.field_x - var9, var9, -40 + oh.field_h.field_I, 40, (byte) -120);
-              CanvasRasterBuffer.field_k.field_rb = nn.field_m.toUpperCase();
+              CanvasRasterBuffer.field_k.field_rb = CacheEntry.field_m.toUpperCase();
               stackIn_19_0 = CanvasRasterBuffer.field_k;
               stackIn_20_1 = (param2) && (PatchEnvelopeSet.field_a == 0L);
               stackIn_19_0.field_ub = stackIn_20_1;
@@ -298,7 +298,7 @@ final class c {
                       pe.field_Fb[var16] != null) {
                       var18_int = pe.field_Fb[var16][var17_int];
                       if (0 != var18_int &&
-                        !gm.field_c) {
+                        !LinkButtonPainter.field_c) {
                         var11_int = 1;
                       }
                       if (var18_int > var13_int) {
@@ -313,7 +313,7 @@ final class c {
                       CanvasRasterBuffer.field_a[var16] != null) {
                       var18_intLifetime1 = CanvasRasterBuffer.field_a[var16][var17_int];
                       if (var18_intLifetime1 != 0 &&
-                        !gm.field_c) {
+                        !LinkButtonPainter.field_c) {
                         var11_int = 1;
                       }
                       if (var14_int < var18_intLifetime1) {
@@ -406,12 +406,12 @@ final class c {
                   CanvasRasterBuffer.field_k.field_ub = false;
                   if (CanvasRasterBuffer.field_k.field_A) {
                     if (tn.field_Ob.field_c.field_Mb != 0) {
-                      kh.field_c = tj.a(param3 ^ 119, new String[]{ec.field_b}, q.field_O);
+                      TextLayout.field_c = tj.a(param3 ^ 119, new String[]{ec.field_b}, q.field_O);
                       if (var19 != 0) {
-                        kh.field_c = DiskCacheRequest.field_G;
+                        TextLayout.field_c = DiskCacheRequest.field_G;
                       }
                     } else {
-                      kh.field_c = DiskCacheRequest.field_G;
+                      TextLayout.field_c = DiskCacheRequest.field_G;
                     }
                   }
                   decompiledFrameRemainder0 = (var19 != 0);
@@ -474,7 +474,7 @@ final class c {
                     var14 = rf.field_g + (String) (var11);
                   }
                 }
-                kh.field_c = "<col=A00000>" + var13_ref + "<br>" + var14;
+                TextLayout.field_c = "<col=A00000>" + var13_ref + "<br>" + var14;
               }
               if (var19 != 0) {
                 var9_ref_String = DirectByteStorage.field_f.field_ic;
@@ -517,7 +517,7 @@ final class c {
             if (IntrusiveNodeHashTable.field_o.field_U != 0) {
               qc.a(false, DirectByteStorage.field_f.h((byte) 94), param0);
             }
-            if (0 != go.field_d.field_U) {
+            if (0 != SocketConnector.field_d.field_U) {
               so.field_j = true;
             }
             if (CanvasRasterBuffer.field_k.field_U != 0) {

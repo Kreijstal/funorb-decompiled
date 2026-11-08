@@ -22,7 +22,7 @@ final class hi {
         field_h = null;
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void installViewController(int param0, boolean param1) {
         Object var2 = null;
         Object var2Lifetime1;
         Object var2Lifetime2;
@@ -34,17 +34,17 @@ final class hi {
           } else {
             var2Lifetime3 = new wd();
           }
-          ArchiveIndex.a(-113, new v((qi) (var2Lifetime3)));
+          ArchiveIndex.a(-113, new v((ViewResizeListener) (var2Lifetime3)));
           return;
         }
-        hi.a(23, true);
+        hi.installViewController(23, true);
         var2Lifetime1 = null;
         if (!param1) {
           var2Lifetime2 = new rd();
         } else {
           var2Lifetime2 = new wd();
         }
-        ArchiveIndex.a(-113, new v((qi) (var2Lifetime2)));
+        ArchiveIndex.a(-113, new v((ViewResizeListener) (var2Lifetime2)));
     }
 
     static {

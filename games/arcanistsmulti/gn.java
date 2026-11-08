@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class gn {
-    private ig field_i;
+    private WeightedLruCache field_i;
     static String field_j;
     private ResourceArchive field_h;
     private ResourceArchive field_d;
@@ -14,9 +14,9 @@ final class gn {
     static int field_a;
     static String field_f;
 
-    final tk a(int param0, byte param1) {
+    final tk getDefinition(int param0, byte param1) {
         byte[] var4 = null;
-        tk var3 = (tk) (this.field_i.a((long)param0, false));
+        tk var3 = (tk) (this.field_i.get((long)param0, false));
         if (var3 == null) {
           if (param0 >= 32768) {
             var4 = this.field_d.b(32767 & param0, 26219, 1);
@@ -30,7 +30,7 @@ final class gn {
           if (32768 <= param0) {
             var3.e((byte) -127);
           }
-          this.field_i.a(var3, (long)param0, -70);
+          this.field_i.putUnitWeight(var3, (long)param0, -70);
           int var5 = 80 / ((param1 - 3) / 56);
           return var3;
         }
@@ -170,7 +170,7 @@ final class gn {
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        this.field_i = new ig(64);
+        this.field_i = new WeightedLruCache(64);
         try {
           this.field_d = param2;
           this.field_h = param1;

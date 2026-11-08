@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hc {
+final class ConditionalTextValue {
     private String field_b;
     static String field_d;
     private boolean field_c;
@@ -12,7 +12,7 @@ final class hc {
     static boolean field_f;
     static db field_h;
 
-    hc(String param0) {
+    ConditionalTextValue(String param0) {
         this(param0, false);
     }
 
@@ -30,7 +30,7 @@ final class hc {
         return kf.field_a;
     }
 
-    final static void a(java.applet.Applet param0, int param1) {
+    final static void openServerList(java.applet.Applet param0, int param1) {
         try {
           java.net.URL var2 = null;
           Exception var2_ref = null;
@@ -45,7 +45,7 @@ final class hc {
                 field_f = true;
               }
               var2 = new java.net.URL(param0.getCodeBase(), "toserverlist.ws");
-              param0.getAppletContext().showDocument(nm.a(param0, var2, -31843), "_top");
+              param0.getAppletContext().showDocument(nm.appendSessionParameters(param0, var2, -31843), "_top");
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -72,7 +72,7 @@ final class hc {
         }
     }
 
-    hc(String param0, boolean param1) {
+    ConditionalTextValue(String param0, boolean param1) {
         RuntimeException var3 = null;
         boolean stackIn_4_1 = false;
         RuntimeException stackIn_12_0 = null;
@@ -113,7 +113,7 @@ final class hc {
         return hb.field_Gb == sk.field_a ? true : false;
     }
 
-    final String b(int param0) {
+    final String getText(int param0) {
         int var2 = -73 % ((19 - param0) / 42);
         return this.field_b;
     }
@@ -128,13 +128,13 @@ final class hc {
           field_i = null;
           return;
         }
-        hc.releaseStatics((byte) -54);
+        ConditionalTextValue.releaseStatics((byte) -54);
         field_e = null;
         field_g = null;
         field_i = null;
     }
 
-    final boolean a(boolean param0) {
+    final boolean isEnabled(boolean param0) {
         if (!param0) {
           return true;
         }

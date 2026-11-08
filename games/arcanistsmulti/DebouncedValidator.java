@@ -202,7 +202,7 @@ abstract class DebouncedValidator implements ValidationProvider {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = 88 / ((-13 - param0) / 38);
-          stackIn_1_0 = hd.a(param1, (byte) 59, false);
+          stackIn_1_0 = hd.isValidNameText(param1, (byte) 59, false);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -5,7 +5,7 @@ final class v {
     private int field_v;
     private int field_q;
     private int field_o;
-    private qi field_a;
+    private ViewResizeListener field_a;
     private float field_b;
     private int field_u;
     private int field_f;
@@ -30,7 +30,7 @@ final class v {
         this.field_r = co.field_c;
         this.field_a.a(this.field_m, this.field_c, 120);
         jm.field_j = false;
-        FullscreenFocusCanvas var2 = ol.a(0, 0, false, fi.field_d, this.field_c, this.field_m);
+        FullscreenFocusCanvas var2 = CameraFollowTarget.createFullscreenCanvas(0, 0, false, fi.field_d, this.field_c, this.field_m);
         if (param0 > 116) {
           if (var2 == null) {
             this.a(true);
@@ -334,7 +334,7 @@ final class v {
         this.field_a.a(this.field_j, this.field_r, 9);
     }
 
-    v(qi param0) {
+    v(ViewResizeListener param0) {
         this(640, 480, 1280, 1024, 640, 480, 122, 16, param0);
     }
 
@@ -343,7 +343,7 @@ final class v {
         int fieldTemp$0 = 0;
         if (param0 != 93) {
           v.releaseStatics(1);
-          if (ka.field_m != null) {
+          if (ProxySocketConnector.field_m != null) {
             return;
           }
           if (ah.field_c <= 0) {
@@ -377,7 +377,7 @@ final class v {
             ta.field_e = 0;
           }
         } else {
-          if (ka.field_m != null) {
+          if (ProxySocketConnector.field_m != null) {
             return;
           }
           if (ah.field_c <= 0) {
@@ -433,7 +433,7 @@ final class v {
         }
     }
 
-    private v(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, qi param8) {
+    private v(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, ViewResizeListener param8) {
         try {
           this.field_c = 480;
           this.field_h = param3;

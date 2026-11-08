@@ -206,7 +206,7 @@ final class tk extends DualLinkNode {
                 var5 = ValidationState.a((byte) -48, param2, var4);
               }
               if (vd.field_h == 3) {
-                var5 = hf.a(var4, var4, param2, param0 ^ 10068666);
+                var5 = MembershipOfferScreen.a(var4, var4, param2, param0 ^ 10068666);
               }
               if (var5 != null) {
                 var6 = (String) null;
@@ -223,9 +223,9 @@ final class tk extends DualLinkNode {
     }
 
     final static int a(boolean param0, int param1, String param2, String param3, int param4, String param5, byte param6) {
-        hc var7 = null;
+        ConditionalTextValue var7 = null;
         RuntimeException var7_ref = null;
-        hc var8 = null;
+        ConditionalTextValue var8 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
         RuntimeException stackIn_7_0 = null;
@@ -241,8 +241,8 @@ final class tk extends DualLinkNode {
             stackIn_2_0 = -107;
             return stackIn_2_0;
           }
-          var7 = new hc(param2);
-          var8 = new hc(param5);
+          var7 = new ConditionalTextValue(param2);
+          var8 = new ConditionalTextValue(param5);
           stackIn_4_0 = cj.a(param0, (byte) -91, param1, var8, param4, var7, param3);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

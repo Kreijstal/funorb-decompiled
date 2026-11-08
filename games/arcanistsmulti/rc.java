@@ -159,8 +159,8 @@ final class rc {
             var3 = var2 - jo.field_e * jo.field_e;
             param0 = param0 + var3 * (vd.field_k - param0) / var2;
           }
-          n.field_g.a(640, sa.field_Hb, param0, 120, (byte) -120);
-          jd.a(5, vd.field_k - 24, (byte) 19, 640, mm.field_p, 0, dh.field_Gb);
+          IntKeyLookup.field_g.a(640, sa.field_Hb, param0, 120, (byte) -120);
+          IsaacRandom.a(5, vd.field_k - 24, (byte) 19, 640, mm.field_p, 0, dh.field_Gb);
           return;
         }
         CharSequence var4 = (CharSequence) null;
@@ -171,8 +171,8 @@ final class rc {
           var3Lifetime1 = var2Lifetime1 - jo.field_e * jo.field_e;
           param0 = param0 + var3Lifetime1 * (vd.field_k - param0) / var2Lifetime1;
         }
-        n.field_g.a(640, sa.field_Hb, param0, 120, (byte) -120);
-        jd.a(5, vd.field_k - 24, (byte) 19, 640, mm.field_p, 0, dh.field_Gb);
+        IntKeyLookup.field_g.a(640, sa.field_Hb, param0, 120, (byte) -120);
+        IsaacRandom.a(5, vd.field_k - 24, (byte) 19, 640, mm.field_p, 0, dh.field_Gb);
     }
 
     final static boolean b(int param0) {

@@ -109,7 +109,7 @@ final class ub {
           }
           var2 = i.field_e.first(12623);
           while (var2 != null) {
-            gb.a(param1, true);
+            SecondaryNodeDeque.a(param1, true);
             var2 = i.field_e.next(0);
           }
           return;

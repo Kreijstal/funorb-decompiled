@@ -22,7 +22,7 @@ final class oo extends DualLinkNode {
     static vg[] field_u;
     static Sprite field_t;
 
-    private final void a(PacketBuffer param0, int param1, int param2) {
+    private final void decodeOpcode(PacketBuffer param0, int param1, int param2) {
         char[] stackIn_10_0 = null;
         int stackIn_10_1 = 0;
         int stackIn_11_2 = 0;
@@ -57,7 +57,7 @@ final class oo extends DualLinkNode {
                 if (var7 == 0) {
                   stackIn_17_2 = (char)0;
                 } else {
-                  stackIn_17_2 = hm.a((byte) var7, -112);
+                  stackIn_17_2 = hm.decodeCp1252Char((byte) var7, -112);
                 }
                 stackIn_16_0[stackIn_16_1] = stackIn_17_2;
               }
@@ -71,7 +71,7 @@ final class oo extends DualLinkNode {
                 stackIn_10_0 = this.field_z;
                 stackIn_10_1 = var6;
                 if (var7 != 0) {
-                  stackIn_11_2 = hm.a((byte) var7, -104);
+                  stackIn_11_2 = hm.decodeCp1252Char((byte) var7, -104);
                 } else {
                   stackIn_11_2 = 0;
                 }
@@ -116,7 +116,7 @@ final class oo extends DualLinkNode {
         field_o = null;
     }
 
-    final static void c(int param0) {
+    final static void popClipState(int param0) {
         uh var1 = (uh) (Js5Transport.field_j.removeLast(true));
         if (var1 == null) {
           throw new IllegalStateException();
@@ -172,7 +172,7 @@ final class oo extends DualLinkNode {
         }
     }
 
-    final void a(byte param0, PacketBuffer param1) {
+    final void decode(byte param0, PacketBuffer param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -190,7 +190,7 @@ final class oo extends DualLinkNode {
             if (0 == var3_int) {
               return;
             }
-            this.a(param1, var3_int, 127);
+            this.decodeOpcode(param1, var3_int, 127);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

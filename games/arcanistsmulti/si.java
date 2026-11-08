@@ -103,13 +103,13 @@ final class si implements WidgetPainter {
         if (param0 != 116) {
           field_q = (String) null;
           mk.field_O.a(-8456);
-          if (jl.field_c.e(param0 - 3261)) {
+          if (GrowableIntList.field_c.e(param0 - 3261)) {
             return 0;
           }
           return to.d(true);
         }
         mk.field_O.a(-8456);
-        if (jl.field_c.e(param0 - 3261)) {
+        if (GrowableIntList.field_c.e(param0 - 3261)) {
           return 0;
         }
         return to.d(true);

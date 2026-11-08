@@ -39,7 +39,7 @@ final class we {
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var2 = (IOException) (Object) decompiledCaughtException;
-                  ka.b(false);
+                  ProxySocketConnector.closeActiveConnection(false);
                 }
                 he.field_e.position = 0;
               }

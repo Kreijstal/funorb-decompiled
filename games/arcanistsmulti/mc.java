@@ -25,7 +25,7 @@ final class mc {
         throw new Error();
     }
 
-    final static void a(int param0, java.applet.Applet param1) {
+    final static void reloadPage(int param0, java.applet.Applet param1) {
         try {
           String var2 = null;
           Exception var2_ref = null;
@@ -53,7 +53,7 @@ final class mc {
                 var4Lifetime2 = var4Lifetime2 + var2.substring(var3);
               }
               var5 = new java.net.URL(param1.getCodeBase(), var4Lifetime2);
-              param1.getAppletContext().showDocument(nm.a(param1, var5, param0 - 62292), "_self");
+              param1.getAppletContext().showDocument(nm.appendSessionParameters(param1, var5, param0 - 62292), "_self");
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

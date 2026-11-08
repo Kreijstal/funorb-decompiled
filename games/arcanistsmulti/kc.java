@@ -170,9 +170,9 @@ class kc extends to {
         var21 = this.field_qb + var19;
         var22 = this.field_tb + var20;
         if (!this.field_yb) {
-          gl.a(this.field_I, this.field_V, -27327, this.field_x, var16, this.field_nb);
+          gl.drawNineSliceFrame(this.field_I, this.field_V, -27327, this.field_x, var16, this.field_nb);
         } else {
-          gl.a(param3, param6, -27327, param5, var16, param10);
+          gl.drawNineSliceFrame(param3, param6, -27327, param5, var16, param10);
         }
         var23 = 32 / ((25 - param7) / 47);
         if (var17 != null) {

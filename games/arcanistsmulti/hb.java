@@ -144,7 +144,7 @@ final class hb extends kc {
         oh.field_i = false;
         int var1 = 57 / ((param0 + 19) / 41);
         DelegatingCanvas.field_f = 0;
-        ka.field_p = -1;
+        ProxySocketConnector.field_p = -1;
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {

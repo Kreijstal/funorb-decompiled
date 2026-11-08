@@ -60,7 +60,7 @@ final class sc extends ej {
           var6 = this.field_J.getValidationState(-103);
           var35 = (WidgetTextLayout) ((Object) this.field_r);
           var9 = this.field_n + param1;
-          var10 = var35.a(param3, -13372, (UiComponent) (this)) + (var35.a((UiComponent) (this), -126).a((byte) -58) >> 1);
+          var10 = var35.a(param3, -13372, (UiComponent) (this)) + (var35.a((UiComponent) (this), -126).height((byte) -58) >> 1);
           if (da.field_f != var6 &&
             IsaacCipher.field_c != var6) {
             if (var6 == ra.field_k) {
@@ -68,7 +68,7 @@ final class sc extends ej {
               var19.drawAdditive(var9, var10 - (var19.field_y >> 1), 256);
               return;
             }
-            if (nn.field_s == var6) {
+            if (CacheEntry.field_s == var6) {
               var20 = qk.field_lb[1];
               var20.drawAdditive(var9, var10 - (var20.field_y >> 1), 256);
               return;
@@ -82,7 +82,7 @@ final class sc extends ej {
             this.field_Y = new Sprite(var11, var12);
             fk.setSpriteRasterTarget(this.field_Y, -23095);
             var21.drawRotatedAboutPivot(112, 144, var21.field_n << 4, var21.field_w << 4, -this.field_X << 10, 4096);
-            oo.c(-15405);
+            oo.popClipState(-15405);
             this.field_Y.drawAdditive(-(var21.field_n >> 1) + var9, var10 - var21.field_w, 256);
             return;
           }
@@ -90,7 +90,7 @@ final class sc extends ej {
             this.field_Y = new Sprite(var11, var12);
             fk.setSpriteRasterTarget(this.field_Y, -23095);
             var21.drawRotatedAboutPivot(112, 144, var21.field_n << 4, var21.field_w << 4, -this.field_X << 10, 4096);
-            oo.c(-15405);
+            oo.popClipState(-15405);
             this.field_Y.drawAdditive(-(var21.field_n >> 1) + var9, var10 - var21.field_w, 256);
             return;
           }
@@ -98,14 +98,14 @@ final class sc extends ej {
             fk.setSpriteRasterTarget(this.field_Y, -23095);
             SoftwareRasterizer.clear();
             var21.drawRotatedAboutPivot(112, 144, var21.field_n << 4, var21.field_w << 4, -this.field_X << 10, 4096);
-            oo.c(-15405);
+            oo.popClipState(-15405);
             this.field_Y.drawAdditive(-(var21.field_n >> 1) + var9, var10 - var21.field_w, 256);
             return;
           }
           this.field_Y = new Sprite(var11, var12);
           fk.setSpriteRasterTarget(this.field_Y, -23095);
           var21.drawRotatedAboutPivot(112, 144, var21.field_n << 4, var21.field_w << 4, -this.field_X << 10, 4096);
-          oo.c(-15405);
+          oo.popClipState(-15405);
           this.field_Y.drawAdditive(-(var21.field_n >> 1) + var9, var10 - var21.field_w, 256);
           return;
         }
@@ -126,7 +126,7 @@ final class sc extends ej {
           var6 = this.field_J.getValidationState(-103);
           var36 = (WidgetTextLayout) ((Object) this.field_r);
           var9Lifetime1 = this.field_n + param1;
-          var10Lifetime1 = var36.a(param3, -13372, (UiComponent) (this)) + (var36.a((UiComponent) (this), -126).a((byte) -58) >> 1);
+          var10Lifetime1 = var36.a(param3, -13372, (UiComponent) (this)) + (var36.a((UiComponent) (this), -126).height((byte) -58) >> 1);
           if (da.field_f == var6) {
             var23 = qk.field_lb[0];
             var11Lifetime1 = var23.field_n << 1;
@@ -135,7 +135,7 @@ final class sc extends ej {
               this.field_Y = new Sprite(var11Lifetime1, var12Lifetime1);
               fk.setSpriteRasterTarget(this.field_Y, -23095);
               var23.drawRotatedAboutPivot(112, 144, var23.field_n << 4, var23.field_w << 4, -this.field_X << 10, 4096);
-              oo.c(-15405);
+              oo.popClipState(-15405);
               this.field_Y.drawAdditive(-(var23.field_n >> 1) + var9Lifetime1, var10Lifetime1 - var23.field_w, 256);
               return;
             }
@@ -143,7 +143,7 @@ final class sc extends ej {
               this.field_Y = new Sprite(var11Lifetime1, var12Lifetime1);
               fk.setSpriteRasterTarget(this.field_Y, -23095);
               var23.drawRotatedAboutPivot(112, 144, var23.field_n << 4, var23.field_w << 4, -this.field_X << 10, 4096);
-              oo.c(-15405);
+              oo.popClipState(-15405);
               this.field_Y.drawAdditive(-(var23.field_n >> 1) + var9Lifetime1, var10Lifetime1 - var23.field_w, 256);
               return;
             }
@@ -151,14 +151,14 @@ final class sc extends ej {
               fk.setSpriteRasterTarget(this.field_Y, -23095);
               SoftwareRasterizer.clear();
               var23.drawRotatedAboutPivot(112, 144, var23.field_n << 4, var23.field_w << 4, -this.field_X << 10, 4096);
-              oo.c(-15405);
+              oo.popClipState(-15405);
               this.field_Y.drawAdditive(-(var23.field_n >> 1) + var9Lifetime1, var10Lifetime1 - var23.field_w, 256);
               return;
             }
             this.field_Y = new Sprite(var11Lifetime1, var12Lifetime1);
             fk.setSpriteRasterTarget(this.field_Y, -23095);
             var23.drawRotatedAboutPivot(112, 144, var23.field_n << 4, var23.field_w << 4, -this.field_X << 10, 4096);
-            oo.c(-15405);
+            oo.popClipState(-15405);
             this.field_Y.drawAdditive(-(var23.field_n >> 1) + var9Lifetime1, var10Lifetime1 - var23.field_w, 256);
             return;
           }
@@ -171,7 +171,7 @@ final class sc extends ej {
               this.field_Y = new Sprite(var11Lifetime1Lifetime1, var12Lifetime1Lifetime1);
               fk.setSpriteRasterTarget(this.field_Y, -23095);
               var24.drawRotatedAboutPivot(112, 144, var24.field_n << 4, var24.field_w << 4, -this.field_X << 10, 4096);
-              oo.c(-15405);
+              oo.popClipState(-15405);
               this.field_Y.drawAdditive(-(var24.field_n >> 1) + var9Lifetime1, var10Lifetime1 - var24.field_w, 256);
               return;
             }
@@ -179,7 +179,7 @@ final class sc extends ej {
               this.field_Y = new Sprite(var11Lifetime1Lifetime1, var12Lifetime1Lifetime1);
               fk.setSpriteRasterTarget(this.field_Y, -23095);
               var24.drawRotatedAboutPivot(112, 144, var24.field_n << 4, var24.field_w << 4, -this.field_X << 10, 4096);
-              oo.c(-15405);
+              oo.popClipState(-15405);
               this.field_Y.drawAdditive(-(var24.field_n >> 1) + var9Lifetime1, var10Lifetime1 - var24.field_w, 256);
               return;
             }
@@ -187,14 +187,14 @@ final class sc extends ej {
               this.field_Y = new Sprite(var11Lifetime1Lifetime1, var12Lifetime1Lifetime1);
               fk.setSpriteRasterTarget(this.field_Y, -23095);
               var24.drawRotatedAboutPivot(112, 144, var24.field_n << 4, var24.field_w << 4, -this.field_X << 10, 4096);
-              oo.c(-15405);
+              oo.popClipState(-15405);
               this.field_Y.drawAdditive(-(var24.field_n >> 1) + var9Lifetime1, var10Lifetime1 - var24.field_w, 256);
               return;
             }
             fk.setSpriteRasterTarget(this.field_Y, -23095);
             SoftwareRasterizer.clear();
             var24.drawRotatedAboutPivot(112, 144, var24.field_n << 4, var24.field_w << 4, -this.field_X << 10, 4096);
-            oo.c(-15405);
+            oo.popClipState(-15405);
             this.field_Y.drawAdditive(-(var24.field_n >> 1) + var9Lifetime1, var10Lifetime1 - var24.field_w, 256);
             return;
           }
@@ -203,7 +203,7 @@ final class sc extends ej {
             var29.drawAdditive(var9Lifetime1, var10Lifetime1 - (var29.field_y >> 1), 256);
             return;
           }
-          if (nn.field_s != var6) {
+          if (CacheEntry.field_s != var6) {
             return;
           }
           var30 = qk.field_lb[1];
@@ -214,7 +214,7 @@ final class sc extends ej {
         var6 = this.field_J.getValidationState(-103);
         WidgetTextLayout var37 = (WidgetTextLayout) ((Object) this.field_r);
         var9Lifetime2 = this.field_n + param1;
-        var10Lifetime2 = var37.a(param3, -13372, (UiComponent) (this)) + (var37.a((UiComponent) (this), -126).a((byte) -58) >> 1);
+        var10Lifetime2 = var37.a(param3, -13372, (UiComponent) (this)) + (var37.a((UiComponent) (this), -126).height((byte) -58) >> 1);
         if (da.field_f != var6 &&
           IsaacCipher.field_c != var6) {
           if (var6 == ra.field_k) {
@@ -222,7 +222,7 @@ final class sc extends ej {
             var32.drawAdditive(var9Lifetime2, var10Lifetime2 - (var32.field_y >> 1), 256);
             return;
           }
-          if (nn.field_s != var6) {
+          if (CacheEntry.field_s != var6) {
             return;
           }
           var33 = qk.field_lb[1];
@@ -236,7 +236,7 @@ final class sc extends ej {
           this.field_Y = new Sprite(var11Lifetime2, var12Lifetime2);
           fk.setSpriteRasterTarget(this.field_Y, -23095);
           var34.drawRotatedAboutPivot(112, 144, var34.field_n << 4, var34.field_w << 4, -this.field_X << 10, 4096);
-          oo.c(-15405);
+          oo.popClipState(-15405);
           this.field_Y.drawAdditive(-(var34.field_n >> 1) + var9Lifetime2, var10Lifetime2 - var34.field_w, 256);
           return;
         }
@@ -244,7 +244,7 @@ final class sc extends ej {
           this.field_Y = new Sprite(var11Lifetime2, var12Lifetime2);
           fk.setSpriteRasterTarget(this.field_Y, -23095);
           var34.drawRotatedAboutPivot(112, 144, var34.field_n << 4, var34.field_w << 4, -this.field_X << 10, 4096);
-          oo.c(-15405);
+          oo.popClipState(-15405);
           this.field_Y.drawAdditive(-(var34.field_n >> 1) + var9Lifetime2, var10Lifetime2 - var34.field_w, 256);
           return;
         }
@@ -252,14 +252,14 @@ final class sc extends ej {
           fk.setSpriteRasterTarget(this.field_Y, -23095);
           SoftwareRasterizer.clear();
           var34.drawRotatedAboutPivot(112, 144, var34.field_n << 4, var34.field_w << 4, -this.field_X << 10, 4096);
-          oo.c(-15405);
+          oo.popClipState(-15405);
           this.field_Y.drawAdditive(-(var34.field_n >> 1) + var9Lifetime2, var10Lifetime2 - var34.field_w, 256);
           return;
         }
         this.field_Y = new Sprite(var11Lifetime2, var12Lifetime2);
         fk.setSpriteRasterTarget(this.field_Y, -23095);
         var34.drawRotatedAboutPivot(112, 144, var34.field_n << 4, var34.field_w << 4, -this.field_X << 10, 4096);
-        oo.c(-15405);
+        oo.popClipState(-15405);
         this.field_Y.drawAdditive(-(var34.field_n >> 1) + var9Lifetime2, var10Lifetime2 - var34.field_w, 256);
     }
 

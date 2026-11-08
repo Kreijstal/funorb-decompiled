@@ -10,7 +10,7 @@ final class fh implements Iterator {
     static int field_e;
     private DualLinkNode field_c;
     static int field_g;
-    private gb field_h;
+    private SecondaryNodeDeque field_h;
     static String field_f;
     static ho field_i;
 
@@ -97,7 +97,7 @@ final class fh implements Iterator {
         return this.field_c != this.field_h.field_g;
     }
 
-    fh(gb param0) {
+    fh(SecondaryNodeDeque param0) {
         this.field_b = null;
         try {
           this.field_h = param0;

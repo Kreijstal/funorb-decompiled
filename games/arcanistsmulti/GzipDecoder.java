@@ -20,15 +20,15 @@ final class GzipDecoder {
         }
         if (ah.field_c > 0) {
           if (ob.field_Y != null) {
-            ka.field_m = ob.field_Y.a(param1 + 122);
+            ProxySocketConnector.field_m = ob.field_Y.a(param1 + 122);
             li.a(2, 0);
           } else {
-            ka.field_m = ol.a(0, 0, false, fi.field_d, 480, 640);
+            ProxySocketConnector.field_m = CameraFollowTarget.createFullscreenCanvas(0, 0, false, fi.field_d, 480, 640);
           }
-          if (null == ka.field_m) {
+          if (null == ProxySocketConnector.field_m) {
             var2 = 3;
           } else {
-            n.a(ka.field_m, (byte) 118);
+            IntKeyLookup.attachInputHandlers(ProxySocketConnector.field_m, (byte) 118);
             var2 = 2;
           }
         } else {

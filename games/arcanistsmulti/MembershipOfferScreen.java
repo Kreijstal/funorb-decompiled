@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hf {
+final class MembershipOfferScreen {
     static kc field_f;
     static String field_m;
     static Sprite field_o;
@@ -27,7 +27,7 @@ final class hf {
     public static void releaseStatics(boolean param0) {
         if (param0) {
           int[] var2 = (int[]) null;
-          hf.a(91, (int[]) null, -18, -89, -119, 34, 118);
+          MembershipOfferScreen.a(91, (int[]) null, -18, -89, -119, 34, 118);
         }
         field_m = null;
         field_o = null;
@@ -44,7 +44,7 @@ final class hf {
           eo.field_b[param3] = param5;
           if (param2 != 0) {
             BitmapFont var8 = (BitmapFont) null;
-            hf.a((String[]) null, (String) null, -76, (BitmapFont) null, 57);
+            MembershipOfferScreen.splitIntoTwoLines((String[]) null, (String) null, -76, (BitmapFont) null, 57);
           }
           tg.field_f[param3] = param4;
           sc.field_U[param3] = param0;
@@ -53,14 +53,14 @@ final class hf {
         }
     }
 
-    private final int a(byte param0) {
+    private final int updateOffer(byte param0) {
         if (param0 >= -61) {
           this.field_i = (IndexedSprite[]) null;
         }
         this.field_d.a((byte) -76);
         if (this.field_d.b(true)) {
           if (this.field_d.field_h == 0) {
-            this.a(127);
+            this.openMembershipPage(127);
             return 3;
           }
           if (this.field_d.field_h == 1) {
@@ -73,7 +73,7 @@ final class hf {
         return 0;
     }
 
-    final static boolean a(char param0, byte param1) {
+    final static boolean isTypeableCharacter(char param0, byte param1) {
         char[] var2 = null;
         int var2_int = 0;
         RuntimeException var2_ref = null;
@@ -118,11 +118,11 @@ final class hf {
         wh.field_g = false;
         AlternateUsernameCredentials.field_p = UiContainer.field_z.readUnsignedByte((byte) 88) == 0 ? true : false;
         if (param0 < 15) {
-          hf.releaseStatics(true);
+          MembershipOfferScreen.releaseStatics(true);
         }
     }
 
-    private final void a(int param0, int param1, int param2, BitmapFont param3, String param4, int param5, int[] param6, int param7) {
+    private final void drawGradientParagraph(int param0, int param1, int param2, BitmapFont param3, String param4, int param5, int[] param6, int param7) {
         int var9_int = 0;
         int var10 = 0;
         int var11 = 0;
@@ -145,7 +145,7 @@ final class hf {
             var11 = param6[-var10 + param6.length - 1];
             param3.drawParagraph(param4, param2, param7, param1, param0, var11, -1, 1, 1, 0);
           }
-          oo.c(-15405);
+          oo.popClipState(-15405);
           if (param5 != 23146) {
             this.field_u = 61;
           }
@@ -176,7 +176,7 @@ final class hf {
         }
     }
 
-    final void b(byte param0) {
+    final void drawBackground(byte param0) {
         int var2;
         int var3;
         int var4;
@@ -203,7 +203,7 @@ final class hf {
           var3Lifetime1 += 91;
           var2Lifetime1++;
         }
-        this.c((byte) -101);
+        this.drawPage((byte) -101);
         if (null != EmailLoginCredentials.field_o &&
           EmailLoginCredentials.field_o.c(-10923) &&
           EmailLoginCredentials.field_o.a("members_expansion_screen", -24417) &&
@@ -223,7 +223,7 @@ final class hf {
           EmailLoginCredentials.field_o = null;
           bb.field_a = null;
         }
-        this.b(16180917);
+        this.buildHeaderSprite(16180917);
         if (null == SectorCacheStore.field_j) {
           return;
         }
@@ -235,7 +235,7 @@ final class hf {
           cg.field_Ib.drawHorizontalFlip(558, 257);
           if (me.field_I > 257 &&
             290 > me.field_I) {
-            var2Lifetime2 = 40 + (40 * hg.a(this.field_p << 4, -52) >> 16);
+            var2Lifetime2 = 40 + (40 * FrameClock.sinTable(this.field_p << 4, -52) >> 16);
             if (var2Lifetime2 > 0) {
               if (EmailLoginCredentials.field_g > 9 &&
                 EmailLoginCredentials.field_g < 82) {
@@ -340,18 +340,18 @@ final class hf {
         }
     }
 
-    private final void a(int param0) {
+    private final void openMembershipPage(int param0) {
         if (param0 != 127) {
           return;
         }
         try {
-          ko.a(cd.getApplet(124), (byte) -108);
+          ko.openSubscribePage(cd.getApplet(124), (byte) -108);
         } catch (Exception exception) {
           exception.printStackTrace();
         }
     }
 
-    private final void a(IndexedSprite[] param0, int param1, String param2, java.applet.Applet param3, boolean param4, String[] param5) {
+    private final void initialize(IndexedSprite[] param0, int param1, String param2, java.applet.Applet param3, boolean param4, String[] param5) {
         String var7 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -417,7 +417,7 @@ final class hf {
         }
     }
 
-    private final void b(int param0) {
+    private final void buildHeaderSprite(int param0) {
         int var2 = 0;
         int var3 = 0;
         int[] var15 = null;
@@ -437,10 +437,10 @@ final class hf {
           var2 = 16448250;
           var3 = 10068666;
           var15 = BoundedRandomAccessFile.a(var3, var2, param0 ^ 16128330);
-          this.a(47, 622, 0, fd.field_b, this.field_j, 23146, var15, 0);
-          oo.c(-15405);
+          this.drawGradientParagraph(47, 622, 0, fd.field_b, this.field_j, 23146, var15, 0);
+          oo.popClipState(-15405);
           this.field_g = new Sprite(475, 24);
-          this.a(this.field_g, 0.75f, 0, 127, 24, var15, -4, fd.field_b, mm.field_r, 475);
+          this.drawScaledCaption(this.field_g, 0.75f, 0, 127, 24, var15, -4, fd.field_b, mm.field_r, 475);
           var13 = BoundedRandomAccessFile.a(526344, 526344, 65535);
           var11 = var13;
           var9 = var11;
@@ -450,19 +450,19 @@ final class hf {
           SoftwareRasterizer.fillVerticalGradient(0, var5.field_y / 2, var5.field_q, var5.field_y, 16306250, 15568919);
           var6 = vc.field_l;
           var7 = ph.field_b;
-          this.a(var5, 0.5f, 0, 127, var5.field_y, var13, -16, fd.field_b, var6, var5.field_q);
-          this.a(var5, 0.5f, 0, 127, var5.field_y, var13, 20, fd.field_b, var7, var5.field_q);
-          this.a(var5, 0.699999988079071f, 0, 127, var5.field_y / 3, var9, 12 + (var5.field_y / 2 - fd.field_b.field_C), fd.field_b, Js5ArchiveManager.field_f[this.field_u], var5.field_q);
-          oo.c(-15405);
+          this.drawScaledCaption(var5, 0.5f, 0, 127, var5.field_y, var13, -16, fd.field_b, var6, var5.field_q);
+          this.drawScaledCaption(var5, 0.5f, 0, 127, var5.field_y, var13, 20, fd.field_b, var7, var5.field_q);
+          this.drawScaledCaption(var5, 0.699999988079071f, 0, 127, var5.field_y / 3, var9, 12 + (var5.field_y / 2 - fd.field_b.field_C), fd.field_b, Js5ArchiveManager.field_f[this.field_u], var5.field_q);
+          oo.popClipState(-15405);
           this.field_e = new Sprite(121, 122);
           fk.setSpriteRasterTarget(this.field_e, param0 - 16204012);
           var5.drawCenteredRotatedScaledBilinear(this.field_e.field_q / 2, this.field_e.field_y / 2, -2048, 4096);
-          oo.c(param0 - 16196322);
+          oo.popClipState(param0 - 16196322);
           return;
         }
     }
 
-    private final void a(Sprite param0, float param1, int param2, int param3, int param4, int[] param5, int param6, BitmapFont param7, String param8, int param9) {
+    private final void drawScaledCaption(Sprite param0, float param1, int param2, int param3, int param4, int[] param5, int param6, BitmapFont param7, String param8, int param9) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -486,11 +486,11 @@ final class hf {
           var13 = new Sprite(var11_int, var12);
           fk.setSpriteRasterTarget(var13, -23095);
           param0.drawScaled((int)((float)(-param2) / param1), (int)((float)(-param6) / param1), (int)((float)param0.field_q / param1), (int)((float)param0.field_y / param1));
-          this.a(var12, var11_int, 0, param7, param8, param3 ^ 23061, param5, 0);
-          oo.c(param3 - 15532);
+          this.drawGradientParagraph(var12, var11_int, 0, param7, param8, param3 ^ 23061, param5, 0);
+          oo.popClipState(param3 - 15532);
           fk.setSpriteRasterTarget(param0, -23095);
           var13.drawScaledAveraged(param2, param6, param9, param4);
-          oo.c(param3 ^ -15444);
+          oo.popClipState(param3 ^ -15444);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -524,7 +524,7 @@ final class hf {
         }
     }
 
-    private final void c(byte param0) {
+    private final void drawPage(byte param0) {
         IndexedSprite var2;
         int var3;
         int var4;
@@ -540,7 +540,7 @@ final class hf {
           return;
         }
         if (param0 != -101) {
-          this.a(true, false);
+          this.advanceAnimation(true, false);
         }
         var6 = this.field_i[this.field_l];
         var2 = var6;
@@ -567,7 +567,7 @@ final class hf {
         return;
     }
 
-    final int a(boolean param0, boolean param1) {
+    final int advanceAnimation(boolean param0, boolean param1) {
         int var3;
         int var4;
         int var5;
@@ -661,7 +661,7 @@ final class hf {
           }
         }
         if (param0) {
-          this.field_d.a(this.a(EmailLoginCredentials.field_g, 112, me.field_I), this.a(pb.field_h, 76, ja.field_s), -97);
+          this.field_d.a(this.hitTestButtons(EmailLoginCredentials.field_g, 112, me.field_I), this.hitTestButtons(pb.field_h, 76, ja.field_s), -97);
           var4Lifetime1 = 0;
           if (this.field_d.b(true)) {
             if (this.field_d.field_h == 0) {
@@ -673,7 +673,7 @@ final class hf {
           }
           if (v.field_t) {
             while (ib.b(false)) {
-              var5 = this.a((byte) -73);
+              var5 = this.updateOffer((byte) -73);
               if (0 == var5) {
                 continue;
               }
@@ -681,14 +681,14 @@ final class hf {
             }
           }
           if (var4Lifetime1 != 0) {
-            this.a(127);
+            this.openMembershipPage(127);
             return 3;
           }
         }
         return 0;
     }
 
-    private final int a(int param0, int param1, int param2) {
+    private final int hitTestButtons(int param0, int param1, int param2) {
         if (SectorCacheStore.field_j == null) {
           return -1;
         }
@@ -710,7 +710,7 @@ final class hf {
         return -1;
     }
 
-    final static int a(String[] args, String param1, int param2, BitmapFont param3, int param4) {
+    final static int splitIntoTwoLines(String[] args, String param1, int param2, BitmapFont param3, int param4) {
         int var9 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -806,12 +806,12 @@ final class hf {
         }
     }
 
-    hf(java.applet.Applet param0, String param1, IndexedSprite[] param2, String[] param3) {
+    MembershipOfferScreen(java.applet.Applet param0, String param1, IndexedSprite[] param2, String[] param3) {
         this.field_p = 0;
         this.field_c = 0;
         this.field_h = true;
         try {
-          this.a(param2, -126, param1, param0, true, param3);
+          this.initialize(param2, -126, param1, param0, true, param3);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "hf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

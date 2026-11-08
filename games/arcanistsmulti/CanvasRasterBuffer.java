@@ -82,7 +82,7 @@ abstract class CanvasRasterBuffer {
           }
           var6 = stackIn_4_0;
           if (0 == i.field_d) {
-            var7 = hf.a(of.field_e, var11, 480, ob.field_T, 21230);
+            var7 = MembershipOfferScreen.splitIntoTwoLines(of.field_e, var11, 480, ob.field_T, 21230);
             var8 = var7 + 3;
             pm.field_f = new String[var8];
             ln.field_M = new int[var8];
@@ -104,7 +104,7 @@ abstract class CanvasRasterBuffer {
             if (1 != i.field_d) {
               throw new IllegalArgumentException();
             }
-            var7 = hf.a(of.field_e, var11, 480, ob.field_T, 21230);
+            var7 = MembershipOfferScreen.splitIntoTwoLines(of.field_e, var11, 480, ob.field_T, 21230);
             var8 = var7 + 2;
             ln.field_M = new int[var8];
             pm.field_f = new String[var8];

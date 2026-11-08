@@ -40,10 +40,10 @@ final class rg {
             return true;
           }
           if (102 == IntrusiveDeque.field_d) {
-            nn.field_q.e(param1 ^ -89);
+            CacheEntry.field_q.e(param1 ^ -89);
             return true;
           }
-          stackIn_13_0 = (null != nn.field_q) && (nn.field_q.b(param1 ^ -122, param0, param2));
+          stackIn_13_0 = (null != CacheEntry.field_q) && (CacheEntry.field_q.b(param1 ^ -122, param0, param2));
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -198,7 +198,7 @@ final class rg {
                 }
                 var2 = tj.a("text_x_hasbeendefeated", param1 ^ -75);
                 if (var2 != null) {
-                  jl.field_i = sc.a((byte) 88, var2);
+                  GrowableIntList.field_i = sc.a((byte) 88, var2);
                 }
                 var2 = tj.a("youcanchangeyourcharacter", -75);
                 if (null != var2) {
@@ -2250,7 +2250,7 @@ final class rg {
                 }
                 var2 = tj.a("keycode_walkleft1", -72);
                 if (null != var2) {
-                  ig.field_g = var2[0] & 255;
+                  WeightedLruCache.field_g = var2[0] & 255;
                 }
                 var2 = tj.a("keycode_walkright1", -72);
                 if (var2 != null) {
@@ -2302,7 +2302,7 @@ final class rg {
                 }
                 var2 = tj.a("multiplayer", -101);
                 if (null != var2) {
-                  ol.field_a = sc.a((byte) 117, var2);
+                  CameraFollowTarget.field_a = sc.a((byte) 117, var2);
                 }
                 var2 = tj.a("text_randomize", -72);
                 if (var2 != null) {
@@ -2310,7 +2310,7 @@ final class rg {
                 }
                 var2 = tj.a("text_offeringrematch", -113);
                 if (var2 != null) {
-                  hf.field_b = sc.a((byte) 114, var2);
+                  MembershipOfferScreen.field_b = sc.a((byte) 114, var2);
                 }
                 var2 = tj.a("text_waiting", -72);
                 if (null != var2) {
@@ -2534,7 +2534,7 @@ final class rg {
                 }
                 var2 = tj.a("nowands", param1 ^ -104);
                 if (null != var2) {
-                  jl.field_l = sc.a((byte) 109, var2);
+                  GrowableIntList.field_l = sc.a((byte) 109, var2);
                 }
                 var2 = tj.a("wandsspace", -80);
                 if (var2 != null) {
@@ -2594,7 +2594,7 @@ final class rg {
                 }
                 var2 = tj.a("dsc1", -128);
                 if (null != var2) {
-                  gm.field_b = sc.a((byte) 126, var2);
+                  LinkButtonPainter.field_b = sc.a((byte) 126, var2);
                 }
                 var2 = tj.a("tit1", param1 ^ -66);
                 if (var2 != null) {
@@ -2859,7 +2859,7 @@ final class rg {
                 }
                 var2 = tj.a("mostzombiemonkies", -72);
                 if (null != var2) {
-                  lj.field_q = sc.a((byte) 101, var2);
+                  NanoFrameClock.field_q = sc.a((byte) 101, var2);
                 }
                 var2 = tj.a("gameoutoftime", param1 - 141);
                 if (null != var2) {
@@ -2979,7 +2979,7 @@ final class rg {
                 }
                 var2 = tj.a("ins33", param1 - 111);
                 if (null != var2) {
-                  hc.field_a = sc.a((byte) 106, var2);
+                  ConditionalTextValue.field_a = sc.a((byte) 106, var2);
                 }
                 var2 = tj.a("ins32", -106);
                 if (null != var2) {
@@ -2995,11 +2995,11 @@ final class rg {
                 }
                 var2 = tj.a("ins29", -92);
                 if (null != var2) {
-                  n.field_e = sc.a((byte) 93, var2);
+                  IntKeyLookup.field_e = sc.a((byte) 93, var2);
                 }
                 var2 = tj.a("ins28", param1 ^ -68);
                 if (null != var2) {
-                  jd.field_e = sc.a((byte) 86, var2);
+                  IsaacRandom.field_e = sc.a((byte) 86, var2);
                 }
                 var2 = tj.a("ins27", -76);
                 if (var2 != null) {
@@ -3007,7 +3007,7 @@ final class rg {
                 }
                 var2 = tj.a("ins26", -120);
                 if (var2 != null) {
-                  gb.field_e = sc.a((byte) 124, var2);
+                  SecondaryNodeDeque.field_e = sc.a((byte) 124, var2);
                 }
                 var2 = tj.a("ins26b", -114);
                 if (var2 != null) {
@@ -3123,7 +3123,7 @@ final class rg {
                 }
                 var2 = tj.a("skincolour", param1 - 99);
                 if (var2 != null) {
-                  ka.field_l = sc.a((byte) 91, var2);
+                  ProxySocketConnector.field_l = sc.a((byte) 91, var2);
                 }
                 var2 = tj.a("haircolour", param1 - 133);
                 if (var2 != null) {
@@ -3207,7 +3207,7 @@ final class rg {
                 }
                 var2 = tj.a("tut48", param1 - 123);
                 if (null != var2) {
-                  jl.field_e = sc.a((byte) 110, var2);
+                  GrowableIntList.field_e = sc.a((byte) 110, var2);
                 }
                 var2 = tj.a("tut47", -102);
                 if (null != var2) {
@@ -3231,11 +3231,11 @@ final class rg {
                 }
                 var2 = tj.a("tut42", -70);
                 if (null != var2) {
-                  pa.field_f = sc.a((byte) 108, var2);
+                  DiskCacheWorker.field_f = sc.a((byte) 108, var2);
                 }
                 var2 = tj.a("tut41", -126);
                 if (null != var2) {
-                  ol.field_e = sc.a((byte) 88, var2);
+                  CameraFollowTarget.field_e = sc.a((byte) 88, var2);
                 }
                 var2 = tj.a("tut40", param1 ^ -124);
                 if (var2 != null) {
@@ -3271,7 +3271,7 @@ final class rg {
                 }
                 var2 = tj.a("tut32", -96);
                 if (null != var2) {
-                  jd.field_c = sc.a((byte) 122, var2);
+                  IsaacRandom.field_c = sc.a((byte) 122, var2);
                 }
                 var2 = tj.a("tut31", param1 - 108);
                 if (var2 != null) {
@@ -3451,7 +3451,7 @@ final class rg {
                 }
                 var2 = tj.a("unpack3", -80);
                 if (var2 != null) {
-                  go.field_h = sc.a((byte) 126, var2);
+                  SocketConnector.field_h = sc.a((byte) 126, var2);
                 }
                 var2 = tj.a("unpacknature", param1 ^ -96);
                 if (null != var2) {
@@ -3567,7 +3567,7 @@ final class rg {
                 }
                 var2 = tj.a("tp2", -95);
                 if (null != var2) {
-                  jl.field_f = sc.a((byte) 117, var2);
+                  GrowableIntList.field_f = sc.a((byte) 117, var2);
                 }
                 var2 = tj.a("tp0", -96);
                 if (null != var2) {
@@ -3595,7 +3595,7 @@ final class rg {
                 }
                 var2 = tj.a("sorryonlyonceperturn", -70);
                 if (var2 != null) {
-                  hc.field_g = sc.a((byte) 110, var2);
+                  ConditionalTextValue.field_g = sc.a((byte) 110, var2);
                 }
                 var2 = tj.a("nocastwhileflying", -81);
                 if (var2 != null) {
@@ -3665,7 +3665,7 @@ final class rg {
                 }
                 var2 = tj.a("overcaps", -95);
                 if (var2 != null) {
-                  go.field_f = sc.a((byte) 122, var2);
+                  SocketConnector.field_f = sc.a((byte) 122, var2);
                 }
                 var2 = tj.a("underdarkcaps", -89);
                 if (null != var2) {

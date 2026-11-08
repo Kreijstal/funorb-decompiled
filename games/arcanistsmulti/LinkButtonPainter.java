@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gm implements WidgetPainter {
+final class LinkButtonPainter implements WidgetPainter {
     static int[] field_g;
     static String field_i;
     private BitmapFont field_m;
@@ -32,7 +32,7 @@ final class gm implements WidgetPainter {
         field_b = null;
     }
 
-    final static int b(int param0) {
+    final static int getFramesPerSecond(int param0) {
         if (param0 != -2) {
           return -77;
         }
@@ -96,7 +96,7 @@ final class gm implements WidgetPainter {
           if (param1 == 5592405) {
             return;
           }
-          gm.b(-20);
+          LinkButtonPainter.getFramesPerSecond(-20);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -112,13 +112,13 @@ final class gm implements WidgetPainter {
         }
     }
 
-    public gm() {
+    public LinkButtonPainter() {
         this.field_e = 1;
         this.field_k = 1;
         this.field_m = ia.field_c;
     }
 
-    gm(BitmapFont param0, int param1, int param2) {
+    LinkButtonPainter(BitmapFont param0, int param1, int param2) {
         try {
           this.field_m = param0;
           this.field_k = param1;

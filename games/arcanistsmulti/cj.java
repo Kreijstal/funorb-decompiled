@@ -82,7 +82,7 @@ final class cj {
             var61 = var45.field_H;
             to.a(var61, false, SpriteState.field_s, 0, 0);
           } else {
-            ol.a((byte) 91);
+            CameraFollowTarget.a((byte) 91);
           }
           var55 = new int[param4.field_A];
           var50 = var55;
@@ -121,7 +121,7 @@ final class cj {
           }
           var44 = 0;
           var13Lifetime1 = var44;
-          while (ol.field_i > var44) {
+          while (CameraFollowTarget.field_i > var44) {
             var14Lifetime1 = w.field_Lb[var44];
             var15Lifetime1 = param4.field_U[var14Lifetime1];
             var16 = param4.field_T[var14Lifetime1];
@@ -239,7 +239,7 @@ final class cj {
         }
     }
 
-    final static int a(boolean param0, byte param1, int param2, hc param3, int param4, hc param5, String param6) {
+    final static int a(boolean param0, byte param1, int param2, ConditionalTextValue param3, int param4, ConditionalTextValue param5, String param6) {
         int var12 = 0;
         int stackIn_6_0 = 0;
         PacketBuffer stackIn_18_0 = null;
@@ -282,10 +282,10 @@ final class cj {
         var16 = null;
         var13 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          var15 = param5.b(85);
+          var15 = param5.getText(85);
           var11_ref_String = var15;
           var11_ref_StringLifetime1 = var15;
-          var8 = param3.b(-68);
+          var8 = param3.getText(-68);
           var11_ref_StringLifetime2 = var8;
           var11_ref_StringLifetime3 = var8;
           if (CredentialKind.field_c == null &&
@@ -305,14 +305,14 @@ final class cj {
               jf.field_a.writeInt(TextButton.field_D.nextInt(), (byte) -101);
               jf.field_a.writeInt(TextButton.field_D.nextInt(), (byte) -101);
               stackIn_18_0 = jf.field_a;
-              if (param5.a(true)) {
+              if (param5.isEnabled(true)) {
                 stackIn_19_1 = var15;
               } else {
                 stackIn_19_1 = "";
               }
               ((PacketBuffer) (Object) stackIn_18_0).writeVersionedString(stackIn_19_1, (byte) -115);
               stackIn_21_0 = jf.field_a;
-              if (param3.a(true)) {
+              if (param3.isEnabled(true)) {
                 stackIn_22_1 = var8;
               } else {
                 stackIn_22_1 = "";
@@ -341,7 +341,7 @@ final class cj {
               he.field_e.writeByte(18, (byte) -114);
               he.field_e.position = he.field_e.position + 2;
               var10 = he.field_e.position;
-              var11_ref_StringLifetime4 = gb.a(cd.getApplet(121), param1 ^ 32);
+              var11_ref_StringLifetime4 = SecondaryNodeDeque.getSettingsCookie(cd.getApplet(121), param1 ^ 32);
               if (var11_ref_StringLifetime4 == null) {
                 var11_ref_StringLifetime4 = "";
               }
@@ -364,7 +364,7 @@ final class cj {
               if (var9Lifetime1 == 248) {
                 UiContainer.a(1, cd.getApplet(param1 ^ -40));
                 me.field_E = fo.field_c;
-                ka.b(false);
+                ProxySocketConnector.closeActiveConnection(false);
                 bb.field_h = false;
                 stackIn_36_0 = var9Lifetime1;
                 return stackIn_36_0;
@@ -375,7 +375,7 @@ final class cj {
                 on.field_g = var9Lifetime1;
               } else {
                 pe.a((byte) -86, oi.b(88));
-                kj.field_e = new Boolean(jo.a(UiContainer.field_z, param1 + 89));
+                kj.field_e = new Boolean(jo.readByteMatches(UiContainer.field_z, param1 + 89));
                 UiContainer.field_z.position = 0;
               }
             }
@@ -390,7 +390,7 @@ final class cj {
                 for (var12 = 0; var11 > var12; var12++) {
                   Bzip2State.field_M[var12] = UiContainer.field_z.readVersionedString(-32461);
                 }
-                ka.b(false);
+                ProxySocketConnector.closeActiveConnection(false);
                 bb.field_h = false;
                 stackIn_45_0 = var11 + 100;
                 return stackIn_45_0;
@@ -407,7 +407,7 @@ final class cj {
                 jf.a(var9_ref_String, cd.getApplet(110), 0);
               }
             }
-            ka.b(false);
+            ProxySocketConnector.closeActiveConnection(false);
             bb.field_h = false;
             stackIn_54_0 = on.field_g;
             return stackIn_54_0;

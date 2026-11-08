@@ -77,7 +77,7 @@ final class ff {
           var9 = (char)param1;
           try {
             for (var10_int = 0; var5_int > var10_int; var10_int++) {
-              var11 = th.field_d.a(param0[var10_int], (byte) -87);
+              var11 = th.field_d.getDefinition(param0[var10_int], (byte) -87);
               var6[var10_int] = var11.c(true);
               var9 = (char)(var9 + 1);
               var7[var10_int] = (char)var9;

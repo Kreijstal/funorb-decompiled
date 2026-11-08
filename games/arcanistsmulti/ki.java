@@ -23,14 +23,14 @@ final class ki extends TextFieldValidator {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          stackIn_3_0 = (null != pn.a((byte) 78, param0)) ? 0 : 1;
+          stackIn_3_0 = (null != pn.validateEmailAddress((byte) 78, param0)) ? 0 : 1;
           var3_int = stackIn_3_0;
           if (var3_int == 0) {
             stackIn_6_0 = ra.field_k;
             return stackIn_6_0;
           }
           var4 = -46 % ((param1 + 50) / 36);
-          stackIn_8_0 = nn.field_s;
+          stackIn_8_0 = CacheEntry.field_s;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -76,7 +76,7 @@ final class ki extends TextFieldValidator {
             this.validateText((String) null, -66);
           }
           if (this.validateText(param0, 68) != ra.field_k) {
-            stackIn_6_0 = nh.field_v;
+            stackIn_6_0 = StrongCacheEntry.field_v;
             return stackIn_6_0;
           }
           stackIn_4_0 = gl.field_f;
@@ -95,11 +95,11 @@ final class ki extends TextFieldValidator {
         }
     }
 
-    final static hg e(byte param0) {
+    final static FrameClock createFrameClock(byte param0) {
         if (param0 > -51) {
-          return (hg) null;
+          return (FrameClock) null;
         }
-        return (hg) ((Object) new lj());
+        return (FrameClock) ((Object) new NanoFrameClock());
     }
 
     static {

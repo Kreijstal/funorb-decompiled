@@ -23,12 +23,12 @@ final class nl extends kc {
         }
     }
 
-    final static hc f(byte param0) {
+    final static ConditionalTextValue f(byte param0) {
         if (param0 == 13) {
-          return new hc(k.a(param0 ^ 13), ImageProducerRasterBuffer.b(3236));
+          return new ConditionalTextValue(k.a(param0 ^ 13), ImageProducerRasterBuffer.b(3236));
         }
         field_Hb = (String) null;
-        return new hc(k.a(param0 ^ 13), ImageProducerRasterBuffer.b(3236));
+        return new ConditionalTextValue(k.a(param0 ^ 13), ImageProducerRasterBuffer.b(3236));
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {

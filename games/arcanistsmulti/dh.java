@@ -62,7 +62,7 @@ final class dh extends kc {
           this.field_Ob.a(var9_int, 5, 3 + ImageProducerRasterBuffer.field_r, ImageProducerRasterBuffer.field_r, (byte) -120);
           var10 = 5 + (5 + var9_int);
           var11 = 3 + (3 + 2 * ImageProducerRasterBuffer.field_r);
-          var12 = ih.a(param0, var10, param2, 246);
+          var12 = ih.clampToScreenX(param0, var10, param2, 246);
           var13 = ql.a(10, param3, var11, param1);
           this.a(var10, var12, var13, var11, (byte) -120);
           return;
@@ -130,7 +130,7 @@ final class dh extends kc {
         int var4Lifetime1;
         var6 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          go.field_j = new IndexedSprite[72];
+          SocketConnector.field_j = new IndexedSprite[72];
           ti.field_I = new IndexedSprite[9];
           var2 = null;
           var3_int = 0;
@@ -164,7 +164,7 @@ final class dh extends kc {
             }
             ti.field_I[var4] = (IndexedSprite) (((Object[]) (var2))[0]);
             for (var5 = 1; 9 > var5; var5++) {
-              go.field_j[var3_int] = (IndexedSprite) (((Object[]) (var2))[var5]);
+              SocketConnector.field_j[var3_int] = (IndexedSprite) (((Object[]) (var2))[var5]);
               var3_int++;
             }
           }
@@ -173,21 +173,21 @@ final class dh extends kc {
           var8 = var9;
           var2 = var8;
           for (var3_intLifetime1 = 0; var3_intLifetime1 < 9; var3_intLifetime1++) {
-            MusicPatchPcmStream.field_p[var3_intLifetime1] = new wj(go.field_j[8 * var3_intLifetime1].field_l);
+            MusicPatchPcmStream.field_p[var3_intLifetime1] = new wj(SocketConnector.field_j[8 * var3_intLifetime1].field_l);
             var7 = 0;
             var4Lifetime1 = var7;
-            while (var7 < go.field_j[var3_intLifetime1 * 8].field_l.length) {
-              var9[var3_intLifetime1][var7] = go.field_j[8 * var3_intLifetime1].field_l[var7];
+            while (var7 < SocketConnector.field_j[var3_intLifetime1 * 8].field_l.length) {
+              var9[var3_intLifetime1][var7] = SocketConnector.field_j[8 * var3_intLifetime1].field_l[var7];
               var7++;
             }
           }
           for (var3_intLifetime2 = 0; var3_intLifetime2 < ti.field_I.length; var3_intLifetime2++) {
             ti.field_I[var3_intLifetime2].field_l = var9[var3_intLifetime2];
           }
-          for (var3_intLifetime3 = 0; var3_intLifetime3 < go.field_j.length; var3_intLifetime3++) {
-            go.field_j[var3_intLifetime3].field_l = (int[]) (((Object[]) (var2))[var3_intLifetime3 / 8]);
+          for (var3_intLifetime3 = 0; var3_intLifetime3 < SocketConnector.field_j.length; var3_intLifetime3++) {
+            SocketConnector.field_j[var3_intLifetime3].field_l = (int[]) (((Object[]) (var2))[var3_intLifetime3 / 8]);
           }
-          kh.field_d = ti.field_I[3];
+          TextLayout.field_d = ti.field_I[3];
           ByteStorage.field_e = fj.loadSprite("", -22612, param0, "slab");
           ScreenDisplayMode.field_i = new Sprite[7];
           ScreenDisplayMode.field_i[0] = fj.loadSprite("", param1 - 22546, param0, "spells_universal_tower_64x32");

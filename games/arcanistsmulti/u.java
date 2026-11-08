@@ -315,7 +315,7 @@ final class u {
         }
     }
 
-    final static int a(jd param0, int param1, int param2) {
+    final static int a(IsaacRandom param0, int param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -330,12 +330,12 @@ final class u {
             throw new IllegalArgumentException();
           }
           if (ScreenDisplayMode.a(-2147483648, param2)) {
-            stackIn_5_0 = (int)(((long)param0.c((byte) -46) & 4294967295L) * (long)param2 >> 32);
+            stackIn_5_0 = (int)(((long)param0.nextInt((byte) -46) & 4294967295L) * (long)param2 >> 32);
             return stackIn_5_0;
           }
           var3_int = -(int)(4294967296L % (long)param2) + param1;
           do {
-            var4 = param0.c((byte) -46);
+            var4 = param0.nextInt((byte) -46);
           } while (var3_int <= var4);
           stackIn_10_0 = dh.floorMod(var4, true, param2);
           return stackIn_10_0;
@@ -477,11 +477,11 @@ final class u {
               return;
             }
             if (var2 == 7) {
-              var33 = (cg) (gm.field_j.first(12623));
+              var33 = (cg) (LinkButtonPainter.field_j.first(12623));
               while (var33 != null) {
                 var33.unlink(true);
                 var33.unlinkSecondary((byte) 88);
-                var33 = (cg) (gm.field_j.next(0));
+                var33 = (cg) (LinkButtonPainter.field_j.next(0));
               }
               oe.field_b = 0;
               return;
@@ -607,8 +607,8 @@ final class u {
                     qf.field_a = ((PacketBuffer) ((Object) var1)).readLong(-943038560);
                     return;
                   }
-                  DelegatingCanvas.a((Throwable) null, "L1: " + nn.g((byte) -25), (byte) 20);
-                  ka.b(false);
+                  DelegatingCanvas.a((Throwable) null, "L1: " + CacheEntry.g((byte) -25), (byte) 20);
+                  ProxySocketConnector.closeActiveConnection(false);
                   return;
                 }
                 var3_longLifetime2 = ((PacketBuffer) ((Object) var1)).readLong(-943038560);
@@ -724,12 +724,12 @@ final class u {
         if (param0 != 6) {
           return;
         }
-        if (ka.field_m == null) {
+        if (ProxySocketConnector.field_m == null) {
           return;
         }
-        UiComponent.attachInputListeners(ka.field_m, (byte) 122);
-        ka.field_m.a(fi.field_d, (byte) 67);
-        ka.field_m = null;
+        UiComponent.attachInputListeners(ProxySocketConnector.field_m, (byte) 122);
+        ProxySocketConnector.field_m.a(fi.field_d, (byte) 67);
+        ProxySocketConnector.field_m = null;
         if (ob.field_Y != null) {
           ob.field_Y.a(true);
         }
@@ -886,7 +886,7 @@ final class u {
             return stackIn_13_0;
           }
           if (5 == param1) {
-            stackIn_16_0 = tj.a(-95, new String[]{param2}, gm.field_n);
+            stackIn_16_0 = tj.a(-95, new String[]{param2}, LinkButtonPainter.field_n);
             return stackIn_16_0;
           }
           if (param1 == 6) {
