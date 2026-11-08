@@ -43,7 +43,7 @@ final class QuickChatCategory extends DualNode {
               return true;
             }
             if (param0 != -30157) {
-              QuickChatCategory.g(59);
+              QuickChatCategory.releaseStatics(59);
             }
             return false;
           }
@@ -163,7 +163,7 @@ final class QuickChatCategory extends DualNode {
         }
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         field_G = null;
         field_E = null;
         if (param0 != 1) {

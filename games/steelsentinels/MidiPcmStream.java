@@ -1395,7 +1395,7 @@ final class MidiPcmStream extends PcmStream {
                 }
                 stackIn_37_0 = var7.field_Ub;
                 if (var14 > 0) {
-                  stackIn_38_1 = BitmapFont.a(var7.field_Ub.field_L, var7.field_dc, var14);
+                  stackIn_38_1 = BitmapFont.truncateWithEllipsis(var7.field_Ub.field_L, var7.field_dc, var14);
                 } else {
                   stackIn_38_1 = var7.field_dc;
                 }

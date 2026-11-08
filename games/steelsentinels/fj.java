@@ -12,7 +12,7 @@ final class fj {
     static int[] field_h;
     static int field_d;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_h = null;
         field_i = null;
         field_a = null;
@@ -78,7 +78,7 @@ final class fj {
             return false;
           }
           if (param2 > -93) {
-            fj.a((byte) 85);
+            fj.releaseStatics((byte) 85);
           }
           if (param1 == null) {
             return false;

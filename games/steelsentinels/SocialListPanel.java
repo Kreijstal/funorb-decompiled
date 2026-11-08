@@ -96,7 +96,7 @@ final class SocialListPanel extends SceneWidget {
         DiskCacheWorker.field_j = mm.field_e;
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_Vb = null;
         field_ac = null;
         field_Yb = null;

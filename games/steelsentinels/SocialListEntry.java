@@ -17,7 +17,7 @@ final class SocialListEntry extends SceneWidget {
     static String field_fc;
     SceneWidget field_ec;
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_Yb = null;
         field_Zb = null;
         field_Xb = null;
@@ -46,10 +46,10 @@ final class SocialListEntry extends SceneWidget {
           ArchiveIndex.a(false);
           dj.field_c = new RgbSprite(var3, 3 * var4 / 4);
           dj.field_c.bindRasterTarget();
-          var2.f(0, 0);
+          var2.drawOpaque(0, 0);
           BattleTerrain.field_k = new RgbSprite(var3, -dj.field_c.field_F + var4);
           BattleTerrain.field_k.bindRasterTarget();
-          var2.f(0, -dj.field_c.field_F);
+          var2.drawOpaque(0, -dj.field_c.field_F);
           BattleTerrain.field_k.field_H = dj.field_c.field_F;
           MatchingTextValidator.$cfr$intArgs$f$20d51497949f(107);
         } catch (RuntimeException runtimeException) {

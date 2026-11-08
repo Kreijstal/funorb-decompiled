@@ -43,7 +43,7 @@ final class MusicPatchPcmStream extends PcmStream {
         }
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         field_C = null;
         field_w = null;
         field_x = null;
@@ -51,7 +51,7 @@ final class MusicPatchPcmStream extends PcmStream {
         field_t = null;
         field_u = null;
         if (param0 >= -62) {
-          MusicPatchPcmStream.e(-110);
+          MusicPatchPcmStream.releaseStatics(-110);
         }
         field_z = null;
         field_s = null;

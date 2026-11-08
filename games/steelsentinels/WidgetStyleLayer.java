@@ -14,7 +14,7 @@ final class WidgetStyleLayer {
     RgbSprite field_a;
     private boolean field_e;
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != 12) {
           String var2 = (String) null;
           WidgetStyleLayer.a(-105, (String) null);
@@ -197,7 +197,7 @@ final class WidgetStyleLayer {
             if (TabbedPanel.field_Sb == param2) {
               var21 += 42;
             }
-            var33 = BitmapFont.a(var12.field_Sb.field_L, var32, var21);
+            var33 = BitmapFont.truncateWithEllipsis(var12.field_Sb.field_L, var32, var21);
             var20 = var33;
             var20 = var33;
             var20 = var33;
@@ -510,7 +510,7 @@ final class WidgetStyleLayer {
         this.field_a = null;
         this.field_g = 0;
         if (param0 != -107) {
-          WidgetStyleLayer.b((byte) -14);
+          WidgetStyleLayer.releaseStatics((byte) -14);
         }
         this.field_h = null;
         this.field_f = 0;
@@ -561,9 +561,9 @@ final class WidgetStyleLayer {
             if (2 == param3.field_j) {
               var7 = var7 + (param1.field_E - this.field_a.field_B);
             }
-            this.field_a.a(var6_int, var7);
+            this.field_a.drawTransparent(var6_int, var7);
           }
-          var6 = param3.c(-1, param1);
+          var6 = param3.getDisplayText(-1, param1);
           if (var6 != null &&
             null != param3.field_f &&
             this.field_d >= 0) {
@@ -592,7 +592,7 @@ final class WidgetStyleLayer {
             } else {
               stackIn_26_8 = 256;
             }
-            ((BitmapFont) (Object) stackIn_19_0).a(stackIn_19_1, stackIn_22_2, stackIn_25_3, stackIn_25_4, stackIn_25_5, stackIn_25_6, stackIn_25_7, stackIn_26_8, param3.field_a, param3.field_j, param3.field_m);
+            ((BitmapFont) (Object) stackIn_19_0).drawParagraphAlpha(stackIn_19_1, stackIn_22_2, stackIn_25_3, stackIn_25_4, stackIn_25_5, stackIn_25_6, stackIn_25_7, stackIn_26_8, param3.field_a, param3.field_j, param3.field_m);
           }
           if (param4) {
             var8 = (String) null;

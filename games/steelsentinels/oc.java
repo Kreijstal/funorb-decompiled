@@ -76,7 +76,7 @@ final class oc {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_e = null;
         field_c = null;
@@ -246,8 +246,8 @@ final class oc {
             var16 = param1.field_cb + (var2_int + 39);
             var17 = (var15 + var7Lifetime1.field_k) / 2;
             var18 = 4473924;
-            SoftwareRaster.a(var17, var16, var15, var16, var18, 128);
-            SoftwareRaster.a((var7Lifetime1.field_k * 3 + var17) / 4, (var16 + var7Lifetime1.field_l * 3) / 4, var17, var16, var18, 128);
+            SoftwareRaster.drawLineBlended(var17, var16, var15, var16, var18, 128);
+            SoftwareRaster.drawLineBlended((var7Lifetime1.field_k * 3 + var17) / 4, (var16 + var7Lifetime1.field_l * 3) / 4, var17, var16, var18, 128);
             var2_int += 78;
           }
           stackIn_52_0 = var2_int;

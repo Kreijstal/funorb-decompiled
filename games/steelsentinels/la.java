@@ -149,10 +149,10 @@ final class la {
             wn.field_a.drawCentered(wn.field_c, var6, 200, 16777215, -1);
             uj.a(3, 0, 0, (byte) -45, var12.field_F, 1, var12, var12.field_A);
             wb.field_i.bindRasterTarget();
-            var12.a(18 - wb.field_i.field_D, -wb.field_i.field_H + 241);
+            var12.drawTransparent(18 - wb.field_i.field_D, -wb.field_i.field_H + 241);
             for (var7 = 0; Js5ArchiveManager.field_f.length > var7; var7++) {
               AccountMessagePanel.field_R[var7].bindRasterTarget();
-              wn.field_a.a(Js5ArchiveManager.field_f[var7], 3, 3, AccountMessagePanel.field_R[var7].field_A - 6, -6 + AccountMessagePanel.field_R[var7].field_F, dc.field_h, -1, 1, 1, wn.field_a.field_F + wn.field_a.field_G);
+              wn.field_a.drawParagraph(Js5ArchiveManager.field_f[var7], 3, 3, AccountMessagePanel.field_R[var7].field_A - 6, -6 + AccountMessagePanel.field_R[var7].field_F, dc.field_h, -1, 1, 1, wn.field_a.field_F + wn.field_a.field_G);
               uj.a(3, 0, 0, (byte) -79, AccountMessagePanel.field_R[var7].field_F, 1, AccountMessagePanel.field_R[var7], AccountMessagePanel.field_R[var7].field_A);
             }
             Js5ArchiveManager.field_f = null;
@@ -178,7 +178,7 @@ final class la {
             var4 = SoftwareRaster.field_j;
             SoftwareRaster.getClip(ImageProducerRasterBuffer.field_n);
             var14 = SocketConnector.a(CombatWorld.field_x, -69, new String[]{ResourceArchive.field_m[MouseInputHandler.field_j]});
-            var6Lifetime1 = FullscreenFocusCanvas.field_g.a(var14, pa.field_b);
+            var6Lifetime1 = FullscreenFocusCanvas.field_g.getWrappedWidth(var14, pa.field_b);
             var7Lifetime1 = FullscreenFocusCanvas.field_g.paragraphHeight(var14, pa.field_b, FullscreenFocusCanvas.field_g.field_G + FullscreenFocusCanvas.field_g.field_F);
             var8 = BufferedSocket.field_e + (-var6Lifetime1 + pa.field_b) / 2;
             var9 = NameSuggestionsPanel.field_W + (ci.field_g - var7Lifetime1) / 2;
@@ -225,13 +225,13 @@ final class la {
             hl.field_r.normalizeCanvas();
             var10 = new RgbSprite(hl.field_r.field_z, hl.field_r.field_B);
             var10.bindRasterTarget();
-            FullscreenFocusCanvas.field_g.a(var14, BufferedSocket.field_e, NameSuggestionsPanel.field_W, pa.field_b, ci.field_g, 16777215, -1, 1, 1, FullscreenFocusCanvas.field_g.field_F + FullscreenFocusCanvas.field_g.field_G);
+            FullscreenFocusCanvas.field_g.drawParagraph(var14, BufferedSocket.field_e, NameSuggestionsPanel.field_W, pa.field_b, ci.field_g, 16777215, -1, 1, 1, FullscreenFocusCanvas.field_g.field_F + FullscreenFocusCanvas.field_g.field_G);
             uj.a(3, 0, 0, (byte) -119, var10.field_B, 1, var10, var10.field_z);
             hl.field_r.bindRasterTarget();
-            var10.a(0, 0);
+            var10.drawTransparent(0, 0);
             ArchiveProvider.field_e = new RgbSprite(640, 480);
             ArchiveProvider.field_e.bindRasterTarget();
-            hl.field_r.d((hl.field_r.field_z >> 1) + TextHotspotRegion.field_t, (hl.field_r.field_B >> 1) + MusicPatchPcmStream.field_y, be.field_e, 4096);
+            hl.field_r.drawRotatedAboutCenter((hl.field_r.field_z >> 1) + TextHotspotRegion.field_t, (hl.field_r.field_B >> 1) + MusicPatchPcmStream.field_y, be.field_e, 4096);
             hl.field_r = null;
             ArchiveProvider.field_e.trimTransparentBorders();
             SoftwareRaster.setTarget(var28, var3Lifetime1, var4);
@@ -247,10 +247,10 @@ final class la {
             var6_ref_String = SocketConnector.a(dd.field_l, -109, new String[]{NameSuggestionsPanel.field_P});
             NameSuggestionsPanel.field_P = null;
             var16.bindRasterTarget();
-            wn.field_a.a(var6_ref_String, 3, 3, var16.field_A - 6, var16.field_F - 6, 16777215, -1, 0, 1, wn.field_a.field_G + wn.field_a.field_F);
+            wn.field_a.drawParagraph(var6_ref_String, 3, 3, var16.field_A - 6, var16.field_F - 6, 16777215, -1, 0, 1, wn.field_a.field_G + wn.field_a.field_F);
             uj.a(3, 0, 0, (byte) -42, var16.field_F, 1, var16, var16.field_A);
             EditableTextWidget.field_kb.bindRasterTarget();
-            var16.a(-EditableTextWidget.field_kb.field_D + 199, -EditableTextWidget.field_kb.field_H + 83);
+            var16.drawTransparent(-EditableTextWidget.field_kb.field_D + 199, -EditableTextWidget.field_kb.field_H + 83);
             SoftwareRaster.setTarget(var29, var3Lifetime2, var4Lifetime1);
             SoftwareRaster.setClip(ImageProducerRasterBuffer.field_n);
           }
@@ -260,7 +260,7 @@ final class la {
             var3Lifetime3 = SoftwareRaster.field_c;
             var4Lifetime2 = SoftwareRaster.field_j;
             SoftwareRaster.getClip(ImageProducerRasterBuffer.field_n);
-            var5 = wn.field_a.a(TextFieldValidator.field_j, 640) + 6;
+            var5 = wn.field_a.getWrappedWidth(TextFieldValidator.field_j, 640) + 6;
             var6Lifetime2 = 20 + (var5 + qi.field_i.field_z);
             var7Lifetime2 = 427 - var6Lifetime2 / 2;
             var8Lifetime1 = qi.field_i.field_z + (var7Lifetime2 + 20);
@@ -268,32 +268,32 @@ final class la {
             wn.field_a.drawLeft(TextFieldValidator.field_j, -EditableTextWidget.field_kb.field_D + var8Lifetime1, wn.field_a.field_F + wn.field_a.field_G + (155 - EditableTextWidget.field_kb.field_H), 16777215, -1);
             uj.a(3, var8Lifetime1 - EditableTextWidget.field_kb.field_D - 4, 155 - EditableTextWidget.field_kb.field_H, (byte) -60, 50, 1, EditableTextWidget.field_kb, var5);
             var9Lifetime1 = 155 - EditableTextWidget.field_kb.field_H - (-wn.field_a.field_F + (-wn.field_a.field_G + qi.field_i.field_B - 3)) / 2;
-            qi.field_i.a(-EditableTextWidget.field_kb.field_D + var7Lifetime2, var9Lifetime1);
+            qi.field_i.drawTransparent(-EditableTextWidget.field_kb.field_D + var7Lifetime2, var9Lifetime1);
             SoftwareRaster.setTarget(var30, var3Lifetime3, var4Lifetime2);
             SoftwareRaster.setClip(ImageProducerRasterBuffer.field_n);
             qi.field_i = null;
           }
           SoftwareRaster.getClip(ImageProducerRasterBuffer.field_n);
-          SoftwareRaster.a(16, 16, 608, 112, 15, Sentinel.field_bc, AudioService.field_b);
-          SoftwareRaster.a(231, 144, 393, 232, 15, Sentinel.field_bc, AudioService.field_b);
+          SoftwareRaster.fillRoundedRectangleBlended(16, 16, 608, 112, 15, Sentinel.field_bc, AudioService.field_b);
+          SoftwareRaster.fillRoundedRectangleBlended(231, 144, 393, 232, 15, Sentinel.field_bc, AudioService.field_b);
           if (c.field_o != null) {
-            c.field_o.a(0, 0);
+            c.field_o.drawTransparent(0, 0);
           }
           if (null != wb.field_i) {
-            wb.field_i.a(0, 0);
+            wb.field_i.drawTransparent(0, 0);
           }
-          EditableTextWidget.field_kb.a(0, 0);
+          EditableTextWidget.field_kb.drawTransparent(0, 0);
           if (null != ArchiveProvider.field_e) {
-            ArchiveProvider.field_e.a(0, 0);
+            ArchiveProvider.field_e.drawTransparent(0, 0);
           }
           if (null != ba.field_e &&
             null != ValidatedTextWidget.field_ub) {
-            ba.field_e.a(231, 390);
+            ba.field_e.drawTransparent(231, 390);
             var2_ref_wk = TextLayout.field_f;
             if (jh.field_i.field_e == 0) {
               var2_ref_wk = tf.field_e;
             }
-            var2_ref_wk.a(0, 0);
+            var2_ref_wk.drawTransparent(0, 0);
             stackIn_51_0 = 40;
             stackIn_51_1 = 20612;
             stackIn_51_2 = ik.field_e;
@@ -320,8 +320,8 @@ final class la {
           }
           if (null != ba.field_e &&
             null != ValidatedTextWidget.field_ub) {
-            ba.field_e.a(434, 390);
-            ValidatedTextWidget.field_pb.a(0, 0);
+            ba.field_e.drawTransparent(434, 390);
+            ValidatedTextWidget.field_pb.drawTransparent(0, 0);
             if (jh.field_i.field_e == 1) {
               MusicPatchPcmStream.a(ba.field_e.field_F * 7 / 12, 436, ba.field_e.field_A - 4, 64, 392, 40);
             }
@@ -332,8 +332,8 @@ final class la {
           }
           if (NodeIterator.field_b != null) {
             var2Lifetime1 = 357 - NodeIterator.field_b.field_B / 2;
-            NodeIterator.field_b.a(-NodeIterator.field_b.field_z + 269, var2Lifetime1);
-            in.field_e.a(586, var2Lifetime1);
+            NodeIterator.field_b.drawTransparent(-NodeIterator.field_b.field_z + 269, var2Lifetime1);
+            in.field_e.drawTransparent(586, var2Lifetime1);
             if (DelegatingCanvas.field_c > var2Lifetime1 &&
               DelegatingCanvas.field_c < NodeIterator.field_b.field_F + var2Lifetime1) {
               var3Lifetime5 = 40 + (dd.a(20612, ik.field_e << 4) * 40 >> 16);
@@ -356,10 +356,10 @@ final class la {
               }
             }
             rg.b(30);
-            AccountMessagePanel.field_R[UiComponent.field_r].a(269, 340);
+            AccountMessagePanel.field_R[UiComponent.field_r].drawTransparent(269, 340);
           } else {
             rg.b(30);
-            AccountMessagePanel.field_R[UiComponent.field_r].a(269, 340);
+            AccountMessagePanel.field_R[UiComponent.field_r].drawTransparent(269, 340);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -434,7 +434,7 @@ final class la {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_c = null;
         int var1 = 124 / ((-23 - param0) / 49);
     }

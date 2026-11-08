@@ -42,7 +42,7 @@ final class ReflectionCheck extends IntrusiveNode {
         cf.field_x = (param1 << 16) / 150;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_O = null;
         field_P = null;
         field_x = null;

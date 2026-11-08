@@ -50,7 +50,7 @@ class EditableTextWidget extends TextButton {
         String var2 = (String) null;
         WeightedLruCache.a(kf.field_o, (String) null, -80);
         if (param0 != 0) {
-          EditableTextWidget.d(true);
+          EditableTextWidget.releaseStatics(true);
         }
     }
 
@@ -78,13 +78,13 @@ class EditableTextWidget extends TextButton {
         }
     }
 
-    public static void d(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_kb = null;
         field_gb = null;
         field_eb = null;
         field_cb = null;
         if (!param0) {
-          EditableTextWidget.d(false);
+          EditableTextWidget.releaseStatics(false);
         }
         field_W = null;
         field_db = null;
@@ -120,15 +120,15 @@ class EditableTextWidget extends TextButton {
         }
         if (this.field_p != null &&
           param3 == 0) {
-          this.field_p.a(param2, (UiComponent) (this), (byte) -30, this.field_K, param0);
+          this.field_p.drawWidget(param2, (UiComponent) (this), (byte) -30, this.field_K, param0);
           if (this.field_p instanceof WidgetTextLayout) {
             var8 = (WidgetTextLayout) ((Object) this.field_p);
             if (this.field_bb != this.field_fb) {
-              var8.a(param0, param2, false, this.field_bb, (UiComponent) (this), this.field_fb);
+              var8.drawSelection(param0, param2, false, this.field_bb, (UiComponent) (this), this.field_fb);
             }
             var6 = mm.a(-127);
             if ((var6 - this.field_Y) % 1000L < 500L) {
-              var8.a((UiComponent) (this), this.field_fb, param0, param2, (byte) 80);
+              var8.drawCaret((UiComponent) (this), this.field_fb, param0, param2, (byte) 80);
             }
           }
         }
@@ -189,7 +189,7 @@ class EditableTextWidget extends TextButton {
           if (this.field_w == 1) {
             if (this.field_p instanceof WidgetTextLayout) {
               var7 = (WidgetTextLayout) ((Object) this.field_p);
-              var6 = var7.a(param0, oh.field_f, (UiComponent) (this), (byte) 115, param3, DelegatingCanvas.field_c);
+              var6 = var7.characterIndexAtPosition(param0, oh.field_f, (UiComponent) (this), (byte) 115, param3, DelegatingCanvas.field_c);
               if (var6 != -1) {
                 if (this.field_jb &&
                   this.field_X > var6 &&
@@ -221,7 +221,7 @@ class EditableTextWidget extends TextButton {
 
     private final void f(byte param0) {
         if (param0 >= -74) {
-          EditableTextWidget.d(true);
+          EditableTextWidget.releaseStatics(true);
         }
         String var2 = this.selectedText(49);
         if (var2.length() > 0) {
@@ -488,7 +488,7 @@ class EditableTextWidget extends TextButton {
           if (!(this.field_p instanceof WidgetTextLayout)) {
             return false;
           }
-          var8_int = ((WidgetTextLayout) ((Object) this.field_p)).a(param2, oh.field_f, (UiComponent) (this), (byte) 115, param4, DelegatingCanvas.field_c);
+          var8_int = ((WidgetTextLayout) ((Object) this.field_p)).characterIndexAtPosition(param2, oh.field_f, (UiComponent) (this), (byte) 115, param4, DelegatingCanvas.field_c);
           if (var8_int != -1) {
             stackIn_6_1 = var8_int;
           } else {
@@ -551,10 +551,10 @@ class EditableTextWidget extends TextButton {
           return;
         }
         var9 = (WidgetTextLayout) ((Object) this.field_p);
-        var3 = var9.b(-1, (UiComponent) (this));
+        var3 = var9.ensureTextLayout(-1, (UiComponent) (this));
         var4 = var3.b((byte) -100);
-        var5 = var9.a(5546, (UiComponent) (this));
-        var6 = var9.a(118) >> 1;
+        var5 = var9.contentWidth(5546, (UiComponent) (this));
+        var6 = var9.lineHeight(118) >> 1;
         if (-var6 + var5 > var4) {
           this.field_u = 0;
           this.field_F = 0;

@@ -85,7 +85,7 @@ final class qm {
         ci.field_a.transitionToContent(EmailAvailabilityValidator.field_o, param0 - 22929007);
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         field_g = null;
         field_c = null;

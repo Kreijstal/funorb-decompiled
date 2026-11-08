@@ -59,7 +59,7 @@ final class UiTheme {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        SoftwareRaster.c(param2, param6, param0, param3, param5, param4);
+        SoftwareRaster.fillRectangleBlended(param2, param6, param0, param3, param5, param4);
         if (param1 != 5939) {
           field_i = (String) null;
         }
@@ -128,7 +128,7 @@ final class UiTheme {
           }
           SoftwareRaster.drawRectangleOutline(var12, var13Lifetime1, var5_int + var9, var10 + var6, this.field_t);
           SoftwareRaster.fillRectangle(1 + var12, var13Lifetime1 + 1, -2 + var5_int + var9, var10 + (var6 - 2), this.field_n);
-          this.field_v.a(param3, this.field_g + var12, this.field_a + var13Lifetime1, var9, var10, this.field_k, -1, 0, 0, var7);
+          this.field_v.drawParagraph(param3, this.field_g + var12, this.field_a + var13Lifetime1, var9, var10, this.field_k, -1, 0, 0, var7);
           if (param0 == 102) {
             return;
           }
@@ -198,7 +198,7 @@ final class UiTheme {
         this.field_h = (WidgetPainter) ((Object) var17);
         var17.field_k = 16777215;
         StatefulTextPainter var4 = new StatefulTextPainter();
-        var17.a(var4, -3);
+        var17.copyStyleTo(var4, -3);
         this.field_v = param1;
         var4.field_e = 15658734;
         this.field_d = 3;
@@ -233,7 +233,7 @@ final class UiTheme {
         DialWidgetPainter discarded$0 = new DialWidgetPainter(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
         MarkerSliderPainter discarded$1 = new MarkerSliderPainter(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
         StatefulTextPainter var8 = new StatefulTextPainter();
-        var17.a(var8, -3);
+        var17.copyStyleTo(var8, -3);
         var8.a(-25088, 0).a(1, TickClock.a(15658734, (byte) 118, 10066329, 7829367)).a((byte) -96, 1118481).setShadowColor(1, -1);
         var8.a(-25088, 4).a(true, (byte) 125).a(1, var5);
         this.field_c = (WidgetPainter) ((Object) var8);
@@ -270,7 +270,7 @@ final class UiTheme {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_i = null;
         if (param0 > 51) {
           field_e = null;

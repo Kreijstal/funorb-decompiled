@@ -9,7 +9,7 @@ final class sa {
     static int field_c;
     static String field_b;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_e = null;
         field_d = null;
         field_b = null;
@@ -18,7 +18,7 @@ final class sa {
         if (!param0) {
           return;
         }
-        sa.a(false);
+        sa.releaseStatics(false);
     }
 
     final static String b(byte param0) {

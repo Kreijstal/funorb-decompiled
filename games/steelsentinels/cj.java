@@ -164,9 +164,9 @@ final class cj {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -1) {
-          cj.a(-69);
+          cj.releaseStatics(-69);
         }
         field_b = null;
         field_f = null;

@@ -17,7 +17,7 @@ final class SentinelCommand extends IntrusiveNode {
     boolean activated;
     static int field_t;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_w = null;
         if (param0 >= -102) {
           byte[] var2 = (byte[]) null;

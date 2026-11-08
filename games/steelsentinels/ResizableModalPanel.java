@@ -72,7 +72,7 @@ abstract class ResizableModalPanel extends ModalPanel {
         int var12Lifetime1;
         int var13Lifetime1;
         var16 = SteelSentinels.obfuscationControl;
-        SoftwareRaster.e(6 + param0, param1 + 35, -12 + this.field_x, this.field_E - 40, 2105376, 0);
+        SoftwareRaster.fillVerticalGradient(6 + param0, param1 + 35, -12 + this.field_x, this.field_E - 40, 2105376, 0);
         var5 = 211;
         var4 = 35;
         var6 = 194;
@@ -139,7 +139,7 @@ abstract class ResizableModalPanel extends ModalPanel {
           var7Lifetime1++;
           var8Lifetime1++;
         }
-        Explosion.field_L.a(this.field_x + param0 - 90, param1 + 10);
+        Explosion.field_L.drawTransparent(this.field_x + param0 - 90, param1 + 10);
         if (param2) {
           uc.a(jj.field_k, this.field_x - 10, 35 + param1, (byte) -39, param0 + 5);
           uc.a(Explosion.field_J, this.field_x, this.field_E + (param1 - 22), (byte) -39, param0);
@@ -206,7 +206,7 @@ abstract class ResizableModalPanel extends ModalPanel {
         return super.j(-55);
     }
 
-    public static void k(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_Z = null;
         field_ab = null;
         if (param0 == 38) {

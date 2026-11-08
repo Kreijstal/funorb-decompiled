@@ -86,14 +86,14 @@ final class StatefulTextPainter extends TextWidgetPainter {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -21121) {
           StatefulTextPainter.a((byte) 56);
         }
         field_o = null;
     }
 
-    public final void a(int param0, UiComponent param1, byte param2, boolean param3, int param4) {
+    public final void drawWidget(int param0, UiComponent param1, byte param2, boolean param3, int param4) {
         UiComponent stackIn_3_0 = null;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
@@ -278,7 +278,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
     final static int a(int param0, int param1, byte param2) {
         int var3 = param0 >> 16;
         if (param2 != -27) {
-          StatefulTextPainter.c(60);
+          StatefulTextPainter.releaseStatics(60);
         }
         int var4 = 65535 & param0;
         int var5 = param1 >> 16;
@@ -305,7 +305,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
           if (param1 != 65535) {
             return;
           }
-          super.a(param0, -3);
+          super.copyStyleTo(param0, -3);
           if (param2) {
             for (var4_int = 0; var4_int < 6; var4_int++) {
               var5 = this.field_r[var4_int];

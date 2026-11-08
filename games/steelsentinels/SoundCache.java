@@ -79,7 +79,7 @@ final class SoundCache {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_b = null;
         field_k = null;
@@ -164,7 +164,7 @@ final class SoundCache {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -35) {
-            SoundCache.a(-82);
+            SoundCache.releaseStatics(-82);
           }
           if (this.field_l.getGroupCapacity((byte) 121) == 1) {
             stackIn_4_0 = this.a(0, 0, param2, param1);

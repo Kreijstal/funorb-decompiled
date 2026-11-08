@@ -90,7 +90,7 @@ final class dm {
         return this.field_g;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_e = null;
         if (param0 <= -99) {
           field_f = null;
@@ -98,7 +98,7 @@ final class dm {
           field_h = null;
           return;
         }
-        dm.a(120);
+        dm.releaseStatics(120);
         field_f = null;
         field_d = null;
         field_h = null;

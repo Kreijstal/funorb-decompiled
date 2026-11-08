@@ -20,7 +20,7 @@ final class jh {
         return angle >= 6144 ? -hk.quarterSine16[-angle + 8192] : -hk.quarterSine16[angle - 4096];
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_i = null;
         field_c = null;
         field_h = null;
@@ -30,7 +30,7 @@ final class jh {
         field_a = null;
         field_b = null;
         if (param0 != 30706) {
-          jh.a(49);
+          jh.releaseStatics(49);
         }
     }
 

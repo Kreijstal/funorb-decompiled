@@ -9,7 +9,7 @@ final class ph {
     static String field_f;
     static na[] field_e;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 < 33) {
           return;
         }

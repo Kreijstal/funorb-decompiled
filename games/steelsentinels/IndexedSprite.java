@@ -15,7 +15,7 @@ final class IndexedSprite extends Sprite {
         return new RgbSprite(this.field_g, this.field_d, this.field_j, this.field_n, this.field_a, this.field_i, var2);
     }
 
-    private final static void a(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitAlpha(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var11 = 0;
         int var12 = 0;
         int incrementValue$12 = 0;
@@ -82,12 +82,12 @@ final class IndexedSprite extends Sprite {
           if (var6 <= 0) {
             return;
           }
-          IndexedSprite.a(SoftwareRaster.field_g, this.field_p, this.field_o, var5, var4, var7, var6, var8, var9, param2);
+          IndexedSprite.blitAlpha(SoftwareRaster.field_g, this.field_p, this.field_o, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
 
-    private final static void a(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
+    private final static void blitPaletteRowsScaledTinted(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
         int var17 = 0;
         int var18 = 0;
         int var19 = 0;
@@ -123,7 +123,7 @@ final class IndexedSprite extends Sprite {
         }
     }
 
-    final IndexedSprite b() {
+    final IndexedSprite copyFlippedHorizontal() {
         int var4 = 0;
         int var3 = 0;
         IndexedSprite var1 = new IndexedSprite(this.field_a, this.field_i, this.field_o.length);
@@ -215,7 +215,7 @@ final class IndexedSprite extends Sprite {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
+    final void drawScaled(int param0, int param1, int param2, int param3, int param4) {
         int var14 = 0;
         int var16 = 0;
         int var6 = this.field_a;
@@ -269,10 +269,10 @@ final class IndexedSprite extends Sprite {
           var8 = var8 + var12 * var16Lifetime2;
           var15 = var15 + var16Lifetime2;
         }
-        IndexedSprite.a(SoftwareRaster.field_g, this.field_p, this.field_o, var8, var9, var14Lifetime2, var15, param2, param3, var12, var13, var6, param4);
+        IndexedSprite.blitPaletteRowsScaledTinted(SoftwareRaster.field_g, this.field_p, this.field_o, var8, var9, var14Lifetime2, var15, param2, param3, var12, var13, var6, param4);
     }
 
-    final void c(int param0, int param1) {
+    final void drawHalfSize(int param0, int param1) {
         int var10 = 0;
         int var11 = 0;
         int var17 = 0;
@@ -349,7 +349,7 @@ final class IndexedSprite extends Sprite {
         }
     }
 
-    private final static void b(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void copyNonzeroPaletteRows(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var11 = 0;
         int incrementValue$3 = 0;
         int incrementValue$5 = 0;
@@ -465,7 +465,7 @@ final class IndexedSprite extends Sprite {
           var7 = var7 + var11 * var15Lifetime2;
           var14 = var14 + var15Lifetime2;
         }
-        IndexedSprite.a(SoftwareRaster.field_g, this.field_p, this.field_o, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
+        IndexedSprite.copyPaletteRowsScaled(SoftwareRaster.field_g, this.field_p, this.field_o, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
     }
 
     final void draw(int param0, int param1) {
@@ -509,12 +509,12 @@ final class IndexedSprite extends Sprite {
           if (var5 <= 0) {
             return;
           }
-          IndexedSprite.b(SoftwareRaster.field_g, this.field_p, this.field_o, 0, var4, var3, var6, var5, var7, var8);
+          IndexedSprite.copyNonzeroPaletteRows(SoftwareRaster.field_g, this.field_p, this.field_o, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final void rotateNearest(int param0, int param1, int param2, int param3, int param4, int param5) {
         int incrementValue$8 = 0;
         int incrementValue$6 = 0;
         int incrementValue$7 = 0;
@@ -1132,7 +1132,7 @@ final class IndexedSprite extends Sprite {
         this.field_o = new int[param2];
     }
 
-    private final static void a(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
+    private final static void copyPaletteRowsScaled(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;

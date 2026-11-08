@@ -42,7 +42,7 @@ final class ud extends IntrusiveNode {
     ud() {
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 20000000) {
           ud.e(-26);
           field_A = null;

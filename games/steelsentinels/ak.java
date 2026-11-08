@@ -218,8 +218,8 @@ final class ak {
             var2_int += 36;
             if (var14 <= var17 &&
               var14 >= var18) {
-              SoftwareRaster.a(var15, var14, var13Lifetime1, var14, var16, 128);
-              SoftwareRaster.a((3 * var5.field_k + var15) / 4, (3 * var5.field_l + var14) / 4, var15, var14, var16, 128);
+              SoftwareRaster.drawLineBlended(var15, var14, var13Lifetime1, var14, var16, 128);
+              SoftwareRaster.drawLineBlended((3 * var5.field_k + var15) / 4, (3 * var5.field_l + var14) / 4, var15, var14, var16, 128);
             }
           }
           stackIn_87_0 = var2_int;
@@ -272,11 +272,11 @@ final class ak {
         var17 = SteelSentinels.obfuscationControl;
         try {
           var10 = ValidationHelpWidget.field_lb;
-          SoftwareRaster.c(-8 + (param4 - param5), param1 - 8 + 2, 16 + (param3 - 4), param6 + 12, 0, 210);
+          SoftwareRaster.fillRectangleBlended(-8 + (param4 - param5), param1 - 8 + 2, 16 + (param3 - 4), param6 + 12, 0, 210);
           jm.a(-8 + param1, param6 + 16, TextButton.field_Q, 1, param4 - 8, param3 + 16);
           var11 = 4 + param1;
           if (param0 != null) {
-            param0.a((-param0.field_A + param3) / 2 + param4, var11);
+            param0.drawTransparent((-param0.field_A + param3) / 2 + param4, var11);
             var11 = var11 + (param0.field_F + 2);
           }
           if (param2 != null) {
@@ -293,7 +293,7 @@ final class ak {
             } else {
               stackIn_8_8 = 0;
             }
-            var12 = ((BitmapFont) (Object) stackIn_7_0).a(stackIn_7_1, stackIn_7_2, stackIn_7_3, stackIn_7_4, stackIn_7_5, stackIn_7_6, stackIn_7_7, stackIn_8_8, 0, 0);
+            var12 = ((BitmapFont) (Object) stackIn_7_0).drawParagraph(stackIn_7_1, stackIn_7_2, stackIn_7_3, stackIn_7_4, stackIn_7_5, stackIn_7_6, stackIn_7_7, stackIn_8_8, 0, 0);
             var11 = var11 + (4 + (((BitmapFont) ((Object) var10)).field_W * var12 + 3));
           }
           SoftwareRaster.drawRectangleOutline(param4, param1, param3, -param1 + var11, param7);
@@ -352,7 +352,7 @@ final class ak {
         IterableDualNodeDeque.a((byte) -77, this.field_d, param0, param4, param2, param3);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = -48 % ((param0 + 54) / 60);
         field_a = null;
         field_b = null;

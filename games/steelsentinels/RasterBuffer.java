@@ -202,7 +202,7 @@ abstract class RasterBuffer {
           }
         } else {
           var23 = (CharSequence) ((Object) en.field_e);
-          var18 = SocketConnector.a(hh.field_d, -19, new String[]{TextWidgetPainter.a((byte) 116, var23)});
+          var18 = SocketConnector.a(hh.field_d, -19, new String[]{TextWidgetPainter.normalizeName((byte) 116, var23)});
           var7Lifetime6 = var18;
           var7Lifetime6 = var18;
           var8 = SocketConnector.a(ak.field_e, -87, new String[]{var16});
@@ -223,7 +223,7 @@ abstract class RasterBuffer {
         return true;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_j = null;
         field_e = null;
         field_g = null;

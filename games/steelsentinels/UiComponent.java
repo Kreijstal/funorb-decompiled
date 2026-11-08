@@ -337,7 +337,7 @@ class UiComponent extends IntrusiveNode {
         RuntimeException var19 = null;
         try {
           if (param2 < 52) {
-            UiComponent.c((byte) 15);
+            UiComponent.releaseStatics((byte) 15);
           }
           NodeHashTableIterator.a(param9, param4, (String[]) null, param5, param18, param8, param3, 1, param10, (byte) 94, param11, param13, param7, param12, param1, param6, param0, param14, param15, param16);
           return;
@@ -581,7 +581,7 @@ class UiComponent extends IntrusiveNode {
         if (null == this.field_p) {
           return;
         }
-        this.field_p.a(param2, this, (byte) -30, true, param0);
+        this.field_p.drawWidget(param2, this, (byte) -30, true, param0);
     }
 
     final boolean a(int param0, int param1, byte param2, int param3, int param4) {
@@ -740,7 +740,7 @@ class UiComponent extends IntrusiveNode {
         }
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != 19) {
           return;
         }
@@ -927,8 +927,8 @@ class UiComponent extends IntrusiveNode {
           this.field_y = param0;
           if (this.field_p instanceof WidgetTextLayout) {
             var4 = (WidgetTextLayout) ((Object) this.field_p);
-            this.field_x = var4.a((byte) 41, this);
-            this.field_E = var4.b((byte) -126, this);
+            this.field_x = var4.preferredWidth((byte) 41, this);
+            this.field_E = var4.preferredHeight((byte) -126, this);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

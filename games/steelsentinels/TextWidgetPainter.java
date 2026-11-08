@@ -17,7 +17,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
     int field_e;
     int field_c;
 
-    public void a(int param0, UiComponent param1, byte param2, boolean param3, int param4) {
+    public void drawWidget(int param0, UiComponent param1, byte param2, boolean param3, int param4) {
         if (param2 != -30) {
           return;
         }
@@ -25,13 +25,13 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           return;
         }
         try {
-          this.a(param4, param0, param1, 118);
+          this.drawText(param4, param0, param1, 118);
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "cn.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    private final int d(int param0, UiComponent param1) {
+    private final int contentHeight(int param0, UiComponent param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -515,7 +515,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         }
     }
 
-    private final int a(int param0, int param1, int param2, UiComponent param3) {
+    private final int textYForOffset(int param0, int param1, int param2, UiComponent param3) {
         RuntimeException var5 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -524,7 +524,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != 0) {
-            this.a((UiComponent) null, (byte) 118);
+            this.layoutSingleLine((UiComponent) null, (byte) 118);
           }
           stackIn_3_0 = param3.field_F + this.field_h + param1 - (-param3.field_z - param0);
           return stackIn_3_0;
@@ -542,7 +542,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         }
     }
 
-    String c(int param0, UiComponent param1) {
+    String getDisplayText(int param0, UiComponent param1) {
         RuntimeException var3 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -551,7 +551,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -1) {
-            this.b((byte) 115, (UiComponent) null);
+            this.preferredHeight((byte) 115, (UiComponent) null);
           }
           stackIn_3_0 = param1.field_y;
           return stackIn_3_0;
@@ -609,7 +609,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         return var4 != 0;
     }
 
-    public final int a(int param0, int param1, UiComponent param2, byte param3, int param4, int param5) {
+    public final int characterIndexAtPosition(int param0, int param1, UiComponent param2, byte param3, int param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -617,11 +617,11 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.b(-1, param2);
+          this.ensureTextLayout(-1, param2);
           if (param3 != 115) {
             this.field_h = -14;
           }
-          stackIn_3_0 = param2.field_s.a(0, -this.a(param0, 3, param2) + param1, param5 - this.a((byte) -123, param2, param4));
+          stackIn_3_0 = param2.field_s.a(0, -this.textOriginX(param0, 3, param2) + param1, param5 - this.textOriginY((byte) -123, param2, param4));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -637,7 +637,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         }
     }
 
-    public final int a(byte param0, UiComponent param1, int param2) {
+    public final int textOriginY(byte param0, UiComponent param1, int param2) {
         RuntimeException var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -646,9 +646,9 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 > -113) {
-            this.a((byte) 8, (UiComponent) null, 100);
+            this.textOriginY((byte) 8, (UiComponent) null, 100);
           }
-          stackIn_3_0 = this.a(0, param2, 0, param1);
+          stackIn_3_0 = this.textYForOffset(0, param2, 0, param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -664,12 +664,12 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         }
     }
 
-    public final int a(int param0) {
+    public final int lineHeight(int param0) {
         int var2 = 26 / ((70 - param0) / 37);
         return this.field_f.field_G + this.field_f.field_F;
     }
 
-    private final void a(UiComponent param0, byte param1) {
+    private final void layoutSingleLine(UiComponent param0, byte param1) {
         RuntimeException stackIn_35_0 = null;
         StringBuilder stackIn_35_1 = null;
         String stackIn_36_2 = null;
@@ -689,8 +689,8 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           boolean decompiledFrameRemainder4 = true;
           boolean decompiledFrameRemainder3 = true;
           boolean decompiledFrameRemainder2 = true;
-          var3_int = this.a(5546, param0);
-          var4 = this.d(-3, param0);
+          var3_int = this.contentWidth(5546, param0);
+          var4 = this.contentHeight(-3, param0);
           var6 = this.field_j;
           if ((var6 != 0) &&
             (decompiledFrameRemainder2 = (var6 != 2 ||
@@ -713,7 +713,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
             var5 = this.field_f.field_G + (-this.field_f.field_F + (-this.field_f.field_G + var4) >> 1);
           }
           if (param1 <= 60) {
-            this.a(-108, 13, (UiComponent) null);
+            this.textOriginX(-108, 13, (UiComponent) null);
           }
           boolean decompiledFrameRemainder1 = true;
           boolean decompiledFrameRemainder0 = true;
@@ -731,7 +731,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
             if (!(param0.field_s instanceof CachedTextLayout)) {
               return;
             }
-            ((CachedTextLayout) (param0.field_s)).a(0, this.c(-1, param0), 97, var5, this.field_f);
+            ((CachedTextLayout) (param0.field_s)).a(0, this.getDisplayText(-1, param0), 97, var5, this.field_f);
             if (var7 == 0) {
               return;
             }
@@ -740,7 +740,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
             if (!(param0.field_s instanceof CachedTextLayout)) {
               return;
             }
-            ((CachedTextLayout) (param0.field_s)).b(var3_int >> 1, this.c(-1, param0), var5, -1385548511, this.field_f);
+            ((CachedTextLayout) (param0.field_s)).b(var3_int >> 1, this.getDisplayText(-1, param0), var5, -1385548511, this.field_f);
             if (var7 == 0) {
               return;
             }
@@ -748,7 +748,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           if (!(param0.field_s instanceof CachedTextLayout)) {
             return;
           }
-          ((CachedTextLayout) (param0.field_s)).a(this.c(-1, param0), true, var3_int, var5, this.field_f);
+          ((CachedTextLayout) (param0.field_s)).a(this.getDisplayText(-1, param0), true, var3_int, var5, this.field_f);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -768,7 +768,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
-    private final int a(byte param0, UiComponent param1, int param2, int param3) {
+    private final int textXForOffset(byte param0, UiComponent param1, int param2, int param3) {
         int discarded$1 = 0;
         RuntimeException var5 = null;
         int stackIn_3_0 = 0;
@@ -778,7 +778,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 114) {
-            discarded$1 = this.a(37, 62, 35, (UiComponent) null);
+            discarded$1 = this.textYForOffset(37, 62, 35, (UiComponent) null);
           }
           stackIn_3_0 = param2 + this.field_b + (param1.field_o + param3 + param1.field_u);
           return stackIn_3_0;
@@ -796,7 +796,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         }
     }
 
-    final static String a(byte param0, CharSequence param1) {
+    final static String normalizeName(byte param0, CharSequence param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         String stackIn_5_0 = null;
@@ -828,7 +828,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3, int param4, int param5, UiComponent param6, int param7) {
+    private final void paintTextRun(int param0, int param1, int param2, int param3, int param4, int param5, UiComponent param6, int param7) {
         RuntimeException stackIn_34_0 = null;
         StringBuilder stackIn_34_1 = null;
         String stackIn_35_2 = null;
@@ -842,8 +842,8 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         var13 = SteelSentinels.obfuscationControl;
         try {
           ArchiveRequest.a(param0 + param6.field_o, param2 + param6.field_z, 47, param6.field_x + (param6.field_o + param0), param6.field_E + param6.field_z + param2);
-          var9_int = this.a(5546, param6);
-          var10 = this.d(-3, param6);
+          var9_int = this.contentWidth(5546, param6);
+          var10 = this.contentHeight(-3, param6);
           boolean decompiledSharedTail0 = (this.field_i);
           if (!decompiledSharedTail0) {
             boolean decompiledFrameRemainder2 = true;
@@ -890,22 +890,22 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
                         break;
                     }
                   }
-                  this.field_f.drawLeft(this.c(param1 + 11866, param6), this.a((byte) 114, param6, param5, param0), var11 + this.a(param3, param2, 0, param6), param7, param4);
+                  this.field_f.drawLeft(this.getDisplayText(param1 + 11866, param6), this.textXForOffset((byte) 114, param6, param5, param0), var11 + this.textYForOffset(param3, param2, 0, param6), param7, param4);
                   if (var13 == 0) {
                     break regionExit1;
                   }
                 }
-                this.field_f.drawCentered(this.c(-1, param6), (var9_int >> 1) + this.a((byte) 114, param6, param5, param0), this.a(param3, param2, 0, param6) + var11, param7, param4);
+                this.field_f.drawCentered(this.getDisplayText(-1, param6), (var9_int >> 1) + this.textXForOffset((byte) 114, param6, param5, param0), this.textYForOffset(param3, param2, 0, param6) + var11, param7, param4);
                 if (var13 == 0) {
                   break regionExit1;
                 }
               }
-              this.field_f.c(this.c(param1 ^ 11866, param6), this.a((byte) 114, param6, param5, param0) + var9_int, this.a(param3, param2, 0, param6) + var11, param7, param4);
+              this.field_f.drawRight(this.getDisplayText(param1 ^ 11866, param6), this.textXForOffset((byte) 114, param6, param5, param0) + var9_int, this.textYForOffset(param3, param2, 0, param6) + var11, param7, param4);
             }
             decompiledSharedTail0 = (var13 != 0);
           }
           if (decompiledSharedTail0) {
-            this.field_f.a(this.c(-1, param6), this.a((byte) 114, param6, param5, param0), this.a(param3, param2, 0, param6), var9_int, var10, param7, param4, this.field_a, this.field_j, this.field_m);
+            this.field_f.drawParagraph(this.getDisplayText(-1, param6), this.textXForOffset((byte) 114, param6, param5, param0), this.textYForOffset(param3, param2, 0, param6), var9_int, var10, param7, param4, this.field_a, this.field_j, this.field_m);
           }
           if (param1 != -11867) {
             return;
@@ -926,7 +926,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         }
     }
 
-    public final TextLayout b(int param0, UiComponent param1) {
+    public final TextLayout ensureTextLayout(int param0, UiComponent param1) {
         RuntimeException var3 = null;
         TextLayout stackIn_9_0 = null;
         RuntimeException stackIn_12_0 = null;
@@ -941,12 +941,12 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
             param1.field_s = (TextLayout) ((Object) new CachedTextLayout());
           }
           if (this.field_i) {
-            ((CachedTextLayout) (param1.field_s)).a(this.a(param0 + 5547, param1), this.field_a, this.field_m, this.c(-1, param1), this.field_j, this.field_f, this.d(param0 - 2, param1), param0 + 2);
+            ((CachedTextLayout) (param1.field_s)).a(this.contentWidth(param0 + 5547, param1), this.field_a, this.field_m, this.getDisplayText(-1, param1), this.field_j, this.field_f, this.contentHeight(param0 - 2, param1), param0 + 2);
             if (SteelSentinels.obfuscationControl != 0) {
-              this.a(param1, (byte) 125);
+              this.layoutSingleLine(param1, (byte) 125);
             }
           } else {
-            this.a(param1, (byte) 125);
+            this.layoutSingleLine(param1, (byte) 125);
           }
           stackIn_9_0 = param1.field_s;
           return stackIn_9_0;
@@ -964,7 +964,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         }
     }
 
-    public final int a(int param0, int param1, UiComponent param2) {
+    public final int textOriginX(int param0, int param1, UiComponent param2) {
         int discarded$1 = 0;
         RuntimeException var4 = null;
         int stackIn_3_0 = 0;
@@ -974,9 +974,9 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 3) {
-            discarded$1 = this.d(-89, (UiComponent) null);
+            discarded$1 = this.contentHeight(-89, (UiComponent) null);
           }
-          stackIn_3_0 = this.a((byte) 114, param2, 0, param0);
+          stackIn_3_0 = this.textXForOffset((byte) 114, param2, 0, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -992,7 +992,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         }
     }
 
-    public final void a(int param0, int param1, boolean param2, int param3, UiComponent param4, int param5) {
+    public final void drawSelection(int param0, int param1, boolean param2, int param3, UiComponent param4, int param5) {
         int stackIn_16_0 = 0;
         int stackIn_21_0 = 0;
         int stackIn_23_0 = 0;
@@ -1018,10 +1018,10 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
             return;
           }
           if (param2) {
-            this.a(107, -2, false, -112, (UiComponent) null, 115);
+            this.drawSelection(107, -2, false, -112, (UiComponent) null, 115);
           }
           if (param4.isFocused(0)) {
-            var17 = this.b(-1, param4);
+            var17 = this.ensureTextLayout(-1, param4);
             var18 = var17;
             if (param5 > param3) {
               var8 = param3;
@@ -1057,7 +1057,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
                   stackIn_21_0 = var18.a(1, var9);
                 }
                 var15 = stackIn_21_0;
-                ad.field_j.a(-var14 + var15, 5939, this.a((byte) 114, param4, var14, param1), var13.field_a, this.field_c >>> 24, this.field_c, param0 + param4.field_z - (-this.field_h - param4.field_F - var13.field_h));
+                ad.field_j.a(-var14 + var15, 5939, this.textXForOffset((byte) 114, param4, var14, param1), var13.field_a, this.field_c >>> 24, this.field_c, param0 + param4.field_z - (-this.field_h - param4.field_F - var13.field_h));
                 var12++;
                 continue;
               }
@@ -1084,7 +1084,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         }
     }
 
-    final void a(TextWidgetPainter param0, int param1) {
+    final void copyStyleTo(TextWidgetPainter param0, int param1) {
         try {
           param0.field_g = this.field_g;
           if (param1 != -3) {
@@ -1107,18 +1107,18 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         }
     }
 
-    private final void a(int param0, int param1, UiComponent param2, int param3) {
+    private final void drawText(int param0, int param1, UiComponent param2, int param3) {
         try {
           if (param3 < 73) {
-            this.a((TextWidgetPainter) null, -48);
+            this.copyStyleTo((TextWidgetPainter) null, -48);
           }
-          this.a(param1, -11867, param0, 0, this.field_g, 0, param2, this.field_k);
+          this.paintTextRun(param1, -11867, param0, 0, this.field_g, 0, param2, this.field_k);
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "cn.P(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
-    public final int b(byte param0, UiComponent param1) {
+    public final int preferredHeight(byte param0, UiComponent param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
@@ -1128,7 +1128,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = -120 / ((param0 + 67) / 59);
-          this.b(-1, param1);
+          this.ensureTextLayout(-1, param1);
           stackIn_1_0 = param1.field_s.a((byte) 24) + this.field_h + this.field_d;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1145,7 +1145,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         }
     }
 
-    public final int a(byte param0, UiComponent param1) {
+    public final int preferredWidth(byte param0, UiComponent param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -1153,7 +1153,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.b(-1, param1);
+          this.ensureTextLayout(-1, param1);
           if (param0 <= 40) {
             TextWidgetPainter.a(-9, true, false, false, 56);
           }
@@ -1173,7 +1173,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         }
     }
 
-    public final int a(int param0, UiComponent param1) {
+    public final int contentWidth(int param0, UiComponent param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -1200,7 +1200,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         }
     }
 
-    public final void a(UiComponent param0, int param1, int param2, int param3, byte param4) {
+    public final void drawCaret(UiComponent param0, int param1, int param2, int param3, byte param4) {
         int stackIn_6_0 = 0;
         int stackIn_6_1 = 0;
         int stackIn_6_2 = 0;
@@ -1223,15 +1223,15 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
             TextWidgetPainter.a(-106, 84, -5, false);
           }
           if (param0.isFocused(0)) {
-            var13 = this.b(-1, param0);
+            var13 = this.ensureTextLayout(-1, param0);
             var14 = var13;
             var7 = var14.b(-1, param1);
             var8 = var13.field_h[var7];
             var9 = var14.a(1, param1);
-            var10 = this.a((byte) 114, param0, var9, param3);
-            var11 = this.a((byte) -120, param0, param2) + Math.max(0, var8.field_h);
-            stackIn_6_0 = this.a((byte) -116, param0, param2);
-            stackIn_6_1 = this.d(-3, param0);
+            var10 = this.textXForOffset((byte) 114, param0, var9, param3);
+            var11 = this.textOriginY((byte) -120, param0, param2) + Math.max(0, var8.field_h);
+            stackIn_6_0 = this.textOriginY((byte) -116, param0, param2);
+            stackIn_6_1 = this.contentHeight(-3, param0);
             stackIn_6_2 = var8.field_a;
             if (var14.field_h.length > (1 + var7)) {
               stackIn_7_3 = var13.field_h[var7 + 1].field_h;

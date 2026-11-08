@@ -12,7 +12,7 @@ final class ai extends IntrusiveNode {
     static String field_w;
     static String field_r;
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         field_o = null;
         field_v = null;
         field_p = null;
@@ -110,7 +110,7 @@ final class ai extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -32599) {
-            ai.e(-24);
+            ai.releaseStatics(-24);
           }
           var2_int = param0.readUnsignedByte((byte) -123);
           stackIn_5_0 = (var2_int == 1) ? 1 : 0;

@@ -37,7 +37,7 @@ final class MusicPatchEnvelope {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         field_d = null;
         field_b = null;
@@ -47,7 +47,7 @@ final class MusicPatchEnvelope {
           field_f = null;
           return;
         }
-        MusicPatchEnvelope.a(74);
+        MusicPatchEnvelope.releaseStatics(74);
         field_f = null;
     }
 

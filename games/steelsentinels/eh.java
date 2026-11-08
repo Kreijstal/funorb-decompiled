@@ -115,7 +115,7 @@ final class eh {
         return uc.field_i;
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_e = null;
         if (param0 != 0) {
           return;
@@ -202,7 +202,7 @@ final class eh {
             }
             stackIn_22_0 = var6.field_Ub;
             if (var10 > 0) {
-              stackIn_23_1 = BitmapFont.a(var6.field_Ub.field_L, var6.field_dc, var10);
+              stackIn_23_1 = BitmapFont.truncateWithEllipsis(var6.field_Ub.field_L, var6.field_dc, var10);
             } else {
               stackIn_23_1 = var6.field_dc;
             }

@@ -12,7 +12,7 @@ final class tj {
     final static void a(int param0) {
         LabeledField.a(17, 0);
         if (param0 < 111) {
-          tj.a(false);
+          tj.releaseStatics(false);
         }
     }
 
@@ -47,7 +47,7 @@ final class tj {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_d = null;
         field_b = null;
         field_f = null;

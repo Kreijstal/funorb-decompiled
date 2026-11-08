@@ -130,10 +130,10 @@ abstract class TickClock {
                     var17 = 0;
                     var13Lifetime1 = var17;
                     while (var17 < var9) {
-                      var12[var17] = Sprite.a(10126, var10[var17]);
+                      var12[var17] = Sprite.loadClassOrPrimitive(10126, var10[var17]);
                       var17++;
                     }
-                    var18.field_K[var5] = param0.a(var8, (byte) 52, Sprite.a(10126, var20), var12);
+                    var18.field_K[var5] = param0.a(var8, (byte) 52, Sprite.loadClassOrPrimitive(10126, var20), var12);
                     var18.field_F[var5] = var21;
                   }
                 } else {
@@ -147,7 +147,7 @@ abstract class TickClock {
                   }
                   var18.field_s[var5] = var6_int;
                   var18.field_w[var5] = var9;
-                  var18.field_y[var5] = param0.a(9, Sprite.a(10126, var15), var16);
+                  var18.field_y[var5] = param0.a(9, Sprite.loadClassOrPrimitive(10126, var15), var16);
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -237,7 +237,7 @@ abstract class TickClock {
 
     abstract int advanceTicks(long param0, byte param1);
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 30) {
           TickClock.a(-15);
         }

@@ -457,7 +457,7 @@ final class in {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_e = null;
         field_c = null;
         field_f = null;

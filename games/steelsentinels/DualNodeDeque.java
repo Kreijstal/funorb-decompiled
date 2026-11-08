@@ -19,7 +19,7 @@ final class DualNodeDeque {
         if (!obfuscationGuard) {
           return var2;
         }
-        DualNodeDeque.b((byte) 121);
+        DualNodeDeque.releaseStatics((byte) 121);
         return var2;
     }
 
@@ -99,7 +99,7 @@ final class DualNodeDeque {
         }
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         int var1 = -107 % ((-33 - param0) / 46);
         field_b = null;

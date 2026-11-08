@@ -115,7 +115,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         int var7 = SteelSentinels.obfuscationControl;
         if (param3 == 0 &&
           this.field_p != null) {
-          this.field_p.a(param2, (UiComponent) (this), (byte) -30, true, param0);
+          this.field_p.drawWidget(param2, (UiComponent) (this), (byte) -30, true, param0);
         }
         NodeIterator var5 = new NodeIterator(this.field_K);
         UiComponent var6 = (UiComponent) (var5.c(2));

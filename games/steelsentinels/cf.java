@@ -76,7 +76,7 @@ final class cf extends IntrusiveNode {
         return true;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_v = null;
         field_s = null;
         field_A = null;

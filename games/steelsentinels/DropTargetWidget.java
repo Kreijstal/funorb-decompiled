@@ -82,8 +82,8 @@ final class DropTargetWidget extends SingleChildContainer {
           var6 = var9;
           for (var7 = 0; var7 < var10.length; var7 += 2) {
             if (!param3) {
-              BoundedUrlRequest.field_d.c(bi.field_b[var10[var7]], 74 + param1, var5_int + (param0 + 8), 16777215, -1);
-              vc.field_e[var6[var7 + 1]].f(76 + param1, var5_int + param0);
+              BoundedUrlRequest.field_d.drawRight(bi.field_b[var10[var7]], 74 + param1, var5_int + (param0 + 8), 16777215, -1);
+              vc.field_e[var6[var7 + 1]].drawOpaque(76 + param1, var5_int + param0);
             }
             var5_int += 12;
           }

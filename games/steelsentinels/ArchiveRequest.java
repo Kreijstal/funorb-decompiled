@@ -11,7 +11,7 @@ abstract class ArchiveRequest extends DualNode {
     static int field_F;
     boolean field_C;
 
-    public static void e(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 < 11) {
           return;
         }
@@ -52,7 +52,7 @@ abstract class ArchiveRequest extends DualNode {
             var1 = (cc) (IterableNodeHashTable.field_m.next((byte) -36));
           }
           if (param0 <= 102) {
-            ArchiveRequest.e((byte) 19);
+            ArchiveRequest.releaseStatics((byte) 19);
           }
           var1_ref = (hk) (ci.field_e.first(13058));
           while (var1_ref != null) {

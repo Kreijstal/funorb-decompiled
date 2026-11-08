@@ -39,7 +39,7 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
         ib.field_b = 0;
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_v = null;
         if (param0 == 28873) {
           field_t = null;

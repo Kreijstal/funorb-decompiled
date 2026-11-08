@@ -397,12 +397,12 @@ final class IconTextComponent extends SceneWidget {
 
     final static String k(int param0) {
         if (param0 != 8347) {
-          IconTextComponent.j(-70);
+          IconTextComponent.releaseStatics(-70);
         }
         return rf.field_d.readString(param0 ^ 8346);
     }
 
-    public static void j(int param0) {
+    public static void releaseStatics(int param0) {
         field_Ub = null;
         field_Vb = null;
         if (param0 != 15) {

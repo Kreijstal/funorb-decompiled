@@ -5,7 +5,7 @@ final class PaletteBitmapFont extends BitmapFont {
     private int[][] field_D;
     private byte[][] field_X;
 
-    private final static void a(int param0, int[] param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
+    private final static void blitPaletteGlyphAlpha(int param0, int[] param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
         int var12 = 0;
         int var13 = 0;
         int incrementValue$16 = 0;
@@ -84,7 +84,7 @@ final class PaletteBitmapFont extends BitmapFont {
         if (param3 > 0 &&
           param4 > 0) {
           if (!param6) {
-            PaletteBitmapFont.a(0, SoftwareRaster.field_g, this.field_X[param0], this.field_D[param5], var11, var8, param3, param4, var9, var10);
+            PaletteBitmapFont.blitPaletteGlyph(0, SoftwareRaster.field_g, this.field_X[param0], this.field_D[param5], var11, var8, param3, param4, var9, var10);
           } else {
             BinaryBitmapFont.blitBinaryGlyph(SoftwareRaster.field_g, this.field_X[param0], param5, var11, var8, param3, param4, var9, var10);
           }
@@ -132,7 +132,7 @@ final class PaletteBitmapFont extends BitmapFont {
         if (param3 > 0 &&
           param4 > 0) {
           if (!param7) {
-            PaletteBitmapFont.a(0, SoftwareRaster.field_g, this.field_X[param0], this.field_D[param5], var12, var9, param3, param4, var10, var11, param6);
+            PaletteBitmapFont.blitPaletteGlyphAlpha(0, SoftwareRaster.field_g, this.field_X[param0], this.field_D[param5], var12, var9, param3, param4, var10, var11, param6);
           } else {
             BinaryBitmapFont.blitBinaryGlyphWithAlpha(SoftwareRaster.field_g, this.field_X[param0], param5, var12, var9, param3, param4, var10, var11, param6);
           }
@@ -140,7 +140,7 @@ final class PaletteBitmapFont extends BitmapFont {
         }
     }
 
-    private final static void a(int param0, int[] param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitPaletteGlyph(int param0, int[] param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var11 = 0;
         int incrementValue$3 = 0;
         byte dupTemp$4 = 0;

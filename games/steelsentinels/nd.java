@@ -27,7 +27,7 @@ final class nd {
         ViewportController.a(UiTheme.field_i, 1);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         int var1 = -64 % ((param0 + 13) / 36);
     }

@@ -29,7 +29,7 @@ final class rb {
         return DiskCacheRequest.atanFixed16ToAngle8192(-3720, (deltaY << 16) / deltaX);
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_d = null;
         field_h = null;
         field_e = null;
@@ -37,7 +37,7 @@ final class rb {
         field_b = null;
         field_g = null;
         if (param0 != -82) {
-          rb.a((byte) -125);
+          rb.releaseStatics((byte) -125);
         }
     }
 

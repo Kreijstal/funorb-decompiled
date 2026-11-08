@@ -170,7 +170,7 @@ final class EmailCredentials extends LoginCredentials {
         return ArticulatedPart.field_F;
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != -116) {
           return;
         }

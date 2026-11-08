@@ -21,7 +21,7 @@ final class CheckboxPainter implements WidgetPainter {
     private int field_h;
     private BitmapFont field_c;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_r = null;
         field_b = null;
         field_j = null;
@@ -32,7 +32,7 @@ final class CheckboxPainter implements WidgetPainter {
         }
     }
 
-    public final void a(int param0, UiComponent param1, byte param2, boolean param3, int param4) {
+    public final void drawWidget(int param0, UiComponent param1, byte param2, boolean param3, int param4) {
         UiComponent stackIn_3_0 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
@@ -76,7 +76,7 @@ final class CheckboxPainter implements WidgetPainter {
             return;
           }
           var10 = this.field_e + this.field_p + this.field_a;
-          this.field_c.a(param1.field_y, var10 + (param1.field_o + param0), param4 + param1.field_z + this.field_i, param1.field_x - this.field_a - var10, param1.field_E - (this.field_a << 1), this.field_q, this.field_g, this.field_o, this.field_d, 0);
+          this.field_c.drawParagraph(param1.field_y, var10 + (param1.field_o + param0), param4 + param1.field_z + this.field_i, param1.field_x - this.field_a - var10, param1.field_E - (this.field_a << 1), this.field_q, this.field_g, this.field_o, this.field_d, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

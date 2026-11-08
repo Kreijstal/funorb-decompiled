@@ -95,7 +95,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
     FullscreenFocusCanvas() {
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_c = null;
         field_e = null;
         if (param0 != 30) {

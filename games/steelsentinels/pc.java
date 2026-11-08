@@ -105,7 +105,7 @@ final class pc extends IntrusiveNode {
         }
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_s = null;
         field_q = null;
         int var1 = -124 / ((62 - param0) / 37);

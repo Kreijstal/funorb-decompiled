@@ -19,7 +19,7 @@ final class NameAvailabilityValidator extends TextFieldValidator {
         this.field_s = false;
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_n = null;
         if (param0 != 1) {
           NameAvailabilityValidator.a(83, 71, true);
@@ -49,7 +49,7 @@ final class NameAvailabilityValidator extends TextFieldValidator {
         var8 = SteelSentinels.obfuscationControl;
         try {
           SoftwareRaster.drawRectangleOutline(param0, param1, param2, param3, 12105914);
-          SoftwareRaster.e(1 + param0, param1 + 1, -2 + param2, param3 - 2, 16251129, 10461345);
+          SoftwareRaster.fillVerticalGradient(1 + param0, param1 + 1, -2 + param2, param3 - 2, 16251129, 10461345);
           var6 = -126 / ((param4 - 69) / 50);
           var5_int = 64;
           for (var7 = 1; var7 <= 6; var7++) {

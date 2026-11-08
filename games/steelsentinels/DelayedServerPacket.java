@@ -18,7 +18,7 @@ final class DelayedServerPacket extends IntrusiveNode {
     static BoundedUrlRequest field_s;
     static String field_t;
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_x = (RgbSprite[][]) null;
         field_w = null;
         field_o = null;

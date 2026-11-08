@@ -306,7 +306,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_gb = null;
         field_X = null;
         field_P = null;
@@ -488,7 +488,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
 
     private final String linkEndMarkup(int param0) {
         if (param0 != 170) {
-          AccountRegistrationPanel.a(true);
+          AccountRegistrationPanel.releaseStatics(true);
           return "</col></u>";
         }
         return "</col></u>";

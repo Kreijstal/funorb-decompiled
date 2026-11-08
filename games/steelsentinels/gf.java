@@ -98,7 +98,7 @@ final class gf {
           var3 = DialWidgetPainter.field_q[0];
           DialWidgetPainter.field_q[0] = RasterSnapshot.field_r[0].copySprite();
           DialWidgetPainter.field_q[0].bindRasterTarget();
-          var3.a(0, 0);
+          var3.drawTransparent(0, 0);
           for (var4 = 0; var4 < var3.field_E.length; var4++) {
             if ((65280 & var3.field_E[var4]) != 0) {
               var3.field_E[var4] = 8454016;
@@ -110,7 +110,7 @@ final class gf {
           }
           DialWidgetPainter.field_q[1] = RasterSnapshot.field_r[1].copySprite();
           DialWidgetPainter.field_q[1].bindRasterTarget();
-          var3.a(0, 0);
+          var3.drawTransparent(0, 0);
           for (var4Lifetime1 = 0; var4Lifetime1 < var3.field_E.length; var4Lifetime1++) {
             if (var3.field_E[var4Lifetime1] == 8454016) {
               var3.field_E[var4Lifetime1] = 16711680;
@@ -122,10 +122,10 @@ final class gf {
           }
           DialWidgetPainter.field_q[2] = RasterSnapshot.field_r[2].copySprite();
           DialWidgetPainter.field_q[2].bindRasterTarget();
-          var3.a(0, param0);
+          var3.drawTransparent(0, param0);
           for (var4Lifetime2 = 0; var4Lifetime2 < 3; var4Lifetime2++) {
             rh.field_v[21 + var4Lifetime2].bindRasterTarget();
-            DialWidgetPainter.field_q[var4Lifetime2].a(0, 0);
+            DialWidgetPainter.field_q[var4Lifetime2].drawTransparent(0, 0);
           }
           rh.field_v[24].bindRasterTarget();
           CachedTextLayout.field_E[1].drawScaled(0, 0, 4 * var1_intLifetime1, var1_intLifetime1 * 4);
@@ -153,7 +153,7 @@ final class gf {
         WeightedLruCache.field_q = false;
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_b = null;
         field_d = null;

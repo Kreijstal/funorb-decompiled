@@ -9,7 +9,7 @@ final class vf {
     static String field_f;
     static int field_e;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_f = null;
         field_a = null;
         int var1 = 91 % ((param0 - 56) / 62);

@@ -371,7 +371,7 @@ final class ResourceArchive {
           this.packedGroups[groupId] = SocialListEntry.a(false, this.provider.getEncodedGroup(groupId, 2), 0);
         }
         if (obfuscationGuard > -12) {
-          ResourceArchive.b(true);
+          ResourceArchive.releaseStatics(true);
         }
     }
 
@@ -403,7 +403,7 @@ final class ResourceArchive {
         return var4Lifetime1;
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_l = null;
         field_m = null;
         field_p = null;
@@ -631,7 +631,7 @@ final class ResourceArchive {
         String[] var18 = null;
         try {
           if (param1 < 53) {
-            ResourceArchive.b(false);
+            ResourceArchive.releaseStatics(false);
           }
           var18 = (String[]) null;
           UiComponent.a(param11, param5, 72, param15, param4, param3, param6, param13, param9, param10, param2, param0, param14, param12, param8, (String[]) null, param16, 1, param7);
@@ -724,7 +724,7 @@ final class ResourceArchive {
 
     final static int atan2Angle8192(int deltaY, int obfuscationGuard, int deltaX) {
         if (obfuscationGuard != 200) {
-          ResourceArchive.b(false);
+          ResourceArchive.releaseStatics(false);
         }
         if (deltaX == 0) {
           if (deltaY == 0) {

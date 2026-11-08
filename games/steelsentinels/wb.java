@@ -75,7 +75,7 @@ final class wb {
         return 0;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_e = null;
         field_b = null;
         field_h = null;

@@ -91,7 +91,7 @@ final class ArgbSprite extends RgbSprite {
         }
     }
 
-    final void a(int param0, int param1) {
+    final void drawTransparent(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -259,7 +259,7 @@ final class ArgbSprite extends RgbSprite {
         }
     }
 
-    final void f(int param0, int param1) {
+    final void drawOpaque(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -710,7 +710,7 @@ final class ArgbSprite extends RgbSprite {
         ArgbSprite.blitArgbScaledAlpha(SoftwareRaster.field_g, this.field_E, 0, var8, var9, var14Lifetime2, var15, param2, param3, var12, var13, var6, param4);
     }
 
-    final void e(int param0, int param1, int param2, int param3) {
+    final void drawWithVerticalAlphaGradient(int param0, int param1, int param2, int param3) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int var5;

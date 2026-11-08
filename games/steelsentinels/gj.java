@@ -212,7 +212,7 @@ final class gj {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_a = null;
         int var1 = 10 % ((44 - param0) / 40);

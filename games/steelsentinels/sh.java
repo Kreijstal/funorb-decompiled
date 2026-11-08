@@ -19,7 +19,7 @@ final class sh {
         param3--;
         param2++;
         SoftwareRaster.setClip(param4, param3, param4 + param1, param3 + param2);
-        MidiPcmStream.field_db.f(param4, param3 - 17);
+        MidiPcmStream.field_db.drawOpaque(param4, param3 - 17);
         SoftwareRaster.resetClip();
         SoftwareRaster.drawHorizontalLineAlpha(param4, param3, param1, 0, 128);
         SoftwareRaster.drawHorizontalLineAlpha(param4, param3 + 1, param1, 0, 96);
@@ -99,7 +99,7 @@ final class sh {
         return new LoginMethod[]{PartInstruction.field_o, TabbedPanel.field_Vb, DraggableWidget.field_Y};
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_c = null;
         if (param0 != -3274) {

@@ -99,7 +99,7 @@ abstract class ArchiveProvider {
 
     final static void a(boolean param0, byte param1, boolean param2) {
         if (param0) {
-          SoftwareRaster.c(0, 0, SoftwareRaster.field_c, SoftwareRaster.field_j, 0, 192);
+          SoftwareRaster.fillRectangleBlended(0, 0, SoftwareRaster.field_c, SoftwareRaster.field_j, 0, 192);
           if (param1 <= 32) {
             field_d = (vd) null;
             wn.a(0, param0);
@@ -117,7 +117,7 @@ abstract class ArchiveProvider {
         wn.a(0, param0);
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_e = null;
         field_d = null;

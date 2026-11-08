@@ -51,7 +51,7 @@ final class sf {
     final static void a(int param0, byte param1, boolean param2, int param3) {
         int var4 = 0;
         int var4Lifetime1;
-        ValidatedTextWidget.field_ub.a(param3, param0);
+        ValidatedTextWidget.field_ub.drawTransparent(param3, param0);
         if (param2) {
           var4 = 2 * (ik.field_e % ValidatedTextWidget.field_ub.field_A);
           if (var4 >= ValidatedTextWidget.field_ub.field_A) {
@@ -417,7 +417,7 @@ final class sf {
     final static void $cfr$intArgs$a$c79a3df4369d(int param0, int param1, boolean param2, int param3) {
         int var4 = 0;
         int var4Lifetime1;
-        ValidatedTextWidget.field_ub.a(param3, param0);
+        ValidatedTextWidget.field_ub.drawTransparent(param3, param0);
         if (param2) {
           var4 = 2 * (ik.field_e % ValidatedTextWidget.field_ub.field_A);
           if (var4 >= ValidatedTextWidget.field_ub.field_A) {

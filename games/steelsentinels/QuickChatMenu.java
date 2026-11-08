@@ -86,7 +86,7 @@ final class QuickChatMenu extends SceneWidget {
         }
     }
 
-    public static void k(int param0) {
+    public static void releaseStatics(int param0) {
         field_lc = null;
         field_gc = null;
         field_Zb = null;
@@ -296,7 +296,7 @@ final class QuickChatMenu extends SceneWidget {
           this.c(127, -1 + this.field_fc);
         }
         if (param0 < 28) {
-          QuickChatMenu.k(119);
+          QuickChatMenu.releaseStatics(119);
         }
     }
 

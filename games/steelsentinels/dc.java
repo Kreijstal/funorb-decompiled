@@ -34,7 +34,7 @@ final class dc {
         return var3.toString();
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = (RgbSprite[][]) null;
         field_d = null;
         field_f = null;

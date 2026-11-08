@@ -130,7 +130,7 @@ final class ValidationIndicator extends TextButton {
         }
     }
 
-    public static void h(int param0) {
+    public static void releaseStatics(int param0) {
         field_Z = null;
         if (param0 != -30289) {
           return;
@@ -252,7 +252,7 @@ final class ValidationIndicator extends TextButton {
             qf.field_f = new RgbSprite(var9, var10);
             IterableNodeHashTable.a(qf.field_f, (byte) -108);
           }
-          var12.a(112, 144, var12.field_z << 4, var12.field_B << 4, -this.field_ab << 10, 4096);
+          var12.drawRotatedAboutPivot(112, 144, var12.field_z << 4, var12.field_B << 4, -this.field_ab << 10, 4096);
           MatchingTextValidator.$cfr$intArgs$f$20d51497949f(106);
           qf.field_f.drawAdditive(-var12.field_z + var5, -var12.field_B + var6, 256);
         }

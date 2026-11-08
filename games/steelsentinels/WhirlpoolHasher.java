@@ -203,7 +203,7 @@ final class WhirlpoolHasher {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_g = null;
         field_d = null;
         field_o = (RgbSprite[][]) null;

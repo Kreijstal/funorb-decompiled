@@ -74,7 +74,7 @@ final class SocketJs5Transport extends Js5Transport {
         }
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         field_B = null;
         field_y = null;
         field_x = null;
@@ -237,7 +237,7 @@ final class SocketJs5Transport extends Js5Transport {
             if (!AccountNoticeDialog.a(var4.charAt(0), -33) &&
               !AccountNoticeDialog.a(var4.charAt(-1 + var4.length()), -33)) {
               if (param1 != 4) {
-                SocketJs5Transport.e(1);
+                SocketJs5Transport.releaseStatics(1);
               }
               var5 = 0;
               for (var6 = 0; var6 < param0.length(); var6++) {

@@ -10,7 +10,7 @@ final class AlphaContainer extends SingleChildContainer {
     static String field_S;
     static boolean field_G;
 
-    public static void h(int param0) {
+    public static void releaseStatics(int param0) {
         field_U = null;
         field_V = null;
         if (param0 == -13) {

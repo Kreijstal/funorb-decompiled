@@ -105,7 +105,7 @@ abstract class TextLayout {
             TextLayout.a(true, -102);
           }
           vc.field_c = param2 * MusicCrossfadeStream.a((byte) -108) / 1000;
-          Sprite.a(param0, 1728986241);
+          Sprite.loadLogoJingle(param0, 1728986241);
           DialWidget.a((byte) 90, param0);
           SocialListEntry.a(77, param0);
           ValidationIndicator.a(true);
@@ -328,7 +328,7 @@ abstract class TextLayout {
         TextLayoutLine.a(param0, (byte) -125);
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_e = null;
         field_a = null;
         field_i = null;

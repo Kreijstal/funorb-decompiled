@@ -50,7 +50,7 @@ final class ci {
         return var1;
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (param0) {
           ci.a((byte) -76);
         }
@@ -92,7 +92,7 @@ final class ci {
           gf.field_d = (BitmapFont) ((Object) be.a(param0, param2, (byte) -57, "arezzo14bold", "commonui"));
           var17 = new RgbSprite(param3.a("", -742, "button.gif"), (java.awt.Component) ((Object) sl.field_n));
           if (param1 < 63) {
-            ci.a(true);
+            ci.releaseStatics(true);
           }
           NanoTickClock.a(param0, (byte) 85, "commonui", "dropdown");
           var5 = cj.a(45, "commonui", param0, "screen_options");
@@ -125,13 +125,13 @@ final class ci {
           var15 = new RgbSprite(var9Lifetime1, var9Lifetime1);
           var18 = var15;
           var18.bindRasterTarget();
-          var17.f(0, 0);
+          var17.drawOpaque(0, 0);
           var11 = new RgbSprite(var9Lifetime1, var9Lifetime1);
           var11.bindRasterTarget();
-          var17.f(var9Lifetime1 - var17.field_A, 0);
+          var17.drawOpaque(var9Lifetime1 - var17.field_A, 0);
           var12 = new RgbSprite(var17.field_A - var9Lifetime1 * 2, var9Lifetime1);
           var12.bindRasterTarget();
-          var17.f(-var9Lifetime1, 0);
+          var17.drawOpaque(-var9Lifetime1, 0);
           MatchingTextValidator.$cfr$intArgs$f$20d51497949f(122);
           un.field_m = new RgbSprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {

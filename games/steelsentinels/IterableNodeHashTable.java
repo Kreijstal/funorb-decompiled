@@ -18,7 +18,7 @@ final class IterableNodeHashTable implements Iterable {
     static String field_k;
     IntrusiveNode[] field_j;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_d = null;
         if (param0 < -126) {
           field_f = null;

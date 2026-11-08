@@ -50,7 +50,7 @@ final class CoverageBitmapFont extends BitmapFont {
         if (param3 > 0 &&
           param4 > 0) {
           if (!param7) {
-            CoverageBitmapFont.a(SoftwareRaster.field_g, this.field_D[param0], param5, var12, var9, param3, param4, var10, var11, param6);
+            CoverageBitmapFont.blitCoverageAlpha(SoftwareRaster.field_g, this.field_D[param0], param5, var12, var9, param3, param4, var10, var11, param6);
           } else {
             BinaryBitmapFont.blitBinaryGlyphWithAlpha(SoftwareRaster.field_g, this.field_D[param0], param5, var12, var9, param3, param4, var10, var11, param6);
           }
@@ -58,7 +58,7 @@ final class CoverageBitmapFont extends BitmapFont {
         }
     }
 
-    private final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void blitCoverage(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var9 = 0;
         int var10 = 0;
         int incrementValue$11 = 0;
@@ -127,7 +127,7 @@ final class CoverageBitmapFont extends BitmapFont {
         if (param3 > 0 &&
           param4 > 0) {
           if (!param6) {
-            CoverageBitmapFont.a(SoftwareRaster.field_g, this.field_D[param0], param5, var11, var8, param3, param4, var9, var10);
+            CoverageBitmapFont.blitCoverage(SoftwareRaster.field_g, this.field_D[param0], param5, var11, var8, param3, param4, var9, var10);
           } else {
             BinaryBitmapFont.blitBinaryGlyph(SoftwareRaster.field_g, this.field_D[param0], param5, var11, var8, param3, param4, var9, var10);
           }
@@ -135,7 +135,7 @@ final class CoverageBitmapFont extends BitmapFont {
         }
     }
 
-    private final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitCoverageAlpha(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var10 = 0;
         int var11 = 0;
         int incrementValue$11 = 0;

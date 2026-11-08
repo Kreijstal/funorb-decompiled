@@ -27,7 +27,7 @@ final class vc {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_e = null;
         field_l = null;
         field_h = null;
@@ -37,7 +37,7 @@ final class vc {
           field_k = null;
           return;
         }
-        vc.b(45);
+        vc.releaseStatics(45);
         field_f = null;
         field_k = null;
     }

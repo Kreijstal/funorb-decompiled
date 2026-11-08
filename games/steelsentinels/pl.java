@@ -53,7 +53,7 @@ final class pl extends ch implements ButtonListener {
         return (java.awt.Container) ((Object) Projectile.d((byte) -21));
     }
 
-    public static void c(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_X = null;
         field_ab = (int[][]) null;
         field_V = null;

@@ -78,7 +78,7 @@ final class bi {
         return true;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_f = null;
         int var1 = -15 % ((7 - param0) / 47);
         field_b = null;

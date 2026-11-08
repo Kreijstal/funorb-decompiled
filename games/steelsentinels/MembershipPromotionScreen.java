@@ -56,20 +56,20 @@ final class MembershipPromotionScreen {
         int var2Lifetime2;
         int var3Lifetime1;
         var4 = SteelSentinels.obfuscationControl;
-        SoftwareRaster.e(9, 9, 622, 47, 4540749, 65793);
+        SoftwareRaster.fillVerticalGradient(9, 9, 622, 47, 4540749, 65793);
         SoftwareRaster.fillRectangle(9, 257, 622, 33, 2585);
-        SoftwareRaster.e(9, 265, 622, 11, 2585, 1515566);
+        SoftwareRaster.fillVerticalGradient(9, 265, 622, 11, 2585, 1515566);
         var2 = 0;
         var3 = 14;
         while (var2 < 4) {
-          SoftwareRaster.e(var3, 331, 117, 90, 460551, 3881787);
+          SoftwareRaster.fillVerticalGradient(var3, 331, 117, 90, 460551, 3881787);
           var2++;
           var3 += 121;
         }
         var2Lifetime1 = 0;
         var3Lifetime1 = 299;
         while (var2Lifetime1 < 2) {
-          SoftwareRaster.e(508, var3Lifetime1, 127, 42, 1130115, 3365268);
+          SoftwareRaster.fillVerticalGradient(508, var3Lifetime1, 127, 42, 1130115, 3365268);
           SoftwareRaster.fillRectangle(508, 42 + var3Lifetime1, 127, 42, 12410);
           var3Lifetime1 += 91;
           var2Lifetime1++;
@@ -98,11 +98,11 @@ final class MembershipPromotionScreen {
         if (null == QuickChatHelpDialog.field_Wb) {
           return;
         }
-        this.field_a.a(376, 339);
-        this.field_u.a(9, 9);
+        this.field_a.drawTransparent(376, 339);
+        this.field_u.drawTransparent(9, 9);
         QuickChatHelpDialog.field_Wb.draw(0, 0);
         if (di.field_f != null) {
-          di.field_f.a(9, 257);
+          di.field_f.drawTransparent(9, 257);
           di.field_f.drawHorizontalFlip(558, 257);
           if (DelegatingCanvas.field_c > 257 &&
             DelegatingCanvas.field_c < 290) {
@@ -128,22 +128,22 @@ final class MembershipPromotionScreen {
             }
           }
         }
-        this.field_t.a(16, 302);
-        GameApplet.field_g.a(this.field_d[this.field_q], 9, 257, 622, 33, 16754688, -1, 1, 1, 0);
-        qe.field_g.a(30, 330);
-        GameApplet.field_g.a(ArchiveRequest.field_A[0], 17, 428, 111, 35, 16754688, -1, 1, 1, 0);
-        GameApplet.field_g.a(ArchiveRequest.field_A[1], 138, 428, 111, 35, 16754688, -1, 1, 1, 0);
-        GameApplet.field_g.a(ArchiveRequest.field_A[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
-        SectorCacheStore.field_d.a(508 + (-SectorCacheStore.field_d.field_z + 127) / 2, 315);
+        this.field_t.drawTransparent(16, 302);
+        GameApplet.field_g.drawParagraph(this.field_d[this.field_q], 9, 257, 622, 33, 16754688, -1, 1, 1, 0);
+        qe.field_g.drawTransparent(30, 330);
+        GameApplet.field_g.drawParagraph(ArchiveRequest.field_A[0], 17, 428, 111, 35, 16754688, -1, 1, 1, 0);
+        GameApplet.field_g.drawParagraph(ArchiveRequest.field_A[1], 138, 428, 111, 35, 16754688, -1, 1, 1, 0);
+        GameApplet.field_g.drawParagraph(ArchiveRequest.field_A[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
+        SectorCacheStore.field_d.drawTransparent(508 + (-SectorCacheStore.field_d.field_z + 127) / 2, 315);
         if (!param0) {
           var5 = (BitmapFont) null;
           this.a(-67, (int[]) null, -60, 99, (String) null, 51, (BitmapFont) null, (byte) 82);
         }
         if (this.field_n.field_e == 0) {
-          ce.field_v[0].a(508, 299);
+          ce.field_v[0].drawTransparent(508, 299);
         } else {
           if (this.field_n.field_e == 1) {
-            ce.field_v[1].a(508, 387);
+            ce.field_v[1].drawTransparent(508, 387);
           }
         }
     }
@@ -263,7 +263,7 @@ final class MembershipPromotionScreen {
         return 3;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_o = null;
         field_r = null;
         int var1 = -21 % ((param0 + 6) / 61);
@@ -287,7 +287,7 @@ final class MembershipPromotionScreen {
           }
           this.field_u = new RgbSprite(622, 47);
           IterableNodeHashTable.a(this.field_u, (byte) -124);
-          SoftwareRaster.e(0, 0, 622, 47, 4540749, 65793);
+          SoftwareRaster.fillVerticalGradient(0, 0, 622, 47, 4540749, 65793);
           if (param0 < 86) {
             this.a(-93, false);
           }
@@ -301,8 +301,8 @@ final class MembershipPromotionScreen {
           var17 = ContentTransitionDialog.b(526344, 526344, (byte) -104);
           var5 = new RgbSprite(121, 122);
           IterableNodeHashTable.a(var5, (byte) -117);
-          SoftwareRaster.e(0, 0, var5.field_A, var5.field_F / 2, 16180917, 16306250);
-          SoftwareRaster.e(0, var5.field_F / 2, var5.field_A, var5.field_F, 16306250, 15568919);
+          SoftwareRaster.fillVerticalGradient(0, 0, var5.field_A, var5.field_F / 2, 16180917, 16306250);
+          SoftwareRaster.fillVerticalGradient(0, var5.field_F / 2, var5.field_A, var5.field_F, 16306250, 15568919);
           var6 = cl.field_d;
           var7 = eb.field_t;
           this.a(var5.field_F, 0.5f, var5, 0, var5.field_A, var6, -16, FunOrbClient.field_w, var17, 259);
@@ -311,7 +311,7 @@ final class MembershipPromotionScreen {
           MatchingTextValidator.$cfr$intArgs$f$20d51497949f(118);
           this.field_a = new RgbSprite(121, 122);
           IterableNodeHashTable.a(this.field_a, (byte) -75);
-          var5.d(this.field_a.field_A / 2, this.field_a.field_F / 2, -2048, 4096);
+          var5.drawRotatedAboutCenter(this.field_a.field_A / 2, this.field_a.field_F / 2, -2048, 4096);
           MatchingTextValidator.$cfr$intArgs$f$20d51497949f(112);
           return;
         }
@@ -328,7 +328,7 @@ final class MembershipPromotionScreen {
         var5 = SteelSentinels.obfuscationControl;
         if (null == this.field_s) {
           if (null != GameApplet.field_g) {
-            GameApplet.field_g.a(eb.field_q, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
+            GameApplet.field_g.drawParagraph(eb.field_q, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
           }
           return;
         }
@@ -339,7 +339,7 @@ final class MembershipPromotionScreen {
         }
         if (var2 == null) {
           if (null != GameApplet.field_g) {
-            GameApplet.field_g.a(eb.field_q, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
+            GameApplet.field_g.drawParagraph(eb.field_q, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
           }
         } else {
           var6.draw(9, 58);
@@ -443,7 +443,7 @@ final class MembershipPromotionScreen {
             SoftwareRaster.setClip(param0, var9_int, param2, var9_int + 1);
             var10 = param1.length * var9_int / param5;
             var11 = param1[-1 - var10 + param1.length];
-            param6.a(param4, param0, param3, param2, param5, var11, -1, 1, 1, 0);
+            param6.drawParagraph(param4, param0, param3, param2, param5, var11, -1, 1, 1, 0);
             var9_int++;
           }
           MatchingTextValidator.$cfr$intArgs$f$20d51497949f(118);
@@ -479,7 +479,7 @@ final class MembershipPromotionScreen {
           this.a(0, param8, var11_int, 0, param5, var12, param7, (byte) -27);
           MatchingTextValidator.$cfr$intArgs$f$20d51497949f(111);
           IterableNodeHashTable.a(param2, (byte) -126);
-          var13.b(param3, param6, param4, param0);
+          var13.drawScaledAveraged(param3, param6, param4, param0);
           MatchingTextValidator.$cfr$intArgs$f$20d51497949f(117);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

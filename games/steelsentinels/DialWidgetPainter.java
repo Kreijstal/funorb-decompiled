@@ -22,7 +22,7 @@ final class DialWidgetPainter implements WidgetPainter {
     private int field_r;
     private int field_a;
 
-    public final void a(int param0, UiComponent param1, byte param2, boolean param3, int param4) {
+    public final void drawWidget(int param0, UiComponent param1, byte param2, boolean param3, int param4) {
         int var7 = 0;
         int var8 = 0;
         int var13 = 0;
@@ -42,21 +42,21 @@ final class DialWidgetPainter implements WidgetPainter {
         try {
           var7 = var14.field_cb + (param1.field_o + param0);
           var8 = var14.field_Y + (param4 + param1.field_z);
-          SoftwareRaster.e(var7, var8, var14.field_ab, this.field_a);
+          SoftwareRaster.fillCircle(var7, var8, var14.field_ab, this.field_a);
           if (-1 != var14.field_W) {
             var9 = (double)var14.field_W * 3.141592653589793 * 2.0 / (double)var14.field_bb;
             var11 = (int)(-Math.sin(var9) * (double)var14.field_ab);
             var12 = (int)(Math.cos(var9) * (double)var14.field_ab);
-            SoftwareRaster.e(var11 + var7, var12 + var8, 1, this.field_k);
+            SoftwareRaster.fillCircle(var11 + var7, var12 + var8, 1, this.field_k);
           }
-          SoftwareRaster.e(var7, var8, 2, 1);
+          SoftwareRaster.fillCircle(var7, var8, 2, 1);
           var9Lifetime1 = (double)var14.field_eb * 3.141592653589793 * 2.0 / (double)var14.field_bb;
           var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var14.field_ab);
           var12Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var14.field_ab);
           SoftwareRaster.drawLine(var7, var8, var7 + var11Lifetime1, var12Lifetime1 + var8, 1);
           if (null != this.field_o) {
             var13 = this.field_s + var14.field_cb + var14.field_ab;
-            this.field_o.a(param1.field_y, param0 + param1.field_o + var13, this.field_h + param4 + param1.field_z, -var13 - this.field_s + param1.field_x, param1.field_E - (this.field_s << 1), this.field_r, this.field_d, 1, 1, 0);
+            this.field_o.drawParagraph(param1.field_y, param0 + param1.field_o + var13, this.field_h + param4 + param1.field_z, -var13 - this.field_s + param1.field_x, param1.field_E - (this.field_s << 1), this.field_r, this.field_d, 1, 1, 0);
           }
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "b.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
@@ -89,7 +89,7 @@ final class DialWidgetPainter implements WidgetPainter {
         int var3 = -47 % ((param1 + 35) / 61);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_j = null;
         field_l = null;
         field_i = null;

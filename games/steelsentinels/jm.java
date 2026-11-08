@@ -10,7 +10,7 @@ final class jm extends IntrusiveNode {
     static int field_o;
     int field_s;
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_p = null;
         field_u = null;
         int var1 = 90 % ((param0 - 75) / 51);
@@ -105,29 +105,29 @@ final class jm extends IntrusiveNode {
             SoftwareRaster.getClip(var26);
             if (param2[0] != null) {
               SoftwareRaster.intersectClip(param4, param0, var17, var19);
-              param2[0].a(param4, param0);
+              param2[0].drawTransparent(param4, param0);
               SoftwareRaster.setClip(var26);
             }
             if (null != param2[2]) {
               SoftwareRaster.intersectClip(var18, param0, var11, var19);
-              param2[2].a(var14, param0);
+              param2[2].drawTransparent(var14, param0);
               SoftwareRaster.setClip(var26);
             }
             if (null != param2[6]) {
               SoftwareRaster.intersectClip(param4, var20, var17, var12);
-              param2[6].a(param4, var16);
+              param2[6].drawTransparent(param4, var16);
               SoftwareRaster.setClip(var26);
             }
             if (param2[8] != null) {
               SoftwareRaster.intersectClip(var18, var20, var11, var12);
-              param2[8].a(var14, var16);
+              param2[8].drawTransparent(var14, var16);
               SoftwareRaster.setClip(var26);
             }
             if (null != param2[1] &&
               param2[1].field_z != 0) {
               SoftwareRaster.intersectClip(var17, param0, var18, var19);
               for (var21 = var13; var21 < var14; var21 = var21 + param2[1].field_z) {
-                param2[1].a(var21, param0);
+                param2[1].drawTransparent(var21, param0);
               }
               SoftwareRaster.setClip(var29);
             }
@@ -135,7 +135,7 @@ final class jm extends IntrusiveNode {
               param2[7].field_z != 0) {
               SoftwareRaster.intersectClip(var17, var20, var18, var12);
               for (var21Lifetime1 = var13; var14 > var21Lifetime1; var21Lifetime1 = var21Lifetime1 + param2[7].field_z) {
-                param2[7].a(var21Lifetime1, var16);
+                param2[7].drawTransparent(var21Lifetime1, var16);
               }
               SoftwareRaster.setClip(var29);
             }

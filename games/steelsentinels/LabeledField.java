@@ -84,7 +84,7 @@ final class LabeledField extends SingleChildContainer {
           LabeledField.a(104, -35);
         }
         int var7 = this.field_db ? -(this.field_ab * 2) - this.field_T + this.field_x : 0;
-        this.field_Z.a(this.field_U, var7 + (var5 + this.field_ab), var6 + this.field_ab, -this.field_ab + this.field_T, -(this.field_ab * 2) + this.field_E, this.field_Y, -1, !this.field_db ? 2 : 0, 1, this.field_Z.field_G);
+        this.field_Z.drawParagraph(this.field_U, var7 + (var5 + this.field_ab), var6 + this.field_ab, -this.field_ab + this.field_T, -(this.field_ab * 2) + this.field_E, this.field_Y, -1, !this.field_db ? 2 : 0, 1, this.field_Z.field_G);
     }
 
     LabeledField(int param0, int param1, int param2, int param3, UiComponent param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {

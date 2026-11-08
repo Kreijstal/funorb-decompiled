@@ -62,7 +62,7 @@ final class NumericDateInputWidget extends DateInputWidget {
         return null;
     }
 
-    public static void l(int param0) {
+    public static void releaseStatics(int param0) {
         field_W = null;
         field_ab = null;
         field_hb = null;
@@ -159,7 +159,7 @@ final class NumericDateInputWidget extends DateInputWidget {
             if (param1 == 9268) {
               return;
             }
-            NumericDateInputWidget.l(36);
+            NumericDateInputWidget.releaseStatics(36);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

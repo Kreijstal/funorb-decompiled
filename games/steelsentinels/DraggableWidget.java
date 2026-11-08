@@ -269,7 +269,7 @@ final class DraggableWidget extends SingleChildContainer {
         }
     }
 
-    public static void h(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
           return;
         }

@@ -277,9 +277,9 @@ final class IterableDualNodeDeque implements Iterable {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
-          IterableDualNodeDeque.a(true);
+          IterableDualNodeDeque.releaseStatics(true);
         }
         field_g = null;
         field_j = null;
@@ -423,29 +423,29 @@ final class IterableDualNodeDeque implements Iterable {
             }
             if (param1[0] != null) {
               SoftwareRaster.intersectClip(param4, param3, var17, var19);
-              param1[0].a(param4, param3);
+              param1[0].drawTransparent(param4, param3);
               SoftwareRaster.setClip(LoginCredentials.field_g);
             }
             if (param1[2] != null) {
               SoftwareRaster.intersectClip(var18, param3, var10, var19);
-              param1[2].a(var14, param3);
+              param1[2].drawTransparent(var14, param3);
               SoftwareRaster.setClip(LoginCredentials.field_g);
             }
             if (param1[6] != null) {
               SoftwareRaster.intersectClip(param4, var20, var17, var12);
-              param1[6].a(param4, var16);
+              param1[6].drawTransparent(param4, var16);
               SoftwareRaster.setClip(LoginCredentials.field_g);
             }
             if (param1[8] != null) {
               SoftwareRaster.intersectClip(var18, var20, var10, var12);
-              param1[8].a(var14, var16);
+              param1[8].drawTransparent(var14, var16);
               SoftwareRaster.setClip(LoginCredentials.field_g);
             }
             if (param1[1] != null &&
               0 != param1[1].field_z) {
               SoftwareRaster.intersectClip(var17, param3, var18, var19);
               for (var21 = var13; var21 < var14; var21 = var21 + param1[1].field_z) {
-                param1[1].a(var21, param3);
+                param1[1].drawTransparent(var21, param3);
               }
               SoftwareRaster.setClip(LoginCredentials.field_g);
             }
@@ -453,7 +453,7 @@ final class IterableDualNodeDeque implements Iterable {
               param1[7].field_z != 0) {
               SoftwareRaster.intersectClip(var17, var20, var18, var12);
               for (var21Lifetime1 = var13; var21Lifetime1 < var14; var21Lifetime1 = var21Lifetime1 + param1[7].field_z) {
-                param1[7].a(var21Lifetime1, var16);
+                param1[7].drawTransparent(var21Lifetime1, var16);
               }
               SoftwareRaster.setClip(LoginCredentials.field_g);
             }
@@ -461,7 +461,7 @@ final class IterableDualNodeDeque implements Iterable {
               0 != param1[3].field_B) {
               SoftwareRaster.intersectClip(param4, var19, var17, var20);
               for (var21Lifetime2 = var15; var16 > var21Lifetime2; var21Lifetime2 = var21Lifetime2 + param1[3].field_B) {
-                param1[3].a(param4, var21Lifetime2);
+                param1[3].drawTransparent(param4, var21Lifetime2);
               }
               SoftwareRaster.setClip(LoginCredentials.field_g);
             }
@@ -469,7 +469,7 @@ final class IterableDualNodeDeque implements Iterable {
               0 != param1[5].field_B) {
               SoftwareRaster.intersectClip(var18, var19, var10, var20);
               for (var21Lifetime3 = var15; var16 > var21Lifetime3; var21Lifetime3 = var21Lifetime3 + param1[5].field_B) {
-                param1[5].a(var14, var21Lifetime3);
+                param1[5].drawTransparent(var14, var21Lifetime3);
               }
               SoftwareRaster.setClip(LoginCredentials.field_g);
             }
@@ -481,7 +481,7 @@ final class IterableDualNodeDeque implements Iterable {
               SoftwareRaster.intersectClip(var17, var19, var18, var20);
               for (var21Lifetime4 = var15; var16 > var21Lifetime4; var21Lifetime4 = var21Lifetime4 + param1[4].field_B) {
                 for (var22 = var13; var14 > var22; var22 = var22 + param1[4].field_z) {
-                  param1[4].a(var22, var21Lifetime4);
+                  param1[4].drawTransparent(var22, var21Lifetime4);
                 }
               }
               SoftwareRaster.setClip(LoginCredentials.field_g);

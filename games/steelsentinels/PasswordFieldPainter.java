@@ -15,7 +15,7 @@ final class PasswordFieldPainter extends GradientOutlineTextPainter {
 
     final static boolean c(int param0) {
         if (param0 != 8) {
-          PasswordFieldPainter.d(28);
+          PasswordFieldPainter.releaseStatics(28);
           if (!ParticleEffect.g(2)) {
             return false;
           }
@@ -48,7 +48,7 @@ final class PasswordFieldPainter extends GradientOutlineTextPainter {
         this(tj.field_e, param0);
     }
 
-    final String c(int param0, UiComponent param1) {
+    final String getDisplayText(int param0, UiComponent param1) {
         RuntimeException var3 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -75,7 +75,7 @@ final class PasswordFieldPainter extends GradientOutlineTextPainter {
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_x = null;
         field_y = null;
         field_C = null;
@@ -86,7 +86,7 @@ final class PasswordFieldPainter extends GradientOutlineTextPainter {
           field_B = null;
           return;
         }
-        PasswordFieldPainter.d(-15);
+        PasswordFieldPainter.releaseStatics(-15);
         field_E = null;
         field_B = null;
     }

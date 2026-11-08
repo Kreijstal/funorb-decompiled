@@ -44,7 +44,7 @@ final class LoginMethod {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_e = null;
         field_b = null;
         if (param0 != 7) {

@@ -155,7 +155,7 @@ final class ViewportController {
         return false;
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_h = null;
         field_l = null;
         int var1 = 86 / ((0 - param0) / 63);
@@ -247,13 +247,13 @@ final class ViewportController {
           var2_int = oh.field_f;
           var3 = DelegatingCanvas.field_c;
           var4 = bd.field_f.field_L.wrappedLineCount(param0, 500);
-          var5 = 6 + bd.field_f.field_L.a(param0, 500);
+          var5 = 6 + bd.field_f.field_L.getWrappedWidth(param0, 500);
           var6 = 2 + SocketConnector.field_b * var4;
           var7 = UiContainer.a(12, 127, var2_int, var5);
           var8 = QuickChatHelpDialog.a(var3, 0, 20, var6);
           SoftwareRaster.drawRectangleOutline(var7, var8, var5, var6, 0);
           SoftwareRaster.fillRectangle(1 + var7, 1 + var8, -2 + var5, var6 - 2, 16777088);
-          bd.field_f.field_L.a(param0, 3 + var7, param1 + var8 - (-km.field_g + bd.field_f.field_L.field_G), 500, 1000, 0, -1, 0, 0, SocketConnector.field_b);
+          bd.field_f.field_L.drawParagraph(param0, 3 + var7, param1 + var8 - (-km.field_g + bd.field_f.field_L.field_G), 500, 1000, 0, -1, 0, 0, SocketConnector.field_b);
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "jg.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

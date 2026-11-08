@@ -47,7 +47,7 @@ final class dj {
         throw new IllegalStateException();
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_g = (String[][]) null;
         field_f = null;
         field_a = null;
@@ -61,7 +61,7 @@ final class dj {
           field_c = null;
           return;
         }
-        dj.a((byte) 20);
+        dj.releaseStatics((byte) 20);
         field_h = null;
         field_k = null;
         field_c = null;

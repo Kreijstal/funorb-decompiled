@@ -130,7 +130,7 @@ final class DialWidget extends TextButton {
         }
     }
 
-    public static void f(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_db = null;
         field_V = null;
         field_Z = null;
@@ -150,7 +150,7 @@ final class DialWidget extends TextButton {
         int var8 = SoftwareRaster.field_j;
         RgbSprite var9 = new RgbSprite(16, param4);
         var9.bindRasterTarget();
-        SoftwareRaster.e(0, 0, 16, param4, param1, param5);
+        SoftwareRaster.fillVerticalGradient(0, 0, 16, param4, param1, param5);
         Object var10 = null;
         Object var11 = null;
         if (param0) {

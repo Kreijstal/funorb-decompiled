@@ -210,7 +210,7 @@ final class IsaacRandom {
         return NodeHashTable.nonnegativeRemainder(false, sample, bound);
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 > -24) {
           field_a = (String) null;
         }

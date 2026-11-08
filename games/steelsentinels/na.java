@@ -138,7 +138,7 @@ final class na {
         var3.writeShort(param2, 47);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_v = null;
         field_q = null;
         field_h = null;

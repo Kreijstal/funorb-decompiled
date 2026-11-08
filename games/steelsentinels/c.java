@@ -189,7 +189,7 @@ final class c extends IntrusiveNode {
         return true;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_p = null;
         field_o = null;
         if (param0 == 127) {

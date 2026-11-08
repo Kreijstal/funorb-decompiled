@@ -9,7 +9,7 @@ final class fc {
     static String field_c;
     static int[][] field_b;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_a = null;
         if (!param0) {
           return;
@@ -132,7 +132,7 @@ final class fc {
             var5 = param1.getFile();
             var6 = 0;
             if (param0 != -19571) {
-              fc.a(false);
+              fc.releaseStatics(false);
             }
             while (true) {
               boolean decompiledFrameRemainder0 = true;

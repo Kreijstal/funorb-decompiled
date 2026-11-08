@@ -1480,7 +1480,7 @@ final class BufferedRandomAccessFile {
         try {
           this.a((byte) 115, param1, param1.length, 0);
           if (param0 >= -45) {
-            BufferedRandomAccessFile.a(-54);
+            BufferedRandomAccessFile.releaseStatics(-54);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1732,7 +1732,7 @@ final class BufferedRandomAccessFile {
         this.field_q.a(true);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_k = null;
         field_c = null;
         field_d = null;

@@ -16,7 +16,7 @@ final class AccountMessagePanel extends UiContainer implements ButtonListener {
     static long[] field_T;
     private BitmapFont field_ab;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_Z = null;
         field_Y = null;
         field_S = null;
@@ -46,7 +46,7 @@ final class AccountMessagePanel extends UiContainer implements ButtonListener {
         if (param1 > -99) {
           this.drawLayer(-109, (byte) 96, 110, -22);
         }
-        this.field_ab.a(this.field_P, this.field_o + (param2 + 14), this.field_z + param0 + 10, this.field_x - 28, this.field_E, 16777215, -1, 0, 0, this.field_ab.field_G);
+        this.field_ab.drawParagraph(this.field_P, this.field_o + (param2 + 14), this.field_z + param0 + 10, this.field_x - 28, this.field_E, 16777215, -1, 0, 0, this.field_ab.field_G);
     }
 
     final static RgbSprite[] b(int param0, int param1, int param2, int param3) {
@@ -55,7 +55,7 @@ final class AccountMessagePanel extends UiContainer implements ButtonListener {
         RgbSprite[] var7 = new RgbSprite[9];
         RgbSprite[] var4 = var7;
         if (param1 != -2) {
-          AccountMessagePanel.a((byte) 112);
+          AccountMessagePanel.releaseStatics((byte) 112);
         }
         var7[0] = bd.a(param0, param2, 248);
         for (var5 = 1; var5 < 9; var5++) {

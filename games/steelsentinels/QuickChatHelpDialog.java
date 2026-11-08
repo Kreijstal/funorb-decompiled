@@ -124,7 +124,7 @@ final class QuickChatHelpDialog extends SceneWidget {
         return var4Lifetime1;
     }
 
-    public static void k(int param0) {
+    public static void releaseStatics(int param0) {
         field_Xb = null;
         field_cc = (int[][]) null;
         field_Sb = null;

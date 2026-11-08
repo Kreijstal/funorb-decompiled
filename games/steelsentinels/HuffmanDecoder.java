@@ -145,7 +145,7 @@ final class HuffmanDecoder {
           var9 = param0 - 6;
           var10 = 3 + param5;
           var11 = var7 * param4 / 12200;
-          BoundedUrlRequest.field_d.c("<img=1>", param3, param5 + param0, 1021128, -1);
+          BoundedUrlRequest.field_d.drawRight("<img=1>", param3, param5 + param0, 1021128, -1);
           if (param4 > 12200) {
             var6_int = 1044724;
             var11 = var7;
@@ -179,7 +179,7 @@ final class HuffmanDecoder {
             var19 = 8 + BoundedUrlRequest.field_d.textWidth(var16);
             var20 = 13;
             var17 = var17 - var19 / 2;
-            SoftwareRaster.c(var17 - 4, var18, var19, var20, 0, 192);
+            SoftwareRaster.fillRectangleBlended(var17 - 4, var18, var19, var20, 0, 192);
             SoftwareRaster.drawRectangleOutlineAlpha(-4 + var17, var18, var19, var20, 1400960, 192);
             BoundedUrlRequest.field_d.drawLeft(var16, var17, var18 + 10, 41727, -1);
           }
@@ -396,7 +396,7 @@ final class HuffmanDecoder {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_i = null;
         field_h = null;
         field_b = (int[][]) null;

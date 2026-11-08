@@ -23,7 +23,7 @@ abstract class Js5Transport {
     volatile int field_t;
     Js5NetworkRequest field_d;
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = 82 % ((-38 - param0) / 51);
         field_s = null;
         field_b = null;

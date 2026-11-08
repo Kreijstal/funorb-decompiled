@@ -15,7 +15,7 @@ final class uc {
     static String[][] field_h;
     static int[] field_b;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_h = (String[][]) null;
         field_j = null;
         field_d = null;
@@ -78,8 +78,8 @@ final class uc {
             var5_int = param0[0].field_z;
             var6 = param0[2].field_z;
             var7 = param0[1].field_z;
-            param0[0].a(param4, param2);
-            param0[2].a(param1 + (param4 - var6), param2);
+            param0[0].drawTransparent(param4, param2);
+            param0[2].drawTransparent(param1 + (param4 - var6), param2);
             SoftwareRaster.getClip(RasterSnapshot.field_v);
             SoftwareRaster.intersectClip(param4 + var5_int, param2, param4 + param1 - var6, param0[1].field_B + param2);
             var8 = var5_int + param4;
@@ -89,7 +89,7 @@ final class uc {
               return;
             }
             while (param4 < var9) {
-              param0[1].a(param4, param2);
+              param0[1].drawTransparent(param4, param2);
               param4 = param4 + var7;
             }
             SoftwareRaster.setClip(RasterSnapshot.field_v);

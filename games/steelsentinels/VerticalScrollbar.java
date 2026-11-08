@@ -22,7 +22,7 @@ final class VerticalScrollbar extends SceneWidget {
     private SceneWidget field_Xb;
     static int field_gc;
 
-    public static void j(int param0) {
+    public static void releaseStatics(int param0) {
         field_Vb = null;
         field_fc = null;
         field_Wb = (byte[][][]) null;
@@ -55,7 +55,7 @@ final class VerticalScrollbar extends SceneWidget {
           WhirlpoolHasher.field_m.a(mm.field_a, 123);
           WhirlpoolHasher.field_m.a(SceneWidgetNode.field_E, 121);
           if (param0 != 109) {
-            VerticalScrollbar.j(-84);
+            VerticalScrollbar.releaseStatics(-84);
           }
           WhirlpoolHasher.field_m.a(km.field_j, 118);
           WhirlpoolHasher.field_m.a(CachedTextLayout.field_v, 120);

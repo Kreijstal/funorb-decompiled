@@ -134,7 +134,7 @@ final class CachedTextLayout extends TextLayout {
         return new ik(jj.a(true), Projectile.j(param0 ^ 16777151));
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_u = null;
         field_A = null;
         field_j = null;

@@ -14,7 +14,7 @@ final class of {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         if (param0 < 63) {
           field_b = (String) null;

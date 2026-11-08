@@ -73,7 +73,7 @@ final class AccountTermsPanel extends UiContainer implements TextHotspotListener
           ok.a(param0, false, param1 ^ 95);
           return;
         }
-        AccountTermsPanel.a(true);
+        AccountTermsPanel.releaseStatics(true);
         ok.a(param0, false, param1 ^ 95);
     }
 
@@ -163,7 +163,7 @@ final class AccountTermsPanel extends UiContainer implements TextHotspotListener
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_T = null;
         field_U = null;
         if (param0) {

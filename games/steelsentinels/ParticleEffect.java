@@ -21,7 +21,7 @@ final class ParticleEffect extends DualNode {
     static IndexedSprite[] field_L;
     static String field_N;
 
-    public static void h(int param0) {
+    public static void releaseStatics(int param0) {
         field_E = null;
         field_L = null;
         field_y = (String[][]) null;
@@ -52,14 +52,14 @@ final class ParticleEffect extends DualNode {
           }
           var7 = 8 * MouseWheelInput.field_c / 50 % var6.length;
           LoginMethod.a(-param1 + param4, param3 - param1, vh.field_b, param0 + 2 * param1, 160, (byte) -31, param1 * 2 + param5);
-          var6[var7].e(param4, param3, 2254472);
-          SoftwareRaster.d(16, 4, -4 + param4, param3 - 4, 8 + param0, param5 + 8);
+          var6[var7].drawSilhouette(param4, param3, 2254472);
+          SoftwareRaster.blurRectangle(16, 4, -4 + param4, param3 - 4, 8 + param0, param5 + 8);
           if (param2 < 26) {
             var12 = (String) null;
             ParticleEffect.a(112, -62, (String) null, 84, (String) null);
           }
-          var6[var7].e(param4, param3, 17561);
-          SoftwareRaster.d(8, 2, -4 + param4, param3 - 4, 8 + param0, param5 + 8);
+          var6[var7].drawSilhouette(param4, param3, 17561);
+          SoftwareRaster.blurRectangle(8, 2, -4 + param4, param3 - 4, 8 + param0, param5 + 8);
           var6[var7].drawAdditive(param4, param3, 255);
           var8 = param0 + 2 * param1;
           var9 = 2 * param1 + param5;
@@ -131,7 +131,7 @@ final class ParticleEffect extends DualNode {
                     return;
                   }
                   var9 = 16;
-                  AccountMessagePanel.field_S[var8].d(-var9 + var5, -var9 + var7, var9 * 2, 2 * var9, 128);
+                  AccountMessagePanel.field_S[var8].drawScaledAdditive(-var9 + var5, -var9 + var7, var9 * 2, 2 * var9, 128);
                   if (var10 == 0) {
                     return;
                   }
@@ -142,7 +142,7 @@ final class ParticleEffect extends DualNode {
                       return;
                     }
                     var9 = 2;
-                    AccountMessagePanel.field_S[var8].d(-var9 + var5, var7 - var9, var9 * 2, 2 * var9, 128);
+                    AccountMessagePanel.field_S[var8].drawScaledAdditive(-var9 + var5, var7 - var9, var9 * 2, 2 * var9, 128);
                     if (var10 == 0) {
                       return;
                     }
@@ -152,7 +152,7 @@ final class ParticleEffect extends DualNode {
                       return;
                     }
                     var9 = 1;
-                    AccountRegistrationPanel.field_gb[var8].d(-var9 + var5, var7 - var9, 2 * var9, var9 * 2, 128);
+                    AccountRegistrationPanel.field_gb[var8].drawScaledAdditive(-var9 + var5, var7 - var9, 2 * var9, var9 * 2, 128);
                     if (var10 == 0) {
                       return;
                     }
@@ -173,7 +173,7 @@ final class ParticleEffect extends DualNode {
                         return;
                       }
                       var9 = 2;
-                      AccountMessagePanel.field_S[2 & var8].d(var5 - var9, -var9 + var7, 2 * var9, 2 * var9, -(this.ageTicks * 250 / this.durationTicks) + 250);
+                      AccountMessagePanel.field_S[2 & var8].drawScaledAdditive(var5 - var9, -var9 + var7, 2 * var9, 2 * var9, -(this.ageTicks * 250 / this.durationTicks) + 250);
                       if (var10 == 0) {
                         return;
                       }
@@ -186,7 +186,7 @@ final class ParticleEffect extends DualNode {
                         return;
                       }
                       var9 = (500 - 2 * this.ageTicks) / 125;
-                      SoftwareRaster.a(var5 << 4, var7 << 4, var9 << 4, 31, LabeledField.field_W);
+                      SoftwareRaster.fillRadialPaletteCircle(var5 << 4, var7 << 4, var9 << 4, 31, LabeledField.field_W);
                       if (var10 == 0) {
                         return;
                       }
@@ -195,7 +195,7 @@ final class ParticleEffect extends DualNode {
                       return;
                     }
                     var9 = 16;
-                    SoftwareRaster.a(var5 << 4, var7 << 4, var9 << 4, 249, LabeledField.field_X);
+                    SoftwareRaster.fillRadialPaletteCircle(var5 << 4, var7 << 4, var9 << 4, 249, LabeledField.field_X);
                     if (var10 == 0) {
                       return;
                     }
@@ -214,7 +214,7 @@ final class ParticleEffect extends DualNode {
                   return;
                 }
                 var9 = 4;
-                AccountMessagePanel.field_S[var8].d(-var9 + var5, -var9 + var7, 2 * var9, 2 * var9, 128);
+                AccountMessagePanel.field_S[var8].drawScaledAdditive(-var9 + var5, -var9 + var7, 2 * var9, 2 * var9, 128);
                 if (var10 == 0) {
                   return;
                 }
@@ -223,7 +223,7 @@ final class ParticleEffect extends DualNode {
                 return;
               }
               var9Lifetime3 = 2;
-              AccountRegistrationPanel.field_gb[var8].d(var5 - var9Lifetime3, var7 - var9Lifetime3, var9Lifetime3 * 2, 2 * var9Lifetime3, 128);
+              AccountRegistrationPanel.field_gb[var8].drawScaledAdditive(var5 - var9Lifetime3, var7 - var9Lifetime3, var9Lifetime3 * 2, 2 * var9Lifetime3, 128);
               if (var10 == 0) {
                 return;
               }
@@ -232,7 +232,7 @@ final class ParticleEffect extends DualNode {
               return;
             }
             var9Lifetime2 = 16;
-            AccountRegistrationPanel.field_gb[var8].d(var5 - var9Lifetime2, var7 - var9Lifetime2, var9Lifetime2 * 2, 2 * var9Lifetime2, 128);
+            AccountRegistrationPanel.field_gb[var8].drawScaledAdditive(var5 - var9Lifetime2, var7 - var9Lifetime2, var9Lifetime2 * 2, 2 * var9Lifetime2, 128);
             if (var10 == 0) {
               return;
             }

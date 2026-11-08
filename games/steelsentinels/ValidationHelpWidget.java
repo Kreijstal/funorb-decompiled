@@ -76,7 +76,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         SoftwareRaster.clear();
         LoginForm.a(true);
         if (var5 < 256) {
-          SoftwareRaster.c(0, 0, SoftwareRaster.field_c, SoftwareRaster.field_j, 0, 256 - var5);
+          SoftwareRaster.fillRectangleBlended(0, 0, SoftwareRaster.field_c, SoftwareRaster.field_j, 0, 256 - var5);
         }
         MatchingTextValidator.$cfr$intArgs$f$20d51497949f(103);
         if (150 > DateOfBirthValidator.field_h) {
@@ -449,16 +449,16 @@ final class ValidationHelpWidget extends TextHotspotWidget {
                 var33 = hl.field_v.a(0, 2);
                 if (var33 != null &&
                   null != var33.attachedPart) {
-                  Js5Transport.field_r.a(var4 + Js5NetworkRequest.field_M + 40, var5 - 135);
+                  Js5Transport.field_r.drawTransparent(var4 + Js5NetworkRequest.field_M + 40, var5 - 135);
                 }
               }
               if (hl.field_v.componentId == 75) {
                 var34 = hl.field_v.a(0, 2);
                 if (var34 != null &&
                   null != var34.attachedPart) {
-                  Js5Transport.field_r.a(4 + Js5NetworkRequest.field_M + var4, -178 + var5);
+                  Js5Transport.field_r.drawTransparent(4 + Js5NetworkRequest.field_M + var4, -178 + var5);
                   if (var34.attachedPart.componentId == 95) {
-                    Js5Transport.field_r.a(var4 + Js5NetworkRequest.field_M + 10, -175 + var5);
+                    Js5Transport.field_r.drawTransparent(var4 + Js5NetworkRequest.field_M + 10, -175 + var5);
                   }
                 }
               }
@@ -466,7 +466,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
                 var35 = hl.field_v.a(0, 2);
                 if (var35 != null &&
                   null != var35.attachedPart) {
-                  Js5Transport.field_r.a(-3 + Js5NetworkRequest.field_M + var4, var5 - 156);
+                  Js5Transport.field_r.drawTransparent(-3 + Js5NetworkRequest.field_M + var4, var5 - 156);
                 }
               }
               if (55 == hl.field_v.componentId) {
@@ -490,7 +490,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
               SoftwareRaster.drawHorizontalLine(308, ImageProducerRasterBuffer.field_y, 8, 3355443);
               SoftwareRaster.drawHorizontalLine(308, var8_int, 8, 3355443);
               var9 = (var8_int - ImageProducerRasterBuffer.field_y) * 2000 / MusicPatchNode.field_w;
-              BoundedUrlRequest.field_d.c(SocketConnector.a(LoginMethod.field_e, -123, new String[]{Integer.toString(var9 / 10), Integer.toString(var9 % 10)}), 307, (ImageProducerRasterBuffer.field_y + var8_int) / 2, 4473924, -1);
+              BoundedUrlRequest.field_d.drawRight(SocketConnector.a(LoginMethod.field_e, -123, new String[]{Integer.toString(var9 / 10), Integer.toString(var9 % 10)}), 307, (ImageProducerRasterBuffer.field_y + var8_int) / 2, 4473924, -1);
             }
             var8_int = -Js5NetworkRequest.field_M + 657;
             if (var8_int < 640 &&
@@ -503,7 +503,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
                 SoftwareRaster.drawHorizontalLine(var8_int - 10, -var10 + var9 - 8, 8, 3355443);
                 SoftwareRaster.drawHorizontalLine(var8_int - 10, -8 + var9, 8, 3355443);
                 var11_ref_String = SocketConnector.a(LoginMethod.field_e, -60, new String[]{Integer.toString(1), Integer.toString(8)});
-                BoundedUrlRequest.field_d.c(var11_ref_String, var8_int - 12, -8 + var9 - var10 / 2 + 3, 4473924, -1);
+                BoundedUrlRequest.field_d.drawRight(var11_ref_String, var8_int - 12, -8 + var9 - var10 / 2 + 3, 4473924, -1);
               }
             }
             MusicPatchNode.field_w = var6;
@@ -521,7 +521,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
                 SoftwareRaster.drawVerticalLine(var17, var12, var10, 0);
               }
               SoftwareRaster.drawRectangleOutline(-2 + var11, -2 + var12, 4 + var9, 4 + var10, 4408131);
-              BoundedUrlRequest.field_d.c(Explosion.field_E + var14, var11 + var9, -4 + var12, 16777215, -1);
+              BoundedUrlRequest.field_d.drawRight(Explosion.field_E + var14, var11 + var9, -4 + var12, 16777215, -1);
             }
             var9 = 0;
             var10 = 0;
@@ -722,7 +722,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
                   var39 = var38 + ": " + var29_ref_String;
                   var31 = BoundedUrlRequest.field_d.textWidth(var39) + 8;
                   var25 = var25 - var31 / 2;
-                  SoftwareRaster.c(var25, var27, var31, var26, 0, 192);
+                  SoftwareRaster.fillRectangleBlended(var25, var27, var31, var26, 0, 192);
                   SoftwareRaster.drawRectangleOutlineAlpha(var25, var27, var31, var26, 1400960, 192);
                   BoundedUrlRequest.field_d.drawLeft(var39, 4 + var25, var27 + 10, 41727, -1);
                 }
@@ -812,7 +812,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
             if (0 <= var13_int &&
               WhirlpoolHasher.field_g.length > var13_int &&
               var1_int == 0) {
-              SoftwareRaster.c(var8_int, var9, var10, var11, 0, 150);
+              SoftwareRaster.fillRectangleBlended(var8_int, var9, var10, var11, 0, 150);
               SoftwareRaster.drawRectangleOutline(var8_int, var9, var10, var11, 1397105);
               var43 = WhirlpoolHasher.field_g[var13_int];
               SoftwareRaster.setClip(var8_int + 1, 1 + var9, var10 + (var8_int - 1), var9 - (-var11 + 1));
@@ -945,9 +945,9 @@ final class ValidationHelpWidget extends TextHotspotWidget {
             var19 = 228;
             var20 = 16777215;
             var21 = -var18 + 378;
-            SoftwareRaster.c(var19, var21, var16, var18, 0, 200);
+            SoftwareRaster.fillRectangleBlended(var19, var21, var16, var18, 0, 200);
             SoftwareRaster.drawRectangleOutline(var19, var21, var16, var18, var20);
-            ((BitmapFont) ((Object) var8_ref)).a(var50, 10 + var19, 5 + var21, -20 + var16, var18, 8421504, 0, 0, 0, var17);
+            ((BitmapFont) ((Object) var8_ref)).drawParagraph(var50, 10 + var19, 5 + var21, -20 + var16, var18, 8421504, 0, 0, 0, var17);
           }
           var9 = -1;
           var10 = -1;
@@ -1040,7 +1040,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
                   var16_ref = var20_ref_wk;
                   var21 = (var18 & 3) * var19;
                   var22 = (var18 >> 2) * var19;
-                  var20_ref_wk.a(-var21, -var22);
+                  var20_ref_wk.drawTransparent(-var21, -var22);
                 }
               }
             }
@@ -1338,7 +1338,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
               var21 = var21 + (((BitmapFont) ((Object) var8_ref)).paragraphHeight((String) (var14_ref), var19 - 20, var20) + 5);
             }
             var18 = 378 - var21;
-            SoftwareRaster.c(var22, var18, var19, var21, 0, 200);
+            SoftwareRaster.fillRectangleBlended(var22, var18, var19, var21, 0, 200);
             SoftwareRaster.drawRectangleOutline(var22, var18, var19, var21, var23);
             var21 = var18 - (-5 - var20);
             if (var25 > 0) {
@@ -1348,8 +1348,8 @@ final class ValidationHelpWidget extends TextHotspotWidget {
               var21 = var21 + (var20 * var25 + 5);
             }
             if (var16_ref != null) {
-              ((RgbSprite) (var16_ref)).f(var22 + 138, var21 - 18);
-              ((BitmapFont) ((Object) var8_ref)).a((String) (var15), 138 + var22, var21 - 20 + ((RgbSprite) (var16_ref)).field_F, -140 + (var19 - 2), 100, 1021128, 0, 0, 0, 10);
+              ((RgbSprite) (var16_ref)).drawOpaque(var22 + 138, var21 - 18);
+              ((BitmapFont) ((Object) var8_ref)).drawParagraph((String) (var15), 138 + var22, var21 - 20 + ((RgbSprite) (var16_ref)).field_F, -140 + (var19 - 2), 100, 1021128, 0, 0, 0, 10);
             }
             if (var11 != -1 ||
               var12 != -1) {
@@ -1379,7 +1379,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
             }
             var21 = var21 + var26;
             if (var14_ref != null) {
-              ((BitmapFont) ((Object) var8_ref)).a((String) (var14_ref), var22 + 10, var21, -20 + var19, 300, 1021128, 0, 0, 0, var20);
+              ((BitmapFont) ((Object) var8_ref)).drawParagraph((String) (var14_ref), var22 + 10, var21, -20 + var19, 300, 1021128, 0, 0, 0, var20);
               var21 = var21 + ((BitmapFont) ((Object) var8_ref)).paragraphHeight((String) (var14_ref), -20 + var19, var20);
             }
           }
@@ -1459,10 +1459,10 @@ final class ValidationHelpWidget extends TextHotspotWidget {
             var14 = 283;
             var15_int = 230;
             var16 = 87;
-            var17 = 10 + pl.field_U.a(var59, var14);
+            var17 = 10 + pl.field_U.getWrappedWidth(var59, var14);
             var18 = 10 + pl.field_U.paragraphHeight(var59, var14, 12);
-            SoftwareRaster.c((-var17 + var14) / 2 + var15_int, -5 + var16, var17, var18, 0, 150);
-            pl.field_U.a(var59, var15_int, var16, var14, 100, 16711680, 0, 1, 0, 12);
+            SoftwareRaster.fillRectangleBlended((-var17 + var14) / 2 + var15_int, -5 + var16, var17, var18, 0, 150);
+            pl.field_U.drawParagraph(var59, var15_int, var16, var14, 100, 16711680, 0, 1, 0, 12);
           }
           if (SocketJs5Transport.field_y != null) {
             var14 = 0;
@@ -1578,7 +1578,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
                 var14 == 3) && 0 == (RegistrationRequestDialog.field_Ob & 1)) {
                 var17 = -var19 - 4 + (SocketJs5Transport.field_y.field_zb + SocketJs5Transport.field_y.field_Rb);
               }
-              SoftwareRaster.c(var17, var18, var19, var16, 0, 192);
+              SoftwareRaster.fillRectangleBlended(var17, var18, var19, var16, 0, 192);
               SoftwareRaster.drawRectangleOutlineAlpha(var17, var18, var19, var16, 1400960, 192);
               BoundedUrlRequest.field_d.drawLeft((String) (var15), 4 + var17, 10 + var18, 16777215, -1);
             }
@@ -1749,7 +1749,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
               var21 = var44[var20];
               if (var21 >= 0) {
                 var15++;
-                IsaacRandom.field_d[var21].c(var17Lifetime1, var18_intLifetime1);
+                IsaacRandom.field_d[var21].drawHalfSize(var17Lifetime1, var18_intLifetime1);
                 if (var15 == 4) {
                   var17Lifetime1 = 0;
                   var18_intLifetime1 += 20;
@@ -1856,12 +1856,12 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         }
     }
 
-    public static void h(int param0) {
+    public static void releaseStatics(int param0) {
         field_ob = null;
         field_qb = null;
         field_sb = null;
         if (param0 != -3413) {
-          ValidationHelpWidget.h(119);
+          ValidationHelpWidget.releaseStatics(119);
         }
         field_tb = null;
         field_ub = null;
@@ -1930,7 +1930,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         if (param1 > -99) {
           this.field_jb = 127;
         }
-        var10 = var8.a((byte) -115, (UiComponent) (this), param0) + (var8.b(-1, (UiComponent) (this)).a((byte) 24) >> 1);
+        var10 = var8.textOriginY((byte) -115, (UiComponent) (this), param0) + (var8.ensureTextLayout(-1, (UiComponent) (this)).a((byte) 24) >> 1);
         if (Bzip2State.field_J != var6Lifetime1 &&
           var6Lifetime1 != TextHotspotWidget.field_Y) {
           if (ArchiveProvider.field_d == var6Lifetime1) {
@@ -1953,7 +1953,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
             this.field_pb = new RgbSprite(var11, var12);
             IterableNodeHashTable.a(this.field_pb, (byte) -111);
           }
-          var14.a(112, 144, var14.field_z << 4, var14.field_B << 4, -this.field_jb << 10, 4096);
+          var14.drawRotatedAboutPivot(112, 144, var14.field_z << 4, var14.field_B << 4, -this.field_jb << 10, 4096);
           MatchingTextValidator.$cfr$intArgs$f$20d51497949f(111);
           this.field_pb.drawAdditive(var9 - (var14.field_z >> 1), -var14.field_B + var10, 256);
         }

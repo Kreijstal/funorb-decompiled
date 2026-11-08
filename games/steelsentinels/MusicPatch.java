@@ -101,7 +101,7 @@ final class MusicPatch extends IntrusiveNode {
         CachedTextLayout.field_m = 0;
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != -73) {
           MusicPatch.d(-109);
         }
@@ -441,7 +441,7 @@ final class MusicPatch extends IntrusiveNode {
               } else {
                 var12.field_gc.a(0, var31, SocketConnector.field_b, 0, 68);
               }
-              var12.field_Cc.field_S = BitmapFont.a(var12.field_Cc.field_L, var32, 78);
+              var12.field_Cc.field_S = BitmapFont.truncateWithEllipsis(var12.field_Cc.field_L, var32, 78);
               var12.field_Cc.a(param1 ^ 1, var31, SocketConnector.field_b, 70, 78);
               if (var12.field_Cc.field_kb &&
                 !var12.field_Cc.field_S.equals(var32)) {

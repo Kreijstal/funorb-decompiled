@@ -97,13 +97,13 @@ final class uj {
                   var15[1 + var13] == 0 ||
                   !(var16 >= param6.field_F - 1) &&
                   var15[var13 + param6.field_A] == 0)) {
-                  SoftwareRaster.e(var17, var16, param0, param5);
+                  SoftwareRaster.fillCircle(var17, var16, param0, param5);
                 }
                 var13++;
               }
               var13 = var13 + var14;
             }
-            var22.a(-param6.field_D, -param6.field_H);
+            var22.drawTransparent(-param6.field_D, -param6.field_H);
             SoftwareRaster.setTarget(var31, var10, var11);
             SoftwareRaster.setClip(var30);
             return;
@@ -123,7 +123,7 @@ final class uj {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         if (param0 != -1) {
           return;

@@ -120,7 +120,7 @@ final class cc extends SceneWidget {
         }
     }
 
-    public static void k(int param0) {
+    public static void releaseStatics(int param0) {
         field_Xb = null;
         field_Tb = null;
         field_ic = null;

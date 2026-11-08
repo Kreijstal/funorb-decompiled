@@ -14,11 +14,11 @@ final class di {
     final static void a(byte param0) {
         ln.field_a = 0;
         if (param0 != -128) {
-          di.a(112);
+          di.releaseStatics(112);
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         field_f = null;
         field_e = null;

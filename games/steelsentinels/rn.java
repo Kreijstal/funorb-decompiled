@@ -82,7 +82,7 @@ final class rn extends IntrusiveNode {
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_D = null;
         field_t = null;
         field_w = null;
@@ -98,7 +98,7 @@ final class rn extends IntrusiveNode {
           field_z = null;
           return;
         }
-        rn.d(-70);
+        rn.releaseStatics(-70);
         field_z = null;
     }
 

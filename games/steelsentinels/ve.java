@@ -7,7 +7,7 @@ final class ve {
     static pl field_b;
     static ViewportController field_a;
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         int var1 = -9 / ((param0 - 36) / 56);
         field_b = null;

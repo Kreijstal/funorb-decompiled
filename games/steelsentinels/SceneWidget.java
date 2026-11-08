@@ -507,7 +507,7 @@ class SceneWidget extends SceneWidgetNode {
             var24 = var24 + (-var17.field_B + this.field_Lb);
           }
           if (this.field_X >= 256) {
-            var17.a(var23_int, var24);
+            var17.drawTransparent(var23_int, var24);
           } else {
             var17.drawShadedGrayscale(var23_int, var24, this.field_X);
           }
@@ -536,19 +536,19 @@ class SceneWidget extends SceneWidgetNode {
               this.field_L.drawLeftAlpha(var23Lifetime2, var21 + this.field_Rb + this.field_ub, this.field_L.field_G + var22 + this.field_cb, var18, -1, this.field_V);
             } else {
               if (this.field_Kb == 1) {
-                this.field_L.c(var23Lifetime2, (this.field_zb - this.field_ub * 2) / 2 + this.field_Rb + (this.field_ub + var21), this.field_L.field_G + var22 + this.field_cb, var18, -1, this.field_V);
+                this.field_L.drawCenteredAlpha(var23Lifetime2, (this.field_zb - this.field_ub * 2) / 2 + this.field_Rb + (this.field_ub + var21), this.field_L.field_G + var22 + this.field_cb, var18, -1, this.field_V);
               } else {
                 if (this.field_Kb != 2) {
-                  this.field_L.a(var23Lifetime2, this.field_Rb + (this.field_ub + var21), var22 + this.field_cb, this.field_zb - this.field_ub * 2, this.field_Lb, var18, -1, this.field_V, this.field_Kb, this.field_Fb, this.field_Ib);
+                  this.field_L.drawParagraphAlpha(var23Lifetime2, this.field_Rb + (this.field_ub + var21), var22 + this.field_cb, this.field_zb - this.field_ub * 2, this.field_Lb, var18, -1, this.field_V, this.field_Kb, this.field_Fb, this.field_Ib);
                 } else {
-                  this.field_L.b(var23Lifetime2, -(this.field_ub * 2) - (-this.field_zb - (var21 + this.field_ub) - this.field_Rb), this.field_L.field_G + (this.field_cb + var22), var18, -1, this.field_V);
+                  this.field_L.drawRightAlpha(var23Lifetime2, -(this.field_ub * 2) - (-this.field_zb - (var21 + this.field_ub) - this.field_Rb), this.field_L.field_G + (this.field_cb + var22), var18, -1, this.field_V);
                 }
               }
             }
             decompiledFrameRemainder0 = false;
           }
           else {
-            this.field_L.a(var23Lifetime2, this.field_Rb - (-this.field_ub - var21), var22 + this.field_cb, -(this.field_ub * 2) + this.field_zb, this.field_Lb, var18, -1, this.field_V, this.field_Kb, this.field_Fb, this.field_Ib);
+            this.field_L.drawParagraphAlpha(var23Lifetime2, this.field_Rb - (-this.field_ub - var21), var22 + this.field_cb, -(this.field_ub * 2) + this.field_zb, this.field_Lb, var18, -1, this.field_V, this.field_Kb, this.field_Fb, this.field_Ib);
           }
         }
         if (null != this.field_M) {
@@ -822,7 +822,7 @@ class SceneWidget extends SceneWidgetNode {
         int var3 = 0;
         if (null != this.field_S &&
           null != this.field_L) {
-          var4_int = this.field_L.a(this.field_S, param1);
+          var4_int = this.field_L.getWrappedWidth(this.field_S, param1);
           if (var3 < var4_int) {
             var3 = var4_int;
           }

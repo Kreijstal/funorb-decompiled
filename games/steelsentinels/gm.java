@@ -32,7 +32,7 @@ final class gm {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param0) {
-            gm.a(108);
+            gm.releaseStatics(108);
           }
           if (param1 != null &&
             param1.length() != 0) {
@@ -67,7 +67,7 @@ final class gm {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_d = null;
         field_c = null;

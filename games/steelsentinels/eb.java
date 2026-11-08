@@ -46,7 +46,7 @@ final class eb extends TextFieldValidator {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_u = null;
         field_t = null;
         if (param0 > 14) {

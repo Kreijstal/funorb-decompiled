@@ -19,7 +19,7 @@ abstract class Sprite {
 
     abstract void drawAlpha(int param0, int param1, int param2);
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 < 55) {
           return;
         }
@@ -31,7 +31,7 @@ abstract class Sprite {
         field_l = null;
     }
 
-    final static Class a(int param0, String param1) throws ClassNotFoundException {
+    final static Class loadClassOrPrimitive(int param0, String param1) throws ClassNotFoundException {
         RuntimeException var2 = null;
         Class stackIn_2_0 = null;
         Class stackIn_6_0 = null;
@@ -197,7 +197,7 @@ abstract class Sprite {
         return (na) (var4);
     }
 
-    final static void a(ResourceArchive param0, int param1) {
+    final static void loadLogoJingle(ResourceArchive param0, int param1) {
         VorbisSample var2 = null;
         try {
           VorbisSample.decodeSetup(param0.a("", -742, "headers.packvorbis"));

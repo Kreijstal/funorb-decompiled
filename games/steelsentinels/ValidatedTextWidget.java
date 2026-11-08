@@ -256,7 +256,7 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
         return this.field_zb;
     }
 
-    public static void i(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_wb = null;
         field_qb = null;
         field_vb = (byte[][]) null;

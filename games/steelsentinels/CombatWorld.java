@@ -1407,8 +1407,8 @@ final class CombatWorld {
           var2 = var1.copySprite();
           var3 = 0;
           while (var3 < 15) {
-            var2.e(-2, -2, 16777215);
-            SoftwareRaster.d(4, 4, 0, 0, 540, 140);
+            var2.drawSilhouette(-2, -2, 16777215);
+            SoftwareRaster.blurRectangle(4, 4, 0, 0, 540, 140);
             var3++;
             if (var4 != 0) {
               return;

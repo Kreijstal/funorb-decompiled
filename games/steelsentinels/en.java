@@ -9,7 +9,7 @@ final class en {
     static String field_a;
     static int field_d;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_e = null;
         field_b = null;
         field_c = null;

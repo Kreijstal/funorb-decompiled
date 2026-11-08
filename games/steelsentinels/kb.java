@@ -7,7 +7,7 @@ final class kb implements om {
     static String field_d;
     static String field_c;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         field_b = null;
         if (param0 != 5) {
@@ -23,7 +23,7 @@ final class kb implements om {
           param7 = param7 - (3 + var8_int / 2);
           var8_int += 5;
           if (!param4) {
-            kb.a(-79);
+            kb.releaseStatics(-79);
           }
           SoftwareRaster.fillRectangle(param7, -2 - param6.field_U + param2, var8_int, param6.field_U + 4, param1);
           SoftwareRaster.drawRectangleOutline(param7, -param6.field_U + (param2 - 2), var8_int, 4 + param6.field_U, param3);

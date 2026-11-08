@@ -235,7 +235,7 @@ abstract class WeightedCacheEntry extends DualNode {
         this.field_z = param0;
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         field_A = (byte[][]) null;
         field_D = null;
         field_E = null;

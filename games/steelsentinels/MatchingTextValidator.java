@@ -120,7 +120,7 @@ final class MatchingTextValidator extends TextFieldValidator {
         sl.field_b.addLast(3, var1);
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_t = null;
         field_p = null;
         field_r = null;

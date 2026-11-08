@@ -66,7 +66,7 @@ final class MarkerSliderPainter implements WidgetPainter {
         return -1;
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_f = null;
         field_n = null;
         field_o = null;
@@ -85,7 +85,7 @@ final class MarkerSliderPainter implements WidgetPainter {
         field_p = null;
     }
 
-    public final void a(int param0, UiComponent param1, byte param2, boolean param3, int param4) {
+    public final void drawWidget(int param0, UiComponent param1, byte param2, boolean param3, int param4) {
         int var10 = 0;
         UiComponent stackIn_4_0 = null;
         RuntimeException stackIn_16_0 = null;
@@ -114,7 +114,7 @@ final class MarkerSliderPainter implements WidgetPainter {
           var9 = var12.field_ab + (param1.field_z + param4);
           SoftwareRaster.drawLine(var8, var9, var7 + var8, var9, this.field_k);
           for (var10 = -1 + var12.h(24129); var10 >= 0; var10--) {
-            SoftwareRaster.e(var8 + var7 * var12.a(var10, -128) / var12.g((byte) 64), var9, this.field_c, this.field_h);
+            SoftwareRaster.fillCircle(var8 + var7 * var12.a(var10, -128) / var12.g((byte) 64), var9, this.field_c, this.field_h);
           }
           if (null != this.field_b) {
             this.field_b.drawCentered(var12.field_y, var8 + var7 / 2, var12.field_ab + this.field_b.field_W + var9, this.field_e, this.field_d);

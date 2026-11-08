@@ -13,7 +13,7 @@ final class qf {
     static e field_d;
     static int[] field_h;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_i = null;
         field_g = null;
         field_d = null;

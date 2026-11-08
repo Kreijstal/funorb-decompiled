@@ -128,7 +128,7 @@ class SceneWidgetNode extends DualNode {
         return rf.a(true, 1, (byte) -127, false, false, param1);
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_E = null;
         field_z = null;
         field_A = (byte[][]) null;

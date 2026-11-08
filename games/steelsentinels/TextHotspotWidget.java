@@ -70,7 +70,7 @@ class TextHotspotWidget extends TextButton {
         this.f((byte) -109);
     }
 
-    public static void c(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_eb = null;
         field_cb = null;
         if (!param0) {
@@ -110,7 +110,7 @@ class TextHotspotWidget extends TextButton {
         this.field_ab = new NodeDeque();
         var3 = 0;
         var4 = (WidgetTextLayout) ((Object) this.field_p);
-        var5 = var4.b(-1, (UiComponent) (this));
+        var5 = var4.ensureTextLayout(-1, (UiComponent) (this));
         while (true) {
           var6 = this.field_y.indexOf("<hotspot=", var3);
           if (-1 == var6) {
@@ -141,7 +141,7 @@ class TextHotspotWidget extends TextButton {
               }
             }
             var15 = stackIn_13_0;
-            var16 = new TextHotspotRegion(var8Lifetime1, var14, var13.field_h, var15 - var14, Math.max(var4.a(-40), var13.field_a - var13.field_h));
+            var16 = new TextHotspotRegion(var8Lifetime1, var14, var13.field_h, var15 - var14, Math.max(var4.lineHeight(-40), var13.field_a - var13.field_h));
             if (var11 == null) {
               this.field_ab.addLast(3, var16);
               var11 = var16;
@@ -299,11 +299,11 @@ class TextHotspotWidget extends TextButton {
 
     final void a(int param0, int param1, int param2, int param3) {
         if (param3 == -1) {
-          this.a(param0, (byte) -109, param1, param2, ((WidgetTextLayout) ((Object) this.field_p)).b((byte) 31, (UiComponent) (this)));
+          this.a(param0, (byte) -109, param1, param2, ((WidgetTextLayout) ((Object) this.field_p)).preferredHeight((byte) 31, (UiComponent) (this)));
           return;
         }
         field_cb = (ef) null;
-        this.a(param0, (byte) -109, param1, param2, ((WidgetTextLayout) ((Object) this.field_p)).b((byte) 31, (UiComponent) (this)));
+        this.a(param0, (byte) -109, param1, param2, ((WidgetTextLayout) ((Object) this.field_p)).preferredHeight((byte) 31, (UiComponent) (this)));
     }
 
     void updateHover(int param0, int param1, UiComponent param2, int param3) {
@@ -365,7 +365,7 @@ class TextHotspotWidget extends TextButton {
           }
           return null;
         }
-        TextHotspotWidget.c(true);
+        TextHotspotWidget.releaseStatics(true);
         var4Lifetime1 = (TextHotspotRegion) (this.field_ab.first(13058));
         while (var4Lifetime1 != null) {
           var5Lifetime1 = var4Lifetime1;
@@ -396,8 +396,8 @@ class TextHotspotWidget extends TextButton {
           var6 = this.field_db;
           if (var6 == null) {
           } else {
-            var7 = var9.a(param2, 3, (UiComponent) (this));
-            var8 = var9.a((byte) -121, (UiComponent) (this), param0);
+            var7 = var9.textOriginX(param2, 3, (UiComponent) (this));
+            var8 = var9.textOriginY((byte) -121, (UiComponent) (this), param0);
             do {
               DateInputWidget.a(var7 + var6.field_s - 2, var6.field_u + 2, 2 + var6.field_o, 0, var6.field_w + var8 - 2);
               var6 = var6.field_q;

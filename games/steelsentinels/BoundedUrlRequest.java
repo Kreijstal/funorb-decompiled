@@ -83,7 +83,7 @@ final class BoundedUrlRequest implements Runnable {
         return null != DelayedServerPacket.field_y ? true : false;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_p = null;
         field_a = null;
         if (param0 == -64) {

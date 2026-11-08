@@ -96,7 +96,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
         }
     }
 
-    public static void l(int param0) {
+    public static void releaseStatics(int param0) {
         field_wb = null;
         if (param0 != -12930) {
           ContentTransitionDialog.l((byte) 66);

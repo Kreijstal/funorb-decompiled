@@ -36,7 +36,7 @@ final class qe {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_f = null;
         field_d = null;
         field_g = null;

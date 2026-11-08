@@ -21,7 +21,7 @@ final class SentinelCommandSimulator {
     private int field_p;
     static boolean field_f;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 > -69) {
           SentinelCommandSimulator.a((byte) 39, true);
         }
@@ -47,7 +47,7 @@ final class SentinelCommandSimulator {
               var9 = pe.field_q;
             }
           }
-          SoftwareRaster.a(var7 << 4, var8 << 4, param1, var9.length - 1, var9);
+          SoftwareRaster.fillRadialPaletteCircle(var7 << 4, var8 << 4, param1, var9.length - 1, var9);
           if (param4 &&
             BattleTerrain.field_a < SocketJs5Transport.field_w.length) {
             SocketJs5Transport.field_w[BattleTerrain.field_a] = var7;

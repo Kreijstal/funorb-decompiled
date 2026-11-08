@@ -69,7 +69,7 @@ final class PasswordValidator extends TextFieldValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 1) {
-            PasswordValidator.d((byte) 43);
+            PasswordValidator.releaseStatics((byte) 43);
           }
           var3 = this.field_n.field_y.toLowerCase();
           var4 = param1.toLowerCase();
@@ -193,7 +193,7 @@ final class PasswordValidator extends TextFieldValidator {
         }
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = 56 % ((param0 - 10) / 37);
         field_o = null;
         field_q = null;

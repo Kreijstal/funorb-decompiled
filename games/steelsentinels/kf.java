@@ -19,7 +19,7 @@ final class kf extends IntrusiveNode {
     static String[] field_A;
     static SceneWidget field_y;
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == 90) {
           field_r = null;
           field_B = null;

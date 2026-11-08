@@ -167,7 +167,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
         }
     }
 
-    public static void l(int param0) {
+    public static void releaseStatics(int param0) {
         field_Y = null;
         field_P = null;
         field_db = null;
@@ -370,7 +370,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
 
     final void drawLayer(int param0, byte param1, int param2, int param3) {
         if (null != this.field_fb) {
-          tj.field_e.a(this.field_fb, 20 + this.field_o + param2, this.field_z + param0 + 15, -40 + this.field_x, this.field_E, 16777215, -1, 1, 0, tj.field_e.field_G);
+          tj.field_e.drawParagraph(this.field_fb, 20 + this.field_o + param2, this.field_z + param0 + 15, -40 + this.field_x, this.field_E, 16777215, -1, 1, 0, tj.field_e.field_G);
         }
         if (this.field_X != null) {
           SoftwareRaster.drawHorizontalLine(10 + param2, 134 + param0, this.field_x - 20, 4210752);

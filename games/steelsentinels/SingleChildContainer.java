@@ -112,7 +112,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
         }
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         field_O = null;
         field_N = null;
         field_L = null;
@@ -417,7 +417,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
           }
           return;
         }
-        this.field_p.a(param2, (UiComponent) (this), (byte) -30, true, param0);
+        this.field_p.drawWidget(param2, (UiComponent) (this), (byte) -30, true, param0);
         if (param1 >= -99) {
           var6Lifetime2 = (StringBuilder) null;
           this.a((Hashtable) null, (byte) 1, 11, (StringBuilder) null);

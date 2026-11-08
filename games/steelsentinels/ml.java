@@ -59,7 +59,7 @@ final class ml {
         throw new IllegalStateException();
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 > 12) {
           field_c = null;
           field_f = null;

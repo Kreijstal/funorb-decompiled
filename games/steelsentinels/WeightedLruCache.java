@@ -46,7 +46,7 @@ final class WeightedLruCache {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_m = null;
         field_g = null;
         field_p = null;

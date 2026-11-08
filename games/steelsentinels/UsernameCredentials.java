@@ -95,7 +95,7 @@ class UsernameCredentials extends LoginCredentials {
         }
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_l = null;
         field_q = null;
         field_o = null;
@@ -108,7 +108,7 @@ class UsernameCredentials extends LoginCredentials {
           field_h = null;
           return;
         }
-        UsernameCredentials.b((byte) 119);
+        UsernameCredentials.releaseStatics((byte) 119);
         field_n = null;
         field_h = null;
     }

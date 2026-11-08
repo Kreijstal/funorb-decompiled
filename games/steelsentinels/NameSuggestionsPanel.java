@@ -14,7 +14,7 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
     static String field_V;
     private String[] field_Z;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_T = null;
         if (param0 != -42) {
           field_Q = (String) null;
@@ -47,7 +47,7 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
             var3_int = param1.length;
             this.field_Z = new String[var3_int];
             for (var4_int = 0; var4_int < var3_int; var4_int++) {
-              this.field_Z[var4_int] = TextWidgetPainter.a((byte) 90, (CharSequence) ((Object) param1[var4_int])).replace(' ', ' ');
+              this.field_Z[var4_int] = TextWidgetPainter.normalizeName((byte) 90, (CharSequence) ((Object) param1[var4_int])).replace(' ', ' ');
             }
             var4 = new LinkButtonPainter(tj.field_e, 0, 1);
             this.field_U = new TextButton[var3_int + 1];
@@ -225,7 +225,7 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
         }
         BitmapFont var5 = tj.field_e;
         if (null != this.field_Z) {
-          var5.a(qi.field_h, param2 + this.field_o, this.field_z + param0, this.field_x, 20, 16777215, -1, 0, 0, var5.field_F + var5.field_G);
+          var5.drawParagraph(qi.field_h, param2 + this.field_o, this.field_z + param0, this.field_x, 20, 16777215, -1, 0, 0, var5.field_F + var5.field_G);
         }
     }
 

@@ -14,7 +14,7 @@ final class NodeHashTable {
     private int nextBucketIndex;
     private IntrusiveNode lookupCursor;
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_h = null;
         int var1 = 54 / ((-11 - param0) / 35);
         field_k = null;
@@ -34,7 +34,7 @@ final class NodeHashTable {
           node.next = var5;
           node.previous.next = node;
           if (obfuscationGuard != -1816) {
-            NodeHashTable.c(30);
+            NodeHashTable.releaseStatics(30);
           }
           node.key = key;
           node.next.previous = node;

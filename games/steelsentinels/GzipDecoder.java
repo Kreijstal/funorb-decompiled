@@ -236,7 +236,7 @@ final class GzipDecoder {
         GzipDecoder.a(-9, (byte[]) null, (byte) 24);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         field_b = null;
         field_a = null;

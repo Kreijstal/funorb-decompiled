@@ -57,13 +57,13 @@ final class hh {
 
     final static int a(int param0, boolean param1, byte param2, int param3) {
         if (param2 != -66) {
-          hh.a(false);
+          hh.releaseStatics(false);
           return SceneWidget.i(104);
         }
         return SceneWidget.i(104);
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (param0) {
           return;
         }

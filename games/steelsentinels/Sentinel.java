@@ -1829,7 +1829,7 @@ final class Sentinel extends IntrusiveNode {
         double var8 = Math.sin(3.141592653589793 * (double)(2 * this.world.simulationTick) / 50.0) * 4.0;
         String var10 = Integer.toString((this.field_ec + 49) / 50);
         int var11 = BoundedUrlRequest.field_d.textWidth(var10);
-        SoftwareRaster.c(-1 + (var5 - var11 / 2), -4 + var6, 2 + var11, 8, 0, 100);
+        SoftwareRaster.fillRectangleBlended(-1 + (var5 - var11 / 2), -4 + var6, 2 + var11, 8, 0, 100);
         if (param2 != 23859) {
           return false;
         }
@@ -3104,7 +3104,7 @@ final class Sentinel extends IntrusiveNode {
         return;
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_I = null;
         field_T = null;
         field_nc = null;
@@ -4064,7 +4064,7 @@ final class Sentinel extends IntrusiveNode {
           param1) {
           var8 = var8 * (-Math.abs(this.field_F) + 250) / 250;
         }
-        SoftwareRaster.c(-(var7 / 2) + param2, -var6 + param0, var7, var8, 0, 128);
+        SoftwareRaster.fillRectangleBlended(-(var7 / 2) + param2, -var6 + param0, var7, var8, 0, 128);
         var9 = WeightedLruCache.a(this.activeModuleType, (byte) -102);
         SoftwareRaster.drawRectangleOutlineAlpha(param2 - var7 / 2, param0 - var6, var7, var8, 16711935, 128 + jh.sine16(200 * this.world.simulationTick, param3 ^ 4141) / 513);
         if (param3 != 45) {
@@ -4080,7 +4080,7 @@ final class Sentinel extends IntrusiveNode {
           SoftwareRaster.getClip(var14);
           SoftwareRaster.intersectClip(-(var7 / 2) + param2, -var6 + param0, param2 + var7 / 2, -var6 + (param0 + var8));
         }
-        var9.c(-(var5 / 2) + param2, -var5 + param0);
+        var9.drawHalfSize(-(var5 / 2) + param2, -var5 + param0);
         if (this.field_xb) {
           BoundedUrlRequest.field_d.drawCentered(Integer.toString((49 + this.field_v) / 50), param2, -2 + (param0 - var5), 16777215, 0);
         }
@@ -4250,18 +4250,18 @@ final class Sentinel extends IntrusiveNode {
             !this.field_pc &&
             param3 != this) {
             var11 = this.field_Ub * param1 >> 11;
-            SoftwareRaster.c(-(var11 / 2) + (var9 - 1), 5 + (-1 + var10), 2 + var11, 5, 0, var7 * 3);
+            SoftwareRaster.fillRectangleBlended(-(var11 / 2) + (var9 - 1), 5 + (-1 + var10), 2 + var11, 5, 0, var7 * 3);
             var12 = Math.max(0, Math.min(this.armour * var11 / this.maximumArmour, var11));
             for (var13 = 1; var13 <= 5; var13++) {
-              SoftwareRaster.c(-(var11 / 2) + (var9 + (var12 - var13 * var12 / 5)), var10 + 5, var13 * var12 / 5, 3, 65280, 2 * var7);
+              SoftwareRaster.fillRectangleBlended(-(var11 / 2) + (var9 + (var12 - var13 * var12 / 5)), var10 + 5, var13 * var12 / 5, 3, 65280, 2 * var7);
             }
             var13 = Math.max(0, Math.min(var11 * this.field_G / this.maximumArmour, var11));
-            SoftwareRaster.c(var9 - var11 / 2 + var12, var10 + 5, -var12 + var13, 3, 16711680, var7 * 2 * this.field_P / 100);
+            SoftwareRaster.fillRectangleBlended(var9 - var11 / 2 + var12, var10 + 5, -var12 + var13, 3, 16711680, var7 * 2 * this.field_P / 100);
             if (0 < this.field_Q) {
               var12Lifetime2 = Math.max(0, Math.min(var11 * this.field_S / this.field_Q, var11));
               for (var14 = 1; var14 <= 5; var14++) {
-                SoftwareRaster.c(-(var14 * var12Lifetime2 / 5) + (-(var11 / 2) + (var9 + var12Lifetime2)), var10 + 6, var12Lifetime2 * var14 / 5, 1, 65535, var7);
-                SoftwareRaster.c(-(var12Lifetime2 * var14 / 5) - var11 / 2 + (var9 + var12Lifetime2), var10 + 7, var12Lifetime2 * var14 / 5, 1, 65535, var7 * 2);
+                SoftwareRaster.fillRectangleBlended(-(var14 * var12Lifetime2 / 5) + (-(var11 / 2) + (var9 + var12Lifetime2)), var10 + 6, var12Lifetime2 * var14 / 5, 1, 65535, var7);
+                SoftwareRaster.fillRectangleBlended(-(var12Lifetime2 * var14 / 5) - var11 / 2 + (var9 + var12Lifetime2), var10 + 7, var12Lifetime2 * var14 / 5, 1, 65535, var7 * 2);
               }
             }
           }
@@ -4289,31 +4289,31 @@ final class Sentinel extends IntrusiveNode {
               if (var14Lifetime1 == PartInstruction.field_t[0]) {
                 var14Lifetime1 = 12583104;
               }
-              BoundedUrlRequest.field_d.c(var20, var9, 1 + var11Lifetime1, 0, -1, 3 * var7);
-              BoundedUrlRequest.field_d.c(var20, 1 + var9, var11Lifetime1, 0, -1, 3 * var7);
-              BoundedUrlRequest.field_d.c(var20, var9, var11Lifetime1, var14Lifetime1, -1, 4 * var7);
+              BoundedUrlRequest.field_d.drawCenteredAlpha(var20, var9, 1 + var11Lifetime1, 0, -1, 3 * var7);
+              BoundedUrlRequest.field_d.drawCenteredAlpha(var20, 1 + var9, var11Lifetime1, 0, -1, 3 * var7);
+              BoundedUrlRequest.field_d.drawCenteredAlpha(var20, var9, var11Lifetime1, var14Lifetime1, -1, 4 * var7);
             } else {
               if (this.field_Nb == 11) {
                 var23 = this.world.d(param2 ^ -1676781437, this.playerId);
                 var14Lifetime1 = this.getTeamColour((byte) -123);
-                BoundedUrlRequest.field_d.c(var23, var9, 1 + var11Lifetime1, 0, -1, var7 * 3);
-                BoundedUrlRequest.field_d.c(var23, 1 + var9, var11Lifetime1, 0, -1, 3 * var7);
-                BoundedUrlRequest.field_d.c(var23, var9, var11Lifetime1, var14Lifetime1, -1, 4 * var7);
+                BoundedUrlRequest.field_d.drawCenteredAlpha(var23, var9, 1 + var11Lifetime1, 0, -1, var7 * 3);
+                BoundedUrlRequest.field_d.drawCenteredAlpha(var23, 1 + var9, var11Lifetime1, 0, -1, 3 * var7);
+                BoundedUrlRequest.field_d.drawCenteredAlpha(var23, var9, var11Lifetime1, var14Lifetime1, -1, 4 * var7);
               } else {
                 if (var12Lifetime1 != 0 &&
                   QuickChatHelpDialog.field_Ub == 0 &&
                   9 >= IconTextComponent.field_Yb) {
                   var22 = SocketConnector.field_f;
-                  BoundedUrlRequest.field_d.c(var22, var9, 1 + var11Lifetime1, 0, -1, 3 * var7);
-                  BoundedUrlRequest.field_d.c(var22, var9 + 1, var11Lifetime1, 0, -1, var7 * 3);
-                  BoundedUrlRequest.field_d.c(var22, var9, var11Lifetime1, 10085888, -1, 4 * var7);
+                  BoundedUrlRequest.field_d.drawCenteredAlpha(var22, var9, 1 + var11Lifetime1, 0, -1, 3 * var7);
+                  BoundedUrlRequest.field_d.drawCenteredAlpha(var22, var9 + 1, var11Lifetime1, 0, -1, var7 * 3);
+                  BoundedUrlRequest.field_d.drawCenteredAlpha(var22, var9, var11Lifetime1, 10085888, -1, 4 * var7);
                 } else {
                   var21 = "^";
                   stackIn_63_0 = (var12Lifetime1 != 0) ? 10085888 : 16711680;
                   var14Lifetime1 = stackIn_63_0;
-                  dk.field_h.c(var21, var9, var11Lifetime1 + 1, 0, -1, var7 * 3);
-                  dk.field_h.c(var21, var9 + 1, var11Lifetime1, 0, -1, 3 * var7);
-                  dk.field_h.c(var21, var9, var11Lifetime1, var14Lifetime1, -1, 4 * var7);
+                  dk.field_h.drawCenteredAlpha(var21, var9, var11Lifetime1 + 1, 0, -1, var7 * 3);
+                  dk.field_h.drawCenteredAlpha(var21, var9 + 1, var11Lifetime1, 0, -1, 3 * var7);
+                  dk.field_h.drawCenteredAlpha(var21, var9, var11Lifetime1, var14Lifetime1, -1, 4 * var7);
                 }
               }
             }
@@ -4322,7 +4322,7 @@ final class Sentinel extends IntrusiveNode {
             var11Lifetime1 -= 10;
             if (this.field_Vb == param3 &&
               (16 & this.world.simulationTick) != 0) {
-              BoundedUrlRequest.field_d.c(ResizableModalPanel.field_gb, var9, var11Lifetime1, 16711680, 0, 128);
+              BoundedUrlRequest.field_d.drawCenteredAlpha(ResizableModalPanel.field_gb, var9, var11Lifetime1, 16711680, 0, 128);
               var11Lifetime1 -= 10;
             }
             if (this.chassis.componentId != 109) {
@@ -4331,14 +4331,14 @@ final class Sentinel extends IntrusiveNode {
                   var13 = this.field_mc / 50;
                   var19 = SocketConnector.a(SocketJs5Transport.field_E, -47, new String[]{Integer.toString(var13)});
                   var15 = SocketConnector.a("<%0> - <%1>", -82, new String[]{ProxySocketConnector.field_i, var19});
-                  BoundedUrlRequest.field_d.c(var15, var9, var11Lifetime1, 16777215, 0, 128);
+                  BoundedUrlRequest.field_d.drawCenteredAlpha(var15, var9, var11Lifetime1, 16777215, 0, 128);
                   var11Lifetime1 -= 10;
                 }
               } else {
                 var13 = -this.field_ub / (50 * (this.field_wb + 2));
                 var18 = SocketConnector.a(SocketJs5Transport.field_E, -56, new String[]{Integer.toString(var13)});
                 var15 = SocketConnector.a("<%0> - <%1>", -73, new String[]{hk.field_pc, var18});
-                BoundedUrlRequest.field_d.c(var15, var9, var11Lifetime1, 16777215, 0, 128);
+                BoundedUrlRequest.field_d.drawCenteredAlpha(var15, var9, var11Lifetime1, 16777215, 0, 128);
                 var11Lifetime1 -= 10;
               }
             }
@@ -4615,7 +4615,7 @@ final class Sentinel extends IntrusiveNode {
           if (0 < this.field_E) {
             ArchiveProvider.field_a[var11Lifetime1].drawQuarter(var12, var13_int);
           } else {
-            ArchiveProvider.field_a[var11Lifetime1].b().drawQuarter(var12, var13_int);
+            ArchiveProvider.field_a[var11Lifetime1].copyFlippedHorizontal().drawQuarter(var12, var13_int);
           }
           return false;
         }
@@ -4741,7 +4741,7 @@ final class Sentinel extends IntrusiveNode {
             if (var27 == 16777215) {
               ml.field_c[var18Lifetime1].drawScaled(var25, var26, var23, var24_int);
             } else {
-              ml.field_c[var18Lifetime1].a(var25, var26, var23, var24_int, var27);
+              ml.field_c[var18Lifetime1].drawScaled(var25, var26, var23, var24_int, var27);
             }
           } else {
             var28 = SoftwareRaster.field_i;
@@ -4756,7 +4756,7 @@ final class Sentinel extends IntrusiveNode {
               var26 = var26 + var24_int * (-225 + this.field_Qb) / 25;
             }
             if (var27 != 16777215) {
-              ml.field_c[var18Lifetime1].a(var25, var26, var23, var24_int, var27);
+              ml.field_c[var18Lifetime1].drawScaled(var25, var26, var23, var24_int, var27);
             } else {
               ml.field_c[var18Lifetime1].drawScaled(var25, var26, var23, var24_int);
             }
@@ -4823,9 +4823,9 @@ final class Sentinel extends IntrusiveNode {
           var28Lifetime1 = var15Lifetime1 - var26Lifetime1 / 2;
           var29Lifetime1 = var16Lifetime1 - (int)((double)var27Lifetime1 / var22 * ((-1.0 + var22) / 2.0 + 1.0));
           if (var20 < 256) {
-            DialWidgetPainter.field_n[var21].d(var28Lifetime1, var29Lifetime1, var26Lifetime1, var27Lifetime1, var20);
+            DialWidgetPainter.field_n[var21].drawScaledAdditive(var28Lifetime1, var29Lifetime1, var26Lifetime1, var27Lifetime1, var20);
           } else {
-            DialWidgetPainter.field_n[var21].d(var28Lifetime1, var29Lifetime1, var26Lifetime1, var27Lifetime1, 256);
+            DialWidgetPainter.field_n[var21].drawScaledAdditive(var28Lifetime1, var29Lifetime1, var26Lifetime1, var27Lifetime1, 256);
           }
         }
         if (this.field_Cb) {

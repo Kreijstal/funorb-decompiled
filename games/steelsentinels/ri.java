@@ -14,7 +14,7 @@ final class ri {
         return WeightedLruCache.field_q;
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         field_b = null;
         if (param0 != 0) {

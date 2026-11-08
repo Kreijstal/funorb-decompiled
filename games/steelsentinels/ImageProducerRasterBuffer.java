@@ -42,7 +42,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == 65280) {
           field_m = null;
           field_q = null;
@@ -133,7 +133,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         if (ResourceArchive.field_j != null) {
           ResourceArchive.field_j.dispose();
           if (param0 != 7094) {
-            ImageProducerRasterBuffer.b(-48);
+            ImageProducerRasterBuffer.releaseStatics(-48);
             return;
           }
           return;
@@ -141,7 +141,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         if (param0 == 7094) {
           return;
         }
-        ImageProducerRasterBuffer.b(-48);
+        ImageProducerRasterBuffer.releaseStatics(-48);
     }
 
     public final boolean imageUpdate(java.awt.Image param0, int param1, int param2, int param3, int param4, int param5) {

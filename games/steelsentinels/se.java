@@ -329,7 +329,7 @@ final class se {
           var8 = SoftwareRaster.field_j;
           var9 = new RgbSprite(param0, -(2 * param0) + param3);
           var9.bindRasterTarget();
-          SoftwareRaster.e(0, 0, param0, param3 - param0 * 2, param2, param4);
+          SoftwareRaster.fillVerticalGradient(0, 0, param0, param3 - param0 * 2, param2, param4);
           var10 = new RgbSprite(param0, param0);
           var10.bindRasterTarget();
           if (param5 != 13574) {
@@ -731,7 +731,7 @@ final class se {
             var15 = NodeDeque.a((byte) 83, param3.componentId);
             var14.field_Pb = new RgbSprite(Math.min(64, -4 + var11), Math.min(64, var7 - 4));
             var14.field_Pb.bindRasterTarget();
-            CachedTextLayout.field_E[var15].a(0, 0);
+            CachedTextLayout.field_E[var15].drawTransparent(0, 0);
             SoftwareRaster.resetClip();
             Checkbox.field_bb.b((byte) 121);
             ViewportController.field_h[var15] = var14;
@@ -742,7 +742,7 @@ final class se {
             param1 ||
             var6 != 0) {
             var14.field_Pb.bindRasterTarget();
-            SoftwareRaster.c(0, 0, var14.field_Pb.field_A, var14.field_Pb.field_F, 0, 128);
+            SoftwareRaster.fillRectangleBlended(0, 0, var14.field_Pb.field_A, var14.field_Pb.field_F, 0, 128);
             if (param1 &&
               var6 == 0) {
               pl.field_U.drawCentered(mc.field_d, var14.field_Pb.field_A / 2, (pl.field_U.field_G + var14.field_Pb.field_F) / 2, 12632256, 0);

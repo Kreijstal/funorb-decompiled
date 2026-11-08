@@ -50,7 +50,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
         }
     }
 
-    public static void o(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_Xb = null;
         field_Tb = null;
         field_Yb = null;

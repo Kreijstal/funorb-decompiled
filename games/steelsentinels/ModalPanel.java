@@ -12,7 +12,7 @@ abstract class ModalPanel extends UiContainer {
     private int field_U;
     static int[] field_S;
 
-    public static void h(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_S = null;
         field_W = null;
         field_P = null;

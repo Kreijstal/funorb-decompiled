@@ -194,12 +194,12 @@ final class SpriteCheckboxPainter implements WidgetPainter {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         int var1 = -115 % ((param0 - 47) / 58);
     }
 
-    public final void a(int param0, UiComponent param1, byte param2, boolean param3, int param4) {
+    public final void drawWidget(int param0, UiComponent param1, byte param2, boolean param3, int param4) {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -210,7 +210,7 @@ final class SpriteCheckboxPainter implements WidgetPainter {
         RgbSprite var8 = null;
         try {
           if (param2 != -30) {
-            SpriteCheckboxPainter.a((byte) -83);
+            SpriteCheckboxPainter.releaseStatics((byte) -83);
           }
           var6_int = param0 + param1.field_o;
           var7 = param1.field_z + param4;

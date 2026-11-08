@@ -15,7 +15,7 @@ final class LoginDialog extends ContentTransitionDialog {
         super(param0, param1, 33, 20, 30);
     }
 
-    public static void m(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_zb = null;
         field_Ab = null;
         field_Bb = null;
@@ -61,7 +61,7 @@ final class LoginDialog extends ContentTransitionDialog {
         ArchiveRequest.a(-640 + SoftwareRaster.field_c >> 1, 0, -102, 640 + SoftwareRaster.field_c >> 1, SoftwareRaster.field_j);
         if (SentinelCommand.field_t > 0) {
           if (null != Js5ArchiveManager.field_e) {
-            Js5ArchiveManager.field_e.f(QuickChatMenu.field_Ub.field_Y, 0);
+            Js5ArchiveManager.field_e.drawOpaque(QuickChatMenu.field_Ub.field_Y, 0);
           }
           stackIn_9_0 = QuickChatMenu.field_Ub;
           stackIn_10_1 = (param1) && (!im.field_b);
@@ -73,7 +73,7 @@ final class LoginDialog extends ContentTransitionDialog {
         if (!(bd.field_c <= 0) ||
           !(fj.field_f <= 0)) {
           if (null != Js5ArchiveManager.field_e) {
-            Js5ArchiveManager.field_e.f(SocialListPanel.field_ec.field_Y, 0);
+            Js5ArchiveManager.field_e.drawOpaque(SocialListPanel.field_ec.field_Y, 0);
           }
           stackIn_23_0 = SocialListPanel.field_ec;
           stackIn_24_1 = (param1) && (!GzipDecoder.field_c);
@@ -222,7 +222,7 @@ final class LoginDialog extends ContentTransitionDialog {
           }
           var6 = new StringBuilder(var5);
           if (param2 != 50) {
-            LoginDialog.m((byte) 37);
+            LoginDialog.releaseStatics((byte) 37);
           }
           for (var7 = param1; var7 < var4_int; var7++) {
             var8 = param3[var7];

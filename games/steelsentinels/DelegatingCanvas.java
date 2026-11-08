@@ -9,7 +9,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
     static int field_c;
     static String[] field_f;
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         field_b = null;
         field_f = null;

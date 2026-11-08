@@ -36,7 +36,7 @@ final class lf {
         }
     }
 
-    public static void b() {
+    public static void releaseStatics() {
         field_c = null;
         field_f = null;
         field_a = null;

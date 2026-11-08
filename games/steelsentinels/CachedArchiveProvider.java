@@ -252,7 +252,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_s = null;
         field_t = null;
         field_j = null;
@@ -619,7 +619,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
           }
         }
         if (!param0) {
-          CachedArchiveProvider.c(-55);
+          CachedArchiveProvider.releaseStatics(-55);
         }
         return 100;
     }

@@ -105,7 +105,7 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
 
     public final boolean b(boolean param0) {
         if (!param0) {
-          DateOfBirthValidator.d(false);
+          DateOfBirthValidator.releaseStatics(false);
           return this.field_n.i(-7034);
         }
         return this.field_n.i(-7034);
@@ -179,13 +179,13 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
 
     final static PcmStreamMixer c(byte param0) {
         if (param0 != 83) {
-          DateOfBirthValidator.d(true);
+          DateOfBirthValidator.releaseStatics(true);
           return UiTheme.field_e;
         }
         return UiTheme.field_e;
     }
 
-    public static void d(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_m = null;
         field_j = null;
         if (param0) {

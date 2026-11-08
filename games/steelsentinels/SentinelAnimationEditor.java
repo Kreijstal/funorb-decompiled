@@ -26,7 +26,7 @@ final class SentinelAnimationEditor {
     private int field_s;
     static int field_h;
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_u = null;
         if (param0 != 21841) {
           return;
@@ -410,7 +410,7 @@ final class SentinelAnimationEditor {
           Checkbox.field_bb.b((byte) 127);
         }
         if (param0 <= 43) {
-          SentinelAnimationEditor.c(117);
+          SentinelAnimationEditor.releaseStatics(117);
         }
     }
 
@@ -601,26 +601,26 @@ final class SentinelAnimationEditor {
             SoftwareRaster.drawVerticalLineAlpha(-64 + var2Lifetime1, -192 + var3Lifetime1, 192, 16777215, 64);
             SoftwareRaster.drawVerticalLineAlpha(var2Lifetime1 + 64, -192 + var3Lifetime1, 192, 16777215, 64);
             var7_intLifetime1 = ModalStack.field_G[o.a((byte) 84, this.field_n)][25][3];
-            SoftwareRaster.b(var2Lifetime1 - this.field_g * ((this.field_b - 1) * var5Lifetime1) / var6Lifetime1, 7 + var3Lifetime1, 7, 16777215, 255 - (this.field_b - 1) * 256 / var7_intLifetime1);
-            SoftwareRaster.b(var2Lifetime1 - (var5Lifetime1 * (this.field_b - 1) * this.field_g / var6Lifetime1 + this.field_g * (var5Lifetime1 * var7_intLifetime1) / (var6Lifetime1 * 2)), var3Lifetime1 + 7, 7, 16711680, 128);
-            SoftwareRaster.b(-(var5Lifetime1 * (this.field_b - var7_intLifetime1 - 1) * this.field_g / var6Lifetime1) + var2Lifetime1, var3Lifetime1 + 7, 7, 16777215, (-var7_intLifetime1 + this.field_b - 1) * 256 / var7_intLifetime1 + 255);
-            SoftwareRaster.b(var2Lifetime1 - this.field_g * var5Lifetime1 * (this.field_b - (var7_intLifetime1 + 1)) / var6Lifetime1 - this.field_g * (var7_intLifetime1 * var5Lifetime1) / (var6Lifetime1 * 2), 7 + var3Lifetime1, 7, 16711680, 128);
+            SoftwareRaster.fillCircleBlended(var2Lifetime1 - this.field_g * ((this.field_b - 1) * var5Lifetime1) / var6Lifetime1, 7 + var3Lifetime1, 7, 16777215, 255 - (this.field_b - 1) * 256 / var7_intLifetime1);
+            SoftwareRaster.fillCircleBlended(var2Lifetime1 - (var5Lifetime1 * (this.field_b - 1) * this.field_g / var6Lifetime1 + this.field_g * (var5Lifetime1 * var7_intLifetime1) / (var6Lifetime1 * 2)), var3Lifetime1 + 7, 7, 16711680, 128);
+            SoftwareRaster.fillCircleBlended(-(var5Lifetime1 * (this.field_b - var7_intLifetime1 - 1) * this.field_g / var6Lifetime1) + var2Lifetime1, var3Lifetime1 + 7, 7, 16777215, (-var7_intLifetime1 + this.field_b - 1) * 256 / var7_intLifetime1 + 255);
+            SoftwareRaster.fillCircleBlended(var2Lifetime1 - this.field_g * var5Lifetime1 * (this.field_b - (var7_intLifetime1 + 1)) / var6Lifetime1 - this.field_g * (var7_intLifetime1 * var5Lifetime1) / (var6Lifetime1 * 2), 7 + var3Lifetime1, 7, 16711680, 128);
           } else {
             if (jh.field_d != this.field_t) {
-              SoftwareRaster.e(var2Lifetime1, var3Lifetime1 + 7, 7, 16777215);
+              SoftwareRaster.fillCircle(var2Lifetime1, var3Lifetime1 + 7, 7, 16777215);
             } else {
               SoftwareRaster.drawVerticalLineAlpha(var2Lifetime1, var3Lifetime1 - 192, 192, 16777215, 64);
               SoftwareRaster.drawVerticalLineAlpha(var2Lifetime1 - 64, var3Lifetime1 - 192, 192, 16777215, 64);
               SoftwareRaster.drawVerticalLineAlpha(var2Lifetime1 + 64, var3Lifetime1 - 192, 192, 16777215, 64);
               var7_intLifetime1 = ModalStack.field_G[o.a((byte) 84, this.field_n)][25][7];
               var8Lifetime1 = this.field_g * var5Lifetime1 * (this.field_b - 17) / var6Lifetime1;
-              SoftwareRaster.b(-var8Lifetime1 + var2Lifetime1, var8Lifetime1 + 7 + var3Lifetime1, 7, 16777215, 255 - (this.field_b - 17) * 256 / var7_intLifetime1);
+              SoftwareRaster.fillCircleBlended(-var8Lifetime1 + var2Lifetime1, var8Lifetime1 + 7 + var3Lifetime1, 7, 16777215, 255 - (this.field_b - 17) * 256 / var7_intLifetime1);
               var8Lifetime1Lifetime1 = -(this.field_g * var7_intLifetime1 * var5Lifetime1 / (var6Lifetime1 * 2)) + this.field_g * (this.field_b - 17) * var5Lifetime1 / var6Lifetime1;
-              SoftwareRaster.b(-var8Lifetime1Lifetime1 + var2Lifetime1, var3Lifetime1 + (7 + var8Lifetime1Lifetime1), 7, 16711680, 128);
+              SoftwareRaster.fillCircleBlended(-var8Lifetime1Lifetime1 + var2Lifetime1, var3Lifetime1 + (7 + var8Lifetime1Lifetime1), 7, 16711680, 128);
               var8Lifetime1Lifetime2 = (this.field_b + (-var7_intLifetime1 - 17)) * (var5Lifetime1 * this.field_g) / var6Lifetime1;
-              SoftwareRaster.b(var2Lifetime1 - var8Lifetime1Lifetime2, 7 + var3Lifetime1 + var8Lifetime1Lifetime2, 7, 16777215, (-4352 + (-var7_intLifetime1 + this.field_b) * 256) / var7_intLifetime1 + 255);
+              SoftwareRaster.fillCircleBlended(var2Lifetime1 - var8Lifetime1Lifetime2, 7 + var3Lifetime1 + var8Lifetime1Lifetime2, 7, 16777215, (-4352 + (-var7_intLifetime1 + this.field_b) * 256) / var7_intLifetime1 + 255);
               var8Lifetime1Lifetime3 = this.field_g * (-var7_intLifetime1 + this.field_b - 17) * var5Lifetime1 / var6Lifetime1 - this.field_g * (var5Lifetime1 * var7_intLifetime1) / (var6Lifetime1 * 2);
-              SoftwareRaster.b(var2Lifetime1 - var8Lifetime1Lifetime3, 7 + var3Lifetime1 + var8Lifetime1Lifetime3, 7, 16711680, 128);
+              SoftwareRaster.fillCircleBlended(var2Lifetime1 - var8Lifetime1Lifetime3, 7 + var3Lifetime1 + var8Lifetime1Lifetime3, 7, 16711680, 128);
             }
           }
           Js5NetworkRequest.field_J[this.field_b].drawScaled(var2Lifetime1 - 128, -256 + var3Lifetime1, 256, 256);
@@ -646,10 +646,10 @@ final class SentinelAnimationEditor {
               SoftwareRaster.drawVerticalLineAlpha(64 + var2Lifetime1, var3Lifetime1 - 192, 192, 16777215, 64);
               SoftwareRaster.setClip(-128 + var2Lifetime1, 0, 128 + var2Lifetime1, 480);
               var2Lifetime1 = var2Lifetime1 - this.field_g * var5Lifetime1 * (-50 + this.field_l.field_mb) / (50 * var6Lifetime1);
-              SoftwareRaster.b(var2Lifetime1 - this.field_g * (var5Lifetime1 * (this.field_l.field_r - 1)) / var6Lifetime1, 7 + var3Lifetime1, 7, 16777215, -(256 * (this.field_l.field_r - 1) / var7_intLifetime3) + 255);
-              SoftwareRaster.b(-(this.field_g * (var7_intLifetime3 * var5Lifetime1) / (var6Lifetime1 * 2)) + var2Lifetime1 - var5Lifetime1 * (this.field_l.field_r - 1) * this.field_g / var6Lifetime1, 7 + var3Lifetime1, 7, 16711680, 128);
-              SoftwareRaster.b(-((-var7_intLifetime3 + (this.field_l.field_r - 1)) * (var5Lifetime1 * this.field_g) / var6Lifetime1) + var2Lifetime1, 7 + var3Lifetime1, 7, 16777215, (-256 + 256 * (this.field_l.field_r - var7_intLifetime3)) / var7_intLifetime3 + 255);
-              SoftwareRaster.b(var2Lifetime1 - this.field_g * (-var7_intLifetime3 + this.field_l.field_r - 1) * var5Lifetime1 / var6Lifetime1 - this.field_g * (var5Lifetime1 * var7_intLifetime3) / (2 * var6Lifetime1), 7 + var3Lifetime1, 7, 16711680, 128);
+              SoftwareRaster.fillCircleBlended(var2Lifetime1 - this.field_g * (var5Lifetime1 * (this.field_l.field_r - 1)) / var6Lifetime1, 7 + var3Lifetime1, 7, 16777215, -(256 * (this.field_l.field_r - 1) / var7_intLifetime3) + 255);
+              SoftwareRaster.fillCircleBlended(-(this.field_g * (var7_intLifetime3 * var5Lifetime1) / (var6Lifetime1 * 2)) + var2Lifetime1 - var5Lifetime1 * (this.field_l.field_r - 1) * this.field_g / var6Lifetime1, 7 + var3Lifetime1, 7, 16711680, 128);
+              SoftwareRaster.fillCircleBlended(-((-var7_intLifetime3 + (this.field_l.field_r - 1)) * (var5Lifetime1 * this.field_g) / var6Lifetime1) + var2Lifetime1, 7 + var3Lifetime1, 7, 16777215, (-256 + 256 * (this.field_l.field_r - var7_intLifetime3)) / var7_intLifetime3 + 255);
+              SoftwareRaster.fillCircleBlended(var2Lifetime1 - this.field_g * (-var7_intLifetime3 + this.field_l.field_r - 1) * var5Lifetime1 / var6Lifetime1 - this.field_g * (var5Lifetime1 * var7_intLifetime3) / (2 * var6Lifetime1), 7 + var3Lifetime1, 7, 16711680, 128);
               SoftwareRaster.resetClip();
             }
             SoftwareRaster.resetClip();
@@ -669,20 +669,20 @@ final class SentinelAnimationEditor {
                 var2Lifetime1 = var2Lifetime1 - this.field_g * ((this.field_l.field_mb - 50) * var5Lifetime1) / (50 * var6Lifetime1);
                 var3Lifetime1 = var3Lifetime1 + var5Lifetime1 * (this.field_l.field_mb - 50) * this.field_g / (var6Lifetime1 * 50);
                 var8Lifetime2 = (-17 + this.field_l.field_r) * (var5Lifetime1 * this.field_g) / var6Lifetime1;
-                SoftwareRaster.b(var2Lifetime1 - var8Lifetime2, 7 + var3Lifetime1 + var8Lifetime2, 7, 16777215, -((this.field_l.field_r - 17) * 256 / var7_intLifetime3) + 255);
+                SoftwareRaster.fillCircleBlended(var2Lifetime1 - var8Lifetime2, 7 + var3Lifetime1 + var8Lifetime2, 7, 16777215, -((this.field_l.field_r - 17) * 256 / var7_intLifetime3) + 255);
                 var8Lifetime2Lifetime1 = -(this.field_g * var5Lifetime1 * var7_intLifetime3 / (2 * var6Lifetime1)) + this.field_g * var5Lifetime1 * (this.field_l.field_r - 17) / var6Lifetime1;
-                SoftwareRaster.b(-var8Lifetime2Lifetime1 + var2Lifetime1, var8Lifetime2Lifetime1 + (7 + var3Lifetime1), 7, 16711680, 128);
+                SoftwareRaster.fillCircleBlended(-var8Lifetime2Lifetime1 + var2Lifetime1, var8Lifetime2Lifetime1 + (7 + var3Lifetime1), 7, 16711680, 128);
                 var8Lifetime2Lifetime2 = var5Lifetime1 * (this.field_l.field_r - var7_intLifetime3 - 17) * this.field_g / var6Lifetime1;
-                SoftwareRaster.b(-var8Lifetime2Lifetime2 + var2Lifetime1, var3Lifetime1 + 7 + var8Lifetime2Lifetime2, 7, 16777215, 255 + 256 * (this.field_l.field_r - (var7_intLifetime3 + 17)) / var7_intLifetime3);
+                SoftwareRaster.fillCircleBlended(-var8Lifetime2Lifetime2 + var2Lifetime1, var3Lifetime1 + 7 + var8Lifetime2Lifetime2, 7, 16777215, 255 + 256 * (this.field_l.field_r - (var7_intLifetime3 + 17)) / var7_intLifetime3);
                 var8Lifetime2Lifetime3 = this.field_g * var5Lifetime1 * (-var7_intLifetime3 + (this.field_l.field_r - 17)) / var6Lifetime1 - this.field_g * (var5Lifetime1 * var7_intLifetime3) / (2 * var6Lifetime1);
-                SoftwareRaster.b(var2Lifetime1 - var8Lifetime2Lifetime3, var8Lifetime2Lifetime3 + (var3Lifetime1 + 7), 7, 16711680, 128);
+                SoftwareRaster.fillCircleBlended(var2Lifetime1 - var8Lifetime2Lifetime3, var8Lifetime2Lifetime3 + (var3Lifetime1 + 7), 7, 16711680, 128);
                 SoftwareRaster.resetClip();
               }
               SoftwareRaster.resetClip();
             } else {
               SoftwareRaster.setClip(-128 + var2Lifetime1, 130, 128 + var2Lifetime1, var3Lifetime1);
               SoftwareRaster.resetClip();
-              SoftwareRaster.e(var2Lifetime1, var3Lifetime1 + 7, 7, 16777215);
+              SoftwareRaster.fillCircle(var2Lifetime1, var3Lifetime1 + 7, 7, 16777215);
             }
           }
           var14 = "";
@@ -741,7 +741,7 @@ final class SentinelAnimationEditor {
             var29 = var28 + "Frame = " + (1 + (this.field_b - 17)) + " of " + ModalStack.field_G[o.a((byte) 84, this.field_n)][25][7] + " (arrow keys to change, + and - to change max frame no)<br>";
             var7Lifetime15 = var29 + "FPS = " + ModalStack.field_G[o.a((byte) 84, this.field_n)][25][6] + " (SHIFT + <lt> and <gt> to change)<br>";
           }
-          dk.field_h.a(var7Lifetime15, 8, 8, 624, 100, 43724, 0, 0, 0, 12);
+          dk.field_h.drawParagraph(var7Lifetime15, 8, 8, 624, 100, 43724, 0, 0, 0, 12);
           return;
         }
     }

@@ -91,13 +91,13 @@ final class nf {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_a = null;
         field_c = null;
         field_d = null;
         if (param0 != 55) {
-          nf.a(-99);
+          nf.releaseStatics(-99);
         }
     }
 

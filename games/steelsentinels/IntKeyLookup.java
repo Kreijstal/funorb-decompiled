@@ -192,7 +192,7 @@ final class IntKeyLookup {
         }
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 >= -67) {
           IntKeyLookup.c((byte) -9);
         }

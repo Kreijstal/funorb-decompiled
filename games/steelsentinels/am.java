@@ -9,7 +9,7 @@ final class am {
     static String field_a;
     static String field_e;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_e = null;
         field_c = null;
         field_a = null;
@@ -18,7 +18,7 @@ final class am {
           field_d = null;
           return;
         }
-        am.a(5);
+        am.releaseStatics(5);
         field_f = null;
         field_d = null;
     }

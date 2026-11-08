@@ -83,7 +83,7 @@ final class dd {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_l = null;
         if (param0 != 0) {
@@ -537,7 +537,7 @@ final class dd {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param2) {
-            dd.a(18);
+            dd.releaseStatics(18);
           }
           var5_int = param0.getGroupId(param3, 46);
           var6 = param0.getFileId(var5_int, -32759, param4);
@@ -579,7 +579,7 @@ final class dd {
         int var5;
         var5 = SteelSentinels.obfuscationControl;
         if (param0) {
-          dd.a(-11);
+          dd.releaseStatics(-11);
         }
         if (param2 == 8) {
           ValidatedTextWidget.a(this.field_h, this.field_k, 2);

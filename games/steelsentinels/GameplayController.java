@@ -81,7 +81,7 @@ final class GameplayController {
                 return;
               }
               if (0 < var10) {
-                SoftwareRaster.a(var8_int, var9, var11, var12, 16777215, 128);
+                SoftwareRaster.drawLineBlended(var8_int, var9, var11, var12, 16777215, 128);
               }
               var8_int = var11;
               var9 = var12;
@@ -538,7 +538,7 @@ final class GameplayController {
             return;
           }
           var10_int = param0;
-          SoftwareRaster.c(param8, param5, var10_int, param0, 0, 160);
+          SoftwareRaster.fillRectangleBlended(param8, param5, var10_int, param0, 0, 160);
           var11 = -var10_int + (param3 - 4);
           var12 = 4 + var10_int + param8;
           var13 = param5;
@@ -555,7 +555,7 @@ final class GameplayController {
           }
           SoftwareRaster.setClip(param8, param5, var10_int + param8, param5 + param0);
           if (param4) {
-            TextButton.field_N.a(param8 + (-TextButton.field_N.field_z + var10_int) / 2, param5 + (-TextButton.field_N.field_B + param0) / 2);
+            TextButton.field_N.drawTransparent(param8 + (-TextButton.field_N.field_z + var10_int) / 2, param5 + (-TextButton.field_N.field_B + param0) / 2);
           }
           MusicPatchNode.field_w = var10_int * 6400 / param6;
           var17 = null;
@@ -568,11 +568,11 @@ final class GameplayController {
             param7.chassis.a(0, true, var10_int / 2, var15 - 6 + param0, (byte) 49, 0);
             WeightedCacheEntry.a(var17_ref, param7, 14590);
             Checkbox.field_bb.b((byte) 121);
-            var17_ref.a(param8, param5);
+            var17_ref.drawTransparent(param8, param5);
           }
           SoftwareRaster.resetClip();
           MusicPatchNode.field_w = var14;
-          SoftwareRaster.c(var12, var13, var11, 21, 0, 160);
+          SoftwareRaster.fillRectangleBlended(var12, var13, var11, 21, 0, 160);
           var13 += 16;
           var18 = this.world.d(-1661904765, param7.playerId);
           if (param1) {
@@ -795,10 +795,10 @@ final class GameplayController {
             var9 = stackIn_88_0;
             WeightedLruCache.field_b = var9 != 0;
             if (var9 != 0) {
-              SoftwareRaster.b(var5, var6, var8, 8421631, 50);
+              SoftwareRaster.fillCircleBlended(var5, var6, var8, 8421631, 50);
             }
             if (var4 != 0) {
-              SoftwareRaster.b(var5, var6, var8 - 1, 0, 200);
+              SoftwareRaster.fillCircleBlended(var5, var6, var8 - 1, 0, 200);
             }
             var10 = 1;
             do {
@@ -899,7 +899,7 @@ final class GameplayController {
                 var29 != 0) {
                 SoftwareRaster.intersectClip(var14Lifetime1 + 1, 0, 640, 480);
               }
-              fm.field_j.c(-48 + var14Lifetime1, var15Lifetime1 - 48);
+              fm.field_j.drawHalfSize(-48 + var14Lifetime1, var15Lifetime1 - 48);
             }
             SoftwareRaster.setClip(var13);
             if (!WeightedLruCache.field_b &&
@@ -943,7 +943,7 @@ final class GameplayController {
                 SoftwareRaster.intersectClip(0, 0, var14Lifetime1, 480);
               }
               if (var7 == 0) {
-                fm.field_j.c(-48 + var14Lifetime1, var15Lifetime2 - 48);
+                fm.field_j.drawHalfSize(-48 + var14Lifetime1, var15Lifetime2 - 48);
               }
               SoftwareRaster.setClip(var13);
               if (WeightedLruCache.field_b &&
@@ -965,7 +965,7 @@ final class GameplayController {
               }
             }
             if (var3_int != 0) {
-              SoftwareRaster.a(var5 << 4, var6 << 4, var8 << 4, 99, this.field_b);
+              SoftwareRaster.fillRadialPaletteCircle(var5 << 4, var6 << 4, var8 << 4, 99, this.field_b);
             }
             regionExit2: {
               if (var4 != 0) {
@@ -979,7 +979,7 @@ final class GameplayController {
                 this.controlledSentinel.field_Cb = var17Lifetime2 != 0;
                 this.controlledSentinel.field_S = var16Lifetime3;
                 var10 = 0;
-                rl.field_b.e(0, 0, 1);
+                rl.field_b.drawSilhouette(0, 0, 1);
                 var18Lifetime1 = this.controlledSentinel.getTeamColour((byte) -128);
                 var19 = 0;
                 while (true) {
@@ -1020,7 +1020,7 @@ final class GameplayController {
                     Checkbox.field_bb.b((byte) 125);
                     SoftwareRaster.setClip(var5 - 48, var6 - 48, 48 + var5, 48 + var6);
                     var19 = -80 + (this.controlledSentinel.field_Db >>> 5);
-                    rl.field_b.e(-40 + var5, var19 + var6, 128, 128);
+                    rl.field_b.drawWithVerticalAlphaGradient(-40 + var5, var19 + var6, 128, 128);
                     stackIn_294_0 = this.d(true, this.controlledSentinel.worldX);
                   }
                   var20_intLifetime1Lifetime1 = stackIn_294_0;
@@ -1084,7 +1084,7 @@ final class GameplayController {
                         break regionExit2;
                       }
                       if (stackIn_320_0 > stackIn_320_1) {
-                        SoftwareRaster.a(var23Lifetime2Lifetime1 << 4, var24Lifetime2Lifetime1 << 4, 20, -1 + var25Lifetime1.length, var25Lifetime1);
+                        SoftwareRaster.fillRadialPaletteCircle(var23Lifetime2Lifetime1 << 4, var24Lifetime2Lifetime1 << 4, 20, -1 + var25Lifetime1.length, var25Lifetime1);
                       }
                       var22Lifetime2++;
                     }
@@ -1114,7 +1114,7 @@ final class GameplayController {
             var17Lifetime3 = var17Lifetime3 + (-(10 * var18Lifetime2 / 20) + 5);
             var19Lifetime1 = -(256 * var18Lifetime2 / 100) + 256;
             var20 = PasswordFieldPainter.field_B[this.controlledSentinel.field_Xb[this.field_F]];
-            BoundedUrlRequest.field_d.c(var20, var16Lifetime4, var17Lifetime3, 16777215, 0, var19Lifetime1);
+            BoundedUrlRequest.field_d.drawCenteredAlpha(var20, var16Lifetime4, var17Lifetime3, 16777215, 0, var19Lifetime1);
             SoftwareRaster.resetClip();
             return;
           }
@@ -1264,7 +1264,7 @@ final class GameplayController {
                 } else {
                   stackIn_83_4 = 16777215;
                 }
-                SoftwareRaster.a(stackIn_82_0, stackIn_82_1, stackIn_82_2, stackIn_82_3, stackIn_83_4, 128);
+                SoftwareRaster.drawLineBlended(stackIn_82_0, stackIn_82_1, stackIn_82_2, stackIn_82_3, stackIn_83_4, 128);
                 if ((var10 + 1) < this.field_S) {
                   this.field_D[var10 + 1] = var2.worldX;
                   this.field_K[1 + var10] = var2.worldY;
@@ -1307,7 +1307,7 @@ final class GameplayController {
                   } else {
                     stackIn_119_4 = 16744576;
                   }
-                  SoftwareRaster.b(stackIn_118_0, stackIn_118_1, stackIn_118_2, stackIn_118_3, stackIn_119_4, 128);
+                  SoftwareRaster.drawLineBlendedInclusive(stackIn_118_0, stackIn_118_1, stackIn_118_2, stackIn_118_3, stackIn_119_4, 128);
                   var9 = 0;
                   if (var7 != 0) {
                     break scanLoop1;
@@ -1590,12 +1590,12 @@ final class GameplayController {
           }
           if ((decompiledFrameCompleted1) &&
             (this.world.field_b >= 50)) {
-            SoftwareRaster.c(0, 0, 640, 400, 16777215, 255 * (-this.world.field_b + 550) / 500);
+            SoftwareRaster.fillRectangleBlended(0, 0, 640, 400, 16777215, 255 * (-this.world.field_b + 550) / 500);
             decompiledFrameRemainder0 = (var16 != 0);
           }
           if ((decompiledFrameRemainder0) &&
             (this.world.field_b > 0)) {
-            SoftwareRaster.c(0, 0, 640, 400, 16777215, this.world.field_b * 5);
+            SoftwareRaster.fillRectangleBlended(0, 0, 640, 400, 16777215, this.world.field_b * 5);
           }
           boolean decompiledFrameCompleted0 = true;
           if (param1 &&
@@ -1849,7 +1849,7 @@ final class GameplayController {
           var8 = var8 + var14 * var9;
           var15 = 480 - var8;
           ch.a(var15, 640, 32308, 0, var8);
-          SoftwareRaster.g(3, 3 + var15, 634, var8 - 3 - 3, 8, 0);
+          SoftwareRaster.fillRoundedRectangle(3, 3 + var15, 634, var8 - 3 - 3, 8, 0);
           var16 = 473;
           var17 = 0;
           if (var5 != 0) {
@@ -1864,7 +1864,7 @@ final class GameplayController {
             }
             var16 = var16 - var9;
             var16 = var16 - var13;
-            pl.field_U.a(QuickChatMenu.field_Zb, 40, var16, 560, var13, 16777215, -1, 1, 0, var12);
+            pl.field_U.drawParagraph(QuickChatMenu.field_Zb, 40, var16, 560, var13, 16777215, -1, 1, 0, var12);
             var16 = var16 - var9;
           }
           if ((var5 == 0 ||
@@ -1877,7 +1877,7 @@ final class GameplayController {
             }
             var16 = var16 - var9;
             var16 = var16 - var13;
-            pl.field_U.a(IconLabelControl.field_Tb, 40, var16, 560, var13, 16777215, -1, 1, 0, var12);
+            pl.field_U.drawParagraph(IconLabelControl.field_Tb, 40, var16, 560, var13, 16777215, -1, 1, 0, var12);
             var16 = var16 - var9;
           }
           var18 = -1;
@@ -4325,7 +4325,7 @@ final class GameplayController {
           if (this.controlledSentinel != null) {
             SoftwareRaster.fillRectangle(3, 423, 71, 54, 0);
             SoftwareRaster.fillRectangle(77, 423, 77, 54, 0);
-            SoftwareRaster.e(4, 424, 69, 26, 0, 1052688);
+            SoftwareRaster.fillVerticalGradient(4, 424, 69, 26, 0, 1052688);
           }
           if (param1 != 1956917985) {
             this.a(116, -87, -26);
@@ -4367,7 +4367,7 @@ final class GameplayController {
             var17 = 427;
             BoundedUrlRequest.field_d.drawLeft(Sentinel.field_I, var16, var17 + 9, 1021128, -1);
             var16 = var16 + (2 + BoundedUrlRequest.field_d.textWidth(Sentinel.field_I));
-            MarkerSliderPainter.field_f[3].a(var16, var17);
+            MarkerSliderPainter.field_f[3].drawTransparent(var16, var17);
             var17 += 22;
             var16 = 6;
             var18 = 1021128;
@@ -4378,23 +4378,23 @@ final class GameplayController {
             BoundedUrlRequest.field_d.drawLeft(NodeHashTableIterator.field_f, var16, 9 + var17, var18, -1);
             var17 += 13;
             if (dm.field_c) {
-              MarkerSliderPainter.field_f[5].a(var16, var17);
+              MarkerSliderPainter.field_f[5].drawTransparent(var16, var17);
               var16 += 14;
               if (var40 != 0) {
-                MarkerSliderPainter.field_f[4].a(var16, var17);
+                MarkerSliderPainter.field_f[4].drawTransparent(var16, var17);
                 var16 += 13;
               }
             } else {
-              MarkerSliderPainter.field_f[4].a(var16, var17);
+              MarkerSliderPainter.field_f[4].drawTransparent(var16, var17);
               var16 += 13;
             }
             BoundedUrlRequest.field_d.drawLeft(RegistrationRequestDialog.field_Pb, var16, 9 + var17, 10526880, -1);
             var16 = var16 + (BoundedUrlRequest.field_d.textWidth(RegistrationRequestDialog.field_Pb) + 2);
-            ValidatedTextWidget.field_wb.f(var16, var17);
+            ValidatedTextWidget.field_wb.drawOpaque(var16, var17);
             var16 = var16 + (2 + ValidatedTextWidget.field_wb.field_A);
             BoundedUrlRequest.field_d.drawLeft("+", var16, 9 + var17, 10526880, -1);
             var16 = var16 + BoundedUrlRequest.field_d.textWidth("+");
-            MarkerSliderPainter.field_f[3].a(var16, var17);
+            MarkerSliderPainter.field_f[3].drawTransparent(var16, var17);
           }
           if (this.controlledSentinel != null) {
             var14 = -var8 + (640 - var7);
@@ -4462,23 +4462,23 @@ final class GameplayController {
                     } else {
                       if (var27 == 0) {
                         if (eh.field_b[ed.field_f] > 0) {
-                          IterableDualNodeDeque.field_j[this.field_M[3] + var29].d(var16, var17, 0, 4096);
+                          IterableDualNodeDeque.field_j[this.field_M[3] + var29].drawRotatedAboutCenter(var16, var17, 0, 4096);
                           if (NanoTickClock.field_p > 0) {
                             var30 = 40 * NanoTickClock.field_p / (50 * eh.field_b[ed.field_f]);
-                            SoftwareRaster.c(var16 - 20, -20 + var17, 40, var30, 0, 192);
+                            SoftwareRaster.fillRectangleBlended(var16 - 20, -20 + var17, 40, var30, 0, 192);
                             if (CachedTextLayout.field_t == 0) {
-                              SoftwareRaster.c(-20 + var16, var17 - 20 + var30, 40, 40 - var30, 0, 128);
+                              SoftwareRaster.fillRectangleBlended(-20 + var16, var17 - 20 + var30, 40, 40 - var30, 0, 128);
                             }
                           }
-                          BoundedUrlRequest.field_d.c(Integer.toString(CachedTextLayout.field_t), 20 + var16, 17 + var17, 16777215, 0);
+                          BoundedUrlRequest.field_d.drawRight(Integer.toString(CachedTextLayout.field_t), 20 + var16, 17 + var17, 16777215, 0);
                         } else {
-                          IterableDualNodeDeque.field_j[var29 + this.field_M[3]].d(var16, var17, 0, 4096);
+                          IterableDualNodeDeque.field_j[var29 + this.field_M[3]].drawRotatedAboutCenter(var16, var17, 0, 4096);
                           if (this.controlledSentinel.field_ub < 0 &&
                             c.a((byte) -90, var29)) {
-                            SoftwareRaster.c(var16 - 20, -20 + var17, 40, 40, 0, 192);
+                            SoftwareRaster.fillRectangleBlended(var16 - 20, -20 + var17, 40, 40, 0, 192);
                           } else if (!(this.controlledSentinel.charge >= 1) &&
                             var29 == 8) {
-                            SoftwareRaster.c(var16 - 20, -20 + var17, 40, 40, 0, 192);
+                            SoftwareRaster.fillRectangleBlended(var16 - 20, -20 + var17, 40, 40, 0, 192);
                           }
                         }
                       } else {
@@ -4490,28 +4490,28 @@ final class GameplayController {
                           oh.field_f <= (var16 + 15) &&
                           var17 + 15 >= DelegatingCanvas.field_c) {
                           this.field_t = var28;
-                          SoftwareRaster.a(var16 << 4, var17 << 4, 320, pe.field_o.length - 1, pe.field_o);
+                          SoftwareRaster.fillRadialPaletteCircle(var16 << 4, var17 << 4, 320, pe.field_o.length - 1, pe.field_o);
                         }
                         if (eh.field_b[ed.field_f] > 0) {
-                          IterableDualNodeDeque.field_j[var29 + this.field_M[3]].d(var16, var17, 0, var22 * 4096 / 40);
+                          IterableDualNodeDeque.field_j[var29 + this.field_M[3]].drawRotatedAboutCenter(var16, var17, 0, var22 * 4096 / 40);
                           if (NanoTickClock.field_p > 0) {
                             var30 = var22 * NanoTickClock.field_p / (50 * eh.field_b[ed.field_f]);
-                            SoftwareRaster.c(var16 - var22 / 2, -(var22 / 2) + var17, var22, var30, 0, 192);
+                            SoftwareRaster.fillRectangleBlended(var16 - var22 / 2, -(var22 / 2) + var17, var22, var30, 0, 192);
                             if (0 == CachedTextLayout.field_t) {
-                              SoftwareRaster.c(-(var22 / 2) + var16, var30 + var17 - var22 / 2, var22, -var30 + var22, 0, 128);
+                              SoftwareRaster.fillRectangleBlended(-(var22 / 2) + var16, var30 + var17 - var22 / 2, var22, -var30 + var22, 0, 128);
                             }
                           }
-                          BoundedUrlRequest.field_d.c(Integer.toString(CachedTextLayout.field_t), 15 + var16, 14 + var17, 16777215, 0);
+                          BoundedUrlRequest.field_d.drawRight(Integer.toString(CachedTextLayout.field_t), 15 + var16, 14 + var17, 16777215, 0);
                         } else {
-                          IterableDualNodeDeque.field_j[this.field_M[3] + var29].d(var16, var17, 0, 4096 * var22 / 40);
+                          IterableDualNodeDeque.field_j[this.field_M[3] + var29].drawRotatedAboutCenter(var16, var17, 0, 4096 * var22 / 40);
                           if (!(this.controlledSentinel.field_ub < 0) ||
                             !c.a((byte) -101, var29)) {
                             if (!(this.controlledSentinel.charge >= 1) &&
                               var29 == 8) {
-                              SoftwareRaster.c(-(var22 / 2) + var16, var17 - var22 / 2, var22, var22, 0, 192);
+                              SoftwareRaster.fillRectangleBlended(-(var22 / 2) + var16, var17 - var22 / 2, var22, var22, 0, 192);
                             }
                           } else {
-                            SoftwareRaster.c(var16 - var22 / 2, -(var22 / 2) + var17, var22, var22, 0, 192);
+                            SoftwareRaster.fillRectangleBlended(var16 - var22 / 2, -(var22 / 2) + var17, var22, var22, 0, 192);
                           }
                         }
                       }
@@ -4590,8 +4590,8 @@ final class GameplayController {
             if (decompiledFrameRemainder3) {
               var28 = 0;
               while (var28 < 4) {
-                SoftwareRaster.e(var26, var27, var25, 25, 1776411, 2565927);
-                SoftwareRaster.e(var26, 25 + var27, var25, var22 + (-25 - 2 * var24), 1644825, 2631720);
+                SoftwareRaster.fillVerticalGradient(var26, var27, var25, 25, 1776411, 2565927);
+                SoftwareRaster.fillVerticalGradient(var26, 25 + var27, var25, var22 + (-25 - 2 * var24), 1644825, 2631720);
                 var26 = var26 + (var25 + var24);
                 var28++;
                 if (var40 != 0) {
@@ -4605,7 +4605,7 @@ final class GameplayController {
                 var28 = var25 + var24;
                 if (this.controlledSentinel.hasModuleType(24, -27)) {
                   boolean decompiledFrameRemainder9 = true;
-                  IsaacRandom.field_d[24].c(var16 - 10, var17 - 14);
+                  IsaacRandom.field_d[24].drawHalfSize(var16 - 10, var17 - 14);
                   if ((!(this.controlledSentinel.field_ub >= 0) ||
                     !(this.controlledSentinel.charge >= 5)) && this.controlledSentinel.activeModuleType != 24) {
                     stackIn_276_0 = 1;
@@ -4641,7 +4641,7 @@ final class GameplayController {
                   var16 = var16 - var28;
                 }
                 if (this.controlledSentinel.hasModuleType(15, -27)) {
-                  IsaacRandom.field_d[15].c(-10 + var16, var17 - 14);
+                  IsaacRandom.field_d[15].drawHalfSize(-10 + var16, var17 - 14);
                   if (0 <= this.controlledSentinel.field_ub &&
                     0 >= this.controlledSentinel.field_Yb) {
                     stackIn_303_0 = 0;
@@ -4685,7 +4685,7 @@ final class GameplayController {
                   } else {
                     NodeIterator.field_k = false;
                   }
-                  IsaacRandom.field_d[16].c(var16 - 10, var17 - 14);
+                  IsaacRandom.field_d[16].drawHalfSize(var16 - 10, var17 - 14);
                   if (!NodeIterator.field_k &&
                     this.controlledSentinel.field_ub < 0) {
                     stackIn_342_0 = 1;
@@ -4799,9 +4799,9 @@ final class GameplayController {
                   boolean decompiledFrameRemainder7 = true;
                   if (var26 >= var30) {
                     var31 = var30 * var25 + var23;
-                    SoftwareRaster.e(var31, var27, var25, var29, 100611, 514822);
+                    SoftwareRaster.fillVerticalGradient(var31, var27, var25, var29, 100611, 514822);
                     SoftwareRaster.drawHorizontalLine(var31, var29 + var27, var25, 501766);
-                    SoftwareRaster.e(var31, var27 + var29 + 1, var25, -var29 + var28 - 1, 487430, 93952);
+                    SoftwareRaster.fillVerticalGradient(var31, var27 + var29 + 1, var25, -var29 + var28 - 1, 487430, 93952);
                     stackIn_415_0 = ~var25;
                     stackIn_415_1 = -5;
                     if (var40 != 0) {
@@ -4909,7 +4909,7 @@ final class GameplayController {
             }
             if (((decompiledFrameCompleted4) && (decompiledFrameCompleted2)) &&
               (decompiledFrameRemainder2 = (var4 != 0))) {
-              BoundedUrlRequest.field_d.c(ProxyAuthenticationException.field_e, 630 - var9, 18 + var13, 16736304, -1);
+              BoundedUrlRequest.field_d.drawRight(ProxyAuthenticationException.field_e, 630 - var9, 18 + var13, 16736304, -1);
               var24 = -var22 + 620;
               var25 = 100 * this.controlledSentinel.maximumCharge;
               var26 = this.controlledSentinel.field_ub / 30 + this.controlledSentinel.charge * 100;
@@ -4954,8 +4954,8 @@ final class GameplayController {
                 boolean decompiledFrameRemainder5 = true;
                 if (var29 >= var36) {
                   var37 = -((var36 + 1) * var28) + var24;
-                  SoftwareRaster.e(var37, var30, var28, var32, var33Lifetime3, var34Lifetime3);
-                  SoftwareRaster.e(var37, var32 + var30, var28, var31 - var32, var34Lifetime3, var35Lifetime2);
+                  SoftwareRaster.fillVerticalGradient(var37, var30, var28, var32, var33Lifetime3, var34Lifetime3);
+                  SoftwareRaster.fillVerticalGradient(var37, var32 + var30, var28, var31 - var32, var34Lifetime3, var35Lifetime2);
                   stackIn_481_0 = -5;
                   stackIn_481_1 = ~var28;
                   if (var40 != 0) {
@@ -5077,7 +5077,7 @@ final class GameplayController {
               var27 = BoundedUrlRequest.field_d.field_F + BoundedUrlRequest.field_d.field_G;
               var28 = Math.max(0, var23 - var26 / 2);
               var29 = -var27 + (var24 - 30);
-              SoftwareRaster.c(var28, var29, var26, var27, 0, 128);
+              SoftwareRaster.fillRectangleBlended(var28, var29, var26, var27, 0, 128);
               BoundedUrlRequest.field_d.drawLeft(var25_ref_String, var28 + 2, var29 + 10, 16777215, 0);
             }
           }
@@ -5180,9 +5180,9 @@ final class GameplayController {
                     SoftwareRaster.drawCircleOutline(var12, var13 - 3, (int)(2.0 * Math.sin(3.141592653589793 * (double)(2 * (63 & this.world.simulationTick)) / 64.0)) + 6, var27);
                   }
                   if ((var21 + 4) <= var13) {
-                    SoftwareRaster.e(var12, -3 + var13, (250 - var26_ref_mb.field_F) * 3 / 250, var27);
+                    SoftwareRaster.fillCircle(var12, -3 + var13, (250 - var26_ref_mb.field_F) * 3 / 250, var27);
                     if (!(var28 <= 0)) {
-                      SoftwareRaster.b(var12, -3 + var13, (250 - var26_ref_mb.field_F) * 3 / 250, 16776960, var28);
+                      SoftwareRaster.fillCircleBlended(var12, -3 + var13, (250 - var26_ref_mb.field_F) * 3 / 250, 16776960, var28);
                     }
                     decompiledFrameRemainder10 = false;
                   }
@@ -5221,7 +5221,7 @@ final class GameplayController {
               var27 = var26_ref_mbLifetime1.getTeamColour((byte) 92);
               boolean decompiledSharedTail1 = !(var21 <= var13);
               if (!decompiledSharedTail1) {
-                SoftwareRaster.e(var12, -4 + var13, 4, var27);
+                SoftwareRaster.fillCircle(var12, -4 + var13, 4, var27);
                 SoftwareRaster.drawCircleOutline(var12, var13 - 4, 4, 16777215);
                 decompiledSharedTail1 = (var40 != 0);
               }
@@ -5248,7 +5248,7 @@ final class GameplayController {
                 var28 = stackIn_662_0.field_K / 2;
                 if (var13 >= var21) {
                   if (var28 < 256) {
-                    SoftwareRaster.c(var12, -6 + var13, 6, 6, var27, var28);
+                    SoftwareRaster.fillRectangleBlended(var12, -6 + var13, 6, 6, var27, var28);
                     SoftwareRaster.drawRectangleOutlineAlpha(var12, var13 - 6, 6, 6, 65535, var28);
                   } else {
                     SoftwareRaster.fillRectangle(var12, var13 - 6, 6, 6, var27);
@@ -5266,8 +5266,8 @@ final class GameplayController {
                   SoftwareRaster.drawHorizontalLineAlpha(var12 - 1, var21 + 2, 3, var27, var28);
                   SoftwareRaster.drawHorizontalLineAlpha(var12 - 2, 3 + var21, 5, var27, var28);
                   SoftwareRaster.drawHorizontalLineAlpha(-3 + var12, 4 + var21, 7, var27, var28);
-                  SoftwareRaster.b(var12 - 1, var21 + 1, var12 - 3, 3 + var21, 65535, var28);
-                  SoftwareRaster.b(1 + var12, 1 + var21, var12 + 3, 3 + var21, 65535, var28);
+                  SoftwareRaster.drawLineBlendedInclusive(var12 - 1, var21 + 1, var12 - 3, 3 + var21, 65535, var28);
+                  SoftwareRaster.drawLineBlendedInclusive(1 + var12, 1 + var21, var12 + 3, 3 + var21, 65535, var28);
                 }
                 var26_ref_ne = (FallingPickup) (this.world.field_e.next((byte) -6));
                 continue;
@@ -5306,10 +5306,10 @@ final class GameplayController {
                 if (stackIn_694_0) {
                   var28 = 16711680;
                 }
-                SoftwareRaster.f(var12 - var14, var13, var12, var13 - var15, var28, 256);
-                SoftwareRaster.f(var12, -var15 + var13, var14 + var12, var13, var28, 256);
-                SoftwareRaster.f(var12 + var14, var13, var12, var15 + var13, var28, 256);
-                SoftwareRaster.f(var12, var13 + var15, -var14 + var12, var13, var28, 256);
+                SoftwareRaster.addLine(var12 - var14, var13, var12, var13 - var15, var28, 256);
+                SoftwareRaster.addLine(var12, -var15 + var13, var14 + var12, var13, var28, 256);
+                SoftwareRaster.addLine(var12 + var14, var13, var12, var15 + var13, var28, 256);
+                SoftwareRaster.addLine(var12, var13 + var15, -var14 + var12, var13, var28, 256);
                 var26_ref_jb = (Explosion) (this.world.field_C.next((byte) -96));
                 continue;
               }
@@ -5333,7 +5333,7 @@ final class GameplayController {
             var29 += 3;
             var28 += 3;
           }
-          SoftwareRaster.c(var26, var28, 1 - var26 + var27, var29 - var28 + 1, 16777215, 40);
+          SoftwareRaster.fillRectangleBlended(var26, var28, 1 - var26 + var27, var29 - var28 + 1, 16777215, 40);
           SoftwareRaster.resetClip();
           SoftwareRaster.drawVerticalLine(var16 + (var17 - 2), -2 + var22 - 3, 4, 0);
           SoftwareRaster.drawVerticalLine(-2 + var17 + (var16 - 1), var22 - 3, 2, 0);
@@ -5359,10 +5359,10 @@ final class GameplayController {
           if (this.world.simulationTick > 50 &&
             NodeDeque.field_d >= 2) {
             if (this.field_ab) {
-              dk.field_h.c("S/C checksums broken", 636, 80, 16711680, -1);
+              dk.field_h.drawRight("S/C checksums broken", 636, 80, 16711680, -1);
             }
             if (this.field_k) {
-              dk.field_h.c("S/C score checksums broken", 636, 100, 16711680, -1);
+              dk.field_h.drawRight("S/C score checksums broken", 636, 100, 16711680, -1);
             }
           }
           if (this.field_E > 1024) {
@@ -5380,10 +5380,10 @@ final class GameplayController {
             var26 = 360;
             if (this.world.field_c != 1) {
               var27 = Js5Transport.field_h[this.world.field_c] * (var24 - var23) / 500;
-              SoftwareRaster.e(var23, var26 + 2, -var27 + var24 - var23, 8, 2236962, 8772);
-              SoftwareRaster.e(var23, 8 + var26 + 2, var24 - var23 - var27, 8, 68, 0);
-              SoftwareRaster.e(var24 - var27, var26 + 2, var27, 8, 2236962, 16729156);
-              SoftwareRaster.e(-var27 + var24, 10 + var26, var27, 8, 16729156, 0);
+              SoftwareRaster.fillVerticalGradient(var23, var26 + 2, -var27 + var24 - var23, 8, 2236962, 8772);
+              SoftwareRaster.fillVerticalGradient(var23, 8 + var26 + 2, var24 - var23 - var27, 8, 68, 0);
+              SoftwareRaster.fillVerticalGradient(var24 - var27, var26 + 2, var27, 8, 2236962, 16729156);
+              SoftwareRaster.fillVerticalGradient(-var27 + var24, 10 + var26, var27, 8, 16729156, 0);
               var28 = 1;
               var29_ref_je = (SentinelCommand) (this.controlledSentinel.pendingCommands.first(param1 ^ 1956905443));
               while (null != var29_ref_je) {
@@ -5418,8 +5418,8 @@ final class GameplayController {
                 if (var29_ref_je.field_q) {
                   var37 = 8947712;
                 }
-                SoftwareRaster.g(var23 + var32Lifetime1, var34Lifetime1, var14, var15, var35Lifetime1, var37);
-                SoftwareRaster.g(2 + (var32Lifetime1 + var23), 2 + var34Lifetime1, var14 - 4, -4 + var15, -2 + var35Lifetime1, 0);
+                SoftwareRaster.fillRoundedRectangle(var23 + var32Lifetime1, var34Lifetime1, var14, var15, var35Lifetime1, var37);
+                SoftwareRaster.fillRoundedRectangle(2 + (var32Lifetime1 + var23), 2 + var34Lifetime1, var14 - 4, -4 + var15, -2 + var35Lifetime1, 0);
                 if (var29_ref_je.actionType == 0) {
                   var38Lifetime1 = var29_ref_je.actionVariant;
                   if (var38Lifetime1 >= 0 &&
@@ -5430,7 +5430,7 @@ final class GameplayController {
                       var28 = 0;
                       var39 = var32Lifetime1 - (-var23 + 20);
                       if (var39 < var23) {
-                        IterableDualNodeDeque.field_j[var38Lifetime1 + this.field_M[3]].a(var23, var34Lifetime1 - 20);
+                        IterableDualNodeDeque.field_j[var38Lifetime1 + this.field_M[3]].drawTransparent(var23, var34Lifetime1 - 20);
                       } else {
                         IterableDualNodeDeque.field_j[this.field_M[3] + var38Lifetime1].drawHalfSize(var23 + var32Lifetime1, var34Lifetime1);
                       }
@@ -5449,7 +5449,7 @@ final class GameplayController {
             var24 = 6;
             var25Lifetime1Lifetime1 = 10;
             var26 = 0;
-            BoundedUrlRequest.field_d.a(LoginDialog.field_Cb, (int[]) null);
+            BoundedUrlRequest.field_d.setInlineSprites(LoginDialog.field_Cb, (int[]) null);
             var27 = 0;
             while (true) {
               stackIn_780_0Lifetime1 = ~var27;
@@ -5472,9 +5472,9 @@ final class GameplayController {
               var28 = var28 * (-var27 + 6) / 6;
               var29 = CachedArchiveProvider.field_g[var27];
               var30 = 6 + BoundedUrlRequest.field_d.textWidth(WidgetStyleLayer.field_b[var27]);
-              SoftwareRaster.c(-3 + var24, var23 - BoundedUrlRequest.field_d.field_G, var30, BoundedUrlRequest.field_d.field_G, 0, var28 * 2 / 3);
+              SoftwareRaster.fillRectangleBlended(-3 + var24, var23 - BoundedUrlRequest.field_d.field_G, var30, BoundedUrlRequest.field_d.field_G, 0, var28 * 2 / 3);
               if (var30 > var26) {
-                SoftwareRaster.c(var24 - (3 - var26), var23, var30 - var26, 5, 0, 2 * var28 / 3);
+                SoftwareRaster.fillRectangleBlended(var24 - (3 - var26), var23, var30 - var26, 5, 0, 2 * var28 / 3);
               }
               var26 = var30;
               BoundedUrlRequest.field_d.drawLeftAlpha(WidgetStyleLayer.field_b[var27], var24, var23, var29, 0, var28);
@@ -5482,7 +5482,7 @@ final class GameplayController {
               var27++;
             }
           }
-          BoundedUrlRequest.field_d.a(NodeIterator.field_c, ModalPanel.field_X);
+          BoundedUrlRequest.field_d.setInlineSprites(NodeIterator.field_c, ModalPanel.field_X);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -5597,20 +5597,20 @@ final class GameplayController {
                 SoftwareRaster.setClip(var14, -(var18 >> 4) + 400, 1 + var14, -(var16 >> 4) + 400);
                 SoftwareRaster.drawVerticalLineAlpha(var14, 400 - (var18 >> 4), 400 - (-var18 + var16 >> 4) + 1, 0, 64);
                 SoftwareRaster.setClip(var14, 401 - (var17 >> 4), 1 + var14, 400 - (var18 >> 4));
-                var11_ref_wk.f(-(255 & var15 >> 4) + var14, var8 - 3 * var12);
-                var11_ref_wk.f(-((var15 & 4095) >> 4) + var14, var8 - var12);
+                var11_ref_wk.drawOpaque(-(255 & var15 >> 4) + var14, var8 - 3 * var12);
+                var11_ref_wk.drawOpaque(-((var15 & 4095) >> 4) + var14, var8 - var12);
                 SoftwareRaster.setClip(var14, 400 - (var17 >> 4) + 1, 1 + var14, 400 - (var16 >> 4));
-                AccountRegistrationPanel.field_R.d(-(1023 & var15 >> 2) + var14, -(var17 >> 4) + 400, 1024, 16, 128);
+                AccountRegistrationPanel.field_R.drawScaledAdditive(-(1023 & var15 >> 2) + var14, -(var17 >> 4) + 400, 1024, 16, 128);
               }
               SoftwareRaster.setClip(var14, 1 - (var16 >> 4) + 400, 1 + var14, var9 + var13);
-              var11_ref_wk.f(-(255 & var15 >> 4) + var14, var8 - var12 * 3);
-              var11_ref_wk.f(var14 - (var15 >> 4 & 255), var8 - var12);
-              AccountRegistrationPanel.field_R.d(var14 - ((var15 & 4095) >> 2), 400 - (var16 >> 4), 1024, 16, 128);
+              var11_ref_wk.drawOpaque(-(255 & var15 >> 4) + var14, var8 - var12 * 3);
+              var11_ref_wk.drawOpaque(var14 - (var15 >> 4 & 255), var8 - var12);
+              AccountRegistrationPanel.field_R.drawScaledAdditive(var14 - ((var15 & 4095) >> 2), 400 - (var16 >> 4), 1024, 16, 128);
               SoftwareRaster.setClip(var14, 400 - (var16 >> 4), var14 + 1, 1 + (400 - (var16 >> 4)));
               var19 = (var16 << 8) % 4096 * 256 / 4096;
               var11_ref_wk.drawShadedGrayscale(-(255 & var15 >> 4) + var14, -(3 * var12) + var8, var19);
               var11_ref_wk.drawShadedGrayscale(var14 - ((4095 & var15) >> 4), var8 - var12, var19);
-              AccountRegistrationPanel.field_R.d(-(1023 & var15 >> 2) + var14, -(var16 >> 4) + 400, 1024, 16, var19 * 128 / 256);
+              AccountRegistrationPanel.field_R.drawScaledAdditive(-(1023 & var15 >> 2) + var14, -(var16 >> 4) + 400, 1024, 16, var19 * 128 / 256);
               var14++;
             }
             if (decompiledFrameCompleted1) {
@@ -5933,7 +5933,7 @@ final class GameplayController {
             var5 = LoginDialog.field_Eb;
           }
           var5 = WidgetStyleLayer.a(42, var5);
-          MidiPcmStream.field_db.f(0, -10);
+          MidiPcmStream.field_db.drawOpaque(0, -10);
           if (var5 != null) {
             ((BitmapFont) ((Object) var3)).drawCentered(var5, 320, ((BitmapFont) ((Object) var3)).field_G / 2 + 22, 0, -1);
           }
@@ -5947,7 +5947,7 @@ final class GameplayController {
           if (var2_int == 0) {
             if (!(ed.field_j < 0)) {
               ch.a(var7, 640, 32308, 0, 480 - var7);
-              SoftwareRaster.g(3, 3 + var7, 634, -var7 + 480 - 6, 8, 0);
+              SoftwareRaster.fillRoundedRectangle(3, 3 + var7, 634, -var7 + 480 - 6, 8, 0);
               if (var51 != 0) {
                 this.g((byte) -118);
               }
@@ -6115,7 +6115,7 @@ final class GameplayController {
               var30 = -(var29 / 2) + (640 + var26 * 1280) / 4;
               var31 = 60;
               var32 = AlphaContainer.field_U.field_U + 2 * var27;
-              SoftwareRaster.c(var30, var31, var29, var32, 0, 160);
+              SoftwareRaster.fillRectangleBlended(var30, var31, var29, var32, 0, 160);
               var33_int = fj.field_h[var26];
               stackIn_188_0 = ~PartInstruction.field_t[0];
               stackIn_188_1 = ~var33_int;
@@ -6132,7 +6132,7 @@ final class GameplayController {
                 var35 = 100;
                 stackIn_185_0 = (var26 == 1) ? 320 : 0;
                 var36 = stackIn_185_0 + (320 - var34) / 2;
-                ReportAbuseDialog.field_ec.a(var36, var35);
+                ReportAbuseDialog.field_ec.drawTransparent(var36, var35);
               }
               var26++;
             }
@@ -6171,7 +6171,7 @@ final class GameplayController {
                 var15 = var15 - var29Lifetime1 / 2;
                 var15 = Math.min(var15, 638 - var29Lifetime1);
                 var15 = Math.max(var15, 2);
-                SoftwareRaster.c(-2 + var15, var16 - 2, var29Lifetime1 + 4, 4 + (((BitmapFont) ((Object) var28_ref_fh)).field_F + ((BitmapFont) ((Object) var28_ref_fh)).field_G), 0, 192);
+                SoftwareRaster.fillRectangleBlended(-2 + var15, var16 - 2, var29Lifetime1 + 4, 4 + (((BitmapFont) ((Object) var28_ref_fh)).field_F + ((BitmapFont) ((Object) var28_ref_fh)).field_G), 0, 192);
                 ((BitmapFont) ((Object) var28_ref_fh)).drawLeft((String) (var14Lifetime1), var15, var16 + ((BitmapFont) ((Object) var28_ref_fh)).field_G, 16777215, 0);
               }
               stackIn_370_0 = 0;
@@ -6229,7 +6229,7 @@ final class GameplayController {
                 stackIn_263_0 = (WeightedLruCache.field_a >= 0) ? 65280 : 6316128;
                 var33_intLifetime1 = stackIn_263_0;
               }
-              ((BitmapFont) ((Object) var10)).c(var32_ref_String, -5 + (var26 + var20), var27Lifetime1 + 16, var33_intLifetime1, -1);
+              ((BitmapFont) ((Object) var10)).drawRight(var32_ref_String, -5 + (var26 + var20), var27Lifetime1 + 16, var33_intLifetime1, -1);
               var34Lifetime1 = 25 + var27Lifetime1;
               var35Lifetime1 = 4 + (var26 + var21);
               var36Lifetime1 = -var35Lifetime1 + var20 + var26;
@@ -6238,7 +6238,7 @@ final class GameplayController {
               if (var2_int == 0) {
                 if (this.world.field_lb &&
                   this.world.field_cb < 43) {
-                  SoftwareRaster.c(var35Lifetime1, var34Lifetime1, var36Lifetime1, var37, 0, var38);
+                  SoftwareRaster.fillRectangleBlended(var35Lifetime1, var34Lifetime1, var36Lifetime1, var37, 0, var38);
                   var39_ref = null;
                   if (this.world.field_cb <= 40) {
                     var39_ref_String = "" + this.world.field_cb;
@@ -6254,7 +6254,7 @@ final class GameplayController {
                   var42 = 20;
                   var43 = var39;
                   if (var31Lifetime1 != 0) {
-                    SoftwareRaster.c(var35Lifetime1, var34Lifetime1, var36Lifetime1, var37, 0, var38);
+                    SoftwareRaster.fillRectangleBlended(var35Lifetime1, var34Lifetime1, var36Lifetime1, var37, 0, var38);
                     ((BitmapFont) ((Object) var10)).drawLeft(NodeIterator.field_e, 4 + var39, ((BitmapFont) ((Object) var10)).field_U / 2 + var40, 11579568, 0);
                   } else {
                     var25Lifetime1 = 1;
@@ -6267,7 +6267,7 @@ final class GameplayController {
                     var45 = stackIn_283_0;
                     var46 = var36Lifetime1 / var41;
                     if (0 < var45) {
-                      SoftwareRaster.c(var35Lifetime1, var34Lifetime1, var36Lifetime1, var37, 0, var38);
+                      SoftwareRaster.fillRectangleBlended(var35Lifetime1, var34Lifetime1, var36Lifetime1, var37, 0, var38);
                     }
                     if (var46 < var45) {
                       if (var37 <= 40) {
@@ -6288,7 +6288,7 @@ final class GameplayController {
                         var28 % 2 == 0 ||
                         var4 == 0 &&
                         (var44 & this.field_e[var28]) != 0) {
-                        AccountChoicePanel.field_Z[var47].a(var43, var40);
+                        AccountChoicePanel.field_Z[var47].drawTransparent(var43, var40);
                         if (var43 <= oh.field_f &&
                           oh.field_f < (var43 + AccountChoicePanel.field_Z[var47].field_z) &&
                           var40 <= DelegatingCanvas.field_c &&
@@ -6444,7 +6444,7 @@ final class GameplayController {
               var31Lifetime2 = -var34Lifetime2 + 630;
             }
             var36Lifetime2 = -var35Lifetime2 + 400 - 4;
-            SoftwareRaster.c(var31Lifetime2, var36Lifetime2, var34Lifetime2, var35Lifetime2, 0, 192);
+            SoftwareRaster.fillRectangleBlended(var31Lifetime2, var36Lifetime2, var34Lifetime2, var35Lifetime2, 0, 192);
             ValidationHelpWidget.field_lb.drawLeft(var33, 2 + var31Lifetime2, -2 + (var35Lifetime2 + var36Lifetime2), 16777215, -1);
             return;
           }
@@ -6669,7 +6669,7 @@ final class GameplayController {
           if (di.field_g != -1 &&
             di.field_g != 4 &&
             UiContainer.field_M != IconTextComponent.field_Yb) {
-            SoftwareRaster.c(0, 0, 640, 480, 0, 128);
+            SoftwareRaster.fillRectangleBlended(0, 0, 640, 480, 0, 128);
           }
           if (null != this.controlledSentinel) {
             this.a(var3_int != 0, param1 ^ -21520);
@@ -6686,16 +6686,16 @@ final class GameplayController {
             var7 = 428;
             var8 = 192;
             var9 = 508;
-            SoftwareRaster.c(var7, var5, var9 - var7, var6, 32768, var8);
+            SoftwareRaster.fillRectangleBlended(var7, var5, var9 - var7, var6, 32768, var8);
             var7 = var9;
             var9Lifetime3 = 549;
-            SoftwareRaster.c(var7, var5, -var7 + var9Lifetime3, var6, 8421376, var8);
+            SoftwareRaster.fillRectangleBlended(var7, var5, -var7 + var9Lifetime3, var6, 8421376, var8);
             var7 = var9Lifetime3;
             var9Lifetime4 = 589;
-            SoftwareRaster.c(var7, var5, var9Lifetime4 - var7, var6, 8409088, var8);
+            SoftwareRaster.fillRectangleBlended(var7, var5, var9Lifetime4 - var7, var6, 8409088, var8);
             var7 = var9Lifetime4;
             var9Lifetime5 = 628;
-            SoftwareRaster.c(var7, var5, var9Lifetime5 - var7, var6, 8388608, var8);
+            SoftwareRaster.fillRectangleBlended(var7, var5, var9Lifetime5 - var7, var6, 8388608, var8);
             if (12000 > this.world.simulationTick) {
               stackIn_46_0 = 32768;
             } else {
@@ -6762,11 +6762,11 @@ final class GameplayController {
             SoftwareRaster.setClip(0, 0, 640, var10Lifetime1);
             ((BitmapFont) ((Object) var5_ref_u)).drawCentered(WidgetStyleLayer.a(42, var6_ref_String), var9Lifetime1, var11_intLifetime1, 16777215, 0);
             SoftwareRaster.setClip(0, 10 + var11_intLifetime1, 640, 480);
-            pl.field_U.a(var7_ref_String, 100, 200, 440, 200, 1044724, 0, 1, 0, pl.field_U.field_G);
+            pl.field_U.drawParagraph(var7_ref_String, 100, 200, 440, 200, 1044724, 0, 1, 0, pl.field_U.field_G);
             SoftwareRaster.resetClip();
           }
           if (this.world.field_j) {
-            SoftwareRaster.c(0, 0, 640, 480, 0, Math.max(0, -IterableNodeHashTable.field_h + 100));
+            SoftwareRaster.fillRectangleBlended(0, 0, 640, 480, 0, Math.max(0, -IterableNodeHashTable.field_h + 100));
           }
           if (param1 != 21519) {
             return;
@@ -6848,7 +6848,7 @@ final class GameplayController {
                 var10Lifetime2 = -var9Lifetime2 + DisplayNameForm.field_V.field_cb;
               }
             }
-            SoftwareRaster.c(0, var10Lifetime2, var8, var9Lifetime2, 0, 192);
+            SoftwareRaster.fillRectangleBlended(0, var10Lifetime2, var8, var9Lifetime2, 0, 192);
             IterableDualNodeDeque.a((byte) 44, var7_ref_wk__, var8, var10Lifetime2, 0, var9Lifetime2);
             if (0 <= oh.field_f &&
               var8 + 0 > oh.field_f &&
@@ -6860,7 +6860,7 @@ final class GameplayController {
             var11 = new int[4];
             SoftwareRaster.getClip(var11);
             if (MusicPatchNode.field_s != null) {
-              BoundedUrlRequest.field_d.c(MusicPatchNode.field_s.toUpperCase(), var7_ref_wk__[0].field_A + (int)ArchiveIndex.field_c, -var7_ref_wk__[6].field_F + var10Lifetime2 - (-var9Lifetime2 - 3), this.field_M[0], -1);
+              BoundedUrlRequest.field_d.drawRight(MusicPatchNode.field_s.toUpperCase(), var7_ref_wk__[0].field_A + (int)ArchiveIndex.field_c, -var7_ref_wk__[6].field_F + var10Lifetime2 - (-var9Lifetime2 - 3), this.field_M[0], -1);
             }
             SoftwareRaster.setClip(var11);
           }
@@ -7121,7 +7121,7 @@ final class GameplayController {
             var4 = this.field_M[1];
             var5 = 16777215;
             var6Lifetime1 = BoundedUrlRequest.field_d;
-            SoftwareRaster.c(0, 0, 192, 47, 0, 192);
+            SoftwareRaster.fillRectangleBlended(0, 0, 192, 47, 0, 192);
             SoftwareRaster.drawRectangleOutlineAlpha(0, 0, 192, 47, var4, 192);
             SoftwareRaster.fillRectangle(2, 2, 188, 14, 2565927);
             var7 = 0;
@@ -7345,13 +7345,13 @@ final class GameplayController {
             var21 = 1021128;
             if (this.e(-100) &&
               (5 + var8Lifetime1) <= oh.field_f &&
-              oh.field_f < (ValidationHelpWidget.field_lb.a(param5, var17) + (5 + var8Lifetime1)) &&
+              oh.field_f < (ValidationHelpWidget.field_lb.getWrappedWidth(param5, var17) + (5 + var8Lifetime1)) &&
               DelegatingCanvas.field_c >= var13Lifetime1 &&
               DelegatingCanvas.field_c < (var13Lifetime1 + ValidationHelpWidget.field_lb.paragraphHeight(param5, var17, var15))) {
               var21 = 1044724;
               this.field_r = 42;
             }
-            ValidationHelpWidget.field_lb.a(param5, 5 + var8Lifetime1, var13Lifetime1, var17, 100, var21, -1, 0, 0, var15);
+            ValidationHelpWidget.field_lb.drawParagraph(param5, 5 + var8Lifetime1, var13Lifetime1, var17, 100, var21, -1, 0, 0, var15);
             var13Lifetime1 = var13Lifetime1 + var14;
           }
           boolean decompiledFrameCompleted0 = true;
@@ -7775,7 +7775,7 @@ final class GameplayController {
           boolean decompiledFrameCompleted2 = true;
           boolean decompiledFrameRemainder1 = true;
           boolean decompiledFrameCompleted3 = true;
-          SoftwareRaster.c(0, 0, var8, var7, 0, 192);
+          SoftwareRaster.fillRectangleBlended(0, 0, var8, var7, 0, 192);
           SoftwareRaster.drawRectangleOutlineAlpha(0, 0, var8, var7, var3_int, 192);
           if ((!this.world.field_lb) &&
             (!(var5 <= 4) ||
@@ -7907,7 +7907,7 @@ final class GameplayController {
                       var19 = 16776960;
                     }
                     BoundedUrlRequest.field_d.drawLeft(var21_ref_String, 6, var12, var19, -1);
-                    BoundedUrlRequest.field_d.c(var22, 132, var12, var20, -1);
+                    BoundedUrlRequest.field_d.drawRight(var22, 132, var12, var20, -1);
                     if (var23_int != 0) {
                       SoftwareRaster.drawHorizontalLine(6, -1 + var12 - BoundedUrlRequest.field_d.field_U / 2, 126, 10526880);
                     }
@@ -7917,7 +7917,7 @@ final class GameplayController {
                       var19 = var17_ref_mb.getTeamColour((byte) -124);
                       var22 = Integer.toString(var17_ref_mb.field_vb / 100);
                       BoundedUrlRequest.field_d.drawLeft(var21_ref_String, 6, var12, var19, -1);
-                      BoundedUrlRequest.field_d.c(var22, 132, var12, 13421772, -1);
+                      BoundedUrlRequest.field_d.drawRight(var22, 132, var12, 13421772, -1);
                       var12 += 9;
                     }
                   }
@@ -7952,7 +7952,7 @@ final class GameplayController {
                 var21_ref_StringLifetime1 = Integer.toString(((int[]) (var11))[var17] / 100);
                 var12 = this.field_B[var16] + 12;
                 BoundedUrlRequest.field_d.drawLeft(var18_ref_String, 6, var12, var19Lifetime1, -1);
-                BoundedUrlRequest.field_d.c(var21_ref_StringLifetime1, 132, var12, var20Lifetime1, -1);
+                BoundedUrlRequest.field_d.drawRight(var21_ref_StringLifetime1, 132, var12, var20Lifetime1, -1);
                 var16++;
               }
               if (decompiledFrameCompleted0) {
@@ -8035,7 +8035,7 @@ final class GameplayController {
                         var19Lifetime1Lifetime1 = 16776960;
                       }
                       BoundedUrlRequest.field_d.drawLeft(var21_ref_StringLifetime1Lifetime1, 6, var12, var19Lifetime1Lifetime1, -1);
-                      BoundedUrlRequest.field_d.c(var22Lifetime1, 132, var12, var20Lifetime1Lifetime1, -1);
+                      BoundedUrlRequest.field_d.drawRight(var22Lifetime1, 132, var12, var20Lifetime1Lifetime1, -1);
                       if (this.world.field_fb &&
                         var18_ref_mb.field_kc > 0) {
                         var24 = "<times>" + var18_ref_mb.field_kc;
@@ -8067,7 +8067,7 @@ final class GameplayController {
                         var22Lifetime1 = this.world.d(-1661904765, var18_ref_mb.playerId);
                         var23 = Integer.toString(var18_ref_mb.field_vb / 100);
                         BoundedUrlRequest.field_d.drawLeft(var22Lifetime1, 6, var12, var19Lifetime1Lifetime1, -1);
-                        BoundedUrlRequest.field_d.c(var23, 132, var12, var20Lifetime1Lifetime1, -1);
+                        BoundedUrlRequest.field_d.drawRight(var23, 132, var12, var20Lifetime1Lifetime1, -1);
                         if (this.world.field_fb &&
                           var18_ref_mb.field_kc > 0) {
                           var24 = "<times>" + var18_ref_mb.field_kc;
@@ -8115,10 +8115,10 @@ final class GameplayController {
             var12 = stackIn_388_0 + stackIn_388_1;
             var12 += 9;
             BoundedUrlRequest.field_d.drawLeft(ci.field_f, 6, var12, var4, -1);
-            BoundedUrlRequest.field_d.c(Integer.toString(this.world.field_cb), 132, var12, 13421772, -1);
+            BoundedUrlRequest.field_d.drawRight(Integer.toString(this.world.field_cb), 132, var12, 13421772, -1);
             var12 += 9;
             BoundedUrlRequest.field_d.drawLeft(mc.field_e, 6, var12, var4, -1);
-            BoundedUrlRequest.field_d.c(Integer.toString(this.world.field_M), 132, var12, 13421772, -1);
+            BoundedUrlRequest.field_d.drawRight(Integer.toString(this.world.field_M), 132, var12, 13421772, -1);
             var12 += 4;
             var16 = 6;
             var17 = 126;
@@ -8358,8 +8358,8 @@ final class GameplayController {
             var6 += 3;
             var7 += 3;
             var8Lifetime1 = ValidationHelpWidget.field_lb.paragraphHeight(var10_ref, var9, 18);
-            SoftwareRaster.c(-3 + var6, -3 + var7, var9 + 5, var8Lifetime1 + 5, 0, 128);
-            ValidationHelpWidget.field_lb.a(var10_ref, var6, var7, var9, 100, 1021128, -1, 0, 0, 18);
+            SoftwareRaster.fillRectangleBlended(-3 + var6, -3 + var7, var9 + 5, var8Lifetime1 + 5, 0, 128);
+            ValidationHelpWidget.field_lb.drawParagraph(var10_ref, var6, var7, var9, 100, 1021128, -1, 0, 0, 18);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -8676,9 +8676,9 @@ final class GameplayController {
               }
               if (null != un.field_o &&
                 DraggableWidget.field_T != null) {
-                un.field_o.f(var11, var13);
+                un.field_o.drawOpaque(var11, var13);
                 var11 = -(this.field_P >> 4) / 2;
-                DraggableWidget.field_T.f(var11, var13);
+                DraggableWidget.field_T.drawOpaque(var11, var13);
               }
             }
             if (var9 != 0) {
@@ -8801,17 +8801,17 @@ final class GameplayController {
                 if (stackIn_199_0 < stackIn_199_1) {
                   var15Lifetime1 = Checkbox.field_W.field_z;
                   if (var12Lifetime1 == 0) {
-                    Checkbox.field_W.a(-(var15Lifetime1 / 2) + var13Lifetime1, var14Lifetime1);
+                    Checkbox.field_W.drawTransparent(-(var15Lifetime1 / 2) + var13Lifetime1, var14Lifetime1);
                     var16Lifetime1 = this.world.simulationTick / 5 % 6;
                     if ((1 & this.world.field_v) == 0) {
-                      DialWidgetPainter.field_n[var16Lifetime1].d(var13Lifetime1 - var15Lifetime1 / 2, var14Lifetime1, var15Lifetime1, var15Lifetime1, 64);
+                      DialWidgetPainter.field_n[var16Lifetime1].drawScaledAdditive(var13Lifetime1 - var15Lifetime1 / 2, var14Lifetime1, var15Lifetime1, var15Lifetime1, 64);
                     }
                   }
                   if (1 == var12Lifetime1) {
-                    IterableDualNodeDeque.field_e.a(-(var15Lifetime1 / 2) + var13Lifetime1, var14Lifetime1);
+                    IterableDualNodeDeque.field_e.drawTransparent(-(var15Lifetime1 / 2) + var13Lifetime1, var14Lifetime1);
                     var16Lifetime1 = 6 + this.world.simulationTick / 5 % 6;
                     if ((2 & this.world.field_v) == 0) {
-                      DialWidgetPainter.field_n[var16Lifetime1].d(var13Lifetime1 - var15Lifetime1 / 2, var14Lifetime1, var15Lifetime1, var15Lifetime1, 64);
+                      DialWidgetPainter.field_n[var16Lifetime1].drawScaledAdditive(var13Lifetime1 - var15Lifetime1 / 2, var14Lifetime1, var15Lifetime1, var15Lifetime1, 64);
                     }
                   }
                 } else {
@@ -9019,13 +9019,13 @@ final class GameplayController {
               var14Lifetime1Lifetime1 += 384;
               var15Lifetime1Lifetime1 = Checkbox.field_W.field_z;
               var16Lifetime1Lifetime1 = Checkbox.field_W.field_B;
-              Checkbox.field_W.a(-(var15Lifetime1Lifetime1 / 2) + var13Lifetime1Lifetime1, -(3 * var16Lifetime1Lifetime1 / 2) + var14Lifetime1Lifetime1);
+              Checkbox.field_W.drawTransparent(-(var15Lifetime1Lifetime1 / 2) + var13Lifetime1Lifetime1, -(3 * var16Lifetime1Lifetime1 / 2) + var14Lifetime1Lifetime1);
               var17Lifetime1Lifetime1 = this.world.simulationTick / 5 % 6;
-              DialWidgetPainter.field_n[var17Lifetime1Lifetime1].d(-(var15Lifetime1Lifetime1 / 2) + var13Lifetime1Lifetime1, -(var15Lifetime1Lifetime1 / 2) + (var14Lifetime1Lifetime1 - 3 * var16Lifetime1Lifetime1 / 4), var15Lifetime1Lifetime1, var15Lifetime1Lifetime1, 64);
+              DialWidgetPainter.field_n[var17Lifetime1Lifetime1].drawScaledAdditive(-(var15Lifetime1Lifetime1 / 2) + var13Lifetime1Lifetime1, -(var15Lifetime1Lifetime1 / 2) + (var14Lifetime1Lifetime1 - 3 * var16Lifetime1Lifetime1 / 4), var15Lifetime1Lifetime1, var15Lifetime1Lifetime1, 64);
             }
           }
           if (this.world.field_fb) {
-            SoftwareRaster.c(0, 0, 640, 480, 0, 180);
+            SoftwareRaster.fillRectangleBlended(0, 0, 640, 480, 0, 180);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -9087,7 +9087,7 @@ final class GameplayController {
               boolean decompiledFrameRemainder1 = true;
               if (var9 > 0 &&
                 var13 * var13 + var12 * var12 < 2304) {
-                SoftwareRaster.a(var7_int, var8, var10, var11, 12632304, 128);
+                SoftwareRaster.drawLineBlended(var7_int, var8, var10, var11, 12632304, 128);
               } else {
                 if ((0 >= var9) &&
                   (decompiledFrameRemainder1 = !(var9 <= 0))) {
@@ -9175,7 +9175,7 @@ final class GameplayController {
                   }
                   stackIn_86_0Lifetime1 = var7_int;
                   stackIn_86_1Lifetime1 = var8;
-                  SoftwareRaster.a(stackIn_86_0Lifetime1, stackIn_86_1Lifetime1, var14, var15, 12632304, 128);
+                  SoftwareRaster.drawLineBlended(stackIn_86_0Lifetime1, stackIn_86_1Lifetime1, var14, var15, 12632304, 128);
                   return;
                 }
               }
@@ -9246,7 +9246,7 @@ final class GameplayController {
         try {
           var2_int = 41;
           var3 = 1021128;
-          MidiPcmStream.field_db.f(0, -MidiPcmStream.field_db.field_B + var2_int);
+          MidiPcmStream.field_db.drawOpaque(0, -MidiPcmStream.field_db.field_B + var2_int);
           if (this.field_r == -1 &&
             oh.field_f >= 479 &&
             635 > oh.field_f &&
@@ -9319,7 +9319,7 @@ final class GameplayController {
                 var7 += 8;
                 break;
               }
-              QuickChatPhraseDefinition.field_y.a(var8, var9);
+              QuickChatPhraseDefinition.field_y.drawTransparent(var8, var9);
               var8 += 10;
               var10++;
             } while (var20 == 0);
@@ -9368,7 +9368,7 @@ final class GameplayController {
                 var14 = 28;
                 var15 = var11 + 2;
                 var16 = 1 + var12;
-                SoftwareRaster.g(var15, var16, var14, var14, 4, 0);
+                SoftwareRaster.fillRoundedRectangle(var15, var16, var14, var14, 4, 0);
                 SoftwareRaster.intersectClip(var15, 1 + var16, var15 + var14, var14 + var16);
                 var17_ref_wk = CachedTextLayout.field_E[var10];
                 var18_int = var13 % 4 * var14;
@@ -9381,7 +9381,7 @@ final class GameplayController {
                 if ((80 - var14 - 6) >= var19Lifetime1) {
                   BoundedUrlRequest.field_d.drawCentered(var18, var11 + (80 + var14) / 2, var17, var3, -1);
                 } else {
-                  BoundedUrlRequest.field_d.c(var18, -1 + (var11 + 80), var17, var3, -1);
+                  BoundedUrlRequest.field_d.drawRight(var18, -1 + (var11 + 80), var17, var3, -1);
                 }
               }
               var10++;
@@ -9463,7 +9463,7 @@ final class GameplayController {
         try {
           boolean decompiledFrameRemainder4 = true;
           boolean decompiledFrameRemainder3 = true;
-          SoftwareRaster.c(0, 0, 640, 480, 0, 100);
+          SoftwareRaster.fillRectangleBlended(0, 0, 640, 480, 0, 100);
           var2_int = 25;
           var3 = 0;
           var4 = null;
@@ -9546,7 +9546,7 @@ final class GameplayController {
           if (di.field_g == 4) {
             var5 = null;
           }
-          MidiPcmStream.field_db.f(0, -115 + CipherPacketBuffer.field_w);
+          MidiPcmStream.field_db.drawOpaque(0, -115 + CipherPacketBuffer.field_w);
           if (this.world.field_W ||
             !(0 > this.world.field_A)) {
             SoftwareRaster.plotPixel(639, -58 + CipherPacketBuffer.field_w, 16776960);
@@ -9825,7 +9825,7 @@ final class GameplayController {
           }
           SoftwareRaster.drawHorizontalLineAlpha(stackIn_219_0, stackIn_219_1, 640, 0, 128);
           if (var5 != null) {
-            pl.field_U.a((String) (var5), 100, -CipherPacketBuffer.field_w + 500, 440, 100, 1021128, -1, 1, 0, pl.field_U.field_U + 6);
+            pl.field_U.drawParagraph((String) (var5), 100, -CipherPacketBuffer.field_w + 500, 440, 100, 1021128, -1, 1, 0, pl.field_U.field_U + 6);
           }
           if (this.field_h &&
             EmailAvailabilityValidator.a(-CipherPacketBuffer.field_w + 541, 280, param0 + 4418, ja.field_c, 30, 80)) {
@@ -10084,7 +10084,7 @@ final class GameplayController {
             if (630 < var6Lifetime1 + var10) {
               var6Lifetime1 = 630 - var10;
             }
-            SoftwareRaster.c(var6Lifetime1 - 3, -ValidationHelpWidget.field_lb.field_U + (param1 - 3), var10, ValidationHelpWidget.field_lb.field_U + (ValidationHelpWidget.field_lb.field_F + 3), 0, 128);
+            SoftwareRaster.fillRectangleBlended(var6Lifetime1 - 3, -ValidationHelpWidget.field_lb.field_U + (param1 - 3), var10, ValidationHelpWidget.field_lb.field_U + (ValidationHelpWidget.field_lb.field_F + 3), 0, 128);
             ValidationHelpWidget.field_lb.drawLeft(var9, var6Lifetime1, param1, 16777215, -1);
           }
           stackIn_39_0 = var7;
@@ -10142,21 +10142,21 @@ final class GameplayController {
             if ((param1 - 13) <= oh.field_f) {
               if ((param1 + 12) > oh.field_f) {
                 this.field_r = 35;
-                SoftwareRaster.a(-1 + param1 << 4, param0 + 6 << 4, 160, -1 + pe.field_o.length, pe.field_o);
+                SoftwareRaster.fillRadialPaletteCircle(-1 + param1 << 4, param0 + 6 << 4, 160, -1 + pe.field_o.length, pe.field_o);
                 decompiledFrameRemainder0 = (var18 != 0);
               }
               if ((decompiledFrameRemainder0) &&
                 (!(oh.field_f >= (param1 + 40)))) {
                 this.field_r = 34;
-                SoftwareRaster.a(16 + param1 << 4, 6 + param0 << 4, 144, pe.field_o.length - 1, pe.field_o);
+                SoftwareRaster.fillRadialPaletteCircle(16 + param1 << 4, 6 + param0 << 4, 144, pe.field_o.length - 1, pe.field_o);
                 if (var18 != 0) {
                   this.field_r = 33;
-                  SoftwareRaster.a(param1 - 17 << 4, param0 + 6 << 4, 144, pe.field_o.length - 1, pe.field_o);
+                  SoftwareRaster.fillRadialPaletteCircle(param1 - 17 << 4, param0 + 6 << 4, 144, pe.field_o.length - 1, pe.field_o);
                 }
               }
             } else {
               this.field_r = 33;
-              SoftwareRaster.a(param1 - 17 << 4, param0 + 6 << 4, 144, pe.field_o.length - 1, pe.field_o);
+              SoftwareRaster.fillRadialPaletteCircle(param1 - 17 << 4, param0 + 6 << 4, 144, pe.field_o.length - 1, pe.field_o);
             }
           }
           if (~this.controlledSentinel.field_ub > param2) {
@@ -10314,7 +10314,7 @@ final class GameplayController {
           } else {
             stackIn_93_1 = cl.field_g;
           }
-          ((BinaryBitmapFont) (Object) stackIn_92_0).c(stackIn_93_1, param1 - 29, 10 + param0, 1021128, -1);
+          ((BinaryBitmapFont) (Object) stackIn_92_0).drawRight(stackIn_93_1, param1 - 29, 10 + param0, 1021128, -1);
           SoftwareRaster.setClip(0, 423, 640, 480);
           stackIn_96_0 = this.controlledSentinel;
           stackIn_96_1 = param1;
@@ -11205,11 +11205,11 @@ final class GameplayController {
         int var15Lifetime1;
         try {
           var9_int = -48 + param7;
-          SoftwareRaster.c(param5, param6, param1, var9_int, 0, 150);
-          SoftwareRaster.c(param5, param6 + var9_int + 4, param1, 20, 0, 150);
+          SoftwareRaster.fillRectangleBlended(param5, param6, param1, var9_int, 0, 150);
+          SoftwareRaster.fillRectangleBlended(param5, param6 + var9_int + 4, param1, 20, 0, 150);
           var10 = this.world.d(-1661904765, param3.playerId);
           if (null != var10) {
-            SoftwareRaster.c(param5, 8 + (param6 - (-var9_int - 20)), param1, 20, 0, 150);
+            SoftwareRaster.fillRectangleBlended(param5, 8 + (param6 - (-var9_int - 20)), param1, 20, 0, 150);
           }
           var11 = MusicPatchNode.field_w;
           var12 = -4 + Math.min(param1, var9_int);
@@ -11461,9 +11461,9 @@ final class GameplayController {
           this.a((byte) 125, true, true, var4);
           this.a(-105, true, var3_int != 0, true);
           discarded$0 = this.a(true, var4, true, (byte) -110);
-          SoftwareRaster.c(0, 0, 640, 480, 0, 128);
+          SoftwareRaster.fillRectangleBlended(0, 0, 640, 480, 0, 128);
           SoftwareRaster.drawRectangleOutline(218, 198, 204, 44, 16777215);
-          SoftwareRaster.c(220, 200, this.world.simulationTick * 200 / this.field_w, 40, 4473924, 128);
+          SoftwareRaster.fillRectangleBlended(220, 200, this.world.simulationTick * 200 / this.field_w, 40, 4473924, 128);
           pl.field_U.drawCentered(eb.field_q + " " + this.world.simulationTick * 100 / this.field_w + "%", 320, pl.field_U.field_U / 2 + 220, 16777215, 0);
           pl.field_U.drawCentered(rb.field_b, 320, 220 + pl.field_U.field_U / 2 + 40, 16777215, 0);
           this.b(true, 1956917985);
@@ -11501,7 +11501,7 @@ final class GameplayController {
                 var9 = DisplayNameForm.field_V.field_cb - var8;
               }
             }
-            SoftwareRaster.c(0, var9, var7, var8, 0, 192);
+            SoftwareRaster.fillRectangleBlended(0, var9, var7, var8, 0, 192);
             IterableDualNodeDeque.a((byte) 115, var6, var7, var9, 0, var8);
             if (oh.field_f >= 0 &&
               var7 + 0 > oh.field_f &&
@@ -11513,7 +11513,7 @@ final class GameplayController {
             var10 = new int[4];
             SoftwareRaster.getClip(var10);
             if (null != MusicPatchNode.field_s) {
-              BoundedUrlRequest.field_d.c(MusicPatchNode.field_s.toUpperCase(), (int)ArchiveIndex.field_c + var6[0].field_A, 3 + (var9 + (-var6[6].field_F + var8)), this.field_M[0], -1);
+              BoundedUrlRequest.field_d.drawRight(MusicPatchNode.field_s.toUpperCase(), (int)ArchiveIndex.field_c + var6[0].field_A, 3 + (var9 + (-var6[6].field_F + var8)), this.field_M[0], -1);
             }
             SoftwareRaster.setClip(var10);
           }

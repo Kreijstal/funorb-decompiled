@@ -45,7 +45,7 @@ final class QuickChatPhraseCache {
           if (param2 == -6988) {
             return;
           }
-          QuickChatPhraseCache.a(66);
+          QuickChatPhraseCache.releaseStatics(66);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -101,7 +101,7 @@ final class QuickChatPhraseCache {
         return var5;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_f = null;
         if (param0 == 272) {
           field_l = null;
@@ -111,7 +111,7 @@ final class QuickChatPhraseCache {
           field_d = null;
           return;
         }
-        QuickChatPhraseCache.a(-128);
+        QuickChatPhraseCache.releaseStatics(-128);
         field_l = null;
         field_a = null;
         field_j = null;

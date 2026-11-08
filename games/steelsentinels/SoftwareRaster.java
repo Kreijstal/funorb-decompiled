@@ -40,7 +40,7 @@ final class SoftwareRaster {
         if (field_d > param3) {
           field_d = param3;
         }
-        SoftwareRaster.d();
+        SoftwareRaster.invalidateClipCaches();
     }
 
     final static void plotAdditive(int param0, int param1, int param2) {
@@ -132,7 +132,7 @@ final class SoftwareRaster {
         }
     }
 
-    private final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int[] param8, int param9, int[] param10, int param11, int param12, int param13, int param14, int param15, int param16, int param17) {
+    private final static void addRadialGlowScanlines(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int[] param8, int param9, int[] param10, int param11, int param12, int param13, int param14, int param15, int param16, int param17) {
         int var18 = 0;
         while (param17 < 0) {
           param3 = param14;
@@ -240,7 +240,7 @@ final class SoftwareRaster {
         param0[3] = field_d;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final static void fillRoundedRectangleBlended(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int incrementValue$5 = 0;
         int incrementValue$4 = 0;
         int incrementValue$6 = 0;
@@ -283,11 +283,11 @@ final class SoftwareRaster {
         int var23Lifetime1;
         int var23Lifetime2;
         if (param6 == 256) {
-          SoftwareRaster.g(param0, param1, param2, param3, param4, param5);
+          SoftwareRaster.fillRoundedRectangle(param0, param1, param2, param3, param4, param5);
           return;
         }
         if (param4 == 0) {
-          SoftwareRaster.c(param0, param1, param2, param3, param5, param6);
+          SoftwareRaster.fillRectangleBlended(param0, param1, param2, param3, param5, param6);
           return;
         }
         var7 = 256 - param6;
@@ -415,7 +415,7 @@ final class SoftwareRaster {
         return;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void drawLineBlended(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var6;
         int var7;
         int var8;
@@ -537,7 +537,7 @@ final class SoftwareRaster {
         return;
     }
 
-    final static void e(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void fillVerticalGradient(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var10 = 0;
         int var14 = 0;
         int incrementValue$0 = 0;
@@ -581,12 +581,12 @@ final class SoftwareRaster {
         }
     }
 
-    final static void d(int param0, int param1, int param2, int param3, int param4, int param5) {
-        SoftwareRaster.a(field_g, 0, param2 + param3 * field_c, param0, param2, param4, field_c - param4, param5);
-        SoftwareRaster.a(field_g, 0, param2 + param3 * field_c, param1, param3, param5, field_c - param4, param2, param4);
+    final static void blurRectangle(int param0, int param1, int param2, int param3, int param4, int param5) {
+        SoftwareRaster.blurRowsHorizontally(field_g, 0, param2 + param3 * field_c, param0, param2, param4, field_c - param4, param5);
+        SoftwareRaster.blurColumnsVertically(field_g, 0, param2 + param3 * field_c, param1, param3, param5, field_c - param4, param2, param4);
     }
 
-    private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    private final static void blurRowsHorizontally(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var13 = 0;
         int incrementValue$0 = 0;
         int incrementValue$5 = 0;
@@ -747,7 +747,7 @@ final class SoftwareRaster {
         }
     }
 
-    final static void b(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void drawLineBlendedInclusive(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var6;
         int var7;
         int var8;
@@ -891,7 +891,7 @@ final class SoftwareRaster {
         }
     }
 
-    private final static void i(int param0, int param1, int param2, int param3, int param4) {
+    private final static void addVerticalLineScaled(int param0, int param1, int param2, int param3, int param4) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -925,7 +925,7 @@ final class SoftwareRaster {
         }
     }
 
-    final static void c(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void fillRectangleBlended(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var9 = 0;
         int var10 = 0;
         int incrementValue$0 = 0;
@@ -973,7 +973,7 @@ final class SoftwareRaster {
         }
     }
 
-    final static void e(int param0, int param1, int param2, int param3) {
+    final static void fillCircle(int param0, int param1, int param2, int param3) {
         int incrementValue$4 = 0;
         int incrementValue$3 = 0;
         int incrementValue$5 = 0;
@@ -1094,7 +1094,7 @@ final class SoftwareRaster {
         return;
     }
 
-    public static void a() {
+    public static void releaseStatics() {
         field_g = null;
         field_a = null;
         field_k = null;
@@ -1103,7 +1103,7 @@ final class SoftwareRaster {
         field_f = null;
     }
 
-    private final static void d() {
+    private final static void invalidateClipCaches() {
         field_a = null;
         field_k = null;
     }
@@ -1291,7 +1291,7 @@ final class SoftwareRaster {
         field_l = 0;
         field_b = field_c;
         field_d = field_j;
-        SoftwareRaster.d();
+        SoftwareRaster.invalidateClipCaches();
     }
 
     final static void drawRectangleOutlineAlpha(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -1329,10 +1329,10 @@ final class SoftwareRaster {
         field_l = param0[1];
         field_b = param0[2];
         field_d = param0[3];
-        SoftwareRaster.d();
+        SoftwareRaster.invalidateClipCaches();
     }
 
-    final static void f(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void addLine(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var6;
         int var7;
         int var8;
@@ -1352,17 +1352,17 @@ final class SoftwareRaster {
         param3 = param3 - param1;
         if (param3 == 0) {
           if (param2 < 0) {
-            SoftwareRaster.g(param0 + param2, param1, -param2 + 1, param4, param5);
+            SoftwareRaster.addHorizontalLineScaled(param0 + param2, param1, -param2 + 1, param4, param5);
           } else {
-            SoftwareRaster.g(param0, param1, param2 + 1, param4, param5);
+            SoftwareRaster.addHorizontalLineScaled(param0, param1, param2 + 1, param4, param5);
           }
           return;
         }
         if (param2 == 0) {
           if (param3 < 0) {
-            SoftwareRaster.i(param0, param1 + param3, -param3 + 1, param4, param5);
+            SoftwareRaster.addVerticalLineScaled(param0, param1 + param3, -param3 + 1, param4, param5);
           } else {
-            SoftwareRaster.i(param0, param1, param3 + 1, param4, param5);
+            SoftwareRaster.addVerticalLineScaled(param0, param1, param3 + 1, param4, param5);
           }
           return;
         }
@@ -1432,7 +1432,7 @@ final class SoftwareRaster {
         return;
     }
 
-    private final static void g(int param0, int param1, int param2, int param3, int param4) {
+    private final static void addHorizontalLineScaled(int param0, int param1, int param2, int param3, int param4) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -1466,7 +1466,7 @@ final class SoftwareRaster {
         }
     }
 
-    final static void b(int param0, int param1, int param2, int param3, int param4) {
+    final static void fillCircleBlended(int param0, int param1, int param2, int param3, int param4) {
         int incrementValue$4 = 0;
         int incrementValue$3 = 0;
         int incrementValue$5 = 0;
@@ -1509,7 +1509,7 @@ final class SoftwareRaster {
           return;
         }
         if (param4 == 256) {
-          SoftwareRaster.e(param0, param1, param2, param3);
+          SoftwareRaster.fillCircle(param0, param1, param2, param3);
           return;
         }
         if (param2 < 0) {
@@ -1670,7 +1670,7 @@ final class SoftwareRaster {
         }
     }
 
-    private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void blurColumnsVertically(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int incrementValue$7 = 0;
         int incrementValue$6 = 0;
         int incrementValue$2 = 0;
@@ -2018,10 +2018,10 @@ final class SoftwareRaster {
         field_l = param1;
         field_b = param2;
         field_d = param3;
-        SoftwareRaster.d();
+        SoftwareRaster.invalidateClipCaches();
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int[] param4) {
+    final static void fillRadialPaletteCircle(int param0, int param1, int param2, int param3, int[] param4) {
         int var5 = param2 * param2;
         int var6 = param0 - param2 >> 4;
         int var7 = param0 + param2 + 15 >> 4;
@@ -2059,10 +2059,10 @@ final class SoftwareRaster {
         int var21 = var20 - var19;
         int var22 = var6 + var8 * field_c;
         int var23 = field_c + var6 - var7;
-        SoftwareRaster.a(0, 0, 0, 0, 0, var15, var5, var22, field_g, param3, param4, var23, var13, var6 - var7, var16 + var10, var19, var21, var8 - var9);
+        SoftwareRaster.addRadialGlowScanlines(0, 0, 0, 0, 0, var15, var5, var22, field_g, param3, param4, var23, var13, var6 - var7, var16 + var10, var19, var21, var8 - var9);
     }
 
-    final static void g(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void fillRoundedRectangle(int param0, int param1, int param2, int param3, int param4, int param5) {
         int incrementValue$5 = 0;
         int incrementValue$4 = 0;
         int incrementValue$6 = 0;

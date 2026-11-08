@@ -264,7 +264,7 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
         }
     }
 
-    public static void l(int param0) {
+    public static void releaseStatics(int param0) {
         field_pb = null;
         field_kb = null;
         field_sb = null;

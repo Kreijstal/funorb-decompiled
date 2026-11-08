@@ -233,7 +233,7 @@ final class NodeHashTableIterator implements Iterator {
         this.field_c = this.field_d.field_j[0].next;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 == 22) {
           field_i = null;
           field_f = null;

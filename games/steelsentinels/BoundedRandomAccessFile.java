@@ -144,7 +144,7 @@ final class BoundedRandomAccessFile {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_g = (byte[][]) null;
         field_f = null;
         field_a = null;

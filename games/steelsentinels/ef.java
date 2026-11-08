@@ -7,7 +7,7 @@ final class ef {
     static int field_c;
     static boolean field_b;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 8421504) {
           return;
         }

@@ -14,7 +14,7 @@ class GradientOutlineTextPainter extends TextWidgetPainter {
         this(tj.field_e, param0);
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_t = null;
         field_o = null;
         if (param0 != 9) {
@@ -24,12 +24,12 @@ class GradientOutlineTextPainter extends TextWidgetPainter {
         field_r = null;
     }
 
-    public final void a(int param0, UiComponent param1, byte param2, boolean param3, int param4) {
+    public final void drawWidget(int param0, UiComponent param1, byte param2, boolean param3, int param4) {
         try {
           if (param3) {
             DualNodeDeque.a(param1.field_z + param4, param1.field_x, param1.field_E, param1.field_o + param0, (byte) 116);
           }
-          super.a(param0, param1, param2, param3, param4);
+          super.drawWidget(param0, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "ag.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }

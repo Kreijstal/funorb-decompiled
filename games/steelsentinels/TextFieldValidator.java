@@ -17,7 +17,7 @@ abstract class TextFieldValidator extends DebouncedValidator implements TextInpu
         return this.a(this.field_k.field_y, -1);
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_m = null;
         field_j = null;
         if (param0 >= 85) {

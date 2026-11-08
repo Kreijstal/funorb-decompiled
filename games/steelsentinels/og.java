@@ -11,7 +11,7 @@ final class og {
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
         if (param0 > -79) {
-          og.a((byte) -45);
+          og.releaseStatics((byte) -45);
         }
         if (SoundCache.field_e == null) {
           return;
@@ -22,7 +22,7 @@ final class og {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         if (param0 > -61) {
           return;

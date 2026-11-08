@@ -53,7 +53,7 @@ final class ad {
             var12 = var13;
             var6 = var12;
             if (param3 != 84) {
-              ad.a(-38);
+              ad.releaseStatics(-38);
             }
             for (var7 = 0; var7 < var15.length; var7++) {
               var8 = var15[var7];
@@ -244,9 +244,9 @@ final class ad {
                 if (var4 == 0) {
                   break;
                 }
-                SoftwareRaster.c(0, 0, 62, 74, 0, 128);
+                SoftwareRaster.fillRectangleBlended(0, 0, 62, 74, 0, 128);
                 var6 = MusicCrossfadeStream.field_F;
-                var6.a((-var6.field_z + 62) / 2, (-var6.field_B + 74) / 2);
+                var6.drawTransparent((-var6.field_z + 62) / 2, (-var6.field_B + 74) / 2);
                 break;
               }
             }
@@ -268,7 +268,7 @@ final class ad {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_j = null;
         field_g = null;
         field_a = null;

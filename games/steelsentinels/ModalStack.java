@@ -271,12 +271,12 @@ final class ModalStack extends SingleChildContainer {
         return null;
     }
 
-    public static void f(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_S = null;
         field_U = null;
         field_G = (int[][][]) null;
         if (param0 <= 124) {
-          ModalStack.f((byte) 57);
+          ModalStack.releaseStatics((byte) 57);
         }
     }
 
@@ -318,7 +318,7 @@ final class ModalStack extends SingleChildContainer {
     final void drawLayer(int param0, byte param1, int param2, int param3) {
         int var7 = SteelSentinels.obfuscationControl;
         if (null != this.field_p) {
-          this.field_p.a(param2, (UiComponent) (this), (byte) -30, true, param0);
+          this.field_p.drawWidget(param2, (UiComponent) (this), (byte) -30, true, param0);
         }
         NodeIterator var5 = new NodeIterator(this.field_T);
         UiComponent var6 = (UiComponent) (var5.c(2));
@@ -464,7 +464,7 @@ final class ModalStack extends SingleChildContainer {
         var9 = SteelSentinels.obfuscationControl;
         try {
           if (param1) {
-            ModalStack.f((byte) 92);
+            ModalStack.releaseStatics((byte) 92);
           }
           var10 = (CharSequence) ((Object) param2);
           var3_int = AccountChoicePanel.a(2019550017, var10, param0);

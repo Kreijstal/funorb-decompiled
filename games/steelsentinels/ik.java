@@ -20,7 +20,7 @@ final class ik {
         return this.field_f;
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = 4 / ((param0 + 28) / 39);
         field_g = null;
         field_i = null;
@@ -49,7 +49,7 @@ final class ik {
           var4.backpatchByteLength((byte) -92, -var5 + var4.position);
           return;
         }
-        ik.b(-47);
+        ik.releaseStatics(-47);
         var4.position = var4.position + 1;
         var5Lifetime1 = var4.position;
         var4.writeByte((byte) 115, 6);

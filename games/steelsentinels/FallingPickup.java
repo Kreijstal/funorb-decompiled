@@ -825,7 +825,7 @@ final class FallingPickup extends DualNode {
             } else {
               stackIn_17_4 = 12303138;
             }
-            SoftwareRaster.f(stackIn_16_0, stackIn_16_1, stackIn_16_2, stackIn_16_3, stackIn_17_4, 192);
+            SoftwareRaster.addLine(stackIn_16_0, stackIn_16_1, stackIn_16_2, stackIn_16_3, stackIn_17_4, 192);
             SoftwareRaster.plotAdditive(-1 + var15, var16, var13);
             SoftwareRaster.plotAdditive(var15, var16 - 1, var13);
             SoftwareRaster.plotAdditive(1 + var15, var16, var13);
@@ -845,7 +845,7 @@ final class FallingPickup extends DualNode {
           var6 = var6 - var10;
           Checkbox.field_bb.b((byte) 123);
           if (var11 >= 256) {
-            sl.field_p.a(var5_int, var6);
+            sl.field_p.drawTransparent(var5_int, var6);
             if (SteelSentinels.obfuscationControl == 0) {
               return;
             }

@@ -18,7 +18,7 @@ final class un {
     static String field_a;
     static String field_e;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_g = null;
         field_f = null;
         field_m = null;

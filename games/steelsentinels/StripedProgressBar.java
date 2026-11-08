@@ -24,7 +24,7 @@ final class StripedProgressBar extends UiComponent {
     static String field_H;
     static String field_P;
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         field_M = null;
         field_O = null;
         if (param0 != -47) {
@@ -159,27 +159,27 @@ final class StripedProgressBar extends UiComponent {
             field_P = (String) null;
           }
           while (var5_int > var6) {
-            param3.a(var6, param2);
+            param3.drawTransparent(var6, param2);
             var6 = var6 + param3.field_A;
           }
           MatchingTextValidator.$cfr$intArgs$f$20d51497949f(113);
           if (this.field_L.field_A + param0 >= SoftwareRaster.field_i) {
             IterableNodeHashTable.a(this.field_Y, (byte) -75);
-            param3.a(-this.field_G, 0);
-            param3.a(2 * this.field_T - this.field_G, 0);
-            this.field_K.c(0, 0);
+            param3.drawTransparent(-this.field_G, 0);
+            param3.drawTransparent(2 * this.field_T - this.field_G, 0);
+            this.field_K.drawMultiply(0, 0);
             MatchingTextValidator.$cfr$intArgs$f$20d51497949f(107);
-            this.field_Y.a(param0, param2);
+            this.field_Y.drawTransparent(param0, param2);
           }
           if (SoftwareRaster.field_b >= var5_int - this.field_L.field_A) {
             IterableNodeHashTable.a(this.field_Y, (byte) -63);
             for (var7 = -this.field_L.field_A + (this.field_x + this.field_G); 2 * this.field_T < var7; var7 = var7 - 2 * this.field_T) {
             }
-            param3.a(-var7, 0);
-            param3.a(this.field_T * 2 - var7, 0);
-            this.field_L.c(0, 0);
+            param3.drawTransparent(-var7, 0);
+            param3.drawTransparent(this.field_T * 2 - var7, 0);
+            this.field_L.drawMultiply(0, 0);
             MatchingTextValidator.$cfr$intArgs$f$20d51497949f(109);
-            this.field_Y.a(var5_int - this.field_L.field_A, param2);
+            this.field_Y.drawTransparent(var5_int - this.field_L.field_A, param2);
             return;
           }
           return;

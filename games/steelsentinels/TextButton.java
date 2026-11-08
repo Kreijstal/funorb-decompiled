@@ -20,7 +20,7 @@ class TextButton extends UiComponent {
     static long field_G;
     static RgbSprite[] field_Q;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_J = null;
         field_O = null;
         field_N = null;

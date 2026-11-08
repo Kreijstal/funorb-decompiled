@@ -15,7 +15,7 @@ final class fm {
     static SceneWidget field_b;
     static int[] field_e;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 4314) {
           BitmapFont var2 = (BitmapFont) null;
           fm.a(-42, true, 120, 16, -64, 89, -116, -30, -115, 59, 77, (BitmapFont) null, -85);
@@ -45,7 +45,7 @@ final class fm {
           var13.field_Ab = NodeDeque.a((byte) 0, param6, param10);
           var13.field_mb = NodeDeque.a((byte) 0, param3, param2);
           if (param1) {
-            fm.a(-102);
+            fm.releaseStatics(-102);
           }
           var13.field_bb = NodeDeque.a((byte) 0, param5, param9);
           var13.field_H = NodeDeque.a((byte) 0, param4, param0);

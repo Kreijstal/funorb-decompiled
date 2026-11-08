@@ -90,7 +90,7 @@ final class NanoTickClock extends TickClock {
         return 0L;
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_l = null;
         field_j = null;
         if (param0 != 0) {

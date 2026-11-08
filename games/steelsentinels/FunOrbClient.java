@@ -296,7 +296,7 @@ abstract class FunOrbClient extends GameApplet {
         return this.a(true, param0, param1 ^ 5534);
     }
 
-    public static void h(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_p = null;
         field_w = null;
         field_o = null;

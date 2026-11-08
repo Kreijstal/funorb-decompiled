@@ -19,7 +19,7 @@ final class tc extends IntrusiveNode {
     int field_y;
     static int field_z;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_A = null;
         field_r = null;
         if (!param0) {

@@ -94,7 +94,7 @@ final class vd {
             }
             if (decompiledFrameRemainder0) {
               if (param0 != 63) {
-                vd.b((byte) 112);
+                vd.releaseStatics((byte) 112);
               }
               return;
             }
@@ -121,7 +121,7 @@ final class vd {
             }
             if (decompiledFrameRemainder0) {
               if (param0 != 63) {
-                vd.b((byte) 112);
+                vd.releaseStatics((byte) 112);
               }
               return;
             }
@@ -141,10 +141,10 @@ final class vd {
         if (param0 == 63) {
           return;
         }
-        vd.b((byte) 112);
+        vd.releaseStatics((byte) 112);
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != 56) {
           return;
         }

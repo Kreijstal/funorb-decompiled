@@ -44,7 +44,7 @@ final class Js5ArchiveManager {
     final static boolean a(int param0) {
         boolean stackIn_6_0 = false;
         if (param0 >= -44) {
-          Js5ArchiveManager.a((byte) 65);
+          Js5ArchiveManager.releaseStatics((byte) 65);
         }
         stackIn_6_0 = (null != DelayedServerPacket.field_y) && (DelayedServerPacket.field_y.d((byte) 76));
         return stackIn_6_0;
@@ -168,7 +168,7 @@ final class Js5ArchiveManager {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_i = null;
         field_d = null;
         field_e = null;

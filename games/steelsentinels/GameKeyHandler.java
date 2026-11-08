@@ -8,7 +8,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
     static String field_b;
     static String field_a;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = -36 % ((-59 - param0) / 57);
         field_e = null;
         field_a = null;

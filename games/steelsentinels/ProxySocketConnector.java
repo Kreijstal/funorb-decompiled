@@ -134,7 +134,7 @@ final class ProxySocketConnector extends SocketConnector {
         return this.a((byte) 59);
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_q = null;
         field_o = null;
         field_k = null;

@@ -24,7 +24,7 @@ final class LinkButtonPainter implements WidgetPainter {
         oh.a(16777215, param7, param2, param0, param3, (byte) -125, param4, param1, param11, param6, param10, param8, param9, 16777215);
     }
 
-    public final void a(int param0, UiComponent param1, byte param2, boolean param3, int param4) {
+    public final void drawWidget(int param0, UiComponent param1, byte param2, boolean param3, int param4) {
         int stackIn_7_0 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -51,7 +51,7 @@ final class LinkButtonPainter implements WidgetPainter {
             stackIn_7_0 = 3249872;
           }
           var6_int = stackIn_7_0;
-          this.field_l.a("<u=" + Integer.toString(var6_int, 16) + ">" + param1.field_y + "</u>", param0 + param1.field_o, param4 + param1.field_z, param1.field_x, param1.field_E, var6_int, -1, this.field_n, this.field_i, this.field_l.field_G + this.field_l.field_F);
+          this.field_l.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param1.field_y + "</u>", param0 + param1.field_o, param4 + param1.field_z, param1.field_x, param1.field_E, var6_int, -1, this.field_n, this.field_i, this.field_l.field_G + this.field_l.field_F);
           if (!param1.isFocused(0)) {
             return;
           }
@@ -192,7 +192,7 @@ final class LinkButtonPainter implements WidgetPainter {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_g = null;
         field_j = null;
         field_b = null;

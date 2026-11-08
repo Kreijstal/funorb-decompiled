@@ -436,7 +436,7 @@ final class MenuInputState {
         return 103 == this.field_b ? true : false;
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_j = null;
         field_h = null;
         if (param0 != -18) {

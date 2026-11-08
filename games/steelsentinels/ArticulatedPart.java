@@ -126,7 +126,7 @@ final class ArticulatedPart extends DualNode {
           stackIn_11_0 = this;
         }
         if (this.sprite != null) {
-          this.sprite.a(this.field_G << 4, this.field_E << 4, param2 << 4, param3 << 4, -var7, MusicPatchNode.field_w);
+          this.sprite.rotateNearest(this.field_G << 4, this.field_E << 4, param2 << 4, param3 << 4, -var7, MusicPatchNode.field_w);
         }
         if (param1) {
           this.field_K = var7 - param0 - this.field_D;
@@ -499,7 +499,7 @@ final class ArticulatedPart extends DualNode {
               if (param3 == 1 &&
                 null != this.field_U) {
                 if (0 >= this.field_C) {
-                  this.field_U.a(this.field_G << var6, this.field_E << var6, param1 << 4, param2 << 4, -var7, var5);
+                  this.field_U.rotateNearest(this.field_G << var6, this.field_E << var6, param1 << 4, param2 << 4, -var7, var5);
                   if (var13 == 0) {
                     break scanLoop1;
                   }
@@ -507,7 +507,7 @@ final class ArticulatedPart extends DualNode {
                 if (this.field_C > 50) {
                   break scanLoop1;
                 }
-                this.field_U.a(this.field_G << var6, this.field_E << var6, param1 << 4, param2 << 4, -var7, (-this.field_C + 50) * var5 / 50);
+                this.field_U.rotateNearest(this.field_G << var6, this.field_E << var6, param1 << 4, param2 << 4, -var7, (-this.field_C + 50) * var5 / 50);
                 if (var13 == 0) {
                   break scanLoop1;
                 }
@@ -524,24 +524,24 @@ final class ArticulatedPart extends DualNode {
               if (this.field_C > 50) {
                 break scanLoop1;
               }
-              this.field_H.a(this.field_H.field_g * 4 - this.field_G << var6, this.field_E << var6, param1 << 4, param2 << 4, var7, (-this.field_C + 50) * var5 / 50);
+              this.field_H.rotateNearest(this.field_H.field_g * 4 - this.field_G << var6, this.field_E << var6, param1 << 4, param2 << 4, var7, (-this.field_C + 50) * var5 / 50);
               if (var13 == 0) {
                 break scanLoop1;
               }
             }
-            this.field_H.a(4 * this.field_H.field_g - this.field_G << var6, this.field_E << var6, param1 << 4, param2 << 4, var7, var5);
+            this.field_H.rotateNearest(4 * this.field_H.field_g - this.field_G << var6, this.field_E << var6, param1 << 4, param2 << 4, var7, var5);
             if (var13 == 0) {
               break scanLoop1;
             }
           }
           if (this.field_C <= 0) {
-            this.field_U.a(140 << var6, 130 << var6, param1 << 4, param2 << 4, -var7, var5);
+            this.field_U.rotateNearest(140 << var6, 130 << var6, param1 << 4, param2 << 4, -var7, var5);
             if (var13 == 0) {
               break scanLoop1;
             }
           }
           if (50 >= this.field_C) {
-            this.field_U.a(140 << var6, 130 << var6, param1 << 4, param2 << 4, -var7, (-this.field_C + 50) * var5 / 50);
+            this.field_U.rotateNearest(140 << var6, 130 << var6, param1 << 4, param2 << 4, -var7, (-this.field_C + 50) * var5 / 50);
           }
           break;
         }
@@ -629,7 +629,7 @@ final class ArticulatedPart extends DualNode {
         }
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_F = null;
         field_P = null;
         field_M = null;
@@ -743,7 +743,7 @@ final class ArticulatedPart extends DualNode {
               }
               if (decompiledFrameCompleted0) {
                 param2.field_U.field_o = MenuInputState.field_h;
-                param2.field_H = param2.field_U.b();
+                param2.field_H = param2.field_U.copyFlippedHorizontal();
                 param2.field_H.field_o = param2.field_U.field_o;
               }
             }

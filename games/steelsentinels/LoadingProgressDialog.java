@@ -111,7 +111,7 @@ final class LoadingProgressDialog extends ResizableModalPanel {
         }
     }
 
-    public static void l(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = -24 % ((param0 - 40) / 35);
         field_ob = null;
         field_pb = null;
@@ -156,7 +156,7 @@ final class LoadingProgressDialog extends ResizableModalPanel {
         gf.field_d.drawCentered(this.field_qb, param0 + (this.field_x >> 1), 103 + param1, 16777215, -1);
         if (null != this.field_jb) {
           SoftwareRaster.drawHorizontalLine(20 + param0, -7 + param1 + 120, 260, 8421504);
-          gf.field_d.a(this.field_jb, 20 + param0, 128 + param1, 260, 100, 16777215, -1, 1, 0, gf.field_d.field_G);
+          gf.field_d.drawParagraph(this.field_jb, 20 + param0, 128 + param1, 260, 100, 16777215, -1, 1, 0, gf.field_d.field_G);
         }
     }
 

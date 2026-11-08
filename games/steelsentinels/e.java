@@ -10,11 +10,11 @@ final class e {
     String field_e;
     static String[] field_g;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_g = null;
         field_b = null;
         if (param0 != -89) {
-          e.a((byte) -126);
+          e.releaseStatics((byte) -126);
         }
     }
 

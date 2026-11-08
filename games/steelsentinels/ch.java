@@ -355,7 +355,7 @@ abstract class ch extends UiComponent implements UiContainerMarker {
         var7 = SteelSentinels.obfuscationControl;
         if (0 == param3 &&
           this.field_p != null) {
-          this.field_p.a(param2, (UiComponent) (this), (byte) -30, true, param0);
+          this.field_p.drawWidget(param2, (UiComponent) (this), (byte) -30, true, param0);
         }
         boolean decompiledFrameCompleted0 = true;
         if (null != this.field_J) {
@@ -679,7 +679,7 @@ abstract class ch extends UiComponent implements UiContainerMarker {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_M = null;
         field_I = null;
         field_G = null;
@@ -784,10 +784,10 @@ abstract class ch extends UiComponent implements UiContainerMarker {
         var7 = SteelSentinels.obfuscationControl;
         try {
           SoftwareRaster.drawRectangleOutline(param3, param0, param1, param4, 12105914);
-          SoftwareRaster.e(1 + param3, param0 + 1, param1 - 2, -2 + param4, 10461345, 16251129);
+          SoftwareRaster.fillVerticalGradient(1 + param3, param0 + 1, param1 - 2, -2 + param4, 10461345, 16251129);
           var5_int = 64;
           if (param2 != 32308) {
-            ch.a((byte) 31);
+            ch.releaseStatics((byte) 31);
           }
           var6 = 1;
           while (var6 < 6) {

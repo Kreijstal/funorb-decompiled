@@ -274,7 +274,7 @@ final class jj {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_h = null;
         field_e = null;
         field_j = null;

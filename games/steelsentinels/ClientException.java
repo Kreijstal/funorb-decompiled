@@ -17,7 +17,7 @@ final class ClientException extends RuntimeException {
     static boolean field_e;
     private static String field_z;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_i = null;
         field_k = null;
         field_c = null;

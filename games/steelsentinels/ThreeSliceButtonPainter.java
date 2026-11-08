@@ -16,7 +16,7 @@ final class ThreeSliceButtonPainter extends TextWidgetPainter {
     static UiTheme field_w;
     static int[] field_u;
 
-    public final void a(int param0, UiComponent param1, byte param2, boolean param3, int param4) {
+    public final void drawWidget(int param0, UiComponent param1, byte param2, boolean param3, int param4) {
         int stackIn_6_0 = 0;
         int stackIn_13_0 = 0;
         int stackIn_16_0 = 0;
@@ -54,7 +54,7 @@ final class ThreeSliceButtonPainter extends TextWidgetPainter {
             this.field_t = -80;
           }
           sl.a(this.field_y, param1.field_x, (param1.field_E - this.field_y[0].field_B >> 1) + (param1.field_z + param4), param0 + param1.field_o, var7, (byte) -119);
-          this.field_f.a(param1.field_y, param1.field_o + param0, -2 + param4 + param1.field_z, param1.field_x, param1.field_E, var8, -1, 1, 1, this.field_f.field_G);
+          this.field_f.drawParagraph(param1.field_y, param1.field_o + param0, -2 + param4 + param1.field_z, param1.field_x, param1.field_E, var8, -1, 1, 1, this.field_f.field_G);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -133,7 +133,7 @@ final class ThreeSliceButtonPainter extends TextWidgetPainter {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_u = null;
         field_z = null;
         field_w = null;

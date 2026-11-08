@@ -221,7 +221,7 @@ final class rg {
           SoftwareRaster.fillRectangle(244, 198, 367, 141, 0);
           if (Explosion.field_S == null) {
             if (null != wn.field_a) {
-              wn.field_a.a(eb.field_q, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+              wn.field_a.drawParagraph(eb.field_q, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
             return;
           }
@@ -230,10 +230,10 @@ final class rg {
           var7Lifetime1 = var6;
           if (var6 == null) {
             if (wn.field_a != null) {
-              wn.field_a.a(eb.field_q, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+              wn.field_a.drawParagraph(eb.field_q, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
           } else {
-            var6.a(245, 199);
+            var6.drawTransparent(245, 199);
           }
           if (NodeDeque.field_g < hh.field_i) {
             var7Lifetime2 = Explosion.field_S[QuickChatPhraseCache.field_e];
@@ -266,7 +266,7 @@ final class rg {
             if (var2 == null) {
               return;
             }
-            wn.field_a.a("Screenshot(s) " + (String) (var2) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
+            wn.field_a.drawParagraph("Screenshot(s) " + (String) (var2) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
             return;
           }
           return;

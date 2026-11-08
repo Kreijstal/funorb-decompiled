@@ -10,7 +10,7 @@ final class Checkbox extends TextButton {
     static SceneWidget field_ab;
     static RgbSprite[] field_X;
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         field_bb = null;
         if (param0 >= 92) {
           field_ab = null;
@@ -20,7 +20,7 @@ final class Checkbox extends TextButton {
           field_W = null;
           return;
         }
-        Checkbox.g(-16);
+        Checkbox.releaseStatics(-16);
         field_ab = null;
         field_X = null;
         field_V = null;

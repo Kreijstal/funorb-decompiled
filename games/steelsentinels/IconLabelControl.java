@@ -29,7 +29,7 @@ final class IconLabelControl extends SceneWidget {
         this.field_Vb.a(0, 0, this.field_Lb, var3, this.field_zb - var3);
     }
 
-    public static void j(int param0) {
+    public static void releaseStatics(int param0) {
         field_Wb = null;
         field_Ub = null;
         field_Zb = null;

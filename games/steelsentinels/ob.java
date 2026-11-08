@@ -24,7 +24,7 @@ final class ob extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -38) {
-            ob.d(118);
+            ob.releaseStatics(118);
           }
           if (!jn.field_g) {
             return false;
@@ -51,7 +51,7 @@ final class ob extends IntrusiveNode {
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == 18601) {
           field_w = null;
           field_z = null;
@@ -61,7 +61,7 @@ final class ob extends IntrusiveNode {
           field_x = null;
           return;
         }
-        ob.d(118);
+        ob.releaseStatics(118);
         field_w = null;
         field_z = null;
         field_t = null;

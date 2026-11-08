@@ -434,7 +434,7 @@ final class ReportAbuseDialog extends SceneWidget {
         return stackIn_6_0;
     }
 
-    public static void j(int param0) {
+    public static void releaseStatics(int param0) {
         field_Xb = null;
         field_ec = null;
         field_Vb = null;

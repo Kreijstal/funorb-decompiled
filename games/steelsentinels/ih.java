@@ -11,7 +11,7 @@ final class ih extends TextFieldValidator {
     static String field_u;
     static int field_r;
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 18384) {
           return;
         }

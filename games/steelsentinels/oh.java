@@ -375,7 +375,7 @@ final class oh {
         SingleChildContainer.a(-1, param10, param6, param7);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_h = null;
         field_g = null;
@@ -472,9 +472,9 @@ final class oh {
           var7 = vd.a(param4, "lobby", param2, -1, "largefont");
           ContentTransitionDialog.field_kb = vd.a(param4, "lobby", param2, -1, "generalfont");
           Bzip2State.field_d = vd.a(param4, "lobby", param2, -1, "chatfont");
-          var7.a(var5, var24);
-          ContentTransitionDialog.field_kb.a(var5, var24);
-          Bzip2State.field_d.a(var5, var24);
+          var7.setInlineSprites(var5, var24);
+          ContentTransitionDialog.field_kb.setInlineSprites(var5, var24);
+          Bzip2State.field_d.setInlineSprites(var5, var24);
           var8 = new SceneWidget(0L, (SceneWidget) null);
           var8.field_Ib = SocketConnector.field_b;
           var8.field_nb = 16777215;

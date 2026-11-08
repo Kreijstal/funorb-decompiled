@@ -31,7 +31,7 @@ abstract class MouseWheelInput {
         jm.a(param0, param2, var5Lifetime1, 1, param1, param4);
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_g = null;
         field_b = null;
         field_h = null;
@@ -42,7 +42,7 @@ abstract class MouseWheelInput {
           field_f = null;
           return;
         }
-        MouseWheelInput.c(-126);
+        MouseWheelInput.releaseStatics(-126);
         field_e = null;
         field_f = null;
     }

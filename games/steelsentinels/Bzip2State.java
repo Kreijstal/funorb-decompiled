@@ -43,7 +43,7 @@ final class Bzip2State {
     static BinaryBitmapFont field_d;
     static String[] field_o;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_u = null;
         field_n = null;
         if (param0 < -73) {

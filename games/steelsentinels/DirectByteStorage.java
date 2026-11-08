@@ -87,7 +87,7 @@ final class DirectByteStorage extends ByteStorage {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 <= 3) {
           return;
         }

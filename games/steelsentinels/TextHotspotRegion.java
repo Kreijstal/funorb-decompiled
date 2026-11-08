@@ -41,7 +41,7 @@ final class TextHotspotRegion extends IntrusiveNode {
         uc.field_j.a(param0 ^ 0, -40 + pc.field_q.field_Lb, 40, var3, -var3 + pc.field_q.field_zb);
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != 29) {
           return;
         }

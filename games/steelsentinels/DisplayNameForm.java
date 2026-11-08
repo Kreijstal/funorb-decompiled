@@ -254,7 +254,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
         }
     }
 
-    public static void j(int param0) {
+    public static void releaseStatics(int param0) {
         field_S = null;
         if (param0 != 60) {
           field_S = (int[]) null;

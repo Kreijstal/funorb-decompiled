@@ -135,7 +135,7 @@ final class Projectile extends DualNode {
         var6 = 8;
         var7 = (int)(65536.0 * Math.atan2((double)(-this.velocityX), (double)(-this.velocityY)) / 6.283185307179586);
         if (19 == this.effectType) {
-          SoftwareRaster.b(var4, var5, 100, 16777215, 16);
+          SoftwareRaster.fillCircleBlended(var4, var5, 100, 16777215, 16);
         }
         if (param2 != 4) {
           discarded$0 = this.g(-67, 19);
@@ -143,9 +143,9 @@ final class Projectile extends DualNode {
         if (this.effectType >= 12 &&
           16 >= this.effectType) {
           if (this.velocityX != 1) {
-            Checkbox.field_W.a(-(Checkbox.field_W.field_z / 2) + var4, -(Checkbox.field_W.field_B / 2) + var5);
+            Checkbox.field_W.drawTransparent(-(Checkbox.field_W.field_z / 2) + var4, -(Checkbox.field_W.field_B / 2) + var5);
           } else {
-            IterableDualNodeDeque.field_e.a(var4 - Checkbox.field_W.field_z / 2, var5 - Checkbox.field_W.field_B / 2);
+            IterableDualNodeDeque.field_e.drawTransparent(var4 - Checkbox.field_W.field_z / 2, var5 - Checkbox.field_W.field_B / 2);
           }
         }
         if (var4 < -32) {
@@ -189,14 +189,14 @@ final class Projectile extends DualNode {
                     continue;
                   }
                   IconTextComponent.b(10000, var5 << 4, 15, var4 << 4, var9 << 4);
-                  SoftwareRaster.a(var4 << 4, var5 << 4, var9 << 4, 500, var26);
+                  SoftwareRaster.fillRadialPaletteCircle(var4 << 4, var5 << 4, var9 << 4, 500, var26);
                   stackIn_94_0Lifetime1 = ~this.sourceWeaponType;
                   stackIn_94_1Lifetime1 = -19;
                   if (stackIn_94_0Lifetime1 == stackIn_94_1Lifetime1) {
                     var11 = (int)(Math.cos(0.2 * (double)this.ageTicks) * 150.0);
                     var12 = (int)(Math.sin((double)this.ageTicks * 0.2) * 150.0);
-                    SoftwareRaster.a((var4 << 4) + var11, var12 + (var5 << 4), var9 << 3, 250, var26);
-                    SoftwareRaster.a((var4 << 4) - var11, (var5 << 4) - var12, var9 << 3, 250, var26);
+                    SoftwareRaster.fillRadialPaletteCircle((var4 << 4) + var11, var12 + (var5 << 4), var9 << 3, 250, var26);
+                    SoftwareRaster.fillRadialPaletteCircle((var4 << 4) - var11, (var5 << 4) - var12, var9 << 3, 250, var26);
                     break;
                   }
                   if (this.sourceWeaponType != 31) {
@@ -204,12 +204,12 @@ final class Projectile extends DualNode {
                   }
                   var11 = (int)(Math.cos((double)this.ageTicks * 0.2) * 150.0);
                   var12 = (int)(150.0 * Math.sin(0.2 * (double)this.ageTicks));
-                  SoftwareRaster.a(var11 + (var4 << 4), (var5 << 4) + var12, var9 << 3, 250, var26);
-                  SoftwareRaster.a((var4 << 4) - var11, -var12 + (var5 << 4), var9 << 3, 250, var26);
+                  SoftwareRaster.fillRadialPaletteCircle(var11 + (var4 << 4), (var5 << 4) + var12, var9 << 3, 250, var26);
+                  SoftwareRaster.fillRadialPaletteCircle((var4 << 4) - var11, -var12 + (var5 << 4), var9 << 3, 250, var26);
                   var11 = var11 * 2;
                   var12 = var12 * 2;
-                  SoftwareRaster.a(var12 + (var4 << 4), (var5 << 4) - var11, var9 << 3, 250, var26);
-                  SoftwareRaster.a(-var12 + (var4 << 4), (var5 << 4) + var11, var9 << 3, 250, var26);
+                  SoftwareRaster.fillRadialPaletteCircle(var12 + (var4 << 4), (var5 << 4) - var11, var9 << 3, 250, var26);
+                  SoftwareRaster.fillRadialPaletteCircle(-var12 + (var4 << 4), (var5 << 4) + var11, var9 << 3, 250, var26);
                   return;
                 }
               }
@@ -275,7 +275,7 @@ final class Projectile extends DualNode {
                     var13 = var13 >> 2;
                     var14 = var14 >> 2;
                     for (var16_intLifetime1 = 15; var16_intLifetime1 > 0; var16_intLifetime1--) {
-                      SoftwareRaster.a(var4, var5, 32 + var16_intLifetime1 * 3, 2 * var16_intLifetime1 + 1, LabeledField.field_W);
+                      SoftwareRaster.fillRadialPaletteCircle(var4, var5, 32 + var16_intLifetime1 * 3, 2 * var16_intLifetime1 + 1, LabeledField.field_W);
                       var5 = var5 + var14;
                       var4 = var4 + var13;
                     }
@@ -287,7 +287,7 @@ final class Projectile extends DualNode {
                     var4 = var4 << 4;
                     var13 = var13 >> 3;
                     for (var16_intLifetime1Lifetime1 = 15; var16_intLifetime1Lifetime1 > 0; var16_intLifetime1Lifetime1--) {
-                      SoftwareRaster.a(var4, var5, 32 + var16_intLifetime1Lifetime1 * 3, 1 + var16_intLifetime1Lifetime1 * 2, LabeledField.field_eb);
+                      SoftwareRaster.fillRadialPaletteCircle(var4, var5, 32 + var16_intLifetime1Lifetime1 * 3, 1 + var16_intLifetime1Lifetime1 * 2, LabeledField.field_eb);
                       var5 = var5 + var14;
                       var4 = var4 + var13;
                     }
@@ -300,7 +300,7 @@ final class Projectile extends DualNode {
                     var4 = var4 << 4;
                     var13 = var13 >> 3;
                     for (var16_intLifetime1Lifetime2 = 15; var16_intLifetime1Lifetime2 > 0; var16_intLifetime1Lifetime2--) {
-                      SoftwareRaster.a(var4, var5, 32 + var16_intLifetime1Lifetime2 * 3, var16_intLifetime1Lifetime2 * 2 + 1, LabeledField.field_eb);
+                      SoftwareRaster.fillRadialPaletteCircle(var4, var5, 32 + var16_intLifetime1Lifetime2 * 3, var16_intLifetime1Lifetime2 * 2 + 1, LabeledField.field_eb);
                       var4 = var4 + var13;
                       var5 = var5 + var14;
                     }
@@ -313,7 +313,7 @@ final class Projectile extends DualNode {
                     var4 = var4 << 4;
                     var5 = var5 << 4;
                     for (var16_intLifetime1Lifetime3 = 15; 0 < var16_intLifetime1Lifetime3; var16_intLifetime1Lifetime3--) {
-                      SoftwareRaster.a(var4, var5, 32 + var16_intLifetime1Lifetime3 * 3, 1 + 2 * var16_intLifetime1Lifetime3, LabeledField.field_W);
+                      SoftwareRaster.fillRadialPaletteCircle(var4, var5, 32 + var16_intLifetime1Lifetime3 * 3, 1 + 2 * var16_intLifetime1Lifetime3, LabeledField.field_W);
                       var4 = var4 + var13;
                       var5 = var5 + var14;
                     }
@@ -323,7 +323,7 @@ final class Projectile extends DualNode {
                     this.a(var14, var5, param2 - 3, var12, var13, var4, var10_int, var25);
                     return;
                   }
-                  SoftwareRaster.f(var4, var5, (var13 >> 4) + var4, (var14 >> 4) + var5, var10_int, 192);
+                  SoftwareRaster.addLine(var4, var5, (var13 >> 4) + var4, (var14 >> 4) + var5, var10_int, 192);
                   return;
                 }
                 var16 = 0.5 * Math.random() + 0.25;
@@ -339,10 +339,10 @@ final class Projectile extends DualNode {
           } else {
             var8_ref_nk = NodeDeque.a(17 + this.sourceWeaponType, (byte) 67);
             if (var8_ref_nk != null) {
-              var8_ref_nk.sprite.a(var8_ref_nk.sprite.field_g << 3, var8_ref_nk.sprite.field_d << 3, var4 << 4, var5 << 4, var7, 1024);
+              var8_ref_nk.sprite.rotateNearest(var8_ref_nk.sprite.field_g << 3, var8_ref_nk.sprite.field_d << 3, var4 << 4, var5 << 4, var7, 1024);
               if (this.sourceWeaponType == 32) {
                 var9 = 3 * var6 / 2;
-                DialWidgetPainter.field_n[0 + this.world.simulationTick / 10 % 6].d(-(this.velocityX >> 6) - var9 + var4, -(this.velocityY >> 6) + var5 - var9, var9 * 2, var9 * 2, 192);
+                DialWidgetPainter.field_n[0 + this.world.simulationTick / 10 % 6].drawScaledAdditive(-(this.velocityX >> 6) - var9 + var4, -(this.velocityY >> 6) + var5 - var9, var9 * 2, var9 * 2, 192);
               }
             }
           }
@@ -1366,7 +1366,7 @@ final class Projectile extends DualNode {
           if (!this.field_W &&
             this.sourceWeaponType != 35 &&
             this.sourceWeaponType != 4) {
-            SoftwareRaster.e(param5, param1, param3 - 1, 16777215);
+            SoftwareRaster.fillCircle(param5, param1, param3 - 1, 16777215);
             SoftwareRaster.drawCircleOutline(param5, param1, param3 - 1, param6);
           }
           if (param4 <= param0) {
@@ -2616,7 +2616,7 @@ final class Projectile extends DualNode {
         }
     }
 
-    public static void h(int param0) {
+    public static void releaseStatics(int param0) {
         field_Y = null;
         field_R = null;
         field_J = null;

@@ -17,14 +17,14 @@ final class ProxyAuthenticationException extends IOException {
         super(param0);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_h = null;
         field_g = null;
         field_d = null;
         field_b = null;
         field_e = null;
         if (param0 >= -27) {
-          ProxyAuthenticationException.a(-125);
+          ProxyAuthenticationException.releaseStatics(-125);
         }
     }
 
