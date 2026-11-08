@@ -204,7 +204,7 @@ public final class Sumoblitz extends GameClientShell {
           }
           this.a(100, 3, 1, 10, 2, 0, true);
           var2 = new MidiPcmStream();
-          var2.a(177, 128, 9);
+          var2.setInitialProgram(177, 128, 9);
           var3 = new MusicCrossfadeStream(var2, new MidiPcmStream());
           SpriteMask.a(lt.field_m, true, var3, (byte) -125, 48000, (java.awt.Component) ((Object) qn.field_f));
           BufferedSocket.field_f = false;
@@ -875,7 +875,7 @@ public final class Sumoblitz extends GameClientShell {
                                   if (!param0) {
                                     return false;
                                   }
-                                  eb.field_b = new og(SecondaryNodeDeque.field_d, er.field_c);
+                                  eb.field_b = new SoundCache(SecondaryNodeDeque.field_d, er.field_c);
                                   ff.a((byte) -62, SecondaryNodeDeque.field_d);
                                   oq.a(-24233);
                                   SecondaryNodeDeque.field_d = null;
@@ -1671,7 +1671,7 @@ public final class Sumoblitz extends GameClientShell {
           RasterBuffer.releaseStatics((byte) 41);
           mn.releaseStatics((byte) 17);
           FullscreenCanvas.releaseStatics(true);
-          og.releaseStatics(false);
+          SoundCache.releaseStatics(false);
           MenuScreen.releaseStatics(-6);
           GameplaySession.releaseStatics((byte) 42);
           kv.releaseStatics((byte) 30);
@@ -1768,7 +1768,7 @@ public final class Sumoblitz extends GameClientShell {
           WidgetContainer.releaseStatics(true);
           ao.releaseStatics(0);
           ok.releaseStatics((byte) -122);
-          pp.releaseStatics(2);
+          AudioServiceThread.releaseStatics(2);
           t.releaseStatics(1);
           ro.releaseStatics(0);
           fv.d((byte) 62);
@@ -1778,7 +1778,7 @@ public final class Sumoblitz extends GameClientShell {
           rw.releaseStatics(true);
           fa.releaseStatics(false);
           nk.releaseStatics();
-          q.releaseStatics();
+          VorbisSample.releaseStatics();
           eh.releaseStatics(-66);
           l.releaseStatics(-104);
           CompactMeshGeometry.releaseStatics(0);
@@ -1796,7 +1796,7 @@ public final class Sumoblitz extends GameClientShell {
           rd.releaseStatics(false);
           pb.releaseStatics(3);
           ih.a((byte) 122);
-          lo.releaseStatics();
+          VorbisFloor1.releaseStatics();
           oq.g(-6811);
           qw.releaseStatics(-122);
           is.releaseStatics(false);

@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MusicTrack extends IntrusiveNode {
-    byte[] field_k;
-    IntrusiveNodeHashTable field_l;
+    byte[] midiBytes;
+    IntrusiveNodeHashTable instrumentUsage;
 
-    final void b() {
+    final void buildInstrumentUsage() {
         int[] var1;
         int[] var2;
         MidiFileReader var4;
@@ -30,10 +30,10 @@ final class MusicTrack extends IntrusiveNode {
         int var11Lifetime1;
         int var11Lifetime2;
         int var12Lifetime1;
-        if (this.field_l != null) {
+        if (this.instrumentUsage != null) {
           return;
         }
-        this.field_l = new IntrusiveNodeHashTable(16);
+        this.instrumentUsage = new IntrusiveNodeHashTable(16);
         var20 = new int[16];
         var17 = var20;
         var1 = var17;
@@ -43,26 +43,26 @@ final class MusicTrack extends IntrusiveNode {
         var22 = var1;
         var18[9] = 128;
         var22[9] = 128;
-        var4 = new MidiFileReader(this.field_k);
-        var5 = var4.f();
+        var4 = new MidiFileReader(this.midiBytes);
+        var5 = var4.trackCount();
         for (var6 = 0; var6 < var5; var6++) {
-          var4.b(var6);
-          var4.a(var6);
-          var4.c(var6);
+          var4.seekTrack(var6);
+          var4.readTrackDelta(var6);
+          var4.saveTrackPosition(var6);
         }
         while (true) {
           var6Lifetime1 = var4.nextTrack();
-          var7 = var4.field_c[var6Lifetime1];
+          var7 = var4.trackTicks[var6Lifetime1];
           while (true) {
-            if (var4.field_c[var6Lifetime1] != var7) {
+            if (var4.trackTicks[var6Lifetime1] != var7) {
               break;
             }
-            var4.b(var6Lifetime1);
-            var8 = var4.e(var6Lifetime1);
+            var4.seekTrack(var6Lifetime1);
+            var8 = var4.readMessage(var6Lifetime1);
             if (var8 == 1) {
-              var4.a();
-              var4.c(var6Lifetime1);
-              if (var4.d()) {
+              var4.markTrackDone();
+              var4.saveTrackPosition(var6Lifetime1);
+              if (var4.allTracksDone()) {
                 return;
               }
               break;
@@ -90,21 +90,21 @@ final class MusicTrack extends IntrusiveNode {
               var12Lifetime1 = var8 >> 16 & 127;
               if (var12Lifetime1 > 0) {
                 var13 = var18[var10Lifetime2];
-                var14 = (InstrumentNoteMask) (this.field_l.a(125, (long)var13));
+                var14 = (InstrumentNoteMask) (this.instrumentUsage.a(125, (long)var13));
                 if (var14 == null) {
                   var14 = new InstrumentNoteMask(new byte[128]);
-                  this.field_l.a(var14, -1, (long)var13);
+                  this.instrumentUsage.a(var14, -1, (long)var13);
                 }
-                var14.field_m[var11Lifetime2] = (byte) 1;
+                var14.notes[var11Lifetime2] = (byte) 1;
               }
             }
-            var4.a(var6Lifetime1);
-            var4.c(var6Lifetime1);
+            var4.readTrackDelta(var6Lifetime1);
+            var4.saveTrackPosition(var6Lifetime1);
           }
         }
     }
 
-    final static MusicTrack a(ResourceArchive param0, String param1) {
+    final static MusicTrack load(ResourceArchive param0, String param1) {
         byte[] var2 = param0.a((byte) 121, param1);
         if (var2 == null) {
           return null;
@@ -414,8 +414,8 @@ final class MusicTrack extends IntrusiveNode {
         param0.position = param0.position + var25;
         var50 = param0.position;
         param0.position = param0.position + var5 * 3;
-        this.field_k = new byte[var4];
-        var51 = new PacketBuffer(this.field_k);
+        this.midiBytes = new byte[var4];
+        var51 = new PacketBuffer(this.midiBytes);
         var51.e(48, 1297377380);
         var51.e(48, 6);
         stackIn_84_0 = var51;
@@ -636,7 +636,7 @@ final class MusicTrack extends IntrusiveNode {
         }
     }
 
-    final void a() {
-        this.field_l = null;
+    final void clearInstrumentUsage() {
+        this.instrumentUsage = null;
     }
 }

@@ -3,43 +3,43 @@
  */
 import java.io.*;
 
-final class q extends IntrusiveNode {
-    private static float[] field_E;
-    private float[] field_P;
-    private static int[] field_Q;
-    private static float[] field_z;
-    private static float[] field_x;
-    private int field_H;
-    private static boolean field_t;
-    private int field_r;
-    private static eo[] field_N;
-    private static int field_y;
-    private static float[] field_s;
-    private int field_G;
-    private int field_F;
-    private byte[][] field_v;
-    private static int field_o;
-    private static ob[] field_u;
-    private boolean field_n;
-    private boolean field_M;
-    private static float[] field_q;
-    private static int field_m;
-    private static byte[] field_p;
-    private static int[] field_k;
-    private int field_K;
-    private byte[] field_D;
-    private static boolean[] field_O;
-    private int field_R;
-    private static int field_l;
-    private int field_A;
-    private static lo[] field_L;
-    private static int[] field_J;
-    private static float[] field_w;
-    private static float[] field_C;
-    static tp[] field_I;
-    private int field_B;
+final class VorbisSample extends IntrusiveNode {
+    private static float[] transformBuffer;
+    private float[] previousBlock;
+    private static int[] longBitReverse;
+    private static float[] longTrigB;
+    private static float[] shortTrigC;
+    private int sampleRate;
+    private static boolean setupReady;
+    private int loopStart;
+    private static VorbisResidue[] residues;
+    private static int byteOffset;
+    private static float[] shortTrigA;
+    private int previousTailSamples;
+    private int loopEnd;
+    private byte[][] packets;
+    private static int shortBlockSize;
+    private static VorbisMapping[] mappings;
+    private boolean previousSilent;
+    private boolean pingPong;
+    private static float[] shortTrigB;
+    private static int bitOffset;
+    private static byte[] bitstream;
+    private static int[] shortBitReverse;
+    private int decodedPosition;
+    private byte[] decodedSamples;
+    private static boolean[] longBlockModes;
+    private int packetIndex;
+    private static int longBlockSize;
+    private int previousBlockSize;
+    private static VorbisFloor1[] floors;
+    private static int[] modeMappings;
+    private static float[] longTrigA;
+    private static float[] longTrigC;
+    static VorbisCodebook[] codebooks;
+    private int sampleCount;
 
-    final static void a(byte[] param0) {
+    final static void decodeSetup(byte[] setupBytes) {
         int var7_int = 0;
         int var8_int = 0;
         int var9_int = 0;
@@ -70,15 +70,15 @@ final class q extends IntrusiveNode {
         int var4Lifetime2;
         int var5Lifetime1;
         int var5Lifetime2;
-        q.a(param0, 0);
-        field_o = 1 << q.a(4);
-        field_l = 1 << q.a(4);
-        field_E = new float[field_l];
+        VorbisSample.setBitstream(setupBytes, 0);
+        shortBlockSize = 1 << VorbisSample.readBits(4);
+        longBlockSize = 1 << VorbisSample.readBits(4);
+        transformBuffer = new float[longBlockSize];
         for (var1 = 0; var1 < 2; var1++) {
           if (var1 == 0) {
-            stackIn_5_0 = field_o;
+            stackIn_5_0 = shortBlockSize;
           } else {
-            stackIn_5_0 = field_l;
+            stackIn_5_0 = longBlockSize;
           }
           var2 = stackIn_5_0;
           var3 = var2 >> 1;
@@ -105,60 +105,60 @@ final class q extends IntrusiveNode {
             var9[var11] = mi.a((byte) 72, var11, var10);
           }
           if (var1 == 0) {
-            field_s = var6_ref_float__;
-            field_q = var7;
-            field_x = var8;
-            field_k = var9;
+            shortTrigA = var6_ref_float__;
+            shortTrigB = var7;
+            shortTrigC = var8;
+            shortBitReverse = var9;
           } else {
-            field_w = var6_ref_float__;
-            field_z = var7;
-            field_C = var8;
-            field_Q = var9;
+            longTrigA = var6_ref_float__;
+            longTrigB = var7;
+            longTrigC = var8;
+            longBitReverse = var9;
           }
         }
-        var1Lifetime1 = q.a(8) + 1;
-        field_I = new tp[var1Lifetime1];
+        var1Lifetime1 = VorbisSample.readBits(8) + 1;
+        codebooks = new VorbisCodebook[var1Lifetime1];
         for (var2Lifetime1 = 0; var2Lifetime1 < var1Lifetime1; var2Lifetime1++) {
-          field_I[var2Lifetime1] = new tp();
+          codebooks[var2Lifetime1] = new VorbisCodebook();
         }
-        var2Lifetime2 = q.a(6) + 1;
+        var2Lifetime2 = VorbisSample.readBits(6) + 1;
         for (var3Lifetime1 = 0; var3Lifetime1 < var2Lifetime2; var3Lifetime1++) {
-          q.a(16);
+          VorbisSample.readBits(16);
         }
-        var2Lifetime3 = q.a(6) + 1;
-        field_L = new lo[var2Lifetime3];
+        var2Lifetime3 = VorbisSample.readBits(6) + 1;
+        floors = new VorbisFloor1[var2Lifetime3];
         for (var3Lifetime2 = 0; var3Lifetime2 < var2Lifetime3; var3Lifetime2++) {
-          field_L[var3Lifetime2] = new lo();
+          floors[var3Lifetime2] = new VorbisFloor1();
         }
-        var3Lifetime3 = q.a(6) + 1;
-        field_N = new eo[var3Lifetime3];
+        var3Lifetime3 = VorbisSample.readBits(6) + 1;
+        residues = new VorbisResidue[var3Lifetime3];
         for (var4Lifetime1 = 0; var4Lifetime1 < var3Lifetime3; var4Lifetime1++) {
-          field_N[var4Lifetime1] = new eo();
+          residues[var4Lifetime1] = new VorbisResidue();
         }
-        var4Lifetime2 = q.a(6) + 1;
-        field_u = new ob[var4Lifetime2];
+        var4Lifetime2 = VorbisSample.readBits(6) + 1;
+        mappings = new VorbisMapping[var4Lifetime2];
         for (var5Lifetime1 = 0; var5Lifetime1 < var4Lifetime2; var5Lifetime1++) {
-          field_u[var5Lifetime1] = new ob();
+          mappings[var5Lifetime1] = new VorbisMapping();
         }
-        var5Lifetime2 = q.a(6) + 1;
-        field_O = new boolean[var5Lifetime2];
-        field_J = new int[var5Lifetime2];
+        var5Lifetime2 = VorbisSample.readBits(6) + 1;
+        longBlockModes = new boolean[var5Lifetime2];
+        modeMappings = new int[var5Lifetime2];
         for (var6 = 0; var6 < var5Lifetime2; var6++) {
-          stackIn_41_0 = (boolean[]) (field_O);
+          stackIn_41_0 = (boolean[]) (longBlockModes);
           stackIn_41_1 = var6;
-          stackIn_42_2 = (q.b() != 0);
+          stackIn_42_2 = (VorbisSample.readBit() != 0);
           stackIn_41_0[stackIn_41_1] = stackIn_42_2;
-          q.a(16);
-          q.a(16);
-          field_J[var6] = q.a(8);
+          VorbisSample.readBits(16);
+          VorbisSample.readBits(16);
+          modeMappings[var6] = VorbisSample.readBits(8);
         }
-        field_t = true;
+        setupReady = true;
     }
 
-    final static q a(ResourceArchive param0, String param1, String param2) {
+    final static VorbisSample load(ResourceArchive param0, String param1, String param2) {
         try {
-          q var4_ref = null;
-          if (!q.a(param0)) {
+          VorbisSample var4_ref = null;
+          if (!VorbisSample.ensureSetup(param0)) {
             param0.a(param1, -1158, param2);
             return null;
           }
@@ -168,7 +168,7 @@ final class q extends IntrusiveNode {
           }
           Object var4 = null;
           try {
-            var4_ref = new q(var3);
+            var4_ref = new VorbisSample(var3);
           } catch (IOException iOException) {
             iOException.printStackTrace();
           }
@@ -181,38 +181,38 @@ final class q extends IntrusiveNode {
     }
 
     public static void releaseStatics() {
-        field_p = null;
-        field_I = null;
-        field_L = null;
-        field_N = null;
-        field_u = null;
-        field_O = null;
-        field_J = null;
-        field_E = null;
-        field_s = null;
-        field_q = null;
-        field_x = null;
-        field_w = null;
-        field_z = null;
-        field_C = null;
-        field_k = null;
-        field_Q = null;
+        bitstream = null;
+        codebooks = null;
+        floors = null;
+        residues = null;
+        mappings = null;
+        longBlockModes = null;
+        modeMappings = null;
+        transformBuffer = null;
+        shortTrigA = null;
+        shortTrigB = null;
+        shortTrigC = null;
+        longTrigA = null;
+        longTrigB = null;
+        longTrigC = null;
+        shortBitReverse = null;
+        longBitReverse = null;
     }
 
-    final static q a(ResourceArchive param0, int param1, int param2) {
+    final static VorbisSample load(ResourceArchive archive, int groupId, int fileId) {
         try {
-          q var4_ref = null;
-          if (!q.a(param0)) {
-            param0.a(param1, false, param2);
+          VorbisSample var4_ref = null;
+          if (!VorbisSample.ensureSetup(archive)) {
+            archive.a(groupId, false, fileId);
             return null;
           }
-          byte[] var3 = param0.a((byte) 112, param2, param1);
+          byte[] var3 = archive.a((byte) 112, fileId, groupId);
           if (var3 == null) {
             return null;
           }
           Object var4 = null;
           try {
-            var4_ref = new q(var3);
+            var4_ref = new VorbisSample(var3);
           } catch (IOException iOException) {
             iOException.printStackTrace();
           }
@@ -224,49 +224,49 @@ final class q extends IntrusiveNode {
         }
     }
 
-    final static int b() {
-        int var0 = field_p[field_y] >> field_m & 1;
-        field_m = field_m + 1;
-        field_y = field_y + (field_m >> 3);
-        field_m = field_m & 7;
+    final static int readBit() {
+        int var0 = bitstream[byteOffset] >> bitOffset & 1;
+        bitOffset = bitOffset + 1;
+        byteOffset = byteOffset + (bitOffset >> 3);
+        bitOffset = bitOffset & 7;
         return var0;
     }
 
-    private final static void a(byte[] param0, int param1) {
-        field_p = param0;
-        field_y = param1;
-        field_m = 0;
+    private final static void setBitstream(byte[] bytes, int offset) {
+        bitstream = bytes;
+        byteOffset = offset;
+        bitOffset = 0;
     }
 
-    final static float d(int param0) {
-        int var1 = param0 & 2097151;
-        int var2 = param0 & -2147483648;
-        int var3 = (param0 & 2145386496) >> 21;
+    final static float unpackFloat(int packed) {
+        int var1 = packed & 2097151;
+        int var2 = packed & -2147483648;
+        int var3 = (packed & 2145386496) >> 21;
         if (var2 != 0) {
           var1 = -var1;
         }
         return (float)((double)var1 * Math.pow(2.0, (double)(var3 - 788)));
     }
 
-    private final void b(byte[] param0) throws IOException {
+    private final void decodeContainer(byte[] bytes) throws IOException {
         int var4 = 0;
         int var5 = 0;
         int var6_int = 0;
         byte[] var6 = null;
-        PacketBuffer var2 = new PacketBuffer(param0);
-        this.field_H = var2.c(true);
-        this.field_B = var2.c(true);
-        this.field_r = var2.c(true);
-        this.field_F = var2.c(true);
-        if (this.field_F < 0) {
-          this.field_F = ~this.field_F;
-          this.field_M = true;
+        PacketBuffer var2 = new PacketBuffer(bytes);
+        this.sampleRate = var2.c(true);
+        this.sampleCount = var2.c(true);
+        this.loopStart = var2.c(true);
+        this.loopEnd = var2.c(true);
+        if (this.loopEnd < 0) {
+          this.loopEnd = ~this.loopEnd;
+          this.pingPong = true;
         }
         int var3 = var2.c(true);
         if (var3 < 0) {
           throw new IOException();
         }
-        this.field_v = new byte[var3][];
+        this.packets = new byte[var3][];
         for (var4 = 0; var4 < var3; var4++) {
           var5 = 0;
           do {
@@ -275,11 +275,11 @@ final class q extends IntrusiveNode {
           } while (var6_int >= 255);
           var6 = new byte[var5];
           var2.a(var6, var5, 0, (byte) -87);
-          this.field_v[var4] = var6;
+          this.packets[var4] = var6;
         }
     }
 
-    final PcmSample c() {
+    final PcmSample decodeAll() {
         int var3 = 0;
         int var6 = 0;
         int incrementValue$0 = 0;
@@ -288,16 +288,16 @@ final class q extends IntrusiveNode {
         float[] var4;
         int var5;
         int var7;
-        this.field_A = 0;
-        this.field_P = new float[field_l];
-        var1 = new byte[this.field_B];
+        this.previousBlockSize = 0;
+        this.previousBlock = new float[longBlockSize];
+        var1 = new byte[this.sampleCount];
         var2 = 0;
-        for (var3 = 0; var3 < this.field_v.length; var3++) {
-          var4 = this.c(var3);
+        for (var3 = 0; var3 < this.packets.length; var3++) {
+          var4 = this.decodePacket(var3);
           if (var4 != null) {
             var5 = var4.length;
-            if (var5 > this.field_B - var2) {
-              var5 = this.field_B - var2;
+            if (var5 > this.sampleCount - var2) {
+              var5 = this.sampleCount - var2;
             }
             for (var6 = 0; var6 < var5; var6++) {
               var7 = (int)(128.0f + var4[var6] * 128.0f);
@@ -310,11 +310,11 @@ final class q extends IntrusiveNode {
             }
           }
         }
-        this.field_P = null;
-        return new PcmSample(this.field_H, var1, this.field_r, this.field_F, this.field_M);
+        this.previousBlock = null;
+        return new PcmSample(this.sampleRate, var1, this.loopStart, this.loopEnd, this.pingPong);
     }
 
-    final PcmSample a(int[] param0) {
+    final PcmSample toPcmSample(int[] sampleBudget) {
         int var5 = 0;
         int incrementValue$0 = 0;
         int var3;
@@ -322,28 +322,28 @@ final class q extends IntrusiveNode {
         int var6;
         float[] var7;
         byte[] var12;
-        if (param0 != null &&
-          param0[0] <= 0) {
+        if (sampleBudget != null &&
+          sampleBudget[0] <= 0) {
           return null;
         }
-        if (this.field_D == null) {
-          this.field_A = 0;
-          this.field_P = new float[field_l];
-          this.field_D = new byte[this.field_B];
-          this.field_K = 0;
-          this.field_R = 0;
+        if (this.decodedSamples == null) {
+          this.previousBlockSize = 0;
+          this.previousBlock = new float[longBlockSize];
+          this.decodedSamples = new byte[this.sampleCount];
+          this.decodedPosition = 0;
+          this.packetIndex = 0;
         }
-        while (this.field_R < this.field_v.length) {
-          if (param0 != null &&
-            param0[0] <= 0) {
+        while (this.packetIndex < this.packets.length) {
+          if (sampleBudget != null &&
+            sampleBudget[0] <= 0) {
             return null;
           }
-          var7 = this.c(this.field_R);
+          var7 = this.decodePacket(this.packetIndex);
           if (var7 != null) {
-            var3 = this.field_K;
+            var3 = this.decodedPosition;
             var4 = var7.length;
-            if (var4 > this.field_B - var3) {
-              var4 = this.field_B - var3;
+            if (var4 > this.sampleCount - var3) {
+              var4 = this.sampleCount - var3;
             }
             for (var5 = 0; var5 < var4; var5++) {
               var6 = (int)(128.0f + var7[var5] * 128.0f);
@@ -352,22 +352,22 @@ final class q extends IntrusiveNode {
               }
               incrementValue$0 = var3;
               var3++;
-              this.field_D[incrementValue$0] = (byte)(var6 - 128);
+              this.decodedSamples[incrementValue$0] = (byte)(var6 - 128);
             }
-            if (param0 != null) {
-              param0[0] = param0[0] - (var3 - this.field_K);
+            if (sampleBudget != null) {
+              sampleBudget[0] = sampleBudget[0] - (var3 - this.decodedPosition);
             }
-            this.field_K = var3;
+            this.decodedPosition = var3;
           }
-          this.field_R = this.field_R + 1;
+          this.packetIndex = this.packetIndex + 1;
         }
-        this.field_P = null;
-        var12 = this.field_D;
-        this.field_D = null;
-        return new PcmSample(this.field_H, var12, this.field_r, this.field_F, this.field_M);
+        this.previousBlock = null;
+        var12 = this.decodedSamples;
+        this.decodedSamples = null;
+        return new PcmSample(this.sampleRate, var12, this.loopStart, this.loopEnd, this.pingPong);
     }
 
-    private final float[] c(int param0) {
+    private final float[] decodePacket(int packetIndex) {
         int var32_int = 0;
         int stackIn_3_0 = 0;
         int stackIn_7_0 = 0;
@@ -390,7 +390,7 @@ final class q extends IntrusiveNode {
         int var11;
         int var12;
         int var13;
-        ob var14;
+        VorbisMapping var14;
         int var15;
         int var16;
         int var17_int;
@@ -429,7 +429,7 @@ final class q extends IntrusiveNode {
         float var39;
         float[] var40;
         int var41;
-        eo var42;
+        VorbisResidue var42;
         int[] var44;
         float[] var45;
         float[] var46;
@@ -479,30 +479,30 @@ final class q extends IntrusiveNode {
         float var30Lifetime1Lifetime3;
         int var18_intLifetime1;
         int var18_intLifetime2;
-        q.a(this.field_v[param0], 0);
-        q.b();
-        var2 = q.a(mr.a(field_J.length - 1, (byte) -115));
-        var3 = field_O[var2] ? 1 : 0;
+        VorbisSample.setBitstream(this.packets[packetIndex], 0);
+        VorbisSample.readBit();
+        var2 = VorbisSample.readBits(mr.a(modeMappings.length - 1, (byte) -115));
+        var3 = longBlockModes[var2] ? 1 : 0;
         if (var3 == 0) {
-          stackIn_3_0 = field_o;
+          stackIn_3_0 = shortBlockSize;
         } else {
-          stackIn_3_0 = field_l;
+          stackIn_3_0 = longBlockSize;
         }
         var4 = stackIn_3_0;
         var5 = 0;
         var6 = 0;
         if (var3 != 0) {
-          stackIn_7_0 = (q.b() == 0) ? 0 : 1;
+          stackIn_7_0 = (VorbisSample.readBit() == 0) ? 0 : 1;
           var5 = stackIn_7_0;
-          stackIn_10_0 = (q.b() == 0) ? 0 : 1;
+          stackIn_10_0 = (VorbisSample.readBit() == 0) ? 0 : 1;
           var6 = stackIn_10_0;
         }
         var7 = var4 >> 1;
         if (var3 != 0 &&
           var5 == 0) {
-          var8 = (var4 >> 2) - (field_o >> 2);
-          var9 = (var4 >> 2) + (field_o >> 2);
-          var10 = field_o >> 1;
+          var8 = (var4 >> 2) - (shortBlockSize >> 2);
+          var9 = (var4 >> 2) + (shortBlockSize >> 2);
+          var10 = shortBlockSize >> 1;
         } else {
           var8 = 0;
           var9 = var7;
@@ -510,39 +510,39 @@ final class q extends IntrusiveNode {
         }
         if (var3 != 0 &&
           var6 == 0) {
-          var11 = var4 - (var4 >> 2) - (field_o >> 2);
-          var12 = var4 - (var4 >> 2) + (field_o >> 2);
-          var13 = field_o >> 1;
+          var11 = var4 - (var4 >> 2) - (shortBlockSize >> 2);
+          var12 = var4 - (var4 >> 2) + (shortBlockSize >> 2);
+          var13 = shortBlockSize >> 1;
         } else {
           var11 = var7;
           var12 = var4;
           var13 = var4 >> 1;
         }
-        var14 = field_u[field_J[var2]];
-        var16 = var14.field_a;
-        var17_int = var14.field_d[var16];
-        stackIn_22_0 = (field_L[var17_int].b()) ? 0 : 1;
+        var14 = mappings[modeMappings[var2]];
+        var16 = var14.mux;
+        var17_int = var14.submapFloors[var16];
+        stackIn_22_0 = (floors[var17_int].decode()) ? 0 : 1;
         var15 = stackIn_22_0;
         var16Lifetime1 = var15;
-        for (var17_intLifetime1 = 0; var17_intLifetime1 < var14.field_b; var17_intLifetime1++) {
-          var42 = field_N[var14.field_c[var17_intLifetime1]];
-          var52 = field_E;
-          var42.a(var52, var4 >> 1, var16Lifetime1 != 0);
+        for (var17_intLifetime1 = 0; var17_intLifetime1 < var14.submaps; var17_intLifetime1++) {
+          var42 = residues[var14.submapResidues[var17_intLifetime1]];
+          var52 = transformBuffer;
+          var42.decode(var52, var4 >> 1, var16Lifetime1 != 0);
         }
         if (var15 == 0) {
-          var17_intLifetime2 = var14.field_a;
-          var18_int = var14.field_d[var17_intLifetime2];
-          field_L[var18_int].a(field_E, var4 >> 1);
+          var17_intLifetime2 = var14.mux;
+          var18_int = var14.submapFloors[var17_intLifetime2];
+          floors[var18_int].apply(transformBuffer, var4 >> 1);
         }
         if (var15 != 0) {
           for (var17_intLifetime3 = var4 >> 1; var17_intLifetime3 < var4; var17_intLifetime3++) {
-            field_E[var17_intLifetime3] = 0.0f;
+            transformBuffer[var17_intLifetime3] = 0.0f;
           }
         } else {
           var17_intLifetime3 = var4 >> 1;
           var18_intLifetime1 = var4 >> 2;
           var19 = var4 >> 3;
-          var49 = field_E;
+          var49 = transformBuffer;
           var45 = var49;
           var20_ref_float__ = var45;
           for (var21_int = 0; var21_int < var17_intLifetime3; var21_int++) {
@@ -555,27 +555,27 @@ final class q extends IntrusiveNode {
             var41++;
           }
           if (var3 == 0) {
-            stackIn_40_0 = (float[]) (field_s);
+            stackIn_40_0 = (float[]) (shortTrigA);
           } else {
-            stackIn_40_0 = (float[]) (field_w);
+            stackIn_40_0 = (float[]) (longTrigA);
           }
           var21 = stackIn_40_0;
           if (var3 == 0) {
-            stackIn_43_0 = (float[]) (field_q);
+            stackIn_43_0 = (float[]) (shortTrigB);
           } else {
-            stackIn_43_0 = (float[]) (field_z);
+            stackIn_43_0 = (float[]) (longTrigB);
           }
           var22 = stackIn_43_0;
           if (var3 == 0) {
-            stackIn_46_0 = (float[]) (field_x);
+            stackIn_46_0 = (float[]) (shortTrigC);
           } else {
-            stackIn_46_0 = (float[]) (field_C);
+            stackIn_46_0 = (float[]) (longTrigC);
           }
           var23 = stackIn_46_0;
           if (var3 == 0) {
-            stackIn_49_0 = (int[]) (field_k);
+            stackIn_49_0 = (int[]) (shortBitReverse);
           } else {
-            stackIn_49_0 = (int[]) (field_Q);
+            stackIn_49_0 = (int[]) (longBitReverse);
           }
           var48 = stackIn_49_0;
           var44 = var48;
@@ -682,83 +682,83 @@ final class q extends IntrusiveNode {
           }
           for (var26Lifetime10 = var8; var26Lifetime10 < var9; var26Lifetime10++) {
             var27Lifetime3 = (float)Math.sin(((double)(var26Lifetime10 - var8) + 0.5) / (double)var10 * 0.5 * 3.141592653589793);
-            field_E[var26Lifetime10] = field_E[var26Lifetime10] * (float)Math.sin(1.5707963267948966 * (double)var27Lifetime3 * (double)var27Lifetime3);
+            transformBuffer[var26Lifetime10] = transformBuffer[var26Lifetime10] * (float)Math.sin(1.5707963267948966 * (double)var27Lifetime3 * (double)var27Lifetime3);
           }
           for (var26Lifetime11 = var11; var26Lifetime11 < var12; var26Lifetime11++) {
             var27Lifetime4 = (float)Math.sin(((double)(var26Lifetime11 - var11) + 0.5) / (double)var13 * 0.5 * 3.141592653589793 + 1.5707963267948966);
-            field_E[var26Lifetime11] = field_E[var26Lifetime11] * (float)Math.sin(1.5707963267948966 * (double)var27Lifetime4 * (double)var27Lifetime4);
+            transformBuffer[var26Lifetime11] = transformBuffer[var26Lifetime11] * (float)Math.sin(1.5707963267948966 * (double)var27Lifetime4 * (double)var27Lifetime4);
           }
         }
         var17 = null;
-        if (this.field_A > 0) {
-          var18_intLifetime2 = this.field_A + var4 >> 2;
+        if (this.previousBlockSize > 0) {
+          var18_intLifetime2 = this.previousBlockSize + var4 >> 2;
           var50 = new float[var18_intLifetime2];
           var46 = var50;
           var40 = var46;
           var17 = var40;
-          if (!this.field_n) {
-            for (var19Lifetime1 = 0; var19Lifetime1 < this.field_G; var19Lifetime1++) {
-              var20 = (this.field_A >> 1) + var19Lifetime1;
-              var40[var19Lifetime1] = var40[var19Lifetime1] + this.field_P[var20];
+          if (!this.previousSilent) {
+            for (var19Lifetime1 = 0; var19Lifetime1 < this.previousTailSamples; var19Lifetime1++) {
+              var20 = (this.previousBlockSize >> 1) + var19Lifetime1;
+              var40[var19Lifetime1] = var40[var19Lifetime1] + this.previousBlock[var20];
             }
           }
           if (var15 == 0) {
             for (var19Lifetime1Lifetime1 = var8; var19Lifetime1Lifetime1 < var4 >> 1; var19Lifetime1Lifetime1++) {
               var20Lifetime1 = var50.length - (var4 >> 1) + var19Lifetime1Lifetime1;
-              var40[var20Lifetime1] = var40[var20Lifetime1] + field_E[var19Lifetime1Lifetime1];
+              var40[var20Lifetime1] = var40[var20Lifetime1] + transformBuffer[var19Lifetime1Lifetime1];
             }
           }
         }
-        var18 = this.field_P;
-        this.field_P = field_E;
-        field_E = var18;
-        this.field_A = var4;
-        this.field_G = var12 - (var4 >> 1);
+        var18 = this.previousBlock;
+        this.previousBlock = transformBuffer;
+        transformBuffer = var18;
+        this.previousBlockSize = var4;
+        this.previousTailSamples = var12 - (var4 >> 1);
         stackIn_113_1 = (var15 != 0);
-        this.field_n = stackIn_113_1;
+        this.previousSilent = stackIn_113_1;
         return (float[]) (var17);
     }
 
-    final static int a(int param0) {
+    final static int readBits(int bitCount) {
         int var4 = 0;
         int var3 = 0;
         int var1 = 0;
         int var2 = 0;
         int var3Lifetime1;
-        while (param0 >= 8 - field_m) {
-          var3 = 8 - field_m;
+        while (bitCount >= 8 - bitOffset) {
+          var3 = 8 - bitOffset;
           var4 = (1 << var3) - 1;
-          var1 = var1 + ((field_p[field_y] >> field_m & var4) << var2);
-          field_m = 0;
-          field_y = field_y + 1;
+          var1 = var1 + ((bitstream[byteOffset] >> bitOffset & var4) << var2);
+          bitOffset = 0;
+          byteOffset = byteOffset + 1;
           var2 = var2 + var3;
-          param0 = param0 - var3;
+          bitCount = bitCount - var3;
         }
-        if (param0 > 0) {
-          var3Lifetime1 = (1 << param0) - 1;
-          var1 = var1 + ((field_p[field_y] >> field_m & var3Lifetime1) << var2);
-          field_m = field_m + param0;
+        if (bitCount > 0) {
+          var3Lifetime1 = (1 << bitCount) - 1;
+          var1 = var1 + ((bitstream[byteOffset] >> bitOffset & var3Lifetime1) << var2);
+          bitOffset = bitOffset + bitCount;
         }
         return var1;
     }
 
-    private final static boolean a(ResourceArchive param0) {
+    private final static boolean ensureSetup(ResourceArchive archive) {
         byte[] var1 = null;
-        if (!field_t) {
-          var1 = param0.a((byte) 95, 0, 0);
+        if (!setupReady) {
+          var1 = archive.a((byte) 95, 0, 0);
           if (var1 == null) {
             return false;
           }
-          q.a(var1);
+          VorbisSample.decodeSetup(var1);
         }
         return true;
     }
 
-    private q(byte[] param0) throws IOException {
-        this.b(param0);
+    private VorbisSample(byte[] param0) throws IOException {
+        this.decodeContainer(param0);
     }
 
     static {
-        field_t = false;
+        setupReady = false;
     }
 }

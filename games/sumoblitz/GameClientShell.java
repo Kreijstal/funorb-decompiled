@@ -176,7 +176,7 @@ abstract class GameClientShell extends GameApplet {
             hd.field_H = wd.a(u.field_P, (byte) 125);
           }
           wd.field_j = ve.a(11880, true, OpenGlUnderwaterEffect.field_i, 1, false);
-          eb.field_f = ve.a(11880, true, pp.field_h, 1, false);
+          eb.field_f = ve.a(11880, true, AudioServiceThread.field_h, 1, false);
           hw.field_a = ve.a(11880, true, ra.field_f, 1, false);
           pi.field_c = wd.field_j;
           mp.field_a = 2;
@@ -776,7 +776,7 @@ abstract class GameClientShell extends GameApplet {
         u.field_P = param4;
         OpenGlUnderwaterEffect.field_i = param5;
         ra.field_f = param3;
-        pp.field_h = param6;
+        AudioServiceThread.field_h = param6;
         this.p(-1);
         wt.c(8193);
     }

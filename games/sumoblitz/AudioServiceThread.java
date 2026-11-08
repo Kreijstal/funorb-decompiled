@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pp implements Runnable {
-    volatile AudioOutput[] field_c;
-    volatile boolean field_b;
+final class AudioServiceThread implements Runnable {
+    volatile AudioOutput[] outputs;
+    volatile boolean running;
     static String membersText;
     static String[] padTypeNames;
-    PlatformTaskDispatcher field_g;
-    volatile boolean field_a;
+    PlatformTaskDispatcher taskDispatcher;
+    volatile boolean stopRequested;
     static gm field_d;
     static int field_h;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void drawDottedRectangle(int param0, int param1, int param2, int param3, int param4) {
         int stackIn_4_0 = 0;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
@@ -75,7 +75,7 @@ final class pp implements Runnable {
             }
           }
           if (param2 != -13181) {
-            pp.a(5, 111, 100, -88, -57);
+            AudioServiceThread.drawDottedRectangle(5, 111, 100, -88, -57);
           }
           if (SoftwareRasterizer.clipTop <= param0 &&
             var6 < SoftwareRasterizer.clipBottom) {
@@ -127,7 +127,7 @@ final class pp implements Runnable {
     public static void releaseStatics(int param0) {
         field_d = null;
         if (param0 != 2) {
-          pp.releaseStatics(-25);
+          AudioServiceThread.releaseStatics(-25);
           membersText = null;
           padTypeNames = null;
           return;
@@ -146,18 +146,18 @@ final class pp implements Runnable {
         Throwable var3 = null;
         String var5 = null;
         var4 = Sumoblitz.field_L ? 1 : 0;
-        this.field_b = true;
+        this.running = true;
         try {
           try {
-            while (!this.field_a) {
+            while (!this.stopRequested) {
               for (var1_int = 0; 2 > var1_int; var1_int++) {
-                var2 = this.field_c[var1_int];
+                var2 = this.outputs[var1_int];
                 if (var2 != null) {
-                  var2.b();
+                  var2.serviceOutput();
                 }
               }
               tg.a(10L, (byte) 107);
-              rd.a((Object) null, this.field_g, -11030);
+              rd.a((Object) null, this.taskDispatcher, -11030);
             }
             decompiledRegionSelector0 = 0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -173,16 +173,16 @@ final class pp implements Runnable {
         } catch (java.lang.Throwable decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var3 = decompiledCaughtException;
-          this.field_b = false;
-          throw pp.<RuntimeException>$cfr$sneakyThrow(var3);
+          this.running = false;
+          throw AudioServiceThread.<RuntimeException>rethrowUnchecked(var3);
         }
-        this.field_b = false;
+        this.running = false;
     }
 
-    pp() {
-        this.field_c = new AudioOutput[2];
-        this.field_a = false;
-        this.field_b = false;
+    AudioServiceThread() {
+        this.outputs = new AudioOutput[2];
+        this.stopRequested = false;
+        this.running = false;
     }
 
     static {
@@ -191,7 +191,7 @@ final class pp implements Runnable {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException rethrowUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

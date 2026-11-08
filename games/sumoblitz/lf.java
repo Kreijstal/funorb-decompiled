@@ -105,13 +105,13 @@ final class lf extends ka {
     final static void a(int param0, int param1) {
         tt.field_l = param1;
         if (null != qc.field_e) {
-          qc.field_e.b(param1, true);
+          qc.field_e.setMasterVolume(param1, true);
         }
         if (param0 != 0) {
           return;
         }
         if (qr.field_b != null) {
-          qr.field_b.a((byte) -43, param1);
+          qr.field_b.setVolume((byte) -43, param1);
         }
     }
 

@@ -1761,14 +1761,14 @@ class MenuScreen {
     }
 
     final static void initializeLogoAudio(ResourceArchive param0, int param1) {
-        q var2 = null;
+        VorbisSample var2 = null;
         try {
           if (param1 != 100) {
             field_a = (ToolkitSprite[]) null;
           }
-          q.a(param0.a("", "headers.packvorbis", -1));
-          var2 = q.a(param0, "jagex logo2.packvorbis", "");
-          var2.c();
+          VorbisSample.decodeSetup(param0.a("", "headers.packvorbis", -1));
+          var2 = VorbisSample.load(param0, "jagex logo2.packvorbis", "");
+          var2.decodeAll();
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ak.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

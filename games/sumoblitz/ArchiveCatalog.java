@@ -1289,35 +1289,35 @@ final class ArchiveCatalog {
           }
           var2Lifetime183 = ke.a((byte) 98, "terrainNames,0");
           if (null != var2Lifetime183) {
-            pp.padTypeNames[0] = MusicVoice.a(0, var2Lifetime183);
+            AudioServiceThread.padTypeNames[0] = MusicVoice.a(0, var2Lifetime183);
           }
           var2Lifetime184 = ke.a((byte) 120, "terrainNames,1");
           if (var2Lifetime184 != null) {
-            pp.padTypeNames[1] = MusicVoice.a(param1 + 5, var2Lifetime184);
+            AudioServiceThread.padTypeNames[1] = MusicVoice.a(param1 + 5, var2Lifetime184);
           }
           var2Lifetime185 = ke.a((byte) 118, "terrainNames,2");
           if (var2Lifetime185 != null) {
-            pp.padTypeNames[2] = MusicVoice.a(0, var2Lifetime185);
+            AudioServiceThread.padTypeNames[2] = MusicVoice.a(0, var2Lifetime185);
           }
           var2Lifetime186 = ke.a((byte) 112, "terrainNames,3");
           if (null != var2Lifetime186) {
-            pp.padTypeNames[3] = MusicVoice.a(jg.a(param1, -5), var2Lifetime186);
+            AudioServiceThread.padTypeNames[3] = MusicVoice.a(jg.a(param1, -5), var2Lifetime186);
           }
           var2Lifetime187 = ke.a((byte) 127, "terrainNames,4");
           if (var2Lifetime187 != null) {
-            pp.padTypeNames[4] = MusicVoice.a(0, var2Lifetime187);
+            AudioServiceThread.padTypeNames[4] = MusicVoice.a(0, var2Lifetime187);
           }
           var2Lifetime188 = ke.a((byte) 97, "terrainNames,5");
           if (var2Lifetime188 != null) {
-            pp.padTypeNames[5] = MusicVoice.a(0, var2Lifetime188);
+            AudioServiceThread.padTypeNames[5] = MusicVoice.a(0, var2Lifetime188);
           }
           var2Lifetime189 = ke.a((byte) 104, "terrainNames,6");
           if (null != var2Lifetime189) {
-            pp.padTypeNames[6] = MusicVoice.a(0, var2Lifetime189);
+            AudioServiceThread.padTypeNames[6] = MusicVoice.a(0, var2Lifetime189);
           }
           var2Lifetime190 = ke.a((byte) 121, "terrainNames,7");
           if (null != var2Lifetime190) {
-            pp.padTypeNames[7] = MusicVoice.a(0, var2Lifetime190);
+            AudioServiceThread.padTypeNames[7] = MusicVoice.a(0, var2Lifetime190);
           }
           var2Lifetime191 = ke.a((byte) 96, "enemyTypeColon");
           if (var2Lifetime191 != null) {

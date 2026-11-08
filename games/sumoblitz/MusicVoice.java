@@ -2,30 +2,30 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MusicVoice extends IntrusiveNode {
-    PcmSampleStream field_z;
-    int field_D;
-    int field_y;
+    PcmSampleStream stream;
+    int pan;
+    int channel;
     static qr field_l;
-    int field_q;
-    int field_C;
-    MusicPatchEnvelope field_w;
-    int field_x;
-    PcmSample field_B;
-    MusicPatch field_A;
-    int field_H;
+    int exclusiveGroup;
+    int vibratoPhase;
+    MusicPatchEnvelope envelope;
+    int releaseTime;
+    PcmSample sample;
+    MusicPatch patch;
+    int ageTicks;
     static String field_s;
-    int field_v;
-    int field_m;
-    int field_p;
-    int field_r;
-    int field_t;
-    int field_k;
+    int decayTime;
+    int basePitchQ8;
+    int portamentoDelta;
+    int gainEnvelopeIndex;
+    int retriggerPhase;
+    int portamentoScaleQ12;
     static SpriteData field_o;
-    int field_G;
-    int field_u;
-    int field_F;
-    int field_E;
-    int field_n;
+    int gainEnvelopeTime;
+    int samplesUntilUpdate;
+    int velocityGain;
+    int note;
+    int releaseEnvelopeIndex;
 
     final static String a(int param0, byte[] param1) {
         RuntimeException var2 = null;
@@ -63,14 +63,14 @@ final class MusicVoice extends IntrusiveNode {
         }
     }
 
-    final void a(int param0) {
+    final void clearReferences(int param0) {
         if (param0 != 0) {
           return;
         }
-        this.field_B = null;
-        this.field_w = null;
-        this.field_z = null;
-        this.field_A = null;
+        this.sample = null;
+        this.envelope = null;
+        this.stream = null;
+        this.patch = null;
     }
 
     final static void c(boolean param0) {

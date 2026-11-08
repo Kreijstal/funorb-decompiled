@@ -64,7 +64,7 @@ final class bv implements mh {
                 var10 = var10 + (param0.field_p - var8 >> 1);
               }
             }
-            pp.a(var10 + 2, 4 + var7, param2 ^ -5596714, var9 - 2, var8);
+            AudioServiceThread.drawDottedRectangle(var10 + 2, 4 + var7, param2 ^ -5596714, var9 - 2, var8);
           }
           if (param2 == 5592405) {
             return;

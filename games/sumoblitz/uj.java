@@ -41,15 +41,15 @@ final class uj {
           if (null != qc.field_e) {
             var4_ref = wd.field_f;
             synchronized (var4_ref) {
-              qc.field_e.a((byte) -91, -1, param1);
+              qc.field_e.setChannelVolumeScale((byte) -91, -1, param1);
               if (nd.field_B == param3) {
                 return;
               }
-              qc.field_e.e(0);
-              wd.field_f.d();
+              qc.field_e.stop(0);
+              wd.field_f.flush();
               nd.field_B = param3;
               if (null != nd.field_B) {
-                qc.field_e.a(param2, nd.field_B, 91);
+                qc.field_e.playTrack(param2, nd.field_B, 91);
               }
             }
           }

@@ -46,7 +46,7 @@ final class oj implements mh {
           if (!param0.d(param2 - 5592406)) {
             return;
           }
-          pp.a(var7 + 2, -4 + param0.field_q, param2 - 5605586, var6_int + 2, -4 + param0.field_p);
+          AudioServiceThread.drawDottedRectangle(var7 + 2, -4 + param0.field_q, param2 - 5605586, var6_int + 2, -4 + param0.field_p);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

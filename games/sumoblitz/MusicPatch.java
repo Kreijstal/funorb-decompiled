@@ -4,19 +4,19 @@
 import java.util.*;
 
 final class MusicPatch extends IntrusiveNode {
-    byte[] field_q;
+    byte[] noteVolumes;
     static String editorText;
-    PcmSample[] field_o;
-    byte[] field_t;
-    MusicPatchEnvelope[] field_n;
-    private int[] field_p;
+    PcmSample[] samples;
+    byte[] notePans;
+    MusicPatchEnvelope[] envelopes;
+    private int[] sampleIds;
     static boolean simulationPaused;
     static int field_u;
-    byte[] field_r;
-    short[] field_k;
-    int field_s;
+    byte[] exclusiveGroups;
+    short[] tunings;
+    int volume;
 
-    final boolean a(byte[] param0, int[] param1, og param2, int param3) {
+    final boolean loadSamples(byte[] requiredNotes, int[] sampleBudget, SoundCache soundCache, int guard) {
         int var8 = 0;
         int var5_int = 0;
         RuntimeException var5 = null;
@@ -36,31 +36,31 @@ final class MusicPatch extends IntrusiveNode {
         var10 = Sumoblitz.field_L ? 1 : 0;
         try {
           var5_int = 1;
-          if (param3 != 1255750754) {
+          if (guard != 1255750754) {
             return false;
           }
           var6 = 0;
           var7 = null;
           for (var8 = 0; var8 < 128; var8++) {
-            if (param0 == null ||
-              param0[var8] != 0) {
-              var9 = this.field_p[var8];
+            if (requiredNotes == null ||
+              requiredNotes[var8] != 0) {
+              var9 = this.sampleIds[var8];
               if (var9 != 0) {
                 if (var6 != var9) {
                   var6 = var9;
                   var9--;
                   if ((1 & var9) != 0) {
-                    var7 = param2.b(-94, param1, var9 >> 2);
+                    var7 = soundCache.getVorbisById(-94, sampleBudget, var9 >> 2);
                   } else {
-                    var7 = param2.a(var9 >> 2, param1, 10709);
+                    var7 = soundCache.getSoundEffectById(var9 >> 2, sampleBudget, 10709);
                   }
                   if (var7 == null) {
                     var5_int = 0;
                   }
                 }
                 if (var7 != null) {
-                  this.field_o[var8] = (PcmSample) (var7);
-                  this.field_p[var8] = 0;
+                  this.samples[var8] = (PcmSample) (var7);
+                  this.sampleIds[var8] = 0;
                 }
               }
             }
@@ -72,24 +72,24 @@ final class MusicPatch extends IntrusiveNode {
           var5 = decompiledCaughtException;
           stackIn_23_0 = var5;
           stackIn_23_1 = new StringBuilder().append("td.D(");
-          if (param0 == null) {
+          if (requiredNotes == null) {
             stackIn_24_2 = "null";
           } else {
             stackIn_24_2 = "{...}";
           }
           stackIn_26_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',');
-          if (param1 == null) {
+          if (sampleBudget == null) {
             stackIn_27_2 = "null";
           } else {
             stackIn_27_2 = "{...}";
           }
           stackIn_29_1 = ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',');
-          if (param2 == null) {
+          if (soundCache == null) {
             stackIn_30_2 = "null";
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -150,8 +150,8 @@ final class MusicPatch extends IntrusiveNode {
         }
     }
 
-    final void d(byte param0) {
-        this.field_p = null;
+    final void clearSampleIds(byte param0) {
+        this.sampleIds = null;
         int var2 = -58 % ((param0 - 73) / 51);
     }
 
@@ -385,13 +385,13 @@ final class MusicPatch extends IntrusiveNode {
         int var30Lifetime1Lifetime2;
         int var31Lifetime1Lifetime1;
         try {
-          this.field_k = new short[128];
-          this.field_n = new MusicPatchEnvelope[128];
-          this.field_q = new byte[128];
-          this.field_o = new PcmSample[128];
-          this.field_p = new int[128];
-          this.field_t = new byte[128];
-          this.field_r = new byte[128];
+          this.tunings = new short[128];
+          this.envelopes = new MusicPatchEnvelope[128];
+          this.noteVolumes = new byte[128];
+          this.samples = new PcmSample[128];
+          this.sampleIds = new int[128];
+          this.notePans = new byte[128];
+          this.exclusiveGroups = new byte[128];
           var38 = new PacketBuffer(param0);
           for (var3 = 0; var38.payload[var38.position + var3] != 0; var3++) {
           }
@@ -459,12 +459,12 @@ final class MusicPatch extends IntrusiveNode {
             var15_ref = var40;
             var16_int = var38.e(-31302);
             if (var16_int > 0) {
-              var15_ref.field_g = new byte[var16_int * 2];
+              var15_ref.gainCurve = new byte[var16_int * 2];
             }
             var16_intLifetime1 = var38.e(-31302);
             if (var16_intLifetime1 > 0) {
-              var15_ref.field_h = new byte[2 + 2 * var16_intLifetime1];
-              var40.field_h[1] = (byte)64;
+              var15_ref.releaseCurve = new byte[2 + 2 * var16_intLifetime1];
+              var40.releaseCurve[1] = (byte)64;
             }
           }
           var14Lifetime2 = var38.e(-31302);
@@ -497,12 +497,12 @@ final class MusicPatch extends IntrusiveNode {
           var19Lifetime1 = 0;
           for (var20 = 0; var20 < 128; var20++) {
             var19Lifetime1 = var19Lifetime1 + var38.e(-31302);
-            this.field_k[var20] = (short)var19Lifetime1;
+            this.tunings[var20] = (short)var19Lifetime1;
           }
           var19Lifetime2 = 0;
           for (var20Lifetime1 = 0; var20Lifetime1 < 128; var20Lifetime1++) {
             var19Lifetime2 = var19Lifetime2 + var38.e(-31302);
-            this.field_k[var20Lifetime1] = (short)(this.field_k[var20Lifetime1] + (var19Lifetime2 << 8));
+            this.tunings[var20Lifetime1] = (short)(this.tunings[var20Lifetime1] + (var19Lifetime2 << 8));
           }
           var20Lifetime2 = 0;
           var21 = 0;
@@ -516,15 +516,15 @@ final class MusicPatch extends IntrusiveNode {
               }
               var22 = var38.f((byte) 93);
             }
-            this.field_k[var23] = (short)(this.field_k[var23] + (eb.a(-1 + var22, 2) << 14));
-            this.field_p[var23] = var22;
+            this.tunings[var23] = (short)(this.tunings[var23] + (eb.a(-1 + var22, 2) << 14));
+            this.sampleIds[var23] = var22;
             var20Lifetime2--;
           }
           var20Lifetime3 = 0;
           var21Lifetime1 = 0;
           var23Lifetime1 = 0;
           for (var24 = 0; var24 < 128; var24++) {
-            if (0 != this.field_p[var24]) {
+            if (0 != this.sampleIds[var24]) {
               if (var20Lifetime3 == 0) {
                 if (var55.length <= var21Lifetime1) {
                   var20Lifetime3 = -1;
@@ -535,7 +535,7 @@ final class MusicPatch extends IntrusiveNode {
                 var5Lifetime1++;
                 var23Lifetime1 = -1 + var38.payload[incrementValue$6];
               }
-              this.field_r[var24] = (byte)var23Lifetime1;
+              this.exclusiveGroups[var24] = (byte)var23Lifetime1;
               var20Lifetime3--;
             }
           }
@@ -543,7 +543,7 @@ final class MusicPatch extends IntrusiveNode {
           var20Lifetime4 = 0;
           var24Lifetime1 = 0;
           for (var25_int = 0; var25_int < 128; var25_int++) {
-            if (this.field_p[var25_int] != 0) {
+            if (this.sampleIds[var25_int] != 0) {
               if (var20Lifetime4 == 0) {
                 incrementValue$3 = var8Lifetime1;
                 var8Lifetime1++;
@@ -555,14 +555,14 @@ final class MusicPatch extends IntrusiveNode {
                 }
               }
               var20Lifetime4--;
-              this.field_t[var25_int] = (byte)var24Lifetime1;
+              this.notePans[var25_int] = (byte)var24Lifetime1;
             }
           }
           var21Lifetime3 = 0;
           var20Lifetime5 = 0;
           var25 = null;
           for (var26 = 0; var26 < 128; var26++) {
-            if (this.field_p[var26] != 0) {
+            if (this.sampleIds[var26] != 0) {
               if (var20Lifetime5 == 0) {
                 var25 = var13[var53[var21Lifetime3]];
                 if (var57.length <= var21Lifetime3) {
@@ -571,7 +571,7 @@ final class MusicPatch extends IntrusiveNode {
                   var20Lifetime5 = var10[var21Lifetime3++];
                 }
               }
-              this.field_n[var26] = (MusicPatchEnvelope) (var25);
+              this.envelopes[var26] = (MusicPatchEnvelope) (var25);
               var20Lifetime5--;
             }
           }
@@ -585,24 +585,24 @@ final class MusicPatch extends IntrusiveNode {
               } else {
                 var20Lifetime6 = var18[var21Lifetime4++];
               }
-              if (this.field_p[var27] > 0) {
+              if (this.sampleIds[var27] > 0) {
                 var26Lifetime1 = var38.e(-31302) + 1;
               }
             }
             var20Lifetime6--;
-            this.field_q[var27] = (byte)var26Lifetime1;
+            this.noteVolumes[var27] = (byte)var26Lifetime1;
           }
-          this.field_s = 1 + var38.e(-31302);
+          this.volume = 1 + var38.e(-31302);
           for (var27Lifetime1 = 0; var12 > var27Lifetime1; var27Lifetime1++) {
             var45 = var13[var27Lifetime1];
-            if (var45.field_g != null) {
-              for (var29 = 1; var45.field_g.length > var29; var29 += 2) {
-                var45.field_g[var29] = var38.d(true);
+            if (var45.gainCurve != null) {
+              for (var29 = 1; var45.gainCurve.length > var29; var29 += 2) {
+                var45.gainCurve[var29] = var38.d(true);
               }
             }
-            if (var45.field_h != null) {
-              for (var29Lifetime5 = 3; var29Lifetime5 < -2 + var45.field_h.length; var29Lifetime5 += 2) {
-                var45.field_h[var29Lifetime5] = var38.d(true);
+            if (var45.releaseCurve != null) {
+              for (var29Lifetime5 = 3; var29Lifetime5 < -2 + var45.releaseCurve.length; var29Lifetime5 += 2) {
+                var45.releaseCurve[var29Lifetime5] = var38.d(true);
               }
             }
           }
@@ -618,21 +618,21 @@ final class MusicPatch extends IntrusiveNode {
           }
           for (var27Lifetime4 = 0; var27Lifetime4 < var12; var27Lifetime4++) {
             var48 = var13[var27Lifetime4];
-            if (var48.field_h != null) {
+            if (var48.releaseCurve != null) {
               var19Lifetime3 = 0;
-              for (var29Lifetime1 = 2; var29Lifetime1 < var48.field_h.length; var29Lifetime1 += 2) {
+              for (var29Lifetime1 = 2; var29Lifetime1 < var48.releaseCurve.length; var29Lifetime1 += 2) {
                 var19Lifetime3 = var38.e(-31302) + (var19Lifetime3 + 1);
-                var48.field_h[var29Lifetime1] = (byte)var19Lifetime3;
+                var48.releaseCurve[var29Lifetime1] = (byte)var19Lifetime3;
               }
             }
           }
           for (var27Lifetime5 = 0; var12 > var27Lifetime5; var27Lifetime5++) {
             var49 = var13[var27Lifetime5];
-            if (var49.field_g != null) {
+            if (var49.gainCurve != null) {
               var19Lifetime4 = 0;
-              for (var29Lifetime2 = 2; var49.field_g.length > var29Lifetime2; var29Lifetime2 += 2) {
+              for (var29Lifetime2 = 2; var49.gainCurve.length > var29Lifetime2; var29Lifetime2 += 2) {
                 var19Lifetime4 = var38.e(-31302) + (var19Lifetime4 + 1);
-                var49.field_g[var29Lifetime2] = (byte)var19Lifetime4;
+                var49.gainCurve[var29Lifetime2] = (byte)var19Lifetime4;
               }
             }
           }
@@ -646,7 +646,7 @@ final class MusicPatch extends IntrusiveNode {
             var27Lifetime6Lifetime1 = var58[0];
             var28 = var58[1];
             for (var29Lifetime3 = 0; var29Lifetime3 < var27Lifetime6Lifetime1; var29Lifetime3++) {
-              this.field_q[var29Lifetime3] = (byte)(32 + this.field_q[var29Lifetime3] * var28 >> 6);
+              this.noteVolumes[var29Lifetime3] = (byte)(32 + this.noteVolumes[var29Lifetime3] * var28 >> 6);
             }
             var29Lifetime3Lifetime1 = 2;
             while (var58.length > var29Lifetime3Lifetime1) {
@@ -656,7 +656,7 @@ final class MusicPatch extends IntrusiveNode {
               for (var33 = var27Lifetime6Lifetime1; var30 > var33; var33++) {
                 var34 = dh.b(var32, var30 - var27Lifetime6Lifetime1, false);
                 var32 = var32 + (var31 - var28);
-                this.field_q[var33] = (byte)(32 + this.field_q[var33] * var34 >> 6);
+                this.noteVolumes[var33] = (byte)(32 + this.noteVolumes[var33] * var34 >> 6);
               }
               var28 = var31;
               var29Lifetime3Lifetime1 += 2;
@@ -664,7 +664,7 @@ final class MusicPatch extends IntrusiveNode {
             }
             var15 = null;
             for (var30Lifetime2 = var27Lifetime6Lifetime1; var30Lifetime2 < 128; var30Lifetime2++) {
-              this.field_q[var30Lifetime2] = (byte)(this.field_q[var30Lifetime2] * var28 + 32 >> 6);
+              this.noteVolumes[var30Lifetime2] = (byte)(this.noteVolumes[var30Lifetime2] * var28 + 32 >> 6);
             }
           }
           if (var16 != null) {
@@ -677,14 +677,14 @@ final class MusicPatch extends IntrusiveNode {
             var27Lifetime7Lifetime1 = var47[0];
             var28Lifetime1 = var47[1] << 1;
             for (var29Lifetime4 = 0; var29Lifetime4 < var27Lifetime7Lifetime1; var29Lifetime4++) {
-              var30Lifetime1 = (this.field_t[var29Lifetime4] & 255) + var28Lifetime1;
+              var30Lifetime1 = (this.notePans[var29Lifetime4] & 255) + var28Lifetime1;
               if (var30Lifetime1 < 0) {
                 var30Lifetime1 = 0;
               }
               if (var30Lifetime1 > 128) {
                 var30Lifetime1 = 128;
               }
-              this.field_t[var29Lifetime4] = (byte)var30Lifetime1;
+              this.notePans[var29Lifetime4] = (byte)var30Lifetime1;
             }
             var29Lifetime4Lifetime1 = 2;
             while (var47.length > var29Lifetime4Lifetime1) {
@@ -695,7 +695,7 @@ final class MusicPatch extends IntrusiveNode {
               var33Lifetime1 = var37;
               while (var37 < var30Lifetime1Lifetime1) {
                 var34Lifetime1 = dh.b(var32Lifetime1, var30Lifetime1Lifetime1 - var27Lifetime7Lifetime1, false);
-                var35 = (this.field_t[var37] & 255) + var34Lifetime1;
+                var35 = (this.notePans[var37] & 255) + var34Lifetime1;
                 if (0 > var35) {
                   var35 = 0;
                 }
@@ -703,7 +703,7 @@ final class MusicPatch extends IntrusiveNode {
                   var35 = 128;
                 }
                 var32Lifetime1 = var32Lifetime1 + (-var28Lifetime1 + var31Lifetime1);
-                this.field_t[var37] = (byte)var35;
+                this.notePans[var37] = (byte)var35;
                 var37++;
               }
               var29Lifetime4Lifetime1 += 2;
@@ -711,45 +711,45 @@ final class MusicPatch extends IntrusiveNode {
               var27Lifetime7Lifetime1 = var30Lifetime1Lifetime1;
             }
             for (var30Lifetime1Lifetime2 = var27Lifetime7Lifetime1; var30Lifetime1Lifetime2 < 128; var30Lifetime1Lifetime2++) {
-              var31Lifetime1Lifetime1 = var28Lifetime1 + (255 & this.field_t[var30Lifetime1Lifetime2]);
+              var31Lifetime1Lifetime1 = var28Lifetime1 + (255 & this.notePans[var30Lifetime1Lifetime2]);
               if (var31Lifetime1Lifetime1 < 0) {
                 var31Lifetime1Lifetime1 = 0;
               }
               if (var31Lifetime1Lifetime1 > 128) {
                 var31Lifetime1Lifetime1 = 128;
               }
-              this.field_t[var30Lifetime1Lifetime2] = (byte)var31Lifetime1Lifetime1;
+              this.notePans[var30Lifetime1Lifetime2] = (byte)var31Lifetime1Lifetime1;
             }
             var16 = null;
           }
           for (var27Lifetime8 = 0; var27Lifetime8 < var12; var27Lifetime8++) {
-            var13[var27Lifetime8].field_i = var38.e(-31302);
+            var13[var27Lifetime8].decayRate = var38.e(-31302);
           }
           for (var27Lifetime9 = 0; var27Lifetime9 < var12; var27Lifetime9++) {
             var50 = var13[var27Lifetime9];
-            if (null != var50.field_g) {
-              var50.field_f = var38.e(-31302);
+            if (null != var50.gainCurve) {
+              var50.gainKeyScale = var38.e(-31302);
             }
-            if (null != var50.field_h) {
-              var50.field_c = var38.e(-31302);
+            if (null != var50.releaseCurve) {
+              var50.releaseKeyScale = var38.e(-31302);
             }
-            if (var50.field_i > 0) {
-              var50.field_d = var38.e(-31302);
+            if (var50.decayRate > 0) {
+              var50.decayKeyScale = var38.e(-31302);
             }
           }
           for (var27Lifetime10 = 0; var12 > var27Lifetime10; var27Lifetime10++) {
-            var13[var27Lifetime10].field_j = var38.e(-31302);
+            var13[var27Lifetime10].vibratoRate = var38.e(-31302);
           }
           for (var27Lifetime11 = 0; var12 > var27Lifetime11; var27Lifetime11++) {
             var51 = var13[var27Lifetime11];
-            if (var51.field_j > 0) {
-              var51.field_b = var38.e(-31302);
+            if (var51.vibratoRate > 0) {
+              var51.vibratoDepth = var38.e(-31302);
             }
           }
           for (var27Lifetime12 = 0; var27Lifetime12 < var12; var27Lifetime12++) {
             var52 = var13[var27Lifetime12];
-            if (0 < var52.field_b) {
-              var52.field_e = var38.e(-31302);
+            if (0 < var52.vibratoDepth) {
+              var52.vibratoDelay = var38.e(-31302);
             }
           }
           return;

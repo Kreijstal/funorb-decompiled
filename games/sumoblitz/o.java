@@ -16,7 +16,7 @@ final class o {
         }
         of.a((byte) -104);
         ju.g(123);
-        if (!og.a(-77)) {
+        if (!SoundCache.isLevelIndexTwentyFour(-77)) {
           StrongCacheReference.switchMenuScreen(-7753, true, 10);
         }
         if (!(oh.levelIndex <= bl.field_e)) {

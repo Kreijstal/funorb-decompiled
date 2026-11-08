@@ -2730,7 +2730,7 @@ final class ni extends ShaderEffect {
                 }
                 var2 = rc.a("fs_button_members", (byte) -23);
                 if (null != var2) {
-                  pp.membersText = MusicVoice.a(0, var2);
+                  AudioServiceThread.membersText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("fs_unavailable", (byte) -23);
                 if (var2 != null) {

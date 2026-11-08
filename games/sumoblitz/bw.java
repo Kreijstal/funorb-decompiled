@@ -83,7 +83,7 @@ final class bw extends qt {
         while (var2 < rl.field_n) {
           var4 = we.field_B[var2] * vg.field_k[var2];
           var21 = TextLayout.field_d[var2];
-          if (!og.field_d[var2]) {
+          if (!SoundCache.field_d[var2]) {
             var10 = new int[var4];
             var22 = var10;
             for (var7_int = 0; var7_int < var4; var7_int++) {

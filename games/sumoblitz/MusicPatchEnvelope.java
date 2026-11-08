@@ -3,15 +3,15 @@
  */
 final class MusicPatchEnvelope {
     static Sprite field_a;
-    int field_c;
-    int field_e;
-    int field_j;
-    int field_f;
-    byte[] field_g;
-    byte[] field_h;
-    int field_b;
-    int field_i;
-    int field_d;
+    int releaseKeyScale;
+    int vibratoDelay;
+    int vibratoRate;
+    int gainKeyScale;
+    byte[] gainCurve;
+    byte[] releaseCurve;
+    int vibratoDepth;
+    int decayRate;
+    int decayKeyScale;
 
     final static boolean a(int param0, int param1) {
         int var2_int = 0;

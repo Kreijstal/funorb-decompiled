@@ -3,21 +3,21 @@
  */
 final class MusicCrossfadeStream extends PcmStream {
     private MusicTrack field_t;
-    private int field_C;
+    private int crossfadeStep;
     static ToolkitSprite[] field_q;
     private int[] field_s;
-    private MusicTrack field_y;
+    private MusicTrack secondTrack;
     private int[] field_A;
     private boolean field_u;
     static SpriteData field_p;
-    private MusicTrack field_v;
+    private MusicTrack firstTrack;
     private int field_z;
-    private int field_B;
+    private int volume;
     private MidiPcmStream field_D;
     private boolean field_w;
-    MidiPcmStream field_r;
-    MidiPcmStream field_x;
-    private int field_o;
+    MidiPcmStream secondSynthesizer;
+    MidiPcmStream firstSynthesizer;
+    private int crossfadePosition;
 
     public static void releaseStatics(int param0) {
         field_p = null;
@@ -25,7 +25,7 @@ final class MusicCrossfadeStream extends PcmStream {
         field_q = null;
     }
 
-    final synchronized void a(int param0, int param1, MusicTrack param2, boolean param3, int param4, int param5) {
+    final synchronized void transitionToTrack(int param0, int param1, MusicTrack param2, boolean param3, int param4, int param5) {
         boolean stackIn_22_1 = false;
         int stackIn_34_0 = 0;
         MidiPcmStream stackIn_43_0 = null;
@@ -44,77 +44,77 @@ final class MusicCrossfadeStream extends PcmStream {
         try {
           if (this.field_u &&
             param3) {
-            if (this.field_C <= 0) {
-              if (null != this.field_y) {
-                this.field_r.e(0);
+            if (this.crossfadeStep <= 0) {
+              if (null != this.secondTrack) {
+                this.secondSynthesizer.stop(0);
               }
-              this.field_y = param2;
+              this.secondTrack = param2;
               if (param2 != null) {
-                this.field_r.a(false, param2, 60);
-                this.a(param1, (byte) 24, this.field_r, param5);
+                this.secondSynthesizer.playTrack(false, param2, 60);
+                this.configureSynthesizer(param1, (byte) 24, this.secondSynthesizer, param5);
               }
             } else {
-              if (this.field_v != null) {
-                this.field_x.e(0);
+              if (this.firstTrack != null) {
+                this.firstSynthesizer.stop(0);
               }
-              this.field_v = param2;
+              this.firstTrack = param2;
               if (param2 != null) {
-                this.field_x.a(false, param2, 117);
-                this.a(param1, (byte) 39, this.field_x, param5);
+                this.firstSynthesizer.playTrack(false, param2, 117);
+                this.configureSynthesizer(param1, (byte) 39, this.firstSynthesizer, param5);
               }
             }
             return;
           }
           if (param0 != 1) {
             var9 = (Sprite[]) null;
-            MusicCrossfadeStream.a(57, -30, 8, 30, (Sprite[]) null);
+            MusicCrossfadeStream.drawHorizontalSpriteStrip(57, -30, 8, 30, (Sprite[]) null);
           }
           stackIn_22_1 = (param3);
           this.field_u = stackIn_22_1;
-          if (param2 == this.field_v) {
-            this.field_C = param4;
-            this.a(param1, (byte) -114, this.field_x, param5);
+          if (param2 == this.firstTrack) {
+            this.crossfadeStep = param4;
+            this.configureSynthesizer(param1, (byte) -114, this.firstSynthesizer, param5);
             return;
           }
-          if (param2 == this.field_y) {
-            this.field_C = -param4;
-            this.a(param1, (byte) -82, this.field_r, param5);
+          if (param2 == this.secondTrack) {
+            this.crossfadeStep = -param4;
+            this.configureSynthesizer(param1, (byte) -82, this.secondSynthesizer, param5);
             return;
           }
-          if (this.field_v != null) {
-            if (this.field_y == null) {
+          if (this.firstTrack != null) {
+            if (this.secondTrack == null) {
               var7_int = 0;
             } else {
-              stackIn_34_0 = (524288 <= this.field_o) ? 0 : 1;
+              stackIn_34_0 = (524288 <= this.crossfadePosition) ? 0 : 1;
               var7_int = stackIn_34_0;
             }
           } else {
             var7_int = 1;
           }
           if (var7_int == 0) {
-            if (null != this.field_y) {
-              this.field_r.e(0);
+            if (null != this.secondTrack) {
+              this.secondSynthesizer.stop(0);
             }
-            this.field_y = param2;
+            this.secondTrack = param2;
             if (param2 != null) {
-              stackIn_53_0 = this.field_r;
+              stackIn_53_0 = this.secondSynthesizer;
               stackIn_54_1 = !(param3);
-              ((MidiPcmStream) (Object) stackIn_53_0).a(stackIn_54_1, param2, param0 + 67);
-              this.a(param1, (byte) 45, this.field_r, param5);
+              ((MidiPcmStream) (Object) stackIn_53_0).playTrack(stackIn_54_1, param2, param0 + 67);
+              this.configureSynthesizer(param1, (byte) 45, this.secondSynthesizer, param5);
             }
-            this.field_C = -param4;
+            this.crossfadeStep = -param4;
           } else {
-            if (null != this.field_v) {
-              this.field_x.e(param0 - 1);
+            if (null != this.firstTrack) {
+              this.firstSynthesizer.stop(param0 - 1);
             }
-            this.field_v = param2;
+            this.firstTrack = param2;
             if (param2 != null) {
-              stackIn_43_0 = this.field_x;
+              stackIn_43_0 = this.firstSynthesizer;
               stackIn_44_1 = !(param3);
-              ((MidiPcmStream) (Object) stackIn_43_0).a(stackIn_44_1, param2, 121);
-              this.a(param1, (byte) -114, this.field_x, param5);
+              ((MidiPcmStream) (Object) stackIn_43_0).playTrack(stackIn_44_1, param2, 121);
+              this.configureSynthesizer(param1, (byte) -114, this.firstSynthesizer, param5);
             }
-            this.field_C = param4;
+            this.crossfadeStep = param4;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -131,7 +131,7 @@ final class MusicCrossfadeStream extends PcmStream {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, Sprite[] param4) {
+    final static void drawHorizontalSpriteStrip(int param0, int param1, int param2, int param3, Sprite[] param4) {
         RuntimeException runtimeException = null;
         int var5_int = 0;
         int var6 = 0;
@@ -177,31 +177,31 @@ final class MusicCrossfadeStream extends PcmStream {
         }
     }
 
-    private final void a(int param0, byte param1, MidiPcmStream param2, int param3) {
+    private final void configureSynthesizer(int param0, byte param1, MidiPcmStream param2, int param3) {
         try {
-          param2.a((byte) -86, -1, param3);
-          param2.b(param0, 0);
+          param2.setChannelVolumeScale((byte) -86, -1, param3);
+          param2.setTimeScale(param0, 0);
           int var5_int = -21 / ((param1 + 28) / 47);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ud.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
-    final synchronized void a(byte param0, int param1) {
-        if (param0 != -43) {
+    final synchronized void setVolume(byte guard, int volume) {
+        if (guard != -43) {
           return;
         }
-        this.field_B = param1;
+        this.volume = volume;
     }
 
-    private final void a(MidiPcmStream param0, int param1, MidiPcmStream param2) {
+    private final void setSynthesizers(MidiPcmStream param0, int param1, MidiPcmStream param2) {
         try {
           if (param1 > -55) {
             this.activityWeight();
           }
-          this.field_o = 1048576;
-          this.field_r = param0;
-          this.field_x = param2;
+          this.crossfadePosition = 1048576;
+          this.secondSynthesizer = param0;
+          this.firstSynthesizer = param2;
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ud.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -215,11 +215,11 @@ final class MusicCrossfadeStream extends PcmStream {
         int var3;
         boolean decompiledFrameRemainder0 = true;
         var3 = Sumoblitz.field_L ? 1 : 0;
-        if (this.field_o > 0) {
-          if (null != this.field_v) {
-            this.field_x.skip(param0);
+        if (this.crossfadePosition > 0) {
+          if (null != this.firstTrack) {
+            this.firstSynthesizer.skip(param0);
           }
-          if (this.field_o >= 1048576) {
+          if (this.crossfadePosition >= 1048576) {
             if ((!(0 >= this.field_z)) &&
               ((this.field_t != null))) {
               this.field_D.skip(param0);
@@ -227,7 +227,7 @@ final class MusicCrossfadeStream extends PcmStream {
             decompiledFrameRemainder0 = false;
           }
           else {
-            if (null == this.field_y) {
+            if (null == this.secondTrack) {
               if ((!(0 >= this.field_z)) &&
                 ((this.field_t != null))) {
                 this.field_D.skip(param0);
@@ -235,11 +235,11 @@ final class MusicCrossfadeStream extends PcmStream {
               decompiledFrameRemainder0 = false;
             }
             else {
-              this.field_r.skip(param0);
+              this.secondSynthesizer.skip(param0);
             }
           }
         } else {
-          if (this.field_o >= 1048576) {
+          if (this.crossfadePosition >= 1048576) {
             if ((!(0 >= this.field_z)) &&
               ((this.field_t != null))) {
               this.field_D.skip(param0);
@@ -247,7 +247,7 @@ final class MusicCrossfadeStream extends PcmStream {
             decompiledFrameRemainder0 = false;
           }
           else {
-            if (null == this.field_y) {
+            if (null == this.secondTrack) {
               if ((!(0 >= this.field_z)) &&
                 ((this.field_t != null))) {
                 this.field_D.skip(param0);
@@ -255,7 +255,7 @@ final class MusicCrossfadeStream extends PcmStream {
               decompiledFrameRemainder0 = false;
             }
             else {
-              this.field_r.skip(param0);
+              this.secondSynthesizer.skip(param0);
             }
           }
         }
@@ -264,44 +264,44 @@ final class MusicCrossfadeStream extends PcmStream {
           this.field_D.skip(param0);
         }
         if (this.field_u) {
-          if (this.field_C > 0 &&
-            !this.field_x.c(-8192)) {
-            this.field_C = -this.field_C;
+          if (this.crossfadeStep > 0 &&
+            !this.firstSynthesizer.isPlaying(-8192)) {
+            this.crossfadeStep = -this.crossfadeStep;
             this.field_u = false;
-            this.field_v = null;
+            this.firstTrack = null;
           } else {
-            if (0 > this.field_C &&
-              !this.field_r.c(-8192)) {
-              this.field_C = -this.field_C;
-              this.field_y = null;
+            if (0 > this.crossfadeStep &&
+              !this.secondSynthesizer.isPlaying(-8192)) {
+              this.crossfadeStep = -this.crossfadeStep;
+              this.secondTrack = null;
               this.field_u = false;
             }
           }
         }
-        if (this.field_C != 0) {
-          this.field_o = this.field_o + this.field_C * param0;
-          if (this.field_o < 1048576) {
-            if (0 >= this.field_o) {
-              this.field_o = 0;
+        if (this.crossfadeStep != 0) {
+          this.crossfadePosition = this.crossfadePosition + this.crossfadeStep * param0;
+          if (this.crossfadePosition < 1048576) {
+            if (0 >= this.crossfadePosition) {
+              this.crossfadePosition = 0;
               if (!this.field_u) {
-                this.field_C = 0;
+                this.crossfadeStep = 0;
                 if (!this.field_w) {
-                  if (this.field_v != null) {
-                    this.field_x.e(0);
+                  if (this.firstTrack != null) {
+                    this.firstSynthesizer.stop(0);
                   }
-                  this.field_v = null;
+                  this.firstTrack = null;
                 }
               }
             }
           } else {
-            this.field_o = 1048576;
+            this.crossfadePosition = 1048576;
             if (!this.field_u) {
-              this.field_C = 0;
+              this.crossfadeStep = 0;
               if (!this.field_w) {
-                if (this.field_y != null) {
-                  this.field_r.e(0);
+                if (this.secondTrack != null) {
+                  this.secondSynthesizer.stop(0);
                 }
-                this.field_y = null;
+                this.secondTrack = null;
               }
             }
           }
@@ -339,65 +339,65 @@ final class MusicCrossfadeStream extends PcmStream {
         int var8Lifetime1;
         var11 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (this.field_B <= 0) {
+          if (this.volume <= 0) {
             this.skip(param2);
             return;
           }
           if (this.field_u) {
-            if (0 < this.field_C &&
-              !this.field_x.c(-8192)) {
+            if (0 < this.crossfadeStep &&
+              !this.firstSynthesizer.isPlaying(-8192)) {
               this.field_u = false;
-              this.field_C = -this.field_C;
-              this.field_v = null;
+              this.crossfadeStep = -this.crossfadeStep;
+              this.firstTrack = null;
             } else {
-              if (0 > this.field_C &&
-                !this.field_r.c(-8192)) {
-                this.field_y = null;
-                this.field_C = -this.field_C;
+              if (0 > this.crossfadeStep &&
+                !this.secondSynthesizer.isPlaying(-8192)) {
+                this.secondTrack = null;
+                this.crossfadeStep = -this.crossfadeStep;
                 this.field_u = false;
               }
             }
           }
-          var4_int = (this.field_o >> 12) * this.field_B / 256;
-          var5 = this.field_B - var4_int;
-          if (this.field_C != 0) {
-            this.field_o = this.field_o + this.field_C * param2;
-            if (this.field_o < 1048576) {
-              if (0 >= this.field_o) {
-                this.field_o = 0;
+          var4_int = (this.crossfadePosition >> 12) * this.volume / 256;
+          var5 = this.volume - var4_int;
+          if (this.crossfadeStep != 0) {
+            this.crossfadePosition = this.crossfadePosition + this.crossfadeStep * param2;
+            if (this.crossfadePosition < 1048576) {
+              if (0 >= this.crossfadePosition) {
+                this.crossfadePosition = 0;
                 if (!this.field_u) {
-                  this.field_C = 0;
+                  this.crossfadeStep = 0;
                   if (!this.field_w) {
-                    if (null != this.field_v) {
-                      this.field_x.e(0);
+                    if (null != this.firstTrack) {
+                      this.firstSynthesizer.stop(0);
                     }
-                    this.field_v = null;
+                    this.firstTrack = null;
                   }
                 }
               }
             } else {
-              this.field_o = 1048576;
+              this.crossfadePosition = 1048576;
               if (!this.field_u) {
-                this.field_C = 0;
+                this.crossfadeStep = 0;
                 if (!this.field_w) {
-                  if (null != this.field_y) {
-                    this.field_r.e(0);
+                  if (null != this.secondTrack) {
+                    this.secondSynthesizer.stop(0);
                   }
-                  this.field_y = null;
+                  this.secondTrack = null;
                 }
               }
             }
           }
-          if (AudioOutput.field_o) {
+          if (AudioOutput.stereo) {
             stackIn_33_0 = param2 << 1;
           } else {
             stackIn_33_0 = param2;
           }
           var6 = stackIn_33_0;
-          if (this.field_z < 256 && (this.field_v != null ||
-            this.field_y != null)) {
+          if (this.field_z < 256 && (this.firstTrack != null ||
+            this.secondTrack != null)) {
             if (var4_int == 256) {
-              this.field_x.mixInto(param0, param1, param2);
+              this.firstSynthesizer.mixInto(param0, param1, param2);
             } else {
               if (256 != var5) {
                 if (this.field_s != null &&
@@ -408,9 +408,9 @@ final class MusicCrossfadeStream extends PcmStream {
                   this.field_s = new int[var6];
                   this.field_A = new int[var6];
                 }
-                this.field_x.mixInto(this.field_s, 0, param2);
-                this.field_r.mixInto(this.field_A, 0, param2);
-                if (!AudioOutput.field_o) {
+                this.firstSynthesizer.mixInto(this.field_s, 0, param2);
+                this.secondSynthesizer.mixInto(this.field_A, 0, param2);
+                if (!AudioOutput.stereo) {
                   stackIn_48_0 = param1;
                 } else {
                   localTemp$0 = param1 << 1;
@@ -422,7 +422,7 @@ final class MusicCrossfadeStream extends PcmStream {
                   param0[var8 + var7] = param0[var8 + var7] + (var5 * this.field_A[var8] + var4_int * this.field_s[var8] >> 8);
                 }
               } else {
-                this.field_r.mixInto(param0, param1, param2);
+                this.secondSynthesizer.mixInto(param0, param1, param2);
               }
             }
           }
@@ -436,7 +436,7 @@ final class MusicCrossfadeStream extends PcmStream {
               this.field_s = new int[var6];
             }
             this.field_D.mixInto(this.field_s, 0, param2);
-            if (AudioOutput.field_o) {
+            if (AudioOutput.stereo) {
               localTemp$1 = param1 << 1;
               param1 = localTemp$1;
               stackIn_61_0 = localTemp$1;
@@ -444,8 +444,8 @@ final class MusicCrossfadeStream extends PcmStream {
               stackIn_61_0 = param1;
             }
             var7Lifetime1 = stackIn_61_0;
-            var8Lifetime1 = this.field_z * this.field_B / 256;
-            var9 = this.field_B - var8Lifetime1;
+            var8Lifetime1 = this.field_z * this.volume / 256;
+            var9 = this.volume - var8Lifetime1;
             for (var10 = 0; var6 > var10; var10++) {
               param0[var10 + var7Lifetime1] = this.field_s[var10] * var8Lifetime1 + param0[var10 + var7Lifetime1] * var9 >> 8;
             }
@@ -467,11 +467,11 @@ final class MusicCrossfadeStream extends PcmStream {
     }
 
     MusicCrossfadeStream(MidiPcmStream param0, MidiPcmStream param1) {
-        this.field_B = 256;
+        this.volume = 256;
         this.field_w = false;
         this.field_z = 0;
         try {
-          this.a(param1, -79, param0);
+          this.setSynthesizers(param1, -79, param0);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ud.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

@@ -133,19 +133,19 @@ final class fw extends IntrusiveNode {
     }
 
     final static gm a(int param0) {
-        if (null == pp.field_d) {
-          pp.field_d = new gm(jm.field_a, 20, 0, 0, 0, 11579568, -1, 0, 0, jm.field_a.field_s, -1, 2147483647, true);
+        if (null == AudioServiceThread.field_d) {
+          AudioServiceThread.field_d = new gm(jm.field_a, 20, 0, 0, 0, 11579568, -1, 0, 0, jm.field_a.field_s, -1, 2147483647, true);
           if (param0 != 0) {
             fw.c(false);
-            return pp.field_d;
+            return AudioServiceThread.field_d;
           }
-          return pp.field_d;
+          return AudioServiceThread.field_d;
         }
         if (param0 == 0) {
-          return pp.field_d;
+          return AudioServiceThread.field_d;
         }
         fw.c(false);
-        return pp.field_d;
+        return AudioServiceThread.field_d;
     }
 
     static {

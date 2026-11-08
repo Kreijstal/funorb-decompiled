@@ -58,7 +58,7 @@ final class kq extends hf implements ai {
           var2.field_w = (mh) ((Object) new gm(jm.field_a, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.a(var2, 60);
           if (vs.b((byte) 9)) {
-            this.field_U = this.a(25566, (qm) (this), pp.membersText);
+            this.field_U = this.a(25566, (qm) (this), AudioServiceThread.membersText);
           }
           this.field_P = this.a(25566, (qm) (this), jh.closeText);
         } catch (RuntimeException runtimeException) {

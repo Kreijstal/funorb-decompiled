@@ -31,17 +31,17 @@ final class oi {
 
     final static void a(int param0) {
         if (wd.field_f != null) {
-          wd.field_f.e();
+          wd.field_f.shutdown();
           if (param0 == -27864) {
             if (null == LegacyOpenGlEffectManager.field_a) {
               return;
             }
-            LegacyOpenGlEffectManager.field_a.e();
+            LegacyOpenGlEffectManager.field_a.shutdown();
             return;
           }
           field_d = (SpriteData) null;
           if (null != LegacyOpenGlEffectManager.field_a) {
-            LegacyOpenGlEffectManager.field_a.e();
+            LegacyOpenGlEffectManager.field_a.shutdown();
             return;
           }
           return;
@@ -51,13 +51,13 @@ final class oi {
           if (null == LegacyOpenGlEffectManager.field_a) {
             return;
           }
-          LegacyOpenGlEffectManager.field_a.e();
+          LegacyOpenGlEffectManager.field_a.shutdown();
           return;
         }
         if (null == LegacyOpenGlEffectManager.field_a) {
           return;
         }
-        LegacyOpenGlEffectManager.field_a.e();
+        LegacyOpenGlEffectManager.field_a.shutdown();
     }
 
     static {

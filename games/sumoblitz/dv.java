@@ -25,7 +25,7 @@ final class dv implements mh {
           var7 = param1 + param0.field_v;
           ByteArrayStorage.drawBeveledBorder(param0.field_p, var6_int, param0.field_q, (byte) -84, var7);
           if (param0.d(-1)) {
-            pp.a(var7 + 2, param0.field_q - 4, -13181, var6_int + 2, -4 + param0.field_p);
+            AudioServiceThread.drawDottedRectangle(var7 + 2, param0.field_q - 4, -13181, var6_int + 2, -4 + param0.field_p);
           }
           SoftwareRasterizer.setClip(var6_int, var7, -2 + param0.field_q + var6_int, param0.field_p + var7);
           var8 = this.field_a.field_B.a(-72);

@@ -286,7 +286,7 @@ class ar extends wp {
           var7 = var9.a(param0, (UiWidget) (this), 16098);
           var8 = var9.b(param1, (UiWidget) (this), 0);
           do {
-            pp.a(-2 + (var6.field_l + var8), var6.field_t + 2, -13181, -2 + (var7 + var6.field_s), 2 + var6.field_p);
+            AudioServiceThread.drawDottedRectangle(-2 + (var6.field_l + var8), var6.field_t + 2, -13181, -2 + (var7 + var6.field_s), 2 + var6.field_p);
             var6 = var6.field_r;
           } while (var6 != null);
         }

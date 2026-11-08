@@ -199,7 +199,7 @@ final class u extends hf implements ai {
           stackIn_2_2 = 1000000;
           stackIn_2_3 = (MusicTrack) (param0);
           stackIn_3_4 = !(param4);
-          ((MusicCrossfadeStream) (Object) stackIn_2_0).a(stackIn_2_1, stackIn_2_2, stackIn_2_3, stackIn_3_4, param3, param1);
+          ((MusicCrossfadeStream) (Object) stackIn_2_0).transitionToTrack(stackIn_2_1, stackIn_2_2, stackIn_2_3, stackIn_3_4, param3, param1);
           if (param2 == -87) {
             return;
           }

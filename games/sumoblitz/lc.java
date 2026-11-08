@@ -27,7 +27,7 @@ final class lc extends WidgetContainer implements ai {
             }
             nd.field_B = param5;
             if (nd.field_B != null) {
-              qc.field_e.a(param2, param3, 7094, param4, nd.field_B, param1);
+              qc.field_e.queueTrackAtGrid(param2, param3, 7094, param4, nd.field_B, param1);
             }
             if (param0 < 98) {
               var8 = (MusicTrack) null;

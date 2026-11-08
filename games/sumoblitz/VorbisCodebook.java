@@ -1,27 +1,27 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tp {
-    private int field_f;
-    private int[] field_d;
-    private int[] field_e;
-    private float[][] field_b;
-    int field_c;
-    private int[] field_a;
+final class VorbisCodebook {
+    private int entries;
+    private int[] codewordLengths;
+    private int[] decodeTree;
+    private float[][] vectors;
+    int dimensions;
+    private int[] multiplicands;
 
-    final float[] c() {
-        return this.field_b[this.b()];
+    final float[] decodeVector() {
+        return this.vectors[this.decodeScalar()];
     }
 
-    final int b() {
+    final int decodeScalar() {
         int var1 = 0;
-        while (this.field_e[var1] >= 0) {
-          var1 = q.b() != 0 ? this.field_e[var1] : var1 + 1;
+        while (this.decodeTree[var1] >= 0) {
+          var1 = VorbisSample.readBit() != 0 ? this.decodeTree[var1] : var1 + 1;
         }
-        return ~this.field_e[var1];
+        return ~this.decodeTree[var1];
     }
 
-    private final void a() {
+    private final void buildDecodeTree() {
         int[] var2_ref_int__;
         int var2;
         int var3;
@@ -46,12 +46,12 @@ final class tp {
         int var10Lifetime1;
         int var8Lifetime2;
         int var9_intLifetime1;
-        var17 = new int[this.field_f];
+        var17 = new int[this.entries];
         var14 = new int[33];
         var12 = var14;
         var2_ref_int__ = var12;
-        for (var3 = 0; var3 < this.field_f; var3++) {
-          var4 = this.field_d[var3];
+        for (var3 = 0; var3 < this.entries; var3++) {
+          var4 = this.codewordLengths[var3];
           if (var4 != 0) {
             {
               var5 = 1 << 32 - var4;
@@ -84,10 +84,10 @@ final class tp {
             }
           }
         }
-        this.field_e = new int[8];
+        this.decodeTree = new int[8];
         var2 = 0;
-        for (var3Lifetime1 = 0; var3Lifetime1 < this.field_f; var3Lifetime1++) {
-          var4Lifetime1 = this.field_d[var3Lifetime1];
+        for (var3Lifetime1 = 0; var3Lifetime1 < this.entries; var3Lifetime1++) {
+          var4Lifetime1 = this.codewordLengths[var3Lifetime1];
           if (var4Lifetime1 != 0) {
             var5Lifetime1 = var17[var3Lifetime1];
             var6Lifetime1 = 0;
@@ -96,24 +96,24 @@ final class tp {
               if ((var5Lifetime1 & var8Lifetime1) == 0) {
                 var6Lifetime1++;
               } else {
-                if (this.field_e[var6Lifetime1] == 0) {
-                  this.field_e[var6Lifetime1] = var2;
+                if (this.decodeTree[var6Lifetime1] == 0) {
+                  this.decodeTree[var6Lifetime1] = var2;
                 }
-                var6Lifetime1 = this.field_e[var6Lifetime1];
+                var6Lifetime1 = this.decodeTree[var6Lifetime1];
               }
-              if (var6Lifetime1 >= this.field_e.length) {
-                var9 = new int[this.field_e.length * 2];
+              if (var6Lifetime1 >= this.decodeTree.length) {
+                var9 = new int[this.decodeTree.length * 2];
                 var11 = 0;
                 var10Lifetime1 = var11;
-                while (var11 < this.field_e.length) {
-                  var9[var11] = this.field_e[var11];
+                while (var11 < this.decodeTree.length) {
+                  var9[var11] = this.decodeTree[var11];
                   var11++;
                 }
-                this.field_e = var9;
+                this.decodeTree = var9;
               }
               var8Lifetime1 = var8Lifetime1 >>> 1;
             }
-            this.field_e[var6Lifetime1] = ~var3Lifetime1;
+            this.decodeTree[var6Lifetime1] = ~var3Lifetime1;
             if (var6Lifetime1 >= var2) {
               var2 = var6Lifetime1 + 1;
             }
@@ -121,14 +121,14 @@ final class tp {
         }
     }
 
-    private final static int a(int param0, int param1) {
+    private final static int lookup1Values(int entries, int dimensions) {
         int var2 = 0;
-        for (var2 = (int)Math.pow((double)param0, 1.0 / (double)param1) + 1; nq.a(var2, 94, param1) > param0; var2--) {
+        for (var2 = (int)Math.pow((double)entries, 1.0 / (double)dimensions) + 1; nq.a(var2, 94, dimensions) > entries; var2--) {
         }
         return var2;
     }
 
-    tp() {
+    VorbisCodebook() {
         int incrementValue$0 = 0;
         int stackIn_3_0 = 0;
         int stackIn_13_0 = 0;
@@ -153,64 +153,64 @@ final class tp {
         int var2Lifetime1;
         int var5Lifetime1;
         int var8Lifetime1;
-        q.a(24);
-        this.field_c = q.a(16);
-        this.field_f = q.a(24);
-        this.field_d = new int[this.field_f];
-        stackIn_3_0 = (q.b() == 0) ? 0 : 1;
+        VorbisSample.readBits(24);
+        this.dimensions = VorbisSample.readBits(16);
+        this.entries = VorbisSample.readBits(24);
+        this.codewordLengths = new int[this.entries];
+        stackIn_3_0 = (VorbisSample.readBit() == 0) ? 0 : 1;
         var1 = stackIn_3_0;
         if (var1 != 0) {
           var2 = 0;
-          var3_int = q.a(5) + 1;
-          while (var2 < this.field_f) {
-            var4_int = q.a(mr.a(this.field_f - var2, (byte) -115));
+          var3_int = VorbisSample.readBits(5) + 1;
+          while (var2 < this.entries) {
+            var4_int = VorbisSample.readBits(mr.a(this.entries - var2, (byte) -115));
             for (var5 = 0; var5 < var4_int; var5++) {
               incrementValue$0 = var2;
               var2++;
-              this.field_d[incrementValue$0] = var3_int;
+              this.codewordLengths[incrementValue$0] = var3_int;
             }
             var3_int++;
           }
         } else {
-          stackIn_13_0 = (q.b() == 0) ? 0 : 1;
+          stackIn_13_0 = (VorbisSample.readBit() == 0) ? 0 : 1;
           var2 = stackIn_13_0;
           var14 = 0;
           var3_int = var14;
-          while (var14 < this.field_f) {
+          while (var14 < this.entries) {
             if (var2 != 0 &&
-              q.b() == 0) {
-              this.field_d[var14] = 0;
+              VorbisSample.readBit() == 0) {
+              this.codewordLengths[var14] = 0;
             } else {
-              this.field_d[var14] = q.a(5) + 1;
+              this.codewordLengths[var14] = VorbisSample.readBits(5) + 1;
             }
             var14++;
           }
         }
-        this.a();
-        var2Lifetime1 = q.a(4);
+        this.buildDecodeTree();
+        var2Lifetime1 = VorbisSample.readBits(4);
         if (var2Lifetime1 > 0) {
-          var3 = q.d(q.a(32));
-          var4 = q.d(q.a(32));
-          var5Lifetime1 = q.a(4) + 1;
-          stackIn_25_0 = (q.b() == 0) ? 0 : 1;
+          var3 = VorbisSample.unpackFloat(VorbisSample.readBits(32));
+          var4 = VorbisSample.unpackFloat(VorbisSample.readBits(32));
+          var5Lifetime1 = VorbisSample.readBits(4) + 1;
+          stackIn_25_0 = (VorbisSample.readBit() == 0) ? 0 : 1;
           var6 = stackIn_25_0;
           if (var2Lifetime1 != 1) {
-            var7 = this.field_f * this.field_c;
+            var7 = this.entries * this.dimensions;
           } else {
-            var7 = tp.a(this.field_f, this.field_c);
+            var7 = VorbisCodebook.lookup1Values(this.entries, this.dimensions);
           }
-          this.field_a = new int[var7];
+          this.multiplicands = new int[var7];
           for (var8 = 0; var8 < var7; var8++) {
-            this.field_a[var8] = q.a(var5Lifetime1);
+            this.multiplicands[var8] = VorbisSample.readBits(var5Lifetime1);
           }
-          this.field_b = new float[this.field_f][this.field_c];
+          this.vectors = new float[this.entries][this.dimensions];
           if (var2Lifetime1 != 1) {
-            for (var8Lifetime1 = 0; var8Lifetime1 < this.field_f; var8Lifetime1++) {
+            for (var8Lifetime1 = 0; var8Lifetime1 < this.entries; var8Lifetime1++) {
               var9 = 0.0f;
-              var10 = var8Lifetime1 * this.field_c;
-              for (var11 = 0; var11 < this.field_c; var11++) {
-                var12 = (float)this.field_a[var10] * var4 + var3 + var9;
-                this.field_b[var8Lifetime1][var11] = var12;
+              var10 = var8Lifetime1 * this.dimensions;
+              for (var11 = 0; var11 < this.dimensions; var11++) {
+                var12 = (float)this.multiplicands[var10] * var4 + var3 + var9;
+                this.vectors[var8Lifetime1][var11] = var12;
                 if (var6 != 0) {
                   var9 = var12;
                 }
@@ -218,13 +218,13 @@ final class tp {
               }
             }
           } else {
-            for (var8Lifetime1 = 0; var8Lifetime1 < this.field_f; var8Lifetime1++) {
+            for (var8Lifetime1 = 0; var8Lifetime1 < this.entries; var8Lifetime1++) {
               var9 = 0.0f;
               var10 = 1;
-              for (var11 = 0; var11 < this.field_c; var11++) {
+              for (var11 = 0; var11 < this.dimensions; var11++) {
                 var12_int = var8Lifetime1 / var10 % var7;
-                var13 = (float)this.field_a[var12_int] * var4 + var3 + var9;
-                this.field_b[var8Lifetime1][var11] = var13;
+                var13 = (float)this.multiplicands[var12_int] * var4 + var3 + var9;
+                this.vectors[var8Lifetime1][var11] = var13;
                 if (var6 != 0) {
                   var9 = var13;
                 }

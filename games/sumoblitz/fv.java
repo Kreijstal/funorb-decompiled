@@ -47,9 +47,9 @@ final class fv extends rw {
         PlayingSound var2Lifetime1;
         var3 = Sumoblitz.field_L ? 1 : 0;
         try {
-          wd.field_f.b();
+          wd.field_f.serviceOutput();
           var1_int = -111 % ((param0 + 34) / 35);
-          LegacyOpenGlEffectManager.field_a.b();
+          LegacyOpenGlEffectManager.field_a.serviceOutput();
           vf.field_b = vf.field_b - 1;
           if (vf.field_b == 0) {
             vf.field_b = 200;
@@ -71,7 +71,7 @@ final class fv extends rw {
             }
           }
           if (qc.field_e != null) {
-            stackIn_18_0 = qc.field_e.c(-8192);
+            stackIn_18_0 = qc.field_e.isPlaying(-8192);
             if (!stackIn_18_0) {
               nd.field_B = null;
               return;

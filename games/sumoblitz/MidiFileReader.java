@@ -2,54 +2,54 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MidiFileReader {
-    private static byte[] field_a;
-    private PacketBuffer field_i;
-    int field_d;
-    private int[] field_h;
-    int[] field_c;
-    private int[] field_f;
-    private int field_e;
-    private int[] field_g;
-    private long field_b;
+    private static byte[] messageLengths;
+    private PacketBuffer buffer;
+    int division;
+    private int[] trackStarts;
+    int[] trackTicks;
+    private int[] runningStatus;
+    private int tempo;
+    private int[] trackPositions;
+    private long timeBase;
 
-    final void a() {
-        this.field_i.position = -1;
+    final void markTrackDone() {
+        this.buffer.position = -1;
     }
 
-    final int f() {
-        return this.field_g.length;
+    final int trackCount() {
+        return this.trackPositions.length;
     }
 
-    final void a(byte[] param0) {
+    final void parse(byte[] midiBytes) {
         int var4 = 0;
         int var5 = 0;
         int var3Lifetime1;
-        this.field_i.payload = param0;
-        this.field_i.position = 10;
-        int var2 = this.field_i.a(255);
-        this.field_d = this.field_i.a(255);
-        this.field_e = 500000;
-        this.field_h = new int[var2];
+        this.buffer.payload = midiBytes;
+        this.buffer.position = 10;
+        int var2 = this.buffer.a(255);
+        this.division = this.buffer.a(255);
+        this.tempo = 500000;
+        this.trackStarts = new int[var2];
         int var3 = 0;
         while (var3 < var2) {
-          var4 = this.field_i.c(true);
-          var5 = this.field_i.c(true);
+          var4 = this.buffer.c(true);
+          var5 = this.buffer.c(true);
           if (var4 == 1297379947) {
-            this.field_h[var3] = this.field_i.position;
+            this.trackStarts[var3] = this.buffer.position;
             var3++;
           }
-          this.field_i.position = this.field_i.position + var5;
+          this.buffer.position = this.buffer.position + var5;
         }
-        this.field_b = 0L;
-        this.field_g = new int[var2];
+        this.timeBase = 0L;
+        this.trackPositions = new int[var2];
         int var6 = 0;
         var3Lifetime1 = var6;
         while (var6 < var2) {
-          this.field_g[var6] = this.field_h[var6];
+          this.trackPositions[var6] = this.trackStarts[var6];
           var6++;
         }
-        this.field_c = new int[var2];
-        this.field_f = new int[var2];
+        this.trackTicks = new int[var2];
+        this.runningStatus = new int[var2];
     }
 
     final int nextTrack() {
@@ -57,166 +57,166 @@ final class MidiFileReader {
         int var1;
         int var2;
         int var3;
-        var1 = this.field_g.length;
+        var1 = this.trackPositions.length;
         var2 = -1;
         var3 = 2147483647;
         for (var4 = 0; var4 < var1; var4++) {
-          if (this.field_g[var4] >= 0 &&
-            this.field_c[var4] < var3) {
+          if (this.trackPositions[var4] >= 0 &&
+            this.trackTicks[var4] < var3) {
             var2 = var4;
-            var3 = this.field_c[var4];
+            var3 = this.trackTicks[var4];
           }
         }
         return var2;
     }
 
-    final void b(int param0) {
-        this.field_i.position = this.field_g[param0];
+    final void seekTrack(int track) {
+        this.buffer.position = this.trackPositions[track];
     }
 
-    final void e() {
-        this.field_i.payload = null;
-        this.field_h = null;
-        this.field_g = null;
-        this.field_c = null;
-        this.field_f = null;
+    final void clear() {
+        this.buffer.payload = null;
+        this.trackStarts = null;
+        this.trackPositions = null;
+        this.trackTicks = null;
+        this.runningStatus = null;
     }
 
     final void reset(long param0) {
         int var4 = 0;
-        this.field_b = param0;
-        int var3 = this.field_g.length;
+        this.timeBase = param0;
+        int var3 = this.trackPositions.length;
         for (var4 = 0; var4 < var3; var4++) {
-          this.field_c[var4] = 0;
-          this.field_f[var4] = 0;
-          this.field_i.position = this.field_h[var4];
-          this.a(var4);
-          this.field_g[var4] = this.field_i.position;
+          this.trackTicks[var4] = 0;
+          this.runningStatus[var4] = 0;
+          this.buffer.position = this.trackStarts[var4];
+          this.readTrackDelta(var4);
+          this.trackPositions[var4] = this.buffer.position;
         }
     }
 
-    private final int f(int param0) {
+    private final int readRunningStatusMessage(int track) {
         int var2;
         int var3;
         int var4;
-        var2 = this.field_i.payload[this.field_i.position];
+        var2 = this.buffer.payload[this.buffer.position];
         if (var2 >= 0) {
-          var2 = this.field_f[param0];
+          var2 = this.runningStatus[track];
         } else {
           var2 = var2 & 255;
-          this.field_f[param0] = var2;
-          this.field_i.position = this.field_i.position + 1;
+          this.runningStatus[track] = var2;
+          this.buffer.position = this.buffer.position + 1;
         }
         if (var2 != 240 &&
           var2 != 247) {
-          return this.a(param0, var2);
+          return this.readMessageData(track, var2);
         }
-        var3 = this.field_i.f((byte) 93);
+        var3 = this.buffer.f((byte) 93);
         if (var2 == 247 &&
           var3 > 0) {
-          var4 = this.field_i.payload[this.field_i.position] & 255;
+          var4 = this.buffer.payload[this.buffer.position] & 255;
           if (!(var4 < 241) &&
             !(var4 > 243) || (var4 == 246 ||
             var4 == 248) || !(var4 < 250) &&
             !(var4 > 252) || var4 == 254) {
-            this.field_i.position = this.field_i.position + 1;
-            this.field_f[param0] = var4;
-            return this.a(param0, var4);
+            this.buffer.position = this.buffer.position + 1;
+            this.runningStatus[track] = var4;
+            return this.readMessageData(track, var4);
           }
         }
-        this.field_i.position = this.field_i.position + var3;
+        this.buffer.position = this.buffer.position + var3;
         return 0;
     }
 
-    final void a(int param0) {
-        int var2 = this.field_i.f((byte) 127);
-        this.field_c[param0] = this.field_c[param0] + var2;
+    final void readTrackDelta(int track) {
+        int var2 = this.buffer.f((byte) 127);
+        this.trackTicks[track] = this.trackTicks[track] + var2;
     }
 
-    final int e(int param0) {
-        int var2 = this.f(param0);
+    final int readMessage(int track) {
+        int var2 = this.readRunningStatusMessage(track);
         return var2;
     }
 
-    private final int a(int param0, int param1) {
+    private final int readMessageData(int track, int status) {
         int var5 = 0;
         int var6 = 0;
         int var3 = 0;
         int var4 = 0;
         int var3Lifetime1;
         int var4Lifetime1;
-        if (param1 == 255) {
-          var3 = this.field_i.e(-31302);
-          var4 = this.field_i.f((byte) 105);
+        if (status == 255) {
+          var3 = this.buffer.e(-31302);
+          var4 = this.buffer.f((byte) 105);
           if (var3 == 47) {
-            this.field_i.position = this.field_i.position + var4;
+            this.buffer.position = this.buffer.position + var4;
             return 1;
           }
           if (var3 == 81) {
-            var5 = this.field_i.c((byte) 124);
+            var5 = this.buffer.c((byte) 124);
             var4 -= 3;
-            var6 = this.field_c[param0];
-            this.field_b = this.field_b + (long)var6 * (long)(this.field_e - var5);
-            this.field_e = var5;
-            this.field_i.position = this.field_i.position + var4;
+            var6 = this.trackTicks[track];
+            this.timeBase = this.timeBase + (long)var6 * (long)(this.tempo - var5);
+            this.tempo = var5;
+            this.buffer.position = this.buffer.position + var4;
             return 2;
           }
-          this.field_i.position = this.field_i.position + var4;
+          this.buffer.position = this.buffer.position + var4;
           return 3;
         }
-        var3Lifetime1 = field_a[param1 - 128];
-        var4Lifetime1 = param1;
+        var3Lifetime1 = messageLengths[status - 128];
+        var4Lifetime1 = status;
         if (var3Lifetime1 >= 1) {
-          var4Lifetime1 = var4Lifetime1 | this.field_i.e(-31302) << 8;
+          var4Lifetime1 = var4Lifetime1 | this.buffer.e(-31302) << 8;
         }
         if (var3Lifetime1 >= 2) {
-          var4Lifetime1 = var4Lifetime1 | this.field_i.e(-31302) << 16;
+          var4Lifetime1 = var4Lifetime1 | this.buffer.e(-31302) << 16;
         }
         return var4Lifetime1;
     }
 
     public static void releaseStatics() {
-        field_a = null;
+        messageLengths = null;
     }
 
-    final int a(long param0) {
-        long var3 = param0 - this.field_b;
-        return (int)((var3 + (long)this.field_e - 1L) / (long)this.field_e);
+    final int ticksAtTimeCeiling(long time) {
+        long var3 = time - this.timeBase;
+        return (int)((var3 + (long)this.tempo - 1L) / (long)this.tempo);
     }
 
-    final boolean d() {
+    final boolean allTracksDone() {
         int var2 = 0;
-        int var1 = this.field_g.length;
+        int var1 = this.trackPositions.length;
         for (var2 = 0; var2 < var1; var2++) {
-          if (this.field_g[var2] >= 0) {
+          if (this.trackPositions[var2] >= 0) {
             return false;
           }
         }
         return true;
     }
 
-    final long d(int param0) {
-        return this.field_b + (long)param0 * (long)this.field_e;
+    final long timeAtTick(int tick) {
+        return this.timeBase + (long)tick * (long)this.tempo;
     }
 
-    final boolean c() {
-        return this.field_i.payload != null;
+    final boolean isReady() {
+        return this.buffer.payload != null;
     }
 
     MidiFileReader() {
-        this.field_i = new PacketBuffer((byte[]) null);
+        this.buffer = new PacketBuffer((byte[]) null);
     }
 
-    final void c(int param0) {
-        this.field_g[param0] = this.field_i.position;
+    final void saveTrackPosition(int track) {
+        this.trackPositions[track] = this.buffer.position;
     }
 
     MidiFileReader(byte[] param0) {
-        this.field_i = new PacketBuffer((byte[]) null);
-        this.a(param0);
+        this.buffer = new PacketBuffer((byte[]) null);
+        this.parse(param0);
     }
 
     static {
-        field_a = new byte[]{(byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 0, (byte) 1, (byte) 2, (byte) 1, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
+        messageLengths = new byte[]{(byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 0, (byte) 1, (byte) 2, (byte) 1, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
     }
 }

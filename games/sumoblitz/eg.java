@@ -71,7 +71,7 @@ final class eg extends IntrusiveNode {
           rl.field_n = var17.a(255);
           vg.field_k = new int[rl.field_n];
           we.field_B = new int[rl.field_n];
-          og.field_d = new boolean[rl.field_n];
+          SoundCache.field_d = new boolean[rl.field_n];
           TextLayout.field_d = new byte[rl.field_n][];
           StrongCacheReference.field_C = new int[rl.field_n];
           er.field_h = new int[rl.field_n];
@@ -167,7 +167,7 @@ final class eg extends IntrusiveNode {
                 }
               }
             }
-            og.field_d[var4Lifetime5] = var10 != 0;
+            SoundCache.field_d[var4Lifetime5] = var10 != 0;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

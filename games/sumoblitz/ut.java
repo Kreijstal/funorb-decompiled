@@ -346,7 +346,7 @@ final class ut extends eu {
           stackIn_2_2 = 1000000;
           stackIn_2_3 = (MusicTrack) (param2);
           stackIn_3_4 = !(param3);
-          ((MusicCrossfadeStream) (Object) stackIn_2_0).a(stackIn_2_1, stackIn_2_2, stackIn_2_3, stackIn_3_4, param0, 256);
+          ((MusicCrossfadeStream) (Object) stackIn_2_0).transitionToTrack(stackIn_2_1, stackIn_2_2, stackIn_2_3, stackIn_3_4, param0, 256);
           if (param1 == -55) {
             return;
           }

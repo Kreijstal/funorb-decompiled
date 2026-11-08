@@ -192,19 +192,19 @@ final class au extends LegacyOpenGlEffect {
     }
 
     final static void a(int param0, ResourceArchive param1) {
-        TimedSceneEffect.field_m[0] = MusicTrack.a(param1, "titlescreen_track");
-        TimedSceneEffect.field_m[1] = MusicTrack.a(param1, "track2");
-        TimedSceneEffect.field_m[2] = MusicTrack.a(param1, "track3");
+        TimedSceneEffect.field_m[0] = MusicTrack.load(param1, "titlescreen_track");
+        TimedSceneEffect.field_m[1] = MusicTrack.load(param1, "track2");
+        TimedSceneEffect.field_m[2] = MusicTrack.load(param1, "track3");
         if (param0 != -1509) {
           return;
         }
         try {
-          TimedSceneEffect.field_m[3] = MusicTrack.a(param1, "track5");
-          TimedSceneEffect.field_m[4] = MusicTrack.a(param1, "track6");
-          TimedSceneEffect.field_m[5] = MusicTrack.a(param1, "track7");
-          TimedSceneEffect.field_m[6] = MusicTrack.a(param1, "win_track");
-          TimedSceneEffect.field_m[7] = MusicTrack.a(param1, "defeat_track");
-          TimedSceneEffect.field_m[8] = MusicTrack.a(param1, "challenge_mode_track");
+          TimedSceneEffect.field_m[3] = MusicTrack.load(param1, "track5");
+          TimedSceneEffect.field_m[4] = MusicTrack.load(param1, "track6");
+          TimedSceneEffect.field_m[5] = MusicTrack.load(param1, "track7");
+          TimedSceneEffect.field_m[6] = MusicTrack.load(param1, "win_track");
+          TimedSceneEffect.field_m[7] = MusicTrack.load(param1, "defeat_track");
+          TimedSceneEffect.field_m[8] = MusicTrack.load(param1, "challenge_mode_track");
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "au.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

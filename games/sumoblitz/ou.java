@@ -221,7 +221,7 @@ final class ou extends na {
               bf.field_c[var5] = GameInstructions.field_c[var5];
             }
             bf.field_c[-3 + var4] = "";
-            bf.field_c[-2 + var4] = pp.membersText;
+            bf.field_c[-2 + var4] = AudioServiceThread.membersText;
             eb.field_a[-2 + var4] = 0;
             jo.field_b[0] = 4;
             bf.field_c[-1 + var4] = jh.closeText;

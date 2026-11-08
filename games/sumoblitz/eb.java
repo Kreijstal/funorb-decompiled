@@ -4,7 +4,7 @@
 final class eb {
     private cs field_d;
     static ResourceArchive field_f;
-    static og field_b;
+    static SoundCache field_b;
     private IntrusiveDeque field_e;
     private LegacyOpenGlGraphicsToolkit field_c;
     static int[] field_a;
@@ -13,7 +13,7 @@ final class eb {
         if (param0 == 550267135) {
           return null != this.field_d ? true : false;
         }
-        field_b = (og) null;
+        field_b = (SoundCache) null;
         return null != this.field_d ? true : false;
     }
 

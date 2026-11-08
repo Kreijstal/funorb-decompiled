@@ -1341,7 +1341,7 @@ final class GameplaySession {
                   !b.field_c) {
                   th.b(24753, 248, 7);
                 }
-                if (og.a(-102)) {
+                if (SoundCache.isLevelIndexTwentyFour(-102)) {
                   oh.levelIndex = oh.levelIndex + 1;
                 }
                 if (ku.field_J != null &&

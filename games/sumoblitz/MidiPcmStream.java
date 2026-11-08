@@ -2,51 +2,51 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MidiPcmStream extends PcmStream {
-    private int field_E;
-    private int[] field_L;
-    private int[] field_H;
-    int[] field_R;
-    private int[] field_F;
-    private int[] field_T;
-    private int[] field_y;
-    private MidiFileReader field_v;
-    private int[] field_B;
-    private int[] field_S;
-    private MusicVoice[][] field_P;
-    private int field_r;
-    private int[] field_D;
-    private IntrusiveNodeHashTable field_p;
-    int[] field_x;
-    private int[] field_N;
-    private int[] field_w;
-    private int[] field_G;
-    private MusicVoice[][] field_t;
-    private int[] field_z;
-    private int[] field_K;
+    private int timeScale;
+    private int[] pitchBend;
+    private int[] initialPrograms;
+    int[] sampleOffsets;
+    private int[] banks;
+    private int[] channelExpression;
+    private int[] channelVolumeScales;
+    private MidiFileReader midiReader;
+    private int[] programs;
+    private int[] parameterSelection;
+    private MusicVoice[][] groupVoices;
+    private int masterVolume;
+    private int[] pitchBendSensitivity;
+    private IntrusiveNodeHashTable patches;
+    int[] retriggerRates;
+    private int[] retriggerControllers;
+    private int[] channelVolume;
+    private int[] channelPan;
+    private MusicVoice[][] keyVoices;
+    private int[] portamentoTime;
+    private int[] modulation;
     static char[] field_o;
-    int[] field_J;
-    private boolean field_M;
-    private long field_q;
-    private MidiNoteMixer field_s;
-    private int field_C;
-    private long field_O;
-    private int field_Q;
-    private int field_u;
-    private boolean field_A;
-    private MusicTrack field_I;
+    int[] channelFlags;
+    private boolean looping;
+    private long nextEventTime;
+    private MidiNoteMixer noteMixer;
+    private int nextEventTick;
+    private long currentTime;
+    private int nextTrack;
+    private int switchTick;
+    private boolean stopVoicesOnSwitch;
+    private MusicTrack pendingTrack;
 
-    final synchronized boolean c(int param0) {
+    final synchronized boolean isPlaying(int param0) {
         if (param0 != -8192) {
-          this.a(false, (MusicTrack) null, -40);
+          this.playTrack(false, (MusicTrack) null, -40);
         }
-        return this.field_v.c();
+        return this.midiReader.isReady();
     }
 
     final synchronized PcmStream nextSubstream() {
         return null;
     }
 
-    private final int c(int param0, MusicVoice param1) {
+    private final int voiceVolume(int guard, MusicVoice voice) {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -66,41 +66,41 @@ final class MidiPcmStream extends PcmStream {
         int var7Lifetime1;
         int var8Lifetime1;
         try {
-          if (param0 != 255) {
-            this.field_T = (int[]) null;
+          if (guard != 255) {
+            this.channelExpression = (int[]) null;
           }
-          if (this.field_y[param1.field_y] == 0) {
+          if (this.channelVolumeScales[voice.channel] == 0) {
             stackIn_4_0 = 0;
             return stackIn_4_0;
           }
-          var9 = param1.field_w;
+          var9 = voice.envelope;
           var10 = var9;
-          var4 = 4096 + this.field_T[param1.field_y] * this.field_w[param1.field_y] >> 13;
+          var4 = 4096 + this.channelExpression[voice.channel] * this.channelVolume[voice.channel] >> 13;
           var4 = 16384 + var4 * var4 >> 15;
-          var4 = 16384 + param1.field_F * var4 >> 15;
-          var4 = 128 + this.field_r * var4 >> 8;
-          var4 = var4 * this.field_y[param1.field_y] + 128 >> 8;
-          if (0 < var10.field_i) {
-            var4 = (int)(0.5 + (double)var4 * Math.pow(0.5, 0.00001953125 * (double)param1.field_v * (double)var10.field_i));
+          var4 = 16384 + voice.velocityGain * var4 >> 15;
+          var4 = 128 + this.masterVolume * var4 >> 8;
+          var4 = var4 * this.channelVolumeScales[voice.channel] + 128 >> 8;
+          if (0 < var10.decayRate) {
+            var4 = (int)(0.5 + (double)var4 * Math.pow(0.5, 0.00001953125 * (double)voice.decayTime * (double)var10.decayRate));
           }
-          if (null != var10.field_g) {
-            var5 = param1.field_G;
-            var6 = var10.field_g[param1.field_r + 1];
-            if (param1.field_r < (-2 + var10.field_g.length)) {
-              var7 = 65280 & var9.field_g[param1.field_r] << 8;
-              var8 = var10.field_g[param1.field_r + 2] << 8 & 65280;
-              var6 = var6 + (var5 - var7) * (-var6 + var10.field_g[3 + param1.field_r]) / (-var7 + var8);
+          if (null != var10.gainCurve) {
+            var5 = voice.gainEnvelopeTime;
+            var6 = var10.gainCurve[voice.gainEnvelopeIndex + 1];
+            if (voice.gainEnvelopeIndex < (-2 + var10.gainCurve.length)) {
+              var7 = 65280 & var9.gainCurve[voice.gainEnvelopeIndex] << 8;
+              var8 = var10.gainCurve[voice.gainEnvelopeIndex + 2] << 8 & 65280;
+              var6 = var6 + (var5 - var7) * (-var6 + var10.gainCurve[3 + voice.gainEnvelopeIndex]) / (-var7 + var8);
             }
             var4 = 32 + var6 * var4 >> 6;
           }
-          if (param1.field_x > 0 &&
-            var10.field_h != null) {
-            var5Lifetime1 = param1.field_x;
-            var6Lifetime1 = var10.field_h[1 + param1.field_n];
-            if ((-2 + var10.field_h.length) > param1.field_n) {
-              var7Lifetime1 = (var9.field_h[param1.field_n] & 255) << 8;
-              var8Lifetime1 = 65280 & var10.field_h[param1.field_n + 2] << 8;
-              var6Lifetime1 = var6Lifetime1 + (var10.field_h[3 + param1.field_n] - var6Lifetime1) * (-var7Lifetime1 + var5Lifetime1) / (var8Lifetime1 - var7Lifetime1);
+          if (voice.releaseTime > 0 &&
+            var10.releaseCurve != null) {
+            var5Lifetime1 = voice.releaseTime;
+            var6Lifetime1 = var10.releaseCurve[1 + voice.releaseEnvelopeIndex];
+            if ((-2 + var10.releaseCurve.length) > voice.releaseEnvelopeIndex) {
+              var7Lifetime1 = (var9.releaseCurve[voice.releaseEnvelopeIndex] & 255) << 8;
+              var8Lifetime1 = 65280 & var10.releaseCurve[voice.releaseEnvelopeIndex + 2] << 8;
+              var6Lifetime1 = var6Lifetime1 + (var10.releaseCurve[3 + voice.releaseEnvelopeIndex] - var6Lifetime1) * (-var7Lifetime1 + var5Lifetime1) / (var8Lifetime1 - var7Lifetime1);
             }
             var4 = var6Lifetime1 * var4 + 32 >> 6;
           }
@@ -110,8 +110,8 @@ final class MidiPcmStream extends PcmStream {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_21_0 = var3;
-          stackIn_21_1 = new StringBuilder().append("bs.I(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_21_1 = new StringBuilder().append("bs.I(").append(guard).append(',');
+          if (voice == null) {
             stackIn_22_2 = "null";
           } else {
             stackIn_22_2 = "{...}";
@@ -120,35 +120,35 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3) {
+    private final void noteOff(int velocity, int note, int guard, int channel) {
         MusicVoice var6 = null;
         int var7 = 0;
         MusicVoice var8 = null;
         int stackIn_15_0 = 0;
         int stackIn_15_1 = 0;
         var7 = Sumoblitz.field_L ? 1 : 0;
-        var8 = this.field_t[param3][param1];
+        var8 = this.keyVoices[channel][note];
         if (var8 == null) {
           return;
         }
         boolean decompiledFrameCompleted0 = true;
-        this.field_t[param3][param1] = null;
-        if ((this.field_J[param3] & 2) != 0) {
-          var6 = (MusicVoice) (this.field_s.field_t.first(param2 - 12866));
+        this.keyVoices[channel][note] = null;
+        if ((this.channelFlags[channel] & 2) != 0) {
+          var6 = (MusicVoice) (this.noteMixer.voices.first(guard - 12866));
           while (true) {
             if (var6 != null) {
-              stackIn_15_0 = var8.field_y;
-              stackIn_15_1 = var6.field_y;
+              stackIn_15_0 = var8.channel;
+              stackIn_15_1 = var6.channel;
               if (var7 != 0) {
                 decompiledFrameCompleted0 = false;
                 break;
               }
               if (stackIn_15_0 == stackIn_15_1 &&
-                var6.field_x < 0 &&
+                var6.releaseTime < 0 &&
                 var8 != var6) {
-                var8.field_x = 0;
+                var8.releaseTime = 0;
               } else {
-                var6 = (MusicVoice) (this.field_s.field_t.next((byte) 18));
+                var6 = (MusicVoice) (this.noteMixer.voices.next((byte) 18));
                 continue;
               }
             }
@@ -156,21 +156,21 @@ final class MidiPcmStream extends PcmStream {
           }
           if ((decompiledFrameCompleted0) &&
             (var7 != 0)) {
-            var8.field_x = 0;
+            var8.releaseTime = 0;
           }
         } else {
-          var8.field_x = 0;
+          var8.releaseTime = 0;
         }
         if (decompiledFrameCompleted0) {
-          stackIn_15_0 = param2;
+          stackIn_15_0 = guard;
           stackIn_15_1 = 12800;
         }
         if (stackIn_15_0 != stackIn_15_1) {
-          this.field_r = 50;
+          this.masterVolume = 50;
         }
     }
 
-    private final int a(boolean param0, MusicVoice param1) {
+    private final int voiceSampleStep(boolean guard, MusicVoice voice) {
         int stackIn_13_0 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -184,32 +184,32 @@ final class MidiPcmStream extends PcmStream {
         double var7 = 0.0;
         int var5Lifetime1;
         try {
-          var3_int = (param1.field_p * param1.field_k >> 12) + param1.field_m;
-          var3_int = var3_int + (this.field_D[param1.field_y] * (-8192 + this.field_L[param1.field_y]) >> 12);
-          if (!param0) {
-            this.field_O = 8L;
+          var3_int = (voice.portamentoDelta * voice.portamentoScaleQ12 >> 12) + voice.basePitchQ8;
+          var3_int = var3_int + (this.pitchBendSensitivity[voice.channel] * (-8192 + this.pitchBend[voice.channel]) >> 12);
+          if (!guard) {
+            this.currentTime = 8L;
           }
-          var4 = param1.field_w;
-          if (var4.field_j > 0 && (!(var4.field_b <= 0) ||
-            this.field_K[param1.field_y] > 0)) {
-            var5 = var4.field_b << 2;
-            var6 = var4.field_e << 1;
-            if (var6 > param1.field_H) {
-              var5 = var5 * param1.field_H / var6;
+          var4 = voice.envelope;
+          if (var4.vibratoRate > 0 && (!(var4.vibratoDepth <= 0) ||
+            this.modulation[voice.channel] > 0)) {
+            var5 = var4.vibratoDepth << 2;
+            var6 = var4.vibratoDelay << 1;
+            if (var6 > voice.ageTicks) {
+              var5 = var5 * voice.ageTicks / var6;
             }
-            var5 = var5 + (this.field_K[param1.field_y] >> 7);
-            var7 = Math.sin((double)(511 & param1.field_C) * 0.01227184630308513);
+            var5 = var5 + (this.modulation[voice.channel] >> 7);
+            var7 = Math.sin((double)(511 & voice.vibratoPhase) * 0.01227184630308513);
             var3_int = var3_int + (int)(var7 * (double)var5);
           }
-          var5Lifetime1 = (int)(0.5 + (double)(param1.field_B.sampleRate * 256) * Math.pow(2.0, (double)var3_int * 0.0003255208333333333) / (double)AudioOutput.field_k);
+          var5Lifetime1 = (int)(0.5 + (double)(voice.sample.sampleRate * 256) * Math.pow(2.0, (double)var3_int * 0.0003255208333333333) / (double)AudioOutput.sampleRate);
           stackIn_13_0 = (var5Lifetime1 >= 1) ? var5Lifetime1 : 1;
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_16_0 = var3;
-          stackIn_16_1 = new StringBuilder().append("bs.QA(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_16_1 = new StringBuilder().append("bs.QA(").append(guard).append(',');
+          if (voice == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
@@ -218,62 +218,62 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    private final void a(int param0, boolean param1) {
+    private final void resetControllers(int channel, boolean guard) {
         int discarded$1 = 0;
         int var4;
         var4 = Sumoblitz.field_L ? 1 : 0;
-        if (0 > param0) {
-          param0 = 0;
+        if (0 > channel) {
+          channel = 0;
           do {
-            if (param0 >= 16) {
+            if (channel >= 16) {
               return;
             }
-            this.a(param0, true);
-            param0++;
+            this.resetControllers(channel, true);
+            channel++;
           } while (var4 == 0);
           return;
         }
-        this.field_w[param0] = 12800;
-        this.field_G[param0] = 8192;
-        this.field_T[param0] = 16383;
-        this.field_L[param0] = 8192;
-        this.field_K[param0] = 0;
-        this.field_z[param0] = 8192;
-        this.b(param0, (byte) 126);
-        this.a(param0, 32605);
-        if (!param1) {
-          discarded$1 = this.a(45, (MusicVoice) null);
+        this.channelVolume[channel] = 12800;
+        this.channelPan[channel] = 8192;
+        this.channelExpression[channel] = 16383;
+        this.pitchBend[channel] = 8192;
+        this.modulation[channel] = 0;
+        this.portamentoTime[channel] = 8192;
+        this.releasePortamentoVoices(channel, (byte) 126);
+        this.resetRetriggerPhases(channel, 32605);
+        if (!guard) {
+          discarded$1 = this.voicePan(45, (MusicVoice) null);
         }
-        this.field_J[param0] = 0;
-        this.field_S[param0] = 32767;
-        this.field_D[param0] = 256;
-        this.field_R[param0] = 0;
-        this.d(8192, param0, 41);
+        this.channelFlags[channel] = 0;
+        this.parameterSelection[channel] = 32767;
+        this.pitchBendSensitivity[channel] = 256;
+        this.sampleOffsets[channel] = 0;
+        this.setRetriggerRate(8192, channel, 41);
     }
 
-    private final void a(boolean param0, boolean param1) {
+    private final void resetSynthesizer(boolean param0, boolean param1) {
         int var3 = 0;
         int var4 = 0;
         var4 = Sumoblitz.field_L ? 1 : 0;
         if (param0) {
-          this.c(-1, -1);
+          this.allSoundOff(-1, -1);
         }
         if (!param0 ||
           var4 != 0) {
-          this.c(-1, (byte) -30);
+          this.allNotesOff(-1, (byte) -30);
         }
-        this.a(-1, param1);
+        this.resetControllers(-1, param1);
         var3 = 0;
         do {
           if (var3 >= 16) {
             var3 = 0;
             break;
           }
-          this.field_B[var3] = this.field_H[var3];
+          this.programs[var3] = this.initialPrograms[var3];
           var3++;
         } while (var4 == 0);
         while (var3 < 16) {
-          this.field_F[var3] = eb.a(this.field_H[var3], -128);
+          this.banks[var3] = eb.a(this.initialPrograms[var3], -128);
           var3++;
           if (var4 == 0) {
             continue;
@@ -283,7 +283,7 @@ final class MidiPcmStream extends PcmStream {
         return;
     }
 
-    final synchronized boolean a(og param0, MusicTrack param1, int param2, ResourceArchive param3, int param4) {
+    final synchronized boolean loadTrackPatches(SoundCache param0, MusicTrack param1, int param2, ResourceArchive param3, int param4) {
         int stackIn_19_0 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -302,17 +302,17 @@ final class MidiPcmStream extends PcmStream {
         int var11 = 0;
         var11 = Sumoblitz.field_L ? 1 : 0;
         try {
-          param1.b();
+          param1.buildInstrumentUsage();
           var6_int = 1;
           var7 = null;
           if (~param4 < param2) {
             var7 = new int[]{param4};
           }
-          var8 = (InstrumentNoteMask) (param1.field_l.a(52));
+          var8 = (InstrumentNoteMask) (param1.instrumentUsage.a(52));
           scanLoop1: while (true) {
             if (var8 != null) {
               var9 = (int)var8.key;
-              var10 = (MusicPatch) (this.field_p.a(param2 ^ -119, (long)var9));
+              var10 = (MusicPatch) (this.patches.a(param2 ^ -119, (long)var9));
               if (var11 == 0) {
                 boolean decompiledFrameRemainder0 = true;
                 if (var10 == null) {
@@ -322,16 +322,16 @@ final class MidiPcmStream extends PcmStream {
                     decompiledFrameRemainder0 = false;
                   }
                   else {
-                    this.field_p.a(var10, param2 ^ 0, (long)var9);
-                    decompiledFrameRemainder0 = !(var10.a(var8.field_m, (int[]) (var7), param0, 1255750754));
+                    this.patches.a(var10, param2 ^ 0, (long)var9);
+                    decompiledFrameRemainder0 = !(var10.loadSamples(var8.notes, (int[]) (var7), param0, 1255750754));
                   }
                 } else {
-                  decompiledFrameRemainder0 = !(var10.a(var8.field_m, (int[]) (var7), param0, 1255750754));
+                  decompiledFrameRemainder0 = !(var10.loadSamples(var8.notes, (int[]) (var7), param0, 1255750754));
                 }
                 if (decompiledFrameRemainder0) {
                   var6_int = 0;
                 }
-                var8 = (InstrumentNoteMask) (param1.field_l.a(true));
+                var8 = (InstrumentNoteMask) (param1.instrumentUsage.a(true));
                 continue;
               }
             } else {
@@ -339,7 +339,7 @@ final class MidiPcmStream extends PcmStream {
                 break scanLoop1;
               }
             }
-            param1.a();
+            param1.clearInstrumentUsage();
             break;
           }
           stackIn_19_0 = var6_int;
@@ -371,14 +371,14 @@ final class MidiPcmStream extends PcmStream {
     }
 
     final synchronized PcmStream firstSubstream() {
-        return (PcmStream) ((Object) this.field_s);
+        return (PcmStream) ((Object) this.noteMixer);
     }
 
     final synchronized int activityWeight() {
         return 0;
     }
 
-    private final int a(int param0, MusicVoice param1) {
+    private final int voicePan(int guard, MusicVoice voice) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_4_0 = 0;
@@ -388,22 +388,22 @@ final class MidiPcmStream extends PcmStream {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 != 16384) {
-            this.field_K = (int[]) null;
+          if (guard != 16384) {
+            this.modulation = (int[]) null;
           }
-          var3_int = this.field_G[param1.field_y];
+          var3_int = this.channelPan[voice.channel];
           if (8192 <= var3_int) {
-            stackIn_6_0 = 16384 - ((128 - param1.field_D) * (16384 - var3_int) + 32 >> 6);
+            stackIn_6_0 = 16384 - ((128 - voice.pan) * (16384 - var3_int) + 32 >> 6);
             return stackIn_6_0;
           }
-          stackIn_4_0 = var3_int * param1.field_D + 32 >> 6;
+          stackIn_4_0 = var3_int * voice.pan + 32 >> 6;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_9_0 = var3;
-          stackIn_9_1 = new StringBuilder().append("bs.HA(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_9_1 = new StringBuilder().append("bs.HA(").append(guard).append(',');
+          if (voice == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
@@ -412,18 +412,18 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized void a(boolean param0, MusicTrack param1, int param2) {
+    final synchronized void playTrack(boolean param0, MusicTrack param1, int param2) {
         try {
           if (param2 <= 48) {
-            this.d(0, -127, 115);
+            this.setRetriggerRate(0, -127, 115);
           }
-          this.a(param0, true, true, param1);
+          this.startTrack(param0, true, true, param1);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "bs.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final boolean a(int[] param0, int param1, int param2, MusicVoice param3, int param4) {
+    final boolean updateVoice(int[] output, int offset, int sampleCount, MusicVoice voice, int guard) {
         int stackIn_34_0 = 0;
         int stackIn_34_1 = 0;
         int stackIn_55_0 = 0;
@@ -442,107 +442,107 @@ final class MidiPcmStream extends PcmStream {
         int var11 = 0;
         var11 = Sumoblitz.field_L ? 1 : 0;
         try {
-          param3.field_u = AudioOutput.field_k / 100;
-          if (param3.field_x >= 0 && (param3.field_z == null ||
-            param3.field_z.isOutOfBounds())) {
-            param3.a(0);
-            param3.unlink(false);
-            if (param3.field_q > 0 &&
-              this.field_P[param3.field_y][param3.field_q] == param3) {
-              this.field_P[param3.field_y][param3.field_q] = null;
+          voice.samplesUntilUpdate = AudioOutput.sampleRate / 100;
+          if (voice.releaseTime >= 0 && (voice.stream == null ||
+            voice.stream.isOutOfBounds())) {
+            voice.clearReferences(0);
+            voice.unlink(false);
+            if (voice.exclusiveGroup > 0 &&
+              this.groupVoices[voice.channel][voice.exclusiveGroup] == voice) {
+              this.groupVoices[voice.channel][voice.exclusiveGroup] = null;
               return true;
             }
             return true;
           }
-          var6_int = param3.field_k;
+          var6_int = voice.portamentoScaleQ12;
           if (var6_int > 0) {
-            var6_int = var6_int - (int)(16.0 * Math.pow(2.0, (double)this.field_z[param3.field_y] * 0.0004921259842519685) + 0.5);
+            var6_int = var6_int - (int)(16.0 * Math.pow(2.0, (double)this.portamentoTime[voice.channel] * 0.0004921259842519685) + 0.5);
             if (var6_int < 0) {
               var6_int = 0;
             }
-            param3.field_k = var6_int;
+            voice.portamentoScaleQ12 = var6_int;
           }
-          param3.field_z.setStepMagnitude(this.a(true, param3));
-          var7 = param3.field_w;
-          param3.field_C = param3.field_C + var7.field_j;
+          voice.stream.setStepMagnitude(this.voiceSampleStep(true, voice));
+          var7 = voice.envelope;
+          voice.vibratoPhase = voice.vibratoPhase + var7.vibratoRate;
           var8 = 0;
-          param3.field_H = param3.field_H + 1;
-          var9 = (double)((param3.field_k * param3.field_p >> 12) + (-60 + param3.field_E << 8)) * 0.000005086263020833333;
-          if (var7.field_i > 0) {
-            boolean decompiledSharedTail0 = !(var7.field_d <= 0);
+          voice.ageTicks = voice.ageTicks + 1;
+          var9 = (double)((voice.portamentoScaleQ12 * voice.portamentoDelta >> 12) + (-60 + voice.note << 8)) * 0.000005086263020833333;
+          if (var7.decayRate > 0) {
+            boolean decompiledSharedTail0 = !(var7.decayKeyScale <= 0);
             if (!decompiledSharedTail0) {
-              param3.field_v = param3.field_v + 128;
+              voice.decayTime = voice.decayTime + 128;
               decompiledSharedTail0 = (var11 != 0);
             }
             if (decompiledSharedTail0) {
-              param3.field_v = param3.field_v + (int)(128.0 * Math.pow(2.0, (double)var7.field_d * var9) + 0.5);
+              voice.decayTime = voice.decayTime + (int)(128.0 * Math.pow(2.0, (double)var7.decayKeyScale * var9) + 0.5);
             }
-            if (819200 <= var7.field_i * param3.field_v) {
+            if (819200 <= var7.decayRate * voice.decayTime) {
               var8 = 1;
             }
           }
-          if (var7.field_g != null) {
-            if (0 < var7.field_f) {
-              param3.field_G = param3.field_G + (int)(0.5 + Math.pow(2.0, var9 * (double)var7.field_f) * 128.0);
+          if (var7.gainCurve != null) {
+            if (0 < var7.gainKeyScale) {
+              voice.gainEnvelopeTime = voice.gainEnvelopeTime + (int)(0.5 + Math.pow(2.0, var9 * (double)var7.gainKeyScale) * 128.0);
               if (var11 != 0) {
-                param3.field_G = param3.field_G + 128;
+                voice.gainEnvelopeTime = voice.gainEnvelopeTime + 128;
               }
             } else {
-              param3.field_G = param3.field_G + 128;
+              voice.gainEnvelopeTime = voice.gainEnvelopeTime + 128;
             }
             while (true) {
               boolean decompiledFrameRemainder1 = true;
-              if ((var7.field_g.length - 2) > param3.field_r) {
-                stackIn_34_0 = param3.field_G;
-                stackIn_34_1 = (255 & var7.field_g[param3.field_r + 2]) << 8;
+              if ((var7.gainCurve.length - 2) > voice.gainEnvelopeIndex) {
+                stackIn_34_0 = voice.gainEnvelopeTime;
+                stackIn_34_1 = (255 & var7.gainCurve[voice.gainEnvelopeIndex + 2]) << 8;
                 decompiledFrameRemainder1 = (var11 == 0);
                 if ((decompiledFrameRemainder1) &&
                   (stackIn_34_0 > stackIn_34_1)) {
-                  param3.field_r = param3.field_r + 2;
+                  voice.gainEnvelopeIndex = voice.gainEnvelopeIndex + 2;
                   continue;
                 }
               }
               if (decompiledFrameRemainder1) {
-                stackIn_34_0 = ~(var7.field_g.length - 2);
-                stackIn_34_1 = ~param3.field_r;
+                stackIn_34_0 = ~(var7.gainCurve.length - 2);
+                stackIn_34_1 = ~voice.gainEnvelopeIndex;
               }
               if (stackIn_34_0 != stackIn_34_1) {
                 break;
               }
-              if (0 != var7.field_g[param3.field_r + 1]) {
+              if (0 != var7.gainCurve[voice.gainEnvelopeIndex + 1]) {
                 break;
               }
               var8 = 1;
               break;
             }
           }
-          if (param4 <= param3.field_x &&
-            var7.field_h != null &&
-            (1 & this.field_J[param3.field_y]) == 0 && (!(param3.field_q >= 0) ||
-            this.field_P[param3.field_y][param3.field_q] != param3)) {
-            if (var7.field_c > 0) {
-              param3.field_x = param3.field_x + (int)(0.5 + 128.0 * Math.pow(2.0, var9 * (double)var7.field_c));
+          if (guard <= voice.releaseTime &&
+            var7.releaseCurve != null &&
+            (1 & this.channelFlags[voice.channel]) == 0 && (!(voice.exclusiveGroup >= 0) ||
+            this.groupVoices[voice.channel][voice.exclusiveGroup] != voice)) {
+            if (var7.releaseKeyScale > 0) {
+              voice.releaseTime = voice.releaseTime + (int)(0.5 + 128.0 * Math.pow(2.0, var9 * (double)var7.releaseKeyScale));
               if (var11 != 0) {
-                param3.field_x = param3.field_x + 128;
+                voice.releaseTime = voice.releaseTime + 128;
               }
             } else {
-              param3.field_x = param3.field_x + 128;
+              voice.releaseTime = voice.releaseTime + 128;
             }
             while (true) {
               boolean decompiledFrameRemainder0 = true;
-              if (param3.field_n < var7.field_h.length - 2) {
-                stackIn_55_0 = param3.field_x;
-                stackIn_55_1 = (var7.field_h[2 + param3.field_n] & 255) << 8;
+              if (voice.releaseEnvelopeIndex < var7.releaseCurve.length - 2) {
+                stackIn_55_0 = voice.releaseTime;
+                stackIn_55_1 = (var7.releaseCurve[2 + voice.releaseEnvelopeIndex] & 255) << 8;
                 decompiledFrameRemainder0 = (var11 == 0);
                 if ((decompiledFrameRemainder0) &&
                   (stackIn_55_0 > stackIn_55_1)) {
-                  param3.field_n = param3.field_n + 2;
+                  voice.releaseEnvelopeIndex = voice.releaseEnvelopeIndex + 2;
                   continue;
                 }
               }
               if (decompiledFrameRemainder0) {
-                stackIn_55_0 = param3.field_n;
-                stackIn_55_1 = var7.field_h.length - 2;
+                stackIn_55_0 = voice.releaseEnvelopeIndex;
+                stackIn_55_1 = var7.releaseCurve.length - 2;
               }
               if (stackIn_55_0 != stackIn_55_1) {
                 break;
@@ -552,27 +552,27 @@ final class MidiPcmStream extends PcmStream {
             }
           }
           if (var8 == 0) {
-            param3.field_z.rampVolumeAndPan(param3.field_u, this.c(255, param3), this.a(param4 ^ 16384, param3));
+            voice.stream.rampVolumeAndPan(voice.samplesUntilUpdate, this.voiceVolume(255, voice), this.voicePan(guard ^ 16384, voice));
             return false;
           }
-          param3.field_z.fadeOutAndUnlink(param3.field_u);
-          if (param0 != null) {
-            param3.field_z.mixInto(param0, param1, param2);
+          voice.stream.fadeOutAndUnlink(voice.samplesUntilUpdate);
+          if (output != null) {
+            voice.stream.mixInto(output, offset, sampleCount);
             if (var11 != 0) {
-              param3.field_z.skip(param2);
+              voice.stream.skip(sampleCount);
             }
           } else {
-            param3.field_z.skip(param2);
+            voice.stream.skip(sampleCount);
           }
-          if (param3.field_z.isRamping()) {
-            this.field_s.field_o.addSubstream(param3.field_z);
+          if (voice.stream.isRamping()) {
+            this.noteMixer.fadingStreams.addSubstream(voice.stream);
           }
-          param3.a(0);
-          if (param3.field_x >= 0) {
-            param3.unlink(false);
-            if (param3.field_q > 0 &&
-              this.field_P[param3.field_y][param3.field_q] == param3) {
-              this.field_P[param3.field_y][param3.field_q] = null;
+          voice.clearReferences(0);
+          if (voice.releaseTime >= 0) {
+            voice.unlink(false);
+            if (voice.exclusiveGroup > 0 &&
+              this.groupVoices[voice.channel][voice.exclusiveGroup] == voice) {
+              this.groupVoices[voice.channel][voice.exclusiveGroup] = null;
             }
           }
           return true;
@@ -581,43 +581,43 @@ final class MidiPcmStream extends PcmStream {
           var6 = decompiledCaughtException;
           stackIn_77_0 = var6;
           stackIn_77_1 = new StringBuilder().append("bs.IA(");
-          if (param0 == null) {
+          if (output == null) {
             stackIn_78_2 = "null";
           } else {
             stackIn_78_2 = "{...}";
           }
-          stackIn_80_1 = ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_80_1 = ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(',').append(offset).append(',').append(sampleCount).append(',');
+          if (voice == null) {
             stackIn_81_2 = "null";
           } else {
             stackIn_81_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_77_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(',').append(param4).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_77_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(',').append(guard).append(')').toString());
         }
     }
 
-    private final void b(int param0, byte param1) {
+    private final void releasePortamentoVoices(int param0, byte param1) {
         MusicVoice var3;
         int var4;
         int stackIn_12_0 = 0;
         int stackIn_12_1 = 0;
         boolean decompiledFrameCompleted0 = true;
         var4 = Sumoblitz.field_L ? 1 : 0;
-        if ((2 & this.field_J[param0]) != 0) {
-          var3 = (MusicVoice) (this.field_s.field_t.first(-78));
+        if ((2 & this.channelFlags[param0]) != 0) {
+          var3 = (MusicVoice) (this.noteMixer.voices.first(-78));
           while (var3 != null) {
-            stackIn_12_0 = var3.field_y;
+            stackIn_12_0 = var3.channel;
             stackIn_12_1 = param0;
             if (var4 != 0) {
               decompiledFrameCompleted0 = false;
               break;
             }
             if (stackIn_12_0 == stackIn_12_1 &&
-              this.field_t[param0][var3.field_E] == null &&
-              0 > var3.field_x) {
-              var3.field_x = 0;
+              this.keyVoices[param0][var3.note] == null &&
+              0 > var3.releaseTime) {
+              var3.releaseTime = 0;
             }
-            var3 = (MusicVoice) (this.field_s.field_t.next((byte) 18));
+            var3 = (MusicVoice) (this.noteMixer.voices.next((byte) 18));
           }
         }
         if (decompiledFrameCompleted0) {
@@ -625,11 +625,11 @@ final class MidiPcmStream extends PcmStream {
           stackIn_12_1 = 120;
         }
         if (stackIn_12_0 <= stackIn_12_1) {
-          this.field_J = (int[]) null;
+          this.channelFlags = (int[]) null;
         }
     }
 
-    final void a(byte param0, MusicVoice param1, boolean param2) {
+    final void applySampleOffset(byte guard, MusicVoice voice, boolean looping) {
         RuntimeException runtimeException = null;
         int var4_int = 0;
         int var5 = 0;
@@ -640,54 +640,54 @@ final class MidiPcmStream extends PcmStream {
         RuntimeException decompiledCaughtException = null;
         int var6Lifetime1;
         try {
-          var4_int = param1.field_B.samples.length;
-          boolean decompiledSharedTail0 = (!(param2) ||
-            !(param1.field_B.pingPong));
+          var4_int = voice.sample.samples.length;
+          boolean decompiledSharedTail0 = (!(looping) ||
+            !(voice.sample.pingPong));
           if (!decompiledSharedTail0) {
-            var6 = -param1.field_B.loopStart + (var4_int + var4_int);
-            var5 = (int)((long)var6 * (long)this.field_R[param1.field_y] >> 6);
+            var6 = -voice.sample.loopStart + (var4_int + var4_int);
+            var5 = (int)((long)var6 * (long)this.sampleOffsets[voice.channel] >> 6);
             var4_int = var4_int << 8;
             if (var4_int <= var5) {
-              param1.field_z.setReversed(true);
+              voice.stream.setReversed(true);
               var5 = -var5 + (var4_int + var4_int) - 1;
             }
             decompiledSharedTail0 = (Sumoblitz.field_L);
           }
           if (decompiledSharedTail0) {
-            var5 = (int)((long)var4_int * (long)this.field_R[param1.field_y] >> 6);
+            var5 = (int)((long)var4_int * (long)this.sampleOffsets[voice.channel] >> 6);
           }
-          var6Lifetime1 = -121 / ((22 - param0) / 59);
-          param1.field_z.setPosition(var5);
+          var6Lifetime1 = -121 / ((22 - guard) / 59);
+          voice.stream.setPosition(var5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
           stackIn_11_0 = runtimeException;
-          stackIn_11_1 = new StringBuilder().append("bs.GA(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_11_1 = new StringBuilder().append("bs.GA(").append(guard).append(',');
+          if (voice == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(looping).append(')').toString());
         }
     }
 
-    final synchronized void b(int param0, boolean param1) {
-        if (!param1) {
-          this.field_y = (int[]) null;
+    final synchronized void setMasterVolume(int volume, boolean guard) {
+        if (!guard) {
+          this.channelVolumeScales = (int[]) null;
         }
-        this.field_r = param0;
+        this.masterVolume = volume;
     }
 
-    private final void b(int param0, int param1, int param2) {
-        this.field_L[param0] = param2;
-        if (param1 > -98) {
-          this.field_D = (int[]) null;
+    private final void setPitchBend(int channel, int guard, int value) {
+        this.pitchBend[channel] = value;
+        if (guard > -98) {
+          this.pitchBendSensitivity = (int[]) null;
         }
     }
 
-    private final void d(int param0) {
+    private final void advanceMidiEvents(int param0) {
         int stackIn_7_0 = 0;
         int stackIn_7_1 = 0;
         int stackIn_29_0 = 0;
@@ -698,88 +698,88 @@ final class MidiPcmStream extends PcmStream {
         int var6 = 0;
         int var7 = 0;
         var7 = Sumoblitz.field_L ? 1 : 0;
-        var2 = this.field_Q;
+        var2 = this.nextTrack;
         if (param0 != 18922) {
-          this.field_v = (MidiFileReader) null;
+          this.midiReader = (MidiFileReader) null;
         }
-        var3 = this.field_C;
-        var4 = this.field_q;
-        if (null != this.field_I &&
-          ~var3 == ~this.field_u) {
-          this.a(this.field_M, true, this.field_A, this.field_I);
-          this.d(18922);
+        var3 = this.nextEventTick;
+        var4 = this.nextEventTime;
+        if (null != this.pendingTrack &&
+          ~var3 == ~this.switchTick) {
+          this.startTrack(this.looping, true, this.stopVoicesOnSwitch, this.pendingTrack);
+          this.advanceMidiEvents(18922);
           return;
         }
         while (true) {
           stackIn_7_0 = ~var3;
-          stackIn_7_1 = ~this.field_C;
+          stackIn_7_1 = ~this.nextEventTick;
           regionExit1: {
             if (stackIn_7_0 == stackIn_7_1) {
               scanLoop2: while (true) {
                 stackIn_29_0 = ~var3;
-                stackIn_29_1 = ~this.field_v.field_c[var2];
+                stackIn_29_1 = ~this.midiReader.trackTicks[var2];
                 if (var7 != 0) {
                   break regionExit1;
                 }
                 if (stackIn_29_0 == stackIn_29_1) {
-                  this.field_v.b(var2);
-                  var6 = this.field_v.e(var2);
+                  this.midiReader.seekTrack(var2);
+                  var6 = this.midiReader.readMessage(var2);
                   stackIn_7_0 = ~var6;
                   stackIn_7_1 = -2;
                   if (stackIn_7_0 == stackIn_7_1) {
-                    this.field_v.a();
-                    this.field_v.c(var2);
-                    if (!this.field_v.d() &&
+                    this.midiReader.markTrackDone();
+                    this.midiReader.saveTrackPosition(var2);
+                    if (!this.midiReader.allTracksDone() &&
                       var7 == 0) {
                       break scanLoop2;
                     }
-                    if (this.field_I != null) {
-                      this.a(this.field_M, this.field_I, 107);
-                      this.d(18922);
+                    if (this.pendingTrack != null) {
+                      this.playTrack(this.looping, this.pendingTrack, 107);
+                      this.advanceMidiEvents(18922);
                       return;
                     }
-                    if (this.field_M &&
+                    if (this.looping &&
                       var3 != 0) {
-                      this.field_v.reset(var4);
+                      this.midiReader.reset(var4);
                       break scanLoop2;
                     }
-                    this.a(true, true);
-                    this.field_v.e();
+                    this.resetSynthesizer(true, true);
+                    this.midiReader.clear();
                     return;
                   }
                   if (0 != (var6 & 128)) {
-                    this.a(var6, (byte) -82);
+                    this.dispatchMidiEvent(var6, (byte) -82);
                   }
-                  this.field_v.a(var2);
-                  this.field_v.c(var2);
+                  this.midiReader.readTrackDelta(var2);
+                  this.midiReader.saveTrackPosition(var2);
                   continue;
                 }
                 break;
               }
-              var2 = this.field_v.nextTrack();
-              var3 = this.field_v.field_c[var2];
-              var4 = this.field_v.d(var3);
+              var2 = this.midiReader.nextTrack();
+              var3 = this.midiReader.trackTicks[var2];
+              var4 = this.midiReader.timeAtTick(var3);
               continue;
             }
-            this.field_q = var4;
-            this.field_C = var3;
-            this.field_Q = var2;
-            if (this.field_I == null) {
+            this.nextEventTime = var4;
+            this.nextEventTick = var3;
+            this.nextTrack = var2;
+            if (this.pendingTrack == null) {
               return;
             }
-            stackIn_29_0 = ~this.field_u;
+            stackIn_29_0 = ~this.switchTick;
             stackIn_29_1 = ~var3;
           }
           if (stackIn_29_0 > stackIn_29_1) {
-            this.field_C = this.field_u;
-            this.field_Q = -1;
-            this.field_q = this.field_v.d(this.field_C);
+            this.nextEventTick = this.switchTick;
+            this.nextTrack = -1;
+            this.nextEventTime = this.midiReader.timeAtTick(this.nextEventTick);
           }
           return;
         }
     }
 
-    private final void a(int param0, byte param1, int param2, int param3) {
+    private final void noteOn(int velocity, byte guard, int channel, int note) {
         int stackIn_17_1 = 0;
         MusicVoice stackIn_17_2 = null;
         Object stackIn_18_0;
@@ -794,126 +794,126 @@ final class MidiPcmStream extends PcmStream {
         MusicPatch var11;
         MusicPatch var12;
         var10 = Sumoblitz.field_L ? 1 : 0;
-        this.a(64, param3, 12800, param2);
-        if ((this.field_J[param2] & 2) != 0) {
-          var5 = (MusicVoice) (this.field_s.field_t.last(9));
+        this.noteOff(64, note, 12800, channel);
+        if ((this.channelFlags[channel] & 2) != 0) {
+          var5 = (MusicVoice) (this.noteMixer.voices.last(9));
           while (var5 != null) {
-            if (~param2 == ~var5.field_y &&
-              0 > var5.field_x) {
-              this.field_t[param2][var5.field_E] = null;
-              this.field_t[param2][param3] = var5;
-              var6_int = var5.field_m + (var5.field_p * var5.field_k >> 12);
-              var5.field_m = var5.field_m + (-var5.field_E + param3 << 8);
-              var5.field_p = -var5.field_m + var6_int;
-              var5.field_E = param3;
-              var5.field_k = 4096;
+            if (~channel == ~var5.channel &&
+              0 > var5.releaseTime) {
+              this.keyVoices[channel][var5.note] = null;
+              this.keyVoices[channel][note] = var5;
+              var6_int = var5.basePitchQ8 + (var5.portamentoDelta * var5.portamentoScaleQ12 >> 12);
+              var5.basePitchQ8 = var5.basePitchQ8 + (-var5.note + note << 8);
+              var5.portamentoDelta = -var5.basePitchQ8 + var6_int;
+              var5.note = note;
+              var5.portamentoScaleQ12 = 4096;
               return;
             }
-            var5 = (MusicVoice) (this.field_s.field_t.previous(9));
+            var5 = (MusicVoice) (this.noteMixer.voices.previous(9));
             if (var10 == 0) {
               continue;
             }
             break;
           }
         }
-        var11 = (MusicPatch) (this.field_p.a(115, (long)this.field_B[param2]));
+        var11 = (MusicPatch) (this.patches.a(115, (long)this.programs[channel]));
         var12 = var11;
         if (var12 == null) {
           return;
         }
-        var6 = var11.field_o[param3];
+        var6 = var11.samples[note];
         if (var6 == null) {
           return;
         }
         var7 = new MusicVoice();
-        var7.field_A = var12;
-        var7.field_y = param2;
-        var7.field_B = var6;
-        var7.field_w = var11.field_n[param3];
-        var7.field_q = var11.field_r[param3];
-        var8 = -115 % ((-80 - param1) / 43);
-        var7.field_E = param3;
-        var7.field_F = 1024 + var12.field_s * (param0 * (param0 * var11.field_q[param3])) >> 11;
-        var7.field_D = var11.field_t[param3] & 255;
-        var7.field_m = -(32767 & var11.field_k[param3]) + (param3 << 8);
-        var7.field_G = 0;
-        var7.field_r = 0;
-        var7.field_x = -1;
-        var7.field_v = 0;
-        var7.field_n = 0;
-        if (0 == this.field_R[param2]) {
-          var7.field_z = PcmSampleStream.createForSampleStep(var6, this.a(true, var7), this.c(255, var7), this.a(16384, var7));
+        var7.patch = var12;
+        var7.channel = channel;
+        var7.sample = var6;
+        var7.envelope = var11.envelopes[note];
+        var7.exclusiveGroup = var11.exclusiveGroups[note];
+        var8 = -115 % ((-80 - guard) / 43);
+        var7.note = note;
+        var7.velocityGain = 1024 + var12.volume * (velocity * (velocity * var11.noteVolumes[note])) >> 11;
+        var7.pan = var11.notePans[note] & 255;
+        var7.basePitchQ8 = -(32767 & var11.tunings[note]) + (note << 8);
+        var7.gainEnvelopeTime = 0;
+        var7.gainEnvelopeIndex = 0;
+        var7.releaseTime = -1;
+        var7.decayTime = 0;
+        var7.releaseEnvelopeIndex = 0;
+        if (0 == this.sampleOffsets[channel]) {
+          var7.stream = PcmSampleStream.createForSampleStep(var6, this.voiceSampleStep(true, var7), this.voiceVolume(255, var7), this.voicePan(16384, var7));
           if (var10 != 0) {
-            var7.field_z = PcmSampleStream.createForSampleStep(var6, this.a(true, var7), 0, this.a(16384, var7));
+            var7.stream = PcmSampleStream.createForSampleStep(var6, this.voiceSampleStep(true, var7), 0, this.voicePan(16384, var7));
             stackIn_17_1 = 110;
             stackIn_17_2 = var7;
-            if (var11.field_k[param3] >= 0) {
+            if (var11.tunings[note] >= 0) {
               stackIn_18_0 = this;
               stackIn_18_3 = false;
             } else {
               stackIn_18_0 = this;
               stackIn_18_3 = true;
             }
-            this.a((byte) stackIn_17_1, stackIn_17_2, stackIn_18_3);
+            this.applySampleOffset((byte) stackIn_17_1, stackIn_17_2, stackIn_18_3);
           }
         } else {
-          var7.field_z = PcmSampleStream.createForSampleStep(var6, this.a(true, var7), 0, this.a(16384, var7));
+          var7.stream = PcmSampleStream.createForSampleStep(var6, this.voiceSampleStep(true, var7), 0, this.voicePan(16384, var7));
           stackIn_17_1 = 110;
           stackIn_17_2 = var7;
-          if (var11.field_k[param3] >= 0) {
+          if (var11.tunings[note] >= 0) {
             stackIn_18_0 = this;
             stackIn_18_3 = false;
           } else {
             stackIn_18_0 = this;
             stackIn_18_3 = true;
           }
-          this.a((byte) stackIn_17_1, stackIn_17_2, stackIn_18_3);
+          this.applySampleOffset((byte) stackIn_17_1, stackIn_17_2, stackIn_18_3);
         }
-        if (var11.field_k[param3] < 0) {
-          var7.field_z.setLoopCount(-1);
+        if (var11.tunings[note] < 0) {
+          var7.stream.setLoopCount(-1);
         }
-        if (var7.field_q >= 0) {
-          var9 = this.field_P[param2][var7.field_q];
+        if (var7.exclusiveGroup >= 0) {
+          var9 = this.groupVoices[channel][var7.exclusiveGroup];
           if (var9 != null &&
-            var9.field_x < 0) {
-            this.field_t[param2][var9.field_E] = null;
-            var9.field_x = 0;
+            var9.releaseTime < 0) {
+            this.keyVoices[channel][var9.note] = null;
+            var9.releaseTime = 0;
           }
-          this.field_P[param2][var7.field_q] = var7;
+          this.groupVoices[channel][var7.exclusiveGroup] = var7;
         }
-        this.field_s.field_t.addLast((IntrusiveNode) (var7), (byte) 39);
-        this.field_t[param2][param3] = var7;
+        this.noteMixer.voices.addLast((IntrusiveNode) (var7), (byte) 39);
+        this.keyVoices[channel][note] = var7;
         return;
     }
 
-    final boolean b(int param0, MusicVoice param1) {
+    final boolean removeInactiveVoice(int guard, MusicVoice voice) {
         RuntimeException var3 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 < 30) {
-            this.field_s = (MidiNoteMixer) null;
+          if (guard < 30) {
+            this.noteMixer = (MidiNoteMixer) null;
           }
-          if (param1.field_z != null) {
+          if (voice.stream != null) {
             return false;
           }
-          if (param1.field_x < 0) {
+          if (voice.releaseTime < 0) {
             return true;
           }
-          param1.unlink(false);
-          if (0 < param1.field_q &&
-            param1 == this.field_P[param1.field_y][param1.field_q]) {
-            this.field_P[param1.field_y][param1.field_q] = null;
+          voice.unlink(false);
+          if (0 < voice.exclusiveGroup &&
+            voice == this.groupVoices[voice.channel][voice.exclusiveGroup]) {
+            this.groupVoices[voice.channel][voice.exclusiveGroup] = null;
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_14_0 = var3;
-          stackIn_14_1 = new StringBuilder().append("bs.V(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_14_1 = new StringBuilder().append("bs.V(").append(guard).append(',');
+          if (voice == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";
@@ -922,7 +922,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    private final void a(int param0, byte param1) {
+    private final void dispatchMidiEvent(int message, byte guard) {
         int var3;
         int var4;
         int var5;
@@ -946,192 +946,192 @@ final class MidiPcmStream extends PcmStream {
         int var5Lifetime3Lifetime1;
         int var5Lifetime3Lifetime2;
         var8 = Sumoblitz.field_L ? 1 : 0;
-        var3 = param0 & 240;
+        var3 = message & 240;
         if (var3 == 128) {
-          var4 = 15 & param0;
-          var5 = param0 >> 8 & 127;
-          var6 = param0 >> 16 & 127;
-          this.a(var6, var5, 12800, var4);
+          var4 = 15 & message;
+          var5 = message >> 8 & 127;
+          var6 = message >> 16 & 127;
+          this.noteOff(var6, var5, 12800, var4);
           return;
         }
         if (var3 == 144) {
-          var4Lifetime1 = 15 & param0;
-          var5Lifetime1 = (32657 & param0) >> 8;
-          var6Lifetime1 = 127 & param0 >> 16;
+          var4Lifetime1 = 15 & message;
+          var5Lifetime1 = (32657 & message) >> 8;
+          var6Lifetime1 = 127 & message >> 16;
           if (var6Lifetime1 > 0) {
-            this.a(var6Lifetime1, (byte) -13, var4Lifetime1, var5Lifetime1);
+            this.noteOn(var6Lifetime1, (byte) -13, var4Lifetime1, var5Lifetime1);
             if (var8 == 0) {
               return;
             }
           }
-          this.a(64, var5Lifetime1, 12800, var4Lifetime1);
+          this.noteOff(64, var5Lifetime1, 12800, var4Lifetime1);
           return;
         }
-        if (param1 >= -52) {
+        if (guard >= -52) {
           return;
         }
         if (var3 == 160) {
-          var4Lifetime2 = param0 & 15;
-          var5Lifetime2 = 127 & param0 >> 8;
-          var6Lifetime2 = param0 >> 16 & 127;
-          this.b(97, var5Lifetime2, var6Lifetime2, var4Lifetime2);
+          var4Lifetime2 = message & 15;
+          var5Lifetime2 = 127 & message >> 8;
+          var6Lifetime2 = message >> 16 & 127;
+          this.handlePolyphonicPressure(97, var5Lifetime2, var6Lifetime2, var4Lifetime2);
           return;
         }
         if (176 != var3) {
           if (var3 == 192) {
-            var4Lifetime3 = param0 & 15;
-            var5Lifetime3 = (param0 & 32711) >> 8;
-            this.e(var4Lifetime3, this.field_F[var4Lifetime3] + var5Lifetime3, 5174);
+            var4Lifetime3 = message & 15;
+            var5Lifetime3 = (message & 32711) >> 8;
+            this.changeProgram(var4Lifetime3, this.banks[var4Lifetime3] + var5Lifetime3, 5174);
             return;
           }
           if (208 == var3) {
-            var4Lifetime3Lifetime1 = 15 & param0;
-            var5Lifetime3Lifetime1 = (32605 & param0) >> 8;
-            this.a(var4Lifetime3Lifetime1, (byte) -101, var5Lifetime3Lifetime1);
+            var4Lifetime3Lifetime1 = 15 & message;
+            var5Lifetime3Lifetime1 = (32605 & message) >> 8;
+            this.handleChannelPressure(var4Lifetime3Lifetime1, (byte) -101, var5Lifetime3Lifetime1);
             return;
           }
           if (224 == var3) {
-            var4Lifetime3Lifetime2 = 15 & param0;
-            var5Lifetime3Lifetime2 = ((param0 & 8323255) >> 9) + (param0 >> 8 & 127);
-            this.b(var4Lifetime3Lifetime2, -105, var5Lifetime3Lifetime2);
+            var4Lifetime3Lifetime2 = 15 & message;
+            var5Lifetime3Lifetime2 = ((message & 8323255) >> 9) + (message >> 8 & 127);
+            this.setPitchBend(var4Lifetime3Lifetime2, -105, var5Lifetime3Lifetime2);
             return;
           }
-          var3 = 255 & param0;
+          var3 = 255 & message;
           if (var3 != 255) {
             return;
           }
-          this.a(true, true);
+          this.resetSynthesizer(true, true);
           return;
         }
-        var4Lifetime4 = 15 & param0;
-        var5Lifetime4 = (32654 & param0) >> 8;
-        var6Lifetime3 = (8345855 & param0) >> 16;
+        var4Lifetime4 = 15 & message;
+        var5Lifetime4 = (32654 & message) >> 8;
+        var6Lifetime3 = (8345855 & message) >> 16;
         if (0 == var5Lifetime4) {
-          this.field_F[var4Lifetime4] = (var6Lifetime3 << 14) + eb.a(-2080769, this.field_F[var4Lifetime4]);
+          this.banks[var4Lifetime4] = (var6Lifetime3 << 14) + eb.a(-2080769, this.banks[var4Lifetime4]);
         }
         if (var5Lifetime4 == 32) {
-          this.field_F[var4Lifetime4] = (var6Lifetime3 << 7) + eb.a(this.field_F[var4Lifetime4], -16257);
+          this.banks[var4Lifetime4] = (var6Lifetime3 << 7) + eb.a(this.banks[var4Lifetime4], -16257);
         }
         if (var5Lifetime4 == 1) {
-          this.field_K[var4Lifetime4] = (var6Lifetime3 << 7) + eb.a(-16257, this.field_K[var4Lifetime4]);
+          this.modulation[var4Lifetime4] = (var6Lifetime3 << 7) + eb.a(-16257, this.modulation[var4Lifetime4]);
         }
         if (33 == var5Lifetime4) {
-          this.field_K[var4Lifetime4] = eb.a(-128, this.field_K[var4Lifetime4]) + var6Lifetime3;
+          this.modulation[var4Lifetime4] = eb.a(-128, this.modulation[var4Lifetime4]) + var6Lifetime3;
         }
         if (var5Lifetime4 == 5) {
-          this.field_z[var4Lifetime4] = (var6Lifetime3 << 7) + eb.a(-16257, this.field_z[var4Lifetime4]);
+          this.portamentoTime[var4Lifetime4] = (var6Lifetime3 << 7) + eb.a(-16257, this.portamentoTime[var4Lifetime4]);
         }
         if (37 == var5Lifetime4) {
-          this.field_z[var4Lifetime4] = var6Lifetime3 + eb.a(-128, this.field_z[var4Lifetime4]);
+          this.portamentoTime[var4Lifetime4] = var6Lifetime3 + eb.a(-128, this.portamentoTime[var4Lifetime4]);
         }
         if (var5Lifetime4 == 7) {
-          this.field_w[var4Lifetime4] = eb.a(-16257, this.field_w[var4Lifetime4]) + (var6Lifetime3 << 7);
+          this.channelVolume[var4Lifetime4] = eb.a(-16257, this.channelVolume[var4Lifetime4]) + (var6Lifetime3 << 7);
         }
         if (39 == var5Lifetime4) {
-          this.field_w[var4Lifetime4] = var6Lifetime3 + eb.a(this.field_w[var4Lifetime4], -128);
+          this.channelVolume[var4Lifetime4] = var6Lifetime3 + eb.a(this.channelVolume[var4Lifetime4], -128);
         }
         if (10 == var5Lifetime4) {
-          this.field_G[var4Lifetime4] = eb.a(-16257, this.field_G[var4Lifetime4]) + (var6Lifetime3 << 7);
+          this.channelPan[var4Lifetime4] = eb.a(-16257, this.channelPan[var4Lifetime4]) + (var6Lifetime3 << 7);
         }
         if (42 == var5Lifetime4) {
-          this.field_G[var4Lifetime4] = var6Lifetime3 + eb.a(-128, this.field_G[var4Lifetime4]);
+          this.channelPan[var4Lifetime4] = var6Lifetime3 + eb.a(-128, this.channelPan[var4Lifetime4]);
         }
         if (var5Lifetime4 == 11) {
-          this.field_T[var4Lifetime4] = eb.a(-16257, this.field_T[var4Lifetime4]) + (var6Lifetime3 << 7);
+          this.channelExpression[var4Lifetime4] = eb.a(-16257, this.channelExpression[var4Lifetime4]) + (var6Lifetime3 << 7);
         }
         if (var5Lifetime4 == 43) {
-          this.field_T[var4Lifetime4] = var6Lifetime3 + eb.a(-128, this.field_T[var4Lifetime4]);
+          this.channelExpression[var4Lifetime4] = var6Lifetime3 + eb.a(-128, this.channelExpression[var4Lifetime4]);
         }
         if (var5Lifetime4 == 64) {
           if (var6Lifetime3 >= 64) {
-            this.field_J[var4Lifetime4] = ic.a(this.field_J[var4Lifetime4], 1);
+            this.channelFlags[var4Lifetime4] = ic.a(this.channelFlags[var4Lifetime4], 1);
             if (var8 != 0) {
-              this.field_J[var4Lifetime4] = eb.a(this.field_J[var4Lifetime4], -2);
+              this.channelFlags[var4Lifetime4] = eb.a(this.channelFlags[var4Lifetime4], -2);
             }
           } else {
-            this.field_J[var4Lifetime4] = eb.a(this.field_J[var4Lifetime4], -2);
+            this.channelFlags[var4Lifetime4] = eb.a(this.channelFlags[var4Lifetime4], -2);
           }
         }
         if (var5Lifetime4 == 65) {
           if (var6Lifetime3 < 64) {
-            this.b(var4Lifetime4, (byte) 122);
-            this.field_J[var4Lifetime4] = eb.a(this.field_J[var4Lifetime4], -3);
+            this.releasePortamentoVoices(var4Lifetime4, (byte) 122);
+            this.channelFlags[var4Lifetime4] = eb.a(this.channelFlags[var4Lifetime4], -3);
             if (var8 != 0) {
-              this.field_J[var4Lifetime4] = ic.a(this.field_J[var4Lifetime4], 2);
+              this.channelFlags[var4Lifetime4] = ic.a(this.channelFlags[var4Lifetime4], 2);
             }
           } else {
-            this.field_J[var4Lifetime4] = ic.a(this.field_J[var4Lifetime4], 2);
+            this.channelFlags[var4Lifetime4] = ic.a(this.channelFlags[var4Lifetime4], 2);
           }
         }
         if (var5Lifetime4 == 99) {
-          this.field_S[var4Lifetime4] = (var6Lifetime3 << 7) + eb.a(127, this.field_S[var4Lifetime4]);
+          this.parameterSelection[var4Lifetime4] = (var6Lifetime3 << 7) + eb.a(127, this.parameterSelection[var4Lifetime4]);
         }
         if (var5Lifetime4 == 98) {
-          this.field_S[var4Lifetime4] = eb.a(16256, this.field_S[var4Lifetime4]) + var6Lifetime3;
+          this.parameterSelection[var4Lifetime4] = eb.a(16256, this.parameterSelection[var4Lifetime4]) + var6Lifetime3;
         }
         if (var5Lifetime4 == 101) {
-          this.field_S[var4Lifetime4] = 16384 + (eb.a(127, this.field_S[var4Lifetime4]) + (var6Lifetime3 << 7));
+          this.parameterSelection[var4Lifetime4] = 16384 + (eb.a(127, this.parameterSelection[var4Lifetime4]) + (var6Lifetime3 << 7));
         }
         if (var5Lifetime4 == 100) {
-          this.field_S[var4Lifetime4] = 16384 - (-eb.a(this.field_S[var4Lifetime4], 16256) - var6Lifetime3);
+          this.parameterSelection[var4Lifetime4] = 16384 - (-eb.a(this.parameterSelection[var4Lifetime4], 16256) - var6Lifetime3);
         }
         if (var5Lifetime4 == 120) {
-          this.c(-1, var4Lifetime4);
+          this.allSoundOff(-1, var4Lifetime4);
         }
         if (var5Lifetime4 == 121) {
-          this.a(var4Lifetime4, true);
+          this.resetControllers(var4Lifetime4, true);
         }
         if (var5Lifetime4 == 123) {
-          this.c(var4Lifetime4, (byte) -109);
+          this.allNotesOff(var4Lifetime4, (byte) -109);
         }
         if (var5Lifetime4 == 6) {
-          var7 = this.field_S[var4Lifetime4];
+          var7 = this.parameterSelection[var4Lifetime4];
           if (16384 == var7) {
-            this.field_D[var4Lifetime4] = eb.a(-16257, this.field_D[var4Lifetime4]) + (var6Lifetime3 << 7);
+            this.pitchBendSensitivity[var4Lifetime4] = eb.a(-16257, this.pitchBendSensitivity[var4Lifetime4]) + (var6Lifetime3 << 7);
           }
         }
         if (var5Lifetime4 == 38) {
-          var7Lifetime1 = this.field_S[var4Lifetime4];
+          var7Lifetime1 = this.parameterSelection[var4Lifetime4];
           if (var7Lifetime1 == 16384) {
-            this.field_D[var4Lifetime4] = var6Lifetime3 + eb.a(this.field_D[var4Lifetime4], -128);
+            this.pitchBendSensitivity[var4Lifetime4] = var6Lifetime3 + eb.a(this.pitchBendSensitivity[var4Lifetime4], -128);
           }
         }
         if (16 == var5Lifetime4) {
-          this.field_R[var4Lifetime4] = eb.a(this.field_R[var4Lifetime4], -16257) + (var6Lifetime3 << 7);
+          this.sampleOffsets[var4Lifetime4] = eb.a(this.sampleOffsets[var4Lifetime4], -16257) + (var6Lifetime3 << 7);
         }
         if (var5Lifetime4 == 48) {
-          this.field_R[var4Lifetime4] = var6Lifetime3 + eb.a(this.field_R[var4Lifetime4], -128);
+          this.sampleOffsets[var4Lifetime4] = var6Lifetime3 + eb.a(this.sampleOffsets[var4Lifetime4], -128);
         }
         if (81 == var5Lifetime4) {
           if (var6Lifetime3 < 64) {
-            this.a(var4Lifetime4, 32605);
-            this.field_J[var4Lifetime4] = eb.a(this.field_J[var4Lifetime4], -5);
+            this.resetRetriggerPhases(var4Lifetime4, 32605);
+            this.channelFlags[var4Lifetime4] = eb.a(this.channelFlags[var4Lifetime4], -5);
             if (var8 != 0) {
-              this.field_J[var4Lifetime4] = ic.a(this.field_J[var4Lifetime4], 4);
+              this.channelFlags[var4Lifetime4] = ic.a(this.channelFlags[var4Lifetime4], 4);
             }
           } else {
-            this.field_J[var4Lifetime4] = ic.a(this.field_J[var4Lifetime4], 4);
+            this.channelFlags[var4Lifetime4] = ic.a(this.channelFlags[var4Lifetime4], 4);
           }
         }
         if (var5Lifetime4 == 17) {
-          this.d((var6Lifetime3 << 7) + (-16257 & this.field_N[var4Lifetime4]), var4Lifetime4, 97);
+          this.setRetriggerRate((var6Lifetime3 << 7) + (-16257 & this.retriggerControllers[var4Lifetime4]), var4Lifetime4, 97);
         }
         if (var5Lifetime4 == 49) {
-          this.d(var6Lifetime3 + (-128 & this.field_N[var4Lifetime4]), var4Lifetime4, 42);
+          this.setRetriggerRate(var6Lifetime3 + (-128 & this.retriggerControllers[var4Lifetime4]), var4Lifetime4, 42);
         }
         return;
     }
 
-    private final void e(int param0, int param1, int param2) {
+    private final void changeProgram(int channel, int program, int guard) {
         int var4 = 0;
         int var5 = 0;
         boolean decompiledFrameCompleted0 = true;
         var5 = Sumoblitz.field_L ? 1 : 0;
-        if (~this.field_B[param0] != ~param1) {
-          this.field_B[param0] = param1;
+        if (~this.programs[channel] != ~program) {
+          this.programs[channel] = program;
           var4 = 0;
           while (var4 < 128) {
-            this.field_P[param0][var4] = null;
+            this.groupVoices[channel][var4] = null;
             var4++;
             if (var5 != 0) {
               decompiledFrameCompleted0 = false;
@@ -1140,25 +1140,25 @@ final class MidiPcmStream extends PcmStream {
           }
         }
         if ((decompiledFrameCompleted0) &&
-          (param2 != 5174)) {
-          this.field_y = (int[]) null;
+          (guard != 5174)) {
+          this.channelVolumeScales = (int[]) null;
         }
 
     }
 
-    private final void a(int param0, byte param1, int param2) {
+    private final void handleChannelPressure(int param0, byte param1, int param2) {
         if (param1 >= -26) {
-          this.field_r = -65;
+          this.masterVolume = -65;
         }
     }
 
-    private final void c(int param0, int param1, int param2) {
-        this.field_H[param1] = param2;
-        this.field_F[param1] = eb.a(-128, param2);
+    private final void initializeChannelProgram(int param0, int param1, int param2) {
+        this.initialPrograms[param1] = param2;
+        this.banks[param1] = eb.a(-128, param2);
         if (param0 != -1823) {
           return;
         }
-        this.e(param1, param2, param0 ^ -4905);
+        this.changeProgram(param1, param2, param0 ^ -4905);
     }
 
     final synchronized void mixInto(int[] param0, int param1, int param2) {
@@ -1173,34 +1173,34 @@ final class MidiPcmStream extends PcmStream {
         int var8 = 0;
         var8 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (this.field_v.c()) {
-            var4_int = this.field_E * this.field_v.field_d / AudioOutput.field_k;
+          if (this.midiReader.isReady()) {
+            var4_int = this.timeScale * this.midiReader.division / AudioOutput.sampleRate;
             while (true) {
-              var5 = (long)var4_int * (long)param2 + this.field_O;
-              if (0L <= -var5 + this.field_q) {
-                this.field_O = var5;
+              var5 = (long)var4_int * (long)param2 + this.currentTime;
+              if (0L <= -var5 + this.nextEventTime) {
+                this.currentTime = var5;
                 if (var8 == 0) {
                   break;
                 }
               }
-              var7 = (int)((this.field_q + (-this.field_O + (long)var4_int - 1L)) / (long)var4_int);
-              this.field_O = this.field_O + (long)var7 * (long)var4_int;
-              this.field_s.mixInto(param0, param1, var7);
+              var7 = (int)((this.nextEventTime + (-this.currentTime + (long)var4_int - 1L)) / (long)var4_int);
+              this.currentTime = this.currentTime + (long)var7 * (long)var4_int;
+              this.noteMixer.mixInto(param0, param1, var7);
               param2 = param2 - var7;
-              this.d(18922);
+              this.advanceMidiEvents(18922);
               param1 = param1 + var7;
-              if (!this.field_v.c() &&
+              if (!this.midiReader.isReady() &&
                 var8 == 0) {
                 break;
               }
               if (var8 == 0) {
                 continue;
               }
-              this.field_s.mixInto(param0, param1, param2);
+              this.noteMixer.mixInto(param0, param1, param2);
               return;
             }
           }
-          this.field_s.mixInto(param0, param1, param2);
+          this.noteMixer.mixInto(param0, param1, param2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1216,183 +1216,183 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    private final void a(int param0, int param1) {
+    private final void resetRetriggerPhases(int param0, int param1) {
         MusicVoice var3;
         int var4;
         var4 = Sumoblitz.field_L ? 1 : 0;
         if (param1 != 32605) {
-          this.field_z = (int[]) null;
+          this.portamentoTime = (int[]) null;
         }
-        if ((this.field_J[param0] & 4) != 0) {
-          var3 = (MusicVoice) (this.field_s.field_t.first(param1 - 32539));
+        if ((this.channelFlags[param0] & 4) != 0) {
+          var3 = (MusicVoice) (this.noteMixer.voices.first(param1 - 32539));
           while (var3 != null) {
             if (var4 != 0) {
               break;
             }
-            if (~param0 == ~var3.field_y) {
-              var3.field_t = 0;
+            if (~param0 == ~var3.channel) {
+              var3.retriggerPhase = 0;
             }
-            var3 = (MusicVoice) (this.field_s.field_t.next((byte) 18));
+            var3 = (MusicVoice) (this.noteMixer.voices.next((byte) 18));
           }
         }
     }
 
-    private final void c(int param0, int param1) {
+    private final void allSoundOff(int guard, int channel) {
         MusicVoice var3;
         int var4;
         var4 = Sumoblitz.field_L ? 1 : 0;
-        if (param0 != -1) {
-          this.field_v = (MidiFileReader) null;
+        if (guard != -1) {
+          this.midiReader = (MidiFileReader) null;
         }
-        var3 = (MusicVoice) (this.field_s.field_t.first(param0 ^ -95));
+        var3 = (MusicVoice) (this.noteMixer.voices.first(guard ^ -95));
         while (var3 != null) {
           if (var4 == 0) {
-            if (param1 < 0 ||
-              ~var3.field_y == ~param1) {
-              if (null != var3.field_z) {
-                var3.field_z.fadeOutAndUnlink(AudioOutput.field_k / 100);
-                if (var3.field_z.isRamping()) {
-                  this.field_s.field_o.addSubstream(var3.field_z);
+            if (channel < 0 ||
+              ~var3.channel == ~channel) {
+              if (null != var3.stream) {
+                var3.stream.fadeOutAndUnlink(AudioOutput.sampleRate / 100);
+                if (var3.stream.isRamping()) {
+                  this.noteMixer.fadingStreams.addSubstream(var3.stream);
                 }
-                var3.a(~param0);
+                var3.clearReferences(~guard);
               }
-              if (var3.field_x < 0) {
-                this.field_t[var3.field_y][var3.field_E] = null;
+              if (var3.releaseTime < 0) {
+                this.keyVoices[var3.channel][var3.note] = null;
               }
               var3.unlink(false);
             }
-            var3 = (MusicVoice) (this.field_s.field_t.next((byte) 18));
+            var3 = (MusicVoice) (this.noteMixer.voices.next((byte) 18));
             continue;
           }
           break;
         }
     }
 
-    private final void b(int param0, int param1, int param2, int param3) {
+    private final void handlePolyphonicPressure(int param0, int param1, int param2, int param3) {
         if (param0 <= 7) {
-          this.field_F = (int[]) null;
+          this.banks = (int[]) null;
         }
     }
 
-    final synchronized void a(boolean param0, int param1, int param2, int param3, MusicTrack param4, boolean param5) {
+    final synchronized void queueTrackAtGrid(boolean param0, int param1, int param2, int param3, MusicTrack param4, boolean param5) {
         int var7_int = 0;
         int var8 = 0;
-        if (!this.field_v.c()) {
-          this.a(param5, param4, 77);
+        if (!this.midiReader.isReady()) {
+          this.playTrack(param5, param4, 77);
           return;
         }
         try {
-          this.field_M = param5 ? true : false;
-          this.field_A = param0 ? true : false;
-          this.field_I = param4;
-          var7_int = this.field_v.a(this.field_O) * param3;
+          this.looping = param5 ? true : false;
+          this.stopVoicesOnSwitch = param0 ? true : false;
+          this.pendingTrack = param4;
+          var7_int = this.midiReader.ticksAtTimeCeiling(this.currentTime) * param3;
           if (param2 != 7094) {
-            this.c(-41, (byte) 86);
+            this.allNotesOff(-41, (byte) 86);
           }
-          var8 = param1 * this.field_v.field_d;
+          var8 = param1 * this.midiReader.division;
           var7_int = var8 * ((-1 + var8 + var7_int) / var8);
-          this.field_u = ((param3 >> 1) + var7_int) / param3;
+          this.switchTick = ((param3 >> 1) + var7_int) / param3;
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "bs.W(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 
-    final synchronized void e(int param0) {
+    final synchronized void stop(int param0) {
         if (param0 != 0) {
-          this.b(-55, (byte) 105);
+          this.releasePortamentoVoices(-55, (byte) 105);
         }
-        this.a(true, (byte) 104);
+        this.clearPlayback(true, (byte) 104);
     }
 
-    final synchronized void a(byte param0) {
+    final synchronized void clearPatchSampleIds(byte param0) {
         int var3 = 0;
         MusicPatch var4 = null;
         var3 = Sumoblitz.field_L ? 1 : 0;
-        var4 = (MusicPatch) (this.field_p.a(79));
+        var4 = (MusicPatch) (this.patches.a(79));
         while (var4 != null) {
-          var4.d((byte) -36);
-          var4 = (MusicPatch) (this.field_p.a(true));
+          var4.clearSampleIds((byte) -36);
+          var4 = (MusicPatch) (this.patches.a(true));
           if (var3 != 0) {
             return;
           }
         }
         if (param0 != 28) {
-          this.field_y = (int[]) null;
+          this.channelVolumeScales = (int[]) null;
         }
         return;
     }
 
-    final synchronized void b(int param0, int param1) {
+    final synchronized void setTimeScale(int timeScale, int guard) {
         int discarded$0 = 0;
-        if (param1 != 0) {
-          discarded$0 = this.a(true, (MusicVoice) null);
+        if (guard != 0) {
+          discarded$0 = this.voiceSampleStep(true, (MusicVoice) null);
         }
-        this.field_E = param0;
+        this.timeScale = timeScale;
     }
 
-    private final void d(int param0, int param1, int param2) {
-        this.field_N[param1] = param0;
-        if (param2 <= 9) {
-          this.a(-89, (byte) -88, -127);
+    private final void setRetriggerRate(int value, int channel, int guard) {
+        this.retriggerControllers[channel] = value;
+        if (guard <= 9) {
+          this.handleChannelPressure(-89, (byte) -88, -127);
         }
-        this.field_x[param1] = (int)(0.5 + Math.pow(2.0, (double)param0 * 0.00054931640625) * 2097152.0);
+        this.retriggerRates[channel] = (int)(0.5 + Math.pow(2.0, (double)value * 0.00054931640625) * 2097152.0);
     }
 
-    final synchronized void a(int param0, int param1, int param2) {
-        this.c(param0 ^ -1968, param2, param1);
+    final synchronized void setInitialProgram(int param0, int param1, int param2) {
+        this.initializeChannelProgram(param0 ^ -1968, param2, param1);
         if (param0 != 177) {
-          this.field_z = (int[]) null;
+          this.portamentoTime = (int[]) null;
         }
     }
 
-    private final synchronized void a(boolean param0, byte param1) {
-        this.field_v.e();
-        this.field_I = null;
+    private final synchronized void clearPlayback(boolean param0, byte param1) {
+        this.midiReader.clear();
+        this.pendingTrack = null;
         if (param1 < 0) {
-          this.field_q = 79L;
+          this.nextEventTime = 79L;
         }
-        this.a(param0, true);
+        this.resetSynthesizer(param0, true);
     }
 
-    private final void c(int param0, byte param1) {
+    private final void allNotesOff(int channel, byte guard) {
         MusicVoice var3;
         int var4;
         int stackIn_11_0 = 0;
         var4 = Sumoblitz.field_L ? 1 : 0;
-        var3 = (MusicVoice) (this.field_s.field_t.first(-96));
+        var3 = (MusicVoice) (this.noteMixer.voices.first(-96));
         boolean decompiledNaturalLoopExit0 = false;
         while (!(decompiledNaturalLoopExit0 = (var3 == null))) {
-          stackIn_11_0 = param0;
+          stackIn_11_0 = channel;
           if (var4 == 0) {
             if ((stackIn_11_0 < 0 ||
-              ~var3.field_y == ~param0) &&
-              var3.field_x < 0) {
-              this.field_t[var3.field_y][var3.field_E] = null;
-              var3.field_x = 0;
+              ~var3.channel == ~channel) &&
+              var3.releaseTime < 0) {
+              this.keyVoices[var3.channel][var3.note] = null;
+              var3.releaseTime = 0;
             }
-            var3 = (MusicVoice) (this.field_s.field_t.next((byte) 18));
+            var3 = (MusicVoice) (this.noteMixer.voices.next((byte) 18));
             continue;
           }
           break;
         }
         if (decompiledNaturalLoopExit0) {
-          stackIn_11_0 = param1;
+          stackIn_11_0 = guard;
         }
         if (stackIn_11_0 >= -15) {
-          this.c(126, 58);
+          this.allSoundOff(126, 58);
         }
         return;
     }
 
-    final synchronized void a(byte param0, int param1, int param2) {
+    final synchronized void setChannelVolumeScale(byte guard, int channel, int scale) {
         int var4 = 0;
         int var5 = 0;
         boolean decompiledFrameCompleted0 = true;
         var5 = Sumoblitz.field_L ? 1 : 0;
-        if (param1 < 0) {
+        if (channel < 0) {
           var4 = 0;
           while (16 > var4) {
-            this.field_y[var4] = param2;
+            this.channelVolumeScales[var4] = scale;
             var4++;
             if (var5 != 0) {
               decompiledFrameCompleted0 = false;
@@ -1401,17 +1401,17 @@ final class MidiPcmStream extends PcmStream {
           }
           if ((decompiledFrameCompleted0) &&
             (var5 != 0)) {
-            this.field_y[param1] = param2;
+            this.channelVolumeScales[channel] = scale;
           }
         } else {
-          this.field_y[param1] = param2;
+          this.channelVolumeScales[channel] = scale;
         }
-        if (param0 >= -42) {
+        if (guard >= -42) {
           this.nextSubstream();
         }
     }
 
-    private final synchronized void a(boolean param0, boolean param1, boolean param2, MusicTrack param3) {
+    private final synchronized void startTrack(boolean param0, boolean param1, boolean param2, MusicTrack param3) {
         RuntimeException runtimeException = null;
         int var5_int = 0;
         int var6 = 0;
@@ -1423,28 +1423,28 @@ final class MidiPcmStream extends PcmStream {
         RuntimeException decompiledCaughtException = null;
         var7 = Sumoblitz.field_L ? 1 : 0;
         try {
-          this.a(param2, (byte) 69);
-          this.field_v.a(param3.field_k);
-          this.field_O = 0L;
+          this.clearPlayback(param2, (byte) 69);
+          this.midiReader.parse(param3.midiBytes);
+          this.currentTime = 0L;
           stackIn_4_1 = (param0);
-          this.field_M = stackIn_4_1;
-          var5_int = this.field_v.f();
+          this.looping = stackIn_4_1;
+          var5_int = this.midiReader.trackCount();
           var6 = 0;
           if (!param1) {
-            this.field_B = (int[]) null;
+            this.programs = (int[]) null;
           }
           while (var5_int > var6) {
-            this.field_v.b(var6);
-            this.field_v.a(var6);
-            this.field_v.c(var6);
+            this.midiReader.seekTrack(var6);
+            this.midiReader.readTrackDelta(var6);
+            this.midiReader.saveTrackPosition(var6);
             var6++;
             if (var7 != 0) {
               return;
             }
           }
-          this.field_Q = this.field_v.nextTrack();
-          this.field_C = this.field_v.field_c[this.field_Q];
-          this.field_q = this.field_v.d(this.field_C);
+          this.nextTrack = this.midiReader.nextTrack();
+          this.nextEventTick = this.midiReader.trackTicks[this.nextTrack];
+          this.nextEventTime = this.midiReader.timeAtTick(this.nextEventTick);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1474,65 +1474,65 @@ final class MidiPcmStream extends PcmStream {
         int var6;
         boolean decompiledFrameCompleted0 = true;
         var6 = Sumoblitz.field_L ? 1 : 0;
-        if (this.field_v.c()) {
-          var2 = this.field_E * this.field_v.field_d / AudioOutput.field_k;
+        if (this.midiReader.isReady()) {
+          var2 = this.timeScale * this.midiReader.division / AudioOutput.sampleRate;
           while (true) {
-            var3 = this.field_O + (long)param0 * (long)var2;
-            if (-var3 + this.field_q >= 0L) {
-              this.field_O = var3;
+            var3 = this.currentTime + (long)param0 * (long)var2;
+            if (-var3 + this.nextEventTime >= 0L) {
+              this.currentTime = var3;
               if (var6 == 0) {
                 break;
               }
             }
-            var5 = (int)((this.field_q - this.field_O + ((long)var2 - 1L)) / (long)var2);
-            this.field_O = this.field_O + (long)var5 * (long)var2;
+            var5 = (int)((this.nextEventTime - this.currentTime + ((long)var2 - 1L)) / (long)var2);
+            this.currentTime = this.currentTime + (long)var5 * (long)var2;
             param0 = param0 - var5;
-            this.field_s.skip(var5);
-            this.d(18922);
-            if (!this.field_v.c() &&
+            this.noteMixer.skip(var5);
+            this.advanceMidiEvents(18922);
+            if (!this.midiReader.isReady() &&
               var6 == 0) {
               break;
             }
             if (var6 == 0) {
               continue;
             }
-            this.field_s.skip(param0);
+            this.noteMixer.skip(param0);
             decompiledFrameCompleted0 = false;
             break;
           }
         }
         if (decompiledFrameCompleted0) {
-          this.field_s.skip(param0);
+          this.noteMixer.skip(param0);
         }
 
     }
 
     public MidiPcmStream() {
-        this.field_R = new int[16];
-        this.field_T = new int[16];
-        this.field_B = new int[16];
-        this.field_F = new int[16];
-        this.field_H = new int[16];
-        this.field_y = new int[16];
-        this.field_P = new MusicVoice[16][128];
-        this.field_r = 256;
-        this.field_w = new int[16];
-        this.field_E = 1000000;
-        this.field_L = new int[16];
-        this.field_N = new int[16];
-        this.field_t = new MusicVoice[16][128];
-        this.field_S = new int[16];
-        this.field_x = new int[16];
-        this.field_G = new int[16];
-        this.field_K = new int[16];
-        this.field_D = new int[16];
-        this.field_J = new int[16];
-        this.field_z = new int[16];
-        this.field_v = new MidiFileReader();
-        this.field_s = new MidiNoteMixer(this);
-        this.field_p = new IntrusiveNodeHashTable(128);
-        this.a((byte) -127, -1, 256);
-        this.a(true, true);
+        this.sampleOffsets = new int[16];
+        this.channelExpression = new int[16];
+        this.programs = new int[16];
+        this.banks = new int[16];
+        this.initialPrograms = new int[16];
+        this.channelVolumeScales = new int[16];
+        this.groupVoices = new MusicVoice[16][128];
+        this.masterVolume = 256;
+        this.channelVolume = new int[16];
+        this.timeScale = 1000000;
+        this.pitchBend = new int[16];
+        this.retriggerControllers = new int[16];
+        this.keyVoices = new MusicVoice[16][128];
+        this.parameterSelection = new int[16];
+        this.retriggerRates = new int[16];
+        this.channelPan = new int[16];
+        this.modulation = new int[16];
+        this.pitchBendSensitivity = new int[16];
+        this.channelFlags = new int[16];
+        this.portamentoTime = new int[16];
+        this.midiReader = new MidiFileReader();
+        this.noteMixer = new MidiNoteMixer(this);
+        this.patches = new IntrusiveNodeHashTable(128);
+        this.setChannelVolumeScale((byte) -127, -1, 256);
+        this.resetSynthesizer(true, true);
     }
 
     static {

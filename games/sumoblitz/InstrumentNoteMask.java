@@ -5,7 +5,7 @@ final class InstrumentNoteMask extends IntrusiveNode {
     static BufferedSocket field_n;
     static String typeYourPasswordAgainText;
     static String timeText;
-    byte[] field_m;
+    byte[] notes;
     static String createAFreeAccountText;
 
     public static void releaseStatics(byte param0) {
@@ -40,7 +40,7 @@ final class InstrumentNoteMask extends IntrusiveNode {
 
     InstrumentNoteMask(byte[] param0) {
         try {
-          this.field_m = param0;
+          this.notes = param0;
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "tj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

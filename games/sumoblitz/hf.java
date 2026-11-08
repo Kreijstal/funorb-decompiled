@@ -165,8 +165,8 @@ abstract class hf extends rg {
           var8Lifetime1++;
         }
         ar.field_E.draw(param1 + (this.field_q - 90), 10 + param2);
-        MusicCrossfadeStream.a(35 + param2, this.field_q - 10, 2, param1 + 5, li.field_v);
-        MusicCrossfadeStream.a(-22 + this.field_p + param2, this.field_q, 2, param1, hd.field_O);
+        MusicCrossfadeStream.drawHorizontalSpriteStrip(35 + param2, this.field_q - 10, 2, param1 + 5, li.field_v);
+        MusicCrossfadeStream.drawHorizontalSpriteStrip(-22 + this.field_p + param2, this.field_q, 2, param1, hd.field_O);
         var6Lifetime2 = 127;
         var5Lifetime2 = 169;
         var4Lifetime2 = this.field_p - 79;
