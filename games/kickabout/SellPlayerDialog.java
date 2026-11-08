@@ -103,7 +103,7 @@ final class SellPlayerDialog extends MessageDialog {
           TextInputUiSupport.updateTutorialMarker(11);
           ReceivedAuctionItem.updateTutorialPossessionAssist((byte) 125);
           if (HuffmanCodec.field_e == 6) {
-            DualLinkDeque.a((byte) -127);
+            DualLinkDeque.updateTutorialOpponents((byte) -127);
           }
           boolean decompiledFrameRemainder0 = true;
           if (HuffmanCodec.field_e == 7) {
@@ -234,7 +234,7 @@ final class SellPlayerDialog extends MessageDialog {
         }
     }
 
-    final static AccountInputValidationResult a(String param0, int param1) {
+    final static AccountInputValidationResult validateDomainName(String param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String[] var3 = null;
@@ -263,7 +263,7 @@ final class SellPlayerDialog extends MessageDialog {
             stackIn_7_0 = CachedTextLayout.field_j;
             return stackIn_7_0;
           }
-          var3 = FormationAgent.a(param0, 2, '.');
+          var3 = FormationAgent.split(param0, 2, '.');
           if (var3.length < 2) {
             stackIn_10_0 = AccountInputValidationResult.field_b;
             return stackIn_10_0;
@@ -316,8 +316,8 @@ final class SellPlayerDialog extends MessageDialog {
           var6 = param1.getDisplayName(100);
           String var3 = var6;
           var4 = LocalizedTextLoader.formatCurrencyAmount(ImageProducerRasterBuffer.calculatePlayerSaleValue(param1, true), 26300);
-          var5 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ListingRowCache.field_e[34], new String[]{var6, var4});
-          this.a(var5, this.field_t, this.field_D, -71, this.field_u);
+          var5 = LoginDialog.substitutePlaceholders(-18, ListingRowCache.field_e[34], new String[]{var6, var4});
+          this.setMessageContent(var5, this.field_t, this.field_D, -71, this.field_u);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ie.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

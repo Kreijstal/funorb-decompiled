@@ -88,7 +88,7 @@ final class IntTripleCommand extends ConsoleCommand {
         var4 = Kickabout.field_G;
         try {
           if (FaceNormal.field_c) {
-            NodeHashTableIterator.a(param0, 0);
+            NodeHashTableIterator.sortWorldDrawListDescending(param0, 0);
             return;
           }
           stackIn_7_0 = -27054;
@@ -99,7 +99,7 @@ final class IntTripleCommand extends ConsoleCommand {
                 var3 = var2.field_d;
                 if (((WorldDrawEntry) (var2)).getSortY((byte) -13) > ((WorldDrawEntry) (var3)).getSortY((byte) 124)) {
                   var2.unlink((byte) -109);
-                  GeneratedPanelPainter.a(var2, var3, (byte) 126);
+                  GeneratedPanelPainter.insertNodeAfter(var2, var3, (byte) 126);
                 }
                 var2 = var3;
                 continue;

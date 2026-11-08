@@ -147,7 +147,7 @@ public final class Kickabout extends GameLoopApplet {
         int var3;
         int var4;
         var4 = field_G;
-        LobbyGameRecord.a(4, -120);
+        LobbyGameRecord.resendAchievementRequests(4, -120);
         SquadGridWidget.resendRankingsRequests(7, (byte) -97);
         if (AuctionLogEntry.field_h instanceof FindingOpponentScreen) {
           DelayedServerPacket.a(0, false, -2);
@@ -562,7 +562,7 @@ public final class Kickabout extends GameLoopApplet {
         SoftwareRasterizer.fillRectangleAlpha(0, 300, 640, 87, 0, 190);
         int var2 = (int)(250.0f * TextInputWidget.field_R / 100.0f);
         int var3 = var2 + 196;
-        ByteArrayPool.field_d.drawCentered(LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, TickClock.field_e, new String[]{QuickChatMenuBuilder.field_b[KitPatternMaskSupport.field_c][RankingsScreen.field_C].toUpperCase()}), 320, 332, 16777215, 0);
+        ByteArrayPool.field_d.drawCentered(LoginDialog.substitutePlaceholders(-18, TickClock.field_e, new String[]{QuickChatMenuBuilder.field_b[KitPatternMaskSupport.field_c][RankingsScreen.field_C].toUpperCase()}), 320, 332, 16777215, 0);
         SoftwareRasterizer.drawRoundedRectangle(193, 348, 254, 19, 8, 268435455);
         if (param0 != 81) {
           return;
@@ -587,7 +587,7 @@ public final class Kickabout extends GameLoopApplet {
 
     public Kickabout() {
         CharSequence var2 = (CharSequence) ((Object) HuffmanTextSupport.field_b);
-        GameLoopApplet.field_E = new ClubState(LoggedPlayer.a(var2, false));
+        GameLoopApplet.field_E = new ClubState(LoggedPlayer.encodeBase37Name(var2, false));
         AnimationClip.field_g = this;
     }
 
@@ -686,7 +686,7 @@ public final class Kickabout extends GameLoopApplet {
         }
         this.initialiseClient(1, 69, 0, 2, 18, (byte) -4, 4, true);
         this.startWithLoader(107, new GameResourceLoader());
-        FullscreenFocusCanvas.a(PlatformTaskState.field_c, (byte) 23, (java.awt.Component) ((Object) RegistrationRequestState.field_d));
+        FullscreenFocusCanvas.initializeAudioOutputs(PlatformTaskState.field_c, (byte) 23, (java.awt.Component) ((Object) RegistrationRequestState.field_d));
         ListingRow.initializeGamePacketLengths((byte) -8, IntTripleCommand.field_A);
     }
 
@@ -993,7 +993,7 @@ public final class Kickabout extends GameLoopApplet {
             }
             if (param0 == 14) {
               MeshObject.finishScreenTransition((byte) 81);
-              ConsoleTokenCursor.a(NetworkGameClient.getLobbyPlayerListContent(param2 ^ 1), 120, MatchHudSupport.ceilPowerOfTwo((byte) 6, 1250), MatchHudSupport.ceilPowerOfTwo((byte) 6, 16), AnimationPlayer.b(-116), UrlRequest.field_c, ClassNameSupport.getActiveLayoutChild(param2 ^ 1), 150, ArchiveSource.field_c.length, 1024);
+              ConsoleTokenCursor.initializeLobbyState(NetworkGameClient.getLobbyPlayerListContent(param2 ^ 1), 120, MatchHudSupport.ceilPowerOfTwo((byte) 6, 1250), MatchHudSupport.ceilPowerOfTwo((byte) 6, 16), AnimationPlayer.getPlayerListContent(-116), UrlRequest.field_c, ClassNameSupport.getActiveLayoutChild(param2 ^ 1), 150, ArchiveSource.field_c.length, 1024);
               DropTargetWidget.initializeSocialLists(64, LoginRequiredDialog.h((byte) -64), ButtonMenuScreen.f((byte) -63));
               LoginText.field_e = false;
               PlayerValueSortCriterion.field_n = true;
@@ -1070,7 +1070,7 @@ public final class Kickabout extends GameLoopApplet {
                 var28[var7Lifetime4] = PainterStyle.bitwiseOr(var51[var7Lifetime4], var52[var7Lifetime4]);
               }
               if (ResourceArchive.field_g) {
-                RasterBuffer.initializeTrinketCabinet(20164);
+                RasterBuffer.initializeAchievementCabinet(20164);
               }
               return true;
             }
@@ -1200,7 +1200,7 @@ public final class Kickabout extends GameLoopApplet {
                 var44 = RasterBuffer.a(var43, 80, (byte) 123);
                 for (var7Lifetime1 = 0; var7Lifetime1 < var44.length; var7Lifetime1++) {
                   var8 = new ChatMessage(2, "", 0, "", var44[var7Lifetime1]);
-                  SectorCacheStore.a((byte) 94, var8);
+                  SectorCacheStore.appendReceivedChatMessage((byte) 94, var8);
                 }
                 return true;
               }
@@ -1375,7 +1375,7 @@ public final class Kickabout extends GameLoopApplet {
         }
         else {
           if (FormationAgent.field_f < 680) {
-            LookupRecordUpdate.a((byte) -48);
+            LookupRecordUpdate.drawPitchBackground((byte) -48);
           }
           if (SortCriterion.field_l != null &&
             AuctionLogEntry.field_h.screenId != 0 &&
@@ -1906,7 +1906,7 @@ public final class Kickabout extends GameLoopApplet {
         BytePlusOneCommand.releaseStatics((byte) 52);
         SetLagCommand.releaseStatics(false);
         BroadcastServerCommand.releaseStatics((byte) 96);
-        SelectableTrinketIcon.releaseStatics((byte) 118);
+        SelectableAchievementIcon.releaseStatics((byte) 118);
         ListRow.releaseStatics(-18523);
         TrinketTile.releaseStatics((byte) -117);
         TrinketIcon.releaseStatics(true);

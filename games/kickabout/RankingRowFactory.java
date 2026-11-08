@@ -149,7 +149,7 @@ final class RankingRowFactory {
           var5 = (CharSequence) ((Object) param1);
           var4 = Cp1252EncodingSupport.a(var5, (byte) 106);
           param2.writeUnsignedSmart(-53, var4.length);
-          param2.field_n = param2.field_n + Bzip2State.field_I.a(-1, var4.length, param2.field_n, param2.field_f, var4, 0);
+          param2.field_n = param2.field_n + Bzip2State.field_I.compress(-1, var4.length, param2.field_n, param2.field_f, var4, 0);
           stackIn_3_0 = param2.field_n - var3_int;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

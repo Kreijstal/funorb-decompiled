@@ -653,7 +653,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
         }
     }
 
-    final static String a(String param0, String param1, boolean param2, String param3) {
+    final static String replaceLiteral(String param0, String param1, boolean param2, String param3) {
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;

@@ -151,43 +151,43 @@ final class DisplayModeSupport {
         RuntimeException var3 = null;
         try {
           if (param1 == 1) {
-            stackIn_3_0 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ShopPlayerSlot.field_Kb, new String[]{param0});
+            stackIn_3_0 = LoginDialog.substitutePlaceholders(-18, ShopPlayerSlot.field_Kb, new String[]{param0});
             return stackIn_3_0;
           }
           if (param1 == 2) {
-            stackIn_6_0 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ConsoleCommand.field_r, new String[]{param0});
+            stackIn_6_0 = LoginDialog.substitutePlaceholders(-18, ConsoleCommand.field_r, new String[]{param0});
             return stackIn_6_0;
           }
           if (param1 == 3) {
-            stackIn_10_0 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, StrongCacheEntry.field_E, new String[]{param0});
+            stackIn_10_0 = LoginDialog.substitutePlaceholders(-18, StrongCacheEntry.field_E, new String[]{param0});
             return stackIn_10_0;
           }
           if (param1 == 4) {
-            stackIn_14_0 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, MusicTrackMixer.field_m, new String[]{param0});
+            stackIn_14_0 = LoginDialog.substitutePlaceholders(-18, MusicTrackMixer.field_m, new String[]{param0});
             return stackIn_14_0;
           }
           if (param1 == 5) {
-            stackIn_18_0 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, GameSetupPanel.field_lc, new String[]{param0});
+            stackIn_18_0 = LoginDialog.substitutePlaceholders(-18, GameSetupPanel.field_lc, new String[]{param0});
             return stackIn_18_0;
           }
           if (param1 == 6) {
-            stackIn_22_0 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, GzipDecoder.field_c, new String[]{param0});
+            stackIn_22_0 = LoginDialog.substitutePlaceholders(-18, GzipDecoder.field_c, new String[]{param0});
             return stackIn_22_0;
           }
           if (param1 == 7) {
-            stackIn_25_0 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, WhirlpoolHasher.field_b, new String[]{param0});
+            stackIn_25_0 = LoginDialog.substitutePlaceholders(-18, WhirlpoolHasher.field_b, new String[]{param0});
             return stackIn_25_0;
           }
           if (param1 == 8) {
-            stackIn_28_0 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, CachedListingRow.field_e, new String[]{param0});
+            stackIn_28_0 = LoginDialog.substitutePlaceholders(-18, CachedListingRow.field_e, new String[]{param0});
             return stackIn_28_0;
           }
           if (param1 == 11) {
-            stackIn_32_0 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, RankingRowNode.field_Cb, new String[]{param0});
+            stackIn_32_0 = LoginDialog.substitutePlaceholders(-18, RankingRowNode.field_Cb, new String[]{param0});
             return stackIn_32_0;
           }
           if (param1 == 12) {
-            stackIn_35_0 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, SortCriterion.field_e, new String[]{param0});
+            stackIn_35_0 = LoginDialog.substitutePlaceholders(-18, SortCriterion.field_e, new String[]{param0});
             return stackIn_35_0;
           }
           if (param2 != 73) {
@@ -197,7 +197,7 @@ final class DisplayModeSupport {
           if (13 != param1) {
             return null;
           }
-          stackIn_42_0 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, TutorialMessages.field_g, new String[]{param0});
+          stackIn_42_0 = LoginDialog.substitutePlaceholders(-18, TutorialMessages.field_g, new String[]{param0});
           return stackIn_42_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

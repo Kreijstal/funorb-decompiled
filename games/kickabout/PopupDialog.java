@@ -19,7 +19,7 @@ abstract class PopupDialog extends IntrusiveNode {
 
     abstract void drawBody(byte param0, int param1, int param2);
 
-    final void b(int param0, boolean param1) {
+    final void updatePopup(int param0, boolean param1) {
         int var3 = 0;
         int fieldTemp$0 = 0;
         int stackIn_22_0 = 0;
@@ -87,7 +87,7 @@ abstract class PopupDialog extends IntrusiveNode {
         field_g = null;
     }
 
-    final void b(boolean param0) {
+    final void drawAnimatedPopup(boolean param0) {
         int var2;
         int var3;
         UiLayoutNode var4;
@@ -183,7 +183,7 @@ abstract class PopupDialog extends IntrusiveNode {
           }
         }
         if (param1 != -21) {
-          this.b(45, true);
+          this.updatePopup(45, true);
         }
         return true;
     }

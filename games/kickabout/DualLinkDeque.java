@@ -67,7 +67,7 @@ final class DualLinkDeque {
         }
     }
 
-    final static ModelMesh a(int param0, MeshData param1) {
+    final static ModelMesh createFlattenedMonochromeModel(int param0, MeshData param1) {
         int var5 = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -147,7 +147,7 @@ final class DualLinkDeque {
         return var2;
     }
 
-    final static void a(byte param0) {
+    final static void updateTutorialOpponents(byte param0) {
         int var1_int = 0;
         FootballerAgent var2 = null;
         int var3 = 0;

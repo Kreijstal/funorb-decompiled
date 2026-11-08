@@ -28,7 +28,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         var9 = Kickabout.field_G;
         try {
           if (param1 == 1) {
-            this.field_u = FormationAgent.a(param2.readString(param0 ^ 100), 2, '<');
+            this.field_u = FormationAgent.split(param2.readString(param0 ^ 100), 2, '<');
           } else {
             if (2 == param1) {
               var4_int = param2.readUnsignedByte((byte) -122);

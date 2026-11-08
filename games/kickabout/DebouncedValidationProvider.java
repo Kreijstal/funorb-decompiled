@@ -27,7 +27,7 @@ abstract class DebouncedValidationProvider implements ValidationSource {
           if (param0 instanceof byte[]) {
             var3 = (byte[]) (param0);
             if (param1) {
-              stackIn_9_0 = FullscreenFocusCanvas.a(70, var3);
+              stackIn_9_0 = FullscreenFocusCanvas.copyByteArray(70, var3);
               return stackIn_9_0;
             }
             stackIn_7_0 = var3;

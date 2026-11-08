@@ -132,7 +132,7 @@ final class LeaguesScreen extends ButtonMenuScreen {
             AnimationSkeleton.field_k != var5) {
             AnimationSkeleton.field_k = var5;
             SquadGridWidget.field_Gb = var7;
-            SectorCacheStore.a(89);
+            SectorCacheStore.refreshVisibleRankingRows(89);
           }
         }
         if (DialogOverlay.field_b.field_gb) {
@@ -142,7 +142,7 @@ final class LeaguesScreen extends ButtonMenuScreen {
         while (var7 < WelcomeDialog.field_H.length) {
           stackIn_42_0 = WelcomeDialog.field_H[var7].field_gb;
           if (stackIn_42_0) {
-            IndexedSpriteState.showTextTooltip(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, GrowableIntList.field_f, new String[]{ConsoleTokenCursor.field_h[var7]}));
+            IndexedSpriteState.showTextTooltip(-67, LoginDialog.substitutePlaceholders(-18, GrowableIntList.field_f, new String[]{ConsoleTokenCursor.field_h[var7]}));
           }
           var7++;
         }
@@ -289,8 +289,8 @@ final class LeaguesScreen extends ButtonMenuScreen {
         ByteArrayPool.field_d.drawCentered(var3_ref.toLowerCase(), this.slideOffsetX + 194, 156, 16679959, -1);
         var4Lifetime1 = ByteArrayPool.field_d.stringWidth(var3_ref.toLowerCase());
         if (SoftwareDrawingSupport.field_f != null) {
-          SoftwareDrawingSupport.field_f[AnimationSkeleton.field_k].a(194 + this.slideOffsetX - (var4Lifetime1 >> 1) - 28, 146);
-          SoftwareDrawingSupport.field_f[AnimationSkeleton.field_k].a(14 + ((var4Lifetime1 >> 1) + this.slideOffsetX) + 194, 146);
+          SoftwareDrawingSupport.field_f[AnimationSkeleton.field_k].draw(194 + this.slideOffsetX - (var4Lifetime1 >> 1) - 28, 146);
+          SoftwareDrawingSupport.field_f[AnimationSkeleton.field_k].draw(14 + ((var4Lifetime1 >> 1) + this.slideOffsetX) + 194, 146);
         }
         stackIn_26_0 = MenuButton.field_e;
         stackIn_26_1 = 85;

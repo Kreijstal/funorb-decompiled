@@ -17,9 +17,9 @@ final class GoalStateAgent extends MatchAgent {
           return;
         }
         try {
-          this.score[0] = ClientInteractionSupport.a(22531, 7, param0, 0);
-          this.score[1] = ClientInteractionSupport.a(22531, 7, param0, 0);
-          this.goalCount = ClientInteractionSupport.a(22531, 10, param0, 0);
+          this.score[0] = ClientInteractionSupport.readTwoRangeUnsigned(22531, 7, param0, 0);
+          this.score[1] = ClientInteractionSupport.readTwoRangeUnsigned(22531, 7, param0, 0);
+          this.goalCount = ClientInteractionSupport.readTwoRangeUnsigned(22531, 10, param0, 0);
           int var3_int = -57 % ((25 - param1) / 63);
           this.goalScorer = -1 + param0.readBits(2, 59);
         } catch (RuntimeException runtimeException) {
@@ -92,7 +92,7 @@ final class GoalStateAgent extends MatchAgent {
         return "AgentGoalState\tscore=[" + this.score[0] + "," + this.score[1] + "]\tgoal_count=" + this.goalCount + "\tgoal_scorer=" + this.goalScorer;
     }
 
-    final static IndexedSprite[] a(int param0, int param1, ResourceArchive param2, boolean param3) {
+    final static IndexedSprite[] loadIndexedSpriteSheet(int param0, int param1, ResourceArchive param2, boolean param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         IndexedSprite[] stackIn_6_0 = null;

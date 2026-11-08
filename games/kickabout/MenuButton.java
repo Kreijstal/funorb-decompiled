@@ -354,7 +354,7 @@ final class MenuButton {
               var4[4 + var5] = var8[var5];
               var4[var5 + 8] = var3[var5];
             }
-            IntrusiveNodeHashTable.a(true, var4);
+            IntrusiveNodeHashTable.setOptionSprites(true, var4);
           }
           if (null == DirectByteStorage.field_g) {
             if (!QuickChatKeysHelpPanel.field_Cb.ensurePackedGroupByName(false, "instructions")) {

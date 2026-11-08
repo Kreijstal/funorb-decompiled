@@ -45,7 +45,7 @@ final class MatchUiLayoutSupport {
           } else {
             stackIn_4_1 = GameMediaSupport.field_b;
           }
-          ConsoleEvaluationException.a(stackIn_3_0, stackIn_4_1);
+          ConsoleEvaluationException.layoutLobbyPanels(stackIn_3_0, stackIn_4_1);
           HighScoreQuery.field_l.layout(0, TrinketIcon.field_Cb.field_q, 0, -2 + (-40 + TrinketIcon.field_Cb.field_mb), (byte) -80);
           GameQuickChatResolver.field_c.setBounds(true, AchievementsScreen.field_C.field_q, 0, 0, LineupPositionSupport.field_c);
           stackIn_6_0 = BufferedSocket.field_u;

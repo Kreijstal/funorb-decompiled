@@ -313,7 +313,7 @@ class UiWidget extends IntrusiveNode {
         if (param0 != 0) {
           UiWidget.releaseStatics((byte) 9);
         }
-        SplashScreen.field_m.a(PlatformTaskState.field_c, param0 + 9);
+        SplashScreen.field_m.exitFullscreen(PlatformTaskState.field_c, param0 + 9);
         SplashScreen.field_m = null;
         if (null != ArchiveIndex.field_h) {
           ArchiveIndex.field_h.restoreSavedSize(0);

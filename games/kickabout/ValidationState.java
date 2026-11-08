@@ -60,7 +60,7 @@ final class ValidationState {
           PacketBuffer.pushSpriteRaster(110, NamedValueContainer.field_f);
           TriangleRasterizer.useRasterClip();
           SoftwareRasterizer.clearFramebuffer();
-          AuctionItem.a((byte) 47);
+          AuctionItem.drawLitLogoModels((byte) 47);
           if (256 > var5) {
             SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f, 0, 256 - var5);
           }
@@ -117,7 +117,7 @@ final class ValidationState {
         PacketBuffer.pushSpriteRaster(110, NamedValueContainer.field_f);
         TriangleRasterizer.useRasterClip();
         SoftwareRasterizer.clearFramebuffer();
-        AuctionItem.a((byte) 47);
+        AuctionItem.drawLitLogoModels((byte) 47);
         if (256 > var5Lifetime1) {
           SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f, 0, 256 - var5Lifetime1);
         }

@@ -61,7 +61,7 @@ final class MatchTextInputOverlay implements OverlayLayer {
               var12.setClip(var7, (byte) -107);
               PitchPurchaseSupport.field_b[var5] = new byte[8][];
               for (var8 = 0; var8 < 8; var8++) {
-                CanvasResizePolicy.a(var5, var12, var8 << 8, false, 2150);
+                CanvasResizePolicy.renderAnimatedModelPreview(var5, var12, var8 << 8, false, 2150);
                 PitchPurchaseSupport.field_b[var5][var8] = MatchingTextValidator.encodeSpriteMask(16, BuyPitchDialog.field_F);
               }
               var12.setClip(var6, (byte) -107);
@@ -70,7 +70,7 @@ final class MatchTextInputOverlay implements OverlayLayer {
               for (var9 = 0; var9 < var8Lifetime1; var9++) {
                 var12.setFrame(var9 * 3, -39);
                 for (var10 = 0; var10 < 8; var10++) {
-                  CanvasResizePolicy.a(var5, var12, var10 << 8, false, 2150);
+                  CanvasResizePolicy.renderAnimatedModelPreview(var5, var12, var10 << 8, false, 2150);
                   BuyPitchDialog.field_K[var5][var9][var10] = MatchingTextValidator.encodeSpriteMask(16, BuyPitchDialog.field_F);
                 }
                 var4Lifetime1++;
@@ -220,7 +220,7 @@ final class MatchTextInputOverlay implements OverlayLayer {
         field_n = "Play rated game";
         field_d = "tournament lobby";
         field_o = new QuickChatCommandType(8, 0, 4, 1);
-        GameKeyHandler.b(50, (byte) -110);
+        GameKeyHandler.configureCarouselTiming(50, (byte) -110);
         field_l = "Loading animations";
         field_g = "Public chat is unavailable while setting up a rated game.";
         field_b = "Quick Chat Help";

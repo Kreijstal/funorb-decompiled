@@ -72,7 +72,7 @@ final class DualLinkDequeIterator implements Iterator {
         }
         var5Lifetime1 = null;
         if (PanelSpriteFactory.field_b == 0) {
-          var5Lifetime1 = BroadcastServerCommand.a(param1, 100, var4);
+          var5Lifetime1 = BroadcastServerCommand.requestFriendAddition(param1, 100, var4);
         }
         if (PanelSpriteFactory.field_b == 1) {
           var5Lifetime1 = FriendRemovalSupport.requestFriendRemoval(param1, (byte) 100, var4);
@@ -81,7 +81,7 @@ final class DualLinkDequeIterator implements Iterator {
           var5Lifetime1 = ClassDescriptorSupport.requestIgnore(var4, param1, (byte) 126);
         }
         if (PanelSpriteFactory.field_b == 3) {
-          var5Lifetime1 = VertexNormal.a(var4, 2, param1, var4);
+          var5Lifetime1 = VertexNormal.requestIgnoreRemoval(var4, 2, param1, var4);
         }
         if (var5Lifetime1 == null) {
           StreetSceneryLoader.field_m = null;
@@ -90,7 +90,7 @@ final class DualLinkDequeIterator implements Iterator {
           return;
         }
         var6 = (String) null;
-        TextButton.a((String) null, var4, 0, 2, (String) (var5Lifetime1), -115);
+        TextButton.appendChatMessage((String) null, var4, 0, 2, (String) (var5Lifetime1), -115);
         StreetSceneryLoader.field_m = null;
         PanelSpriteFactory.field_b = -1;
         var3Lifetime5 = 91 % ((-21 - param0) / 44);

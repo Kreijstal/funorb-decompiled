@@ -22,7 +22,7 @@ final class BuyPitchDialog extends MessageDialog {
         field_H = null;
     }
 
-    final static char a(byte param0, char param1) {
+    final static char normalizeAccountNameCharacter(byte param0, char param1) {
         int var2;
         int var3;
         int var4;
@@ -211,8 +211,8 @@ final class BuyPitchDialog extends MessageDialog {
           var5 = QuickChatMenuBuilder.field_b[this.field_L][this.field_J];
           String var2 = var5;
           var3 = param0.field_Eb;
-          var4 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ListingRowCache.field_e[29], new String[]{var5, var3});
-          this.a(var4, this.field_t, this.field_D, -90, this.field_u);
+          var4 = LoginDialog.substitutePlaceholders(-18, ListingRowCache.field_e[29], new String[]{var5, var3});
+          this.setMessageContent(var4, this.field_t, this.field_D, -90, this.field_u);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "vf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
@@ -221,12 +221,12 @@ final class BuyPitchDialog extends MessageDialog {
     final void handleResult(int param0, int param1) {
         super.handleResult(84, param1);
         if (param1 == 0) {
-          FullscreenErrorDialog.a(true, this.field_L, this.field_J);
+          FullscreenErrorDialog.queuePitchPurchase(true, this.field_L, this.field_J);
         }
         if (param0 > 60) {
           return;
         }
-        BuyPitchDialog.a((byte) -101, 'V');
+        BuyPitchDialog.normalizeAccountNameCharacter((byte) -101, 'V');
     }
 
     static {

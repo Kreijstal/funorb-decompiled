@@ -57,7 +57,7 @@ final class GameSetupPanel extends UiLayoutNode {
         }
     }
 
-    final boolean a(int param0, GameSetupPanel param1) {
+    final boolean precedes(int param0, GameSetupPanel param1) {
         int stackIn_8_0 = 0;
         int stackIn_14_0 = 0;
         int stackIn_17_0 = 0;
@@ -83,7 +83,7 @@ final class GameSetupPanel extends UiLayoutNode {
         try {
           if (param0 != 20724) {
             var7 = (GameSetupPanel) null;
-            this.a(89, (GameSetupPanel) null);
+            this.precedes(89, (GameSetupPanel) null);
           }
           if (!this.field_hc) {
             stackIn_8_0 = (this.field_Ab == 6) ? 1 : 0;

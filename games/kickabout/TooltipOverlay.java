@@ -153,19 +153,19 @@ final class TooltipOverlay implements OverlayLayer {
         var4 = ConsoleTokenCursor.field_d;
         if (AuctionItem.field_e == 2) {
           var6 = new String[3];
-          var6[0] = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, LoadingProgressDialog.field_Z, new String[]{LocalizedTextLoader.formatCurrencyAmount(ReflectionCheck.field_k, 26300)});
+          var6[0] = LoginDialog.substitutePlaceholders(-18, LoadingProgressDialog.field_Z, new String[]{LocalizedTextLoader.formatCurrencyAmount(ReflectionCheck.field_k, 26300)});
           if (SoundStreamHandle.field_h != 0) {
             stackIn_20_0 = var6;
             stackIn_20_1 = 1;
             if (0 >= SoundStreamHandle.field_h) {
-              stackIn_21_2 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, DualLinkDequeIterator.field_b, new String[]{LocalizedTextLoader.formatCurrencyAmount(Math.abs(SoundStreamHandle.field_h), 26300)});
+              stackIn_21_2 = LoginDialog.substitutePlaceholders(-18, DualLinkDequeIterator.field_b, new String[]{LocalizedTextLoader.formatCurrencyAmount(Math.abs(SoundStreamHandle.field_h), 26300)});
             } else {
-              stackIn_21_2 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, HighScoreQuery.field_h, new String[]{LocalizedTextLoader.formatCurrencyAmount(Math.abs(SoundStreamHandle.field_h), 26300)});
+              stackIn_21_2 = LoginDialog.substitutePlaceholders(-18, HighScoreQuery.field_h, new String[]{LocalizedTextLoader.formatCurrencyAmount(Math.abs(SoundStreamHandle.field_h), 26300)});
             }
             stackIn_20_0[stackIn_20_1] = stackIn_21_2;
           }
           if (SoundStreamHandle.field_h != 0) {
-            var6[2] = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, PromotionDialog.field_F, new String[]{LocalizedTextLoader.formatCurrencyAmount(SoundStreamHandle.field_h + ReflectionCheck.field_k, 26300)});
+            var6[2] = LoginDialog.substitutePlaceholders(-18, PromotionDialog.field_F, new String[]{LocalizedTextLoader.formatCurrencyAmount(SoundStreamHandle.field_h + ReflectionCheck.field_k, 26300)});
           }
           var7 = 0;
           var8 = 0;

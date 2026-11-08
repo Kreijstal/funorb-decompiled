@@ -494,9 +494,9 @@ final class LineupView extends MatchPhaseView {
               }
             }
             if (var7 != -1) {
-              var5 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, UiKeyRoutingSupport.field_i, new String[]{Integer.toString(1 + var6), Integer.toString(var7 + 1)});
+              var5 = LoginDialog.substitutePlaceholders(-18, UiKeyRoutingSupport.field_i, new String[]{Integer.toString(1 + var6), Integer.toString(var7 + 1)});
             } else {
-              var5 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, HighScoreSubmission.field_p, new String[]{Integer.toString(var6 + 1)});
+              var5 = LoginDialog.substitutePlaceholders(-18, HighScoreSubmission.field_p, new String[]{Integer.toString(var6 + 1)});
             }
           } else {
             var5 = MatchHudSupport.field_j;

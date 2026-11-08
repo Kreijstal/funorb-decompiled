@@ -145,7 +145,7 @@ final class FootballerPreview {
           var3.field_R = 31;
           var3.field_k = 16;
         }
-        MeshData var4 = AuctionItem.a(var3.field_w, var3.field_k, 0, var2, 0, 0, var3.field_R, false, false, false);
+        MeshData var4 = AuctionItem.createFootballerMesh(var3.field_w, var3.field_k, 0, var2, 0, 0, var3.field_R, false, false, false);
         this.field_b = new RenderedFootballer(var4, var2, false);
         this.field_b.directionMask = 8;
         this.field_b.field_R = 1536;

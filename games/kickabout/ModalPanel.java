@@ -91,7 +91,7 @@ abstract class ModalPanel extends WidgetContainer {
         return (Sprite[]) null;
     }
 
-    final static void a(int param0, byte param1) {
+    final static void queueKitStyleChange(int param0, byte param1) {
         ManagerAction var2 = null;
         int var3 = Kickabout.field_G;
         ManagerAction var2Lifetime1;

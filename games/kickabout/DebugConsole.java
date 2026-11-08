@@ -140,7 +140,7 @@ final class DebugConsole extends ConsolePanel {
           var6 = var13;
           var6Lifetime1 = var13;
           var3 = this.field_k.getCaretPosition(-1);
-          var4 = DialogOverlay.a(var13, (byte) -81);
+          var4 = DialogOverlay.tokenizeConsoleCached(var13, (byte) -81);
           var5 = ConsoleArgumentSupport.findExpressionBoundary(var3, var4, 1);
           this.field_j.field_s = 0;
           var6Lifetime2 = "";
@@ -483,7 +483,7 @@ final class DebugConsole extends ConsolePanel {
           var6 = var16;
           var6Lifetime1 = var16;
           var3 = this.field_k.getCaretPosition(-1);
-          var4 = DialogOverlay.a(var16, (byte) -33);
+          var4 = DialogOverlay.tokenizeConsoleCached(var16, (byte) -33);
           var5 = ConsoleArgumentSupport.findExpressionBoundary(var3, var4, 1);
           var6Lifetime2 = "";
           if (var5 >= 0) {
@@ -577,18 +577,18 @@ final class DebugConsole extends ConsolePanel {
           if (param1.field_Cb && (param1.field_Mb == 2 ||
             !(2 > ScrollContainer.field_Ib))) {
             var7 = TextButton.field_v;
-            var8 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, SelectableTrinketIcon.field_Ab, new String[]{param3});
+            var8 = LoginDialog.substitutePlaceholders(-18, SelectableAchievementIcon.field_Ab, new String[]{param3});
             var7.field_j.addItem(0, 10, var8);
           }
           TextButton.field_v.buildMenuItems(param0 - 14);
           if (param2) {
             if (TextButton.field_v.field_c != DelayedServerPacket.field_h) {
               var11 = TextButton.field_v;
-              var12 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, KitUnlockNoticeSupport.field_a, new String[]{param3});
+              var12 = LoginDialog.substitutePlaceholders(-18, KitUnlockNoticeSupport.field_a, new String[]{param3});
               var11.field_j.addItem(param0 - 15, 15, var12);
             } else {
               var9 = TextButton.field_v;
-              var10 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, FullscreenDisplayMode.field_h, new String[]{param3});
+              var10 = LoginDialog.substitutePlaceholders(-18, FullscreenDisplayMode.field_h, new String[]{param3});
               var9.field_j.addItem(0, 16, var10);
             }
           }

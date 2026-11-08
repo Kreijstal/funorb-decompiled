@@ -49,7 +49,7 @@ final class TextPromptDialog extends UiLayoutNode {
           if (!PacketBuffer.field_l &&
             var5 < TrinketTile.field_Hb) {
             var10_int = ClientProtocolStage.getChatFilterValue(0, var8_ref_tv.field_c);
-            if (var10_int <= var8_ref_tv.b(80) && (var8_ref_tv.field_m ||
+            if (var10_int <= var8_ref_tv.getFilterPriority(80) && (var8_ref_tv.field_m ||
               !DiskCacheRequest.isIgnored(param2 ^ 26, var8_ref_tv.field_q))) {
               var9 = 1;
             }

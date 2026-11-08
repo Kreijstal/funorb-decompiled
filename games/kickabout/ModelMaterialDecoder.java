@@ -50,7 +50,7 @@ final class ModelMaterialDecoder {
               param0.readBits(12, 59);
               var4[var5] = var6;
             } else {
-              var6_int = param0.readBits(WriteIntegersCommand.a(-1 + var5, false), param1 ^ -57);
+              var6_int = param0.readBits(WriteIntegersCommand.getSignedValueBitWidth(-1 + var5, false), param1 ^ -57);
               var4[var5] = var4[var6_int];
             }
           }

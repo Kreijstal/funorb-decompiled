@@ -50,7 +50,7 @@ final class ValidatedTextWidget extends TextInputWidget implements ValidationPro
 
     public final ValidationSource getValidationSource(byte param0) {
         if (param0 > -107) {
-          ValidatedTextWidget.a((byte) -36, 39);
+          ValidatedTextWidget.queueSecondaryKitColorChange((byte) -36, 39);
         }
         return this.field_V;
     }
@@ -94,7 +94,7 @@ final class ValidatedTextWidget extends TextInputWidget implements ValidationPro
         }
     }
 
-    final static void a(byte param0, int param1) {
+    final static void queueSecondaryKitColorChange(byte param0, int param1) {
         ManagerAction var2 = null;
         int var3 = Kickabout.field_G;
         ManagerAction var2Lifetime1;

@@ -13,7 +13,7 @@ final class ConsoleExpression extends IntrusiveNode {
     String field_h;
     IntrusiveDeque field_j;
 
-    final static void a(int param0, CommonGame param1, int param2, FootballerAgent param3) {
+    final static void startPassToClosestOutfielder(int param0, CommonGame param1, int param2, FootballerAgent param3) {
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;

@@ -147,7 +147,7 @@ final class WidgetTheme {
           var6.field_e = 0;
           var7 = new StatefulTextPainter(var4, true);
           var7.field_e = 0;
-          var7.a(ShopPlayerSlot.createSolidNineSliceSprites((byte) 26, 8947848), -23952);
+          var7.setStateSprites(ShopPlayerSlot.createSolidNineSliceSprites((byte) 26, 8947848), -23952);
           var7.createStateStyle(1, -12085).withPanelSprites(true, ShopPlayerSlot.createSolidNineSliceSprites((byte) 26, 11184810)).withTextColor(-2, 2236962);
           this.field_o = (WidgetPainter) ((Object) new CheckboxPainter(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new RotaryDialPainter(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
@@ -171,22 +171,22 @@ final class WidgetTheme {
           var13 = new Sprite(7, 4);
           var13.field_y = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           var14 = new StatefulTextPainter(var4, true);
-          var14.a(var13.copy(), (byte) -95);
+          var14.setStateSprite(var13.copy(), (byte) -95);
           var13.rotateClockwise();
           var14Lifetime1 = new StatefulTextPainter(var4, true);
-          var14Lifetime1.a(var13.copy(), (byte) -114);
+          var14Lifetime1.setStateSprite(var13.copy(), (byte) -114);
           var13.rotateClockwise();
           var14Lifetime2 = new StatefulTextPainter(var4, true);
-          var14Lifetime2.a(var13.copy(), (byte) -101);
+          var14Lifetime2.setStateSprite(var13.copy(), (byte) -101);
           var13.rotateClockwise();
           var19 = new StatefulTextPainter(var4, true);
-          var19.a(var13, (byte) -90);
+          var19.setStateSprite(var13, (byte) -90);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "wc.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final static void a(byte param0, java.applet.Applet param1) {
+    final static void setTuhstatbutMarker(byte param0, java.applet.Applet param1) {
         String var2 = null;
         String var3 = null;
         long var4 = 0L;

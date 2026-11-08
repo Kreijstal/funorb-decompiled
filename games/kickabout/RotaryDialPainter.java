@@ -89,7 +89,7 @@ final class RotaryDialPainter implements WidgetPainter {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, byte param5, TriangleMesh param6, int param7) {
+    final static void rasterizeLitMesh(int param0, int param1, int param2, int param3, int param4, byte param5, TriangleMesh param6, int param7) {
         int stackIn_16_0 = 0;
         int[] stackIn_18_0 = null;
         int stackIn_19_1 = 0;
@@ -248,7 +248,7 @@ final class RotaryDialPainter implements WidgetPainter {
               var32 = var30 & 65280;
               var33 = var28 * var31 >>> 8 & -671153921 | -1090453760 & var28 * var32 >>> 8;
               var33 = var33 + var29 * 65793;
-              ProxyAuthenticationRequiredException.a(var23, var27, var25, (byte) -56, var22, var24, var26, (var33 & 16711422) >> 1);
+              ProxyAuthenticationRequiredException.rasterizeTriangleHalfBlend(var23, var27, var25, (byte) -56, var22, var24, var26, (var33 & 16711422) >> 1);
             } else {
               var28 = var54[var18];
               var29 = var54[var19];

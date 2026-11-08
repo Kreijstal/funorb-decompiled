@@ -830,7 +830,7 @@ final class RenderedFootballer extends FootballerAgent {
         if (param0 >= -42) {
           field_S = (String) null;
         }
-        DemoIntegersCommand.a(param11, param8, param13, -103);
+        DemoIntegersCommand.updateSharedChatWidgets(param11, param8, param13, -103);
     }
 
     final void resetPose(byte param0) {

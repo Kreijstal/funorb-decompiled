@@ -26,7 +26,7 @@ final class LookupRecordUpdate extends IntrusiveNode {
         field_f = null;
     }
 
-    final static void a(byte param0) {
+    final static void drawPitchBackground(byte param0) {
         int stackIn_20_0 = 0;
         int stackIn_23_0 = 0;
         int stackIn_26_0 = 0;

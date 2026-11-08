@@ -630,7 +630,7 @@ final class ResourceArchive {
           while (WeightedLruCache.field_c.length > var3_int) {
             var5 = AchievementQuery.field_g[var3_int];
             if (var5 >= 0) {
-              var6 = MatchTransitionScreen.a(10, WeightedLruCache.field_c[var3_int], true);
+              var6 = MatchTransitionScreen.measureMenuText(10, WeightedLruCache.field_c[var3_int], true);
               var7 = -(var6 >> 1) + TeamManagementScreen.field_A;
               var4 = var4 + ThreadSleepSupport.field_a;
               if (LoginText.rectangleContains(-DiskCacheWorker.field_d + var7, param1, param0, (byte) -124, var4, var6 + (DiskCacheWorker.field_d << 1), PlayerModelPreview.field_j + (LeagueRatingRequirements.field_d << 1))) {

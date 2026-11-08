@@ -177,16 +177,16 @@ final class AccountMessagePanel extends WidgetContainer implements ButtonListene
 
     final static String a(int param0, boolean param1, int param2) {
         if (5 == param0) {
-          return LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ConsoleParseException.field_b, new String[]{LocalizedTextLoader.formatCurrencyAmount(param2, 26300)});
+          return LoginDialog.substitutePlaceholders(-18, ConsoleParseException.field_b, new String[]{LocalizedTextLoader.formatCurrencyAmount(param2, 26300)});
         }
         if (4 == param0) {
-          return LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, UnreadMessagesScreen.field_B, new String[]{LocalizedTextLoader.formatCurrencyAmount(param2, 26300)});
+          return LoginDialog.substitutePlaceholders(-18, UnreadMessagesScreen.field_B, new String[]{LocalizedTextLoader.formatCurrencyAmount(param2, 26300)});
         }
         if (param0 == 3) {
           return ConsoleExpression.field_e;
         }
         if (1 == param0) {
-          return LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, SocialRowOrderSupport.field_g, new String[]{LocalizedTextLoader.formatCurrencyAmount(param2, 26300), LocalizedTextLoader.formatCurrencyAmount((int)((double)param2 * 0.9), 26300)});
+          return LoginDialog.substitutePlaceholders(-18, SocialRowOrderSupport.field_g, new String[]{LocalizedTextLoader.formatCurrencyAmount(param2, 26300), LocalizedTextLoader.formatCurrencyAmount((int)((double)param2 * 0.9), 26300)});
         }
         if (param0 == 2) {
           return PasswordFieldPainter.field_C;

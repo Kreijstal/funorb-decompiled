@@ -38,7 +38,7 @@ final class FormationAgent extends MatchAgent {
         field_g = null;
     }
 
-    final static int a(int param0, CipherPacketBuffer param1, int param2, int param3, int param4, int param5) {
+    final static int readTwoRangeUnsigned(int param0, CipherPacketBuffer param1, int param2, int param3, int param4, int param5) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int stackIn_4_0 = 0;
@@ -76,12 +76,12 @@ final class FormationAgent extends MatchAgent {
         }
     }
 
-    final void c(CipherPacketBuffer param0, int param1) {
+    final void readFormationState(CipherPacketBuffer param0, int param1) {
         try {
           this.formationChoice[0] = param0.readBits(3, 59);
           if (param1 != 2) {
             java.awt.Canvas var4 = (java.awt.Canvas) null;
-            FormationAgent.a((java.awt.Canvas) null, 103);
+            FormationAgent.drawLoadingProgressToCanvas((java.awt.Canvas) null, 103);
           }
           this.formationChoice[1] = param0.readBits(3, 59);
           this.formationConfirmed[0] = ContentTransitionDialog.readBooleanBit(param0, (byte) -39);
@@ -91,7 +91,7 @@ final class FormationAgent extends MatchAgent {
         }
     }
 
-    final static String[] a(String param0, int param1, char param2) {
+    final static String[] split(String param0, int param1, char param2) {
         int var7 = 0;
         int incrementValue$1 = 0;
         int var3_int = 0;
@@ -152,7 +152,7 @@ final class FormationAgent extends MatchAgent {
         return "AgentFormation\tteam0=" + this.formationChoice[0] + "/" + this.formationConfirmed[0] + "\tteam1=" + this.formationChoice[1] + "/" + this.formationConfirmed[1];
     }
 
-    final static void a(java.awt.Canvas param0, int param1) {
+    final static void drawLoadingProgressToCanvas(java.awt.Canvas param0, int param1) {
         String var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -167,7 +167,7 @@ final class FormationAgent extends MatchAgent {
           WidgetStyleFactory.drawRasterToCanvas(param1 ^ -23390, 0, 0, param0);
           if (param1 != -14142) {
             var3 = (String) null;
-            FormationAgent.a((String) null, -39, 'ￜ');
+            FormationAgent.split((String) null, -39, 'ￜ');
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

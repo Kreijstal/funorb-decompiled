@@ -13,7 +13,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
     static int[] field_c;
     static int[] field_b;
 
-    final static void a(int param0, int param1, int param2, byte param3, int param4, int param5, int param6, int param7) {
+    final static void rasterizeTriangleHalfBlend(int param0, int param1, int param2, byte param3, int param4, int param5, int param6, int param7) {
         int var8 = 0;
         int var9 = Kickabout.field_G;
         int var8Lifetime1;

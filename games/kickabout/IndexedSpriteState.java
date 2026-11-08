@@ -21,7 +21,7 @@ abstract class IndexedSpriteState {
         }
     }
 
-    abstract void a(int param0, int param1);
+    abstract void draw(int param0, int param1);
 
     final static void addPolygonGroundMarkers(int param0, IntrusiveDeque param1, java.awt.Point[] param2) {
         try {

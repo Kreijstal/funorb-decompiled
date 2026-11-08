@@ -56,7 +56,7 @@ final class ConsoleParseException extends Exception {
             }
           }
           var7 = (String) null;
-          MarkerSliderWidget.a(0, SoundStreamHandle.field_e, var5, (String) null, (byte) 34);
+          MarkerSliderWidget.updateChatComposerLabel(0, SoundStreamHandle.field_e, var5, (String) null, (byte) 34);
           RotaryDialPainter.field_b.field_ab = SoundStreamHandle.field_e + (-((SoundStreamHandle.field_e & 16711422) >> 1) + ((ArchiveRequest.field_o.field_ab & 16711422) >> 1));
           RotaryDialPainter.field_b.field_H = SoundStreamHandle.field_e + (-((SoundStreamHandle.field_e & 16711422) >> 1) + (8355711 & ArchiveRequest.field_o.field_H >> 1));
           RotaryDialPainter.field_b.field_ub = -((16711423 & SoundStreamHandle.field_e) >> 1) + SoundStreamHandle.field_e + (ArchiveRequest.field_o.field_ub >> 1 & 8355711);

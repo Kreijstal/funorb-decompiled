@@ -93,7 +93,7 @@ final class AnimationPlayer {
         this.field_b = 0;
     }
 
-    final static UiLayoutNode b(int param0) {
+    final static UiLayoutNode getPlayerListContent(int param0) {
         if (param0 > -108) {
           return (UiLayoutNode) null;
         }
@@ -148,7 +148,7 @@ final class AnimationPlayer {
         }
         this.field_j = this.field_e.field_e[this.field_b];
         if (param0 != 0) {
-          AnimationPlayer.b(-93);
+          AnimationPlayer.getPlayerListContent(-93);
         }
         this.field_h = this.field_e.field_c[this.field_b];
         return false;

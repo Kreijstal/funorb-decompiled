@@ -79,7 +79,7 @@ final class CanvasResizePolicy {
         }
     }
 
-    final static void a(int param0, AnimationPlayer param1, int param2, boolean param3, int param4) {
+    final static void renderAnimatedModelPreview(int param0, AnimationPlayer param1, int param2, boolean param3, int param4) {
         AnimationPlayer stackIn_2_0;
         ModelMesh stackIn_2_1;
         boolean stackIn_2_2;

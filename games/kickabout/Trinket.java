@@ -292,7 +292,7 @@ final class Trinket {
                 stackIn_49_0 = 2150;
               }
               var6 = stackIn_49_0;
-              CanvasResizePolicy.a(param0.field_U, param0.field_mb, param0.field_R, false, var6);
+              CanvasResizePolicy.renderAnimatedModelPreview(param0.field_U, param0.field_mb, param0.field_R, false, var6);
               SpritePixelSupport.drawSpriteShadowMask(BuyPitchDialog.field_F, var2_int - 48, var3 - 48);
               return;
             }
@@ -328,7 +328,7 @@ final class Trinket {
           TriangleRasterizer.useRasterClip();
           SoftwareRasterizer.clearFramebuffer();
           PlayerStats.field_p = 0;
-          AuctionItem.a((byte) -112);
+          AuctionItem.drawLitLogoModels((byte) -112);
           var2 = var1.copy();
           var3 = 0;
           while (var3 < 15) {
@@ -556,14 +556,14 @@ final class Trinket {
             !LoggedPlayer.canSendPrivateChatToSelectedPlayer(param0 - 3194)) {
             boolean decompiledSharedTail1 = !(IntKeyLookup.isFriend(PlayerStatSortCriterion.field_o, -39));
             if (!decompiledSharedTail1) {
-              var2 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ChatComposeSupport.field_c, new String[]{TrinketTile.field_Kb});
+              var2 = LoginDialog.substitutePlaceholders(-18, ChatComposeSupport.field_c, new String[]{TrinketTile.field_Kb});
               decompiledSharedTail1 = (var10 != 0);
             }
             if (decompiledSharedTail1) {
-              var2 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, BrowserUiSupport.field_a, new String[]{TrinketTile.field_Kb});
+              var2 = LoginDialog.substitutePlaceholders(-18, BrowserUiSupport.field_a, new String[]{TrinketTile.field_Kb});
             }
             if (DebugConsole.field_s) {
-              TextButton.a((String) null, (String) null, 0, 2, (String) (var2), -115);
+              TextButton.appendChatMessage((String) null, (String) null, 0, 2, (String) (var2), -115);
               ClientInteractionSupport.dismissQuickChat((byte) 110);
             }
           }
@@ -574,7 +574,7 @@ final class Trinket {
           }
           boolean decompiledFrameRemainder0 = true;
           if (null != var2) {
-            MarkerSliderWidget.a(0, SoundStreamHandle.field_e, (String) (var2), (String) null, (byte) 34);
+            MarkerSliderWidget.updateChatComposerLabel(0, SoundStreamHandle.field_e, (String) (var2), (String) null, (byte) 34);
             decompiledFrameRemainder0 = (var10 != 0);
           }
           if (decompiledFrameRemainder0) {
@@ -585,8 +585,8 @@ final class Trinket {
             var6 = NodeHashTableIterator.field_b;
             var7 = 0;
             if (var6 == 2) {
-              var4 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, MySquadScreen.field_F, new String[]{TrinketTile.field_Kb});
-              var8 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, UiLayoutNode.field_ib, new String[]{var3});
+              var4 = LoginDialog.substitutePlaceholders(-18, MySquadScreen.field_F, new String[]{TrinketTile.field_Kb});
+              var8 = LoginDialog.substitutePlaceholders(-18, UiLayoutNode.field_ib, new String[]{var3});
               var7 = -485 + WeightedCacheEntry.field_s.field_q + (RotaryDialPainter.field_b.field_q + (FootballerAgent.field_i.stringWidth(var8) - FootballerAgent.field_i.stringWidth(var4)));
               if (0 > var7) {
                 var7 = 0;
@@ -602,7 +602,7 @@ final class Trinket {
                 if (PlayerContextMenu.field_i != null) {
                   if (!GameOverView.field_R ||
                     SingleChildContainer.field_x == null) {
-                    var4 = "[" + LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, AccountNameAvailabilityValidator.field_m, new String[]{PlayerContextMenu.field_i.field_ec}) + "] ";
+                    var4 = "[" + LoginDialog.substitutePlaceholders(-18, AccountNameAvailabilityValidator.field_m, new String[]{PlayerContextMenu.field_i.field_ec}) + "] ";
                     if (var10 != 0) {
                       var4 = "[" + SingleChildContainer.field_x + "] ";
                     }
@@ -647,12 +647,12 @@ final class Trinket {
                 }
               }
             }
-            MarkerSliderWidget.a(var7, ByteArrayPoolState.field_c[var6], var4 + BitmapFont.escapeMarkup(AuctionLogEntry.field_m.toString()), var5, (byte) 34);
+            MarkerSliderWidget.updateChatComposerLabel(var7, ByteArrayPoolState.field_c[var6], var4 + BitmapFont.escapeMarkup(AuctionLogEntry.field_m.toString()), var5, (byte) 34);
             if (!TextFieldNode.field_Wb) {
               WeightedCacheEntry.field_s.field_gb = false;
             }
             if (WeightedCacheEntry.field_s.field_gb) {
-              var1 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, FormationView.field_s, new String[]{var3, TrinketTile.field_Kb});
+              var1 = LoginDialog.substitutePlaceholders(-18, FormationView.field_s, new String[]{var3, TrinketTile.field_Kb});
             }
           }
           stackIn_99_0 = var1;

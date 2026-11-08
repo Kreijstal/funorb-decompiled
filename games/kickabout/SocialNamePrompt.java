@@ -135,7 +135,7 @@ final class SocialNamePrompt extends UiLayoutNode {
             0 < this.field_yb.length()) {
             PagedHelpScreen.resizeAndPad(-1 + this.field_yb.length(), ' ', -11407, this.field_yb);
           }
-          if (StatefulTextPainter.a(false, (CharSequence) ((Object) this.field_yb), ClassDescriptorSupport.field_c)) {
+          if (StatefulTextPainter.canAppendAccountNameCharacter(false, (CharSequence) ((Object) this.field_yb), ClassDescriptorSupport.field_c)) {
             discarded$1 = this.field_yb.append(ClassDescriptorSupport.field_c);
           } else {
             if (this.field_yb.length() == 0 &&

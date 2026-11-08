@@ -141,7 +141,7 @@ final class MusicPatchNode extends IntrusiveNode {
         }
         try {
           DualLinkDequeIterator.field_e.complete(false, (byte) 108);
-          StatefulTextPainter.a(param0, param3, false, param2);
+          StatefulTextPainter.loadCommonUiResources(param0, param3, false, param2);
           IntKeyLookup.initializeAccountModals(-93);
           PitchAppearanceSupport.field_a = RasterGlowSupport.field_a;
           ClubStateFactory.field_f = RasterGlowSupport.field_a;

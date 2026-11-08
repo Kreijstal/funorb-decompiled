@@ -18,7 +18,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         }
     }
 
-    final static void b(int param0, byte param1) {
+    final static void configureCarouselTiming(int param0, byte param1) {
         if (param1 != -110) {
           return;
         }
@@ -157,21 +157,21 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           for (var22 = 0; var22 < 2; var22++) {
             if (var7 != 0) {
               ListRow.drawPitchSprite(-12376, var14 + var12 * var22, -var5 + var15, PlayerValueSortCriterion.field_p);
-              AuctionsScreen.a(-840618968, var12 * var22 + var14, DualLinkNode.field_h[var1_int], -var18 + var15);
+              AuctionsScreen.drawIndexedPitchSprite(-840618968, var12 * var22 + var14, DualLinkNode.field_h[var1_int], -var18 + var15);
             }
             if (var9 != 0) {
               ListRow.drawPitchSprite(-12376, var12 * var22 + var14, var17, TextLayoutLine.field_a);
-              AuctionsScreen.a(-840618968, var14 + var22 * var12, ModalPanel.field_G[var1_int], var17 + var5);
+              AuctionsScreen.drawIndexedPitchSprite(-840618968, var14 + var22 * var12, ModalPanel.field_G[var1_int], var17 + var5);
             }
           }
           for (var22Lifetime1 = 0; var22Lifetime1 < 3; var22Lifetime1++) {
             if (var6 != 0) {
               ListRow.drawPitchSprite(-12376, -var21 + var14, var13 * var22Lifetime1 + var15, LoggedGoal.field_o);
-              AuctionsScreen.a(-840618968, -var19 + var14, DateInputValidator.field_e[var1_int], var22Lifetime1 * var13 + var15);
+              AuctionsScreen.drawIndexedPitchSprite(-840618968, -var19 + var14, DateInputValidator.field_e[var1_int], var22Lifetime1 * var13 + var15);
             }
             if (var8 != 0) {
               ListRow.drawPitchSprite(-12376, var16, var13 * var22Lifetime1 + var15, GoalSpriteLoader.field_d);
-              AuctionsScreen.a(-840618968, var16 + var4, ClientInteractionSupport.field_e[var1_int], var15 + var22Lifetime1 * var13);
+              AuctionsScreen.drawIndexedPitchSprite(-840618968, var16 + var4, ClientInteractionSupport.field_e[var1_int], var15 + var22Lifetime1 * var13);
             }
           }
           if (var6 != 0 &&

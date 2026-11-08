@@ -53,13 +53,13 @@ final class AvailabilityCheckRequest {
         AudioOutputSupport.field_e[2][1] = MyPitchScreen.loadIndexedSpriteByName(QuickChatKeysHelpPanel.field_Cb, "stadium", true, "right_seats_2");
         AudioOutputSupport.field_e[2][2] = MyPitchScreen.loadIndexedSpriteByName(QuickChatKeysHelpPanel.field_Cb, "stadium", true, "right_seats_3");
         LineupView.field_s = new IndexedSprite[3][];
-        LineupView.field_s[0] = DemoIntegersCommand.a(QuickChatKeysHelpPanel.field_Cb, TrinketShopDialog.bitwiseXor((int) param0, 17349), "stadium", "top_seats_1_mask");
-        LineupView.field_s[1] = DemoIntegersCommand.a(QuickChatKeysHelpPanel.field_Cb, 17369, "stadium", "top_seats_2_mask");
-        LineupView.field_s[2] = DemoIntegersCommand.a(QuickChatKeysHelpPanel.field_Cb, 17369, "stadium", "top_seats_3_mask");
+        LineupView.field_s[0] = DemoIntegersCommand.loadIndexedSpriteSheetByName(QuickChatKeysHelpPanel.field_Cb, TrinketShopDialog.bitwiseXor((int) param0, 17349), "stadium", "top_seats_1_mask");
+        LineupView.field_s[1] = DemoIntegersCommand.loadIndexedSpriteSheetByName(QuickChatKeysHelpPanel.field_Cb, 17369, "stadium", "top_seats_2_mask");
+        LineupView.field_s[2] = DemoIntegersCommand.loadIndexedSpriteSheetByName(QuickChatKeysHelpPanel.field_Cb, 17369, "stadium", "top_seats_3_mask");
         LoginCredentials.field_c = new IndexedSprite[3][];
-        LoginCredentials.field_c[0] = DemoIntegersCommand.a(QuickChatKeysHelpPanel.field_Cb, 17369, "stadium", "bot_seats_1_mask");
-        LoginCredentials.field_c[1] = DemoIntegersCommand.a(QuickChatKeysHelpPanel.field_Cb, 17369, "stadium", "bot_seats_2_mask");
-        LoginCredentials.field_c[2] = DemoIntegersCommand.a(QuickChatKeysHelpPanel.field_Cb, 17369, "stadium", "bot_seats_3_mask");
+        LoginCredentials.field_c[0] = DemoIntegersCommand.loadIndexedSpriteSheetByName(QuickChatKeysHelpPanel.field_Cb, 17369, "stadium", "bot_seats_1_mask");
+        LoginCredentials.field_c[1] = DemoIntegersCommand.loadIndexedSpriteSheetByName(QuickChatKeysHelpPanel.field_Cb, 17369, "stadium", "bot_seats_2_mask");
+        LoginCredentials.field_c[2] = DemoIntegersCommand.loadIndexedSpriteSheetByName(QuickChatKeysHelpPanel.field_Cb, 17369, "stadium", "bot_seats_3_mask");
         return -1;
     }
 
@@ -86,7 +86,7 @@ final class AvailabilityCheckRequest {
         return this.complete;
     }
 
-    final static void a(int param0, int param1) {
+    final static void queuePrimaryKitColorChange(int param0, int param1) {
         ManagerAction var2 = null;
         int var3 = Kickabout.field_G;
         ManagerAction var2Lifetime1;

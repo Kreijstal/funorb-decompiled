@@ -52,7 +52,7 @@ final class SaveChangesDialog extends MessageDialog {
         int var4 = Kickabout.field_G;
         super.handleResult(127, param1);
         if (0 == param1) {
-          TexturedPanelPainter.c((byte) -56);
+          TexturedPanelPainter.flushManagerActions((byte) -56);
           DelayedServerPacket.a(13, true, -2);
         } else {
           if (param1 == 1) {

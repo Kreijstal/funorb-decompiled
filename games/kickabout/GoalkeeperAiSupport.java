@@ -17,7 +17,7 @@ final class GoalkeeperAiSupport {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = QuickChatPhraseDefinition.decodeBase37Name((byte) 116, LoggedPlayer.a(param1, param0));
+          var2 = QuickChatPhraseDefinition.decodeBase37Name((byte) 116, LoggedPlayer.encodeBase37Name(param1, param0));
           if (param0) {
             stackIn_2_0 = (String) null;
             return stackIn_2_0;
@@ -113,7 +113,7 @@ final class GoalkeeperAiSupport {
             }
             if (param1.field_V.possessorTeam == param2 &&
               param1.field_V.possessorSlot == 0) {
-              ConsoleExpression.a(param2, param1, -96, var19);
+              ConsoleExpression.startPassToClosestOutfielder(param2, param1, -96, var19);
               return;
             }
             if (var13 != 0 &&

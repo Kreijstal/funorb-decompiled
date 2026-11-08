@@ -26,7 +26,7 @@ final class ConsoleEvaluationException extends Exception {
         field_b = null;
     }
 
-    final static void a(int param0, int param1) {
+    final static void layoutLobbyPanels(int param0, int param1) {
         int var2 = (-640 + ColorQuantizationBox.field_a) / 2;
         int var3 = TextPromptDialog.field_Bb * TextPromptDialog.field_Bb;
         int var4 = -(param1 * param1) + var3;

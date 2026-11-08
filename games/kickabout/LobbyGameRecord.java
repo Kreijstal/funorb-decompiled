@@ -18,7 +18,7 @@ final class LobbyGameRecord {
     int field_f;
     int field_h;
 
-    final static void a(int param0, int param1) {
+    final static void resendAchievementRequests(int param0, int param1) {
         IntrusiveNode var2 = null;
         int var3 = 0;
         AchievementSubmission var4 = null;
@@ -47,7 +47,7 @@ final class LobbyGameRecord {
         }
     }
 
-    final static void a(int param0) {
+    final static void ageLobbyHighlights(int param0) {
         RuntimeException decompiledCaughtException = null;
         LobbyPlayerRow var1 = null;
         GameSetupPanel var1_ref = null;
@@ -266,7 +266,7 @@ final class LobbyGameRecord {
         field_i = null;
     }
 
-    final void b(boolean param0, LobbyGameRecord param1) {
+    final void copyFromPixelSnapshot(boolean param0, LobbyGameRecord param1) {
         int var4 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;

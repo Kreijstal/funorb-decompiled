@@ -24,7 +24,7 @@ final class RankingsRequest extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void scatterStreetCracks(int param0, int param1, int param2) {
         RuntimeException decompiledCaughtException = null;
         Sprite[] var3 = null;
         RuntimeException var3_ref = null;

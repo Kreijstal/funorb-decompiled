@@ -36,7 +36,7 @@ class BeveledTextPainter extends TextWidgetPainter {
           }
           var5 = 255 & 19 * ((1 + param3) * (1 + param1)) + param2.aiTick;
           if (param0 != -93) {
-            BeveledTextPainter.a(113, false, true, 5);
+            BeveledTextPainter.updateLobbyGameSetup(113, false, true, 5);
           }
           var6 = var16.pixelX(param0 - 7);
           var7 = var16.pixelY(true);
@@ -174,7 +174,7 @@ class BeveledTextPainter extends TextWidgetPainter {
         var18 = Kickabout.field_G;
         try {
           boolean decompiledFrameRemainder0 = true;
-          var21 = DemoIntegersCommand.a(param4, 17369, "lobby", "crowns");
+          var21 = DemoIntegersCommand.loadIndexedSpriteSheetByName(param4, 17369, "lobby", "crowns");
           var5 = var21;
           CalendarSupport.field_e = var21.length;
           if (param3 != null) {
@@ -442,7 +442,7 @@ class BeveledTextPainter extends TextWidgetPainter {
         }
     }
 
-    final static ArgbSprite a(ArgbSprite param0, boolean param1) {
+    final static ArgbSprite createShadedSprite(ArgbSprite param0, boolean param1) {
         int var3_int = 0;
         ArgbSprite stackIn_15_0 = null;
         RuntimeException stackIn_18_0 = null;
@@ -482,7 +482,7 @@ class BeveledTextPainter extends TextWidgetPainter {
           TeamManagementScreen.popRasterState(125);
           if (!param1) {
             var9 = (CharSequence) null;
-            BeveledTextPainter.a((CharSequence) null, (byte) 122);
+            BeveledTextPainter.normalizeAsciiIdentifier((CharSequence) null, (byte) 122);
           }
           var11 = 0;
           var4Lifetime1 = var11;
@@ -522,7 +522,7 @@ class BeveledTextPainter extends TextWidgetPainter {
         this(ModelMaterial.field_a, param0);
     }
 
-    final static void a(int param0, boolean param1, boolean param2, int param3) {
+    final static void updateLobbyGameSetup(int param0, boolean param1, boolean param2, int param3) {
         int stackIn_10_0 = 0;
         UiLayoutNode stackIn_23_0 = null;
         String stackIn_24_1 = null;
@@ -563,7 +563,7 @@ class BeveledTextPainter extends TextWidgetPainter {
         var13 = Kickabout.field_G;
         try {
           var4_int = -109 / ((-55 - param0) / 60);
-          ConsoleEvaluationException.a(127, ConsoleLexer.field_a);
+          ConsoleEvaluationException.layoutLobbyPanels(127, ConsoleLexer.field_a);
           if (null != ArchiveSource.field_b) {
             var5 = DualLinkHashTable.field_d;
             DualLinkHashTable.field_d.field_mb = 0;
@@ -649,7 +649,7 @@ class BeveledTextPainter extends TextWidgetPainter {
               } else {
                 stackIn_27_2 = PitchSurfaceLoader.field_b;
               }
-              stackIn_26_0.field_E = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(stackIn_26_1, stackIn_27_2, new String[]{GoalStateAgent.field_k.field_E});
+              stackIn_26_0.field_E = LoginDialog.substitutePlaceholders(stackIn_26_1, stackIn_27_2, new String[]{GoalStateAgent.field_k.field_E});
               MarkerSliderWidget.field_F.field_E = CheckboxLabelWidget.field_Db;
               TrinketUnlockNotice.field_b.field_lb = true;
               SocialListProtocolSupport.field_c = true;
@@ -739,7 +739,7 @@ class BeveledTextPainter extends TextWidgetPainter {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_G, -1, 2147483647, false);
     }
 
-    final static String a(CharSequence param0, byte param1) {
+    final static String normalizeAsciiIdentifier(CharSequence param0, byte param1) {
         int var4 = 0;
         int var2_int = 0;
         char[] var3 = null;

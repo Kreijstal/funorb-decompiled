@@ -424,8 +424,8 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
               stackIn_11_0 = ClientInteractionSupport.field_e;
             }
             var9 = stackIn_11_0;
-            AuctionsScreen.a(-840618968, var2, var8[var5], PitchProjectionSupport.worldToScreenY(var6, (byte) -56));
-            AuctionsScreen.a(-840618968, var3, var9[var5], PitchProjectionSupport.worldToScreenY(var6, (byte) -56));
+            AuctionsScreen.drawIndexedPitchSprite(-840618968, var2, var8[var5], PitchProjectionSupport.worldToScreenY(var6, (byte) -56));
+            AuctionsScreen.drawIndexedPitchSprite(-840618968, var3, var9[var5], PitchProjectionSupport.worldToScreenY(var6, (byte) -56));
             var6 = var6 + var4;
           }
           return;

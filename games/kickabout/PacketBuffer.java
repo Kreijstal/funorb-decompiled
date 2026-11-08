@@ -270,7 +270,7 @@ class PacketBuffer extends IntrusiveNode {
 
     final boolean verifyCrc32(int param0) {
         this.field_n = this.field_n - 4;
-        int var2 = RotaryDialWidget.a(this.field_n, -109, this.field_f, param0);
+        int var2 = RotaryDialWidget.crc32(this.field_n, -109, this.field_f, param0);
         int var3 = this.readInt(4);
         if (var3 != var2) {
           return false;
@@ -628,7 +628,7 @@ class PacketBuffer extends IntrusiveNode {
         if (param1) {
           this.writeMedium(86, (byte) 85);
         }
-        int var3 = RotaryDialWidget.a(this.field_n, 117, this.field_f, param0);
+        int var3 = RotaryDialWidget.crc32(this.field_n, 117, this.field_f, param0);
         this.writeInt(-37, var3);
         return var3;
     }

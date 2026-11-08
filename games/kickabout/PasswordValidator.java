@@ -188,7 +188,7 @@ final class PasswordValidator extends TextFieldValidator {
         }
     }
 
-    final static void a(byte param0, java.applet.Applet param1) {
+    final static void probeAppletUsername(byte param0, java.applet.Applet param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         CharSequence var3 = null;
@@ -203,7 +203,7 @@ final class PasswordValidator extends TextFieldValidator {
           }
           if (var2 != null) {
             var3 = (CharSequence) ((Object) var2);
-            if (LoggedPlayer.a(var3, false) != 0L) {
+            if (LoggedPlayer.encodeBase37Name(var3, false) != 0L) {
               return;
             }
           }

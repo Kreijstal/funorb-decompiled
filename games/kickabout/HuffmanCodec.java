@@ -347,7 +347,7 @@ final class HuffmanCodec {
         return (short)(param0 | (param1 << 10 | param3 << 7));
     }
 
-    final int a(int param0, int param1, int param2, byte[] param3, byte[] param4, int param5) {
+    final int compress(int param0, int param1, int param2, byte[] param3, byte[] param4, int param5) {
         int dupTemp$0 = 0;
         int stackIn_20_0 = 0;
         int stackIn_22_0 = 0;

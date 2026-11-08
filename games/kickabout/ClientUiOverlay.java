@@ -295,7 +295,7 @@ final class ClientUiOverlay implements OverlayLayer {
           var4 = var3 * (-ScrollPane.field_Bb + 480) / 400 + ScrollPane.field_Bb;
           PlayerStats.setChatPanelY(var4, (byte) -124);
           this.field_h = this.field_h + 1;
-          LobbyGameRecord.a(-121);
+          LobbyGameRecord.ageLobbyHighlights(-121);
           if (null != PlayerContextMenu.field_i) {
             if (ShopPlayerSlot.canStartConfiguredGame(PlayerContextMenu.field_i.field_Eb, -3, PlayerContextMenu.field_i.field_bc, PlayerContextMenu.field_i.field_gc)) {
               stackIn_19_0 = (GameLoopApplet.field_E.hasFourAvailablePlayers((byte) 46)) ? 1 : 0;

@@ -31,7 +31,7 @@ final class NodeHashTableIterator implements Iterator {
         return false;
     }
 
-    final static void a(IntrusiveDeque param0, int param1) {
+    final static void sortWorldDrawListDescending(IntrusiveDeque param0, int param1) {
         Object var2 = null;
         IntrusiveNode var2_ref = null;
         IntrusiveNode var3 = null;
@@ -46,7 +46,7 @@ final class NodeHashTableIterator implements Iterator {
           if (param1 != 0) {
             field_b = -112;
           }
-          while (!DemoIntegersCommand.a(param0, false)) {
+          while (!DemoIntegersCommand.isWorldDrawListSorted(param0, false)) {
             var2_ref = param0.first(24009);
             while (var2_ref instanceof WorldDrawEntry) {
               if (!(var2_ref.field_d instanceof WorldDrawEntry)) {
@@ -55,7 +55,7 @@ final class NodeHashTableIterator implements Iterator {
               var3 = var2_ref.field_d;
               if (((WorldDrawEntry) (var2_ref)).getSortY((byte) 120) < ((WorldDrawEntry) (var3)).getSortY((byte) -73)) {
                 var2_ref.unlink((byte) -109);
-                GeneratedPanelPainter.a(var2_ref, var3, (byte) 127);
+                GeneratedPanelPainter.insertNodeAfter(var2_ref, var3, (byte) 127);
               }
               var2_ref = var3;
             }

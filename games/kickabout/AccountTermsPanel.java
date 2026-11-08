@@ -60,7 +60,7 @@ final class AccountTermsPanel extends WidgetContainer implements TextHotspotList
           this.field_B = param0;
           this.field_I = new TextButton(RowRangeRequest.field_g, (UiListener) null);
           this.field_I.field_r = (WidgetPainter) ((Object) new SpriteButtonPainter());
-          var7 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, NodeHashTableIterator.field_a, new String[]{this.linkStylePrefix(107), this.linkStyleSuffix(-1522433695)});
+          var7 = LoginDialog.substitutePlaceholders(-18, NodeHashTableIterator.field_a, new String[]{this.linkStylePrefix(107), this.linkStyleSuffix(-1522433695)});
           var3 = 20;
           var4 = new TextWidgetPainter(ModelMaterial.field_a, 0, 0, 0, 0, 16777215, -1, 3, 0, ModelMaterial.field_a.field_G, -1, 2147483647, true);
           this.field_D = new TextHotspotWidget(var7, var4);

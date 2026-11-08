@@ -72,7 +72,7 @@ final class TexturedPanelPainter extends NineSlicePanelPainter {
         }
     }
 
-    final static void c(byte param0) {
+    final static void flushManagerActions(byte param0) {
         int var1_int = 0;
         ManagerAction var2 = null;
         int var3 = Kickabout.field_G;

@@ -49,7 +49,7 @@ class AuctionItem extends IntrusiveNode {
         }
     }
 
-    final static MeshData a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7, boolean param8, boolean param9) {
+    final static MeshData createFootballerMesh(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7, boolean param8, boolean param9) {
         if (param7) {
           Class var13 = (Class) null;
           AuctionItem.isNumericPrimitive(100, (Class) null);
@@ -57,10 +57,10 @@ class AuctionItem extends IntrusiveNode {
         int var10 = LongPlusOneCommand.field_B[param1];
         int var11 = LongPlusOneCommand.field_B[param6];
         boolean[][][] var12 = AnimationSkeleton.field_g[param0].patternMasks;
-        return MatchPhaseView.a(param9, param5, param3, var10, var12[0], param4, var12[1], (byte) -92, param2, param8, var11);
+        return MatchPhaseView.createFootballerMesh(param9, param5, param3, var10, var12[0], param4, var12[1], (byte) -92, param2, param8, var11);
     }
 
-    final static void a(byte param0) {
+    final static void drawLitLogoModels(byte param0) {
         int var16 = 0;
         int var18_int = 0;
         int var19 = 0;
@@ -158,7 +158,7 @@ class AuctionItem extends IntrusiveNode {
               FullscreenFailureReason.field_g[var19] = FullscreenFailureReason.field_g[var19] + HighScoreSubmission.field_l[var16][var19];
             }
             Bzip2State.a(var18, false, FullscreenFailureReason.field_g, ImageProducerRasterBuffer.field_i, (byte) -96, false, true);
-            RotaryDialPainter.a(var8Lifetime1, var7Lifetime1, var13Lifetime1, var9Lifetime1, var14, (byte) -125, var18, var15);
+            RotaryDialPainter.rasterizeLitMesh(var8Lifetime1, var7Lifetime1, var13Lifetime1, var9Lifetime1, var14, (byte) -125, var18, var15);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

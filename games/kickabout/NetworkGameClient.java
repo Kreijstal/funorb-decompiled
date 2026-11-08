@@ -73,7 +73,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             SumIntegersCommand.resendHighScoreRequests(115, 3);
           }
           if (LookupRecordUpdate.field_h[3]) {
-            LobbyGameRecord.a(4, -56);
+            LobbyGameRecord.resendAchievementRequests(4, -56);
           }
           if (LookupRecordUpdate.field_h[4]) {
             PromotionDialog.resendLookupRequests(5, (byte) -122);
@@ -170,7 +170,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (QuickChatMenuBuilder.field_f != null) {
           var2 = QuickChatMenuBuilder.field_f;
           String var1 = var2;
-          ArchiveManager.showCenteredMessagePanel(126, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, EmailSyntaxValidator.field_j, new String[]{var2}));
+          ArchiveManager.showCenteredMessagePanel(126, LoginDialog.substitutePlaceholders(-18, EmailSyntaxValidator.field_j, new String[]{var2}));
           QuickChatMenuBuilder.field_f = null;
         }
         if (!param0) {
@@ -295,7 +295,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                             stackIn_26_0 = 113;
                             stackIn_27_1 = (12 == var2);
                             var3 = TextFieldValidator.$cfr$intArgs$a$e7eed804270c(stackIn_26_0, stackIn_27_1);
-                            SectorCacheStore.a((byte) -112, var3);
+                            SectorCacheStore.appendReceivedChatMessage((byte) -112, var3);
                           }
                         } else {
                           TextWidgetPainter.a(ByteArrayPool.field_e, MusicVolumeSupport.field_b, -1, PlatformTaskState.field_c);
@@ -521,7 +521,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           SceneSpriteFactory.field_b = null;
           SelectionMarkerSupport.field_c = null;
           PlayerStats.field_k = null;
-          PasswordValidator.a((byte) -127, (java.applet.Applet) (this));
+          PasswordValidator.probeAppletUsername((byte) -127, (java.applet.Applet) (this));
           AnimationPlayer.resetFrameTiming((byte) 120);
           DateInputValidator.field_d = 10;
         }
@@ -741,7 +741,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             }
             if (SocialTabsPanel.field_c[0][2].field_Q) {
               if (!ScrollPane.isLocalGameHost(77)) {
-                UrlRequest.field_e = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ClubState.field_v, new String[]{PlayerContextMenu.field_i.field_ec});
+                UrlRequest.field_e = LoginDialog.substitutePlaceholders(-18, ClubState.field_v, new String[]{PlayerContextMenu.field_i.field_ec});
               } else {
                 UrlRequest.field_e = DateOfBirthPanel.field_B;
               }
@@ -1054,13 +1054,13 @@ abstract class NetworkGameClient extends GameAppletShell {
                     if (var11 != 0) {
                       var22_int = -MusicPatchNode.field_o + AppletContextSupport.field_f[var7][var9];
                       if (var22_int != 1) {
-                        var21 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, DiagnosticsOverlaySupport.field_c, new String[]{Integer.toString(var22_int)});
+                        var21 = LoginDialog.substitutePlaceholders(-18, DiagnosticsOverlaySupport.field_c, new String[]{Integer.toString(var22_int)});
                       } else {
                         var21 = UiKeyRoutingSupport.field_d;
                       }
                     }
                     if (var12 != 0) {
-                      var31 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, IsaacRandom.field_h, new String[]{Integer.toString(ConsoleArgumentSupport.field_d), Integer.toString(BroadcastServerCommand.field_E[var7][var9])});
+                      var31 = LoginDialog.substitutePlaceholders(-18, IsaacRandom.field_h, new String[]{Integer.toString(ConsoleArgumentSupport.field_d), Integer.toString(BroadcastServerCommand.field_E[var7][var9])});
                       var21 = var31;
                       var21 = var31;
                       if (var21 != null) {
@@ -1120,12 +1120,12 @@ abstract class NetworkGameClient extends GameAppletShell {
                   if (var23 != 0) {
                     var21 = PlayerModelPreview.field_m + (String) (var22);
                   } else {
-                    var21 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ChatComposeSupport.field_d, new String[]{(String) (var22)});
+                    var21 = LoginDialog.substitutePlaceholders(-18, ChatComposeSupport.field_d, new String[]{(String) (var22)});
                   }
                 }
                 if (var21 != null) {
                   var32 = "<col=A00000>" + (String) (var21);
-                  var33 = WidgetContainer.a("<br>", "<br><col=A00000>", true, var32);
+                  var33 = WidgetContainer.replaceLiteral("<br>", "<br><col=A00000>", true, var32);
                   if (var20 != null) {
                     var20 = (String) (var20) + "<br>" + var33;
                   } else {

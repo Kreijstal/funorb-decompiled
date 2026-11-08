@@ -83,7 +83,7 @@ final class PitchSurfaceLoader {
         }
     }
 
-    final static void a(int param0) {
+    final static void clearLobbyState(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         LobbyPlayerRow var3 = null;
@@ -163,7 +163,7 @@ final class PitchSurfaceLoader {
         var5 = (String) (var3) + "_surface" + param0;
         var6 = var5;
         if (param2 > -48) {
-          PitchSurfaceLoader.a(22);
+          PitchSurfaceLoader.clearLobbyState(22);
         }
         if (!QuickChatKeysHelpPanel.field_Cb.ensurePackedGroupByName(false, var6)) {
           return QuickChatKeysHelpPanel.field_Cb.getGroupProgressByName(var6, -16248);

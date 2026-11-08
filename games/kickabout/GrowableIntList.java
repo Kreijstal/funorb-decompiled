@@ -29,7 +29,7 @@ final class GrowableIntList {
         }
         this.field_d[param2] = param1;
         if (!param0) {
-          GrowableIntList.a(-117, 14, -87);
+          GrowableIntList.loadPitchSoundGroups(-117, 14, -87);
         }
     }
 
@@ -74,12 +74,12 @@ final class GrowableIntList {
         field_a = null;
         field_f = null;
         if (!param0) {
-          GrowableIntList.a(52, 5, 56);
+          GrowableIntList.loadPitchSoundGroups(52, 5, 56);
         }
         field_b = null;
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int loadPitchSoundGroups(int param0, int param1, int param2) {
         int stackIn_22_0 = 0;
         int stackIn_25_0 = 0;
         RuntimeException decompiledCaughtException = null;

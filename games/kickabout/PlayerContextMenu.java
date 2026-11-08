@@ -128,10 +128,10 @@ final class PlayerContextMenu {
         var5 = this.getDisplayName(-26719);
         if (var4 != null) {
           if (!field_i.field_Cb) {
-            this.field_j.addItem(0, 1, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, VertexNormal.field_e, new String[]{var5}));
+            this.field_j.addItem(0, 1, LoginDialog.substitutePlaceholders(-18, VertexNormal.field_e, new String[]{var5}));
           } else {
             if (field_i.field_ac >= 0) {
-              this.field_j.addItem(0, 1, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, VertexNormal.field_e, new String[]{var5}));
+              this.field_j.addItem(0, 1, LoginDialog.substitutePlaceholders(-18, VertexNormal.field_e, new String[]{var5}));
             }
           }
         } else {
@@ -139,16 +139,16 @@ final class PlayerContextMenu {
             field_i.field_ic &&
             field_i.field_gc < field_i.field_bc) {
             if (var7.field_Gb) {
-              this.field_j.addItem(0, 1, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, FullscreenFocusCanvas.field_f, new String[]{var5}));
+              this.field_j.addItem(0, 1, LoginDialog.substitutePlaceholders(-18, FullscreenFocusCanvas.field_f, new String[]{var5}));
             } else {
               if (!param0) {
-                this.field_j.addItem(0, 0, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, PlayingView.field_F, new String[]{var5}));
+                this.field_j.addItem(0, 0, LoginDialog.substitutePlaceholders(-18, PlayingView.field_F, new String[]{var5}));
               } else {
                 if (!var7.field_Fb) {
-                  this.field_j.addItem(0, 0, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, PlayingView.field_F, new String[]{var5}));
+                  this.field_j.addItem(0, 0, LoginDialog.substitutePlaceholders(-18, PlayingView.field_F, new String[]{var5}));
                 } else {
-                  this.field_j.addItem(0, 0, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, IconLabel.field_Ab, new String[]{var5}));
-                  this.field_j.addItem(0, 1, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ScrollBar.field_Eb, new String[]{var5}));
+                  this.field_j.addItem(0, 0, LoginDialog.substitutePlaceholders(-18, IconLabel.field_Ab, new String[]{var5}));
+                  this.field_j.addItem(0, 1, LoginDialog.substitutePlaceholders(-18, ScrollBar.field_Eb, new String[]{var5}));
                 }
               }
             }
@@ -178,7 +178,7 @@ final class PlayerContextMenu {
           }
           var3 = this.getDisplayName(-26719);
           String var2 = var3;
-          this.field_j.addItem(0, 17, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, MatchTextInputOverlay.field_m, new String[]{var3}));
+          this.field_j.addItem(0, 17, LoginDialog.substitutePlaceholders(-18, MatchTextInputOverlay.field_m, new String[]{var3}));
         }
         if (param0 <= -11) {
           return;
@@ -314,9 +314,9 @@ final class PlayerContextMenu {
         String var4_refLifetime1;
         var4 = null;
         if (param0 == 4) {
-          var12 = BroadcastServerCommand.a(param1, 100, this.field_k);
+          var12 = BroadcastServerCommand.requestFriendAddition(param1, 100, this.field_k);
           if (var12 != null) {
-            TextButton.a((String) null, this.field_k, 0, 2, var12, -128);
+            TextButton.appendChatMessage((String) null, this.field_k, 0, 2, var12, -128);
           }
           if (param2 < -13) {
             return true;
@@ -328,7 +328,7 @@ final class PlayerContextMenu {
           var5 = FriendRemovalSupport.requestFriendRemoval(param1, (byte) 87, this.field_k);
           var4_ref = var5;
           if (var5 != null) {
-            TextButton.a((String) null, this.field_k, 0, 2, var5, -128);
+            TextButton.appendChatMessage((String) null, this.field_k, 0, 2, var5, -128);
           }
           if (param2 < -13) {
             return true;
@@ -340,7 +340,7 @@ final class PlayerContextMenu {
           var10 = ClassDescriptorSupport.requestIgnore(this.field_k, param1, (byte) 126);
           var4_refLifetime1 = var10;
           if (var10 != null) {
-            TextButton.a((String) null, this.field_k, 0, 2, var10, -128);
+            TextButton.appendChatMessage((String) null, this.field_k, 0, 2, var10, -128);
           }
           if (param2 < -13) {
             return true;
@@ -351,9 +351,9 @@ final class PlayerContextMenu {
         if (7 != param0) {
           return false;
         }
-        var11 = VertexNormal.a(this.field_a, 2, param1, this.field_k);
+        var11 = VertexNormal.requestIgnoreRemoval(this.field_a, 2, param1, this.field_k);
         if (var11 != null) {
-          TextButton.a((String) null, this.field_k, 0, 2, var11, -128);
+          TextButton.appendChatMessage((String) null, this.field_k, 0, 2, var11, -128);
         }
         if (param2 < -13) {
           return true;
@@ -386,12 +386,12 @@ final class PlayerContextMenu {
               } else {
                 if (10 != param0) {
                   if (15 == param0) {
-                    NamedValueEntry.a(this.field_c, param2 ^ 81, param1);
+                    NamedValueEntry.requestLobbyGameDetails(this.field_c, param2 ^ 81, param1);
                   } else {
                     if (param0 != 16) {
                       return false;
                     }
-                    NamedValueEntry.a(0, -58, param1);
+                    NamedValueEntry.requestLobbyGameDetails(0, -58, param1);
                   }
                 } else {
                   GameLoopApplet.b(15848, param1, this.field_c);
@@ -446,8 +446,8 @@ final class PlayerContextMenu {
         }
         var3 = var5.field_ec;
         if (var5.field_hc) {
-          this.field_j.addItem(0, 2, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, SocketArchiveNetworkClient.field_u, new String[]{var3}));
-          this.field_j.addItem(param0 ^ 1, 3, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ReceivedAuctionItem.field_z, new String[]{var3}));
+          this.field_j.addItem(0, 2, LoginDialog.substitutePlaceholders(-18, SocketArchiveNetworkClient.field_u, new String[]{var3}));
+          this.field_j.addItem(param0 ^ 1, 3, LoginDialog.substitutePlaceholders(-18, ReceivedAuctionItem.field_z, new String[]{var3}));
           if (param0 == 1) {
             return;
           }
@@ -455,7 +455,7 @@ final class PlayerContextMenu {
           return;
         }
         if (var5.field_Xb) {
-          this.field_j.addItem(param0 ^ 1, 2, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, SelectionMarkerSupport.field_f, new String[]{var3}));
+          this.field_j.addItem(param0 ^ 1, 2, LoginDialog.substitutePlaceholders(-18, SelectionMarkerSupport.field_f, new String[]{var3}));
           if (!var5.field_Tb) {
             if (param0 == 1) {
               return;
@@ -463,7 +463,7 @@ final class PlayerContextMenu {
             discarded$11 = this.getDisplayName(126);
             return;
           }
-          this.field_j.addItem(param0 ^ 1, 3, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, QuickChatCommandType.field_c, new String[]{var3}));
+          this.field_j.addItem(param0 ^ 1, 3, LoginDialog.substitutePlaceholders(-18, QuickChatCommandType.field_c, new String[]{var3}));
           if (param0 == 1) {
             return;
           }
@@ -478,7 +478,7 @@ final class PlayerContextMenu {
             discarded$9 = this.getDisplayName(126);
             return;
           }
-          this.field_j.addItem(param0 ^ 1, 3, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, QuickChatCommandType.field_c, new String[]{var3}));
+          this.field_j.addItem(param0 ^ 1, 3, LoginDialog.substitutePlaceholders(-18, QuickChatCommandType.field_c, new String[]{var3}));
           if (param0 == 1) {
             return;
           }
@@ -493,7 +493,7 @@ final class PlayerContextMenu {
             discarded$7 = this.getDisplayName(126);
             return;
           }
-          this.field_j.addItem(param0 ^ 1, 3, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, QuickChatCommandType.field_c, new String[]{var3}));
+          this.field_j.addItem(param0 ^ 1, 3, LoginDialog.substitutePlaceholders(-18, QuickChatCommandType.field_c, new String[]{var3}));
           if (param0 == 1) {
             return;
           }
@@ -501,7 +501,7 @@ final class PlayerContextMenu {
           return;
         }
         if (!var5.field_Cb) {
-          this.field_j.addItem(0, 2, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, GameplayHelpScreen.field_H, new String[]{var3}));
+          this.field_j.addItem(0, 2, LoginDialog.substitutePlaceholders(-18, GameplayHelpScreen.field_H, new String[]{var3}));
           if (!var5.field_Tb) {
             if (param0 == 1) {
               return;
@@ -509,7 +509,7 @@ final class PlayerContextMenu {
             discarded$1 = this.getDisplayName(126);
             return;
           }
-          this.field_j.addItem(param0 ^ 1, 3, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, QuickChatCommandType.field_c, new String[]{var3}));
+          this.field_j.addItem(param0 ^ 1, 3, LoginDialog.substitutePlaceholders(-18, QuickChatCommandType.field_c, new String[]{var3}));
           if (param0 == 1) {
             return;
           }
@@ -524,14 +524,14 @@ final class PlayerContextMenu {
             discarded$5 = this.getDisplayName(126);
             return;
           }
-          this.field_j.addItem(param0 ^ 1, 3, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, QuickChatCommandType.field_c, new String[]{var3}));
+          this.field_j.addItem(param0 ^ 1, 3, LoginDialog.substitutePlaceholders(-18, QuickChatCommandType.field_c, new String[]{var3}));
           if (param0 == 1) {
             return;
           }
           discarded$6 = this.getDisplayName(126);
           return;
         }
-        this.field_j.addItem(0, 2, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, GameplayHelpScreen.field_H, new String[]{var3}));
+        this.field_j.addItem(0, 2, LoginDialog.substitutePlaceholders(-18, GameplayHelpScreen.field_H, new String[]{var3}));
         if (!var5.field_Tb) {
           if (param0 == 1) {
             return;
@@ -539,7 +539,7 @@ final class PlayerContextMenu {
           discarded$3 = this.getDisplayName(126);
           return;
         }
-        this.field_j.addItem(param0 ^ 1, 3, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, QuickChatCommandType.field_c, new String[]{var3}));
+        this.field_j.addItem(param0 ^ 1, 3, LoginDialog.substitutePlaceholders(-18, QuickChatCommandType.field_c, new String[]{var3}));
         if (param0 == 1) {
           return;
         }
@@ -577,31 +577,31 @@ final class PlayerContextMenu {
               var7 = DiskCacheRequest.isIgnored(0, this.field_k) ? 1 : 0;
               if (var6 == null &&
                 var7 == 0) {
-                this.field_j.addItem(0, 4, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, DualLinkNode.field_m, new String[]{var5}));
-                this.field_j.addItem(0, 6, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, WeightedCacheEntry.field_r, new String[]{var5}));
+                this.field_j.addItem(0, 4, LoginDialog.substitutePlaceholders(-18, DualLinkNode.field_m, new String[]{var5}));
+                this.field_j.addItem(0, 6, LoginDialog.substitutePlaceholders(-18, WeightedCacheEntry.field_r, new String[]{var5}));
                 if (param2 != null &&
                   param0 != 2 &&
                   !PacketBuffer.field_l) {
                   this.field_h = param2;
-                  this.field_j.addItem(0, 19, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, MonotonicClock.field_a, new String[]{var5}));
+                  this.field_j.addItem(0, 19, LoginDialog.substitutePlaceholders(-18, MonotonicClock.field_a, new String[]{var5}));
                 }
               }
               if (var6 != null) {
                 if (!BufferedCacheFile.isActivePrivateChatRecipient(121, this.field_k) &&
                   !PacketBuffer.field_l) {
                   if (!WriteIntegersCommand.field_C) {
-                    this.field_j.addItem(0, 8, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, LeaderboardParticipant.field_a, new String[]{var5}));
+                    this.field_j.addItem(0, 8, LoginDialog.substitutePlaceholders(-18, LeaderboardParticipant.field_a, new String[]{var5}));
                   }
-                  this.field_j.addItem(0, 18, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, GameMediaSupport.field_c, new String[]{var5}));
+                  this.field_j.addItem(0, 18, LoginDialog.substitutePlaceholders(-18, GameMediaSupport.field_c, new String[]{var5}));
                   if (param2 != null) {
                     this.field_h = param2;
-                    this.field_j.addItem(0, 19, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, MonotonicClock.field_a, new String[]{var5}));
+                    this.field_j.addItem(0, 19, LoginDialog.substitutePlaceholders(-18, MonotonicClock.field_a, new String[]{var5}));
                   }
                 }
-                this.field_j.addItem(0, 5, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, Trinket.field_i, new String[]{var5}));
+                this.field_j.addItem(0, 5, LoginDialog.substitutePlaceholders(-18, Trinket.field_i, new String[]{var5}));
               }
               if (var7 != 0) {
-                this.field_j.addItem(0, 7, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, LeaderboardParticipant.field_i, new String[]{var5}));
+                this.field_j.addItem(0, 7, LoginDialog.substitutePlaceholders(-18, LeaderboardParticipant.field_i, new String[]{var5}));
                 return;
               }
             }

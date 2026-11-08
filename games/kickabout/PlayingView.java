@@ -805,7 +805,7 @@ final class PlayingView extends MatchPhaseView {
                 stackIn_22_0 = 0;
               }
               var13 = stackIn_22_0;
-              var14 = AuctionItem.a(var5, var6, var10, var9, var11, var12, var7, false, this.field_n, var13 != 0);
+              var14 = AuctionItem.createFootballerMesh(var5, var6, var10, var9, var11, var12, var7, false, this.field_n, var13 != 0);
               var15 = new RenderedFootballer(var14, var9, false, param0.field_P[var4_int][var8]);
               stackIn_24_0 = var15;
               stackIn_25_1 = (param1);
@@ -1275,7 +1275,7 @@ final class PlayingView extends MatchPhaseView {
           var6 = (WorldDrawEntry) (this.field_r.next(33));
         }
         if (MyKitScreen.field_O) {
-          MessageDialog.f(70);
+          MessageDialog.drawTutorialInputHints(70);
         }
         if (this.field_C != null) {
           stackIn_21_0 = (!this.field_f) ? 12 : 0;
@@ -1487,7 +1487,7 @@ final class PlayingView extends MatchPhaseView {
               stackIn_27_0 = 0;
             }
             var11 = stackIn_27_0;
-            var12 = AuctionItem.a(var3, var4, var8, var7, var9, var10, var5, false, this.field_n, var11 != 0);
+            var12 = AuctionItem.createFootballerMesh(var3, var4, var8, var7, var9, var10, var5, false, this.field_n, var11 != 0);
             ((RenderedFootballer) (this.field_a.field_P[var2][var6])).setModel(var12, (byte) -115);
           }
           var2++;
@@ -1537,7 +1537,7 @@ final class PlayingView extends MatchPhaseView {
               var3_int = 1;
               PlatformTaskState.field_f = false;
             }
-            AgeValidator.a(var3_int != 0, -68, PlayerInputEvent.getAccountLoadingStatus((byte) 60), SumIntegersCommand.field_A, MeshPreviewSupport.getCommonUiLoadProgress((byte) 92));
+            AgeValidator.drawAwtLoadingBar(var3_int != 0, -68, PlayerInputEvent.getAccountLoadingStatus((byte) 60), SumIntegersCommand.field_A, MeshPreviewSupport.getCommonUiLoadProgress((byte) 92));
           } else {
             if (!TournamentChampionDialog.isLogoSequenceComplete(-86)) {
               SoftwareRasterizer.clearFramebuffer();
@@ -1548,7 +1548,7 @@ final class PlayingView extends MatchPhaseView {
                 PlayerPortraitCacheEntry.drawDimmedSharedOverlay(false, param1, (byte) 39);
                 WidgetStyleFactory.drawRasterToCanvas(27744, 0, 0, param0);
               } else {
-                FormationAgent.a(param0, -14142);
+                FormationAgent.drawLoadingProgressToCanvas(param0, -14142);
               }
             }
           }

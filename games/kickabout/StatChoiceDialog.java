@@ -308,7 +308,7 @@ final class StatChoiceDialog extends MessageDialog {
     public static void releaseStatics(int param0) {
         field_G = null;
         if (param0 != 25996) {
-          StatChoiceDialog.b(-32, 113, 1);
+          StatChoiceDialog.queuePitchSelection(-32, 113, 1);
         }
         field_F = null;
         field_K = null;
@@ -377,7 +377,7 @@ final class StatChoiceDialog extends MessageDialog {
         return 370;
     }
 
-    final static void b(int param0, int param1, int param2) {
+    final static void queuePitchSelection(int param0, int param1, int param2) {
         ManagerAction var3 = null;
         int var4 = Kickabout.field_G;
         ManagerAction var3Lifetime1;

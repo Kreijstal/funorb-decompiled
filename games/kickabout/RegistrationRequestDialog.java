@@ -46,7 +46,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
             try {
               var2 = "tuhstatbut";
               var3 = (String) (AppletJavaScriptBridge.callJavaScript(30858, "getcookies", param1));
-              var4 = FormationAgent.a(var3, 2, ';');
+              var4 = FormationAgent.split(var3, 2, ';');
               for (var5 = 0; var4.length > var5; var5++) {
                 var6 = var4[var5].indexOf('=');
                 if (0 <= var6 &&
@@ -172,7 +172,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
                   var4 = GameSoundEffect.field_g;
                   this.field_nb = true;
                 } else {
-                  DisplayNameUiSupport.a(536870912);
+                  DisplayNameUiSupport.setTuhstatbutMarker(536870912);
                   var4 = GameSoundEffect.field_g;
                   this.field_nb = true;
                 }

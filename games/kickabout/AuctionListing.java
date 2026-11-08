@@ -891,7 +891,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -59, "spectate_xs_game");
                 if (var2 != null) {
-                  SelectableTrinketIcon.field_Ab = BlackFadeScreen.decodeCp1252Bytes(var2, param0);
+                  SelectableAchievementIcon.field_Ab = BlackFadeScreen.decodeCp1252Bytes(var2, param0);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -78, "hide_players_in_xs_game");
                 if (var2 != null) {
@@ -2016,7 +2016,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -85, "waitingfor_music");
                 if (var2 != null) {
-                  SelectableTrinketIcon.field_yb = BlackFadeScreen.decodeCp1252Bytes(var2, true);
+                  SelectableAchievementIcon.field_yb = BlackFadeScreen.decodeCp1252Bytes(var2, true);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -123, "waitingfor_instruments");
                 if (var2 != null) {

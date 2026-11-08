@@ -20,7 +20,7 @@ final class AuctionListingDialog extends MessageDialog {
           this.field_G = param1 ? true : false;
           this.field_J = param0;
           var6 = AccountMessagePanel.a(this.field_J.getListingType((byte) 37), false, this.field_J.b(6));
-          this.a(var6, this.field_t, this.field_D, -87, this.field_u);
+          this.setMessageContent(var6, this.field_t, this.field_D, -87, this.field_u);
           dupTemp$0 = this.field_i[0];
           dupTemp$0.field_s = dupTemp$0.field_s - 30;
           var4 = SharedPanelFactory.getMessageButtonLabels(false, 21)[1];

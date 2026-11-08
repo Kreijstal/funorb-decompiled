@@ -174,7 +174,7 @@ final class MyPitchScreen extends TeamManagementScreen {
                 var3_ref_jt = (PitchOptionTile) (RankingRowNode.field_Gb.field_jb.next(33));
                 continue;
               }
-              StatChoiceDialog.b(var3_ref_jt.field_Db, 97, var3_ref_jt.field_zb);
+              StatChoiceDialog.queuePitchSelection(var3_ref_jt.field_Db, 97, var3_ref_jt.field_zb);
             }
           }
           var3_ref_jt = (PitchOptionTile) (RankingRowNode.field_Gb.field_jb.next(33));

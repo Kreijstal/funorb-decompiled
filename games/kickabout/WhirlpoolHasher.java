@@ -232,14 +232,14 @@ final class WhirlpoolHasher {
               InstrumentEnvelope.field_a.writeCircumfixedString(var14, (byte) -126);
               InstrumentEnvelope.field_a.writeCircumfixedString(var8, (byte) -126);
               var15 = (CharSequence) ((Object) param5);
-              InstrumentEnvelope.field_a.writeCircumfixedString(BeveledTextPainter.a(var15, (byte) -100), (byte) -125);
+              InstrumentEnvelope.field_a.writeCircumfixedString(BeveledTextPainter.normalizeAsciiIdentifier(var15, (byte) -100), (byte) -125);
               InstrumentEnvelope.field_a.writeShort(-1207444472, param0);
               InstrumentEnvelope.field_a.writeByte(106, param3);
               InstrumentEnvelope.field_a.writeByte(125, var9);
               FootballerAiOverlaySupport.field_d.writeByte(123, 18);
               FootballerAiOverlaySupport.field_d.field_n = FootballerAiOverlaySupport.field_d.field_n + 2;
               var10 = FootballerAiOverlaySupport.field_d.field_n;
-              var11_ref_String = DelegatingCanvas.a(AppletContextSupport.getActiveApplet(50), (byte) 123);
+              var11_ref_String = DelegatingCanvas.readClientSettings(AppletContextSupport.getActiveApplet(50), (byte) 123);
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
@@ -260,7 +260,7 @@ final class WhirlpoolHasher {
               ValidatedTextWidget.field_X = new String[-100 + var9Lifetime1];
             } else {
               if (var9Lifetime1 == 248) {
-                WidgetTheme.a((byte) -50, AppletContextSupport.getActiveApplet(-71));
+                WidgetTheme.setTuhstatbutMarker((byte) -50, AppletContextSupport.getActiveApplet(-71));
                 ListingRowCache.field_b = AccountInputValidationResult.field_i;
                 FormationView.closeClientSocket((byte) -116);
                 ContextMenuItem.field_Db = false;

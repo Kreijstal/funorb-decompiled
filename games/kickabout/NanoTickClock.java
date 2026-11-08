@@ -21,7 +21,7 @@ final class NanoTickClock extends TickClock {
         return IntrusiveDeque.field_f;
     }
 
-    final static TriangleMesh a(byte param0, CipherPacketBuffer param1) {
+    final static TriangleMesh decodeTriangleMesh(byte param0, CipherPacketBuffer param1) {
         int var7 = 0;
         TriangleMesh stackIn_26_0 = null;
         TriangleMesh stackIn_28_0 = null;

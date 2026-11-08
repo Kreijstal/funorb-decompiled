@@ -1014,7 +1014,7 @@ final class PlayerStats implements PopupCard {
             }
             param6 = param6 + var26[2];
             if (param2) {
-              var17 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, NamedValueContainer.field_g, new String[]{LocalizedTextLoader.formatCurrencyAmount(ImageProducerRasterBuffer.calculatePlayerSaleValue(this, true), 26300)});
+              var17 = LoginDialog.substitutePlaceholders(-18, NamedValueContainer.field_g, new String[]{LocalizedTextLoader.formatCurrencyAmount(ImageProducerRasterBuffer.calculatePlayerSaleValue(this, true), 26300)});
               ConsoleTokenCursor.field_d.drawText(var17, param1 + 10, param6 + 15, 16777215, 65793);
             }
             return;

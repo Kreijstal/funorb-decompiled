@@ -120,7 +120,7 @@ final class IntrusiveNodeHashTable {
         return var2;
     }
 
-    final static void a(boolean param0, Sprite[] param1) {
+    final static void setOptionSprites(boolean param0, Sprite[] param1) {
         int var2_int = 0;
         int var6 = 0;
         RuntimeException stackIn_19_0 = null;

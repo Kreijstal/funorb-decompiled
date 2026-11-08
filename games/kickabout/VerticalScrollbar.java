@@ -606,7 +606,7 @@ final class VerticalScrollbar extends UiLayoutNode {
                 SortCriterion.field_f.put(var4_ref_qb, (byte) -4, (long)var3_int);
               }
               GameModesHelpScreen.a(true, 116, var1, var4_ref_qb);
-              FullscreenErrorDialog.a(var4_ref_qb, (byte) -119);
+              FullscreenErrorDialog.insertLobbyGameInOrder(var4_ref_qb, (byte) -119);
               return;
             }
             if (var2 == 9) {
@@ -650,7 +650,7 @@ final class VerticalScrollbar extends UiLayoutNode {
                   var23_ref.field_Db = PlayerInputFactory.field_c;
                 }
                 var13.field_hc = false;
-                FullscreenErrorDialog.a(var23_ref, (byte) -119);
+                FullscreenErrorDialog.insertLobbyGameInOrder(var23_ref, (byte) -119);
                 return;
               }
               if (var2 != 14 &&
@@ -768,7 +768,7 @@ final class VerticalScrollbar extends UiLayoutNode {
             } else {
               var24.field_Tb = true;
             }
-            FullscreenErrorDialog.a(var24, (byte) -119);
+            FullscreenErrorDialog.insertLobbyGameInOrder(var24, (byte) -119);
             return;
           }
           var3_ref_he = (LobbyPlayerRow) (ProxyAuthenticationRequiredException.field_d.first(24009));

@@ -73,7 +73,7 @@ final class PlayerMeshFactory {
           var8 = (4045 & var7) >> 8;
           var9 = (246 & var7) >> 4;
           var10 = (15 & var7) >> 0;
-          var11 = AuctionItem.a(param4, param2, var8, var6_int, var9, var10, param1, false, false, param5);
+          var11 = AuctionItem.createFootballerMesh(param4, param2, var8, var6_int, var9, var10, param1, false, false, param5);
           stackIn_4_0 = var11;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

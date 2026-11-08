@@ -110,8 +110,8 @@ abstract class RasterBuffer {
         }
     }
 
-    final static void initializeTrinketCabinet(int param0) {
-        ContextMenuItem.field_Ib = new ScrollContainer("Cabinet", GameplayHelpScreen.createTrinketPickerGrid((byte) 15), ConsolePanel.field_q, ParticipantAgent.field_m);
+    final static void initializeAchievementCabinet(int param0) {
+        ContextMenuItem.field_Ib = new ScrollContainer("Cabinet", GameplayHelpScreen.createAchievementGrid((byte) 15), ConsolePanel.field_q, ParticipantAgent.field_m);
         ContextMenuItem.field_Ib.setLayout(16, 100, 4, (byte) -114, 200, 300, 70);
         if (param0 != 20164) {
           field_c = 125;

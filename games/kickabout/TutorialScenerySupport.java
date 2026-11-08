@@ -473,7 +473,7 @@ final class TutorialScenerySupport {
         }
     }
 
-    final static int a(CipherPacketBuffer param0, int param1, byte param2, int param3) {
+    final static int readSignedTwoRangeValue(CipherPacketBuffer param0, int param1, byte param2, int param3) {
         RuntimeException var4 = null;
         int stackIn_5_0 = 0;
         CipherPacketBuffer stackIn_7_1;

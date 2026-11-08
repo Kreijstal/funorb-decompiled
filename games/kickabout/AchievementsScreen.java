@@ -57,8 +57,8 @@ final class AchievementsScreen extends ButtonMenuScreen {
         AuctionListing.pushRasterClip(ContextMenuItem.field_Ib.field_F + ContextMenuItem.field_Ib.field_q, param0 - 22909, ContextMenuItem.field_Ib.field_F, ContextMenuItem.field_Ib.field_mb + ContextMenuItem.field_Ib.field_T, ContextMenuItem.field_Ib.field_T);
         var3 = (UiLayoutNode) (ContextMenuItem.field_Ib.field_Db.field_jb.first(24009));
         while (var3 != null) {
-          if (var3 instanceof SelectableTrinketIcon) {
-            ((SelectableTrinketIcon) (var3)).c(true);
+          if (var3 instanceof SelectableAchievementIcon) {
+            ((SelectableAchievementIcon) (var3)).drawAchievementIcon(true);
           }
           var3 = (UiLayoutNode) (ContextMenuItem.field_Ib.field_Db.field_jb.next(33));
         }
@@ -210,7 +210,7 @@ final class AchievementsScreen extends ButtonMenuScreen {
           var3.field_t.rotateClockwise();
         }
         MatchUiLayoutSupport.field_d.field_lb = false;
-        ContextMenuItem.field_Ib = new ScrollContainer("Cabinet", GameplayHelpScreen.createTrinketPickerGrid((byte) 15), ConsolePanel.field_q, ParticipantAgent.field_m);
+        ContextMenuItem.field_Ib = new ScrollContainer("Cabinet", GameplayHelpScreen.createAchievementGrid((byte) 15), ConsolePanel.field_q, ParticipantAgent.field_m);
         ContextMenuItem.field_Ib.setLayout(16, 100, 4, (byte) -114, 200, 300, 70);
         if (param0 == -38) {
           ResourceArchive.field_g = true;
@@ -245,8 +245,8 @@ final class AchievementsScreen extends ButtonMenuScreen {
           RenderedBall.field_C = -1;
           var5 = (UiLayoutNode) (ContextMenuItem.field_Ib.field_Db.field_jb.first(24009));
           while (var5 != null) {
-            if (var5 instanceof SelectableTrinketIcon) {
-              ((SelectableTrinketIcon) (var5)).updateTrinketSelection(param1, -60);
+            if (var5 instanceof SelectableAchievementIcon) {
+              ((SelectableAchievementIcon) (var5)).updateAchievementSelection(param1, -60);
             }
             var5 = (UiLayoutNode) (ContextMenuItem.field_Ib.field_Db.field_jb.next(33));
           }
@@ -290,8 +290,8 @@ final class AchievementsScreen extends ButtonMenuScreen {
         RenderedBall.field_C = -1;
         var5 = (UiLayoutNode) (ContextMenuItem.field_Ib.field_Db.field_jb.first(24009));
         while (var5 != null) {
-          if (var5 instanceof SelectableTrinketIcon) {
-            ((SelectableTrinketIcon) (var5)).updateTrinketSelection(param1, -60);
+          if (var5 instanceof SelectableAchievementIcon) {
+            ((SelectableAchievementIcon) (var5)).updateAchievementSelection(param1, -60);
           }
           var5 = (UiLayoutNode) (ContextMenuItem.field_Ib.field_Db.field_jb.next(33));
         }

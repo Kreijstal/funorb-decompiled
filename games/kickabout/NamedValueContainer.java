@@ -10,7 +10,7 @@ final class NamedValueContainer {
     static int[] field_d;
     static int[] field_b;
 
-    private final NamedValueEntry a(int param0, byte param1) {
+    private final NamedValueEntry findUnnamedEntry(int param0, byte param1) {
         NamedValueEntry var3;
         int var4;
         var4 = Kickabout.field_G;
@@ -154,7 +154,7 @@ final class NamedValueContainer {
               return;
             }
             var3 = (String) null;
-            NamedValueContainer.a((String) null, 87L, (byte) -24, false, (String) null);
+            NamedValueContainer.createLoginCredentials((String) null, 87L, (byte) -24, false, (String) null);
             if (0 < ConsoleLexer.field_a) {
               if (null != IntrusiveDeque.field_e) {
                 IntrusiveDeque.field_e.drawOpaque(TrinketIcon.field_Cb.field_s, 0);
@@ -251,7 +251,7 @@ final class NamedValueContainer {
           }
         } else {
           var3Lifetime1 = (String) null;
-          NamedValueContainer.a((String) null, 87L, (byte) -24, false, (String) null);
+          NamedValueContainer.createLoginCredentials((String) null, 87L, (byte) -24, false, (String) null);
           if (0 < ConsoleLexer.field_a) {
             if (null == IntrusiveDeque.field_e) {
               stackIn_97_0 = TrinketIcon.field_Cb;
@@ -339,7 +339,7 @@ final class NamedValueContainer {
         }
     }
 
-    private final void a(NamedValueEntry param0, int param1) {
+    private final void addEntryIfAbsent(NamedValueEntry param0, int param1) {
         Object var3 = null;
         NamedValueEntry var3_ref = null;
         RuntimeException stackIn_11_0 = null;
@@ -352,7 +352,7 @@ final class NamedValueContainer {
           if (null != param0.field_j) {
             var3_ref = this.findEntry(param1 - 48, param0.field_j);
           } else {
-            var3_ref = this.a(param0.field_e, (byte) 1);
+            var3_ref = this.findUnnamedEntry(param0.field_e, (byte) 1);
           }
           if (param1 != 8) {
             return;
@@ -375,7 +375,7 @@ final class NamedValueContainer {
         }
     }
 
-    final static LoginCredentials a(String param0, long param1, byte param2, boolean param3, String param4) {
+    final static LoginCredentials createLoginCredentials(String param0, long param1, byte param2, boolean param3, String param4) {
         RuntimeException var6 = null;
         LoginCredentials stackIn_2_0 = null;
         PasswordLoginCredentials stackIn_6_0 = null;
@@ -483,7 +483,7 @@ final class NamedValueContainer {
                   }
                   var7.field_i = param0.field_n;
                   var7.field_h = -var7.field_i + var5;
-                  this.a(var7, 8);
+                  this.addEntryIfAbsent(var7, 8);
                   decompiledRegionSelector0 = 1;
                 }
               } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

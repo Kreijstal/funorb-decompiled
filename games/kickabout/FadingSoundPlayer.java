@@ -79,7 +79,7 @@ final class FadingSoundPlayer extends IntrusiveNode {
         if (!this.field_r) {
           TextInputWidget.attachSampleStream(this.stream, 114);
         } else {
-          DialogOverlay.a(this.stream, param0 ^ 14);
+          DialogOverlay.addReverbSubstream(this.stream, param0 ^ 14);
         }
         this.startDelay = this.startDelay - 1;
         this.field_o = false;

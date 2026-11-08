@@ -11,7 +11,7 @@ final class ConsoleTokenCursor {
     static BinaryBitmapFont field_d;
     static String field_c;
 
-    final static void a(UiLayoutNode param0, int param1, int param2, int param3, UiLayoutNode param4, byte[] param5, UiLayoutNode param6, int param7, int param8, int param9) {
+    final static void initializeLobbyState(UiLayoutNode param0, int param1, int param2, int param3, UiLayoutNode param4, byte[] param5, UiLayoutNode param6, int param7, int param8, int param9) {
         int var11 = 0;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
@@ -67,7 +67,7 @@ final class ConsoleTokenCursor {
           PlayerInputFactory.field_c = param7;
           TextFieldNode.field_Ib = 0L;
           if (param1 <= 114) {
-            ConsoleTokenCursor.a(123, 125, 58, -75, 34, -38, 61, 107, -70);
+            ConsoleTokenCursor.createBeveledPanelSprites(123, 125, 58, -75, 34, -38, 61, 107, -70);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -127,7 +127,7 @@ final class ConsoleTokenCursor {
         return this.field_a >= this.field_g.length ? true : false;
     }
 
-    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static Sprite[] createBeveledPanelSprites(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var14 = 0;
         int var9;
         Sprite[] var10;

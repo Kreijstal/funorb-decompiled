@@ -72,7 +72,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
         this.field_L.addChild((byte) -115, (UiLayoutNode) (this.field_G));
     }
 
-    final static void a(int param0, int param1, IndexedSprite param2, int param3) {
+    final static void drawIndexedPitchSprite(int param0, int param1, IndexedSprite param2, int param3) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -80,7 +80,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
         RuntimeException var4 = null;
         try {
           if (256 == InstrumentNoteMask.field_i) {
-            param2.a(param1, param3);
+            param2.draw(param1, param3);
           } else {
             param2.drawScaled(param1, param3, InstrumentNoteMask.field_i * param2.field_i >> 8, InstrumentNoteMask.field_i * param2.field_a >> 8);
           }
@@ -626,7 +626,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
         }
         for (var3 = 0; var3 < this.field_E.length; var3++) {
           if (this.field_E[var3].field_gb) {
-            IndexedSpriteState.showTextTooltip(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, FullscreenFocusCanvas.field_e, new String[]{RegistrationUiSupport.field_e[var3]}));
+            IndexedSpriteState.showTextTooltip(-67, LoginDialog.substitutePlaceholders(-18, FullscreenFocusCanvas.field_e, new String[]{RegistrationUiSupport.field_e[var3]}));
           }
         }
         if (this.field_R.field_sb == 1) {

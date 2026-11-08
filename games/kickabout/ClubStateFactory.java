@@ -12,7 +12,7 @@ final class ClubStateFactory {
     static PlayArea[] field_g;
     static PlayerStats field_c;
 
-    final static short a(int param0, int param1) {
+    final static short rgbToPackedHsl(int param0, int param1) {
         float stackIn_8_0 = 0.0f;
         float stackIn_15_0 = 0.0f;
         float stackIn_33_0 = 0.0f;

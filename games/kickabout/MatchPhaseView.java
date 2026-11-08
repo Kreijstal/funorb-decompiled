@@ -62,7 +62,7 @@ abstract class MatchPhaseView {
         return stackIn_6_0;
     }
 
-    final static MeshData a(boolean param0, int param1, int param2, int param3, boolean[][] param4, int param5, boolean[][] param6, byte param7, int param8, boolean param9, int param10) {
+    final static MeshData createFootballerMesh(boolean param0, int param1, int param2, int param3, boolean[][] param4, int param5, boolean[][] param6, byte param7, int param8, boolean param9, int param10) {
         MeshData stackIn_4_0 = null;
         MeshData stackIn_13_0 = null;
         int stackIn_57_0 = 0;

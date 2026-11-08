@@ -18,11 +18,11 @@ class MessageDialog extends PopupDialog {
 
     void onUpdate(int param0, boolean param1) {
         if (param0 != 3) {
-          MessageDialog.f(-13);
+          MessageDialog.drawTutorialInputHints(-13);
         }
     }
 
-    final static void f(int param0) {
+    final static void drawTutorialInputHints(int param0) {
         boolean[] array$0 = null;
         int var11 = 0;
         int stackIn_12_0 = 0;
@@ -307,7 +307,7 @@ class MessageDialog extends PopupDialog {
         }
     }
 
-    final void a(String param0, PopupCard param1, Sprite param2, int param3, String param4) {
+    final void setMessageContent(String param0, PopupCard param1, Sprite param2, int param3, String param4) {
         int stackIn_9_1 = 0;
         int stackIn_10_2 = 0;
         int stackIn_12_1 = 0;
@@ -413,7 +413,7 @@ class MessageDialog extends PopupDialog {
     MessageDialog(int param0, PopupCard param1, String param2, String param3) {
         try {
           this.field_y = param0;
-          this.a(param3, param1, MusicPatchNode.getMessageDialogIcon(2, this.field_y), -125, param2);
+          this.setMessageContent(param3, param1, MusicPatchNode.getMessageDialogIcon(2, this.field_y), -125, param2);
           this.open(ModelMaterialDecoder.messageButtonCount(this.field_y, 1), SharedPanelFactory.getMessageButtonLabels(false, this.field_y), 1054928844);
           if (this.field_y == 8) {
             this.setOptionLabels(AlternateKeyedLoginCredentials.field_j, (byte) 90);

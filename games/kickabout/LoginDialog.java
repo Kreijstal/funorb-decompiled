@@ -22,7 +22,7 @@ final class LoginDialog extends ContentTransitionDialog {
         }
     }
 
-    final static String a(byte param0, String param1, String[] param2) {
+    final static String substitutePlaceholders(byte param0, String param1, String[] param2) {
         StringBuilder discarded$2 = null;
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
@@ -315,7 +315,7 @@ final class LoginDialog extends ContentTransitionDialog {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static String $cfr$intArgs$a$53ce4ab4c593(int param0, String param1, String[] param2) {
+    final static String substitutePlaceholders(int param0, String param1, String[] param2) {
         StringBuilder discarded$2 = null;
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;

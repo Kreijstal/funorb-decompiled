@@ -26,7 +26,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         }
     }
 
-    final static byte[] a(int param0, byte[] param1) {
+    final static byte[] copyByteArray(int param0, byte[] param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         byte[] var3 = null;
@@ -58,7 +58,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         }
     }
 
-    final void a(PlatformTaskDispatcher param0, int param1) {
+    final void exitFullscreen(PlatformTaskDispatcher param0, int param1) {
         try {
           ProxySocketConnector.exitFullscreen(param0, this.field_c, 0);
           if (param1 != 9) {
@@ -83,7 +83,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         field_g = null;
     }
 
-    final static void a(PlatformTaskDispatcher param0, byte param1, java.awt.Component param2) {
+    final static void initializeAudioOutputs(PlatformTaskDispatcher param0, byte param1, java.awt.Component param2) {
         int var5 = 0;
         int var3_int = 0;
         int var4 = Kickabout.field_G;

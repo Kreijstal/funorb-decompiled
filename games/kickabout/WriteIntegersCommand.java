@@ -30,7 +30,7 @@ final class WriteIntegersCommand extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 84) {
-            stackIn_4_0 = new ConsoleValue(TextButton.a(-31182, (int[]) (param1[0].field_d)));
+            stackIn_4_0 = new ConsoleValue(TextButton.formatArrayIndices(-31182, (int[]) (param1[0].field_d)));
             return stackIn_4_0;
           }
           stackIn_2_0 = (ConsoleValue) null;
@@ -49,11 +49,11 @@ final class WriteIntegersCommand extends ConsoleCommand {
         }
     }
 
-    final static int a(int param0, boolean param1) {
+    final static int getSignedValueBitWidth(int param0, boolean param1) {
         int var2;
         int var2Lifetime1;
         if (param1) {
-          WriteIntegersCommand.h(-15);
+          WriteIntegersCommand.drawTutorialControlsLegend(-15);
         }
         if (param0 == 0) {
           return 0;
@@ -106,7 +106,7 @@ final class WriteIntegersCommand extends ConsoleCommand {
         return var2Lifetime1;
     }
 
-    final static void h(int param0) {
+    final static void drawTutorialControlsLegend(int param0) {
         int var2 = 0;
         int var1_int = 0;
         int var3 = 0;

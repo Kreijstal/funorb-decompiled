@@ -17,7 +17,7 @@ final class AchievementQuery extends IntrusiveNode {
         try {
           var4_int = 75 / ((72 - param2) / 47);
           if (RankingRowFactory.decodeSpriteSheetFromArchive(param1, param3, param0, 117)) {
-            return LeaderboardParticipant.a(-125);
+            return LeaderboardParticipant.buildDecodedSprites(-125);
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

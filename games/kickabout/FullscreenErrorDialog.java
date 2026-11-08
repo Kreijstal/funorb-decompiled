@@ -28,7 +28,7 @@ final class FullscreenErrorDialog extends ResizableModalPanel implements ButtonL
         }
     }
 
-    final static int c(boolean param0) {
+    final static int loadParkSprites(boolean param0) {
         if (BallAgent.field_u) {
           return -1;
         }
@@ -45,7 +45,7 @@ final class FullscreenErrorDialog extends ResizableModalPanel implements ButtonL
         return QuickChatKeysHelpPanel.field_Cb.getGroupProgressByName("park", -16248);
     }
 
-    final static void a(GameSetupPanel param0, byte param1) {
+    final static void insertLobbyGameInOrder(GameSetupPanel param0, byte param1) {
         GameSetupPanel var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -61,7 +61,7 @@ final class FullscreenErrorDialog extends ResizableModalPanel implements ButtonL
           param0.unlink((byte) -109);
           var2 = (GameSetupPanel) (SquadSlotWidget.field_yb.first(24009));
           while (var2 != null) {
-            if (var2.a(param1 + 20843, param0)) {
+            if (var2.precedes(param1 + 20843, param0)) {
               var2 = (GameSetupPanel) (SquadSlotWidget.field_yb.next(33));
               continue;
             }
@@ -131,7 +131,7 @@ final class FullscreenErrorDialog extends ResizableModalPanel implements ButtonL
         }
     }
 
-    final static void a(boolean param0, int param1, int param2) {
+    final static void queuePitchPurchase(boolean param0, int param1, int param2) {
         ManagerAction var3 = new ManagerAction(7, new int[]{param1, param2});
         AchievementSubmission.applyAndQueueManagerAction(var3, 109);
         if (param0) {
@@ -198,7 +198,7 @@ final class FullscreenErrorDialog extends ResizableModalPanel implements ButtonL
         }
     }
 
-    final static void q(int param0) {
+    final static void updateFadingChatMessages(int param0) {
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
         ChatMessage var1 = null;

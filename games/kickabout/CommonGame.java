@@ -88,7 +88,7 @@ final class CommonGame {
           } while (var5 == 0);
           if (2 == this.phase) {
             this.field_C.readSynchronizationMetadata(param0, ~param1);
-            this.field_C.c(param0, param1 + 7);
+            this.field_C.readFormationState(param0, param1 + 7);
           }
           if (3 == this.phase) {
             this.field_o.readSynchronizationMetadata(param0, 4);
@@ -3182,7 +3182,7 @@ final class CommonGame {
           }
           if (this.phase == 2) {
             this.field_C.readSynchronizationMetadata(param0, 4);
-            this.field_C.c(param0, 2);
+            this.field_C.readFormationState(param0, 2);
           }
           if (3 == this.phase) {
             this.field_o.readSynchronizationMetadata(param0, 4);

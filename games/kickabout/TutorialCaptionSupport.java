@@ -29,7 +29,7 @@ final class TutorialCaptionSupport extends IntrusiveNode {
         if (null == ThumbnailStateFactory.field_d) {
           return;
         }
-        WriteIntegersCommand.h(-92);
+        WriteIntegersCommand.drawTutorialControlsLegend(-92);
         if (TickClock.field_a == 0) {
           return;
         }
@@ -60,7 +60,7 @@ final class TutorialCaptionSupport extends IntrusiveNode {
             var3 = var9.substring(0, var8);
           }
           var5 = var4 != 1 ? var4 != 2 ? 0 : 6 : 16;
-          var3 = WidgetContainer.a("</>", "</shad></col>", true, WidgetContainer.a("<>", "<col=ffff00><shad=010101>", true, var3));
+          var3 = WidgetContainer.replaceLiteral("</>", "</shad></col>", true, WidgetContainer.replaceLiteral("<>", "<col=ffff00><shad=010101>", true, var3));
           IsSixCommand.field_C.drawParagraph(var3, (-TickClock.field_a + 640 >> 1) + 72, -10 + (var5 + 458) - 48, -44 + TickClock.field_a - 50, 48, 16777215, -1, 0, 0, 16);
           return;
         }

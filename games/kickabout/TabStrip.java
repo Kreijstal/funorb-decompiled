@@ -41,10 +41,10 @@ final class TabStrip extends UiLayoutNode {
         this.field_mb = param1;
         this.field_s = param2;
         if (!param0) {
-          this.a(79, -39, -98);
+          this.layoutTabs(79, -39, -98);
         }
         this.field_J = param5;
-        this.a(param3, param4, 10000);
+        this.layoutTabs(param3, param4, 10000);
     }
 
     TabStrip(long param0, UiLayoutNode param1, String[] param2, UiLayoutNode param3, UiLayoutNode[] param4, int param5) {
@@ -116,7 +116,7 @@ final class TabStrip extends UiLayoutNode {
         }
     }
 
-    private final void a(int param0, int param1, int param2) {
+    private final void layoutTabs(int param0, int param1, int param2) {
         UiLayoutNode dupTemp$0 = null;
         int var4;
         int var5;
@@ -156,7 +156,7 @@ final class TabStrip extends UiLayoutNode {
         int var3;
         var3 = Kickabout.field_G;
         if (param0 < 36) {
-          this.a(44, -42, 25);
+          this.layoutTabs(44, -42, 25);
         }
         for (var2 = 0; this.field_Bb.length > var2; var2++) {
           if (this.field_Db != var2 &&

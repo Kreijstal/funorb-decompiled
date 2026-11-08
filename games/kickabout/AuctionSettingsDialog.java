@@ -472,9 +472,9 @@ final class AuctionSettingsDialog extends MessageDialog {
         for (var3 = 0; var3 < 5; var3++) {
           if (FriendRemovalSupport.field_d[var3].field_gb) {
             if (var3 == GameMediaSupport.field_d) {
-              IndexedSpriteState.showTextTooltip(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, AuctionTableWidget.field_Jb, new String[]{HighScoreQuery.field_k[var3]}));
+              IndexedSpriteState.showTextTooltip(-67, LoginDialog.substitutePlaceholders(-18, AuctionTableWidget.field_Jb, new String[]{HighScoreQuery.field_k[var3]}));
             } else {
-              IndexedSpriteState.showTextTooltip(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, TrinketPickerDialog.field_H, new String[]{HighScoreQuery.field_k[var3]}));
+              IndexedSpriteState.showTextTooltip(-67, LoginDialog.substitutePlaceholders(-18, TrinketPickerDialog.field_H, new String[]{HighScoreQuery.field_k[var3]}));
             }
           }
         }
@@ -486,13 +486,13 @@ final class AuctionSettingsDialog extends MessageDialog {
               LocalizedTextLoader.field_f == AuctionBidDialog.field_L) {
               IndexedSpriteState.showTextTooltip(-67, LocalizedTextLoader.field_a);
             } else {
-              IndexedSpriteState.showTextTooltip(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, WeightedCacheEntry.field_q, new String[]{LocalizedTextLoader.formatCurrencyAmount(1, 26300)}));
+              IndexedSpriteState.showTextTooltip(-67, LoginDialog.substitutePlaceholders(-18, WeightedCacheEntry.field_q, new String[]{LocalizedTextLoader.formatCurrencyAmount(1, 26300)}));
             }
           }
         }
         if (AuctionBidDialog.field_I.field_Q) {
           if (QuickChatPhraseCache.field_c != LocalizedTextLoader.field_f) {
-            IndexedSpriteState.showTextTooltip(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ScrollPane.field_Ib, new String[]{LocalizedTextLoader.formatCurrencyAmount(1, 26300)}));
+            IndexedSpriteState.showTextTooltip(-67, LoginDialog.substitutePlaceholders(-18, ScrollPane.field_Ib, new String[]{LocalizedTextLoader.formatCurrencyAmount(1, 26300)}));
           } else {
             IndexedSpriteState.showTextTooltip(-67, UiWidget.field_j);
           }
@@ -502,7 +502,7 @@ final class AuctionSettingsDialog extends MessageDialog {
             if (AuctionBidDialog.field_L == IndexedSpriteState.field_g) {
               IndexedSpriteState.showTextTooltip(-67, SumIntegersCommand.field_E);
             } else {
-              IndexedSpriteState.showTextTooltip(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, IntrusiveDequeCursor.field_c, new String[]{LocalizedTextLoader.formatCurrencyAmount(1, param0 ^ 26303)}));
+              IndexedSpriteState.showTextTooltip(-67, LoginDialog.substitutePlaceholders(-18, IntrusiveDequeCursor.field_c, new String[]{LocalizedTextLoader.formatCurrencyAmount(1, param0 ^ 26303)}));
             }
           } else {
             IndexedSpriteState.showTextTooltip(-67, ListRow.field_zb);
@@ -514,7 +514,7 @@ final class AuctionSettingsDialog extends MessageDialog {
               if (LocalizedTextLoader.field_f == AuctionBidDialog.field_L) {
                 IndexedSpriteState.showTextTooltip(-67, SpriteBackgroundSupport.field_e);
               } else {
-                IndexedSpriteState.showTextTooltip(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, PlayerStats.field_d, new String[]{LocalizedTextLoader.formatCurrencyAmount(1, 26300)}));
+                IndexedSpriteState.showTextTooltip(-67, LoginDialog.substitutePlaceholders(-18, PlayerStats.field_d, new String[]{LocalizedTextLoader.formatCurrencyAmount(1, 26300)}));
               }
             } else {
               IndexedSpriteState.showTextTooltip(-67, LeaguesScreen.field_C);

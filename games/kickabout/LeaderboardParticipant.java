@@ -357,7 +357,7 @@ final class LeaderboardParticipant {
         }
     }
 
-    final static Sprite[] a(int param0) {
+    final static Sprite[] buildDecodedSprites(int param0) {
         int var2 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -407,7 +407,7 @@ final class LeaderboardParticipant {
         return var1;
     }
 
-    final static LoginCredentials a(int param0, String param1, boolean param2, String param3) {
+    final static LoginCredentials createLoginCredentialsFromName(int param0, String param1, boolean param2, String param3) {
         long var4_long = 0L;
         RuntimeException var4 = null;
         Object var6 = null;
@@ -431,9 +431,9 @@ final class LeaderboardParticipant {
             var6 = param3;
           } else {
             var8 = (CharSequence) ((Object) param3);
-            var4_long = LoggedPlayer.a(var8, false);
+            var4_long = LoggedPlayer.encodeBase37Name(var8, false);
           }
-          stackIn_6_0 = NamedValueContainer.a(param1, var4_long, (byte) 31, param2, (String) (var6));
+          stackIn_6_0 = NamedValueContainer.createLoginCredentials(param1, var4_long, (byte) 31, param2, (String) (var6));
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

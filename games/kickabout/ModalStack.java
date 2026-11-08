@@ -137,7 +137,7 @@ final class ModalStack extends SingleChildContainer {
           var5 = null;
           if (PitchCoordinateSupport.field_d == 2) {
             TriangleMesh.field_R.field_lb = true;
-            MarkerSliderPainter.field_f.field_E = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, RegistrationUiSupport.field_d, new String[]{BufferedSocket.field_h});
+            MarkerSliderPainter.field_f.field_E = LoginDialog.substitutePlaceholders(-18, RegistrationUiSupport.field_d, new String[]{BufferedSocket.field_h});
             RotaryDialPainter.field_d.field_Cb.field_zb.field_E = null;
             var6 = null;
             var7 = (SocialPlayerRow) (var4.first(24009));
@@ -233,11 +233,11 @@ final class ModalStack extends SingleChildContainer {
                     !PacketBuffer.field_l) {
                     if (!WriteIntegersCommand.field_C) {
                       var17 = TextButton.field_v;
-                      var18 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, LeaderboardParticipant.field_a, new String[]{var16});
+                      var18 = LoginDialog.substitutePlaceholders(-18, LeaderboardParticipant.field_a, new String[]{var16});
                       var17.field_j.addItem(param1 ^ 2, 8, var18);
                     }
                     var17Lifetime1 = TextButton.field_v;
-                    var18Lifetime1 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, GameMediaSupport.field_c, new String[]{var16});
+                    var18Lifetime1 = LoginDialog.substitutePlaceholders(-18, GameMediaSupport.field_c, new String[]{var16});
                     var17Lifetime1.field_j.addItem(0, 18, var18Lifetime1);
                   }
                 } else {

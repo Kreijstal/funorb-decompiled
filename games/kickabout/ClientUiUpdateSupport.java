@@ -84,7 +84,7 @@ final class ClientUiUpdateSupport {
         boolean stackIn_66_2 = false;
         GeneratedPanelPainter.b((byte) 123);
         if (ConsoleArgumentSupport.field_d >= 0) {
-          ConsoleValue.field_a.field_E = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, StatefulTextPainter.field_r, new String[]{Integer.toString(ConsoleArgumentSupport.field_d)});
+          ConsoleValue.field_a.field_E = LoginDialog.substitutePlaceholders(-18, StatefulTextPainter.field_r, new String[]{Integer.toString(ConsoleArgumentSupport.field_d)});
           stackIn_51_0 = UiKeyRoutingSupport.field_c;
           stackIn_51_1 = 0;
           stackIn_52_2 = (param0) && (!param1) && (!TextWidgetPainter.field_f) && (PlayerContextMenu.field_i == null) && (null == ArchiveSource.field_b);

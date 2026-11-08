@@ -25,7 +25,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         field_d = null;
     }
 
-    final static String a(java.applet.Applet param0, byte param1) {
+    final static String readClientSettings(java.applet.Applet param0, byte param1) {
         try {
           String var3 = null;
           String var4 = null;
@@ -50,7 +50,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
               var10 = param0.getParameter("cookieprefix");
               var3 = var10 + "settings";
               var4 = (String) (AppletJavaScriptBridge.callJavaScript(30858, "getcookies", param0));
-              var5 = FormationAgent.a(var4, 2, ';');
+              var5 = FormationAgent.split(var4, 2, ';');
               var6 = 0;
               var7 = 35 % ((param1 - 32) / 57);
               while (var6 < var5.length) {

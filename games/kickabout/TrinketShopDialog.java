@@ -97,7 +97,7 @@ final class TrinketShopDialog extends MessageDialog {
           var6_ref_at = (TrinketTile) (this.field_L.field_Db.field_jb.next(33));
         }
         if (this.field_t != var5) {
-          this.a(this.field_v, (PopupCard) (var5), (Sprite) null, -94, this.field_u);
+          this.setMessageContent(this.field_v, (PopupCard) (var5), (Sprite) null, -94, this.field_u);
         }
         TeamManagementScreen.popRasterState(123);
         if (null != this.field_H) {

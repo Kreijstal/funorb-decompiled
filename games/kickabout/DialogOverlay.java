@@ -11,7 +11,7 @@ final class DialogOverlay implements OverlayLayer {
     static String field_c;
     static UiLayoutNode field_e;
 
-    final static SoundStreamHandle a(PcmSampleStream param0, int param1) {
+    final static SoundStreamHandle addReverbSubstream(PcmSampleStream param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         SoundStreamHandle var3 = null;
@@ -49,7 +49,7 @@ final class DialogOverlay implements OverlayLayer {
     public final void paint(int param0) {
         int var2 = 8 / ((50 - param0) / 45);
         if (null != WidgetStyleFactory.field_c) {
-          WidgetStyleFactory.field_c.b(false);
+          WidgetStyleFactory.field_c.drawAnimatedPopup(false);
         }
     }
 
@@ -511,12 +511,12 @@ final class DialogOverlay implements OverlayLayer {
                 var31 = var31 + LineupPositionSupport.field_c * var39Lifetime1;
               }
               if (var12.field_hc) {
-                var12.field_dc.field_E = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, TextButton.field_x, new String[]{var32});
+                var12.field_dc.field_E = LoginDialog.substitutePlaceholders(-18, TextButton.field_x, new String[]{var32});
                 var12.field_dc.setBounds(true, -(2 * DiskCacheWorker.field_b) + var12.field_q, DiskCacheWorker.field_b, var31, LineupPositionSupport.field_c);
                 var31 = var31 + LineupPositionSupport.field_c;
               }
               if (var12.field_Tb) {
-                var12.field_Yb.field_E = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, SetLagCommand.field_C, new String[]{var32});
+                var12.field_Yb.field_E = LoginDialog.substitutePlaceholders(-18, SetLagCommand.field_C, new String[]{var32});
                 var12.field_Yb.setBounds(true, var12.field_q - 2 * DiskCacheWorker.field_b, DiskCacheWorker.field_b, var31, LineupPositionSupport.field_c);
                 var31 = var31 + LineupPositionSupport.field_c;
               }
@@ -619,7 +619,7 @@ final class DialogOverlay implements OverlayLayer {
         }
     }
 
-    final static ConsoleExpression[] a(String param0, byte param1) {
+    final static ConsoleExpression[] tokenizeConsoleCached(String param0, byte param1) {
         int incrementValue$1 = 0;
         IntrusiveDeque var2 = null;
         RuntimeException var2_ref = null;
@@ -716,14 +716,14 @@ final class DialogOverlay implements OverlayLayer {
             WidgetStyleFactory.field_c = (PopupDialog) (ScrollPane.field_Jb.removeFirst((byte) 125));
           }
         } else {
-          WidgetStyleFactory.field_c.b(param0 - 16511, param1);
+          WidgetStyleFactory.field_c.updatePopup(param0 - 16511, param1);
           if (WidgetStyleFactory.field_c.isClosed(-31268)) {
             WidgetStyleFactory.field_c = null;
           }
         }
         if (param0 != -25) {
           var5 = (PcmSampleStream) null;
-          DialogOverlay.a((PcmSampleStream) null, -103);
+          DialogOverlay.addReverbSubstream((PcmSampleStream) null, -103);
         }
     }
 

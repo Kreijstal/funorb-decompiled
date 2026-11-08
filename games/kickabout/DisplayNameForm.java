@@ -30,7 +30,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
         ((AccountNameAvailabilityValidator) (this.field_C.getValidationSource((byte) -116))).clearCachedName((byte) 101);
     }
 
-    private final int a(String param0, int param1, int param2, UiWidget param3, int param4, int param5, String param6) {
+    private final int addLabeledValidatedField(String param0, int param1, int param2, UiWidget param3, int param4, int param5, String param6) {
         RuntimeException var8 = null;
         ValidationHelpWidget var9 = null;
         int var10 = 0;
@@ -171,7 +171,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
         var2.setBounds(50, 1, 20, 270, var3);
         this.addChild(-86, var2);
         var3 += 50;
-        var3 = var3 + (5 + this.a(var3, MusicPatch.field_i, GoalStateAgent.field_f, this.field_C, (byte) 29, 170));
+        var3 = var3 + (5 + this.addLabeledValidatedField(var3, MusicPatch.field_i, GoalStateAgent.field_f, this.field_C, (byte) 29, 170));
         this.field_B.setBounds(40, 1, -var5 + 496 >> 1, var5, var3);
         this.field_E.setBounds(40, 1, var4 + 3, 60, 15 + var3);
         this.field_E.field_k = (UiListener) (this);
@@ -196,7 +196,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
         return true;
     }
 
-    private final int a(int param0, String param1, String param2, UiWidget param3, byte param4, int param5) {
+    private final int addLabeledValidatedField(int param0, String param1, String param2, UiWidget param3, byte param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -211,7 +211,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
           if (param4 != 29) {
             this.field_G = (NameSuggestionsPanel) null;
           }
-          stackIn_3_0 = this.a(param2, param5, 35, param3, -93, param0, param1);
+          stackIn_3_0 = this.addLabeledValidatedField(param2, param5, 35, param3, -93, param0, param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

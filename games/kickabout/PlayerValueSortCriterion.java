@@ -151,7 +151,7 @@ final class PlayerValueSortCriterion extends SortCriterion {
                   ArrayWidgetContainer.field_x < 640 &&
                   TutorialCaptionSupport.field_j > var13 - VertexNormal.field_c &&
                   TutorialCaptionSupport.field_j < var13) {
-                  SpriteResourceSupport.showTextTooltip((byte) 52, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, "<%0>: <%1>ms", new String[]{TrinketPickerDialog.field_G[var12], var14 + ""}));
+                  SpriteResourceSupport.showTextTooltip((byte) 52, LoginDialog.substitutePlaceholders(-18, "<%0>: <%1>ms", new String[]{TrinketPickerDialog.field_G[var12], var14 + ""}));
                 }
                 stackIn_29_0 = (AsciiCharacterSupport.field_c.participantStatus[var12].isActive(3511)) ? 16777215 : 11184810;
                 var16 = stackIn_29_0;

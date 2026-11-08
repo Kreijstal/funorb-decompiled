@@ -20,7 +20,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
         return dupTemp$0;
     }
 
-    private final void a(StatefulTextPainter param0, boolean param1, int param2) {
+    private final void copyStateStylesTo(StatefulTextPainter param0, boolean param1, int param2) {
         int var4_int = 0;
         PainterStyle dupTemp$0 = null;
         PainterStyle stackIn_7_0 = null;
@@ -77,7 +77,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
         }
     }
 
-    final static boolean a(boolean param0, CharSequence param1, char param2) {
+    final static boolean canAppendAccountNameCharacter(boolean param0, CharSequence param1, char param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_19_0 = null;
@@ -116,7 +116,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
         }
     }
 
-    final void a(Sprite[] param0, int param1) {
+    final void setStateSprites(Sprite[] param0, int param1) {
         int var4 = 0;
         PainterStyle[] var3 = null;
         PainterStyle var5 = null;
@@ -155,7 +155,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
         }
     }
 
-    final static void a(ResourceArchive param0, ResourceArchive param1, boolean param2, ResourceArchive param3) {
+    final static void loadCommonUiResources(ResourceArchive param0, ResourceArchive param1, boolean param2, ResourceArchive param3) {
         int var11_int = 0;
         IndexedSprite[] var5 = null;
         IndexedSprite[][] var6 = null;
@@ -201,7 +201,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
           stackIn_3_1 = "commonui";
           stackIn_4_2 = !(param2);
           MyPitchScreen.loadIndexedSpriteByName(stackIn_3_0, stackIn_3_1, stackIn_4_2, "dropdown");
-          var5 = DemoIntegersCommand.a(param3, 17369, "commonui", "screen_options");
+          var5 = DemoIntegersCommand.loadIndexedSpriteSheetByName(param3, 17369, "commonui", "screen_options");
           ConsoleEvaluationException.field_d = new IndexedSprite[4];
           BallAgent.field_f = new IndexedSprite[4];
           TriangleMesh.field_Q = new IndexedSprite[4];
@@ -241,7 +241,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
           TeamManagementScreen.popRasterState(119);
           IntrusiveDequeCursor.field_a = new Sprite[]{var15, var12, var11};
           if (param2) {
-            StatefulTextPainter.a(false, (CharSequence) null, 'ﾺ');
+            StatefulTextPainter.canAppendAccountNameCharacter(false, (CharSequence) null, 'ﾺ');
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -372,13 +372,13 @@ final class StatefulTextPainter extends TextWidgetPainter {
     StatefulTextPainter(StatefulTextPainter param0, boolean param1) {
         this();
         try {
-          param0.a(this, param1, -116);
+          param0.copyStateStylesTo(this, param1, -116);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "id.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void a(Sprite param0, byte param1) {
+    final void setStateSprite(Sprite param0, byte param1) {
         PainterStyle[] var3 = null;
         int var4 = 0;
         PainterStyle var5 = null;
@@ -393,7 +393,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
           var3 = this.field_w;
           var4 = 0;
           if (param1 > -86) {
-            StatefulTextPainter.a(false, (CharSequence) null, 'ﾴ');
+            StatefulTextPainter.canAppendAccountNameCharacter(false, (CharSequence) null, 'ﾴ');
           }
           while (var3.length > var4) {
             var5 = var3[var4];

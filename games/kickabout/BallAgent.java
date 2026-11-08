@@ -211,8 +211,8 @@ class BallAgent extends MatchAgent {
           if (!ContentTransitionDialog.readBooleanBit(param0, (byte) -39)) {
             return;
           }
-          this.uncatchable = ClientInteractionSupport.a(22531, 9, param0, 0);
-          this.highFriction = ClientInteractionSupport.a(22531, 5, param0, 0);
+          this.uncatchable = ClientInteractionSupport.readTwoRangeUnsigned(22531, 9, param0, 0);
+          this.highFriction = ClientInteractionSupport.readTwoRangeUnsigned(22531, 5, param0, 0);
           this.modelId = param0.readBits(4, 59);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

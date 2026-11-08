@@ -320,21 +320,21 @@ class FootballerAgent extends MatchAgent {
         try {
           this.positionX = param1.readBits(26, param0 ^ -13927);
           this.positionY = param1.readBits(27, 59);
-          this.height = ClientInteractionSupport.a(22531, 30, param1, 0);
+          this.height = ClientInteractionSupport.readTwoRangeUnsigned(22531, 30, param1, 0);
           this.verticalVelocity = BufferedCacheFile.readSignedFourRangeBits((byte) 125, 17, param1, 0, 24, 25);
           this.directionMask = param1.readBits(4, 59);
           this.directionY = param1.readBits(2, 59) - 1;
           this.directionX = -1 + param1.readBits(2, param0 + 13977);
-          this.action = ClientInteractionSupport.a(param0 ^ -28255, WriteIntegersCommand.a(14, false), param1, 0);
-          this.actionTime = ClientInteractionSupport.a(22531, 8, param1, 0);
-          this.dashCooldown = ClientInteractionSupport.a(22531, 9, param1, 0);
+          this.action = ClientInteractionSupport.readTwoRangeUnsigned(param0 ^ -28255, WriteIntegersCommand.getSignedValueBitWidth(14, false), param1, 0);
+          this.actionTime = ClientInteractionSupport.readTwoRangeUnsigned(22531, 8, param1, 0);
+          this.dashCooldown = ClientInteractionSupport.readTwoRangeUnsigned(22531, 9, param1, 0);
           this.aiWait = param1.readBits(3, param0 ^ -13927);
           this.field_O = ContentTransitionDialog.readBooleanBit(param1, (byte) -39);
           this.field_s = ContentTransitionDialog.readBooleanBit(param1, (byte) -39);
-          this.field_k = TutorialScenerySupport.a(param1, 30, (byte) 6, 18);
-          this.field_m = TutorialScenerySupport.a(param1, 30, (byte) 6, 18);
-          this.field_r = TutorialScenerySupport.a(param1, 30, (byte) 6, 18);
-          this.field_B = TutorialScenerySupport.a(param1, 30, (byte) 6, 18);
+          this.field_k = TutorialScenerySupport.readSignedTwoRangeValue(param1, 30, (byte) 6, 18);
+          this.field_m = TutorialScenerySupport.readSignedTwoRangeValue(param1, 30, (byte) 6, 18);
+          this.field_r = TutorialScenerySupport.readSignedTwoRangeValue(param1, 30, (byte) 6, 18);
+          this.field_B = TutorialScenerySupport.readSignedTwoRangeValue(param1, 30, (byte) 6, 18);
           this.field_h = param1.readBits(4, 59);
           this.field_z = param1.readBits(9, 59) - 5;
           this.field_x = IsaacRandom.readSignedBits(11, -30273, param1);
@@ -406,17 +406,17 @@ class FootballerAgent extends MatchAgent {
             this.positionY = this.positionY + BufferedCacheFile.readSignedFourRangeBits((byte) 125, 19, param1, 0, 23, 30);
             this.height = this.height + BufferedCacheFile.readSignedFourRangeBits((byte) 125, 19, param1, 0, 23, 30);
           }
-          this.verticalVelocity = TutorialScenerySupport.a(param1, 25, (byte) 6, 0);
+          this.verticalVelocity = TutorialScenerySupport.readSignedTwoRangeValue(param1, 25, (byte) 6, 0);
           if (ContentTransitionDialog.readBooleanBit(param1, (byte) -39)) {
             this.directionMask = param1.readBits(4, 59);
             this.directionY = -1 + param1.readBits(2, param0 ^ 50);
             this.directionX = param1.readBits(2, 59) - 1;
           }
           if (ContentTransitionDialog.readBooleanBit(param1, (byte) -39)) {
-            this.action = param1.readBits(WriteIntegersCommand.a(14, false), 59);
+            this.action = param1.readBits(WriteIntegersCommand.getSignedValueBitWidth(14, false), 59);
             this.actionTime = param1.readBits(8, param0 ^ 50);
           }
-          this.dashCooldown = ClientInteractionSupport.a(param0 ^ 22538, param0, param1, 0);
+          this.dashCooldown = ClientInteractionSupport.readTwoRangeUnsigned(param0 ^ 22538, param0, param1, 0);
           if (ContentTransitionDialog.readBooleanBit(param1, (byte) -39)) {
             this.aiWait = param1.readBits(3, 59);
           }
@@ -429,10 +429,10 @@ class FootballerAgent extends MatchAgent {
           }
           if (ContentTransitionDialog.readBooleanBit(param1, (byte) -39)) {
             this.field_s = ContentTransitionDialog.readBooleanBit(param1, (byte) -39);
-            this.field_k = TutorialScenerySupport.a(param1, 30, (byte) 6, 18);
-            this.field_m = TutorialScenerySupport.a(param1, 30, (byte) 6, 18);
-            this.field_r = TutorialScenerySupport.a(param1, 30, (byte) 6, 18);
-            this.field_B = TutorialScenerySupport.a(param1, 30, (byte) 6, 18);
+            this.field_k = TutorialScenerySupport.readSignedTwoRangeValue(param1, 30, (byte) 6, 18);
+            this.field_m = TutorialScenerySupport.readSignedTwoRangeValue(param1, 30, (byte) 6, 18);
+            this.field_r = TutorialScenerySupport.readSignedTwoRangeValue(param1, 30, (byte) 6, 18);
+            this.field_B = TutorialScenerySupport.readSignedTwoRangeValue(param1, 30, (byte) 6, 18);
           }
           if (ContentTransitionDialog.readBooleanBit(param1, (byte) -39)) {
             this.field_A = param1.readBits(32, param0 ^ 50);

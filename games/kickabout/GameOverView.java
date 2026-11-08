@@ -245,7 +245,7 @@ final class GameOverView extends MatchPhaseView {
           var5 = this.field_u[this.field_h];
           var6 = this.field_u[1 - this.field_h];
           stackIn_4_0 = ByteArrayPool.field_d;
-          stackIn_4_1 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, RotaryDialPainter.field_c, new String[]{Integer.toString(var5)});
+          stackIn_4_1 = LoginDialog.substitutePlaceholders(-18, RotaryDialPainter.field_c, new String[]{Integer.toString(var5)});
           stackIn_4_2 = -40 + var4;
           stackIn_4_3 = var3 + 46;
           if (var6 >= var5) {
@@ -259,7 +259,7 @@ final class GameOverView extends MatchPhaseView {
           }
           ((CoverageBitmapFont) (Object) stackIn_4_0).drawCentered(stackIn_4_1, stackIn_4_2, stackIn_4_3, stackIn_8_4, -1);
           stackIn_11_0 = ByteArrayPool.field_d;
-          stackIn_11_1 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, RotaryDialPainter.field_c, new String[]{Integer.toString(var6)});
+          stackIn_11_1 = LoginDialog.substitutePlaceholders(-18, RotaryDialPainter.field_c, new String[]{Integer.toString(var6)});
           stackIn_11_2 = var4 - 40;
           stackIn_11_3 = 87 + var3;
           if (var5 >= var6) {
@@ -310,7 +310,7 @@ final class GameOverView extends MatchPhaseView {
                   SoftwareRasterizer.fillRectangleAlpha(var7, -17 + var8, 160, 21, var13, var14);
                   ByteArrayPool.field_d.drawCentered(this.field_a.field_S[var9], var7 + 80, var8, var12, -1);
                   SoftwareRasterizer.fillRectangleAlpha(2 + var7 + 160, -17 + var8, 40, 21, var13, var14);
-                  ByteArrayPool.field_d.drawCentered(LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, RotaryDialPainter.field_c, new String[]{Integer.toString(this.field_k[var9])}), 160 + (var7 + 22), var8, var12, -1);
+                  ByteArrayPool.field_d.drawCentered(LoginDialog.substitutePlaceholders(-18, RotaryDialPainter.field_c, new String[]{Integer.toString(this.field_k[var9])}), 160 + (var7 + 22), var8, var12, -1);
                   var8 += 23;
                 }
                 var9++;
@@ -373,7 +373,7 @@ final class GameOverView extends MatchPhaseView {
                   SoftwareRasterizer.fillRectangleAlpha(var7, var8 - 17, 160, 21, var13Lifetime1, var14Lifetime1);
                   ByteArrayPool.field_d.drawCentered(this.field_a.field_S[var9], var7 + 80, var8, var12Lifetime1, -1);
                   SoftwareRasterizer.fillRectangleAlpha(var7 - 42, var8 - 17, 40, 21, var13Lifetime1, var14Lifetime1);
-                  ByteArrayPool.field_d.drawCentered(LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, RotaryDialPainter.field_c, new String[]{Integer.toString(this.field_k[var9])}), -22 + var7, var8, var12Lifetime1, -1);
+                  ByteArrayPool.field_d.drawCentered(LoginDialog.substitutePlaceholders(-18, RotaryDialPainter.field_c, new String[]{Integer.toString(this.field_k[var9])}), -22 + var7, var8, var12Lifetime1, -1);
                   var8 += 23;
                 }
                 var9++;
@@ -969,7 +969,7 @@ final class GameOverView extends MatchPhaseView {
             if (param0.field_X.score[1] > param0.field_X.score[0]) {
               this.field_Z = LoginRequiredDialog.field_J;
             }
-            this.field_Z = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, this.field_Z, new String[]{Integer.toString(param0.field_X.score[0]), Integer.toString(param0.field_X.score[1])});
+            this.field_Z = LoginDialog.substitutePlaceholders(-18, this.field_Z, new String[]{Integer.toString(param0.field_X.score[0]), Integer.toString(param0.field_X.score[1])});
           }
           this.field_m = new int[2];
           this.field_w = new String[2][8];
@@ -1325,7 +1325,7 @@ final class GameOverView extends MatchPhaseView {
                 break;
               }
               if (stackIn_23_0 != stackIn_23_1) {
-                var14 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, AccountRegistrationPanel.field_P, new String[]{this.field_a.field_S[var11_ref_ch.scorerParticipant].toLowerCase()});
+                var14 = LoginDialog.substitutePlaceholders(-18, AccountRegistrationPanel.field_P, new String[]{this.field_a.field_S[var11_ref_ch.scorerParticipant].toLowerCase()});
               }
               if (this.field_g == var11_ref_ch.scorerParticipant) {
                 var13 = 50;
@@ -1543,7 +1543,7 @@ final class GameOverView extends MatchPhaseView {
               if (!MachineTokenStorageSupport.field_e.field_s) {
                 if (this.field_N) {
                   if (this.field_a.field_e) {
-                    var4 = AnimationSkeleton.field_p + "<br>" + LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, DraggableWidget.field_I, new String[]{LocalizedTextLoader.formatCurrencyAmount(this.field_G, 26300)});
+                    var4 = AnimationSkeleton.field_p + "<br>" + LoginDialog.substitutePlaceholders(-18, DraggableWidget.field_I, new String[]{LocalizedTextLoader.formatCurrencyAmount(this.field_G, 26300)});
                   } else {
                     var4 = TickClock.field_b + "<br>" + ArchiveReconnectSupport.field_a + " " + NotCommand.field_E;
                   }
@@ -1553,7 +1553,7 @@ final class GameOverView extends MatchPhaseView {
               } else {
                 var4 = BrowserUiSupport.field_d;
                 if (MachineTokenStorageSupport.field_e.field_q) {
-                  var4 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, TeamSelectionAgent.field_m + " " + NotCommand.field_E, new String[]{this.field_a.field_S[1 - this.field_g]});
+                  var4 = LoginDialog.substitutePlaceholders(-18, TeamSelectionAgent.field_m + " " + NotCommand.field_E, new String[]{this.field_a.field_S[1 - this.field_g]});
                   if ((var13 != 0) &&
                     (!this.field_N)) {
                     var4 = MeshPreviewSupport.field_c;
@@ -1570,7 +1570,7 @@ final class GameOverView extends MatchPhaseView {
                 if (!MachineTokenStorageSupport.field_e.field_q &&
                   this.field_a.field_g[this.field_g].field_l &&
                   LeagueRatingRequirements.field_a[var5] > this.field_a.field_g[this.field_g].field_h) {
-                  var4 = var4 + "<br>" + LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, MyKitScreen.field_L, new String[]{ConsoleTokenCursor.field_h[var5], Integer.toString(LeagueRatingRequirements.field_a[var5]), Integer.toString(this.field_a.field_g[this.field_g].field_h)});
+                  var4 = var4 + "<br>" + LoginDialog.substitutePlaceholders(-18, MyKitScreen.field_L, new String[]{ConsoleTokenCursor.field_h[var5], Integer.toString(LeagueRatingRequirements.field_a[var5]), Integer.toString(this.field_a.field_g[this.field_g].field_h)});
                 }
               }
             }

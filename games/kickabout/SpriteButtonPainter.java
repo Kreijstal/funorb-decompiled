@@ -130,7 +130,7 @@ final class SpriteButtonPainter extends TextWidgetPainter {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          var3 = FormationAgent.a(param2, 2, ',');
+          var3 = FormationAgent.split(param2, 2, ',');
           var4 = 0;
           var5 = 0;
           if (param1 <= 125) {

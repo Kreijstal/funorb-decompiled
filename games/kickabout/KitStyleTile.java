@@ -316,7 +316,7 @@ final class KitStyleTile extends UiLayoutNode implements PopupCard {
               } else {
                 stackIn_24_2 = RenderedBall.field_R;
               }
-              IndexedSpriteState.showTextTooltip(stackIn_23_0, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(stackIn_23_1, stackIn_24_2, new String[]{AvailabilityCheckRequest.field_c[this.field_Cb.achievementBitIndex].toLowerCase()}));
+              IndexedSpriteState.showTextTooltip(stackIn_23_0, LoginDialog.substitutePlaceholders(stackIn_23_1, stackIn_24_2, new String[]{AvailabilityCheckRequest.field_c[this.field_Cb.achievementBitIndex].toLowerCase()}));
             }
           }
           if (-1 != this.field_Cb.unlockBitIndex) {
@@ -327,7 +327,7 @@ final class KitStyleTile extends UiLayoutNode implements PopupCard {
             } else {
               stackIn_30_2 = TickClock.field_l;
             }
-            IndexedSpriteState.showTextTooltip(stackIn_29_0, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(stackIn_29_1, stackIn_30_2, new String[]{}));
+            IndexedSpriteState.showTextTooltip(stackIn_29_0, LoginDialog.substitutePlaceholders(stackIn_29_1, stackIn_30_2, new String[]{}));
           }
           if (this.field_Cb.requiresJagexModeratorRights) {
             IndexedSpriteState.showTextTooltip(-67, BytePlusOneCommand.field_G);

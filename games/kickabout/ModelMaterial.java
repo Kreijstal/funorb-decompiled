@@ -208,7 +208,7 @@ final class ModelMaterial {
             var4 = param1.substring(1 + var2_int);
             var5 = PasswordLoginCredentials.validateEmailLocalPart((byte) -25, var3);
             if (var5 == null) {
-              stackIn_12_0 = SellPlayerDialog.a(var4, param0 - 64);
+              stackIn_12_0 = SellPlayerDialog.validateDomainName(var4, param0 - 64);
               return stackIn_12_0;
             }
             stackIn_10_0 = var5;

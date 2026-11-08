@@ -36,7 +36,7 @@ final class LoggedPlayer {
         return "LoggedPlayer{" + var2.toString() + "}";
     }
 
-    final static long a(CharSequence param0, boolean param1) {
+    final static long encodeBase37Name(CharSequence param0, boolean param1) {
         int var5 = 0;
         long stackIn_23_0 = 0L;
         RuntimeException stackIn_26_0 = null;

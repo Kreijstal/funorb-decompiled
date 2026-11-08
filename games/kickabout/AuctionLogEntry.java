@@ -172,7 +172,7 @@ final class AuctionLogEntry extends IntrusiveNode {
           if (param0 != 14) {
             return null;
           }
-          stackIn_30_0 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, AnimationClip.field_a, new String[]{param1});
+          stackIn_30_0 = LoginDialog.substitutePlaceholders(-18, AnimationClip.field_a, new String[]{param1});
           return stackIn_30_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -262,7 +262,7 @@ final class AuctionLogEntry extends IntrusiveNode {
             stackIn_11_0 = (byte[]) (param0);
             return stackIn_11_0;
           }
-          stackIn_9_0 = FullscreenFocusCanvas.a(82, param0);
+          stackIn_9_0 = FullscreenFocusCanvas.copyByteArray(82, param0);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

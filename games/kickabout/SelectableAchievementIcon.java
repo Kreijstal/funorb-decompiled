@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class SelectableTrinketIcon extends UiLayoutNode {
+final class SelectableAchievementIcon extends UiLayoutNode {
     private int field_Bb;
     static String[] field_zb;
     static String field_Ab;
     static String field_yb;
 
-    final void updateTrinketSelection(boolean param0, int param1) {
+    final void updateAchievementSelection(boolean param0, int param1) {
         java.awt.Component var4;
         java.awt.Component var4Lifetime1;
         if (this.field_sb != 1) {
@@ -27,7 +27,7 @@ final class SelectableTrinketIcon extends UiLayoutNode {
                 return;
               }
               var4 = (java.awt.Component) null;
-              SelectableTrinketIcon.attachKeyboardInput((java.awt.Component) null, -51);
+              SelectableAchievementIcon.attachKeyboardInput((java.awt.Component) null, -51);
               return;
             }
             RenderedBall.field_C = this.field_Bb;
@@ -37,7 +37,7 @@ final class SelectableTrinketIcon extends UiLayoutNode {
           return;
         }
         var4Lifetime1 = (java.awt.Component) null;
-        SelectableTrinketIcon.attachKeyboardInput((java.awt.Component) null, -51);
+        SelectableAchievementIcon.attachKeyboardInput((java.awt.Component) null, -51);
     }
 
     final static void b(int param0, int param1, int param2, int param3) {
@@ -69,7 +69,7 @@ final class SelectableTrinketIcon extends UiLayoutNode {
         }
     }
 
-    final void c(boolean param0) {
+    final void drawAchievementIcon(boolean param0) {
         int var3;
         var3 = Kickabout.field_G;
         if (AuctionListing.field_e == this.field_Bb) {
@@ -94,7 +94,7 @@ final class SelectableTrinketIcon extends UiLayoutNode {
               }
             }
           } else {
-            this.c(true);
+            this.drawAchievementIcon(true);
             if (ClientPacketFlushSupport.isBitSet(this.field_Bb, 0, BufferedSocket.field_f)) {
               ArchivePreloader.field_i[PacketBuffer.field_e[this.field_Bb]].drawQuarterSize(this.field_F, this.field_T);
             } else {
@@ -137,7 +137,7 @@ final class SelectableTrinketIcon extends UiLayoutNode {
               }
             }
           } else {
-            this.c(true);
+            this.drawAchievementIcon(true);
             if (ClientPacketFlushSupport.isBitSet(this.field_Bb, 0, BufferedSocket.field_f)) {
               ArchivePreloader.field_i[PacketBuffer.field_e[this.field_Bb]].drawQuarterSize(this.field_F, this.field_T);
             } else {
@@ -166,13 +166,13 @@ final class SelectableTrinketIcon extends UiLayoutNode {
           field_yb = null;
           return;
         }
-        SelectableTrinketIcon.releaseStatics((byte) 120);
+        SelectableAchievementIcon.releaseStatics((byte) 120);
         field_zb = null;
         field_Ab = null;
         field_yb = null;
     }
 
-    SelectableTrinketIcon(int param0) {
+    SelectableAchievementIcon(int param0) {
         this.field_Bb = param0;
     }
 

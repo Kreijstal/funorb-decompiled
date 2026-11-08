@@ -130,7 +130,7 @@ final class TrinketCountSortCriterion extends SortCriterion {
           AccountChoicePanel.field_D = true;
           TextPromptState.field_a = param2;
           if (TextPromptState.field_a == 0) {
-            var3_int = SpriteState.a(MeshObject.field_f, SocialListProtocolSupport.field_a, -46, TeamManagementScreen.field_C, MatchTextInputOverlay.field_k);
+            var3_int = SpriteState.wrapBalancedText(MeshObject.field_f, SocialListProtocolSupport.field_a, -46, TeamManagementScreen.field_C, MatchTextInputOverlay.field_k);
             var4 = 3 + var3_int;
             AchievementQuery.field_g = new int[var4];
             WeightedLruCache.field_c = new String[var4];
@@ -149,7 +149,7 @@ final class TrinketCountSortCriterion extends SortCriterion {
             AchievementQuery.field_g[-1 + var4] = 1;
             LineupPositionSupport.field_f[1] = 5;
           } else if (TextPromptState.field_a == 1) {
-            var3_int = SpriteState.a(MeshObject.field_f, SocialListProtocolSupport.field_a, param1 ^ -44, TeamManagementScreen.field_C, MatchTextInputOverlay.field_k);
+            var3_int = SpriteState.wrapBalancedText(MeshObject.field_f, SocialListProtocolSupport.field_a, param1 ^ -44, TeamManagementScreen.field_C, MatchTextInputOverlay.field_k);
             var4 = 2 + var3_int;
             WeightedLruCache.field_c = new String[var4];
             AchievementQuery.field_g = new int[var4];
@@ -167,9 +167,9 @@ final class TrinketCountSortCriterion extends SortCriterion {
           } else if (2 != TextPromptState.field_a) {
             if (TextPromptState.field_a == 3) {
               if (!PlatformTaskState.field_c.field_l) {
-                var3_int = SpriteState.a(MeshObject.field_f, ValidatedTextWidget.field_bb, -46, TeamManagementScreen.field_C, MatchTextInputOverlay.field_k);
+                var3_int = SpriteState.wrapBalancedText(MeshObject.field_f, ValidatedTextWidget.field_bb, -46, TeamManagementScreen.field_C, MatchTextInputOverlay.field_k);
               } else {
-                var3_int = SpriteState.a(MeshObject.field_f, GrowableIntList.field_a, param1 - 52, TeamManagementScreen.field_C, MatchTextInputOverlay.field_k);
+                var3_int = SpriteState.wrapBalancedText(MeshObject.field_f, GrowableIntList.field_a, param1 - 52, TeamManagementScreen.field_C, MatchTextInputOverlay.field_k);
               }
               var4 = 2 + var3_int;
               WeightedLruCache.field_c = new String[var4];
@@ -186,7 +186,7 @@ final class TrinketCountSortCriterion extends SortCriterion {
               AchievementQuery.field_g[-1 + var4] = 0;
               LineupPositionSupport.field_f[0] = 5;
             } else if (TextPromptState.field_a == 4) {
-              var3_int = SpriteState.a(MeshObject.field_f, AnimationSkeleton.field_n, -46, TeamManagementScreen.field_C, MatchTextInputOverlay.field_k);
+              var3_int = SpriteState.wrapBalancedText(MeshObject.field_f, AnimationSkeleton.field_n, -46, TeamManagementScreen.field_C, MatchTextInputOverlay.field_k);
               var4 = var3_int + 2;
               AchievementQuery.field_g = new int[var4];
               WeightedLruCache.field_c = new String[var4];
@@ -205,7 +205,7 @@ final class TrinketCountSortCriterion extends SortCriterion {
               if (TextPromptState.field_a != 5) {
                 throw new IllegalArgumentException();
               }
-              var3_int = SpriteState.a(MeshObject.field_f, ClassNameSupport.field_b, -46, TeamManagementScreen.field_C, MatchTextInputOverlay.field_k);
+              var3_int = SpriteState.wrapBalancedText(MeshObject.field_f, ClassNameSupport.field_b, -46, TeamManagementScreen.field_C, MatchTextInputOverlay.field_k);
               var4 = 3 + var3_int;
               WeightedLruCache.field_c = new String[var4];
               AchievementQuery.field_g = new int[var4];
@@ -225,7 +225,7 @@ final class TrinketCountSortCriterion extends SortCriterion {
               LineupPositionSupport.field_f[1] = 5;
             }
           } else {
-            var3_int = SpriteState.a(MeshObject.field_f, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, TextFieldNode.field_Kb, new String[]{"<br><%0><br>"}), -46, TeamManagementScreen.field_C, MatchTextInputOverlay.field_k);
+            var3_int = SpriteState.wrapBalancedText(MeshObject.field_f, LoginDialog.substitutePlaceholders(-18, TextFieldNode.field_Kb, new String[]{"<br><%0><br>"}), -46, TeamManagementScreen.field_C, MatchTextInputOverlay.field_k);
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(TeamManagementScreen.field_C[var5])) {
@@ -242,7 +242,7 @@ final class TrinketCountSortCriterion extends SortCriterion {
             SharedPanelFactory.field_a = new String[-1 + (-var4 + var3_int)];
             ArrayOperations.copyReferences(TeamManagementScreen.field_C, var4 + 1, SharedPanelFactory.field_a, 0, -var4 + (var3_int - 1));
             var4 = -1;
-            var3_int = SpriteState.a(MeshObject.field_f, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, FormationView.field_o, new String[]{"<br><%0><br>"}), -46, TeamManagementScreen.field_C, MatchTextInputOverlay.field_k);
+            var3_int = SpriteState.wrapBalancedText(MeshObject.field_f, LoginDialog.substitutePlaceholders(-18, FormationView.field_o, new String[]{"<br><%0><br>"}), -46, TeamManagementScreen.field_C, MatchTextInputOverlay.field_k);
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(TeamManagementScreen.field_C[var5])) {
                 continue;
@@ -321,7 +321,7 @@ final class TrinketCountSortCriterion extends SortCriterion {
             stackIn_90_0 = 10;
             stackIn_90_1 = WeightedLruCache.field_c[var4Lifetime1];
             stackIn_91_2 = !(AchievementQuery.field_g[var4Lifetime1] < 0);
-            var5Lifetime1 = MatchTransitionScreen.a(stackIn_90_0, stackIn_90_1, stackIn_91_2);
+            var5Lifetime1 = MatchTransitionScreen.measureMenuText(stackIn_90_0, stackIn_90_1, stackIn_91_2);
             if (var3_intLifetime1 < var5Lifetime1) {
               var3_intLifetime1 = var5Lifetime1;
             }
@@ -331,7 +331,7 @@ final class TrinketCountSortCriterion extends SortCriterion {
             var4_ref_String__ = var10;
             for (var5Lifetime2 = 0; var10.length > var5Lifetime2; var5Lifetime2++) {
               var11 = var10[var5Lifetime2];
-              var7Lifetime1 = MatchTransitionScreen.a(10, var11, false);
+              var7Lifetime1 = MatchTransitionScreen.measureMenuText(10, var11, false);
               if (var7Lifetime1 > var3_intLifetime1) {
                 var3_intLifetime1 = var7Lifetime1;
               }
@@ -339,7 +339,7 @@ final class TrinketCountSortCriterion extends SortCriterion {
             var4_ref_String__Lifetime1 = SharedPanelFactory.field_a;
             for (var5Lifetime2Lifetime1 = 0; var4_ref_String__Lifetime1.length > var5Lifetime2Lifetime1; var5Lifetime2Lifetime1++) {
               var12 = var4_ref_String__Lifetime1[var5Lifetime2Lifetime1];
-              var7Lifetime1Lifetime1 = MatchTransitionScreen.a(10, var12, false);
+              var7Lifetime1Lifetime1 = MatchTransitionScreen.measureMenuText(10, var12, false);
               if (var7Lifetime1Lifetime1 > var3_intLifetime1) {
                 var3_intLifetime1 = var7Lifetime1Lifetime1;
               }
@@ -366,7 +366,7 @@ final class TrinketCountSortCriterion extends SortCriterion {
             if (var6Lifetime1 < 0) {
               var5Lifetime3 = var5Lifetime3 + PlayArea.field_c;
             } else {
-              var7Lifetime2 = MatchTransitionScreen.a(10, WeightedLruCache.field_c[var4Lifetime3], true);
+              var7Lifetime2 = MatchTransitionScreen.measureMenuText(10, WeightedLruCache.field_c[var4Lifetime3], true);
               var8Lifetime1 = TeamManagementScreen.field_A - (var7Lifetime2 >> 1);
               var5Lifetime3 = var5Lifetime3 + ThreadSleepSupport.field_a;
               AccountInputValidationResult.field_j[var4Lifetime3] = new int[4];

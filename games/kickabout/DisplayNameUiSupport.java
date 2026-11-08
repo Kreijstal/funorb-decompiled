@@ -118,10 +118,10 @@ final class DisplayNameUiSupport {
         field_a = null;
     }
 
-    final static void a(int param0) {
-        WidgetTheme.a((byte) -44, AppletContextSupport.getActiveApplet(param0 ^ -536871029));
+    final static void setTuhstatbutMarker(int param0) {
+        WidgetTheme.setTuhstatbutMarker((byte) -44, AppletContextSupport.getActiveApplet(param0 ^ -536871029));
         if (param0 != 536870912) {
-          DisplayNameUiSupport.a(36);
+          DisplayNameUiSupport.setTuhstatbutMarker(36);
         }
     }
 

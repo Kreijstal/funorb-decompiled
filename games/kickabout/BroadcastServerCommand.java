@@ -28,7 +28,7 @@ final class BroadcastServerCommand extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static String a(int param0, int param1, String param2) {
+    final static String requestFriendAddition(int param0, int param1, String param2) {
         String stackIn_2_0 = null;
         String stackIn_6_0 = null;
         String stackIn_10_0 = null;
@@ -60,7 +60,7 @@ final class BroadcastServerCommand extends ConsoleCommand {
             return stackIn_10_0;
           }
           if (IntKeyLookup.isFriend(param2, -64)) {
-            stackIn_13_0 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, GameAppletShell.field_m, new String[]{param2});
+            stackIn_13_0 = LoginDialog.substitutePlaceholders(-18, GameAppletShell.field_m, new String[]{param2});
             return stackIn_13_0;
           }
           if (param1 <= ListingRow.field_d &&
@@ -73,7 +73,7 @@ final class BroadcastServerCommand extends ConsoleCommand {
             return stackIn_20_0;
           }
           if (DiskCacheRequest.isIgnored(0, param2)) {
-            stackIn_24_0 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, TrinketTile.field_Gb, new String[]{param2});
+            stackIn_24_0 = LoginDialog.substitutePlaceholders(-18, TrinketTile.field_Gb, new String[]{param2});
             return stackIn_24_0;
           }
           var5 = FootballerAiOverlaySupport.field_d;
@@ -140,7 +140,7 @@ final class BroadcastServerCommand extends ConsoleCommand {
         }
     }
 
-    final static ListingRow a(PacketBuffer param0, int param1) {
+    final static ListingRow readListingRow(PacketBuffer param0, int param1) {
         ListingRow var2 = null;
         RuntimeException var2_ref = null;
         String var3 = null;
@@ -152,7 +152,7 @@ final class BroadcastServerCommand extends ConsoleCommand {
         try {
           if (param1 != 18653) {
             var3 = (String) null;
-            BroadcastServerCommand.a(8, 73, (String) null);
+            BroadcastServerCommand.requestFriendAddition(8, 73, (String) null);
           }
           var2 = new ListingRow();
           var2.readFromPacket(param0, 62);

@@ -158,7 +158,7 @@ final class BufferedCacheFile {
 
     final static void initializeChatInterface(boolean param0, ResourceArchive param1, ResourceArchive param2, int param3) {
         try {
-          BytePlusOneCommand.a(CheckboxLabelWidget.field_Ab, DisplayModeSupport.field_b, TrinketPickerDialog.field_F, SharedScrollbarState.field_b, MonotonicClock.field_d, param0, ClientProtocolStage.field_c, DoSomethingCommand.field_B, TextInputUiSupport.field_c, ConsoleEvaluationException.field_e, 5, RasterGammaSupport.field_c);
+          BytePlusOneCommand.initializeSharedChatWidgets(CheckboxLabelWidget.field_Ab, DisplayModeSupport.field_b, TrinketPickerDialog.field_F, SharedScrollbarState.field_b, MonotonicClock.field_d, param0, ClientProtocolStage.field_c, DoSomethingCommand.field_B, TextInputUiSupport.field_c, ConsoleEvaluationException.field_e, 5, RasterGammaSupport.field_c);
           ClassDescriptorSupport.field_d = ModalStack.loadSpriteSheetByName(param1, -127, "lobby", "chatfilter");
           IntrusiveDeque.field_h[2] = GeneratedPanelPainter.field_j;
           IntrusiveDeque.field_h[param3] = ClubState.field_Q;

@@ -47,13 +47,13 @@ final class QuickChatCategoryCache {
         Sprite var6 = new Sprite(var3, param2 * var4[1] + var4[2] + var4[0]);
         PacketBuffer.pushSpriteRaster(83, var6);
         int var7 = 0;
-        var5[0].a(0, var7);
+        var5[0].draw(0, var7);
         var7 = var7 + var4[0];
         for (var8 = 0; var8 < param2; var8++) {
-          var5[1].a(0, var7);
+          var5[1].draw(0, var7);
           var7 = var7 + var4[1];
         }
-        var5[2].a(0, var7);
+        var5[2].draw(0, var7);
         TeamManagementScreen.popRasterState(118);
         LoginForm.tintSpriteForSurface(var6, 20684);
         return var6;
@@ -227,7 +227,7 @@ final class QuickChatCategoryCache {
           if (var2Lifetime6 != 0 &&
             EmailAvailabilityValidator.field_k.action == 0 &&
             0 == ThumbnailStateFactory.field_d.field_V.possessorTeam) {
-            SelectableTrinketIcon.b(200, -2, -100, 30);
+            SelectableAchievementIcon.b(200, -2, -100, 30);
           }
           var2Lifetime6 = var2Lifetime6 != 0 & QuickChatCategory.advanceToPoint(8, (byte) 86, 29360128, LoginResponseUiSupport.field_c, 36438016) ? 1 : 0;
           stackIn_26_0 = var2Lifetime6;

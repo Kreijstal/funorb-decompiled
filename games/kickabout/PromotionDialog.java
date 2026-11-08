@@ -12,9 +12,9 @@ final class PromotionDialog extends MessageDialog {
         String var6 = Integer.toString(LoginCredentials.field_d[param0]);
         String var2 = var6;
         String var3 = ConsoleTokenCursor.field_h[param0];
-        String var4 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ListingRowCache.field_e[10], new String[]{var6, var3});
+        String var4 = LoginDialog.substitutePlaceholders(-18, ListingRowCache.field_e[10], new String[]{var6, var3});
         Sprite var5 = WriteIntegersCommand.field_E[param0];
-        this.a(var4, this.field_t, var5, -110, this.field_u);
+        this.setMessageContent(var4, this.field_t, var5, -110, this.field_u);
         this.open(ModelMaterialDecoder.messageButtonCount(this.field_y, 1), SharedPanelFactory.getMessageButtonLabels(false, 10), 1054928844);
     }
 

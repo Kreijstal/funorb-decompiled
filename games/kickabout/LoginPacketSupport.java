@@ -109,7 +109,7 @@ final class LoginPacketSupport {
             var6 = var6 | 16;
           }
           FootballerAiOverlaySupport.field_d.writeByte(103, var6);
-          var7 = DelegatingCanvas.a(AppletContextSupport.getActiveApplet(param3 ^ 16246), (byte) 116);
+          var7 = DelegatingCanvas.readClientSettings(AppletContextSupport.getActiveApplet(param3 ^ 16246), (byte) 116);
           if (var7 == null) {
             var7 = "";
           }

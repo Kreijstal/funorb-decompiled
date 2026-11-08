@@ -197,7 +197,7 @@ final class SquadGridWidget extends UiLayoutNode {
           var6 = stackIn_4_0;
           var7 = new ListingRow[var4];
           for (var8 = 0; var4 > var8; var8++) {
-            var7[var8] = BroadcastServerCommand.a(ByteArrayPool.field_e, param0 + 18758);
+            var7[var8] = BroadcastServerCommand.readListingRow(ByteArrayPool.field_e, param0 + 18758);
           }
           LineupView.field_y.addAll(param0 ^ -107, var7, MonotonicClock.monotonicMillis(param0 + 186));
           if (!param2 &&
@@ -262,7 +262,7 @@ final class SquadGridWidget extends UiLayoutNode {
               break;
             }
           }
-          SectorCacheStore.a(94);
+          SectorCacheStore.refreshVisibleRankingRows(94);
           PlayerContextMenu.field_f = false;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -780,7 +780,7 @@ final class SquadGridWidget extends UiLayoutNode {
           var6 = stackIn_4_0;
           var7 = new ListingRow[var4];
           for (var8 = 0; var4 > var8; var8++) {
-            var7[var8] = BroadcastServerCommand.a(ByteArrayPool.field_e, param0 + 18758);
+            var7[var8] = BroadcastServerCommand.readListingRow(ByteArrayPool.field_e, param0 + 18758);
           }
           LineupView.field_y.addAll(param0 ^ -107, var7, MonotonicClock.monotonicMillis(param0 + 186));
           if (!param2 &&
@@ -845,7 +845,7 @@ final class SquadGridWidget extends UiLayoutNode {
               break;
             }
           }
-          SectorCacheStore.a(94);
+          SectorCacheStore.refreshVisibleRankingRows(94);
           PlayerContextMenu.field_f = false;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

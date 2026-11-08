@@ -174,7 +174,7 @@ final class InstrumentEnvelope {
 
     final static Sprite[] createPanelSpriteSlices(int param0, byte param1, int param2, int param3, int param4) {
         int var5 = 34 % ((param1 - 38) / 37);
-        return ConsoleTokenCursor.a(1, 1, param2, 1, 3, -1481, param4, param0, param3);
+        return ConsoleTokenCursor.createBeveledPanelSprites(1, 1, param2, 1, 3, -1481, param4, param0, param3);
     }
 
     public static void releaseStatics(int param0) {

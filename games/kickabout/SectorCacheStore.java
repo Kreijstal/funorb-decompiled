@@ -187,7 +187,7 @@ final class SectorCacheStore {
         }
     }
 
-    final static void a(byte param0, ChatMessage param1) {
+    final static void appendReceivedChatMessage(byte param0, ChatMessage param1) {
         int var2_int = 0;
         ChatMessage var3 = null;
         int var4 = 0;
@@ -284,7 +284,7 @@ final class SectorCacheStore {
                 StatefulTextPainter.field_u[5] = (byte)var7_int;
                 StatefulTextPainter.field_u[1] = (byte)(param4 >> 8);
                 if (param1 != 16) {
-                  SectorCacheStore.a(-25);
+                  SectorCacheStore.refreshVisibleRankingRows(-25);
                 }
                 StatefulTextPainter.field_u[2] = (byte)param4;
                 this.field_f.seek((byte) 4, (long)(6 * param2));
@@ -427,7 +427,7 @@ final class SectorCacheStore {
         return "" + this.field_h;
     }
 
-    final static void a(int param0) {
+    final static void refreshVisibleRankingRows(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;

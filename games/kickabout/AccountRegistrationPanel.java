@@ -257,7 +257,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         PasswordFieldPainter dupTemp$1 = new PasswordFieldPainter(10000536);
         this.field_N.field_r = (WidgetPainter) ((Object) dupTemp$1);
         this.field_T.field_r = (WidgetPainter) ((Object) dupTemp$1);
-        String var2 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, SquadGridWidget.field_Ab, new String[]{this.openLinkMarkup(true), this.closeLinkMarkup(6)});
+        String var2 = LoginDialog.substitutePlaceholders(-18, SquadGridWidget.field_Ab, new String[]{this.openLinkMarkup(true), this.closeLinkMarkup(6)});
         int var3 = 20;
         var3 = var3 + this.addCaptionedField(170, ReflectionCheck.field_i, 21621, var3, this.field_S);
         var3 = var3 + (5 + this.addFieldWithValidationHelp(20, true, GameAppletShell.field_n, this.field_K, 170, "", var3));
@@ -434,10 +434,10 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
           GeneratedPanelPainter.b((byte) 82);
         }
         if (ConsoleLexer.field_a > 0) {
-          ConsoleEvaluationException.a(param0 + 19335, ConsoleLexer.field_a);
+          ConsoleEvaluationException.layoutLobbyPanels(param0 + 19335, ConsoleLexer.field_a);
         }
         if (!(GameMediaSupport.field_b <= 0)) {
-          ConsoleEvaluationException.a(125, GameMediaSupport.field_b);
+          ConsoleEvaluationException.layoutLobbyPanels(125, GameMediaSupport.field_b);
         }
     }
 

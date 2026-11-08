@@ -50,7 +50,7 @@ final class LoginResponseUiSupport {
             }
             if (var4 != 0) {
               if (SocialRowOrderSupport.field_f) {
-                param0 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, EmailAvailabilityValidator.field_l, new String[]{param0});
+                param0 = LoginDialog.substitutePlaceholders(-18, EmailAvailabilityValidator.field_l, new String[]{param0});
               }
               if (TextLineLayoutSupport.field_a) {
                 param0 = AccountTermsPanel.field_L;

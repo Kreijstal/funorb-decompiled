@@ -53,7 +53,7 @@ final class AgeValidator extends TextFieldValidator {
         }
     }
 
-    final static void a(boolean param0, int param1, String param2, java.awt.Color param3, int param4) {
+    final static void drawAwtLoadingBar(boolean param0, int param1, String param2, java.awt.Color param3, int param4) {
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;

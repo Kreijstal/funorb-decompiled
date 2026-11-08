@@ -41,7 +41,7 @@ final class MeshData extends MeshObject {
     private int[] field_C;
     private byte field_F;
 
-    private final int a(MeshData param0, int param1, short param2) {
+    private final int findOrAddVertex(MeshData param0, int param1, short param2) {
         int var7 = 0;
         int var4;
         int var5;
@@ -1196,9 +1196,9 @@ final class MeshData extends MeshObject {
               }
               this.field_p[this.field_D] = var15.field_p[var12];
               this.field_K[this.field_D] = (short)var10;
-              this.field_r[this.field_D] = this.a(var15, var15.field_r[var12], (short) var10);
-              this.field_L[this.field_D] = this.a(var15, var15.field_L[var12], (short) var10);
-              this.field_w[this.field_D] = this.a(var15, var15.field_w[var12], (short) var10);
+              this.field_r[this.field_D] = this.findOrAddVertex(var15, var15.field_r[var12], (short) var10);
+              this.field_L[this.field_D] = this.findOrAddVertex(var15, var15.field_L[var12], (short) var10);
+              this.field_w[this.field_D] = this.findOrAddVertex(var15, var15.field_w[var12], (short) var10);
               this.field_D = this.field_D + 1;
             }
           }
@@ -1233,9 +1233,9 @@ final class MeshData extends MeshObject {
               this.field_T[this.field_R] = dupTemp$0;
               var14 = dupTemp$0;
               if (var14 == 0) {
-                this.field_h[this.field_R] = (short)this.a(var16, (int) var16.field_h[var17], (short) var12Lifetime1);
-                this.field_B[this.field_R] = (short)this.a(var16, (int) var16.field_B[var17], (short) var12Lifetime1);
-                this.field_y[this.field_R] = (short)this.a(var16, (int) var16.field_y[var17], (short) var12Lifetime1);
+                this.field_h[this.field_R] = (short)this.findOrAddVertex(var16, (int) var16.field_h[var17], (short) var12Lifetime1);
+                this.field_B[this.field_R] = (short)this.findOrAddVertex(var16, (int) var16.field_B[var17], (short) var12Lifetime1);
+                this.field_y[this.field_R] = (short)this.findOrAddVertex(var16, (int) var16.field_y[var17], (short) var12Lifetime1);
               }
               if (var14 >= 1 &&
                 var14 <= 3) {

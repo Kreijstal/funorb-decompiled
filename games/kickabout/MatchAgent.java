@@ -369,7 +369,7 @@ abstract class MatchAgent {
           for (var6 = var2_int; var6 < var3; var6++) {
             var7 = param1.charAt(var6);
             if (AccountNameCharacterSupport.isAllowedAccountNameCharacter((char) var7, (byte) 121)) {
-              var8 = BuyPitchDialog.a((byte) -67, (char) var7);
+              var8 = BuyPitchDialog.normalizeAccountNameCharacter((byte) -67, (char) var7);
               if (var8 != 0) {
                 discarded$0 = var5.append((char) var8);
               }
@@ -419,7 +419,7 @@ abstract class MatchAgent {
             var4 = (MatchAgent) null;
             this.copyStateFrom((byte) 17, (MatchAgent) null);
           }
-          this.controlSourceAge = -ClientInteractionSupport.a(22531, 6, param0, 0) + 64;
+          this.controlSourceAge = -ClientInteractionSupport.readTwoRangeUnsigned(22531, 6, param0, 0) + 64;
           if (ContentTransitionDialog.readBooleanBit(param0, (byte) -39)) {
             this.controlSourceParticipant = param0.readBits(4, param1 + 55) - 1;
           }

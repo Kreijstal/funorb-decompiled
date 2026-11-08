@@ -261,7 +261,7 @@ abstract class MeshObject {
           }
           if (StreetSceneryLoader.field_k) {
             ReceivedAuctionItem.closeSharedPopups((byte) 119);
-            PitchSurfaceLoader.a(-2);
+            PitchSurfaceLoader.clearLobbyState(-2);
             RasterStateSnapshot.resetSocialListState(0);
             StreetSceneryLoader.field_k = false;
           }

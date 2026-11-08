@@ -17,7 +17,7 @@ final class GeneratedPanelPainter extends NineSlicePanelPainter {
         }
     }
 
-    final static void a(IntrusiveNode param0, IntrusiveNode param1, byte param2) {
+    final static void insertNodeAfter(IntrusiveNode param0, IntrusiveNode param1, byte param2) {
         try {
           if (param0.field_b != null) {
             param0.unlink((byte) -109);
@@ -35,7 +35,7 @@ final class GeneratedPanelPainter extends NineSlicePanelPainter {
     final void drawPanel(int param0, int param1, int param2, int param3, int param4) {
         if (param4 != 3) {
           IntrusiveNode var7 = (IntrusiveNode) null;
-          GeneratedPanelPainter.a((IntrusiveNode) null, (IntrusiveNode) null, (byte) 126);
+          GeneratedPanelPainter.insertNodeAfter((IntrusiveNode) null, (IntrusiveNode) null, (byte) 126);
           if (null == this.field_k) {
             AccountRegistrationPanel.createButtonStateSprite(false, (byte) -52, this.field_h, param3, 13386922).draw(param0, param2);
             return;

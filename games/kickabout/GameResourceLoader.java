@@ -28,7 +28,7 @@ final class GameResourceLoader implements LoadingSequence {
             var2_ref_oi = (IntValueNode) (LoginText.field_f.next(param0 ^ -27629));
           }
           Cp1252EncodingSupport.field_a.clear(22997);
-          RasterBuffer.initializeTrinketCabinet(20164);
+          RasterBuffer.initializeAchievementCabinet(20164);
         }
         if (param0 != -27598) {
           this.field_a = true;
@@ -101,7 +101,7 @@ final class GameResourceLoader implements LoadingSequence {
           SoftwareDrawingSupport.field_j[0] = new Sprite(0, 0);
           SoftwareDrawingSupport.field_m = ModalStack.loadSpriteSheetByName(QuickChatKeysHelpPanel.field_Cb, -121, "lobby", "exhibition_icons");
           SoftwareDrawingSupport.field_m[0] = new Sprite(0, 0);
-          SoftwareDrawingSupport.field_f = DemoIntegersCommand.a(QuickChatKeysHelpPanel.field_Cb, 17369, "lobby", "orb_icons");
+          SoftwareDrawingSupport.field_f = DemoIntegersCommand.loadIndexedSpriteSheetByName(QuickChatKeysHelpPanel.field_Cb, 17369, "lobby", "orb_icons");
           ModalStack.loadSpriteSheetByName(QuickChatKeysHelpPanel.field_Cb, -127, "lobby", "players");
           IntrusiveDeque.field_e = SoftwareDrawingSupport.field_q;
           ByteArrayPool.field_d = RenderedFootballer.loadFontByName(EntityAfterimage.field_b, 10, "font2", QuickChatKeysHelpPanel.field_Cb, "fonts");
@@ -157,7 +157,7 @@ final class GameResourceLoader implements LoadingSequence {
           }
           GradientRasterSupport.field_c = new ArgbSprite[4];
           for (var10_intLifetime2 = 0; var10_intLifetime2 < GradientRasterSupport.field_c.length; var10_intLifetime2++) {
-            GradientRasterSupport.field_c[var10_intLifetime2] = BeveledTextPainter.a(ScrollContainer.field_Fb[var10_intLifetime2][0], param0);
+            GradientRasterSupport.field_c[var10_intLifetime2] = BeveledTextPainter.createShadedSprite(ScrollContainer.field_Fb[var10_intLifetime2][0], param0);
           }
           ArchiveIndex.field_m = (ArgbSprite) (QuickChatPhraseDefinition.loadSpriteByName("menu", QuickChatKeysHelpPanel.field_Cb, (byte) 96, "help_up"));
           QuickChatPhraseDefinition.loadSpriteByName("menu", QuickChatKeysHelpPanel.field_Cb, (byte) 100, "help_dwn");
@@ -276,7 +276,7 @@ final class GameResourceLoader implements LoadingSequence {
         WidgetTheme.field_k = new UrlRequest(AnimationClip.field_g);
     }
 
-    final static void a(byte param0) {
+    final static void buildBeachPitchScenery(byte param0) {
         int incrementValue$69 = 0;
         int incrementValue$49 = 0;
         int incrementValue$50 = 0;
@@ -679,8 +679,8 @@ final class GameResourceLoader implements LoadingSequence {
         }
         BlobSubmission.field_h.addArchivePreload(IterableNodeHashTable.field_c, (byte) -115, TutorialCaptionSupport.field_f, TextLayoutLine.field_c);
         BlobSubmission.field_h.addArchiveIndexPreload(TextLayoutLine.field_c, FixedVelocitySupport.field_b, -100);
-        BlobSubmission.field_h.addArchivePreload(MatchTextInputOverlay.field_j, (byte) -109, MyPitchScreen.field_H, SelectableTrinketIcon.field_yb);
-        BlobSubmission.field_h.addArchivePreload(HighScoreQuery.field_i, (byte) -123, MyPitchScreen.field_H, SelectableTrinketIcon.field_yb);
+        BlobSubmission.field_h.addArchivePreload(MatchTextInputOverlay.field_j, (byte) -109, MyPitchScreen.field_H, SelectableAchievementIcon.field_yb);
+        BlobSubmission.field_h.addArchivePreload(HighScoreQuery.field_i, (byte) -123, MyPitchScreen.field_H, SelectableAchievementIcon.field_yb);
         BlobSubmission.field_h.addArchivePreload(Kickabout.field_J, (byte) -124, CachedTextLayout.field_d, LobbyMatchPreview.field_n);
         BlobSubmission.field_h.addArchivePreload(KitStyleTile.field_Bb, (byte) -122, MatchTextInputOverlay.field_l, RankingRowFactory.field_b);
         BlobSubmission.field_h.addArchivePreload(ContextMenuItem.field_Eb, (byte) -126, MatchTextInputOverlay.field_l, RankingRowFactory.field_b);
@@ -750,7 +750,7 @@ final class GameResourceLoader implements LoadingSequence {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 < 16) {
-            GameResourceLoader.a((byte) 120);
+            GameResourceLoader.buildBeachPitchScenery((byte) 120);
           }
           var6 = ModalStack.loadSpriteSheetByName(param1, -42, param0, param3);
           var5 = var6;

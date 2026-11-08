@@ -212,7 +212,7 @@ final class IsaacRandom {
         ConsoleExpression[] var11 = null;
         var9 = Kickabout.field_G;
         try {
-          var11 = DialogOverlay.a(param0, (byte) -21);
+          var11 = DialogOverlay.tokenizeConsoleCached(param0, (byte) -21);
           var2 = var11;
           if (param1 < 103) {
             var10 = (String) null;

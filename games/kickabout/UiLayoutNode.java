@@ -89,7 +89,7 @@ class UiLayoutNode extends SharedWidgetFactory {
             RasterBuffer.a(116, ChatMessage.field_b, 15, 15);
           }
           if (2 == KitPatternMaskSupport.field_c) {
-            RankingsRequest.a(15, 15, 124);
+            RankingsRequest.scatterStreetCracks(15, 15, 124);
           }
           TeamManagementScreen.popRasterState(param0 ^ 122);
         } catch (RuntimeException runtimeException) {
@@ -383,8 +383,8 @@ class UiLayoutNode extends SharedWidgetFactory {
             if (AuctionLogEntry.field_m.length() > 0) {
               var4_ref_String = AuctionLogEntry.field_m.toString();
               if (SocketArchiveNetworkClient.containsLoginPassword(var4_ref_String, -125)) {
-                TextButton.a((String) null, (String) null, 0, 2, ServerTextTemplate.field_i, -125);
-                TextButton.a((String) null, (String) null, 0, 2, PlayerInputFactory.field_e, -126);
+                TextButton.appendChatMessage((String) null, (String) null, 0, 2, ServerTextTemplate.field_i, -125);
+                TextButton.appendChatMessage((String) null, (String) null, 0, 2, PlayerInputFactory.field_e, -126);
               } else {
                 var5 = NodeHashTableIterator.field_b;
                 if (var5 == 0 &&
@@ -437,7 +437,7 @@ class UiLayoutNode extends SharedWidgetFactory {
                   null != SingleChildContainer.field_x) {
                   var7Lifetime6 = "[" + SingleChildContainer.field_x + "] ";
                 } else {
-                  var7Lifetime6 = "[" + LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, AccountNameAvailabilityValidator.field_m, new String[]{PlayerContextMenu.field_i.field_ec}) + "] ";
+                  var7Lifetime6 = "[" + LoginDialog.substitutePlaceholders(-18, AccountNameAvailabilityValidator.field_m, new String[]{PlayerContextMenu.field_i.field_ec}) + "] ";
                 }
               }
             }
@@ -445,10 +445,10 @@ class UiLayoutNode extends SharedWidgetFactory {
             var5Lifetime1 = var5Lifetime1 - FootballerAgent.field_i.stringWidth(var16);
           } else {
             var18 = (CharSequence) ((Object) TrinketTile.field_Kb);
-            var14 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, MySquadScreen.field_F, new String[]{GoalkeeperAiSupport.normalizeBase37Name(false, var18)});
+            var14 = LoginDialog.substitutePlaceholders(-18, MySquadScreen.field_F, new String[]{GoalkeeperAiSupport.normalizeBase37Name(false, var18)});
             var7Lifetime6 = var14;
             var7Lifetime6 = var14;
-            var8 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, field_ib, new String[]{var12});
+            var8 = LoginDialog.substitutePlaceholders(-18, field_ib, new String[]{var12});
             var7Lifetime6 = var8;
             var7Lifetime6 = var8;
             var9 = FootballerAgent.field_i.stringWidth(var14);

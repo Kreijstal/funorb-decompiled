@@ -105,7 +105,7 @@ final class CheckboxPainter implements WidgetPainter {
             stackIn_38_0 = 10;
             stackIn_38_1 = var6;
             stackIn_39_2 = !(var4 < 0);
-            var7Lifetime1 = MatchTransitionScreen.a(stackIn_38_0, stackIn_38_1, stackIn_39_2);
+            var7Lifetime1 = MatchTransitionScreen.measureMenuText(stackIn_38_0, stackIn_38_1, stackIn_39_2);
             var8Lifetime1 = TeamManagementScreen.field_A - (var7Lifetime1 >> 1);
             if (var4 >= 0) {
               if (DirectByteStorage.field_k.selectedIndex == var4) {
@@ -186,7 +186,7 @@ final class CheckboxPainter implements WidgetPainter {
               }
             }
           } else {
-            var1Lifetime1 = FullscreenErrorDialog.c(false);
+            var1Lifetime1 = FullscreenErrorDialog.loadParkSprites(false);
             if (var1Lifetime1 != -1) {
               DelayedServerPacket.updateLoadingProgress(100, 9863, var1Lifetime1);
               return;
@@ -208,7 +208,7 @@ final class CheckboxPainter implements WidgetPainter {
             }
           }
           AccountNameCheckState.advanceLoadingStep(0, 3);
-          var1Lifetime3 = GrowableIntList.a(5464, KitPatternMaskSupport.field_c, RankingsScreen.field_C);
+          var1Lifetime3 = GrowableIntList.loadPitchSoundGroups(5464, KitPatternMaskSupport.field_c, RankingsScreen.field_C);
           if (var1Lifetime3 != -1) {
             DelayedServerPacket.updateLoadingProgress(100, 9863, var1Lifetime3);
             return;
@@ -273,7 +273,7 @@ final class CheckboxPainter implements WidgetPainter {
               MusicPatchPcmStream.b(1);
             }
             if (KitPatternMaskSupport.field_c == 1) {
-              GameResourceLoader.a((byte) -48);
+              GameResourceLoader.buildBeachPitchScenery((byte) -48);
             }
             if (KitPatternMaskSupport.field_c == 2) {
               MeshObject.buildPitchScenery(11383);

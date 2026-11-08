@@ -3,7 +3,7 @@
  */
 final class CanvasInputBindings {
     final static void attachInputHandlers(java.awt.Canvas param0, byte param1) {
-        SelectableTrinketIcon.attachKeyboardInput((java.awt.Component) ((Object) param0), -125);
+        SelectableAchievementIcon.attachKeyboardInput((java.awt.Component) ((Object) param0), -125);
         if (param1 != -64) {
           return;
         }

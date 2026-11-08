@@ -86,7 +86,7 @@ final class RotaryDialWidget extends TextButton {
         return (LoginText) null;
     }
 
-    final static int a(int param0, int param1, byte[] param2, int param3) {
+    final static int crc32(int param0, int param1, byte[] param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

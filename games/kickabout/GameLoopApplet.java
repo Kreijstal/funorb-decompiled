@@ -279,13 +279,13 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
           return;
         }
         if (!CachedListingRow.field_h) {
-          FormationAgent.a(var2, -14142);
+          FormationAgent.drawLoadingProgressToCanvas(var2, -14142);
           return;
         }
         if (!MouseWheelInput.field_b &&
           !PlayArea.isGuestSession(100)) {
           ValidationHelpWidget.setLoadingStatus(100.0f, SumIntegersCommand.field_H, (byte) 30);
-          FormationAgent.a(var2, -14142);
+          FormationAgent.drawLoadingProgressToCanvas(var2, -14142);
           return;
         }
         TextFieldNode.field_Rb = true;

@@ -15,7 +15,7 @@ final class OverlayLayerSupport {
         }
     }
 
-    final static Sprite a(boolean param0, int param1, byte param2) {
+    final static Sprite buildStadiumSeatRow(boolean param0, int param1, byte param2) {
         IndexedSprite[] var17 = null;
         int[] var15 = null;
         Sprite var16 = null;
@@ -35,13 +35,13 @@ final class OverlayLayerSupport {
           var16 = new Sprite(var15[1] * param1 + var15[0] + var15[2], var4);
           PacketBuffer.pushSpriteRaster(-122, var16);
           var7 = 0;
-          var10[0].a(var7, 0);
+          var10[0].draw(var7, 0);
           var7 = var7 + var15[0];
           for (var8 = 0; param1 > var8; var8++) {
-            var10[1].a(var7, 0);
+            var10[1].draw(var7, 0);
             var7 = var7 + var15[1];
           }
-          var17[2].a(var7, 0);
+          var17[2].draw(var7, 0);
           TeamManagementScreen.popRasterState(122);
           LoginForm.tintSpriteForSurface(var16, 20684);
           return var16;
@@ -54,13 +54,13 @@ final class OverlayLayerSupport {
         Sprite var13 = new Sprite(var12[1] * param1 + var12[0] + var12[2], var4Lifetime1);
         PacketBuffer.pushSpriteRaster(-122, var13);
         var7Lifetime1 = 0;
-        var10[0].a(var7Lifetime1, 0);
+        var10[0].draw(var7Lifetime1, 0);
         var7Lifetime1 = var7Lifetime1 + var12[0];
         for (var8Lifetime1 = 0; param1 > var8Lifetime1; var8Lifetime1++) {
-          var10[1].a(var7Lifetime1, 0);
+          var10[1].draw(var7Lifetime1, 0);
           var7Lifetime1 = var7Lifetime1 + var12[1];
         }
-        var14[2].a(var7Lifetime1, 0);
+        var14[2].draw(var7Lifetime1, 0);
         TeamManagementScreen.popRasterState(122);
         LoginForm.tintSpriteForSurface(var13, 20684);
         return var13;

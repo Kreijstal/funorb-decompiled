@@ -130,9 +130,9 @@ abstract class AppScreen {
             if (SpriteBackgroundSupport.field_d == ByteArrayPool.field_c) {
               if (param3) {
                 var10 = (String) null;
-                FullscreenFocusCanvas.field_h = NamedValueContainer.a(param4, DiagnosticsOverlaySupport.field_d, (byte) 30, false, (String) null);
+                FullscreenFocusCanvas.field_h = NamedValueContainer.createLoginCredentials(param4, DiagnosticsOverlaySupport.field_d, (byte) 30, false, (String) null);
               } else {
-                FullscreenFocusCanvas.field_h = LeaderboardParticipant.a(-111, param4, false, param1);
+                FullscreenFocusCanvas.field_h = LeaderboardParticipant.createLoginCredentialsFromName(-111, param4, false, param1);
               }
               FootballerAiOverlaySupport.field_d.field_n = 0;
               FootballerAiOverlaySupport.field_d.writeByte(108, 14);

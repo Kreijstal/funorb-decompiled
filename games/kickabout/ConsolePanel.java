@@ -40,7 +40,7 @@ abstract class ConsolePanel implements OverlayLayer {
           if (param2 != -122) {
             ConsolePanel.releaseStatics((byte) 97);
           }
-          var5 = FormationAgent.a(param1, 2, '\n');
+          var5 = FormationAgent.split(param1, 2, '\n');
           var6 = var5;
           for (var7 = 0; var7 < var6.length; var7++) {
             var8 = var6[var7];

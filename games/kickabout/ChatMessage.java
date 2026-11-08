@@ -33,7 +33,7 @@ final class ChatMessage {
         field_b = null;
     }
 
-    final int b(int param0) {
+    final int getFilterPriority(int param0) {
         if (this.field_m) {
           return 2;
         }

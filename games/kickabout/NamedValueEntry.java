@@ -75,7 +75,7 @@ final class NamedValueEntry extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void requestLobbyGameDetails(int param0, int param1, int param2) {
         GameSetupPanel var4 = null;
         CipherPacketBuffer var5 = null;
         int var3 = 35 / ((23 - param1) / 35);

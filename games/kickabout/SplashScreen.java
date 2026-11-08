@@ -237,14 +237,14 @@ final class SplashScreen extends AppScreen {
               } else {
                 if (!var12.field_Gb) {
                   if (var12.field_Fb) {
-                    var12.field_Lb.field_E = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, HighScoreQuery.field_p, new String[]{var20});
+                    var12.field_Lb.field_E = LoginDialog.substitutePlaceholders(-18, HighScoreQuery.field_p, new String[]{var20});
                     var12.field_Tb.field_E = AvailabilityCheckRequest.field_a;
                     var12.field_Hb.field_E = DemoIntegersCommand.field_A;
                   } else {
                     var12.field_Tb.field_E = LoginPacketSupport.field_c;
                   }
                 } else {
-                  var12.field_Lb.field_E = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, SocialListLayoutSupport.field_d, new String[]{var20});
+                  var12.field_Lb.field_E = LoginDialog.substitutePlaceholders(-18, SocialListLayoutSupport.field_d, new String[]{var20});
                   var12.field_Hb.field_E = AsciiCharacterSupport.field_a;
                 }
               }
@@ -336,11 +336,11 @@ final class SplashScreen extends AppScreen {
               if (~AnimationPlayer.field_c != ~var12.field_Ab) {
                 if (var5_int != 0 &&
                   !var12.field_Cb) {
-                  var24Lifetime2 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, FadingSoundPlayer.field_v, new String[]{var20});
+                  var24Lifetime2 = LoginDialog.substitutePlaceholders(-18, FadingSoundPlayer.field_v, new String[]{var20});
                 } else {
                   if (var12.field_Db >= var7) {
                     if (var12.field_Qb < var6) {
-                      var24Lifetime2 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, CommonGame.field_D, new String[]{var20, Integer.toString(var6)});
+                      var24Lifetime2 = LoginDialog.substitutePlaceholders(-18, CommonGame.field_D, new String[]{var20, Integer.toString(var6)});
                       var30Lifetime1 = var24Lifetime2;
                       var25 = var30Lifetime1;
                       var24Lifetime2 = var25;
@@ -349,21 +349,21 @@ final class SplashScreen extends AppScreen {
                     } else {
                       if ((~var12.field_Pb & var8) != 0) {
                         var25_int = LoginCredentials.highestOneBit((byte) -86, ~var12.field_Pb & var8);
-                        var24Lifetime2 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ClassDescriptorSupport.field_e, new String[]{var20});
+                        var24Lifetime2 = LoginDialog.substitutePlaceholders(-18, ClassDescriptorSupport.field_e, new String[]{var20});
                         if (var25_int > 0 &&
                           null != MachineTokenStorageSupport.field_a &&
                           var25_int <= MachineTokenStorageSupport.field_a.length &&
                           MachineTokenStorageSupport.field_a[-1 + var25_int] != null) {
-                          var24Lifetime2 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, MachineTokenStorageSupport.field_a[var25_int - 1][2], new String[]{var20});
+                          var24Lifetime2 = LoginDialog.substitutePlaceholders(-18, MachineTokenStorageSupport.field_a[var25_int - 1][2], new String[]{var20});
                         }
                       }
                     }
                   } else {
                     var25_int = -var12.field_Db + var7;
                     if (var25_int == 1) {
-                      var24Lifetime2 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, SessionUrlSupport.field_d, new String[]{var20});
+                      var24Lifetime2 = LoginDialog.substitutePlaceholders(-18, SessionUrlSupport.field_d, new String[]{var20});
                     }
-                    var24Lifetime2 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, TextEntrySupport.field_e, new String[]{var20, Integer.toString(var25_int)});
+                    var24Lifetime2 = LoginDialog.substitutePlaceholders(-18, TextEntrySupport.field_e, new String[]{var20, Integer.toString(var25_int)});
                   }
                 }
               } else {
@@ -376,7 +376,7 @@ final class SplashScreen extends AppScreen {
                     if (1 == var25_int) {
                       var24Lifetime2 = BlackFadeScreen.field_k;
                     }
-                    var24Lifetime2 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, VertexNormal.field_h, new String[]{null, Integer.toString(var25_int)});
+                    var24Lifetime2 = LoginDialog.substitutePlaceholders(-18, VertexNormal.field_h, new String[]{null, Integer.toString(var25_int)});
                   } else {
                     if (var12.field_Qb >= var6) {
                       if ((var8 & ~var12.field_Pb) != 0) {
@@ -390,7 +390,7 @@ final class SplashScreen extends AppScreen {
                         }
                       }
                     } else {
-                      var24Lifetime2 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, RegistrationRequestState.field_c, new String[]{null, Integer.toString(var6)});
+                      var24Lifetime2 = LoginDialog.substitutePlaceholders(-18, RegistrationRequestState.field_c, new String[]{null, Integer.toString(var6)});
                     }
                   }
                 }
@@ -460,13 +460,13 @@ final class SplashScreen extends AppScreen {
                 if (param0 == ClientException.field_c &&
                   ScrollPane.isLocalGameHost(47)) {
                   if (var26Lifetime1 == 0) {
-                    var24Lifetime2 = var34 + "<br>" + LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, LoadingProgressDialog.field_V, new String[]{(String) (var25)});
+                    var24Lifetime2 = var34 + "<br>" + LoginDialog.substitutePlaceholders(-18, LoadingProgressDialog.field_V, new String[]{(String) (var25)});
                   } else {
                     var24Lifetime2 = var34 + "<br>" + TextFieldNode.field_Cb + (String) (var25);
                   }
                 } else {
                   if (var26Lifetime1 == 0) {
-                    var24Lifetime2 = var34 + "<br>" + LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, WorldDrawEntry.field_l, new String[]{(String) (var25)});
+                    var24Lifetime2 = var34 + "<br>" + LoginDialog.substitutePlaceholders(-18, WorldDrawEntry.field_l, new String[]{(String) (var25)});
                   } else {
                     var24Lifetime2 = var34 + "<br>" + SocialRowOrderSupport.field_c + (String) (var25);
                   }
@@ -474,7 +474,7 @@ final class SplashScreen extends AppScreen {
                 if (ClientException.field_c == param0 &&
                   !ScrollPane.isLocalGameHost(111)) {
                   var27 = PlayerContextMenu.field_i.field_ec;
-                  var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, LoginRequiredDialog.field_F, new String[]{var27});
+                  var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + LoginDialog.substitutePlaceholders(-18, LoginRequiredDialog.field_F, new String[]{var27});
                 }
                 UrlRequest.field_e = (String) (var24Lifetime2);
               }

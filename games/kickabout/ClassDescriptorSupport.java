@@ -116,7 +116,7 @@ final class ClassDescriptorSupport {
             return stackIn_10_0;
           }
           if (DiskCacheRequest.isIgnored(0, param0)) {
-            stackIn_13_0 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, FriendRemovalSupport.field_b, new String[]{param0});
+            stackIn_13_0 = LoginDialog.substitutePlaceholders(-18, FriendRemovalSupport.field_b, new String[]{param0});
             return stackIn_13_0;
           }
           if (StripedProgressBar.field_y >= 100) {
@@ -124,7 +124,7 @@ final class ClassDescriptorSupport {
             return stackIn_17_0;
           }
           if (IntKeyLookup.isFriend(param0, 108)) {
-            stackIn_20_0 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, AuctionListing.field_i, new String[]{param0});
+            stackIn_20_0 = LoginDialog.substitutePlaceholders(-18, AuctionListing.field_i, new String[]{param0});
             return stackIn_20_0;
           }
           var5 = FootballerAiOverlaySupport.field_d;

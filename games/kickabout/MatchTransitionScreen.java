@@ -51,7 +51,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
         DelayedServerPacket.a(-1, false, -2);
     }
 
-    final static int a(int param0, String param1, boolean param2) {
+    final static int measureMenuText(int param0, String param1, boolean param2) {
         RuntimeException var3 = null;
         String var4 = null;
         int stackIn_4_0 = 0;
@@ -63,7 +63,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
         try {
           if (param0 != 10) {
             var4 = (String) null;
-            MatchTransitionScreen.a(-31, (String) null, true);
+            MatchTransitionScreen.measureMenuText(-31, (String) null, true);
           }
           if (!param2) {
             stackIn_6_0 = MeshObject.field_f.stringWidth(param1);
@@ -304,7 +304,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
           MarkerSliderWidget.field_F.field_A = 1;
           MarkerSliderWidget.field_F.field_kb = RasterGammaSupport.field_c.field_kb;
           if (ConsoleLexer.field_a > 0) {
-            BeveledTextPainter.a(102, param4, param7, param6);
+            BeveledTextPainter.updateLobbyGameSetup(102, param4, param7, param6);
           }
           if (GameMediaSupport.field_b > 0) {
             SpriteState.a(param7, param6, -2, param9, param4);
@@ -338,7 +338,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
                   MarkerSliderWidget.field_F.field_A = 1;
                   MarkerSliderWidget.field_F.field_kb = RasterGammaSupport.field_c.field_kb;
                   if (ConsoleLexer.field_a > 0) {
-                    BeveledTextPainter.a(102, param4, param7, param6);
+                    BeveledTextPainter.updateLobbyGameSetup(102, param4, param7, param6);
                   }
                   if (GameMediaSupport.field_b > 0) {
                     SpriteState.a(param7, param6, -2, param9, param4);
@@ -372,7 +372,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
               MarkerSliderWidget.field_F.field_A = 1;
               MarkerSliderWidget.field_F.field_kb = RasterGammaSupport.field_c.field_kb;
               if (ConsoleLexer.field_a > 0) {
-                BeveledTextPainter.a(102, param4, param7, param6);
+                BeveledTextPainter.updateLobbyGameSetup(102, param4, param7, param6);
               }
               if (GameMediaSupport.field_b > 0) {
                 SpriteState.a(param7, param6, -2, param9, param4);
@@ -396,7 +396,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
               MarkerSliderWidget.field_F.field_A = 1;
               MarkerSliderWidget.field_F.field_kb = RasterGammaSupport.field_c.field_kb;
               if (ConsoleLexer.field_a > 0) {
-                BeveledTextPainter.a(102, param4, param7, param6);
+                BeveledTextPainter.updateLobbyGameSetup(102, param4, param7, param6);
               }
               if (GameMediaSupport.field_b > 0) {
                 SpriteState.a(param7, param6, -2, param9, param4);
@@ -431,7 +431,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
                   MarkerSliderWidget.field_F.field_A = 1;
                   MarkerSliderWidget.field_F.field_kb = RasterGammaSupport.field_c.field_kb;
                   if (ConsoleLexer.field_a > 0) {
-                    BeveledTextPainter.a(102, param4, param7, param6);
+                    BeveledTextPainter.updateLobbyGameSetup(102, param4, param7, param6);
                   }
                   if (GameMediaSupport.field_b > 0) {
                     SpriteState.a(param7, param6, -2, param9, param4);
@@ -465,7 +465,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
               MarkerSliderWidget.field_F.field_A = 1;
               MarkerSliderWidget.field_F.field_kb = RasterGammaSupport.field_c.field_kb;
               if (ConsoleLexer.field_a > 0) {
-                BeveledTextPainter.a(102, param4, param7, param6);
+                BeveledTextPainter.updateLobbyGameSetup(102, param4, param7, param6);
               }
               if (GameMediaSupport.field_b > 0) {
                 SpriteState.a(param7, param6, -2, param9, param4);
@@ -489,7 +489,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
               MarkerSliderWidget.field_F.field_A = 1;
               MarkerSliderWidget.field_F.field_kb = RasterGammaSupport.field_c.field_kb;
               if (ConsoleLexer.field_a > 0) {
-                BeveledTextPainter.a(102, param4, param7, param6);
+                BeveledTextPainter.updateLobbyGameSetup(102, param4, param7, param6);
                 if (GameMediaSupport.field_b > 0) {
                   SpriteState.a(param7, param6, -2, param9, param4);
                 }

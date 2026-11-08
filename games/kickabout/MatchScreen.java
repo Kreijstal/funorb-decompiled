@@ -68,7 +68,7 @@ final class MatchScreen extends AppScreen {
             for (var4 = 0; var4 < 5; var4++) {
               WidgetContainer.field_v[var3_int][var4] = MeshData.load(param1, "", "Characters/" + var9[var3_int] + "_head_0" + (var4 + 1));
             }
-            WriteIntegersCommand.field_B[var3_int] = DualLinkDeque.a(107, new MeshData(new MeshData[]{PacketBuffer.field_m[var3_int], WidgetContainer.field_v[var3_int][0]}, 2));
+            WriteIntegersCommand.field_B[var3_int] = DualLinkDeque.createFlattenedMonochromeModel(107, new MeshData(new MeshData[]{PacketBuffer.field_m[var3_int], WidgetContainer.field_v[var3_int][0]}, 2));
           }
           LoadingProgressSupport.reportStageProgress(param0 + 111, 5, 2);
           var3 = new MeshData[9];
@@ -223,7 +223,7 @@ final class MatchScreen extends AppScreen {
           }
           this.matchState.reconcileAgentStatesFrom(this.field_i, this.localSeat, var4, -6);
         }
-        FullscreenErrorDialog.q(-28033);
+        FullscreenErrorDialog.updateFadingChatMessages(-28033);
         if (this.field_E > 0) {
           this.field_E = this.field_E - 16;
         }
@@ -338,7 +338,7 @@ final class MatchScreen extends AppScreen {
         }
         if (null != this.phaseController) {
           PacketBuffer.pushSpriteRaster(-44, WorldSpriteSequence.field_h);
-          LookupRecordUpdate.a((byte) -48);
+          LookupRecordUpdate.drawPitchBackground((byte) -48);
           this.drawScreen(-5, false);
           TeamManagementScreen.popRasterState(122);
           this.field_E = 256;
@@ -443,7 +443,7 @@ final class MatchScreen extends AppScreen {
           }
         }
         if (var6 != null) {
-          RenderedFootballer.enqueueFadingChatMessage(LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, (String) (var6), new String[]{this.matchState.field_S[param2]}), false, (byte) -108);
+          RenderedFootballer.enqueueFadingChatMessage(LoginDialog.substitutePlaceholders(-18, (String) (var6), new String[]{this.matchState.field_S[param2]}), false, (byte) -108);
         }
     }
 

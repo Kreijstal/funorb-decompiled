@@ -56,7 +56,7 @@ final class MyKitScreen extends TeamManagementScreen {
           }
           if (!var4_ref_nt.field_Ib &&
             !var4_ref_nt.field_Kb) {
-            ModalPanel.a(var4_ref_nt.field_Cb.styleId, (byte) -38);
+            ModalPanel.queueKitStyleChange(var4_ref_nt.field_Cb.styleId, (byte) -38);
           }
           var4_ref_nt = (KitStyleTile) (this.field_F.field_jb.next(33));
         }
@@ -66,9 +66,9 @@ final class MyKitScreen extends TeamManagementScreen {
           while (var6 != null) {
             if (0 != var6.field_sb) {
               if (var4 != 0) {
-                ValidatedTextWidget.a((byte) 74, var6.field_yb);
+                ValidatedTextWidget.queueSecondaryKitColorChange((byte) 74, var6.field_yb);
               } else {
-                AvailabilityCheckRequest.a(123, var6.field_yb);
+                AvailabilityCheckRequest.queuePrimaryKitColorChange(123, var6.field_yb);
               }
               LoginKind.playSelectionSound((byte) -117);
             }

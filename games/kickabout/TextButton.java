@@ -21,7 +21,7 @@ class TextButton extends UiWidget {
         this.field_y = true;
     }
 
-    final static void a(String param0, String param1, int param2, int param3, String param4, int param5) {
+    final static void appendChatMessage(String param0, String param1, int param2, int param3, String param4, int param5) {
         ChatMessage var6 = null;
         try {
           if (param5 >= -112) {
@@ -206,7 +206,7 @@ class TextButton extends UiWidget {
         }
     }
 
-    final static StringBuilder a(int param0, int[] param1) {
+    final static StringBuilder formatArrayIndices(int param0, int[] param1) {
         int var3 = 0;
         StringBuilder discarded$10 = null;
         StringBuilder discarded$11 = null;
@@ -223,7 +223,7 @@ class TextButton extends UiWidget {
         try {
           if (param0 != -31182) {
             var5 = (String) null;
-            TextButton.a((String) null, (String) null, -61, -57, (String) null, 83);
+            TextButton.appendChatMessage((String) null, (String) null, -61, -57, (String) null, 83);
           }
           var2 = new StringBuilder("int[] {");
           for (var3 = 0; var3 < param1.length; var3++) {

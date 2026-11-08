@@ -13,7 +13,7 @@ final class AccountInputValidationResult {
     static int[] field_e;
     static RenderedFootballer field_f;
 
-    final static void a(byte param0, int param1, int param2) {
+    final static void queuePlayerPurchase(byte param0, int param1, int param2) {
         int var4_int = 0;
         int var3_int = 0;
         ManagerAction var4 = null;
@@ -204,7 +204,7 @@ final class AccountInputValidationResult {
         field_f = null;
         field_i = null;
         if (param0 != 112) {
-          AccountInputValidationResult.a((byte) -12, 82, -66);
+          AccountInputValidationResult.queuePlayerPurchase((byte) -12, 82, -66);
         }
         field_d = null;
         field_a = null;

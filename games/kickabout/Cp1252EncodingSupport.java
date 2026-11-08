@@ -40,7 +40,7 @@ final class Cp1252EncodingSupport {
           }
           var5 = ProxySocketConnector.nextBoundedInt(-34, 16777200, param2) + 1;
           var5 = 8355711 & var5 >> 1;
-          var6 = ClubStateFactory.a(var5, 63);
+          var6 = ClubStateFactory.rgbToPackedHsl(var5, 63);
           for (var7 = 0; var7 < var15.length; var7++) {
             if (var15[var7] == 935) {
               var4[var7] = (short)var6;

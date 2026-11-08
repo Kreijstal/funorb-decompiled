@@ -16,7 +16,7 @@ final class VertexNormal {
           LinkTextPainter.field_e = param0;
           if (param5 > -80) {
             String var7 = (String) null;
-            VertexNormal.a((String) null, 123, -38, (String) null);
+            VertexNormal.requestIgnoreRemoval((String) null, 123, -38, (String) null);
           }
           LeagueRatingRequirements.field_d = param3;
           DiskCacheWorker.field_d = param4;
@@ -36,7 +36,7 @@ final class VertexNormal {
         return ByteArrayPool.field_b[param1];
     }
 
-    final static String a(String param0, int param1, int param2, String param3) {
+    final static String requestIgnoreRemoval(String param0, int param1, int param2, String param3) {
         RuntimeException var4 = null;
         CipherPacketBuffer var5 = null;
         int var6 = 0;
@@ -64,7 +64,7 @@ final class VertexNormal {
           }
           var7 = AchievementsScreen.findSocialPlayerByName(param0, 145);
           if (var7 == null) {
-            stackIn_10_0 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, DoSomethingCommand.field_A, new String[]{param0});
+            stackIn_10_0 = LoginDialog.substitutePlaceholders(-18, DoSomethingCommand.field_A, new String[]{param0});
             return stackIn_10_0;
           }
           var7.unlink((byte) -109);
@@ -104,7 +104,7 @@ final class VertexNormal {
           return TriangleRasterizer.field_f[param0 & 2047];
         }
         String var3 = (String) null;
-        VertexNormal.a((String) null, -48, 14, (String) null);
+        VertexNormal.requestIgnoreRemoval((String) null, -48, 14, (String) null);
         return TriangleRasterizer.field_f[param0 & 2047];
     }
 

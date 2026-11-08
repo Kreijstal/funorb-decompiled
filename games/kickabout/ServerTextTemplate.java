@@ -156,7 +156,7 @@ final class ServerTextTemplate {
             var2[var3] = this.field_f[var3];
           }
         }
-        return LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ValidationState.field_d[this.field_b], var5);
+        return LoginDialog.substitutePlaceholders(-18, ValidationState.field_d[this.field_b], var5);
     }
 
     final static Sprite[] loadSpriteSheetByName(String param0, String param1, int param2, ResourceArchive param3) {

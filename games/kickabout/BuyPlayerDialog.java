@@ -20,8 +20,8 @@ final class BuyPlayerDialog extends MessageDialog {
           var5 = param0.field_Sb.getDisplayName(100);
           String var2 = var5;
           var3 = param0.field_Nb;
-          var4 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ListingRowCache.field_e[30], new String[]{var5, var3});
-          this.a(var4, this.field_t, this.field_D, -91, this.field_u);
+          var4 = LoginDialog.substitutePlaceholders(-18, ListingRowCache.field_e[30], new String[]{var5, var3});
+          this.setMessageContent(var4, this.field_t, this.field_D, -91, this.field_u);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ce.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
@@ -42,7 +42,7 @@ final class BuyPlayerDialog extends MessageDialog {
         }
         super.handleResult(95, param1);
         if (param1 == 0) {
-          AccountInputValidationResult.a((byte) -25, this.field_H, this.field_J);
+          AccountInputValidationResult.queuePlayerPurchase((byte) -25, this.field_H, this.field_J);
         }
     }
 

@@ -13,7 +13,7 @@ final class DemoIntegersCommand extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static IndexedSprite[] a(ResourceArchive param0, int param1, String param2, String param3) {
+    final static IndexedSprite[] loadIndexedSpriteSheetByName(ResourceArchive param0, int param1, String param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -32,7 +32,7 @@ final class DemoIntegersCommand extends ConsoleCommand {
             DemoIntegersCommand.releaseStatics(27);
           }
           var5 = param0.getFileId((byte) -121, param3, var4_int);
-          stackIn_3_0 = GoalStateAgent.a(var4_int, var5, param0, false);
+          stackIn_3_0 = GoalStateAgent.loadIndexedSpriteSheet(var4_int, var5, param0, false);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -60,7 +60,7 @@ final class DemoIntegersCommand extends ConsoleCommand {
         }
     }
 
-    final static void a(boolean param0, int param1, int param2, int param3) {
+    final static void updateSharedChatWidgets(boolean param0, int param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
@@ -159,7 +159,7 @@ final class DemoIntegersCommand extends ConsoleCommand {
         field_A = null;
     }
 
-    final static boolean a(IntrusiveDeque param0, boolean param1) {
+    final static boolean isWorldDrawListSorted(IntrusiveDeque param0, boolean param1) {
         IntrusiveNode var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;

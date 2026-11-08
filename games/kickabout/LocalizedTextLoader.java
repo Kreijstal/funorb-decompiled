@@ -2338,15 +2338,15 @@ final class LocalizedTextLoader {
                 }
                 var2 = DateOfBirthPanel.loadNamedResource("surface,0", -87);
                 if (var2 != null) {
-                  SelectableTrinketIcon.field_zb[0] = BlackFadeScreen.decodeCp1252Bytes(var2, true);
+                  SelectableAchievementIcon.field_zb[0] = BlackFadeScreen.decodeCp1252Bytes(var2, true);
                 }
                 var2 = DateOfBirthPanel.loadNamedResource("surface,1", param1 - 99);
                 if (null != var2) {
-                  SelectableTrinketIcon.field_zb[1] = BlackFadeScreen.decodeCp1252Bytes(var2, true);
+                  SelectableAchievementIcon.field_zb[1] = BlackFadeScreen.decodeCp1252Bytes(var2, true);
                 }
                 var2 = DateOfBirthPanel.loadNamedResource("surface,2", param1 ^ -118);
                 if (null != var2) {
-                  SelectableTrinketIcon.field_zb[2] = BlackFadeScreen.decodeCp1252Bytes(var2, true);
+                  SelectableAchievementIcon.field_zb[2] = BlackFadeScreen.decodeCp1252Bytes(var2, true);
                 }
                 var2 = DateOfBirthPanel.loadNamedResource("kit_style", -121);
                 if (var2 != null) {

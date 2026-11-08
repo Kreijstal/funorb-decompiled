@@ -69,7 +69,7 @@ final class StripedProgressBar extends UiWidget {
           HighScoreSubmission.field_l = new int[var3][];
           TrinketCountSortCriterion.field_n = new TriangleMesh[var3];
           for (var4 = 0; var4 < var3; var4++) {
-            TrinketCountSortCriterion.field_n[var4] = NanoTickClock.a((byte) 80, var8);
+            TrinketCountSortCriterion.field_n[var4] = NanoTickClock.decodeTriangleMesh((byte) 80, var8);
           }
           var10.finishBitRead((byte) -63);
           if (param0 != 49) {

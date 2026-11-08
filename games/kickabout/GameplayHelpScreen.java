@@ -13,10 +13,10 @@ final class GameplayHelpScreen extends PagedHelpScreen {
     private PlayerStats[] field_F;
     private SquadSlotWidget[] field_K;
 
-    final static UiLayoutNode createTrinketPickerGrid(byte param0) {
+    final static UiLayoutNode createAchievementGrid(byte param0) {
         int var4 = 0;
         int var8 = 0;
-        SelectableTrinketIcon stackIn_30_0;
+        SelectableAchievementIcon stackIn_30_0;
         boolean stackIn_30_1;
         int stackIn_30_2;
         int stackIn_30_3;
@@ -27,14 +27,14 @@ final class GameplayHelpScreen extends PagedHelpScreen {
         int var6;
         int var7;
         int var9;
-        SelectableTrinketIcon var10;
+        SelectableAchievementIcon var10;
         int var11;
         UiLayoutNode var12;
         int var7Lifetime1;
         var11 = Kickabout.field_G;
         var12 = new UiLayoutNode();
         if (param0 != 15) {
-          GameplayHelpScreen.createTrinketPickerGrid((byte) 80);
+          GameplayHelpScreen.createAchievementGrid((byte) 80);
         }
         var2 = 0;
         var3 = GradientRasterSupport.field_f.length;
@@ -63,7 +63,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
               var9 = 1;
             }
             if (var9 == 0) {
-              var10 = new SelectableTrinketIcon(QuickChatKeysHelpPanel.field_Ab[var2]);
+              var10 = new SelectableAchievementIcon(QuickChatKeysHelpPanel.field_Ab[var2]);
               stackIn_30_0 = var10;
               stackIn_30_1 = true;
               stackIn_30_2 = 32;
@@ -73,7 +73,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
               } else {
                 stackIn_31_4 = 0;
               }
-              ((SelectableTrinketIcon) (Object) stackIn_30_0).setBounds(stackIn_30_1, stackIn_30_2, stackIn_30_3 + (stackIn_31_4 + var7Lifetime1 * 50), 10 + 44 * var4, 32);
+              ((SelectableAchievementIcon) (Object) stackIn_30_0).setBounds(stackIn_30_1, stackIn_30_2, stackIn_30_3 + (stackIn_31_4 + var7Lifetime1 * 50), 10 + 44 * var4, 32);
               var2++;
               var7Lifetime1++;
               var12.addChild((byte) -121, (UiLayoutNode) (var10));
@@ -353,7 +353,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
           WorldDrawEntry.field_f.draw(120 + this.slideOffsetX, 363);
         }
         if (param0 != -128) {
-          GameplayHelpScreen.createTrinketPickerGrid((byte) 0);
+          GameplayHelpScreen.createAchievementGrid((byte) 0);
         }
         IsSixCommand.field_C.drawParagraph(ModelMaterial.field_d, 150 + this.slideOffsetX, 360, 300, 43, 16777215, -1, 0, 1, 16);
         if (var2 != 0) {
@@ -389,7 +389,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
           if (var2 == 4) {
             var3_int = 2;
           }
-          RasterGammaSupport.field_b[var2] = new RenderedFootballer(AuctionItem.a(11, 16, 0, var3_int, 0, 0, 31, false, false, false), var3_int, true);
+          RasterGammaSupport.field_b[var2] = new RenderedFootballer(AuctionItem.createFootballerMesh(11, 16, 0, var3_int, 0, 0, 31, false, false, false), var3_int, true);
           RasterGammaSupport.field_b[var2].archetype = var3_int;
           RasterGammaSupport.field_b[var2].resetPose((byte) 127);
           RasterGammaSupport.field_b[var2].field_mb.setFrame(ProxySocketConnector.nextBoundedInt(79, RasterGammaSupport.field_b[var2].field_mb.frameCount(true), new Random()), -61);
@@ -399,7 +399,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
         var6.archetype = 0;
         var6.speed = 100;
         for (var3_intLifetime1 = 0; var3_intLifetime1 < 2; var3_intLifetime1++) {
-          CalendarSupport.field_a[var3_intLifetime1] = new RenderedFootballer(AuctionItem.a(4, 16, var3_intLifetime1, 0, var3_intLifetime1, var3_intLifetime1, 31, false, false, false), 0, true);
+          CalendarSupport.field_a[var3_intLifetime1] = new RenderedFootballer(AuctionItem.createFootballerMesh(4, 16, var3_intLifetime1, 0, var3_intLifetime1, var3_intLifetime1, 31, false, false, false), 0, true);
           CalendarSupport.field_a[var3_intLifetime1].applyPlayerStats(true, var6, 3);
         }
         UrlRequest.field_k = new Sprite(200, 300);

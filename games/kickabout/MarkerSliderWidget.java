@@ -21,7 +21,7 @@ final class MarkerSliderWidget extends TextButton {
         return this.field_K.size(1);
     }
 
-    final static CoverageBitmapFont a(int param0, byte[] param1) {
+    final static CoverageBitmapFont buildCoverageFont(int param0, byte[] param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         CoverageBitmapFont var3 = null;
@@ -108,7 +108,7 @@ final class MarkerSliderWidget extends TextButton {
         return this.field_M;
     }
 
-    final static void a(int param0, int param1, String param2, String param3, byte param4) {
+    final static void updateChatComposerLabel(int param0, int param1, String param2, String param3, byte param4) {
         try {
           RotaryDialPainter.field_b.field_y = param1;
           RotaryDialPainter.field_b.field_V = param3;
@@ -222,7 +222,7 @@ final class MarkerSliderWidget extends TextButton {
           return WeightedLruCache.field_j != WeightedLruCache.field_a ? true : false;
         }
         byte[] var2 = (byte[]) null;
-        MarkerSliderWidget.a(-42, (byte[]) null);
+        MarkerSliderWidget.buildCoverageFont(-42, (byte[]) null);
         return WeightedLruCache.field_j != WeightedLruCache.field_a ? true : false;
     }
 

@@ -11,7 +11,7 @@ final class ClientInteractionSupport {
     final static boolean a(byte param0) {
         if (param0 != 10) {
           CipherPacketBuffer var2 = (CipherPacketBuffer) null;
-          ClientInteractionSupport.a(-49, -20, (CipherPacketBuffer) null, 91);
+          ClientInteractionSupport.readTwoRangeUnsigned(-49, -20, (CipherPacketBuffer) null, 91);
           if (RasterGlowSupport.field_c < 10) {
             return false;
           }
@@ -29,7 +29,7 @@ final class ClientInteractionSupport {
         return false;
     }
 
-    final static int a(int param0, int param1, CipherPacketBuffer param2, int param3) {
+    final static int readTwoRangeUnsigned(int param0, int param1, CipherPacketBuffer param2, int param3) {
         RuntimeException var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -40,7 +40,7 @@ final class ClientInteractionSupport {
           if (param0 != 22531) {
             ClientInteractionSupport.a((byte) -59);
           }
-          stackIn_3_0 = FormationAgent.a(param1, param2, 1 << param3, param3, 1 << param1, 1);
+          stackIn_3_0 = FormationAgent.readTwoRangeUnsigned(param1, param2, 1 << param3, param3, 1 << param1, 1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -493,7 +493,7 @@ final class RenderedBall extends BallAgent {
               var3 = "[" + ButtonMenuScreen.field_z + "] ";
             }
             if (1 == param1.field_c) {
-              var3 = "[" + LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, AccountNameAvailabilityValidator.field_m, new String[]{param1.field_l}) + "] ";
+              var3 = "[" + LoginDialog.substitutePlaceholders(-18, AccountNameAvailabilityValidator.field_m, new String[]{param1.field_l}) + "] ";
             }
             if (param1.field_c == 4 &&
               null != SingleChildContainer.field_x) {
@@ -509,9 +509,9 @@ final class RenderedBall extends BallAgent {
             if (!param1.field_m) {
               if (param1.field_j == 0 &&
                 param1.field_p == 0) {
-                var3 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, MySquadScreen.field_F, new String[]{(String) (var2)});
+                var3 = LoginDialog.substitutePlaceholders(-18, MySquadScreen.field_F, new String[]{(String) (var2)});
               } else {
-                var3 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, UiLayoutNode.field_ib, new String[]{(String) (var2)});
+                var3 = LoginDialog.substitutePlaceholders(-18, UiLayoutNode.field_ib, new String[]{(String) (var2)});
               }
             }
           }

@@ -49,17 +49,17 @@ final class LoginText {
           }
           for (var2_intLifetime1 = 0; PitchDecorationSupport.field_j > var2_intLifetime1; var2_intLifetime1++) {
             if (GrowableIntList.field_b[var2_intLifetime1].field_c == param1.field_c) {
-              dupTemp$3 = GrowableIntList.field_b[var2_intLifetime1].b(80);
+              dupTemp$3 = GrowableIntList.field_b[var2_intLifetime1].getFilterPriority(80);
               AlphaContainer.field_C[dupTemp$3] = AlphaContainer.field_C[dupTemp$3] + 1;
             }
           }
-          dupTemp$0 = param1.b(80);
+          dupTemp$0 = param1.getFilterPriority(80);
           AlphaContainer.field_C[dupTemp$0] = AlphaContainer.field_C[dupTemp$0] + 1;
           var2_intLifetime2 = 0;
           for (var3 = 0; PitchDecorationSupport.field_j > var3; var3++) {
             boolean decompiledFrameRemainder0 = true;
             if (~param1.field_c == ~GrowableIntList.field_b[var3].field_c) {
-              var4 = GrowableIntList.field_b[var3].b(80);
+              var4 = GrowableIntList.field_b[var3].getFilterPriority(80);
               if (TrinketTile.field_Hb < AlphaContainer.field_C[var4]) {
                 AlphaContainer.field_C[var4] = AlphaContainer.field_C[var4] - 1;
                 decompiledFrameRemainder0 = false;
