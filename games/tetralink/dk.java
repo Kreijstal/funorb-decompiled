@@ -14,13 +14,13 @@ final class dk {
             this.field_c = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "dk.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "dk.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -5384) {
-          dk.a(-20);
+          dk.releaseStatics(-20);
           field_d = null;
           field_a = null;
           return;
@@ -33,7 +33,7 @@ final class dk {
         throw new IllegalStateException();
     }
 
-    final boolean a(int param0, String param1) {
+    final boolean matchesCookieValue(int param0, String param1) {
         RuntimeException var3 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -56,7 +56,7 @@ final class dk {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -64,7 +64,7 @@ final class dk {
         try {
           this.field_c = param0;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "dk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "dk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

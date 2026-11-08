@@ -21,18 +21,18 @@ final class vd {
         if (param0) {
           var4 = new int[this.b(0, param1)];
           var3 = var4;
-          rd.a(this.field_d, 0, var4, 0, this.field_d.length);
+          rd.copy(this.field_d, 0, var4, 0, this.field_d.length);
           this.field_d = var4;
           return;
         }
         this.field_j = 31;
         var4Lifetime1 = new int[this.b(0, param1)];
         var3Lifetime1 = var4Lifetime1;
-        rd.a(this.field_d, 0, var4Lifetime1, 0, this.field_d.length);
+        rd.copy(this.field_d, 0, var4Lifetime1, 0, this.field_d.length);
         this.field_d = var4Lifetime1;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_i = null;
         field_c = null;
         if (param0 >= 32) {
@@ -41,7 +41,7 @@ final class vd {
           field_g = null;
           return;
         }
-        vd.a((byte) -56);
+        vd.releaseStatics((byte) -56);
         field_h = null;
         field_b = null;
         field_g = null;
@@ -57,7 +57,7 @@ final class vd {
             throw new ArrayIndexOutOfBoundsException(param1);
           }
           if (this.field_j != param1) {
-            rd.a(this.field_d, param1 + 1, this.field_d, param1, this.field_j - param1);
+            rd.copy(this.field_d, param1 + 1, this.field_d, param1, this.field_j - param1);
             this.field_j = this.field_j - 1;
             return;
           }
@@ -74,7 +74,7 @@ final class vd {
           this.field_j = this.field_j - 1;
           return;
         }
-        rd.a(this.field_d, param1 + 1, this.field_d, param1, this.field_j - param1);
+        rd.copy(this.field_d, param1 + 1, this.field_d, param1, this.field_j - param1);
         this.field_j = this.field_j - 1;
     }
 
@@ -127,7 +127,7 @@ final class vd {
         if (qd.field_ab <= 0) {
           if (ng.field_t > param1) {
             if (hd.field_r != null) {
-              hd.field_r.b(tl.field_P.field_M, 0);
+              hd.field_r.drawOpaque(tl.field_P.field_M, 0);
             }
             stackIn_47_0 = tl.field_P;
             stackIn_48_1 = (param0) && (!lg.field_S);
@@ -138,7 +138,7 @@ final class vd {
           } else {
             if (am.field_f > 0) {
               if (hd.field_r != null) {
-                hd.field_r.b(tl.field_P.field_M, 0);
+                hd.field_r.drawOpaque(tl.field_P.field_M, 0);
               }
               stackIn_61_0 = tl.field_P;
               stackIn_62_1 = (param0) && (!lg.field_S);
@@ -150,7 +150,7 @@ final class vd {
           }
         } else {
           if (null != hd.field_r) {
-            hd.field_r.b(hn.field_P.field_M, 0);
+            hd.field_r.drawOpaque(hn.field_P.field_M, 0);
           }
           stackIn_7_0 = hn.field_P;
           stackIn_8_1 = (param0) && (!hm.field_b);
@@ -160,7 +160,7 @@ final class vd {
           ((hl) (Object) stackIn_11_0).a(stackIn_12_1, 256);
           if (ng.field_t > param1) {
             if (hd.field_r != null) {
-              hd.field_r.b(tl.field_P.field_M, 0);
+              hd.field_r.drawOpaque(tl.field_P.field_M, 0);
             }
             stackIn_33_0 = tl.field_P;
             stackIn_34_1 = (param0) && (!lg.field_S);
@@ -171,7 +171,7 @@ final class vd {
           } else {
             if (am.field_f > 0) {
               if (hd.field_r != null) {
-                hd.field_r.b(tl.field_P.field_M, 0);
+                hd.field_r.drawOpaque(tl.field_P.field_M, 0);
               }
               stackIn_20_0 = tl.field_P;
               stackIn_21_1 = (param0) && (!lg.field_S);
@@ -204,13 +204,13 @@ final class vd {
         if (param0 == 0) {
           return var3;
         }
-        vd.a((byte) -117);
+        vd.releaseStatics((byte) -117);
         return var3;
     }
 
     final int a(boolean param0) {
         if (param0) {
-          vd.a((byte) -40);
+          vd.releaseStatics((byte) -40);
           return 1 + this.field_j;
         }
         return 1 + this.field_j;

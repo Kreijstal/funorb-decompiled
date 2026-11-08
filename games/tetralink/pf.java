@@ -105,7 +105,7 @@ final class pf {
           ~this.field_e != ~IsaacCipher.field_c) {
           var3 = this.b(2);
           String var2 = var3;
-          this.field_j.a(sk.a(new String[]{var3}, qm.field_a, 125), 1, 17);
+          this.field_j.addItem(sk.a(new String[]{var3}, qm.field_a, 125), 1, 17);
         }
         if (param0) {
           return;
@@ -185,7 +185,7 @@ final class pf {
           int var6_int = -83 % ((param4 + 59) / 56);
           qf.field_j = param0;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "pf.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "pf.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -197,9 +197,9 @@ final class pf {
           this.field_f = param0.field_i;
           if (param0.field_i == 0) {
             if (ik.field_e == 0) {
-              this.field_j.a(qk.field_b, 1, 12);
+              this.field_j.addItem(qk.field_b, 1, 12);
             }
-            this.field_j.a(df.field_b, 1, 13);
+            this.field_j.addItem(df.field_b, 1, 13);
           }
           if (param1 != 12) {
             int[] var4 = (int[]) null;
@@ -207,18 +207,18 @@ final class pf {
           }
           if (1 == param0.field_i) {
             if (me.field_b == 0) {
-              this.field_j.a(kf.field_a, param1 - 11, 12);
+              this.field_j.addItem(kf.field_a, param1 - 11, 12);
             }
-            this.field_j.a(SpriteState.field_H, 1, 13);
+            this.field_j.addItem(SpriteState.field_H, 1, 13);
           }
           if (param0.field_i == 2) {
             if (IntrusiveNode.field_f == 0) {
-              this.field_j.a(jn.field_a, param1 - 11, 12);
+              this.field_j.addItem(jn.field_a, param1 - 11, 12);
             }
-            this.field_j.a(IntrusiveNode.field_a, 1, 13);
+            this.field_j.addItem(IntrusiveNode.field_a, 1, 13);
           }
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "pf.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "pf.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -271,25 +271,25 @@ final class pf {
         }
         var3 = var5.field_ec;
         if (var5.field_Vb) {
-          this.field_j.a(sk.a(new String[]{var3}, cm.field_b, 123), 1, 2);
-          this.field_j.a(sk.a(new String[]{var3}, SocketConnector.field_b, 122), param0 - 78, 3);
+          this.field_j.addItem(sk.a(new String[]{var3}, cm.field_b, 123), 1, 2);
+          this.field_j.addItem(sk.a(new String[]{var3}, SocketConnector.field_b, 122), param0 - 78, 3);
         } else {
           if (var5.field_xc) {
-            this.field_j.a(sk.a(new String[]{var3}, oa.field_o, 127), 1, 2);
+            this.field_j.addItem(sk.a(new String[]{var3}, oa.field_o, 127), 1, 2);
           } else {
             if (!var5.field_Wb &&
               var5.field_kc) {
               if (!var5.field_Kb) {
-                this.field_j.a(sk.a(new String[]{var3}, bb.field_g, 120), 1, 2);
+                this.field_j.addItem(sk.a(new String[]{var3}, bb.field_g, 120), 1, 2);
               } else {
                 if (var5.field_xc) {
-                  this.field_j.a(sk.a(new String[]{var3}, bb.field_g, 120), 1, 2);
+                  this.field_j.addItem(sk.a(new String[]{var3}, bb.field_g, 120), 1, 2);
                 }
               }
             }
           }
           if (var5.field_Wb) {
-            this.field_j.a(sk.a(new String[]{var3}, tk.field_e, 121), 1, 3);
+            this.field_j.addItem(sk.a(new String[]{var3}, tk.field_e, 121), 1, 3);
           }
         }
         if (param0 == 79) {
@@ -338,10 +338,10 @@ final class pf {
         var5 = this.b(2);
         if (var4 != null) {
           if (!qb.field_N.field_Kb) {
-            this.field_j.a(sk.a(new String[]{var5}, il.field_P, 124), 1, 1);
+            this.field_j.addItem(sk.a(new String[]{var5}, il.field_P, 124), 1, 1);
           } else {
             if (qb.field_N.field_bc >= 0) {
-              this.field_j.a(sk.a(new String[]{var5}, il.field_P, 124), 1, 1);
+              this.field_j.addItem(sk.a(new String[]{var5}, il.field_P, 124), 1, 1);
             }
           }
         } else {
@@ -349,16 +349,16 @@ final class pf {
             qb.field_N.field_kc &&
             qb.field_N.field_jc < qb.field_N.field_rc) {
             if (var7.field_cc) {
-              this.field_j.a(sk.a(new String[]{var5}, ab.field_P, param0 + 106), param0 ^ 18, 1);
+              this.field_j.addItem(sk.a(new String[]{var5}, ab.field_P, param0 + 106), param0 ^ 18, 1);
             } else {
               if (!param1) {
-                this.field_j.a(sk.a(new String[]{var5}, nh.field_Lb, 126), 1, 0);
+                this.field_j.addItem(sk.a(new String[]{var5}, nh.field_Lb, 126), 1, 0);
               } else {
                 if (!var7.field_Kb) {
-                  this.field_j.a(sk.a(new String[]{var5}, nh.field_Lb, 126), 1, 0);
+                  this.field_j.addItem(sk.a(new String[]{var5}, nh.field_Lb, 126), 1, 0);
                 } else {
-                  this.field_j.a(sk.a(new String[]{var5}, fe.field_a, 125), 1, 0);
-                  this.field_j.a(sk.a(new String[]{var5}, jd.field_c, param0 ^ 104), param0 - 18, 1);
+                  this.field_j.addItem(sk.a(new String[]{var5}, fe.field_a, 125), 1, 0);
+                  this.field_j.addItem(sk.a(new String[]{var5}, jd.field_c, param0 ^ 104), param0 - 18, 1);
                 }
               }
             }
@@ -383,7 +383,7 @@ final class pf {
           this.field_c = param4;
           this.field_i = param3;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "pf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "pf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -421,34 +421,34 @@ final class pf {
               stackIn_9_0 = this.field_b;
               stackIn_10_1 = !(param2);
               var5 = ke.a(stackIn_9_0, stackIn_10_1);
-              var6 = sb.a((byte) 2, this.field_b) ? 1 : 0;
+              var6 = sb.areAllGroupsReady((byte) 2, this.field_b) ? 1 : 0;
               if (var5 == null &&
                 var6 == 0) {
-                this.field_j.a(sk.a(new String[]{var7}, l.field_i, 125), 1, 4);
-                this.field_j.a(sk.a(new String[]{var7}, mi.field_Nb, 126), 1, 6);
+                this.field_j.addItem(sk.a(new String[]{var7}, l.field_i, 125), 1, 4);
+                this.field_j.addItem(sk.a(new String[]{var7}, mi.field_Nb, 126), 1, 6);
                 if (param1 != null &&
                   param0 != 2 &&
                   !cd.field_a) {
                   this.field_g = param1;
-                  this.field_j.a(sk.a(new String[]{var7}, tl.field_bb, 123), 1, 19);
+                  this.field_j.addItem(sk.a(new String[]{var7}, tl.field_bb, 123), 1, 19);
                 }
               }
               if (var5 != null) {
                 if (!cc.a(this.field_b, (byte) -80) &&
                   !cd.field_a) {
                   if (!fn.field_K) {
-                    this.field_j.a(sk.a(new String[]{var7}, jk.field_a, 125), 1, 8);
+                    this.field_j.addItem(sk.a(new String[]{var7}, jk.field_a, 125), 1, 8);
                   }
-                  this.field_j.a(sk.a(new String[]{var7}, pl.field_b, 126), 1, 18);
+                  this.field_j.addItem(sk.a(new String[]{var7}, pl.field_b, 126), 1, 18);
                   if (param1 != null) {
                     this.field_g = param1;
-                    this.field_j.a(sk.a(new String[]{var7}, tl.field_bb, 127), 1, 19);
+                    this.field_j.addItem(sk.a(new String[]{var7}, tl.field_bb, 127), 1, 19);
                   }
                 }
-                this.field_j.a(sk.a(new String[]{var7}, wk.field_j, 120), 1, 5);
+                this.field_j.addItem(sk.a(new String[]{var7}, wk.field_j, 120), 1, 5);
               }
               if (var6 != 0) {
-                this.field_j.a(sk.a(new String[]{var7}, lk.field_nb, 126), 1, 7);
+                this.field_j.addItem(sk.a(new String[]{var7}, lk.field_nb, 126), 1, 7);
                 return;
               }
             }
@@ -464,7 +464,7 @@ final class pf {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -511,7 +511,7 @@ final class pf {
           try {
             ii.a(new Object[]{new Integer(param1)}, 6760, "resizing", lk.q(13));
             if (param0 <= 115) {
-              pf.a((byte) 9);
+              pf.releaseStatics((byte) 9);
             }
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -524,7 +524,7 @@ final class pf {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         field_k = null;
         if (param0 != 86) {

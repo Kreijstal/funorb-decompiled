@@ -31,7 +31,7 @@ final class v extends IntrusiveNode {
         qn.a(DelegatingCanvas.field_c - var2, 128);
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = 8 % ((param0 + 24) / 61);
         field_A = null;
         field_x = null;

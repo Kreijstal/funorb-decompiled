@@ -23,11 +23,11 @@ final class hd extends um {
         try {
           this.field_A = new cb(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "hd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "hd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static kh a(int param0, int param1, Archive param2) {
+    final static kh loadSpritesFromArchive(int param0, int param1, Archive param2) {
         RuntimeException var3 = null;
         kh stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -53,11 +53,11 @@ final class hd extends um {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         field_B = null;
         field_D = null;
         field_u = null;
@@ -84,7 +84,7 @@ final class hd extends um {
             field_B = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "hd.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "hd.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -112,7 +112,7 @@ final class hd extends um {
           param0.field_mb = 0;
           param0.field_yb = 0;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "hd.S(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "hd.S(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -156,7 +156,7 @@ final class hd extends um {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -171,7 +171,7 @@ final class hd extends um {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 26202) {
-            hd.g(92);
+            hd.releaseStatics(92);
           }
           if (this.field_A.a(0, param0) == db.field_h) {
             stackIn_5_0 = this.field_A.a(param0, 26202);
@@ -193,7 +193,7 @@ final class hd extends um {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 

@@ -349,7 +349,7 @@ abstract class SpriteState extends DualLinkNode {
               } else {
                 var12.field_hc.a((byte) -118, 68, var31, GameKeyHandler.field_d, 0);
               }
-              var12.field_pc.field_jb = BitmapFont.a(var12.field_pc.field_Ib, var32, 78);
+              var12.field_pc.field_jb = BitmapFont.truncateWithEllipsis(var12.field_pc.field_Ib, var32, 78);
               var12.field_pc.a((byte) -102, 78, var31, GameKeyHandler.field_d, 70);
               if (var12.field_pc.field_Y &&
                 !var12.field_pc.field_jb.equals(var32)) {
@@ -359,7 +359,7 @@ abstract class SpriteState extends DualLinkNode {
               if (var12.field_kc) {
                 var12.field_yc.field_jb = "/" + var12.field_rc;
                 var12.field_Bc.field_xb = 2;
-                var33_int = (-var12.field_yc.field_Ib.b("/") + 348) / 2;
+                var33_int = (-var12.field_yc.field_Ib.textWidth("/") + 348) / 2;
                 var12.field_Bc.a((byte) -104, -150 + var33_int, var31, GameKeyHandler.field_d, 150);
                 var12.field_yc.a((byte) -102, -var33_int + 198, var31, GameKeyHandler.field_d, var33_int);
               } else {
@@ -466,7 +466,7 @@ abstract class SpriteState extends DualLinkNode {
                 }
                 var38 = var37.toString();
                 var12.field_Mb.field_jb = var38;
-                var39Lifetime1 = var12.field_Mb.field_Ib.c(var38, -(2 * var12.field_Mb.field_V) + var12.field_Hb);
+                var39Lifetime1 = var12.field_Mb.field_Ib.wrappedLineCount(var38, -(2 * var12.field_Mb.field_V) + var12.field_Hb);
                 var12.field_Mb.a((byte) -96, var12.field_Hb, var31, var39Lifetime1 * GameKeyHandler.field_d, 0);
                 var31 = var31 + GameKeyHandler.field_d * var39Lifetime1;
               }
@@ -481,11 +481,11 @@ abstract class SpriteState extends DualLinkNode {
                 var31 = var31 + GameKeyHandler.field_d;
               }
             }
-            var33 = ef.a((byte) 63, var32, var12.field_gc);
+            var33 = ef.getJoinFailureMessage((byte) 63, var32, var12.field_gc);
             var34 = var33;
             var34Lifetime1 = var33;
             if (var33 != null) {
-              var34_intLifetime1 = var12.field_Tb.field_Ib.c(var33, -fn.field_Q + (var12.field_Hb - fn.field_Q));
+              var34_intLifetime1 = var12.field_Tb.field_Ib.wrappedLineCount(var33, -fn.field_Q + (var12.field_Hb - fn.field_Q));
               var12.field_Tb.field_jb = var33;
               var12.field_Tb.field_K = 256 * var12.field_Ub / u.field_a;
               var12.field_Tb.a((byte) -112, var12.field_Hb - 2 * fn.field_Q, var31, var34_intLifetime1 * GameKeyHandler.field_d, fn.field_Q);
@@ -495,7 +495,7 @@ abstract class SpriteState extends DualLinkNode {
               var12.field_mb = -var12.field_R + var31;
             }
             if (var13 != 0) {
-              ph.field_t.field_Pb.a((hl) (var11), true, var12, 2);
+              ph.field_t.field_Pb.placeBelow((hl) (var11), true, var12, 2);
             }
             for (var34_intLifetime2 = 0; hg.field_k > var34_intLifetime2; var34_intLifetime2++) {
               if (var12.field_Lb[var34_intLifetime2].field_Y) {
@@ -575,7 +575,7 @@ abstract class SpriteState extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var7), "md.P(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw oi.wrapException((Throwable) ((Object) var7), "md.P(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -716,7 +716,7 @@ abstract class SpriteState extends DualLinkNode {
                       param1.a(0, false);
                     } else if (var10 instanceof Number) {
                       param1.a(1, false);
-                      param1.a(-1, ((Number) (var10)).longValue());
+                      param1.writeLong(-1, ((Number) (var10)).longValue());
                     } else if (!(var10 instanceof String)) {
                       param1.a(4, false);
                     } else {
@@ -795,7 +795,7 @@ abstract class SpriteState extends DualLinkNode {
             } else {
               stackIn_69_2 = "{...}";
             }
-            throw oi.a((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(')').toString());
+            throw oi.wrapException((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

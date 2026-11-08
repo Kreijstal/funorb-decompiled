@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ue extends Sprite {
-    final void b(int param0, int param1, int param2) {
+    final void drawAdditive(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
@@ -43,10 +43,10 @@ final class ue extends Sprite {
           var6 <= 0) {
           return;
         }
-        ue.b(0, 0, 0, SoftwareRasterizer.field_b, this.field_C, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+        ue.addArgbRows(0, 0, 0, SoftwareRasterizer.field_b, this.field_C, var5, 0, var4, 0, var7, var6, var8, var9, param2);
     }
 
-    private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void blendArgbRows(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var10 = 0;
         int var11 = 0;
         int incrementValue$12 = 0;
@@ -115,7 +115,7 @@ final class ue extends Sprite {
           var6 <= 0) {
           return;
         }
-        ue.f(SoftwareRasterizer.field_b, this.field_C, 0, var5, var4, var7, var6, var8, var9, param2);
+        ue.blitArgbAlpha(SoftwareRasterizer.field_b, this.field_C, 0, var5, var4, var7, var6, var8, var9, param2);
     }
 
     final void e(int param0, int param1, int param2) {
@@ -159,10 +159,10 @@ final class ue extends Sprite {
           var6 <= 0) {
           return;
         }
-        ue.d(SoftwareRasterizer.field_b, this.field_C, 0, var5, var4, var7, var6, var8, var9, param2);
+        ue.blendShadedGrayscaleRows(SoftwareRasterizer.field_b, this.field_C, 0, var5, var4, var7, var6, var8, var9, param2);
     }
 
-    final void c(int param0, int param1, int param2, int param3) {
+    final void drawScaled(int param0, int param1, int param2, int param3) {
         int var13 = 0;
         int var15 = 0;
         int var13Lifetime1;
@@ -220,15 +220,15 @@ final class ue extends Sprite {
           var7 = var7 + var11 * var15Lifetime2;
           var14 = var14 + var15Lifetime2;
         }
-        ue.b(SoftwareRasterizer.field_b, this.field_C, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
+        ue.blitArgbScaled(SoftwareRasterizer.field_b, this.field_C, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
     }
 
-    final void d(int param0, int param1, int param2) {
+    final void drawTransparentWithOpacity(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
         if (param2 == 256) {
-          this.c(param0, param1);
+          this.drawTransparent(param0, param1);
           return;
         }
         param0 = param0 + this.field_x;
@@ -268,10 +268,10 @@ final class ue extends Sprite {
           var6 <= 0) {
           return;
         }
-        ue.e(SoftwareRasterizer.field_b, this.field_C, 0, var5, var4, var7, var6, var8, var9, param2);
+        ue.blitArgbAlphaDimmed(SoftwareRasterizer.field_b, this.field_C, 0, var5, var4, var7, var6, var8, var9, param2);
     }
 
-    private final static void d(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blendShadedGrayscaleRows(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var15 = 0;
         int var16 = 0;
         int incrementValue$6 = 0;
@@ -325,7 +325,7 @@ final class ue extends Sprite {
         }
     }
 
-    final void b(int param0, int param1) {
+    final void drawOpaque(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -366,10 +366,10 @@ final class ue extends Sprite {
           var5 <= 0) {
           return;
         }
-        ue.c(SoftwareRasterizer.field_b, this.field_C, 0, var4, var3, var6, var5, var7, var8);
+        ue.blendArgbRows(SoftwareRasterizer.field_b, this.field_C, 0, var4, var3, var6, var5, var7, var8);
     }
 
-    private final static void b(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
+    private final static void addArgbRows(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
         int incrementValue$12 = 0;
         int var14;
         for (param8 = -param10; param8 < 0; param8++) {
@@ -395,7 +395,7 @@ final class ue extends Sprite {
         }
     }
 
-    final void c(int param0, int param1) {
+    final void drawTransparent(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -436,14 +436,14 @@ final class ue extends Sprite {
           var5 <= 0) {
           return;
         }
-        ue.c(SoftwareRasterizer.field_b, this.field_C, 0, var4, var3, var6, var5, var7, var8);
+        ue.blendArgbRows(SoftwareRasterizer.field_b, this.field_C, 0, var4, var3, var6, var5, var7, var8);
     }
 
     ue(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
         super(param0, param1, param2, param3, param4, param5, param6);
     }
 
-    final void d(int param0, int param1) {
+    final void drawHalfSize(int param0, int param1) {
         int var9 = 0;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
@@ -542,7 +542,7 @@ final class ue extends Sprite {
         }
     }
 
-    private final static void e(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitArgbAlphaDimmed(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var10 = 0;
         int var11 = 0;
         int incrementValue$12 = 0;
@@ -577,7 +577,7 @@ final class ue extends Sprite {
         super(param0, param1);
     }
 
-    private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
+    private final static void blitArgbScaled(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
@@ -608,7 +608,7 @@ final class ue extends Sprite {
         }
     }
 
-    private final static void f(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitArgbAlpha(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;

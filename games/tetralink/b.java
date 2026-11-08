@@ -6,7 +6,7 @@ final class b {
     static int field_c;
     static int field_a;
 
-    final static void a(int param0, int param1, byte param2) {
+    final static void setPendingTooltipAnchor(int param0, int param1, byte param2) {
         nh.field_Nb = param1;
         if (param2 > -5) {
           return;
@@ -34,7 +34,7 @@ final class b {
         return false;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         if (param0 != 41) {
           b.a(-42);

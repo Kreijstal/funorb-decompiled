@@ -37,13 +37,13 @@ final class la extends jd {
           for (var7 = 1; var7 < param0.length(); var7++) {
             var8 = param0.charAt(var7);
             if (var8 == 60) {
-              var6 = param1.field_j[0] + (var5_int >> 8) + param2.b(param0.substring(0, var7));
+              var6 = param1.field_j[0] + (var5_int >> 8) + param2.textWidth(param0.substring(0, var7));
             }
             if (-1 == var6) {
               if (var8 == 32) {
                 var5_int = var5_int + param4;
               }
-              param1.field_j[var7] = param1.field_j[0] + ((var5_int >> 8) + param2.b(param0.substring(0, 1 + var7))) - param2.a((char) var8);
+              param1.field_j[var7] = param1.field_j[0] + ((var5_int >> 8) + param2.textWidth(param0.substring(0, 1 + var7))) - param2.a((char) var8);
             } else {
               param1.field_j[var7] = var6;
             }
@@ -74,7 +74,7 @@ final class la extends jd {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -138,7 +138,7 @@ final class la extends jd {
           this.field_d.position(0);
           this.field_d.put(param1);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "la.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "la.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -153,7 +153,7 @@ final class la extends jd {
         try {
           if (oa.field_y.c(false) &&
             !param0.equals(oa.field_y.a((byte) 72))) {
-            oa.field_y = il.a(param0, 14781);
+            oa.field_y = il.createEmailCheckResult(param0, 14781);
           }
           if (param1 == 0) {
             stackIn_7_0 = oa.field_y;
@@ -171,13 +171,13 @@ final class la extends jd {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 37) {
-          la.c(98);
+          la.releaseStatics(98);
         }
         field_k = null;
         field_j = null;

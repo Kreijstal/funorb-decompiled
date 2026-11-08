@@ -19,7 +19,7 @@ final class mm extends um {
         try {
           fe.a(param0, 256, param2, 113);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "mm.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "mm.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -48,7 +48,7 @@ final class mm extends um {
           if (param0 != 0) {
             field_v = (String[]) null;
           }
-          if (!this.a(param1, (byte) 47)) {
+          if (!this.containsEmailComponent(param1, (byte) 47)) {
             return pf.field_a;
           }
           stackIn_13_0 = db.field_h;
@@ -63,7 +63,7 @@ final class mm extends um {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -73,11 +73,11 @@ final class mm extends um {
           this.field_r = param2;
           this.field_t = param1;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "mm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "mm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         field_v = null;
         field_x = null;
         if (param0 == 0) {
@@ -95,7 +95,7 @@ final class mm extends um {
         field_q = null;
     }
 
-    private final boolean a(String param0, byte param1) {
+    private final boolean containsEmailComponent(String param0, byte param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -139,7 +139,7 @@ final class mm extends um {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -171,7 +171,7 @@ final class mm extends um {
             return (String) (stackIn_2_0);
           }
           var5 = var4;
-          if (pi.a(var5, 17510)) {
+          if (pi.hasInvalidPasswordLength(var5, 17510)) {
             stackIn_6_0 = ka.field_i;
             return stackIn_6_0;
           }
@@ -179,15 +179,15 @@ final class mm extends um {
             stackIn_9_0 = ic.field_d;
             return stackIn_9_0;
           }
-          if (MouseInputHandler.a(var5, -78)) {
+          if (MouseInputHandler.isRepeatedCharacter(var5, -78)) {
             stackIn_13_0 = ac.field_d;
             return stackIn_13_0;
           }
           if (param1 != 26202) {
             var6 = (String) null;
-            discarded$1 = this.a((String) null, (byte) -27);
+            discarded$1 = this.containsEmailComponent((String) null, (byte) -27);
           }
-          if (this.a(param0, (byte) 89)) {
+          if (this.containsEmailComponent(param0, (byte) 89)) {
             stackIn_18_0 = nl.field_l;
             return stackIn_18_0;
           }
@@ -218,7 +218,7 @@ final class mm extends um {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param1).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param1).append(')').toString());
         }
     }
 

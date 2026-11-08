@@ -67,7 +67,7 @@ final class ni {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param4).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -147,7 +147,7 @@ final class ni {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 10) {
-            stackIn_4_0 = nl.a(param0, 10, true, true);
+            stackIn_4_0 = nl.isIntegerInRadix(param0, 10, true, true);
             return stackIn_4_0;
           }
           return true;
@@ -161,7 +161,7 @@ final class ni {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -178,7 +178,7 @@ final class ni {
           }
           en.field_K = -ClientException.field_f + 0;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "ni.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "ni.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -295,7 +295,7 @@ final class ni {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var1), "ni.C(" + param0 + ')');
+          throw oi.wrapException((Throwable) ((Object) var1), "ni.C(" + param0 + ')');
         }
     }
 
@@ -336,7 +336,7 @@ final class ni {
             this.field_g = this.field_a.a(false, 255, (byte) 0, 255, true);
           }
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "ni.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "ni.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -8,7 +8,7 @@ final class te extends en {
     static int field_P;
     static int field_R;
 
-    final void a(int param0, boolean param1, UiWidget param2, int param3, int param4, int param5) {
+    final void handlePointerRelease(int param0, boolean param1, UiWidget param2, int param3, int param4, int param5) {
         RuntimeException runtimeException = null;
         ed var7 = null;
         ed var8 = null;
@@ -17,7 +17,7 @@ final class te extends en {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          super.a(param0, param1, param2, param3, param4, param5);
+          super.handlePointerRelease(param0, param1, param2, param3, param4, param5);
           var8 = gi.field_c;
           var7 = var8;
           if (var8 != null) {
@@ -46,18 +46,18 @@ final class te extends en {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
-    public static void h(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 <= -6) {
           field_N = null;
           field_Q = null;
           field_O = null;
           return;
         }
-        te.h(115);
+        te.releaseStatics(115);
         field_N = null;
         field_Q = null;
         field_O = null;
@@ -68,7 +68,7 @@ final class te extends en {
         try {
           this.field_J = param6;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "te.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "te.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 

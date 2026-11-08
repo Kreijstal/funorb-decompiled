@@ -20,7 +20,7 @@ final class gl extends ka {
 
     final static void a(boolean param0, byte param1) {
         if (null != sj.field_g) {
-          SoftwareRasterizer.e(SoftwareRasterizer.field_j, SoftwareRasterizer.field_i, -SoftwareRasterizer.field_j + SoftwareRasterizer.field_l, -SoftwareRasterizer.field_i + SoftwareRasterizer.field_g);
+          SoftwareRasterizer.darkenRectangle(SoftwareRasterizer.field_j, SoftwareRasterizer.field_i, -SoftwareRasterizer.field_j + SoftwareRasterizer.field_l, -SoftwareRasterizer.field_i + SoftwareRasterizer.field_g);
           sj.field_g.a(param0, 256);
           if (param1 != 24) {
             gl.a(true, (byte) -84);
@@ -34,7 +34,7 @@ final class gl extends ka {
         gl.a(true, (byte) -84);
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_n = null;
         field_o = null;
         field_q = null;

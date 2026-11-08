@@ -185,7 +185,7 @@ final class ci extends mf {
             if (param1 == hn.field_Q) {
               var21 += 42;
             }
-            var33 = BitmapFont.a(var12.field_Wb.field_Ib, var32, var21);
+            var33 = BitmapFont.truncateWithEllipsis(var12.field_Wb.field_Ib, var32, var21);
             var20 = var33;
             var20 = var33;
             var20 = var33;
@@ -295,7 +295,7 @@ final class ci extends mf {
             var25 = var30;
             var24Lifetime1 = var23;
             if (var23 != null) {
-              var24_intLifetime1 = var12.field_Ob.field_Ib.c(var23, -fn.field_Q - fn.field_Q + var12.field_Hb);
+              var24_intLifetime1 = var12.field_Ob.field_Ib.wrappedLineCount(var23, -fn.field_Q - fn.field_Q + var12.field_Hb);
               var12.field_Ob.field_K = var12.field_Sb * 256 / u.field_a;
               var12.field_Ob.field_jb = var23;
               var12.field_Ob.a((byte) -80, var12.field_Hb - fn.field_Q * 2, var19, var24_intLifetime1 * GameKeyHandler.field_d, fn.field_Q);
@@ -305,7 +305,7 @@ final class ci extends mf {
               var12.field_mb = -var12.field_R + var19;
             }
             if (var13 != 0) {
-              param1.field_Pb.a((hl) (var11), true, var12, 2);
+              param1.field_Pb.placeBelow((hl) (var11), true, var12, 2);
             }
             if (var12.field_F != 0 &&
               !var12.d((byte) -1)) {
@@ -485,7 +485,7 @@ final class ci extends mf {
           } else {
             stackIn_215_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_214_0), ((StringBuilder) (Object) stackIn_214_1).append(stackIn_215_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_214_0), ((StringBuilder) (Object) stackIn_214_1).append(stackIn_215_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -499,7 +499,7 @@ final class ci extends mf {
             field_C = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "ci.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "ci.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -546,14 +546,14 @@ final class ci extends mf {
             var8 = param4[1].field_t;
             param4[0].e(param3, param1, param0);
             param4[2].e(-var7 + param2 + param3, param1, param0);
-            SoftwareRasterizer.a(NodeHashTableIterator.field_a);
-            SoftwareRasterizer.b(param3 + var6_int, param1, param3 + param2 - var7, param1 + param4[1].field_F);
+            SoftwareRasterizer.saveClip(NodeHashTableIterator.field_a);
+            SoftwareRasterizer.intersectClip(param3 + var6_int, param1, param3 + param2 - var7, param1 + param4[1].field_F);
             var9 = param3 + var6_int;
             var10 = param3 + (param2 - var7);
             for (param3 = var9; var10 > param3; param3 = param3 + var8) {
               param4[1].e(param3, param1, param0);
             }
-            SoftwareRasterizer.b(NodeHashTableIterator.field_a);
+            SoftwareRasterizer.restoreClip(NodeHashTableIterator.field_a);
             return;
           }
           return;
@@ -567,7 +567,7 @@ final class ci extends mf {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param5).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -594,7 +594,7 @@ final class ci extends mf {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -602,7 +602,7 @@ final class ci extends mf {
         this(od.field_S, param0);
     }
 
-    public static void c(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_A = null;
         field_D = null;
         if (!param0) {

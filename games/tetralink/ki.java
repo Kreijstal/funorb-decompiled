@@ -6,7 +6,7 @@ final class ki {
     static java.math.BigInteger field_c;
     static String field_a;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != -49) {
           return;
         }
@@ -37,10 +37,10 @@ final class ki {
           }
           if (param0 >= 100 &&
             param0 <= 105) {
-            va.field_n = ng.a((byte) -67, param2);
+            va.field_n = ng.createSuggestedUsernameQuery((byte) -67, param2);
             return;
           }
-          va.field_n = hj.a(param1, param0, false);
+          va.field_n = hj.createUsernameResponseQuery(param1, param0, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -58,7 +58,7 @@ final class ki {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param3).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param3).append(')').toString());
         }
     }
 

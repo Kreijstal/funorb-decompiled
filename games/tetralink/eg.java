@@ -25,7 +25,7 @@ abstract class eg extends UiWidget implements nf {
           if (param3 != -372494750) {
             field_J = (IntrusiveDeque) null;
           }
-          if (this.a(param0, param2, 105, param1)) {
+          if (this.beginDebugDescription(param0, param2, 105, param1)) {
             this.a(param3 ^ 372494831, param1, param0, param2);
             this.b(param2, param1, param0, 0);
           }
@@ -47,11 +47,11 @@ abstract class eg extends UiWidget implements nf {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final boolean a(UiWidget param0, int param1) {
+    final boolean focusNext(UiWidget param0, int param1) {
         int var4 = 0;
         UiWidget[] var3 = null;
         RuntimeException var3_ref = null;
@@ -72,7 +72,7 @@ abstract class eg extends UiWidget implements nf {
           for (var4 = 0; var4 < var7.length; var4++) {
             var5 = var7[var4];
             if (var5 != null &&
-              var5.a(param0, -384169950)) {
+              var5.focusNext(param0, -384169950)) {
               return true;
             }
           }
@@ -87,7 +87,7 @@ abstract class eg extends UiWidget implements nf {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -95,7 +95,7 @@ abstract class eg extends UiWidget implements nf {
         super(param0, param1, param2, param3, param4, (dn) null);
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         field_K = null;
         field_N = null;
         if (param0 != -1) {
@@ -183,7 +183,7 @@ abstract class eg extends UiWidget implements nf {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -227,7 +227,7 @@ abstract class eg extends UiWidget implements nf {
 
     abstract void d(byte param0);
 
-    final String e(int param0) {
+    final String getTooltip(int param0) {
         int var3 = 0;
         UiWidget[] var2;
         UiWidget var4;
@@ -241,7 +241,7 @@ abstract class eg extends UiWidget implements nf {
         for (var3 = param0; var3 < var2.length; var3++) {
           var4 = var2[var3];
           if (var4 != null) {
-            var5 = var4.e(0);
+            var5 = var4.getTooltip(0);
             if (var5 != null) {
               return var5;
             }
@@ -289,7 +289,7 @@ abstract class eg extends UiWidget implements nf {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -317,7 +317,7 @@ abstract class eg extends UiWidget implements nf {
               for (var4_int = var4_int + param2; this.field_I.length > var4_int; var4_int = var4_int + param2) {
                 var6 = this.field_I[var4_int];
                 if (var6 != null &&
-                  var6.a(param1, -384169950)) {
+                  var6.focusNext(param1, -384169950)) {
                   return true;
                 }
               }
@@ -336,7 +336,7 @@ abstract class eg extends UiWidget implements nf {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -351,7 +351,7 @@ abstract class eg extends UiWidget implements nf {
         try {
           if (param0 != 1) {
             var4 = (UiWidget) null;
-            this.a((UiWidget) null, -49);
+            this.focusNext((UiWidget) null, -49);
           }
           stackIn_3_0 = this.a(true, 1, param1);
           return stackIn_3_0;
@@ -365,11 +365,11 @@ abstract class eg extends UiWidget implements nf {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
-    final boolean a(int param0, UiWidget param1, int param2, int param3, int param4, int param5, int param6) {
+    final boolean onFocusedKey(int param0, UiWidget param1, int param2, int param3, int param4, int param5, int param6) {
         int var9 = 0;
         UiWidget[] var8 = null;
         RuntimeException var8_ref = null;
@@ -383,7 +383,7 @@ abstract class eg extends UiWidget implements nf {
         var11 = TetraLink.field_J;
         try {
           if (param0 != -19137) {
-            this.e(-73);
+            this.getTooltip(-73);
           }
           if (null == this.field_I) {
             return false;
@@ -394,7 +394,7 @@ abstract class eg extends UiWidget implements nf {
             var10 = var12[var9];
             if (var10 != null &&
               var10.c(3) &&
-              var10.a(-19137, param1, param2, param3, param4, param5, param6)) {
+              var10.onFocusedKey(-19137, param1, param2, param3, param4, param5, param6)) {
               return true;
             }
           }
@@ -409,7 +409,7 @@ abstract class eg extends UiWidget implements nf {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -439,7 +439,7 @@ abstract class eg extends UiWidget implements nf {
               for (var4_int = var4_int - param1; var4_int >= 0; var4_int = var4_int - param1) {
                 var6 = this.field_I[var4_int];
                 if (var6 != null &&
-                  var6.a(param2, -384169950)) {
+                  var6.focusNext(param2, -384169950)) {
                   return true;
                 }
               }
@@ -457,18 +457,18 @@ abstract class eg extends UiWidget implements nf {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
-    void a(int param0, int param1, int param2, int param3) {
+    void drawLayer(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         UiWidget var6;
         int var7;
         var7 = TetraLink.field_J;
         if (param3 == 0 &&
           this.field_H != null) {
-          this.field_H.a((UiWidget) (this), param1, param2, true, true);
+          this.field_H.drawWidget((UiWidget) (this), param1, param2, true, true);
         }
         if (param0 != 0) {
           field_N = (String) null;
@@ -477,7 +477,7 @@ abstract class eg extends UiWidget implements nf {
           for (var5 = -1 + this.field_I.length; var5 >= 0; var5--) {
             var6 = this.field_I[var5];
             if (var6 != null) {
-              var6.a(0, this.field_t + param1, param2 + this.field_w, param3);
+              var6.drawLayer(0, this.field_t + param1, param2 + this.field_w, param3);
             }
           }
         }
@@ -503,7 +503,7 @@ abstract class eg extends UiWidget implements nf {
         }
     }
 
-    private final boolean a(UiWidget param0, byte param1) {
+    private final boolean focusPreviousChild(UiWidget param0, byte param1) {
         RuntimeException var3 = null;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_7_0 = null;
@@ -526,11 +526,11 @@ abstract class eg extends UiWidget implements nf {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    void a(UiWidget param0, int param1, int param2, boolean param3) {
+    void updatePointer(UiWidget param0, int param1, int param2, boolean param3) {
         int var6 = 0;
         UiWidget[] var5 = null;
         UiWidget var7 = null;
@@ -543,7 +543,7 @@ abstract class eg extends UiWidget implements nf {
         RuntimeException var5_ref = null;
         var8 = TetraLink.field_J;
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(param0, param1, param2, param3);
           if (null == this.field_I) {
             return;
           }
@@ -552,7 +552,7 @@ abstract class eg extends UiWidget implements nf {
           for (var6 = 0; var9.length > var6; var6++) {
             var7 = var9[var6];
             if (var7 != null) {
-              var7.a(param0, this.field_t + param1, this.field_w + param2, param3);
+              var7.updatePointer(param0, this.field_t + param1, this.field_w + param2, param3);
             }
           }
           return;
@@ -566,11 +566,11 @@ abstract class eg extends UiWidget implements nf {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final boolean a(int param0, char param1, int param2, UiWidget param3) {
+    final boolean handleKey(int param0, char param1, int param2, UiWidget param3) {
         int var6 = 0;
         UiWidget[] var5 = null;
         int var5_int = 0;
@@ -597,7 +597,7 @@ abstract class eg extends UiWidget implements nf {
             var7 = var9[var6];
             if (var7 != null &&
               var7.c(param2 + 2) &&
-              var7.a(param0, param1, 1, param3)) {
+              var7.handleKey(param0, param1, 1, param3)) {
               return true;
             }
           }
@@ -608,7 +608,7 @@ abstract class eg extends UiWidget implements nf {
           if (sn.field_a[81]) {
             stackIn_21_0 = this.a(1, param3);
           } else {
-            stackIn_21_0 = this.a(param3, (byte) 45);
+            stackIn_21_0 = this.focusPreviousChild(param3, (byte) 45);
           }
           return stackIn_21_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -621,11 +621,11 @@ abstract class eg extends UiWidget implements nf {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
-    final void a(int param0, boolean param1, UiWidget param2, int param3, int param4, int param5) {
+    final void handlePointerRelease(int param0, boolean param1, UiWidget param2, int param3, int param4, int param5) {
         int var8 = 0;
         UiWidget[] var7 = null;
         UiWidget var9 = null;
@@ -649,7 +649,7 @@ abstract class eg extends UiWidget implements nf {
           for (var8 = 0; var8 < var11.length; var8++) {
             var9 = var11[var8];
             if (var9 != null) {
-              var9.a(param0, false, param2, param3 + this.field_w, param4, this.field_t + param5);
+              var9.handlePointerRelease(param0, false, param2, param3 + this.field_w, param4, this.field_t + param5);
             }
           }
           return;
@@ -663,7 +663,7 @@ abstract class eg extends UiWidget implements nf {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

@@ -22,10 +22,10 @@ final class oe extends IntrusiveNode {
           if (q.a(false, param1)) {
             return false;
           }
-          if (MouseInputHandler.a(param1, -63)) {
+          if (MouseInputHandler.isRepeatedCharacter(param1, -63)) {
             return false;
           }
-          if (pi.a(param1, 17510)) {
+          if (pi.hasInvalidPasswordLength(param1, 17510)) {
             return false;
           }
           if (param2.length() == 0) {
@@ -35,7 +35,7 @@ final class oe extends IntrusiveNode {
             return false;
           }
           if (param0 != -41) {
-            oe.a(true);
+            oe.releaseStatics(true);
           }
           if (mf.a((byte) 29, param2, param1)) {
             return false;
@@ -60,14 +60,14 @@ final class oe extends IntrusiveNode {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_t = null;
         if (!param0) {
-          oe.a(false);
+          oe.releaseStatics(false);
         }
     }
 
@@ -130,7 +130,7 @@ final class oe extends IntrusiveNode {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 

@@ -10,7 +10,7 @@ abstract class hn extends gn implements uc {
     static Sprite[] field_O;
     static String field_N;
 
-    void a(int param0, qh param1) {
+    void setBirthDateValidator(int param0, qh param1) {
         try {
           this.field_L = param1;
           this.field_L.field_m = this;
@@ -18,13 +18,13 @@ abstract class hn extends gn implements uc {
             field_N = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "hn.W(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "hn.W(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     abstract int g(byte param0);
 
-    abstract int a(boolean param0);
+    abstract int getMonthIndex(boolean param0);
 
     abstract boolean h(int param0);
 
@@ -50,11 +50,11 @@ abstract class hn extends gn implements uc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var3), "hn.C(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw oi.wrapException((Throwable) ((Object) var3), "hn.C(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    public static void e(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_P = null;
         field_O = null;
         field_M = null;
@@ -104,7 +104,7 @@ abstract class hn extends gn implements uc {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -161,7 +161,7 @@ abstract class hn extends gn implements uc {
             if (qi.field_p == BitPacketBuffer.field_z) {
               if (param3) {
                 var10 = (String) null;
-                c.field_a = ug.a(ua.field_g, (String) null, false, param1, -6336);
+                c.field_a = ug.createLoginCredentials(ua.field_g, (String) null, false, param1, -6336);
               } else {
                 c.field_a = sk.a((byte) -79, param5, false, param1);
               }
@@ -270,7 +270,7 @@ abstract class hn extends gn implements uc {
               if (0 >= mb.field_C &&
                 !dh.field_o) {
                 try {
-                  ii.a((byte) 81, "unzap", lk.q(13));
+                  ii.callJavaScript((byte) 81, "unzap", lk.q(13));
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;
@@ -349,7 +349,7 @@ abstract class hn extends gn implements uc {
             } else {
               stackIn_111_2 = "{...}";
             }
-            throw oi.a((Throwable) ((Object) stackIn_107_0), ((StringBuilder) (Object) stackIn_110_1).append(stackIn_111_2).append(')').toString());
+            throw oi.wrapException((Throwable) ((Object) stackIn_107_0), ((StringBuilder) (Object) stackIn_110_1).append(stackIn_111_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -358,7 +358,7 @@ abstract class hn extends gn implements uc {
         }
     }
 
-    abstract int f(byte param0);
+    abstract int getDay(byte param0);
 
     final static void a(boolean param0, String param1, int param2, boolean param3) {
         try {
@@ -372,7 +372,7 @@ abstract class hn extends gn implements uc {
           mm.field_u = new sd(mf.field_s, ao.field_c);
           mf.field_s.a(mm.field_u, false);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "hn.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "hn.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 

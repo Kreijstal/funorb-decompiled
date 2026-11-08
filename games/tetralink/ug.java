@@ -80,7 +80,7 @@ final class ug extends nb {
           }
           if (io.field_h.length() > 0) {
             var4_ref_String = io.field_h.toString();
-            if (oa.a(var4_ref_String, 65416)) {
+            if (oa.containsFilterWord(var4_ref_String, 65416)) {
               var13 = (String) null;
               var12 = (String) null;
               fi.a(0, 0, (String) null, 2, kj.field_c, (String) null);
@@ -110,7 +110,7 @@ final class ug extends nb {
             return true;
           }
           if (io.field_h.length() > 0) {
-            lo.a(-26750, io.field_h, -1 + io.field_h.length(), ' ');
+            lo.resizeAndPad(-26750, io.field_h, -1 + io.field_h.length(), ' ');
           }
           return true;
         }
@@ -127,15 +127,15 @@ final class ug extends nb {
         discarded$0 = io.field_h.append((char) var4);
         var5Lifetime1 = 485;
         var17 = ph.field_w;
-        var16 = rh.a(var17, param0 ^ -125);
+        var16 = rh.prefixRankIcon(var17, param0 ^ -125);
         var19 = var16;
         if (SecondaryNodeDequeIterator.field_d != 2) {
           var7 = "";
           if (SecondaryNodeDequeIterator.field_d != 0) {
             var23 = var7 + var19 + ": ";
-            var5Lifetime1 = var5Lifetime1 - we.field_k.b(var23);
-            if (we.field_k.b(io.field_h.toString()) > var5Lifetime1) {
-              lo.a(-26750, io.field_h, io.field_h.length() - 1, ' ');
+            var5Lifetime1 = var5Lifetime1 - we.field_k.textWidth(var23);
+            if (we.field_k.textWidth(io.field_h.toString()) > var5Lifetime1) {
+              lo.resizeAndPad(-26750, io.field_h, io.field_h.length() - 1, ' ');
             }
             return true;
           }
@@ -143,36 +143,36 @@ final class ug extends nb {
             if (!go.field_c) {
               if (null == qb.field_N) {
                 var30 = var7 + var19 + ": ";
-                var5Lifetime1 = var5Lifetime1 - we.field_k.b(var30);
-                if (we.field_k.b(io.field_h.toString()) > var5Lifetime1) {
-                  lo.a(-26750, io.field_h, io.field_h.length() - 1, ' ');
+                var5Lifetime1 = var5Lifetime1 - we.field_k.textWidth(var30);
+                if (we.field_k.textWidth(io.field_h.toString()) > var5Lifetime1) {
+                  lo.resizeAndPad(-26750, io.field_h, io.field_h.length() - 1, ' ');
                 }
                 return true;
               }
               if (!nh.field_Sb) {
                 var26 = "[" + sk.a(new String[]{qb.field_N.field_ec}, GameKeyHandler.field_e, 120) + "] ";
                 var27 = var26 + var19 + ": ";
-                var5Lifetime1 = var5Lifetime1 - we.field_k.b(var27);
-                if (we.field_k.b(io.field_h.toString()) > var5Lifetime1) {
-                  lo.a(-26750, io.field_h, io.field_h.length() - 1, ' ');
+                var5Lifetime1 = var5Lifetime1 - we.field_k.textWidth(var27);
+                if (we.field_k.textWidth(io.field_h.toString()) > var5Lifetime1) {
+                  lo.resizeAndPad(-26750, io.field_h, io.field_h.length() - 1, ' ');
                 }
                 return true;
               }
               if (null != ec.field_h) {
                 var24 = "[" + ec.field_h + "] ";
                 var25 = var24 + var19 + ": ";
-                var5Lifetime1 = var5Lifetime1 - we.field_k.b(var25);
-                if (we.field_k.b(io.field_h.toString()) > var5Lifetime1) {
-                  lo.a(-26750, io.field_h, io.field_h.length() - 1, ' ');
+                var5Lifetime1 = var5Lifetime1 - we.field_k.textWidth(var25);
+                if (we.field_k.textWidth(io.field_h.toString()) > var5Lifetime1) {
+                  lo.resizeAndPad(-26750, io.field_h, io.field_h.length() - 1, ' ');
                 }
                 return true;
               }
               var28 = "[" + sk.a(new String[]{qb.field_N.field_ec}, GameKeyHandler.field_e, 120) + "] ";
               var7 = var28;
               var29 = var28 + var19 + ": ";
-              var5Lifetime1 = var5Lifetime1 - we.field_k.b(var29);
-              if (we.field_k.b(io.field_h.toString()) > var5Lifetime1) {
-                lo.a(-26750, io.field_h, io.field_h.length() - 1, ' ');
+              var5Lifetime1 = var5Lifetime1 - we.field_k.textWidth(var29);
+              if (we.field_k.textWidth(io.field_h.toString()) > var5Lifetime1) {
+                lo.resizeAndPad(-26750, io.field_h, io.field_h.length() - 1, ' ');
               }
               return true;
             }
@@ -182,48 +182,48 @@ final class ug extends nb {
             if (!nh.field_Sb) {
               var33 = "[" + sk.a(new String[]{qb.field_N.field_ec}, GameKeyHandler.field_e, 120) + "] ";
               var34 = var33 + var19 + ": ";
-              var5Lifetime1 = var5Lifetime1 - we.field_k.b(var34);
-              if (we.field_k.b(io.field_h.toString()) > var5Lifetime1) {
-                lo.a(-26750, io.field_h, io.field_h.length() - 1, ' ');
+              var5Lifetime1 = var5Lifetime1 - we.field_k.textWidth(var34);
+              if (we.field_k.textWidth(io.field_h.toString()) > var5Lifetime1) {
+                lo.resizeAndPad(-26750, io.field_h, io.field_h.length() - 1, ' ');
               }
               return true;
             }
             if (null != ec.field_h) {
               var31 = "[" + ec.field_h + "] ";
               var32 = var31 + var19 + ": ";
-              var5Lifetime1 = var5Lifetime1 - we.field_k.b(var32);
-              if (we.field_k.b(io.field_h.toString()) > var5Lifetime1) {
-                lo.a(-26750, io.field_h, io.field_h.length() - 1, ' ');
+              var5Lifetime1 = var5Lifetime1 - we.field_k.textWidth(var32);
+              if (we.field_k.textWidth(io.field_h.toString()) > var5Lifetime1) {
+                lo.resizeAndPad(-26750, io.field_h, io.field_h.length() - 1, ' ');
               }
               return true;
             }
             var35 = "[" + sk.a(new String[]{qb.field_N.field_ec}, GameKeyHandler.field_e, 120) + "] ";
             var7 = var35;
             var36 = var35 + var19 + ": ";
-            var5Lifetime1 = var5Lifetime1 - we.field_k.b(var36);
-            if (we.field_k.b(io.field_h.toString()) > var5Lifetime1) {
-              lo.a(-26750, io.field_h, io.field_h.length() - 1, ' ');
+            var5Lifetime1 = var5Lifetime1 - we.field_k.textWidth(var36);
+            if (we.field_k.textWidth(io.field_h.toString()) > var5Lifetime1) {
+              lo.resizeAndPad(-26750, io.field_h, io.field_h.length() - 1, ' ');
             }
             return true;
           }
           var37 = var7 + var19 + ": ";
-          var5Lifetime1 = var5Lifetime1 - we.field_k.b(var37);
+          var5Lifetime1 = var5Lifetime1 - we.field_k.textWidth(var37);
         } else {
           var39 = (CharSequence) ((Object) ka.field_m);
           var18 = sk.a(new String[]{p.a(var39, (byte) 43)}, vd.field_b, param0 ^ 94);
           var8 = sk.a(new String[]{var16}, IntrusiveNode.field_h, 127);
-          var9 = we.field_k.b(var18);
-          var10 = we.field_k.b(var8);
+          var9 = we.field_k.textWidth(var18);
+          var10 = we.field_k.textWidth(var8);
           if (var9 > var10) {
             var5Lifetime1 = var5Lifetime1 - var9;
           } else {
             var5Lifetime1 = var5Lifetime1 - var10;
           }
         }
-        if (we.field_k.b(io.field_h.toString()) <= var5Lifetime1) {
+        if (we.field_k.textWidth(io.field_h.toString()) <= var5Lifetime1) {
           return true;
         }
-        lo.a(-26750, io.field_h, io.field_h.length() - 1, ' ');
+        lo.resizeAndPad(-26750, io.field_h, io.field_h.length() - 1, ' ');
         return true;
     }
 
@@ -233,7 +233,7 @@ final class ug extends nb {
         try {
           this.field_Y = param1;
           if (this.field_Y != null) {
-            var3_int = ab.field_V.b(this.field_Y, 260, ab.field_V.field_N);
+            var3_int = ab.field_V.paragraphHeight(this.field_Y, 260, ab.field_V.field_N);
             this.a(300, (byte) 122, var3_int + 150);
           }
           this.field_db = new lg(13, 50, 274, 30, 15, 2113632, 4210752);
@@ -242,7 +242,7 @@ final class ug extends nb {
           this.field_db.field_K = true;
           this.c(this.field_db, 10);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "ug.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "ug.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -314,7 +314,7 @@ final class ug extends nb {
         return PacketBuffer.field_r;
     }
 
-    public static void f(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_ab = null;
         field_bb = null;
         field_X = null;
@@ -325,13 +325,13 @@ final class ug extends nb {
           return;
         }
         String var2 = (String) null;
-        ug.a(-50L, (String) null, false, (String) null, 121);
+        ug.createLoginCredentials(-50L, (String) null, false, (String) null, 121);
         field_ib = null;
         field_hb = null;
         field_cb = null;
     }
 
-    final static Sprite a(Archive param0, byte param1, String param2, String param3) {
+    final static Sprite loadFontByName(Archive param0, byte param1, String param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -374,7 +374,7 @@ final class ug extends nb {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -425,11 +425,11 @@ final class ug extends nb {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final void e(boolean param0) {
+    final void setStopAnimatingWhenNormal(boolean param0) {
         this.field_gb = param0 ? true : false;
         this.field_db.field_K = false;
     }
@@ -437,18 +437,18 @@ final class ug extends nb {
     final static void a(int param0, Archive param1) {
         ag var2 = null;
         try {
-          ag.a(param1.a("headers.packvorbis", "", true));
+          ag.decodeSetup(param1.a("headers.packvorbis", "", true));
           if (param0 < 80) {
-            ug.f(true);
+            ug.releaseStatics(true);
           }
-          var2 = ag.a(param1, "jagex logo2.packvorbis", "");
-          var2.b();
+          var2 = ag.load(param1, "jagex logo2.packvorbis", "");
+          var2.decodeAllToPcm();
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "ug.U(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "ug.U(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static hm a(long param0, String param1, boolean param2, String param3, int param4) {
+    final static hm createLoginCredentials(long param0, String param1, boolean param2, String param3, int param4) {
         RuntimeException var6 = null;
         gg stackIn_3_0 = null;
         gl stackIn_7_0 = null;
@@ -492,17 +492,17 @@ final class ug extends nb {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param4).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param4).append(')').toString());
         }
     }
 
     final void b(int param0, int param1, int param2) {
         super.b(param0, 82, param2);
-        ab.field_V.a(this.field_fb, (this.field_F >> 1) + param2, 103 + param0, 16777215, -1);
+        ab.field_V.drawCentered(this.field_fb, (this.field_F >> 1) + param2, 103 + param0, 16777215, -1);
         if (param1 >= 66) {
           if (null != this.field_Y) {
-            SoftwareRasterizer.g(20 + param2, param0 + 113, 260, 8421504);
-            ab.field_V.a(this.field_Y, param2 + 20, 8 + (param0 + 120), 260, 100, 16777215, -1, 1, 0, ab.field_V.field_N);
+            SoftwareRasterizer.drawHorizontalLine(20 + param2, param0 + 113, 260, 8421504);
+            ab.field_V.drawParagraph(this.field_Y, param2 + 20, 8 + (param0 + 120), 260, 100, 16777215, -1, 1, 0, ab.field_V.field_N);
           }
           return;
         }

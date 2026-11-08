@@ -26,14 +26,14 @@ final class r extends PcmStream {
             this.field_C = (ri) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "r.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "r.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     final static void a(Archive param0, Archive param1, boolean param2, boolean param3) {
         try {
           IntrusiveDequeCursor.a(0, NotificationToast.field_n, t.field_o, uf.field_g, u.field_b, sd.field_rb, tn.field_b, bk.field_i, param3, rh.field_N, NotificationToast.field_o, qc.field_cb);
-          ec.field_n = bf.a((byte) -99, param0, "lobby", "chatfilter");
+          ec.field_n = bf.loadSpritesByName((byte) -99, param0, "lobby", "chatfilter");
           gk.field_a[0] = IsaacCipher.field_h;
           gk.field_a[2] = mk.field_f;
           gk.field_a[1] = am.field_a;
@@ -42,24 +42,24 @@ final class r extends PcmStream {
             field_v = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "r.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "r.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skipFrames(int param0) {
         int var3;
         var3 = TetraLink.field_J;
         if (this.field_z > 0 &&
           null != this.field_y) {
-          this.field_A.a(param0);
+          this.field_A.skipFrames(param0);
         }
         if (1048576 > this.field_z &&
           null != this.field_s) {
-          this.field_u.a(param0);
+          this.field_u.skipFrames(param0);
         }
         if (this.field_D > 0 &&
           null != this.field_C) {
-          this.field_t.a(param0);
+          this.field_t.skipFrames(param0);
         }
         if (this.field_w) {
           if (this.field_r > 0 &&
@@ -106,7 +106,7 @@ final class r extends PcmStream {
         }
     }
 
-    final static void a(PlatformTaskDispatcher param0, java.awt.Frame param1, int param2) {
+    final static void exitFullscreenAndDisposeFrame(PlatformTaskDispatcher param0, java.awt.Frame param1, int param2) {
         AsyncRequest var3 = null;
         int var4 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -151,7 +151,7 @@ final class r extends PcmStream {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -197,7 +197,7 @@ final class r extends PcmStream {
           }
           if (param5 > -120) {
             var9 = (int[]) null;
-            this.b((int[]) null, -67, 0);
+            this.mixInto((int[]) null, -67, 0);
           }
           stackIn_22_1 = (param2);
           this.field_w = stackIn_22_1;
@@ -257,7 +257,7 @@ final class r extends PcmStream {
           } else {
             stackIn_61_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_60_0), ((StringBuilder) (Object) stackIn_60_1).append(stackIn_61_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_60_0), ((StringBuilder) (Object) stackIn_60_1).append(stackIn_61_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -270,7 +270,7 @@ final class r extends PcmStream {
         return stackIn_6_0;
     }
 
-    final void b(int[] param0, int param1, int param2) {
+    final void mixInto(int[] param0, int param1, int param2) {
         int localTemp$0 = 0;
         int localTemp$1 = 0;
         int var10 = 0;
@@ -294,7 +294,7 @@ final class r extends PcmStream {
         var11 = TetraLink.field_J;
         try {
           if (this.field_E <= 0) {
-            this.a(param2);
+            this.skipFrames(param2);
             return;
           }
           if (this.field_w) {
@@ -351,19 +351,19 @@ final class r extends PcmStream {
           if (256 > this.field_D && (null != this.field_y ||
             null != this.field_s)) {
             if (var4_int == 256) {
-              this.field_A.b(param0, param1, param2);
+              this.field_A.mixInto(param0, param1, param2);
             } else {
               if (var5 != 256) {
                 if (null != this.field_x &&
                   this.field_x.length >= var6) {
-                  rd.a(this.field_x, 0, var6);
-                  rd.a(this.field_F, 0, var6);
+                  rd.clear(this.field_x, 0, var6);
+                  rd.clear(this.field_F, 0, var6);
                 } else {
                   this.field_F = new int[var6];
                   this.field_x = new int[var6];
                 }
-                this.field_A.b(this.field_x, 0, param2);
-                this.field_u.b(this.field_F, 0, param2);
+                this.field_A.mixInto(this.field_x, 0, param2);
+                this.field_u.mixInto(this.field_F, 0, param2);
                 if (nk.field_s) {
                   localTemp$0 = param1 << 1;
                   param1 = localTemp$0;
@@ -376,7 +376,7 @@ final class r extends PcmStream {
                   param0[var7 + var8] = param0[var7 + var8] + (var5 * this.field_F[var8] + this.field_x[var8] * var4_int >> 8);
                 }
               } else {
-                this.field_u.b(param0, param1, param2);
+                this.field_u.mixInto(param0, param1, param2);
               }
             }
           }
@@ -386,12 +386,12 @@ final class r extends PcmStream {
             }
             if (this.field_x != null &&
               this.field_x.length >= var6) {
-              rd.a(this.field_x, 0, var6);
+              rd.clear(this.field_x, 0, var6);
             } else {
               this.field_x = new int[var6];
               this.field_F = new int[var6];
             }
-            this.field_t.b(this.field_x, 0, param2);
+            this.field_t.mixInto(this.field_x, 0, param2);
             if (!nk.field_s) {
               stackIn_63_0 = param1;
             } else {
@@ -417,11 +417,11 @@ final class r extends PcmStream {
           } else {
             stackIn_70_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = 57 / ((-10 - param0) / 44);
         field_v = null;
     }
@@ -433,11 +433,11 @@ final class r extends PcmStream {
         }
     }
 
-    final synchronized int a() {
+    final synchronized int activity() {
         return 2;
     }
 
-    final PcmStream b() {
+    final PcmStream firstSubStream() {
         return null;
     }
 
@@ -471,7 +471,7 @@ final class r extends PcmStream {
             var5 < fh.field_a) {
             var10_int = fh.a((byte) 79, var8_ref_fj.field_i);
             if (var8_ref_fj.a((byte) -63) >= var10_int && (var8_ref_fj.field_l ||
-              !sb.a((byte) 2, var8_ref_fj.field_n))) {
+              !sb.areAllGroupsReady((byte) 2, var8_ref_fj.field_n))) {
               var9 = 1;
             }
           }
@@ -482,7 +482,7 @@ final class r extends PcmStream {
                 lb.field_R = lb.field_R + 1;
               }
               var10 = u.a(18440, var8_ref_fj);
-              var11 = var10 + BitmapFont.c(var8_ref_fj.field_h);
+              var11 = var10 + BitmapFont.escapeMarkup(var8_ref_fj.field_h);
               var12 = fi.a((byte) 100, var8_ref_fj);
               var8_ref_fj.field_f = new hl(0L, ll.field_A, var11);
               var6 = var6 + param2;
@@ -535,7 +535,7 @@ final class r extends PcmStream {
         return (fj) (var4);
     }
 
-    final PcmStream c() {
+    final PcmStream nextSubStream() {
         return null;
     }
 

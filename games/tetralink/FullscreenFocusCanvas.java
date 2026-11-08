@@ -16,12 +16,12 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
     final static void a(int param0, int param1, int param2, byte param3, int param4) {
         if (param3 == -79) {
           nm.b((byte) 75);
-          SoftwareRasterizer.b(param4, param2, param0, param1);
+          SoftwareRasterizer.intersectClip(param4, param2, param0, param1);
           return;
         }
         FullscreenFocusCanvas.a(20, -54, 32, (byte) 91, -80);
         nm.b((byte) 75);
-        SoftwareRasterizer.b(param4, param2, param0, param1);
+        SoftwareRasterizer.intersectClip(param4, param2, param0, param1);
     }
 
     public final void paint(java.awt.Graphics param0) {
@@ -33,13 +33,13 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
             java.awt.Graphics var4 = (java.awt.Graphics) null;
             this.paint((java.awt.Graphics) null);
           }
-          r.a(param1, this.field_d, 0);
+          r.exitFullscreenAndDisposeFrame(param1, this.field_d, 0);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "kl.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "kl.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_e = null;
         if (param0 >= -87) {
           return;
@@ -58,7 +58,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         try {
           this.field_c = true;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "kl.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "kl.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

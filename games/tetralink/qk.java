@@ -84,7 +84,7 @@ final class qk {
         wa.a(-1979588528, param10, param2, param15, param9, param4, param7, param12, param8, param0, param5, param11, param6, param13, param3, param14, SoftwareRasterizer.field_b);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_d = null;
         field_c = null;
@@ -128,13 +128,13 @@ final class qk {
           stackIn_6_3 = (!wk.field_i.field_n) ? 2 : 0;
           ((cl) (Object) stackIn_5_0).a(stackIn_5_1, stackIn_5_2, stackIn_6_3);
           if (param1 != -1) {
-            pn.a(param1, 256, 16769381, false, false);
+            pn.pixelate(param1, 256, 16769381, false, false);
           }
           if (!wk.field_i.field_n) {
-            rh.field_M.c();
+            rh.field_M.makeRasterTarget();
             kk.field_X[param4].a(false, param2, 1);
             if (-1 != param1) {
-              pn.a(param1, 256, 16769381, false, false);
+              pn.pixelate(param1, 256, 16769381, false, false);
             }
           }
           fh.a(true);
@@ -218,7 +218,7 @@ final class qk {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 

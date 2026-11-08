@@ -9,10 +9,10 @@ final class ck extends fk {
     private vm field_db;
     private Sprite field_cb;
 
-    public static void f(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_bb = null;
         if (param0 < 119) {
-          ck.f((byte) -66);
+          ck.releaseStatics((byte) -66);
           field_Z = null;
           return;
         }
@@ -48,11 +48,11 @@ final class ck extends fk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var2_ref), "ck.C(" + param0 + ',' + param1 + ')');
+          throw oi.wrapException((Throwable) ((Object) var2_ref), "ck.C(" + param0 + ',' + param1 + ')');
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         jk var6;
         int var9;
         int var10;
@@ -93,7 +93,7 @@ final class ck extends fk {
             this.field_A = var5;
             this.a(~param0);
           }
-          super.a(param0, param1, param2, param3);
+          super.drawLayer(param0, param1, param2, param3);
           var6 = this.field_db.c(param0 - 113);
           var29 = (jh) ((Object) this.field_H);
           var9 = param1 + this.field_t;
@@ -115,24 +115,24 @@ final class ck extends fk {
                   sk.a((byte) 111, this.field_cb);
                 } else {
                   sk.a((byte) 118, this.field_cb);
-                  SoftwareRasterizer.a();
+                  SoftwareRasterizer.clear();
                 }
               }
             }
-            var24.a(112, 144, var24.field_t << 4, var24.field_F << 4, -this.field_ab << 10, 4096);
+            var24.drawRotatedAboutPivot(112, 144, var24.field_t << 4, var24.field_F << 4, -this.field_ab << 10, 4096);
             dh.a(-581);
-            this.field_cb.b(var9 - (var24.field_t >> 1), var10 - var24.field_F, 256);
+            this.field_cb.drawAdditive(var9 - (var24.field_t >> 1), var10 - var24.field_F, 256);
             return;
           }
           if (var6 != ug.field_cb) {
             if (db.field_h == var6) {
               var26 = fj.field_q[2];
-              var26.b(var9, -(var26.field_E >> 1) + var10, 256);
+              var26.drawAdditive(var9, -(var26.field_E >> 1) + var10, 256);
               return;
             }
             if (pf.field_a == var6) {
               var27 = fj.field_q[1];
-              var27.b(var9, -(var27.field_E >> 1) + var10, 256);
+              var27.drawAdditive(var9, -(var27.field_E >> 1) + var10, 256);
             }
             return;
           }
@@ -152,13 +152,13 @@ final class ck extends fk {
                 sk.a((byte) 111, this.field_cb);
               } else {
                 sk.a((byte) 118, this.field_cb);
-                SoftwareRasterizer.a();
+                SoftwareRasterizer.clear();
               }
             }
           }
-          var23.a(112, 144, var23.field_t << 4, var23.field_F << 4, -this.field_ab << 10, 4096);
+          var23.drawRotatedAboutPivot(112, 144, var23.field_t << 4, var23.field_F << 4, -this.field_ab << 10, 4096);
           dh.a(-581);
-          this.field_cb.b(var9 - (var23.field_t >> 1), var10 - var23.field_F, 256);
+          this.field_cb.drawAdditive(var9 - (var23.field_t >> 1), var10 - var23.field_F, 256);
           return;
         }
         var17 = df.field_a;
@@ -166,7 +166,7 @@ final class ck extends fk {
           this.field_A = var17;
           this.a(~param0);
         }
-        super.a(param0, param1, param2, param3);
+        super.drawLayer(param0, param1, param2, param3);
         var6Lifetime1 = this.field_db.c(param0 - 113);
         var28 = (jh) ((Object) this.field_H);
         var9Lifetime1 = param1 + this.field_t;
@@ -175,11 +175,11 @@ final class ck extends fk {
           var6Lifetime1 != ug.field_cb) {
           if (db.field_h == var6Lifetime1) {
             var20 = fj.field_q[2];
-            var20.b(var9Lifetime1, -(var20.field_E >> 1) + var10Lifetime1, 256);
+            var20.drawAdditive(var9Lifetime1, -(var20.field_E >> 1) + var10Lifetime1, 256);
           } else {
             if (pf.field_a == var6Lifetime1) {
               var21 = fj.field_q[1];
-              var21.b(var9Lifetime1, -(var21.field_E >> 1) + var10Lifetime1, 256);
+              var21.drawAdditive(var9Lifetime1, -(var21.field_E >> 1) + var10Lifetime1, 256);
             }
           }
         } else {
@@ -190,27 +190,27 @@ final class ck extends fk {
             this.field_cb.field_u >= var11Lifetime1 &&
             var12Lifetime1 <= this.field_cb.field_E) {
             sk.a((byte) 118, this.field_cb);
-            SoftwareRasterizer.a();
+            SoftwareRasterizer.clear();
           } else {
             this.field_cb = new Sprite(var11Lifetime1, var12Lifetime1);
             sk.a((byte) 111, this.field_cb);
           }
-          var19.a(112, 144, var19.field_t << 4, var19.field_F << 4, -this.field_ab << 10, 4096);
+          var19.drawRotatedAboutPivot(112, 144, var19.field_t << 4, var19.field_F << 4, -this.field_ab << 10, 4096);
           dh.a(-581);
-          this.field_cb.b(var9Lifetime1 - (var19.field_t >> 1), var10Lifetime1 - var19.field_F, 256);
+          this.field_cb.drawAdditive(var9Lifetime1 - (var19.field_t >> 1), var10Lifetime1 - var19.field_F, 256);
         }
     }
 
-    final void a(UiWidget param0, int param1, int param2, boolean param3) {
+    final void updatePointer(UiWidget param0, int param1, int param2, boolean param3) {
         try {
           this.field_ab = this.field_ab + 1;
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "ck.MA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "ck.MA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    final boolean a(UiWidget param0, int param1) {
+    final boolean focusNext(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -232,7 +232,7 @@ final class ck extends fk {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -243,7 +243,7 @@ final class ck extends fk {
         jd.a((byte) -55, param1, false);
     }
 
-    final String e(int param0) {
+    final String getTooltip(int param0) {
         if (param0 == 0) {
           return null;
         }
@@ -258,7 +258,7 @@ final class ck extends fk {
           this.field_db = param0;
           this.a(param5, param3, -122, param2, param4);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "ck.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "ck.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

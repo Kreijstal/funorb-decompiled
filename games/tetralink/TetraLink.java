@@ -12,305 +12,305 @@ public final class TetraLink extends ph {
     public static int field_J;
 
     final void releaseStaticResources(int param0) {
-        TetraLink.p(10297);
-        NotificationToast.b((byte) -64);
-        IntrusiveNode.b(20043);
-        IntrusiveDeque.b((byte) 25);
+        TetraLink.releaseStatics(10297);
+        NotificationToast.releaseStatics((byte) -64);
+        IntrusiveNode.releaseStatics(20043);
+        IntrusiveDeque.releaseStatics((byte) 25);
         kj.a(param0 ^ param0);
-        sn.a(-127);
+        sn.releaseStatics(-127);
         ma.d(-3);
-        tb.a((byte) -123);
-        ao.a(true);
-        ib.a(27204);
-        rf.b(127);
-        GameKeyHandler.a((byte) -70);
-        jj.a(param0 - 1320);
-        cd.a((byte) 67);
-        lf.a(true);
+        tb.releaseStatics((byte) -123);
+        ao.releaseStatics(true);
+        ib.releaseStatics(27204);
+        rf.releaseStatics(127);
+        GameKeyHandler.releaseStatics((byte) -70);
+        jj.releaseStatics(param0 - 1320);
+        cd.releaseStatics((byte) 67);
+        lf.releaseStatics(true);
         gi.a(14914);
-        bj.a(-28);
-        ph.o(param0 ^ -1328);
-        ClientException.a(true);
+        bj.releaseStatics(-28);
+        ph.releaseStatics(param0 ^ -1328);
+        ClientException.releaseStatics(true);
         GameApplet.e(6);
-        UrlFetchTask.a(-2);
-        MouseInputHandler.a(param0 ^ 1322);
-        MouseWheelInput.b(-1);
-        SoftwareRasterizer.b();
-        Archive.d(16);
-        BitmapFont.a();
-        gh.a(126);
-        PacketBuffer.c(true);
-        k.b(-14243);
-        jg.a(true);
-        da.a(param0 - 1333);
-        ai.a(param0 ^ 12618);
-        lo.a(4666);
-        e.b((byte) 83);
-        fm.a(-35);
-        ic.b((byte) 88);
-        im.a((byte) -109);
-        fj.a(param0 ^ 1316);
-        nj.a((byte) 122);
-        uh.a((byte) 41);
-        RasterBuffer.a((byte) -20);
-        wh.a(false);
-        FullscreenFocusCanvas.a((byte) -117);
-        i.a(false);
+        UrlFetchTask.releaseStatics(-2);
+        MouseInputHandler.releaseStatics(param0 ^ 1322);
+        MouseWheelInput.releaseStatics(-1);
+        SoftwareRasterizer.releaseStatics();
+        Archive.releaseStatics(16);
+        BitmapFont.releaseStatics();
+        gh.releaseStatics(126);
+        PacketBuffer.releaseStatics(true);
+        k.releaseStatics(-14243);
+        jg.releaseStatics(true);
+        da.releaseStatics(param0 - 1333);
+        ai.releaseStatics(param0 ^ 12618);
+        lo.releaseStatics(4666);
+        e.releaseStatics((byte) 83);
+        fm.releaseStatics(-35);
+        ic.releaseStatics((byte) 88);
+        im.releaseStatics((byte) -109);
+        fj.releaseStatics(param0 ^ 1316);
+        nj.releaseStatics((byte) 122);
+        uh.releaseStatics((byte) 41);
+        RasterBuffer.releaseStatics((byte) -20);
+        wh.releaseStatics(false);
+        FullscreenFocusCanvas.releaseStatics((byte) -117);
+        i.releaseStatics(false);
         SoundEffectLibrary.b(-2);
         th.a(121);
-        ke.a(param0 ^ 1327);
+        ke.releaseStatics(param0 ^ 1327);
         ni.c((byte) 107);
         p.b((byte) -94);
         BufferedSocket.b(-26787);
-        cl.d(-119);
-        ei.b(false);
-        wg.a(6945);
-        Model.d();
-        ti.a(2);
+        cl.releaseStatics(-119);
+        ei.releaseStatics(false);
+        wg.releaseStatics(6945);
+        Model.releaseStatics();
+        ti.releaseStatics(2);
         SpriteState.f(21);
-        DualLinkNode.d(105);
-        fe.a(-1);
-        rl.a(14236);
-        bb.b(-578);
-        mi.h(0);
-        bl.e((byte) 124);
-        uk.b((byte) -96);
-        hl.g(-31057);
+        DualLinkNode.releaseStatics(105);
+        fe.releaseStatics(-1);
+        rl.releaseStatics(14236);
+        bb.releaseStatics(-578);
+        mi.releaseStatics(0);
+        bl.releaseStatics((byte) 124);
+        uk.releaseStatics((byte) -96);
+        hl.releaseStatics(-31057);
         aa.h(-2);
-        ji.d((byte) 116);
-        pf.a((byte) 86);
-        rb.d((byte) -127);
-        om.c(true);
-        gd.h(11042);
-        tk.a(-161);
-        s.a(63);
-        lc.a(120);
-        vf.b((byte) -41);
+        ji.releaseStatics((byte) 116);
+        pf.releaseStatics((byte) 86);
+        rb.releaseStatics((byte) -127);
+        om.releaseStatics(true);
+        gd.releaseStatics(11042);
+        tk.releaseStatics(-161);
+        s.releaseStatics(63);
+        lc.releaseStatics(120);
+        vf.releaseStatics((byte) -41);
         nh.c(false);
-        mk.a(param0 - 1324);
+        mk.releaseStatics(param0 - 1324);
         el.i(0);
-        vn.a();
-        ja.a((byte) 99);
+        vn.releaseStatics();
+        ja.releaseStatics((byte) 99);
         dh.a((byte) -55);
-        vh.a(126);
-        ce.a((byte) 51);
-        io.a(false);
-        oe.a(true);
-        jl.b(param0 ^ -26264);
-        f.c((byte) 87);
-        pc.a();
-        g.c((byte) 118);
-        dj.a((byte) 38);
-        oc.c(param0 ^ 1322);
-        wj.b();
-        wn.c(param0 ^ 19100);
-        nk.e();
-        r.c(-59);
-        rn.a((byte) 99);
+        vh.releaseStatics(126);
+        ce.releaseStatics((byte) 51);
+        io.releaseStatics(false);
+        oe.releaseStatics(true);
+        jl.releaseStatics(param0 ^ -26264);
+        f.releaseStatics((byte) 87);
+        pc.releaseStatics();
+        g.releaseStatics((byte) 118);
+        dj.releaseStatics((byte) 38);
+        oc.releaseStatics(param0 ^ 1322);
+        wj.releaseStatics();
+        wn.releaseStatics(param0 ^ 19100);
+        nk.releaseStatics();
+        r.releaseStatics(-59);
+        rn.releaseStatics((byte) 99);
         of.g(-126);
-        ve.a(param0 ^ 1365);
-        jm.a(90);
-        ak.b(param0 - 1415);
-        ac.a((byte) -100);
-        gm.a(0);
-        t.a(param0 ^ 1345);
-        go.b((byte) 57);
-        hk.b(8);
-        kn.a(true);
-        hh.a((byte) 126);
-        WidgetContainer.h(param0 - 1324);
-        fi.g((byte) -22);
-        ug.f(false);
-        sd.p(-32527);
-        lk.f((byte) 100);
-        ho.a(112);
-        qb.a(param0 ^ 1403);
-        tl.i(20);
-        fn.e((byte) 84);
-        hb.b(-125);
-        wk.a(param0 ^ 1323);
-        sc.a(param0 + 25418);
-        ik.b(-137);
+        ve.releaseStatics(param0 ^ 1365);
+        jm.releaseStatics(90);
+        ak.releaseStatics(param0 - 1415);
+        ac.releaseStatics((byte) -100);
+        gm.releaseStatics(0);
+        t.releaseStatics(param0 ^ 1345);
+        go.releaseStatics((byte) 57);
+        hk.releaseStatics(8);
+        kn.releaseStatics(true);
+        hh.releaseStatics((byte) 126);
+        WidgetContainer.releaseStatics(param0 - 1324);
+        fi.releaseStatics((byte) -22);
+        ug.releaseStatics(false);
+        sd.releaseStatics(-32527);
+        lk.releaseStatics((byte) 100);
+        ho.releaseStatics(112);
+        qb.releaseStatics(param0 ^ 1403);
+        tl.releaseStatics(20);
+        fn.releaseStatics((byte) 84);
+        hb.releaseStatics(-125);
+        wk.releaseStatics(param0 ^ 1323);
+        sc.releaseStatics(param0 + 25418);
+        ik.releaseStatics(-137);
         fh.a((byte) -48);
-        pm.a(-85);
-        tn.a(param0 - 1324);
-        wa.a((byte) -123);
-        gj.a(-12359);
-        eo.a((byte) -109);
-        pi.a((byte) -62);
-        df.a((byte) -108);
-        hm.a(118);
-        BitPacketBuffer.j(29313);
-        IsaacCipher.a((byte) 125);
-        kd.a(-84);
-        me.b((byte) -92);
-        l.b(9);
-        MatchSetup.f(-86);
+        pm.releaseStatics(-85);
+        tn.releaseStatics(param0 - 1324);
+        wa.releaseStatics((byte) -123);
+        gj.releaseStatics(-12359);
+        eo.releaseStatics((byte) -109);
+        pi.releaseStatics((byte) -62);
+        df.releaseStatics((byte) -108);
+        hm.releaseStatics(118);
+        BitPacketBuffer.releaseStatics(29313);
+        IsaacCipher.releaseStatics((byte) 125);
+        kd.releaseStatics(-84);
+        me.releaseStatics((byte) -92);
+        l.releaseStatics(9);
+        MatchSetup.releaseStatics(-86);
         lb.h(param0 ^ 1322);
-        vi.b(117);
-        sb.a((byte) -30);
-        nd.h(param0 ^ 2106634);
+        vi.releaseStatics(117);
+        sb.releaseStatics((byte) -30);
+        nd.releaseStatics(param0 ^ 2106634);
         oi.a(-49);
-        qj.a((byte) -78);
-        mj.b();
-        nm.c((byte) 6);
-        RandomAccessCacheFile.b((byte) -112);
-        ua.c(-1);
-        pj.a(39);
-        pg.a(false);
-        pd.e(param0 - 1322);
-        DualLinkDeque.a(21332);
-        rh.g(-84);
-        sk.c(29187);
-        fd.h(-1);
-        bo.c(-251);
-        am.a(true);
-        ll.b((byte) 125);
-        wl.a(-101);
-        qc.e((byte) -128);
-        al.a((byte) -93);
-        ag.a();
-        rm.a((byte) -16);
-        id.a(338);
-        b.a((byte) 41);
-        nc.a(105);
-        an.a(param0 ^ -14345);
-        bd.a((byte) 119);
-        on.a(-10457);
-        DelegatingCanvas.a(-108);
-        qf.a(false);
-        qm.a(false);
-        jd.b(-84);
-        sl.a();
-        cm.b((byte) 28);
-        pe.a(true);
-        mn.a(-119);
-        og.a(-17479);
-        qn.a(24468);
-        cc.a(-114);
-        dc.b(82);
-        hi.a((byte) 91);
+        qj.releaseStatics((byte) -78);
+        mj.releaseStatics();
+        nm.releaseStatics((byte) 6);
+        RandomAccessCacheFile.releaseStatics((byte) -112);
+        ua.releaseStatics(-1);
+        pj.releaseStatics(39);
+        pg.releaseStatics(false);
+        pd.releaseStatics(param0 - 1322);
+        DualLinkDeque.releaseStatics(21332);
+        rh.releaseStatics(-84);
+        sk.releaseStatics(29187);
+        fd.releaseStatics(-1);
+        bo.releaseStatics(-251);
+        am.releaseStatics(true);
+        ll.releaseStatics((byte) 125);
+        wl.releaseStatics(-101);
+        qc.releaseStatics((byte) -128);
+        al.releaseStatics((byte) -93);
+        ag.releaseStatics();
+        rm.releaseStatics((byte) -16);
+        id.releaseStatics(338);
+        b.releaseStatics((byte) 41);
+        nc.releaseStatics(105);
+        an.releaseStatics(param0 ^ -14345);
+        bd.releaseStatics((byte) 119);
+        on.releaseStatics(-10457);
+        DelegatingCanvas.releaseStatics(-108);
+        qf.releaseStatics(false);
+        qm.releaseStatics(false);
+        jd.releaseStatics(-84);
+        sl.releaseStatics();
+        cm.releaseStatics((byte) 28);
+        pe.releaseStatics(true);
+        mn.releaseStatics(-119);
+        og.releaseStatics(-17479);
+        qn.releaseStatics(24468);
+        cc.releaseStatics(-114);
+        dc.releaseStatics(82);
+        hi.releaseStatics((byte) 91);
         UiWidget.c((byte) 101);
         ae.a(true);
-        en.g(99);
-        nb.n(-463);
-        ld.k(param0 ^ -1365);
-        gn.d(true);
+        en.releaseStatics(99);
+        nb.releaseStatics(-463);
+        ld.releaseStatics(param0 ^ -1365);
+        gn.releaseStatics(true);
         IntrusiveDequeCursor.a(param0 - 1322);
-        qk.a(-30581);
-        cj.b();
-        kf.a(23365);
-        ki.a((byte) -49);
-        vc.a((byte) 118);
-        ga.a(7151);
-        le.j(66);
-        hj.a(param0 ^ 34090);
-        u.b(param0 + 31446);
-        qa.f(param0 - 1322);
+        qk.releaseStatics(-30581);
+        cj.releaseStatics();
+        kf.releaseStatics(23365);
+        ki.releaseStatics((byte) -49);
+        vc.releaseStatics((byte) 118);
+        ga.releaseStatics(7151);
+        le.releaseStatics(66);
+        hj.releaseStatics(param0 ^ 34090);
+        u.releaseStatics(param0 + 31446);
+        qa.releaseStatics(param0 - 1322);
         j.f(4);
-        ec.a((byte) 116);
+        ec.releaseStatics((byte) 116);
         SocketConnector.d(param0 ^ 1322);
         bn.b(-26623);
-        ef.c(-34);
-        ImageProducerRasterBuffer.b(true);
-        pl.a((byte) 63);
-        nl.a(false);
-        ql.a();
-        ch.a(param0 ^ 1375);
-        li.a(255);
-        ui.a(12000);
-        ad.d((byte) 43);
-        vg.e((byte) 102);
-        gk.b(3);
-        ng.a(param0 ^ 1348);
-        lm.a(2);
-        rc.h(0);
-        fo.o(param0 + 28468);
-        nn.e(true);
+        ef.releaseStatics(-34);
+        ImageProducerRasterBuffer.releaseStatics(true);
+        pl.releaseStatics((byte) 63);
+        nl.releaseStatics(false);
+        ql.releaseStatics();
+        ch.releaseStatics(param0 ^ 1375);
+        li.releaseStatics(255);
+        ui.releaseStatics(12000);
+        ad.releaseStatics((byte) 43);
+        vg.releaseStatics((byte) 102);
+        gk.releaseStatics(3);
+        ng.releaseStatics(param0 ^ 1348);
+        lm.releaseStatics(2);
+        rc.releaseStatics(0);
+        fo.releaseStatics(param0 + 28468);
+        nn.releaseStatics(true);
         ml.e((byte) -38);
-        lg.d((byte) -104);
-        n.a(96);
-        fk.g(-24314);
-        ab.e((byte) 59);
-        ck.f((byte) 125);
-        re.a(param0 ^ 1322);
-        um.f(param0 ^ 1322);
-        hg.a(-108);
-        ia.a(-51);
-        qd.d(true);
-        kk.h(2147483647);
+        lg.releaseStatics((byte) -104);
+        n.releaseStatics(96);
+        fk.releaseStatics(-24314);
+        ab.releaseStatics((byte) 59);
+        ck.releaseStatics((byte) 125);
+        re.releaseStatics(param0 ^ 1322);
+        um.releaseStatics(param0 ^ 1322);
+        hg.releaseStatics(-108);
+        ia.releaseStatics(-51);
+        qd.releaseStatics(true);
+        kk.releaseStatics(2147483647);
         qh.d((byte) -34);
-        od.e(false);
-        eg.g(-1);
-        dd.a(0);
-        hn.e((byte) -98);
-        we.c(0);
-        la.c(param0 ^ 1295);
-        vd.a((byte) 83);
-        ed.a(false);
-        te.h(-108);
-        IterableNodeHashTable.a(-4099);
-        SecondaryNodeDeque.a(0);
-        mb.b((byte) -48);
-        db.a(true);
+        od.releaseStatics(false);
+        eg.releaseStatics(-1);
+        dd.releaseStatics(0);
+        hn.releaseStatics((byte) -98);
+        we.releaseStatics(0);
+        la.releaseStatics(param0 ^ 1295);
+        vd.releaseStatics((byte) 83);
+        ed.releaseStatics(false);
+        te.releaseStatics(-108);
+        IterableNodeHashTable.releaseStatics(-4099);
+        SecondaryNodeDeque.releaseStatics(0);
+        mb.releaseStatics((byte) -48);
+        db.releaseStatics(true);
         wc.c((byte) -103);
         ProxySocketConnector.b((byte) -109);
-        si.a();
-        h.a(-74);
-        NodeHashTableIterator.b((byte) 123);
-        SecondaryNodeDequeIterator.a((byte) -125);
-        c.a((byte) 72);
-        kb.a(111);
-        ko.b((byte) -127);
-        qi.a(param0 + 18059);
-        v.b((byte) 103);
+        si.releaseStatics();
+        h.releaseStatics(-74);
+        NodeHashTableIterator.releaseStatics((byte) 123);
+        SecondaryNodeDequeIterator.releaseStatics((byte) -125);
+        c.releaseStatics((byte) 72);
+        kb.releaseStatics(111);
+        ko.releaseStatics((byte) -127);
+        qi.releaseStatics(param0 + 18059);
+        v.releaseStatics((byte) 103);
         bf.a(65364);
-        co.a(22);
-        uj.b((byte) -67);
-        q.a(98);
-        mf.b(false);
-        ci.c(true);
-        ul.a(17);
-        il.e((byte) -16);
-        oa.a(-25731);
-        o.a(-11961);
-        pb.a(127);
-        ud.h(0);
-        in.b(-1);
-        cf.b((byte) 6);
+        co.releaseStatics(22);
+        uj.releaseStatics((byte) -67);
+        q.releaseStatics(98);
+        mf.releaseStatics(false);
+        ci.releaseStatics(true);
+        ul.releaseStatics(17);
+        il.releaseStatics((byte) -16);
+        oa.releaseStatics(-25731);
+        o.releaseStatics(-11961);
+        pb.releaseStatics(127);
+        ud.releaseStatics(0);
+        in.releaseStatics(-1);
+        cf.releaseStatics((byte) 6);
         eh.a(param0 - 1322);
-        rj.b(true);
-        a.a(0);
-        tc.a(true);
-        dl.c(-57);
-        jn.a((byte) 122);
-        uf.a(-11535);
+        rj.releaseStatics(true);
+        a.releaseStatics(0);
+        tc.releaseStatics(true);
+        dl.releaseStatics(-57);
+        jn.releaseStatics((byte) 122);
+        uf.releaseStatics(-11535);
         sj.a(0);
-        ba.h(22);
-        dk.a(-5384);
-        ka.b((byte) 86);
-        gl.d(24943);
-        gg.a(false);
-        bi.a(param0 ^ 1226);
+        ba.releaseStatics(22);
+        dk.releaseStatics(-5384);
+        ka.releaseStatics((byte) 86);
+        gl.releaseStatics(24943);
+        gg.releaseStatics(false);
+        bi.releaseStatics(param0 ^ 1226);
         ej.a(-1);
-        af.a(-119);
-        km.b((byte) -57);
-        hc.a(-95);
-        vj.a(false);
-        bm.b((byte) 112);
-        dg.b(-5549);
-        bk.b(81);
-        tm.g(-62);
-        mm.g(0);
-        lh.g(255);
-        hd.g(-57);
-        w.g(47);
-        cb.d((byte) 80);
-        ok.a(4);
-        va.b((byte) 44);
-        jk.a((byte) 77);
-        d.b((byte) 6);
-        mh.a(-82);
+        af.releaseStatics(-119);
+        km.releaseStatics((byte) -57);
+        hc.releaseStatics(-95);
+        vj.releaseStatics(false);
+        bm.releaseStatics((byte) 112);
+        dg.releaseStatics(-5549);
+        bk.releaseStatics(81);
+        tm.releaseStatics(-62);
+        mm.releaseStatics(0);
+        lh.releaseStatics(255);
+        hd.releaseStatics(-57);
+        w.releaseStatics(47);
+        cb.releaseStatics((byte) 80);
+        ok.releaseStatics(4);
+        va.releaseStatics((byte) 44);
+        jk.releaseStatics((byte) 77);
+        d.releaseStatics((byte) 6);
+        mh.releaseStatics(-82);
         this.notificationQueue = null;
         this.field_y = null;
     }
@@ -344,7 +344,7 @@ public final class TetraLink extends ph {
           return;
         }
         if (!qj.a(4)) {
-          ak.a(0, v.field_w, 100.0f);
+          ak.setBenefitsBorderAndCaption(0, v.field_w, 100.0f);
           kf.a(-8129, (java.awt.Canvas) (var2));
           return;
         }
@@ -381,14 +381,14 @@ public final class TetraLink extends ph {
           } else {
             var4 = hd.field_v + 1;
           }
-          pn.a(var4, 256, 16769381, false, false);
+          pn.pixelate(var4, 256, 16769381, false, false);
         }
         if (!GameKeyHandler.field_b ||
           !nn.field_X) {
           rn.a(hc.c(64), -108);
         }
         if (pj.b((byte) 56)) {
-          SoftwareRasterizer.e(0, 0, SoftwareRasterizer.field_f, SoftwareRasterizer.field_e);
+          SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_f, SoftwareRasterizer.field_e);
           var4Lifetime1 = 14 + dc.a((byte) 117);
           var5 = ia.h(88) + 16;
           jl.a(var5, var4Lifetime1, 480);
@@ -408,8 +408,8 @@ public final class TetraLink extends ph {
                     var5 = 8;
                   }
                 }
-                hl.field_G[var4_ref_ek.field_q].c(8, var5);
-                mk.field_b.b(ui.field_a[var4_ref_ek.field_q], 48, var5 + mk.field_b.field_N, 8437759, -1);
+                hl.field_G[var4_ref_ek.field_q].drawTransparent(8, var5);
+                mk.field_b.drawLeft(ui.field_a[var4_ref_ek.field_q], 48, var5 + mk.field_b.field_N, 8437759, -1);
               }
             } else {
               var4Lifetime1 = 4 + nn.f((byte) -63);
@@ -427,7 +427,7 @@ public final class TetraLink extends ph {
           pm.a(-16711936, (-(256 * ai.field_i) + 4096) / 16);
         }
         if (dd.field_c >= 2) {
-          mk.field_b.b(Integer.toString(tc.field_v), 4, 24, 16777215, -1);
+          mk.field_b.drawLeft(Integer.toString(tc.field_v), 4, 24, 16777215, -1);
         }
         bo.a(0, 0, (java.awt.Canvas) (var2), -2);
         return;
@@ -515,19 +515,19 @@ public final class TetraLink extends ph {
           if (qd.field_P == null) {
             qd.field_P = new Sprite(640, 480);
             bd.a(qd.field_P, param0 - 4);
-            SoftwareRasterizer.c(0, 0, 640, 480, 3158064);
+            SoftwareRasterizer.fillRectangle(0, 0, 640, 480, 3158064);
             var3_int = (dh.field_e % 20480 << 12) % 83886080;
             var4 = SpriteState.field_G;
             var5 = ik.field_a;
             kd.a(320, 240, (byte) -121);
-            ta.a(ka.field_h, new double[]{-768.0, 20.0, 0.0}, new double[]{0.0, 0.0, 1.0}, 600.0, 200.0, ja.field_i, 23967451 + var3_int, 59918628 + var3_int, 0, 16711680, wk.field_i.field_g);
-            ta.a(ka.field_h, new double[]{-768.0 + vh.field_b * 400.0, 20.0, 600.0 + vh.field_b * 400.0}, new double[]{vh.field_b, 0.0, vh.field_b}, 400.0, 200.0, ja.field_i, var3_int + 59918628, var3_int + 83820544, 0, 16711680, wk.field_i.field_g);
-            ta.a(ka.field_h, new double[]{vh.field_b * 400.0 - 768.0, 20.0, -(600.0 + 400.0 * vh.field_b)}, new double[]{-vh.field_b, 0.0, vh.field_b}, 400.0, 200.0, ja.field_i, var3_int, var3_int + 23967451, 0, 16711680, wk.field_i.field_g);
-            mf.field_w.a(bd.field_b, ti.field_d);
+            ta.drawPerspectiveTexturedQuad(ka.field_h, new double[]{-768.0, 20.0, 0.0}, new double[]{0.0, 0.0, 1.0}, 600.0, 200.0, ja.field_i, 23967451 + var3_int, 59918628 + var3_int, 0, 16711680, wk.field_i.field_g);
+            ta.drawPerspectiveTexturedQuad(ka.field_h, new double[]{-768.0 + vh.field_b * 400.0, 20.0, 600.0 + vh.field_b * 400.0}, new double[]{vh.field_b, 0.0, vh.field_b}, 400.0, 200.0, ja.field_i, var3_int + 59918628, var3_int + 83820544, 0, 16711680, wk.field_i.field_g);
+            ta.drawPerspectiveTexturedQuad(ka.field_h, new double[]{vh.field_b * 400.0 - 768.0, 20.0, -(600.0 + 400.0 * vh.field_b)}, new double[]{-vh.field_b, 0.0, vh.field_b}, 400.0, 200.0, ja.field_i, var3_int, var3_int + 23967451, 0, 16711680, wk.field_i.field_g);
+            mf.field_w.drawTransformed(bd.field_b, ti.field_d);
             fh.a(true);
             kd.a(var4, var5, (byte) -121);
           }
-          qd.field_P.b(0, -240 + ik.field_a);
+          qd.field_P.drawOpaque(0, -240 + ik.field_a);
           if (wk.field_i.field_j) {
             var3_intLifetime1 = dh.field_e % 64;
             if (var3_intLifetime1 >= 32) {
@@ -556,8 +556,8 @@ public final class TetraLink extends ph {
             var6_ref_int__[1] = 128 + (var3_intLifetime1Lifetime1 >> 4);
             var17[2] = 80;
             var19[2] = 128;
-            var7 = ta.a(8437759);
-            mj.a(240, 0, 0, var18, var24, var19, var7, var7, var7);
+            var7 = ta.rgbToPackedHsl(8437759);
+            mj.drawTriangle(240, 0, 0, var18, var24, var19, var7, var7, var7);
             var3_intLifetime1Lifetime2 = var18[0];
             var4_ref_int__[0] = var18[1];
             var18[1] = var3_intLifetime1Lifetime2;
@@ -567,7 +567,7 @@ public final class TetraLink extends ph {
             var3_intLifetime1Lifetime4 = var19[0];
             var6_ref_int__[0] = var19[1];
             var19[1] = var3_intLifetime1Lifetime4;
-            mj.a(240, 0, 0, var18, var24, var19, var7, var7, var7);
+            mj.drawTriangle(240, 0, 0, var18, var24, var19, var7, var7, var7);
           }
           if (wk.field_i.field_n) {
             var21 = bl.field_Lb.field_C;
@@ -609,16 +609,16 @@ public final class TetraLink extends ph {
             bd.a(bl.field_Lb, param0 - 4);
             var5_ref_ko = (ko) (eg.field_J.c(false));
             while (var5_ref_ko != null) {
-              rf.a(var5_ref_ko.field_r, var5_ref_ko.field_p, var5_ref_ko.field_n << 3, 10000);
+              rf.drawBubbleDistortion(var5_ref_ko.field_r, var5_ref_ko.field_p, var5_ref_ko.field_n << 3, 10000);
               var5_ref_ko = (ko) (eg.field_J.a((byte) -70));
             }
             fh.a(true);
-            bl.field_Lb.c(SpriteState.field_G - (bl.field_Lb.field_u >> 1), -(bl.field_Lb.field_E >> 1) + ik.field_a);
+            bl.field_Lb.drawTransparent(SpriteState.field_G - (bl.field_Lb.field_u >> 1), -(bl.field_Lb.field_E >> 1) + ik.field_a);
             if (!(wk.field_i.field_l <= 0)) {
-              rf.a(-(bl.field_Lb.field_u >> 1) + SpriteState.field_G, -(bl.field_Lb.field_E >> 1) + ik.field_a, (bl.field_Lb.field_u >> 1) + SpriteState.field_G, -(bl.field_Lb.field_E >> 1) + ik.field_a, 40, wk.field_i.field_l, oi.field_n);
-              rf.a(SpriteState.field_G + (bl.field_Lb.field_u >> 1), -(bl.field_Lb.field_E >> 1) + ik.field_a, (bl.field_Lb.field_u >> 1) + SpriteState.field_G, (bl.field_Lb.field_E >> 1) + ik.field_a, 40, wk.field_i.field_l, oi.field_n);
-              rf.a(SpriteState.field_G + (bl.field_Lb.field_u >> 1), ik.field_a + (bl.field_Lb.field_E >> 1), -(bl.field_Lb.field_u >> 1) + SpriteState.field_G, ik.field_a + (bl.field_Lb.field_E >> 1), 40, wk.field_i.field_l, oi.field_n);
-              rf.a(SpriteState.field_G - (bl.field_Lb.field_u >> 1), (bl.field_Lb.field_E >> 1) + ik.field_a, SpriteState.field_G - (bl.field_Lb.field_u >> 1), ik.field_a - (bl.field_Lb.field_E >> 1), 40, wk.field_i.field_l, oi.field_n);
+              rf.drawGlowingLine(-(bl.field_Lb.field_u >> 1) + SpriteState.field_G, -(bl.field_Lb.field_E >> 1) + ik.field_a, (bl.field_Lb.field_u >> 1) + SpriteState.field_G, -(bl.field_Lb.field_E >> 1) + ik.field_a, 40, wk.field_i.field_l, oi.field_n);
+              rf.drawGlowingLine(SpriteState.field_G + (bl.field_Lb.field_u >> 1), -(bl.field_Lb.field_E >> 1) + ik.field_a, (bl.field_Lb.field_u >> 1) + SpriteState.field_G, (bl.field_Lb.field_E >> 1) + ik.field_a, 40, wk.field_i.field_l, oi.field_n);
+              rf.drawGlowingLine(SpriteState.field_G + (bl.field_Lb.field_u >> 1), ik.field_a + (bl.field_Lb.field_E >> 1), -(bl.field_Lb.field_u >> 1) + SpriteState.field_G, ik.field_a + (bl.field_Lb.field_E >> 1), 40, wk.field_i.field_l, oi.field_n);
+              rf.drawGlowingLine(SpriteState.field_G - (bl.field_Lb.field_u >> 1), (bl.field_Lb.field_E >> 1) + ik.field_a, SpriteState.field_G - (bl.field_Lb.field_u >> 1), ik.field_a - (bl.field_Lb.field_E >> 1), 40, wk.field_i.field_l, oi.field_n);
             }
           }
           var3_ref = (qi) (nd.field_Sb.c(false));
@@ -627,7 +627,7 @@ public final class TetraLink extends ph {
             var6Lifetime1 = 512 + (var3_ref.field_y >> 12);
             var5Lifetime2 = var3_ref.field_v >> 12;
             if (var6Lifetime1 > 0) {
-              SoftwareRasterizer.a((SpriteState.field_G << 4) + (var4Lifetime2 << 13) / var6Lifetime1, (var5Lifetime2 << 13) / var6Lifetime1 + (ik.field_a << 4), 65536 / var6Lifetime1, 5 * var3_ref.field_s / 3, oi.field_n);
+              SoftwareRasterizer.fillRadialPaletteCircle((SpriteState.field_G << 4) + (var4Lifetime2 << 13) / var6Lifetime1, (var5Lifetime2 << 13) / var6Lifetime1 + (ik.field_a << 4), 65536 / var6Lifetime1, 5 * var3_ref.field_s / 3, oi.field_n);
             }
             var3_ref = (qi) (nd.field_Sb.a((byte) -70));
           }
@@ -668,26 +668,26 @@ public final class TetraLink extends ph {
           }
           var4++;
         }
-        SoftwareRasterizer.g(110, var2, 420, 16777215);
-        SoftwareRasterizer.e(110, (var2 + 3) % 400, 420, 16777215, 192);
-        SoftwareRasterizer.e(110, (var2 + 5) % 400, 420, 16777215, 128);
-        SoftwareRasterizer.e(110, (var2 + 9) % 400, 420, 16777215, 64);
-        SoftwareRasterizer.e(110, (150 + var2) % 400, 420, 16777215, 128);
+        SoftwareRasterizer.drawHorizontalLine(110, var2, 420, 16777215);
+        SoftwareRasterizer.drawHorizontalLineAlpha(110, (var2 + 3) % 400, 420, 16777215, 192);
+        SoftwareRasterizer.drawHorizontalLineAlpha(110, (var2 + 5) % 400, 420, 16777215, 128);
+        SoftwareRasterizer.drawHorizontalLineAlpha(110, (var2 + 9) % 400, 420, 16777215, 64);
+        SoftwareRasterizer.drawHorizontalLineAlpha(110, (150 + var2) % 400, 420, 16777215, 128);
         stackIn_13_0Lifetime1 = param0;
         if (stackIn_13_0Lifetime1 <= 4) {
           field_O = (String) null;
         }
-        SoftwareRasterizer.e(110, (153 + var2) % 400, 420, 16777215, 96);
-        SoftwareRasterizer.e(110, (var2 + 155) % 400, 420, 16777215, 64);
-        SoftwareRasterizer.e(110, (var2 + 159) % 400, 420, 16777215, 32);
-        SoftwareRasterizer.e(110, (var2 + 250) % 400, 420, 16777215, 64);
-        SoftwareRasterizer.e(110, (253 + var2) % 400, 420, 16777215, 48);
-        SoftwareRasterizer.e(110, (255 + var2) % 400, 420, 16777215, 32);
-        SoftwareRasterizer.e(110, (259 + var2) % 400, 420, 16777215, 16);
-        SoftwareRasterizer.e(110, (350 + var2) % 400, 420, 16777215, 64);
-        SoftwareRasterizer.e(110, (353 + var2) % 400, 420, 16777215, 48);
-        SoftwareRasterizer.e(110, (355 + var2) % 400, 420, 16777215, 32);
-        SoftwareRasterizer.e(110, (var2 + 359) % 400, 420, 16777215, 16);
+        SoftwareRasterizer.drawHorizontalLineAlpha(110, (153 + var2) % 400, 420, 16777215, 96);
+        SoftwareRasterizer.drawHorizontalLineAlpha(110, (var2 + 155) % 400, 420, 16777215, 64);
+        SoftwareRasterizer.drawHorizontalLineAlpha(110, (var2 + 159) % 400, 420, 16777215, 32);
+        SoftwareRasterizer.drawHorizontalLineAlpha(110, (var2 + 250) % 400, 420, 16777215, 64);
+        SoftwareRasterizer.drawHorizontalLineAlpha(110, (253 + var2) % 400, 420, 16777215, 48);
+        SoftwareRasterizer.drawHorizontalLineAlpha(110, (255 + var2) % 400, 420, 16777215, 32);
+        SoftwareRasterizer.drawHorizontalLineAlpha(110, (259 + var2) % 400, 420, 16777215, 16);
+        SoftwareRasterizer.drawHorizontalLineAlpha(110, (350 + var2) % 400, 420, 16777215, 64);
+        SoftwareRasterizer.drawHorizontalLineAlpha(110, (353 + var2) % 400, 420, 16777215, 48);
+        SoftwareRasterizer.drawHorizontalLineAlpha(110, (355 + var2) % 400, 420, 16777215, 32);
+        SoftwareRasterizer.drawHorizontalLineAlpha(110, (var2 + 359) % 400, 420, 16777215, 16);
         return;
     }
 
@@ -852,7 +852,7 @@ public final class TetraLink extends ph {
           if (ua.field_c == 14) {
             lb.a(e.field_c, 573509761);
             q.b(0);
-            tm.a((byte) -58, 1024, SoundEffectLibrary.a(true), cc.a(2, (byte) -108), qn.field_s.length, ke.a((byte) -95), pl.field_a, ClientException.a(12), 150, cc.a(2000, (byte) -51));
+            tm.initializeLobbyState((byte) -58, 1024, SoundEffectLibrary.a(true), cc.a(2, (byte) -108), qn.field_s.length, ke.a((byte) -95), pl.field_a, ClientException.a(12), 150, cc.a(2000, (byte) -51));
             mi.a(uj.b(false), uh.b(32), 0);
             mi.field_Pb = true;
             ed.field_O = -2;
@@ -1009,7 +1009,7 @@ public final class TetraLink extends ph {
             stackIn_155_0Lifetime2 = ua.field_c;
             stackIn_155_1Lifetime2 = 57;
             if (stackIn_155_0Lifetime2 == stackIn_155_1Lifetime2 &&
-              ej.a(var11[var6_int], 4)) {
+              ej.matchesNormalizedSessionName(var11[var6_int], 4)) {
               var5Lifetime1 = var6_int;
             }
           }
@@ -1029,7 +1029,7 @@ public final class TetraLink extends ph {
             if (var6.field_c) {
               var7 = var6.field_a.field_o[0];
               var8_int = 0;
-              while (ej.a(var7, 4)) {
+              while (ej.matchesNormalizedSessionName(var7, 4)) {
                 var8_int++;
                 var7 = var6.field_a.field_o[var8_int];
               }
@@ -1231,21 +1231,21 @@ public final class TetraLink extends ph {
           var7_int = ua.a(-122, var5);
           ng.field_s = new int[]{var8_int, var10, var9_int, var7_int, 0, -var6, 0, 65536, 0, var6, 0, var7_int};
           var18_ref = (Model) (ac.field_a.a(false, -37, ec.field_l, true));
-          var18_ref.a(ng.field_s);
+          var18_ref.transform(ng.field_s);
           var4 = new Model(new Model[]{var4, var18_ref}, 2);
         }
         lh.field_t = new Model();
         la.field_g = new Model();
         ui.a(la.field_g, 0, 0, lh.field_t, 0, bd.field_b[10] >> 10, 100, var4, bd.field_b[11] >> 10, bd.field_b[9] >> 10);
         if (var2 != 0) {
-          SoftwareRasterizer.c(0, 0, 640, 480, 3158064);
+          SoftwareRasterizer.fillRectangle(0, 0, 640, 480, 3158064);
           var5Lifetime1 = (dh.field_e % 20480 << 12) % 83886080;
-          ta.a(ka.field_h, new double[]{-768.0, 20.0, 0.0}, new double[]{0.0, 0.0, 1.0}, 600.0, 200.0, ja.field_i, 23967451 + var5Lifetime1, 59918628 + var5Lifetime1, 0, 16711680, wk.field_i.field_g);
-          ta.a(ka.field_h, new double[]{-768.0 + 400.0 * vh.field_b, 20.0, 400.0 * vh.field_b + 600.0}, new double[]{vh.field_b, 0.0, vh.field_b}, 400.0, 200.0, ja.field_i, var5Lifetime1 + 59918628, 83820544 + var5Lifetime1, 0, 16711680, wk.field_i.field_g);
-          ta.a(ka.field_h, new double[]{400.0 * vh.field_b - 768.0, 20.0, -(600.0 + vh.field_b * 400.0)}, new double[]{-vh.field_b, 0.0, vh.field_b}, 400.0, 200.0, ja.field_i, var5Lifetime1, var5Lifetime1 + 23967451, 0, 16711680, wk.field_i.field_g);
+          ta.drawPerspectiveTexturedQuad(ka.field_h, new double[]{-768.0, 20.0, 0.0}, new double[]{0.0, 0.0, 1.0}, 600.0, 200.0, ja.field_i, 23967451 + var5Lifetime1, 59918628 + var5Lifetime1, 0, 16711680, wk.field_i.field_g);
+          ta.drawPerspectiveTexturedQuad(ka.field_h, new double[]{-768.0 + 400.0 * vh.field_b, 20.0, 400.0 * vh.field_b + 600.0}, new double[]{vh.field_b, 0.0, vh.field_b}, 400.0, 200.0, ja.field_i, var5Lifetime1 + 59918628, 83820544 + var5Lifetime1, 0, 16711680, wk.field_i.field_g);
+          ta.drawPerspectiveTexturedQuad(ka.field_h, new double[]{400.0 * vh.field_b - 768.0, 20.0, -(600.0 + vh.field_b * 400.0)}, new double[]{-vh.field_b, 0.0, vh.field_b}, 400.0, 200.0, ja.field_i, var5Lifetime1, var5Lifetime1 + 23967451, 0, 16711680, wk.field_i.field_g);
           hg.a(kn.field_d, (byte) -121);
-          ta.a(ka.field_h, new double[]{420.0, 20.0, 0.0}, new double[]{0.0, 0.0, -1.0}, 100.0, 200.0, kn.field_d, 2621440, 10420224, 10485760, 26148864, wk.field_i.field_g);
-          lh.field_t.a(bd.field_b, ti.field_d);
+          ta.drawPerspectiveTexturedQuad(ka.field_h, new double[]{420.0, 20.0, 0.0}, new double[]{0.0, 0.0, -1.0}, 100.0, 200.0, kn.field_d, 2621440, 10420224, 10485760, 26148864, wk.field_i.field_g);
+          lh.field_t.drawTransformed(bd.field_b, ti.field_d);
           var6 = dh.field_e % 64;
           if (var6 >= 32) {
             stackIn_26_0 = 48 - var6;
@@ -1275,7 +1275,7 @@ public final class TetraLink extends ph {
           var28[2] = 0;
           var26[2] = 1280;
           var27[2] = 0;
-          ta.a(bd.field_b, var28, var26, var27);
+          ta.transformTriangleToCamera(bd.field_b, var28, var26, var27);
           if (wk.field_i.field_j) {
             var10 = dh.field_e % 128;
             if (var10 < 64) {
@@ -1285,7 +1285,7 @@ public final class TetraLink extends ph {
             }
             var10 = stackIn_32_0;
             var11 = var10 * 2 + 38784;
-            mj.a(240, 0, 0, var28, var26, var27, var11, var11, var11);
+            mj.drawTriangle(240, 0, 0, var28, var26, var27, var11, var11, var11);
             var6 = var28[0];
             var7[0] = var28[1];
             var28[1] = var6;
@@ -1295,7 +1295,7 @@ public final class TetraLink extends ph {
             var6 = var27[0];
             var9[0] = var27[1];
             var27[1] = var6;
-            mj.a(240, 0, 0, var28, var26, var27, var11, var11, var11);
+            mj.drawTriangle(240, 0, 0, var28, var26, var27, var11, var11, var11);
           }
           if (wk.field_i.field_n) {
             var31 = bl.field_Lb.field_C;
@@ -1370,7 +1370,7 @@ public final class TetraLink extends ph {
             bd.a(bl.field_Lb, 6);
             var11_ref_ko = (ko) (eg.field_J.c(false));
             while (var11_ref_ko != null) {
-              rf.a(var11_ref_ko.field_r, var11_ref_ko.field_p, var11_ref_ko.field_n << 3, 10000);
+              rf.drawBubbleDistortion(var11_ref_ko.field_r, var11_ref_ko.field_p, var11_ref_ko.field_n << 3, 10000);
               var11_ref_ko = (ko) (eg.field_J.a((byte) -70));
             }
             if (10 == kb.field_t) {
@@ -1384,7 +1384,7 @@ public final class TetraLink extends ph {
                 ta.a(ka.field_h, new double[]{0.0, 0.0, 0.0}, hi.field_d, (double)s.field_c, (double)bo.field_y, bl.field_Lb, 110, 529, 0, 399, wk.field_i.field_g, true);
               }
               if (!(0 >= wk.field_i.field_l)) {
-                ta.a(ka.field_h, new double[]{0.0, 0.0, 0.0}, hi.field_d, (double)s.field_c, (double)bo.field_y, oi.field_n, 40, wk.field_i.field_l);
+                ta.drawGlowingQuadOutline(ka.field_h, new double[]{0.0, 0.0, 0.0}, hi.field_d, (double)s.field_c, (double)bo.field_y, oi.field_n, 40, wk.field_i.field_l);
               }
             } else {
               if (ka.field_h[11] < 0.0) {
@@ -1393,7 +1393,7 @@ public final class TetraLink extends ph {
                 ta.a(ka.field_h, new double[]{0.0, 0.0, 0.0}, hi.field_d, (double)(22.0f * s.field_c / 21.0f), (double)bo.field_y, bl.field_Lb, 110, 529, 0, 399, wk.field_i.field_g, true);
               }
               if (!(wk.field_i.field_l <= 0)) {
-                ta.a(ka.field_h, new double[]{0.0, 0.0, 0.0}, hi.field_d, (double)s.field_c, (double)bo.field_y, oi.field_n, 1 + (int)(s.field_c / 1.3125f), (int)(s.field_c / 1.100000023841858f));
+                ta.drawGlowingQuadOutline(ka.field_h, new double[]{0.0, 0.0, 0.0}, hi.field_d, (double)s.field_c, (double)bo.field_y, oi.field_n, 1 + (int)(s.field_c / 1.3125f), (int)(s.field_c / 1.100000023841858f));
               }
             }
           } else {
@@ -1543,16 +1543,16 @@ public final class TetraLink extends ph {
             bd.a(bl.field_Lb, 6);
             var12_ref_ko = (ko) (eg.field_J.c(false));
             while (var12_ref_ko != null) {
-              rf.a(var12_ref_ko.field_r, var12_ref_ko.field_p, var12_ref_ko.field_n << 3, 10000);
+              rf.drawBubbleDistortion(var12_ref_ko.field_r, var12_ref_ko.field_p, var12_ref_ko.field_n << 3, 10000);
               var12_ref_ko = (ko) (eg.field_J.a((byte) -70));
             }
             if (kb.field_t == 10) {
               this.f((byte) 122);
             }
-            rh.field_M.c();
+            rh.field_M.makeRasterTarget();
             var12_ref_koLifetime1 = (ko) (eg.field_J.c(false));
             while (var12_ref_koLifetime1 != null) {
-              rf.a(var12_ref_koLifetime1.field_r, var12_ref_koLifetime1.field_p, var12_ref_koLifetime1.field_n << 3, 10000);
+              rf.drawBubbleDistortion(var12_ref_koLifetime1.field_r, var12_ref_koLifetime1.field_p, var12_ref_koLifetime1.field_n << 3, 10000);
               var12_ref_koLifetime1 = (ko) (eg.field_J.a((byte) -70));
             }
             if (kb.field_t == 10) {
@@ -1564,14 +1564,14 @@ public final class TetraLink extends ph {
                 ta.a(ka.field_h, new double[]{0.0, 0.0, (double)(-jl.field_e >> 16)}, hi.field_d, (double)s.field_c, (double)bo.field_y, rh.field_M, 529, 110, 0, 399, wk.field_i.field_g, false);
                 ta.a(ka.field_h, new double[]{0.0, 0.0, 0.0}, hi.field_d, (double)s.field_c, (double)bo.field_y, bl.field_Lb, 529, 110, 0, 399, wk.field_i.field_g, false);
                 if (wk.field_i.field_l > 0) {
-                  ta.a(ka.field_h, new double[]{0.0, 0.0, 0.0}, hi.field_d, (double)s.field_c, (double)bo.field_y, oi.field_n, 40, wk.field_i.field_l);
+                  ta.drawGlowingQuadOutline(ka.field_h, new double[]{0.0, 0.0, 0.0}, hi.field_d, (double)s.field_c, (double)bo.field_y, oi.field_n, 40, wk.field_i.field_l);
                 }
                 ta.a(ka.field_h, new double[]{0.0, 0.0, (double)(jl.field_e >> 16)}, hi.field_d, (double)s.field_c, (double)bo.field_y, rh.field_M, 529, 110, 0, 399, wk.field_i.field_g, false);
               } else {
                 ta.a(ka.field_h, new double[]{0.0, 0.0, (double)(jl.field_e >> 16)}, hi.field_d, (double)s.field_c, (double)bo.field_y, rh.field_M, 110, 529, 0, 399, wk.field_i.field_g, false);
                 ta.a(ka.field_h, new double[]{0.0, 0.0, 0.0}, hi.field_d, (double)s.field_c, (double)bo.field_y, bl.field_Lb, 110, 529, 0, 399, wk.field_i.field_g, false);
                 if (wk.field_i.field_l > 0) {
-                  ta.a(ka.field_h, new double[]{0.0, 0.0, 0.0}, hi.field_d, (double)s.field_c, (double)bo.field_y, oi.field_n, 40, wk.field_i.field_l);
+                  ta.drawGlowingQuadOutline(ka.field_h, new double[]{0.0, 0.0, 0.0}, hi.field_d, (double)s.field_c, (double)bo.field_y, oi.field_n, 40, wk.field_i.field_l);
                 }
                 ta.a(ka.field_h, new double[]{0.0, 0.0, (double)(-jl.field_e >> 16)}, hi.field_d, (double)s.field_c, (double)bo.field_y, rh.field_M, 110, 529, 0, 399, wk.field_i.field_g, false);
               }
@@ -1580,20 +1580,20 @@ public final class TetraLink extends ph {
                 ta.a(ka.field_h, new double[]{0.0, 0.0, (double)(jl.field_e >> 16)}, hi.field_d, (double)(22.0f * s.field_c / 21.0f), (double)bo.field_y, rh.field_M, 100, 539, 0, 399, wk.field_i.field_g, false);
                 ta.a(ka.field_h, new double[]{0.0, 0.0, 0.0}, hi.field_d, (double)(22.0f * s.field_c / 21.0f), (double)bo.field_y, bl.field_Lb, 100, 539, 0, 399, wk.field_i.field_g, false);
                 if (wk.field_i.field_l > 0) {
-                  ta.a(ka.field_h, new double[]{0.0, 0.0, 0.0}, hi.field_d, (double)s.field_c, (double)bo.field_y, oi.field_n, 1 + (int)(s.field_c / 1.3125f), (int)(s.field_c / 1.100000023841858f));
+                  ta.drawGlowingQuadOutline(ka.field_h, new double[]{0.0, 0.0, 0.0}, hi.field_d, (double)s.field_c, (double)bo.field_y, oi.field_n, 1 + (int)(s.field_c / 1.3125f), (int)(s.field_c / 1.100000023841858f));
                 }
                 ta.a(ka.field_h, new double[]{0.0, 0.0, (double)(-jl.field_e >> 16)}, hi.field_d, (double)(22.0f * s.field_c / 21.0f), (double)bo.field_y, rh.field_M, 100, 539, 0, 399, wk.field_i.field_g, false);
               } else {
                 ta.a(ka.field_h, new double[]{0.0, 0.0, (double)(-jl.field_e >> 16)}, hi.field_d, (double)(22.0f * s.field_c / 21.0f), (double)bo.field_y, rh.field_M, 539, 100, 0, 399, wk.field_i.field_g, false);
                 ta.a(ka.field_h, new double[]{0.0, 0.0, 0.0}, hi.field_d, (double)(22.0f * s.field_c / 21.0f), (double)bo.field_y, bl.field_Lb, 539, 100, 0, 399, wk.field_i.field_g, false);
                 if (0 < wk.field_i.field_l) {
-                  ta.a(ka.field_h, new double[]{0.0, 0.0, 0.0}, hi.field_d, (double)s.field_c, (double)bo.field_y, oi.field_n, 1 + (int)(s.field_c / 1.3125f), (int)(s.field_c / 1.100000023841858f));
+                  ta.drawGlowingQuadOutline(ka.field_h, new double[]{0.0, 0.0, 0.0}, hi.field_d, (double)s.field_c, (double)bo.field_y, oi.field_n, 1 + (int)(s.field_c / 1.3125f), (int)(s.field_c / 1.100000023841858f));
                 }
                 ta.a(ka.field_h, new double[]{0.0, 0.0, (double)(jl.field_e >> 16)}, hi.field_d, (double)(22.0f * s.field_c / 21.0f), (double)bo.field_y, rh.field_M, 539, 100, 0, 399, wk.field_i.field_g, false);
               }
             }
             if (var27[2] > 0) {
-              SoftwareRasterizer.a((SpriteState.field_G << 4) + (var28[2] << 11) / var27[2], (var26[2] << 13) / var27[2] + (ik.field_a << 4), 65536 / var27[2], 255, oi.field_n);
+              SoftwareRasterizer.fillRadialPaletteCircle((SpriteState.field_G << 4) + (var28[2] << 11) / var27[2], (var26[2] << 13) / var27[2] + (ik.field_a << 4), 65536 / var27[2], 255, oi.field_n);
             }
           }
           var15 = (qi) (nd.field_Sb.c(false));
@@ -1606,11 +1606,11 @@ public final class TetraLink extends ph {
             var12Lifetime1 = bd.field_b[5] * var6 + var10 * bd.field_b[3] + bd.field_b[4] * var11Lifetime2;
             var6 = var14Lifetime1 >> 22;
             if (var14Lifetime1 > 0) {
-              SoftwareRasterizer.a((SpriteState.field_G << 4) + (var12Lifetime1 >> 9) / var6, (ik.field_a << 4) + (var13Lifetime1 >> 9) / var6, 16384 / var6, 5 * var15.field_s / 3, oi.field_n);
+              SoftwareRasterizer.fillRadialPaletteCircle((SpriteState.field_G << 4) + (var12Lifetime1 >> 9) / var6, (ik.field_a << 4) + (var13Lifetime1 >> 9) / var6, 16384 / var6, 5 * var15.field_s / 3, oi.field_n);
             }
             var15 = (qi) (nd.field_Sb.a((byte) -70));
           }
-          la.field_g.a(bd.field_b, ti.field_d);
+          la.field_g.drawTransformed(bd.field_b, ti.field_d);
         }
     }
 
@@ -1639,7 +1639,7 @@ public final class TetraLink extends ph {
                 stackIn_3_0 = (String) null;
                 return stackIn_3_0;
               }
-              var3 = (String) (ii.a((byte) 121, "getcookies", param2));
+              var3 = (String) (ii.callJavaScript((byte) 121, "getcookies", param2));
               var4 = hi.a(var3, ';', 783);
               for (var5 = 0; var4.length > var5; var5++) {
                 var6 = var4[var5].indexOf('=');
@@ -1671,7 +1671,7 @@ public final class TetraLink extends ph {
             } else {
               stackIn_22_2 = "{...}";
             }
-            throw oi.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+            throw oi.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -1854,7 +1854,7 @@ public final class TetraLink extends ph {
     }
 
     public final void init() {
-        this.a("tetralink", 18, 640);
+        this.startApplet("tetralink", 18, 640);
     }
 
     final void onShutdown(int param0) {
@@ -1905,19 +1905,19 @@ public final class TetraLink extends ph {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          vn.b(1.0f);
-          vn.b();
+          vn.setBrightnessAndRebuildPalette(1.0f);
+          vn.useRasterClip();
           af.field_c = ModelData.a(param1, "", "scenery");
           if (!cf.a(0, (byte) 117)) {
-            mf.field_w = (Model) (af.field_c.a(64, 728, 0, 256, 0));
+            mf.field_w = (Model) (af.field_c.createModel(64, 728, 0, 256, 0));
           } else {
-            mf.field_w = (Model) (af.field_c.a(32, 2184, 0, 256, 0));
+            mf.field_w = (Model) (af.field_c.createModel(32, 2184, 0, 256, 0));
             var3 = ModelData.a(param1, "", "ghost_untextured");
-            ec.field_l = (Model) (var3.a(64, 728, 0, 256, 0));
+            ec.field_l = (Model) (var3.createModel(64, 728, 0, 256, 0));
           }
-          mf.field_w.a(gk.field_e);
+          mf.field_w.transform(gk.field_e);
           if (param0) {
-            TetraLink.p(-81);
+            TetraLink.releaseStatics(-81);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1930,11 +1930,11 @@ public final class TetraLink extends ph {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
-    public static void p(int param0) {
+    public static void releaseStatics(int param0) {
         field_M = null;
         field_O = null;
         if (param0 != 10297) {
@@ -2006,47 +2006,47 @@ public final class TetraLink extends ph {
         try {
           mk.field_b = pm.a("", "font", param1, param3, -89);
           go.field_g = pm.a("kartika13", "", param0, param4, -63);
-          var12 = ug.a(param1, (byte) -45, "starfield", "");
+          var12 = ug.loadFontByName(param1, (byte) -45, "starfield", "");
           ja.field_i = new Sprite(2560, 256);
-          ja.field_i.c();
-          var12.b(0, 0);
-          var12.b(1280, 0);
+          ja.field_i.makeRasterTarget();
+          var12.drawOpaque(0, 0);
+          var12.drawOpaque(1280, 0);
           WidgetContainer.field_O.a(-117);
           GameApplet.field_c = qk.a((byte) 79, param1, "", "logo");
-          ef.field_k = ug.a(param1, (byte) -45, "splash", "");
+          ef.field_k = ug.loadFontByName(param1, (byte) -45, "splash", "");
           of.field_f = el.a(param1, "walk1", "", -1409);
           th.field_p = el.a(param1, "walk2", "", -1409);
           qd.field_cb = el.a(param1, "walk3", "", -1409);
           li.field_l = oc.a("frame", true, param1, "");
-          sd.field_qb = bf.a((byte) -69, param1, "", "achievements_large");
-          NotificationToast.field_p = ug.a(param0, (byte) -45, "unachieved", "basic");
-          w.field_r = ug.a(param0, (byte) -45, "orbcoin", "basic");
+          sd.field_qb = bf.loadSpritesByName((byte) -69, param1, "", "achievements_large");
+          NotificationToast.field_p = ug.loadFontByName(param0, (byte) -45, "unachieved", "basic");
+          w.field_r = ug.loadFontByName(param0, (byte) -45, "orbcoin", "basic");
           var8 = sd.field_qb.length;
           hl.field_G = new Sprite[var8];
           me.a(false);
           for (var9_int = 0; var9_int < var8; var9_int++) {
             var10_ref_oh = new Sprite(32, 32);
-            var10_ref_oh.c();
-            sd.field_qb[var9_int].b(0, 0, 32, 32);
+            var10_ref_oh.makeRasterTarget();
+            sd.field_qb[var9_int].drawScaledAveraged(0, 0, 32, 32);
             hl.field_G[var9_int] = var10_ref_oh;
           }
           cm.field_F = new Sprite(32, 32);
-          cm.field_F.c();
-          NotificationToast.field_p.b(0, 0, 32, 32);
+          cm.field_F.makeRasterTarget();
+          NotificationToast.field_p.drawScaledAveraged(0, 0, 32, 32);
           fh.a(true);
-          l.field_c = bf.a((byte) -97, param1, "", "viewicons");
+          l.field_c = bf.loadSpritesByName((byte) -97, param1, "", "viewicons");
           e.field_f = this.createShadedDiscSprite(8388608, 262144, (byte) -107);
           ho.field_M = this.createShadedDiscSprite(6316128, 263172, (byte) -107);
           if (cf.a(0, (byte) 119)) {
-            me.field_e = ug.a(param1, (byte) -45, "red_counter", "allhallowseve");
-            qd.field_X = ug.a(param1, (byte) -45, "white_counter", "allhallowseve");
+            me.field_e = ug.loadFontByName(param1, (byte) -45, "red_counter", "allhallowseve");
+            qd.field_X = ug.loadFontByName(param1, (byte) -45, "white_counter", "allhallowseve");
           }
           var9 = new Sprite[ua.field_b.length][];
           for (var10 = 0; ua.field_b.length > var10; var10++) {
-            var9[var10] = bf.a((byte) -126, param1, "", ua.field_b[var10]);
+            var9[var10] = bf.loadSpritesByName((byte) -126, param1, "", ua.field_b[var10]);
           }
           qn.a(false, pl.field_a, sb.field_b, d.field_c, var9, param2, var9, d.field_c, rc.field_U, param4, qn.field_s, 1, 2, a.field_i, param0);
-          hd.field_r = ug.a(param1, (byte) -45, "lobbyicon", "");
+          hd.field_r = ug.loadFontByName(param1, (byte) -45, "lobbyicon", "");
           if (cf.a(0, (byte) 116)) {
             vn.a(new ja(param5, param1));
           } else {
@@ -2087,7 +2087,7 @@ public final class TetraLink extends ph {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
         }
     }
 
@@ -2123,16 +2123,16 @@ public final class TetraLink extends ph {
         Sprite var4 = new Sprite(57, 57);
         int var5Lifetime1;
         bd.a(var4, 6);
-        SoftwareRasterizer.f(29, 29, 27, 263172);
+        SoftwareRasterizer.fillCircle(29, 29, 27, 263172);
         for (var5 = 23; var5 >= 0; var5--) {
-          SoftwareRasterizer.f(29, 29, var5, param1 * var5 + param0);
+          SoftwareRasterizer.fillCircle(29, 29, var5, param1 * var5 + param0);
         }
         if (param2 != -107) {
           Archive var7 = (Archive) null;
           this.a(false, (Archive) null);
         }
         for (var5Lifetime1 = 0; 57 > var5Lifetime1; var5Lifetime1 += 2) {
-          SoftwareRasterizer.e(0, var5Lifetime1, 57, 0, 128);
+          SoftwareRasterizer.drawHorizontalLineAlpha(0, var5Lifetime1, 57, 0, 128);
         }
         fh.a(true);
         return var4;
@@ -2149,13 +2149,13 @@ public final class TetraLink extends ph {
         la.d(-109);
         if (null == n.field_N) {
           if (null != nl.field_g) {
-            ak.a(0, mf.field_r, 80.0f);
+            ak.setBenefitsBorderAndCaption(0, mf.field_r, 80.0f);
             this.renderFrame(124);
             qc.field_bb = new ri[4];
-            qc.field_bb[0] = ri.a(nl.field_g, "", "tetralink titlescreen");
-            qc.field_bb[1] = ri.a(nl.field_g, "", "tetralink ingame 1");
-            qc.field_bb[2] = ri.a(nl.field_g, "", "tetralink ingame 2");
-            qc.field_bb[3] = ri.a(nl.field_g, "", "tetralink ingame 3");
+            qc.field_bb[0] = ri.load(nl.field_g, "", "tetralink titlescreen");
+            qc.field_bb[1] = ri.load(nl.field_g, "", "tetralink ingame 1");
+            qc.field_bb[2] = ri.load(nl.field_g, "", "tetralink ingame 2");
+            qc.field_bb[3] = ri.load(nl.field_g, "", "tetralink ingame 3");
             for (var3 = 0; var3 < 4; var3++) {
               ic.field_b.a(PacketBuffer.field_q, qc.field_bb[var3], DualLinkDeque.field_f, -1, 0);
             }
@@ -2167,7 +2167,7 @@ public final class TetraLink extends ph {
             return false;
           }
           if (null != ll.field_x) {
-            ak.a(0, hm.field_e, 90.0f);
+            ak.setBenefitsBorderAndCaption(0, hm.field_e, 90.0f);
             this.renderFrame(126);
             this.a(v.field_v, cd.field_b, true, ll.field_x, sb.field_a, vf.field_a);
             sb.field_a = null;
@@ -2176,7 +2176,7 @@ public final class TetraLink extends ph {
             return false;
           }
           if (fk.field_U != null) {
-            ak.a(0, pi.field_e, 95.0f);
+            ak.setBenefitsBorderAndCaption(0, pi.field_e, 95.0f);
             this.renderFrame(118);
             this.a(false, fk.field_U);
             fk.field_U = null;
@@ -2185,11 +2185,11 @@ public final class TetraLink extends ph {
           }
           if (mf.field_v != null &&
             cf.a(0, (byte) 116)) {
-            jn.a(dc.field_k, true, mf.field_v);
+            jn.setSharedArchives(dc.field_k, true, mf.field_v);
             var6 = new f(0);
             while (!var6.b((byte) -106)) {
             }
-            dj.a((byte) -116, var6);
+            dj.discardServerMessage((byte) -116, var6);
             go.field_a = new tb(kn.field_c, "ghost_update", "ghost_update_normal_ready");
             vg.field_Vb = new tb(kn.field_c, "ghost_update", "ghost_update_normal_walk");
             mf.field_v = null;
@@ -2197,7 +2197,7 @@ public final class TetraLink extends ph {
             kn.field_c = null;
           }
           if (null != nl.field_b) {
-            bj.a(5, new fh(nl.field_b.a("", "huffman", true)));
+            bj.setSharedAnimationFrameset(5, new fh(nl.field_b.a("", "huffman", true)));
             nl.field_b = null;
             SecondaryNodeDeque.c(-8243);
             return false;
@@ -2254,16 +2254,16 @@ public final class TetraLink extends ph {
                                         mf.field_v.a(false)) &&
                                         (decompiledFrameRemainder0 = (!(kn.field_c.c(119)) ||
                                         !(kn.field_c.a(false))))) {
-                                        ak.a(0, fn.a(0, kn.field_c, gk.field_f, ml.field_kb), 75.0f);
+                                        ak.setBenefitsBorderAndCaption(0, fn.a(0, kn.field_c, gk.field_f, ml.field_kb), 75.0f);
                                         return false;
                                       }
                                       if (decompiledFrameRemainder0) {
-                                        ak.a(0, fn.a(0, mf.field_v, gk.field_f, ml.field_kb), 75.0f);
+                                        ak.setBenefitsBorderAndCaption(0, fn.a(0, mf.field_v, gk.field_f, ml.field_kb), 75.0f);
                                         return false;
                                       }
                                     }
                                     if (decompiledFrameRemainder0) {
-                                      ak.a(0, fn.a(0, dc.field_k, on.field_a, la.field_k), 75.0f);
+                                      ak.setBenefitsBorderAndCaption(0, fn.a(0, dc.field_k, on.field_a, la.field_k), 75.0f);
                                       return false;
                                     }
                                   }
@@ -2272,7 +2272,7 @@ public final class TetraLink extends ph {
                                     if (rc.field_U.c(98) &&
                                       rc.field_U.a(false)) {
                                       ni.d((byte) 126);
-                                      ak.a(0, ji.field_Ub, 78.0f);
+                                      ak.setBenefitsBorderAndCaption(0, ji.field_Ub, 78.0f);
                                       this.renderFrame(122);
                                       if (!param1) {
                                         return false;
@@ -2304,49 +2304,49 @@ public final class TetraLink extends ph {
                                       SecondaryNodeDeque.c(-8243);
                                       return false;
                                     }
-                                    ak.a(0, fn.a(0, rc.field_U, BufferedSocket.field_a, v.field_w), 77.0f);
+                                    ak.setBenefitsBorderAndCaption(0, fn.a(0, rc.field_U, BufferedSocket.field_a, v.field_w), 77.0f);
                                     return false;
                                   }
-                                  ak.a(0, ji.a(ng.field_x, vf.field_a, rh.field_L, "", 1152753825), 75.0f);
+                                  ak.setBenefitsBorderAndCaption(0, ji.a(ng.field_x, vf.field_a, rh.field_L, "", 1152753825), 75.0f);
                                   return false;
                                 }
-                                ak.a(0, ji.a(la.field_k, fk.field_U, on.field_a, "", 1152753825), 75.0f);
+                                ak.setBenefitsBorderAndCaption(0, ji.a(la.field_k, fk.field_U, on.field_a, "", 1152753825), 75.0f);
                                 return false;
                               }
-                              ak.a(0, ji.a(v.field_w, nl.field_b, BufferedSocket.field_a, "", 1152753825), 75.0f);
+                              ak.setBenefitsBorderAndCaption(0, ji.a(v.field_w, nl.field_b, BufferedSocket.field_a, "", 1152753825), 75.0f);
                               return false;
                             }
-                            ak.a(0, ji.a(nc.field_c, ll.field_x, qa.field_C, "", 1152753825), 75.0f);
+                            ak.setBenefitsBorderAndCaption(0, ji.a(nc.field_c, ll.field_x, qa.field_C, "", 1152753825), 75.0f);
                             return false;
                           }
-                          ak.a(0, ji.a(nc.field_c, cd.field_b, qa.field_C, "", 1152753825), 75.0f);
+                          ak.setBenefitsBorderAndCaption(0, ji.a(nc.field_c, cd.field_b, qa.field_C, "", 1152753825), 75.0f);
                           return false;
                         }
-                        ak.a(0, ji.a(rl.field_g, nl.field_g, MouseWheelInput.field_a, "", 1152753825), 60.0f);
+                        ak.setBenefitsBorderAndCaption(0, ji.a(rl.field_g, nl.field_g, MouseWheelInput.field_a, "", 1152753825), 60.0f);
                         return false;
                       }
-                      ak.a(0, ma.a(DualLinkDeque.field_f, MouseWheelInput.field_a, 0, rl.field_g, (byte) 15), 45.0f);
+                      ak.setBenefitsBorderAndCaption(0, ma.a(DualLinkDeque.field_f, MouseWheelInput.field_a, 0, rl.field_g, (byte) 15), 45.0f);
                       return false;
                     }
-                    ak.a(0, ji.a(va.field_t, oa.field_p, oc.field_w, "", 1152753825), 40.0f);
+                    ak.setBenefitsBorderAndCaption(0, ji.a(va.field_t, oa.field_p, oc.field_w, "", 1152753825), 40.0f);
                     return false;
                   }
-                  ak.a(0, ji.a(va.field_t, n.field_N, oc.field_w, "", 1152753825), 20.0f);
+                  ak.setBenefitsBorderAndCaption(0, ji.a(va.field_t, n.field_N, oc.field_w, "", 1152753825), 20.0f);
                   return false;
                 }
-                ak.a(0, ji.a(hh.field_a, sb.field_a, nd.field_Kb, "lobby", 1152753825), 17.0f);
+                ak.setBenefitsBorderAndCaption(0, ji.a(hh.field_a, sb.field_a, nd.field_Kb, "lobby", 1152753825), 17.0f);
                 return false;
               }
-              ak.a(0, ji.a(nc.field_c, v.field_v, qa.field_C, "lobby", 1152753825), 13.0f);
+              ak.setBenefitsBorderAndCaption(0, ji.a(nc.field_c, v.field_v, qa.field_C, "lobby", 1152753825), 13.0f);
               return false;
             }
-            ak.a(0, ji.a(hh.field_a, sb.field_a, nd.field_Kb, "roman20", 1152753825), 12.0f);
+            ak.setBenefitsBorderAndCaption(0, ji.a(hh.field_a, sb.field_a, nd.field_Kb, "roman20", 1152753825), 12.0f);
             return false;
           }
-          ak.a(0, ji.a(nc.field_c, v.field_v, qa.field_C, "kartika13", 1152753825), 11.0f);
+          ak.setBenefitsBorderAndCaption(0, ji.a(nc.field_c, v.field_v, qa.field_C, "kartika13", 1152753825), 11.0f);
           return false;
         }
-        ak.a(0, ji.a(nc.field_c, v.field_v, qa.field_C, "basic", 1152753825), 10.0f);
+        ak.setBenefitsBorderAndCaption(0, ji.a(nc.field_c, v.field_v, qa.field_C, "basic", 1152753825), 10.0f);
         return false;
     }
 

@@ -38,7 +38,7 @@ abstract class d implements vm {
             }
             try {
               var2 = "tuhstatbut";
-              var3 = (String) (ii.a((byte) 122, "getcookies", param1));
+              var3 = (String) (ii.callJavaScript((byte) 122, "getcookies", param1));
               var4 = hi.a(var3, ';', 783);
               for (var5 = 0; var4.length > var5; var5++) {
                 var6 = var4[var5].indexOf('=');
@@ -63,7 +63,7 @@ abstract class d implements vm {
             } else {
               stackIn_23_2 = "{...}";
             }
-            throw oi.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+            throw oi.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -106,7 +106,7 @@ abstract class d implements vm {
     public final void a(int param0) {
         this.field_d = k.a(0);
         if (param0 < 117) {
-          d.b((byte) 100);
+          d.releaseStatics((byte) 100);
         }
     }
 
@@ -127,7 +127,7 @@ abstract class d implements vm {
         return null;
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_c = (String[][]) null;
         if (param0 == 6) {
           field_i = null;
@@ -136,7 +136,7 @@ abstract class d implements vm {
           field_f = (byte[][]) null;
           return;
         }
-        d.d(112);
+        d.clearTemporaryRaster(112);
         field_i = null;
         field_a = null;
         field_g = null;
@@ -145,7 +145,7 @@ abstract class d implements vm {
 
     abstract jk a(boolean param0);
 
-    final static void d(int param0) {
+    final static void clearTemporaryRaster(int param0) {
         int[] var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -176,7 +176,7 @@ abstract class d implements vm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var1_ref), "d.J(" + param0 + ')');
+          throw oi.wrapException((Throwable) ((Object) var1_ref), "d.J(" + param0 + ')');
         }
     }
 

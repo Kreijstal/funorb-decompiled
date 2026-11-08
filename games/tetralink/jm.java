@@ -11,7 +11,7 @@ final class jm {
     static boolean field_b;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_e = null;
         field_f = null;
@@ -21,7 +21,7 @@ final class jm {
           field_c = null;
           return;
         }
-        jm.a(-29);
+        jm.releaseStatics(-29);
         field_d = null;
         field_g = (Sprite[][]) null;
         field_c = null;

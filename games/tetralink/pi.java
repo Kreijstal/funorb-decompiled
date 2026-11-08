@@ -8,7 +8,7 @@ final class pi {
     static String field_d;
     static String field_b;
 
-    final static boolean a(String param0, int param1) {
+    final static boolean hasInvalidPasswordLength(String param0, int param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -36,11 +36,11 @@ final class pi {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_c = null;
         if (param0 <= -2) {
           field_e = null;

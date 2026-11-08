@@ -12,7 +12,7 @@ final class wj {
     private int field_d;
     private int[] field_b;
 
-    final void a(byte[] param0) {
+    final void load(byte[] param0) {
         int var4 = 0;
         int var5 = 0;
         int var3Lifetime1;
@@ -44,11 +44,11 @@ final class wj {
         this.field_b = new int[var2];
     }
 
-    final long d(int param0) {
+    final long tickTime(int param0) {
         return this.field_c + (long)param0 * (long)this.field_d;
     }
 
-    private final int a(int param0) {
+    private final int readNextMessage(int param0) {
         int var2;
         int var3;
         int var4;
@@ -62,7 +62,7 @@ final class wj {
         }
         if (var2 != 240 &&
           var2 != 247) {
-          return this.a(param0, var2);
+          return this.decodeMessagePayload(param0, var2);
         }
         var3 = this.field_h.readVarInt((byte) 120);
         if (var2 == 247 &&
@@ -74,14 +74,14 @@ final class wj {
             !(var4 > 252) || var4 == 254) {
             this.field_h.position = this.field_h.position + 1;
             this.field_b[param0] = var4;
-            return this.a(param0, var4);
+            return this.decodeMessagePayload(param0, var4);
           }
         }
         this.field_h.position = this.field_h.position + var3;
         return 0;
     }
 
-    private final int a(int param0, int param1) {
+    private final int decodeMessagePayload(int param0, int param1) {
         int var5 = 0;
         int var6 = 0;
         int var3 = 0;
@@ -118,19 +118,19 @@ final class wj {
         return var4Lifetime1;
     }
 
-    final void b(int param0) {
+    final void saveTrackPosition(int param0) {
         this.field_e[param0] = this.field_h.position;
     }
 
-    final void f(int param0) {
+    final void seekTrack(int param0) {
         this.field_h.position = this.field_e[param0];
     }
 
-    public static void b() {
+    public static void releaseStatics() {
         field_i = null;
     }
 
-    final int g() {
+    final int nextTrack() {
         int var4 = 0;
         int var1;
         int var2;
@@ -148,11 +148,11 @@ final class wj {
         return var2;
     }
 
-    final boolean f() {
+    final boolean isReady() {
         return this.field_h.payload != null;
     }
 
-    final void d() {
+    final void release() {
         this.field_h.payload = null;
         this.field_a = null;
         this.field_e = null;
@@ -160,11 +160,11 @@ final class wj {
         this.field_b = null;
     }
 
-    final int e() {
+    final int trackCount() {
         return this.field_e.length;
     }
 
-    final void a(long param0) {
+    final void reset(long param0) {
         int var4 = 0;
         this.field_c = param0;
         int var3 = this.field_e.length;
@@ -172,21 +172,21 @@ final class wj {
           this.field_g[var4] = 0;
           this.field_b[var4] = 0;
           this.field_h.position = this.field_a[var4];
-          this.e(var4);
+          this.readTrackDelta(var4);
           this.field_e[var4] = this.field_h.position;
         }
     }
 
-    final void e(int param0) {
+    final void readTrackDelta(int param0) {
         int var2 = this.field_h.readVarInt((byte) 120);
         this.field_g[param0] = this.field_g[param0] + var2;
     }
 
-    final void c() {
+    final void markTrackDone() {
         this.field_h.position = -1;
     }
 
-    final boolean a() {
+    final boolean isDone() {
         int var2 = 0;
         int var1 = this.field_e.length;
         for (var2 = 0; var2 < var1; var2++) {
@@ -197,8 +197,8 @@ final class wj {
         return true;
     }
 
-    final int c(int param0) {
-        int var2 = this.a(param0);
+    final int readMessage(int param0) {
+        int var2 = this.readNextMessage(param0);
         return var2;
     }
 
@@ -208,7 +208,7 @@ final class wj {
 
     wj(byte[] param0) {
         this.field_h = new PacketBuffer((byte[]) null);
-        this.a(param0);
+        this.load(param0);
     }
 
     static {

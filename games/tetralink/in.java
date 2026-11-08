@@ -15,7 +15,7 @@ final class in {
         t.a(4, param0 ^ param0);
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         field_g = null;
         if (param0 != -1) {
@@ -66,7 +66,7 @@ final class in {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw oi.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+            throw oi.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -86,8 +86,8 @@ final class in {
         int var10 = 0;
         var10 = TetraLink.field_J;
         try {
-          SoftwareRasterizer.g(param0, param1, param3 + 1, 10000536);
-          SoftwareRasterizer.g(param0, param4 + param1, 1 + param3, 12105912);
+          SoftwareRasterizer.drawHorizontalLine(param0, param1, param3 + 1, 10000536);
+          SoftwareRasterizer.drawHorizontalLine(param0, param4 + param1, 1 + param3, 12105912);
           var5_int = 1;
           if (SoftwareRasterizer.field_i > param1 + var5_int) {
             var5_int = SoftwareRasterizer.field_i - param1;
@@ -109,7 +109,7 @@ final class in {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var5), "in.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw oi.wrapException((Throwable) ((Object) var5), "in.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -135,7 +135,7 @@ final class in {
             }
             var2 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
             if (param0 != 18) {
-              in.b(119);
+              in.releaseStatics(119);
             }
             for (var3 = 0; var3 < param1.length(); var3++) {
               if (-1 == var2.indexOf((int) param1.charAt(var3))) {
@@ -159,7 +159,7 @@ final class in {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 

@@ -103,7 +103,7 @@ final class bo extends hk {
         return var3.a(false);
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_C = null;
         field_h = null;
         if (param0 != -251) {
@@ -356,7 +356,7 @@ final class bo extends hk {
         try {
           try {
             var4 = param2.getGraphics();
-            WidgetContainer.field_O.a(10, param0, param1, var4);
+            WidgetContainer.field_O.drawImage(10, param0, param1, var4);
             var4.dispose();
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -377,7 +377,7 @@ final class bo extends hk {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -402,9 +402,9 @@ final class bo extends hk {
           gj.a(param9, param6, param2, -20140);
           da.a(param15, param3, param8, -120, param13, param12);
           if (param4 != -1) {
-            bo.c(-91);
+            bo.releaseStatics(-91);
           }
-          b.a(param0, param1, (byte) -66);
+          b.setPendingTooltipAnchor(param0, param1, (byte) -66);
           kb.a(param19, param16, param10, (byte) -118);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -441,7 +441,7 @@ final class bo extends hk {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param15).append(',').append(param16).append(',').append(param17).append(',').append(param18).append(',').append(param19).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param15).append(',').append(param16).append(',').append(param17).append(',').append(param18).append(',').append(param19).append(')').toString());
         }
     }
 
@@ -700,7 +700,7 @@ final class bo extends hk {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 

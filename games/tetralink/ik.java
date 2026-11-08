@@ -23,7 +23,7 @@ final class ik {
         return null;
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == -137) {
           field_f = null;
           field_d = null;
@@ -58,7 +58,7 @@ final class ik {
             return stackIn_5_0;
           }
           if (param1) {
-            stackIn_10_0 = ak.a(-14074, param0);
+            stackIn_10_0 = ak.copyBytes(-14074, param0);
             return stackIn_10_0;
           }
           stackIn_8_0 = (byte[]) (param0);
@@ -73,7 +73,7 @@ final class ik {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

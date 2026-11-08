@@ -57,7 +57,7 @@ final class qj {
         return ph.field_t.field_Pb;
     }
 
-    final static void a(int param0, byte param1, Sprite[] param2, int param3, int param4, int param5) {
+    final static void drawNineSliceFrame(int param0, byte param1, Sprite[] param2, int param3, int param4, int param5) {
         int var21 = 0;
         int stackIn_9_0 = 0;
         int stackIn_12_0 = 0;
@@ -136,73 +136,73 @@ final class qj {
             }
             var18 = var14;
             var19 = var15;
-            SoftwareRasterizer.a(pg.field_i);
+            SoftwareRasterizer.saveClip(pg.field_i);
             if (var18 > var19) {
               var19 = param5 + var8 * param4 / (var9 + var8);
               var18 = param5 + var8 * param4 / (var9 + var8);
             }
             if (param2[0] != null) {
-              SoftwareRasterizer.b(param3, param5, var16, var18);
-              param2[0].c(param3, param5);
-              SoftwareRasterizer.b(pg.field_i);
+              SoftwareRasterizer.intersectClip(param3, param5, var16, var18);
+              param2[0].drawTransparent(param3, param5);
+              SoftwareRasterizer.restoreClip(pg.field_i);
             }
             if (param2[2] != null) {
-              SoftwareRasterizer.b(var17, param5, var10, var18);
-              param2[2].c(var13, param5);
-              SoftwareRasterizer.b(pg.field_i);
+              SoftwareRasterizer.intersectClip(var17, param5, var10, var18);
+              param2[2].drawTransparent(var13, param5);
+              SoftwareRasterizer.restoreClip(pg.field_i);
             }
             if (null != param2[6]) {
-              SoftwareRasterizer.b(param3, var19, var16, var11);
-              param2[6].c(param3, var15);
-              SoftwareRasterizer.b(pg.field_i);
+              SoftwareRasterizer.intersectClip(param3, var19, var16, var11);
+              param2[6].drawTransparent(param3, var15);
+              SoftwareRasterizer.restoreClip(pg.field_i);
             }
             if (param2[8] != null) {
-              SoftwareRasterizer.b(var17, var19, var10, var11);
-              param2[8].c(var13, var15);
-              SoftwareRasterizer.b(pg.field_i);
+              SoftwareRasterizer.intersectClip(var17, var19, var10, var11);
+              param2[8].drawTransparent(var13, var15);
+              SoftwareRasterizer.restoreClip(pg.field_i);
             }
             if (null != param2[1] &&
               0 != param2[1].field_t) {
-              SoftwareRasterizer.b(var16, param5, var17, var18);
+              SoftwareRasterizer.intersectClip(var16, param5, var17, var18);
               for (var20 = var12; var20 < var13; var20 = var20 + param2[1].field_t) {
-                param2[1].c(var20, param5);
+                param2[1].drawTransparent(var20, param5);
               }
-              SoftwareRasterizer.b(pg.field_i);
+              SoftwareRasterizer.restoreClip(pg.field_i);
             }
             if (null != param2[7] &&
               param2[7].field_t != 0) {
-              SoftwareRasterizer.b(var16, var19, var17, var11);
+              SoftwareRasterizer.intersectClip(var16, var19, var17, var11);
               for (var20Lifetime1 = var12; var20Lifetime1 < var13; var20Lifetime1 = var20Lifetime1 + param2[7].field_t) {
-                param2[7].c(var20Lifetime1, var15);
+                param2[7].drawTransparent(var20Lifetime1, var15);
               }
-              SoftwareRasterizer.b(pg.field_i);
+              SoftwareRasterizer.restoreClip(pg.field_i);
             }
             if (param2[3] != null &&
               param2[3].field_F != 0) {
-              SoftwareRasterizer.b(param3, var18, var16, var19);
+              SoftwareRasterizer.intersectClip(param3, var18, var16, var19);
               for (var20Lifetime2 = var14; var15 > var20Lifetime2; var20Lifetime2 = var20Lifetime2 + param2[3].field_F) {
-                param2[3].c(param3, var20Lifetime2);
+                param2[3].drawTransparent(param3, var20Lifetime2);
               }
-              SoftwareRasterizer.b(pg.field_i);
+              SoftwareRasterizer.restoreClip(pg.field_i);
             }
             if (param2[5] != null &&
               param2[5].field_F != 0) {
-              SoftwareRasterizer.b(var17, var18, var10, var19);
+              SoftwareRasterizer.intersectClip(var17, var18, var10, var19);
               for (var20Lifetime3 = var14; var15 > var20Lifetime3; var20Lifetime3 = var20Lifetime3 + param2[5].field_F) {
-                param2[5].c(var13, var20Lifetime3);
+                param2[5].drawTransparent(var13, var20Lifetime3);
               }
-              SoftwareRasterizer.b(pg.field_i);
+              SoftwareRasterizer.restoreClip(pg.field_i);
             }
             if (param2[4] != null &&
               0 != param2[4].field_t &&
               param2[4].field_F != 0) {
-              SoftwareRasterizer.b(var16, var18, var17, var19);
+              SoftwareRasterizer.intersectClip(var16, var18, var17, var19);
               for (var20Lifetime4 = var14; var15 > var20Lifetime4; var20Lifetime4 = var20Lifetime4 + param2[4].field_F) {
                 for (var21 = var12; var21 < var13; var21 = var21 + param2[4].field_t) {
-                  param2[4].c(var21, var20Lifetime4);
+                  param2[4].drawTransparent(var21, var20Lifetime4);
                 }
               }
-              SoftwareRasterizer.b(pg.field_i);
+              SoftwareRasterizer.restoreClip(pg.field_i);
               return;
             }
             return;
@@ -218,11 +218,11 @@ final class qj {
           } else {
             stackIn_75_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_74_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_74_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_e = null;
         field_b = null;
         field_a = null;

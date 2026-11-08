@@ -19,7 +19,7 @@ final class MatchSetup {
     byte[] field_p;
     int field_g;
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         int var1 = -124 / ((-9 - param0) / 35);
         field_i = null;
@@ -93,13 +93,13 @@ final class MatchSetup {
           q.field_a = param3;
           lc.field_g = param11;
           cl.field_f = param6;
-          rm.field_b = bf.a((byte) -87, param7, "lobby", "gameprivacy");
+          rm.field_b = bf.loadSpritesByName((byte) -87, param7, "lobby", "gameprivacy");
           if (param10 <= 81) {
             return;
           }
-          s.field_e = bf.a((byte) -107, param7, "lobby", "ratedgame");
-          ll.field_u = bf.a((byte) -76, param7, "lobby", "opentome");
-          SpriteState.field_B = bf.a((byte) -122, param7, "lobby", "allowspectators");
+          s.field_e = bf.loadSpritesByName((byte) -107, param7, "lobby", "ratedgame");
+          ll.field_u = bf.loadSpritesByName((byte) -76, param7, "lobby", "opentome");
+          SpriteState.field_B = bf.loadSpritesByName((byte) -122, param7, "lobby", "allowspectators");
           wa.field_b = new String[5];
           wa.field_b[3] = fh.field_d;
           wa.field_b[0] = c.field_k;
@@ -358,7 +358,7 @@ final class MatchSetup {
           } else {
             stackIn_107_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_76_0), ((StringBuilder) (Object) stackIn_106_1).append(stackIn_107_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_76_0), ((StringBuilder) (Object) stackIn_106_1).append(stackIn_107_2).append(')').toString());
         }
     }
 
@@ -465,7 +465,7 @@ final class MatchSetup {
             }
           }
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "em.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "em.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -479,7 +479,7 @@ final class MatchSetup {
           }
         }
         if (param1 != 101) {
-          MatchSetup.f(-56);
+          MatchSetup.releaseStatics(-56);
         }
         return -1;
     }
@@ -631,7 +631,7 @@ final class MatchSetup {
           this.field_p = new byte[6];
           this.field_o = param1;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "em.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "em.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

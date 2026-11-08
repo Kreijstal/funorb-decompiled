@@ -30,7 +30,7 @@ final class ql {
     private static int[] field_f;
     private static int[] field_s;
 
-    public static void a() {
+    public static void releaseStatics() {
         field_x = null;
         field_e = null;
         field_j = null;
@@ -41,7 +41,7 @@ final class ql {
         field_f = null;
     }
 
-    final int[] a(int param0, int param1) {
+    final int[] synthesize(int param0, int param1) {
         int stackIn_41_0 = 0;
         double var3;
         int var5;
@@ -85,19 +85,19 @@ final class ql {
         int var17Lifetime3;
         int var17Lifetime1Lifetime1;
         int var17Lifetime2Lifetime1;
-        rd.a(field_x, 0, param0);
+        rd.clear(field_x, 0, param0);
         if (param1 < 10) {
           return field_x;
         }
         var3 = (double)param0 / ((double)param1 + 0.0);
-        this.field_c.a();
-        this.field_n.a();
+        this.field_c.reset();
+        this.field_n.reset();
         var5 = 0;
         var6 = 0;
         var7 = 0;
         if (this.field_o != null) {
-          this.field_o.a();
-          this.field_g.a();
+          this.field_o.reset();
+          this.field_g.reset();
           var5 = (int)((double)(this.field_o.field_j - this.field_o.field_i) * 32.768 / var3);
           var6 = (int)((double)this.field_o.field_i * 32.768 / var3);
         }
@@ -105,8 +105,8 @@ final class ql {
         var9 = 0;
         var10 = 0;
         if (this.field_u != null) {
-          this.field_u.a();
-          this.field_a.a();
+          this.field_u.reset();
+          this.field_a.reset();
           var8 = (int)((double)(this.field_u.field_j - this.field_u.field_i) * 32.768 / var3);
           var9 = (int)((double)this.field_u.field_i * 32.768 / var3);
         }
@@ -120,39 +120,39 @@ final class ql {
           }
         }
         for (var11Lifetime1 = 0; var11Lifetime1 < param0; var11Lifetime1++) {
-          var12 = this.field_c.a(param0);
-          var13 = this.field_n.a(param0);
+          var12 = this.field_c.advance(param0);
+          var13 = this.field_n.advance(param0);
           if (this.field_o != null) {
-            var14 = this.field_o.a(param0);
-            var15 = this.field_g.a(param0);
-            var12 = var12 + (this.a(var7, var15, this.field_o.field_b) >> 1);
+            var14 = this.field_o.advance(param0);
+            var15 = this.field_g.advance(param0);
+            var12 = var12 + (this.evaluateWave(var7, var15, this.field_o.field_b) >> 1);
             var7 = var7 + ((var14 * var5 >> 16) + var6);
           }
           if (this.field_u != null) {
-            var14Lifetime3 = this.field_u.a(param0);
-            var15Lifetime3 = this.field_a.a(param0);
-            var13 = var13 * ((this.a(var10, var15Lifetime3, this.field_u.field_b) >> 1) + 32768) >> 15;
+            var14Lifetime3 = this.field_u.advance(param0);
+            var15Lifetime3 = this.field_a.advance(param0);
+            var13 = var13 * ((this.evaluateWave(var10, var15Lifetime3, this.field_u.field_b) >> 1) + 32768) >> 15;
             var10 = var10 + ((var14Lifetime3 * var8 >> 16) + var9);
           }
           for (var14Lifetime4 = 0; var14Lifetime4 < 5; var14Lifetime4++) {
             if (this.field_t[var14Lifetime4] != 0) {
               var15Lifetime4 = var11Lifetime1 + field_r[var14Lifetime4];
               if (var15Lifetime4 < param0) {
-                field_x[var15Lifetime4] = field_x[var15Lifetime4] + this.a(field_s[var14Lifetime4], var13 * field_h[var14Lifetime4] >> 15, this.field_c.field_b);
+                field_x[var15Lifetime4] = field_x[var15Lifetime4] + this.evaluateWave(field_s[var14Lifetime4], var13 * field_h[var14Lifetime4] >> 15, this.field_c.field_b);
                 field_s[var14Lifetime4] = field_s[var14Lifetime4] + ((var12 * field_d[var14Lifetime4] >> 16) + field_f[var14Lifetime4]);
               }
             }
           }
         }
         if (this.field_p != null) {
-          this.field_p.a();
-          this.field_i.a();
+          this.field_p.reset();
+          this.field_i.reset();
           var11Lifetime2 = 0;
           var12Lifetime1 = 0;
           var13Lifetime1 = 1;
           for (var14Lifetime1 = 0; var14Lifetime1 < param0; var14Lifetime1++) {
-            var15Lifetime1 = this.field_p.a(param0);
-            var16 = this.field_i.a(param0);
+            var15Lifetime1 = this.field_p.advance(param0);
+            var16 = this.field_i.advance(param0);
             if (var13Lifetime1 == 0) {
               var12Lifetime1Lifetime1 = this.field_p.field_i + ((this.field_p.field_j - this.field_p.field_i) * var16 >> 8);
             } else {
@@ -178,10 +178,10 @@ final class ql {
         }
         if (!(this.field_m.field_h[0] <= 0) ||
           !(this.field_m.field_h[1] <= 0)) {
-          this.field_q.a();
-          var11Lifetime4 = this.field_q.a(param0 + 1);
-          var12Lifetime3 = this.field_m.a(0, (float)var11Lifetime4 / 65536.0f);
-          var13Lifetime2 = this.field_m.a(1, (float)var11Lifetime4 / 65536.0f);
+          this.field_q.reset();
+          var11Lifetime4 = this.field_q.advance(param0 + 1);
+          var12Lifetime3 = this.field_m.computeCoefficients(0, (float)var11Lifetime4 / 65536.0f);
+          var13Lifetime2 = this.field_m.computeCoefficients(1, (float)var11Lifetime4 / 65536.0f);
           if (param0 >= var12Lifetime3 + var13Lifetime2) {
             var14Lifetime2 = 0;
             var15Lifetime2 = var13Lifetime2;
@@ -197,7 +197,7 @@ final class ql {
                 var16Lifetime1 = var16Lifetime1 - (int)((long)field_x[var14Lifetime2 - 1 - var17Lifetime3] * (long)si.field_d[1][var17Lifetime3] >> 16);
               }
               field_x[var14Lifetime2] = var16Lifetime1;
-              var11Lifetime4 = this.field_q.a(param0 + 1);
+              var11Lifetime4 = this.field_q.advance(param0 + 1);
               var14Lifetime2++;
             }
             var15Lifetime2Lifetime1 = 128;
@@ -214,12 +214,12 @@ final class ql {
                   var16Lifetime1Lifetime1 = var16Lifetime1Lifetime1 - (int)((long)field_x[var14Lifetime2 - 1 - var17Lifetime1Lifetime1] * (long)si.field_d[1][var17Lifetime1Lifetime1] >> 16);
                 }
                 field_x[var14Lifetime2] = var16Lifetime1Lifetime1;
-                var11Lifetime4 = this.field_q.a(param0 + 1);
+                var11Lifetime4 = this.field_q.advance(param0 + 1);
                 var14Lifetime2++;
               }
               if (var14Lifetime2 < param0 - var12Lifetime3) {
-                var12Lifetime3 = this.field_m.a(0, (float)var11Lifetime4 / 65536.0f);
-                var13Lifetime2 = this.field_m.a(1, (float)var11Lifetime4 / 65536.0f);
+                var12Lifetime3 = this.field_m.computeCoefficients(0, (float)var11Lifetime4 / 65536.0f);
+                var13Lifetime2 = this.field_m.computeCoefficients(1, (float)var11Lifetime4 / 65536.0f);
                 var15Lifetime2Lifetime1 += 128;
                 continue;
               }
@@ -234,7 +234,7 @@ final class ql {
                 var16Lifetime1Lifetime2 = var16Lifetime1Lifetime2 - (int)((long)field_x[var14Lifetime2 - 1 - var17Lifetime2Lifetime1] * (long)si.field_d[1][var17Lifetime2Lifetime1] >> 16);
               }
               field_x[var14Lifetime2] = var16Lifetime1Lifetime2;
-              var11Lifetime4 = this.field_q.a(param0 + 1);
+              var11Lifetime4 = this.field_q.advance(param0 + 1);
               var14Lifetime2++;
             }
           }
@@ -250,7 +250,7 @@ final class ql {
         return field_x;
     }
 
-    private final int a(int param0, int param1, int param2) {
+    private final int evaluateWave(int param0, int param1, int param2) {
         if (param2 == 1) {
           if ((param0 & 32767) < 16384) {
             return param1;
@@ -269,7 +269,7 @@ final class ql {
         return 0;
     }
 
-    final void a(PacketBuffer param0) {
+    final void decode(PacketBuffer param0) {
         int var3 = 0;
         int var4 = 0;
         this.field_c = new td();
@@ -315,7 +315,7 @@ final class ql {
         this.field_b = param0.readUnsignedShort(127);
         this.field_m = new si();
         this.field_q = new td();
-        this.field_m.a(param0, this.field_q);
+        this.field_m.decode(param0, this.field_q);
     }
 
     ql() {

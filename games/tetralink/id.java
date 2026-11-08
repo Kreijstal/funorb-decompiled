@@ -182,7 +182,7 @@ final class id {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var5), "id.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw oi.wrapException((Throwable) ((Object) var5), "id.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -208,7 +208,7 @@ final class id {
         return true;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_w = null;
         field_M = null;
         if (param0 != 338) {

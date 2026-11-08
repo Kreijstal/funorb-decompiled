@@ -18,7 +18,7 @@ final class uj extends al {
         return bl.d(!param0 ? true : false);
     }
 
-    final static void a(long param0, int param1) {
+    final static void sleepIgnoringInterrupt(long param0, int param1) {
         try {
           Throwable decompiledCaughtException = null;
           InterruptedException var3 = null;
@@ -39,7 +39,7 @@ final class uj extends al {
         }
     }
 
-    public final void a(UiWidget param0, int param1, int param2, boolean param3, boolean param4) {
+    public final void drawWidget(UiWidget param0, int param1, int param2, boolean param3, boolean param4) {
         int stackIn_6_0 = 0;
         int stackIn_14_0 = 0;
         int stackIn_19_0 = 0;
@@ -77,7 +77,7 @@ final class uj extends al {
           stackIn_19_0 = (!param4) ? 7105644 : 16777215;
           var8 = stackIn_19_0;
           ci.a(var7, (-this.field_u[0].field_F + param0.field_u >> 1) + (param0.field_w + param2), param0.field_F, param0.field_t + param1, this.field_u, -119);
-          this.field_b.a(param0.field_A, param0.field_t + param1, param0.field_w + (param2 - 2), param0.field_F, param0.field_u, var8, -1, 1, 1, this.field_b.field_N);
+          this.field_b.drawParagraph(param0.field_A, param0.field_t + param1, param0.field_w + (param2 - 2), param0.field_F, param0.field_u, var8, -1, 1, 1, this.field_b.field_N);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -89,11 +89,11 @@ final class uj extends al {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = -97 % ((43 - param0) / 56);
         field_s = (int[][]) null;
         field_q = null;

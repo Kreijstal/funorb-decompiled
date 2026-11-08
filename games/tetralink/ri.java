@@ -5,7 +5,7 @@ final class ri extends IntrusiveNode {
     byte[] field_o;
     dj field_n;
 
-    final void a() {
+    final void buildPatchUsage() {
         int[] var1;
         int[] var2;
         wj var4;
@@ -45,25 +45,25 @@ final class ri extends IntrusiveNode {
         var19[9] = 128;
         var23[9] = 128;
         var4 = new wj(this.field_o);
-        var5 = var4.e();
+        var5 = var4.trackCount();
         for (var6 = 0; var6 < var5; var6++) {
-          var4.f(var6);
-          var4.e(var6);
-          var4.b(var6);
+          var4.seekTrack(var6);
+          var4.readTrackDelta(var6);
+          var4.saveTrackPosition(var6);
         }
         while (true) {
-          var6Lifetime1 = var4.g();
+          var6Lifetime1 = var4.nextTrack();
           var7 = var4.field_g[var6Lifetime1];
           while (true) {
             if (var4.field_g[var6Lifetime1] != var7) {
               break;
             }
-            var4.f(var6Lifetime1);
-            var8 = var4.c(var6Lifetime1);
+            var4.seekTrack(var6Lifetime1);
+            var8 = var4.readMessage(var6Lifetime1);
             if (var8 == 1) {
-              var4.c();
-              var4.b(var6Lifetime1);
-              if (var4.a()) {
+              var4.markTrackDone();
+              var4.saveTrackPosition(var6Lifetime1);
+              if (var4.isDone()) {
                 return;
               }
               break;
@@ -100,13 +100,13 @@ final class ri extends IntrusiveNode {
                 var14.field_p[var11Lifetime2] = (byte) 1;
               }
             }
-            var4.e(var6Lifetime1);
-            var4.b(var6Lifetime1);
+            var4.readTrackDelta(var6Lifetime1);
+            var4.saveTrackPosition(var6Lifetime1);
           }
         }
     }
 
-    final static ri a(Archive param0, String param1, String param2) {
+    final static ri load(Archive param0, String param1, String param2) {
         byte[] var3 = param0.a(param1, param2, true);
         if (var3 == null) {
           return null;
@@ -114,7 +114,7 @@ final class ri extends IntrusiveNode {
         return new ri(new PacketBuffer(var3));
     }
 
-    final void b() {
+    final void releasePatchUsage() {
         this.field_n = null;
     }
 

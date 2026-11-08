@@ -15,12 +15,12 @@ final class wh {
     private int field_b;
     private int field_g;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_j = null;
         field_l = null;
         field_a = null;
         if (param0) {
-          wh.a(true);
+          wh.releaseStatics(true);
         }
     }
 
@@ -91,7 +91,7 @@ final class wh {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 

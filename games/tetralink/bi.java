@@ -9,7 +9,7 @@ final class bi {
     static int[] field_c;
     static int field_a;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == 480) {
           field_c = null;
           field_d = null;
@@ -24,7 +24,7 @@ final class bi {
 
     final static uh a(byte param0) {
         if (param0 < 48) {
-          bi.a(-128);
+          bi.releaseStatics(-128);
           return (uh) ((Object) new ef());
         }
         return (uh) ((Object) new ef());

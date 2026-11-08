@@ -21,7 +21,7 @@ final class ng extends IntrusiveNode {
     static String field_y;
     byte[] field_A;
 
-    final static sj a(byte param0, String[] param1) {
+    final static sj createSuggestedUsernameQuery(byte param0, String[] param1) {
         sj var2 = null;
         RuntimeException var2_ref = null;
         sj stackIn_2_0 = null;
@@ -49,7 +49,7 @@ final class ng extends IntrusiveNode {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -73,7 +73,7 @@ final class ng extends IntrusiveNode {
         var10 = TetraLink.field_J;
         try {
           if (param2 != -114) {
-            ng.a(-121);
+            ng.releaseStatics(-121);
           }
           var5_int = 1;
           var6 = 0;
@@ -87,7 +87,7 @@ final class ng extends IntrusiveNode {
                   var6 = var9;
                   var9--;
                   if ((var9 & 1) != 0) {
-                    var7 = param1.a(param0, var9 >> 2, 95);
+                    var7 = param1.getSoundEffectById(param0, var9 >> 2, 95);
                   } else {
                     var7 = param1.a((byte) 67, var9 >> 2, param0);
                   }
@@ -126,18 +126,18 @@ final class ng extends IntrusiveNode {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
         }
     }
 
-    final static void a(String param0, boolean param1) {
+    final static void installTextHuffman(String param0, boolean param1) {
         try {
           cl.field_b = param0;
           if (!param1) {
-            ng.a(-44);
+            ng.releaseStatics(-44);
           }
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "ng.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "ng.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -175,7 +175,7 @@ final class ng extends IntrusiveNode {
           nd.field_Lb.position = nd.field_Lb.position + 2;
           var5_int = nd.field_Lb.position;
           nd.field_Lb.d(lm.field_g, (byte) -124);
-          nd.field_Lb.a(-1, tc.field_s);
+          nd.field_Lb.writeLong(-1, tc.field_s);
           var6 = 0;
           if (pg.field_m) {
             var6 = var6 | 1;
@@ -212,7 +212,7 @@ final class ng extends IntrusiveNode {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param4).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -221,7 +221,7 @@ final class ng extends IntrusiveNode {
         int var2 = 125 % ((param0 + 39) / 54);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_E = null;
         if (param0 < 12) {
           return;
@@ -740,7 +740,7 @@ final class ng extends IntrusiveNode {
           } else {
             stackIn_206_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_205_0), ((StringBuilder) (Object) stackIn_205_1).append(stackIn_206_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_205_0), ((StringBuilder) (Object) stackIn_205_1).append(stackIn_206_2).append(')').toString());
         }
     }
 

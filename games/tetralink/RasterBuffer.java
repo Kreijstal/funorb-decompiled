@@ -31,13 +31,13 @@ abstract class RasterBuffer {
         ci.field_y[91] = 42;
         if (param0) {
           byte[] var2 = (byte[]) null;
-          RasterBuffer.a((CharSequence) null, 104, -100, (byte[]) null, -8, (byte) 44);
+          RasterBuffer.encodeTextSlice((CharSequence) null, 104, -100, (byte[]) null, -8, (byte) 44);
         }
     }
 
     final void a(int param0) {
         int var2 = -92 % ((param0 + 69) / 41);
-        SoftwareRasterizer.a(this.field_g, this.field_h, this.field_j);
+        SoftwareRasterizer.setTarget(this.field_g, this.field_h, this.field_j);
     }
 
     final static void a(boolean param0, int param1) {
@@ -95,7 +95,7 @@ abstract class RasterBuffer {
         return qa.field_v;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         field_e = null;
         field_b = null;
@@ -105,9 +105,9 @@ abstract class RasterBuffer {
         field_d = null;
     }
 
-    abstract void a(int param0, int param1, int param2, java.awt.Graphics param3);
+    abstract void drawImage(int param0, int param1, int param2, java.awt.Graphics param3);
 
-    final static int a(CharSequence param0, int param1, int param2, byte[] param3, int param4, byte param5) {
+    final static int encodeTextSlice(CharSequence param0, int param1, int param2, byte[] param3, int param4, byte param5) {
         int var8 = 0;
         int stackIn_67_0 = 0;
         RuntimeException stackIn_70_0 = null;
@@ -240,7 +240,7 @@ abstract class RasterBuffer {
           } else {
             stackIn_74_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

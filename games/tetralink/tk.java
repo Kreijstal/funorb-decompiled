@@ -9,7 +9,7 @@ final class tk {
     static String field_c;
     static boolean field_b;
 
-    final static boolean a(byte param0, char param1) {
+    final static boolean isNameSeparator(byte param0, char param1) {
         if (param0 != 81) {
           return false;
         }
@@ -28,13 +28,13 @@ final class tk {
         return true;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_e = null;
         field_c = null;
         field_d = null;
         field_f = null;
         if (param0 != -161) {
-          tk.a(-94);
+          tk.releaseStatics(-94);
         }
     }
 

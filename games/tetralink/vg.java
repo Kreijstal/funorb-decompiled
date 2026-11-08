@@ -24,7 +24,7 @@ final class vg extends hl {
           while (nj.b((byte) 28)) {
             if (dg.field_e == 85 &&
               this.field_Tb.length() > 0) {
-              lo.a(-26750, this.field_Tb, this.field_Tb.length() - 1, ' ');
+              lo.resizeAndPad(-26750, this.field_Tb, this.field_Tb.length() - 1, ' ');
             }
             if (lk.a(tb.field_m, -1, (CharSequence) ((Object) this.field_Tb)) ||
               (this.field_Tb.length() == 0 &&
@@ -68,7 +68,7 @@ final class vg extends hl {
         }
     }
 
-    public static void e(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_Nb = null;
         field_Vb = null;
         if (param0 != 102) {
@@ -93,7 +93,7 @@ final class vg extends hl {
         }
         if (dg.field_e == 85 &&
           !(0 >= this.field_Tb.length())) {
-          lo.a(-26750, this.field_Tb, this.field_Tb.length() - 1, ' ');
+          lo.resizeAndPad(-26750, this.field_Tb, this.field_Tb.length() - 1, ' ');
         }
         if (this.field_Tb.length() < 12) {
           var2 = Character.toLowerCase(tb.field_m);
@@ -189,7 +189,7 @@ final class vg extends hl {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -259,12 +259,12 @@ final class vg extends hl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var1), "vg.D(" + param0 + ')');
+          throw oi.wrapException((Throwable) ((Object) var1), "vg.D(" + param0 + ')');
         }
     }
 
     final static void a(byte param0, Archive param1) {
-        db.field_b = ug.a(param1, (byte) -45, "display_name_changed", "basic");
+        db.field_b = ug.loadFontByName(param1, (byte) -45, "display_name_changed", "basic");
         pj.field_f = new ji(0L, nj.field_b, RasterBuffer.field_d, re.field_S);
         BufferedSocket.field_n = new ji(0L, nj.field_b, re.field_Q, kk.field_P);
         go.field_d = new hl(0L, (hl) null);
@@ -292,7 +292,7 @@ final class vg extends hl {
           BufferedSocket.field_n.field_Rb.field_Ob.field_J = 1;
           var3.field_xb = 1;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "vg.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "vg.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -351,11 +351,11 @@ final class vg extends hl {
               var3 = (-RasterBuffer.field_i + 256) / 2;
             }
             for (var5 = 0; var5 < 18; var5++) {
-              SoftwareRasterizer.e(-(int)a.field_d + (640 + var5 / 2), -var5 + var2, -(var5 / 2) + (int)a.field_d, var4, var3);
-              SoftwareRasterizer.e(var5 / 2 + (638 - (int)a.field_d), var2 - var5, 2, 16777215, var3);
+              SoftwareRasterizer.drawHorizontalLineAlpha(-(int)a.field_d + (640 + var5 / 2), -var5 + var2, -(var5 / 2) + (int)a.field_d, var4, var3);
+              SoftwareRasterizer.drawHorizontalLineAlpha(var5 / 2 + (638 - (int)a.field_d), var2 - var5, 2, 16777215, var3);
             }
             for (var5Lifetime3 = 18; var5Lifetime3 < 20; var5Lifetime3++) {
-              SoftwareRasterizer.e(-(int)a.field_d + (638 + var5Lifetime3 / 2), -var5Lifetime3 + var2, 2 + ((int)a.field_d - var5Lifetime3 / 2), 16777215, var3);
+              SoftwareRasterizer.drawHorizontalLineAlpha(-(int)a.field_d + (638 + var5Lifetime3 / 2), -var5Lifetime3 + var2, 2 + ((int)a.field_d - var5Lifetime3 / 2), 16777215, var3);
             }
             var5_ref = null;
             if (ml.field_ab == 1) {
@@ -365,7 +365,7 @@ final class vg extends hl {
               var5_ref = ai.field_c;
             }
             if (RasterBuffer.field_i == 0) {
-              go.field_g.b((String) (var5_ref), -(int)a.field_d + 652, var2 - 2, 16777215, -1);
+              go.field_g.drawLeft((String) (var5_ref), -(int)a.field_d + 652, var2 - 2, 16777215, -1);
             } else {
               var6_ref = null;
               if (1 == wk.field_u) {
@@ -374,8 +374,8 @@ final class vg extends hl {
               if (wk.field_u == 2) {
                 var6_ref = ai.field_c;
               }
-              go.field_g.c((String) (var5_ref), -(int)a.field_d + 652, -2 + var2, 16777215, -1, -RasterBuffer.field_i + 256);
-              go.field_g.c((String) (var6_ref), -(int)a.field_d + 652, var2 - 2, 16777215, -1, RasterBuffer.field_i);
+              go.field_g.drawLeftAlpha((String) (var5_ref), -(int)a.field_d + 652, -2 + var2, 16777215, -1, -RasterBuffer.field_i + 256);
+              go.field_g.drawLeftAlpha((String) (var6_ref), -(int)a.field_d + 652, var2 - 2, 16777215, -1, RasterBuffer.field_i);
             }
           }
           if (ml.field_ab != 2 &&
@@ -400,13 +400,13 @@ final class vg extends hl {
             }
             var7 = 638 + (-(int)a.field_d - (-(26 * var5Lifetime1) - 10));
             for (var8 = 0; var8 < 18; var8++) {
-              SoftwareRasterizer.e(var8 / 2 + (var7 + 2), var2 - var8, 24, var6, var3Lifetime1);
-              SoftwareRasterizer.e(var8 / 2 + var7, -var8 + var2, 2, 16777215, var3Lifetime1);
+              SoftwareRasterizer.drawHorizontalLineAlpha(var8 / 2 + (var7 + 2), var2 - var8, 24, var6, var3Lifetime1);
+              SoftwareRasterizer.drawHorizontalLineAlpha(var8 / 2 + var7, -var8 + var2, 2, 16777215, var3Lifetime1);
             }
             if (var4Lifetime1 != 256) {
               l.field_c[var5Lifetime1].a(12 + var7, -13 + var2, var4Lifetime1);
             } else {
-              l.field_c[var5Lifetime1].c(12 + var7, var2 - 13);
+              l.field_c[var5Lifetime1].drawTransparent(12 + var7, var2 - 13);
             }
           }
           var5Lifetime2 = 4210752;
@@ -415,22 +415,22 @@ final class vg extends hl {
           }
           var6Lifetime1 = 104 + (638 - ((int)a.field_d - 10));
           for (var7Lifetime1 = 0; var7Lifetime1 < 18; var7Lifetime1++) {
-            SoftwareRasterizer.e(var6Lifetime1 + (2 + var7Lifetime1 / 2), -var7Lifetime1 + var2, 30, var5Lifetime2, var3Lifetime1);
-            SoftwareRasterizer.e(var6Lifetime1 + var7Lifetime1 / 2, -var7Lifetime1 + var2, 2, 16777215, var3Lifetime1);
+            SoftwareRasterizer.drawHorizontalLineAlpha(var6Lifetime1 + (2 + var7Lifetime1 / 2), -var7Lifetime1 + var2, 30, var5Lifetime2, var3Lifetime1);
+            SoftwareRasterizer.drawHorizontalLineAlpha(var6Lifetime1 + var7Lifetime1 / 2, -var7Lifetime1 + var2, 2, 16777215, var3Lifetime1);
           }
           if (256 == var4Lifetime1) {
-            l.field_c[4].c(10 + var6Lifetime1, -13 + var2);
+            l.field_c[4].drawTransparent(10 + var6Lifetime1, -13 + var2);
           } else {
             l.field_c[4].a(10 + var6Lifetime1, -13 + var2, var4Lifetime1);
           }
           for (var7Lifetime2 = -2; var7Lifetime2 < 0; var7Lifetime2++) {
-            SoftwareRasterizer.e((-1 + var7Lifetime2) / 2 + (638 - (int)a.field_d + 20), var2 - 20 - var7Lifetime2, 130, 16777215, var3Lifetime1);
+            SoftwareRasterizer.drawHorizontalLineAlpha((-1 + var7Lifetime2) / 2 + (638 - (int)a.field_d + 20), var2 - 20 - var7Lifetime2, 130, 16777215, var3Lifetime1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var1), "vg.B(" + param0 + ')');
+          throw oi.wrapException((Throwable) ((Object) var1), "vg.B(" + param0 + ')');
         }
     }
 

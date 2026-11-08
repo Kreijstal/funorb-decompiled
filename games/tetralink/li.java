@@ -92,7 +92,7 @@ final class li {
           var6 = 7 & -(7 & (int)param1) + 8;
           var7 = this.field_j & 7;
           if (!param2) {
-            li.a(-105);
+            li.releaseStatics(-105);
           }
           var9 = param1;
           var11 = 31;
@@ -157,7 +157,7 @@ final class li {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -231,7 +231,7 @@ final class li {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_g = null;
         field_a = null;
         if (param0 != 255) {
@@ -263,7 +263,7 @@ final class li {
             stackIn_2_0 = uk.field_u;
             return stackIn_2_0;
           }
-          if (ej.a(param1, param2 ^ 6)) {
+          if (ej.matchesNormalizedSessionName(param1, param2 ^ 6)) {
             stackIn_5_0 = hl.field_A;
             return stackIn_5_0;
           }
@@ -271,7 +271,7 @@ final class li {
             stackIn_8_0 = f.field_w;
             return stackIn_8_0;
           }
-          if (sb.a((byte) 2, param1)) {
+          if (sb.areAllGroupsReady((byte) 2, param1)) {
             stackIn_12_0 = sk.a(new String[]{param1}, hl.field_B, 127);
             return stackIn_12_0;
           }
@@ -302,7 +302,7 @@ final class li {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -373,7 +373,7 @@ final class li {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param13).append(',').append(param14).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param13).append(',').append(param14).append(')').toString());
         }
     }
 
@@ -428,7 +428,7 @@ final class li {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -462,7 +462,7 @@ final class li {
             this.field_e = this.field_e + 1;
             this.field_n[fieldTemp$1] = (byte) 0;
           }
-          rd.a(this.field_f, 0, this.field_n, 32, 32);
+          rd.copy(this.field_f, 0, this.field_n, 32, 32);
           this.b(31);
           var4_int = 0;
           var5 = param1;
@@ -493,7 +493,7 @@ final class li {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

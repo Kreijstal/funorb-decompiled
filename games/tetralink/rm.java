@@ -53,7 +53,7 @@ final class rm {
         return false;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_c = null;
         field_d = null;
         field_e = null;
@@ -118,19 +118,19 @@ final class rm {
             var27 = var9;
             var27Lifetime3 = var9;
             var10 = nd.field_Qb;
-            var8.field_j.a(11, var9, 0, var10);
+            var8.field_j.addIconAction(11, var9, 0, var10);
             var11 = hd.field_s;
             var12 = ec.field_n[1];
             var27Lifetime4 = var12;
             var27Lifetime5 = var12;
             var13 = uh.field_d;
-            var11.field_j.a(12, var12, param2 ^ 0, var13);
+            var11.field_j.addIconAction(12, var12, param2 ^ 0, var13);
             var14 = hd.field_s;
             var15 = ec.field_n[2];
             var27Lifetime6 = var15;
             var27Lifetime7 = var15;
             var16 = df.field_b;
-            var14.field_j.a(13, var15, 0, var16);
+            var14.field_j.addIconAction(13, var15, 0, var16);
           }
           if (param0 == 1) {
             var17 = hd.field_s;
@@ -138,33 +138,33 @@ final class rm {
             var27Lifetime1 = var18;
             var27Lifetime1Lifetime1 = var18;
             var19 = ji.field_Ob;
-            var17.field_j.a(11, var18, param2 + 0, var19);
+            var17.field_j.addIconAction(11, var18, param2 + 0, var19);
             var20 = hd.field_s;
             var21 = ec.field_n[1];
             var27Lifetime1Lifetime2 = var21;
             var27Lifetime1Lifetime3 = var21;
             var22 = fj.field_t;
-            var20.field_j.a(12, var21, param2 ^ 0, var22);
+            var20.field_j.addIconAction(12, var21, param2 ^ 0, var22);
             var23 = hd.field_s;
             var24 = ec.field_n[2];
             var27Lifetime1Lifetime4 = var24;
             var27Lifetime1Lifetime5 = var24;
             var25 = SpriteState.field_H;
-            var23.field_j.a(13, var24, 0, var25);
+            var23.field_j.addIconAction(13, var24, 0, var25);
           }
           if (param0 == 2) {
             var26 = hd.field_s;
             var27Lifetime2 = ec.field_n[0];
             var28 = mb.field_A;
-            var26.field_j.a(11, var27Lifetime2, 0, var28);
+            var26.field_j.addIconAction(11, var27Lifetime2, 0, var28);
             var29 = hd.field_s;
             var30 = ec.field_n[1];
             var31 = dk.field_a;
-            var29.field_j.a(12, var30, param2 ^ 0, var31);
+            var29.field_j.addIconAction(12, var30, param2 ^ 0, var31);
             var32 = hd.field_s;
             var33 = ec.field_n[2];
             var34 = IntrusiveNode.field_a;
-            var32.field_j.a(13, var33, param2 + 0, var34);
+            var32.field_j.addIconAction(13, var33, param2 + 0, var34);
           }
           var35 = hd.field_s;
           var4 = param1.field_eb;
@@ -173,7 +173,7 @@ final class rm {
           var7 = param1.field_R;
           var35.field_j.a(var6, var5, -127, var7, var4);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "rm.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "rm.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

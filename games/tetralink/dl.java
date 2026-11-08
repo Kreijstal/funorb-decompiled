@@ -24,18 +24,18 @@ final class dl extends IntrusiveNode {
             field_n = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "dl.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "dl.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 > -25) {
           return;
         }
         field_n = null;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int[] param4, boolean param5, int param6, int param7) {
+    final void setRasterState(int param0, int param1, int param2, int param3, int[] param4, boolean param5, int param6, int param7) {
         try {
           this.field_p = param2;
           if (!param5) {
@@ -48,7 +48,7 @@ final class dl extends IntrusiveNode {
           this.field_r = param3;
           this.field_u = param1;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "dl.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "dl.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 

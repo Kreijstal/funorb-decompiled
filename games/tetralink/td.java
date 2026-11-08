@@ -14,7 +14,7 @@ final class td {
     private int field_g;
     private int field_k;
 
-    final void b(PacketBuffer param0) {
+    final void decodeSegments(PacketBuffer param0) {
         int var2 = 0;
         this.field_f = param0.readUnsignedByte((byte) -99);
         this.field_c = new int[this.field_f];
@@ -29,10 +29,10 @@ final class td {
         this.field_b = param0.readUnsignedByte((byte) -99);
         this.field_i = param0.f(97);
         this.field_j = param0.f(-108);
-        this.b(param0);
+        this.decodeSegments(param0);
     }
 
-    final int a(int param0) {
+    final int advance(int param0) {
         int fieldTemp$0 = 0;
         if (this.field_k >= this.field_e) {
           fieldTemp$0 = this.field_h;
@@ -51,7 +51,7 @@ final class td {
         return this.field_a - this.field_g >> 15;
     }
 
-    final void a() {
+    final void reset() {
         this.field_e = 0;
         this.field_h = 0;
         this.field_g = 0;

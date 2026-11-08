@@ -31,7 +31,7 @@ final class IntrusiveDequeCursor {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var2_ref), "tg.B(" + param0 + ')');
+          throw oi.wrapException((Throwable) ((Object) var2_ref), "tg.B(" + param0 + ')');
         }
     }
 
@@ -57,11 +57,11 @@ final class IntrusiveDequeCursor {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var2_ref), "tg.E(" + param0 + ')');
+          throw oi.wrapException((Throwable) ((Object) var2_ref), "tg.E(" + param0 + ')');
         }
     }
 
-    final IntrusiveNode a(boolean param0, IntrusiveNode param1) {
+    final IntrusiveNode startBackwardFrom(boolean param0, IntrusiveNode param1) {
         IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_7_0 = null;
@@ -100,7 +100,7 @@ final class IntrusiveDequeCursor {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -145,7 +145,7 @@ final class IntrusiveDequeCursor {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -171,7 +171,7 @@ final class IntrusiveDequeCursor {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var2_ref), "tg.G(" + param0 + ')');
+          throw oi.wrapException((Throwable) ((Object) var2_ref), "tg.G(" + param0 + ')');
         }
     }
 
@@ -196,7 +196,7 @@ final class IntrusiveDequeCursor {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var2_ref), "tg.F(" + param0 + ')');
+          throw oi.wrapException((Throwable) ((Object) var2_ref), "tg.F(" + param0 + ')');
         }
     }
 
@@ -219,7 +219,7 @@ final class IntrusiveDequeCursor {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -231,7 +231,7 @@ final class IntrusiveDequeCursor {
             field_f = 18;
           }
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "tg.D(" + param0 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "tg.D(" + param0 + ')');
         }
     }
 
@@ -435,7 +435,7 @@ final class IntrusiveDequeCursor {
           } else {
             stackIn_75_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(')').toString());
         }
     }
 

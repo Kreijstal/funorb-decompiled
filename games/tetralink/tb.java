@@ -29,7 +29,7 @@ final class tb {
           }
           cl.field_e = true;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "tb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "tb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -65,7 +65,7 @@ final class tb {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -87,7 +87,7 @@ final class tb {
         this(param0, param1, param0.a(param1, false, param2));
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_d = null;
         field_j = null;
         field_h = null;
@@ -214,7 +214,7 @@ final class tb {
           } else {
             stackIn_60_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_59_1).append(stackIn_60_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_59_1).append(stackIn_60_2).append(')').toString());
         }
     }
 
@@ -226,10 +226,10 @@ final class tb {
           tb.a(false, (String) null, -3L);
         }
         if (param1 % 10L != 0L) {
-          uj.a(param1, -568127903);
+          uj.sleepIgnoringInterrupt(param1, -568127903);
         } else {
-          uj.a(-1L + param1, -568127903);
-          uj.a(1L, -568127903);
+          uj.sleepIgnoringInterrupt(-1L + param1, -568127903);
+          uj.sleepIgnoringInterrupt(1L, -568127903);
         }
     }
 
@@ -289,7 +289,7 @@ final class tb {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

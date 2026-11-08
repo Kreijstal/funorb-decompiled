@@ -19,7 +19,7 @@ class nn extends ae {
 
     private final void m(int param0) {
         if (this.field_s instanceof ih) {
-          ((ih) (this.field_s)).a(this, (byte) 101);
+          ((ih) (this.field_s)).onTextChanged(this, (byte) 101);
         }
         if (param0 != 82) {
           String var3 = (String) null;
@@ -35,11 +35,11 @@ class nn extends ae {
         try {
           this.field_P = param2;
           this.field_H = dh.field_q.field_r;
-          this.a(true, 103, param0);
+          this.setText(true, 103, param0);
           this.field_W = true;
           this.field_bb = k.a(0);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "nn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "nn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -64,7 +64,7 @@ class nn extends ae {
             } else {
               stackIn_6_2 = var8_int;
             }
-            this.c(stackIn_5_1, stackIn_6_2);
+            this.setCaret(stackIn_5_1, stackIn_6_2);
             var8_long = k.a(0);
             stackIn_9_1 = !(-this.field_U + var8_long >= 250L);
             this.field_Z = stackIn_9_1;
@@ -94,18 +94,18 @@ class nn extends ae {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
-    private final void c(int param0, int param1) {
+    private final void setCaret(int param0, int param1) {
         this.field_V = param1;
         if (!sn.field_a[param0]) {
           this.field_Q = this.field_V;
         }
     }
 
-    public static void e(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_T = null;
         field_S = null;
         field_Y = null;
@@ -114,7 +114,7 @@ class nn extends ae {
         }
     }
 
-    final void a(boolean param0, int param1, String param2) {
+    final void setText(boolean param0, int param1, String param2) {
         int dupTemp$2 = 0;
         int var4_int = 0;
         RuntimeException stackIn_15_0 = null;
@@ -152,7 +152,7 @@ class nn extends ae {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -203,11 +203,11 @@ class nn extends ae {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    void a(UiWidget param0, int param1, int param2, boolean param3) {
+    void updatePointer(UiWidget param0, int param1, int param2, boolean param3) {
         jh var5 = null;
         int var6 = 0;
         RuntimeException stackIn_15_0 = null;
@@ -216,7 +216,7 @@ class nn extends ae {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5_ref = null;
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(param0, param1, param2, param3);
           this.h((byte) -85);
           if (this.field_x == 1) {
             if (this.field_H instanceof jh) {
@@ -244,11 +244,11 @@ class nn extends ae {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    private final String g(int param0) {
+    private final String selectedText(int param0) {
         int var2 = this.field_V <= this.field_Q ? this.field_V : this.field_Q;
         if (param0 < 43) {
           return (String) null;
@@ -257,7 +257,7 @@ class nn extends ae {
         return this.field_A.substring(var2, var3);
     }
 
-    final void k(int param0) {
+    final void clearText(int param0) {
         this.field_A = "";
         this.field_Q = 0;
         this.field_V = param0;
@@ -277,11 +277,11 @@ class nn extends ae {
         }
         if (param0 != 1) {
           String var4 = (String) null;
-          this.a(false, -8, (String) null);
+          this.setText(false, -8, (String) null);
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         long var6;
         jh var8;
         if (param0 != 0) {
@@ -289,7 +289,7 @@ class nn extends ae {
         }
         if (this.field_H != null &&
           0 == param3) {
-          this.field_H.a((UiWidget) (this), param1, param2, true, this.field_K);
+          this.field_H.drawWidget((UiWidget) (this), param1, param2, true, this.field_K);
           if (this.field_H instanceof jh) {
             var8 = (jh) ((Object) this.field_H);
             if (this.field_Q != this.field_V) {
@@ -310,7 +310,7 @@ class nn extends ae {
         return -ja.field_j + hd.field_q;
     }
 
-    final boolean a(int param0, char param1, int param2, UiWidget param3) {
+    final boolean handleKey(int param0, char param1, int param2, UiWidget param3) {
         int dupTemp$0 = 0;
         int stackIn_62_1 = 0;
         int stackIn_63_2 = 0;
@@ -353,7 +353,7 @@ class nn extends ae {
             if (param0 != 85) {
               if (101 != param0) {
                 if (param0 == 13) {
-                  this.k(0);
+                  this.clearText(0);
                   return true;
                 }
                 if (96 == param0) {
@@ -364,7 +364,7 @@ class nn extends ae {
                     } else {
                       stackIn_69_2 = this.n(param2 ^ -34);
                     }
-                    this.c(stackIn_68_1, stackIn_69_2);
+                    this.setCaret(stackIn_68_1, stackIn_69_2);
                     return true;
                   }
                 } else {
@@ -376,16 +376,16 @@ class nn extends ae {
                       } else {
                         stackIn_63_2 = this.d(false);
                       }
-                      this.c(stackIn_62_1, stackIn_63_2);
+                      this.setCaret(stackIn_62_1, stackIn_63_2);
                       return true;
                     }
                   } else {
                     if (param0 == 102) {
-                      this.c(81, 0);
+                      this.setCaret(81, 0);
                       return true;
                     }
                     if (param0 == 103) {
-                      this.c(param2 + 80, this.field_A.length());
+                      this.setCaret(param2 + 80, this.field_A.length());
                       return true;
                     }
                     if (param0 == 84) {
@@ -444,7 +444,7 @@ class nn extends ae {
           } else {
             stackIn_78_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_77_0), ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_77_0), ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(')').toString());
         }
     }
 
@@ -490,13 +490,13 @@ class nn extends ae {
           }
           pl.field_d = 0;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "nn.O(" + param0 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "nn.O(" + param0 + ')');
         }
     }
 
     void j(int param0) {
         if (this.field_s instanceof ih) {
-          ((ih) (this.field_s)).a((byte) 73, this);
+          ((ih) (this.field_s)).onTextSet((byte) 73, this);
         }
         if (param0 != -12956) {
           this.e((byte) 22);
@@ -533,7 +533,7 @@ class nn extends ae {
         var3 = var10.a((UiWidget) (this), false);
         var4 = var3.b((byte) 66);
         var6 = var10.b((UiWidget) (this), 92);
-        var7 = var10.a(true) >> 1;
+        var7 = var10.getLineInkHeight(true) >> 1;
         if (var4 < var6 - var7) {
           this.field_o = 0;
           this.field_E = 0;
@@ -579,7 +579,7 @@ class nn extends ae {
           this.field_Q = this.field_V;
           this.j(-12956);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "nn.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "nn.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -607,12 +607,12 @@ class nn extends ae {
     }
 
     private final void l(int param0) {
-        String var2 = this.g(46);
+        String var2 = this.selectedText(46);
         if (param0 <= 26) {
           return;
         }
         if (!(var2.length() <= 0)) {
-          java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) ((Object) new java.awt.datatransfer.StringSelection(this.g(71))), (java.awt.datatransfer.ClipboardOwner) null);
+          java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) ((Object) new java.awt.datatransfer.StringSelection(this.selectedText(71))), (java.awt.datatransfer.ClipboardOwner) null);
         }
     }
 
@@ -644,11 +644,11 @@ class nn extends ae {
             mf.field_s.a(nl.field_a, false);
           }
           nl.field_a.a(param0, (byte) -122, param1, param3);
-          SoftwareRasterizer.a();
+          SoftwareRasterizer.clear();
           i.b(true, 122);
           int var4_int = -4 % ((param2 + 53) / 62);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "nn.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "nn.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

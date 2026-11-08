@@ -28,7 +28,7 @@ final class gg extends hm {
         String var1 = hb.c(-8927);
         ao.field_c = new tl(var1, (String) null, true, false, false);
         mf.field_s.a(mm.field_u, false);
-        mm.field_u.e(ao.field_c, -27667);
+        mm.field_u.transitionToContent(ao.field_c, -27667);
         mm.field_u.a(true);
     }
 
@@ -40,8 +40,8 @@ final class gg extends hm {
         bf var1Lifetime1;
         var2 = TetraLink.field_J;
         try {
-          ch.field_q.f();
-          hc.field_v.f();
+          ch.field_q.serviceOutput();
+          hc.field_v.serviceOutput();
           ok.field_a = ok.field_a - 1;
           if (ok.field_a == 0) {
             ok.field_a = 200;
@@ -63,7 +63,7 @@ final class gg extends hm {
             }
           }
           if (param0 > -77) {
-            gg.a(true);
+            gg.releaseStatics(true);
           }
           if (null != ic.field_b &&
             !ic.field_b.d((byte) 127)) {
@@ -74,7 +74,7 @@ final class gg extends hm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var1_ref), "gg.G(" + param0 + ')');
+          throw oi.wrapException((Throwable) ((Object) var1_ref), "gg.G(" + param0 + ')');
         }
     }
 
@@ -100,7 +100,7 @@ final class gg extends hm {
         int var1_intLifetime1;
         var4 = TetraLink.field_J;
         try {
-          vn.b();
+          vn.useRasterClip();
           da.field_g = new int[260];
           mh.field_a = 11;
           for (var1_int = 0; var1_int < 256; var1_int++) {
@@ -120,7 +120,7 @@ final class gg extends hm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var1), "gg.D(" + param0 + ')');
+          throw oi.wrapException((Throwable) ((Object) var1), "gg.D(" + param0 + ')');
         }
     }
 
@@ -139,7 +139,7 @@ final class gg extends hm {
           param1.a(this.field_g, (byte) 103);
           param1.a((byte) 124, this.field_h);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "gg.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "gg.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -150,7 +150,7 @@ final class gg extends hm {
         var2.a(param1, false);
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (param0) {
           field_k = (java.awt.Font) null;
         }
@@ -164,7 +164,7 @@ final class gg extends hm {
           this.field_h = param1;
           this.field_g = param0;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "gg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "gg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

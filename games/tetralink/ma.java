@@ -58,7 +58,7 @@ final class ma {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -93,11 +93,11 @@ final class ma {
               var7Lifetime2 = var9;
               var7Lifetime3 = var9;
               if (param1 >= 0L) {
-                var7Lifetime4 = var9 + "; Expires=" + ei.a((byte) 2, k.a(0) + 1000L * param1) + "; Max-Age=" + param1;
+                var7Lifetime4 = var9 + "; Expires=" + ei.formatGmtDate((byte) 2, k.a(0) + 1000L * param1) + "; Max-Age=" + param1;
               } else {
                 var7Lifetime4 = var9 + "; Discard;";
               }
-              ii.a(-19149, "document.cookie=\"" + var7Lifetime4 + "\"", param2);
+              ii.evaluateScript(-19149, "document.cookie=\"" + var7Lifetime4 + "\"", param2);
               return;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -126,7 +126,7 @@ final class ma {
             } else {
               stackIn_18_2 = "{...}";
             }
-            throw oi.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+            throw oi.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -268,7 +268,7 @@ final class ma {
             stackIn_10_0 = sk.a(new String[]{param1}, SecondaryNodeDequeIterator.field_b, 127);
             return stackIn_10_0;
           }
-          og.field_j.a((byte) -10, var8);
+          og.field_j.startBackwardFrom((byte) -10, var8);
           while (true) {
             var7 = (ud) (og.field_j.a((byte) -70));
             if (var7 != null) {
@@ -299,7 +299,7 @@ final class ma {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -314,7 +314,7 @@ final class ma {
           }
           this.field_k = -1;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "ma.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "ma.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -347,8 +347,8 @@ final class ma {
           stackIn_2_1 = param3;
           stackIn_2_2 = false;
           stackIn_3_3 = !(param0);
-          var5 = ((fc) (Object) stackIn_2_0).a(stackIn_2_1, stackIn_2_2, stackIn_3_3);
-          var5.a(im.field_c, this.field_i, (f) null, -1, 0, 0, param0);
+          var5 = ((fc) (Object) stackIn_2_0).copyForAnimation(stackIn_2_1, stackIn_2_2, stackIn_3_3);
+          var5.applyAnimationFrame(im.field_c, this.field_i, (f) null, -1, 0, 0, param0);
           stackIn_4_0 = var5;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -361,7 +361,7 @@ final class ma {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -397,7 +397,7 @@ final class ma {
             } else {
               stackIn_7_2 = "{...}";
             }
-            throw oi.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+            throw oi.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -470,7 +470,7 @@ final class ma {
         return false;
     }
 
-    final static void c(int param0) {
+    final static void initializeOptionLabels(int param0) {
         bb.field_d = new String[co.field_q];
         bb.field_d[19] = uk.field_v;
         bb.field_d[20] = ok.field_e;

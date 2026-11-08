@@ -24,7 +24,7 @@ final class RandomAccessCacheFile {
           this.field_d.write(param2, param1, param3);
           this.field_c = this.field_c + (long)param3;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "sa.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "sa.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -72,7 +72,7 @@ final class RandomAccessCacheFile {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param3).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -115,7 +115,7 @@ final class RandomAccessCacheFile {
         this.field_d = (RandomAccessFile) null;
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_h = null;
         field_b = null;
         if (param0 != -112) {
@@ -134,7 +134,7 @@ final class RandomAccessCacheFile {
 
     final long a(int param0) throws IOException {
         if (param0 != -1) {
-          RandomAccessCacheFile.b((byte) -82);
+          RandomAccessCacheFile.releaseStatics((byte) -82);
           return this.field_d.length();
         }
         return this.field_d.length();
@@ -160,7 +160,7 @@ final class RandomAccessCacheFile {
           }
           this.field_d.seek(0L);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "sa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "sa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

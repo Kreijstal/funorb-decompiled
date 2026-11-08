@@ -25,11 +25,11 @@ final class dh implements m {
         if (var1 == null) {
           throw new IllegalStateException();
         }
-        SoftwareRasterizer.a(var1.field_t, var1.field_p, var1.field_o);
+        SoftwareRasterizer.setTarget(var1.field_t, var1.field_p, var1.field_o);
         if (param0 != -581) {
           return;
         }
-        SoftwareRasterizer.a(var1.field_r, var1.field_q, var1.field_u, var1.field_s);
+        SoftwareRasterizer.setClip(var1.field_r, var1.field_q, var1.field_u, var1.field_s);
         var1.field_t = null;
         fm.field_a.addLast(var1, false);
     }
@@ -71,17 +71,17 @@ final class dh implements m {
               return var7.field_u;
             }
             var7.unlink(false);
-            var7.a();
+            var7.releasePixels();
             this.field_a = this.field_a + 1;
           }
-          if (!var7.a(param0, this.field_h, this.field_j)) {
+          if (!var7.buildPixels(param0, this.field_h, this.field_j)) {
             return null;
           }
           if (this.field_a != 0) {
             this.field_a = this.field_a - 1;
           } else {
             var8 = (gf) (this.field_b.removeLast((byte) 126));
-            var8.a();
+            var8.releasePixels();
           }
           this.field_b.addFirst(var7, 127);
           return var7.field_u;
@@ -191,7 +191,7 @@ final class dh implements m {
           } else {
             stackIn_46_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(')').toString());
         }
     }
 
@@ -220,7 +220,7 @@ final class dh implements m {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var1_ref), "dh.F(" + param0 + ')');
+          throw oi.wrapException((Throwable) ((Object) var1_ref), "dh.F(" + param0 + ')');
         }
     }
 
@@ -301,7 +301,7 @@ final class dh implements m {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

@@ -14,7 +14,7 @@ final class sj {
     static int field_e;
     static boolean field_a;
 
-    final static byte[] a(String param0, int param1) {
+    final static byte[] readTextResourceBytes(String param0, int param1) {
         RuntimeException var2 = null;
         byte[] stackIn_2_0 = null;
         byte[] stackIn_4_0 = null;
@@ -39,7 +39,7 @@ final class sj {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -55,7 +55,7 @@ final class sj {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!fi.a(param0, param4, param1, (byte) -94, param2)) {
+          if (!fi.canSendQuickChat(param0, param4, param1, (byte) -94, param2)) {
             return false;
           }
           if (param4 == 1) {
@@ -89,7 +89,7 @@ final class sj {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -164,7 +164,7 @@ final class sj {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -198,7 +198,7 @@ final class sj {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -258,7 +258,7 @@ final class sj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var2_ref), "sj.E(" + param0 + ',' + param1 + ')');
+          throw oi.wrapException((Throwable) ((Object) var2_ref), "sj.E(" + param0 + ',' + param1 + ')');
         }
     }
 

@@ -17,7 +17,7 @@ final class pc {
     short[] field_h;
     byte[] field_i;
 
-    public static void a() {
+    public static void releaseStatics() {
         field_a = null;
         field_k = null;
         field_j = null;

@@ -18,11 +18,11 @@ final class eo {
         if (param1 > 88) {
           return SoftwareRasterizer.field_f - param0;
         }
-        eo.a((byte) -127);
+        eo.releaseStatics((byte) -127);
         return SoftwareRasterizer.field_f - param0;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_c = null;
         if (param0 < -100) {
           field_d = null;
@@ -40,8 +40,8 @@ final class eo {
     }
 
     final static void a(int param0) {
-        ka.field_h = ta.a(ti.field_g, new double[]{0.0, 0.0, 0.0}, new double[]{0.0, 1.0, 0.0});
-        bd.field_b = ta.a(ka.field_h);
+        ka.field_h = ta.createLookAtCamera(ti.field_g, new double[]{0.0, 0.0, 0.0}, new double[]{0.0, 1.0, 0.0});
+        bd.field_b = ta.toFixedCamera(ka.field_h);
         if (param0 >= -14) {
           field_a = (String) null;
         }
@@ -67,7 +67,7 @@ final class eo {
           }
           var8.b(var8.position - var7, -2);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "eo.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "eo.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 

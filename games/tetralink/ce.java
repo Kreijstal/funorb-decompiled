@@ -12,11 +12,11 @@ final class ce {
     static String field_c;
     static int field_b;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_f = null;
         field_i = (boolean[][]) null;
         if (param0 <= 7) {
-          ce.a((byte) -74);
+          ce.releaseStatics((byte) -74);
         }
         field_c = null;
         field_e = null;

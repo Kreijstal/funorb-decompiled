@@ -10,7 +10,7 @@ final class ve {
     static String field_f;
 
     final void a(int param0, int param1, byte param2, int param3, int param4) {
-        qj.a(param3, (byte) -36, this.field_e, param1, param4, param0);
+        qj.drawNineSliceFrame(param3, (byte) -36, this.field_e, param1, param4, param0);
         int var6 = 11 % ((-72 - param2) / 50);
     }
 
@@ -30,7 +30,7 @@ final class ve {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 >= 115) {
           field_f = null;
@@ -53,9 +53,9 @@ final class ve {
           if (param0 != -1) {
             field_a = (int[]) null;
           }
-          mm.field_u.e(ao.field_c, param0 - 27666);
+          mm.field_u.transitionToContent(ao.field_c, param0 - 27666);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "ve.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "ve.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -83,7 +83,7 @@ final class ve {
         try {
           this.field_e = param0;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "ve.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "ve.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

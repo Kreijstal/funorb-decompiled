@@ -12,20 +12,20 @@ class ka extends hm {
 
     final void a(int param0, PacketBuffer param1) {
         try {
-          param1.a(-1, this.field_j);
+          param1.writeLong(-1, this.field_j);
           param1.a((byte) -127, this.field_k);
           if (param0 != -22017) {
             ka.a(-61, '￶');
           }
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "ka.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "ka.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static boolean a(int param0, char param1) {
         boolean stackIn_13_0 = false;
         if (param0 != 65) {
-          ka.b((byte) -100);
+          ka.releaseStatics((byte) -100);
         }
         stackIn_13_0 = ((!(param1 < 48) &&
           !(57 < param1)) ||
@@ -189,7 +189,7 @@ class ka extends hm {
         }
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_l = null;
         field_g = null;
         field_i = null;
@@ -220,7 +220,7 @@ class ka extends hm {
           this.field_k = param1;
           this.field_j = param0;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "ka.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "ka.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

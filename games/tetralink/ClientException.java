@@ -12,7 +12,7 @@ final class ClientException extends RuntimeException {
 
     final static hl a(int param0) {
         if (param0 != 12) {
-          ClientException.a(false);
+          ClientException.releaseStatics(false);
           return qj.b(0);
         }
         return qj.b(0);
@@ -103,7 +103,7 @@ final class ClientException extends RuntimeException {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
           return;
         }

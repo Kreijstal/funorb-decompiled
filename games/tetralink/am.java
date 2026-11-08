@@ -10,7 +10,7 @@ final class am {
     static int field_f;
     private static String field_z;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (param0) {
           field_d = null;
           field_e = null;
@@ -19,7 +19,7 @@ final class am {
           field_c = null;
           return;
         }
-        am.a(false);
+        am.releaseStatics(false);
         field_d = null;
         field_e = null;
         field_a = null;

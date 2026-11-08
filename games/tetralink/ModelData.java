@@ -41,7 +41,7 @@ final class ModelData extends vh {
     byte field_s;
     int[] field_h;
 
-    final void b() {
+    final void computeNormals() {
         ce dupTemp$0 = null;
         int var1;
         int var2;
@@ -145,7 +145,7 @@ final class ModelData extends vh {
         }
     }
 
-    final void a() {
+    final void buildVertexGroups() {
         int[] array$2 = null;
         int dupTemp$0 = 0;
         int[] arrayValue$1 = null;
@@ -214,7 +214,7 @@ final class ModelData extends vh {
         }
     }
 
-    final fc a(int param0, int param1, int param2, int param3, int param4) {
+    final fc createModel(int param0, int param1, int param2, int param3, int param4) {
         return (fc) ((Object) new Model(this, param0, param1, param2, param3, param4));
     }
 
@@ -226,7 +226,7 @@ final class ModelData extends vh {
         return new ModelData(var3);
     }
 
-    private final void a(byte[] param0) {
+    private final void decodeExtendedFormat(byte[] param0) {
         byte dupTemp$0 = 0;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
@@ -645,7 +645,7 @@ final class ModelData extends vh {
         }
     }
 
-    private final void b(byte[] param0) {
+    private final void decodeLegacyFormat(byte[] param0) {
         int var2;
         int var3;
         PacketBuffer var4;
@@ -971,9 +971,9 @@ final class ModelData extends vh {
         this.field_E = 0;
         if (param0[param0.length - 1] == -1 &&
           param0[param0.length - 2] == -1) {
-          this.a(param0);
+          this.decodeExtendedFormat(param0);
         } else {
-          this.b(param0);
+          this.decodeLegacyFormat(param0);
         }
     }
 }

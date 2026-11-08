@@ -14,7 +14,7 @@ final class NotificationToast extends IntrusiveNode {
         this.field_q = param0;
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 <= -21) {
           field_s = null;
           field_r = null;
@@ -24,7 +24,7 @@ final class NotificationToast extends IntrusiveNode {
           field_p = null;
           return;
         }
-        NotificationToast.b((byte) -76);
+        NotificationToast.releaseStatics((byte) -76);
         field_s = null;
         field_r = null;
         field_o = null;

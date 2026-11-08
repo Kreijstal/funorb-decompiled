@@ -9,14 +9,14 @@ abstract class um extends d implements ih {
     private nn field_p;
     static boolean field_o;
 
-    public final void a(nn param0, byte param1) {
+    public final void onTextChanged(nn param0, byte param1) {
         try {
           if (param1 != 101) {
             String var4 = (String) null;
             um.a((String) null, ' ', false, (String) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "um.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "um.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -98,7 +98,7 @@ abstract class um extends d implements ih {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -107,7 +107,7 @@ abstract class um extends d implements ih {
           return this.a(0, this.field_p.field_A);
         }
         nn var3 = (nn) null;
-        this.a((byte) 77, (nn) null);
+        this.onTextSet((byte) 77, (nn) null);
         return this.a(0, this.field_p.field_A);
     }
 
@@ -124,12 +124,12 @@ abstract class um extends d implements ih {
         return true;
     }
 
-    public final void a(byte param0, nn param1) {
+    public final void onTextSet(byte param0, nn param1) {
         try {
           this.a(127);
           int var3_int = 33 / ((-18 - param0) / 63);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "um.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "um.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -140,7 +140,7 @@ abstract class um extends d implements ih {
         return this.a(this.field_p.field_A, 26202);
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_m = null;
         if (param0 == 0) {
           field_k = null;
@@ -159,7 +159,7 @@ abstract class um extends d implements ih {
         try {
           this.field_p = param0;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "um.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "um.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

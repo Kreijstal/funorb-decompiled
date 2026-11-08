@@ -13,7 +13,7 @@ final class tc extends IntrusiveNode {
     static String field_t;
     static int[] field_w;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_t = null;
         field_q = null;
         if (param0) {
@@ -22,7 +22,7 @@ final class tc extends IntrusiveNode {
           field_n = null;
           return;
         }
-        tc.a(false);
+        tc.releaseStatics(false);
         field_p = null;
         field_w = null;
         field_n = null;
@@ -34,7 +34,7 @@ final class tc extends IntrusiveNode {
           this.field_u = param1;
           this.field_o = param2;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "tc.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "tc.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

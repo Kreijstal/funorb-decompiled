@@ -12,7 +12,7 @@ final class o extends IntrusiveNode {
         throw new Error();
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_p = null;
         if (param0 != -11961) {
           return;
@@ -27,16 +27,16 @@ final class o extends IntrusiveNode {
         int var1Lifetime1;
         if (param0 > 0) {
           field_p = (String) null;
-          om.field_Rb = mk.field_b.b(cd.field_c[14]);
-          var1 = mk.field_b.b(cd.field_c[15]);
+          om.field_Rb = mk.field_b.textWidth(cd.field_c[14]);
+          var1 = mk.field_b.textWidth(cd.field_c[15]);
           if (om.field_Rb < var1) {
             om.field_Rb = var1;
             return;
           }
           return;
         }
-        om.field_Rb = mk.field_b.b(cd.field_c[14]);
-        var1Lifetime1 = mk.field_b.b(cd.field_c[15]);
+        om.field_Rb = mk.field_b.textWidth(cd.field_c[14]);
+        var1Lifetime1 = mk.field_b.textWidth(cd.field_c[15]);
         if (om.field_Rb >= var1Lifetime1) {
           return;
         }

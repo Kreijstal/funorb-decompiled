@@ -22,7 +22,7 @@ final class dg {
         return ma.field_g;
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -5549) {
           return;
         }
@@ -56,7 +56,7 @@ final class dg {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -86,7 +86,7 @@ final class dg {
         int var7 = 0;
         UiWidget var8 = null;
         try {
-          qj.a(param4.field_F, (byte) -36, this.field_k, param2 + param4.field_t, param4.field_u, param1 + param4.field_w);
+          qj.drawNineSliceFrame(param4.field_F, (byte) -36, this.field_k, param2 + param4.field_t, param4.field_u, param1 + param4.field_w);
           if (this.field_n != null) {
             var6_int = param4.field_t + param2 + this.field_b;
             if (param3.field_k == 1) {
@@ -102,7 +102,7 @@ final class dg {
             if (2 == param3.field_d) {
               var7 = var7 + (-this.field_n.field_F + param4.field_u);
             }
-            this.field_n.c(var6_int, var7);
+            this.field_n.drawTransparent(var6_int, var7);
           }
           var6 = param3.c(param4, 4373);
           if (param0 != 46) {
@@ -137,7 +137,7 @@ final class dg {
             } else {
               stackIn_24_8 = this.field_h;
             }
-            ((BitmapFont) (Object) stackIn_17_0).a(stackIn_17_1, stackIn_20_2, stackIn_23_3, stackIn_23_4, stackIn_23_5, stackIn_23_6, stackIn_23_7, stackIn_24_8, param3.field_k, param3.field_d, param3.field_c);
+            ((BitmapFont) (Object) stackIn_17_0).drawParagraphAlpha(stackIn_17_1, stackIn_20_2, stackIn_23_3, stackIn_23_4, stackIn_23_5, stackIn_23_6, stackIn_23_7, stackIn_24_8, param3.field_k, param3.field_d, param3.field_c);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -156,7 +156,7 @@ final class dg {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
         }
     }
 
@@ -248,7 +248,7 @@ final class dg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var1), "dg.E(" + param0 + ')');
+          throw oi.wrapException((Throwable) ((Object) var1), "dg.E(" + param0 + ')');
         }
     }
 
@@ -324,7 +324,7 @@ final class dg {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
         }
     }
 
@@ -347,7 +347,7 @@ final class dg {
         }
         vd.b(param0, 0);
         if (wl.field_d) {
-          SoftwareRasterizer.e(we.field_e.field_g.field_M, we.field_e.field_g.field_yb, we.field_e.field_g.field_Hb, we.field_e.field_g.field_R);
+          SoftwareRasterizer.darkenRectangle(we.field_e.field_g.field_M, we.field_e.field_g.field_yb, we.field_e.field_g.field_Hb, we.field_e.field_g.field_R);
           we.field_e.field_g.a(param0, param1 + 344);
         }
         if (param1 != -88) {
@@ -377,7 +377,7 @@ final class dg {
           int var3_int = -14 / ((param1 - 6) / 54);
           param0.field_h = this.field_h;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "dg.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "dg.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -478,7 +478,7 @@ final class dg {
               var9 = var16;
               var9 = var16;
               var9 = var16;
-              var10Lifetime1 = tn.field_a.field_Ib.b(var16) + 3 * tn.field_a.field_Ib.a('.');
+              var10Lifetime1 = tn.field_a.field_Ib.textWidth(var16) + 3 * tn.field_a.field_Ib.a('.');
               tn.field_a.field_V = (tn.field_a.field_Hb - var10Lifetime1) / 2;
               if ((cb.field_u & 48) == 16) {
                 var9 = var16 + ".";
@@ -591,7 +591,7 @@ final class dg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var4), "dg.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw oi.wrapException((Throwable) ((Object) var4), "dg.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -616,7 +616,7 @@ final class dg {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = -58 / ((param1 - 71) / 52);
-          stackIn_1_0 = we.a(-11040, ee.a(param2, 100, param0));
+          stackIn_1_0 = we.a(-11040, ee.createAtRatePercent(param2, 100, param0));
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -628,7 +628,7 @@ final class dg {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 

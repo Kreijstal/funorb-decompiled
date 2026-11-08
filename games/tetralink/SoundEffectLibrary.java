@@ -58,13 +58,13 @@ final class SoundEffectLibrary {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
     final static void a(Archive param0, boolean param1, Archive param2, Archive param3, byte param4) {
         try {
-          oa.field_y = il.a("", param4 ^ 14822);
+          oa.field_y = il.createEmailCheckResult("", param4 ^ 14822);
           oa.field_y.a(false, 8);
           ua.a(param0, param3, param2, -97);
           GameKeyHandler.a(-86);
@@ -74,7 +74,7 @@ final class SoundEffectLibrary {
             SoundEffectLibrary.b(-90);
           }
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "fa.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "fa.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -131,7 +131,7 @@ final class SoundEffectLibrary {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -168,7 +168,7 @@ final class SoundEffectLibrary {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -188,13 +188,13 @@ final class SoundEffectLibrary {
     final static hl a(boolean param0) {
         if (!param0) {
           byte[] var2 = (byte[]) null;
-          SoundEffectLibrary.a(-120, (byte[]) null);
+          SoundEffectLibrary.createBinaryFont(-120, (byte[]) null);
           return NotificationToast.a(true);
         }
         return NotificationToast.a(true);
     }
 
-    final static ig a(int param0, byte[] param1) {
+    final static ig createBinaryFont(int param0, byte[] param1) {
         ig var2 = null;
         RuntimeException var2_ref = null;
         ig stackIn_5_0 = null;
@@ -225,7 +225,7 @@ final class SoundEffectLibrary {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -266,14 +266,14 @@ final class SoundEffectLibrary {
           }
           var9 = (ag) (this.field_g.a(var6, (byte) -43));
           if (var9 == null) {
-            var9 = ag.a(this.field_c, param3, param1);
+            var9 = ag.load(this.field_c, param3, param1);
             if (var9 == null) {
               stackIn_14_0 = null;
               return (PcmSample) (stackIn_14_0);
             }
             this.field_g.a(var6, param0 ^ 834608919, var9);
           }
-          var8Lifetime1 = var9.a(param2);
+          var8Lifetime1 = var9.decodeToPcm(param2);
           if (var8Lifetime1 == null) {
             stackIn_18_0 = null;
             return (PcmSample) (stackIn_18_0);
@@ -292,7 +292,7 @@ final class SoundEffectLibrary {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param3).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -330,11 +330,11 @@ final class SoundEffectLibrary {
             stackIn_9_0 = null;
             return (PcmSample) (stackIn_9_0);
           }
-          var9 = ge.a(this.field_b, param3, param1);
+          var9 = ge.load(this.field_b, param3, param1);
           if (var9 == null) {
             return null;
           }
-          var11 = var9.b();
+          var11 = var9.toPcmSample();
           var8Lifetime1 = var11;
           this.field_f.a(var6, -58, var8Lifetime1);
           if (param2 != null) {
@@ -352,7 +352,7 @@ final class SoundEffectLibrary {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param3).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -389,7 +389,7 @@ final class SoundEffectLibrary {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -430,7 +430,7 @@ final class SoundEffectLibrary {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -442,7 +442,7 @@ final class SoundEffectLibrary {
         return id.field_x;
     }
 
-    final PcmSample a(int[] param0, int param1, int param2) {
+    final PcmSample getSoundEffectById(int[] param0, int param1, int param2) {
         RuntimeException var4 = null;
         PcmSample stackIn_2_0 = null;
         PcmSample stackIn_5_0 = null;
@@ -475,7 +475,7 @@ final class SoundEffectLibrary {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -486,7 +486,7 @@ final class SoundEffectLibrary {
           this.field_c = param1;
           this.field_b = param0;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "fa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "fa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

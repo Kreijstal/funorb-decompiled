@@ -14,7 +14,7 @@ final class gh {
         return var1;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 <= 64) {
           field_b = (String) null;
         }
@@ -41,19 +41,19 @@ final class gh {
             var5_int = param3[0].field_t;
             var6 = param3[2].field_t;
             var7 = param3[1].field_t;
-            param3[0].c(param1, param2);
-            param3[2].c(param1 + param0 - var6, param2);
-            SoftwareRasterizer.a(NodeHashTableIterator.field_a);
-            SoftwareRasterizer.b(var5_int + param1, param2, -var6 + (param0 + param1), param2 + param3[1].field_F);
+            param3[0].drawTransparent(param1, param2);
+            param3[2].drawTransparent(param1 + param0 - var6, param2);
+            SoftwareRasterizer.saveClip(NodeHashTableIterator.field_a);
+            SoftwareRasterizer.intersectClip(var5_int + param1, param2, -var6 + (param0 + param1), param2 + param3[1].field_F);
             var8 = var5_int + param1;
             var9 = param1 - (-param0 + var6);
             for (param1 = var8; var9 > param1; param1 = param1 + var7) {
-              param3[1].c(param1, param2);
+              param3[1].drawTransparent(param1, param2);
             }
             if (param4 > -123) {
               field_b = (String) null;
             }
-            SoftwareRasterizer.b(NodeHashTableIterator.field_a);
+            SoftwareRasterizer.restoreClip(NodeHashTableIterator.field_a);
             return;
           }
           return;
@@ -67,7 +67,7 @@ final class gh {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param4).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -81,7 +81,7 @@ final class gh {
         }
     }
 
-    final static String a(CharSequence[] param0, int param1, int param2, int param3) {
+    final static String joinCharSequenceRange(CharSequence[] param0, int param1, int param2, int param3) {
         int var6_int = 0;
         int var7 = 0;
         StringBuilder discarded$3 = null;
@@ -150,7 +150,7 @@ final class gh {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

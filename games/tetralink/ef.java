@@ -46,11 +46,11 @@ final class ef extends uh {
           var5 = (-en.field_K + 250 << 8) / 50;
         }
         sk.a((byte) 115, cl.field_d);
-        vn.b();
-        SoftwareRasterizer.a();
+        vn.useRasterClip();
+        SoftwareRasterizer.clear();
         ni.a((byte) 71);
         if (var5 < 256) {
-          SoftwareRasterizer.d(0, 0, SoftwareRasterizer.field_f, SoftwareRasterizer.field_e, 0, -var5 + 256);
+          SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_f, SoftwareRasterizer.field_e, 0, -var5 + 256);
         }
         var6 = -23 / ((param2 + 17) / 41);
         dh.a(-581);
@@ -61,13 +61,13 @@ final class ef extends uh {
             var7 < 50) {
             if (var7 < 20) {
               var8 = var7 * 256 / 20;
-              oi.field_e.b(var3, var4, var8);
+              oi.field_e.drawAdditive(var3, var4, var8);
             } else {
               if (var7 < 30) {
-                oi.field_e.b(var3, var4, 256);
+                oi.field_e.drawAdditive(var3, var4, 256);
               } else {
                 var8 = (12800 - var7 * 256) / 20;
-                oi.field_e.b(var3, var4, var8);
+                oi.field_e.drawAdditive(var3, var4, var8);
               }
             }
           }
@@ -81,7 +81,7 @@ final class ef extends uh {
           }
           return;
         }
-        cl.field_d.d(var3, var4);
+        cl.field_d.drawHalfSize(var3, var4);
         var7Lifetime1 = -125 + en.field_K;
         if (0 >= var7Lifetime1) {
           var7Lifetime1 = en.field_K - 140;
@@ -107,7 +107,7 @@ final class ef extends uh {
         }
         if (var7Lifetime1 < 20) {
           var8Lifetime3 = var7Lifetime1 * 256 / 20;
-          oi.field_e.b(var3, var4, var8Lifetime3);
+          oi.field_e.drawAdditive(var3, var4, var8Lifetime3);
           var7Lifetime1 = en.field_K - 140;
           if (var7Lifetime1 > 0) {
             var8Lifetime3Lifetime1 = 256;
@@ -119,7 +119,7 @@ final class ef extends uh {
           return;
         }
         if (var7Lifetime1 < 30) {
-          oi.field_e.b(var3, var4, 256);
+          oi.field_e.drawAdditive(var3, var4, 256);
           var7Lifetime1 = en.field_K - 140;
           if (var7Lifetime1 > 0) {
             var8Lifetime4 = 256;
@@ -131,7 +131,7 @@ final class ef extends uh {
           return;
         }
         var8Lifetime5 = (12800 - var7Lifetime1 * 256) / 20;
-        oi.field_e.b(var3, var4, var8Lifetime5);
+        oi.field_e.drawAdditive(var3, var4, var8Lifetime5);
         var7Lifetime2 = en.field_K - 140;
         if (var7Lifetime2 > 0) {
           var8Lifetime6 = 256;
@@ -143,7 +143,7 @@ final class ef extends uh {
         return;
     }
 
-    final static String a(byte param0, String param1, int param2) {
+    final static String getJoinFailureMessage(byte param0, String param1, int param2) {
         RuntimeException var3 = null;
         String stackIn_2_0 = null;
         String stackIn_5_0 = null;
@@ -206,7 +206,7 @@ final class ef extends uh {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -315,7 +315,7 @@ final class ef extends uh {
         this.field_p = this.field_p + (-this.field_p + this.field_i);
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_l = null;
         field_o = null;
         if (param0 > -14) {

@@ -22,7 +22,7 @@ final class DisplayModeEnumerator implements com.ms.directX.IEnumModesCallback {
         return var3;
     }
 
-    final void a(java.awt.Frame param0, int param1) {
+    final void restoreDisplay(java.awt.Frame param0, int param1) {
         this.field_a.restoreDisplayMode();
         this.field_a.setCooperativeLevel((java.awt.Component) ((Object) param0), param1);
     }

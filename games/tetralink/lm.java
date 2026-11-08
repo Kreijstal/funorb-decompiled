@@ -310,7 +310,7 @@ final class lm {
         va.field_z = -2147483648;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 2) {
           field_l = (String) null;
           field_l = null;

@@ -41,7 +41,7 @@ final class vi {
         return dg.field_m;
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 < 12) {
           field_a = (GameKeyHandler) null;
           field_b = null;

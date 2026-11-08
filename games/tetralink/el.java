@@ -145,7 +145,7 @@ final class el extends hl {
           } else {
             stackIn_72_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(')').toString());
         }
     }
 
@@ -179,37 +179,37 @@ final class el extends hl {
         int var7 = SoftwareRasterizer.field_f;
         int var8 = SoftwareRasterizer.field_e;
         Sprite var9 = new Sprite(16, param4);
-        var9.c();
-        SoftwareRasterizer.b(0, 0, 16, param4, param2, param5);
+        var9.makeRasterTarget();
+        SoftwareRasterizer.fillVerticalGradient(0, 0, 16, param4, param2, param5);
         Object var10 = null;
         Object var11 = null;
         if (param0) {
-          var14 = var9.d();
+          var14 = var9.copy();
           var10 = var14;
-          var14.c();
-          SoftwareRasterizer.g(0, 0, 5, 0);
-          SoftwareRasterizer.g(0, 1, 3, 0);
-          SoftwareRasterizer.g(0, 2, 2, 0);
-          SoftwareRasterizer.g(0, 3, 1, 0);
-          SoftwareRasterizer.g(0, 4, 1, 0);
+          var14.makeRasterTarget();
+          SoftwareRasterizer.drawHorizontalLine(0, 0, 5, 0);
+          SoftwareRasterizer.drawHorizontalLine(0, 1, 3, 0);
+          SoftwareRasterizer.drawHorizontalLine(0, 2, 2, 0);
+          SoftwareRasterizer.drawHorizontalLine(0, 3, 1, 0);
+          SoftwareRasterizer.drawHorizontalLine(0, 4, 1, 0);
         }
         if (param3) {
-          var15 = var9.d();
+          var15 = var9.copy();
           var11 = var15;
-          var15.c();
-          SoftwareRasterizer.g(11, 0, 5, 0);
-          SoftwareRasterizer.g(13, 1, 3, 0);
-          SoftwareRasterizer.g(14, 2, 2, 0);
-          SoftwareRasterizer.g(15, 3, 1, 0);
-          SoftwareRasterizer.g(15, 4, 1, 0);
+          var15.makeRasterTarget();
+          SoftwareRasterizer.drawHorizontalLine(11, 0, 5, 0);
+          SoftwareRasterizer.drawHorizontalLine(13, 1, 3, 0);
+          SoftwareRasterizer.drawHorizontalLine(14, 2, 2, 0);
+          SoftwareRasterizer.drawHorizontalLine(15, 3, 1, 0);
+          SoftwareRasterizer.drawHorizontalLine(15, 4, 1, 0);
         }
         if (!param1) {
-          SoftwareRasterizer.a(var17, var7, var8);
+          SoftwareRasterizer.setTarget(var17, var7, var8);
           return new Sprite[]{null, null, null, (Sprite) (var10), var9, (Sprite) (var11), null, null, null};
         }
         java.applet.Applet var12 = (java.applet.Applet) null;
         el.a(113, (java.applet.Applet) null);
-        SoftwareRasterizer.a(var17, var7, var8);
+        SoftwareRasterizer.setTarget(var17, var7, var8);
         return new Sprite[]{null, null, null, (Sprite) (var10), var9, (Sprite) (var11), null, null, null};
     }
 
@@ -277,7 +277,7 @@ final class el extends hl {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -314,7 +314,7 @@ final class el extends hl {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw oi.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+            throw oi.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

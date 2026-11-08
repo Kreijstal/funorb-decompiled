@@ -70,7 +70,7 @@ final class om extends hl {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -130,7 +130,7 @@ final class om extends hl {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param5).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -301,9 +301,9 @@ final class om extends hl {
               throw new IllegalStateException();
             }
             fi.field_Ab = new String[var4];
-            rd.a(kn.field_f, 0, fi.field_Ab, 0, var4);
+            rd.copy(kn.field_f, 0, fi.field_Ab, 0, var4);
             qc.field_db = new String[-var4 + var3_int - 1];
-            rd.a(kn.field_f, 1 + var4, qc.field_db, 0, -1 + (var3_int - var4));
+            rd.copy(kn.field_f, 1 + var4, qc.field_db, 0, -1 + (var3_int - var4));
             var3_int = t.a(uf.field_f, param1 ^ -125, sk.a(new String[]{"<br><%0><br>"}, DualLinkNode.field_p, 124), kn.field_f, dk.field_d);
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
@@ -317,9 +317,9 @@ final class om extends hl {
               throw new IllegalStateException();
             }
             jl.field_b = new String[var4];
-            rd.a(kn.field_f, 0, jl.field_b, 0, var4);
+            rd.copy(kn.field_f, 0, jl.field_b, 0, var4);
             Archive.field_j = new String[-1 + (-var4 + var3_int)];
-            rd.a(kn.field_f, var4 + 1, Archive.field_j, 0, -var4 + (var3_int - 1));
+            rd.copy(kn.field_f, var4 + 1, Archive.field_j, 0, -var4 + (var3_int - 1));
             if (fi.field_Ab.length < jl.field_b.length) {
               stackIn_50_0 = jl.field_b.length;
             } else {
@@ -379,7 +379,7 @@ final class om extends hl {
           var3_intLifetime1 = 0;
           for (var4Lifetime1 = 0; pj.field_h.length > var4Lifetime1; var4Lifetime1++) {
             stackIn_89_0 = !(ml.field_mb[var4Lifetime1] < 0);
-            var5Lifetime1 = fi.a(stackIn_89_0, pj.field_h[var4Lifetime1], (byte) -77);
+            var5Lifetime1 = fi.measureText(stackIn_89_0, pj.field_h[var4Lifetime1], (byte) -77);
             if (var3_intLifetime1 < var5Lifetime1) {
               var3_intLifetime1 = var5Lifetime1;
             }
@@ -389,7 +389,7 @@ final class om extends hl {
             var4_ref_String__ = var10;
             for (var5Lifetime2 = 0; var10.length > var5Lifetime2; var5Lifetime2++) {
               var11 = var10[var5Lifetime2];
-              var7Lifetime1 = fi.a(false, var11, (byte) -111);
+              var7Lifetime1 = fi.measureText(false, var11, (byte) -111);
               if (var7Lifetime1 > var3_intLifetime1) {
                 var3_intLifetime1 = var7Lifetime1;
               }
@@ -397,7 +397,7 @@ final class om extends hl {
             var4_ref_String__Lifetime1 = qc.field_db;
             for (var5Lifetime2Lifetime1 = 0; var4_ref_String__Lifetime1.length > var5Lifetime2Lifetime1; var5Lifetime2Lifetime1++) {
               var12 = var4_ref_String__Lifetime1[var5Lifetime2Lifetime1];
-              var7Lifetime1Lifetime1 = fi.a(false, var12, (byte) -106);
+              var7Lifetime1Lifetime1 = fi.measureText(false, var12, (byte) -106);
               if (var3_intLifetime1 < var7Lifetime1Lifetime1) {
                 var3_intLifetime1 = var7Lifetime1Lifetime1;
               }
@@ -427,7 +427,7 @@ final class om extends hl {
             if (var6Lifetime1 < 0) {
               var5Lifetime3 = var5Lifetime3 + la.field_e;
             } else {
-              var7Lifetime2 = fi.a(true, pj.field_h[var4Lifetime3], (byte) -83);
+              var7Lifetime2 = fi.measureText(true, pj.field_h[var4Lifetime3], (byte) -83);
               var8Lifetime1 = -(var7Lifetime2 >> 1) + vg.field_Lb;
               var5Lifetime3 = var5Lifetime3 + mn.field_c;
               bl.field_Ob[var4Lifetime3] = new int[4];
@@ -448,7 +448,7 @@ final class om extends hl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var3), "om.F(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw oi.wrapException((Throwable) ((Object) var3), "om.F(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -598,15 +598,15 @@ final class om extends hl {
               discarded$0 = this.field_Kb.append(param11);
             }
             var16Lifetime2 = 0;
-            var17 = param6.field_Ib.b(wl.field_b);
+            var17 = param6.field_Ib.textWidth(wl.field_b);
             if (var16Lifetime2 < var17) {
               var16Lifetime2 = var17;
             }
-            var17Lifetime2 = param6.field_Ib.b(la.field_j);
+            var17Lifetime2 = param6.field_Ib.textWidth(la.field_j);
             if (var16Lifetime2 < var17Lifetime2) {
               var16Lifetime2 = var17Lifetime2;
             }
-            var17Lifetime3 = param6.field_Ib.b(me.field_f);
+            var17Lifetime3 = param6.field_Ib.textWidth(me.field_f);
             if (var17Lifetime3 > var16Lifetime2) {
               var16Lifetime2 = var17Lifetime3;
             }
@@ -696,7 +696,7 @@ final class om extends hl {
           this.field_Mb.a((byte) -105, this.field_Vb);
           var15_int = 226;
           var16Lifetime1 = 10;
-          var17Lifetime1 = this.field_Vb.field_Ib.c(this.field_Vb.field_jb, var15_int);
+          var17Lifetime1 = this.field_Vb.field_Ib.wrappedLineCount(this.field_Vb.field_jb, var15_int);
           this.field_Vb.a((byte) -114, var15_int, var16Lifetime1, GameKeyHandler.field_d * var17Lifetime1, 13);
           var16Lifetime1 = var16Lifetime1 + GameKeyHandler.field_d * var17Lifetime1;
           this.field_Mb.a((byte) -99, 13 + var15_int + 13, 24, var16Lifetime1 + 10, 0);
@@ -753,7 +753,7 @@ final class om extends hl {
           } else {
             stackIn_70_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param12).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param12).append(')').toString());
         }
     }
 
@@ -818,7 +818,7 @@ final class om extends hl {
             return stackIn_2_0;
           }
           param2 += 8;
-          var6_int = param1.field_Ib.b(param1.field_jb, param4 - param1.field_V * 2, param1.field_Q);
+          var6_int = param1.field_Ib.paragraphHeight(param1.field_jb, param4 - param1.field_V * 2, param1.field_Q);
           param1.a((byte) -86, param4, param2, var6_int, 0);
           param2 = param2 + (0 + var6_int);
           param3.a((byte) -96, param1);
@@ -840,7 +840,7 @@ final class om extends hl {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -855,7 +855,7 @@ final class om extends hl {
         this.a(0, param0);
         if (null != this.field_bc) {
           this.field_bc.field_jb = this.field_Kb.toString();
-          this.field_bc.field_M = (this.field_Hb - this.field_bc.field_Ib.b(this.field_bc.field_jb)) / 2;
+          this.field_bc.field_M = (this.field_Hb - this.field_bc.field_Ib.textWidth(this.field_bc.field_jb)) / 2;
           if (null != this.field_ac &&
             this.field_ac.field_F != 0) {
             stackIn_7_0 = this.field_ac;
@@ -893,9 +893,9 @@ final class om extends hl {
         try {
           mk.field_d = param3;
           ll.field_w = param2;
-          uf.a(ec.field_d, param1, param0);
+          uf.openLoginProgress(ec.field_d, param1, param0);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "om.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "om.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -964,7 +964,7 @@ final class om extends hl {
         return true;
     }
 
-    public static void c(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
           field_Yb = (int[]) null;
         }
@@ -1030,7 +1030,7 @@ final class om extends hl {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 }

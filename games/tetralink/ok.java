@@ -8,7 +8,7 @@ final class ok {
     static String field_c;
     static float field_d;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         if (param0 != 4) {
           return;
@@ -21,7 +21,7 @@ final class ok {
         throw new IllegalStateException();
     }
 
-    final static Sprite[] a(Sprite param0, byte param1) {
+    final static Sprite[] createCentreOnlyFrame(Sprite param0, byte param1) {
         Sprite[] var2 = null;
         RuntimeException var2_ref = null;
         Sprite[] var3 = null;
@@ -51,7 +51,7 @@ final class ok {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 

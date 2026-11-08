@@ -5,7 +5,7 @@ final class kh extends oi {
     int[] field_p;
     byte[] field_o;
 
-    final void b(int param0, int param1) {
+    final void drawFlippedHorizontal(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -46,10 +46,10 @@ final class kh extends oi {
           var5 <= 0) {
           return;
         }
-        kh.a(SoftwareRasterizer.field_b, this.field_o, this.field_p, 0, var4, var3, var6, var5, var7, var8);
+        kh.copyNonzeroPaletteRowsReversed(SoftwareRasterizer.field_b, this.field_o, this.field_p, 0, var4, var3, var6, var5, var7, var8);
     }
 
-    private final static void b(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitAlpha(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var11 = 0;
         int var12 = 0;
         int incrementValue$12 = 0;
@@ -75,7 +75,7 @@ final class kh extends oi {
         }
     }
 
-    private final static void c(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void copyNonzeroPaletteRows(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var11 = 0;
         int incrementValue$3 = 0;
         int incrementValue$5 = 0;
@@ -137,7 +137,7 @@ final class kh extends oi {
         }
     }
 
-    final void a() {
+    final void normalizeCanvas() {
         int var3 = 0;
         int var4 = 0;
         int incrementValue$0 = 0;
@@ -161,7 +161,7 @@ final class kh extends oi {
         this.field_h = 0;
     }
 
-    final void a(int param0, int param1) {
+    final void draw(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -202,10 +202,10 @@ final class kh extends oi {
           var5 <= 0) {
           return;
         }
-        kh.c(SoftwareRasterizer.field_b, this.field_o, this.field_p, 0, var4, var3, var6, var5, var7, var8);
+        kh.copyNonzeroPaletteRows(SoftwareRasterizer.field_b, this.field_o, this.field_p, 0, var4, var3, var6, var5, var7, var8);
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void drawAlpha(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
@@ -246,10 +246,10 @@ final class kh extends oi {
           var6 <= 0) {
           return;
         }
-        kh.b(SoftwareRasterizer.field_b, this.field_o, this.field_p, var5, var4, var7, var6, var8, var9, param2);
+        kh.blitAlpha(SoftwareRasterizer.field_b, this.field_o, this.field_p, var5, var4, var7, var6, var8, var9, param2);
     }
 
-    private final static void a(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void copyNonzeroPaletteRowsReversed(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var11 = 0;
         int incrementValue$2 = 0;
         int incrementValue$4 = 0;
@@ -322,7 +322,7 @@ final class kh extends oi {
         this.field_p = param7;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawScaled(int param0, int param1, int param2, int param3) {
         int var13 = 0;
         int var15 = 0;
         int var5 = this.field_b;
@@ -376,7 +376,7 @@ final class kh extends oi {
           var7 = var7 + var11 * var15Lifetime2;
           var14 = var14 + var15Lifetime2;
         }
-        kh.a(SoftwareRasterizer.field_b, this.field_o, this.field_p, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
+        kh.copyPaletteRowsScaled(SoftwareRasterizer.field_b, this.field_o, this.field_p, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
     }
 
     kh(int param0, int param1, int param2) {
@@ -390,7 +390,7 @@ final class kh extends oi {
         this.field_p = new int[param2];
     }
 
-    private final static void a(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
+    private final static void copyPaletteRowsScaled(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;

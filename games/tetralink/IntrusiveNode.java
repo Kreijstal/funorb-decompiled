@@ -45,7 +45,7 @@ class IntrusiveNode {
         return true;
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_i = null;
         field_g = null;
         field_d = null;
@@ -55,7 +55,7 @@ class IntrusiveNode {
           field_m = null;
           return;
         }
-        IntrusiveNode.b(-4);
+        IntrusiveNode.releaseStatics(-4);
         field_h = null;
         field_a = null;
         field_m = null;

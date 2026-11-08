@@ -23,7 +23,7 @@ abstract class mb extends DualLinkNode {
 
     abstract Object g(int param0);
 
-    abstract boolean f(int param0);
+    abstract boolean isSoftReference(int param0);
 
     final static float a(float param0, float param1, boolean param2) {
         int var4 = 0;
@@ -46,11 +46,11 @@ abstract class mb extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var3), "mb.D(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw oi.wrapException((Throwable) ((Object) var3), "mb.D(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_v = null;
         field_A = null;
         field_x = null;

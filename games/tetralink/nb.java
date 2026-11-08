@@ -90,7 +90,7 @@ abstract class nb extends ld {
         int var12Lifetime1;
         int var13Lifetime1;
         var16 = TetraLink.field_J;
-        SoftwareRasterizer.b(param2 + 6, param0 + 35, -12 + this.field_F, this.field_u - 40, 2105376, 0);
+        SoftwareRasterizer.fillVerticalGradient(param2 + 6, param0 + 35, -12 + this.field_F, this.field_u - 40, 2105376, 0);
         var4 = 35;
         var5 = 211;
         var6 = 194;
@@ -137,7 +137,7 @@ abstract class nb extends ld {
               var11 = var12Lifetime1;
             }
             var9 = var9 | (var9 << 16 | var9 << 8);
-            SoftwareRasterizer.g(param2 + var10, var8, -var10 + var11, var9);
+            SoftwareRasterizer.drawHorizontalLine(param2 + var10, var8, -var10 + var11, var9);
           }
           var7++;
           var8++;
@@ -150,15 +150,15 @@ abstract class nb extends ld {
         while (var7Lifetime1 < var4Lifetime1) {
           var9Lifetime1 = (-var5Lifetime1 + var6Lifetime1) * var7Lifetime1 / var4Lifetime1 + var5Lifetime1;
           var9Lifetime1 = var9Lifetime1 | (var9Lifetime1 << 16 | var9Lifetime1 << 8);
-          SoftwareRasterizer.g(param2, var8Lifetime1, 6, var9Lifetime1);
-          SoftwareRasterizer.g(-6 + (param2 + this.field_F), var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(param2, var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(-6 + (param2 + this.field_F), var8Lifetime1, 6, var9Lifetime1);
           var8Lifetime1++;
           var7Lifetime1++;
         }
         if (param1 <= 66) {
           field_W = (String) null;
         }
-        ac.field_c.c(this.field_F + (param2 - 90), 10 + param0);
+        ac.field_c.drawTransparent(this.field_F + (param2 - 90), 10 + param0);
         gh.a(-10 + this.field_F, param2 + 5, param0 + 35, hn.field_O, -125);
         gh.a(this.field_F, param2, this.field_u + (param0 - 22), IntrusiveNode.field_i, -125);
         var4Lifetime2 = -79 + this.field_u;
@@ -169,14 +169,14 @@ abstract class nb extends ld {
         while (var7Lifetime2 < var4Lifetime2) {
           var9Lifetime2 = (var6Lifetime2 - var5Lifetime2) * var7Lifetime2 / var4Lifetime2 + var5Lifetime2;
           var9Lifetime2 = var9Lifetime2 | (var9Lifetime2 << 8 | var9Lifetime2 << 16);
-          SoftwareRasterizer.g(param2, var8Lifetime2, 6, var9Lifetime2);
-          SoftwareRasterizer.g(-6 + (this.field_F + param2), var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRasterizer.drawHorizontalLine(param2, var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRasterizer.drawHorizontalLine(-6 + (this.field_F + param2), var8Lifetime2, 6, var9Lifetime2);
           var7Lifetime2++;
           var8Lifetime2++;
         }
     }
 
-    public static void n(int param0) {
+    public static void releaseStatics(int param0) {
         field_V = null;
         field_W = null;
         if (param0 != -463) {

@@ -24,7 +24,7 @@ final class nd extends hl {
         return stackIn_9_0;
     }
 
-    final static void d(byte param0) {
+    final static void detectMaxMemoryMb(byte param0) {
         try {
           int decompiledRegionSelector0 = 0;
           Throwable decompiledCaughtException = null;
@@ -65,19 +65,19 @@ final class nd extends hl {
         }
     }
 
-    public static void h(int param0) {
+    public static void releaseStatics(int param0) {
         field_Pb = null;
         field_Rb = null;
         field_Qb = null;
         if (param0 != 2105376) {
-          nd.d((byte) 78);
+          nd.detectMaxMemoryMb((byte) 78);
         }
         field_Kb = null;
         field_Lb = null;
         field_Sb = null;
     }
 
-    final static int a(int param0, boolean param1, String param2, String param3, String param4, int param5, int param6) {
+    final static int submitAccountCreation(int param0, boolean param1, String param2, String param3, String param4, int param5, int param6) {
         hb var7 = null;
         RuntimeException var7_ref = null;
         hb var8 = null;
@@ -122,7 +122,7 @@ final class nd extends hl {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -164,7 +164,7 @@ final class nd extends hl {
           for (var12 = 0; var12 < ph.field_C.length; var12++) {
             var13 = new hl(0L, param3, hh.field_d[var12]);
             var14 = new hl(0L, param3, ph.field_C[var12]);
-            var15 = param3.field_Ib.b(ph.field_C[var12]);
+            var15 = param3.field_Ib.textWidth(ph.field_C[var12]);
             if (var15 > var11) {
               var11 = var15;
             }
@@ -228,7 +228,7 @@ final class nd extends hl {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 

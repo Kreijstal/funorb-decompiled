@@ -8,14 +8,14 @@ final class vj extends IntrusiveNode {
     static long field_o;
     static String field_p;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_p = null;
         if (param0) {
           vj.a(-1.4104137420654297f, true);
         }
     }
 
-    final static byte[] a(boolean param0, byte param1, Object param2) {
+    final static byte[] readArchiveBytes(boolean param0, byte param1, Object param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         jd var4 = null;
@@ -33,7 +33,7 @@ final class vj extends IntrusiveNode {
           if (param2 instanceof byte[]) {
             var3 = (byte[]) (param2);
             if (param0) {
-              stackIn_8_0 = ak.a(-14074, var3);
+              stackIn_8_0 = ak.copyBytes(-14074, var3);
               return stackIn_8_0;
             }
             stackIn_6_0 = var3;
@@ -58,7 +58,7 @@ final class vj extends IntrusiveNode {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -101,7 +101,7 @@ final class vj extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var2), "vj.D(" + param0 + ',' + param1 + ')');
+          throw oi.wrapException((Throwable) ((Object) var2), "vj.D(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -128,7 +128,7 @@ final class vj extends IntrusiveNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -140,7 +140,7 @@ final class vj extends IntrusiveNode {
         ei.a(lk.q(13), 60);
         if (param0 != 1) {
           Object var2 = (Object) null;
-          vj.a(false, (byte) 43, (Object) null);
+          vj.readArchiveBytes(false, (byte) 43, (Object) null);
         }
     }
 

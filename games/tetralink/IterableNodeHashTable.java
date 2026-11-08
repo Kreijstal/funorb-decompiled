@@ -14,7 +14,7 @@ final class IterableNodeHashTable implements Iterable {
     static volatile int field_a;
     static int[] field_b;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_c = null;
         if (param0 != -4099) {
@@ -40,7 +40,7 @@ final class IterableNodeHashTable implements Iterable {
           param1.next.previous = param1;
           param1.key = param0;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "ea.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "ea.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

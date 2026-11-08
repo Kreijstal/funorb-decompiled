@@ -23,7 +23,7 @@ final class kb extends IntrusiveNode {
           ck.field_bb.a((byte) 112, gl.field_o);
           hi.field_a = true;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "kb.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "kb.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -32,11 +32,11 @@ final class kb extends IntrusiveNode {
         uj.field_w = param2;
         wa.field_d = param1;
         if (param3 != -118) {
-          kb.a(13);
+          kb.releaseStatics(13);
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 111) {
           field_p = (String) null;
           field_q = null;

@@ -139,11 +139,11 @@ final class c {
           } else {
             stackIn_42_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(')').toString());
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_k = null;
         field_o = null;
         if (param0 < 61) {
@@ -217,13 +217,13 @@ final class c {
             stackIn_79_3 = (!wk.field_i.field_n) ? 2 : 0;
             ((cl) (Object) stackIn_78_0).a(stackIn_78_1, stackIn_78_2, stackIn_79_3);
             if (param3 != -1) {
-              pn.a(param3, 256, 16769381, false, false);
+              pn.pixelate(param3, 256, 16769381, false, false);
             }
             if (!wk.field_i.field_n) {
-              rh.field_M.c();
+              rh.field_M.makeRasterTarget();
               kk.field_X[param4].a(false, param0, 1);
               if (-1 != param3) {
-                pn.a(param3, 256, 16769381, false, false);
+                pn.pixelate(param3, 256, 16769381, false, false);
               }
             }
             fh.a(param1);
@@ -279,13 +279,13 @@ final class c {
           stackIn_37_3 = (!wk.field_i.field_n) ? 2 : 0;
           ((cl) (Object) stackIn_36_0).a(stackIn_36_1, stackIn_36_2, stackIn_37_3);
           if (param3 != -1) {
-            pn.a(param3, 256, 16769381, false, false);
+            pn.pixelate(param3, 256, 16769381, false, false);
           }
           if (!wk.field_i.field_n) {
-            rh.field_M.c();
+            rh.field_M.makeRasterTarget();
             kk.field_X[param4].a(false, param0, 1);
             if (-1 != param3) {
-              pn.a(param3, 256, 16769381, false, false);
+              pn.pixelate(param3, 256, 16769381, false, false);
             }
           }
           fh.a(param1);

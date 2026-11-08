@@ -66,7 +66,7 @@ final class PlatformTaskDispatcher implements Runnable {
     final AsyncRequest requestEnterFullscreen(int param0, int param1, int param2, int param3, int param4) {
         if (param0 != 0) {
           String var7 = (String) null;
-          PlatformTaskDispatcher.a((String) null, (String) null, 18, -31);
+          PlatformTaskDispatcher.openPreferencesFile((String) null, (String) null, 18, -31);
         }
         return this.enqueueTask(param1 + (param4 << 16), (Object) null, 6, 19696, (param2 << 16) + param3);
     }
@@ -91,7 +91,7 @@ final class PlatformTaskDispatcher implements Runnable {
         return this.field_d != null ? true : false;
     }
 
-    final void a(int param0) {
+    final void shutdown(int param0) {
         try {
           int var2_int = 0;
           InterruptedException interruptedException = null;
@@ -156,7 +156,7 @@ final class PlatformTaskDispatcher implements Runnable {
         }
     }
 
-    private final static RandomAccessCacheFile a(String param0, String param1, int param2, int param3) {
+    private final static RandomAccessCacheFile openPreferencesFile(String param0, String param1, int param2, int param3) {
         try {
           int var6 = 0;
           RandomAccessCacheFile stackIn_15_0 = null;
@@ -284,7 +284,7 @@ final class PlatformTaskDispatcher implements Runnable {
                   case 16:
                   default:
                     if (!this.field_e) {
-                      throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
+                      throw PlatformTaskDispatcher.<RuntimeException>rethrowUnchecked(new Exception(""));
                     }
                     switch (var2_int) {
                       case 3:
@@ -313,17 +313,17 @@ final class PlatformTaskDispatcher implements Runnable {
                         break;
                       case 7:
                         if (this.field_c) {
-                          this.field_r.a((java.awt.Frame) (var8.field_g), 8);
+                          this.field_r.restoreDisplay((java.awt.Frame) (var8.field_g), 8);
                         } else {
                           Class.forName("sg").getMethod("exit", new Class[]{}).invoke(this.field_d, new Object[]{});
                         }
                         break;
                       case 12:
-                        var3_ref = PlatformTaskDispatcher.a((String) (var8.field_g), field_w, -1, field_h);
+                        var3_ref = PlatformTaskDispatcher.openPreferencesFile((String) (var8.field_g), field_w, -1, field_h);
                         var8.field_f = var3_ref;
                         break;
                       case 13:
-                        var3_ref = PlatformTaskDispatcher.a((String) (var8.field_g), "", -1, field_h);
+                        var3_ref = PlatformTaskDispatcher.openPreferencesFile((String) (var8.field_g), "", -1, field_h);
                         var8.field_f = var3_ref;
                         break;
                       case 16:
@@ -345,7 +345,7 @@ final class PlatformTaskDispatcher implements Runnable {
                           var3_int = stackIn_83_0;
                           var4 = (java.awt.Component) (var8.field_g);
                           if (this.field_c) {
-                            this.field_t.a(var3_int != 0, var4, 101024);
+                            this.field_t.setCursorVisible(var3_int != 0, var4, 101024);
                           } else {
                             Class.forName("aj").getDeclaredMethod("showcursor", new Class[]{java.awt.Component.class, Boolean.TYPE}).invoke(this.field_j, new Object[]{var4, new Boolean(var3_int != 0)});
                           }
@@ -357,21 +357,21 @@ final class PlatformTaskDispatcher implements Runnable {
                           Class.forName("aj").getDeclaredMethod("setcustomcursor", new Class[]{java.awt.Component.class, int[].class, Integer.TYPE, Integer.TYPE, java.awt.Point.class}).invoke(this.field_j, new Object[]{var12[0], var12[1], new Integer(var8.field_a), new Integer(var8.field_b), var12[2]});
                         } else {
                           if (var2_int != 16) {
-                            throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
+                            throw PlatformTaskDispatcher.<RuntimeException>rethrowUnchecked(new Exception(""));
                           }
                           try {
                             if (!field_l.startsWith("win")) {
-                              throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                              throw PlatformTaskDispatcher.<RuntimeException>rethrowUnchecked(new Exception());
                             }
                             var11 = (String) (var8.field_g);
                             if (!var11.startsWith("http://") &&
                               !var11.startsWith("https://")) {
-                              throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                              throw PlatformTaskDispatcher.<RuntimeException>rethrowUnchecked(new Exception());
                             }
                             var4_ref = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
                             for (var5 = 0; var5 < var11.length(); var5++) {
                               if (var4_ref.indexOf((int) var11.charAt(var5)) == -1) {
-                                throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                                throw PlatformTaskDispatcher.<RuntimeException>rethrowUnchecked(new Exception());
                               }
                             }
                             Runtime.getRuntime().exec("cmd /c start \"j\" \"" + var11 + "\"");
@@ -380,7 +380,7 @@ final class PlatformTaskDispatcher implements Runnable {
                             decompiledCaughtException = decompiledCaughtParameter1;
                             var3_ref2 = (Exception) (Object) decompiledCaughtException;
                             var8.field_f = var3_ref2;
-                            throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(var3_ref2);
+                            throw PlatformTaskDispatcher.<RuntimeException>rethrowUnchecked(var3_ref2);
                           }
                         }
                         break;
@@ -413,7 +413,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     }
                     try {
                       if (false) throw (bn) null;
-                      var8.field_f = co.a(var8.field_a, (String) (var8.field_g), (byte) 118).a((byte) -127);
+                      var8.field_f = co.a(var8.field_a, (String) (var8.field_g), (byte) 118).connect((byte) -127);
                     } catch (bn decompiledCaughtParameter2) {
                       decompiledCaughtException = decompiledCaughtParameter2;
                       var3_ref3 = (bn) (Object) decompiledCaughtException;
@@ -625,7 +625,7 @@ final class PlatformTaskDispatcher implements Runnable {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException rethrowUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

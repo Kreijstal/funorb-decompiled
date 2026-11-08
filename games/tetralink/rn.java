@@ -16,11 +16,11 @@ final class rn {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         field_c = null;
         if (param0 < 97) {
-          rn.a((byte) 104);
+          rn.releaseStatics((byte) 104);
           field_e = null;
           return;
         }
@@ -67,7 +67,7 @@ final class rn {
           param1 = param1 >> 8;
         }
         if (param0 != -127) {
-          rn.a((byte) -124);
+          rn.releaseStatics((byte) -124);
         }
         if (param1 < -16) {
           var2Lifetime1 += 4;

@@ -21,7 +21,7 @@ final class pb {
         return 0;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = 87 / ((param0 - 86) / 37);
         field_f = null;
         field_d = null;

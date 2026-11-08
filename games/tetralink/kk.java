@@ -12,7 +12,7 @@ final class kk extends ae {
     static cl[] field_X;
     private int field_S;
 
-    public static void h(int param0) {
+    public static void releaseStatics(int param0) {
         field_X = null;
         field_P = null;
         if (param0 != 2147483647) {
@@ -52,7 +52,7 @@ final class kk extends ae {
           return;
         }
         if (hi.field_a) {
-          SoftwareRasterizer.e(SoftwareRasterizer.field_j, SoftwareRasterizer.field_i, SoftwareRasterizer.field_l - SoftwareRasterizer.field_j, -SoftwareRasterizer.field_i + SoftwareRasterizer.field_g);
+          SoftwareRasterizer.darkenRectangle(SoftwareRasterizer.field_j, SoftwareRasterizer.field_i, SoftwareRasterizer.field_l - SoftwareRasterizer.field_j, -SoftwareRasterizer.field_i + SoftwareRasterizer.field_g);
           ck.field_bb.a(false, param0 + 257);
         }
     }
@@ -114,7 +114,7 @@ final class kk extends ae {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -157,7 +157,7 @@ final class kk extends ae {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var1), "kk.A(" + param0 + ')');
+          throw oi.wrapException((Throwable) ((Object) var1), "kk.A(" + param0 + ')');
         }
     }
 

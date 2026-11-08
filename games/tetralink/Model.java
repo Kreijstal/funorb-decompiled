@@ -66,7 +66,7 @@ final class Model extends fc {
     private static int[] field_pb;
     private static int[] field_L;
 
-    final void a(int[] param0, int[] param1) {
+    final void drawTransformed(int[] param0, int[] param1) {
         int stackIn_15_0 = 0;
         int stackIn_21_0 = 0;
         Throwable decompiledCaughtException = null;
@@ -108,7 +108,7 @@ final class Model extends fc {
         int var22Lifetime1Lifetime1;
         int var23Lifetime1Lifetime1;
         if (!this.field_s) {
-          this.e();
+          this.calculateBounds();
         }
         var15 = param0[3] >> 2;
         var16 = param0[4] >> 2;
@@ -191,7 +191,7 @@ final class Model extends fc {
           var27++;
         }
         try {
-          this.a((var20 & var16) != 0, false, 0L, (int) this.field_m, this.field_m << 1);
+          this.drawSortedFaces((var20 & var16) != 0, false, 0L, (int) this.field_m, this.field_m << 1);
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var21 = (Exception) (Object) decompiledCaughtException;
@@ -199,7 +199,7 @@ final class Model extends fc {
         return;
     }
 
-    final boolean a() {
+    final boolean beginAnimation() {
         if (this.field_B == null) {
           return false;
         }
@@ -209,7 +209,7 @@ final class Model extends fc {
         return true;
     }
 
-    private final void d(int param0) {
+    private final void drawClippedFace(int param0) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -384,17 +384,17 @@ final class Model extends fc {
               var19 = var7;
             }
             if (this.field_j[param0] != -1) {
-              vn.a(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, field_w[0], field_w[1], field_w[2], field_F[var17], field_F[var18], field_F[var19], field_db[var17], field_db[var18], field_db[var19], field_q[var17], field_q[var18], field_q[var19], (int) this.field_r[param0]);
+              vn.drawTexturedTriangle(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, field_w[0], field_w[1], field_w[2], field_F[var17], field_F[var18], field_F[var19], field_db[var17], field_db[var18], field_db[var19], field_q[var17], field_q[var18], field_q[var19], (int) this.field_r[param0]);
             } else {
-              vn.a(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, this.field_hb[param0], this.field_hb[param0], this.field_hb[param0], field_F[var17], field_F[var18], field_F[var19], field_db[var17], field_db[var18], field_db[var19], field_q[var17], field_q[var18], field_q[var19], (int) this.field_r[param0]);
+              vn.drawTexturedTriangle(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, this.field_hb[param0], this.field_hb[param0], this.field_hb[param0], field_F[var17], field_F[var18], field_F[var19], field_db[var17], field_db[var18], field_db[var19], field_q[var17], field_q[var18], field_q[var19], (int) this.field_r[param0]);
             }
             decompiledFrameRemainder0 = false;
           }
           else {
             if (this.field_j[param0] != -1) {
-              vn.a(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, field_w[0], field_w[1], field_w[2]);
+              vn.drawShadedTriangle(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, field_w[0], field_w[1], field_w[2]);
             } else {
-              vn.a(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, vn.field_m[this.field_hb[param0] & 65535]);
+              vn.drawFlatTriangle(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, vn.field_m[this.field_hb[param0] & 65535]);
             }
           }
         }
@@ -426,25 +426,25 @@ final class Model extends fc {
           }
           var20Lifetime1Lifetime1 = this.field_r[param0];
           if (this.field_j[param0] != -1) {
-            vn.a(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, field_w[0], field_w[1], field_w[2], field_F[var17Lifetime1], field_F[var18Lifetime1], field_F[var19Lifetime1], field_db[var17Lifetime1], field_db[var18Lifetime1], field_db[var19Lifetime1], field_q[var17Lifetime1], field_q[var18Lifetime1], field_q[var19Lifetime1], var20Lifetime1Lifetime1);
-            vn.a(var14Lifetime3, var16, field_x[3], var11Lifetime3, var13Lifetime3, field_L[3], field_w[0], field_w[2], field_w[3], field_F[var17Lifetime1], field_F[var18Lifetime1], field_F[var19Lifetime1], field_db[var17Lifetime1], field_db[var18Lifetime1], field_db[var19Lifetime1], field_q[var17Lifetime1], field_q[var18Lifetime1], field_q[var19Lifetime1], var20Lifetime1Lifetime1);
+            vn.drawTexturedTriangle(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, field_w[0], field_w[1], field_w[2], field_F[var17Lifetime1], field_F[var18Lifetime1], field_F[var19Lifetime1], field_db[var17Lifetime1], field_db[var18Lifetime1], field_db[var19Lifetime1], field_q[var17Lifetime1], field_q[var18Lifetime1], field_q[var19Lifetime1], var20Lifetime1Lifetime1);
+            vn.drawTexturedTriangle(var14Lifetime3, var16, field_x[3], var11Lifetime3, var13Lifetime3, field_L[3], field_w[0], field_w[2], field_w[3], field_F[var17Lifetime1], field_F[var18Lifetime1], field_F[var19Lifetime1], field_db[var17Lifetime1], field_db[var18Lifetime1], field_db[var19Lifetime1], field_q[var17Lifetime1], field_q[var18Lifetime1], field_q[var19Lifetime1], var20Lifetime1Lifetime1);
           } else {
-            vn.a(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, this.field_hb[param0], this.field_hb[param0], this.field_hb[param0], field_F[var17Lifetime1], field_F[var18Lifetime1], field_F[var19Lifetime1], field_db[var17Lifetime1], field_db[var18Lifetime1], field_db[var19Lifetime1], field_q[var17Lifetime1], field_q[var18Lifetime1], field_q[var19Lifetime1], var20Lifetime1Lifetime1);
-            vn.a(var14Lifetime3, var16, field_x[3], var11Lifetime3, var13Lifetime3, field_L[3], this.field_hb[param0], this.field_hb[param0], this.field_hb[param0], field_F[var17Lifetime1], field_F[var18Lifetime1], field_F[var19Lifetime1], field_db[var17Lifetime1], field_db[var18Lifetime1], field_db[var19Lifetime1], field_q[var17Lifetime1], field_q[var18Lifetime1], field_q[var19Lifetime1], var20Lifetime1Lifetime1);
+            vn.drawTexturedTriangle(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, this.field_hb[param0], this.field_hb[param0], this.field_hb[param0], field_F[var17Lifetime1], field_F[var18Lifetime1], field_F[var19Lifetime1], field_db[var17Lifetime1], field_db[var18Lifetime1], field_db[var19Lifetime1], field_q[var17Lifetime1], field_q[var18Lifetime1], field_q[var19Lifetime1], var20Lifetime1Lifetime1);
+            vn.drawTexturedTriangle(var14Lifetime3, var16, field_x[3], var11Lifetime3, var13Lifetime3, field_L[3], this.field_hb[param0], this.field_hb[param0], this.field_hb[param0], field_F[var17Lifetime1], field_F[var18Lifetime1], field_F[var19Lifetime1], field_db[var17Lifetime1], field_db[var18Lifetime1], field_db[var19Lifetime1], field_q[var17Lifetime1], field_q[var18Lifetime1], field_q[var19Lifetime1], var20Lifetime1Lifetime1);
           }
         } else {
           if (this.field_j[param0] != -1) {
-            vn.a(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, field_w[0], field_w[1], field_w[2]);
-            vn.a(var14Lifetime3, var16, field_x[3], var11Lifetime3, var13Lifetime3, field_L[3], field_w[0], field_w[2], field_w[3]);
+            vn.drawShadedTriangle(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, field_w[0], field_w[1], field_w[2]);
+            vn.drawShadedTriangle(var14Lifetime3, var16, field_x[3], var11Lifetime3, var13Lifetime3, field_L[3], field_w[0], field_w[2], field_w[3]);
           } else {
             var17Lifetime1 = vn.field_m[this.field_hb[param0] & 65535];
-            vn.a(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, var17Lifetime1);
-            vn.a(var14Lifetime3, var16, field_x[3], var11Lifetime3, var13Lifetime3, field_L[3], var17Lifetime1);
+            vn.drawFlatTriangle(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, var17Lifetime1);
+            vn.drawFlatTriangle(var14Lifetime3, var16, field_x[3], var11Lifetime3, var13Lifetime3, field_L[3], var17Lifetime1);
           }
         }
     }
 
-    private final void c() {
+    private final void refreshFaceLighting() {
         int var4 = 0;
         int var3;
         int stackIn_5_0 = 0;
@@ -462,21 +462,21 @@ final class Model extends fc {
             if (this.field_j[var4] != -1) {
               if (this.field_j[var4] != -2) {
                 var2 = this.field_hb[var4] & -131072;
-                this.field_hb[var4] = var2 | Model.a(var1, var2 >> 17);
+                this.field_hb[var4] = var2 | Model.scaleHslLightness(var1, var2 >> 17);
                 var2 = this.field_M[var4] & -131072;
-                this.field_M[var4] = var2 | Model.a(var1, var2 >> 17);
+                this.field_M[var4] = var2 | Model.scaleHslLightness(var1, var2 >> 17);
                 var2 = this.field_j[var4] & -131072;
-                this.field_j[var4] = var2 | Model.a(var1, var2 >> 17);
+                this.field_j[var4] = var2 | Model.scaleHslLightness(var1, var2 >> 17);
               }
             } else {
               var2 = this.field_hb[var4] & -131072;
-              this.field_hb[var4] = var2 | Model.a(var1, var2 >> 17);
+              this.field_hb[var4] = var2 | Model.scaleHslLightness(var1, var2 >> 17);
             }
           }
         }
     }
 
-    private final fc a(boolean param0, boolean param1, Model param2, byte[] param3, short[] param4, int[] param5, int[] param6, int[] param7) {
+    private final fc copyInto(boolean param0, boolean param1, Model param2, byte[] param3, short[] param4, int[] param5, int[] param6, int[] param7) {
         int var9;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -544,7 +544,7 @@ final class Model extends fc {
         return (fc) ((Object) param2);
     }
 
-    final void a(int[] param0) {
+    final void transform(int[] param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -560,7 +560,7 @@ final class Model extends fc {
         this.field_s = false;
     }
 
-    private final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    private final boolean isPointInTriangleBounds(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         if (param1 < param2 &&
           param1 < param3 &&
           param1 < param4) {
@@ -584,7 +584,7 @@ final class Model extends fc {
         return true;
     }
 
-    public static void d() {
+    public static void releaseStatics() {
         field_o = null;
         field_cb = null;
         field_h = null;
@@ -615,7 +615,7 @@ final class Model extends fc {
         field_w = null;
     }
 
-    final fc a(boolean param0, boolean param1, boolean param2) {
+    final fc copyForAnimation(boolean param0, boolean param1, boolean param2) {
         if (!param0 &&
           field_cb.length < this.field_ob) {
           field_cb = new byte[this.field_ob + 100];
@@ -627,10 +627,10 @@ final class Model extends fc {
           field_jb = new int[this.field_ob + 100];
           field_h = new short[this.field_ob + 100];
         }
-        return this.a(param0, param1, field_o, field_cb, field_h, field_O, field_n, field_jb);
+        return this.copyInto(param0, param1, field_o, field_cb, field_h, field_O, field_n, field_jb);
     }
 
-    private final void c(int param0) {
+    private final void drawFace(int param0) {
         int var2;
         int var3;
         int var4;
@@ -639,7 +639,7 @@ final class Model extends fc {
         int var7;
         int var8;
         if (field_l[param0]) {
-          this.d(param0);
+          this.drawClippedFace(param0);
           return;
         }
         var2 = this.field_kb[param0];
@@ -665,20 +665,20 @@ final class Model extends fc {
             var7 = var4;
           }
           if (this.field_j[param0] != -1) {
-            vn.a(field_G[var2], field_G[var3], field_G[var4], field_bb[var2], field_bb[var3], field_bb[var4], this.field_hb[param0], this.field_M[param0], this.field_j[param0], field_F[var5], field_F[var6], field_F[var7], field_db[var5], field_db[var6], field_db[var7], field_q[var5], field_q[var6], field_q[var7], (int) this.field_r[param0]);
+            vn.drawTexturedTriangle(field_G[var2], field_G[var3], field_G[var4], field_bb[var2], field_bb[var3], field_bb[var4], this.field_hb[param0], this.field_M[param0], this.field_j[param0], field_F[var5], field_F[var6], field_F[var7], field_db[var5], field_db[var6], field_db[var7], field_q[var5], field_q[var6], field_q[var7], (int) this.field_r[param0]);
           } else {
-            vn.a(field_G[var2], field_G[var3], field_G[var4], field_bb[var2], field_bb[var3], field_bb[var4], this.field_hb[param0], this.field_hb[param0], this.field_hb[param0], field_F[var5], field_F[var6], field_F[var7], field_db[var5], field_db[var6], field_db[var7], field_q[var5], field_q[var6], field_q[var7], (int) this.field_r[param0]);
+            vn.drawTexturedTriangle(field_G[var2], field_G[var3], field_G[var4], field_bb[var2], field_bb[var3], field_bb[var4], this.field_hb[param0], this.field_hb[param0], this.field_hb[param0], field_F[var5], field_F[var6], field_F[var7], field_db[var5], field_db[var6], field_db[var7], field_q[var5], field_q[var6], field_q[var7], (int) this.field_r[param0]);
           }
         } else {
           if (this.field_j[param0] != -1) {
-            vn.a(field_G[var2], field_G[var3], field_G[var4], field_bb[var2], field_bb[var3], field_bb[var4], this.field_hb[param0] & 65535, this.field_M[param0] & 65535, this.field_j[param0] & 65535);
+            vn.drawShadedTriangle(field_G[var2], field_G[var3], field_G[var4], field_bb[var2], field_bb[var3], field_bb[var4], this.field_hb[param0] & 65535, this.field_M[param0] & 65535, this.field_j[param0] & 65535);
           } else {
-            vn.a(field_G[var2], field_G[var3], field_G[var4], field_bb[var2], field_bb[var3], field_bb[var4], vn.field_m[this.field_hb[param0] & 65535]);
+            vn.drawFlatTriangle(field_G[var2], field_G[var3], field_G[var4], field_bb[var2], field_bb[var3], field_bb[var4], vn.field_m[this.field_hb[param0] & 65535]);
           }
         }
     }
 
-    private final void a(boolean param0, boolean param1, long param2, int param3, int param4) {
+    private final void drawSortedFaces(boolean param0, boolean param1, long param2, int param3, int param4) {
         int incrementValue$12 = 0;
         int dupTemp$10 = 0;
         int[] arrayValue$11 = null;
@@ -833,7 +833,7 @@ final class Model extends fc {
                 break regionExit1;
               }
               if (param1 &&
-                this.a(bl.field_Mb + vn.field_a, li.field_b + vn.field_f, field_G[var9], field_G[var10], field_G[var11], var12, var13, var14_int)) {
+                this.isPointInTriangleBounds(bl.field_Mb + vn.field_a, li.field_b + vn.field_f, field_G[var9], field_G[var10], field_G[var11], var12, var13, var14_int)) {
                 fieldTemp$13 = fd.field_I;
                 fd.field_I = fd.field_I + 1;
                 cb.field_r[fieldTemp$13] = param2;
@@ -889,7 +889,7 @@ final class Model extends fc {
           IsaacCipher.a(0, field_z, (byte) -63, var7 - 1, field_pb);
           if (this.field_U == null) {
             for (var8Lifetime2 = 0; var8Lifetime2 < var7; var8Lifetime2++) {
-              this.c(field_z[var8Lifetime2]);
+              this.drawFace(field_z[var8Lifetime2]);
             }
             return;
           }
@@ -924,14 +924,14 @@ final class Model extends fc {
                 var10Lifetime1 = stackIn_88_0;
                 var45 = field_ab[var8Lifetime2];
                 for (var12Lifetime1 = 0; var12Lifetime1 < var10Lifetime1; var12Lifetime1++) {
-                  this.c(var45[var12Lifetime1]);
+                  this.drawFace(var45[var12Lifetime1]);
                 }
               }
               if (var9Lifetime1 > 64) {
                 var10Lifetime1 = field_H[var8Lifetime2] - 64 - 1;
                 var46 = field_f[var10Lifetime1];
                 for (var12Lifetime1 = 0; var12Lifetime1 < field_P[var10Lifetime1]; var12Lifetime1++) {
-                  this.c(var46[var12Lifetime1]);
+                  this.drawFace(var46[var12Lifetime1]);
                 }
               }
             }
@@ -1026,7 +1026,7 @@ final class Model extends fc {
             if (var11Lifetime2 > var8Lifetime3) {
               incrementValue$4 = var12Lifetime2;
               var12Lifetime2++;
-              this.c(var14[incrementValue$4]);
+              this.drawFace(var14[incrementValue$4]);
               if (var12Lifetime2 == var13Lifetime2 &&
                 var14 != field_g[11]) {
                 var12Lifetime2 = 0;
@@ -1047,7 +1047,7 @@ final class Model extends fc {
             if (var11Lifetime2 > var9Lifetime2) {
               incrementValue$5 = var12Lifetime2;
               var12Lifetime2++;
-              this.c(var14[incrementValue$5]);
+              this.drawFace(var14[incrementValue$5]);
               if (var12Lifetime2 == var13Lifetime2 &&
                 var14 != field_g[11]) {
                 var12Lifetime2 = 0;
@@ -1068,7 +1068,7 @@ final class Model extends fc {
             if (var11Lifetime2 > var10Lifetime2) {
               incrementValue$6 = var12Lifetime2;
               var12Lifetime2++;
-              this.c(var14[incrementValue$6]);
+              this.drawFace(var14[incrementValue$6]);
               if (var12Lifetime2 == var13Lifetime2 &&
                 var14 != field_g[11]) {
                 var12Lifetime2 = 0;
@@ -1090,14 +1090,14 @@ final class Model extends fc {
           var29 = 0;
           var19Lifetime1 = var29;
           while (var29 < var17Lifetime1) {
-            this.c(var49[var29]);
+            this.drawFace(var49[var29]);
             var29++;
           }
         }
         while (var11Lifetime2 != -1000) {
           incrementValue$3 = var12Lifetime2;
           var12Lifetime2++;
-          this.c(var14[incrementValue$3]);
+          this.drawFace(var14[incrementValue$3]);
           if (var12Lifetime2 == var13Lifetime2 &&
             var14 != field_g[11]) {
             var12Lifetime2 = 0;
@@ -1114,7 +1114,7 @@ final class Model extends fc {
         return;
     }
 
-    private final static int a(int param0, int param1) {
+    private final static int scaleHslLightness(int param0, int param1) {
         param1 = param1 * (param0 & 127) >> 7;
         if (param1 < 2) {
           param1 = 2;
@@ -1126,7 +1126,7 @@ final class Model extends fc {
         return (param0 & 65408) + param1;
     }
 
-    final void a(int param0, int[] param1, int param2, int param3, int param4, boolean param5) {
+    final void applyGroupTransform(int param0, int[] param1, int param2, int param3, int param4, boolean param5) {
         int var7;
         int var8;
         int var9;
@@ -1340,7 +1340,7 @@ final class Model extends fc {
         }
     }
 
-    private final static int e(int param0) {
+    private final static int clampHslLightness(int param0) {
         if (param0 < 2) {
           param0 = 2;
         } else {
@@ -1351,7 +1351,7 @@ final class Model extends fc {
         return param0;
     }
 
-    private final void e() {
+    private final void calculateBounds() {
         int var9 = 0;
         int var1;
         int var2;
@@ -1409,7 +1409,7 @@ final class Model extends fc {
         this.field_s = true;
     }
 
-    final void a(int param0, int[] param1, int param2, int param3, int param4, boolean param5, int param6, int[] param7) {
+    final void applyMaskedGroupTransform(int param0, int[] param1, int param2, int param3, int param4, boolean param5, int param6, int[] param7) {
         int var35_int = 0;
         int var42 = 0;
         int var9;
@@ -1867,9 +1867,9 @@ final class Model extends fc {
         }
     }
 
-    final void b() {
+    final void finishAnimation() {
         if (this.field_i) {
-          this.c();
+          this.refreshFaceLighting();
           this.field_i = false;
         }
         this.field_s = false;
@@ -1917,8 +1917,8 @@ final class Model extends fc {
         this.field_nb = 0;
         this.field_K = (byte) 0;
         this.field_s = false;
-        param0.b();
-        param0.a();
+        param0.computeNormals();
+        param0.buildVertexGroups();
         this.field_ib = param0.field_t;
         this.field_nb = param0.field_E;
         this.field_t = param0.field_R;
@@ -2034,7 +2034,7 @@ final class Model extends fc {
               } else {
                 var19 = param0.field_o[var16];
                 var14 = param1 + (param3 * var19.field_g + param4 * var19.field_d + param5 * var19.field_h) / (var8 + var8 / 2);
-                this.field_hb[var16] = Model.e(var14);
+                this.field_hb[var16] = Model.clampHslLightness(var14);
                 this.field_j[var16] = -1;
               }
             } else {
@@ -2045,7 +2045,7 @@ final class Model extends fc {
                 var13 = param0.field_f[this.field_kb[var16]];
               }
               var14 = param1 + (param3 * var13.field_j + param4 * var13.field_f + param5 * var13.field_b) / (var8 * var13.field_e);
-              this.field_hb[var16] = Model.e(var14);
+              this.field_hb[var16] = Model.clampHslLightness(var14);
               if (param0.field_w != null &&
                 param0.field_w[this.field_A[var16]] != null) {
                 var13 = param0.field_w[this.field_A[var16]];
@@ -2053,7 +2053,7 @@ final class Model extends fc {
                 var13 = param0.field_f[this.field_A[var16]];
               }
               var14 = param1 + (param3 * var13.field_j + param4 * var13.field_f + param5 * var13.field_b) / (var8 * var13.field_e);
-              this.field_M[var16] = Model.e(var14);
+              this.field_M[var16] = Model.clampHslLightness(var14);
               if (param0.field_w != null &&
                 param0.field_w[this.field_p[var16]] != null) {
                 var13 = param0.field_w[this.field_p[var16]];
@@ -2061,7 +2061,7 @@ final class Model extends fc {
                 var13 = param0.field_f[this.field_p[var16]];
               }
               var14 = param1 + (param3 * var13.field_j + param4 * var13.field_f + param5 * var13.field_b) / (var8 * var13.field_e);
-              this.field_j[var16] = Model.e(var14);
+              this.field_j[var16] = Model.clampHslLightness(var14);
             }
           } else {
             if (var10Lifetime2 != 0) {
@@ -2075,7 +2075,7 @@ final class Model extends fc {
               } else {
                 var18 = param0.field_o[var16];
                 var14 = param1 + (param3 * var18.field_g + param4 * var18.field_d + param5 * var18.field_h) / (var8 + var8 / 2) << 17;
-                this.field_hb[var16] = var14 | Model.a(param0.field_H[var16] & 65535, var14 >> 17);
+                this.field_hb[var16] = var14 | Model.scaleHslLightness(param0.field_H[var16] & 65535, var14 >> 17);
                 this.field_j[var16] = -1;
               }
             } else {
@@ -2087,7 +2087,7 @@ final class Model extends fc {
                 var13 = param0.field_f[this.field_kb[var16]];
               }
               var14 = param1 + (param3 * var13.field_j + param4 * var13.field_f + param5 * var13.field_b) / (var8 * var13.field_e) << 17;
-              this.field_hb[var16] = var14 | Model.a(var15, var14 >> 17);
+              this.field_hb[var16] = var14 | Model.scaleHslLightness(var15, var14 >> 17);
               if (param0.field_w != null &&
                 param0.field_w[this.field_A[var16]] != null) {
                 var13 = param0.field_w[this.field_A[var16]];
@@ -2095,7 +2095,7 @@ final class Model extends fc {
                 var13 = param0.field_f[this.field_A[var16]];
               }
               var14 = param1 + (param3 * var13.field_j + param4 * var13.field_f + param5 * var13.field_b) / (var8 * var13.field_e) << 17;
-              this.field_M[var16] = var14 | Model.a(var15, var14 >> 17);
+              this.field_M[var16] = var14 | Model.scaleHslLightness(var15, var14 >> 17);
               if (param0.field_w != null &&
                 param0.field_w[this.field_p[var16]] != null) {
                 var13 = param0.field_w[this.field_p[var16]];
@@ -2103,7 +2103,7 @@ final class Model extends fc {
                 var13 = param0.field_f[this.field_p[var16]];
               }
               var14 = param1 + (param3 * var13.field_j + param4 * var13.field_f + param5 * var13.field_b) / (var8 * var13.field_e) << 17;
-              this.field_j[var16] = var14 | Model.a(var15, var14 >> 17);
+              this.field_j[var16] = var14 | Model.scaleHslLightness(var15, var14 >> 17);
             }
           }
           var16++;

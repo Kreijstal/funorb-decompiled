@@ -6,7 +6,7 @@ final class sb {
     static Archive field_a;
     static String field_c;
 
-    final static boolean a(byte param0, String param1) {
+    final static boolean areAllGroupsReady(byte param0, String param1) {
         RuntimeException var2 = null;
         boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;
@@ -15,7 +15,7 @@ final class sb {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 2) {
-            sb.a((byte) 126);
+            sb.releaseStatics((byte) 126);
           }
           stackIn_5_0 = (null != fh.a(-32055, param1));
           return stackIn_5_0;
@@ -29,11 +29,11 @@ final class sb {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_c = null;
         field_a = null;
         if (param0 == -30) {
@@ -41,7 +41,7 @@ final class sb {
           return;
         }
         String var2 = (String) null;
-        sb.a((byte) 65, (String) null);
+        sb.areAllGroupsReady((byte) 65, (String) null);
         field_b = null;
     }
 

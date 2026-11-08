@@ -33,11 +33,11 @@ final class n extends gn implements dm {
         try {
           this.field_S = param0;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "n.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "n.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_U = null;
         if (param0 <= 69) {
           fj var2 = (fj) null;
@@ -80,18 +80,18 @@ final class n extends gn implements dm {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
-        super.a(param0, param1, param2, param3);
+    final void drawLayer(int param0, int param1, int param2, int param3) {
+        super.drawLayer(param0, param1, param2, param3);
         if (0 != param3) {
           return;
         }
         BitmapFont var5 = od.field_S;
         if (null != this.field_V) {
-          var5.a(pg.field_c, param1 + this.field_t, param2 + this.field_w, this.field_F, 20, 16777215, -1, 0, 0, var5.field_K + var5.field_N);
+          var5.drawParagraph(pg.field_c, param1 + this.field_t, param2 + this.field_w, this.field_F, 20, 16777215, -1, 0, 0, var5.field_K + var5.field_N);
         }
     }
 
@@ -143,11 +143,11 @@ final class n extends gn implements dm {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
-    final boolean a(int param0, char param1, int param2, UiWidget param3) {
+    final boolean handleKey(int param0, char param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_5_0 = false;
         boolean stackIn_9_0 = false;
@@ -156,7 +156,7 @@ final class n extends gn implements dm {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKey(param0, param1, param2, param3)) {
             return true;
           }
           if (98 == param0) {
@@ -178,7 +178,7 @@ final class n extends gn implements dm {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -230,11 +230,11 @@ final class n extends gn implements dm {
             if (!fn.field_K) {
               var5 = hd.field_s;
               var6 = mn.field_f;
-              var5.field_j.a(var6, 1, 14);
+              var5.field_j.addItem(var6, 1, 14);
             }
             var7 = hd.field_s;
             var8 = BitPacketBuffer.field_x;
-            var7.field_j.a(var8, 1, 20);
+            var7.field_j.addItem(var8, 1, 20);
           }
           if (param1.field_i == 1 &&
             !u.a(param0 ^ 0) &&
@@ -243,11 +243,11 @@ final class n extends gn implements dm {
             if (!fn.field_K) {
               var9 = hd.field_s;
               var10 = lc.field_d;
-              var9.field_j.a(var10, 1, 14);
+              var9.field_j.addItem(var10, 1, 14);
             }
             var11 = hd.field_s;
             var12 = bd.field_d;
-            var11.field_j.a(var12, param0 ^ 110, 20);
+            var11.field_j.addItem(var12, param0 ^ 110, 20);
           }
           if (param0 != 111) {
             return;
@@ -272,7 +272,7 @@ final class n extends gn implements dm {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 

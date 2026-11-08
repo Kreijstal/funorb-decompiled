@@ -39,11 +39,11 @@ class ae extends UiWidget {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var2), "ae.BA(" + param0 + ',' + param1 + ')');
+          throw oi.wrapException((Throwable) ((Object) var2), "ae.BA(" + param0 + ',' + param1 + ')');
         }
     }
 
-    void b(int param0, int param1, int param2, int param3) {
+    void activate(int param0, int param1, int param2, int param3) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
@@ -58,11 +58,11 @@ class ae extends UiWidget {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var5), "ae.AA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw oi.wrapException((Throwable) ((Object) var5), "ae.AA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    boolean a(UiWidget param0, int param1) {
+    boolean focusNext(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
@@ -93,7 +93,7 @@ class ae extends UiWidget {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -143,7 +143,7 @@ class ae extends UiWidget {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param4).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -163,7 +163,7 @@ class ae extends UiWidget {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var1), "ae.W(" + param0 + ')');
+          throw oi.wrapException((Throwable) ((Object) var1), "ae.W(" + param0 + ')');
         }
     }
 
@@ -291,7 +291,7 @@ class ae extends UiWidget {
                   }
                   stackIn_44_0 = var7.field_Tb;
                   if (var14 > 0) {
-                    stackIn_45_1 = BitmapFont.a(var7.field_Tb.field_Ib, var7.field_Mb, var14);
+                    stackIn_45_1 = BitmapFont.truncateWithEllipsis(var7.field_Tb.field_Ib, var7.field_Mb, var14);
                   } else {
                     stackIn_45_1 = var7.field_Mb;
                   }
@@ -312,7 +312,7 @@ class ae extends UiWidget {
                     var7.field_mb = var9 - var7.field_R;
                   }
                   if (var8 != 0) {
-                    pj.field_f.field_Kb.a((hl) (var6), true, var7, 2);
+                    pj.field_f.field_Kb.placeBelow((hl) (var6), true, var7, 2);
                   }
                   if (var7.field_Kb == null ||
                     !var7.field_Kb.field_Y) {
@@ -325,11 +325,11 @@ class ae extends UiWidget {
                         if (!fn.field_K) {
                           var17 = hd.field_s;
                           var18 = sk.a(new String[]{var16}, jk.field_a, 123);
-                          var17.field_j.a(var18, param2 + 13048, 8);
+                          var17.field_j.addItem(var18, param2 + 13048, 8);
                         }
                         var17Lifetime1 = hd.field_s;
                         var18Lifetime1 = sk.a(new String[]{var16}, pl.field_b, param2 + 13172);
-                        var17Lifetime1.field_j.a(var18Lifetime1, 1, 18);
+                        var17Lifetime1.field_j.addItem(var18Lifetime1, 1, 18);
                       }
                       var5 = var7;
                     } else if (var7.field_Tb.field_Y &&
@@ -362,11 +362,11 @@ class ae extends UiWidget {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var3), "ae.CA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw oi.wrapException((Throwable) ((Object) var3), "ae.CA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    boolean a(int param0, char param1, int param2, UiWidget param3) {
+    boolean handleKey(int param0, char param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
@@ -375,7 +375,7 @@ class ae extends UiWidget {
         try {
           if (this.c(3) && (param0 == 84 ||
             param0 == 83)) {
-            this.b(-1, -1, 80, 1);
+            this.activate(-1, -1, 80, 1);
             return true;
           }
           if (param2 != 1) {
@@ -392,7 +392,7 @@ class ae extends UiWidget {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -404,7 +404,7 @@ class ae extends UiWidget {
           field_J = null;
           field_M = null;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "ae.DA(" + param0 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "ae.DA(" + param0 + ')');
         }
     }
 
@@ -421,7 +421,7 @@ class ae extends UiWidget {
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a(param0, param2, 80, param1)) {
+          if (this.beginDebugDescription(param0, param2, 80, param1)) {
             this.a(-126, param1, param0, param2);
             if (this.field_N) {
               discarded$0 = param1.append(" active");
@@ -452,11 +452,11 @@ class ae extends UiWidget {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final void a(int param0, boolean param1, UiWidget param2, int param3, int param4, int param5) {
+    final void handlePointerRelease(int param0, boolean param1, UiWidget param2, int param3, int param4, int param5) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -482,7 +482,7 @@ class ae extends UiWidget {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -498,7 +498,7 @@ class ae extends UiWidget {
           }
           if (this.field_K &&
             this.b(param6, 1343807649, param1, param3, param5)) {
-            this.a(param0, -384169950);
+            this.focusNext(param0, -384169950);
             this.field_x = param2;
             if (null != this.field_s &&
               this.field_s instanceof tf) {
@@ -517,25 +517,25 @@ class ae extends UiWidget {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
-    void a(UiWidget param0, int param1, int param2, boolean param3) {
+    void updatePointer(UiWidget param0, int param1, int param2, boolean param3) {
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(param0, param1, param2, param3);
           if (0 != this.field_x &&
             ho.field_X != this.field_x) {
             if (this.b(aa.field_Nb, 1343807649, param1, param2, a.field_a) &&
               ho.field_X == 0) {
-              this.b(-param2 + a.field_a, -param1 + aa.field_Nb, 80, this.field_x);
+              this.activate(-param2 + a.field_a, -param1 + aa.field_Nb, 80, this.field_x);
             }
-            this.a(a.field_a, false, param0, param2, aa.field_Nb, param1);
+            this.handlePointerRelease(a.field_a, false, param0, param2, aa.field_Nb, param1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -548,7 +548,7 @@ class ae extends UiWidget {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -566,7 +566,7 @@ class ae extends UiWidget {
         try {
           this.field_H = dh.field_q.field_t;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "ae.<init>()");
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "ae.<init>()");
         }
     }
 
@@ -588,7 +588,7 @@ class ae extends UiWidget {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var2), "ae.UA(" + param0 + ')');
+          throw oi.wrapException((Throwable) ((Object) var2), "ae.UA(" + param0 + ')');
         }
     }
 
@@ -605,7 +605,7 @@ class ae extends UiWidget {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var2), "ae.JA(" + param0 + ')');
+          throw oi.wrapException((Throwable) ((Object) var2), "ae.JA(" + param0 + ')');
         }
     }
 

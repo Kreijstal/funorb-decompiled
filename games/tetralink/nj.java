@@ -91,11 +91,11 @@ final class nj {
           in.field_g.field_Hb = in.field_g.field_Hb - ba.field_L.field_Hb;
           ba.field_L.field_M = ba.field_L.field_M - ba.field_L.field_Hb;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "nj.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "nj.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_e = null;
         field_h = null;
         field_b = null;

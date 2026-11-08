@@ -24,7 +24,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
         this.field_f = null;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         field_c = null;
         field_a = null;
@@ -52,16 +52,16 @@ final class SecondaryNodeDequeIterator implements Iterator {
           this.field_f = null;
           this.field_g = this.field_e.field_e.secondaryNext;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "sf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "sf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static gd a(int param0, long param1) {
         if (param0 == -18701) {
-          return (gd) (dg.field_g.a(param1, param0 ^ -18702));
+          return (gd) (dg.field_g.findByKey(param1, param0 ^ -18702));
         }
-        SecondaryNodeDequeIterator.a((byte) -94);
-        return (gd) (dg.field_g.a(param1, param0 ^ -18702));
+        SecondaryNodeDequeIterator.releaseStatics((byte) -94);
+        return (gd) (dg.field_g.findByKey(param1, param0 ^ -18702));
     }
 
     static {

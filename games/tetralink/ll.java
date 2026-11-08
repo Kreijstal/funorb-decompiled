@@ -72,7 +72,7 @@ abstract class ll extends DualLinkNode {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -88,10 +88,10 @@ abstract class ll extends DualLinkNode {
           return;
         }
         try {
-          ng.a(param1, true);
-          uf.a(ec.field_d, false, false);
+          ng.installTextHuffman(param1, true);
+          uf.openLoginProgress(ec.field_d, false, false);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "ll.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "ll.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -99,7 +99,7 @@ abstract class ll extends DualLinkNode {
 
     abstract int a(boolean param0);
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_y = null;
         field_u = null;
         field_E = null;
@@ -114,21 +114,21 @@ abstract class ll extends DualLinkNode {
 
     final static void a(boolean param0, java.awt.Component param1, int param2, PlatformTaskDispatcher param3, g param4, int param5, byte param6, int param7) {
         try {
-          nk.a(param7, param0, 10);
-          ch.field_q = nk.a(param3, param1, 0, param2);
-          hc.field_v = nk.a(param3, param1, 1, param5);
+          nk.configure(param7, param0, 10);
+          ch.field_q = nk.createOutput(param3, param1, 0, param2);
+          hc.field_v = nk.createOutput(param3, param1, 1, param5);
           u.field_g = new fg();
           id.field_x = param5 * 1000 / param7;
-          hc.field_v.a(u.field_g);
+          hc.field_v.setStream(u.field_g);
           if (param6 < 126) {
             g var9 = (g) null;
             ll.a(true, (java.awt.Component) null, -128, (PlatformTaskDispatcher) null, (g) null, 27, (byte) -4, -4);
           }
           ic.field_b = param4;
           ic.field_b.a((byte) 96, jj.field_a);
-          ch.field_q.a(ic.field_b);
+          ch.field_q.setStream(ic.field_b);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "ll.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "ll.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -188,7 +188,7 @@ abstract class ll extends DualLinkNode {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param20).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param20).append(')').toString());
         }
     }
 

@@ -24,7 +24,7 @@ final class gd extends hl {
     static int[] field_Zb;
     String field_Yb;
 
-    public static void h(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 11042) {
           return;
         }
@@ -43,7 +43,7 @@ final class gd extends hl {
           var5 = (CharSequence) ((Object) this.field_Rb);
           cc.a(var5, (byte) 104);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "gd.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "gd.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -89,7 +89,7 @@ final class gd extends hl {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -128,11 +128,11 @@ final class gd extends hl {
         try {
           bi.field_d = param4;
           if (param1 != 255) {
-            gd.h(-71);
+            gd.releaseStatics(-71);
           }
           hd.field_s = new pf(param7, param6, param0, param2, param8, param3, param5);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "gd.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "gd.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ')');
         }
     }
 
@@ -146,7 +146,7 @@ final class gd extends hl {
           var6 = (CharSequence) ((Object) this.field_Rb);
           cc.a(var6, (byte) 115);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "gd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "gd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -169,7 +169,7 @@ final class gd extends hl {
           while (pj.field_h.length > var3_int) {
             var5 = ml.field_mb[var3_int];
             if (var5 >= 0) {
-              var6 = fi.a(true, pj.field_h[var3_int], (byte) -89);
+              var6 = fi.measureText(true, pj.field_h[var3_int], (byte) -89);
               var7 = vg.field_Lb - (var6 >> 1);
               var4 = var4 + mn.field_c;
               if (tb.a(param1, -io.field_a + var7, var4, param0, var6 + (io.field_a << 1), bj.field_d + (da.field_e << 1), -113)) {
@@ -191,7 +191,7 @@ final class gd extends hl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var3), "gd.I(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw oi.wrapException((Throwable) ((Object) var3), "gd.I(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

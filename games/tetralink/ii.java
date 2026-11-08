@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ii {
-    final static Object a(byte param0, String param1, java.applet.Applet param2) throws Throwable {
+    final static Object callJavaScript(byte param0, String param1, java.applet.Applet param2) throws Throwable {
         if (param0 < 50) {
           return (Object) null;
         }
         return netscape.javascript.JSObject.getWindow(param2).call(param1, (Object[]) null);
     }
 
-    final static void a(int param0, String param1, java.applet.Applet param2) throws Throwable {
+    final static void evaluateScript(int param0, String param1, java.applet.Applet param2) throws Throwable {
         if (param0 != -19149) {
           return;
         }

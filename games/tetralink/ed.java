@@ -50,7 +50,7 @@ final class ed extends en {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -71,7 +71,7 @@ final class ed extends en {
             stackIn_2_0 = (StringBuilder) null;
             return stackIn_2_0;
           }
-          if (this.a(param0, param2, param3 ^ -372494832, param1)) {
+          if (this.beginDebugDescription(param0, param2, param3 ^ -372494832, param1)) {
             this.a(-120, param1, param0, param2);
             this.a(-31857, param2, param1, param0);
             discarded$62 = param1.append(" revert=").append(this.field_R);
@@ -98,7 +98,7 @@ final class ed extends en {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -155,16 +155,16 @@ final class ed extends en {
           this.field_R = param7 ? true : false;
           this.field_Q = param8 ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "ed.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "ed.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
         }
     }
 
-    final void a(int param0, boolean param1, UiWidget param2, int param3, int param4, int param5) {
+    final void handlePointerRelease(int param0, boolean param1, UiWidget param2, int param3, int param4, int param5) {
         try {
-          super.a(param0, param1, param2, param3, param4, param5);
+          super.handlePointerRelease(param0, param1, param2, param3, param4, param5);
           this.field_x = 0;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "ed.AB(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "ed.AB(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -178,7 +178,7 @@ final class ed extends en {
         }
     }
 
-    final static MouseWheelInput e(byte param0) {
+    final static MouseWheelInput createMouseWheelInput(byte param0) {
         try {
           Throwable var1 = null;
           MouseWheelInput stackIn_3_0 = null;
@@ -201,7 +201,7 @@ final class ed extends en {
         }
     }
 
-    final void a(UiWidget param0, int param1, int param2, boolean param3) {
+    final void updatePointer(UiWidget param0, int param1, int param2, boolean param3) {
         int stackIn_16_1 = 0;
         int stackIn_17_2 = 0;
         int stackIn_22_1 = 0;
@@ -229,7 +229,7 @@ final class ed extends en {
             }
           } else {
             if (!this.field_R) {
-              super.a(param0, param1, param2, param3);
+              super.updatePointer(param0, param1, param2, param3);
               return;
             }
             if (this.field_N != this.field_t) {
@@ -261,7 +261,7 @@ final class ed extends en {
               this.field_w = stackIn_22_1 + stackIn_25_2;
             }
           }
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(param0, param1, param2, param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -273,11 +273,11 @@ final class ed extends en {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_U = null;
         field_V = null;
         field_P = null;
@@ -577,13 +577,13 @@ final class ed extends en {
           }
           var4Lifetime1 = 0;
           if (wk.field_u == 2) {
-            var4Lifetime1 = go.field_g.b(ai.field_c) + 17;
+            var4Lifetime1 = go.field_g.textWidth(ai.field_c) + 17;
             if (var4Lifetime1 < 135) {
               var4Lifetime1 = 135;
             }
           } else {
             if (wk.field_u == 1) {
-              var4Lifetime1 = 17 + go.field_g.b(qf.field_d);
+              var4Lifetime1 = 17 + go.field_g.textWidth(qf.field_d);
             }
           }
           a.field_d = a.field_d + (-a.field_d + (float)var4Lifetime1) * 0.10000000149011612f;
@@ -591,7 +591,7 @@ final class ed extends en {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var1_ref), "ed.G(" + param0 + ')');
+          throw oi.wrapException((Throwable) ((Object) var1_ref), "ed.G(" + param0 + ')');
         }
     }
 

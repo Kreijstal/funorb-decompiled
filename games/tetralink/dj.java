@@ -12,7 +12,7 @@ final class dj {
     private IntrusiveNode[] field_e;
     static String field_d;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != 38) {
           return;
         }
@@ -54,7 +54,7 @@ final class dj {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -102,7 +102,7 @@ final class dj {
           param2.key = param0;
           param2.next.previous = param2;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "dj.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "dj.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -177,12 +177,12 @@ final class dj {
         }
     }
 
-    final static void a(byte param0, f param1) {
+    final static void discardServerMessage(byte param0, f param1) {
         try {
           int var2_int = 29 / ((-63 - param0) / 49);
           im.field_c = param1;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "dj.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "dj.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

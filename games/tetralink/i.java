@@ -112,7 +112,7 @@ final class i {
         var2.a(qb.field_N.field_rc, false);
         int var4 = qb.field_N.field_ic + (qb.field_N.field_Zb << 6);
         var2.a(var4, false);
-        var2.a(0, 128, qb.field_N.field_sc, qb.field_N.field_sc.length);
+        var2.writeBytes(0, 128, qb.field_N.field_sc, qb.field_N.field_sc.length);
         var2.b(-var3 + var2.position, -2);
     }
 
@@ -224,7 +224,7 @@ final class i {
                 var12++;
               }
               if (var21 != null &&
-                ej.a(var21, param0 ^ 5)) {
+                ej.matchesNormalizedSessionName(var21, param0 ^ 5)) {
                 var8[1][var13] = ph.field_w;
                 var9[1][var13] = null;
                 var34[1][var13] = var22;
@@ -278,7 +278,7 @@ final class i {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var1), "i.C(" + param0 + ')');
+          throw oi.wrapException((Throwable) ((Object) var1), "i.C(" + param0 + ')');
         }
     }
 
@@ -309,15 +309,15 @@ final class i {
           var4 = cc.a(param2, (byte) 111);
           if (var4 != null &&
             var4.length() >= 1) {
-            if (!tk.a((byte) 81, var4.charAt(0)) &&
-              !tk.a((byte) 81, var4.charAt(var4.length() - 1))) {
+            if (!tk.isNameSeparator((byte) 81, var4.charAt(0)) &&
+              !tk.isNameSeparator((byte) 81, var4.charAt(var4.length() - 1))) {
               if (param1) {
                 field_a = (ok) null;
               }
               var5 = 0;
               for (var6 = 0; var6 < param2.length(); var6++) {
                 var7 = param2.charAt(var6);
-                if (tk.a((byte) 81, (char) var7)) {
+                if (tk.isNameSeparator((byte) 81, (char) var7)) {
                   var5++;
                 } else {
                   var5 = 0;
@@ -345,7 +345,7 @@ final class i {
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
         }
     }
 
@@ -413,14 +413,14 @@ final class i {
         this.field_x = d.field_h;
         this.field_u.a(this.field_o, -13325, this.field_r);
         MouseInputHandler.field_h = param0 ? true : false;
-        FullscreenFocusCanvas var2 = bm.a(this.field_o, 0, 0, this.field_r, 0, nd.field_Pb);
+        FullscreenFocusCanvas var2 = bm.createFullscreenCanvas(this.field_o, 0, 0, this.field_r, 0, nd.field_Pb);
         if (var2 == null) {
           this.a((byte) 36);
         }
         return var2;
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_a = null;
         field_t = null;
         if (param0) {
@@ -452,7 +452,7 @@ final class i {
           var5.c(var4, param2 ^ -71);
           var5.b(var5.position - var4, param2 ^ -2);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "i.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "i.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

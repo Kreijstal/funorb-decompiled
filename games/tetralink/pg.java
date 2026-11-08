@@ -34,7 +34,7 @@ final class pg implements Runnable {
               for (var1_int = 0; var1_int < 2; var1_int++) {
                 var2 = this.field_l[var1_int];
                 if (var2 != null) {
-                  var2.f();
+                  var2.serviceOutput();
                 }
               }
               tb.a(false, 10L);
@@ -61,7 +61,7 @@ final class pg implements Runnable {
         this.field_k = false;
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_c = null;
         field_e = null;
         field_d = null;
@@ -71,7 +71,7 @@ final class pg implements Runnable {
           field_b = null;
           return;
         }
-        pg.a(true);
+        pg.releaseStatics(true);
         field_i = null;
         field_b = null;
     }

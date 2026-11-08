@@ -12,7 +12,7 @@ final class od extends hn {
     static int[] field_X;
     private boolean field_U;
 
-    final int f(byte param0) {
+    final int getDay(byte param0) {
         NumberFormatException var2 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -50,7 +50,7 @@ final class od extends hn {
           }
           this.c(this.field_V, 10);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "od.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "od.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -59,23 +59,23 @@ final class od extends hn {
         try {
           this.a(param5, param3, 11, param2, param4);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "od.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "od.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
     private final void a(UiWidget param0, byte param1, int param2, int param3, String param4) {
         try {
-          dh.field_d.a(param4, param2 + (param0.field_t + (param0.field_F >> 1)), param3 + param0.field_w - 5, 16777215, -1);
+          dh.field_d.drawCentered(param4, param2 + (param0.field_t + (param0.field_F >> 1)), param3 + param0.field_w - 5, 16777215, -1);
           if (param1 != 33) {
             field_X = (int[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "od.CA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "od.CA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final String e(int param0) {
-        String var2 = this.field_W.e(param0 + param0);
+    final String getTooltip(int param0) {
+        String var2 = this.field_W.getTooltip(param0 + param0);
         if (var2 != null) {
           return var2;
         }
@@ -85,7 +85,7 @@ final class od extends hn {
         return null;
     }
 
-    final static ig a(Archive param0, String param1, Archive param2, String param3, byte param4) {
+    final static ig loadFontByName(Archive param0, String param1, Archive param2, String param3, byte param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -138,7 +138,7 @@ final class od extends hn {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param4).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -173,18 +173,18 @@ final class od extends hn {
         }
     }
 
-    final void a(int param0, qh param1) {
+    final void setBirthDateValidator(int param0, qh param1) {
         try {
-          super.a(param0, param1);
+          super.setBirthDateValidator(param0, param1);
           this.field_R.field_s = (dn) ((Object) param1);
           this.field_W.field_s = (dn) ((Object) param1);
           this.field_V.field_s = (dn) ((Object) param1);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "od.W(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "od.W(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final int a(boolean param0) {
+    final int getMonthIndex(boolean param0) {
         NumberFormatException var2 = null;
         int stackIn_3_0 = 0;
         Throwable decompiledCaughtException = null;
@@ -222,8 +222,8 @@ final class od extends hn {
         return true;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
-        super.a(param0 ^ param0, param1, param2, param3);
+    final void drawLayer(int param0, int param1, int param2, int param3) {
+        super.drawLayer(param0 ^ param0, param1, param2, param3);
         if (param3 != 0) {
           return;
         }
@@ -275,7 +275,7 @@ final class od extends hn {
         try {
           if (param0 != 98) {
             var14 = (String) null;
-            od.a((Archive) null, (String) null, (Archive) null, (String) null, (byte) -75);
+            od.loadFontByName((Archive) null, (String) null, (Archive) null, (String) null, (byte) -75);
           }
           var15 = param2.a((byte) -54);
           var8 = param6.a((byte) -66);
@@ -292,14 +292,14 @@ final class od extends hn {
               tb.field_j.d(SocketConnector.field_i.nextInt(), (byte) -124);
               tb.field_j.d(SocketConnector.field_i.nextInt(), (byte) -124);
               stackIn_19_0 = tb.field_j;
-              if (!param2.a(0)) {
+              if (!param2.isSelected(0)) {
                 stackIn_20_1 = "";
               } else {
                 stackIn_20_1 = var15;
               }
               ((PacketBuffer) (Object) stackIn_19_0).a(stackIn_20_1, (byte) 103);
               stackIn_22_0 = tb.field_j;
-              if (!param6.a(0)) {
+              if (!param6.isSelected(0)) {
                 stackIn_23_1 = "";
               } else {
                 stackIn_23_1 = var8;
@@ -362,7 +362,7 @@ final class od extends hn {
                 rl.field_d = -1;
               } else {
                 en.b(96, bb.a(param0 + 31934));
-                ui.field_b = new Boolean(GameApplet.a(kb.field_q, (byte) 55));
+                ui.field_b = new Boolean(GameApplet.readBooleanByte(kb.field_q, (byte) 55));
                 kb.field_q.position = 0;
               }
             }
@@ -439,11 +439,11 @@ final class od extends hn {
           } else {
             stackIn_78_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(')').toString());
         }
     }
 
-    public static void e(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_X = null;
         field_S = null;
         if (param0) {

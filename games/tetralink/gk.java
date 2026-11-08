@@ -9,7 +9,7 @@ final class gk {
     static String field_b;
     static int[] field_c;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_f = null;
         field_b = null;
         field_a = null;
@@ -17,7 +17,7 @@ final class gk {
         field_e = null;
         field_c = null;
         if (param0 != 3) {
-          gk.b(-19);
+          gk.releaseStatics(-19);
         }
     }
 

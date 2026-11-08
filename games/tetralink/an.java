@@ -4,10 +4,10 @@
 final class an {
     static jk field_a;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 != -15651) {
-          an.a(-103);
+          an.releaseStatics(-103);
         }
     }
 
@@ -21,7 +21,7 @@ final class an {
           ti.field_c = null;
           return;
         }
-        an.a(32);
+        an.releaseStatics(32);
         qa.field_x = null;
         i.field_t = null;
         ti.field_c = null;

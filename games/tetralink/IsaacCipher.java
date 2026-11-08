@@ -41,18 +41,18 @@ final class IsaacCipher {
             !(2 > dd.field_c))) {
             var7 = hd.field_s;
             var8 = sk.a(new String[]{param3}, SpriteState.field_y, 119);
-            var7.field_j.a(var8, 1, 10);
+            var7.field_j.addItem(var8, 1, 10);
           }
           hd.field_s.b((byte) 79);
           if (param2) {
             if (nd.field_Nb != hd.field_s.field_c) {
               var11 = hd.field_s;
               var12 = sk.a(new String[]{param3}, vi.field_b, 120);
-              var11.field_j.a(var12, 1, 15);
+              var11.field_j.addItem(var12, 1, 15);
             } else {
               var9 = hd.field_s;
               var10 = sk.a(new String[]{param3}, wa.field_h, 127);
-              var9.field_j.a(var10, 1, 16);
+              var9.field_j.addItem(var10, 1, 16);
             }
           }
           var13 = hd.field_s;
@@ -79,7 +79,7 @@ final class IsaacCipher {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -153,7 +153,7 @@ final class IsaacCipher {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -248,7 +248,7 @@ final class IsaacCipher {
               var7[0][var10 * 4 + 1] = ac.field_b[var11];
               var7[0][2 + var10 * 4] = ai.field_g[var11];
               var7[0][3 + 4 * var10] = gl.field_n[var11];
-              if (ej.a(nj.field_a[var11], 4) &&
+              if (ej.matchesNormalizedSessionName(nj.field_a[var11], 4) &&
                 ai.field_g[var11] + (ac.field_b[var11] + gl.field_n[var11]) == 0) {
                 var6[0][var10] = null;
                 var10--;
@@ -266,7 +266,7 @@ final class IsaacCipher {
               var7[1][4 * var14 + 1] = ac.field_b[var11Lifetime1];
               var7[1][var14 * 4 + 2] = ai.field_g[var11Lifetime1];
               var7[1][var14 * 4 + 3] = gl.field_n[var11Lifetime1];
-              if (ej.a(nj.field_a[var11Lifetime1], 4) &&
+              if (ej.matchesNormalizedSessionName(nj.field_a[var11Lifetime1], 4) &&
                 gl.field_n[var11Lifetime1] + ai.field_g[var11Lifetime1] + ac.field_b[var11Lifetime1] == 0) {
                 var6[1][var14] = null;
                 var14--;
@@ -281,7 +281,7 @@ final class IsaacCipher {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var1), "oj.A(" + param0 + ')');
+          throw oi.wrapException((Throwable) ((Object) var1), "oj.A(" + param0 + ')');
         }
     }
 
@@ -308,7 +308,7 @@ final class IsaacCipher {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -492,11 +492,11 @@ final class IsaacCipher {
           }
           this.b(3);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "oj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "oj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_f = null;
         field_j = null;
         field_a = null;

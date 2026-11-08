@@ -38,7 +38,7 @@ final class fh {
           if (var2 == null) {
             var2 = param1;
           }
-          var3 = (ud) (sd.field_nb.a((long)var2.hashCode(), 1));
+          var3 = (ud) (sd.field_nb.findByKey((long)var2.hashCode(), 1));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (null == var3))) {
             var4 = cc.a((CharSequence) ((Object) var3.field_Mb), (byte) 124);
@@ -70,7 +70,7 @@ final class fh {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
         }
     }
 
@@ -100,7 +100,7 @@ final class fh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var2), "fh.D(" + param0 + ',' + param1 + ')');
+          throw oi.wrapException((Throwable) ((Object) var2), "fh.D(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -113,14 +113,14 @@ final class fh {
             fh.b((byte) -44);
           }
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "fh.E(" + param0 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "fh.E(" + param0 + ')');
         }
     }
 
     final static void a(boolean param0) {
         try {
           vc.field_c = vc.field_c - 1;
-          SoftwareRasterizer.a(sc.field_a[vc.field_c], gh.field_a[vc.field_c], hc.field_s[vc.field_c]);
+          SoftwareRasterizer.setTarget(sc.field_a[vc.field_c], gh.field_a[vc.field_c], hc.field_s[vc.field_c]);
           SoftwareRasterizer.field_j = qd.field_Y[vc.field_c];
           SoftwareRasterizer.field_l = IterableNodeHashTable.field_b[vc.field_c];
           SoftwareRasterizer.field_i = SocketConnector.field_f[vc.field_c];
@@ -129,7 +129,7 @@ final class fh {
             field_f = (hl[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "fh.G(" + param0 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "fh.G(" + param0 + ')');
         }
     }
 
@@ -181,7 +181,7 @@ final class fh {
             nj.a((String) (var3), (byte) -48, (String) null, t.field_l, 0);
           } else {
             var4 = ph.field_w;
-            var4 = rh.a(var4, -62);
+            var4 = rh.prefixRankIcon(var4, -62);
             var5 = "";
             var6 = "|";
             var7 = SecondaryNodeDequeIterator.field_d;
@@ -189,7 +189,7 @@ final class fh {
             if (var7 == 2) {
               var5 = sk.a(new String[]{ka.field_m}, vd.field_b, 126);
               var9 = sk.a(new String[]{var4}, IntrusiveNode.field_h, 119);
-              var8 = -485 + ba.field_L.field_Hb + (in.field_g.field_Hb + we.field_k.b(var9)) - we.field_k.b(var5);
+              var8 = -485 + ba.field_L.field_Hb + (in.field_g.field_Hb + we.field_k.textWidth(var9)) - we.field_k.textWidth(var5);
               if (0 > var8) {
                 var8 = 0;
               }
@@ -230,7 +230,7 @@ final class fh {
                 var6 = "";
                 var5 = "<col=999999>" + var5 + PacketBuffer.field_n + "</col>";
               }
-              var10 = we.field_k.b(var5);
+              var10 = we.field_k.textWidth(var5);
               if (!gg.b((byte) 87)) {
                 if (in.field_g.field_Y &&
                   aa.field_Nb - in.field_g.field_eb < var10) {
@@ -247,7 +247,7 @@ final class fh {
                 }
               }
             }
-            nj.a(var5 + BitmapFont.c(io.field_h.toString()), (byte) -48, var6, pg.field_f[var7], var8);
+            nj.a(var5 + BitmapFont.escapeMarkup(io.field_h.toString()), (byte) -48, var6, pg.field_f[var7], var8);
             if (!cl.field_e) {
               ba.field_L.field_Y = false;
             }
@@ -260,7 +260,7 @@ final class fh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oi.a((Throwable) (var1), "fh.B(" + param0 + ')');
+          throw oi.wrapException((Throwable) (var1), "fh.B(" + param0 + ')');
         }
     }
 
@@ -490,7 +490,7 @@ final class fh {
           } else {
             stackIn_104_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_99_0), ((StringBuilder) (Object) stackIn_103_1).append(stackIn_104_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_99_0), ((StringBuilder) (Object) stackIn_103_1).append(stackIn_104_2).append(')').toString());
         }
     }
 
@@ -594,7 +594,7 @@ final class fh {
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param5).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -747,7 +747,7 @@ final class fh {
           } else {
             stackIn_71_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_70_1).append(stackIn_71_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_70_1).append(stackIn_71_2).append(')').toString());
         }
     }
 

@@ -53,7 +53,7 @@ final class oc extends IntrusiveNode {
             rh.a(th.field_e, ai.c((byte) -63), vi.a(-31307), (byte) 84, var3_int != 0);
           } else {
             if (!me.a((byte) -99)) {
-              SoftwareRasterizer.a();
+              SoftwareRasterizer.clear();
               ef.a(320, 240, -109);
               bo.a(0, 0, param0, -2);
             } else {
@@ -80,7 +80,7 @@ final class oc extends IntrusiveNode {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -98,7 +98,7 @@ final class oc extends IntrusiveNode {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5 = bf.a((byte) -117, param2, param3, param0);
+          var5 = bf.loadSpritesByName((byte) -117, param2, param3, param0);
           var4 = var5;
           var5[3].field_F = var5[3].field_E;
           var5[1].field_t = var5[1].field_u;
@@ -131,11 +131,11 @@ final class oc extends IntrusiveNode {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
           field_z = (go) null;
           field_z = null;

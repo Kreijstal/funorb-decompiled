@@ -67,7 +67,7 @@ final class rh extends ll {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -160,11 +160,11 @@ final class rh extends ll {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    final static String a(String param0, int param1) {
+    final static String prefixRankIcon(String param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String stackIn_8_0 = null;
@@ -195,7 +195,7 @@ final class rh extends ll {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -665,7 +665,7 @@ final class rh extends ll {
         return (byte) var2Lifetime2;
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         field_N = null;
         field_J = null;
         field_M = null;
@@ -675,7 +675,7 @@ final class rh extends ll {
         field_G = null;
     }
 
-    final static String a(int param0, PacketBuffer param1, int param2) {
+    final static String readCompressedChatText(int param0, PacketBuffer param1, int param2) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -719,7 +719,7 @@ final class rh extends ll {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
         }
     }
 

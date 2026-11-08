@@ -20,7 +20,7 @@ final class nh extends hl {
         try {
           this.a(param3, param5, -105);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "nh.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "nh.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -85,7 +85,7 @@ final class nh extends hl {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
         }
     }
 
@@ -105,7 +105,7 @@ final class nh extends hl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var1), "nh.E(" + param0 + ')');
+          throw oi.wrapException((Throwable) ((Object) var1), "nh.E(" + param0 + ')');
         }
     }
 
@@ -147,7 +147,7 @@ final class nh extends hl {
         try {
           var5_int = ja.c(-7422, 3 * (-param1 + param0));
           var6 = param1 * 3;
-          d.d(-107);
+          d.clearTemporaryRaster(-107);
           var7 = -10 + var5_int;
           if (param2.field_Q > 0 &&
             param2.field_u != null) {
@@ -252,7 +252,7 @@ final class nh extends hl {
           } else {
             stackIn_65_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_64_0), ((StringBuilder) (Object) stackIn_64_1).append(stackIn_65_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_64_0), ((StringBuilder) (Object) stackIn_64_1).append(stackIn_65_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -305,7 +305,7 @@ final class nh extends hl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var4), "nh.C(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw oi.wrapException((Throwable) ((Object) var4), "nh.C(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -332,7 +332,7 @@ final class nh extends hl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var4), "nh.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw oi.wrapException((Throwable) ((Object) var4), "nh.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

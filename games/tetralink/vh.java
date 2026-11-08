@@ -8,7 +8,7 @@ abstract class vh {
     static th field_e;
     static boolean field_d;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         int var1 = 75 % ((62 - param0) / 63);
         field_a = null;
@@ -21,7 +21,7 @@ abstract class vh {
             en.field_K = en.field_K + 1;
             return;
           }
-          vh.a(-111);
+          vh.releaseStatics(-111);
           en.field_K = en.field_K + 1;
           return;
         }
@@ -30,7 +30,7 @@ abstract class vh {
             en.field_K = en.field_K + 1;
             return;
           }
-          vh.a(-111);
+          vh.releaseStatics(-111);
           en.field_K = en.field_K + 1;
           return;
         }
@@ -38,7 +38,7 @@ abstract class vh {
           en.field_K = en.field_K + 1;
           return;
         }
-        vh.a(-111);
+        vh.releaseStatics(-111);
         en.field_K = en.field_K + 1;
     }
 

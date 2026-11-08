@@ -3042,7 +3042,7 @@ final class gi {
                   } else {
                     stackIn_2606_2 = "{...}";
                   }
-                  throw oi.a((Throwable) ((Object) stackIn_2605_0), ((StringBuilder) (Object) stackIn_2605_1).append(stackIn_2606_2).append(')').toString());
+                  throw oi.wrapException((Throwable) ((Object) stackIn_2605_0), ((StringBuilder) (Object) stackIn_2605_1).append(stackIn_2606_2).append(')').toString());
                 }
                 if (var3 != 0) {
                   stackIn_2614_0 = (!GameApplet.field_l);
@@ -3102,7 +3102,7 @@ final class gi {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
@@ -3146,7 +3146,7 @@ final class gi {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 
@@ -3165,7 +3165,7 @@ final class gi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var1), "gi.C(" + param0 + ')');
+          throw oi.wrapException((Throwable) ((Object) var1), "gi.C(" + param0 + ')');
         }
     }
 

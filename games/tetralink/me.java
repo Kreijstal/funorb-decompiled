@@ -21,7 +21,7 @@ final class me {
             me.a((byte) 114);
           }
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "me.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "me.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -37,11 +37,11 @@ final class me {
           vc.field_c = vc.field_c + 1;
           return;
         }
-        me.b((byte) 92);
+        me.releaseStatics((byte) 92);
         vc.field_c = vc.field_c + 1;
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 > -91) {
           return;
         }

@@ -7,8 +7,8 @@ abstract class ld extends gn {
     static String field_M;
     boolean field_K;
 
-    final UiWidget d(byte param0) {
-        UiWidget var2 = super.d(param0);
+    final UiWidget findFocusedChild(byte param0) {
+        UiWidget var2 = super.findFocusedChild(param0);
         if (var2 != null) {
           return var2;
         }
@@ -22,7 +22,7 @@ abstract class ld extends gn {
         return 81;
     }
 
-    public static void k(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 > -121) {
           return;
         }
@@ -114,7 +114,7 @@ abstract class ld extends gn {
               if (param0.length() == 0) {
                 var5 = var5 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }
-              ii.a(-19149, "document.cookie=\"" + var5 + "\"", param1);
+              ii.evaluateScript(-19149, "document.cookie=\"" + var5 + "\"", param1);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3_ref = decompiledCaughtException;
@@ -137,7 +137,7 @@ abstract class ld extends gn {
             } else {
               stackIn_16_2 = "{...}";
             }
-            throw oi.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
+            throw oi.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -146,7 +146,7 @@ abstract class ld extends gn {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         if (this.field_N == 0) {
           return;
         }
@@ -155,15 +155,15 @@ abstract class ld extends gn {
             return;
           }
           this.b(this.field_w + param2, 117, this.field_t + param1);
-          super.a(0, param1, param2, param3);
+          super.drawLayer(0, param1, param2, param3);
           return;
         }
         if (null == ej.field_v) {
           ej.field_v = new Sprite(this.field_F, this.field_u);
           sk.a((byte) 126, ej.field_v);
-          SoftwareRasterizer.a();
+          SoftwareRasterizer.clear();
           this.b(param0, 120, 0);
-          super.a(0, -param1 - this.field_t, -this.field_w - param2, param3);
+          super.drawLayer(0, -param1 - this.field_t, -this.field_w - param2, param3);
           dh.a(param0 ^ -581);
           ej.field_v.a(this.field_t + param1, this.field_w + param2, this.field_N);
           return;
@@ -171,27 +171,27 @@ abstract class ld extends gn {
         if (this.field_F > ej.field_v.field_u) {
           ej.field_v = new Sprite(this.field_F, this.field_u);
           sk.a((byte) 126, ej.field_v);
-          SoftwareRasterizer.a();
+          SoftwareRasterizer.clear();
           this.b(param0, 120, 0);
-          super.a(0, -param1 - this.field_t, -this.field_w - param2, param3);
+          super.drawLayer(0, -param1 - this.field_t, -this.field_w - param2, param3);
           dh.a(param0 ^ -581);
           ej.field_v.a(this.field_t + param1, this.field_w + param2, this.field_N);
           return;
         }
         if (this.field_u <= ej.field_v.field_E) {
           sk.a((byte) 126, ej.field_v);
-          SoftwareRasterizer.a();
+          SoftwareRasterizer.clear();
           this.b(param0, 120, 0);
-          super.a(0, -param1 - this.field_t, -this.field_w - param2, param3);
+          super.drawLayer(0, -param1 - this.field_t, -this.field_w - param2, param3);
           dh.a(param0 ^ -581);
           ej.field_v.a(this.field_t + param1, this.field_w + param2, this.field_N);
           return;
         }
         ej.field_v = new Sprite(this.field_F, this.field_u);
         sk.a((byte) 126, ej.field_v);
-        SoftwareRasterizer.a();
+        SoftwareRasterizer.clear();
         this.b(param0, 120, 0);
-        super.a(0, -param1 - this.field_t, -this.field_w - param2, param3);
+        super.drawLayer(0, -param1 - this.field_t, -this.field_w - param2, param3);
         dh.a(param0 ^ -581);
         ej.field_v.a(this.field_t + param1, this.field_w + param2, this.field_N);
     }
@@ -212,7 +212,7 @@ abstract class ld extends gn {
           this.field_N = 0;
           this.field_L = param0;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "ld.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "ld.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

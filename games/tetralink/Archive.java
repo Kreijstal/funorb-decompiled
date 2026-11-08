@@ -47,7 +47,7 @@ final class Archive {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -96,28 +96,28 @@ final class Archive {
         int var7 = SoftwareRasterizer.field_f;
         int var8 = SoftwareRasterizer.field_e;
         Sprite var9 = new Sprite(param1, -(param1 * 2) + param5);
-        var9.c();
-        SoftwareRasterizer.b(0, 0, param1, param5 - param1 * 2, param4, param2);
+        var9.makeRasterTarget();
+        SoftwareRasterizer.fillVerticalGradient(0, 0, param1, param5 - param1 * 2, param4, param2);
         Sprite var10 = new Sprite(param1, param1);
-        var10.c();
-        SoftwareRasterizer.c(0, 0, param1, param1, param4);
+        var10.makeRasterTarget();
+        SoftwareRasterizer.fillRectangle(0, 0, param1, param1, param4);
         Sprite var11 = new Sprite(16, param1);
-        var11.c();
-        SoftwareRasterizer.c(0, 0, 16, param1, param4);
+        var11.makeRasterTarget();
+        SoftwareRasterizer.fillRectangle(0, 0, 16, param1, param4);
         Sprite var12 = new Sprite(param1, param1);
-        var12.c();
-        SoftwareRasterizer.c(0, 0, param1, param1, param2);
+        var12.makeRasterTarget();
+        SoftwareRasterizer.fillRectangle(0, 0, param1, param1, param2);
         Sprite var13 = new Sprite(16, param1);
-        var13.c();
-        SoftwareRasterizer.c(0, 0, param3, param1, param2);
+        var13.makeRasterTarget();
+        SoftwareRasterizer.fillRectangle(0, 0, param3, param1, param2);
         Object var14 = null;
         if (param0 > 0) {
           var16 = new Sprite(16, 16);
           var14 = var16;
-          var16.c();
-          SoftwareRasterizer.c(0, 0, 16, 16, param0);
+          var16.makeRasterTarget();
+          SoftwareRasterizer.fillRectangle(0, 0, 16, 16, param0);
         }
-        SoftwareRasterizer.a(var18, var7, var8);
+        SoftwareRasterizer.setTarget(var18, var7, var8);
         return new Sprite[]{var10, var11, var10, var9, (Sprite) (var14), var9, var12, var13, var12};
     }
 
@@ -152,7 +152,7 @@ final class Archive {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -211,7 +211,7 @@ final class Archive {
             throw new RuntimeException("");
           }
           if (this.field_h[param2][param3] != null) {
-            var7 = vj.a(false, (byte) -28, this.field_h[param2][param3]);
+            var7 = vj.readArchiveBytes(false, (byte) -28, this.field_h[param2][param3]);
             var5 = var7;
             if (var7 == null) {
               throw new RuntimeException("");
@@ -241,7 +241,7 @@ final class Archive {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw oi.a((Throwable) (stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw oi.wrapException((Throwable) (stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -280,7 +280,7 @@ final class Archive {
         return false;
     }
 
-    final boolean a(String param0, int param1) {
+    final boolean hasGroupName(String param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         CharSequence var4 = null;
@@ -309,7 +309,7 @@ final class Archive {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -413,7 +413,7 @@ final class Archive {
             0 != param1[1] ||
             param1[2] != 0 ||
             param1[3] != 0)) {
-            var35 = vj.a(true, (byte) -28, this.field_i[param0]);
+            var35 = vj.readArchiveBytes(true, (byte) -28, this.field_i[param0]);
             var25 = var35;
             var9 = var25;
             var26 = new PacketBuffer(var35);
@@ -421,7 +421,7 @@ final class Archive {
             decompiledFrameRemainder0 = false;
           }
           else {
-            var9 = vj.a(false, (byte) -28, this.field_i[param0]);
+            var9 = vj.readArchiveBytes(false, (byte) -28, this.field_i[param0]);
           }
           try {
             var36 = WidgetContainer.a(var9, (byte) 88);
@@ -434,7 +434,7 @@ final class Archive {
             stackIn_38_0 = var11_ref_RuntimeException;
             stackIn_38_1 = new StringBuilder();
             stackIn_39_2 = (param1 != null);
-            throw oi.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(" ").append(param0).append(" ").append(var9.length).append(" ").append(ti.a(var9, (byte) 92, var9.length)).append(" ").append(ti.a(var9, (byte) -15, -2 + var9.length)).append(" ").append(this.field_e.field_u[param0]).append(" ").append(this.field_e.field_v).toString());
+            throw oi.wrapException((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(" ").append(param0).append(" ").append(var9.length).append(" ").append(ti.a(var9, (byte) 92, var9.length)).append(" ").append(ti.a(var9, (byte) -15, -2 + var9.length)).append(" ").append(this.field_e.field_u[param0]).append(" ").append(this.field_e.field_v).toString());
           }
           if (this.field_f) {
             this.field_i[param0] = null;
@@ -481,7 +481,7 @@ final class Archive {
                     var21 = var20;
                   }
                   if (var21 == param3) {
-                    rd.a(var43, var17, var44, var14Lifetime1, var19);
+                    rd.copy(var43, var17, var44, var14Lifetime1, var19);
                     var14Lifetime1 = var14Lifetime1 + var19;
                   }
                   var17 = var17 + var19;
@@ -519,7 +519,7 @@ final class Archive {
                 var18 = 0;
                 for (var19 = 0; var19 < var5_int; var19++) {
                   var18 = var18 + var29.f(-111);
-                  rd.a(var43, var16, var39[var19], var38[var19], var18);
+                  rd.copy(var43, var16, var39[var19], var38[var19], var18);
                   var16 = var16 + var18;
                   var14_ref_int__[var19] = var14_ref_int__[var19] + var18;
                 }
@@ -560,11 +560,11 @@ final class Archive {
           } else {
             stackIn_108_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_107_0), ((StringBuilder) (Object) stackIn_107_1).append(stackIn_108_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_107_0), ((StringBuilder) (Object) stackIn_107_1).append(stackIn_108_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_g = null;
         field_c = null;
         field_j = null;
@@ -606,7 +606,7 @@ final class Archive {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -703,7 +703,7 @@ final class Archive {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -744,7 +744,7 @@ final class Archive {
           param2 = param2.toLowerCase();
           if (param1) {
             var5 = (String) null;
-            this.a((String) null, 39);
+            this.hasGroupName((String) null, 39);
           }
           var6 = (CharSequence) ((Object) param2);
           var4_int = this.field_e.field_n[param0].a(83, g.a(-1, var6));
@@ -763,7 +763,7 @@ final class Archive {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -796,7 +796,7 @@ final class Archive {
           return true;
         }
         if (param1 != 0) {
-          Archive.d(74);
+          Archive.releaseStatics(74);
         }
         this.b((byte) -3, param0);
         if (null == this.field_i[param0]) {
@@ -816,7 +816,7 @@ final class Archive {
           this.field_b = param0;
           this.field_d = param2;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "ah.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "ah.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -897,7 +897,7 @@ final class Archive {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
         }
     }
 

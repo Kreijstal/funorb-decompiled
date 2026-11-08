@@ -11,7 +11,7 @@ final class db {
     static Sprite field_b;
     static kd field_e;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_a = null;
         field_g = null;
         field_e = null;
@@ -60,11 +60,11 @@ final class db {
             fk.a(-124, (Throwable) null, "QC2");
             return;
           }
-          s.a(-1, var4);
+          s.setSinglePhraseCategory(-1, var4);
           var12 = (BitmapFont) null;
-          wa.field_a = ec.a(1513239, (BitmapFont) null, 5138823, 4020342, (byte) -120, 65793, 65793, 2245737, 1127256, 65793, 8947848, 1513239, 0);
-          ec.field_b = ec.a(0, param1, 0, 0, (byte) -120, 0, 0, 0, 0, 0, 0, 0, 16764006);
-          hc.field_n = ec.a(0, param1, 0, 0, (byte) -120, 0, 0, 0, 0, 0, 0, 0, 16777215);
+          wa.field_a = ec.createThemedWidget(1513239, (BitmapFont) null, 5138823, 4020342, (byte) -120, 65793, 65793, 2245737, 1127256, 65793, 8947848, 1513239, 0);
+          ec.field_b = ec.createThemedWidget(0, param1, 0, 0, (byte) -120, 0, 0, 0, 0, 0, 0, 0, 16764006);
+          hc.field_n = ec.createThemedWidget(0, param1, 0, 0, (byte) -120, 0, 0, 0, 0, 0, 0, 0, 16777215);
           if (param2 < 54) {
             field_e = (kd) null;
           }
@@ -72,11 +72,11 @@ final class db {
           var6 = SoftwareRasterizer.field_e;
           var16 = SoftwareRasterizer.field_b;
           ab.field_R = new Sprite(10, 14);
-          ab.field_R.c();
+          ab.field_R.makeRasterTarget();
           for (var8 = 2; 7 > var8; var8++) {
-            SoftwareRasterizer.c(var8, 1 + var8, -(var8 << 1) + 14, 16777215);
+            SoftwareRasterizer.drawVerticalLine(var8, 1 + var8, -(var8 << 1) + 14, 16777215);
           }
-          SoftwareRasterizer.a(var16, var5, var6);
+          SoftwareRasterizer.setTarget(var16, var5, var6);
           rh.field_F = gm.a(-122, wa.field_a, var4, hc.field_n, ec.field_b);
           ck.field_bb.field_fb = new IntrusiveDeque();
           return;
@@ -96,7 +96,7 @@ final class db {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(')').toString());
         }
     }
 

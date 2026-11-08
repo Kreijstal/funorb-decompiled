@@ -32,8 +32,8 @@ final class NodeHashTableIterator implements Iterator {
           if (var2_int > 0) {
             throw new IllegalStateException("" + var2_int);
           }
-          var3 = BitPacketBuffer.a(91, param1) ? 1 : 0;
-          var4 = BitPacketBuffer.a(77, param1) ? 1 : 0;
+          var3 = BitPacketBuffer.readBooleanBit(91, param1) ? 1 : 0;
+          var4 = BitPacketBuffer.readBooleanBit(77, param1) ? 1 : 0;
           var5 = new id();
           var5.field_q = (short)param1.readBits(16, (byte) -112);
           var5.field_D = cc.a(var5.field_D, param1, 16, 0);
@@ -60,10 +60,10 @@ final class NodeHashTableIterator implements Iterator {
             var5.field_o = cc.a(var5.field_o, param1, 16, 0);
             var5.field_g = cc.a(var5.field_g, param1, 16, 0);
           }
-          if (BitPacketBuffer.a(126, param1)) {
+          if (BitPacketBuffer.readBooleanBit(126, param1)) {
             var5.field_v = cc.a(var5.field_v, param1, 16, 0);
           }
-          if (BitPacketBuffer.a(64, param1)) {
+          if (BitPacketBuffer.readBooleanBit(64, param1)) {
             var5.field_u = fi.a(16, var5.field_u, param1, (byte) 119);
             var6 = 0;
             for (var7 = 0; var7 < var5.field_u.length; var7++) {
@@ -89,7 +89,7 @@ final class NodeHashTableIterator implements Iterator {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
         }
     }
 
@@ -136,7 +136,7 @@ final class NodeHashTableIterator implements Iterator {
         return false;
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         field_c = null;
         if (param0 <= 116) {
@@ -199,7 +199,7 @@ final class NodeHashTableIterator implements Iterator {
           var3 = param0.readBits(12, (byte) -112);
           var4 = new rm[var3];
           for (var5 = 0; var3 > var5; var5++) {
-            if (BitPacketBuffer.a(100, param0)) {
+            if (BitPacketBuffer.readBooleanBit(100, param0)) {
               var6 = new rm();
               param0.readBits(24, (byte) -112);
               param0.readBits(24, (byte) -112);
@@ -226,7 +226,7 @@ final class NodeHashTableIterator implements Iterator {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -236,7 +236,7 @@ final class NodeHashTableIterator implements Iterator {
           this.field_e = param0;
           this.a(-1);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "lj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "lj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

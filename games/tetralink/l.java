@@ -55,7 +55,7 @@ final class l {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -174,7 +174,7 @@ final class l {
         }
         int var3 = null != GameKeyHandler.field_a ? 1 : 0;
         if (9 == dg.field_e &&
-          fi.a(ml.field_jb, vf.field_b, vd.field_h, (byte) -86, ba.field_N)) {
+          fi.canSendQuickChat(ml.field_jb, vf.field_b, vd.field_h, (byte) -86, ba.field_N)) {
           if (vf.field_b != 2 &&
             var3 != 0) {
             return false;
@@ -213,7 +213,7 @@ final class l {
         try {
           ll.a(param4, param0, param1, param5, param2, param3, (byte) 127, param1);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "l.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "l.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -380,14 +380,14 @@ final class l {
         var2.position = var2.position + 1;
         int var3 = var2.position;
         var2.a(2, false);
-        var2.a(0, 128, km.field_o, km.field_o.length);
+        var2.writeBytes(0, 128, km.field_o, km.field_o.length);
         var2.a(ni.field_c, false);
         var2.a(qa.field_A, false);
-        var2.a(param0, param0 + 128, lo.field_a, lo.field_a.length);
+        var2.writeBytes(param0, param0 + 128, lo.field_a, lo.field_a.length);
         var2.b(var2.position - var3, -2);
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_i = null;
         int var1 = 118 % ((param0 + 38) / 43);
         field_c = null;
@@ -427,7 +427,7 @@ final class l {
           this.field_f = null;
           this.field_e = new byte[6];
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "l.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "l.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

@@ -17,7 +17,7 @@ final class nm extends IntrusiveNode {
     static String field_A;
     int[] field_w;
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_y = null;
         field_o = null;
         field_n = null;
@@ -38,7 +38,7 @@ final class nm extends IntrusiveNode {
           if (var1 == null) {
             var1 = new dl();
           }
-          var1.a(SoftwareRasterizer.field_g, SoftwareRasterizer.field_l, SoftwareRasterizer.field_f, SoftwareRasterizer.field_j, SoftwareRasterizer.field_b, true, SoftwareRasterizer.field_i, SoftwareRasterizer.field_e);
+          var1.setRasterState(SoftwareRasterizer.field_g, SoftwareRasterizer.field_l, SoftwareRasterizer.field_f, SoftwareRasterizer.field_j, SoftwareRasterizer.field_b, true, SoftwareRasterizer.field_i, SoftwareRasterizer.field_e);
           oa.field_u.addLast(var1, false);
           return;
         }

@@ -5,7 +5,7 @@ final class ta {
     static int field_b;
     static int field_a;
 
-    final static void a(double[] param0, double[] param1, double[] param2, double param3, double param4, Sprite param5, int param6, int param7, int param8, int param9, boolean param10) {
+    final static void drawPerspectiveTexturedQuad(double[] param0, double[] param1, double[] param2, double param3, double param4, Sprite param5, int param6, int param7, int param8, int param9, boolean param10) {
         double var17_double;
         double var19_double;
         double var21_double;
@@ -36,21 +36,21 @@ final class ta {
         double var31Lifetime1;
         int var41Lifetime1;
         var54 = new double[3];
-        ta.a(param0, param1, param2, -param3, -param4, var54);
+        ta.computeQuadCorner(param0, param1, param2, -param3, -param4, var54);
         var56 = new double[3];
         var55 = new double[3];
-        ta.a(param0, param1, param2, param3, -param4, var55);
+        ta.computeQuadCorner(param0, param1, param2, param3, -param4, var55);
         var57 = new double[3];
-        ta.b(param0, var54);
-        ta.b(param0, var55);
+        ta.transformToCameraSpace(param0, var54);
+        ta.transformToCameraSpace(param0, var55);
         if (!(var54[2] < 32.0) &&
           !(var55[2] < 32.0)) {
-          ta.a(param0, param1, param2, -param3, param4, var56);
-          ta.a(param0, param1, param2, param3, param4, var57);
-          ta.a(param0, param1, param2, -param3, -param4, var54);
-          ta.a(param0, param1, param2, param3, -param4, var55);
-          ta.a(param0, var54);
-          ta.a(param0, var55);
+          ta.computeQuadCorner(param0, param1, param2, -param3, param4, var56);
+          ta.computeQuadCorner(param0, param1, param2, param3, param4, var57);
+          ta.computeQuadCorner(param0, param1, param2, -param3, -param4, var54);
+          ta.computeQuadCorner(param0, param1, param2, param3, -param4, var55);
+          ta.projectToScreen(param0, var54);
+          ta.projectToScreen(param0, var55);
         } else {
           if (var54[2] < 32.0 &&
             var55[2] < 32.0) {
@@ -72,15 +72,15 @@ final class ta {
             var29 = var25;
             param6 = param6 + (int)(0.5 * (1.0 + var25 / param3) * (double)(param7 - param6));
           }
-          ta.a(param0, param1, param2, var29, -param4, var54);
-          ta.a(param0, param1, param2, var29, param4, var56);
-          ta.a(param0, param1, param2, var31, -param4, var55);
-          ta.a(param0, param1, param2, var31, param4, var57);
-          ta.a(param0, var54);
-          ta.a(param0, var55);
+          ta.computeQuadCorner(param0, param1, param2, var29, -param4, var54);
+          ta.computeQuadCorner(param0, param1, param2, var29, param4, var56);
+          ta.computeQuadCorner(param0, param1, param2, var31, -param4, var55);
+          ta.computeQuadCorner(param0, param1, param2, var31, param4, var57);
+          ta.projectToScreen(param0, var54);
+          ta.projectToScreen(param0, var55);
         }
-        ta.a(param0, var56);
-        ta.a(param0, var57);
+        ta.projectToScreen(param0, var56);
+        ta.projectToScreen(param0, var57);
         var17 = (int)var54[0];
         var18 = (int)var55[0];
         var19 = (int)var54[1];
@@ -121,7 +121,7 @@ final class ta {
         }
         if (!param10) {
           for (var41Lifetime1 = var17; var41Lifetime1 <= var18; var41Lifetime1++) {
-            ta.b(var41Lifetime1, (int)var31Lifetime1, (int)var33, param5, (int)(var37 / var35) >> 16, param8, param9);
+            ta.drawScaledSpriteColumn(var41Lifetime1, (int)var31Lifetime1, (int)var33, param5, (int)(var37 / var35) >> 16, param8, param9);
             var31Lifetime1 = var31Lifetime1 + var25Lifetime1;
             var33 = var33 + var27Lifetime1;
             var35 = var35 + var29Lifetime1;
@@ -138,7 +138,7 @@ final class ta {
         }
     }
 
-    private final static void a(double[] param0, double[] param1, double[] param2, double param3, double param4, double[] param5) {
+    private final static void computeQuadCorner(double[] param0, double[] param1, double[] param2, double param3, double param4, double[] param5) {
         param5[0] = param1[0] + param3 * param2[0] + param4 * param0[6];
         param5[1] = param1[1] + param3 * param2[1] + param4 * param0[7];
         param5[2] = param1[2] + param3 * param2[2] + param4 * param0[8];
@@ -153,7 +153,7 @@ final class ta {
         return var2;
     }
 
-    private final static void a(double[] param0, double[] param1) {
+    private final static void projectToScreen(double[] param0, double[] param1) {
         param1[0] = param1[0] - param0[0];
         param1[1] = param1[1] - param0[1];
         param1[2] = param1[2] - param0[2];
@@ -198,7 +198,7 @@ final class ta {
         }
     }
 
-    private final static void b(int param0, int param1, int param2, Sprite param3, int param4, int param5, int param6) {
+    private final static void drawScaledSpriteColumn(int param0, int param1, int param2, Sprite param3, int param4, int param5, int param6) {
         if (param2 == 0) {
           return;
         }
@@ -224,7 +224,7 @@ final class ta {
         }
     }
 
-    final static void a(double[] param0, double[] param1, double[] param2, double param3, double param4, int[] param5, int param6, int param7) {
+    final static void drawGlowingQuadOutline(double[] param0, double[] param1, double[] param2, double param3, double param4, int[] param5, int param6, int param7) {
         int var14;
         double var15_double;
         double var17_double;
@@ -243,22 +243,22 @@ final class ta {
           return;
         }
         var33 = new double[3];
-        ta.a(param0, param1, param2, -param3, -param4, var33);
+        ta.computeQuadCorner(param0, param1, param2, -param3, -param4, var33);
         var35 = new double[3];
         var34 = new double[3];
-        ta.a(param0, param1, param2, param3, -param4, var34);
+        ta.computeQuadCorner(param0, param1, param2, param3, -param4, var34);
         var36 = new double[3];
-        ta.b(param0, var33);
-        ta.b(param0, var34);
+        ta.transformToCameraSpace(param0, var33);
+        ta.transformToCameraSpace(param0, var34);
         var14 = 0;
         if (!(var33[2] < 0.5) &&
           !(var34[2] < 0.5)) {
-          ta.a(param0, param1, param2, -param3, param4, var35);
-          ta.a(param0, param1, param2, param3, param4, var36);
-          ta.a(param0, param1, param2, -param3, -param4, var33);
-          ta.a(param0, param1, param2, param3, -param4, var34);
-          ta.a(param0, var33);
-          ta.a(param0, var34);
+          ta.computeQuadCorner(param0, param1, param2, -param3, param4, var35);
+          ta.computeQuadCorner(param0, param1, param2, param3, param4, var36);
+          ta.computeQuadCorner(param0, param1, param2, -param3, -param4, var33);
+          ta.computeQuadCorner(param0, param1, param2, param3, -param4, var34);
+          ta.projectToScreen(param0, var33);
+          ta.projectToScreen(param0, var34);
         } else {
           if (var33[2] < 0.5 &&
             var34[2] < 0.5) {
@@ -275,30 +275,30 @@ final class ta {
             var17_double = var15_double;
             var14 = 1;
           }
-          ta.a(param0, param1, param2, var17_double, -param4, var33);
-          ta.a(param0, param1, param2, var17_double, param4, var35);
-          ta.a(param0, param1, param2, var19_double, -param4, var34);
-          ta.a(param0, param1, param2, var19_double, param4, var36);
-          ta.a(param0, var33);
-          ta.a(param0, var34);
+          ta.computeQuadCorner(param0, param1, param2, var17_double, -param4, var33);
+          ta.computeQuadCorner(param0, param1, param2, var17_double, param4, var35);
+          ta.computeQuadCorner(param0, param1, param2, var19_double, -param4, var34);
+          ta.computeQuadCorner(param0, param1, param2, var19_double, param4, var36);
+          ta.projectToScreen(param0, var33);
+          ta.projectToScreen(param0, var34);
         }
-        ta.a(param0, var35);
-        ta.a(param0, var36);
+        ta.projectToScreen(param0, var35);
+        ta.projectToScreen(param0, var36);
         var15 = (int)var33[0];
         var16 = (int)var34[0];
         var17 = (int)var33[1];
         var18 = (int)var34[1];
         var19 = (int)(var35[1] - var33[1]);
         var20 = (int)(var36[1] - var34[1]);
-        rf.a(var15, var17, var16, var18, (int)((double)(param6 << 7) * var33[2]), param7, param5);
+        rf.drawGlowingLine(var15, var17, var16, var18, (int)((double)(param6 << 7) * var33[2]), param7, param5);
         if (var14 != 1) {
-          rf.a(var15, var17, var15, var17 + var19, (int)((double)(param6 << 7) * var33[2]), param7, param5);
+          rf.drawGlowingLine(var15, var17, var15, var17 + var19, (int)((double)(param6 << 7) * var33[2]), param7, param5);
         }
-        rf.a(var15, var17 + var19, var16, var18 + var20, (int)((double)(param6 << 7) * var33[2]), param7, param5);
+        rf.drawGlowingLine(var15, var17 + var19, var16, var18 + var20, (int)((double)(param6 << 7) * var33[2]), param7, param5);
         if (var14 == 2) {
           return;
         }
-        rf.a(var16, var18, var16, var18 + var20, (int)((double)(param6 << 7) * var34[2]), param7, param5);
+        rf.drawGlowingLine(var16, var18, var16, var18 + var20, (int)((double)(param6 << 7) * var34[2]), param7, param5);
         return;
     }
 
@@ -328,21 +328,21 @@ final class ta {
         int var42;
         int var42Lifetime1;
         var55 = new double[3];
-        ta.a(param0, param1, param2, -param3, -param4, var55);
+        ta.computeQuadCorner(param0, param1, param2, -param3, -param4, var55);
         var57 = new double[3];
         var56 = new double[3];
-        ta.a(param0, param1, param2, param3, -param4, var56);
+        ta.computeQuadCorner(param0, param1, param2, param3, -param4, var56);
         var58 = new double[3];
-        ta.b(param0, var55);
-        ta.b(param0, var56);
+        ta.transformToCameraSpace(param0, var55);
+        ta.transformToCameraSpace(param0, var56);
         if (!(var55[2] < 0.5) &&
           !(var56[2] < 0.5)) {
-          ta.a(param0, param1, param2, -param3, param4, var57);
-          ta.a(param0, param1, param2, param3, param4, var58);
-          ta.a(param0, param1, param2, -param3, -param4, var55);
-          ta.a(param0, param1, param2, param3, -param4, var56);
-          ta.a(param0, var55);
-          ta.a(param0, var56);
+          ta.computeQuadCorner(param0, param1, param2, -param3, param4, var57);
+          ta.computeQuadCorner(param0, param1, param2, param3, param4, var58);
+          ta.computeQuadCorner(param0, param1, param2, -param3, -param4, var55);
+          ta.computeQuadCorner(param0, param1, param2, param3, -param4, var56);
+          ta.projectToScreen(param0, var55);
+          ta.projectToScreen(param0, var56);
         } else {
           if (var55[2] < 0.5 &&
             var56[2] < 0.5) {
@@ -359,15 +359,15 @@ final class ta {
             var20_double = var18_double;
             param6 = (int)(0.5 * (1.0 + var18_double / param3) * (double)(param6 + param7));
           }
-          ta.a(param0, param1, param2, var20_double, -param4, var55);
-          ta.a(param0, param1, param2, var20_double, param4, var57);
-          ta.a(param0, param1, param2, var22_double, -param4, var56);
-          ta.a(param0, param1, param2, var22_double, param4, var58);
-          ta.a(param0, var55);
-          ta.a(param0, var56);
+          ta.computeQuadCorner(param0, param1, param2, var20_double, -param4, var55);
+          ta.computeQuadCorner(param0, param1, param2, var20_double, param4, var57);
+          ta.computeQuadCorner(param0, param1, param2, var22_double, -param4, var56);
+          ta.computeQuadCorner(param0, param1, param2, var22_double, param4, var58);
+          ta.projectToScreen(param0, var55);
+          ta.projectToScreen(param0, var56);
         }
-        ta.a(param0, var57);
-        ta.a(param0, var58);
+        ta.projectToScreen(param0, var57);
+        ta.projectToScreen(param0, var58);
         var18 = (int)var55[0];
         var19 = (int)var56[0];
         var20 = (int)var55[1];
@@ -432,7 +432,7 @@ final class ta {
           }
         } else {
           for (var42Lifetime1 = var18; var42Lifetime1 <= var19; var42Lifetime1++) {
-            ta.c(var42Lifetime1, (int)var34, (int)var36, param5, (int)(65536.0 * var40 / var38), param8, param9);
+            ta.drawScaledSpriteColumnFiltered(var42Lifetime1, (int)var34, (int)var36, param5, (int)(65536.0 * var40 / var38), param8, param9);
             var34 = var34 + var26;
             var36 = var36 + var28;
             var38 = var38 + var30;
@@ -442,7 +442,7 @@ final class ta {
         }
     }
 
-    final static int a(int param0) {
+    final static int rgbToPackedHsl(int param0) {
         float stackIn_7_0 = 0.0f;
         float stackIn_14_0 = 0.0f;
         float stackIn_32_0 = 0.0f;
@@ -601,17 +601,17 @@ final class ta {
         }
     }
 
-    final static double[] a(double[] param0, double[] param1, double[] param2) {
+    final static double[] createLookAtCamera(double[] param0, double[] param1, double[] param2) {
         double[] var3 = new double[]{param1[0] - param0[0], param1[1] - param0[1], param1[2] - param0[2]};
-        double[] var11 = ta.c(var3, param2);
-        double[] var12 = ta.c(var11, var3);
-        ta.b(var11);
-        ta.b(var12);
-        ta.b(var3);
+        double[] var11 = ta.crossProduct(var3, param2);
+        double[] var12 = ta.crossProduct(var11, var3);
+        ta.normalizeVector(var11);
+        ta.normalizeVector(var12);
+        ta.normalizeVector(var3);
         return new double[]{param0[0], param0[1], param0[2], var11[0], var11[1], var11[2], var12[0], var12[1], var12[2], var3[0], var3[1], var3[2]};
     }
 
-    final static int[] a(double[] param0) {
+    final static int[] toFixedCamera(double[] param0) {
         int[] var1 = ta.a(param0, 16);
         var1[0] = (int)param0[0];
         var1[1] = (int)param0[1];
@@ -619,7 +619,7 @@ final class ta {
         return var1;
     }
 
-    private final static void b(double[] param0) {
+    private final static void normalizeVector(double[] param0) {
         double var1 = param0[0];
         double var3 = param0[1];
         double var5 = param0[2];
@@ -633,7 +633,7 @@ final class ta {
         param0[2] = var5 / var7;
     }
 
-    private final static void c(int param0, int param1, int param2, Sprite param3, int param4, int param5, int param6) {
+    private final static void drawScaledSpriteColumnFiltered(int param0, int param1, int param2, Sprite param3, int param4, int param5, int param6) {
         int var7;
         int var8;
         int var9;
@@ -732,7 +732,7 @@ final class ta {
         }
     }
 
-    private final static double[] c(double[] param0, double[] param1) {
+    private final static double[] crossProduct(double[] param0, double[] param1) {
         return new double[]{param0[2] * param1[1] - param0[1] * param1[2], param0[0] * param1[2] - param0[2] * param1[0], param0[1] * param1[0] - param0[0] * param1[1]};
     }
 
@@ -838,7 +838,7 @@ final class ta {
         }
     }
 
-    private final static void b(double[] param0, double[] param1) {
+    private final static void transformToCameraSpace(double[] param0, double[] param1) {
         param1[0] = param1[0] - param0[0];
         param1[1] = param1[1] - param0[1];
         param1[2] = param1[2] - param0[2];
@@ -850,7 +850,7 @@ final class ta {
         param1[2] = var6;
     }
 
-    final static void a(int[] param0, int[] param1, int[] param2, int[] param3) {
+    final static void transformTriangleToCamera(int[] param0, int[] param1, int[] param2, int[] param3) {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;

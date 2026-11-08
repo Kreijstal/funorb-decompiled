@@ -41,7 +41,7 @@ final class ud extends hl {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -49,7 +49,7 @@ final class ud extends hl {
         super(0L, (hl) null);
     }
 
-    public static void h(int param0) {
+    public static void releaseStatics(int param0) {
         field_Qb = null;
         if (param0 != 0) {
           return;

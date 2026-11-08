@@ -89,17 +89,17 @@ final class tn {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 != -2) {
-          tn.a(34);
+          tn.releaseStatics(34);
           field_b = null;
           return;
         }
         field_b = null;
     }
 
-    final static int a(boolean param0, int param1, String param2) {
+    final static int measureText(boolean param0, int param1, String param2) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_5_0 = 0;
@@ -114,10 +114,10 @@ final class tn {
             return stackIn_2_0;
           }
           if (param0) {
-            stackIn_7_0 = oi.field_a.b(param2);
+            stackIn_7_0 = oi.field_a.textWidth(param2);
             return stackIn_7_0;
           }
-          stackIn_5_0 = ko.field_u.b(param2);
+          stackIn_5_0 = ko.field_u.textWidth(param2);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -129,7 +129,7 @@ final class tn {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 

@@ -23,11 +23,11 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         int fieldTemp$0 = nd.field_Lb.position + 1;
         nd.field_Lb.position = nd.field_Lb.position + 1;
         int var4 = fieldTemp$0;
-        nd.field_Lb.a(param1, param1 + 128, tb.field_j.payload, tb.field_j.position);
+        nd.field_Lb.writeBytes(param1, param1 + 128, tb.field_j.payload, tb.field_j.position);
         nd.field_Lb.b(-var4 + nd.field_Lb.position, -2);
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_f = null;
         field_e = null;
         field_c = null;
@@ -57,7 +57,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -68,7 +68,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         int var5 = var4.position;
         int var6 = 16 % ((param0 + 59) / 54);
         var4.a(7, false);
-        var4.a(-1, param2);
+        var4.writeLong(-1, param2);
         var4.b(var4.position - var5, -2);
     }
 
@@ -141,7 +141,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 
@@ -183,7 +183,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -205,7 +205,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           }
           param0.consume();
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "qe.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "qe.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

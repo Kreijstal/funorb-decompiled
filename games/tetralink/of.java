@@ -27,7 +27,7 @@ final class of {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var2), "of.E(" + param0 + ')');
+          throw oi.wrapException((Throwable) ((Object) var2), "of.E(" + param0 + ')');
         }
     }
 
@@ -47,7 +47,7 @@ final class of {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var2), "of.L(" + param0 + ')');
+          throw oi.wrapException((Throwable) ((Object) var2), "of.L(" + param0 + ')');
         }
     }
 
@@ -64,7 +64,7 @@ final class of {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var2), "of.G(" + param0 + ')');
+          throw oi.wrapException((Throwable) ((Object) var2), "of.G(" + param0 + ')');
         }
     }
 
@@ -83,7 +83,7 @@ final class of {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var3), "of.I(" + param0 + ',' + param1 + ')');
+          throw oi.wrapException((Throwable) ((Object) var3), "of.I(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -100,7 +100,7 @@ final class of {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var2), "of.Q(" + param0 + ')');
+          throw oi.wrapException((Throwable) ((Object) var2), "of.Q(" + param0 + ')');
         }
     }
 
@@ -117,7 +117,7 @@ final class of {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var2), "of.P(" + param0 + ')');
+          throw oi.wrapException((Throwable) ((Object) var2), "of.P(" + param0 + ')');
         }
     }
 
@@ -180,7 +180,7 @@ final class of {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var4), "of.H(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw oi.wrapException((Throwable) ((Object) var4), "of.H(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -260,272 +260,272 @@ final class of {
         byte[] var2Lifetime66;
         try {
           bl.field_Nb = param1;
-          var2 = sj.a("waitingfor_patches", -1);
+          var2 = sj.readTextResourceBytes("waitingfor_patches", -1);
           if (null != var2) {
             ud.a(var2, -81);
           }
-          var2Lifetime1 = sj.a("loading_patches", -1);
+          var2Lifetime1 = sj.readTextResourceBytes("loading_patches", -1);
           if (null != var2Lifetime1) {
             ud.a(var2Lifetime1, -82);
           }
-          var2Lifetime2 = sj.a("TEXT_CREATE_ACCOUNT1", -1);
+          var2Lifetime2 = sj.readTextResourceBytes("TEXT_CREATE_ACCOUNT1", -1);
           if (null != var2Lifetime2) {
             ei.field_e = ud.a(var2Lifetime2, -42);
           }
-          var2Lifetime3 = sj.a("TEXT_CREATE_ACCOUNT2", -1);
+          var2Lifetime3 = sj.readTextResourceBytes("TEXT_CREATE_ACCOUNT2", -1);
           if (null != var2Lifetime3) {
             rm.field_h = ud.a(var2Lifetime3, -108);
           }
-          var2Lifetime4 = sj.a("TEXT_FULLSCREEN_TOGGLE", -1);
+          var2Lifetime4 = sj.readTextResourceBytes("TEXT_FULLSCREEN_TOGGLE", -1);
           if (var2Lifetime4 != null) {
             vd.field_g = ud.a(var2Lifetime4, -97);
           }
-          var2Lifetime5 = sj.a("TEXT_MODE", -1);
+          var2Lifetime5 = sj.readTextResourceBytes("TEXT_MODE", -1);
           if (var2Lifetime5 != null) {
             ud.a(var2Lifetime5, -52);
           }
-          var2Lifetime6 = sj.a("TEXT_DETAIL", -1);
+          var2Lifetime6 = sj.readTextResourceBytes("TEXT_DETAIL", -1);
           if (null != var2Lifetime6) {
             SpriteState.field_z = ud.a(var2Lifetime6, -73);
           }
-          var2Lifetime7 = sj.a("TEXT_OPTIONS", -1);
+          var2Lifetime7 = sj.readTextResourceBytes("TEXT_OPTIONS", -1);
           if (var2Lifetime7 != null) {
             SoundEffectLibrary.field_a = ud.a(var2Lifetime7, -79);
           }
-          var2Lifetime8 = sj.a("TEXT_YOURCOLOUR", -1);
+          var2Lifetime8 = sj.readTextResourceBytes("TEXT_YOURCOLOUR", -1);
           if (null != var2Lifetime8) {
             BufferedSocket.field_e = ud.a(var2Lifetime8, -45);
           }
-          var2Lifetime9 = sj.a("TEXT_OPPONENT", -1);
+          var2Lifetime9 = sj.readTextResourceBytes("TEXT_OPPONENT", -1);
           if (var2Lifetime9 != null) {
             id.field_w = ud.a(var2Lifetime9, -64);
           }
-          var2Lifetime10 = sj.a("TEXT_PLAYERS", -1);
+          var2Lifetime10 = sj.readTextResourceBytes("TEXT_PLAYERS", -1);
           if (var2Lifetime10 != null) {
             b.field_b = ud.a(var2Lifetime10, -88);
           }
-          var2Lifetime11 = sj.a("TEXT_YOUR_TURN_PLAYING", -1);
+          var2Lifetime11 = sj.readTextResourceBytes("TEXT_YOUR_TURN_PLAYING", -1);
           if (var2Lifetime11 != null) {
             qj.field_e = ud.a(var2Lifetime11, -84);
           }
-          var2Lifetime12 = sj.a("TEXT_X_TURN_PLAYING", -1);
+          var2Lifetime12 = sj.readTextResourceBytes("TEXT_X_TURN_PLAYING", -1);
           if (null != var2Lifetime12) {
             ld.field_M = ud.a(var2Lifetime12, -57);
           }
-          var2Lifetime13 = sj.a("TEXT_X_TURN", -1);
+          var2Lifetime13 = sj.readTextResourceBytes("TEXT_X_TURN", -1);
           if (var2Lifetime13 != null) {
             ef.field_o = ud.a(var2Lifetime13, -89);
           }
-          var2Lifetime14 = sj.a("TEXT_COLOUR_WHITE", -1);
+          var2Lifetime14 = sj.readTextResourceBytes("TEXT_COLOUR_WHITE", -1);
           if (var2Lifetime14 != null) {
             NotificationToast.field_t = ud.a(var2Lifetime14, -89);
           }
-          var2Lifetime15 = sj.a("TEXT_COLOUR_RED", -1);
+          var2Lifetime15 = sj.readTextResourceBytes("TEXT_COLOUR_RED", -1);
           if (var2Lifetime15 != null) {
             PacketBuffer.field_s = ud.a(var2Lifetime15, -117);
           }
-          var2Lifetime16 = sj.a("TEXT_DRAWN", -1);
+          var2Lifetime16 = sj.readTextResourceBytes("TEXT_DRAWN", -1);
           if (var2Lifetime16 != null) {
             dc.field_i = ud.a(var2Lifetime16, -77);
           }
-          var2Lifetime17 = sj.a("TEXT_WINS", -1);
+          var2Lifetime17 = sj.readTextResourceBytes("TEXT_WINS", -1);
           if (null != var2Lifetime17) {
             ph.field_A = ud.a(var2Lifetime17, -106);
           }
-          var2Lifetime18 = sj.a("TEXT_2D", -1);
+          var2Lifetime18 = sj.readTextResourceBytes("TEXT_2D", -1);
           if (var2Lifetime18 != null) {
             wh.field_a = ud.a(var2Lifetime18, -70);
           }
-          var2Lifetime19 = sj.a("TEXT_3D", -1);
+          var2Lifetime19 = sj.readTextResourceBytes("TEXT_3D", -1);
           if (var2Lifetime19 != null) {
             en.field_I = ud.a(var2Lifetime19, -100);
           }
-          var2Lifetime20 = sj.a("TEXT_SWITCH_2D", -1);
+          var2Lifetime20 = sj.readTextResourceBytes("TEXT_SWITCH_2D", -1);
           var3 = 65 % ((param0 + 32) / 54);
           if (null != var2Lifetime20) {
             ai.field_c = ud.a(var2Lifetime20, -119);
           }
-          var2Lifetime21 = sj.a("TEXT_SWITCH_3D", -1);
+          var2Lifetime21 = sj.readTextResourceBytes("TEXT_SWITCH_3D", -1);
           if (null != var2Lifetime21) {
             qf.field_d = ud.a(var2Lifetime21, -97);
           }
-          var2Lifetime22 = sj.a("TEXT_BACK", -1);
+          var2Lifetime22 = sj.readTextResourceBytes("TEXT_BACK", -1);
           if (var2Lifetime22 != null) {
             ci.field_A = ud.a(var2Lifetime22, -45);
           }
-          var2Lifetime23 = sj.a("TEXT_NOT_AVAILABLE_IN_2D", -1);
+          var2Lifetime23 = sj.readTextResourceBytes("TEXT_NOT_AVAILABLE_IN_2D", -1);
           if (null != var2Lifetime23) {
             we.field_n = ud.a(var2Lifetime23, -122);
           }
-          var2Lifetime24 = sj.a("TEXT_RESET_VIEW", -1);
+          var2Lifetime24 = sj.readTextResourceBytes("TEXT_RESET_VIEW", -1);
           if (null != var2Lifetime24) {
             ud.a(var2Lifetime24, -127);
           }
-          var2Lifetime25 = sj.a("TEXT_ERROR", -1);
+          var2Lifetime25 = sj.readTextResourceBytes("TEXT_ERROR", -1);
           if (var2Lifetime25 != null) {
             jm.field_e = ud.a(var2Lifetime25, -43);
           }
-          var2Lifetime26 = sj.a("TEXT_PLAY_AGAIN", -1);
+          var2Lifetime26 = sj.readTextResourceBytes("TEXT_PLAY_AGAIN", -1);
           if (var2Lifetime26 != null) {
             qk.field_a = ud.a(var2Lifetime26, -78);
           }
-          var2Lifetime27 = sj.a("GAMEOPT_NAMES,0", -1);
+          var2Lifetime27 = sj.readTextResourceBytes("GAMEOPT_NAMES,0", -1);
           if (null != var2Lifetime27) {
             la.field_l[0] = ud.a(var2Lifetime27, -98);
           }
-          var2Lifetime28 = sj.a("GAMEOPT_NAMES,1", -1);
+          var2Lifetime28 = sj.readTextResourceBytes("GAMEOPT_NAMES,1", -1);
           if (null != var2Lifetime28) {
             la.field_l[1] = ud.a(var2Lifetime28, -125);
           }
-          var2Lifetime29 = sj.a("GAMEOPT_NAMES,2", -1);
+          var2Lifetime29 = sj.readTextResourceBytes("GAMEOPT_NAMES,2", -1);
           if (var2Lifetime29 != null) {
             la.field_l[2] = ud.a(var2Lifetime29, -48);
           }
-          var2Lifetime30 = sj.a("PLAYERNAME_HOTSEAT_2", -1);
+          var2Lifetime30 = sj.readTextResourceBytes("PLAYERNAME_HOTSEAT_2", -1);
           if (null != var2Lifetime30) {
             vh.field_a = ud.a(var2Lifetime30, -124);
           }
-          var2Lifetime31 = sj.a("PLAYERNAME_HOTSEAT_1", -1);
+          var2Lifetime31 = sj.readTextResourceBytes("PLAYERNAME_HOTSEAT_1", -1);
           if (null != var2Lifetime31) {
             me.field_c = ud.a(var2Lifetime31, -58);
           }
-          var2Lifetime32 = sj.a("TEXT_HINT", -1);
+          var2Lifetime32 = sj.readTextResourceBytes("TEXT_HINT", -1);
           if (var2Lifetime32 != null) {
             ud.a(var2Lifetime32, -98);
           }
-          var2Lifetime33 = sj.a("DETAIL_NAMES,0", -1);
+          var2Lifetime33 = sj.readTextResourceBytes("DETAIL_NAMES,0", -1);
           if (var2Lifetime33 != null) {
             qf.field_f[0] = ud.a(var2Lifetime33, -50);
           }
-          var2Lifetime34 = sj.a("DETAIL_NAMES,1", -1);
+          var2Lifetime34 = sj.readTextResourceBytes("DETAIL_NAMES,1", -1);
           if (null != var2Lifetime34) {
             qf.field_f[1] = ud.a(var2Lifetime34, -96);
           }
-          var2Lifetime35 = sj.a("DETAIL_NAMES,2", -1);
+          var2Lifetime35 = sj.readTextResourceBytes("DETAIL_NAMES,2", -1);
           if (var2Lifetime35 != null) {
             qf.field_f[2] = ud.a(var2Lifetime35, -72);
           }
-          var2Lifetime36 = sj.a("DETAIL_NAMES,3", -1);
+          var2Lifetime36 = sj.readTextResourceBytes("DETAIL_NAMES,3", -1);
           if (null != var2Lifetime36) {
             qf.field_f[3] = ud.a(var2Lifetime36, -65);
           }
-          var2Lifetime37 = sj.a("DETAIL_NAMES,4", -1);
+          var2Lifetime37 = sj.readTextResourceBytes("DETAIL_NAMES,4", -1);
           if (null != var2Lifetime37) {
             qf.field_f[4] = ud.a(var2Lifetime37, -87);
           }
-          var2Lifetime38 = sj.a("achievement_names,0", -1);
+          var2Lifetime38 = sj.readTextResourceBytes("achievement_names,0", -1);
           if (var2Lifetime38 != null) {
             ui.field_a[0] = ud.a(var2Lifetime38, -51);
           }
-          var2Lifetime39 = sj.a("achievement_names,1", -1);
+          var2Lifetime39 = sj.readTextResourceBytes("achievement_names,1", -1);
           if (null != var2Lifetime39) {
             ui.field_a[1] = ud.a(var2Lifetime39, -77);
           }
-          var2Lifetime40 = sj.a("achievement_names,2", -1);
+          var2Lifetime40 = sj.readTextResourceBytes("achievement_names,2", -1);
           if (null != var2Lifetime40) {
             ui.field_a[2] = ud.a(var2Lifetime40, -58);
           }
-          var2Lifetime41 = sj.a("achievement_names,3", -1);
+          var2Lifetime41 = sj.readTextResourceBytes("achievement_names,3", -1);
           if (null != var2Lifetime41) {
             ui.field_a[3] = ud.a(var2Lifetime41, -104);
           }
-          var2Lifetime42 = sj.a("achievement_names,4", -1);
+          var2Lifetime42 = sj.readTextResourceBytes("achievement_names,4", -1);
           if (var2Lifetime42 != null) {
             ui.field_a[4] = ud.a(var2Lifetime42, -82);
           }
-          var2Lifetime43 = sj.a("achievement_names,5", -1);
+          var2Lifetime43 = sj.readTextResourceBytes("achievement_names,5", -1);
           if (null != var2Lifetime43) {
             ui.field_a[5] = ud.a(var2Lifetime43, -41);
           }
-          var2Lifetime44 = sj.a("achievement_names,6", -1);
+          var2Lifetime44 = sj.readTextResourceBytes("achievement_names,6", -1);
           if (var2Lifetime44 != null) {
             ui.field_a[6] = ud.a(var2Lifetime44, -122);
           }
-          var2Lifetime45 = sj.a("achievement_names,7", -1);
+          var2Lifetime45 = sj.readTextResourceBytes("achievement_names,7", -1);
           if (null != var2Lifetime45) {
             ui.field_a[7] = ud.a(var2Lifetime45, -120);
           }
-          var2Lifetime46 = sj.a("achievement_criteria,0", -1);
+          var2Lifetime46 = sj.readTextResourceBytes("achievement_criteria,0", -1);
           if (null != var2Lifetime46) {
             nh.field_Ob[0] = ud.a(var2Lifetime46, -52);
           }
-          var2Lifetime47 = sj.a("achievement_criteria,1", -1);
+          var2Lifetime47 = sj.readTextResourceBytes("achievement_criteria,1", -1);
           if (var2Lifetime47 != null) {
             nh.field_Ob[1] = ud.a(var2Lifetime47, -94);
           }
-          var2Lifetime48 = sj.a("achievement_criteria,2", -1);
+          var2Lifetime48 = sj.readTextResourceBytes("achievement_criteria,2", -1);
           if (var2Lifetime48 != null) {
             nh.field_Ob[2] = ud.a(var2Lifetime48, -49);
           }
-          var2Lifetime49 = sj.a("achievement_criteria,3", -1);
+          var2Lifetime49 = sj.readTextResourceBytes("achievement_criteria,3", -1);
           if (var2Lifetime49 != null) {
             nh.field_Ob[3] = ud.a(var2Lifetime49, -125);
           }
-          var2Lifetime50 = sj.a("achievement_criteria,4", -1);
+          var2Lifetime50 = sj.readTextResourceBytes("achievement_criteria,4", -1);
           if (null != var2Lifetime50) {
             nh.field_Ob[4] = ud.a(var2Lifetime50, -91);
           }
-          var2Lifetime51 = sj.a("achievement_criteria,5", -1);
+          var2Lifetime51 = sj.readTextResourceBytes("achievement_criteria,5", -1);
           if (var2Lifetime51 != null) {
             nh.field_Ob[5] = ud.a(var2Lifetime51, -90);
           }
-          var2Lifetime52 = sj.a("achievement_criteria,6", -1);
+          var2Lifetime52 = sj.readTextResourceBytes("achievement_criteria,6", -1);
           if (var2Lifetime52 != null) {
             nh.field_Ob[6] = ud.a(var2Lifetime52, -93);
           }
-          var2Lifetime53 = sj.a("achievement_criteria,7", -1);
+          var2Lifetime53 = sj.readTextResourceBytes("achievement_criteria,7", -1);
           if (var2Lifetime53 != null) {
             nh.field_Ob[7] = ud.a(var2Lifetime53, -124);
           }
-          var2Lifetime54 = sj.a("text_login_or_discard", -1);
+          var2Lifetime54 = sj.readTextResourceBytes("text_login_or_discard", -1);
           if (var2Lifetime54 != null) {
             ud.a(var2Lifetime54, -86);
           }
-          var2Lifetime55 = sj.a("gameoptlabels,0", -1);
+          var2Lifetime55 = sj.readTextResourceBytes("gameoptlabels,0", -1);
           if (null != var2Lifetime55) {
             a.field_i[0] = ud.a(var2Lifetime55, -114);
           }
-          var2Lifetime56 = sj.a("gameoptnames,0,0", -1);
+          var2Lifetime56 = sj.readTextResourceBytes("gameoptnames,0,0", -1);
           if (null != var2Lifetime56) {
             d.field_c[0][0] = ud.a(var2Lifetime56, -117);
           }
-          var2Lifetime57 = sj.a("gameoptnames,0,1", -1);
+          var2Lifetime57 = sj.readTextResourceBytes("gameoptnames,0,1", -1);
           if (var2Lifetime57 != null) {
             d.field_c[0][1] = ud.a(var2Lifetime57, -110);
           }
-          var2Lifetime58 = sj.a("gameoptnames,0,2", -1);
+          var2Lifetime58 = sj.readTextResourceBytes("gameoptnames,0,2", -1);
           if (null != var2Lifetime58) {
             d.field_c[0][2] = ud.a(var2Lifetime58, -37);
           }
-          var2Lifetime59 = sj.a("gameoptnames,0,3", -1);
+          var2Lifetime59 = sj.readTextResourceBytes("gameoptnames,0,3", -1);
           if (null != var2Lifetime59) {
             d.field_c[0][3] = ud.a(var2Lifetime59, -114);
           }
-          var2Lifetime60 = sj.a("gameoptnames,0,4", -1);
+          var2Lifetime60 = sj.readTextResourceBytes("gameoptnames,0,4", -1);
           if (var2Lifetime60 != null) {
             d.field_c[0][4] = ud.a(var2Lifetime60, -126);
           }
-          var2Lifetime61 = sj.a("gameoptnames,0,5", -1);
+          var2Lifetime61 = sj.readTextResourceBytes("gameoptnames,0,5", -1);
           if (null != var2Lifetime61) {
             d.field_c[0][5] = ud.a(var2Lifetime61, -54);
           }
-          var2Lifetime62 = sj.a("gameoptnames,0,6", -1);
+          var2Lifetime62 = sj.readTextResourceBytes("gameoptnames,0,6", -1);
           if (null != var2Lifetime62) {
             d.field_c[0][6] = ud.a(var2Lifetime62, -98);
           }
-          var2Lifetime63 = sj.a("text_removed_from_game", -1);
+          var2Lifetime63 = sj.readTextResourceBytes("text_removed_from_game", -1);
           if (var2Lifetime63 != null) {
             rc.field_T = ud.a(var2Lifetime63, -74);
           }
-          var2Lifetime64 = sj.a("text_lobby_pleaselogin", -1);
+          var2Lifetime64 = sj.readTextResourceBytes("text_lobby_pleaselogin", -1);
           if (null != var2Lifetime64) {
             eo.field_a = ud.a(var2Lifetime64, -95);
           }
-          var2Lifetime65 = sj.a("instructions_pages,0", -1);
+          var2Lifetime65 = sj.readTextResourceBytes("instructions_pages,0", -1);
           if (var2Lifetime65 != null) {
             on.field_c[0] = ud.a(var2Lifetime65, -46);
           }
-          var2Lifetime66 = sj.a("instructions_pages,1", -1);
+          var2Lifetime66 = sj.readTextResourceBytes("instructions_pages,1", -1);
           if (var2Lifetime66 != null) {
             on.field_c[1] = ud.a(var2Lifetime66, -96);
           }
@@ -541,7 +541,7 @@ final class of {
           } else {
             stackIn_238_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_237_0), ((StringBuilder) (Object) stackIn_237_1).append(stackIn_238_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_237_0), ((StringBuilder) (Object) stackIn_237_1).append(stackIn_238_2).append(')').toString());
         }
     }
 
@@ -701,7 +701,7 @@ final class of {
             } else {
               stackIn_72_2 = "{...}";
             }
-            throw oi.a((Throwable) ((Object) stackIn_63_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(')').toString());
+            throw oi.wrapException((Throwable) ((Object) stackIn_63_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -723,7 +723,7 @@ final class of {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var2), "of.B(" + param0 + ')');
+          throw oi.wrapException((Throwable) ((Object) var2), "of.B(" + param0 + ')');
         }
     }
 
@@ -760,7 +760,7 @@ final class of {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var2), "of.J(" + param0 + ')');
+          throw oi.wrapException((Throwable) ((Object) var2), "of.J(" + param0 + ')');
         }
     }
 
@@ -778,7 +778,7 @@ final class of {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var1), "of.C(" + param0 + ')');
+          throw oi.wrapException((Throwable) ((Object) var1), "of.C(" + param0 + ')');
         }
     }
 
@@ -795,7 +795,7 @@ final class of {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var2), "of.M(" + param0 + ')');
+          throw oi.wrapException((Throwable) ((Object) var2), "of.M(" + param0 + ')');
         }
     }
 
@@ -818,7 +818,7 @@ final class of {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) runtimeException), "of.N(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "of.N(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -838,7 +838,7 @@ final class of {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var1), "of.O(" + param0 + ')');
+          throw oi.wrapException((Throwable) ((Object) var1), "of.O(" + param0 + ')');
         }
     }
 
@@ -855,7 +855,7 @@ final class of {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var2), "of.D(" + param0 + ')');
+          throw oi.wrapException((Throwable) ((Object) var2), "of.D(" + param0 + ')');
         }
     }
 
@@ -872,7 +872,7 @@ final class of {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var2), "of.F(" + param0 + ')');
+          throw oi.wrapException((Throwable) ((Object) var2), "of.F(" + param0 + ')');
         }
     }
 
@@ -889,7 +889,7 @@ final class of {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var2), "of.R(" + param0 + ')');
+          throw oi.wrapException((Throwable) ((Object) var2), "of.R(" + param0 + ')');
         }
     }
 
@@ -899,7 +899,7 @@ final class of {
         try {
           this.field_g = param0;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "of.<init>(" + param0 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "of.<init>(" + param0 + ')');
         }
     }
 

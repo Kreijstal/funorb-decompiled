@@ -9,7 +9,7 @@ final class hj {
     static ve field_e;
     private ec field_f;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 32768) {
           return;
         }
@@ -41,7 +41,7 @@ final class hj {
         hg.field_b[8] = hg.field_b[8] + 32;
     }
 
-    final static sj a(String param0, int param1, boolean param2) {
+    final static sj createUsernameResponseQuery(String param0, int param1, boolean param2) {
         sj var3 = null;
         RuntimeException var3_ref = null;
         sj stackIn_1_0 = null;
@@ -65,11 +65,11 @@ final class hj {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    final static void a(byte param0) {
+    final static void compactDepthBucketFaceOrder(byte param0) {
         int var2 = 0;
         int var1_int = 0;
         int var3 = 0;
@@ -84,14 +84,14 @@ final class hj {
           var1_int = ug.field_bb[0];
           for (var2 = 1; var2 < ug.field_bb.length; var2++) {
             var3 = ug.field_bb[var2];
-            rd.a(lg.field_ab, var2 << 4, lg.field_ab, var1_int, var3);
+            rd.copy(lg.field_ab, var2 << 4, lg.field_ab, var1_int, var3);
             var1_int = var1_int + var3;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var1), "hj.D(" + param0 + ')');
+          throw oi.wrapException((Throwable) ((Object) var1), "hj.D(" + param0 + ')');
         }
     }
 
@@ -111,7 +111,7 @@ final class hj {
         }
         var3 = new qa();
         if (var4 != null) {
-          var3.a(new PacketBuffer(var4), 0);
+          var3.decode(new PacketBuffer(var4), 0);
           if (32768 <= param0) {
             var3.g(32768);
           }
@@ -160,7 +160,7 @@ final class hj {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 

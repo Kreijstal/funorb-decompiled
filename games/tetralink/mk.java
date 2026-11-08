@@ -56,7 +56,7 @@ final class mk {
           wa.field_e.close(-15488);
           wa.field_e = null;
           if (param0) {
-            mk.a(-109);
+            mk.releaseStatics(-109);
             return;
           }
           return;
@@ -64,7 +64,7 @@ final class mk {
         if (!param0) {
           return;
         }
-        mk.a(-109);
+        mk.releaseStatics(-109);
     }
 
     final static void a(int param0, String param1, int param2, boolean param3, long param4, int param5) {
@@ -73,7 +73,7 @@ final class mk {
           nd.field_Lb.writeCipheredByte(param5, (byte) -92);
           nd.field_Lb.position = nd.field_Lb.position + 1;
           var7_int = nd.field_Lb.position;
-          nd.field_Lb.a(-1, param4);
+          nd.field_Lb.writeLong(-1, param4);
           nd.field_Lb.a(param1, 0);
           nd.field_Lb.a(param2, false);
           if (param0 >= -95) {
@@ -82,7 +82,7 @@ final class mk {
           nd.field_Lb.a(param3 ? 1 : 0, false);
           nd.field_Lb.b(-var7_int + nd.field_Lb.position, -2);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "mk.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "mk.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -100,7 +100,7 @@ final class mk {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == -2) {
           field_f = null;
           field_d = null;
@@ -125,7 +125,7 @@ final class mk {
           var4 = new hl[]{param1, go.field_d, (hl) ((Object) BufferedSocket.field_n)};
           this.field_g = new ad(0L, te.field_O, var3, rc.field_S, var4, 0);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "mk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "mk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

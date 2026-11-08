@@ -40,7 +40,7 @@ final class fn extends gn implements sh, dm {
         ((tm) (this.field_N.a(-108))).d((byte) -99);
     }
 
-    public static void e(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = 30 / ((param0 + 14) / 54);
         field_M = null;
         field_P = null;
@@ -76,7 +76,7 @@ final class fn extends gn implements sh, dm {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -129,7 +129,7 @@ final class fn extends gn implements sh, dm {
             var8 = (String) null;
             fn.a(62, (Archive) null, (String) null, (String) null);
           }
-          stackIn_3_0 = this.a(126, param0, param4, param1, 35, param3, param2);
+          stackIn_3_0 = this.addFieldWithHelp(126, param0, param4, param1, 35, param3, param2);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -153,7 +153,7 @@ final class fn extends gn implements sh, dm {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param5).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -186,11 +186,11 @@ final class fn extends gn implements sh, dm {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    private final int a(int param0, int param1, String param2, int param3, int param4, UiWidget param5, String param6) {
+    private final int addFieldWithHelp(int param0, int param1, String param2, int param3, int param4, UiWidget param5, String param6) {
         RuntimeException var8 = null;
         ck var9 = null;
         rc var10 = null;
@@ -233,7 +233,7 @@ final class fn extends gn implements sh, dm {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -244,9 +244,9 @@ final class fn extends gn implements sh, dm {
           int var3_int = -104 / ((-9 - param0) / 61);
           var4 = this.field_N;
           var5 = param1;
-          ((nn) ((Object) var4)).a(false, 122, var5);
+          ((nn) ((Object) var4)).setText(false, 122, var5);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "fn.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "fn.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -272,7 +272,7 @@ final class fn extends gn implements sh, dm {
             field_O = 3;
           }
           kf.a(-4968, param7, param15, param8, param2, param17);
-          ti.a(param10, 1, param18, param9);
+          ti.setLegacyMenuFrameAndPadding(param10, 1, param18, param9);
           gj.a(70, param19, param20, param12);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -309,16 +309,16 @@ final class fn extends gn implements sh, dm {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(',').append(param17).append(',').append(param18).append(',').append(param19).append(',').append(param20).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(',').append(param17).append(',').append(param18).append(',').append(param19).append(',').append(param20).append(')').toString());
         }
     }
 
-    final void a(UiWidget param0, int param1, int param2, boolean param3) {
+    final void updatePointer(UiWidget param0, int param1, int param2, boolean param3) {
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(param0, param1, param2, param3);
           this.field_T.field_K = this.f((byte) -33);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "fn.MA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "fn.MA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -344,7 +344,7 @@ final class fn extends gn implements sh, dm {
         return true;
     }
 
-    final boolean a(int param0, char param1, int param2, UiWidget param3) {
+    final boolean handleKey(int param0, char param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_9_0 = false;
@@ -353,7 +353,7 @@ final class fn extends gn implements sh, dm {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKey(param0, param1, param2, param3)) {
             return true;
           }
           if (98 == param0) {
@@ -375,7 +375,7 @@ final class fn extends gn implements sh, dm {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -393,7 +393,7 @@ final class fn extends gn implements sh, dm {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 0) {
-            fn.e((byte) 47);
+            fn.releaseStatics((byte) 47);
           }
           if (!param1.c(105)) {
             stackIn_5_0 = (String) (param2);
@@ -423,7 +423,7 @@ final class fn extends gn implements sh, dm {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 

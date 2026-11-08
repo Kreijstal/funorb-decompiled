@@ -8,15 +8,15 @@ final class im {
     static int[] field_d;
     static String field_a;
 
-    final static fg a(int param0) {
+    final static fg getSoundMixer(int param0) {
         if (param0 != 28357) {
-          im.a((byte) 91);
+          im.releaseStatics((byte) 91);
           return u.field_g;
         }
         return u.field_g;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         field_b = null;
         field_d = null;

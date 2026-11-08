@@ -120,7 +120,7 @@ final class bn extends IOException {
           } else {
             stackIn_62_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_61_0), ((StringBuilder) (Object) stackIn_61_1).append(stackIn_62_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_61_0), ((StringBuilder) (Object) stackIn_61_1).append(stackIn_62_2).append(')').toString());
         }
     }
 
@@ -141,7 +141,7 @@ final class bn extends IOException {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var1), "bn.E(" + param0 + ')');
+          throw oi.wrapException((Throwable) ((Object) var1), "bn.E(" + param0 + ')');
         }
     }
 
@@ -175,7 +175,7 @@ final class bn extends IOException {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var2), "bn.D(" + param0 + ',' + param1 + ')');
+          throw oi.wrapException((Throwable) ((Object) var2), "bn.D(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -193,7 +193,7 @@ final class bn extends IOException {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var1), "bn.A(" + param0 + ')');
+          throw oi.wrapException((Throwable) ((Object) var1), "bn.A(" + param0 + ')');
         }
     }
 
@@ -467,24 +467,24 @@ final class bn extends IOException {
                 if ((-var53 | (-var52 | -var51)) < 0) {
                   if (ic.field_c.length < (4 + (param21 + var29))) {
                     var54 = new int[param21 + var29 + 104];
-                    rd.a(ic.field_c, 0, var54, 0, k.field_e);
+                    rd.copy(ic.field_c, 0, var54, 0, k.field_e);
                     ic.field_c = var54;
                     var54Lifetime4 = new int[var29 + (param21 + 104)];
-                    rd.a(nn.field_S, 0, var54Lifetime4, 0, k.field_e);
+                    rd.copy(nn.field_S, 0, var54Lifetime4, 0, k.field_e);
                     nn.field_S = var54Lifetime4;
                     var54Lifetime5 = new int[104 + param21 + var29];
-                    rd.a(bd.field_a, 0, var54Lifetime5, 0, k.field_e);
+                    rd.copy(bd.field_a, 0, var54Lifetime5, 0, k.field_e);
                     bd.field_a = var54Lifetime5;
                   }
                   if (am.field_b.length < (var31 + (param21 + 4))) {
                     var54Lifetime1 = new int[104 + param21 + var31];
-                    rd.a(am.field_b, 0, var54Lifetime1, 0, mf.field_u);
+                    rd.copy(am.field_b, 0, var54Lifetime1, 0, mf.field_u);
                     am.field_b = var54Lifetime1;
                     var54Lifetime1Lifetime1 = new int[104 + param21 + var31];
-                    rd.a(gd.field_Zb, 0, var54Lifetime1Lifetime1, 0, mf.field_u);
+                    rd.copy(gd.field_Zb, 0, var54Lifetime1Lifetime1, 0, mf.field_u);
                     gd.field_Zb = var54Lifetime1Lifetime1;
                     var54Lifetime1Lifetime2 = new int[104 + (var31 + param21)];
-                    rd.a(cm.field_q, 0, var54Lifetime1Lifetime2, 0, mf.field_u);
+                    rd.copy(cm.field_q, 0, var54Lifetime1Lifetime2, 0, mf.field_u);
                     cm.field_q = var54Lifetime1Lifetime2;
                   }
                   var55 = k.field_e;
@@ -693,23 +693,23 @@ final class bn extends IOException {
                   k.field_e = var55;
                   if (ja.field_l.length < (-2 + var57 + var30 + param7)) {
                     var54Lifetime2 = new int[param7 + var30 + (var57 + 98)];
-                    rd.a(ja.field_l, 0, var54Lifetime2, 0, var33Lifetime2);
+                    rd.copy(ja.field_l, 0, var54Lifetime2, 0, var33Lifetime2);
                     ja.field_l = var54Lifetime2;
                     var54Lifetime2Lifetime1 = new int[var57 + (param7 + var30) + 98];
-                    rd.a(db.field_f, 0, var54Lifetime2Lifetime1, 0, var33Lifetime2);
+                    rd.copy(db.field_f, 0, var54Lifetime2Lifetime1, 0, var33Lifetime2);
                     db.field_f = var54Lifetime2Lifetime1;
                     var54Lifetime2Lifetime2 = new int[98 + var57 + (var30 + param7)];
-                    rd.a(wk.field_b, 0, var54Lifetime2Lifetime2, 0, var33Lifetime2);
+                    rd.copy(wk.field_b, 0, var54Lifetime2Lifetime2, 0, var33Lifetime2);
                     wk.field_b = var54Lifetime2Lifetime2;
                     if (null != param18) {
                       var54Lifetime2Lifetime3 = new int[98 + (var30 + (param7 + var57))];
-                      rd.a(IntrusiveNode.field_m, 0, var54Lifetime2Lifetime3, 0, var33Lifetime2);
+                      rd.copy(IntrusiveNode.field_m, 0, var54Lifetime2Lifetime3, 0, var33Lifetime2);
                       IntrusiveNode.field_m = var54Lifetime2Lifetime3;
                       var54Lifetime2Lifetime3 = new int[var30 + (param7 + var57 + 98)];
-                      rd.a(tc.field_w, 0, var54Lifetime2Lifetime3, 0, var33Lifetime2);
+                      rd.copy(tc.field_w, 0, var54Lifetime2Lifetime3, 0, var33Lifetime2);
                       tc.field_w = var54Lifetime2Lifetime3;
                       var54Lifetime2Lifetime3 = new int[98 + var57 + (var30 + param7)];
-                      rd.a(SecondaryNodeDeque.field_b, 0, var54Lifetime2Lifetime3, 0, var33Lifetime2);
+                      rd.copy(SecondaryNodeDeque.field_b, 0, var54Lifetime2Lifetime3, 0, var33Lifetime2);
                       SecondaryNodeDeque.field_b = var54Lifetime2Lifetime3;
                     }
                   }
@@ -750,23 +750,23 @@ final class bn extends IOException {
                   var33Lifetime2 = le.field_Xb;
                   if ((var58 + param7 - (-var32 + 2)) > ve.field_a.length) {
                     var54Lifetime3 = new int[var58 + (var32 + (param7 + 98))];
-                    rd.a(ve.field_a, 0, var54Lifetime3, 0, var33Lifetime2);
+                    rd.copy(ve.field_a, 0, var54Lifetime3, 0, var33Lifetime2);
                     ve.field_a = var54Lifetime3;
                     var54Lifetime3Lifetime1 = new int[98 + var58 + (param7 + var32)];
-                    rd.a(hd.field_D, 0, var54Lifetime3Lifetime1, 0, var33Lifetime2);
+                    rd.copy(hd.field_D, 0, var54Lifetime3Lifetime1, 0, var33Lifetime2);
                     hd.field_D = var54Lifetime3Lifetime1;
                     var54Lifetime3Lifetime2 = new int[param7 - (-var32 - var58) + 98];
-                    rd.a(kj.field_d, 0, var54Lifetime3Lifetime2, 0, var33Lifetime2);
+                    rd.copy(kj.field_d, 0, var54Lifetime3Lifetime2, 0, var33Lifetime2);
                     kj.field_d = var54Lifetime3Lifetime2;
                     if (null != param18) {
                       var54Lifetime3Lifetime3 = new int[param7 + var32 + (var58 + 98)];
-                      rd.a(ga.field_b, 0, var54Lifetime3Lifetime3, 0, var33Lifetime2);
+                      rd.copy(ga.field_b, 0, var54Lifetime3Lifetime3, 0, var33Lifetime2);
                       ga.field_b = var54Lifetime3Lifetime3;
                       var54Lifetime3Lifetime3 = new int[98 + var58 + (param7 + var32)];
-                      rd.a(fj.field_p, 0, var54Lifetime3Lifetime3, 0, var33Lifetime2);
+                      rd.copy(fj.field_p, 0, var54Lifetime3Lifetime3, 0, var33Lifetime2);
                       fj.field_p = var54Lifetime3Lifetime3;
                       var54Lifetime3Lifetime3 = new int[98 + (param7 + var32) + var58];
-                      rd.a(om.field_Yb, 0, var54Lifetime3Lifetime3, 0, var33Lifetime2);
+                      rd.copy(om.field_Yb, 0, var54Lifetime3Lifetime3, 0, var33Lifetime2);
                       om.field_Yb = var54Lifetime3Lifetime3;
                     }
                   }
@@ -1218,7 +1218,7 @@ final class bn extends IOException {
           } else {
             stackIn_393_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_340_0), ((StringBuilder) (Object) stackIn_392_1).append(stackIn_393_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_340_0), ((StringBuilder) (Object) stackIn_392_1).append(stackIn_393_2).append(')').toString());
         }
     }
 

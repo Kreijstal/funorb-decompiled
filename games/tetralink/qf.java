@@ -42,7 +42,7 @@ final class qf {
             stackIn_5_0 = el.field_qc;
             return stackIn_5_0;
           }
-          if (ej.a(param1, 4)) {
+          if (ej.matchesNormalizedSessionName(param1, 4)) {
             stackIn_9_0 = hl.field_A;
             return stackIn_9_0;
           }
@@ -63,7 +63,7 @@ final class qf {
             stackIn_22_0 = MouseInputHandler.field_g;
             return stackIn_22_0;
           }
-          if (sb.a((byte) 2, param1)) {
+          if (sb.areAllGroupsReady((byte) 2, param1)) {
             stackIn_25_0 = sk.a(new String[]{param1}, rh.field_J, 126);
             return stackIn_25_0;
           }
@@ -86,12 +86,12 @@ final class qf {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param2).append(')').toString());
         }
     }
 
     final static void a(int param0, boolean param1) {
-        SoftwareRasterizer.a();
+        SoftwareRasterizer.clear();
         if (param0 != 1) {
           field_k = (MouseWheelInput) null;
         }
@@ -178,10 +178,10 @@ final class qf {
                     var17 = 0;
                     var13Lifetime1 = var17;
                     while (var9 > var17) {
-                      var12[var17] = hh.a(var10[var17], 111);
+                      var12[var17] = hh.classForDescriptor(var10[var17], 111);
                       var17++;
                     }
-                    var18.field_u[var5] = param3.a(8, hh.a(var20, 42), var12, var21);
+                    var18.field_u[var5] = param3.a(8, hh.classForDescriptor(var20, 42), var12, var21);
                     var18.field_t[var5] = var22;
                   }
                 } else {
@@ -195,7 +195,7 @@ final class qf {
                   }
                   var18.field_z[var5] = var6_int;
                   var18.field_q[var5] = var9;
-                  var18.field_x[var5] = param3.requestDeclaredField(var15, 26298, hh.a(var16, -72));
+                  var18.field_x[var5] = param3.requestDeclaredField(var15, 26298, hh.classForDescriptor(var16, -72));
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -237,7 +237,7 @@ final class qf {
             } else {
               stackIn_41_2 = "{...}";
             }
-            throw oi.a((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
+            throw oi.wrapException((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -246,7 +246,7 @@ final class qf {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_c = null;
         field_h = null;
         field_a = null;

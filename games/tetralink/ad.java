@@ -73,11 +73,11 @@ final class ad extends hl {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param5).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param5).append(')').toString());
         }
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != 43) {
           field_Nb = (String) null;
         }
@@ -95,7 +95,7 @@ final class ad extends hl {
           hg.field_b[param2] = param0;
           hg.field_j[param2] = param3;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "ad.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "ad.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -140,7 +140,7 @@ final class ad extends hl {
         var3 = TetraLink.field_J;
         var2 = 0;
         if (!param0) {
-          ad.d((byte) 85);
+          ad.releaseStatics((byte) 85);
         }
         while (this.field_Mb.length > var2) {
           if (this.field_Lb != var2 &&

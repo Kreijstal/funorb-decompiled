@@ -70,7 +70,7 @@ final class le extends hl {
             }
             this.field_Qb[var13] = new nh(0L, param2, (hl) null, param3, (Sprite) (var14), param6[var13]);
             this.a((byte) 97, this.field_Qb[var13]);
-            var15 = var17.b(param6[var13]);
+            var15 = var17.textWidth(param6[var13]);
             if (this.field_Mb < var15) {
               this.field_Mb = var15;
             }
@@ -124,11 +124,11 @@ final class le extends hl {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
-    public static void j(int param0) {
+    public static void releaseStatics(int param0) {
         field_Lb = null;
         int var1 = -107 % ((10 - param0) / 47);
         field_Vb = null;
@@ -256,7 +256,7 @@ final class le extends hl {
               }
             }
             if (param0 != 128) {
-              le.j(100);
+              le.releaseStatics(100);
             }
             return false;
           }
@@ -264,7 +264,7 @@ final class le extends hl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var2_ref), "le.A(" + param0 + ',' + param1 + ')');
+          throw oi.wrapException((Throwable) ((Object) var2_ref), "le.A(" + param0 + ',' + param1 + ')');
         }
     }
 

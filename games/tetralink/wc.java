@@ -27,7 +27,7 @@ final class wc extends mb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var1), "wc.H(" + param0 + ')');
+          throw oi.wrapException((Throwable) ((Object) var1), "wc.H(" + param0 + ')');
         }
     }
 
@@ -84,12 +84,12 @@ final class wc extends mb {
             if (var6 == null) {
               var6 = fh.a(-32055, var7);
               if (null != var6) {
-                sd.field_nb.a((long)var8.hashCode(), var6, param0 + 104);
+                sd.field_nb.put((long)var8.hashCode(), var6, param0 + 104);
               }
             }
             if (var6 == null) {
               var6 = new ud();
-              sd.field_nb.a((long)var8.hashCode(), var6, 113);
+              sd.field_nb.put((long)var8.hashCode(), var6, 113);
               fieldTemp$0 = SocketConnector.field_c;
               SocketConnector.field_c = SocketConnector.field_c + 1;
               var6.field_Rb = fieldTemp$0;
@@ -139,12 +139,12 @@ final class wc extends mb {
           if (null == var6Lifetime1) {
             var6Lifetime1 = ke.a(var5Lifetime1, false);
             if (null != var6Lifetime1) {
-              DelegatingCanvas.field_f.a((long)cc.a((CharSequence) ((Object) var4_ref_StringLifetime1), (byte) 124).hashCode(), var6Lifetime1, 106);
+              DelegatingCanvas.field_f.put((long)cc.a((CharSequence) ((Object) var4_ref_StringLifetime1), (byte) 124).hashCode(), var6Lifetime1, 106);
             }
           }
           if (null == var6Lifetime1) {
             var6Lifetime1 = new ud();
-            DelegatingCanvas.field_f.a((long)cc.a((CharSequence) ((Object) var4_ref_StringLifetime1), (byte) 95).hashCode(), var6Lifetime1, 96);
+            DelegatingCanvas.field_f.put((long)cc.a((CharSequence) ((Object) var4_ref_StringLifetime1), (byte) 95).hashCode(), var6Lifetime1, 96);
             fieldTemp$1 = qi.field_q;
             qi.field_q = qi.field_q + 1;
             var6Lifetime1.field_Rb = fieldTemp$1;
@@ -187,7 +187,7 @@ final class wc extends mb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var1_ref), "wc.F(" + param0 + ')');
+          throw oi.wrapException((Throwable) ((Object) var1_ref), "wc.F(" + param0 + ')');
         }
     }
 
@@ -206,7 +206,7 @@ final class wc extends mb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var2), "wc.B(" + param0 + ')');
+          throw oi.wrapException((Throwable) ((Object) var2), "wc.B(" + param0 + ')');
         }
     }
 
@@ -230,7 +230,7 @@ final class wc extends mb {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -266,11 +266,11 @@ final class wc extends mb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) runtimeException), "wc.G(" + param0 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "wc.G(" + param0 + ')');
         }
     }
 
-    final boolean f(int param0) {
+    final boolean isSoftReference(int param0) {
         RuntimeException var2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -281,7 +281,7 @@ final class wc extends mb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var2), "wc.A(" + param0 + ')');
+          throw oi.wrapException((Throwable) ((Object) var2), "wc.A(" + param0 + ')');
         }
     }
 

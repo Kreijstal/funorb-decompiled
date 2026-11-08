@@ -204,7 +204,7 @@ class hl extends uk {
           } else {
             stackIn_104_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_103_0), ((StringBuilder) (Object) stackIn_103_1).append(stackIn_104_2).append(',').append(param1).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_103_0), ((StringBuilder) (Object) stackIn_103_1).append(stackIn_104_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -258,7 +258,7 @@ class hl extends uk {
         var9 = SoftwareRasterizer.field_i;
         var10 = SoftwareRasterizer.field_l;
         var11 = SoftwareRasterizer.field_g;
-        SoftwareRasterizer.b(this.field_eb, this.field_z, this.field_eb + this.field_Hb, this.field_z + this.field_R);
+        SoftwareRasterizer.intersectClip(this.field_eb, this.field_z, this.field_eb + this.field_Hb, this.field_z + this.field_R);
         var12 = 0;
         if (!tk.field_b &&
           param0 &&
@@ -298,7 +298,7 @@ class hl extends uk {
         if (var12 != 0) {
           tk.field_b = true;
         }
-        SoftwareRasterizer.a(var8, var9, var10, var11);
+        SoftwareRasterizer.setClip(var8, var9, var10, var11);
         if (this.field_T != 0 &&
           this.field_qb) {
           this.field_M = aa.field_Nb - (this.field_Z + param5);
@@ -322,7 +322,7 @@ class hl extends uk {
         }
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         field_gb = null;
         field_A = null;
         if (param0 != -31057) {
@@ -334,7 +334,7 @@ class hl extends uk {
         field_G = null;
     }
 
-    final void a(hl param0, boolean param1, hl param2, int param3) {
+    final void placeBelow(hl param0, boolean param1, hl param2, int param3) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -370,7 +370,7 @@ class hl extends uk {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -411,7 +411,7 @@ class hl extends uk {
         var13 = SoftwareRasterizer.field_i;
         var14 = SoftwareRasterizer.field_l;
         var15 = SoftwareRasterizer.field_g;
-        SoftwareRasterizer.b(this.field_eb, this.field_z, this.field_Hb + this.field_eb, this.field_R + this.field_z);
+        SoftwareRasterizer.intersectClip(this.field_eb, this.field_z, this.field_Hb + this.field_eb, this.field_R + this.field_z);
         param3 = param3 & this.field_S;
         if (!this.field_tb) {
           stackIn_5_0 = (this.field_T != 0);
@@ -492,9 +492,9 @@ class hl extends uk {
         var21 = var19 + this.field_W;
         var22 = this.field_ob + var20;
         if (this.field_Cb) {
-          qj.a(param10, (byte) -36, var16, param2, param1, param0);
+          qj.drawNineSliceFrame(param10, (byte) -36, var16, param2, param1, param0);
         } else {
-          qj.a(this.field_Hb, (byte) -36, var16, this.field_eb, this.field_R, this.field_z);
+          qj.drawNineSliceFrame(this.field_Hb, (byte) -36, var16, this.field_eb, this.field_R, this.field_z);
         }
         if (var17 != null) {
           var23_int = var21 + this.field_eb;
@@ -514,7 +514,7 @@ class hl extends uk {
           if (256 > this.field_Bb) {
             var17.a(var23_int, var24, this.field_Bb);
           } else {
-            var17.c(var23_int, var24);
+            var17.drawTransparent(var23_int, var24);
           }
         }
         boolean decompiledFrameRemainder0 = true;
@@ -528,7 +528,7 @@ class hl extends uk {
             this.field_O != null) {
             var23Lifetime2 = var26 + this.field_O;
           }
-          if (this.field_Ib.b(var23Lifetime2) <= -(this.field_V * 2) + this.field_Hb &&
+          if (this.field_Ib.textWidth(var23Lifetime2) <= -(this.field_V * 2) + this.field_Hb &&
             var23Lifetime2.indexOf("<br>") < 0) {
             if (this.field_J != 1) {
               if (this.field_J == 2) {
@@ -538,22 +538,22 @@ class hl extends uk {
               var22 = var22 + (-this.field_Ib.field_K + (-this.field_Ib.field_N + this.field_R)) / 2;
             }
             if (this.field_xb == 0) {
-              this.field_Ib.c(var23Lifetime2, var21 + (this.field_eb + this.field_V), this.field_Ib.field_N + (this.field_z + var22), var18, -1, this.field_K);
+              this.field_Ib.drawLeftAlpha(var23Lifetime2, var21 + (this.field_eb + this.field_V), this.field_Ib.field_N + (this.field_z + var22), var18, -1, this.field_K);
             } else {
               if (this.field_xb == 1) {
-                this.field_Ib.a(var23Lifetime2, var21 + this.field_eb + (this.field_V + (this.field_Hb - this.field_V * 2) / 2), var22 + this.field_z + this.field_Ib.field_N, var18, -1, this.field_K);
+                this.field_Ib.drawCenteredAlpha(var23Lifetime2, var21 + this.field_eb + (this.field_V + (this.field_Hb - this.field_V * 2) / 2), var22 + this.field_z + this.field_Ib.field_N, var18, -1, this.field_K);
               } else {
                 if (this.field_xb != 2) {
-                  this.field_Ib.a(var23Lifetime2, this.field_V + this.field_eb + var21, var22 + this.field_z, this.field_Hb - 2 * this.field_V, this.field_R, var18, -1, this.field_K, this.field_xb, this.field_J, this.field_Q);
+                  this.field_Ib.drawParagraphAlpha(var23Lifetime2, this.field_V + this.field_eb + var21, var22 + this.field_z, this.field_Hb - 2 * this.field_V, this.field_R, var18, -1, this.field_K, this.field_xb, this.field_J, this.field_Q);
                 } else {
-                  this.field_Ib.b(var23Lifetime2, this.field_Hb - (this.field_V * 2 - (var21 + (this.field_eb + this.field_V))), var22 + this.field_z + this.field_Ib.field_N, var18, -1, this.field_K);
+                  this.field_Ib.drawRightAlpha(var23Lifetime2, this.field_Hb - (this.field_V * 2 - (var21 + (this.field_eb + this.field_V))), var22 + this.field_z + this.field_Ib.field_N, var18, -1, this.field_K);
                 }
               }
             }
             decompiledFrameRemainder0 = false;
           }
           else {
-            this.field_Ib.a(var23Lifetime2, var21 + this.field_eb + this.field_V, this.field_z + var22, -(2 * this.field_V) + this.field_Hb, this.field_R, var18, -1, this.field_K, this.field_xb, this.field_J, this.field_Q);
+            this.field_Ib.drawParagraphAlpha(var23Lifetime2, var21 + this.field_eb + this.field_V, this.field_z + var22, -(2 * this.field_V) + this.field_Hb, this.field_R, var18, -1, this.field_K, this.field_xb, this.field_J, this.field_Q);
           }
         }
         if (null != this.field_fb) {
@@ -563,7 +563,7 @@ class hl extends uk {
             var23_ref = (hl) (this.field_fb.a((byte) -70));
           }
         }
-        SoftwareRasterizer.a(var12, var13, var14, var15);
+        SoftwareRasterizer.setClip(var12, var13, var14, var15);
     }
 
     hl(long param0, hl param1) {
@@ -586,7 +586,7 @@ class hl extends uk {
           this.field_fb.addLast(param1, false);
           int var3_int = 56 % ((param0 + 38) / 47);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "hl.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "hl.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -638,7 +638,7 @@ class hl extends uk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var7), "hl.P(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw oi.wrapException((Throwable) ((Object) var7), "hl.P(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -652,7 +652,7 @@ class hl extends uk {
         int var4Lifetime1;
         if (this.field_jb != null &&
           this.field_Ib != null) {
-          var4 = this.field_Ib.b(this.field_jb, param1);
+          var4 = this.field_Ib.getWrappedWidth(this.field_jb, param1);
           if (var4 > var3) {
             var3 = var4;
           }
@@ -809,7 +809,7 @@ class hl extends uk {
             this.field_jb = param6;
           }
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "hl.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "hl.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 

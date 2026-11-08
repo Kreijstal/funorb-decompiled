@@ -34,7 +34,7 @@ final class q implements kg {
         qh.field_k = false;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_a = null;
         field_d = null;
@@ -75,7 +75,7 @@ final class q implements kg {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -88,7 +88,7 @@ final class q implements kg {
           var4.position = var4.position + 1;
           var5 = var4.position;
           var4.a(6, false);
-          var4.a(-1, param2);
+          var4.writeLong(-1, param2);
           var4.b(var4.position - var5, param1 + 116);
           return;
         }
@@ -96,7 +96,7 @@ final class q implements kg {
         var4.position = var4.position + 1;
         var5Lifetime1 = var4.position;
         var4.a(6, false);
-        var4.a(-1, param2);
+        var4.writeLong(-1, param2);
         var4.b(var4.position - var5Lifetime1, param1 + 116);
     }
 
@@ -140,7 +140,7 @@ final class q implements kg {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -150,11 +150,11 @@ final class q implements kg {
           this.field_e = param0;
           this.field_c = param1;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "q.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "q.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    public final void a(UiWidget param0, int param1, int param2, boolean param3, boolean param4) {
+    public final void drawWidget(UiWidget param0, int param1, int param2, boolean param3, boolean param4) {
         int stackIn_6_0 = 0;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -176,12 +176,12 @@ final class q implements kg {
             stackIn_6_0 = 3249872;
           }
           var6_int = stackIn_6_0;
-          this.field_e.a("<u=" + Integer.toString(var6_int, 16) + ">" + param0.field_A + "</u>", param0.field_t + param1, param2 + param0.field_w, param0.field_F, param0.field_u, var6_int, -1, this.field_c, this.field_f, this.field_e.field_K + this.field_e.field_N);
+          this.field_e.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param0.field_A + "</u>", param0.field_t + param1, param2 + param0.field_w, param0.field_F, param0.field_u, var6_int, -1, this.field_c, this.field_f, this.field_e.field_K + this.field_e.field_N);
           if (!param3) {
             field_a = (String[]) null;
           }
           if (param0.c(3)) {
-            var7 = this.field_e.b(param0.field_A);
+            var7 = this.field_e.textWidth(param0.field_A);
             var8 = this.field_e.field_N + this.field_e.field_K;
             var9 = param0.field_t + param1;
             var10 = param0.field_w + param2;
@@ -212,7 +212,7 @@ final class q implements kg {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -343,7 +343,7 @@ final class q implements kg {
           } else {
             stackIn_71_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_70_1).append(stackIn_71_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_70_1).append(stackIn_71_2).append(')').toString());
         }
     }
 
@@ -386,7 +386,7 @@ final class q implements kg {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw oi.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+            throw oi.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

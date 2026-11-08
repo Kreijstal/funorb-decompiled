@@ -8,7 +8,7 @@ abstract class jd {
 
     abstract void a(int param0, byte[] param1);
 
-    final static void a(java.applet.Applet param0, byte param1) {
+    final static void openSupportPage(java.applet.Applet param0, byte param1) {
         try {
           java.net.URL var2 = null;
           Exception var2_ref = null;
@@ -41,7 +41,7 @@ abstract class jd {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw oi.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+            throw oi.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -65,7 +65,7 @@ abstract class jd {
         hn.a(param1, (String) null, 65, param2);
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_c = null;
         int var1 = -52 / ((-36 - param0) / 47);
@@ -110,7 +110,7 @@ abstract class jd {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 

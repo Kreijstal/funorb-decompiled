@@ -61,7 +61,7 @@ abstract class oi {
             } else {
               stackIn_16_2 = "{...}";
             }
-            throw oi.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+            throw oi.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -70,7 +70,7 @@ abstract class oi {
         }
     }
 
-    abstract void a(int param0, int param1);
+    abstract void draw(int param0, int param1);
 
     final static void a(byte param0, int param1) {
         BitPacketBuffer var2 = nd.field_Lb;
@@ -98,7 +98,7 @@ abstract class oi {
         }
     }
 
-    final static ClientException a(Throwable param0, String param1) {
+    final static ClientException wrapException(Throwable param0, String param1) {
         ClientException var2 = null;
         if (!(param0 instanceof ClientException)) {
           var2 = new ClientException(param0, param1);
@@ -109,7 +109,7 @@ abstract class oi {
         return var2;
     }
 
-    abstract void a(int param0, int param1, int param2);
+    abstract void drawAlpha(int param0, int param1, int param2);
 
     static {
         field_g = "to keep fullscreen or";

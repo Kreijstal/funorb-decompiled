@@ -10,7 +10,7 @@ final class il extends en {
     int field_N;
     static String field_P;
 
-    final static rj a(String param0, int param1) {
+    final static rj createEmailCheckResult(String param0, int param1) {
         RuntimeException var2 = null;
         rj stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -33,7 +33,7 @@ final class il extends en {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -95,7 +95,7 @@ final class il extends en {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
@@ -104,7 +104,7 @@ final class il extends en {
         this.field_N = 256;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         if (param3 != 0) {
           return;
         }
@@ -115,12 +115,12 @@ final class il extends en {
           return;
         }
         if (this.field_N == 256) {
-          this.field_J.a(0, this.field_t + param1, param2 + this.field_w, param3);
+          this.field_J.drawLayer(0, this.field_t + param1, param2 + this.field_w, param3);
           return;
         }
         Sprite var6 = new Sprite(this.field_J.field_F, this.field_J.field_u);
         sk.a((byte) 105, var6);
-        this.field_J.a(param0, 0, 0, param3);
+        this.field_J.drawLayer(param0, 0, 0, param3);
         dh.a(-581);
         var6.a(this.field_t + param1, param2 + this.field_w, this.field_N);
     }
@@ -132,11 +132,11 @@ final class il extends en {
           this.field_J = param0;
           this.field_N = 256;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "il.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "il.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void e(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_T = null;
         field_Q = null;
         int var1 = -86 % ((-82 - param0) / 43);

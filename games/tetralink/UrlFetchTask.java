@@ -88,7 +88,7 @@ final class UrlFetchTask implements Runnable {
         return false;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -2) {
           field_j = (int[]) null;
           field_j = null;
@@ -127,7 +127,7 @@ final class UrlFetchTask implements Runnable {
               break;
             }
             if (this.field_g.position == this.field_g.payload.length) {
-              throw UrlFetchTask.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_g.payload.length + " " + this.field_e));
+              throw UrlFetchTask.<RuntimeException>rethrowUnchecked(new Exception("HG1: " + this.field_g.payload.length + " " + this.field_e));
             }
             var1 = this;
             synchronized (var1) {
@@ -158,7 +158,7 @@ final class UrlFetchTask implements Runnable {
           this.field_a = param0;
           this.field_g = new PacketBuffer(param2);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "un.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "un.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -179,7 +179,7 @@ final class UrlFetchTask implements Runnable {
             return stackIn_2_0;
           }
           if (ia.a(param3, param4, param2, -58)) {
-            stackIn_7_0 = SoundEffectLibrary.a(param0 + 28748, param1.a(param0 + 28976, param3, param2));
+            stackIn_7_0 = SoundEffectLibrary.createBinaryFont(param0 + 28748, param1.a(param0 + 28976, param3, param2));
             return stackIn_7_0;
           }
           stackIn_5_0 = null;
@@ -200,7 +200,7 @@ final class UrlFetchTask implements Runnable {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -238,7 +238,7 @@ final class UrlFetchTask implements Runnable {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException rethrowUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

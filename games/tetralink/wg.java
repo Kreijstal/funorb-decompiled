@@ -60,7 +60,7 @@ final class wg {
           ab.field_U = var8.readString((byte) 81);
         }
         if (!param1) {
-          ml.field_fb = rh.a(119, var8, 80);
+          ml.field_fb = rh.readCompressedChatText(119, var8, 80);
           MouseInputHandler.field_i = null;
         } else {
           var5 = var8.readUnsignedShort(127);
@@ -84,7 +84,7 @@ final class wg {
         return new fj(param1);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         field_g = null;
         if (param0 != 6945) {
@@ -127,12 +127,12 @@ final class wg {
             var5 = cc.a(param0, (byte) 108);
             if (var5 != null &&
               var5.length() >= 1) {
-              if (!tk.a((byte) 81, var5.charAt(0)) &&
-                !tk.a((byte) 81, var5.charAt(var5.length() - 1))) {
+              if (!tk.isNameSeparator((byte) 81, var5.charAt(0)) &&
+                !tk.isNameSeparator((byte) 81, var5.charAt(var5.length() - 1))) {
                 var6 = 0;
                 for (var7 = 0; var7 < param0.length(); var7++) {
                   var8 = param0.charAt(var7);
-                  if (tk.a((byte) 81, (char) var8)) {
+                  if (tk.isNameSeparator((byte) 81, (char) var8)) {
                     var6++;
                   } else {
                     var6 = 0;
@@ -167,13 +167,13 @@ final class wg {
           } else {
             stackIn_37_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
     final static int a(boolean param0) {
         if (!param0) {
-          wg.a(123);
+          wg.releaseStatics(123);
         }
         return IntrusiveNode.field_f + ((me.field_b << 2) + (ik.field_e << 4));
     }
@@ -238,7 +238,7 @@ final class wg {
           ab.field_U = var8.readString((byte) 81);
         }
         if (!param1) {
-          ml.field_fb = rh.a(119, var8, 80);
+          ml.field_fb = rh.readCompressedChatText(119, var8, 80);
           MouseInputHandler.field_i = null;
         } else {
           var5 = var8.readUnsignedShort(127);

@@ -23,7 +23,7 @@ abstract class ph extends GameApplet {
     static String field_x;
     static String[] field_C;
 
-    private final void a(int param0, String param1, int param2, int param3, int param4) {
+    private final void readAppletParameters(int param0, String param1, int param2, int param3, int param4) {
         boolean stackIn_8_1 = false;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
@@ -75,7 +75,7 @@ abstract class ph extends GameApplet {
             var6 = (Exception) (Object) decompiledCaughtException;
             var10 = (String) null;
             fk.a(-95, (Throwable) ((Object) var6), (String) null);
-            this.a(24044, "crash");
+            this.redirectToErrorPage(24044, "crash");
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -88,7 +88,7 @@ abstract class ph extends GameApplet {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -104,11 +104,11 @@ abstract class ph extends GameApplet {
         oi.a((byte) -60, ud.a(var5, -107), var3 != 0, lk.q(13));
     }
 
-    final void a(String param0, int param1, int param2) {
+    final void startApplet(String param0, int param1, int param2) {
         try {
-          this.a(param1, param0, 480, param2, 124);
+          this.readAppletParameters(param1, param0, 480, param2, 124);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "ph.CA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "ph.CA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -117,7 +117,7 @@ abstract class ph extends GameApplet {
     }
 
     final void a(boolean param0, boolean param1, boolean param2, boolean param3, boolean param4, boolean param5, byte param6) {
-        this.c(param6 + 24, true);
+        this.configureCommonPackets(param6 + 24, true);
         if (param2) {
           this.k(-7);
         }
@@ -151,14 +151,14 @@ abstract class ph extends GameApplet {
         t.a(this.field_H, nd.field_Pb, this.field_E, th.field_l, 5000, this.field_G, this.field_B, 5000, this.field_v, (byte) 118, param0, this.field_y, param4, this.field_q);
         gi.a(this.field_B, this.field_q, 1, th.field_l, nd.field_Pb, this.field_v, this.field_y, this.field_G, param0);
         RasterBuffer.a(false);
-        qf.field_k = ed.e((byte) 124);
+        qf.field_k = ed.createMouseWheelInput((byte) 124);
         da.a((byte) -70, uh.field_b);
         jg.field_a = param1;
         kd.field_l = param7;
         il.field_R = param2;
         BufferedSocket.field_g = param6;
         ai.field_b = param5;
-        this.l(-6848);
+        this.configureSharedPacketLengths(-6848);
         l.a(param3 ^ param3);
     }
 
@@ -202,7 +202,7 @@ abstract class ph extends GameApplet {
             }
           }
           if (var4 == 2) {
-            var5Lifetime1 = nd.a(this.field_p, rb.c(false), RandomAccessCacheFile.a((byte) -68), i.e(122), ka.c((byte) -114), qa.c((byte) -97), -8769);
+            var5Lifetime1 = nd.submitAccountCreation(this.field_p, rb.c(false), RandomAccessCacheFile.a((byte) -68), i.e(122), ka.c((byte) -114), qa.c((byte) -97), -8769);
             if (var5Lifetime1 != -1) {
               ki.a(var5Lifetime1, IntrusiveDequeCursor.field_d, og.field_h, -106);
               IntrusiveDequeCursor.field_d = null;
@@ -248,7 +248,7 @@ abstract class ph extends GameApplet {
             fn.field_R = 10;
           }
           if (var4 == 7) {
-            jd.a(lk.q(13), (byte) -126);
+            jd.openSupportPage(lk.q(13), (byte) -126);
           }
           var5Lifetime3 = 77 / ((81 - param0) / 34);
           if (var4 == 8) {
@@ -308,7 +308,7 @@ abstract class ph extends GameApplet {
         }
     }
 
-    public static void o(int param0) {
+    public static void releaseStatics(int param0) {
         field_D = null;
         field_t = null;
         field_C = null;
@@ -339,7 +339,7 @@ abstract class ph extends GameApplet {
         if (param0 != ~var2 &&
           var2 != 1) {
           if (!SoundEffectLibrary.field_e) {
-            this.a(24044, "reconnect");
+            this.redirectToErrorPage(24044, "reconnect");
           }
           sd.q(param0 + 27113);
           fi.a(IntrusiveDequeCursor.field_d, var2, (byte) 20);
@@ -411,7 +411,7 @@ abstract class ph extends GameApplet {
         }
     }
 
-    private final void l(int param0) {
+    private final void configureSharedPacketLengths(int param0) {
         if (param0 == -6848) {
           IntrusiveDeque.field_b[18] = 1;
           IntrusiveDeque.field_b[8] = -2;
@@ -562,7 +562,7 @@ abstract class ph extends GameApplet {
           mf.a(0);
         }
         if (qf.field_k != null) {
-          hc.field_p = qf.field_k.a(12224);
+          hc.field_p = qf.field_k.takeRotation(12224);
         }
         if (r.d(0)) {
           var4 = va.a(-1) * 1200;
@@ -617,18 +617,18 @@ abstract class ph extends GameApplet {
               if (4 != a.field_h) {
                 if (a.field_h != 2) {
                   if (5 == a.field_h) {
-                    this.a(24044, "outofdate");
+                    this.redirectToErrorPage(24044, "outofdate");
                   } else {
-                    this.a(24044, "js5connect");
+                    this.redirectToErrorPage(24044, "js5connect");
                   }
                 } else {
-                  this.a(24044, "js5connect_full");
+                  this.redirectToErrorPage(24044, "js5connect_full");
                 }
               } else {
-                this.a(24044, "js5io");
+                this.redirectToErrorPage(24044, "js5io");
               }
             } else {
-              this.a(24044, "js5crc");
+              this.redirectToErrorPage(24044, "js5crc");
             }
           } else {
             if (fn.field_R >= 10) {
@@ -687,7 +687,7 @@ abstract class ph extends GameApplet {
         if (2 == vd.field_a) {
           if (d.field_i != null &&
             d.field_i.c(120)) {
-            if (!d.field_i.a("", 0)) {
+            if (!d.field_i.hasGroupName("", 0)) {
               d.field_i = null;
             } else {
               if (d.field_i.a("", (byte) -76)) {
@@ -721,7 +721,7 @@ abstract class ph extends GameApplet {
             vg.i(5959);
           }
           if (null == rl.field_f) {
-            rl.field_f = im.a(28357);
+            rl.field_f = im.getSoundMixer(28357);
             ci.field_z = SoundEffectLibrary.a(-116);
           }
           ni.a(q.field_b, rl.field_f, ci.field_z, (byte) -5);
@@ -742,7 +742,7 @@ abstract class ph extends GameApplet {
         if (11 == vd.field_a) {
           if (null != um.field_k && (!um.field_k.c(124) ||
             !um.field_k.a(false))) {
-            ak.a(0, fn.a(0, um.field_k, eg.field_N, nj.field_e), 0.0f);
+            ak.setBenefitsBorderAndCaption(0, fn.a(0, um.field_k, eg.field_N, nj.field_e), 0.0f);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -759,7 +759,7 @@ abstract class ph extends GameApplet {
           if (en.field_L != null) {
             stackIn_139_0 = (!en.field_L.a(-1210)) ? 0 : 1;
             var4Lifetime2 = stackIn_139_0;
-            ak.a(0, en.field_L.field_e, en.field_L.field_f);
+            ak.setBenefitsBorderAndCaption(0, en.field_L.field_e, en.field_L.field_f);
           }
           if (var4Lifetime2 != 0) {
             vd.field_a = 20;
@@ -767,8 +767,8 @@ abstract class ph extends GameApplet {
         }
         if (!param1 &&
           MouseInputHandler.field_h) {
-          oa.a((byte) -117, uh.field_b);
-          this.d(-66);
+          oa.attachCanvasInput((byte) -117, uh.field_b);
+          this.replaceCanvas(-66);
           da.a((byte) -118, uh.field_b);
         }
         if (hc.field_u[8]) {
@@ -776,7 +776,7 @@ abstract class ph extends GameApplet {
         }
     }
 
-    private final void c(int param0, boolean param1) {
+    private final void configureCommonPackets(int param0, boolean param1) {
         hc.field_u[16] = true;
         hc.field_u[8] = param1;
         hc.field_u[17] = true;

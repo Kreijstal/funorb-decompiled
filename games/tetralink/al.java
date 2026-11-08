@@ -41,7 +41,7 @@ class al implements kg, jh {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -65,14 +65,14 @@ class al implements kg, jh {
             String var9 = (String) null;
             al.a((String) null, (byte) -79);
           }
-          var10.a(0, 128, param2, param2.length);
+          var10.writeBytes(0, 128, param2, param2.length);
           var10.b(-var7 + var10.position, -2);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "al.FA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "al.FA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
-    public void a(UiWidget param0, int param1, int param2, boolean param3, boolean param4) {
+    public void drawWidget(UiWidget param0, int param1, int param2, boolean param3, boolean param4) {
         if (null == this.field_b) {
           return;
         }
@@ -83,7 +83,7 @@ class al implements kg, jh {
           }
           this.a(param1, param2, param0, (byte) -47);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "al.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "al.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -105,7 +105,7 @@ class al implements kg, jh {
             param1.field_D = (hi) ((Object) new we());
           }
           var3_int = this.b(param1, -107);
-          var4 = this.d(param1, -42);
+          var4 = this.getAvailableWidth(param1, -42);
           if (param0 != 2) {
             this.field_f = -119;
           }
@@ -155,11 +155,11 @@ class al implements kg, jh {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
         }
     }
 
-    public final int a(int param0, int param1, UiWidget param2) {
+    public final int textOriginY(int param0, int param1, UiWidget param2) {
         RuntimeException var4 = null;
         al var5 = null;
         int stackIn_3_0 = 0;
@@ -184,11 +184,11 @@ class al implements kg, jh {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
-    public final int a(boolean param0) {
+    public final int getLineInkHeight(boolean param0) {
         if (!param0) {
           return -109;
         }
@@ -218,7 +218,7 @@ class al implements kg, jh {
             this.field_o = -103;
           }
           this.a(param4, false);
-          stackIn_3_0 = param4.field_D.a(param3 - this.a(param1, 0, param4), param2 - this.a(param4, param0, true), 12024);
+          stackIn_3_0 = param4.field_D.a(param3 - this.textOriginY(param1, 0, param4), param2 - this.a(param4, param0, true), 12024);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -230,7 +230,7 @@ class al implements kg, jh {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param5).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -247,7 +247,7 @@ class al implements kg, jh {
             param0.field_D = (hi) ((Object) new we());
           }
           if (this.field_p) {
-            ((we) (param0.field_D)).a(-24340, this.d(param0, -37), this.c(param0, 4373), this.b(param0, 111), this.field_b, this.field_k, this.field_d, this.field_c);
+            ((we) (param0.field_D)).a(-24340, this.getAvailableWidth(param0, -37), this.c(param0, 4373), this.b(param0, 111), this.field_b, this.field_k, this.field_d, this.field_c);
           } else {
             this.a(2, param0);
           }
@@ -267,7 +267,7 @@ class al implements kg, jh {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -294,7 +294,7 @@ class al implements kg, jh {
         try {
           if (param3 != 0) {
             var13 = (UiWidget) null;
-            discarded$1 = this.d((UiWidget) null, -88);
+            discarded$1 = this.getAvailableWidth((UiWidget) null, -88);
           }
           if (!param0.c(3)) {
             return;
@@ -307,7 +307,7 @@ class al implements kg, jh {
           var10 = this.a(param3 + 0, param0, param4, var9);
           var11 = this.a(param0, param1, true) + Math.max(0, var8.field_h);
           stackIn_6_0 = this.a(param0, param1, true);
-          stackIn_6_1 = this.d(param0, param3 ^ -128);
+          stackIn_6_1 = this.getAvailableWidth(param0, param3 ^ -128);
           stackIn_6_2 = var8.field_a;
           if (var15.field_c.length > 1 + var7) {
             stackIn_7_3 = var14.field_c[1 + var7].field_h;
@@ -329,11 +329,11 @@ class al implements kg, jh {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    public final int a(UiWidget param0, byte param1) {
+    public final int getPreferredHeight(UiWidget param0, byte param1) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -359,7 +359,7 @@ class al implements kg, jh {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -379,10 +379,10 @@ class al implements kg, jh {
           param1.field_g = this.field_g;
           param1.field_n = this.field_n;
           if (param0 != 0) {
-            this.a(false);
+            this.getLineInkHeight(false);
           }
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "al.EA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "al.EA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -393,7 +393,7 @@ class al implements kg, jh {
             this.field_j = -55;
           }
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "al.MA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "al.MA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -419,7 +419,7 @@ class al implements kg, jh {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -448,7 +448,7 @@ class al implements kg, jh {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -460,7 +460,7 @@ class al implements kg, jh {
           }
           t.a(12, 0);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "al.LA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "al.LA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -482,9 +482,9 @@ class al implements kg, jh {
           boolean decompiledFrameRemainder0 = true;
           FullscreenFocusCanvas.a(param0.field_F + param0.field_t + param1, param7 + param0.field_w + param0.field_u, param0.field_w + param7, (byte) -79, param0.field_t + param1);
           var9_int = this.b(param0, 75);
-          var10 = this.d(param0, -19);
+          var10 = this.getAvailableWidth(param0, -19);
           if (this.field_p) {
-            this.field_b.a(this.c(param0, 4373), this.a(0, param0, param1, param6), this.a(param7, param0, (byte) -24, param2), var9_int, var10, param5, param4, this.field_k, this.field_d, this.field_c);
+            this.field_b.drawParagraph(this.c(param0, 4373), this.a(0, param0, param1, param6), this.a(param7, param0, (byte) -24, param2), var9_int, var10, param5, param4, this.field_k, this.field_d, this.field_c);
           } else {
             var12 = this.field_d;
             if (var12 != 0) {
@@ -503,16 +503,16 @@ class al implements kg, jh {
             if (var12Lifetime1 != 0 &&
               var12Lifetime1 != 3) {
               if (var12Lifetime1 == 1) {
-                this.field_b.a(this.c(param0, 4373), this.a(0, param0, param1, param6) + (var9_int >> 1), var11 + this.a(param7, param0, (byte) 120, param2), param5, param4);
+                this.field_b.drawCentered(this.c(param0, 4373), this.a(0, param0, param1, param6) + (var9_int >> 1), var11 + this.a(param7, param0, (byte) 120, param2), param5, param4);
               } else {
                 if ((var12Lifetime1 == 2)) {
-                  this.field_b.c(this.c(param0, 4373), var9_int + this.a(0, param0, param1, param6), this.a(param7, param0, (byte) 122, param2) + var11, param5, param4);
+                  this.field_b.drawRight(this.c(param0, 4373), var9_int + this.a(0, param0, param1, param6), this.a(param7, param0, (byte) 122, param2) + var11, param5, param4);
                 }
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              this.field_b.b(this.c(param0, 4373), this.a(0, param0, param1, param6), var11 + this.a(param7, param0, (byte) -79, param2), param5, param4);
+              this.field_b.drawLeft(this.c(param0, 4373), this.a(0, param0, param1, param6), var11 + this.a(param7, param0, (byte) -79, param2), param5, param4);
             }
           }
           if (param3 < 37) {
@@ -531,7 +531,7 @@ class al implements kg, jh {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -560,7 +560,7 @@ class al implements kg, jh {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -640,7 +640,7 @@ class al implements kg, jh {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
@@ -669,18 +669,18 @@ class al implements kg, jh {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_e = null;
         field_l = null;
         field_i = null;
         int var1 = -5 % ((-21 - param0) / 62);
     }
 
-    private final int d(UiWidget param0, int param1) {
+    private final int getAvailableWidth(UiWidget param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
@@ -702,7 +702,7 @@ class al implements kg, jh {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -717,7 +717,7 @@ class al implements kg, jh {
         try {
           if (param1 < 65) {
             var4 = (UiWidget) null;
-            this.a(-16, 92, (UiWidget) null);
+            this.textOriginY(-16, 92, (UiWidget) null);
           }
           this.a(param0, false);
           stackIn_3_0 = param0.field_D.a(true) + (this.field_j + this.field_h);
@@ -732,7 +732,7 @@ class al implements kg, jh {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -759,7 +759,7 @@ class al implements kg, jh {
           this.field_a = param5;
           this.field_p = param12 ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "al.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "al.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ')');
         }
     }
 

@@ -358,11 +358,11 @@ final class wa {
           } else {
             stackIn_85_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_84_0), ((StringBuilder) (Object) stackIn_84_1).append(stackIn_85_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_84_0), ((StringBuilder) (Object) stackIn_84_1).append(stackIn_85_2).append(')').toString());
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_i = null;
         field_e = null;
         field_f = null;

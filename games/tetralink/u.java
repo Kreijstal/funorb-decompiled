@@ -10,14 +10,14 @@ final class u {
     static fg field_g;
     private Archive field_e;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == 32768) {
           field_b = null;
           field_g = null;
           field_d = null;
           return;
         }
-        u.b(61);
+        u.releaseStatics(61);
         field_b = null;
         field_g = null;
         field_d = null;
@@ -115,7 +115,7 @@ final class u {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw oi.a((Throwable) (stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw oi.wrapException((Throwable) (stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
@@ -136,7 +136,7 @@ final class u {
         if (param1 < -125) {
           var6 = new j();
           if (var4 != null) {
-            var6.a(new PacketBuffer(var4), 15067);
+            var6.decode(new PacketBuffer(var4), 15067);
           }
           if (param0 >= 32768) {
             var6.g(25271);
@@ -147,7 +147,7 @@ final class u {
         this.a(-123, -16);
         var5 = new j();
         if (var4 != null) {
-          var5.a(new PacketBuffer(var4), 15067);
+          var5.decode(new PacketBuffer(var4), 15067);
         }
         if (param0 >= 32768) {
           var5.g(25271);
@@ -200,7 +200,7 @@ final class u {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 

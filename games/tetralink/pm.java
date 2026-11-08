@@ -25,7 +25,7 @@ final class pm {
         return ll.field_C == pi.field_a ? true : false;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = 0 / ((-10 - param0) / 50);
         field_d = null;
         field_f = null;
@@ -85,7 +85,7 @@ final class pm {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -122,7 +122,7 @@ final class pm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var2), "pm.E(" + param0 + ',' + param1 + ')');
+          throw oi.wrapException((Throwable) ((Object) var2), "pm.E(" + param0 + ',' + param1 + ')');
         }
     }
 

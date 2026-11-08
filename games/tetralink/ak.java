@@ -7,13 +7,13 @@ final class ak {
     static hl field_a;
     static String field_b;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_b = null;
         int var1 = 30 / ((param0 + 27) / 49);
     }
 
-    final static byte[] a(int param0, byte[] param1) {
+    final static byte[] copyBytes(int param0, byte[] param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         byte[] var3 = null;
@@ -30,7 +30,7 @@ final class ak {
             return stackIn_2_0;
           }
           var3 = new byte[var2_int];
-          rd.a(param1, 0, var3, 0, var2_int);
+          rd.copy(param1, 0, var3, 0, var2_int);
           stackIn_4_0 = var3;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -43,7 +43,7 @@ final class ak {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -81,7 +81,7 @@ final class ak {
         }
     }
 
-    final static void a(int param0, String param1, float param2) {
+    final static void setBenefitsBorderAndCaption(int param0, String param1, float param2) {
         try {
           if (param0 != 0) {
             field_b = (String) null;
@@ -89,7 +89,7 @@ final class ak {
           bn.field_a = param1;
           SpriteState.field_v = param2;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "ak.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "ak.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

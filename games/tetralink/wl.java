@@ -8,7 +8,7 @@ final class wl {
     static boolean field_d;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         int var1 = 65 % ((param0 + 36) / 35);
         field_c = (String[][]) null;

@@ -22,7 +22,7 @@ final class tl extends gn implements ih, dm {
     private boolean field_R;
     private ae field_W;
 
-    public static void i(int param0) {
+    public static void releaseStatics(int param0) {
         field_bb = null;
         field_Z = null;
         field_P = null;
@@ -35,7 +35,7 @@ final class tl extends gn implements ih, dm {
         }
     }
 
-    final boolean a(int param0, char param1, int param2, UiWidget param3) {
+    final boolean handleKey(int param0, char param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_10_0 = false;
@@ -44,7 +44,7 @@ final class tl extends gn implements ih, dm {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKey(param0, param1, param2, param3)) {
             return true;
           }
           if (param0 == 98) {
@@ -66,25 +66,25 @@ final class tl extends gn implements ih, dm {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         if (this.field_K != null) {
-          od.field_S.a(this.field_K, 20 + param1 + this.field_t, this.field_w + param2 + 15, this.field_F - 40, this.field_u, 16777215, -1, 1, 0, od.field_S.field_N);
+          od.field_S.drawParagraph(this.field_K, 20 + param1 + this.field_t, this.field_w + param2 + 15, this.field_F - 40, this.field_u, 16777215, -1, 1, 0, od.field_S.field_N);
         }
         if (null != this.field_W) {
-          SoftwareRasterizer.g(param1 + 10, 134 + param2, -20 + this.field_F, 4210752);
+          SoftwareRasterizer.drawHorizontalLine(param1 + 10, 134 + param2, -20 + this.field_F, 4210752);
         }
-        super.a(param0, param1, param2, param3);
+        super.drawLayer(param0, param1, param2, param3);
     }
 
-    public final void a(byte param0, nn param1) {
+    public final void onTextSet(byte param0, nn param1) {
         try {
           int var3_int = -45 / ((-18 - param0) / 63);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "tl.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "tl.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -146,11 +146,11 @@ final class tl extends gn implements ih, dm {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    public final void a(nn param0, byte param1) {
+    public final void onTextChanged(nn param0, byte param1) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -158,7 +158,7 @@ final class tl extends gn implements ih, dm {
         RuntimeException var3 = null;
         try {
           if (param0 == this.field_ab) {
-            this.field_S.a((UiWidget) (this), -384169950);
+            this.field_S.focusNext((UiWidget) (this), -384169950);
           }
           if (param0 == this.field_S) {
             this.a(false);
@@ -177,7 +177,7 @@ final class tl extends gn implements ih, dm {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -187,22 +187,22 @@ final class tl extends gn implements ih, dm {
         try {
           var3 = this.field_ab;
           if (!param0) {
-            this.a(33, 126, 119, -2);
+            this.drawLayer(33, 126, 119, -2);
           }
           var4 = param1;
-          var3.a(false, 74, var4);
-          this.field_S.k(0);
+          var3.setText(false, 74, var4);
+          this.field_S.clearText(0);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "tl.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "tl.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(int param0) {
-        this.field_ab.k(0);
+        this.field_ab.clearText(0);
         if (param0 != 1379) {
           this.e(true);
         }
-        this.field_S.k(0);
+        this.field_S.clearText(0);
     }
 
     private final void a(boolean param0) {
@@ -241,7 +241,7 @@ final class tl extends gn implements ih, dm {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -343,7 +343,7 @@ final class tl extends gn implements ih, dm {
           this.field_w = 15;
           var7 = od.field_S;
           if (null != this.field_K) {
-            this.field_w = this.field_w + (5 + var7.b(this.field_K, this.field_F - 40, var7.field_N));
+            this.field_w = this.field_w + (5 + var7.paragraphHeight(this.field_K, this.field_F - 40, var7.field_N));
           }
           var8 = oa.field_n;
           var9 = DualLinkNode.a((byte) 91, lk.q(13));
@@ -415,7 +415,7 @@ final class tl extends gn implements ih, dm {
           } else {
             stackIn_63_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

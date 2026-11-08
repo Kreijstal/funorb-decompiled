@@ -69,21 +69,21 @@ final class g extends PcmStream {
               stackIn_27_0 = var3;
               stackIn_27_1 = this.field_N.field_g[var2];
               if (stackIn_27_0 == stackIn_27_1) {
-                this.field_N.f(var2);
-                var6 = this.field_N.c(var2);
+                this.field_N.seekTrack(var2);
+                var6 = this.field_N.readMessage(var2);
                 stackIn_7_0 = -2;
                 stackIn_7_1 = ~var6;
                 if (stackIn_7_0 != stackIn_7_1) {
                   if ((128 & var6) != 0) {
                     this.f(91, var6);
                   }
-                  this.field_N.e(var2);
-                  this.field_N.b(var2);
+                  this.field_N.readTrackDelta(var2);
+                  this.field_N.saveTrackPosition(var2);
                   continue;
                 }
-                this.field_N.c();
-                this.field_N.b(var2);
-                if (this.field_N.a()) {
+                this.field_N.markTrackDone();
+                this.field_N.saveTrackPosition(var2);
+                if (this.field_N.isDone()) {
                   if (this.field_z != null) {
                     this.a(this.field_x, this.field_z, (byte) 123);
                     this.b((byte) 108);
@@ -91,19 +91,19 @@ final class g extends PcmStream {
                   }
                   if (this.field_x &&
                     var3 != 0) {
-                    this.field_N.a(var4);
+                    this.field_N.reset(var4);
                   } else {
                     this.a(true, (byte) 127);
-                    this.field_N.d();
+                    this.field_N.release();
                     return;
                   }
                 }
               }
               break;
             }
-            var2 = this.field_N.g();
+            var2 = this.field_N.nextTrack();
             var3 = this.field_N.field_g[var2];
-            var4 = this.field_N.d(var3);
+            var4 = this.field_N.tickTime(var3);
             continue scanLoop1;
           }
           break;
@@ -119,7 +119,7 @@ final class g extends PcmStream {
         if (stackIn_27_0Lifetime1 > stackIn_27_1Lifetime1) {
           this.field_Y = -1;
           this.field_S = this.field_F;
-          this.field_C = this.field_N.d(this.field_S);
+          this.field_C = this.field_N.tickTime(this.field_S);
         }
         return;
     }
@@ -381,7 +381,7 @@ final class g extends PcmStream {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -448,7 +448,7 @@ final class g extends PcmStream {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -468,14 +468,14 @@ final class g extends PcmStream {
         return var4;
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skipFrames(int param0) {
         int var2;
         long var3;
         int var6;
         int var5;
         boolean decompiledFrameCompleted0 = true;
         var6 = TetraLink.field_J;
-        if (this.field_N.f()) {
+        if (this.field_N.isReady()) {
           var2 = this.field_R * this.field_N.field_f / nk.field_k;
           while (true) {
             var3 = (long)param0 * (long)var2 + this.field_D;
@@ -485,19 +485,19 @@ final class g extends PcmStream {
             }
             var5 = (int)((-1L + (long)var2 + this.field_C - this.field_D) / (long)var2);
             this.field_D = this.field_D + (long)var5 * (long)var2;
-            this.field_y.a(var5);
+            this.field_y.skipFrames(var5);
             param0 = param0 - var5;
             this.b((byte) 110);
-            if (this.field_N.f()) {
+            if (this.field_N.isReady()) {
               continue;
             }
-            this.field_y.a(param0);
+            this.field_y.skipFrames(param0);
             decompiledFrameCompleted0 = false;
             break;
           }
         }
         if (decompiledFrameCompleted0) {
-          this.field_y.a(param0);
+          this.field_y.skipFrames(param0);
         }
 
     }
@@ -509,7 +509,7 @@ final class g extends PcmStream {
         this.a(param0, -121, param1);
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_O = null;
         int var1 = -46 % ((54 - param0) / 62);
     }
@@ -540,14 +540,14 @@ final class g extends PcmStream {
           Archive var4 = (Archive) null;
           this.a((SoundEffectLibrary) null, (ri) null, (Archive) null, -13, -73);
         }
-        this.field_N.d();
+        this.field_N.release();
         this.field_z = null;
         this.a(param1, (byte) 39);
     }
 
     final synchronized boolean d(byte param0) {
         int var2 = -65 / ((14 - param0) / 33);
-        return this.field_N.f();
+        return this.field_N.isReady();
     }
 
     final boolean b(byte param0, oc param1) {
@@ -582,11 +582,11 @@ final class g extends PcmStream {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
-    final synchronized int a() {
+    final synchronized int activity() {
         return 0;
     }
 
@@ -620,10 +620,10 @@ final class g extends PcmStream {
               105 >= param2) {
               var4 = args;
               ia.a(var4, 10532);
-              pm.field_f = ng.a((byte) -67, args);
+              pm.field_f = ng.createSuggestedUsernameQuery((byte) -67, args);
               return;
             }
-            pm.field_f = hj.a(param1, param2, false);
+            pm.field_f = hj.createUsernameResponseQuery(param1, param2, false);
           } else {
             stackIn_7_0 = !(13 <= wh.field_k);
             pm.field_f = al.a(stackIn_7_0, 1);
@@ -646,7 +646,7 @@ final class g extends PcmStream {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -664,7 +664,7 @@ final class g extends PcmStream {
         el var7 = null;
         BitPacketBuffer var4 = null;
         if (param2 != nd.field_Nb) {
-          var6 = (el) (db.field_e.a((long)nd.field_Nb, 1));
+          var6 = (el) (db.field_e.findByKey((long)nd.field_Nb, 1));
           var7 = var6;
           if (var7 != null) {
             var7.field_fc = null;
@@ -677,7 +677,7 @@ final class g extends PcmStream {
           var4.b(param2, false);
         }
         if (param1 > -113) {
-          g.c((byte) -93);
+          g.releaseStatics((byte) -93);
         }
     }
 
@@ -703,8 +703,8 @@ final class g extends PcmStream {
           if (param1 < 0 ||
             var3.field_n == param1) {
             if (var3.field_I != null) {
-              var3.field_I.g(nk.field_k / 100);
-              if (var3.field_I.g()) {
+              var3.field_I.fadeOutAndUnlink(nk.field_k / 100);
+              if (var3.field_I.hasRemainingRampFrames()) {
                 this.field_y.field_s.a(var3.field_I);
               }
               var3.a(77);
@@ -725,11 +725,11 @@ final class g extends PcmStream {
             this.field_W = (int[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "g.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "g.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final synchronized PcmStream c() {
+    final synchronized PcmStream nextSubStream() {
         return null;
     }
 
@@ -759,7 +759,7 @@ final class g extends PcmStream {
     final synchronized void e(byte param0) {
         int var3 = TetraLink.field_J;
         if (param0 < 111) {
-          this.a();
+          this.activity();
         }
         ng var4 = (ng) (this.field_A.b(84));
         while (var4 != null) {
@@ -768,7 +768,7 @@ final class g extends PcmStream {
         }
     }
 
-    final synchronized PcmStream b() {
+    final synchronized PcmStream firstSubStream() {
         return (PcmStream) ((Object) this.field_y);
     }
 
@@ -832,7 +832,7 @@ final class g extends PcmStream {
         var7.field_G = 0;
         var7.field_t = 0;
         if (this.field_G[param3] != 0) {
-          var7.field_I = ee.a(var6, this.a(-18511, var7), 0, this.a((byte) 24, var7));
+          var7.field_I = ee.createAtStepQ8(var6, this.a(-18511, var7), 0, this.a((byte) 24, var7));
           stackIn_17_1 = false;
           stackIn_17_2 = var7;
           if (var11.field_o[param0] >= 0) {
@@ -844,10 +844,10 @@ final class g extends PcmStream {
           }
           this.a(stackIn_17_1, stackIn_17_2, stackIn_18_3);
         } else {
-          var7.field_I = ee.a(var6, this.a(-18511, var7), this.a(var7, 16402), this.a((byte) 87, var7));
+          var7.field_I = ee.createAtStepQ8(var6, this.a(-18511, var7), this.a(var7, 16402), this.a((byte) 87, var7));
         }
         if (var11.field_o[param0] < 0) {
-          var7.field_I.c(-1);
+          var7.field_I.setLoopCount(-1);
         }
         if (0 <= var7.field_C) {
           var8 = this.field_J[param3][var7.field_C];
@@ -906,7 +906,7 @@ final class g extends PcmStream {
         try {
           param3.field_s = nk.field_k / 100;
           if (0 <= param3.field_v && (null == param3.field_I ||
-            param3.field_I.l())) {
+            param3.field_I.isSamplePositionOutOfRange())) {
             param3.a(-121);
             param3.unlink(false);
             if (param3.field_C > 0) {
@@ -925,7 +925,7 @@ final class g extends PcmStream {
             }
             param3.field_D = var6_int;
           }
-          param3.field_I.d(this.a(-18511, param3));
+          param3.field_I.setSampleStepMagnitude(this.a(-18511, param3));
           if (param4 != 21107) {
             this.field_G = (int[]) null;
           }
@@ -999,16 +999,16 @@ final class g extends PcmStream {
             }
           }
           if (var8 == 0) {
-            param3.field_I.a(param3.field_s, this.a(param3, 16402), this.a((byte) -118, param3));
+            param3.field_I.rampVolumeAndPan(param3.field_s, this.a(param3, 16402), this.a((byte) -118, param3));
             return false;
           }
-          param3.field_I.g(param3.field_s);
+          param3.field_I.fadeOutAndUnlink(param3.field_s);
           if (param1 != null) {
-            param3.field_I.b(param1, param0, param2);
+            param3.field_I.mixInto(param1, param0, param2);
           } else {
-            param3.field_I.a(param2);
+            param3.field_I.skipFrames(param2);
           }
-          if (param3.field_I.g()) {
+          if (param3.field_I.hasRemainingRampFrames()) {
             this.field_y.field_s.a(param3.field_I);
           }
           param3.a(59);
@@ -1036,7 +1036,7 @@ final class g extends PcmStream {
           } else {
             stackIn_77_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_73_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(',').append(param4).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_73_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -1073,20 +1073,20 @@ final class g extends PcmStream {
         int var7 = TetraLink.field_J;
         try {
           this.a(487759088, param2);
-          this.field_N.a(param0.field_o);
+          this.field_N.load(param0.field_o);
           this.field_x = param3 ? true : false;
           this.field_D = (long)param1;
-          var5_int = this.field_N.e();
+          var5_int = this.field_N.trackCount();
           for (var6 = 0; var5_int > var6; var6++) {
-            this.field_N.f(var6);
-            this.field_N.e(var6);
-            this.field_N.b(var6);
+            this.field_N.seekTrack(var6);
+            this.field_N.readTrackDelta(var6);
+            this.field_N.saveTrackPosition(var6);
           }
-          this.field_Y = this.field_N.g();
+          this.field_Y = this.field_N.nextTrack();
           this.field_S = this.field_N.field_g[this.field_Y];
-          this.field_C = this.field_N.d(this.field_S);
+          this.field_C = this.field_N.tickTime(this.field_S);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "g.Q(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "g.Q(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -1148,7 +1148,7 @@ final class g extends PcmStream {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -1172,7 +1172,7 @@ final class g extends PcmStream {
         ng var13 = null;
         var11 = TetraLink.field_J;
         try {
-          param1.a();
+          param1.buildPatchUsage();
           var6_int = 1;
           var7 = null;
           if (param3 > ~param4) {
@@ -1184,7 +1184,7 @@ final class g extends PcmStream {
             var9 = (int)var8.key;
             var12 = (ng) (this.field_A.a((long)var9, (byte) -43));
             if (var12 == null) {
-              var13 = go.a(true, var9, param2);
+              var13 = go.loadInstrumentPatch(true, var9, param2);
               if (var13 == null) {
                 var6_int = 0;
                 decompiledFrameRemainder0 = false;
@@ -1202,7 +1202,7 @@ final class g extends PcmStream {
             var8 = (ch) (param1.field_n.a(-1));
           }
           if (var6_int != 0) {
-            param1.b();
+            param1.releasePatchUsage();
           }
           stackIn_19_0 = var6_int;
           return stackIn_19_0 != 0;
@@ -1228,7 +1228,7 @@ final class g extends PcmStream {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -1265,7 +1265,7 @@ final class g extends PcmStream {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -1331,13 +1331,13 @@ final class g extends PcmStream {
             var4_int = var4_int << 8;
             var5 = (int)((long)var6 * (long)this.field_G[param1.field_n] >> 6);
             if (var5 >= var4_int) {
-              param1.field_I.a(true);
+              param1.field_I.setReversePlayback(true);
               var5 = -1 + var4_int + var4_int - var5;
             }
           } else {
             var5 = (int)((long)this.field_G[param1.field_n] * (long)var4_int >> 6);
           }
-          param1.field_I.e(var5);
+          param1.field_I.setPosition(var5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1349,7 +1349,7 @@ final class g extends PcmStream {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -1369,7 +1369,7 @@ final class g extends PcmStream {
         }
     }
 
-    final synchronized void b(int[] param0, int param1, int param2) {
+    final synchronized void mixInto(int[] param0, int param1, int param2) {
         int var4_int = 0;
         long var5 = 0L;
         int var8 = 0;
@@ -1381,7 +1381,7 @@ final class g extends PcmStream {
         int var7 = 0;
         var8 = TetraLink.field_J;
         try {
-          if (this.field_N.f()) {
+          if (this.field_N.isReady()) {
             var4_int = this.field_R * this.field_N.field_f / nk.field_k;
             while (true) {
               var5 = this.field_D + (long)param2 * (long)var4_int;
@@ -1390,20 +1390,20 @@ final class g extends PcmStream {
               } else {
                 var7 = (int)((-1L + ((long)var4_int + this.field_C - this.field_D)) / (long)var4_int);
                 this.field_D = this.field_D + (long)var4_int * (long)var7;
-                this.field_y.b(param0, param1, var7);
+                this.field_y.mixInto(param0, param1, var7);
                 param1 = param1 + var7;
                 param2 = param2 - var7;
                 this.b((byte) 111);
-                if (this.field_N.f()) {
+                if (this.field_N.isReady()) {
                   continue;
                 }
               }
               break;
             }
-            this.field_y.b(param0, param1, param2);
+            this.field_y.mixInto(param0, param1, param2);
             return;
           }
-          this.field_y.b(param0, param1, param2);
+          this.field_y.mixInto(param0, param1, param2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1415,7 +1415,7 @@ final class g extends PcmStream {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

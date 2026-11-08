@@ -11,7 +11,7 @@ final class bf extends IntrusiveNode {
     IntrusiveNode field_q;
     static PcmSample field_r;
 
-    final static Sprite[] a(byte param0, Archive param1, String param2, String param3) {
+    final static Sprite[] loadSpritesByName(byte param0, Archive param1, String param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -28,11 +28,11 @@ final class bf extends IntrusiveNode {
         try {
           if (param0 > -68) {
             var6 = (String) null;
-            bf.a((byte) -110, (Archive) null, (String) null, (String) null);
+            bf.loadSpritesByName((byte) -110, (Archive) null, (String) null, (String) null);
           }
           var4_int = param1.a(-1, param2);
           var5 = param1.a(var4_int, false, param3);
-          stackIn_3_0 = uh.a(var5, 0, param1, var4_int);
+          stackIn_3_0 = uh.loadSpriteSheet(var5, 0, param1, var4_int);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -56,7 +56,7 @@ final class bf extends IntrusiveNode {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -137,9 +137,9 @@ final class bf extends IntrusiveNode {
           if (var44.field_u != null &&
             1 < var44.field_Q) {
             var60 = var44.field_u;
-            gn.a(0, 0, 0, var60, c.field_m);
+            gn.groupQueuedMeshFacesByPriority(0, 0, 0, var60, c.field_m);
           } else {
-            hj.a((byte) -93);
+            hj.compactDepthBucketFaceOrder((byte) -93);
           }
           var54 = new int[param2.field_O];
           var49 = var54;
@@ -265,18 +265,18 @@ final class bf extends IntrusiveNode {
           } else {
             stackIn_55_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
     bf(ee param0, IntrusiveNode param1) {
         try {
           this.field_t = param0;
-          this.field_u = param0.k();
+          this.field_u = param0.getTargetVolume();
           this.field_q = param1;
-          this.field_t.f(128 + this.field_u * DelegatingCanvas.field_c >> 8);
+          this.field_t.setVolumeQ6(128 + this.field_u * DelegatingCanvas.field_c >> 8);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "bf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "bf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

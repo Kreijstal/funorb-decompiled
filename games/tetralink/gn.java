@@ -11,15 +11,15 @@ class gn extends UiWidget implements nf {
         try {
           if (param1 != 10) {
             UiWidget var4 = (UiWidget) null;
-            this.a(-79, 'Y', -110, (UiWidget) null);
+            this.handleKey(-79, 'Y', -110, (UiWidget) null);
           }
           this.field_J.addLast(param0, false);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "gn.BC(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "gn.BC(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final boolean a(int param0, UiWidget param1, int param2, int param3, int param4, int param5, int param6) {
+    final boolean onFocusedKey(int param0, UiWidget param1, int param2, int param3, int param4, int param5, int param6) {
         IntrusiveDequeCursor var8 = null;
         RuntimeException var8_ref = null;
         UiWidget var9 = null;
@@ -38,7 +38,7 @@ class gn extends UiWidget implements nf {
           while (var9 != null) {
             if (var9.isLinked((byte) 95)) {
               if (var9.c(param0 ^ -19140) &&
-                var9.a(-19137, param1, param2, param3, param4, param5, param6)) {
+                var9.onFocusedKey(-19137, param1, param2, param3, param4, param5, param6)) {
                 return true;
               }
               var9 = (UiWidget) (var8.next((byte) -58));
@@ -57,11 +57,11 @@ class gn extends UiWidget implements nf {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
-    void a(UiWidget param0, int param1, int param2, boolean param3) {
+    void updatePointer(UiWidget param0, int param1, int param2, boolean param3) {
         RuntimeException runtimeException = null;
         IntrusiveDequeCursor var5 = null;
         UiWidget var6 = null;
@@ -72,12 +72,12 @@ class gn extends UiWidget implements nf {
         RuntimeException decompiledCaughtException = null;
         var7 = TetraLink.field_J;
         try {
-          super.a(param0, param1, param2, true);
+          super.updatePointer(param0, param1, param2, true);
           var5 = new IntrusiveDequeCursor(this.field_J);
           var6 = (UiWidget) (var5.first(param3));
           while (var6 != null) {
             if (var6.isLinked((byte) 95)) {
-              var6.a(param0, this.field_t + param1, param2 + this.field_w, true);
+              var6.updatePointer(param0, this.field_t + param1, param2 + this.field_w, true);
               var6 = (UiWidget) (var5.next((byte) -58));
               continue;
             }
@@ -94,7 +94,7 @@ class gn extends UiWidget implements nf {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -115,7 +115,7 @@ class gn extends UiWidget implements nf {
         var8 = TetraLink.field_J;
         try {
           if (param0 != 14) {
-            gn.d(true);
+            gn.releaseStatics(true);
           }
           var5 = new IntrusiveDequeCursor(this.field_J);
           var6 = (UiWidget) (var5.first(true));
@@ -144,7 +144,7 @@ class gn extends UiWidget implements nf {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -152,10 +152,10 @@ class gn extends UiWidget implements nf {
         if (param0 != 3) {
           field_I = (hl) null;
         }
-        return null != this.d((byte) 5) ? true : false;
+        return null != this.findFocusedChild((byte) 5) ? true : false;
     }
 
-    final boolean a(UiWidget param0, int param1) {
+    final boolean focusNext(UiWidget param0, int param1) {
         IntrusiveDequeCursor var3 = null;
         RuntimeException var3_ref = null;
         UiWidget var4 = null;
@@ -175,7 +175,7 @@ class gn extends UiWidget implements nf {
             if (var4 == null) {
               return false;
             }
-            if (!var4.a(param0, -384169950)) {
+            if (!var4.focusNext(param0, -384169950)) {
               var4 = (UiWidget) (var3.next((byte) -58));
               continue;
             }
@@ -192,7 +192,7 @@ class gn extends UiWidget implements nf {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -223,7 +223,7 @@ class gn extends UiWidget implements nf {
               var5.a(-106, var4);
               var6 = (UiWidget) (var5.next((byte) -58));
               while (var6 != null) {
-                if (var6.a(param0, -384169950)) {
+                if (var6.focusNext(param0, -384169950)) {
                   return true;
                 }
                 var6 = (UiWidget) (var5.next((byte) -58));
@@ -242,7 +242,7 @@ class gn extends UiWidget implements nf {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -259,7 +259,7 @@ class gn extends UiWidget implements nf {
         }
     }
 
-    String e(int param0) {
+    String getTooltip(int param0) {
         IntrusiveDequeCursor var2;
         UiWidget var3;
         String var4;
@@ -271,7 +271,7 @@ class gn extends UiWidget implements nf {
           this.field_J = (IntrusiveDeque) null;
         }
         while (var3 != null) {
-          var4 = var3.e(0);
+          var4 = var3.getTooltip(0);
           if (var4 != null) {
             return var4;
           }
@@ -286,19 +286,19 @@ class gn extends UiWidget implements nf {
         this.g(55);
     }
 
-    void a(int param0, int param1, int param2, int param3) {
+    void drawLayer(int param0, int param1, int param2, int param3) {
         int var7 = TetraLink.field_J;
         if (param0 != 0) {
           return;
         }
         if (param3 == 0 &&
           this.field_H != null) {
-          this.field_H.a((UiWidget) (this), param1, param2, true, true);
+          this.field_H.drawWidget((UiWidget) (this), param1, param2, true, true);
         }
         IntrusiveDequeCursor var5 = new IntrusiveDequeCursor(this.field_J);
         UiWidget var6 = (UiWidget) (var5.last(param0 + 90));
         while (var6 != null) {
-          var6.a(0, this.field_t + param1, param2 + this.field_w, param3);
+          var6.drawLayer(0, this.field_t + param1, param2 + this.field_w, param3);
           var6 = (UiWidget) (var5.previous((byte) -66));
         }
     }
@@ -326,7 +326,7 @@ class gn extends UiWidget implements nf {
         return var2;
     }
 
-    UiWidget d(byte param0) {
+    UiWidget findFocusedChild(byte param0) {
         IntrusiveDequeCursor var2;
         UiWidget var3;
         int var4;
@@ -350,7 +350,7 @@ class gn extends UiWidget implements nf {
         this.field_J = new IntrusiveDeque();
     }
 
-    final static void a(int param0, int param1, int param2, byte[] param3, int[] param4) {
+    final static void groupQueuedMeshFacesByPriority(int param0, int param1, int param2, byte[] param3, int[] param4) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         byte dupTemp$2 = 0;
@@ -406,7 +406,7 @@ class gn extends UiWidget implements nf {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -433,10 +433,10 @@ class gn extends UiWidget implements nf {
           while (var5 != null) {
             if (var5.c(3)) {
               var6 = new IntrusiveDequeCursor(this.field_J);
-              var6.a(true, var5);
+              var6.startBackwardFrom(true, var5);
               var7 = (UiWidget) (var6.previous((byte) -66));
               while (var7 != null) {
-                if (var7.a(param0, -384169950)) {
+                if (var7.focusNext(param0, -384169950)) {
                   return true;
                 }
                 var7 = (UiWidget) (var6.previous((byte) -66));
@@ -455,7 +455,7 @@ class gn extends UiWidget implements nf {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -498,7 +498,7 @@ class gn extends UiWidget implements nf {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -513,7 +513,7 @@ class gn extends UiWidget implements nf {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a(param0, param2, param3 ^ -372494754, param1)) {
+          if (this.beginDebugDescription(param0, param2, param3 ^ -372494754, param1)) {
             this.a(param3 + 372494636, param1, param0, param2);
             this.a((byte) 14, param1, param2, param0);
           }
@@ -539,7 +539,7 @@ class gn extends UiWidget implements nf {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -556,14 +556,14 @@ class gn extends UiWidget implements nf {
         }
     }
 
-    public static void d(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
           field_I = (hl) null;
         }
         field_I = null;
     }
 
-    final void a(int param0, boolean param1, UiWidget param2, int param3, int param4, int param5) {
+    final void handlePointerRelease(int param0, boolean param1, UiWidget param2, int param3, int param4, int param5) {
         RuntimeException runtimeException = null;
         IntrusiveDequeCursor var7 = null;
         UiWidget var8 = null;
@@ -578,12 +578,12 @@ class gn extends UiWidget implements nf {
           var7 = new IntrusiveDequeCursor(this.field_J);
           if (param1) {
             var10 = (UiWidget) null;
-            this.a((UiWidget) null, 63, -119, false);
+            this.updatePointer((UiWidget) null, 63, -119, false);
           }
           var8 = (UiWidget) (var7.first(true));
           while (var8 != null) {
             if (var8.isLinked((byte) 95)) {
-              var8.a(param0, false, param2, param3 + this.field_w, param4, param5 + this.field_t);
+              var8.handlePointerRelease(param0, false, param2, param3 + this.field_w, param4, param5 + this.field_t);
               var8 = (UiWidget) (var7.next((byte) -58));
               continue;
             }
@@ -600,11 +600,11 @@ class gn extends UiWidget implements nf {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
-    boolean a(int param0, char param1, int param2, UiWidget param3) {
+    boolean handleKey(int param0, char param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
@@ -625,7 +625,7 @@ class gn extends UiWidget implements nf {
           while (var8 != null) {
             if (var8.isLinked((byte) 95)) {
               if (var8.c(3) &&
-                var8.a(param0, param1, 1, param3)) {
+                var8.handleKey(param0, param1, 1, param3)) {
                 return true;
               }
               var8 = (UiWidget) (var9.next((byte) -58));
@@ -653,7 +653,7 @@ class gn extends UiWidget implements nf {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 

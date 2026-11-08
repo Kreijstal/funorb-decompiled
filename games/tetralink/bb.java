@@ -98,7 +98,7 @@ final class bb {
         DelegatingCanvas.a(true, -7869);
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_g = null;
         field_b = null;

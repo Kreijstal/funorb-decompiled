@@ -213,7 +213,7 @@ final class pd extends th {
               break;
             }
             if (param0) {
-              pd.e(81);
+              pd.releaseStatics(81);
             }
             return true;
           } catch (java.io.IOException decompiledCaughtParameter1) {
@@ -241,7 +241,7 @@ final class pd extends th {
         }
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         field_t = (String[][]) null;
         field_r = null;
         if (param0 != 0) {
@@ -344,7 +344,7 @@ final class pd extends th {
             } else {
               stackIn_26_2 = "{...}";
             }
-            throw oi.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+            throw oi.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(',').append(param2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -361,7 +361,7 @@ final class pd extends th {
         uh.field_f.a((byte) -112, hh.field_c);
         gg.field_j = new mk(nm.field_v, uh.field_f);
         if (param0) {
-          pd.e(-120);
+          pd.releaseStatics(-120);
         }
         hn.field_P = new hl(0L, (hl) null);
         hn.field_P.a((byte) -92, gg.field_j.field_g);

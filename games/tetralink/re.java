@@ -8,9 +8,9 @@ final class re extends ae {
     static String field_P;
     static String field_T;
 
-    final void b(int param0, int param1, int param2, int param3) {
+    final void activate(int param0, int param1, int param2, int param3) {
         this.field_N = !this.field_N ? true : false;
-        super.b(param0, param1, param2, param3);
+        super.activate(param0, param1, param2, param3);
     }
 
     re(String param0, dn param1, boolean param2) {
@@ -18,18 +18,18 @@ final class re extends ae {
         try {
           this.field_N = param2 ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "re.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "re.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     final static void d(boolean param0) {
         qa.b((byte) 53);
         if (uh.field_b != null) {
-          oa.a((byte) -128, uh.field_b);
+          oa.attachCanvasInput((byte) -128, uh.field_b);
         }
         rl.b(-9648);
         jl.a(109);
-        bm.a(-25676);
+        bm.closeArchiveConnections(-25676);
         if (!param0) {
           re.e((byte) -39);
           if (ImageProducerRasterBuffer.c(-14688)) {
@@ -53,7 +53,7 @@ final class re extends ae {
         return true;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_R = null;
         field_S = null;
         field_Q = null;
@@ -69,7 +69,7 @@ final class re extends ae {
         try {
           this.field_H = dh.field_q.field_x;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "re.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "re.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -105,7 +105,7 @@ final class re extends ae {
             db.field_a = null;
           }
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "re.C(" + param0 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "re.C(" + param0 + ')');
         }
     }
 
@@ -114,7 +114,7 @@ final class re extends ae {
         try {
           this.field_H = dh.field_q.field_x;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "re.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "re.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

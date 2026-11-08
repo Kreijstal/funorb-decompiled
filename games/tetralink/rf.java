@@ -10,12 +10,12 @@ final class rf {
           mf.field_s.e((byte) -110);
         }
         if (nl.field_a != null) {
-          nl.field_a.e(true);
+          nl.field_a.setStopAnimatingWhenNormal(true);
         }
         ve.a((byte) -83);
         if (param0 != 0) {
           int[] var2 = (int[]) null;
-          rf.a(68, 64, -107, -67, 75, 111, (int[]) null, 29, -61, 73, -123, 102, -38, 93);
+          rf.addGlowingLinePixels(68, 64, -107, -67, 75, 111, (int[]) null, 29, -61, 73, -123, 102, -38, 93);
         }
     }
 
@@ -65,11 +65,11 @@ final class rf {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
+    final static void drawGlowingLine(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
         int var15 = 0;
         int var7 = param2 - param0;
         int var8 = param3 - param1;
@@ -115,10 +115,10 @@ final class rf {
         ic.field_e = (var11 - param0) * var7;
         bj.field_b = (var11 - param0) * var8;
         GameApplet.field_k = param6;
-        rf.a(param0, param1, param4, 0, 0, var9, SoftwareRasterizer.field_b, var12 * SoftwareRasterizer.field_f + var11, param5, var7, var8, var12 - var14, var11 - var13, SoftwareRasterizer.field_f - (var13 - var11));
+        rf.addGlowingLinePixels(param0, param1, param4, 0, 0, var9, SoftwareRasterizer.field_b, var12 * SoftwareRasterizer.field_f + var11, param5, var7, var8, var12 - var14, var11 - var13, SoftwareRasterizer.field_f - (var13 - var11));
     }
 
-    private final static void b(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
+    private final static void drawBubbleRowAboveCenter(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
         int incrementValue$1 = 0;
         int var14;
         int var15;
@@ -218,7 +218,7 @@ final class rf {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3) {
+    final static void drawBubbleDistortion(int param0, int param1, int param2, int param3) {
         int var28 = 0;
         int var4 = param2 * param2;
         int var5 = param0 - param2 >> 4;
@@ -280,7 +280,7 @@ final class rf {
         int var26 = var11 + var17;
         int var27 = var20;
         for (var28 = var9; var28 < var10; var28++) {
-          rf.a(var28, var26, var14, var16, var23, var4, var24, var5, var6, var7, param3, var25, param0, param1);
+          rf.drawBubbleRowBelowCenter(var28, var26, var14, var16, var23, var4, var24, var5, var6, var7, param3, var25, param0, param1);
           var26 = var26 + var27;
           var27 = var27 + var22;
           var25 += 640;
@@ -292,16 +292,16 @@ final class rf {
           var27 = var27 - var22;
           var26 = var26 - var27;
           var25 -= 640;
-          rf.b(var28Lifetime1, var26, var14, var16, var23, var4, var24, var5, var6, var7, param3, var25, param0, param1);
+          rf.drawBubbleRowAboveCenter(var28Lifetime1, var26, var14, var16, var23, var4, var24, var5, var6, var7, param3, var25, param0, param1);
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         int var1 = -112 % ((79 - param0) / 43);
     }
 
-    private final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
+    private final static void drawBubbleRowBelowCenter(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
         int incrementValue$1 = 0;
         int var14;
         int var15;
@@ -401,7 +401,7 @@ final class rf {
         }
     }
 
-    private final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
+    private final static void addGlowingLinePixels(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
         int stackIn_16_0 = 0;
         int stackIn_19_0 = 0;
         int var14;

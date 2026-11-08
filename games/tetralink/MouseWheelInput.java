@@ -71,13 +71,13 @@ abstract class MouseWheelInput {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var1), "se.E(" + param0 + ')');
+          throw oi.wrapException((Throwable) ((Object) var1), "se.E(" + param0 + ')');
         }
     }
 
     abstract void b(int param0, java.awt.Component param1);
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         if (param0 != -1) {
           MouseWheelInput.a(true);
@@ -87,7 +87,7 @@ abstract class MouseWheelInput {
         field_a = null;
     }
 
-    abstract int a(int param0);
+    abstract int takeRotation(int param0);
 
     static {
         field_a = "Waiting for music";

@@ -16,7 +16,7 @@ final class ej extends IntrusiveNode {
     static byte[] field_o;
     static Sprite field_v;
 
-    final static boolean a(String param0, int param1) {
+    final static boolean matchesNormalizedSessionName(String param0, int param1) {
         RuntimeException var2 = null;
         CharSequence var3 = null;
         boolean stackIn_3_0 = false;
@@ -41,7 +41,7 @@ final class ej extends IntrusiveNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -137,7 +137,7 @@ final class ej extends IntrusiveNode {
           this.field_u = param0.field_f;
           this.field_n = param0.field_b;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "ej.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "ej.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

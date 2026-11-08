@@ -27,7 +27,7 @@ final class t {
     static hl field_o;
     private byte[] field_b;
 
-    final static de a(boolean param0, byte[] param1) {
+    final static de createBinaryMaskFont(boolean param0, byte[] param1) {
         de var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_4_0 = null;
@@ -58,7 +58,7 @@ final class t {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -91,7 +91,7 @@ final class t {
         var14 = TetraLink.field_J;
         try {
           var6 = 72 % ((param1 - 53) / 49);
-          var5_int = param4.b(param2);
+          var5_int = param4.textWidth(param2);
           if (var5_int <= param0 &&
             -1 == param2.indexOf("<br>")) {
             param3[0] = param2;
@@ -108,7 +108,7 @@ final class t {
             if (32 == var11 ||
               var11 == 45) {
               var12 = param2.substring(var8, 1 + var10).trim();
-              var13 = param4.b(var12);
+              var13 = param4.textWidth(var12);
               if (var13 >= param0) {
                 var8 = var10 + 1;
                 incrementValue$1 = var7Lifetime1;
@@ -153,7 +153,7 @@ final class t {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
@@ -366,7 +366,7 @@ final class t {
           } else {
             stackIn_100_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_99_0), ((StringBuilder) (Object) stackIn_99_1).append(stackIn_100_2).append(',').append(param1).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_99_0), ((StringBuilder) (Object) stackIn_99_1).append(stackIn_100_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -404,7 +404,7 @@ final class t {
             tc.field_s = param2;
             if (param9 <= 29) {
               var16 = (byte[]) null;
-              t.a(false, (byte[]) null);
+              t.createBinaryMaskFont(false, (byte[]) null);
             }
             pg.field_m = param0;
             wg.field_c = param10;
@@ -439,7 +439,7 @@ final class t {
             } else {
               stackIn_16_2 = "{...}";
             }
-            throw oi.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param12).append(',').append(param13).append(')').toString());
+            throw oi.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param12).append(',').append(param13).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -448,7 +448,7 @@ final class t {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_h = null;
         field_q = null;
         field_p = null;
@@ -478,7 +478,7 @@ final class t {
           }
           this.a(param0, 0);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "t.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "t.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

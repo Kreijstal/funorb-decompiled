@@ -12,7 +12,7 @@ final class bm extends IntrusiveNode {
     static int field_p;
     static String field_o;
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 < 57) {
           return;
         }
@@ -20,7 +20,7 @@ final class bm extends IntrusiveNode {
         field_o = null;
     }
 
-    final static FullscreenFocusCanvas a(int param0, int param1, int param2, int param3, int param4, PlatformTaskDispatcher param5) {
+    final static FullscreenFocusCanvas createFullscreenCanvas(int param0, int param1, int param2, int param3, int param4, PlatformTaskDispatcher param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
         FullscreenFocusCanvas var7 = null;
@@ -54,7 +54,7 @@ final class bm extends IntrusiveNode {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -62,7 +62,7 @@ final class bm extends IntrusiveNode {
         throw new Error();
     }
 
-    final static void a(int param0) {
+    final static void closeArchiveConnections(int param0) {
         try {
           int var1_int = 0;
           IOException iOException = null;
@@ -106,7 +106,7 @@ final class bm extends IntrusiveNode {
           } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
             var1 = (RuntimeException) (Object) decompiledCaughtException;
-            throw oi.a((Throwable) ((Object) var1), "bm.D(" + param0 + ')');
+            throw oi.wrapException((Throwable) ((Object) var1), "bm.D(" + param0 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

@@ -35,7 +35,7 @@ class DualLinkNode extends IntrusiveNode {
         return true;
     }
 
-    final static kh a(boolean param0, int[] param1, kh param2) {
+    final static kh createRepalettedSprite(boolean param0, int[] param1, kh param2) {
         kh var3 = null;
         RuntimeException var3_ref = null;
         kh stackIn_2_0 = null;
@@ -78,7 +78,7 @@ class DualLinkNode extends IntrusiveNode {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -94,7 +94,7 @@ class DualLinkNode extends IntrusiveNode {
             hd.field_u = hn.field_M.b(false);
             pf.a(123, 2);
           } else {
-            hd.field_u = bm.a(480, 0, 0, 640, 0, nd.field_Pb);
+            hd.field_u = bm.createFullscreenCanvas(480, 0, 0, 640, 0, nd.field_Pb);
           }
           if (hd.field_u == null) {
             var2 = 3;
@@ -109,7 +109,7 @@ class DualLinkNode extends IntrusiveNode {
         }
         if (param0 > -68) {
           var4 = (kh) null;
-          DualLinkNode.a(false, (int[]) null, (kh) null);
+          DualLinkNode.createRepalettedSprite(false, (int[]) null, (kh) null);
         }
     }
 
@@ -151,7 +151,7 @@ class DualLinkNode extends IntrusiveNode {
           var3_ref_dk__ = lf.a(7);
           for (var4 = 0; var4 < var3_ref_dk__.length; var4++) {
             var5 = var3_ref_dk__[var4];
-            if (var5.a(16412, var2)) {
+            if (var5.matchesCookieValue(16412, var2)) {
               stackIn_10_0 = var5;
               return stackIn_10_0;
             }
@@ -169,11 +169,11 @@ class DualLinkNode extends IntrusiveNode {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_q = null;
         field_p = null;
         if (param0 < 88) {

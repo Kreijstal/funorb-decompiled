@@ -35,7 +35,7 @@ final class ji extends hl {
             return stackIn_2_0;
           }
           if (param4 != 1152753825) {
-            ji.d((byte) 23);
+            ji.releaseStatics((byte) 23);
           }
           stackIn_6_0 = param0 + " - " + param1.a(param3, true) + "%";
           return stackIn_6_0;
@@ -67,7 +67,7 @@ final class ji extends hl {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param4).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -98,7 +98,7 @@ final class ji extends hl {
           this.a((byte) -117, this.field_Sb);
           this.a((byte) 47, this.field_Pb);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "ji.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "ji.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -167,7 +167,7 @@ final class ji extends hl {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -192,7 +192,7 @@ final class ji extends hl {
         this(param0, param1, param1.field_Rb.field_Ob, param1.field_Rb.field_Qb, param1.field_Sb, param2, param3);
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != 116) {
           field_Mb = (String) null;
         }
@@ -226,7 +226,7 @@ final class ji extends hl {
           }
           field_Tb = 0;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "ji.E(" + param0 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "ji.E(" + param0 + ')');
         }
     }
 

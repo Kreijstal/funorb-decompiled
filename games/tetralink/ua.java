@@ -50,14 +50,14 @@ final class ua {
         int var9Lifetime1;
         int var10Lifetime1;
         try {
-          hn.field_O = bf.a((byte) -128, param0, "commonui", "frame_top");
-          IntrusiveNode.field_i = bf.a((byte) -83, param0, "commonui", "frame_bottom");
-          ac.field_c = ug.a(param0, (byte) -45, "jagex_logo_grey", "commonui");
-          mf.field_q = bf.a((byte) -81, param0, "commonui", "button");
-          fj.field_q = qa.a("commonui", -1, param0, "validation");
-          dh.field_d = (BitmapFont) ((Object) od.a(param0, "arezzo12", param1, "commonui", (byte) 95));
-          od.field_S = (BitmapFont) ((Object) od.a(param0, "arezzo14", param1, "commonui", (byte) 95));
-          ab.field_V = (BitmapFont) ((Object) od.a(param0, "arezzo14bold", param1, "commonui", (byte) 95));
+          hn.field_O = bf.loadSpritesByName((byte) -128, param0, "commonui", "frame_top");
+          IntrusiveNode.field_i = bf.loadSpritesByName((byte) -83, param0, "commonui", "frame_bottom");
+          ac.field_c = ug.loadFontByName(param0, (byte) -45, "jagex_logo_grey", "commonui");
+          mf.field_q = bf.loadSpritesByName((byte) -81, param0, "commonui", "button");
+          fj.field_q = qa.loadRgbSpriteByName("commonui", -1, param0, "validation");
+          dh.field_d = (BitmapFont) ((Object) od.loadFontByName(param0, "arezzo12", param1, "commonui", (byte) 95));
+          od.field_S = (BitmapFont) ((Object) od.loadFontByName(param0, "arezzo14", param1, "commonui", (byte) 95));
+          ab.field_V = (BitmapFont) ((Object) od.loadFontByName(param0, "arezzo14bold", param1, "commonui", (byte) 95));
           var18 = new Sprite(param2.a("button.gif", "", true), (java.awt.Component) ((Object) uh.field_b));
           qk.a((byte) 80, param0, "commonui", "dropdown");
           var5 = el.a(param0, "screen_options", "commonui", -1409);
@@ -81,27 +81,27 @@ final class ua {
             var15 = var6[var10];
             kh[] var11 = var15;
             for (var12_int = 0; var12_int < var15.length; var12_int++) {
-              var15[var12_int] = DualLinkNode.a(false, var20[var12_int], var5[var10]);
+              var15[var12_int] = DualLinkNode.createRepalettedSprite(false, var20[var12_int], var5[var10]);
             }
           }
           var10Lifetime1 = var18.field_E;
           nm.b((byte) 111);
-          var18.c();
-          SoftwareRasterizer.d(0, 0, SoftwareRasterizer.field_f, SoftwareRasterizer.field_e);
+          var18.makeRasterTarget();
+          SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.field_f, SoftwareRasterizer.field_e);
           var16 = new Sprite(var10Lifetime1, var10Lifetime1);
           var19 = var16;
-          var19.c();
-          var18.b(0, 0);
+          var19.makeRasterTarget();
+          var18.drawOpaque(0, 0);
           var12 = new Sprite(var10Lifetime1, var10Lifetime1);
-          var12.c();
-          var18.b(-var18.field_u + var10Lifetime1, 0);
+          var12.makeRasterTarget();
+          var18.drawOpaque(-var18.field_u + var10Lifetime1, 0);
           var13 = new Sprite(var18.field_u - var10Lifetime1 * 2, var10Lifetime1);
-          var13.c();
-          var18.b(-var10Lifetime1, 0);
+          var13.makeRasterTarget();
+          var18.drawOpaque(-var10Lifetime1, 0);
           dh.a(-581);
           mf.field_q = new Sprite[]{var16, var13, var12};
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "ua.F(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "ua.F(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -113,7 +113,7 @@ final class ua {
         bj.a((byte) -119);
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_h = null;
         field_b = null;
         field_a = null;
@@ -141,19 +141,19 @@ final class ua {
         try {
           var2_int = aa.field_Nb;
           var3 = a.field_a;
-          var4 = bk.field_i.field_Ib.c(param1, 500);
-          var5 = bk.field_i.field_Ib.b(param1, 500) + 6;
+          var4 = bk.field_i.field_Ib.wrappedLineCount(param1, 500);
+          var5 = bk.field_i.field_Ib.getWrappedWidth(param1, 500) + 6;
           if (param0 != 7918) {
             field_g = 6L;
           }
           var6 = var4 * GameKeyHandler.field_d + 2;
           var7 = eo.a(var5, (byte) 108, var2_int, 12);
           var8 = mh.a(20, var3, var6, -8748);
-          SoftwareRasterizer.b(var7, var8, var5, var6, 0);
-          SoftwareRasterizer.c(1 + var7, 1 + var8, var5 - 2, var6 - 2, 16777088);
-          bk.field_i.field_Ib.a(param1, var7 + 3, -bk.field_i.field_Ib.field_N + ai.field_d + (var8 + 1), 500, 1000, 0, -1, 0, 0, GameKeyHandler.field_d);
+          SoftwareRasterizer.drawRectangle(var7, var8, var5, var6, 0);
+          SoftwareRasterizer.fillRectangle(1 + var7, 1 + var8, var5 - 2, var6 - 2, 16777088);
+          bk.field_i.field_Ib.drawParagraph(param1, var7 + 3, -bk.field_i.field_Ib.field_N + ai.field_d + (var8 + 1), 500, 1000, 0, -1, 0, 0, GameKeyHandler.field_d);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "ua.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "ua.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

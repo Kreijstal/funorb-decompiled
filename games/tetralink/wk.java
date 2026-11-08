@@ -28,7 +28,7 @@ final class wk {
     static volatile int field_c;
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        SoftwareRasterizer.d(param1, param3, param5, param0, param4);
+        SoftwareRasterizer.drawLine(param1, param3, param5, param0, param4);
         if (param2 > -62) {
           String var8 = (String) null;
           this.a(16, (String) null, -52, 95);
@@ -41,7 +41,7 @@ final class wk {
         int var7 = 0;
         int var8 = 0;
         try {
-          var5_int = this.field_k.b(param3);
+          var5_int = this.field_k.textWidth(param3);
           var6 = this.field_k.field_u + this.field_k.field_K;
           var7 = param2;
           if (var5_int + var7 + 6 > SoftwareRasterizer.field_f) {
@@ -51,15 +51,15 @@ final class wk {
           if (!(var6 + (var8 + 6) <= SoftwareRasterizer.field_e)) {
             var8 = -6 + (SoftwareRasterizer.field_e - var6);
           }
-          SoftwareRasterizer.b(var7, var8, 6 + var5_int, 6 + var6, this.field_h);
-          SoftwareRasterizer.c(var7 + 1, var8 + 1, 4 + var5_int, var6 + 4, this.field_g);
-          this.field_k.b(param3, var7 + 3, var8 + 3 + this.field_k.field_u, this.field_h, -1);
+          SoftwareRasterizer.drawRectangle(var7, var8, 6 + var5_int, 6 + var6, this.field_h);
+          SoftwareRasterizer.fillRectangle(var7 + 1, var8 + 1, 4 + var5_int, var6 + 4, this.field_g);
+          this.field_k.drawLeft(param3, var7 + 3, var8 + 3 + this.field_k.field_u, this.field_h, -1);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "wk.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "wk.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 1) {
           wk.a(-113, true, -82, -66);
         }
@@ -82,7 +82,7 @@ final class wk {
           hd.field_s.a(19, false);
           var5 = hd.field_s;
           var6_ref_String = re.field_S;
-          var5.field_j.a(var6_ref_String, 1, 5);
+          var5.field_j.addItem(var6_ref_String, 1, 5);
           var5Lifetime1 = hd.field_s;
           var6 = ci.field_B;
           var7 = li.field_o;
@@ -127,7 +127,7 @@ final class wk {
             var7 = this.field_k.field_N + this.field_k.field_K;
           }
           var8 = SoftwareRasterizer.field_f >> 2;
-          var9 = this.field_k.b(param1);
+          var9 = this.field_k.textWidth(param1);
           var10 = this.field_k.field_N + this.field_k.field_K;
           var11 = 1;
           if (var9 > var8 ||
@@ -141,11 +141,11 @@ final class wk {
               var13 = var9 / var8;
               var12 = 2 * ((-1 + (var9 % var8 + var13)) / var13) + var8;
             }
-            var11Lifetime1 = this.field_k.a(param1, new int[]{var12}, db.field_g);
+            var11Lifetime1 = this.field_k.wrapText(param1, new int[]{var12}, db.field_g);
             var9 = 0;
             var10 = var10 + var7 * (-1 + var11Lifetime1);
             for (var13Lifetime2 = 0; var13Lifetime2 < var11Lifetime1; var13Lifetime2++) {
-              var14 = this.field_k.b(db.field_g[var13Lifetime2]);
+              var14 = this.field_k.textWidth(db.field_g[var13Lifetime2]);
               if (var14 > var9) {
                 var9 = var14;
               }
@@ -159,9 +159,9 @@ final class wk {
           if (SoftwareRasterizer.field_e < var13Lifetime1 + var10 + var6) {
             var13Lifetime1 = -var6 + param2 - var10;
           }
-          SoftwareRasterizer.b(var12, var13Lifetime1, var5_int + var9, var6 + var10, this.field_d);
-          SoftwareRasterizer.c(1 + var12, var13Lifetime1 + 1, var5_int + (var9 - param0), -2 + (var10 + var6), this.field_g);
-          this.field_k.a(param1, this.field_v + var12, var13Lifetime1 + this.field_f, var9, var10, this.field_h, -1, 0, 0, var7);
+          SoftwareRasterizer.drawRectangle(var12, var13Lifetime1, var5_int + var9, var6 + var10, this.field_d);
+          SoftwareRasterizer.fillRectangle(1 + var12, var13Lifetime1 + 1, var5_int + (var9 - param0), -2 + (var10 + var6), this.field_g);
+          this.field_k.drawParagraph(param1, this.field_v + var12, var13Lifetime1 + this.field_f, var9, var10, this.field_h, -1, 0, 0, var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -173,12 +173,12 @@ final class wk {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        SoftwareRasterizer.d(param6, param0, param1, param4, param3, param5);
+        SoftwareRasterizer.fillRectangleAlpha(param6, param0, param1, param4, param3, param5);
         if (param2 != 13421772) {
           field_s = -0.8290913105010986f;
         }
@@ -186,7 +186,7 @@ final class wk {
 
     final static void b(int param0) {
         rm.field_a = new ho();
-        mm.field_u.e(rm.field_a, -27667);
+        mm.field_u.transitionToContent(rm.field_a, -27667);
         int var1 = 75 / ((-8 - param0) / 51);
     }
 
@@ -230,9 +230,9 @@ final class wk {
           this.field_k = param1;
           var4.field_n = 11711154;
           var4.field_o = 15658734;
-          var4.a((byte) -41, 0).a(2, 15658734).a(ImageProducerRasterBuffer.a(false, 7829367, 10066329, 8947848), true);
-          var4.a((byte) -41, 1).a(ImageProducerRasterBuffer.a(false, 13421772, 10066329, 11184810), true);
-          var4.a((byte) -41, 3).a(ImageProducerRasterBuffer.a(false, 10066329, 7829367, 8947848), true).a((byte) -128, 1).a(1, (byte) 12);
+          var4.createStateStyle((byte) -41, 0).a(2, 15658734).a(ImageProducerRasterBuffer.a(false, 7829367, 10066329, 8947848), true);
+          var4.createStateStyle((byte) -41, 1).a(ImageProducerRasterBuffer.a(false, 13421772, 10066329, 11184810), true);
+          var4.createStateStyle((byte) -41, 3).a(ImageProducerRasterBuffer.a(false, 10066329, 7829367, 8947848), true).a((byte) -128, 1).a(1, (byte) 12);
           var5 = new Sprite[9];
           var16 = new ue(32, 32);
           var17 = var16;
@@ -240,22 +240,22 @@ final class wk {
             var16.field_C[var7_int] = 1077952576;
           }
           var5[4] = (Sprite) ((Object) var17);
-          var4.a((byte) -41, 4).a((byte) -77, true).a(var5, true);
-          var4.a((byte) -41, 5).a(kk.a(65793, 0, 0, 0, (byte) -97), true).a((byte) -77, true).a(param0 ^ 15658732, -1);
+          var4.createStateStyle((byte) -41, 4).a((byte) -77, true).a(var5, true);
+          var4.createStateStyle((byte) -41, 5).a(kk.a(65793, 0, 0, 0, (byte) -97), true).a((byte) -77, true).a(param0 ^ 15658732, -1);
           this.field_n = (kg) ((Object) var4);
           var6 = new qn(var4, true);
           var6.field_k = 0;
           var7 = new qn(var4, true);
           var7.field_k = 0;
           var7.a(qj.a(-5300, 8947848), param0 - 15658837);
-          var7.a((byte) -41, 1).a(qj.a(-5300, 11184810), true).a(param0 ^ 15658732, 2236962);
+          var7.createStateStyle((byte) -41, 1).a(qj.a(-5300, 11184810), true).a(param0 ^ 15658732, 2236962);
           this.field_x = (kg) ((Object) new og(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new cc(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new dc(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new qn();
           var18.a(0, var8);
-          var8.a((byte) -41, 0).a(ImageProducerRasterBuffer.a(false, 10066329, 7829367, 15658734), true).a(2, 1118481).b(-1, param0 ^ 15658732);
-          var8.a((byte) -41, 4).a((byte) -77, true).a(var5, true);
+          var8.createStateStyle((byte) -41, 0).a(ImageProducerRasterBuffer.a(false, 10066329, 7829367, 15658734), true).a(2, 1118481).b(-1, param0 ^ 15658732);
+          var8.createStateStyle((byte) -41, 4).a((byte) -77, true).a(var5, true);
           this.field_r = (kg) ((Object) var8);
           var9 = new Sprite[9];
           var10 = new Sprite[9];
@@ -271,18 +271,18 @@ final class wk {
           var13 = new Sprite(7, 4);
           var13.field_C = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           var14 = new qn(var4, true);
-          var14.a(var13.d(), (byte) 71);
-          var13.b();
+          var14.setFrameSpritesForAllStates(var13.copy(), (byte) 71);
+          var13.rotateClockwise();
           var14Lifetime1 = new qn(var4, true);
-          var14Lifetime1.a(var13.d(), (byte) 71);
-          var13.b();
+          var14Lifetime1.setFrameSpritesForAllStates(var13.copy(), (byte) 71);
+          var13.rotateClockwise();
           var14Lifetime2 = new qn(var4, true);
-          var14Lifetime2.a(var13.d(), (byte) 71);
-          var13.b();
+          var14Lifetime2.setFrameSpritesForAllStates(var13.copy(), (byte) 71);
+          var13.rotateClockwise();
           var19 = new qn(var4, true);
-          var19.a(var13, (byte) 71);
+          var19.setFrameSpritesForAllStates(var13, (byte) 71);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "wk.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "wk.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -312,7 +312,7 @@ final class wk {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

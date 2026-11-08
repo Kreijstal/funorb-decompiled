@@ -9,7 +9,7 @@ final class e {
     static PcmSample field_c;
     static Sprite field_f;
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_e = null;
         field_b = null;
         field_f = null;
@@ -31,7 +31,7 @@ final class e {
           BufferedSocket.field_b = param2;
           SocketConnector.b(-69);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "e.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "e.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

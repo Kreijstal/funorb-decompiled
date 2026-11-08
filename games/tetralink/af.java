@@ -88,7 +88,7 @@ final class af {
           } else {
             stackIn_43_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(')').toString());
         }
     }
 
@@ -126,27 +126,27 @@ final class af {
         try {
           var1 = new Sprite(540, 140);
           sk.a((byte) 110, var1);
-          vn.b();
-          SoftwareRasterizer.a();
+          vn.useRasterClip();
+          SoftwareRasterizer.clear();
           en.field_K = 0;
           ni.a((byte) 71);
-          var2 = var1.d();
+          var2 = var1.copy();
           for (var3 = 0; var3 < 15; var3++) {
-            var2.c(-2, -2, 16777215);
-            SoftwareRasterizer.a(4, 4, 0, 0, 540, 140);
+            var2.drawSilhouette(-2, -2, 16777215);
+            SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 540, 140);
           }
-          oi.field_e.c();
-          var1.d(0, 0);
+          oi.field_e.makeRasterTarget();
+          var1.drawHalfSize(0, 0);
           if (param0 != 18428) {
             field_d = (String) null;
           }
           dh.a(-581);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "af.B(" + param0 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "af.B(" + param0 + ')');
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_g = null;
         field_d = null;
         field_i = null;
@@ -155,7 +155,7 @@ final class af {
         field_b = null;
         field_e = null;
         if (param0 > -70) {
-          af.a(6);
+          af.releaseStatics(6);
         }
     }
 

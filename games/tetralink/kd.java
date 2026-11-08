@@ -38,7 +38,7 @@ final class kd {
         return null;
     }
 
-    final void a(long param0, DualLinkNode param1, int param2) {
+    final void put(long param0, DualLinkNode param1, int param2) {
         DualLinkNode var5 = null;
         try {
           if (param1.secondaryPrevious != null) {
@@ -54,7 +54,7 @@ final class kd {
           param1.secondaryNext.secondaryPrevious = param1;
           param1.secondaryKey = param0;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "kd.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "kd.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -66,10 +66,10 @@ final class kd {
         if (param2 != -121) {
           return;
         }
-        vn.a(param0, param1);
+        vn.setProjectionCenter(param0, param1);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_e = null;
         field_i = null;
         int var1 = -52 / ((-5 - param0) / 51);
@@ -78,7 +78,7 @@ final class kd {
         field_m = null;
     }
 
-    final DualLinkNode a(long param0, int param1) {
+    final DualLinkNode findByKey(long param0, int param1) {
         DualLinkNode var4;
         DualLinkNode var5;
         int var6;

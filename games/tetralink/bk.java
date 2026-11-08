@@ -43,7 +43,7 @@ final class bk {
         return -1 + this.field_j.length;
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_i = null;
         field_d = null;
@@ -55,7 +55,7 @@ final class bk {
           field_e = null;
           return;
         }
-        bk.b(-43);
+        bk.releaseStatics(-43);
         field_f = null;
         field_e = null;
     }

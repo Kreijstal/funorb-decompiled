@@ -31,9 +31,9 @@ final class WidgetContainer extends en {
           var3 = (ld) (param0);
           this.field_N.addFirst(var3, -25);
           var3.field_K = true;
-          var3.a((UiWidget) (this), -384169950);
+          var3.focusNext((UiWidget) (this), -384169950);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "pk.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "pk.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -117,7 +117,7 @@ final class WidgetContainer extends en {
               var10 = var12;
               var6 = var10;
               if (var3 == 1) {
-                sl.a(var12, var5_int, param0, var4, 9);
+                sl.decompressInto(var12, var5_int, param0, var4, 9);
               } else {
                 var7 = oc.field_z;
                 synchronized (var7) {
@@ -140,7 +140,7 @@ final class WidgetContainer extends en {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -149,7 +149,7 @@ final class WidgetContainer extends en {
         this.field_N = new IntrusiveDeque();
     }
 
-    public static void h(int param0) {
+    public static void releaseStatics(int param0) {
         field_O = null;
         if (param0 != -2) {
           java.applet.Applet var2 = (java.applet.Applet) null;
@@ -189,7 +189,7 @@ final class WidgetContainer extends en {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -207,17 +207,17 @@ final class WidgetContainer extends en {
         }
         while (var3 != null) {
           if (var3.field_K) {
-            return var3.d((byte) 5);
+            return var3.findFocusedChild((byte) 5);
           }
           var3 = (ld) (var2.next((byte) -58));
         }
         return null;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         int var7 = TetraLink.field_J;
         if (null != this.field_H) {
-          this.field_H.a((UiWidget) (this), param1, param2, true, true);
+          this.field_H.drawWidget((UiWidget) (this), param1, param2, true, true);
         }
         IntrusiveDequeCursor var5 = new IntrusiveDequeCursor(this.field_N);
         if (param0 != 0) {
@@ -225,7 +225,7 @@ final class WidgetContainer extends en {
         }
         UiWidget var6 = (UiWidget) (var5.last(param0 ^ -115));
         while (var6 != null) {
-          var6.a(0, param1 + this.field_t, param2 + this.field_w, param3);
+          var6.drawLayer(0, param1 + this.field_t, param2 + this.field_w, param3);
           var6 = (UiWidget) (var5.previous((byte) -66));
         }
     }
@@ -234,7 +234,7 @@ final class WidgetContainer extends en {
         int var4 = TetraLink.field_J;
         IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_N);
         if (param0 != -110) {
-          this.a(18, -69, -122, 50);
+          this.drawLayer(18, -69, -122, 50);
         }
         ld var3 = (ld) (var2.first(true));
         while (var3 != null) {

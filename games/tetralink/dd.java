@@ -6,9 +6,9 @@ final class dd {
     static int field_a;
     static int field_c;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
-          dd.a(-99);
+          dd.releaseStatics(-99);
           field_b = null;
           return;
         }
@@ -60,7 +60,7 @@ final class dd {
             try {
               var9 = param0.getParameter("cookieprefix");
               var3 = var9 + "settings";
-              var4 = (String) (ii.a((byte) 90, "getcookies", param0));
+              var4 = (String) (ii.callJavaScript((byte) 90, "getcookies", param0));
               var5 = hi.a(var4, ';', 783);
               for (var6 = 0; var5.length > var6; var6++) {
                 var7 = var5[var6].indexOf('=');
@@ -91,7 +91,7 @@ final class dd {
             } else {
               stackIn_19_2 = "{...}";
             }
-            throw oi.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
+            throw oi.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

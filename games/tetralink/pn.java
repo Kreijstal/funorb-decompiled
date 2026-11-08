@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pn {
-    final static void a(int param0, int param1, int param2, boolean param3, boolean param4) {
+    final static void pixelate(int param0, int param1, int param2, boolean param3, boolean param4) {
         int var11 = 0;
         int var12 = 0;
         int var19 = 0;

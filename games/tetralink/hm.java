@@ -12,7 +12,7 @@ abstract class hm {
 
     abstract df a(byte param0);
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = -47 % ((58 - param0) / 45);
         field_f = null;
         field_d = null;

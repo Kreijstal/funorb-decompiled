@@ -88,7 +88,7 @@ final class aa extends hl {
         }
     }
 
-    final void a(int param0, Sprite param1, int param2, String param3) {
+    final void addIconAction(int param0, Sprite param1, int param2, String param3) {
         try {
           this.field_Lb[this.field_Rb] = new nh((long)param2, (hl) null, (hl) null, this.field_Ub, param1, param3);
           this.field_Lb[this.field_Rb].field_kb = this.field_Zb;
@@ -98,11 +98,11 @@ final class aa extends hl {
           this.field_Sb[this.field_Rb] = param0;
           this.field_Rb = this.field_Rb + 1;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "aa.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "aa.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(String param0, int param1, int param2) {
+    final void addItem(String param0, int param1, int param2) {
         try {
           this.field_Lb[this.field_Rb] = new nh(0L, (hl) null, (hl) null, this.field_Ub, (Sprite) null, param0);
           this.field_Lb[this.field_Rb].field_kb = this.field_Zb;
@@ -112,7 +112,7 @@ final class aa extends hl {
           this.field_Sb[this.field_Rb] = param2;
           this.field_Rb = this.field_Rb + 1;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "aa.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "aa.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -184,7 +184,7 @@ final class aa extends hl {
           this.field_Ob = param2;
           this.field_Zb = param1;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "aa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "aa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -264,7 +264,7 @@ final class aa extends hl {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 

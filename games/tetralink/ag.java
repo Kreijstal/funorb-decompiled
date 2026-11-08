@@ -39,7 +39,7 @@ final class ag extends IntrusiveNode {
     private static int[] field_B;
     private static byte[] field_M;
 
-    final PcmSample a(int[] param0) {
+    final PcmSample decodeToPcm(int[] param0) {
         int var5 = 0;
         int incrementValue$0 = 0;
         int var3;
@@ -63,7 +63,7 @@ final class ag extends IntrusiveNode {
             param0[0] <= 0) {
             return null;
           }
-          var7 = this.a(this.field_q);
+          var7 = this.decodePacket(this.field_q);
           if (var7 != null) {
             var3 = this.field_I;
             var4 = var7.length;
@@ -92,7 +92,7 @@ final class ag extends IntrusiveNode {
         return new PcmSample(this.field_T, var12, this.field_U, this.field_S, this.field_w);
     }
 
-    private final void b(byte[] param0) throws IOException {
+    private final void decodePacketContainer(byte[] param0) throws IOException {
         int var4 = 0;
         int var5 = 0;
         int var6_int = 0;
@@ -123,10 +123,10 @@ final class ag extends IntrusiveNode {
         }
     }
 
-    final static ag a(Archive param0, String param1, String param2) {
+    final static ag load(Archive param0, String param1, String param2) {
         try {
           ag var4_ref = null;
-          if (!ag.a(param0)) {
+          if (!ag.ensureSetup(param0)) {
             param0.a(param2, -128, param1);
             return null;
           }
@@ -148,7 +148,7 @@ final class ag extends IntrusiveNode {
         }
     }
 
-    final static int c() {
+    final static int readBit() {
         int var0 = field_M[field_A] >> field_R & 1;
         field_R = field_R + 1;
         field_A = field_A + (field_R >> 3);
@@ -156,7 +156,7 @@ final class ag extends IntrusiveNode {
         return var0;
     }
 
-    final PcmSample b() {
+    final PcmSample decodeAllToPcm() {
         int var3 = 0;
         int var6 = 0;
         int incrementValue$0 = 0;
@@ -170,7 +170,7 @@ final class ag extends IntrusiveNode {
         var1 = new byte[this.field_C];
         var2 = 0;
         for (var3 = 0; var3 < this.field_n.length; var3++) {
-          var4 = this.a(var3);
+          var4 = this.decodePacket(var3);
           if (var4 != null) {
             var5 = var4.length;
             if (var5 > this.field_C - var2) {
@@ -191,7 +191,7 @@ final class ag extends IntrusiveNode {
         return new PcmSample(this.field_T, var1, this.field_U, this.field_S, this.field_w);
     }
 
-    final static void a(byte[] param0) {
+    final static void decodeSetup(byte[] param0) {
         int var7_int = 0;
         int var8_int = 0;
         int var9_int = 0;
@@ -222,9 +222,9 @@ final class ag extends IntrusiveNode {
         int var4Lifetime2;
         int var5Lifetime1;
         int var5Lifetime2;
-        ag.a(param0, 0);
-        field_p = 1 << ag.d(4);
-        field_F = 1 << ag.d(4);
+        ag.setBitstream(param0, 0);
+        field_p = 1 << ag.readBits(4);
+        field_F = 1 << ag.readBits(4);
         field_O = new float[field_F];
         for (var1 = 0; var1 < 2; var1++) {
           if (var1 == 0) {
@@ -268,46 +268,46 @@ final class ag extends IntrusiveNode {
             field_x = var9;
           }
         }
-        var1Lifetime1 = ag.d(8) + 1;
+        var1Lifetime1 = ag.readBits(8) + 1;
         field_Q = new pa[var1Lifetime1];
         for (var2Lifetime1 = 0; var2Lifetime1 < var1Lifetime1; var2Lifetime1++) {
           field_Q[var2Lifetime1] = new pa();
         }
-        var2Lifetime2 = ag.d(6) + 1;
+        var2Lifetime2 = ag.readBits(6) + 1;
         for (var3Lifetime1 = 0; var3Lifetime1 < var2Lifetime2; var3Lifetime1++) {
-          ag.d(16);
+          ag.readBits(16);
         }
-        var2Lifetime3 = ag.d(6) + 1;
+        var2Lifetime3 = ag.readBits(6) + 1;
         field_L = new cj[var2Lifetime3];
         for (var3Lifetime2 = 0; var3Lifetime2 < var2Lifetime3; var3Lifetime2++) {
           field_L[var3Lifetime2] = new cj();
         }
-        var3Lifetime3 = ag.d(6) + 1;
+        var3Lifetime3 = ag.readBits(6) + 1;
         field_y = new mg[var3Lifetime3];
         for (var4Lifetime1 = 0; var4Lifetime1 < var3Lifetime3; var4Lifetime1++) {
           field_y[var4Lifetime1] = new mg();
         }
-        var4Lifetime2 = ag.d(6) + 1;
+        var4Lifetime2 = ag.readBits(6) + 1;
         field_K = new jf[var4Lifetime2];
         for (var5Lifetime1 = 0; var5Lifetime1 < var4Lifetime2; var5Lifetime1++) {
           field_K[var5Lifetime1] = new jf();
         }
-        var5Lifetime2 = ag.d(6) + 1;
+        var5Lifetime2 = ag.readBits(6) + 1;
         field_t = new boolean[var5Lifetime2];
         field_D = new int[var5Lifetime2];
         for (var6 = 0; var6 < var5Lifetime2; var6++) {
           stackIn_41_0 = (boolean[]) (field_t);
           stackIn_41_1 = var6;
-          stackIn_42_2 = (ag.c() != 0);
+          stackIn_42_2 = (ag.readBit() != 0);
           stackIn_41_0[stackIn_41_1] = stackIn_42_2;
-          ag.d(16);
-          ag.d(16);
-          field_D[var6] = ag.d(8);
+          ag.readBits(16);
+          ag.readBits(16);
+          field_D[var6] = ag.readBits(8);
         }
         field_G = true;
     }
 
-    private final float[] a(int param0) {
+    private final float[] decodePacket(int param0) {
         int var32_int = 0;
         int stackIn_3_0 = 0;
         int stackIn_7_0 = 0;
@@ -419,9 +419,9 @@ final class ag extends IntrusiveNode {
         float var30Lifetime1Lifetime3;
         int var18_intLifetime1;
         int var18_intLifetime2;
-        ag.a(this.field_n[param0], 0);
-        ag.c();
-        var2 = ag.d(ja.c(-7422, field_D.length - 1));
+        ag.setBitstream(this.field_n[param0], 0);
+        ag.readBit();
+        var2 = ag.readBits(ja.c(-7422, field_D.length - 1));
         var3 = field_t[var2] ? 1 : 0;
         if (var3 == 0) {
           stackIn_3_0 = field_p;
@@ -432,9 +432,9 @@ final class ag extends IntrusiveNode {
         var5 = 0;
         var6 = 0;
         if (var3 != 0) {
-          stackIn_7_0 = (ag.c() == 0) ? 0 : 1;
+          stackIn_7_0 = (ag.readBit() == 0) ? 0 : 1;
           var5 = stackIn_7_0;
-          stackIn_10_0 = (ag.c() == 0) ? 0 : 1;
+          stackIn_10_0 = (ag.readBit() == 0) ? 0 : 1;
           var6 = stackIn_10_0;
         }
         var7 = var4 >> 1;
@@ -461,18 +461,18 @@ final class ag extends IntrusiveNode {
         var14 = field_K[field_D[var2]];
         var16 = var14.field_c;
         var17_int = var14.field_b[var16];
-        stackIn_22_0 = (field_L[var17_int].a()) ? 0 : 1;
+        stackIn_22_0 = (field_L[var17_int].decodeFloor()) ? 0 : 1;
         var15 = stackIn_22_0;
         var16Lifetime1 = var15;
         for (var17_intLifetime1 = 0; var17_intLifetime1 < var14.field_d; var17_intLifetime1++) {
           var42 = field_y[var14.field_a[var17_intLifetime1]];
           var52 = field_O;
-          var42.a(var52, var4 >> 1, var16Lifetime1 != 0);
+          var42.decodeResidue(var52, var4 >> 1, var16Lifetime1 != 0);
         }
         if (var15 == 0) {
           var17_intLifetime2 = var14.field_c;
           var18_int = var14.field_b[var17_intLifetime2];
-          field_L[var18_int].a(field_O, var4 >> 1);
+          field_L[var18_int].applyFloor(field_O, var4 >> 1);
         }
         if (var15 != 0) {
           for (var17_intLifetime3 = var4 >> 1; var17_intLifetime3 < var4; var17_intLifetime3++) {
@@ -659,10 +659,10 @@ final class ag extends IntrusiveNode {
         return (float[]) (var17);
     }
 
-    final static ag a(Archive param0, int param1, int param2) {
+    final static ag load(Archive param0, int param1, int param2) {
         try {
           ag var4_ref = null;
-          if (!ag.a(param0)) {
+          if (!ag.ensureSetup(param0)) {
             param0.a((byte) -30, param1, param2);
             return null;
           }
@@ -684,7 +684,7 @@ final class ag extends IntrusiveNode {
         }
     }
 
-    final static int d(int param0) {
+    final static int readBits(int param0) {
         int var4 = 0;
         int var3 = 0;
         int var1 = 0;
@@ -707,7 +707,7 @@ final class ag extends IntrusiveNode {
         return var1;
     }
 
-    final static float c(int param0) {
+    final static float unpackFloat(int param0) {
         int var1 = param0 & 2097151;
         int var2 = param0 & -2147483648;
         int var3 = (param0 & 2145386496) >> 21;
@@ -717,13 +717,13 @@ final class ag extends IntrusiveNode {
         return (float)((double)var1 * Math.pow(2.0, (double)(var3 - 788)));
     }
 
-    private final static void a(byte[] param0, int param1) {
+    private final static void setBitstream(byte[] param0, int param1) {
         field_M = param0;
         field_A = param1;
         field_R = 0;
     }
 
-    public static void a() {
+    public static void releaseStatics() {
         field_M = null;
         field_Q = null;
         field_L = null;
@@ -743,17 +743,17 @@ final class ag extends IntrusiveNode {
     }
 
     private ag(byte[] param0) throws IOException {
-        this.b(param0);
+        this.decodePacketContainer(param0);
     }
 
-    private final static boolean a(Archive param0) {
+    private final static boolean ensureSetup(Archive param0) {
         byte[] var1 = null;
         if (!field_G) {
           var1 = param0.a(42, 0, 0);
           if (var1 == null) {
             return false;
           }
-          ag.a(var1);
+          ag.decodeSetup(var1);
         }
         return true;
     }

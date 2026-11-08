@@ -11,7 +11,7 @@ final class km extends IntrusiveNode {
         throw new Error();
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_n = null;
         int var1 = 124 / ((36 - param0) / 60);
         field_p = null;

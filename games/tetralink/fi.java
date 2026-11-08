@@ -55,7 +55,7 @@ final class fi extends lk implements dm {
           }
           if (param2 != 20) {
             var4 = (String) null;
-            fi.a(true, (String) null, (byte) -53);
+            fi.measureText(true, (String) null, (byte) -53);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -68,7 +68,7 @@ final class fi extends lk implements dm {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -84,7 +84,7 @@ final class fi extends lk implements dm {
         try {
           this.r(-125);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "fi.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "fi.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -93,18 +93,18 @@ final class fi extends lk implements dm {
         try {
           this.field_Bb = param1;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "fi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "fi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void g(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_zb = null;
         int var1 = 90 / ((64 - param0) / 35);
         field_Ab = null;
         field_xb = null;
     }
 
-    final static int a(boolean param0, String param1, byte param2) {
+    final static int measureText(boolean param0, String param1, byte param2) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_5_0 = 0;
@@ -119,10 +119,10 @@ final class fi extends lk implements dm {
             return stackIn_2_0;
           }
           if (!param0) {
-            stackIn_7_0 = dk.field_d.b(param1);
+            stackIn_7_0 = dk.field_d.textWidth(param1);
             return stackIn_7_0;
           }
-          stackIn_5_0 = cf.field_o.b(param1);
+          stackIn_5_0 = cf.field_o.textWidth(param1);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -134,7 +134,7 @@ final class fi extends lk implements dm {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -190,7 +190,7 @@ final class fi extends lk implements dm {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -252,7 +252,7 @@ final class fi extends lk implements dm {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param3).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -268,7 +268,7 @@ final class fi extends lk implements dm {
         if (param0 <= 1) {
           field_Cb = false;
         }
-        this.a(hj.a(wc.field_K, 248, false), 22811, true);
+        this.a(hj.createUsernameResponseQuery(wc.field_K, 248, false), 22811, true);
     }
 
     final static void a(int param0, int param1, String param2, int param3, String param4, String param5) {
@@ -284,7 +284,7 @@ final class fi extends lk implements dm {
         RuntimeException var6_ref = null;
         try {
           var6 = new fj(param3, param2, param0, param5, param4);
-          ei.a(-2792, var6);
+          ei.appendChatHistory(-2792, var6);
           if (param1 != 0) {
             field_zb = (String) null;
           }
@@ -311,7 +311,7 @@ final class fi extends lk implements dm {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -352,7 +352,7 @@ final class fi extends lk implements dm {
           var5 = new ba((lk) (this), ab.field_V, var4);
           if (param0.field_f) {
             if (param0.field_b) {
-              this.e(new ia(this), -27667);
+              this.transitionToContent(new ia(this), -27667);
               return;
             }
             var5.a((dn) (this), param1 ^ -22896, al.field_e);
@@ -369,7 +369,7 @@ final class fi extends lk implements dm {
             }
             if (param0.field_d != 3) {
               if (param0.field_d != 6) {
-                this.e(var5, -27667);
+                this.transitionToContent(var5, -27667);
                 return;
               }
               var5.a(MatchSetup.field_c, 9, 115);
@@ -377,7 +377,7 @@ final class fi extends lk implements dm {
               var5.a(hl.field_C, 7, 75);
             }
           }
-          this.e(var5, -27667);
+          this.transitionToContent(var5, -27667);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -389,7 +389,7 @@ final class fi extends lk implements dm {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -408,7 +408,7 @@ final class fi extends lk implements dm {
         return super.l(-1);
     }
 
-    final static boolean a(long param0, int param1, String param2, byte param3, int[] param4) {
+    final static boolean canSendQuickChat(long param0, int param1, String param2, byte param3, int[] param4) {
         RuntimeException var6 = null;
         boolean stackIn_8_0 = false;
         RuntimeException stackIn_11_0 = null;
@@ -447,7 +447,7 @@ final class fi extends lk implements dm {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 

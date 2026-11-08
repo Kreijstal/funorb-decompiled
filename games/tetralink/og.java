@@ -20,16 +20,16 @@ final class og implements kg {
     private int field_a;
     private int field_l;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_j = null;
         field_o = null;
         field_h = null;
         if (param0 != -17479) {
-          og.a(-8);
+          og.releaseStatics(-8);
         }
     }
 
-    public final void a(UiWidget param0, int param1, int param2, boolean param3, boolean param4) {
+    public final void drawWidget(UiWidget param0, int param1, int param2, boolean param3, boolean param4) {
         UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
@@ -55,23 +55,23 @@ final class og implements kg {
             field_f = 95;
           }
           var7 = 5592405;
-          SoftwareRasterizer.c(param1 + param0.field_t, param0.field_w + param2, param0.field_F, param0.field_u, this.field_q);
+          SoftwareRasterizer.fillRectangle(param1 + param0.field_t, param0.field_w + param2, param0.field_F, param0.field_u, this.field_q);
           if (param4) {
             var7 = 16777215;
           }
           var8 = this.field_g + (param1 + param0.field_t);
           var9 = param2 + param0.field_w + this.field_a;
-          SoftwareRasterizer.a(var8, var9, this.field_l, this.field_e, 5592405);
-          SoftwareRasterizer.c(var8, var9, this.field_l, this.field_e, var7);
+          SoftwareRasterizer.drawDropShadow(var8, var9, this.field_l, this.field_e, 5592405);
+          SoftwareRasterizer.fillRectangle(var8, var9, this.field_l, this.field_e, var7);
           if (var11.field_N) {
-            SoftwareRasterizer.d(var8, var9, this.field_l + var8, this.field_e + var9, 1);
-            SoftwareRasterizer.d(this.field_l + var8, var9, var8, var9 + this.field_e, 1);
+            SoftwareRasterizer.drawLine(var8, var9, this.field_l + var8, this.field_e + var9, 1);
+            SoftwareRasterizer.drawLine(this.field_l + var8, var9, var8, var9 + this.field_e, 1);
           }
           if (this.field_k == null) {
             return;
           }
           var10 = this.field_g + this.field_l + this.field_n;
-          this.field_k.a(param0.field_A, var10 + (param0.field_t + param1), param2 + param0.field_w + this.field_c, -var10 - this.field_n + param0.field_F, param0.field_u - (this.field_n << 1), this.field_b, this.field_p, this.field_m, this.field_d, 0);
+          this.field_k.drawParagraph(param0.field_A, var10 + (param0.field_t + param1), param2 + param0.field_w + this.field_c, -var10 - this.field_n + param0.field_F, param0.field_u - (this.field_n << 1), this.field_b, this.field_p, this.field_m, this.field_d, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -83,7 +83,7 @@ final class og implements kg {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -102,7 +102,7 @@ final class og implements kg {
           this.field_n = param1;
           this.field_p = param4;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "og.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "og.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 

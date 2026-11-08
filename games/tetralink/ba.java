@@ -15,7 +15,7 @@ final class ba extends gn implements dm {
     static String field_P;
     static int field_Q;
 
-    public static void h(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 22) {
           ba.a(34);
         }
@@ -59,7 +59,7 @@ final class ba extends gn implements dm {
           }
         }
         if (param0 != 1) {
-          ba.h(20);
+          ba.releaseStatics(20);
         }
     }
 
@@ -100,16 +100,16 @@ final class ba extends gn implements dm {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
-        super.a(0, param1, param2, param3);
-        this.field_R.a(this.field_K, 14 + (param1 + this.field_t), this.field_w + param2 + 10, this.field_F - 28, this.field_u, 16777215, -1, param0, 0, this.field_R.field_N);
+    final void drawLayer(int param0, int param1, int param2, int param3) {
+        super.drawLayer(0, param1, param2, param3);
+        this.field_R.drawParagraph(this.field_K, 14 + (param1 + this.field_t), this.field_w + param2 + 10, this.field_F - 28, this.field_u, 16777215, -1, param0, 0, this.field_R.field_N);
     }
 
-    private final void b(int param0, int param1) {
+    private final void ensureActionCapacity(int param0, int param1) {
         int var5 = 0;
         int var6 = TetraLink.field_J;
         if (this.field_V >= param0) {
@@ -131,12 +131,12 @@ final class ba extends gn implements dm {
         int var4_int = 0;
         try {
           var4_int = this.field_V;
-          this.b(var4_int + 1, 0);
+          this.ensureActionCapacity(var4_int + 1, 0);
           int var5 = 80 / ((21 - param2) / 48);
           this.field_O[var4_int] = this.a((dn) (this), -67, param0);
           this.field_U[var4_int] = param1;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "ba.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "ba.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -178,7 +178,7 @@ final class ba extends gn implements dm {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -189,7 +189,7 @@ final class ba extends gn implements dm {
             field_P = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "ba.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "ba.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -201,10 +201,10 @@ final class ba extends gn implements dm {
           this.field_R = param1;
           this.field_K = param2;
           this.field_T = param0;
-          var4_int = null == this.field_K ? 0 : this.field_R.b(this.field_K, 260, this.field_R.field_N);
+          var4_int = null == this.field_K ? 0 : this.field_R.paragraphHeight(this.field_K, 260, this.field_R.field_N);
           this.a(var4_int + 22, 0, 69, 0, 288);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "ba.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "ba.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

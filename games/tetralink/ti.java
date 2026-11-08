@@ -89,9 +89,9 @@ final class ti {
           var7 = pm.a("lobby", "largefont", param4, param0, -83);
           rn.field_e = pm.a("lobby", "generalfont", param4, param0, -106);
           uf.field_g = pm.a("lobby", "chatfont", param4, param0, -58);
-          var7.a(var5, var22);
-          rn.field_e.a(var5, var22);
-          uf.field_g.a(var5, var22);
+          var7.setInlineSprites(var5, var22);
+          rn.field_e.setInlineSprites(var5, var22);
+          uf.field_g.setInlineSprites(var5, var22);
           var8 = new hl(0L, (hl) null);
           var8.field_N = 16777215;
           var8.field_Ib = (BitmapFont) ((Object) var7);
@@ -107,21 +107,21 @@ final class ti {
           var11 = var10;
           var11.field_xb = 1;
           cc.field_j = new hl(0L, var8);
-          cc.field_j.field_Eb = kf.a(true, bf.a((byte) -79, param4, "lobby", "heading"));
+          cc.field_j.field_Eb = kf.a(true, bf.loadSpritesByName((byte) -79, param4, "lobby", "heading"));
           u.field_b = new hl(0L, (hl) null);
           u.field_b.field_Eb = el.a(false, false, 8421504, false, 120, 4210752);
           NotificationToast.field_o = new hl(0L, (hl) null);
           NotificationToast.field_o.field_Eb = Archive.a(1, 3, 6316128, 16, 6316128, 114);
           um.field_n = new hl(0L, (hl) null);
-          um.field_n.field_Eb = kf.a(true, bf.a((byte) -121, param4, "lobby", "popup"));
-          var12 = kf.a(true, bf.a((byte) -102, param4, "lobby", "popup_mouseover"));
-          var13 = bf.a((byte) -106, param4, "lobby", "button");
-          var14 = kf.a(true, bf.a((byte) -83, param4, "lobby", "tab_active"));
+          um.field_n.field_Eb = kf.a(true, bf.loadSpritesByName((byte) -121, param4, "lobby", "popup"));
+          var12 = kf.a(true, bf.loadSpritesByName((byte) -102, param4, "lobby", "popup_mouseover"));
+          var13 = bf.loadSpritesByName((byte) -106, param4, "lobby", "button");
+          var14 = kf.a(true, bf.loadSpritesByName((byte) -83, param4, "lobby", "tab_active"));
           hl.field_gb = new hl(0L, var8);
           hl.field_gb.field_Eb = var14;
           sn.field_c = new hl(0L, (hl) null);
-          sn.field_c.field_vb = ug.a(param4, (byte) -45, "closebutton", "lobby");
-          sn.field_c.field_Ab = ug.a(param4, (byte) -45, "closebutton_mouseover", "lobby");
+          sn.field_c.field_vb = ug.loadFontByName(param4, (byte) -45, "closebutton", "lobby");
+          sn.field_c.field_Ab = ug.loadFontByName(param4, (byte) -45, "closebutton_mouseover", "lobby");
           mn.field_d = new hl(0L, var8);
           mn.field_d.field_Eb = el.a(true, false, 3815994, true, 40, 2039583);
           mb.field_x = new hl(0L, var10);
@@ -158,7 +158,7 @@ final class ti {
           ga.field_c.a(NotificationToast.field_n, -2147483648);
           sk.field_h = new hl(0L, sd.field_rb);
           sk.field_h.a(NotificationToast.field_n, -2147483648);
-          var16 = bf.a((byte) -115, param4, "lobby", "button_mouseover");
+          var16 = bf.loadSpritesByName((byte) -115, param4, "lobby", "button_mouseover");
           TetraLink.field_P = new aa(um.field_n, var12, bk.field_i, NotificationToast.field_n, 3, 2, eh.field_w, 3, GameKeyHandler.field_d);
           o.field_r = new hl(0L, NotificationToast.field_n);
           o.field_r.field_kb = var16;
@@ -167,14 +167,14 @@ final class ti {
           o.field_r.field_Fb = 1;
           o.field_r.field_D = 1;
           o.field_r.field_E = 1;
-          o.field_r.field_pb = bf.a((byte) -86, param4, "lobby", "button_mouseheld");
-          o.field_r.field_Gb = bf.a((byte) -98, param4, "lobby", "button_active");
-          o.field_r.field_H = bf.a((byte) -105, param4, "lobby", "button_disabled");
+          o.field_r.field_pb = bf.loadSpritesByName((byte) -86, param4, "lobby", "button_mouseheld");
+          o.field_r.field_Gb = bf.loadSpritesByName((byte) -98, param4, "lobby", "button_active");
+          o.field_r.field_H = bf.loadSpritesByName((byte) -105, param4, "lobby", "button_disabled");
           o.field_r.field_xb = 1;
           te.field_O = new hl(0L, NotificationToast.field_n);
           te.field_O.field_xb = 1;
-          te.field_O.field_Eb = kf.a(true, bf.a((byte) -122, param4, "lobby", "tab_inactive"));
-          te.field_O.field_kb = kf.a(true, bf.a((byte) -112, param4, "lobby", "tab_mouseover"));
+          te.field_O.field_Eb = kf.a(true, bf.loadSpritesByName((byte) -122, param4, "lobby", "tab_inactive"));
+          te.field_O.field_kb = kf.a(true, bf.loadSpritesByName((byte) -112, param4, "lobby", "tab_mouseover"));
           te.field_O.field_Gb = var14;
           rc.field_S = new hl(0L, (hl) null);
           rc.field_S.field_Eb = Archive.a(-1, 3, 1127256, 16, 1856141, 206);
@@ -199,71 +199,71 @@ final class ti {
           t.field_o = new hl(0L, rb.field_Kb);
           rh.field_N = new hl(0L, rb.field_Kb);
           ia.field_L = new hl(0L, rb.field_Kb);
-          rb.field_Kb.field_Eb = kf.a(true, bf.a((byte) -97, param4, "lobby", "smallbutton"));
-          rb.field_Kb.field_kb = kf.a(true, bf.a((byte) -99, param4, "lobby", "smallbutton_mouseover"));
-          dupTemp$0 = kf.a(true, bf.a((byte) -72, param4, "lobby", "smallbutton_active"));
+          rb.field_Kb.field_Eb = kf.a(true, bf.loadSpritesByName((byte) -97, param4, "lobby", "smallbutton"));
+          rb.field_Kb.field_kb = kf.a(true, bf.loadSpritesByName((byte) -99, param4, "lobby", "smallbutton_mouseover"));
+          dupTemp$0 = kf.a(true, bf.loadSpritesByName((byte) -72, param4, "lobby", "smallbutton_active"));
           rb.field_Kb.field_Gb = dupTemp$0;
           rb.field_Kb.field_pb = dupTemp$0;
-          rb.field_Kb.field_H = kf.a(true, bf.a((byte) -121, param4, "lobby", "smallbutton_disabled"));
-          k.field_a.field_Eb = kf.a(true, bf.a((byte) -98, param4, "lobby", "mediumbutton"));
-          k.field_a.field_kb = kf.a(true, bf.a((byte) -114, param4, "lobby", "mediumbutton_mouseover"));
-          k.field_a.field_pb = kf.a(true, bf.a((byte) -90, param4, "lobby", "mediumbutton_mouseheld"));
-          rj.field_l.field_Eb = kf.a(true, bf.a((byte) -100, param4, "lobby", "bigbutton"));
-          rj.field_l.field_kb = kf.a(true, bf.a((byte) -125, param4, "lobby", "bigbutton_mouseover"));
-          rj.field_l.field_pb = kf.a(true, bf.a((byte) -118, param4, "lobby", "bigbutton_mouseheld"));
-          rj.field_l.field_H = kf.a(true, bf.a((byte) -69, param4, "lobby", "bigbutton_disabled"));
-          eo.field_c.field_Eb = kf.a(true, bf.a((byte) -128, param4, "lobby", "greenbutton"));
-          eo.field_c.field_kb = kf.a(true, bf.a((byte) -82, param4, "lobby", "greenbutton_mouseover"));
-          eo.field_c.field_pb = kf.a(true, bf.a((byte) -93, param4, "lobby", "greenbutton_mouseheld"));
-          wh.field_l.field_Eb = kf.a(true, bf.a((byte) -71, param4, "lobby", "redbutton"));
-          wh.field_l.field_kb = kf.a(true, bf.a((byte) -73, param4, "lobby", "redbutton_mouseover"));
-          wh.field_l.field_pb = kf.a(true, bf.a((byte) -91, param4, "lobby", "redbutton_mouseheld"));
-          SecondaryNodeDeque.field_d.field_Eb = kf.a(true, bf.a((byte) -110, param4, "lobby", "backbutton"));
-          SecondaryNodeDeque.field_d.field_kb = kf.a(true, bf.a((byte) -99, param4, "lobby", "backbutton_mouseover"));
-          SecondaryNodeDeque.field_d.field_pb = kf.a(true, bf.a((byte) -120, param4, "lobby", "backbutton_mouseheld"));
-          SecondaryNodeDeque.field_d.field_H = kf.a(true, bf.a((byte) -77, param4, "lobby", "backbutton_disabled"));
-          ia.field_L.field_Eb = kf.a(true, bf.a((byte) -88, param4, "lobby", "gameoptionbutton"));
-          ia.field_L.field_kb = kf.a(true, bf.a((byte) -119, param4, "lobby", "gameoptionbutton_mouseover"));
-          dupTemp$1 = kf.a(true, bf.a((byte) -84, param4, "lobby", "gameoptionbutton_active"));
+          rb.field_Kb.field_H = kf.a(true, bf.loadSpritesByName((byte) -121, param4, "lobby", "smallbutton_disabled"));
+          k.field_a.field_Eb = kf.a(true, bf.loadSpritesByName((byte) -98, param4, "lobby", "mediumbutton"));
+          k.field_a.field_kb = kf.a(true, bf.loadSpritesByName((byte) -114, param4, "lobby", "mediumbutton_mouseover"));
+          k.field_a.field_pb = kf.a(true, bf.loadSpritesByName((byte) -90, param4, "lobby", "mediumbutton_mouseheld"));
+          rj.field_l.field_Eb = kf.a(true, bf.loadSpritesByName((byte) -100, param4, "lobby", "bigbutton"));
+          rj.field_l.field_kb = kf.a(true, bf.loadSpritesByName((byte) -125, param4, "lobby", "bigbutton_mouseover"));
+          rj.field_l.field_pb = kf.a(true, bf.loadSpritesByName((byte) -118, param4, "lobby", "bigbutton_mouseheld"));
+          rj.field_l.field_H = kf.a(true, bf.loadSpritesByName((byte) -69, param4, "lobby", "bigbutton_disabled"));
+          eo.field_c.field_Eb = kf.a(true, bf.loadSpritesByName((byte) -128, param4, "lobby", "greenbutton"));
+          eo.field_c.field_kb = kf.a(true, bf.loadSpritesByName((byte) -82, param4, "lobby", "greenbutton_mouseover"));
+          eo.field_c.field_pb = kf.a(true, bf.loadSpritesByName((byte) -93, param4, "lobby", "greenbutton_mouseheld"));
+          wh.field_l.field_Eb = kf.a(true, bf.loadSpritesByName((byte) -71, param4, "lobby", "redbutton"));
+          wh.field_l.field_kb = kf.a(true, bf.loadSpritesByName((byte) -73, param4, "lobby", "redbutton_mouseover"));
+          wh.field_l.field_pb = kf.a(true, bf.loadSpritesByName((byte) -91, param4, "lobby", "redbutton_mouseheld"));
+          SecondaryNodeDeque.field_d.field_Eb = kf.a(true, bf.loadSpritesByName((byte) -110, param4, "lobby", "backbutton"));
+          SecondaryNodeDeque.field_d.field_kb = kf.a(true, bf.loadSpritesByName((byte) -99, param4, "lobby", "backbutton_mouseover"));
+          SecondaryNodeDeque.field_d.field_pb = kf.a(true, bf.loadSpritesByName((byte) -120, param4, "lobby", "backbutton_mouseheld"));
+          SecondaryNodeDeque.field_d.field_H = kf.a(true, bf.loadSpritesByName((byte) -77, param4, "lobby", "backbutton_disabled"));
+          ia.field_L.field_Eb = kf.a(true, bf.loadSpritesByName((byte) -88, param4, "lobby", "gameoptionbutton"));
+          ia.field_L.field_kb = kf.a(true, bf.loadSpritesByName((byte) -119, param4, "lobby", "gameoptionbutton_mouseover"));
+          dupTemp$1 = kf.a(true, bf.loadSpritesByName((byte) -84, param4, "lobby", "gameoptionbutton_active"));
           ia.field_L.field_Gb = dupTemp$1;
           ia.field_L.field_pb = dupTemp$1;
-          ia.field_L.field_H = kf.a(true, bf.a((byte) -86, param4, "lobby", "gameoptionbutton_disabled"));
-          t.field_o.field_Eb = kf.a(true, bf.a((byte) -117, param4, "lobby", "chatbutton"));
-          t.field_o.field_kb = kf.a(true, bf.a((byte) -101, param4, "lobby", "chatbutton_mouseover"));
-          dupTemp$2 = kf.a(true, bf.a((byte) -94, param4, "lobby", "chatbutton_active"));
+          ia.field_L.field_H = kf.a(true, bf.loadSpritesByName((byte) -86, param4, "lobby", "gameoptionbutton_disabled"));
+          t.field_o.field_Eb = kf.a(true, bf.loadSpritesByName((byte) -117, param4, "lobby", "chatbutton"));
+          t.field_o.field_kb = kf.a(true, bf.loadSpritesByName((byte) -101, param4, "lobby", "chatbutton_mouseover"));
+          dupTemp$2 = kf.a(true, bf.loadSpritesByName((byte) -94, param4, "lobby", "chatbutton_active"));
           t.field_o.field_Gb = dupTemp$2;
           t.field_o.field_pb = dupTemp$2;
-          rh.field_N.field_Eb = kf.a(true, bf.a((byte) -85, param4, "lobby", "chatfilterbutton"));
-          rh.field_N.field_kb = kf.a(true, bf.a((byte) -92, param4, "lobby", "chatfilterbutton_mouseover"));
-          dupTemp$3 = kf.a(true, bf.a((byte) -119, param4, "lobby", "chatfilterbutton_active"));
+          rh.field_N.field_Eb = kf.a(true, bf.loadSpritesByName((byte) -85, param4, "lobby", "chatfilterbutton"));
+          rh.field_N.field_kb = kf.a(true, bf.loadSpritesByName((byte) -92, param4, "lobby", "chatfilterbutton_mouseover"));
+          dupTemp$3 = kf.a(true, bf.loadSpritesByName((byte) -119, param4, "lobby", "chatfilterbutton_active"));
           rh.field_N.field_Gb = dupTemp$3;
           rh.field_N.field_pb = dupTemp$3;
-          var17 = bf.a((byte) -87, param4, "lobby", "checkbox");
+          var17 = bf.loadSpritesByName((byte) -87, param4, "lobby", "checkbox");
           vd.field_c = new mi(0L, var17[1], var17[0], 1, NotificationToast.field_n, (String) null);
           ak.field_a = new hl(0L, (hl) null);
-          ak.field_a.field_Eb = ok.a(ug.a(param4, (byte) -45, "slideregion", "lobby"), (byte) 21);
-          ak.field_a.field_kb = ok.a(ug.a(param4, (byte) -45, "slideregion_mouseover", "lobby"), (byte) 21);
-          ak.field_a.field_pb = ok.a(ug.a(param4, (byte) -45, "slideregion_mouseheld", "lobby"), (byte) 21);
-          ak.field_a.field_H = ok.a(ug.a(param4, (byte) -45, "slideregion_disabled", "lobby"), (byte) 21);
+          ak.field_a.field_Eb = ok.createCentreOnlyFrame(ug.loadFontByName(param4, (byte) -45, "slideregion", "lobby"), (byte) 21);
+          ak.field_a.field_kb = ok.createCentreOnlyFrame(ug.loadFontByName(param4, (byte) -45, "slideregion_mouseover", "lobby"), (byte) 21);
+          ak.field_a.field_pb = ok.createCentreOnlyFrame(ug.loadFontByName(param4, (byte) -45, "slideregion_mouseheld", "lobby"), (byte) 21);
+          ak.field_a.field_H = ok.createCentreOnlyFrame(ug.loadFontByName(param4, (byte) -45, "slideregion_disabled", "lobby"), (byte) 21);
           bd.field_g = new hl(0L, (hl) null);
-          bd.field_g.field_Eb = kf.a(true, bf.a((byte) -124, param4, "lobby", "dragbar"));
-          bd.field_g.field_kb = kf.a(true, bf.a((byte) -94, param4, "lobby", "dragbar_mouseover"));
-          bd.field_g.field_pb = kf.a(true, bf.a((byte) -103, param4, "lobby", "dragbar_mouseheld"));
-          bd.field_g.field_H = kf.a(true, bf.a((byte) -80, param4, "lobby", "dragbar_disabled"));
+          bd.field_g.field_Eb = kf.a(true, bf.loadSpritesByName((byte) -124, param4, "lobby", "dragbar"));
+          bd.field_g.field_kb = kf.a(true, bf.loadSpritesByName((byte) -94, param4, "lobby", "dragbar_mouseover"));
+          bd.field_g.field_pb = kf.a(true, bf.loadSpritesByName((byte) -103, param4, "lobby", "dragbar_mouseheld"));
+          bd.field_g.field_H = kf.a(true, bf.loadSpritesByName((byte) -80, param4, "lobby", "dragbar_disabled"));
           IsaacCipher.field_j = new hl(0L, (hl) null);
-          IsaacCipher.field_j.field_vb = ug.a(param4, (byte) -45, "upbutton", "lobby");
+          IsaacCipher.field_j.field_vb = ug.loadFontByName(param4, (byte) -45, "upbutton", "lobby");
           if (param1 < 38) {
             var19 = (byte[]) null;
             ti.a((byte[]) null, (byte) -120, -19);
           }
-          IsaacCipher.field_j.field_Ab = ug.a(param4, (byte) -45, "upbutton_mouseover", "lobby");
-          IsaacCipher.field_j.field_sb = ug.a(param4, (byte) -45, "upbutton_mouseheld", "lobby");
-          IsaacCipher.field_j.field_y = ug.a(param4, (byte) -45, "upbutton_disabled", "lobby");
+          IsaacCipher.field_j.field_Ab = ug.loadFontByName(param4, (byte) -45, "upbutton_mouseover", "lobby");
+          IsaacCipher.field_j.field_sb = ug.loadFontByName(param4, (byte) -45, "upbutton_mouseheld", "lobby");
+          IsaacCipher.field_j.field_y = ug.loadFontByName(param4, (byte) -45, "upbutton_disabled", "lobby");
           bj.field_c = new hl(0L, (hl) null);
-          bj.field_c.field_vb = ug.a(param4, (byte) -45, "downbutton", "lobby");
-          bj.field_c.field_Ab = ug.a(param4, (byte) -45, "downbutton_mouseover", "lobby");
-          bj.field_c.field_sb = ug.a(param4, (byte) -45, "downbutton_mouseheld", "lobby");
-          bj.field_c.field_y = ug.a(param4, (byte) -45, "downbutton_disabled", "lobby");
+          bj.field_c.field_vb = ug.loadFontByName(param4, (byte) -45, "downbutton", "lobby");
+          bj.field_c.field_Ab = ug.loadFontByName(param4, (byte) -45, "downbutton_mouseover", "lobby");
+          bj.field_c.field_sb = ug.loadFontByName(param4, (byte) -45, "downbutton_mouseheld", "lobby");
+          bj.field_c.field_y = ug.loadFontByName(param4, (byte) -45, "downbutton_disabled", "lobby");
           qc.field_cb = new bl(0L, IsaacCipher.field_j, bj.field_c, ak.field_a, bd.field_g);
           nj.field_b = new ji(0L, (hl) null, cb.field_t, qc.field_cb, rb.field_Kb, (String) null, (String) null);
           return;
@@ -295,7 +295,7 @@ final class ti {
           } else {
             stackIn_41_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
         }
     }
 
@@ -336,7 +336,7 @@ final class ti {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -362,11 +362,11 @@ final class ti {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 2) {
           field_b = (String) null;
         }
@@ -378,17 +378,17 @@ final class ti {
         field_c = null;
     }
 
-    final static void a(int param0, int param1, int param2, ve param3) {
+    final static void setLegacyMenuFrameAndPadding(int param0, int param1, int param2, ve param3) {
         try {
           SoundEffectLibrary.field_d = param2;
           qm.field_b = param3;
           if (param1 != 1) {
             ve var5 = (ve) null;
-            ti.a(-29, -41, 120, (ve) null);
+            ti.setLegacyMenuFrameAndPadding(-29, -41, 120, (ve) null);
           }
           nc.field_d = param0;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "ti.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "ti.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

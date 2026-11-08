@@ -18,15 +18,15 @@ final class kj {
           var4 = var2.field_E;
           nm.b((byte) 45);
           a.field_c = new Sprite(var3, var4 * param0 / 4);
-          a.field_c.c();
-          var2.b(0, 0);
+          a.field_c.makeRasterTarget();
+          var2.drawOpaque(0, 0);
           h.field_c = new Sprite(var3, var4 - a.field_c.field_E);
-          h.field_c.c();
-          var2.b(0, -a.field_c.field_E);
+          h.field_c.makeRasterTarget();
+          var2.drawOpaque(0, -a.field_c.field_E);
           h.field_c.field_D = a.field_c.field_E;
           dh.a(-581);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "kj.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "kj.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -40,7 +40,7 @@ final class kj {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = 2 / ((param0 - 55) / 54);
-          stackIn_1_0 = gh.a(param1, 0, param1.length, -2);
+          stackIn_1_0 = gh.joinCharSequenceRange(param1, 0, param1.length, -2);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -52,7 +52,7 @@ final class kj {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 

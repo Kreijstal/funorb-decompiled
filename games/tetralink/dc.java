@@ -15,7 +15,7 @@ final class dc implements kg {
     static String field_i;
     static hl field_l;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_i = null;
         int var1 = -95 / ((param0 + 9) / 60);
         field_e = null;
@@ -106,7 +106,7 @@ final class dc implements kg {
             if (-2 == var4) {
               var6 = Integer.toString(var2);
             }
-            var7Lifetime1 = fi.a(!(var4 < 0), var6, (byte) -75);
+            var7Lifetime1 = fi.measureText(!(var4 < 0), var6, (byte) -75);
             var8Lifetime1 = -(var7Lifetime1 >> 1) + vg.field_Lb;
             if (var4 >= 0) {
               var1_int = var1_int + mn.field_c;
@@ -122,10 +122,10 @@ final class dc implements kg {
               var1_int = var1_int + da.field_e;
             }
             if (0 > var4) {
-              dk.field_d.b(var6, var8Lifetime1, jj.field_b + var1_int, var5, -1);
+              dk.field_d.drawLeft(var6, var8Lifetime1, jj.field_b + var1_int, var5, -1);
               var1_int = var1_int + la.field_e;
             } else {
-              cf.field_o.b(var6, var8Lifetime1, rn.field_b + var1_int, var5, -1);
+              cf.field_o.drawLeft(var6, var8Lifetime1, rn.field_b + var1_int, var5, -1);
               var1_int = var1_int + (mn.field_c + da.field_e + bj.field_d);
             }
           }
@@ -133,7 +133,7 @@ final class dc implements kg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var1), "dc.A(" + param0 + ')');
+          throw oi.wrapException((Throwable) ((Object) var1), "dc.A(" + param0 + ')');
         }
     }
 
@@ -147,7 +147,7 @@ final class dc implements kg {
           this.field_h = param5;
           this.field_b = param4;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "dc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "dc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -158,7 +158,7 @@ final class dc implements kg {
         return -lb.field_V + ia.field_K;
     }
 
-    public final void a(UiWidget param0, int param1, int param2, boolean param3, boolean param4) {
+    public final void drawWidget(UiWidget param0, int param1, int param2, boolean param3, boolean param4) {
         int var10 = 0;
         UiWidget stackIn_4_0 = null;
         RuntimeException stackIn_16_0 = null;
@@ -184,18 +184,18 @@ final class dc implements kg {
           }
           if (var12 != null) {
           }
-          SoftwareRasterizer.c(param1 + param0.field_t, param0.field_w + param2, param0.field_F, param0.field_u, this.field_b);
+          SoftwareRasterizer.fillRectangle(param1 + param0.field_t, param0.field_w + param2, param0.field_F, param0.field_u, this.field_b);
           var7 = -(var12.field_W * 2) + param0.field_F;
           var8 = param1 - (-param0.field_t - var12.field_W);
           var9 = param2 + param0.field_w + var12.field_V;
-          SoftwareRasterizer.d(var8, var9, var8 + var7, var9, this.field_g);
+          SoftwareRasterizer.drawLine(var8, var9, var8 + var7, var9, this.field_g);
           for (var10 = var12.e((byte) -116) - 1; 0 <= var10; var10--) {
-            SoftwareRasterizer.f(var7 * var12.a(var10, (byte) 119) / var12.a(23329) + var8, var9, this.field_h, this.field_a);
+            SoftwareRasterizer.fillCircle(var7 * var12.a(var10, (byte) 119) / var12.a(23329) + var8, var9, this.field_h, this.field_a);
           }
           if (null == this.field_c) {
             return;
           }
-          this.field_c.a(var12.field_A, var7 / 2 + var8, var9 - (-this.field_c.field_H - var12.field_V), this.field_j, this.field_f);
+          this.field_c.drawCentered(var12.field_A, var7 / 2 + var8, var9 - (-this.field_c.field_H - var12.field_V), this.field_j, this.field_f);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -207,7 +207,7 @@ final class dc implements kg {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

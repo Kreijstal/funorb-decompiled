@@ -7,7 +7,7 @@ final class hh {
     static String field_a;
     static String[] field_d;
 
-    final static Class a(String param0, int param1) throws ClassNotFoundException {
+    final static Class classForDescriptor(String param0, int param1) throws ClassNotFoundException {
         int var2_int = 0;
         RuntimeException var2 = null;
         Class stackIn_2_0 = null;
@@ -69,11 +69,11 @@ final class hh {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param1).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 > 119) {
           field_d = null;
           field_b = null;
@@ -96,7 +96,7 @@ final class hh {
           hl.field_wb = param0;
           return;
         }
-        hh.a((byte) 61);
+        hh.releaseStatics((byte) 61);
         h.field_a = param3;
         hl.field_wb = param0;
     }

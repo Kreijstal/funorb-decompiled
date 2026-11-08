@@ -18,7 +18,7 @@ final class bd {
         Sprite[] var6Lifetime1;
         Sprite[] var5Lifetime1;
         if (param4 != 126) {
-          bd.a((byte) -37);
+          bd.releaseStatics((byte) -37);
           var6 = new Sprite[9];
           var5 = var6;
           dupTemp$0 = ce.a(param2, param1, param4 - 126);
@@ -74,13 +74,13 @@ final class bd {
             bd.a((Sprite) null, -66);
           }
           me.a(false);
-          param0.c();
+          param0.makeRasterTarget();
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "bd.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "bd.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_f = null;
         field_d = null;
         field_c = null;

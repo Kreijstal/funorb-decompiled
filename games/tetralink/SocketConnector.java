@@ -28,7 +28,7 @@ abstract class SocketConnector {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var1), "ca.L(" + param0 + ')');
+          throw oi.wrapException((Throwable) ((Object) var1), "ca.L(" + param0 + ')');
         }
     }
 
@@ -43,7 +43,7 @@ abstract class SocketConnector {
         try {
           field_f = null;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "ca.J(" + param0 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "ca.J(" + param0 + ')');
         }
     }
 
@@ -59,7 +59,7 @@ abstract class SocketConnector {
           }
           UiWidget.c(true);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "ca.G(" + param0 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "ca.G(" + param0 + ')');
         }
     }
 
@@ -93,7 +93,7 @@ abstract class SocketConnector {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var3), "ca.H(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw oi.wrapException((Throwable) ((Object) var3), "ca.H(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -112,11 +112,11 @@ abstract class SocketConnector {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var2), "ca.K(" + param0 + ')');
+          throw oi.wrapException((Throwable) ((Object) var2), "ca.K(" + param0 + ')');
         }
     }
 
-    abstract java.net.Socket a(byte param0) throws IOException;
+    abstract java.net.Socket connect(byte param0) throws IOException;
 
     final static void a(boolean param0, byte param1) {
         RuntimeException decompiledCaughtException = null;
@@ -199,7 +199,7 @@ abstract class SocketConnector {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var2), "ca.I(" + param0 + ',' + param1 + ')');
+          throw oi.wrapException((Throwable) ((Object) var2), "ca.I(" + param0 + ',' + param1 + ')');
         }
     }
 

@@ -13,7 +13,7 @@ class lk extends ml implements dm {
     private lg field_tb;
     static String field_nb;
 
-    public static void f(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = -101 / ((-67 - param0) / 47);
         field_nb = null;
         field_pb = null;
@@ -102,7 +102,7 @@ class lk extends ml implements dm {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
@@ -118,11 +118,11 @@ class lk extends ml implements dm {
           this.field_tb.field_K = true;
           this.c(this.field_tb, 10);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "lk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "lk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    final boolean a(int param0, char param1, int param2, UiWidget param3) {
+    final boolean handleKey(int param0, char param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -134,7 +134,7 @@ class lk extends ml implements dm {
             lk.q(108);
           }
           if (param0 != 13) {
-            stackIn_7_0 = super.a(param0, param1, 1, param3);
+            stackIn_7_0 = super.handleKey(param0, param1, 1, param3);
             return stackIn_7_0;
           }
           this.r(-125);
@@ -149,7 +149,7 @@ class lk extends ml implements dm {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -161,7 +161,7 @@ class lk extends ml implements dm {
         this.field_tb.b(param0 ^ 248, 2121792, 4210752);
         ba var2 = new ba(this, this.field_ub, oa.field_t);
         var2.a(lm.field_l, 15, param0 ^ -256);
-        this.e(var2, -27667);
+        this.transitionToContent(var2, -27667);
     }
 
     final static java.applet.Applet q(int param0) {
@@ -212,7 +212,7 @@ class lk extends ml implements dm {
           if (12 <= var3_int) {
             return false;
           }
-          if (!tk.a((byte) 81, param0)) {
+          if (!tk.isNameSeparator((byte) 81, param0)) {
             return true;
           }
           if (var3_int != 0) {
@@ -229,7 +229,7 @@ class lk extends ml implements dm {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
@@ -435,7 +435,7 @@ class lk extends ml implements dm {
           } else {
             stackIn_101_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_100_0), ((StringBuilder) (Object) stackIn_100_1).append(stackIn_101_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_100_0), ((StringBuilder) (Object) stackIn_100_1).append(stackIn_101_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -489,14 +489,14 @@ class lk extends ml implements dm {
                 var6.a(MatchSetup.field_c, 9, 81);
               } else {
                 if (9 != param1) {
-                  this.e(var6, -27667);
+                  this.transitionToContent(var6, -27667);
                   return;
                 }
                 var6.a((dn) (this), 40, jm.field_d);
               }
             }
           }
-          this.e(var6, -27667);
+          this.transitionToContent(var6, -27667);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -508,7 +508,7 @@ class lk extends ml implements dm {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -539,7 +539,7 @@ class lk extends ml implements dm {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

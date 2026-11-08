@@ -45,7 +45,7 @@ class mf extends al {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -76,22 +76,22 @@ class mf extends al {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var1), "mf.I(" + param0 + ')');
+          throw oi.wrapException((Throwable) ((Object) var1), "mf.I(" + param0 + ')');
         }
     }
 
-    public final void a(UiWidget param0, int param1, int param2, boolean param3, boolean param4) {
+    public final void drawWidget(UiWidget param0, int param1, int param2, boolean param3, boolean param4) {
         try {
           if (param4) {
             in.a(param1 + param0.field_t, param0.field_w + param2, (byte) -110, param0.field_F, param0.field_u);
           }
-          super.a(param0, param1, param2, param3, param4);
+          super.drawWidget(param0, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "mf.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "mf.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_s = null;
         field_q = null;
         if (!param0) {
@@ -170,7 +170,7 @@ class mf extends al {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var1), "mf.M(" + param0 + ')');
+          throw oi.wrapException((Throwable) ((Object) var1), "mf.M(" + param0 + ')');
         }
     }
 

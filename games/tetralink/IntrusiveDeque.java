@@ -30,7 +30,7 @@ final class IntrusiveDeque {
         return;
     }
 
-    final IntrusiveNode a(byte param0, IntrusiveNode param1) {
+    final IntrusiveNode startBackwardFrom(byte param0, IntrusiveNode param1) {
         IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_6_0 = null;
@@ -66,7 +66,7 @@ final class IntrusiveDeque {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -141,11 +141,11 @@ final class IntrusiveDeque {
         try {
           param2.a(param3, false);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "je.I(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "je.I(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_g = null;
         field_b = null;
         field_e = null;
@@ -210,7 +210,7 @@ final class IntrusiveDeque {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var1_ref), "je.C(" + param0 + ')');
+          throw oi.wrapException((Throwable) ((Object) var1_ref), "je.C(" + param0 + ')');
         }
     }
 
@@ -227,7 +227,7 @@ final class IntrusiveDeque {
           param0.previous.next = param0;
           param0.next.previous = param0;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "je.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "je.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -314,7 +314,7 @@ final class IntrusiveDeque {
           var7Lifetime1 = 0;
           for (var8Lifetime1 = 0; hk.field_b.length > var8Lifetime1; var8Lifetime1++) {
             stackIn_26_0 = !(bi.field_c[var8Lifetime1] < 0);
-            var9Lifetime1 = tn.a(stackIn_26_0, 1, hk.field_b[var8Lifetime1]);
+            var9Lifetime1 = tn.measureText(stackIn_26_0, 1, hk.field_b[var8Lifetime1]);
             if (-1 != bi.field_c[var8Lifetime1]) {
               var9Lifetime1 = var9Lifetime1 + 2 * ao.field_a;
             }
@@ -350,7 +350,7 @@ final class IntrusiveDeque {
           } else {
             stackIn_46_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -365,7 +365,7 @@ final class IntrusiveDeque {
           int var3_int = -56 / ((param1 - 37) / 58);
           param0.next.previous = param0;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "je.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "je.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

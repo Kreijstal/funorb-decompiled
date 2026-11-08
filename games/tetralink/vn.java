@@ -20,7 +20,7 @@ final class vn {
     static int field_a;
     static int[] field_m;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final static void drawFlatTriangle(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int localTemp$0 = 0;
         int localTemp$1 = 0;
         int localTemp$2 = 0;
@@ -77,7 +77,7 @@ final class vn {
               while (true) {
                 param2--;
                 if (param2 >= 0) {
-                  vn.a(SoftwareRasterizer.field_b, param0, param6, 0, param3 >> 16, param4 >> 16);
+                  vn.drawFlatSpan(SoftwareRasterizer.field_b, param0, param6, 0, param3 >> 16, param4 >> 16);
                   param4 = param4 + var9;
                   param3 = param3 + var7;
                   param0 = param0 + SoftwareRasterizer.field_f;
@@ -87,7 +87,7 @@ final class vn {
               }
               param1--;
               while (param1 >= 0) {
-                vn.a(SoftwareRasterizer.field_b, param0, param6, 0, param3 >> 16, param5 >> 16);
+                vn.drawFlatSpan(SoftwareRasterizer.field_b, param0, param6, 0, param3 >> 16, param5 >> 16);
                 param5 = param5 + var8;
                 param3 = param3 + var7;
                 param0 = param0 + SoftwareRasterizer.field_f;
@@ -101,7 +101,7 @@ final class vn {
             while (true) {
               param2--;
               if (param2 >= 0) {
-                vn.a(SoftwareRasterizer.field_b, param0, param6, 0, param4 >> 16, param3 >> 16);
+                vn.drawFlatSpan(SoftwareRasterizer.field_b, param0, param6, 0, param4 >> 16, param3 >> 16);
                 param4 = param4 + var9;
                 param3 = param3 + var7;
                 param0 = param0 + SoftwareRasterizer.field_f;
@@ -111,7 +111,7 @@ final class vn {
             }
             param1--;
             while (param1 >= 0) {
-              vn.a(SoftwareRasterizer.field_b, param0, param6, 0, param5 >> 16, param3 >> 16);
+              vn.drawFlatSpan(SoftwareRasterizer.field_b, param0, param6, 0, param5 >> 16, param3 >> 16);
               param5 = param5 + var8;
               param3 = param3 + var7;
               param0 = param0 + SoftwareRasterizer.field_f;
@@ -142,7 +142,7 @@ final class vn {
             while (true) {
               param1--;
               if (param1 >= 0) {
-                vn.a(SoftwareRasterizer.field_b, param0, param6, 0, param3 >> 16, param5 >> 16);
+                vn.drawFlatSpan(SoftwareRasterizer.field_b, param0, param6, 0, param3 >> 16, param5 >> 16);
                 param5 = param5 + var9;
                 param3 = param3 + var7;
                 param0 = param0 + SoftwareRasterizer.field_f;
@@ -152,7 +152,7 @@ final class vn {
             }
             param2--;
             while (param2 >= 0) {
-              vn.a(SoftwareRasterizer.field_b, param0, param6, 0, param4 >> 16, param5 >> 16);
+              vn.drawFlatSpan(SoftwareRasterizer.field_b, param0, param6, 0, param4 >> 16, param5 >> 16);
               param5 = param5 + var9;
               param4 = param4 + var8;
               param0 = param0 + SoftwareRasterizer.field_f;
@@ -166,7 +166,7 @@ final class vn {
           while (true) {
             param1--;
             if (param1 >= 0) {
-              vn.a(SoftwareRasterizer.field_b, param0, param6, 0, param5 >> 16, param3 >> 16);
+              vn.drawFlatSpan(SoftwareRasterizer.field_b, param0, param6, 0, param5 >> 16, param3 >> 16);
               param5 = param5 + var9;
               param3 = param3 + var7;
               param0 = param0 + SoftwareRasterizer.field_f;
@@ -176,7 +176,7 @@ final class vn {
           }
           param2--;
           while (param2 >= 0) {
-            vn.a(SoftwareRasterizer.field_b, param0, param6, 0, param5 >> 16, param4 >> 16);
+            vn.drawFlatSpan(SoftwareRasterizer.field_b, param0, param6, 0, param5 >> 16, param4 >> 16);
             param5 = param5 + var9;
             param4 = param4 + var8;
             param0 = param0 + SoftwareRasterizer.field_f;
@@ -215,7 +215,7 @@ final class vn {
               while (true) {
                 param1--;
                 if (param1 >= 0) {
-                  vn.a(SoftwareRasterizer.field_b, param2, param6, 0, param5 >> 16, param3 >> 16);
+                  vn.drawFlatSpan(SoftwareRasterizer.field_b, param2, param6, 0, param5 >> 16, param3 >> 16);
                   param3 = param3 + var8;
                   param5 = param5 + var9;
                   param2 = param2 + SoftwareRasterizer.field_f;
@@ -225,7 +225,7 @@ final class vn {
               }
               param0--;
               while (param0 >= 0) {
-                vn.a(SoftwareRasterizer.field_b, param2, param6, 0, param5 >> 16, param4 >> 16);
+                vn.drawFlatSpan(SoftwareRasterizer.field_b, param2, param6, 0, param5 >> 16, param4 >> 16);
                 param4 = param4 + var7;
                 param5 = param5 + var9;
                 param2 = param2 + SoftwareRasterizer.field_f;
@@ -239,7 +239,7 @@ final class vn {
             while (true) {
               param1--;
               if (param1 >= 0) {
-                vn.a(SoftwareRasterizer.field_b, param2, param6, 0, param3 >> 16, param5 >> 16);
+                vn.drawFlatSpan(SoftwareRasterizer.field_b, param2, param6, 0, param3 >> 16, param5 >> 16);
                 param3 = param3 + var8;
                 param5 = param5 + var9;
                 param2 = param2 + SoftwareRasterizer.field_f;
@@ -249,7 +249,7 @@ final class vn {
             }
             param0--;
             while (param0 >= 0) {
-              vn.a(SoftwareRasterizer.field_b, param2, param6, 0, param4 >> 16, param5 >> 16);
+              vn.drawFlatSpan(SoftwareRasterizer.field_b, param2, param6, 0, param4 >> 16, param5 >> 16);
               param4 = param4 + var7;
               param5 = param5 + var9;
               param2 = param2 + SoftwareRasterizer.field_f;
@@ -277,7 +277,7 @@ final class vn {
             while (true) {
               param0--;
               if (param0 >= 0) {
-                vn.a(SoftwareRasterizer.field_b, param2, param6, 0, param5 >> 16, param4 >> 16);
+                vn.drawFlatSpan(SoftwareRasterizer.field_b, param2, param6, 0, param5 >> 16, param4 >> 16);
                 param4 = param4 + var8;
                 param5 = param5 + var9;
                 param2 = param2 + SoftwareRasterizer.field_f;
@@ -287,7 +287,7 @@ final class vn {
             }
             param1--;
             while (param1 >= 0) {
-              vn.a(SoftwareRasterizer.field_b, param2, param6, 0, param3 >> 16, param4 >> 16);
+              vn.drawFlatSpan(SoftwareRasterizer.field_b, param2, param6, 0, param3 >> 16, param4 >> 16);
               param4 = param4 + var8;
               param3 = param3 + var7;
               param2 = param2 + SoftwareRasterizer.field_f;
@@ -301,7 +301,7 @@ final class vn {
           while (true) {
             param0--;
             if (param0 >= 0) {
-              vn.a(SoftwareRasterizer.field_b, param2, param6, 0, param4 >> 16, param5 >> 16);
+              vn.drawFlatSpan(SoftwareRasterizer.field_b, param2, param6, 0, param4 >> 16, param5 >> 16);
               param4 = param4 + var8;
               param5 = param5 + var9;
               param2 = param2 + SoftwareRasterizer.field_f;
@@ -311,7 +311,7 @@ final class vn {
           }
           param1--;
           while (param1 >= 0) {
-            vn.a(SoftwareRasterizer.field_b, param2, param6, 0, param4 >> 16, param3 >> 16);
+            vn.drawFlatSpan(SoftwareRasterizer.field_b, param2, param6, 0, param4 >> 16, param3 >> 16);
             param4 = param4 + var8;
             param3 = param3 + var7;
             param2 = param2 + SoftwareRasterizer.field_f;
@@ -349,7 +349,7 @@ final class vn {
             while (true) {
               param0--;
               if (param0 >= 0) {
-                vn.a(SoftwareRasterizer.field_b, param1, param6, 0, param4 >> 16, param5 >> 16);
+                vn.drawFlatSpan(SoftwareRasterizer.field_b, param1, param6, 0, param4 >> 16, param5 >> 16);
                 param5 = param5 + var7;
                 param4 = param4 + var8;
                 param1 = param1 + SoftwareRasterizer.field_f;
@@ -359,7 +359,7 @@ final class vn {
             }
             param2--;
             while (param2 >= 0) {
-              vn.a(SoftwareRasterizer.field_b, param1, param6, 0, param4 >> 16, param3 >> 16);
+              vn.drawFlatSpan(SoftwareRasterizer.field_b, param1, param6, 0, param4 >> 16, param3 >> 16);
               param3 = param3 + var9;
               param4 = param4 + var8;
               param1 = param1 + SoftwareRasterizer.field_f;
@@ -373,7 +373,7 @@ final class vn {
           while (true) {
             param0--;
             if (param0 >= 0) {
-              vn.a(SoftwareRasterizer.field_b, param1, param6, 0, param5 >> 16, param4 >> 16);
+              vn.drawFlatSpan(SoftwareRasterizer.field_b, param1, param6, 0, param5 >> 16, param4 >> 16);
               param5 = param5 + var7;
               param4 = param4 + var8;
               param1 = param1 + SoftwareRasterizer.field_f;
@@ -383,7 +383,7 @@ final class vn {
           }
           param2--;
           while (param2 >= 0) {
-            vn.a(SoftwareRasterizer.field_b, param1, param6, 0, param3 >> 16, param4 >> 16);
+            vn.drawFlatSpan(SoftwareRasterizer.field_b, param1, param6, 0, param3 >> 16, param4 >> 16);
             param3 = param3 + var9;
             param4 = param4 + var8;
             param1 = param1 + SoftwareRasterizer.field_f;
@@ -414,7 +414,7 @@ final class vn {
           while (true) {
             param2--;
             if (param2 >= 0) {
-              vn.a(SoftwareRasterizer.field_b, param1, param6, 0, param4 >> 16, param3 >> 16);
+              vn.drawFlatSpan(SoftwareRasterizer.field_b, param1, param6, 0, param4 >> 16, param3 >> 16);
               param3 = param3 + var7;
               param4 = param4 + var8;
               param1 = param1 + SoftwareRasterizer.field_f;
@@ -424,7 +424,7 @@ final class vn {
           }
           param0--;
           while (param0 >= 0) {
-            vn.a(SoftwareRasterizer.field_b, param1, param6, 0, param5 >> 16, param3 >> 16);
+            vn.drawFlatSpan(SoftwareRasterizer.field_b, param1, param6, 0, param5 >> 16, param3 >> 16);
             param3 = param3 + var7;
             param5 = param5 + var9;
             param1 = param1 + SoftwareRasterizer.field_f;
@@ -438,7 +438,7 @@ final class vn {
         while (true) {
           param2--;
           if (param2 >= 0) {
-            vn.a(SoftwareRasterizer.field_b, param1, param6, 0, param3 >> 16, param4 >> 16);
+            vn.drawFlatSpan(SoftwareRasterizer.field_b, param1, param6, 0, param3 >> 16, param4 >> 16);
             param3 = param3 + var7;
             param4 = param4 + var8;
             param1 = param1 + SoftwareRasterizer.field_f;
@@ -448,7 +448,7 @@ final class vn {
         }
         param0--;
         while (param0 >= 0) {
-          vn.a(SoftwareRasterizer.field_b, param1, param6, 0, param3 >> 16, param5 >> 16);
+          vn.drawFlatSpan(SoftwareRasterizer.field_b, param1, param6, 0, param3 >> 16, param5 >> 16);
           param3 = param3 + var7;
           param5 = param5 + var9;
           param1 = param1 + SoftwareRasterizer.field_f;
@@ -457,7 +457,7 @@ final class vn {
         return;
     }
 
-    private final static void b(int param0, int param1) {
+    private final static void buildColorPalette(int param0, int param1) {
         int var3 = 0;
         int var8 = 0;
         int incrementValue$0 = 0;
@@ -559,7 +559,7 @@ final class vn {
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void setProjectionCenter(int param0, int param1) {
         int var2 = field_h[0];
         int var3 = var2 / SoftwareRasterizer.field_f;
         int var4 = var2 - var3 * SoftwareRasterizer.field_f;
@@ -567,7 +567,7 @@ final class vn {
         field_f = param1 - var3;
     }
 
-    private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    private final static void drawShadedSpan(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int incrementValue$14 = 0;
         int incrementValue$13 = 0;
         int incrementValue$15 = 0;
@@ -686,21 +686,21 @@ final class vn {
 
     }
 
-    final static void b(float param0) {
-        vn.a(param0);
-        vn.b(0, 512);
+    final static void setBrightnessAndRebuildPalette(float param0) {
+        vn.setRandomizedBrightness(param0);
+        vn.buildColorPalette(0, 512);
     }
 
     final static void a(m param0) {
         field_d = param0;
     }
 
-    private final static void a(float param0) {
+    private final static void setRandomizedBrightness(float param0) {
         field_l = param0;
         field_l = (float)((double)field_l + (Math.random() * 0.03 - 0.015));
     }
 
-    private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5) {
+    private final static void drawFlatSpan(int[] param0, int param1, int param2, int param3, int param4, int param5) {
         int incrementValue$12 = 0;
         int incrementValue$13 = 0;
         int incrementValue$14 = 0;
@@ -818,7 +818,7 @@ final class vn {
         }
     }
 
-    public static void a() {
+    public static void releaseStatics() {
         field_h = null;
         field_m = null;
         field_d = null;
@@ -828,15 +828,15 @@ final class vn {
         field_o = null;
     }
 
-    final static void b() {
-        vn.a(SoftwareRasterizer.field_j, SoftwareRasterizer.field_i, SoftwareRasterizer.field_l, SoftwareRasterizer.field_g);
+    final static void useRasterClip() {
+        vn.setViewport(SoftwareRasterizer.field_j, SoftwareRasterizer.field_i, SoftwareRasterizer.field_l, SoftwareRasterizer.field_g);
     }
 
-    private final static void a(int param0, int param1, int param2, int param3) {
+    private final static void setViewport(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         field_k = param2 - param0;
         field_n = param3 - param1;
-        vn.c();
+        vn.centerProjection();
         if (field_h.length < field_n) {
           field_h = new int[cc.a(field_n, (byte) -109)];
         }
@@ -847,7 +847,7 @@ final class vn {
         }
     }
 
-    private final static int c(int param0, int param1) {
+    private final static int scaleHslLightness(int param0, int param1) {
         param1 = param1 * (param0 & 127) >> 7;
         if (param1 < 2) {
           param1 = 2;
@@ -859,7 +859,7 @@ final class vn {
         return (param0 & 65408) + param1;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16, int param17, int param18) {
+    final static void drawTexturedTriangle(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16, int param17, int param18) {
         int localTemp$4 = 0;
         int localTemp$5 = 0;
         int localTemp$6 = 0;
@@ -985,7 +985,7 @@ final class vn {
                 while (true) {
                   param2--;
                   if (param2 >= 0) {
-                    vn.a(SoftwareRasterizer.field_b, var43, 0, 0, param0, param3 >> 16, param4 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+                    vn.drawTexturedScanline(SoftwareRasterizer.field_b, var43, 0, 0, param0, param3 >> 16, param4 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
                     param4 = param4 + var28;
                     param3 = param3 + var26;
                     param6 = param6 + var31;
@@ -999,7 +999,7 @@ final class vn {
                 }
                 param1--;
                 while (param1 >= 0) {
-                  vn.a(SoftwareRasterizer.field_b, var43, 0, 0, param0, param3 >> 16, param5 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+                  vn.drawTexturedScanline(SoftwareRasterizer.field_b, var43, 0, 0, param0, param3 >> 16, param5 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
                   param5 = param5 + var27;
                   param3 = param3 + var26;
                   param6 = param6 + var31;
@@ -1017,7 +1017,7 @@ final class vn {
               while (true) {
                 param2--;
                 if (param2 >= 0) {
-                  vn.a(SoftwareRasterizer.field_b, var43, 0, 0, param0, param4 >> 16, param3 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+                  vn.drawTexturedScanline(SoftwareRasterizer.field_b, var43, 0, 0, param0, param4 >> 16, param3 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
                   param4 = param4 + var28;
                   param3 = param3 + var26;
                   param6 = param6 + var31;
@@ -1031,7 +1031,7 @@ final class vn {
               }
               param1--;
               while (param1 >= 0) {
-                vn.a(SoftwareRasterizer.field_b, var43, 0, 0, param0, param5 >> 16, param3 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+                vn.drawTexturedScanline(SoftwareRasterizer.field_b, var43, 0, 0, param0, param5 >> 16, param3 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
                 param5 = param5 + var27;
                 param3 = param3 + var26;
                 param6 = param6 + var31;
@@ -1070,7 +1070,7 @@ final class vn {
               while (true) {
                 param1--;
                 if (param1 >= 0) {
-                  vn.a(SoftwareRasterizer.field_b, var43, 0, 0, param0, param3 >> 16, param5 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+                  vn.drawTexturedScanline(SoftwareRasterizer.field_b, var43, 0, 0, param0, param3 >> 16, param5 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
                   param5 = param5 + var28;
                   param3 = param3 + var26;
                   param6 = param6 + var31;
@@ -1084,7 +1084,7 @@ final class vn {
               }
               param2--;
               while (param2 >= 0) {
-                vn.a(SoftwareRasterizer.field_b, var43, 0, 0, param0, param4 >> 16, param5 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+                vn.drawTexturedScanline(SoftwareRasterizer.field_b, var43, 0, 0, param0, param4 >> 16, param5 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
                 param5 = param5 + var28;
                 param4 = param4 + var27;
                 param6 = param6 + var31;
@@ -1102,7 +1102,7 @@ final class vn {
             while (true) {
               param1--;
               if (param1 >= 0) {
-                vn.a(SoftwareRasterizer.field_b, var43, 0, 0, param0, param5 >> 16, param3 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+                vn.drawTexturedScanline(SoftwareRasterizer.field_b, var43, 0, 0, param0, param5 >> 16, param3 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
                 param5 = param5 + var28;
                 param3 = param3 + var26;
                 param6 = param6 + var31;
@@ -1116,7 +1116,7 @@ final class vn {
             }
             param2--;
             while (param2 >= 0) {
-              vn.a(SoftwareRasterizer.field_b, var43, 0, 0, param0, param5 >> 16, param4 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+              vn.drawTexturedScanline(SoftwareRasterizer.field_b, var43, 0, 0, param0, param5 >> 16, param4 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
               param5 = param5 + var28;
               param4 = param4 + var27;
               param6 = param6 + var31;
@@ -1165,7 +1165,7 @@ final class vn {
                 while (true) {
                   param1--;
                   if (param1 >= 0) {
-                    vn.a(SoftwareRasterizer.field_b, var43, 0, 0, param2, param5 >> 16, param3 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+                    vn.drawTexturedScanline(SoftwareRasterizer.field_b, var43, 0, 0, param2, param5 >> 16, param3 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
                     param3 = param3 + var27;
                     param5 = param5 + var28;
                     param8 = param8 + var31;
@@ -1179,7 +1179,7 @@ final class vn {
                 }
                 param0--;
                 while (param0 >= 0) {
-                  vn.a(SoftwareRasterizer.field_b, var43, 0, 0, param2, param5 >> 16, param4 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+                  vn.drawTexturedScanline(SoftwareRasterizer.field_b, var43, 0, 0, param2, param5 >> 16, param4 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
                   param4 = param4 + var26;
                   param5 = param5 + var28;
                   param8 = param8 + var31;
@@ -1197,7 +1197,7 @@ final class vn {
               while (true) {
                 param1--;
                 if (param1 >= 0) {
-                  vn.a(SoftwareRasterizer.field_b, var43, 0, 0, param2, param3 >> 16, param5 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+                  vn.drawTexturedScanline(SoftwareRasterizer.field_b, var43, 0, 0, param2, param3 >> 16, param5 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
                   param3 = param3 + var27;
                   param5 = param5 + var28;
                   param8 = param8 + var31;
@@ -1211,7 +1211,7 @@ final class vn {
               }
               param0--;
               while (param0 >= 0) {
-                vn.a(SoftwareRasterizer.field_b, var43, 0, 0, param2, param4 >> 16, param5 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+                vn.drawTexturedScanline(SoftwareRasterizer.field_b, var43, 0, 0, param2, param4 >> 16, param5 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
                 param4 = param4 + var26;
                 param5 = param5 + var28;
                 param8 = param8 + var31;
@@ -1248,7 +1248,7 @@ final class vn {
               while (true) {
                 param0--;
                 if (param0 >= 0) {
-                  vn.a(SoftwareRasterizer.field_b, var43, 0, 0, param2, param5 >> 16, param4 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+                  vn.drawTexturedScanline(SoftwareRasterizer.field_b, var43, 0, 0, param2, param5 >> 16, param4 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
                   param4 = param4 + var27;
                   param5 = param5 + var28;
                   param8 = param8 + var31;
@@ -1262,7 +1262,7 @@ final class vn {
               }
               param1--;
               while (param1 >= 0) {
-                vn.a(SoftwareRasterizer.field_b, var43, 0, 0, param2, param3 >> 16, param4 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+                vn.drawTexturedScanline(SoftwareRasterizer.field_b, var43, 0, 0, param2, param3 >> 16, param4 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
                 param4 = param4 + var27;
                 param3 = param3 + var26;
                 param8 = param8 + var31;
@@ -1280,7 +1280,7 @@ final class vn {
             while (true) {
               param0--;
               if (param0 >= 0) {
-                vn.a(SoftwareRasterizer.field_b, var43, 0, 0, param2, param4 >> 16, param5 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+                vn.drawTexturedScanline(SoftwareRasterizer.field_b, var43, 0, 0, param2, param4 >> 16, param5 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
                 param4 = param4 + var27;
                 param5 = param5 + var28;
                 param8 = param8 + var31;
@@ -1294,7 +1294,7 @@ final class vn {
             }
             param1--;
             while (param1 >= 0) {
-              vn.a(SoftwareRasterizer.field_b, var43, 0, 0, param2, param4 >> 16, param3 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+              vn.drawTexturedScanline(SoftwareRasterizer.field_b, var43, 0, 0, param2, param4 >> 16, param3 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
               param4 = param4 + var27;
               param3 = param3 + var26;
               param8 = param8 + var31;
@@ -1342,7 +1342,7 @@ final class vn {
               while (true) {
                 param0--;
                 if (param0 >= 0) {
-                  vn.a(SoftwareRasterizer.field_b, var43, 0, 0, param1, param4 >> 16, param5 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+                  vn.drawTexturedScanline(SoftwareRasterizer.field_b, var43, 0, 0, param1, param4 >> 16, param5 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
                   param5 = param5 + var26;
                   param4 = param4 + var27;
                   param7 = param7 + var31;
@@ -1356,7 +1356,7 @@ final class vn {
               }
               param2--;
               while (param2 >= 0) {
-                vn.a(SoftwareRasterizer.field_b, var43, 0, 0, param1, param4 >> 16, param3 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+                vn.drawTexturedScanline(SoftwareRasterizer.field_b, var43, 0, 0, param1, param4 >> 16, param3 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
                 param3 = param3 + var28;
                 param4 = param4 + var27;
                 param7 = param7 + var31;
@@ -1374,7 +1374,7 @@ final class vn {
             while (true) {
               param0--;
               if (param0 >= 0) {
-                vn.a(SoftwareRasterizer.field_b, var43, 0, 0, param1, param5 >> 16, param4 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+                vn.drawTexturedScanline(SoftwareRasterizer.field_b, var43, 0, 0, param1, param5 >> 16, param4 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
                 param5 = param5 + var26;
                 param4 = param4 + var27;
                 param7 = param7 + var31;
@@ -1388,7 +1388,7 @@ final class vn {
             }
             param2--;
             while (param2 >= 0) {
-              vn.a(SoftwareRasterizer.field_b, var43, 0, 0, param1, param3 >> 16, param4 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+              vn.drawTexturedScanline(SoftwareRasterizer.field_b, var43, 0, 0, param1, param3 >> 16, param4 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
               param3 = param3 + var28;
               param4 = param4 + var27;
               param7 = param7 + var31;
@@ -1427,7 +1427,7 @@ final class vn {
             while (true) {
               param2--;
               if (param2 >= 0) {
-                vn.a(SoftwareRasterizer.field_b, var43, 0, 0, param1, param4 >> 16, param3 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+                vn.drawTexturedScanline(SoftwareRasterizer.field_b, var43, 0, 0, param1, param4 >> 16, param3 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
                 param3 = param3 + var26;
                 param4 = param4 + var27;
                 param7 = param7 + var31;
@@ -1441,7 +1441,7 @@ final class vn {
             }
             param0--;
             while (param0 >= 0) {
-              vn.a(SoftwareRasterizer.field_b, var43, 0, 0, param1, param5 >> 16, param3 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+              vn.drawTexturedScanline(SoftwareRasterizer.field_b, var43, 0, 0, param1, param5 >> 16, param3 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
               param3 = param3 + var26;
               param5 = param5 + var28;
               param7 = param7 + var31;
@@ -1459,7 +1459,7 @@ final class vn {
           while (true) {
             param2--;
             if (param2 >= 0) {
-              vn.a(SoftwareRasterizer.field_b, var43, 0, 0, param1, param3 >> 16, param4 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+              vn.drawTexturedScanline(SoftwareRasterizer.field_b, var43, 0, 0, param1, param3 >> 16, param4 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
               param3 = param3 + var26;
               param4 = param4 + var27;
               param7 = param7 + var31;
@@ -1473,7 +1473,7 @@ final class vn {
           }
           param0--;
           while (param0 >= 0) {
-            vn.a(SoftwareRasterizer.field_b, var43, 0, 0, param1, param3 >> 16, param5 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+            vn.drawTexturedScanline(SoftwareRasterizer.field_b, var43, 0, 0, param1, param3 >> 16, param5 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
             param3 = param3 + var26;
             param5 = param5 + var28;
             param7 = param7 + var31;
@@ -1486,10 +1486,10 @@ final class vn {
           return;
         }
         var20Lifetime1 = field_d.b(6092, param18);
-        vn.a(param0, param1, param2, param3, param4, param5, vn.c(var20Lifetime1, param6), vn.c(var20Lifetime1, param7), vn.c(var20Lifetime1, param8));
+        vn.drawShadedTriangle(param0, param1, param2, param3, param4, param5, vn.scaleHslLightness(var20Lifetime1, param6), vn.scaleHslLightness(var20Lifetime1, param7), vn.scaleHslLightness(var20Lifetime1, param8));
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static void drawShadedTriangle(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int localTemp$0 = 0;
         int localTemp$1 = 0;
         int localTemp$2 = 0;
@@ -1572,7 +1572,7 @@ final class vn {
               while (true) {
                 param2--;
                 if (param2 >= 0) {
-                  vn.a(SoftwareRasterizer.field_b, param0, 0, 0, param3 >> 16, param4 >> 16, param6, var19);
+                  vn.drawShadedSpan(SoftwareRasterizer.field_b, param0, 0, 0, param3 >> 16, param4 >> 16, param6, var19);
                   param4 = param4 + var17;
                   param3 = param3 + var16;
                   param6 = param6 + var20;
@@ -1583,7 +1583,7 @@ final class vn {
               }
               param1--;
               while (param1 >= 0) {
-                vn.a(SoftwareRasterizer.field_b, param0, 0, 0, param3 >> 16, param5 >> 16, param6, var19);
+                vn.drawShadedSpan(SoftwareRasterizer.field_b, param0, 0, 0, param3 >> 16, param5 >> 16, param6, var19);
                 param5 = param5 + var15;
                 param3 = param3 + var16;
                 param6 = param6 + var20;
@@ -1598,7 +1598,7 @@ final class vn {
             while (true) {
               param2--;
               if (param2 >= 0) {
-                vn.a(SoftwareRasterizer.field_b, param0, 0, 0, param4 >> 16, param3 >> 16, param6, var19);
+                vn.drawShadedSpan(SoftwareRasterizer.field_b, param0, 0, 0, param4 >> 16, param3 >> 16, param6, var19);
                 param4 = param4 + var17;
                 param3 = param3 + var16;
                 param6 = param6 + var20;
@@ -1609,7 +1609,7 @@ final class vn {
             }
             param1--;
             while (param1 >= 0) {
-              vn.a(SoftwareRasterizer.field_b, param0, 0, 0, param5 >> 16, param3 >> 16, param6, var19);
+              vn.drawShadedSpan(SoftwareRasterizer.field_b, param0, 0, 0, param5 >> 16, param3 >> 16, param6, var19);
               param5 = param5 + var15;
               param3 = param3 + var16;
               param6 = param6 + var20;
@@ -1642,7 +1642,7 @@ final class vn {
             while (true) {
               param1--;
               if (param1 >= 0) {
-                vn.a(SoftwareRasterizer.field_b, param0, 0, 0, param3 >> 16, param5 >> 16, param6, var19);
+                vn.drawShadedSpan(SoftwareRasterizer.field_b, param0, 0, 0, param3 >> 16, param5 >> 16, param6, var19);
                 param5 = param5 + var17;
                 param3 = param3 + var16;
                 param6 = param6 + var20;
@@ -1653,7 +1653,7 @@ final class vn {
             }
             param2--;
             while (param2 >= 0) {
-              vn.a(SoftwareRasterizer.field_b, param0, 0, 0, param4 >> 16, param5 >> 16, param6, var19);
+              vn.drawShadedSpan(SoftwareRasterizer.field_b, param0, 0, 0, param4 >> 16, param5 >> 16, param6, var19);
               param5 = param5 + var17;
               param4 = param4 + var15;
               param6 = param6 + var20;
@@ -1668,7 +1668,7 @@ final class vn {
           while (true) {
             param1--;
             if (param1 >= 0) {
-              vn.a(SoftwareRasterizer.field_b, param0, 0, 0, param5 >> 16, param3 >> 16, param6, var19);
+              vn.drawShadedSpan(SoftwareRasterizer.field_b, param0, 0, 0, param5 >> 16, param3 >> 16, param6, var19);
               param5 = param5 + var17;
               param3 = param3 + var16;
               param6 = param6 + var20;
@@ -1679,7 +1679,7 @@ final class vn {
           }
           param2--;
           while (param2 >= 0) {
-            vn.a(SoftwareRasterizer.field_b, param0, 0, 0, param5 >> 16, param4 >> 16, param6, var19);
+            vn.drawShadedSpan(SoftwareRasterizer.field_b, param0, 0, 0, param5 >> 16, param4 >> 16, param6, var19);
             param5 = param5 + var17;
             param4 = param4 + var15;
             param6 = param6 + var20;
@@ -1721,7 +1721,7 @@ final class vn {
               while (true) {
                 param1--;
                 if (param1 >= 0) {
-                  vn.a(SoftwareRasterizer.field_b, param2, 0, 0, param5 >> 16, param3 >> 16, param8, var19);
+                  vn.drawShadedSpan(SoftwareRasterizer.field_b, param2, 0, 0, param5 >> 16, param3 >> 16, param8, var19);
                   param3 = param3 + var15;
                   param5 = param5 + var17;
                   param8 = param8 + var20;
@@ -1732,7 +1732,7 @@ final class vn {
               }
               param0--;
               while (param0 >= 0) {
-                vn.a(SoftwareRasterizer.field_b, param2, 0, 0, param5 >> 16, param4 >> 16, param8, var19);
+                vn.drawShadedSpan(SoftwareRasterizer.field_b, param2, 0, 0, param5 >> 16, param4 >> 16, param8, var19);
                 param4 = param4 + var16;
                 param5 = param5 + var17;
                 param8 = param8 + var20;
@@ -1747,7 +1747,7 @@ final class vn {
             while (true) {
               param1--;
               if (param1 >= 0) {
-                vn.a(SoftwareRasterizer.field_b, param2, 0, 0, param3 >> 16, param5 >> 16, param8, var19);
+                vn.drawShadedSpan(SoftwareRasterizer.field_b, param2, 0, 0, param3 >> 16, param5 >> 16, param8, var19);
                 param3 = param3 + var15;
                 param5 = param5 + var17;
                 param8 = param8 + var20;
@@ -1758,7 +1758,7 @@ final class vn {
             }
             param0--;
             while (param0 >= 0) {
-              vn.a(SoftwareRasterizer.field_b, param2, 0, 0, param4 >> 16, param5 >> 16, param8, var19);
+              vn.drawShadedSpan(SoftwareRasterizer.field_b, param2, 0, 0, param4 >> 16, param5 >> 16, param8, var19);
               param4 = param4 + var16;
               param5 = param5 + var17;
               param8 = param8 + var20;
@@ -1788,7 +1788,7 @@ final class vn {
             while (true) {
               param0--;
               if (param0 >= 0) {
-                vn.a(SoftwareRasterizer.field_b, param2, 0, 0, param5 >> 16, param4 >> 16, param8, var19);
+                vn.drawShadedSpan(SoftwareRasterizer.field_b, param2, 0, 0, param5 >> 16, param4 >> 16, param8, var19);
                 param4 = param4 + var15;
                 param5 = param5 + var17;
                 param8 = param8 + var20;
@@ -1799,7 +1799,7 @@ final class vn {
             }
             param1--;
             while (param1 >= 0) {
-              vn.a(SoftwareRasterizer.field_b, param2, 0, 0, param3 >> 16, param4 >> 16, param8, var19);
+              vn.drawShadedSpan(SoftwareRasterizer.field_b, param2, 0, 0, param3 >> 16, param4 >> 16, param8, var19);
               param4 = param4 + var15;
               param3 = param3 + var16;
               param8 = param8 + var20;
@@ -1814,7 +1814,7 @@ final class vn {
           while (true) {
             param0--;
             if (param0 >= 0) {
-              vn.a(SoftwareRasterizer.field_b, param2, 0, 0, param4 >> 16, param5 >> 16, param8, var19);
+              vn.drawShadedSpan(SoftwareRasterizer.field_b, param2, 0, 0, param4 >> 16, param5 >> 16, param8, var19);
               param4 = param4 + var15;
               param5 = param5 + var17;
               param8 = param8 + var20;
@@ -1825,7 +1825,7 @@ final class vn {
           }
           param1--;
           while (param1 >= 0) {
-            vn.a(SoftwareRasterizer.field_b, param2, 0, 0, param4 >> 16, param3 >> 16, param8, var19);
+            vn.drawShadedSpan(SoftwareRasterizer.field_b, param2, 0, 0, param4 >> 16, param3 >> 16, param8, var19);
             param4 = param4 + var15;
             param3 = param3 + var16;
             param8 = param8 + var20;
@@ -1866,7 +1866,7 @@ final class vn {
             while (true) {
               param0--;
               if (param0 >= 0) {
-                vn.a(SoftwareRasterizer.field_b, param1, 0, 0, param4 >> 16, param5 >> 16, param7, var19);
+                vn.drawShadedSpan(SoftwareRasterizer.field_b, param1, 0, 0, param4 >> 16, param5 >> 16, param7, var19);
                 param5 = param5 + var16;
                 param4 = param4 + var15;
                 param7 = param7 + var20;
@@ -1877,7 +1877,7 @@ final class vn {
             }
             param2--;
             while (param2 >= 0) {
-              vn.a(SoftwareRasterizer.field_b, param1, 0, 0, param4 >> 16, param3 >> 16, param7, var19);
+              vn.drawShadedSpan(SoftwareRasterizer.field_b, param1, 0, 0, param4 >> 16, param3 >> 16, param7, var19);
               param3 = param3 + var17;
               param4 = param4 + var15;
               param7 = param7 + var20;
@@ -1892,7 +1892,7 @@ final class vn {
           while (true) {
             param0--;
             if (param0 >= 0) {
-              vn.a(SoftwareRasterizer.field_b, param1, 0, 0, param5 >> 16, param4 >> 16, param7, var19);
+              vn.drawShadedSpan(SoftwareRasterizer.field_b, param1, 0, 0, param5 >> 16, param4 >> 16, param7, var19);
               param5 = param5 + var16;
               param4 = param4 + var15;
               param7 = param7 + var20;
@@ -1903,7 +1903,7 @@ final class vn {
           }
           param2--;
           while (param2 >= 0) {
-            vn.a(SoftwareRasterizer.field_b, param1, 0, 0, param3 >> 16, param4 >> 16, param7, var19);
+            vn.drawShadedSpan(SoftwareRasterizer.field_b, param1, 0, 0, param3 >> 16, param4 >> 16, param7, var19);
             param3 = param3 + var17;
             param4 = param4 + var15;
             param7 = param7 + var20;
@@ -1936,7 +1936,7 @@ final class vn {
           while (true) {
             param2--;
             if (param2 >= 0) {
-              vn.a(SoftwareRasterizer.field_b, param1, 0, 0, param4 >> 16, param3 >> 16, param7, var19);
+              vn.drawShadedSpan(SoftwareRasterizer.field_b, param1, 0, 0, param4 >> 16, param3 >> 16, param7, var19);
               param3 = param3 + var16;
               param4 = param4 + var15;
               param7 = param7 + var20;
@@ -1947,7 +1947,7 @@ final class vn {
           }
           param0--;
           while (param0 >= 0) {
-            vn.a(SoftwareRasterizer.field_b, param1, 0, 0, param5 >> 16, param3 >> 16, param7, var19);
+            vn.drawShadedSpan(SoftwareRasterizer.field_b, param1, 0, 0, param5 >> 16, param3 >> 16, param7, var19);
             param3 = param3 + var16;
             param5 = param5 + var17;
             param7 = param7 + var20;
@@ -1962,7 +1962,7 @@ final class vn {
         while (true) {
           param2--;
           if (param2 >= 0) {
-            vn.a(SoftwareRasterizer.field_b, param1, 0, 0, param3 >> 16, param4 >> 16, param7, var19);
+            vn.drawShadedSpan(SoftwareRasterizer.field_b, param1, 0, 0, param3 >> 16, param4 >> 16, param7, var19);
             param3 = param3 + var16;
             param4 = param4 + var15;
             param7 = param7 + var20;
@@ -1973,7 +1973,7 @@ final class vn {
         }
         param0--;
         while (param0 >= 0) {
-          vn.a(SoftwareRasterizer.field_b, param1, 0, 0, param3 >> 16, param5 >> 16, param7, var19);
+          vn.drawShadedSpan(SoftwareRasterizer.field_b, param1, 0, 0, param3 >> 16, param5 >> 16, param7, var19);
           param3 = param3 + var16;
           param5 = param5 + var17;
           param7 = param7 + var20;
@@ -1983,7 +1983,7 @@ final class vn {
         return;
     }
 
-    private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14) {
+    private final static void drawTexturedScanline(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14) {
         int dupTemp$18 = 0;
         int dupTemp$19 = 0;
         int dupTemp$20 = 0;
@@ -2438,7 +2438,7 @@ final class vn {
         }
     }
 
-    private final static void c() {
+    private final static void centerProjection() {
         field_a = field_k / 2;
         field_f = field_n / 2;
     }

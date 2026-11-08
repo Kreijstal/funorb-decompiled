@@ -12,7 +12,7 @@ final class fd extends ll {
 
     final static al g(int param0) {
         if (param0 != -1) {
-          fd.h(43);
+          fd.releaseStatics(43);
           if (null == pg.field_d) {
             pg.field_d = new al(dh.field_d, 20, 0, 0, 0, 11579568, -1, 0, 0, dh.field_d.field_N, -1, 2147483647, true);
             return pg.field_d;
@@ -26,7 +26,7 @@ final class fd extends ll {
         return pg.field_d;
     }
 
-    public static void h(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -1) {
           return;
         }
@@ -42,7 +42,7 @@ final class fd extends ll {
           var3.a(param2.field_n, false);
           var3.a(param2.field_q, false);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "fd.M(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "fd.M(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -72,7 +72,7 @@ final class fd extends ll {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

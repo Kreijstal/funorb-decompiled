@@ -17,19 +17,19 @@ final class ho extends gn implements ij, dm, sh {
     private fo field_N;
     private fk field_P;
 
-    final void a(UiWidget param0, int param1, int param2, boolean param3) {
+    final void updatePointer(UiWidget param0, int param1, int param2, boolean param3) {
         try {
           if (!param3) {
             this.a(true);
           }
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(param0, param1, param2, param3);
           this.field_V.field_K = this.h(15);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "ho.MA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "ho.MA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    final boolean a(int param0, char param1, int param2, UiWidget param3) {
+    final boolean handleKey(int param0, char param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_9_0 = false;
@@ -38,7 +38,7 @@ final class ho extends gn implements ij, dm, sh {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKey(param0, param1, param2, param3)) {
             return true;
           }
           if (param0 == 98) {
@@ -60,7 +60,7 @@ final class ho extends gn implements ij, dm, sh {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -101,14 +101,14 @@ final class ho extends gn implements ij, dm, sh {
         ci dupTemp$1 = new ci(10000536);
         this.field_N.field_H = (kg) ((Object) dupTemp$1);
         this.field_R.field_H = (kg) ((Object) dupTemp$1);
-        String var2 = sk.a(new String[]{this.i(-2), this.f((byte) 9)}, ej.field_t, 120);
+        String var2 = sk.a(new String[]{this.getLinkOpenMarkup(-2), this.f((byte) 9)}, ej.field_t, 120);
         int var3 = 20;
         var3 = var3 + this.a(rm.field_c, this.field_W, 96, var3, 170);
-        var3 = var3 + (5 + this.a("", 20, 170, om.field_Pb, this.field_K, var3, false));
+        var3 = var3 + (5 + this.addFieldWithHelp("", 20, 170, om.field_Pb, this.field_K, var3, false));
         var3 = var3 + this.a(gj.field_a, this.field_R, -115, var3, 170);
-        var3 = var3 + (5 + this.a(this.field_N, 170, qm.field_f, 120, var3, fm.field_e));
-        var3 = var3 + (5 + this.a(this.field_O, 170, jm.field_c, 120, var3, FullscreenFocusCanvas.field_e));
-        var3 = var3 + this.a(170, ba.field_P, var3, this.field_U, 107);
+        var3 = var3 + (5 + this.addFieldWithValidationHelp(this.field_N, 170, qm.field_f, 120, var3, fm.field_e));
+        var3 = var3 + (5 + this.addFieldWithValidationHelp(this.field_O, 170, jm.field_c, 120, var3, FullscreenFocusCanvas.field_e));
+        var3 = var3 + this.addValidatedField(170, ba.field_P, var3, this.field_U, 107);
         rc var4 = new rc(46, var3, this.field_F - 90, 25, this.field_T, true, this.field_F - 120, 5, dh.field_d, 11579568, ke.field_e);
         this.c(var4, 10);
         var3 = var3 + var4.field_u;
@@ -135,7 +135,7 @@ final class ho extends gn implements ij, dm, sh {
         this.a(55 + (var3 + var6), 0, -118, 0, 496);
     }
 
-    public final void a(int param0, byte param1, fk param2, int param3) {
+    public final void onHotspotAction(int param0, byte param1, fk param2, int param3) {
         RuntimeException var5 = null;
         int var6 = 0;
         RuntimeException stackIn_13_0 = null;
@@ -170,11 +170,11 @@ final class ho extends gn implements ij, dm, sh {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    private final boolean a(byte param0, uc param1) {
+    private final boolean isFieldAcceptable(byte param0, uc param1) {
         vm var3 = null;
         RuntimeException var3_ref = null;
         jk var4 = null;
@@ -211,13 +211,13 @@ final class ho extends gn implements ij, dm, sh {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 <= 109) {
-          ho.a(109);
+          ho.releaseStatics(109);
           field_M = null;
           field_Q = null;
           return;
@@ -256,11 +256,11 @@ final class ho extends gn implements ij, dm, sh {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    private final int a(int param0, String param1, int param2, UiWidget param3, int param4) {
+    private final int addValidatedField(int param0, String param1, int param2, UiWidget param3, int param4) {
         RuntimeException var6 = null;
         ab var7 = null;
         int var8 = 0;
@@ -297,11 +297,11 @@ final class ho extends gn implements ij, dm, sh {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param4).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param4).append(')').toString());
         }
     }
 
-    private final int a(String param0, int param1, int param2, String param3, UiWidget param4, int param5, boolean param6) {
+    private final int addFieldWithHelp(String param0, int param1, int param2, String param3, UiWidget param4, int param5, boolean param6) {
         RuntimeException var8 = null;
         ck var9 = null;
         rc var10 = null;
@@ -344,7 +344,7 @@ final class ho extends gn implements ij, dm, sh {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -355,16 +355,16 @@ final class ho extends gn implements ij, dm, sh {
           var3 = this.field_O;
           var4 = param1;
           int var5 = 9 % ((param0 + 9) / 61);
-          ((nn) ((Object) var3)).a(false, 32, var4);
+          ((nn) ((Object) var3)).setText(false, 32, var4);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "ho.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "ho.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     private final String f(byte param0) {
         if (param0 != 9) {
           UiWidget var3 = (UiWidget) null;
-          this.a(-82, '\0', 16, (UiWidget) null);
+          this.handleKey(-82, '\0', 16, (UiWidget) null);
           return "</col></u>";
         }
         return "</col></u>";
@@ -394,22 +394,22 @@ final class ho extends gn implements ij, dm, sh {
         if (param0 != 15) {
           return true;
         }
-        if (!this.a((byte) -123, this.field_O)) {
+        if (!this.isFieldAcceptable((byte) -123, this.field_O)) {
           return false;
         }
-        if (!this.a((byte) -11, this.field_W)) {
+        if (!this.isFieldAcceptable((byte) -11, this.field_W)) {
           return false;
         }
-        if (!this.a((byte) -92, this.field_K)) {
+        if (!this.isFieldAcceptable((byte) -92, this.field_K)) {
           return false;
         }
-        if (!this.a((byte) -93, this.field_R)) {
+        if (!this.isFieldAcceptable((byte) -93, this.field_R)) {
           return false;
         }
-        if (!this.a((byte) -27, this.field_N)) {
+        if (!this.isFieldAcceptable((byte) -27, this.field_N)) {
           return false;
         }
-        if (this.a((byte) -105, this.field_U)) {
+        if (this.isFieldAcceptable((byte) -105, this.field_U)) {
           return true;
         }
         return false;
@@ -448,11 +448,11 @@ final class ho extends gn implements ij, dm, sh {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    private final int a(UiWidget param0, int param1, String param2, int param3, int param4, String param5) {
+    private final int addFieldWithValidationHelp(UiWidget param0, int param1, String param2, int param3, int param4, String param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -465,9 +465,9 @@ final class ho extends gn implements ij, dm, sh {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 != 120) {
-            ho.a(-16);
+            ho.releaseStatics(-16);
           }
-          stackIn_3_0 = this.a(param2, 35, param1, param5, param0, param4, false);
+          stackIn_3_0 = this.addFieldWithHelp(param2, 35, param1, param5, param0, param4, false);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -491,11 +491,11 @@ final class ho extends gn implements ij, dm, sh {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
-    private final String i(int param0) {
+    private final String getLinkOpenMarkup(int param0) {
         if (param0 != -2) {
           return (String) null;
         }

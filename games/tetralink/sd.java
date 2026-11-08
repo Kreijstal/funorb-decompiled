@@ -8,11 +8,11 @@ final class sd extends ml {
     static String field_pb;
     static kd field_nb;
 
-    final void e(UiWidget param0, int param1) {
+    final void transitionToContent(UiWidget param0, int param1) {
         try {
-          super.e(param0, param1);
+          super.transitionToContent(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "sd.Q(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "sd.Q(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -88,7 +88,7 @@ final class sd extends ml {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -117,11 +117,11 @@ final class sd extends ml {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
-    public static void p(int param0) {
+    public static void releaseStatics(int param0) {
         field_pb = null;
         field_qb = null;
         if (param0 == -32527) {
@@ -156,7 +156,7 @@ final class sd extends ml {
           param0.addMouseMotionListener(kd.field_g);
           param0.addFocusListener(kd.field_g);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "sd.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "sd.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

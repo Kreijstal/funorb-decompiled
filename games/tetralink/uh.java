@@ -9,7 +9,7 @@ abstract class uh {
     static java.awt.Canvas field_b;
     static String field_a;
 
-    final static Sprite[] a(int param0, int param1, Archive param2, int param3) {
+    final static Sprite[] loadSpriteSheet(int param0, int param1, Archive param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_4_0 = null;
         Sprite[] stackIn_6_0 = null;
@@ -37,7 +37,7 @@ abstract class uh {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -73,7 +73,7 @@ abstract class uh {
 
     abstract int a(long param0, byte param1);
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 == 41) {
           field_b = null;
           field_c = null;

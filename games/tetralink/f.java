@@ -11,7 +11,7 @@ final class f extends DualLinkNode {
     pc[] field_u;
     private byte[][] field_v;
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_A = null;
         field_w = null;
         if (param0 != 87) {

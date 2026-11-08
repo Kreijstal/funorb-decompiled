@@ -66,7 +66,7 @@ final class ke implements Runnable {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -74,7 +74,7 @@ final class ke implements Runnable {
         synchronized (this.field_f) {
           this.field_f.addLast(param0, 0);
           if (param1 > -49) {
-            ke.a(21);
+            ke.releaseStatics(21);
           }
           this.field_d = this.field_d + 1;
           this.field_f.notifyAll();
@@ -113,7 +113,7 @@ final class ke implements Runnable {
           if (var2 == null) {
             return null;
           }
-          var3 = (ud) (DelegatingCanvas.field_f.a((long)var2.hashCode(), 1));
+          var3 = (ud) (DelegatingCanvas.field_f.findByKey((long)var2.hashCode(), 1));
           while (var3 != null) {
             var7 = (CharSequence) ((Object) var3.field_Mb);
             var4 = cc.a(var7, (byte) 119);
@@ -139,11 +139,11 @@ final class ke implements Runnable {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 5) {
           field_g = (String) null;
           field_e = null;
@@ -186,7 +186,7 @@ final class ke implements Runnable {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -321,7 +321,7 @@ final class ke implements Runnable {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -340,7 +340,7 @@ final class ke implements Runnable {
           }
           this.field_b = (Thread) (var2.field_f);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "ke.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "ke.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

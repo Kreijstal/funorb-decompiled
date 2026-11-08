@@ -6,7 +6,7 @@ import java.util.*;
 final class di extends RasterBuffer {
     private java.awt.Component field_l;
 
-    final void a(int param0, int param1, int param2, java.awt.Graphics param3) {
+    final void drawImage(int param0, int param1, int param2, java.awt.Graphics param3) {
         param3.drawImage(this.field_c, param2, param1, (java.awt.image.ImageObserver) ((Object) this.field_l));
         if (param0 != 10) {
           this.field_l = (java.awt.Component) null;

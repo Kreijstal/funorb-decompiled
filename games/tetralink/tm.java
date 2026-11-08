@@ -7,9 +7,9 @@ final class tm extends um {
     private String field_q;
     static int field_t;
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 >= -23) {
-          tm.g(-116);
+          tm.releaseStatics(-116);
         }
         field_r = null;
     }
@@ -42,7 +42,7 @@ final class tm extends um {
             this.d((byte) -30);
           }
           if (!param1.equals(this.field_q)) {
-            var3 = hi.a(param1, (byte) -80);
+            var3 = hi.pollUsernameAvailability(param1, (byte) -80);
             if (var3 != null &&
               null == var3.field_i) {
               this.field_q = param1;
@@ -68,7 +68,7 @@ final class tm extends um {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -80,7 +80,7 @@ final class tm extends um {
         if (param1 != -26778) {
           field_t = -16;
         }
-        return (gd) (db.field_a.a(param0, 1));
+        return (gd) (db.field_a.findByKey(param0, 1));
     }
 
     final String a(String param0, int param1) {
@@ -108,7 +108,7 @@ final class tm extends um {
             return stackIn_6_0;
           }
           if (!param0.equals(this.field_q)) {
-            var4 = hi.a(param0, (byte) -80);
+            var4 = hi.pollUsernameAvailability(param0, (byte) -80);
             if (var4 == null) {
               return null;
             }
@@ -134,11 +134,11 @@ final class tm extends um {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final static void a(byte param0, int param1, hl param2, int param3, int param4, hl param5, byte[] param6, hl param7, int param8, int param9) {
+    final static void initializeLobbyState(byte param0, int param1, hl param2, int param3, int param4, hl param5, byte[] param6, hl param7, int param8, int param9) {
         int var11 = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -173,7 +173,7 @@ final class tm extends um {
             param5.field_fb = new IntrusiveDeque();
           }
           if (param0 != -58) {
-            tm.g(71);
+            tm.releaseStatics(71);
           }
           gl.field_p = param5.field_fb;
           gl.field_p.clear(1);
@@ -225,7 +225,7 @@ final class tm extends um {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param8).append(',').append(param9).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param8).append(',').append(param9).append(')').toString());
         }
     }
 

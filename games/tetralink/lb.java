@@ -11,19 +11,19 @@ final class lb extends eg implements dm {
     static int field_V;
     static String field_U;
 
-    final void a(UiWidget param0, int param1, int param2, boolean param3) {
+    final void updatePointer(UiWidget param0, int param1, int param2, boolean param3) {
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(param0, param1, param2, param3);
           this.field_T.field_K = this.field_W.a(-104).c(-68) == pf.field_a ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "lb.MA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "lb.MA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     lb(int param0, int param1, int param2, int param3) {
         super(param0, param1, param2, param3, (kg) null);
         this.field_W = new od(new mf(10000536), ef.field_n, 0, 0, 140, 25);
-        this.field_W.a(45, new qh());
+        this.field_W.setBirthDateValidator(45, new qh());
         this.field_T = new ae(al.field_e, (dn) (this));
         this.field_I = new UiWidget[]{(UiWidget) ((Object) this.field_W), (UiWidget) ((Object) this.field_T)};
         this.field_T.field_H = (kg) ((Object) new uj());
@@ -68,7 +68,7 @@ final class lb extends eg implements dm {
           fd.field_F = fd.field_F + (var2_intLifetime2 >> 1);
           om.field_Nb = om.field_Nb + param0.readUnsignedShort(127);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "lb.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "lb.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -86,9 +86,9 @@ final class lb extends eg implements dm {
         field_P = null;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
-        super.a(param0, param1, param2, param3);
-        dh.field_d.b(UiWidget.field_G, param1 + (this.field_t + 4), dh.field_d.field_N + this.field_w + (param2 + 4), 16777215, -1);
+    final void drawLayer(int param0, int param1, int param2, int param3) {
+        super.drawLayer(param0, param1, param2, param3);
+        dh.field_d.drawLeft(UiWidget.field_G, param1 + (this.field_t + 4), dh.field_d.field_N + this.field_w + (param2 + 4), 16777215, -1);
     }
 
     public final void a(byte param0, ae param1, int param2, int param3, int param4) {
@@ -99,9 +99,9 @@ final class lb extends eg implements dm {
           return;
         }
         try {
-          GameKeyHandler.a(this.field_W.a(false), 0, this.field_W.f((byte) 90), this.field_W.g((byte) 12));
+          GameKeyHandler.a(this.field_W.getMonthIndex(false), 0, this.field_W.getDay((byte) 90), this.field_W.g((byte) 12));
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "lb.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "lb.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -116,7 +116,7 @@ final class lb extends eg implements dm {
           if (param1 != 573509761) {
             field_U = (String) null;
           }
-          stackIn_3_0 = we.a(-11040, ee.a(param0, 100, 96));
+          stackIn_3_0 = we.a(-11040, ee.createAtRatePercent(param0, 100, 96));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -128,7 +128,7 @@ final class lb extends eg implements dm {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 

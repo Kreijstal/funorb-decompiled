@@ -17,7 +17,7 @@ final class ja implements m {
 
     public final int b(int param0, int param1) {
         if (param0 != 6092) {
-          ja.a((byte) -102);
+          ja.releaseStatics((byte) -102);
         }
         if (null == this.field_b[param1]) {
           return 0;
@@ -73,8 +73,8 @@ final class ja implements m {
         int var8 = TetraLink.field_J;
         int var7Lifetime1;
         try {
-          var10 = hd.a(param0 - 5, param1.field_e, this.field_c);
-          var10.a();
+          var10 = hd.loadSpritesFromArchive(param0 - 5, param1.field_e, this.field_c);
+          var10.normalizeCanvas();
           var16 = var10.field_o;
           var13 = var10.field_p;
           var11 = var13;
@@ -93,15 +93,15 @@ final class ja implements m {
             var9++;
           }
           if (param0 != 6) {
-            ja.a((byte) 125);
+            ja.releaseStatics((byte) 125);
           }
           param1.field_f = param2;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "ja.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "ja.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_k = null;
         field_l = null;
         field_e = null;
@@ -122,10 +122,10 @@ final class ja implements m {
 
     final static void a(int param0) {
         if (ch.field_q != null) {
-          ch.field_q.b();
+          ch.field_q.shutdown();
         }
         if (null != hc.field_v) {
-          hc.field_v.b();
+          hc.field_v.shutdown();
         }
         if (param0 != 0) {
           ja.c(104, -23);
@@ -187,7 +187,7 @@ final class ja implements m {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -217,14 +217,14 @@ final class ja implements m {
           return var12.field_c;
         }
         if (!param2) {
-          ja.a((byte) 74);
+          ja.releaseStatics((byte) 74);
         }
         var14 = cc.field_a.field_C;
         var13 = var14;
         var5 = var13;
         var6 = dh.field_e + ui.a(16, 1692) & 127;
-        rd.a(var12.field_c, 0, var5, var6 * 128, -(128 * var6) + 16384);
-        rd.a(var12.field_c, 128 * (-var6 + 128), var14, 0, 128 * var6);
+        rd.copy(var12.field_c, 0, var5, var6 * 128, -(128 * var6) + 16384);
+        rd.copy(var12.field_c, 128 * (-var6 + 128), var14, 0, 128 * var6);
         var7 = (3 * param1 + 17) * dh.field_e & 255;
         if (var7 < 128) {
           var7 = var7 >> 2;

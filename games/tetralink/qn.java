@@ -42,7 +42,7 @@ final class qn extends al {
           var16 = (kh[]) null;
           c.a(param6, param2, param14, (byte) -35, param1, param7, (int[]) null, param12, param3, param10, param13, param9, param8, (kh[]) null, param5, param11, param4);
           if (param0) {
-            qn.a(-32);
+            qn.releaseStatics(-32);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -115,7 +115,7 @@ final class qn extends al {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
         }
     }
 
@@ -158,7 +158,7 @@ final class qn extends al {
             }
             return;
           }
-          rd.a(this.field_q, 0, param0.field_q, 0, 6);
+          rd.copy(this.field_q, 0, param0.field_q, 0, 6);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -170,17 +170,17 @@ final class qn extends al {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_r = null;
         field_s = null;
         field_v = null;
         field_t = null;
         if (param0 != 24468) {
-          qn.a(-59);
+          qn.releaseStatics(-59);
         }
     }
 
@@ -221,7 +221,7 @@ final class qn extends al {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -236,11 +236,11 @@ final class qn extends al {
         try {
           this.field_q[param0].field_k = param2;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "qn.K(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "qn.K(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public final void a(UiWidget param0, int param1, int param2, boolean param3, boolean param4) {
+    public final void drawWidget(UiWidget param0, int param1, int param2, boolean param3, boolean param4) {
         UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_34_0 = null;
         StringBuilder stackIn_34_1 = null;
@@ -316,7 +316,7 @@ final class qn extends al {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -336,7 +336,7 @@ final class qn extends al {
           var2 = (bf) (MouseInputHandler.field_b.c(false));
           while (var2 != null) {
             if (var2.field_q.isLinked((byte) 95)) {
-              var2.field_t.f(128 + var2.field_u * DelegatingCanvas.field_c >> 8);
+              var2.field_t.setVolumeQ6(128 + var2.field_u * DelegatingCanvas.field_c >> 8);
             } else {
               var2.unlink(false);
             }
@@ -349,7 +349,7 @@ final class qn extends al {
               if (!stackIn_14_0) {
                 var2Lifetime1.unlink(false);
               } else {
-                var2Lifetime1.field_t.f(128 + DelegatingCanvas.field_c * var2Lifetime1.field_u >> 8);
+                var2Lifetime1.field_t.setVolumeQ6(128 + DelegatingCanvas.field_c * var2Lifetime1.field_u >> 8);
               }
               var2Lifetime1 = (bf) (gi.field_d.a((byte) -70));
             }
@@ -359,7 +359,7 @@ final class qn extends al {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var2_ref), "qn.M(" + param0 + ',' + param1 + ')');
+          throw oi.wrapException((Throwable) ((Object) var2_ref), "qn.M(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -368,11 +368,11 @@ final class qn extends al {
         try {
           param0.a(this, (byte) 52, param1);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "qn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "qn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void a(Sprite param0, byte param1) {
+    final void setFrameSpritesForAllStates(Sprite param0, byte param1) {
         int var4 = 0;
         dg[] var3 = null;
         dg var5 = null;
@@ -407,7 +407,7 @@ final class qn extends al {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -420,7 +420,7 @@ final class qn extends al {
         var1.a(30033);
     }
 
-    final dg a(byte param0, int param1) {
+    final dg createStateStyle(byte param0, int param1) {
         if (param0 != -41) {
           return (dg) null;
         }

@@ -7,11 +7,11 @@ final class sc {
     static int[][] field_a;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_c = null;
         if (param0 != 26740) {
-          sc.a(-4);
+          sc.releaseStatics(-4);
           field_a = (int[][]) null;
           return;
         }

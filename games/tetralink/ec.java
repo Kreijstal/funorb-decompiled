@@ -18,7 +18,7 @@ final class ec {
     static hl field_b;
     static boolean field_k;
 
-    private final void a(mb param0, int param1) {
+    private final void removeEntry(mb param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_5_0 = null;
@@ -44,7 +44,7 @@ final class ec {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -53,10 +53,10 @@ final class ec {
         if (param0 < 22) {
           return;
         }
-        this.a(var4, 44);
+        this.removeEntry(var4, 44);
     }
 
-    final static hl a(int param0, BitmapFont param1, int param2, int param3, byte param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
+    final static hl createThemedWidget(int param0, BitmapFont param1, int param2, int param3, byte param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
         hl var13 = null;
         RuntimeException var13_ref = null;
         hl stackIn_2_0 = null;
@@ -90,7 +90,7 @@ final class ec {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(')').toString());
         }
     }
 
@@ -108,9 +108,9 @@ final class ec {
           if (param2 != 50) {
             ec.a(true, 108);
           }
-          this.a(param2 ^ 50, param0, param1, 1);
+          this.putWeighted(param2 ^ 50, param0, param1, 1);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "ec.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "ec.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -130,27 +130,27 @@ final class ec {
         }
         if (param0 < 116) {
           ec.a(false, -84);
-          if (!var7.f(105)) {
-            this.field_o.a((byte) -50, var7);
+          if (!var7.isSoftReference(105)) {
+            this.field_o.addLast((byte) -50, var7);
             var7.secondaryKey = 0L;
             return var5;
           }
           var6 = new wc(var5, var7.field_t);
           this.field_m.put(var7.key, var6, false);
-          this.field_o.a((byte) -85, var6);
+          this.field_o.addLast((byte) -85, var6);
           ((mb) ((Object) var6)).secondaryKey = 0L;
           var7.unlink(false);
           var7.unlinkSecondary(0);
           return var5;
         }
-        if (!var7.f(105)) {
-          this.field_o.a((byte) -50, var7);
+        if (!var7.isSoftReference(105)) {
+          this.field_o.addLast((byte) -50, var7);
           var7.secondaryKey = 0L;
           return var5;
         }
         var6Lifetime1 = new wc(var5, var7.field_t);
         this.field_m.put(var7.key, var6Lifetime1, false);
-        this.field_o.a((byte) -85, var6Lifetime1);
+        this.field_o.addLast((byte) -85, var6Lifetime1);
         ((mb) ((Object) var6Lifetime1)).secondaryKey = 0L;
         var7.unlink(false);
         var7.unlinkSecondary(0);
@@ -161,7 +161,7 @@ final class ec {
         this(param0, param0);
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_f = null;
         field_n = null;
         field_d = null;
@@ -174,7 +174,7 @@ final class ec {
         field_e = null;
     }
 
-    private final void a(int param0, Object param1, long param2, int param3) {
+    private final void putWeighted(int param0, Object param1, long param2, int param3) {
         mb var6 = null;
         wc var6_ref = null;
         int var7 = TetraLink.field_J;
@@ -186,14 +186,14 @@ final class ec {
           this.field_c = this.field_c - param3;
           while (this.field_c < 0) {
             var6 = (mb) (this.field_o.b(-91));
-            this.a(var6, param0 ^ -122);
+            this.removeEntry(var6, param0 ^ -122);
           }
           var6_ref = new wc(param1, param3);
           this.field_m.put(param2, var6_ref, false);
-          this.field_o.a((byte) -14, var6_ref);
+          this.field_o.addLast((byte) -14, var6_ref);
           ((mb) ((Object) var6_ref)).secondaryKey = (long)param0;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "ec.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "ec.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 

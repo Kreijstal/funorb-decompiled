@@ -13,7 +13,7 @@ final class qc extends nb implements dm {
     static ke field_X;
     static bl field_cb;
 
-    public static void e(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_db = null;
         if (param0 > -111) {
           field_cb = (bl) null;
@@ -46,7 +46,7 @@ final class qc extends nb implements dm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var2), "qc.N(" + param0 + ',' + param1 + ')');
+          throw oi.wrapException((Throwable) ((Object) var2), "qc.N(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -90,7 +90,7 @@ final class qc extends nb implements dm {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -148,7 +148,7 @@ final class qc extends nb implements dm {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw oi.a((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw oi.wrapException((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -163,7 +163,7 @@ final class qc extends nb implements dm {
             this.f((byte) -113);
           }
           if (param0 >= 0) {
-            qc.e((byte) 23);
+            qc.releaseStatics((byte) 23);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -176,7 +176,7 @@ final class qc extends nb implements dm {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

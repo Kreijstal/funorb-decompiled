@@ -19,7 +19,7 @@ final class oa extends IntrusiveNode {
     static String field_o;
     static ri field_B;
 
-    final static void a(byte param0, java.awt.Canvas param1) {
+    final static void attachCanvasInput(byte param0, java.awt.Canvas param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -30,7 +30,7 @@ final class oa extends IntrusiveNode {
             return;
           }
           mn.a((java.awt.Component) ((Object) param1), true);
-          ProxySocketConnector.a(-51, (java.awt.Component) ((Object) param1));
+          ProxySocketConnector.removeMouseListeners(-51, (java.awt.Component) ((Object) param1));
           if (null == qf.field_k) {
             return;
           }
@@ -46,7 +46,7 @@ final class oa extends IntrusiveNode {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -69,7 +69,7 @@ final class oa extends IntrusiveNode {
           var6 = (int)(256.0 * Math.pow((double)var6 / 256.0, param1));
           return (var4 << 16) + ((var5 << 8) + var6);
         }
-        oa.a(-17);
+        oa.releaseStatics(-17);
         var4Lifetime1 = param0 >> 16;
         var5Lifetime1 = (param0 & 65416) >> 8;
         var4Lifetime1 = (int)(Math.pow((double)var4Lifetime1 / 256.0, param1) * 256.0);
@@ -79,7 +79,7 @@ final class oa extends IntrusiveNode {
         return (var4Lifetime1 << 16) + ((var5Lifetime1 << 8) + var6Lifetime1);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_q = null;
         field_v = null;
         field_x = null;
@@ -100,7 +100,7 @@ final class oa extends IntrusiveNode {
         throw new Error();
     }
 
-    final static boolean a(String param0, int param1) {
+    final static boolean containsFilterWord(String param0, int param1) {
         RuntimeException var2 = null;
         boolean stackIn_10_0 = false;
         RuntimeException stackIn_13_0 = null;
@@ -126,7 +126,7 @@ final class oa extends IntrusiveNode {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 

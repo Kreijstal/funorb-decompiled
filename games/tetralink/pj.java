@@ -30,7 +30,7 @@ final class pj {
         return (java.awt.Container) ((Object) lk.q(13));
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_h = null;
         if (param0 > 25) {
           field_d = null;

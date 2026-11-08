@@ -54,7 +54,7 @@ final class sk {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -233,7 +233,7 @@ final class sk {
             } else {
               stackIn_68_2 = "{...}";
             }
-            throw oi.a((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_67_1).append(stackIn_68_2).append(')').toString());
+            throw oi.wrapException((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_67_1).append(stackIn_68_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -450,7 +450,7 @@ final class sk {
           if (var11.field_d != 2) {
             return var7;
           }
-          r.a(param1, var7, 0);
+          r.exitFullscreenAndDisposeFrame(param1, var7, 0);
           stackIn_39_0 = null;
           return (java.awt.Frame) (stackIn_39_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -463,7 +463,7 @@ final class sk {
           } else {
             stackIn_43_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -473,9 +473,9 @@ final class sk {
         }
         try {
           nm.b((byte) 96);
-          SoftwareRasterizer.a(param1.field_C, param1.field_t, param1.field_F);
+          SoftwareRasterizer.setTarget(param1.field_C, param1.field_t, param1.field_F);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "sk.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "sk.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -483,7 +483,7 @@ final class sk {
         return "" + this.field_d;
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         if (param0 != 29187) {
           return;
@@ -519,7 +519,7 @@ final class sk {
           } else {
             var6 = param1;
           }
-          stackIn_7_0 = ug.a(var4_long, (String) (var6), param2, param3, -6336);
+          stackIn_7_0 = ug.createLoginCredentials(var4_long, (String) (var6), param2, param3, -6336);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -537,7 +537,7 @@ final class sk {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -597,7 +597,7 @@ final class sk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref2 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var1_ref2), "sk.I(" + param0 + ')');
+          throw oi.wrapException((Throwable) ((Object) var1_ref2), "sk.I(" + param0 + ')');
         }
     }
 
@@ -611,7 +611,7 @@ final class sk {
           this.field_d = param0;
           this.field_i = param1;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "sk.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "sk.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -724,7 +724,7 @@ final class sk {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param2).append(')').toString());
         }
     }
 

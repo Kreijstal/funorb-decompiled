@@ -7,7 +7,7 @@ final class fg extends PcmStream {
     private int field_r;
     private int field_u;
 
-    final synchronized void a(int param0) {
+    final synchronized void skipFrames(int param0) {
         int var2 = 0;
         ln var3 = null;
         int var5 = 0;
@@ -27,17 +27,17 @@ final class fg extends PcmStream {
           this.c(var2);
           param0 = param0 - var2;
           this.field_u = this.field_u + var2;
-          this.e();
+          this.commitElapsed();
           var3 = (ln) (this.field_t.c(false));
           var4 = var3;
           synchronized (var4) {
             var5 = var3.a(this);
             if (var5 >= 0) {
               var3.field_n = var5;
-              this.a(var3.next, var3);
+              this.insertListener(var3.next, var3);
             } else {
               var3.field_n = 0;
-              this.a(var3);
+              this.removeListener(var3);
             }
           }
         } while (param0 != 0);
@@ -51,16 +51,16 @@ final class fg extends PcmStream {
     private final void c(int[] param0, int param1, int param2) {
         PcmStream var4 = (PcmStream) (this.field_s.c(false));
         while (var4 != null) {
-          var4.a(param0, param1, param2);
+          var4.process(param0, param1, param2);
           var4 = (PcmStream) (this.field_s.a((byte) -70));
         }
     }
 
-    final PcmStream b() {
+    final PcmStream firstSubStream() {
         return (PcmStream) (this.field_s.c(false));
     }
 
-    private final void a(IntrusiveNode param0, ln param1) {
+    private final void insertListener(IntrusiveNode param0, ln param1) {
         while (true) {
           if (param0 == this.field_t.sentinel) {
             cl.a(param0, -71, param1);
@@ -81,12 +81,12 @@ final class fg extends PcmStream {
     private final void c(int param0) {
         PcmStream var2 = (PcmStream) (this.field_s.c(false));
         while (var2 != null) {
-          var2.a(param0);
+          var2.skipFrames(param0);
           var2 = (PcmStream) (this.field_s.a((byte) -70));
         }
     }
 
-    private final void a(ln param0) {
+    private final void removeListener(ln param0) {
         param0.unlink(false);
         param0.a();
         IntrusiveNode var2 = this.field_t.sentinel.next;
@@ -97,7 +97,7 @@ final class fg extends PcmStream {
         }
     }
 
-    final synchronized void b(int[] param0, int param1, int param2) {
+    final synchronized void mixInto(int[] param0, int param1, int param2) {
         int var4 = 0;
         ln var5 = null;
         int var7 = 0;
@@ -118,28 +118,28 @@ final class fg extends PcmStream {
           param1 = param1 + var4;
           param2 = param2 - var4;
           this.field_u = this.field_u + var4;
-          this.e();
+          this.commitElapsed();
           var5 = (ln) (this.field_t.c(false));
           var6 = var5;
           synchronized (var6) {
             var7 = var5.a(this);
             if (var7 >= 0) {
               var5.field_n = var7;
-              this.a(var5.next, var5);
+              this.insertListener(var5.next, var5);
             } else {
               var5.field_n = 0;
-              this.a(var5);
+              this.removeListener(var5);
             }
           }
         } while (param2 != 0);
         return;
     }
 
-    final int a() {
+    final int activity() {
         return 0;
     }
 
-    private final void e() {
+    private final void commitElapsed() {
         ln var1 = null;
         if (this.field_u > 0) {
           var1 = (ln) (this.field_t.c(false));
@@ -152,7 +152,7 @@ final class fg extends PcmStream {
         }
     }
 
-    final PcmStream c() {
+    final PcmStream nextSubStream() {
         return (PcmStream) (this.field_s.a((byte) -70));
     }
 

@@ -62,19 +62,19 @@ final class qd extends ae {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
     final static el c(int param0, int param1) {
         if (param0 >= 107) {
-          return null != db.field_e ? (el) (db.field_e.a((long)param1, 1)) : null;
+          return null != db.field_e ? (el) (db.field_e.findByKey((long)param1, 1)) : null;
         }
         field_P = (Sprite) null;
-        return null != db.field_e ? (el) (db.field_e.a((long)param1, 1)) : null;
+        return null != db.field_e ? (el) (db.field_e.findByKey((long)param1, 1)) : null;
     }
 
-    public static void d(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
           return;
         }

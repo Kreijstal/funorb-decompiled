@@ -25,7 +25,7 @@ final class fe {
                 return;
               }
               ic.field_b.d(19);
-              ch.field_q.c();
+              ch.field_q.flush();
               oa.field_B = param0;
               if (null != oa.field_B) {
                 ic.field_b.a(param2, oa.field_B, (byte) 23);
@@ -47,11 +47,11 @@ final class fe {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 != -1) {
           field_a = (String) null;

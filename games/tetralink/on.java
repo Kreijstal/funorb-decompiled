@@ -11,7 +11,7 @@ final class on {
         if (param0) {
           if (0 < qd.field_ab &&
             hm.field_b) {
-            SoftwareRasterizer.e(0, 0, SoftwareRasterizer.field_f, IsaacCipher.field_a.field_z);
+            SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_f, IsaacCipher.field_a.field_z);
             t.field_q.a(param1, 256);
             if (ng.field_t <= 0 &&
               0 >= am.field_f) {
@@ -48,7 +48,7 @@ final class on {
                 return;
               }
               if (lg.field_S) {
-                SoftwareRasterizer.e(0, 0, SoftwareRasterizer.field_f, IsaacCipher.field_a.field_z);
+                SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_f, IsaacCipher.field_a.field_z);
                 fj.field_b.a(param1, 256);
               }
               return;
@@ -56,7 +56,7 @@ final class on {
           }
           if (decompiledFrameRemainder0) {
             if (hm.field_b) {
-              SoftwareRasterizer.e(0, 0, SoftwareRasterizer.field_f, IsaacCipher.field_a.field_z);
+              SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_f, IsaacCipher.field_a.field_z);
               t.field_q.a(param1, 256);
             }
             if (ng.field_t <= 0 &&
@@ -68,11 +68,11 @@ final class on {
             }
           }
         }
-        SoftwareRasterizer.e(0, 0, SoftwareRasterizer.field_f, IsaacCipher.field_a.field_z);
+        SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_f, IsaacCipher.field_a.field_z);
         fj.field_b.a(param1, 256);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -10457) {
           return;
         }

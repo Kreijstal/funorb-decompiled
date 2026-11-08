@@ -40,14 +40,14 @@ final class cc implements kg {
           var2_int = 0;
           var3 = param0.length();
           while (var3 > var2_int) {
-            if (tk.a((byte) 81, param0.charAt(var2_int))) {
+            if (tk.isNameSeparator((byte) 81, param0.charAt(var2_int))) {
               var2_int++;
               continue;
             }
             break;
           }
           while (var2_int < var3) {
-            if (tk.a((byte) 81, param0.charAt(var3 - 1))) {
+            if (tk.isNameSeparator((byte) 81, param0.charAt(var3 - 1))) {
               var3--;
               continue;
             }
@@ -87,7 +87,7 @@ final class cc implements kg {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param1).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -146,7 +146,7 @@ final class cc implements kg {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -158,7 +158,7 @@ final class cc implements kg {
         qa.field_v = true;
         jd.field_a = true;
         mf.field_s.i(0);
-        uf.a(id.field_n, false, false);
+        uf.openLoginProgress(id.field_n, false, false);
     }
 
     final static int a(byte param0, int param1) {
@@ -173,7 +173,7 @@ final class cc implements kg {
         return 255 & param1;
     }
 
-    public final void a(UiWidget param0, int param1, int param2, boolean param3, boolean param4) {
+    public final void drawWidget(UiWidget param0, int param1, int param2, boolean param3, boolean param4) {
         qd var14 = null;
         int var7 = 0;
         int var8 = 0;
@@ -186,12 +186,12 @@ final class cc implements kg {
         int var12Lifetime1;
         try {
           var14 = !(param0 instanceof qd) ? null : (qd) (param0);
-          SoftwareRasterizer.c(param0.field_t + param1, param2 + param0.field_w, param0.field_F, param0.field_u, this.field_b);
+          SoftwareRasterizer.fillRectangle(param0.field_t + param1, param2 + param0.field_w, param0.field_F, param0.field_u, this.field_b);
           if (var14 == null) {
           }
           var7 = param1 + (param0.field_t + var14.field_V);
           var8 = param2 - (-param0.field_w - var14.field_Z);
-          SoftwareRasterizer.f(var7, var8, var14.field_bb, this.field_h);
+          SoftwareRasterizer.fillCircle(var7, var8, var14.field_bb, this.field_h);
           if (!param3) {
             this.field_b = 42;
           }
@@ -199,19 +199,19 @@ final class cc implements kg {
             var9 = (double)var14.field_U * 3.141592653589793 * 2.0 / (double)var14.field_R;
             var11 = (int)(-Math.sin(var9) * (double)var14.field_bb);
             var12 = (int)(Math.cos(var9) * (double)var14.field_bb);
-            SoftwareRasterizer.f(var7 + var11, var12 + var8, 1, this.field_l);
+            SoftwareRasterizer.fillCircle(var7 + var11, var12 + var8, 1, this.field_l);
           }
-          SoftwareRasterizer.f(var7, var8, 2, 1);
+          SoftwareRasterizer.fillCircle(var7, var8, 2, 1);
           var9Lifetime1 = 2.0 * (3.141592653589793 * (double)var14.field_S) / (double)var14.field_R;
           var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var14.field_bb);
           var12Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var14.field_bb);
-          SoftwareRasterizer.d(var7, var8, var11Lifetime1 + var7, var8 + var12Lifetime1, 1);
+          SoftwareRasterizer.drawLine(var7, var8, var11Lifetime1 + var7, var8 + var12Lifetime1, 1);
           if (this.field_g != null) {
             var13 = var14.field_V + var14.field_bb + this.field_k;
-            this.field_g.a(param0.field_A, param0.field_t + (param1 + var13), this.field_d + (param2 + param0.field_w), -var13 + (-this.field_k + param0.field_F), param0.field_u - (this.field_k << 1), this.field_i, this.field_c, 1, 1, 0);
+            this.field_g.drawParagraph(param0.field_A, param0.field_t + (param1 + var13), this.field_d + (param2 + param0.field_w), -var13 + (-this.field_k + param0.field_F), param0.field_u - (this.field_k << 1), this.field_i, this.field_c, 1, 1, 0);
           }
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "cc.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "cc.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -254,11 +254,11 @@ final class cc implements kg {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_j = null;
         field_e = null;
@@ -276,7 +276,7 @@ final class cc implements kg {
           this.field_k = param1;
           this.field_g = param0;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "cc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "cc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -466,7 +466,7 @@ final class cc implements kg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var2), "cc.B(" + param0 + ',' + param1 + ')');
+          throw oi.wrapException((Throwable) ((Object) var2), "cc.B(" + param0 + ',' + param1 + ')');
         }
     }
 

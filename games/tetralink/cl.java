@@ -167,11 +167,11 @@ final class cl {
         if (param0 < 23) {
           field_f = (int[]) null;
         }
-        int var5 = mk.field_b.c(var6, 370);
-        SoftwareRasterizer.c(132, 125, 376, 6 + 24 * var5, param1 == 1 ? 127 : 394896);
-        qj.a(370 + li.field_l[0].field_t + li.field_l[2].field_t, (byte) -36, li.field_l, 135 - li.field_l[0].field_t, li.field_l[6].field_F + (24 * var5 + li.field_l[0].field_F), -li.field_l[0].field_F + 128);
+        int var5 = mk.field_b.wrappedLineCount(var6, 370);
+        SoftwareRasterizer.fillRectangle(132, 125, 376, 6 + 24 * var5, param1 == 1 ? 127 : 394896);
+        qj.drawNineSliceFrame(370 + li.field_l[0].field_t + li.field_l[2].field_t, (byte) -36, li.field_l, 135 - li.field_l[0].field_t, li.field_l[6].field_F + (24 * var5 + li.field_l[0].field_F), -li.field_l[0].field_F + 128);
         if (2 != param1) {
-          mk.field_b.a(var6, 135, 125, 370, 240, 8437759, -1, 1, 0, 24);
+          mk.field_b.drawParagraph(var6, 135, 125, 370, 240, 8437759, -1, 1, 0, 24);
         }
     }
 
@@ -302,7 +302,7 @@ final class cl {
           default:
             break;
         }
-        var7 = mk.field_b.b(var6);
+        var7 = mk.field_b.textWidth(var6);
         var8 = this.a((byte) 46, param0);
         var9 = this.b(param0, (byte) -101);
         var10 = this.a(54, param0);
@@ -325,20 +325,20 @@ final class cl {
           stackIn_49_0 = (param2) ? 12632256 : 7829367;
           var15 = stackIn_49_0;
         }
-        mk.field_b.b(var6, var11, mk.field_b.field_N + var10, var15, -1);
+        mk.field_b.drawLeft(var6, var11, mk.field_b.field_N + var10, var15, -1);
         if (var5 != 14 &&
           15 != var5) {
           return;
         }
         var11 = var11 + om.field_Rb;
-        SoftwareRasterizer.b(var11, -1 + (var10 + var12 / 2), 121, 2, var15);
+        SoftwareRasterizer.drawRectangle(var11, -1 + (var10 + var12 / 2), 121, 2, var15);
         if (var5 != 14) {
           stackIn_56_0 = 120 * jj.field_a / 256;
         } else {
           stackIn_56_0 = 120 * DelegatingCanvas.field_c / 256;
         }
         var16 = stackIn_56_0;
-        SoftwareRasterizer.b(var16 + (var11 - 1), var10 + 3, 3, var12 - 6, var15);
+        SoftwareRasterizer.drawRectangle(var16 + (var11 - 1), var10 + 3, 3, var12 - 6, var15);
         return;
     }
 
@@ -447,20 +447,20 @@ final class cl {
         if (var6Lifetime1 == -1) {
           if (param1 != 2) {
             if (!ug.o(-70)) {
-              mk.field_b.a(om.field_Lb, 160, 240, 320, 80, 8437759, -1, 1, 0, 20);
+              mk.field_b.drawParagraph(om.field_Lb, 160, 240, 320, 80, 8437759, -1, 1, 0, 20);
             } else {
-              mk.field_b.a(ei.field_e, 320, 270, 8437759, -1);
-              mk.field_b.a(rm.field_h, 320, 290, 8437759, -1);
-              mk.field_b.a(om.field_Lb, 160, 210, 320, 80, 8437759, -1, 1, 0, 20);
+              mk.field_b.drawCentered(ei.field_e, 320, 270, 8437759, -1);
+              mk.field_b.drawCentered(rm.field_h, 320, 290, 8437759, -1);
+              mk.field_b.drawParagraph(om.field_Lb, 160, 210, 320, 80, 8437759, -1, 1, 0, 20);
             }
           }
         } else {
           if (param1 != 2) {
-            mk.field_b.a(ui.field_a[var6Lifetime1], 320, var7Lifetime1 + 60, 8437759, -1);
+            mk.field_b.drawCentered(ui.field_a[var6Lifetime1], 320, var7Lifetime1 + 60, 8437759, -1);
             if ((hj.field_a & 1 << var6Lifetime1) != 0) {
-              mk.field_b.a(ua.field_f, 320, var7Lifetime1 + 80, 8437759, -1);
+              mk.field_b.drawCentered(ua.field_f, 320, var7Lifetime1 + 80, 8437759, -1);
             } else {
-              mk.field_b.a(ph.field_D, 320, 80 + var7Lifetime1, 8437759, -1);
+              mk.field_b.drawCentered(ph.field_D, 320, 80 + var7Lifetime1, 8437759, -1);
             }
           }
           if (ug.o(-110)) {
@@ -474,32 +474,32 @@ final class cl {
           var13 = 3072 / (-var11 + 96);
           if (af.field_a[var6Lifetime1] >= 1) {
             if (var9 < 0) {
-              w.field_r.a(240 + var8 - (var12 >> 1), var8 / 2 + (var7Lifetime1 + 158) + (var9 - (var12 >> 1)), var12, var12);
+              w.field_r.drawDownscaledAveraged(240 + var8 - (var12 >> 1), var8 / 2 + (var7Lifetime1 + 158) + (var9 - (var12 >> 1)), var12, var12);
             }
             if (af.field_a[var6Lifetime1] >= 2 &&
               var11 < 0) {
-              w.field_r.a(-(var13 >> 1) + (var10 + 240), 158 + (var7Lifetime1 + (-(var10 / 2) + var11)) - (var13 >> 1), var13, var13);
+              w.field_r.drawDownscaledAveraged(-(var13 >> 1) + (var10 + 240), 158 + (var7Lifetime1 + (-(var10 / 2) + var11)) - (var13 >> 1), var13, var13);
             }
           }
           this.a(240, var6Lifetime1, false, 128, 158 + var7Lifetime1, 1);
           if (af.field_a[var6Lifetime1] >= 1) {
             if (var9 >= 0) {
-              w.field_r.a(var8 + (240 - (var12 >> 1)), -(var12 >> 1) + 158 + (var7Lifetime1 + var8 / 2 + var9), var12, var12);
+              w.field_r.drawDownscaledAveraged(var8 + (240 - (var12 >> 1)), -(var12 >> 1) + 158 + (var7Lifetime1 + var8 / 2 + var9), var12, var12);
             }
             if (af.field_a[var6Lifetime1] >= 2 &&
               var11 >= 0) {
-              w.field_r.a(var10 + (240 - (var13 >> 1)), var11 + var7Lifetime1 + 158 + (-(var10 / 2) - (var13 >> 1)), var13, var13);
+              w.field_r.drawDownscaledAveraged(var10 + (240 - (var13 >> 1)), var11 + var7Lifetime1 + 158 + (-(var10 / 2) - (var13 >> 1)), var13, var13);
             }
           }
           if (ug.o(param0 ^ 10)) {
             var7Lifetime1 -= 8;
           }
           if (2 != param1) {
-            mk.field_b.c(hd.field_B, 420, var7Lifetime1 + 128, 8437759, -1);
-            mk.field_b.b(Integer.toString(sk.field_b[var6Lifetime1]), 420, var7Lifetime1 + 128, 8437759, -1);
-            mk.field_b.c(nl.field_c, 420, var7Lifetime1 + 148, 8437759, -1);
-            mk.field_b.b(Integer.toString(af.field_a[var6Lifetime1]), 420, var7Lifetime1 + 148, 8437759, -1);
-            mk.field_b.a(nh.field_Ob[var6Lifetime1], 320, var7Lifetime1 + 158, 160, 80, 8437759, -1, 1, 0, 20);
+            mk.field_b.drawRight(hd.field_B, 420, var7Lifetime1 + 128, 8437759, -1);
+            mk.field_b.drawLeft(Integer.toString(sk.field_b[var6Lifetime1]), 420, var7Lifetime1 + 128, 8437759, -1);
+            mk.field_b.drawRight(nl.field_c, 420, var7Lifetime1 + 148, 8437759, -1);
+            mk.field_b.drawLeft(Integer.toString(af.field_a[var6Lifetime1]), 420, var7Lifetime1 + 148, 8437759, -1);
+            mk.field_b.drawParagraph(nh.field_Ob[var6Lifetime1], 320, var7Lifetime1 + 158, 160, 80, 8437759, -1, 1, 0, 20);
           }
         }
     }
@@ -569,7 +569,7 @@ final class cl {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param3).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -606,12 +606,12 @@ final class cl {
           var4 = var4 + go.field_g.field_N;
         }
         regionExit1: {
-          go.field_g.a(SpriteState.field_w, 310, var5, var3, -1);
-          go.field_g.a(sj.field_j, 368, var4, var3, -1);
-          go.field_g.a(ib.field_d, 420, var5, var3, -1);
-          go.field_g.a(e.field_a, 458, var4, var3, -1);
+          go.field_g.drawCentered(SpriteState.field_w, 310, var5, var3, -1);
+          go.field_g.drawCentered(sj.field_j, 368, var4, var3, -1);
+          go.field_g.drawCentered(ib.field_d, 420, var5, var3, -1);
+          go.field_g.drawCentered(e.field_a, 458, var4, var3, -1);
           var4 += 24;
-          go.field_g.a(hi.field_b, 500, var5, var3, -1);
+          go.field_g.drawCentered(hi.field_b, 500, var5, var3, -1);
           if (cm.field_x.field_u) {
             if (cm.field_x.field_p != null) {
               var6 = lo.field_c;
@@ -622,7 +622,7 @@ final class cl {
                 if (null != var7[var10]) {
                   var3 = 8437759;
                   var11 = var7[var10];
-                  if (ej.a(var11, 4)) {
+                  if (ej.matchesNormalizedSessionName(var11, 4)) {
                     var3 = 16777215;
                     var9 = 1;
                   }
@@ -644,13 +644,13 @@ final class cl {
           }
         }
         var4Lifetime1 = mk.field_b.field_N + 120 + 8 * hg.field_j[6] / 2;
-        mk.field_b.a(var6, 320, var4Lifetime1, 8437759, -1);
+        mk.field_b.drawCentered(var6, 320, var4Lifetime1, 8437759, -1);
         return;
     }
 
     private final void a(int param0, byte param1) {
-        ef.field_k.d(110, 0, 192);
-        GameApplet.field_c.a(163, 20, 315, 120);
+        ef.field_k.drawTransparentWithOpacity(110, 0, 192);
+        GameApplet.field_c.drawScaled(163, 20, 315, 120);
         int var3 = -94 % ((-17 - param1) / 53);
     }
 
@@ -674,7 +674,7 @@ final class cl {
           param2.previous.next = param2;
           param2.next.previous = param2;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "cl.CA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "cl.CA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -807,31 +807,31 @@ final class cl {
         String var16 = null;
         int var10_int = param2 + (param4 + param6);
         if (param0 != -1) {
-          mk.field_b.c(1 + param0 + ". ", 140, param1, param5, -1);
+          mk.field_b.drawRight(1 + param0 + ". ", 140, param1, param5, -1);
         }
         if (0 != var10_int) {
           param2 = (200 * param2 + var10_int) / (2 * var10_int);
           param4 = (param4 * 200 + var10_int) / (var10_int * 2);
           param6 = (var10_int + 200 * param6) / (2 * var10_int);
         }
-        mk.field_b.b(param3, 140, param1, param5, -1);
+        mk.field_b.drawLeft(param3, 140, param1, param5, -1);
         String var12 = Integer.toString(param8);
-        mk.field_b.a(var12, 310, param1, param5, -1);
+        mk.field_b.drawCentered(var12, 310, param1, param5, -1);
         if (param7) {
           return;
         }
         try {
           var13 = 500 > var10_int ? Integer.toString(var10_int) : "500+";
           String var11 = var13;
-          mk.field_b.a(var13, 368, param1, param5, -1);
+          mk.field_b.drawCentered(var13, 368, param1, param5, -1);
           var14 = param6 + "%";
-          mk.field_b.a(var14, 420, param1, param5, -1);
+          mk.field_b.drawCentered(var14, 420, param1, param5, -1);
           var15 = param4 + "%";
-          mk.field_b.a(var15, 458, param1, param5, -1);
+          mk.field_b.drawCentered(var15, 458, param1, param5, -1);
           var16 = param2 + "%";
-          mk.field_b.a(var16, 500, param1, param5, -1);
+          mk.field_b.drawCentered(var16, 500, param1, param5, -1);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "cl.K(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "cl.K(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -860,7 +860,7 @@ final class cl {
           }
           var10 = stackIn_10_0;
           var7 = var10;
-          var10.c(param0 - 16, -16 + param4);
+          var10.drawTransparent(param0 - 16, -16 + param4);
         } else {
           if ((hj.field_a & 1 << param1) == 0) {
             stackIn_4_0 = NotificationToast.field_p;
@@ -870,9 +870,9 @@ final class cl {
           var9 = stackIn_4_0;
           var7 = var9;
           if (128 != param3) {
-            var9.a(-(param3 >> 1) + param0, param4 - (param3 >> 1), param3, param3);
+            var9.drawDownscaledAveraged(-(param3 >> 1) + param0, param4 - (param3 >> 1), param3, param3);
           } else {
-            var9.c(-64 + param0, -64 + param4);
+            var9.drawTransparent(-64 + param0, -64 + param4);
           }
         }
         if (param2) {
@@ -887,7 +887,7 @@ final class cl {
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_d = null;
         field_a = null;
@@ -951,7 +951,7 @@ final class cl {
 
     private final void a(byte param0) {
         int var2 = 103 % ((48 - param0) / 61);
-        mk.field_b.a(dj.field_c, 320, 115 - (-mk.field_b.field_N - 94), 8437759, -1);
+        mk.field_b.drawCentered(dj.field_c, 320, 115 - (-mk.field_b.field_N - 94), 8437759, -1);
     }
 
     final void a(boolean param0, int param1, int param2) {
@@ -982,14 +982,14 @@ final class cl {
         int var7;
         int var8;
         var8 = TetraLink.field_J;
-        SoftwareRasterizer.c(100, 0, 10, 400, 0);
-        SoftwareRasterizer.c(530, 0, 10, 400, 0);
+        SoftwareRasterizer.fillRectangle(100, 0, 10, 400, 0);
+        SoftwareRasterizer.fillRectangle(530, 0, 10, 400, 0);
         stackIn_2_0 = 110;
         stackIn_2_1 = 0;
         stackIn_2_2 = 420;
         stackIn_2_3 = 400;
         stackIn_3_4 = (1 == param2) ? 127 : 394896;
-        SoftwareRasterizer.c(stackIn_2_0, stackIn_2_1, stackIn_2_2, stackIn_2_3, stackIn_3_4);
+        SoftwareRasterizer.fillRectangle(stackIn_2_0, stackIn_2_1, stackIn_2_2, stackIn_2_3, stackIn_3_4);
         if (this.field_c == 10) {
           this.a(param2, (byte) -111);
           return;
@@ -997,8 +997,8 @@ final class cl {
         if (param0) {
           this.a(67, 7, true);
         }
-        GameApplet.field_c.a(163, 20, 315, 120);
-        var4 = mk.field_b.b(co.field_p[this.field_c]);
+        GameApplet.field_c.drawScaled(163, 20, 315, 120);
+        var4 = mk.field_b.textWidth(co.field_p[this.field_c]);
         stackIn_9_0 = -20;
         if (hg.field_b[this.field_c] < 120) {
           stackIn_10_1 = hg.field_b[this.field_c];
@@ -1011,9 +1011,9 @@ final class cl {
         stackIn_12_2 = 6 + var4;
         stackIn_12_3 = -li.field_l[6].field_F - li.field_l[0].field_F + (mk.field_b.field_N + 16);
         stackIn_13_4 = (param2 != 1) ? 394896 : 127;
-        SoftwareRasterizer.c(stackIn_12_0, stackIn_12_1, stackIn_12_2, stackIn_12_3, stackIn_13_4);
-        qj.a(li.field_l[2].field_t + li.field_l[0].field_t + var4, (byte) -36, li.field_l, -var4 + (468 - li.field_l[0].field_t), mk.field_b.field_N + 10, var6 - mk.field_b.field_N);
-        mk.field_b.b(co.field_p[this.field_c], -var4 + 470, 2 + var6, 16777215, -1);
+        SoftwareRasterizer.fillRectangle(stackIn_12_0, stackIn_12_1, stackIn_12_2, stackIn_12_3, stackIn_13_4);
+        qj.drawNineSliceFrame(li.field_l[2].field_t + li.field_l[0].field_t + var4, (byte) -36, li.field_l, -var4 + (468 - li.field_l[0].field_t), mk.field_b.field_N + 10, var6 - mk.field_b.field_N);
+        mk.field_b.drawLeft(co.field_p[this.field_c], -var4 + 470, 2 + var6, 16777215, -1);
         for (var5 = 0; this.field_h.field_g > var5; var5++) {
           if (this.d(var5, (byte) 127)) {
             stackIn_20_1 = var5;
@@ -1034,16 +1034,16 @@ final class cl {
               this.b((byte) -99, param2);
             } else {
               if (9 == this.field_c) {
-                var7 = mk.field_b.c(n.field_R, 370);
+                var7 = mk.field_b.wrappedLineCount(n.field_R, 370);
                 stackIn_31_0 = 132;
                 stackIn_31_1 = 122;
                 stackIn_31_2 = 376;
                 stackIn_31_3 = 6 + 24 * var7;
                 stackIn_32_4 = (param2 == 1) ? 127 : 394896;
-                SoftwareRasterizer.c(stackIn_31_0, stackIn_31_1, stackIn_31_2, stackIn_31_3, stackIn_32_4);
-                qj.a(li.field_l[2].field_t + 370 + li.field_l[0].field_t, (byte) -36, li.field_l, 135 - li.field_l[0].field_t, var7 * 24 - (-li.field_l[0].field_F - li.field_l[6].field_F), 125 - li.field_l[0].field_F);
+                SoftwareRasterizer.fillRectangle(stackIn_31_0, stackIn_31_1, stackIn_31_2, stackIn_31_3, stackIn_32_4);
+                qj.drawNineSliceFrame(li.field_l[2].field_t + 370 + li.field_l[0].field_t, (byte) -36, li.field_l, 135 - li.field_l[0].field_t, var7 * 24 - (-li.field_l[0].field_F - li.field_l[6].field_F), 125 - li.field_l[0].field_F);
                 if (param2 != 2) {
-                  mk.field_b.a(n.field_R, 135, 125, 370, 240, 8437759, -1, 1, 0, 24);
+                  mk.field_b.drawParagraph(n.field_R, 135, 125, 370, 240, 8437759, -1, 1, 0, 24);
                 }
               }
             }

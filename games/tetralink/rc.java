@@ -23,7 +23,7 @@ final class rc extends en {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 10) {
-            stackIn_4_0 = qb.a(true, param0, (byte) -126, 10);
+            stackIn_4_0 = qb.parseInt(true, param0, (byte) -126, 10);
             return stackIn_4_0;
           }
           stackIn_2_0 = 80;
@@ -38,23 +38,23 @@ final class rc extends en {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         int var7 = 0;
         int var5 = param1 + this.field_t;
         int var6 = this.field_w + param2;
-        super.a(0, param1, param2, param3);
+        super.drawLayer(0, param1, param2, param3);
         if (param0 == param3) {
           var7 = !this.field_W ? 0 : -this.field_P + this.field_F - this.field_O * 2;
-          this.field_R.a(this.field_Q, this.field_O + var7 + var5, var6 + this.field_O, -this.field_O + this.field_P, -(2 * this.field_O) + this.field_u, this.field_V, -1, !this.field_W ? 2 : 0, 1, this.field_R.field_N);
+          this.field_R.drawParagraph(this.field_Q, this.field_O + var7 + var5, var6 + this.field_O, -this.field_O + this.field_P, -(2 * this.field_O) + this.field_u, this.field_V, -1, !this.field_W ? 2 : 0, 1, this.field_R.field_N);
           return;
         }
     }
 
-    public static void h(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
           return;
         }
@@ -89,7 +89,7 @@ final class rc extends en {
           this.field_P = param6;
           this.field_V = param9;
           var12_int = -this.field_O + this.field_P;
-          var13 = this.field_R.b(param10, var12_int, this.field_R.field_N) + 2 * this.field_O;
+          var13 = this.field_R.paragraphHeight(param10, var12_int, this.field_R.field_N) + 2 * this.field_O;
           if (var13 > param3) {
             this.a(var13, param1, -119, param0, param2);
           } else {
@@ -125,14 +125,14 @@ final class rc extends en {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
-    final String e(int param0) {
+    final String getTooltip(int param0) {
         int var2 = this.field_J.field_r ? 1 : 0;
         this.field_J.field_r = this.field_r;
-        String var3 = this.field_J.e(param0);
+        String var3 = this.field_J.getTooltip(param0);
         this.field_J.field_r = var2 != 0 ? true : false;
         return var3;
     }

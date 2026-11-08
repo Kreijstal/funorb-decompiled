@@ -24,13 +24,13 @@ class nk {
     private int field_r;
     private long field_b;
 
-    final synchronized void c() {
+    final synchronized void flush() {
         try {
           this.field_g = true;
           try {
-            this.h();
+            this.flushDevice();
           } catch (Exception exception) {
-            this.d();
+            this.closeDevice();
             this.field_b = k.a(0) + 2000L;
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -40,7 +40,7 @@ class nk {
         }
     }
 
-    final synchronized void f() {
+    final synchronized void serviceOutput() {
         try {
           Throwable decompiledCaughtException = null;
           long var1 = 0L;
@@ -56,7 +56,7 @@ class nk {
               this.field_i = var1 - 6000L;
             }
             while (var1 > this.field_i + 5000L) {
-              this.a(256);
+              this.skipFrames(256);
               this.field_i = this.field_i + (long)(256000 / field_k);
               var1 = k.a(0);
             }
@@ -73,11 +73,11 @@ class nk {
               if (var1 < this.field_b) {
                 return;
               }
-              this.b(this.field_r);
+              this.openDevice(this.field_r);
               this.field_b = 0L;
               this.field_g = true;
             }
-            var3_int = this.a();
+            var3_int = this.bufferedSamples();
             if (this.field_a - var3_int > this.field_t) {
               this.field_t = this.field_a - var3_int;
             }
@@ -90,8 +90,8 @@ class nk {
               if (this.field_r > 16384) {
                 this.field_r = 16384;
               }
-              this.d();
-              this.b(this.field_r);
+              this.closeDevice();
+              this.openDevice(this.field_r);
               var3_int = 0;
               this.field_g = true;
               if (var4 + 256 > this.field_r) {
@@ -100,8 +100,8 @@ class nk {
               }
             }
             while (var3_int < var4) {
-              this.a(this.field_c, 256);
-              this.g();
+              this.mixBlock(this.field_c, 256);
+              this.writeMixBlock();
               var3_int += 256;
             }
             if (var1 > this.field_l) {
@@ -110,7 +110,7 @@ class nk {
               } else {
                 if (this.field_t == 0 &&
                   this.field_u == 0) {
-                  this.d();
+                  this.closeDevice();
                   this.field_b = var1 + 2000L;
                   return;
                 }
@@ -124,7 +124,7 @@ class nk {
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var3 = (Exception) (Object) decompiledCaughtException;
-            this.d();
+            this.closeDevice();
             this.field_b = var1 + 2000L;
           }
           return;
@@ -135,23 +135,23 @@ class nk {
         }
     }
 
-    int a() throws Exception {
+    int bufferedSamples() throws Exception {
         return this.field_r;
     }
 
-    private final static void b(PcmStream param0) {
+    private final static void deactivateTree(PcmStream param0) {
         param0.field_q = false;
         if (param0.field_p != null) {
           param0.field_p.field_n = 0;
         }
-        PcmStream var1 = param0.b();
+        PcmStream var1 = param0.firstSubStream();
         while (var1 != null) {
-          nk.b(var1);
-          var1 = param0.c();
+          nk.deactivateTree(var1);
+          var1 = param0.nextSubStream();
         }
     }
 
-    final synchronized void b() {
+    final synchronized void shutdown() {
         int var2 = 0;
         int var1;
         if (field_q != null) {
@@ -172,12 +172,12 @@ class nk {
             field_q = null;
           }
         }
-        this.d();
+        this.closeDevice();
         this.field_c = null;
         this.field_o = true;
     }
 
-    final static void a(int param0, boolean param1, int param2) {
+    final static void configure(int param0, boolean param1, int param2) {
         if (param0 < 8000 ||
           param0 > 48000) {
           throw new IllegalArgumentException();
@@ -187,7 +187,7 @@ class nk {
         field_n = param2;
     }
 
-    private final void a(PcmStream param0, int param1) {
+    private final void enqueueByPriority(PcmStream param0, int param1) {
         int var3 = param1 >> 5;
         PcmStream var4 = this.field_f[var3];
         if (var4 == null) {
@@ -199,11 +199,11 @@ class nk {
         param0.field_o = param1;
     }
 
-    final synchronized void a(PcmStream param0) {
+    final synchronized void setStream(PcmStream param0) {
         this.field_j = param0;
     }
 
-    final static nk a(PlatformTaskDispatcher param0, java.awt.Component param1, int param2, int param3) {
+    final static nk createOutput(PlatformTaskDispatcher param0, java.awt.Component param1, int param2, int param3) {
         try {
           vk var4 = null;
           Throwable var4_ref = null;
@@ -233,12 +233,12 @@ class nk {
               }
               ((nk) ((Object) stackIn_10_0)).field_c = new int[stackIn_10_1 * stackIn_11_2];
               ((nk) ((Object) var4)).field_p = param3;
-              ((nk) ((Object) var4)).a(param1);
+              ((nk) ((Object) var4)).initializeDevice(param1);
               ((nk) ((Object) var4)).field_r = (param3 & -1024) + 1024;
               if (((nk) ((Object) var4)).field_r > 16384) {
                 ((nk) ((Object) var4)).field_r = 16384;
               }
-              ((nk) ((Object) var4)).b(((nk) ((Object) var4)).field_r);
+              ((nk) ((Object) var4)).openDevice(((nk) ((Object) var4)).field_r);
               if (field_n > 0 &&
                 field_q == null) {
                 field_q = new pg();
@@ -267,13 +267,13 @@ class nk {
         }
     }
 
-    void g() throws Exception {
+    void writeMixBlock() throws Exception {
     }
 
-    void h() throws Exception {
+    void flushDevice() throws Exception {
     }
 
-    private final void a(int[] param0, int param1) {
+    private final void mixBlock(int[] param0, int param1) {
         int var3;
         int var4;
         int var5;
@@ -299,13 +299,13 @@ class nk {
         if (field_s) {
           var3 = var3 << 1;
         }
-        rd.a(param0, 0, var3);
+        rd.clear(param0, 0, var3);
         this.field_e = this.field_e - param1;
         if (this.field_j != null &&
           this.field_e <= 0) {
           this.field_e = this.field_e + (field_k >> 4);
-          nk.b(this.field_j);
-          this.a(this.field_j, this.field_j.d());
+          nk.deactivateTree(this.field_j);
+          this.enqueueByPriority(this.field_j, this.field_j.priority());
           var4 = 0;
           var5 = 255;
           var6 = 7;
@@ -336,7 +336,7 @@ class nk {
                       continue;
                     }
                     var11.field_q = true;
-                    var13 = var11.a();
+                    var13 = var11.activity();
                     var4 = var4 + var13;
                     if (var12 != null) {
                       var12.field_n = var12.field_n + var13;
@@ -344,12 +344,12 @@ class nk {
                     if (var4 >= this.field_h) {
                       break scanLoop1;
                     }
-                    var14Lifetime2 = var11.b();
+                    var14Lifetime2 = var11.firstSubStream();
                     if (var14Lifetime2 != null) {
                       var15_int = var11.field_o;
                       while (var14Lifetime2 != null) {
-                        this.a(var14Lifetime2, var15_int * var14Lifetime2.d() >> 8);
-                        var14Lifetime2 = var11.c();
+                        this.enqueueByPriority(var14Lifetime2, var15_int * var14Lifetime2.priority() >> 8);
+                        var14Lifetime2 = var11.nextSubStream();
                       }
                     }
                     var15 = var11.field_n;
@@ -391,32 +391,32 @@ class nk {
           this.field_e = 0;
         }
         if (this.field_j != null) {
-          this.field_j.b(param0, 0, param1);
+          this.field_j.mixInto(param0, 0, param1);
         }
         this.field_i = k.a(0);
     }
 
-    void a(java.awt.Component param0) throws Exception {
+    void initializeDevice(java.awt.Component param0) throws Exception {
     }
 
-    void d() {
+    void closeDevice() {
     }
 
-    private final void a(int param0) {
+    private final void skipFrames(int param0) {
         this.field_e = this.field_e - param0;
         if (this.field_e < 0) {
           this.field_e = 0;
         }
         if (this.field_j != null) {
-          this.field_j.a(param0);
+          this.field_j.skipFrames(param0);
           return;
         }
     }
 
-    void b(int param0) throws Exception {
+    void openDevice(int param0) throws Exception {
     }
 
-    public static void e() {
+    public static void releaseStatics() {
         field_q = null;
     }
 

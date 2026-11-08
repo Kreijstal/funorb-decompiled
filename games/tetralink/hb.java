@@ -17,7 +17,7 @@ final class hb {
         return this.field_b;
     }
 
-    final boolean a(int param0) {
+    final boolean isSelected(int param0) {
         if (param0 != 0) {
           this.field_b = (String) null;
           return this.field_g;
@@ -54,7 +54,7 @@ final class hb {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -76,7 +76,7 @@ final class hb {
           }
           return var1;
         }
-        hb.b(75);
+        hb.releaseStatics(75);
         if (ao.field_c != null) {
           var1 = ao.field_c.e(false);
         }
@@ -89,7 +89,7 @@ final class hb {
         return var1;
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         field_a = null;
         field_e = null;

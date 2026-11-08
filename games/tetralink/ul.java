@@ -8,7 +8,7 @@ final class ul implements kg {
     static String field_e;
     static kh[] field_c;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = -102 / ((-25 - param0) / 36);
         field_b = null;
         field_e = null;
@@ -16,7 +16,7 @@ final class ul implements kg {
         field_a = null;
     }
 
-    public final void a(UiWidget param0, int param1, int param2, boolean param3, boolean param4) {
+    public final void drawWidget(UiWidget param0, int param1, int param2, boolean param3, boolean param4) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -37,7 +37,7 @@ final class ul implements kg {
           var8 = fj.field_q[1];
           if (param0 instanceof ae &&
             ((ae) (param0)).field_N) {
-            var8.b((param0.field_F - var8.field_t >> 1) + 1 + var6_int, 1 + (var7 + (param0.field_u - var8.field_F >> 1)), 256);
+            var8.drawAdditive((param0.field_F - var8.field_t >> 1) + 1 + var6_int, 1 + (var7 + (param0.field_u - var8.field_F >> 1)), 256);
           }
           if (!param0.c(3)) {
             return;
@@ -54,7 +54,7 @@ final class ul implements kg {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -95,7 +95,7 @@ final class ul implements kg {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 

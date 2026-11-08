@@ -9,7 +9,7 @@ final class mn {
     static String field_b;
     static int field_a;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_f = null;
         field_d = null;
         int var1 = -42 / ((param0 - 68) / 41);
@@ -72,7 +72,7 @@ final class mn {
           var3 = var9;
           var4 = new nl[var10.length >> 2];
           if (param1 != 37956674) {
-            mn.a(-102);
+            mn.releaseStatics(-102);
           }
           for (var5 = 0; var5 < var4.length; var5++) {
             var6 = new nl();
@@ -94,7 +94,7 @@ final class mn {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -107,7 +107,7 @@ final class mn {
           param0.removeFocusListener(vi.field_a);
           mh.field_b = -1;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "mn.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "mn.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -164,7 +164,7 @@ final class mn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var6), "mn.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw oi.wrapException((Throwable) ((Object) var6), "mn.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

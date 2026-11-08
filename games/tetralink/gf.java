@@ -11,7 +11,7 @@ final class gf extends IntrusiveNode {
     int[] field_u;
     private int[] field_t;
 
-    private final static int a(int param0, double param1) {
+    private final static int applyGamma(int param0, double param1) {
         if (param1 == 1.0) {
           return param0;
         }
@@ -24,11 +24,11 @@ final class gf extends IntrusiveNode {
         return (var3 << 16) + (var4 << 8) + var5;
     }
 
-    final void a() {
+    final void releasePixels() {
         this.field_u = null;
     }
 
-    final boolean a(float param0, int param1, Archive param2) {
+    final boolean buildPixels(float param0, int param1, Archive param2) {
         int var5 = 0;
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
@@ -59,8 +59,8 @@ final class gf extends IntrusiveNode {
         var4Lifetime1 = param1 * param1;
         this.field_u = new int[var4Lifetime1];
         for (var5 = 0; var5 < this.field_s.length; var5++) {
-          var6 = hd.a(1, this.field_s[var5], param2);
-          var6.a();
+          var6 = hd.loadSpritesFromArchive(1, this.field_s[var5], param2);
+          var6.normalizeCanvas();
           var17 = var6.field_o;
           var15 = var17;
           var7 = var15;
@@ -80,7 +80,7 @@ final class gf extends IntrusiveNode {
             }
           }
           for (var10Lifetime1 = 0; var10Lifetime1 < var16.length; var10Lifetime1++) {
-            var8[var10Lifetime1] = gf.a(var16[var10Lifetime1], (double)param0);
+            var8[var10Lifetime1] = gf.applyGamma(var16[var10Lifetime1], (double)param0);
           }
           if (var5 != 0) {
             var10Lifetime2 = this.field_r[var5 - 1];

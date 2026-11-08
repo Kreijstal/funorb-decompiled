@@ -86,7 +86,7 @@ final class we extends hi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var7), "we.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw oi.wrapException((Throwable) ((Object) var7), "we.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -117,7 +117,7 @@ final class we extends hi {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -142,11 +142,11 @@ final class we extends hi {
           this.field_o = true;
           var8 = this.a(param0, param1, -19395, param4);
           var9 = var8;
-          var9.field_j[0] = -param4.b(param0) + param2;
+          var9.field_j[0] = -param4.textWidth(param0) + param2;
           var9.field_j[param0.length()] = param2;
           la.a(param0, var9, param4, param3, 0);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "we.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "we.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -172,12 +172,12 @@ final class we extends hi {
           this.field_g = param2;
           this.field_l = 1;
           var8 = this.a(param0, param4, -19395, param2);
-          var7 = param2.b(param0);
+          var7 = param2.textWidth(param0);
           var8.field_j[0] = param3 - (var7 >> 1);
           var8.field_j[param0.length()] = param3 + (var7 >> 1);
           la.a(param0, var8, param2, false, 0);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "we.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "we.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -208,10 +208,10 @@ final class we extends hi {
           var7 = this.a(param4, param3, -19395, param1);
           var8 = var7;
           var7.field_j[param2] = param0;
-          var8.field_j[param4.length()] = param1.b(param4) + param0;
+          var8.field_j[param4.length()] = param1.textWidth(param4) + param0;
           la.a(param4, var8, param1, false, 0);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "we.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "we.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -275,9 +275,9 @@ final class we extends hi {
           }
           this.field_g = param4;
           this.field_o = false;
-          var16 = new String[1 + param4.c(param2, param3)];
+          var16 = new String[1 + param4.wrappedLineCount(param2, param3)];
           var17 = var16;
-          var10 = Math.max(1, param4.a(param2, new int[]{param3}, var17));
+          var10 = Math.max(1, param4.wrapText(param2, new int[]{param3}, var17));
           if (this.field_f == 3 &&
             var10 == 1) {
             this.field_f = 1;
@@ -319,13 +319,13 @@ final class we extends hi {
             var14 = new bk(stackIn_38_2, stackIn_38_3, stackIn_39_4);
             var14.field_j[0] = 0;
             if (var13 != null) {
-              var14.field_j[var13.length()] = param4.b(var13);
+              var14.field_j[var13.length()] = param4.textWidth(var13);
               stackIn_43_0 = var13;
               stackIn_43_1 = var14;
               stackIn_43_2 = (BitmapFont) (param4);
               stackIn_43_3 = false;
               if (param5 == 3) {
-                stackIn_44_4 = this.a(param4.b(var13), (byte) -126, param3, var13);
+                stackIn_44_4 = this.a(param4.textWidth(var13), (byte) -126, param3, var13);
               } else {
                 stackIn_44_4 = 0;
               }
@@ -351,11 +351,11 @@ final class we extends hi {
           } else {
             stackIn_53_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_49_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_49_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
           field_n = (String) null;
         }
@@ -401,7 +401,7 @@ final class we extends hi {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -431,13 +431,13 @@ final class we extends hi {
               stackIn_6_0 = -(var11 * 5) + 239;
             }
             var12 = stackIn_6_0;
-            SoftwareRasterizer.c(var11 + var7_int, var8, var10, var12);
-            SoftwareRasterizer.c(-var11 + (-1 + var7_int) + var9, var8, var10, var12);
+            SoftwareRasterizer.drawVerticalLine(var11 + var7_int, var8, var10, var12);
+            SoftwareRasterizer.drawVerticalLine(-var11 + (-1 + var7_int) + var9, var8, var10, var12);
           }
           stackIn_10_0 = (param6) ? 244 : 4;
           var11Lifetime1 = stackIn_10_0;
-          SoftwareRasterizer.c(48 + var7_int, var8, var9 - 96, var10, var11Lifetime1);
-          qj.a(param2, (byte) -36, li.field_l, param5, param3, param0);
+          SoftwareRasterizer.fillRectangle(48 + var7_int, var8, var9 - 96, var10, var11Lifetime1);
+          qj.drawNineSliceFrame(param2, (byte) -36, li.field_l, param5, param3, param0);
           if (param4 <= 39) {
             field_e = (mk) null;
           }
@@ -445,7 +445,7 @@ final class we extends hi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var7), "we.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw oi.wrapException((Throwable) ((Object) var7), "we.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 

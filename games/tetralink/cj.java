@@ -15,7 +15,7 @@ final class cj {
     private static int[] field_c;
     private static int[] field_h;
 
-    private final static int b(int[] param0, int param1) {
+    private final static int highNeighbour(int[] param0, int param1) {
         int var5 = 0;
         int var2;
         int var3;
@@ -35,7 +35,7 @@ final class cj {
         return var3;
     }
 
-    public static void b() {
+    public static void releaseStatics() {
         field_c = null;
         field_b = null;
         field_i = null;
@@ -43,7 +43,7 @@ final class cj {
         field_g = null;
     }
 
-    final void a(float[] param0, int param1) {
+    final void applyFloor(float[] param0, int param1) {
         int stackIn_5_0 = 0;
         int[] stackIn_9_0 = null;
         int stackIn_9_1 = 0;
@@ -78,9 +78,9 @@ final class cj {
         field_g[1] = true;
         var5[0] = true;
         for (var6 = 2; var6 < var3; var6++) {
-          var7 = cj.a(field_i, var6);
-          var8_int = cj.b(field_i, var6);
-          var9 = this.a(field_i[var7], field_h[var7], field_i[var8_int], field_h[var8_int], field_i[var6]);
+          var7 = cj.lowNeighbour(field_i, var6);
+          var8_int = cj.highNeighbour(field_i, var6);
+          var9 = this.interpolatePoint(field_i[var7], field_h[var7], field_i[var8_int], field_h[var8_int], field_i[var6]);
           var10 = field_h[var6];
           var11 = var4 - var9;
           var12 = var9;
@@ -116,7 +116,7 @@ final class cj {
             }
           }
         }
-        this.a(0, var3 - 1);
+        this.sortPoints(0, var3 - 1);
         var6Lifetime1 = 0;
         var7Lifetime1 = field_h[0] * this.field_d;
         var16 = 1;
@@ -125,7 +125,7 @@ final class cj {
           if (field_g[var16]) {
             var9Lifetime1 = field_i[var16];
             var10Lifetime1 = field_h[var16] * this.field_d;
-            this.a(var6Lifetime1, var7Lifetime1, var9Lifetime1, var10Lifetime1, param0, param1);
+            this.applyLine(var6Lifetime1, var7Lifetime1, var9Lifetime1, var10Lifetime1, param0, param1);
             if (var9Lifetime1 >= param1) {
               return;
             }
@@ -140,7 +140,7 @@ final class cj {
         }
     }
 
-    private final int a(int param0, int param1, int param2, int param3, int param4) {
+    private final int interpolatePoint(int param0, int param1, int param2, int param3, int param4) {
         int var6 = param3 - param1;
         int var7 = param2 - param0;
         int var8 = var6 < 0 ? -var6 : var6;
@@ -149,7 +149,7 @@ final class cj {
         return var6 < 0 ? param1 - var10 : param1 + var10;
     }
 
-    private final void a(int param0, int param1) {
+    private final void sortPoints(int param0, int param1) {
         int var7 = 0;
         int var3;
         int var4;
@@ -178,11 +178,11 @@ final class cj {
         field_i[var3] = var4;
         field_h[var3] = var5;
         field_g[var3] = var6 != 0;
-        this.a(param0, var3 - 1);
-        this.a(var3 + 1, param1);
+        this.sortPoints(param0, var3 - 1);
+        this.sortPoints(var3 + 1, param1);
     }
 
-    private final void a(int param0, int param1, int param2, int param3, float[] param4, int param5) {
+    private final void applyLine(int param0, int param1, int param2, int param3, float[] param4, int param5) {
         int var14 = 0;
         int var7 = param3 - param1;
         int var8 = param2 - param0;
@@ -208,7 +208,7 @@ final class cj {
         }
     }
 
-    private final static int a(int[] param0, int param1) {
+    private final static int lowNeighbour(int[] param0, int param1) {
         int var5 = 0;
         int var2;
         int var3;
@@ -249,15 +249,15 @@ final class cj {
         int var5Lifetime1;
         int var5Lifetime2;
         int var5Lifetime3;
-        var1 = ag.d(16);
+        var1 = ag.readBits(16);
         if (var1 != 1) {
           throw new RuntimeException();
         }
-        var2 = ag.d(5);
+        var2 = ag.readBits(5);
         var3 = 0;
         this.field_j = new int[var2];
         for (var4 = 0; var4 < var2; var4++) {
-          var5 = ag.d(4);
+          var5 = ag.readBits(4);
           this.field_j[var4] = var5;
           if (var5 >= var3) {
             var3 = var5 + 1;
@@ -268,12 +268,12 @@ final class cj {
         this.field_k = new int[var3];
         this.field_f = new int[var3][];
         for (var4Lifetime1 = 0; var4Lifetime1 < var3; var4Lifetime1++) {
-          this.field_a[var4Lifetime1] = ag.d(3) + 1;
-          dupTemp$1 = ag.d(2);
+          this.field_a[var4Lifetime1] = ag.readBits(3) + 1;
+          dupTemp$1 = ag.readBits(2);
           this.field_l[var4Lifetime1] = dupTemp$1;
           var5Lifetime1 = dupTemp$1;
           if (var5Lifetime1 != 0) {
-            this.field_k[var4Lifetime1] = ag.d(8);
+            this.field_k[var4Lifetime1] = ag.readBits(8);
           }
           var5Lifetime1 = 1 << var5Lifetime1;
           var10 = new int[var5Lifetime1];
@@ -281,11 +281,11 @@ final class cj {
           var6_ref_int__ = var9;
           this.field_f[var4Lifetime1] = var10;
           for (var7 = 0; var7 < var5Lifetime1; var7++) {
-            var6_ref_int__[var7] = ag.d(8) - 1;
+            var6_ref_int__[var7] = ag.readBits(8) - 1;
           }
         }
-        this.field_d = ag.d(2) + 1;
-        var4Lifetime2 = ag.d(4);
+        this.field_d = ag.readBits(2) + 1;
+        var4Lifetime2 = ag.readBits(4);
         var5Lifetime2 = 2;
         for (var6 = 0; var6 < var2; var6++) {
           var5Lifetime2 = var5Lifetime2 + this.field_a[this.field_j[var6]];
@@ -299,7 +299,7 @@ final class cj {
           for (var8 = 0; var8 < this.field_a[var7Lifetime1]; var8++) {
             incrementValue$0 = var5Lifetime3;
             var5Lifetime3++;
-            this.field_e[incrementValue$0] = ag.d(var4Lifetime2);
+            this.field_e[incrementValue$0] = ag.readBits(var4Lifetime2);
           }
         }
         if (field_i != null &&
@@ -312,7 +312,7 @@ final class cj {
         return;
     }
 
-    final boolean a() {
+    final boolean decodeFloor() {
         int var6 = 0;
         int var12 = 0;
         int incrementValue$0 = 0;
@@ -331,7 +331,7 @@ final class cj {
         int var10;
         int var11;
         int var13;
-        stackIn_3_0 = (ag.c() == 0) ? 0 : 1;
+        stackIn_3_0 = (ag.readBit() == 0) ? 0 : 1;
         var1 = stackIn_3_0;
         if (var1 == 0) {
           return false;
@@ -340,8 +340,8 @@ final class cj {
         System.arraycopy(this.field_e, 0, field_i, 0, var2);
         var3 = field_c[this.field_d - 1];
         var4 = ja.c(-7422, var3 - 1);
-        field_h[0] = ag.d(var4);
-        field_h[1] = ag.d(var4);
+        field_h[0] = ag.readBits(var4);
+        field_h[1] = ag.readBits(var4);
         var5 = 2;
         for (var6 = 0; var6 < this.field_j.length; var6++) {
           var7 = this.field_j[var6];
@@ -350,7 +350,7 @@ final class cj {
           var10 = (1 << var9) - 1;
           var11 = 0;
           if (var9 > 0) {
-            var11 = ag.field_Q[this.field_k[var7]].b();
+            var11 = ag.field_Q[this.field_k[var7]].decodeScalar();
           }
           for (var12 = 0; var12 < var8; var12++) {
             var13 = this.field_f[var7][var11 & var10];
@@ -362,7 +362,7 @@ final class cj {
             if (var13 < 0) {
               stackIn_14_2 = 0;
             } else {
-              stackIn_14_2 = ag.field_Q[var13].b();
+              stackIn_14_2 = ag.field_Q[var13].decodeScalar();
             }
             stackIn_13_0[stackIn_13_1] = stackIn_14_2;
           }

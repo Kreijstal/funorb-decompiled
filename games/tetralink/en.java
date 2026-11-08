@@ -11,16 +11,16 @@ abstract class en extends UiWidget implements nf {
     static int field_K;
     static String field_M;
 
-    void a(UiWidget param0, int param1, int param2, boolean param3) {
+    void updatePointer(UiWidget param0, int param1, int param2, boolean param3) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(param0, param1, param2, param3);
           if (null != this.field_J) {
-            this.field_J.a(param0, this.field_t + param1, this.field_w + param2, true);
+            this.field_J.updatePointer(param0, this.field_t + param1, this.field_w + param2, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -33,7 +33,7 @@ abstract class en extends UiWidget implements nf {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -87,7 +87,7 @@ abstract class en extends UiWidget implements nf {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw oi.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+            throw oi.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -96,7 +96,7 @@ abstract class en extends UiWidget implements nf {
         }
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         field_I = null;
         field_M = null;
         field_L = null;
@@ -106,7 +106,7 @@ abstract class en extends UiWidget implements nf {
         }
     }
 
-    void a(int param0, boolean param1, UiWidget param2, int param3, int param4, int param5) {
+    void handlePointerRelease(int param0, boolean param1, UiWidget param2, int param3, int param4, int param5) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -114,7 +114,7 @@ abstract class en extends UiWidget implements nf {
         RuntimeException var7 = null;
         try {
           if (this.field_J != null) {
-            this.field_J.a(param0, false, param2, param3 + this.field_w, param4, param5 + this.field_t);
+            this.field_J.handlePointerRelease(param0, false, param2, param3 + this.field_w, param4, param5 + this.field_t);
           }
           if (param1) {
             field_M = (String) null;
@@ -130,7 +130,7 @@ abstract class en extends UiWidget implements nf {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -227,15 +227,15 @@ abstract class en extends UiWidget implements nf {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
-    String e(int param0) {
+    String getTooltip(int param0) {
         String var3 = null;
-        String var2 = super.e(param0);
+        String var2 = super.getTooltip(param0);
         if (null != this.field_J) {
-          var3 = this.field_J.e(param0 ^ 0);
+          var3 = this.field_J.getTooltip(param0 ^ 0);
           if (var3 != null) {
             return var3;
           }
@@ -258,7 +258,7 @@ abstract class en extends UiWidget implements nf {
             stackIn_2_0 = (StringBuilder) null;
             return stackIn_2_0;
           }
-          if (this.a(param0, param2, 119, param1)) {
+          if (this.beginDebugDescription(param0, param2, 119, param1)) {
             this.a(-108, param1, param0, param2);
             this.a(-31857, param2, param1, param0);
           }
@@ -280,11 +280,11 @@ abstract class en extends UiWidget implements nf {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final boolean a(UiWidget param0, int param1) {
+    final boolean focusNext(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -295,7 +295,7 @@ abstract class en extends UiWidget implements nf {
           if (param1 != -384169950) {
             field_I = (String) null;
           }
-          stackIn_6_0 = (this.field_J != null) && (this.field_J.a(param0, -384169950));
+          stackIn_6_0 = (this.field_J != null) && (this.field_J.focusNext(param0, -384169950));
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -307,7 +307,7 @@ abstract class en extends UiWidget implements nf {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -334,7 +334,7 @@ abstract class en extends UiWidget implements nf {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -389,11 +389,11 @@ abstract class en extends UiWidget implements nf {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
-    final boolean a(int param0, UiWidget param1, int param2, int param3, int param4, int param5, int param6) {
+    final boolean onFocusedKey(int param0, UiWidget param1, int param2, int param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
         boolean stackIn_8_0 = false;
         RuntimeException stackIn_11_0 = null;
@@ -404,7 +404,7 @@ abstract class en extends UiWidget implements nf {
           if (param0 != -19137) {
             return false;
           }
-          stackIn_8_0 = (this.field_J != null) && (this.field_J.c(3)) && (this.field_J.a(param0 + 0, param1, param2, param3, param4, param5, param6));
+          stackIn_8_0 = (this.field_J != null) && (this.field_J.c(3)) && (this.field_J.onFocusedKey(param0 + 0, param1, param2, param3, param4, param5, param6));
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -416,7 +416,7 @@ abstract class en extends UiWidget implements nf {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -445,7 +445,7 @@ abstract class en extends UiWidget implements nf {
           if (param1 >= -7) {
             field_I = (String) null;
           }
-          stackIn_7_0 = (this.field_J != null) && (!this.field_J.c(3)) && (this.field_J.a(param0, -384169950));
+          stackIn_7_0 = (this.field_J != null) && (!this.field_J.c(3)) && (this.field_J.focusNext(param0, -384169950));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -457,7 +457,7 @@ abstract class en extends UiWidget implements nf {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -472,7 +472,7 @@ abstract class en extends UiWidget implements nf {
           if (param1 != 0) {
             this.field_J = (UiWidget) null;
           }
-          stackIn_7_0 = (null != this.field_J) && (!this.field_J.c(3)) && (this.field_J.a(param0, -384169950));
+          stackIn_7_0 = (null != this.field_J) && (!this.field_J.c(3)) && (this.field_J.focusNext(param0, -384169950));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -484,7 +484,7 @@ abstract class en extends UiWidget implements nf {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -516,24 +516,24 @@ abstract class en extends UiWidget implements nf {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    void a(int param0, int param1, int param2, int param3) {
+    void drawLayer(int param0, int param1, int param2, int param3) {
         if (param3 == 0 &&
           this.field_H != null) {
-          this.field_H.a((UiWidget) (this), param1, param2, true, true);
+          this.field_H.drawWidget((UiWidget) (this), param1, param2, true, true);
         }
         if (this.field_J != null) {
-          this.field_J.a(0, param1 + this.field_t, this.field_w + param2, param3);
+          this.field_J.drawLayer(0, param1 + this.field_t, this.field_w + param2, param3);
         }
         if (param0 != 0) {
           field_I = (String) null;
         }
     }
 
-    final boolean a(int param0, char param1, int param2, UiWidget param3) {
+    final boolean handleKey(int param0, char param1, int param2, UiWidget param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_10_0 = false;
@@ -544,7 +544,7 @@ abstract class en extends UiWidget implements nf {
         try {
           if (this.field_J != null &&
             this.field_J.c(3) &&
-            this.field_J.a(param0, param1, 1, param3)) {
+            this.field_J.handleKey(param0, param1, 1, param3)) {
             return true;
           }
           var5_int = param0;
@@ -571,7 +571,7 @@ abstract class en extends UiWidget implements nf {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 

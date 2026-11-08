@@ -8,7 +8,7 @@ final class be extends com.ms.dll.Callback {
     private boolean field_a;
     private int field_c;
 
-    final void a(boolean param0, java.awt.Component param1, int param2) {
+    final void setCursorVisible(boolean param0, java.awt.Component param1, int param2) {
         int var5 = 0;
         Object var6 = null;
         Throwable var8 = null;

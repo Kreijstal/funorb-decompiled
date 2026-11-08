@@ -13,7 +13,7 @@ final class lc {
     static String field_d;
     static String field_c;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_h = null;
         field_j = null;
         field_f = null;

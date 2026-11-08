@@ -8,7 +8,7 @@ final class jl {
     static String field_d;
     static String field_c;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_d = null;
         field_b = null;
@@ -46,7 +46,7 @@ final class jl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var1_ref), "jl.D(" + param0 + ')');
+          throw oi.wrapException((Throwable) ((Object) var1_ref), "jl.D(" + param0 + ')');
         }
     }
 
@@ -74,7 +74,7 @@ final class jl {
         RuntimeException var3 = null;
         var6 = TetraLink.field_J;
         try {
-          SoftwareRasterizer.c(640 - param1 >> 1, param2 - param0 >> 1, param1, param0, 9408511);
+          SoftwareRasterizer.fillRectangle(640 - param1 >> 1, param2 - param0 >> 1, param1, param0, 9408511);
           var3_int = -param0;
           while (true) {
             if (var3_int >= 0) {
@@ -96,7 +96,7 @@ final class jl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var3), "jl.B(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw oi.wrapException((Throwable) ((Object) var3), "jl.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

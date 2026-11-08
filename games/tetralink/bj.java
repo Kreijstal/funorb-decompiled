@@ -66,11 +66,11 @@ final class bj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var4), "bj.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw oi.wrapException((Throwable) ((Object) var4), "bj.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         field_a = null;
         if (param0 > -6) {
@@ -117,14 +117,14 @@ final class bj {
         bj.a(param1, param10, false, param4);
     }
 
-    final static void a(int param0, fh param1) {
+    final static void setSharedAnimationFrameset(int param0, fh param1) {
         if (param0 != 5) {
           return;
         }
         try {
           ck.field_Z = param1;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "bj.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "bj.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

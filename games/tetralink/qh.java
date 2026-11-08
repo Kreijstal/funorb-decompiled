@@ -22,8 +22,8 @@ final class qh extends d implements ih, cg {
             stackIn_2_0 = (String) null;
             return stackIn_2_0;
           }
-          var3 = this.field_m.a(false);
-          var4 = this.field_m.f((byte) 94);
+          var3 = this.field_m.getMonthIndex(false);
+          var4 = this.field_m.getDay((byte) 94);
           var5 = df.a(true);
           if (var4 >= 1890 &&
             var4 <= var5 - 3) {
@@ -41,12 +41,12 @@ final class qh extends d implements ih, cg {
         return nm.field_y;
     }
 
-    public final void a(byte param0, nn param1) {
+    public final void onTextSet(byte param0, nn param1) {
         try {
           int var3_int = -10 / ((-18 - param0) / 63);
           this.a(125);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "qh.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "qh.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -124,7 +124,7 @@ final class qh extends d implements ih, cg {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -140,7 +140,7 @@ final class qh extends d implements ih, cg {
           bn.field_c.a(param3, param2, !param0 ? true : false, param4, 1000000, (byte) -128);
           int var5_int = 120 / ((param1 + 1) / 47);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "qh.D(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "qh.D(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -161,13 +161,13 @@ final class qh extends d implements ih, cg {
         gl.field_o.a(param5, param3, param5 - d.field_e, param1, param3, 0);
     }
 
-    public final void a(nn param0, byte param1) {
+    public final void onTextChanged(nn param0, byte param1) {
         try {
           if (param1 != 101) {
             this.field_m = (hn) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "qh.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "qh.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -183,8 +183,8 @@ final class qh extends d implements ih, cg {
         Throwable decompiledCaughtException = null;
         try {
           var2_int = this.field_m.g((byte) 12);
-          var3 = this.field_m.a(param0);
-          var4 = this.field_m.f((byte) 66);
+          var3 = this.field_m.getMonthIndex(param0);
+          var4 = this.field_m.getDay((byte) 66);
           var5 = df.a(true);
           if (var4 < 1890) {
             stackIn_3_0 = db.field_h;

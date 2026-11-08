@@ -15,7 +15,7 @@ class fk extends ae {
     static int field_W;
     static String field_R;
 
-    boolean a(UiWidget param0, int param1) {
+    boolean focusNext(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -37,7 +37,7 @@ class fk extends ae {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -98,7 +98,7 @@ class fk extends ae {
               stackIn_14_0 = var4.a(var2, true);
             }
             var14 = stackIn_14_0;
-            var15 = new va(var7Lifetime1, var13, var12.field_h, -var13 + var14, Math.max(var3.a(true), var12.field_a - var12.field_h));
+            var15 = new va(var7Lifetime1, var13, var12.field_h, -var13 + var14, Math.max(var3.getLineInkHeight(true), var12.field_a - var12.field_h));
             if (var10 != null) {
               ((va) (var10)).field_v = var15;
             }
@@ -149,10 +149,10 @@ class fk extends ae {
         }
     }
 
-    void a(int param0, int param1, int param2, int param3) {
+    void drawLayer(int param0, int param1, int param2, int param3) {
         int var7 = 0;
         int var8 = 0;
-        super.a(param0 ^ 0, param1, param2, param3);
+        super.drawLayer(param0 ^ 0, param1, param2, param3);
         if (param3 != param0) {
           return;
         }
@@ -160,7 +160,7 @@ class fk extends ae {
         va var6 = this.field_X;
         if (var6 == null) {
         } else {
-          var7 = var9.a(param1, param0 ^ 0, (UiWidget) (this));
+          var7 = var9.textOriginY(param1, param0 ^ 0, (UiWidget) (this));
           var8 = var9.a((UiWidget) (this), param2, true);
           do {
             id.a(var6.field_r + 2, var6.field_s + var8 - 2, 0, var6.field_x + 2, -2 + (var6.field_o + var7));
@@ -169,7 +169,7 @@ class fk extends ae {
         }
     }
 
-    String e(int param0) {
+    String getTooltip(int param0) {
         if (param0 != 0) {
           field_V = (hl) null;
         }
@@ -208,7 +208,7 @@ class fk extends ae {
         return false;
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         field_R = null;
         if (param0 != -24314) {
           field_R = (String) null;
@@ -234,7 +234,7 @@ class fk extends ae {
         return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
     }
 
-    void a(UiWidget param0, int param1, int param2, boolean param3) {
+    void updatePointer(UiWidget param0, int param1, int param2, boolean param3) {
         int var5_int = 0;
         int var6 = 0;
         RuntimeException stackIn_8_0 = null;
@@ -243,7 +243,7 @@ class fk extends ae {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(param0, param1, param2, param3);
           this.field_X = null;
           if (!param3) {
             fk.a(-113, (byte) -121, 13, -15);
@@ -264,18 +264,18 @@ class fk extends ae {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final void b(int param0, int param1, int param2, int param3) {
-        super.b(param0, param1, param2, param3);
+    final void activate(int param0, int param1, int param2, int param3) {
+        super.activate(param0, param1, param2, param3);
         int var5 = param1 - this.field_t;
         int var6 = -this.field_w + param0;
         va var7 = this.b(var5, (byte) 119, var6);
         if (var7 != null &&
           this.field_s != null) {
-          ((ij) ((Object) this.field_s)).a(var7.field_w, (byte) -103, this, param3);
+          ((ij) ((Object) this.field_s)).onHotspotAction(var7.field_w, (byte) -103, this, param3);
         }
     }
 
@@ -285,7 +285,7 @@ class fk extends ae {
         try {
           this.field_H = param1;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "fk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "fk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -329,7 +329,7 @@ class fk extends ae {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
         }
     }
 

@@ -10,7 +10,7 @@ final class pl {
     static String field_b;
     static int[] field_f;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_c = null;
         field_f = null;
         int var1 = 70 % ((param0 + 45) / 36);

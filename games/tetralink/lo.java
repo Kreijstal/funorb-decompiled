@@ -7,17 +7,17 @@ final class lo {
     static String field_d;
     static String field_c;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_c = null;
         field_d = null;
         field_a = null;
         if (param0 != 4666) {
-          lo.a(83);
+          lo.releaseStatics(83);
         }
     }
 
-    final static StringBuilder a(int param0, StringBuilder param1, int param2, char param3) {
+    final static StringBuilder resizeAndPad(int param0, StringBuilder param1, int param2, char param3) {
         int var5 = 0;
         int var4_int = 0;
         RuntimeException var4 = null;
@@ -49,7 +49,7 @@ final class lo {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

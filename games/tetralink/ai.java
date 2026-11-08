@@ -73,7 +73,7 @@ final class ai {
         try {
           var3 = null;
           if (param1 >= -101) {
-            ai.a(125);
+            ai.releaseStatics(125);
           }
           var4 = null;
           if (bm.field_s != null &&
@@ -104,11 +104,11 @@ final class ai {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw oi.a((Throwable) (stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw oi.wrapException((Throwable) (stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_g = null;
         field_a = null;
         field_f = null;
@@ -149,7 +149,7 @@ final class ai {
           while (var3_int < hk.field_b.length) {
             var6 = bi.field_c[var3_int];
             if (var6 >= 0) {
-              var7 = tn.a(true, 1, hk.field_b[var3_int]);
+              var7 = tn.measureText(true, 1, hk.field_b[var3_int]);
               var8 = nh.field_Nb - (var7 >> 1);
               var4 = var4 + cd.field_e;
               if (tb.a(param1, var8 - ao.field_a, var4, param0, (ao.field_a << 1) + var7, (hc.field_q << 1) + i.field_n, -124)) {
@@ -167,7 +167,7 @@ final class ai {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var3), "ai.F(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw oi.wrapException((Throwable) ((Object) var3), "ai.F(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -189,7 +189,7 @@ final class ai {
             if (!d.field_i.c(107)) {
               return 14;
             }
-            if (!d.field_i.a("", 0)) {
+            if (!d.field_i.hasGroupName("", 0)) {
               return 29;
             }
             if (!d.field_i.a("", (byte) -81)) {

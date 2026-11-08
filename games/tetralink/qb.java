@@ -25,7 +25,7 @@ final class qb extends gn implements dm {
         var7 = TetraLink.field_J;
         try {
           if (param0 > 0) {
-            this.a(-118, -114, -30, -7);
+            this.drawLayer(-118, -114, -30, -7);
           }
           if (param1 != this.field_M) {
             if (param1 == this.field_L) {
@@ -49,20 +49,20 @@ final class qb extends gn implements dm {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         int var5 = this.field_t + param1;
         int var6 = this.field_w + param2;
-        od.field_S.a(we.field_m, 20 + var5, 20 + var6, -40 + this.field_F, -50 + this.field_u, 16777215, -1, 1, 0, od.field_S.field_N);
-        super.a(param0, param1, param2, param3);
+        od.field_S.drawParagraph(we.field_m, 20 + var5, 20 + var6, -40 + this.field_F, -50 + this.field_u, 16777215, -1, 1, 0, od.field_S.field_N);
+        super.drawLayer(param0, param1, param2, param3);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 <= 54) {
-          qb.a(-48);
+          qb.releaseStatics(-48);
         }
         field_N = null;
         field_K = null;
@@ -157,11 +157,11 @@ final class qb extends gn implements dm {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final static int a(boolean param0, CharSequence param1, byte param2, int param3) {
+    final static int parseInt(boolean param0, CharSequence param1, byte param2, int param3) {
         int var8 = 0;
         int stackIn_40_0 = 0;
         RuntimeException stackIn_43_0 = null;
@@ -185,7 +185,7 @@ final class qb extends gn implements dm {
             var6 = 0;
             var7 = param1.length();
             if (param2 >= -51) {
-              qb.a(-91);
+              qb.releaseStatics(-91);
             }
             for (var8 = 0; var8 < var7; var8++) {
               boolean decompiledFrameRemainder0 = true;
@@ -240,11 +240,11 @@ final class qb extends gn implements dm {
           } else {
             stackIn_44_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final boolean a(int param0, char param1, int param2, UiWidget param3) {
+    final boolean handleKey(int param0, char param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_8_0 = false;
         boolean stackIn_11_0 = false;
@@ -256,7 +256,7 @@ final class qb extends gn implements dm {
           if (param2 != 1) {
             qb.a(-72, (byte) -52);
           }
-          if (super.a(param0, param1, param2 ^ 0, param3)) {
+          if (super.handleKey(param0, param1, param2 ^ 0, param3)) {
             return true;
           }
           if (param0 == 98) {
@@ -278,7 +278,7 @@ final class qb extends gn implements dm {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 

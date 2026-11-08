@@ -10,7 +10,7 @@ final class SecondaryNodeDeque implements Iterable {
     static String field_a;
     static byte[][][] field_c;
 
-    final void a(byte param0, DualLinkNode param1) {
+    final void addLast(byte param0, DualLinkNode param1) {
         try {
           if (param1.secondaryPrevious != null) {
             param1.unlinkSecondary(0);
@@ -21,7 +21,7 @@ final class SecondaryNodeDeque implements Iterable {
           param1.secondaryPrevious.secondaryNext = param1;
           param1.secondaryNext.secondaryPrevious = param1;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "rk.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "rk.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -45,7 +45,7 @@ final class SecondaryNodeDeque implements Iterable {
         vg.field_Lb = param2;
         dh.field_i = param0;
         if (param1 != -33) {
-          SecondaryNodeDeque.a(-45);
+          SecondaryNodeDeque.releaseStatics(-45);
         }
     }
 
@@ -66,7 +66,7 @@ final class SecondaryNodeDeque implements Iterable {
           }
           qh.field_n = 0;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "rk.E(" + param0 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "rk.E(" + param0 + ')');
         }
     }
 
@@ -76,7 +76,7 @@ final class SecondaryNodeDeque implements Iterable {
         this.field_e.secondaryNext = this.field_e;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
           field_a = (String) null;
         }

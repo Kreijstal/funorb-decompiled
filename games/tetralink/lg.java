@@ -40,14 +40,14 @@ final class lg extends UiWidget {
               var7 = Math.sqrt(-var7 + 1.0);
               var9 = !(1.0 <= var7) ? (int)(var7 * 255.0) : 255;
             }
-            SoftwareRasterizer.a(var6, var4, var9 << 8 | var9 | var9 << 16);
+            SoftwareRasterizer.setPixel(var6, var4, var9 << 8 | var9 | var9 << 16);
           }
         }
         dh.a(-581);
         return var3;
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_ab = null;
         field_O = null;
         field_V = null;
@@ -90,18 +90,18 @@ final class lg extends UiWidget {
             stackIn_7_0 = var8 | var9;
           }
           var12 = stackIn_7_0;
-          SoftwareRasterizer.g(var7, var6, this.field_U, var12);
+          SoftwareRasterizer.drawHorizontalLine(var7, var6, this.field_U, var12);
           var8Lifetime1 = param0 & 16711935;
           var9Lifetime1 = 65280 & param0;
-          SoftwareRasterizer.g(-(2 * this.field_U) + var7, var6, this.field_U, var12);
+          SoftwareRasterizer.drawHorizontalLine(-(2 * this.field_U) + var7, var6, this.field_U, var12);
           if (var11 < 256) {
             stackIn_10_0 = (-16711936 & var8Lifetime1 * var11 | 16711680 & var9Lifetime1 * var11) >>> 8;
           } else {
             stackIn_10_0 = var8Lifetime1 | var9Lifetime1;
           }
           var12Lifetime1 = stackIn_10_0;
-          SoftwareRasterizer.g(this.field_U + var7, var6, this.field_U, var12Lifetime1);
-          SoftwareRasterizer.g(var7 - this.field_U, var6, this.field_U, var12Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(this.field_U + var7, var6, this.field_U, var12Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(var7 - this.field_U, var6, this.field_U, var12Lifetime1);
         }
         if (param1 >= -15) {
           return (Sprite) null;
@@ -112,9 +112,9 @@ final class lg extends UiWidget {
 
     final static void a(boolean param0, int param1, boolean param2) {
         if (!param2) {
-          SoftwareRasterizer.a();
+          SoftwareRasterizer.clear();
         } else {
-          SoftwareRasterizer.d(0, 0, SoftwareRasterizer.field_f, SoftwareRasterizer.field_e, 0, 192);
+          SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_f, SoftwareRasterizer.field_e, 0, 192);
         }
         if (param1 != 1) {
           field_X = 111;
@@ -130,7 +130,7 @@ final class lg extends UiWidget {
         Sprite discarded$0 = null;
         this.field_Q = new Sprite[]{this.a(this.field_W, (byte) -55, this.field_T), this.a(this.field_N, (byte) -77, this.field_J)};
         this.field_L = this.a(param0 - 308991302);
-        this.field_P = this.field_L.a();
+        this.field_P = this.field_L.copyFlippedHorizontal();
         this.field_Y = new Sprite(this.field_u >> 1, this.field_u);
         if (param0 != 308991265) {
           discarded$0 = this.a(-5);
@@ -162,27 +162,27 @@ final class lg extends UiWidget {
           var6 = param0 - this.field_M;
           var7 = 10 % ((param3 - 44) / 63);
           while (var5_int > var6) {
-            param1.c(var6, param2);
+            param1.drawTransparent(var6, param2);
             var6 = var6 + param1.field_u;
           }
           dh.a(-581);
           if (param0 + this.field_L.field_u >= SoftwareRasterizer.field_j) {
             sk.a((byte) 118, this.field_Y);
-            param1.c(-this.field_M, 0);
-            param1.c(2 * this.field_U - this.field_M, 0);
-            this.field_P.e(0, 0);
+            param1.drawTransparent(-this.field_M, 0);
+            param1.drawTransparent(2 * this.field_U - this.field_M, 0);
+            this.field_P.drawMultiply(0, 0);
             dh.a(-581);
-            this.field_Y.c(param0, param2);
+            this.field_Y.drawTransparent(param0, param2);
           }
           if (SoftwareRasterizer.field_l >= -this.field_L.field_u + var5_int) {
             sk.a((byte) 116, this.field_Y);
             for (var8 = this.field_M - this.field_L.field_u + this.field_F; var8 > 2 * this.field_U; var8 = var8 - 2 * this.field_U) {
             }
-            param1.c(-var8, 0);
-            param1.c(this.field_U * 2 - var8, 0);
-            this.field_L.e(0, 0);
+            param1.drawTransparent(-var8, 0);
+            param1.drawTransparent(this.field_U * 2 - var8, 0);
+            this.field_L.drawMultiply(0, 0);
             dh.a(-581);
-            this.field_Y.c(-this.field_L.field_u + var5_int, param2);
+            this.field_Y.drawTransparent(-this.field_L.field_u + var5_int, param2);
             return;
           }
           return;
@@ -196,11 +196,11 @@ final class lg extends UiWidget {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final void a(UiWidget param0, int param1, int param2, boolean param3) {
+    final void updatePointer(UiWidget param0, int param1, int param2, boolean param3) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -228,7 +228,7 @@ final class lg extends UiWidget {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -241,7 +241,7 @@ final class lg extends UiWidget {
         this.g(308991265);
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         if (param0 != param3) {
           return;
         }

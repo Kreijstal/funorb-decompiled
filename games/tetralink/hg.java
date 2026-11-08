@@ -14,7 +14,7 @@ final class hg {
     static String field_e;
     static boolean field_c;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         field_b = null;
         field_j = null;
@@ -652,7 +652,7 @@ final class hg {
           } else {
             stackIn_353_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_352_0), ((StringBuilder) (Object) stackIn_352_1).append(stackIn_353_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_352_0), ((StringBuilder) (Object) stackIn_352_1).append(stackIn_353_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -672,12 +672,12 @@ final class hg {
           bd.a(param0, 6);
           if (cf.a(0, (byte) 105) &&
             ui.a(100, 1692) != 0) {
-            SoftwareRasterizer.c(0, 0, 200, 400, 0);
+            SoftwareRasterizer.fillRectangle(0, 0, 200, 400, 0);
             fh.a(true);
             return;
           }
           var2_int = -112 % ((param1 - 57) / 45);
-          SoftwareRasterizer.c(0, 0, 200, 400, 8421504);
+          SoftwareRasterizer.fillRectangle(0, 0, 200, 400, 8421504);
           var3 = (kb) (tb.field_d.c(false));
           while (var3 != null) {
             if (var3.field_o == 0) {
@@ -692,9 +692,9 @@ final class hg {
             var5 = var4[var3.field_r / 3];
             var5.field_p[1] = var3.field_s * 65793;
             if (!var3.field_n) {
-              var5.b(-31, 200);
+              var5.drawFlippedHorizontal(-31, 200);
             } else {
-              var5.a(-31, 200);
+              var5.draw(-31, 200);
             }
             var3 = (kb) (tb.field_d.a((byte) -70));
           }
@@ -710,7 +710,7 @@ final class hg {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
         }
     }
 

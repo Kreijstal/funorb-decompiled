@@ -24,7 +24,7 @@ final class va extends IntrusiveNode {
         return (int)(1000000000L / mb.field_B);
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_n = null;
         field_t = null;
         if (param0 != 44) {

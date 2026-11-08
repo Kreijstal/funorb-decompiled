@@ -25,7 +25,7 @@ final class bl extends hl {
         return 0 != this.field_Rb.field_T ? true : false;
     }
 
-    public static void e(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_Nb = null;
         field_Ub = null;
         if (param0 < 115) {
@@ -99,7 +99,7 @@ final class bl extends hl {
           vg.a((byte) 53, param18);
           MatchSetup.a(param9, param16, param5, param8, param1, param2, param0, param18, param6, param10, 109, param7, param15, param13, param12);
           r.a(param18, param3, true, param11);
-          ma.c(param17 ^ -19985);
+          ma.initializeOptionLabels(param17 ^ -19985);
           pd.b(false);
           ch.a(false);
           return;
@@ -197,7 +197,7 @@ final class bl extends hl {
           } else {
             stackIn_49_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(')').toString());
         }
     }
 
@@ -263,14 +263,14 @@ final class bl extends hl {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, boolean param5, int param6, int param7) {
         this.field_Hb = param3;
         if (!param5) {
-          bl.e((byte) 60);
+          bl.releaseStatics((byte) 60);
         }
         this.field_yb = param2;
         this.field_R = param1;

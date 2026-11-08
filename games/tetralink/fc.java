@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class fc extends vh {
-    abstract fc a(boolean param0, boolean param1, boolean param2);
+    abstract fc copyForAnimation(boolean param0, boolean param1, boolean param2);
 
-    private final void a(oe param0, pc param1, pc param2, int param3, int param4, boolean[] param5, boolean param6, boolean param7, int param8, int[] param9) {
+    private final void blendAnimationFrames(oe param0, pc param1, pc param2, int param3, int param4, boolean[] param5, boolean param6, boolean param7, int param8, int[] param9) {
         int var11;
         int var12;
         int var13;
@@ -144,24 +144,24 @@ abstract class fc extends vh {
                   if (var26 != -1) {
                     var31Lifetime1 = param8 & param0.field_s[var26];
                     if (var31Lifetime1 == 65535) {
-                      this.a(0, param0.field_q[var26], 0, 0, 0, param7);
+                      this.applyGroupTransform(0, param0.field_q[var26], 0, 0, 0, param7);
                     } else {
-                      this.a(0, param0.field_q[var26], 0, 0, 0, param7, var31Lifetime1, param9);
+                      this.applyMaskedGroupTransform(0, param0.field_q[var26], 0, 0, 0, param7, var31Lifetime1, param9);
                     }
                   }
                 } else {
                   var31Lifetime1 = param8 & param0.field_s[var21];
                   if (var31Lifetime1 == 65535) {
-                    this.a(0, param0.field_q[var21], 0, 0, 0, param7);
+                    this.applyGroupTransform(0, param0.field_q[var21], 0, 0, 0, param7);
                   } else {
-                    this.a(0, param0.field_q[var21], 0, 0, 0, param7, var31Lifetime1, param9);
+                    this.applyMaskedGroupTransform(0, param0.field_q[var21], 0, 0, 0, param7, var31Lifetime1, param9);
                   }
                 }
                 var31Lifetime2 = param8 & param0.field_s[var36];
                 if (var31Lifetime2 == 65535) {
-                  this.a(var17, param0.field_q[var36], var28, var29, var30, param7);
+                  this.applyGroupTransform(var17, param0.field_q[var36], var28, var29, var30, param7);
                 } else {
-                  this.a(var17, param0.field_q[var36], var28, var29, var30, param7, var31Lifetime2, param9);
+                  this.applyMaskedGroupTransform(var17, param0.field_q[var36], var28, var29, var30, param7, var31Lifetime2, param9);
                 }
               }
             }
@@ -178,35 +178,35 @@ abstract class fc extends vh {
             if (var13Lifetime1 != -1) {
               var14Lifetime1 = param8 & param0.field_s[var13Lifetime1];
               if (var14Lifetime1 == 65535) {
-                this.a(0, param0.field_q[var13Lifetime1], 0, 0, 0, param7);
+                this.applyGroupTransform(0, param0.field_q[var13Lifetime1], 0, 0, 0, param7);
               } else {
-                this.a(0, param0.field_q[var13Lifetime1], 0, 0, 0, param7, var14Lifetime1, param9);
+                this.applyMaskedGroupTransform(0, param0.field_q[var13Lifetime1], 0, 0, 0, param7, var14Lifetime1, param9);
               }
             }
             var14Lifetime1Lifetime1 = param8 & param0.field_s[var12Lifetime1];
             if (var14Lifetime1Lifetime1 == 65535) {
-              this.a(param0.field_p[var12Lifetime1], param0.field_q[var12Lifetime1], (int) param1.field_l[var11Lifetime1], (int) param1.field_h[var11Lifetime1], (int) param1.field_c[var11Lifetime1], param7);
+              this.applyGroupTransform(param0.field_p[var12Lifetime1], param0.field_q[var12Lifetime1], (int) param1.field_l[var11Lifetime1], (int) param1.field_h[var11Lifetime1], (int) param1.field_c[var11Lifetime1], param7);
             } else {
-              this.a(param0.field_p[var12Lifetime1], param0.field_q[var12Lifetime1], (int) param1.field_l[var11Lifetime1], (int) param1.field_h[var11Lifetime1], (int) param1.field_c[var11Lifetime1], param7, var14Lifetime1Lifetime1, param9);
+              this.applyMaskedGroupTransform(param0.field_p[var12Lifetime1], param0.field_q[var12Lifetime1], (int) param1.field_l[var11Lifetime1], (int) param1.field_h[var11Lifetime1], (int) param1.field_c[var11Lifetime1], param7, var14Lifetime1Lifetime1, param9);
             }
           }
         }
     }
 
-    abstract boolean a();
+    abstract boolean beginAnimation();
 
-    abstract void a(int param0, int[] param1, int param2, int param3, int param4, boolean param5, int param6, int[] param7);
+    abstract void applyMaskedGroupTransform(int param0, int[] param1, int param2, int param3, int param4, boolean param5, int param6, int[] param7);
 
-    abstract void a(int param0, int[] param1, int param2, int param3, int param4, boolean param5);
+    abstract void applyGroupTransform(int param0, int[] param1, int param2, int param3, int param4, boolean param5);
 
     fc() {
     }
 
-    final void a(f param0, int param1, f param2, int param3, int param4, int param5, boolean param6) {
+    final void applyAnimationFrame(f param0, int param1, f param2, int param3, int param4, int param5, boolean param6) {
         if (param1 == -1) {
           return;
         }
-        if (!this.a()) {
+        if (!this.beginAnimation()) {
           return;
         }
         pc var8 = param0.field_u[param1];
@@ -218,9 +218,9 @@ abstract class fc extends vh {
             var10 = null;
           }
         }
-        this.a(var9, var8, (pc) (var10), param4, param5, (boolean[]) null, false, param6, 65535, (int[]) null);
-        this.b();
+        this.blendAnimationFrames(var9, var8, (pc) (var10), param4, param5, (boolean[]) null, false, param6, 65535, (int[]) null);
+        this.finishAnimation();
     }
 
-    abstract void b();
+    abstract void finishAnimation();
 }

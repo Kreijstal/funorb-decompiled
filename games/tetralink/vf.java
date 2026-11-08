@@ -308,7 +308,7 @@ final class vf {
               var9 = stackIn_12_0;
               if (var17 == null) {
                 var8_ref_gd = new gd(var18, var19, var3_long);
-                db.field_a.a(var3_long, var8_ref_gd, param0 ^ -122);
+                db.field_a.put(var3_long, var8_ref_gd, param0 ^ -122);
               } else {
                 if (var9 != 0) {
                   var17.a(32, var18, var19);
@@ -358,10 +358,10 @@ final class vf {
             }
             if (8 == var2) {
               var3 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(param0 ^ -122);
-              var4_ref_el = (el) (db.field_e.a((long)var3, param0 ^ -8));
+              var4_ref_el = (el) (db.field_e.findByKey((long)var3, param0 ^ -8));
               if (var4_ref_el == null) {
                 var4_ref_el = new el(hg.field_k);
-                db.field_e.a((long)var3, var4_ref_el, param0 + 129);
+                db.field_e.put((long)var3, var4_ref_el, param0 + 129);
               }
               dh.a(true, true, var4_ref_el, var1);
               ll.a(var4_ref_el, -40);
@@ -370,7 +370,7 @@ final class vf {
             if (9 == var2) {
               var3Lifetime4 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(127);
               var4 = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) -99);
-              var28 = (el) (db.field_e.a((long)var3Lifetime4, 1));
+              var28 = (el) (db.field_e.findByKey((long)var3Lifetime4, 1));
               if (var28 == null) {
                 return;
               }
@@ -397,7 +397,7 @@ final class vf {
               if (var2 == 13) {
                 var3Lifetime5 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(127);
                 var4Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) -99);
-                var14 = (el) (db.field_e.a((long)var3Lifetime5, 1));
+                var14 = (el) (db.field_e.findByKey((long)var3Lifetime5, 1));
                 if (var14 != null) {
                   var14.field_Wb = false;
                   var13 = var14;
@@ -422,7 +422,7 @@ final class vf {
                     var7 = SecondaryNodeDequeIterator.a(-18701, var3_longLifetime2);
                     if (var7 == null) {
                       var7 = new gd(var23, var24, var3_longLifetime2);
-                      dg.field_g.a(var3_longLifetime2, var7, 108);
+                      dg.field_g.put(var3_longLifetime2, var7, 108);
                       qb.field_N.field_jc = qb.field_N.field_jc + 1;
                     }
                     var7.field_Pb = ((PacketBuffer) ((Object) var1)).readUnsignedShort(127);
@@ -516,7 +516,7 @@ final class vf {
               return;
             }
             var3Lifetime6 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(param0 ^ -122);
-            var16_ref = (el) (db.field_e.a((long)var3Lifetime6, param0 ^ -8));
+            var16_ref = (el) (db.field_e.findByKey((long)var3Lifetime6, param0 ^ -8));
             var20 = var16_ref;
             if (var20 == null) {
               return;
@@ -586,11 +586,11 @@ final class vf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var1_ref), "vf.B(" + param0 + ')');
+          throw oi.wrapException((Throwable) ((Object) var1_ref), "vf.B(" + param0 + ')');
         }
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 >= -37) {
           vf.a((byte) -19);
         }

@@ -12,7 +12,7 @@ final class go {
     static tb field_a;
     static de field_g;
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         field_e = null;
         field_a = null;
@@ -37,7 +37,7 @@ final class go {
         field_g = (de) null;
     }
 
-    final static ng a(boolean param0, int param1, Archive param2) {
+    final static ng loadInstrumentPatch(boolean param0, int param1, Archive param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
@@ -71,7 +71,7 @@ final class go {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -88,7 +88,7 @@ final class go {
           return;
         }
         Archive var2 = (Archive) null;
-        go.a(false, 4, (Archive) null);
+        go.loadInstrumentPatch(false, 4, (Archive) null);
     }
 
     final static void a(byte param0, String param1) {
@@ -104,14 +104,14 @@ final class go {
           if (param0 != -105) {
             field_e = (String) null;
           }
-          var4 = dc.field_e.field_Ib.b(param1, 272, dc.field_e.field_Q);
+          var4 = dc.field_e.field_Ib.paragraphHeight(param1, 272, dc.field_e.field_Q);
           var5 = -(var4 / 2) + 7 + var3 / 2 - 110;
           t.field_q.a((byte) -117, 320, var5, -(2 * var5) - 120 + var3, (-320 + var2_int) / 2);
           t.field_q.field_Eb = Archive.a(2105376, 3, 8421504, param0 ^ -121, 11579568, t.field_q.field_R);
           dc.field_e.a((byte) -92, -48 + t.field_q.field_Hb, 16, -24 + t.field_q.field_R - 20, 24);
           DelegatingCanvas.field_a.a((byte) -124, 80, -20 + (t.field_q.field_R - 24), 24, 120);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "go.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "go.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -137,7 +137,7 @@ final class go {
             }
             this.field_f.reset();
           } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) ((Object) runtimeException), "go.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw oi.wrapException((Throwable) ((Object) runtimeException), "go.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

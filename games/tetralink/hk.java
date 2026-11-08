@@ -12,7 +12,7 @@ abstract class hk {
           BufferedSocket.field_u.r(-128);
         }
         ko.field_q = new fn();
-        mm.field_u.e(ko.field_q, -27667);
+        mm.field_u.transitionToContent(ko.field_q, -27667);
         if (param0 > -50) {
           field_d = -89;
         }
@@ -165,11 +165,11 @@ abstract class hk {
           } else {
             stackIn_55_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(',').append(param1).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 8) {
           return;
         }

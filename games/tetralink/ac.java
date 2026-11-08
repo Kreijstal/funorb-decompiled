@@ -91,7 +91,7 @@ final class ac {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 > -88) {
           return;
         }
@@ -140,7 +140,7 @@ final class ac {
             ug.field_hb = new PacketBuffer(var7_int);
           }
           ug.field_hb.position = 0;
-          ug.field_hb.a(param4, 128, param1, param2);
+          ug.field_hb.writeBytes(param4, 128, param1, param2);
           ug.field_hb.b((byte) -71, var7_int);
           ug.field_hb.a(10830, var14);
           if (null == ce.field_f ||
@@ -157,8 +157,8 @@ final class ac {
           }
           ce.field_f.b(param2, false);
           ce.field_f.a(param5, param6, -25035);
-          param3.a(0, 128, ce.field_f.payload, ce.field_f.position);
-          param3.a(0, 128, ug.field_hb.payload, ug.field_hb.position);
+          param3.writeBytes(0, 128, ce.field_f.payload, ce.field_f.position);
+          param3.writeBytes(0, 128, ug.field_hb.payload, ug.field_hb.position);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -188,7 +188,7 @@ final class ac {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
         }
     }
 

@@ -4,7 +4,7 @@
 final class sl {
     private static cm field_a;
 
-    private final static void a(int[] param0, int[] param1, int[] param2, byte[] param3, int param4, int param5, int param6) {
+    private final static void buildHuffmanTables(int[] param0, int[] param1, int[] param2, byte[] param3, int param4, int param5, int param6) {
         int var9 = 0;
         int dupTemp$0 = 0;
         int var7;
@@ -49,7 +49,7 @@ final class sl {
         }
     }
 
-    private final static int a(int param0, cm param1) {
+    private final static int readBits(int param0, cm param1) {
         int var2;
         while (param1.field_v < param0) {
           param1.field_k = param1.field_k << 8 | param1.field_i[param1.field_o] & 255;
@@ -65,7 +65,7 @@ final class sl {
         return var2;
     }
 
-    private final static void b(cm param0) {
+    private final static void decodeBlocks(cm param0) {
         int dupTemp$1 = 0;
         int dupTemp$0 = 0;
         int var1;
@@ -181,10 +181,10 @@ final class sl {
               }
             }
           }
-          sl.a(param0);
+          sl.buildSymbolMap(param0);
           var7 = param0.field_s + 2;
-          var8 = sl.a(3, param0);
-          var9 = sl.a(15, param0);
+          var8 = sl.readBits(3, param0);
+          var9 = sl.readBits(15, param0);
           var4 = 0;
           while (var4 < var9) {
             var5 = 0;
@@ -219,7 +219,7 @@ final class sl {
           }
           var6 = 0;
           while (var6 < var8) {
-            var17 = sl.a(5, param0);
+            var17 = sl.readBits(5, param0);
             var4 = 0;
             while (true) {
               if (var4 >= var7) {
@@ -253,7 +253,7 @@ final class sl {
                 var2 = param0.field_h[var6][var4];
               }
             }
-            sl.a(param0.field_p[var6], param0.field_r[var6], param0.field_e[var6], param0.field_h[var6], var2, var3, var7);
+            sl.buildHuffmanTables(param0.field_p[var6], param0.field_r[var6], param0.field_e[var6], param0.field_h[var6], var2, var3, var7);
             param0.field_D[var6] = var2;
           }
           var10 = param0.field_s + 1;
@@ -282,7 +282,7 @@ final class sl {
           }
           var12--;
           var18 = var22;
-          var19 = sl.a(var18, param0);
+          var19 = sl.readBits(var18, param0);
           while (var19 > ((int[]) (var23))[var18]) {
             var18++;
             var20 = sl.d(param0);
@@ -313,7 +313,7 @@ final class sl {
               param0.field_a = param0.field_a >> 8;
               param0.field_E = param0.field_E + 1;
               param0.field_z = var14;
-              sl.e(param0);
+              sl.emitBlock(param0);
               if (param0.field_E == param0.field_z + 1 &&
                 param0.field_G == 0) {
                 var26 = 1;
@@ -385,7 +385,7 @@ final class sl {
               }
               var12--;
               var18 = var22;
-              var19 = sl.a(var18, param0);
+              var19 = sl.readBits(var18, param0);
               while (var19 > ((int[]) (var23))[var18]) {
                 var18++;
                 var20 = sl.d(param0);
@@ -416,7 +416,7 @@ final class sl {
               }
               var12--;
               var18 = var22;
-              var19 = sl.a(var18, param0);
+              var19 = sl.readBits(var18, param0);
               while (var19 > ((int[]) (var23))[var18]) {
                 var18++;
                 var20 = sl.d(param0);
@@ -437,7 +437,7 @@ final class sl {
         }
     }
 
-    private final static void e(cm param0) {
+    private final static void emitBlock(cm param0) {
         int var1;
         int var2;
         int var3;
@@ -568,7 +568,7 @@ final class sl {
         return;
     }
 
-    private final static void a(cm param0) {
+    private final static void buildSymbolMap(cm param0) {
         int var1 = 0;
         param0.field_s = 0;
         for (var1 = 0; var1 < 256; var1++) {
@@ -579,11 +579,11 @@ final class sl {
         }
     }
 
-    public static void a() {
+    public static void releaseStatics() {
         field_a = null;
     }
 
-    final static int a(byte[] param0, int param1, byte[] param2, int param3, int param4) {
+    final static int decompressInto(byte[] param0, int param1, byte[] param2, int param3, int param4) {
         int stackIn_2_0 = 0;
         Throwable decompiledCaughtException = null;
         Object var5 = null;
@@ -598,7 +598,7 @@ final class sl {
           field_a.field_k = 0;
           field_a.field_d = 0;
           field_a.field_A = 0;
-          sl.b(field_a);
+          sl.decodeBlocks(field_a);
           param1 = param1 - field_a.field_f;
           field_a.field_i = null;
           field_a.field_J = null;
@@ -608,11 +608,11 @@ final class sl {
     }
 
     private final static byte c(cm param0) {
-        return (byte)sl.a(8, param0);
+        return (byte)sl.readBits(8, param0);
     }
 
     private final static byte d(cm param0) {
-        return (byte)sl.a(1, param0);
+        return (byte)sl.readBits(1, param0);
     }
 
     static {

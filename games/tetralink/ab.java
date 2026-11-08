@@ -11,7 +11,7 @@ final class ab extends ae {
     static String field_U;
     static int field_T;
 
-    final String e(int param0) {
+    final String getTooltip(int param0) {
         if (param0 != 0) {
           this.field_W = 121;
           if (this.field_r) {
@@ -25,7 +25,7 @@ final class ab extends ae {
         return null;
     }
 
-    final boolean a(UiWidget param0, int param1) {
+    final boolean focusNext(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         UiWidget var4 = null;
         RuntimeException stackIn_6_0 = null;
@@ -37,7 +37,7 @@ final class ab extends ae {
             return false;
           }
           var4 = (UiWidget) null;
-          this.a((UiWidget) null, 31);
+          this.focusNext((UiWidget) null, 31);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -49,7 +49,7 @@ final class ab extends ae {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -64,7 +64,7 @@ final class ab extends ae {
           if (param0) {
             field_T = -32;
           }
-          stackIn_3_0 = qb.a(true, param2, (byte) -87, param1);
+          stackIn_3_0 = qb.parseInt(true, param2, (byte) -87, param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -76,11 +76,11 @@ final class ab extends ae {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         int var5;
         int var6;
         jk var8;
@@ -94,7 +94,7 @@ final class ab extends ae {
         int var9Lifetime1;
         int var10Lifetime1;
         var11 = TetraLink.field_J;
-        super.a(param0, param1, param2, param3);
+        super.drawLayer(param0, param1, param2, param3);
         if (param3 != 0) {
           return;
         }
@@ -118,26 +118,26 @@ final class ab extends ae {
                 sk.a((byte) 112, bb.field_c);
               } else {
                 sk.a((byte) 120, bb.field_c);
-                SoftwareRasterizer.a();
+                SoftwareRasterizer.clear();
               }
             }
           }
-          var16.a(112, 144, var16.field_t << 4, var16.field_F << 4, -this.field_W << 10, 4096);
+          var16.drawRotatedAboutPivot(112, 144, var16.field_t << 4, var16.field_F << 4, -this.field_W << 10, 4096);
           dh.a(-581);
-          bb.field_c.b(-var16.field_t + var5, var6 - var16.field_F, 256);
+          bb.field_c.drawAdditive(-var16.field_t + var5, var6 - var16.field_F, 256);
           return;
         }
         if (ug.field_cb != var8) {
           if (var8 == db.field_h) {
             var14 = fj.field_q[2];
-            var14.b(var5 - (var14.field_u >> 1), var6 - (var14.field_E >> 1), 256);
+            var14.drawAdditive(var5 - (var14.field_u >> 1), var6 - (var14.field_E >> 1), 256);
             return;
           }
           if (var8 != pf.field_a) {
             return;
           }
           var13 = fj.field_q[1];
-          var13.b(var5 - (var13.field_u >> 1), -(var13.field_E >> 1) + var6, 256);
+          var13.drawAdditive(var5 - (var13.field_u >> 1), -(var13.field_E >> 1) + var6, 256);
           return;
         }
         var15 = fj.field_q[0];
@@ -156,24 +156,24 @@ final class ab extends ae {
               sk.a((byte) 112, bb.field_c);
             } else {
               sk.a((byte) 120, bb.field_c);
-              SoftwareRasterizer.a();
+              SoftwareRasterizer.clear();
             }
           }
         }
-        var15.a(112, 144, var15.field_t << 4, var15.field_F << 4, -this.field_W << 10, 4096);
+        var15.drawRotatedAboutPivot(112, 144, var15.field_t << 4, var15.field_F << 4, -this.field_W << 10, 4096);
         dh.a(-581);
-        bb.field_c.b(-var15.field_t + var5, var6 - var15.field_F, 256);
+        bb.field_c.drawAdditive(-var15.field_t + var5, var6 - var15.field_F, 256);
     }
 
     ab(vm param0) {
         try {
           this.field_S = param0;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "ab.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "ab.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void e(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_R = null;
         if (param0 <= 11) {
           return;
@@ -183,12 +183,12 @@ final class ab extends ae {
         field_P = null;
     }
 
-    final void a(UiWidget param0, int param1, int param2, boolean param3) {
+    final void updatePointer(UiWidget param0, int param1, int param2, boolean param3) {
         try {
           this.field_W = this.field_W + 1;
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "ab.MA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "ab.MA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

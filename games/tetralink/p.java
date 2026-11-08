@@ -61,7 +61,7 @@ final class p {
             if (this.field_b != -1L &&
               this.field_b + (long)this.field_e.length < this.field_k + (long)param3) {
               var5_int = (int)((long)this.field_e.length - (-this.field_b + this.field_k));
-              rd.a(param1, param2, this.field_e, (int)(-this.field_b + this.field_k), var5_int);
+              rd.copy(param1, param2, this.field_e, (int)(-this.field_b + this.field_k), var5_int);
               this.field_k = this.field_k + (long)var5_int;
               param2 = param2 + var5_int;
               param3 = param3 - var5_int;
@@ -75,7 +75,7 @@ final class p {
               if (this.field_b == -1L) {
                 this.field_b = this.field_k;
               }
-              rd.a(param1, param2, this.field_e, (int)(-this.field_b + this.field_k), param3);
+              rd.copy(param1, param2, this.field_e, (int)(-this.field_b + this.field_k), param3);
               this.field_k = this.field_k + (long)param3;
               if ((-this.field_b + this.field_k) > (long)this.field_f) {
                 this.field_f = (int)(this.field_k - this.field_b);
@@ -114,7 +114,7 @@ final class p {
             if (-1L < var5_long &&
               var5_long < var7) {
               var9 = (int)(-var5_long + var7);
-              rd.a(param1, (int)(var5_long + ((long)param2 - this.field_k)), this.field_l, (int)(-this.field_d + var5_long), var9);
+              rd.copy(param1, (int)(var5_long + ((long)param2 - this.field_k)), this.field_l, (int)(-this.field_d + var5_long), var9);
             }
             this.field_k = this.field_k + (long)param3;
             return;
@@ -134,7 +134,7 @@ final class p {
           } else {
             stackIn_53_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_52_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_52_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -200,7 +200,7 @@ final class p {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -245,7 +245,7 @@ final class p {
                 if (-1L < var2 &&
                   var2 < var4) {
                   var6 = (int)(var4 - var2);
-                  rd.a(this.field_e, (int)(var2 - this.field_b), this.field_l, (int)(var2 - this.field_d), var6);
+                  rd.copy(this.field_e, (int)(var2 - this.field_b), this.field_l, (int)(var2 - this.field_d), var6);
                 }
                 this.field_f = 0;
                 this.field_b = -1L;
@@ -260,7 +260,7 @@ final class p {
             if (-1L < var2 &&
               var2 < var4) {
               var6Lifetime1 = (int)(var4 - var2);
-              rd.a(this.field_e, (int)(var2 - this.field_b), this.field_l, (int)(var2 - this.field_d), var6Lifetime1);
+              rd.copy(this.field_e, (int)(var2 - this.field_b), this.field_l, (int)(var2 - this.field_d), var6Lifetime1);
             }
             this.field_f = 0;
             this.field_b = -1L;
@@ -276,7 +276,7 @@ final class p {
         try {
           this.a(param0, param0.length, 0, (byte) 120);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "p.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "p.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -310,7 +310,7 @@ final class p {
             if (-1L != this.field_b &&
               this.field_b <= this.field_k &&
               (this.field_b + (long)this.field_f) >= ((long)param1 + this.field_k)) {
-              rd.a(this.field_e, (int)(this.field_k - this.field_b), param0, param2, param1);
+              rd.copy(this.field_e, (int)(this.field_k - this.field_b), param0, param2, param1);
               this.field_k = this.field_k + (long)param1;
               return;
             }
@@ -326,7 +326,7 @@ final class p {
               if (param1 < var9_int) {
                 var9_int = param1;
               }
-              rd.a(this.field_l, (int)(this.field_k - this.field_d), param0, param2, var9_int);
+              rd.copy(this.field_l, (int)(this.field_k - this.field_d), param0, param2, var9_int);
               param2 = param2 + var9_int;
               param1 = param1 - var9_int;
               this.field_k = this.field_k + (long)var9_int;
@@ -357,7 +357,7 @@ final class p {
               if (var9_intLifetime1Lifetime1 > this.field_j) {
                 var9_intLifetime1Lifetime1 = this.field_j;
               }
-              rd.a(this.field_l, 0, param0, param2, var9_intLifetime1Lifetime1);
+              rd.copy(this.field_l, 0, param0, param2, var9_intLifetime1Lifetime1);
               this.field_k = this.field_k + (long)var9_intLifetime1Lifetime1;
               param1 = param1 - var9_intLifetime1Lifetime1;
               param2 = param2 + var9_intLifetime1Lifetime1;
@@ -403,7 +403,7 @@ final class p {
               if (var9 > -1L &&
                 var11 > var9) {
                 var13 = (int)(-var9 + var11);
-                rd.a(this.field_e, (int)(-this.field_b + var9), param0, var7 + (int)(-var5_long + var9), var13);
+                rd.copy(this.field_e, (int)(-this.field_b + var9), param0, var7 + (int)(-var5_long + var9), var13);
                 if (var11 > this.field_k) {
                   param1 = (int)((long)param1 - (var11 - this.field_k));
                   this.field_k = var11;
@@ -430,7 +430,7 @@ final class p {
           } else {
             stackIn_62_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_61_0), ((StringBuilder) (Object) stackIn_61_1).append(stackIn_62_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_61_0), ((StringBuilder) (Object) stackIn_61_1).append(stackIn_62_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -459,7 +459,7 @@ final class p {
           this.field_e = new byte[param2];
           this.field_k = 0L;
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "p.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "p.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

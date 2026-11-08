@@ -263,11 +263,11 @@ final class ui {
           } else {
             stackIn_93_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_86_0), ((StringBuilder) (Object) stackIn_92_1).append(stackIn_93_2).append(',').append(param8).append(',').append(param9).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_86_0), ((StringBuilder) (Object) stackIn_92_1).append(stackIn_93_2).append(',').append(param8).append(',').append(param9).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 != 12000) {
           return;

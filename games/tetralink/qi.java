@@ -207,7 +207,7 @@ final class qi extends IntrusiveNode {
           } else {
             stackIn_79_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_78_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_78_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 
@@ -255,11 +255,11 @@ final class qi extends IntrusiveNode {
               var5Lifetime4 = var7;
               var5Lifetime5 = var7;
               if (param0.length() != 0) {
-                var5Lifetime6 = var7 + "; Expires=" + ei.a((byte) 2, 94608000000L + k.a(0)) + "; Max-Age=" + 94608000L;
+                var5Lifetime6 = var7 + "; Expires=" + ei.formatGmtDate((byte) 2, 94608000000L + k.a(0)) + "; Max-Age=" + 94608000L;
               } else {
                 var5Lifetime6 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }
-              ii.a(-19149, "document.cookie=\"" + var5Lifetime6 + "\"", param2);
+              ii.evaluateScript(-19149, "document.cookie=\"" + var5Lifetime6 + "\"", param2);
               if (param1 != -7011) {
                 field_n = (hl) null;
               }
@@ -285,7 +285,7 @@ final class qi extends IntrusiveNode {
             } else {
               stackIn_16_2 = "{...}";
             }
-            throw oi.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+            throw oi.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -294,7 +294,7 @@ final class qi extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_u = null;
         field_n = null;
         field_o = null;

@@ -4,7 +4,7 @@
 final class de extends BitmapFont {
     private byte[][] field_R;
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
+    final void drawGlyph(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
         int var8;
         int var9;
         int var10;
@@ -44,15 +44,15 @@ final class de extends BitmapFont {
         if (param3 > 0 &&
           param4 > 0) {
           if (SoftwareRasterizer.field_k == null) {
-            de.a(SoftwareRasterizer.field_b, this.field_R[param0], param5, var11, var8, param3, param4, var9, var10);
+            de.blitBinaryGlyph(SoftwareRasterizer.field_b, this.field_R[param0], param5, var11, var8, param3, param4, var9, var10);
           } else {
-            de.a(SoftwareRasterizer.field_b, this.field_R[param0], param1, param2, param3, param4, param5, var11, var8, var9, var10, SoftwareRasterizer.field_k, SoftwareRasterizer.field_h);
+            de.blitMaskedGlyph(SoftwareRasterizer.field_b, this.field_R[param0], param1, param2, param3, param4, param5, var11, var8, var9, var10, SoftwareRasterizer.field_k, SoftwareRasterizer.field_h);
           }
           return;
         }
     }
 
-    final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    final static void blitBinaryGlyphWithAlpha(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var10 = 0;
         int var11 = 0;
         int incrementValue$12 = 0;
@@ -75,7 +75,7 @@ final class de extends BitmapFont {
         }
     }
 
-    private final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int[] param11, int[] param12) {
+    private final static void blitMaskedGlyph(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int[] param11, int[] param12) {
         int var15 = 0;
         int var20 = 0;
         int incrementValue$1 = 0;
@@ -138,7 +138,7 @@ final class de extends BitmapFont {
         }
     }
 
-    final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static void blitBinaryGlyph(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var10 = 0;
         int var9;
         int var11;
@@ -180,7 +180,7 @@ final class de extends BitmapFont {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
+    final void drawGlyphAlpha(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
         int var13 = 0;
         int var9 = param1 + param2 * SoftwareRasterizer.field_f;
         int var10 = SoftwareRasterizer.field_f - param3;
@@ -217,7 +217,7 @@ final class de extends BitmapFont {
           param4 <= 0) {
           return;
         }
-        de.a(SoftwareRasterizer.field_b, this.field_R[param0], param5, var12, var9, param3, param4, var10, var11, param6);
+        de.blitBinaryGlyphWithAlpha(SoftwareRasterizer.field_b, this.field_R[param0], param5, var12, var9, param3, param4, var10, var11, param6);
     }
 
     de(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4, byte[][] param5) {

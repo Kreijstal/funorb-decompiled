@@ -21,7 +21,7 @@ class uk extends DualLinkNode {
     uk() {
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_w = null;
         if (param0 == -96) {
           field_t = null;
@@ -29,7 +29,7 @@ class uk extends DualLinkNode {
           field_v = null;
           return;
         }
-        uk.b((byte) 88);
+        uk.releaseStatics((byte) 88);
         field_t = null;
         field_u = null;
         field_v = null;

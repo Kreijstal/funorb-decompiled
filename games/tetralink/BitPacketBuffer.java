@@ -89,7 +89,7 @@ final class BitPacketBuffer extends PacketBuffer {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -110,11 +110,11 @@ final class BitPacketBuffer extends PacketBuffer {
         this.position = (this.bitPosition + 7) / 8;
         if (param0 <= 57) {
           BitPacketBuffer var3 = (BitPacketBuffer) null;
-          BitPacketBuffer.a(89, (BitPacketBuffer) null);
+          BitPacketBuffer.readBooleanBit(89, (BitPacketBuffer) null);
         }
     }
 
-    final static boolean a(int param0, BitPacketBuffer param1) {
+    final static boolean readBooleanBit(int param0, BitPacketBuffer param1) {
         RuntimeException var2 = null;
         BitPacketBuffer var3 = null;
         boolean stackIn_5_0 = false;
@@ -125,7 +125,7 @@ final class BitPacketBuffer extends PacketBuffer {
         try {
           if (param0 <= 53) {
             var3 = (BitPacketBuffer) null;
-            BitPacketBuffer.a(116, (BitPacketBuffer) null);
+            BitPacketBuffer.readBooleanBit(116, (BitPacketBuffer) null);
           }
           stackIn_5_0 = (1 == param1.readBits(1, (byte) -112));
           return stackIn_5_0;
@@ -139,7 +139,7 @@ final class BitPacketBuffer extends PacketBuffer {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw oi.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -158,7 +158,7 @@ final class BitPacketBuffer extends PacketBuffer {
             this.beginBitAccess(true);
           }
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "bc.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "bc.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -176,9 +176,9 @@ final class BitPacketBuffer extends PacketBuffer {
         this.payload[fieldTemp$1] = (byte)(this.cipher.nextInt(IsaacCipher.a((int) param1, -92)) + param0);
     }
 
-    public static void j(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 29313) {
-          BitPacketBuffer.j(84);
+          BitPacketBuffer.releaseStatics(84);
           field_z = null;
           field_v = null;
           field_x = null;

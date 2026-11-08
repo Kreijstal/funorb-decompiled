@@ -11,10 +11,10 @@ final class ko extends IntrusiveNode {
     static fn field_q;
     static int field_t;
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_o = null;
         if (param0 > -81) {
-          ko.b((byte) -79);
+          ko.releaseStatics((byte) -79);
         }
         field_q = null;
         field_u = null;
@@ -105,7 +105,7 @@ final class ko extends IntrusiveNode {
             }
             stackIn_23_0 = var6.field_Tb;
             if (var10 > 0) {
-              stackIn_24_1 = BitmapFont.a(var6.field_Tb.field_Ib, var6.field_Mb, var10);
+              stackIn_24_1 = BitmapFont.truncateWithEllipsis(var6.field_Tb.field_Ib, var6.field_Mb, var10);
             } else {
               stackIn_24_1 = var6.field_Mb;
             }
@@ -117,7 +117,7 @@ final class ko extends IntrusiveNode {
               var6.field_mb = -var6.field_R + GameKeyHandler.field_d;
             }
             if (var7 != 0) {
-              BufferedSocket.field_n.field_Kb.a((hl) (var5), true, var6, 2);
+              BufferedSocket.field_n.field_Kb.placeBelow((hl) (var5), true, var6, 2);
             }
             if (null != var6.field_Kb &&
               var6.field_Kb.field_Y) {
@@ -133,7 +133,7 @@ final class ko extends IntrusiveNode {
               gd.a(var6.field_Lb, 255, var6.field_Mb, -1, BufferedSocket.field_n.field_Rb, (int[]) null, 0L, var6, -1);
               var16 = hd.field_s;
               var13_ref_String = kk.field_P;
-              var16.field_j.a(var13_ref_String, param2 ^ -63, 7);
+              var16.field_j.addItem(var13_ref_String, param2 ^ -63, 7);
               var17 = hd.field_s;
               var13 = ci.field_B;
               var14 = li.field_o;
@@ -154,7 +154,7 @@ final class ko extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) var3), "ko.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw oi.wrapException((Throwable) ((Object) var3), "ko.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

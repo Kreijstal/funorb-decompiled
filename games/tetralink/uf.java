@@ -28,7 +28,7 @@ final class uf {
         BitPacketBuffer var3Lifetime1;
         if (param1 <= 94) {
           String var4 = (String) null;
-          uf.a((String) null, false, false);
+          uf.openLoginProgress((String) null, false, false);
           var3 = nd.field_Lb;
           var3.writeCipheredByte(param0, (byte) -92);
           var3.a(3, false);
@@ -56,22 +56,22 @@ final class uf {
           }
           hi.a(97);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "uf.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "uf.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final static void a(String param0, boolean param1, boolean param2) {
+    final static void openLoginProgress(String param0, boolean param1, boolean param2) {
         try {
           sn.field_b = param2;
           s.field_f = true;
           BufferedSocket.field_u = new lk(mf.field_s, ab.field_V, param0, qa.field_v, sn.field_b);
           mf.field_s.a(BufferedSocket.field_u, param1);
         } catch (RuntimeException runtimeException) {
-          throw oi.a((Throwable) ((Object) runtimeException), "uf.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw oi.wrapException((Throwable) ((Object) runtimeException), "uf.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         field_a = null;
         field_g = null;
