@@ -422,8 +422,8 @@ final class ou extends na {
             }
           }
           hu.field_b = -(var3_intLifetime1 >> 1) + oj.field_a;
-          dj.field_n = var3_intLifetime1 + oj.field_a - (var3_intLifetime1 >> 1);
-          rf.field_d = nj.field_a.field_e * (ag.field_b + qc.field_a << 1);
+          PlayingSound.field_n = var3_intLifetime1 + oj.field_a - (var3_intLifetime1 >> 1);
+          rf.field_d = nj.field_a.field_e * (TextLayout.field_b + qc.field_a << 1);
           for (var4Lifetime2 = 0; var4Lifetime2 < bf.field_c.length; var4Lifetime2++) {
             stackIn_116_0 = rf.field_d;
             if (0 <= eb.field_a[var4Lifetime2]) {
@@ -450,8 +450,8 @@ final class ou extends na {
               ib.field_g[var5Lifetime3][0] = var9 - dw.field_b;
               ib.field_g[var5Lifetime3][1] = var6Lifetime1;
               ib.field_g[var5Lifetime3][2] = (dw.field_b << 1) + var8Lifetime1;
-              var6Lifetime1 = var6Lifetime1 + (qc.field_a + (ag.field_b << 1) + ga.field_h);
-              ib.field_g[var5Lifetime3][3] = (ag.field_b << 1) + ga.field_h;
+              var6Lifetime1 = var6Lifetime1 + (qc.field_a + (TextLayout.field_b << 1) + ga.field_h);
+              ib.field_g[var5Lifetime3][3] = (TextLayout.field_b << 1) + ga.field_h;
             }
             var5Lifetime3++;
           }

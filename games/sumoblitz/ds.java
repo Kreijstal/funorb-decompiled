@@ -54,11 +54,11 @@ final class ds {
     final static void a(int param0) {
         if (param0 <= 33) {
           ds.a(-65);
-          aa.field_a[0] = (Drone) ((Object) new PlayerDrone(81920, 61440));
-          aa.field_a[0].speedLevel = ResourceArchive.field_f;
-          aa.field_a[0].bounceLevel = hc.field_f;
-          aa.field_a[0].tractionLevel = LegacyOpenGlEffectManager.field_i;
-          aa.field_a[0].recomputeUpgradeStats((byte) 35);
+          SpriteMask.drones[0] = (Drone) ((Object) new PlayerDrone(81920, 61440));
+          SpriteMask.drones[0].speedLevel = ResourceArchive.field_f;
+          SpriteMask.drones[0].bounceLevel = hc.field_f;
+          SpriteMask.drones[0].tractionLevel = LegacyOpenGlEffectManager.field_i;
+          SpriteMask.drones[0].recomputeUpgradeStats((byte) 35);
           fa.field_b = 250;
           if (bw.field_d) {
             bw.field_d = false;
@@ -67,11 +67,11 @@ final class ds {
           }
           return;
         }
-        aa.field_a[0] = (Drone) ((Object) new PlayerDrone(81920, 61440));
-        aa.field_a[0].speedLevel = ResourceArchive.field_f;
-        aa.field_a[0].bounceLevel = hc.field_f;
-        aa.field_a[0].tractionLevel = LegacyOpenGlEffectManager.field_i;
-        aa.field_a[0].recomputeUpgradeStats((byte) 35);
+        SpriteMask.drones[0] = (Drone) ((Object) new PlayerDrone(81920, 61440));
+        SpriteMask.drones[0].speedLevel = ResourceArchive.field_f;
+        SpriteMask.drones[0].bounceLevel = hc.field_f;
+        SpriteMask.drones[0].tractionLevel = LegacyOpenGlEffectManager.field_i;
+        SpriteMask.drones[0].recomputeUpgradeStats((byte) 35);
         fa.field_b = 250;
         if (!bw.field_d) {
           return;

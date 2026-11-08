@@ -84,10 +84,10 @@ final class og {
 
     final static boolean a(int param0) {
         if (param0 < -5) {
-          return oh.field_e == 24 ? true : false;
+          return oh.levelIndex == 24 ? true : false;
         }
         og.releaseStatics(true);
-        return oh.field_e == 24 ? true : false;
+        return oh.levelIndex == 24 ? true : false;
     }
 
     final PcmSample a(int param0, String param1) {
@@ -174,7 +174,7 @@ final class og {
         RuntimeException var5 = null;
         long var6 = 0L;
         PcmSample var8 = null;
-        ae var9 = null;
+        SoundEffect var9 = null;
         String var10 = null;
         PcmSample var11 = null;
         PcmSample stackIn_5_0 = null;
@@ -203,11 +203,11 @@ final class og {
             stackIn_9_0 = null;
             return (PcmSample) (stackIn_9_0);
           }
-          var9 = ae.a(this.field_e, param2, param3);
+          var9 = SoundEffect.load(this.field_e, param2, param3);
           if (var9 == null) {
             return null;
           }
-          var11 = var9.b();
+          var11 = var9.toPcmSample();
           var8Lifetime1 = var11;
           this.field_c.a(var8Lifetime1, -1, var6);
           if (param0 != null) {

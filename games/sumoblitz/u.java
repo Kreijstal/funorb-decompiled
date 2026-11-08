@@ -21,12 +21,12 @@ final class u extends hf implements ai {
             if (am.field_e == param1) {
               this.field_p = this.field_p + 10;
               var3 = LimitedRandomAccessFile.field_c;
-              if (jt.a((byte) -96)) {
+              if (CacheReferenceNode.a((byte) -96)) {
                 this.field_p = this.field_p + 20;
                 var3 = c.unfortunatelyThereWasAText;
               }
             } else {
-              if (param1 == ta.field_f) {
+              if (param1 == FontMetrics.field_f) {
                 this.field_p = this.field_p + 30;
                 var3 = ua.fullscreenModeWasCancelledText;
               }

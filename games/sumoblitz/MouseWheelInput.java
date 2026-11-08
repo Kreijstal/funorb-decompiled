@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class MouseWheelInput {
-    static vn field_a;
+    static LegacyBitmapFont field_a;
     static String field_c;
     static ToolkitSprite field_b;
     private static String field_z;

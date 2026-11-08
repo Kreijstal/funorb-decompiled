@@ -87,7 +87,7 @@ final class br {
     }
 
     br(boolean param0) {
-        this.field_c = jt.field_w;
+        this.field_c = CacheReferenceNode.field_w;
         this.field_f = is.field_a;
         this.field_a = wn.field_a;
         this.field_j = ReassignUpgradesScreen.field_j;

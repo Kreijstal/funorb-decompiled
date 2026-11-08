@@ -3,7 +3,7 @@
  */
 final class hc {
     static gt field_c;
-    static da field_e;
+    static ToolkitFont field_e;
     static int field_f;
     static SpriteData[] field_a;
     static SpriteData field_b;

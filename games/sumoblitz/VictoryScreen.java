@@ -95,8 +95,8 @@ final class VictoryScreen extends MenuScreen {
           var8 = toolkit;
           var5 = hf.field_H;
           wo.a(var5, 60, 210, 0, 1, var8, 220, 350, 1, true);
-          wo.a(hf.field_H, lu.field_e.a() + 20, -10 + (-(lu.field_e.c() >> 1) + 320), -1426063360, 3, toolkit, lu.field_e.c() + 20, 190 - (lu.field_e.a() >> 1), 1, true);
-          lu.field_e.a(-(lu.field_e.c() >> 1) + 320, 200 - (lu.field_e.a() >> 1));
+          wo.a(hf.field_H, LegacyOpenGlSpriteMask.field_e.a() + 20, -10 + (-(LegacyOpenGlSpriteMask.field_e.c() >> 1) + 320), -1426063360, 3, toolkit, LegacyOpenGlSpriteMask.field_e.c() + 20, 190 - (LegacyOpenGlSpriteMask.field_e.a() >> 1), 1, true);
+          LegacyOpenGlSpriteMask.field_e.a(-(LegacyOpenGlSpriteMask.field_e.c() >> 1) + 320, 200 - (LegacyOpenGlSpriteMask.field_e.a() >> 1));
           var7 = (TimedSceneEffect) (im.field_b.first(-102));
           while (var7 != null) {
             var7.render(toolkit, guard + 2230);

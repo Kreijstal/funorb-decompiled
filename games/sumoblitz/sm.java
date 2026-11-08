@@ -81,14 +81,14 @@ final class sm {
     }
 
     final static void a(int param0) {
-        aa.field_a[0] = (Drone) ((Object) new PlayerDrone(81920, 61440));
-        aa.field_a[0].speedLevel = !rf.a(false) ? 5 : 10;
-        aa.field_a[0].tractionLevel = !rf.a(false) ? 5 : 10;
-        aa.field_a[0].bounceLevel = rf.a(false) ? 10 : 5;
+        SpriteMask.drones[0] = (Drone) ((Object) new PlayerDrone(81920, 61440));
+        SpriteMask.drones[0].speedLevel = !rf.a(false) ? 5 : 10;
+        SpriteMask.drones[0].tractionLevel = !rf.a(false) ? 5 : 10;
+        SpriteMask.drones[0].bounceLevel = rf.a(false) ? 10 : 5;
         if (param0 <= 68) {
           sm.releaseStatics((byte) 108);
         }
-        aa.field_a[0].recomputeUpgradeStats((byte) 35);
+        SpriteMask.drones[0].recomputeUpgradeStats((byte) 35);
         fa.field_b = 250;
     }
 
@@ -204,7 +204,7 @@ final class sm {
     }
 
     final void a(int param0, fl param1, int param2, int param3, UiWidget param4) {
-        vn stackIn_20_0 = null;
+        LegacyBitmapFont stackIn_20_0 = null;
         String stackIn_20_1 = null;
         int stackIn_21_2 = 0;
         int stackIn_23_2;
@@ -245,7 +245,7 @@ final class sm {
             if (2 == param1.field_c) {
               var8 = var8 + (-this.field_i.field_w + param4.field_p);
             }
-            this.field_i.a(var7_int, var8);
+            this.field_i.draw(var7_int, var8);
           }
           var7 = param1.a(true, param4);
           if (var7 != null &&
@@ -277,7 +277,7 @@ final class sm {
             } else {
               stackIn_27_8 = this.field_g;
             }
-            ((vn) (Object) stackIn_20_0).a(stackIn_20_1, stackIn_23_2, stackIn_26_3, stackIn_26_4, stackIn_26_5, stackIn_26_6, stackIn_26_7, stackIn_27_8, param1.field_f, param1.field_c, param1.field_j);
+            ((LegacyBitmapFont) (Object) stackIn_20_0).a(stackIn_20_1, stackIn_23_2, stackIn_26_3, stackIn_26_4, stackIn_26_5, stackIn_26_6, stackIn_26_7, stackIn_27_8, param1.field_f, param1.field_c, param1.field_j);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

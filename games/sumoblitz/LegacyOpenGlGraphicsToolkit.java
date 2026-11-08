@@ -208,7 +208,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
         this.field_B = this.field_y.a("GL_EXT_framebuffer_blit");
         this.field_vb = this.field_y.a("GL_EXT_framebuffer_multisample");
         this.field_W = en.field_h.startsWith("mac");
-        jaggl.OpenGL.glGetFloatv(2834, lu.field_g, 0);
+        jaggl.OpenGL.glGetFloatv(2834, LegacyOpenGlSpriteMask.field_g, 0);
         stackIn_26_0 = (var2 != 0) ? var2 : 0;
         return stackIn_26_0;
     }
@@ -388,9 +388,9 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
         return this.field_U != null && this.field_U.a(118);
     }
 
-    final da a(ta param0, SpriteData[] param1, boolean param2) {
+    final ToolkitFont a(FontMetrics param0, SpriteData[] param1, boolean param2) {
         RuntimeException var4 = null;
-        qh stackIn_1_0 = null;
+        LegacyOpenGlBitmapFont stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -398,8 +398,8 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          stackIn_1_0 = new qh(this, param0, param1, param2);
-          return (da) ((Object) stackIn_1_0);
+          stackIn_1_0 = new LegacyOpenGlBitmapFont(this, param0, param1, param2);
+          return (ToolkitFont) ((Object) stackIn_1_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
@@ -421,14 +421,14 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
     }
 
     final void a(int param0, float param1, float param2, float param3, float param4) {
-        lu.field_g[2] = param2;
+        LegacyOpenGlSpriteMask.field_g[2] = param2;
         if (param0 != 31322) {
           this.field_Xb = 70;
         }
-        lu.field_g[0] = param3;
-        lu.field_g[1] = param1;
-        lu.field_g[3] = param4;
-        jaggl.OpenGL.glTexEnvfv(8960, 8705, lu.field_g, 0);
+        LegacyOpenGlSpriteMask.field_g[0] = param3;
+        LegacyOpenGlSpriteMask.field_g[1] = param1;
+        LegacyOpenGlSpriteMask.field_g[3] = param4;
+        jaggl.OpenGL.glTexEnvfv(8960, 8705, LegacyOpenGlSpriteMask.field_g, 0);
     }
 
     final void a(int param0, ht param1) {
@@ -1764,11 +1764,11 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
     }
 
     final void e(int param0, int param1) {
-        lu.field_g[0] = (float)eb.a(param1, 16711680) / 16711680.0f;
-        lu.field_g[2] = (float)eb.a(255, param1) / 255.0f;
-        lu.field_g[1] = (float)eb.a(65280, param1) / 65280.0f;
-        lu.field_g[3] = (float)(param1 >>> 24) / 255.0f;
-        jaggl.OpenGL.glTexEnvfv(8960, 8705, lu.field_g, param0);
+        LegacyOpenGlSpriteMask.field_g[0] = (float)eb.a(param1, 16711680) / 16711680.0f;
+        LegacyOpenGlSpriteMask.field_g[2] = (float)eb.a(255, param1) / 255.0f;
+        LegacyOpenGlSpriteMask.field_g[1] = (float)eb.a(65280, param1) / 65280.0f;
+        LegacyOpenGlSpriteMask.field_g[3] = (float)(param1 >>> 24) / 255.0f;
+        jaggl.OpenGL.glTexEnvfv(8960, 8705, LegacyOpenGlSpriteMask.field_g, param0);
     }
 
     final void a(mw param0, int param1) {
@@ -2474,10 +2474,10 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
           return;
         }
         jaggl.OpenGL.glFogf(2916, this.field_Lb);
-        lu.field_g[1] = (float)eb.a(this.field_P, 65280) / 65280.0f;
-        lu.field_g[2] = (float)eb.a(255, this.field_P) / 255.0f;
-        lu.field_g[0] = (float)eb.a(this.field_P, 16711680) / 16711680.0f;
-        jaggl.OpenGL.glFogfv(2918, lu.field_g, 0);
+        LegacyOpenGlSpriteMask.field_g[1] = (float)eb.a(this.field_P, 65280) / 65280.0f;
+        LegacyOpenGlSpriteMask.field_g[2] = (float)eb.a(255, this.field_P) / 255.0f;
+        LegacyOpenGlSpriteMask.field_g[0] = (float)eb.a(this.field_P, 16711680) / 16711680.0f;
+        jaggl.OpenGL.glFogfv(2918, LegacyOpenGlSpriteMask.field_g, 0);
     }
 
     static {

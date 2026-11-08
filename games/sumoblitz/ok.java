@@ -361,7 +361,7 @@ final class ok {
               uc.field_b[var18] = uc.field_b[var18] + kh.field_c[var15][var18];
             }
             up.a(OpenGlUnderwaterEffect.field_k, uc.field_b, false, false, var17, true, -1622738130);
-            GameplaySession.a(var7Lifetime1, var17, var14, var12Lifetime1, var9Lifetime1, var13Lifetime1, (byte) -9, var8Lifetime1);
+            GameplaySession.renderLitMeshFaces(var7Lifetime1, var17, var14, var12Lifetime1, var9Lifetime1, var13Lifetime1, (byte) -9, var8Lifetime1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

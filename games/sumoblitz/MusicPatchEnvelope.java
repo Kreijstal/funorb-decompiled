@@ -72,11 +72,11 @@ final class MusicPatchEnvelope {
           }
           var12 = param0.field_Sb;
           if (var12.b((byte) -101)) {
-            if (null != dj.field_m) {
+            if (null != PlayingSound.field_m) {
               return;
             }
             var22 = mr.a(0.6000000238418579f, 0.5f, 128, -30865, new vu(419684), 4.0f, 4.0f, 16.0f, 16, 8, 128);
-            dj.field_m = DroneDebris.storeByteArray((byte) -126, var22, false);
+            PlayingSound.field_m = DroneDebris.storeByteArray((byte) -126, var22, false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

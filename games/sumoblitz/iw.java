@@ -3,7 +3,7 @@
  */
 final class iw {
     static int field_a;
-    static int field_b;
+    static int elapsedTicks;
     int field_c;
 
     final static ne a(int param0, int param1, ResourceArchive param2, int param3) {
@@ -20,7 +20,7 @@ final class iw {
             return (ne) (stackIn_2_0);
           }
           if (param3 != -21834) {
-            field_b = -84;
+            elapsedTicks = -84;
           }
           stackIn_6_0 = ad.e(param3 + 34602);
           return stackIn_6_0;
@@ -47,7 +47,7 @@ final class iw {
     }
 
     static {
-        field_b = 0;
+        elapsedTicks = 0;
         field_a = -1;
     }
 }

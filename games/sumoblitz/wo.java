@@ -17,7 +17,7 @@ final class wo extends java.awt.Canvas {
         }
     }
 
-    final static int a(String[] args, vn param1, int param2, boolean param3, String param4) {
+    final static int a(String[] args, LegacyBitmapFont param1, int param2, boolean param3, String param4) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;

@@ -10,7 +10,7 @@ final class nd extends ao {
     static MusicTrack field_B;
     private int field_D;
     private int[] field_J;
-    static int field_F;
+    static int livesRemaining;
     static String errorConnectingToServerText;
     private int field_C;
     private int field_E;
@@ -211,7 +211,7 @@ final class nd extends ao {
           pl var4 = null;
           pl var5 = null;
           if (tm.field_a == null) {
-            tm.field_a = jt.field_t.a((byte) 71, mc.field_C, vp.field_a);
+            tm.field_a = CacheReferenceNode.field_t.a((byte) 71, mc.field_C, vp.field_a);
           }
           if (param0 > -33) {
             nd.a((byte) 116, false);
@@ -221,12 +221,12 @@ final class nd extends ao {
           }
           long dupTemp$0 = wq.a(-38);
           ArchiveCatalog.field_a = dupTemp$0;
-          jt.field_x = dupTemp$0;
+          CacheReferenceNode.field_x = dupTemp$0;
           if (tm.field_a.field_c != 1) {
             kw.field_c = lr.field_b;
           } else {
             try {
-              qk.field_O = new BufferedSocket((java.net.Socket) (tm.field_a.field_d), jt.field_t);
+              qk.field_O = new BufferedSocket((java.net.Socket) (tm.field_a.field_d), CacheReferenceNode.field_t);
               var4 = ig.field_a;
               var5 = var4;
               InwardSparkParticle.field_v.position = 0;
@@ -235,7 +235,7 @@ final class nd extends ao {
               vb.field_I = param1 ? -2 : -1;
               ur.field_Q = param1 ? -2 : -1;
               kw.field_c = gg.field_t;
-              sb.a(s.field_o, 81, jt.field_r, ql.field_v, InwardSparkParticle.field_v);
+              sb.a(s.field_o, 81, CacheReferenceNode.field_r, ql.field_v, InwardSparkParticle.field_v);
               gt.a(0, -1);
             } catch (IOException iOException) {
               kw.field_c = lr.field_b;

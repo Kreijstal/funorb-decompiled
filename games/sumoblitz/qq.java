@@ -6,11 +6,11 @@ final class qq extends dh implements op {
     static int field_P;
     private v field_S;
     static String namesShouldContainAText;
-    static vn field_R;
+    static LegacyBitmapFont field_R;
 
     public static void releaseStatics(int param0) {
         if (param0 != -15648) {
-          field_R = (vn) null;
+          field_R = (LegacyBitmapFont) null;
           field_R = null;
           namesShouldContainAText = null;
           return;
@@ -56,10 +56,10 @@ final class qq extends dh implements op {
         this.field_S.a((byte) -117);
     }
 
-    final static dj a(int param0, PcmSampleStream param1) {
-        dj var2 = null;
+    final static PlayingSound addPlayingSound(int param0, PcmSampleStream param1) {
+        PlayingSound var2 = null;
         RuntimeException var2_ref = null;
-        dj stackIn_3_0 = null;
+        PlayingSound stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -68,7 +68,7 @@ final class qq extends dh implements op {
           if (param0 != 18416) {
             qq.b(-31, 81, 66);
           }
-          var2 = new dj(param1, param1);
+          var2 = new PlayingSound(param1, param1);
           jf.field_c.addLast((IntrusiveNode) (var2), (byte) 39);
           sj.field_c.addSubstream(param1);
           stackIn_3_0 = var2;

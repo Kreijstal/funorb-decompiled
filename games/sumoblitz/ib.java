@@ -81,7 +81,7 @@ final class ib extends ShaderEffect {
         this.field_b.g(1, -119);
         this.field_b.a((byte) -83, lf.field_e, cv.field_F);
         this.field_b.a((byte) 111, 0, true, false, jq.field_a);
-        this.field_b.a(ta.field_a, 0, true);
+        this.field_b.a(FontMetrics.field_a, 0, true);
         this.field_b.c(0, param1 ^ 20151);
         this.field_b.g(0, -124);
         if (param1 == 20186) {

@@ -20,13 +20,13 @@ abstract class gd {
     byte field_m;
     fv field_i;
 
-    final static ta a(ResourceArchive param0, byte param1, String param2, String param3) {
+    final static FontMetrics a(ResourceArchive param0, byte param1, String param2, String param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;
         Object stackIn_2_0 = null;
-        ta stackIn_5_0 = null;
-        ta stackIn_7_0 = null;
+        FontMetrics stackIn_5_0 = null;
+        FontMetrics stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -40,13 +40,13 @@ abstract class gd {
           var4 = var5;
           if (var5 == null) {
             stackIn_2_0 = null;
-            return (ta) (stackIn_2_0);
+            return (FontMetrics) (stackIn_2_0);
           }
           if (param1 < -1) {
-            stackIn_7_0 = new ta(var5);
+            stackIn_7_0 = new FontMetrics(var5);
             return stackIn_7_0;
           }
-          stackIn_5_0 = (ta) null;
+          stackIn_5_0 = (FontMetrics) null;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

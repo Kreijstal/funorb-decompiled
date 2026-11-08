@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qh extends da {
+final class LegacyOpenGlBitmapFont extends ToolkitFont {
     private tq field_e;
     private f field_c;
     private LegacyOpenGlGraphicsToolkit field_f;
     private boolean field_d;
 
-    final void a(char param0, int param1, int param2, int param3, boolean param4, aa param5, int param6, int param7) {
-        lu var9;
+    final void drawMaskedGlyph(char param0, int param1, int param2, int param3, boolean param4, SpriteMask param5, int param6, int param7) {
+        LegacyOpenGlSpriteMask var9;
         f var10;
         float var11;
         float var12;
-        var9 = (lu) (param5);
-        var10 = var9.field_f;
+        var9 = (LegacyOpenGlSpriteMask) (param5);
+        var10 = var9.texture;
         this.field_f.k(-25462);
         this.field_f.a(68, this.field_c);
         if (!this.field_d &&
@@ -51,7 +51,7 @@ final class qh extends da {
         }
     }
 
-    qh(LegacyOpenGlGraphicsToolkit param0, ta param1, SpriteData[] param2, boolean param3) {
+    LegacyOpenGlBitmapFont(LegacyOpenGlGraphicsToolkit param0, FontMetrics param1, SpriteData[] param2, boolean param3) {
         super(param0, param1);
         int incrementValue$3 = 0;
         int incrementValue$0 = 0;
@@ -246,7 +246,7 @@ final class qh extends da {
         }
     }
 
-    final void fa(char param0, int param1, int param2, int param3, boolean param4) {
+    final void drawGlyph(char param0, int param1, int param2, int param3, boolean param4) {
         this.field_f.k(-25462);
         this.field_f.a(45, this.field_c);
         if (!this.field_d &&

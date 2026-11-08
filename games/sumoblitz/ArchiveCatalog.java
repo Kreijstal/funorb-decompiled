@@ -1125,7 +1125,7 @@ final class ArchiveCatalog {
           }
           var2Lifetime142 = ke.a((byte) 122, "arcadeunlocked");
           if (var2Lifetime142 != null) {
-            aa.arcadeModeUnlockedText = MusicVoice.a(0, var2Lifetime142);
+            SpriteMask.arcadeModeUnlockedText = MusicVoice.a(0, var2Lifetime142);
           }
           var2Lifetime143 = ke.a((byte) 93, "levelSelect");
           if (var2Lifetime143 != null) {
@@ -1690,7 +1690,7 @@ final class ArchiveCatalog {
           if (param0 != -6) {
             field_f = (SpriteData) null;
           }
-          jt.a(-99);
+          CacheReferenceNode.a(-99);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

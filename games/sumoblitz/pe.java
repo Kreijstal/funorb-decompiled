@@ -220,7 +220,7 @@ final class pe extends WidgetContainer implements ai {
         rc.field_i = SpriteData.a(param3, "", "lock");
         hc.field_b = SpriteData.a(param3, "", "heart");
         oi.field_d = SpriteData.a(param3, "", "skull");
-        tk.field_c = SpriteData.b(param3, "", "slider");
+        TextLayoutLine.field_c = SpriteData.b(param3, "", "slider");
         if (param2 != 20) {
           return;
         }
@@ -241,7 +241,7 @@ final class pe extends WidgetContainer implements ai {
           kr.field_b = SpriteData.b(param3, "", "splitter");
           qk.field_V = SpriteData.b(param3, "", "seeker");
           ph.field_a = SpriteData.b(param3, "", "shadowdudes");
-          jd.field_h = SpriteData.b(param3, "", "mod_armour");
+          CachedTextLayout.field_h = SpriteData.b(param3, "", "mod_armour");
           bk.field_b = SpriteData.b(param3, "", "mod_bomb");
           cd.field_c = SpriteData.b(param3, "", "mod_spikes");
           lh.field_k = SpriteData.a(param3, "", "zap");
@@ -295,7 +295,7 @@ final class pe extends WidgetContainer implements ai {
         if (0 != param3) {
           return;
         }
-        vn var5 = kw.field_b;
+        LegacyBitmapFont var5 = kw.field_b;
         if (this.field_B != null) {
           var5.a(NodeHashTableIterator.suggestedNamesText, param0 + this.field_r, this.field_v + param1, this.field_q, 20, 16777215, -1, 0, 0, var5.field_I + var5.field_s);
         }

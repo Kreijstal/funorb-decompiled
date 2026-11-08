@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class ig {
-    static IntrusiveDeque field_b;
+    static IntrusiveDeque hudMessages;
     static pl field_a;
 
     final static boolean b(int param0) {
@@ -26,13 +26,13 @@ final class ig {
           if (ku.field_J == null) {
             return false;
           }
-          if (an.field_a == -1) {
+          if (an.waveIndex == -1) {
             return false;
           }
-          if (ku.field_J.length <= an.field_a) {
+          if (ku.field_J.length <= an.waveIndex) {
             return false;
           }
-          var12 = ku.field_J[an.field_a];
+          var12 = ku.field_J[an.waveIndex];
           var2 = var12.field_b;
           var3 = 0;
           var4 = 26 / ((67 - param0) / 42);
@@ -100,7 +100,7 @@ final class ig {
         var9 = Sumoblitz.field_L ? 1 : 0;
         try {
           if (!param1) {
-            field_b = (IntrusiveDeque) null;
+            hudMessages = (IntrusiveDeque) null;
           }
           if (!qn.field_e.field_f) {
             stackIn_6_0 = -1;
@@ -193,11 +193,11 @@ final class ig {
         if (param0) {
           field_a = (pl) null;
         }
-        field_b = null;
+        hudMessages = null;
         field_a = null;
     }
 
     static {
-        field_b = new IntrusiveDeque();
+        hudMessages = new IntrusiveDeque();
     }
 }

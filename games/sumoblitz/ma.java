@@ -4,7 +4,7 @@
 final class ma {
     static String logInText;
     static String namesCannotContainConsecutiveText;
-    static ta field_b;
+    static FontMetrics field_b;
     private static String field_z;
 
     public static void releaseStatics(int param0) {
@@ -14,7 +14,7 @@ final class ma {
           field_b = null;
           return;
         }
-        field_b = (ta) null;
+        field_b = (FontMetrics) null;
         namesCannotContainConsecutiveText = null;
         logInText = null;
         field_b = null;

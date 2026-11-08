@@ -4,7 +4,7 @@
 final class bj {
     private String field_f;
     static tg field_c;
-    static IntrusiveDeque field_b;
+    static IntrusiveDeque powerupPickups;
     static int field_a;
     private boolean field_e;
     static SpriteData field_g;
@@ -23,7 +23,7 @@ final class bj {
         if (param0 > -69) {
           return;
         }
-        field_b = null;
+        powerupPickups = null;
         field_g = null;
     }
 
@@ -37,7 +37,7 @@ final class bj {
 
     final String b(int param0) {
         if (param0 <= 16) {
-          field_b = (IntrusiveDeque) null;
+          powerupPickups = (IntrusiveDeque) null;
           return this.field_f;
         }
         return this.field_f;

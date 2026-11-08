@@ -27,8 +27,8 @@ final class qb extends ff {
     }
 
     final static void d(int param0) {
-        il.field_a = in.field_z;
-        oh.field_e = oh.field_e + 1;
+        il.field_a = in.score;
+        oh.levelIndex = oh.levelIndex + 1;
         kr.field_e = 3;
         uk.field_ob = true;
         if (!jl.a(-89)) {
@@ -37,10 +37,10 @@ final class qb extends ff {
         ke.a(false);
         nv.field_a = 0;
         pd.field_p = un.field_a[0];
-        in.field_z = 0;
-        jt.field_u = 0;
+        in.score = 0;
+        CacheReferenceNode.field_u = 0;
         gn.a(param0, true);
-        ag.a(0, 1 + oh.field_e % 5);
+        TextLayout.a(0, 1 + oh.levelIndex % 5);
     }
 
     static {

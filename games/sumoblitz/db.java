@@ -3,7 +3,7 @@
  */
 final class db extends IntrusiveNode {
     byte[] field_k;
-    static int field_l;
+    static int droneSlotLimit;
     int field_m;
 
     final static void a(boolean param0, java.awt.Canvas param1) {

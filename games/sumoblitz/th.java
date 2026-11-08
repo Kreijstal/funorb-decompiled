@@ -111,9 +111,9 @@ final class th extends WidgetContainer implements ca, ai {
           OpenGlTransparentWaterEffect.field_e = OpenGlTransparentWaterEffect.field_e | var3_int;
           pl.field_v.addLast((IntrusiveNode) (new ge(param2)), (byte) 39);
           if (gj.a((byte) -84, 10) >= 5) {
-            fb.field_a = fb.field_a + iw.field_b;
+            fb.field_a = fb.field_a + iw.elapsedTicks;
           } else {
-            GraphicsToolkit.field_f = GraphicsToolkit.field_f + iw.field_b;
+            GraphicsToolkit.field_f = GraphicsToolkit.field_f + iw.elapsedTicks;
           }
           if (gj.a((byte) -84, 10) < 5) {
             ts.field_a = ts.field_a - IntrusiveNodeHashTable.field_c;
@@ -127,7 +127,7 @@ final class th extends WidgetContainer implements ca, ai {
           boolean decompiledFrameRemainder1 = true;
           if (3 == param2) {
             kn.field_b = kn.field_b - ld.field_C;
-            GraphicsToolkit.field_f = GraphicsToolkit.field_f + oh.field_e;
+            GraphicsToolkit.field_f = GraphicsToolkit.field_f + oh.levelIndex;
             ts.field_a = ts.field_a - nq.field_i;
           } else {
             if (param2 != 4 &&
@@ -135,12 +135,12 @@ final class th extends WidgetContainer implements ca, ai {
               6 != param2 &&
               param2 != 7) {
               if (param2 == 10) {
-                GraphicsToolkit.field_f = GraphicsToolkit.field_f + oh.field_e;
+                GraphicsToolkit.field_f = GraphicsToolkit.field_f + oh.levelIndex;
               } else {
                 if ((param2 == 0 ||
                   param2 == 1 ||
                   2 == param2)) {
-                  fb.field_a = fb.field_a + oh.field_e;
+                  fb.field_a = fb.field_a + oh.levelIndex;
                 }
               }
               decompiledFrameRemainder1 = false;
@@ -159,12 +159,12 @@ final class th extends WidgetContainer implements ca, ai {
               6 != param2 &&
               param2 != 7) {
               if (10 == param2) {
-                GraphicsToolkit.field_f = GraphicsToolkit.field_f - oh.field_e;
+                GraphicsToolkit.field_f = GraphicsToolkit.field_f - oh.levelIndex;
               } else {
                 if ((param2 == 0 ||
                   param2 == 1 ||
                   param2 == 2)) {
-                  fb.field_a = fb.field_a - oh.field_e;
+                  fb.field_a = fb.field_a - oh.levelIndex;
                 }
               }
               decompiledFrameRemainder0 = false;
@@ -174,13 +174,13 @@ final class th extends WidgetContainer implements ca, ai {
             }
           } else {
             kn.field_b = kn.field_b + ld.field_C;
-            GraphicsToolkit.field_f = GraphicsToolkit.field_f - oh.field_e;
+            GraphicsToolkit.field_f = GraphicsToolkit.field_f - oh.levelIndex;
             ts.field_a = ts.field_a + nq.field_i;
           }
           if (5 > gj.a((byte) -84, 10)) {
-            GraphicsToolkit.field_f = GraphicsToolkit.field_f - iw.field_b;
+            GraphicsToolkit.field_f = GraphicsToolkit.field_f - iw.elapsedTicks;
           } else {
-            fb.field_a = fb.field_a - iw.field_b;
+            fb.field_a = fb.field_a - iw.elapsedTicks;
           }
           if (gj.a((byte) -84, 10) >= 5) {
             kn.field_b = kn.field_b + IntrusiveNodeHashTable.field_c;

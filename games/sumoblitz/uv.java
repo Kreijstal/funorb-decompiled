@@ -12,9 +12,9 @@ final class uv extends gm {
         if (param0 != -25843) {
           IntrusiveDeque var2 = (IntrusiveDeque) null;
           uv.a(-92, -128, -112, -123, (IntrusiveDeque) null, -24);
-          return -hu.field_b + dj.field_n;
+          return -hu.field_b + PlayingSound.field_n;
         }
-        return -hu.field_b + dj.field_n;
+        return -hu.field_b + PlayingSound.field_n;
     }
 
     uv(ne[] param0) {
@@ -103,7 +103,7 @@ final class uv extends gm {
         int var12 = 0;
         int var13 = 0;
         try {
-          SoftwareRasterizer.b(param0.field_r + param4, param0.field_v + param1, param0.field_q, param0.field_p, 10197915);
+          SoftwareRasterizer.drawRectangle(param0.field_r + param4, param0.field_v + param1, param0.field_q, param0.field_p, 10197915);
           if (param3) {
             stackIn_6_0 = (((wp) (param0)).field_C) ? 1 : 0;
           } else {

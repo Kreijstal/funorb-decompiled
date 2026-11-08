@@ -66,23 +66,23 @@ final class sd {
     }
 
     final Object a(byte param0) {
-        jt var2;
+        CacheReferenceNode var2;
         Object var3;
-        jt var4;
+        CacheReferenceNode var4;
         int var5;
         byte[] var6;
         var5 = Sumoblitz.field_L ? 1 : 0;
-        var2 = (jt) (this.field_c.next(-1));
+        var2 = (CacheReferenceNode) (this.field_c.next(-1));
         while (var2 != null) {
-          var3 = var2.c((byte) 107);
+          var3 = var2.getValue((byte) 107);
           if (var3 != null) {
             return var3;
           }
           var4 = var2;
-          var2 = (jt) (this.field_c.next(-1));
+          var2 = (CacheReferenceNode) (this.field_c.next(-1));
           var4.unlink(false);
           var4.unlinkSecondary(-5106);
-          this.field_d = this.field_d + var4.field_z;
+          this.field_d = this.field_d + var4.weight;
         }
         if (param0 == -92) {
           return null;
@@ -93,23 +93,23 @@ final class sd {
     }
 
     final Object a(long param0, int param1) {
-        av var6 = null;
-        jt var7 = (jt) (this.field_c.get(575, param0));
+        StrongCacheReference var6 = null;
+        CacheReferenceNode var7 = (CacheReferenceNode) (this.field_c.get(575, param0));
         if (var7 == null) {
           return null;
         }
-        Object var5 = var7.c((byte) -81);
+        Object var5 = var7.getValue((byte) -81);
         if (var5 == null) {
           var7.unlink(false);
           var7.unlinkSecondary(-5106);
-          this.field_d = this.field_d + var7.field_z;
+          this.field_d = this.field_d + var7.weight;
           return null;
         }
-        if (var7.e(115)) {
-          var6 = new av(var5, var7.field_z);
+        if (var7.isSoftReference(115)) {
+          var6 = new StrongCacheReference(var5, var7.weight);
           this.field_c.put(-20657, var6, var7.key);
           this.field_h.addLast((DualLinkNode) (var6), (byte) -122);
-          ((jt) ((Object) var6)).secondaryKey = 0L;
+          ((CacheReferenceNode) ((Object) var6)).secondaryKey = 0L;
           var7.unlink(false);
           var7.unlinkSecondary(-5106);
         } else {
@@ -124,35 +124,35 @@ final class sd {
 
     final void a(int param0, int param1) {
         long fieldTemp$0 = 0L;
-        jt var3;
-        kl var4;
+        CacheReferenceNode var3;
+        SoftCacheReference var4;
         int var5;
         var5 = Sumoblitz.field_L ? 1 : 0;
         if (param1 != 22663) {
           return;
         }
-        var3 = (jt) (this.field_h.first(-1));
+        var3 = (CacheReferenceNode) (this.field_h.first(-1));
         while (var3 != null) {
-          if (var3.e(param1 ^ -22690)) {
-            if (var3.c((byte) -62) == null) {
+          if (var3.isSoftReference(param1 ^ -22690)) {
+            if (var3.getValue((byte) -62) == null) {
               var3.unlink(false);
               var3.unlinkSecondary(-5106);
-              this.field_d = this.field_d + var3.field_z;
+              this.field_d = this.field_d + var3.weight;
             }
           } else {
             fieldTemp$0 = var3.secondaryKey + 1L;
             var3.secondaryKey = var3.secondaryKey + 1L;
             if (fieldTemp$0 <= (long)param0) {
-              var3 = (jt) (this.field_h.next((byte) -122));
+              var3 = (CacheReferenceNode) (this.field_h.next((byte) -122));
               continue;
             }
-            var4 = new kl(var3.c((byte) -102), var3.field_z);
+            var4 = new SoftCacheReference(var3.getValue((byte) -102), var3.weight);
             this.field_c.put(param1 ^ -2104, var4, var3.key);
             pt.a(var3, 2066481250, var4);
             var3.unlink(false);
             var3.unlinkSecondary(-5106);
           }
-          var3 = (jt) (this.field_h.next((byte) -122));
+          var3 = (CacheReferenceNode) (this.field_h.next((byte) -122));
         }
         return;
     }
@@ -381,28 +381,28 @@ final class sd {
         }
         if (param4 > param5) {
           if (param4 < param2) {
-            uw.a(SoftwareRasterizer.field_a, param6, param5, param2, param1, param0, param3 + 1955582389, param7, param4);
+            uw.a(SoftwareRasterizer.pixels, param6, param5, param2, param1, param0, param3 + 1955582389, param7, param4);
           } else {
             if (param2 <= param5) {
-              uw.a(SoftwareRasterizer.field_a, param0, param2, param4, param1, param7, 1955582416, param6, param5);
+              uw.a(SoftwareRasterizer.pixels, param0, param2, param4, param1, param7, 1955582416, param6, param5);
             } else {
-              uw.a(SoftwareRasterizer.field_a, param0, param5, param4, param1, param6, param3 ^ 1955582411, param7, param2);
+              uw.a(SoftwareRasterizer.pixels, param0, param5, param4, param1, param6, param3 ^ 1955582411, param7, param2);
             }
           }
         } else {
           if (param2 <= param5) {
             if (param2 > param4) {
-              uw.a(SoftwareRasterizer.field_a, param7, param4, param5, param1, param6, 1955582416, param0, param2);
+              uw.a(SoftwareRasterizer.pixels, param7, param4, param5, param1, param6, 1955582416, param0, param2);
             } else {
-              uw.a(SoftwareRasterizer.field_a, param7, param2, param5, param1, param0, 1955582416, param6, param4);
+              uw.a(SoftwareRasterizer.pixels, param7, param2, param5, param1, param0, 1955582416, param6, param4);
             }
           } else {
-            uw.a(SoftwareRasterizer.field_a, param6, param4, param2, param1, param7, 1955582416, param0, param5);
+            uw.a(SoftwareRasterizer.pixels, param6, param4, param2, param1, param7, 1955582416, param0, param5);
           }
         }
     }
 
-    private final void a(jt param0, byte param1) {
+    private final void a(CacheReferenceNode param0, byte param1) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -412,7 +412,7 @@ final class sd {
           if (param0 != null) {
             param0.unlink(false);
             param0.unlinkSecondary(-5106);
-            this.field_d = this.field_d + param0.field_z;
+            this.field_d = this.field_d + param0.weight;
           }
           if (param1 != -124) {
             field_a = (SpriteData[]) null;
@@ -444,25 +444,25 @@ final class sd {
     }
 
     final Object b(int param0) {
-        jt var2;
+        CacheReferenceNode var2;
         Object var3;
-        jt var4;
+        CacheReferenceNode var4;
         int var5;
         var5 = Sumoblitz.field_L ? 1 : 0;
-        var2 = (jt) (this.field_c.first(-1));
+        var2 = (CacheReferenceNode) (this.field_c.first(-1));
         if (param0 != 0) {
           return (Object) null;
         }
         while (var2 != null) {
-          var3 = var2.c((byte) 103);
+          var3 = var2.getValue((byte) 103);
           if (var3 != null) {
             return var3;
           }
           var4 = var2;
-          var2 = (jt) (this.field_c.next(-1));
+          var2 = (CacheReferenceNode) (this.field_c.next(-1));
           var4.unlink(false);
           var4.unlinkSecondary(-5106);
-          this.field_d = this.field_d + var4.field_z;
+          this.field_d = this.field_d + var4.weight;
         }
         return null;
     }
@@ -527,7 +527,7 @@ final class sd {
     }
 
     private final void a(long param0, boolean param1) {
-        jt var4 = (jt) (this.field_c.get(575, param0));
+        CacheReferenceNode var4 = (CacheReferenceNode) (this.field_c.get(575, param0));
         if (param1) {
           this.a(-43, (byte) -104, (Object) null, -101L);
         }
@@ -544,8 +544,8 @@ final class sd {
     }
 
     private final void a(int param0, byte param1, Object param2, long param3) {
-        jt var6 = null;
-        av var6_ref = null;
+        CacheReferenceNode var6 = null;
+        StrongCacheReference var6_ref = null;
         int var8 = Sumoblitz.field_L ? 1 : 0;
         try {
           if (this.field_g < param0) {
@@ -554,14 +554,14 @@ final class sd {
           this.a(param3, false);
           this.field_d = this.field_d - param0;
           while (0 > this.field_d) {
-            var6 = (jt) (this.field_h.removeFirst((byte) -61));
+            var6 = (CacheReferenceNode) (this.field_h.removeFirst((byte) -61));
             this.a(var6, (byte) -124);
           }
-          var6_ref = new av(param2, param0);
+          var6_ref = new StrongCacheReference(param2, param0);
           this.field_c.put(-20657, var6_ref, param3);
           int var7 = 2 % ((12 - param1) / 33);
           this.field_h.addLast((DualLinkNode) (var6_ref), (byte) -122);
-          ((jt) ((Object) var6_ref)).secondaryKey = 0L;
+          ((CacheReferenceNode) ((Object) var6_ref)).secondaryKey = 0L;
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "sd.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

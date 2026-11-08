@@ -3,7 +3,7 @@
  */
 final class tq {
     private int field_b;
-    static vn field_a;
+    static LegacyBitmapFont field_a;
 
     final static void a(int param0, int param1, boolean param2) {
         if (param1 == GameInstructions.field_b) {
@@ -14,14 +14,14 @@ final class tq {
           mp.a(GameInstructions.field_b, 124);
           qv.a(GameInstructions.field_b, 4);
           if (param0 > -87) {
-            field_a = (vn) null;
+            field_a = (LegacyBitmapFont) null;
             return;
           }
           return;
         }
         gn.a(GameInstructions.field_b, true);
         if (param0 > -87) {
-          field_a = (vn) null;
+          field_a = (LegacyBitmapFont) null;
           return;
         }
     }
@@ -47,7 +47,7 @@ final class tq {
     final void a(byte param0, char param1) {
         jaggl.OpenGL.glCallList(param1 + this.field_b);
         if (param0 != 121) {
-          field_a = (vn) null;
+          field_a = (LegacyBitmapFont) null;
         }
     }
 
@@ -57,7 +57,7 @@ final class tq {
 
     public static void releaseStatics(byte param0) {
         if (param0 >= -6) {
-          field_a = (vn) null;
+          field_a = (LegacyBitmapFont) null;
           field_a = null;
           return;
         }
@@ -79,7 +79,7 @@ final class tq {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (oc.field_e <= in.field_z) {
+          if (oc.field_e <= in.score) {
             GameKeyHandler.a(param1, -1);
             oc.field_e = (int)((double)oc.field_e + 1.5 * (double)oc.field_e);
           }

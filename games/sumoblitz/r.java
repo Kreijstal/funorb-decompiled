@@ -28,9 +28,9 @@ abstract class r extends DualLinkNode {
         ReassignUpgradesScreen.field_j = var8.a((byte) 113);
         if (2 == jb.field_h) {
           eh.field_c = var8.a(255);
-          jt.field_w = var8.c((byte) 126);
+          CacheReferenceNode.field_w = var8.c((byte) 126);
         } else {
-          jt.field_w = 0;
+          CacheReferenceNode.field_w = 0;
           eh.field_c = 0;
         }
         if (param1 >= -51) {

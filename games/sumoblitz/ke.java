@@ -52,16 +52,16 @@ final class ke {
         if (null == ku.field_J) {
           return;
         }
-        if (-1 == oh.field_e) {
+        if (-1 == oh.levelIndex) {
           return;
         }
-        if (an.field_a == -1) {
+        if (an.waveIndex == -1) {
           return;
         }
-        if (an.field_a < ku.field_J.length) {
+        if (an.waveIndex < ku.field_J.length) {
           SocketConnector.field_c = 0;
           ig.b(120);
-          uc.field_f = iw.field_b;
+          uc.field_f = iw.elapsedTicks;
           kp.field_a = false;
           DroneDebris.field_C = false;
         }

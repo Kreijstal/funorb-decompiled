@@ -163,7 +163,7 @@ final class kk {
           if (2 == var5.field_p) {
             var7 = this.field_c.a(param0 - 25069, var6, var6, false, 0.699999988079071f, param1);
           } else {
-            if (!dj.a(-83, (int) var5.field_d)) {
+            if (!PlayingSound.a(-83, (int) var5.field_d)) {
               var23 = this.field_c.a(param0 - 25069, var6, var6, false, 0.699999988079071f, param1);
               stackIn_12_0 = null;
               stackIn_12_1 = null;
@@ -247,7 +247,7 @@ final class kk {
         if (2 == var5.field_p) {
           var7Lifetime1 = this.field_c.a(param0 - 25069, var6, var6, false, 0.699999988079071f, param1);
         } else {
-          if (!dj.a(-83, (int) var5.field_d)) {
+          if (!PlayingSound.a(-83, (int) var5.field_d)) {
             var24 = this.field_c.a(param0 - 25069, var6, var6, false, 0.699999988079071f, param1);
             stackIn_31_0 = null;
             stackIn_31_1 = null;

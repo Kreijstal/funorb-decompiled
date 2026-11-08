@@ -196,7 +196,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (var1 == null) {
             var1 = new rl();
           }
-          var1.a(SoftwareRasterizer.field_b, SoftwareRasterizer.field_c, SoftwareRasterizer.field_a, SoftwareRasterizer.field_j, (byte) -94, SoftwareRasterizer.field_i, SoftwareRasterizer.field_k, SoftwareRasterizer.field_e);
+          var1.a(SoftwareRasterizer.width, SoftwareRasterizer.height, SoftwareRasterizer.pixels, SoftwareRasterizer.clipRight, (byte) -94, SoftwareRasterizer.clipTop, SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipBottom);
           IntrusiveNodeHashTable.field_g.addLast((IntrusiveNode) (var1), (byte) 39);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

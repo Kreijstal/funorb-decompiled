@@ -153,7 +153,7 @@ final class bn extends ar {
           var6Lifetime5 = this.field_Q.c(-106);
           var50 = (de) ((Object) this.field_w);
           var9 = this.field_r + param0;
-          var10 = var50.b(param1, (UiWidget) (this), 0) + (var50.b(-3, (UiWidget) (this)).a(true) >> 1);
+          var10 = var50.b(param1, (UiWidget) (this), 0) + (var50.b(-3, (UiWidget) (this)).height(true) >> 1);
           if (var6Lifetime5 != GameInstructions.field_f &&
             kt.field_a != var6Lifetime5) {
             if (qr.field_e == var6Lifetime5) {
@@ -184,7 +184,7 @@ final class bn extends ar {
                 jq.a(7161, this.field_K);
               } else {
                 jq.a(7161, this.field_K);
-                SoftwareRasterizer.b();
+                SoftwareRasterizer.clear();
               }
             }
           }
@@ -205,7 +205,7 @@ final class bn extends ar {
           var6Lifetime1 = this.field_Q.c(-106);
           var51 = (de) ((Object) this.field_w);
           var9Lifetime1 = this.field_r + param0;
-          var10Lifetime1 = var51.b(param1, (UiWidget) (this), 0) + (var51.b(-3, (UiWidget) (this)).a(true) >> 1);
+          var10Lifetime1 = var51.b(param1, (UiWidget) (this), 0) + (var51.b(-3, (UiWidget) (this)).height(true) >> 1);
           if (var6Lifetime1 != GameInstructions.field_f &&
             kt.field_a != var6Lifetime1) {
             if (qr.field_e == var6Lifetime1) {
@@ -236,7 +236,7 @@ final class bn extends ar {
                 jq.a(7161, this.field_K);
               } else {
                 jq.a(7161, this.field_K);
-                SoftwareRasterizer.b();
+                SoftwareRasterizer.clear();
               }
             }
           }
@@ -255,7 +255,7 @@ final class bn extends ar {
           var6Lifetime1 = this.field_Q.c(-106);
           var52 = (de) ((Object) this.field_w);
           var9Lifetime2 = this.field_r + param0;
-          var10Lifetime2 = var52.b(param1, (UiWidget) (this), 0) + (var52.b(-3, (UiWidget) (this)).a(true) >> 1);
+          var10Lifetime2 = var52.b(param1, (UiWidget) (this), 0) + (var52.b(-3, (UiWidget) (this)).height(true) >> 1);
           if (var6Lifetime1 != GameInstructions.field_f &&
             kt.field_a != var6Lifetime1) {
             if (qr.field_e == var6Lifetime1) {
@@ -283,7 +283,7 @@ final class bn extends ar {
             } else {
               if (this.field_K.field_u >= var12Lifetime2) {
                 jq.a(7161, this.field_K);
-                SoftwareRasterizer.b();
+                SoftwareRasterizer.clear();
               } else {
                 this.field_K = new Sprite(var11Lifetime2, var12Lifetime2);
                 jq.a(7161, this.field_K);
@@ -305,7 +305,7 @@ final class bn extends ar {
           var6Lifetime2 = this.field_Q.c(-106);
           var53 = (de) ((Object) this.field_w);
           var9Lifetime3 = this.field_r + param0;
-          var10Lifetime3 = var53.b(param1, (UiWidget) (this), 0) + (var53.b(-3, (UiWidget) (this)).a(true) >> 1);
+          var10Lifetime3 = var53.b(param1, (UiWidget) (this), 0) + (var53.b(-3, (UiWidget) (this)).height(true) >> 1);
           if (var6Lifetime2 != GameInstructions.field_f &&
             kt.field_a != var6Lifetime2) {
             if (qr.field_e == var6Lifetime2) {
@@ -333,7 +333,7 @@ final class bn extends ar {
             } else {
               if (this.field_K.field_u >= var12Lifetime3) {
                 jq.a(7161, this.field_K);
-                SoftwareRasterizer.b();
+                SoftwareRasterizer.clear();
               } else {
                 this.field_K = new Sprite(var11Lifetime3, var12Lifetime3);
                 jq.a(7161, this.field_K);
@@ -351,7 +351,7 @@ final class bn extends ar {
           var6Lifetime3 = this.field_Q.c(-106);
           var55 = (de) ((Object) this.field_w);
           var9Lifetime4 = this.field_r + param0;
-          var10Lifetime4 = var55.b(param1, (UiWidget) (this), 0) + (var55.b(-3, (UiWidget) (this)).a(true) >> 1);
+          var10Lifetime4 = var55.b(param1, (UiWidget) (this), 0) + (var55.b(-3, (UiWidget) (this)).height(true) >> 1);
           if (var6Lifetime3 != GameInstructions.field_f &&
             kt.field_a != var6Lifetime3) {
             if (qr.field_e == var6Lifetime3) {
@@ -373,7 +373,7 @@ final class bn extends ar {
             var11Lifetime4 <= this.field_K.field_x) {
             if (this.field_K.field_u >= var12Lifetime4) {
               jq.a(7161, this.field_K);
-              SoftwareRasterizer.b();
+              SoftwareRasterizer.clear();
             } else {
               this.field_K = new Sprite(var11Lifetime4, var12Lifetime4);
               jq.a(7161, this.field_K);
@@ -393,7 +393,7 @@ final class bn extends ar {
         var6Lifetime4 = this.field_Q.c(-106);
         var54 = (de) ((Object) this.field_w);
         var9Lifetime5 = this.field_r + param0;
-        var10Lifetime5 = var54.b(param1, (UiWidget) (this), 0) + (var54.b(-3, (UiWidget) (this)).a(true) >> 1);
+        var10Lifetime5 = var54.b(param1, (UiWidget) (this), 0) + (var54.b(-3, (UiWidget) (this)).height(true) >> 1);
         if (var6Lifetime4 == GameInstructions.field_f) {
           var38 = fw.field_m[0];
           var11Lifetime5 = var38.field_z << 1;
@@ -402,7 +402,7 @@ final class bn extends ar {
             var11Lifetime5 <= this.field_K.field_x) {
             if (this.field_K.field_u >= var12Lifetime5) {
               jq.a(7161, this.field_K);
-              SoftwareRasterizer.b();
+              SoftwareRasterizer.clear();
             } else {
               this.field_K = new Sprite(var11Lifetime5, var12Lifetime5);
               jq.a(7161, this.field_K);
@@ -437,7 +437,7 @@ final class bn extends ar {
           var11Lifetime6 <= this.field_K.field_x) {
           if (this.field_K.field_u >= var12Lifetime6) {
             jq.a(7161, this.field_K);
-            SoftwareRasterizer.b();
+            SoftwareRasterizer.clear();
           } else {
             this.field_K = new Sprite(var11Lifetime6, var12Lifetime6);
             jq.a(7161, this.field_K);
@@ -454,7 +454,7 @@ final class bn extends ar {
 
     final static void f(int param0) {
         nv.field_a = nv.field_a + 1;
-        jt.field_u = 150;
+        CacheReferenceNode.field_u = 150;
         int var1 = nv.field_a / param0;
         if (un.field_a.length - 1 != var1) {
           if (un.field_a.length <= var1) {
@@ -463,8 +463,8 @@ final class bn extends ar {
           pd.field_p = un.field_a[var1];
           return;
         }
-        ta.field_b = ta.field_b + 1;
-        if (ps.field_e[12] == ta.field_b) {
+        FontMetrics.field_b = FontMetrics.field_b + 1;
+        if (ps.field_e[12] == FontMetrics.field_b) {
           th.b(24753, 243, 12);
           if (un.field_a.length <= var1) {
             var1 = un.field_a.length - 1;

@@ -9,17 +9,17 @@ final class PlayerDrone extends Drone {
         super(0, 0, xQ8, yQ8);
     }
 
-    final static dj a(int param0, PcmSample param1) {
+    final static PlayingSound playSample(int param0, PcmSample param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
-        dj stackIn_1_0 = null;
+        PlayingSound stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = -12 % ((-31 - param0) / 63);
-          stackIn_1_0 = qq.a(18416, PcmSampleStream.a(param1, 100, 96));
+          stackIn_1_0 = qq.addPlayingSound(18416, PcmSampleStream.createAtRatePercent(param1, 100, 96));
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -38,7 +38,7 @@ final class PlayerDrone extends Drone {
     public static void releaseStatics(byte param0) {
         if (param0 > -63) {
           PcmSample var2 = (PcmSample) null;
-          PlayerDrone.a(44, (PcmSample) null);
+          PlayerDrone.playSample(44, (PcmSample) null);
           reconnectStatusFrames = null;
           return;
         }

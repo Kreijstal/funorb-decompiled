@@ -178,9 +178,9 @@ class ff extends en {
           rc.field_l[9] = eb.field_b.b(0, "accelerator_pad_4");
           rc.field_l[11] = eb.field_b.b(0, "attractor_pulse_loop");
           rc.field_l[12] = eb.field_b.b(0, "repeller_pulse_loop");
-          ImageProducerRasterBuffer.field_n[0] = PcmSampleStream.a(rc.field_l[4], 100, 96);
-          ImageProducerRasterBuffer.field_n[1] = PcmSampleStream.a(rc.field_l[11], 100, 96);
-          ImageProducerRasterBuffer.field_n[2] = PcmSampleStream.a(rc.field_l[12], 100, 96);
+          ImageProducerRasterBuffer.field_n[0] = PcmSampleStream.createAtRatePercent(rc.field_l[4], 100, 96);
+          ImageProducerRasterBuffer.field_n[1] = PcmSampleStream.createAtRatePercent(rc.field_l[11], 100, 96);
+          ImageProducerRasterBuffer.field_n[2] = PcmSampleStream.createAtRatePercent(rc.field_l[12], 100, 96);
           rc.field_l[17] = eb.field_b.b(0, "menu_mouseover");
           rc.field_l[18] = eb.field_b.b(0, "multiplier_upgrade");
           rc.field_l[19] = eb.field_b.b(0, "npc_bomb_charge_and_explode1");

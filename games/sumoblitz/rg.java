@@ -40,7 +40,7 @@ abstract class rg extends WidgetContainer {
         if (null == uw.field_a) {
           uw.field_a = new Sprite(this.field_q, this.field_p);
           jq.a(7161, uw.field_a);
-          SoftwareRasterizer.b();
+          SoftwareRasterizer.clear();
           this.b(113, 0, 0);
           if (param2 < -35) {
             super.a(-param0 - this.field_r, -param1 - this.field_v, (byte) -114, param3);
@@ -57,7 +57,7 @@ abstract class rg extends WidgetContainer {
         if (uw.field_a.field_x < this.field_q) {
           uw.field_a = new Sprite(this.field_q, this.field_p);
           jq.a(7161, uw.field_a);
-          SoftwareRasterizer.b();
+          SoftwareRasterizer.clear();
           this.b(113, 0, 0);
           if (param2 < -35) {
             super.a(-param0 - this.field_r, -param1 - this.field_v, (byte) -114, param3);
@@ -74,7 +74,7 @@ abstract class rg extends WidgetContainer {
         if (this.field_p > uw.field_a.field_u) {
           uw.field_a = new Sprite(this.field_q, this.field_p);
           jq.a(7161, uw.field_a);
-          SoftwareRasterizer.b();
+          SoftwareRasterizer.clear();
           this.b(113, 0, 0);
           if (param2 < -35) {
             super.a(-param0 - this.field_r, -param1 - this.field_v, (byte) -114, param3);
@@ -89,7 +89,7 @@ abstract class rg extends WidgetContainer {
           return;
         }
         jq.a(7161, uw.field_a);
-        SoftwareRasterizer.b();
+        SoftwareRasterizer.clear();
         this.b(113, 0, 0);
         if (param2 < -35) {
           super.a(-param0 - this.field_r, -param1 - this.field_v, (byte) -114, param3);

@@ -3,7 +3,7 @@
  */
 final class ph {
     static SpriteData[] field_a;
-    static GameplaySession field_b;
+    static GameplaySession gameplaySession;
     static String youHaveUnreadMessagesText;
     private DualLinkNode field_e;
     private ro field_g;
@@ -66,7 +66,7 @@ final class ph {
         if (param0 != 1882049616) {
           return;
         }
-        field_b = null;
+        gameplaySession = null;
         usernameText = null;
         youHaveUnreadMessagesText = null;
         field_a = null;
@@ -303,7 +303,7 @@ final class ph {
                   var29 = var29 + var31;
                   var18 = var18 + var20;
                   var26 = var26 + var28;
-                  var36Lifetime2 = var36Lifetime2 + SoftwareRasterizer.field_b;
+                  var36Lifetime2 = var36Lifetime2 + SoftwareRasterizer.width;
                   var30 = var30 + var32;
                   var17_int = var17_int + var19;
                   var25 = var25 + var27;
@@ -392,7 +392,7 @@ final class ph {
               var25 = var25 + var27;
               var30 = var30 + var32;
               var21 = var21 + var23;
-              var35Lifetime1 = var35Lifetime1 + SoftwareRasterizer.field_b;
+              var35Lifetime1 = var35Lifetime1 + SoftwareRasterizer.width;
               var22 = var22 + var24;
               var18 = var18 + var20;
               var17_int = var17_int + var19;

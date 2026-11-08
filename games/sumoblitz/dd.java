@@ -123,7 +123,7 @@ final class dd extends hf implements ai {
           }
           stackIn_31_1 = !(this.field_Z.length <= 0);
           this.field_R = stackIn_31_1;
-          stackIn_34_0 = (!jt.a((byte) -90)) ? 0 : 1;
+          stackIn_34_0 = (!CacheReferenceNode.a((byte) -90)) ? 0 : 1;
           var2_intLifetime1 = stackIn_34_0;
           stackIn_37_0 = (var2_intLifetime1 == 0) ? 2 : 3;
           var3Lifetime1 = stackIn_37_0;
@@ -167,7 +167,7 @@ final class dd extends hf implements ai {
           if (var2_intLifetime1 != 0) {
             this.field_Y = this.a(kn.field_f, (qm) (this), hq.resizableText, (byte) 122);
           }
-          this.field_T = this.a(sm.field_c, (qm) (this), dj.fullScreenText, (byte) 110);
+          this.field_T = this.a(sm.field_c, (qm) (this), PlayingSound.fullScreenText, (byte) 110);
           if (var2_intLifetime1 != 0) {
             stackIn_57_1 = 3;
           } else {

@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lu extends aa {
-    f field_f;
+final class LegacyOpenGlSpriteMask extends SpriteMask {
+    f texture;
     static ToolkitSprite field_e;
     static float[] field_g;
 
@@ -14,7 +14,7 @@ final class lu extends aa {
         }
     }
 
-    private lu() throws Throwable {
+    private LegacyOpenGlSpriteMask() throws Throwable {
         throw new Error();
     }
 

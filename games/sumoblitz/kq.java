@@ -182,7 +182,7 @@ final class kq extends hf implements ai {
     }
 
     final static void l(int param0) {
-        ag.b(param0 ^ param0);
+        TextLayout.b(param0 ^ param0);
     }
 
     final static int a(int param0, mi param1) {
@@ -204,7 +204,7 @@ final class kq extends hf implements ai {
             stackIn_10_0 = 34167;
             return stackIn_10_0;
           }
-          if (ta.field_a == param1) {
+          if (FontMetrics.field_a == param1) {
             stackIn_4_0 = 34168;
             return stackIn_4_0;
           }

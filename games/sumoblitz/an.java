@@ -8,7 +8,7 @@ final class an {
     boolean field_b;
     String[] field_h;
     String field_g;
-    static int field_a;
+    static int waveIndex;
     static ck field_d;
 
     final static float a(float param0, float param1, int param2, float param3, int param4) {
@@ -24,7 +24,7 @@ final class an {
     public static void releaseStatics(byte param0) {
         field_f = null;
         if (param0 < 4) {
-          field_a = 11;
+          waveIndex = 11;
           field_d = null;
           return;
         }

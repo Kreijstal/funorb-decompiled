@@ -3,7 +3,7 @@
  */
 final class qr {
     static IntrusiveDeque field_c;
-    static ta field_a;
+    static FontMetrics field_a;
     static gf field_e;
     static int[] field_d;
     static MusicCrossfadeStream field_b;

@@ -6,38 +6,38 @@ final class o {
     static String field_a;
 
     final static void a(int param0) {
-        wm.field_f[oh.field_e] = true;
-        jk.field_a = iw.field_b;
+        wm.field_f[oh.levelIndex] = true;
+        jk.field_a = iw.elapsedTicks;
         if (rf.a(false)) {
-          qn.field_d[oh.field_e] = true;
+          qn.field_d[oh.levelIndex] = true;
         }
-        if (nd.field_F == 3) {
-          up.field_g[oh.field_e] = true;
+        if (nd.livesRemaining == 3) {
+          up.field_g[oh.levelIndex] = true;
         }
         of.a((byte) -104);
         ju.g(123);
         if (!og.a(-77)) {
-          av.a(-7753, true, 10);
+          StrongCacheReference.switchMenuScreen(-7753, true, 10);
         }
-        if (!(oh.field_e <= bl.field_e)) {
-          bl.field_e = oh.field_e;
+        if (!(oh.levelIndex <= bl.field_e)) {
+          bl.field_e = oh.levelIndex;
         }
-        int var1 = iw.field_b;
-        if (!(var1 >= ql.field_z[oh.field_e])) {
-          ql.field_z[oh.field_e] = var1;
+        int var1 = iw.elapsedTicks;
+        if (!(var1 >= ql.field_z[oh.levelIndex])) {
+          ql.field_z[oh.levelIndex] = var1;
         }
-        if (go.field_j[oh.field_e] < in.field_z) {
-          go.field_j[oh.field_e] = in.field_z;
+        if (go.field_j[oh.levelIndex] < in.score) {
+          go.field_j[oh.levelIndex] = in.score;
         }
         if (param0 != 0) {
           field_a = (String) null;
         }
-        if (oh.field_e == 12 &&
+        if (oh.levelIndex == 12 &&
           !bn.field_P) {
           th.b(24753, 245, 10);
         }
         nq.field_i = nq.field_i + 1;
-        il.field_a = in.field_z;
+        il.field_a = in.score;
     }
 
     public static void b(int param0) {

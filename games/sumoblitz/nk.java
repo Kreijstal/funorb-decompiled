@@ -28,10 +28,10 @@ final class nk {
         if (field_d.length < field_c) {
           field_d = new int[hn.a(false, field_c)];
         }
-        int var4 = param1 * SoftwareRasterizer.field_b + param0;
+        int var4 = param1 * SoftwareRasterizer.width + param0;
         for (var5 = 0; var5 < field_c; var5++) {
           field_d[var5] = var4;
-          var4 = var4 + SoftwareRasterizer.field_b;
+          var4 = var4 + SoftwareRasterizer.width;
         }
     }
 
@@ -41,7 +41,7 @@ final class nk {
     }
 
     final static void b() {
-        nk.a(SoftwareRasterizer.field_k, SoftwareRasterizer.field_i, SoftwareRasterizer.field_j, SoftwareRasterizer.field_e);
+        nk.a(SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipTop, SoftwareRasterizer.clipRight, SoftwareRasterizer.clipBottom);
     }
 
     static {

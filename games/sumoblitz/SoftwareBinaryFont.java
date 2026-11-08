@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class at extends da {
+final class SoftwareBinaryFont extends ToolkitFont {
     private int[] field_c;
     private SoftwareGraphicsToolkit field_e;
     private int[] field_h;
@@ -9,12 +9,12 @@ final class at extends da {
     private int[] field_g;
     private byte[][] field_d;
 
-    final void a(char param0, int param1, int param2, int param3, boolean param4, aa param5, int param6, int param7) {
+    final void drawMaskedGlyph(char param0, int param1, int param2, int param3, boolean param4, SpriteMask param5, int param6, int param7) {
         int var16 = 0;
         int var16Lifetime1;
         int var16Lifetime2;
         if (param5 == null) {
-          this.fa(param0, param1, param2, param3, param4);
+          this.drawGlyph(param0, param1, param2, param3, param4);
           return;
         }
         param1 = param1 + this.field_f[param0];
@@ -89,7 +89,7 @@ final class at extends da {
         }
     }
 
-    final void fa(char param0, int param1, int param2, int param3, boolean param4) {
+    final void drawGlyph(char param0, int param1, int param2, int param3, boolean param4) {
         int var13 = 0;
         int var13Lifetime1;
         int var13Lifetime2;
@@ -140,7 +140,7 @@ final class at extends da {
         }
     }
 
-    at(SoftwareGraphicsToolkit param0, ta param1, SpriteData[] param2, int[] param3, int[] param4) {
+    SoftwareBinaryFont(SoftwareGraphicsToolkit param0, FontMetrics param1, SpriteData[] param2, int[] param3, int[] param4) {
         super(param0, param1);
         int var6 = 0;
         this.field_e = param0;
@@ -198,12 +198,12 @@ final class at extends da {
         }
     }
 
-    private final void a(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, aa param12, int param13, int param14) {
+    private final void a(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, SpriteMask param12, int param13, int param14) {
         int var21 = 0;
         int var26 = 0;
         int stackIn_5_0 = 0;
         Object var16;
-        dm var16_ref;
+        ScanlineSpriteMask var16_ref;
         int[] var17;
         int[] var18;
         int var19;
@@ -216,11 +216,11 @@ final class at extends da {
         int[] var28;
         int var25Lifetime1;
         var16 = null;
-        var16_ref = (dm) (param12);
-        var28 = var16_ref.field_f;
+        var16_ref = (ScanlineSpriteMask) (param12);
+        var28 = var16_ref.rowStarts;
         var27 = var28;
         var17 = var27;
-        var18 = var16_ref.field_g;
+        var18 = var16_ref.rowWidths;
         var19 = param10;
         if (param14 > var19) {
           var19 = param14;
@@ -281,13 +281,13 @@ final class at extends da {
         }
     }
 
-    private final void b(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, aa param12, int param13, int param14) {
+    private final void b(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, SpriteMask param12, int param13, int param14) {
         int var24 = 0;
         int var29 = 0;
         int incrementValue$1 = 0;
         int stackIn_5_0 = 0;
         Object var16;
-        dm var16_ref;
+        ScanlineSpriteMask var16_ref;
         int[] var17;
         int[] var18;
         int var19;
@@ -305,11 +305,11 @@ final class at extends da {
         int[] var33;
         int var28Lifetime1;
         var16 = null;
-        var16_ref = (dm) (param12);
-        var33 = var16_ref.field_f;
+        var16_ref = (ScanlineSpriteMask) (param12);
+        var33 = var16_ref.rowStarts;
         var32 = var33;
         var17 = var32;
-        var18 = var16_ref.field_g;
+        var18 = var16_ref.rowWidths;
         var19 = param9 - this.field_e.field_v;
         var20 = param10;
         if (param14 > var20) {

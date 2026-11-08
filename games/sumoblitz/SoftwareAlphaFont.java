@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class it extends da {
+final class SoftwareAlphaFont extends ToolkitFont {
     private byte[][] field_d;
     private int[] field_e;
     private int[] field_g;
@@ -9,14 +9,14 @@ final class it extends da {
     private int[] field_h;
     private int[] field_f;
 
-    private final void a(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, aa param12, int param13, int param14) {
+    private final void a(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, SpriteMask param12, int param13, int param14) {
         int var22 = 0;
         int var27 = 0;
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int stackIn_5_0 = 0;
         Object var16;
-        dm var16_ref;
+        ScanlineSpriteMask var16_ref;
         int[] var17;
         int[] var18;
         int var19;
@@ -33,11 +33,11 @@ final class it extends da {
         int[] var32;
         int var26Lifetime1;
         var16 = null;
-        var16_ref = (dm) (param12);
-        var32 = var16_ref.field_f;
+        var16_ref = (ScanlineSpriteMask) (param12);
+        var32 = var16_ref.rowStarts;
         var31 = var32;
         var17 = var31;
-        var18 = var16_ref.field_g;
+        var18 = var16_ref.rowWidths;
         var19 = param9 - this.field_c.field_v;
         var20 = param10;
         if (param14 > var20) {
@@ -107,7 +107,7 @@ final class it extends da {
         }
     }
 
-    final void fa(char param0, int param1, int param2, int param3, boolean param4) {
+    final void drawGlyph(char param0, int param1, int param2, int param3, boolean param4) {
         int var13 = 0;
         int var13Lifetime1;
         int var13Lifetime2;
@@ -152,12 +152,12 @@ final class it extends da {
         this.a(this.field_d[param0], this.field_c.field_o, param3, var12, var9, var6, var7, var10, var11);
     }
 
-    final void a(char param0, int param1, int param2, int param3, boolean param4, aa param5, int param6, int param7) {
+    final void drawMaskedGlyph(char param0, int param1, int param2, int param3, boolean param4, SpriteMask param5, int param6, int param7) {
         int var16 = 0;
         int var16Lifetime1;
         int var16Lifetime2;
         if (param5 == null) {
-          this.fa(param0, param1, param2, param3, param4);
+          this.drawGlyph(param0, param1, param2, param3, param4);
           return;
         }
         param1 = param1 + this.field_f[param0];
@@ -230,7 +230,7 @@ final class it extends da {
         }
     }
 
-    it(SoftwareGraphicsToolkit param0, ta param1, SpriteData[] param2, int[] param3, int[] param4) {
+    SoftwareAlphaFont(SoftwareGraphicsToolkit param0, FontMetrics param1, SpriteData[] param2, int[] param3, int[] param4) {
         super(param0, param1);
         int var6 = 0;
         byte[] array$0 = null;

@@ -1,30 +1,30 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ag {
+abstract class TextLayout {
     static byte[][] field_d;
     static float[] field_c;
-    tk[] field_a;
+    TextLayoutLine[] lines;
     static int field_b;
 
-    final int b(int param0, int param1) {
+    final int lineForCharacter(int param0, int param1) {
         int var3 = 0;
-        tk var4 = null;
+        TextLayoutLine var4 = null;
         int var5 = Sumoblitz.field_L ? 1 : 0;
-        for (var3 = 0; var3 < this.field_a.length; var3++) {
-          var4 = this.field_a[var3];
-          if (param0 < var4.field_b.length) {
+        for (var3 = 0; var3 < this.lines.length; var3++) {
+          var4 = this.lines[var3];
+          if (param0 < var4.caretX.length) {
             return var3;
           }
-          param0 = param0 - (var4.field_b.length - 1);
+          param0 = param0 - (var4.caretX.length - 1);
         }
         if (param1 != -17500) {
-          ag.releaseStatics(-10);
+          TextLayout.releaseStatics(-10);
         }
-        return this.field_a.length;
+        return this.lines.length;
     }
 
-    final int a(int param0, int param1, String param2, int param3) {
+    final int justificationSpaceQ8(int param0, int param1, String param2, int param3) {
         int var8 = 0;
         int var5_int = 0;
         int var6 = 0;
@@ -42,7 +42,7 @@ abstract class ag {
         try {
           var5_int = 0;
           if (param0 != -292767736) {
-            ag.b(3);
+            TextLayout.b(3);
           }
           var6 = 0;
           var7 = param2.length();
@@ -81,37 +81,37 @@ abstract class ag {
         }
     }
 
-    final int a(int param0, int param1, int param2) {
+    final int characterAtPoint(int param0, int param1, int param2) {
         int var5 = 0;
         int var4;
-        tk var6;
+        TextLayoutLine var6;
         int var7;
         int var8;
         var8 = Sumoblitz.field_L ? 1 : 0;
-        if (this.field_a != null &&
-          this.field_a.length != 0 &&
-          param0 >= this.field_a[0].field_d) {
-          if (this.field_a[this.field_a.length - 1].field_a < param0) {
+        if (this.lines != null &&
+          this.lines.length != 0 &&
+          param0 >= this.lines[0].top) {
+          if (this.lines[this.lines.length - 1].bottom < param0) {
             return -1;
           }
-          if (this.field_a.length == 1) {
-            return this.field_a[0].a(param1, (byte) 117);
+          if (this.lines.length == 1) {
+            return this.lines[0].nearestCaret(param1, (byte) 117);
           }
           var4 = 0;
           if (param2 < 97) {
             return -92;
           }
-          for (var5 = 0; this.field_a.length > var5; var5++) {
-            var6 = this.field_a[var5];
-            if (var6.field_d <= param0 &&
-              param0 <= var6.field_a) {
-              var7 = var6.a(param1, (byte) -126);
+          for (var5 = 0; this.lines.length > var5; var5++) {
+            var6 = this.lines[var5];
+            if (var6.top <= param0 &&
+              param0 <= var6.bottom) {
+              var7 = var6.nearestCaret(param1, (byte) -126);
               if (var7 != -1) {
                 return var4 + var7;
               }
               return -1;
             }
-            var4 = var4 + (var6.field_b.length - 1);
+            var4 = var4 + (var6.caretX.length - 1);
           }
           return -1;
         }
@@ -138,26 +138,26 @@ abstract class ag {
     final static void a(int param0, int param1) {
         wt.a(param1, (byte) 105);
         if (param0 != 0) {
-          ag.releaseStatics(-74);
+          TextLayout.releaseStatics(-74);
         }
     }
 
-    final int a(byte param0, int param1) {
+    final int caretX(byte param0, int param1) {
         int var4 = 0;
-        tk var5 = null;
+        TextLayoutLine var5 = null;
         int var6 = Sumoblitz.field_L ? 1 : 0;
-        tk[] var8 = this.field_a;
-        tk[] var3 = var8;
+        TextLayoutLine[] var8 = this.lines;
+        TextLayoutLine[] var3 = var8;
         if (param0 <= 104) {
           String var7 = (String) null;
-          this.a(-96, -70, (String) null, 123);
+          this.justificationSpaceQ8(-96, -70, (String) null, 123);
         }
         for (var4 = 0; var8.length > var4; var4++) {
           var5 = var8[var4];
-          if (!(var5.field_b.length <= param1)) {
-            return var5.field_b[param1];
+          if (!(var5.caretX.length <= param1)) {
+            return var5.caretX[param1];
           }
-          param1 = param1 - (-1 + var5.field_b.length);
+          param1 = param1 - (-1 + var5.caretX.length);
         }
         return 0;
     }
@@ -178,14 +178,14 @@ abstract class ag {
         }
     }
 
-    final int a(boolean param0) {
+    final int height(boolean param0) {
         int stackIn_6_0 = 0;
         if (!param0) {
           return 73;
         }
-        if (this.field_a != null &&
-          this.field_a.length > 0) {
-          stackIn_6_0 = this.field_a[-1 + this.field_a.length].field_a - this.field_a[0].field_d;
+        if (this.lines != null &&
+          this.lines.length > 0) {
+          stackIn_6_0 = this.lines[-1 + this.lines.length].bottom - this.lines[0].top;
         } else {
           stackIn_6_0 = 0;
         }
@@ -198,26 +198,26 @@ abstract class ag {
         field_d = (byte[][]) null;
     }
 
-    final int a(byte param0) {
+    final int maximumRightEdge(byte param0) {
         int var4 = 0;
         int var2;
-        tk[] var3;
-        tk var5;
+        TextLayoutLine[] var3;
+        TextLayoutLine var5;
         int var7;
         String var8;
         int var6;
         var7 = Sumoblitz.field_L ? 1 : 0;
         if (param0 > -6) {
           var8 = (String) null;
-          this.a(84, 121, (String) null, -67);
+          this.justificationSpaceQ8(84, 121, (String) null, -67);
         }
         var2 = -1;
-        if (null != this.field_a) {
-          var3 = this.field_a;
+        if (null != this.lines) {
+          var3 = this.lines;
           for (var4 = 0; var3.length > var4; var4++) {
             var5 = var3[var4];
             if (var5 != null) {
-              var6 = var5.a(1);
+              var6 = var5.rightEdge(1);
               if (var6 > var2) {
                 var2 = var6;
               }

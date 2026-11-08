@@ -3,7 +3,7 @@
  */
 final class iu implements mh {
     private int field_d;
-    private vn field_c;
+    private LegacyBitmapFont field_c;
     static int field_e;
     private int field_h;
     private int field_b;
@@ -33,7 +33,7 @@ final class iu implements mh {
             stackIn_4_0 = null;
           }
           var13 = (fu) (stackIn_4_0);
-          SoftwareRasterizer.d(param0.field_r + param4, param0.field_v + param1, param0.field_q, param0.field_p, this.field_h);
+          SoftwareRasterizer.fillRectangle(param0.field_r + param4, param0.field_v + param1, param0.field_q, param0.field_p, this.field_h);
           if (var13 != null) {
           }
           if (param2 != 5592405) {
@@ -43,9 +43,9 @@ final class iu implements mh {
           var7 = param0.field_q - var13.field_I * 2;
           var8 = param4 - (-param0.field_r - var13.field_I);
           var9 = param1 + param0.field_v + var13.field_J;
-          SoftwareRasterizer.e(var8, var9, var7 + var8, var9, this.field_g);
+          SoftwareRasterizer.drawLine(var8, var9, var7 + var8, var9, this.field_g);
           for (var10 = -1 + var13.g(0); var10 >= 0; var10--) {
-            SoftwareRasterizer.b(var8 + var13.a(var10, param2 - 5616599) * var7 / var13.h(-1), var9, this.field_d, this.field_a);
+            SoftwareRasterizer.fillCircle(var8 + var13.a(var10, param2 - 5616599) * var7 / var13.h(-1), var9, this.field_d, this.field_a);
           }
           if (this.field_c == null) {
             return;
@@ -98,7 +98,7 @@ final class iu implements mh {
         }
     }
 
-    iu(vn param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    iu(LegacyBitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         try {
           this.field_g = param3;
           this.field_b = param1;

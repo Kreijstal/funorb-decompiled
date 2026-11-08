@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ta {
+final class FontMetrics {
     int field_d;
     private byte[] field_g;
     int field_h;
@@ -699,7 +699,7 @@ final class ta {
         }
     }
 
-    ta(byte[] param0) {
+    FontMetrics(byte[] param0) {
         byte[] array$0 = null;
         byte[] array$1 = null;
         int stackIn_8_0 = 0;

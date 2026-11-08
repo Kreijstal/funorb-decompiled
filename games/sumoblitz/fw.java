@@ -9,28 +9,28 @@ final class fw extends IntrusiveNode {
     pm field_l;
 
     final static cp c(boolean param0) {
-        if (jt.field_v == null) {
-          jt.field_v = new cp();
-          jt.field_v.a(kw.field_b, (byte) -118);
-          jt.field_v.field_q = 5;
-          jt.field_v.field_l = 6;
-          jt.field_v.field_v = jm.field_a;
-          jt.field_v.field_m = 4;
-          jt.field_v.field_d = 2763306;
-          jt.field_v.field_u = 14;
-          jt.field_v.field_r = 7697781;
-          jt.field_v.field_s = 0;
+        if (CacheReferenceNode.field_v == null) {
+          CacheReferenceNode.field_v = new cp();
+          CacheReferenceNode.field_v.a(kw.field_b, (byte) -118);
+          CacheReferenceNode.field_v.field_q = 5;
+          CacheReferenceNode.field_v.field_l = 6;
+          CacheReferenceNode.field_v.field_v = jm.field_a;
+          CacheReferenceNode.field_v.field_m = 4;
+          CacheReferenceNode.field_v.field_d = 2763306;
+          CacheReferenceNode.field_v.field_u = 14;
+          CacheReferenceNode.field_v.field_r = 7697781;
+          CacheReferenceNode.field_v.field_s = 0;
           if (param0) {
             fw.a(-20);
-            return jt.field_v;
+            return CacheReferenceNode.field_v;
           }
-          return jt.field_v;
+          return CacheReferenceNode.field_v;
         }
         if (!param0) {
-          return jt.field_v;
+          return CacheReferenceNode.field_v;
         }
         fw.a(-20);
-        return jt.field_v;
+        return CacheReferenceNode.field_v;
     }
 
     final static boolean a(byte param0, Class param1, String param2) {

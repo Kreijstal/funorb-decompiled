@@ -143,14 +143,14 @@ class ar extends wp {
         int stackIn_13_0 = 0;
         int var2;
         de var3;
-        ag var4;
+        TextLayout var4;
         int var5;
         String var6;
         int var7;
         int var8;
         int var9;
         Object var10;
-        tk var12;
+        TextLayoutLine var12;
         int var13;
         int var14;
         s var15;
@@ -173,28 +173,28 @@ class ar extends wp {
           var6 = this.field_m.substring(9 + var5, var7);
           var7Lifetime1 = Integer.parseInt(var6);
           var2 = this.field_m.indexOf("</hotspot>", var5);
-          var8 = var4.b(var5, -17500);
-          var9 = var4.b(var2, param0 - 17509);
+          var8 = var4.lineForCharacter(var5, -17500);
+          var9 = var4.lineForCharacter(var2, param0 - 17509);
           var10 = null;
           for (var11 = var8; var11 <= var9; var11++) {
-            var12 = var4.field_a[var11];
+            var12 = var4.lines[var11];
             if (~var11 == ~var8) {
-              stackIn_8_0 = var4.a((byte) 125, var5);
+              stackIn_8_0 = var4.caretX((byte) 125, var5);
             } else {
-              stackIn_8_0 = var12.field_b[0];
+              stackIn_8_0 = var12.caretX[0];
             }
             var13 = stackIn_8_0;
             if (var9 != var11) {
               if (var12 == null) {
                 stackIn_13_0 = 0;
               } else {
-                stackIn_13_0 = var12.field_b[-1 + var12.field_b.length];
+                stackIn_13_0 = var12.caretX[-1 + var12.caretX.length];
               }
             } else {
-              stackIn_13_0 = var4.a((byte) 126, var2);
+              stackIn_13_0 = var4.caretX((byte) 126, var2);
             }
             var14 = stackIn_13_0;
-            var15 = new s(var7Lifetime1, var13, var12.field_d, -var13 + var14, Math.max(var3.a(14763), -var12.field_d + var12.field_a));
+            var15 = new s(var7Lifetime1, var13, var12.top, -var13 + var14, Math.max(var3.a(14763), -var12.top + var12.bottom));
             if (var10 != null) {
               ((s) (var10)).field_r = var15;
             }

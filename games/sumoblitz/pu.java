@@ -61,8 +61,8 @@ final class pu extends ToolkitSprite {
         this.field_d.U(0);
         this.field_d.n(2);
         this.field_d.l(0);
-        this.field_d.a(ta.field_a, 1, 0);
-        this.field_d.a(ta.field_a, 1, true);
+        this.field_d.a(FontMetrics.field_a, 1, 0);
+        this.field_d.a(FontMetrics.field_a, 1, true);
     }
 
     final int c() {
@@ -135,8 +135,8 @@ final class pu extends ToolkitSprite {
         this.field_d.U(0);
         this.field_d.n(2);
         this.field_d.l(0);
-        this.field_d.a(ta.field_a, 1, 0);
-        this.field_d.a(ta.field_a, 1, true);
+        this.field_d.a(FontMetrics.field_a, 1, 0);
+        this.field_d.a(FontMetrics.field_a, 1, true);
     }
 
     final void a(int param0, int param1, int param2, int param3) {
@@ -263,8 +263,8 @@ final class pu extends ToolkitSprite {
         this.field_d.U(0);
         this.field_d.n(2);
         this.field_d.l(0);
-        this.field_d.a(ta.field_a, 1, 0);
-        this.field_d.a(ta.field_a, 1, true);
+        this.field_d.a(FontMetrics.field_a, 1, 0);
+        this.field_d.a(FontMetrics.field_a, 1, true);
     }
 
     final int b() {

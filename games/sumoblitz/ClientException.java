@@ -94,8 +94,8 @@ final class ClientException extends RuntimeException {
         if (var1 == null) {
           throw new IllegalStateException();
         }
-        SoftwareRasterizer.a(var1.field_v, var1.field_t, var1.field_m);
-        SoftwareRasterizer.d(var1.field_s, var1.field_r, var1.field_u, var1.field_p);
+        SoftwareRasterizer.setRaster(var1.field_v, var1.field_t, var1.field_m);
+        SoftwareRasterizer.setClip(var1.field_s, var1.field_r, var1.field_u, var1.field_p);
         var1.field_v = null;
         ko.field_m.addLast((IntrusiveNode) (var1), (byte) 39);
         int var2 = -37 / ((param0 - 1) / 38);

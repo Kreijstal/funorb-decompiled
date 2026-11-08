@@ -4,7 +4,7 @@
 final class in extends ie {
     static ti field_D;
     static String field_C;
-    static int field_z;
+    static int score;
     static String nextText;
     int field_A;
 
@@ -94,7 +94,7 @@ final class in extends ie {
     }
 
     static {
-        field_z = 0;
+        score = 0;
         nextText = "Next";
     }
 }

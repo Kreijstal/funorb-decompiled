@@ -1,27 +1,27 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jd extends ag {
+final class CachedTextLayout extends TextLayout {
     private int field_e;
-    private boolean field_i;
+    private boolean singleLine;
     static SpriteData[] field_h;
     private int field_j;
     private int field_k;
-    private vn field_l;
+    private LegacyBitmapFont font;
     private int field_g;
     private int field_m;
-    private String field_f;
+    private String text;
 
-    final void a(byte param0, int param1, vn param2, int param3, String param4, int param5, int param6, int param7) {
-        tk stackIn_34_0;
-        tk stackIn_34_1;
+    final void layoutWrapped(byte param0, int param1, LegacyBitmapFont param2, int param3, String param4, int param5, int param6, int param7) {
+        TextLayoutLine stackIn_34_0;
+        TextLayoutLine stackIn_34_1;
         int stackIn_34_2;
         int stackIn_34_3;
-        tk stackIn_35_0 = null;
-        tk stackIn_35_1 = null;
+        TextLayoutLine stackIn_35_0 = null;
+        TextLayoutLine stackIn_35_1 = null;
         int stackIn_35_4 = 0;
         int stackIn_39_0 = 0;
-        tk stackIn_39_1 = null;
+        TextLayoutLine stackIn_39_1 = null;
         int stackIn_40_2 = 0;
         RuntimeException stackIn_45_0 = null;
         StringBuilder stackIn_45_1 = null;
@@ -35,7 +35,7 @@ final class jd extends ag {
         int var12 = 0;
         int var13 = 0;
         String var14 = null;
-        tk var15 = null;
+        TextLayoutLine var15 = null;
         int var16 = 0;
         String[] var17 = null;
         String[] var18 = null;
@@ -46,27 +46,27 @@ final class jd extends ag {
             param6 = param2.field_F;
           }
           if (param4 == null) {
-            this.field_a = null;
+            this.lines = null;
             return;
           }
-          if (param2 == this.field_l &&
-            !this.field_i &&
+          if (param2 == this.font &&
+            !this.singleLine &&
             this.field_e == param1 &&
             this.field_m == param5 &&
             param6 == this.field_j &&
             param3 == this.field_g &&
             this.field_k == param7 &&
-            this.field_f != null &&
-            this.field_f.equals(param4)) {
+            this.text != null &&
+            this.text.equals(param4)) {
             return;
           }
-          this.field_f = param4;
+          this.text = param4;
           this.field_j = param6;
-          this.field_i = false;
+          this.singleLine = false;
           this.field_g = param3;
           this.field_e = param1;
           this.field_k = param7;
-          this.field_l = param2;
+          this.font = param2;
           this.field_m = param5;
           var17 = new String[param2.b(param4, param7) + 1];
           var18 = var17;
@@ -94,7 +94,7 @@ final class jd extends ag {
               var11 = (this.field_g - var10 * this.field_j >> 1) + param2.field_s;
             }
           }
-          this.field_a = new tk[var10];
+          this.lines = new TextLayoutLine[var10];
           for (var13Lifetime1 = 0; var10 > var13Lifetime1; var13Lifetime1++) {
             var14 = var17[var13Lifetime1];
             stackIn_34_0 = null;
@@ -110,21 +110,21 @@ final class jd extends ag {
               stackIn_35_1 = null;
               stackIn_35_4 = 0;
             }
-            var15 = new tk(stackIn_34_2, stackIn_34_3, stackIn_35_4);
-            var15.field_b[0] = 0;
+            var15 = new TextLayoutLine(stackIn_34_2, stackIn_34_3, stackIn_35_4);
+            var15.caretX[0] = 0;
             if (var14 != null) {
-              var15.field_b[var14.length()] = param2.a(var14);
+              var15.caretX[var14.length()] = param2.a(var14);
               stackIn_39_0 = 90;
               stackIn_39_1 = var15;
               if (3 != param1) {
                 stackIn_40_2 = 0;
               } else {
-                stackIn_40_2 = this.a(-292767736, param7, var14, param2.a(var14));
+                stackIn_40_2 = this.justificationSpaceQ8(-292767736, param7, var14, param2.a(var14));
               }
               kw.$cfr$intArgs$a$62b8cf4125f9(stackIn_39_0, stackIn_39_1, stackIn_40_2, param2, var14);
             }
             var11 = var11 + param6;
-            this.field_a[var13Lifetime1] = var15;
+            this.lines[var13Lifetime1] = var15;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -147,28 +147,28 @@ final class jd extends ag {
         }
     }
 
-    final void a(int param0, vn param1, int param2, String param3, int param4) {
-        tk var8 = null;
+    final void layoutCenteredLine(int param0, LegacyBitmapFont param1, int param2, String param3, int param4) {
+        TextLayoutLine var8 = null;
         int var7 = 0;
         if (param3 == null) {
-          this.field_a = null;
+          this.lines = null;
           return;
         }
-        if (this.field_l == param1 && this.field_i && this.field_e == 1 && null != this.field_f &&
-          this.field_f.equals(param3)) {
+        if (this.font == param1 && this.singleLine && this.field_e == 1 && null != this.text &&
+          this.text.equals(param3)) {
           return;
         }
         try {
           if (param2 < 73) {
             this.field_k = -104;
           }
-          this.field_i = true;
-          this.field_l = param1;
+          this.singleLine = true;
+          this.font = param1;
           this.field_e = 1;
-          var8 = this.a(param0, -106, param1, param3);
+          var8 = this.createSingleLine(param0, -106, param1, param3);
           var7 = param1.a(param3);
-          var8.field_b[0] = -(var7 >> 1) + param4;
-          var8.field_b[param3.length()] = param4 + (var7 >> 1);
+          var8.caretX[0] = -(var7 >> 1) + param4;
+          var8.caretX[param3.length()] = param4 + (var7 >> 1);
           kw.$cfr$intArgs$a$62b8cf4125f9(90, var8, 0, param1, param3);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "jd.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
@@ -189,7 +189,7 @@ final class jd extends ag {
           param2 = gf.a('_', param2, false, "");
           var3 = ji.a(param0, (byte) 117);
           if (param1 <= 29) {
-            jd.e(58);
+            CachedTextLayout.e(58);
           }
           stackIn_7_0 = (param2.indexOf(param0) != -1) || (-1 != param2.indexOf(var3));
           return stackIn_7_0;
@@ -216,7 +216,7 @@ final class jd extends ag {
     public static void d(int param0) {
         if (param0 != 0) {
           String var2 = (String) null;
-          jd.a((lj) null, -59, (lj) null, 54, false, 96, (String) null);
+          CachedTextLayout.a((lj) null, -59, (lj) null, 54, false, 96, (String) null);
         }
         field_h = null;
     }
@@ -224,7 +224,7 @@ final class jd extends ag {
     final static String e(int param0) {
         if (param0 <= 71) {
           String var2 = (String) null;
-          jd.a((lj) null, 38, (lj) null, -17, false, -119, (String) null);
+          CachedTextLayout.a((lj) null, 38, (lj) null, -17, false, -119, (String) null);
         }
         if (up.field_d) {
           return null;
@@ -238,7 +238,7 @@ final class jd extends ag {
         return null;
     }
 
-    final static void a(MusicTrack param0, byte param1, boolean param2) {
+    final static void playMusic(MusicTrack param0, byte param1, boolean param2) {
         try {
           if (param1 < 54) {
             field_h = (SpriteData[]) null;
@@ -249,11 +249,11 @@ final class jd extends ag {
         }
     }
 
-    private final tk a(int param0, int param1, vn param2, String param3) {
-        tk var5 = null;
+    private final TextLayoutLine createSingleLine(int param0, int param1, LegacyBitmapFont param2, String param3) {
+        TextLayoutLine var5 = null;
         RuntimeException var5_ref = null;
-        tk var6 = null;
-        tk stackIn_3_0 = null;
+        TextLayoutLine var6 = null;
+        TextLayoutLine stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -261,11 +261,11 @@ final class jd extends ag {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6 = new tk(-param2.field_s + param0, param2.field_I + param0, param3.length());
+          var6 = new TextLayoutLine(-param2.field_s + param0, param2.field_I + param0, param3.length());
           var5 = var6;
-          this.field_a = new tk[]{var6};
+          this.lines = new TextLayoutLine[]{var6};
           if (param1 != -106) {
-            this.field_l = (vn) null;
+            this.font = (LegacyBitmapFont) null;
           }
           stackIn_3_0 = var5;
           return stackIn_3_0;
@@ -330,7 +330,7 @@ final class jd extends ag {
         try {
           if (param5 <= 20) {
             var14 = (MusicTrack) null;
-            jd.a((MusicTrack) null, (byte) 63, false);
+            CachedTextLayout.playMusic((MusicTrack) null, (byte) 63, false);
           }
           var15 = param0.a(true);
           var8 = param2.a(true);
@@ -498,62 +498,62 @@ final class jd extends ag {
         }
     }
 
-    public jd() {
+    public CachedTextLayout() {
     }
 
-    final void a(vn param0, int param1, int param2, String param3, byte param4) {
+    final void a(LegacyBitmapFont param0, int param1, int param2, String param3, byte param4) {
         if (param3 == null) {
-          this.field_a = null;
+          this.lines = null;
           return;
         }
-        if (this.field_l == param0 &&
-          this.field_i &&
+        if (this.font == param0 &&
+          this.singleLine &&
           this.field_e == 2 &&
-          this.field_f != null &&
-          this.field_f.equals(param3)) {
+          this.text != null &&
+          this.text.equals(param3)) {
           return;
         }
         this.field_e = 2;
-        this.field_l = param0;
-        this.field_i = true;
-        this.field_f = param3;
-        tk var7 = this.a(param1, param4 ^ -39, param0, param3);
-        tk var8 = var7;
+        this.font = param0;
+        this.singleLine = true;
+        this.text = param3;
+        TextLayoutLine var7 = this.createSingleLine(param1, param4 ^ -39, param0, param3);
+        TextLayoutLine var8 = var7;
         if (param4 != 79) {
           return;
         }
         try {
-          var8.field_b[0] = param2 - param0.a(param3);
-          var7.field_b[param3.length()] = param2;
+          var8.caretX[0] = param2 - param0.a(param3);
+          var7.caretX[param3.length()] = param2;
           kw.$cfr$intArgs$a$62b8cf4125f9(90, var8, 0, param0, param3);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "jd.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
-    final void a(vn param0, int param1, String param2, int param3, byte param4) {
-        tk var7 = null;
-        tk var8 = null;
+    final void a(LegacyBitmapFont param0, int param1, String param2, int param3, byte param4) {
+        TextLayoutLine var7 = null;
+        TextLayoutLine var8 = null;
         if (param2 == null) {
-          this.field_a = null;
+          this.lines = null;
           return;
         }
         if (param4 != -36) {
-          this.field_f = (String) null;
+          this.text = (String) null;
         }
-        if (param0 == this.field_l && this.field_i && this.field_e == 0 && this.field_f != null &&
-          this.field_f.equals(param2)) {
+        if (param0 == this.font && this.singleLine && this.field_e == 0 && this.text != null &&
+          this.text.equals(param2)) {
           return;
         }
         try {
           this.field_e = 0;
-          this.field_l = param0;
-          this.field_i = true;
-          this.field_f = param2;
-          var7 = this.a(param1, -106, param0, param2);
+          this.font = param0;
+          this.singleLine = true;
+          this.text = param2;
+          var7 = this.createSingleLine(param1, -106, param0, param2);
           var8 = var7;
-          var7.field_b[0] = param3;
-          var8.field_b[param2.length()] = param3 + param0.a(param2);
+          var7.caretX[0] = param3;
+          var8.caretX[param2.length()] = param3 + param0.a(param2);
           kw.$cfr$intArgs$a$62b8cf4125f9(90, var8, 0, param0, param2);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "jd.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');

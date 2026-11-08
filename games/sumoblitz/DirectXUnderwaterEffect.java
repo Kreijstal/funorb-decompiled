@@ -39,7 +39,7 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
         this.field_b.a((byte) -83, lf.field_e, ua.field_n);
         this.field_b.a(mm.field_h, 0, param1 ^ param1);
         this.field_b.a((byte) 89, 2, true, false, jq.field_a);
-        this.field_b.a(ta.field_a, 0, true);
+        this.field_b.a(FontMetrics.field_a, 0, true);
         this.field_b.g(0, param1 - 20311);
         this.d(-86);
     }
@@ -183,8 +183,8 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
         if (!this.field_e) {
           this.field_b.a(this.field_b.field_D, param1 ^ 18939);
           this.field_b.h(param1 - 18771, 1);
-          this.field_b.a(ta.field_a, 0, param1 ^ 18834);
-          this.field_b.a(ta.field_a, 0, true);
+          this.field_b.a(FontMetrics.field_a, 0, param1 ^ 18834);
+          this.field_b.a(FontMetrics.field_a, 0, true);
           this.field_e = true;
           return;
         }

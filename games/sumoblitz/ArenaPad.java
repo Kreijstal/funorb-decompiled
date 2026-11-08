@@ -194,7 +194,7 @@ final class ArenaPad extends IntrusiveNode {
                 if (!(Math.abs(-drone.facingRadians + var15) < 1.5707963267948966)) {
                   ro.a(drone, (byte) 113);
                   this.triggerCooldownTicks = 200;
-                  if (12 == oh.field_e) {
+                  if (12 == oh.levelIndex) {
                     bn.field_P = true;
                   }
                   ts.a(this.xQ8, this.effects, -16240, 25, 65535, this.yQ8);
@@ -220,7 +220,7 @@ final class ArenaPad extends IntrusiveNode {
               }
               if (decompiledFrameRemainder7) {
                 ro.a(drone, (byte) 113);
-                if (oh.field_e == 12) {
+                if (oh.levelIndex == 12) {
                   bn.field_P = true;
                 }
                 this.triggerCooldownTicks = 200;
@@ -257,7 +257,7 @@ final class ArenaPad extends IntrusiveNode {
             (decompiledFrameRemainder6) &&
             (decompiledFrameRemainder5) &&
             (decompiledFrameRemainder4)) {
-            var5 = is.field_c;
+            var5 = is.arenaPads;
             var7 = 0;
             var6 = new IntrusiveDequeCursor(var5);
             var8 = (ArenaPad) (var6.first((byte) -80));

@@ -11,7 +11,7 @@ final class jv {
 
     final static void a(boolean param0, byte param1, boolean param2) {
         if (!param0) {
-          SoftwareRasterizer.b();
+          SoftwareRasterizer.clear();
           if (param1 != -71) {
             field_b = 40;
             BurstParticle.a(param0, true);
@@ -20,7 +20,7 @@ final class jv {
           BurstParticle.a(param0, true);
           return;
         }
-        SoftwareRasterizer.b(0, 0, SoftwareRasterizer.field_b, SoftwareRasterizer.field_c, 0, 192);
+        SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, 192);
         if (param1 != -71) {
           field_b = 40;
           BurstParticle.a(param0, true);

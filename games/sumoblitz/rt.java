@@ -3,7 +3,7 @@
  */
 final class rt extends ie {
     private int field_A;
-    private vn field_D;
+    private LegacyBitmapFont field_D;
     private int field_z;
     private int field_F;
     private boolean field_H;
@@ -27,7 +27,7 @@ final class rt extends ie {
         int var6Lifetime1;
         int var7Lifetime1;
         if (param2 > -35) {
-          this.field_D = (vn) null;
+          this.field_D = (LegacyBitmapFont) null;
           var6 = param1 + this.field_v;
           super.a(param0, param1, (byte) -40, param3);
           if (0 == param3) {
@@ -46,7 +46,7 @@ final class rt extends ie {
         }
     }
 
-    rt(int param0, int param1, int param2, int param3, UiWidget param4, boolean param5, int param6, int param7, vn param8, int param9, String param10) {
+    rt(int param0, int param1, int param2, int param3, UiWidget param4, boolean param5, int param6, int param7, LegacyBitmapFont param8, int param9, String param10) {
         super(param0, param1, param2, param3, (mh) null, (qm) null);
         boolean stackIn_4_1 = false;
         int stackIn_10_0 = 0;

@@ -5,7 +5,7 @@ final class bv implements mh {
     static String friendsCanBeAddedText;
     private int field_a;
     private int field_d;
-    private vn field_c;
+    private LegacyBitmapFont field_c;
 
     public static void b(int param0) {
         if (param0 < 38) {
@@ -85,7 +85,7 @@ final class bv implements mh {
         }
     }
 
-    bv(vn param0, int param1, int param2) {
+    bv(LegacyBitmapFont param0, int param1, int param2) {
         try {
           this.field_a = param2;
           this.field_c = param0;

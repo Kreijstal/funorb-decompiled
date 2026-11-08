@@ -39,12 +39,12 @@ final class fv extends rw {
 
     final static void e(byte param0) {
         int var1_int = 0;
-        dj var2 = null;
+        PlayingSound var2 = null;
         int var3 = 0;
         boolean stackIn_18_0 = false;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
-        dj var2Lifetime1;
+        PlayingSound var2Lifetime1;
         var3 = Sumoblitz.field_L ? 1 : 0;
         try {
           wd.field_f.b();
@@ -53,20 +53,20 @@ final class fv extends rw {
           vf.field_b = vf.field_b - 1;
           if (vf.field_b == 0) {
             vf.field_b = 200;
-            var2 = (dj) (jf.field_c.first(107));
+            var2 = (PlayingSound) (jf.field_c.first(107));
             while (var2 != null) {
-              if (!var2.field_k.isLinked(false)) {
+              if (!var2.lifetimeNode.isLinked(false)) {
                 var2.unlink(false);
               }
-              var2 = (dj) (jf.field_c.next((byte) 18));
+              var2 = (PlayingSound) (jf.field_c.next((byte) 18));
             }
             if (s.field_u != null) {
-              var2Lifetime1 = (dj) (s.field_u.first(-105));
+              var2Lifetime1 = (PlayingSound) (s.field_u.first(-105));
               while (var2Lifetime1 != null) {
-                if (!var2Lifetime1.field_k.isLinked(false)) {
+                if (!var2Lifetime1.lifetimeNode.isLinked(false)) {
                   var2Lifetime1.unlink(false);
                 }
-                var2Lifetime1 = (dj) (s.field_u.next((byte) 18));
+                var2Lifetime1 = (PlayingSound) (s.field_u.next((byte) 18));
               }
             }
           }

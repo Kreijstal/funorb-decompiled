@@ -59,10 +59,10 @@ final class kd {
         }
         jq.a(7161, sn.field_a);
         nk.b();
-        SoftwareRasterizer.b();
+        SoftwareRasterizer.clear();
         ok.b(param2 + 0);
         if (256 > var5) {
-          SoftwareRasterizer.b(0, 0, SoftwareRasterizer.field_b, SoftwareRasterizer.field_c, 0, 256 - var5);
+          SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, 256 - var5);
         }
         ClientException.a((byte) -69);
         if (MusicPatch.field_u >= 150) {
@@ -127,7 +127,7 @@ final class kd {
           }
           return;
         }
-        sn.field_a.b(var3, var4);
+        sn.field_a.drawHalfSize(var3, var4);
         var6Lifetime1 = MusicPatch.field_u - 125;
         if (var6Lifetime1 <= 0) {
           var6Lifetime1 = MusicPatch.field_u - 140;

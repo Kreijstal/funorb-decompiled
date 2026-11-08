@@ -215,7 +215,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements Nat
         this.field_m = true;
     }
 
-    final da a(ta param0, SpriteData[] param1, boolean param2) {
+    final ToolkitFont a(FontMetrics param0, SpriteData[] param1, boolean param2) {
         int var7 = 0;
         int[] var4;
         int[] var5;
@@ -232,12 +232,12 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements Nat
         }
         if (!param2) {
           if (var6 == 0) {
-            return (da) ((Object) new n(this, this.field_i, param0, param1, (ToolkitSprite[]) null));
+            return (ToolkitFont) ((Object) new NativePaletteFont(this, this.field_i, param0, param1, (ToolkitSprite[]) null));
           }
           throw new IllegalArgumentException("Cannot specify alpha with non-mono font unless someone writes it");
         }
         if (var6 == 0) {
-          return (da) ((Object) new h(this, this.field_i, param0, param1, (ToolkitSprite[]) null));
+          return (ToolkitFont) ((Object) new NativeMonochromeFont(this, this.field_i, param0, param1, (ToolkitSprite[]) null));
         }
         throw new IllegalArgumentException("Cannot specify alpha with non-mono font unless someone writes it");
     }

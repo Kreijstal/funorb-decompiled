@@ -8,7 +8,7 @@ class UiWidget extends IntrusiveNode {
     boolean field_k;
     int field_q;
     int field_n;
-    ag field_u;
+    TextLayout field_u;
     int field_v;
     int field_p;
     String field_m;
@@ -34,7 +34,7 @@ class UiWidget extends IntrusiveNode {
           }
           break;
         }
-        var5 = jd.e(102);
+        var5 = CachedTextLayout.e(102);
         if (var5 != null) {
           ks.field_x.a(za.field_k, 13421772, hq.field_b, var5);
         }

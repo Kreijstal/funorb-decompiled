@@ -16,7 +16,7 @@ interface de {
 
     public abstract int a(int param0, UiWidget param1);
 
-    public abstract ag b(int param0, UiWidget param1);
+    public abstract TextLayout b(int param0, UiWidget param1);
 
     public abstract int a(int param0);
 

@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class po {
-    static boolean field_a;
+    static boolean pauseMenuOpen;
 
     static {
-        field_a = false;
+        pauseMenuOpen = false;
     }
 }

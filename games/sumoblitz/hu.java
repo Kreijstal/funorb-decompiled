@@ -4,7 +4,7 @@
 final class hu {
     static int field_b;
     private long field_d;
-    static ta field_c;
+    static FontMetrics field_c;
     static String[] field_a;
     private int field_e;
     static int[] field_f;
@@ -12,14 +12,14 @@ final class hu {
     final static void a(String param0, float param1, boolean param2, int param3) {
         try {
           if (param3 < 75) {
-            field_c = (ta) null;
+            field_c = (FontMetrics) null;
           }
           if (null == he.field_n) {
             he.field_n = new m(rf.field_a, t.field_s);
             rf.field_a.a((byte) 100, he.field_n);
           }
           he.field_n.a(false, param1, param0, param2);
-          SoftwareRasterizer.b();
+          SoftwareRasterizer.clear();
           BurstParticle.a(true, true);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "hu.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
@@ -55,7 +55,7 @@ final class hu {
           var6 = (CharSequence) ((Object) param0);
           var2 = uk.a(-1, var6);
           if (param1 <= 8) {
-            field_c = (ta) null;
+            field_c = (FontMetrics) null;
           }
           if (var2 == null) {
             return null;

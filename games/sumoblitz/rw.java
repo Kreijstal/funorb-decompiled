@@ -44,16 +44,16 @@ abstract class rw extends DualLinkNode {
           if (param0 != -90) {
             field_r = (SpriteData[]) null;
           }
-          SoftwareRasterizer.b();
+          SoftwareRasterizer.clear();
           MusicPatch.field_u = 0;
           ok.b(256);
-          var2 = var1.b();
+          var2 = var1.copy();
           for (var3 = 0; var3 < 15; var3++) {
-            var2.c(-2, -2, 16777215);
-            SoftwareRasterizer.c(4, 4, 0, 0, 540, 140);
+            var2.drawSilhouette(-2, -2, 16777215);
+            SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 540, 140);
           }
           eh.field_b.d();
-          var1.b(0, 0);
+          var1.drawHalfSize(0, 0);
           ClientException.a((byte) 76);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "rw.B(" + param0 + ')');

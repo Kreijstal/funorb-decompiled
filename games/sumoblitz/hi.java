@@ -30,30 +30,30 @@ final class hi implements vc {
         int var16Lifetime5;
         if (param12 >= param8) {
           if (param12 < param2) {
-            ph.a(param15, param11, param7, param1, SoftwareRasterizer.field_a, param4, param13, param9, param14, param5, param0, param10, param2, param8, (byte) -48, param6, param12);
+            ph.a(param15, param11, param7, param1, SoftwareRasterizer.pixels, param4, param13, param9, param14, param5, param0, param10, param2, param8, (byte) -48, param6, param12);
             var16 = 70 % ((68 - param3) / 35);
             return;
           }
           if (param2 > param8) {
-            ph.a(param15, param4, param14, param9, SoftwareRasterizer.field_a, param11, param13, param1, param7, param0, param5, param10, param12, param8, (byte) -48, param6, param2);
+            ph.a(param15, param4, param14, param9, SoftwareRasterizer.pixels, param11, param13, param1, param7, param0, param5, param10, param12, param8, (byte) -48, param6, param2);
             var16Lifetime4 = 70 % ((68 - param3) / 35);
             return;
           }
-          ph.a(param0, param4, param14, param9, SoftwareRasterizer.field_a, param13, param11, param6, param10, param15, param5, param7, param12, param2, (byte) -48, param1, param8);
+          ph.a(param0, param4, param14, param9, SoftwareRasterizer.pixels, param13, param11, param6, param10, param15, param5, param7, param12, param2, (byte) -48, param1, param8);
           var16Lifetime5 = 70 % ((68 - param3) / 35);
           return;
         }
         if (param2 > param8) {
-          ph.a(param5, param11, param7, param1, SoftwareRasterizer.field_a, param13, param4, param6, param10, param15, param0, param14, param2, param12, (byte) -48, param9, param8);
+          ph.a(param5, param11, param7, param1, SoftwareRasterizer.pixels, param13, param4, param6, param10, param15, param0, param14, param2, param12, (byte) -48, param9, param8);
           var16Lifetime1 = 70 % ((68 - param3) / 35);
           return;
         }
         if (param12 >= param2) {
-          ph.a(param0, param13, param10, param6, SoftwareRasterizer.field_a, param4, param11, param9, param14, param5, param15, param7, param8, param2, (byte) -48, param1, param12);
+          ph.a(param0, param13, param10, param6, SoftwareRasterizer.pixels, param4, param11, param9, param14, param5, param15, param7, param8, param2, (byte) -48, param1, param12);
           var16Lifetime2 = 70 % ((68 - param3) / 35);
           return;
         }
-        ph.a(param5, param13, param10, param6, SoftwareRasterizer.field_a, param11, param4, param1, param7, param0, param15, param14, param8, param12, (byte) -48, param9, param2);
+        ph.a(param5, param13, param10, param6, SoftwareRasterizer.pixels, param11, param4, param1, param7, param0, param15, param14, param8, param12, (byte) -48, param9, param2);
         var16Lifetime3 = 70 % ((68 - param3) / 35);
     }
 

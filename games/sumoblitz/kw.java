@@ -2,19 +2,19 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class kw {
-    static vn field_b;
+    static LegacyBitmapFont field_b;
     static qr field_c;
     static ToolkitSprite field_a;
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         GameApplet.j(125);
-        SoftwareRasterizer.e(param3, param1, param4, param0);
+        SoftwareRasterizer.intersectClip(param3, param1, param4, param0);
         if (param2 != 1) {
-          field_b = (vn) null;
+          field_b = (LegacyBitmapFont) null;
         }
     }
 
-    final static void a(byte param0, tk param1, int param2, vn param3, String param4) {
+    final static void a(byte param0, TextLayoutLine param1, int param2, LegacyBitmapFont param3, String param4) {
         int var7 = 0;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
@@ -32,22 +32,22 @@ final class kw {
         var9 = Sumoblitz.field_L ? 1 : 0;
         try {
           if (param0 != 90) {
-            field_b = (vn) null;
+            field_b = (LegacyBitmapFont) null;
           }
           var5_int = 0;
           var6 = -1;
           for (var7 = 1; param4.length() > var7; var7++) {
             var8 = param4.charAt(var7);
             if (60 == var8) {
-              var6 = (var5_int >> 8) + param1.field_b[0] + param3.a(param4.substring(0, var7));
+              var6 = (var5_int >> 8) + param1.caretX[0] + param3.a(param4.substring(0, var7));
             }
             if (var6 == -1) {
               if (var8 == 32) {
                 var5_int = var5_int + param2;
               }
-              param1.field_b[var7] = param1.field_b[0] + ((var5_int >> 8) + (param3.a(param4.substring(0, 1 + var7)) - param3.a((char) var8)));
+              param1.caretX[var7] = param1.caretX[0] + ((var5_int >> 8) + (param3.a(param4.substring(0, 1 + var7)) - param3.a((char) var8)));
             } else {
-              param1.field_b[var7] = var6;
+              param1.caretX[var7] = var6;
             }
             if (62 == var8) {
               var6 = -1;
@@ -83,7 +83,7 @@ final class kw {
     public static void releaseStatics(byte param0) {
         field_c = null;
         if (param0 >= -86) {
-          field_b = (vn) null;
+          field_b = (LegacyBitmapFont) null;
           field_b = null;
           field_a = null;
           return;
@@ -96,7 +96,7 @@ final class kw {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$62b8cf4125f9(int param0, tk param1, int param2, vn param3, String param4) {
+    final static void $cfr$intArgs$a$62b8cf4125f9(int param0, TextLayoutLine param1, int param2, LegacyBitmapFont param3, String param4) {
         int var7 = 0;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
@@ -114,22 +114,22 @@ final class kw {
         var9 = Sumoblitz.field_L ? 1 : 0;
         try {
           if (param0 != 90) {
-            field_b = (vn) null;
+            field_b = (LegacyBitmapFont) null;
           }
           var5_int = 0;
           var6 = -1;
           for (var7 = 1; param4.length() > var7; var7++) {
             var8 = param4.charAt(var7);
             if (60 == var8) {
-              var6 = (var5_int >> 8) + param1.field_b[0] + param3.a(param4.substring(0, var7));
+              var6 = (var5_int >> 8) + param1.caretX[0] + param3.a(param4.substring(0, var7));
             }
             if (var6 == -1) {
               if (var8 == 32) {
                 var5_int = var5_int + param2;
               }
-              param1.field_b[var7] = param1.field_b[0] + ((var5_int >> 8) + (param3.a(param4.substring(0, 1 + var7)) - param3.a((char) var8)));
+              param1.caretX[var7] = param1.caretX[0] + ((var5_int >> 8) + (param3.a(param4.substring(0, 1 + var7)) - param3.a((char) var8)));
             } else {
-              param1.field_b[var7] = var6;
+              param1.caretX[var7] = var6;
             }
             if (62 == var8) {
               var6 = -1;

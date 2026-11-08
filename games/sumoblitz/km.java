@@ -66,23 +66,23 @@ final class km extends IntrusiveNode {
         int var1_intLifetime1;
         var7 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (null != aa.field_a) {
-            for (var1_int = 0; var1_int < db.field_l; var1_int++) {
+          if (null != SpriteMask.drones) {
+            for (var1_int = 0; var1_int < db.droneSlotLimit; var1_int++) {
               boolean decompiledFrameRemainder0 = true;
               boolean decompiledFrameCompleted0 = true;
-              var2 = aa.field_a[var1_int];
+              var2 = SpriteMask.drones[var1_int];
               var3 = var2;
               var6 = var3;
               var3Lifetime1 = var2;
               if (var2 != null &&
                 var1_int != 0 &&
                 !var2.isAsleep(-1)) {
-                var3Lifetime2 = aa.field_a[0];
+                var3Lifetime2 = SpriteMask.drones[0];
                 var6Lifetime1 = var3Lifetime2;
                 var6Lifetime1Lifetime1 = var3Lifetime2;
                 if (var3Lifetime2 != null) {
                   var4 = var2.field_a;
-                  if (gt.field_bb) {
+                  if (gt.arcadeMode) {
                     if (wn.a(var3Lifetime2.yQ8, var4, -114, var2.xQ8, var3Lifetime2.xQ8, var2.yQ8) &&
                       var3Lifetime2.isAliveAndSpawned((byte) -63) &&
                       var3Lifetime2.hasVelocityOnBothAxes((byte) 125)) {
@@ -90,8 +90,8 @@ final class km extends IntrusiveNode {
                       decompiledFrameRemainder0 = false;
                     }
                     else {
-                      for (var5 = 0; db.field_l > var5; var5++) {
-                        var6Lifetime1Lifetime2 = aa.field_a[var5];
+                      for (var5 = 0; db.droneSlotLimit > var5; var5++) {
+                        var6Lifetime1Lifetime2 = SpriteMask.drones[var5];
                         if (~var5 != ~var1_int &&
                           var6Lifetime1Lifetime2 != null &&
                           var6Lifetime1Lifetime2.hasVelocityOnBothAxes((byte) 125) &&

@@ -136,7 +136,7 @@ final class ad extends za {
     final static ne e(int param0) {
         ne var1 = null;
         if (param0 == 12768) {
-          var1 = new ne(vf.field_d, li.field_u, er.field_h[0], av.field_C[0], vg.field_k[0], we.field_B[0], ag.field_d[0], LegacyOpenGlEffectManager.field_l);
+          var1 = new ne(vf.field_d, li.field_u, er.field_h[0], StrongCacheReference.field_C[0], vg.field_k[0], we.field_B[0], TextLayout.field_d[0], LegacyOpenGlEffectManager.field_l);
           PowerupPickup.releaseSpriteDecoderArrays((byte) -20);
           return var1;
         }
@@ -165,7 +165,7 @@ final class ad extends za {
             return;
           }
           if (!lf.b(-251)) {
-            SoftwareRasterizer.b();
+            SoftwareRasterizer.clear();
             kd.a(240, 320, 256);
             IterableNodeHashTable.a(0, 0, param1, (byte) 125);
             return;

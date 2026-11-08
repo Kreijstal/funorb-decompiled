@@ -34,7 +34,7 @@ final class qk extends hf implements ai {
           } else {
             ib.d(1);
             this.e(true);
-            this.field_E.a((byte) 121, new u(this.field_E, ta.field_f));
+            this.field_E.a((byte) 121, new u(this.field_E, FontMetrics.field_f));
           }
           if (this.field_D &&
             null == CompactMeshGeometry.field_o) {

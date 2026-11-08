@@ -4,7 +4,7 @@
 abstract class LegacyOpenGlEffect {
     static String[] monthShortNames;
     static int[] field_d;
-    static da field_c;
+    static ToolkitFont field_c;
     LegacyOpenGlGraphicsToolkit field_b;
 
     final static an a(boolean param0, int param1) {
@@ -41,7 +41,7 @@ abstract class LegacyOpenGlEffect {
         field_d = null;
         monthShortNames = null;
         if (param0 != -76) {
-          field_c = (da) null;
+          field_c = (ToolkitFont) null;
         }
     }
 

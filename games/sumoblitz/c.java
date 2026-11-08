@@ -48,7 +48,7 @@ final class c extends nl {
         field_u = null;
     }
 
-    private c(vn param0, int param1) {
+    private c(LegacyBitmapFont param0, int param1) {
         super(param0, param1);
     }
 
@@ -91,7 +91,7 @@ final class c extends nl {
                 hw.field_b[~var2] = false;
               }
             }
-            ua.field_a = jt.field_s;
+            ua.field_a = CacheReferenceNode.field_s;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

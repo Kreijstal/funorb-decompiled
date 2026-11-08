@@ -145,7 +145,7 @@ abstract class uw {
                   }
                   var9_int = var9_int + var11;
                   var10 = var10 + var12;
-                  var16Lifetime2 = var16Lifetime2 + SoftwareRasterizer.field_b;
+                  var16Lifetime2 = var16Lifetime2 + SoftwareRasterizer.width;
                 }
               }
               var16Lifetime3 = -param8 + param3;
@@ -195,7 +195,7 @@ abstract class uw {
                 return;
               }
               var10 = var10 + var12;
-              var15Lifetime1 = var15Lifetime1 + SoftwareRasterizer.field_b;
+              var15Lifetime1 = var15Lifetime1 + SoftwareRasterizer.width;
               var9_int = var9_int + var11;
             }
             return;

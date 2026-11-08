@@ -72,8 +72,8 @@ final class qc {
         try {
           var10 = LimitedRandomAccessFile.droneDescriptions[2 * this.field_d + 1];
           var3_int -= 10;
-          gt.field_db.a(480, -11753985, 0, 20 + var5, -(var5 / 2) + var3_int, (int[]) null, (ToolkitSprite[]) null, var4 + 8, -1, 0, SocketConnector.field_a.field_i, param1 - 4312, var10, (aa) null, 1, 0);
-          LegacyOpenGlEffect.field_c.a(480, -1, 0, var5 + 20, -(var5 / 2) + var3_int, (int[]) null, (ToolkitSprite[]) null, var4 + 8, -1, 0, SocketConnector.field_a.field_i, -8787, var10, (aa) null, 1, 0);
+          gt.field_db.a(480, -11753985, 0, 20 + var5, -(var5 / 2) + var3_int, (int[]) null, (ToolkitSprite[]) null, var4 + 8, -1, 0, SocketConnector.field_a.field_i, param1 - 4312, var10, (SpriteMask) null, 1, 0);
+          LegacyOpenGlEffect.field_c.a(480, -1, 0, var5 + 20, -(var5 / 2) + var3_int, (int[]) null, (ToolkitSprite[]) null, var4 + 8, -1, 0, SocketConnector.field_a.field_i, -8787, var10, (SpriteMask) null, 1, 0);
           if (this.field_b <= 0) {
             var4 += 115;
             var3_int -= 50;
@@ -116,17 +116,17 @@ final class qc {
     final static void a(boolean param0, boolean param1, boolean param2) {
         int var4 = Sumoblitz.field_L ? 1 : 0;
         if (!vs.b((byte) 9)) {
-          ph.field_b.e(-113);
+          ph.gameplaySession.submitSessionStatistics(-113);
           mr.field_f = null;
         } else {
           if (0 < IntrusiveNodeHashTable.field_c) {
-            av.a(-7753, param0, 6);
+            StrongCacheReference.switchMenuScreen(-7753, param0, 6);
           } else {
-            av.a(-7753, param0, 0);
+            StrongCacheReference.switchMenuScreen(-7753, param0, 0);
           }
         }
         EnemyDrone.o(250);
-        ph.field_b.a(66);
+        ph.gameplaySession.resetSession(66);
         if (!param1) {
           return;
         }

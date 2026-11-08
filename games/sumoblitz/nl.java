@@ -16,7 +16,7 @@ class nl extends gm {
         field_p = null;
     }
 
-    nl(vn param0, int param1) {
+    nl(LegacyBitmapFont param0, int param1) {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_s, -1, 2147483647, false);
     }
 

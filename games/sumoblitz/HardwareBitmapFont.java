@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mv extends da {
+final class HardwareBitmapFont extends ToolkitFont {
     private pv field_d;
     private ru field_e;
     private boolean field_c;
     private HardwareGraphicsToolkit field_f;
 
-    mv(HardwareGraphicsToolkit param0, ta param1, SpriteData[] param2, boolean param3) {
+    HardwareBitmapFont(HardwareGraphicsToolkit param0, FontMetrics param1, SpriteData[] param2, boolean param3) {
         super(param0, param1);
         int incrementValue$3 = 0;
         int incrementValue$0 = 0;
@@ -268,7 +268,7 @@ final class mv extends da {
         return;
     }
 
-    final void fa(char param0, int param1, int param2, int param3, boolean param4) {
+    final void drawGlyph(char param0, int param1, int param2, int param3, boolean param4) {
         ut var6;
         this.field_f.K(0);
         this.field_f.a(this.field_e, 110);
@@ -292,6 +292,6 @@ final class mv extends da {
         }
     }
 
-    final void a(char param0, int param1, int param2, int param3, boolean param4, aa param5, int param6, int param7) {
+    final void drawMaskedGlyph(char param0, int param1, int param2, int param3, boolean param4, SpriteMask param5, int param6, int param7) {
     }
 }

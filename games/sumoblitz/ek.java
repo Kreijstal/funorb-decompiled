@@ -54,8 +54,8 @@ final class ek extends ht {
         try {
           qf.field_a = qf.field_a + 1;
           if (tm.field_d == -1 &&
-            dm.field_e == -1) {
-            dm.field_e = pi.field_e;
+            ScanlineSpriteMask.field_e == -1) {
+            ScanlineSpriteMask.field_e = pi.field_e;
             tm.field_d = ko.field_p;
           }
           boolean decompiledFrameRemainder0 = true;
@@ -88,7 +88,7 @@ final class ek extends ht {
                 }
               }
             }
-            za.field_k = dm.field_e;
+            za.field_k = ScanlineSpriteMask.field_e;
             hq.field_b = tm.field_d;
             if (param0 != null) {
               up.field_d = false;
@@ -104,7 +104,7 @@ final class ek extends ht {
             qf.field_a < GameClientShell.field_s &&
             sl.field_d) {
             qf.field_a = 0;
-            za.field_k = dm.field_e;
+            za.field_k = ScanlineSpriteMask.field_e;
             hq.field_b = tm.field_d;
           }
           if (up.field_d &&
@@ -112,7 +112,7 @@ final class ek extends ht {
             qf.field_a = 0;
             up.field_d = false;
           }
-          dm.field_e = -1;
+          ScanlineSpriteMask.field_e = -1;
           tm.field_d = -1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -157,15 +157,15 @@ final class ek extends ht {
     }
 
     final static void b(boolean param0, int param1) {
-        PcmSampleStream var2 = PcmSampleStream.a(rc.field_l[param1], 100, 96);
+        PcmSampleStream var2 = PcmSampleStream.createAtRatePercent(rc.field_l[param1], 100, 96);
         if (param0) {
-          var2.c(-1);
-          qq.a(18416, var2);
+          var2.setLoopCount(-1);
+          qq.addPlayingSound(18416, var2);
           return;
         }
         ek.b(true, 27);
-        var2.c(-1);
-        qq.a(18416, var2);
+        var2.setLoopCount(-1);
+        qq.addPlayingSound(18416, var2);
     }
 
     static {

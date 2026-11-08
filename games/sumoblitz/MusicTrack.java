@@ -51,7 +51,7 @@ final class MusicTrack extends IntrusiveNode {
           var4.c(var6);
         }
         while (true) {
-          var6Lifetime1 = var4.b();
+          var6Lifetime1 = var4.nextTrack();
           var7 = var4.field_c[var6Lifetime1];
           while (true) {
             if (var4.field_c[var6Lifetime1] != var7) {

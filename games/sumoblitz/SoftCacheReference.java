@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kl extends jt {
-    private java.lang.ref.SoftReference field_B;
+final class SoftCacheReference extends CacheReferenceNode {
+    private java.lang.ref.SoftReference reference;
     static volatile int field_C;
 
-    final Object c(byte param0) {
+    final Object getValue(byte param0) {
         int var2 = 58 % ((param0 - 37) / 58);
-        return this.field_B.get();
+        return this.reference.get();
     }
 
-    final static GraphicsToolkit a(int param0, java.awt.Canvas param1, d param2, int param3, int param4) {
+    final static GraphicsToolkit createSoftwareToolkit(int param0, java.awt.Canvas param1, d param2, int param3, int param4) {
         RuntimeException var5 = null;
         GraphicsToolkit stackIn_2_0 = null;
         SoftwareGraphicsToolkit stackIn_4_0 = null;
@@ -47,16 +47,16 @@ final class kl extends jt {
         }
     }
 
-    kl(Object param0, int param1) {
+    SoftCacheReference(Object param0, int param1) {
         super(param1);
         try {
-          this.field_B = new java.lang.ref.SoftReference(param0);
+          this.reference = new java.lang.ref.SoftReference(param0);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "kl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final boolean e(int param0) {
+    final boolean isSoftReference(int param0) {
         int var2 = -79 % ((14 - param0) / 51);
         return true;
     }

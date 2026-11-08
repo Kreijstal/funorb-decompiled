@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dm extends aa {
-    int[] field_g;
-    int[] field_f;
+final class ScanlineSpriteMask extends SpriteMask {
+    int[] rowWidths;
+    int[] rowStarts;
     static int field_e;
     private static String dmText;
 
-    private dm() throws Throwable {
+    private ScanlineSpriteMask() throws Throwable {
         throw new Error();
     }
 

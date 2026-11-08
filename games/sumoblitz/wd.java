@@ -73,7 +73,7 @@ final class wd extends se {
             return false;
           }
           tg.field_a = cp.field_c[bj.field_a];
-          np.field_c = aa.field_c[bj.field_a];
+          np.field_c = SpriteMask.field_c[bj.field_a];
           bj.field_a = bj.field_a + 1 & 127;
           stackIn_7_0 = true;
         }

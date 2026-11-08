@@ -88,7 +88,7 @@ final class of extends IntrusiveNode {
     }
 
     final static void a(byte param0) {
-        po.field_a = true;
+        po.pauseMenuOpen = true;
         if (param0 > -102) {
           field_t = (int[]) null;
         }

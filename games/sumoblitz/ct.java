@@ -41,8 +41,8 @@ final class ct extends ml {
               ps.field_e[13] == bi.field_c) {
               th.b(24753, 242, 13);
             }
-            if (7 == oh.field_e &&
-              0 == an.field_a) {
+            if (7 == oh.levelIndex &&
+              0 == an.waveIndex) {
               if (param1.variant == 5) {
                 ei.field_a = ei.field_a + 1;
               } else {
@@ -103,20 +103,20 @@ final class ct extends ml {
     }
 
     final static void b(boolean param0) {
-        aa.field_a = new Drone[100];
+        SpriteMask.drones = new Drone[100];
         sm.a(72);
-        bj.field_b = new IntrusiveDeque();
-        is.field_c = new IntrusiveDeque();
+        bj.powerupPickups = new IntrusiveDeque();
+        is.arenaPads = new IntrusiveDeque();
         he.field_o = new Random();
-        db.field_l = 1;
-        in.field_z = 0;
-        nd.field_F = 1;
-        iw.field_b = 0;
-        MusicPatch.field_m = false;
+        db.droneSlotLimit = 1;
+        in.score = 0;
+        nd.livesRemaining = 1;
+        iw.elapsedTicks = 0;
+        MusicPatch.simulationPaused = false;
         if (param0) {
           ke.a(false);
           oc.field_e = 1000;
-          ag.a(0, 8);
+          TextLayout.a(0, 8);
           return;
         }
     }

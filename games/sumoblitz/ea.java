@@ -106,7 +106,7 @@ final class ea {
     final static void a(ResourceArchive param0, boolean param1, byte param2, ResourceArchive param3, ResourceArchive param4) {
         ut.field_o = DroneDebris.a(false, "");
         ut.field_o.a(113, false);
-        da.a(param4, param3, 17474, param0);
+        ToolkitFont.a(param4, param3, 17474, param0);
         if (param2 < 20) {
           return;
         }

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class jm {
-    static vn field_a;
+    static LegacyBitmapFont field_a;
     static long field_b;
     static String field_d;
     static String bestHiscoresText;

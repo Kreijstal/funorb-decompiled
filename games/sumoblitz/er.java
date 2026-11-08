@@ -26,17 +26,17 @@ final class er {
         pi.field_d = hf.a(var2, CompactMeshGeometry.field_N, (byte) -11);
         uj.field_a = hf.a(var2, MusicCrossfadeStream.field_p, (byte) -11);
         MouseWheelInput.field_b = hf.a(var2, IntrusiveNode.field_d, (byte) -11);
-        jt.field_y = hf.a(var2, rc.field_i, (byte) -11);
+        CacheReferenceNode.field_y = hf.a(var2, rc.field_i, (byte) -11);
         il.field_b = hf.a(var2, hc.field_b, (byte) -11);
         ti.field_b = hf.a(var2, oi.field_d, (byte) -11);
-        vm.field_a = DroneDebris.createToolkitSprites(tk.field_c, var2, 28513);
+        vm.field_a = DroneDebris.createToolkitSprites(TextLayoutLine.field_c, var2, 28513);
         HudMessage.field_s = DroneDebris.createToolkitSprites(jj.field_c, var2, 28513);
         SpriteState.field_B = DroneDebris.createToolkitSprites(rw.field_r, var2, 28513);
         SecondaryNodeDequeIterator.field_a = DroneDebris.createToolkitSprites(ok.field_d, var2, 28513);
         IntrusiveDeque.field_c = DroneDebris.createToolkitSprites(hh.field_a, var2, 28513);
         ok.field_j = DroneDebris.createToolkitSprites(sk.field_c, var2, 28513);
         pr.field_k = DroneDebris.createToolkitSprites(gq.field_o, var2, 28513);
-        lu.field_e = hf.a(var2, IntrusiveDequeCursor.field_e, (byte) -11);
+        LegacyOpenGlSpriteMask.field_e = hf.a(var2, IntrusiveDequeCursor.field_e, (byte) -11);
         HudMessage.field_m = hf.a(var2, ve.field_k, (byte) -11);
         bt.field_e = hf.a(var2, BufferedSocket.field_n, (byte) -11);
         ht.field_e = DroneDebris.createToolkitSprites(rl.field_l, var2, 28513);
@@ -48,7 +48,7 @@ final class er {
         if (param0) {
           field_c = (ResourceArchive) null;
           ts.field_e = DroneDebris.createToolkitSprites(ph.field_a, var2, 28513);
-          hh.field_e = DroneDebris.createToolkitSprites(jd.field_h, var2, 28513);
+          hh.field_e = DroneDebris.createToolkitSprites(CachedTextLayout.field_h, var2, 28513);
           ct.field_A = DroneDebris.createToolkitSprites(bk.field_b, var2, 28513);
           up.field_e = DroneDebris.createToolkitSprites(cd.field_c, var2, 28513);
           th.field_B = hf.a(var2, lh.field_k, (byte) -11);
@@ -65,7 +65,7 @@ final class er {
           hf.a(var2, ShaderEffect.field_c, (byte) -11);
           im.field_a = hf.a(var2, ue.field_p, (byte) -11);
           mn.field_j = hf.a(var2, pc.field_c, (byte) -11);
-          dj.field_l = hf.a(var2, no.field_c, (byte) -11);
+          PlayingSound.field_l = hf.a(var2, no.field_c, (byte) -11);
           hv.field_b = hf.a(var2, rt.field_E, (byte) -11);
           OpenGlEnvironmentWaterEffect.field_i = hf.a(var2, mn.field_c, (byte) -11);
           an.field_f = hf.a(var2, SceneryParticle.field_C, (byte) -11);
@@ -91,13 +91,13 @@ final class er {
           OpenGlUnderwaterEffect.field_t = hf.a(var2, tc.field_i, (byte) -11);
           f.field_r = DroneDebris.createToolkitSprites(hc.field_a, var2, 28513);
           vl.field_c = hf.a(var2, rl.field_o, (byte) -11);
-          wo.field_b = new ToolkitSprite[]{mn.field_j, dj.field_l, hv.field_b};
+          wo.field_b = new ToolkitSprite[]{mn.field_j, PlayingSound.field_l, hv.field_b};
           tc.field_j = new ToolkitSprite[]{an.field_f, wm.field_a, DirectByteArrayStorage.field_d};
           Sumoblitz.field_J = DroneDebris.createToolkitSprites(pq.field_F, var2, 28513);
           return;
         }
         ts.field_e = DroneDebris.createToolkitSprites(ph.field_a, var2, 28513);
-        hh.field_e = DroneDebris.createToolkitSprites(jd.field_h, var2, 28513);
+        hh.field_e = DroneDebris.createToolkitSprites(CachedTextLayout.field_h, var2, 28513);
         ct.field_A = DroneDebris.createToolkitSprites(bk.field_b, var2, 28513);
         up.field_e = DroneDebris.createToolkitSprites(cd.field_c, var2, 28513);
         th.field_B = hf.a(var2, lh.field_k, (byte) -11);
@@ -114,7 +114,7 @@ final class er {
         hf.a(var2, ShaderEffect.field_c, (byte) -11);
         im.field_a = hf.a(var2, ue.field_p, (byte) -11);
         mn.field_j = hf.a(var2, pc.field_c, (byte) -11);
-        dj.field_l = hf.a(var2, no.field_c, (byte) -11);
+        PlayingSound.field_l = hf.a(var2, no.field_c, (byte) -11);
         hv.field_b = hf.a(var2, rt.field_E, (byte) -11);
         OpenGlEnvironmentWaterEffect.field_i = hf.a(var2, mn.field_c, (byte) -11);
         an.field_f = hf.a(var2, SceneryParticle.field_C, (byte) -11);
@@ -140,7 +140,7 @@ final class er {
         OpenGlUnderwaterEffect.field_t = hf.a(var2, tc.field_i, (byte) -11);
         f.field_r = DroneDebris.createToolkitSprites(hc.field_a, var2, 28513);
         vl.field_c = hf.a(var2, rl.field_o, (byte) -11);
-        wo.field_b = new ToolkitSprite[]{mn.field_j, dj.field_l, hv.field_b};
+        wo.field_b = new ToolkitSprite[]{mn.field_j, PlayingSound.field_l, hv.field_b};
         tc.field_j = new ToolkitSprite[]{an.field_f, wm.field_a, DirectByteArrayStorage.field_d};
         Sumoblitz.field_J = DroneDebris.createToolkitSprites(pq.field_F, var2, 28513);
     }
@@ -175,9 +175,9 @@ final class er {
         var6 = Sumoblitz.field_L ? 1 : 0;
         try {
           var1_int = -63 / ((-56 - param0) / 60);
-          if (null != aa.field_a) {
-            for (var2 = 0; db.field_l > var2; var2++) {
-              var3 = aa.field_a[var2];
+          if (null != SpriteMask.drones) {
+            for (var2 = 0; db.droneSlotLimit > var2; var2++) {
+              var3 = SpriteMask.drones[var2];
               var4 = var3;
               var4Lifetime1 = var3;
               if (var3 != null) {
@@ -215,10 +215,10 @@ final class er {
                   oc.a(var5, false);
                 }
                 if (var3.destructionTicks > 100) {
-                  if (gt.field_bb) {
+                  if (gt.arcadeMode) {
                     qw.a(94, var3);
                   }
-                  aa.field_a[var2] = null;
+                  SpriteMask.drones[var2] = null;
                 }
               }
             }

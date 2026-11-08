@@ -6,7 +6,7 @@ final class is {
     static boolean field_b;
     private sd field_f;
     private ResourceArchive field_e;
-    static IntrusiveDeque field_c;
+    static IntrusiveDeque arenaPads;
     static boolean field_a;
 
     final static void b(int param0) {
@@ -121,7 +121,7 @@ final class is {
     }
 
     public static void releaseStatics(boolean param0) {
-        field_c = null;
+        arenaPads = null;
         if (param0) {
           String var2 = (String) null;
           is.a((byte) 3, (String) null);

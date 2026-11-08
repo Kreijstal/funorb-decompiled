@@ -17,7 +17,7 @@ abstract class ua implements ot {
     static String fullscreenModeWasCancelledText;
     static int field_a;
     static ToolkitSprite[] field_g;
-    static int field_d;
+    static int targetMarkerXQ8;
 
     final static Sprite[] a(int param0, int param1) {
         Sprite[] var3 = new Sprite[9];

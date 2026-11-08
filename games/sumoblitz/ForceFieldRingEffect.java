@@ -5,7 +5,7 @@ final class ForceFieldRingEffect extends TimedSceneEffect {
     static ResourceArchive field_s;
     private boolean expanding;
     private static long[] field_v;
-    static da field_t;
+    static ToolkitFont field_t;
 
     final void render(GraphicsToolkit toolkit, int guard) {
         int var3_int = 0;
@@ -66,7 +66,7 @@ final class ForceFieldRingEffect extends TimedSceneEffect {
         field_t = null;
         field_v = null;
         if (param0 != 6408) {
-          field_t = (da) null;
+          field_t = (ToolkitFont) null;
         }
         field_s = null;
     }

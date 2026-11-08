@@ -229,7 +229,7 @@ final class gi extends LegacyOpenGlEffect {
     }
 
     final static void a(int param0, int param1, int param2) {
-        dm.field_e = param0;
+        ScanlineSpriteMask.field_e = param0;
         tm.field_d = param1;
         if (param2 > -75) {
           gi.releaseStatics(48);

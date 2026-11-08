@@ -237,7 +237,7 @@ final class IntrusiveDequeCursor {
           for (var3 = 1; var2_int > var3; var3++) {
             var4 = param0[var3];
             for (var5 = var3 - 1; var5 >= 0; var5--) {
-              if (da.a(param0[var5], -114, var4)) {
+              if (ToolkitFont.a(param0[var5], -114, var4)) {
                 param0[var5 + 1] = param0[var5];
                 continue;
               }
@@ -345,22 +345,22 @@ final class IntrusiveDequeCursor {
         int var2;
         int var3;
         var3 = Sumoblitz.field_L ? 1 : 0;
-        var2 = in.field_z;
+        var2 = in.score;
         IntrusiveNodeHashTable.field_c = IntrusiveNodeHashTable.field_c + param0;
         if (param1 != -1372239541) {
           return;
         }
-        in.field_z = in.field_z + param0;
+        in.score = in.score + param0;
         if (gj.a((byte) -84, 10) < 5) {
           if (5 <= gj.a((byte) -84, 10)) {
             kn.field_b = kn.field_b + param0;
             if (var2 >= 50000) {
               return;
             }
-            if (in.field_z < 50000) {
+            if (in.score < 50000) {
               return;
             }
-            if (!gt.field_bb) {
+            if (!gt.arcadeMode) {
               th.b(24753, 241, 14);
             }
             return;
@@ -376,10 +376,10 @@ final class IntrusiveDequeCursor {
         if (var2 >= 50000) {
           return;
         }
-        if (in.field_z < 50000) {
+        if (in.score < 50000) {
           return;
         }
-        if (gt.field_bb) {
+        if (gt.arcadeMode) {
           return;
         }
         th.b(24753, 241, 14);

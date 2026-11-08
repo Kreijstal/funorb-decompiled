@@ -145,7 +145,7 @@ final class mr {
             if (2 == var12.field_p) {
               var7 = this.field_c.a(-25069, var6, var6, false, 0.699999988079071f, param1);
             } else {
-              if (dj.a(108, (int) var12.field_d)) {
+              if (PlayingSound.a(108, (int) var12.field_d)) {
                 var7 = this.field_c.a(true, var6, (byte) -81, var6, 0.699999988079071f, param1);
               } else {
                 var7 = this.field_c.a(-25069, var6, var6, false, 0.699999988079071f, param1);
@@ -171,7 +171,7 @@ final class mr {
             this.field_d.a((long)param1, var18, (byte) 19);
             return var18;
           }
-          if (!dj.a(108, (int) var12.field_d)) {
+          if (!PlayingSound.a(108, (int) var12.field_d)) {
             var7Lifetime6 = this.field_c.a(-25069, var6, var6, false, 0.699999988079071f, param1);
             stackIn_40_0 = this.field_a;
             stackIn_40_1 = var7Lifetime6;
@@ -214,7 +214,7 @@ final class mr {
             this.field_d.a((long)param1, var33, (byte) 19);
             return var33;
           }
-          if (!dj.a(108, (int) var29.field_d)) {
+          if (!PlayingSound.a(108, (int) var29.field_d)) {
             var7Lifetime1Lifetime1 = this.field_c.a(-25069, var6Lifetime1, var6Lifetime1, false, 0.699999988079071f, param1);
             stackIn_83_0 = this.field_a;
             stackIn_83_1 = var7Lifetime1Lifetime1;
@@ -258,7 +258,7 @@ final class mr {
           this.field_d.a((long)param1, var30, (byte) 19);
           return var30;
         }
-        if (!dj.a(108, (int) var29.field_d)) {
+        if (!PlayingSound.a(108, (int) var29.field_d)) {
           var7Lifetime3 = this.field_c.a(-25069, var6Lifetime1, var6Lifetime1, false, 0.699999988079071f, param1);
           stackIn_66_0 = this.field_a;
           stackIn_66_1 = var7Lifetime3;

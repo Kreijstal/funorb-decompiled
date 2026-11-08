@@ -17,7 +17,7 @@ final class DelayedInboundPacket extends IntrusiveNode {
         int var4;
         Drone var5;
         var4 = Sumoblitz.field_L ? 1 : 0;
-        var5 = aa.field_a[0];
+        var5 = SpriteMask.drones[0];
         var1 = var5;
         if (param0 < 18) {
           return;

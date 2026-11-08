@@ -57,7 +57,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         try {
           if (null != wk.field_h) {
             ht.field_h = 0;
-            kl.field_C = -1;
+            SoftCacheReference.field_C = -1;
             SecondaryNodeDeque.field_b = -1;
             ResourceArchive.field_i = true;
           }
@@ -103,7 +103,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             return;
           }
           ht.field_h = 0;
-          kl.field_C = param0.getX();
+          SoftCacheReference.field_C = param0.getX();
           SecondaryNodeDeque.field_b = param0.getY();
           ResourceArchive.field_i = true;
           return;
@@ -207,7 +207,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             return;
           }
           ht.field_h = 0;
-          kl.field_C = param0.getX();
+          SoftCacheReference.field_C = param0.getX();
           SecondaryNodeDeque.field_b = param0.getY();
           ResourceArchive.field_i = true;
           return;
@@ -236,7 +236,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             return;
           }
           ht.field_h = 0;
-          kl.field_C = param0.getX();
+          SoftCacheReference.field_C = param0.getX();
           SecondaryNodeDeque.field_b = param0.getY();
           ResourceArchive.field_i = true;
           return;

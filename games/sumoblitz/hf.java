@@ -99,15 +99,15 @@ abstract class hf extends rg {
         if (param0 <= 110) {
           return;
         }
-        SoftwareRasterizer.a(6 + param1, 35 + param2, this.field_q - 12, -40 + this.field_p, 2105376, 0);
+        SoftwareRasterizer.fillVerticalGradient(6 + param1, 35 + param2, this.field_q - 12, -40 + this.field_p, 2105376, 0);
         var4 = 35;
         var5 = 211;
         var6 = 194;
         var7 = 0;
         var8 = param2;
         while (var7 < var4) {
-          if (var8 >= SoftwareRasterizer.field_i &&
-            SoftwareRasterizer.field_e > var8) {
+          if (var8 >= SoftwareRasterizer.clipTop &&
+            SoftwareRasterizer.clipBottom > var8) {
             var9 = var5 + (-var5 + var6) * var7 / var4;
             var10 = 0;
             var11 = this.field_q;
@@ -120,7 +120,7 @@ abstract class hf extends rg {
                   }
                   var13 = var9 * (-var12 + 462) / 42;
                   var13 = var13 | (var13 << 16 | var13 << 8);
-                  SoftwareRasterizer.field_a[param1 + (var8 * SoftwareRasterizer.field_b + var10)] = var13;
+                  SoftwareRasterizer.pixels[param1 + (var8 * SoftwareRasterizer.width + var10)] = var13;
                 }
                 var10++;
               }
@@ -136,7 +136,7 @@ abstract class hf extends rg {
                   } else {
                     var15 = var9 * (462 - var14) / 42;
                     var15 = var15 | (var15 << 8 | var15 << 16);
-                    SoftwareRasterizer.field_a[param1 + var8 * SoftwareRasterizer.field_b + var11] = var15;
+                    SoftwareRasterizer.pixels[param1 + var8 * SoftwareRasterizer.width + var11] = var15;
                   }
                   var11++;
                   continue;
@@ -146,7 +146,7 @@ abstract class hf extends rg {
               var11 = var12Lifetime1;
             }
             var9 = var9 | (var9 << 8 | var9 << 16);
-            SoftwareRasterizer.f(var10 + param1, var8, -var10 + var11, var9);
+            SoftwareRasterizer.drawHorizontalLine(var10 + param1, var8, -var10 + var11, var9);
           }
           var8++;
           var7++;
@@ -159,12 +159,12 @@ abstract class hf extends rg {
         while (var4Lifetime1 > var7Lifetime1) {
           var9Lifetime1 = var5Lifetime1 + (-var5Lifetime1 + var6Lifetime1) * var7Lifetime1 / var4Lifetime1;
           var9Lifetime1 = var9Lifetime1 | (var9Lifetime1 << 16 | var9Lifetime1 << 8);
-          SoftwareRasterizer.f(param1, var8Lifetime1, 6, var9Lifetime1);
-          SoftwareRasterizer.f(param1 + this.field_q - 6, var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(param1, var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(param1 + this.field_q - 6, var8Lifetime1, 6, var9Lifetime1);
           var7Lifetime1++;
           var8Lifetime1++;
         }
-        ar.field_E.a(param1 + (this.field_q - 90), 10 + param2);
+        ar.field_E.draw(param1 + (this.field_q - 90), 10 + param2);
         MusicCrossfadeStream.a(35 + param2, this.field_q - 10, 2, param1 + 5, li.field_v);
         MusicCrossfadeStream.a(-22 + this.field_p + param2, this.field_q, 2, param1, hd.field_O);
         var6Lifetime2 = 127;
@@ -175,8 +175,8 @@ abstract class hf extends rg {
         while (var7Lifetime2 < var4Lifetime2) {
           var9Lifetime2 = var7Lifetime2 * (-var5Lifetime2 + var6Lifetime2) / var4Lifetime2 + var5Lifetime2;
           var9Lifetime2 = var9Lifetime2 | (var9Lifetime2 << 16 | var9Lifetime2 << 8);
-          SoftwareRasterizer.f(param1, var8Lifetime2, 6, var9Lifetime2);
-          SoftwareRasterizer.f(-6 + (this.field_q + param1), var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRasterizer.drawHorizontalLine(param1, var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRasterizer.drawHorizontalLine(-6 + (this.field_q + param1), var8Lifetime2, 6, var9Lifetime2);
           var8Lifetime2++;
           var7Lifetime2++;
         }

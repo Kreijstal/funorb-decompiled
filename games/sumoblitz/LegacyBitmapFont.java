@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class vn extends DualLinkNode {
+abstract class LegacyBitmapFont extends DualLinkNode {
     private int[] field_A;
     private int[] field_u;
     int field_I;
@@ -235,7 +235,7 @@ abstract class vn extends DualLinkNode {
               for (var8Lifetime2 = 0; var8Lifetime2 < 256; var8Lifetime2++) {
                 if (var8Lifetime2 != 32 &&
                   var8Lifetime2 != 160) {
-                  this.field_D[(var7Lifetime2 << 8) + var8Lifetime2] = (byte)vn.a(var15, var16, var17, this.field_L, var14, var7Lifetime2, var8Lifetime2);
+                  this.field_D[(var7Lifetime2 << 8) + var8Lifetime2] = (byte)LegacyBitmapFont.a(var15, var16, var17, this.field_L, var14, var7Lifetime2, var8Lifetime2);
                 }
               }
             }
@@ -461,10 +461,10 @@ abstract class vn extends DualLinkNode {
               }
               param1 = param1 + this.field_L[var8];
               if (field_x != -1) {
-                SoftwareRasterizer.f(var11, param2 + (int)((double)this.field_F * 0.7), param1 - var11, field_x);
+                SoftwareRasterizer.drawHorizontalLine(var11, param2 + (int)((double)this.field_F * 0.7), param1 - var11, field_x);
               }
               if (field_v != -1) {
-                SoftwareRasterizer.f(var11, param2 + this.field_F + 1, param1 - var11, field_v);
+                SoftwareRasterizer.drawHorizontalLine(var11, param2 + this.field_F + 1, param1 - var11, field_v);
               }
               var5 = var8;
             }
@@ -850,7 +850,7 @@ abstract class vn extends DualLinkNode {
 
     abstract void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6);
 
-    vn(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4) {
+    LegacyBitmapFont(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4) {
         int var8 = 0;
         int var6;
         int var7;

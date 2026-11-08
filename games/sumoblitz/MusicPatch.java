@@ -10,7 +10,7 @@ final class MusicPatch extends IntrusiveNode {
     byte[] field_t;
     MusicPatchEnvelope[] field_n;
     private int[] field_p;
-    static boolean field_m;
+    static boolean simulationPaused;
     static int field_u;
     byte[] field_r;
     short[] field_k;
@@ -242,9 +242,9 @@ final class MusicPatch extends IntrusiveNode {
           if (param0 != 77) {
             field_u = -102;
           }
-          if (aa.field_a != null) {
-            for (var1_int = 0; var1_int < db.field_l; var1_int++) {
-              var2 = aa.field_a[var1_int];
+          if (SpriteMask.drones != null) {
+            for (var1_int = 0; var1_int < db.droneSlotLimit; var1_int++) {
+              var2 = SpriteMask.drones[var1_int];
               if (var2 != null) {
                 var2.update(-76);
               }
@@ -769,6 +769,6 @@ final class MusicPatch extends IntrusiveNode {
 
     static {
         editorText = "editor";
-        field_m = true;
+        simulationPaused = true;
     }
 }

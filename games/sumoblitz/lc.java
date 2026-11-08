@@ -4,7 +4,7 @@
 final class lc extends WidgetContainer implements ai {
     private wp[] field_H;
     private int field_F;
-    private vn field_C;
+    private LegacyBitmapFont field_C;
     private int[] field_D;
     private String field_B;
     static boolean field_A;
@@ -49,7 +49,7 @@ final class lc extends WidgetContainer implements ai {
         }
     }
 
-    lc(gt param0, vn param1, String param2) {
+    lc(gt param0, LegacyBitmapFont param1, String param2) {
         super(0, 0, 288, 0, (mh) null);
         int var4_int = 0;
         this.field_F = 0;

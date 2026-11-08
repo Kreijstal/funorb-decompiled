@@ -645,7 +645,7 @@ final class uo extends ShaderEffect {
           this.field_b.a(param1 - 6432, rt.field_C);
           this.field_b.g(1, -114);
           this.field_b.a((byte) -83, lf.field_e, ua.field_n);
-          this.field_b.a((byte) 101, 2, true, false, ta.field_a);
+          this.field_b.a((byte) 101, 2, true, false, FontMetrics.field_a);
           this.field_b.a(fv.field_y, 0, true);
           var4 = this.field_b.B(0);
           var4.a(this.field_b.c(true), true);

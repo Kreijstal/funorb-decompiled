@@ -1499,7 +1499,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         this.g();
     }
 
-    final da a(ta param0, SpriteData[] param1, boolean param2) {
+    final ToolkitFont a(FontMetrics param0, SpriteData[] param1, boolean param2) {
         int var7 = 0;
         int[] var4;
         int[] var5;
@@ -1516,14 +1516,14 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         }
         if (!param2) {
           if (var6 == 0) {
-            return (da) ((Object) new je(this, param0, param1, var4, var5));
+            return (ToolkitFont) ((Object) new SoftwarePaletteFont(this, param0, param1, var4, var5));
           }
           throw new IllegalArgumentException("");
         }
         if (var6 == 0) {
-          return (da) ((Object) new at(this, param0, param1, var4, var5));
+          return (ToolkitFont) ((Object) new SoftwareBinaryFont(this, param0, param1, var4, var5));
         }
-        return (da) ((Object) new it(this, param0, param1, var4, var5));
+        return (ToolkitFont) ((Object) new SoftwareAlphaFont(this, param0, param1, var4, var5));
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5) {

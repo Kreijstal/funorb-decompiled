@@ -3,7 +3,7 @@
  */
 final class sv {
     static PacketBuffer field_c;
-    static ta field_a;
+    static FontMetrics field_a;
     static int field_b;
     private static String field_z;
 

@@ -416,7 +416,7 @@ class dh extends wp {
     }
 
     private final void f(byte param0) {
-        ag var3;
+        TextLayout var3;
         int var4;
         int var5;
         int var6;
@@ -434,7 +434,7 @@ class dh extends wp {
         }
         var9 = (de) ((Object) this.field_w);
         var3 = var9.b(-3, (UiWidget) (this));
-        var4 = var3.a((byte) -15);
+        var4 = var3.maximumRightEdge((byte) -15);
         if (param0 != -44) {
           field_H = (int[]) null;
         }
@@ -445,7 +445,7 @@ class dh extends wp {
           this.field_s = 0;
           return;
         }
-        var7 = this.field_s + var3.a((byte) 113, this.field_F);
+        var7 = this.field_s + var3.caretX((byte) 113, this.field_F);
         if (-var6 + var5 >= var7) {
           if (var6 > var7) {
             this.field_s = -var7 + var6 + this.field_s;

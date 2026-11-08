@@ -59,7 +59,7 @@ final class tc extends na {
             stackIn_19_0 = vr.thisPasswordContainsYourText;
             return stackIn_19_0;
           }
-          if (jd.a(var5, (byte) 114, var3)) {
+          if (CachedTextLayout.a(var5, (byte) 114, var3)) {
             stackIn_22_0 = mm.thisPasswordIsPartText;
             return stackIn_22_0;
           }
@@ -176,7 +176,7 @@ final class tc extends na {
     }
 
     final static void e(int param0) {
-        ta.field_b = 0;
+        FontMetrics.field_b = 0;
         qk.field_T = -1;
         bn.field_P = false;
         ei.field_a = 0;

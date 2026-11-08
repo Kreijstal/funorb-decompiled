@@ -11,7 +11,7 @@ class dq extends dp {
     private boolean field_x;
     private int field_O;
     private int field_N;
-    private vn field_C;
+    private LegacyBitmapFont field_C;
     private Sprite field_A;
     static SpriteData[] field_v;
     private boolean field_R;

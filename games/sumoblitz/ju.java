@@ -69,7 +69,7 @@ final class ju extends ua implements cr {
               var2_int = -ig.field_a.position + param1;
             }
             qk.field_O.a(param0 ^ 99, ig.field_a.position, var2_int, ig.field_a.payload);
-            jt.field_x = wq.a(-47);
+            CacheReferenceNode.field_x = wq.a(-47);
             ig.field_a.position = ig.field_a.position + var2_int;
             if (ig.field_a.position < param1) {
               return false;

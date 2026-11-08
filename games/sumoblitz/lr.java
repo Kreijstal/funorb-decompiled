@@ -41,7 +41,7 @@ final class lr {
           if (param1 < 15) {
             lr.a(-61);
           }
-          jd.a(param0, (byte) 109, true);
+          CachedTextLayout.playMusic(param0, (byte) 109, true);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "lr.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

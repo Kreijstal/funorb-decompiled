@@ -6,7 +6,7 @@ final class vg implements mh {
     private int field_f;
     private int field_d;
     private int field_b;
-    private vn field_m;
+    private LegacyBitmapFont field_m;
     private int field_j;
     private int field_l;
     private int field_g;
@@ -42,14 +42,14 @@ final class vg implements mh {
           if (param3) {
             var7 = 16777215;
           }
-          SoftwareRasterizer.d(param0.field_r + param4, param0.field_v + param1, param0.field_q, param0.field_p, this.field_e);
+          SoftwareRasterizer.fillRectangle(param0.field_r + param4, param0.field_v + param1, param0.field_q, param0.field_p, this.field_e);
           var8 = this.field_h + param4 + param0.field_r;
           var9 = this.field_g + param0.field_v + param1;
-          SoftwareRasterizer.f(var8, var9, this.field_c, this.field_j, param2);
-          SoftwareRasterizer.d(var8, var9, this.field_c, this.field_j, var7);
+          SoftwareRasterizer.drawDropShadow(var8, var9, this.field_c, this.field_j, param2);
+          SoftwareRasterizer.fillRectangle(var8, var9, this.field_c, this.field_j, var7);
           if (var11.field_C) {
-            SoftwareRasterizer.e(var8, var9, var8 + this.field_c, var9 + this.field_j, 1);
-            SoftwareRasterizer.e(this.field_c + var8, var9, var8, this.field_j + var9, 1);
+            SoftwareRasterizer.drawLine(var8, var9, var8 + this.field_c, var9 + this.field_j, 1);
+            SoftwareRasterizer.drawLine(this.field_c + var8, var9, var8, this.field_j + var9, 1);
           }
           if (null != this.field_m) {
             var10 = this.field_c - (-this.field_h - this.field_l);
@@ -77,7 +77,7 @@ final class vg implements mh {
         }
     }
 
-    vg(vn param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    vg(LegacyBitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         this.field_b = 1;
         this.field_d = 1;
         try {

@@ -28,7 +28,7 @@ final class fb {
           sd.field_e.e(48, bk.field_e[1]);
           sd.field_e.e(48, bk.field_e[2]);
           sd.field_e.e(48, bk.field_e[3]);
-          av.a(sd.field_e, true);
+          StrongCacheReference.a(sd.field_e, true);
           sd.field_e.b(param2 + 12917, param3);
           param4.a(sd.field_e, (byte) -113);
           InwardSparkParticle.field_v.position = 0;

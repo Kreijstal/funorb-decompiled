@@ -105,9 +105,9 @@ final class jc extends na {
           if (!param0) {
             field_f = 118;
           }
-          while (var2 < aa.field_a.length) {
-            if (aa.field_a[var2] != null &&
-              aa.field_a[var2].droneType != 0) {
+          while (var2 < SpriteMask.drones.length) {
+            if (SpriteMask.drones[var2] != null &&
+              SpriteMask.drones[var2].droneType != 0) {
               var1_int++;
             }
             var2++;

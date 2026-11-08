@@ -293,7 +293,7 @@ class Drone {
         float[] var13;
         float[] var2Lifetime1;
         var3 = Sumoblitz.field_L ? 1 : 0;
-        if (MusicPatch.field_m) {
+        if (MusicPatch.simulationPaused) {
           return;
         }
         if (this.awakeTicksRemaining > 0) {
@@ -681,7 +681,7 @@ class Drone {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        Drone var7 = aa.field_a[0];
+        Drone var7 = SpriteMask.drones[0];
         if (param0 < 53) {
           this.variant = 4;
         }

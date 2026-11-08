@@ -6,7 +6,7 @@ final class oh {
     private OpenGlGraphicsToolkit field_a;
     static java.math.BigInteger field_c;
     static String toReturnToTheText;
-    static int field_e;
+    static int levelIndex;
 
     oh(OpenGlGraphicsToolkit param0, long param1, qj[] param2) {
         try {

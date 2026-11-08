@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uf implements aq {
+final class LegacyDirectSoundDevice implements DirectSoundDevice {
     private com.ms.directX.DSBufferDesc[] field_a;
     private com.ms.directX.DSCursors[] field_b;
 
-    public uf() throws Exception {
+    public LegacyDirectSoundDevice() throws Exception {
         int var1 = 0;
         int var1Lifetime1;
         this.field_a = new com.ms.directX.DSBufferDesc[2];

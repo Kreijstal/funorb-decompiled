@@ -1225,7 +1225,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
                 var4 = 1;
               } else {
                 var5 = 0;
-                var3 = av.field_B;
+                var3 = StrongCacheReference.field_B;
                 var4 = 0;
               }
             }
@@ -1316,9 +1316,9 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         return this.field_oc;
     }
 
-    final da a(ta param0, SpriteData[] param1, boolean param2) {
+    final ToolkitFont a(FontMetrics param0, SpriteData[] param1, boolean param2) {
         RuntimeException var4 = null;
-        mv stackIn_1_0 = null;
+        HardwareBitmapFont stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -1326,8 +1326,8 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          stackIn_1_0 = new mv(this, param0, param1, param2);
-          return (da) ((Object) stackIn_1_0);
+          stackIn_1_0 = new HardwareBitmapFont(this, param0, param1, param2);
+          return (ToolkitFont) ((Object) stackIn_1_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;

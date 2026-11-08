@@ -6,7 +6,7 @@ import java.io.*;
 abstract class SocketConnector {
     int field_d;
     static int field_c;
-    static ta field_a;
+    static FontMetrics field_a;
     String field_b;
 
     public static void releaseStatics(int param0) {

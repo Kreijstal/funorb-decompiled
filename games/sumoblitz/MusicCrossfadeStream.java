@@ -150,16 +150,16 @@ final class MusicCrossfadeStream extends PcmStream {
             var5_int = param4[0].field_z;
             var6 = param4[2].field_z;
             var7 = param4[1].field_z;
-            param4[0].a(param3, param0);
-            param4[param2].a(-var6 + (param1 + param3), param0);
-            SoftwareRasterizer.b(mo.field_t);
-            SoftwareRasterizer.e(param3 + var5_int, param0, -var6 + param3 + param1, param4[1].field_w + param0);
+            param4[0].draw(param3, param0);
+            param4[param2].draw(-var6 + (param1 + param3), param0);
+            SoftwareRasterizer.saveClip(mo.field_t);
+            SoftwareRasterizer.intersectClip(param3 + var5_int, param0, -var6 + param3 + param1, param4[1].field_w + param0);
             var8 = param3 + var5_int;
             var9 = param1 + param3 - var6;
             for (param3 = var8; param3 < var9; param3 = param3 + var7) {
-              param4[1].a(param3, param0);
+              param4[1].draw(param3, param0);
             }
-            SoftwareRasterizer.a(mo.field_t);
+            SoftwareRasterizer.restoreClip(mo.field_t);
             return;
           }
           return;

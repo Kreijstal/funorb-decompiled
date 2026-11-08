@@ -183,8 +183,8 @@ final class ga extends LegacyOpenGlEffect {
         } else {
           jaggl.OpenGL.glBindProgramARB(34336, 2147483647 != this.field_b.field_yb ? this.field_f.field_a : this.field_e.field_a);
         }
-        var2.a(ag.field_c, 26839, -1.0f, 0.0f, (float)this.field_b.field_yb, 0.0f);
-        jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 1, ag.field_c[0], ag.field_c[1], ag.field_c[2], ag.field_c[3]);
+        var2.a(TextLayout.field_c, 26839, -1.0f, 0.0f, (float)this.field_b.field_yb, 0.0f);
+        jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 1, TextLayout.field_c[0], TextLayout.field_c[1], TextLayout.field_c[2], TextLayout.field_c[3]);
         jaggl.OpenGL.glEnable(34336);
         this.field_k = true;
         int var3 = 106 % ((-55 - param0) / 52);

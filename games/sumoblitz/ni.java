@@ -5,7 +5,7 @@ final class ni extends ShaderEffect {
     static String field_g;
     static SpriteData[] field_h;
     static String field_f;
-    static IntrusiveDeque field_e;
+    static IntrusiveDeque sceneryParticles;
 
     final void a(int param0, int param1, int param2) {
         try {
@@ -2806,15 +2806,15 @@ final class ni extends ShaderEffect {
                 }
                 var2 = rc.a("hs_mode_name,0", (byte) -23);
                 if (null != var2) {
-                  dj.scoreFilterLabels[0] = MusicVoice.a(param0 - 7, var2);
+                  PlayingSound.scoreFilterLabels[0] = MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = rc.a("hs_mode_name,1", (byte) -23);
                 if (null != var2) {
-                  dj.scoreFilterLabels[1] = MusicVoice.a(0, var2);
+                  PlayingSound.scoreFilterLabels[1] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("hs_mode_name,2", (byte) -23);
                 if (null != var2) {
-                  dj.scoreFilterLabels[2] = MusicVoice.a(0, var2);
+                  PlayingSound.scoreFilterLabels[2] = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("rating_mode_name,0", (byte) -23);
                 if (null != var2) {
@@ -2842,7 +2842,7 @@ final class ni extends ShaderEffect {
                 }
                 var2 = rc.a("graphics_config_fullscreen", (byte) -23);
                 if (var2 != null) {
-                  dj.fullScreenText = MusicVoice.a(0, var2);
+                  PlayingSound.fullScreenText = MusicVoice.a(0, var2);
                 }
                 var2 = rc.a("graphics_config_done", (byte) -23);
                 if (var2 != null) {
@@ -3127,7 +3127,7 @@ final class ni extends ShaderEffect {
 
     public static void d(boolean param0) {
         field_g = null;
-        field_e = null;
+        sceneryParticles = null;
         if (param0) {
           return;
         }

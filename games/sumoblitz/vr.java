@@ -84,7 +84,7 @@ final class vr extends wp {
           }
           if (var10 <= kv.field_a.field_u) {
             jq.a(7161, kv.field_a);
-            SoftwareRasterizer.b();
+            SoftwareRasterizer.clear();
             var16.a(112, 144, var16.field_z << 4, var16.field_w << 4, -this.field_E << 10, 4096);
             ClientException.a((byte) 126);
             kv.field_a.d(var5 - var16.field_z, -var16.field_w + var6, 256);
@@ -147,7 +147,7 @@ final class vr extends wp {
             return;
           }
           jq.a(7161, kv.field_a);
-          SoftwareRasterizer.b();
+          SoftwareRasterizer.clear();
           var17.a(112, 144, var17.field_z << 4, var17.field_w << 4, -this.field_E << 10, 4096);
           ClientException.a((byte) 126);
           kv.field_a.d(var5 - var17.field_z, -var17.field_w + var6, 256);

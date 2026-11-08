@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class va implements mh {
-    private vn field_a;
+    private LegacyBitmapFont field_a;
     private int field_e;
     private int field_h;
     private int field_g;
@@ -27,24 +27,24 @@ final class va implements mh {
           var14 = param0 instanceof vb ? (vb) (param0) : null;
           if (var14 == null) {
           }
-          SoftwareRasterizer.d(param0.field_r + param4, param0.field_v + param1, param0.field_q, param0.field_p, this.field_i);
+          SoftwareRasterizer.fillRectangle(param0.field_r + param4, param0.field_v + param1, param0.field_q, param0.field_p, this.field_i);
           var7 = param4 - (-param0.field_r - var14.field_G);
           var8 = var14.field_K + (param1 + param0.field_v);
-          SoftwareRasterizer.b(var7, var8, var14.field_F, this.field_e);
+          SoftwareRasterizer.fillCircle(var7, var8, var14.field_F, this.field_e);
           if (-1 != var14.field_M) {
             var9 = 2.0 * (3.141592653589793 * (double)var14.field_M) / (double)var14.field_L;
             var11 = (int)(-Math.sin(var9) * (double)var14.field_F);
             var12 = (int)(Math.cos(var9) * (double)var14.field_F);
-            SoftwareRasterizer.b(var7 + var11, var8 + var12, 1, this.field_h);
+            SoftwareRasterizer.fillCircle(var7 + var11, var8 + var12, 1, this.field_h);
           }
-          SoftwareRasterizer.b(var7, var8, 2, 1);
+          SoftwareRasterizer.fillCircle(var7, var8, 2, 1);
           if (param2 != 5592405) {
             this.field_d = -11;
           }
           var9Lifetime1 = 2.0 * (3.141592653589793 * (double)var14.field_H) / (double)var14.field_L;
           var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var14.field_F);
           var12Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var14.field_F);
-          SoftwareRasterizer.e(var7, var8, var7 + var11Lifetime1, var12Lifetime1 + var8, 1);
+          SoftwareRasterizer.drawLine(var7, var8, var7 + var11Lifetime1, var12Lifetime1 + var8, 1);
           if (null != this.field_a) {
             var13 = var14.field_F + (var14.field_G + this.field_f);
             this.field_a.a(param0.field_m, param0.field_r + (param4 + var13), param0.field_v + (param1 + this.field_d), -this.field_f - var13 + param0.field_q, -(this.field_f << 1) + param0.field_p, this.field_g, this.field_c, 1, 1, 0);
@@ -104,7 +104,7 @@ final class va implements mh {
         }
     }
 
-    va(vn param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    va(LegacyBitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         try {
           this.field_i = param7;
           this.field_d = param2;

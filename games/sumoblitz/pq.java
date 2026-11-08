@@ -99,7 +99,7 @@ final class pq extends UiWidget {
               var6 = Math.sqrt(1.0 - var6);
               var8 = !(1.0 <= var6) ? (int)(var6 * 255.0) : 255;
             }
-            SoftwareRasterizer.a(var5, var4, var8 << 16 | (var8 | var8 << 8));
+            SoftwareRasterizer.setPixel(var5, var4, var8 << 16 | (var8 | var8 << 8));
           }
         }
         ClientException.a((byte) -94);
@@ -129,13 +129,13 @@ final class pq extends UiWidget {
           var10 = var6 - var5;
           var11 = 128 + (int)(Math.sqrt((double)(var5 * var5 - var10 * var10)) / (double)var5 * 128.0);
           var12 = var11 < 256 ? (var9 * var11 & 16711680 | -16711936 & var11 * var8) >>> 8 : var9 | var8;
-          SoftwareRasterizer.f(var7, var6, this.field_H, var12);
+          SoftwareRasterizer.drawHorizontalLine(var7, var6, this.field_H, var12);
           var9Lifetime1 = param0 & 65280;
           var8Lifetime1 = 16711935 & param0;
-          SoftwareRasterizer.f(-(2 * this.field_H) + var7, var6, this.field_H, var12);
+          SoftwareRasterizer.drawHorizontalLine(-(2 * this.field_H) + var7, var6, this.field_H, var12);
           var12Lifetime1 = 256 > var11 ? (16711680 & var11 * var9Lifetime1 | var8Lifetime1 * var11 & -16711936) >>> 8 : var8Lifetime1 | var9Lifetime1;
-          SoftwareRasterizer.f(this.field_H + var7, var6, this.field_H, var12Lifetime1);
-          SoftwareRasterizer.f(-this.field_H + var7, var6, this.field_H, var12Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(this.field_H + var7, var6, this.field_H, var12Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(-this.field_H + var7, var6, this.field_H, var12Lifetime1);
         }
         var6Lifetime1 = 21 % ((param1 + 50) / 32);
         ClientException.a((byte) 44);
@@ -157,29 +157,29 @@ final class pq extends UiWidget {
           var5_int = param3 + this.field_q;
           kw.a(this.field_p + param1, param1, 1, param3 + this.field_M.field_x, -this.field_M.field_x + var5_int);
           for (var6 = param3 - this.field_A; var6 < var5_int; var6 = var6 + param0.field_x) {
-            param0.a(var6, param1);
+            param0.draw(var6, param1);
           }
           if (param2 != 256) {
             this.field_J = true;
           }
           ClientException.a((byte) -51);
-          if (param3 + this.field_M.field_x >= SoftwareRasterizer.field_k) {
+          if (param3 + this.field_M.field_x >= SoftwareRasterizer.clipLeft) {
             jq.a(param2 + 6905, this.field_E);
-            param0.a(-this.field_A, 0);
-            param0.a(this.field_H * 2 - this.field_A, 0);
-            this.field_G.d(0, 0);
+            param0.draw(-this.field_A, 0);
+            param0.draw(this.field_H * 2 - this.field_A, 0);
+            this.field_G.drawMultiply(0, 0);
             ClientException.a((byte) -105);
-            this.field_E.a(param3, param1);
+            this.field_E.draw(param3, param1);
           }
-          if (SoftwareRasterizer.field_j >= -this.field_M.field_x + var5_int) {
+          if (SoftwareRasterizer.clipRight >= -this.field_M.field_x + var5_int) {
             jq.a(7161, this.field_E);
             for (var7 = this.field_A + this.field_q - this.field_M.field_x; this.field_H * 2 < var7; var7 = var7 - this.field_H * 2) {
             }
-            param0.a(-var7, 0);
-            param0.a(2 * this.field_H - var7, 0);
-            this.field_M.d(0, 0);
+            param0.draw(-var7, 0);
+            param0.draw(2 * this.field_H - var7, 0);
+            this.field_M.drawMultiply(0, 0);
             ClientException.a((byte) 106);
-            this.field_E.a(var5_int - this.field_M.field_x, param1);
+            this.field_E.draw(var5_int - this.field_M.field_x, param1);
             return;
           }
           return;

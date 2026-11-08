@@ -443,7 +443,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         if (fv.field_y == param0) {
           return 0;
         }
-        if (param0 == ta.field_a) {
+        if (param0 == FontMetrics.field_a) {
           return 1;
         }
         if (param0 != mm.field_h) {

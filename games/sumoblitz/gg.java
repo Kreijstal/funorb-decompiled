@@ -34,7 +34,7 @@ final class gg extends DualLinkNode {
           if (gt.a(param0, param1, 106)) {
             return false;
           }
-          if (jd.a(param0, (byte) 111, param1)) {
+          if (CachedTextLayout.a(param0, (byte) 111, param1)) {
             return false;
           }
           if (!wv.a(false, param0, param1)) {
@@ -77,44 +77,44 @@ final class gg extends DualLinkNode {
         int var3 = 0;
         var3 = Sumoblitz.field_L ? 1 : 0;
         try {
-          ig.field_b.clear(122);
-          aa.field_a = new Drone[100];
+          ig.hudMessages.clear(122);
+          SpriteMask.drones = new Drone[100];
           ds.a(85);
           if (param0 <= 81) {
             field_t = (qr) null;
           }
-          bj.field_b = new IntrusiveDeque();
-          is.field_c = new IntrusiveDeque();
-          if (oh.field_e != -1) {
-            is.field_c = EnemyDrone.field_S[oh.field_e].field_d;
+          bj.powerupPickups = new IntrusiveDeque();
+          is.arenaPads = new IntrusiveDeque();
+          if (oh.levelIndex != -1) {
+            is.arenaPads = EnemyDrone.field_S[oh.levelIndex].field_d;
           }
           he.field_o = new Random();
-          db.field_l = 1;
-          nd.field_F = 3;
-          an.field_a = 0;
+          db.droneSlotLimit = 1;
+          nd.livesRemaining = 3;
+          an.waveIndex = 0;
           ku.field_J = new wc[6];
           var1_int = 0;
-          if (-1 != oh.field_e) {
-            if (!MidiNoteMixer.field_r[oh.field_e]) {
-              for (var2 = cj.field_e[oh.field_e]; var2 < 6 + cj.field_e[oh.field_e]; var2++) {
+          if (-1 != oh.levelIndex) {
+            if (!MidiNoteMixer.field_r[oh.levelIndex]) {
+              for (var2 = cj.field_e[oh.levelIndex]; var2 < 6 + cj.field_e[oh.levelIndex]; var2++) {
                 ku.field_J[var1_int] = IntrusiveDequeCursor.field_a[var2];
                 var1_int++;
               }
             } else {
-              ku.field_J = ((om) (ab.field_a.a(107, (long)oh.field_e))).a(-120);
+              ku.field_J = ((om) (ab.field_a.a(107, (long)oh.levelIndex))).a(-120);
             }
           }
-          in.field_z = 0;
+          in.score = 0;
           if (5 >= gj.a((byte) -84, 10)) {
-            fb.field_a = fb.field_a + iw.field_b;
+            fb.field_a = fb.field_a + iw.elapsedTicks;
           } else {
-            GraphicsToolkit.field_f = GraphicsToolkit.field_f + iw.field_b;
+            GraphicsToolkit.field_f = GraphicsToolkit.field_f + iw.elapsedTicks;
           }
-          iw.field_b = 0;
-          MusicPatch.field_m = false;
+          iw.elapsedTicks = 0;
+          MusicPatch.simulationPaused = false;
           ke.a(false);
           oc.field_e = 1000;
-          ag.a(0, oh.field_e % 5 + 1);
+          TextLayout.a(0, oh.levelIndex % 5 + 1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

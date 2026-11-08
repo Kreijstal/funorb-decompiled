@@ -10,7 +10,7 @@ class gm implements mh, de {
     int field_a;
     int field_j;
     int field_k;
-    vn field_e;
+    LegacyBitmapFont field_e;
     int field_m;
     int field_f;
     int field_h;
@@ -56,7 +56,7 @@ class gm implements mh, de {
         try {
           this.b(-3, param0);
           if (param1 > 65) {
-            stackIn_4_0 = param0.field_u.a(true) + this.field_a + this.field_m;
+            stackIn_4_0 = param0.field_u.height(true) + this.field_a + this.field_m;
             return stackIn_4_0;
           }
           stackIn_2_0 = 56;
@@ -82,22 +82,22 @@ class gm implements mh, de {
         return this.field_e.field_I + this.field_e.field_s;
     }
 
-    public final ag b(int param0, UiWidget param1) {
+    public final TextLayout b(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         UiWidget var4 = null;
-        ag stackIn_8_0 = null;
+        TextLayout stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (null == param1.field_u) {
-            param1.field_u = (ag) ((Object) new jd());
+            param1.field_u = (TextLayout) ((Object) new CachedTextLayout());
           }
           if (!this.field_i) {
             this.c(-12731, param1);
           } else {
-            ((jd) (param1.field_u)).a((byte) -75, this.field_f, this.field_e, this.a(param1, true), this.a(true, param1), this.field_c, this.field_j, this.a(98, param1));
+            ((CachedTextLayout) (param1.field_u)).layoutWrapped((byte) -75, this.field_f, this.field_e, this.a(param1, true), this.a(true, param1), this.field_c, this.field_j, this.a(98, param1));
           }
           if (param0 != -3) {
             var4 = (UiWidget) null;
@@ -134,7 +134,7 @@ class gm implements mh, de {
         var7 = Sumoblitz.field_L ? 1 : 0;
         try {
           if (null == param1.field_u) {
-            param1.field_u = (ag) ((Object) new jd());
+            param1.field_u = (TextLayout) ((Object) new CachedTextLayout());
           }
           var3_int = this.a(112, param1);
           var4 = this.a(param1, true);
@@ -158,23 +158,23 @@ class gm implements mh, de {
           if (var6Lifetime1 != 0 &&
             3 != var6Lifetime1) {
             if (1 == var6Lifetime1) {
-              if (!(param1.field_u instanceof jd)) {
+              if (!(param1.field_u instanceof CachedTextLayout)) {
                 return;
               }
-              ((jd) (param1.field_u)).a(var5, this.field_e, param0 ^ -12762, this.a(true, param1), var3_int >> 1);
+              ((CachedTextLayout) (param1.field_u)).layoutCenteredLine(var5, this.field_e, param0 ^ -12762, this.a(true, param1), var3_int >> 1);
               return;
             }
             if (var6Lifetime1 != 2) {
               return;
             }
-            if (!(param1.field_u instanceof jd)) {
+            if (!(param1.field_u instanceof CachedTextLayout)) {
               return;
             }
-            ((jd) (param1.field_u)).a(this.field_e, var5, var3_int, this.a(true, param1), (byte) 79);
+            ((CachedTextLayout) (param1.field_u)).a(this.field_e, var5, var3_int, this.a(true, param1), (byte) 79);
             return;
           }
-          if (param1.field_u instanceof jd) {
-            ((jd) (param1.field_u)).a(this.field_e, var5, this.a(true, param1), 0, (byte) -36);
+          if (param1.field_u instanceof CachedTextLayout) {
+            ((CachedTextLayout) (param1.field_u)).a(this.field_e, var5, this.a(true, param1), 0, (byte) -36);
             return;
           }
           return;
@@ -203,7 +203,7 @@ class gm implements mh, de {
         try {
           this.b(param1 - 86, param0);
           if (param1 == 83) {
-            stackIn_4_0 = param0.field_u.a((byte) -18) + this.field_k + this.field_h;
+            stackIn_4_0 = param0.field_u.maximumRightEdge((byte) -18) + this.field_k + this.field_h;
             return stackIn_4_0;
           }
           stackIn_2_0 = -86;
@@ -353,14 +353,14 @@ class gm implements mh, de {
 
     public final void a(int param0, int param1, int param2, int param3, UiWidget param4) {
         int var7 = 0;
-        tk var8 = null;
+        TextLayoutLine var8 = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
         UiWidget var13 = null;
-        ag var14 = null;
-        ag var15 = null;
+        TextLayout var14 = null;
+        TextLayout var15 = null;
         int stackIn_4_0 = 0;
         int stackIn_4_1 = 0;
         int stackIn_4_2 = 0;
@@ -374,18 +374,18 @@ class gm implements mh, de {
           if (param4.d(param0 ^ -2)) {
             var14 = this.b(-3, param4);
             var15 = var14;
-            var7 = var15.b(param3, -17500);
-            var8 = var14.field_a[var7];
-            var9 = var15.a((byte) 113, param3);
+            var7 = var15.lineForCharacter(param3, -17500);
+            var8 = var14.lines[var7];
+            var9 = var15.caretX((byte) 113, param3);
             var10 = this.a(-3, param4, var9, param1);
-            var11 = this.b(param2, param4, 0) + Math.max(0, var8.field_d);
+            var11 = this.b(param2, param4, 0) + Math.max(0, var8.top);
             stackIn_4_0 = this.b(param2, param4, 0);
             stackIn_4_1 = this.a(param4, true);
-            stackIn_4_2 = var8.field_a;
-            if (var15.field_a.length <= var7 + 1) {
-              stackIn_5_3 = var8.field_a;
+            stackIn_4_2 = var8.bottom;
+            if (var15.lines.length <= var7 + 1) {
+              stackIn_5_3 = var8.bottom;
             } else {
-              stackIn_5_3 = var14.field_a[1 + var7].field_d;
+              stackIn_5_3 = var14.lines[1 + var7].top;
             }
             var12 = stackIn_4_0 + Math.min(stackIn_4_1, Math.min(stackIn_4_2, stackIn_5_3));
             kw.a(param4.field_p + (param4.field_v + param2), param2 + param4.field_v, 1, param4.field_r + param1, param4.field_r + param1 + param4.field_q);
@@ -432,7 +432,7 @@ class gm implements mh, de {
         }
     }
 
-    gm(vn param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    gm(LegacyBitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
@@ -478,12 +478,12 @@ class gm implements mh, de {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        tk var13 = null;
+        TextLayoutLine var13 = null;
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        ag var17 = null;
-        ag var18 = null;
+        TextLayout var17 = null;
+        TextLayout var18 = null;
         var16 = Sumoblitz.field_L ? 1 : 0;
         try {
           if (param1 == param3) {
@@ -502,28 +502,28 @@ class gm implements mh, de {
               var8 = param3;
               var9 = param1;
             }
-            var10 = var18.b(var8, param2 ^ -17500);
-            var11 = var18.b(var9, -17500);
+            var10 = var18.lineForCharacter(var8, param2 ^ -17500);
+            var11 = var18.lineForCharacter(var9, -17500);
             kw.a(param4.field_p + (param4.field_v + param5), param4.field_v + param5, 1, param4.field_r + param0, param4.field_q + (param0 + param4.field_r));
             for (var12 = var10; var12 <= var11; var12++) {
-              var13 = var17.field_a[var12];
+              var13 = var17.lines[var12];
               if (var10 != var12) {
-                stackIn_14_0 = var13.field_b[0];
+                stackIn_14_0 = var13.caretX[0];
               } else {
-                stackIn_14_0 = var18.a((byte) 118, var8);
+                stackIn_14_0 = var18.caretX((byte) 118, var8);
               }
               var14 = stackIn_14_0;
               if (var12 == var11) {
-                stackIn_19_0 = var18.a((byte) 125, var9);
+                stackIn_19_0 = var18.caretX((byte) 125, var9);
               } else {
                 if (var13 != null) {
-                  stackIn_19_0 = var13.field_b[-1 + var13.field_b.length];
+                  stackIn_19_0 = var13.caretX[-1 + var13.caretX.length];
                 } else {
                   stackIn_19_0 = 0;
                 }
               }
               var15 = stackIn_19_0;
-              ks.field_x.a(this.field_l >>> 24, param2 + 3, var13.field_a, this.field_l, this.a(-3, param4, var14, param0), var15 - var14, param4.field_n + (this.field_a + param4.field_v + param5) + var13.field_d);
+              ks.field_x.a(this.field_l >>> 24, param2 + 3, var13.bottom, this.field_l, this.a(-3, param4, var14, param0), var15 - var14, param4.field_n + (this.field_a + param4.field_v + param5) + var13.top);
             }
             ClientException.a((byte) 86);
             return;
@@ -557,7 +557,7 @@ class gm implements mh, de {
             return stackIn_2_0;
           }
           this.b(param4 ^ 4056, param1);
-          stackIn_4_0 = param1.field_u.a(param3 - this.b(param5, param1, 0), -this.a(param0, param1, 16098) + param2, param4 + 4166);
+          stackIn_4_0 = param1.field_u.characterAtPoint(param3 - this.b(param5, param1, 0), -this.a(param0, param1, 16098) + param2, param4 + 4166);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -684,7 +684,7 @@ class gm implements mh, de {
     protected gm() {
     }
 
-    gm(vn param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
+    gm(LegacyBitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
         try {
           this.field_d = param5;
           this.field_j = param9;

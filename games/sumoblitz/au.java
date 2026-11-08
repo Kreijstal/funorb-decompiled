@@ -225,7 +225,7 @@ final class au extends LegacyOpenGlEffect {
         synchronized (var1) {
           ht.field_h = ht.field_h + 1;
           ar.field_G = b.field_a;
-          ko.field_p = kl.field_C;
+          ko.field_p = SoftCacheReference.field_C;
           pi.field_e = SecondaryNodeDeque.field_b;
           sl.field_d = ResourceArchive.field_i;
           ResourceArchive.field_i = false;

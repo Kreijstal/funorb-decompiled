@@ -23,7 +23,7 @@ final class jq {
     final static void a(int param0, Sprite param1) {
         try {
           GameApplet.j(82);
-          SoftwareRasterizer.a(param1.pixels, param1.field_z, param1.field_w);
+          SoftwareRasterizer.setRaster(param1.pixels, param1.field_z, param1.field_w);
           if (param0 != 7161) {
             jq.a(-84, -69);
           }

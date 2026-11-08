@@ -101,7 +101,7 @@ final class cv extends WidgetContainer implements pw, ai {
           this.field_H = (dh) null;
         }
         if (null != this.field_D) {
-          SoftwareRasterizer.f(param0 + 10, param1 + 134, -20 + this.field_q, 4210752);
+          SoftwareRasterizer.drawHorizontalLine(param0 + 10, param1 + 134, -20 + this.field_q, 4210752);
         }
         super.a(param0, param1, (byte) -59, param3);
     }
@@ -126,7 +126,7 @@ final class cv extends WidgetContainer implements pw, ai {
         RuntimeException decompiledCaughtException = null;
         ue var6 = null;
         RuntimeException var6_ref = null;
-        vn var7 = null;
+        LegacyBitmapFont var7 = null;
         String var8 = null;
         jj var9 = null;
         rt var12 = null;

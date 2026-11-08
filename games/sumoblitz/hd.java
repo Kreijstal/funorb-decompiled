@@ -6,7 +6,7 @@ final class hd extends ac {
     Object[] field_K;
     static String regularText;
     static Sprite[] field_O;
-    private vn field_P;
+    private LegacyBitmapFont field_P;
     static ResourceArchive field_H;
     int field_J;
     int field_N;
@@ -149,7 +149,7 @@ final class hd extends ac {
         if (param2 < -35) {
           var5 = param0 + this.field_r;
           var6 = param1 + this.field_v;
-          SoftwareRasterizer.d(var5, var6, this.field_q, this.field_p, 0);
+          SoftwareRasterizer.fillRectangle(var5, var6, this.field_q, this.field_p, 0);
           var7 = this.field_L;
           if (-1 != this.field_N) {
             var7 = this.field_N;
@@ -161,7 +161,7 @@ final class hd extends ac {
             var16 = this.field_K[var8];
             var17 = var16.toString();
             if (var7 == var8) {
-              SoftwareRasterizer.b(2 + var5, var6 + 4, -4 + this.field_q, this.field_J, 2188450, 128);
+              SoftwareRasterizer.fillRectangleAlpha(2 + var5, var6 + 4, -4 + this.field_q, this.field_J, 2188450, 128);
             }
             var6 = var6 + this.field_J;
             this.field_P.b(var17, 2 + var5, var6, 10000536, -1);
@@ -171,7 +171,7 @@ final class hd extends ac {
         this.b(56, -9, false, ((int[]) (this.field_K[0]))[2]);
         var5Lifetime1 = param0 + this.field_r;
         var6Lifetime1 = param1 + this.field_v;
-        SoftwareRasterizer.d(var5Lifetime1, var6Lifetime1, this.field_q, this.field_p, 0);
+        SoftwareRasterizer.fillRectangle(var5Lifetime1, var6Lifetime1, this.field_q, this.field_p, 0);
         var7Lifetime1 = this.field_L;
         if (-1 != this.field_N) {
           var7Lifetime1 = this.field_N;
@@ -183,14 +183,14 @@ final class hd extends ac {
           var14 = this.field_K[var8Lifetime1];
           var15 = var14.toString();
           if (var7Lifetime1 == var8Lifetime1) {
-            SoftwareRasterizer.b(2 + var5Lifetime1, var6Lifetime1 + 4, -4 + this.field_q, this.field_J, 2188450, 128);
+            SoftwareRasterizer.fillRectangleAlpha(2 + var5Lifetime1, var6Lifetime1 + 4, -4 + this.field_q, this.field_J, 2188450, 128);
           }
           var6Lifetime1 = var6Lifetime1 + this.field_J;
           this.field_P.b(var15, 2 + var5Lifetime1, var6Lifetime1, 10000536, -1);
         }
     }
 
-    hd(ld param0, vn param1, Object[] param2, int param3) {
+    hd(ld param0, LegacyBitmapFont param1, Object[] param2, int param3) {
         super(param0);
         try {
           this.field_M = param0;

@@ -31,11 +31,11 @@ final class wg {
               var6 = gt.$cfr$intArgs$a$590e95718a07(-59, bf.field_c[var3_int], true);
               var7 = oj.field_a - (var6 >> 1);
               var4 = var4 + qc.field_a;
-              if (oc.a(var4, (byte) 122, param2, var7 - dw.field_b, ga.field_h + (ag.field_b << 1), param0, (dw.field_b << 1) + var6)) {
+              if (oc.a(var4, (byte) 122, param2, var7 - dw.field_b, ga.field_h + (TextLayout.field_b << 1), param0, (dw.field_b << 1) + var6)) {
                 stackIn_8_0 = var5;
                 return stackIn_8_0;
               }
-              var4 = var4 + (qc.field_a + (ag.field_b << 1) + ga.field_h);
+              var4 = var4 + (qc.field_a + (TextLayout.field_b << 1) + ga.field_h);
             }
             var3_int++;
           }

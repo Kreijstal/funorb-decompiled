@@ -13,7 +13,7 @@ final class ld extends WidgetContainer implements ai {
     static SpriteData[] field_F;
     static int field_D;
     String field_L;
-    vn field_G;
+    LegacyBitmapFont field_G;
     static int field_C;
     static bw field_N;
 

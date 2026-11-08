@@ -58,7 +58,7 @@ final class ng extends ShaderEffect {
             this.field_b.g(2, -117);
             this.field_b.a((byte) -83, SlowBurstParticle.field_v, SlowBurstParticle.field_v);
             this.field_b.a(jq.field_a, 0, 0);
-            this.field_b.a(ta.field_a, 1, 0);
+            this.field_b.a(FontMetrics.field_a, 1, 0);
             this.field_b.a(jq.field_a, 0, true);
             this.field_b.a((ed) null, 110);
           } else {
@@ -260,11 +260,11 @@ final class ng extends ShaderEffect {
             this.field_b.a(ip.field_y, 28880);
             if (!this.field_g) {
               this.field_b.a((byte) -83, SlowBurstParticle.field_v, lf.field_e);
-              this.field_b.a(ta.field_a, 0, param1 ^ 20186);
+              this.field_b.a(FontMetrics.field_a, 0, param1 ^ 20186);
               this.field_b.g(2, param1 - 20295);
               this.field_b.a((byte) -83, lf.field_e, cv.field_F);
-              this.field_b.a(ta.field_a, 0, 0);
-              this.field_b.a((byte) 102, 1, true, false, ta.field_a);
+              this.field_b.a(FontMetrics.field_a, 0, 0);
+              this.field_b.a((byte) 102, 1, true, false, FontMetrics.field_a);
               this.field_b.a(fv.field_y, 0, true);
               this.field_b.a(this.field_b.field_D, param1 - 20079);
             } else {

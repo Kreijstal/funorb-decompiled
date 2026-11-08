@@ -36,7 +36,7 @@ final class tm implements mh {
             vp.field_a = param7;
             jm.field_b = param13;
             mc.field_C = param9;
-            jt.field_t = param2;
+            CacheReferenceNode.field_t = param2;
             qn.field_a = param10;
             if (param1 != 84) {
               return;
@@ -45,12 +45,12 @@ final class tm implements mh {
             MidiNoteMixer.field_p = param6;
             gn.field_d = param0;
             nb.field_b = param4;
-            jt.field_r = param11;
-            if (null == jt.field_t.field_n) {
+            CacheReferenceNode.field_r = param11;
+            if (null == CacheReferenceNode.field_t.field_n) {
               return;
             }
             try {
-              pe.field_E = new gj(jt.field_t.field_n, 64, 0);
+              pe.field_E = new gj(CacheReferenceNode.field_t.field_n, 64, 0);
               return;
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

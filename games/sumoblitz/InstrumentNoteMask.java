@@ -21,19 +21,19 @@ final class InstrumentNoteMask extends IntrusiveNode {
         Sprite var4 = null;
         int var5 = Sumoblitz.field_L ? 1 : 0;
         int var1 = vg.field_k[0] * we.field_B[0];
-        byte[] var2 = ag.field_d[0];
+        byte[] var2 = TextLayout.field_d[0];
         int[] var3 = new int[var1];
         Sprite var4Lifetime1;
         for (var4_int = 0; var1 > var4_int; var4_int++) {
           var3[var4_int] = LegacyOpenGlEffectManager.field_l[eb.a(255, (int) var2[var4_int])];
         }
         if (param0 == -8) {
-          var4 = new Sprite(vf.field_d, li.field_u, er.field_h[0], av.field_C[0], vg.field_k[0], we.field_B[0], var3);
+          var4 = new Sprite(vf.field_d, li.field_u, er.field_h[0], StrongCacheReference.field_C[0], vg.field_k[0], we.field_B[0], var3);
           PowerupPickup.releaseSpriteDecoderArrays((byte) -59);
           return var4;
         }
         InstrumentNoteMask.c((byte) -8);
-        var4Lifetime1 = new Sprite(vf.field_d, li.field_u, er.field_h[0], av.field_C[0], vg.field_k[0], we.field_B[0], var3);
+        var4Lifetime1 = new Sprite(vf.field_d, li.field_u, er.field_h[0], StrongCacheReference.field_C[0], vg.field_k[0], we.field_B[0], var3);
         PowerupPickup.releaseSpriteDecoderArrays((byte) -59);
         return var4Lifetime1;
     }

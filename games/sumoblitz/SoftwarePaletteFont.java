@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class je extends da {
+final class SoftwarePaletteFont extends ToolkitFont {
     private byte[][] field_e;
     private int[] field_i;
     private int[] field_f;
@@ -104,7 +104,7 @@ final class je extends da {
         }
     }
 
-    final void fa(char param0, int param1, int param2, int param3, boolean param4) {
+    final void drawGlyph(char param0, int param1, int param2, int param3, boolean param4) {
         int var13 = 0;
         int var13Lifetime1;
         int var13Lifetime2;
@@ -153,12 +153,12 @@ final class je extends da {
         }
     }
 
-    final void a(char param0, int param1, int param2, int param3, boolean param4, aa param5, int param6, int param7) {
+    final void drawMaskedGlyph(char param0, int param1, int param2, int param3, boolean param4, SpriteMask param5, int param6, int param7) {
         int var16 = 0;
         int var16Lifetime1;
         int var16Lifetime2;
         if (param5 == null) {
-          this.fa(param0, param1, param2, param3, param4);
+          this.drawGlyph(param0, param1, param2, param3, param4);
           return;
         }
         param1 = param1 + this.field_d[param0];
@@ -206,12 +206,12 @@ final class je extends da {
         }
     }
 
-    private final void a(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, aa param12, int param13, int param14) {
+    private final void a(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, SpriteMask param12, int param13, int param14) {
         int var22 = 0;
         int var27 = 0;
         int stackIn_5_0 = 0;
         Object var16;
-        dm var16_ref;
+        ScanlineSpriteMask var16_ref;
         int[] var17;
         int[] var18;
         int var19;
@@ -225,11 +225,11 @@ final class je extends da {
         int[] var29;
         int var26Lifetime1;
         var16 = null;
-        var16_ref = (dm) (param12);
-        var29 = var16_ref.field_f;
+        var16_ref = (ScanlineSpriteMask) (param12);
+        var29 = var16_ref.rowStarts;
         var28 = var29;
         var17 = var28;
-        var18 = var16_ref.field_g;
+        var18 = var16_ref.rowWidths;
         var19 = param9 - this.field_g.field_v;
         var20 = param10;
         if (param14 > var20) {
@@ -333,7 +333,7 @@ final class je extends da {
         }
     }
 
-    private final void a(byte[] param0, int[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, aa param13, int param14, int param15) {
+    private final void a(byte[] param0, int[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, SpriteMask param13, int param14, int param15) {
         int var24 = 0;
         int var29 = 0;
         int incrementValue$0 = 0;
@@ -341,7 +341,7 @@ final class je extends da {
         int incrementValue$2 = 0;
         int stackIn_5_0 = 0;
         Object var17;
-        dm var17_ref;
+        ScanlineSpriteMask var17_ref;
         int[] var18;
         int[] var19;
         int var20;
@@ -357,11 +357,11 @@ final class je extends da {
         int var23Lifetime1;
         int var28Lifetime1;
         var17 = null;
-        var17_ref = (dm) (param13);
-        var31 = var17_ref.field_f;
+        var17_ref = (ScanlineSpriteMask) (param13);
+        var31 = var17_ref.rowStarts;
         var30 = var31;
         var18 = var30;
-        var19 = var17_ref.field_g;
+        var19 = var17_ref.rowWidths;
         var20 = param10 - this.field_g.field_v;
         var21 = param11;
         if (param15 > var21) {
@@ -430,7 +430,7 @@ final class je extends da {
         }
     }
 
-    je(SoftwareGraphicsToolkit param0, ta param1, SpriteData[] param2, int[] param3, int[] param4) {
+    SoftwarePaletteFont(SoftwareGraphicsToolkit param0, FontMetrics param1, SpriteData[] param2, int[] param3, int[] param4) {
         super(param0, param1);
         int var6 = 0;
         this.field_g = param0;

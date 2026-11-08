@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class da {
-    private ta field_b;
+abstract class ToolkitFont {
+    private FontMetrics field_b;
     private GraphicsToolkit field_a;
 
     final void a(int param0, int param1, int param2, String param3, byte param4, int param5) {
@@ -14,13 +14,13 @@ abstract class da {
         }
         try {
           this.a(param2, param5, 60);
-          this.a(-274, param0, (ToolkitSprite[]) null, param1, 0, 0, param3, (int[]) null, (aa) null);
+          this.a(-274, param0, (ToolkitSprite[]) null, param1, 0, 0, param3, (int[]) null, (SpriteMask) null);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "da.I(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 
-    final int a(int param0, int param1, int param2, int param3, int param4, int[] param5, ToolkitSprite[] param6, int param7, int param8, int param9, int param10, int param11, String param12, aa param13, int param14, int param15) {
+    final int a(int param0, int param1, int param2, int param3, int param4, int[] param5, ToolkitSprite[] param6, int param7, int param8, int param9, int param10, int param11, String param12, SpriteMask param13, int param14, int param15) {
         RuntimeException var17 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -80,7 +80,7 @@ abstract class da {
             this.field_a = (GraphicsToolkit) null;
           }
           this.a(param4, param0, 60);
-          this.a(-274, param3, (ToolkitSprite[]) null, -this.field_b.a(param2, 0) + param1, 0, 0, param2, (int[]) null, (aa) null);
+          this.a(-274, param3, (ToolkitSprite[]) null, -this.field_b.a(param2, 0) + param1, 0, 0, param2, (int[]) null, (SpriteMask) null);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "da.O(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
@@ -186,7 +186,7 @@ abstract class da {
         }
     }
 
-    private final int a(aa param0, ToolkitSprite[] param1, int param2, int[] param3, String param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16) {
+    private final int a(SpriteMask param0, ToolkitSprite[] param1, int param2, int[] param3, String param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16) {
         int stackIn_4_0 = 0;
         int stackIn_47_0 = 0;
         Object stackIn_50_0 = null;
@@ -204,7 +204,7 @@ abstract class da {
         int var20 = 0;
         int var21 = 0;
         int var22 = 0;
-        aa var23 = null;
+        SpriteMask var23 = null;
         int var21Lifetime1;
         var22 = Sumoblitz.field_L ? 1 : 0;
         try {
@@ -239,8 +239,8 @@ abstract class da {
             param15 = 1;
           }
           if (param14 < 38) {
-            var23 = (aa) null;
-            this.a(98, 62, (ToolkitSprite[]) null, 36, 116, -67, (String) null, (int[]) null, (aa) null);
+            var23 = (SpriteMask) null;
+            this.a(98, 62, (ToolkitSprite[]) null, 36, 116, -67, (String) null, (int[]) null, (SpriteMask) null);
           }
           if (0 == param15) {
             var20 = param16 + this.field_b.field_i;
@@ -316,7 +316,7 @@ abstract class da {
         }
     }
 
-    private final void a(int param0, int param1, ToolkitSprite[] param2, int param3, int param4, int param5, String param6, int[] param7, aa param8) {
+    private final void a(int param0, int param1, ToolkitSprite[] param2, int param3, int param4, int param5, String param6, int[] param7, SpriteMask param8) {
         int var13 = 0;
         int stackIn_25_0 = 0;
         RuntimeException stackIn_62_0 = null;
@@ -429,14 +429,14 @@ abstract class da {
                 if (var14 != 32) {
                   if (param8 == null) {
                     if ((-16777216 & jj.field_b) != 0) {
-                      this.fa((char) var14, param3 + 1, param1 + 1, jj.field_b, true);
+                      this.drawGlyph((char) var14, param3 + 1, param1 + 1, jj.field_b, true);
                     }
-                    this.fa((char) var14, param3, param1, mn.field_i, false);
+                    this.drawGlyph((char) var14, param3, param1, mn.field_i, false);
                   } else {
                     if ((-16777216 & jj.field_b) != 0) {
-                      this.a((char) var14, param3 + 1, param1 + 1, jj.field_b, true, param8, param4, param5);
+                      this.drawMaskedGlyph((char) var14, param3 + 1, param1 + 1, jj.field_b, true, param8, param4, param5);
                     }
-                    this.a((char) var14, param3, param1, mn.field_i, false, param8, param4, param5);
+                    this.drawMaskedGlyph((char) var14, param3, param1, mn.field_i, false, param8, param4, param5);
                   }
                 } else {
                   if (lb.field_b > 0) {
@@ -508,9 +508,9 @@ abstract class da {
         ar.field_E = jb.a("commonui", "jagex_logo_grey", -104, param0);
         LevelCompleteUpgradeScreen.field_j = kb.a("button", param0, true, "commonui");
         fw.field_m = DelayedInboundPacket.a(param0, "commonui", (byte) -56, "validation");
-        jm.field_a = (vn) ((Object) vf.a(param1, true, "commonui", "arezzo12", param0));
-        kw.field_b = (vn) ((Object) vf.a(param1, true, "commonui", "arezzo14", param0));
-        tq.field_a = (vn) ((Object) vf.a(param1, true, "commonui", "arezzo14bold", param0));
+        jm.field_a = (LegacyBitmapFont) ((Object) vf.a(param1, true, "commonui", "arezzo12", param0));
+        kw.field_b = (LegacyBitmapFont) ((Object) vf.a(param1, true, "commonui", "arezzo14", param0));
+        tq.field_a = (LegacyBitmapFont) ((Object) vf.a(param1, true, "commonui", "arezzo14bold", param0));
         Sprite var17 = new Sprite(param3.a("", "button.gif", -1), (java.awt.Component) ((Object) qn.field_f));
         mc.a((byte) 83, param0, "dropdown", "commonui");
         ne[] var5 = ShaderEffect.a("screen_options", param0, 73, "commonui");
@@ -543,7 +543,7 @@ abstract class da {
         try {
           GameApplet.j(70);
           var17.d();
-          SoftwareRasterizer.g(0, 0, SoftwareRasterizer.field_b, SoftwareRasterizer.field_c);
+          SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
           var15 = new Sprite(var9, var9);
           var18 = var15;
           var18.d();
@@ -561,7 +561,7 @@ abstract class da {
         }
     }
 
-    abstract void fa(char param0, int param1, int param2, int param3, boolean param4);
+    abstract void drawGlyph(char param0, int param1, int param2, int param3, boolean param4);
 
     final void a(String param0, int param1, int param2, int param3, int param4, int param5) {
         if (param0 == null) {
@@ -569,7 +569,7 @@ abstract class da {
         }
         try {
           this.a(param1, param2, 60);
-          this.a(-274, param3, (ToolkitSprite[]) null, -(this.field_b.a(param0, param5) / 2) + param4, 0, 0, param0, (int[]) null, (aa) null);
+          this.a(-274, param3, (ToolkitSprite[]) null, -(this.field_b.a(param0, param5) / 2) + param4, 0, 0, param0, (int[]) null, (SpriteMask) null);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "da.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
@@ -585,14 +585,14 @@ abstract class da {
         vo.field_I = -1;
         sb.field_a = 0;
         if (param2 != 60) {
-          this.field_b = (ta) null;
+          this.field_b = (FontMetrics) null;
         }
         fl.field_p = -1;
         jv.field_b = param1;
         jj.field_b = param1;
     }
 
-    da(GraphicsToolkit param0, ta param1) {
+    ToolkitFont(GraphicsToolkit param0, FontMetrics param1) {
         try {
           this.field_b = param1;
           this.field_a = param0;
@@ -616,7 +616,7 @@ abstract class da {
           }
           if (param1 > -11) {
             var4 = (ResourceArchive) null;
-            da.a((ResourceArchive) null, (ResourceArchive) null, 47, (ResourceArchive) null);
+            ToolkitFont.a((ResourceArchive) null, (ResourceArchive) null, 47, (ResourceArchive) null);
           }
           if (param0.field_a != param2.field_a) {
             return false;
@@ -645,7 +645,7 @@ abstract class da {
         }
     }
 
-    abstract void a(char param0, int param1, int param2, int param3, boolean param4, aa param5, int param6, int param7);
+    abstract void drawMaskedGlyph(char param0, int param1, int param2, int param3, boolean param4, SpriteMask param5, int param6, int param7);
 
     private final void a(String param0, int param1, byte param2) {
         int var6 = 0;

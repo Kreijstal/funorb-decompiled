@@ -235,8 +235,8 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
           }
           this.field_b.a(this.field_b.field_D, 97);
           this.field_b.h(113, 1);
-          this.field_b.a(ta.field_a, 0, 0);
-          this.field_b.a(ta.field_a, 0, true);
+          this.field_b.a(FontMetrics.field_a, 0, 0);
+          this.field_b.a(FontMetrics.field_a, 0, true);
           this.field_h = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -267,7 +267,7 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
           this.field_b.a((byte) -83, lf.field_e, ua.field_n);
           this.field_b.a(mm.field_h, 0, 0);
           this.field_b.a((byte) 85, 2, true, false, jq.field_a);
-          this.field_b.a(ta.field_a, 0, true);
+          this.field_b.a(FontMetrics.field_a, 0, true);
           this.field_b.g(0, -108);
           this.e((byte) 14);
           return;

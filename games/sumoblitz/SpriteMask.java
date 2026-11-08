@@ -1,23 +1,23 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class aa {
+abstract class SpriteMask {
     static String arcadeModeUnlockedText;
     static char[] field_c;
-    static Drone[] field_a;
+    static Drone[] drones;
     static int[] field_d;
 
-    protected aa() throws Throwable {
+    protected SpriteMask() throws Throwable {
         throw new Error();
     }
 
     public static void releaseStatics(boolean param0) {
         arcadeModeUnlockedText = null;
-        field_a = null;
+        drones = null;
         field_c = null;
         field_d = null;
         if (param0) {
-          aa.releaseStatics(true);
+          SpriteMask.releaseStatics(true);
         }
     }
 

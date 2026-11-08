@@ -44,18 +44,18 @@ final class oc extends ShaderEffect {
         int var9Lifetime1;
         var10 = Sumoblitz.field_L ? 1 : 0;
         try {
-          for (var2_int = 0; db.field_l > var2_int; var2_int++) {
-            var11 = aa.field_a[var2_int];
+          for (var2_int = 0; db.droneSlotLimit > var2_int; var2_int++) {
+            var11 = SpriteMask.drones[var2_int];
             if (var11 != null) {
               var4 = var11.radiusQ8 + param0.radiusQ8;
               if (wn.a(var11.yQ8, var4, -104, param0.xQ8, var11.xQ8, param0.yQ8)) {
                 var5 = -var11.xQ8 + param0.xQ8;
                 var6 = param0.yQ8 - var11.yQ8;
                 if (var5 == 0) {
-                  var5 = -1 + (2 & iw.field_b << 1);
+                  var5 = -1 + (2 & iw.elapsedTicks << 1);
                 }
                 if (var6 == 0) {
-                  var6 = ((1 & iw.field_b) << 1) - 1;
+                  var6 = ((1 & iw.elapsedTicks) << 1) - 1;
                 }
                 var7 = (int)Math.round(Math.sqrt((double)((float)var5 * (float)var5 + (float)var6 * (float)var6)));
                 if (var4 > var7) {
@@ -69,7 +69,7 @@ final class oc extends ShaderEffect {
               }
             }
           }
-          var12 = new IntrusiveDequeCursor(is.field_c);
+          var12 = new IntrusiveDequeCursor(is.arenaPads);
           var3 = (ArenaPad) (var12.first((byte) -80));
           if (param1) {
             return;
@@ -79,11 +79,11 @@ final class oc extends ShaderEffect {
             if (wn.a(param0.yQ8, var4Lifetime1, -114, var3.xQ8, param0.xQ8, var3.yQ8)) {
               var5Lifetime1 = -var3.xQ8 + param0.xQ8;
               if (var5Lifetime1 == 0) {
-                var5Lifetime1 = -1 + (2 & iw.field_b << 1);
+                var5Lifetime1 = -1 + (2 & iw.elapsedTicks << 1);
               }
               var6Lifetime1 = -var3.yQ8 + param0.yQ8;
               if (var6Lifetime1 == 0) {
-                var6Lifetime1 = -1 + ((iw.field_b & 1) << 1);
+                var6Lifetime1 = -1 + ((iw.elapsedTicks & 1) << 1);
               }
               var7Lifetime1 = (int)Math.round(Math.sqrt((double)((float)var6Lifetime1 * (float)var6Lifetime1 + (float)var5Lifetime1 * (float)var5Lifetime1)));
               if (var4Lifetime1 > var7Lifetime1) {
@@ -107,17 +107,17 @@ final class oc extends ShaderEffect {
           if (rl.field_k - 26 << 8 < param0.radiusQ8 + param0.yQ8) {
             param0.yQ8 = param0.yQ8 - (26 << 9 + param0.radiusQ8);
           }
-          for (var4Lifetime2 = 0; var4Lifetime2 < db.field_l; var4Lifetime2++) {
-            if (aa.field_a[var4Lifetime2] == null &&
+          for (var4Lifetime2 = 0; var4Lifetime2 < db.droneSlotLimit; var4Lifetime2++) {
+            if (SpriteMask.drones[var4Lifetime2] == null &&
               var4Lifetime2 != 0) {
-              aa.field_a[var4Lifetime2] = param0;
+              SpriteMask.drones[var4Lifetime2] = param0;
               return;
             }
           }
-          if (aa.field_a.length > db.field_l) {
-            fieldTemp$0 = db.field_l;
-            db.field_l = db.field_l + 1;
-            aa.field_a[fieldTemp$0] = param0;
+          if (SpriteMask.drones.length > db.droneSlotLimit) {
+            fieldTemp$0 = db.droneSlotLimit;
+            db.droneSlotLimit = db.droneSlotLimit + 1;
+            SpriteMask.drones[fieldTemp$0] = param0;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

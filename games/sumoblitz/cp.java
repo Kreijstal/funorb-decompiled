@@ -14,7 +14,7 @@ final class cp {
     int field_s;
     mh field_j;
     int field_g;
-    vn field_v;
+    LegacyBitmapFont field_v;
     static int[] field_c;
     mh field_e;
     int field_a;
@@ -129,15 +129,15 @@ final class cp {
           var5_int = this.field_v.a(param1);
           var6 = this.field_v.field_y + this.field_v.field_I;
           var7 = param2;
-          if (var7 + var5_int + 6 > SoftwareRasterizer.field_b) {
-            var7 = SoftwareRasterizer.field_b - (var5_int + 6);
+          if (var7 + var5_int + 6 > SoftwareRasterizer.width) {
+            var7 = SoftwareRasterizer.width - (var5_int + 6);
           }
           var8 = 32 - this.field_v.field_y + param0;
-          if (SoftwareRasterizer.field_c < 6 + (var8 + var6)) {
-            var8 = -6 + SoftwareRasterizer.field_c - var6;
+          if (SoftwareRasterizer.height < 6 + (var8 + var6)) {
+            var8 = -6 + SoftwareRasterizer.height - var6;
           }
-          SoftwareRasterizer.b(var7, var8, var5_int + 6, 6 + var6, this.field_t);
-          SoftwareRasterizer.d(var7 + 1, var8 + 1, var5_int + 4, 4 + var6, this.field_d);
+          SoftwareRasterizer.drawRectangle(var7, var8, var5_int + 6, 6 + var6, this.field_t);
+          SoftwareRasterizer.fillRectangle(var7 + 1, var8 + 1, var5_int + 4, 4 + var6, this.field_d);
           this.field_v.b(param1, var7 + 3, var8 + 3 + this.field_v.field_y, this.field_t, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -155,7 +155,7 @@ final class cp {
     }
 
     final void a(int param0, int param1, boolean param2, int param3, int param4, int param5) {
-        SoftwareRasterizer.e(param3, param5, param1, param4, param0);
+        SoftwareRasterizer.drawLine(param3, param5, param1, param4, param0);
         if (param2) {
           this.field_f = (mh) null;
         }
@@ -219,7 +219,7 @@ final class cp {
           if (var7 == -1) {
             var7 = this.field_v.field_I + this.field_v.field_s;
           }
-          var8 = SoftwareRasterizer.field_b >> 2;
+          var8 = SoftwareRasterizer.width >> 2;
           var9 = this.field_v.a(param1);
           var10 = this.field_v.field_s + this.field_v.field_I;
           var11 = 1;
@@ -246,15 +246,15 @@ final class cp {
           }
           var12 = param0;
           var13Lifetime1 = 70 / ((74 - param2) / 40);
-          if (SoftwareRasterizer.field_b < var5_int + var12 + var9) {
-            var12 = -var5_int + SoftwareRasterizer.field_b - var9;
+          if (SoftwareRasterizer.width < var5_int + var12 + var9) {
+            var12 = -var5_int + SoftwareRasterizer.width - var9;
           }
           var14Lifetime1 = 32 + (-this.field_v.field_y + param3);
-          if (SoftwareRasterizer.field_c < var6 + var14Lifetime1 + var10) {
+          if (SoftwareRasterizer.height < var6 + var14Lifetime1 + var10) {
             var14Lifetime1 = -var10 + param3 - var6;
           }
-          SoftwareRasterizer.b(var12, var14Lifetime1, var9 + var5_int, var10 + var6, this.field_r);
-          SoftwareRasterizer.d(var12 + 1, 1 + var14Lifetime1, var5_int + var9 - 2, var6 + var10 - 2, this.field_d);
+          SoftwareRasterizer.drawRectangle(var12, var14Lifetime1, var9 + var5_int, var10 + var6, this.field_r);
+          SoftwareRasterizer.fillRectangle(var12 + 1, 1 + var14Lifetime1, var5_int + var9 - 2, var6 + var10 - 2, this.field_d);
           this.field_v.a(param1, var12 + this.field_l, var14Lifetime1 + this.field_s, var9, var10, this.field_t, -1, 0, 0, var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -271,7 +271,7 @@ final class cp {
         }
     }
 
-    final void a(vn param0, byte param1) {
+    final void a(LegacyBitmapFont param0, byte param1) {
         gm var17 = null;
         fl var4 = null;
         Sprite[] var5 = null;
@@ -311,9 +311,9 @@ final class cp {
           this.field_t = 15658734;
           this.field_u = -1;
           var4.field_l = 11711154;
-          var4.a(false, 0).c(15658734, 17818).a(ta.a(8947848, 92, 10066329, 7829367), 2147483647);
-          var4.a(false, 1).a(ta.a(11184810, 126, 10066329, 13421772), 2147483647);
-          var4.a(false, 3).a(ta.a(8947848, 97, 7829367, 10066329), 2147483647).a(1, -1).b(1, 1);
+          var4.a(false, 0).c(15658734, 17818).a(FontMetrics.a(8947848, 92, 10066329, 7829367), 2147483647);
+          var4.a(false, 1).a(FontMetrics.a(11184810, 126, 10066329, 13421772), 2147483647);
+          var4.a(false, 3).a(FontMetrics.a(8947848, 97, 7829367, 10066329), 2147483647).a(1, -1).b(1, 1);
           var5 = new Sprite[9];
           var16 = new mg(32, 32);
           var18 = var16;
@@ -338,7 +338,7 @@ final class cp {
           discarded$1 = new iu(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new fl();
           var17.a(var8, 107);
-          var8.a(false, 0).a(ta.a(15658734, 102, 7829367, 10066329), 2147483647).c(1118481, 17818).d(-1, 30149);
+          var8.a(false, 0).a(FontMetrics.a(15658734, 102, 7829367, 10066329), 2147483647).c(1118481, 17818).d(-1, 30149);
           var8.a(false, 4).a(true, true).a(var5, 2147483647);
           this.field_j = (mh) ((Object) var8);
           var9 = new Sprite[9];
@@ -358,14 +358,14 @@ final class cp {
           this.field_g = 10;
           var13.pixels = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           var14 = new fl(var4, true);
-          var14.a(-84, var13.b());
-          var13.c();
+          var14.a(-84, var13.copy());
+          var13.rotateClockwise();
           var14Lifetime1 = new fl(var4, true);
-          var14Lifetime1.a(30, var13.b());
-          var13.c();
+          var14Lifetime1.a(30, var13.copy());
+          var13.rotateClockwise();
           var14Lifetime2 = new fl(var4, true);
-          var14Lifetime2.a(111, var13.b());
-          var13.c();
+          var14Lifetime2.a(111, var13.copy());
+          var13.rotateClockwise();
           var19 = new fl(var4, true);
           var19.a(-29, var13);
         } catch (RuntimeException runtimeException) {
@@ -382,7 +382,7 @@ final class cp {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        SoftwareRasterizer.b(param4, param6, param5, param2, param3, param0);
+        SoftwareRasterizer.fillRectangleAlpha(param4, param6, param5, param2, param3, param0);
         if (param1 != 3) {
           byte[] var9 = (byte[]) null;
           cp.a((byte[]) null, -45);

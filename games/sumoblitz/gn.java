@@ -16,7 +16,7 @@ final class gn {
           byte[] var3 = (byte[]) null;
           gn.a((byte[]) null, (byte) -29, -53, 2);
         }
-        PlayerDrone.a(-125, rc.field_l[param0]);
+        PlayerDrone.playSample(-125, rc.field_l[param0]);
     }
 
     final static byte[] a(byte[] param0, byte param1, int param2, int param3) {

@@ -72,7 +72,7 @@ final class ch {
           this.field_f = new ek(param0, 6410, 128, 128, 16, var21, 6410);
           var10 = param0.field_Sb;
           if (var10.b((byte) -101)) {
-            var22 = ab.a(false, dj.field_m, 0);
+            var22 = ab.a(false, PlayingSound.field_m, 0);
             this.field_c = new ek(param0, 6408, 128, 128, 16);
             var4 = new ek(param0, 6409, 128, 128, 16, var22, 6409);
             if (!var10.a(this.field_c, 2.0f, false, var4)) {

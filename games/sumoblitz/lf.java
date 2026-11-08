@@ -7,37 +7,37 @@ final class lf extends ka {
     static String[] monthNames;
 
     final static void a(int param0, byte param1) {
-        dj var2 = null;
+        PlayingSound var2 = null;
         int var3 = 0;
         boolean stackIn_14_0 = false;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
-        dj var2Lifetime1;
+        PlayingSound var2Lifetime1;
         var3 = Sumoblitz.field_L ? 1 : 0;
         try {
           kr.field_c = param0;
           if (param1 != -58) {
             return;
           }
-          var2 = (dj) (jf.field_c.first(81));
+          var2 = (PlayingSound) (jf.field_c.first(81));
           while (var2 != null) {
-            if (!var2.field_k.isLinked(false)) {
+            if (!var2.lifetimeNode.isLinked(false)) {
               var2.unlink(false);
             } else {
-              var2.field_q.f(128 + var2.field_p * kr.field_c >> 8);
+              var2.stream.setVolume(128 + var2.originalVolume * kr.field_c >> 8);
             }
-            var2 = (dj) (jf.field_c.next((byte) 18));
+            var2 = (PlayingSound) (jf.field_c.next((byte) 18));
           }
           if (null != s.field_u) {
-            var2Lifetime1 = (dj) (s.field_u.first(param1 ^ -123));
+            var2Lifetime1 = (PlayingSound) (s.field_u.first(param1 ^ -123));
             while (var2Lifetime1 != null) {
-              stackIn_14_0 = var2Lifetime1.field_k.isLinked(false);
+              stackIn_14_0 = var2Lifetime1.lifetimeNode.isLinked(false);
               if (stackIn_14_0) {
-                var2Lifetime1.field_q.f(128 + kr.field_c * var2Lifetime1.field_p >> 8);
+                var2Lifetime1.stream.setVolume(128 + kr.field_c * var2Lifetime1.originalVolume >> 8);
               } else {
                 var2Lifetime1.unlink(false);
               }
-              var2Lifetime1 = (dj) (s.field_u.next((byte) 18));
+              var2Lifetime1 = (PlayingSound) (s.field_u.next((byte) 18));
             }
             return;
           }

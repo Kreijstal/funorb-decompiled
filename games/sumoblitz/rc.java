@@ -5,7 +5,7 @@ final class rc extends bp implements ef {
     static int field_j;
     static PcmSample[] field_l;
     static SpriteData field_i;
-    static IntrusiveDeque field_m;
+    static IntrusiveDeque sceneEffects;
     static int field_k;
 
     public final void a(int param0) {
@@ -21,7 +21,7 @@ final class rc extends bp implements ef {
         if (param0 < 115) {
           return;
         }
-        field_m = null;
+        sceneEffects = null;
         field_l = null;
         field_i = null;
     }

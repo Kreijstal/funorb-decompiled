@@ -15,11 +15,11 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             if (var2_int != 0 &&
               var2_int != 65535 &&
               vo.a(-125, (char) var2_int)) {
-              var3 = jt.field_s + 1 & 127;
+              var3 = CacheReferenceNode.field_s + 1 & 127;
               if (var3 != bj.field_a) {
-                cp.field_c[jt.field_s] = -1;
-                aa.field_c[jt.field_s] = (char)var2_int;
-                jt.field_s = var3;
+                cp.field_c[CacheReferenceNode.field_s] = -1;
+                SpriteMask.field_c[CacheReferenceNode.field_s] = (char)var2_int;
+                CacheReferenceNode.field_s = var3;
               }
             }
           }
@@ -62,11 +62,11 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             }
           }
           if (var2_int >= 0) {
-            var3 = 1 + jt.field_s & 127;
+            var3 = 1 + CacheReferenceNode.field_s & 127;
             if (var3 != bj.field_a) {
-              cp.field_c[jt.field_s] = var2_int;
-              aa.field_c[jt.field_s] = (char)0;
-              jt.field_s = var3;
+              cp.field_c[CacheReferenceNode.field_s] = var2_int;
+              SpriteMask.field_c[CacheReferenceNode.field_s] = (char)0;
+              CacheReferenceNode.field_s = var3;
             }
           }
           var3Lifetime1 = param0.getModifiers();
@@ -104,7 +104,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        if (gt.field_bb) {
+        if (gt.arcadeMode) {
           return;
         }
         try {
@@ -117,7 +117,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           }
           var6 = 1;
           var7 = ExpandingRingEffect.nextRandomInt(5, he.field_o, (byte) -96);
-          bj.field_b.addLast((IntrusiveNode) (new PowerupPickup(var6, var7, var2_int, var3, var4, var5)), (byte) 39);
+          bj.powerupPickups.addLast((IntrusiveNode) (new PowerupPickup(var6, var7, var2_int, var3, var4, var5)), (byte) 39);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "hb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

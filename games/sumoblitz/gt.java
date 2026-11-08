@@ -7,13 +7,13 @@ class gt extends ur implements ai {
     static jh field_gb;
     static int field_ab;
     private boolean field_cb;
-    static da field_db;
+    static ToolkitFont field_db;
     static String loadingMusicText;
-    static boolean field_bb;
+    static boolean arcadeMode;
     private pq field_ib;
     private boolean field_kb;
     private boolean field_fb;
-    private vn field_jb;
+    private LegacyBitmapFont field_jb;
     private boolean field_eb;
 
     final static void a(int param0, java.applet.Applet param1) {
@@ -37,7 +37,7 @@ class gt extends ur implements ai {
           }
           this.field_D = false;
           if (this.field_cb) {
-            ag.a(0);
+            TextLayout.a(0);
             return;
           }
           if (this.field_fb) {
@@ -51,7 +51,7 @@ class gt extends ur implements ai {
         }
         this.field_D = false;
         if (this.field_cb) {
-          ag.a(0);
+          TextLayout.a(0);
           return;
         }
         if (this.field_fb) {
@@ -163,7 +163,7 @@ class gt extends ur implements ai {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 710) {
-            field_db = (da) null;
+            field_db = (ToolkitFont) null;
           }
           if (!this.field_eb) {
             cn.a("tochangedisplayname.ws", ra.c(param1 - 708), (byte) -103);
@@ -341,7 +341,7 @@ class gt extends ur implements ai {
         }
     }
 
-    gt(dg param0, vn param1, String param2, boolean param3, boolean param4) {
+    gt(dg param0, LegacyBitmapFont param1, String param2, boolean param3, boolean param4) {
         super(param0, new lc((gt) null, param1, param2), 77, 10, 10);
         try {
           this.field_fb = param4 ? true : false;

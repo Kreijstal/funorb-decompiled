@@ -72,8 +72,8 @@ final class eg extends IntrusiveNode {
           vg.field_k = new int[rl.field_n];
           we.field_B = new int[rl.field_n];
           og.field_d = new boolean[rl.field_n];
-          ag.field_d = new byte[rl.field_n][];
-          av.field_C = new int[rl.field_n];
+          TextLayout.field_d = new byte[rl.field_n][];
+          StrongCacheReference.field_C = new int[rl.field_n];
           er.field_h = new int[rl.field_n];
           fl.field_o = new byte[rl.field_n][];
           var17.position = -(rl.field_n * 8) - 7 + param1.length;
@@ -84,7 +84,7 @@ final class eg extends IntrusiveNode {
             er.field_h[var4] = var16.a(255);
           }
           for (var4Lifetime1 = 0; rl.field_n > var4Lifetime1; var4Lifetime1++) {
-            av.field_C[var4Lifetime1] = var17.a(255);
+            StrongCacheReference.field_C[var4Lifetime1] = var17.a(255);
           }
           for (var4Lifetime2 = 0; rl.field_n > var4Lifetime2; var4Lifetime2++) {
             vg.field_k[var4Lifetime2] = var17.a(255);
@@ -109,7 +109,7 @@ final class eg extends IntrusiveNode {
               var20 = new byte[var7];
               var18 = var20;
               var8 = var18;
-              ag.field_d[var4Lifetime5] = var20;
+              TextLayout.field_d[var4Lifetime5] = var20;
               var21 = new byte[var7];
               var19 = var21;
               var9 = var19;

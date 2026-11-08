@@ -106,16 +106,16 @@ final class sj {
               }
               var9 = stackIn_48_0;
               if (var9 != null) {
-                var9.a((dw.field_b << 1) + var7Lifetime1, -dw.field_b + var8Lifetime1, (ag.field_b << 1) + ga.field_h, 101, var1_int);
+                var9.a((dw.field_b << 1) + var7Lifetime1, -dw.field_b + var8Lifetime1, (TextLayout.field_b << 1) + ga.field_h, 101, var1_int);
               }
-              var1_int = var1_int + ag.field_b;
+              var1_int = var1_int + TextLayout.field_b;
             }
             if (var4 < 0) {
               qq.field_R.b(var6, var8Lifetime1, var1_int + NodeHashTableIterator.field_d, var5, -1);
               var1_int = var1_int + GameClientShell.field_t;
             } else {
               MouseWheelInput.field_a.b(var6, var8Lifetime1, var1_int + dl.field_f, var5, -1);
-              var1_int = var1_int + (qc.field_a + (ag.field_b + ga.field_h));
+              var1_int = var1_int + (qc.field_a + (TextLayout.field_b + ga.field_h));
             }
           }
           return;

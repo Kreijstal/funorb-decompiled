@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class sq {
-    static ta field_b;
+    static FontMetrics field_b;
     static int[] field_a;
     private static String field_z;
 

@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dj extends IntrusiveNode {
-    PcmSampleStream field_q;
+final class PlayingSound extends IntrusiveNode {
+    PcmSampleStream stream;
     static String fullScreenText;
     static String[] scoreFilterLabels;
     static ToolkitSprite field_l;
     static int field_n;
-    IntrusiveNode field_k;
-    int field_p;
+    IntrusiveNode lifetimeNode;
+    int originalVolume;
     static Object field_m;
 
     final static boolean a(int param0, int param1) {
@@ -30,18 +30,18 @@ final class dj extends IntrusiveNode {
           scoreFilterLabels = null;
           return;
         }
-        dj.a(-56, -102);
+        PlayingSound.a(-56, -102);
         fullScreenText = null;
         field_m = null;
         scoreFilterLabels = null;
     }
 
-    dj(PcmSampleStream param0, IntrusiveNode param1) {
+    PlayingSound(PcmSampleStream param0, IntrusiveNode param1) {
         try {
-          this.field_q = param0;
-          this.field_p = param0.g();
-          this.field_k = param1;
-          this.field_q.f(128 + this.field_p * kr.field_c >> 8);
+          this.stream = param0;
+          this.originalVolume = param0.targetVolume();
+          this.lifetimeNode = param1;
+          this.stream.setVolume(128 + this.originalVolume * kr.field_c >> 8);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "dj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

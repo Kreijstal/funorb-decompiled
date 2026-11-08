@@ -107,22 +107,22 @@ final class MidiNoteMixer extends PcmStream {
               }
               var11 = param0.field_z;
               if (this.field_u.field_R[param0.field_y] != 0) {
-                param0.field_z = PcmSampleStream.a(param0.field_B, var11.e(), 0, var11.i());
+                param0.field_z = PcmSampleStream.createForSampleStep(param0.field_B, var11.stepMagnitude(), 0, var11.targetPan());
                 stackIn_14_0 = this.field_u;
                 stackIn_14_1 = 114;
                 stackIn_14_2 = (MusicVoice) (param0);
                 stackIn_15_3 = !(param0.field_A.field_k[param0.field_E] >= 0);
                 ((MidiPcmStream) (Object) stackIn_14_0).a((byte) stackIn_14_1, stackIn_14_2, stackIn_15_3);
-                param0.field_z.b(var9, var11.g());
+                param0.field_z.rampVolume(var9, var11.targetVolume());
               } else {
-                param0.field_z = PcmSampleStream.a(param0.field_B, var11.e(), var11.g(), var11.i());
+                param0.field_z = PcmSampleStream.createForSampleStep(param0.field_B, var11.stepMagnitude(), var11.targetVolume(), var11.targetPan());
               }
               if (param0.field_A.field_k[param0.field_E] < 0) {
-                param0.field_z.c(-1);
+                param0.field_z.setLoopCount(-1);
               }
-              var11.d(var9);
+              var11.fadeOutAndUnlink(var9);
               var11.mixInto(param1, param4, -param4 + param2);
-              if (!var11.k()) {
+              if (!var11.isRamping()) {
                 continue;
               }
               this.field_o.addSubstream(var11);
@@ -229,9 +229,9 @@ final class MidiNoteMixer extends PcmStream {
             param0.field_t = param1 * var4_int + param0.field_t & 1048575;
             if (param1 >= var5) {
               if (this.field_u.field_R[param0.field_y] == 0) {
-                param0.field_z = PcmSampleStream.a(param0.field_B, param0.field_z.e(), param0.field_z.g(), param0.field_z.i());
+                param0.field_z = PcmSampleStream.createForSampleStep(param0.field_B, param0.field_z.stepMagnitude(), param0.field_z.targetVolume(), param0.field_z.targetPan());
               } else {
-                param0.field_z = PcmSampleStream.a(param0.field_B, param0.field_z.e(), 0, param0.field_z.i());
+                param0.field_z = PcmSampleStream.createForSampleStep(param0.field_B, param0.field_z.stepMagnitude(), 0, param0.field_z.targetPan());
                 stackIn_8_0 = this.field_u;
                 stackIn_8_1 = -56;
                 stackIn_8_2 = (MusicVoice) (param0);
@@ -239,7 +239,7 @@ final class MidiNoteMixer extends PcmStream {
                 ((MidiPcmStream) (Object) stackIn_8_0).a((byte) stackIn_8_1, stackIn_8_2, stackIn_9_3);
               }
               if (param0.field_A.field_k[param0.field_E] < 0) {
-                param0.field_z.c(-1);
+                param0.field_z.setLoopCount(-1);
               }
               param1 = param0.field_t / var4_int;
             }

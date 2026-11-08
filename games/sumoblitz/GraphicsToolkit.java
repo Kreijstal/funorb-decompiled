@@ -30,7 +30,7 @@ abstract class GraphicsToolkit {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 == ~param0) {
-            stackIn_3_0 = kl.a(param5, param1, param4, param6, -1);
+            stackIn_3_0 = SoftCacheReference.createSoftwareToolkit(param5, param1, param4, param6, -1);
             return stackIn_3_0;
           }
           if (2 == param0) {
@@ -149,7 +149,7 @@ abstract class GraphicsToolkit {
         this.b(0, 0);
     }
 
-    abstract da a(ta param0, SpriteData[] param1, boolean param2);
+    abstract ToolkitFont a(FontMetrics param0, SpriteData[] param1, boolean param2);
 
     abstract void aa(int param0, int param1, int param2, int param3, int param4, int param5);
 

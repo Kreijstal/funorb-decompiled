@@ -161,8 +161,8 @@ final class up {
                   var25Lifetime1Lifetime1 = param4.field_i[var23Lifetime2];
                   var26Lifetime1Lifetime1 = param4.field_J[var23Lifetime2];
                   mp.field_b[var23Lifetime2] = var9 + (var25Lifetime1Lifetime1 * var15 + (var12 * var24Lifetime1Lifetime1 + var26Lifetime1Lifetime1 * var18) >> 16);
-                  ta.field_e[var23Lifetime2] = (var19 * var26Lifetime1Lifetime1 + (var16 * var25Lifetime1Lifetime1 + var13 * var24Lifetime1Lifetime1) >> 16) + var10;
-                  aa.field_d[var23Lifetime2] = var11 + (var14 * var24Lifetime1Lifetime1 - (-(var17 * var25Lifetime1Lifetime1) - var26Lifetime1Lifetime1 * var20) >> 16);
+                  FontMetrics.field_e[var23Lifetime2] = (var19 * var26Lifetime1Lifetime1 + (var16 * var25Lifetime1Lifetime1 + var13 * var24Lifetime1Lifetime1) >> 16) + var10;
+                  SpriteMask.field_d[var23Lifetime2] = var11 + (var14 * var24Lifetime1Lifetime1 - (-(var17 * var25Lifetime1Lifetime1) - var26Lifetime1Lifetime1 * var20) >> 16);
                   var24Lifetime1Lifetime1 = param4.field_q[var23Lifetime2];
                   var25Lifetime1Lifetime1 = param4.field_p[var23Lifetime2];
                   var26Lifetime1Lifetime1 = param4.field_s[var23Lifetime2];

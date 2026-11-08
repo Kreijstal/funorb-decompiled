@@ -104,7 +104,7 @@ abstract class RasterBuffer {
     }
 
     final void a(int param0) {
-        SoftwareRasterizer.a(this.field_c, this.field_h, this.field_b);
+        SoftwareRasterizer.setRaster(this.field_c, this.field_h, this.field_b);
         if (param0 != -1) {
           String var3 = (String) null;
           RasterBuffer.a(111, (String) null);

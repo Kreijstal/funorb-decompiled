@@ -73,7 +73,7 @@ final class LevelSelectScreen extends MenuScreen {
                 qv.field_k.a(Integer.toString(var7 + 1), 5023231 | var4_int, -1, 28 + var8, var9 + 48, 0);
                 uq.field_a.a(Integer.toString(1 + var7), var4_int + 16777215, -1, var8 + 28, 48 + var9, 0);
               } else {
-                jt.field_y.a((float)(var9 + 50), (float)(var8 + 22), 4096, 0, 3, var4_int, 1);
+                CacheReferenceNode.field_y.a((float)(var9 + 50), (float)(var8 + 22), 4096, 0, 3, var4_int, 1);
               }
               var7++;
             }
@@ -182,8 +182,8 @@ final class LevelSelectScreen extends MenuScreen {
           this.field_i != -1 &&
           this.field_i <= bl.field_e + 1) {
           gn.a(16, true);
-          ph.field_b.a(this.field_i, false, false);
-          av.a(-7753, true, -1);
+          ph.gameplaySession.startLevel(this.field_i, false, false);
+          StrongCacheReference.switchMenuScreen(-7753, true, -1);
         }
         if (2 <= ku.field_j &&
           hw.field_b[82] &&

@@ -13,7 +13,7 @@ final class OpenGlTransparentWaterEffect extends ShaderEffect {
     final void a(boolean param0, int param1) {
         jaggl.OpenGL.glBindProgramARB(34336, this.field_g.field_b);
         jaggl.OpenGL.glEnable(34336);
-        this.field_b.a(ta.field_a, 0, param1 - 20186);
+        this.field_b.a(FontMetrics.field_a, 0, param1 - 20186);
         if (param1 != 20186) {
           this.field_j = (OpenGlGraphicsToolkit) null;
         }
@@ -161,13 +161,13 @@ final class OpenGlTransparentWaterEffect extends ShaderEffect {
         int var26Lifetime1;
         var29 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (null != aa.field_a) {
-            for (var1_int = 0; var1_int < db.field_l; var1_int++) {
-              var2 = aa.field_a[var1_int];
+          if (null != SpriteMask.drones) {
+            for (var1_int = 0; var1_int < db.droneSlotLimit; var1_int++) {
+              var2 = SpriteMask.drones[var1_int];
               if (var2 != null &&
                 var2.isActive((byte) 113)) {
-                for (var3 = 1 + var1_int; db.field_l > var3; var3++) {
-                  var4 = aa.field_a[var3];
+                for (var3 = 1 + var1_int; db.droneSlotLimit > var3; var3++) {
+                  var4 = SpriteMask.drones[var3];
                   if (var4 != null &&
                     var4.isActive((byte) 113)) {
                     var5 = var2.radiusQ8 + var4.radiusQ8;

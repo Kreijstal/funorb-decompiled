@@ -6,7 +6,7 @@ final class qv extends IntrusiveNode {
     static String field_o;
     int[] field_m;
     int field_n;
-    static da field_k;
+    static ToolkitFont field_k;
 
     final static void a(int param0) {
         ts.field_a = ts.field_a + 13;
@@ -24,8 +24,8 @@ final class qv extends IntrusiveNode {
           CharSequence var3 = (CharSequence) null;
           qv.a(false, -82, (CharSequence) null);
         }
-        var2.c(-1);
-        qq.a(18416, var2);
+        var2.setLoopCount(-1);
+        qq.addPlayingSound(18416, var2);
     }
 
     final static String a(boolean param0, int param1, CharSequence param2) {
@@ -110,7 +110,7 @@ final class qv extends IntrusiveNode {
         asYouAreUnderText = null;
         field_k = null;
         if (param0 != 18) {
-          field_k = (da) null;
+          field_k = (ToolkitFont) null;
         }
         field_o = null;
     }

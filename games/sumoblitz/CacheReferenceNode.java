@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class jt extends DualLinkNode {
+abstract class CacheReferenceNode extends DualLinkNode {
     static int field_r;
     static int field_w;
     static int field_s;
@@ -10,12 +10,12 @@ abstract class jt extends DualLinkNode {
     static cp field_v;
     static PlatformTaskDispatcher field_t;
     static long field_x;
-    int field_z;
+    int weight;
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_t = null;
         if (param0 != 54) {
-          jt.a(-29);
+          CacheReferenceNode.a(-29);
           field_v = null;
           field_y = null;
           return;
@@ -36,9 +36,9 @@ abstract class jt extends DualLinkNode {
         var1Lifetime1 = -44 % ((param0 - 35) / 40);
     }
 
-    abstract Object c(byte param0);
+    abstract Object getValue(byte param0);
 
-    abstract boolean e(int param0);
+    abstract boolean isSoftReference(int param0);
 
     final static boolean a(byte param0) {
         int var1 = 102 / ((param0 + 27) / 59);
@@ -51,8 +51,8 @@ abstract class jt extends DualLinkNode {
         return false;
     }
 
-    jt(int param0) {
-        this.field_z = param0;
+    CacheReferenceNode(int param0) {
+        this.weight = param0;
     }
 
     static {

@@ -221,7 +221,7 @@ final class PowerupPickup extends IntrusiveNode {
         int var4;
         int var5;
         var5 = Sumoblitz.field_L ? 1 : 0;
-        var2 = new IntrusiveDequeCursor(is.field_c);
+        var2 = new IntrusiveDequeCursor(is.arenaPads);
         if (param0 > -106) {
           field_v = -85;
         }
@@ -249,9 +249,9 @@ final class PowerupPickup extends IntrusiveNode {
         if (param0 >= -13) {
           return;
         }
-        av.field_C = null;
+        StrongCacheReference.field_C = null;
         er.field_h = null;
-        ag.field_d = (byte[][]) null;
+        TextLayout.field_d = (byte[][]) null;
         LegacyOpenGlEffectManager.field_l = null;
         vg.field_k = null;
         we.field_B = null;

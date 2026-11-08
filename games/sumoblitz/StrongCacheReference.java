@@ -3,8 +3,8 @@
  */
 import java.io.*;
 
-final class av extends jt {
-    private Object field_D;
+final class StrongCacheReference extends CacheReferenceNode {
+    private Object value;
     static il field_B;
     static int[] field_C;
 
@@ -70,12 +70,12 @@ final class av extends jt {
         }
     }
 
-    final boolean e(int param0) {
+    final boolean isSoftReference(int param0) {
         int var2 = -48 % ((14 - param0) / 51);
         return false;
     }
 
-    final static void a(int param0, boolean param1, int param2) {
+    final static void switchMenuScreen(int param0, boolean param1, int param2) {
         eh.field_a = 0;
         rc.field_k = param2;
         if (param0 != -7753) {
@@ -86,14 +86,14 @@ final class av extends jt {
         }
         if (0 == rc.field_k &&
           7 != nj.field_b) {
-          ag.a(0, 0);
+          TextLayout.a(0, 0);
         }
     }
 
-    av(Object param0, int param1) {
+    StrongCacheReference(Object param0, int param1) {
         super(param1);
         try {
-          this.field_D = param0;
+          this.value = param0;
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "av.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -103,13 +103,13 @@ final class av extends jt {
         field_C = null;
         field_B = null;
         if (param0 != 24) {
-          av.releaseStatics(30);
+          StrongCacheReference.releaseStatics(30);
         }
     }
 
-    final Object c(byte param0) {
+    final Object getValue(byte param0) {
         int var2 = -15 % ((37 - param0) / 58);
-        return this.field_D;
+        return this.value;
     }
 
     static {
