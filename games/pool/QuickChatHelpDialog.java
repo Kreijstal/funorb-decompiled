@@ -40,7 +40,7 @@ final class QuickChatHelpDialog extends UiComponent {
           return (LobbyPlayer) (LobbyPlayer.field_Qb.findFirst(playerId, false));
         }
         String var4 = (String) null;
-        QuickChatHelpDialog.a((String) null, -19, (String) null, -83, true, (String) null, -49);
+        QuickChatHelpDialog.pollAccountCreationRequest((String) null, -19, (String) null, -83, true, (String) null, -49);
         return (LobbyPlayer) (LobbyPlayer.field_Qb.findFirst(playerId, false));
     }
 
@@ -96,7 +96,7 @@ final class QuickChatHelpDialog extends UiComponent {
         }
     }
 
-    final static int a(ChatMessage param0, int param1) {
+    final static int chatMessageColor(ChatMessage message, int obfuscationGuard) {
         int var2_int = 0;
         int var3 = 0;
         int stackIn_16_0 = 0;
@@ -110,31 +110,31 @@ final class QuickChatHelpDialog extends UiComponent {
         var3 = Pool.field_O;
         try {
           var2_int = FreePlayRules.field_g;
-          if (param0.field_p == 2) {
-            if (param0.field_g) {
+          if (message.field_p == 2) {
+            if (message.field_g) {
               var2_intLifetime1 = FreePlayRules.field_g;
             } else {
-              if (param0.field_m == 0 &&
-                param0.field_e == 0) {
-                var2_intLifetime1 = Ball.field_F[param0.field_p];
+              if (message.field_m == 0 &&
+                message.field_e == 0) {
+                var2_intLifetime1 = Ball.field_F[message.field_p];
               } else {
-                var2_intLifetime1 = ThreeSliceButtonPainter.field_A[param0.field_p];
+                var2_intLifetime1 = ThreeSliceButtonPainter.field_A[message.field_p];
               }
             }
           } else {
-            if (param0.field_p != 4) {
-              if (~BitmapTextLayout.field_m == ~param0.field_b) {
-                var2_intLifetime1 = Ball.field_F[param0.field_p];
+            if (message.field_p != 4) {
+              if (~BitmapTextLayout.field_m == ~message.field_b) {
+                var2_intLifetime1 = Ball.field_F[message.field_p];
               } else {
-                var2_intLifetime1 = ThreeSliceButtonPainter.field_A[param0.field_p];
+                var2_intLifetime1 = ThreeSliceButtonPainter.field_A[message.field_p];
               }
             } else {
-              var2_intLifetime1 = ThreeSliceButtonPainter.field_A[param0.field_p];
+              var2_intLifetime1 = ThreeSliceButtonPainter.field_A[message.field_p];
             }
           }
-          if (param1 > -30) {
+          if (obfuscationGuard > -30) {
             var4 = (ChatMessage) null;
-            QuickChatHelpDialog.a((ChatMessage) null, 64);
+            QuickChatHelpDialog.chatMessageColor((ChatMessage) null, 64);
           }
           stackIn_16_0 = var2_intLifetime1;
           return stackIn_16_0;
@@ -143,12 +143,12 @@ final class QuickChatHelpDialog extends UiComponent {
           var2 = decompiledCaughtException;
           stackIn_19_0 = var2;
           stackIn_19_1 = new StringBuilder().append("fn.A(");
-          if (param0 == null) {
+          if (message == null) {
             stackIn_20_2 = "null";
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -166,7 +166,7 @@ final class QuickChatHelpDialog extends UiComponent {
         musicColon = null;
         if (param0 <= 12) {
           String var2 = (String) null;
-          QuickChatHelpDialog.a((String) null, -57, (String) null, 61, false, (String) null, 44);
+          QuickChatHelpDialog.pollAccountCreationRequest((String) null, -57, (String) null, 61, false, (String) null, 44);
           gameoptPlayersdontqualify = null;
           cannotAddYourself = null;
           tutorialCameraRotate = null;
@@ -179,7 +179,7 @@ final class QuickChatHelpDialog extends UiComponent {
         addXToFriends = null;
     }
 
-    final static int a(String param0, int param1, String param2, int param3, boolean param4, String param5, int param6) {
+    final static int pollAccountCreationRequest(String param0, int param1, String param2, int param3, boolean param4, String param5, int param6) {
         LoginTextValue var7 = null;
         RuntimeException var7_ref = null;
         LoginTextValue var8 = null;
@@ -198,7 +198,7 @@ final class QuickChatHelpDialog extends UiComponent {
           }
           var7 = new LoginTextValue(param2);
           var8 = new LoginTextValue(param0);
-          stackIn_3_0 = LoginRequestSupport.a(param5, (byte) 87, param1, param4, var7, var8, param6);
+          stackIn_3_0 = LoginRequestSupport.pollAccountCreationRequest(param5, (byte) 87, param1, param4, var7, var8, param6);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

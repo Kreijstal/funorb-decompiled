@@ -52,7 +52,7 @@ final class UsernameSuggestionSupport {
         muGameoptAcceptXIntoGame = null;
     }
 
-    final static SocialListEntry a(int param0, String param1) {
+    final static SocialListEntry findSocialEntryByName(int obfuscationGuard, String name) {
         String var2 = null;
         int var3 = 0;
         SocialListEntry var4 = null;
@@ -71,15 +71,15 @@ final class UsernameSuggestionSupport {
           if (AimTarget.field_b == null) {
             return null;
           }
-          if (param1 == null) {
+          if (name == null) {
             return null;
           }
-          if (0 == param1.length()) {
+          if (0 == name.length()) {
             stackIn_6_0 = null;
             return (SocialListEntry) (stackIn_6_0);
           }
-          var3 = 53 / ((-16 - param0) / 62);
-          var6 = (CharSequence) ((Object) param1);
+          var3 = 53 / ((-16 - obfuscationGuard) / 62);
+          var6 = (CharSequence) ((Object) name);
           var2 = TutorialController.normalizeDisplayName(83, var6);
           if (var2 == null) {
             stackIn_9_0 = null;
@@ -100,8 +100,8 @@ final class UsernameSuggestionSupport {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
           stackIn_21_0 = var2_ref;
-          stackIn_21_1 = new StringBuilder().append("gf.B(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_21_1 = new StringBuilder().append("gf.B(").append(obfuscationGuard).append(',');
+          if (name == null) {
             stackIn_22_2 = "null";
           } else {
             stackIn_22_2 = "{...}";

@@ -23,8 +23,8 @@ abstract class NetworkGameClient extends GameApplet {
     static int[] field_H;
     static String loginCreateaccount;
 
-    private final void c(int param0) {
-        int var2 = -25 / ((param0 - 25) / 53);
+    private final void enableChatAndSocialResponses(int obfuscationGuard) {
+        int var2 = -25 / ((obfuscationGuard - 25) / 53);
         ButtonWidget.field_H[12] = true;
         ButtonWidget.field_H[11] = true;
         ButtonWidget.field_H[13] = true;
@@ -113,17 +113,17 @@ abstract class NetworkGameClient extends GameApplet {
             this.enableSavedDataResponses((byte) -98);
           }
           if (param4) {
-            this.b(true);
+            this.setRankingsResponsesEnabled(true);
           }
           if (param2) {
-            this.c(-55);
+            this.enableChatAndSocialResponses(-55);
           }
           return;
         }
     }
 
-    private final void b(boolean param0) {
-        ButtonWidget.field_H[6] = param0;
+    private final void setRankingsResponsesEnabled(boolean enabled) {
+        ButtonWidget.field_H[6] = enabled;
     }
 
     private final int serviceAccountActions(boolean param0, boolean param1, int param2) {
@@ -141,12 +141,12 @@ abstract class NetworkGameClient extends GameApplet {
           int var5_intLifetime1;
           int var5_intLifetime2;
           var8 = Pool.field_O;
-          var4 = MenuSelectionSupport.a((byte) -88, param1, CompressedContainerSupport.field_d, ProgressBarWidget.field_S);
+          var4 = MenuSelectionSupport.pollAccountDialogResult((byte) -88, param1, CompressedContainerSupport.field_d, ProgressBarWidget.field_S);
           if (0 == var4) {
             throw new IllegalStateException();
           }
           if (var4 == 1) {
-            var5_int = TickClock.a(9539, StatefulTextPainter.c(5), HighScoreRequest.c(8388));
+            var5_int = TickClock.a(9539, StatefulTextPainter.c(5), HighScoreRequest.createLoginTextValue(8388));
             if (-1 != var5_int) {
               GameRules.handleLoginResponse(LoginPayloadFactory.field_b, false, var5_int, LoginTextValue.field_g);
               LoginPayloadFactory.field_b = null;
@@ -158,7 +158,7 @@ abstract class NetworkGameClient extends GameApplet {
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = QuickChatHelpDialog.a(LoginTextSupport.a(true), this.field_w, CollisionContact.a(false), 50, DelegatingCanvas.a((byte) 108), ByteRecordSubmission.c((byte) 64), ThreeSliceButtonPainter.c(12854));
+            var5_intLifetime1 = QuickChatHelpDialog.pollAccountCreationRequest(LoginTextSupport.getAccountName(true), this.field_w, CollisionContact.a(false), 50, DelegatingCanvas.getAccountCreationRequestFlag((byte) 108), ByteRecordSubmission.c((byte) 64), ThreeSliceButtonPainter.c(12854));
             if (-1 != var5_intLifetime1) {
               LoginTextValue.a(LoginTextValue.field_g, var5_intLifetime1, LoginPayloadFactory.field_b, (byte) -16);
               LoginPayloadFactory.field_b = null;
@@ -216,7 +216,7 @@ abstract class NetworkGameClient extends GameApplet {
             JaggrabDownloader.field_j.writeCipheredOpcode(false, 17);
           }
           if (var4 == 11) {
-            DebouncedValidationProvider.a(NanoTickClock.getApplet(114), (byte) -121);
+            DebouncedValidationProvider.reloadApplet(NanoTickClock.getApplet(114), (byte) -121);
           }
           if (param2 >= -96) {
             this.dispatchAccountPacket(91);
@@ -322,7 +322,7 @@ abstract class NetworkGameClient extends GameApplet {
                   var2 != 12) {
                   switch (var2) {
                     case 13:
-                      MaxLengthTextInputWidget.n(29769);
+                      MaxLengthTextInputWidget.readSocialListUpdate(29769);
                       break regionExit1;
                     case 17:
                       this.readBrowserUrlResponse(70);
@@ -338,7 +338,7 @@ abstract class NetworkGameClient extends GameApplet {
                 }
                 stackIn_29_0 = -31;
                 stackIn_30_1 = (var2 == 12);
-                var3 = QuickChatCategoryCache.$cfr$intArgs$a$9af18640dc82(stackIn_29_0, stackIn_30_1);
+                var3 = QuickChatCategoryCache.readChatMessageIntArgs(stackIn_29_0, stackIn_30_1);
                 QuickChatCategoryCache.displayChatMessageIfNew(var3, 101);
                 break;
               case 16:
@@ -389,10 +389,10 @@ abstract class NetworkGameClient extends GameApplet {
         TikiTableScene.field_eb = param1;
         BrowserCookieSupport.field_g = param3;
         this.initializeAccountPacketLengths((byte) -81);
-        ScrollPaneWithFooter.c(false);
+        ScrollPaneWithFooter.clearClientOptionMask(false);
     }
 
-    final static void a(byte param0, PoolMatchController param1) {
+    final static void advanceNotifications(byte obfuscationGuard, PoolMatchController session) {
         AnimatedNotification dupTemp$0 = null;
         int stackIn_14_0 = 0;
         RuntimeException stackIn_63_0 = null;
@@ -440,17 +440,17 @@ abstract class NetworkGameClient extends GameApplet {
               var2.field_x[0] = var2.field_q.screenX + (var2.field_q.width >> 1);
             }
             if (null != var2.field_p) {
-              WorldPointProjectionSupport.projectWorldPointToScreen(param1, var2, var2.field_L, var2.field_p, 1);
+              WorldPointProjectionSupport.projectWorldPointToScreen(session, var2, var2.field_L, var2.field_p, 1);
             }
             if (var2.field_F != null) {
-              WorldPointProjectionSupport.projectWorldPointToScreen(param1, var2, var2.field_z, var2.field_F, 1);
+              WorldPointProjectionSupport.projectWorldPointToScreen(session, var2, var2.field_z, var2.field_F, 1);
             }
             if (var2.field_D != null) {
-              WorldPointProjectionSupport.projectWorldPointToScreen(param1, var2, var2.field_x, var2.field_D, 1);
+              WorldPointProjectionSupport.projectWorldPointToScreen(session, var2, var2.field_x, var2.field_D, 1);
             }
             if (ByteRecordSubmission.field_m < var2.field_H) {
               if ((1 & var2.field_v) != 0) {
-                var2.field_J = var2.field_L[0] + FontPaletteSupport.cubicEaseOut(-var2.field_L[0] + var2.field_z[0], ByteRecordSubmission.field_m, var2.field_H, param0 + 13849);
+                var2.field_J = var2.field_L[0] + FontPaletteSupport.cubicEaseOut(-var2.field_L[0] + var2.field_z[0], ByteRecordSubmission.field_m, var2.field_H, obfuscationGuard + 13849);
                 var2.field_C = var2.field_L[1] + FontPaletteSupport.cubicEaseOut(-var2.field_L[1] + var2.field_z[1], ByteRecordSubmission.field_m, var2.field_H, 13776);
               } else {
                 var2.field_J = var2.field_z[0];
@@ -490,7 +490,7 @@ abstract class NetworkGameClient extends GameApplet {
                     if ((var2.field_r & 2) == 0) {
                       var2.field_E = 0;
                     } else {
-                      var2.field_E = FontPaletteSupport.cubicEaseOut(2048, var3, var2.field_y, param0 + 13849) + 4096;
+                      var2.field_E = FontPaletteSupport.cubicEaseOut(2048, var3, var2.field_y, obfuscationGuard + 13849) + 4096;
                     }
                   } else {
                     var2.field_E = 96 + ValidationMessageWidget.easeOutQuadratic((byte) -126, 4000, var2.field_y, -var3 + var2.field_y);
@@ -507,17 +507,17 @@ abstract class NetworkGameClient extends GameApplet {
               ByteRecordSubmission.field_m = -1;
             }
           }
-          if (param0 != -73) {
+          if (obfuscationGuard != -73) {
             var5 = (PoolMatchController) null;
-            NetworkGameClient.a((byte) -7, (PoolMatchController) null);
+            NetworkGameClient.advanceNotifications((byte) -7, (PoolMatchController) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
           stackIn_63_0 = var2_ref;
-          stackIn_63_1 = new StringBuilder().append("ep.HA(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_63_1 = new StringBuilder().append("ep.HA(").append(obfuscationGuard).append(',');
+          if (session == null) {
             stackIn_64_2 = "null";
           } else {
             stackIn_64_2 = "{...}";
@@ -650,9 +650,9 @@ abstract class NetworkGameClient extends GameApplet {
           if (MatchingTextValidator.field_u == null) {
             var6 = AppletContainerSupport.getTopLevelContainer(false);
             var4 = var6.getSize();
-            PlasmaTableScene.field_gb.a(var4.width, 51, var4.height);
+            PlasmaTableScene.field_gb.setAvailableSize(var4.width, 51, var4.height);
           }
-          PlasmaTableScene.field_gb.a(true);
+          PlasmaTableScene.field_gb.updateViewportSize(true);
         }
         MouseWheelInput.a(127);
         FixedAngleSupport.snapshotPointerInput((byte) 123);
@@ -756,7 +756,7 @@ abstract class NetworkGameClient extends GameApplet {
           PasswordValidator.field_o = false;
         }
         if (QuickChatCategoryDefinition.field_y == 0 &&
-          DirectByteStorage.e(-11071)) {
+          DirectByteStorage.ensureMasterIndex(-11071)) {
           QuickChatCategoryDefinition.field_y = 1;
         }
         if (1 == QuickChatCategoryDefinition.field_y) {
@@ -779,7 +779,7 @@ abstract class NetworkGameClient extends GameApplet {
               if (QuickChatPhraseRegistry.field_a.ensureGroupAvailableByName("", param0 ^ -4)) {
                 TranslatedUiText.a(QuickChatPhraseRegistry.field_a, -21013);
                 QuickChatPhraseRegistry.field_a = null;
-                ArrayWidgetGroup.a(0);
+                ArrayWidgetGroup.resetFrameTiming(0);
               }
             }
           }
@@ -814,7 +814,7 @@ abstract class NetworkGameClient extends GameApplet {
           PolarTableScene.field_nb = null;
           WorldPointProjectionSupport.field_d = null;
           MusicVoice.readUsernameParameter(-23989, (java.applet.Applet) (this));
-          ArrayWidgetGroup.a(0);
+          ArrayWidgetGroup.resetFrameTiming(0);
           QuickChatCategoryDefinition.field_y = 10;
         }
         if (QuickChatCategoryDefinition.field_y == 10) {
@@ -827,7 +827,7 @@ abstract class NetworkGameClient extends GameApplet {
         if (QuickChatCategoryDefinition.field_y == 11) {
           if (GameApplet.field_m != null && (!GameApplet.field_m.isIndexReady(param0 ^ -52) ||
             !GameApplet.field_m.ensureAllGroupsAvailable(param0 ^ 61))) {
-            KeyHandler.a(SupportPageLauncher.formatProgressLabel(GameApplet.field_m, BufferedFile.field_b, -641, SingleChildWidget.field_F), 0.0f, false);
+            KeyHandler.setLoadingProgress(SupportPageLauncher.formatProgressLabel(GameApplet.field_m, BufferedFile.field_b, -641, SingleChildWidget.field_F), 0.0f, false);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -844,7 +844,7 @@ abstract class NetworkGameClient extends GameApplet {
           if (SpriteSheetLoadSupport.field_e != null) {
             stackIn_138_0 = (!SpriteSheetLoadSupport.field_e.pollLoaded((byte) -51)) ? 0 : 1;
             var3Lifetime2 = stackIn_138_0;
-            KeyHandler.a(SpriteSheetLoadSupport.field_e.statusText, SpriteSheetLoadSupport.field_e.scaledProgress, false);
+            KeyHandler.setLoadingProgress(SpriteSheetLoadSupport.field_e.statusText, SpriteSheetLoadSupport.field_e.scaledProgress, false);
           }
           if (var3Lifetime2 != 0) {
             QuickChatCategoryDefinition.field_y = 20;
@@ -857,7 +857,7 @@ abstract class NetworkGameClient extends GameApplet {
           CanvasInputAttachmentSupport.attachInputListeners(TimeTrialSelectScreen.field_K, 2);
         }
         if (ButtonWidget.field_H[8]) {
-          StrongCacheEntry.h(119);
+          StrongCacheEntry.flushReflectionReplies(119);
         }
     }
 
@@ -893,7 +893,7 @@ abstract class NetworkGameClient extends GameApplet {
         }
     }
 
-    final static Sprite[] a(int param0, ResourceArchive param1, String param2, String param3) {
+    final static Sprite[] loadSpriteSheetByName(int obfuscationGuard, ResourceArchive archive, String fileName, String groupName) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -908,32 +908,32 @@ abstract class NetworkGameClient extends GameApplet {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 < 36) {
+          if (obfuscationGuard < 36) {
             var6 = (PoolMatchController) null;
-            NetworkGameClient.a((byte) -107, (PoolMatchController) null);
+            NetworkGameClient.advanceNotifications((byte) -107, (PoolMatchController) null);
           }
-          var4_int = param1.getGroupId(param3, -1);
-          var5 = param1.getFileId(var4_int, 0, param2);
-          stackIn_3_0 = LobbyPlayer.a(var4_int, var5, 0, param1);
+          var4_int = archive.getGroupId(groupName, -1);
+          var5 = archive.getFileId(var4_int, 0, fileName);
+          stackIn_3_0 = LobbyPlayer.a(var4_int, var5, 0, archive);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_6_0 = var4;
-          stackIn_6_1 = new StringBuilder().append("ep.DA(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_6_1 = new StringBuilder().append("ep.DA(").append(obfuscationGuard).append(',');
+          if (archive == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
           stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
-          if (param2 == null) {
+          if (fileName == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
           stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',');
-          if (param3 == null) {
+          if (groupName == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
@@ -956,7 +956,7 @@ abstract class NetworkGameClient extends GameApplet {
             LookupRetrySupport.resendLookupQueries(true, 2);
           }
           if (ButtonWidget.field_H[2]) {
-            HighScoreRequest.a(3, true);
+            HighScoreRequest.resendHighScoreOperations(3, true);
           }
           if (ButtonWidget.field_H[3]) {
             VerticalScrollbar.resendAchievementAndAccountQueries((byte) 58, 4);

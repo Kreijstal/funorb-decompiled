@@ -170,7 +170,7 @@ final class StrongCacheEntry extends CacheEntry {
         }
     }
 
-    final static void h(int param0) {
+    final static void flushReflectionReplies(int obfuscationGuard) {
         int fieldTemp$0 = 0;
         RuntimeException decompiledCaughtException = null;
         CipherPacketBuffer var1 = null;
@@ -180,7 +180,7 @@ final class StrongCacheEntry extends CacheEntry {
         var3 = Pool.field_O;
         try {
           var1 = JaggrabDownloader.field_j;
-          if (param0 <= 117) {
+          if (obfuscationGuard <= 117) {
             return;
           }
           while (MultiHandleSliderWidget.g((byte) -120)) {
@@ -195,7 +195,7 @@ final class StrongCacheEntry extends CacheEntry {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1_ref), "fd.G(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1_ref), "fd.G(" + obfuscationGuard + ')');
         }
     }
 
@@ -208,15 +208,15 @@ final class StrongCacheEntry extends CacheEntry {
         }
     }
 
-    final static void a(int[] param0, int[] param1, byte param2) {
+    final static void sortPairedArrays(int[] keys, int[] values, byte obfuscationGuard) {
         try {
-          ChatInputSupport.quickSortRange(0, param2 ^ 30966, param0, param1, param0.length - 1);
-          if (param2 != -54) {
+          ChatInputSupport.quickSortRange(0, obfuscationGuard ^ 30966, keys, values, keys.length - 1);
+          if (obfuscationGuard != -54) {
             int[] var4 = (int[]) null;
-            StrongCacheEntry.a((int[]) null, (int[]) null, (byte) -96);
+            StrongCacheEntry.sortPairedArrays((int[]) null, (int[]) null, (byte) -96);
           }
         } catch (RuntimeException runtimeException) {
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "fd.R(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "fd.R(" + (keys != null ? "{...}" : "null") + ',' + (values != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -228,7 +228,7 @@ final class StrongCacheEntry extends CacheEntry {
         return false;
     }
 
-    final static void a(int[] param0, int param1, int param2, int param3, int param4) {
+    final static void blendHalfColorSpan(int[] param0, int param1, int param2, int param3, int param4) {
         int[] var8 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -242,7 +242,7 @@ final class StrongCacheEntry extends CacheEntry {
         try {
           if (param4 != 2) {
             var8 = (int[]) null;
-            StrongCacheEntry.a((int[]) null, (int[]) null, (byte) -8);
+            StrongCacheEntry.sortPairedArrays((int[]) null, (int[]) null, (byte) -8);
           }
           param3--;
           while (param3 >= 0) {

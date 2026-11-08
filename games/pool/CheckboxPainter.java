@@ -48,7 +48,7 @@ final class CheckboxPainter implements WidgetPainter {
               if (param1 == 1) {
                 return null;
               }
-              CheckboxPainter.a(-34);
+              CheckboxPainter.clientNoticeHeight(-34);
               stackIn_16_0 = null;
               return (SocialListEntry) (stackIn_16_0);
             }
@@ -145,19 +145,19 @@ final class CheckboxPainter implements WidgetPainter {
         field_a = null;
     }
 
-    final static int a(int param0) {
-        if (param0 != 23467) {
+    final static int clientNoticeHeight(int obfuscationGuard) {
+        if (obfuscationGuard != 23467) {
           return 80;
         }
         return MonotonicClock.field_a;
     }
 
-    final static void a(Sprite param0, int param1) {
+    final static void setMembershipPreviewSprite(Sprite sprite, int obfuscationGuard) {
         try {
-          int var2_int = 17 % ((param1 - 33) / 56);
-          Camera.field_c = param0;
+          int var2_int = 17 % ((obfuscationGuard - 33) / 56);
+          Camera.field_c = sprite;
         } catch (RuntimeException runtimeException) {
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "hl.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "hl.B(" + (sprite != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 

@@ -18,7 +18,7 @@ abstract class MeshBase {
         try {
           var4 = (ByteRecordSubmission) (ArchiveLoadStep.field_c.last((byte) 65));
           while (var4 != null) {
-            DelayedServerPacket.a(98, var4, param1);
+            DelayedServerPacket.sendByteRecordSubmission(98, var4, param1);
             var4 = (ByteRecordSubmission) (ArchiveLoadStep.field_c.previous((byte) -5));
           }
           if (param0 != 10) {

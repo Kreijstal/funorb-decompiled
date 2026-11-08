@@ -93,7 +93,7 @@ final class QuickChatMenu extends UiComponent {
           return false;
         }
         if (param3 >= 1 &&
-          TutorialController.a(param2, param1, 1) >= param3) {
+          TutorialController.daysInMonth(param2, param1, 1) >= param3) {
           if (param0 <= 103) {
             playerYouX2AreOfferingDraw = (String) null;
           }
@@ -203,7 +203,7 @@ final class QuickChatMenu extends UiComponent {
                 null != HighscoresScreen.field_L) {
                 var6 = 1;
               }
-              if (LobbyPanelLayoutSupport.a(5, var6) == 2) {
+              if (LobbyPanelLayoutSupport.getChatFilterMode(5, var6) == 2) {
                 TextInputPainter.a(1, var6, param2, (byte) -89);
               }
               var7 = (String) null;

@@ -184,7 +184,7 @@ final class SoundCache {
           for (var5_int = 0; var5_int < var25.length; var5_int++) {
             var23[var5_int] = var5_int;
           }
-          StrongCacheEntry.a(var25, var23, (byte) -54);
+          StrongCacheEntry.sortPairedArrays(var25, var23, (byte) -54);
           var5 = ShotEvent.scatterByIndex(var4_ref_int__, (byte) 117, GradientPaletteSupport.buildGradientPalette(new int[]{0, 16744192, var25.length, 16777087}, obfuscationGuard ^ -126));
           var6 = ShotEvent.scatterByIndex(var4_ref_int__, (byte) 10, GradientPaletteSupport.buildGradientPalette(new int[]{0, 16776960, var25.length, 16777023}, 18));
           var7 = ShotEvent.scatterByIndex(var4_ref_int__, (byte) 7, GradientPaletteSupport.buildGradientPalette(new int[]{0, 8355711, var25.length, 16777215}, obfuscationGuard ^ 70));
@@ -244,7 +244,7 @@ final class SoundCache {
           var8Lifetime5.field_G = 0;
           var8Lifetime5.field_w = var19.field_z;
           var2_intLifetime3 = 0;
-          var3 = NetworkGameClient.a(106, archive, "titles", "");
+          var3 = NetworkGameClient.loadSpriteSheetByName(106, archive, "titles", "");
           incrementValue$6 = var2_intLifetime3;
           var2_intLifetime3++;
           AudioService.field_a = var3[incrementValue$6];
@@ -310,7 +310,7 @@ final class SoundCache {
           TransformRotationSupport.field_e = NameEntryPopup.loadSpritesByName(0, "", archive, "playerlist_button");
           PolarObject.field_d = NameEntryPopup.loadSpritesByName(0, "", archive, "tutorial_controls");
           VertexTransformSupport.field_b = WidgetStyleLayer.loadSprite("", (byte) 52, "tutorial_box_progress", archive);
-          AccountCreationForm.field_Z = ArchiveRequest.a(archive, "", -24155, "controls");
+          AccountCreationForm.field_Z = ArchiveRequest.loadIndexedSpritesByName(archive, "", -24155, "controls");
           LoginPayloadFactory.field_d = new int[AccountCreationForm.field_Z.length];
           TextLayout.field_f = 0;
           for (var4 = 0; AccountCreationForm.field_Z.length > var4; var4++) {

@@ -83,7 +83,7 @@ final class AvailabilityQueryResult {
               var2 = 3;
             }
           } else {
-            MatchingTextValidator.field_u = PlasmaTableScene.field_gb.b(-71);
+            MatchingTextValidator.field_u = PlasmaTableScene.field_gb.enterFullscreen(-71);
             ArchiveAvailabilitySupport.notifyBrowserResize(25692, 2);
             if (null != MatchingTextValidator.field_u) {
               var2 = 2;

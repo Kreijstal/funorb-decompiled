@@ -31,7 +31,7 @@ final class Atan2Support {
         RuntimeException decompiledCaughtException = null;
         try {
           var6 = (CharSequence) ((Object) param1);
-          if (!ProgressBarWidget.a(param2 ^ -25906, var6)) {
+          if (!ProgressBarWidget.isAllowedDisplayName(param2 ^ -25906, var6)) {
             stackIn_2_0 = ModelInstance.invalidName;
             return stackIn_2_0;
           }

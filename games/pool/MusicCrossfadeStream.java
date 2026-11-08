@@ -255,7 +255,7 @@ final class MusicCrossfadeStream extends PcmStream {
             dupTemp$0 = ((StringBuilder) (Object) stackIn_15_0).append(stackIn_16_1).toString();
             var5 = dupTemp$0;
             var3Lifetime1 = dupTemp$0;
-            ProgressBarWidget.a(true, 0, var5 + ": " + ContentTransitionDialog.field_pb[param1][0], ContentTransitionDialog.field_pb[param1][1]);
+            ProgressBarWidget.replaceNotification(true, 0, var5 + ": " + ContentTransitionDialog.field_pb[param1][0], ContentTransitionDialog.field_pb[param1][1]);
           }
         }
     }

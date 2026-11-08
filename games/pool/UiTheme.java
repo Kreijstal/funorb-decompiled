@@ -275,8 +275,8 @@ final class UiTheme {
         var6.horizontalAlignment = 0;
         StatefulTextPainter var7 = new StatefulTextPainter(var4, true);
         var7.horizontalAlignment = 0;
-        var7.setFrameSpritesForAllStates(UiWidget.a((byte) 83, 8947848), 6);
-        var7.createStateLayer(1, 0).setFrameSprites(UiWidget.a((byte) 32, 11184810), (byte) 120).setTextColor(2236962, 51);
+        var7.setFrameSpritesForAllStates(UiWidget.createSolidPanelSprites((byte) 83, 8947848), 6);
+        var7.createStateLayer(1, 0).setFrameSprites(UiWidget.createSolidPanelSprites((byte) 32, 11184810), (byte) 120).setTextColor(2236962, 51);
         this.field_o = (WidgetPainter) ((Object) new CheckboxPainter(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
         DialRenderer discarded$0 = new DialRenderer(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
         MarkerSliderPainter discarded$1 = new MarkerSliderPainter(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);

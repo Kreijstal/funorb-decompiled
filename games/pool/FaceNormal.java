@@ -156,7 +156,7 @@ final class FaceNormal {
         try {
           AccountWelcomePanel.field_N = title;
           if (obfuscationGuard != -2107) {
-            FaceNormal.a(3, 47, -112);
+            FaceNormal.sendSpectateRequest(3, 47, -112);
           }
           ProgressDialog.field_gb = background;
         } catch (RuntimeException runtimeException) {
@@ -164,12 +164,12 @@ final class FaceNormal {
         }
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void sendSpectateRequest(int gameId, int packetLength, int opcode) {
         CipherPacketBuffer var3 = JaggrabDownloader.field_j;
-        var3.writeCipheredOpcode(false, param2);
-        var3.writeByte(param1, false);
+        var3.writeCipheredOpcode(false, opcode);
+        var3.writeByte(packetLength, false);
         var3.writeByte(10, false);
-        var3.writeShort((byte) -81, param0);
+        var3.writeShort((byte) -81, gameId);
     }
 
     public static void releaseStatics(int param0) {

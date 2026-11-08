@@ -84,7 +84,7 @@ final class MidiPcmStream extends PcmStream {
             var9 = (int)var8.key;
             var10 = (MusicPatch) (this.instrumentPatches.get(false, (long)var9));
             if (var10 == null) {
-              var10 = NanoTickClock.a(param1, (byte) 127, var9);
+              var10 = NanoTickClock.loadMusicPatch(param1, (byte) 127, var9);
               if (var10 == null) {
                 var6_int = 0;
                 decompiledFrameRemainder0 = false;

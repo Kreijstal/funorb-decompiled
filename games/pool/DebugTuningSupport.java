@@ -32,11 +32,11 @@ final class DebugTuningSupport {
 
     final static void requestAccountInterface(int param0) {
         if (PlasmaTableScene.field_ab == 10) {
-          MaxLengthTextInputWidget.b(false);
+          MaxLengthTextInputWidget.beginReconnect(false);
           PlasmaTableScene.field_ab = 11;
         } else {
           if (!RasterStateSupport.acceptsClientGuard(-114)) {
-            MaxLengthTextInputWidget.b(false);
+            MaxLengthTextInputWidget.beginReconnect(false);
             PlasmaTableScene.field_ab = 11;
           }
         }

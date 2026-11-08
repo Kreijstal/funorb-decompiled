@@ -49,7 +49,7 @@ final class QuickChatMenuSupport {
             GrowableIntList.reportClientError((Throwable) null, "QC2", -8555);
             return;
           }
-          AchievementProtocolSupport.a((byte) 58, var4);
+          AchievementProtocolSupport.setUnknownQuickChatPhrase((byte) 58, var4);
           var12 = (BitmapFont) null;
           LookupRetrySupport.field_i = MouseWheelInput.createFramedLabel(1127256, 0, 0, 4020342, 1513239, 65793, 5138823, 1513239, 65793, (BitmapFont) null, 8947848, 2245737, 65793);
           CushionSegment.field_c = MouseWheelInput.createFramedLabel(0, 0, 16764006, 0, 0, 0, 0, 0, 0, param0, 0, 0, 0);

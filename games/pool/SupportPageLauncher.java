@@ -10,7 +10,7 @@ final class SupportPageLauncher {
 
     final static boolean a(boolean param0) {
         if (param0) {
-          SupportPageLauncher.a(-113, false, -92, -109);
+          SupportPageLauncher.updateQuickChatMenu(-113, false, -92, -109);
         }
         return AccountStateQuery.a(false, QuickChatMenuSupport.field_d, ResourceArchive.field_a);
     }
@@ -154,7 +154,7 @@ final class SupportPageLauncher {
         field_b = null;
     }
 
-    final static void a(int param0, boolean param1, int param2, int param3) {
+    final static void updateQuickChatMenu(int param0, boolean param1, int param2, int param3) {
         int var4;
         int var5;
         int var6;

@@ -32,41 +32,41 @@ final class SocialListEntry extends UiComponent {
         super(0L, (UiComponent) null);
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void requestLobbyGamePlayers(int opcode, int gameId, int obfuscationGuard) {
         LobbyGame var6 = null;
         LobbyGame var7 = null;
         CipherPacketBuffer var4 = null;
         CipherPacketBuffer var4Lifetime1;
-        if (param1 != AgeValidator.field_r) {
+        if (gameId != AgeValidator.field_r) {
           var6 = (LobbyGame) (LoginEncryptionSupport.field_a.findFirst((long)AgeValidator.field_r, false));
           var7 = var6;
-          AgeValidator.field_r = param1;
+          AgeValidator.field_r = gameId;
           if (var7 != null) {
             var7.playerNames = null;
           } else {
             var4 = JaggrabDownloader.field_j;
-            var4.writeCipheredOpcode(false, param0);
+            var4.writeCipheredOpcode(false, opcode);
             var4.writeByte(3, false);
             var4.writeByte(11, false);
-            var4.writeShort((byte) -81, param1);
-            if (param2 != 11) {
+            var4.writeShort((byte) -81, gameId);
+            if (obfuscationGuard != 11) {
               field_Rb = (String) null;
               return;
             }
             return;
           }
           var4Lifetime1 = JaggrabDownloader.field_j;
-          var4Lifetime1.writeCipheredOpcode(false, param0);
+          var4Lifetime1.writeCipheredOpcode(false, opcode);
           var4Lifetime1.writeByte(3, false);
           var4Lifetime1.writeByte(11, false);
-          var4Lifetime1.writeShort((byte) -81, param1);
-          if (param2 != 11) {
+          var4Lifetime1.writeShort((byte) -81, gameId);
+          if (obfuscationGuard != 11) {
             field_Rb = (String) null;
             return;
           }
           return;
         }
-        if (param2 == 11) {
+        if (obfuscationGuard == 11) {
           return;
         }
         field_Rb = (String) null;

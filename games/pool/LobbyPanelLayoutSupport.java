@@ -11,18 +11,18 @@ final class LobbyPanelLayoutSupport {
     static int field_g;
     static UiComponent field_e;
 
-    final static int a(int param0, int param1) {
+    final static int getChatFilterMode(int obfuscationGuard, int channel) {
         int var2 = 0;
-        if (0 == param1) {
+        if (0 == channel) {
           var2 = BallDebugOverlay.field_i;
         }
-        if (param1 == 1) {
+        if (channel == 1) {
           var2 = FixedPointVectorSupport.field_e;
         }
-        if (param1 == 2) {
+        if (channel == 2) {
           var2 = ResourceArchive.field_e;
         }
-        if (param0 == 5) {
+        if (obfuscationGuard == 5) {
           return var2;
         }
         return 112;

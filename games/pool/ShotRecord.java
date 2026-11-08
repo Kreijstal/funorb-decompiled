@@ -191,7 +191,7 @@ final class ShotRecord extends IntrusiveNode {
 
     final static void a(int param0, int param1, int param2, boolean param3) {
         ModelInstance.a(param3, param2 ^ 40844);
-        SupportPageLauncher.a(param1, param3, param0, 30);
+        SupportPageLauncher.updateQuickChatMenu(param1, param3, param0, 30);
         if (param2 != -40960) {
           ShotRecord.b(false);
         }

@@ -24,7 +24,7 @@ final class NodeHashTableIterator implements Iterator {
     static String instructions;
     static int field_e;
 
-    final static Sprite[] a(int param0, Sprite param1) {
+    final static Sprite[] createCenterOnlyFrameSprites(int obfuscationGuard, Sprite center) {
         Sprite[] var2 = null;
         RuntimeException var2_ref = null;
         Sprite[] var3 = null;
@@ -36,8 +36,8 @@ final class NodeHashTableIterator implements Iterator {
         try {
           var3 = new Sprite[9];
           var2 = var3;
-          var3[4] = param1;
-          if (param0 != -32344) {
+          var3[4] = center;
+          if (obfuscationGuard != -32344) {
             field_l = -30;
           }
           stackIn_3_0 = var2;
@@ -46,8 +46,8 @@ final class NodeHashTableIterator implements Iterator {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
           stackIn_6_0 = var2_ref;
-          stackIn_6_1 = new StringBuilder().append("hb.C(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_6_1 = new StringBuilder().append("hb.C(").append(obfuscationGuard).append(',');
+          if (center == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
@@ -97,7 +97,7 @@ final class NodeHashTableIterator implements Iterator {
         return var1;
     }
 
-    final static void a(int param0, UiComponent param1, int param2) {
+    final static void openChatFilterMenu(int obfuscationGuard, UiComponent anchor, int channel) {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -148,8 +148,8 @@ final class NodeHashTableIterator implements Iterator {
         Sprite var30Lifetime1Lifetime4;
         Sprite var30Lifetime1Lifetime5;
         try {
-          LogoFinalFrameLoader.openPlayerContextMenu((String) null, param2, 0L, -1, (ScrollPane) null, (String) null, 32540, param1, (int[]) null);
-          if (0 == param2) {
+          LogoFinalFrameLoader.openPlayerContextMenu((String) null, channel, 0L, -1, (ScrollPane) null, (String) null, 32540, anchor, (int[]) null);
+          if (0 == channel) {
             var11 = PlasmaBallSkin.field_m;
             var12 = ThemeSelectScreen.field_M[0];
             var30 = var12;
@@ -169,7 +169,7 @@ final class NodeHashTableIterator implements Iterator {
             var19 = Pool.muChatLobbyHide;
             var17.field_n.addIconAction(13, (byte) -75, var18, var19);
           }
-          if (param2 == 1) {
+          if (channel == 1) {
             var20 = PlasmaBallSkin.field_m;
             var21 = ThemeSelectScreen.field_M[0];
             var30Lifetime1 = var21;
@@ -189,7 +189,7 @@ final class NodeHashTableIterator implements Iterator {
             var28 = TextLayout.muChatGameHide;
             var26.field_n.addIconAction(13, (byte) 82, var27, var28);
           }
-          if (param2 == 2) {
+          if (channel == 2) {
             var29 = PlasmaBallSkin.field_m;
             var30Lifetime2 = ThemeSelectScreen.field_M[0];
             var31 = MusicPatchEnvelope.muChatPmShowAll;
@@ -204,12 +204,12 @@ final class NodeHashTableIterator implements Iterator {
             var35.field_n.addIconAction(13, (byte) 90, var36, var37);
           }
           var38 = PlasmaBallSkin.field_m;
-          var4 = param1.screenX;
-          var5 = param1.screenY;
-          var6 = param1.width;
-          var7 = param1.height;
+          var4 = anchor.screenX;
+          var5 = anchor.screenY;
+          var6 = anchor.width;
+          var7 = anchor.height;
           var38.field_n.layoutAtAnchor(var6, var7, var4, 0, var5);
-          if (param0 != 27937) {
+          if (obfuscationGuard != 27937) {
             mpAcceptrematchUnrated = (String) null;
           }
           return;
@@ -217,13 +217,13 @@ final class NodeHashTableIterator implements Iterator {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_13_0 = var3;
-          stackIn_13_1 = new StringBuilder().append("hb.A(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_13_1 = new StringBuilder().append("hb.A(").append(obfuscationGuard).append(',');
+          if (anchor == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(channel).append(')').toString());
         }
     }
 
@@ -235,9 +235,9 @@ final class NodeHashTableIterator implements Iterator {
         this.field_i = null;
     }
 
-    private final void a(byte param0) {
+    private final void reset(byte obfuscationGuard) {
         this.field_i = null;
-        if (param0 != 43) {
+        if (obfuscationGuard != 43) {
           return;
         }
         this.field_m = this.field_h.buckets[0].previous;
@@ -267,7 +267,7 @@ final class NodeHashTableIterator implements Iterator {
         this.field_i = null;
         try {
           this.field_h = param0;
-          this.a((byte) 43);
+          this.reset((byte) 43);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "hb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

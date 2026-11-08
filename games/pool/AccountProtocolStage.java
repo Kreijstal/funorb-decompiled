@@ -14,7 +14,7 @@ final class AccountProtocolStage {
         throw new IllegalStateException();
     }
 
-    final static int a(byte param0) {
+    final static int pollAccountDialogResult(byte obfuscationGuard) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -27,7 +27,7 @@ final class AccountProtocolStage {
         RuntimeException decompiledCaughtException = null;
         var3 = Pool.field_O;
         try {
-          var1_int = -124 / ((param0 - 38) / 54);
+          var1_int = -124 / ((obfuscationGuard - 38) / 54);
           TabbedPane.field_Ub.processPointerFrame(-120, AvailabilityQueryResult.field_b, true, PasswordInputPainter.field_D);
           TabbedPane.field_Ub.advanceDialogAnimations((byte) 126);
           while (LabeledChildWidget.h(127)) {
@@ -59,7 +59,7 @@ final class AccountProtocolStage {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "ph.A(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "ph.A(" + obfuscationGuard + ')');
         }
     }
 

@@ -27,7 +27,7 @@ final class LoginTextSupport {
         field_c = null;
     }
 
-    final static String a(boolean param0) {
+    final static String getAccountName(boolean obfuscationGuard) {
         if (TabbedPane.field_Lb == IntegerRecordProtocolSupport.field_e) {
           return LoginPayload.field_d;
         }
@@ -37,7 +37,7 @@ final class LoginTextSupport {
         if (TimeTrialSelectScreen.field_I == IntegerRecordProtocolSupport.field_e) {
           return TextInputValidator.field_j.getText(2);
         }
-        if (param0) {
+        if (obfuscationGuard) {
           return SpriteState.field_x;
         }
         LoginTextSupport.releaseStatics(-107);

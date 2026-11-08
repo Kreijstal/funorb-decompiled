@@ -211,7 +211,7 @@ final class HighscoresScreen extends MenuScreen {
 
     final int getButtonHeight(byte param0, int param1) {
         if (param0 != 69) {
-          HighscoresScreen.a(93, (byte) -1, 126);
+          HighscoresScreen.sendJoinGameRequest(93, (byte) -1, 126);
         }
         if (!NanoTickClock.isClientConnected(param0 - 178) &&
           param1 < 3) {
@@ -233,7 +233,7 @@ final class HighscoresScreen extends MenuScreen {
 
     final static int currentYear(int obfuscationGuard) {
         if (obfuscationGuard != 36) {
-          HighscoresScreen.a(4, (byte) -14, 28);
+          HighscoresScreen.sendJoinGameRequest(4, (byte) -14, 28);
         }
         return 1900 + new Date().getYear();
     }
@@ -323,15 +323,15 @@ final class HighscoresScreen extends MenuScreen {
         return 390;
     }
 
-    final static void a(int param0, byte param1, int param2) {
+    final static void sendJoinGameRequest(int gameId, byte obfuscationGuard, int opcode) {
         CipherPacketBuffer var3 = JaggrabDownloader.field_j;
-        var3.writeCipheredOpcode(false, param2);
-        if (param1 > -103) {
-          HighscoresScreen.a(-22, (byte) -114, 4);
+        var3.writeCipheredOpcode(false, opcode);
+        if (obfuscationGuard > -103) {
+          HighscoresScreen.sendJoinGameRequest(-22, (byte) -114, 4);
         }
         var3.writeByte(3, false);
         var3.writeByte(8, false);
-        var3.writeShort((byte) -81, param0);
+        var3.writeShort((byte) -81, gameId);
     }
 
     final void drawScreen(int param0) {
@@ -397,7 +397,7 @@ final class HighscoresScreen extends MenuScreen {
         }
     }
 
-    final static void a(String[] args, int param1, int param2, boolean param3, ResourceArchive param4, int param5, ResourceArchive param6, byte[] param7, int[] param8, ResourceArchive param9, String[][] param10, String[] param11, byte[] param12, IndexedSprite[] param13, String[] param14, Sprite[][] param15, String[][] param16, byte param17, Sprite[][] param18, int[] param19) {
+    final static void initializeLobbyInterface(String[] args, int param1, int param2, boolean param3, ResourceArchive param4, int param5, ResourceArchive param6, byte[] param7, int[] param8, ResourceArchive param9, String[][] param10, String[] param11, byte[] param12, IndexedSprite[] param13, String[] param14, Sprite[][] param15, String[][] param16, byte param17, Sprite[][] param18, int[] param19) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;

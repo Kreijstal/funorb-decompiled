@@ -216,7 +216,7 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
         this.okButton = new ButtonWidget(ReflectionReplySupport.ok, (WidgetListener) null);
         this.cancelButton = new ButtonWidget(OptionsScreen.cancel, (WidgetListener) null);
         this.displayNameInput.hoverText = ThemeSelectScreen.createDisplaynameTooltip;
-        this.displayNameInput.a((byte) -111, new UsernameAvailabilityValidator(this.displayNameInput));
+        this.displayNameInput.setValidationProvider((byte) -111, new UsernameAvailabilityValidator(this.displayNameInput));
         this.okButton.enabled = false;
         this.okButton.renderer = (WidgetPainter) ((Object) new ThreeSliceButtonPainter());
         this.cancelButton.renderer = (WidgetPainter) ((Object) new LinkButtonPainter());

@@ -27,7 +27,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
         field_Hb = null;
     }
 
-    private final void a(LoginResponse param0, int param1, boolean param2) {
+    private final void showCreationResponse(LoginResponse response, int obfuscationGuard, boolean initialError) {
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
         String stackIn_34_2 = null;
@@ -39,14 +39,14 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
         var6 = Pool.field_O;
         try {
           this.field_Fb = true;
-          if (param1 != 5) {
+          if (obfuscationGuard != 5) {
             field_Gb = true;
           }
-          if (!param0.field_f) {
-            if (null == param0.field_c) {
-              var4 = param0.field_b;
-              if (param0.field_g == 248) {
-                if (!param2) {
+          if (!response.field_f) {
+            if (null == response.field_c) {
+              var4 = response.field_b;
+              if (response.field_g == 248) {
+                if (!initialError) {
                   PoolMatchController.setTuhstatbutCookie((byte) -80);
                 }
                 var4 = NodeHashTableIterator.createIneligible;
@@ -55,34 +55,34 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
             } else {
               var4 = TextHotspotRegion.createUsernameUnavailable;
               if (null != this.field_Cb) {
-                this.field_Cb.onMoreSuggestionsRequested(param1 ^ 16777210);
+                this.field_Cb.onMoreSuggestionsRequested(obfuscationGuard ^ 16777210);
               }
             }
           } else {
             var4 = SingleChildWidget.createAccountSuccess;
           }
           var5 = new MessageDialogContent((MessageDialog) (this), LoginPayloadFactory.field_e, var4);
-          if (param0.field_f) {
-            if (param0.field_e) {
+          if (response.field_f) {
+            if (response.field_e) {
               this.replaceContent(new Under13NoticePanel(this), 30);
               return;
             }
-            var5.addButton(WeightedLruCache.cont, param1 - 88, (WidgetListener) (this));
+            var5.addButton(WeightedLruCache.cont, obfuscationGuard - 88, (WidgetListener) (this));
           } else {
             if (this.field_Eb) {
               var5.addButton(WeightedLruCache.cont, -123, (WidgetListener) (this));
             } else {
-              if (param0.field_g == 5) {
-                var5.addActionButton(11, NodeHashTableIterator.reloadgame, param1 ^ 4);
+              if (response.field_g == 5) {
+                var5.addActionButton(11, NodeHashTableIterator.reloadgame, obfuscationGuard ^ 4);
                 var5.addActionButton(17, FullscreenDisplayMode.quittowebsite, 1);
               } else {
-                var5.addActionButton(-1, CueStick.back, param1 ^ 4);
+                var5.addActionButton(-1, CueStick.back, obfuscationGuard ^ 4);
               }
             }
-            if (3 == param0.field_g) {
-              var5.addActionButton(7, UiComponentNode.toserverlist, param1 ^ 4);
+            if (3 == response.field_g) {
+              var5.addActionButton(7, UiComponentNode.toserverlist, obfuscationGuard ^ 4);
             } else {
-              if (param0.field_g != 6) {
+              if (response.field_g != 6) {
                 this.replaceContent(var5, 30);
                 return;
               }
@@ -96,12 +96,12 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
           var4_ref = decompiledCaughtException;
           stackIn_33_0 = var4_ref;
           stackIn_33_1 = new StringBuilder().append("fq.TB(");
-          if (param0 == null) {
+          if (response == null) {
             stackIn_34_2 = "null";
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(obfuscationGuard).append(',').append(initialError).append(')').toString());
         }
     }
 
@@ -132,9 +132,9 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
           if (this.field_Fb) {
             return super.advanceDialogAnimation((byte) -20);
           }
-          var2 = DirectByteStorage.a(true);
+          var2 = DirectByteStorage.pollAccountCreationResponse(true);
           if (var2 != null) {
-            this.a(var2, param0 + 25, false);
+            this.showCreationResponse(var2, param0 + 25, false);
             return super.advanceDialogAnimation((byte) -20);
           }
           return super.advanceDialogAnimation((byte) -20);
@@ -145,9 +145,9 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
         if (this.field_Fb) {
           return super.advanceDialogAnimation((byte) -20);
         }
-        var2Lifetime1 = DirectByteStorage.a(true);
+        var2Lifetime1 = DirectByteStorage.pollAccountCreationResponse(true);
         if (var2Lifetime1 != null) {
-          this.a(var2Lifetime1, param0 + 25, false);
+          this.showCreationResponse(var2Lifetime1, param0 + 25, false);
           return super.advanceDialogAnimation((byte) -20);
         }
         return super.advanceDialogAnimation((byte) -20);
@@ -162,22 +162,22 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
         }
     }
 
-    final void p(byte param0) {
-        this.a(DebouncedValidationProvider.a(248, true, NodeHashTableIterator.createIneligible), 5, true);
-        if (param0 > -44) {
+    final void showCreationIneligible(byte obfuscationGuard) {
+        this.showCreationResponse(DebouncedValidationProvider.createLoginErrorResponse(248, true, NodeHashTableIterator.createIneligible), 5, true);
+        if (obfuscationGuard > -44) {
           field_Gb = true;
         }
     }
 
-    final static void a(int param0, int param1, int param2, boolean param3) {
+    final static void switchScreen(int obfuscationGuard, int screenId, int parentScreenId, boolean animate) {
         int var4;
         StatefulTextPainter.field_s.setCursorVisible(true, (byte) 106, (java.awt.Component) ((Object) TextLineLayout.getActiveCanvas((byte) -37)));
         ThemeSelectScreen.field_P = 0;
-        GameRules.field_b = param1;
-        if (param0 != -3405) {
+        GameRules.field_b = screenId;
+        if (obfuscationGuard != -3405) {
           return;
         }
-        MaxLengthTextInputWidget.m(param0 ^ 22150);
+        MaxLengthTextInputWidget.initializeBallPreview(obfuscationGuard ^ 22150);
         if (!ShotEvent.isNonnegative(true, GameRules.field_b)) {
           if (GameRules.field_b < 0) {
             if (-2 == GameRules.field_b) {
@@ -221,12 +221,12 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
           TextLineLayout.a((byte) -27, BeveledFrameSpriteFactory.field_c[3]);
           return;
         }
-        DisplayModeSupport.field_c[GameRules.field_b].parentScreenId = param2;
+        DisplayModeSupport.field_c[GameRules.field_b].parentScreenId = parentScreenId;
         var4 = 0;
         if (GameRules.field_b == 21) {
           var4 = -1;
         }
-        DisplayModeSupport.field_c[GameRules.field_b].onEnter(0, var4, param3);
+        DisplayModeSupport.field_c[GameRules.field_b].onEnter(0, var4, animate);
         if (GameRules.field_b != 21) {
           if (GameRules.field_b < 0) {
             if (-2 == GameRules.field_b) {
@@ -283,7 +283,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
             }
           }
         } else {
-          MouseWheelInput.a(-83, param3);
+          MouseWheelInput.a(-83, animate);
           if (GameRules.field_b < 0) {
             if (-2 == GameRules.field_b) {
               KillerBallSkin.playMusicTrack(256, false, true, HalloweenBallSkin.field_m);

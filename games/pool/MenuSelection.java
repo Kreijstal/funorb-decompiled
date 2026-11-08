@@ -282,10 +282,10 @@ final class MenuSelection {
           NodeHashTableIterator.field_a = NodeHashTableIterator.field_a - 1;
           if (NodeHashTableIterator.field_a <= 0) {
             if (0 < PoolMatchController.field_z) {
-              DelayedServerPacket.$cfr$intArgs$a$e9dea5688aa5(-42, PoolMatchController.field_z);
+              DelayedServerPacket.layoutSlidingGamePanelsIntArgs(-42, PoolMatchController.field_z);
             }
             if (LogoMaterial.field_b > 0) {
-              DelayedServerPacket.$cfr$intArgs$a$e9dea5688aa5(-35, LogoMaterial.field_b);
+              DelayedServerPacket.layoutSlidingGamePanelsIntArgs(-35, LogoMaterial.field_b);
             }
             if (param0 != -13953) {
               MenuSelection.releaseStatics(67);
@@ -295,16 +295,16 @@ final class MenuSelection {
           IterableDualLinkDeque.a((byte) -80);
           if (0 >= PoolMatchController.field_z) {
             if (LogoMaterial.field_b > 0) {
-              DelayedServerPacket.$cfr$intArgs$a$e9dea5688aa5(-35, LogoMaterial.field_b);
+              DelayedServerPacket.layoutSlidingGamePanelsIntArgs(-35, LogoMaterial.field_b);
             }
             if (param0 != -13953) {
               MenuSelection.releaseStatics(67);
             }
             return;
           }
-          DelayedServerPacket.$cfr$intArgs$a$e9dea5688aa5(-42, PoolMatchController.field_z);
+          DelayedServerPacket.layoutSlidingGamePanelsIntArgs(-42, PoolMatchController.field_z);
           if (LogoMaterial.field_b > 0) {
-            DelayedServerPacket.$cfr$intArgs$a$e9dea5688aa5(-35, LogoMaterial.field_b);
+            DelayedServerPacket.layoutSlidingGamePanelsIntArgs(-35, LogoMaterial.field_b);
           }
           if (param0 == -13953) {
             return;
@@ -318,10 +318,10 @@ final class MenuSelection {
             IterableDualLinkDeque.a((byte) -80);
           }
           if (0 < PoolMatchController.field_z) {
-            DelayedServerPacket.$cfr$intArgs$a$e9dea5688aa5(-42, PoolMatchController.field_z);
+            DelayedServerPacket.layoutSlidingGamePanelsIntArgs(-42, PoolMatchController.field_z);
           }
           if (LogoMaterial.field_b > 0) {
-            DelayedServerPacket.$cfr$intArgs$a$e9dea5688aa5(-35, LogoMaterial.field_b);
+            DelayedServerPacket.layoutSlidingGamePanelsIntArgs(-35, LogoMaterial.field_b);
           }
           if (param0 == -13953) {
             return;
@@ -334,19 +334,19 @@ final class MenuSelection {
             IterableDualLinkDeque.a((byte) -80);
           }
           if (0 < PoolMatchController.field_z) {
-            DelayedServerPacket.$cfr$intArgs$a$e9dea5688aa5(-42, PoolMatchController.field_z);
+            DelayedServerPacket.layoutSlidingGamePanelsIntArgs(-42, PoolMatchController.field_z);
           }
         } else {
           LogoMaterial.field_b = LogoMaterial.field_b - 1;
           if (NodeHashTableIterator.field_a > 0) {
             IterableDualLinkDeque.a((byte) -80);
             if (0 < PoolMatchController.field_z) {
-              DelayedServerPacket.$cfr$intArgs$a$e9dea5688aa5(-42, PoolMatchController.field_z);
+              DelayedServerPacket.layoutSlidingGamePanelsIntArgs(-42, PoolMatchController.field_z);
             }
           } else {
             if (0 >= PoolMatchController.field_z) {
               if (LogoMaterial.field_b > 0) {
-                DelayedServerPacket.$cfr$intArgs$a$e9dea5688aa5(-35, LogoMaterial.field_b);
+                DelayedServerPacket.layoutSlidingGamePanelsIntArgs(-35, LogoMaterial.field_b);
               }
               if (param0 == -13953) {
                 return;
@@ -354,11 +354,11 @@ final class MenuSelection {
               MenuSelection.releaseStatics(67);
               return;
             }
-            DelayedServerPacket.$cfr$intArgs$a$e9dea5688aa5(-42, PoolMatchController.field_z);
+            DelayedServerPacket.layoutSlidingGamePanelsIntArgs(-42, PoolMatchController.field_z);
           }
         }
         if (LogoMaterial.field_b > 0) {
-          DelayedServerPacket.$cfr$intArgs$a$e9dea5688aa5(-35, LogoMaterial.field_b);
+          DelayedServerPacket.layoutSlidingGamePanelsIntArgs(-35, LogoMaterial.field_b);
         }
         if (param0 != -13953) {
           MenuSelection.releaseStatics(67);

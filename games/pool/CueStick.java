@@ -79,10 +79,10 @@ final class CueStick {
             if (var4 >= -1 + this.segments.length) {
               this.segments[var4] = var3;
             } else {
-              this.segments[var4] = TutorialController.b((byte) 121);
-              var5_ref_eg = TutorialController.b((byte) 124);
+              this.segments[var4] = TutorialController.createEmptyMesh((byte) 121);
+              var5_ref_eg = TutorialController.createEmptyMesh((byte) 124);
               var6_int = (-param0.field_V + param0.field_x) * (1 + var4) / this.segments.length + param0.field_V;
-              JaggrabDownloader.a(0, this.segments[var4], 0, false, var6_int, 0, 0, 1, var5_ref_eg, var3);
+              JaggrabDownloader.splitMeshByPlane(0, this.segments[var4], 0, false, var6_int, 0, 0, 1, var5_ref_eg, var3);
               var3 = var5_ref_eg;
             }
             this.segments[var4].clearCaches();

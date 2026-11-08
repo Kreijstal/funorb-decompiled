@@ -21,11 +21,11 @@ class PauseMenuScreen extends MenuScreen {
 
     final void navigateBack(byte param0) {
         if (param0 < -11) {
-          AccountCreationDialog.a(-3405, -1, LobbyPlayerLookupSupport.a(true) ? 21 : 0, false);
+          AccountCreationDialog.switchScreen(-3405, -1, LobbyPlayerLookupSupport.a(true) ? 21 : 0, false);
           return;
         }
         this.field_K = (Sprite) null;
-        AccountCreationDialog.a(-3405, -1, LobbyPlayerLookupSupport.a(true) ? 21 : 0, false);
+        AccountCreationDialog.switchScreen(-3405, -1, LobbyPlayerLookupSupport.a(true) ? 21 : 0, false);
     }
 
     final static LoginResponse a(String[] args, int param1) {

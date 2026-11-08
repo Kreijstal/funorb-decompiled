@@ -94,7 +94,7 @@ final class JaggrabDownloader implements Runnable {
         }
     }
 
-    final static void a(int param0, MeshBuilder param1, int param2, boolean param3, int param4, int param5, int param6, int param7, MeshBuilder param8, MeshBuilder param9) {
+    final static void splitMeshByPlane(int param0, MeshBuilder param1, int param2, boolean param3, int param4, int param5, int param6, int param7, MeshBuilder param8, MeshBuilder param9) {
         byte fieldTemp$0 = 0;
         RuntimeException stackIn_191_0 = null;
         StringBuilder stackIn_191_1 = null;
@@ -504,7 +504,7 @@ final class JaggrabDownloader implements Runnable {
         }
     }
 
-    final static void a(boolean param0, int param1, int param2, byte param3, TriangleMesh param4) {
+    final static void bucketVisibleFaces(boolean cullBackfaces, int maximumDepth, int minimumDepth, byte obfuscationGuard, TriangleMesh mesh) {
         byte dupTemp$0 = 0;
         int stackIn_25_0 = 0;
         RuntimeException stackIn_55_0 = null;
@@ -533,22 +533,22 @@ final class JaggrabDownloader implements Runnable {
         int var13Lifetime1;
         int var14Lifetime1;
         try {
-          var7 = 101 / ((-47 - param3) / 46);
-          var5_int = TextHotspotRegion.a(3 * (-param2 + param1), 0);
-          var6 = param2 * 3;
+          var7 = 101 / ((-47 - obfuscationGuard) / 46);
+          var5_int = TextHotspotRegion.bitLengthWithOffset(3 * (-minimumDepth + maximumDepth), 0);
+          var6 = minimumDepth * 3;
           var8 = -10 + var5_int;
           GlowSprite.clearFaceBucketCounts((byte) 48);
-          if (0 < param4.field_I &&
-            param4.field_K != null) {
+          if (0 < mesh.field_I &&
+            mesh.field_K != null) {
             AgeValidator.h(0);
           }
           HighScoreRequest.field_x = 0;
-          for (var9 = 0; param4.field_d > var9; var9++) {
+          for (var9 = 0; mesh.field_d > var9; var9++) {
             boolean decompiledFrameCompleted0 = true;
-            var10 = param4.field_y[var9];
-            var11 = param4.field_r[var9];
-            var12 = param4.field_u[var9];
-            if (param0) {
+            var10 = mesh.field_y[var9];
+            var11 = mesh.field_r[var9];
+            var12 = mesh.field_u[var9];
+            if (cullBackfaces) {
               var13 = WidgetContainer.field_M[var10];
               var14 = IsaacCipher.field_h[var10];
               var15 = WidgetContainer.field_M[var11] - var13;
@@ -556,7 +556,7 @@ final class JaggrabDownloader implements Runnable {
               var17 = -var14 + IsaacCipher.field_h[var11];
               var18 = IsaacCipher.field_h[var12] - var14;
             }
-            if (!param0 ||
+            if (!cullBackfaces ||
               !(var15 * var18 - var16 * var17 >= 0)) {
               var13Lifetime1 = ButtonWidget.field_L[var10];
               if (-2147483648 != var13Lifetime1) {
@@ -585,9 +585,9 @@ final class JaggrabDownloader implements Runnable {
                       var19 = var18 + (var17 << 4);
                       RankingsScreen.field_I[var19] = var9;
                       DialogLayer.field_T[var17] = 1 + var18;
-                      if (param4.field_I > 0 &&
-                        null != param4.field_K) {
-                        dupTemp$0 = param4.field_K[var9];
+                      if (mesh.field_I > 0 &&
+                        null != mesh.field_K) {
+                        dupTemp$0 = mesh.field_K[var9];
                         ProgressDialog.field_ib[dupTemp$0] = ProgressDialog.field_ib[dupTemp$0] + 1;
                       }
                       HighScoreRequest.field_x = HighScoreRequest.field_x + 1;
@@ -597,8 +597,8 @@ final class JaggrabDownloader implements Runnable {
               }
             }
           }
-          if (0 < param4.field_I &&
-            param4.field_K != null) {
+          if (0 < mesh.field_I &&
+            mesh.field_K != null) {
             var9Lifetime1 = 0;
             for (var10Lifetime1 = 0; ProgressDialog.field_ib.length > var10Lifetime1; var10Lifetime1++) {
               var11Lifetime1 = ProgressDialog.field_ib[var10Lifetime1];
@@ -612,8 +612,8 @@ final class JaggrabDownloader implements Runnable {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_55_0 = var5;
-          stackIn_55_1 = new StringBuilder().append("ej.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          stackIn_55_1 = new StringBuilder().append("ej.A(").append(cullBackfaces).append(',').append(maximumDepth).append(',').append(minimumDepth).append(',').append(obfuscationGuard).append(',');
+          if (mesh == null) {
             stackIn_56_2 = "null";
           } else {
             stackIn_56_2 = "{...}";

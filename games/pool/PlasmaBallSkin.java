@@ -13,7 +13,7 @@ final class PlasmaBallSkin extends BallSkin {
     static IndexedSprite[] field_l;
     static String muGamelistAllGames;
 
-    final static void a(int param0, int param1, Sprite[] param2, int param3, Sprite[] param4, int param5, int param6, BitmapFont param7, int param8, int param9, Sprite[] param10, int param11, int param12, int param13, int param14) {
+    final static void configureSharedInterfaceStyle(int param0, int param1, Sprite[] param2, int param3, Sprite[] param4, int param5, int param6, BitmapFont param7, int param8, int param9, Sprite[] param10, int param11, int param12, int param13, int param14) {
         RuntimeException runtimeException = null;
         int var15_int = 0;
         int var16 = 0;
@@ -33,7 +33,7 @@ final class PlasmaBallSkin extends BallSkin {
           }
           var15_int = param7.maxDescent + param7.field_L;
           var16 = param7.field_L;
-          HighScoreRequest.a(param5, var16, param4, param7, param1, param10, param14, param6, 19539, param0, param2, var16, param13, param7, param3, param8, param12, param9, var15_int, var15_int);
+          HighScoreRequest.configureSharedInterfaceStyle(param5, var16, param4, param7, param1, param10, param14, param6, 19539, param0, param2, var16, param13, param7, param3, param8, param12, param9, var15_int, var15_int);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

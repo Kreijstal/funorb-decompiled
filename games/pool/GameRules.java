@@ -202,7 +202,7 @@ abstract class GameRules {
               PoolMatchController.field_gb = PauseMenuScreen.a(args, 57);
               return;
             }
-            PoolMatchController.field_gb = DebouncedValidationProvider.a(param2, true, param3);
+            PoolMatchController.field_gb = DebouncedValidationProvider.createLoginErrorResponse(param2, true, param3);
           } else {
             stackIn_6_0 = !(ButtonPainter.field_b >= 13);
             PoolMatchController.field_gb = GradientPaletteSupport.createLoginResponse(stackIn_6_0, -30914);

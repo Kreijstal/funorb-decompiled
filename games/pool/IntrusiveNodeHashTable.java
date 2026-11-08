@@ -230,7 +230,7 @@ final class IntrusiveNodeHashTable implements Iterable {
           var9 = 0;
           if (!RankingsRequest.field_z &&
             var5 < QuickChatPhraseDefinition.field_E) {
-            var10_int = LobbyPanelLayoutSupport.a(5, var8_ref_pn.field_p);
+            var10_int = LobbyPanelLayoutSupport.getChatFilterMode(5, var8_ref_pn.field_p);
             if (var8_ref_pn.b(14842) >= var10_int && (var8_ref_pn.field_g ||
               !MenuSelection.a(var8_ref_pn.field_q, 24552))) {
               var9 = 1;
@@ -245,7 +245,7 @@ final class IntrusiveNodeHashTable implements Iterable {
               }
               var10 = PacketBuffer.formatChatPrefix((byte) -24, var8_ref_pn);
               var11 = var10 + BitmapFont.escapeMarkup(var8_ref_pn.field_f);
-              var12 = QuickChatHelpDialog.a(var8_ref_pn, -55);
+              var12 = QuickChatHelpDialog.chatMessageColor(var8_ref_pn, -55);
               var8_ref_pn.field_u = new UiComponent(0L, TickClock.field_h, var11);
               var8_ref_pn.field_u.capturedTextColor = -(var12 >> 1 & 8355711) + (var12 + ((16711423 & TickClock.field_h.capturedTextColor) >> 1));
               var8_ref_pn.field_u.font = RatingTextState.field_c;

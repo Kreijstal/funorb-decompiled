@@ -33,8 +33,8 @@ abstract class DateInputWidget extends WidgetContainer implements ValidationProv
         }
     }
 
-    final static void j(byte param0) {
-        if (param0 < -9) {
+    final static void shutdownAudioOutputs(byte obfuscationGuard) {
+        if (obfuscationGuard < -9) {
           if (MidiNoteMixer.field_s != null) {
             MidiNoteMixer.field_s.shutdown();
           }
@@ -75,7 +75,7 @@ abstract class DateInputWidget extends WidgetContainer implements ValidationProv
         super(param0, param1, param2, param3, param4);
     }
 
-    final static void i(byte param0) {
+    final static void initializeMenuScreens(byte obfuscationGuard) {
         DisplayModeSupport.field_c = new MenuScreen[25];
         MenuScreen discarded$0 = new MenuScreen(ProjectedLineSupport.field_m, 0, 180, 460, 160, 24, new int[]{39, 43, 0, 1, 5, 47, 4, 48, 22, 19});
         OptionsScreen discarded$1 = new OptionsScreen(14, 180, 460, 160, 24, MusicCrossfadeStream.field_B);
@@ -96,7 +96,7 @@ abstract class DateInputWidget extends WidgetContainer implements ValidationProv
         AchievementsScreen discarded$16 = new AchievementsScreen(18, 180, 460, 400, 24, new int[]{48, 8});
         LoginRequiredScreen discarded$17 = new LoginRequiredScreen(19, 180, 460, 400, 24, new int[]{23, 24});
         MessageScreen discarded$18 = new MessageScreen(20, 290, 460, 400, 24, new int[]{7});
-        int var1 = 37 % ((37 - param0) / 35);
+        int var1 = 37 % ((37 - obfuscationGuard) / 35);
         MembershipBenefitsScreen discarded$19 = new MembershipBenefitsScreen(21, 180, 460, 160, 24, new int[]{});
         LocalGameSetupScreen discarded$20 = new LocalGameSetupScreen(6, 180, 460, 160, 24, new int[]{28, 27, 64, 63, 45, 44, 46, 8, 65});
         ThemeSelectScreen discarded$21 = new ThemeSelectScreen(7, 180, 460, 160, 24, new int[]{29, 30, 31, 32, 33, 8});
@@ -109,7 +109,7 @@ abstract class DateInputWidget extends WidgetContainer implements ValidationProv
         PauseMenuScreen.applyScreenLayouts((byte) -104);
     }
 
-    final static String a(java.applet.Applet param0, byte param1) {
+    final static String readSettingsCookie(java.applet.Applet applet, byte obfuscationGuard) {
         try {
           int var6 = 0;
           String var3 = null;
@@ -127,12 +127,12 @@ abstract class DateInputWidget extends WidgetContainer implements ValidationProv
           RuntimeException var2_ref = null;
           try {
             try {
-              var8 = param0.getParameter("cookieprefix");
-              if (param1 <= 110) {
+              var8 = applet.getParameter("cookieprefix");
+              if (obfuscationGuard <= 110) {
                 field_U = 74;
               }
               var3 = var8 + "settings";
-              var4 = (String) (JavaScriptBridge.callWindowFunction((byte) 124, "getcookies", param0));
+              var4 = (String) (JavaScriptBridge.callWindowFunction((byte) 124, "getcookies", applet));
               var5 = AppletUrlSupport.splitString(30634, var4, ';');
               for (var6 = 0; var5.length > var6; var6++) {
                 var7 = var5[var6].indexOf('=');
@@ -147,7 +147,7 @@ abstract class DateInputWidget extends WidgetContainer implements ValidationProv
               var2 = decompiledCaughtException;
             }
             if (GlowSprite.field_g == null) {
-              return param0.getParameter("settings");
+              return applet.getParameter("settings");
             }
             stackIn_14_0 = GlowSprite.field_g;
             return stackIn_14_0;
@@ -156,12 +156,12 @@ abstract class DateInputWidget extends WidgetContainer implements ValidationProv
             var2_ref = (RuntimeException) (Object) decompiledCaughtException;
             stackIn_17_0 = var2_ref;
             stackIn_17_1 = new StringBuilder().append("eq.H(");
-            if (param0 == null) {
+            if (applet == null) {
               stackIn_18_2 = "null";
             } else {
               stackIn_18_2 = "{...}";
             }
-            throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
+            throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(obfuscationGuard).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

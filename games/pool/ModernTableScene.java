@@ -111,7 +111,7 @@ final class ModernTableScene extends ModelTableScene {
                 } else {
                   stackIn_40_2 = 0;
                 }
-                AccountCreationDialog.a(stackIn_39_0, stackIn_39_1, stackIn_40_2, false);
+                AccountCreationDialog.switchScreen(stackIn_39_0, stackIn_39_1, stackIn_40_2, false);
                 StatefulTextPainter.field_s.setCursorVisible(true, (byte) 106, (java.awt.Component) ((Object) TextLineLayout.getActiveCanvas((byte) -113)));
               }
             }
@@ -276,7 +276,7 @@ final class ModernTableScene extends ModelTableScene {
           QuaternionRotationSupport.clearScreenForTransition(param0 + 55);
           this.a(false, param1);
           var56 = new int[3];
-          ViewportController.a(ChatInputSupport.field_l[PolarTableScene.field_lb].transform[0], var56, GzipDecoder.field_d, ChatInputSupport.field_l[PolarTableScene.field_lb].transform[1], ChatInputSupport.field_l[PolarTableScene.field_lb].transform[2], (byte) 9);
+          ViewportController.projectWorldPoint(ChatInputSupport.field_l[PolarTableScene.field_lb].transform[0], var56, GzipDecoder.field_d, ChatInputSupport.field_l[PolarTableScene.field_lb].transform[1], ChatInputSupport.field_l[PolarTableScene.field_lb].transform[2], (byte) 9);
           dupTemp$0 = var56[1];
           var9 = dupTemp$0;
           var8Lifetime1 = dupTemp$0;
@@ -285,7 +285,7 @@ final class ModernTableScene extends ModelTableScene {
           var6 = dupTemp$1;
           for (var5Lifetime1 = IntrusiveNode.field_g - 1; var5Lifetime1 >= PolarTableScene.field_lb; var5Lifetime1--) {
             ChatInputSupport.field_l[var5Lifetime1].c(6710886, GzipDecoder.field_d);
-            ViewportController.a((int) ChatInputSupport.field_l[var5Lifetime1].field_h, var56, GzipDecoder.field_d, (int) ChatInputSupport.field_l[var5Lifetime1].field_a, (int) ChatInputSupport.field_l[var5Lifetime1].field_o, (byte) 9);
+            ViewportController.projectWorldPoint((int) ChatInputSupport.field_l[var5Lifetime1].field_h, var56, GzipDecoder.field_d, (int) ChatInputSupport.field_l[var5Lifetime1].field_a, (int) ChatInputSupport.field_l[var5Lifetime1].field_o, (byte) 9);
             if (var6 <= var56[0]) {
               if (var7Lifetime1 < var56[0]) {
                 var7Lifetime1 = var56[0];
@@ -300,7 +300,7 @@ final class ModernTableScene extends ModelTableScene {
             } else {
               var8Lifetime1 = var56[1];
             }
-            ViewportController.a((int) ChatInputSupport.field_l[var5Lifetime1].field_p, var56, GzipDecoder.field_d, (int) ChatInputSupport.field_l[var5Lifetime1].field_a, (int) ChatInputSupport.field_l[var5Lifetime1].field_o, (byte) 9);
+            ViewportController.projectWorldPoint((int) ChatInputSupport.field_l[var5Lifetime1].field_p, var56, GzipDecoder.field_d, (int) ChatInputSupport.field_l[var5Lifetime1].field_a, (int) ChatInputSupport.field_l[var5Lifetime1].field_o, (byte) 9);
             if (var56[0] >= var6) {
               if (var7Lifetime1 < var56[0]) {
                 var7Lifetime1 = var56[0];
@@ -315,7 +315,7 @@ final class ModernTableScene extends ModelTableScene {
             } else {
               var8Lifetime1 = var56[1];
             }
-            ViewportController.a((int) ChatInputSupport.field_l[var5Lifetime1].field_h, var56, GzipDecoder.field_d, (int) ChatInputSupport.field_l[var5Lifetime1].field_m, (int) ChatInputSupport.field_l[var5Lifetime1].field_o, (byte) 9);
+            ViewportController.projectWorldPoint((int) ChatInputSupport.field_l[var5Lifetime1].field_h, var56, GzipDecoder.field_d, (int) ChatInputSupport.field_l[var5Lifetime1].field_m, (int) ChatInputSupport.field_l[var5Lifetime1].field_o, (byte) 9);
             if (var6 > var56[0]) {
               var6 = var56[0];
             } else {
@@ -330,7 +330,7 @@ final class ModernTableScene extends ModelTableScene {
                 var9 = var56[1];
               }
             }
-            ViewportController.a((int) ChatInputSupport.field_l[var5Lifetime1].field_p, var56, GzipDecoder.field_d, (int) ChatInputSupport.field_l[var5Lifetime1].field_m, (int) ChatInputSupport.field_l[var5Lifetime1].field_o, (byte) 9);
+            ViewportController.projectWorldPoint((int) ChatInputSupport.field_l[var5Lifetime1].field_p, var56, GzipDecoder.field_d, (int) ChatInputSupport.field_l[var5Lifetime1].field_m, (int) ChatInputSupport.field_l[var5Lifetime1].field_o, (byte) 9);
             if (var8Lifetime1 <= var56[1]) {
               if (var9 < var56[1]) {
                 var9 = var56[1];
@@ -345,7 +345,7 @@ final class ModernTableScene extends ModelTableScene {
                 var7Lifetime1 = var56[0];
               }
             }
-            ViewportController.a((int) ChatInputSupport.field_l[var5Lifetime1].field_h, var56, GzipDecoder.field_d, (int) ChatInputSupport.field_l[var5Lifetime1].field_a, (int) ChatInputSupport.field_l[var5Lifetime1].field_f, (byte) 9);
+            ViewportController.projectWorldPoint((int) ChatInputSupport.field_l[var5Lifetime1].field_h, var56, GzipDecoder.field_d, (int) ChatInputSupport.field_l[var5Lifetime1].field_a, (int) ChatInputSupport.field_l[var5Lifetime1].field_f, (byte) 9);
             if (var8Lifetime1 <= var56[1]) {
               if (var9 < var56[1]) {
                 var9 = var56[1];
@@ -360,7 +360,7 @@ final class ModernTableScene extends ModelTableScene {
                 var7Lifetime1 = var56[0];
               }
             }
-            ViewportController.a((int) ChatInputSupport.field_l[var5Lifetime1].field_p, var56, GzipDecoder.field_d, (int) ChatInputSupport.field_l[var5Lifetime1].field_a, (int) ChatInputSupport.field_l[var5Lifetime1].field_f, (byte) 9);
+            ViewportController.projectWorldPoint((int) ChatInputSupport.field_l[var5Lifetime1].field_p, var56, GzipDecoder.field_d, (int) ChatInputSupport.field_l[var5Lifetime1].field_a, (int) ChatInputSupport.field_l[var5Lifetime1].field_f, (byte) 9);
             if (var6 > var56[0]) {
               var6 = var56[0];
             } else {
@@ -375,7 +375,7 @@ final class ModernTableScene extends ModelTableScene {
                 var9 = var56[1];
               }
             }
-            ViewportController.a((int) ChatInputSupport.field_l[var5Lifetime1].field_h, var56, GzipDecoder.field_d, (int) ChatInputSupport.field_l[var5Lifetime1].field_m, (int) ChatInputSupport.field_l[var5Lifetime1].field_f, (byte) 9);
+            ViewportController.projectWorldPoint((int) ChatInputSupport.field_l[var5Lifetime1].field_h, var56, GzipDecoder.field_d, (int) ChatInputSupport.field_l[var5Lifetime1].field_m, (int) ChatInputSupport.field_l[var5Lifetime1].field_f, (byte) 9);
             if (var6 <= var56[0]) {
               if (var56[0] > var7Lifetime1) {
                 var7Lifetime1 = var56[0];
@@ -390,7 +390,7 @@ final class ModernTableScene extends ModelTableScene {
             } else {
               var8Lifetime1 = var56[1];
             }
-            ViewportController.a((int) ChatInputSupport.field_l[var5Lifetime1].field_p, var56, GzipDecoder.field_d, (int) ChatInputSupport.field_l[var5Lifetime1].field_m, (int) ChatInputSupport.field_l[var5Lifetime1].field_f, (byte) 9);
+            ViewportController.projectWorldPoint((int) ChatInputSupport.field_l[var5Lifetime1].field_p, var56, GzipDecoder.field_d, (int) ChatInputSupport.field_l[var5Lifetime1].field_m, (int) ChatInputSupport.field_l[var5Lifetime1].field_f, (byte) 9);
             if (var56[1] >= var8Lifetime1) {
               if (var9 < var56[1]) {
                 var9 = var56[1];
@@ -721,14 +721,14 @@ final class ModernTableScene extends ModelTableScene {
         var14 = new MeshBuilder[EightBallRules.field_e - WidgetContainer.field_G][2];
         for (var2Lifetime4 = WidgetContainer.field_G; var2Lifetime4 < EightBallRules.field_e; var2Lifetime4++) {
           dupTemp$5 = var14[var2Lifetime4 - WidgetContainer.field_G];
-          dupTemp$6 = TutorialController.b((byte) 125);
+          dupTemp$6 = TutorialController.createEmptyMesh((byte) 125);
           dupTemp$5[0] = dupTemp$6;
           var15_ref_eg = dupTemp$6;
           dupTemp$7 = var14[-WidgetContainer.field_G + var2Lifetime4];
-          dupTemp$8 = TutorialController.b((byte) 127);
+          dupTemp$8 = TutorialController.createEmptyMesh((byte) 127);
           dupTemp$7[1] = dupTemp$8;
           var28 = dupTemp$8;
-          JaggrabDownloader.a(0, var15_ref_eg, 0, false, -this.field_M[var2Lifetime4][2], 0, 0, 1, var28, this.field_O[var2Lifetime4]);
+          JaggrabDownloader.splitMeshByPlane(0, var15_ref_eg, 0, false, -this.field_M[var2Lifetime4][2], 0, 0, 1, var28, this.field_O[var2Lifetime4]);
         }
         var15 = 0;
         for (var2Lifetime5 = WidgetContainer.field_G; EightBallRules.field_e > var2Lifetime5; var2Lifetime5++) {

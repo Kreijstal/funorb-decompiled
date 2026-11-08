@@ -70,48 +70,48 @@ final class DelayedServerPacket extends IntrusiveNode {
         return var2Lifetime1;
     }
 
-    final static void a(int param0, ByteRecordSubmission param1, int param2) {
+    final static void sendByteRecordSubmission(int obfuscationGuard, ByteRecordSubmission submission, int opcode) {
         CipherPacketBuffer var6 = null;
         int var4 = 0;
         try {
           var6 = JaggrabDownloader.field_j;
           CipherPacketBuffer var3 = var6;
-          var6.writeCipheredOpcode(false, param2);
+          var6.writeCipheredOpcode(false, opcode);
           var6.position = var6.position + 1;
           var4 = var6.position;
           var6.writeByte(1, false);
-          if (null != param1.field_p) {
-            var6.writeByte(param1.field_p.length, false);
-            var6.writeBytes(param1.field_p, (byte) 0, 0, param1.field_p.length);
+          if (null != submission.field_p) {
+            var6.writeByte(submission.field_p.length, false);
+            var6.writeBytes(submission.field_p, (byte) 0, 0, submission.field_p.length);
           } else {
             var6.writeByte(0, false);
           }
-          int var5 = 48 / ((param0 - 52) / 40);
+          int var5 = 48 / ((obfuscationGuard - 52) / 40);
           var6.appendChecksum(-1, var4);
           var6.position = var6.position - 4;
-          param1.field_o = var6.readInt(true);
+          submission.field_o = var6.readInt(true);
           var6.writeByteLengthPrefix(-var4 + var6.position, true);
         } catch (RuntimeException runtimeException) {
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "fr.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "fr.D(" + obfuscationGuard + ',' + (submission != null ? "{...}" : "null") + ',' + opcode + ')');
         }
     }
 
-    final static void a(byte param0, int param1) {
+    final static void layoutSlidingGamePanels(byte obfuscationGuard, int progress) {
         int var3 = 0;
         int var4 = 0;
         int var2 = (-640 + field_s) / 2;
         int var3Lifetime1;
         int var4Lifetime1;
-        if (param0 <= -21) {
+        if (obfuscationGuard <= -21) {
           var3 = BufferedFile.field_h * BufferedFile.field_h;
-          var4 = var3 - param1 * param1;
+          var4 = var3 - progress * progress;
           SceneNode.field_k.setBounds(90, 2147483647, var2 - 199 * var4 / var3, 199, -90 + (-4 + (-120 + SoftwareRasterizer.height)));
           Bzip2DecoderState.field_f.setBounds(0, 2147483647, 202 + (var2 + 438 * var4 / var3), 438, -120 + SoftwareRasterizer.height - 4);
           return;
         }
         field_s = -62;
         var3Lifetime1 = BufferedFile.field_h * BufferedFile.field_h;
-        var4Lifetime1 = var3Lifetime1 - param1 * param1;
+        var4Lifetime1 = var3Lifetime1 - progress * progress;
         SceneNode.field_k.setBounds(90, 2147483647, var2 - 199 * var4Lifetime1 / var3Lifetime1, 199, -90 + (-4 + (-120 + SoftwareRasterizer.height)));
         Bzip2DecoderState.field_f.setBounds(0, 2147483647, 202 + (var2 + 438 * var4Lifetime1 / var3Lifetime1), 438, -120 + SoftwareRasterizer.height - 4);
     }
@@ -142,22 +142,22 @@ final class DelayedServerPacket extends IntrusiveNode {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$e9dea5688aa5(int param0, int param1) {
+    final static void layoutSlidingGamePanelsIntArgs(int obfuscationGuard, int progress) {
         int var3 = 0;
         int var4 = 0;
         int var2 = (-640 + field_s) / 2;
         int var3Lifetime1;
         int var4Lifetime1;
-        if (param0 <= -21) {
+        if (obfuscationGuard <= -21) {
           var3 = BufferedFile.field_h * BufferedFile.field_h;
-          var4 = var3 - param1 * param1;
+          var4 = var3 - progress * progress;
           SceneNode.field_k.setBounds(90, 2147483647, var2 - 199 * var4 / var3, 199, -90 + (-4 + (-120 + SoftwareRasterizer.height)));
           Bzip2DecoderState.field_f.setBounds(0, 2147483647, 202 + (var2 + 438 * var4 / var3), 438, -120 + SoftwareRasterizer.height - 4);
           return;
         }
         field_s = -62;
         var3Lifetime1 = BufferedFile.field_h * BufferedFile.field_h;
-        var4Lifetime1 = var3Lifetime1 - param1 * param1;
+        var4Lifetime1 = var3Lifetime1 - progress * progress;
         SceneNode.field_k.setBounds(90, 2147483647, var2 - 199 * var4Lifetime1 / var3Lifetime1, 199, -90 + (-4 + (-120 + SoftwareRasterizer.height)));
         Bzip2DecoderState.field_f.setBounds(0, 2147483647, 202 + (var2 + 438 * var4Lifetime1 / var3Lifetime1), 438, -120 + SoftwareRasterizer.height - 4);
     }

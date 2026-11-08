@@ -403,7 +403,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
                   MidiNoteMixer.c(-119);
                 } else {
                   if (!this.field_O) {
-                    VerticalScrollbar.h(15158);
+                    VerticalScrollbar.requestLoginReset(15158);
                   } else {
                     FullscreenFocusCanvas.a(true);
                   }

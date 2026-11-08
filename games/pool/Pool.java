@@ -110,7 +110,7 @@ public final class Pool extends NetworkGameClient {
                   AvailabilityQueryResult.a(-28038, false);
                 }
                 if (WireframeQuad.field_x) {
-                  AccountCreationDialog.a(-3405, -4, GameRules.field_b, false);
+                  AccountCreationDialog.switchScreen(-3405, -4, GameRules.field_b, false);
                   WireframeQuad.field_x = false;
                 }
                 if (ShotEvent.isNonnegative(true, GameRules.field_b)) {
@@ -126,7 +126,7 @@ public final class Pool extends NetworkGameClient {
           if (!param0) {
             if (GameRules.field_b != MatchingTextValidator.field_w) {
               ThemeSelectScreen.field_P = ThemeSelectScreen.field_P + 1;
-              LoginRequestSupport.a((byte) 46);
+              LoginRequestSupport.rotateBallPreview((byte) 46);
               if (ThemeSelectScreen.field_P == 32) {
                 PoolGameModel.applyPendingScreenTransition(param1 - 128);
               }
@@ -245,7 +245,7 @@ public final class Pool extends NetworkGameClient {
           } else {
             stackIn_98_2 = 0;
           }
-          AccountCreationDialog.a(stackIn_97_0, stackIn_97_1, stackIn_98_2, var4Lifetime1Lifetime1 != 0);
+          AccountCreationDialog.switchScreen(stackIn_97_0, stackIn_97_1, stackIn_98_2, var4Lifetime1Lifetime1 != 0);
           AppletUrlSupport.field_c = true;
         }
         if (GameRules.field_b == -7) {
@@ -282,7 +282,7 @@ public final class Pool extends NetworkGameClient {
           } else {
             stackIn_109_2 = 0;
           }
-          AccountCreationDialog.a(stackIn_108_0, stackIn_108_1, stackIn_109_2, var5 != 0);
+          AccountCreationDialog.switchScreen(stackIn_108_0, stackIn_108_1, stackIn_109_2, var5 != 0);
           AppletUrlSupport.field_c = true;
         }
         if (GameRules.field_b == -6) {
@@ -297,7 +297,7 @@ public final class Pool extends NetworkGameClient {
           stackIn_119_0 = param1 - 3405;
           stackIn_119_1 = -1;
           stackIn_120_2 = (LobbyPlayerLookupSupport.a(true)) ? 21 : 0;
-          AccountCreationDialog.a(stackIn_119_0, stackIn_119_1, stackIn_120_2, var4Lifetime3 != 0);
+          AccountCreationDialog.switchScreen(stackIn_119_0, stackIn_119_1, stackIn_120_2, var4Lifetime3 != 0);
           AppletUrlSupport.field_c = true;
         }
         if (GameRules.field_b == -8) {
@@ -328,7 +328,7 @@ public final class Pool extends NetworkGameClient {
           stackIn_133_0 = -3405;
           stackIn_133_1 = -1;
           stackIn_134_2 = (!LobbyPlayerLookupSupport.a(true)) ? 0 : 21;
-          AccountCreationDialog.a(stackIn_133_0, stackIn_133_1, stackIn_134_2, var4Lifetime4 != 0);
+          AccountCreationDialog.switchScreen(stackIn_133_0, stackIn_133_1, stackIn_134_2, var4Lifetime4 != 0);
           AppletUrlSupport.field_c = true;
         }
         if (GameRules.field_b == -4) {
@@ -379,7 +379,7 @@ public final class Pool extends NetworkGameClient {
         var10 = field_O;
         var11 = TextLineLayout.getActiveCanvas((byte) -126);
         if (StartupInterfaceSupport.a((byte) -123)) {
-          KeyHandler.a((byte) -55, AccountCreationDialog.hasCanvasFocus(0), var11);
+          KeyHandler.drawStartupScreen((byte) -55, AccountCreationDialog.hasCanvasFocus(0), var11);
           return;
         }
         if (!MeshSymmetrySupport.field_d) {
@@ -390,7 +390,7 @@ public final class Pool extends NetworkGameClient {
           return;
         }
         if (!PoolMatchController.hasAccountDataOrConnection(false)) {
-          KeyHandler.a(SoundCache.loadingExtradata, 100.0f, false);
+          KeyHandler.setLoadingProgress(SoundCache.loadingExtradata, 100.0f, false);
           ModelTableScene.a(true, var11);
           return;
         }
@@ -459,7 +459,7 @@ public final class Pool extends NetworkGameClient {
         }
         if (LookupQuery.isClientNoticeOpen(1)) {
           SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
-          TutorialController.h(-29322);
+          TutorialController.drawClientNotice(-29322);
         }
         if (StartupInterfaceSupport.a(param0 - 109)) {
           stackIn_49_0 = -82;
@@ -492,7 +492,7 @@ public final class Pool extends NetworkGameClient {
           var9 = (int)(var4 / 1024L);
           CollisionContact.field_h.drawLeft(var8 + "/" + var9, -((CollisionContact.field_h.maxAscent + CollisionContact.field_h.maxDescent) * 4) + (640 - 2 * CollisionContact.field_h.maxAscent), -((CollisionContact.field_h.maxDescent + CollisionContact.field_h.maxAscent) * 3 / 2) - 5 + 480 - CollisionContact.field_h.maxDescent, 16777215, 1);
         }
-        ButtonWidget.a(0, 0, (byte) 85, var11);
+        ButtonWidget.drawRasterToCanvas(0, 0, (byte) 85, var11);
         return;
     }
 
@@ -903,7 +903,7 @@ public final class Pool extends NetworkGameClient {
         if (GameApplet.field_m != null) {
           PoolUiText.applyLocalizedTexts(GameApplet.field_m, -8);
           GameApplet.field_m = null;
-          ArrayWidgetGroup.a(0);
+          ArrayWidgetGroup.resetFrameTiming(0);
         }
         if (param0 > -103) {
           this.initializeGame((byte) -93);
@@ -993,7 +993,7 @@ public final class Pool extends NetworkGameClient {
           }
           if (Bzip2DecoderState.field_c == 14) {
             PoolGameModel.applyPendingScreenTransition(-124);
-            SharedWidgetLayoutSupport.a(PackedColorSupport.a((byte) 1), 1024, AccountCreationForm.g((byte) 103), 150, ByteArrayNode.field_p, ByteArrayNode.nextPowerOfTwo(-17931, 8), ByteArrayNode.nextPowerOfTwo(-17931, 2000), SpaceTableScene.getChatScrollContent(true), 4, 13162);
+            SharedWidgetLayoutSupport.a(PackedColorSupport.getAccountDialogContent((byte) 1), 1024, AccountCreationForm.g((byte) 103), 150, ByteArrayNode.field_p, ByteArrayNode.nextPowerOfTwo(-17931, 8), ByteArrayNode.nextPowerOfTwo(-17931, 2000), SpaceTableScene.getChatScrollContent(true), 4, 13162);
             NineSliceFrameSupport.a(LobbyPlayer.f(0), VerticalScrollbar.getIgnoreListContent((byte) 13), -36);
             AlternateLongAndTextLoginPayload.field_p = false;
             LookupProtocolSupport.field_b = true;
@@ -1045,7 +1045,7 @@ public final class Pool extends NetworkGameClient {
             }
             if (HighscoresScreen.field_K) {
               for (var3 = 0; var3 < RenderingInitializationSupport.achievementNames.length; var3++) {
-                if (ButtonWidget.a(var22, obfuscationGuard ^ -13670, var3)) {
+                if (ButtonWidget.isBitSet(var22, obfuscationGuard ^ -13670, var3)) {
                   LoginForm.field_U.addFirst((byte) -3, new AchievementNotice(var3));
                 }
               }
@@ -1142,7 +1142,7 @@ public final class Pool extends NetworkGameClient {
                 } else {
                   stackIn_102_2 = 0;
                 }
-                AccountCreationDialog.a(stackIn_101_0, stackIn_101_1, stackIn_102_2, false);
+                AccountCreationDialog.switchScreen(stackIn_101_0, stackIn_101_1, stackIn_102_2, false);
                 ((PoolMatchController) (var20)).resetView(-23095);
                 if ((LobbyPanelLayoutSupport.field_f & ((PoolMatchController) (var20)).modeFlags) == 0) {
                   continue;
@@ -1326,7 +1326,7 @@ public final class Pool extends NetworkGameClient {
                     this.updateScreenTransition(false, 0);
                   } else {
                     LobbyGame.field_gc.buildSceneryLayers(2);
-                    ArrayWidgetGroup.a(0);
+                    ArrayWidgetGroup.resetFrameTiming(0);
                     if (LobbyGame.field_gc.field_G == LobbyGame.field_gc.field_H) {
                       LobbyGame.field_gc.d(16);
                       DebugTuningSupport.field_g = false;
@@ -1364,7 +1364,7 @@ public final class Pool extends NetworkGameClient {
               }
             } else {
               if (EmailAvailabilityValidator.field_s == EmailAvailabilityValidator.field_o) {
-                var3 = SpaceTableScene.n(-1);
+                var3 = SpaceTableScene.pollClientNoticeResult(-1);
                 if (2 != var3) {
                   if (var3 != 3) {
                     if (var3 == 4) {
@@ -1418,7 +1418,7 @@ public final class Pool extends NetworkGameClient {
                   } else {
                     stackIn_76_2 = 21;
                   }
-                  AccountCreationDialog.a(stackIn_75_0, stackIn_75_1, stackIn_76_2, false);
+                  AccountCreationDialog.switchScreen(stackIn_75_0, stackIn_75_1, stackIn_76_2, false);
                 } else {
                   ThreeSliceButtonPainter.field_B = LoginForm.textRemovedFromGame;
                   stackIn_71_0 = -3405;
@@ -1428,7 +1428,7 @@ public final class Pool extends NetworkGameClient {
                   } else {
                     stackIn_72_2 = 21;
                   }
-                  AccountCreationDialog.a(stackIn_71_0, stackIn_71_1, stackIn_72_2, false);
+                  AccountCreationDialog.switchScreen(stackIn_71_0, stackIn_71_1, stackIn_72_2, false);
                 }
                 PoolGameModel.applyPendingScreenTransition(-127);
                 DisplayModeSupport.field_c[MatchingTextValidator.field_w].onEnter(0, 0, false);
@@ -1467,7 +1467,7 @@ public final class Pool extends NetworkGameClient {
     }
 
     final void shutdownServices(byte param0) {
-        DateInputWidget.j((byte) -78);
+        DateInputWidget.shutdownAudioOutputs((byte) -78);
         if (param0 != -39) {
           this.paintFrame((byte) -29);
         }
@@ -1554,15 +1554,15 @@ public final class Pool extends NetworkGameClient {
         if (WeightedLruCache.field_d == null) {
           if (CanvasInputSupport.field_b != null) {
             var66 = TutorialFactory.unpackingSoundeffects;
-            KeyHandler.a(var66, (float)GrowableIntListFactory.field_i[20], false);
+            KeyHandler.setLoadingProgress(var66, (float)GrowableIntListFactory.field_i[20], false);
             this.paintFrame((byte) 120);
             CanvasInputSupport.field_b = null;
-            ArrayWidgetGroup.a(0);
+            ArrayWidgetGroup.resetFrameTiming(0);
             return false;
           }
           if (AppletUrlSupport.field_a != null) {
             var67 = KillerBallSkin.unpackingMusic;
-            KeyHandler.a(var67, (float)GrowableIntListFactory.field_i[21], false);
+            KeyHandler.setLoadingProgress(var67, (float)GrowableIntListFactory.field_i[21], false);
             this.paintFrame((byte) 120);
             HalloweenBallSkin.field_m = MusicTrack.loadFromArchive(AppletUrlSupport.field_a, "", "title");
             MenuScreenBase.field_d = MusicTrack.loadFromArchive(AppletUrlSupport.field_a, "", "title_next_door");
@@ -1570,12 +1570,12 @@ public final class Pool extends NetworkGameClient {
               BrowserCookieWriter.field_b[var3].loadMusicTracks(1, AppletUrlSupport.field_a);
             }
             AppletUrlSupport.field_a = null;
-            ArrayWidgetGroup.a(0);
+            ArrayWidgetGroup.resetFrameTiming(0);
             return false;
           }
           if (null != UsernameSuggestionSupport.field_g) {
             var68 = KillerBallSkin.unpackingMusic;
-            KeyHandler.a(var68, (float)GrowableIntListFactory.field_i[22], false);
+            KeyHandler.setLoadingProgress(var68, (float)GrowableIntListFactory.field_i[22], false);
             this.paintFrame((byte) 120);
             RankingsScreen.field_N.prepareScoreInstruments(VertexTransformSupport.field_g, UsernameSuggestionSupport.field_g, HalloweenBallSkin.field_m, 75, 0);
             RankingsScreen.field_N.prepareScoreInstruments(VertexTransformSupport.field_g, UsernameSuggestionSupport.field_g, MenuScreenBase.field_d, 95, 0);
@@ -1585,12 +1585,12 @@ public final class Pool extends NetworkGameClient {
             RankingsScreen.field_N.clearInstrumentSampleIds(true);
             UsernameSuggestionSupport.field_g = null;
             VertexTransformSupport.field_g = null;
-            ArrayWidgetGroup.a(0);
+            ArrayWidgetGroup.resetFrameTiming(0);
             return false;
           }
           if (QuickChatMenu.field_Zb != null) {
             var69 = NineBallRules.unpackingGraphics;
-            KeyHandler.a(var69, (float)GrowableIntListFactory.field_i[23], false);
+            KeyHandler.setLoadingProgress(var69, (float)GrowableIntListFactory.field_i[23], false);
             this.paintFrame((byte) 120);
             FreePlayRules.field_e = PaletteFontLoader.loadPaletteFont(Ball.field_z, 32362, "", "font", ViewportController.field_q);
             CollisionContact.field_h = CanvasInputSupport.a(Under13NoticePanel.field_R, "", 0, QuickChatMenu.field_Zb, "arialish12");
@@ -1618,7 +1618,7 @@ public final class Pool extends NetworkGameClient {
             BallDebugOverlay.readAppletParameters(0, 0, 37, DialRenderer.textBenefits, (java.applet.Applet) (this), 16777215);
             QuickChatMenu.field_Zb = null;
             Ball.field_z = null;
-            ArrayWidgetGroup.a(0);
+            ArrayWidgetGroup.resetFrameTiming(0);
             return false;
           }
           if (param0 < 56) {
@@ -1627,20 +1627,20 @@ public final class Pool extends NetworkGameClient {
           if (ArchiveFactory.field_b != null) {
             MusicPatchEnvelope.a(new HuffmanCodec(ArchiveFactory.field_b.getFileByName(false, "huffman", "")), (byte) -92);
             ArchiveFactory.field_b = null;
-            ArrayWidgetGroup.a(0);
+            ArrayWidgetGroup.resetFrameTiming(0);
             return false;
           }
           if (null != DisplayModeSupport.field_a) {
             var70 = ValidationIconWidget.unpackingModels;
-            KeyHandler.a(var70, (float)GrowableIntListFactory.field_i[24], false);
+            KeyHandler.setLoadingProgress(var70, (float)GrowableIntListFactory.field_i[24], false);
             this.paintFrame((byte) 120);
-            ViewportController.a(DisplayModeSupport.field_a, 0);
+            ViewportController.loadSceneAndBallModels(DisplayModeSupport.field_a, 0);
             DisplayModeSupport.field_a = null;
-            ArrayWidgetGroup.a(0);
+            ArrayWidgetGroup.resetFrameTiming(0);
             return false;
           }
           RenderingInitializationSupport.initializeRendering(32);
-          DateInputWidget.i((byte) 124);
+          DateInputWidget.initializeMenuScreens((byte) 124);
           MatchingTextValidator.field_w = 0;
           GameRules.field_b = 0;
           TutorialFactory.createTutorials(4313);
@@ -1649,8 +1649,8 @@ public final class Pool extends NetworkGameClient {
           AnimatedNotification.field_u = HalloweenBallSkin.field_m;
           RankingsScreen.field_N.startMusicScore(HalloweenBallSkin.field_m, 8821, true);
           IntrusiveNodeHashTable.a(FreePlayRules.field_e.field_L, 8, CollisionContact.field_h.maxDescent + CollisionContact.field_h.field_L, 240, FreePlayRules.field_e.field_L + FreePlayRules.field_e.maxDescent, 2, MidiPcmStream.field_y[0].field_z + 5, 5 + MidiPcmStream.field_y[0].field_A, 8, 480, 3, MeshSymmetrySupport.field_g, -23994, CollisionContact.field_h, 4, 13421772, CollisionContact.field_h.field_L, 320, MidiPcmStream.field_y, MeshSymmetrySupport.field_g, FreePlayRules.field_e);
-          PlasmaBallSkin.a(240, MidiPcmStream.field_y[0].field_A + 5, MeshSymmetrySupport.field_g, 8, MeshSymmetrySupport.field_g, 4, 8, FreePlayRules.field_e, 5 + MidiPcmStream.field_y[0].field_z, 2, MidiPcmStream.field_y, -1373633266, 2, 3, 320);
-          ArrayWidgetGroup.a(0);
+          PlasmaBallSkin.configureSharedInterfaceStyle(240, MidiPcmStream.field_y[0].field_A + 5, MeshSymmetrySupport.field_g, 8, MeshSymmetrySupport.field_g, 4, 8, FreePlayRules.field_e, 5 + MidiPcmStream.field_y[0].field_z, 2, MidiPcmStream.field_y, -1373633266, 2, 3, 320);
+          ArrayWidgetGroup.resetFrameTiming(0);
           return true;
         }
         if (Under13NoticePanel.field_R.isIndexReady(-62) &&
@@ -1693,12 +1693,12 @@ public final class Pool extends NetworkGameClient {
                                               var61 = NetworkGameClient.field_F;
                                               var62 = DebugTuningSupport.waitingforExtradata;
                                               var63 = SoundCache.loadingExtradata;
-                                              KeyHandler.a(SupportPageLauncher.formatProgressLabel(var61, var62, -641, var63), (float)(GrowableIntListFactory.field_i[18] + (GrowableIntListFactory.field_i[19] - GrowableIntListFactory.field_i[18]) * var61.getOverallProgress(0) / 100), false);
+                                              KeyHandler.setLoadingProgress(SupportPageLauncher.formatProgressLabel(var61, var62, -641, var63), (float)(GrowableIntListFactory.field_i[18] + (GrowableIntListFactory.field_i[19] - GrowableIntListFactory.field_i[18]) * var61.getOverallProgress(0) / 100), false);
                                               return false;
                                             }
                                             StartupInterfaceSupport.a(true);
                                             var64 = TutorialFactory.unpackingSoundeffects;
-                                            KeyHandler.a(var64, (float)GrowableIntListFactory.field_i[19], false);
+                                            KeyHandler.setLoadingProgress(var64, (float)GrowableIntListFactory.field_i[19], false);
                                             this.paintFrame((byte) 120);
                                             IntKeyLookup.a(true);
                                             VertexTransformSupport.field_g = new SoundCache(WeightedLruCache.field_d, CanvasInputSupport.field_b);
@@ -1718,115 +1718,115 @@ public final class Pool extends NetworkGameClient {
                                               var4.field_Y = var65_ref.field_rb;
                                             }
                                             WeightedLruCache.field_d = null;
-                                            ArrayWidgetGroup.a(0);
+                                            ArrayWidgetGroup.resetFrameTiming(0);
                                             return false;
                                           }
                                           var58 = NetworkGameClient.field_F;
                                           var59 = DebugTuningSupport.waitingforExtradata;
                                           var60 = SoundCache.loadingExtradata;
-                                          KeyHandler.a(SupportPageLauncher.formatProgressLabel(var58, var59, -641, var60), (float)(GrowableIntListFactory.field_i[18] + (-GrowableIntListFactory.field_i[18] + GrowableIntListFactory.field_i[19]) * var58.getOverallProgress(0) / 100), false);
+                                          KeyHandler.setLoadingProgress(SupportPageLauncher.formatProgressLabel(var58, var59, -641, var60), (float)(GrowableIntListFactory.field_i[18] + (-GrowableIntListFactory.field_i[18] + GrowableIntListFactory.field_i[19]) * var58.getOverallProgress(0) / 100), false);
                                           return false;
                                         }
                                         var55 = DisplayModeSupport.field_a;
                                         var56 = DebugTuningSupport.waitingforExtradata;
                                         var57 = SoundCache.loadingExtradata;
-                                        KeyHandler.a(SupportPageLauncher.formatProgressLabel(var55, var56, -641, var57), (float)(GrowableIntListFactory.field_i[17] + (GrowableIntListFactory.field_i[18] - GrowableIntListFactory.field_i[17]) * var55.getOverallProgress(0) / 100), false);
+                                        KeyHandler.setLoadingProgress(SupportPageLauncher.formatProgressLabel(var55, var56, -641, var57), (float)(GrowableIntListFactory.field_i[17] + (GrowableIntListFactory.field_i[18] - GrowableIntListFactory.field_i[17]) * var55.getOverallProgress(0) / 100), false);
                                         return false;
                                       }
                                       var52 = InputIdleSupport.field_a;
                                       var53 = DebugTuningSupport.waitingforExtradata;
                                       var54 = SoundCache.loadingExtradata;
-                                      KeyHandler.a(SupportPageLauncher.formatProgressLabel(var52, var53, -641, var54), (float)(GrowableIntListFactory.field_i[16] + (-GrowableIntListFactory.field_i[16] + GrowableIntListFactory.field_i[17]) * var52.getOverallProgress(0) / 100), false);
+                                      KeyHandler.setLoadingProgress(SupportPageLauncher.formatProgressLabel(var52, var53, -641, var54), (float)(GrowableIntListFactory.field_i[16] + (-GrowableIntListFactory.field_i[16] + GrowableIntListFactory.field_i[17]) * var52.getOverallProgress(0) / 100), false);
                                       return false;
                                     }
                                     var49 = ArchiveFactory.field_b;
                                     var50 = DebugTuningSupport.waitingforExtradata;
                                     var51 = SoundCache.loadingExtradata;
-                                    KeyHandler.a(SupportPageLauncher.formatProgressLabel(var49, var50, -641, var51), (float)(GrowableIntListFactory.field_i[15] + (GrowableIntListFactory.field_i[16] - GrowableIntListFactory.field_i[15]) * var49.getOverallProgress(0) / 100), false);
+                                    KeyHandler.setLoadingProgress(SupportPageLauncher.formatProgressLabel(var49, var50, -641, var51), (float)(GrowableIntListFactory.field_i[15] + (GrowableIntListFactory.field_i[16] - GrowableIntListFactory.field_i[15]) * var49.getOverallProgress(0) / 100), false);
                                     return false;
                                   }
                                   var46 = Ball.field_z;
                                   var48 = SpaceTableScene.waitingforFonts;
                                   var47 = TickClock.loadingFonts;
-                                  KeyHandler.a(GlowParticle.formatProgressLabel((byte) -21, "", var46, var47, var48), (float)(GrowableIntListFactory.field_i[14] + (GrowableIntListFactory.field_i[15] - GrowableIntListFactory.field_i[14]) * var46.getGroupProgressByName(100, "") / 100), false);
+                                  KeyHandler.setLoadingProgress(GlowParticle.formatProgressLabel((byte) -21, "", var46, var47, var48), (float)(GrowableIntListFactory.field_i[14] + (GrowableIntListFactory.field_i[15] - GrowableIntListFactory.field_i[14]) * var46.getGroupProgressByName(100, "") / 100), false);
                                   return false;
                                 }
                                 var43 = MonotonicClock.field_h;
                                 var45 = NineSliceFrameSupport.waitingforGraphics;
                                 var44 = HighScoreSubmission.loadingGraphics;
-                                KeyHandler.a(GlowParticle.formatProgressLabel((byte) -1, "", var43, var44, var45), (float)(GrowableIntListFactory.field_i[13] + (GrowableIntListFactory.field_i[14] - GrowableIntListFactory.field_i[13]) * var43.getGroupProgressByName(100, "") / 100), false);
+                                KeyHandler.setLoadingProgress(GlowParticle.formatProgressLabel((byte) -1, "", var43, var44, var45), (float)(GrowableIntListFactory.field_i[13] + (GrowableIntListFactory.field_i[14] - GrowableIntListFactory.field_i[13]) * var43.getGroupProgressByName(100, "") / 100), false);
                                 return false;
                               }
                               var40 = ViewportController.field_q;
                               var42 = NineSliceFrameSupport.waitingforGraphics;
                               var41 = HighScoreSubmission.loadingGraphics;
-                              KeyHandler.a(GlowParticle.formatProgressLabel((byte) 119, "", var40, var41, var42), (float)(GrowableIntListFactory.field_i[12] + (GrowableIntListFactory.field_i[13] - GrowableIntListFactory.field_i[12]) * var40.getGroupProgressByName(100, "") / 100), false);
+                              KeyHandler.setLoadingProgress(GlowParticle.formatProgressLabel((byte) 119, "", var40, var41, var42), (float)(GrowableIntListFactory.field_i[12] + (GrowableIntListFactory.field_i[13] - GrowableIntListFactory.field_i[12]) * var40.getGroupProgressByName(100, "") / 100), false);
                               return false;
                             }
                             var37 = AppletUrlSupport.field_a;
                             var38 = NameEntryPopup.waitingforMusic;
                             var39 = Camera.loadingMusic;
-                            KeyHandler.a(SupportPageLauncher.formatProgressLabel(var37, var38, -641, var39), (float)(GrowableIntListFactory.field_i[11] + (GrowableIntListFactory.field_i[12] - GrowableIntListFactory.field_i[11]) * var37.getOverallProgress(0) / 100), false);
+                            KeyHandler.setLoadingProgress(SupportPageLauncher.formatProgressLabel(var37, var38, -641, var39), (float)(GrowableIntListFactory.field_i[11] + (GrowableIntListFactory.field_i[12] - GrowableIntListFactory.field_i[11]) * var37.getOverallProgress(0) / 100), false);
                             return false;
                           }
                           var34 = UsernameSuggestionSupport.field_g;
                           var35 = NameEntryPopup.waitingforMusic;
                           var36 = Camera.loadingMusic;
-                          KeyHandler.a(SupportPageLauncher.formatProgressLabel(var34, var35, -641, var36), (float)(GrowableIntListFactory.field_i[10] + (-GrowableIntListFactory.field_i[10] + GrowableIntListFactory.field_i[11]) * var34.getOverallProgress(0) / 100), false);
+                          KeyHandler.setLoadingProgress(SupportPageLauncher.formatProgressLabel(var34, var35, -641, var36), (float)(GrowableIntListFactory.field_i[10] + (-GrowableIntListFactory.field_i[10] + GrowableIntListFactory.field_i[11]) * var34.getOverallProgress(0) / 100), false);
                           return false;
                         }
                         var31 = CanvasInputSupport.field_b;
                         var32 = HuffmanCodec.waitingforSoundeffects;
                         var33 = AudioService.loadingSoundeffects;
-                        KeyHandler.a(SupportPageLauncher.formatProgressLabel(var31, var32, -641, var33), (float)(GrowableIntListFactory.field_i[9] + (-GrowableIntListFactory.field_i[9] + GrowableIntListFactory.field_i[10]) * var31.getOverallProgress(0) / 100), false);
+                        KeyHandler.setLoadingProgress(SupportPageLauncher.formatProgressLabel(var31, var32, -641, var33), (float)(GrowableIntListFactory.field_i[9] + (-GrowableIntListFactory.field_i[9] + GrowableIntListFactory.field_i[10]) * var31.getOverallProgress(0) / 100), false);
                         return false;
                       }
                       var28 = WeightedLruCache.field_d;
                       var29 = HuffmanCodec.waitingforSoundeffects;
                       var30 = AudioService.loadingSoundeffects;
-                      KeyHandler.a(SupportPageLauncher.formatProgressLabel(var28, var29, -641, var30), (float)(GrowableIntListFactory.field_i[8] + (GrowableIntListFactory.field_i[9] - GrowableIntListFactory.field_i[8]) * var28.getOverallProgress(0) / 100), false);
+                      KeyHandler.setLoadingProgress(SupportPageLauncher.formatProgressLabel(var28, var29, -641, var30), (float)(GrowableIntListFactory.field_i[8] + (GrowableIntListFactory.field_i[9] - GrowableIntListFactory.field_i[8]) * var28.getOverallProgress(0) / 100), false);
                       return false;
                     }
                     var25 = QuickChatMenu.field_Zb;
                     var27 = SpaceTableScene.waitingforFonts;
                     var26 = TickClock.loadingFonts;
-                    KeyHandler.a(GlowParticle.formatProgressLabel((byte) 118, "lobby", var25, var26, var27), (float)(GrowableIntListFactory.field_i[7] + (-GrowableIntListFactory.field_i[7] + GrowableIntListFactory.field_i[8]) * var25.getGroupProgressByName(100, "lobby") / 100), false);
+                    KeyHandler.setLoadingProgress(GlowParticle.formatProgressLabel((byte) 118, "lobby", var25, var26, var27), (float)(GrowableIntListFactory.field_i[7] + (-GrowableIntListFactory.field_i[7] + GrowableIntListFactory.field_i[8]) * var25.getGroupProgressByName(100, "lobby") / 100), false);
                     return false;
                   }
                   var22 = Under13NoticePanel.field_R;
                   var24 = NineSliceFrameSupport.waitingforGraphics;
                   var23 = HighScoreSubmission.loadingGraphics;
-                  KeyHandler.a(GlowParticle.formatProgressLabel((byte) 122, "lobby", var22, var23, var24), (float)(GrowableIntListFactory.field_i[6] + (-GrowableIntListFactory.field_i[6] + GrowableIntListFactory.field_i[7]) * var22.getGroupProgressByName(100, "lobby") / 100), false);
+                  KeyHandler.setLoadingProgress(GlowParticle.formatProgressLabel((byte) 122, "lobby", var22, var23, var24), (float)(GrowableIntListFactory.field_i[6] + (-GrowableIntListFactory.field_i[6] + GrowableIntListFactory.field_i[7]) * var22.getGroupProgressByName(100, "lobby") / 100), false);
                   return false;
                 }
                 var19 = Under13NoticePanel.field_R;
                 var21 = NineSliceFrameSupport.waitingforGraphics;
                 var20 = HighScoreSubmission.loadingGraphics;
-                KeyHandler.a(GlowParticle.formatProgressLabel((byte) 101, "basic", var19, var20, var21), (float)(GrowableIntListFactory.field_i[5] + (GrowableIntListFactory.field_i[6] - GrowableIntListFactory.field_i[5]) * var19.getGroupProgressByName(100, "basic") / 100), false);
+                KeyHandler.setLoadingProgress(GlowParticle.formatProgressLabel((byte) 101, "basic", var19, var20, var21), (float)(GrowableIntListFactory.field_i[5] + (GrowableIntListFactory.field_i[6] - GrowableIntListFactory.field_i[5]) * var19.getGroupProgressByName(100, "basic") / 100), false);
                 return false;
               }
               var16 = QuickChatMenu.field_Zb;
               var18 = SpaceTableScene.waitingforFonts;
               var17 = TickClock.loadingFonts;
-              KeyHandler.a(GlowParticle.formatProgressLabel((byte) -116, "arialish12", var16, var17, var18), (float)(GrowableIntListFactory.field_i[4] + (-GrowableIntListFactory.field_i[4] + GrowableIntListFactory.field_i[5]) * var16.getGroupProgressByName(100, "arialish12") / 100), false);
+              KeyHandler.setLoadingProgress(GlowParticle.formatProgressLabel((byte) -116, "arialish12", var16, var17, var18), (float)(GrowableIntListFactory.field_i[4] + (-GrowableIntListFactory.field_i[4] + GrowableIntListFactory.field_i[5]) * var16.getGroupProgressByName(100, "arialish12") / 100), false);
               return false;
             }
             var13 = QuickChatMenu.field_Zb;
             var15 = SpaceTableScene.waitingforFonts;
             var14 = TickClock.loadingFonts;
-            KeyHandler.a(GlowParticle.formatProgressLabel((byte) -61, "arialbold14", var13, var14, var15), (float)(GrowableIntListFactory.field_i[3] + (-GrowableIntListFactory.field_i[3] + GrowableIntListFactory.field_i[4]) * var13.getGroupProgressByName(100, "arialbold14") / 100), false);
+            KeyHandler.setLoadingProgress(GlowParticle.formatProgressLabel((byte) -61, "arialbold14", var13, var14, var15), (float)(GrowableIntListFactory.field_i[3] + (-GrowableIntListFactory.field_i[3] + GrowableIntListFactory.field_i[4]) * var13.getGroupProgressByName(100, "arialbold14") / 100), false);
             return false;
           }
           var10 = Under13NoticePanel.field_R;
           var12 = NineSliceFrameSupport.waitingforGraphics;
           var11 = HighScoreSubmission.loadingGraphics;
-          KeyHandler.a(GlowParticle.formatProgressLabel((byte) -17, "arialish12", var10, var11, var12), (float)(GrowableIntListFactory.field_i[2] + (-GrowableIntListFactory.field_i[2] + GrowableIntListFactory.field_i[3]) * var10.getGroupProgressByName(100, "arialish12") / 100), false);
+          KeyHandler.setLoadingProgress(GlowParticle.formatProgressLabel((byte) -17, "arialish12", var10, var11, var12), (float)(GrowableIntListFactory.field_i[2] + (-GrowableIntListFactory.field_i[2] + GrowableIntListFactory.field_i[3]) * var10.getGroupProgressByName(100, "arialish12") / 100), false);
           return false;
         }
         var7 = Under13NoticePanel.field_R;
         var9 = NineSliceFrameSupport.waitingforGraphics;
         var8 = HighScoreSubmission.loadingGraphics;
-        KeyHandler.a(GlowParticle.formatProgressLabel((byte) -22, "arialbold14", var7, var8, var9), (float)(GrowableIntListFactory.field_i[1] + (GrowableIntListFactory.field_i[2] - GrowableIntListFactory.field_i[1]) * var7.getGroupProgressByName(100, "arialbold14") / 100), false);
+        KeyHandler.setLoadingProgress(GlowParticle.formatProgressLabel((byte) -22, "arialbold14", var7, var8, var9), (float)(GrowableIntListFactory.field_i[1] + (GrowableIntListFactory.field_i[2] - GrowableIntListFactory.field_i[1]) * var7.getGroupProgressByName(100, "arialbold14") / 100), false);
         return false;
     }
 

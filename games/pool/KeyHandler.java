@@ -69,7 +69,7 @@ final class KeyHandler implements java.awt.event.KeyListener, java.awt.event.Foc
         }
     }
 
-    final static void a(byte param0, boolean param1, java.awt.Canvas param2) {
+    final static void drawStartupScreen(byte param0, boolean param1, java.awt.Canvas param2) {
         int var4 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -90,14 +90,14 @@ final class KeyHandler implements java.awt.event.KeyListener, java.awt.event.Foc
             if (MeshRenderSupport.a(108)) {
               if (PlasmaTableScene.field_ab == 0) {
                 ResourceArchive.drawAccountOverlay(param1, (byte) 109, false);
-                ButtonWidget.a(0, 0, (byte) -65, param2);
+                ButtonWidget.drawRasterToCanvas(0, 0, (byte) -65, param2);
               } else {
                 ModelTableScene.a(true, param2);
               }
             } else {
               SoftwareRasterizer.clear();
-              DialWidget.a(240, false, 320);
-              ButtonWidget.a(0, 0, (byte) -89, param2);
+              DialWidget.drawIntroAt(240, false, 320);
+              ButtonWidget.drawRasterToCanvas(0, 0, (byte) -89, param2);
             }
           }
           if (param0 != -55) {
@@ -196,22 +196,22 @@ final class KeyHandler implements java.awt.event.KeyListener, java.awt.event.Foc
         }
     }
 
-    final static IndexedSprite a(byte param0) {
-        int var2 = 77 % ((20 - param0) / 41);
+    final static IndexedSprite createDecodedIndexedSprite(byte obfuscationGuard) {
+        int var2 = 77 % ((20 - obfuscationGuard) / 41);
         IndexedSprite var1 = new IndexedSprite(DialRenderer.field_c, AccountStateQuery.field_r, AchievementsScreen.field_I[0], LoginRequestSupport.field_d[0], LinkButtonPainter.field_a[0], AccountTextSupport.field_f[0], LimitedRandomAccessFile.field_b[0], IntrusiveNode.field_h);
         OpacityWidget.releaseSpriteDecoderArrays(-1);
         return var1;
     }
 
-    final static void a(String param0, float param1, boolean param2) {
+    final static void setLoadingProgress(String message, float percent, boolean obfuscationGuard) {
         try {
-          if (param2) {
-            KeyHandler.a((String) null, 0.6310321688652039f, false);
+          if (obfuscationGuard) {
+            KeyHandler.setLoadingProgress((String) null, 0.6310321688652039f, false);
           }
-          TextWidgetPainter.field_n = param0;
-          CacheEntry.field_w = param1;
+          TextWidgetPainter.field_n = message;
+          CacheEntry.field_w = percent;
         } catch (RuntimeException runtimeException) {
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "fo.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "fo.D(" + (message != null ? "{...}" : "null") + ',' + percent + ',' + obfuscationGuard + ')');
         }
     }
 

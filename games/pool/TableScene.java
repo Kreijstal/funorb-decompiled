@@ -1526,8 +1526,8 @@ abstract class TableScene {
         }
     }
 
-    void a(byte param0, boolean param1, int param2) {
-        int var4 = 30 / ((param0 + 47) / 45);
+    void stopTableSound(byte obfuscationGuard, boolean fastFade, int soundId) {
+        int var4 = 30 / ((obfuscationGuard + 47) / 45);
     }
 
     int floorColor(int param0) {

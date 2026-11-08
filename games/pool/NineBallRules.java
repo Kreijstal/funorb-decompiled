@@ -132,12 +132,12 @@ final class NineBallRules extends GameRules {
     final static Sprite[] createBeveledPanelSprites(int param0, int param1, int param2, boolean param3) {
         if (param3) {
           String var5 = (String) null;
-          NineBallRules.a((String) null, (byte) 90);
+          NineBallRules.isActivePrivateChatRecipient((String) null, (byte) 90);
         }
         return EightBallRules.createBeveledPanelSprites(param0, 64, param2, param1, 1);
     }
 
-    final static boolean a(String param0, byte param1) {
+    final static boolean isActivePrivateChatRecipient(String name, byte obfuscationGuard) {
         RuntimeException var2 = null;
         CharSequence var3 = null;
         RuntimeException stackIn_16_0 = null;
@@ -150,11 +150,11 @@ final class NineBallRules extends GameRules {
           }
           if (CookieDateSupport.field_b == 2 &&
             ResourceArchive.field_a != null) {
-            var3 = (CharSequence) ((Object) param0);
+            var3 = (CharSequence) ((Object) name);
             if (!ResourceArchive.field_a.equals(TutorialController.normalizeDisplayName(91, var3))) {
               return false;
             }
-            if (param1 == -101) {
+            if (obfuscationGuard == -101) {
               return true;
             }
             return true;
@@ -165,12 +165,12 @@ final class NineBallRules extends GameRules {
           var2 = decompiledCaughtException;
           stackIn_16_0 = var2;
           stackIn_16_1 = new StringBuilder().append("fj.RA(");
-          if (param0 == null) {
+          if (name == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -245,7 +245,7 @@ final class NineBallRules extends GameRules {
         int var3 = Pool.field_O;
         if (param0 != -1) {
           String var4 = (String) null;
-          NineBallRules.a((String) null, (byte) 119);
+          NineBallRules.isActivePrivateChatRecipient((String) null, (byte) 119);
         }
         for (var2 = 1; var2 < 9; var2++) {
           if (this.field_d.balls[var2].inPlay) {
@@ -348,7 +348,7 @@ final class NineBallRules extends GameRules {
         return var3;
     }
 
-    final static boolean a(String param0, int[] param1, int param2, int param3, long param4) {
+    final static boolean canOpenQuickChatOptions(String param0, int[] param1, int param2, int param3, long param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         boolean stackIn_6_0 = false;
@@ -414,7 +414,7 @@ final class NineBallRules extends GameRules {
           CachedArchiveSource.field_M[var4] = var4 + 2;
           FullscreenDisplayMode.field_a[var4] = var6.a(23165, 2048);
         }
-        StrongCacheEntry.a(FullscreenDisplayMode.field_a, CachedArchiveSource.field_M, (byte) -54);
+        StrongCacheEntry.sortPairedArrays(FullscreenDisplayMode.field_a, CachedArchiveSource.field_M, (byte) -54);
         Js5Transport.field_s[1] = 1;
         Js5Transport.field_s[0] = 0;
         Js5Transport.field_s[3] = CachedArchiveSource.field_M[1];

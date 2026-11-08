@@ -32,14 +32,14 @@ final class LoginTextValue {
             return;
           }
           if (param1 < 100) {
-            QuickChatCategoryDefinition.field_B = DebouncedValidationProvider.a(param1, true, param0);
+            QuickChatCategoryDefinition.field_B = DebouncedValidationProvider.createLoginErrorResponse(param1, true, param0);
             return;
           }
           if (param1 <= 105) {
             QuickChatCategoryDefinition.field_B = PauseMenuScreen.a(param2, 57);
             return;
           }
-          QuickChatCategoryDefinition.field_B = DebouncedValidationProvider.a(param1, true, param0);
+          QuickChatCategoryDefinition.field_B = DebouncedValidationProvider.createLoginErrorResponse(param1, true, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

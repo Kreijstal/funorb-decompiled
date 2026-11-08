@@ -23,7 +23,7 @@ final class DialWidget extends ButtonWidget {
         int var1 = -61 % ((param0 - 69) / 52);
     }
 
-    final static void a(int param0, boolean param1, int param2) {
+    final static void drawIntroAt(int centerY, boolean obfuscationGuard, int centerX) {
         int var6 = 0;
         int var7 = 0;
         int var8 = Pool.field_O;
@@ -45,11 +45,11 @@ final class DialWidget extends ButtonWidget {
         if (!(LobbyPlayer.field_fc >= 0)) {
           return;
         }
-        if (param1) {
+        if (obfuscationGuard) {
           return;
         }
-        int var3 = param2 - 135;
-        int var4 = param0 - 35;
+        int var3 = centerX - 135;
+        int var4 = centerY - 35;
         int var5 = 256;
         if (LobbyPlayer.field_fc < 75) {
           var5 = (LobbyPlayer.field_fc << 8) / 75;
@@ -60,7 +60,7 @@ final class DialWidget extends ButtonWidget {
         CueAim.a(63, LookupProtocolSupport.field_c);
         TriangleRasterizer.useRasterClip();
         SoftwareRasterizer.clear();
-        TextHotspotRegion.a(-21818);
+        TextHotspotRegion.drawIntroMeshes(-21818);
         if (var5 < 256) {
           SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, -var5 + 256);
         }
@@ -198,7 +198,7 @@ final class DialWidget extends ButtonWidget {
         ArchiveLoadStep.field_k.drawShadedGrayscale(var3 + 15, var4 + 10, var7Lifetime6 * var5 >> 8);
     }
 
-    final static void a(LobbyPlayer param0, int param1) {
+    final static void insertLobbyPlayerSorted(LobbyPlayer player, int obfuscationGuard) {
         LobbyPlayer var2 = null;
         int var3 = 0;
         RuntimeException stackIn_13_0 = null;
@@ -208,22 +208,22 @@ final class DialWidget extends ButtonWidget {
         RuntimeException var2_ref = null;
         var3 = Pool.field_O;
         try {
-          param0.unlink((byte) -117);
-          if (param1 >= -89) {
+          player.unlink((byte) -117);
+          if (obfuscationGuard >= -89) {
             return;
           }
           var2 = (LobbyPlayer) (IntrusiveNode.field_i.last((byte) 124));
           while (var2 != null) {
-            if (var2.comesBeforePlayer(param0, (byte) -97)) {
+            if (var2.comesBeforePlayer(player, (byte) -97)) {
               var2 = (LobbyPlayer) (IntrusiveNode.field_i.previous((byte) -5));
               continue;
             }
             break;
           }
           if (var2 == null) {
-            IntrusiveNode.field_i.addFirst((byte) -11, param0);
+            IntrusiveNode.field_i.addFirst((byte) -11, player);
           } else {
-            TextLineLayout.insertAfter(param0, (byte) -119, var2);
+            TextLineLayout.insertAfter(player, (byte) -119, var2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -231,16 +231,16 @@ final class DialWidget extends ButtonWidget {
           var2_ref = decompiledCaughtException;
           stackIn_13_0 = var2_ref;
           stackIn_13_1 = new StringBuilder().append("er.F(");
-          if (param0 == null) {
+          if (player == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
-    final static void a(int param0, String param1, int param2, int param3, BitmapFont param4, boolean param5, int param6) {
+    final static void drawTooltip(int baselineY, String text, int centerX, int shadowColor, BitmapFont font, boolean obfuscationGuard, int textColor) {
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -253,51 +253,51 @@ final class DialWidget extends ButtonWidget {
         int var9 = 0;
         int var10 = 0;
         try {
-          var7_int = param4.stringWidth(param1) + 6;
-          var8 = param4.maxDescent + param4.maxAscent + 6;
-          var9 = param2 - var7_int / 2;
+          var7_int = font.stringWidth(text) + 6;
+          var8 = font.maxDescent + font.maxAscent + 6;
+          var9 = centerX - var7_int / 2;
           if (var9 >= 0) {
             if (var9 + var7_int > 640) {
-              param2 = param2 - (-640 + (var7_int + var9));
+              centerX = centerX - (-640 + (var7_int + var9));
               var9 = -var7_int + 640;
             }
           } else {
-            param2 = param2 - var9;
+            centerX = centerX - var9;
             var9 = 0;
           }
-          if (!param5) {
+          if (!obfuscationGuard) {
             field_X = 49;
           }
-          var10 = -3 + (-param4.maxAscent + param0);
+          var10 = -3 + (-font.maxAscent + baselineY);
           if (var10 < 0) {
-            param0 = param0 - var10;
+            baselineY = baselineY - var10;
             var10 = 0;
           } else {
             if (480 < var10 + var8) {
-              param0 = param0 - (var10 + (var8 - 480));
+              baselineY = baselineY - (var10 + (var8 - 480));
               var10 = 480 - var8;
             }
           }
           SoftwareRasterizer.fillRoundedRectangleBlended(var9, var10, var7_int, var8, 3, 0, 128);
-          param4.drawCentered(param1, param2, param0, param6, param3);
+          font.drawCentered(text, centerX, baselineY, textColor, shadowColor);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
           stackIn_15_0 = var7;
-          stackIn_15_1 = new StringBuilder().append("er.B(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_15_1 = new StringBuilder().append("er.B(").append(baselineY).append(',');
+          if (text == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
           }
-          stackIn_18_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          stackIn_18_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(centerX).append(',').append(shadowColor).append(',');
+          if (font == null) {
             stackIn_19_2 = "null";
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(obfuscationGuard).append(',').append(textColor).append(')').toString());
         }
     }
 

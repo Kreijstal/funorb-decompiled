@@ -210,7 +210,7 @@ final class MessageDialogContent extends WidgetContainer implements ButtonActiva
         int var10Lifetime1;
         var12 = Pool.field_O;
         try {
-          DelayedServerPacket.$cfr$intArgs$a$e9dea5688aa5(-100, PoolMatchController.field_z);
+          DelayedServerPacket.layoutSlidingGamePanelsIntArgs(-100, PoolMatchController.field_z);
           if (null != LookupRetrySupport.field_e) {
             var4 = CanvasInputAttachmentSupport.field_b;
             CanvasInputAttachmentSupport.field_b.height = 0;

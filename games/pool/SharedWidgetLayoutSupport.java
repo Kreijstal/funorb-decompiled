@@ -550,11 +550,11 @@ final class SharedWidgetLayoutSupport {
                 if (var12.field_ec && (!var12.field_Dc ||
                   !var12.field_ic &&
                   !var12.field_Xb)) {
-                  FaceNormal.a(var12.getGameId(20872), param1 + 3, param2);
+                  FaceNormal.sendSpectateRequest(var12.getGameId(20872), param1 + 3, param2);
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  HighscoresScreen.a(var12.getGameId(20872), (byte) -104, param2);
+                  HighscoresScreen.sendJoinGameRequest(var12.getGameId(20872), (byte) -104, param2);
                 }
               }
             }

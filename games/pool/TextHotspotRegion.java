@@ -12,30 +12,30 @@ final class TextHotspotRegion extends IntrusiveNode {
     int field_m;
     static int field_t;
 
-    final static int a(int param0, int param1) {
-        int var2 = param1;
-        if (param0 < 0 ||
-          65536 <= param0) {
-          param0 = param0 >>> 16;
+    final static int bitLengthWithOffset(int value, int offset) {
+        int var2 = offset;
+        if (value < 0 ||
+          65536 <= value) {
+          value = value >>> 16;
           var2 += 16;
         }
-        if (param0 >= 256) {
-          param0 = param0 >>> 8;
+        if (value >= 256) {
+          value = value >>> 8;
           var2 += 8;
         }
-        if (16 <= param0) {
+        if (16 <= value) {
           var2 += 4;
-          param0 = param0 >>> 4;
+          value = value >>> 4;
         }
-        if (param0 >= 4) {
+        if (value >= 4) {
           var2 += 2;
-          param0 = param0 >>> 2;
+          value = value >>> 2;
         }
-        if (param0 >= 1) {
-          param0 = param0 >>> 1;
+        if (value >= 1) {
+          value = value >>> 1;
           var2++;
         }
-        return param0 + var2;
+        return value + var2;
     }
 
     final void drawOutline(int param0, int param1, int param2, int param3, boolean param4, int param5) {
@@ -53,7 +53,7 @@ final class TextHotspotRegion extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0) {
+    final static void drawIntroMeshes(int obfuscationGuard) {
         int var15 = 0;
         int var17_int = 0;
         int var18 = 0;
@@ -129,7 +129,7 @@ final class TextHotspotRegion extends IntrusiveNode {
           var12Lifetime1 = -var3Lifetime1 + var7Lifetime1;
           var13Lifetime1 = -var4 + var8Lifetime1;
           var14 = -var5Lifetime1 + var9Lifetime1;
-          if (param0 != -21818) {
+          if (obfuscationGuard != -21818) {
             return;
           }
           var10Lifetime1 = 256.0 / Math.sqrt((double)(var14 * var14 + var13Lifetime1 * var13Lifetime1 + var12Lifetime1 * var12Lifetime1));
@@ -149,14 +149,14 @@ final class TextHotspotRegion extends IntrusiveNode {
             for (var18 = 0; var18 < 3; var18++) {
               IsaacCipher.field_b[var18] = IsaacCipher.field_b[var18] + QuickChatMenu.field_gc[var15][var18];
             }
-            BitmapTextLayout.a(param0 + 21815, false, HighScoreRequest.field_p, false, true, IsaacCipher.field_b, var17);
+            BitmapTextLayout.a(obfuscationGuard + 21815, false, HighScoreRequest.field_p, false, true, IsaacCipher.field_b, var17);
             CueAim.a(var14, 8355711, var17, var8Lifetime1, var13Lifetime1, var9Lifetime1, var12Lifetime1, var7Lifetime1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "gi.A(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "gi.A(" + obfuscationGuard + ')');
         }
     }
 
@@ -168,7 +168,7 @@ final class TextHotspotRegion extends IntrusiveNode {
         field_o = null;
     }
 
-    final static AnimatedNotification a(boolean param0, int param1, String param2, String param3) {
+    final static AnimatedNotification enqueueNotificationIfAbsent(boolean obfuscationGuard, int notificationId, String firstLine, String secondLine) {
         AnimatedNotification var4 = null;
         RuntimeException var4_ref = null;
         AnimatedNotification stackIn_3_0 = null;
@@ -180,14 +180,14 @@ final class TextHotspotRegion extends IntrusiveNode {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (EmailAvailabilityValidator.a(-2, param1) == null) {
-            var4 = new AnimatedNotification(param1);
-            var4.renderNotificationText(param2, (byte) 120, param3);
+          if (EmailAvailabilityValidator.a(-2, notificationId) == null) {
+            var4 = new AnimatedNotification(notificationId);
+            var4.renderNotificationText(firstLine, (byte) 120, secondLine);
             MarkerSliderPainter.field_i.addFirst((byte) -20, var4);
             stackIn_3_0 = var4;
             return stackIn_3_0;
           }
-          if (param0) {
+          if (obfuscationGuard) {
             return null;
           }
           stackIn_7_0 = (AnimatedNotification) null;
@@ -196,14 +196,14 @@ final class TextHotspotRegion extends IntrusiveNode {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
           stackIn_11_0 = var4_ref;
-          stackIn_11_1 = new StringBuilder().append("gi.E(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_11_1 = new StringBuilder().append("gi.E(").append(obfuscationGuard).append(',').append(notificationId).append(',');
+          if (firstLine == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
           }
           stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',');
-          if (param3 == null) {
+          if (secondLine == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";

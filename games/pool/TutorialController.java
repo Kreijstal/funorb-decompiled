@@ -114,7 +114,7 @@ final class TutorialController {
         int var2 = -86 % ((40 - param0) / 46);
         int var3 = 0;
         if (HotspotRectangle.field_v.pressedButton != 0) {
-          this.d((byte) -105);
+          this.togglePanel((byte) -105);
           var3 = 1;
         } else {
           if (!this.field_b) {
@@ -278,12 +278,12 @@ final class TutorialController {
         }
     }
 
-    private final void d(byte param0) {
-        int var2 = 52 % ((7 - param0) / 41);
+    private final void togglePanel(byte obfuscationGuard) {
+        int var2 = 52 % ((7 - obfuscationGuard) / 41);
         if (this.field_b) {
-          this.d(-128);
+          this.collapsePanel(-128);
         } else {
-          this.g(-84);
+          this.expandPanel(-84);
         }
     }
 
@@ -298,7 +298,7 @@ final class TutorialController {
             this.previousStep = this.currentStep;
           }
           this.setCurrentStep((TutorialStep) (this.currentStep.previous), param0 ^ 254);
-          this.g(-120);
+          this.expandPanel(-120);
         } else {
           if (null != this.field_j) {
             this.field_j.previousStep = this.currentStep;
@@ -307,9 +307,9 @@ final class TutorialController {
         }
     }
 
-    final static MeshBuilder b(byte param0) {
+    final static MeshBuilder createEmptyMesh(byte obfuscationGuard) {
         MeshBuilder var1 = new MeshBuilder(0, 0, 0);
-        if (param0 < 120) {
+        if (obfuscationGuard < 120) {
           field_i = 107;
         }
         var1.releaseNormals();
@@ -328,7 +328,7 @@ final class TutorialController {
         RuntimeException var3_ref = null;
         try {
           if (param2 != 17924) {
-            TutorialController.h(36);
+            TutorialController.drawClientNotice(36);
           }
           var3 = HotspotRectangle.reverseString(param1, 0);
           if (param0.indexOf(param1) == -1 &&
@@ -384,7 +384,7 @@ final class TutorialController {
         if (var4_int != 512) {
           if (var4_int == 2048) {
             var12 = (String) null;
-            ProgressBarWidget.a(true, 0, CueAim.pottingTheRestOfYourGroup, (String) null);
+            ProgressBarWidget.replaceNotification(true, 0, CueAim.pottingTheRestOfYourGroup, (String) null);
             var13 = this.field_a.gameModel.balls;
             var2 = var13;
             var3 = this.field_a.gameModel.rules.initialGroup(-1);
@@ -433,7 +433,7 @@ final class TutorialController {
             var18 = var16;
             var8_ref_pq = this.field_a.gameModel.balls[var5_int];
             var15 = this.field_a.gameModel.currentShot(75);
-            ProgressBarWidget.a(true, 0, AccountWelcomePanel.substituteTemplateArguments(new String[]{TransformRotationSupport.field_a.groupName((byte) 92, var4_int)}, -1, ModelTableScene.pottingBallForYou), (String) null);
+            ProgressBarWidget.replaceNotification(true, 0, AccountWelcomePanel.substituteTemplateArguments(new String[]{TransformRotationSupport.field_a.groupName((byte) 92, var4_int)}, -1, ModelTableScene.pottingBallForYou), (String) null);
             this.field_a.gameModel.stopAllBalls(-95);
             this.field_a.gameModel.rules.assignGroups(var4_int, -1, 0);
             var15.endResolution = AchievementSubmission.field_m | MarkerSliderPainter.field_j;
@@ -476,7 +476,7 @@ final class TutorialController {
             } else {
               this.field_a.rerackBalls(0);
               var6 = (String) null;
-              ProgressBarWidget.a(true, 0, BallDebugOverlay.tutorialBreakTryAgain, (String) null);
+              ProgressBarWidget.replaceNotification(true, 0, BallDebugOverlay.tutorialBreakTryAgain, (String) null);
             }
           }
           if (this.currentStep.field_s == 512 &&
@@ -661,11 +661,11 @@ final class TutorialController {
           var7 = (TutorialStep) (var23.previous(param0 ^ 61));
         }
         if (param0 != -109) {
-          this.d(-29);
+          this.collapsePanel(-29);
         }
     }
 
-    private final void d(int param0) {
+    private final void collapsePanel(int obfuscationGuard) {
         if (!this.field_b) {
         } else {
           HotspotRectangle.field_v.capturedSprite = PolarObject.field_d[13];
@@ -679,17 +679,17 @@ final class TutorialController {
             TextPairLoginPayload.field_i = 25 - TextPairLoginPayload.field_i;
           }
         }
-        if (param0 > -121) {
+        if (obfuscationGuard > -121) {
           this.renderPanel(113, -115);
         }
     }
 
-    final static int a(int param0, int param1, int param2) {
-        if (param2 == param0 &&
-          FixedAngleSupport.isLeapYear(param1, (byte) 43)) {
+    final static int daysInMonth(int month, int year, int februaryIndex) {
+        if (februaryIndex == month &&
+          FixedAngleSupport.isLeapYear(year, (byte) 43)) {
           return 29;
         }
-        return TickClock.field_d[param0];
+        return TickClock.field_d[month];
     }
 
     final void restart(int param0) {
@@ -700,7 +700,7 @@ final class TutorialController {
           var3 = (TutorialStep) (var4.previous(param0 - 98));
         }
         this.setCurrentStep((TutorialStep) (this.field_d.last((byte) 109)), 1);
-        this.g(-94);
+        this.expandPanel(-94);
         PoolGameModel.field_k.height = null == this.currentStep ? 10 : this.currentStep.getHeight((byte) -112);
         PoolGameModel.field_k.localY = -5 - PoolGameModel.field_k.height + SoftwareRasterizer.height;
         this.layoutButtons(1);
@@ -711,17 +711,17 @@ final class TutorialController {
         this.field_a.gameModel.setGameType(this.field_n, (byte) -118);
         this.field_a.cueAim.azimuth = 0;
         this.field_a.snapCameraToPreset(-24070);
-        ProgressBarWidget.a(true, 0, this.field_g, LoginTextValue.pressEscapeForOptionsMenu);
+        ProgressBarWidget.replaceNotification(true, 0, this.field_g, LoginTextValue.pressEscapeForOptionsMenu);
     }
 
-    final static void h(int param0) {
-        if (param0 != -29322) {
+    final static void drawClientNotice(int obfuscationGuard) {
+        if (obfuscationGuard != -29322) {
           field_c = -7;
         }
-        int var1 = QuickChatCategoryCache.b((byte) -62);
-        int var2 = CheckboxPainter.a(23467);
+        int var1 = QuickChatCategoryCache.clientNoticeWidth((byte) -62);
+        int var2 = CheckboxPainter.clientNoticeHeight(23467);
         Pool.field_I.draw(var1 + (TutorialStep.field_v << 1), -WhirlpoolHasher.field_b + PasswordValidator.field_n, -6316, -TutorialStep.field_v + PlasmaTableScene.field_Z, (WhirlpoolHasher.field_b << 1) + var2);
-        ChoiceButtonSupport.a(param0 ^ 29411);
+        ChoiceButtonSupport.drawClientNotice(obfuscationGuard ^ 29411);
     }
 
     final static String joinText(int param0, byte param1, CharSequence[] param2, int param3) {
@@ -888,7 +888,7 @@ final class TutorialController {
         if (1 << param1 == this.currentStep.field_s) {
           if (!this.currentStep.advanceProgress(param0, (byte) 127)) {
             TranslatedUiText.field_e = true;
-            this.g(20);
+            this.expandPanel(20);
           } else {
             this.goToPreviousStep(param2 ^ -28391);
             TranslatedUiText.field_e = false;
@@ -911,7 +911,7 @@ final class TutorialController {
         }
     }
 
-    final void g(int param0) {
+    final void expandPanel(int obfuscationGuard) {
         if (!this.field_b) {
           this.field_b = true;
           if (null != this.currentStep) {
@@ -927,7 +927,7 @@ final class TutorialController {
           HotspotRectangle.field_v.activeSprite = PolarObject.field_d[10];
           HotspotRectangle.field_v.disabledSprite = PolarObject.field_d[2];
         }
-        int var2 = -81 % ((-32 - param0) / 38);
+        int var2 = -81 % ((-32 - obfuscationGuard) / 38);
     }
 
     private final void setCurrentStep(TutorialStep param0, int param1) {
@@ -970,7 +970,7 @@ final class TutorialController {
             ThreeSliceButtonPainter.field_s = 0;
           }
           this.setCurrentStep((TutorialStep) (this.currentStep.next), 1);
-          this.g(-109);
+          this.expandPanel(-109);
         }
     }
 
@@ -990,7 +990,7 @@ final class TutorialController {
         sendQcToX = null;
         field_m = null;
         if (param0 != 5) {
-          TutorialController.b((byte) 8);
+          TutorialController.createEmptyMesh((byte) 8);
         }
     }
 

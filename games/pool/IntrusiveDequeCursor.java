@@ -179,7 +179,7 @@ final class IntrusiveDequeCursor {
           if (param0) {
             field_h = -20;
           }
-          AchievementProtocolSupport.a(param2, param1, -6725);
+          AchievementProtocolSupport.sendAchievementSubmission(param2, param1, -6725);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "aa.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

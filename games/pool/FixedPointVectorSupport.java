@@ -83,16 +83,16 @@ final class FixedPointVectorSupport {
                     if (0 == var18) {
                       if (0 <= var17 &&
                         var17 < TriangleRasterizer.clipWidth) {
-                        StrongCacheEntry.a(param0, param1, var16Lifetime2 + var17, var18, 2);
+                        StrongCacheEntry.blendHalfColorSpan(param0, param1, var16Lifetime2 + var17, var18, 2);
                       }
                     } else {
                       if (TriangleRasterizer.clipWidth <= var17 + var18) {
                         var18 = -1 + (TriangleRasterizer.clipWidth - var17);
                       }
                       if (var17 < 0) {
-                        StrongCacheEntry.a(param0, param1, var16Lifetime2, var17 + var18, param8 - 19545);
+                        StrongCacheEntry.blendHalfColorSpan(param0, param1, var16Lifetime2, var17 + var18, param8 - 19545);
                       } else {
-                        StrongCacheEntry.a(param0, param1, var16Lifetime2 + var17, var18, param8 ^ 19545);
+                        StrongCacheEntry.blendHalfColorSpan(param0, param1, var16Lifetime2 + var17, var18, param8 ^ 19545);
                       }
                     }
                   }
@@ -164,16 +164,16 @@ final class FixedPointVectorSupport {
                 if (var17Lifetime1 == 0) {
                   if (0 <= var16Lifetime1 &&
                     TriangleRasterizer.clipWidth > var16Lifetime1) {
-                    StrongCacheEntry.a(param0, param1, var16Lifetime1 + var15Lifetime1, var17Lifetime1, 2);
+                    StrongCacheEntry.blendHalfColorSpan(param0, param1, var16Lifetime1 + var15Lifetime1, var17Lifetime1, 2);
                   }
                 } else {
                   if (var16Lifetime1 + var17Lifetime1 >= TriangleRasterizer.clipWidth) {
                     var17Lifetime1 = -1 + TriangleRasterizer.clipWidth - var16Lifetime1;
                   }
                   if (var16Lifetime1 >= 0) {
-                    StrongCacheEntry.a(param0, param1, var16Lifetime1 + var15Lifetime1, var17Lifetime1, 2);
+                    StrongCacheEntry.blendHalfColorSpan(param0, param1, var16Lifetime1 + var15Lifetime1, var17Lifetime1, 2);
                   } else {
-                    StrongCacheEntry.a(param0, param1, var15Lifetime1, var17Lifetime1 + var16Lifetime1, 2);
+                    StrongCacheEntry.blendHalfColorSpan(param0, param1, var15Lifetime1, var17Lifetime1 + var16Lifetime1, 2);
                   }
                 }
               }

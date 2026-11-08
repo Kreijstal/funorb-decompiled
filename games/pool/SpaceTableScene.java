@@ -158,7 +158,7 @@ final class SpaceTableScene extends ModelTableScene {
         }
     }
 
-    private final void a(PoolMatchController param0, int param1) {
+    private final void drawScrollingBackdrop(PoolMatchController session, int obfuscationGuard) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
@@ -168,12 +168,12 @@ final class SpaceTableScene extends ModelTableScene {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          var3_int = param0.camera.b(-127) + (this.field_B.field_A >> 1);
-          if (param1 != 10) {
+          var3_int = session.camera.b(-127) + (this.field_B.field_A >> 1);
+          if (obfuscationGuard != 10) {
             waitingforFonts = (String) null;
           }
           if (var3_int > 0) {
-            var4 = (int)(-param0.camera.getYaw(true) * (double)this.field_B.field_z / 2.0 / 3.141592653589793);
+            var4 = (int)(-session.camera.getYaw(true) * (double)this.field_B.field_z / 2.0 / 3.141592653589793);
             var5 = -this.field_B.field_A + var3_int;
             this.field_B.drawAt(-this.field_B.field_z + var4, var5);
             if (-640 + this.field_B.field_z > var4) {
@@ -186,12 +186,12 @@ final class SpaceTableScene extends ModelTableScene {
           var3 = decompiledCaughtException;
           stackIn_9_0 = var3;
           stackIn_9_1 = new StringBuilder().append("gh.UA(");
-          if (param0 == null) {
+          if (session == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -579,7 +579,7 @@ final class SpaceTableScene extends ModelTableScene {
           var93 = GzipDecoder.field_d;
           var35.sortModelsByDepth((byte) -116, 0, var35.field_j.length, var93);
           SoftwareRasterizer.fillRectangle(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 51);
-          this.a(param1, param0 ^ -61);
+          this.drawScrollingBackdrop(param1, param0 ^ -61);
           for (var5Lifetime2 = 0; var5Lifetime2 < CacheEntry.field_C[0].length; var5Lifetime2++) {
             if (DisplayModeSupport.field_b[2][var5Lifetime2] >= 0) {
               SoftwareRasterizer.fillRadialGlow(DisplayModeSupport.field_b[0][var5Lifetime2], DisplayModeSupport.field_b[1][var5Lifetime2], var5Lifetime2 % ThreeSliceButtonPainter.field_t.length + 2 << 3, 255, DiskArchiveRequest.field_K);
@@ -994,12 +994,12 @@ final class SpaceTableScene extends ModelTableScene {
         DiskArchiveRequest.field_K = GradientPaletteSupport.buildGradientPalette(new int[]{0, var3[0], 128, var3[1], 192, var3[2], 224, var3[4], 256, var3[8]}, -122);
     }
 
-    final void a(byte param0, boolean param1, int param2) {
-        int var4 = -109 / ((-47 - param0) / 45);
-        if (param2 != 9) {
+    final void stopTableSound(byte obfuscationGuard, boolean fastFade, int soundId) {
+        int var4 = -109 / ((-47 - obfuscationGuard) / 45);
+        if (soundId != 9) {
         } else {
           if (null != BufferedSocket.field_b) {
-            if (!param1) {
+            if (!fastFade) {
               BufferedSocket.field_b.fadeOutAndUnlink(4096);
             } else {
               BufferedSocket.field_b.fadeOutAndUnlink(64);
@@ -1009,7 +1009,7 @@ final class SpaceTableScene extends ModelTableScene {
         }
     }
 
-    final static int n(int param0) {
+    final static int pollClientNoticeResult(int obfuscationGuard) {
         int stackIn_31_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
@@ -1035,7 +1035,7 @@ final class SpaceTableScene extends ModelTableScene {
             }
             var2 = 1;
           }
-          LabeledChildWidget.field_W.a(AlternateLongAndTextLoginPayload.a(DialogLayer.field_W, UsernameAvailabilityValidator.field_o, 0), AlternateLongAndTextLoginPayload.a(ReflectionReplySupport.field_i, DebouncedValidationProvider.field_f, ~param0), -41);
+          LabeledChildWidget.field_W.a(AlternateLongAndTextLoginPayload.a(DialogLayer.field_W, UsernameAvailabilityValidator.field_o, 0), AlternateLongAndTextLoginPayload.a(ReflectionReplySupport.field_i, DebouncedValidationProvider.field_f, ~obfuscationGuard), -41);
           if (LabeledChildWidget.field_W.isPressActivated((byte) 93)) {
             var1_int = 1;
           }
@@ -1045,12 +1045,12 @@ final class SpaceTableScene extends ModelTableScene {
             var3 = ByteStorage.field_c[LabeledChildWidget.field_W.selectedIndex];
             if (2 == var3 ||
               var3 == 5) {
-              ArchiveRequest.g(param0 + 127);
+              ArchiveRequest.dismissClientNotice(obfuscationGuard + 127);
             }
           } else {
             if (var2 != 0) {
               if (ClientException.field_h == 2) {
-                if (param0 == ~var3 &&
+                if (obfuscationGuard == ~var3 &&
                   ClientException.field_h == 2) {
                   var4 = -QuickChatPhraseDefinition.field_y + MonotonicClock.monotonicTimeMillis((byte) -128);
                   var6 = (int)((10999L - var4) / 1000L);
@@ -1061,10 +1061,10 @@ final class SpaceTableScene extends ModelTableScene {
                 }
                 return var3;
               }
-              ArchiveRequest.g(116);
+              ArchiveRequest.dismissClientNotice(116);
             }
           }
-          if (param0 == ~var3 &&
+          if (obfuscationGuard == ~var3 &&
             ClientException.field_h == 2) {
             var4Lifetime1 = -QuickChatPhraseDefinition.field_y + MonotonicClock.monotonicTimeMillis((byte) -128);
             var6Lifetime1 = (int)((10999L - var4Lifetime1) / 1000L);
@@ -1078,7 +1078,7 @@ final class SpaceTableScene extends ModelTableScene {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "gh.WA(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "gh.WA(" + obfuscationGuard + ')');
         }
     }
 

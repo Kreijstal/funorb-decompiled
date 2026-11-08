@@ -506,7 +506,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements ChildWidgetOwner {
         }
     }
 
-    final static void a(PacketBuffer param0, boolean param1, int param2, int param3, int param4) {
+    final static void writeClientHandshake(PacketBuffer param0, boolean param1, int param2, int param3, int param4) {
         param0.writeByte(12, false);
         param0.writeShort((byte) -81, 17);
         if (!param1) {
@@ -726,7 +726,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements ChildWidgetOwner {
 
     abstract void f(byte param0);
 
-    final static Class a(boolean param0, String param1) throws ClassNotFoundException {
+    final static Class resolveReflectionType(boolean obfuscationGuard, String typeName) throws ClassNotFoundException {
         RuntimeException var2 = null;
         Class stackIn_3_0 = null;
         Class stackIn_8_0 = null;
@@ -742,39 +742,39 @@ abstract class ArrayWidgetGroup extends UiWidget implements ChildWidgetOwner {
         String stackIn_35_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1.equals("B")) {
+          if (typeName.equals("B")) {
             stackIn_3_0 = Byte.TYPE;
             return stackIn_3_0;
           }
-          if (!param0) {
+          if (!obfuscationGuard) {
             field_K = (Atan2Support[][]) null;
           }
-          if (param1.equals("I")) {
+          if (typeName.equals("I")) {
             stackIn_8_0 = Integer.TYPE;
             return stackIn_8_0;
           }
-          if (param1.equals("S")) {
+          if (typeName.equals("S")) {
             stackIn_11_0 = Short.TYPE;
             return stackIn_11_0;
           }
-          if (param1.equals("J")) {
+          if (typeName.equals("J")) {
             stackIn_15_0 = Long.TYPE;
             return stackIn_15_0;
           }
-          if (param1.equals("Z")) {
+          if (typeName.equals("Z")) {
             stackIn_18_0 = Boolean.TYPE;
             return stackIn_18_0;
           }
-          if (param1.equals("F")) {
+          if (typeName.equals("F")) {
             stackIn_22_0 = Float.TYPE;
             return stackIn_22_0;
           }
-          if (param1.equals("D")) {
+          if (typeName.equals("D")) {
             stackIn_26_0 = Double.TYPE;
             return stackIn_26_0;
           }
-          if (!param1.equals("C")) {
-            stackIn_31_0 = Class.forName(param1);
+          if (!typeName.equals("C")) {
+            stackIn_31_0 = Class.forName(typeName);
             return stackIn_31_0;
           }
           stackIn_29_0 = Character.TYPE;
@@ -783,8 +783,8 @@ abstract class ArrayWidgetGroup extends UiWidget implements ChildWidgetOwner {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_34_0 = var2;
-          stackIn_34_1 = new StringBuilder().append("fm.TA(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_34_1 = new StringBuilder().append("fm.TA(").append(obfuscationGuard).append(',');
+          if (typeName == null) {
             stackIn_35_2 = "null";
           } else {
             stackIn_35_2 = "{...}";
@@ -841,13 +841,13 @@ abstract class ArrayWidgetGroup extends UiWidget implements ChildWidgetOwner {
         return null != this.findFocusTarget(15041) ? true : false;
     }
 
-    final static void a(int param0) {
+    final static void resetFrameTiming(int firstSample) {
         int var1_int = 0;
         int var2 = Pool.field_O;
         int var1_intLifetime1;
         try {
           MessageScreen.field_J.resetTiming((byte) 26);
-          for (var1_int = param0; var1_int < 32; var1_int++) {
+          for (var1_int = firstSample; var1_int < 32; var1_int++) {
             FullscreenDisplayMode.field_l[var1_int] = 0L;
           }
           for (var1_intLifetime1 = 0; 32 > var1_intLifetime1; var1_intLifetime1++) {
@@ -855,7 +855,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements ChildWidgetOwner {
           }
           DiskCacheWorker.field_b = 0;
         } catch (RuntimeException runtimeException) {
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "fm.AB(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "fm.AB(" + firstSample + ')');
         }
     }
 

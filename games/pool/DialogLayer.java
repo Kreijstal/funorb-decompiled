@@ -118,9 +118,9 @@ final class DialogLayer extends SingleChildWidget {
             var5 = BeveledFrameSpriteFactory.field_g[var4_int];
             if (var5 != null) {
               if (var5.pressedButton != 0) {
-                NodeHashTableIterator.a(27937, var5, var4_int);
+                NodeHashTableIterator.openChatFilterMenu(27937, var5, var4_int);
               }
-              var6 = LobbyPanelLayoutSupport.a(param2 ^ 5, var4_int);
+              var6 = LobbyPanelLayoutSupport.getChatFilterMode(param2 ^ 5, var4_int);
               AlignedIconLabel.field_Mb[var4_int].sprite = ThemeSelectScreen.field_M[var6];
               GradientPaletteSupport.field_b[var4_int].text = TranslatedUiText.field_i[var6];
             }
@@ -169,7 +169,7 @@ final class DialogLayer extends SingleChildWidget {
           if (param1 != -1) {
             DialogLayer.i(82);
           }
-          stackIn_5_0 = (UsernameSuggestionSupport.a(param1 ^ 88, param0) != null);
+          stackIn_5_0 = (UsernameSuggestionSupport.findSocialEntryByName(param1 ^ 88, param0) != null);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

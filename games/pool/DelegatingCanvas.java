@@ -69,8 +69,8 @@ final class DelegatingCanvas extends java.awt.Canvas {
         }
     }
 
-    final static boolean a(byte param0) {
-        if (param0 < 33) {
+    final static boolean getAccountCreationRequestFlag(byte obfuscationGuard) {
+        if (obfuscationGuard < 33) {
           ResourceArchive var2 = (ResourceArchive) null;
           DelegatingCanvas.loadAlphaFont((ResourceArchive) null, 9, -34, (ResourceArchive) null, -113);
         }

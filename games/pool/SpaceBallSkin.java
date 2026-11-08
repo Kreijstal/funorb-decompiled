@@ -16,7 +16,7 @@ final class SpaceBallSkin extends BallSkin {
           TriangleRasterizer.useRasterClip();
           SoftwareRasterizer.clear();
           LobbyPlayer.field_fc = 0;
-          TextHotspotRegion.a(-21818);
+          TextHotspotRegion.drawIntroMeshes(-21818);
           var3 = var1.copy();
           for (var4 = 0; 15 > var4; var4++) {
             var3.drawSilhouette(-2, -2, 16777215);

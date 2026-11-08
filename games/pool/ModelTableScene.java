@@ -151,7 +151,7 @@ abstract class ModelTableScene extends TableScene {
           if (!param0) {
             optionsmenuNotpaused = (String) null;
           }
-          ButtonWidget.a(0, 0, (byte) -118, param1);
+          ButtonWidget.drawRasterToCanvas(0, 0, (byte) -118, param1);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "vc.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

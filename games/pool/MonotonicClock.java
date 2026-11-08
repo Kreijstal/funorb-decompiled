@@ -115,7 +115,7 @@ final class MonotonicClock {
               var9_ref_im.field_Xb = var11 >> 1;
               var9_ref_im.field_bc = ((PacketBuffer) ((Object) var1)).readUnsignedByte(-68);
               var9_ref_im.field_Nb = ((PacketBuffer) ((Object) var1)).readUnsignedByte(-75);
-              DialWidget.a(var9_ref_im, -93);
+              DialWidget.insertLobbyPlayerSorted(var9_ref_im, -93);
               return;
             }
             if (6 == var2) {
@@ -290,7 +290,7 @@ final class MonotonicClock {
                     var30.field_Yb = false;
                   }
                 }
-                DialWidget.a(var30, -94);
+                DialWidget.insertLobbyPlayerSorted(var30, -94);
                 return;
               }
               var4_longLifetime2Lifetime1 = ((PacketBuffer) ((Object) var1)).readLong(-412303328);
@@ -306,7 +306,7 @@ final class MonotonicClock {
                   PoolMatchController.field_jb = PoolMatchController.field_jb + 1;
                 }
               }
-              DialWidget.a(var31, -118);
+              DialWidget.insertLobbyPlayerSorted(var31, -118);
               return;
             }
             var4Lifetime6 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(-1034);
@@ -337,7 +337,7 @@ final class MonotonicClock {
                 PoolMatchController.field_jb = PoolMatchController.field_jb - 1;
               }
               var4_ref_imLifetime1.field_mc = false;
-              DialWidget.a(var4_ref_imLifetime1, -111);
+              DialWidget.insertLobbyPlayerSorted(var4_ref_imLifetime1, -111);
             }
             var4_ref_imLifetime1 = (LobbyPlayer) (ModelOriginSupport.field_n.nextForIteration(127));
           }

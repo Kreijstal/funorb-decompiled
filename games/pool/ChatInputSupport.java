@@ -94,7 +94,7 @@ final class ChatInputSupport {
               var5_ref_String = Base37Support.field_c.toString();
               var8 = var5_ref_String;
               var8Lifetime2 = var5_ref_String;
-              if (UiWidget.a((byte) -71, var5_ref_String)) {
+              if (UiWidget.containsPassword((byte) -71, var5_ref_String)) {
                 var13 = (String) null;
                 var12 = (String) null;
                 MenuScreenBase.a(0, QuickChatDynamicCommand.unableToSendMessagePasswordA, (String) null, 2, (String) null, true);
@@ -107,7 +107,7 @@ final class ChatInputSupport {
                   null != HighscoresScreen.field_L) {
                   var6 = 1;
                 }
-                if (LobbyPanelLayoutSupport.a(5, var6) == 2) {
+                if (LobbyPanelLayoutSupport.getChatFilterMode(5, var6) == 2) {
                   TextInputPainter.a(1, var6, param0, (byte) -4);
                 }
                 AlternateLongAndTextLoginPayload.a((byte) -116, var5_ref_String, param2, ArrayWidgetGroup.field_I, CookieDateSupport.field_b, -1);

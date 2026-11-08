@@ -8,7 +8,7 @@ final class QuaternionRotationSupport {
     static QuickChatDynamicCommand field_c;
     static String playerListFirst;
 
-    final static boolean a(int param0, int param1, int param2) {
+    final static boolean matchesSelectedGameOption(int value, int optionKind, int obfuscationGuard) {
         boolean stackIn_5_0 = false;
         boolean stackIn_10_0 = false;
         boolean stackIn_15_0 = false;
@@ -23,52 +23,52 @@ final class QuaternionRotationSupport {
         int var4;
         int var3Lifetime1;
         var4 = Pool.field_O;
-        if (param2 >= 91) {
-          var3 = param1;
+        if (obfuscationGuard >= 91) {
+          var3 = optionKind;
           if (-1 == var3) {
-            stackIn_32_0 = (DelayedServerPacket.field_n == param0);
+            stackIn_32_0 = (DelayedServerPacket.field_n == value);
             return stackIn_32_0;
           }
           if (1 == var3) {
-            stackIn_37_0 = (param0 == DialWidget.field_W);
+            stackIn_37_0 = (value == DialWidget.field_W);
             return stackIn_37_0;
           }
           if (var3 == 2) {
-            stackIn_42_0 = (param0 == LoginPayload.field_f);
+            stackIn_42_0 = (value == LoginPayload.field_f);
             return stackIn_42_0;
           }
           if (var3 == 0) {
-            stackIn_55_0 = (ChatPanelSupport.field_a == param0);
+            stackIn_55_0 = (ChatPanelSupport.field_a == value);
             return stackIn_55_0;
           }
           if (var3 != 3) {
             return true;
           }
-          stackIn_50_0 = (param0 == LookupProtocolSupport.field_e);
+          stackIn_50_0 = (value == LookupProtocolSupport.field_e);
           return stackIn_50_0;
         }
-        QuaternionRotationSupport.a(93, 66, 62);
-        var3Lifetime1 = param1;
+        QuaternionRotationSupport.matchesSelectedGameOption(93, 66, 62);
+        var3Lifetime1 = optionKind;
         if (-1 == var3Lifetime1) {
-          stackIn_5_0 = (DelayedServerPacket.field_n == param0);
+          stackIn_5_0 = (DelayedServerPacket.field_n == value);
           return stackIn_5_0;
         }
         if (1 == var3Lifetime1) {
-          stackIn_10_0 = (param0 == DialWidget.field_W);
+          stackIn_10_0 = (value == DialWidget.field_W);
           return stackIn_10_0;
         }
         if (var3Lifetime1 == 2) {
-          stackIn_15_0 = (param0 == LoginPayload.field_f);
+          stackIn_15_0 = (value == LoginPayload.field_f);
           return stackIn_15_0;
         }
         if (var3Lifetime1 == 0) {
-          stackIn_20_0 = (ChatPanelSupport.field_a == param0);
+          stackIn_20_0 = (ChatPanelSupport.field_a == value);
           return stackIn_20_0;
         }
         if (var3Lifetime1 != 3) {
           return true;
         }
-        stackIn_26_0 = (param0 == LookupProtocolSupport.field_e);
+        stackIn_26_0 = (value == LookupProtocolSupport.field_e);
         return stackIn_26_0;
     }
 

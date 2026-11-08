@@ -26,7 +26,7 @@ final class QuickChatDynamicCommand {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!NineBallRules.a(param3, param1, -118, param0, param2)) {
+          if (!NineBallRules.canOpenQuickChatOptions(param3, param1, -118, param0, param2)) {
             return false;
           }
           if (param0 == 1) {

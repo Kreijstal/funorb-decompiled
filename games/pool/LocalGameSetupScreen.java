@@ -63,18 +63,18 @@ final class LocalGameSetupScreen extends MenuScreen {
             if (-1 + divisions[0] <= var10) {
               var4 = var5;
             } else {
-              var4 = TutorialController.b((byte) 122);
-              var11_ref_eg = TutorialController.b((byte) 124);
-              JaggrabDownloader.a(0, var4, mesh.field_D + (1 + var10) * (mesh.field_w - mesh.field_D) / divisions[0], false, 0, 0, 1, 0, var11_ref_eg, var5);
+              var4 = TutorialController.createEmptyMesh((byte) 122);
+              var11_ref_eg = TutorialController.createEmptyMesh((byte) 124);
+              JaggrabDownloader.splitMeshByPlane(0, var4, mesh.field_D + (1 + var10) * (mesh.field_w - mesh.field_D) / divisions[0], false, 0, 0, 1, 0, var11_ref_eg, var5);
               var5 = var11_ref_eg;
             }
             var7 = var4;
             for (var11 = 0; divisions[1] > var11; var11++) {
               if (var11 < divisions[1] - 1) {
-                var15 = TutorialController.b((byte) 123);
+                var15 = TutorialController.createEmptyMesh((byte) 123);
                 var6 = var15;
-                var12_ref_eg = TutorialController.b((byte) 125);
-                JaggrabDownloader.a((1 + var11) * (-mesh.field_y + mesh.field_S) / divisions[1] + mesh.field_y, var15, 0, false, 0, 1, 0, 0, var12_ref_eg, var7);
+                var12_ref_eg = TutorialController.createEmptyMesh((byte) 125);
+                JaggrabDownloader.splitMeshByPlane((1 + var11) * (-mesh.field_y + mesh.field_S) / divisions[1] + mesh.field_y, var15, 0, false, 0, 1, 0, 0, var12_ref_eg, var7);
                 var7 = var12_ref_eg;
               } else {
                 var6 = var7;
@@ -82,13 +82,13 @@ final class LocalGameSetupScreen extends MenuScreen {
               var8 = var6;
               for (var12 = 0; var12 < divisions[2]; var12++) {
                 if (var12 < (divisions[2] - 1)) {
-                  var3[var9] = TutorialController.b((byte) 124);
-                  var13 = TutorialController.b((byte) 126);
+                  var3[var9] = TutorialController.createEmptyMesh((byte) 124);
+                  var13 = TutorialController.createEmptyMesh((byte) 126);
                   stackIn_20_0 = 0;
                   stackIn_20_1 = var16[var9];
                   stackIn_20_2 = 0;
                   stackIn_21_3 = !(obfuscationGuard);
-                  JaggrabDownloader.a(stackIn_20_0, stackIn_20_1, stackIn_20_2, stackIn_21_3, mesh.field_V + (var12 + 1) * (-mesh.field_V + mesh.field_x) / divisions[2], 0, 0, 1, var13, var8);
+                  JaggrabDownloader.splitMeshByPlane(stackIn_20_0, stackIn_20_1, stackIn_20_2, stackIn_21_3, mesh.field_V + (var12 + 1) * (-mesh.field_V + mesh.field_x) / divisions[2], 0, 0, 1, var13, var8);
                   var8 = var13;
                 } else {
                   var3[var9] = var8;
@@ -161,7 +161,7 @@ final class LocalGameSetupScreen extends MenuScreen {
           FaceNormal.configureMembershipBenefitsBackground(-2107, PotEvent.field_m, ReportAbuseDialog.textGameName);
           AchievementNotice.configureMembershipBenefitsHeader(40, QuickChatMenu.field_Rb, 80, 80, 15, -2400, 2, -1, 40);
           GameApplet.a(ShotEvent.field_o, -58);
-          CheckboxPainter.a(AccountDisplayNameSupport.field_g, 106);
+          CheckboxPainter.setMembershipPreviewSprite(AccountDisplayNameSupport.field_g, 106);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

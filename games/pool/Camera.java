@@ -487,7 +487,7 @@ final class Camera {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, BitmapFont param4, int param5, int param6, int param7, int param8, int param9, NineSliceFrame param10, int param11, int param12, NineSliceFrame param13, BitmapFont param14, int param15, int param16, int param17, int param18, NineSliceFrame param19) {
+    final static void configureSharedInterfaceStyle(int param0, int param1, int param2, int param3, BitmapFont param4, int param5, int param6, int param7, int param8, int param9, NineSliceFrame param10, int param11, int param12, NineSliceFrame param13, BitmapFont param14, int param15, int param16, int param17, int param18, NineSliceFrame param19) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -504,7 +504,7 @@ final class Camera {
         try {
           QuickChatMenu.field_ec = param14;
           HotspotRectangle.field_t = param4;
-          AchievementsScreen.b(84, param1, param7, param6, param12);
+          AchievementsScreen.configureInterfaceMetrics(84, param1, param7, param6, param12);
           UsernameSuggestionsPanel.a(param18, param0, param13, -92);
           if (param16 != 2) {
             return;

@@ -39,8 +39,8 @@ final class Pocket {
           for (var1_int = firstConstraint; var1_int < LoginMethod.field_h.length; var1_int++) {
             if (LoginMethod.field_h[var1_int][0] != 2 &&
               LoginMethod.field_h[var1_int][2] != 2 &&
-              QuaternionRotationSupport.a(LoginMethod.field_h[var1_int][1], LoginMethod.field_h[var1_int][0], 115) &&
-              QuaternionRotationSupport.a(LoginMethod.field_h[var1_int][3], LoginMethod.field_h[var1_int][2], 110)) {
+              QuaternionRotationSupport.matchesSelectedGameOption(LoginMethod.field_h[var1_int][1], LoginMethod.field_h[var1_int][0], 115) &&
+              QuaternionRotationSupport.matchesSelectedGameOption(LoginMethod.field_h[var1_int][3], LoginMethod.field_h[var1_int][2], 110)) {
               return false;
             }
           }

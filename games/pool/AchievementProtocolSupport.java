@@ -17,41 +17,41 @@ final class AchievementProtocolSupport {
         field_d = null;
     }
 
-    final static void a(byte param0, QuickChatCategoryDefinition param1) {
+    final static void setUnknownQuickChatPhrase(byte obfuscationGuard, QuickChatCategoryDefinition category) {
         try {
-          param1.phraseShortcuts = new char[]{(char)63};
-          if (param0 < 9) {
+          category.phraseShortcuts = new char[]{(char)63};
+          if (obfuscationGuard < 9) {
             field_d = (IntegerSyntaxSupport) null;
           }
-          param1.phraseIds = new int[]{-1};
+          category.phraseIds = new int[]{-1};
         } catch (RuntimeException runtimeException) {
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "gp.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "gp.C(" + obfuscationGuard + ',' + (category != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void a(int param0, AchievementSubmission param1, int param2) {
+    final static void sendAchievementSubmission(int opcode, AchievementSubmission submission, int obfuscationGuard) {
         CipherPacketBuffer var6 = null;
         int var4 = 0;
         try {
           var6 = JaggrabDownloader.field_j;
-          var6.writeCipheredOpcode(false, param0);
+          var6.writeCipheredOpcode(false, opcode);
           var6.position = var6.position + 1;
-          if (param2 != -6725) {
+          if (obfuscationGuard != -6725) {
             AchievementSubmission var5 = (AchievementSubmission) null;
-            AchievementProtocolSupport.a(80, (AchievementSubmission) null, -101);
+            AchievementProtocolSupport.sendAchievementSubmission(80, (AchievementSubmission) null, -101);
           }
           var4 = var6.position;
           var6.writeByte(1, false);
-          var6.writeByte(param1.field_r, false);
-          var6.writeByte(param1.field_n, false);
-          var6.writeInt(true, param1.field_p);
-          var6.writeInt(true, param1.field_s);
-          var6.writeInt(true, param1.field_t);
-          var6.writeInt(true, param1.field_q);
+          var6.writeByte(submission.field_r, false);
+          var6.writeByte(submission.field_n, false);
+          var6.writeInt(true, submission.field_p);
+          var6.writeInt(true, submission.field_s);
+          var6.writeInt(true, submission.field_t);
+          var6.writeInt(true, submission.field_q);
           var6.appendChecksum(-1, var4);
           var6.writeByteLengthPrefix(-var4 + var6.position, true);
         } catch (RuntimeException runtimeException) {
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "gp.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "gp.B(" + opcode + ',' + (submission != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 

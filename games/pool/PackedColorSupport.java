@@ -9,8 +9,8 @@ final class PackedColorSupport {
     static String errorJs5connectFull;
     static int field_e;
 
-    final static UiComponent a(byte param0) {
-        if (param0 != 1) {
+    final static UiComponent getAccountDialogContent(byte obfuscationGuard) {
+        if (obfuscationGuard != 1) {
           field_a = 112;
           return BufferedSocket.field_m.content;
         }

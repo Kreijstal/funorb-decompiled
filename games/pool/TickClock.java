@@ -27,7 +27,7 @@ abstract class TickClock {
             TickClock.releaseStatics((byte) -60);
           }
           var4 = (String) null;
-          stackIn_3_0 = LoginRequestSupport.a((String) null, (byte) 107, 0, false, param2, param1, 0);
+          stackIn_3_0 = LoginRequestSupport.pollAccountCreationRequest((String) null, (byte) 107, 0, false, param2, param1, 0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

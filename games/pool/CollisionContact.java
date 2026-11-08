@@ -84,7 +84,7 @@ final class CollisionContact {
               DialRenderer.field_g = stackIn_8_0;
               MenuSelection.field_l = stackIn_8_0;
               RankingsScreen.field_J = Js5Transport.field_h;
-              ArrayWidgetGroup.a(JaggrabDownloader.field_j, true, CanvasInputAttachmentSupport.field_c, LobbyGame.field_uc, LoginEncryptionSupport.field_b);
+              ArrayWidgetGroup.writeClientHandshake(JaggrabDownloader.field_j, true, CanvasInputAttachmentSupport.field_c, LobbyGame.field_uc, LoginEncryptionSupport.field_b);
               DebugTuningSupport.flushClientPackets(-1, 0);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

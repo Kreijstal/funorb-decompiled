@@ -140,7 +140,7 @@ final class ProjectedVertex {
                 DisplayModeSupport.field_c[18].onEnter(0, 0, false);
               } else {
                 MatchingTextValidator.field_w = 16;
-                AccountCreationDialog.a(-3405, 16, GameRules.field_b, false);
+                AccountCreationDialog.switchScreen(-3405, 16, GameRules.field_b, false);
               }
             }
           }
@@ -227,7 +227,7 @@ final class ProjectedVertex {
             var4 = (ProjectedVertex) null;
             this.b((ProjectedVertex) null, -17);
           }
-          stackIn_3_0 = NanoTickClock.a(99, param0.field_n, this.field_n, param0.field_u, param0.field_a, this.field_a, this.field_u);
+          stackIn_3_0 = NanoTickClock.isSegmentOutsideViewFrustum(99, param0.field_n, this.field_n, param0.field_u, param0.field_a, this.field_a, this.field_u);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

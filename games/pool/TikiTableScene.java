@@ -479,9 +479,9 @@ final class TikiTableScene extends ModelTableScene {
               if (Atan2Support.field_h[var7] <= var6) {
                 if (Atan2Support.field_h[var7] < var6 &&
                   Atan2Support.field_h[var7] > var5_int) {
-                  var8 = TutorialController.b((byte) 125);
-                  var9 = TutorialController.b((byte) 127);
-                  JaggrabDownloader.a(0, var9, 0, false, Atan2Support.field_h[var7] - transform[2], 0, 0, 1, var8, var11);
+                  var8 = TutorialController.createEmptyMesh((byte) 125);
+                  var9 = TutorialController.createEmptyMesh((byte) 127);
+                  JaggrabDownloader.splitMeshByPlane(0, var9, 0, false, Atan2Support.field_h[var7] - transform[2], 0, 0, 1, var8, var11);
                   if (var9.faceCount > 0) {
                     var9.clearCaches();
                     var9.computeBounds();

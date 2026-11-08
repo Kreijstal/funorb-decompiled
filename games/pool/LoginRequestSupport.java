@@ -21,7 +21,7 @@ final class LoginRequestSupport {
         field_c = null;
     }
 
-    final static int a(String param0, byte param1, int param2, boolean param3, LoginTextValue param4, LoginTextValue param5, int param6) {
+    final static int pollAccountCreationRequest(String param0, byte param1, int param2, boolean param3, LoginTextValue param4, LoginTextValue param5, int param6) {
         int var12 = 0;
         int stackIn_4_0 = 0;
         PacketBuffer stackIn_17_0 = null;
@@ -110,7 +110,7 @@ final class LoginRequestSupport {
               JaggrabDownloader.field_j.writeByte(18, false);
               JaggrabDownloader.field_j.position = JaggrabDownloader.field_j.position + 2;
               var10 = JaggrabDownloader.field_j.position;
-              var11_ref_String = DateInputWidget.a(NanoTickClock.getApplet(79), (byte) 112);
+              var11_ref_String = DateInputWidget.readSettingsCookie(NanoTickClock.getApplet(79), (byte) 112);
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
@@ -228,15 +228,15 @@ final class LoginRequestSupport {
         }
     }
 
-    final static void a(byte param0) {
+    final static void rotateBallPreview(byte obfuscationGuard) {
         Quaternion var1 = new Quaternion();
         var1.setFromAxisAngle(86, 0, 0, 65536, 64);
-        if (param0 != 46) {
+        if (obfuscationGuard != 46) {
           LoginTextValue var2 = (LoginTextValue) null;
-          LoginRequestSupport.a((String) null, (byte) -72, 28, true, (LoginTextValue) null, (LoginTextValue) null, 104);
+          LoginRequestSupport.pollAccountCreationRequest((String) null, (byte) -72, 28, true, (LoginTextValue) null, (LoginTextValue) null, 104);
         }
         var1.normalise(true);
-        AppletUrlSupport.field_e.multiplyBy(param0 ^ 45, var1);
+        AppletUrlSupport.field_e.multiplyBy(obfuscationGuard ^ 45, var1);
     }
 
     static {

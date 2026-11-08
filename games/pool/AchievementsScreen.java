@@ -78,7 +78,7 @@ final class AchievementsScreen extends MenuScreen {
             }
           }
           regionExit1: {
-            if (ButtonWidget.a(var15, -13671, var6)) {
+            if (ButtonWidget.isBitSet(var15, -13671, var6)) {
               IsaacCipher.field_f[var6].drawQuarterSize(var7, var8);
             } else {
               if (var2 != 0) {
@@ -104,7 +104,7 @@ final class AchievementsScreen extends MenuScreen {
         var6Lifetime1 = stackIn_37_0;
         if (var6Lifetime1 != -1) {
           ModernTableScene.field_Z.drawLeft(RenderingInitializationSupport.achievementNames[var6Lifetime1], 225, ModernTableScene.field_Z.maxAscent + 215, 16777215, -1);
-          stackIn_41_0 = (!ButtonWidget.a(var15, -13671, var6Lifetime1)) ? 0 : 1;
+          stackIn_41_0 = (!ButtonWidget.isBitSet(var15, -13671, var6Lifetime1)) ? 0 : 1;
           var7Lifetime1 = stackIn_41_0;
           stackIn_46_0 = CollisionContact.field_h;
           if (var7Lifetime1 != 0) {
@@ -256,7 +256,7 @@ final class AchievementsScreen extends MenuScreen {
         IntrusiveNodeHashTable.field_j = -1;
     }
 
-    final static void b(int param0, int param1, int param2, int param3, int param4) {
+    final static void configureInterfaceMetrics(int param0, int param1, int param2, int param3, int param4) {
         LookupProtocolSupport.field_h = param1;
         int var5 = 69 % ((param0 - 25) / 50);
         LobbyGame.field_yc = param4;
@@ -380,7 +380,7 @@ final class AchievementsScreen extends MenuScreen {
             stackIn_8_0 = -3405;
             stackIn_8_1 = 16;
             stackIn_9_2 = (!LobbyPlayerLookupSupport.a(true)) ? 0 : 21;
-            AccountCreationDialog.a(stackIn_8_0, stackIn_8_1, stackIn_9_2, var4 != 0);
+            AccountCreationDialog.switchScreen(stackIn_8_0, stackIn_8_1, stackIn_9_2, var4 != 0);
           }
         }
         if (param0 != -16470) {

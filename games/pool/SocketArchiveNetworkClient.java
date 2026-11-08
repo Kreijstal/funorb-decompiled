@@ -714,7 +714,7 @@ final class SocketArchiveNetworkClient extends Js5Transport {
             if (2 == MonotonicClock.field_e) {
               TransformRotationSupport.field_h = new BufferedSocket((java.net.Socket) (AudioService.field_c.field_e), ButtonWidget.field_M);
               var2 = new PacketBuffer(13);
-              ArrayWidgetGroup.a(var2, true, DebugTuningSlider.field_k, TextInputPainter.field_v, UiWidget.field_B);
+              ArrayWidgetGroup.writeClientHandshake(var2, true, DebugTuningSlider.field_k, TextInputPainter.field_v, UiWidget.field_B);
               var2.writeByte(15, false);
               var2.writeInt(true, SpaceObject.field_f);
               TransformRotationSupport.field_h.write(var2.payload, (byte) 72, 13, 0);

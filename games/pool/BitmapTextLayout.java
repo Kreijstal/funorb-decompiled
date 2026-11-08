@@ -625,7 +625,7 @@ final class BitmapTextLayout extends TextLayout {
               PoolGameModel.field_g[var18Lifetime1] = var21Lifetime3 * var17Lifetime1 + var19Lifetime1 * var11Lifetime1 + var20Lifetime1 * var14Lifetime1 >> 16;
             }
           }
-          JaggrabDownloader.a(param3, var8, var7_int, (byte) 48, param6);
+          JaggrabDownloader.bucketVisibleFaces(param3, var8, var7_int, (byte) 48, param6);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

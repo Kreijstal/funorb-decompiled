@@ -83,7 +83,7 @@ final class TextLineLayout {
             TextLineLayout.getActiveCanvas((byte) -44);
           }
           if (MarkerSliderPainter.field_i.isEmpty(0)) {
-            stackIn_12_0 = TextHotspotRegion.a(true, param3, param2, param0);
+            stackIn_12_0 = TextHotspotRegion.enqueueNotificationIfAbsent(true, param3, param2, param0);
             return stackIn_12_0;
           }
           var4 = (AnimatedNotification) (MarkerSliderPainter.field_i.last((byte) -88));

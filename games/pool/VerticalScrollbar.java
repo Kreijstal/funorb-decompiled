@@ -458,7 +458,7 @@ final class VerticalScrollbar extends UiComponent {
         try {
           var4 = (AchievementSubmission) (StartupInterfaceSupport.field_b.last((byte) 96));
           while (var4 != null) {
-            AchievementProtocolSupport.a(opcode, var4, -6725);
+            AchievementProtocolSupport.sendAchievementSubmission(opcode, var4, -6725);
             var4 = (AchievementSubmission) (StartupInterfaceSupport.field_b.previous((byte) -5));
           }
           var2 = NodeHashTableIterator.field_j.last((byte) 87);
@@ -486,9 +486,9 @@ final class VerticalScrollbar extends UiComponent {
         return 0 != this.thumb.capturedButton ? true : false;
     }
 
-    final static void h(int param0) {
+    final static void requestLoginReset(int obfuscationGuard) {
         LoginEncryptionSupport.setAccountDialogResult(4, (byte) 105);
-        if (param0 == 15158) {
+        if (obfuscationGuard == 15158) {
           return;
         }
         field_Pb = -100L;

@@ -356,9 +356,9 @@ final class PolarTableScene extends ModelTableScene {
           if (BallDebugOverlay.field_f < this.field_O[var2Lifetime1].field_x + this.field_M[var2Lifetime1][2]) {
             BallDebugOverlay.field_f = this.field_M[var2Lifetime1][2] + this.field_O[var2Lifetime1].field_x;
           }
-          var23 = TutorialController.b((byte) 122);
-          var22 = TutorialController.b((byte) 121);
-          JaggrabDownloader.a(0, var23, 0, false, -this.field_M[var2Lifetime1][2], 0, 0, 1, var22, this.field_O[var2Lifetime1]);
+          var23 = TutorialController.createEmptyMesh((byte) 122);
+          var22 = TutorialController.createEmptyMesh((byte) 121);
+          JaggrabDownloader.splitMeshByPlane(0, var23, 0, false, -this.field_M[var2Lifetime1][2], 0, 0, 1, var22, this.field_O[var2Lifetime1]);
           var12.field_b[var2Lifetime1 - ByteRecordSubmission.field_n] = SceneNodeFactory.createSceneNode(var22, this.field_M[var2Lifetime1], (byte) 101);
           var10.field_b[-ByteRecordSubmission.field_n + var2Lifetime1] = SceneNodeFactory.createSceneNode(var23, this.field_M[var2Lifetime1], (byte) 101);
         }
@@ -376,13 +376,13 @@ final class PolarTableScene extends ModelTableScene {
             var33.addFirst((byte) -39, new SceneNodeEntry(var30));
           } else {
             if (-this.field_M[var2Lifetime3][2] <= var24.field_x) {
-              var28 = TutorialController.b((byte) 121);
-              var26 = TutorialController.b((byte) 122);
+              var28 = TutorialController.createEmptyMesh((byte) 121);
+              var26 = TutorialController.createEmptyMesh((byte) 122);
               stackIn_15_0 = 0;
               stackIn_15_1 = var28;
               stackIn_15_2 = 0;
               stackIn_16_3 = !(param0);
-              JaggrabDownloader.a(stackIn_15_0, stackIn_15_1, stackIn_15_2, stackIn_16_3, -this.field_M[var2Lifetime3][2], 0, 0, 1, var26, var24);
+              JaggrabDownloader.splitMeshByPlane(stackIn_15_0, stackIn_15_1, stackIn_15_2, stackIn_16_3, -this.field_M[var2Lifetime3][2], 0, 0, 1, var26, var24);
               dupTemp$498 = SceneNodeFactory.createSceneNode(var26, this.field_M[var2Lifetime3], (byte) 101);
               var27 = dupTemp$498;
               var4.addFirst((byte) -51, new SceneNodeEntry(dupTemp$498));

@@ -128,7 +128,7 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    final static boolean a(byte param0, String param1) {
+    final static boolean containsPassword(byte obfuscationGuard, String text) {
         RuntimeException var2 = null;
         boolean stackIn_9_0 = false;
         RuntimeException stackIn_12_0 = null;
@@ -139,17 +139,17 @@ class UiWidget extends IntrusiveNode {
           if (null == field_E) {
             return false;
           }
-          if (param0 != -71) {
+          if (obfuscationGuard != -71) {
             field_A = (UiComponent) null;
           }
-          stackIn_9_0 = !(param1.toLowerCase().indexOf(field_E.toLowerCase()) < 0);
+          stackIn_9_0 = !(text.toLowerCase().indexOf(field_E.toLowerCase()) < 0);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_12_0 = var2;
-          stackIn_12_1 = new StringBuilder().append("ei.FB(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_12_1 = new StringBuilder().append("ei.FB(").append(obfuscationGuard).append(',');
+          if (text == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
@@ -309,16 +309,16 @@ class UiWidget extends IntrusiveNode {
         return stackIn_18_0;
     }
 
-    final static Sprite[] a(byte param0, int param1) {
+    final static Sprite[] createSolidPanelSprites(byte obfuscationGuard, int color) {
         Sprite[] var4 = new Sprite[9];
         Sprite[] var2 = var4;
-        if (param0 > 4) {
-          var4[4] = ArchiveIndex.createSolidSquareSprite(param1, 64, 7);
+        if (obfuscationGuard > 4) {
+          var4[4] = ArchiveIndex.createSolidSquareSprite(color, 64, 7);
           return var2;
         }
         String var3 = (String) null;
-        UiWidget.a((byte) 3, (String) null);
-        var4[4] = ArchiveIndex.createSolidSquareSprite(param1, 64, 7);
+        UiWidget.containsPassword((byte) 3, (String) null);
+        var4[4] = ArchiveIndex.createSolidSquareSprite(color, 64, 7);
         return var2;
     }
 

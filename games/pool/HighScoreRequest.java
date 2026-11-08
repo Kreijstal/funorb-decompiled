@@ -19,20 +19,20 @@ final class HighScoreRequest extends IntrusiveNode {
     static int[] field_p;
     static int[] field_w;
 
-    final static LoginTextValue c(int param0) {
+    final static LoginTextValue createLoginTextValue(int obfuscationGuard) {
         String var1 = CollisionContact.a(false);
         if (var1 != null &&
           var1.indexOf('@') >= 0) {
           var1 = "";
         }
-        if (param0 == 8388) {
+        if (obfuscationGuard == 8388) {
           return new LoginTextValue(CollisionContact.a(false), NetworkArchiveRequest.h(0));
         }
-        HighScoreRequest.a(115, true);
+        HighScoreRequest.resendHighScoreOperations(115, true);
         return new LoginTextValue(CollisionContact.a(false), NetworkArchiveRequest.h(0));
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void resendHighScoreOperations(int opcode, boolean obfuscationGuard) {
         int var3 = 0;
         HighScoreSubmission var4 = null;
         HighScoreRequest var5 = null;
@@ -42,22 +42,22 @@ final class HighScoreRequest extends IntrusiveNode {
         try {
           var4 = (HighScoreSubmission) (GradientPaletteSupport.field_i.last((byte) 81));
           while (var4 != null) {
-            WidgetContainer.sendHighScoreSubmission(!param1, var4, param0);
+            WidgetContainer.sendHighScoreSubmission(!obfuscationGuard, var4, opcode);
             var4 = (HighScoreSubmission) (GradientPaletteSupport.field_i.previous((byte) -5));
           }
-          if (!param1) {
+          if (!obfuscationGuard) {
             HighScoreRequest.releaseStatics(104);
           }
           var5 = (HighScoreRequest) (StateIconLabel.field_Lb.last((byte) -49));
           while (var5 != null) {
-            AlternateLongAndTextLoginPayload.a(var5, param0, (byte) -126);
+            AlternateLongAndTextLoginPayload.a(var5, opcode, (byte) -126);
             var5 = (HighScoreRequest) (StateIconLabel.field_Lb.previous((byte) -5));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "eh.D(" + param0 + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "eh.D(" + opcode + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -72,7 +72,7 @@ final class HighScoreRequest extends IntrusiveNode {
           return;
         }
         BitmapFont var2 = (BitmapFont) null;
-        HighScoreRequest.a(-96, 113, (Sprite[]) null, (BitmapFont) null, -106, (Sprite[]) null, 56, -114, -28, 47, (Sprite[]) null, -80, -127, (BitmapFont) null, -116, -112, -82, 45, -61, -51);
+        HighScoreRequest.configureSharedInterfaceStyle(-96, 113, (Sprite[]) null, (BitmapFont) null, -106, (Sprite[]) null, 56, -114, -28, 47, (Sprite[]) null, -80, -127, (BitmapFont) null, -116, -112, -82, 45, -61, -51);
         field_p = null;
         field_s = null;
         invaliduserorpass = null;
@@ -81,7 +81,7 @@ final class HighScoreRequest extends IntrusiveNode {
         field_l = null;
     }
 
-    final static void a(int param0, int param1, Sprite[] param2, BitmapFont param3, int param4, Sprite[] param5, int param6, int param7, int param8, int param9, Sprite[] param10, int param11, int param12, BitmapFont param13, int param14, int param15, int param16, int param17, int param18, int param19) {
+    final static void configureSharedInterfaceStyle(int param0, int param1, Sprite[] param2, BitmapFont param3, int param4, Sprite[] param5, int param6, int param7, int param8, int param9, Sprite[] param10, int param11, int param12, BitmapFont param13, int param14, int param15, int param16, int param17, int param18, int param19) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -99,7 +99,7 @@ final class HighScoreRequest extends IntrusiveNode {
           if (param8 != 19539) {
             return;
           }
-          Camera.a(param15, param1, param9, param14, param13, param7, param11, param18, param17, param6, new NineSliceFrame(param2), param12, param19, new NineSliceFrame(param5), param3, param0, param8 ^ 19537, param16, param4, new NineSliceFrame(param10));
+          Camera.configureSharedInterfaceStyle(param15, param1, param9, param14, param13, param7, param11, param18, param17, param6, new NineSliceFrame(param2), param12, param19, new NineSliceFrame(param5), param3, param0, param8 ^ 19537, param16, param4, new NineSliceFrame(param10));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

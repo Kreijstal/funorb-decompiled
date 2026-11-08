@@ -20,7 +20,7 @@ final class VorbisCodebook {
         return var2;
     }
 
-    private final void a() {
+    private final void buildDecodeTree() {
         int[] var2_ref_int__;
         int var2;
         int var3;
@@ -163,7 +163,7 @@ final class VorbisCodebook {
           var2 = 0;
           var3_int = VorbisSample.readBits(5) + 1;
           while (var2 < this.entryCount) {
-            var4_int = VorbisSample.readBits(TextHotspotRegion.a(this.entryCount - var2, 0));
+            var4_int = VorbisSample.readBits(TextHotspotRegion.bitLengthWithOffset(this.entryCount - var2, 0));
             for (var5 = 0; var5 < var4_int; var5++) {
               incrementValue$0 = var2;
               var2++;
@@ -186,7 +186,7 @@ final class VorbisCodebook {
             var14++;
           }
         }
-        this.a();
+        this.buildDecodeTree();
         var2Lifetime1 = VorbisSample.readBits(4);
         if (var2Lifetime1 > 0) {
           var3 = VorbisSample.unpackFloat(VorbisSample.readBits(32));

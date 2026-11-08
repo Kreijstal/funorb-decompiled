@@ -121,11 +121,11 @@ final class MusicVoice extends IntrusiveNode {
             KeyHandler.field_c[var8][4][0] = -var2_int;
             KeyHandler.field_c[var8][4][1] = -var3;
             KeyHandler.field_c[var8][4][2] = Atan2Support.field_h[var8];
-            MaxLengthTextInputWidget.a(param0, KeyHandler.field_c[var8][0], false);
-            MaxLengthTextInputWidget.a(param0, KeyHandler.field_c[var8][1], param1);
-            MaxLengthTextInputWidget.a(param0, KeyHandler.field_c[var8][2], false);
-            MaxLengthTextInputWidget.a(param0, KeyHandler.field_c[var8][3], false);
-            MaxLengthTextInputWidget.a(param0, KeyHandler.field_c[var8][4], false);
+            MaxLengthTextInputWidget.projectPointInPlace(param0, KeyHandler.field_c[var8][0], false);
+            MaxLengthTextInputWidget.projectPointInPlace(param0, KeyHandler.field_c[var8][1], param1);
+            MaxLengthTextInputWidget.projectPointInPlace(param0, KeyHandler.field_c[var8][2], false);
+            MaxLengthTextInputWidget.projectPointInPlace(param0, KeyHandler.field_c[var8][3], false);
+            MaxLengthTextInputWidget.projectPointInPlace(param0, KeyHandler.field_c[var8][4], false);
             if (KeyHandler.field_c[var8][0][2] < 0) {
               KeyHandler.field_c[var8][0][1] = SoftwareRasterizer.height;
             }

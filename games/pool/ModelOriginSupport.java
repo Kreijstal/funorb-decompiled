@@ -120,7 +120,7 @@ final class ModelOriginSupport extends IntrusiveNode {
         if (param0 != 0) {
           tutorialHide = (String) null;
         }
-        AccountProtocolStage.a((byte) 118);
+        AccountProtocolStage.pollAccountDialogResult((byte) 118);
     }
 
     static {

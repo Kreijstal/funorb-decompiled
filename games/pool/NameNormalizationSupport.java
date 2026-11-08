@@ -16,7 +16,7 @@ final class NameNormalizationSupport {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = 1 % ((param1 - 27) / 33);
-          stackIn_1_0 = ButtonWidget.a(false, (byte) 70, param0);
+          stackIn_1_0 = ButtonWidget.validateAccountName(false, (byte) 70, param0);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

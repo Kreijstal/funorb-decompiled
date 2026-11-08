@@ -131,8 +131,8 @@ final class ScrollPaneWithFooter extends UiComponent {
         }
     }
 
-    final static void c(boolean param0) {
-        if (param0) {
+    final static void clearClientOptionMask(boolean obfuscationGuard) {
+        if (obfuscationGuard) {
           return;
         }
         AwtEventQueueSupport.field_d = 0;

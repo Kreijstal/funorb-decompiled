@@ -57,7 +57,7 @@ final class ProgressBarWidget extends UiWidget {
         return var13;
     }
 
-    final static boolean a(int param0, CharSequence param1) {
+    final static boolean isAllowedDisplayName(int obfuscationGuard, CharSequence name) {
         int var2_int = 0;
         RuntimeException var2 = null;
         byte[] var3 = null;
@@ -66,15 +66,15 @@ final class ProgressBarWidget extends UiWidget {
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!ModelInstance.isValidDisplayName(param1, (byte) -113, true)) {
+          if (!ModelInstance.isValidDisplayName(name, (byte) -113, true)) {
             return false;
           }
-          for (var2_int = 0; param1.length() > var2_int; var2_int++) {
-            if (!HalloweenBallSkin.isAllowedNameCharacter(param1.charAt(var2_int), (byte) 124)) {
+          for (var2_int = 0; name.length() > var2_int; var2_int++) {
+            if (!HalloweenBallSkin.isAllowedNameCharacter(name.charAt(var2_int), (byte) 124)) {
               return false;
             }
           }
-          if (param0 == -25908) {
+          if (obfuscationGuard == -25908) {
             return true;
           }
           var3 = (byte[]) null;
@@ -84,8 +84,8 @@ final class ProgressBarWidget extends UiWidget {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_17_0 = var2;
-          stackIn_17_1 = new StringBuilder().append("gj.G(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_17_1 = new StringBuilder().append("gj.G(").append(obfuscationGuard).append(',');
+          if (name == null) {
             stackIn_18_2 = "null";
           } else {
             stackIn_18_2 = "{...}";
@@ -257,7 +257,7 @@ final class ProgressBarWidget extends UiWidget {
         this.rebuildSprites((byte) 83);
     }
 
-    final static AnimatedNotification a(boolean param0, int param1, String param2, String param3) {
+    final static AnimatedNotification replaceNotification(boolean obfuscationGuard, int notificationId, String firstLine, String secondLine) {
         AnimatedNotification var4 = null;
         RuntimeException var4_ref = null;
         AnimatedNotification stackIn_2_0 = null;
@@ -269,13 +269,13 @@ final class ProgressBarWidget extends UiWidget {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          VertexTransformSupport.a((byte) 48, param1);
-          var4 = new AnimatedNotification(param1);
-          if (!param0) {
+          VertexTransformSupport.a((byte) 48, notificationId);
+          var4 = new AnimatedNotification(notificationId);
+          if (!obfuscationGuard) {
             stackIn_2_0 = (AnimatedNotification) null;
             return stackIn_2_0;
           }
-          var4.renderNotificationText(param2, (byte) 87, param3);
+          var4.renderNotificationText(firstLine, (byte) 87, secondLine);
           MarkerSliderPainter.field_i.addFirst((byte) 92, var4);
           stackIn_4_0 = var4;
           return stackIn_4_0;
@@ -283,14 +283,14 @@ final class ProgressBarWidget extends UiWidget {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
           stackIn_7_0 = var4_ref;
-          stackIn_7_1 = new StringBuilder().append("gj.H(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_7_1 = new StringBuilder().append("gj.H(").append(obfuscationGuard).append(',').append(notificationId).append(',');
+          if (firstLine == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
           stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',');
-          if (param3 == null) {
+          if (secondLine == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";

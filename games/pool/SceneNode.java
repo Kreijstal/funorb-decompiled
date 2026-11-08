@@ -50,7 +50,7 @@ final class SceneNode {
         String[] var21 = null;
         try {
           var21 = (String[]) null;
-          HighscoresScreen.a((String[]) null, 1, param1, param17, param16, param10, param2, param14, param11, param12, param0, param8, param9, param18, param13, param3, param4, (byte) -75, param7, param15);
+          HighscoresScreen.initializeLobbyInterface((String[]) null, 1, param1, param17, param16, param10, param2, param14, param11, param12, param0, param8, param9, param18, param13, param3, param4, (byte) -75, param7, param15);
           if (param5 != -25) {
             var20 = (IndexedSprite[]) null;
             SceneNode.a((String[][]) null, -73, (ResourceArchive) null, (Sprite[][]) null, (String[][]) null, 7, 14, (Sprite[][]) null, (String[]) null, (byte[]) null, 88, (int[]) null, (ResourceArchive) null, (String[]) null, (byte[]) null, (int[]) null, (ResourceArchive) null, false, (IndexedSprite[]) null);
@@ -331,7 +331,7 @@ final class SceneNode {
           for (var15 = 0; var15 < 24; var15 += 2) {
             if (0 <= var13[var15] &&
               var13[1 + var15] >= 0 &&
-              !NanoTickClock.a(101, var11[var15 + 1], var11[var15], var12[var15 + 1], var13[1 + var15], var13[var15], var12[var15])) {
+              !NanoTickClock.isSegmentOutsideViewFrustum(101, var11[var15 + 1], var11[var15], var12[var15 + 1], var13[1 + var15], var13[var15], var12[var15])) {
               var18 = (int[]) null;
               SharedRateScaleSupport.a(var12, var15, var11, (int[]) null, var13, 4);
               if (var13[var15] == 0) {

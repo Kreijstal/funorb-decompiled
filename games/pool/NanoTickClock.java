@@ -223,7 +223,7 @@ final class NanoTickClock extends TickClock {
         BirthDatePromptPanel.h(-9395);
     }
 
-    final static MusicPatch a(ResourceArchive param0, byte param1, int param2) {
+    final static MusicPatch loadMusicPatch(ResourceArchive archive, byte obfuscationGuard, int patchId) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
@@ -234,9 +234,9 @@ final class NanoTickClock extends TickClock {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = param0.getOnlyFileBytes(param2, -31413);
+          var4 = archive.getOnlyFileBytes(patchId, -31413);
           var3 = var4;
-          if (param1 < 85) {
+          if (obfuscationGuard < 85) {
             stackIn_2_0 = (MusicPatch) null;
             return stackIn_2_0;
           }
@@ -250,46 +250,46 @@ final class NanoTickClock extends TickClock {
           var3_ref = decompiledCaughtException;
           stackIn_10_0 = var3_ref;
           stackIn_10_1 = new StringBuilder().append("hk.L(");
-          if (param0 == null) {
+          if (archive == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(obfuscationGuard).append(',').append(patchId).append(')').toString());
         }
     }
 
-    final static boolean a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final static boolean isSegmentOutsideViewFrustum(int obfuscationGuard, int firstX, int secondX, int firstY, int firstDepth, int secondDepth, int secondY) {
         int var7Lifetime1;
         int var9Lifetime1;
         int var9Lifetime2;
         int var9Lifetime3;
         int var8Lifetime1;
-        if (param0 < 44) {
+        if (obfuscationGuard < 44) {
           NanoTickClock.releaseStatics((byte) -91);
         }
         int var7 = -512;
         int var9 = 320;
-        if (param2 * var7 + param5 * var9 < 0 &&
-          var7 * param1 + param4 * var9 < 0) {
+        if (secondX * var7 + secondDepth * var9 < 0 &&
+          var7 * firstX + firstDepth * var9 < 0) {
           return true;
         }
         var7Lifetime1 = 512;
         var9Lifetime1 = 320;
-        if (param5 * var9Lifetime1 + param2 * var7Lifetime1 < 0 &&
-          param4 * var9Lifetime1 + param1 * var7Lifetime1 < 0) {
+        if (secondDepth * var9Lifetime1 + secondX * var7Lifetime1 < 0 &&
+          firstDepth * var9Lifetime1 + firstX * var7Lifetime1 < 0) {
           return true;
         }
         int var8 = -512;
         var9Lifetime2 = 240;
-        if (var8 * param6 + var9Lifetime2 * param5 < 0 &&
-          var8 * param3 + param4 * var9Lifetime2 < 0) {
+        if (var8 * secondY + var9Lifetime2 * secondDepth < 0 &&
+          var8 * firstY + firstDepth * var9Lifetime2 < 0) {
           return true;
         }
         var8Lifetime1 = 512;
         var9Lifetime3 = 240;
-        if (param5 * var9Lifetime3 + var8Lifetime1 * param6 < 0 &&
-          0 > var9Lifetime3 * param4 + var8Lifetime1 * param3) {
+        if (secondDepth * var9Lifetime3 + var8Lifetime1 * secondY < 0 &&
+          0 > var9Lifetime3 * firstDepth + var8Lifetime1 * firstY) {
           return true;
         }
         return false;

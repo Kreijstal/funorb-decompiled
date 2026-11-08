@@ -72,7 +72,7 @@ final class AccountStateQuery extends IntrusiveNode {
             var5 = (String) null;
             AccountStateQuery.a(true, -73L, (String) null);
           }
-          var4 = UsernameSuggestionSupport.a(62, param2);
+          var4 = UsernameSuggestionSupport.findSocialEntryByName(62, param2);
           if (var4 != null &&
             null != var4.serverName) {
             return true;
@@ -121,7 +121,7 @@ final class AccountStateQuery extends IntrusiveNode {
         MatchingTextValidator.field_u.a(StatefulTextPainter.field_s, -1);
         MatchingTextValidator.field_u = null;
         if (null != PlasmaTableScene.field_gb) {
-          PlasmaTableScene.field_gb.d(22472);
+          PlasmaTableScene.field_gb.restorePreviousViewportSize(22472);
         }
         TimeTrialSelectScreen.field_K.requestFocus();
     }

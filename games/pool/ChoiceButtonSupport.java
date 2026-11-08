@@ -25,7 +25,7 @@ final class ChoiceButtonSupport {
         }
     }
 
-    final static void a(int param0) {
+    final static void drawClientNotice(int obfuscationGuard) {
         int stackIn_18_0 = 0;
         String stackIn_24_0 = null;
         int stackIn_28_0 = 0;
@@ -60,7 +60,7 @@ final class ChoiceButtonSupport {
             }
           }
           var3 = 0;
-          if (param0 > -78) {
+          if (obfuscationGuard > -78) {
             field_e = (StateIconLabel) null;
           }
           while (TransformRotationSupport.field_j.length > var3) {
@@ -141,7 +141,7 @@ final class ChoiceButtonSupport {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "e.B(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "e.B(" + obfuscationGuard + ')');
         }
     }
 

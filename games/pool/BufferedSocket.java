@@ -220,7 +220,7 @@ final class BufferedSocket implements Runnable {
           var8 = 91 / ((48 - param2) / 53);
           TabbedPane.field_Ub.showDialog(var9, 30000);
           if (GameRules.loadAppletCookies(0)) {
-            var9.p((byte) -52);
+            var9.showCreationIneligible((byte) -52);
             return true;
           }
           IterableDualLinkDeque.field_c = param0;

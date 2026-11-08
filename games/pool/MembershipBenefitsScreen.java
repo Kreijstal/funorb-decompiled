@@ -121,10 +121,10 @@ final class MembershipBenefitsScreen extends MenuScreen {
           DisplayModeSupport.openSubscribePage(NanoTickClock.getApplet(58), 2056898529);
         }
         if (var2 == 1) {
-          AccountCreationDialog.a(-3405, 0, GameRules.field_b, false);
+          AccountCreationDialog.switchScreen(-3405, 0, GameRules.field_b, false);
         }
         if (var2 == 2) {
-          AccountCreationDialog.a(-3405, 0, GameRules.field_b, true);
+          AccountCreationDialog.switchScreen(-3405, 0, GameRules.field_b, true);
         }
     }
 

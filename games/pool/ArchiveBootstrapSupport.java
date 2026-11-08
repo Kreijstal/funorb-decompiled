@@ -33,7 +33,7 @@ final class ArchiveBootstrapSupport {
           if (PlasmaTableScene.field_gb == null) {
             return false;
           }
-          if (PlasmaTableScene.field_gb.e(100)) {
+          if (PlasmaTableScene.field_gb.canApplyConstrainedSize(100)) {
             return true;
           }
           return false;
@@ -41,7 +41,7 @@ final class ArchiveBootstrapSupport {
         if (PlasmaTableScene.field_gb == null) {
           return false;
         }
-        if (PlasmaTableScene.field_gb.e(100)) {
+        if (PlasmaTableScene.field_gb.canApplyConstrainedSize(100)) {
           return true;
         }
         return false;

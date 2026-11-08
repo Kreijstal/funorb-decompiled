@@ -176,7 +176,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         int var7_intLifetime3;
         var18 = Pool.field_O;
         try {
-          var20 = ArchiveRequest.a(param4, "lobby", -24155, "crowns");
+          var20 = ArchiveRequest.loadIndexedSpritesByName(param4, "lobby", -24155, "crowns");
           var5 = var20;
           UsernameSuggestionSupport.field_a = var20.length;
           if (param2 != null) {
@@ -372,10 +372,10 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
           var17 = NameEntryPopup.loadSpritesByName(0, "lobby", param4, "checkbox");
           ChoiceButtonSupport.field_e = new StateIconLabel(0L, var17[1], var17[0], 1, UiWidget.field_A, (String) null);
           LabeledChildWidget.field_R = new UiComponent(0L, (UiComponent) null);
-          LabeledChildWidget.field_R.frameSprites = NodeHashTableIterator.a(-32344, WidgetStyleLayer.loadSprite("lobby", (byte) 121, "slideregion", param4));
-          LabeledChildWidget.field_R.activeFrameSprites = NodeHashTableIterator.a(-32344, WidgetStyleLayer.loadSprite("lobby", (byte) 74, "slideregion_mouseover", param4));
-          LabeledChildWidget.field_R.capturedFrameSprites = NodeHashTableIterator.a(-32344, WidgetStyleLayer.loadSprite("lobby", (byte) 47, "slideregion_mouseheld", param4));
-          LabeledChildWidget.field_R.disabledFrameSprites = NodeHashTableIterator.a(-32344, WidgetStyleLayer.loadSprite("lobby", (byte) 95, "slideregion_disabled", param4));
+          LabeledChildWidget.field_R.frameSprites = NodeHashTableIterator.createCenterOnlyFrameSprites(-32344, WidgetStyleLayer.loadSprite("lobby", (byte) 121, "slideregion", param4));
+          LabeledChildWidget.field_R.activeFrameSprites = NodeHashTableIterator.createCenterOnlyFrameSprites(-32344, WidgetStyleLayer.loadSprite("lobby", (byte) 74, "slideregion_mouseover", param4));
+          LabeledChildWidget.field_R.capturedFrameSprites = NodeHashTableIterator.createCenterOnlyFrameSprites(-32344, WidgetStyleLayer.loadSprite("lobby", (byte) 47, "slideregion_mouseheld", param4));
+          LabeledChildWidget.field_R.disabledFrameSprites = NodeHashTableIterator.createCenterOnlyFrameSprites(-32344, WidgetStyleLayer.loadSprite("lobby", (byte) 95, "slideregion_disabled", param4));
           ArchiveRequest.field_y = new UiComponent(0L, (UiComponent) null);
           ArchiveRequest.field_y.frameSprites = CachedArchiveSource.a(NameEntryPopup.loadSpritesByName(0, "lobby", param4, "dragbar"), 12519);
           ArchiveRequest.field_y.activeFrameSprites = CachedArchiveSource.a(NameEntryPopup.loadSpritesByName(0, "lobby", param4, "dragbar_mouseover"), 12519);

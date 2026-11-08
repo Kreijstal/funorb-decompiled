@@ -69,20 +69,20 @@ final class PlayerContextMenu {
                 AccountCreationForm.a(this.field_b, true, param1);
               } else {
                 if (param2 == 10) {
-                  FaceNormal.a(this.field_b, 3, param1);
+                  FaceNormal.sendSpectateRequest(this.field_b, 3, param1);
                 } else {
                   if (param2 == 15) {
-                    SocialListEntry.a(param1, this.field_b, 11);
+                    SocialListEntry.requestLobbyGamePlayers(param1, this.field_b, 11);
                   } else {
                     if (16 != param2) {
                       return false;
                     }
-                    SocialListEntry.a(param1, 0, param0 ^ 105);
+                    SocialListEntry.requestLobbyGamePlayers(param1, 0, param0 ^ 105);
                   }
                 }
               }
             } else {
-              HighscoresScreen.a(this.field_b, (byte) -125, param1);
+              HighscoresScreen.sendJoinGameRequest(this.field_b, (byte) -125, param1);
             }
           } else {
             CueStick.a(this.field_l, param1, param0 - 98);
@@ -109,7 +109,7 @@ final class PlayerContextMenu {
             2 == param0) && ChatInputSupport.field_a == 2) {
             var7 = this.getTargetName(3);
             var4 = var7;
-            var5 = UsernameSuggestionSupport.a(-103, this.field_m);
+            var5 = UsernameSuggestionSupport.findSocialEntryByName(-103, this.field_m);
             var6 = MenuSelection.a(this.field_m, 24552) ? 1 : 0;
             if (var5 == null &&
               var6 == 0) {
@@ -123,7 +123,7 @@ final class PlayerContextMenu {
               }
             }
             if (var5 != null) {
-              if (!NineBallRules.a(this.field_m, (byte) -101) &&
+              if (!NineBallRules.isActivePrivateChatRecipient(this.field_m, (byte) -101) &&
                 !RankingsRequest.field_z) {
                 if (!ViewportController.field_y) {
                   this.field_n.addAction(AccountWelcomePanel.substituteTemplateArguments(new String[]{var7}, -1, NineSliceFrameSupport.sendPmToX), 17130, 8);

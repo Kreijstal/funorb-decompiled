@@ -154,7 +154,7 @@ final class HalloweenBallSkin extends BallSkin {
         CharSequence var10 = null;
         try {
           var10 = (CharSequence) ((Object) param1);
-          if (!ProgressBarWidget.a(-25908, var10)) {
+          if (!ProgressBarWidget.isAllowedDisplayName(-25908, var10)) {
             stackIn_3_0 = ModelInstance.invalidName;
             return stackIn_3_0;
           }
@@ -162,7 +162,7 @@ final class HalloweenBallSkin extends BallSkin {
             stackIn_6_0 = ShotRecord.unableToDeleteFriend;
             return stackIn_6_0;
           }
-          var8 = UsernameSuggestionSupport.a(-83, param1);
+          var8 = UsernameSuggestionSupport.findSocialEntryByName(-83, param1);
           if (var8 == null) {
             stackIn_10_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{param1}, -1, IntrusiveDequeCursor.friendnotfound);
             return stackIn_10_0;

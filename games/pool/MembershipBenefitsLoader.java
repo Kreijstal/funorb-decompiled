@@ -28,7 +28,7 @@ final class MembershipBenefitsLoader {
         RuntimeException decompiledCaughtException = null;
         try {
           var9 = (CharSequence) ((Object) param2);
-          if (!ProgressBarWidget.a(-25908, var9)) {
+          if (!ProgressBarWidget.isAllowedDisplayName(-25908, var9)) {
             stackIn_3_0 = ModelInstance.invalidName;
             return stackIn_3_0;
           }

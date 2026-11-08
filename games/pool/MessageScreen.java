@@ -96,7 +96,7 @@ final class MessageScreen extends MenuScreen {
             var6 = var6 | 16;
           }
           JaggrabDownloader.field_j.writeByte(var6, false);
-          var7 = DateInputWidget.a(NanoTickClock.getApplet(90), (byte) 120);
+          var7 = DateInputWidget.readSettingsCookie(NanoTickClock.getApplet(90), (byte) 120);
           if (var7 == null) {
             var7 = "";
           }

@@ -158,8 +158,8 @@ final class DirectByteStorage extends ByteStorage {
         }
     }
 
-    final static boolean e(int param0) {
-        if (param0 != -11071) {
+    final static boolean ensureMasterIndex(int obfuscationGuard) {
+        if (obfuscationGuard != -11071) {
           field_k = (int[]) null;
         }
         return TranslatedUiText.field_m.ensureMasterIndex(true);
@@ -184,7 +184,7 @@ final class DirectByteStorage extends ByteStorage {
     final void setBytes(byte[] param0, byte param1) {
         try {
           if (param1 != 2) {
-            DirectByteStorage.e(-82);
+            DirectByteStorage.ensureMasterIndex(-82);
           }
           this.field_l = java.nio.ByteBuffer.allocateDirect(param0.length);
           this.field_l.position(0);
@@ -201,8 +201,8 @@ final class DirectByteStorage extends ByteStorage {
         var2.writeByte(0, false);
     }
 
-    final static LoginResponse a(boolean param0) {
-        if (!param0) {
+    final static LoginResponse pollAccountCreationResponse(boolean obfuscationGuard) {
+        if (!obfuscationGuard) {
           return (LoginResponse) null;
         }
         if (IntrusiveDequeCursor.field_c == TabbedPane.field_Lb) {

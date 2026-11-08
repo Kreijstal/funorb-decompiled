@@ -128,8 +128,8 @@ final class QuickChatCategoryCache {
         }
     }
 
-    final static int b(byte param0) {
-        if (param0 >= -51) {
+    final static int clientNoticeWidth(byte obfuscationGuard) {
+        if (obfuscationGuard >= -51) {
           field_b = (int[]) null;
         }
         return -PlasmaTableScene.field_Z + VertexNormal.field_i;
@@ -218,7 +218,7 @@ final class QuickChatCategoryCache {
         var4 = stackIn_9_0;
         LabeledChildWidget.field_S = var8.readNullTerminatedString(-105);
         if (obfuscationGuard != -31) {
-          QuickChatCategoryCache.b((byte) -81);
+          QuickChatCategoryCache.clientNoticeWidth((byte) -81);
         }
         if (var4 == 0) {
           ArchiveProvider.field_f = LabeledChildWidget.field_S;
@@ -332,7 +332,7 @@ final class QuickChatCategoryCache {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static ChatMessage $cfr$intArgs$a$9af18640dc82(int param0, boolean param1) {
+    final static ChatMessage readChatMessageIntArgs(int obfuscationGuard, boolean quickChat) {
         boolean stackIn_3_0 = false;
         int stackIn_9_0 = 0;
         int[] stackIn_25_0 = null;
@@ -361,16 +361,16 @@ final class QuickChatCategoryCache {
           PacketDecodeState.field_a = var8.readUnsignedShort(-1034);
           RatingTextState.field_e = var8.readUnsignedMedium(98);
         }
-        stackIn_9_0 = (var8.readUnsignedByte(param0 ^ 94) != 1) ? 0 : 1;
+        stackIn_9_0 = (var8.readUnsignedByte(obfuscationGuard ^ 94) != 1) ? 0 : 1;
         var4 = stackIn_9_0;
         LabeledChildWidget.field_S = var8.readNullTerminatedString(-105);
-        if (param0 != -31) {
-          QuickChatCategoryCache.b((byte) -81);
+        if (obfuscationGuard != -31) {
+          QuickChatCategoryCache.clientNoticeWidth((byte) -81);
         }
         if (var4 == 0) {
           ArchiveProvider.field_f = LabeledChildWidget.field_S;
         } else {
-          ArchiveProvider.field_f = var8.readNullTerminatedString(param0 ^ 82);
+          ArchiveProvider.field_f = var8.readNullTerminatedString(obfuscationGuard ^ 82);
         }
         if (MeshBase.field_d == 1) {
           MeshColorSupport.field_b = var8.readUnsignedShort(-1034);
@@ -384,11 +384,11 @@ final class QuickChatCategoryCache {
             LookupRetrySupport.field_g = null;
           }
         }
-        if (param1) {
+        if (quickChat) {
           var5 = var8.readUnsignedShort(-1034);
           try {
             var9 = UiComponentNode.field_x.getDefinition(127, var5);
-            SectorCacheStore.field_a = var9.getTemplateText(param0 ^ -31);
+            SectorCacheStore.field_a = var9.getTemplateText(obfuscationGuard ^ -31);
             if (ArchiveProvider.field_f.equals(ResourceArchive.field_j)) {
               stackIn_25_0 = null;
             } else {
@@ -398,7 +398,7 @@ final class QuickChatCategoryCache {
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6 = (Exception) (Object) decompiledCaughtException;
-            GrowableIntList.reportClientError((Throwable) ((Object) var6), "CC1", param0 ^ 8564);
+            GrowableIntList.reportClientError((Throwable) ((Object) var6), "CC1", obfuscationGuard ^ 8564);
             SectorCacheStore.field_a = null;
             DebugTuningSlider.field_p = null;
           }
@@ -406,6 +406,6 @@ final class QuickChatCategoryCache {
           SectorCacheStore.field_a = DisplayModeSupport.a(var8, 80, true);
           DebugTuningSlider.field_p = null;
         }
-        return new ChatMessage(param1);
+        return new ChatMessage(quickChat);
     }
 }

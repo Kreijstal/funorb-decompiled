@@ -762,14 +762,14 @@ final class PoolGameModel {
                       if (0L == (LinkButtonPainter.field_i & 16L)) {
                         return false;
                       }
-                      ViewportController.a(FixedPointVectorSupport.a(new int[]{var18, var19_int, var20}, (byte) 1), 16724753, -128, AccountContentDialog.field_ub.viewMatrix);
+                      ViewportController.drawProjectedCrosshair(FixedPointVectorSupport.a(new int[]{var18, var19_int, var20}, (byte) 1), 16724753, -128, AccountContentDialog.field_ub.viewMatrix);
                     }
                     return false;
                   }
                 }
                 if (((AccountContentDialog.field_ub != null)) &&
                   ((0L != (16L & LinkButtonPainter.field_i)))) {
-                  ViewportController.a(FixedPointVectorSupport.a(new int[]{var18, var19_int, var20}, (byte) 1), 16764057, -79, AccountContentDialog.field_ub.viewMatrix);
+                  ViewportController.drawProjectedCrosshair(FixedPointVectorSupport.a(new int[]{var18, var19_int, var20}, (byte) 1), 16764057, -79, AccountContentDialog.field_ub.viewMatrix);
                 }
               }
               decompiledFrameRemainder0 = false;
@@ -802,7 +802,7 @@ final class PoolGameModel {
                     var29 = (long)DisplayModeSupport.field_e[2] + var23 * (long)DisplayModeSupport.field_e[11];
                     if (null != AccountContentDialog.field_ub &&
                       (LinkButtonPainter.field_i & 16L) != 0L) {
-                      ViewportController.a(FixedPointVectorSupport.a(new int[]{(int)var25, (int)var27, (int)var29}, (byte) 1), 16724753, 112, AccountContentDialog.field_ub.viewMatrix);
+                      ViewportController.drawProjectedCrosshair(FixedPointVectorSupport.a(new int[]{(int)var25, (int)var27, (int)var29}, (byte) 1), 16724753, 112, AccountContentDialog.field_ub.viewMatrix);
                     }
                     return false;
                   }
@@ -818,7 +818,7 @@ final class PoolGameModel {
                   var31 = (long)DisplayModeSupport.field_e[11] * var25 + (long)DisplayModeSupport.field_e[2];
                   if (null != AccountContentDialog.field_ub &&
                     (LinkButtonPainter.field_i & 16L) != 0L) {
-                    ViewportController.a(FixedPointVectorSupport.a(new int[]{(int)var27, (int)var29, (int)var31}, (byte) 1), 16724753, param3 ^ -272, AccountContentDialog.field_ub.viewMatrix);
+                    ViewportController.drawProjectedCrosshair(FixedPointVectorSupport.a(new int[]{(int)var27, (int)var29, (int)var31}, (byte) 1), 16724753, param3 ^ -272, AccountContentDialog.field_ub.viewMatrix);
                   }
                   return false;
                 }
@@ -1043,7 +1043,7 @@ final class PoolGameModel {
           this.field_a[var5_int] = this.field_r[var5_int].distance;
           this.field_t[var5_int] = var5_int;
         }
-        StrongCacheEntry.a(this.field_a, this.field_t, (byte) -54);
+        StrongCacheEntry.sortPairedArrays(this.field_a, this.field_t, (byte) -54);
         for (var3Lifetime4 = 0; this.field_r.length > var3Lifetime4; var3Lifetime4++) {
           var5 = this.field_r[this.field_t[var3Lifetime4]];
           if (var5.isEligibleTarget((byte) -8, param1, this)) {
@@ -1540,7 +1540,7 @@ final class PoolGameModel {
           } else {
             stackIn_4_1 = LogoMaterial.field_b;
           }
-          DelayedServerPacket.$cfr$intArgs$a$e9dea5688aa5(stackIn_3_0, stackIn_4_1);
+          DelayedServerPacket.layoutSlidingGamePanelsIntArgs(stackIn_3_0, stackIn_4_1);
           IntegerSyntaxSupport.field_e.a(-40 + SceneNode.field_k.height - 2, SceneNode.field_k.width, 0, 0, (byte) -114);
           MarkerSliderPainter.field_c.setBounds(0, 2147483647, 0, ProjectedLineSupport.field_d.width, ArchiveIndex.field_x);
           stackIn_6_0 = LoginRequiredScreen.field_M;

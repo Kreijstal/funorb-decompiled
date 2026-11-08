@@ -444,12 +444,12 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
         this.passwordConfirmInput.hoverText = ProxyConnectorSupport.createPasswordConfirmTooltip;
         this.ageInput.hoverText = PoolMatchController.createAgeTooltip;
         this.newsOptInCheckbox.hoverText = LoginForm.createOptinNewsTooltip;
-        this.displayNameInput.a((byte) -111, new UsernameAvailabilityValidator(this.displayNameInput));
-        this.emailInput.a((byte) -111, new EmailValidator(this.emailInput));
-        this.emailConfirmInput.a((byte) -111, new EmailAvailabilityValidator(this.emailConfirmInput, this.emailInput));
-        this.passwordInput.a((byte) -111, new PasswordValidator(this.passwordInput, this.displayNameInput, this.emailInput));
-        this.passwordConfirmInput.a((byte) -111, new MatchingTextValidator(this.passwordConfirmInput, this.passwordInput));
-        this.ageInput.a((byte) -111, new AgeValidator(this.ageInput));
+        this.displayNameInput.setValidationProvider((byte) -111, new UsernameAvailabilityValidator(this.displayNameInput));
+        this.emailInput.setValidationProvider((byte) -111, new EmailValidator(this.emailInput));
+        this.emailConfirmInput.setValidationProvider((byte) -111, new EmailAvailabilityValidator(this.emailConfirmInput, this.emailInput));
+        this.passwordInput.setValidationProvider((byte) -111, new PasswordValidator(this.passwordInput, this.displayNameInput, this.emailInput));
+        this.passwordConfirmInput.setValidationProvider((byte) -111, new MatchingTextValidator(this.passwordConfirmInput, this.passwordInput));
+        this.ageInput.setValidationProvider((byte) -111, new AgeValidator(this.ageInput));
         this.createButton.enabled = false;
         this.createButton.renderer = (WidgetPainter) ((Object) new ThreeSliceButtonPainter());
         this.backButton.renderer = (WidgetPainter) ((Object) new LinkButtonPainter());

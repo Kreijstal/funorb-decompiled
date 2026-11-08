@@ -26,7 +26,7 @@ final class SpriteResourceSupport {
             SpriteResourceSupport.floatToFixed3(0.49575117230415344f, true);
           }
           if (SpriteSheetLoadSupport.loadSpriteSheet((byte) 81, param1, param2)) {
-            return KeyHandler.a((byte) 108);
+            return KeyHandler.createDecodedIndexedSprite((byte) 108);
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

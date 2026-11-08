@@ -262,7 +262,7 @@ class MenuScreen extends MenuScreenBase {
         if (1 == DialWidget.field_W) {
           this.requestLocalMatch(0, param1, 0);
         } else {
-          AccountCreationDialog.a(-3405, 7, 0, param1);
+          AccountCreationDialog.switchScreen(-3405, 7, 0, param1);
         }
     }
 
@@ -387,12 +387,12 @@ class MenuScreen extends MenuScreenBase {
               var6 != 38) {
               if (37 == var6) {
                 if (!(!this.selection.isPressActivated((byte) 72))) {
-                  AccountCreationDialog.a(-3405, 7, 0, param1);
+                  AccountCreationDialog.switchScreen(-3405, 7, 0, param1);
                 }
               } else {
                 if (39 == var6) {
                   if (!(!this.selection.isPressActivated((byte) 74))) {
-                    AccountCreationDialog.a(-3405, 1, 0, param1);
+                    AccountCreationDialog.switchScreen(-3405, 1, 0, param1);
                   }
                 } else {
                   if (var6 == 49) {
@@ -480,7 +480,7 @@ class MenuScreen extends MenuScreenBase {
                                           if (43 == var6) {
                                             if (!(!this.selection.isPressActivated((byte) 81))) {
                                               var6 = param1 ? 1 : 0;
-                                              AccountCreationDialog.a(param0 ^ 19737, 2, GameRules.field_b, var6 != 0);
+                                              AccountCreationDialog.switchScreen(param0 ^ 19737, 2, GameRules.field_b, var6 != 0);
                                             }
                                           } else {
                                             if (var6 == 50) {
@@ -505,7 +505,7 @@ class MenuScreen extends MenuScreenBase {
                                                     TranslatedUiText.a(VertexProjectionSupport.pleaselogin, -4, (byte) 82);
                                                   } else {
                                                     var6 = param1 ? 1 : 0;
-                                                    AccountCreationDialog.a(-3405, -4, GameRules.field_b, var6 != 0);
+                                                    AccountCreationDialog.switchScreen(-3405, -4, GameRules.field_b, var6 != 0);
                                                   }
                                                 } else {
                                                   if (var6 != 62 &&
@@ -513,33 +513,33 @@ class MenuScreen extends MenuScreenBase {
                                                     if (var6 == 7) {
                                                       if (!(!this.selection.isPressActivated((byte) 50))) {
                                                         var6 = param1 ? 1 : 0;
-                                                        AccountCreationDialog.a(-3405, 0, GameRules.field_b, var6 != 0);
+                                                        AccountCreationDialog.switchScreen(-3405, 0, GameRules.field_b, var6 != 0);
                                                         AppletUrlSupport.field_c = false;
                                                       }
                                                     } else {
                                                       if (var6 == 24) {
                                                         if (!(!this.selection.isPressActivated((byte) 95))) {
                                                           var6 = param1 ? 1 : 0;
-                                                          AccountCreationDialog.a(-3405, 21, GameRules.field_b, var6 != 0);
+                                                          AccountCreationDialog.switchScreen(-3405, 21, GameRules.field_b, var6 != 0);
                                                           ProxyAuthenticationRequiredException.field_a = true;
                                                         }
                                                       } else {
                                                         if (var6 == 22) {
                                                           if (!(!this.selection.isPressActivated((byte) 109))) {
                                                             var6 = param1 ? 1 : 0;
-                                                            AccountCreationDialog.a(-3405, 17, GameRules.field_b, var6 != 0);
+                                                            AccountCreationDialog.switchScreen(-3405, 17, GameRules.field_b, var6 != 0);
                                                           }
                                                         } else {
                                                           if (var6 == 5) {
                                                             if (!(!this.selection.isPressActivated((byte) 67))) {
                                                               var6 = param1 ? 1 : 0;
-                                                              AccountCreationDialog.a(-3405, 13, GameRules.field_b, var6 != 0);
+                                                              AccountCreationDialog.switchScreen(-3405, 13, GameRules.field_b, var6 != 0);
                                                             }
                                                           } else {
                                                             if (47 == var6) {
                                                               if (!(!this.selection.isPressActivated((byte) 81))) {
                                                                 var6 = param1 ? 1 : 0;
-                                                                AccountCreationDialog.a(-3405, 14, GameRules.field_b, var6 != 0);
+                                                                AccountCreationDialog.switchScreen(-3405, 14, GameRules.field_b, var6 != 0);
                                                               }
                                                             } else {
                                                               if (8 == var6) {
@@ -555,13 +555,13 @@ class MenuScreen extends MenuScreenBase {
                                                                   } else {
                                                                     stackIn_152_3 = 0;
                                                                   }
-                                                                  AccountCreationDialog.a(stackIn_151_0, stackIn_151_1, stackIn_151_2[stackIn_152_3].parentScreenId, param1);
+                                                                  AccountCreationDialog.switchScreen(stackIn_151_0, stackIn_151_1, stackIn_151_2[stackIn_152_3].parentScreenId, param1);
                                                                 }
                                                               } else {
                                                                 if (var6 == 4) {
                                                                   if (!(!this.selection.isPressActivated((byte) 52))) {
                                                                     var6 = param1 ? 1 : 0;
-                                                                    AccountCreationDialog.a(-3405, 15, GameRules.field_b, var6 != 0);
+                                                                    AccountCreationDialog.switchScreen(-3405, 15, GameRules.field_b, var6 != 0);
                                                                   }
                                                                 } else {
                                                                   if (var6 == 48) {
@@ -569,7 +569,7 @@ class MenuScreen extends MenuScreenBase {
                                                                       break regionExit2;
                                                                     }
                                                                     var6 = param1 ? 1 : 0;
-                                                                    AccountCreationDialog.a(-3405, 16, GameRules.field_b, var6 != 0);
+                                                                    AccountCreationDialog.switchScreen(-3405, 16, GameRules.field_b, var6 != 0);
                                                                   } else {
                                                                     if (var6 == 20) {
                                                                       var5 = 0;
@@ -670,7 +670,7 @@ class MenuScreen extends MenuScreenBase {
                                                                                 } else {
                                                                                   stackIn_213_2 = 0;
                                                                                 }
-                                                                                AccountCreationDialog.a(stackIn_212_0, stackIn_212_1, stackIn_213_2, var6 != 0);
+                                                                                AccountCreationDialog.switchScreen(stackIn_212_0, stackIn_212_1, stackIn_213_2, var6 != 0);
                                                                               }
                                                                             } else {
                                                                               if (var6 == 11) {
@@ -684,7 +684,7 @@ class MenuScreen extends MenuScreenBase {
                                                                                   } else {
                                                                                     stackIn_219_2 = 0;
                                                                                   }
-                                                                                  AccountCreationDialog.a(stackIn_218_0, stackIn_218_1, stackIn_219_2, var6 != 0);
+                                                                                  AccountCreationDialog.switchScreen(stackIn_218_0, stackIn_218_1, stackIn_219_2, var6 != 0);
                                                                                 }
                                                                               } else {
                                                                                 if (12 == var6) {
@@ -702,7 +702,7 @@ class MenuScreen extends MenuScreenBase {
                                                                                     } else {
                                                                                       stackIn_225_2 = 21;
                                                                                     }
-                                                                                    AccountCreationDialog.a(stackIn_224_0, stackIn_224_1, stackIn_225_2, var6 != 0);
+                                                                                    AccountCreationDialog.switchScreen(stackIn_224_0, stackIn_224_1, stackIn_225_2, var6 != 0);
                                                                                   }
                                                                                 } else {
                                                                                   if (var6 != 3) {
@@ -711,10 +711,10 @@ class MenuScreen extends MenuScreenBase {
                                                                                         if (MidiNoteMixer.field_v) {
                                                                                           AccountContentDialog.field_ub.resignGame(1791);
                                                                                           var6 = param1 ? 1 : 0;
-                                                                                          AccountCreationDialog.a(param0 ^ 19737, -5, GameRules.field_b, var6 != 0);
+                                                                                          AccountCreationDialog.switchScreen(param0 ^ 19737, -5, GameRules.field_b, var6 != 0);
                                                                                         }
                                                                                         if (!(!TransformSupport.field_e)) {
-                                                                                          FaceNormal.a(0, 3, 11);
+                                                                                          FaceNormal.sendSpectateRequest(0, 3, 11);
                                                                                         }
                                                                                       }
                                                                                       break regionExit1;
@@ -754,7 +754,7 @@ class MenuScreen extends MenuScreenBase {
                                                                                     } else {
                                                                                       stackIn_241_2 = 0;
                                                                                     }
-                                                                                    AccountCreationDialog.a(stackIn_240_0, stackIn_240_1, stackIn_241_2, var6 != 0);
+                                                                                    AccountCreationDialog.switchScreen(stackIn_240_0, stackIn_240_1, stackIn_241_2, var6 != 0);
                                                                                   } else {
                                                                                     if ((AccountContentDialog.field_ub.modeFlags & PaletteFontLoader.field_d) != 0) {
                                                                                       var6 = param1 ? 1 : 0;
@@ -765,7 +765,7 @@ class MenuScreen extends MenuScreenBase {
                                                                                       } else {
                                                                                         stackIn_237_2 = 21;
                                                                                       }
-                                                                                      AccountCreationDialog.a(stackIn_236_0, stackIn_236_1, stackIn_237_2, var6 != 0);
+                                                                                      AccountCreationDialog.switchScreen(stackIn_236_0, stackIn_236_1, stackIn_237_2, var6 != 0);
                                                                                     } else {
                                                                                       var6 = param1 ? 1 : 0;
                                                                                       stackIn_232_0 = -3405;
@@ -775,7 +775,7 @@ class MenuScreen extends MenuScreenBase {
                                                                                       } else {
                                                                                         stackIn_233_2 = 21;
                                                                                       }
-                                                                                      AccountCreationDialog.a(stackIn_232_0, stackIn_232_1, stackIn_233_2, var6 != 0);
+                                                                                      AccountCreationDialog.switchScreen(stackIn_232_0, stackIn_232_1, stackIn_233_2, var6 != 0);
                                                                                     }
                                                                                   }
                                                                                 }
@@ -810,7 +810,7 @@ class MenuScreen extends MenuScreenBase {
                                                       } else {
                                                         stackIn_130_2 = 0;
                                                       }
-                                                      AccountCreationDialog.a(stackIn_129_0, stackIn_129_1, stackIn_130_2, var6 != 0);
+                                                      AccountCreationDialog.switchScreen(stackIn_129_0, stackIn_129_1, stackIn_130_2, var6 != 0);
                                                     }
                                                   }
                                                 }
@@ -834,7 +834,7 @@ class MenuScreen extends MenuScreenBase {
               break regionExit1;
             }
             if (this.selection.isPressActivated((byte) 97)) {
-              AccountCreationDialog.a(-3405, 6, 0, param1);
+              AccountCreationDialog.switchScreen(-3405, 6, 0, param1);
             }
           }
         }
@@ -928,7 +928,7 @@ class MenuScreen extends MenuScreenBase {
     }
 
     void navigateBack(byte param0) {
-        AccountCreationDialog.a(-3405, this.parentScreenId, this.parentScreenId, false);
+        AccountCreationDialog.switchScreen(-3405, this.parentScreenId, this.parentScreenId, false);
         if (param0 > -11) {
           this.requestLocalMatch(11, false, -44);
         }

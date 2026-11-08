@@ -125,7 +125,7 @@ final class MultiHandleSliderWidget extends ButtonWidget {
         CharSequence var7 = null;
         try {
           var7 = (CharSequence) ((Object) param0);
-          if (!ProgressBarWidget.a(-25908, var7)) {
+          if (!ProgressBarWidget.isAllowedDisplayName(-25908, var7)) {
             stackIn_2_0 = ModelInstance.invalidName;
             return stackIn_2_0;
           }

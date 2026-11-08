@@ -97,7 +97,7 @@ final class HighScoreSubmission extends IntrusiveNode {
     final static boolean a(int param0, int param1, int param2) {
         int var3 = LookupRetrySupport.field_e != null ? 1 : 0;
         if (~IterableDualLinkDeque.field_a == param2 &&
-          NineBallRules.a(ProjectedVertex.field_s, DiskCacheWorker.field_g, 17, AppletContainerSupport.field_a, SupportPageLauncher.field_a)) {
+          NineBallRules.canOpenQuickChatOptions(ProjectedVertex.field_s, DiskCacheWorker.field_g, 17, AppletContainerSupport.field_a, SupportPageLauncher.field_a)) {
           if (AppletContainerSupport.field_a != 2 &&
             var3 != 0) {
             return false;

@@ -391,7 +391,7 @@ final class LobbyGame extends UiComponent {
         try {
           var4_int = -89 / ((-33 - param2) / 51);
           if (TextLineLayout.a(param1, param3, param0, (byte) 121)) {
-            return KeyHandler.a((byte) -23);
+            return KeyHandler.createDecodedIndexedSprite((byte) -23);
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

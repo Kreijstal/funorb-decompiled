@@ -129,7 +129,7 @@ final class VorbisFloor1 {
         var2 = this.field_k.length;
         System.arraycopy(this.field_k, 0, field_g, 0, var2);
         var3 = field_i[this.field_e - 1];
-        var4 = TextHotspotRegion.a(var3 - 1, 0);
+        var4 = TextHotspotRegion.bitLengthWithOffset(var3 - 1, 0);
         field_a[0] = VorbisSample.readBits(var4);
         field_a[1] = VorbisSample.readBits(var4);
         var5 = 2;

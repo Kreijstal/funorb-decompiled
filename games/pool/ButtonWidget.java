@@ -13,7 +13,7 @@ class ButtonWidget extends UiWidget {
     boolean enabled;
     private boolean focused;
 
-    final static void a(int param0, int param1, byte param2, java.awt.Canvas param3) {
+    final static void drawRasterToCanvas(int x, int y, byte obfuscationGuard, java.awt.Canvas canvas) {
         java.awt.Graphics var4 = null;
         int var5 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -24,22 +24,22 @@ class ButtonWidget extends UiWidget {
         RuntimeException var4_ref2 = null;
         try {
           try {
-            var4 = param3.getGraphics();
-            OpacityWidget.field_P.drawTo(var4, param0, param1, -23820);
-            var5 = 107 % ((-1 - param2) / 57);
+            var4 = canvas.getGraphics();
+            OpacityWidget.field_P.drawTo(var4, x, y, -23820);
+            var5 = 107 % ((-1 - obfuscationGuard) / 57);
             var4.dispose();
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var4_ref = (Exception) (Object) decompiledCaughtException;
-            param3.repaint();
+            canvas.repaint();
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
           stackIn_6_0 = var4_ref2;
-          stackIn_6_1 = new StringBuilder().append("fe.V(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_6_1 = new StringBuilder().append("fe.V(").append(x).append(',').append(y).append(',').append(obfuscationGuard).append(',');
+          if (canvas == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
@@ -117,7 +117,7 @@ class ButtonWidget extends UiWidget {
         var18 = null;
         var19 = Pool.field_O;
         try {
-          DelayedServerPacket.$cfr$intArgs$a$e9dea5688aa5(-58, LogoMaterial.field_b);
+          DelayedServerPacket.layoutSlidingGamePanelsIntArgs(-58, LogoMaterial.field_b);
           if (null != HighscoresScreen.field_L) {
             ContentTransitionDialog.field_ob.enabled = true;
             CanvasInputAttachmentSupport.field_b.height = 0;
@@ -492,7 +492,7 @@ class ButtonWidget extends UiWidget {
         }
     }
 
-    final static boolean a(int[] param0, int param1, int param2) {
+    final static boolean isBitSet(int[] words, int obfuscationGuard, int bitIndex) {
         RuntimeException var3 = null;
         boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;
@@ -500,22 +500,22 @@ class ButtonWidget extends UiWidget {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 != -13671) {
-            ButtonWidget.a((int[]) null, 103, 77);
+          if (obfuscationGuard != -13671) {
+            ButtonWidget.isBitSet((int[]) null, 103, 77);
           }
-          stackIn_5_0 = ((param0[param2 >> 5] & 1 << (param2 & 31)) != 0);
+          stackIn_5_0 = ((words[bitIndex >> 5] & 1 << (bitIndex & 31)) != 0);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_8_0 = var3;
           stackIn_8_1 = new StringBuilder().append("fe.BA(");
-          if (param0 == null) {
+          if (words == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(obfuscationGuard).append(',').append(bitIndex).append(')').toString());
         }
     }
 
@@ -638,7 +638,7 @@ class ButtonWidget extends UiWidget {
         }
     }
 
-    final static String a(boolean param0, byte param1, CharSequence param2) {
+    final static String validateAccountName(boolean mode, byte obfuscationGuard, CharSequence name) {
         String var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -655,15 +655,15 @@ class ButtonWidget extends UiWidget {
         boolean stackOut_7_0;
         var5 = Pool.field_O;
         try {
-          var3 = CachedArchiveSource.a(param0, param2, (byte) 117);
+          var3 = CachedArchiveSource.a(mode, name, (byte) 117);
           if (var3 != null) {
             stackIn_4_0 = var3;
             return stackIn_4_0;
           }
           var4 = 0;
           boolean decompiledNaturalLoopExit0 = false;
-          while (!(decompiledNaturalLoopExit0 = (!(param2.length() > var4)))) {
-            stackOut_7_0 = RasterStateSupport.isNameCharacter(param2.charAt(var4), (byte) -51);
+          while (!(decompiledNaturalLoopExit0 = (!(name.length() > var4)))) {
+            stackOut_7_0 = RasterStateSupport.isNameCharacter(name.charAt(var4), (byte) -51);
             stackIn_14_0 = stackOut_7_0 ? 1 : 0;
             stackIn_8_0 = stackOut_7_0;
             if (var5 == 0) {
@@ -677,20 +677,20 @@ class ButtonWidget extends UiWidget {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            stackIn_14_0 = param1;
+            stackIn_14_0 = obfuscationGuard;
           }
           if (stackIn_14_0 > 66) {
             return null;
           }
-          ButtonWidget.a(7, -120, (byte) 100, (java.awt.Canvas) null);
+          ButtonWidget.drawRasterToCanvas(7, -120, (byte) 100, (java.awt.Canvas) null);
           stackIn_17_0 = null;
           return (String) (stackIn_17_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_20_0 = var3_ref;
-          stackIn_20_1 = new StringBuilder().append("fe.DA(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_20_1 = new StringBuilder().append("fe.DA(").append(mode).append(',').append(obfuscationGuard).append(',');
+          if (name == null) {
             stackIn_21_2 = "null";
           } else {
             stackIn_21_2 = "{...}";

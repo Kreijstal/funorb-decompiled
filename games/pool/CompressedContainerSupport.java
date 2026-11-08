@@ -198,7 +198,7 @@ final class CompressedContainerSupport implements QuickChatResolverMarker {
                   LogoFinalFrameLoader.openPlayerContextMenu((String) null, -1, 0L, -1, NameEntryPopup.field_Mb.scrollPane, var16, 32540, var7, (int[]) null);
                   var5 = var7;
                   if (var7.serverName != null &&
-                    !NineBallRules.a(PlasmaBallSkin.field_m.field_m, (byte) -101) &&
+                    !NineBallRules.isActivePrivateChatRecipient(PlasmaBallSkin.field_m.field_m, (byte) -101) &&
                     !RankingsRequest.field_z) {
                     if (!ViewportController.field_y) {
                       var17 = PlasmaBallSkin.field_m;

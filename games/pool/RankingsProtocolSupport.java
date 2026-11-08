@@ -15,7 +15,7 @@ final class RankingsProtocolSupport {
           if (param0) {
             RankingsProtocolSupport.releaseStatics((byte) 31);
           }
-          DebouncedValidationProvider.a(param1, (byte) -85);
+          DebouncedValidationProvider.reloadApplet(param1, (byte) -85);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "wb.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

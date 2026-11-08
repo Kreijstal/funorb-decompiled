@@ -113,12 +113,12 @@ final class MenuSelectionSupport {
         }
     }
 
-    final static int a(byte param0, boolean param1, int param2, int param3) {
+    final static int pollAccountDialogResult(byte param0, boolean param1, int param2, int param3) {
         if (param0 != -88) {
           field_b = (int[]) null;
-          return AccountProtocolStage.a((byte) -115);
+          return AccountProtocolStage.pollAccountDialogResult((byte) -115);
         }
-        return AccountProtocolStage.a((byte) -115);
+        return AccountProtocolStage.pollAccountDialogResult((byte) -115);
     }
 
     static {

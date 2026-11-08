@@ -283,7 +283,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
         if (param0 != 5) {
           StatefulTextPainter.c(-37);
         }
-        return new LoginTextValue(LoginTextSupport.a(true), DualLinkDequeIterator.a(true));
+        return new LoginTextValue(LoginTextSupport.getAccountName(true), DualLinkDequeIterator.a(true));
     }
 
     static {
