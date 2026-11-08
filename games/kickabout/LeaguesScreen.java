@@ -190,7 +190,7 @@ final class LeaguesScreen extends ButtonMenuScreen {
         var5.field_X = (BitmapFont) ((Object) ConsoleTokenCursor.field_d);
         var5.field_D = 5;
         DialogOverlay.field_b = new TextFieldNode(0L, var8, var4, var5, 20);
-        DialogOverlay.field_b.a(param0 - 592, 145, 64, 4 + (ConsoleTokenCursor.field_d.field_G + ConsoleTokenCursor.field_d.field_p), 160);
+        DialogOverlay.field_b.layoutTextField(param0 - 592, 145, 64, 4 + (ConsoleTokenCursor.field_d.field_G + ConsoleTokenCursor.field_d.field_p), 160);
         var8.field_X = (BitmapFont) ((Object) ConsoleTokenCursor.field_d);
         DialogOverlay.field_b.field_R = null;
         ScrollPane.field_Cb = SoftwareDrawingSupport.createTextButton(RegistrationRequestState.field_j, 7126504);

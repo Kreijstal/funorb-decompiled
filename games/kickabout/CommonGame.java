@@ -83,7 +83,7 @@ final class CommonGame {
               break;
             }
             this.participantStatus[var3_int].b(param0, param1 + 9);
-            this.participantStatus[var3_int].c(param0, param1 ^ -6);
+            this.participantStatus[var3_int].decodeDelta(param0, param1 ^ -6);
             var3_int++;
           } while (var5 == 0);
           if (2 == this.phase) {
@@ -3069,7 +3069,7 @@ final class CommonGame {
               }
               var5 = stackIn_38_0;
               while (4 > var5) {
-                this.field_i[var4_int][var5] = param0.readBits(3, TrinketShopDialog.b(param2, 58));
+                this.field_i[var4_int][var5] = param0.readBits(3, TrinketShopDialog.bitwiseXor(param2, 58));
                 var5++;
               }
               var4_int++;
@@ -3166,7 +3166,7 @@ final class CommonGame {
           scanLoop2: while (true) {
             if (var4_int < this.playerCount) {
               this.participantStatus[var4_int].b(param0, 4);
-              this.participantStatus[var4_int].c(param0, param2 + 0);
+              this.participantStatus[var4_int].decodeDelta(param0, param2 + 0);
               var4_int++;
               if (var7 == 0) {
                 continue;

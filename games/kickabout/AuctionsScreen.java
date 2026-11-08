@@ -63,7 +63,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
           }
         }
         this.field_G = new AuctionTableWidget(ChatComposeSupport.field_f, ClubState.field_l, var6, 50);
-        this.field_G.a(300, (byte) -116, 122, 7);
+        this.field_G.layoutTableViewport(300, (byte) -116, 122, 7);
         this.field_B = new ReceivedAuctionItemRow[]{};
         this.field_G.setRows(this.field_B, 0);
         this.field_L.addChild((byte) -123, this.field_P);
@@ -142,7 +142,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
         stackIn_11_1 = stackIn_6_1 & stackIn_9_2;
         stackIn_12_2 = (PlayArea.a(100)) ? 0 : 1;
         param1 = stackIn_5_0 & (stackIn_11_1 & stackIn_12_2) != 0;
-        this.field_G.a(param1, false);
+        this.field_G.updateTableInput(param1, false);
         this.field_L.field_s = this.slideOffsetX;
         this.field_L.updateInput(0, param1);
         if (param1) {
@@ -305,7 +305,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
         IntrusiveNodeHashTable.a(GameLoopApplet.field_E.field_x, param0 + 415422632);
         this.field_N = true;
         this.field_B = new ReceivedAuctionItemRow[param0];
-        this.field_G.a(0, (byte) -47, this.field_B, 5);
+        this.field_G.installRows(0, (byte) -47, this.field_B, 5);
         this.field_G.field_Db = -1;
         this.field_G.cycleColumnSort(4, 113);
         this.field_U = 15;
@@ -378,7 +378,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
         for (var3_int = 0; 4 > var3_int; var3_int++) {
           this.field_E[var3_int].a(false, (byte) 46);
         }
-        this.field_G.a(-82);
+        this.field_G.drawTable(-82);
         this.field_L.draw(63, false);
         if (this.field_N) {
           if (this.field_U == 0) {
@@ -566,7 +566,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
           } else {
             stackIn_48_1 = 0;
           }
-          ((AuctionTableWidget) (Object) stackIn_47_0).a(stackIn_48_1, (byte) -47, this.field_B, param2 + var14);
+          ((AuctionTableWidget) (Object) stackIn_47_0).installRows(stackIn_48_1, (byte) -47, this.field_B, param2 + var14);
           this.field_G.setScrollOffset(param0, var12Lifetime2);
           this.field_G.updateInput(0, false);
           return;

@@ -272,7 +272,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                       if (var2 != 7) {
                         if (var2 != 8) {
                           if (16 == var2) {
-                            IntrusiveNode.c(-49);
+                            IntrusiveNode.readAccountNameUpdate(-49);
                           } else {
                             if (var2 != 11 &&
                               var2 != 12) {
@@ -359,7 +359,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         var5 = Kickabout.field_G;
         if (null != ArchiveIndex.field_h) {
           if (null == SplashScreen.field_m) {
-            var6 = PlayingView.d((byte) -13);
+            var6 = PlayingView.getAppletHostContainer((byte) -13);
             var4 = var6.getSize();
             ArchiveIndex.field_h.setAvailableSize(768, var4.width, var4.height);
           }
@@ -788,7 +788,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                         TextHotspotRegion.field_h[var9] = (byte) 0;
                       }
                     } else {
-                      TextHotspotRegion.field_h[var7 / 8] = (byte)TrinketShopDialog.b((int) TextHotspotRegion.field_h[var7 / 8], 1 << TextLayoutLine.bitwiseAnd(7, var7));
+                      TextHotspotRegion.field_h[var7 / 8] = (byte)TrinketShopDialog.bitwiseXor((int) TextHotspotRegion.field_h[var7 / 8], 1 << TextLayoutLine.bitwiseAnd(7, var7));
                     }
                   }
                 } else {
@@ -1009,7 +1009,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                       SocialTabsPanel.field_d[var18 / 8] = (byte)TextLayoutLine.bitwiseAnd((int) SocialTabsPanel.field_d[var18 / 8], ~(1 << TextLayoutLine.bitwiseAnd(var18, 7)));
                     }
                   } else {
-                    SocialTabsPanel.field_d[(var9 + var6Lifetime3) / 8] = (byte)TrinketShopDialog.b((int) SocialTabsPanel.field_d[(var9 + var6Lifetime3) / 8], 1 << TextLayoutLine.bitwiseAnd(var6Lifetime3 + var9, 7));
+                    SocialTabsPanel.field_d[(var9 + var6Lifetime3) / 8] = (byte)TrinketShopDialog.bitwiseXor((int) SocialTabsPanel.field_d[(var9 + var6Lifetime3) / 8], 1 << TextLayoutLine.bitwiseAnd(var6Lifetime3 + var9, 7));
                   }
                 } else {
                   if (var16Lifetime1 == 0 &&
@@ -1208,7 +1208,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             throw new IllegalStateException();
           }
           if (1 == var4) {
-            var5_int = QuickChatKeysHelpPanel.a(RotaryDialWidget.j(61), (byte) -98, PlayingView.f(-1));
+            var5_int = QuickChatKeysHelpPanel.a(RotaryDialWidget.j(61), (byte) -98, PlayingView.createAccountNameStatus(-1));
             if (-1 != var5_int) {
               LeagueWinnerDialog.a(ValidatedTextWidget.field_X, var5_int, ListingRowCache.field_b, -1);
               ListingRowCache.field_b = null;
@@ -1220,7 +1220,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = ContentTransitionDialog.a(12, LoginRequiredDialog.g((byte) -17), BigCommand.g(-26370), LongPlusOneCommand.h(10326), LobbyPlayerRow.a(320), PlayArea.b(820907312), this.field_r);
+            var5_intLifetime1 = ContentTransitionDialog.a(12, LoginRequiredDialog.g((byte) -17), BigCommand.g(-26370), LongPlusOneCommand.h(10326), LobbyPlayerRow.getCurrentAccountNameText(320), PlayArea.b(820907312), this.field_r);
             if (var5_intLifetime1 != -1) {
               PlayerPortraitCacheEntry.completeAccountRegistration(ListingRowCache.field_b, ValidatedTextWidget.field_X, (byte) 122, var5_intLifetime1);
               ValidatedTextWidget.field_X = null;

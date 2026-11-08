@@ -44,7 +44,7 @@ final class CheatCodeListener implements OverlayLayer {
         var1 = 0;
         if (ArchiveManager.a(false)) {
           var1 = 1;
-          SocialPlayerRow.a(-32053);
+          SocialPlayerRow.drawDimmedModalOverlay(-32053);
         } else {
           if (!ServerTextTemplate.a(param0 ^ 27302)) {
             if (NanoTickClock.c(2915)) {

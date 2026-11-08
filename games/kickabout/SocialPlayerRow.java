@@ -116,7 +116,7 @@ final class SocialPlayerRow extends UiLayoutNode {
         IntrusiveDeque.field_a = 0.0;
     }
 
-    final static void a(int param0) {
+    final static void drawDimmedModalOverlay(int param0) {
         TrinketCountSortCriterion.drawModalOverlay(112, true);
         if (param0 != -32053) {
           field_Db = 59;

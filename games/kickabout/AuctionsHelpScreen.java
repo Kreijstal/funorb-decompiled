@@ -168,7 +168,7 @@ final class AuctionsHelpScreen extends PagedHelpScreen {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_F = null;
         if (param0) {
           field_H = 29;
@@ -195,7 +195,7 @@ final class AuctionsHelpScreen extends PagedHelpScreen {
             var1_int = 1;
           }
           if (param0 >= -35) {
-            AuctionsHelpScreen.c(true);
+            AuctionsHelpScreen.releaseStatics(true);
           }
           CheckboxPainter.field_c.a(-21174, PitchCoordinateSupport.hitTestMenuRows(ArchiveManager.field_m, BytePlusOneCommand.field_A, 16756), PitchCoordinateSupport.hitTestMenuRows(ReceivedAuctionItem.field_y, HighScoreSubmission.field_q, 16756));
           if (CheckboxPainter.field_c.c(-1)) {

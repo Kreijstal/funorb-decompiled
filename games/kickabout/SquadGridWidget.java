@@ -547,7 +547,7 @@ final class SquadGridWidget extends UiLayoutNode {
           }
           var4 = (RankingsRequest) (WorldDrawEntry.field_i.g(24009));
           while (var4 != null) {
-            TextFieldNode.a(true, var4, param0);
+            TextFieldNode.writeRankingsRequest(true, var4, param0);
             var4 = (RankingsRequest) (WorldDrawEntry.field_i.c(33));
           }
           return;

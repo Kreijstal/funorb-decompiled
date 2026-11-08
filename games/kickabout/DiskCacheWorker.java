@@ -213,7 +213,7 @@ final class DiskCacheWorker implements Runnable {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_i = null;
         field_c = null;
         field_g = null;

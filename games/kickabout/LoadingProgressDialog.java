@@ -104,7 +104,7 @@ final class LoadingProgressDialog extends ResizableModalPanel {
           this.field_X = false;
           this.field_W = false;
           this.field_Y.field_w = true;
-          this.a(-120, this.field_Y);
+          this.addChild(-120, this.field_Y);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "oj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

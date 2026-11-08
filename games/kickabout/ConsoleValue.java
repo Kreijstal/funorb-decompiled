@@ -11,7 +11,7 @@ final class ConsoleValue {
     static int field_h;
     static int[] field_g;
 
-    final static void a(int param0, byte param1) {
+    final static void setMusicVolume(int param0, byte param1) {
         if (param1 < 8) {
           ConsoleValue.releaseStatics((byte) -49);
           MusicVolumeSupport.setMusicVolume(0, param0);
@@ -30,12 +30,12 @@ final class ConsoleValue {
         return this.field_d.toString();
     }
 
-    final static void a(int param0, String param1) {
+    final static void enqueueTournamentChampionDialog(int param0, String param1) {
         try {
           ScrollPane.field_Jb.addLast(new TournamentChampionDialog(param1), 3);
           if (param0 != 2009) {
             String var3 = (String) null;
-            ConsoleValue.a(79, (String) null);
+            ConsoleValue.enqueueTournamentChampionDialog(79, (String) null);
           }
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "li.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -71,7 +71,7 @@ final class ConsoleValue {
         return ((Float) (this.field_d)).longValue();
     }
 
-    final int b(int param0) {
+    final int asInt(int param0) {
         if (param0 != -30368) {
           field_h = -65;
           if (!(this.field_d instanceof Integer)) {
@@ -85,14 +85,14 @@ final class ConsoleValue {
         return ((Integer) (this.field_d)).intValue();
     }
 
-    final boolean c(int param0) {
+    final boolean asBoolean(int param0) {
         if (param0 != 0) {
           return true;
         }
         return ((Boolean) (this.field_d)).booleanValue();
     }
 
-    final byte a(int param0) {
+    final byte asByte(int param0) {
         if (param0 != 0) {
           this.field_d = (Object) null;
           if (this.field_d instanceof Byte) {
@@ -116,7 +116,7 @@ final class ConsoleValue {
           return;
         }
         String var2 = (String) null;
-        ConsoleValue.a(121, (String) null);
+        ConsoleValue.enqueueTournamentChampionDialog(121, (String) null);
         field_g = null;
         field_e = null;
         field_a = null;

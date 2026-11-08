@@ -51,7 +51,7 @@ final class LoggedPlayer {
         var7 = Kickabout.field_G;
         try {
           if (param1) {
-            LoggedPlayer.a(-79, true);
+            LoggedPlayer.twice(-79, true);
           }
           var2_long = 0L;
           var4 = param0.length();
@@ -98,7 +98,7 @@ final class LoggedPlayer {
         }
     }
 
-    final static int a(int param0, boolean param1) {
+    final static int twice(int param0, boolean param1) {
         if (!param1) {
           field_g = (Sprite[]) null;
         }

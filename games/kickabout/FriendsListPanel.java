@@ -28,7 +28,7 @@ final class FriendsListPanel extends UiLayoutNode {
         field_Ab = null;
         field_Bb = (double[][]) null;
         if (param0 != 1) {
-          FriendsListPanel.h((byte) 68);
+          FriendsListPanel.findMarkedQuickChatCategory((byte) 68);
         }
     }
 
@@ -37,7 +37,7 @@ final class FriendsListPanel extends UiLayoutNode {
         this.field_J = param3;
         this.field_s = param7;
         this.field_q = param4;
-        this.a(param6, param0, (byte) 19, param2);
+        this.layoutListAndButtons(param6, param0, (byte) 19, param2);
         if (param5 < 82) {
           FriendsListPanel.releaseStatics(-85);
         }
@@ -60,7 +60,7 @@ final class FriendsListPanel extends UiLayoutNode {
         }
     }
 
-    final static QuickChatCategory h(byte param0) {
+    final static QuickChatCategory findMarkedQuickChatCategory(byte param0) {
         int var1_int = 0;
         QuickChatCategory var2 = null;
         int var3 = 0;
@@ -94,7 +94,7 @@ final class FriendsListPanel extends UiLayoutNode {
         this(param0, param1, param1.field_Cb.field_zb, param1.field_Cb.field_Fb, param1.field_Eb, param2, param3);
     }
 
-    final void a(int param0, int param1, byte param2, int param3) {
+    final void layoutListAndButtons(int param0, int param1, byte param2, int param3) {
         int var5 = (this.field_q + param0) / 2;
         int var6 = -param3 + this.field_mb;
         this.field_Cb.setLayout(param0, 117, var6 - param0, 0, 0, this.field_q, param1);

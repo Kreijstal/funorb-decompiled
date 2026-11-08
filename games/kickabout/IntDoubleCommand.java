@@ -19,7 +19,7 @@ final class IntDoubleCommand extends ConsoleCommand {
           if (param0 != 84) {
             IntDoubleCommand.a((byte) -8, 27, -76, -11, 111, 51, -121, -63);
           }
-          stackIn_3_0 = new ConsoleValue(LoggedPlayer.a(param1[0].b(-30368), true));
+          stackIn_3_0 = new ConsoleValue(LoggedPlayer.twice(param1[0].asInt(-30368), true));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -240,7 +240,7 @@ final class IntDoubleCommand extends ConsoleCommand {
         var8.directionMask = 0;
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = -87 % ((58 - param0) / 50);
         field_C = null;
         field_E = null;
@@ -255,7 +255,7 @@ final class IntDoubleCommand extends ConsoleCommand {
         try {
           if (AnimationClip.field_d == null) {
             AnimationClip.field_d = new LoadingProgressDialog(RankingsRequest.field_l, CachedTextLayout.field_m);
-            RankingsRequest.field_l.a(AnimationClip.field_d, false);
+            RankingsRequest.field_l.pushModal(AnimationClip.field_d, false);
           }
           if (param3 < 71) {
             IntDoubleCommand.a((byte) -14, 61, 24, 8, -65, -11, 102, -101);

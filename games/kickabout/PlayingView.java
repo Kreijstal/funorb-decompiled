@@ -65,7 +65,7 @@ final class PlayingView extends MatchPhaseView {
         this.queueKeypress(var5 + param2, -1);
     }
 
-    private final int a(byte param0, int param1) {
+    private final int nextSharedRandomInt(byte param0, int param1) {
         if (param0 >= -56) {
           return -33;
         }
@@ -93,27 +93,27 @@ final class PlayingView extends MatchPhaseView {
             stackIn_12_2 = -79;
             stackIn_12_3 = param0;
             stackIn_13_4 = !(param0);
-            ParticipantStatus.$cfr$intArgs$a$60f25194e713(stackIn_12_0, stackIn_12_1, stackIn_12_2, UiWidget.a(stackIn_12_3, stackIn_13_4, (byte) 97, false, false));
+            ParticipantStatus.playFadingSound(stackIn_12_0, stackIn_12_1, stackIn_12_2, UiWidget.chooseCrowdShoutId(stackIn_12_3, stackIn_13_4, (byte) 97, false, false));
           }
           if (RankingsScreen.field_C == 1) {
             if (!param0) {
-              ParticipantStatus.$cfr$intArgs$a$60f25194e713(false, -1, 81, 3);
+              ParticipantStatus.playFadingSound(false, -1, 81, 3);
             } else {
-              ParticipantStatus.$cfr$intArgs$a$60f25194e713(false, -1, -111, 4);
+              ParticipantStatus.playFadingSound(false, -1, -111, 4);
             }
           }
           if (RankingsScreen.field_C == 2) {
             if (!param0) {
-              ParticipantStatus.$cfr$intArgs$a$60f25194e713(false, -1, -99, 24);
+              ParticipantStatus.playFadingSound(false, -1, -99, 24);
             } else {
-              ParticipantStatus.$cfr$intArgs$a$60f25194e713(false, -1, 104, 25);
+              ParticipantStatus.playFadingSound(false, -1, 104, 25);
             }
           }
           if (RankingsScreen.field_C == 3) {
             if (!param0) {
-              ParticipantStatus.$cfr$intArgs$a$60f25194e713(false, -1, -70, 30);
+              ParticipantStatus.playFadingSound(false, -1, -70, 30);
             } else {
-              ParticipantStatus.$cfr$intArgs$a$60f25194e713(false, -1, 79, 31);
+              ParticipantStatus.playFadingSound(false, -1, 79, 31);
             }
           }
         }
@@ -124,13 +124,13 @@ final class PlayingView extends MatchPhaseView {
           1 - param2 == this.field_a.field_V.possessorTeam &&
           param2 == this.field_D) {
           if (RankingsScreen.field_C == 1) {
-            ParticipantStatus.$cfr$intArgs$a$60f25194e713(false, -1, 91, 5);
+            ParticipantStatus.playFadingSound(false, -1, 91, 5);
           }
           if (2 == RankingsScreen.field_C) {
-            ParticipantStatus.$cfr$intArgs$a$60f25194e713(false, -1, 91, 26);
+            ParticipantStatus.playFadingSound(false, -1, 91, 26);
           }
           if (RankingsScreen.field_C == 3) {
-            ParticipantStatus.$cfr$intArgs$a$60f25194e713(false, -1, 96, 32);
+            ParticipantStatus.playFadingSound(false, -1, 96, 32);
           }
         }
     }
@@ -142,7 +142,7 @@ final class PlayingView extends MatchPhaseView {
         return this.isLocalParticipantActive((byte) 13) ? this.field_g : this.field_a.b((byte) -69, this.field_h);
     }
 
-    private final void l(int param0) {
+    private final void updateMatchAudio(int param0) {
         int stackIn_25_0 = 0;
         int stackIn_28_0 = 0;
         int stackIn_30_0 = 0;
@@ -244,10 +244,10 @@ final class PlayingView extends MatchPhaseView {
         if (NanoTickClock.field_n) {
           if (RankingsScreen.field_C == 1 ||
             2 == RankingsScreen.field_C) {
-            this.a(var3 != 0, 4, var5 != 0);
+            this.playRandomCrowdShout(var3 != 0, 4, var5 != 0);
           }
           if (3 == RankingsScreen.field_C) {
-            this.o(-23079);
+            this.scheduleAmbientCrowdSound(-23079);
           }
         }
         if (this.field_a.field_V.possessorTeam == -1 &&
@@ -288,13 +288,13 @@ final class PlayingView extends MatchPhaseView {
             var8 != 0 &&
             var7 == 0) {
             if (RankingsScreen.field_C == 1) {
-              ParticipantStatus.$cfr$intArgs$a$60f25194e713(false, -1, 122, 5);
+              ParticipantStatus.playFadingSound(false, -1, 122, 5);
             }
             if (RankingsScreen.field_C == 2) {
-              ParticipantStatus.$cfr$intArgs$a$60f25194e713(false, -1, -106, 26);
+              ParticipantStatus.playFadingSound(false, -1, -106, 26);
             }
             if (RankingsScreen.field_C == 3) {
-              ParticipantStatus.$cfr$intArgs$a$60f25194e713(false, -1, -75, 32);
+              ParticipantStatus.playFadingSound(false, -1, -75, 32);
             }
           }
         }
@@ -316,7 +316,7 @@ final class PlayingView extends MatchPhaseView {
               } else {
                 stackIn_123_3 = 23;
               }
-              ParticipantStatus.$cfr$intArgs$a$60f25194e713(stackIn_122_0, stackIn_122_1, stackIn_122_2, stackIn_123_3);
+              ParticipantStatus.playFadingSound(stackIn_122_0, stackIn_122_1, stackIn_122_2, stackIn_123_3);
             }
             if (2 == RankingsScreen.field_C) {
               stackIn_128_0 = false;
@@ -327,7 +327,7 @@ final class PlayingView extends MatchPhaseView {
               } else {
                 stackIn_129_3 = 27;
               }
-              ParticipantStatus.$cfr$intArgs$a$60f25194e713(stackIn_128_0, stackIn_128_1, stackIn_128_2, stackIn_129_3);
+              ParticipantStatus.playFadingSound(stackIn_128_0, stackIn_128_1, stackIn_128_2, stackIn_129_3);
             }
             if (RankingsScreen.field_C == 3) {
               stackIn_134_0 = false;
@@ -338,7 +338,7 @@ final class PlayingView extends MatchPhaseView {
               } else {
                 stackIn_135_3 = 43;
               }
-              ParticipantStatus.$cfr$intArgs$a$60f25194e713(stackIn_134_0, stackIn_134_1, stackIn_134_2, stackIn_135_3);
+              ParticipantStatus.playFadingSound(stackIn_134_0, stackIn_134_1, stackIn_134_2, stackIn_135_3);
             }
           }
         }
@@ -349,7 +349,7 @@ final class PlayingView extends MatchPhaseView {
         }
     }
 
-    final boolean b(byte param0) {
+    final boolean hasHeldMouseInput(byte param0) {
         int var2;
         boolean stackIn_5_0 = false;
         var2 = 121 % ((17 - param0) / 35);
@@ -357,11 +357,11 @@ final class PlayingView extends MatchPhaseView {
         return stackIn_5_0;
     }
 
-    final static LoginText f(int param0) {
+    final static LoginText createAccountNameStatus(int param0) {
         if (param0 != -1) {
-          PlayingView.d((byte) -2);
+          PlayingView.getAppletHostContainer((byte) -2);
         }
-        return new LoginText(LobbyPlayerRow.a(320), TextLine.isAvailabilityCheckPending(false));
+        return new LoginText(LobbyPlayerRow.getCurrentAccountNameText(320), TextLine.isAvailabilityCheckPending(false));
     }
 
     private final void queueMouseMove(int param0, int param1, int param2) {
@@ -401,12 +401,12 @@ final class PlayingView extends MatchPhaseView {
         }
     }
 
-    final void m(int param0) {
+    final void rebuildRenderedMatch(int param0) {
         if (param0 > -77) {
           this.queueKeypress(-34, -31);
         }
         this.wrapAgentsForRendering(this.field_a, this.field_f, 370);
-        this.a((IntrusiveDeque) null, (byte) -126);
+        this.rebuildWorldDrawList((IntrusiveDeque) null, (byte) -126);
     }
 
     private final void pollMovementKeys(int param0) {
@@ -500,7 +500,7 @@ final class PlayingView extends MatchPhaseView {
             if (this.field_H != var7 ||
               this.field_a.getControlledFootballer((byte) -38, this.field_g).directionMask != var7) {
               this.field_H = var7;
-              this.b(false);
+              this.queueHeldKeys(false);
             }
           }
           if (var2[SquadSlotWidget.field_Jb]) {
@@ -566,7 +566,7 @@ final class PlayingView extends MatchPhaseView {
         int var2Lifetime1;
         var5 = Kickabout.field_G;
         if (ArchiveIndex.b(640) &&
-          !this.b((byte) -65)) {
+          !this.hasHeldMouseInput((byte) -65)) {
           return;
         }
         if (2 == RasterGammaSupport.field_a) {
@@ -667,7 +667,7 @@ final class PlayingView extends MatchPhaseView {
         }
     }
 
-    final void a(IntrusiveDeque param0, byte param1) {
+    final void rebuildWorldDrawList(IntrusiveDeque param0, byte param1) {
         int var4_int = 0;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
@@ -718,7 +718,7 @@ final class PlayingView extends MatchPhaseView {
         }
     }
 
-    private final void o(int param0) {
+    private final void scheduleAmbientCrowdSound(int param0) {
         int var2 = 0;
         int var3 = 0;
         FadingSoundPlayer var4 = null;
@@ -726,15 +726,15 @@ final class PlayingView extends MatchPhaseView {
           this.field_a.field_X.goalCount < 40 &&
           !PlayerPortraitCacheEntry.isFadingSoundActive(90, 28) &&
           !PlayerPortraitCacheEntry.isFadingSoundActive(117, 29)) {
-          var2 = this.a((byte) -97, 2);
-          var3 = 1 == var2 ? 1 + this.a((byte) -104, 2) : this.a((byte) -103, 3) + 3;
-          var4 = ParticipantStatus.$cfr$intArgs$a$60f25194e713(false, -1, -65, 28 + var2);
+          var2 = this.nextSharedRandomInt((byte) -97, 2);
+          var3 = 1 == var2 ? 1 + this.nextSharedRandomInt((byte) -104, 2) : this.nextSharedRandomInt((byte) -103, 3) + 3;
+          var4 = ParticipantStatus.playFadingSound(false, -1, -65, 28 + var2);
           if (var4 != null) {
             var4.startFadeIn(200, true);
             var4.startFadeOut(200, (byte) -4);
             var4.setStartDelay(var3, param0 ^ -23079);
           }
-          this.field_p = this.a((byte) -89, 400) + 600;
+          this.field_p = this.nextSharedRandomInt((byte) -89, 400) + 600;
         }
         if (param0 != -23079) {
           this.field_z = 59;
@@ -831,7 +831,7 @@ final class PlayingView extends MatchPhaseView {
     final void onButtonClick(int param0, int param1) {
         if (param0 <= 98) {
           IntrusiveDeque var4 = (IntrusiveDeque) null;
-          this.a((IntrusiveDeque) null, (byte) -3);
+          this.rebuildWorldDrawList((IntrusiveDeque) null, (byte) -3);
         }
     }
 
@@ -1112,7 +1112,7 @@ final class PlayingView extends MatchPhaseView {
         }
     }
 
-    final static java.awt.Container d(byte param0) {
+    final static java.awt.Container getAppletHostContainer(byte param0) {
         if (ServerMessageScreen.field_A != null) {
           return (java.awt.Container) ((Object) ServerMessageScreen.field_A);
         }
@@ -1151,7 +1151,7 @@ final class PlayingView extends MatchPhaseView {
           stackIn_7_1 = !(param3);
           this.field_B = stackIn_7_1;
           this.wrapAgentsForRendering(param0, param3, 370);
-          this.a((IntrusiveDeque) null, (byte) -97);
+          this.rebuildWorldDrawList((IntrusiveDeque) null, (byte) -97);
           var6_int = this.getFocusedParticipant(-41);
           this.field_C = SetLagCommand.a((byte) -97, param0.field_g, param0.field_S, param0.field_g[var6_int].team);
           this.field_l = true;
@@ -1185,7 +1185,7 @@ final class PlayingView extends MatchPhaseView {
         }
     }
 
-    private final void b(boolean param0) {
+    private final void queueHeldKeys(boolean param0) {
         this.queueInputEvent(param0, PlayerInputFactory.createKeyheldEvent(param0, this.field_H, this.field_g));
         if (this.field_f) {
           FootballerAiOverlaySupport.field_d.b(68, (byte) -65);
@@ -1204,7 +1204,7 @@ final class PlayingView extends MatchPhaseView {
         }
     }
 
-    final void g(int param0) {
+    final void updatePossessionSoundTeam(int param0) {
         PlayerInputEvent var3;
         if (-2 != this.field_s ||
           this.field_a.field_V.possessorTeam != -1) {
@@ -1219,19 +1219,19 @@ final class PlayingView extends MatchPhaseView {
         }
     }
 
-    private final void a(boolean param0, int param1, boolean param2) {
+    private final void playRandomCrowdShout(boolean param0, int param1, boolean param2) {
         int var4 = 0;
         int var5 = 0;
         FadingSoundPlayer var6 = null;
         if (this.field_p <= 0 &&
           40 > this.field_a.field_X.goalCount) {
-          var4 = !param0 ? UiWidget.a(false, true, (byte) 97, false, false) : UiWidget.a(true, false, (byte) 97, true, !param2 ? true : false);
-          var5 = this.a((byte) -64, 2) == 0 ? 1 : 0;
-          var6 = ParticipantStatus.$cfr$intArgs$a$60f25194e713(false, var5 == 0 ? 256 : 0, 65, var4);
+          var4 = !param0 ? UiWidget.chooseCrowdShoutId(false, true, (byte) 97, false, false) : UiWidget.chooseCrowdShoutId(true, false, (byte) 97, true, !param2 ? true : false);
+          var5 = this.nextSharedRandomInt((byte) -64, 2) == 0 ? 1 : 0;
+          var6 = ParticipantStatus.playFadingSound(false, var5 == 0 ? 256 : 0, 65, var4);
           if (var6 != null) {
             var6.startFadeOut(4, (byte) -4);
           }
-          this.field_p = this.a((byte) -78, 100) + 200;
+          this.field_p = this.nextSharedRandomInt((byte) -78, 100) + 200;
         }
         if (param1 != 4) {
           this.field_q = -116;
@@ -1417,7 +1417,7 @@ final class PlayingView extends MatchPhaseView {
           RotaryDialPainter.field_n) {
           this.switchToPredictedReceiver((PlayerInputEvent) null, -123);
         }
-        this.a(true, this.field_a);
+        this.updateRenderedAgentFlags(true, this.field_a);
         if (this.field_a.bigHeadMode != this.field_n) {
           this.field_n = this.field_a.bigHeadMode;
           this.refreshFootballerSprites(-90);
@@ -1431,7 +1431,7 @@ final class PlayingView extends MatchPhaseView {
         }
         IntTripleCommand.a(this.field_r, -22488);
         TextLineLayoutSupport.tickWorldEntries(7249);
-        this.l(2115);
+        this.updateMatchAudio(2115);
         GameKeyHandler.b(40);
         ArchiveIndex.c(88);
         LobbyPlayerRow.i(0);
@@ -1494,7 +1494,7 @@ final class PlayingView extends MatchPhaseView {
         }
     }
 
-    private final void a(boolean param0, CommonGame param1) {
+    private final void updateRenderedAgentFlags(boolean param0, CommonGame param1) {
         int var3_int = 0;
         int var4 = 0;
         RenderedFootballer var5 = null;
@@ -1521,7 +1521,7 @@ final class PlayingView extends MatchPhaseView {
         }
     }
 
-    final static void a(java.awt.Canvas param0, boolean param1, int param2) {
+    final static void drawClientToCanvas(java.awt.Canvas param0, boolean param1, int param2) {
         int var4 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -1553,7 +1553,7 @@ final class PlayingView extends MatchPhaseView {
             }
           }
           if (param2 != 0) {
-            PlayingView.d((byte) -37);
+            PlayingView.getAppletHostContainer((byte) -37);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -30,7 +30,7 @@ final class AccountChoicePanel extends WidgetContainer implements ButtonListener
             return;
           }
           if (param1 == this.field_E) {
-            NameSuggestionsPanel.a((byte) -76);
+            NameSuggestionsPanel.showAccountRegistrationPanel((byte) -76);
             return;
           }
           if (this.field_H != param1) {
@@ -104,9 +104,9 @@ final class AccountChoicePanel extends WidgetContainer implements ButtonListener
         this.field_H.field_k = (UiListener) (this);
         this.field_E.field_u = AppletContextSupport.field_c;
         this.field_H.field_u = HelpTipDialog.field_G;
-        this.a(-59, this.field_J);
-        this.a(-121, this.field_E);
-        this.a(-54, this.field_H);
+        this.addChild(-59, this.field_J);
+        this.addChild(-121, this.field_E);
+        this.addChild(-54, this.field_H);
     }
 
     final boolean handleKeyInput(char param0, byte param1, UiWidget param2, int param3) {
@@ -122,7 +122,7 @@ final class AccountChoicePanel extends WidgetContainer implements ButtonListener
             return true;
           }
           if (param3 == 98) {
-            stackIn_7_0 = this.a(param2, (byte) -100);
+            stackIn_7_0 = this.focusPreviousChild(param2, (byte) -100);
             return stackIn_7_0;
           }
           if (param1 >= -60) {
@@ -131,7 +131,7 @@ final class AccountChoicePanel extends WidgetContainer implements ButtonListener
           if (param3 != 99) {
             return false;
           }
-          stackIn_14_0 = this.b(param2, (byte) 126);
+          stackIn_14_0 = this.focusNextChild(param2, (byte) 126);
           return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

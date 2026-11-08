@@ -956,7 +956,7 @@ final class GameOverView extends MatchPhaseView {
               }
             }
             if (decompiledFrameCompleted3) {
-              this.a(-26254);
+              this.initializeButtonSelection(-26254);
             }
           }
           if (decompiledFrameCompleted3) {
@@ -1205,7 +1205,7 @@ final class GameOverView extends MatchPhaseView {
         }
     }
 
-    final void a(int param0, ManagerAction param1, int param2, int param3) {
+    final void applyTrainingAction(int param0, ManagerAction param1, int param2, int param3) {
         PlayerStats dupTemp$0 = null;
         PlayerStats dupTemp$1 = null;
         PlayerStats dupTemp$2 = null;
@@ -1405,7 +1405,7 @@ final class GameOverView extends MatchPhaseView {
             FootballerAiOverlaySupport.field_d.writeByte(117, 3);
           }
           if (44 == param1) {
-            TrinketShopDialog.g(-29315);
+            TrinketShopDialog.enqueueTrinketPickerDialog(-29315);
           }
           if (param0 < 98) {
             this.field_T = 67;
@@ -1489,7 +1489,7 @@ final class GameOverView extends MatchPhaseView {
             if (var13 == 0) {
               if (stackIn_49_0 != stackIn_49_1) {
                 var7 = var3[var5];
-                WidgetContainer.a(this.field_J[var5], var6, this.field_I[var5], var7, 100, 124);
+                WidgetContainer.drawParticipantPanelBackground(this.field_J[var5], var6, this.field_I[var5], var7, 100, 124);
                 var8 = 140;
                 var9 = 0;
                 while (this.field_m[var5] > var9) {

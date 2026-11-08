@@ -23,7 +23,7 @@ final class WaitForPlayersView extends MatchPhaseView {
             param2 = param2 >> 1;
           }
           if (param1 != -11934) {
-            WaitForPlayersView.f(-39);
+            WaitForPlayersView.releaseStatics(-39);
           }
           if (param2 != 1) {
             return var3_int;
@@ -47,7 +47,7 @@ final class WaitForPlayersView extends MatchPhaseView {
         this.drawPanelBackground(112);
         this.drawTitle(false, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, TickClock.field_e, new String[]{QuickChatMenuBuilder.field_b[this.field_a.surface][this.field_a.tier]}));
         this.drawCountdown(param0 - 2352, this.field_a.phaseTime);
-        this.a(150, 17709);
+        this.drawTeamParticipantPanels(150, 17709);
         if (param0 != 1) {
           this.drawContent(-98);
           if (this.field_a.field_f) {
@@ -62,7 +62,7 @@ final class WaitForPlayersView extends MatchPhaseView {
         ByteArrayPool.field_d.drawText("FB", 5, 17, 16777215, -1);
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_k = null;
         if (param0 != 1) {
           WaitForPlayersView.b(76, -73, -121);

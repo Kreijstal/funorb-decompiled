@@ -39,7 +39,7 @@ final class PlayerShopScreen extends TeamManagementScreen {
         SortCriterion var6 = this.field_J.field_zb[this.field_J.field_Db];
         this.field_I.addLast(new IntValueNode(param0 | param3 << 16), 3);
         this.rebuildShopRows(true);
-        this.field_J.a(var6, 94);
+        this.field_J.sortRows(var6, 94);
         this.field_J.setScrollOffset(true, var5);
         this.field_T.field_Fb = param1;
         if (param2 <= 20) {
@@ -103,7 +103,7 @@ final class PlayerShopScreen extends TeamManagementScreen {
         }
         var3 = this.field_J.getScrollOffset((byte) -38);
         QuickChatCategory.a(RegistrationRequestState.field_h.field_x, 5464);
-        this.field_J.a(param1, false);
+        this.field_J.updateTableInput(param1, false);
         this.field_L.field_s = this.slideOffsetX;
         this.field_L.updateInput(0, param1);
         this.field_T.update(48);
@@ -263,7 +263,7 @@ final class PlayerShopScreen extends TeamManagementScreen {
         var3[4] = SortCriterion.field_k;
         var3[3] = BeveledTextPainter.field_u;
         this.field_J = new ColumnTableWidget(MusicPatchNode.field_x, MainMenuScreen.field_D, var4, 50);
-        this.field_J.a(369, (byte) -111, 54, 175);
+        this.field_J.layoutTableViewport(369, (byte) -111, 54, 175);
         if (param0 != -38) {
           field_K = 109;
         }
@@ -287,7 +287,7 @@ final class PlayerShopScreen extends TeamManagementScreen {
         SoftwareRasterizer.fillRectangleAlpha(this.field_G.field_F, this.field_G.field_T, this.field_G.field_q, this.field_G.field_mb, 65793, 96);
         ByteArrayPool.field_d.drawText(MusicPatchNode.field_i, 14 + this.field_G.field_F, 21 + this.field_G.field_T, 16777215, -1);
         RenderedFootballer.a(param0 - 5181, this.field_U.isLinked((byte) -113), this.field_G, this.field_T.getSelectedSlot((byte) 21));
-        this.field_J.a(-120);
+        this.field_J.drawTable(-120);
         this.field_L.draw(75, false);
     }
 

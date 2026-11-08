@@ -59,7 +59,7 @@ final class TeamSelectionView extends MatchPhaseView {
               var5_ref_String = CommonGame.field_a;
             }
           }
-          WidgetContainer.a(var3, 8, var5_ref_String, var4 * 162 + 78, 105, 126);
+          WidgetContainer.drawParticipantPanelBackground(var3, 8, var5_ref_String, var4 * 162 + 78, 105, 126);
         }
         if (this.isLocalParticipantActive((byte) 13)) {
           if (var2 != 0) {

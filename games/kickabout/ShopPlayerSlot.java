@@ -52,7 +52,7 @@ final class ShopPlayerSlot extends ListRow {
 
     final static FadingSoundPlayer c(int param0, int param1) {
         int var2 = 62 % ((-55 - param1) / 32);
-        return ParticipantStatus.$cfr$intArgs$a$60f25194e713(false, 128, 126, param0);
+        return ParticipantStatus.playFadingSound(false, 128, 126, param0);
     }
 
     final static void a(String param0, byte param1) {

@@ -71,12 +71,12 @@ final class AccountTermsPanel extends WidgetContainer implements TextHotspotList
           this.field_D.field_k = (UiListener) (this);
           this.field_D.c(-1, -40 + this.field_n, 26, var3);
           var3 = var3 + (15 + this.field_D.field_i);
-          this.a(-103, this.field_D);
+          this.addChild(-103, this.field_D);
           var5 = 4;
           var6 = 200;
           this.field_I.setBounds(40, 1, 300 - var6 >> 1, var6, var3);
           this.field_I.field_k = (UiListener) (this);
-          this.a(-43, this.field_I);
+          this.addChild(-43, this.field_I);
           this.setBounds(55 + (var3 + var5), 1, 0, 300, 0);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ai.<init>(" + (param0 != null ? "{...}" : "null") + ')');
@@ -96,11 +96,11 @@ final class AccountTermsPanel extends WidgetContainer implements TextHotspotList
             return true;
           }
           if (param3 == 98) {
-            stackIn_7_0 = this.a(param2, (byte) -100);
+            stackIn_7_0 = this.focusPreviousChild(param2, (byte) -100);
             return stackIn_7_0;
           }
           if (param3 == 99) {
-            stackIn_10_0 = this.b(param2, (byte) 125);
+            stackIn_10_0 = this.focusNextChild(param2, (byte) 125);
             return stackIn_10_0;
           }
           if (param1 <= -60) {

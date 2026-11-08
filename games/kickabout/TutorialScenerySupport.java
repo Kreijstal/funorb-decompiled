@@ -394,7 +394,7 @@ final class TutorialScenerySupport {
                       switch (var2_int) {
                         case 8:
                           if (HoverTooltip.field_Eb) {
-                            MachineTokenStorageSupport.field_e.a((byte) -119, var4);
+                            MachineTokenStorageSupport.field_e.rebuildWorldDrawList((byte) -119, var4);
                             return;
                           }
                           AccountRequestDialog.a((byte) -108, 28, var4, new java.awt.Point[]{new java.awt.Point(-4, 186), new java.awt.Point(334, 186), new java.awt.Point(334, 86), new java.awt.Point(662, 86), new java.awt.Point(662, 186), new java.awt.Point(874, 186), new java.awt.Point(874, 724), new java.awt.Point(572, 724), new java.awt.Point(572, 824), new java.awt.Point(244, 824), new java.awt.Point(244, 724), new java.awt.Point(124, 724), new java.awt.Point(124, 986), new java.awt.Point(284, 986), new java.awt.Point(284, 886), new java.awt.Point(762, 886), new java.awt.Point(762, 986), new java.awt.Point(874, 986), new java.awt.Point(874, 1114), new java.awt.Point(762, 1114), new java.awt.Point(762, 1214), new java.awt.Point(284, 1214), new java.awt.Point(284, 1114), new java.awt.Point(-4, 1114), new java.awt.Point(-4, 596), new java.awt.Point(244, 596), new java.awt.Point(244, 496), new java.awt.Point(572, 496), new java.awt.Point(572, 596), new java.awt.Point(746, 596), new java.awt.Point(746, 314), new java.awt.Point(662, 314), new java.awt.Point(662, 414), new java.awt.Point(334, 414), new java.awt.Point(334, 314), new java.awt.Point(-4, 314)});
@@ -459,7 +459,7 @@ final class TutorialScenerySupport {
               var4.addLast(SceneSpriteFactory.createSceneSprite(448, 0, false, 820, 9103, true), param0 ^ -1623);
               var4.addLast(UiKeyRoutingSupport.field_b, 3);
             }
-            MachineTokenStorageSupport.field_e.a((byte) -119, var4);
+            MachineTokenStorageSupport.field_e.rebuildWorldDrawList((byte) -119, var4);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

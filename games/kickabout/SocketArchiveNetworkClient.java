@@ -119,7 +119,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
                     var17 = 0;
                     var7 = var17;
                     while (var6 > var17) {
-                      this.field_k.field_v.field_f[this.field_k.field_v.field_n + var17] = (byte)TrinketShopDialog.b((int) this.field_k.field_v.field_f[this.field_k.field_v.field_n + var17], (int) this.field_g);
+                      this.field_k.field_v.field_f[this.field_k.field_v.field_n + var17] = (byte)TrinketShopDialog.bitwiseXor((int) this.field_k.field_v.field_f[this.field_k.field_v.field_n + var17], (int) this.field_g);
                       var17++;
                     }
                   }
@@ -142,7 +142,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
                   this.field_x.readFully(this.field_n.field_f, var5, this.field_n.field_n, -4847);
                   if (this.field_g != 0) {
                     for (var6 = 0; var6 < var5; var6++) {
-                      this.field_n.field_f[this.field_n.field_n + var6] = (byte)TrinketShopDialog.b((int) this.field_n.field_f[this.field_n.field_n + var6], (int) this.field_g);
+                      this.field_n.field_f[this.field_n.field_n + var6] = (byte)TrinketShopDialog.bitwiseXor((int) this.field_n.field_f[this.field_n.field_n + var6], (int) this.field_g);
                     }
                   }
                   this.field_n.field_n = this.field_n.field_n + var5;

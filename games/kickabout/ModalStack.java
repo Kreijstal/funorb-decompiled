@@ -46,7 +46,7 @@ final class ModalStack extends SingleChildContainer {
         }
     }
 
-    final static Sprite[] a(ResourceArchive param0, int param1, String param2, String param3) {
+    final static Sprite[] loadSpriteSheetByName(ResourceArchive param0, int param1, String param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -317,7 +317,7 @@ final class ModalStack extends SingleChildContainer {
         }
     }
 
-    final ModalPanel h(byte param0) {
+    final ModalPanel topActiveModal(byte param0) {
         IntrusiveDequeCursor var2 = null;
         RuntimeException var2_ref = null;
         ModalPanel var3 = null;
@@ -354,7 +354,7 @@ final class ModalStack extends SingleChildContainer {
         }
     }
 
-    final void l(int param0) {
+    final void finishModalAnimations(int param0) {
         RuntimeException runtimeException = null;
         IntrusiveDequeCursor var2 = null;
         ModalPanel var3 = null;
@@ -384,7 +384,7 @@ final class ModalStack extends SingleChildContainer {
         }
     }
 
-    final void a(UiWidget param0, boolean param1) {
+    final void pushModal(UiWidget param0, boolean param1) {
         ModalPanel var3 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -426,7 +426,7 @@ final class ModalStack extends SingleChildContainer {
         try {
           param1.addMouseListener(ProxyAuthenticationRequiredException.field_e);
           if (param0 != 15282) {
-            ModalStack.m(110);
+            ModalStack.releaseStatics(110);
           }
           param1.addMouseMotionListener(ProxyAuthenticationRequiredException.field_e);
           param1.addFocusListener(ProxyAuthenticationRequiredException.field_e);
@@ -445,7 +445,7 @@ final class ModalStack extends SingleChildContainer {
         }
     }
 
-    final void k(int param0) {
+    final void deactivateAllModals(int param0) {
         RuntimeException runtimeException = null;
         IntrusiveDequeCursor var2 = null;
         ModalPanel var3 = null;
@@ -455,7 +455,7 @@ final class ModalStack extends SingleChildContainer {
         try {
           var2 = new IntrusiveDequeCursor(this.field_A);
           if (param0 <= 82) {
-            this.h((byte) 110);
+            this.topActiveModal((byte) 110);
           }
           var3 = (ModalPanel) (var2.a((byte) 110));
           while (null != var3) {
@@ -474,7 +474,7 @@ final class ModalStack extends SingleChildContainer {
         }
     }
 
-    public static void m(int param0) {
+    public static void releaseStatics(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
@@ -511,7 +511,7 @@ final class ModalStack extends SingleChildContainer {
         }
     }
 
-    final void n(int param0) {
+    final void advanceModalAnimations(int param0) {
         IntrusiveDequeCursor var2 = null;
         ModalPanel var3 = null;
         int var4 = 0;
@@ -533,7 +533,7 @@ final class ModalStack extends SingleChildContainer {
             }
             var3 = (ModalPanel) (var2.a(0));
           }
-          this.field_z = (UiWidget) ((Object) this.h((byte) 18));
+          this.field_z = (UiWidget) ((Object) this.topActiveModal((byte) 18));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

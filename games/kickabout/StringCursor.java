@@ -74,7 +74,7 @@ final class StringCursor {
         return this.field_f.substring(0, this.field_c) + "|" + this.field_f.substring(this.field_c);
     }
 
-    final static int a(int param0, int param1) {
+    final static int cosAngle(int param0, int param1) {
         if (param1 > -121) {
           field_g = (String) null;
           return TriangleRasterizer.field_o[2047 & param0];

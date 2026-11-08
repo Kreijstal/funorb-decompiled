@@ -27,7 +27,7 @@ final class ClientProtocolStage {
     }
 
     final static void disconnectAndLeaveFullscreen(boolean param0) {
-        UiWidget.h(0);
+        UiWidget.leaveFullscreen(0);
         if (null != RegistrationRequestState.field_d) {
           SumIntegersCommand.a(-120, RegistrationRequestState.field_d);
         }

@@ -12,7 +12,7 @@ abstract class MatchPhaseView {
     MenuButton[] field_c;
     int field_h;
 
-    private final int a(int param0, int param1, int param2) {
+    private final int hitTestButton(int param0, int param1, int param2) {
         int var4 = 0;
         int var5;
         int var6;
@@ -258,7 +258,7 @@ abstract class MatchPhaseView {
           return;
         }
         if (param1) {
-          this.field_i.a(-21174, this.a(ArrayWidgetContainer.field_x, TutorialCaptionSupport.field_j, -74), this.a(TrinketIcon.field_yb, TabStrip.field_Eb, -106));
+          this.field_i.a(-21174, this.hitTestButton(ArrayWidgetContainer.field_x, TutorialCaptionSupport.field_j, -74), this.hitTestButton(TrinketIcon.field_yb, TabStrip.field_Eb, -106));
           if (this.field_i.selectedIndex >= 0 &&
             this.field_i.c(-1)) {
             this.onButtonClick(111, this.field_c[this.field_i.selectedIndex].kind);
@@ -296,15 +296,15 @@ abstract class MatchPhaseView {
         return;
     }
 
-    final void a(int param0) {
+    final void initializeButtonSelection(int param0) {
         if (param0 != -26254) {
           field_d = (IconLabel) null;
         }
         this.field_i = new MenuSelection(this.field_c.length);
-        this.field_i.a(true, this.a(ArrayWidgetContainer.field_x, TutorialCaptionSupport.field_j, -93), (byte) -127);
+        this.field_i.a(true, this.hitTestButton(ArrayWidgetContainer.field_x, TutorialCaptionSupport.field_j, -93), (byte) -127);
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         field_b = null;
         int var1 = 45 % ((22 - param0) / 38);
@@ -406,7 +406,7 @@ abstract class MatchPhaseView {
         return;
     }
 
-    final void a(int param0, int param1, byte param2, int param3) {
+    final void drawTeamParticipantRows(int param0, int param1, byte param2, int param3) {
         int stackIn_3_0 = 0;
         int stackIn_13_0 = 0;
         int stackIn_13_1 = 0;
@@ -446,7 +446,7 @@ abstract class MatchPhaseView {
         } else {
           stackIn_14_2 = LobbyPlayerRow.field_Ub;
         }
-        WidgetContainer.a(stackIn_13_0, stackIn_13_1, stackIn_14_2, param3, param1, 114);
+        WidgetContainer.drawParticipantPanelBackground(stackIn_13_0, stackIn_13_1, stackIn_14_2, param3, param1, 114);
         param1 += 39;
         if (param2 >= -43) {
           return;
@@ -505,7 +505,7 @@ abstract class MatchPhaseView {
             for (var5_int = 0; param3.length > var5_int; var5_int++) {
               this.field_c[var5_int] = new MenuButton(-3, 7126504, param3[var5_int]);
             }
-            this.a(-26254);
+            this.initializeButtonSelection(-26254);
           }
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "hs.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
@@ -530,7 +530,7 @@ abstract class MatchPhaseView {
         }
     }
 
-    final void a(int param0, int param1) {
+    final void drawTeamParticipantPanels(int param0, int param1) {
         int stackIn_8_0 = 0;
         int var3;
         int[] var4;
@@ -543,7 +543,7 @@ abstract class MatchPhaseView {
         int var7Lifetime1;
         var9 = Kickabout.field_G;
         if (param1 != 17709) {
-          this.a(-84, 57);
+          this.drawTeamParticipantPanels(-84, 57);
         }
         var3 = 210;
         var4 = new int[]{-160 - var3 + 640 >> 1, -160 + (640 + var3) >> 1};
@@ -559,8 +559,8 @@ abstract class MatchPhaseView {
           var4[0] = var4[1];
           var4[1] = var7;
         }
-        this.a(0, param0, (byte) -62, var4[0]);
-        this.a(1, param0, (byte) -72, var4[1]);
+        this.drawTeamParticipantRows(0, param0, (byte) -62, var4[0]);
+        this.drawTeamParticipantRows(1, param0, (byte) -72, var4[1]);
         var10 = 0;
         var7Lifetime1 = var10;
         while (this.field_a.playerCount > var10) {

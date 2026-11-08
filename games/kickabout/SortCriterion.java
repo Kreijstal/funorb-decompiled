@@ -177,7 +177,7 @@ abstract class SortCriterion {
         return var6;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_l = null;
         field_g = null;
         field_e = null;
@@ -186,7 +186,7 @@ abstract class SortCriterion {
         field_c = null;
         field_b = null;
         if (param0 <= 86) {
-          SortCriterion.a((byte) -80);
+          SortCriterion.releaseStatics((byte) -80);
         }
         field_m = null;
         field_f = null;

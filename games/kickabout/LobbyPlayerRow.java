@@ -26,7 +26,7 @@ final class LobbyPlayerRow extends UiLayoutNode {
     int field_Pb;
     static String field_Bb;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_yb = null;
         field_Bb = null;
         field_Eb = null;
@@ -122,7 +122,7 @@ final class LobbyPlayerRow extends UiLayoutNode {
         }
     }
 
-    final static String a(int param0) {
+    final static String getCurrentAccountNameText(int param0) {
         if (PlayerModelPreview.field_f == ClubStateFactory.field_f) {
           return AccountInputValidationResult.field_a;
         }

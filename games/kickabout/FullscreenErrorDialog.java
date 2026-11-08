@@ -35,9 +35,9 @@ final class FullscreenErrorDialog extends ResizableModalPanel implements ButtonL
         if (QuickChatKeysHelpPanel.field_Cb.a(param0, "park")) {
           BallAgent.field_u = true;
           LeaguesScreen.field_E = ServerTextTemplate.a("benches", "park", 2, QuickChatKeysHelpPanel.field_Cb);
-          ConsoleCommand.field_w = QuickChatPhraseDefinition.a("park", QuickChatKeysHelpPanel.field_Cb, (byte) 70, "hotdog");
-          PlayerMeshFactory.field_a = QuickChatPhraseDefinition.a("park", QuickChatKeysHelpPanel.field_Cb, (byte) 59, "swing");
-          RandomAccessCacheFile.field_c = QuickChatPhraseDefinition.a("park", QuickChatKeysHelpPanel.field_Cb, (byte) 114, "slide");
+          ConsoleCommand.field_w = QuickChatPhraseDefinition.loadSpriteByName("park", QuickChatKeysHelpPanel.field_Cb, (byte) 70, "hotdog");
+          PlayerMeshFactory.field_a = QuickChatPhraseDefinition.loadSpriteByName("park", QuickChatKeysHelpPanel.field_Cb, (byte) 59, "swing");
+          RandomAccessCacheFile.field_c = QuickChatPhraseDefinition.loadSpriteByName("park", QuickChatKeysHelpPanel.field_Cb, (byte) 114, "slide");
           ServerTextTemplate.field_j = ServerTextTemplate.a("trees", "park", 2, QuickChatKeysHelpPanel.field_Cb);
           HuffmanTextSupport.field_d = ServerTextTemplate.a("stains", "park", 2, QuickChatKeysHelpPanel.field_Cb);
           return -1;
@@ -107,7 +107,7 @@ final class FullscreenErrorDialog extends ResizableModalPanel implements ButtonL
           }
           this.field_i = this.field_i + 38;
           var4.setBounds(30, param0 ^ -54, 15, -16 + (this.field_n - 14), var5);
-          this.a(param0 - 12, var4);
+          this.addChild(param0 - 12, var4);
           this.refreshLayout(-1947);
           stackIn_3_0 = var4;
           return stackIn_3_0;
@@ -175,7 +175,7 @@ final class FullscreenErrorDialog extends ResizableModalPanel implements ButtonL
           var4.field_g = 50;
           var4.field_i = 80;
           var4.field_r = (WidgetPainter) ((Object) new TextWidgetPainter(EmailSyntaxValidator.field_k, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
-          this.a(-98, var4);
+          this.addChild(-98, var4);
           this.field_U = this.addButton((byte) -53, (UiListener) (this), SharedPanelFactory.field_c);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

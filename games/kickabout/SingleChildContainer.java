@@ -74,7 +74,7 @@ abstract class SingleChildContainer extends UiWidget implements UiContainerMarke
         super(param0, param1, param2, param3, param4, param5);
     }
 
-    private final boolean b(byte param0, UiWidget param1) {
+    private final boolean focusNextChild(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -108,7 +108,7 @@ abstract class SingleChildContainer extends UiWidget implements UiContainerMarke
         return this.field_z == null ? 0 : this.field_z.getLastRenderPass((byte) 118);
     }
 
-    final static int a(boolean param0, int param1) {
+    final static int latencyIndicatorHeight(boolean param0, int param1) {
         if (!param0) {
           return 89;
         }
@@ -141,9 +141,9 @@ abstract class SingleChildContainer extends UiWidget implements UiContainerMarke
             return false;
           }
           if (GameplayHelpScreen.field_G[81]) {
-            stackIn_12_0 = this.a((byte) -86, param2);
+            stackIn_12_0 = this.focusPreviousChild((byte) -86, param2);
           } else {
-            stackIn_12_0 = this.b((byte) 99, param2);
+            stackIn_12_0 = this.focusNextChild((byte) 99, param2);
           }
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -228,7 +228,7 @@ abstract class SingleChildContainer extends UiWidget implements UiContainerMarke
         }
     }
 
-    final void a(Hashtable param0, int param1, StringBuilder param2, int param3) {
+    final void appendChildDebugTree(Hashtable param0, int param1, StringBuilder param2, int param3) {
         StringBuilder discarded$26 = null;
         int var5_int = 0;
         StringBuilder discarded$28 = null;
@@ -276,7 +276,7 @@ abstract class SingleChildContainer extends UiWidget implements UiContainerMarke
         }
     }
 
-    private final boolean a(byte param0, UiWidget param1) {
+    private final boolean focusPreviousChild(byte param0, UiWidget param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         boolean stackIn_5_0 = false;
@@ -317,7 +317,7 @@ abstract class SingleChildContainer extends UiWidget implements UiContainerMarke
           }
           if (this.beginWidgetDiagnosticVisit(1, param3, param2, param1)) {
             this.appendWidgetDiagnosticProperties(param1, param3, param2, -18568);
-            this.a(param2, 124, param3, param1);
+            this.appendChildDebugTree(param2, 124, param3, param1);
           }
           stackIn_5_0 = (StringBuilder) (param3);
           return stackIn_5_0;
@@ -389,7 +389,7 @@ abstract class SingleChildContainer extends UiWidget implements UiContainerMarke
         }
     }
 
-    final static void i(int param0) {
+    final static void detectMaximumHeapSize(int param0) {
         try {
           Throwable decompiledCaughtException = null;
           java.lang.reflect.Method var1_ref_java_lang_reflect_Method = null;

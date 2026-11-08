@@ -10,7 +10,7 @@ final class InstrumentNoteMask extends IntrusiveNode {
     private static int[] field_e;
     static float field_j;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_e = null;
         field_h = null;
         if (param0 <= 83) {

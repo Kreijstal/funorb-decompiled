@@ -85,12 +85,12 @@ final class DateOfBirthPanel extends ArrayWidgetContainer implements ButtonListe
         this.refreshLayout(-1947);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_F = null;
         field_B = null;
         field_H = null;
         if (param0 != 905215457) {
-          DateOfBirthPanel.a(-67);
+          DateOfBirthPanel.releaseStatics(-67);
           field_C = null;
           return;
         }

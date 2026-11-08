@@ -192,7 +192,7 @@ abstract class AppScreen {
               ScrollContainer.field_Ib = ByteArrayPool.field_e.readUnsignedByte((byte) -118);
               LobbyMatchPreview.field_c = ByteArrayPool.field_e.readUnsignedByte((byte) -112);
               WeightedLruCache.field_d = ByteArrayPool.field_e.readUnsignedShort((byte) 81);
-              var11 = ByteArrayPool.field_e.a(true);
+              var11 = ByteArrayPool.field_e.readNullableString(true);
               var7 = ByteArrayPool.field_e.readUnsignedByte((byte) -106);
               if ((1 & var7) != 0) {
                 MachineTokenStorageSupport.storeMachineToken((byte) 114);

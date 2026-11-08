@@ -17,7 +17,7 @@ final class SumIntegersCommand extends ConsoleCommand {
         }
     }
 
-    final static int a(byte param0, int param1) {
+    final static int triple(byte param0, int param1) {
         if (param0 <= 104) {
           field_A = (java.awt.Color) null;
           return param1 * 3;
@@ -143,7 +143,7 @@ final class SumIntegersCommand extends ConsoleCommand {
         }
     }
 
-    final static TickClock h(int param0) {
+    final static TickClock createNanoTickClock(int param0) {
         if (param0 != 3) {
           String var2 = (String) null;
           SumIntegersCommand.a((byte) 22, (String) null);
@@ -152,7 +152,7 @@ final class SumIntegersCommand extends ConsoleCommand {
         return (TickClock) ((Object) new NanoTickClock());
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         field_G = null;
         field_H = null;
         field_E = null;

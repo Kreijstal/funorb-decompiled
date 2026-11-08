@@ -70,7 +70,7 @@ final class GrowableIntList {
         return new PlayerInputEvent(7, param0, param2, (byte) 0, (byte) 0);
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_a = null;
         field_f = null;
         if (!param0) {

@@ -121,10 +121,10 @@ abstract class ModalPanel extends WidgetContainer {
 
     private final int targetOpacity(boolean param0) {
         if (param0) {
-          return !this.field_C ? 0 : this == this.field_H.h((byte) 18) ? 256 : 0;
+          return !this.field_C ? 0 : this == this.field_H.topActiveModal((byte) 18) ? 256 : 0;
         }
         this.field_F = -20;
-        return !this.field_C ? 0 : this == this.field_H.h((byte) 18) ? 256 : 0;
+        return !this.field_C ? 0 : this == this.field_H.topActiveModal((byte) 18) ? 256 : 0;
     }
 
     final void setCenteredSize(byte param0, int param1, int param2) {

@@ -173,7 +173,7 @@ class AuctionItem extends IntrusiveNode {
         return var1;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_l = null;
         field_p = null;
         field_n = null;

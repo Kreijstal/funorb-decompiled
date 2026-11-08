@@ -50,7 +50,7 @@ final class IsSixCommand extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 84) {
-            stackIn_4_0 = new ConsoleValue(TextPromptDialog.a((byte) -46, param1[0].b(param0 ^ -30412)));
+            stackIn_4_0 = new ConsoleValue(TextPromptDialog.a((byte) -46, param1[0].asInt(param0 ^ -30412)));
             return stackIn_4_0;
           }
           stackIn_2_0 = (ConsoleValue) null;

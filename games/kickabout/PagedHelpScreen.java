@@ -185,7 +185,7 @@ abstract class PagedHelpScreen extends ButtonMenuScreen {
         return 320 + 70 * (-1 + param0);
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         field_B = null;
         field_D = null;
         if (param0 != -29104) {

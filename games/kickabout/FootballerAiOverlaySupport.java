@@ -98,7 +98,7 @@ final class FootballerAiOverlaySupport {
             var11 = -var9 + 1344 - var11;
             var10 = -var8 + 896 - var10;
           }
-          ParticipantStatus.a(param1, param2, (byte) 112, param0.field_r[param2]);
+          ParticipantStatus.updateFormationTargetPoint(param1, param2, (byte) 112, param0.field_r[param2]);
           var12 = SocialListLayoutSupport.worldToScreenX(param3 - 99, var5);
           var13 = IntKeyLookup.a((byte) -96, var6);
           var14 = SocialListLayoutSupport.worldToScreenX(0, MatchingTextValidator.field_m[0]);

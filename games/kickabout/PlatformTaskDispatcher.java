@@ -168,7 +168,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         var8.field_b = java.net.InetAddress.getByName(var17).getHostName();
                         break;
                       case 12:
-                        var3_ref = PlatformTaskDispatcher.a(-127, field_d, field_e, (String) (var8.field_g));
+                        var3_ref = PlatformTaskDispatcher.openPreferencesFile(-127, field_d, field_e, (String) (var8.field_g));
                         var8.field_b = var3_ref;
                         break;
                       case 16:
@@ -230,7 +230,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         }
                         break;
                       case 13:
-                        var3_ref = PlatformTaskDispatcher.a(-112, field_d, "", (String) (var8.field_g));
+                        var3_ref = PlatformTaskDispatcher.openPreferencesFile(-112, field_d, "", (String) (var8.field_g));
                         var8.field_b = var3_ref;
                         break;
                       case 7:
@@ -354,7 +354,7 @@ final class PlatformTaskDispatcher implements Runnable {
         return this.enqueueTask(18, 0, 8128, (Object) null, 0);
     }
 
-    final void a(boolean param0) {
+    final void shutdown(boolean param0) {
         try {
           int var2_int = 0;
           boolean stackIn_4_1 = false;
@@ -421,7 +421,7 @@ final class PlatformTaskDispatcher implements Runnable {
     final PlatformTask requestUrl(java.net.URL param0, byte param1) {
         if (param1 > -17) {
           String var4 = (String) null;
-          PlatformTaskDispatcher.a(92, -82, (String) null, (String) null);
+          PlatformTaskDispatcher.openPreferencesFile(92, -82, (String) null, (String) null);
         }
         return this.enqueueTask(4, 0, 8128, param0, 0);
     }
@@ -429,7 +429,7 @@ final class PlatformTaskDispatcher implements Runnable {
     final PlatformTask requestExitFullscreen(byte param0, java.awt.Frame param1) {
         if (param0 >= -36) {
           String var4 = (String) null;
-          PlatformTaskDispatcher.a(-21, 74, (String) null, (String) null);
+          PlatformTaskDispatcher.openPreferencesFile(-21, 74, (String) null, (String) null);
         }
         return this.enqueueTask(7, 0, 8128, param1, 0);
     }
@@ -599,7 +599,7 @@ final class PlatformTaskDispatcher implements Runnable {
         this.field_s.start();
     }
 
-    private final static RandomAccessCacheFile a(int param0, int param1, String param2, String param3) {
+    private final static RandomAccessCacheFile openPreferencesFile(int param0, int param1, String param2, String param3) {
         try {
           int var6 = 0;
           RandomAccessCacheFile stackIn_15_0 = null;

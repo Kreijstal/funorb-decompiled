@@ -102,8 +102,8 @@ final class FormationView extends MatchPhaseView {
           var4Lifetime3 = var5Lifetime2;
           var5Lifetime2 = var6Lifetime2;
         }
-        this.a(0, var4Lifetime3, (byte) -107, 30);
-        this.a(1, var5Lifetime2, (byte) -78, 30);
+        this.drawTeamParticipantRows(0, var4Lifetime3, (byte) -107, 30);
+        this.drawTeamParticipantRows(1, var5Lifetime2, (byte) -78, 30);
         if (this.field_a.field_f) {
           ByteArrayPool.field_d.drawText("FB", 5, 17, 16777215, -1);
         }

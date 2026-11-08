@@ -19,8 +19,8 @@ final class GoalSpriteLoader {
             return false;
           }
           if (QuickChatKeysHelpPanel.field_Cb.ensureFileAvailableByName("scenery", "goal_bottom", (byte) -10)) {
-            IntrusiveNodeHashTable.field_g[1] = QuickChatPhraseDefinition.a("scenery", QuickChatKeysHelpPanel.field_Cb, (byte) 93, "goal_top");
-            IntrusiveNodeHashTable.field_g[0] = QuickChatPhraseDefinition.a("scenery", QuickChatKeysHelpPanel.field_Cb, (byte) 127, "goal_bottom");
+            IntrusiveNodeHashTable.field_g[1] = QuickChatPhraseDefinition.loadSpriteByName("scenery", QuickChatKeysHelpPanel.field_Cb, (byte) 93, "goal_top");
+            IntrusiveNodeHashTable.field_g[0] = QuickChatPhraseDefinition.loadSpriteByName("scenery", QuickChatKeysHelpPanel.field_Cb, (byte) 127, "goal_bottom");
             return true;
           }
           return false;
@@ -29,8 +29,8 @@ final class GoalSpriteLoader {
           return false;
         }
         if (QuickChatKeysHelpPanel.field_Cb.ensureFileAvailableByName("scenery", "goal_bottom", (byte) -10)) {
-          IntrusiveNodeHashTable.field_g[1] = QuickChatPhraseDefinition.a("scenery", QuickChatKeysHelpPanel.field_Cb, (byte) 93, "goal_top");
-          IntrusiveNodeHashTable.field_g[0] = QuickChatPhraseDefinition.a("scenery", QuickChatKeysHelpPanel.field_Cb, (byte) 127, "goal_bottom");
+          IntrusiveNodeHashTable.field_g[1] = QuickChatPhraseDefinition.loadSpriteByName("scenery", QuickChatKeysHelpPanel.field_Cb, (byte) 93, "goal_top");
+          IntrusiveNodeHashTable.field_g[0] = QuickChatPhraseDefinition.loadSpriteByName("scenery", QuickChatKeysHelpPanel.field_Cb, (byte) 127, "goal_bottom");
           return true;
         }
         return false;

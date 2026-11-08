@@ -227,12 +227,12 @@ final class ReceivedAuctionItem extends AuctionItem {
         }
         QuickChatCategory.field_s = true;
         AccountRegistrationResponse.field_a = ServerTextTemplate.a("deckchairs", "beach", 2, QuickChatKeysHelpPanel.field_Cb);
-        CachedTextLayout.field_q = QuickChatPhraseDefinition.a("beach", QuickChatKeysHelpPanel.field_Cb, (byte) 45, "parasol");
-        NotificationPanelPositionSupport.field_c = QuickChatPhraseDefinition.a("beach", QuickChatKeysHelpPanel.field_Cb, (byte) 92, "ball");
-        AnimationSkeleton.field_h = QuickChatPhraseDefinition.a("beach", QuickChatKeysHelpPanel.field_Cb, (byte) 68, "bucket");
-        ClientPacketFlushSupport.field_e = QuickChatPhraseDefinition.a("beach", QuickChatKeysHelpPanel.field_Cb, (byte) 76, "palmtree");
-        FullscreenFocusCanvas.field_a = QuickChatPhraseDefinition.a("beach", QuickChatKeysHelpPanel.field_Cb, (byte) 76, "starfish");
-        BytePlusOneCommand.field_D = QuickChatPhraseDefinition.a("beach", QuickChatKeysHelpPanel.field_Cb, (byte) 93, "icecream");
+        CachedTextLayout.field_q = QuickChatPhraseDefinition.loadSpriteByName("beach", QuickChatKeysHelpPanel.field_Cb, (byte) 45, "parasol");
+        NotificationPanelPositionSupport.field_c = QuickChatPhraseDefinition.loadSpriteByName("beach", QuickChatKeysHelpPanel.field_Cb, (byte) 92, "ball");
+        AnimationSkeleton.field_h = QuickChatPhraseDefinition.loadSpriteByName("beach", QuickChatKeysHelpPanel.field_Cb, (byte) 68, "bucket");
+        ClientPacketFlushSupport.field_e = QuickChatPhraseDefinition.loadSpriteByName("beach", QuickChatKeysHelpPanel.field_Cb, (byte) 76, "palmtree");
+        FullscreenFocusCanvas.field_a = QuickChatPhraseDefinition.loadSpriteByName("beach", QuickChatKeysHelpPanel.field_Cb, (byte) 76, "starfish");
+        BytePlusOneCommand.field_D = QuickChatPhraseDefinition.loadSpriteByName("beach", QuickChatKeysHelpPanel.field_Cb, (byte) 93, "icecream");
         int var1 = 88 % ((65 - param0) / 42);
         ChatMessage.field_b = ServerTextTemplate.a("stains", "beach", 2, QuickChatKeysHelpPanel.field_Cb);
         return -1;

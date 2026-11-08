@@ -75,7 +75,7 @@ class IntrusiveNode {
         return BufferedSocket.field_j;
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 <= 114) {
           return;
         }
@@ -92,7 +92,7 @@ class IntrusiveNode {
         return true;
     }
 
-    final static void c(int param0) {
+    final static void readAccountNameUpdate(int param0) {
         ArchiveSource.field_e = ByteArrayPool.field_e.readString(-117);
         CharSequence var2 = (CharSequence) ((Object) ArchiveSource.field_e);
         DebugConsole.field_w = MatchAgent.a(0, var2);
@@ -131,7 +131,7 @@ class IntrusiveNode {
           this.field_d = null;
           return;
         }
-        IntrusiveNode.c(80);
+        IntrusiveNode.readAccountNameUpdate(80);
         this.field_b.field_d = this.field_d;
         this.field_d.field_b = this.field_b;
         this.field_b = null;

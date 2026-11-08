@@ -124,9 +124,9 @@ final class TextFieldNode extends UiLayoutNode {
         }
     }
 
-    public static void m(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 96) {
-          TextFieldNode.a(49);
+          TextFieldNode.getSuggestedLoginName(49);
         }
         field_Kb = null;
         field_Vb = null;
@@ -162,7 +162,7 @@ final class TextFieldNode extends UiLayoutNode {
         this.field_Lb.field_E = this.field_Ub.toString();
     }
 
-    final static void c(int param0, int param1) {
+    final static void flushWithSimulatedLag(int param0, int param1) {
         RuntimeException decompiledCaughtException = null;
         long var2_long = 0L;
         RuntimeException var2 = null;
@@ -245,13 +245,13 @@ final class TextFieldNode extends UiLayoutNode {
         }
     }
 
-    final static void a(boolean param0, RankingsRequest param1, int param2) {
+    final static void writeRankingsRequest(boolean param0, RankingsRequest param1, int param2) {
         CipherPacketBuffer var3 = null;
         try {
           var3 = FootballerAiOverlaySupport.field_d;
           var3.b(param2, (byte) 98);
           if (!param0) {
-            TextFieldNode.c(-62, -59);
+            TextFieldNode.flushWithSimulatedLag(-62, -59);
           }
           var3.writeByte(127, param1.field_k);
           var3.writeByte(115, param1.field_p);
@@ -413,16 +413,16 @@ final class TextFieldNode extends UiLayoutNode {
                       stackIn_52_0 = this.field_Mb + 1;
                     }
                     var4 = stackIn_52_0;
-                    this.a(var4, (byte) -115);
+                    this.moveCaret(var4, (byte) -115);
                     return true;
                   }
                 } else {
                   if (102 == param0) {
-                    this.a(0, (byte) -126);
+                    this.moveCaret(0, (byte) -126);
                     return true;
                   }
                   if (param0 == 103) {
-                    this.a(this.field_Ub.length(), (byte) -103);
+                    this.moveCaret(this.field_Ub.length(), (byte) -103);
                     return true;
                   }
                   if (GameplayHelpScreen.field_G[82] &&
@@ -449,7 +449,7 @@ final class TextFieldNode extends UiLayoutNode {
                     stackIn_31_0 = this.field_Mb - 1;
                   }
                   var4 = stackIn_31_0;
-                  this.a(var4, (byte) -103);
+                  this.moveCaret(var4, (byte) -103);
                   return true;
                 }
               }
@@ -511,11 +511,11 @@ final class TextFieldNode extends UiLayoutNode {
         this.field_Mb = param1;
         this.field_Fb = param1;
         if (param0 > -22) {
-          this.a(88, -94, -16, -118, -110);
+          this.layoutTextField(88, -94, -16, -118, -110);
         }
     }
 
-    final static String a(int param0) {
+    final static String getSuggestedLoginName(int param0) {
         int var1 = 100 / ((36 - param0) / 50);
         String var2 = "";
         if (IsSixCommand.field_E != null) {
@@ -530,10 +530,10 @@ final class TextFieldNode extends UiLayoutNode {
         return var2;
     }
 
-    private final void a(int param0, byte param1) {
+    private final void moveCaret(int param0, byte param1) {
         this.field_Mb = param0;
         if (param1 > -70) {
-          TextFieldNode.c(-51, -118);
+          TextFieldNode.flushWithSimulatedLag(-51, -118);
         }
         if (!GameplayHelpScreen.field_G[81]) {
           this.field_Fb = this.field_Mb;
@@ -655,7 +655,7 @@ final class TextFieldNode extends UiLayoutNode {
           var6 = Kickabout.field_G;
           var2 = this.characterIndexAtWidth(BytePlusOneCommand.field_A - this.field_F - this.field_Lb.field_D, param0 ^ param0);
           if (this.field_sb == 1) {
-            this.a(var2, (byte) -112);
+            this.moveCaret(var2, (byte) -112);
             this.field_Jb = true;
             var3_long = MonotonicClock.monotonicMillis(-69);
             stackIn_14_1 = !(var3_long - this.field_Sb >= 250L);
@@ -722,7 +722,7 @@ final class TextFieldNode extends UiLayoutNode {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
+    final void layoutTextField(int param0, int param1, int param2, int param3, int param4) {
         if (param0 != -630) {
           field_Db = (GameSoundEffect[]) null;
         }

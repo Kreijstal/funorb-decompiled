@@ -96,13 +96,13 @@ final class GameResourceLoader implements LoadingSequence {
         if (EntityAfterimage.field_b != null) {
           CipherPacketBuffer.k(61, 2);
           SoftwareDrawingSupport.field_q = SpriteResourceSupport.loadNamedSprite((byte) 124, "lobby", QuickChatKeysHelpPanel.field_Cb, "logo");
-          SoftwareDrawingSupport.field_p = ModalStack.a(QuickChatKeysHelpPanel.field_Cb, -28, "lobby", "time");
-          SoftwareDrawingSupport.field_j = ModalStack.a(QuickChatKeysHelpPanel.field_Cb, -121, "lobby", "tournament_icons");
+          SoftwareDrawingSupport.field_p = ModalStack.loadSpriteSheetByName(QuickChatKeysHelpPanel.field_Cb, -28, "lobby", "time");
+          SoftwareDrawingSupport.field_j = ModalStack.loadSpriteSheetByName(QuickChatKeysHelpPanel.field_Cb, -121, "lobby", "tournament_icons");
           SoftwareDrawingSupport.field_j[0] = new Sprite(0, 0);
-          SoftwareDrawingSupport.field_m = ModalStack.a(QuickChatKeysHelpPanel.field_Cb, -121, "lobby", "exhibition_icons");
+          SoftwareDrawingSupport.field_m = ModalStack.loadSpriteSheetByName(QuickChatKeysHelpPanel.field_Cb, -121, "lobby", "exhibition_icons");
           SoftwareDrawingSupport.field_m[0] = new Sprite(0, 0);
           SoftwareDrawingSupport.field_f = DemoIntegersCommand.a(QuickChatKeysHelpPanel.field_Cb, 17369, "lobby", "orb_icons");
-          ModalStack.a(QuickChatKeysHelpPanel.field_Cb, -127, "lobby", "players");
+          ModalStack.loadSpriteSheetByName(QuickChatKeysHelpPanel.field_Cb, -127, "lobby", "players");
           IntrusiveDeque.field_e = SoftwareDrawingSupport.field_q;
           ByteArrayPool.field_d = RenderedFootballer.a(EntityAfterimage.field_b, 10, "font2", QuickChatKeysHelpPanel.field_Cb, "fonts");
           ConsoleTokenCursor.field_d = Checkbox.a("font", EntityAfterimage.field_b, 75, "fonts", QuickChatKeysHelpPanel.field_Cb);
@@ -116,16 +116,16 @@ final class GameResourceLoader implements LoadingSequence {
           IsSixCommand.field_C.setInlineImages(new IndexedSprite[]{var5}, new int[]{10});
           LoadingProgressSupport.reportStageProgress(83, 100, 10);
           var6 = SpriteResourceSupport.loadNamedSprite((byte) 100, "basic", var16, "orbcoin");
-          LoggedGoal.a(var6, (ArgbSprite) (QuickChatPhraseDefinition.a("menu", QuickChatKeysHelpPanel.field_Cb, (byte) 77, "locked")), (ArgbSprite) (QuickChatPhraseDefinition.a("menu", QuickChatKeysHelpPanel.field_Cb, (byte) 77, "unachieved")), -123);
+          LoggedGoal.a(var6, (ArgbSprite) (QuickChatPhraseDefinition.loadSpriteByName("menu", QuickChatKeysHelpPanel.field_Cb, (byte) 77, "locked")), (ArgbSprite) (QuickChatPhraseDefinition.loadSpriteByName("menu", QuickChatKeysHelpPanel.field_Cb, (byte) 77, "unachieved")), -123);
           LineupPositionSupport.field_g = SpritePixelSupport.downscaleArgbByHalf(SpritePixelSupport.downsampleSpriteHalfToArgb(var6));
-          AccountChoicePanel.field_B = (ArgbSprite) (QuickChatPhraseDefinition.a("menu", QuickChatKeysHelpPanel.field_Cb, (byte) 69, "divider"));
+          AccountChoicePanel.field_B = (ArgbSprite) (QuickChatPhraseDefinition.loadSpriteByName("menu", QuickChatKeysHelpPanel.field_Cb, (byte) 69, "divider"));
           SocialListProtocolSupport.field_e = SpriteResourceSupport.loadNamedSprite((byte) 122, "menu", QuickChatKeysHelpPanel.field_Cb, "button_left_shine");
           GameAppletShell.field_l = SpriteResourceSupport.loadNamedSprite((byte) 106, "menu", QuickChatKeysHelpPanel.field_Cb, "button_middle_shine");
           LoadingProgressSupport.reportStageProgress(-109, 100, 20);
           CaptionedContainer.field_K = SpriteResourceSupport.loadNamedSprite((byte) 107, "menu", QuickChatKeysHelpPanel.field_Cb, "button_right_shine");
           CanvasResizePolicy.field_r = SpriteResourceSupport.loadNamedSprite((byte) 116, "menu", QuickChatKeysHelpPanel.field_Cb, "button_small_shine");
           MatchScreen.field_l = SpriteResourceSupport.loadNamedSprite((byte) 101, "menu", QuickChatKeysHelpPanel.field_Cb, "button_large_shine");
-          MatchHudSupport.field_a = ModalStack.a(QuickChatKeysHelpPanel.field_Cb, -119, "menu", "digifont");
+          MatchHudSupport.field_a = ModalStack.loadSpriteSheetByName(QuickChatKeysHelpPanel.field_Cb, -119, "menu", "digifont");
           LoadingProgressSupport.reportStageProgress(90, 100, 25);
           ArrayWidgetContainer.field_z = ServerTextTemplate.a("swatch_overlay", "menu", 2, QuickChatKeysHelpPanel.field_Cb);
           var7 = ServerTextTemplate.a("arrows", "menu", 2, QuickChatKeysHelpPanel.field_Cb);
@@ -135,7 +135,7 @@ final class GameResourceLoader implements LoadingSequence {
           LoadingProgressSupport.reportStageProgress(103, 100, 35);
           LoadingProgressSupport.reportStageProgress(-94, 100, 40);
           SocketArchiveNetworkClient.field_q = ServerTextTemplate.a("digits", "hud", 2, QuickChatKeysHelpPanel.field_Cb);
-          MouseInputHandler.field_g = ModalStack.a(QuickChatKeysHelpPanel.field_Cb, -121, "hud", "cones");
+          MouseInputHandler.field_g = ModalStack.loadSpriteSheetByName(QuickChatKeysHelpPanel.field_Cb, -121, "hud", "cones");
           SpriteState.field_p = ServerTextTemplate.a("tutorial", "hud", 2, QuickChatKeysHelpPanel.field_Cb);
           SocialUiState.field_e = SpriteResourceSupport.loadNamedSprite((byte) 114, "hud", QuickChatKeysHelpPanel.field_Cb, "arrow");
           IntrusiveDequeCursor.a(-128, SpriteResourceSupport.loadNamedSprite((byte) 114, "hud", QuickChatKeysHelpPanel.field_Cb, "cursor"));
@@ -159,22 +159,22 @@ final class GameResourceLoader implements LoadingSequence {
           for (var10_intLifetime2 = 0; var10_intLifetime2 < GradientRasterSupport.field_c.length; var10_intLifetime2++) {
             GradientRasterSupport.field_c[var10_intLifetime2] = BeveledTextPainter.a(ScrollContainer.field_Fb[var10_intLifetime2][0], param0);
           }
-          ArchiveIndex.field_m = (ArgbSprite) (QuickChatPhraseDefinition.a("menu", QuickChatKeysHelpPanel.field_Cb, (byte) 96, "help_up"));
-          QuickChatPhraseDefinition.a("menu", QuickChatKeysHelpPanel.field_Cb, (byte) 100, "help_dwn");
-          SquadGridWidget.a(ModalStack.a(QuickChatKeysHelpPanel.field_Cb, -124, "menu", "tickbox"), true);
+          ArchiveIndex.field_m = (ArgbSprite) (QuickChatPhraseDefinition.loadSpriteByName("menu", QuickChatKeysHelpPanel.field_Cb, (byte) 96, "help_up"));
+          QuickChatPhraseDefinition.loadSpriteByName("menu", QuickChatKeysHelpPanel.field_Cb, (byte) 100, "help_dwn");
+          SquadGridWidget.a(ModalStack.loadSpriteSheetByName(QuickChatKeysHelpPanel.field_Cb, -124, "menu", "tickbox"), true);
           LoadingProgressSupport.reportStageProgress(80, 100, 75);
-          WeightedLruCache.field_h = (ArgbSprite) (QuickChatPhraseDefinition.a("menu", QuickChatKeysHelpPanel.field_Cb, (byte) 93, "hammer_icon"));
-          CipherPacketBuffer.field_q = (ArgbSprite) (QuickChatPhraseDefinition.a("menu", QuickChatKeysHelpPanel.field_Cb, (byte) 89, "hammer_icon_buy"));
+          WeightedLruCache.field_h = (ArgbSprite) (QuickChatPhraseDefinition.loadSpriteByName("menu", QuickChatKeysHelpPanel.field_Cb, (byte) 93, "hammer_icon"));
+          CipherPacketBuffer.field_q = (ArgbSprite) (QuickChatPhraseDefinition.loadSpriteByName("menu", QuickChatKeysHelpPanel.field_Cb, (byte) 89, "hammer_icon_buy"));
           LoadingProgressSupport.reportStageProgress(113, 100, 70);
-          TextLayoutLine.field_f = QuickChatPhraseDefinition.a("menu", QuickChatKeysHelpPanel.field_Cb, (byte) 60, "tactics_pitch");
-          LoginResponseUiSupport.field_h = (ArgbSprite) (QuickChatPhraseDefinition.a("menu", QuickChatKeysHelpPanel.field_Cb, (byte) 109, "lock_icon"));
+          TextLayoutLine.field_f = QuickChatPhraseDefinition.loadSpriteByName("menu", QuickChatKeysHelpPanel.field_Cb, (byte) 60, "tactics_pitch");
+          LoginResponseUiSupport.field_h = (ArgbSprite) (QuickChatPhraseDefinition.loadSpriteByName("menu", QuickChatKeysHelpPanel.field_Cb, (byte) 109, "lock_icon"));
           LoadingProgressSupport.reportStageProgress(90, 100, 80);
-          RowRangeRequest.field_f = QuickChatPhraseDefinition.a("menu", QuickChatKeysHelpPanel.field_Cb, (byte) 78, "kit");
+          RowRangeRequest.field_f = QuickChatPhraseDefinition.loadSpriteByName("menu", QuickChatKeysHelpPanel.field_Cb, (byte) 78, "kit");
           WriteIntegersCommand.field_E = ServerTextTemplate.a("cups", "menu", 2, QuickChatKeysHelpPanel.field_Cb);
           DelayedServerPacket.field_i = ServerTextTemplate.a("cups_empty", "menu", 2, QuickChatKeysHelpPanel.field_Cb);
           LoadingProgressSupport.reportStageProgress(102, 100, 90);
-          Trinket.field_d = (ArgbSprite) (QuickChatPhraseDefinition.a("menu", QuickChatKeysHelpPanel.field_Cb, (byte) 88, "shelf"));
-          WorldSpriteSequence.field_g = QuickChatPhraseDefinition.a("menu", QuickChatKeysHelpPanel.field_Cb, (byte) 76, "scroll_button");
+          Trinket.field_d = (ArgbSprite) (QuickChatPhraseDefinition.loadSpriteByName("menu", QuickChatKeysHelpPanel.field_Cb, (byte) 88, "shelf"));
+          WorldSpriteSequence.field_g = QuickChatPhraseDefinition.loadSpriteByName("menu", QuickChatKeysHelpPanel.field_Cb, (byte) 76, "scroll_button");
           LeaguesScreen.field_B = this.a("menu", QuickChatKeysHelpPanel.field_Cb, (byte) 26, "scroll_bar");
           WidgetStyleFactory.field_a = SpriteResourceSupport.loadNamedSprite((byte) 106, "menu", QuickChatKeysHelpPanel.field_Cb, "mini_ball");
           LoadingProgressSupport.reportStageProgress(-91, 100, 95);
@@ -517,7 +517,7 @@ final class GameResourceLoader implements LoadingSequence {
         SharedWidgetFactory.createSharedWidgets(ByteArrayPool.field_d, (byte) 113);
         LoadingProgressSupport.reportStageProgress(-89, 6, 3);
         RegistrationUiSupport.buildLoadingSpinnerSprites((byte) -32);
-        ResizableModalPanel.l(96);
+        ResizableModalPanel.buildRotatedStarSprites(96);
         LoadingProgressSupport.reportStageProgress(-49, 6, 5);
         GameLoopApplet.n((byte) -10);
         CipherPacketBuffer.k(61, 10);
@@ -752,7 +752,7 @@ final class GameResourceLoader implements LoadingSequence {
           if (param2 < 16) {
             GameResourceLoader.a((byte) 120);
           }
-          var6 = ModalStack.a(param1, -42, param0, param3);
+          var6 = ModalStack.loadSpriteSheetByName(param1, -42, param0, param3);
           var5 = var6;
           var6[3].field_v = var6[3].field_w;
           var6[1].field_o = var6[1].field_q;

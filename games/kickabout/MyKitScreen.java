@@ -286,7 +286,7 @@ final class MyKitScreen extends TeamManagementScreen {
           var4 = null;
           var5 = (ColourSwatchTile) (this.field_J[var3Lifetime1].field_jb.g(24009));
           while (var5 != null) {
-            if (!var5.c(false)) {
+            if (!var5.isSelectedColor(false)) {
               var5.a(param0 ^ -8);
             } else {
               var4 = var5;

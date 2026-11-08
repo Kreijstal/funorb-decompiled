@@ -83,7 +83,7 @@ final class TrinketIcon extends UiLayoutNode {
         int var3 = 0;
         int var4 = 0;
         if (!param2) {
-          TrinketIcon.c(false);
+          TrinketIcon.releaseStatics(false);
         }
         if (TextPromptState.field_b != null) {
           var3 = TextPromptState.field_b.a(param0, 0);
@@ -98,7 +98,7 @@ final class TrinketIcon extends UiLayoutNode {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_zb = null;
         field_Db = null;
         field_Ab = null;

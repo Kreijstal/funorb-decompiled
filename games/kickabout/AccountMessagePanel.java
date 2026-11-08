@@ -121,7 +121,7 @@ final class AccountMessagePanel extends WidgetContainer implements ButtonListene
           var5 = -2 + this.field_i;
           this.setBounds(34 + this.field_i, 1, 0, this.field_n, 0);
           var4.setBounds(30, param2 ^ 78, 7, this.field_n - 14, var5);
-          this.a(-102, var4);
+          this.addChild(-102, var4);
           stackIn_4_0 = var4;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

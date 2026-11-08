@@ -867,7 +867,7 @@ final class RenderedFootballer extends FootballerAgent {
         return var2;
     }
 
-    public static void i(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_fb = (int[][][]) null;
         field_Q = null;
         field_lb = null;

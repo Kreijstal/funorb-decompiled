@@ -286,7 +286,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           }
           if (null != PlatformTaskState.field_c) {
             try {
-              PlatformTaskState.field_c.a(true);
+              PlatformTaskState.field_c.shutdown(true);
             } catch (java.lang.Exception decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               exception = (Exception) (Object) decompiledCaughtException;
@@ -613,11 +613,11 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                     var3_ref_Throwable = decompiledCaughtException;
                   }
                 }
-                SingleChildContainer.i(-1);
+                SingleChildContainer.detectMaximumHeapSize(-1);
                 this.replaceCanvas((byte) -105);
                 ColorQuantizationBox.field_f = DelayedServerPacket.a(105, SpriteNumberPainter.field_d, ReceivedAuctionItem.field_B, (java.awt.Component) ((Object) RegistrationRequestState.field_d));
                 this.onStartup((byte) -76);
-                SplashScreen.field_k = SumIntegersCommand.h(3);
+                SplashScreen.field_k = SumIntegersCommand.createNanoTickClock(3);
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (SquadPickerDialog.field_I != 0L) {

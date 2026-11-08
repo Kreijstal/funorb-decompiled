@@ -579,7 +579,7 @@ final class Trinket {
           }
           if (decompiledFrameRemainder0) {
             var3 = ArchiveSource.field_e;
-            var3 = TextInputWidget.a(false, var3);
+            var3 = TextInputWidget.prefixAccountIcon(false, var3);
             var4 = "";
             var5 = "|";
             var6 = NodeHashTableIterator.field_b;

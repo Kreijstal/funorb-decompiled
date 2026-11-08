@@ -268,7 +268,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           }
           TextLineLayoutSupport.field_a = param2;
           WorldSpriteSequence.field_f = new AccountRequestDialog(RankingsRequest.field_l, ConsoleLexer.field_b, param0, AuctionBidDialog.field_G, TextLineLayoutSupport.field_a);
-          RankingsRequest.field_l.a(WorldSpriteSequence.field_f, false);
+          RankingsRequest.field_l.pushModal(WorldSpriteSequence.field_f, false);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ku.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

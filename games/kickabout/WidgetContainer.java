@@ -46,7 +46,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
         }
     }
 
-    public static void i(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -336184828) {
           return;
         }
@@ -64,7 +64,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
         this.field_y = new IntrusiveDeque();
     }
 
-    final boolean b(UiWidget param0, byte param1) {
+    final boolean focusNextChild(UiWidget param0, byte param1) {
         IntrusiveDequeCursor var3 = null;
         UiWidget var4 = null;
         IntrusiveDequeCursor var5 = null;
@@ -184,7 +184,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
         }
     }
 
-    final void a(int param0, UiWidget param1) {
+    final void addChild(int param0, UiWidget param1) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -337,7 +337,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
         }
     }
 
-    final boolean a(UiWidget param0, byte param1) {
+    final boolean focusPreviousChild(UiWidget param0, byte param1) {
         IntrusiveDequeCursor var3 = null;
         UiWidget var4 = null;
         IntrusiveDequeCursor var5 = null;
@@ -361,7 +361,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
           var3 = new IntrusiveDequeCursor(this.field_y);
           var4 = (UiWidget) (var3.b(0));
           if (param1 != -100) {
-            this.a(-56, (UiWidget) null);
+            this.addChild(-56, (UiWidget) null);
           }
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (null == var4))) {
@@ -438,7 +438,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
         }
     }
 
-    final static void a(int param0, int param1, String param2, int param3, int param4, int param5) {
+    final static void drawParticipantPanelBackground(int param0, int param1, String param2, int param3, int param4, int param5) {
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -792,7 +792,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
         }
     }
 
-    private final void a(StringBuilder param0, Hashtable param1, int param2, int param3) {
+    private final void appendChildrenDebugTree(StringBuilder param0, Hashtable param1, int param2, int param3) {
         StringBuilder discarded$2 = null;
         StringBuilder discarded$3 = null;
         RuntimeException runtimeException = null;
@@ -850,7 +850,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
     void setBounds(int param0, int param1, int param2, int param3, int param4) {
         try {
           super.setBounds(param0, param1, param2, param3, param4);
-          this.j(5);
+          this.refreshChildrenLayout(5);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "wj.W(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
@@ -914,7 +914,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
           }
           if (this.beginWidgetDiagnosticVisit(1, param3, param2, param1)) {
             this.appendWidgetDiagnosticProperties(param1, param3, param2, param0 - 36451);
-            this.a(param3, param2, param1, 24745);
+            this.appendChildrenDebugTree(param3, param2, param1, 24745);
           }
           stackIn_8_0 = (StringBuilder) (param3);
           return stackIn_8_0;
@@ -984,9 +984,9 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
             return false;
           }
           if (!GameplayHelpScreen.field_G[81]) {
-            stackIn_27_0 = this.b(param2, (byte) 123);
+            stackIn_27_0 = this.focusNextChild(param2, (byte) 123);
           } else {
-            stackIn_27_0 = this.a(param2, (byte) -100);
+            stackIn_27_0 = this.focusPreviousChild(param2, (byte) -100);
           }
           return stackIn_27_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1042,7 +1042,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
         }
     }
 
-    private final void j(int param0) {
+    private final void refreshChildrenLayout(int param0) {
         RuntimeException runtimeException = null;
         IntrusiveDequeCursor var2 = null;
         UiWidget var3 = null;
@@ -1052,7 +1052,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
         try {
           var2 = new IntrusiveDequeCursor(this.field_y);
           if (param0 != 5) {
-            WidgetContainer.i(-127);
+            WidgetContainer.releaseStatics(-127);
           }
           var3 = (UiWidget) (var2.a((byte) 106));
           while (null != var3) {

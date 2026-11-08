@@ -100,7 +100,7 @@ final class NotCommand extends ConsoleCommand {
           if (param0 != 84) {
             NotCommand.h(5);
           }
-          stackIn_3_0 = new ConsoleValue(WelcomeDialog.a(param1[0].c(param0 - 84), (byte) -48));
+          stackIn_3_0 = new ConsoleValue(WelcomeDialog.negate(param1[0].asBoolean(param0 - 84), (byte) -48));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

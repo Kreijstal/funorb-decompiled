@@ -144,7 +144,7 @@ final class SplashScreen extends AppScreen {
           var9Lifetime1 = stackIn_48_0;
           var10 = param0.field_Ab.field_jb;
           if (param4 < 0) {
-            SplashScreen.a(112);
+            SplashScreen.releaseStatics(112);
           }
           var11 = null;
           var12 = (LobbyPlayerRow) (var10.g(24009));
@@ -543,7 +543,7 @@ final class SplashScreen extends AppScreen {
         return true;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_i = null;
         field_k = null;
         if (param0 != -1) {

@@ -122,13 +122,13 @@ final class MatchScreen extends AppScreen {
         }
     }
 
-    final boolean f(byte param0) {
+    final boolean canUsePitchPointer(byte param0) {
         boolean stackIn_16_0 = false;
         if (this.matchState.phase != 4) {
           return false;
         }
         if (param0 != 29) {
-          this.f((byte) -25);
+          this.canUsePitchPointer((byte) -25);
         }
         boolean decompiledFrameRemainder0 = true;
         if (!this.isSpectator(-2) &&
@@ -136,7 +136,7 @@ final class MatchScreen extends AppScreen {
           ArrayWidgetContainer.field_x >= 0 &&
           TutorialCaptionSupport.field_j >= 0 &&
           ArrayWidgetContainer.field_x < 640 &&
-          TutorialCaptionSupport.field_j < 480 && (((PlayingView) (this.phaseController)).b((byte) -82) ||
+          TutorialCaptionSupport.field_j < 480 && (((PlayingView) (this.phaseController)).hasHeldMouseInput((byte) -82) ||
           !ArchiveIndex.b(640))) {
           stackIn_16_0 = true;
           decompiledFrameRemainder0 = false;
@@ -198,7 +198,7 @@ final class MatchScreen extends AppScreen {
           return;
         }
         if (this.matchState.phase == 4) {
-          ((PlayingView) (this.phaseController)).g(0);
+          ((PlayingView) (this.phaseController)).updatePossessionSoundTeam(0);
         }
         this.matchState.processEventQueue((byte) -87);
         this.matchState.field_E.clear(22997);
@@ -215,11 +215,11 @@ final class MatchScreen extends AppScreen {
           if (this.isSpectator(-2)) {
             stackIn_18_0 = 0;
           } else {
-            stackIn_18_0 = this.g(64);
+            stackIn_18_0 = this.getLocalInputDelay(64);
           }
           var4 = stackIn_18_0;
           for (var5 = 0; var5 < this.matchState.playerCount; var5++) {
-            this.a(var4, 20700, var5);
+            this.announceParticipantStatusChange(var4, 20700, var5);
           }
           this.matchState.a(this.field_i, this.localSeat, var4, -6);
         }
@@ -368,7 +368,7 @@ final class MatchScreen extends AppScreen {
         }
         if (this.isOnlineMatch &&
           this.matchState.phase != 0) {
-          this.phaseController.a(150, param0 ^ 17789);
+          this.phaseController.drawTeamParticipantPanels(150, param0 ^ 17789);
           return;
         }
     }
@@ -381,7 +381,7 @@ final class MatchScreen extends AppScreen {
         return ((GameOverView) (this.phaseController)).h(-19510);
     }
 
-    final void a(int param0, CipherPacketBuffer param1) {
+    final void readParticipantPingTimes(int param0, CipherPacketBuffer param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -412,7 +412,7 @@ final class MatchScreen extends AppScreen {
         }
     }
 
-    private final void a(int param0, int param1, int param2) {
+    private final void announceParticipantStatusChange(int param0, int param1, int param2) {
         ParticipantStatus var5;
         Object var6;
         ParticipantStatus var7;
@@ -551,12 +551,12 @@ final class MatchScreen extends AppScreen {
         field_w = null;
     }
 
-    final void a(int param0, ManagerAction param1, byte param2, int param3) {
+    final void applyGameOverTrainingAction(int param0, ManagerAction param1, byte param2, int param3) {
         if (!this.isGameOverViewShown((byte) -68)) {
           return;
         }
         try {
-          ((GameOverView) (this.phaseController)).a(1, param1, param0, param3);
+          ((GameOverView) (this.phaseController)).applyTrainingAction(1, param1, param0, param3);
           if (param2 > -71) {
             this.field_v = true;
           }
@@ -655,7 +655,7 @@ final class MatchScreen extends AppScreen {
         }
     }
 
-    final void a(byte param0, IntrusiveDeque param1) {
+    final void rebuildWorldDrawList(byte param0, IntrusiveDeque param1) {
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -663,7 +663,7 @@ final class MatchScreen extends AppScreen {
         RuntimeException var3 = null;
         try {
           if (this.phaseController instanceof PlayingView) {
-            ((PlayingView) (this.phaseController)).a(param1, (byte) -82);
+            ((PlayingView) (this.phaseController)).rebuildWorldDrawList(param1, (byte) -82);
           }
           if (param0 >= -111) {
             this.field_n = (ClubState) null;
@@ -746,14 +746,14 @@ final class MatchScreen extends AppScreen {
         return this.phaseController.handleKey(param2, 1670, param0);
     }
 
-    final void a(int param0) {
+    final void rebuildRenderedMatch(int param0) {
         if (this.phaseController instanceof PlayingView) {
-          ((PlayingView) (this.phaseController)).m(-105);
+          ((PlayingView) (this.phaseController)).rebuildRenderedMatch(-105);
         }
         int var2 = 109 / ((param0 - 6) / 37);
     }
 
-    private final int g(int param0) {
+    private final int getLocalInputDelay(int param0) {
         if (param0 < 16) {
           field_l = (Sprite) null;
         }
@@ -868,7 +868,7 @@ final class MatchScreen extends AppScreen {
     final void resign(int param0) {
         if (param0 > -10) {
           IntrusiveDeque var3 = (IntrusiveDeque) null;
-          this.a((byte) -89, (IntrusiveDeque) null);
+          this.rebuildWorldDrawList((byte) -89, (IntrusiveDeque) null);
         }
         if (!this.isOnlineMatch) {
           throw new IllegalStateException();

@@ -297,7 +297,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
         var11 = Kickabout.field_G;
         if (param4) {
           AuctionsHelpScreen.field_H = ModalPanel.field_B;
-          ParticipantStatus.a(param4, 1);
+          ParticipantStatus.advanceSharedPanelTransition(param4, 1);
           if (NotificationPanelPositionSupport.field_a > 0) {
             ClientUiUpdateSupport.updateCommonClientUi(param7, param4, (byte) -119, param6);
           }
@@ -331,7 +331,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
                   } else {
                     AuctionsHelpScreen.field_H = (ColorQuantizationBox.field_a - 640) / 2;
                   }
-                  ParticipantStatus.a(param4, 1);
+                  ParticipantStatus.advanceSharedPanelTransition(param4, 1);
                   if (NotificationPanelPositionSupport.field_a > 0) {
                     ClientUiUpdateSupport.updateCommonClientUi(param7, param4, (byte) -119, param6);
                   }
@@ -365,7 +365,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
             }
             if (!param4) {
               AuctionsHelpScreen.field_H = (ColorQuantizationBox.field_a - 640) / 2;
-              ParticipantStatus.a(param4, 1);
+              ParticipantStatus.advanceSharedPanelTransition(param4, 1);
               if (NotificationPanelPositionSupport.field_a > 0) {
                 ClientUiUpdateSupport.updateCommonClientUi(param7, param4, (byte) -119, param6);
               }
@@ -389,7 +389,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
               }
             } else {
               AuctionsHelpScreen.field_H = ModalPanel.field_B;
-              ParticipantStatus.a(param4, 1);
+              ParticipantStatus.advanceSharedPanelTransition(param4, 1);
               if (NotificationPanelPositionSupport.field_a > 0) {
                 ClientUiUpdateSupport.updateCommonClientUi(param7, param4, (byte) -119, param6);
               }
@@ -424,7 +424,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
                   } else {
                     AuctionsHelpScreen.field_H = (ColorQuantizationBox.field_a - 640) / 2;
                   }
-                  ParticipantStatus.a(param4, 1);
+                  ParticipantStatus.advanceSharedPanelTransition(param4, 1);
                   if (NotificationPanelPositionSupport.field_a > 0) {
                     ClientUiUpdateSupport.updateCommonClientUi(param7, param4, (byte) -119, param6);
                   }
@@ -458,7 +458,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
             }
             if (!param4) {
               AuctionsHelpScreen.field_H = (ColorQuantizationBox.field_a - 640) / 2;
-              ParticipantStatus.a(param4, 1);
+              ParticipantStatus.advanceSharedPanelTransition(param4, 1);
               if (NotificationPanelPositionSupport.field_a > 0) {
                 ClientUiUpdateSupport.updateCommonClientUi(param7, param4, (byte) -119, param6);
               }
@@ -482,7 +482,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
               }
             } else {
               AuctionsHelpScreen.field_H = ModalPanel.field_B;
-              ParticipantStatus.a(param4, 1);
+              ParticipantStatus.advanceSharedPanelTransition(param4, 1);
               if (NotificationPanelPositionSupport.field_a > 0) {
                 ClientUiUpdateSupport.updateCommonClientUi(param7, param4, (byte) -119, param6);
               }

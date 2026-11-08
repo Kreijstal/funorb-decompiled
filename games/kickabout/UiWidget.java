@@ -26,7 +26,7 @@ class UiWidget extends IntrusiveNode {
         return this.appendDebugTree(17883, 0, new Hashtable(), new StringBuilder()).toString();
     }
 
-    final static int a(boolean param0, boolean param1, byte param2, boolean param3, boolean param4) {
+    final static int chooseCrowdShoutId(boolean param0, boolean param1, byte param2, boolean param3, boolean param4) {
         int stackIn_3_0 = 0;
         int stackIn_34_0 = 0;
         int stackIn_38_0 = 0;
@@ -305,13 +305,13 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    final static void h(int param0) {
+    final static void leaveFullscreen(int param0) {
         if (null == SplashScreen.field_m) {
           return;
         }
         SumIntegersCommand.a(param0 ^ -120, SplashScreen.field_m);
         if (param0 != 0) {
-          UiWidget.g((byte) 9);
+          UiWidget.releaseStatics((byte) 9);
         }
         SplashScreen.field_m.a(PlatformTaskState.field_c, param0 + 9);
         SplashScreen.field_m = null;
@@ -321,11 +321,11 @@ class UiWidget extends IntrusiveNode {
         RegistrationRequestState.field_d.requestFocus();
     }
 
-    public static void g(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_f = null;
         field_j = null;
         if (param0 <= 77) {
-          UiWidget.g((byte) 74);
+          UiWidget.releaseStatics((byte) 74);
         }
         field_e = null;
     }

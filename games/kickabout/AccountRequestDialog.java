@@ -238,7 +238,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
           this.field_gb = param3 ? true : false;
           this.field_jb = new StripedProgressBar(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_jb.field_w = true;
-          this.a(-42, this.field_jb);
+          this.addChild(-42, this.field_jb);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "wv.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }

@@ -60,7 +60,7 @@ final class ThreeCommand extends ConsoleCommand {
         PasswordLoginCredentials.drawSharedTextPanel(param0, (byte) -93);
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_A = null;
         field_C = null;
         field_B = null;

@@ -141,7 +141,7 @@ final class SocialTabsPanel {
         AlphaContainer.field_E.setBounds(true, -2 - TeamSelectionAgent.field_f + (TriangleMesh.field_R.field_q - 80) - 2, 0, 2 + LineupPositionSupport.field_c, 18);
         AudioOutputSupport.field_f.setBounds(true, 82 + TeamSelectionAgent.field_f, -80 + (-TeamSelectionAgent.field_f + TriangleMesh.field_R.field_q) - 2, LineupPositionSupport.field_c + 2, 18);
         RotaryDialPainter.field_d.setBoundsAndUpdateRows(TeamSelectionAgent.field_f, -LineupPositionSupport.field_c + (TriangleMesh.field_R.field_mb - 22), 20, 20 + LineupPositionSupport.field_c + 2, TriangleMesh.field_R.field_q, 92, 2, 0);
-        TournamentChampionDialog.field_F.a(2, TeamSelectionAgent.field_f, (byte) 19, 20);
+        TournamentChampionDialog.field_F.layoutListAndButtons(2, TeamSelectionAgent.field_f, (byte) 19, 20);
     }
 
     final static void a(byte param0) {

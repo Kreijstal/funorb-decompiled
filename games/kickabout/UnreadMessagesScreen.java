@@ -34,7 +34,7 @@ final class UnreadMessagesScreen extends ButtonMenuScreen {
             var4 = 62 / ((38 - param0) / 60);
             return;
           } else {
-            UiWidget.h(0);
+            UiWidget.leaveFullscreen(0);
             AuctionLogEntry.openSubscribePage(AppletContextSupport.getActiveApplet(-98), (byte) 126);
           }
         }

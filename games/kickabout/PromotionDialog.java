@@ -32,7 +32,7 @@ final class PromotionDialog extends MessageDialog {
             var4 = (LookupRecordUpdate) (NamedValueContainer.field_c.c(33));
           }
           if (param1 >= -120) {
-            PromotionDialog.h(96);
+            PromotionDialog.releaseStatics(96);
           }
           var5 = (LookupQuery) (MidiPcmStream.field_M.g(24009));
           while (var5 != null) {
@@ -63,7 +63,7 @@ final class PromotionDialog extends MessageDialog {
         try {
           RankingsRequest.field_l.processPointerFrame(AuctionLogEntry.field_n, 31947, PacketBuffer.field_i, true);
           var1_int = -43 % ((param0 + 39) / 43);
-          RankingsRequest.field_l.n(2);
+          RankingsRequest.field_l.advanceModalAnimations(2);
           while (TexturedPanelPainter.$cfr$intArgs$b$c4997cb15529(-59)) {
             RankingsRequest.field_l.dispatchKeyInput(ClassDescriptorSupport.field_c, (byte) -88, FixedQuaternion.field_e);
           }
@@ -98,7 +98,7 @@ final class PromotionDialog extends MessageDialog {
         }
     }
 
-    public static void h(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == 22100) {
           field_F = null;
           field_G = null;

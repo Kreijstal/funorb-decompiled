@@ -220,7 +220,7 @@ final class AchievementsScreen extends ButtonMenuScreen {
         ResourceArchive.field_g = true;
     }
 
-    public static void g(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = 3 % ((param0 + 3) / 32);
         field_A = null;
         field_C = null;

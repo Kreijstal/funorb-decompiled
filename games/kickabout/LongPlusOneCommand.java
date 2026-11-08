@@ -6,7 +6,7 @@ final class LongPlusOneCommand extends ConsoleCommand {
     static UiLayoutNode field_D;
     static String field_A;
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         field_B = null;
         field_A = null;
         if (param0 == 1) {

@@ -12,7 +12,7 @@ class ColumnTableWidget extends UiLayoutNode {
     private ScrollContainer field_Cb;
     private UiLayoutNode[] field_Bb;
 
-    final void a(boolean param0, boolean param1) {
+    final void updateTableInput(boolean param0, boolean param1) {
         int var3_int = 0;
         int var4 = 0;
         int var6;
@@ -35,7 +35,7 @@ class ColumnTableWidget extends UiLayoutNode {
         }
     }
 
-    final static byte[] a(int param0, CipherPacketBuffer param1, byte[] param2, int param3) {
+    final static byte[] readPackedByteArray(int param0, CipherPacketBuffer param1, byte[] param2, int param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -106,13 +106,13 @@ class ColumnTableWidget extends UiLayoutNode {
 
     final void setRows(ListRow[] param0, int param1) {
         try {
-          this.a(param1, (byte) -47, param0, param0.length);
+          this.installRows(param1, (byte) -47, param0, param0.length);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "bp.NA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void a(int param0, byte param1, ListRow[] param2, int param3) {
+    final void installRows(int param0, byte param1, ListRow[] param2, int param3) {
         int var8 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -173,7 +173,7 @@ class ColumnTableWidget extends UiLayoutNode {
           } else {
             this.field_Ab.field_mb = param3 * (this.field_Eb + 5) + 5;
           }
-          this.a(this.field_mb, (byte) -126, this.field_J, this.field_s);
+          this.layoutTableViewport(this.field_mb, (byte) -126, this.field_J, this.field_s);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -196,7 +196,7 @@ class ColumnTableWidget extends UiLayoutNode {
         field_yb = null;
     }
 
-    final void a(int param0, byte param1, int param2, int param3) {
+    final void layoutTableViewport(int param0, byte param1, int param2, int param3) {
         this.setBounds(true, this.field_q, param3, param2, param0);
         if (param1 > -108) {
           this.field_Fb = (ListRow[]) null;
@@ -219,7 +219,7 @@ class ColumnTableWidget extends UiLayoutNode {
         return this.field_Db;
     }
 
-    final void a(SortCriterion param0, int param1) {
+    final void sortRows(SortCriterion param0, int param1) {
         int var5 = 0;
         int var4 = 0;
         int var3_int = 0;
@@ -272,11 +272,11 @@ class ColumnTableWidget extends UiLayoutNode {
         SortCriterion var3 = this.field_zb[param0];
         if (var3 != null) {
           var3.cycleDirection(param0 == this.field_Db ? true : false, 93);
-          this.a(var3, 57);
+          this.sortRows(var3, 57);
         }
     }
 
-    final void a(int param0) {
+    final void drawTable(int param0) {
         int stackIn_10_0 = 0;
         int stackIn_13_0 = 0;
         int stackIn_35_0 = 0;

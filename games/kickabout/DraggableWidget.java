@@ -249,7 +249,7 @@ final class DraggableWidget extends SingleChildContainer {
         try {
           if (this.beginWidgetDiagnosticVisit(1, param3, param2, param1)) {
             this.appendWidgetDiagnosticProperties(param1, param3, param2, -18568);
-            this.a(param2, 127, param3, param1);
+            this.appendChildDebugTree(param2, 127, param3, param1);
             discarded$64 = param3.append(" revert=").append(this.field_L);
             if (this.field_H != 2147483647 &&
               this.field_C != 2147483647) {

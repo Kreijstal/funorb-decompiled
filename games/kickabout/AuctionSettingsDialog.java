@@ -368,11 +368,11 @@ final class AuctionSettingsDialog extends MessageDialog {
         var5.field_D = 5;
         UnreadMessagesScreen.field_A = new TextFieldNode(0L, var3, var10, var5, 20);
         UnreadMessagesScreen.field_A.field_R = null;
-        UnreadMessagesScreen.field_A.a(-630, 5 + (ChatInputState.field_b.field_q >> 1) - 33, (ChatInputState.field_b.field_mb >> 2) - 2, 4 + (IsSixCommand.field_C.field_G + IsSixCommand.field_C.field_p), 67);
+        UnreadMessagesScreen.field_A.layoutTextField(-630, 5 + (ChatInputState.field_b.field_q >> 1) - 33, (ChatInputState.field_b.field_mb >> 2) - 2, 4 + (IsSixCommand.field_C.field_G + IsSixCommand.field_C.field_p), 67);
         ChatInputState.field_b.addChild((byte) -113, (UiLayoutNode) (UnreadMessagesScreen.field_A));
         StatChoiceDialog.field_F = new TextFieldNode(0L, var3, var10, var5, 20);
         StatChoiceDialog.field_F.field_R = null;
-        StatChoiceDialog.field_F.a(-630, 5 + (-33 + (OverlayLayerSupport.field_b.field_q >> 1)), 8 + (OverlayLayerSupport.field_b.field_mb >> 1), 4 + (IsSixCommand.field_C.field_G + IsSixCommand.field_C.field_p), 67);
+        StatChoiceDialog.field_F.layoutTextField(-630, 5 + (-33 + (OverlayLayerSupport.field_b.field_q >> 1)), 8 + (OverlayLayerSupport.field_b.field_mb >> 1), 4 + (IsSixCommand.field_C.field_G + IsSixCommand.field_C.field_p), 67);
         OverlayLayerSupport.field_b.addChild((byte) -121, (UiLayoutNode) (StatChoiceDialog.field_F));
         DisplayModeSupport.field_a = new CheckboxLabelWidget(LoggedPlayer.field_k.toLowerCase(), ByteArrayPool.field_d);
         DisplayModeSupport.field_a.field_J = 5;

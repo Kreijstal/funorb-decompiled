@@ -11,7 +11,7 @@ final class TrinketShopDialog extends MessageDialog {
     private int field_F;
     static int field_G;
 
-    static int b(int param0, int param1) {
+    static int bitwiseXor(int param0, int param1) {
         return param0 ^ param1;
     }
 
@@ -116,7 +116,7 @@ final class TrinketShopDialog extends MessageDialog {
         IsSixCommand.field_C.drawCentered(CheckboxLabelWidget.field_Bb, (this.dialogWidth(-1379118556) >> 1) + param1, 312 + param2, 13421772, -1);
     }
 
-    final static void g(int param0) {
+    final static void enqueueTrinketPickerDialog(int param0) {
         ScrollPane.field_Jb.addLast(new TrinketPickerDialog(), 3);
         if (param0 != -29315) {
           TrinketShopDialog.b(true, -105, 126);
@@ -178,7 +178,7 @@ final class TrinketShopDialog extends MessageDialog {
         this.field_i[0].field_lb = false;
     }
 
-    public static void d(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (param0) {
           field_G = 36;
         }

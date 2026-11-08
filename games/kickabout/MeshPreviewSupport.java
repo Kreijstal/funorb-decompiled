@@ -75,8 +75,8 @@ final class MeshPreviewSupport {
           if (!ArchiveManager.a(false)) {
             if (null != SplashScreen.field_m &&
               SplashScreen.field_m.field_b) {
-              UiWidget.h(0);
-              ValidatedTextWidget.field_Z.a(new FullscreenErrorDialog(ValidatedTextWidget.field_Z, PainterStyle.field_a), false);
+              UiWidget.leaveFullscreen(0);
+              ValidatedTextWidget.field_Z.pushModal(new FullscreenErrorDialog(ValidatedTextWidget.field_Z, PainterStyle.field_a), false);
             }
             return;
           }
@@ -84,7 +84,7 @@ final class MeshPreviewSupport {
           if (param0 <= 104) {
             MeshPreviewSupport.b(104);
           }
-          ValidatedTextWidget.field_Z.n(2);
+          ValidatedTextWidget.field_Z.advanceModalAnimations(2);
           while (TexturedPanelPainter.$cfr$intArgs$b$c4997cb15529(-59)) {
             ValidatedTextWidget.field_Z.dispatchKeyInput(ClassDescriptorSupport.field_c, (byte) -91, FixedQuaternion.field_e);
           }

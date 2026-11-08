@@ -367,7 +367,7 @@ class PacketBuffer extends IntrusiveNode {
         return (255 & this.field_f[-1 + this.field_n]) + ((65280 & this.field_f[this.field_n - 2] << 8) + (16711680 & this.field_f[-3 + this.field_n] << 16));
     }
 
-    final String a(boolean param0) {
+    final String readNullableString(boolean param0) {
         if (this.field_f[this.field_n] == 0) {
           this.field_n = this.field_n + 1;
           return null;

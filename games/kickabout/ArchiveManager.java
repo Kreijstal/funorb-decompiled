@@ -577,7 +577,7 @@ final class ArchiveManager {
         if (null == ValidatedTextWidget.field_Z) {
           return false;
         }
-        if (null == ValidatedTextWidget.field_Z.h((byte) 18)) {
+        if (null == ValidatedTextWidget.field_Z.topActiveModal((byte) 18)) {
           return false;
         }
         return true;

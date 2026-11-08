@@ -300,7 +300,7 @@ final class WhirlpoolHasher {
             if (AppletContextSupport.field_b != 255) {
               ListingRowCache.field_b = ByteArrayPool.field_e.readString(61);
             } else {
-              var9_ref_String = ByteArrayPool.field_e.a(true);
+              var9_ref_String = ByteArrayPool.field_e.readNullableString(true);
               if (var9_ref_String != null) {
                 BlobSubmission.writeSettingsCookie(AppletContextSupport.getActiveApplet(62), true, var9_ref_String);
               }

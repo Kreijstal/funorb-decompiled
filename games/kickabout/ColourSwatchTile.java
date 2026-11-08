@@ -43,7 +43,7 @@ final class ColourSwatchTile extends UiLayoutNode {
         }
     }
 
-    final boolean c(boolean param0) {
+    final boolean isSelectedColor(boolean param0) {
         int var2 = this.field_Ab == 0 ? this.field_zb.field_k : this.field_zb.field_R;
         if (!param0) {
           return var2 == this.field_yb ? true : false;
@@ -56,7 +56,7 @@ final class ColourSwatchTile extends UiLayoutNode {
         int var7 = 0;
         int var6 = 0;
         int var8 = Kickabout.field_G;
-        int var2 = this.c(false) ? 1 : 0;
+        int var2 = this.isSelectedColor(false) ? 1 : 0;
         int var3 = this.field_F;
         int var4 = this.field_T;
         if (var2 == 0) {
@@ -97,7 +97,7 @@ final class ColourSwatchTile extends UiLayoutNode {
         SoftwareRasterizer.drawVerticalLineAlpha(2 + var5, 2 + var6, var7 - 5, 0, 90);
     }
 
-    public static void h(int param0) {
+    public static void releaseStatics(int param0) {
         field_Bb = null;
         if (param0 != -31922) {
           field_Bb = (String) null;

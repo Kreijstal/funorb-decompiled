@@ -114,7 +114,7 @@ final class BufferedCacheFile {
           if (var2 > 200000000) {
             var2 = 200000000;
           }
-          var3 = this.field_j.a(33, var2, this.field_h, this.field_b);
+          var3 = this.field_j.read(33, var2, this.field_h, this.field_b);
           if (var3 != -1) {
             this.field_c = this.field_c + (long)var3;
             this.field_b = this.field_b + var3;
@@ -159,7 +159,7 @@ final class BufferedCacheFile {
     final static void a(boolean param0, ResourceArchive param1, ResourceArchive param2, int param3) {
         try {
           BytePlusOneCommand.a(CheckboxLabelWidget.field_Ab, DisplayModeSupport.field_b, TrinketPickerDialog.field_F, SharedScrollbarState.field_b, MonotonicClock.field_d, param0, ClientProtocolStage.field_c, DoSomethingCommand.field_B, TextInputUiSupport.field_c, ConsoleEvaluationException.field_e, 5, RasterGammaSupport.field_c);
-          ClassDescriptorSupport.field_d = ModalStack.a(param1, -127, "lobby", "chatfilter");
+          ClassDescriptorSupport.field_d = ModalStack.loadSpriteSheetByName(param1, -127, "lobby", "chatfilter");
           IntrusiveDeque.field_h[2] = GeneratedPanelPainter.field_j;
           IntrusiveDeque.field_h[param3] = ClubState.field_Q;
           IntrusiveDeque.field_h[1] = ConsoleExpression.field_n;
@@ -281,7 +281,7 @@ final class BufferedCacheFile {
               this.field_j.seek(15557, this.field_m);
               this.field_c = this.field_m;
               while (param0 > 0) {
-                var9_intLifetime1 = this.field_j.a(33, param0, param3, param1);
+                var9_intLifetime1 = this.field_j.read(33, param0, param3, param1);
                 if (-1 == var9_intLifetime1) {
                   decompiledFrameCompleted0 = false;
                   break;
@@ -433,7 +433,7 @@ final class BufferedCacheFile {
               this.field_j.seek(15557, this.field_m);
               this.field_c = this.field_m;
             }
-            this.field_j.a(1, param3, param0, param2);
+            this.field_j.write(1, param3, param0, param2);
             this.field_c = this.field_c + (long)param2;
             if (this.field_c > this.field_i) {
               this.field_i = this.field_c;
@@ -499,7 +499,7 @@ final class BufferedCacheFile {
             this.field_j.seek(15557, this.field_l);
             this.field_c = this.field_l;
           }
-          this.field_j.a(1, this.field_k, 0, this.field_g);
+          this.field_j.write(1, this.field_k, 0, this.field_g);
           this.field_c = this.field_c + (long)this.field_g;
           if (this.field_i < this.field_c) {
             this.field_i = this.field_c;

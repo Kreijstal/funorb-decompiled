@@ -145,7 +145,7 @@ final class PlayerValueSortCriterion extends SortCriterion {
               if (~var9Lifetime1 == ~AsciiCharacterSupport.field_c.field_g[var12].team) {
                 var13 = 1 + (TextPromptDialog.field_yb + var11 * VertexNormal.field_c) + (var25[var9Lifetime1] + 2) + 3;
                 var14 = param0[var12];
-                var15 = SingleChildContainer.a(true, var14);
+                var15 = SingleChildContainer.latencyIndicatorHeight(true, var14);
                 if (JaggrabDownloader.field_c &&
                   644 - ThumbnailStateFactory.field_c < ArrayWidgetContainer.field_x &&
                   ArrayWidgetContainer.field_x < 640 &&

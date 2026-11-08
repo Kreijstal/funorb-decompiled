@@ -264,7 +264,7 @@ class MessageDialog extends PopupDialog {
         return 53;
     }
 
-    public static void f(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_w = null;
         field_E = null;
         field_A = null;

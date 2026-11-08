@@ -21,7 +21,7 @@ final class ParticipantStatus extends MatchAgent {
     boolean departed;
     static String field_o;
 
-    final static void a(int param0, int param1, byte param2, int param3) {
+    final static void updateFormationTargetPoint(int param0, int param1, byte param2, int param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -91,7 +91,7 @@ final class ParticipantStatus extends MatchAgent {
         }
     }
 
-    final void c(CipherPacketBuffer param0, int param1) {
+    final void decodeDelta(CipherPacketBuffer param0, int param1) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -126,7 +126,7 @@ final class ParticipantStatus extends MatchAgent {
         }
     }
 
-    final static FadingSoundPlayer a(boolean param0, int param1, byte param2, int param3) {
+    final static FadingSoundPlayer playFadingSound(boolean param0, int param1, byte param2, int param3) {
         int var4_int = 0;
         int stackIn_3_0 = 0;
         boolean stackIn_3_1 = false;
@@ -205,11 +205,11 @@ final class ParticipantStatus extends MatchAgent {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         try {
           field_r = null;
           if (!param0) {
-            ParticipantStatus.$cfr$intArgs$a$60f25194e713(false, -40, 99, -28);
+            ParticipantStatus.playFadingSound(false, -40, 99, -28);
           }
           field_t = null;
           field_j = null;
@@ -227,7 +227,7 @@ final class ParticipantStatus extends MatchAgent {
         this.field_l = 0;
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void advanceSharedPanelTransition(boolean param0, int param1) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -564,7 +564,7 @@ final class ParticipantStatus extends MatchAgent {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static FadingSoundPlayer $cfr$intArgs$a$60f25194e713(boolean param0, int param1, int param2, int param3) {
+    final static FadingSoundPlayer playFadingSound(boolean param0, int param1, int param2, int param3) {
         int var4_int = 0;
         int stackIn_3_0 = 0;
         boolean stackIn_3_1 = false;

@@ -16,7 +16,7 @@ abstract class ConsoleCommand extends DualLinkNode {
     static Sprite field_w;
     static String[] field_q;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_n = null;
         field_w = null;
         field_r = null;

@@ -21,9 +21,9 @@ final class WelcomeDialog extends MessageDialog {
         super(23);
     }
 
-    final static boolean a(boolean param0, byte param1) {
+    final static boolean negate(boolean param0, byte param1) {
         if (param1 != -48) {
-          WelcomeDialog.g(120);
+          WelcomeDialog.releaseStatics(120);
         }
         return !param0 ? true : false;
     }
@@ -265,11 +265,11 @@ final class WelcomeDialog extends MessageDialog {
         return var9;
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         field_H = null;
         field_F = null;
         if (param0 != 100) {
-          WelcomeDialog.a(false, (byte) -43);
+          WelcomeDialog.negate(false, (byte) -43);
         }
         field_J = null;
     }

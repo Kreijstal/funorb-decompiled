@@ -102,13 +102,13 @@ final class NumericDateInputWidget extends DateInputWidget {
           this.field_L.field_r = param0;
           this.field_U = param1 ? true : false;
           if (this.field_U) {
-            this.a(-126, this.field_K);
-            this.a(-20, this.field_L);
+            this.addChild(-126, this.field_K);
+            this.addChild(-20, this.field_L);
           } else {
-            this.a(-123, this.field_L);
-            this.a(-46, this.field_K);
+            this.addChild(-123, this.field_L);
+            this.addChild(-46, this.field_K);
           }
-          this.a(-57, this.field_P);
+          this.addChild(-57, this.field_P);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "fb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

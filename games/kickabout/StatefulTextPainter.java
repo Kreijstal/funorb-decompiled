@@ -188,10 +188,10 @@ final class StatefulTextPainter extends TextWidgetPainter {
         int var9Lifetime1;
         var13 = Kickabout.field_G;
         try {
-          LoadingProgressSupport.field_a = ModalStack.a(param3, -9, "commonui", "frame_top");
-          PitchDecorationSupport.field_a = ModalStack.a(param3, -120, "commonui", "frame_bottom");
+          LoadingProgressSupport.field_a = ModalStack.loadSpriteSheetByName(param3, -9, "commonui", "frame_top");
+          PitchDecorationSupport.field_a = ModalStack.loadSpriteSheetByName(param3, -120, "commonui", "frame_bottom");
           KeyedLoginCredentials.field_f = SpriteResourceSupport.loadNamedSprite((byte) 112, "commonui", param3, "jagex_logo_grey");
-          IntrusiveDequeCursor.field_a = ModalStack.a(param3, -29, "commonui", "button");
+          IntrusiveDequeCursor.field_a = ModalStack.loadSpriteSheetByName(param3, -29, "commonui", "button");
           LoggedPlayer.field_g = ServerTextTemplate.a("validation", "commonui", 2, param3);
           EmailSyntaxValidator.field_k = (BitmapFont) ((Object) RenderedFootballer.a(param1, 10, "arezzo12", param3, "commonui"));
           ModelMaterial.field_a = (BitmapFont) ((Object) RenderedFootballer.a(param1, 10, "arezzo14", param3, "commonui"));

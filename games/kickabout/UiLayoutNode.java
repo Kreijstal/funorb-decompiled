@@ -359,7 +359,7 @@ class UiLayoutNode extends SharedWidgetFactory {
         var11 = Kickabout.field_G;
         var3 = 1;
         if (param0) {
-          UiLayoutNode.g(-41);
+          UiLayoutNode.releaseStatics(-41);
         }
         if (!NineSlicePanelPainter.field_a &&
           ContentTransitionDialog.field_Y == null) {
@@ -419,7 +419,7 @@ class UiLayoutNode extends SharedWidgetFactory {
           var13 = ArchiveSource.field_e;
           var7 = var13;
           var7Lifetime1 = var13;
-          var12 = TextInputWidget.a(false, var13);
+          var12 = TextInputWidget.prefixAccountIcon(false, var13);
           var7Lifetime2 = var12;
           var7Lifetime3 = var12;
           var15 = var12;
@@ -466,10 +466,10 @@ class UiLayoutNode extends SharedWidgetFactory {
         return true;
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         field_Z = null;
         if (param0 != -14457) {
-          UiLayoutNode.g(118);
+          UiLayoutNode.releaseStatics(118);
         }
         field_C = null;
         field_ib = null;

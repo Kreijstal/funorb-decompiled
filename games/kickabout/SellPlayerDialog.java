@@ -299,9 +299,9 @@ final class SellPlayerDialog extends MessageDialog {
         }
     }
 
-    public static void h(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 24342) {
-          SellPlayerDialog.h(-101);
+          SellPlayerDialog.releaseStatics(-101);
         }
         field_H = null;
     }

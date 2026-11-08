@@ -143,7 +143,7 @@ final class StatChoiceDialog extends MessageDialog {
               if (AuctionLogEntry.field_h instanceof MatchScreen &&
                 null != MachineTokenStorageSupport.field_e &&
                 MachineTokenStorageSupport.field_e.isGameOverViewShown((byte) 76)) {
-                MachineTokenStorageSupport.field_e.a(this.field_N, var4, (byte) -78, this.field_H);
+                MachineTokenStorageSupport.field_e.applyGameOverTrainingAction(this.field_N, var4, (byte) -78, this.field_H);
               }
             }
           } else {

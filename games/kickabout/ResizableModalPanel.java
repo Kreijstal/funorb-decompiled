@@ -103,7 +103,7 @@ abstract class ResizableModalPanel extends ModalPanel {
         }
     }
 
-    final static void l(int param0) {
+    final static void buildRotatedStarSprites(int param0) {
         int var4 = 0;
         int var1_int = 0;
         int var2 = 0;

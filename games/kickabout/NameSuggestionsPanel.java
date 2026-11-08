@@ -47,7 +47,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonListen
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_B = null;
         if (param0 != 0) {
           field_G = 118;
@@ -87,12 +87,12 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonListen
               this.field_F[var5].field_r = (WidgetPainter) ((Object) var4);
               this.field_F[var5].field_u = TextHotspotWidget.field_G;
               this.field_F[var5].setBounds(15, 1, 0, 80, var5 * 16 + 20);
-              this.a(-23, this.field_F[var5]);
+              this.addChild(-23, this.field_F[var5]);
             }
             this.field_F[var3_int] = new TextButton(PlayingView.field_K, (UiListener) (this));
             this.field_F[var3_int].field_r = (WidgetPainter) ((Object) var4);
             this.field_F[var3_int].setBounds(15, 1, 0, 100, 20 + 16 * (var3_int + 1));
-            this.a(-52, this.field_F[var3_int]);
+            this.addChild(-52, this.field_F[var3_int]);
             return;
           }
           this.field_H = null;
@@ -121,19 +121,19 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonListen
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 > -60) {
-            NameSuggestionsPanel.a((byte) -18);
+            NameSuggestionsPanel.showAccountRegistrationPanel((byte) -18);
           }
           if (super.handleKeyInput(param0, (byte) -87, param2, param3)) {
             return true;
           }
           if (param3 == 98) {
-            stackIn_9_0 = this.a(param2, (byte) -100);
+            stackIn_9_0 = this.focusPreviousChild(param2, (byte) -100);
             return stackIn_9_0;
           }
           if (99 != param3) {
             return false;
           }
-          stackIn_13_0 = this.b(param2, (byte) 127);
+          stackIn_13_0 = this.focusNextChild(param2, (byte) 127);
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -158,7 +158,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonListen
         }
     }
 
-    final static void a(byte param0) {
+    final static void showAccountRegistrationPanel(byte param0) {
         CachedArchiveSource.field_u = new AccountRegistrationPanel();
         if (param0 != -76) {
           field_B = (String) null;

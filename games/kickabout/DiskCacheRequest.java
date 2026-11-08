@@ -17,7 +17,7 @@ final class DiskCacheRequest extends ArchiveRequest {
         return 100;
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         field_w = null;
         if (param0 != -26236) {
           field_w = (String) null;

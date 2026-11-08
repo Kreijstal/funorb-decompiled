@@ -12,7 +12,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
     private int[][] field_t;
     int[] field_n;
 
-    private final void a(byte param0, int param1, PacketBuffer param2) {
+    private final void decodeTag(byte param0, int param1, PacketBuffer param2) {
         int[] array$0 = null;
         int var8 = 0;
         RuntimeException stackIn_22_0 = null;
@@ -118,7 +118,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         return var6.toString();
     }
 
-    final static Sprite a(String param0, ResourceArchive param1, byte param2, String param3) {
+    final static Sprite loadSpriteByName(String param0, ResourceArchive param1, byte param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -167,7 +167,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 < 41) {
           QuickChatPhraseDefinition.decodeBase37Name((byte) 105, -78L);
         }
@@ -178,7 +178,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         field_q = null;
     }
 
-    final void a(boolean param0) {
+    final void markGlobalPhraseIds(boolean param0) {
         int var2 = 0;
         int var3 = Kickabout.field_G;
         if (this.field_n != null) {
@@ -187,7 +187,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
           }
         }
         if (param0) {
-          QuickChatPhraseDefinition.a(-4);
+          QuickChatPhraseDefinition.releaseStatics(-4);
         }
     }
 
@@ -228,7 +228,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
           while (true) {
             var3_int = param1.readUnsignedByte((byte) -117);
             if (var3_int != 0) {
-              this.a((byte) 63, var3_int, param1);
+              this.decodeTag((byte) 63, var3_int, param1);
               continue;
             }
             break;

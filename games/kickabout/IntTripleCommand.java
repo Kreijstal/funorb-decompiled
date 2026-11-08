@@ -46,7 +46,7 @@ final class IntTripleCommand extends ConsoleCommand {
           if (param0 != 84) {
             field_E = (String) null;
           }
-          stackIn_3_0 = new ConsoleValue(SumIntegersCommand.a((byte) 120, param1[0].b(-30368)));
+          stackIn_3_0 = new ConsoleValue(SumIntegersCommand.triple((byte) 120, param1[0].asInt(-30368)));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -148,7 +148,7 @@ final class IntTripleCommand extends ConsoleCommand {
           return;
         }
         SocialRowOrderSupport.field_f = true;
-        RankingsRequest.field_l.k(103);
+        RankingsRequest.field_l.deactivateAllModals(103);
         MouseInputHandler.a(TextInputUiSupport.field_a, 4, false);
     }
 

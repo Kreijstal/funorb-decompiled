@@ -465,7 +465,7 @@ final class LineupView extends MatchPhaseView {
           this.field_j[this.field_l].h((byte) -117);
         }
         if (this.field_v) {
-          this.a(this.field_h, 240, (byte) -60, 412);
+          this.drawTeamParticipantRows(this.field_h, 240, (byte) -60, 412);
           AuctionListing.a(640, -22914, 574, 480, 0);
           var4Lifetime5 = 263;
           var11 = 0;

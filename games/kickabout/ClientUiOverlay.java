@@ -354,7 +354,7 @@ final class ClientUiOverlay implements OverlayLayer {
           if (84 != param1) {
           } else {
             if (null != SplashScreen.field_m) {
-              UiWidget.h(0);
+              UiWidget.leaveFullscreen(0);
             } else {
               ConsoleEvaluationException.a(true, param0 - 11516);
             }

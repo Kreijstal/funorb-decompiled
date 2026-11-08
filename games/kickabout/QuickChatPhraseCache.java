@@ -29,12 +29,12 @@ final class QuickChatPhraseCache {
           this.field_e.put((long)param1, var3, (byte) -116);
           return var3;
         }
-        var3.a(false);
+        var3.markGlobalPhraseIds(false);
         this.field_e.put((long)param1, var3, (byte) -116);
         return var3;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_f = null;
         if (param0 != 30297) {
           field_c = 42;

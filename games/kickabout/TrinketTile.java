@@ -58,7 +58,7 @@ final class TrinketTile extends UiLayoutNode {
           if (param2 != -32) {
             TrinketTile.releaseStatics((byte) -19);
           }
-          var4 = FriendsListPanel.h((byte) 124);
+          var4 = FriendsListPanel.findMarkedQuickChatCategory((byte) 124);
           if (var4 == null) {
             var11 = (Throwable) null;
             UnreadMessagesScreen.a("QC2", (Throwable) null, 1);

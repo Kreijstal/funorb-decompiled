@@ -72,7 +72,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
         var4 = Kickabout.field_G;
         if (SplashScreen.field_m != null &&
           SplashScreen.field_m.field_b) {
-          UiWidget.h(0);
+          UiWidget.leaveFullscreen(0);
           AudioOutputSupport.a((byte) -122);
         }
         stackIn_6_1 = 0;
@@ -123,7 +123,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
           this.paint(120);
         }
         HuffmanTextSupport.b(5);
-        TextFieldNode.c(0, 0);
+        TextFieldNode.flushWithSimulatedLag(0, 0);
         if (ClientInteractionSupport.a((byte) 10)) {
           var2 = this.pollLoginResult((byte) -65);
           if (var2 == 0 ||
@@ -179,7 +179,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
                   ConsoleEvaluationException.a(true, 0);
                 }
               } else {
-                UiWidget.h(0);
+                UiWidget.leaveFullscreen(0);
               }
               this.update(param0 - 18886, false);
             }
@@ -193,7 +193,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
                 this.update(param0 ^ -18870, false);
               } else {
                 if (null != SplashScreen.field_m) {
-                  UiWidget.h(0);
+                  UiWidget.leaveFullscreen(0);
                 }
                 if (var3 != 2) {
                   this.update(param0 ^ -18870, false);
@@ -275,7 +275,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
         int var4 = Kickabout.field_G;
         java.awt.Canvas var2 = DropTargetWidget.l(64);
         if (RegistrationUiSupport.c(608)) {
-          PlayingView.a(var2, StrongCacheEntry.g(2368), 0);
+          PlayingView.drawClientToCanvas(var2, StrongCacheEntry.g(2368), 0);
           return;
         }
         if (!CachedListingRow.field_h) {
@@ -318,7 +318,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
             return;
           }
           for (var1_int = 0; MatchHudSupport.field_a.length > var1_int; var1_int++) {
-            ClubStateFactory.field_d[var1_int] = AnimationClip.tintGrayscaleSprite(16729156, TrinketShopDialog.b((int) param0, 85), MatchHudSupport.field_a[var1_int]);
+            ClubStateFactory.field_d[var1_int] = AnimationClip.tintGrayscaleSprite(16729156, TrinketShopDialog.bitwiseXor((int) param0, 85), MatchHudSupport.field_a[var1_int]);
             ValidationIndicator.field_G[var1_int] = AnimationClip.tintGrayscaleSprite(4521796, -92, MatchHudSupport.field_a[var1_int]);
           }
           return;

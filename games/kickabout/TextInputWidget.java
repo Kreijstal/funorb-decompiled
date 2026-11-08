@@ -29,7 +29,7 @@ class TextInputWidget extends TextButton {
         }
     }
 
-    final static String a(boolean param0, String param1) {
+    final static String prefixAccountIcon(boolean param0, String param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String stackIn_8_0 = null;
@@ -211,7 +211,7 @@ class TextInputWidget extends TextButton {
         int var3 = 0;
         if (param0 >= -117) {
           PcmSampleStream var4 = (PcmSampleStream) null;
-          TextInputWidget.a((PcmSampleStream) null, -85);
+          TextInputWidget.attachSampleStream((PcmSampleStream) null, -85);
         }
         if (this.field_I != this.field_Q) {
           var2 = this.field_Q >= this.field_I ? this.field_I : this.field_Q;
@@ -249,7 +249,7 @@ class TextInputWidget extends TextButton {
         this.notifyTextChanged((byte) -85);
     }
 
-    final static SoundStreamHandle a(PcmSampleStream param0, int param1) {
+    final static SoundStreamHandle attachSampleStream(PcmSampleStream param0, int param1) {
         SoundStreamHandle var2 = null;
         RuntimeException var2_ref = null;
         SoundStreamHandle stackIn_3_0 = null;

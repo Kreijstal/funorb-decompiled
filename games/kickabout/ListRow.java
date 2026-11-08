@@ -10,7 +10,7 @@ abstract class ListRow extends UiLayoutNode {
     ListRow() {
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_Bb = null;
         field_zb = null;
         if (param0 != -18523) {

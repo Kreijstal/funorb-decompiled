@@ -113,7 +113,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
                 }
               }
             } else {
-              NameSuggestionsPanel.a((byte) -76);
+              NameSuggestionsPanel.showAccountRegistrationPanel((byte) -76);
             }
           } else {
             this.submitLogin(60);
@@ -152,13 +152,13 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
             return true;
           }
           if (param3 == 98) {
-            stackIn_9_0 = this.a(param2, (byte) -100);
+            stackIn_9_0 = this.focusPreviousChild(param2, (byte) -100);
             return stackIn_9_0;
           }
           if (param3 != 99) {
             return false;
           }
-          stackIn_12_0 = this.b(param2, (byte) 126);
+          stackIn_12_0 = this.focusNextChild(param2, (byte) 126);
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -309,11 +309,11 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           }
           dupTemp$0 = new CaptionedContainer(10, this.field_g, -20 + this.field_n, 25, this.field_N, false, 80, 3, var7, 16777215, var8);
           var12 = dupTemp$0;
-          this.a(-120, dupTemp$0);
+          this.addChild(-120, dupTemp$0);
           this.field_g = this.field_g + (((UiWidget) ((Object) var12)).field_i + 5);
           dupTemp$1 = new CaptionedContainer(10, this.field_g, -20 + this.field_n, 25, this.field_J, false, 80, 3, var7, 16777215, TrinketTile.field_Ib);
           var13 = dupTemp$1;
-          this.a(-55, dupTemp$1);
+          this.addChild(-55, dupTemp$1);
           this.field_K.field_k = (UiListener) (this);
           this.field_g = this.field_g + (((UiWidget) ((Object) var13)).field_i + 5);
           if (this.field_L != null) {
@@ -344,12 +344,12 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
             }
           }
           this.setBounds(this.field_g + 3, 1, 0, this.field_n, 0);
-          this.a(-63, this.field_K);
+          this.addChild(-63, this.field_K);
           if (null != this.field_L) {
-            this.a(-42, this.field_L);
+            this.addChild(-42, this.field_L);
           }
           if (this.field_F != null) {
-            this.a(-82, this.field_F);
+            this.addChild(-82, this.field_F);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -174,7 +174,7 @@ final class MenuButton {
                                                                 if (SplashScreen.field_m == null) {
                                                                   ConsoleEvaluationException.a(param1, 0);
                                                                 } else {
-                                                                  UiWidget.h(0);
+                                                                  UiWidget.leaveFullscreen(0);
                                                                 }
                                                                 SpriteButtonPainter.field_v = 2147483647;
                                                               }
@@ -253,7 +253,7 @@ final class MenuButton {
           var5 = var3;
         }
         if (this.kind == 17) {
-          ConsoleValue.a(var5, (byte) 20);
+          ConsoleValue.setMusicVolume(var5, (byte) 20);
         }
         if (this.kind == 16) {
           MeshPreviewSupport.a(var5, (byte) -121);
@@ -287,7 +287,7 @@ final class MenuButton {
             var7 = var6;
           }
           if (this.kind == 17) {
-            ConsoleValue.a(var7, (byte) 46);
+            ConsoleValue.setMusicVolume(var7, (byte) 46);
           }
           if (16 == this.kind) {
             MeshPreviewSupport.a(var7, (byte) -121);
@@ -345,9 +345,9 @@ final class MenuButton {
             if (!QuickChatKeysHelpPanel.field_Cb.a(false, "stadium_icon")) {
               return;
             }
-            var7 = ModalStack.a(QuickChatKeysHelpPanel.field_Cb, 53, "stadium_icon", "park");
-            var8 = ModalStack.a(QuickChatKeysHelpPanel.field_Cb, param0 ^ 20, "stadium_icon", "beach");
-            var3 = ModalStack.a(QuickChatKeysHelpPanel.field_Cb, -121, "stadium_icon", "street");
+            var7 = ModalStack.loadSpriteSheetByName(QuickChatKeysHelpPanel.field_Cb, 53, "stadium_icon", "park");
+            var8 = ModalStack.loadSpriteSheetByName(QuickChatKeysHelpPanel.field_Cb, param0 ^ 20, "stadium_icon", "beach");
+            var3 = ModalStack.loadSpriteSheetByName(QuickChatKeysHelpPanel.field_Cb, -121, "stadium_icon", "street");
             var4 = new Sprite[12];
             for (var5 = 0; var5 < 4; var5++) {
               var4[var5] = var7[var5];
@@ -360,15 +360,15 @@ final class MenuButton {
             if (!QuickChatKeysHelpPanel.field_Cb.a(false, "instructions")) {
               return;
             }
-            var9 = QuickChatPhraseDefinition.a("instructions", QuickChatKeysHelpPanel.field_Cb, (byte) 119, "arrowkey");
-            var10 = QuickChatPhraseDefinition.a("instructions", QuickChatKeysHelpPanel.field_Cb, (byte) 43, "key");
+            var9 = QuickChatPhraseDefinition.loadSpriteByName("instructions", QuickChatKeysHelpPanel.field_Cb, (byte) 119, "arrowkey");
+            var10 = QuickChatPhraseDefinition.loadSpriteByName("instructions", QuickChatKeysHelpPanel.field_Cb, (byte) 43, "key");
             AccountRegistrationPanel.field_C = AuctionsScreen.a(3, var9);
             DebugConsole.field_y = new Sprite[][]{ThumbnailStateFactory.createThumbnailStates(0, PlatformTaskState.field_a, var10, var10.field_o), ThumbnailStateFactory.createThumbnailStates(0, SocialUiState.field_c, var10, 62)};
             PlayAreaMovementSupport.field_d = new Sprite[]{ThumbnailStateFactory.createThumbnailStates(0, RasterGammaSupport.field_d[0], var10, 50)[1], ThumbnailStateFactory.createThumbnailStates(param0 - 2, RasterGammaSupport.field_d[1], var10, 50)[1]};
-            DirectByteStorage.field_g = QuickChatPhraseDefinition.a("instructions", QuickChatKeysHelpPanel.field_Cb, (byte) 78, "mouse");
-            RegistrationRequestDialog.field_qb = QuickChatPhraseDefinition.a("instructions", QuickChatKeysHelpPanel.field_Cb, (byte) 108, "mouse_left");
-            PlayerInputEvent.field_q = QuickChatPhraseDefinition.a("instructions", QuickChatKeysHelpPanel.field_Cb, (byte) 103, "mouse_right");
-            WorldDrawEntry.field_f = QuickChatPhraseDefinition.a("instructions", QuickChatKeysHelpPanel.field_Cb, (byte) 106, "mouse_roller");
+            DirectByteStorage.field_g = QuickChatPhraseDefinition.loadSpriteByName("instructions", QuickChatKeysHelpPanel.field_Cb, (byte) 78, "mouse");
+            RegistrationRequestDialog.field_qb = QuickChatPhraseDefinition.loadSpriteByName("instructions", QuickChatKeysHelpPanel.field_Cb, (byte) 108, "mouse_left");
+            PlayerInputEvent.field_q = QuickChatPhraseDefinition.loadSpriteByName("instructions", QuickChatKeysHelpPanel.field_Cb, (byte) 103, "mouse_right");
+            WorldDrawEntry.field_f = QuickChatPhraseDefinition.loadSpriteByName("instructions", QuickChatKeysHelpPanel.field_Cb, (byte) 106, "mouse_roller");
           }
           if (param0 != 2) {
             field_l = 67;

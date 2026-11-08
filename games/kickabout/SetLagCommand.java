@@ -126,7 +126,7 @@ final class SetLagCommand extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 84) {
-            stackIn_4_0 = new ConsoleValue(TextFieldNode.e(-63, param1[0].b(-30368)));
+            stackIn_4_0 = new ConsoleValue(TextFieldNode.e(-63, param1[0].asInt(-30368)));
             return stackIn_4_0;
           }
           stackIn_2_0 = (ConsoleValue) null;
@@ -196,9 +196,9 @@ final class SetLagCommand extends ConsoleCommand {
         if (null != WorldSpriteSequence.field_f) {
           WorldSpriteSequence.field_f.closeDialog(-96);
         }
-        String var1 = TextFieldNode.a(-110);
+        String var1 = TextFieldNode.getSuggestedLoginName(-110);
         IsSixCommand.field_E = new LoginForm(var1, (String) null, param0, false, false);
-        RankingsRequest.field_l.a(ClientUiUpdateSupport.field_a, false);
+        RankingsRequest.field_l.pushModal(ClientUiUpdateSupport.field_a, false);
         ClientUiUpdateSupport.field_a.a((byte) -126, (UiWidget) (IsSixCommand.field_E));
         ClientUiUpdateSupport.field_a.finishTransition(4000);
     }

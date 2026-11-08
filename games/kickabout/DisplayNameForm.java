@@ -46,11 +46,11 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
         RuntimeException decompiledCaughtException = null;
         try {
           var11 = new CaptionedContainer(20, param5, param1 + 120, 25, param3, false, 120, 3, ModelMaterial.field_a, 16777215, param0);
-          this.a(-55, var11);
+          this.addChild(-55, var11);
           var9 = new ValidationHelpWidget(((ValidationProvider) ((Object) param3)).getValidationSource((byte) -120), param6, 126, var11.field_i + param5, param1 + 25, param2);
           var9.field_k = (UiListener) (this);
           var10 = -123 % ((param4 - 24) / 41);
-          this.a(-58, var9);
+          this.addChild(-58, var9);
           stackIn_1_0 = var9.field_i + var11.field_i;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -130,13 +130,13 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
             this.field_B = (TextButton) null;
           }
           if (98 == param3) {
-            stackIn_9_0 = this.a(param2, (byte) -100);
+            stackIn_9_0 = this.focusPreviousChild(param2, (byte) -100);
             return stackIn_9_0;
           }
           if (param3 != 99) {
             return false;
           }
-          stackIn_13_0 = this.b(param2, (byte) 123);
+          stackIn_13_0 = this.focusNextChild(param2, (byte) 123);
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -169,18 +169,18 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
         int var4 = 4;
         int var5 = 200;
         var2.setBounds(50, 1, 20, 270, var3);
-        this.a(-86, var2);
+        this.addChild(-86, var2);
         var3 += 50;
         var3 = var3 + (5 + this.a(var3, MusicPatch.field_i, GoalStateAgent.field_f, this.field_C, (byte) 29, 170));
         this.field_B.setBounds(40, 1, -var5 + 496 >> 1, var5, var3);
         this.field_E.setBounds(40, 1, var4 + 3, 60, 15 + var3);
         this.field_E.field_k = (UiListener) (this);
         this.field_B.field_k = (UiListener) (this);
-        this.a(-50, this.field_B);
-        this.a(-84, this.field_E);
+        this.addChild(-50, this.field_B);
+        this.addChild(-84, this.field_E);
         this.field_G = new NameSuggestionsPanel((NameSuggestionListener) (this));
         this.field_G.setBounds(150, 1, this.field_C.field_t + (this.field_C.field_n + 60), -this.field_C.field_n + this.field_n - this.field_C.field_t - 60, 20);
-        this.a(-16, this.field_G);
+        this.addChild(-16, this.field_G);
         this.setBounds(var4 + (var3 + 55), 1, 0, 496, 0);
     }
 

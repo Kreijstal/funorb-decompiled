@@ -64,7 +64,7 @@ abstract class TextFieldValidator extends DebouncedValidationProvider implements
           if (param0 > 84) {
             return new ChatMessage(param1);
           }
-          TextFieldValidator.b((byte) 82);
+          TextFieldValidator.releaseStatics((byte) 82);
           return new ChatMessage(param1);
         }
         var5 = var8.readUnsignedShort((byte) 81);
@@ -86,13 +86,13 @@ abstract class TextFieldValidator extends DebouncedValidationProvider implements
           if (param0 > 84) {
             return new ChatMessage(param1);
           }
-          TextFieldValidator.b((byte) 82);
+          TextFieldValidator.releaseStatics((byte) 82);
           return new ChatMessage(param1);
         }
         if (param0 > 84) {
           return new ChatMessage(param1);
         }
-        TextFieldValidator.b((byte) 82);
+        TextFieldValidator.releaseStatics((byte) 82);
         return new ChatMessage(param1);
     }
 
@@ -167,7 +167,7 @@ abstract class TextFieldValidator extends DebouncedValidationProvider implements
 
     abstract String describeText(byte param0, String param1);
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = 91 % ((-57 - param0) / 62);
         field_g = null;
         field_d = null;
@@ -251,7 +251,7 @@ abstract class TextFieldValidator extends DebouncedValidationProvider implements
           if (param0 > 84) {
             return new ChatMessage(param1);
           }
-          TextFieldValidator.b((byte) 82);
+          TextFieldValidator.releaseStatics((byte) 82);
           return new ChatMessage(param1);
         }
         var5 = var8.readUnsignedShort((byte) 81);
@@ -273,13 +273,13 @@ abstract class TextFieldValidator extends DebouncedValidationProvider implements
           if (param0 > 84) {
             return new ChatMessage(param1);
           }
-          TextFieldValidator.b((byte) 82);
+          TextFieldValidator.releaseStatics((byte) 82);
           return new ChatMessage(param1);
         }
         if (param0 > 84) {
           return new ChatMessage(param1);
         }
-        TextFieldValidator.b((byte) 82);
+        TextFieldValidator.releaseStatics((byte) 82);
         return new ChatMessage(param1);
     }
 }

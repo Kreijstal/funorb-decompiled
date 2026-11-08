@@ -197,7 +197,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
             this.field_Q = (TextButton) null;
           }
           var6 = new CaptionedContainer(20, param3, param0 + 120, 25, param4, false, 120, 3, ModelMaterial.field_a, 16777215, param1);
-          this.a(-54, var6);
+          this.addChild(-54, var6);
           stackIn_3_0 = var6.field_i;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -266,7 +266,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         var3 = var3 + (this.addFieldWithValidationHelp(this.field_E, GoalStateAgent.field_f, 35, 170, var3, MusicPatch.field_i) + 5);
         var3 = var3 + this.addValidatedField(var3, GameOptionMenuSupport.field_a, 170, this.field_J, (byte) 117);
         CaptionedContainer var4 = new CaptionedContainer(46, var3, -90 + this.field_n, 25, this.field_O, true, this.field_n - 120, 5, EmailSyntaxValidator.field_k, 11579568, StrongCacheEntry.field_v);
-        this.a(-35, var4);
+        this.addChild(-35, var4);
         var3 = var3 + var4.field_i;
         TextWidgetPainter var5 = new TextWidgetPainter(ModelMaterial.field_a, 0, 0, 0, 0, 16777215, -1, 0, 0, ModelMaterial.field_a.field_G, -1, 2147483647, true);
         this.field_R = new TextHotspotWidget(var2, var5);
@@ -276,18 +276,18 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         this.field_R.field_k = (UiListener) (this);
         this.field_R.c(-1, this.field_n - 90, 46, var3);
         var3 = var3 + (15 + this.field_R.field_i);
-        this.a(-45, this.field_R);
+        this.addChild(-45, this.field_R);
         int var6 = 4;
         int var7 = 200;
         this.field_Q.setBounds(40, 1, -var7 + 496 >> 1, var7, var3);
         this.field_F.setBounds(40, 1, 3 + var6, 60, var3 + 15);
         this.field_F.field_k = (UiListener) (this);
         this.field_Q.field_k = (UiListener) (this);
-        this.a(-106, this.field_Q);
-        this.a(-29, this.field_F);
+        this.addChild(-106, this.field_Q);
+        this.addChild(-29, this.field_F);
         this.field_L = new NameSuggestionsPanel((NameSuggestionListener) (this));
         this.field_L.setBounds(150, 1, 60 + this.field_E.field_n + this.field_E.field_t, this.field_n - this.field_E.field_t + (-this.field_E.field_n - 60), this.field_E.field_g + 20);
-        this.a(-56, this.field_L);
+        this.addChild(-56, this.field_L);
         this.setBounds(var6 + (55 + var3), 1, 0, 496, 0);
     }
 
@@ -311,10 +311,10 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
             stackIn_2_0 = -97;
             return stackIn_2_0;
           }
-          this.a(-84, var10);
+          this.addChild(-84, var10);
           var9 = new ValidationHelpWidget(((ValidationProvider) ((Object) param3)).getValidationSource((byte) -128), param5, 126, var10.field_i + param6, 50 + param4, param0);
           var9.field_k = (UiListener) (this);
-          this.a(-42, var9);
+          this.addChild(-42, var9);
           stackIn_4_0 = var10.field_i + var9.field_i;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -563,9 +563,9 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         try {
           var6_int = 94 / ((10 - param4) / 49);
           var7 = new CaptionedContainer(20, param0, param2 + 120, 25, param3, false, 120, 3, ModelMaterial.field_a, 16777215, param1);
-          this.a(-111, var7);
+          this.addChild(-111, var7);
           var8 = new ValidationIndicator(((ValidationProvider) ((Object) param3)).getValidationSource((byte) -117));
-          this.a(-48, var8);
+          this.addChild(-48, var8);
           var8.setBounds(15, 1, 3 + (var7.field_n + var7.field_t), 15, var7.field_g + (var7.field_i - 15 >> 1));
           stackIn_1_0 = var7.field_i;
           return stackIn_1_0;
@@ -605,13 +605,13 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
             return false;
           }
           if (param3 == 98) {
-            stackIn_9_0 = this.a(param2, (byte) -100);
+            stackIn_9_0 = this.focusPreviousChild(param2, (byte) -100);
             return stackIn_9_0;
           }
           if (param3 != 99) {
             return false;
           }
-          stackIn_13_0 = this.b(param2, (byte) 123);
+          stackIn_13_0 = this.focusNextChild(param2, (byte) 123);
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

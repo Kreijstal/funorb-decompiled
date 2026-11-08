@@ -28,7 +28,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
             param0.setBounds(param0.field_i, 1, 6, param0.field_n, this.field_R + 6);
             this.field_ab = new AlphaContainer(param0);
           }
-          this.a(-83, this.field_ab);
+          this.addChild(-83, this.field_ab);
           this.field_V = null;
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "mu.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

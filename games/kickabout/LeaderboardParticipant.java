@@ -88,10 +88,10 @@ final class LeaderboardParticipant {
           LoadingProgressDialog.field_Q = param12;
           IntValueNode.field_f = param3;
           GradientRasterSupport.field_g = param6;
-          TextFieldValidator.field_d = ModalStack.a(param9, 70, "lobby", "gameprivacy");
-          CachedArchiveSource.field_m = ModalStack.a(param9, 86, "lobby", "ratedgame");
-          MarkerSliderWidget.field_L = ModalStack.a(param9, -6, "lobby", "opentome");
-          MessageDialog.field_E = ModalStack.a(param9, -119, "lobby", "allowspectators");
+          TextFieldValidator.field_d = ModalStack.loadSpriteSheetByName(param9, 70, "lobby", "gameprivacy");
+          CachedArchiveSource.field_m = ModalStack.loadSpriteSheetByName(param9, 86, "lobby", "ratedgame");
+          MarkerSliderWidget.field_L = ModalStack.loadSpriteSheetByName(param9, -6, "lobby", "opentome");
+          MessageDialog.field_E = ModalStack.loadSpriteSheetByName(param9, -119, "lobby", "allowspectators");
           WidgetContainer.field_w = new String[5];
           WidgetContainer.field_w[0] = ConsoleExpression.field_m;
           WidgetContainer.field_w[4] = TeamSelectionAgent.field_g;

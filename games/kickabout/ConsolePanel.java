@@ -539,7 +539,7 @@ abstract class ConsolePanel implements OverlayLayer {
           var15.field_B = 2;
           var15.field_X = this.field_d;
           this.field_k = new TextFieldNode(0L, var7, var11, var15);
-          this.field_k.a(-630, this.field_g.field_s, 5 + (this.field_g.field_J + this.field_g.field_mb), var3_int, this.field_g.field_q);
+          this.field_k.layoutTextField(-630, this.field_g.field_s, 5 + (this.field_g.field_J + this.field_g.field_mb), var3_int, this.field_g.field_q);
           this.field_k.setPlatformDispatcher(param1, -17421);
           this.field_l.addChild((byte) -119, (UiLayoutNode) (this.field_k));
           this.field_j = new UiLayoutNode(0L, var12);

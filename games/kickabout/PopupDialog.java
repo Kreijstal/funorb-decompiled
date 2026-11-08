@@ -78,7 +78,7 @@ abstract class PopupDialog extends IntrusiveNode {
 
     abstract void handleResult(int param0, int param1);
 
-    public static void c(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (param0) {
           field_g = (java.security.SecureRandom) null;
         }

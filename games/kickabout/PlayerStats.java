@@ -353,7 +353,7 @@ final class PlayerStats implements PopupCard {
 
     final static void e(int param0) {
         if (RankingsRequest.field_l != null) {
-          RankingsRequest.field_l.l(param0 ^ -5172);
+          RankingsRequest.field_l.finishModalAnimations(param0 ^ -5172);
         }
         if (param0 != -1456) {
           PlayerStats.releaseStatics(3);

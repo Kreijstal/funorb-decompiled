@@ -46,10 +46,10 @@ final class AgeValidator extends TextFieldValidator {
         }
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_j = null;
         if (param0 < 16) {
-          AgeValidator.c((byte) -116);
+          AgeValidator.releaseStatics((byte) -116);
         }
     }
 

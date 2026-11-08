@@ -38,11 +38,11 @@ final class ConsoleLexer {
     }
 
     final static void showLoadingProgressDialog(int param0) {
-        RankingsRequest.field_l.k(119);
+        RankingsRequest.field_l.deactivateAllModals(119);
         if (AnimationClip.field_d == null) {
           AnimationClip.field_d = new LoadingProgressDialog(RankingsRequest.field_l, CachedTextLayout.field_m);
         }
-        RankingsRequest.field_l.a(AnimationClip.field_d, false);
+        RankingsRequest.field_l.pushModal(AnimationClip.field_d, false);
         if (param0 == -45) {
           return;
         }

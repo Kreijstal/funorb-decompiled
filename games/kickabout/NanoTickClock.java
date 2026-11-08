@@ -74,7 +74,7 @@ final class NanoTickClock extends TickClock {
             var5.field_o = TournamentChampionDialog.a(var5.field_o, param1, 16, 106);
           }
           if (ContentTransitionDialog.a(param1, (byte) -39)) {
-            var5.field_G = ColumnTableWidget.a(2280703, param1, var5.field_G, 16);
+            var5.field_G = ColumnTableWidget.readPackedByteArray(2280703, param1, var5.field_G, 16);
             var6 = 0;
             for (var7 = 0; var5.field_G.length > var7; var7++) {
               if (var6 < (var5.field_G[var7] & 255)) {
