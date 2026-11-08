@@ -97,7 +97,7 @@ final class TextHotspotRegion extends IntrusiveNode {
           for (var3 = 0; var1_int > var3; var3++) {
             var4_ref_oc = ShotRecord.field_S[var3];
             var4_ref_oc.updateBounds((byte) 87);
-            ShotRecord.b(0, var3);
+            ShotRecord.updateIntroPieceRotation(0, var3);
             var5 = var4_ref_oc.minX + var4_ref_oc.maxX >> 1;
             var6 = var4_ref_oc.maxY + var4_ref_oc.minY >> 1;
             var7 = var4_ref_oc.minZ + var4_ref_oc.maxZ >> 1;
@@ -145,7 +145,7 @@ final class TextHotspotRegion extends IntrusiveNode {
             }
             var20[var16] = -2147483648;
             var17 = ShotRecord.field_S[var16];
-            ShotRecord.b(0, var16);
+            ShotRecord.updateIntroPieceRotation(0, var16);
             for (var18 = 0; var18 < 3; var18++) {
               IsaacCipher.field_b[var18] = IsaacCipher.field_b[var18] + QuickChatMenu.field_gc[var15][var18];
             }

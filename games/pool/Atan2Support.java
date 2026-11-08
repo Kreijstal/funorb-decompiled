@@ -126,7 +126,7 @@ final class Atan2Support {
         String stackIn_32_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (HotspotRectangle.a(1, password)) {
+          if (HotspotRectangle.containsNonAlphanumeric(1, password)) {
             return false;
           }
           if (IterableNodeHashTable.hasUniformCharacters(password, -106)) {

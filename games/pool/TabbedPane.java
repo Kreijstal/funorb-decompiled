@@ -57,11 +57,11 @@ final class TabbedPane extends UiComponent {
         field_Ub = null;
     }
 
-    final static String b(int param0, int param1) {
-        if (param1 <= 51) {
+    final static String describeShotOutcomeFlags(int flags, int obfuscationGuard) {
+        if (obfuscationGuard <= 51) {
           return (String) null;
         }
-        return ((param0 & MarkerSliderPainter.field_j) == 0 ? "" : "cont vis|") + ((ThemeSelectScreen.field_O & param0) == 0 ? "" : "gv visit+1|") + ((OptionsScreen.field_I & param0) == 0 ? "" : "gv shot+1|") + (0 == (param0 & AccountWelcomePanel.field_Q) ? "" : "gv BiH anywhere|") + (0 != (AccountWelcomePanel.field_R & param0) ? "gv BiH kitchen|" : "") + ((AccountWelcomePanel.field_V & param0) == 0 ? "" : "gv BiH in D|") + ((ScreenProjectionSupport.field_e & param0) != 0 ? "wins|" : "") + ((Quaternion.field_e & param0) == 0 ? "" : "loses|") + ((param0 & ClientException.field_b) == 0 ? "" : "group choice|") + (0 != (param0 & MeshBase.field_c) ? "respot white|" : "") + ((param0 & MenuScreen.field_F) == 0 ? "" : "rerack|") + (0 != (BrowserUrlSupport.field_f & param0) ? "ends turn|" : "");
+        return ((flags & MarkerSliderPainter.field_j) == 0 ? "" : "cont vis|") + ((ThemeSelectScreen.field_O & flags) == 0 ? "" : "gv visit+1|") + ((OptionsScreen.field_I & flags) == 0 ? "" : "gv shot+1|") + (0 == (flags & AccountWelcomePanel.field_Q) ? "" : "gv BiH anywhere|") + (0 != (AccountWelcomePanel.field_R & flags) ? "gv BiH kitchen|" : "") + ((AccountWelcomePanel.field_V & flags) == 0 ? "" : "gv BiH in D|") + ((ScreenProjectionSupport.field_e & flags) != 0 ? "wins|" : "") + ((Quaternion.field_e & flags) == 0 ? "" : "loses|") + ((flags & ClientException.field_b) == 0 ? "" : "group choice|") + (0 != (flags & MeshBase.field_c) ? "respot white|" : "") + ((flags & MenuScreen.field_F) == 0 ? "" : "rerack|") + (0 != (BrowserUrlSupport.field_f & flags) ? "ends turn|" : "");
     }
 
     TabbedPane(long param0, UiComponent param1, String[] param2, UiComponent param3, UiComponent[] param4, int param5) {

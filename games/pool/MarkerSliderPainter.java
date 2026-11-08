@@ -127,7 +127,7 @@ final class MarkerSliderPainter implements WidgetPainter {
         if (obfuscationGuard > -82) {
           field_i = (IntrusiveDeque) null;
         }
-        PacketDiagnosticsSupport.a(110, true, true);
+        PacketDiagnosticsSupport.initializeLoginDialog(110, true, true);
     }
 
     final static void recenterTextureTriangles(MeshBuilder mesh, byte obfuscationGuard) {

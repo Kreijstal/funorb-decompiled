@@ -28,7 +28,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           var5 = (CharSequence) ((Object) param0);
-          var3 = NameNormalizationSupport.a(var5, param1 - 89);
+          var3 = NameNormalizationSupport.validateAccountName(var5, param1 - 89);
           if (var3 != null) {
             stackIn_2_0 = var3;
             return stackIn_2_0;
@@ -37,7 +37,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
             field_u = (Sprite) null;
           }
           if (!param0.equals(this.cachedUsernameCandidate)) {
-            var4 = PasswordInputPainter.a(param0, 118);
+            var4 = PasswordInputPainter.pollUsernameAvailability(param0, 118);
             if (var4 == null) {
               return null;
             }
@@ -82,7 +82,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = (CharSequence) ((Object) param0);
-          if (!IterableDualLinkDeque.a((byte) -64, var4)) {
+          if (!IterableDualLinkDeque.isValidAccountName((byte) -64, var4)) {
             stackIn_2_0 = AchievementProtocolSupport.field_d;
             return stackIn_2_0;
           }
@@ -91,7 +91,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
             return stackIn_5_0;
           }
           if (!param0.equals(this.cachedUsernameCandidate)) {
-            var3 = PasswordInputPainter.a(param0, -51);
+            var3 = PasswordInputPainter.pollUsernameAvailability(param0, -51);
             if (var3 != null &&
               var3.field_b == null) {
               this.cachedUsernameCandidate = param0;
@@ -149,8 +149,8 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
         startgame = null;
     }
 
-    final static void b(boolean param0) {
-        if (!param0) {
+    final static void drawDecisionDialog(boolean obfuscationGuard) {
+        if (!obfuscationGuard) {
           startgame = (String) null;
           if (GzipDecoder.field_h) {
             LobbyGame.field_Vb.drawRoot((byte) -79, false);

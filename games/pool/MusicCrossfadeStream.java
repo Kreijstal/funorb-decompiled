@@ -23,8 +23,8 @@ final class MusicCrossfadeStream extends PcmStream {
     static String[] field_H;
     static int[] field_B;
 
-    final static void c(int param0) {
-        if (param0 != 946) {
+    final static void initializeReflectionCheckQueue(int obfuscationGuard) {
+        if (obfuscationGuard != 946) {
           return;
         }
         MessageScreen.field_H = new IntrusiveDeque();
@@ -181,7 +181,7 @@ final class MusicCrossfadeStream extends PcmStream {
         }
     }
 
-    final static PlayingSound a(int param0, PcmSampleStream param1) {
+    final static PlayingSound registerReverberatedSound(int obfuscationGuard, PcmSampleStream stream) {
         PlayingSound var2 = null;
         RuntimeException var2_ref = null;
         PlayingSound stackIn_2_0 = null;
@@ -191,21 +191,21 @@ final class MusicCrossfadeStream extends PcmStream {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = new PlayingSound(param1, param1);
-          if (param0 < 93) {
+          var2 = new PlayingSound(stream, stream);
+          if (obfuscationGuard < 93) {
             stackIn_2_0 = (PlayingSound) null;
             return stackIn_2_0;
           }
           UsernameSuggestionsPanel.field_R.addFirst((byte) -108, var2);
-          ReportAbuseDialog.field_Xb.addSubstream(param1);
+          ReportAbuseDialog.field_Xb.addSubstream(stream);
           stackIn_4_0 = var2;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
           stackIn_7_0 = var2_ref;
-          stackIn_7_1 = new StringBuilder().append("rq.K(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_7_1 = new StringBuilder().append("rq.K(").append(obfuscationGuard).append(',');
+          if (stream == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
@@ -214,7 +214,7 @@ final class MusicCrossfadeStream extends PcmStream {
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void showShortcutNotification(int obfuscationGuard, int shortcutIndex) {
         String dupTemp$0 = null;
         PoolMatchController stackIn_8_0 = null;
         StringBuilder stackIn_15_0 = null;
@@ -225,11 +225,11 @@ final class MusicCrossfadeStream extends PcmStream {
         String var5;
         String var6;
         String var3Lifetime1;
-        if (param0 != 0) {
-          MusicCrossfadeStream.c(-63);
+        if (obfuscationGuard != 0) {
+          MusicCrossfadeStream.initializeReflectionCheckQueue(-63);
         }
-        if (ContentTransitionDialog.field_pb.length > param1 &&
-          0L != (1L << param1 & LinkButtonPainter.field_i)) {
+        if (ContentTransitionDialog.field_pb.length > shortcutIndex &&
+          0L != (1L << shortcutIndex & LinkButtonPainter.field_i)) {
           if (null == AccountContentDialog.field_ub) {
             stackIn_8_0 = TextWidgetPainter.field_e;
           } else {
@@ -239,7 +239,7 @@ final class MusicCrossfadeStream extends PcmStream {
           if (var2 != null) {
             var6 = new String(new char[]{(char)65, (char)108, (char)116, (char)32});
             var3 = var6;
-            var4 = param1 / 10;
+            var4 = shortcutIndex / 10;
             if (0 != (2 & var4)) {
               var3 = var6 + "Ctrl ";
             }
@@ -247,15 +247,15 @@ final class MusicCrossfadeStream extends PcmStream {
               var3 = var3 + "Shift ";
             }
             stackIn_15_0 = new StringBuilder().append(var3);
-            if (param1 % 10 < 9) {
-              stackIn_16_1 = Integer.toString(param1 % 10 + 1);
+            if (shortcutIndex % 10 < 9) {
+              stackIn_16_1 = Integer.toString(shortcutIndex % 10 + 1);
             } else {
               stackIn_16_1 = "0";
             }
             dupTemp$0 = ((StringBuilder) (Object) stackIn_15_0).append(stackIn_16_1).toString();
             var5 = dupTemp$0;
             var3Lifetime1 = dupTemp$0;
-            ProgressBarWidget.replaceNotification(true, 0, var5 + ": " + ContentTransitionDialog.field_pb[param1][0], ContentTransitionDialog.field_pb[param1][1]);
+            ProgressBarWidget.replaceNotification(true, 0, var5 + ": " + ContentTransitionDialog.field_pb[shortcutIndex][0], ContentTransitionDialog.field_pb[shortcutIndex][1]);
           }
         }
     }
@@ -417,7 +417,7 @@ final class MusicCrossfadeStream extends PcmStream {
         }
     }
 
-    final static boolean a(int param0, int param1, boolean param2, double param3, int param4, double[] param5, int[] param6) {
+    final static boolean unprojectPointerToPlane(int planeZ, int screenY, boolean obfuscationGuard, double projectionScale, int screenX, double[] worldPoint, int[] cameraTransform) {
         int var8_int = 0;
         RuntimeException var8 = null;
         int var9 = 0;
@@ -433,34 +433,34 @@ final class MusicCrossfadeStream extends PcmStream {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var8_int = param4 - 320;
-          var9 = param1 - 240;
-          var10 = -param3 * (double)((float)param6[6] * 0.0000152587890625f * (float)var9) / 512.0 + ((double)(0.0000152587890625f * (float)param6[9]) * -param3 + (double)((float)var8_int * ((float)param6[3] * 0.0000152587890625f)) * -param3 / 512.0);
-          var12 = (double)(0.0000152587890625f * (float)param6[10]) * -param3 + (double)((float)var8_int * ((float)param6[4] * 0.0000152587890625f)) * -param3 / 512.0 + (double)((float)var9 * ((float)param6[7] * 0.0000152587890625f)) * -param3 / 512.0;
-          var14 = -param3 * (double)((float)param6[8] * 0.0000152587890625f * (float)var9) / 512.0 + ((double)(0.0000152587890625f * (float)param6[11]) * -param3 + (double)((float)var8_int * (0.0000152587890625f * (float)param6[5])) * -param3 / 512.0);
+          var8_int = screenX - 320;
+          var9 = screenY - 240;
+          var10 = -projectionScale * (double)((float)cameraTransform[6] * 0.0000152587890625f * (float)var9) / 512.0 + ((double)(0.0000152587890625f * (float)cameraTransform[9]) * -projectionScale + (double)((float)var8_int * ((float)cameraTransform[3] * 0.0000152587890625f)) * -projectionScale / 512.0);
+          var12 = (double)(0.0000152587890625f * (float)cameraTransform[10]) * -projectionScale + (double)((float)var8_int * ((float)cameraTransform[4] * 0.0000152587890625f)) * -projectionScale / 512.0 + (double)((float)var9 * ((float)cameraTransform[7] * 0.0000152587890625f)) * -projectionScale / 512.0;
+          var14 = -projectionScale * (double)((float)cameraTransform[8] * 0.0000152587890625f * (float)var9) / 512.0 + ((double)(0.0000152587890625f * (float)cameraTransform[11]) * -projectionScale + (double)((float)var8_int * (0.0000152587890625f * (float)cameraTransform[5])) * -projectionScale / 512.0);
           var16 = Math.sqrt(var10 * var10 + var12 * var12 + var14 * var14);
           var14 = var14 / var16;
           var12 = var12 / var16;
           var10 = var10 / var16;
-          var18 = (double)(-param6[2] + param0) / var14;
-          if (param2) {
-            MusicCrossfadeStream.a((byte) -106, -122);
+          var18 = (double)(-cameraTransform[2] + planeZ) / var14;
+          if (obfuscationGuard) {
+            MusicCrossfadeStream.flushPacketsWithSimulatedDelay((byte) -106, -122);
           }
-          param5[0] = ((double)param6[0] + var10 * var18) / 8.0;
-          param5[1] = ((double)param6[1] + var12 * var18) / 8.0;
+          worldPoint[0] = ((double)cameraTransform[0] + var10 * var18) / 8.0;
+          worldPoint[1] = ((double)cameraTransform[1] + var12 * var18) / 8.0;
           return ((0.0 > var14));
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
           stackIn_8_0 = var8;
-          stackIn_8_1 = new StringBuilder().append("rq.F(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
-          if (param5 == null) {
+          stackIn_8_1 = new StringBuilder().append("rq.F(").append(planeZ).append(',').append(screenY).append(',').append(obfuscationGuard).append(',').append(projectionScale).append(',').append(screenX).append(',');
+          if (worldPoint == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
           }
           stackIn_11_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',');
-          if (param6 == null) {
+          if (cameraTransform == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
@@ -469,7 +469,7 @@ final class MusicCrossfadeStream extends PcmStream {
         }
     }
 
-    final static void a(byte param0, int param1) {
+    final static void flushPacketsWithSimulatedDelay(byte obfuscationGuard, int flushParameter) {
         RuntimeException decompiledCaughtException = null;
         long var2_long = 0L;
         RuntimeException var2 = null;
@@ -522,15 +522,15 @@ final class MusicCrossfadeStream extends PcmStream {
               JaggrabDownloader.field_j.position = var13.field_r;
             }
           }
-          if (param0 >= -16) {
-            MusicCrossfadeStream.a((byte) -17, -81);
+          if (obfuscationGuard >= -16) {
+            MusicCrossfadeStream.flushPacketsWithSimulatedDelay((byte) -17, -81);
           }
-          DebugTuningSupport.flushClientPackets(param1, 0);
+          DebugTuningSupport.flushClientPackets(flushParameter, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "rq.L(" + param0 + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "rq.L(" + obfuscationGuard + ',' + flushParameter + ')');
         }
     }
 

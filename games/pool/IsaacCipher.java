@@ -251,7 +251,7 @@ final class IsaacCipher {
               var2_int++;
             }
           }
-          mesh.field_o = OpacityWidget.a((byte) 60, mesh.field_o, var2_int);
+          mesh.field_o = OpacityWidget.extendByteArrayWithZeros((byte) 60, mesh.field_o, var2_int);
           mesh.field_p = QuickChatPhraseDefinition.resizeShortArray(mesh.field_p, (byte) -73, var2_int * 3);
           mesh.field_H = QuickChatPhraseDefinition.resizeShortArray(mesh.field_H, (byte) -73, var2_int * 3);
           mesh.field_C = QuickChatPhraseDefinition.resizeShortArray(mesh.field_C, (byte) -73, var2_int * 3);

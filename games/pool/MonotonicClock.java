@@ -350,7 +350,7 @@ final class MonotonicClock {
           } else {
             var4Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(-1034);
             HighscoresScreen.field_L = new LobbyGame(LogoFinalFrameLoader.field_c);
-            HighscoresScreen.field_L.a((long)var4Lifetime1, 45);
+            HighscoresScreen.field_L.setSecondaryKey((long)var4Lifetime1, 45);
             MeshBoundsSupport.readLobbyGameDetails(HighscoresScreen.field_L, 119, var1, false);
             StrongCacheEntry.field_K = 0L;
           }

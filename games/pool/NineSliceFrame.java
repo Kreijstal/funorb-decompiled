@@ -15,7 +15,7 @@ final class NineSliceFrame {
         if (obfuscationGuard != 41) {
           return;
         }
-        HotspotRectangle.a(true, LoginPayload.field_d, -104, SocialListEntry.field_Rb);
+        HotspotRectangle.beginLoginWithCredentials(true, LoginPayload.field_d, -104, SocialListEntry.field_Rb);
         PolarBallSkin.field_q = true;
     }
 

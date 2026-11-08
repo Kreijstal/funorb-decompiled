@@ -26,10 +26,10 @@ final class HighScoreRequest extends IntrusiveNode {
           var1 = "";
         }
         if (obfuscationGuard == 8388) {
-          return new LoginTextValue(CollisionContact.a(false), NetworkArchiveRequest.h(0));
+          return new LoginTextValue(CollisionContact.a(false), NetworkArchiveRequest.isUsernameAvailabilityPending(0));
         }
         HighScoreRequest.resendHighScoreOperations(115, true);
-        return new LoginTextValue(CollisionContact.a(false), NetworkArchiveRequest.h(0));
+        return new LoginTextValue(CollisionContact.a(false), NetworkArchiveRequest.isUsernameAvailabilityPending(0));
     }
 
     final static void resendHighScoreOperations(int opcode, boolean obfuscationGuard) {

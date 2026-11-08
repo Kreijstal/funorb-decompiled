@@ -12,7 +12,7 @@ final class AvailabilityQueryResult {
 
     public static void releaseStatics(byte param0) {
         if (param0 < 41) {
-          AvailabilityQueryResult.a(123, false);
+          AvailabilityQueryResult.requestFullscreen(123, false);
           field_a = null;
           return;
         }
@@ -63,12 +63,12 @@ final class AvailabilityQueryResult {
         }
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void requestFullscreen(int obfuscationGuard, boolean active) {
         int var2;
         int var3;
         var3 = Pool.field_O;
         if (UsernameSuggestionsPanel.field_V <= 0) {
-          if (!NanoTickClock.isClientConnected(-120)) {
+          if (!NanoTickClock.isGuestMode(-120)) {
             var2 = 1;
           } else {
             var2 = 0;
@@ -78,7 +78,7 @@ final class AvailabilityQueryResult {
             MatchingTextValidator.field_u = CompressedContainerSupport.openFullscreenCanvas(640, StatefulTextPainter.field_s, (byte) 0, 480, 0, 0);
             if (null != MatchingTextValidator.field_u) {
               var2 = 2;
-              CanvasInputAttachmentSupport.attachInputListeners(MatchingTextValidator.field_u, param0 ^ -28040);
+              CanvasInputAttachmentSupport.attachInputListeners(MatchingTextValidator.field_u, obfuscationGuard ^ -28040);
             } else {
               var2 = 3;
             }
@@ -87,7 +87,7 @@ final class AvailabilityQueryResult {
             ArchiveAvailabilitySupport.notifyBrowserResize(25692, 2);
             if (null != MatchingTextValidator.field_u) {
               var2 = 2;
-              CanvasInputAttachmentSupport.attachInputListeners(MatchingTextValidator.field_u, param0 ^ -28040);
+              CanvasInputAttachmentSupport.attachInputListeners(MatchingTextValidator.field_u, obfuscationGuard ^ -28040);
             } else {
               var2 = 3;
             }
@@ -95,9 +95,9 @@ final class AvailabilityQueryResult {
         }
         if (PlasmaTableScene.field_gb == null &&
           ButtonWidget.field_J) {
-          CacheEntry.showClientNotice(param1, 4, var2);
+          CacheEntry.showClientNotice(active, 4, var2);
         }
-        if (param0 == -28038) {
+        if (obfuscationGuard == -28038) {
           return;
         }
         field_a = (IntrusiveDeque) null;

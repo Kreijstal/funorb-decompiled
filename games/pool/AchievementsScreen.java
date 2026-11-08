@@ -84,7 +84,7 @@ final class AchievementsScreen extends MenuScreen {
               if (var2 != 0) {
                 break regionExit1;
               }
-              LoginPayloadKind.a(-17104, var6).drawQuarterSize(var7, var8);
+              LoginPayloadKind.achievementPlaceholderSprite(-17104, var6).drawQuarterSize(var7, var8);
             }
             var4Lifetime1++;
             if (var4Lifetime1 % 10 == 0) {
@@ -121,7 +121,7 @@ final class AchievementsScreen extends MenuScreen {
           if (var7Lifetime1 != 0) {
             IsaacCipher.field_f[var6Lifetime1].draw(85, 225);
           } else {
-            LoginPayloadKind.a(-17104, var6Lifetime1).draw(85, 225);
+            LoginPayloadKind.achievementPlaceholderSprite(-17104, var6Lifetime1).draw(85, 225);
           }
           var8 = CollisionContact.field_h.baselineHeight + 5;
           if (TikiTableScene.field_fb[var6Lifetime1]) {
@@ -160,7 +160,7 @@ final class AchievementsScreen extends MenuScreen {
           }
         } else {
           FreePlayRules.field_e.drawCentered(StrongCacheEntry.mouseoveranicon, SoftwareRasterizer.width >> 1, 215 + FreePlayRules.field_e.maxAscent, 4, -1);
-          if (NanoTickClock.isClientConnected(-107)) {
+          if (NanoTickClock.isGuestMode(-107)) {
             var7Lifetime1 = 215 + this.buttonTop >> 1;
             FreePlayRules.field_e.drawParagraph(IntegerRecordProtocolSupport.createtouse, SoftwareRasterizer.width >> 2, -FreePlayRules.field_e.baselineHeight + var7Lifetime1, SoftwareRasterizer.width >> 1, 240, 4, -1, 0, 0, 0);
           }
@@ -170,7 +170,7 @@ final class AchievementsScreen extends MenuScreen {
         }
         var7Lifetime2 = TextureCache.getVisibleTooltipIndex(104);
         if (-1 != var7Lifetime2) {
-          HotspotRectangle.a((byte) 71, SoftwareRasterizer.width >> 1, CollisionContact.field_h, LoginPayload.field_e[var7Lifetime2], 15658734, 4144959);
+          HotspotRectangle.drawWrappedPointerTooltip((byte) 71, SoftwareRasterizer.width >> 1, CollisionContact.field_h, LoginPayload.field_e[var7Lifetime2], 15658734, 4144959);
           if (this.field_G != null) {
             this.field_G.drawOutline(15658734, 0, 128, -1, true, 70 - IterableDualLinkDeque.field_b >> 1);
           }
@@ -218,7 +218,7 @@ final class AchievementsScreen extends MenuScreen {
         if (param0 >= 0) {
           field_H = (int[]) null;
         }
-        return (-468 + SoftwareRasterizer.width >> 1) + (var3 < 13 ? param1 * 36 : -(MeshColorSupport.a(true) ? 18 : 0) + (param1 - 13) * 36);
+        return (-468 + SoftwareRasterizer.width >> 1) + (var3 < 13 ? param1 * 36 : -(MeshColorSupport.isExtraAchievementEnabled(true) ? 18 : 0) + (param1 - 13) * 36);
     }
 
     final int getButtonLeft(int param0, int param1) {
@@ -369,7 +369,7 @@ final class AchievementsScreen extends MenuScreen {
         if (var4 != 48) {
           if (var4 == 23) {
             if (this.selection.isPressActivated((byte) 108)) {
-              TranslatedUiText.a(VertexProjectionSupport.pleaselogin, this.screenId, (byte) 81);
+              TranslatedUiText.requestLoginTransition(VertexProjectionSupport.pleaselogin, this.screenId, (byte) 81);
             }
           } else {
             super.handleMenuAction(-16470, param1, param2);
@@ -379,7 +379,7 @@ final class AchievementsScreen extends MenuScreen {
             var4 = param1 ? 1 : 0;
             stackIn_8_0 = -3405;
             stackIn_8_1 = 16;
-            stackIn_9_2 = (!LobbyPlayerLookupSupport.a(true)) ? 0 : 21;
+            stackIn_9_2 = (!LobbyPlayerLookupSupport.isGuestOrFreeAccount(true)) ? 0 : 21;
             AccountCreationDialog.switchScreen(stackIn_8_0, stackIn_8_1, stackIn_9_2, var4 != 0);
           }
         }

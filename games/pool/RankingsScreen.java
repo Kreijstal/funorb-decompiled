@@ -16,7 +16,7 @@ final class RankingsScreen extends MenuScreen {
         if (param0 != -34) {
           field_J = (ServerListLauncher) null;
         }
-        if (!NanoTickClock.isClientConnected(10)) {
+        if (!NanoTickClock.isGuestMode(10)) {
           if (IterableDualLinkDeque.field_a == 96) {
             if (this.selection.selectedIndex > 0) {
               if (this.selection.selectedIndex != 2) {
@@ -102,14 +102,14 @@ final class RankingsScreen extends MenuScreen {
         if (param0 != 69) {
           field_N = (MidiPcmStream) null;
         }
-        if (!NanoTickClock.isClientConnected(-114) &&
+        if (!NanoTickClock.isGuestMode(-114) &&
           param1 < 2) {
           return 24;
         }
         return 36;
     }
 
-    final static int h(int param0) {
+    final static int pollSharedChoiceAction(int obfuscationGuard) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -117,7 +117,7 @@ final class RankingsScreen extends MenuScreen {
         RuntimeException decompiledCaughtException = null;
         try {
           var1_int = 0;
-          while (LabeledChildWidget.pollKeyEvent(param0 + 119)) {
+          while (LabeledChildWidget.pollKeyEvent(obfuscationGuard + 119)) {
             LookupProtocolSupport.field_f.navigateVertical(-15525);
             if (!LookupProtocolSupport.field_f.isPressActivated((byte) 119)) {
               continue;
@@ -129,14 +129,14 @@ final class RankingsScreen extends MenuScreen {
             var1_int = 1;
           }
           var2 = 0;
-          if (param0 != 8) {
-            RankingsScreen.d(-51, true);
+          if (obfuscationGuard != 8) {
+            RankingsScreen.drawSharedInterfaceAndMenu(-51, true);
           }
           if (var1_int != 0 &&
             LookupProtocolSupport.field_f.selectedIndex >= 0) {
             var2 = LoginForm.field_V[LookupProtocolSupport.field_f.selectedIndex];
             if (var2 == 2) {
-              IntegerRecordProtocolSupport.a((byte) -108);
+              IntegerRecordProtocolSupport.hideLoginRequiredPrompt((byte) -108);
             }
           }
           stackIn_13_0 = var2;
@@ -144,7 +144,7 @@ final class RankingsScreen extends MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "tl.F(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "tl.F(" + obfuscationGuard + ')');
         }
     }
 
@@ -1091,7 +1091,7 @@ final class RankingsScreen extends MenuScreen {
         }
     }
 
-    final static IndexedSprite a(ResourceArchive param0, int param1, String param2, String param3) {
+    final static IndexedSprite loadIndexedSpriteByName(ResourceArchive archive, int obfuscationGuard, String fileName, String groupName) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -1105,31 +1105,31 @@ final class RankingsScreen extends MenuScreen {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param0.getGroupId(param3, -1);
-          if (param1 != 3812) {
+          var4_int = archive.getGroupId(groupName, -1);
+          if (obfuscationGuard != 3812) {
             friendlistdupe = (String) null;
           }
-          var5 = param0.getFileId(var4_int, 0, param2);
-          stackIn_3_0 = LobbyGame.loadIndexedSprite(var5, var4_int, (byte) -97, param0);
+          var5 = archive.getFileId(var4_int, 0, fileName);
+          stackIn_3_0 = LobbyGame.loadIndexedSprite(var5, var4_int, (byte) -97, archive);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_6_0 = var4;
           stackIn_6_1 = new StringBuilder().append("tl.S(");
-          if (param0 == null) {
+          if (archive == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(',');
+          if (fileName == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
           stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',');
-          if (param3 == null) {
+          if (groupName == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
@@ -1154,7 +1154,7 @@ final class RankingsScreen extends MenuScreen {
             var6 = (String) null;
             this.createButtonLabel((String) null, 127, -77, -84);
           }
-          if (!NanoTickClock.isClientConnected(96) &&
+          if (!NanoTickClock.isGuestMode(96) &&
             param3 < 2) {
             var7 = FreePlayRules.field_e.field_U[param1];
             var5 = var7;
@@ -1178,7 +1178,7 @@ final class RankingsScreen extends MenuScreen {
     }
 
     final int getButtonRight(boolean param0, int param1) {
-        if (!NanoTickClock.isClientConnected(-114)) {
+        if (!NanoTickClock.isGuestMode(-114)) {
           return param1 < 2 ? param1 * 240 + 300 : 380;
         }
         if (param0) {
@@ -1203,7 +1203,7 @@ final class RankingsScreen extends MenuScreen {
           super.handleMenuAction(param0 + 0, param1, param2);
         } else {
           if (this.selection.isPressActivated((byte) 75)) {
-            TranslatedUiText.a(VertexProjectionSupport.pleaselogin, this.screenId, (byte) 101);
+            TranslatedUiText.requestLoginTransition(VertexProjectionSupport.pleaselogin, this.screenId, (byte) 101);
           }
         }
     }
@@ -1238,7 +1238,7 @@ final class RankingsScreen extends MenuScreen {
         int var3Lifetime2Lifetime1;
         var10 = Pool.field_O;
         super.drawScreen(43);
-        if (NanoTickClock.isClientConnected(-128)) {
+        if (NanoTickClock.isGuestMode(-128)) {
           this.drawCreateAccountHint(320);
           return;
         }
@@ -1309,7 +1309,7 @@ final class RankingsScreen extends MenuScreen {
         CollisionContact.field_h.drawCentered(IntegerRecordProtocolSupport.createtouse, param0, 380, 15658734, -1);
     }
 
-    final static String a(int param0, int param1, byte[] param2, int param3) {
+    final static String decodeWindows1252(int length, int obfuscationGuard, byte[] bytes, int offset) {
         int var6 = 0;
         int incrementValue$1 = 0;
         char[] var4 = null;
@@ -1326,16 +1326,16 @@ final class RankingsScreen extends MenuScreen {
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var11 = new char[param0];
+          var11 = new char[length];
           var10 = var11;
           var9 = var10;
           var4 = var9;
           var5 = 0;
-          if (param1 != -7510) {
-            RankingsScreen.h(-13);
+          if (obfuscationGuard != -7510) {
+            RankingsScreen.pollSharedChoiceAction(-13);
           }
-          for (var6 = 0; var6 < param0; var6++) {
-            var7 = param2[param3 + var6] & 255;
+          for (var6 = 0; var6 < length; var6++) {
+            var7 = bytes[offset + var6] & 255;
             if (var7 != 0) {
               if (var7 >= 128 &&
                 var7 < 160) {
@@ -1356,18 +1356,18 @@ final class RankingsScreen extends MenuScreen {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
           stackIn_17_0 = var4_ref;
-          stackIn_17_1 = new StringBuilder().append("tl.U(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_17_1 = new StringBuilder().append("tl.U(").append(length).append(',').append(obfuscationGuard).append(',');
+          if (bytes == null) {
             stackIn_18_2 = "null";
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(offset).append(')').toString());
         }
     }
 
     final int getButtonLeft(int param0, int param1) {
-        if (!NanoTickClock.isClientConnected(-117)) {
+        if (!NanoTickClock.isGuestMode(-117)) {
           return 2 <= param1 ? 260 : param1 * 240 + 100;
         }
         if (param0 != 0) {
@@ -1387,7 +1387,7 @@ final class RankingsScreen extends MenuScreen {
         if (param0 != 6) {
           this.drawScreen(120);
         }
-        if (!NanoTickClock.isClientConnected(-119)) {
+        if (!NanoTickClock.isGuestMode(-119)) {
           if (param1 < 2) {
             return this.buttonTop;
           }
@@ -1396,13 +1396,13 @@ final class RankingsScreen extends MenuScreen {
         return 390;
     }
 
-    final static void d(int param0, boolean param1) {
-        IntLookupQuery.field_q.drawRoot((byte) -79, param1);
+    final static void drawSharedInterfaceAndMenu(int obfuscationGuard, boolean active) {
+        IntLookupQuery.field_q.drawRoot((byte) -79, active);
         BirthDatePromptPanel var2 = ThemeSelectScreen.field_J;
         if (var2 != null) {
           var2.renderWidgetPassesAndTooltip(IntLookupQuery.field_q.screenX, (byte) 74, IntLookupQuery.field_q.screenY);
         }
-        if (param0 >= -74) {
+        if (obfuscationGuard >= -74) {
           field_I = (int[]) null;
         }
     }

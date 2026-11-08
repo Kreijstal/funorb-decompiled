@@ -12,19 +12,19 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
     static int field_xb;
     private boolean errorContentInstalled;
 
-    final static void o(byte param0) {
+    final static void initializeDecisionDialog(byte obfuscationGuard) {
         LobbyGame.field_Vb = new UiComponent("decision box", (UiComponent) null);
         MenuSelection.applyCenteredPanelStyle(true, LobbyGame.field_Vb);
         NanoTickClock.field_t = new UiComponent("decision button a", (UiComponent) null);
         MonotonicClock.field_b = new UiComponent("decision button b", (UiComponent) null);
-        if (param0 < -103) {
+        if (obfuscationGuard < -103) {
           GlowSprite.applyButtonStyle(29022, NanoTickClock.field_t);
           GlowSprite.applyButtonStyle(29022, MonotonicClock.field_b);
           LobbyGame.field_Vb.addChild(-104, NanoTickClock.field_t);
           LobbyGame.field_Vb.addChild(-104, MonotonicClock.field_b);
           return;
         }
-        MessageDialog.o((byte) -98);
+        MessageDialog.initializeDecisionDialog((byte) -98);
         GlowSprite.applyButtonStyle(29022, NanoTickClock.field_t);
         GlowSprite.applyButtonStyle(29022, MonotonicClock.field_b);
         LobbyGame.field_Vb.addChild(-104, NanoTickClock.field_t);
@@ -80,20 +80,20 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
         MirroredSceneSupport.showDefaultLoginForm(false);
     }
 
-    final void m(byte param0) {
+    final void showConnectionRestored(byte obfuscationGuard) {
         MessageDialogContent var2 = null;
         MessageDialogContent var2Lifetime1;
         this.statusProgressBar.setStripeColors(4210752, 19365, 2121792);
-        if (param0 == -33) {
+        if (obfuscationGuard == -33) {
           var2 = new MessageDialogContent(this, this.messageFont, ScreenProjectionSupport.connectionrestored);
-          var2.addActionButton(15, DebugSliderInputSupport.returntogame, param0 + 34);
-          this.replaceContent(var2, param0 + 63);
+          var2.addActionButton(15, DebugSliderInputSupport.returntogame, obfuscationGuard + 34);
+          this.replaceContent(var2, obfuscationGuard + 63);
           return;
         }
         this.field_tb = false;
         var2Lifetime1 = new MessageDialogContent(this, this.messageFont, ScreenProjectionSupport.connectionrestored);
-        var2Lifetime1.addActionButton(15, DebugSliderInputSupport.returntogame, param0 + 34);
-        this.replaceContent(var2Lifetime1, param0 + 63);
+        var2Lifetime1.addActionButton(15, DebugSliderInputSupport.returntogame, obfuscationGuard + 34);
+        this.replaceContent(var2Lifetime1, obfuscationGuard + 63);
     }
 
     public static void clearSharedReferences(byte param0) {

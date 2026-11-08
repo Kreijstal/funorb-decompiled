@@ -26,7 +26,7 @@ final class ClientException extends RuntimeException {
           SoftwareRasterizer.darkenRectangle(IntegerSyntaxSupport.field_e.field_i.localX, IntegerSyntaxSupport.field_e.field_i.localY, IntegerSyntaxSupport.field_e.field_i.width, IntegerSyntaxSupport.field_e.field_i.height);
           IntegerSyntaxSupport.field_e.field_i.drawRoot((byte) -79, active);
         }
-        RankingsScreen.d(obfuscationGuard ^ -5, active);
+        RankingsScreen.drawSharedInterfaceAndMenu(obfuscationGuard ^ -5, active);
     }
 
     public static void releaseStatics(int param0) {
@@ -40,7 +40,7 @@ final class ClientException extends RuntimeException {
         field_g = null;
     }
 
-    final static void a(boolean param0, byte[] param1) {
+    final static void decodeSpriteSheet(boolean obfuscationGuard, byte[] bytes) {
         byte dupTemp$0 = 0;
         byte dupTemp$1 = 0;
         int stackIn_36_0 = 0;
@@ -77,9 +77,9 @@ final class ClientException extends RuntimeException {
         int var4Lifetime4;
         int var4Lifetime5;
         try {
-          var16 = new PacketBuffer(param1);
+          var16 = new PacketBuffer(bytes);
           var17 = var16;
-          var17.position = -2 + param1.length;
+          var17.position = -2 + bytes.length;
           PacketAvailabilitySupport.field_d = var17.readUnsignedShort(-1034);
           StateIconLabel.field_Sb = new byte[PacketAvailabilitySupport.field_d][];
           AccountTextSupport.field_f = new int[PacketAvailabilitySupport.field_d];
@@ -88,7 +88,7 @@ final class ClientException extends RuntimeException {
           AchievementsScreen.field_I = new int[PacketAvailabilitySupport.field_d];
           LoginRequestSupport.field_d = new int[PacketAvailabilitySupport.field_d];
           DebouncedValidationProvider.field_d = new boolean[PacketAvailabilitySupport.field_d];
-          var17.position = param1.length - 7 - PacketAvailabilitySupport.field_d * 8;
+          var17.position = bytes.length - 7 - PacketAvailabilitySupport.field_d * 8;
           DialRenderer.field_c = var17.readUnsignedShort(-1034);
           AccountStateQuery.field_r = var17.readUnsignedShort(-1034);
           var3 = (var17.readUnsignedByte(-97) & 255) + 1;
@@ -104,7 +104,7 @@ final class ClientException extends RuntimeException {
           for (var4Lifetime3 = 0; PacketAvailabilitySupport.field_d > var4Lifetime3; var4Lifetime3++) {
             AccountTextSupport.field_f[var4Lifetime3] = var16.readUnsignedShort(-1034);
           }
-          var17.position = -(3 * (-1 + var3)) + (-(8 * PacketAvailabilitySupport.field_d) + (-7 + param1.length));
+          var17.position = -(3 * (-1 + var3)) + (-(8 * PacketAvailabilitySupport.field_d) + (-7 + bytes.length));
           IntrusiveNode.field_h = new int[var3];
           for (var4Lifetime4 = 1; var3 > var4Lifetime4; var4Lifetime4++) {
             IntrusiveNode.field_h[var4Lifetime4] = var16.readUnsignedMedium(99);
@@ -113,9 +113,9 @@ final class ClientException extends RuntimeException {
             }
           }
           var17.position = 0;
-          if (!param0) {
+          if (!obfuscationGuard) {
             var15 = (byte[]) null;
-            ClientException.a(true, (byte[]) null);
+            ClientException.decodeSpriteSheet(true, (byte[]) null);
           }
           for (var4Lifetime5 = 0; PacketAvailabilitySupport.field_d > var4Lifetime5; var4Lifetime5++) {
             var5 = LinkButtonPainter.field_a[var4Lifetime5];
@@ -179,8 +179,8 @@ final class ClientException extends RuntimeException {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_54_0 = var2;
-          stackIn_54_1 = new StringBuilder().append("oa.C(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_54_1 = new StringBuilder().append("oa.C(").append(obfuscationGuard).append(',');
+          if (bytes == null) {
             stackIn_55_2 = "null";
           } else {
             stackIn_55_2 = "{...}";
@@ -245,17 +245,17 @@ final class ClientException extends RuntimeException {
           }
           for (var2_intLifetime1 = 0; IntrusiveDequeCursor.field_e > var2_intLifetime1; var2_intLifetime1++) {
             if (message.field_p == RankingsProtocolSupport.field_e[var2_intLifetime1].field_p) {
-              dupTemp$4 = RankingsProtocolSupport.field_e[var2_intLifetime1].b(14842);
+              dupTemp$4 = RankingsProtocolSupport.field_e[var2_intLifetime1].visibilityPriority(14842);
               MusicPatch.field_l[dupTemp$4] = MusicPatch.field_l[dupTemp$4] + 1;
             }
           }
-          dupTemp$0 = message.b(14842);
+          dupTemp$0 = message.visibilityPriority(14842);
           MusicPatch.field_l[dupTemp$0] = MusicPatch.field_l[dupTemp$0] + 1;
           var2_intLifetime2 = 0;
           for (var3 = 0; var3 < IntrusiveDequeCursor.field_e; var3++) {
             boolean decompiledFrameRemainder0 = true;
             if (RankingsProtocolSupport.field_e[var3].field_p == message.field_p) {
-              var4 = RankingsProtocolSupport.field_e[var3].b(14842);
+              var4 = RankingsProtocolSupport.field_e[var3].visibilityPriority(14842);
               if (MusicPatch.field_l[var4] > QuickChatPhraseDefinition.field_E) {
                 MusicPatch.field_l[var4] = MusicPatch.field_l[var4] - 1;
                 decompiledFrameRemainder0 = false;

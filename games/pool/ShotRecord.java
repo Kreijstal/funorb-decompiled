@@ -56,8 +56,8 @@ final class ShotRecord extends IntrusiveNode {
         return false;
     }
 
-    final static GrowableIntList b(boolean param0) {
-        if (!param0) {
+    final static GrowableIntList createPottedBallList(boolean obfuscationGuard) {
+        if (!obfuscationGuard) {
           unableToDeleteFriend = (String) null;
           return GrowableIntListFactory.createGrowableIntList(false, 1);
         }
@@ -80,7 +80,7 @@ final class ShotRecord extends IntrusiveNode {
         String var3Lifetime3;
         try {
           if (param0 != 1) {
-            ShotRecord.b(false);
+            ShotRecord.createPottedBallList(false);
           }
           var5 = "Shot " + this.shotNumber + " " + TextWidgetPainter.shotPhaseName(8, this.phase) + " player " + param1.field_h[this.playerIndex];
           var3 = var5;
@@ -189,11 +189,11 @@ final class ShotRecord extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, int param1, int param2, boolean param3) {
-        ModelInstance.a(param3, param2 ^ 40844);
+    final static void updateAuxiliaryDialogAndQuickChat(int param0, int param1, int param2, boolean param3) {
+        ModelInstance.updateAuxiliaryDialog(param3, param2 ^ 40844);
         SupportPageLauncher.updateQuickChatMenu(param1, param3, param0, 30);
         if (param2 != -40960) {
-          ShotRecord.b(false);
+          ShotRecord.createPottedBallList(false);
         }
     }
 
@@ -227,7 +227,7 @@ final class ShotRecord extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, byte param4, int param5) {
+    final static void recolorGreenPixelsInRectangle(int width, int height, int greenThreshold, int y, byte obfuscationGuard, int x) {
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
         RuntimeException var6 = null;
@@ -237,32 +237,32 @@ final class ShotRecord extends IntrusiveNode {
         int var10 = 0;
         int var11 = 0;
         try {
-          if (param5 < SoftwareRasterizer.clipLeft) {
-            param0 = param0 - (-param5 + SoftwareRasterizer.clipLeft);
-            param5 = SoftwareRasterizer.clipLeft;
+          if (x < SoftwareRasterizer.clipLeft) {
+            width = width - (-x + SoftwareRasterizer.clipLeft);
+            x = SoftwareRasterizer.clipLeft;
           }
-          if (param3 < SoftwareRasterizer.clipTop) {
-            param1 = param1 - (-param3 + SoftwareRasterizer.clipTop);
-            param3 = SoftwareRasterizer.clipTop;
+          if (y < SoftwareRasterizer.clipTop) {
+            height = height - (-y + SoftwareRasterizer.clipTop);
+            y = SoftwareRasterizer.clipTop;
           }
-          if (SoftwareRasterizer.clipRight < param0 + param5) {
-            param0 = SoftwareRasterizer.clipRight - param5;
+          if (SoftwareRasterizer.clipRight < width + x) {
+            width = SoftwareRasterizer.clipRight - x;
           }
-          if (SoftwareRasterizer.clipBottom < param3 + param1) {
-            param1 = SoftwareRasterizer.clipBottom - param3;
+          if (SoftwareRasterizer.clipBottom < y + height) {
+            height = SoftwareRasterizer.clipBottom - y;
           }
-          if (param0 > 0 &&
-            param1 > 0) {
-            var6_int = param5 + SoftwareRasterizer.width * param3;
-            var7 = -param0 + SoftwareRasterizer.width;
-            param3 = -param1;
-            if (param4 < 94) {
+          if (width > 0 &&
+            height > 0) {
+            var6_int = x + SoftwareRasterizer.width * y;
+            var7 = -width + SoftwareRasterizer.width;
+            y = -height;
+            if (obfuscationGuard < 94) {
               return;
             }
-            while (0 > param3) {
-              for (param5 = -param0; 0 > param5; param5++) {
+            while (0 > y) {
+              for (x = -width; 0 > x; x++) {
                 var8 = SoftwareRasterizer.pixels[var6_int];
-                if (param2 < (65280 & var8) >> 8 &&
+                if (greenThreshold < (65280 & var8) >> 8 &&
                   (var8 & 65280) >> 8 >= (var8 & 16711680) >> 16) {
                   var9 = ((16711680 & var8) >> 15) - 60;
                   if (var9 > 255) {
@@ -276,7 +276,7 @@ final class ShotRecord extends IntrusiveNode {
                 var6_int++;
               }
               var6_int = var6_int + var7;
-              param3++;
+              y++;
             }
             return;
           }
@@ -284,44 +284,44 @@ final class ShotRecord extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var6), "qe.P(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var6), "qe.P(" + width + ',' + height + ',' + greenThreshold + ',' + y + ',' + obfuscationGuard + ',' + x + ')');
         }
     }
 
-    final static void b(int param0, int param1) {
+    final static void updateIntroPieceRotation(int angle, int pieceIndex) {
         int var2;
         int var3;
         int var4;
         int var5;
-        var2 = param0;
+        var2 = angle;
         var3 = LobbyPlayer.field_fc;
         if (var3 < 5) {
           var2 = var3 * var3 * 8192 / 1100;
           var4 = 1;
           var5 = 0;
-          if (param1 == 1) {
+          if (pieceIndex == 1) {
             var5 = 1;
           }
-          if (param1 == 3) {
+          if (pieceIndex == 3) {
             var4 = -1;
           }
-          if (param1 == 4) {
+          if (pieceIndex == 4) {
             var5 = 1;
             var4 = 1;
           }
-          if (param1 == 5) {
+          if (pieceIndex == 5) {
             var4 = -1;
             var5 = 1;
           }
-          if (param1 == 6) {
+          if (pieceIndex == 6) {
             var5 = -1;
             var4 = 1;
           }
-          if (param1 == 7) {
+          if (pieceIndex == 7) {
             var4 = -1;
             var5 = -1;
           } else {
-            if (param1 == 8) {
+            if (pieceIndex == 8) {
               var4 = -1;
               var5 = -1;
             }
@@ -331,29 +331,29 @@ final class ShotRecord extends IntrusiveNode {
             var2 = (-40960 + 16384 * var3) / 220;
             var4 = 1;
             var5 = 0;
-            if (param1 == 1) {
+            if (pieceIndex == 1) {
               var5 = 1;
             }
-            if (param1 == 3) {
+            if (pieceIndex == 3) {
               var4 = -1;
             }
-            if (param1 == 4) {
+            if (pieceIndex == 4) {
               var5 = 1;
               var4 = 1;
             }
-            if (param1 == 5) {
+            if (pieceIndex == 5) {
               var4 = -1;
               var5 = 1;
             }
-            if (param1 == 6) {
+            if (pieceIndex == 6) {
               var5 = -1;
               var4 = 1;
             }
-            if (param1 == 7) {
+            if (pieceIndex == 7) {
               var4 = -1;
               var5 = -1;
             } else {
-              if (param1 == 8) {
+              if (pieceIndex == 8) {
                 var4 = -1;
                 var5 = -1;
               }
@@ -362,45 +362,45 @@ final class ShotRecord extends IntrusiveNode {
             if (120 <= var3) {
               var4 = 1;
               var5 = 0;
-              if (param1 == 1) {
+              if (pieceIndex == 1) {
                 var5 = 1;
               }
-              if (param1 == 3) {
+              if (pieceIndex == 3) {
                 var4 = -1;
               }
-              if (param1 == 4) {
+              if (pieceIndex == 4) {
                 var5 = 1;
                 var4 = 1;
               }
-              if (param1 == 5) {
+              if (pieceIndex == 5) {
                 var4 = -1;
                 var5 = 1;
               }
-              if (param1 == 6) {
+              if (pieceIndex == 6) {
                 var5 = -1;
                 var4 = 1;
               }
-              if (param1 == 7 ||
-                param1 == 8) {
+              if (pieceIndex == 7 ||
+                pieceIndex == 8) {
                 var4 = -1;
                 var5 = -1;
               }
-              if (param1 == 11) {
+              if (pieceIndex == 11) {
                 var4 = -1;
               }
-              if (param1 == 12) {
+              if (pieceIndex == 12) {
                 var4 = -1;
                 var5 = -1;
               }
-              if (param1 == 13) {
+              if (pieceIndex == 13) {
                 var5 = -1;
                 var4 = 1;
               }
-              if (param1 == 14) {
+              if (pieceIndex == 14) {
                 var5 = 1;
                 var4 = -1;
               }
-              if (param1 == 15) {
+              if (pieceIndex == 15) {
                 var4 = 1;
                 var5 = 1;
               }
@@ -411,47 +411,47 @@ final class ShotRecord extends IntrusiveNode {
             var2 = 8192 - var3 * (var3 * 8192) / 3300;
             var4 = 1;
             var5 = 0;
-            if (param1 == 1) {
+            if (pieceIndex == 1) {
               var5 = 1;
             }
-            if (param1 == 3) {
+            if (pieceIndex == 3) {
               var4 = -1;
             }
-            if (param1 == 4) {
+            if (pieceIndex == 4) {
               var5 = 1;
               var4 = 1;
             }
-            if (param1 == 5) {
+            if (pieceIndex == 5) {
               var4 = -1;
               var5 = 1;
             }
-            if (param1 == 6) {
+            if (pieceIndex == 6) {
               var5 = -1;
               var4 = 1;
             }
-            if (param1 == 7 ||
-              param1 == 8) {
+            if (pieceIndex == 7 ||
+              pieceIndex == 8) {
               var4 = -1;
               var5 = -1;
             }
           }
         }
-        if (param1 == 11) {
+        if (pieceIndex == 11) {
           var4 = -1;
         }
-        if (param1 == 12) {
+        if (pieceIndex == 12) {
           var4 = -1;
           var5 = -1;
         }
-        if (param1 == 13) {
+        if (pieceIndex == 13) {
           var5 = -1;
           var4 = 1;
         }
-        if (param1 == 14) {
+        if (pieceIndex == 14) {
           var5 = 1;
           var4 = -1;
         }
-        if (param1 == 15) {
+        if (pieceIndex == 15) {
           var4 = 1;
           var5 = 1;
         }
@@ -581,7 +581,7 @@ final class ShotRecord extends IntrusiveNode {
           }
           return var2;
         }
-        ShotRecord.a(82, -62, 92, 61, (byte) 96, -63);
+        ShotRecord.recolorGreenPixelsInRectangle(82, -62, 92, 61, (byte) 96, -63);
         if ((8 & this.field_l) != 0) {
           var2 = var2 + "; play";
         }
@@ -897,7 +897,7 @@ final class ShotRecord extends IntrusiveNode {
           if (this.endResolution == param1) {
             return;
           }
-          GrowableIntList.reportClientError(new Throwable(), "New end resolution 0b" + Integer.toString(this.endResolution, 2) + ": " + TabbedPane.b(param1, param0 ^ 87) + " does not match current one 0b" + Integer.toString(param1, 2) + ": " + TabbedPane.b(this.endResolution, 77), -8555);
+          GrowableIntList.reportClientError(new Throwable(), "New end resolution 0b" + Integer.toString(this.endResolution, 2) + ": " + TabbedPane.describeShotOutcomeFlags(param1, param0 ^ 87) + " does not match current one 0b" + Integer.toString(param1, 2) + ": " + TabbedPane.describeShotOutcomeFlags(this.endResolution, 77), -8555);
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

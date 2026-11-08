@@ -177,7 +177,7 @@ final class HuffmanCodec {
         }
     }
 
-    final static void a(byte param0) {
+    final static void drawDebugSliders(byte obfuscationGuard) {
         int var1_int = 0;
         int var2 = 0;
         int var3 = 0;
@@ -188,7 +188,7 @@ final class HuffmanCodec {
           var1_int = 4 + CollisionContact.field_h.maxDescent + CollisionContact.field_h.maxAscent;
           SoftwareRasterizer.fillRectangleAlpha(0, -var1_int + 376, 32 + DebugOverlayLayoutSupport.field_a.length * 32, var1_int + 112, 8421504, 127);
           var2 = 0;
-          var3 = 56 / ((-35 - param0) / 33);
+          var3 = 56 / ((-35 - obfuscationGuard) / 33);
           while (var2 < DebugOverlayLayoutSupport.field_a.length) {
             DebugOverlayLayoutSupport.field_a[var2].draw(3);
             var2++;
@@ -197,7 +197,7 @@ final class HuffmanCodec {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "rk.E(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "rk.E(" + obfuscationGuard + ')');
         }
     }
 
@@ -903,7 +903,7 @@ final class HuffmanCodec {
           while (true) {
             if (param1 <= param0) {
               if (!param5) {
-                HuffmanCodec.b(false);
+                HuffmanCodec.packChatFilterModes(false);
               }
               stackIn_15_0 = -param3 + (7 + var8 >> 3);
               return stackIn_15_0;
@@ -969,7 +969,7 @@ final class HuffmanCodec {
         }
     }
 
-    final static boolean a(int param0, int[] param1) {
+    final static boolean pollServerPacket(int obfuscationGuard, int[] packetLengths) {
         int var5_int = 0;
         int var6 = 0;
         int stackIn_17_0 = 0;
@@ -989,7 +989,7 @@ final class HuffmanCodec {
             return false;
           }
           var2_long = MonotonicClock.monotonicTimeMillis((byte) -103);
-          if (param0 != ProxyConnectorSupport.field_d &&
+          if (obfuscationGuard != ProxyConnectorSupport.field_d &&
             PacketDecodeState.field_b < 0) {
             var4_ref_fr = (DelayedServerPacket) (ReflectionRequestSupport.field_g.last((byte) -112));
             if (var4_ref_fr != null &&
@@ -1011,8 +1011,8 @@ final class HuffmanCodec {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_39_0 = var2;
-          stackIn_39_1 = new StringBuilder().append("rk.F(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_39_1 = new StringBuilder().append("rk.F(").append(obfuscationGuard).append(',');
+          if (packetLengths == null) {
             stackIn_40_2 = "null";
           } else {
             stackIn_40_2 = "{...}";
@@ -1027,9 +1027,9 @@ final class HuffmanCodec {
               if (!DialogLayer.pollPacketBytes((byte) 107, 1)) {
                 return false;
               }
-              PacketDecodeState.field_b = PlayerContextMenu.field_e.readCipheredOpcode(param0 + 107);
+              PacketDecodeState.field_b = PlayerContextMenu.field_e.readCipheredOpcode(obfuscationGuard + 107);
               PlayerContextMenu.field_e.position = 0;
-              ScrollPane.field_Pb = param1[PacketDecodeState.field_b];
+              ScrollPane.field_Pb = packetLengths[PacketDecodeState.field_b];
             }
             if (!PacketAvailabilitySupport.hasCompletePacket((byte) 39)) {
               return false;
@@ -1061,8 +1061,8 @@ final class HuffmanCodec {
           decompiledCaughtException = decompiledCaughtParameter1;
           var2 = decompiledCaughtException;
           stackIn_39_0 = var2;
-          stackIn_39_1 = new StringBuilder().append("rk.F(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_39_1 = new StringBuilder().append("rk.F(").append(obfuscationGuard).append(',');
+          if (packetLengths == null) {
             stackIn_40_2 = "null";
           } else {
             stackIn_40_2 = "{...}";
@@ -1071,8 +1071,8 @@ final class HuffmanCodec {
         }
     }
 
-    final static int b(boolean param0) {
-        if (!param0) {
+    final static int packChatFilterModes(boolean obfuscationGuard) {
+        if (!obfuscationGuard) {
           Sprite[] var2 = (Sprite[]) null;
           HuffmanCodec.drawNineSlice(37, -53, 4, 85, 43, -30, (Sprite[]) null);
         }

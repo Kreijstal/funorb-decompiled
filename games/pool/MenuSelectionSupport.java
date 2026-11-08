@@ -16,7 +16,7 @@ final class MenuSelectionSupport {
         int var5Lifetime2;
         int var5Lifetime3;
         if (param0 >= 60) {
-          return ModelInstance.a(param0 % 60, param1, 45, param0 / 60);
+          return ModelInstance.formatTimer(param0 % 60, param1, 45, param0 / 60);
         }
         String var7 = DialogLayer.timerMinutesSeconds;
         char[] var9 = var7.toCharArray();

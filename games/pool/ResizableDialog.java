@@ -46,35 +46,35 @@ abstract class ResizableDialog extends FadingDialog {
         return super.settleDialogAnimation(param0);
     }
 
-    final static int c(int param0, int param1, int param2) {
-        if (param2 != 4096) {
+    final static int signedAtan2Angle(int x, int y, int obfuscationGuard) {
+        if (obfuscationGuard != 4096) {
           return 124;
         }
-        if (param0 == 0) {
-          if (0 != param1) {
-            if (param1 < 0) {
+        if (x == 0) {
+          if (0 != y) {
+            if (y < 0) {
               return -2048;
             }
             return 2048;
           }
           return 0;
         }
-        if (0 <= param0) {
-          if (param1 == 0) {
+        if (0 <= x) {
+          if (y == 0) {
             return 0;
           }
-          if (param1 < 0) {
-            return -Atan2Support.atan2Angle(param0, 1164778608, -param1);
+          if (y < 0) {
+            return -Atan2Support.atan2Angle(x, 1164778608, -y);
           }
-          return Atan2Support.atan2Angle(param0, 1164778608, param1);
+          return Atan2Support.atan2Angle(x, 1164778608, y);
         }
-        if (0 == param1) {
+        if (0 == y) {
           return 4096;
         }
-        if (param1 >= 0) {
-          return -Atan2Support.atan2Angle(-param0, 1164778608, param1) + 4096;
+        if (y >= 0) {
+          return -Atan2Support.atan2Angle(-x, 1164778608, y) + 4096;
         }
-        return -4096 + Atan2Support.atan2Angle(-param0, 1164778608, -param1);
+        return -4096 + Atan2Support.atan2Angle(-x, 1164778608, -y);
     }
 
     final void startResizeTransition(byte param0, int param1, int param2, int param3) {
@@ -91,7 +91,7 @@ abstract class ResizableDialog extends FadingDialog {
         this.resizeStartHeight = this.widgetHeight;
     }
 
-    final static int i(int param0) {
+    final static int commonInterfaceLoadProgress(int obfuscationGuard) {
         if (QuickChatCategoryDefinition.field_y < 2) {
           return 0;
         }
@@ -110,7 +110,7 @@ abstract class ResizableDialog extends FadingDialog {
           if (!WorldPointProjectionSupport.field_d.isIndexReady(84)) {
             return 43;
           }
-          if (!WorldPointProjectionSupport.field_d.ensureGroupAvailableByName("commonui", param0 - 19535)) {
+          if (!WorldPointProjectionSupport.field_d.ensureGroupAvailableByName("commonui", obfuscationGuard - 19535)) {
             return 57;
           }
           if (!PolarTableScene.field_nb.isIndexReady(-96)) {
@@ -126,7 +126,7 @@ abstract class ResizableDialog extends FadingDialog {
             return 86;
           }
         } else {
-          if (!WorldPointProjectionSupport.field_d.isIndexReady(param0 - 19430)) {
+          if (!WorldPointProjectionSupport.field_d.isIndexReady(obfuscationGuard - 19430)) {
             return 20;
           }
           if (!WorldPointProjectionSupport.field_d.ensureGroupAvailableByName("commonui", 0)) {
@@ -135,7 +135,7 @@ abstract class ResizableDialog extends FadingDialog {
           if (!PolarTableScene.field_nb.isIndexReady(104)) {
             return 50;
           }
-          if (!PolarTableScene.field_nb.ensureGroupAvailableByName("commonui", param0 ^ 19535)) {
+          if (!PolarTableScene.field_nb.ensureGroupAvailableByName("commonui", obfuscationGuard ^ 19535)) {
             return 60;
           }
           if (!DualLinkNode.field_r.isIndexReady(114)) {
@@ -145,26 +145,26 @@ abstract class ResizableDialog extends FadingDialog {
             return 80;
           }
         }
-        if (param0 != 19535) {
-          ResizableDialog.i(-99);
+        if (obfuscationGuard != 19535) {
+          ResizableDialog.commonInterfaceLoadProgress(-99);
         }
         return 100;
     }
 
     public static void releaseStatics(byte param0) {
         if (param0 != -16) {
-          ResizableDialog.i(83);
+          ResizableDialog.commonInterfaceLoadProgress(83);
         }
         field_ab = (int[][]) null;
         playersInGame = null;
         tutorialCameraZoom = null;
     }
 
-    final static boolean a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final static boolean containsPoint(int x, int obfuscationGuard, int height, int y, int width, int top, int left) {
         int var7;
         boolean stackIn_6_0 = false;
-        var7 = 101 / ((69 - param1) / 51);
-        stackIn_6_0 = (param0 >= param6) && (param0 < param4 + param6) && (param5 <= param3) && (param3 < param5 + param2);
+        var7 = 101 / ((69 - obfuscationGuard) / 51);
+        stackIn_6_0 = (x >= left) && (x < width + left) && (top <= y) && (y < top + height);
         return stackIn_6_0;
     }
 

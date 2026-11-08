@@ -826,14 +826,14 @@ final class TutorialController {
           var2_int = 0;
           var3 = param1.length();
           while (var3 > var2_int) {
-            if (Js5ArchiveManager.a(0, param1.charAt(var2_int))) {
+            if (Js5ArchiveManager.isNameSeparator(0, param1.charAt(var2_int))) {
               var2_int++;
               continue;
             }
             break;
           }
           while (var3 > var2_int) {
-            if (Js5ArchiveManager.a(0, param1.charAt(var3 - 1))) {
+            if (Js5ArchiveManager.isNameSeparator(0, param1.charAt(var3 - 1))) {
               var3--;
               continue;
             }

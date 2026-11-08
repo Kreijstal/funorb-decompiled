@@ -130,15 +130,15 @@ final class CachedArchiveSource extends ArchiveProvider {
             var4 = TutorialController.normalizeDisplayName(91, param1);
             if (var4 != null &&
               var4.length() >= 1) {
-              if (!Js5ArchiveManager.a(0, var4.charAt(0)) &&
-                !Js5ArchiveManager.a(0, var4.charAt(var4.length() - 1))) {
+              if (!Js5ArchiveManager.isNameSeparator(0, var4.charAt(0)) &&
+                !Js5ArchiveManager.isNameSeparator(0, var4.charAt(var4.length() - 1))) {
                 var5 = 0;
                 if (param2 < 96) {
                   CachedArchiveSource.getTargetFramesPerSecond(-125);
                 }
                 for (var6 = 0; param1.length() > var6; var6++) {
                   var7 = param1.charAt(var6);
-                  if (Js5ArchiveManager.a(0, (char) var7)) {
+                  if (Js5ArchiveManager.isNameSeparator(0, (char) var7)) {
                     var5++;
                   } else {
                     var5 = 0;

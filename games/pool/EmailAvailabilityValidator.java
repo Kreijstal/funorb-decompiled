@@ -79,12 +79,12 @@ final class EmailAvailabilityValidator extends TextInputValidator {
         return null;
     }
 
-    final static void b(int param0, int param1) {
+    final static void sendCancelMatchmaking(int obfuscationGuard, int opcode) {
         CipherPacketBuffer var2 = JaggrabDownloader.field_j;
-        var2.writeCipheredOpcode(false, param1);
+        var2.writeCipheredOpcode(false, opcode);
         var2.writeByte(1, false);
         var2.writeByte(3, false);
-        int var3 = 22 / ((-52 - param0) / 62);
+        int var3 = 22 / ((-52 - obfuscationGuard) / 62);
     }
 
     public static void releaseStatics(boolean param0) {

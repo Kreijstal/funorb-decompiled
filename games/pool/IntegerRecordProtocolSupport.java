@@ -26,10 +26,10 @@ final class IntegerRecordProtocolSupport {
         field_f = null;
     }
 
-    final static void a(byte param0) {
+    final static void hideLoginRequiredPrompt(byte obfuscationGuard) {
         LoginPayload.field_b = false;
-        if (param0 != -108) {
-          IntegerRecordProtocolSupport.a((byte) -36);
+        if (obfuscationGuard != -108) {
+          IntegerRecordProtocolSupport.hideLoginRequiredPrompt((byte) -36);
         }
     }
 

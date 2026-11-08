@@ -152,7 +152,7 @@ abstract class DebouncedValidationProvider implements ValidationProvider {
                 var4Lifetime2 = var4Lifetime2 + var2.substring(var3);
               }
               var5 = new java.net.URL(applet.getCodeBase(), var4Lifetime2);
-              applet.getAppletContext().showDocument(ModelInstance.a((byte) -103, var5, applet), "_self");
+              applet.getAppletContext().showDocument(ModelInstance.rewriteAppletUrl((byte) -103, var5, applet), "_self");
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2_ref2 = (Exception) (Object) decompiledCaughtException;

@@ -15,12 +15,12 @@ final class Js5ArchiveManager {
     private CachedArchiveSource[] providers;
     static ScrollPane field_b;
 
-    final static boolean a(int param0, char param1) {
+    final static boolean isNameSeparator(int obfuscationGuard, char character) {
         boolean stackIn_9_0 = false;
-        if (param0 != 0) {
+        if (obfuscationGuard != 0) {
           return false;
         }
-        stackIn_9_0 = (param1 == 160) || (param1 == 32) || (param1 == 95) || (param1 == 45);
+        stackIn_9_0 = (character == 160) || (character == 32) || (character == 95) || (character == 45);
         return stackIn_9_0;
     }
 
@@ -138,7 +138,7 @@ final class Js5ArchiveManager {
         byte[] var15;
         var8 = Pool.field_O;
         if (!param0) {
-          Js5ArchiveManager.a((byte) 17, -69);
+          Js5ArchiveManager.sendMatchmakingRequest((byte) 17, -69);
         }
         if (null != this.masterIndex) {
           return true;
@@ -194,10 +194,10 @@ final class Js5ArchiveManager {
         return true;
     }
 
-    final static void a(byte param0, int param1) {
+    final static void sendMatchmakingRequest(byte obfuscationGuard, int opcode) {
         CipherPacketBuffer var2 = JaggrabDownloader.field_j;
-        var2.writeCipheredOpcode(false, param1);
-        int var3 = -32 / ((param0 - 16) / 57);
+        var2.writeCipheredOpcode(false, opcode);
+        int var3 = -32 / ((obfuscationGuard - 16) / 57);
         var2.position = var2.position + 1;
         int var4 = var2.position;
         var2.writeByte(2, false);

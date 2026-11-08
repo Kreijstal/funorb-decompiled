@@ -36,7 +36,7 @@ final class PlatformTaskDispatcher implements Runnable {
         return this.queueRequest(15, !param0 ? 0 : 1, false, param2, 0);
     }
 
-    private final static LimitedRandomAccessFile a(String param0, int param1, boolean param2, String param3) {
+    private final static LimitedRandomAccessFile openPreferencesFile(String suffix, int buildChannel, boolean obfuscationGuard, String product) {
         try {
           int var6 = 0;
           LimitedRandomAccessFile stackIn_12_0 = null;
@@ -47,13 +47,13 @@ final class PlatformTaskDispatcher implements Runnable {
           LimitedRandomAccessFile var8 = null;
           Exception var8_ref = null;
           String var9 = null;
-          if (param1 == 33) {
-            var4 = "jagex_" + param3 + "_preferences" + param0 + "_rc.dat";
+          if (buildChannel == 33) {
+            var4 = "jagex_" + product + "_preferences" + suffix + "_rc.dat";
           } else {
-            if (34 != param1) {
-              var4 = "jagex_" + param3 + "_preferences" + param0 + ".dat";
+            if (34 != buildChannel) {
+              var4 = "jagex_" + product + "_preferences" + suffix + ".dat";
             } else {
-              var4 = "jagex_" + param3 + "_preferences" + param0 + "_wip.dat";
+              var4 = "jagex_" + product + "_preferences" + suffix + "_wip.dat";
             }
           }
           var5 = new String[]{"c:/rscache/", "/rscache/", field_v, "c:/windows/", "c:/winnt/", "c:/", "/tmp/", ""};
@@ -71,11 +71,11 @@ final class PlatformTaskDispatcher implements Runnable {
               }
             }
           }
-          if (!param2) {
+          if (!obfuscationGuard) {
             return null;
           }
           var9 = (String) null;
-          PlatformTaskDispatcher.a((String) null, -124, false, (String) null);
+          PlatformTaskDispatcher.openPreferencesFile((String) null, -124, false, (String) null);
           return null;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -223,7 +223,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         }
                         break;
                       case 13:
-                        var3_ref2 = PlatformTaskDispatcher.a((String) (var9.field_g), field_r, false, "");
+                        var3_ref2 = PlatformTaskDispatcher.openPreferencesFile((String) (var9.field_g), field_r, false, "");
                         var9.field_e = var3_ref2;
                         break;
                       case 16:
@@ -285,7 +285,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         }
                         break;
                       case 12:
-                        var3_ref2 = PlatformTaskDispatcher.a((String) (var9.field_g), field_r, false, field_d);
+                        var3_ref2 = PlatformTaskDispatcher.openPreferencesFile((String) (var9.field_g), field_r, false, field_d);
                         var9.field_e = var3_ref2;
                         break;
                       case 7:
@@ -390,7 +390,7 @@ final class PlatformTaskDispatcher implements Runnable {
 
     final AsyncRequest enterFullscreen(int param0, int param1, int param2, int param3, byte param4) {
         if (param4 != 85) {
-          this.a(false);
+          this.shutdown(false);
         }
         return this.queueRequest(6, (param1 << 16) + param0, false, (Object) null, (param3 << 16) + param2);
     }
@@ -430,7 +430,7 @@ final class PlatformTaskDispatcher implements Runnable {
         return this.queueRequest(param2 ? 22 : 1, param0, false, param1, 0);
     }
 
-    final void a(boolean param0) {
+    final void shutdown(boolean stop) {
         try {
           int var2_int = 0;
           boolean stackIn_4_1 = false;
@@ -441,7 +441,7 @@ final class PlatformTaskDispatcher implements Runnable {
           IOException var3 = null;
           var2 = this;
           synchronized (var2) {
-            stackIn_4_1 = (param0);
+            stackIn_4_1 = (stop);
             this.field_u = stackIn_4_1;
             this.notifyAll();
           }

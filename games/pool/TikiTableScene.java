@@ -592,7 +592,7 @@ final class TikiTableScene extends ModelTableScene {
 
     final void releaseModels(boolean param0) {
         super.releaseModels(param0);
-        MusicVoice.c((byte) 90);
+        MusicVoice.stopSoundEffectReverb((byte) 90);
     }
 
     final void loadSceneSprites(int param0, ResourceArchive param1) {
@@ -905,7 +905,7 @@ final class TikiTableScene extends ModelTableScene {
           PlayingSound.sortParallelArrays(DelegatingCanvas.field_d, (byte) -104, TimeTrialSelectScreen.field_L, AccountProtocolStage.field_g, ClientException.field_e);
           PlayingSound.sortParallelArrays(ReflectionReplySupport.field_j, (byte) -104, TimeTrialSelectScreen.field_L, AccountProtocolStage.field_g, StartupInterfaceSupport.field_a);
           this.drawSky(param1, 9291);
-          MusicVoice.a(ArchiveRequest.field_w, false);
+          MusicVoice.projectSceneryBands(ArchiveRequest.field_w, false);
           this.drawGradientOverlayBands(256, 3, 256, (byte) -86);
           var6 = TriangleRasterizer.colorPalette;
           for (var5Lifetime1 = ModelOriginSupport.field_u.length - 1; 1 < var5Lifetime1; var5Lifetime1--) {
@@ -939,19 +939,19 @@ final class TikiTableScene extends ModelTableScene {
             return;
           }
           for (var5Lifetime2 = -1 + GradientPaletteSupport.field_c; TutorialFactory.field_c <= var5Lifetime2; var5Lifetime2--) {
-            ChatInputSupport.field_l[AccountProtocolStage.field_g[var5Lifetime2]].c(6710886, GzipDecoder.field_d);
+            ChatInputSupport.field_l[AccountProtocolStage.field_g[var5Lifetime2]].drawMeshOrDiagnostics(6710886, GzipDecoder.field_d);
           }
           for (var5Lifetime3 = -1 + TextWidgetPainter.field_h; QuickChatMenuSupport.field_b <= var5Lifetime3; var5Lifetime3--) {
-            ChatInputSupport.field_l[AccountProtocolStage.field_g[var5Lifetime3]].c(6710886, GzipDecoder.field_d);
+            ChatInputSupport.field_l[AccountProtocolStage.field_g[var5Lifetime3]].drawMeshOrDiagnostics(6710886, GzipDecoder.field_d);
           }
           for (var5Lifetime4 = UsernameSuggestionSupport.field_d - 1; var5Lifetime4 >= CheckboxPainter.field_n; var5Lifetime4--) {
-            ChatInputSupport.field_l[AccountProtocolStage.field_g[var5Lifetime4]].c(6710886, GzipDecoder.field_d);
+            ChatInputSupport.field_l[AccountProtocolStage.field_g[var5Lifetime4]].drawMeshOrDiagnostics(6710886, GzipDecoder.field_d);
           }
           if ((1073741824L & LinkButtonPainter.field_i) == 0L) {
             this.drawBallsInOrder(var30, (byte) 106, false, var21, false);
           }
           for (var5Lifetime5 = ReflectionReplySupport.field_j - 1; var5Lifetime5 >= StartupInterfaceSupport.field_a; var5Lifetime5--) {
-            ChatInputSupport.field_l[AccountProtocolStage.field_g[var5Lifetime5]].c(6710886, GzipDecoder.field_d);
+            ChatInputSupport.field_l[AccountProtocolStage.field_g[var5Lifetime5]].drawMeshOrDiagnostics(6710886, GzipDecoder.field_d);
           }
           if ((LinkButtonPainter.field_i & 1073741824L) == 0L) {
             for (var5Lifetime6 = 0; var21.length > var5Lifetime6; var5Lifetime6++) {
@@ -965,7 +965,7 @@ final class TikiTableScene extends ModelTableScene {
           for (var10 = var8 - 1; var7 <= var10; var10--) {
             var9 = AccountProtocolStage.field_g[var10];
             if (!OpacityWidget.field_Q[var9]) {
-              ChatInputSupport.field_l[var9].c(param0 ^ -6710865, GzipDecoder.field_d);
+              ChatInputSupport.field_l[var9].drawMeshOrDiagnostics(param0 ^ -6710865, GzipDecoder.field_d);
             }
           }
           if (0L == (1073741824L & LinkButtonPainter.field_i)) {
@@ -990,7 +990,7 @@ final class TikiTableScene extends ModelTableScene {
           while (var15 >= var7Lifetime1) {
             var9Lifetime1 = AccountProtocolStage.field_g[var15];
             if (OpacityWidget.field_Q[var9Lifetime1]) {
-              ChatInputSupport.field_l[var9Lifetime1].c(6710886, GzipDecoder.field_d);
+              ChatInputSupport.field_l[var9Lifetime1].drawMeshOrDiagnostics(6710886, GzipDecoder.field_d);
             }
             var15--;
           }
@@ -1134,7 +1134,7 @@ final class TikiTableScene extends ModelTableScene {
         for (var5 = 0; ThemeSelectScreen.field_K > var5; var5++) {
           var6 = 63 + var5 * 192 / ThemeSelectScreen.field_K;
           var7 = 128;
-          ShotEvent.field_m[var5] = AccountStateQuery.a(RenderingInitializationSupport.bitwiseOr(var7, RenderingInitializationSupport.bitwiseOr(var7 << 16, var7 << 8)), var6, false);
+          ShotEvent.field_m[var5] = AccountStateQuery.createTintedColorPalette(RenderingInitializationSupport.bitwiseOr(var7, RenderingInitializationSupport.bitwiseOr(var7 << 16, var7 << 8)), var6, false);
           VertexNormal.field_e[var5] = new SceneNode();
           VertexNormal.field_e[var5].setChildren((byte) -112, var3[var5]);
           ValidationMessageWidget.field_Y[var5].addFirst((byte) -52, new SceneNodeEntry(VertexNormal.field_e[var5]));
@@ -1243,7 +1243,7 @@ final class TikiTableScene extends ModelTableScene {
                             if (var6 != 8) {
                               if (var6 != 9) {
                                 if (var6 == 10) {
-                                  FreePlayRules.field_j[var3] = MusicCrossfadeStream.a(126, PcmSampleStream.createAtRatePercentQ6(this.field_gb, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, RankingsRequest.field_r)));
+                                  FreePlayRules.field_j[var3] = MusicCrossfadeStream.registerReverberatedSound(126, PcmSampleStream.createAtRatePercentQ6(this.field_gb, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, RankingsRequest.field_r)));
                                 } else {
                                   var5 = (PcmSample) (FreePlayRules.field_j[var3].field_o.field_n);
                                   if (var5 != this.field_X &&
@@ -1252,17 +1252,17 @@ final class TikiTableScene extends ModelTableScene {
                                     this.field_gb != var5) {
                                     FreePlayRules.field_j[var3] = DualLinkDequeIterator.registerSoundEffectStream(-24296, PcmSampleStream.createAtRatePercentQ6(var5, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, RankingsRequest.field_r)));
                                   } else {
-                                    FreePlayRules.field_j[var3] = MusicCrossfadeStream.a(126, PcmSampleStream.createAtRatePercentQ6(var5, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, RankingsRequest.field_r)));
+                                    FreePlayRules.field_j[var3] = MusicCrossfadeStream.registerReverberatedSound(126, PcmSampleStream.createAtRatePercentQ6(var5, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, RankingsRequest.field_r)));
                                   }
                                 }
                               } else {
-                                FreePlayRules.field_j[var3] = MusicCrossfadeStream.a(101, PcmSampleStream.createAtRatePercentQ6(this.field_Y, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, RankingsRequest.field_r)));
+                                FreePlayRules.field_j[var3] = MusicCrossfadeStream.registerReverberatedSound(101, PcmSampleStream.createAtRatePercentQ6(this.field_Y, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, RankingsRequest.field_r)));
                               }
                             } else {
-                              FreePlayRules.field_j[var3] = MusicCrossfadeStream.a(124, PcmSampleStream.createAtRatePercentQ6(this.field_cb, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, RankingsRequest.field_r)));
+                              FreePlayRules.field_j[var3] = MusicCrossfadeStream.registerReverberatedSound(124, PcmSampleStream.createAtRatePercentQ6(this.field_cb, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, RankingsRequest.field_r)));
                             }
                           } else {
-                            FreePlayRules.field_j[var3] = MusicCrossfadeStream.a(126, PcmSampleStream.createAtRatePercentQ6(this.field_X, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, RankingsRequest.field_r)));
+                            FreePlayRules.field_j[var3] = MusicCrossfadeStream.registerReverberatedSound(126, PcmSampleStream.createAtRatePercentQ6(this.field_X, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, RankingsRequest.field_r)));
                           }
                         } else {
                           FreePlayRules.field_j[var3] = DualLinkDequeIterator.registerSoundEffectStream(param0 - 19719, PcmSampleStream.createAtRatePercentQ6(this.field_ab, 100, param1, MaxLengthTextInputWidget.nextRandomInt(128, true, RankingsRequest.field_r)));

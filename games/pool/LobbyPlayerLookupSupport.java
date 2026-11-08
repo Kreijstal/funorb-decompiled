@@ -9,14 +9,14 @@ final class LobbyPlayerLookupSupport {
 
     final static LobbyPlayer findLobbyPlayer(int param0, long param1) {
         if (param0 != 0) {
-          LobbyPlayerLookupSupport.a(-80);
+          LobbyPlayerLookupSupport.isLoginComplete(-80);
           return (LobbyPlayer) (ModelOriginSupport.field_n.findFirst(param1, false));
         }
         return (LobbyPlayer) (ModelOriginSupport.field_n.findFirst(param1, false));
     }
 
-    final static boolean a(int param0) {
-        int var1 = -30 / ((-4 - param0) / 49);
+    final static boolean isLoginComplete(int obfuscationGuard) {
+        int var1 = -30 / ((-4 - obfuscationGuard) / 49);
         if (Atan2Support.field_c == null) {
           return false;
         }
@@ -31,16 +31,16 @@ final class LobbyPlayerLookupSupport {
         field_c = null;
         ignorelistdupe = null;
         if (param0 >= -40) {
-          LobbyPlayerLookupSupport.a(true);
+          LobbyPlayerLookupSupport.isGuestOrFreeAccount(true);
         }
     }
 
-    final static boolean a(boolean param0) {
+    final static boolean isGuestOrFreeAccount(boolean obfuscationGuard) {
         boolean stackIn_7_0 = false;
-        if (!param0) {
+        if (!obfuscationGuard) {
           return false;
         }
-        if (NanoTickClock.isClientConnected(-18)) {
+        if (NanoTickClock.isGuestMode(-18)) {
           stackIn_7_0 = true;
         } else {
           if (0 >= UsernameSuggestionsPanel.field_V) {

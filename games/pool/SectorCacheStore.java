@@ -21,7 +21,7 @@ final class SectorCacheStore {
         field_a = null;
         if (!param0) {
           String var2 = (String) null;
-          SectorCacheStore.a(true, (String) null, true, true, -64, (String) null);
+          SectorCacheStore.pollLoginRequest(true, (String) null, true, true, -64, (String) null);
         }
     }
 
@@ -424,7 +424,7 @@ final class SectorCacheStore {
         }
     }
 
-    final static int a(boolean param0, String param1, boolean param2, boolean param3, int param4, String param5) {
+    final static int pollLoginRequest(boolean param0, String param1, boolean param2, boolean param3, int param4, String param5) {
         try {
           int stackIn_5_0 = 0;
           int stackIn_32_0 = 0;
@@ -462,7 +462,7 @@ final class SectorCacheStore {
           var9 = Pool.field_O;
           try {
             if (null == Atan2Support.field_c &&
-              !CollisionContact.a((byte) 65, param2)) {
+              !CollisionContact.pollLoginSocket((byte) 65, param2)) {
               stackIn_5_0 = -1;
               return stackIn_5_0;
             }
@@ -495,7 +495,7 @@ final class SectorCacheStore {
               DialogLayer.pollPacketBytes((byte) 43, 8)) {
               Pool.field_Q = PlayerContextMenu.field_e.readLong(-412303328);
               PlayerContextMenu.field_e.position = 0;
-              MessageScreen.a(param2, CookieDateSupport.field_c, param3, -98300704, param4);
+              MessageScreen.sendEncryptedLoginPayload(param2, CookieDateSupport.field_c, param3, -98300704, param4);
               RankingsScreen.field_J = DualLinkDeque.field_g;
             }
             boolean decompiledFrameRemainder0 = true;
@@ -607,7 +607,7 @@ final class SectorCacheStore {
             }
             if (param0) {
               var10 = (String) null;
-              SectorCacheStore.a(true, (String) null, false, false, 59, (String) null);
+              SectorCacheStore.pollLoginRequest(true, (String) null, false, false, 59, (String) null);
             }
             if (RankingsScreen.field_J == Quaternion.field_k &&
               PacketAvailabilitySupport.hasCompletePacket((byte) 39)) {

@@ -50,7 +50,7 @@ final class ThreeSliceButtonPainter extends TextWidgetPainter {
           var8 = stackIn_13_0;
           stackIn_16_0 = (!param0) ? 7105644 : 16777215;
           var9 = stackIn_16_0;
-          SpaceObject.a((param4.widgetHeight - this.field_y[0].field_y >> 1) + (param3 + param4.widgetY), var8, param4.widgetX + param1, (byte) 18, param4.widgetWidth, this.field_y);
+          SpaceObject.drawThreeSliceAlpha((param4.widgetHeight - this.field_y[0].field_y >> 1) + (param3 + param4.widgetY), var8, param4.widgetX + param1, (byte) 18, param4.widgetWidth, this.field_y);
           this.font.drawParagraph(param4.widgetText, param1 + param4.widgetX, -2 + (param3 + param4.widgetY), param4.widgetWidth, param4.widgetHeight, var9, -1, 1, 1, this.font.maxAscent);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

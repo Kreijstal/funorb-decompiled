@@ -231,7 +231,7 @@ final class IntrusiveNodeHashTable implements Iterable {
           if (!RankingsRequest.field_z &&
             var5 < QuickChatPhraseDefinition.field_E) {
             var10_int = LobbyPanelLayoutSupport.getChatFilterMode(5, var8_ref_pn.field_p);
-            if (var8_ref_pn.b(14842) >= var10_int && (var8_ref_pn.field_g ||
+            if (var8_ref_pn.visibilityPriority(14842) >= var10_int && (var8_ref_pn.field_g ||
               !MenuSelection.isIgnoredName(var8_ref_pn.field_q, 24552))) {
               var9 = 1;
             }
@@ -357,7 +357,7 @@ final class IntrusiveNodeHashTable implements Iterable {
           try {
             try {
               var4 = param1.getCodeBase();
-              var3 = ModelInstance.a((byte) -100, var4, param1).getFile();
+              var3 = ModelInstance.rewriteAppletUrl((byte) -100, var4, param1).getFile();
               JavaScriptBridge.callWindowFunctionWithArguments("updatelinks", new Object[]{"home", var3 + "home.ws"}, 98, param1);
               JavaScriptBridge.callWindowFunctionWithArguments("updatelinks", new Object[]{"gamelist", var3 + "togamelist.ws"}, 70, param1);
               JavaScriptBridge.callWindowFunctionWithArguments("updatelinks", new Object[]{"serverlist", var3 + "toserverlist.ws"}, 116, param1);

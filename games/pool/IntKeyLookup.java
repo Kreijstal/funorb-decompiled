@@ -100,7 +100,7 @@ final class IntKeyLookup {
           IntKeyLookup.releaseStatics(-79);
         }
         if (HighScoreSubmission.hasInputOverlay(-86)) {
-          ShotRecord.a(param6, param3, -40960, param4);
+          ShotRecord.updateAuxiliaryDialogAndQuickChat(param6, param3, -40960, param4);
           if (PlasmaBallSkin.field_m != null &&
             PlasmaBallSkin.field_m.handleMenuSelection(param2, param1, param4, 25427, param3)) {
             param4 = false;

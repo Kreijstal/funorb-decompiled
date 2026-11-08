@@ -191,7 +191,7 @@ final class ProxyConnectorSupport {
     }
 
     final static void showLoginDialog(boolean mode, int obfuscationGuard) {
-        PacketDiagnosticsSupport.a(117, mode, false);
+        PacketDiagnosticsSupport.initializeLoginDialog(117, mode, false);
         if (obfuscationGuard != 0) {
           field_d = -51;
         }

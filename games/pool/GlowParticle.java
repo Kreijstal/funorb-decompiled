@@ -172,7 +172,7 @@ final class GlowParticle {
             }
             if (ArrayWidgetGroup.field_H) {
               MenuScreenBase.appendChatMessage(0, (String) (var2), (String) null, 2, (String) null, true);
-              ChatInputSupport.b(-1);
+              ChatInputSupport.closeQuickChat(-1);
             }
           }
           if (null == var2 &&
@@ -246,7 +246,7 @@ final class GlowParticle {
                 if (TimeTrialSelectScreen.field_J.pressedButton != 0 &&
                   var9 > TimeTrialSelectScreen.field_J.pressLocalX &&
                   !RankingsRequest.field_z) {
-                  EmailValidator.c((byte) 68);
+                  EmailValidator.restoreLobbyQuickChat((byte) 68);
                 }
               }
             }

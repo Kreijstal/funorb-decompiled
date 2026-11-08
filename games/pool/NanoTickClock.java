@@ -15,7 +15,7 @@ final class NanoTickClock extends TickClock {
     static UiComponent field_t;
     static boolean field_s;
 
-    final static boolean isClientConnected(int param0) {
+    final static boolean isGuestMode(int param0) {
         int var1 = 10 % ((param0 + 65) / 42);
         return FullscreenErrorDialog.field_kb;
     }
@@ -311,7 +311,7 @@ final class NanoTickClock extends TickClock {
         }
         long var6 = 0L;
         if (param0) {
-          NanoTickClock.isClientConnected(85);
+          NanoTickClock.isGuestMode(85);
         }
         for (var8 = 1; this.field_l >= var8; var8++) {
           var6 = var6 + this.field_o[(10 + this.field_j - var8) % 10];

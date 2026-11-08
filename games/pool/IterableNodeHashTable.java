@@ -61,7 +61,7 @@ final class IterableNodeHashTable {
           if (obfuscationGuard != 524288) {
             field_c = (int[]) null;
           }
-          var2_int = LogoMaterial.b(TutorialController.field_i, GradientPaletteSupport.field_f, -21223);
+          var2_int = LogoMaterial.accountBadgeKind(TutorialController.field_i, GradientPaletteSupport.field_f, -21223);
           if (1 == var2_int) {
             text = "<img=0>" + text;
           }

@@ -35,7 +35,7 @@ abstract class FadingDialog extends WidgetContainer {
     final static void drawSharedPanelAndTooltip(boolean active, int obfuscationGuard) {
         SlidingPanelSupport.drawSharedPanelRoot(0, active);
         if (null != CacheEntry.field_B) {
-          MeshColorSupport.a(CacheEntry.field_B, 1259627265);
+          MeshColorSupport.drawPointerTooltip(CacheEntry.field_B, 1259627265);
         }
         if (obfuscationGuard != 1) {
           int[] var3 = (int[]) null;
@@ -105,7 +105,7 @@ abstract class FadingDialog extends WidgetContainer {
               for (var7_int = var6 + 1; var7_int < param2.length; var7_int++) {
                 if (param2[var7_int].inPlay && (param2[var6].motionState != 0 ||
                   0 != param2[var7_int].motionState)) {
-                  var8_int = Js5Transport.a(param2[var7_int].velocityY, param2[var6].lastAdvanceTime, param2[var7_int].velocityX, param2[var7_int].lastAdvanceTime, param2[var6].velocityX, param2[var7_int].positionY, param2[var6].velocityY, param2[var7_int].positionX, 8, param2[var6].positionX, param2[var6].positionY, -1);
+                  var8_int = Js5Transport.sweepCirclePair(param2[var7_int].velocityY, param2[var6].lastAdvanceTime, param2[var7_int].velocityX, param2[var7_int].lastAdvanceTime, param2[var6].velocityX, param2[var7_int].positionY, param2[var6].velocityY, param2[var7_int].positionX, 8, param2[var6].positionX, param2[var6].positionY, -1);
                   if (param1 < var8_int) {
                     if (param2[var6].lastAdvanceTime < param2[var7_int].lastAdvanceTime) {
                       stackIn_18_0 = param2[var7_int].lastAdvanceTime;

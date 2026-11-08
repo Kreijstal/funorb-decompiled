@@ -128,7 +128,7 @@ final class TextLineLayout {
           if (var5 == null) {
             return false;
           }
-          ClientException.a(true, var5);
+          ClientException.decodeSpriteSheet(true, var5);
           if (param3 == 121) {
             return true;
           }

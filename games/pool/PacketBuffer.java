@@ -541,7 +541,7 @@ class PacketBuffer extends IntrusiveNode {
         } while (this.payload[fieldTemp$0] != 0);
         var3 = -var2 + this.position - 1;
         if (0 != var3) {
-          return RankingsScreen.a(var3, -7510, this.payload, var2);
+          return RankingsScreen.decodeWindows1252(var3, -7510, this.payload, var2);
         }
         return "";
     }
@@ -649,7 +649,7 @@ class PacketBuffer extends IntrusiveNode {
         } while (this.payload[fieldTemp$1] != 0);
         var4 = -1 + (-var3 + this.position);
         if (0 != var4) {
-          return RankingsScreen.a(var4, param0 - 18272, this.payload, var3);
+          return RankingsScreen.decodeWindows1252(var4, param0 - 18272, this.payload, var3);
         }
         return "";
     }

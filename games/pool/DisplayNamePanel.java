@@ -199,7 +199,7 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
     private final void submitDisplayName(int param0) {
         int discarded$0 = 0;
         if (this.isNameValid(-23086)) {
-          IterableDualLinkDeque.a(87, this.displayNameInput.widgetText);
+          IterableDualLinkDeque.beginLoginWithRetainedText(87, this.displayNameInput.widgetText);
           if (param0 >= -104) {
             String var3 = (String) null;
             discarded$0 = this.addValidatedInputRow(-86, (String) null, (UiWidget) null, -74, (String) null, -122, 47);

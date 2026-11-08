@@ -56,7 +56,7 @@ final class InstructionsScreen extends MenuScreen {
           if (var4 == -1) {
             return;
           }
-          HotspotRectangle.a((byte) 71, SoftwareRasterizer.width >> 1, CollisionContact.field_h, LoginPayload.field_e[var4], 15658734, 4144959);
+          HotspotRectangle.drawWrappedPointerTooltip((byte) 71, SoftwareRasterizer.width >> 1, CollisionContact.field_h, LoginPayload.field_e[var4], 15658734, 4144959);
           if (null == this.field_G) {
             return;
           }
@@ -85,7 +85,7 @@ final class InstructionsScreen extends MenuScreen {
           GameApplet.field_h.draw(620 - GameApplet.field_h.field_z, -FreePlayRules.field_e.maxAscent + 60);
           var4Lifetime1 = TextureCache.getVisibleTooltipIndex(104);
           if (var4Lifetime1 != -1) {
-            HotspotRectangle.a((byte) 71, SoftwareRasterizer.width >> 1, CollisionContact.field_h, LoginPayload.field_e[var4Lifetime1], 15658734, 4144959);
+            HotspotRectangle.drawWrappedPointerTooltip((byte) 71, SoftwareRasterizer.width >> 1, CollisionContact.field_h, LoginPayload.field_e[var4Lifetime1], 15658734, 4144959);
             if (null != this.field_G) {
               this.field_G.drawOutline(15658734, 0, 128, -1, true, 0);
             }
@@ -112,7 +112,7 @@ final class InstructionsScreen extends MenuScreen {
           GameApplet.field_h.draw(620 - GameApplet.field_h.field_z, -FreePlayRules.field_e.maxAscent + 60);
           var4Lifetime2 = TextureCache.getVisibleTooltipIndex(104);
           if (var4Lifetime2 != -1) {
-            HotspotRectangle.a((byte) 71, SoftwareRasterizer.width >> 1, CollisionContact.field_h, LoginPayload.field_e[var4Lifetime2], 15658734, 4144959);
+            HotspotRectangle.drawWrappedPointerTooltip((byte) 71, SoftwareRasterizer.width >> 1, CollisionContact.field_h, LoginPayload.field_e[var4Lifetime2], 15658734, 4144959);
             if (null != this.field_G) {
               this.field_G.drawOutline(15658734, 0, 128, -1, true, 0);
             }
@@ -137,7 +137,7 @@ final class InstructionsScreen extends MenuScreen {
         if (var4Lifetime3 == -1) {
           return;
         }
-        HotspotRectangle.a((byte) 71, SoftwareRasterizer.width >> 1, CollisionContact.field_h, LoginPayload.field_e[var4Lifetime3], 15658734, 4144959);
+        HotspotRectangle.drawWrappedPointerTooltip((byte) 71, SoftwareRasterizer.width >> 1, CollisionContact.field_h, LoginPayload.field_e[var4Lifetime3], 15658734, 4144959);
         if (null == this.field_G) {
           return;
         }

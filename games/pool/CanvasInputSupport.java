@@ -128,7 +128,7 @@ final class CanvasInputSupport {
           if (var3_int >= 12) {
             return false;
           }
-          if (!Js5ArchiveManager.a(0, param0)) {
+          if (!Js5ArchiveManager.isNameSeparator(0, param0)) {
             return true;
           }
           if (0 != var3_int) {

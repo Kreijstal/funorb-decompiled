@@ -94,7 +94,7 @@ final class NineBallRules extends GameRules {
         if (param0 >= -6) {
           NineBallRules.achievementNameCount((byte) -21);
         }
-        return !MeshColorSupport.a(true) ? -1 + RenderingInitializationSupport.achievementNames.length : RenderingInitializationSupport.achievementNames.length;
+        return !MeshColorSupport.isExtraAchievementEnabled(true) ? -1 + RenderingInitializationSupport.achievementNames.length : RenderingInitializationSupport.achievementNames.length;
     }
 
     private final int baseResolutionFlags(int param0) {
@@ -362,7 +362,7 @@ final class NineBallRules extends GameRules {
           boolean decompiledFrameRemainder0 = true;
           var6_int = 94 % ((param2 + 49) / 53);
           if (param1 != null && (2 != param3 ||
-            AccountStateQuery.a(false, param4, param0))) {
+            AccountStateQuery.isChatRecipientAvailable(false, param4, param0))) {
             stackIn_6_0 = true;
             decompiledFrameRemainder0 = false;
           }

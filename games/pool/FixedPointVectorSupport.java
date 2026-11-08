@@ -8,7 +8,7 @@ final class FixedPointVectorSupport {
     static String muGamelistAvgRating;
     static BinaryBitmapFont field_c;
 
-    final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static void fillTriangleHalfBlend(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         RuntimeException stackIn_79_0 = null;
         StringBuilder stackIn_79_1 = null;
         String stackIn_80_2 = null;

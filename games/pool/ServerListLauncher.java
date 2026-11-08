@@ -7,8 +7,8 @@ final class ServerListLauncher {
     static BufferedFile field_c;
     static QuaternionRotationSupport field_b;
 
-    final boolean b(int param0) {
-        if (param0 != 719) {
+    final boolean hasReachedLoginResponse(int obfuscationGuard) {
+        if (obfuscationGuard != 719) {
           return true;
         }
         if (this == DualLinkDeque.field_g) {
@@ -38,7 +38,7 @@ final class ServerListLauncher {
             }
             try {
               var2 = new java.net.URL(param1.getCodeBase(), "toserverlist.ws");
-              param1.getAppletContext().showDocument(ModelInstance.a((byte) -33, var2, param1), "_top");
+              param1.getAppletContext().showDocument(ModelInstance.rewriteAppletUrl((byte) -33, var2, param1), "_top");
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

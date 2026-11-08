@@ -25,7 +25,7 @@ final class ProjectedVertex {
     static int[][][] field_v;
     private int[] field_c;
 
-    final static LogoMaterial[] a(int param0, CipherPacketBuffer param1) {
+    final static LogoMaterial[] readLogoMaterials(int obfuscationGuard, CipherPacketBuffer buffer) {
         int var5 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -40,29 +40,29 @@ final class ProjectedVertex {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = param1.readBits(8, 92);
-          if (param0 != 24) {
+          var2_int = buffer.readBits(8, 92);
+          if (obfuscationGuard != 24) {
             field_s = (String) null;
           }
           if (var2_int > 0) {
             stackIn_4_0 = null;
             return (LogoMaterial[]) (stackIn_4_0);
           }
-          var3 = param1.readBits(12, 82);
+          var3 = buffer.readBits(12, 82);
           var4 = new LogoMaterial[var3];
           for (var5 = 0; var3 > var5; var5++) {
-            if (!FullscreenErrorDialog.readBooleanBit((byte) 118, param1)) {
-              var6 = param1.readBits(DelayedServerPacket.bitLength(16, -1 + var5), 105);
+            if (!FullscreenErrorDialog.readBooleanBit((byte) 118, buffer)) {
+              var6 = buffer.readBits(DelayedServerPacket.bitLength(16, -1 + var5), 105);
               var4[var5] = var4[var6];
             } else {
               var6_ref_nj = new LogoMaterial();
-              param1.readBits(24, 22);
-              param1.readBits(24, param0 + 38);
-              var6_ref_nj.field_a = param1.readBits(24, 28);
-              param1.readBits(9, 44);
-              param1.readBits(12, 104);
-              param1.readBits(12, 125);
-              param1.readBits(12, 99);
+              buffer.readBits(24, 22);
+              buffer.readBits(24, obfuscationGuard + 38);
+              var6_ref_nj.field_a = buffer.readBits(24, 28);
+              buffer.readBits(9, 44);
+              buffer.readBits(12, 104);
+              buffer.readBits(12, 125);
+              buffer.readBits(12, 99);
               var4[var5] = var6_ref_nj;
             }
           }
@@ -72,8 +72,8 @@ final class ProjectedVertex {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_15_0 = var2;
-          stackIn_15_1 = new StringBuilder().append("ro.D(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_15_1 = new StringBuilder().append("ro.D(").append(obfuscationGuard).append(',');
+          if (buffer == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
@@ -82,7 +82,7 @@ final class ProjectedVertex {
         }
     }
 
-    final static void b(int param0) {
+    final static void pollAccountStateRefresh(int obfuscationGuard) {
         RuntimeException decompiledCaughtException = null;
         int[] var1 = null;
         RuntimeException var1_ref = null;
@@ -130,7 +130,7 @@ final class ProjectedVertex {
             HighscoresScreen.field_K = true;
             GradientPaletteSupport.field_g = null;
           }
-          if (param0 > -18) {
+          if (obfuscationGuard > -18) {
             return;
           }
           if (HighscoresScreen.field_K) {
@@ -148,22 +148,22 @@ final class ProjectedVertex {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1_ref), "ro.A(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1_ref), "ro.A(" + obfuscationGuard + ')');
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, byte param4, int[] param5) {
+    final void setAndProject(int x, int z, int strokeWidth, int y, byte obfuscationGuard, int[] cameraTransform) {
         try {
-          param0 = param0 - param5[0];
-          param1 = param1 - param5[2];
-          param3 = param3 - param5[1];
-          this.field_u = param5[6] * param0 + (param3 * param5[7] + param1 * param5[8]) >> 16;
-          this.field_n = param1 * param5[5] + param0 * param5[3] + param3 * param5[4] >> 16;
-          this.field_a = param0 * param5[9] + (param3 * param5[10] + param5[11] * param1) >> 16;
-          if (param4 != 120) {
+          x = x - cameraTransform[0];
+          z = z - cameraTransform[2];
+          y = y - cameraTransform[1];
+          this.field_u = cameraTransform[6] * x + (y * cameraTransform[7] + z * cameraTransform[8]) >> 16;
+          this.field_n = z * cameraTransform[5] + x * cameraTransform[3] + y * cameraTransform[4] >> 16;
+          this.field_a = x * cameraTransform[9] + (y * cameraTransform[10] + cameraTransform[11] * z) >> 16;
+          if (obfuscationGuard != 120) {
             this.field_t = 28;
           }
-          this.field_l = param2;
+          this.field_l = strokeWidth;
           if (this.field_a != 0 &&
             this.field_a != 1) {
             this.field_b = IndexedSpriteState.projectX(this.field_a, this.field_n, (byte) 99);
@@ -173,11 +173,11 @@ final class ProjectedVertex {
           this.field_k = 0;
           this.field_i = 0;
         } catch (RuntimeException runtimeException) {
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ro.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ro.E(" + x + ',' + z + ',' + strokeWidth + ',' + y + ',' + obfuscationGuard + ',' + (cameraTransform != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(ProjectedVertex param0, int param1) {
+    final void computeStrokeJoinDirection(ProjectedVertex previous, int obfuscationGuard) {
         int var3_int = 0;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -185,11 +185,11 @@ final class ProjectedVertex {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          this.field_i = param0.field_f + this.field_f;
-          if (param1 != -16875) {
+          this.field_i = previous.field_f + this.field_f;
+          if (obfuscationGuard != -16875) {
             this.field_b = 105;
           }
-          this.field_k = param0.field_m + this.field_m;
+          this.field_k = previous.field_m + this.field_m;
           if (0 == this.field_i &&
             this.field_k == 0) {
             return;
@@ -205,16 +205,16 @@ final class ProjectedVertex {
           var3 = decompiledCaughtException;
           stackIn_10_0 = var3;
           stackIn_10_1 = new StringBuilder().append("ro.G(");
-          if (param0 == null) {
+          if (previous == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
-    final boolean b(ProjectedVertex param0, int param1) {
+    final boolean isSegmentOutsideView(ProjectedVertex other, int obfuscationGuard) {
         RuntimeException var3 = null;
         ProjectedVertex var4 = null;
         boolean stackIn_3_0 = false;
@@ -223,30 +223,30 @@ final class ProjectedVertex {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 != 24) {
+          if (obfuscationGuard != 24) {
             var4 = (ProjectedVertex) null;
-            this.b((ProjectedVertex) null, -17);
+            this.isSegmentOutsideView((ProjectedVertex) null, -17);
           }
-          stackIn_3_0 = NanoTickClock.isSegmentOutsideViewFrustum(99, param0.field_n, this.field_n, param0.field_u, param0.field_a, this.field_a, this.field_u);
+          stackIn_3_0 = NanoTickClock.isSegmentOutsideViewFrustum(99, other.field_n, this.field_n, other.field_u, other.field_a, this.field_a, this.field_u);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_6_0 = var3;
           stackIn_6_1 = new StringBuilder().append("ro.B(");
-          if (param0 == null) {
+          if (other == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
     public static void releaseStatics(int param0) {
         field_d = null;
         if (param0 != 240) {
-          ProjectedVertex.b(-41);
+          ProjectedVertex.pollAccountStateRefresh(-41);
         }
         muGameoptRejectXFromGame = null;
         field_v = (int[][][]) null;
@@ -254,7 +254,7 @@ final class ProjectedVertex {
         gameFull = null;
     }
 
-    final void a(byte param0, ProjectedVertex param1) {
+    final void prepareClippedStrokeSegment(byte obfuscationGuard, ProjectedVertex next) {
         int var3_int = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -266,11 +266,11 @@ final class ProjectedVertex {
           this.field_j[0] = this.field_u;
           this.field_c[0] = this.field_a;
           this.field_h[0] = this.field_l;
-          this.field_q[1] = param1.field_n;
-          this.field_j[1] = param1.field_u;
-          this.field_c[1] = param1.field_a;
-          this.field_h[1] = param1.field_l;
-          this.field_r = SharedRateScaleSupport.clipPerspectiveSegment(this.field_j, 0, this.field_q, this.field_h, this.field_c, param0 - 56);
+          this.field_q[1] = next.field_n;
+          this.field_j[1] = next.field_u;
+          this.field_c[1] = next.field_a;
+          this.field_h[1] = next.field_l;
+          this.field_r = SharedRateScaleSupport.clipPerspectiveSegment(this.field_j, 0, this.field_q, this.field_h, this.field_c, obfuscationGuard - 56);
           if ((this.field_r & 15) == 0) {
             this.field_q[0] = this.field_b;
             this.field_j[0] = this.field_o;
@@ -281,16 +281,16 @@ final class ProjectedVertex {
             this.field_h[0] = ProxyAuthenticationRequiredException.divideFixed12(this.field_h[0], this.field_c[0], (byte) 84);
           }
           if ((this.field_r & 240) == 0) {
-            this.field_q[1] = param1.field_b;
-            this.field_j[1] = param1.field_o;
-            this.field_h[1] = param1.field_t;
+            this.field_q[1] = next.field_b;
+            this.field_j[1] = next.field_o;
+            this.field_h[1] = next.field_t;
           } else {
             this.field_q[1] = IndexedSpriteState.projectX(this.field_c[1], this.field_q[1], (byte) 99);
             this.field_j[1] = DialRenderer.projectY(this.field_c[1], (byte) 68, this.field_j[1]);
             this.field_h[1] = ProxyAuthenticationRequiredException.divideFixed12(this.field_h[1], this.field_c[1], (byte) 83);
           }
           this.field_m = this.field_j[1] - this.field_j[0];
-          if (param0 != 60) {
+          if (obfuscationGuard != 60) {
             this.field_c = (int[]) null;
           }
           this.field_f = this.field_q[1] - this.field_q[0];
@@ -308,8 +308,8 @@ final class ProjectedVertex {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_16_0 = var3;
-          stackIn_16_1 = new StringBuilder().append("ro.F(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_16_1 = new StringBuilder().append("ro.F(").append(obfuscationGuard).append(',');
+          if (next == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";

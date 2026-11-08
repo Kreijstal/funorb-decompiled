@@ -36,7 +36,7 @@ final class ChatMessage {
           return;
         }
         String var2 = (String) null;
-        ChatMessage.a((byte) -13, (String) null);
+        ChatMessage.showCenteredNotice((byte) -13, (String) null);
         statusConcluded = null;
         loginUsernameTooltip = null;
         ballsetPlasmaGroup0Nocolour = null;
@@ -76,7 +76,7 @@ final class ChatMessage {
         }
     }
 
-    final int b(int param0) {
+    final int visibilityPriority(int obfuscationGuard) {
         if (this.field_g) {
           return 2;
         }
@@ -84,7 +84,7 @@ final class ChatMessage {
           if (~BitmapTextLayout.field_m == ~this.field_b) {
             return 1;
           }
-          if (param0 != 14842) {
+          if (obfuscationGuard != 14842) {
             this.field_o = -18;
           }
         } else {
@@ -94,7 +94,7 @@ final class ChatMessage {
           if (~BitmapTextLayout.field_m == ~this.field_b) {
             return 1;
           }
-          if (param0 == 14842) {
+          if (obfuscationGuard == 14842) {
             if (ChatInputSupport.field_a != 2) {
               return 0;
             }
@@ -114,26 +114,26 @@ final class ChatMessage {
         return 1;
     }
 
-    final static void a(byte param0, String param1) {
+    final static void showCenteredNotice(byte obfuscationGuard, String text) {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         LoginPayloadKind.field_d = true;
-        PacketDiagnosticsSupport.field_b.text = param1;
+        PacketDiagnosticsSupport.field_b.text = text;
         int var2_int = OpacityWidget.field_P.width;
-        if (param0 != 75) {
+        if (obfuscationGuard != 75) {
           return;
         }
         try {
           var3 = OpacityWidget.field_P.height;
-          var4 = PacketDiagnosticsSupport.field_b.font.measureWrappedHeight(param1, 272, PacketDiagnosticsSupport.field_b.lineSpacing);
+          var4 = PacketDiagnosticsSupport.field_b.font.measureWrappedHeight(text, 272, PacketDiagnosticsSupport.field_b.lineSpacing);
           var5 = -(var4 / 2) + var3 / 2 - 103;
-          ModelOriginSupport.field_q.setBounds(var5, param0 ^ 2147483572, (-320 + var2_int) / 2, 320, -(var5 * 2) - 120 + var3);
+          ModelOriginSupport.field_q.setBounds(var5, obfuscationGuard ^ 2147483572, (-320 + var2_int) / 2, 320, -(var5 * 2) - 120 + var3);
           ModelOriginSupport.field_q.frameSprites = NineSliceFrameSupport.buildNineSliceFrameSprites(32450, 3, 2105376, ModelOriginSupport.field_q.height, 11579568, 8421504);
-          PacketDiagnosticsSupport.field_b.setBounds(16, param0 + 2147483572, 24, -24 + (ModelOriginSupport.field_q.width - 24), ModelOriginSupport.field_q.height - 44);
-          SpriteResourceSupport.field_a.setBounds(-20 + ModelOriginSupport.field_q.height - 24, param0 ^ 2147483572, 120, 80, 24);
+          PacketDiagnosticsSupport.field_b.setBounds(16, obfuscationGuard + 2147483572, 24, -24 + (ModelOriginSupport.field_q.width - 24), ModelOriginSupport.field_q.height - 44);
+          SpriteResourceSupport.field_a.setBounds(-20 + ModelOriginSupport.field_q.height - 24, obfuscationGuard ^ 2147483572, 120, 80, 24);
         } catch (RuntimeException runtimeException) {
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "pn.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "pn.C(" + obfuscationGuard + ',' + (text != null ? "{...}" : "null") + ')');
         }
     }
 

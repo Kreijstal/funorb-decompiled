@@ -50,7 +50,7 @@ final class HighScoreSubmission extends IntrusiveNode {
           var9 = var7;
           var3 = var9.readUnsignedByte(-123);
           var9.beginBitReading(8);
-          SoundCache.field_a = ProjectedVertex.a(24, var9);
+          SoundCache.field_a = ProjectedVertex.readLogoMaterials(24, var9);
           ShotRecord.field_S = new TriangleMesh[var3];
           QuickChatMenu.field_gc = new int[var3][];
           for (var4 = 0; var4 < var3; var4++) {
@@ -108,7 +108,7 @@ final class HighScoreSubmission extends IntrusiveNode {
           if (var3 != 0) {
             return false;
           }
-          EmailValidator.c((byte) -65);
+          EmailValidator.restoreLobbyQuickChat((byte) -65);
           return true;
         }
         if (11 == IterableDualLinkDeque.field_a) {
@@ -116,7 +116,7 @@ final class HighScoreSubmission extends IntrusiveNode {
             return false;
           }
           if (AccountStateQuery.field_t == 2 &&
-            !AccountStateQuery.a(false, QuickChatDynamicCommand.field_c, BrowserCookieSupport.field_e)) {
+            !AccountStateQuery.isChatRecipientAvailable(false, QuickChatDynamicCommand.field_c, BrowserCookieSupport.field_e)) {
             return false;
           }
           if (2 != AccountStateQuery.field_t &&

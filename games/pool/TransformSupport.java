@@ -89,14 +89,14 @@ final class TransformSupport {
           var2.writeCipheredOpcode(false, opcode);
           var2.writeByte(2, false);
           var2.writeByte(4, false);
-          var2.writeByte(HuffmanCodec.b(true), false);
+          var2.writeByte(HuffmanCodec.packChatFilterModes(true), false);
           return;
         }
         TransformSupport.advanceInterfaceTransitions(true);
         var2.writeCipheredOpcode(false, opcode);
         var2.writeByte(2, false);
         var2.writeByte(4, false);
-        var2.writeByte(HuffmanCodec.b(true), false);
+        var2.writeByte(HuffmanCodec.packChatFilterModes(true), false);
     }
 
     static {

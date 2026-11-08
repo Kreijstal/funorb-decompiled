@@ -41,7 +41,7 @@ final class AudioService implements Runnable {
 
     final static void drawTransientInterface(int obfuscationGuard, boolean active) {
         if (null != CacheEntry.field_B) {
-          MeshColorSupport.a(CacheEntry.field_B, 1259627265);
+          MeshColorSupport.drawPointerTooltip(CacheEntry.field_B, 1259627265);
         }
         if (PlasmaBallSkin.field_m != null) {
           PlasmaBallSkin.field_m.draw(active, 12887);
@@ -53,7 +53,7 @@ final class AudioService implements Runnable {
         if (AccountMenuText.field_b != null) {
           AccountMenuText.field_b.drawRoot((byte) -79, active);
         }
-        PacketDiagnosticsSupport.a(48, active);
+        PacketDiagnosticsSupport.drawAuxiliaryDialog(48, active);
     }
 
     public final void run() {

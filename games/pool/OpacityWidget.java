@@ -250,7 +250,7 @@ final class OpacityWidget extends SingleChildWidget {
         youCanSpectate = null;
         if (param0 != 118) {
           byte[] var2 = (byte[]) null;
-          OpacityWidget.a((byte) 52, (byte[]) null, -94);
+          OpacityWidget.extendByteArrayWithZeros((byte) 52, (byte[]) null, -94);
         }
         benefitsPrice = null;
         field_Q = null;
@@ -304,19 +304,19 @@ final class OpacityWidget extends SingleChildWidget {
         }
     }
 
-    final static void a(ResourceArchive param0, byte param1, ResourceArchive param2) {
+    final static void setMembershipBenefitsArchives(ResourceArchive spriteArchive, byte obfuscationGuard, ResourceArchive fontArchive) {
         try {
-          MonotonicClock.field_c = param2;
-          IterableNodeHashTable.field_k = param0;
-          if (param1 != -32) {
+          MonotonicClock.field_c = fontArchive;
+          IterableNodeHashTable.field_k = spriteArchive;
+          if (obfuscationGuard != -32) {
             youCanSpectate = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "sh.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "sh.G(" + (spriteArchive != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + (fontArchive != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static byte[] a(byte param0, byte[] param1, int param2) {
+    final static byte[] extendByteArrayWithZeros(byte obfuscationGuard, byte[] bytes, int additionalLength) {
         RuntimeException var3 = null;
         byte[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -324,22 +324,22 @@ final class OpacityWidget extends SingleChildWidget {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 < 25) {
+          if (obfuscationGuard < 25) {
             OpacityWidget.placePopupVertically(-81, 49, -78, -118);
           }
-          stackIn_3_0 = ThemeSelectScreen.a(-116, param2, param1, (byte) 0);
+          stackIn_3_0 = ThemeSelectScreen.extendByteArray(-116, additionalLength, bytes, (byte) 0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_6_0 = var3;
-          stackIn_6_1 = new StringBuilder().append("sh.D(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_6_1 = new StringBuilder().append("sh.D(").append(obfuscationGuard).append(',');
+          if (bytes == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(additionalLength).append(')').toString());
         }
     }
 

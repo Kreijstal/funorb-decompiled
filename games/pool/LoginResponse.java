@@ -58,7 +58,7 @@ final class LoginResponse {
         }
     }
 
-    final static void b(int param0) {
+    final static void advanceBallHighlightPulses(int obfuscationGuard) {
         int var1_int = 0;
         int var2 = 0;
         int var3 = 0;
@@ -67,7 +67,7 @@ final class LoginResponse {
         var3 = Pool.field_O;
         try {
           var1_int = 0;
-          var2 = 101 % ((32 - param0) / 49);
+          var2 = 101 % ((32 - obfuscationGuard) / 49);
           while (var1_int < Js5Transport.field_n.length) {
             if (Js5Transport.field_n[var1_int] != 0 ||
               !(0 >= ParticleTrail.field_b[var1_int])) {
@@ -90,7 +90,7 @@ final class LoginResponse {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "wc.C(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "wc.C(" + obfuscationGuard + ')');
         }
     }
 

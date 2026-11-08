@@ -63,7 +63,7 @@ final class Cp1252DecodingSupport {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = -3 % ((69 - param1) / 54);
-          stackIn_1_0 = RankingsScreen.a(param0.length, -7510, param0, 0);
+          stackIn_1_0 = RankingsScreen.decodeWindows1252(param0.length, -7510, param0, 0);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

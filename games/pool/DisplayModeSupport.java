@@ -25,7 +25,7 @@ final class DisplayModeSupport {
             }
             try {
               var2 = new java.net.URL(param0.getCodeBase(), "subscribe.ws");
-              param0.getAppletContext().showDocument(ModelInstance.a((byte) -83, var2, param0), "_top");
+              param0.getAppletContext().showDocument(ModelInstance.rewriteAppletUrl((byte) -83, var2, param0), "_top");
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -65,7 +65,7 @@ final class DisplayModeSupport {
         return -3;
     }
 
-    final static String a(PacketBuffer param0, int param1, boolean param2) {
+    final static String readHuffmanString(PacketBuffer buffer, int maxLength, boolean obfuscationGuard) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -79,18 +79,18 @@ final class DisplayModeSupport {
         String stackIn_13_2 = null;
         Throwable decompiledCaughtException = null;
         try {
-          if (!param2) {
+          if (!obfuscationGuard) {
             stackIn_2_0 = (String) null;
             return stackIn_2_0;
           }
           try {
-            var3_int = param0.readUnsignedSmart((byte) -115);
-            if (param1 < var3_int) {
-              var3_int = param1;
+            var3_int = buffer.readUnsignedSmart((byte) -115);
+            if (maxLength < var3_int) {
+              var3_int = maxLength;
             }
             var4 = new byte[var3_int];
-            param0.position = param0.position + Pool.field_J.decompress((byte) 36, 0, param0.position, var4, param0.payload, var3_int);
-            var5 = RankingsScreen.a(var3_int, -7510, var4, 0);
+            buffer.position = buffer.position + Pool.field_J.decompress((byte) 36, 0, buffer.position, var4, buffer.payload, var3_int);
+            var5 = RankingsScreen.decodeWindows1252(var3_int, -7510, var4, 0);
             stackIn_7_0 = var5;
             return stackIn_7_0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -104,12 +104,12 @@ final class DisplayModeSupport {
           var3_ref = (RuntimeException) (Object) decompiledCaughtException;
           stackIn_12_0 = var3_ref;
           stackIn_12_1 = new StringBuilder().append("s.C(");
-          if (param0 == null) {
+          if (buffer == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(maxLength).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

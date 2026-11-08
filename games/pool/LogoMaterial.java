@@ -240,7 +240,7 @@ final class LogoMaterial {
         }
     }
 
-    final static int b(int param0, int param1, int param2) {
+    final static int accountBadgeKind(int param0, int param1, int param2) {
         if (param2 != -21223) {
           return -99;
         }

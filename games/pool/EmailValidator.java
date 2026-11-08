@@ -5,10 +5,10 @@ final class EmailValidator extends TextInputValidator {
     static int[] field_m;
     static int[] field_n;
 
-    final static void c(byte param0) {
+    final static void restoreLobbyQuickChat(byte obfuscationGuard) {
         CookieDateSupport.field_b = 0;
         QuickChatNavigationSupport.restoreQuickChatMenu((byte) -128);
-        int var1 = 96 / ((param0 - 1) / 38);
+        int var1 = 96 / ((obfuscationGuard - 1) / 38);
     }
 
     final IntegerSyntaxSupport validationStateForText(String param0, boolean param1) {
@@ -73,7 +73,7 @@ final class EmailValidator extends TextInputValidator {
             return stackIn_3_0;
           }
           if (param1 != 0) {
-            EmailValidator.c((byte) 12);
+            EmailValidator.restoreLobbyQuickChat((byte) 12);
           }
           stackIn_7_0 = NodeHashTableIterator.createEmailvalid;
           return stackIn_7_0;

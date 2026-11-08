@@ -698,11 +698,11 @@ class UiComponent extends UiComponentNode {
     }
 
     UiComponent(String param0, UiComponent param1, int param2, int param3, int param4, int param5, String param6) {
-        this(SpriteState.a(112, (CharSequence) ((Object) param0)), param1, param2, param3, param4, param5, param6);
+        this(SpriteState.hashText31(112, (CharSequence) ((Object) param0)), param1, param2, param3, param4, param5, param6);
     }
 
     UiComponent(String param0, UiComponent param1) {
-        this(SpriteState.a(109, (CharSequence) ((Object) param0)), param1, 0, 0, 0, 0, (String) null);
+        this(SpriteState.hashText31(109, (CharSequence) ((Object) param0)), param1, 0, 0, 0, 0, (String) null);
     }
 
     UiComponent(long param0, UiComponent param1, String param2) {

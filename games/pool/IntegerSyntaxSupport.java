@@ -45,7 +45,7 @@ final class IntegerSyntaxSupport {
           }
           LogoFinalFrameLoader.openPlayerContextMenu(stackIn_2_0, stackIn_2_1, stackIn_2_2, stackIn_3_3, (ScrollPane) null, message.field_q, obfuscationGuard ^ 32614, message.field_u, (int[]) null);
           if (message.field_p == 0 &&
-            !AccountStateQuery.c((byte) -75) &&
+            !AccountStateQuery.isLobbyChatComposerOpen((byte) -75) &&
             HighscoresScreen.field_L == null &&
             LookupRetrySupport.field_e == null) {
             if (!ViewportController.field_y) {
@@ -58,7 +58,7 @@ final class IntegerSyntaxSupport {
             var8.field_n.addAction(var9, 17130, 20);
           }
           if (1 == message.field_p &&
-            !AccountStateQuery.c((byte) -75) &&
+            !AccountStateQuery.isLobbyChatComposerOpen((byte) -75) &&
             HighscoresScreen.field_L != null &&
             message.field_o == HighscoresScreen.field_L.getGameId(20872)) {
             if (!ViewportController.field_y) {

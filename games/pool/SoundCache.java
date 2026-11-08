@@ -176,7 +176,7 @@ final class SoundCache {
           ByteArrayNode.field_n = DimmedPauseMenu.loadSprite(archive, 99, "", "achievement_highlight_hover");
           Base37Support.field_g = DimmedPauseMenu.loadSprite(archive, 109, "", "achievement_highlight_selected");
           ProjectedLineSupport.field_m = DimmedPauseMenu.loadSprite(archive, -10, "", "title_pool_logo_withalpha");
-          var11 = RankingsScreen.a(archive, 3812, "gradient_arrow_left", "");
+          var11 = RankingsScreen.loadIndexedSpriteByName(archive, 3812, "gradient_arrow_left", "");
           var25 = var11.field_i;
           var23 = new int[var25.length];
           var13 = var23;

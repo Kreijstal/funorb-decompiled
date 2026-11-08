@@ -52,8 +52,8 @@ abstract class TableScene {
         this.field_y = null;
     }
 
-    void d(int param0) {
-        if (param0 != 16) {
+    void onSceneryTransitionComplete(int obfuscationGuard) {
+        if (obfuscationGuard != 16) {
           this.updateHumPitch(3, 108);
         }
     }
@@ -110,15 +110,15 @@ abstract class TableScene {
         return this.floorColor(obfuscationGuard ^ 32445);
     }
 
-    final void a(int[] param0, int param1, int param2, int[] param3) {
-        IntrusiveNode.computeSpatialSoundParameters(2, param3, param0);
-        if (param2 > -74) {
+    final void playSpatialSound(int[] listenerTransform, int soundId, int obfuscationGuard, int[] sourcePosition) {
+        IntrusiveNode.computeSpatialSoundParameters(2, sourcePosition, listenerTransform);
+        if (obfuscationGuard > -74) {
           return;
         }
         try {
-          this.playTableSound(param1, DualLinkDequeIterator.field_g, (byte) -118, LoginRequiredScreen.field_I);
+          this.playTableSound(soundId, DualLinkDequeIterator.field_g, (byte) -118, LoginRequiredScreen.field_I);
         } catch (RuntimeException runtimeException) {
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "oo.NB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "oo.NB(" + (listenerTransform != null ? "{...}" : "null") + ',' + soundId + ',' + obfuscationGuard + ',' + (sourcePosition != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -769,7 +769,7 @@ abstract class TableScene {
     final String describeAmbientLight(byte param0) {
         if (param0 != 32) {
           int[] var3 = (int[]) null;
-          this.a(-106, (int[]) null, 4, (int[]) null, 62);
+          this.playSpatialSound(-106, (int[]) null, 4, (int[]) null, 62);
         }
         return "lighting amb=" + this.field_d + ", cont=" + this.field_m;
     }
@@ -1021,7 +1021,7 @@ abstract class TableScene {
           this.buildFloorTiles(2);
           this.buildPocketMarkers(param0.pockets, -33);
           this.buildCushionMeshes((byte) -92, param0.cushionSegments);
-          this.a(param0.cushionSegments, 16);
+          this.cacheFarthestCushionPairs(param0.cushionSegments, 16);
           this.markViewDirty(0);
           if (param1 != 21894) {
             var4 = (CushionSegment[]) null;
@@ -1079,7 +1079,7 @@ abstract class TableScene {
         }
     }
 
-    final void a(int param0, int[] param1) {
+    final void drawFloorTiles(int obfuscationGuard, int[] cameraTransform) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_8_0 = null;
@@ -1090,11 +1090,11 @@ abstract class TableScene {
         var4 = Pool.field_O;
         try {
           var3_int = 0;
-          if (param0 <= 26) {
+          if (obfuscationGuard <= 26) {
             this.field_b = (MusicTrack) null;
           }
           while (var3_int < this.field_y.length) {
-            this.field_y[var3_int].c(6710886, param1);
+            this.field_y[var3_int].drawMeshOrDiagnostics(6710886, cameraTransform);
             var3_int++;
           }
           return;
@@ -1102,8 +1102,8 @@ abstract class TableScene {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_8_0 = var3;
-          stackIn_8_1 = new StringBuilder().append("oo.BB(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_8_1 = new StringBuilder().append("oo.BB(").append(obfuscationGuard).append(',');
+          if (cameraTransform == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
@@ -1112,15 +1112,15 @@ abstract class TableScene {
         }
     }
 
-    final void a(int param0, int[] param1, int param2, int[] param3, int param4) {
+    final void playSpatialSound(int obfuscationGuard, int[] listenerTransform, int volume, int[] sourcePosition, int soundId) {
         try {
-          IntrusiveNode.computeSpatialSoundParameters(param0 - 1336449638, param3, param1);
-          this.playTableSound(param4, DualLinkDequeIterator.field_g * param2 >> 8, (byte) -111, LoginRequiredScreen.field_I);
-          if (param0 != 1336449640) {
+          IntrusiveNode.computeSpatialSoundParameters(obfuscationGuard - 1336449638, sourcePosition, listenerTransform);
+          this.playTableSound(soundId, DualLinkDequeIterator.field_g * volume >> 8, (byte) -111, LoginRequiredScreen.field_I);
+          if (obfuscationGuard != 1336449640) {
             this.field_j = 1.1224327362689441;
           }
         } catch (RuntimeException runtimeException) {
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "oo.QB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "oo.QB(" + obfuscationGuard + ',' + (listenerTransform != null ? "{...}" : "null") + ',' + volume + ',' + (sourcePosition != null ? "{...}" : "null") + ',' + soundId + ')');
         }
     }
 
@@ -1352,7 +1352,7 @@ abstract class TableScene {
         TriangleRasterizer.setBrightness(this.field_z);
     }
 
-    private final void a(CushionSegment[] param0, int param1) {
+    private final void cacheFarthestCushionPairs(CushionSegment[] segments, int pairCapacity) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         long var3_long = 0L;
@@ -1375,14 +1375,14 @@ abstract class TableScene {
         int var15 = 0;
         try {
           var3_long = -1L;
-          var17 = new int[param1][];
+          var17 = new int[pairCapacity][];
           var16 = var17;
           var5 = var16;
           var6 = 0;
-          for (var7 = 0; param0.length > var7; var7++) {
-            for (var8 = 1 + var7; param0.length > var8; var8++) {
-              var9_long = (long)(param0[var7].centerX(param1 + 83) - param0[var8].centerX(param1 ^ 101));
-              var11 = (long)(param0[var7].centerY((byte) -127) - param0[var8].centerY((byte) -127));
+          for (var7 = 0; segments.length > var7; var7++) {
+            for (var8 = 1 + var7; segments.length > var8; var8++) {
+              var9_long = (long)(segments[var7].centerX(pairCapacity + 83) - segments[var8].centerX(pairCapacity ^ 101));
+              var11 = (long)(segments[var7].centerY((byte) -127) - segments[var8].centerY((byte) -127));
               var13 = FullscreenFocusCanvas.multiplyFixedChecked(var9_long, var9_long, false) + FullscreenFocusCanvas.multiplyFixedChecked(var11, var11, false);
               if (var3_long < var13) {
                 var3_long = var13;
@@ -1407,8 +1407,8 @@ abstract class TableScene {
             if (var15 >= this.field_a.length) {
               return;
             }
-            var8 = param0[var17[var15][1]].centerX(123) - param0[var17[var15][0]].centerX(109);
-            var9 = param0[var17[var15][1]].centerY((byte) -127) - param0[var17[var15][0]].centerY((byte) -127);
+            var8 = segments[var17[var15][1]].centerX(123) - segments[var17[var15][0]].centerX(109);
+            var9 = segments[var17[var15][1]].centerY((byte) -127) - segments[var17[var15][0]].centerY((byte) -127);
             this.field_a[var15][0] = -var9 >> 13;
             this.field_a[var15][1] = var8 >> 13;
             var10 = IterableNodeHashTable.sqrtScaled256(-111, FullscreenFocusCanvas.multiplyFixedChecked((long)var8, (long)var8, false) + FullscreenFocusCanvas.multiplyFixedChecked((long)var9, (long)var9, false));
@@ -1429,12 +1429,12 @@ abstract class TableScene {
           var3 = decompiledCaughtException;
           stackIn_22_0 = var3;
           stackIn_22_1 = new StringBuilder().append("oo.PB(");
-          if (param0 == null) {
+          if (segments == null) {
             stackIn_23_2 = "null";
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(pairCapacity).append(')').toString());
         }
     }
 

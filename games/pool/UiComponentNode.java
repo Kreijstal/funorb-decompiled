@@ -112,12 +112,12 @@ class UiComponentNode extends DualLinkNode {
         }
     }
 
-    final static void c(byte param0) {
+    final static void requestLoginFromGuestMode(byte obfuscationGuard) {
         if (FullscreenErrorDialog.field_kb) {
           ClassicBallSkin.field_o = true;
           ProxyConnectorSupport.showLoginDialog(true, 0);
           PlasmaTableScene.field_ab = 0;
-          if (param0 <= 18) {
+          if (obfuscationGuard <= 18) {
             rule02 = (String) null;
           }
           return;

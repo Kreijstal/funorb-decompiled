@@ -250,7 +250,7 @@ final class PasswordValidator extends TextInputValidator {
             var6 = (String) null;
             this.validationMessageForText((String) null, -37);
           }
-          if (HotspotRectangle.a(1, var5)) {
+          if (HotspotRectangle.containsNonAlphanumeric(1, var5)) {
             stackIn_10_0 = IterableNodeHashTable.createAlertPasschars;
             return stackIn_10_0;
           }

@@ -106,7 +106,7 @@ final class ModernTableScene extends ModelTableScene {
                 var7Lifetime1Lifetime1 < 50) {
                 stackIn_39_0 = -3405;
                 stackIn_39_1 = 22;
-                if (LobbyPlayerLookupSupport.a(true)) {
+                if (LobbyPlayerLookupSupport.isGuestOrFreeAccount(true)) {
                   stackIn_40_2 = 21;
                 } else {
                   stackIn_40_2 = 0;
@@ -284,7 +284,7 @@ final class ModernTableScene extends ModelTableScene {
           var7Lifetime1 = dupTemp$1;
           var6 = dupTemp$1;
           for (var5Lifetime1 = IntrusiveNode.field_g - 1; var5Lifetime1 >= PolarTableScene.field_lb; var5Lifetime1--) {
-            ChatInputSupport.field_l[var5Lifetime1].c(6710886, GzipDecoder.field_d);
+            ChatInputSupport.field_l[var5Lifetime1].drawMeshOrDiagnostics(6710886, GzipDecoder.field_d);
             ViewportController.projectWorldPoint((int) ChatInputSupport.field_l[var5Lifetime1].field_h, var56, GzipDecoder.field_d, (int) ChatInputSupport.field_l[var5Lifetime1].field_a, (int) ChatInputSupport.field_l[var5Lifetime1].field_o, (byte) 9);
             if (var6 <= var56[0]) {
               if (var7Lifetime1 < var56[0]) {
@@ -419,12 +419,12 @@ final class ModernTableScene extends ModelTableScene {
             var7Lifetime1 = SoftwareRasterizer.clipRight;
           }
           for (var5Lifetime2 = -1 + SocialListEntry.field_Qb; SpriteResourceSupport.field_d <= var5Lifetime2; var5Lifetime2--) {
-            ChatInputSupport.field_l[var5Lifetime2].c(6710886, GzipDecoder.field_d);
+            ChatInputSupport.field_l[var5Lifetime2].drawMeshOrDiagnostics(6710886, GzipDecoder.field_d);
           }
           var11 = ChatMessageLine.field_m;
           var12 = ScreenProjectionSupport.field_c;
           for (var13 = var12 - 1; var11 <= var13; var13--) {
-            ChatInputSupport.field_l[AccountProtocolStage.field_g[var13]].c(6710886, GzipDecoder.field_d);
+            ChatInputSupport.field_l[AccountProtocolStage.field_g[var13]].drawMeshOrDiagnostics(6710886, GzipDecoder.field_d);
           }
           var27 = this.field_R;
           if (param0 != -55) {
@@ -436,7 +436,7 @@ final class ModernTableScene extends ModelTableScene {
           var11Lifetime1 = GrowableIntListFactory.field_h;
           var12Lifetime1 = FixedPointVectorSupport.field_a;
           for (var13Lifetime1 = -1 + var12Lifetime1; var11Lifetime1 <= var13Lifetime1; var13Lifetime1--) {
-            ChatInputSupport.field_l[AccountProtocolStage.field_g[var13Lifetime1]].c(param0 + 6710941, GzipDecoder.field_d);
+            ChatInputSupport.field_l[AccountProtocolStage.field_g[var13Lifetime1]].drawMeshOrDiagnostics(param0 + 6710941, GzipDecoder.field_d);
           }
           if ((1073741824L & LinkButtonPainter.field_i) == 0L) {
             this.drawBallsInOrder(var36, (byte) 65, false, var20, false);
@@ -444,7 +444,7 @@ final class ModernTableScene extends ModelTableScene {
           var11Lifetime2 = NodeHashTableIterator.field_l;
           var12Lifetime2 = CushionSegment.field_k;
           for (var13Lifetime2 = var12Lifetime2 - 1; var13Lifetime2 >= var11Lifetime2; var13Lifetime2--) {
-            ChatInputSupport.field_l[AccountProtocolStage.field_g[var13Lifetime2]].c(param0 ^ -6710865, GzipDecoder.field_d);
+            ChatInputSupport.field_l[AccountProtocolStage.field_g[var13Lifetime2]].drawMeshOrDiagnostics(param0 ^ -6710865, GzipDecoder.field_d);
           }
           if ((1073741824L & LinkButtonPainter.field_i) == 0L) {
             param1.drawGradientGuide((byte) 1);

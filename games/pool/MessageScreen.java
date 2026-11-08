@@ -7,7 +7,7 @@ final class MessageScreen extends MenuScreen {
     static TickClock field_J;
     static String field_I;
 
-    final static Object a(boolean param0, int param1, byte[] param2) {
+    final static Object wrapByteStorage(boolean copyArray, int obfuscationGuard, byte[] bytes) {
         DirectByteStorage var3 = null;
         RuntimeException var3_ref = null;
         DirectByteStorage stackIn_8_0 = null;
@@ -18,30 +18,30 @@ final class MessageScreen extends MenuScreen {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 >= -26) {
+          if (obfuscationGuard >= -26) {
             field_K = (BrowserCookieSupport) null;
           }
-          if (param2 == null) {
+          if (bytes == null) {
             return null;
           }
-          if (param2.length > 136) {
+          if (bytes.length > 136) {
             var3 = new DirectByteStorage();
-            ((ByteStorage) ((Object) var3)).setBytes(param2, (byte) 2);
+            ((ByteStorage) ((Object) var3)).setBytes(bytes, (byte) 2);
             stackIn_8_0 = var3;
             return stackIn_8_0;
           }
-          if (!param0) {
-            stackIn_13_0 = (byte[]) (param2);
+          if (!copyArray) {
+            stackIn_13_0 = (byte[]) (bytes);
             return stackIn_13_0;
           }
-          stackIn_11_0 = BirthDatePromptPanel.copyByteArray(param2, (byte) 91);
+          stackIn_11_0 = BirthDatePromptPanel.copyByteArray(bytes, (byte) 91);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_16_0 = var3_ref;
-          stackIn_16_1 = new StringBuilder().append("pj.B(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_16_1 = new StringBuilder().append("pj.B(").append(copyArray).append(',').append(obfuscationGuard).append(',');
+          if (bytes == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
@@ -50,7 +50,7 @@ final class MessageScreen extends MenuScreen {
         }
     }
 
-    final static void a(boolean param0, LoginPayload param1, boolean param2, int param3, int param4) {
+    final static void sendEncryptedLoginPayload(boolean reconnect, LoginPayload payload, boolean loginOption, int obfuscationGuard, int payloadParameter) {
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
@@ -70,10 +70,10 @@ final class MessageScreen extends MenuScreen {
           FontPaletteSupport.field_b.writeInt(true, Pool.field_L[2]);
           FontPaletteSupport.field_b.writeInt(true, Pool.field_L[3]);
           OptionsScreen.writeMachineIdentifier(FontPaletteSupport.field_b, 0);
-          FontPaletteSupport.field_b.writeShort((byte) -81, param4);
-          param1.writePayload((byte) 121, FontPaletteSupport.field_b);
+          FontPaletteSupport.field_b.writeShort((byte) -81, payloadParameter);
+          payload.writePayload((byte) 121, FontPaletteSupport.field_b);
           JaggrabDownloader.field_j.position = 0;
-          if (param0) {
+          if (reconnect) {
             JaggrabDownloader.field_j.writeByte(18, false);
           } else {
             JaggrabDownloader.field_j.writeByte(16, false);
@@ -89,7 +89,7 @@ final class MessageScreen extends MenuScreen {
           if (NanoTickClock.field_s) {
             var6 = var6 | 4;
           }
-          if (param2) {
+          if (loginOption) {
             var6 = var6 | 8;
           }
           if (CheckboxWidget.field_N != null) {
@@ -107,7 +107,7 @@ final class MessageScreen extends MenuScreen {
           ArchiveIndex.writeEncryptedBuffer((byte) 93, ArchiveLoadSequence.field_l, FontPaletteSupport.field_b, UiWidget.field_q, JaggrabDownloader.field_j);
           JaggrabDownloader.field_j.writeShortLengthPrefix(JaggrabDownloader.field_j.position - var5_int, (byte) -92);
           DebugTuningSupport.flushClientPackets(-1, 0);
-          if (param3 != -98300704) {
+          if (obfuscationGuard != -98300704) {
             MessageScreen.releaseStatics(false);
           }
           return;
@@ -115,13 +115,13 @@ final class MessageScreen extends MenuScreen {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_24_0 = var5;
-          stackIn_24_1 = new StringBuilder().append("pj.C(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_24_1 = new StringBuilder().append("pj.C(").append(reconnect).append(',');
+          if (payload == null) {
             stackIn_25_2 = "null";
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(loginOption).append(',').append(obfuscationGuard).append(',').append(payloadParameter).append(')').toString());
         }
     }
 

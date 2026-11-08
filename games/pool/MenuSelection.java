@@ -292,7 +292,7 @@ final class MenuSelection {
             }
             return;
           }
-          IterableDualLinkDeque.a((byte) -80);
+          IterableDualLinkDeque.layoutSlidingLobbyPanels((byte) -80);
           if (0 >= PoolMatchController.field_z) {
             if (LogoMaterial.field_b > 0) {
               DelayedServerPacket.layoutSlidingGamePanelsIntArgs(-35, LogoMaterial.field_b);
@@ -315,7 +315,7 @@ final class MenuSelection {
         if (0 < PoolMatchController.field_z) {
           PoolMatchController.field_z = PoolMatchController.field_z - 1;
           if (NodeHashTableIterator.field_a > 0) {
-            IterableDualLinkDeque.a((byte) -80);
+            IterableDualLinkDeque.layoutSlidingLobbyPanels((byte) -80);
           }
           if (0 < PoolMatchController.field_z) {
             DelayedServerPacket.layoutSlidingGamePanelsIntArgs(-42, PoolMatchController.field_z);
@@ -331,7 +331,7 @@ final class MenuSelection {
         }
         if (LogoMaterial.field_b <= 0) {
           if (NodeHashTableIterator.field_a > 0) {
-            IterableDualLinkDeque.a((byte) -80);
+            IterableDualLinkDeque.layoutSlidingLobbyPanels((byte) -80);
           }
           if (0 < PoolMatchController.field_z) {
             DelayedServerPacket.layoutSlidingGamePanelsIntArgs(-42, PoolMatchController.field_z);
@@ -339,7 +339,7 @@ final class MenuSelection {
         } else {
           LogoMaterial.field_b = LogoMaterial.field_b - 1;
           if (NodeHashTableIterator.field_a > 0) {
-            IterableDualLinkDeque.a((byte) -80);
+            IterableDualLinkDeque.layoutSlidingLobbyPanels((byte) -80);
             if (0 < PoolMatchController.field_z) {
               DelayedServerPacket.layoutSlidingGamePanelsIntArgs(-42, PoolMatchController.field_z);
             }

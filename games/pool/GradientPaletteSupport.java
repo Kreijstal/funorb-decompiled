@@ -12,11 +12,11 @@ final class GradientPaletteSupport {
     static int field_f;
     static AccountStateQuery field_g;
 
-    final static void a(byte param0, int param1, int param2, int param3) {
-        BallSkin.field_f = param3;
-        ReflectionRequestSupport.field_c = param2;
-        WidgetContainer.field_H = param1;
-        int var4 = 5 / ((param0 + 30) / 63);
+    final static void setChoiceTextColors(byte obfuscationGuard, int selectedColor, int unselectedColor, int headingColor) {
+        BallSkin.field_f = headingColor;
+        ReflectionRequestSupport.field_c = unselectedColor;
+        WidgetContainer.field_H = selectedColor;
+        int var4 = 5 / ((obfuscationGuard + 30) / 63);
     }
 
     final static void showDisplayNameForm(int obfuscationGuard) {

@@ -10,25 +10,25 @@ final class VertexTransformSupport {
     static long field_c;
     static String field_a;
 
-    final static void a(byte param0, int param1) {
+    final static void removeNotificationsByKind(byte obfuscationGuard, int kind) {
         AnimatedNotification var3 = null;
         IntrusiveDequeCursor var4 = null;
         AnimatedNotification var5 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (param1 == 0) {
+          if (kind == 0) {
             return;
           }
           if (MarkerSliderPainter.field_i.isEmpty(0)) {
             return;
           }
-          if (param0 != 48) {
+          if (obfuscationGuard != 48) {
             return;
           }
           var4 = new IntrusiveDequeCursor(MarkerSliderPainter.field_i);
           var5 = (AnimatedNotification) (var4.last((byte) -92));
-          if (param1 == var5.field_m) {
+          if (kind == var5.field_m) {
             if (ByteRecordSubmission.field_m != -1) {
               if (var5.field_H <= ByteRecordSubmission.field_m) {
                 if (ByteRecordSubmission.field_m < var5.field_B + var5.field_H) {
@@ -43,7 +43,7 @@ final class VertexTransformSupport {
           }
           var3 = (AnimatedNotification) (var4.previous(-108));
           while (var3 != null) {
-            if (param1 == var3.field_m) {
+            if (kind == var3.field_m) {
               var3.unlink((byte) -117);
             }
             var3 = (AnimatedNotification) (var4.previous(-88));
@@ -52,7 +52,7 @@ final class VertexTransformSupport {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "qg.A(" + param0 + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "qg.A(" + obfuscationGuard + ',' + kind + ')');
         }
     }
 

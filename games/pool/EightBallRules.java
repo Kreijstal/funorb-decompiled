@@ -632,7 +632,7 @@ final class EightBallRules extends GameRules {
           }
           var4 = (IntLookupQuery) (TutorialFactory.field_g.last((byte) 83));
           while (var4 != null) {
-            SceneNodeEntry.a(var4, param0, true);
+            SceneNodeEntry.sendIntLookupQuery(var4, param0, true);
             var4 = (IntLookupQuery) (TutorialFactory.field_g.previous((byte) -5));
           }
           return;

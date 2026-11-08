@@ -11,11 +11,11 @@ final class AccountDisplayNameSupport {
     static Sprite field_e;
     static int field_c;
 
-    final static String a(byte param0) {
+    final static String accountDisplayNameOrEmpty(byte obfuscationGuard) {
         if (null == ResourceArchive.field_j) {
           return "";
         }
-        if (param0 > -85) {
+        if (obfuscationGuard > -85) {
           field_d = 115;
           return ResourceArchive.field_j;
         }

@@ -107,7 +107,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
 
     public final void onButtonActivated(boolean param0, int param1, int param2, ButtonWidget param3, int param4) {
         if (this.field_Eb) {
-          PacketDiagnosticsSupport.a(115, false, true);
+          PacketDiagnosticsSupport.initializeLoginDialog(115, false, true);
           return;
         }
         NineSliceFrame.loginWithCreatedAccount((byte) 41);

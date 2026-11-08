@@ -64,7 +64,7 @@ final class TranslatedUiText {
         }
     }
 
-    final static void a(String param0, int param1, byte param2) {
+    final static void requestLoginTransition(String message, int resumeScreenId, byte obfuscationGuard) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -72,8 +72,8 @@ final class TranslatedUiText {
         RuntimeException decompiledCaughtException = null;
         try {
           EmailAvailabilityValidator.field_s = ChatInputSupport.field_b;
-          SocialListEntry.field_Ub = param1;
-          if (param2 <= 74) {
+          SocialListEntry.field_Ub = resumeScreenId;
+          if (obfuscationGuard <= 74) {
             field_h = -97;
           }
           return;
@@ -82,12 +82,12 @@ final class TranslatedUiText {
           runtimeException = decompiledCaughtException;
           stackIn_6_0 = runtimeException;
           stackIn_6_1 = new StringBuilder().append("nk.C(");
-          if (param0 == null) {
+          if (message == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(resumeScreenId).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

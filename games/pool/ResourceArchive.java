@@ -750,7 +750,7 @@ final class ResourceArchive {
     private final synchronized void loadGroupData(int param0, int param1) {
         boolean discarded$0 = false;
         if (!this.field_i) {
-          this.field_l[param0] = MessageScreen.a(false, param1 - 29, this.field_d.getPackedGroup(param0, (byte) 19));
+          this.field_l[param0] = MessageScreen.wrapByteStorage(false, param1 - 29, this.field_d.getPackedGroup(param0, (byte) 19));
         } else {
           this.field_l[param0] = this.field_d.getPackedGroup(param0, (byte) 19);
         }
@@ -881,7 +881,7 @@ final class ResourceArchive {
             stackIn_33_0 = var11_ref_RuntimeException;
             stackIn_33_1 = new StringBuilder();
             stackIn_34_2 = (param1 != null);
-            throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(" ").append(param3).append(" ").append(var9.length).append(" ").append(SpriteState.a(var9.length, var9, 0)).append(" ").append(SpriteState.a(var9.length - 2, var9, param0 ^ 0)).append(" ").append(this.index.groupCrcs[param3]).append(" ").append(this.index.field_v).toString());
+            throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(" ").append(param3).append(" ").append(var9.length).append(" ").append(SpriteState.crc32Prefix(var9.length, var9, 0)).append(" ").append(SpriteState.crc32Prefix(var9.length - 2, var9, param0 ^ 0)).append(" ").append(this.index.groupCrcs[param3]).append(" ").append(this.index.field_v).toString());
           }
           if (this.field_i) {
             this.field_l[param3] = null;
@@ -980,7 +980,7 @@ final class ResourceArchive {
                 if (this.field_k != 0) {
                   var7[var18] = var39[var17];
                 } else {
-                  var7[var18] = MessageScreen.a(false, -54, var39[var17]);
+                  var7[var18] = MessageScreen.wrapByteStorage(false, -54, var39[var17]);
                 }
               }
             }
@@ -991,7 +991,7 @@ final class ResourceArchive {
               var11 = var33[0];
             }
             if (this.field_k == 0) {
-              var7[var11] = MessageScreen.a(false, -77, var35);
+              var7[var11] = MessageScreen.wrapByteStorage(false, -77, var35);
               return true;
             }
             var7[var11] = var35;

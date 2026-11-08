@@ -52,12 +52,12 @@ final class TriangleMesh {
         this.boundsValid = false;
     }
 
-    final static boolean b(byte param0) {
+    final static boolean hasActiveLoginResponse(byte obfuscationGuard) {
         boolean stackIn_6_0 = false;
-        if (param0 != 84) {
+        if (obfuscationGuard != 84) {
           field_B = 96;
         }
-        stackIn_6_0 = (Atan2Support.field_c != null) && (RankingsScreen.field_J.b(719));
+        stackIn_6_0 = (Atan2Support.field_c != null) && (RankingsScreen.field_J.hasReachedLoginResponse(719));
         return stackIn_6_0;
     }
 
@@ -89,7 +89,7 @@ final class TriangleMesh {
 
     public static void releaseStatics(int param0) {
         if (param0 >= -11) {
-          TriangleMesh.b((byte) 45);
+          TriangleMesh.hasActiveLoginResponse((byte) 45);
         }
         field_t = null;
         createSuggestions = null;

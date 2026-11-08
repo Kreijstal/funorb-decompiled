@@ -585,7 +585,7 @@ final class SpaceTableScene extends ModelTableScene {
               SoftwareRasterizer.fillRadialGlow(DisplayModeSupport.field_b[0][var5Lifetime2], DisplayModeSupport.field_b[1][var5Lifetime2], var5Lifetime2 % ThreeSliceButtonPainter.field_t.length + 2 << 3, 255, DiskArchiveRequest.field_K);
             }
           }
-          NodeHashTableIterator.field_k.a(PoolUiText.field_d, PasswordValidator.field_t[1], 4096, (byte) 113, PasswordValidator.field_t[0]);
+          NodeHashTableIterator.field_k.drawRotatedCentered(PoolUiText.field_d, PasswordValidator.field_t[1], 4096, (byte) 113, PasswordValidator.field_t[0]);
           var16 = LobbyPanelLayoutSupport.copyTransform((byte) -68, var57);
           var94 = var16;
           var16[0] = var16[0] - 2304;
@@ -842,11 +842,11 @@ final class SpaceTableScene extends ModelTableScene {
           for (var4Lifetime3 = 0; var4Lifetime3 < this.field_O.length; var4Lifetime3++) {
             ModelOriginSupport.recenterModel(this.field_M[var4Lifetime3], 0, this.field_O[var4Lifetime3]);
           }
-          MeshColorSupport.a(this.field_O[MenuLabelSupport.field_b], (short) -8246, true, this.field_M[MenuLabelSupport.field_b], SingleChildWidget.field_I);
+          MeshColorSupport.recenterMeshAtMarkerEdge(this.field_O[MenuLabelSupport.field_b], (short) -8246, true, this.field_M[MenuLabelSupport.field_b], SingleChildWidget.field_I);
           if (param1 >= -43) {
             this.initializeScene(false);
           }
-          MeshColorSupport.a(this.field_O[StatefulTextPainter.field_x], (short) -8246, true, this.field_M[StatefulTextPainter.field_x], ContextMenu.field_Ub);
+          MeshColorSupport.recenterMeshAtMarkerEdge(this.field_O[StatefulTextPainter.field_x], (short) -8246, true, this.field_M[StatefulTextPainter.field_x], ContextMenu.field_Ub);
           DirectByteStorage.field_h = new byte[32][this.field_O[TextInputPainter.field_w].faceCount];
           for (var4Lifetime4 = 0; DirectByteStorage.field_h.length > var4Lifetime4; var4Lifetime4++) {
             for (var14 = 0; var14 < DirectByteStorage.field_h[var4Lifetime4].length; var14++) {

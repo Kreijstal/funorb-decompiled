@@ -175,7 +175,7 @@ final class BitmapTextLayout extends TextLayout {
             var1 = TextLineLayout.field_j.getEnteredName(-103);
           }
           if (var1.length() == 0) {
-            var1 = AccountDisplayNameSupport.a((byte) -119);
+            var1 = AccountDisplayNameSupport.accountDisplayNameOrEmpty((byte) -119);
           }
           if (var1.length() == 0) {
             var1 = LoginPayloadKind.dEFAULTPLAYERNAME;

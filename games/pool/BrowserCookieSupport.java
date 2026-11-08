@@ -218,7 +218,7 @@ final class BrowserCookieSupport {
         boolean stackIn_17_1 = false;
         UiComponent stackIn_21_0 = null;
         boolean stackIn_22_1 = false;
-        IterableDualLinkDeque.a((byte) -100);
+        IterableDualLinkDeque.layoutSlidingLobbyPanels((byte) -100);
         if (LobbyPlayerLookupSupport.field_d >= 0) {
           SceneNodeEntry.field_m.text = AccountWelcomePanel.substituteTemplateArguments(new String[]{Integer.toString(LobbyPlayerLookupSupport.field_d)}, -1, RatingTextState.yourRatingIsX);
         } else {

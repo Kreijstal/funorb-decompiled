@@ -500,9 +500,9 @@ class MenuScreen extends MenuScreenBase {
                                                   if (!this.selection.isPressActivated((byte) 76)) {
                                                     break regionExit2;
                                                   }
-                                                  if (NanoTickClock.isClientConnected(107)) {
+                                                  if (NanoTickClock.isGuestMode(107)) {
                                                     WireframeQuad.field_x = true;
-                                                    TranslatedUiText.a(VertexProjectionSupport.pleaselogin, -4, (byte) 82);
+                                                    TranslatedUiText.requestLoginTransition(VertexProjectionSupport.pleaselogin, -4, (byte) 82);
                                                   } else {
                                                     var6 = param1 ? 1 : 0;
                                                     AccountCreationDialog.switchScreen(-3405, -4, GameRules.field_b, var6 != 0);
@@ -650,11 +650,11 @@ class MenuScreen extends MenuScreenBase {
                                                                             break regionExit2;
                                                                           }
                                                                           if (MatchingTextValidator.field_u != null) {
-                                                                            AccountStateQuery.d((byte) -124);
+                                                                            AccountStateQuery.leaveFullscreen((byte) -124);
                                                                           } else {
                                                                             var6 = param1 ? 1 : 0;
                                                                             NineSliceFrame.field_c = false;
-                                                                            AvailabilityQueryResult.a(-28038, var6 != 0);
+                                                                            AvailabilityQueryResult.requestFullscreen(-28038, var6 != 0);
                                                                           }
                                                                         } else {
                                                                           if (var6 != 61 &&
@@ -665,7 +665,7 @@ class MenuScreen extends MenuScreenBase {
                                                                                 var6 = param1 ? 1 : 0;
                                                                                 stackIn_212_0 = -3405;
                                                                                 stackIn_212_1 = -1;
-                                                                                if (LobbyPlayerLookupSupport.a(true)) {
+                                                                                if (LobbyPlayerLookupSupport.isGuestOrFreeAccount(true)) {
                                                                                   stackIn_213_2 = 21;
                                                                                 } else {
                                                                                   stackIn_213_2 = 0;
@@ -679,7 +679,7 @@ class MenuScreen extends MenuScreenBase {
                                                                                   var6 = param1 ? 1 : 0;
                                                                                   stackIn_218_0 = -3405;
                                                                                   stackIn_218_1 = -1;
-                                                                                  if (LobbyPlayerLookupSupport.a(true)) {
+                                                                                  if (LobbyPlayerLookupSupport.isGuestOrFreeAccount(true)) {
                                                                                     stackIn_219_2 = 21;
                                                                                   } else {
                                                                                     stackIn_219_2 = 0;
@@ -697,7 +697,7 @@ class MenuScreen extends MenuScreenBase {
                                                                                     var6 = param1 ? 1 : 0;
                                                                                     stackIn_224_0 = -3405;
                                                                                     stackIn_224_1 = -7;
-                                                                                    if (!LobbyPlayerLookupSupport.a(true)) {
+                                                                                    if (!LobbyPlayerLookupSupport.isGuestOrFreeAccount(true)) {
                                                                                       stackIn_225_2 = 0;
                                                                                     } else {
                                                                                       stackIn_225_2 = 21;
@@ -749,7 +749,7 @@ class MenuScreen extends MenuScreenBase {
                                                                                     var6 = param1 ? 1 : 0;
                                                                                     stackIn_240_0 = -3405;
                                                                                     stackIn_240_1 = -8;
-                                                                                    if (LobbyPlayerLookupSupport.a(true)) {
+                                                                                    if (LobbyPlayerLookupSupport.isGuestOrFreeAccount(true)) {
                                                                                       stackIn_241_2 = 21;
                                                                                     } else {
                                                                                       stackIn_241_2 = 0;
@@ -760,7 +760,7 @@ class MenuScreen extends MenuScreenBase {
                                                                                       var6 = param1 ? 1 : 0;
                                                                                       stackIn_236_0 = -3405;
                                                                                       stackIn_236_1 = -6;
-                                                                                      if (!LobbyPlayerLookupSupport.a(true)) {
+                                                                                      if (!LobbyPlayerLookupSupport.isGuestOrFreeAccount(true)) {
                                                                                         stackIn_237_2 = 0;
                                                                                       } else {
                                                                                         stackIn_237_2 = 21;
@@ -770,7 +770,7 @@ class MenuScreen extends MenuScreenBase {
                                                                                       var6 = param1 ? 1 : 0;
                                                                                       stackIn_232_0 = -3405;
                                                                                       stackIn_232_1 = -7;
-                                                                                      if (!LobbyPlayerLookupSupport.a(true)) {
+                                                                                      if (!LobbyPlayerLookupSupport.isGuestOrFreeAccount(true)) {
                                                                                         stackIn_233_2 = 0;
                                                                                       } else {
                                                                                         stackIn_233_2 = 21;
@@ -805,7 +805,7 @@ class MenuScreen extends MenuScreenBase {
                                                       var6 = param1 ? 1 : 0;
                                                       stackIn_129_0 = -3405;
                                                       stackIn_129_1 = -1;
-                                                      if (LobbyPlayerLookupSupport.a(true)) {
+                                                      if (LobbyPlayerLookupSupport.isGuestOrFreeAccount(true)) {
                                                         stackIn_130_2 = 21;
                                                       } else {
                                                         stackIn_130_2 = 0;

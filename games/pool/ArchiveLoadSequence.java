@@ -38,7 +38,7 @@ final class ArchiveLoadSequence {
         try {
           if (param1) {
             var5 = (String) null;
-            ArchiveLoadSequence.a((String) null, (String) null, (String) null, 64, -116, 103);
+            ArchiveLoadSequence.showDecisionDialog((String) null, (String) null, (String) null, 64, -116, 103);
           }
           var4_float = (float)param2 / 100.0f + (float)(this.currentStepIndex + 1);
           this.scaledProgress = (float)this.progressScale * var4_float / (float)(1 + this.stepCount);
@@ -119,21 +119,21 @@ final class ArchiveLoadSequence {
         return true;
     }
 
-    final static void a(String param0, String param1, String param2, int param3, int param4, int param5) {
+    final static void showDecisionDialog(String message, String secondButtonText, String firstButtonText, int obfuscationGuard, int secondAction, int firstAction) {
         try {
           if (null == LobbyGame.field_Vb) {
-            MessageDialog.o((byte) -125);
+            MessageDialog.initializeDecisionDialog((byte) -125);
           }
-          int var6_int = 102 % ((-49 - param3) / 58);
-          ScreenProjectionSupport.field_a = param5;
-          NanoTickClock.field_t.text = param2;
-          EmailAvailabilityValidator.field_n = param4;
-          MonotonicClock.field_b.text = param1;
-          LobbyGame.field_Vb.text = param0;
+          int var6_int = 102 % ((-49 - obfuscationGuard) / 58);
+          ScreenProjectionSupport.field_a = firstAction;
+          NanoTickClock.field_t.text = firstButtonText;
+          EmailAvailabilityValidator.field_n = secondAction;
+          MonotonicClock.field_b.text = secondButtonText;
+          LobbyGame.field_Vb.text = message;
           FreePlayRules.layoutDecisionDialog((byte) -86);
           GzipDecoder.field_h = true;
         } catch (RuntimeException runtimeException) {
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "rb.G(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "rb.G(" + (message != null ? "{...}" : "null") + ',' + (secondButtonText != null ? "{...}" : "null") + ',' + (firstButtonText != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + secondAction + ',' + firstAction + ')');
         }
     }
 

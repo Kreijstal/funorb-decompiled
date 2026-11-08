@@ -23,7 +23,7 @@ final class LoginRequiredScreen extends MenuScreen {
           super.handleMenuAction(param0, param1, param2);
           return;
         }
-        TranslatedUiText.a((String) null, FadingDialog.hasNonzeroWord(false, SupportPageLauncher.field_c) ? 18 : 16, (byte) 121);
+        TranslatedUiText.requestLoginTransition((String) null, FadingDialog.hasNonzeroWord(false, SupportPageLauncher.field_c) ? 18 : 16, (byte) 121);
     }
 
     final static void showAccountCreationForm(int obfuscationGuard) {

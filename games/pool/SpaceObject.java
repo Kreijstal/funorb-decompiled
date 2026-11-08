@@ -74,7 +74,7 @@ final class SpaceObject {
         try {
           if (param2 <= 79) {
             var6 = (Sprite[]) null;
-            SpaceObject.a(48, -85, 56, (byte) 112, -17, (Sprite[]) null);
+            SpaceObject.drawThreeSliceAlpha(48, -85, 56, (byte) 112, -17, (Sprite[]) null);
           }
           if (null == this.field_o) {
             this.field_p.toRotationMatrix(this.field_g, -125);
@@ -151,7 +151,7 @@ final class SpaceObject {
         }
     }
 
-    final static void a(int param0, int param1, int param2, byte param3, int param4, Sprite[] param5) {
+    final static void drawThreeSliceAlpha(int y, int alpha, int x, byte obfuscationGuard, int width, Sprite[] sprites) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -166,23 +166,23 @@ final class SpaceObject {
         Sprite[] var12 = null;
         var11 = Pool.field_O;
         try {
-          if (param5 != null &&
-            param4 > 0) {
-            var6_int = param5[0].field_w;
-            var7 = param5[2].field_w;
-            var8 = param5[1].field_w;
-            param5[0].drawAlpha(param2, param0, param1);
-            param5[2].drawAlpha(-var7 + (param2 + param4), param0, param1);
+          if (sprites != null &&
+            width > 0) {
+            var6_int = sprites[0].field_w;
+            var7 = sprites[2].field_w;
+            var8 = sprites[1].field_w;
+            sprites[0].drawAlpha(x, y, alpha);
+            sprites[2].drawAlpha(-var7 + (x + width), y, alpha);
             SoftwareRasterizer.saveClip(GameRules.field_a);
-            SoftwareRasterizer.intersectClip(var6_int + param2, param0, param4 + (param2 - var7), param0 + param5[1].field_y);
-            var9 = param2 + var6_int;
-            var10 = param2 + param4 - var7;
-            if (param3 != 18) {
+            SoftwareRasterizer.intersectClip(var6_int + x, y, width + (x - var7), y + sprites[1].field_y);
+            var9 = x + var6_int;
+            var10 = x + width - var7;
+            if (obfuscationGuard != 18) {
               var12 = (Sprite[]) null;
-              SpaceObject.a(-32, 78, -31, (byte) 16, 88, (Sprite[]) null);
+              SpaceObject.drawThreeSliceAlpha(-32, 78, -31, (byte) 16, 88, (Sprite[]) null);
             }
-            for (param2 = var9; param2 < var10; param2 = param2 + var8) {
-              param5[1].drawAlpha(param2, param0, param1);
+            for (x = var9; x < var10; x = x + var8) {
+              sprites[1].drawAlpha(x, y, alpha);
             }
             SoftwareRasterizer.restoreClip(GameRules.field_a);
             return;
@@ -192,8 +192,8 @@ final class SpaceObject {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
           stackIn_14_0 = var6;
-          stackIn_14_1 = new StringBuilder().append("qf.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
-          if (param5 == null) {
+          stackIn_14_1 = new StringBuilder().append("qf.E(").append(y).append(',').append(alpha).append(',').append(x).append(',').append(obfuscationGuard).append(',').append(width).append(',');
+          if (sprites == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";

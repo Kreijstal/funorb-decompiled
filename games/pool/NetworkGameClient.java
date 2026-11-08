@@ -169,18 +169,18 @@ abstract class NetworkGameClient extends GameApplet {
             if (PaletteFontLoader.field_a != -1 &&
               0 != PaletteFontLoader.field_a) {
               PaletteFontLoader.field_a = -1;
-              ProgressDialog.i((byte) 72);
+              ProgressDialog.resetArchiveConnectionFailures((byte) 72);
             }
             if (!param0) {
-              var5_intLifetime2 = SectorCacheStore.a(false, CollisionContact.a(false), false, this.field_x, this.field_w, ByteRecordSubmission.getAccountPassword((byte) 54));
+              var5_intLifetime2 = SectorCacheStore.pollLoginRequest(false, CollisionContact.a(false), false, this.field_x, this.field_w, ByteRecordSubmission.getAccountPassword((byte) 54));
               if (var5_intLifetime2 != -1) {
                 if (var5_intLifetime2 == 0) {
                   ChatReplacementSupport.field_e = Quaternion.field_a;
-                  LobbyGame.f((byte) 121);
+                  LobbyGame.finishLoginInterface((byte) 121);
                   FullscreenErrorDialog.field_kb = false;
                   PlasmaTableScene.field_ab = 10;
                 } else {
-                  LoginPayload.a(true, LoginTextValue.field_g, var5_intLifetime2);
+                  LoginPayload.showLoginError(true, LoginTextValue.field_g, var5_intLifetime2);
                   LoginTextValue.field_g = null;
                 }
               }
@@ -232,7 +232,7 @@ abstract class NetworkGameClient extends GameApplet {
               if (ClientUiResourceState.field_d.pollComplete((byte) -118)) {
                 var12 = ClientUiResourceState.field_d.getResult(-25955);
                 if (var12 != null) {
-                  var7 = RankingsScreen.a(var12.position, -7510, var12.payload, 0);
+                  var7 = RankingsScreen.decodeWindows1252(var12.position, -7510, var12.payload, 0);
                   AppletContainerSupport.validateAppletContainerGuard(var7, true);
                 } else {
                   var9 = (String) null;
@@ -549,7 +549,7 @@ abstract class NetworkGameClient extends GameApplet {
           discarded$42 = this.serviceAccountActions(stackIn_10_1, stackIn_11_2, -114);
         } else {
           if (QuickChatCategoryDefinition.field_y >= 10) {
-            if (!MeshRenderSupport.a(77)) {
+            if (!MeshRenderSupport.isIntroComplete(77)) {
               LookupProtocolSupport.advanceIntroTick(121);
             } else {
               if (PlasmaTableScene.field_ab != 0) {
@@ -592,33 +592,33 @@ abstract class NetworkGameClient extends GameApplet {
         if (this.field_n) {
           return -1;
         }
-        if (!NameNormalizationSupport.b((byte) 109)) {
+        if (!NameNormalizationSupport.canAttemptLogin((byte) 109)) {
           return -1;
         }
         if (DualLinkNode.field_v) {
           return -1;
         }
-        var2 = SectorCacheStore.a(false, CollisionContact.a(false), true, this.field_x, this.field_w, ByteRecordSubmission.getAccountPassword((byte) 121));
+        var2 = SectorCacheStore.pollLoginRequest(false, CollisionContact.a(false), true, this.field_x, this.field_w, ByteRecordSubmission.getAccountPassword((byte) 121));
         if (param0 == ~var2) {
           return -1;
         }
         if (var2 == 0) {
           if (PlasmaTableScene.field_ab == 11 &&
             0 == PaletteFontLoader.field_a) {
-            LobbyGame.f((byte) -50);
+            LobbyGame.finishLoginInterface((byte) -50);
           }
         } else {
           if (1 == var2) {
             if (PlasmaTableScene.field_ab == 11 &&
               0 == PaletteFontLoader.field_a) {
-              LobbyGame.f((byte) -50);
+              LobbyGame.finishLoginInterface((byte) -50);
             }
           } else {
             if (!LoginPayloadFactory.field_f) {
               this.redirectToErrorPage((byte) 22, "reconnect");
             }
             DebugTuningSupport.requestAccountInterface(param0 + 11);
-            LoginPayload.a(true, LoginTextValue.field_g, var2);
+            LoginPayload.showLoginError(true, LoginTextValue.field_g, var2);
             DualLinkNode.field_v = true;
             MenuSelection.field_k = MonotonicClock.monotonicTimeMillis((byte) -93) + 15000L;
           }
@@ -658,12 +658,12 @@ abstract class NetworkGameClient extends GameApplet {
         FixedAngleSupport.snapshotPointerInput((byte) 123);
         if (!StartupInterfaceSupport.a((byte) -124) &&
           PlasmaTableScene.field_ab != 11) {
-          PacketDiagnosticsSupport.b(-11);
+          PacketDiagnosticsSupport.updateAccountOverlay(-11);
         }
         if (null != ClientException.field_a) {
           CompressedContainerSupport.field_d = ClientException.field_a.takeRotation(2);
         }
-        if (LobbyPlayerLookupSupport.a(-66)) {
+        if (LobbyPlayerLookupSupport.isLoginComplete(-66)) {
           var3 = CachedArchiveSource.getTargetFramesPerSecond(-21282) * 1200;
           if (this.field_C ||
             !(var3 >= LogoMaterial.getKeyboardSnapshotCount(-21055)) &&
@@ -671,7 +671,7 @@ abstract class NetworkGameClient extends GameApplet {
             this.field_C = false;
             ShotEvent.closeClientSocket(-80);
             DebugTuningSupport.requestAccountInterface(param0 + 15);
-            LoginPayload.a(true, IterableNodeHashTable.idlemessage20min, 2);
+            LoginPayload.showLoginError(true, IterableNodeHashTable.idlemessage20min, 2);
             AvailabilityQueryResult.validateQueryGuard(640);
             DualLinkNode.field_v = true;
             MenuSelection.field_k = 15000L + MonotonicClock.monotonicTimeMillis((byte) -101);
@@ -688,8 +688,8 @@ abstract class NetworkGameClient extends GameApplet {
           if (var3Lifetime1 != 0 &&
             PaletteFontLoader.field_a == 0 &&
             11 == PlasmaTableScene.field_ab &&
-            !NameNormalizationSupport.b((byte) 109)) {
-            LobbyGame.f((byte) 124);
+            !NameNormalizationSupport.canAttemptLogin((byte) 109)) {
+            LobbyGame.finishLoginInterface((byte) 124);
           }
           if (-1 != PaletteFontLoader.field_a &&
             PaletteFontLoader.field_a != 0) {
@@ -704,19 +704,19 @@ abstract class NetworkGameClient extends GameApplet {
               if (3 != PaletteFontLoader.field_a) {
                 if (PaletteFontLoader.field_a != 4) {
                   if (PaletteFontLoader.field_a == 2) {
-                    LoginPayload.a(true, PackedColorSupport.errorJs5connectFull, 256);
+                    LoginPayload.showLoginError(true, PackedColorSupport.errorJs5connectFull, 256);
                   } else {
                     if (PaletteFontLoader.field_a == 5) {
-                      LoginPayload.a(true, GlowParticle.loginGameupdated, 5);
+                      LoginPayload.showLoginError(true, GlowParticle.loginGameupdated, 5);
                     } else {
-                      LoginPayload.a(true, FontPaletteSupport.errorJs5connect, 256);
+                      LoginPayload.showLoginError(true, FontPaletteSupport.errorJs5connect, 256);
                     }
                   }
                 } else {
-                  LoginPayload.a(true, LocalGameSetupScreen.errorJs5io, 256);
+                  LoginPayload.showLoginError(true, LocalGameSetupScreen.errorJs5io, 256);
                 }
               } else {
-                LoginPayload.a(true, LoginRequiredScreen.errorJs5crc, 256);
+                LoginPayload.showLoginError(true, LoginRequiredScreen.errorJs5crc, 256);
               }
               DualLinkNode.field_v = true;
             }
@@ -742,17 +742,17 @@ abstract class NetworkGameClient extends GameApplet {
         }
         if ((-1 != PaletteFontLoader.field_a &&
           PaletteFontLoader.field_a != 0 ||
-          NameNormalizationSupport.b((byte) 109)) &&
+          NameNormalizationSupport.canAttemptLogin((byte) 109)) &&
           MenuSelection.field_k <= MonotonicClock.monotonicTimeMillis((byte) -126)) {
           DualLinkNode.field_v = false;
           if (-1 != PaletteFontLoader.field_a &&
             0 != PaletteFontLoader.field_a) {
             PaletteFontLoader.field_a = -1;
-            ProgressDialog.i((byte) 72);
+            ProgressDialog.resetArchiveConnectionFailures((byte) 72);
           }
         }
         if (PaletteFontLoader.field_a == 0 &&
-          !NameNormalizationSupport.b((byte) 109)) {
+          !NameNormalizationSupport.canAttemptLogin((byte) 109)) {
           PasswordValidator.field_o = false;
         }
         if (QuickChatCategoryDefinition.field_y == 0 &&
@@ -971,7 +971,7 @@ abstract class NetworkGameClient extends GameApplet {
             TranslatedUiText.resendRankingsRequests(7, (byte) -91);
           }
           if (ButtonWidget.field_H[8]) {
-            MusicCrossfadeStream.c(946);
+            MusicCrossfadeStream.initializeReflectionCheckQueue(946);
           }
         }
         return var3;

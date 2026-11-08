@@ -127,7 +127,7 @@ final class DualLinkNodeHashTable {
             }
             try {
               var2 = new java.net.URL(param1.getCodeBase(), "quit.ws");
-              param1.getAppletContext().showDocument(ModelInstance.a((byte) 59, var2, param1), "_top");
+              param1.getAppletContext().showDocument(ModelInstance.rewriteAppletUrl((byte) 59, var2, param1), "_top");
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

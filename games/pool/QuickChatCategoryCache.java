@@ -256,7 +256,7 @@ final class QuickChatCategoryCache {
             DebugTuningSlider.field_p = null;
           }
         } else {
-          SectorCacheStore.field_a = DisplayModeSupport.a(var8, 80, true);
+          SectorCacheStore.field_a = DisplayModeSupport.readHuffmanString(var8, 80, true);
           DebugTuningSlider.field_p = null;
         }
         return new ChatMessage(quickChat);
@@ -403,7 +403,7 @@ final class QuickChatCategoryCache {
             DebugTuningSlider.field_p = null;
           }
         } else {
-          SectorCacheStore.field_a = DisplayModeSupport.a(var8, 80, true);
+          SectorCacheStore.field_a = DisplayModeSupport.readHuffmanString(var8, 80, true);
           DebugTuningSlider.field_p = null;
         }
         return new ChatMessage(quickChat);

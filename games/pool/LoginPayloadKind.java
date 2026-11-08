@@ -7,13 +7,13 @@ final class LoginPayloadKind {
     int wireId;
     static String dEFAULTPLAYERNAME;
 
-    final static Sprite a(int param0, int param1) {
-        if (param0 != -17104) {
+    final static Sprite achievementPlaceholderSprite(int obfuscationGuard, int achievementIndex) {
+        if (obfuscationGuard != -17104) {
           field_a = (BallSkin) null;
           if (UsernameSuggestionsPanel.field_V > 0) {
             return UsernameAvailabilityValidator.field_r;
           }
-          if (QuickChatPhraseDefinition.field_w[param1]) {
+          if (QuickChatPhraseDefinition.field_w[achievementIndex]) {
             return Camera.field_j;
           }
           return UsernameAvailabilityValidator.field_r;
@@ -21,15 +21,15 @@ final class LoginPayloadKind {
         if (UsernameSuggestionsPanel.field_V > 0) {
           return UsernameAvailabilityValidator.field_r;
         }
-        if (QuickChatPhraseDefinition.field_w[param1]) {
+        if (QuickChatPhraseDefinition.field_w[achievementIndex]) {
           return Camera.field_j;
         }
         return UsernameAvailabilityValidator.field_r;
     }
 
-    final static boolean a(int param0, int param1, int param2) {
+    final static boolean handleQuickChatKey(int param0, int param1, int param2) {
         if (IterableDualLinkDeque.field_a == 13) {
-          ChatInputSupport.b(-1);
+          ChatInputSupport.closeQuickChat(-1);
           return true;
         }
         if (IterableDualLinkDeque.field_a == 102) {

@@ -62,7 +62,7 @@ final class MaxLengthTextInputWidget extends TextInputWidget implements Validati
             if (param0 > -10) {
               this.getHoverText(39);
             }
-            ByteArrayNode.a((byte) -39, DebouncedValidationProvider.field_f, ReflectionReplySupport.field_i - this.field_bb + this.widgetWidth);
+            ByteArrayNode.setTooltipAnchor((byte) -39, DebouncedValidationProvider.field_f, ReflectionReplySupport.field_i - this.field_bb + this.widgetWidth);
             stackIn_10_0 = this.hoverText;
             return stackIn_10_0;
           }

@@ -5,12 +5,12 @@ final class MeshRenderSupport {
     static double field_b;
     static int field_a;
 
-    final static boolean a(int param0) {
+    final static boolean isIntroComplete(int obfuscationGuard) {
         RuntimeException var1 = null;
         boolean stackIn_7_0 = false;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 < 72) {
+          if (obfuscationGuard < 72) {
             MeshRenderSupport.a(-96, 16, 11, false, (int[]) null, (int[]) null, (int[]) null, (int[]) null, -65, (int[]) null, (int[]) null, -114, 112, (int[]) null, (byte[]) null, (int[]) null, (int[]) null, 52, (int[]) null, -56, (int[]) null, (MeshBuilder) null, 52, (int[]) null);
           }
           stackIn_7_0 = !(LobbyPlayer.field_fc <= 250);
@@ -18,7 +18,7 @@ final class MeshRenderSupport {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "u.C(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "u.C(" + obfuscationGuard + ')');
         }
     }
 
@@ -198,7 +198,7 @@ final class MeshRenderSupport {
           var25 = MultiHandleSliderWidget.field_T;
           var26 = ClientInputResetSupport.field_d;
           if (!param3) {
-            MeshRenderSupport.a((byte) 100, -4, 66, true, 88);
+            MeshRenderSupport.createArrowButton((byte) 100, -4, 66, true, 88);
           }
           var27 = ViewportController.field_n;
           TranslatedUiText.field_a = 0;
@@ -1047,7 +1047,7 @@ final class MeshRenderSupport {
         }
     }
 
-    final static UiComponent a(byte param0, int param1, int param2, boolean param3, int param4) {
+    final static UiComponent createArrowButton(byte obfuscationGuard, int x, int y, boolean reverse, int actionId) {
         Sprite var5 = null;
         RuntimeException var5_ref = null;
         UiComponent var6 = null;
@@ -1059,26 +1059,26 @@ final class MeshRenderSupport {
         UiComponent stackIn_16_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 <= 53) {
+          if (obfuscationGuard <= 53) {
             MeshRenderSupport.a(-58, -76, -84, false, (int[]) null, (int[]) null, (int[]) null, (int[]) null, -35, (int[]) null, (int[]) null, -23, 17, (int[]) null, (byte[]) null, (int[]) null, (int[]) null, -54, (int[]) null, 18, (int[]) null, (MeshBuilder) null, 89, (int[]) null);
           }
-          if (param3) {
+          if (reverse) {
             stackIn_7_0 = CushionSegment.field_h;
           } else {
             stackIn_7_0 = SupportPageLauncher.field_b;
           }
           var5 = stackIn_7_0;
-          var6 = new UiComponent((long)param4, (UiComponent) null, param1, param2, var5.field_z, var5.field_A, (String) null);
+          var6 = new UiComponent((long)actionId, (UiComponent) null, x, y, var5.field_z, var5.field_A, (String) null);
           var6.sprite = var5;
           stackIn_10_0 = var6;
-          if (!param3) {
+          if (!reverse) {
             stackIn_11_1 = ProgressBarWidget.field_T;
           } else {
             stackIn_11_1 = ScreenProjectionSupport.field_b;
           }
           stackIn_10_0.disabledSprite = stackIn_11_1;
           stackIn_14_0 = var6;
-          if (param3) {
+          if (reverse) {
             stackIn_15_1 = PacketAvailabilitySupport.field_a;
           } else {
             stackIn_15_1 = HighScoreRequest.field_y;
@@ -1089,7 +1089,7 @@ final class MeshRenderSupport {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5_ref = decompiledCaughtException;
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var5_ref), "u.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var5_ref), "u.A(" + obfuscationGuard + ',' + x + ',' + y + ',' + reverse + ',' + actionId + ')');
         }
     }
 

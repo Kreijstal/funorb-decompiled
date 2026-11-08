@@ -39,7 +39,7 @@ final class SpriteSheetLoadSupport {
           if (var5 == null) {
             return false;
           }
-          ClientException.a(true, var5);
+          ClientException.decodeSpriteSheet(true, var5);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

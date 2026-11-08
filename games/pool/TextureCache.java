@@ -53,21 +53,21 @@ final class TextureCache implements TextureProvider {
         if (param3 > param2) {
           if (param1 <= param3) {
             if (param1 <= param2) {
-              FixedPointVectorSupport.a(SoftwareRasterizer.pixels, param5, param4, param2, param7, param1, param3, param0, 19547);
+              FixedPointVectorSupport.fillTriangleHalfBlend(SoftwareRasterizer.pixels, param5, param4, param2, param7, param1, param3, param0, 19547);
               if (param6 == 108) {
                 return;
               }
               TextureCache.getVisibleTooltipIndex(-1);
               return;
             }
-            FixedPointVectorSupport.a(SoftwareRasterizer.pixels, param5, param7, param1, param4, param2, param3, param0, 19547);
+            FixedPointVectorSupport.fillTriangleHalfBlend(SoftwareRasterizer.pixels, param5, param7, param1, param4, param2, param3, param0, 19547);
             if (param6 == 108) {
               return;
             }
             TextureCache.getVisibleTooltipIndex(-1);
             return;
           }
-          FixedPointVectorSupport.a(SoftwareRasterizer.pixels, param5, param7, param3, param0, param2, param1, param4, 19547);
+          FixedPointVectorSupport.fillTriangleHalfBlend(SoftwareRasterizer.pixels, param5, param7, param3, param0, param2, param1, param4, 19547);
           if (param6 != 108) {
             TextureCache.getVisibleTooltipIndex(-1);
             return;
@@ -75,7 +75,7 @@ final class TextureCache implements TextureProvider {
           return;
         }
         if (param1 > param2) {
-          FixedPointVectorSupport.a(SoftwareRasterizer.pixels, param5, param0, param2, param7, param3, param1, param4, param6 + 19439);
+          FixedPointVectorSupport.fillTriangleHalfBlend(SoftwareRasterizer.pixels, param5, param0, param2, param7, param3, param1, param4, param6 + 19439);
           if (param6 != 108) {
             TextureCache.getVisibleTooltipIndex(-1);
             return;
@@ -83,14 +83,14 @@ final class TextureCache implements TextureProvider {
           return;
         }
         if (param1 <= param3) {
-          FixedPointVectorSupport.a(SoftwareRasterizer.pixels, param5, param4, param3, param0, param1, param2, param7, 19547);
+          FixedPointVectorSupport.fillTriangleHalfBlend(SoftwareRasterizer.pixels, param5, param4, param3, param0, param1, param2, param7, 19547);
           if (param6 != 108) {
             TextureCache.getVisibleTooltipIndex(-1);
             return;
           }
           return;
         }
-        FixedPointVectorSupport.a(SoftwareRasterizer.pixels, param5, param0, param1, param4, param3, param2, param7, param6 + 19439);
+        FixedPointVectorSupport.fillTriangleHalfBlend(SoftwareRasterizer.pixels, param5, param0, param1, param4, param3, param2, param7, param6 + 19439);
         if (param6 != 108) {
           TextureCache.getVisibleTooltipIndex(-1);
           return;

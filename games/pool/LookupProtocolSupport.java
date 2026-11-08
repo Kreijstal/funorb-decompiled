@@ -49,7 +49,7 @@ final class LookupProtocolSupport {
               var6 = ReportAbuseDialog.a(true, param0 ^ -35, QuickChatMenu.field_Sb[var3_int]);
               var7 = ArchiveIndex.field_u - (var6 >> 1);
               var4 = var4 + LookupQuery.field_m;
-              if (ResizableDialog.a(param2, -59, LobbyGame.field_yc + (TriangleMesh.field_B << 1), param1, var6 + (IterableDualLinkDeque.field_g << 1), var4, -IterableDualLinkDeque.field_g + var7)) {
+              if (ResizableDialog.containsPoint(param2, -59, LobbyGame.field_yc + (TriangleMesh.field_B << 1), param1, var6 + (IterableDualLinkDeque.field_g << 1), var4, -IterableDualLinkDeque.field_g + var7)) {
                 stackIn_7_0 = var5;
                 return stackIn_7_0;
               }

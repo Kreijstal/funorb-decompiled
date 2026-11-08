@@ -77,7 +77,7 @@ class IntrusiveNode {
           if (var9 < 0) {
             var9 = -var9;
           }
-          LoginRequiredScreen.field_I = 128 + (ResizableDialog.c(var9, var6, zIndex ^ 4098) >> 4);
+          LoginRequiredScreen.field_I = 128 + (ResizableDialog.signedAtan2Angle(var9, var6, zIndex ^ 4098) >> 4);
           var10 = IterableNodeHashTable.sqrtScaled256(-112, (long)var7 * (long)var7 + ((long)var6 * (long)var6 + (long)var8 * (long)var8) >> 16);
           if (var10 > (long)LoginPayload.field_a) {
             DualLinkDequeIterator.field_g = (int)((long)(256 * StartupInterfaceSupport.field_e) / ((long)StartupInterfaceSupport.field_e + ((long)QuickChatPhraseDefinition.field_G * (var10 - (long)LoginPayload.field_a) >> 8)));

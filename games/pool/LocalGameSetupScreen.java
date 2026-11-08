@@ -267,10 +267,10 @@ final class LocalGameSetupScreen extends MenuScreen {
         IterableNodeHashTable.field_e.frameSprites = MeshSymmetrySupport.field_g;
         IterableNodeHashTable.field_e.selectedFrameSprites = ModelOriginSupport.field_s;
         NineSliceFrame.field_a.addChild(-114, IterableNodeHashTable.field_e);
-        UiComponent dupTemp$0 = MeshRenderSupport.a((byte) 68, 10, 55, false, 28);
+        UiComponent dupTemp$0 = MeshRenderSupport.createArrowButton((byte) 68, 10, 55, false, 28);
         TikiTableScene.field_V = dupTemp$0;
         IterableNodeHashTable.field_e.addChild(-102, dupTemp$0);
-        UiComponent dupTemp$1 = MeshRenderSupport.a((byte) 120, 210, 55, true, 27);
+        UiComponent dupTemp$1 = MeshRenderSupport.createArrowButton((byte) 120, 210, 55, true, 27);
         ArchiveLoadStep.field_f = dupTemp$1;
         IterableNodeHashTable.field_e.addChild(122, dupTemp$1);
         MultiHandleSliderWidget.a(false, IterableNodeHashTable.field_e, TikiTableScene.field_V);
@@ -292,10 +292,10 @@ final class LocalGameSetupScreen extends MenuScreen {
         PoolUiText.field_f.frameSprites = UsernameSuggestionsPanel.field_N;
         PoolGameModel.field_v.addChild(-106, PoolUiText.field_f);
         MultiHandleSliderWidget.a(false, PoolGameModel.field_v, PoolUiText.field_f);
-        UiComponent dupTemp$2 = MeshRenderSupport.a((byte) 67, 100, 10, false, 64);
+        UiComponent dupTemp$2 = MeshRenderSupport.createArrowButton((byte) 67, 100, 10, false, 64);
         RasterSnapshot.field_w = dupTemp$2;
         PoolGameModel.field_v.addChild(114, dupTemp$2);
-        UiComponent dupTemp$3 = MeshRenderSupport.a((byte) 112, 235, 10, true, 63);
+        UiComponent dupTemp$3 = MeshRenderSupport.createArrowButton((byte) 112, 235, 10, true, 63);
         LoginRequestSupport.field_e = dupTemp$3;
         PoolGameModel.field_v.addChild(33, dupTemp$3);
         MultiHandleSliderWidget.a(false, PoolGameModel.field_v, RasterSnapshot.field_w);
@@ -314,10 +314,10 @@ final class LocalGameSetupScreen extends MenuScreen {
         VerticalScrollbar.field_Nb.frameSprites = UsernameSuggestionsPanel.field_N;
         VerticalScrollbar.field_Nb.verticalAlignment = 1;
         AppletContainerSupport.field_c.addChild(49, VerticalScrollbar.field_Nb);
-        UiComponent dupTemp$4 = MeshRenderSupport.a((byte) 102, RasterSnapshot.field_w.localX, RasterSnapshot.field_w.localY, false, 45);
+        UiComponent dupTemp$4 = MeshRenderSupport.createArrowButton((byte) 102, RasterSnapshot.field_w.localX, RasterSnapshot.field_w.localY, false, 45);
         DualLinkNodeHashTable.field_f = dupTemp$4;
         AppletContainerSupport.field_c.addChild(112, dupTemp$4);
-        UiComponent dupTemp$5 = MeshRenderSupport.a((byte) 124, LoginRequestSupport.field_e.localX, RasterSnapshot.field_w.localY, true, 44);
+        UiComponent dupTemp$5 = MeshRenderSupport.createArrowButton((byte) 124, LoginRequestSupport.field_e.localX, RasterSnapshot.field_w.localY, true, 44);
         TickClock.field_i = dupTemp$5;
         AppletContainerSupport.field_c.addChild(84, dupTemp$5);
         MultiHandleSliderWidget.a(false, AppletContainerSupport.field_c, DualLinkNodeHashTable.field_f);

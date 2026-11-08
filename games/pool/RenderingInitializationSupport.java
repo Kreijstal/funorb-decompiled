@@ -8,8 +8,8 @@ final class RenderingInitializationSupport {
     static byte[] field_c;
     static UiComponent field_d;
 
-    final static boolean a(byte param0) {
-        if (param0 >= -11) {
+    final static boolean isLoginRequiredPromptOpen(byte obfuscationGuard) {
+        if (obfuscationGuard >= -11) {
           field_d = (UiComponent) null;
           return LoginPayload.field_b;
         }
@@ -37,7 +37,7 @@ final class RenderingInitializationSupport {
           field_c = null;
           return;
         }
-        RenderingInitializationSupport.a((byte) -8);
+        RenderingInitializationSupport.isLoginRequiredPromptOpen((byte) -8);
         muChatGameFriends = null;
         field_c = null;
     }

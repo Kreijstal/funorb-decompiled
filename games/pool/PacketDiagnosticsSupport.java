@@ -142,20 +142,20 @@ final class PacketDiagnosticsSupport {
         }
     }
 
-    final static void b(int param0) {
+    final static void updateAccountOverlay(int obfuscationGuard) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
-          if (!MouseHandler.hasAccountOverlay(param0 - 6709)) {
+          if (!MouseHandler.hasAccountOverlay(obfuscationGuard - 6709)) {
             if (MatchingTextValidator.field_u != null &&
               MatchingTextValidator.field_u.focusLost) {
-              AccountStateQuery.d((byte) -124);
+              AccountStateQuery.leaveFullscreen((byte) -124);
               PlasmaTableScene.field_cb.showDialog(new FullscreenErrorDialog(PlasmaTableScene.field_cb, AchievementsScreen.field_K), 30000);
             }
             return;
           }
-          if (param0 != -11) {
-            PacketDiagnosticsSupport.b(-62);
+          if (obfuscationGuard != -11) {
+            PacketDiagnosticsSupport.updateAccountOverlay(-62);
           }
           PlasmaTableScene.field_cb.processPointerFrame(-122, CollisionContact.field_p, true, RankingsScreen.field_M);
           PlasmaTableScene.field_cb.advanceDialogAnimations((byte) 122);
@@ -166,7 +166,7 @@ final class PacketDiagnosticsSupport {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "t.F(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "t.F(" + obfuscationGuard + ')');
         }
     }
 
@@ -179,18 +179,18 @@ final class PacketDiagnosticsSupport {
         }
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void drawAuxiliaryDialog(int obfuscationGuard, boolean active) {
         if (null != CollisionContact.field_f) {
           SoftwareRasterizer.darkenRectangle(SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipTop, SoftwareRasterizer.clipRight - SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipBottom - SoftwareRasterizer.clipTop);
-          CollisionContact.field_f.drawRoot((byte) -79, param1);
+          CollisionContact.field_f.drawRoot((byte) -79, active);
         }
-        if (param0 == 48) {
+        if (obfuscationGuard == 48) {
           return;
         }
-        PacketDiagnosticsSupport.b(-101);
+        PacketDiagnosticsSupport.updateAccountOverlay(-101);
     }
 
-    final static void a(int param0, boolean param1, boolean param2) {
+    final static void initializeLoginDialog(int param0, boolean param1, boolean param2) {
         String var4 = (String) null;
         ScoreboardNameRecord.initializeLoginDialog(-124, param1, param2, (String) null);
         int var3 = -51 / ((param0 - 59) / 47);

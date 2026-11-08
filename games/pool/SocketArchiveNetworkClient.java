@@ -704,7 +704,7 @@ final class SocketArchiveNetworkClient extends Js5Transport {
             }
             if (MonotonicClock.field_e == 1) {
               if (AudioService.field_c.field_f == 2) {
-                stackIn_14_0 = Under13NoticePanel.a(false, -1);
+                stackIn_14_0 = Under13NoticePanel.recordArchiveConnectionFailure(false, -1);
                 return stackIn_14_0;
               }
               if (AudioService.field_c.field_f == 1) {
@@ -725,13 +725,13 @@ final class SocketArchiveNetworkClient extends Js5Transport {
               if (0 < TransformRotationSupport.field_h.availableBytes(72)) {
                 var1_int = TransformRotationSupport.field_h.readByte(14528);
                 if (var1_int != 0) {
-                  stackIn_27_0 = Under13NoticePanel.a(false, var1_int);
+                  stackIn_27_0 = Under13NoticePanel.recordArchiveConnectionFailure(false, var1_int);
                   return stackIn_27_0;
                 }
                 MonotonicClock.field_e = MonotonicClock.field_e + 1;
               } else {
                 if (MonotonicClock.monotonicTimeMillis((byte) -110) > MembershipBenefitsLoader.field_d) {
-                  stackIn_24_0 = Under13NoticePanel.a(false, -2);
+                  stackIn_24_0 = Under13NoticePanel.recordArchiveConnectionFailure(false, -2);
                   return stackIn_24_0;
                 }
               }
@@ -753,7 +753,7 @@ final class SocketArchiveNetworkClient extends Js5Transport {
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var1 = (IOException) (Object) decompiledCaughtException;
-            return Under13NoticePanel.a(false, -3);
+            return Under13NoticePanel.recordArchiveConnectionFailure(false, -3);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

@@ -47,15 +47,15 @@ final class ValueNoise {
         }
     }
 
-    final static int a(int param0, int param1, int param2, int[] param3, int param4, int param5) {
-        int var6 = param4 + ((ValueNoise.sampleNoise(param0, param1, param2) >> 2) + (ValueNoise.sampleNoise(param0 >> 1, param1 >> 1, param2 >> 1) >> 1) + ValueNoise.sampleNoise(param0 >> 2, param1 >> 2, param2 >> 2) >> 16 - param5);
+    final static int sampleFractalPalette(int x, int y, int z, int[] palette, int indexOffset, int indexBits) {
+        int var6 = indexOffset + ((ValueNoise.sampleNoise(x, y, z) >> 2) + (ValueNoise.sampleNoise(x >> 1, y >> 1, z >> 1) >> 1) + ValueNoise.sampleNoise(x >> 2, y >> 2, z >> 2) >> 16 - indexBits);
         if (var6 < 0) {
-          return param3[0];
+          return palette[0];
         }
-        if (var6 >= param3.length) {
-          return param3[param3.length - 1];
+        if (var6 >= palette.length) {
+          return palette[palette.length - 1];
         }
-        return param3[var6];
+        return palette[var6];
     }
 
     public static void releaseStatics() {

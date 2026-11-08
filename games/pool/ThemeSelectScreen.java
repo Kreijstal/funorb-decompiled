@@ -19,7 +19,7 @@ final class ThemeSelectScreen extends MenuScreen {
         if (param0 != 0) {
           this.getButtonRight(true, -54);
         }
-        if (this.g(1) > param1) {
+        if (this.lastItemIndex(1) > param1) {
           if (param1 < 2) {
             return 152 * (param1 % 3) + 173;
           }
@@ -28,7 +28,7 @@ final class ThemeSelectScreen extends MenuScreen {
         return super.getButtonLeft(param0 ^ 0, param1);
     }
 
-    final static byte[] a(int param0, int param1, byte[] param2, byte param3) {
+    final static byte[] extendByteArray(int obfuscationGuard, int additionalLength, byte[] bytes, byte fill) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -42,14 +42,14 @@ final class ThemeSelectScreen extends MenuScreen {
         RuntimeException decompiledCaughtException = null;
         var7 = Pool.field_O;
         try {
-          var8 = new byte[param1 + param2.length];
+          var8 = new byte[additionalLength + bytes.length];
           var4 = var8;
-          for (var5 = 0; var5 < param2.length; var5++) {
-            var8[var5] = param2[var5];
+          for (var5 = 0; var5 < bytes.length; var5++) {
+            var8[var5] = bytes[var5];
           }
-          var6 = 45 / ((44 - param0) / 56);
+          var6 = 45 / ((44 - obfuscationGuard) / 56);
           while (var5 < var8.length) {
-            var8[var5] = (byte)param3;
+            var8[var5] = (byte)fill;
             var5++;
           }
           stackIn_8_0 = var4;
@@ -58,18 +58,18 @@ final class ThemeSelectScreen extends MenuScreen {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
           stackIn_11_0 = var4_ref;
-          stackIn_11_1 = new StringBuilder().append("sg.IB(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_11_1 = new StringBuilder().append("sg.IB(").append(obfuscationGuard).append(',').append(additionalLength).append(',');
+          if (bytes == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(fill).append(')').toString());
         }
     }
 
-    private final int g(int param0) {
-        if (param0 != 1) {
+    private final int lastItemIndex(int obfuscationGuard) {
+        if (obfuscationGuard != 1) {
           this.drawButtonOverlay(31, 61, 50, -68, 43, 50);
         }
         return this.itemIds.length - 1;
@@ -79,7 +79,7 @@ final class ThemeSelectScreen extends MenuScreen {
         if (!param1) {
           this.getLabelOffsetY(-39, -95);
         }
-        if (this.g(1) == param0) {
+        if (this.lastItemIndex(1) == param0) {
           return true;
         }
         return param0 < 5 ? true : false;
@@ -94,7 +94,7 @@ final class ThemeSelectScreen extends MenuScreen {
         statusPrivate = null;
         field_M = null;
         if (param0 != 506724193) {
-          ThemeSelectScreen.h(89);
+          ThemeSelectScreen.createDecodedOpaqueSprites(89);
         }
     }
 
@@ -102,7 +102,7 @@ final class ThemeSelectScreen extends MenuScreen {
         if (param0) {
           this.getLabelOffsetY(112, -81);
         }
-        if (this.g(1) > param1) {
+        if (this.lastItemIndex(1) > param1) {
           return this.getButtonLeft(0, param1) + 140;
         }
         return super.getButtonRight(false, param1);
@@ -112,17 +112,17 @@ final class ThemeSelectScreen extends MenuScreen {
         if (param1 < 2) {
           return 130;
         }
-        if (param1 < this.g(1)) {
+        if (param1 < this.lastItemIndex(1)) {
           return 260;
         }
         if (param0 != 6) {
           PlatformTaskDispatcher var4 = (PlatformTaskDispatcher) null;
-          ThemeSelectScreen.a((java.awt.Component) null, (MidiPcmStream) null, -11, (PlatformTaskDispatcher) null, -109, true);
+          ThemeSelectScreen.initializeAudioOutputs((java.awt.Component) null, (MidiPcmStream) null, -11, (PlatformTaskDispatcher) null, -109, true);
         }
         return 390;
     }
 
-    final static Sprite[] h(int param0) {
+    final static Sprite[] createDecodedOpaqueSprites(int obfuscationGuard) {
         int var2 = 0;
         int var3 = 0;
         byte[] var10 = null;
@@ -131,9 +131,9 @@ final class ThemeSelectScreen extends MenuScreen {
         int[] var5 = null;
         int var6 = 0;
         Sprite[] var1 = new Sprite[PacketAvailabilitySupport.field_d];
-        if (param0 != 152) {
+        if (obfuscationGuard != 152) {
           PlatformTaskDispatcher var7 = (PlatformTaskDispatcher) null;
-          ThemeSelectScreen.a((java.awt.Component) null, (MidiPcmStream) null, -111, (PlatformTaskDispatcher) null, -54, true);
+          ThemeSelectScreen.initializeAudioOutputs((java.awt.Component) null, (MidiPcmStream) null, -111, (PlatformTaskDispatcher) null, -54, true);
         }
         for (var2 = 0; var2 < PacketAvailabilitySupport.field_d; var2++) {
           var3 = LinkButtonPainter.field_a[var2] * AccountTextSupport.field_f[var2];
@@ -153,7 +153,7 @@ final class ThemeSelectScreen extends MenuScreen {
     final void drawButtonOverlay(int param0, int param1, int param2, int param3, int param4, int param5) {
         Sprite var7 = null;
         int var8 = 0;
-        if (!(this.g(1) <= param0)) {
+        if (!(this.lastItemIndex(1) <= param0)) {
           var7 = !this.isButtonEnabled(param0, true) ? MatchingTextValidator.field_t[param0] : TutorialSelectScreen.field_K[param0];
           var8 = -var7.field_z + (-param2 + param1) >> 1;
           var7.drawAt(param2 + var8, var8 + param5);
@@ -179,18 +179,18 @@ final class ThemeSelectScreen extends MenuScreen {
         if (param0 != 69) {
           return -22;
         }
-        if (this.g(1) > param1) {
+        if (this.lastItemIndex(1) > param1) {
           return 120;
         }
         return 36;
     }
 
-    final static void a(java.awt.Component param0, MidiPcmStream param1, int param2, PlatformTaskDispatcher param3, int param4, boolean param5) {
+    final static void initializeAudioOutputs(java.awt.Component param0, MidiPcmStream param1, int param2, PlatformTaskDispatcher param3, int param4, boolean param5) {
         try {
           UiTheme.initializeAudioOutputs(param1, param3, param0, param2, false, 1024, param5, param2);
           if (param4 != 10282) {
             PlatformTaskDispatcher var7 = (PlatformTaskDispatcher) null;
-            ThemeSelectScreen.a((java.awt.Component) null, (MidiPcmStream) null, 11, (PlatformTaskDispatcher) null, -77, false);
+            ThemeSelectScreen.initializeAudioOutputs((java.awt.Component) null, (MidiPcmStream) null, 11, (PlatformTaskDispatcher) null, -77, false);
           }
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "sg.HB(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');

@@ -382,7 +382,7 @@ final class PoolMatchController {
         RuntimeException var3 = null;
         try {
           if ((TutorialController.field_c & this.modeFlags) == 0) {
-            if (NanoTickClock.isClientConnected(-119)) {
+            if (NanoTickClock.isGuestMode(-119)) {
               if (!FadingDialog.hasNonzeroWord(false, SupportPageLauncher.field_c) &&
                 DebugSliderInputSupport.field_d == null) {
                 AccountCreationDialog.switchScreen(param0 - 3661, 21, 0, param1);
@@ -390,7 +390,7 @@ final class PoolMatchController {
                 var3_int = param1 ? 1 : 0;
                 stackIn_30_0 = -3405;
                 stackIn_30_1 = 19;
-                if (LobbyPlayerLookupSupport.a(true)) {
+                if (LobbyPlayerLookupSupport.isGuestOrFreeAccount(true)) {
                   stackIn_31_2 = 21;
                 } else {
                   stackIn_31_2 = 0;
@@ -403,7 +403,7 @@ final class PoolMatchController {
                   var3_int = param1 ? 1 : 0;
                   stackIn_21_0 = -3405;
                   stackIn_21_1 = 0;
-                  if (!LobbyPlayerLookupSupport.a(true)) {
+                  if (!LobbyPlayerLookupSupport.isGuestOrFreeAccount(true)) {
                     stackIn_22_2 = 0;
                   } else {
                     stackIn_22_2 = 21;
@@ -413,7 +413,7 @@ final class PoolMatchController {
                   var3_int = param1 ? 1 : 0;
                   stackIn_16_0 = -3405;
                   stackIn_16_1 = 16;
-                  if (!LobbyPlayerLookupSupport.a(true)) {
+                  if (!LobbyPlayerLookupSupport.isGuestOrFreeAccount(true)) {
                     stackIn_17_2 = 0;
                   } else {
                     stackIn_17_2 = 21;
@@ -424,7 +424,7 @@ final class PoolMatchController {
                 var3_int = param1 ? 1 : 0;
                 stackIn_10_0 = -3405;
                 stackIn_10_1 = 18;
-                if (LobbyPlayerLookupSupport.a(true)) {
+                if (LobbyPlayerLookupSupport.isGuestOrFreeAccount(true)) {
                   stackIn_11_2 = 21;
                 } else {
                   stackIn_11_2 = 0;
@@ -500,7 +500,7 @@ final class PoolMatchController {
           }
           if (this.checkTutorialAction(1, 2, false)) {
             var2 = new double[2];
-            if (MusicCrossfadeStream.a(64, UsernameAvailabilityValidator.field_o, false, this.cameraGoal.getDistance(8), DialogLayer.field_W, var2, this.viewMatrix)) {
+            if (MusicCrossfadeStream.unprojectPointerToPlane(64, UsernameAvailabilityValidator.field_o, false, this.cameraGoal.getDistance(8), DialogLayer.field_W, var2, this.viewMatrix)) {
               this.cameraGoal.targetX = var2[0];
               this.cameraGoal.targetY = var2[1];
               this.cameraGoal.clampToTableScene((byte) -40);
@@ -669,7 +669,7 @@ final class PoolMatchController {
           ValidationIconWidget.field_O = (BitmapFont) ((Object) CookieDateSupport.loadAlphaFont(param3, "commonui", "arezzo14", -25154, param2));
           LoginPayloadFactory.field_e = (BitmapFont) ((Object) CookieDateSupport.loadAlphaFont(param3, "commonui", "arezzo14bold", -25154, param2));
           var4 = new Sprite(param0.getFileByName(false, "", "button.gif"), (java.awt.Component) ((Object) TimeTrialSelectScreen.field_K));
-          RankingsScreen.a(param2, 3812, "dropdown", "commonui");
+          RankingsScreen.loadIndexedSpriteByName(param2, 3812, "dropdown", "commonui");
           var5 = ArchiveRequest.loadIndexedSpritesByName(param2, "commonui", -24155, "screen_options");
           PlasmaBallSkin.field_l = new IndexedSprite[4];
           ChatPanelSupport.field_c = new IndexedSprite[4];
@@ -1422,7 +1422,7 @@ final class PoolMatchController {
           }
           var7 = -1;
           if ((this.modeFlags & PaletteFontLoader.field_d) != 0) {
-            var7 = SceneNodeEntry.a(-27011);
+            var7 = SceneNodeEntry.getHoveredTutorialControl(-27011);
           }
           if (var7 == -1) {
             var7 = this.getHoveredIndicator(1163);
@@ -1455,7 +1455,7 @@ final class PoolMatchController {
           if (SocialListEntry.field_Tb % 100 == 0) {
             this.updateAutoPotBallHighlight(0);
           }
-          LoginResponse.b(127);
+          LoginResponse.advanceBallHighlightPulses(127);
           if (var6 > var5) {
             GlowParticle.field_f = GlowParticle.field_f + (-var6 + var5);
           }
@@ -2108,9 +2108,9 @@ final class PoolMatchController {
           }
           this.drawBallTooltip(-9449);
           if ((LinkButtonPainter.field_i & 4294967296L) == 0L) {
-            LoginPayload.a((byte) 121);
+            LoginPayload.drawActiveNotification((byte) 121);
           }
-          UsernameAvailabilityValidator.b(true);
+          UsernameAvailabilityValidator.drawDecisionDialog(true);
           if (this.gameModel.playerCount > 1) {
             boolean decompiledFrameRemainder0 = true;
             var3_int = 60;
@@ -2262,7 +2262,7 @@ final class PoolMatchController {
           } else {
             stackIn_4_5 = 8;
           }
-          ((TableScene) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_3_4, stackIn_4_5);
+          ((TableScene) (Object) stackIn_3_0).playSpatialSound(stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_3_4, stackIn_4_5);
           this.strikeAnimationFrame = -37;
           this.leaveShotMode(true, (byte) -114);
           if (!this.isLocalPlayersTurn(-1)) {
@@ -2940,7 +2940,7 @@ final class PoolMatchController {
                     } else {
                       stackIn_42_5 = 1;
                     }
-                    ((TableScene) (Object) stackIn_41_0).a(stackIn_41_1, stackIn_41_2, stackIn_41_3, stackIn_41_4, stackIn_42_5);
+                    ((TableScene) (Object) stackIn_41_0).playSpatialSound(stackIn_41_1, stackIn_41_2, stackIn_41_3, stackIn_41_4, stackIn_42_5);
                   }
                 } else {
                   stackIn_41_0 = LobbyGame.field_gc;
@@ -2953,7 +2953,7 @@ final class PoolMatchController {
                   } else {
                     stackIn_42_5 = 1;
                   }
-                  ((TableScene) (Object) stackIn_41_0).a(stackIn_41_1, stackIn_41_2, stackIn_41_3, stackIn_41_4, stackIn_42_5);
+                  ((TableScene) (Object) stackIn_41_0).playSpatialSound(stackIn_41_1, stackIn_41_2, stackIn_41_3, stackIn_41_4, stackIn_42_5);
                 }
                 this.gameModel.startShot((byte) -51);
                 if (this.isLocalPlayersTurn(-1)) {
@@ -3406,7 +3406,7 @@ final class PoolMatchController {
             } else {
               DebugSliderInputSupport.field_d = new HighScoreSubmission(1, 65534, PolarObject.field_f, PacketDecodeState.field_c, field_fb, GlowParticle.field_f, new int[]{-this.clockTicks});
             }
-            if (!NanoTickClock.isClientConnected(77)) {
+            if (!NanoTickClock.isGuestMode(77)) {
               LoginMethod.submitHighScore(25756, DebugSliderInputSupport.field_d, 3);
             }
           }
@@ -3539,7 +3539,7 @@ final class PoolMatchController {
             var3Lifetime1 = var2_intLifetime2;
             stackIn_74_0 = -3405;
             stackIn_74_1 = var3Lifetime1;
-            if (LobbyPlayerLookupSupport.a(true)) {
+            if (LobbyPlayerLookupSupport.isGuestOrFreeAccount(true)) {
               stackIn_75_2 = 21;
             } else {
               stackIn_75_2 = 0;
@@ -3554,7 +3554,7 @@ final class PoolMatchController {
               return;
             }
             if (this.cheatMode &&
-              !PasswordInputPainter.d(-18791)) {
+              !PasswordInputPainter.handleNotificationShortcutToggle(-18791)) {
               this.handleDebugKeys((byte) -116);
             }
             if (this.introDelayTicks < 0) {
@@ -3599,7 +3599,7 @@ final class PoolMatchController {
         }
     }
 
-    final static boolean hasAccountDataOrConnection(boolean param0) {
+    final static boolean hasAccountDataOrGuestMode(boolean param0) {
         RuntimeException var1 = null;
         boolean stackIn_10_0 = false;
         RuntimeException decompiledCaughtException = null;
@@ -3607,7 +3607,7 @@ final class PoolMatchController {
           if (param0) {
             PoolMatchController.releaseStatics(true);
           }
-          stackIn_10_0 = (HighscoresScreen.field_K) || (NanoTickClock.isClientConnected(-126));
+          stackIn_10_0 = (HighscoresScreen.field_K) || (NanoTickClock.isGuestMode(-126));
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3878,7 +3878,7 @@ final class PoolMatchController {
                 if (var7 < 3600) {
                   var8 = MenuSelectionSupport.formatMinutesSeconds(var7 / 60, var7 % 60, 10);
                 } else {
-                  var8 = ModelInstance.a(var7 / 60 % 60, var7 % 60, 45, var7 / 60 / 60);
+                  var8 = ModelInstance.formatTimer(var7 / 60 % 60, var7 % 60, 45, var7 / 60 / 60);
                 }
               }
               var8 = AccountWelcomePanel.substituteTemplateArguments(new String[]{var8}, -1, ModelInstance.mpTimeremaining);
@@ -4286,7 +4286,7 @@ final class PoolMatchController {
                         }
                         stackIn_26_0 = var4.field_c ? 1 : 0;
                         while (true) {
-                          if (stackIn_26_0 == 0 && (var4.a(-5877, this.gameModel.cushionSegments) ||
+                          if (stackIn_26_0 == 0 && (var4.isPointOrEndpointCushionCollision(-5877, this.gameModel.cushionSegments) ||
                             var12 != 0)) {
                             var5--;
                             if (var5 > 0) {
@@ -4581,7 +4581,7 @@ final class PoolMatchController {
             this.adjustPower((byte) -76, 91);
           }
           if ((1L & LinkButtonPainter.field_i) != 0L) {
-            HuffmanCodec.a((byte) 114);
+            HuffmanCodec.drawDebugSliders((byte) 114);
           }
           if (0L != (8192L & LinkButtonPainter.field_i)) {
             var3_intLifetime2 = 476 - CollisionContact.field_h.maxDescent;
@@ -4946,7 +4946,7 @@ final class PoolMatchController {
             }
             AnimatedNotification.field_G = AnimatedNotification.field_G - 1;
             if (AnimatedNotification.field_G == 0) {
-              VertexTransformSupport.a((byte) 48, 7);
+              VertexTransformSupport.removeNotificationsByKind((byte) 48, 7);
             }
           }
           if (param0 != -47) {
@@ -5199,7 +5199,7 @@ final class PoolMatchController {
           }
           boolean decompiledFrameRemainder0 = true;
           var3 = new double[]{(double)var2.positionX / 65536.0, (double)var2.positionY / 65536.0, (double)var2.positionZ / 65536.0};
-          MusicCrossfadeStream.a(-64, DebouncedValidationProvider.field_f, false, this.camera.getDistance(8), ReflectionReplySupport.field_i, var3, this.viewMatrix);
+          MusicCrossfadeStream.unprojectPointerToPlane(-64, DebouncedValidationProvider.field_f, false, this.camera.getDistance(8), ReflectionReplySupport.field_i, var3, this.viewMatrix);
           var4 = var2.positionX;
           var5 = var2.positionY;
           if (this.gameModel.tryPlaceBall((int)(65536.0 * var3[1] + 0.5), (int)(65536.0 * var3[0] + 0.5), -96, this.draggedBallIndex, true)) {
@@ -5678,7 +5678,7 @@ final class PoolMatchController {
         int[] var2 = null;
         try {
           var2 = TransformRotationSupport.field_a.gradientPalette(0, param0 - 1);
-          TextLayout.a(LoginTextSupport.field_a, 2, DebugTuningSlider.field_s, 1, this.viewMatrix, (byte) 1, (var2.length - 1) / 4, var2, TextLayout.field_d, param0, ByteRecordSubmission.field_s);
+          TextLayout.drawProjectedPolyline(LoginTextSupport.field_a, 2, DebugTuningSlider.field_s, 1, this.viewMatrix, (byte) 1, (var2.length - 1) / 4, var2, TextLayout.field_d, param0, ByteRecordSubmission.field_s);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "uf.SA(" + param0 + ')');
         }
@@ -7954,7 +7954,7 @@ final class PoolMatchController {
               }
               stackIn_195_0 = -3405;
               stackIn_195_1 = -1;
-              if (LobbyPlayerLookupSupport.a(true)) {
+              if (LobbyPlayerLookupSupport.isGuestOrFreeAccount(true)) {
                 stackIn_196_2 = 21;
               } else {
                 stackIn_196_2 = 0;
@@ -8064,7 +8064,7 @@ final class PoolMatchController {
             }
           }
           this.playShotOutcomeSound(param0, (byte) -28);
-          RasterSnapshot.a(this, -16813);
+          RasterSnapshot.showPendingShotDecision(this, -16813);
           if ((this.modeFlags & PaletteFontLoader.field_d) != 0) {
             this.tutorial.checkStepAfterShot(false, param0);
           }
@@ -8554,7 +8554,7 @@ final class PoolMatchController {
               } else {
                 stackIn_17_5 = 2;
               }
-              ((TableScene) (Object) stackIn_16_0).a(stackIn_16_1, stackIn_16_2, stackIn_16_3, stackIn_16_4, stackIn_17_5);
+              ((TableScene) (Object) stackIn_16_0).playSpatialSound(stackIn_16_1, stackIn_16_2, stackIn_16_3, stackIn_16_4, stackIn_17_5);
               var2_int++;
             }
           }
@@ -8582,7 +8582,7 @@ final class PoolMatchController {
               } else {
                 var3_intLifetime1 = 192;
               }
-              LobbyGame.field_gc.a(1336449640, this.viewMatrix, 32 + var3_intLifetime1, new int[]{BrowserCookieWriter.field_e[var2_int][0] >> 13, BrowserCookieWriter.field_e[var2_int][1] >> 13, BrowserCookieWriter.field_e[var2_int][2] >> 13}, 5);
+              LobbyGame.field_gc.playSpatialSound(1336449640, this.viewMatrix, 32 + var3_intLifetime1, new int[]{BrowserCookieWriter.field_e[var2_int][0] >> 13, BrowserCookieWriter.field_e[var2_int][1] >> 13, BrowserCookieWriter.field_e[var2_int][2] >> 13}, 5);
               var2_int++;
             }
           }
@@ -8601,7 +8601,7 @@ final class PoolMatchController {
               if (fieldTemp$0 <= 0) {
                 return;
               }
-              LobbyGame.field_gc.a(this.viewMatrix, 4, -94, new int[]{this.gameModel.pockets[var3.pocketIndex].centerX >> 13, this.gameModel.pockets[var3.pocketIndex].centerY >> 13, -64});
+              LobbyGame.field_gc.playSpatialSound(this.viewMatrix, 4, -94, new int[]{this.gameModel.pockets[var3.pocketIndex].centerX >> 13, this.gameModel.pockets[var3.pocketIndex].centerY >> 13, -64});
               var3 = (PotEvent) (var2.next((byte) -71));
             } while (var4 == 0);
             return;

@@ -28,14 +28,14 @@ final class PasswordInputPainter extends TextInputPainter {
         this(ValidationIconWidget.field_O, param0);
     }
 
-    final static boolean d(int param0) {
+    final static boolean handleNotificationShortcutToggle(int obfuscationGuard) {
         int var1;
         int var2;
         int var3;
         int var1Lifetime1;
         var3 = Pool.field_O;
-        if (param0 != -18791) {
-          PasswordInputPainter.d(72);
+        if (obfuscationGuard != -18791) {
+          PasswordInputPainter.handleNotificationShortcutToggle(72);
         }
         if (!TextLineLayout.field_c[86]) {
           return false;
@@ -89,7 +89,7 @@ final class PasswordInputPainter extends TextInputPainter {
           var1Lifetime1 += 20;
         }
         LinkButtonPainter.field_i = LinkButtonPainter.field_i ^ 1L << var1Lifetime1;
-        MusicCrossfadeStream.a(0, var1Lifetime1);
+        MusicCrossfadeStream.showShortcutNotification(0, var1Lifetime1);
         return true;
     }
 
@@ -231,7 +231,7 @@ final class PasswordInputPainter extends TextInputPainter {
         }
     }
 
-    final static LoginResponse a(String param0, int param1) {
+    final static LoginResponse pollUsernameAvailability(String username, int obfuscationGuard) {
         int var2_int = 0;
         RuntimeException var2 = null;
         Object stackIn_2_0 = null;
@@ -242,18 +242,18 @@ final class PasswordInputPainter extends TextInputPainter {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = -40 / ((param1 - 36) / 53);
+          var2_int = -40 / ((obfuscationGuard - 36) / 53);
           if (IntegerRecordProtocolSupport.field_e == TimeTrialSelectScreen.field_I) {
             stackIn_2_0 = null;
             return (LoginResponse) (stackIn_2_0);
           }
           if (Base37Support.field_f == TimeTrialSelectScreen.field_I &&
-            param0.equals(ClientUiResourceState.field_c)) {
+            username.equals(ClientUiResourceState.field_c)) {
             TimeTrialSelectScreen.field_I = IntrusiveDequeCursor.field_c;
             stackIn_6_0 = PoolMatchController.field_gb;
             return stackIn_6_0;
           }
-          ClientUiResourceState.field_c = param0;
+          ClientUiResourceState.field_c = username;
           PoolMatchController.field_gb = null;
           TimeTrialSelectScreen.field_I = IntegerRecordProtocolSupport.field_e;
           stackIn_8_0 = null;
@@ -263,12 +263,12 @@ final class PasswordInputPainter extends TextInputPainter {
           var2 = decompiledCaughtException;
           stackIn_11_0 = var2;
           stackIn_11_1 = new StringBuilder().append("sm.FA(");
-          if (param0 == null) {
+          if (username == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

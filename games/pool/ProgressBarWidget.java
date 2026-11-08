@@ -269,7 +269,7 @@ final class ProgressBarWidget extends UiWidget {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          VertexTransformSupport.a((byte) 48, notificationId);
+          VertexTransformSupport.removeNotificationsByKind((byte) 48, notificationId);
           var4 = new AnimatedNotification(notificationId);
           if (!obfuscationGuard) {
             stackIn_2_0 = (AnimatedNotification) null;

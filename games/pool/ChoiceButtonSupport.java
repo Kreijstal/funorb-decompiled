@@ -159,13 +159,13 @@ final class ChoiceButtonSupport {
             if (NanoTickClock.field_t.pressedButton == 1) {
               var2.makeChoice(ScreenProjectionSupport.field_a, true);
               GzipDecoder.field_h = false;
-              RasterSnapshot.a(param1, -16813);
+              RasterSnapshot.showPendingShotDecision(param1, -16813);
               return true;
             }
             if (MonotonicClock.field_b.pressedButton == 1) {
               var2.makeChoice(EmailAvailabilityValidator.field_n, true);
               GzipDecoder.field_h = false;
-              RasterSnapshot.a(param1, -16813);
+              RasterSnapshot.showPendingShotDecision(param1, -16813);
               return true;
             }
           }

@@ -60,7 +60,7 @@ final class LoginRequestSupport {
           var13 = param4.getText((byte) 104);
           var8 = param5.getText((byte) 104);
           if (null == Atan2Support.field_c &&
-            !CollisionContact.a((byte) 65, false)) {
+            !CollisionContact.pollLoginSocket((byte) 65, false)) {
             stackIn_4_0 = -1;
             return stackIn_4_0;
           }

@@ -221,7 +221,7 @@ final class ViewportController {
         if (obfuscationGuard != 50) {
           ViewportController.updateIgnoreListInteraction(true, 91, 8);
         }
-        HotspotRectangle.a((byte) 55, active);
+        HotspotRectangle.drawLobbyAndGameOverlays((byte) 55, active);
         AudioService.drawTransientInterface(0, active);
     }
 

@@ -44,7 +44,7 @@ final class CueAim {
           var5 = param1.positionY >> 13;
           var6 = (int)(8.0 * param0.eyeY + 0.5);
           var7 = (int)(0.5 + param0.eyeX * 8.0);
-          this.azimuth = ResizableDialog.c(-var4_int + var7, var6 - var5, 4096) >> 2;
+          this.azimuth = ResizableDialog.signedAtan2Angle(-var4_int + var7, var6 - var5, 4096) >> 2;
           int var8 = -57 % ((param2 - 66) / 54);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "kj.L(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');

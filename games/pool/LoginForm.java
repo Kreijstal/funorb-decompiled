@@ -320,7 +320,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
             String var4 = (String) null;
             LoginForm.a((byte) -59, (String) null, (String) null);
           }
-          HotspotRectangle.a(false, param1, -102, param2);
+          HotspotRectangle.beginLoginWithCredentials(false, param1, -102, param2);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ui.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -448,7 +448,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           try {
             try {
               var3 = new java.net.URL(param1.getCodeBase(), param0);
-              var3 = ModelInstance.a((byte) -61, var3, param1);
+              var3 = ModelInstance.rewriteAppletUrl((byte) -61, var3, param1);
               AppletUrlSupport.openUrl(-10553, param1, var3.toString(), true);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

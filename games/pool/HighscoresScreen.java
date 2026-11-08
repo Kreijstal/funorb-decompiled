@@ -158,7 +158,7 @@ final class HighscoresScreen extends MenuScreen {
           return 97;
         }
         regionExit1: {
-          if (!NanoTickClock.isClientConnected(35)) {
+          if (!NanoTickClock.isGuestMode(35)) {
             var3 = param1;
             if (var3 != 0 &&
               1 != var3) {
@@ -182,7 +182,7 @@ final class HighscoresScreen extends MenuScreen {
     }
 
     final void handleNavigationKey(int param0) {
-        if (NanoTickClock.isClientConnected(param0 + 37)) {
+        if (NanoTickClock.isGuestMode(param0 + 37)) {
           super.handleNavigationKey(-34);
         } else {
           if (IterableDualLinkDeque.field_a == 96) {
@@ -213,7 +213,7 @@ final class HighscoresScreen extends MenuScreen {
         if (param0 != 69) {
           HighscoresScreen.sendJoinGameRequest(93, (byte) -1, 126);
         }
-        if (!NanoTickClock.isClientConnected(param0 - 178) &&
+        if (!NanoTickClock.isGuestMode(param0 - 178) &&
           param1 < 3) {
           return 24;
         }
@@ -265,7 +265,7 @@ final class HighscoresScreen extends MenuScreen {
           if (param2 != 0) {
             field_N = false;
           }
-          if (!NanoTickClock.isClientConnected(36) &&
+          if (!NanoTickClock.isGuestMode(36) &&
             3 > param3) {
             var6 = FreePlayRules.field_e.field_U[param1];
             var5 = var6;
@@ -289,7 +289,7 @@ final class HighscoresScreen extends MenuScreen {
     }
 
     final int getButtonRight(boolean param0, int param1) {
-        if (!NanoTickClock.isClientConnected(72)) {
+        if (!NanoTickClock.isGuestMode(72)) {
           if (param1 < 3) {
             return 120 + this.getButtonLeft(0, param1);
           }
@@ -314,7 +314,7 @@ final class HighscoresScreen extends MenuScreen {
         if (param0 != 6) {
           field_K = true;
         }
-        if (!NanoTickClock.isClientConnected(-5)) {
+        if (!NanoTickClock.isGuestMode(-5)) {
           if (param1 < 3) {
             return 130;
           }
@@ -336,7 +336,7 @@ final class HighscoresScreen extends MenuScreen {
 
     final void drawScreen(int param0) {
         super.drawScreen(105);
-        if (NanoTickClock.isClientConnected(95)) {
+        if (NanoTickClock.isGuestMode(95)) {
           this.validateHighscoresGuard(2931);
         } else {
           this.drawHighscoreTable(-3);
@@ -344,7 +344,7 @@ final class HighscoresScreen extends MenuScreen {
         if (param0 <= 36) {
           field_P = -120;
         }
-        String var2 = !NanoTickClock.isClientConnected(66) ? MultiHandleSliderWidget.hsFriendTip : IntegerRecordProtocolSupport.createtouse;
+        String var2 = !NanoTickClock.isGuestMode(66) ? MultiHandleSliderWidget.hsFriendTip : IntegerRecordProtocolSupport.createtouse;
         CollisionContact.field_h.drawCentered(var2, 320, 380, 15658734, -1);
     }
 
@@ -384,7 +384,7 @@ final class HighscoresScreen extends MenuScreen {
                     super.handleMenuAction(-16470, param1, param2);
                   } else {
                     if (this.selection.isPressActivated((byte) 93)) {
-                      TranslatedUiText.a(VertexProjectionSupport.pleaselogin, this.screenId, (byte) 83);
+                      TranslatedUiText.requestLoginTransition(VertexProjectionSupport.pleaselogin, this.screenId, (byte) 83);
                     }
                   }
                 }

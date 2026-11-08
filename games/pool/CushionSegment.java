@@ -65,7 +65,7 @@ final class CushionSegment {
             PasswordValidator.field_t[0] = 320 + var6 / PasswordValidator.field_t[2];
             PasswordValidator.field_t[1] = var7 / PasswordValidator.field_t[2] + 240;
             if (PasswordValidator.field_t[2] > 0) {
-              PoolUiText.field_d = ResizableDialog.c(PasswordValidator.field_t[0] - var4, var5 - PasswordValidator.field_t[1], 4096) << 3;
+              PoolUiText.field_d = ResizableDialog.signedAtan2Angle(PasswordValidator.field_t[0] - var4, var5 - PasswordValidator.field_t[1], 4096) << 3;
               return;
             }
             return;
@@ -74,7 +74,7 @@ final class CushionSegment {
           PasswordValidator.field_t[0] = 320 + var6 / PasswordValidator.field_t[2];
           PasswordValidator.field_t[1] = var7 / PasswordValidator.field_t[2] + 240;
           if (PasswordValidator.field_t[2] > 0) {
-            PoolUiText.field_d = ResizableDialog.c(PasswordValidator.field_t[0] - var4, var5 - PasswordValidator.field_t[1], 4096) << 3;
+            PoolUiText.field_d = ResizableDialog.signedAtan2Angle(PasswordValidator.field_t[0] - var4, var5 - PasswordValidator.field_t[1], 4096) << 3;
             return;
           }
           return;
@@ -98,7 +98,7 @@ final class CushionSegment {
             PasswordValidator.field_t[0] = 320 + var6Lifetime1 / PasswordValidator.field_t[2];
             PasswordValidator.field_t[1] = var7Lifetime1 / PasswordValidator.field_t[2] + 240;
             if (PasswordValidator.field_t[2] > 0) {
-              PoolUiText.field_d = ResizableDialog.c(PasswordValidator.field_t[0] - var4Lifetime1, var5Lifetime1 - PasswordValidator.field_t[1], 4096) << 3;
+              PoolUiText.field_d = ResizableDialog.signedAtan2Angle(PasswordValidator.field_t[0] - var4Lifetime1, var5Lifetime1 - PasswordValidator.field_t[1], 4096) << 3;
               return;
             }
             return;
@@ -107,7 +107,7 @@ final class CushionSegment {
           PasswordValidator.field_t[0] = 320 + var6Lifetime1 / PasswordValidator.field_t[2];
           PasswordValidator.field_t[1] = var7Lifetime1 / PasswordValidator.field_t[2] + 240;
           if (PasswordValidator.field_t[2] > 0) {
-            PoolUiText.field_d = ResizableDialog.c(PasswordValidator.field_t[0] - var4Lifetime1, var5Lifetime1 - PasswordValidator.field_t[1], 4096) << 3;
+            PoolUiText.field_d = ResizableDialog.signedAtan2Angle(PasswordValidator.field_t[0] - var4Lifetime1, var5Lifetime1 - PasswordValidator.field_t[1], 4096) << 3;
             return;
           }
           return;
@@ -129,7 +129,7 @@ final class CushionSegment {
           PasswordValidator.field_t[0] = 320 + var6Lifetime2 / PasswordValidator.field_t[2];
           PasswordValidator.field_t[1] = var7Lifetime2 / PasswordValidator.field_t[2] + 240;
           if (PasswordValidator.field_t[2] > 0) {
-            PoolUiText.field_d = ResizableDialog.c(PasswordValidator.field_t[0] - var4Lifetime2, var5Lifetime2 - PasswordValidator.field_t[1], 4096) << 3;
+            PoolUiText.field_d = ResizableDialog.signedAtan2Angle(PasswordValidator.field_t[0] - var4Lifetime2, var5Lifetime2 - PasswordValidator.field_t[1], 4096) << 3;
             return;
           }
           return;
@@ -137,7 +137,7 @@ final class CushionSegment {
         PasswordValidator.field_t[0] = 320 + var6Lifetime2 / PasswordValidator.field_t[2];
         PasswordValidator.field_t[1] = var7Lifetime2 / PasswordValidator.field_t[2] + 240;
         if (PasswordValidator.field_t[2] > 0) {
-          PoolUiText.field_d = ResizableDialog.c(PasswordValidator.field_t[0] - var4Lifetime2, var5Lifetime2 - PasswordValidator.field_t[1], 4096) << 3;
+          PoolUiText.field_d = ResizableDialog.signedAtan2Angle(PasswordValidator.field_t[0] - var4Lifetime2, var5Lifetime2 - PasswordValidator.field_t[1], 4096) << 3;
           return;
         }
     }

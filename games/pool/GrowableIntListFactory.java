@@ -46,13 +46,13 @@ final class GrowableIntListFactory {
         return var3;
     }
 
-    final static void a(int param0, int param1, int param2) {
-        ArchiveIndex.field_u = param0;
-        RatingTextState.field_f = param2;
-        int var3 = 62 % ((59 - param1) / 59);
+    final static void setMenuAnchor(int x, int obfuscationGuard, int y) {
+        ArchiveIndex.field_u = x;
+        RatingTextState.field_f = y;
+        int var3 = 62 % ((59 - obfuscationGuard) / 59);
     }
 
-    final static boolean a(boolean param0, CharSequence param1, byte param2) {
+    final static boolean isValidAccountName(boolean mode, CharSequence name, byte obfuscationGuard) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -62,14 +62,14 @@ final class GrowableIntListFactory {
         RuntimeException decompiledCaughtException = null;
         var4 = Pool.field_O;
         try {
-          if (!ModelInstance.isValidDisplayName(param1, (byte) -113, param0)) {
+          if (!ModelInstance.isValidDisplayName(name, (byte) -113, mode)) {
             return false;
           }
-          if (param2 != -37) {
+          if (obfuscationGuard != -37) {
             return true;
           }
-          for (var3_int = 0; var3_int < param1.length(); var3_int++) {
-            if (!RasterStateSupport.isNameCharacter(param1.charAt(var3_int), (byte) -51)) {
+          for (var3_int = 0; var3_int < name.length(); var3_int++) {
+            if (!RasterStateSupport.isNameCharacter(name.charAt(var3_int), (byte) -51)) {
               return false;
             }
           }
@@ -78,13 +78,13 @@ final class GrowableIntListFactory {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_18_0 = var3;
-          stackIn_18_1 = new StringBuilder().append("w.D(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_18_1 = new StringBuilder().append("w.D(").append(mode).append(',');
+          if (name == null) {
             stackIn_19_2 = "null";
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

@@ -30,7 +30,7 @@ final class ModelInstance implements SceneDrawable {
         try {
           if (param1 > -27) {
             var4 = (int[]) null;
-            this.b(121, (int[]) null);
+            this.distanceSquaredTo(121, (int[]) null);
           }
           stackIn_3_0 = param0[9] * (this.transform[0] - param0[0]) + ((-param0[1] + this.transform[1]) * param0[10] + param0[11] * (this.transform[2] - param0[2]));
           return stackIn_3_0;
@@ -48,15 +48,15 @@ final class ModelInstance implements SceneDrawable {
         }
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void updateAuxiliaryDialog(boolean active, int obfuscationGuard) {
         if (null != CollisionContact.field_f &&
-          CollisionContact.field_f.updateAndPollDismissal((byte) -52, param0)) {
+          CollisionContact.field_f.updateAndPollDismissal((byte) -52, active)) {
           CollisionContact.field_f = null;
         }
-        int var2 = 20 / ((param1 + 42) / 48);
+        int var2 = 20 / ((obfuscationGuard + 42) / 48);
     }
 
-    final static String a(int param0, int param1, int param2, int param3) {
+    final static String formatTimer(int minutes, int seconds, int obfuscationGuard, int hours) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -91,14 +91,14 @@ final class ModelInstance implements SceneDrawable {
         int var5Lifetime1;
         int var5Lifetime2;
         var7 = new String(CueStick.timerHoursMinutesSeconds);
-        if (param2 != 45) {
+        if (obfuscationGuard != 45) {
           return (String) null;
         }
         var5 = var7.indexOf("hh");
         var9 = var7.toCharArray();
         var8 = var9;
         var6 = var8;
-        if (param3 > 100) {
+        if (hours > 100) {
           incrementValue$0 = var5;
           var5++;
           var6[incrementValue$0] = (char)58;
@@ -110,18 +110,18 @@ final class ModelInstance implements SceneDrawable {
           var5++;
           stackIn_5_0 = var6;
           stackIn_5_1 = incrementValue$2;
-          if (param3 < 0) {
+          if (hours < 0) {
             stackIn_6_2 = 45;
           } else {
-            stackIn_6_2 = param3 / 10 + 48;
+            stackIn_6_2 = hours / 10 + 48;
           }
           stackIn_5_0[stackIn_5_1] = (char)stackIn_6_2;
           incrementValue$3 = var5;
           var5++;
           stackIn_8_0 = var6;
           stackIn_8_1 = incrementValue$3;
-          if (0 <= param3) {
-            stackIn_9_2 = 48 + param3 % 10;
+          if (0 <= hours) {
+            stackIn_9_2 = 48 + hours % 10;
           } else {
             stackIn_9_2 = 45;
           }
@@ -132,8 +132,8 @@ final class ModelInstance implements SceneDrawable {
         var5Lifetime1++;
         stackIn_13_0 = var6;
         stackIn_13_1 = incrementValue$4;
-        if (0 <= param0) {
-          stackIn_14_2 = 48 + param0 / 10;
+        if (0 <= minutes) {
+          stackIn_14_2 = 48 + minutes / 10;
         } else {
           stackIn_14_2 = 45;
         }
@@ -142,8 +142,8 @@ final class ModelInstance implements SceneDrawable {
         var5Lifetime1++;
         stackIn_16_0 = var6;
         stackIn_16_1 = incrementValue$5;
-        if (param0 >= 0) {
-          stackIn_17_2 = param0 % 10 + 48;
+        if (minutes >= 0) {
+          stackIn_17_2 = minutes % 10 + 48;
         } else {
           stackIn_17_2 = 45;
         }
@@ -153,18 +153,18 @@ final class ModelInstance implements SceneDrawable {
         var5Lifetime2++;
         stackIn_19_0 = var6;
         stackIn_19_1 = incrementValue$6;
-        if (param1 < 0) {
+        if (seconds < 0) {
           stackIn_20_2 = 45;
         } else {
-          stackIn_20_2 = param1 / 10 + 48;
+          stackIn_20_2 = seconds / 10 + 48;
         }
         stackIn_19_0[stackIn_19_1] = (char)stackIn_20_2;
         incrementValue$7 = var5Lifetime2;
         var5Lifetime2++;
         stackIn_22_0 = var6;
         stackIn_22_1 = incrementValue$7;
-        if (param1 >= 0) {
-          stackIn_23_2 = 48 + param1 % 10;
+        if (seconds >= 0) {
+          stackIn_23_2 = 48 + seconds % 10;
         } else {
           stackIn_23_2 = 45;
         }
@@ -183,15 +183,15 @@ final class ModelInstance implements SceneDrawable {
         }
     }
 
-    final void a(int param0, int param1, int param2) {
-        this.field_e = (byte)(-param1 > this.transform[0] ? 1 : this.transform[0] <= param1 ? 0 : -1);
-        this.field_d = (byte)(this.transform[1] < -param0 ? 1 : this.transform[1] <= param0 ? 0 : -1);
-        if (param2 > -71) {
+    final void setBoundaryFacingDirections(int halfHeight, int halfWidth, int obfuscationGuard) {
+        this.field_e = (byte)(-halfWidth > this.transform[0] ? 1 : this.transform[0] <= halfWidth ? 0 : -1);
+        this.field_d = (byte)(this.transform[1] < -halfHeight ? 1 : this.transform[1] <= halfHeight ? 0 : -1);
+        if (obfuscationGuard > -71) {
           this.field_e = (byte) 71;
         }
     }
 
-    final int b(int param0, int[] param1) {
+    final int distanceSquaredTo(int obfuscationGuard, int[] position) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -203,21 +203,21 @@ final class ModelInstance implements SceneDrawable {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3_int = this.transform[0] - param1[0];
-          var4 = -param1[1] + this.transform[1];
-          if (param0 != -13025) {
+          var3_int = this.transform[0] - position[0];
+          var4 = -position[1] + this.transform[1];
+          if (obfuscationGuard != -13025) {
             stackIn_2_0 = 3;
             return stackIn_2_0;
           }
-          var5 = this.transform[2] - param1[2];
+          var5 = this.transform[2] - position[2];
           stackIn_4_0 = var3_int * var3_int + (var4 * var4 + var5 * var5);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_7_0 = var3;
-          stackIn_7_1 = new StringBuilder().append("p.F(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_7_1 = new StringBuilder().append("p.F(").append(obfuscationGuard).append(',');
+          if (position == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
@@ -226,7 +226,7 @@ final class ModelInstance implements SceneDrawable {
         }
     }
 
-    private final void c(int param0) {
+    private final void ensureTransformComplete(int obfuscationGuard) {
         int var2 = 0;
         int[] var3 = null;
         if (null == this.transform) {
@@ -246,13 +246,13 @@ final class ModelInstance implements SceneDrawable {
             }
           }
         }
-        if (param0 < 118) {
+        if (obfuscationGuard < 118) {
           int[] var4 = (int[]) null;
-          this.a(-115, (String) null, (int[]) null);
+          this.drawProjectedLabel(-115, (String) null, (int[]) null);
         }
     }
 
-    final static java.net.URL a(byte param0, java.net.URL param1, java.applet.Applet param2) {
+    final static java.net.URL rewriteAppletUrl(byte obfuscationGuard, java.net.URL url, java.applet.Applet applet) {
         Object var3 = null;
         Object var4 = null;
         int var5 = 0;
@@ -264,33 +264,33 @@ final class ModelInstance implements SceneDrawable {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5 = 50 / ((param0 - 20) / 37);
+          var5 = 50 / ((obfuscationGuard - 20) / 37);
           var3 = null;
           var4 = null;
           if (null != GlowSprite.field_g &&
-            !GlowSprite.field_g.equals(param2.getParameter("settings"))) {
+            !GlowSprite.field_g.equals(applet.getParameter("settings"))) {
             var3 = GlowSprite.field_g;
             var4 = var3;
             var4 = var3;
           }
           if (null != TextInputPainter.field_y &&
-            !TextInputPainter.field_y.equals(param2.getParameter("session"))) {
+            !TextInputPainter.field_y.equals(applet.getParameter("session"))) {
             var4 = TextInputPainter.field_y;
           }
-          stackIn_7_0 = MusicVoice.rewriteUrlPathParameters(-1, param1, (String) (var3), (byte) 63, (String) (var4));
+          stackIn_7_0 = MusicVoice.rewriteUrlPathParameters(-1, url, (String) (var3), (byte) 63, (String) (var4));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_10_0 = var3;
-          stackIn_10_1 = new StringBuilder().append("p.D(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_10_1 = new StringBuilder().append("p.D(").append(obfuscationGuard).append(',');
+          if (url == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
           stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',');
-          if (param2 == null) {
+          if (applet == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
@@ -299,19 +299,19 @@ final class ModelInstance implements SceneDrawable {
         }
     }
 
-    private final void a(int param0, String param1, int[] param2) {
+    private final void drawProjectedLabel(int obfuscationGuard, String text, int[] cameraTransform) {
         float[] var5 = null;
         float[] var6 = null;
         try {
           var5 = new float[]{(float)(this.field_h + this.field_p) / 2.0f, (float)(this.field_m + this.field_a) / 2.0f, (float)(this.field_o + this.field_f) / 2.0f};
           var6 = var5;
-          ScreenProjectionSupport.projectToScreen(param2, var6, 9);
-          if (param0 <= 20) {
-            this.a(-74, 99, 4);
+          ScreenProjectionSupport.projectToScreen(cameraTransform, var6, 9);
+          if (obfuscationGuard <= 20) {
+            this.setBoundaryFacingDirections(-74, 99, 4);
           }
-          CollisionContact.field_h.drawCentered(param1, (int)(0.5f + var5[0]), (int)(0.5f + var5[1]), 16764142, 1);
+          CollisionContact.field_h.drawCentered(text, (int)(0.5f + var5[0]), (int)(0.5f + var5[1]), 16764142, 1);
         } catch (RuntimeException runtimeException) {
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "p.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "p.H(" + obfuscationGuard + ',' + (text != null ? "{...}" : "null") + ',' + (cameraTransform != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -352,12 +352,12 @@ final class ModelInstance implements SceneDrawable {
           var4 = TutorialController.normalizeDisplayName(param1 ^ -12, param0);
           if (var4 != null &&
             var4.length() >= 1) {
-            if (!Js5ArchiveManager.a(0, var4.charAt(0)) &&
-              !Js5ArchiveManager.a(0, var4.charAt(var4.length() - 1))) {
+            if (!Js5ArchiveManager.isNameSeparator(0, var4.charAt(0)) &&
+              !Js5ArchiveManager.isNameSeparator(0, var4.charAt(var4.length() - 1))) {
               var5 = 0;
               for (var6 = 0; var6 < param0.length(); var6++) {
                 var7 = param0.charAt(var6);
-                if (!Js5ArchiveManager.a(param1 + 113, (char) var7)) {
+                if (!Js5ArchiveManager.isNameSeparator(param1 + 113, (char) var7)) {
                   var5 = 0;
                 } else {
                   var5++;
@@ -392,7 +392,7 @@ final class ModelInstance implements SceneDrawable {
         }
     }
 
-    final void c(int param0, int[] param1) {
+    final void drawMeshOrDiagnostics(int obfuscationGuard, int[] cameraTransform) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -400,12 +400,12 @@ final class ModelInstance implements SceneDrawable {
         RuntimeException var3 = null;
         try {
           if (this.mesh.getBoundingRadius() << 1 > ModelMesh.field_Y.length) {
-            this.a(6710886, param1);
-            this.a(112, "Model too big - radixsize:" + (this.mesh.getBoundingRadius() << 1) + " maxmodelsize:" + ModelMesh.field_Y.length, param1);
+            this.drawBoundsWireframe(6710886, cameraTransform);
+            this.drawProjectedLabel(112, "Model too big - radixsize:" + (this.mesh.getBoundingRadius() << 1) + " maxmodelsize:" + ModelMesh.field_Y.length, cameraTransform);
           } else {
-            this.mesh.drawWithTransforms(param1, this.transform);
+            this.mesh.drawWithTransforms(cameraTransform, this.transform);
           }
-          if (param0 != 6710886) {
+          if (obfuscationGuard != 6710886) {
             mpXOffersrematch = (String) null;
           }
           return;
@@ -413,8 +413,8 @@ final class ModelInstance implements SceneDrawable {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_8_0 = var3;
-          stackIn_8_1 = new StringBuilder().append("p.B(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_8_1 = new StringBuilder().append("p.B(").append(obfuscationGuard).append(',');
+          if (cameraTransform == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
@@ -423,7 +423,7 @@ final class ModelInstance implements SceneDrawable {
         }
     }
 
-    final boolean a(boolean param0, int[] param1) {
+    final boolean passesBoundaryFacingTest(boolean obfuscationGuard, int[] cameraTransform) {
         RuntimeException var3 = null;
         int[] var4 = null;
         boolean stackIn_5_0 = false;
@@ -432,18 +432,18 @@ final class ModelInstance implements SceneDrawable {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param0) {
+          if (!obfuscationGuard) {
             var4 = (int[]) null;
             this.draw((int[]) null, 86);
           }
-          stackIn_5_0 = !(0 >= this.field_e * (this.transform[0] - param1[0]) + this.field_d * (-param1[1] + this.transform[1]));
+          stackIn_5_0 = !(0 >= this.field_e * (this.transform[0] - cameraTransform[0]) + this.field_d * (-cameraTransform[1] + this.transform[1]));
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_8_0 = var3;
-          stackIn_8_1 = new StringBuilder().append("p.J(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_8_1 = new StringBuilder().append("p.J(").append(obfuscationGuard).append(',');
+          if (cameraTransform == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
@@ -452,7 +452,7 @@ final class ModelInstance implements SceneDrawable {
         }
     }
 
-    private final void a(int param0) {
+    private final void recomputeWorldBounds(int obfuscationGuard) {
         int var6 = 0;
         int var7 = 0;
         int var2;
@@ -500,27 +500,27 @@ final class ModelInstance implements SceneDrawable {
             }
           }
         }
-        if (param0 != 16775) {
+        if (obfuscationGuard != 16775) {
           this.field_p = (short) 97;
         }
     }
 
-    private final void a(int param0, int[] param1) {
+    private final void drawBoundsWireframe(int color, int[] cameraTransform) {
         try {
-          IndexedSpriteState.drawProjectedLine((int) this.field_a, param1, (int) this.field_h, -28361, 6697779, (int) this.field_p, (int) this.field_a, (int) this.field_o, (int) this.field_o);
-          IndexedSpriteState.drawProjectedLine((int) this.field_a, param1, (int) this.field_h, -28361, param0, (int) this.field_p, (int) this.field_a, (int) this.field_f, (int) this.field_f);
-          IndexedSpriteState.drawProjectedLine((int) this.field_m, param1, (int) this.field_h, -28361, 6710886, (int) this.field_p, (int) this.field_m, (int) this.field_o, (int) this.field_o);
-          IndexedSpriteState.drawProjectedLine((int) this.field_m, param1, (int) this.field_h, -28361, 6710886, (int) this.field_p, (int) this.field_m, (int) this.field_f, (int) this.field_f);
-          IndexedSpriteState.drawProjectedLine((int) this.field_m, param1, (int) this.field_h, -28361, 3368499, (int) this.field_h, (int) this.field_a, (int) this.field_o, (int) this.field_o);
-          IndexedSpriteState.drawProjectedLine((int) this.field_m, param1, (int) this.field_h, -28361, 6710886, (int) this.field_h, (int) this.field_a, (int) this.field_f, (int) this.field_f);
-          IndexedSpriteState.drawProjectedLine((int) this.field_m, param1, (int) this.field_p, -28361, 6710886, (int) this.field_p, (int) this.field_a, (int) this.field_o, (int) this.field_o);
-          IndexedSpriteState.drawProjectedLine((int) this.field_m, param1, (int) this.field_p, param0 - 6739247, 6710886, (int) this.field_p, (int) this.field_a, (int) this.field_f, (int) this.field_f);
-          IndexedSpriteState.drawProjectedLine((int) this.field_a, param1, (int) this.field_h, -28361, 3355494, (int) this.field_h, (int) this.field_a, (int) this.field_o, (int) this.field_f);
-          IndexedSpriteState.drawProjectedLine((int) this.field_m, param1, (int) this.field_h, param0 ^ -6686895, 6710886, (int) this.field_h, (int) this.field_m, (int) this.field_o, (int) this.field_f);
-          IndexedSpriteState.drawProjectedLine((int) this.field_a, param1, (int) this.field_p, -28361, 6710886, (int) this.field_p, (int) this.field_a, (int) this.field_o, (int) this.field_f);
-          IndexedSpriteState.drawProjectedLine((int) this.field_m, param1, (int) this.field_p, -28361, 6710886, (int) this.field_p, (int) this.field_m, (int) this.field_o, (int) this.field_f);
+          IndexedSpriteState.drawProjectedLine((int) this.field_a, cameraTransform, (int) this.field_h, -28361, 6697779, (int) this.field_p, (int) this.field_a, (int) this.field_o, (int) this.field_o);
+          IndexedSpriteState.drawProjectedLine((int) this.field_a, cameraTransform, (int) this.field_h, -28361, color, (int) this.field_p, (int) this.field_a, (int) this.field_f, (int) this.field_f);
+          IndexedSpriteState.drawProjectedLine((int) this.field_m, cameraTransform, (int) this.field_h, -28361, 6710886, (int) this.field_p, (int) this.field_m, (int) this.field_o, (int) this.field_o);
+          IndexedSpriteState.drawProjectedLine((int) this.field_m, cameraTransform, (int) this.field_h, -28361, 6710886, (int) this.field_p, (int) this.field_m, (int) this.field_f, (int) this.field_f);
+          IndexedSpriteState.drawProjectedLine((int) this.field_m, cameraTransform, (int) this.field_h, -28361, 3368499, (int) this.field_h, (int) this.field_a, (int) this.field_o, (int) this.field_o);
+          IndexedSpriteState.drawProjectedLine((int) this.field_m, cameraTransform, (int) this.field_h, -28361, 6710886, (int) this.field_h, (int) this.field_a, (int) this.field_f, (int) this.field_f);
+          IndexedSpriteState.drawProjectedLine((int) this.field_m, cameraTransform, (int) this.field_p, -28361, 6710886, (int) this.field_p, (int) this.field_a, (int) this.field_o, (int) this.field_o);
+          IndexedSpriteState.drawProjectedLine((int) this.field_m, cameraTransform, (int) this.field_p, color - 6739247, 6710886, (int) this.field_p, (int) this.field_a, (int) this.field_f, (int) this.field_f);
+          IndexedSpriteState.drawProjectedLine((int) this.field_a, cameraTransform, (int) this.field_h, -28361, 3355494, (int) this.field_h, (int) this.field_a, (int) this.field_o, (int) this.field_f);
+          IndexedSpriteState.drawProjectedLine((int) this.field_m, cameraTransform, (int) this.field_h, color ^ -6686895, 6710886, (int) this.field_h, (int) this.field_m, (int) this.field_o, (int) this.field_f);
+          IndexedSpriteState.drawProjectedLine((int) this.field_a, cameraTransform, (int) this.field_p, -28361, 6710886, (int) this.field_p, (int) this.field_a, (int) this.field_o, (int) this.field_f);
+          IndexedSpriteState.drawProjectedLine((int) this.field_m, cameraTransform, (int) this.field_p, -28361, 6710886, (int) this.field_p, (int) this.field_m, (int) this.field_o, (int) this.field_f);
         } catch (RuntimeException runtimeException) {
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "p.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "p.I(" + color + ',' + (cameraTransform != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -529,8 +529,8 @@ final class ModelInstance implements SceneDrawable {
         try {
           this.mesh = param0;
           this.transform = param1;
-          this.c(126);
-          this.a(16775);
+          this.ensureTransformComplete(126);
+          this.recomputeWorldBounds(16775);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "p.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

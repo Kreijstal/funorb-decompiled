@@ -1075,7 +1075,7 @@ final class PolarTableScene extends ModelTableScene {
           for (var4 = 0; var4 < 256; var4++) {
             incrementValue$0 = var3;
             var3++;
-            BufferedSocket.field_p[incrementValue$0] = ValueNoise.a(var4 << 6, var2_int << 6, HotspotRectangle.field_r << 7, TableScene.field_w, 128, 6);
+            BufferedSocket.field_p[incrementValue$0] = ValueNoise.sampleFractalPalette(var4 << 6, var2_int << 6, HotspotRectangle.field_r << 7, TableScene.field_w, 128, 6);
           }
         }
         if (var1 >= 256) {

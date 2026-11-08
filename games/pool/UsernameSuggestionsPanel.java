@@ -86,8 +86,8 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonAc
         }
     }
 
-    final static boolean g(byte param0) {
-        if (param0 >= -77) {
+    final static boolean isFreeChatAllowed(byte obfuscationGuard) {
+        if (obfuscationGuard >= -77) {
           UsernameSuggestionsPanel.releaseStatics(9);
         }
         return !ViewportController.field_y ? true : false;

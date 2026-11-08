@@ -1739,7 +1739,7 @@ final class PoolGameModel {
         PotEvent var5;
         Pocket var6;
         ShotRecord var7;
-        HotspotRectangle.a(this.field_e, this.cushionSegments, this.balls, 0);
+        HotspotRectangle.advanceBallPhysicsFrame(this.field_e, this.cushionSegments, this.balls, 0);
         var7 = this.currentShot(79);
         if (param0 > -2) {
           return;

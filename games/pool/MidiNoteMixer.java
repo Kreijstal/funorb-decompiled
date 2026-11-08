@@ -260,7 +260,7 @@ final class MidiNoteMixer extends PcmStream {
           if (obfuscationGuard != -30100) {
             MidiNoteMixer.releaseStatics(-75);
           }
-          stackIn_3_0 = AccountStateQuery.a(3, -20607, values);
+          stackIn_3_0 = AccountStateQuery.doubleArrayToFixed(3, -20607, values);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

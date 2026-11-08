@@ -30,15 +30,15 @@ final class KillerRules extends GameRules {
             if (IterableDualLinkDeque.field_a != 80) {
               return false;
             }
-            if (!UsernameSuggestionsPanel.g((byte) -108)) {
+            if (!UsernameSuggestionsPanel.isFreeChatAllowed((byte) -108)) {
               return false;
             }
             DualLinkNode.field_p = true;
             return true;
           }
-          return LoginPayloadKind.a(param2 + 15586, param0, param3);
+          return LoginPayloadKind.handleQuickChatKey(param2 + 15586, param0, param3);
         }
-        if (!UsernameSuggestionsPanel.g((byte) -121)) {
+        if (!UsernameSuggestionsPanel.isFreeChatAllowed((byte) -121)) {
           return false;
         }
         stackIn_22_0 = (!ChatInputSupport.handleChatKey(param3, -103, param1)) ? 0 : 1;

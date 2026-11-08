@@ -131,7 +131,7 @@ final class Pocket {
 
     final void addBall(int param0, int param1) {
         if (this.pottedBalls == null) {
-          this.pottedBalls = ShotRecord.b(true);
+          this.pottedBalls = ShotRecord.createPottedBallList(true);
         }
         int var3 = 126 / ((param1 - 0) / 51);
         this.pottedBalls.add((byte) -2, param0);
@@ -238,7 +238,7 @@ final class Pocket {
           return;
         }
         try {
-          var3 = ShotRecord.b(true);
+          var3 = ShotRecord.createPottedBallList(true);
           var4 = 0;
           for (var5 = 0; var5 < this.pottedBalls.size((byte) 110); var5++) {
             if (!param0[this.pottedBalls.get(var5, 2229)].inPlay) {

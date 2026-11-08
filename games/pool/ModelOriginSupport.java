@@ -31,7 +31,7 @@ final class ModelOriginSupport extends IntrusiveNode {
             return null;
           }
           var4_int = -39 / ((obfuscationGuard + 12) / 57);
-          stackIn_4_0 = ThemeSelectScreen.h(152);
+          stackIn_4_0 = ThemeSelectScreen.createDecodedOpaqueSprites(152);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

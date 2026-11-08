@@ -12,7 +12,7 @@ final class SupportPageLauncher {
         if (obfuscationGuard) {
           SupportPageLauncher.updateQuickChatMenu(-113, false, -92, -109);
         }
-        return AccountStateQuery.a(false, QuickChatMenuSupport.field_d, ResourceArchive.field_a);
+        return AccountStateQuery.isChatRecipientAvailable(false, QuickChatMenuSupport.field_d, ResourceArchive.field_a);
     }
 
     final static void openSupportPage(byte param0, java.applet.Applet param1) {
@@ -28,7 +28,7 @@ final class SupportPageLauncher {
           try {
             try {
               var2 = new java.net.URL(param1.getCodeBase(), "tosupport.ws");
-              param1.getAppletContext().showDocument(ModelInstance.a((byte) 79, var2, param1), "_top");
+              param1.getAppletContext().showDocument(ModelInstance.rewriteAppletUrl((byte) 79, var2, param1), "_top");
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2_ref = (Exception) (Object) decompiledCaughtException;
@@ -167,7 +167,7 @@ final class SupportPageLauncher {
         if (MatchingTextValidator.field_s != 0 &&
           var4 == 0) {
           param1 = false;
-          ChatInputSupport.b(-1);
+          ChatInputSupport.closeQuickChat(-1);
         }
         if (param1) {
           LobbyPlayer.field_Ub.processPressedItems((byte) 86, param2, param0);

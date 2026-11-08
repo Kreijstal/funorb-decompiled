@@ -113,7 +113,7 @@ final class AchievementSubmission extends IntrusiveNode {
           PauseMenuScreen.field_H = false;
         }
         if (RankingsBufferSupport.field_f) {
-          ChatMessage.a((byte) 75, AccountStateQuery.ratedMembersonly);
+          ChatMessage.showCenteredNotice((byte) 75, AccountStateQuery.ratedMembersonly);
           RankingsBufferSupport.field_f = false;
         }
         if (obfuscationGuard >= 7) {

@@ -153,7 +153,7 @@ abstract class TextLayout {
           var3 = var6;
           if (obfuscationGuard < 61) {
             var5 = (int[]) null;
-            TextLayout.a((int[]) null, -54, (int[]) null, -45, (int[]) null, (byte) 22, 22, (int[]) null, (int[]) null, (byte) 2, (int[]) null);
+            TextLayout.drawProjectedPolyline((int[]) null, -54, (int[]) null, -45, (int[]) null, (byte) 22, 22, (int[]) null, (int[]) null, (byte) 2, (int[]) null);
           }
           for (var4 = 0; values.length > var4; var4++) {
             var6[var4] = DebugTuningSupport.scaleByPowerOfTwo(-1, fractionalBits, values[var4]);
@@ -174,7 +174,7 @@ abstract class TextLayout {
         }
     }
 
-    final static void a(int[] param0, int param1, int[] param2, int param3, int[] param4, byte param5, int param6, int[] param7, int[] param8, byte param9, int[] param10) {
+    final static void drawProjectedPolyline(int[] param0, int param1, int[] param2, int param3, int[] param4, byte param5, int param6, int[] param7, int[] param8, byte param9, int[] param10) {
         int var17 = 0;
         int stackIn_15_0 = 0;
         RuntimeException stackIn_45_0 = null;
@@ -214,7 +214,7 @@ abstract class TextLayout {
             ByteRecordSubmission.initializeProjectedVertexPool(param1, (byte) 49);
           }
           for (var11_int = 0; param1 > var11_int; var11_int++) {
-            ViewportController.field_c[var11_int].a(param8[var11_int], param10[var11_int], param2[var11_int], param0[var11_int], (byte) 120, param4);
+            ViewportController.field_c[var11_int].setAndProject(param8[var11_int], param10[var11_int], param2[var11_int], param0[var11_int], (byte) 120, param4);
           }
           var11_intLifetime1 = 0;
           var12 = 0;
@@ -226,13 +226,13 @@ abstract class TextLayout {
           var19 = ViewportController.field_c[1];
           var15Lifetime2 = var19;
           var15Lifetime3 = var19;
-          var18.a((byte) 60, var19);
+          var18.prepareClippedStrokeSegment((byte) 60, var19);
           if (param9 == 0 &&
             param5 == 0) {
             var20 = ViewportController.field_c[-1 + param1];
             var13 = var20;
-            var20.a((byte) 60, var18);
-            var18.a(var20, -16875);
+            var20.prepareClippedStrokeSegment((byte) 60, var18);
+            var18.computeStrokeJoinDirection(var20, -16875);
           }
           if (param9 == 0 &&
             param5 == 0) {
@@ -248,16 +248,16 @@ abstract class TextLayout {
               var15Lifetime4 = ViewportController.field_c[var17 % param1];
             }
             if (param1 > 1 + var17) {
-              var15Lifetime4.a((byte) 60, ViewportController.field_c[1 + var17]);
-              var15Lifetime4.a(var14, -16875);
+              var15Lifetime4.prepareClippedStrokeSegment((byte) 60, ViewportController.field_c[1 + var17]);
+              var15Lifetime4.computeStrokeJoinDirection(var14, -16875);
             } else {
               if (0 == param9 &&
                 param5 == 0) {
-                var15Lifetime4.a((byte) 60, ViewportController.field_c[0]);
-                var15Lifetime4.a(var14, param3 ^ -16876);
+                var15Lifetime4.prepareClippedStrokeSegment((byte) 60, ViewportController.field_c[0]);
+                var15Lifetime4.computeStrokeJoinDirection(var14, param3 ^ -16876);
               }
             }
-            if (!var14.b(var15Lifetime4, 24)) {
+            if (!var14.isSegmentOutsideView(var15Lifetime4, 24)) {
               if ((var14.field_r & 240) == 0) {
                 if (var15Lifetime4.field_i == 0 &&
                   0 == var15Lifetime4.field_k) {

@@ -51,7 +51,7 @@ final class BirthDateValidator extends DebouncedValidationProvider implements Te
           var6 = HighscoresScreen.currentYear(36);
           if (var4 >= 1890 &&
             var6 - 3 >= var4) {
-            if (QuickChatMenu.a((byte) 123, var4, var3, var2_int)) {
+            if (QuickChatMenu.isValidCalendarDate((byte) 123, var4, var3, var2_int)) {
               return null;
             }
           } else {
@@ -104,7 +104,7 @@ final class BirthDateValidator extends DebouncedValidationProvider implements Te
             stackIn_8_0 = AchievementProtocolSupport.field_d;
             return stackIn_8_0;
           }
-          if (!QuickChatMenu.a((byte) 122, var4, var3, var2_int)) {
+          if (!QuickChatMenu.isValidCalendarDate((byte) 122, var4, var3, var2_int)) {
             stackIn_11_0 = AchievementProtocolSupport.field_d;
             return stackIn_11_0;
           }

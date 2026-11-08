@@ -177,7 +177,7 @@ final class PlayerContextMenu {
         var5 = Pool.field_O;
         if (param2 != 8) {
           if (param2 == 18) {
-            AccountStateQuery.a(this.field_l, (byte) -104, this.field_m);
+            AccountStateQuery.setPrivateQuickChatRecipient(this.field_l, (byte) -104, this.field_m);
           } else {
             if (param2 != 11) {
               if (12 != param2) {
@@ -186,7 +186,7 @@ final class PlayerContextMenu {
                     WidgetStyleLayer.setChatComposerOpen(true);
                   } else {
                     if (param2 == 20) {
-                      EmailValidator.c((byte) 41);
+                      EmailValidator.restoreLobbyQuickChat((byte) 41);
                     } else {
                       if (param2 != 19) {
                         return false;

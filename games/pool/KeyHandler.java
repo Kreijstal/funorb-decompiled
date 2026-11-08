@@ -85,9 +85,9 @@ final class KeyHandler implements java.awt.event.KeyListener, java.awt.event.Foc
               CanvasInputSupport.field_c = false;
               var3_int = 1;
             }
-            ModelTableScene.a(var3_int != 0, 30, AimTarget.getLoadingStatusMessage((byte) 84), LocalGameSetupScreen.field_H, ResizableDialog.i(19535));
+            ModelTableScene.a(var3_int != 0, 30, AimTarget.getLoadingStatusMessage((byte) 84), LocalGameSetupScreen.field_H, ResizableDialog.commonInterfaceLoadProgress(19535));
           } else {
-            if (MeshRenderSupport.a(108)) {
+            if (MeshRenderSupport.isIntroComplete(108)) {
               if (PlasmaTableScene.field_ab == 0) {
                 ResourceArchive.drawAccountOverlay(param1, (byte) 109, false);
                 ButtonWidget.drawRasterToCanvas(0, 0, (byte) -65, param2);

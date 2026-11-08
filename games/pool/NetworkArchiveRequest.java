@@ -6,8 +6,8 @@ final class NetworkArchiveRequest extends ArchiveRequest {
     PacketBuffer responseBuffer;
     int blockPosition;
 
-    final static boolean h(int param0) {
-        if (param0 != 0) {
+    final static boolean isUsernameAvailabilityPending(int obfuscationGuard) {
+        if (obfuscationGuard != 0) {
           return true;
         }
         return TimeTrialSelectScreen.field_I == IntegerRecordProtocolSupport.field_e ? true : false;

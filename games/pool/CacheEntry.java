@@ -81,7 +81,7 @@ abstract class CacheEntry extends DualLinkNode {
         DisplayModeSupport.field_c[15].setItems(UsernameAvailabilityValidator.field_t, true);
         DisplayModeSupport.field_c[17].setItems(LoginMethod.field_k, true);
         int var1 = 125 % ((-17 - obfuscationGuard) / 34);
-        if (!LobbyPlayerLookupSupport.a(true)) {
+        if (!LobbyPlayerLookupSupport.isGuestOrFreeAccount(true)) {
           DisplayModeSupport.field_c[3].setItems(OpacityWidget.field_O, true);
           DisplayModeSupport.field_c[10].setItems(CanvasInputAttachmentSupport.field_h, true);
           DisplayModeSupport.field_c[11].setItems(AccountCreationDialog.field_Hb, true);
@@ -141,7 +141,7 @@ abstract class CacheEntry extends DualLinkNode {
           ChatMessageLine.field_o = true;
           ClientException.field_h = noticeKind;
           if (ClientException.field_h == 0) {
-            var3_int = DualLinkNode.a(DraggableWidget.field_T, LoginRequestSupport.field_c, StatefulTextPainter.fsNonmember, TransformRotationSupport.field_f, 0);
+            var3_int = DualLinkNode.wrapTextToBalancedLines(DraggableWidget.field_T, LoginRequestSupport.field_c, StatefulTextPainter.fsNonmember, TransformRotationSupport.field_f, 0);
             var4 = 3 + var3_int;
             IterableNodeHashTable.field_c = new int[var4];
             TransformRotationSupport.field_j = new String[var4];
@@ -160,7 +160,7 @@ abstract class CacheEntry extends DualLinkNode {
             IterableNodeHashTable.field_c[var4 - 1] = 1;
             ByteStorage.field_c[1] = 5;
           } else if (ClientException.field_h == 1) {
-            var3_int = DualLinkNode.a(DraggableWidget.field_T, LoginRequestSupport.field_c, StatefulTextPainter.fsNonmember, TransformRotationSupport.field_f, 0);
+            var3_int = DualLinkNode.wrapTextToBalancedLines(DraggableWidget.field_T, LoginRequestSupport.field_c, StatefulTextPainter.fsNonmember, TransformRotationSupport.field_f, 0);
             var4 = 2 + var3_int;
             TransformRotationSupport.field_j = new String[var4];
             IterableNodeHashTable.field_c = new int[var4];
@@ -178,9 +178,9 @@ abstract class CacheEntry extends DualLinkNode {
           } else if (ClientException.field_h != 2) {
             if (ClientException.field_h == 3) {
               if (StatefulTextPainter.field_s.field_k) {
-                var3_int = DualLinkNode.a(DraggableWidget.field_T, LoginRequestSupport.field_c, LoginRequestSupport.fsUnavailable, TransformRotationSupport.field_f, obfuscationGuard ^ 4);
+                var3_int = DualLinkNode.wrapTextToBalancedLines(DraggableWidget.field_T, LoginRequestSupport.field_c, LoginRequestSupport.fsUnavailable, TransformRotationSupport.field_f, obfuscationGuard ^ 4);
               } else {
-                var3_int = DualLinkNode.a(DraggableWidget.field_T, LoginRequestSupport.field_c, ValidationIconWidget.fsUnavailableTrySignedApplet, TransformRotationSupport.field_f, 0);
+                var3_int = DualLinkNode.wrapTextToBalancedLines(DraggableWidget.field_T, LoginRequestSupport.field_c, ValidationIconWidget.fsUnavailableTrySignedApplet, TransformRotationSupport.field_f, 0);
               }
               var4 = 2 + var3_int;
               IterableNodeHashTable.field_c = new int[var4];
@@ -197,7 +197,7 @@ abstract class CacheEntry extends DualLinkNode {
               IterableNodeHashTable.field_c[-1 + var4] = 0;
               ByteStorage.field_c[0] = 5;
             } else if (4 == ClientException.field_h) {
-              var3_int = DualLinkNode.a(DraggableWidget.field_T, LoginRequestSupport.field_c, QuickChatPhraseRegistry.fsFocus, TransformRotationSupport.field_f, 0);
+              var3_int = DualLinkNode.wrapTextToBalancedLines(DraggableWidget.field_T, LoginRequestSupport.field_c, QuickChatPhraseRegistry.fsFocus, TransformRotationSupport.field_f, 0);
               var4 = 2 + var3_int;
               IterableNodeHashTable.field_c = new int[var4];
               TransformRotationSupport.field_j = new String[var4];
@@ -216,7 +216,7 @@ abstract class CacheEntry extends DualLinkNode {
               if (ClientException.field_h != 5) {
                 throw new IllegalArgumentException();
               }
-              var3_int = DualLinkNode.a(DraggableWidget.field_T, LoginRequestSupport.field_c, DebugTuningSupport.fsTimeout, TransformRotationSupport.field_f, obfuscationGuard ^ 4);
+              var3_int = DualLinkNode.wrapTextToBalancedLines(DraggableWidget.field_T, LoginRequestSupport.field_c, DebugTuningSupport.fsTimeout, TransformRotationSupport.field_f, obfuscationGuard ^ 4);
               var4 = 3 + var3_int;
               IterableNodeHashTable.field_c = new int[var4];
               TransformRotationSupport.field_j = new String[var4];
@@ -236,7 +236,7 @@ abstract class CacheEntry extends DualLinkNode {
               ByteStorage.field_c[1] = 5;
             }
           } else {
-            var3_int = DualLinkNode.a(DraggableWidget.field_T, LoginRequestSupport.field_c, AccountWelcomePanel.substituteTemplateArguments(new String[]{"<br><%0><br>"}, obfuscationGuard - 5, MonotonicClock.fsAcceptCountdownSing), TransformRotationSupport.field_f, 0);
+            var3_int = DualLinkNode.wrapTextToBalancedLines(DraggableWidget.field_T, LoginRequestSupport.field_c, AccountWelcomePanel.substituteTemplateArguments(new String[]{"<br><%0><br>"}, obfuscationGuard - 5, MonotonicClock.fsAcceptCountdownSing), TransformRotationSupport.field_f, 0);
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(LoginRequestSupport.field_c[var5])) {
@@ -253,7 +253,7 @@ abstract class CacheEntry extends DualLinkNode {
             MusicCrossfadeStream.field_H = new String[-1 + var3_int - var4];
             ArrayOperations.copy(LoginRequestSupport.field_c, 1 + var4, MusicCrossfadeStream.field_H, 0, -var4 + var3_int - 1);
             var4 = -1;
-            var3_int = DualLinkNode.a(DraggableWidget.field_T, LoginRequestSupport.field_c, AccountWelcomePanel.substituteTemplateArguments(new String[]{"<br><%0><br>"}, -1, SoundCache.fsAcceptCountdownPl), TransformRotationSupport.field_f, 0);
+            var3_int = DualLinkNode.wrapTextToBalancedLines(DraggableWidget.field_T, LoginRequestSupport.field_c, AccountWelcomePanel.substituteTemplateArguments(new String[]{"<br><%0><br>"}, -1, SoundCache.fsAcceptCountdownPl), TransformRotationSupport.field_f, 0);
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(LoginRequestSupport.field_c[var5])) {
                 continue;

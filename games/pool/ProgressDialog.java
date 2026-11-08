@@ -119,8 +119,8 @@ final class ProgressDialog extends ResizableDialog {
         }
     }
 
-    final static void i(byte param0) {
-        if (param0 == 72) {
+    final static void resetArchiveConnectionFailures(byte obfuscationGuard) {
+        if (obfuscationGuard == 72) {
           GameRules.field_c.field_e = 0;
           GameRules.field_c.field_a = 0;
           return;

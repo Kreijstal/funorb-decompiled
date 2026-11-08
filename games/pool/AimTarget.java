@@ -191,12 +191,12 @@ final class AimTarget {
           }
           if (this.targetIsBall) {
             var6 = model.balls[this.targetIndex];
-            stackIn_4_0 = 8191 & ResizableDialog.c(var6.positionX - sourceBall.positionX >> 10, var6.positionY - sourceBall.positionY >> 10, 4096);
+            stackIn_4_0 = 8191 & ResizableDialog.signedAtan2Angle(var6.positionX - sourceBall.positionX >> 10, var6.positionY - sourceBall.positionY >> 10, 4096);
             return stackIn_4_0;
           }
           var5 = model.field_e[this.targetIndex];
           var4 = var5;
-          stackIn_6_0 = 8191 & ResizableDialog.c(var5[0] - sourceBall.positionX >> 10, -sourceBall.positionY + var5[1] >> 10, 4096);
+          stackIn_6_0 = 8191 & ResizableDialog.signedAtan2Angle(var5[0] - sourceBall.positionX >> 10, -sourceBall.positionY + var5[1] >> 10, 4096);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

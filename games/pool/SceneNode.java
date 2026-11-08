@@ -14,7 +14,7 @@ final class SceneNode {
     private ModelMesh[] field_e;
     int[] field_d;
 
-    final static void a(String[][] param0, int param1, ResourceArchive param2, Sprite[][] param3, String[][] param4, int param5, int param6, Sprite[][] param7, String[] param8, byte[] param9, int param10, int[] param11, ResourceArchive param12, String[] param13, byte[] param14, int[] param15, ResourceArchive param16, boolean param17, IndexedSprite[] param18) {
+    final static void initializeLobbyInterface(String[][] param0, int param1, ResourceArchive param2, Sprite[][] param3, String[][] param4, int param5, int param6, Sprite[][] param7, String[] param8, byte[] param9, int param10, int[] param11, ResourceArchive param12, String[] param13, byte[] param14, int[] param15, ResourceArchive param16, boolean param17, IndexedSprite[] param18) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -53,7 +53,7 @@ final class SceneNode {
           HighscoresScreen.initializeLobbyInterface((String[]) null, 1, param1, param17, param16, param10, param2, param14, param11, param12, param0, param8, param9, param18, param13, param3, param4, (byte) -75, param7, param15);
           if (param5 != -25) {
             var20 = (IndexedSprite[]) null;
-            SceneNode.a((String[][]) null, -73, (ResourceArchive) null, (Sprite[][]) null, (String[][]) null, 7, 14, (Sprite[][]) null, (String[]) null, (byte[]) null, 88, (int[]) null, (ResourceArchive) null, (String[]) null, (byte[]) null, (int[]) null, (ResourceArchive) null, false, (IndexedSprite[]) null);
+            SceneNode.initializeLobbyInterface((String[][]) null, -73, (ResourceArchive) null, (Sprite[][]) null, (String[][]) null, 7, 14, (Sprite[][]) null, (String[]) null, (byte[]) null, 88, (int[]) null, (ResourceArchive) null, (String[]) null, (byte[]) null, (int[]) null, (ResourceArchive) null, false, (IndexedSprite[]) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

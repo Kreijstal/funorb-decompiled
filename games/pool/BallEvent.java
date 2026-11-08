@@ -209,7 +209,7 @@ final class BallEvent {
         return var2;
     }
 
-    final boolean a(int param0, CushionSegment[] param1) {
+    final boolean isPointOrEndpointCushionCollision(int obfuscationGuard, CushionSegment[] segments) {
         CushionSegment var3 = null;
         boolean stackIn_8_0 = false;
         RuntimeException stackIn_16_0 = null;
@@ -218,7 +218,7 @@ final class BallEvent {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          if (param0 != -5877) {
+          if (obfuscationGuard != -5877) {
             this.countEvents((byte) -36);
           }
           if (3 != this.eventKind) {
@@ -227,15 +227,15 @@ final class BallEvent {
             }
             return false;
           }
-          var3 = param1[this.targetIndex];
+          var3 = segments[this.targetIndex];
           stackIn_8_0 = (1 == var3.startKind) || (var3.endKind == 1);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_16_0 = var3_ref;
-          stackIn_16_1 = new StringBuilder().append("or.L(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_16_1 = new StringBuilder().append("or.L(").append(obfuscationGuard).append(',');
+          if (segments == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
@@ -249,7 +249,7 @@ final class BallEvent {
         if (null != ServerListLauncher.field_d) {
           var2 = ServerListLauncher.field_d;
           String var1 = var2;
-          ChatMessage.a((byte) 75, AccountWelcomePanel.substituteTemplateArguments(new String[]{var2}, -1, LoginEncryptionSupport.youHaveBeenRemovedFromXsGame));
+          ChatMessage.showCenteredNotice((byte) 75, AccountWelcomePanel.substituteTemplateArguments(new String[]{var2}, -1, LoginEncryptionSupport.youHaveBeenRemovedFromXsGame));
           ServerListLauncher.field_d = null;
         }
         if (obfuscationGuard == 4) {

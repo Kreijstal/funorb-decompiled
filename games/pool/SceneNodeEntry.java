@@ -8,7 +8,7 @@ final class SceneNodeEntry extends IntrusiveNode {
     static UiComponent field_m;
     static int field_l;
 
-    final static void a(byte[] param0, byte[] param1, String[][] param2, ResourceArchive param3, Sprite[][] param4, int param5, IndexedSprite[] param6, int[] param7, Sprite[][] param8, int param9, String[] param10, ResourceArchive param11, boolean param12, int[] param13, ResourceArchive param14, String[][] param15, int param16) {
+    final static void initializeLobbyInterface(byte[] param0, byte[] param1, String[][] param2, ResourceArchive param3, Sprite[][] param4, int param5, IndexedSprite[] param6, int[] param7, Sprite[][] param8, int param9, String[] param10, ResourceArchive param11, boolean param12, int[] param13, ResourceArchive param14, String[][] param15, int param16) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -42,7 +42,7 @@ final class SceneNodeEntry extends IntrusiveNode {
           if (param16 != -6103) {
             field_m = (UiComponent) null;
           }
-          SceneNode.a(param2, param9, param11, param8, param15, param16 ^ 6094, 1, param4, param10, param0, param5, param7, param14, (String[]) null, param1, param13, param3, param12, param6);
+          SceneNode.initializeLobbyInterface(param2, param9, param11, param8, param15, param16 ^ 6094, 1, param4, param10, param0, param5, param7, param14, (String[]) null, param1, param13, param3, param12, param6);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -130,9 +130,9 @@ final class SceneNodeEntry extends IntrusiveNode {
         }
     }
 
-    final static int a(int param0) {
-        if (param0 != -27011) {
-          SceneNodeEntry.a((byte[]) null, (byte[]) null, (String[][]) null, (ResourceArchive) null, (Sprite[][]) null, 100, (IndexedSprite[]) null, (int[]) null, (Sprite[][]) null, 104, (String[]) null, (ResourceArchive) null, false, (int[]) null, (ResourceArchive) null, (String[][]) null, 112);
+    final static int getHoveredTutorialControl(int obfuscationGuard) {
+        if (obfuscationGuard != -27011) {
+          SceneNodeEntry.initializeLobbyInterface((byte[]) null, (byte[]) null, (String[][]) null, (ResourceArchive) null, (Sprite[][]) null, 100, (IndexedSprite[]) null, (int[]) null, (Sprite[][]) null, 104, (String[]) null, (ResourceArchive) null, false, (int[]) null, (ResourceArchive) null, (String[][]) null, 112);
           if (ProjectedLineSupport.isPointerInside(1, VertexProjectionSupport.field_b)) {
             return 0;
           }
@@ -162,7 +162,7 @@ final class SceneNodeEntry extends IntrusiveNode {
         return 2;
     }
 
-    final static void a(IntLookupQuery param0, int param1, boolean param2) {
+    final static void sendIntLookupQuery(IntLookupQuery query, int opcode, boolean obfuscationGuard) {
         CipherPacketBuffer var3 = null;
         RuntimeException var3_ref = null;
         RuntimeException stackIn_5_0 = null;
@@ -171,11 +171,11 @@ final class SceneNodeEntry extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           var3 = JaggrabDownloader.field_j;
-          var3.writeCipheredOpcode(false, param1);
+          var3.writeCipheredOpcode(false, opcode);
           var3.writeByte(2, false);
           var3.writeByte(0, false);
-          var3.writeByte(param0.field_o, false);
-          if (param2) {
+          var3.writeByte(query.field_o, false);
+          if (obfuscationGuard) {
             return;
           }
           field_p = 32;
@@ -185,12 +185,12 @@ final class SceneNodeEntry extends IntrusiveNode {
           var3_ref = decompiledCaughtException;
           stackIn_5_0 = var3_ref;
           stackIn_5_1 = new StringBuilder().append("pm.C(");
-          if (param0 == null) {
+          if (query == null) {
             stackIn_6_2 = "null";
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(opcode).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

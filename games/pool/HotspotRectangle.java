@@ -15,7 +15,7 @@ final class HotspotRectangle extends IntrusiveNode {
     static int field_r;
     static String playersXOfY;
 
-    final static void a(int[][] param0, CushionSegment[] param1, Ball[] param2, int param3) {
+    final static void advanceBallPhysicsFrame(int[][] points, CushionSegment[] segments, Ball[] balls, int obfuscationGuard) {
         int dupTemp$1 = 0;
         Ball[] var4 = null;
         int var4_int = 0;
@@ -38,19 +38,19 @@ final class HotspotRectangle extends IntrusiveNode {
           NodeHashTableIterator.field_s = -1;
           Base37Support.field_b = 0;
           BallEvent.field_l = 0;
-          var6 = param2;
+          var6 = balls;
           var4 = var6;
           for (var5 = 0; var6.length > var5; var5++) {
             var6[var5].lastAdvanceTime = 0;
           }
           var4_int = 0;
           do {
-            dupTemp$1 = FadingDialog.detectAndApplyBallCollisions(param1, var4_int, param2, param0, param3 + 0);
+            dupTemp$1 = FadingDialog.detectAndApplyBallCollisions(segments, var4_int, balls, points, obfuscationGuard + 0);
             var4_int = dupTemp$1;
           } while (dupTemp$1 != -1);
-          var7 = param2;
+          var7 = balls;
           var4Lifetime1 = var7;
-          var8 = param3;
+          var8 = obfuscationGuard;
           var5Lifetime1 = var8;
           while (var8 < var7.length) {
             if (var7[var8].inPlay) {
@@ -64,24 +64,24 @@ final class HotspotRectangle extends IntrusiveNode {
           var4_ref = decompiledCaughtException;
           stackIn_14_0 = var4_ref;
           stackIn_14_1 = new StringBuilder().append("qa.F(");
-          if (param0 == null) {
+          if (points == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";
           }
           stackIn_17_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',');
-          if (param1 == null) {
+          if (segments == null) {
             stackIn_18_2 = "null";
           } else {
             stackIn_18_2 = "{...}";
           }
           stackIn_20_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',');
-          if (param2 == null) {
+          if (balls == null) {
             stackIn_21_2 = "null";
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -96,18 +96,18 @@ final class HotspotRectangle extends IntrusiveNode {
         }
     }
 
-    final static void a(boolean param0, String param1, int param2, String param3) {
+    final static void beginLoginWithCredentials(boolean active, String username, int obfuscationGuard, String password) {
         try {
-          SpriteState.field_x = param1;
-          VertexTransformSupport.field_a = param3;
-          PacketAvailabilitySupport.a(param0, DebouncedValidationProvider.loggingIn, -126);
-          int var4_int = -110 % ((param2 + 30) / 57);
+          SpriteState.field_x = username;
+          VertexTransformSupport.field_a = password;
+          PacketAvailabilitySupport.a(active, DebouncedValidationProvider.loggingIn, -126);
+          int var4_int = -110 % ((obfuscationGuard + 30) / 57);
         } catch (RuntimeException runtimeException) {
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "qa.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "qa.E(" + active + ',' + (username != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + (password != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static boolean a(int param0, String param1) {
+    final static boolean containsNonAlphanumeric(int obfuscationGuard, String text) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -118,11 +118,11 @@ final class HotspotRectangle extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         var4 = Pool.field_O;
         try {
-          if (param0 != 1) {
+          if (obfuscationGuard != 1) {
             return false;
           }
-          for (var2_int = 0; var2_int < param1.length(); var2_int++) {
-            var3 = param1.charAt(var2_int);
+          for (var2_int = 0; var2_int < text.length(); var2_int++) {
+            var3 = text.charAt(var2_int);
             if (!ContextMenu.isAsciiLetter((char) var3, 22987) &&
               !LobbyGame.isAsciiDigit((char) var3, (byte) 120)) {
               return true;
@@ -133,8 +133,8 @@ final class HotspotRectangle extends IntrusiveNode {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_15_0 = var2;
-          stackIn_15_1 = new StringBuilder().append("qa.B(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_15_1 = new StringBuilder().append("qa.B(").append(obfuscationGuard).append(',');
+          if (text == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
@@ -143,13 +143,13 @@ final class HotspotRectangle extends IntrusiveNode {
         }
     }
 
-    final static void a(byte param0, boolean param1) {
-        ClientException.drawLobbyPanels(param1, (byte) 80);
-        if (param0 != 55) {
+    final static void drawLobbyAndGameOverlays(byte obfuscationGuard, boolean active) {
+        ClientException.drawLobbyPanels(active, (byte) 80);
+        if (obfuscationGuard != 55) {
           String var3 = (String) null;
           HotspotRectangle.reverseString((String) null, 95);
         }
-        Quaternion.drawGameOverlays(param1, param0 - 19268);
+        Quaternion.drawGameOverlays(active, obfuscationGuard - 19268);
     }
 
     final static String reverseString(String param0, int param1) {
@@ -184,7 +184,7 @@ final class HotspotRectangle extends IntrusiveNode {
         }
     }
 
-    final static void a(byte param0, int param1, BitmapFont param2, String param3, int param4, int param5) {
+    final static void drawWrappedPointerTooltip(byte obfuscationGuard, int wrapWidth, BitmapFont font, String text, int foreground, int background) {
         int var11 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
@@ -204,57 +204,57 @@ final class HotspotRectangle extends IntrusiveNode {
         int var9Lifetime1;
         var13 = Pool.field_O;
         try {
-          var6_int = param2.stringWidth(param3);
-          var7 = param2.maxDescent + param2.maxAscent;
+          var6_int = font.stringWidth(text);
+          var7 = font.maxDescent + font.maxAscent;
           var8 = 1;
-          if (var6_int > param1) {
-            var9 = var6_int / param1;
-            var10 = 2 * ((-1 + (var6_int % param1 + var9)) / var9) + param1;
+          if (var6_int > wrapWidth) {
+            var9 = var6_int / wrapWidth;
+            var10 = 2 * ((-1 + (var6_int % wrapWidth + var9)) / var9) + wrapWidth;
             if (null == StateIconLabel.field_Mb) {
               StateIconLabel.field_Mb = new String[16];
             }
-            var8Lifetime1 = param2.wrapText(param3, new int[]{var10}, StateIconLabel.field_Mb);
+            var8Lifetime1 = font.wrapText(text, new int[]{var10}, StateIconLabel.field_Mb);
             var7 = var7 * var8Lifetime1;
             var6_int = 0;
             for (var11 = 0; var11 < var8Lifetime1; var11++) {
-              var12 = param2.stringWidth(StateIconLabel.field_Mb[var11]);
+              var12 = font.stringWidth(StateIconLabel.field_Mb[var11]);
               if (var12 > var6_int) {
                 var6_int = var12;
               }
             }
           }
-          if (param0 != 71) {
+          if (obfuscationGuard != 71) {
             return;
           }
           var9Lifetime1 = TimeTrialSelectScreen.field_H;
           if (var9Lifetime1 + var6_int + 6 > SoftwareRasterizer.width) {
             var9Lifetime1 = -6 - var6_int + SoftwareRasterizer.width;
           }
-          var10 = -param2.field_L + (SceneNodeEntry.field_p + 32);
+          var10 = -font.field_L + (SceneNodeEntry.field_p + 32);
           if (SoftwareRasterizer.height < var7 + (var10 + 6)) {
             var10 = SceneNodeEntry.field_p + (-var7 - 6);
           }
-          SoftwareRasterizer.drawRectangle(var9Lifetime1, var10, 6 + var6_int, 6 + var7, param4);
-          SoftwareRasterizer.fillRectangle(1 + var9Lifetime1, 1 + var10, var6_int + 4, 4 + var7, param5);
-          param2.drawParagraph(param3, 3 + var9Lifetime1, var10 + 3, var6_int, var7, param4, -1, 0, 0, param2.maxDescent + param2.maxAscent);
+          SoftwareRasterizer.drawRectangle(var9Lifetime1, var10, 6 + var6_int, 6 + var7, foreground);
+          SoftwareRasterizer.fillRectangle(1 + var9Lifetime1, 1 + var10, var6_int + 4, 4 + var7, background);
+          font.drawParagraph(text, 3 + var9Lifetime1, var10 + 3, var6_int, var7, foreground, -1, 0, 0, font.maxDescent + font.maxAscent);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
           stackIn_23_0 = var6;
-          stackIn_23_1 = new StringBuilder().append("qa.A(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_23_1 = new StringBuilder().append("qa.A(").append(obfuscationGuard).append(',').append(wrapWidth).append(',');
+          if (font == null) {
             stackIn_24_2 = "null";
           } else {
             stackIn_24_2 = "{...}";
           }
           stackIn_26_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',');
-          if (param3 == null) {
+          if (text == null) {
             stackIn_27_2 = "null";
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(foreground).append(',').append(background).append(')').toString());
         }
     }
 

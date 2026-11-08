@@ -53,7 +53,7 @@ final class CollisionContact {
         return ClientUiResourceState.field_c;
     }
 
-    final static boolean a(byte param0, boolean param1) {
+    final static boolean pollLoginSocket(byte obfuscationGuard, boolean reconnect) {
         try {
           long dupTemp$1 = 0L;
           IOException var2 = null;
@@ -79,7 +79,7 @@ final class CollisionContact {
               var5 = var4;
               JaggrabDownloader.field_j.position = 0;
               var5.position = 0;
-              stackIn_8_0 = (!param1) ? -1 : -2;
+              stackIn_8_0 = (!reconnect) ? -1 : -2;
               NodeHashTableIterator.field_e = stackIn_8_0;
               DialRenderer.field_g = stackIn_8_0;
               MenuSelection.field_l = stackIn_8_0;
@@ -90,14 +90,14 @@ final class CollisionContact {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = (IOException) (Object) decompiledCaughtException;
               RankingsScreen.field_J = MidiPcmStream.field_V;
-              if (param0 != 65) {
+              if (obfuscationGuard != 65) {
                 return false;
               }
               PacketBuffer.field_u = null;
               return true;
             }
           }
-          if (param0 != 65) {
+          if (obfuscationGuard != 65) {
             return false;
           }
           PacketBuffer.field_u = null;
@@ -129,7 +129,7 @@ final class CollisionContact {
           field_w = null;
           return;
         }
-        CollisionContact.a((byte) 89, true);
+        CollisionContact.pollLoginSocket((byte) 89, true);
         field_q = null;
         field_f = null;
         field_o = null;

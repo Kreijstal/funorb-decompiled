@@ -9,7 +9,7 @@ final class ClientInputResetSupport {
     static int field_b;
 
     final static void resetClientInput(byte param0) {
-        AccountStateQuery.d((byte) -128);
+        AccountStateQuery.leaveFullscreen((byte) -128);
         if (TimeTrialSelectScreen.field_K != null) {
           CanvasInputSupport.detachInputListeners(TimeTrialSelectScreen.field_K, 0);
         }
@@ -17,7 +17,7 @@ final class ClientInputResetSupport {
         int var1 = 8 / ((param0 + 12) / 55);
         DebugOverlayLayoutSupport.detachMouseHandler(0);
         TextWidgetPainter.closeNetworkAndCacheResources((byte) 70);
-        if (!TriangleMesh.b((byte) 84)) {
+        if (!TriangleMesh.hasActiveLoginResponse((byte) 84)) {
           ShotEvent.closeClientSocket(-111);
           return;
         }

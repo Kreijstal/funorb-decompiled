@@ -85,16 +85,16 @@ final class QuickChatMenu extends UiComponent {
         return this.menuWidth + (null != this.openSubmenu ? this.openSubmenu.getOpenChainWidth(-1) : 0);
     }
 
-    final static boolean a(byte param0, int param1, int param2, int param3) {
-        if (0 > param2) {
+    final static boolean isValidCalendarDate(byte obfuscationGuard, int year, int month, int day) {
+        if (0 > month) {
           return false;
         }
-        if (param2 > 11) {
+        if (month > 11) {
           return false;
         }
-        if (param3 >= 1 &&
-          TutorialController.daysInMonth(param2, param1, 1) >= param3) {
-          if (param0 <= 103) {
+        if (day >= 1 &&
+          TutorialController.daysInMonth(month, year, 1) >= day) {
+          if (obfuscationGuard <= 103) {
             playerYouX2AreOfferingDraw = (String) null;
           }
           return true;

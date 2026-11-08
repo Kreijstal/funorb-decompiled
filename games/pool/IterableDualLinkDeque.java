@@ -13,7 +13,7 @@ final class IterableDualLinkDeque implements Iterable {
     static boolean field_c;
     static PcmSample field_f;
 
-    final static Sprite[] a(int param0, int param1, boolean param2, int param3, int param4, boolean param5) {
+    final static Sprite[] createGradientPanelSprites(int topColor, int bottomColor, boolean roundRight, int height, int obfuscationGuard, boolean roundLeft) {
         Sprite var20 = null;
         Sprite var21 = null;
         Sprite var22 = null;
@@ -28,13 +28,13 @@ final class IterableDualLinkDeque implements Iterable {
         int[] var6 = var12;
         int var7 = SoftwareRasterizer.width;
         int var8Lifetime1;
-        if (param4 < -84) {
+        if (obfuscationGuard < -84) {
           var8 = SoftwareRasterizer.height;
-          var20 = new Sprite(16, param3);
+          var20 = new Sprite(16, height);
           var20.bindAsRenderTarget();
-          SoftwareRasterizer.fillVerticalGradient(0, 0, 16, param3, param0, param1);
+          SoftwareRasterizer.fillVerticalGradient(0, 0, 16, height, topColor, bottomColor);
           var10 = null;
-          if (param5) {
+          if (roundLeft) {
             var21 = var20.copy();
             var10 = var21;
             var21.bindAsRenderTarget();
@@ -45,7 +45,7 @@ final class IterableDualLinkDeque implements Iterable {
             SoftwareRasterizer.drawHorizontalLine(0, 4, 1, 0);
           }
           var11 = null;
-          if (param2) {
+          if (roundRight) {
             var22 = var20.copy();
             var11 = var22;
             var22.bindAsRenderTarget();
@@ -60,11 +60,11 @@ final class IterableDualLinkDeque implements Iterable {
         }
         field_e = 98;
         var8Lifetime1 = SoftwareRasterizer.height;
-        Sprite var17 = new Sprite(16, param3);
+        Sprite var17 = new Sprite(16, height);
         var17.bindAsRenderTarget();
-        SoftwareRasterizer.fillVerticalGradient(0, 0, 16, param3, param0, param1);
+        SoftwareRasterizer.fillVerticalGradient(0, 0, 16, height, topColor, bottomColor);
         var10 = null;
-        if (param5) {
+        if (roundLeft) {
           var18 = var17.copy();
           var10 = var18;
           var18.bindAsRenderTarget();
@@ -75,7 +75,7 @@ final class IterableDualLinkDeque implements Iterable {
           SoftwareRasterizer.drawHorizontalLine(0, 4, 1, 0);
         }
         var11 = null;
-        if (param2) {
+        if (roundRight) {
           var19 = var17.copy();
           var11 = var19;
           var19.bindAsRenderTarget();
@@ -89,13 +89,13 @@ final class IterableDualLinkDeque implements Iterable {
         return new Sprite[]{null, null, null, (Sprite) (var10), var17, (Sprite) (var11), null, null, null};
     }
 
-    final static void a(byte param0) {
+    final static void layoutSlidingLobbyPanels(byte obfuscationGuard) {
         int var2 = 0;
         int var3 = 0;
         int var1 = (-640 + DelayedServerPacket.field_s) / 2;
         int var2Lifetime1;
         int var3Lifetime1;
-        if (param0 < -71) {
+        if (obfuscationGuard < -71) {
           var2 = BufferedFile.field_h * BufferedFile.field_h;
           var3 = -(NodeHashTableIterator.field_a * NodeHashTableIterator.field_a) + var2;
           BufferedFile.field_a.setBounds(90, 2147483647, -(199 * var3 / var2) + var1, 199, -90 + (SoftwareRasterizer.height - 120) - 4);
@@ -109,15 +109,15 @@ final class IterableDualLinkDeque implements Iterable {
         IntegerRecordSubmission.field_n.setBounds(0, 2147483647, var1 + (202 + var3Lifetime1 * 438 / var2Lifetime1), 438, SoftwareRasterizer.height - 120 - 4);
     }
 
-    final static void a(int param0, String param1) {
-        if (param0 <= 68) {
+    final static void beginLoginWithRetainedText(int obfuscationGuard, String text) {
+        if (obfuscationGuard <= 68) {
           return;
         }
         try {
-          IntegerSyntaxSupport.setRetainedLoginText(-58, param1);
+          IntegerSyntaxSupport.setRetainedLoginText(-58, text);
           PacketAvailabilitySupport.a(false, DebouncedValidationProvider.loggingIn, -128);
         } catch (RuntimeException runtimeException) {
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "qi.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "qi.B(" + obfuscationGuard + ',' + (text != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -139,7 +139,7 @@ final class IterableDualLinkDeque implements Iterable {
         DualLinkNode var2 = null;
         DualLinkNode var2Lifetime1;
         if (param0 >= -87) {
-          IterableDualLinkDeque.a((byte) -89);
+          IterableDualLinkDeque.layoutSlidingLobbyPanels((byte) -89);
           var2 = this.sentinel.field_q;
           if (this.sentinel != var2) {
             var2.unlinkNode(false);
@@ -155,7 +155,7 @@ final class IterableDualLinkDeque implements Iterable {
         return null;
     }
 
-    final static boolean a(byte param0, CharSequence param1) {
+    final static boolean isValidAccountName(byte obfuscationGuard, CharSequence name) {
         RuntimeException var2 = null;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_7_0 = null;
@@ -163,8 +163,8 @@ final class IterableDualLinkDeque implements Iterable {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 == -64) {
-            stackIn_4_0 = GrowableIntListFactory.a(false, param1, (byte) -37);
+          if (obfuscationGuard == -64) {
+            stackIn_4_0 = GrowableIntListFactory.isValidAccountName(false, name, (byte) -37);
             return stackIn_4_0;
           }
           return false;
@@ -172,8 +172,8 @@ final class IterableDualLinkDeque implements Iterable {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_7_0 = var2;
-          stackIn_7_1 = new StringBuilder().append("qi.G(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_7_1 = new StringBuilder().append("qi.G(").append(obfuscationGuard).append(',');
+          if (name == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";

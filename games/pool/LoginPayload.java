@@ -86,11 +86,11 @@ abstract class LoginPayload {
         }
         if (obfuscationGuard >= -81) {
           String var3 = (String) null;
-          LoginPayload.a(false, (String) null, -73);
+          LoginPayload.showLoginError(false, (String) null, -73);
         }
     }
 
-    final static void a(byte param0) {
+    final static void drawActiveNotification(byte obfuscationGuard) {
         int stackIn_16_0;
         int stackIn_16_1;
         int stackIn_16_2;
@@ -126,9 +126,9 @@ abstract class LoginPayload {
         int var2Lifetime3;
         int var2Lifetime4;
         try {
-          if (param0 != 121) {
+          if (obfuscationGuard != 121) {
             var4 = (String) null;
-            LoginPayload.a(true, (String) null, 27);
+            LoginPayload.showLoginError(true, (String) null, 27);
           }
           if (!MarkerSliderPainter.field_i.isEmpty(0) &&
             ByteRecordSubmission.field_m >= 0) {
@@ -219,7 +219,7 @@ abstract class LoginPayload {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "re.E(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "re.E(" + obfuscationGuard + ')');
         }
     }
 
@@ -227,7 +227,7 @@ abstract class LoginPayload {
 
     abstract void writePayload(byte param0, PacketBuffer param1);
 
-    final static void a(boolean param0, String param1, int param2) {
+    final static void showLoginError(boolean active, String message, int errorCode) {
         int var3_int = 0;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
@@ -235,38 +235,38 @@ abstract class LoginPayload {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          if (!param0) {
+          if (!active) {
             return;
           }
           DualLinkDeque.field_c = false;
           NetworkGameClient.field_z = false;
           if (null != MeshBoundsSupport.field_d &&
             MeshBoundsSupport.field_d.dialogOpen) {
-            if (8 == param2) {
+            if (8 == errorCode) {
               if (ProjectedVertex.field_e) {
-                param1 = ThreeSliceButtonPainter.invalidpass;
+                message = ThreeSliceButtonPainter.invalidpass;
               } else {
-                param1 = HighScoreRequest.invaliduserorpass;
+                message = HighScoreRequest.invaliduserorpass;
               }
-              param2 = 2;
+              errorCode = 2;
               TextLineLayout.field_j.prefillUsername(8, SpriteState.field_x);
             }
             var3_int = 1;
-            if (param2 == 10) {
+            if (errorCode == 10) {
               GradientPaletteSupport.showDisplayNameForm(-984040272);
               var3_int = 0;
             }
             if (var3_int != 0) {
               if (DualLinkDeque.field_c) {
-                param1 = AccountWelcomePanel.substituteTemplateArguments(new String[]{param1}, -1, DialogLayer.connectionlostWithreason);
+                message = AccountWelcomePanel.substituteTemplateArguments(new String[]{message}, -1, DialogLayer.connectionlostWithreason);
               }
               if (PolarBallSkin.field_q) {
-                param1 = BufferedFile.pleasetryagain;
+                message = BufferedFile.pleasetryagain;
               }
-              MeshBoundsSupport.field_d.installErrorContent(param1, param2, -257);
+              MeshBoundsSupport.field_d.installErrorContent(message, errorCode, -257);
             }
-            if (param2 != 256 &&
-              param2 != 10) {
+            if (errorCode != 256 &&
+              errorCode != 10) {
               if (ProjectedVertex.field_e) {
                 return;
               }
@@ -278,13 +278,13 @@ abstract class LoginPayload {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_28_0 = var3;
-          stackIn_28_1 = new StringBuilder().append("re.F(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_28_1 = new StringBuilder().append("re.F(").append(active).append(',');
+          if (message == null) {
             stackIn_29_2 = "null";
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(errorCode).append(')').toString());
         }
     }
 

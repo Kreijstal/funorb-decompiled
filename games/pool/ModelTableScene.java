@@ -70,15 +70,15 @@ abstract class ModelTableScene extends TableScene {
         var3 = Pool.field_O;
         if (this.field_h) {
           for (var2 = 0; AccountProtocolStage.field_g.length > var2; var2++) {
-            TimeTrialSelectScreen.field_L[var2] = ChatInputSupport.field_l[AccountProtocolStage.field_g[var2]].b(-13025, GzipDecoder.field_d);
-            OpacityWidget.field_Q[var2] = ChatInputSupport.field_l[var2].a(param0, GzipDecoder.field_d);
+            TimeTrialSelectScreen.field_L[var2] = ChatInputSupport.field_l[AccountProtocolStage.field_g[var2]].distanceSquaredTo(-13025, GzipDecoder.field_d);
+            OpacityWidget.field_Q[var2] = ChatInputSupport.field_l[var2].passesBoundaryFacingTest(param0, GzipDecoder.field_d);
           }
         } else {
           var5 = 0;
           var2 = var5;
           while (AccountProtocolStage.field_g.length > var5) {
             TimeTrialSelectScreen.field_L[var5] = ChatInputSupport.field_l[AccountProtocolStage.field_g[var5]].viewDepth(GzipDecoder.field_d, -31);
-            OpacityWidget.field_Q[var5] = ChatInputSupport.field_l[var5].a(true, GzipDecoder.field_d);
+            OpacityWidget.field_Q[var5] = ChatInputSupport.field_l[var5].passesBoundaryFacingTest(true, GzipDecoder.field_d);
             var5++;
           }
         }
@@ -88,7 +88,7 @@ abstract class ModelTableScene extends TableScene {
         }
     }
 
-    final void d(int param0) {
+    final void onSceneryTransitionComplete(int obfuscationGuard) {
         int var4 = 0;
         int var2 = 0;
         int var3 = Pool.field_O;
@@ -103,11 +103,11 @@ abstract class ModelTableScene extends TableScene {
           var4 = 0;
           var2Lifetime1 = var4;
           while (var4 < ChatInputSupport.field_l.length) {
-            ChatInputSupport.field_l[var4].a(288, 576, param0 ^ -113);
+            ChatInputSupport.field_l[var4].setBoundaryFacingDirections(288, 576, obfuscationGuard ^ -113);
             var4++;
           }
         }
-        if (param0 != 16) {
+        if (obfuscationGuard != 16) {
           this.field_M = (int[][]) null;
         }
     }
@@ -313,7 +313,7 @@ abstract class ModelTableScene extends TableScene {
         try {
           super.buildTableGeometry(param0, param1 ^ 0);
           this.initializeScene(true);
-          this.d(16);
+          this.onSceneryTransitionComplete(16);
           if (param1 != 21894) {
             int[] var4 = (int[]) null;
             this.a((ModelInstance[]) null, 81, -71, false, (MeshBuilder) null, -4, (int[]) null, -24);

@@ -43,7 +43,7 @@ final class Under13NoticePanel extends WidgetContainer implements HotspotActivat
         }
     }
 
-    final static int a(boolean param0, int param1) {
+    final static int recordArchiveConnectionFailure(boolean obfuscationGuard, int errorCode) {
         int var2;
         int var3;
         var3 = Pool.field_O;
@@ -52,10 +52,10 @@ final class Under13NoticePanel extends WidgetContainer implements HotspotActivat
         AudioService.field_c = null;
         var2 = IntegerSyntaxSupport.field_a;
         IntegerSyntaxSupport.field_a = ReflectionReplySupport.field_h;
-        if (param1 == 51) {
+        if (errorCode == 51) {
           GameRules.field_c.field_a = 2;
         } else {
-          if (param1 != 50) {
+          if (errorCode != 50) {
             GameRules.field_c.field_a = 1;
           } else {
             GameRules.field_c.field_a = 5;
@@ -64,15 +64,15 @@ final class Under13NoticePanel extends WidgetContainer implements HotspotActivat
         ReflectionReplySupport.field_h = var2;
         GameRules.field_c.field_e = GameRules.field_c.field_e + 1;
         if (GameRules.field_c.field_e >= 2 &&
-          param1 == 51) {
+          errorCode == 51) {
           return 2;
         }
         if (GameRules.field_c.field_e >= 2 &&
-          param1 == 50) {
+          errorCode == 50) {
           return 5;
         }
-        if (param0) {
-          Under13NoticePanel.a(true, 78);
+        if (obfuscationGuard) {
+          Under13NoticePanel.recordArchiveConnectionFailure(true, 78);
         }
         if (GameRules.field_c.field_e >= 4) {
           return 1;
@@ -80,8 +80,8 @@ final class Under13NoticePanel extends WidgetContainer implements HotspotActivat
         return -1;
     }
 
-    private final String h(byte param0) {
-        if (param0 != 44) {
+    private final String hyperlinkStyleTag(byte obfuscationGuard) {
+        if (obfuscationGuard != 44) {
           HotspotTextWidget var3 = (HotspotTextWidget) null;
           this.onHotspotActivated(-53, (HotspotTextWidget) null, 58, -28);
           return "<u=2164A2><col=2164A2>";
@@ -110,7 +110,7 @@ final class Under13NoticePanel extends WidgetContainer implements HotspotActivat
           this.owner = param0;
           this.continueButton = new ButtonWidget(WeightedLruCache.cont, (WidgetListener) null);
           this.continueButton.renderer = (WidgetPainter) ((Object) new ThreeSliceButtonPainter());
-          var7 = AccountWelcomePanel.substituteTemplateArguments(new String[]{this.h((byte) 44), this.closeLinkMarkup((byte) 99)}, -1, NodeHashTableIterator.createU13terms);
+          var7 = AccountWelcomePanel.substituteTemplateArguments(new String[]{this.hyperlinkStyleTag((byte) 44), this.closeLinkMarkup((byte) 99)}, -1, NodeHashTableIterator.createU13terms);
           var3 = 20;
           var4 = new TextWidgetPainter(ValidationIconWidget.field_O, 0, 0, 0, 0, 16777215, -1, 3, 0, ValidationIconWidget.field_O.maxAscent, -1, 2147483647, true);
           this.termsText = new HotspotTextWidget(var7, var4);
@@ -143,7 +143,7 @@ final class Under13NoticePanel extends WidgetContainer implements HotspotActivat
         var6 = Pool.field_O;
         try {
           if (param2 != -12147) {
-            Under13NoticePanel.a(true, -93);
+            Under13NoticePanel.recordArchiveConnectionFailure(true, -93);
           }
           if (0 == param3) {
             DebugTuningSlider.setAccountStatusMessage("terms.ws", -128);

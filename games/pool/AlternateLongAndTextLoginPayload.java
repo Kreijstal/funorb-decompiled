@@ -232,7 +232,7 @@ final class AlternateLongAndTextLoginPayload extends LongAndTextLoginPayload {
                 var6 = WidgetContainer.measureSharedTextWidth(TransformRotationSupport.field_j[var3_int], true, false);
                 var7 = BrowserCookieWriter.field_c - (var6 >> 1);
                 var4 = var4 + IterableDualLinkDeque.field_e;
-                if (ResizableDialog.a(param0, -23, (NineBallRules.field_h << 1) + WidgetContainer.field_I, param1, (MeshSymmetrySupport.field_b << 1) + var6, var4, var7 - MeshSymmetrySupport.field_b)) {
+                if (ResizableDialog.containsPoint(param0, -23, (NineBallRules.field_h << 1) + WidgetContainer.field_I, param1, (MeshSymmetrySupport.field_b << 1) + var6, var4, var7 - MeshSymmetrySupport.field_b)) {
                   stackIn_12_0 = var5;
                   return stackIn_12_0;
                 }
@@ -383,7 +383,7 @@ final class AlternateLongAndTextLoginPayload extends LongAndTextLoginPayload {
             MeshBoundsSupport.field_e = new UiComponent(0L, param7);
             MeshBoundsSupport.field_e.text = HuffmanCodec.reportabuse;
             IntLookupQuery.field_q.addChild(25, MeshBoundsSupport.field_e);
-            if (!LobbyPlayerLookupSupport.a(61) ||
+            if (!LobbyPlayerLookupSupport.isLoginComplete(61) ||
               RankingsRequest.field_z) {
               ThemeSelectScreen.field_J = new BirthDatePromptPanel(0, 0, 0, 0);
             }

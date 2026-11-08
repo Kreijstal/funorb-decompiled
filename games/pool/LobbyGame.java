@@ -111,14 +111,14 @@ final class LobbyGame extends UiComponent {
         }
     }
 
-    final static void f(byte param0) {
+    final static void finishLoginInterface(byte obfuscationGuard) {
         int var1;
         int var2;
         int var3;
         var3 = Pool.field_O;
         NetworkGameClient.field_z = false;
         ClientException.field_d = null;
-        var1 = -42 % ((-1 - param0) / 38);
+        var1 = -42 % ((-1 - obfuscationGuard) / 38);
         if (!ProjectedVertex.field_e) {
           var2 = Js5Transport.field_l;
           if (var2 > 0) {
@@ -132,7 +132,7 @@ final class LobbyGame extends UiComponent {
           MeshBoundsSupport.field_d.dismissDialog(17);
           DebugTuningSlider.showAccountProgressDialog((byte) -126);
         } else {
-          MeshBoundsSupport.field_d.m((byte) -33);
+          MeshBoundsSupport.field_d.showConnectionRestored((byte) -33);
         }
     }
 
@@ -140,7 +140,7 @@ final class LobbyGame extends UiComponent {
         if (param0 != -14144) {
           field_Gc = -5;
         }
-        return !this.d(param0 ^ -14186) ? true : false;
+        return !this.isSecondaryLinked(param0 ^ -14186) ? true : false;
     }
 
     final static boolean isAsciiDigit(char character, byte obfuscationGuard) {

@@ -161,10 +161,10 @@ final class LobbyPlayer extends UiComponent {
 
     final boolean isUnindexed(boolean param0) {
         if (param0) {
-          return !this.d(59) ? true : false;
+          return !this.isSecondaryLinked(59) ? true : false;
         }
         this.field_bc = -108;
-        return !this.d(59) ? true : false;
+        return !this.isSecondaryLinked(59) ? true : false;
     }
 
     final static int writeCompressedChatText(PacketBuffer packet, byte obfuscationGuard, String text) {

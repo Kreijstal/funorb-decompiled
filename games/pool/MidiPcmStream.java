@@ -785,7 +785,7 @@ final class MidiPcmStream extends PcmStream {
               if (var3.field_o.isRamping()) {
                 this.noteMixer.field_p.addSubstream(var3.field_o);
               }
-              var3.a(2);
+              var3.releaseVoiceResources(2);
             }
             if (var3.field_G < 0) {
               this.heldNotesByKey[var3.field_t][var3.field_A] = null;
@@ -1187,7 +1187,7 @@ final class MidiPcmStream extends PcmStream {
           param4.field_D = AudioOutput.sampleRate / 100;
           if (param4.field_G >= 0 && (param4.field_o == null ||
             param4.field_o.isSamplePositionOutOfRange())) {
-            param4.a(param3 ^ 3);
+            param4.releaseVoiceResources(param3 ^ 3);
             param4.unlink((byte) -117);
             if (0 < param4.field_n &&
               param4 == this.notesByKeyGroup[param4.field_t][param4.field_n]) {
@@ -1274,7 +1274,7 @@ final class MidiPcmStream extends PcmStream {
           if (param4.field_o.isRamping()) {
             this.noteMixer.field_p.addSubstream(param4.field_o);
           }
-          param4.a(2);
+          param4.releaseVoiceResources(2);
           if (param4.field_G >= 0) {
             param4.unlink((byte) -117);
             if (0 < param4.field_n &&

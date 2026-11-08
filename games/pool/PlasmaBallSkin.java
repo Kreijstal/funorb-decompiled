@@ -153,7 +153,7 @@ final class PlasmaBallSkin extends BallSkin {
                 var5 != 0) {
                 SoftwareRasterizer.drawRectangle(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0);
                 if (var5 != 0) {
-                  TextInputPainter.a(-96, false);
+                  TextInputPainter.drawHudAndInterfaceOverlays(-96, false);
                   if (param0 < 0) {
                     SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
                     DisplayModeSupport.field_c[param0].darkenBackground((byte) 108);
@@ -162,7 +162,7 @@ final class PlasmaBallSkin extends BallSkin {
                   }
                 }
               }} else {
-              TextInputPainter.a(-96, false);
+              TextInputPainter.drawHudAndInterfaceOverlays(-96, false);
               if (param0 < 0) {
                 SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
                 if (var5 != 0) {
@@ -177,7 +177,7 @@ final class PlasmaBallSkin extends BallSkin {
               return;
             }
           }
-          TextInputPainter.a(93, param2);
+          TextInputPainter.drawHudAndInterfaceOverlays(93, param2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

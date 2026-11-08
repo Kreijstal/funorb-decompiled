@@ -1046,7 +1046,7 @@ final class PlasmaTableScene extends TableScene {
           }
           this.drawWireframeGrid((byte) 44, var16);
           this.drawBallsInOrder(var16, (byte) 79, false, var14, false);
-          this.a(77, var16);
+          this.drawFloorTiles(77, var16);
           this.drawFloorGlowGrid((byte) -25, var16);
           for (var5 = 0; this.field_K.length > var5; var5++) {
             this.field_K[var5].drawParticles(false, (byte) 98, var16);

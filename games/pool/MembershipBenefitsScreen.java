@@ -116,7 +116,7 @@ final class MembershipBenefitsScreen extends MenuScreen {
         }
         if (3 == var2) {
           if (MatchingTextValidator.field_u != null) {
-            AccountStateQuery.d((byte) -106);
+            AccountStateQuery.leaveFullscreen((byte) -106);
           }
           DisplayModeSupport.openSubscribePage(NanoTickClock.getApplet(58), 2056898529);
         }

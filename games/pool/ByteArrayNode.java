@@ -37,12 +37,12 @@ final class ByteArrayNode extends IntrusiveNode {
         ByteArrayNode.nextPowerOfTwo(45, 53);
     }
 
-    final static void a(byte param0, int param1, int param2) {
-        DebouncedValidationProvider.field_g = param1;
-        if (param0 > -21) {
+    final static void setTooltipAnchor(byte obfuscationGuard, int y, int x) {
+        DebouncedValidationProvider.field_g = y;
+        if (obfuscationGuard > -21) {
           return;
         }
-        DebugTuningSlider.field_i = param2;
+        DebugTuningSlider.field_i = x;
     }
 
     final static int nextPowerOfTwo(int param0, int param1) {

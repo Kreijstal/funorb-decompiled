@@ -21,13 +21,13 @@ final class NineSliceFrameSupport {
         waitingforGraphics = null;
     }
 
-    final static void a(UiComponent param0, UiComponent param1, int param2) {
+    final static void initializeSocialListContainers(UiComponent friendsContainer, UiComponent ignoresContainer, int obfuscationGuard) {
         try {
-          if (null == param0.children) {
-            param0.children = new IntrusiveDeque();
+          if (null == friendsContainer.children) {
+            friendsContainer.children = new IntrusiveDeque();
           }
-          if (param1.children == null) {
-            param1.children = new IntrusiveDeque();
+          if (ignoresContainer.children == null) {
+            ignoresContainer.children = new IntrusiveDeque();
           }
           if (null == AimTarget.field_b) {
             AimTarget.field_b = new DualLinkNodeHashTable(64);
@@ -35,12 +35,12 @@ final class NineSliceFrameSupport {
           if (LoginTextSupport.field_c == null) {
             LoginTextSupport.field_c = new DualLinkNodeHashTable(64);
           }
-          SoundCache.field_k = param0.children;
-          QuickChatNavigationSupport.field_c = param1.children;
+          SoundCache.field_k = friendsContainer.children;
+          QuickChatNavigationSupport.field_c = ignoresContainer.children;
           DialogLayer.clearSocialLists(-65);
-          int var3_int = 107 / ((param2 - 50) / 36);
+          int var3_int = 107 / ((obfuscationGuard - 50) / 36);
         } catch (RuntimeException runtimeException) {
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "rp.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "rp.C(" + (friendsContainer != null ? "{...}" : "null") + ',' + (ignoresContainer != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 

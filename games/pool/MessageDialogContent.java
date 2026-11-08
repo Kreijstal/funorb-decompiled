@@ -365,9 +365,9 @@ final class MessageDialogContent extends WidgetContainer implements ButtonActiva
             }
             if (0 != MeshBoundsSupport.field_c.pressedButton) {
               if (LobbyGame.field_Ac) {
-                EmailAvailabilityValidator.b(-118, param1);
+                EmailAvailabilityValidator.sendCancelMatchmaking(-118, param1);
               } else {
-                Js5ArchiveManager.a((byte) 81, param1);
+                Js5ArchiveManager.sendMatchmakingRequest((byte) 81, param1);
               }
             }
             RankingsScreen.a(param1, LookupRetrySupport.field_e, 0, true);
@@ -452,7 +452,7 @@ final class MessageDialogContent extends WidgetContainer implements ButtonActiva
           }
           ClassicBallSkin.configureClientNoticeFrames((byte) -91, param1, param10, param7, param3, param14);
           BitmapTextLayout.a(111, param15, param17, param18);
-          GradientPaletteSupport.a((byte) -96, param11, param20, param6);
+          GradientPaletteSupport.setChoiceTextColors((byte) -96, param11, param20, param6);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

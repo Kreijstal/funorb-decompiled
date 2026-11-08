@@ -30,7 +30,7 @@ class TextInputPainter extends TextWidgetPainter {
           param1[2] = param1[2] * 512.0;
           param1[3] = param1[3] * 576.0;
           if (param0 > -19) {
-            TextInputPainter.a(-59, false);
+            TextInputPainter.drawHudAndInterfaceOverlays(-59, false);
           }
           param1[5] = param1[5] - 8.0;
           stackIn_3_0 = (double[]) (param1);
@@ -127,7 +127,7 @@ class TextInputPainter extends TextWidgetPainter {
         field_r = null;
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void drawHudAndInterfaceOverlays(int obfuscationGuard, boolean active) {
         int var2;
         int var3;
         boolean stackIn_26_0 = false;
@@ -141,9 +141,9 @@ class TextInputPainter extends TextWidgetPainter {
         boolean stackIn_146_0 = false;
         boolean stackIn_158_0 = false;
         if (null != AccountContentDialog.field_ub) {
-          AccountContentDialog.field_ub.drawHud(param1, -29423);
+          AccountContentDialog.field_ub.drawHud(active, -29423);
         }
-        var2 = 36 / ((param0 - 1) / 45);
+        var2 = 36 / ((obfuscationGuard - 1) / 45);
         if (TextWidgetPainter.field_e == null) {
           if (TranslatedUiText.field_d &&
             AppletUrlSupport.field_c) {
@@ -154,29 +154,29 @@ class TextInputPainter extends TextWidgetPainter {
               stackIn_141_0 = 0;
             }
             var3 = stackIn_141_0;
-            stackIn_146_0 = (param1) && (InputIdleSupport.isCaretBlinkOn((byte) 82)) && (var3 == 0);
+            stackIn_146_0 = (active) && (InputIdleSupport.isCaretBlinkOn((byte) 82)) && (var3 == 0);
             ViewportController.drawInterfaceOverlays(stackIn_146_0, (byte) 50);
             if (var3 != 0) {
-              stackIn_158_0 = (param1) && (InputIdleSupport.isCaretBlinkOn((byte) 98));
+              stackIn_158_0 = (active) && (InputIdleSupport.isCaretBlinkOn((byte) 98));
               FadingDialog.drawSharedPanelAndTooltip(stackIn_158_0, 1);
             }
           }
           if (null != AccountContentDialog.field_ub) {
-            AccountContentDialog.field_ub.drawDebugOverlay(300, param1);
+            AccountContentDialog.field_ub.drawDebugOverlay(300, active);
           }
         } else {
-          TextWidgetPainter.field_e.drawHud(param1, -29423);
+          TextWidgetPainter.field_e.drawHud(active, -29423);
           if (!TranslatedUiText.field_d) {
             if (null == AccountContentDialog.field_ub) {
               if (null == TextWidgetPainter.field_e) {
                 return;
               }
-              TextWidgetPainter.field_e.drawDebugOverlay(300, param1);
+              TextWidgetPainter.field_e.drawDebugOverlay(300, active);
               return;
             }
-            AccountContentDialog.field_ub.drawDebugOverlay(300, param1);
+            AccountContentDialog.field_ub.drawDebugOverlay(300, active);
             if (null != TextWidgetPainter.field_e) {
-              TextWidgetPainter.field_e.drawDebugOverlay(300, param1);
+              TextWidgetPainter.field_e.drawDebugOverlay(300, active);
             }
             return;
           }
@@ -185,64 +185,64 @@ class TextInputPainter extends TextWidgetPainter {
               if (null == TextWidgetPainter.field_e) {
                 return;
               }
-              TextWidgetPainter.field_e.drawDebugOverlay(300, param1);
+              TextWidgetPainter.field_e.drawDebugOverlay(300, active);
               return;
             }
-            AccountContentDialog.field_ub.drawDebugOverlay(300, param1);
+            AccountContentDialog.field_ub.drawDebugOverlay(300, active);
             if (null != TextWidgetPainter.field_e) {
-              TextWidgetPainter.field_e.drawDebugOverlay(300, param1);
+              TextWidgetPainter.field_e.drawDebugOverlay(300, active);
             }
             return;
           }
           if (!MidiNoteMixer.field_v) {
             var3 = 0;
-            stackIn_26_0 = (param1) && (InputIdleSupport.isCaretBlinkOn((byte) 82)) && (var3 == 0);
+            stackIn_26_0 = (active) && (InputIdleSupport.isCaretBlinkOn((byte) 82)) && (var3 == 0);
             ViewportController.drawInterfaceOverlays(stackIn_26_0, (byte) 50);
             if (var3 != 0) {
-              stackIn_32_0 = (param1) && (InputIdleSupport.isCaretBlinkOn((byte) 98));
+              stackIn_32_0 = (active) && (InputIdleSupport.isCaretBlinkOn((byte) 98));
               FadingDialog.drawSharedPanelAndTooltip(stackIn_32_0, 1);
             }
             if (null != AccountContentDialog.field_ub) {
-              AccountContentDialog.field_ub.drawDebugOverlay(300, param1);
+              AccountContentDialog.field_ub.drawDebugOverlay(300, active);
             }
           } else {
             if (!DualLinkNode.field_p) {
               var3 = 0;
-              stackIn_45_0 = (param1) && (InputIdleSupport.isCaretBlinkOn((byte) 82)) && (var3 == 0);
+              stackIn_45_0 = (active) && (InputIdleSupport.isCaretBlinkOn((byte) 82)) && (var3 == 0);
               ViewportController.drawInterfaceOverlays(stackIn_45_0, (byte) 50);
               if (var3 != 0) {
-                stackIn_51_0 = (param1) && (InputIdleSupport.isCaretBlinkOn((byte) 98));
+                stackIn_51_0 = (active) && (InputIdleSupport.isCaretBlinkOn((byte) 98));
                 FadingDialog.drawSharedPanelAndTooltip(stackIn_51_0, 1);
               }
               if (null == AccountContentDialog.field_ub) {
                 if (null == TextWidgetPainter.field_e) {
                   return;
                 }
-                TextWidgetPainter.field_e.drawDebugOverlay(300, param1);
+                TextWidgetPainter.field_e.drawDebugOverlay(300, active);
                 return;
               }
-              AccountContentDialog.field_ub.drawDebugOverlay(300, param1);
+              AccountContentDialog.field_ub.drawDebugOverlay(300, active);
               if (null != TextWidgetPainter.field_e) {
-                TextWidgetPainter.field_e.drawDebugOverlay(300, param1);
+                TextWidgetPainter.field_e.drawDebugOverlay(300, active);
               }
               return;
             }
             var3 = 1;
-            if (!param1) {
+            if (!active) {
               ViewportController.drawInterfaceOverlays(false, (byte) 50);
               if (var3 == 0) {
                 if (null != AccountContentDialog.field_ub) {
-                  AccountContentDialog.field_ub.drawDebugOverlay(300, param1);
+                  AccountContentDialog.field_ub.drawDebugOverlay(300, active);
                   if (null != TextWidgetPainter.field_e) {
-                    TextWidgetPainter.field_e.drawDebugOverlay(300, param1);
+                    TextWidgetPainter.field_e.drawDebugOverlay(300, active);
                   }
                   return;
                 }
               } else {
-                stackIn_76_0 = (param1) && (InputIdleSupport.isCaretBlinkOn((byte) 98));
+                stackIn_76_0 = (active) && (InputIdleSupport.isCaretBlinkOn((byte) 98));
                 FadingDialog.drawSharedPanelAndTooltip(stackIn_76_0, 1);
                 if (null != AccountContentDialog.field_ub) {
-                  AccountContentDialog.field_ub.drawDebugOverlay(300, param1);
+                  AccountContentDialog.field_ub.drawDebugOverlay(300, active);
                 }
               }
             } else {
@@ -250,27 +250,27 @@ class TextInputPainter extends TextWidgetPainter {
                 ViewportController.drawInterfaceOverlays(false, (byte) 50);
                 if (var3 == 0) {
                   if (null != AccountContentDialog.field_ub) {
-                    AccountContentDialog.field_ub.drawDebugOverlay(300, param1);
+                    AccountContentDialog.field_ub.drawDebugOverlay(300, active);
                     if (null != TextWidgetPainter.field_e) {
-                      TextWidgetPainter.field_e.drawDebugOverlay(300, param1);
+                      TextWidgetPainter.field_e.drawDebugOverlay(300, active);
                     }
                     return;
                   }
                 } else {
-                  stackIn_100_0 = (param1) && (InputIdleSupport.isCaretBlinkOn((byte) 98));
+                  stackIn_100_0 = (active) && (InputIdleSupport.isCaretBlinkOn((byte) 98));
                   FadingDialog.drawSharedPanelAndTooltip(stackIn_100_0, 1);
                   if (null != AccountContentDialog.field_ub) {
-                    AccountContentDialog.field_ub.drawDebugOverlay(300, param1);
+                    AccountContentDialog.field_ub.drawDebugOverlay(300, active);
                   }
                 }
               } else {
                 ViewportController.drawInterfaceOverlays((var3 == 0), (byte) 50);
                 if (var3 != 0) {
-                  stackIn_127_0 = (param1) && (InputIdleSupport.isCaretBlinkOn((byte) 98));
+                  stackIn_127_0 = (active) && (InputIdleSupport.isCaretBlinkOn((byte) 98));
                   FadingDialog.drawSharedPanelAndTooltip(stackIn_127_0, 1);
                 }
                 if (null != AccountContentDialog.field_ub) {
-                  AccountContentDialog.field_ub.drawDebugOverlay(300, param1);
+                  AccountContentDialog.field_ub.drawDebugOverlay(300, active);
                 }
               }
             }
@@ -279,7 +279,7 @@ class TextInputPainter extends TextWidgetPainter {
         if (null == TextWidgetPainter.field_e) {
           return;
         }
-        TextWidgetPainter.field_e.drawDebugOverlay(300, param1);
+        TextWidgetPainter.field_e.drawDebugOverlay(300, active);
     }
 
     static {

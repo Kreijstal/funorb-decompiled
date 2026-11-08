@@ -25,13 +25,13 @@ final class MusicVoice extends IntrusiveNode {
     int field_p;
     MusicPatchEnvelope field_x;
 
-    final static void c(byte param0) {
+    final static void stopSoundEffectReverb(byte obfuscationGuard) {
         if (null != GradientPaletteSupport.field_h) {
           SpaceObject.field_d.removeSubstream(GradientPaletteSupport.field_h);
         }
         GradientPaletteSupport.field_h = null;
         UsernameSuggestionsPanel.field_R = null;
-        int var1 = 107 / ((24 - param0) / 56);
+        int var1 = 107 / ((24 - obfuscationGuard) / 56);
         ReportAbuseDialog.field_Xb = null;
     }
 
@@ -69,7 +69,7 @@ final class MusicVoice extends IntrusiveNode {
         }
     }
 
-    final static void a(int[] param0, boolean param1) {
+    final static void projectSceneryBands(int[] cameraTransform, boolean obfuscationGuard) {
         int var2_int = 0;
         int var3 = 0;
         int var4 = 0;
@@ -86,8 +86,8 @@ final class MusicVoice extends IntrusiveNode {
         var6 = Pool.field_O;
         try {
           KeyHandler.field_c = new int[Atan2Support.field_h.length][5][3];
-          var2_int = param0[9] >> 2;
-          var3 = param0[10] >> 2;
+          var2_int = cameraTransform[9] >> 2;
+          var3 = cameraTransform[10] >> 2;
           var4 = var2_int * var2_int + var3 * var3 >> 16;
           if (var4 <= 0) {
             var3 = 65536;
@@ -97,7 +97,7 @@ final class MusicVoice extends IntrusiveNode {
             var2_int = ArchiveProvider.divideFixed16(var5, (byte) -81, (long)var2_int);
             var3 = ArchiveProvider.divideFixed16(var5, (byte) -121, (long)var3);
           }
-          if (param1) {
+          if (obfuscationGuard) {
             var7 = (java.applet.Applet) null;
             MusicVoice.readUsernameParameter(-15, (java.applet.Applet) null);
           }
@@ -121,11 +121,11 @@ final class MusicVoice extends IntrusiveNode {
             KeyHandler.field_c[var8][4][0] = -var2_int;
             KeyHandler.field_c[var8][4][1] = -var3;
             KeyHandler.field_c[var8][4][2] = Atan2Support.field_h[var8];
-            MaxLengthTextInputWidget.projectPointInPlace(param0, KeyHandler.field_c[var8][0], false);
-            MaxLengthTextInputWidget.projectPointInPlace(param0, KeyHandler.field_c[var8][1], param1);
-            MaxLengthTextInputWidget.projectPointInPlace(param0, KeyHandler.field_c[var8][2], false);
-            MaxLengthTextInputWidget.projectPointInPlace(param0, KeyHandler.field_c[var8][3], false);
-            MaxLengthTextInputWidget.projectPointInPlace(param0, KeyHandler.field_c[var8][4], false);
+            MaxLengthTextInputWidget.projectPointInPlace(cameraTransform, KeyHandler.field_c[var8][0], false);
+            MaxLengthTextInputWidget.projectPointInPlace(cameraTransform, KeyHandler.field_c[var8][1], obfuscationGuard);
+            MaxLengthTextInputWidget.projectPointInPlace(cameraTransform, KeyHandler.field_c[var8][2], false);
+            MaxLengthTextInputWidget.projectPointInPlace(cameraTransform, KeyHandler.field_c[var8][3], false);
+            MaxLengthTextInputWidget.projectPointInPlace(cameraTransform, KeyHandler.field_c[var8][4], false);
             if (KeyHandler.field_c[var8][0][2] < 0) {
               KeyHandler.field_c[var8][0][1] = SoftwareRasterizer.height;
             }
@@ -149,19 +149,19 @@ final class MusicVoice extends IntrusiveNode {
           var2 = decompiledCaughtException;
           stackIn_24_0 = var2;
           stackIn_24_1 = new StringBuilder().append("pr.D(");
-          if (param0 == null) {
+          if (cameraTransform == null) {
             stackIn_25_2 = "null";
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
-    final void a(int param0) {
+    final void releaseVoiceResources(int obfuscationGuard) {
         this.field_u = null;
-        if (param0 != 2) {
-          this.a(-106);
+        if (obfuscationGuard != 2) {
+          this.releaseVoiceResources(-106);
         }
         this.field_x = null;
         this.field_C = null;

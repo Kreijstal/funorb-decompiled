@@ -268,7 +268,7 @@ final class ArchiveIndex {
     ArchiveIndex(byte[] param0, int param1, byte[] param2) {
         int var4_int = 0;
         try {
-          this.field_v = SpriteState.a(param0.length, param0, 0);
+          this.field_v = SpriteState.crc32Prefix(param0.length, param0, 0);
           if (this.field_v != param1) {
             throw new RuntimeException();
           }

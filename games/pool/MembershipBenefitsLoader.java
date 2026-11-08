@@ -186,7 +186,7 @@ final class MembershipBenefitsLoader {
             SharedWidgetLayoutSupport.field_a = null;
             Base37Support.field_a = AchievementSubmission.field_o.copy();
             Base37Support.field_a.bindAsRenderTarget();
-            ShotRecord.a(SoftwareRasterizer.width, 2 * SoftwareRasterizer.height / 3, 64, 0, (byte) 103, 0);
+            ShotRecord.recolorGreenPixelsInRectangle(SoftwareRasterizer.width, 2 * SoftwareRasterizer.height / 3, 64, 0, (byte) 103, 0);
             SoftwareRasterizer.setTarget(var27, var2, var3);
             SoftwareRasterizer.restoreClip(AgeValidator.field_o);
             ModelOriginSupport.field_o = 390 + (AccountProtocolStage.field_f.field_A - UiComponentNode.field_C.field_A) / 2;
@@ -353,7 +353,7 @@ final class MembershipBenefitsLoader {
             AccountProtocolStage.field_f.draw(434, 390);
             Pocket.field_h.draw(0, 0);
             if (1 == AppletUrlSupport.field_j.selectedIndex) {
-              ShotRecord.a(AccountProtocolStage.field_f.field_z - 4, 7 * AccountProtocolStage.field_f.field_A / 12, 64, 392, (byte) 120, 436);
+              ShotRecord.recolorGreenPixelsInRectangle(AccountProtocolStage.field_f.field_z - 4, 7 * AccountProtocolStage.field_f.field_A / 12, 64, 392, (byte) 120, 436);
             }
             stackIn_66_0 = 0;
             stackIn_66_1 = RasterSnapshot.field_o;

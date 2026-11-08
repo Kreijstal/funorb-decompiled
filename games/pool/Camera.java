@@ -510,8 +510,8 @@ final class Camera {
             return;
           }
           DebugTuningSlider.configureTextFrameStyle(param17, 26790, param10, param3, param5, param19);
-          GrowableIntListFactory.a(param9, -17, param2);
-          SpriteState.a((byte) -82, param11, param8, param15);
+          GrowableIntListFactory.setMenuAnchor(param9, -17, param2);
+          SpriteState.setMenuTextColors((byte) -82, param11, param8, param15);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

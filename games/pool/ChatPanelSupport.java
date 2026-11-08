@@ -58,7 +58,7 @@ final class ChatPanelSupport {
               if (!ViewportController.field_y) {
                 DualLinkNode.field_p = true;
               } else {
-                EmailValidator.c((byte) 50);
+                EmailValidator.restoreLobbyQuickChat((byte) 50);
               }
             }
           }
