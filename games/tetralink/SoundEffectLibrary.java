@@ -5,12 +5,12 @@ final class SoundEffectLibrary {
     static String field_a;
     private Archive field_c;
     private Archive field_b;
-    private dj field_g;
+    private NodeHashTable field_g;
     static int field_d;
     static boolean field_e;
-    private dj field_f;
+    private NodeHashTable field_f;
 
-    private final PcmSample a(int param0, int[] param1, String param2, String param3) {
+    private final PcmSample getSynthesizedSampleByName(int param0, int[] param1, String param2, String param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -25,13 +25,13 @@ final class SoundEffectLibrary {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = this.field_b.a(param0 - 1, param3);
+          var5_int = this.field_b.getGroupIdByName(param0 - 1, param3);
           if (var5_int < 0) {
             return null;
           }
-          var6 = this.field_b.a(var5_int, false, param2);
+          var6 = this.field_b.getFileIdByName(var5_int, false, param2);
           if (param0 <= var6) {
-            stackIn_7_0 = this.a((byte) 118, var6, param1, var5_int);
+            stackIn_7_0 = this.getSynthesizedSample((byte) 118, var6, param1, var5_int);
             return stackIn_7_0;
           }
           stackIn_5_0 = null;
@@ -58,27 +58,27 @@ final class SoundEffectLibrary {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw oi.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
-    final static void a(Archive param0, boolean param1, Archive param2, Archive param3, byte param4) {
+    final static void loadCommonUiResources(Archive param0, boolean param1, Archive param2, Archive param3, byte param4) {
         try {
-          oa.field_y = il.createEmailCheckResult("", param4 ^ 14822);
-          oa.field_y.a(false, 8);
-          ua.a(param0, param3, param2, -97);
-          GameKeyHandler.a(-86);
-          pi.field_a = fk.field_Q;
-          ma.field_d = fk.field_Q;
+          HighscoreQuery.field_y = OpacityWidget.createEmailCheckResult("", param4 ^ 14822);
+          HighscoreQuery.field_y.setEnabled(false, 8);
+          CommonUiHelpers.loadCommonUi(param0, param3, param2, -97);
+          GameKeyHandler.initializeWidgetRoot(-86);
+          PasswordLengthHelpers.field_a = HotspotTextWidget.field_Q;
+          AnimationPlayer.field_d = HotspotTextWidget.field_Q;
           if (param4 != 91) {
-            SoundEffectLibrary.b(-90);
+            SoundEffectLibrary.releaseStatics(-90);
           }
         } catch (RuntimeException runtimeException) {
-          throw oi.wrapException((Throwable) ((Object) runtimeException), "fa.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) runtimeException), "fa.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
-    private final PcmSample a(String param0, byte param1, String param2, int[] param3) {
+    private final PcmSample getVorbisSampleByNameBudgeted(String param0, byte param1, String param2, int[] param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -94,20 +94,20 @@ final class SoundEffectLibrary {
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = this.field_c.a(-1, param2);
+          var5_int = this.field_c.getGroupIdByName(-1, param2);
           if (var5_int < 0) {
             stackIn_2_0 = null;
             return (PcmSample) (stackIn_2_0);
           }
-          var6 = this.field_c.a(var5_int, false, param0);
+          var6 = this.field_c.getFileIdByName(var5_int, false, param0);
           if (var6 < 0) {
             return null;
           }
           if (param1 <= 47) {
             var7 = (Archive) null;
-            SoundEffectLibrary.a((Archive) null, false, (Archive) null, (Archive) null, (byte) 70);
+            SoundEffectLibrary.loadCommonUiResources((Archive) null, false, (Archive) null, (Archive) null, (byte) 70);
           }
-          stackIn_9_0 = this.a(-834608944, var6, param3, var5_int);
+          stackIn_9_0 = this.getVorbisSample(-834608944, var6, param3, var5_int);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -131,11 +131,11 @@ final class SoundEffectLibrary {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw oi.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
-    final PcmSample a(String param0, String param1, byte param2) {
+    final PcmSample getSynthesizedSampleByNameUnbudgeted(String param0, String param1, byte param2) {
         RuntimeException var4 = null;
         PcmSample stackIn_2_0 = null;
         PcmSample stackIn_4_0 = null;
@@ -147,7 +147,7 @@ final class SoundEffectLibrary {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 == 1) {
-            stackIn_4_0 = this.a(0, (int[]) null, param0, param1);
+            stackIn_4_0 = this.getSynthesizedSampleByName(0, (int[]) null, param0, param1);
             return stackIn_4_0;
           }
           stackIn_2_0 = (PcmSample) null;
@@ -168,11 +168,11 @@ final class SoundEffectLibrary {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw oi.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    final static int a(int param0, int param1) {
+    final static int highestOneBit(int param0, int param1) {
         int var2 = param0 >>> 1;
         var2 = var2 | var2 >>> 1;
         var2 = var2 | var2 >>> 2;
@@ -185,20 +185,20 @@ final class SoundEffectLibrary {
         return 42;
     }
 
-    final static hl a(boolean param0) {
+    final static UiComponent getLobbyPlayerListContent(boolean param0) {
         if (!param0) {
           byte[] var2 = (byte[]) null;
           SoundEffectLibrary.createBinaryFont(-120, (byte[]) null);
-          return NotificationToast.a(true);
+          return NotificationToast.getPlayerListContent(true);
         }
-        return NotificationToast.a(true);
+        return NotificationToast.getPlayerListContent(true);
     }
 
-    final static ig createBinaryFont(int param0, byte[] param1) {
-        ig var2 = null;
+    final static CoverageBitmapFont createBinaryFont(int param0, byte[] param1) {
+        CoverageBitmapFont var2 = null;
         RuntimeException var2_ref = null;
-        ig stackIn_5_0 = null;
-        ig stackIn_7_0 = null;
+        CoverageBitmapFont stackIn_5_0 = null;
+        CoverageBitmapFont stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -208,11 +208,11 @@ final class SoundEffectLibrary {
             return null;
           }
           if (param0 != -334) {
-            stackIn_5_0 = (ig) null;
+            stackIn_5_0 = (CoverageBitmapFont) null;
             return stackIn_5_0;
           }
-          var2 = new ig(param1, qa.field_x, i.field_t, IntrusiveDeque.field_h, sn.field_e, ti.field_c, ga.field_a);
-          an.b(-81);
+          var2 = new CoverageBitmapFont(param1, QuickChatCategory.field_x, ViewportController.field_t, IntrusiveDeque.field_h, ErrorPrintHelpers.field_e, LobbyResourceHelpers.field_c, JoinGameTextGlobals.field_a);
+          DecodedSpriteBuffers.clearDecodedSpriteData(-81);
           stackIn_7_0 = var2;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -225,16 +225,16 @@ final class SoundEffectLibrary {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw oi.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
-    private final PcmSample a(int param0, int param1, int[] param2, int param3) {
+    private final PcmSample getVorbisSample(int param0, int param1, int[] param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;
         PcmSample var8 = null;
-        ag var9 = null;
+        VorbisSample var9 = null;
         PcmSample stackIn_2_0 = null;
         PcmSample stackIn_6_0 = null;
         Object stackIn_10_0 = null;
@@ -254,7 +254,7 @@ final class SoundEffectLibrary {
           var5_int = param1 ^ (param3 >>> 12 | 65523 & param3 << 4);
           var5_int = var5_int | param3 << 16;
           var6 = (long)var5_int ^ 4294967296L;
-          var8 = (PcmSample) (this.field_f.a(var6, (byte) -43));
+          var8 = (PcmSample) (this.field_f.get(var6, (byte) -43));
           if (var8 != null) {
             stackIn_6_0 = var8;
             return stackIn_6_0;
@@ -264,14 +264,14 @@ final class SoundEffectLibrary {
             stackIn_10_0 = null;
             return (PcmSample) (stackIn_10_0);
           }
-          var9 = (ag) (this.field_g.a(var6, (byte) -43));
+          var9 = (VorbisSample) (this.field_g.get(var6, (byte) -43));
           if (var9 == null) {
-            var9 = ag.load(this.field_c, param3, param1);
+            var9 = VorbisSample.load(this.field_c, param3, param1);
             if (var9 == null) {
               stackIn_14_0 = null;
               return (PcmSample) (stackIn_14_0);
             }
-            this.field_g.a(var6, param0 ^ 834608919, var9);
+            this.field_g.put(var6, param0 ^ 834608919, var9);
           }
           var8Lifetime1 = var9.decodeToPcm(param2);
           if (var8Lifetime1 == null) {
@@ -279,7 +279,7 @@ final class SoundEffectLibrary {
             return (PcmSample) (stackIn_18_0);
           }
           var9.unlink(false);
-          this.field_f.a(var6, -112, var8Lifetime1);
+          this.field_f.put(var6, -112, var8Lifetime1);
           stackIn_20_0 = var8Lifetime1;
           return stackIn_20_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -292,16 +292,16 @@ final class SoundEffectLibrary {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw oi.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param3).append(')').toString());
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    private final PcmSample a(byte param0, int param1, int[] param2, int param3) {
+    private final PcmSample getSynthesizedSample(byte param0, int param1, int[] param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;
         PcmSample var8 = null;
-        ge var9 = null;
+        SoundEffect var9 = null;
         String var10 = null;
         PcmSample var11 = null;
         PcmSample stackIn_5_0 = null;
@@ -315,12 +315,12 @@ final class SoundEffectLibrary {
         try {
           if (param0 <= 104) {
             var10 = (String) null;
-            this.a(85, (String) null, (String) null);
+            this.getVorbisSampleByName(85, (String) null, (String) null);
           }
           var5_int = ((param3 & 1342181375) << 4 | param3 >>> 12) ^ param1;
           var5_int = var5_int | param3 << 16;
           var6 = (long)var5_int;
-          var8 = (PcmSample) (this.field_f.a(var6, (byte) -43));
+          var8 = (PcmSample) (this.field_f.get(var6, (byte) -43));
           if (var8 != null) {
             stackIn_5_0 = var8;
             return stackIn_5_0;
@@ -330,13 +330,13 @@ final class SoundEffectLibrary {
             stackIn_9_0 = null;
             return (PcmSample) (stackIn_9_0);
           }
-          var9 = ge.load(this.field_b, param3, param1);
+          var9 = SoundEffect.load(this.field_b, param3, param1);
           if (var9 == null) {
             return null;
           }
           var11 = var9.toPcmSample();
           var8Lifetime1 = var11;
-          this.field_f.a(var6, -58, var8Lifetime1);
+          this.field_f.put(var6, -58, var8Lifetime1);
           if (param2 != null) {
             param2[0] = param2[0] - var11.field_s.length;
           }
@@ -352,11 +352,11 @@ final class SoundEffectLibrary {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw oi.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param3).append(')').toString());
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final PcmSample a(int param0, String param1, String param2) {
+    final PcmSample getVorbisSampleByName(int param0, String param1, String param2) {
         RuntimeException var4 = null;
         String var5 = null;
         PcmSample stackIn_3_0 = null;
@@ -369,9 +369,9 @@ final class SoundEffectLibrary {
         try {
           if (param0 >= -121) {
             var5 = (String) null;
-            this.a(29, (String) null, (String) null);
+            this.getVorbisSampleByName(29, (String) null, (String) null);
           }
-          stackIn_3_0 = this.a(param2, (byte) 56, param1, (int[]) null);
+          stackIn_3_0 = this.getVorbisSampleByNameBudgeted(param2, (byte) 56, param1, (int[]) null);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -389,18 +389,18 @@ final class SoundEffectLibrary {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw oi.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 != -2) {
           field_d = -124;
         }
     }
 
-    final PcmSample a(byte param0, int param1, int[] param2) {
+    final PcmSample getSynthesizedSampleById(byte param0, int param1, int[] param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         PcmSample stackIn_2_0 = null;
@@ -410,15 +410,15 @@ final class SoundEffectLibrary {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_b.a(-1) == 1) {
-            stackIn_2_0 = this.a((byte) 117, param1, param2, 0);
+          if (this.field_b.getGroupCount(-1) == 1) {
+            stackIn_2_0 = this.getSynthesizedSample((byte) 117, param1, param2, 0);
             return stackIn_2_0;
           }
           var4_int = -40 % ((-15 - param0) / 54);
-          if (this.field_b.b(-23126, param1) != 1) {
+          if (this.field_b.getFileCount(-23126, param1) != 1) {
             throw new RuntimeException();
           }
-          stackIn_5_0 = this.a((byte) 127, 0, param2, param1);
+          stackIn_5_0 = this.getSynthesizedSample((byte) 127, 0, param2, param1);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -430,16 +430,16 @@ final class SoundEffectLibrary {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw oi.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
-    final static int a(int param0) {
+    final static int getAudioBufferMillis(int param0) {
         if (param0 > -6) {
-          SoundEffectLibrary.a(-28);
-          return id.field_x;
+          SoundEffectLibrary.getAudioBufferMillis(-28);
+          return TriangleMesh.field_x;
         }
-        return id.field_x;
+        return TriangleMesh.field_x;
     }
 
     final PcmSample getSoundEffectById(int[] param0, int param1, int param2) {
@@ -452,12 +452,12 @@ final class SoundEffectLibrary {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_c.a(-1) == 1) {
-            stackIn_2_0 = this.a(-834608944, param1, param0, 0);
+          if (this.field_c.getGroupCount(-1) == 1) {
+            stackIn_2_0 = this.getVorbisSample(-834608944, param1, param0, 0);
             return stackIn_2_0;
           }
-          if (this.field_c.b(-23126, param1) == 1) {
-            stackIn_5_0 = this.a(-834608944, 0, param0, param1);
+          if (this.field_c.getFileCount(-23126, param1) == 1) {
+            stackIn_5_0 = this.getVorbisSample(-834608944, 0, param0, param1);
             return stackIn_5_0;
           }
           if (param2 >= 3) {
@@ -475,18 +475,18 @@ final class SoundEffectLibrary {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw oi.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
     SoundEffectLibrary(Archive param0, Archive param1) {
-        this.field_g = new dj(256);
-        this.field_f = new dj(256);
+        this.field_g = new NodeHashTable(256);
+        this.field_f = new NodeHashTable(256);
         try {
           this.field_c = param1;
           this.field_b = param0;
         } catch (RuntimeException runtimeException) {
-          throw oi.wrapException((Throwable) ((Object) runtimeException), "fa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) runtimeException), "fa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

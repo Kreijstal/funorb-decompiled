@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class BitPacketBuffer extends PacketBuffer {
-    static a field_z;
+    static ClientProtocolStage field_z;
     private int bitPosition;
     private IsaacCipher cipher;
     static String field_x;
@@ -31,14 +31,14 @@ final class BitPacketBuffer extends PacketBuffer {
           while (param0 > var4) {
             incrementValue$0 = var3;
             var3++;
-            var5 = var5 + ((this.payload[incrementValue$0] & rf.field_a[var4]) << param0 - var4);
+            var5 = var5 + ((this.payload[incrementValue$0] & RasterEffectHelpers.field_a[var4]) << param0 - var4);
             param0 = param0 - var4;
             var4 = 8;
           }
           if (var4 == param0) {
-            var5 = var5 + (this.payload[var3] & rf.field_a[var4]);
+            var5 = var5 + (this.payload[var3] & RasterEffectHelpers.field_a[var4]);
           } else {
-            var5 = var5 + (this.payload[var3] >> -param0 + var4 & rf.field_a[param0]);
+            var5 = var5 + (this.payload[var3] >> -param0 + var4 & RasterEffectHelpers.field_a[param0]);
           }
           return var5;
         }
@@ -47,19 +47,19 @@ final class BitPacketBuffer extends PacketBuffer {
         while (param0 > var4) {
           incrementValue$1 = var3;
           var3++;
-          var5Lifetime1 = var5Lifetime1 + ((this.payload[incrementValue$1] & rf.field_a[var4]) << param0 - var4);
+          var5Lifetime1 = var5Lifetime1 + ((this.payload[incrementValue$1] & RasterEffectHelpers.field_a[var4]) << param0 - var4);
           param0 = param0 - var4;
           var4 = 8;
         }
         if (var4 == param0) {
-          var5Lifetime1 = var5Lifetime1 + (this.payload[var3] & rf.field_a[var4]);
+          var5Lifetime1 = var5Lifetime1 + (this.payload[var3] & RasterEffectHelpers.field_a[var4]);
         } else {
-          var5Lifetime1 = var5Lifetime1 + (this.payload[var3] >> -param0 + var4 & rf.field_a[param0]);
+          var5Lifetime1 = var5Lifetime1 + (this.payload[var3] >> -param0 + var4 & RasterEffectHelpers.field_a[param0]);
         }
         return var5Lifetime1;
     }
 
-    final void a(int param0, byte[] param1, int param2, int param3) {
+    final void readCipheredBytes(int param0, byte[] param1, int param2, int param3) {
         int var5_int = 0;
         int fieldTemp$0 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -89,7 +89,7 @@ final class BitPacketBuffer extends PacketBuffer {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw oi.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -139,7 +139,7 @@ final class BitPacketBuffer extends PacketBuffer {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw oi.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -158,7 +158,7 @@ final class BitPacketBuffer extends PacketBuffer {
             this.beginBitAccess(true);
           }
         } catch (RuntimeException runtimeException) {
-          throw oi.wrapException((Throwable) ((Object) runtimeException), "bc.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) runtimeException), "bc.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -168,12 +168,12 @@ final class BitPacketBuffer extends PacketBuffer {
           field_v = (String) null;
           fieldTemp$0 = this.position;
           this.position = this.position + 1;
-          this.payload[fieldTemp$0] = (byte)(this.cipher.nextInt(IsaacCipher.a((int) param1, -92)) + param0);
+          this.payload[fieldTemp$0] = (byte)(this.cipher.nextInt(IsaacCipher.bitXor((int) param1, -92)) + param0);
           return;
         }
         int fieldTemp$1 = this.position;
         this.position = this.position + 1;
-        this.payload[fieldTemp$1] = (byte)(this.cipher.nextInt(IsaacCipher.a((int) param1, -92)) + param0);
+        this.payload[fieldTemp$1] = (byte)(this.cipher.nextInt(IsaacCipher.bitXor((int) param1, -92)) + param0);
     }
 
     public static void releaseStatics(int param0) {
@@ -190,7 +190,7 @@ final class BitPacketBuffer extends PacketBuffer {
     }
 
     static {
-        field_z = new a();
+        field_z = new ClientProtocolStage();
         field_x = "Quick Chat lobby";
         field_v = "<%0> wants to draw.";
     }

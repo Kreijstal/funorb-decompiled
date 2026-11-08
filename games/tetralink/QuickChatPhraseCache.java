@@ -1,0 +1,210 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class QuickChatPhraseCache {
+    private WeightedLruCache field_f;
+    private Archive field_c;
+    static String field_d;
+    static int field_a;
+    static UiComponent field_b;
+    static PcmStreamMixer field_g;
+    private Archive field_e;
+
+    public static void releaseStatics(int param0) {
+        if (param0 == 32768) {
+          field_b = null;
+          field_g = null;
+          field_d = null;
+          return;
+        }
+        QuickChatPhraseCache.releaseStatics(61);
+        field_b = null;
+        field_g = null;
+        field_d = null;
+    }
+
+    final static boolean isPublicChatInputOpen(int param0) {
+        if (!MenuScreen.field_e) {
+          return false;
+        }
+        if (param0 <= 79) {
+          field_b = (UiComponent) null;
+          if (SecondaryNodeDequeIterator.field_d == 0) {
+            return true;
+          }
+          return false;
+        }
+        if (SecondaryNodeDequeIterator.field_d == 0) {
+          return true;
+        }
+        return false;
+    }
+
+    final static String formatChatPrefix(int param0, ChatMessage param1) {
+        String stackIn_30_0 = null;
+        Object stackIn_33_0 = null;
+        StringBuilder stackIn_33_1 = null;
+        String stackIn_34_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        Object var2 = null;
+        Object var3 = null;
+        String var3_ref = null;
+        int var4 = 0;
+        String var5 = null;
+        Object var3Lifetime1;
+        Object var3Lifetime1Lifetime1;
+        var4 = TetraLink.field_J;
+        try {
+          var2 = null;
+          if (param0 != 18440) {
+            field_d = (String) null;
+          }
+          if (param1.field_e != null) {
+            var5 = param1.field_e;
+            var2 = var5;
+            var3 = var2;
+            var2 = var5;
+            var2 = var5;
+            if (param1.field_k == 1) {
+              var2 = "<img=0>" + var5;
+            }
+            if (param1.field_k == 2) {
+              var2 = "<img=1>" + (String) (var2);
+              var3Lifetime1 = var2;
+              var3Lifetime1Lifetime1 = var2;
+            }
+          }
+          var3_ref = "";
+          if (param1.field_i == 2) {
+            if (!param1.field_l) {
+              if (param1.field_g == 0 &&
+                0 == param1.field_s) {
+                var3_ref = SectorCacheStore.formatTemplate(new String[]{(String) (var2)}, GrowableIntList.field_b, 119);
+              } else {
+                var3_ref = SectorCacheStore.formatTemplate(new String[]{(String) (var2)}, IntrusiveNode.field_h, param0 ^ 18544);
+              }
+            }
+          } else {
+            if (0 == param1.field_i &&
+              GzipDecompressor.field_c) {
+              var3_ref = "[" + ReflectionCheck.field_v + "] ";
+            }
+            if (param1.field_i == 1) {
+              var3_ref = "[" + SectorCacheStore.formatTemplate(new String[]{param1.field_c}, GameKeyHandler.field_e, 127) + "] ";
+            }
+            if (param1.field_i == 4 &&
+              WeightedLruCache.field_h != null) {
+              var3_ref = "[" + WeightedLruCache.field_h + "] ";
+            }
+            if (param1.field_i == 3) {
+              var3_ref = "[#" + param1.field_c + "] ";
+            }
+            if (!param1.field_l) {
+              var3_ref = var3_ref + (String) (var2) + ": ";
+            }
+          }
+          stackIn_30_0 = var3_ref;
+          return stackIn_30_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_33_0 = var2;
+          stackIn_33_1 = new StringBuilder().append("u.D(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_34_2 = "null";
+          } else {
+            stackIn_34_2 = "{...}";
+          }
+          throw IndexedSpriteState.wrapException((Throwable) (stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+        }
+    }
+
+    final QuickChatPhraseDefinition getPhraseDefinition(int param0, int param1) {
+        QuickChatPhraseDefinition var3;
+        byte[] var4;
+        QuickChatPhraseDefinition var5;
+        QuickChatPhraseDefinition var6;
+        var3 = (QuickChatPhraseDefinition) (this.field_f.get((byte) 119, (long)param0));
+        if (var3 != null) {
+          return var3;
+        }
+        if (param0 < 32768) {
+          var4 = this.field_e.getFile(22, param0, 1);
+        } else {
+          var4 = this.field_c.getFile(-107, param0 & 32767, 1);
+        }
+        if (param1 < -125) {
+          var6 = new QuickChatPhraseDefinition();
+          if (var4 != null) {
+            var6.decode(new PacketBuffer(var4), 15067);
+          }
+          if (param0 >= 32768) {
+            var6.applyGlobalIds(25271);
+          }
+          this.field_f.put(var6, (long)param0, (byte) 50);
+          return var6;
+        }
+        this.getPhraseDefinition(-123, -16);
+        var5 = new QuickChatPhraseDefinition();
+        if (var4 != null) {
+          var5.decode(new PacketBuffer(var4), 15067);
+        }
+        if (param0 >= 32768) {
+          var5.applyGlobalIds(25271);
+        }
+        this.field_f.put(var5, (long)param0, (byte) 50);
+        return var5;
+    }
+
+    QuickChatPhraseCache(int param0, Archive param1, Archive param2, QuickChatContext param3) {
+        RuntimeException var5 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_10_2 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_13_2 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_16_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        this.field_f = new WeightedLruCache(64);
+        try {
+          this.field_c = param2;
+          this.field_e = param1;
+          if (this.field_e != null) {
+            this.field_e.getFileCount(-23126, 1);
+          }
+          if (null == this.field_c) {
+            return;
+          }
+          this.field_c.getFileCount(-23126, 1);
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_9_0 = var5;
+          stackIn_9_1 = new StringBuilder().append("u.<init>(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
+          }
+          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',');
+          if (param2 == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
+          }
+          stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',');
+          if (param3 == null) {
+            stackIn_16_2 = "null";
+          } else {
+            stackIn_16_2 = "{...}";
+          }
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+        }
+    }
+
+    static {
+        field_d = "Play free version";
+    }
+}

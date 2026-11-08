@@ -52,16 +52,16 @@ final class SecondaryNodeDequeIterator implements Iterator {
           this.field_f = null;
           this.field_g = this.field_e.field_e.secondaryNext;
         } catch (RuntimeException runtimeException) {
-          throw oi.wrapException((Throwable) ((Object) runtimeException), "sf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) runtimeException), "sf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static gd a(int param0, long param1) {
+    final static LobbyPlayerEntry findLobbyPlayer(int param0, long param1) {
         if (param0 == -18701) {
-          return (gd) (dg.field_g.findByKey(param1, param0 ^ -18702));
+          return (LobbyPlayerEntry) (WidgetStyleLayer.field_g.findByKey(param1, param0 ^ -18702));
         }
         SecondaryNodeDequeIterator.releaseStatics((byte) -94);
-        return (gd) (dg.field_g.findByKey(param1, param0 ^ -18702));
+        return (LobbyPlayerEntry) (WidgetStyleLayer.field_g.findByKey(param1, param0 ^ -18702));
     }
 
     static {

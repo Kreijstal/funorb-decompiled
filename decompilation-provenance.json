@@ -11164,17 +11164,17 @@
       "inputTreeSha256": "677647fb04955ef27f8d196cf967163c6383530e901df32ae6b76c80c5fea3e9",
       "sources": {
         "files": 355,
-        "sha256": "79bc25c308425f1bfb570687495818fbbe6d903ef4e05deded2350f67f2929b1"
+        "sha256": "d48b1f58773bdd6756050244ed1432d26851fa7154bf683e054420473b42aecb"
       },
       "dictionary": {
         "path": "decompilation/tetralink-naming.json",
-        "sha256": "45ce2fb752380383104fe872befdfe446407d414ec0391dcafd1563c92d07441"
+        "sha256": "6d3b7bc83a4e603a9bf9d2eb6a592b2c228aba014aeb84bf35c29724cf440236"
       },
       "readingGuide": {
         "path": "games/tetralink/README.md",
-        "sha256": "e8c7a7206477ea927a4d76773d96c96a5ded10a069a8eccd816154bd029c4d8a"
+        "sha256": "c0cf061b5cd7e258782afabf1854012d49bace74a4fdbdec1c3180891264cfc5"
       },
-      "rulesSha256": "d20690ae590d61e373317996a4460df8038bfd47d3ebd2cfe96577bca49aff14",
+      "rulesSha256": "52aae10e8dc46104d24129e20f7ce7c9c8c74abaf11766db4e1fd5aec34b661a",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
@@ -13297,7 +13297,7 @@
         },
         "publishedSources": {
           "files": 355,
-          "sha256": "79bc25c308425f1bfb570687495818fbbe6d903ef4e05deded2350f67f2929b1"
+          "sha256": "d48b1f58773bdd6756050244ed1432d26851fa7154bf683e054420473b42aecb"
         }
       },
       "tombracer": {

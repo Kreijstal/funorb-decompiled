@@ -1,0 +1,71 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+abstract class CacheEntry extends DualLinkNode {
+    static String field_A;
+    static int field_z;
+    static PcmSample[] field_y;
+    int field_t;
+    static Js5ArchiveManager field_u;
+    static long field_B;
+    static int[] field_w;
+    static UiComponent field_x;
+    static String field_v;
+    static int field_C;
+
+    CacheEntry(int param0) {
+        this.field_t = param0;
+    }
+
+    static long bitXor(long param0, long param1) {
+        return param0 ^ param1;
+    }
+
+    abstract Object getValue(int param0);
+
+    abstract boolean isSoftReference(int param0);
+
+    final static float sumSineOctaves(float param0, float param1, boolean param2) {
+        int var4 = 0;
+        float var3_float = 0.0f;
+        RuntimeException var3 = null;
+        int var5 = 0;
+        float stackIn_7_0 = 0.0f;
+        RuntimeException decompiledCaughtException = null;
+        var5 = TetraLink.field_J;
+        try {
+          var3_float = 0.0f;
+          for (var4 = 0; var4 < 8; var4++) {
+            var3_float = (float)((double)var3_float + (double)PendingListRequest.sampleOctaveNoise(param1, true) * Math.sin((double)((float)(1 << var4) * param0 + PendingListRequest.sampleOctaveNoise(PendingListRequest.sampleOctaveNoise(param1, true) + param1, true))));
+          }
+          if (param2) {
+            field_u = (Js5ArchiveManager) null;
+          }
+          stackIn_7_0 = var3_float;
+          return stackIn_7_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) var3), "mb.D(" + param0 + ',' + param1 + ',' + param2 + ')');
+        }
+    }
+
+    public static void releaseStatics(byte param0) {
+        field_v = null;
+        field_A = null;
+        field_x = null;
+        field_u = null;
+        if (param0 != -48) {
+          CacheEntry.sumSineOctaves(0.8539373278617859f, -0.7423967719078064f, true);
+        }
+        field_w = null;
+        field_y = null;
+    }
+
+    static {
+        field_A = "Show all private chat";
+        field_w = new int[8192];
+        field_B = 20000000L;
+        field_v = "Retry";
+    }
+}

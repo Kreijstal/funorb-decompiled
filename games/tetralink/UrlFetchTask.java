@@ -15,7 +15,7 @@ final class UrlFetchTask implements Runnable {
     private PacketBuffer field_g;
     private int field_c;
 
-    final synchronized boolean b(byte param0) {
+    final synchronized boolean poll(byte param0) {
         Throwable decompiledCaughtException = null;
         int var2 = 0;
         IOException var3 = null;
@@ -28,7 +28,7 @@ final class UrlFetchTask implements Runnable {
         }
         if (this.field_c == 0) {
           if (null == this.field_h) {
-            this.field_h = this.field_a.a(false, this.field_e);
+            this.field_h = this.field_a.requestUrlStream(false, this.field_e);
           }
           if (0 == this.field_h.field_d) {
             return false;
@@ -63,7 +63,7 @@ final class UrlFetchTask implements Runnable {
               var4 = var5.getOutputStream();
               var4.write(17);
               var6 = (CharSequence) ((Object) ("JAGGRAB " + this.field_e.getFile() + "\n\n"));
-              var4.write(q.a(-125, var6));
+              var4.write(LinkTextPainter.encodeSingleByteText(-125, var6));
               this.field_d = new DataInputStream(var5.getInputStream());
             }
             this.field_g.position = 0;
@@ -97,12 +97,12 @@ final class UrlFetchTask implements Runnable {
         field_j = null;
     }
 
-    final PacketBuffer a(byte param0) {
+    final PacketBuffer getCompletedResponse(byte param0) {
         if (this.field_c == 3) {
           return this.field_g;
         }
         if (param0 != 79) {
-          this.a((byte) -122);
+          this.getCompletedResponse((byte) -122);
           return null;
         }
         return null;
@@ -158,15 +158,15 @@ final class UrlFetchTask implements Runnable {
           this.field_a = param0;
           this.field_g = new PacketBuffer(param2);
         } catch (RuntimeException runtimeException) {
-          throw oi.wrapException((Throwable) ((Object) runtimeException), "un.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) runtimeException), "un.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final static ig a(int param0, Archive param1, int param2, int param3, Archive param4) {
+    final static CoverageBitmapFont loadSoundEffect(int param0, Archive param1, int param2, int param3, Archive param4) {
         RuntimeException var5 = null;
-        ig stackIn_2_0 = null;
+        CoverageBitmapFont stackIn_2_0 = null;
         Object stackIn_5_0 = null;
-        ig stackIn_7_0 = null;
+        CoverageBitmapFont stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -175,15 +175,15 @@ final class UrlFetchTask implements Runnable {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -29082) {
-            stackIn_2_0 = (ig) null;
+            stackIn_2_0 = (CoverageBitmapFont) null;
             return stackIn_2_0;
           }
-          if (ia.a(param3, param4, param2, -58)) {
-            stackIn_7_0 = SoundEffectLibrary.createBinaryFont(param0 + 28748, param1.a(param0 + 28976, param3, param2));
+          if (AccountTermsPanel.decodeSpriteSheetFromArchive(param3, param4, param2, -58)) {
+            stackIn_7_0 = SoundEffectLibrary.createBinaryFont(param0 + 28748, param1.getFile(param0 + 28976, param3, param2));
             return stackIn_7_0;
           }
           stackIn_5_0 = null;
-          return (ig) (stackIn_5_0);
+          return (CoverageBitmapFont) (stackIn_5_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
@@ -200,7 +200,7 @@ final class UrlFetchTask implements Runnable {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw oi.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 

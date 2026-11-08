@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ModelData extends vh {
+final class ModelData extends Renderable {
     byte[] field_m;
     byte[] field_x;
     byte[] field_n;
@@ -9,7 +9,7 @@ final class ModelData extends vh {
     short[] field_j;
     byte[] field_v;
     int[][] field_y;
-    io[] field_f;
+    StartupFlagsHelpers[] field_f;
     short[] field_r;
     private int[] field_p;
     byte[] field_z;
@@ -22,7 +22,7 @@ final class ModelData extends vh {
     short[] field_Q;
     short[] field_k;
     private int[] field_G;
-    ce[] field_o;
+    FaceNormal[] field_o;
     short[] field_D;
     int[] field_B;
     int[] field_R;
@@ -37,12 +37,12 @@ final class ModelData extends vh {
     short[] field_N;
     short[] field_l;
     byte[] field_J;
-    io[] field_w;
+    StartupFlagsHelpers[] field_w;
     byte field_s;
     int[] field_h;
 
     final void computeNormals() {
-        ce dupTemp$0 = null;
+        FaceNormal dupTemp$0 = null;
         int var1;
         int var2;
         int var3;
@@ -58,17 +58,17 @@ final class ModelData extends vh {
         int var13;
         int var14;
         int var15;
-        ce var16;
-        io var17;
-        io var18;
-        io var19;
+        FaceNormal var16;
+        StartupFlagsHelpers var17;
+        StartupFlagsHelpers var18;
+        StartupFlagsHelpers var19;
         int var1Lifetime1;
         if (this.field_f != null) {
           return;
         }
-        this.field_f = new io[this.field_E];
+        this.field_f = new StartupFlagsHelpers[this.field_E];
         for (var1 = 0; var1 < this.field_E; var1++) {
-          this.field_f[var1] = new io();
+          this.field_f[var1] = new StartupFlagsHelpers();
         }
         var1Lifetime1 = 0;
         while (true) {
@@ -109,9 +109,9 @@ final class ModelData extends vh {
               if (var15 != 0) {
                 if (var15 == 1) {
                   if (this.field_o == null) {
-                    this.field_o = new ce[this.field_K];
+                    this.field_o = new FaceNormal[this.field_K];
                   }
-                  dupTemp$0 = new ce();
+                  dupTemp$0 = new FaceNormal();
                   this.field_o[var1Lifetime1] = dupTemp$0;
                   var16 = dupTemp$0;
                   var16.field_g = var11;
@@ -214,12 +214,12 @@ final class ModelData extends vh {
         }
     }
 
-    final fc createModel(int param0, int param1, int param2, int param3, int param4) {
-        return (fc) ((Object) new Model(this, param0, param1, param2, param3, param4));
+    final ModelMeshBase createModel(int param0, int param1, int param2, int param3, int param4) {
+        return (ModelMeshBase) ((Object) new Model(this, param0, param1, param2, param3, param4));
     }
 
-    final static ModelData a(Archive param0, String param1, String param2) {
-        byte[] var3 = param0.a(param1, param2, true);
+    final static ModelData load(Archive param0, String param1, String param2) {
+        byte[] var3 = param0.getFileByName(param1, param2, true);
         if (var3 == null) {
           return null;
         }
@@ -465,15 +465,15 @@ final class ModelData extends vh {
           var54 = var2.readUnsignedByte((byte) -99);
           var55 = 0;
           if ((var54 & 1) != 0) {
-            var55 = var3.e((byte) 82);
+            var55 = var3.readSignedSmart((byte) 82);
           }
           var56 = 0;
           if ((var54 & 2) != 0) {
-            var56 = var4.e((byte) 82);
+            var56 = var4.readSignedSmart((byte) 82);
           }
           var57 = 0;
           if ((var54 & 4) != 0) {
-            var57 = var5.e((byte) 82);
+            var57 = var5.readSignedSmart((byte) 82);
           }
           this.field_R[var53] = var50 + var55;
           this.field_h[var53] = var51 + var56;
@@ -527,11 +527,11 @@ final class ModelData extends vh {
         for (var57Lifetime1 = 0; var57Lifetime1 < var10; var57Lifetime1++) {
           var58 = var3.readUnsignedByte((byte) -99);
           if (var58 == 1) {
-            var53Lifetime2 = var2.e((byte) 82) + var56Lifetime1;
+            var53Lifetime2 = var2.readSignedSmart((byte) 82) + var56Lifetime1;
             var56Lifetime1 = var53Lifetime2;
-            var54Lifetime1 = var2.e((byte) 82) + var56Lifetime1;
+            var54Lifetime1 = var2.readSignedSmart((byte) 82) + var56Lifetime1;
             var56Lifetime1 = var54Lifetime1;
-            var55Lifetime1 = var2.e((byte) 82) + var56Lifetime1;
+            var55Lifetime1 = var2.readSignedSmart((byte) 82) + var56Lifetime1;
             var56Lifetime1 = var55Lifetime1;
             this.field_C[var57Lifetime1] = var53Lifetime2;
             this.field_O[var57Lifetime1] = var54Lifetime1;
@@ -548,7 +548,7 @@ final class ModelData extends vh {
           }
           if (var58 == 2) {
             var54Lifetime1 = var55Lifetime1;
-            var55Lifetime1 = var2.e((byte) 82) + var56Lifetime1;
+            var55Lifetime1 = var2.readSignedSmart((byte) 82) + var56Lifetime1;
             var56Lifetime1 = var55Lifetime1;
             this.field_C[var57Lifetime1] = var53Lifetime2;
             this.field_O[var57Lifetime1] = var54Lifetime1;
@@ -559,7 +559,7 @@ final class ModelData extends vh {
           }
           if (var58 == 3) {
             var53Lifetime2 = var55Lifetime1;
-            var55Lifetime1 = var2.e((byte) 82) + var56Lifetime1;
+            var55Lifetime1 = var2.readSignedSmart((byte) 82) + var56Lifetime1;
             var56Lifetime1 = var55Lifetime1;
             this.field_C[var57Lifetime1] = var53Lifetime2;
             this.field_O[var57Lifetime1] = var54Lifetime1;
@@ -572,7 +572,7 @@ final class ModelData extends vh {
             var59 = var53Lifetime2;
             var53Lifetime2 = var54Lifetime1;
             var54Lifetime1 = var59;
-            var55Lifetime1 = var2.e((byte) 82) + var56Lifetime1;
+            var55Lifetime1 = var2.readSignedSmart((byte) 82) + var56Lifetime1;
             var56Lifetime1 = var55Lifetime1;
             this.field_C[var57Lifetime1] = var53Lifetime2;
             this.field_O[var57Lifetime1] = var54Lifetime1;
@@ -805,15 +805,15 @@ final class ModelData extends vh {
           var39 = var4.readUnsignedByte((byte) -99);
           var40 = 0;
           if ((var39 & 1) != 0) {
-            var40 = var5.e((byte) 82);
+            var40 = var5.readSignedSmart((byte) 82);
           }
           var41 = 0;
           if ((var39 & 2) != 0) {
-            var41 = var6.e((byte) 82);
+            var41 = var6.readSignedSmart((byte) 82);
           }
           var42 = 0;
           if ((var39 & 4) != 0) {
-            var42 = var7.e((byte) 82);
+            var42 = var7.readSignedSmart((byte) 82);
           }
           this.field_R[var38] = var35 + var40;
           this.field_h[var38] = var36 + var41;
@@ -872,11 +872,11 @@ final class ModelData extends vh {
         for (var42Lifetime1 = 0; var42Lifetime1 < var10; var42Lifetime1++) {
           var43 = var5.readUnsignedByte((byte) -99);
           if (var43 == 1) {
-            var38Lifetime2 = var4.e((byte) 82) + var41Lifetime1;
+            var38Lifetime2 = var4.readSignedSmart((byte) 82) + var41Lifetime1;
             var41Lifetime1 = var38Lifetime2;
-            var39Lifetime2 = var4.e((byte) 82) + var41Lifetime1;
+            var39Lifetime2 = var4.readSignedSmart((byte) 82) + var41Lifetime1;
             var41Lifetime1 = var39Lifetime2;
-            var40Lifetime1 = var4.e((byte) 82) + var41Lifetime1;
+            var40Lifetime1 = var4.readSignedSmart((byte) 82) + var41Lifetime1;
             var41Lifetime1 = var40Lifetime1;
             this.field_C[var42Lifetime1] = var38Lifetime2;
             this.field_O[var42Lifetime1] = var39Lifetime2;
@@ -893,7 +893,7 @@ final class ModelData extends vh {
           }
           if (var43 == 2) {
             var39Lifetime2 = var40Lifetime1;
-            var40Lifetime1 = var4.e((byte) 82) + var41Lifetime1;
+            var40Lifetime1 = var4.readSignedSmart((byte) 82) + var41Lifetime1;
             var41Lifetime1 = var40Lifetime1;
             this.field_C[var42Lifetime1] = var38Lifetime2;
             this.field_O[var42Lifetime1] = var39Lifetime2;
@@ -904,7 +904,7 @@ final class ModelData extends vh {
           }
           if (var43 == 3) {
             var38Lifetime2 = var40Lifetime1;
-            var40Lifetime1 = var4.e((byte) 82) + var41Lifetime1;
+            var40Lifetime1 = var4.readSignedSmart((byte) 82) + var41Lifetime1;
             var41Lifetime1 = var40Lifetime1;
             this.field_C[var42Lifetime1] = var38Lifetime2;
             this.field_O[var42Lifetime1] = var39Lifetime2;
@@ -917,7 +917,7 @@ final class ModelData extends vh {
             var44 = var38Lifetime2;
             var38Lifetime2 = var39Lifetime2;
             var39Lifetime2 = var44;
-            var40Lifetime1 = var4.e((byte) 82) + var41Lifetime1;
+            var40Lifetime1 = var4.readSignedSmart((byte) 82) + var41Lifetime1;
             var41Lifetime1 = var40Lifetime1;
             this.field_C[var42Lifetime1] = var38Lifetime2;
             this.field_O[var42Lifetime1] = var39Lifetime2;

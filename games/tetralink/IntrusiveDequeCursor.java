@@ -31,7 +31,7 @@ final class IntrusiveDequeCursor {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw oi.wrapException((Throwable) ((Object) var2_ref), "tg.B(" + param0 + ')');
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) var2_ref), "tg.B(" + param0 + ')');
         }
     }
 
@@ -57,7 +57,7 @@ final class IntrusiveDequeCursor {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw oi.wrapException((Throwable) ((Object) var2_ref), "tg.E(" + param0 + ')');
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) var2_ref), "tg.E(" + param0 + ')');
         }
     }
 
@@ -100,11 +100,11 @@ final class IntrusiveDequeCursor {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw oi.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
-    final IntrusiveNode a(int param0, IntrusiveNode param1) {
+    final IntrusiveNode startForwardFrom(int param0, IntrusiveNode param1) {
         IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_5_0 = null;
@@ -145,7 +145,7 @@ final class IntrusiveDequeCursor {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw oi.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -158,7 +158,7 @@ final class IntrusiveDequeCursor {
         try {
           var2 = this.current;
           if (param0 != -58) {
-            IntrusiveDequeCursor.a(87);
+            IntrusiveDequeCursor.releaseStatics(87);
           }
           if (this.deque.sentinel == var2) {
             this.current = null;
@@ -171,7 +171,7 @@ final class IntrusiveDequeCursor {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw oi.wrapException((Throwable) ((Object) var2_ref), "tg.G(" + param0 + ')');
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) var2_ref), "tg.G(" + param0 + ')');
         }
     }
 
@@ -196,7 +196,7 @@ final class IntrusiveDequeCursor {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw oi.wrapException((Throwable) ((Object) var2_ref), "tg.F(" + param0 + ')');
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) var2_ref), "tg.F(" + param0 + ')');
         }
     }
 
@@ -219,11 +219,11 @@ final class IntrusiveDequeCursor {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw oi.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         try {
           field_c = null;
           field_d = null;
@@ -231,11 +231,11 @@ final class IntrusiveDequeCursor {
             field_f = 18;
           }
         } catch (RuntimeException runtimeException) {
-          throw oi.wrapException((Throwable) ((Object) runtimeException), "tg.D(" + param0 + ')');
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) runtimeException), "tg.D(" + param0 + ')');
         }
     }
 
-    final static void a(int param0, hl param1, hl param2, BitmapFont param3, hl param4, hl param5, hl param6, hl param7, boolean param8, hl param9, hl param10, bl param11) {
+    final static void initializeChatWidgets(int param0, UiComponent param1, UiComponent param2, BitmapFont param3, UiComponent param4, UiComponent param5, UiComponent param6, UiComponent param7, boolean param8, UiComponent param9, UiComponent param10, VerticalScrollbar param11) {
         String stackIn_24_0 = null;
         int stackIn_28_0 = 0;
         RuntimeException stackIn_38_0 = null;
@@ -266,24 +266,24 @@ final class IntrusiveDequeCursor {
         int[] var14 = null;
         int[] var15 = null;
         Sprite[] var16 = null;
-        hl var17 = null;
+        UiComponent var17 = null;
         int var18 = 0;
         String var19 = null;
         int var20 = 0;
         var20 = TetraLink.field_J;
         try {
-          pg.field_f[2] = 9474303;
-          pg.field_f[0] = 16764000;
-          we.field_k = param3;
-          pg.field_f[1] = 6356832;
-          ll.field_A = param1;
-          go.field_c = param8;
-          pg.field_f[3] = 16736511;
-          pg.field_f[4] = 16711935;
-          pg.field_f[4] = 16711935;
+          AudioPumpThread.field_f[2] = 9474303;
+          AudioPumpThread.field_f[0] = 16764000;
+          CachedTextLayout.field_k = param3;
+          AudioPumpThread.field_f[1] = 6356832;
+          ArchiveRequest.field_A = param1;
+          GzipDecompressor.field_c = param8;
+          AudioPumpThread.field_f[3] = 16736511;
+          AudioPumpThread.field_f[4] = 16711935;
+          AudioPumpThread.field_f[4] = 16711935;
           UrlFetchTask.field_j[0] = 16764000;
           UrlFetchTask.field_j[2] = 16736352;
-          t.field_l = 8421504;
+          ArchiveIndex.field_l = 8421504;
           UrlFetchTask.field_j[1] = 6356832;
           UrlFetchTask.field_j[3] = 16736511;
           var12 = new Sprite(4, 4);
@@ -296,26 +296,26 @@ final class IntrusiveDequeCursor {
           var14[5] = 7368816;
           var16 = new Sprite[9];
           var16[4] = var12;
-          IsaacCipher.field_a = new hl(0L, param4);
-          IterableNodeHashTable.field_f = new hl(0L, param10);
-          IsaacCipher.field_a.a((byte) 73, IterableNodeHashTable.field_f);
-          var17 = new hl(0L, (hl) null);
+          IsaacCipher.field_a = new UiComponent(0L, param4);
+          IterableNodeHashTable.field_f = new UiComponent(0L, param10);
+          IsaacCipher.field_a.addChild((byte) 73, IterableNodeHashTable.field_f);
+          var17 = new UiComponent(0L, (UiComponent) null);
           var17.field_fb = new IntrusiveDeque();
-          id.field_M = new rb(0L, var17, param5, param11);
-          IterableNodeHashTable.field_f.a((byte) -97, id.field_M);
-          pj.field_d = new hl(0L, param6);
-          IterableNodeHashTable.field_f.a((byte) -123, pj.field_d);
-          in.field_g = new hl(0L, param7);
-          in.field_g.field_Ib = we.field_k;
-          pj.field_d.a((byte) 89, in.field_g);
-          pj.field_d.c((byte) 84);
-          ba.field_L = new hl(0L, (hl) null);
-          ba.field_L.field_Eb = var16;
-          pj.field_d.a((byte) -124, ba.field_L);
-          el.field_oc = new hl[5];
-          nj.field_f = new hl[5];
-          fh.field_f = new hl[5];
-          og.field_o = new hl[5];
+          TriangleMesh.field_M = new ScrollPane(0L, var17, param5, param11);
+          IterableNodeHashTable.field_f.addChild((byte) -97, TriangleMesh.field_M);
+          TopLevelContainerHelpers.field_d = new UiComponent(0L, param6);
+          IterableNodeHashTable.field_f.addChild((byte) -123, TopLevelContainerHelpers.field_d);
+          PageReloadHelpers.field_g = new UiComponent(0L, param7);
+          PageReloadHelpers.field_g.field_Ib = CachedTextLayout.field_k;
+          TopLevelContainerHelpers.field_d.addChild((byte) 89, PageReloadHelpers.field_g);
+          TopLevelContainerHelpers.field_d.markTreeDirty((byte) 84);
+          MessageDialogContent.field_L = new UiComponent(0L, (UiComponent) null);
+          MessageDialogContent.field_L.field_Eb = var16;
+          TopLevelContainerHelpers.field_d.addChild((byte) -124, MessageDialogContent.field_L);
+          LobbyGame.field_oc = new UiComponent[5];
+          KeyEventHelpers.field_f = new UiComponent[5];
+          HuffmanCodec.field_f = new UiComponent[5];
+          CheckboxPainter.field_o = new UiComponent[5];
           var18 = param0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (5 <= var18))) {
@@ -324,35 +324,35 @@ final class IntrusiveDequeCursor {
               boolean decompiledFrameRemainder0 = true;
               if (stackIn_28_0 != 0) {
                 if (var18 == 1 &&
-                  go.field_c) {
-                  var19 = rl.field_e;
+                  GzipDecompressor.field_c) {
+                  var19 = KeyHandlerHelpers.field_e;
                 } else {
                   decompiledFrameRemainder0 = (var18 == 2);
                   if (decompiledFrameRemainder0) {
-                    var19 = im.field_b;
+                    var19 = SoundMixerHelpers.field_b;
                   }
                 }
               } else {
-                if (go.field_c) {
-                  stackIn_24_0 = nm.field_v;
+                if (GzipDecompressor.field_c) {
+                  stackIn_24_0 = ReflectionCheck.field_v;
                 } else {
-                  stackIn_24_0 = r.field_v;
+                  stackIn_24_0 = MusicCrossfadeStream.field_v;
                 }
                 var19 = stackIn_24_0;
               }
               if (decompiledFrameRemainder0) {
-                nj.field_f[var18] = new hl(0L, param9);
-                el.field_oc[var18] = new hl(0L, ll.field_A, var19);
-                fh.field_f[var18] = new hl(0L, (hl) null);
-                fh.field_f[var18].field_J = 1;
-                og.field_o[var18] = new hl(0L, ll.field_A);
-                og.field_o[var18].field_J = 1;
-                nj.field_f[var18].a((byte) -88, el.field_oc[var18]);
-                nj.field_f[var18].a((byte) 14, fh.field_f[var18]);
-                nj.field_f[var18].a((byte) -106, og.field_o[var18]);
-                nj.field_f[var18].c((byte) -96);
-                IsaacCipher.field_a.a((byte) -111, nj.field_f[var18]);
-                v.field_r = v.field_r + 1;
+                KeyEventHelpers.field_f[var18] = new UiComponent(0L, param9);
+                LobbyGame.field_oc[var18] = new UiComponent(0L, ArchiveRequest.field_A, var19);
+                HuffmanCodec.field_f[var18] = new UiComponent(0L, (UiComponent) null);
+                HuffmanCodec.field_f[var18].field_J = 1;
+                CheckboxPainter.field_o[var18] = new UiComponent(0L, ArchiveRequest.field_A);
+                CheckboxPainter.field_o[var18].field_J = 1;
+                KeyEventHelpers.field_f[var18].addChild((byte) -88, LobbyGame.field_oc[var18]);
+                KeyEventHelpers.field_f[var18].addChild((byte) 14, HuffmanCodec.field_f[var18]);
+                KeyEventHelpers.field_f[var18].addChild((byte) -106, CheckboxPainter.field_o[var18]);
+                KeyEventHelpers.field_f[var18].markTreeDirty((byte) -96);
+                IsaacCipher.field_a.addChild((byte) -111, KeyEventHelpers.field_f[var18]);
+                QueuedListRequest.field_r = QueuedListRequest.field_r + 1;
               }
               var18++;
               continue;
@@ -360,16 +360,16 @@ final class IntrusiveDequeCursor {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            nc.field_e = new hl(0L, param2);
-            nc.field_e.field_jb = bd.field_f;
-            IsaacCipher.field_a.a((byte) 47, nc.field_e);
-            stackIn_28_0 = r.d(0) ? 1 : 0;
+            NameAlphabetTable.field_e = new UiComponent(0L, param2);
+            NameAlphabetTable.field_e.field_jb = RasterTargetHelpers.field_f;
+            IsaacCipher.field_a.addChild((byte) 47, NameAlphabetTable.field_e);
+            stackIn_28_0 = MusicCrossfadeStream.isLoginReplyPending(0) ? 1 : 0;
           }
           if (stackIn_28_0 != 0 &&
-            !cd.field_a) {
+            !MenuLabelGlobals.field_a) {
             return;
           }
-          bk.field_e = new lb(0, 0, 0, 0);
+          TextLayoutLine.field_e = new DateOfBirthPanel(0, 0, 0, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -435,7 +435,7 @@ final class IntrusiveDequeCursor {
           } else {
             stackIn_75_2 = "{...}";
           }
-          throw oi.wrapException((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(')').toString());
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(')').toString());
         }
     }
 

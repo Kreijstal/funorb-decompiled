@@ -6,7 +6,7 @@ final class DisplayModeEnumerator implements com.ms.directX.IEnumModesCallback {
     private static int field_b;
     private static int[] field_c;
 
-    final int[] a(byte param0) {
+    final int[] enumerateDisplayModes(byte param0) {
         this.field_a.enumDisplayModes(0, (com.ms.directX.DDSurfaceDesc) null, (com.ms.com.IUnknown) null, (com.ms.directX.IEnumModesCallback) (this));
         field_c = new int[field_b];
         field_b = 0;
@@ -55,7 +55,7 @@ final class DisplayModeEnumerator implements com.ms.directX.IEnumModesCallback {
         this.field_a.initialize((com.ms.com._Guid) null);
     }
 
-    final void a(int param0, int param1, int param2, int param3, java.awt.Frame param4, int param5) {
+    final void enterFullscreen(int param0, int param1, int param2, int param3, java.awt.Frame param4, int param5) {
         param4.setVisible(true);
         com.ms.awt.WComponentPeer var7 = (com.ms.awt.WComponentPeer) null;
         int var8 = var7.getHwnd();

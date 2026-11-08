@@ -1,0 +1,106 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class SettingsCookieHelpers {
+    static String field_b;
+    static int field_a;
+    static int field_c;
+
+    public static void releaseStatics(int param0) {
+        if (param0 != 0) {
+          SettingsCookieHelpers.releaseStatics(-99);
+          field_b = null;
+          return;
+        }
+        field_b = null;
+    }
+
+    final static void updateLobbyFrame(boolean param0, int param1, int param2, boolean param3, boolean param4, int param5, int param6, int param7, int param8, boolean param9, int param10, boolean param11) {
+        int var12 = -16 % ((param1 + 80) / 43);
+        LobbyUpdateHelpers.layoutAndUpdateLobby(16777215, param4, param2, param0, param5, 16777215, param10, param9, param8, param7, param6, -869, param3, param11);
+    }
+
+    final static void resetLoginState(int param0) {
+        MenuThemeHelpers.field_f = false;
+        if (param0 <= -10) {
+          QuickChatCategory.field_v = false;
+          ArchiveIndex.setPendingMenuAction(-1, 0);
+          PasswordLengthHelpers.field_a = HotspotTextWidget.field_Q;
+          AnimationPlayer.field_d = HotspotTextWidget.field_Q;
+          return;
+        }
+        field_c = 70;
+        QuickChatCategory.field_v = false;
+        ArchiveIndex.setPendingMenuAction(-1, 0);
+        PasswordLengthHelpers.field_a = HotspotTextWidget.field_Q;
+        AnimationPlayer.field_d = HotspotTextWidget.field_Q;
+    }
+
+    final static String readSettingsCookie(java.applet.Applet param0, byte param1) {
+        try {
+          RuntimeException var2 = null;
+          String var3 = null;
+          String var4 = null;
+          String[] var5 = null;
+          int var6 = 0;
+          int var7 = 0;
+          int var8 = 0;
+          String var9 = null;
+          String stackIn_6_0 = null;
+          String stackIn_13_0 = null;
+          String stackIn_15_0 = null;
+          RuntimeException stackIn_18_0 = null;
+          StringBuilder stackIn_18_1 = null;
+          String stackIn_19_2 = null;
+          Throwable decompiledCaughtException = null;
+          Throwable var2_ref = null;
+          int var6Lifetime1;
+          var8 = TetraLink.field_J;
+          try {
+            try {
+              var9 = param0.getParameter("cookieprefix");
+              var3 = var9 + "settings";
+              var4 = (String) (JavaScriptBridge.callJavaScript((byte) 90, "getcookies", param0));
+              var5 = TextLayout.split(var4, ';', 783);
+              for (var6 = 0; var5.length > var6; var6++) {
+                var7 = var5[var6].indexOf('=');
+                if (0 <= var7 &&
+                  var5[var6].substring(0, var7).trim().equals(var3)) {
+                  stackIn_6_0 = var5[var6].substring(1 + var7).trim();
+                  return stackIn_6_0;
+                }
+              }
+              var6Lifetime1 = 92 / ((-37 - param1) / 32);
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var2_ref = decompiledCaughtException;
+            }
+            if (null == FullscreenCanvasHelpers.field_s) {
+              stackIn_15_0 = param0.getParameter("settings");
+              return stackIn_15_0;
+            }
+            stackIn_13_0 = FullscreenCanvasHelpers.field_s;
+            return stackIn_13_0;
+          } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            var2 = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_18_0 = var2;
+            stackIn_18_1 = new StringBuilder().append("dd.A(");
+            if (param0 == null) {
+              stackIn_19_2 = "null";
+            } else {
+              stackIn_19_2 = "{...}";
+            }
+            throw IndexedSpriteState.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
+          }
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+          throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+          throw new RuntimeException(decompiledCheckedException);
+        }
+    }
+
+    static {
+        field_b = "Public chat is unavailable while setting up a rated game.";
+    }
+}

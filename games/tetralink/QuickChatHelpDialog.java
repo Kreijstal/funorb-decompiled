@@ -1,0 +1,240 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class QuickChatHelpDialog extends UiComponent {
+    static String field_Qb;
+    private UiComponent field_Ob;
+    static IntrusiveDeque field_Sb;
+    static String[] field_Rb;
+    static String field_Kb;
+    static int field_Nb;
+    static int field_Mb;
+    static BitPacketBuffer field_Lb;
+    static PlatformTaskDispatcher field_Pb;
+
+    final boolean updateAndCheckDismissed(int param0, boolean param1) {
+        boolean stackIn_9_0 = false;
+        this.updateInput(0, true);
+        if (param0 != -20728) {
+          field_Qb = (String) null;
+        }
+        stackIn_9_0 = ((NameAvailabilityValidator.field_t != 0 &&
+          this.field_F == 0) ||
+          this.field_Ob.field_F != 0);
+        return stackIn_9_0;
+    }
+
+    final static void detectMaxMemoryMb(byte param0) {
+        try {
+          int decompiledRegionSelector0 = 0;
+          Throwable decompiledCaughtException = null;
+          java.lang.reflect.Method var1 = null;
+          Exception var1_ref = null;
+          Runtime var2 = null;
+          Throwable var2_ref = null;
+          Long var3 = null;
+          Object[] var4 = null;
+          try {
+            var1 = Runtime.class.getMethod("maxMemory", new Class[]{});
+            if (param0 != -63) {
+              return;
+            }
+            if (var1 != null) {
+              try {
+                var2 = Runtime.getRuntime();
+                var4 = (Object[]) null;
+                var3 = (Long) (var1.invoke((Object) (var2), (Object[]) null));
+                TextureCache.field_a = (int)(var3.longValue() / 1048576L) + 1;
+                decompiledRegionSelector0 = 0;
+              } catch (java.lang.Throwable decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                var2_ref = decompiledCaughtException;
+                decompiledRegionSelector0 = 1;
+              }
+              if (decompiledRegionSelector0 == 0) {
+              }
+            }
+          } catch (java.lang.Exception decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            var1_ref = (Exception) (Object) decompiledCaughtException;
+          }
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+          throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+          throw new RuntimeException(decompiledCheckedException);
+        }
+    }
+
+    public static void releaseStatics(int param0) {
+        field_Pb = null;
+        field_Rb = null;
+        field_Qb = null;
+        if (param0 != 2105376) {
+          QuickChatHelpDialog.detectMaxMemoryMb((byte) 78);
+        }
+        field_Kb = null;
+        field_Lb = null;
+        field_Sb = null;
+    }
+
+    final static int submitAccountCreation(int param0, boolean param1, String param2, String param3, String param4, int param5, int param6) {
+        ConditionalTextValue var7 = null;
+        RuntimeException var7_ref = null;
+        ConditionalTextValue var8 = null;
+        int stackIn_2_0 = 0;
+        int stackIn_4_0 = 0;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_8_2 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_11_2 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_14_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          var7 = new ConditionalTextValue(param2);
+          if (param6 != -8769) {
+            stackIn_2_0 = -114;
+            return stackIn_2_0;
+          }
+          var8 = new ConditionalTextValue(param3);
+          stackIn_4_0 = NumericDateInputWidget.performAccountServerRequest((byte) 98, param4, var7, param0, param5, param1, var8);
+          return stackIn_4_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var7_ref = decompiledCaughtException;
+          stackIn_7_0 = var7_ref;
+          stackIn_7_1 = new StringBuilder().append("nd.C(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
+          }
+          stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',');
+          if (param3 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
+          }
+          stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',');
+          if (param4 == null) {
+            stackIn_14_2 = "null";
+          } else {
+            stackIn_14_2 = "{...}";
+          }
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+        }
+    }
+
+    QuickChatHelpDialog(UiComponent param0, UiComponent param1, UiComponent param2, UiComponent param3, UiComponent param4, UiComponent param5) {
+        int var12 = 0;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_11_2 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_14_2 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_17_2 = null;
+        StringBuilder stackIn_19_1 = null;
+        String stackIn_20_2 = null;
+        StringBuilder stackIn_22_1 = null;
+        String stackIn_23_2 = null;
+        StringBuilder stackIn_25_1 = null;
+        String stackIn_26_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var7 = null;
+        UiComponent var8 = null;
+        UiComponent var9 = null;
+        int var10 = 0;
+        int var11 = 0;
+        UiComponent var13 = null;
+        UiComponent var14 = null;
+        int var15 = 0;
+        UiComponent var17 = null;
+        int var10Lifetime1;
+        try {
+          var17 = new UiComponent(0L, param1, ProxySocketConnector.field_m.toUpperCase());
+          var17.field_xb = 1;
+          this.field_Ob = new UiComponent(0L, param2);
+          var8 = new UiComponent(0L, param3);
+          var9 = new UiComponent(0L, param3, SocketConnector.field_h);
+          var9.field_xb = 1;
+          var10 = 50;
+          var11 = 0;
+          for (var12 = 0; var12 < NetworkGameClient.field_C.length; var12++) {
+            var13 = new UiComponent(0L, param3, TextMetricsGlobals.field_d[var12]);
+            var14 = new UiComponent(0L, param3, NetworkGameClient.field_C[var12]);
+            var15 = param3.field_Ib.textWidth(NetworkGameClient.field_C[var12]);
+            if (var15 > var11) {
+              var11 = var15;
+            }
+            var13.setBounds((byte) -112, 65, var10, 15, 20);
+            var14.setBounds((byte) -92, 640, var10, 15, 90);
+            var8.addChild((byte) 69, var13);
+            var8.addChild((byte) -107, var14);
+            var10 += 30;
+          }
+          var17.setBounds((byte) -116, 20 + var11 + 90, 0, 24, 0);
+          var10 += 15;
+          this.setBounds((byte) -101, var17.field_Hb, 100, var17.field_R + var10, 100);
+          this.field_Ob.setBounds((byte) -121, 15, 5, 15, -20 + var17.field_Hb);
+          var8.setBounds((byte) -128, this.field_Hb, var17.field_R, -var17.field_R + this.field_R, 0);
+          var9.setBounds((byte) -94, this.field_Hb, 20, 15, 0);
+          var8.field_Eb = Archive.buildNineSliceSprites(2105376, 3, 8421504, 16, 11579568, var8.field_R);
+          var17.addChild((byte) -102, this.field_Ob);
+          var8.addChild((byte) 58, var9);
+          this.addChild((byte) -86, var17);
+          this.addChild((byte) 78, var8);
+          var10Lifetime1 = 240 - (this.field_R >> 1);
+          this.field_M = 320 - (this.field_Hb >> 1);
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var7 = decompiledCaughtException;
+          stackIn_10_0 = var7;
+          stackIn_10_1 = new StringBuilder().append("nd.<init>(");
+          if (param0 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
+          }
+          stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',');
+          if (param1 == null) {
+            stackIn_14_2 = "null";
+          } else {
+            stackIn_14_2 = "{...}";
+          }
+          stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',');
+          if (param2 == null) {
+            stackIn_17_2 = "null";
+          } else {
+            stackIn_17_2 = "{...}";
+          }
+          stackIn_19_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',');
+          if (param3 == null) {
+            stackIn_20_2 = "null";
+          } else {
+            stackIn_20_2 = "{...}";
+          }
+          stackIn_22_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',');
+          if (param4 == null) {
+            stackIn_23_2 = "null";
+          } else {
+            stackIn_23_2 = "{...}";
+          }
+          stackIn_25_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',');
+          if (param5 == null) {
+            stackIn_26_2 = "null";
+          } else {
+            stackIn_26_2 = "{...}";
+          }
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+        }
+    }
+
+    static {
+        field_Qb = "Show all lobby chat";
+        field_Kb = "Waiting for fonts";
+        field_Sb = new IntrusiveDeque();
+    }
+}

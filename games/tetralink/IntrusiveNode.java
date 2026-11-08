@@ -16,7 +16,7 @@ class IntrusiveNode {
     static String field_g;
     static String field_h;
 
-    static int a(int param0, int param1) {
+    static int bitOr(int param0, int param1) {
         return param0 | param1;
     }
 

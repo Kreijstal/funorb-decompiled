@@ -7,40 +7,40 @@ abstract class RasterBuffer {
     static String field_d;
     int field_h;
     static String field_a;
-    static db field_e;
+    static QuickChatCommandType field_e;
     int field_j;
     static long field_f;
     java.awt.Image field_c;
     static String field_b;
     static int field_k;
 
-    abstract void a(java.awt.Component param0, int param1, int param2, int param3);
+    abstract void initialize(java.awt.Component param0, int param1, int param2, int param3);
 
-    final static void a(boolean param0) {
-        ci.field_y[47] = 73;
-        ci.field_y[93] = 43;
-        ci.field_y[46] = 72;
-        ci.field_y[520] = 59;
-        ci.field_y[192] = 28;
-        ci.field_y[222] = 58;
-        ci.field_y[61] = 27;
-        ci.field_y[45] = 26;
-        ci.field_y[44] = 71;
-        ci.field_y[59] = 57;
-        ci.field_y[92] = 74;
-        ci.field_y[91] = 42;
+    final static void initializeKeyCodeMap(boolean param0) {
+        PasswordFieldPainter.field_y[47] = 73;
+        PasswordFieldPainter.field_y[93] = 43;
+        PasswordFieldPainter.field_y[46] = 72;
+        PasswordFieldPainter.field_y[520] = 59;
+        PasswordFieldPainter.field_y[192] = 28;
+        PasswordFieldPainter.field_y[222] = 58;
+        PasswordFieldPainter.field_y[61] = 27;
+        PasswordFieldPainter.field_y[45] = 26;
+        PasswordFieldPainter.field_y[44] = 71;
+        PasswordFieldPainter.field_y[59] = 57;
+        PasswordFieldPainter.field_y[92] = 74;
+        PasswordFieldPainter.field_y[91] = 42;
         if (param0) {
           byte[] var2 = (byte[]) null;
           RasterBuffer.encodeTextSlice((CharSequence) null, 104, -100, (byte[]) null, -8, (byte) 44);
         }
     }
 
-    final void a(int param0) {
+    final void makeRasterTarget(int param0) {
         int var2 = -92 % ((param0 + 69) / 41);
         SoftwareRasterizer.setTarget(this.field_g, this.field_h, this.field_j);
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void updateLobbyAndFlushRequests(boolean param0, int param1) {
         int var2;
         int stackIn_8_0 = 0;
         boolean stackIn_10_0 = false;
@@ -55,12 +55,12 @@ abstract class RasterBuffer {
         int stackIn_14_9;
         int stackIn_14_10;
         boolean stackIn_16_11 = false;
-        sk.b(-117);
+        SectorCacheStore.tickLobbyHighlights(-117);
         if (param1 >= -26) {
-          RasterBuffer.a(true, -116);
+          RasterBuffer.updateLobbyAndFlushRequests(true, -116);
         }
-        if (null != qb.field_N) {
-          stackIn_8_0 = (ja.b(false, qb.field_N.field_jc)) ? 1 : 0;
+        if (null != AccountWelcomePanel.field_N) {
+          stackIn_8_0 = (TextureCache.isTwoPlayerCount(false, AccountWelcomePanel.field_N.field_jc)) ? 1 : 0;
         } else {
           stackIn_8_0 = 0;
         }
@@ -68,31 +68,31 @@ abstract class RasterBuffer {
         stackIn_10_0 = false;
         stackIn_10_1 = 77;
         stackIn_10_2 = 15;
-        stackIn_11_3 = (50 >= bd.field_e) ? false : true;
+        stackIn_11_3 = (50 >= RasterTargetHelpers.field_e) ? false : true;
         stackIn_14_4 = param0;
-        stackIn_14_5 = hc.field_p;
+        stackIn_14_5 = PacketDiagnosticsHelpers.field_p;
         stackIn_14_6 = 0;
         stackIn_14_7 = 14;
         stackIn_14_8 = 13;
         stackIn_14_9 = var2;
         stackIn_14_10 = 11;
-        stackIn_16_11 = (ph.field_s) || (sj.field_a);
-        dd.a(stackIn_10_0, stackIn_10_1, stackIn_10_2, stackIn_11_3, stackIn_14_4, stackIn_14_5, stackIn_14_6, stackIn_14_7, stackIn_14_8, stackIn_14_9 != 0, stackIn_14_10, stackIn_16_11);
-        if (uf.field_b) {
-          nd.field_Lb.writeCipheredByte(57, (byte) -92);
-          uf.field_b = false;
+        stackIn_16_11 = (NetworkGameClient.field_s) || (AccountServerResult.field_a);
+        SettingsCookieHelpers.updateLobbyFrame(stackIn_10_0, stackIn_10_1, stackIn_10_2, stackIn_11_3, stackIn_14_4, stackIn_14_5, stackIn_14_6, stackIn_14_7, stackIn_14_8, stackIn_14_9 != 0, stackIn_14_10, stackIn_16_11);
+        if (LoginProgressHelpers.field_b) {
+          QuickChatHelpDialog.field_Lb.writeCipheredByte(57, (byte) -92);
+          LoginProgressHelpers.field_b = false;
         }
         if (PacketBuffer.field_p) {
-          nd.field_Lb.writeCipheredByte(10, (byte) -92);
+          QuickChatHelpDialog.field_Lb.writeCipheredByte(10, (byte) -92);
           PacketBuffer.field_p = false;
         }
     }
 
-    final static boolean b(byte param0) {
+    final static boolean isFrontEndShown(byte param0) {
         if (param0 > -39) {
           field_i = -89;
         }
-        return qa.field_v;
+        return QuickChatCategory.field_v;
     }
 
     public static void releaseStatics(byte param0) {
@@ -240,14 +240,14 @@ abstract class RasterBuffer {
           } else {
             stackIn_74_2 = "{...}";
           }
-          throw oi.wrapException((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
     static {
         field_d = "Add friend";
         field_a = "Scamming";
-        field_e = new db(15, 0, 1, 0);
+        field_e = new QuickChatCommandType(15, 0, 1, 0);
         field_b = "Who can join";
     }
 }

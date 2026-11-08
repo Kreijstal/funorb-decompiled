@@ -15,19 +15,19 @@ final class BufferedSocket implements Runnable {
     private int field_v;
     private PlatformTaskDispatcher field_d;
     private byte[] field_t;
-    static ji field_n;
+    static TwoColumnListPanel field_n;
     private boolean field_m;
     static int field_q;
     static int[] field_c;
     private int field_l;
     static boolean field_s;
-    static lk field_u;
+    static ProgressMessageDialog field_u;
     static String field_h;
     private boolean field_p;
     static String field_e;
     private InputStream field_j;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         field_o = null;
         field_e = null;
@@ -42,7 +42,7 @@ final class BufferedSocket implements Runnable {
 
     final int readByte(int param0) throws IOException {
         if (param0 != 3) {
-          BufferedSocket.b(95);
+          BufferedSocket.releaseStatics(95);
         }
         if (this.field_m) {
           return 0;
@@ -66,7 +66,7 @@ final class BufferedSocket implements Runnable {
           }
           if (null != this.field_r) {
             while (this.field_r.field_d == 0) {
-              tb.a(false, 1L);
+              AnimationSequence.sleepMillis(false, 1L);
             }
             if (1 == this.field_r.field_d) {
               try {
@@ -91,7 +91,7 @@ final class BufferedSocket implements Runnable {
         this(param0, param1, 5000);
     }
 
-    final void a(int param0, int param1, byte[] param2, int param3) throws IOException {
+    final void readFully(int param0, int param1, byte[] param2, int param3) throws IOException {
         int var5_int = 0;
         int var6 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -105,7 +105,7 @@ final class BufferedSocket implements Runnable {
             return;
           }
           if (param3 != 0) {
-            field_u = (lk) null;
+            field_u = (ProgressMessageDialog) null;
           }
           while (param1 > 0) {
             var5_int = this.field_j.read(param2, param0, param1);
@@ -126,7 +126,7 @@ final class BufferedSocket implements Runnable {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw oi.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -143,20 +143,20 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final static hb e(int param0) {
-        String var1 = RandomAccessCacheFile.a((byte) -39);
+    final static ConditionalTextValue createRememberedUsername(int param0) {
+        String var1 = RandomAccessCacheFile.getStatusMessage((byte) -39);
         if (param0 != 1) {
           CharSequence var2 = (CharSequence) null;
-          BufferedSocket.a((byte) 60, (CharSequence) null);
+          BufferedSocket.isValidUsername((byte) 60, (CharSequence) null);
         }
         if (var1 != null &&
           !(0 > var1.indexOf('@'))) {
           var1 = "";
         }
-        return new hb(RandomAccessCacheFile.a((byte) -113), pm.a(true));
+        return new ConditionalTextValue(RandomAccessCacheFile.getStatusMessage((byte) -113), FontAndBrightnessHelpers.isLoginStageReady(true));
     }
 
-    final void a(boolean param0, int param1, byte[] param2, int param3) throws IOException {
+    final void write(boolean param0, int param1, byte[] param2, int param3) throws IOException {
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
@@ -207,7 +207,7 @@ final class BufferedSocket implements Runnable {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw oi.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param3).append(')').toString());
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -297,7 +297,7 @@ final class BufferedSocket implements Runnable {
             decompiledCaughtException = decompiledCaughtParameter4;
             var1_ref = (Exception) (Object) decompiledCaughtException;
             var7 = (String) null;
-            fk.a(-55, (Throwable) ((Object) var1_ref), (String) null);
+            HotspotTextWidget.reportClientError(-55, (Throwable) ((Object) var1_ref), (String) null);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -306,7 +306,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final static boolean a(byte param0, CharSequence param1) {
+    final static boolean isValidUsername(byte param0, CharSequence param1) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -315,9 +315,9 @@ final class BufferedSocket implements Runnable {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 <= 119) {
-            BufferedSocket.e(92);
+            BufferedSocket.createRememberedUsername(92);
           }
-          stackIn_3_0 = ti.a(45, param1, false);
+          stackIn_3_0 = LobbyResourceHelpers.isValidAccountName(45, param1, false);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -329,7 +329,7 @@ final class BufferedSocket implements Runnable {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw oi.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -357,7 +357,7 @@ final class BufferedSocket implements Runnable {
           this.field_i = this.field_f.getOutputStream();
           this.field_k = param2;
         } catch (RuntimeException runtimeException) {
-          throw oi.wrapException((Throwable) ((Object) runtimeException), "fl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) runtimeException), "fl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

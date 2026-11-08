@@ -4,9 +4,9 @@
 final class NotificationToast extends IntrusiveNode {
     int field_q;
     static String field_t;
-    static hl field_o;
+    static UiComponent field_o;
     static String field_r;
-    static hl field_n;
+    static UiComponent field_n;
     static Sprite field_p;
     static String field_s;
 
@@ -33,11 +33,11 @@ final class NotificationToast extends IntrusiveNode {
         field_p = null;
     }
 
-    final static hl a(boolean param0) {
+    final static UiComponent getPlayerListContent(boolean param0) {
         if (!param0) {
-          return (hl) null;
+          return (UiComponent) null;
         }
-        return v.field_x.field_Pb;
+        return QueuedListRequest.field_x.field_Pb;
     }
 
     static {

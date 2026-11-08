@@ -1,0 +1,187 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+abstract class ArchiveProvider {
+    static int field_a;
+    static String[] field_b;
+    static int field_d;
+    static long field_c;
+
+    final static void showDisplayNameForm(byte param0) {
+        if (BufferedSocket.field_u != null) {
+          BufferedSocket.field_u.closeDialog(-128);
+        }
+        PointerTrailBubble.field_q = new DisplayNameForm();
+        PasswordValidator.field_u.transitionToContent(PointerTrailBubble.field_q, -27667);
+        if (param0 > -50) {
+          field_d = -89;
+        }
+    }
+
+    final static void decodeSpriteSheet(byte[] param0, int param1) {
+        byte dupTemp$0 = 0;
+        byte dupTemp$1 = 0;
+        int stackIn_37_0 = 0;
+        int stackIn_38_1 = 0;
+        int stackIn_48_0 = 0;
+        int stackIn_49_1 = 0;
+        RuntimeException stackIn_54_0 = null;
+        StringBuilder stackIn_54_1 = null;
+        String stackIn_55_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        byte[] var8 = null;
+        byte[] var9 = null;
+        int var10 = 0;
+        int var11 = 0;
+        int var12 = 0;
+        int var13 = 0;
+        int var14 = 0;
+        int var15 = 0;
+        byte[] var16 = null;
+        PacketBuffer var17 = null;
+        PacketBuffer var18 = null;
+        byte[] var19 = null;
+        byte[] var20 = null;
+        byte[] var21 = null;
+        byte[] var22 = null;
+        int var4Lifetime1;
+        int var4Lifetime2;
+        int var4Lifetime3;
+        int var4Lifetime4;
+        int var4Lifetime5;
+        var15 = TetraLink.field_J;
+        try {
+          if (param1 > -35) {
+            var16 = (byte[]) null;
+            ArchiveProvider.decodeSpriteSheet((byte[]) null, 72);
+          }
+          var17 = new PacketBuffer(param0);
+          var18 = var17;
+          var18.position = -2 + param0.length;
+          PendingListRequest.field_n = var18.readUnsignedShort(127);
+          QuickChatMenuFactory.field_g = new boolean[PendingListRequest.field_n];
+          JoinGameTextGlobals.field_a = new byte[PendingListRequest.field_n][];
+          ErrorPrintHelpers.field_e = new int[PendingListRequest.field_n];
+          QuickChatCategory.field_x = new int[PendingListRequest.field_n];
+          IntrusiveDeque.field_h = new int[PendingListRequest.field_n];
+          ViewportController.field_t = new int[PendingListRequest.field_n];
+          RsaKeyAndTextGlobals.field_i = new byte[PendingListRequest.field_n][];
+          var18.position = -(PendingListRequest.field_n * 8) - 7 + param0.length;
+          ImageProducerRasterBuffer.field_l = var18.readUnsignedShort(127);
+          PasswordValidator.field_w = var18.readUnsignedShort(127);
+          var3 = 1 + (255 & var18.readUnsignedByte((byte) -99));
+          for (var4 = 0; var4 < PendingListRequest.field_n; var4++) {
+            QuickChatCategory.field_x[var4] = var17.readUnsignedShort(127);
+          }
+          for (var4Lifetime1 = 0; PendingListRequest.field_n > var4Lifetime1; var4Lifetime1++) {
+            ViewportController.field_t[var4Lifetime1] = var18.readUnsignedShort(127);
+          }
+          for (var4Lifetime2 = 0; PendingListRequest.field_n > var4Lifetime2; var4Lifetime2++) {
+            IntrusiveDeque.field_h[var4Lifetime2] = var18.readUnsignedShort(127);
+          }
+          for (var4Lifetime3 = 0; PendingListRequest.field_n > var4Lifetime3; var4Lifetime3++) {
+            ErrorPrintHelpers.field_e[var4Lifetime3] = var18.readUnsignedShort(127);
+          }
+          var18.position = 3 - 3 * var3 + (param0.length - (7 + PendingListRequest.field_n * 8));
+          LobbyResourceHelpers.field_c = new int[var3];
+          for (var4Lifetime4 = 1; var3 > var4Lifetime4; var4Lifetime4++) {
+            LobbyResourceHelpers.field_c[var4Lifetime4] = var18.readMedium(-1);
+            if (LobbyResourceHelpers.field_c[var4Lifetime4] == 0) {
+              LobbyResourceHelpers.field_c[var4Lifetime4] = 1;
+            }
+          }
+          var18.position = 0;
+          for (var4Lifetime5 = 0; PendingListRequest.field_n > var4Lifetime5; var4Lifetime5++) {
+            var5 = IntrusiveDeque.field_h[var4Lifetime5];
+            var6 = ErrorPrintHelpers.field_e[var4Lifetime5];
+            var7 = var6 * var5;
+            var21 = new byte[var7];
+            var19 = var21;
+            var8 = var19;
+            JoinGameTextGlobals.field_a[var4Lifetime5] = var21;
+            var22 = new byte[var7];
+            var20 = var22;
+            var9 = var20;
+            RsaKeyAndTextGlobals.field_i[var4Lifetime5] = var22;
+            var10 = 0;
+            var11 = var18.readUnsignedByte((byte) -99);
+            if ((1 & var11) == 0) {
+              for (var12 = 0; var12 < var7; var12++) {
+                var8[var12] = var18.readSignedByte(-1772093437);
+              }
+              if ((2 & var11) != 0) {
+                for (var12 = 0; var12 < var7; var12++) {
+                  dupTemp$0 = var18.readSignedByte(-1772093437);
+                  var9[var12] = dupTemp$0;
+                  var13 = dupTemp$0;
+                  stackIn_48_0 = var10;
+                  if (var13 == -1) {
+                    stackIn_49_1 = 0;
+                  } else {
+                    stackIn_49_1 = 1;
+                  }
+                  var10 = stackIn_48_0 | stackIn_49_1;
+                }
+              }
+            } else {
+              for (var12 = 0; var5 > var12; var12++) {
+                for (var13 = 0; var6 > var13; var13++) {
+                  var8[var13 * var5 + var12] = var18.readSignedByte(-1772093437);
+                }
+              }
+              if (0 != (2 & var11)) {
+                for (var12 = 0; var5 > var12; var12++) {
+                  for (var13 = 0; var6 > var13; var13++) {
+                    dupTemp$1 = var18.readSignedByte(-1772093437);
+                    var9[var5 * var13 + var12] = dupTemp$1;
+                    var14 = dupTemp$1;
+                    stackIn_37_0 = var10;
+                    if (var14 == -1) {
+                      stackIn_38_1 = 0;
+                    } else {
+                      stackIn_38_1 = 1;
+                    }
+                    var10 = stackIn_37_0 | stackIn_38_1;
+                  }
+                }
+              }
+            }
+            QuickChatMenuFactory.field_g[var4Lifetime5] = var10 != 0;
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_54_0 = var2;
+          stackIn_54_1 = new StringBuilder().append("hk.B(");
+          if (param0 == null) {
+            stackIn_55_2 = "null";
+          } else {
+            stackIn_55_2 = "{...}";
+          }
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    public static void releaseStatics(int param0) {
+        if (param0 != 8) {
+          return;
+        }
+        field_b = null;
+    }
+
+    abstract byte[] getPackedGroup(int param0, int param1);
+
+    abstract int getGroupProgress(int param0, int param1);
+
+    abstract ArchiveIndex getIndex(int param0);
+
+    static {
+    }
+}

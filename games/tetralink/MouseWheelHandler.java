@@ -4,7 +4,7 @@
 final class MouseWheelHandler extends MouseWheelInput implements java.awt.event.MouseWheelListener {
     private int field_d;
 
-    final void a(int param0, java.awt.Component param1) {
+    final void detach(int param0, java.awt.Component param1) {
         param1.removeMouseWheelListener((java.awt.event.MouseWheelListener) (this));
         if (param0 != 0) {
           java.awt.event.MouseWheelEvent var4 = (java.awt.event.MouseWheelEvent) null;
@@ -12,7 +12,7 @@ final class MouseWheelHandler extends MouseWheelInput implements java.awt.event.
         }
     }
 
-    final void b(int param0, java.awt.Component param1) {
+    final void attach(int param0, java.awt.Component param1) {
         param1.addMouseWheelListener((java.awt.event.MouseWheelListener) (this));
         if (param0 >= -112) {
           this.takeRotation(12);

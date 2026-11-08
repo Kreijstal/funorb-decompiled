@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-public final class TetraLink extends ph {
+public final class TetraLink extends NetworkGameClient {
     static int field_N;
-    static aa field_P;
+    static ContextMenu field_P;
     static String field_O;
     static String field_M;
     private IntrusiveDeque notificationQueue;
@@ -16,312 +16,312 @@ public final class TetraLink extends ph {
         NotificationToast.releaseStatics((byte) -64);
         IntrusiveNode.releaseStatics(20043);
         IntrusiveDeque.releaseStatics((byte) 25);
-        kj.a(param0 ^ param0);
-        sn.releaseStatics(-127);
-        ma.d(-3);
-        tb.releaseStatics((byte) -123);
-        ao.releaseStatics(true);
-        ib.releaseStatics(27204);
-        rf.releaseStatics(127);
+        IntroFinalFrameHelpers.releaseStatics(param0 ^ param0);
+        ErrorPrintHelpers.releaseStatics(-127);
+        AnimationPlayer.releaseStatics(-3);
+        AnimationSequence.releaseStatics((byte) -123);
+        ChatReceiveHelpers.releaseStatics(true);
+        ConnectionTimingHelpers.releaseStatics(27204);
+        RasterEffectHelpers.releaseStatics(127);
         GameKeyHandler.releaseStatics((byte) -70);
-        jj.releaseStatics(param0 - 1320);
-        cd.releaseStatics((byte) 67);
-        lf.releaseStatics(true);
-        gi.a(14914);
-        bj.releaseStatics(-28);
-        ph.releaseStatics(param0 ^ -1328);
+        FontAndFrameStyleHelpers.releaseStatics(param0 - 1320);
+        MenuLabelGlobals.releaseStatics((byte) 67);
+        BevelFrameSpriteFactory.releaseStatics(true);
+        InterfaceTextLoader.releaseStatics(14914);
+        LobbyUpdateHelpers.releaseStatics(-28);
+        NetworkGameClient.releaseStatics(param0 ^ -1328);
         ClientException.releaseStatics(true);
-        GameApplet.e(6);
+        GameApplet.releaseStatics(6);
         UrlFetchTask.releaseStatics(-2);
         MouseInputHandler.releaseStatics(param0 ^ 1322);
         MouseWheelInput.releaseStatics(-1);
         SoftwareRasterizer.releaseStatics();
         Archive.releaseStatics(16);
         BitmapFont.releaseStatics();
-        gh.releaseStatics(126);
+        PopupAndStripHelpers.releaseStatics(126);
         PacketBuffer.releaseStatics(true);
-        k.releaseStatics(-14243);
-        jg.releaseStatics(true);
-        da.releaseStatics(param0 - 1333);
-        ai.releaseStatics(param0 ^ 12618);
-        lo.releaseStatics(4666);
-        e.releaseStatics((byte) 83);
-        fm.releaseStatics(-35);
-        ic.releaseStatics((byte) 88);
-        im.releaseStatics((byte) -109);
-        fj.releaseStatics(param0 ^ 1316);
-        nj.releaseStatics((byte) 122);
-        uh.releaseStatics((byte) 41);
+        ClockAndTextHelpers.releaseStatics(-14243);
+        RsaKeyAndTextGlobals.releaseStatics(true);
+        CanvasAndErrorHelpers.releaseStatics(param0 - 1333);
+        ArchiveFactoryHelpers.releaseStatics(param0 ^ 12618);
+        StringPadHelpers.releaseStatics(4666);
+        IndexedSpriteHelpers.releaseStatics((byte) 83);
+        ConfirmPasswordTextGlobals.releaseStatics(-35);
+        SharedPanelFactory.releaseStatics((byte) 88);
+        SoundMixerHelpers.releaseStatics((byte) -109);
+        ChatMessage.releaseStatics(param0 ^ 1316);
+        KeyEventHelpers.releaseStatics((byte) 122);
+        GameClock.releaseStatics((byte) 41);
         RasterBuffer.releaseStatics((byte) -20);
-        wh.releaseStatics(false);
+        LoadingStepTracker.releaseStatics(false);
         FullscreenFocusCanvas.releaseStatics((byte) -117);
-        i.releaseStatics(false);
-        SoundEffectLibrary.b(-2);
-        th.a(121);
-        ke.releaseStatics(param0 ^ 1327);
-        ni.c((byte) 107);
-        p.b((byte) -94);
-        BufferedSocket.b(-26787);
-        cl.releaseStatics(-119);
-        ei.releaseStatics(false);
-        wg.releaseStatics(6945);
+        ViewportController.releaseStatics(false);
+        SoundEffectLibrary.releaseStatics(-2);
+        Js5Transport.releaseStatics(121);
+        DiskCacheWorker.releaseStatics(param0 ^ 1327);
+        Js5ArchiveManager.releaseStatics((byte) 107);
+        BufferedFile.releaseStatics((byte) -94);
+        BufferedSocket.releaseStatics(-26787);
+        MenuScreen.releaseStatics(-119);
+        GameSession.releaseStatics(false);
+        ChatMessageReader.releaseStatics(6945);
         Model.releaseStatics();
-        ti.releaseStatics(2);
-        SpriteState.f(21);
+        LobbyResourceHelpers.releaseStatics(2);
+        SpriteState.releaseStatics(21);
         DualLinkNode.releaseStatics(105);
-        fe.releaseStatics(-1);
-        rl.releaseStatics(14236);
-        bb.releaseStatics(-578);
-        mi.releaseStatics(0);
-        bl.releaseStatics((byte) 124);
-        uk.releaseStatics((byte) -96);
-        hl.releaseStatics(-31057);
-        aa.h(-2);
-        ji.releaseStatics((byte) 116);
-        pf.releaseStatics((byte) 86);
-        rb.releaseStatics((byte) -127);
-        om.releaseStatics(true);
-        gd.releaseStatics(11042);
-        tk.releaseStatics(-161);
-        s.releaseStatics(63);
-        lc.releaseStatics(120);
-        vf.releaseStatics((byte) -41);
-        nh.c(false);
-        mk.releaseStatics(param0 - 1324);
-        el.i(0);
-        vn.releaseStatics();
-        ja.releaseStatics((byte) 99);
-        dh.a((byte) -55);
-        vh.releaseStatics(126);
-        ce.releaseStatics((byte) 51);
-        io.releaseStatics(false);
-        oe.releaseStatics(true);
-        jl.releaseStatics(param0 ^ -26264);
-        f.releaseStatics((byte) 87);
-        pc.releaseStatics();
-        g.releaseStatics((byte) 118);
-        dj.releaseStatics((byte) 38);
-        oc.releaseStatics(param0 ^ 1322);
-        wj.releaseStatics();
-        wn.releaseStatics(param0 ^ 19100);
-        nk.releaseStatics();
-        r.releaseStatics(-59);
-        rn.releaseStatics((byte) 99);
-        of.g(-126);
-        ve.releaseStatics(param0 ^ 1365);
-        jm.releaseStatics(90);
-        ak.releaseStatics(param0 - 1415);
-        ac.releaseStatics((byte) -100);
-        gm.releaseStatics(0);
-        t.releaseStatics(param0 ^ 1345);
-        go.releaseStatics((byte) 57);
-        hk.releaseStatics(8);
-        kn.releaseStatics(true);
-        hh.releaseStatics((byte) 126);
+        MusicTrackHelpers.releaseStatics(-1);
+        KeyHandlerHelpers.releaseStatics(14236);
+        MenuReturnHelpers.releaseStatics(-578);
+        LabelPairWidget.releaseStatics(0);
+        VerticalScrollbar.releaseStatics((byte) 124);
+        WidgetNode.releaseStatics((byte) -96);
+        UiComponent.releaseStatics(-31057);
+        ContextMenu.releaseStatics(-2);
+        TwoColumnListPanel.releaseStatics((byte) 116);
+        PlayerContextMenu.releaseStatics((byte) 86);
+        ScrollPane.releaseStatics((byte) -127);
+        ReportAbuseDialog.releaseStatics(true);
+        LobbyPlayerEntry.releaseStatics(11042);
+        NameSeparatorHelpers.releaseStatics(-161);
+        MenuThemeHelpers.releaseStatics(63);
+        ChatPanelSlideHelpers.releaseStatics(120);
+        SocialListPacketHandler.releaseStatics((byte) -41);
+        IconLabelItem.releaseStatics(false);
+        SocialTabsPanel.releaseStatics(param0 - 1324);
+        LobbyGame.releaseStatics(0);
+        TriangleRasterizer.releaseStatics();
+        TextureCache.releaseStatics((byte) 99);
+        LruTextureCache.releaseStatics((byte) -55);
+        Renderable.releaseStatics(126);
+        FaceNormal.releaseStatics((byte) 51);
+        StartupFlagsHelpers.releaseStatics(false);
+        AnimationSkeleton.releaseStatics(true);
+        InputDetachHelpers.releaseStatics(param0 ^ -26264);
+        AnimationFrameSet.releaseStatics((byte) 87);
+        AnimationFrame.releaseStatics();
+        MidiPcmStream.releaseStatics((byte) 118);
+        NodeHashTable.releaseStatics((byte) 38);
+        MidiNote.releaseStatics(param0 ^ 1322);
+        MidiFileReader.releaseStatics();
+        MusicPatchPcmStream.releaseStatics(param0 ^ 19100);
+        AudioOutput.releaseStatics();
+        MusicCrossfadeStream.releaseStatics(-59);
+        LoadingResourceHelpers.releaseStatics((byte) 99);
+        MenuInputState.releaseStatics(-126);
+        NineSliceFrame.releaseStatics(param0 ^ 1365);
+        AccountTextGlobals.releaseStatics(90);
+        PacketFlushHelpers.releaseStatics(param0 - 1415);
+        ScreenSwitchHelpers.releaseStatics((byte) -100);
+        QuickChatMenuFactory.releaseStatics(0);
+        ArchiveIndex.releaseStatics(param0 ^ 1345);
+        GzipDecompressor.releaseStatics((byte) 57);
+        ArchiveProvider.releaseStatics(8);
+        LoadingStageHook.releaseStatics(true);
+        TextMetricsGlobals.releaseStatics((byte) 126);
         WidgetContainer.releaseStatics(param0 - 1324);
-        fi.releaseStatics((byte) -22);
-        ug.releaseStatics(false);
-        sd.releaseStatics(-32527);
-        lk.releaseStatics((byte) 100);
-        ho.releaseStatics(112);
-        qb.releaseStatics(param0 ^ 1403);
-        tl.releaseStatics(20);
-        fn.releaseStatics((byte) 84);
-        hb.releaseStatics(-125);
-        wk.releaseStatics(param0 ^ 1323);
-        sc.releaseStatics(param0 + 25418);
-        ik.releaseStatics(-137);
-        fh.a((byte) -48);
-        pm.releaseStatics(-85);
-        tn.releaseStatics(param0 - 1324);
-        wa.releaseStatics((byte) -123);
-        gj.releaseStatics(-12359);
-        eo.releaseStatics((byte) -109);
-        pi.releaseStatics((byte) -62);
-        df.releaseStatics((byte) -108);
-        hm.releaseStatics(118);
+        AccountCreationDialog.releaseStatics((byte) -22);
+        LoadingProgressDialog.releaseStatics(false);
+        LoginDialog.releaseStatics(-32527);
+        ProgressMessageDialog.releaseStatics((byte) 100);
+        AccountCreationForm.releaseStatics(112);
+        AccountWelcomePanel.releaseStatics(param0 ^ 1403);
+        LoginPanel.releaseStatics(20);
+        DisplayNameForm.releaseStatics((byte) 84);
+        ConditionalTextValue.releaseStatics(-125);
+        WidgetTheme.releaseStatics(param0 ^ 1323);
+        TooltipTextGlobals.releaseStatics(param0 + 25418);
+        RegistrationResponseHelpers.releaseStatics(-137);
+        HuffmanCodec.releaseStatics((byte) -48);
+        FontAndBrightnessHelpers.releaseStatics(-85);
+        ServerConnectionHelpers.releaseStatics(param0 - 1324);
+        TriangleSpanHelpers.releaseStatics((byte) -123);
+        MenuStyleHelpers.releaseStatics(-12359);
+        CameraAndChatHelpers.releaseStatics((byte) -109);
+        PasswordLengthHelpers.releaseStatics((byte) -62);
+        LoginCredentialType.releaseStatics((byte) -108);
+        LoginCredentials.releaseStatics(118);
         BitPacketBuffer.releaseStatics(29313);
         IsaacCipher.releaseStatics((byte) 125);
-        kd.releaseStatics(-84);
-        me.releaseStatics((byte) -92);
-        l.releaseStatics(9);
-        MatchSetup.releaseStatics(-86);
-        lb.h(param0 ^ 1322);
-        vi.releaseStatics(117);
-        sb.releaseStatics((byte) -30);
-        nd.releaseStatics(param0 ^ 2106634);
-        oi.a(-49);
-        qj.releaseStatics((byte) -78);
-        mj.releaseStatics();
-        nm.releaseStatics((byte) 6);
+        DualLinkNodeHashTable.releaseStatics(-84);
+        RasterStackHelpers.releaseStatics((byte) -92);
+        BoardAnimator.releaseStatics(9);
+        GameBoard.releaseStatics(-86);
+        DateOfBirthPanel.releaseStatics(param0 ^ 1322);
+        LoadingStatusHelpers.releaseStatics(117);
+        ArchiveGroupHelpers.releaseStatics((byte) -30);
+        QuickChatHelpDialog.releaseStatics(param0 ^ 2106634);
+        IndexedSpriteState.releaseStatics(-49);
+        NineSliceFrameHelpers.releaseStatics((byte) -78);
+        ClippedTriangleRenderer.releaseStatics();
+        ReflectionCheck.releaseStatics((byte) 6);
         RandomAccessCacheFile.releaseStatics((byte) -112);
-        ua.releaseStatics(-1);
-        pj.releaseStatics(39);
-        pg.releaseStatics(false);
-        pd.releaseStatics(param0 - 1322);
+        CommonUiHelpers.releaseStatics(-1);
+        TopLevelContainerHelpers.releaseStatics(39);
+        AudioPumpThread.releaseStatics(false);
+        SocketJs5Transport.releaseStatics(param0 - 1322);
         DualLinkDeque.releaseStatics(21332);
-        rh.releaseStatics(-84);
-        sk.releaseStatics(29187);
-        fd.releaseStatics(-1);
-        bo.releaseStatics(-251);
-        am.releaseStatics(true);
-        ll.releaseStatics((byte) 125);
-        wl.releaseStatics(-101);
-        qc.releaseStatics((byte) -128);
-        al.releaseStatics((byte) -93);
-        ag.releaseStatics();
-        rm.releaseStatics((byte) -16);
-        id.releaseStatics(338);
-        b.releaseStatics((byte) 41);
-        nc.releaseStatics(105);
-        an.releaseStatics(param0 ^ -14345);
-        bd.releaseStatics((byte) 119);
-        on.releaseStatics(-10457);
+        NetworkArchiveRequest.releaseStatics(-84);
+        SectorCacheStore.releaseStatics(29187);
+        DiskArchiveRequest.releaseStatics(-1);
+        CachedArchiveSource.releaseStatics(-251);
+        MiscTextGlobals.releaseStatics(true);
+        ArchiveRequest.releaseStatics((byte) 125);
+        GameOptionTextTables.releaseStatics(-101);
+        FullscreenErrorDialog.releaseStatics((byte) -128);
+        TextWidgetPainter.releaseStatics((byte) -93);
+        VorbisSample.releaseStatics();
+        LoadingScreenHelpers.releaseStatics((byte) -16);
+        TriangleMesh.releaseStatics(338);
+        NameEntryKeyHelpers.releaseStatics((byte) 41);
+        NameAlphabetTable.releaseStatics(105);
+        DecodedSpriteBuffers.releaseStatics(param0 ^ -14345);
+        RasterTargetHelpers.releaseStatics((byte) 119);
+        LobbyOverlayHelpers.releaseStatics(-10457);
         DelegatingCanvas.releaseStatics(-108);
-        qf.releaseStatics(false);
-        qm.releaseStatics(false);
-        jd.releaseStatics(-84);
-        sl.releaseStatics();
-        cm.releaseStatics((byte) 28);
-        pe.releaseStatics(true);
-        mn.releaseStatics(-119);
-        og.releaseStatics(-17479);
-        qn.releaseStatics(24468);
-        cc.releaseStatics(-114);
-        dc.releaseStatics(82);
-        hi.releaseStatics((byte) 91);
-        UiWidget.c((byte) 101);
-        ae.a(true);
-        en.releaseStatics(99);
-        nb.releaseStatics(-463);
-        ld.releaseStatics(param0 ^ -1365);
-        gn.releaseStatics(true);
-        IntrusiveDequeCursor.a(param0 - 1322);
-        qk.releaseStatics(-30581);
-        cj.releaseStatics();
-        kf.releaseStatics(23365);
-        ki.releaseStatics((byte) -49);
-        vc.releaseStatics((byte) 118);
-        ga.releaseStatics(7151);
-        le.releaseStatics(66);
-        hj.releaseStatics(param0 ^ 34090);
-        u.releaseStatics(param0 + 31446);
-        qa.releaseStatics(param0 - 1322);
-        j.f(4);
-        ec.releaseStatics((byte) 116);
-        SocketConnector.d(param0 ^ 1322);
-        bn.b(-26623);
-        ef.releaseStatics(-34);
+        ReflectionCheckHelpers.releaseStatics(false);
+        IntKeyLookup.releaseStatics(false);
+        ByteStorage.releaseStatics(-84);
+        Bzip2Decoder.releaseStatics();
+        Bzip2State.releaseStatics((byte) 28);
+        ByteArrayPool.releaseStatics(true);
+        ChatLayoutHelpers.releaseStatics(-119);
+        CheckboxPainter.releaseStatics(-17479);
+        StatefulWidgetRenderer.releaseStatics(24468);
+        DialWidgetPainter.releaseStatics(-114);
+        MarkerSliderPainter.releaseStatics(82);
+        TextLayout.releaseStatics((byte) 91);
+        UiWidget.releaseStatics((byte) 101);
+        TextButton.releaseStatics(true);
+        SingleChildWidget.releaseStatics(99);
+        ResizableDialog.releaseStatics(-463);
+        FadingModalPanel.releaseStatics(param0 ^ -1365);
+        UiContainer.releaseStatics(true);
+        IntrusiveDequeCursor.releaseStatics(param0 - 1322);
+        ScreenDrawHelpers.releaseStatics(-30581);
+        VorbisFloor.releaseStatics();
+        LoadingScreenRenderHelpers.releaseStatics(23365);
+        AccountCreationResultHelpers.releaseStatics((byte) -49);
+        DefaultQuickChatContext.releaseStatics((byte) 118);
+        JoinGameTextGlobals.releaseStatics(7151);
+        QuickChatMenu.releaseStatics(66);
+        QuickChatCategoryCache.releaseStatics(param0 ^ 34090);
+        QuickChatPhraseCache.releaseStatics(param0 + 31446);
+        QuickChatCategory.releaseStatics(param0 - 1322);
+        QuickChatPhraseDefinition.releaseStatics(4);
+        WeightedLruCache.releaseStatics((byte) 116);
+        SocketConnector.releaseStatics(param0 ^ 1322);
+        ProxyAuthenticationRequiredException.releaseStatics(-26623);
+        NanoTickClock.releaseStatics(-34);
         ImageProducerRasterBuffer.releaseStatics(true);
-        pl.releaseStatics((byte) 63);
-        nl.releaseStatics(false);
-        ql.releaseStatics();
-        ch.releaseStatics(param0 ^ 1375);
-        li.releaseStatics(255);
-        ui.releaseStatics(12000);
-        ad.releaseStatics((byte) 43);
-        vg.releaseStatics((byte) 102);
-        gk.releaseStatics(3);
-        ng.releaseStatics(param0 ^ 1348);
-        lm.releaseStatics(2);
-        rc.releaseStatics(0);
-        fo.releaseStatics(param0 + 28468);
-        nn.releaseStatics(true);
-        ml.e((byte) -38);
-        lg.releaseStatics((byte) -104);
-        n.releaseStatics(96);
-        fk.releaseStatics(-24314);
-        ab.releaseStatics((byte) 59);
-        ck.releaseStatics((byte) 125);
-        re.releaseStatics(param0 ^ 1322);
-        um.releaseStatics(param0 ^ 1322);
-        hg.releaseStatics(-108);
-        ia.releaseStatics(-51);
-        qd.releaseStatics(true);
-        kk.releaseStatics(2147483647);
-        qh.d((byte) -34);
-        od.releaseStatics(false);
-        eg.releaseStatics(-1);
-        dd.releaseStatics(0);
-        hn.releaseStatics((byte) -98);
-        we.releaseStatics(0);
-        la.releaseStatics(param0 ^ 1295);
-        vd.releaseStatics((byte) 83);
-        ed.releaseStatics(false);
-        te.releaseStatics(-108);
+        StatusRequestHelpers.releaseStatics((byte) 63);
+        DisplayMode.releaseStatics(false);
+        SynthInstrument.releaseStatics();
+        PatchNoteUsage.releaseStatics(param0 ^ 1375);
+        WhirlpoolHasher.releaseStatics(255);
+        ModelMergeHelpers.releaseStatics(12000);
+        TabbedPanel.releaseStatics((byte) 43);
+        NameEntryPopup.releaseStatics((byte) 102);
+        LobbyListHelpers.releaseStatics(3);
+        MusicPatch.releaseStatics(param0 ^ 1348);
+        MusicPatchEnvelope.releaseStatics(2);
+        CaptionedContainer.releaseStatics(0);
+        ValidatedTextWidget.releaseStatics(param0 + 28468);
+        EditableTextWidget.releaseStatics(true);
+        ContentTransitionDialog.releaseStatics((byte) -38);
+        StripedProgressBar.releaseStatics((byte) -104);
+        NameSuggestionsPanel.releaseStatics(96);
+        HotspotTextWidget.releaseStatics(-24314);
+        ValidationStatusIcon.releaseStatics((byte) 59);
+        ValidationMessageWidget.releaseStatics((byte) 125);
+        CheckboxWidget.releaseStatics(param0 ^ 1322);
+        TextFieldValidator.releaseStatics(param0 ^ 1322);
+        GameOptionControls.releaseStatics(-108);
+        AccountTermsPanel.releaseStatics(-51);
+        DialWidget.releaseStatics(true);
+        MarkerSlider.releaseStatics(2147483647);
+        DateOfBirthValidator.releaseStatics((byte) -34);
+        NumericDateInputWidget.releaseStatics(false);
+        ArrayWidgetContainer.releaseStatics(-1);
+        SettingsCookieHelpers.releaseStatics(0);
+        DateInputWidget.releaseStatics((byte) -98);
+        CachedTextLayout.releaseStatics(0);
+        DirectByteStorage.releaseStatics(param0 ^ 1295);
+        GrowableIntList.releaseStatics((byte) 83);
+        DraggableWidget.releaseStatics(false);
+        DropTargetWidget.releaseStatics(-108);
         IterableNodeHashTable.releaseStatics(-4099);
         SecondaryNodeDeque.releaseStatics(0);
-        mb.releaseStatics((byte) -48);
-        db.releaseStatics(true);
-        wc.c((byte) -103);
-        ProxySocketConnector.b((byte) -109);
-        si.releaseStatics();
-        h.releaseStatics(-74);
+        CacheEntry.releaseStatics((byte) -48);
+        QuickChatCommandType.releaseStatics(true);
+        StrongCacheEntry.releaseStatics((byte) -103);
+        ProxySocketConnector.releaseStatics((byte) -109);
+        SoundFilter.releaseStatics();
+        ChatPanelHelpers.releaseStatics(-74);
         NodeHashTableIterator.releaseStatics((byte) 123);
         SecondaryNodeDequeIterator.releaseStatics((byte) -125);
-        c.releaseStatics((byte) 72);
-        kb.releaseStatics(111);
-        ko.releaseStatics((byte) -127);
-        qi.releaseStatics(param0 + 18059);
-        v.releaseStatics((byte) 103);
-        bf.a(65364);
-        co.releaseStatics(22);
-        uj.releaseStatics((byte) -67);
-        q.releaseStatics(98);
-        mf.releaseStatics(false);
-        ci.releaseStatics(true);
-        ul.releaseStatics(17);
-        il.releaseStatics((byte) -16);
-        oa.releaseStatics(-25731);
-        o.releaseStatics(-11961);
-        pb.releaseStatics(127);
-        ud.releaseStatics(0);
-        in.releaseStatics(-1);
-        cf.releaseStatics((byte) 6);
-        eh.a(param0 - 1322);
-        rj.releaseStatics(true);
-        a.releaseStatics(0);
-        tc.releaseStatics(true);
-        dl.releaseStatics(-57);
-        jn.releaseStatics((byte) 122);
-        uf.releaseStatics(-11535);
-        sj.a(0);
-        ba.releaseStatics(22);
-        dk.releaseStatics(-5384);
-        ka.releaseStatics((byte) 86);
-        gl.releaseStatics(24943);
-        gg.releaseStatics(false);
-        bi.releaseStatics(param0 ^ 1226);
-        ej.a(-1);
-        af.releaseStatics(-119);
-        km.releaseStatics((byte) -57);
-        hc.releaseStatics(-95);
-        vj.releaseStatics(false);
-        bm.releaseStatics((byte) 112);
-        dg.releaseStatics(-5549);
-        bk.releaseStatics(81);
-        tm.releaseStatics(-62);
-        mm.releaseStatics(0);
-        lh.releaseStatics(255);
-        hd.releaseStatics(-57);
-        w.releaseStatics(47);
-        cb.releaseStatics((byte) 80);
-        ok.releaseStatics(4);
-        va.releaseStatics((byte) 44);
-        jk.releaseStatics((byte) 77);
-        d.releaseStatics((byte) 6);
-        mh.releaseStatics(-82);
+        GraphicsSettings.releaseStatics((byte) 72);
+        BackgroundSparkle.releaseStatics(111);
+        PointerTrailBubble.releaseStatics((byte) -127);
+        SparkParticle.releaseStatics(param0 + 18059);
+        QueuedListRequest.releaseStatics((byte) 103);
+        PlayingSound.releaseStatics(65364);
+        PendingReplyNode.releaseStatics(22);
+        ThreeSliceButtonPainter.releaseStatics((byte) -67);
+        LinkTextPainter.releaseStatics(98);
+        InsetTextPainter.releaseStatics(false);
+        PasswordFieldPainter.releaseStatics(true);
+        SpriteCheckboxPainter.releaseStatics(17);
+        OpacityWidget.releaseStatics((byte) -16);
+        HighscoreQuery.releaseStatics(-25731);
+        HighscoreSubmission.releaseStatics(-11961);
+        HighscoreRowName.releaseStatics(127);
+        SocialListEntry.releaseStatics(0);
+        PageReloadHelpers.releaseStatics(-1);
+        PendingStatQuery.releaseStatics((byte) 6);
+        QueuedStatSubmission.releaseStatics(param0 - 1322);
+        FlaggedTextValue.releaseStatics(true);
+        ClientProtocolStage.releaseStatics(0);
+        DelayedIncomingPacket.releaseStatics(true);
+        RasterSnapshot.releaseStatics(-57);
+        TextureEntry.releaseStatics((byte) 122);
+        LoginProgressHelpers.releaseStatics(-11535);
+        AccountServerResult.releaseStatics(0);
+        MessageDialogContent.releaseStatics(22);
+        LoginMethod.releaseStatics(-5384);
+        LongAndTextCredentials.releaseStatics((byte) 86);
+        AlternateLongAndTextCredentials.releaseStatics(24943);
+        PasswordLoginCredentials.releaseStatics(false);
+        PendingMove.releaseStatics(param0 ^ 1226);
+        PieceDropAnimation.releaseStatics(-1);
+        JoinStatusTextHelpers.releaseStatics(-119);
+        PendingSubmission.releaseStatics((byte) -57);
+        PacketDiagnosticsHelpers.releaseStatics(-95);
+        PendingListRequest.releaseStatics(false);
+        FullscreenCanvasHelpers.releaseStatics((byte) 112);
+        WidgetStyleLayer.releaseStatics(-5549);
+        TextLayoutLine.releaseStatics(81);
+        NameAvailabilityValidator.releaseStatics(-62);
+        PasswordValidator.releaseStatics(0);
+        EmailSyntaxValidator.releaseStatics(255);
+        EmailAvailabilityValidator.releaseStatics(-57);
+        AgeValidator.releaseStatics(47);
+        MatchingTextValidator.releaseStatics((byte) 80);
+        TransitionPhase.releaseStatics(4);
+        TextHighlightSpan.releaseStatics((byte) 44);
+        ValidationState.releaseStatics((byte) 77);
+        DebouncedValidator.releaseStatics((byte) 6);
+        GameRoomPanelHelpers.releaseStatics(-82);
         this.notificationQueue = null;
         this.field_y = null;
     }
 
     final void renderFrame(int param0) {
         Object stackIn_3_0 = null;
-        ei stackIn_15_0 = null;
+        GameSession stackIn_15_0 = null;
         int stackIn_42_0 = 0;
         boolean stackIn_44_1 = false;
         Object var2;
-        ei var3;
+        GameSession var3;
         int var4;
         NotificationToast var4_ref_ek;
         int var5;
@@ -329,75 +329,75 @@ public final class TetraLink extends ph {
         int var7;
         int var4Lifetime1;
         var7 = field_J;
-        if (hd.field_u != null) {
-          stackIn_3_0 = hd.field_u;
+        if (EmailAvailabilityValidator.field_u != null) {
+          stackIn_3_0 = EmailAvailabilityValidator.field_u;
         } else {
-          stackIn_3_0 = uh.field_b;
+          stackIn_3_0 = GameClock.field_b;
         }
         var2 = stackIn_3_0;
-        if (rm.a(false)) {
-          oc.a((java.awt.Canvas) (var2), qj.c(124), 32511);
+        if (LoadingScreenHelpers.shouldShowLoadingScreen(false)) {
+          MidiNote.renderStartupScreen((java.awt.Canvas) (var2), NineSliceFrameHelpers.isFullscreenActive(124), 32511);
           return;
         }
-        if (!ji.field_Nb) {
-          kf.a(-8129, (java.awt.Canvas) (var2));
+        if (!TwoColumnListPanel.field_Nb) {
+          LoadingScreenRenderHelpers.renderLoadingScreen(-8129, (java.awt.Canvas) (var2));
           return;
         }
-        if (!qj.a(4)) {
-          ak.setBenefitsBorderAndCaption(0, v.field_w, 100.0f);
-          kf.a(-8129, (java.awt.Canvas) (var2));
+        if (!NineSliceFrameHelpers.isSavedFlagsReady(4)) {
+          PacketFlushHelpers.setBenefitsBorderAndCaption(0, QueuedListRequest.field_w, 100.0f);
+          LoadingScreenRenderHelpers.renderLoadingScreen(-8129, (java.awt.Canvas) (var2));
           return;
         }
-        if (wk.field_i.field_c) {
-          this.s(99);
+        if (WidgetTheme.field_i.field_c) {
+          this.renderHighDetailFrame(99);
         } else {
-          this.r(10);
+          this.renderLowDetailFrame(10);
         }
-        if (null != aa.field_bc) {
-          stackIn_15_0 = aa.field_bc;
+        if (null != ContextMenu.field_bc) {
+          stackIn_15_0 = ContextMenu.field_bc;
         } else {
-          stackIn_15_0 = ud.field_Qb;
+          stackIn_15_0 = SocialListEntry.field_Qb;
         }
         var3 = stackIn_15_0;
         if (var3 != null) {
-          var3.a(-9104, true);
-          vg.j(109);
+          var3.drawGameOverlay(-9104, true);
+          NameEntryPopup.drawViewModeTab(109);
           if (GameKeyHandler.field_b &&
-            nn.field_X) {
-            rn.a(hc.c(64), -124);
+            EditableTextWidget.field_X) {
+            LoadingResourceHelpers.sendGameOptions(PacketDiagnosticsHelpers.isFullscreenBlinkOn(64), -124);
           }
         } else {
-          vg.j(103);
+          NameEntryPopup.drawViewModeTab(103);
         }
         if (param0 < 100) {
           field_O = (String) null;
         }
-        if ((~kb.field_t != ~ed.field_O ||
-          ~af.field_h != ~hm.field_a) &&
-          (kb.field_t == -2 ||
-          ed.field_O == -2)) {
-          if (hd.field_v >= 16) {
-            var4 = 1 + (32 - hd.field_v);
+        if ((~BackgroundSparkle.field_t != ~DraggableWidget.field_O ||
+          ~JoinStatusTextHelpers.field_h != ~LoginCredentials.field_a) &&
+          (BackgroundSparkle.field_t == -2 ||
+          DraggableWidget.field_O == -2)) {
+          if (EmailAvailabilityValidator.field_v >= 16) {
+            var4 = 1 + (32 - EmailAvailabilityValidator.field_v);
           } else {
-            var4 = hd.field_v + 1;
+            var4 = EmailAvailabilityValidator.field_v + 1;
           }
-          pn.pixelate(var4, 256, 16769381, false, false);
+          PixelBlockEffect.pixelate(var4, 256, 16769381, false, false);
         }
         if (!GameKeyHandler.field_b ||
-          !nn.field_X) {
-          rn.a(hc.c(64), -108);
+          !EditableTextWidget.field_X) {
+          LoadingResourceHelpers.sendGameOptions(PacketDiagnosticsHelpers.isFullscreenBlinkOn(64), -108);
         }
-        if (pj.b((byte) 56)) {
+        if (TopLevelContainerHelpers.isAccountCreationMode((byte) 56)) {
           SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_f, SoftwareRasterizer.field_e);
-          var4Lifetime1 = 14 + dc.a((byte) 117);
-          var5 = ia.h(88) + 16;
-          jl.a(var5, var4Lifetime1, 480);
-          jj.a(14, 12, li.field_l, (byte) -88);
+          var4Lifetime1 = 14 + MarkerSliderPainter.getLegacyMenuWidth((byte) 117);
+          var5 = AccountTermsPanel.getMenuHeight(88) + 16;
+          InputDetachHelpers.drawStripedCentredBox(var5, var4Lifetime1, 480);
+          FontAndFrameStyleHelpers.setPopupFrameStyle(14, 12, WhirlpoolHasher.field_l, (byte) -88);
         } else {
-          if (!ai.a((byte) 105)) {
-            if (!dg.c(115)) {
+          if (!ArchiveFactoryHelpers.checkReconnecting((byte) 105)) {
+            if (!WidgetStyleLayer.isMessagePopupOpen(115)) {
               if (!this.notificationQueue.isEmpty(true)) {
-                var4_ref_ek = (NotificationToast) (this.notificationQueue.c(false));
+                var4_ref_ek = (NotificationToast) (this.notificationQueue.first(false));
                 var6 = this.notificationTimer;
                 if (var6 < 80) {
                   var5 = -32 + var6 / 2;
@@ -408,42 +408,42 @@ public final class TetraLink extends ph {
                     var5 = 8;
                   }
                 }
-                hl.field_G[var4_ref_ek.field_q].drawTransparent(8, var5);
-                mk.field_b.drawLeft(ui.field_a[var4_ref_ek.field_q], 48, var5 + mk.field_b.field_N, 8437759, -1);
+                UiComponent.field_G[var4_ref_ek.field_q].drawTransparent(8, var5);
+                SocialTabsPanel.field_b.drawLeft(ModelMergeHelpers.field_a[var4_ref_ek.field_q], 48, var5 + SocialTabsPanel.field_b.field_N, 8437759, -1);
               }
             } else {
-              var4Lifetime1 = 4 + nn.f((byte) -63);
-              var5 = 12 + ed.h(32768);
-              jl.a(var5, var4Lifetime1, 480);
-              e.a(8, (byte) -92, 12, li.field_l);
+              var4Lifetime1 = 4 + EditableTextWidget.getPopupMenuWidth((byte) -63);
+              var5 = 12 + DraggableWidget.getMessagePopupHeight(32768);
+              InputDetachHelpers.drawStripedCentredBox(var5, var4Lifetime1, 480);
+              IndexedSpriteHelpers.openPopupMenuAt(8, (byte) -92, 12, WhirlpoolHasher.field_l);
             }
           } else {
             stackIn_42_0 = 80;
-            stackIn_44_1 = (null != hd.field_u) || (ac.field_e);
-            ci.a(stackIn_42_0, stackIn_44_1);
+            stackIn_44_1 = (null != EmailAvailabilityValidator.field_u) || (ScreenSwitchHelpers.field_e);
+            PasswordFieldPainter.drawDimmedOverlay(stackIn_42_0, stackIn_44_1);
           }
         }
-        if (0 != ko.field_s) {
-          pm.a(-16711936, (-(256 * ai.field_i) + 4096) / 16);
+        if (0 != PointerTrailBubble.field_s) {
+          FontAndBrightnessHelpers.scaleRasterBrightness(-16711936, (-(256 * ArchiveFactoryHelpers.field_i) + 4096) / 16);
         }
-        if (dd.field_c >= 2) {
-          mk.field_b.drawLeft(Integer.toString(tc.field_v), 4, 24, 16777215, -1);
+        if (SettingsCookieHelpers.field_c >= 2) {
+          SocialTabsPanel.field_b.drawLeft(Integer.toString(DelayedIncomingPacket.field_v), 4, 24, 16777215, -1);
         }
-        bo.a(0, 0, (java.awt.Canvas) (var2), -2);
+        CachedArchiveSource.paintCanvasNow(0, 0, (java.awt.Canvas) (var2), -2);
         return;
     }
 
-    private final void r(int param0) {
+    private final void renderLowDetailFrame(int param0) {
         int var2;
         int var8;
         int stackIn_27_0 = 0;
         int var3_int;
         int[] var3;
-        qi var3_ref;
+        SparkParticle var3_ref;
         int var4;
         int[] var4_ref_int__;
         int var5;
-        ko var5_ref_ko;
+        PointerTrailBubble var5_ref_ko;
         int[] var6_ref_int__;
         int var6;
         int var7;
@@ -478,58 +478,58 @@ public final class TetraLink extends ph {
         if (param0 != 10) {
           this.notificationTimer = -53;
         }
-        if (ed.field_O == kb.field_t &&
-          af.field_h == hm.field_a) {
-          if (kb.field_t != -2) {
-            c.a(hm.field_a, true, true, -1, kb.field_t);
+        if (DraggableWidget.field_O == BackgroundSparkle.field_t &&
+          JoinStatusTextHelpers.field_h == LoginCredentials.field_a) {
+          if (BackgroundSparkle.field_t != -2) {
+            GraphicsSettings.renderScreenToSprites(LoginCredentials.field_a, true, true, -1, BackgroundSparkle.field_t);
           } else {
             var2 = 0;
-            qf.a(1, false);
+            ReflectionCheckHelpers.clearScreen(1, false);
           }
         } else {
-          if (kb.field_t != -2) {
-            if (ed.field_O == -2) {
-              if (16 > hd.field_v) {
-                c.a(hm.field_a, true, false, -1, kb.field_t);
+          if (BackgroundSparkle.field_t != -2) {
+            if (DraggableWidget.field_O == -2) {
+              if (16 > EmailAvailabilityValidator.field_v) {
+                GraphicsSettings.renderScreenToSprites(LoginCredentials.field_a, true, false, -1, BackgroundSparkle.field_t);
               } else {
-                qf.a(1, false);
+                ReflectionCheckHelpers.clearScreen(1, false);
                 var2 = 0;
               }
             } else {
-              if (hd.field_v >= 16) {
-                c.a(af.field_h, true, false, -hd.field_v + 33, ed.field_O);
+              if (EmailAvailabilityValidator.field_v >= 16) {
+                GraphicsSettings.renderScreenToSprites(JoinStatusTextHelpers.field_h, true, false, -EmailAvailabilityValidator.field_v + 33, DraggableWidget.field_O);
               } else {
-                c.a(hm.field_a, true, false, 1 + hd.field_v, kb.field_t);
+                GraphicsSettings.renderScreenToSprites(LoginCredentials.field_a, true, false, 1 + EmailAvailabilityValidator.field_v, BackgroundSparkle.field_t);
               }
             }
           } else {
-            if (hd.field_v < 16) {
-              qf.a(1, false);
+            if (EmailAvailabilityValidator.field_v < 16) {
+              ReflectionCheckHelpers.clearScreen(1, false);
               var2 = 0;
             } else {
-              c.a(af.field_h, true, false, -1, ed.field_O);
+              GraphicsSettings.renderScreenToSprites(JoinStatusTextHelpers.field_h, true, false, -1, DraggableWidget.field_O);
             }
           }
         }
         if (var2 != 0) {
-          if (qd.field_P == null) {
-            qd.field_P = new Sprite(640, 480);
-            bd.a(qd.field_P, param0 - 4);
+          if (DialWidget.field_P == null) {
+            DialWidget.field_P = new Sprite(640, 480);
+            RasterTargetHelpers.setSpriteRasterTarget(DialWidget.field_P, param0 - 4);
             SoftwareRasterizer.fillRectangle(0, 0, 640, 480, 3158064);
-            var3_int = (dh.field_e % 20480 << 12) % 83886080;
+            var3_int = (LruTextureCache.field_e % 20480 << 12) % 83886080;
             var4 = SpriteState.field_G;
-            var5 = ik.field_a;
-            kd.a(320, 240, (byte) -121);
-            ta.drawPerspectiveTexturedQuad(ka.field_h, new double[]{-768.0, 20.0, 0.0}, new double[]{0.0, 0.0, 1.0}, 600.0, 200.0, ja.field_i, 23967451 + var3_int, 59918628 + var3_int, 0, 16711680, wk.field_i.field_g);
-            ta.drawPerspectiveTexturedQuad(ka.field_h, new double[]{-768.0 + vh.field_b * 400.0, 20.0, 600.0 + vh.field_b * 400.0}, new double[]{vh.field_b, 0.0, vh.field_b}, 400.0, 200.0, ja.field_i, var3_int + 59918628, var3_int + 83820544, 0, 16711680, wk.field_i.field_g);
-            ta.drawPerspectiveTexturedQuad(ka.field_h, new double[]{vh.field_b * 400.0 - 768.0, 20.0, -(600.0 + 400.0 * vh.field_b)}, new double[]{-vh.field_b, 0.0, vh.field_b}, 400.0, 200.0, ja.field_i, var3_int, var3_int + 23967451, 0, 16711680, wk.field_i.field_g);
-            mf.field_w.drawTransformed(bd.field_b, ti.field_d);
-            fh.a(true);
-            kd.a(var4, var5, (byte) -121);
+            var5 = RegistrationResponseHelpers.field_a;
+            DualLinkNodeHashTable.setScreenCentre(320, 240, (byte) -121);
+            CameraProjectionMath.drawPerspectiveTexturedQuad(LongAndTextCredentials.field_h, new double[]{-768.0, 20.0, 0.0}, new double[]{0.0, 0.0, 1.0}, 600.0, 200.0, TextureCache.field_i, 23967451 + var3_int, 59918628 + var3_int, 0, 16711680, WidgetTheme.field_i.field_g);
+            CameraProjectionMath.drawPerspectiveTexturedQuad(LongAndTextCredentials.field_h, new double[]{-768.0 + Renderable.field_b * 400.0, 20.0, 600.0 + Renderable.field_b * 400.0}, new double[]{Renderable.field_b, 0.0, Renderable.field_b}, 400.0, 200.0, TextureCache.field_i, var3_int + 59918628, var3_int + 83820544, 0, 16711680, WidgetTheme.field_i.field_g);
+            CameraProjectionMath.drawPerspectiveTexturedQuad(LongAndTextCredentials.field_h, new double[]{Renderable.field_b * 400.0 - 768.0, 20.0, -(600.0 + 400.0 * Renderable.field_b)}, new double[]{-Renderable.field_b, 0.0, Renderable.field_b}, 400.0, 200.0, TextureCache.field_i, var3_int, var3_int + 23967451, 0, 16711680, WidgetTheme.field_i.field_g);
+            InsetTextPainter.field_w.drawTransformed(RasterTargetHelpers.field_b, LobbyResourceHelpers.field_d);
+            HuffmanCodec.popRasterTarget(true);
+            DualLinkNodeHashTable.setScreenCentre(var4, var5, (byte) -121);
           }
-          qd.field_P.drawOpaque(0, -240 + ik.field_a);
-          if (wk.field_i.field_j) {
-            var3_intLifetime1 = dh.field_e % 64;
+          DialWidget.field_P.drawOpaque(0, -240 + RegistrationResponseHelpers.field_a);
+          if (WidgetTheme.field_i.field_j) {
+            var3_intLifetime1 = LruTextureCache.field_e % 64;
             if (var3_intLifetime1 >= 32) {
               stackIn_27_0 = -var3_intLifetime1 + 48;
             } else {
@@ -547,17 +547,17 @@ public final class TetraLink extends ph {
             var19 = new int[3];
             var13 = var19;
             var6_ref_int__ = var13;
-            var4_ref_int__[0] = (int)s.field_c;
+            var4_ref_int__[0] = (int)MenuThemeHelpers.field_c;
             var17[0] = 50;
             var6_ref_int__[0] = (var3_intLifetime1Lifetime1 >> 4) + 128;
-            var4_ref_int__[1] = -(int)s.field_c;
+            var4_ref_int__[1] = -(int)MenuThemeHelpers.field_c;
             var17[1] = 50;
             var18[2] = 0;
             var6_ref_int__[1] = 128 + (var3_intLifetime1Lifetime1 >> 4);
             var17[2] = 80;
             var19[2] = 128;
-            var7 = ta.rgbToPackedHsl(8437759);
-            mj.drawTriangle(240, 0, 0, var18, var24, var19, var7, var7, var7);
+            var7 = CameraProjectionMath.rgbToPackedHsl(8437759);
+            ClippedTriangleRenderer.drawTriangle(240, 0, 0, var18, var24, var19, var7, var7, var7);
             var3_intLifetime1Lifetime2 = var18[0];
             var4_ref_int__[0] = var18[1];
             var18[1] = var3_intLifetime1Lifetime2;
@@ -567,28 +567,28 @@ public final class TetraLink extends ph {
             var3_intLifetime1Lifetime4 = var19[0];
             var6_ref_int__[0] = var19[1];
             var19[1] = var3_intLifetime1Lifetime4;
-            mj.drawTriangle(240, 0, 0, var18, var24, var19, var7, var7, var7);
+            ClippedTriangleRenderer.drawTriangle(240, 0, 0, var18, var24, var19, var7, var7, var7);
           }
-          if (wk.field_i.field_n) {
-            var21 = bl.field_Lb.field_C;
+          if (WidgetTheme.field_i.field_n) {
+            var21 = VerticalScrollbar.field_Lb.field_C;
             var15 = var21;
             var10 = var15;
             var22 = var10;
             var16 = var22;
             var3 = var16;
-            if (sk.field_c > 0) {
+            if (SectorCacheStore.field_c > 0) {
               var6 = 256000;
               while (var6 > 0) {
                 var6--;
                 var5Lifetime1 = var21[var6] & 65280;
                 var4Lifetime1 = var21[var6] & 16711935;
-                var4Lifetime1 = var4Lifetime1 * (-sk.field_c + 256);
-                var5Lifetime1 = var5Lifetime1 * (256 - sk.field_c);
+                var4Lifetime1 = var4Lifetime1 * (-SectorCacheStore.field_c + 256);
+                var5Lifetime1 = var5Lifetime1 * (256 - SectorCacheStore.field_c);
                 var4Lifetime1 = var4Lifetime1 & -16711936;
-                var4Lifetime1 = var4Lifetime1 + (-16711936 & 16711935 * sk.field_c);
+                var4Lifetime1 = var4Lifetime1 + (-16711936 & 16711935 * SectorCacheStore.field_c);
                 var5Lifetime1 = var5Lifetime1 & 16711680;
-                var5Lifetime1 = var5Lifetime1 + (65280 * sk.field_c & 16711680);
-                var10[var6] = IntrusiveNode.a(var5Lifetime1, var4Lifetime1) >>> 8;
+                var5Lifetime1 = var5Lifetime1 + (65280 * SectorCacheStore.field_c & 16711680);
+                var10[var6] = IntrusiveNode.bitOr(var5Lifetime1, var4Lifetime1) >>> 8;
               }
             }
             var5Lifetime1Lifetime1 = 200;
@@ -601,40 +601,40 @@ public final class TetraLink extends ph {
                 if (0 >= var4Lifetime1Lifetime1) {
                   break;
                 }
-                var3[var6Lifetime2] = pl.a(var22[var6Lifetime2], 16711422);
+                var3[var6Lifetime2] = StatusRequestHelpers.bitAnd(var22[var6Lifetime2], 16711422);
                 var3[var6Lifetime2] = var3[var6Lifetime2] >> 1;
                 var6Lifetime2++;
               }
             }
-            bd.a(bl.field_Lb, param0 - 4);
-            var5_ref_ko = (ko) (eg.field_J.c(false));
+            RasterTargetHelpers.setSpriteRasterTarget(VerticalScrollbar.field_Lb, param0 - 4);
+            var5_ref_ko = (PointerTrailBubble) (ArrayWidgetContainer.field_J.first(false));
             while (var5_ref_ko != null) {
-              rf.drawBubbleDistortion(var5_ref_ko.field_r, var5_ref_ko.field_p, var5_ref_ko.field_n << 3, 10000);
-              var5_ref_ko = (ko) (eg.field_J.a((byte) -70));
+              RasterEffectHelpers.drawBubbleDistortion(var5_ref_ko.field_r, var5_ref_ko.field_p, var5_ref_ko.field_n << 3, 10000);
+              var5_ref_ko = (PointerTrailBubble) (ArrayWidgetContainer.field_J.next((byte) -70));
             }
-            fh.a(true);
-            bl.field_Lb.drawTransparent(SpriteState.field_G - (bl.field_Lb.field_u >> 1), -(bl.field_Lb.field_E >> 1) + ik.field_a);
-            if (!(wk.field_i.field_l <= 0)) {
-              rf.drawGlowingLine(-(bl.field_Lb.field_u >> 1) + SpriteState.field_G, -(bl.field_Lb.field_E >> 1) + ik.field_a, (bl.field_Lb.field_u >> 1) + SpriteState.field_G, -(bl.field_Lb.field_E >> 1) + ik.field_a, 40, wk.field_i.field_l, oi.field_n);
-              rf.drawGlowingLine(SpriteState.field_G + (bl.field_Lb.field_u >> 1), -(bl.field_Lb.field_E >> 1) + ik.field_a, (bl.field_Lb.field_u >> 1) + SpriteState.field_G, (bl.field_Lb.field_E >> 1) + ik.field_a, 40, wk.field_i.field_l, oi.field_n);
-              rf.drawGlowingLine(SpriteState.field_G + (bl.field_Lb.field_u >> 1), ik.field_a + (bl.field_Lb.field_E >> 1), -(bl.field_Lb.field_u >> 1) + SpriteState.field_G, ik.field_a + (bl.field_Lb.field_E >> 1), 40, wk.field_i.field_l, oi.field_n);
-              rf.drawGlowingLine(SpriteState.field_G - (bl.field_Lb.field_u >> 1), (bl.field_Lb.field_E >> 1) + ik.field_a, SpriteState.field_G - (bl.field_Lb.field_u >> 1), ik.field_a - (bl.field_Lb.field_E >> 1), 40, wk.field_i.field_l, oi.field_n);
+            HuffmanCodec.popRasterTarget(true);
+            VerticalScrollbar.field_Lb.drawTransparent(SpriteState.field_G - (VerticalScrollbar.field_Lb.field_u >> 1), -(VerticalScrollbar.field_Lb.field_E >> 1) + RegistrationResponseHelpers.field_a);
+            if (!(WidgetTheme.field_i.field_l <= 0)) {
+              RasterEffectHelpers.drawGlowingLine(-(VerticalScrollbar.field_Lb.field_u >> 1) + SpriteState.field_G, -(VerticalScrollbar.field_Lb.field_E >> 1) + RegistrationResponseHelpers.field_a, (VerticalScrollbar.field_Lb.field_u >> 1) + SpriteState.field_G, -(VerticalScrollbar.field_Lb.field_E >> 1) + RegistrationResponseHelpers.field_a, 40, WidgetTheme.field_i.field_l, IndexedSpriteState.field_n);
+              RasterEffectHelpers.drawGlowingLine(SpriteState.field_G + (VerticalScrollbar.field_Lb.field_u >> 1), -(VerticalScrollbar.field_Lb.field_E >> 1) + RegistrationResponseHelpers.field_a, (VerticalScrollbar.field_Lb.field_u >> 1) + SpriteState.field_G, (VerticalScrollbar.field_Lb.field_E >> 1) + RegistrationResponseHelpers.field_a, 40, WidgetTheme.field_i.field_l, IndexedSpriteState.field_n);
+              RasterEffectHelpers.drawGlowingLine(SpriteState.field_G + (VerticalScrollbar.field_Lb.field_u >> 1), RegistrationResponseHelpers.field_a + (VerticalScrollbar.field_Lb.field_E >> 1), -(VerticalScrollbar.field_Lb.field_u >> 1) + SpriteState.field_G, RegistrationResponseHelpers.field_a + (VerticalScrollbar.field_Lb.field_E >> 1), 40, WidgetTheme.field_i.field_l, IndexedSpriteState.field_n);
+              RasterEffectHelpers.drawGlowingLine(SpriteState.field_G - (VerticalScrollbar.field_Lb.field_u >> 1), (VerticalScrollbar.field_Lb.field_E >> 1) + RegistrationResponseHelpers.field_a, SpriteState.field_G - (VerticalScrollbar.field_Lb.field_u >> 1), RegistrationResponseHelpers.field_a - (VerticalScrollbar.field_Lb.field_E >> 1), 40, WidgetTheme.field_i.field_l, IndexedSpriteState.field_n);
             }
           }
-          var3_ref = (qi) (nd.field_Sb.c(false));
+          var3_ref = (SparkParticle) (QuickChatHelpDialog.field_Sb.first(false));
           while (var3_ref != null) {
             var4Lifetime2 = var3_ref.field_t >> 12;
             var6Lifetime1 = 512 + (var3_ref.field_y >> 12);
             var5Lifetime2 = var3_ref.field_v >> 12;
             if (var6Lifetime1 > 0) {
-              SoftwareRasterizer.fillRadialPaletteCircle((SpriteState.field_G << 4) + (var4Lifetime2 << 13) / var6Lifetime1, (var5Lifetime2 << 13) / var6Lifetime1 + (ik.field_a << 4), 65536 / var6Lifetime1, 5 * var3_ref.field_s / 3, oi.field_n);
+              SoftwareRasterizer.fillRadialPaletteCircle((SpriteState.field_G << 4) + (var4Lifetime2 << 13) / var6Lifetime1, (var5Lifetime2 << 13) / var6Lifetime1 + (RegistrationResponseHelpers.field_a << 4), 65536 / var6Lifetime1, 5 * var3_ref.field_s / 3, IndexedSpriteState.field_n);
             }
-            var3_ref = (qi) (nd.field_Sb.a((byte) -70));
+            var3_ref = (SparkParticle) (QuickChatHelpDialog.field_Sb.next((byte) -70));
           }
         }
     }
 
-    private final void f(byte param0) {
+    private final void drawTitleWaveEffect(byte param0) {
         int var2;
         int var3;
         int var4;
@@ -644,10 +644,10 @@ public final class TetraLink extends ph {
         int stackIn_13_0 = 0;
         int stackIn_13_0Lifetime1;
         var7 = field_J;
-        var2 = 400 - dh.field_e % 400;
+        var2 = 400 - LruTextureCache.field_e % 400;
         var4 = 0;
         while (var4 < 400) {
-          var5 = (int)(mb.a((float)var4 / 200.0f, (float)dh.field_e, false) * 3.0f);
+          var5 = (int)(CacheEntry.sumSineOctaves((float)var4 / 200.0f, (float)LruTextureCache.field_e, false) * 3.0f);
           stackIn_13_0 = var5;
           if (stackIn_13_0 > 0) {
             var6 = SoftwareRasterizer.field_f * var4 + 100;
@@ -713,7 +713,7 @@ public final class TetraLink extends ph {
         Object var4;
         String[] var4_array;
         int var5;
-        ei var6;
+        GameSession var6;
         String var7;
         String var8;
         int var8_int;
@@ -738,303 +738,303 @@ public final class TetraLink extends ph {
         int stackIn_155_0Lifetime2;
         int stackIn_155_1Lifetime2;
         var10 = field_J;
-        pm.a((byte) 26);
-        bd.field_e = nn.i(117);
-        gg.d((byte) -106);
-        if (hd.field_u != null &&
-          hd.field_u.field_c) {
-          qa.b((byte) 50);
-          sd.r(-11);
+        FontAndBrightnessHelpers.getKeyboardIdleTicks((byte) 26);
+        RasterTargetHelpers.field_e = EditableTextWidget.getMouseIdleTicks(117);
+        PasswordLoginCredentials.serviceAudio((byte) -106);
+        if (EmailAvailabilityValidator.field_u != null &&
+          EmailAvailabilityValidator.field_u.field_c) {
+          QuickChatCategory.exitFullscreen((byte) 50);
+          LoginDialog.reopenAccountScreenIfActive(-11);
         }
         stackIn_5_1 = 120;
-        stackIn_6_2 = (hd.field_u != null);
-        this.b(stackIn_5_1, stackIn_6_2);
-        if (oa.field_w) {
+        stackIn_6_2 = (EmailAvailabilityValidator.field_u != null);
+        this.serviceFramework(stackIn_5_1, stackIn_6_2);
+        if (HighscoreQuery.field_w) {
           this.loadArchives(104);
-          oa.field_w = false;
+          HighscoreQuery.field_w = false;
         }
-        dh.field_e = dh.field_e + 1;
-        if (dh.field_e == 200 &&
-          ed.field_O == 10) {
-          lb.a(oa.field_x, 573509761);
+        LruTextureCache.field_e = LruTextureCache.field_e + 1;
+        if (LruTextureCache.field_e == 200 &&
+          DraggableWidget.field_O == 10) {
+          DateOfBirthPanel.playSample(HighscoreQuery.field_x, 573509761);
         }
-        if (500 == dh.field_e &&
-          ed.field_O == 10) {
-          bb.a(0, false);
+        if (500 == LruTextureCache.field_e &&
+          DraggableWidget.field_O == 10) {
+          MenuReturnHelpers.returnToMenuScreen(0, false);
         }
-        if (rm.a(false)) {
-          this.c((byte) -109);
-          if (rm.a(false)) {
-            if (ji.field_Nb) {
+        if (LoadingScreenHelpers.shouldShowLoadingScreen(false)) {
+          this.updateLoginFlow((byte) -109);
+          if (LoadingScreenHelpers.shouldShowLoadingScreen(false)) {
+            if (TwoColumnListPanel.field_Nb) {
               return;
             }
-            if (ac.a(-19403)) {
-              discarded$0 = this.a((byte) -55, false);
+            if (ScreenSwitchHelpers.haveRequiredClientStages(-19403)) {
+              discarded$0 = this.advanceLoading((byte) -55, false);
             }
             return;
           }
         }
-        if (!ji.field_Nb) {
-          t.b(hc.field_p, -21901);
-          if (this.a((byte) 98, true)) {
-            ji.field_Nb = true;
+        if (!TwoColumnListPanel.field_Nb) {
+          ArchiveIndex.updateMenuWidgets(PacketDiagnosticsHelpers.field_p, -21901);
+          if (this.advanceLoading((byte) 98, true)) {
+            TwoColumnListPanel.field_Nb = true;
           }
         } else {
-          if (!qj.a(4)) {
-            io.a(4);
+          if (!NineSliceFrameHelpers.isSavedFlagsReady(4)) {
+            StartupFlagsHelpers.pollStartupFlagsRequest(4);
           } else {
-            if (!pj.b((byte) 119)) {
-              if (ai.a((byte) 105)) {
-                stackIn_45_1 = (hd.field_u != null);
-                var2 = this.a(stackIn_45_1, (byte) -108);
+            if (!TopLevelContainerHelpers.isAccountCreationMode((byte) 119)) {
+              if (ArchiveFactoryHelpers.checkReconnecting((byte) 105)) {
+                stackIn_45_1 = (EmailAvailabilityValidator.field_u != null);
+                var2 = this.serviceAccountActions(stackIn_45_1, (byte) -108);
                 if (var2 == 1 ||
                   var2 == 2) {
-                  if (null != hd.field_u) {
-                    qa.b((byte) 90);
+                  if (null != EmailAvailabilityValidator.field_u) {
+                    QuickChatCategory.exitFullscreen((byte) 90);
                   }
                   if (var2 == 2) {
-                    ma.a(lk.q(13), (byte) 124);
+                    AnimationPlayer.openQuitPage(ProgressMessageDialog.getHostApplet(13), (byte) 124);
                   }
                 }
-                this.b((byte) 62, true);
+                this.updateScreens((byte) 62, true);
               } else {
-                if (!dg.c(-121)) {
-                  this.b((byte) 62, false);
+                if (!WidgetStyleLayer.isMessagePopupOpen(-121)) {
+                  this.updateScreens((byte) 62, false);
                 } else {
-                  if (0 != ko.field_s) {
-                    this.b((byte) 62, false);
+                  if (0 != PointerTrailBubble.field_s) {
+                    this.updateScreens((byte) 62, false);
                   } else {
-                    var2 = kk.i(-91);
+                    var2 = MarkerSlider.pollPopupMenuSelection(-91);
                     if (var2 == 1) {
-                      kf.field_d = true;
-                      hd.a(vg.field_Mb, 0, -308);
+                      LoadingScreenRenderHelpers.field_d = true;
+                      EmailAvailabilityValidator.startScreenTransition(NameEntryPopup.field_Mb, 0, -308);
                     }
-                    this.b((byte) 62, true);
+                    this.updateScreens((byte) 62, true);
                   }
                 }
               }
             } else {
-              if (ko.field_s == 0) {
-                var2 = mf.b(1000);
+              if (PointerTrailBubble.field_s == 0) {
+                var2 = InsetTextPainter.pollFullscreenPromptAction(1000);
                 if (var2 != 2) {
                   if (var2 != 3) {
                     if (4 == var2) {
-                      MatchSetup.field_f = true;
-                      hd.a(rm.field_d, 0, -308);
+                      GameBoard.field_f = true;
+                      EmailAvailabilityValidator.startScreenTransition(LoadingScreenHelpers.field_d, 0, -308);
                     }
                   } else {
-                    MatchSetup.field_f = false;
-                    s.a(8, li.field_l, (byte) 7, 2, true, 240, 8, 320, mk.field_b.field_K + mk.field_b.field_u, mk.field_b.field_u, mk.field_b, li.field_l);
+                    GameBoard.field_f = false;
+                    MenuThemeHelpers.initializeMenuTheme(8, WhirlpoolHasher.field_l, (byte) 7, 2, true, 240, 8, 320, SocialTabsPanel.field_b.field_K + SocialTabsPanel.field_b.field_u, SocialTabsPanel.field_b.field_u, SocialTabsPanel.field_b, WhirlpoolHasher.field_l);
                   }
                 } else {
-                  qa.b((byte) 67);
+                  QuickChatCategory.exitFullscreen((byte) 67);
                 }
-                this.b((byte) 62, true);
+                this.updateScreens((byte) 62, true);
               } else {
-                this.b((byte) 62, false);
+                this.updateScreens((byte) 62, false);
               }
             }
           }
         }
-        while (bn.a(-19161, IntrusiveDeque.field_b)) {
-          stackIn_155_0 = ua.field_c;
+        while (ProxyAuthenticationRequiredException.pollIncomingPacket(-19161, IntrusiveDeque.field_b)) {
+          stackIn_155_0 = CommonUiHelpers.field_c;
           stackIn_155_1 = 9;
           if (stackIn_155_0 == stackIn_155_1) {
-            q.b(0);
+            LinkTextPainter.commitScreenChange(0);
             DualLinkDeque.field_e = false;
-            ed.field_O = 9;
-            cl.field_g = 2;
-            ok.field_d = 128.0f;
-            im.field_e = 3.1415927410125732f;
-            n.field_R = kb.field_q.readString((byte) 81);
+            DraggableWidget.field_O = 9;
+            MenuScreen.field_g = 2;
+            TransitionPhase.field_d = 128.0f;
+            SoundMixerHelpers.field_e = 3.1415927410125732f;
+            NameSuggestionsPanel.field_R = BackgroundSparkle.field_q.readString((byte) 81);
             continue;
           }
-          if (ua.field_c == 14) {
-            lb.a(e.field_c, 573509761);
-            q.b(0);
-            tm.initializeLobbyState((byte) -58, 1024, SoundEffectLibrary.a(true), cc.a(2, (byte) -108), qn.field_s.length, ke.a((byte) -95), pl.field_a, ClientException.a(12), 150, cc.a(2000, (byte) -51));
-            mi.a(uj.b(false), uh.b(32), 0);
-            mi.field_Pb = true;
-            ed.field_O = -2;
+          if (CommonUiHelpers.field_c == 14) {
+            DateOfBirthPanel.playSample(IndexedSpriteHelpers.field_c, 573509761);
+            LinkTextPainter.commitScreenChange(0);
+            NameAvailabilityValidator.initializeLobbyState((byte) -58, 1024, SoundEffectLibrary.getLobbyPlayerListContent(true), DialWidgetPainter.nextPowerOfTwo(2, (byte) -108), StatefulWidgetRenderer.field_s.length, DiskCacheWorker.getLobbyScrollContent((byte) -95), StatusRequestHelpers.field_a, ClientException.getGameListContent(12), 150, DialWidgetPainter.nextPowerOfTwo(2000, (byte) -51));
+            LabelPairWidget.bindSocialLists(ThreeSliceButtonPainter.getFriendListContent(false), GameClock.getIgnoreListContent(32), 0);
+            LabelPairWidget.field_Pb = true;
+            DraggableWidget.field_O = -2;
             DualLinkDeque.field_e = false;
             continue;
           }
-          if (ua.field_c == 15) {
-            if (mi.field_Pb) {
-              q.b(0);
-              qi.b((byte) -98);
-              nn.g((byte) -126);
-              ed.field_O = 0;
-              sj.field_a = false;
-              nn.field_X = false;
-              qh.field_k = true;
-              tb.field_g = true;
-              mi.field_Pb = false;
-              ph.field_s = false;
-              kd.a(320, 240, (byte) -121);
-              qd.field_P = null;
-              if (aa.field_bc != null &&
-                aa.field_bc.field_i == 1) {
+          if (CommonUiHelpers.field_c == 15) {
+            if (LabelPairWidget.field_Pb) {
+              LinkTextPainter.commitScreenChange(0);
+              SparkParticle.resetSessionScreens((byte) -98);
+              EditableTextWidget.clearChatHistory((byte) -126);
+              DraggableWidget.field_O = 0;
+              AccountServerResult.field_a = false;
+              EditableTextWidget.field_X = false;
+              DateOfBirthValidator.field_k = true;
+              AnimationSequence.field_g = true;
+              LabelPairWidget.field_Pb = false;
+              NetworkGameClient.field_s = false;
+              DualLinkNodeHashTable.setScreenCentre(320, 240, (byte) -121);
+              DialWidget.field_P = null;
+              if (ContextMenu.field_bc != null &&
+                ContextMenu.field_bc.field_i == 1) {
                 stackIn_72_0 = 0.0;
               } else {
                 stackIn_72_0 = 3.141592653589793;
               }
-              uk.field_x = (float)stackIn_72_0;
-              RandomAccessCacheFile.a(-113, false);
-              ti.field_g[0] = (double)rn.field_d * Math.sin((double)dj.field_h);
-              ti.field_g[2] = (double)rn.field_d * Math.cos((double)dj.field_h);
-              DelegatingCanvas.a(true, -7869);
-              eo.a(-20);
+              WidgetNode.field_x = (float)stackIn_72_0;
+              RandomAccessCacheFile.resetCameraToTarget(-113, false);
+              LobbyResourceHelpers.field_g[0] = (double)LoadingResourceHelpers.field_d * Math.sin((double)NodeHashTable.field_h);
+              LobbyResourceHelpers.field_g[2] = (double)LoadingResourceHelpers.field_d * Math.cos((double)NodeHashTable.field_h);
+              DelegatingCanvas.createGameOptions(true, -7869);
+              CameraAndChatHelpers.updateCameraMatrix(-20);
             }
-            fj.field_o = false;
+            ChatMessage.field_o = false;
             DualLinkDeque.field_e = false;
             continue;
           }
-          if (ua.field_c == 10 &&
-            mi.field_Pb) {
-            vf.a((byte) -7);
+          if (CommonUiHelpers.field_c == 10 &&
+            LabelPairWidget.field_Pb) {
+            SocialListPacketHandler.handleSocialListPacket((byte) -7);
             continue;
           }
-          if (67 == ua.field_c) {
-            var2Lifetime1 = kb.field_q.readUnsignedByte((byte) -99);
+          if (67 == CommonUiHelpers.field_c) {
+            var2Lifetime1 = BackgroundSparkle.field_q.readUnsignedByte((byte) -99);
             var3 = 1 << var2Lifetime1;
-            hj.field_a = hj.field_a | var3;
+            QuickChatCategoryCache.field_a = QuickChatCategoryCache.field_a | var3;
             this.notificationQueue.addLast(new NotificationToast(var2Lifetime1), false);
             continue;
           }
-          if (ua.field_c != 57 &&
-            ua.field_c != 58) {
-            if (ua.field_c == 59) {
-              if (ph.field_s ||
-                sj.field_a) {
-                q.b(0);
-                if (ph.field_s) {
-                  aa.field_bc.a(true, false);
+          if (CommonUiHelpers.field_c != 57 &&
+            CommonUiHelpers.field_c != 58) {
+            if (CommonUiHelpers.field_c == 59) {
+              if (NetworkGameClient.field_s ||
+                AccountServerResult.field_a) {
+                LinkTextPainter.commitScreenChange(0);
+                if (NetworkGameClient.field_s) {
+                  ContextMenu.field_bc.exitToMainMenu(true, false);
                 }
-                DelegatingCanvas.a(true, -7869);
-                ph.field_s = false;
-                lb.field_R = 0;
-                tb.field_g = true;
-                ed.field_O = -2;
-                nn.field_X = false;
-                tb.field_e = true;
-                sj.field_a = false;
+                DelegatingCanvas.createGameOptions(true, -7869);
+                NetworkGameClient.field_s = false;
+                DateOfBirthPanel.field_R = 0;
+                AnimationSequence.field_g = true;
+                DraggableWidget.field_O = -2;
+                EditableTextWidget.field_X = false;
+                AnimationSequence.field_e = true;
+                AccountServerResult.field_a = false;
               }
-              fj.field_o = false;
+              ChatMessage.field_o = false;
               continue;
             }
             var2_ref = null;
-            if (ph.field_s) {
-              var2_ref = aa.field_bc;
+            if (NetworkGameClient.field_s) {
+              var2_ref = ContextMenu.field_bc;
             } else {
-              if (sj.field_a) {
-                var2_ref = ud.field_Qb;
+              if (AccountServerResult.field_a) {
+                var2_ref = SocialListEntry.field_Qb;
               }
             }
             if (var2_ref != null) {
-              if (ua.field_c == 60) {
-                var3Lifetime2 = kb.field_q.readUnsignedByte((byte) -99);
-                var4_int = kb.field_q.readUnsignedByte((byte) -99);
-                var5 = kb.field_q.readUnsignedShort(127);
-                ((ei) (var2_ref)).field_a.a(var4_int, 18936, var3Lifetime2);
-                ((ei) (var2_ref)).field_d = var5 - 50;
-                if (((ei) (var2_ref)).field_a.field_g == -1) {
-                  ((ei) (var2_ref)).field_a.field_g = var3Lifetime2;
+              if (CommonUiHelpers.field_c == 60) {
+                var3Lifetime2 = BackgroundSparkle.field_q.readUnsignedByte((byte) -99);
+                var4_int = BackgroundSparkle.field_q.readUnsignedByte((byte) -99);
+                var5 = BackgroundSparkle.field_q.readUnsignedShort(127);
+                ((GameSession) (var2_ref)).field_a.setTurnState(var4_int, 18936, var3Lifetime2);
+                ((GameSession) (var2_ref)).field_d = var5 - 50;
+                if (((GameSession) (var2_ref)).field_a.field_g == -1) {
+                  ((GameSession) (var2_ref)).field_a.field_g = var3Lifetime2;
                 }
-                if (((ei) (var2_ref)).field_d >= 1) {
+                if (((GameSession) (var2_ref)).field_d >= 1) {
                   continue;
                 }
-                ((ei) (var2_ref)).field_d = 1;
+                ((GameSession) (var2_ref)).field_d = 1;
                 continue;
               }
-              if (ua.field_c == 61) {
-                var3Lifetime2Lifetime1 = kb.field_q.readUnsignedByte((byte) -99);
-                var4_intLifetime1 = kb.field_q.readUnsignedByte((byte) -99);
-                ((ei) (var2_ref)).field_a.a(var4_intLifetime1 >> 3, var4_intLifetime1 & 7, var3Lifetime2Lifetime1, -28067);
-                ((ei) (var2_ref)).field_g.a((byte) 56);
+              if (CommonUiHelpers.field_c == 61) {
+                var3Lifetime2Lifetime1 = BackgroundSparkle.field_q.readUnsignedByte((byte) -99);
+                var4_intLifetime1 = BackgroundSparkle.field_q.readUnsignedByte((byte) -99);
+                ((GameSession) (var2_ref)).field_a.placePiece(var4_intLifetime1 >> 3, var4_intLifetime1 & 7, var3Lifetime2Lifetime1, -28067);
+                ((GameSession) (var2_ref)).field_g.queueNewPieceAnimations((byte) 56);
                 continue;
               }
-              if (ua.field_c == 62) {
-                var3Lifetime2Lifetime2 = kb.field_q.readSignedByte(-1772093437);
-                ((ei) (var2_ref)).field_a.a(var3Lifetime2Lifetime2, 4);
+              if (CommonUiHelpers.field_c == 62) {
+                var3Lifetime2Lifetime2 = BackgroundSparkle.field_q.readSignedByte(-1772093437);
+                ((GameSession) (var2_ref)).field_a.endGame(var3Lifetime2Lifetime2, 4);
                 var15 = var2_ref;
                 var4 = var15;
-                if (((ei) (var15)).field_i != -2) {
-                  ((ei) (var15)).a(false, -112, false, -1);
+                if (((GameSession) (var15)).field_i != -2) {
+                  ((GameSession) (var15)).exitToScreen(false, -112, false, -1);
                 }
-                ((ei) (var4)).field_p = 0;
+                ((GameSession) (var4)).field_p = 0;
                 continue;
               }
-              if (ua.field_c == 63) {
-                ((ei) (var2_ref)).field_a.field_h = kb.field_q.readUnsignedByte((byte) -99);
-                if (aa.field_bc == null) {
+              if (CommonUiHelpers.field_c == 63) {
+                ((GameSession) (var2_ref)).field_a.field_h = BackgroundSparkle.field_q.readUnsignedByte((byte) -99);
+                if (ContextMenu.field_bc == null) {
                   continue;
                 }
-                ci.c(63);
+                PasswordFieldPainter.updateDrawOfferCaption(63);
                 continue;
               }
-              if (ua.field_c == 64) {
-                ((ei) (var2_ref)).field_a.field_j = kb.field_q.readUnsignedByte((byte) -99);
+              if (CommonUiHelpers.field_c == 64) {
+                ((GameSession) (var2_ref)).field_a.field_j = BackgroundSparkle.field_q.readUnsignedByte((byte) -99);
                 continue;
               }
-              if (ua.field_c == 65) {
-                ((ei) (var2_ref)).field_a.field_n = kb.field_q.readUnsignedByte((byte) -99);
-                if (null == aa.field_bc) {
+              if (CommonUiHelpers.field_c == 65) {
+                ((GameSession) (var2_ref)).field_a.field_n = BackgroundSparkle.field_q.readUnsignedByte((byte) -99);
+                if (null == ContextMenu.field_bc) {
                   continue;
                 }
-                ba.a(1);
+                MessageDialogContent.updateRematchCaption(1);
                 continue;
               }
-              if (ua.field_c == 66) {
-                ((ei) (var2_ref)).field_m = kb.field_q.readUnsignedByte((byte) -99);
-                if (aa.field_bc == null) {
+              if (CommonUiHelpers.field_c == 66) {
+                ((GameSession) (var2_ref)).field_m = BackgroundSparkle.field_q.readUnsignedByte((byte) -99);
+                if (ContextMenu.field_bc == null) {
                   continue;
                 }
-                ba.a(1);
+                MessageDialogContent.updateRematchCaption(1);
                 continue;
               }
             }
-            this.d(true);
+            this.dispatchSharedPacket(true);
             continue;
           }
-          q.b(0);
-          var2Lifetime1Lifetime1 = kb.field_q.readUnsignedByte((byte) -99);
-          stackIn_87_0 = (0 == kb.field_q.readUnsignedByte((byte) -99)) ? 0 : 1;
+          LinkTextPainter.commitScreenChange(0);
+          var2Lifetime1Lifetime1 = BackgroundSparkle.field_q.readUnsignedByte((byte) -99);
+          stackIn_87_0 = (0 == BackgroundSparkle.field_q.readUnsignedByte((byte) -99)) ? 0 : 1;
           var3Lifetime3 = stackIn_87_0;
           var11 = new String[2];
           var4_array = var11;
           var5Lifetime1 = -2;
           for (var6_int = 0; var6_int < var11.length; var6_int++) {
-            var4_array[var6_int] = kb.field_q.a(true);
-            stackIn_155_0Lifetime2 = ua.field_c;
+            var4_array[var6_int] = BackgroundSparkle.field_q.readZeroPrefixedString(true);
+            stackIn_155_0Lifetime2 = CommonUiHelpers.field_c;
             stackIn_155_1Lifetime2 = 57;
             if (stackIn_155_0Lifetime2 == stackIn_155_1Lifetime2 &&
-              ej.matchesNormalizedSessionName(var11[var6_int], 4)) {
+              PieceDropAnimation.matchesNormalizedSessionName(var11[var6_int], 4)) {
               var5Lifetime1 = var6_int;
             }
           }
-          var6 = new ei(true, var2Lifetime1Lifetime1, var11, var5Lifetime1, var3Lifetime3 != 0);
-          var6.field_a.a(kb.field_q, -7);
-          var6.field_g.c(31);
-          if (ua.field_c != 57) {
-            ud.field_Qb = var6;
-            sj.field_a = true;
+          var6 = new GameSession(true, var2Lifetime1Lifetime1, var11, var5Lifetime1, var3Lifetime3 != 0);
+          var6.field_a.readBoardState(BackgroundSparkle.field_q, -7);
+          var6.field_g.resetToBoard(31);
+          if (CommonUiHelpers.field_c != 57) {
+            SocialListEntry.field_Qb = var6;
+            AccountServerResult.field_a = true;
             var7 = var6.field_a.field_o[0];
             var8 = var6.field_a.field_o[1];
-            var14 = sk.a(new String[]{var7, var8}, b.field_b, 123);
-            fi.a(0, 0, ph.field_w, 1, var14, var6.field_a.field_o[0]);
+            var14 = SectorCacheStore.formatTemplate(new String[]{var7, var8}, NameEntryKeyHelpers.field_b, 123);
+            AccountCreationDialog.addChatMessage(0, 0, NetworkGameClient.field_w, 1, var14, var6.field_a.field_o[0]);
           } else {
-            ph.field_s = true;
-            aa.field_bc = var6;
+            NetworkGameClient.field_s = true;
+            ContextMenu.field_bc = var6;
             if (var6.field_c) {
               var7 = var6.field_a.field_o[0];
               var8_int = 0;
-              while (ej.matchesNormalizedSessionName(var7, 4)) {
+              while (PieceDropAnimation.matchesNormalizedSessionName(var7, 4)) {
                 var8_int++;
                 var7 = var6.field_a.field_o[var8_int];
               }
-              var12 = sk.a(new String[]{var7}, id.field_w, 119);
-              fi.a(0, 0, ph.field_w, 1, var12, var6.field_a.field_o[0]);
+              var12 = SectorCacheStore.formatTemplate(new String[]{var7}, TriangleMesh.field_w, 119);
+              AccountCreationDialog.addChatMessage(0, 0, NetworkGameClient.field_w, 1, var12, var6.field_a.field_o[0]);
             }
             array$1 = new String[1];
             stackIn_103_0 = array$1;
@@ -1046,55 +1046,55 @@ public final class TetraLink extends ph {
               stackIn_104_3 = NotificationToast.field_t;
             }
             stackIn_103_1[stackIn_103_2] = stackIn_104_3;
-            var13 = sk.a(stackIn_103_0, BufferedSocket.field_e, 119);
-            fi.a(0, 0, ph.field_w, 1, var13, var6.field_a.field_o[0]);
+            var13 = SectorCacheStore.formatTemplate(stackIn_103_0, BufferedSocket.field_e, 119);
+            AccountCreationDialog.addChatMessage(0, 0, NetworkGameClient.field_w, 1, var13, var6.field_a.field_o[0]);
           }
-          sk.a(0);
-          fj.field_o = false;
-          ed.field_O = -1;
-          nn.field_X = true;
+          SectorCacheStore.startNewGameScene(0);
+          ChatMessage.field_o = false;
+          DraggableWidget.field_O = -1;
+          EditableTextWidget.field_X = true;
         }
-        ak.a((byte) -95, 0);
+        PacketFlushHelpers.flushPackets((byte) -95, 0);
         stackIn_155_0Lifetime1 = -2;
-        stackIn_155_1Lifetime1 = kb.field_t;
+        stackIn_155_1Lifetime1 = BackgroundSparkle.field_t;
         if (stackIn_155_0Lifetime1 == stackIn_155_1Lifetime1) {
-          tb.field_e = true;
+          AnimationSequence.field_e = true;
         }
         if (param0 <= 12) {
           field_O = (String) null;
         }
-        if (tb.field_e) {
-          lb.field_R = 0;
+        if (AnimationSequence.field_e) {
+          DateOfBirthPanel.field_R = 0;
         }
-        if (SocketConnector.c(-25945)) {
-          var2Lifetime2 = this.n(-1);
+        if (SocketConnector.isSessionDisconnected(-25945)) {
+          var2Lifetime2 = this.pollReconnect(-1);
           if (var2Lifetime2 == 0 ||
             1 == var2Lifetime2) {
-            ck.a(true, 4);
-            qc.a(true, 7);
-            ae.d((byte) 82);
+            ValidationMessageWidget.resendPendingQueries(true, 4);
+            FullscreenErrorDialog.resendQueuedRequests(true, 7);
+            TextButton.resetReflectionCheckQueue((byte) 82);
             if (var2Lifetime2 != 1) {
-              if (mi.field_Pb) {
-                tb.field_g = true;
-                nn.field_X = false;
-                qh.field_k = true;
-                if (ph.field_s) {
-                  n.field_R = rc.field_T;
-                  ac.a(9, -122, false, 0);
+              if (LabelPairWidget.field_Pb) {
+                AnimationSequence.field_g = true;
+                EditableTextWidget.field_X = false;
+                DateOfBirthValidator.field_k = true;
+                if (NetworkGameClient.field_s) {
+                  NameSuggestionsPanel.field_R = CaptionedContainer.field_T;
+                  ScreenSwitchHelpers.switchScreen(9, -122, false, 0);
                 } else {
-                  ac.a(0, -93, false, 0);
+                  ScreenSwitchHelpers.switchScreen(0, -93, false, 0);
                 }
-                q.b(0);
-                DelegatingCanvas.a(true, -7869);
-                kk.field_X[kb.field_t].b(false, 0, -1);
-                mi.field_Pb = false;
-                sj.field_a = false;
-                ph.field_s = false;
+                LinkTextPainter.commitScreenChange(0);
+                DelegatingCanvas.createGameOptions(true, -7869);
+                MarkerSlider.field_X[BackgroundSparkle.field_t].updatePointerSelection(false, 0, -1);
+                LabelPairWidget.field_Pb = false;
+                AccountServerResult.field_a = false;
+                NetworkGameClient.field_s = false;
               }
               DualLinkDeque.field_e = false;
-              fj.field_o = false;
+              ChatMessage.field_o = false;
             } else {
-              fj.field_o = true;
+              ChatMessage.field_o = true;
               DualLinkDeque.field_e = true;
             }
           }
@@ -1102,19 +1102,19 @@ public final class TetraLink extends ph {
           if (var2Lifetime2 == 2) {
             var3Lifetime1 = 1;
           }
-          if (mi.field_Pb ||
+          if (LabelPairWidget.field_Pb ||
             DualLinkDeque.field_e ||
-            fj.field_o) {
+            ChatMessage.field_o) {
             var3Lifetime1 = 1;
           }
           if (var3Lifetime1 != 0) {
-            sd.q(27112);
+            LoginDialog.advanceToLoginRequest(27112);
           }
         }
         return;
     }
 
-    private final void s(int param0) {
+    private final void renderHighDetailFrame(int param0) {
         int stackIn_26_0 = 0;
         int stackIn_32_0 = 0;
         int[] stackIn_59_0 = null;
@@ -1138,14 +1138,14 @@ public final class TetraLink extends ph {
         int var10 = 0;
         int[] var10_ref_int__ = null;
         int var11 = 0;
-        ko var11_ref_ko = null;
+        PointerTrailBubble var11_ref_ko = null;
         int[] var11_ref_int__ = null;
         int var12 = 0;
-        ko var12_ref_ko = null;
+        PointerTrailBubble var12_ref_ko = null;
         int var13 = 0;
         int var14 = 0;
         int var15_int = 0;
-        qi var15 = null;
+        SparkParticle var15 = null;
         int var16 = 0;
         int[] var17 = null;
         Object var18 = null;
@@ -1164,7 +1164,7 @@ public final class TetraLink extends ph {
         int[] var30 = null;
         int[] var31 = null;
         int[] var32 = null;
-        ko var12_ref_koLifetime1;
+        PointerTrailBubble var12_ref_koLifetime1;
         int stackIn_64_0Lifetime1;
         int stackIn_64_1Lifetime1;
         int stackIn_74_0Lifetime1;
@@ -1181,72 +1181,72 @@ public final class TetraLink extends ph {
         var16 = field_J;
         var3 = 72 / ((param0 - 23) / 54);
         var2 = 1;
-        if (~kb.field_t == ~ed.field_O &&
-          af.field_h == hm.field_a) {
-          if (kb.field_t != -2) {
-            qk.a(7230, -1, hm.field_a, true, kb.field_t);
+        if (~BackgroundSparkle.field_t == ~DraggableWidget.field_O &&
+          JoinStatusTextHelpers.field_h == LoginCredentials.field_a) {
+          if (BackgroundSparkle.field_t != -2) {
+            ScreenDrawHelpers.drawCurrentScreen(7230, -1, LoginCredentials.field_a, true, BackgroundSparkle.field_t);
           } else {
             var2 = 0;
-            qf.a(1, false);
+            ReflectionCheckHelpers.clearScreen(1, false);
           }
         } else {
-          if (kb.field_t != -2) {
-            if (ed.field_O != -2) {
-              if (hd.field_v < 16) {
-                qk.a(7230, hd.field_v + 1, hm.field_a, false, kb.field_t);
+          if (BackgroundSparkle.field_t != -2) {
+            if (DraggableWidget.field_O != -2) {
+              if (EmailAvailabilityValidator.field_v < 16) {
+                ScreenDrawHelpers.drawCurrentScreen(7230, EmailAvailabilityValidator.field_v + 1, LoginCredentials.field_a, false, BackgroundSparkle.field_t);
               } else {
-                qk.a(7230, -hd.field_v + 32 + 1, af.field_h, false, ed.field_O);
+                ScreenDrawHelpers.drawCurrentScreen(7230, -EmailAvailabilityValidator.field_v + 32 + 1, JoinStatusTextHelpers.field_h, false, DraggableWidget.field_O);
               }
             } else {
-              if (16 > hd.field_v) {
-                qk.a(7230, -1, hm.field_a, false, kb.field_t);
+              if (16 > EmailAvailabilityValidator.field_v) {
+                ScreenDrawHelpers.drawCurrentScreen(7230, -1, LoginCredentials.field_a, false, BackgroundSparkle.field_t);
               } else {
                 var2 = 0;
-                qf.a(1, false);
+                ReflectionCheckHelpers.clearScreen(1, false);
               }
             }
           } else {
-            if (16 <= hd.field_v) {
-              qk.a(7230, -1, af.field_h, false, ed.field_O);
+            if (16 <= EmailAvailabilityValidator.field_v) {
+              ScreenDrawHelpers.drawCurrentScreen(7230, -1, JoinStatusTextHelpers.field_h, false, DraggableWidget.field_O);
             } else {
               var2 = 0;
-              qf.a(1, false);
+              ReflectionCheckHelpers.clearScreen(1, false);
             }
           }
         }
-        var4 = mf.field_w;
-        if (cf.a(0, (byte) 110)) {
-          var5 = bl.field_Xb >> 3;
-          var6 = le.d(var5, -28583);
-          var7_int = ua.a(82, var5);
+        var4 = InsetTextPainter.field_w;
+        if (PendingStatQuery.hasFeatureBit(0, (byte) 110)) {
+          var5 = VerticalScrollbar.field_Xb >> 3;
+          var6 = QuickChatMenu.sineFixed(var5, -28583);
+          var7_int = CommonUiHelpers.sineFixed(82, var5);
           var8_int = var6 * 300 >> 16;
           var9_int = var7_int * 300 >> 16;
           var10 = 210;
           if (!DualLinkDeque.field_a) {
-            var5 = var5 - (il.field_S << 6);
+            var5 = var5 - (OpacityWidget.field_S << 6);
           } else {
-            var5 = var5 + (il.field_S << 6);
+            var5 = var5 + (OpacityWidget.field_S << 6);
           }
-          var6 = le.d(var5, -28583);
-          var7_int = ua.a(-122, var5);
-          ng.field_s = new int[]{var8_int, var10, var9_int, var7_int, 0, -var6, 0, 65536, 0, var6, 0, var7_int};
-          var18_ref = (Model) (ac.field_a.a(false, -37, ec.field_l, true));
-          var18_ref.transform(ng.field_s);
+          var6 = QuickChatMenu.sineFixed(var5, -28583);
+          var7_int = CommonUiHelpers.sineFixed(-122, var5);
+          MusicPatch.field_s = new int[]{var8_int, var10, var9_int, var7_int, 0, -var6, 0, 65536, 0, var6, 0, var7_int};
+          var18_ref = (Model) (ScreenSwitchHelpers.field_a.applyCurrentFrame(false, -37, WeightedLruCache.field_l, true));
+          var18_ref.transform(MusicPatch.field_s);
           var4 = new Model(new Model[]{var4, var18_ref}, 2);
         }
-        lh.field_t = new Model();
-        la.field_g = new Model();
-        ui.a(la.field_g, 0, 0, lh.field_t, 0, bd.field_b[10] >> 10, 100, var4, bd.field_b[11] >> 10, bd.field_b[9] >> 10);
+        EmailSyntaxValidator.field_t = new Model();
+        DirectByteStorage.field_g = new Model();
+        ModelMergeHelpers.mergeModelGeometry(DirectByteStorage.field_g, 0, 0, EmailSyntaxValidator.field_t, 0, RasterTargetHelpers.field_b[10] >> 10, 100, var4, RasterTargetHelpers.field_b[11] >> 10, RasterTargetHelpers.field_b[9] >> 10);
         if (var2 != 0) {
           SoftwareRasterizer.fillRectangle(0, 0, 640, 480, 3158064);
-          var5Lifetime1 = (dh.field_e % 20480 << 12) % 83886080;
-          ta.drawPerspectiveTexturedQuad(ka.field_h, new double[]{-768.0, 20.0, 0.0}, new double[]{0.0, 0.0, 1.0}, 600.0, 200.0, ja.field_i, 23967451 + var5Lifetime1, 59918628 + var5Lifetime1, 0, 16711680, wk.field_i.field_g);
-          ta.drawPerspectiveTexturedQuad(ka.field_h, new double[]{-768.0 + 400.0 * vh.field_b, 20.0, 400.0 * vh.field_b + 600.0}, new double[]{vh.field_b, 0.0, vh.field_b}, 400.0, 200.0, ja.field_i, var5Lifetime1 + 59918628, 83820544 + var5Lifetime1, 0, 16711680, wk.field_i.field_g);
-          ta.drawPerspectiveTexturedQuad(ka.field_h, new double[]{400.0 * vh.field_b - 768.0, 20.0, -(600.0 + vh.field_b * 400.0)}, new double[]{-vh.field_b, 0.0, vh.field_b}, 400.0, 200.0, ja.field_i, var5Lifetime1, var5Lifetime1 + 23967451, 0, 16711680, wk.field_i.field_g);
-          hg.a(kn.field_d, (byte) -121);
-          ta.drawPerspectiveTexturedQuad(ka.field_h, new double[]{420.0, 20.0, 0.0}, new double[]{0.0, 0.0, -1.0}, 100.0, 200.0, kn.field_d, 2621440, 10420224, 10485760, 26148864, wk.field_i.field_g);
-          lh.field_t.drawTransformed(bd.field_b, ti.field_d);
-          var6 = dh.field_e % 64;
+          var5Lifetime1 = (LruTextureCache.field_e % 20480 << 12) % 83886080;
+          CameraProjectionMath.drawPerspectiveTexturedQuad(LongAndTextCredentials.field_h, new double[]{-768.0, 20.0, 0.0}, new double[]{0.0, 0.0, 1.0}, 600.0, 200.0, TextureCache.field_i, 23967451 + var5Lifetime1, 59918628 + var5Lifetime1, 0, 16711680, WidgetTheme.field_i.field_g);
+          CameraProjectionMath.drawPerspectiveTexturedQuad(LongAndTextCredentials.field_h, new double[]{-768.0 + 400.0 * Renderable.field_b, 20.0, 400.0 * Renderable.field_b + 600.0}, new double[]{Renderable.field_b, 0.0, Renderable.field_b}, 400.0, 200.0, TextureCache.field_i, var5Lifetime1 + 59918628, 83820544 + var5Lifetime1, 0, 16711680, WidgetTheme.field_i.field_g);
+          CameraProjectionMath.drawPerspectiveTexturedQuad(LongAndTextCredentials.field_h, new double[]{400.0 * Renderable.field_b - 768.0, 20.0, -(600.0 + Renderable.field_b * 400.0)}, new double[]{-Renderable.field_b, 0.0, Renderable.field_b}, 400.0, 200.0, TextureCache.field_i, var5Lifetime1, var5Lifetime1 + 23967451, 0, 16711680, WidgetTheme.field_i.field_g);
+          GameOptionControls.renderParticleTexture(LoadingStageHook.field_d, (byte) -121);
+          CameraProjectionMath.drawPerspectiveTexturedQuad(LongAndTextCredentials.field_h, new double[]{420.0, 20.0, 0.0}, new double[]{0.0, 0.0, -1.0}, 100.0, 200.0, LoadingStageHook.field_d, 2621440, 10420224, 10485760, 26148864, WidgetTheme.field_i.field_g);
+          EmailSyntaxValidator.field_t.drawTransformed(RasterTargetHelpers.field_b, LobbyResourceHelpers.field_d);
+          var6 = LruTextureCache.field_e % 64;
           if (var6 >= 32) {
             stackIn_26_0 = 48 - var6;
           } else {
@@ -1254,7 +1254,7 @@ public final class TetraLink extends ph {
           }
           var6 = stackIn_26_0;
           var6 = var6 << 2;
-          if (wk.field_i.field_n) {
+          if (WidgetTheme.field_i.field_n) {
             var6 = 0;
           }
           var28 = new int[3];
@@ -1263,21 +1263,21 @@ public final class TetraLink extends ph {
           var26 = new int[3];
           var19 = var26;
           var8 = var19;
-          var7[0] = (int)s.field_c << 4;
+          var7[0] = (int)MenuThemeHelpers.field_c << 4;
           var27 = new int[3];
           var20 = var27;
           var9 = var20;
           var26[0] = 800;
           var27[0] = var6;
-          var7[1] = -(int)s.field_c << 4;
+          var7[1] = -(int)MenuThemeHelpers.field_c << 4;
           var26[1] = 800;
           var27[1] = var6;
           var28[2] = 0;
           var26[2] = 1280;
           var27[2] = 0;
-          ta.transformTriangleToCamera(bd.field_b, var28, var26, var27);
-          if (wk.field_i.field_j) {
-            var10 = dh.field_e % 128;
+          CameraProjectionMath.transformTriangleToCamera(RasterTargetHelpers.field_b, var28, var26, var27);
+          if (WidgetTheme.field_i.field_j) {
+            var10 = LruTextureCache.field_e % 128;
             if (var10 < 64) {
               stackIn_32_0 = var10;
             } else {
@@ -1285,7 +1285,7 @@ public final class TetraLink extends ph {
             }
             var10 = stackIn_32_0;
             var11 = var10 * 2 + 38784;
-            mj.drawTriangle(240, 0, 0, var28, var26, var27, var11, var11, var11);
+            ClippedTriangleRenderer.drawTriangle(240, 0, 0, var28, var26, var27, var11, var11, var11);
             var6 = var28[0];
             var7[0] = var28[1];
             var28[1] = var6;
@@ -1295,17 +1295,17 @@ public final class TetraLink extends ph {
             var6 = var27[0];
             var9[0] = var27[1];
             var27[1] = var6;
-            mj.drawTriangle(240, 0, 0, var28, var26, var27, var11, var11, var11);
+            ClippedTriangleRenderer.drawTriangle(240, 0, 0, var28, var26, var27, var11, var11, var11);
           }
-          if (wk.field_i.field_n) {
-            var31 = bl.field_Lb.field_C;
+          if (WidgetTheme.field_i.field_n) {
+            var31 = VerticalScrollbar.field_Lb.field_C;
             var24 = var31;
             var17 = var24;
             var32 = var17;
             var25 = var32;
             var10_ref_int__ = var25;
-            if (sk.field_c > 0) {
-              var14 = -sk.field_c + 256;
+            if (SectorCacheStore.field_c > 0) {
+              var14 = -SectorCacheStore.field_c + 256;
               var13 = 256000;
               while (var13 > 0) {
                 var13--;
@@ -1316,13 +1316,13 @@ public final class TetraLink extends ph {
                 var12 = var12 * var14;
                 var11Lifetime1 = var11Lifetime1 & -16711936;
                 var12 = var12 & 16711680;
-                var11Lifetime1 = var11Lifetime1 + (16711935 * sk.field_c & -16711936);
-                var12 = var12 + (16711680 & sk.field_c * 65280);
-                var17[var13] = IntrusiveNode.a(var12, var11Lifetime1) >>> 8;
+                var11Lifetime1 = var11Lifetime1 + (16711935 * SectorCacheStore.field_c & -16711936);
+                var12 = var12 + (16711680 & SectorCacheStore.field_c * 65280);
+                var17[var13] = IntrusiveNode.bitOr(var12, var11Lifetime1) >>> 8;
               }
             }
             boolean decompiledFrameRemainder0 = true;
-            if (128.0f >= rn.field_d) {
+            if (128.0f >= LoadingResourceHelpers.field_d) {
               var12 = 200;
               while (0 < var12) {
                 var12--;
@@ -1333,7 +1333,7 @@ public final class TetraLink extends ph {
                   if (0 >= var11Lifetime1Lifetime1) {
                     break;
                   }
-                  var10_ref_int__[var13] = pl.a(var32[var13], 16711422);
+                  var10_ref_int__[var13] = StatusRequestHelpers.bitAnd(var32[var13], 16711422);
                   var10_ref_int__[var13] = var10_ref_int__[var13] >> 1;
                   var13++;
                 }
@@ -1341,11 +1341,11 @@ public final class TetraLink extends ph {
               decompiledFrameRemainder0 = false;
             }
             else {
-              if (!(256.0f >= rn.field_d)) {
+              if (!(256.0f >= LoadingResourceHelpers.field_d)) {
                 var11Lifetime1Lifetime1 = 256000;
                 while (var11Lifetime1Lifetime1 > 0) {
                   var11Lifetime1Lifetime1--;
-                  var10_ref_int__[var11Lifetime1Lifetime1] = pl.a(var32[var11Lifetime1Lifetime1], 16579836);
+                  var10_ref_int__[var11Lifetime1Lifetime1] = StatusRequestHelpers.bitAnd(var32[var11Lifetime1Lifetime1], 16579836);
                   var10_ref_int__[var11Lifetime1Lifetime1] = var10_ref_int__[var11Lifetime1Lifetime1] >> 2;
                   var10_ref_int__[var11Lifetime1Lifetime1] = var10_ref_int__[var11Lifetime1Lifetime1] * 3;
                 }
@@ -1360,82 +1360,82 @@ public final class TetraLink extends ph {
                     if (var11Lifetime1Lifetime1 <= 0) {
                       break;
                     }
-                    var10_ref_int__[var13] = pl.a(var32[var13], 16711422);
+                    var10_ref_int__[var13] = StatusRequestHelpers.bitAnd(var32[var13], 16711422);
                     var10_ref_int__[var13] = var10_ref_int__[var13] >> 1;
                     var13++;
                   }
                 }
               }
             }
-            bd.a(bl.field_Lb, 6);
-            var11_ref_ko = (ko) (eg.field_J.c(false));
+            RasterTargetHelpers.setSpriteRasterTarget(VerticalScrollbar.field_Lb, 6);
+            var11_ref_ko = (PointerTrailBubble) (ArrayWidgetContainer.field_J.first(false));
             while (var11_ref_ko != null) {
-              rf.drawBubbleDistortion(var11_ref_ko.field_r, var11_ref_ko.field_p, var11_ref_ko.field_n << 3, 10000);
-              var11_ref_ko = (ko) (eg.field_J.a((byte) -70));
+              RasterEffectHelpers.drawBubbleDistortion(var11_ref_ko.field_r, var11_ref_ko.field_p, var11_ref_ko.field_n << 3, 10000);
+              var11_ref_ko = (PointerTrailBubble) (ArrayWidgetContainer.field_J.next((byte) -70));
             }
-            if (10 == kb.field_t) {
-              this.f((byte) 85);
+            if (10 == BackgroundSparkle.field_t) {
+              this.drawTitleWaveEffect((byte) 85);
             }
-            fh.a(true);
-            if (10 != kb.field_t) {
-              if (ka.field_h[11] < 0.0) {
-                ta.a(ka.field_h, new double[]{0.0, 0.0, 0.0}, hi.field_d, (double)s.field_c, (double)bo.field_y, bl.field_Lb, 529, 110, 0, 399, wk.field_i.field_g, true);
+            HuffmanCodec.popRasterTarget(true);
+            if (10 != BackgroundSparkle.field_t) {
+              if (LongAndTextCredentials.field_h[11] < 0.0) {
+                CameraProjectionMath.drawPerspectiveTexturedQuadClipped(LongAndTextCredentials.field_h, new double[]{0.0, 0.0, 0.0}, TextLayout.field_d, (double)MenuThemeHelpers.field_c, (double)CachedArchiveSource.field_y, VerticalScrollbar.field_Lb, 529, 110, 0, 399, WidgetTheme.field_i.field_g, true);
               } else {
-                ta.a(ka.field_h, new double[]{0.0, 0.0, 0.0}, hi.field_d, (double)s.field_c, (double)bo.field_y, bl.field_Lb, 110, 529, 0, 399, wk.field_i.field_g, true);
+                CameraProjectionMath.drawPerspectiveTexturedQuadClipped(LongAndTextCredentials.field_h, new double[]{0.0, 0.0, 0.0}, TextLayout.field_d, (double)MenuThemeHelpers.field_c, (double)CachedArchiveSource.field_y, VerticalScrollbar.field_Lb, 110, 529, 0, 399, WidgetTheme.field_i.field_g, true);
               }
-              if (!(0 >= wk.field_i.field_l)) {
-                ta.drawGlowingQuadOutline(ka.field_h, new double[]{0.0, 0.0, 0.0}, hi.field_d, (double)s.field_c, (double)bo.field_y, oi.field_n, 40, wk.field_i.field_l);
+              if (!(0 >= WidgetTheme.field_i.field_l)) {
+                CameraProjectionMath.drawGlowingQuadOutline(LongAndTextCredentials.field_h, new double[]{0.0, 0.0, 0.0}, TextLayout.field_d, (double)MenuThemeHelpers.field_c, (double)CachedArchiveSource.field_y, IndexedSpriteState.field_n, 40, WidgetTheme.field_i.field_l);
               }
             } else {
-              if (ka.field_h[11] < 0.0) {
-                ta.a(ka.field_h, new double[]{0.0, 0.0, 0.0}, hi.field_d, (double)(s.field_c * 22.0f / 21.0f), (double)bo.field_y, bl.field_Lb, 529, 110, 0, 399, wk.field_i.field_g, true);
+              if (LongAndTextCredentials.field_h[11] < 0.0) {
+                CameraProjectionMath.drawPerspectiveTexturedQuadClipped(LongAndTextCredentials.field_h, new double[]{0.0, 0.0, 0.0}, TextLayout.field_d, (double)(MenuThemeHelpers.field_c * 22.0f / 21.0f), (double)CachedArchiveSource.field_y, VerticalScrollbar.field_Lb, 529, 110, 0, 399, WidgetTheme.field_i.field_g, true);
               } else {
-                ta.a(ka.field_h, new double[]{0.0, 0.0, 0.0}, hi.field_d, (double)(22.0f * s.field_c / 21.0f), (double)bo.field_y, bl.field_Lb, 110, 529, 0, 399, wk.field_i.field_g, true);
+                CameraProjectionMath.drawPerspectiveTexturedQuadClipped(LongAndTextCredentials.field_h, new double[]{0.0, 0.0, 0.0}, TextLayout.field_d, (double)(22.0f * MenuThemeHelpers.field_c / 21.0f), (double)CachedArchiveSource.field_y, VerticalScrollbar.field_Lb, 110, 529, 0, 399, WidgetTheme.field_i.field_g, true);
               }
-              if (!(wk.field_i.field_l <= 0)) {
-                ta.drawGlowingQuadOutline(ka.field_h, new double[]{0.0, 0.0, 0.0}, hi.field_d, (double)s.field_c, (double)bo.field_y, oi.field_n, 1 + (int)(s.field_c / 1.3125f), (int)(s.field_c / 1.100000023841858f));
+              if (!(WidgetTheme.field_i.field_l <= 0)) {
+                CameraProjectionMath.drawGlowingQuadOutline(LongAndTextCredentials.field_h, new double[]{0.0, 0.0, 0.0}, TextLayout.field_d, (double)MenuThemeHelpers.field_c, (double)CachedArchiveSource.field_y, IndexedSpriteState.field_n, 1 + (int)(MenuThemeHelpers.field_c / 1.3125f), (int)(MenuThemeHelpers.field_c / 1.100000023841858f));
               }
             }
           } else {
-            var29 = bl.field_Lb.field_C;
+            var29 = VerticalScrollbar.field_Lb.field_C;
             var22 = var29;
             var10_ref_int__ = var22;
-            var30 = rh.field_M.field_C;
+            var30 = NetworkArchiveRequest.field_M.field_C;
             var23 = var30;
             var11_ref_int__ = var23;
-            if (sk.field_c > 0) {
-              var12 = 256 - sk.field_c;
+            if (SectorCacheStore.field_c > 0) {
+              var12 = 256 - SectorCacheStore.field_c;
               var15_int = 256000;
               while (var15_int > 0) {
                 var15_int--;
-                var14 = bl.field_Lb.field_C[var15_int];
+                var14 = VerticalScrollbar.field_Lb.field_C[var15_int];
                 var13 = 16711935 & var14;
                 var14 = 65280 & var14;
                 var13 = var13 * var12;
                 var14 = var14 * var12;
                 var13 = var13 & -16711936;
-                var13 = var13 + (sk.field_c * 16711935 & -16711936);
+                var13 = var13 + (SectorCacheStore.field_c * 16711935 & -16711936);
                 var14 = var14 & 16711680;
-                var14 = var14 + (16711680 & 65280 * sk.field_c);
-                bl.field_Lb.field_C[var15_int] = IntrusiveNode.a(var14, var13) >>> 8;
+                var14 = var14 + (16711680 & 65280 * SectorCacheStore.field_c);
+                VerticalScrollbar.field_Lb.field_C[var15_int] = IntrusiveNode.bitOr(var14, var13) >>> 8;
               }
               var15_intLifetime1 = 256000;
               while (var15_intLifetime1 > 0) {
                 var15_intLifetime1--;
-                var14 = rh.field_M.field_C[var15_intLifetime1];
+                var14 = NetworkArchiveRequest.field_M.field_C[var15_intLifetime1];
                 var13 = var14 & 16711935;
                 var13 = var13 * var12;
                 var14 = var14 & 65280;
                 var13 = var13 & -16711936;
                 var14 = var14 * var12;
-                var13 = var13 + (sk.field_c * 16711935 & -16711936);
+                var13 = var13 + (SectorCacheStore.field_c * 16711935 & -16711936);
                 var14 = var14 & 16711680;
-                var14 = var14 + (sk.field_c * 65280 & 16711680);
-                rh.field_M.field_C[var15_intLifetime1] = IntrusiveNode.a(var13, var14) >>> 8;
+                var14 = var14 + (SectorCacheStore.field_c * 65280 & 16711680);
+                NetworkArchiveRequest.field_M.field_C[var15_intLifetime1] = IntrusiveNode.bitOr(var13, var14) >>> 8;
               }
             }
             boolean decompiledFrameCompleted0 = true;
-            if (rn.field_d <= 128.0f) {
+            if (LoadingResourceHelpers.field_d <= 128.0f) {
               var13 = 110;
               var14 = -200;
               while (var14 < 0) {
@@ -1447,10 +1447,10 @@ public final class TetraLink extends ph {
                     var14++;
                     break;
                   }
-                  var10_ref_int__[var13] = pl.a(var29[var13], 16711422);
+                  var10_ref_int__[var13] = StatusRequestHelpers.bitAnd(var29[var13], 16711422);
                   var10_ref_int__[var13] = var10_ref_int__[var13] >> 1;
                   if (var30[var13] != 16777215) {
-                    var11_ref_int__[var13] = pl.a(var30[var13], 16711422);
+                    var11_ref_int__[var13] = StatusRequestHelpers.bitAnd(var30[var13], 16711422);
                     var11_ref_int__[var13] = var11_ref_int__[var13] >> 1;
                   } else {
                     var11_ref_int__[var13] = 13619151;
@@ -1459,7 +1459,7 @@ public final class TetraLink extends ph {
                 }
               }
             } else {
-              if (!(256.0f >= rn.field_d)) {
+              if (!(256.0f >= LoadingResourceHelpers.field_d)) {
                 var12 = 255890;
                 var13 = 400;
                 while (true) {
@@ -1476,13 +1476,13 @@ public final class TetraLink extends ph {
                       break;
                     }
                     var12--;
-                    var10_ref_int__[var12] = (pl.a(16579836, var29[var12]) >> 2) * 3;
+                    var10_ref_int__[var12] = (StatusRequestHelpers.bitAnd(16579836, var29[var12]) >> 2) * 3;
                     stackIn_59_0 = var11_ref_int__;
                     stackIn_59_1 = var12;
                     if (var30[var12] == 16777215) {
                       stackIn_60_2 = 15263976;
                     } else {
-                      stackIn_60_2 = 3 * (pl.a(16579836, var30[var12]) >> 2);
+                      stackIn_60_2 = 3 * (StatusRequestHelpers.bitAnd(16579836, var30[var12]) >> 2);
                     }
                     stackIn_59_0[stackIn_59_1] = stackIn_60_2;
                   }
@@ -1501,11 +1501,11 @@ public final class TetraLink extends ph {
                   while (true) {
                     var12--;
                     if (var12 >= 0) {
-                      var10_ref_int__[var13] = pl.a(var29[var13] >> 1, 8355711);
+                      var10_ref_int__[var13] = StatusRequestHelpers.bitAnd(var29[var13] >> 1, 8355711);
                       stackIn_74_0 = 16777215;
                       stackIn_74_1 = var30[var13];
                       if (stackIn_74_0 != stackIn_74_1) {
-                        var11_ref_int__[var13] = pl.a(var30[var13], 16711422);
+                        var11_ref_int__[var13] = StatusRequestHelpers.bitAnd(var30[var13], 16711422);
                         var11_ref_int__[var13] = var11_ref_int__[var13] >> 1;
                       } else {
                         var11_ref_int__[var13] = 13619151;
@@ -1524,13 +1524,13 @@ public final class TetraLink extends ph {
                     if (stackIn_74_0Lifetime1 > stackIn_74_1Lifetime1) {
                       break;
                     }
-                    var10_ref_int__[var13] = pl.a(8355711, var29[var13] >> 1);
+                    var10_ref_int__[var13] = StatusRequestHelpers.bitAnd(8355711, var29[var13] >> 1);
                     stackIn_64_0Lifetime1 = -16777216;
                     stackIn_64_1Lifetime1 = ~var30[var13];
                     if (stackIn_64_0Lifetime1 == stackIn_64_1Lifetime1) {
                       var11_ref_int__[var13] = 13619151;
                     } else {
-                      var11_ref_int__[var13] = pl.a(var30[var13], 16711422);
+                      var11_ref_int__[var13] = StatusRequestHelpers.bitAnd(var30[var13], 16711422);
                       var11_ref_int__[var13] = var11_ref_int__[var13] >> 1;
                     }
                     var13++;
@@ -1540,81 +1540,81 @@ public final class TetraLink extends ph {
                 }
               }
             }
-            bd.a(bl.field_Lb, 6);
-            var12_ref_ko = (ko) (eg.field_J.c(false));
+            RasterTargetHelpers.setSpriteRasterTarget(VerticalScrollbar.field_Lb, 6);
+            var12_ref_ko = (PointerTrailBubble) (ArrayWidgetContainer.field_J.first(false));
             while (var12_ref_ko != null) {
-              rf.drawBubbleDistortion(var12_ref_ko.field_r, var12_ref_ko.field_p, var12_ref_ko.field_n << 3, 10000);
-              var12_ref_ko = (ko) (eg.field_J.a((byte) -70));
+              RasterEffectHelpers.drawBubbleDistortion(var12_ref_ko.field_r, var12_ref_ko.field_p, var12_ref_ko.field_n << 3, 10000);
+              var12_ref_ko = (PointerTrailBubble) (ArrayWidgetContainer.field_J.next((byte) -70));
             }
-            if (kb.field_t == 10) {
-              this.f((byte) 122);
+            if (BackgroundSparkle.field_t == 10) {
+              this.drawTitleWaveEffect((byte) 122);
             }
-            rh.field_M.makeRasterTarget();
-            var12_ref_koLifetime1 = (ko) (eg.field_J.c(false));
+            NetworkArchiveRequest.field_M.makeRasterTarget();
+            var12_ref_koLifetime1 = (PointerTrailBubble) (ArrayWidgetContainer.field_J.first(false));
             while (var12_ref_koLifetime1 != null) {
-              rf.drawBubbleDistortion(var12_ref_koLifetime1.field_r, var12_ref_koLifetime1.field_p, var12_ref_koLifetime1.field_n << 3, 10000);
-              var12_ref_koLifetime1 = (ko) (eg.field_J.a((byte) -70));
+              RasterEffectHelpers.drawBubbleDistortion(var12_ref_koLifetime1.field_r, var12_ref_koLifetime1.field_p, var12_ref_koLifetime1.field_n << 3, 10000);
+              var12_ref_koLifetime1 = (PointerTrailBubble) (ArrayWidgetContainer.field_J.next((byte) -70));
             }
-            if (kb.field_t == 10) {
-              this.f((byte) 99);
+            if (BackgroundSparkle.field_t == 10) {
+              this.drawTitleWaveEffect((byte) 99);
             }
-            fh.a(true);
-            if (10 != kb.field_t) {
-              if (ka.field_h[11] < 0.0) {
-                ta.a(ka.field_h, new double[]{0.0, 0.0, (double)(-jl.field_e >> 16)}, hi.field_d, (double)s.field_c, (double)bo.field_y, rh.field_M, 529, 110, 0, 399, wk.field_i.field_g, false);
-                ta.a(ka.field_h, new double[]{0.0, 0.0, 0.0}, hi.field_d, (double)s.field_c, (double)bo.field_y, bl.field_Lb, 529, 110, 0, 399, wk.field_i.field_g, false);
-                if (wk.field_i.field_l > 0) {
-                  ta.drawGlowingQuadOutline(ka.field_h, new double[]{0.0, 0.0, 0.0}, hi.field_d, (double)s.field_c, (double)bo.field_y, oi.field_n, 40, wk.field_i.field_l);
+            HuffmanCodec.popRasterTarget(true);
+            if (10 != BackgroundSparkle.field_t) {
+              if (LongAndTextCredentials.field_h[11] < 0.0) {
+                CameraProjectionMath.drawPerspectiveTexturedQuadClipped(LongAndTextCredentials.field_h, new double[]{0.0, 0.0, (double)(-InputDetachHelpers.field_e >> 16)}, TextLayout.field_d, (double)MenuThemeHelpers.field_c, (double)CachedArchiveSource.field_y, NetworkArchiveRequest.field_M, 529, 110, 0, 399, WidgetTheme.field_i.field_g, false);
+                CameraProjectionMath.drawPerspectiveTexturedQuadClipped(LongAndTextCredentials.field_h, new double[]{0.0, 0.0, 0.0}, TextLayout.field_d, (double)MenuThemeHelpers.field_c, (double)CachedArchiveSource.field_y, VerticalScrollbar.field_Lb, 529, 110, 0, 399, WidgetTheme.field_i.field_g, false);
+                if (WidgetTheme.field_i.field_l > 0) {
+                  CameraProjectionMath.drawGlowingQuadOutline(LongAndTextCredentials.field_h, new double[]{0.0, 0.0, 0.0}, TextLayout.field_d, (double)MenuThemeHelpers.field_c, (double)CachedArchiveSource.field_y, IndexedSpriteState.field_n, 40, WidgetTheme.field_i.field_l);
                 }
-                ta.a(ka.field_h, new double[]{0.0, 0.0, (double)(jl.field_e >> 16)}, hi.field_d, (double)s.field_c, (double)bo.field_y, rh.field_M, 529, 110, 0, 399, wk.field_i.field_g, false);
+                CameraProjectionMath.drawPerspectiveTexturedQuadClipped(LongAndTextCredentials.field_h, new double[]{0.0, 0.0, (double)(InputDetachHelpers.field_e >> 16)}, TextLayout.field_d, (double)MenuThemeHelpers.field_c, (double)CachedArchiveSource.field_y, NetworkArchiveRequest.field_M, 529, 110, 0, 399, WidgetTheme.field_i.field_g, false);
               } else {
-                ta.a(ka.field_h, new double[]{0.0, 0.0, (double)(jl.field_e >> 16)}, hi.field_d, (double)s.field_c, (double)bo.field_y, rh.field_M, 110, 529, 0, 399, wk.field_i.field_g, false);
-                ta.a(ka.field_h, new double[]{0.0, 0.0, 0.0}, hi.field_d, (double)s.field_c, (double)bo.field_y, bl.field_Lb, 110, 529, 0, 399, wk.field_i.field_g, false);
-                if (wk.field_i.field_l > 0) {
-                  ta.drawGlowingQuadOutline(ka.field_h, new double[]{0.0, 0.0, 0.0}, hi.field_d, (double)s.field_c, (double)bo.field_y, oi.field_n, 40, wk.field_i.field_l);
+                CameraProjectionMath.drawPerspectiveTexturedQuadClipped(LongAndTextCredentials.field_h, new double[]{0.0, 0.0, (double)(InputDetachHelpers.field_e >> 16)}, TextLayout.field_d, (double)MenuThemeHelpers.field_c, (double)CachedArchiveSource.field_y, NetworkArchiveRequest.field_M, 110, 529, 0, 399, WidgetTheme.field_i.field_g, false);
+                CameraProjectionMath.drawPerspectiveTexturedQuadClipped(LongAndTextCredentials.field_h, new double[]{0.0, 0.0, 0.0}, TextLayout.field_d, (double)MenuThemeHelpers.field_c, (double)CachedArchiveSource.field_y, VerticalScrollbar.field_Lb, 110, 529, 0, 399, WidgetTheme.field_i.field_g, false);
+                if (WidgetTheme.field_i.field_l > 0) {
+                  CameraProjectionMath.drawGlowingQuadOutline(LongAndTextCredentials.field_h, new double[]{0.0, 0.0, 0.0}, TextLayout.field_d, (double)MenuThemeHelpers.field_c, (double)CachedArchiveSource.field_y, IndexedSpriteState.field_n, 40, WidgetTheme.field_i.field_l);
                 }
-                ta.a(ka.field_h, new double[]{0.0, 0.0, (double)(-jl.field_e >> 16)}, hi.field_d, (double)s.field_c, (double)bo.field_y, rh.field_M, 110, 529, 0, 399, wk.field_i.field_g, false);
+                CameraProjectionMath.drawPerspectiveTexturedQuadClipped(LongAndTextCredentials.field_h, new double[]{0.0, 0.0, (double)(-InputDetachHelpers.field_e >> 16)}, TextLayout.field_d, (double)MenuThemeHelpers.field_c, (double)CachedArchiveSource.field_y, NetworkArchiveRequest.field_M, 110, 529, 0, 399, WidgetTheme.field_i.field_g, false);
               }
             } else {
-              if (!(ka.field_h[11] < 0.0)) {
-                ta.a(ka.field_h, new double[]{0.0, 0.0, (double)(jl.field_e >> 16)}, hi.field_d, (double)(22.0f * s.field_c / 21.0f), (double)bo.field_y, rh.field_M, 100, 539, 0, 399, wk.field_i.field_g, false);
-                ta.a(ka.field_h, new double[]{0.0, 0.0, 0.0}, hi.field_d, (double)(22.0f * s.field_c / 21.0f), (double)bo.field_y, bl.field_Lb, 100, 539, 0, 399, wk.field_i.field_g, false);
-                if (wk.field_i.field_l > 0) {
-                  ta.drawGlowingQuadOutline(ka.field_h, new double[]{0.0, 0.0, 0.0}, hi.field_d, (double)s.field_c, (double)bo.field_y, oi.field_n, 1 + (int)(s.field_c / 1.3125f), (int)(s.field_c / 1.100000023841858f));
+              if (!(LongAndTextCredentials.field_h[11] < 0.0)) {
+                CameraProjectionMath.drawPerspectiveTexturedQuadClipped(LongAndTextCredentials.field_h, new double[]{0.0, 0.0, (double)(InputDetachHelpers.field_e >> 16)}, TextLayout.field_d, (double)(22.0f * MenuThemeHelpers.field_c / 21.0f), (double)CachedArchiveSource.field_y, NetworkArchiveRequest.field_M, 100, 539, 0, 399, WidgetTheme.field_i.field_g, false);
+                CameraProjectionMath.drawPerspectiveTexturedQuadClipped(LongAndTextCredentials.field_h, new double[]{0.0, 0.0, 0.0}, TextLayout.field_d, (double)(22.0f * MenuThemeHelpers.field_c / 21.0f), (double)CachedArchiveSource.field_y, VerticalScrollbar.field_Lb, 100, 539, 0, 399, WidgetTheme.field_i.field_g, false);
+                if (WidgetTheme.field_i.field_l > 0) {
+                  CameraProjectionMath.drawGlowingQuadOutline(LongAndTextCredentials.field_h, new double[]{0.0, 0.0, 0.0}, TextLayout.field_d, (double)MenuThemeHelpers.field_c, (double)CachedArchiveSource.field_y, IndexedSpriteState.field_n, 1 + (int)(MenuThemeHelpers.field_c / 1.3125f), (int)(MenuThemeHelpers.field_c / 1.100000023841858f));
                 }
-                ta.a(ka.field_h, new double[]{0.0, 0.0, (double)(-jl.field_e >> 16)}, hi.field_d, (double)(22.0f * s.field_c / 21.0f), (double)bo.field_y, rh.field_M, 100, 539, 0, 399, wk.field_i.field_g, false);
+                CameraProjectionMath.drawPerspectiveTexturedQuadClipped(LongAndTextCredentials.field_h, new double[]{0.0, 0.0, (double)(-InputDetachHelpers.field_e >> 16)}, TextLayout.field_d, (double)(22.0f * MenuThemeHelpers.field_c / 21.0f), (double)CachedArchiveSource.field_y, NetworkArchiveRequest.field_M, 100, 539, 0, 399, WidgetTheme.field_i.field_g, false);
               } else {
-                ta.a(ka.field_h, new double[]{0.0, 0.0, (double)(-jl.field_e >> 16)}, hi.field_d, (double)(22.0f * s.field_c / 21.0f), (double)bo.field_y, rh.field_M, 539, 100, 0, 399, wk.field_i.field_g, false);
-                ta.a(ka.field_h, new double[]{0.0, 0.0, 0.0}, hi.field_d, (double)(22.0f * s.field_c / 21.0f), (double)bo.field_y, bl.field_Lb, 539, 100, 0, 399, wk.field_i.field_g, false);
-                if (0 < wk.field_i.field_l) {
-                  ta.drawGlowingQuadOutline(ka.field_h, new double[]{0.0, 0.0, 0.0}, hi.field_d, (double)s.field_c, (double)bo.field_y, oi.field_n, 1 + (int)(s.field_c / 1.3125f), (int)(s.field_c / 1.100000023841858f));
+                CameraProjectionMath.drawPerspectiveTexturedQuadClipped(LongAndTextCredentials.field_h, new double[]{0.0, 0.0, (double)(-InputDetachHelpers.field_e >> 16)}, TextLayout.field_d, (double)(22.0f * MenuThemeHelpers.field_c / 21.0f), (double)CachedArchiveSource.field_y, NetworkArchiveRequest.field_M, 539, 100, 0, 399, WidgetTheme.field_i.field_g, false);
+                CameraProjectionMath.drawPerspectiveTexturedQuadClipped(LongAndTextCredentials.field_h, new double[]{0.0, 0.0, 0.0}, TextLayout.field_d, (double)(22.0f * MenuThemeHelpers.field_c / 21.0f), (double)CachedArchiveSource.field_y, VerticalScrollbar.field_Lb, 539, 100, 0, 399, WidgetTheme.field_i.field_g, false);
+                if (0 < WidgetTheme.field_i.field_l) {
+                  CameraProjectionMath.drawGlowingQuadOutline(LongAndTextCredentials.field_h, new double[]{0.0, 0.0, 0.0}, TextLayout.field_d, (double)MenuThemeHelpers.field_c, (double)CachedArchiveSource.field_y, IndexedSpriteState.field_n, 1 + (int)(MenuThemeHelpers.field_c / 1.3125f), (int)(MenuThemeHelpers.field_c / 1.100000023841858f));
                 }
-                ta.a(ka.field_h, new double[]{0.0, 0.0, (double)(jl.field_e >> 16)}, hi.field_d, (double)(22.0f * s.field_c / 21.0f), (double)bo.field_y, rh.field_M, 539, 100, 0, 399, wk.field_i.field_g, false);
+                CameraProjectionMath.drawPerspectiveTexturedQuadClipped(LongAndTextCredentials.field_h, new double[]{0.0, 0.0, (double)(InputDetachHelpers.field_e >> 16)}, TextLayout.field_d, (double)(22.0f * MenuThemeHelpers.field_c / 21.0f), (double)CachedArchiveSource.field_y, NetworkArchiveRequest.field_M, 539, 100, 0, 399, WidgetTheme.field_i.field_g, false);
               }
             }
             if (var27[2] > 0) {
-              SoftwareRasterizer.fillRadialPaletteCircle((SpriteState.field_G << 4) + (var28[2] << 11) / var27[2], (var26[2] << 13) / var27[2] + (ik.field_a << 4), 65536 / var27[2], 255, oi.field_n);
+              SoftwareRasterizer.fillRadialPaletteCircle((SpriteState.field_G << 4) + (var28[2] << 11) / var27[2], (var26[2] << 13) / var27[2] + (RegistrationResponseHelpers.field_a << 4), 65536 / var27[2], 255, IndexedSpriteState.field_n);
             }
           }
-          var15 = (qi) (nd.field_Sb.c(false));
+          var15 = (SparkParticle) (QuickChatHelpDialog.field_Sb.first(false));
           while (var15 != null) {
-            var6 = (var15.field_y >> 8) - (bd.field_b[2] << 6);
-            var10 = (var15.field_t >> 8) - (bd.field_b[0] << 6);
-            var11Lifetime2 = -(bd.field_b[1] << 6) + (var15.field_v >> 8);
-            var14Lifetime1 = bd.field_b[9] * var10 + (bd.field_b[10] * var11Lifetime2 + bd.field_b[11] * var6);
-            var13Lifetime1 = var6 * bd.field_b[8] + var11Lifetime2 * bd.field_b[7] + bd.field_b[6] * var10;
-            var12Lifetime1 = bd.field_b[5] * var6 + var10 * bd.field_b[3] + bd.field_b[4] * var11Lifetime2;
+            var6 = (var15.field_y >> 8) - (RasterTargetHelpers.field_b[2] << 6);
+            var10 = (var15.field_t >> 8) - (RasterTargetHelpers.field_b[0] << 6);
+            var11Lifetime2 = -(RasterTargetHelpers.field_b[1] << 6) + (var15.field_v >> 8);
+            var14Lifetime1 = RasterTargetHelpers.field_b[9] * var10 + (RasterTargetHelpers.field_b[10] * var11Lifetime2 + RasterTargetHelpers.field_b[11] * var6);
+            var13Lifetime1 = var6 * RasterTargetHelpers.field_b[8] + var11Lifetime2 * RasterTargetHelpers.field_b[7] + RasterTargetHelpers.field_b[6] * var10;
+            var12Lifetime1 = RasterTargetHelpers.field_b[5] * var6 + var10 * RasterTargetHelpers.field_b[3] + RasterTargetHelpers.field_b[4] * var11Lifetime2;
             var6 = var14Lifetime1 >> 22;
             if (var14Lifetime1 > 0) {
-              SoftwareRasterizer.fillRadialPaletteCircle((SpriteState.field_G << 4) + (var12Lifetime1 >> 9) / var6, (ik.field_a << 4) + (var13Lifetime1 >> 9) / var6, 16384 / var6, 5 * var15.field_s / 3, oi.field_n);
+              SoftwareRasterizer.fillRadialPaletteCircle((SpriteState.field_G << 4) + (var12Lifetime1 >> 9) / var6, (RegistrationResponseHelpers.field_a << 4) + (var13Lifetime1 >> 9) / var6, 16384 / var6, 5 * var15.field_s / 3, IndexedSpriteState.field_n);
             }
-            var15 = (qi) (nd.field_Sb.a((byte) -70));
+            var15 = (SparkParticle) (QuickChatHelpDialog.field_Sb.next((byte) -70));
           }
-          la.field_g.drawTransformed(bd.field_b, ti.field_d);
+          DirectByteStorage.field_g.drawTransformed(RasterTargetHelpers.field_b, LobbyResourceHelpers.field_d);
         }
     }
 
-    final static String a(String param0, int param1, java.applet.Applet param2) {
+    final static String readCookie(String param0, int param1, java.applet.Applet param2) {
         try {
           int var5 = 0;
           String var3 = null;
@@ -1639,8 +1639,8 @@ public final class TetraLink extends ph {
                 stackIn_3_0 = (String) null;
                 return stackIn_3_0;
               }
-              var3 = (String) (ii.callJavaScript((byte) 121, "getcookies", param2));
-              var4 = hi.a(var3, ';', 783);
+              var3 = (String) (JavaScriptBridge.callJavaScript((byte) 121, "getcookies", param2));
+              var4 = TextLayout.split(var3, ';', 783);
               for (var5 = 0; var4.length > var5; var5++) {
                 var6 = var4[var5].indexOf('=');
                 if (var6 >= 0 &&
@@ -1671,7 +1671,7 @@ public final class TetraLink extends ph {
             } else {
               stackIn_22_2 = "{...}";
             }
-            throw oi.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+            throw IndexedSpriteState.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -1680,7 +1680,7 @@ public final class TetraLink extends ph {
         }
     }
 
-    private final void b(byte param0, boolean param1) {
+    private final void updateScreens(byte param0, boolean param1) {
         int fieldTemp$0 = 0;
         boolean stackIn_38_0 = false;
         int stackIn_46_0 = 0;
@@ -1694,46 +1694,46 @@ public final class TetraLink extends ph {
         int var4Lifetime1;
         boolean stackIn_38_0Lifetime1;
         var7 = field_J;
-        if (ko.field_s != 0) {
-          if (1 == ko.field_s) {
-            ai.field_i = ai.field_i + 1;
-            if (ai.field_i == 16) {
-              if (MatchSetup.field_f) {
-                ic.a((byte) 117);
+        if (PointerTrailBubble.field_s != 0) {
+          if (1 == PointerTrailBubble.field_s) {
+            ArchiveFactoryHelpers.field_i = ArchiveFactoryHelpers.field_i + 1;
+            if (ArchiveFactoryHelpers.field_i == 16) {
+              if (GameBoard.field_f) {
+                SharedPanelFactory.reopenLoginPanel((byte) 117);
               } else {
-                ei.b((byte) -123);
+                GameSession.returnToLoginStage((byte) -123);
               }
-              ko.field_s = 2;
+              PointerTrailBubble.field_s = 2;
             }
           } else {
-            if (ko.field_s == 2) {
-              if (!ug.o(-103)) {
-                ed.field_O = ci.field_x;
-                ld.i(param0 - 21781);
-                if (MatchSetup.field_f) {
-                  MatchSetup.field_f = false;
-                  s.a(8, li.field_l, (byte) 7, 2, false, 240, 8, 320, mk.field_b.field_u + mk.field_b.field_K, mk.field_b.field_u, mk.field_b, li.field_l);
+            if (PointerTrailBubble.field_s == 2) {
+              if (!LoadingProgressDialog.isKeyboardIdle(-103)) {
+                DraggableWidget.field_O = PasswordFieldPainter.field_x;
+                FadingModalPanel.dismissPromptDialog(param0 - 21781);
+                if (GameBoard.field_f) {
+                  GameBoard.field_f = false;
+                  MenuThemeHelpers.initializeMenuTheme(8, WhirlpoolHasher.field_l, (byte) 7, 2, false, 240, 8, 320, SocialTabsPanel.field_b.field_u + SocialTabsPanel.field_b.field_K, SocialTabsPanel.field_b.field_u, SocialTabsPanel.field_b, WhirlpoolHasher.field_l);
                 }
-                if (kf.field_d) {
-                  var3 = pf.field_d;
-                  if (0 == ed.field_O ||
-                    kb.field_t == 2 ||
-                    kb.field_t == 3 ||
-                    4 == ed.field_O ||
-                    5 == ed.field_O) {
-                    var3 = ed.field_O;
+                if (LoadingScreenRenderHelpers.field_d) {
+                  var3 = PlayerContextMenu.field_d;
+                  if (0 == DraggableWidget.field_O ||
+                    BackgroundSparkle.field_t == 2 ||
+                    BackgroundSparkle.field_t == 3 ||
+                    4 == DraggableWidget.field_O ||
+                    5 == DraggableWidget.field_O) {
+                    var3 = DraggableWidget.field_O;
                   }
-                  ac.a(-4, -80, false, var3);
+                  ScreenSwitchHelpers.switchScreen(-4, -80, false, var3);
                 }
-                if (qb.a(ed.field_O, (byte) 114)) {
-                  q.b(0);
+                if (AccountWelcomePanel.isNonNegative(DraggableWidget.field_O, (byte) 114)) {
+                  LinkTextPainter.commitScreenChange(0);
                 }
               }
-              ko.field_s = 3;
+              PointerTrailBubble.field_s = 3;
             } else {
-              ai.field_i = ai.field_i - 1;
-              if (ai.field_i == 0) {
-                ko.field_s = 0;
+              ArchiveFactoryHelpers.field_i = ArchiveFactoryHelpers.field_i - 1;
+              if (ArchiveFactoryHelpers.field_i == 0) {
+                PointerTrailBubble.field_s = 0;
               }
             }
           }
@@ -1742,78 +1742,78 @@ public final class TetraLink extends ph {
           var3 = 0;
           var4 = 0;
           if (!param1) {
-            if (kb.field_t == ed.field_O &&
-              ~hm.field_a == ~af.field_h) {
-              if (kb.field_t != -1) {
-                if (kb.field_t == -2) {
+            if (BackgroundSparkle.field_t == DraggableWidget.field_O &&
+              ~LoginCredentials.field_a == ~JoinStatusTextHelpers.field_h) {
+              if (BackgroundSparkle.field_t != -1) {
+                if (BackgroundSparkle.field_t == -2) {
                   var3 = 1;
                 } else {
-                  if (!(!qb.a(kb.field_t, (byte) 114))) {
-                    kk.field_X[kb.field_t].c(param0 - 62);
+                  if (!(!AccountWelcomePanel.isNonNegative(BackgroundSparkle.field_t, (byte) 114))) {
+                    MarkerSlider.field_X[BackgroundSparkle.field_t].handleInput(param0 - 62);
                   }
                 }
               } else {
-                if (mi.field_Pb) {
+                if (LabelPairWidget.field_Pb) {
                   var4 = 1;
                   var3 = 1;
                 } else {
-                  aa.field_bc.a(true, (byte) 55);
-                  while (nj.b((byte) 28)) {
-                    aa.field_bc.c(74);
+                  ContextMenu.field_bc.tick(true, (byte) 55);
+                  while (KeyEventHelpers.pollKeyEvent((byte) 28)) {
+                    ContextMenu.field_bc.handleEscapeKey(74);
                   }
                 }
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              hd.field_v = hd.field_v + 1;
-              if (32 == hd.field_v) {
-                q.b(0);
+              EmailAvailabilityValidator.field_v = EmailAvailabilityValidator.field_v + 1;
+              if (32 == EmailAvailabilityValidator.field_v) {
+                LinkTextPainter.commitScreenChange(0);
               }
             }
           }
-          if (mi.field_Pb &&
+          if (LabelPairWidget.field_Pb &&
             !DualLinkDeque.field_e &&
-            !fj.field_o) {
-            RasterBuffer.a(var3 != 0, -36);
-            if (sj.field_a) {
-              ud.field_Qb.a(var4 != 0, (byte) 91);
+            !ChatMessage.field_o) {
+            RasterBuffer.updateLobbyAndFlushRequests(var3 != 0, -36);
+            if (AccountServerResult.field_a) {
+              SocialListEntry.field_Qb.tick(var4 != 0, (byte) 91);
             }
-            if (ph.field_s) {
-              aa.field_bc.a(var4 != 0, (byte) 86);
+            if (NetworkGameClient.field_s) {
+              ContextMenu.field_bc.tick(var4 != 0, (byte) 86);
             }
-            while (nj.b((byte) 28)) {
-              stackIn_38_0 = tb.field_e;
+            while (KeyEventHelpers.pollKeyEvent((byte) 28)) {
+              stackIn_38_0 = AnimationSequence.field_e;
               if (stackIn_38_0) {
-                nj.a(param0 + 15718, 13, 12, 15);
+                KeyEventHelpers.handleGlobalKey(param0 + 15718, 13, 12, 15);
               }
-              if (sj.field_a) {
-                ud.field_Qb.c(71);
+              if (AccountServerResult.field_a) {
+                SocialListEntry.field_Qb.handleEscapeKey(71);
               }
-              if (!ph.field_s) {
+              if (!NetworkGameClient.field_s) {
                 continue;
               }
-              aa.field_bc.c(62);
+              ContextMenu.field_bc.handleEscapeKey(62);
             }
           }
-          stackIn_38_0Lifetime1 = mi.field_Pb;
+          stackIn_38_0Lifetime1 = LabelPairWidget.field_Pb;
           if (!stackIn_38_0Lifetime1) {
-            ua.a((byte) 123);
+            CommonUiHelpers.closeOverlays((byte) 123);
           }
           var5 = IsaacCipher.field_a.field_yb;
-          if (tb.field_e &&
-            mi.field_Pb) {
-            stackIn_46_0 = cb.field_w;
+          if (AnimationSequence.field_e &&
+            LabelPairWidget.field_Pb) {
+            stackIn_46_0 = MatchingTextValidator.field_w;
           } else {
             stackIn_46_0 = 481;
           }
           var6 = stackIn_46_0;
-          dc.field_d = dc.field_d + (-dc.field_d + (float)var6) * 0.10000000149011612f;
-          if ((int)(0.5 + (double)dc.field_d) != var5) {
-            el.d(5, (int)dc.field_d);
-            kd.a(320, ((int)(dc.field_d * 4.0f) + 240) / 9, (byte) -121);
+          MarkerSliderPainter.field_d = MarkerSliderPainter.field_d + (-MarkerSliderPainter.field_d + (float)var6) * 0.10000000149011612f;
+          if ((int)(0.5 + (double)MarkerSliderPainter.field_d) != var5) {
+            LobbyGame.setChatPanelY(5, (int)MarkerSliderPainter.field_d);
+            DualLinkNodeHashTable.setScreenCentre(320, ((int)(MarkerSliderPainter.field_d * 4.0f) + 240) / 9, (byte) -121);
           }
-          if (this.notificationQueue.c(false) != null) {
+          if (this.notificationQueue.first(false) != null) {
             fieldTemp$0 = this.notificationTimer + 1;
             this.notificationTimer = this.notificationTimer + 1;
             if (fieldTemp$0 == 335) {
@@ -1822,34 +1822,34 @@ public final class TetraLink extends ph {
             }
           }
           if (!param1) {
-            ka.b(param0 - 58);
+            LongAndTextCredentials.processGameInput(param0 - 58);
           }
         }
-        if (ed.field_O == -3) {
-          var8 = new String[]{me.field_c, vh.field_a};
-          aa.field_bc = new ei(false, (int) sb.field_b[0], var8, 0, false);
-          sk.a(0);
-          stackIn_84_0 = (!qf.field_g) ? 0 : 1;
+        if (DraggableWidget.field_O == -3) {
+          var8 = new String[]{RasterStackHelpers.field_c, Renderable.field_a};
+          ContextMenu.field_bc = new GameSession(false, (int) ArchiveGroupHelpers.field_b[0], var8, 0, false);
+          SectorCacheStore.startNewGameScene(0);
+          stackIn_84_0 = (!ReflectionCheckHelpers.field_g) ? 0 : 1;
           var4Lifetime1 = stackIn_84_0;
-          ac.a(-1, -74, var4Lifetime1 != 0, 0);
-          nn.field_X = true;
+          ScreenSwitchHelpers.switchScreen(-1, -74, var4Lifetime1 != 0, 0);
+          EditableTextWidget.field_X = true;
         }
-        if (ed.field_O == -4) {
-          nd.field_Lb.writeCipheredByte(9, (byte) -92);
-          ed.field_O = kb.field_t;
+        if (DraggableWidget.field_O == -4) {
+          QuickChatHelpDialog.field_Lb.writeCipheredByte(9, (byte) -92);
+          DraggableWidget.field_O = BackgroundSparkle.field_t;
           DualLinkDeque.field_e = true;
         }
-        if (-5 == ed.field_O) {
-          g.e(qb.field_N.j(-68), -124, 11);
-          ed.field_O = kb.field_t;
-          fj.field_o = true;
+        if (-5 == DraggableWidget.field_O) {
+          MidiPcmStream.sendWithdrawJoinRequest(AccountWelcomePanel.field_N.getGameId(-68), -124, 11);
+          DraggableWidget.field_O = BackgroundSparkle.field_t;
+          ChatMessage.field_o = true;
         }
         if (param0 != 62) {
           return;
         }
-        ed.f((byte) -85);
-        if (ui.a(1000, 1692) == 0) {
-          dg.a(24, (byte) 127, mb.field_y[ui.a(3, 1692)]);
+        DraggableWidget.updateCameraTransition((byte) -85);
+        if (ModelMergeHelpers.nextRandomInt(1000, 1692) == 0) {
+          WidgetStyleLayer.createPlayingSound(24, (byte) 127, CacheEntry.field_y[ModelMergeHelpers.nextRandomInt(3, 1692)]);
         }
     }
 
@@ -1858,46 +1858,46 @@ public final class TetraLink extends ph {
     }
 
     final void onShutdown(int param0) {
-        ja.a(0);
-        if (hd.field_u != null) {
-          qa.b((byte) 46);
+        TextureCache.shutdownAudioOutputs(0);
+        if (EmailAvailabilityValidator.field_u != null) {
+          QuickChatCategory.exitFullscreen((byte) 46);
         }
         if (param0 != 1) {
           field_N = 104;
         }
-        re.d(true);
+        CheckboxWidget.shutdownSession(true);
     }
 
     final void onStartup(int param0) {
-        this.a(17, 2, 0, param0 ^ -20109, false, 4, 1, 17);
-        g var3 = new g();
-        var3.a(9, 128, (byte) -128);
-        l.a((java.awt.Component) ((Object) uh.field_b), 22050, var3, 1024, true, nd.field_Pb);
-        bm.field_n = 8437759;
+        this.initializeFramework(17, 2, 0, param0 ^ -20109, false, 4, 1, 17);
+        MidiPcmStream var3 = new MidiPcmStream();
+        var3.selectChannelBank(9, 128, (byte) -128);
+        BoardAnimator.startAudioOutputs((java.awt.Component) ((Object) GameClock.field_b), 22050, var3, 1024, true, QuickChatHelpDialog.field_Pb);
+        FullscreenCanvasHelpers.field_n = 8437759;
         IntrusiveDeque.field_b[61] = 2;
-        ve.field_b = 16777215;
-        uj.field_w = 255;
+        NineSliceFrame.field_b = 16777215;
+        ThreeSliceButtonPainter.field_w = 255;
         IntrusiveDeque.field_b[62] = 1;
         if (param0 != -20173) {
           this.onShutdown(-119);
         }
         IntrusiveDeque.field_b[67] = 1;
         IntrusiveDeque.field_b[63] = 1;
-        lk.field_wb = 255;
+        ProgressMessageDialog.field_wb = 255;
         IntrusiveDeque.field_b[66] = 1;
         IntrusiveNode.field_b = 8437759;
         IntrusiveDeque.field_b[60] = 4;
         IntrusiveDeque.field_b[64] = 1;
         IntrusiveDeque.field_b[65] = 1;
         IntrusiveDeque.field_b[57] = -2;
-        wa.field_d = 16777215;
+        TriangleSpanHelpers.field_d = 16777215;
         IntrusiveDeque.field_b[58] = -2;
-        this.a(false, true, false, true, false, false, (byte) -6);
-        bo.c(200, 3);
-        this.e((byte) 67);
+        this.enableOptionalPacketHandlers(false, true, false, true, false, false, (byte) -6);
+        CachedArchiveSource.allocateChatHistory(200, 3);
+        this.initScene((byte) 67);
     }
 
-    private final void a(boolean param0, Archive param1) {
+    private final void loadSceneryModels(boolean param0, Archive param1) {
         ModelData var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -1905,17 +1905,17 @@ public final class TetraLink extends ph {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          vn.setBrightnessAndRebuildPalette(1.0f);
-          vn.useRasterClip();
-          af.field_c = ModelData.a(param1, "", "scenery");
-          if (!cf.a(0, (byte) 117)) {
-            mf.field_w = (Model) (af.field_c.createModel(64, 728, 0, 256, 0));
+          TriangleRasterizer.setBrightnessAndRebuildPalette(1.0f);
+          TriangleRasterizer.useRasterClip();
+          JoinStatusTextHelpers.field_c = ModelData.load(param1, "", "scenery");
+          if (!PendingStatQuery.hasFeatureBit(0, (byte) 117)) {
+            InsetTextPainter.field_w = (Model) (JoinStatusTextHelpers.field_c.createModel(64, 728, 0, 256, 0));
           } else {
-            mf.field_w = (Model) (af.field_c.createModel(32, 2184, 0, 256, 0));
-            var3 = ModelData.a(param1, "", "ghost_untextured");
-            ec.field_l = (Model) (var3.createModel(64, 728, 0, 256, 0));
+            InsetTextPainter.field_w = (Model) (JoinStatusTextHelpers.field_c.createModel(32, 2184, 0, 256, 0));
+            var3 = ModelData.load(param1, "", "ghost_untextured");
+            WeightedLruCache.field_l = (Model) (var3.createModel(64, 728, 0, 256, 0));
           }
-          mf.field_w.transform(gk.field_e);
+          InsetTextPainter.field_w.transform(LobbyListHelpers.field_e);
           if (param0) {
             TetraLink.releaseStatics(-81);
           }
@@ -1930,7 +1930,7 @@ public final class TetraLink extends ph {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw oi.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -1943,45 +1943,45 @@ public final class TetraLink extends ph {
         field_P = null;
     }
 
-    private final void e(byte param0) {
+    private final void initScene(byte param0) {
         int var2 = 0;
         int var3 = field_J;
-        oi.field_c = 3;
+        IndexedSpriteState.field_c = 3;
         if (param0 != 67) {
           field_O = (String) null;
         }
         GameKeyHandler.field_g = 3;
-        vn.field_b = false;
-        va.field_p = 3;
-        c dupTemp$0 = new c();
-        cd.field_d = dupTemp$0;
-        wk.field_i = dupTemp$0;
-        ti.field_g = new double[]{0.0, 0.0, -128.0};
-        dj.field_h = 3.1415927410125732f;
-        uk.field_x = 3.1415927410125732f;
-        mh.field_c = 128.0f;
-        rn.field_d = 128.0f;
-        eo.a(-120);
-        wk.field_i.field_n = true;
-        ul.field_d = 0.0f;
-        hi.field_d = new double[]{1.0, 0.0, 0.0};
+        TriangleRasterizer.field_b = false;
+        TextHighlightSpan.field_p = 3;
+        GraphicsSettings dupTemp$0 = new GraphicsSettings();
+        MenuLabelGlobals.field_d = dupTemp$0;
+        WidgetTheme.field_i = dupTemp$0;
+        LobbyResourceHelpers.field_g = new double[]{0.0, 0.0, -128.0};
+        NodeHashTable.field_h = 3.1415927410125732f;
+        WidgetNode.field_x = 3.1415927410125732f;
+        GameRoomPanelHelpers.field_c = 128.0f;
+        LoadingResourceHelpers.field_d = 128.0f;
+        CameraAndChatHelpers.updateCameraMatrix(-120);
+        WidgetTheme.field_i.field_n = true;
+        SpriteCheckboxPainter.field_d = 0.0f;
+        TextLayout.field_d = new double[]{1.0, 0.0, 0.0};
         Archive.field_a = 0;
-        cd.field_d.field_n = true;
-        gk.field_e = new int[]{0, 210, 0, 65536, 0, 0, 0, 65536, 0, 0, 0, 65536};
-        ti.field_d = new int[]{0, 0, 0, 65536, 0, 0, 0, 65536, 0, 0, 0, 65536};
-        bl.field_Lb = new Sprite(640, 400);
-        rh.field_M = new Sprite(640, 400);
-        kn.field_d = new Sprite(200, 400);
+        MenuLabelGlobals.field_d.field_n = true;
+        LobbyListHelpers.field_e = new int[]{0, 210, 0, 65536, 0, 0, 0, 65536, 0, 0, 0, 65536};
+        LobbyResourceHelpers.field_d = new int[]{0, 0, 0, 65536, 0, 0, 0, 65536, 0, 0, 0, 65536};
+        VerticalScrollbar.field_Lb = new Sprite(640, 400);
+        NetworkArchiveRequest.field_M = new Sprite(640, 400);
+        LoadingStageHook.field_d = new Sprite(200, 400);
         for (var2 = 0; var2 < 256; var2++) {
-          oi.field_n[var2] = pl.a(-486473984, 143 * var2) << 8;
-          oi.field_n[var2] = IntrusiveNode.a(oi.field_n[var2], pl.a(65280, 191 * var2));
-          oi.field_n[var2] = IntrusiveNode.a(oi.field_n[var2], var2);
+          IndexedSpriteState.field_n[var2] = StatusRequestHelpers.bitAnd(-486473984, 143 * var2) << 8;
+          IndexedSpriteState.field_n[var2] = IntrusiveNode.bitOr(IndexedSpriteState.field_n[var2], StatusRequestHelpers.bitAnd(65280, 191 * var2));
+          IndexedSpriteState.field_n[var2] = IntrusiveNode.bitOr(IndexedSpriteState.field_n[var2], var2);
         }
-        kd.a(320, 240, (byte) -121);
-        dd.field_a = -1;
+        DualLinkNodeHashTable.setScreenCentre(320, 240, (byte) -121);
+        SettingsCookieHelpers.field_a = -1;
     }
 
-    private final void a(Archive param0, Archive param1, boolean param2, Archive param3, Archive param4, Archive param5) {
+    private final void loadGraphics(Archive param0, Archive param1, boolean param2, Archive param3, Archive param4, Archive param5) {
         int var9_int = 0;
         int var10 = 0;
         RuntimeException stackIn_16_0 = null;
@@ -2004,53 +2004,53 @@ public final class TetraLink extends ph {
         Sprite var12 = null;
         var11 = field_J;
         try {
-          mk.field_b = pm.a("", "font", param1, param3, -89);
-          go.field_g = pm.a("kartika13", "", param0, param4, -63);
-          var12 = ug.loadFontByName(param1, (byte) -45, "starfield", "");
-          ja.field_i = new Sprite(2560, 256);
-          ja.field_i.makeRasterTarget();
+          SocialTabsPanel.field_b = FontAndBrightnessHelpers.loadFontByName("", "font", param1, param3, -89);
+          GzipDecompressor.field_g = FontAndBrightnessHelpers.loadFontByName("kartika13", "", param0, param4, -63);
+          var12 = LoadingProgressDialog.loadFontByName(param1, (byte) -45, "starfield", "");
+          TextureCache.field_i = new Sprite(2560, 256);
+          TextureCache.field_i.makeRasterTarget();
           var12.drawOpaque(0, 0);
           var12.drawOpaque(1280, 0);
-          WidgetContainer.field_O.a(-117);
-          GameApplet.field_c = qk.a((byte) 79, param1, "", "logo");
-          ef.field_k = ug.loadFontByName(param1, (byte) -45, "splash", "");
-          of.field_f = el.a(param1, "walk1", "", -1409);
-          th.field_p = el.a(param1, "walk2", "", -1409);
-          qd.field_cb = el.a(param1, "walk3", "", -1409);
-          li.field_l = oc.a("frame", true, param1, "");
-          sd.field_qb = bf.loadSpritesByName((byte) -69, param1, "", "achievements_large");
-          NotificationToast.field_p = ug.loadFontByName(param0, (byte) -45, "unachieved", "basic");
-          w.field_r = ug.loadFontByName(param0, (byte) -45, "orbcoin", "basic");
-          var8 = sd.field_qb.length;
-          hl.field_G = new Sprite[var8];
-          me.a(false);
+          WidgetContainer.field_O.makeRasterTarget(-117);
+          GameApplet.field_c = ScreenDrawHelpers.loadIndexedSpriteByName((byte) 79, param1, "", "logo");
+          NanoTickClock.field_k = LoadingProgressDialog.loadFontByName(param1, (byte) -45, "splash", "");
+          MenuInputState.field_f = LobbyGame.loadIndexedSpritesByName(param1, "walk1", "", -1409);
+          Js5Transport.field_p = LobbyGame.loadIndexedSpritesByName(param1, "walk2", "", -1409);
+          DialWidget.field_cb = LobbyGame.loadIndexedSpritesByName(param1, "walk3", "", -1409);
+          WhirlpoolHasher.field_l = MidiNote.loadFrameSprites("frame", true, param1, "");
+          LoginDialog.field_qb = PlayingSound.loadSpritesByName((byte) -69, param1, "", "achievements_large");
+          NotificationToast.field_p = LoadingProgressDialog.loadFontByName(param0, (byte) -45, "unachieved", "basic");
+          AgeValidator.field_r = LoadingProgressDialog.loadFontByName(param0, (byte) -45, "orbcoin", "basic");
+          var8 = LoginDialog.field_qb.length;
+          UiComponent.field_G = new Sprite[var8];
+          RasterStackHelpers.pushRasterState(false);
           for (var9_int = 0; var9_int < var8; var9_int++) {
             var10_ref_oh = new Sprite(32, 32);
             var10_ref_oh.makeRasterTarget();
-            sd.field_qb[var9_int].drawScaledAveraged(0, 0, 32, 32);
-            hl.field_G[var9_int] = var10_ref_oh;
+            LoginDialog.field_qb[var9_int].drawScaledAveraged(0, 0, 32, 32);
+            UiComponent.field_G[var9_int] = var10_ref_oh;
           }
-          cm.field_F = new Sprite(32, 32);
-          cm.field_F.makeRasterTarget();
+          Bzip2State.field_F = new Sprite(32, 32);
+          Bzip2State.field_F.makeRasterTarget();
           NotificationToast.field_p.drawScaledAveraged(0, 0, 32, 32);
-          fh.a(true);
-          l.field_c = bf.loadSpritesByName((byte) -97, param1, "", "viewicons");
-          e.field_f = this.createShadedDiscSprite(8388608, 262144, (byte) -107);
-          ho.field_M = this.createShadedDiscSprite(6316128, 263172, (byte) -107);
-          if (cf.a(0, (byte) 119)) {
-            me.field_e = ug.loadFontByName(param1, (byte) -45, "red_counter", "allhallowseve");
-            qd.field_X = ug.loadFontByName(param1, (byte) -45, "white_counter", "allhallowseve");
+          HuffmanCodec.popRasterTarget(true);
+          BoardAnimator.field_c = PlayingSound.loadSpritesByName((byte) -97, param1, "", "viewicons");
+          IndexedSpriteHelpers.field_f = this.createShadedDiscSprite(8388608, 262144, (byte) -107);
+          AccountCreationForm.field_M = this.createShadedDiscSprite(6316128, 263172, (byte) -107);
+          if (PendingStatQuery.hasFeatureBit(0, (byte) 119)) {
+            RasterStackHelpers.field_e = LoadingProgressDialog.loadFontByName(param1, (byte) -45, "red_counter", "allhallowseve");
+            DialWidget.field_X = LoadingProgressDialog.loadFontByName(param1, (byte) -45, "white_counter", "allhallowseve");
           }
-          var9 = new Sprite[ua.field_b.length][];
-          for (var10 = 0; ua.field_b.length > var10; var10++) {
-            var9[var10] = bf.loadSpritesByName((byte) -126, param1, "", ua.field_b[var10]);
+          var9 = new Sprite[CommonUiHelpers.field_b.length][];
+          for (var10 = 0; CommonUiHelpers.field_b.length > var10; var10++) {
+            var9[var10] = PlayingSound.loadSpritesByName((byte) -126, param1, "", CommonUiHelpers.field_b[var10]);
           }
-          qn.a(false, pl.field_a, sb.field_b, d.field_c, var9, param2, var9, d.field_c, rc.field_U, param4, qn.field_s, 1, 2, a.field_i, param0);
-          hd.field_r = ug.loadFontByName(param1, (byte) -45, "lobbyicon", "");
-          if (cf.a(0, (byte) 116)) {
-            vn.a(new ja(param5, param1));
+          StatefulWidgetRenderer.initializeLobbyAssets(false, StatusRequestHelpers.field_a, ArchiveGroupHelpers.field_b, DebouncedValidator.field_c, var9, param2, var9, DebouncedValidator.field_c, CaptionedContainer.field_U, param4, StatefulWidgetRenderer.field_s, 1, 2, ClientProtocolStage.field_i, param0);
+          EmailAvailabilityValidator.field_r = LoadingProgressDialog.loadFontByName(param1, (byte) -45, "lobbyicon", "");
+          if (PendingStatQuery.hasFeatureBit(0, (byte) 116)) {
+            TriangleRasterizer.setTextureProvider(new TextureCache(param5, param1));
           } else {
-            vn.a(new dh(param5, param1, 8, 128));
+            TriangleRasterizer.setTextureProvider(new LruTextureCache(param5, param1, 8, 128));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2087,33 +2087,33 @@ public final class TetraLink extends ph {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw oi.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
         }
     }
 
     private final void loadArchives(int param0) {
-        if (um.field_k != null) {
-          of.a(-98, um.field_k);
-          um.field_k = null;
-          SecondaryNodeDeque.c(-8243);
+        if (TextFieldValidator.field_k != null) {
+          MenuInputState.loadLocalizedText(-98, TextFieldValidator.field_k);
+          TextFieldValidator.field_k = null;
+          SecondaryNodeDeque.resetFrameTimingHistory(-8243);
         }
-        nl.field_b = ve.b(108, 3);
-        cd.field_b = ve.b(-84, 5);
+        DisplayMode.field_b = NineSliceFrame.createArchive(108, 3);
+        MenuLabelGlobals.field_b = NineSliceFrame.createArchive(-84, 5);
         if (param0 <= 16) {
-          field_P = (aa) null;
+          field_P = (ContextMenu) null;
         }
-        ll.field_x = ve.b(-47, 6);
-        n.field_N = ve.b(-64, 7);
-        oa.field_p = ve.b(92, 8);
-        DualLinkDeque.field_f = ve.b(-68, 9);
-        nl.field_g = ve.b(-70, 10);
-        fk.field_U = ve.b(-119, 11);
-        vf.field_a = ve.b(-113, 12);
-        rc.field_U = ve.b(-122, 13);
-        if (cf.a(0, (byte) 108)) {
-          dc.field_k = ve.b(-99, 14);
-          mf.field_v = ve.b(99, 15);
-          kn.field_c = ve.b(-128, 16);
+        ArchiveRequest.field_x = NineSliceFrame.createArchive(-47, 6);
+        NameSuggestionsPanel.field_N = NineSliceFrame.createArchive(-64, 7);
+        HighscoreQuery.field_p = NineSliceFrame.createArchive(92, 8);
+        DualLinkDeque.field_f = NineSliceFrame.createArchive(-68, 9);
+        DisplayMode.field_g = NineSliceFrame.createArchive(-70, 10);
+        HotspotTextWidget.field_U = NineSliceFrame.createArchive(-119, 11);
+        SocialListPacketHandler.field_a = NineSliceFrame.createArchive(-113, 12);
+        CaptionedContainer.field_U = NineSliceFrame.createArchive(-122, 13);
+        if (PendingStatQuery.hasFeatureBit(0, (byte) 108)) {
+          MarkerSliderPainter.field_k = NineSliceFrame.createArchive(-99, 14);
+          InsetTextPainter.field_v = NineSliceFrame.createArchive(99, 15);
+          LoadingStageHook.field_c = NineSliceFrame.createArchive(-128, 16);
         }
     }
 
@@ -2122,231 +2122,231 @@ public final class TetraLink extends ph {
         int var6 = field_J;
         Sprite var4 = new Sprite(57, 57);
         int var5Lifetime1;
-        bd.a(var4, 6);
+        RasterTargetHelpers.setSpriteRasterTarget(var4, 6);
         SoftwareRasterizer.fillCircle(29, 29, 27, 263172);
         for (var5 = 23; var5 >= 0; var5--) {
           SoftwareRasterizer.fillCircle(29, 29, var5, param1 * var5 + param0);
         }
         if (param2 != -107) {
           Archive var7 = (Archive) null;
-          this.a(false, (Archive) null);
+          this.loadSceneryModels(false, (Archive) null);
         }
         for (var5Lifetime1 = 0; 57 > var5Lifetime1; var5Lifetime1 += 2) {
           SoftwareRasterizer.drawHorizontalLineAlpha(0, var5Lifetime1, 57, 0, 128);
         }
-        fh.a(true);
+        HuffmanCodec.popRasterTarget(true);
         return var4;
     }
 
-    private final boolean a(byte param0, boolean param1) {
+    private final boolean advanceLoading(byte param0, boolean param1) {
         int var4 = 0;
         int var3;
         int var5;
-        f var6;
+        AnimationFrameSet var6;
         int var3Lifetime1;
         int var3Lifetime2;
         var5 = field_J;
-        la.d(-109);
-        if (null == n.field_N) {
-          if (null != nl.field_g) {
-            ak.setBenefitsBorderAndCaption(0, mf.field_r, 80.0f);
+        DirectByteStorage.initializeCaptionTables(-109);
+        if (null == NameSuggestionsPanel.field_N) {
+          if (null != DisplayMode.field_g) {
+            PacketFlushHelpers.setBenefitsBorderAndCaption(0, InsetTextPainter.field_r, 80.0f);
             this.renderFrame(124);
-            qc.field_bb = new ri[4];
-            qc.field_bb[0] = ri.load(nl.field_g, "", "tetralink titlescreen");
-            qc.field_bb[1] = ri.load(nl.field_g, "", "tetralink ingame 1");
-            qc.field_bb[2] = ri.load(nl.field_g, "", "tetralink ingame 2");
-            qc.field_bb[3] = ri.load(nl.field_g, "", "tetralink ingame 3");
+            FullscreenErrorDialog.field_bb = new MusicTrack[4];
+            FullscreenErrorDialog.field_bb[0] = MusicTrack.load(DisplayMode.field_g, "", "tetralink titlescreen");
+            FullscreenErrorDialog.field_bb[1] = MusicTrack.load(DisplayMode.field_g, "", "tetralink ingame 1");
+            FullscreenErrorDialog.field_bb[2] = MusicTrack.load(DisplayMode.field_g, "", "tetralink ingame 2");
+            FullscreenErrorDialog.field_bb[3] = MusicTrack.load(DisplayMode.field_g, "", "tetralink ingame 3");
             for (var3 = 0; var3 < 4; var3++) {
-              ic.field_b.a(PacketBuffer.field_q, qc.field_bb[var3], DualLinkDeque.field_f, -1, 0);
+              SharedPanelFactory.field_b.prepareTrack(PacketBuffer.field_q, FullscreenErrorDialog.field_bb[var3], DualLinkDeque.field_f, -1, 0);
             }
-            ic.field_b.e((byte) 115);
+            SharedPanelFactory.field_b.releasePatchSamples((byte) 115);
             DualLinkDeque.field_f = null;
-            nl.field_g = null;
+            DisplayMode.field_g = null;
             PacketBuffer.field_q = null;
-            SecondaryNodeDeque.c(-8243);
+            SecondaryNodeDeque.resetFrameTimingHistory(-8243);
             return false;
           }
-          if (null != ll.field_x) {
-            ak.setBenefitsBorderAndCaption(0, hm.field_e, 90.0f);
+          if (null != ArchiveRequest.field_x) {
+            PacketFlushHelpers.setBenefitsBorderAndCaption(0, LoginCredentials.field_e, 90.0f);
             this.renderFrame(126);
-            this.a(v.field_v, cd.field_b, true, ll.field_x, sb.field_a, vf.field_a);
-            sb.field_a = null;
-            ll.field_x = null;
-            SecondaryNodeDeque.c(-8243);
+            this.loadGraphics(QueuedListRequest.field_v, MenuLabelGlobals.field_b, true, ArchiveRequest.field_x, ArchiveGroupHelpers.field_a, SocialListPacketHandler.field_a);
+            ArchiveGroupHelpers.field_a = null;
+            ArchiveRequest.field_x = null;
+            SecondaryNodeDeque.resetFrameTimingHistory(-8243);
             return false;
           }
-          if (fk.field_U != null) {
-            ak.setBenefitsBorderAndCaption(0, pi.field_e, 95.0f);
+          if (HotspotTextWidget.field_U != null) {
+            PacketFlushHelpers.setBenefitsBorderAndCaption(0, PasswordLengthHelpers.field_e, 95.0f);
             this.renderFrame(118);
-            this.a(false, fk.field_U);
-            fk.field_U = null;
-            SecondaryNodeDeque.c(-8243);
+            this.loadSceneryModels(false, HotspotTextWidget.field_U);
+            HotspotTextWidget.field_U = null;
+            SecondaryNodeDeque.resetFrameTimingHistory(-8243);
             return false;
           }
-          if (mf.field_v != null &&
-            cf.a(0, (byte) 116)) {
-            jn.setSharedArchives(dc.field_k, true, mf.field_v);
-            var6 = new f(0);
-            while (!var6.b((byte) -106)) {
+          if (InsetTextPainter.field_v != null &&
+            PendingStatQuery.hasFeatureBit(0, (byte) 116)) {
+            TextureEntry.setSharedArchives(MarkerSliderPainter.field_k, true, InsetTextPainter.field_v);
+            var6 = new AnimationFrameSet(0);
+            while (!var6.ensureFramesLoaded((byte) -106)) {
             }
-            dj.discardServerMessage((byte) -116, var6);
-            go.field_a = new tb(kn.field_c, "ghost_update", "ghost_update_normal_ready");
-            vg.field_Vb = new tb(kn.field_c, "ghost_update", "ghost_update_normal_walk");
-            mf.field_v = null;
-            dc.field_k = null;
-            kn.field_c = null;
+            NodeHashTable.discardServerMessage((byte) -116, var6);
+            GzipDecompressor.field_a = new AnimationSequence(LoadingStageHook.field_c, "ghost_update", "ghost_update_normal_ready");
+            NameEntryPopup.field_Vb = new AnimationSequence(LoadingStageHook.field_c, "ghost_update", "ghost_update_normal_walk");
+            InsetTextPainter.field_v = null;
+            MarkerSliderPainter.field_k = null;
+            LoadingStageHook.field_c = null;
           }
-          if (null != nl.field_b) {
-            bj.setSharedAnimationFrameset(5, new fh(nl.field_b.a("", "huffman", true)));
-            nl.field_b = null;
-            SecondaryNodeDeque.c(-8243);
+          if (null != DisplayMode.field_b) {
+            LobbyUpdateHelpers.setSharedAnimationFrameset(5, new HuffmanCodec(DisplayMode.field_b.getFileByName("", "huffman", true)));
+            DisplayMode.field_b = null;
+            SecondaryNodeDeque.resetFrameTimingHistory(-8243);
             return false;
           }
-          o.b((byte) -117);
+          HighscoreSubmission.computeCaptionColumnWidth((byte) -117);
           var3Lifetime2 = 108 / ((0 - param0) / 55);
           for (var4 = 0; var4 < 11; var4++) {
-            kk.field_X[var4] = new cl(var4);
+            MarkerSlider.field_X[var4] = new MenuScreen(var4);
           }
-          ed.field_O = 10;
-          kb.field_t = 10;
-          gl.a((byte) 124, 50);
-          bm.b(-51, 50);
-          dl.a(27654, qc.field_bb[0]);
-          dh.field_e = 0;
-          if (!cf.a(0, (byte) 126)) {
+          DraggableWidget.field_O = 10;
+          BackgroundSparkle.field_t = 10;
+          AlternateLongAndTextCredentials.setTargetFrameRate((byte) 124, 50);
+          FullscreenCanvasHelpers.checkComplementGuard(-51, 50);
+          RasterSnapshot.playMusicTrack(27654, FullscreenErrorDialog.field_bb[0]);
+          LruTextureCache.field_e = 0;
+          if (!PendingStatQuery.hasFeatureBit(0, (byte) 126)) {
             return true;
           }
-          ac.field_a = new ma();
-          ac.field_a.a((byte) 33, go.field_a);
+          ScreenSwitchHelpers.field_a = new AnimationPlayer();
+          ScreenSwitchHelpers.field_a.selectSequence((byte) 33, GzipDecompressor.field_a);
           return true;
         }
-        if (v.field_v.c(106) &&
-          v.field_v.a("basic", (byte) -91)) {
-          if (v.field_v.c(112) &&
-            v.field_v.a("kartika13", (byte) -124)) {
-            if (sb.field_a.c(90) &&
-              sb.field_a.a("kartika13", (byte) -110)) {
-              if (v.field_v.c(119) &&
-                v.field_v.a("lobby", (byte) -88)) {
-                if (sb.field_a.c(109) &&
-                  sb.field_a.a("lobby", (byte) -113)) {
-                  if (n.field_N.c(119) &&
-                    n.field_N.a(false)) {
-                    if (oa.field_p.c(108) &&
-                      oa.field_p.a(false)) {
-                      if (DualLinkDeque.field_f.c(97) &&
-                        DualLinkDeque.field_f.a(false)) {
-                        if (nl.field_g.c(108) &&
-                          nl.field_g.a(false)) {
-                          if (cd.field_b.c(95) &&
-                            cd.field_b.a(false)) {
-                            if (ll.field_x.c(100) &&
-                              ll.field_x.a(false)) {
-                              if (nl.field_b.c(112) &&
-                                nl.field_b.a(false)) {
-                                if (fk.field_U.c(101) &&
-                                  fk.field_U.a(false)) {
+        if (QueuedListRequest.field_v.ensureIndexLoaded(106) &&
+          QueuedListRequest.field_v.loadGroupByName("basic", (byte) -91)) {
+          if (QueuedListRequest.field_v.ensureIndexLoaded(112) &&
+            QueuedListRequest.field_v.loadGroupByName("kartika13", (byte) -124)) {
+            if (ArchiveGroupHelpers.field_a.ensureIndexLoaded(90) &&
+              ArchiveGroupHelpers.field_a.loadGroupByName("kartika13", (byte) -110)) {
+              if (QueuedListRequest.field_v.ensureIndexLoaded(119) &&
+                QueuedListRequest.field_v.loadGroupByName("lobby", (byte) -88)) {
+                if (ArchiveGroupHelpers.field_a.ensureIndexLoaded(109) &&
+                  ArchiveGroupHelpers.field_a.loadGroupByName("lobby", (byte) -113)) {
+                  if (NameSuggestionsPanel.field_N.ensureIndexLoaded(119) &&
+                    NameSuggestionsPanel.field_N.areAllGroupsLoaded(false)) {
+                    if (HighscoreQuery.field_p.ensureIndexLoaded(108) &&
+                      HighscoreQuery.field_p.areAllGroupsLoaded(false)) {
+                      if (DualLinkDeque.field_f.ensureIndexLoaded(97) &&
+                        DualLinkDeque.field_f.areAllGroupsLoaded(false)) {
+                        if (DisplayMode.field_g.ensureIndexLoaded(108) &&
+                          DisplayMode.field_g.areAllGroupsLoaded(false)) {
+                          if (MenuLabelGlobals.field_b.ensureIndexLoaded(95) &&
+                            MenuLabelGlobals.field_b.areAllGroupsLoaded(false)) {
+                            if (ArchiveRequest.field_x.ensureIndexLoaded(100) &&
+                              ArchiveRequest.field_x.areAllGroupsLoaded(false)) {
+                              if (DisplayMode.field_b.ensureIndexLoaded(112) &&
+                                DisplayMode.field_b.areAllGroupsLoaded(false)) {
+                                if (HotspotTextWidget.field_U.ensureIndexLoaded(101) &&
+                                  HotspotTextWidget.field_U.areAllGroupsLoaded(false)) {
                                   boolean decompiledFrameRemainder0 = true;
-                                  if (cf.a(0, (byte) 113)) {
-                                    if (dc.field_k.c(92) &&
-                                      dc.field_k.a(false)) {
-                                      if ((mf.field_v.c(99) &&
-                                        mf.field_v.a(false)) &&
-                                        (decompiledFrameRemainder0 = (!(kn.field_c.c(119)) ||
-                                        !(kn.field_c.a(false))))) {
-                                        ak.setBenefitsBorderAndCaption(0, fn.a(0, kn.field_c, gk.field_f, ml.field_kb), 75.0f);
+                                  if (PendingStatQuery.hasFeatureBit(0, (byte) 113)) {
+                                    if (MarkerSliderPainter.field_k.ensureIndexLoaded(92) &&
+                                      MarkerSliderPainter.field_k.areAllGroupsLoaded(false)) {
+                                      if ((InsetTextPainter.field_v.ensureIndexLoaded(99) &&
+                                        InsetTextPainter.field_v.areAllGroupsLoaded(false)) &&
+                                        (decompiledFrameRemainder0 = (!(LoadingStageHook.field_c.ensureIndexLoaded(119)) ||
+                                        !(LoadingStageHook.field_c.areAllGroupsLoaded(false))))) {
+                                        PacketFlushHelpers.setBenefitsBorderAndCaption(0, DisplayNameForm.formatArchiveProgress(0, LoadingStageHook.field_c, LobbyListHelpers.field_f, ContentTransitionDialog.field_kb), 75.0f);
                                         return false;
                                       }
                                       if (decompiledFrameRemainder0) {
-                                        ak.setBenefitsBorderAndCaption(0, fn.a(0, mf.field_v, gk.field_f, ml.field_kb), 75.0f);
+                                        PacketFlushHelpers.setBenefitsBorderAndCaption(0, DisplayNameForm.formatArchiveProgress(0, InsetTextPainter.field_v, LobbyListHelpers.field_f, ContentTransitionDialog.field_kb), 75.0f);
                                         return false;
                                       }
                                     }
                                     if (decompiledFrameRemainder0) {
-                                      ak.setBenefitsBorderAndCaption(0, fn.a(0, dc.field_k, on.field_a, la.field_k), 75.0f);
+                                      PacketFlushHelpers.setBenefitsBorderAndCaption(0, DisplayNameForm.formatArchiveProgress(0, MarkerSliderPainter.field_k, LobbyOverlayHelpers.field_a, DirectByteStorage.field_k), 75.0f);
                                       return false;
                                     }
                                   }
-                                  if (vf.field_a.c(116) &&
-                                    vf.field_a.a(false)) {
-                                    if (rc.field_U.c(98) &&
-                                      rc.field_U.a(false)) {
-                                      ni.d((byte) 126);
-                                      ak.setBenefitsBorderAndCaption(0, ji.field_Ub, 78.0f);
+                                  if (SocialListPacketHandler.field_a.ensureIndexLoaded(116) &&
+                                    SocialListPacketHandler.field_a.areAllGroupsLoaded(false)) {
+                                    if (CaptionedContainer.field_U.ensureIndexLoaded(98) &&
+                                      CaptionedContainer.field_U.areAllGroupsLoaded(false)) {
+                                      Js5ArchiveManager.closeUiLayers((byte) 126);
+                                      PacketFlushHelpers.setBenefitsBorderAndCaption(0, TwoColumnListPanel.field_Ub, 78.0f);
                                       this.renderFrame(122);
                                       if (!param1) {
                                         return false;
                                       }
-                                      PacketBuffer.field_q = new SoundEffectLibrary(n.field_N, oa.field_p);
-                                      PacketBuffer.field_q.a("menu_select", "", (byte) 1);
-                                      io.field_c = PacketBuffer.field_q.a("tetralink_invalid_move", "", (byte) 1);
-                                      s.field_a = new PcmSample[5];
-                                      ti.field_a = new PcmSample[5];
+                                      PacketBuffer.field_q = new SoundEffectLibrary(NameSuggestionsPanel.field_N, HighscoreQuery.field_p);
+                                      PacketBuffer.field_q.getSynthesizedSampleByNameUnbudgeted("menu_select", "", (byte) 1);
+                                      StartupFlagsHelpers.field_c = PacketBuffer.field_q.getSynthesizedSampleByNameUnbudgeted("tetralink_invalid_move", "", (byte) 1);
+                                      MenuThemeHelpers.field_a = new PcmSample[5];
+                                      LobbyResourceHelpers.field_a = new PcmSample[5];
                                       for (var3Lifetime1 = 0; 5 > var3Lifetime1; var3Lifetime1++) {
-                                        s.field_a[var3Lifetime1] = PacketBuffer.field_q.a("tetralink_drop_piece_" + (1 + var3Lifetime1), "", (byte) 1);
-                                        ti.field_a[var3Lifetime1] = PacketBuffer.field_q.a("tetralink_piece_inplace_" + (1 + var3Lifetime1), "", (byte) 1);
+                                        MenuThemeHelpers.field_a[var3Lifetime1] = PacketBuffer.field_q.getSynthesizedSampleByNameUnbudgeted("tetralink_drop_piece_" + (1 + var3Lifetime1), "", (byte) 1);
+                                        LobbyResourceHelpers.field_a[var3Lifetime1] = PacketBuffer.field_q.getSynthesizedSampleByNameUnbudgeted("tetralink_piece_inplace_" + (1 + var3Lifetime1), "", (byte) 1);
                                       }
-                                      bf.field_r = PacketBuffer.field_q.a("tetralink_reset_board", "", (byte) 1);
-                                      sk.field_a = PacketBuffer.field_q.a("tetralink_second_tick", "", (byte) 1);
-                                      bo.field_A = PacketBuffer.field_q.a("tetralink_select_column", "", (byte) 1);
-                                      pi.field_c = PacketBuffer.field_q.a("tetralink_start_game", "", (byte) 1);
-                                      ug.field_ib = PacketBuffer.field_q.a("tetralink_winning_line_sound_winner", "", (byte) 1);
-                                      MouseWheelInput.field_c = PacketBuffer.field_q.a("tetralink_winning_line_sound_loser", "", (byte) 1);
-                                      oa.field_x = PacketBuffer.field_q.a("tetralink_title_appear", "", (byte) 1);
-                                      e.field_c = PacketBuffer.field_q.a("tetralink_dissolve", "", (byte) 1);
-                                      uf.field_d = PacketBuffer.field_q.a("tetralink_dissolve_in", "", (byte) 1);
-                                      mb.field_y = new PcmSample[3];
-                                      mb.field_y[0] = PacketBuffer.field_q.a(-122, "", "tetralink_NASA_chatter_1");
-                                      mb.field_y[1] = PacketBuffer.field_q.a(-123, "", "tetralink_NASA_chatter_2");
-                                      mb.field_y[2] = PacketBuffer.field_q.a(-128, "", "tetralink_NASA_chatter_3");
-                                      oa.field_p = null;
-                                      n.field_N = null;
-                                      SecondaryNodeDeque.c(-8243);
+                                      PlayingSound.field_r = PacketBuffer.field_q.getSynthesizedSampleByNameUnbudgeted("tetralink_reset_board", "", (byte) 1);
+                                      SectorCacheStore.field_a = PacketBuffer.field_q.getSynthesizedSampleByNameUnbudgeted("tetralink_second_tick", "", (byte) 1);
+                                      CachedArchiveSource.field_A = PacketBuffer.field_q.getSynthesizedSampleByNameUnbudgeted("tetralink_select_column", "", (byte) 1);
+                                      PasswordLengthHelpers.field_c = PacketBuffer.field_q.getSynthesizedSampleByNameUnbudgeted("tetralink_start_game", "", (byte) 1);
+                                      LoadingProgressDialog.field_ib = PacketBuffer.field_q.getSynthesizedSampleByNameUnbudgeted("tetralink_winning_line_sound_winner", "", (byte) 1);
+                                      MouseWheelInput.field_c = PacketBuffer.field_q.getSynthesizedSampleByNameUnbudgeted("tetralink_winning_line_sound_loser", "", (byte) 1);
+                                      HighscoreQuery.field_x = PacketBuffer.field_q.getSynthesizedSampleByNameUnbudgeted("tetralink_title_appear", "", (byte) 1);
+                                      IndexedSpriteHelpers.field_c = PacketBuffer.field_q.getSynthesizedSampleByNameUnbudgeted("tetralink_dissolve", "", (byte) 1);
+                                      LoginProgressHelpers.field_d = PacketBuffer.field_q.getSynthesizedSampleByNameUnbudgeted("tetralink_dissolve_in", "", (byte) 1);
+                                      CacheEntry.field_y = new PcmSample[3];
+                                      CacheEntry.field_y[0] = PacketBuffer.field_q.getVorbisSampleByName(-122, "", "tetralink_NASA_chatter_1");
+                                      CacheEntry.field_y[1] = PacketBuffer.field_q.getVorbisSampleByName(-123, "", "tetralink_NASA_chatter_2");
+                                      CacheEntry.field_y[2] = PacketBuffer.field_q.getVorbisSampleByName(-128, "", "tetralink_NASA_chatter_3");
+                                      HighscoreQuery.field_p = null;
+                                      NameSuggestionsPanel.field_N = null;
+                                      SecondaryNodeDeque.resetFrameTimingHistory(-8243);
                                       return false;
                                     }
-                                    ak.setBenefitsBorderAndCaption(0, fn.a(0, rc.field_U, BufferedSocket.field_a, v.field_w), 77.0f);
+                                    PacketFlushHelpers.setBenefitsBorderAndCaption(0, DisplayNameForm.formatArchiveProgress(0, CaptionedContainer.field_U, BufferedSocket.field_a, QueuedListRequest.field_w), 77.0f);
                                     return false;
                                   }
-                                  ak.setBenefitsBorderAndCaption(0, ji.a(ng.field_x, vf.field_a, rh.field_L, "", 1152753825), 75.0f);
+                                  PacketFlushHelpers.setBenefitsBorderAndCaption(0, TwoColumnListPanel.formatArchiveGroupProgress(MusicPatch.field_x, SocialListPacketHandler.field_a, NetworkArchiveRequest.field_L, "", 1152753825), 75.0f);
                                   return false;
                                 }
-                                ak.setBenefitsBorderAndCaption(0, ji.a(la.field_k, fk.field_U, on.field_a, "", 1152753825), 75.0f);
+                                PacketFlushHelpers.setBenefitsBorderAndCaption(0, TwoColumnListPanel.formatArchiveGroupProgress(DirectByteStorage.field_k, HotspotTextWidget.field_U, LobbyOverlayHelpers.field_a, "", 1152753825), 75.0f);
                                 return false;
                               }
-                              ak.setBenefitsBorderAndCaption(0, ji.a(v.field_w, nl.field_b, BufferedSocket.field_a, "", 1152753825), 75.0f);
+                              PacketFlushHelpers.setBenefitsBorderAndCaption(0, TwoColumnListPanel.formatArchiveGroupProgress(QueuedListRequest.field_w, DisplayMode.field_b, BufferedSocket.field_a, "", 1152753825), 75.0f);
                               return false;
                             }
-                            ak.setBenefitsBorderAndCaption(0, ji.a(nc.field_c, ll.field_x, qa.field_C, "", 1152753825), 75.0f);
+                            PacketFlushHelpers.setBenefitsBorderAndCaption(0, TwoColumnListPanel.formatArchiveGroupProgress(NameAlphabetTable.field_c, ArchiveRequest.field_x, QuickChatCategory.field_C, "", 1152753825), 75.0f);
                             return false;
                           }
-                          ak.setBenefitsBorderAndCaption(0, ji.a(nc.field_c, cd.field_b, qa.field_C, "", 1152753825), 75.0f);
+                          PacketFlushHelpers.setBenefitsBorderAndCaption(0, TwoColumnListPanel.formatArchiveGroupProgress(NameAlphabetTable.field_c, MenuLabelGlobals.field_b, QuickChatCategory.field_C, "", 1152753825), 75.0f);
                           return false;
                         }
-                        ak.setBenefitsBorderAndCaption(0, ji.a(rl.field_g, nl.field_g, MouseWheelInput.field_a, "", 1152753825), 60.0f);
+                        PacketFlushHelpers.setBenefitsBorderAndCaption(0, TwoColumnListPanel.formatArchiveGroupProgress(KeyHandlerHelpers.field_g, DisplayMode.field_g, MouseWheelInput.field_a, "", 1152753825), 60.0f);
                         return false;
                       }
-                      ak.setBenefitsBorderAndCaption(0, ma.a(DualLinkDeque.field_f, MouseWheelInput.field_a, 0, rl.field_g, (byte) 15), 45.0f);
+                      PacketFlushHelpers.setBenefitsBorderAndCaption(0, AnimationPlayer.formatArchiveProgressLabel(DualLinkDeque.field_f, MouseWheelInput.field_a, 0, KeyHandlerHelpers.field_g, (byte) 15), 45.0f);
                       return false;
                     }
-                    ak.setBenefitsBorderAndCaption(0, ji.a(va.field_t, oa.field_p, oc.field_w, "", 1152753825), 40.0f);
+                    PacketFlushHelpers.setBenefitsBorderAndCaption(0, TwoColumnListPanel.formatArchiveGroupProgress(TextHighlightSpan.field_t, HighscoreQuery.field_p, MidiNote.field_w, "", 1152753825), 40.0f);
                     return false;
                   }
-                  ak.setBenefitsBorderAndCaption(0, ji.a(va.field_t, n.field_N, oc.field_w, "", 1152753825), 20.0f);
+                  PacketFlushHelpers.setBenefitsBorderAndCaption(0, TwoColumnListPanel.formatArchiveGroupProgress(TextHighlightSpan.field_t, NameSuggestionsPanel.field_N, MidiNote.field_w, "", 1152753825), 20.0f);
                   return false;
                 }
-                ak.setBenefitsBorderAndCaption(0, ji.a(hh.field_a, sb.field_a, nd.field_Kb, "lobby", 1152753825), 17.0f);
+                PacketFlushHelpers.setBenefitsBorderAndCaption(0, TwoColumnListPanel.formatArchiveGroupProgress(TextMetricsGlobals.field_a, ArchiveGroupHelpers.field_a, QuickChatHelpDialog.field_Kb, "lobby", 1152753825), 17.0f);
                 return false;
               }
-              ak.setBenefitsBorderAndCaption(0, ji.a(nc.field_c, v.field_v, qa.field_C, "lobby", 1152753825), 13.0f);
+              PacketFlushHelpers.setBenefitsBorderAndCaption(0, TwoColumnListPanel.formatArchiveGroupProgress(NameAlphabetTable.field_c, QueuedListRequest.field_v, QuickChatCategory.field_C, "lobby", 1152753825), 13.0f);
               return false;
             }
-            ak.setBenefitsBorderAndCaption(0, ji.a(hh.field_a, sb.field_a, nd.field_Kb, "roman20", 1152753825), 12.0f);
+            PacketFlushHelpers.setBenefitsBorderAndCaption(0, TwoColumnListPanel.formatArchiveGroupProgress(TextMetricsGlobals.field_a, ArchiveGroupHelpers.field_a, QuickChatHelpDialog.field_Kb, "roman20", 1152753825), 12.0f);
             return false;
           }
-          ak.setBenefitsBorderAndCaption(0, ji.a(nc.field_c, v.field_v, qa.field_C, "kartika13", 1152753825), 11.0f);
+          PacketFlushHelpers.setBenefitsBorderAndCaption(0, TwoColumnListPanel.formatArchiveGroupProgress(NameAlphabetTable.field_c, QueuedListRequest.field_v, QuickChatCategory.field_C, "kartika13", 1152753825), 11.0f);
           return false;
         }
-        ak.setBenefitsBorderAndCaption(0, ji.a(nc.field_c, v.field_v, qa.field_C, "basic", 1152753825), 10.0f);
+        PacketFlushHelpers.setBenefitsBorderAndCaption(0, TwoColumnListPanel.formatArchiveGroupProgress(NameAlphabetTable.field_c, QueuedListRequest.field_v, QuickChatCategory.field_C, "basic", 1152753825), 10.0f);
         return false;
     }
 

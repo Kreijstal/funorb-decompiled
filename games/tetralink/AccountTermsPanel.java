@@ -1,0 +1,262 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class AccountTermsPanel extends UiContainer implements HotspotListener, ButtonActionListener {
+    private AccountCreationDialog field_N;
+    static UiComponent field_L;
+    static String field_O;
+    private TextButton field_M;
+    static int field_K;
+    private HotspotTextWidget field_P;
+
+    private final String getLinkOpenMarkup(int param0) {
+        if (param0 != 99) {
+          field_O = (String) null;
+          return "<u=2164A2><col=2164A2>";
+        }
+        return "<u=2164A2><col=2164A2>";
+    }
+
+    final boolean handleKey(int param0, char param1, int param2, UiWidget param3) {
+        RuntimeException var5 = null;
+        boolean stackIn_5_0 = false;
+        boolean stackIn_8_0 = false;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_14_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (super.handleKey(param0, param1, param2, param3)) {
+            return true;
+          }
+          if (98 == param0) {
+            stackIn_5_0 = this.focusPreviousChild(param3, 48);
+            return stackIn_5_0;
+          }
+          if (99 != param0) {
+            return false;
+          }
+          stackIn_8_0 = this.focusNextChild(param3, param2 ^ 113);
+          return stackIn_8_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_13_0 = var5;
+          stackIn_13_1 = new StringBuilder().append("ia.DB(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_14_2 = "null";
+          } else {
+            stackIn_14_2 = "{...}";
+          }
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+        }
+    }
+
+    public final void onButtonActivated(byte param0, TextButton param1, int param2, int param3, int param4) {
+        RuntimeException var6 = null;
+        java.applet.Applet var7 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param1 == this.field_M) {
+            SocialListEntry.loginWithRegisteredAccount((byte) 102);
+            this.field_N.closeDialog(-128);
+          }
+          if (param0 < 0) {
+            return;
+          }
+          var7 = (java.applet.Applet) null;
+          AccountTermsPanel.logoutAndReload((java.applet.Applet) null, false);
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var6 = decompiledCaughtException;
+          stackIn_8_0 = var6;
+          stackIn_8_1 = new StringBuilder().append("ia.M(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_2 = "{...}";
+          }
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+        }
+    }
+
+    final static int getMenuHeight(int param0) {
+        int var1 = -83 % ((param0 - 38) / 35);
+        return StripedProgressBar.field_X;
+    }
+
+    public static void releaseStatics(int param0) {
+        int var1 = 10 / ((85 - param0) / 41);
+        field_O = null;
+        field_L = null;
+    }
+
+    AccountTermsPanel(AccountCreationDialog param0) {
+        super(0, 0, 288, 0, (WidgetPainter) null);
+        String var7 = null;
+        int var3 = 0;
+        TextWidgetPainter var4 = null;
+        int var5 = 0;
+        int var6 = 0;
+        try {
+          this.field_N = param0;
+          this.field_M = new TextButton(TextWidgetPainter.field_e, (WidgetListener) null);
+          this.field_M.field_H = (WidgetPainter) ((Object) new ThreeSliceButtonPainter());
+          var7 = SectorCacheStore.formatTemplate(new String[]{this.getLinkOpenMarkup(99), this.getLinkCloseMarkup((byte) -19)}, DualLinkNodeHashTable.field_e, 123);
+          var3 = 20;
+          var4 = new TextWidgetPainter(NumericDateInputWidget.field_S, 0, 0, 0, 0, 16777215, -1, 3, 0, NumericDateInputWidget.field_S.field_N, -1, 2147483647, true);
+          this.field_P = new HotspotTextWidget(var7, var4);
+          this.field_P.field_C = "";
+          this.field_P.setHotspotTooltip(0, PlayingSound.field_o, (byte) -127);
+          this.field_P.setHotspotTooltip(1, PlayingSound.field_o, (byte) -127);
+          this.field_P.field_s = (WidgetListener) (this);
+          this.field_P.field_F = this.field_F - 40;
+          this.field_P.setBoundsToPreferredHeight(this.field_F - 40, 26, var3, -27);
+          var3 = var3 + (15 + this.field_P.field_u);
+          this.addChild(this.field_P, 10);
+          var5 = 4;
+          var6 = 200;
+          this.field_M.setBounds(40, var3, 114, 300 - var6 >> 1, var6);
+          this.field_M.field_s = (WidgetListener) (this);
+          this.addChild(this.field_M, 10);
+          this.setBounds(var3 + 55 + var5, 0, -114, 0, 300);
+        } catch (RuntimeException runtimeException) {
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) runtimeException), "ia.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    final static void logoutAndReload(java.applet.Applet param0, boolean param1) {
+        if (param1) {
+          return;
+        }
+        try {
+          FadingModalPanel.setSessionCookie("", param0, -1);
+          PageReloadHelpers.reloadPage(param0, 63);
+        } catch (RuntimeException runtimeException) {
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) runtimeException), "ia.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+        }
+    }
+
+    final static boolean decodeSpriteSheetFromArchive(int param0, Archive param1, int param2, int param3) {
+        byte[] var4 = null;
+        RuntimeException var4_ref = null;
+        byte[] var5 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param3 >= -36) {
+            field_L = (UiComponent) null;
+          }
+          var5 = param1.getFile(-96, param0, param2);
+          var4 = var5;
+          if (var5 == null) {
+            return false;
+          }
+          ArchiveProvider.decodeSpriteSheet(var5, -62);
+          return true;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4_ref = decompiledCaughtException;
+          stackIn_10_0 = var4_ref;
+          stackIn_10_1 = new StringBuilder().append("ia.A(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
+          }
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+        }
+    }
+
+    private final String getLinkCloseMarkup(byte param0) {
+        if (param0 >= -13) {
+          return (String) null;
+        }
+        return "</col></u>";
+    }
+
+    public final void onHotspotAction(int param0, byte param1, HotspotTextWidget param2, int param3) {
+        RuntimeException var5 = null;
+        int var6 = 0;
+        TextButton var7 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_14_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        var6 = TetraLink.field_J;
+        try {
+          if (param1 != -103) {
+            var7 = (TextButton) null;
+            this.onButtonActivated((byte) -1, (TextButton) null, -75, 112, 43);
+          }
+          if (param0 == 0) {
+            TextWidgetPainter.openWebPage("terms.ws", (byte) 24);
+            return;
+          }
+          if (param0 == 1) {
+            TextWidgetPainter.openWebPage("privacy.ws", (byte) 24);
+            return;
+          }
+          if (2 != param0) {
+            return;
+          }
+          TextWidgetPainter.openWebPage("conduct.ws", (byte) 24);
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_13_0 = var5;
+          stackIn_13_1 = new StringBuilder().append("ia.I(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_14_2 = "null";
+          } else {
+            stackIn_14_2 = "{...}";
+          }
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
+        }
+    }
+
+    final static void publishUsernameSuggestions(String[] args, int param1) {
+        RuntimeException var2 = null;
+        Archive var3 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (LoadingScreenHelpers.field_a != null) {
+            LoadingScreenHelpers.field_a.field_L.setSuggestions(0, args);
+          }
+          if (param1 != 10532) {
+            var3 = (Archive) null;
+            AccountTermsPanel.decodeSpriteSheetFromArchive(34, (Archive) null, -118, -29);
+          }
+          if (null == PointerTrailBubble.field_q) {
+            return;
+          }
+          PointerTrailBubble.field_q.field_L.setSuggestions(0, args);
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_10_0 = var2;
+          stackIn_10_1 = new StringBuilder().append("ia.J(");
+          if (args == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
+          }
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    static {
+        field_O = "This game has been updated! Please reload this page.";
+    }
+}

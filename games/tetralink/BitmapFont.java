@@ -3,7 +3,7 @@
  */
 abstract class BitmapFont extends DualLinkNode {
     private int[] field_Q;
-    private oi[] field_z;
+    private IndexedSpriteState[] field_z;
     private byte[] field_E;
     int field_u;
     private int[] field_M;
@@ -113,7 +113,7 @@ abstract class BitmapFont extends DualLinkNode {
         if (param0 == null) {
           return 0;
         }
-        lo.resizeAndPad(-26750, field_D, 0, ' ');
+        StringPadHelpers.resizeAndPad(-26750, field_D, 0, ' ');
         var4 = 0;
         var5 = 0;
         var6 = -1;
@@ -145,7 +145,7 @@ abstract class BitmapFont extends DualLinkNode {
                                 if (var15.startsWith("img=")) {
                                   try {
                                     var18 = (CharSequence) ((Object) var15.substring(4));
-                                    var16_int = rc.a(var18, 10);
+                                    var16_int = CaptionedContainer.parseDecimalInt(var18, 10);
                                     var4 = var4 + this.field_z[var16_int].field_j;
                                     var10 = 0;
                                   } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -154,7 +154,7 @@ abstract class BitmapFont extends DualLinkNode {
                                   }
                                 }
                               } else {
-                                var4 = var4 + this.a('®');
+                                var4 = var4 + this.measureCharacterAdvance('®');
                                 if (this.field_E != null &&
                                   var10 != 0) {
                                   var4 = var4 + this.field_E[(var10 << 8) + 174];
@@ -162,7 +162,7 @@ abstract class BitmapFont extends DualLinkNode {
                                 var10 = 174;
                               }
                             } else {
-                              var4 = var4 + this.a('©');
+                              var4 = var4 + this.measureCharacterAdvance('©');
                               if (this.field_E != null &&
                                 var10 != 0) {
                                 var4 = var4 + this.field_E[(var10 << 8) + 169];
@@ -170,7 +170,7 @@ abstract class BitmapFont extends DualLinkNode {
                               var10 = 169;
                             }
                           } else {
-                            var4 = var4 + this.a('€');
+                            var4 = var4 + this.measureCharacterAdvance('€');
                             if (this.field_E != null &&
                               var10 != 0) {
                               var4 = var4 + this.field_E[(var10 << 8) + 128];
@@ -178,7 +178,7 @@ abstract class BitmapFont extends DualLinkNode {
                             var10 = 8364;
                           }
                         } else {
-                          var4 = var4 + this.a('×');
+                          var4 = var4 + this.measureCharacterAdvance('×');
                           if (this.field_E != null &&
                             var10 != 0) {
                             var4 = var4 + this.field_E[(var10 << 8) + 215];
@@ -186,7 +186,7 @@ abstract class BitmapFont extends DualLinkNode {
                           var10 = 215;
                         }
                       } else {
-                        var4 = var4 + this.a('­');
+                        var4 = var4 + this.measureCharacterAdvance('­');
                         if (this.field_E != null &&
                           var10 != 0) {
                           var4 = var4 + this.field_E[(var10 << 8) + 173];
@@ -194,7 +194,7 @@ abstract class BitmapFont extends DualLinkNode {
                         var10 = 173;
                       }
                     } else {
-                      var4 = var4 + this.a(' ');
+                      var4 = var4 + this.measureCharacterAdvance(' ');
                       if (this.field_E != null &&
                         var10 != 0) {
                         var4 = var4 + this.field_E[(var10 << 8) + 160];
@@ -202,7 +202,7 @@ abstract class BitmapFont extends DualLinkNode {
                       var10 = 160;
                     }
                   } else {
-                    var4 = var4 + this.a('>');
+                    var4 = var4 + this.measureCharacterAdvance('>');
                     if (this.field_E != null &&
                       var10 != 0) {
                       var4 = var4 + this.field_E[(var10 << 8) + 62];
@@ -210,7 +210,7 @@ abstract class BitmapFont extends DualLinkNode {
                     var10 = 62;
                   }
                 } else {
-                  var4 = var4 + this.a('<');
+                  var4 = var4 + this.measureCharacterAdvance('<');
                   if (this.field_E != null &&
                     var10 != 0) {
                     var4 = var4 + this.field_E[(var10 << 8) + 60];
@@ -230,7 +230,7 @@ abstract class BitmapFont extends DualLinkNode {
             if (var9 == -1) {
               if (var14 != 0) {
                 discarded$3 = field_D.append((char) var14);
-                var14 = (char)(rh.a((char) var14, false) & 255);
+                var14 = (char)(NetworkArchiveRequest.encodeExtendedChar((char) var14, false) & 255);
                 var4 = var4 + this.field_F[var14];
                 if (this.field_E != null &&
                   var10 != 0) {
@@ -319,7 +319,7 @@ abstract class BitmapFont extends DualLinkNode {
                                 }
                               } else {
                                 var7 = (CharSequence) ((Object) param0.substring(5));
-                                field_v = ab.a(false, 16, var7);
+                                field_v = ValidationStatusIcon.parseInteger(false, 16, var7);
                               }
                             } else {
                               field_t = -1;
@@ -329,7 +329,7 @@ abstract class BitmapFont extends DualLinkNode {
                           }
                         } else {
                           var6 = (CharSequence) ((Object) param0.substring(2));
-                          field_t = ab.a(false, 16, var6);
+                          field_t = ValidationStatusIcon.parseInteger(false, 16, var6);
                         }
                       } else {
                         field_I = -1;
@@ -339,21 +339,21 @@ abstract class BitmapFont extends DualLinkNode {
                     }
                   } else {
                     var5 = (CharSequence) ((Object) param0.substring(4));
-                    field_I = ab.a(false, 16, var5);
+                    field_I = ValidationStatusIcon.parseInteger(false, 16, var5);
                   }
                 } else {
                   field_A = field_x;
                 }
               } else {
                 var4 = (CharSequence) ((Object) param0.substring(6));
-                field_A = rc.a(var4, 10);
+                field_A = CaptionedContainer.parseDecimalInt(var4, 10);
               }
             } else {
               field_y = field_B;
             }
           } else {
             var3 = (CharSequence) ((Object) param0.substring(4));
-            field_y = ab.a(false, 16, var3);
+            field_y = ValidationStatusIcon.parseInteger(false, 16, var3);
           }
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -489,7 +489,7 @@ abstract class BitmapFont extends DualLinkNode {
                               if (!(!var8.startsWith("img="))) {
                                 try {
                                   var10 = (CharSequence) ((Object) var8.substring(4));
-                                  var9_int = rc.a(var10, 10);
+                                  var9_int = CaptionedContainer.parseDecimalInt(var10, 10);
                                   var4 = var4 + this.field_z[var9_int].field_j;
                                   var3 = 0;
                                 } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -526,7 +526,7 @@ abstract class BitmapFont extends DualLinkNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var2 == -1)) {
-              var7 = (char)(rh.a((char) var7, false) & 255);
+              var7 = (char)(NetworkArchiveRequest.encodeExtendedChar((char) var7, false) & 255);
               var4 = var4 + this.field_F[var7];
               if (this.field_E != null &&
                 var3 != 0) {
@@ -709,7 +709,7 @@ abstract class BitmapFont extends DualLinkNode {
         int var9 = 0;
         int var10 = 0;
         Exception var10_ref_Exception = null;
-        oi var11_ref_oi = null;
+        IndexedSpriteState var11_ref_oi = null;
         int var11 = 0;
         int var12 = 0;
         CharSequence var13 = null;
@@ -738,7 +738,7 @@ abstract class BitmapFont extends DualLinkNode {
                               } else {
                                 try {
                                   var13 = (CharSequence) ((Object) var9_ref_String.substring(4));
-                                  var10 = rc.a(var13, 10);
+                                  var10 = CaptionedContainer.parseDecimalInt(var13, 10);
                                   var11_ref_oi = this.field_z[var10];
                                   if (this.field_J == null) {
                                     stackIn_27_0 = var11_ref_oi.field_f;
@@ -787,7 +787,7 @@ abstract class BitmapFont extends DualLinkNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var4 == -1)) {
-              var8 = (char)(rh.a((char) var8, false) & 255);
+              var8 = (char)(NetworkArchiveRequest.encodeExtendedChar((char) var8, false) & 255);
               if (this.field_E != null &&
                 var5 != 0) {
                 param1 = param1 + this.field_E[(var5 << 8) + var8];
@@ -851,7 +851,7 @@ abstract class BitmapFont extends DualLinkNode {
         var4 = param2 - var3;
         var5 = 0;
         for (var6 = 0; var6 < param1.length(); var6++) {
-          var7 = param0.a(param1.charAt(var6));
+          var7 = param0.measureCharacterAdvance(param1.charAt(var6));
           if (var5 + var7 > var4) {
             return param1.substring(0, var6 - 1) + "...";
           }
@@ -898,7 +898,7 @@ abstract class BitmapFont extends DualLinkNode {
         return this.drawParagraphAlpha(param0, param1, param2, param3, param4, param5, param6, 256, param7, param8, param9);
     }
 
-    final void setInlineSprites(oi[] param0, int[] param1) {
+    final void setInlineSprites(IndexedSpriteState[] param0, int[] param1) {
         if (param1 != null &&
           param1.length != param0.length) {
           throw new IllegalArgumentException();
@@ -938,8 +938,8 @@ abstract class BitmapFont extends DualLinkNode {
         }
     }
 
-    final int a(char param0) {
-        return this.field_F[rh.a(param0, false) & 255];
+    final int measureCharacterAdvance(char param0) {
+        return this.field_F[NetworkArchiveRequest.encodeExtendedChar(param0, false) & 255];
     }
 
     abstract void drawGlyph(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6);

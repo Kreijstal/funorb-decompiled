@@ -1,0 +1,74 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class LoginMethod {
+    static String field_a;
+    static int field_b;
+    private String field_c;
+    static BitmapFont field_d;
+
+    final void saveAsLastLoginMethod(byte param0, java.applet.Applet param1) {
+        try {
+          AnimationPlayer.setCookie(this.field_c, 31536000L, param1, 118, "jagex-last-login-method");
+          if (param0 >= -69) {
+            this.field_c = (String) null;
+          }
+        } catch (RuntimeException runtimeException) {
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) runtimeException), "dk.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    public static void releaseStatics(int param0) {
+        if (param0 != -5384) {
+          LoginMethod.releaseStatics(-20);
+          field_d = null;
+          field_a = null;
+          return;
+        }
+        field_d = null;
+        field_a = null;
+    }
+
+    public final String toString() {
+        throw new IllegalStateException();
+    }
+
+    final boolean matchesCookieValue(int param0, String param1) {
+        RuntimeException var3 = null;
+        boolean stackIn_3_0 = false;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param0 != 16412) {
+            field_a = (String) null;
+          }
+          stackIn_3_0 = this.field_c.equals(param1);
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("dk.B(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+        }
+    }
+
+    LoginMethod(String param0) {
+        try {
+          this.field_c = param0;
+        } catch (RuntimeException runtimeException) {
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) runtimeException), "dk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    static {
+        field_a = "Show private chat from my friends and opponents";
+    }
+}

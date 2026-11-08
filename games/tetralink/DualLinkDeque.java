@@ -20,14 +20,14 @@ final class DualLinkDeque {
         return var2;
     }
 
-    final static boolean b(int param0) {
+    final static boolean canResizeViewport(int param0) {
         if (param0 != 0) {
           return false;
         }
-        if (hn.field_M == null) {
+        if (DateInputWidget.field_M == null) {
           return false;
         }
-        if (!hn.field_M.d(0)) {
+        if (!DateInputWidget.field_M.isResizeAllowed(0)) {
           return false;
         }
         return true;
@@ -41,7 +41,7 @@ final class DualLinkDeque {
         field_f = null;
     }
 
-    final DualLinkNode a(boolean param0) {
+    final DualLinkNode next(boolean param0) {
         DualLinkNode var2 = this.field_c;
         if (this.sentinel == var2) {
           this.field_c = null;
@@ -56,7 +56,7 @@ final class DualLinkDeque {
         return var2;
     }
 
-    final DualLinkNode a(byte param0) {
+    final DualLinkNode first(byte param0) {
         int var2 = 15 % ((param0 - 20) / 62);
         DualLinkNode var3 = this.sentinel.secondaryNext;
         if (var3 != this.sentinel) {
@@ -79,15 +79,15 @@ final class DualLinkDeque {
         return null;
     }
 
-    final static void a(int[] param0, int param1, int param2) {
+    final static void registerScreen(int[] param0, int param1, int param2) {
         try {
-          hg.field_f[param1] = param0;
-          kk.field_X[param1] = new cl(param1);
+          GameOptionControls.field_f[param1] = param0;
+          MarkerSlider.field_X[param1] = new MenuScreen(param1);
           if (param2 != -13850) {
             field_a = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw oi.wrapException((Throwable) ((Object) runtimeException), "jo.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) runtimeException), "jo.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -126,7 +126,7 @@ final class DualLinkDeque {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw oi.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 

@@ -1,0 +1,93 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class FlaggedTextValue {
+    private boolean field_k;
+    static int[] field_j;
+    static UiComponent field_d;
+    static int[] field_o;
+    static UiComponent field_l;
+    static int[] field_b;
+    static String field_c;
+    private boolean field_e;
+    static String field_a;
+    static int field_g;
+    static int[] field_i;
+    static QuickChatCommandType field_f;
+    static int[] field_h;
+    static long field_n;
+    private String field_m;
+
+    final void setEnabled(boolean param0, int param1) {
+        this.field_e = param0 ? true : false;
+        if (param1 == 8) {
+          this.field_k = true;
+          return;
+        }
+        this.getText((byte) 28);
+        this.field_k = true;
+    }
+
+    final boolean hasChanged(boolean param0) {
+        if (param0) {
+          this.field_k = false;
+          return this.field_k;
+        }
+        return this.field_k;
+    }
+
+    final String getText(byte param0) {
+        if (param0 != 72) {
+          field_i = (int[]) null;
+          return this.field_m;
+        }
+        return this.field_m;
+    }
+
+    final boolean isEnabled(boolean param0) {
+        if (!param0) {
+          return false;
+        }
+        return this.field_e;
+    }
+
+    FlaggedTextValue(String param0) {
+        this.field_k = false;
+        this.field_e = false;
+        try {
+          this.field_m = param0;
+        } catch (RuntimeException runtimeException) {
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) runtimeException), "rj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    public static void releaseStatics(boolean param0) {
+        field_a = null;
+        field_c = null;
+        field_d = null;
+        field_o = null;
+        field_j = null;
+        field_f = null;
+        field_i = null;
+        field_b = null;
+        field_l = null;
+        if (param0) {
+          field_h = null;
+          return;
+        }
+        field_o = (int[]) null;
+        field_h = null;
+    }
+
+    static {
+        field_c = "Cancel";
+        field_a = "Macroing or use of bots";
+        field_o = new int[8];
+        field_i = new int[8];
+        field_h = new int[8];
+        field_b = new int[8];
+        field_j = new int[8];
+        field_g = 0;
+        field_f = new QuickChatCommandType(0, 2, 2, 1);
+    }
+}

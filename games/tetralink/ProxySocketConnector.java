@@ -5,7 +5,7 @@ import java.io.*;
 import java.util.*;
 
 final class ProxySocketConnector extends SocketConnector {
-    static a field_l;
+    static ClientProtocolStage field_l;
     static String field_m;
     static boolean field_j;
     private java.net.ProxySelector field_k;
@@ -35,7 +35,7 @@ final class ProxySocketConnector extends SocketConnector {
         Exception var7_ref = null;
         try {
           if (param0.type() == java.net.Proxy.Type.DIRECT) {
-            stackIn_2_0 = this.a(-1);
+            stackIn_2_0 = this.connectDirect(-1);
             return stackIn_2_0;
           }
           var3 = param0.address();
@@ -89,7 +89,7 @@ final class ProxySocketConnector extends SocketConnector {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw oi.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -122,7 +122,7 @@ final class ProxySocketConnector extends SocketConnector {
         Object var10 = null;
         java.net.Proxy var11 = null;
         java.net.Socket var12 = null;
-        bn var12_ref = null;
+        ProxyAuthenticationRequiredException var12_ref = null;
         IOException var12_ref2 = null;
         int var13 = 0;
         var13 = TetraLink.field_J;
@@ -163,28 +163,28 @@ final class ProxySocketConnector extends SocketConnector {
         } catch (java.net.URISyntaxException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (java.net.URISyntaxException) (Object) decompiledCaughtException;
-          return this.a(-1);
+          return this.connectDirect(-1);
         }
         var3.addAll((Collection) ((Object) var4));
         var6_array = var3.toArray();
         var7 = null;
         if (param0 >= -45) {
-          field_l = (a) null;
+          field_l = (ClientProtocolStage) null;
         }
         var8 = var6_array;
         for (var9 = 0; var8.length > var9; var9++) {
           var10 = var8[var9];
           var11 = (java.net.Proxy) (var10);
           try {
-            if (false) throw (bn) null;
+            if (false) throw (ProxyAuthenticationRequiredException) null;
             var12 = this.connectViaProxy(var11, 111);
             if (var12 != null) {
               stackIn_24_0 = var12;
               return stackIn_24_0;
             }
-          } catch (bn decompiledCaughtParameter1) {
+          } catch (ProxyAuthenticationRequiredException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
-            var12_ref = (bn) (Object) decompiledCaughtException;
+            var12_ref = (ProxyAuthenticationRequiredException) (Object) decompiledCaughtException;
             var7 = var12_ref;
           } catch (java.io.IOException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
@@ -194,7 +194,7 @@ final class ProxySocketConnector extends SocketConnector {
         if (var7 != null) {
           throw ProxySocketConnector.<RuntimeException>rethrowUnchecked((Throwable) var7);
         }
-        return this.a(-1);
+        return this.connectDirect(-1);
     }
 
     private final java.net.Socket connectHttpTunnel(String param0, String param1, int param2, int param3) throws IOException {
@@ -260,11 +260,11 @@ final class ProxySocketConnector extends SocketConnector {
                   if (var11 != -1) {
                     var8 = var15.substring(0, var11);
                   }
-                  throw new bn(var8);
+                  throw new ProxyAuthenticationRequiredException(var8);
                 }
                 break;
               }
-              throw new bn("");
+              throw new ProxyAuthenticationRequiredException("");
             }
             if (decompiledFrameRemainder0) {
               stackIn_12_0 = var14;
@@ -292,11 +292,11 @@ final class ProxySocketConnector extends SocketConnector {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw oi.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != -109) {
           field_j = false;
           field_l = null;
@@ -308,25 +308,25 @@ final class ProxySocketConnector extends SocketConnector {
     }
 
     final static void removeMouseListeners(int param0, java.awt.Component param1) {
-        param1.removeMouseListener(kd.field_g);
-        param1.removeMouseMotionListener(kd.field_g);
+        param1.removeMouseListener(DualLinkNodeHashTable.field_g);
+        param1.removeMouseMotionListener(DualLinkNodeHashTable.field_g);
         if (param0 != -51) {
           return;
         }
         try {
-          param1.removeFocusListener(kd.field_g);
-          kf.field_c = 0;
+          param1.removeFocusListener(DualLinkNodeHashTable.field_g);
+          LoadingScreenRenderHelpers.field_c = 0;
         } catch (RuntimeException runtimeException) {
-          throw oi.wrapException((Throwable) ((Object) runtimeException), "vb.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) runtimeException), "vb.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static boolean e(int param0) {
+    final static boolean isTextPromptOpen(int param0) {
         if (param0 != -30962) {
           field_j = false;
-          return lf.field_b != null ? true : false;
+          return BevelFrameSpriteFactory.field_b != null ? true : false;
         }
-        return lf.field_b != null ? true : false;
+        return BevelFrameSpriteFactory.field_b != null ? true : false;
     }
 
     ProxySocketConnector() {
@@ -335,7 +335,7 @@ final class ProxySocketConnector extends SocketConnector {
 
     static {
         field_m = "Quick Chat Help";
-        field_l = new a();
+        field_l = new ClientProtocolStage();
     }
 
     @SuppressWarnings("unchecked")

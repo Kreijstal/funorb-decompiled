@@ -1,0 +1,41 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+import java.util.*;
+
+final class LoginCredentialType {
+    static String field_c;
+    static String field_a;
+    static String field_b;
+    int field_d;
+
+    final static int getCurrentYear(boolean param0) {
+        if (!param0) {
+          return 51;
+        }
+        return new Date().getYear() + 1900;
+    }
+
+    public final String toString() {
+        throw new IllegalStateException();
+    }
+
+    public static void releaseStatics(byte param0) {
+        field_a = null;
+        field_c = null;
+        field_b = null;
+        if (param0 > -106) {
+          LoginCredentialType.getCurrentYear(true);
+        }
+    }
+
+    LoginCredentialType(int param0) {
+        this.field_d = param0;
+    }
+
+    static {
+        field_a = "Checking";
+        field_b = "Hide lobby chat";
+        field_c = "Status";
+    }
+}

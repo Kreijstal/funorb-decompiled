@@ -4,16 +4,16 @@
 import java.io.*;
 
 final class RandomAccessCacheFile {
-    static a field_f;
+    static ClientProtocolStage field_f;
     private long field_e;
     static java.awt.Frame field_b;
     static String field_a;
     static int field_g;
-    static hl field_h;
+    static UiComponent field_h;
     private RandomAccessFile field_d;
     private long field_c;
 
-    final void a(int param0, int param1, byte[] param2, int param3) throws IOException {
+    final void write(int param0, int param1, byte[] param2, int param3) throws IOException {
         try {
           if ((this.field_c + (long)param3) > this.field_e) {
             this.field_d.seek(this.field_e);
@@ -24,28 +24,28 @@ final class RandomAccessCacheFile {
           this.field_d.write(param2, param1, param3);
           this.field_c = this.field_c + (long)param3;
         } catch (RuntimeException runtimeException) {
-          throw oi.wrapException((Throwable) ((Object) runtimeException), "sa.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) runtimeException), "sa.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
-    final static String a(byte param0) {
-        if (ll.field_C == ma.field_d) {
-          return jl.field_c;
+    final static String getStatusMessage(byte param0) {
+        if (ArchiveRequest.field_C == AnimationPlayer.field_d) {
+          return InputDetachHelpers.field_c;
         }
-        if (ll.field_C == pi.field_a) {
-          return ak.field_b;
+        if (ArchiveRequest.field_C == PasswordLengthHelpers.field_a) {
+          return PacketFlushHelpers.field_b;
         }
-        if (!oa.field_y.c(false)) {
-          return ak.field_b;
+        if (!HighscoreQuery.field_y.hasChanged(false)) {
+          return PacketFlushHelpers.field_b;
         }
         if (param0 < -30) {
-          return mk.field_d;
+          return SocialTabsPanel.field_d;
         }
         field_a = (String) null;
-        return mk.field_d;
+        return SocialTabsPanel.field_d;
     }
 
-    final int a(int param0, int param1, byte[] param2, byte param3) throws IOException {
+    final int read(int param0, int param1, byte[] param2, byte param3) throws IOException {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -72,34 +72,34 @@ final class RandomAccessCacheFile {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw oi.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param3).append(')').toString());
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final void a(long param0, boolean param1) throws IOException {
+    final void seek(long param0, boolean param1) throws IOException {
         this.field_d.seek(param0);
         this.field_c = param0;
         if (param1) {
-          RandomAccessCacheFile.a((byte) -89);
+          RandomAccessCacheFile.getStatusMessage((byte) -89);
           return;
         }
     }
 
-    final static void a(int param0, boolean param1) {
-        ok.field_d = mh.field_c;
-        im.field_e = uk.field_x;
+    final static void resetCameraToTarget(int param0, boolean param1) {
+        TransitionPhase.field_d = GameRoomPanelHelpers.field_c;
+        SoundMixerHelpers.field_e = WidgetNode.field_x;
         if (param1) {
-          wk.field_s = uk.field_x;
-          dg.field_j = mh.field_c;
+          WidgetTheme.field_s = WidgetNode.field_x;
+          WidgetStyleLayer.field_j = GameRoomPanelHelpers.field_c;
         }
-        cl.field_g = 2;
+        MenuScreen.field_g = 2;
         if (param0 < -53) {
           return;
         }
-        field_f = (a) null;
+        field_f = (ClientProtocolStage) null;
     }
 
-    final void b(int param0) throws IOException {
+    final void close(int param0) throws IOException {
         if (null != this.field_d) {
           this.field_d.close();
           this.field_d = null;
@@ -128,11 +128,11 @@ final class RandomAccessCacheFile {
     protected final void finalize() throws Throwable {
         if (this.field_d != null) {
           System.out.println("");
-          this.b(0);
+          this.close(0);
         }
     }
 
-    final long a(int param0) throws IOException {
+    final long length(int param0) throws IOException {
         if (param0 != -1) {
           RandomAccessCacheFile.releaseStatics((byte) -82);
           return this.field_d.length();
@@ -160,13 +160,13 @@ final class RandomAccessCacheFile {
           }
           this.field_d.seek(0L);
         } catch (RuntimeException runtimeException) {
-          throw oi.wrapException((Throwable) ((Object) runtimeException), "sa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) runtimeException), "sa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     static {
         field_g = 0;
         field_a = "If you are not, please change your password to something more obscure!";
-        field_f = new a();
+        field_f = new ClientProtocolStage();
     }
 }

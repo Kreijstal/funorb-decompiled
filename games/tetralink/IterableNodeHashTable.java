@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class IterableNodeHashTable implements Iterable {
-    static hl field_f;
+    static UiComponent field_f;
     IntrusiveNode[] buckets;
     private IntrusiveNode field_g;
     static java.awt.Frame field_h;
@@ -40,7 +40,7 @@ final class IterableNodeHashTable implements Iterable {
           param1.next.previous = param1;
           param1.key = param0;
         } catch (RuntimeException runtimeException) {
-          throw oi.wrapException((Throwable) ((Object) runtimeException), "ea.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) runtimeException), "ea.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

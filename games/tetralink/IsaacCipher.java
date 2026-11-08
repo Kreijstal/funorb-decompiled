@@ -4,21 +4,21 @@
 final class IsaacCipher {
     private int[] field_d;
     private int[] field_g;
-    static hl field_a;
+    static UiComponent field_a;
     private int field_k;
     private int field_i;
     private int field_e;
     static String field_h;
     static long field_c;
     static String field_f;
-    static hl field_j;
+    static UiComponent field_j;
     private int field_b;
 
-    static int a(int param0, int param1) {
+    static int bitXor(int param0, int param1) {
         return param0 ^ param1;
     }
 
-    final static void a(el param0, byte param1, boolean param2, String param3) {
+    final static void openLobbyGameContextMenu(LobbyGame param0, byte param1, boolean param2, String param3) {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -28,40 +28,40 @@ final class IsaacCipher {
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
-        pf var7 = null;
+        PlayerContextMenu var7 = null;
         String var8 = null;
-        pf var9 = null;
+        PlayerContextMenu var9 = null;
         String var10 = null;
-        pf var11 = null;
+        PlayerContextMenu var11 = null;
         String var12 = null;
-        pf var13 = null;
+        PlayerContextMenu var13 = null;
         try {
-          gd.a((String) null, 255, (String) null, -1, ph.field_t, (int[]) null, 0L, param0, param0.j(-128));
+          LobbyPlayerEntry.openPlayerContextMenu((String) null, 255, (String) null, -1, NetworkGameClient.field_t, (int[]) null, 0L, param0, param0.getGameId(-128));
           if (param0.field_Kb && (2 == param0.field_Zb ||
-            !(2 > dd.field_c))) {
-            var7 = hd.field_s;
-            var8 = sk.a(new String[]{param3}, SpriteState.field_y, 119);
+            !(2 > SettingsCookieHelpers.field_c))) {
+            var7 = EmailAvailabilityValidator.field_s;
+            var8 = SectorCacheStore.formatTemplate(new String[]{param3}, SpriteState.field_y, 119);
             var7.field_j.addItem(var8, 1, 10);
           }
-          hd.field_s.b((byte) 79);
+          EmailAvailabilityValidator.field_s.addLobbyGameActions((byte) 79);
           if (param2) {
-            if (nd.field_Nb != hd.field_s.field_c) {
-              var11 = hd.field_s;
-              var12 = sk.a(new String[]{param3}, vi.field_b, 120);
+            if (QuickChatHelpDialog.field_Nb != EmailAvailabilityValidator.field_s.field_c) {
+              var11 = EmailAvailabilityValidator.field_s;
+              var12 = SectorCacheStore.formatTemplate(new String[]{param3}, LoadingStatusHelpers.field_b, 120);
               var11.field_j.addItem(var12, 1, 15);
             } else {
-              var9 = hd.field_s;
-              var10 = sk.a(new String[]{param3}, wa.field_h, 127);
+              var9 = EmailAvailabilityValidator.field_s;
+              var10 = SectorCacheStore.formatTemplate(new String[]{param3}, TriangleSpanHelpers.field_h, 127);
               var9.field_j.addItem(var10, 1, 16);
             }
           }
-          var13 = hd.field_s;
+          var13 = EmailAvailabilityValidator.field_s;
           if (param1 < 103) {
             return;
           }
-          var5 = ci.field_B;
-          var6 = li.field_o;
-          var13.field_j.a(0, var6, -117, 0, var5);
+          var5 = PasswordFieldPainter.field_B;
+          var6 = WhirlpoolHasher.field_o;
+          var13.field_j.openAt(0, var6, -117, 0, var5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -79,11 +79,11 @@ final class IsaacCipher {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw oi.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
-    final static void a(int param0, int[] param1, byte param2, int param3, int[] param4) {
+    final static void quickSortParallel(int param0, int[] param1, byte param2, int param3, int[] param4) {
         int var10 = 0;
         int stackIn_5_0 = 0;
         RuntimeException stackIn_17_0 = null;
@@ -129,12 +129,12 @@ final class IsaacCipher {
             param4[var6] = var7;
             param1[param3] = param1[var6];
             param1[var6] = var8;
-            IsaacCipher.a(param0, param1, (byte) -63, var6 - 1, param4);
-            IsaacCipher.a(1 + var6, param1, (byte) -63, param3, param4);
+            IsaacCipher.quickSortParallel(param0, param1, (byte) -63, var6 - 1, param4);
+            IsaacCipher.quickSortParallel(1 + var6, param1, (byte) -63, param3, param4);
           }
           if (param2 != -63) {
             var14 = (String) null;
-            IsaacCipher.a(126, (String) null);
+            IsaacCipher.isFriend(126, (String) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -153,13 +153,13 @@ final class IsaacCipher {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw oi.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
     final int nextInt(int param0) {
         if (param0 == this.field_e) {
-          this.a(-27169);
+          this.generateResults(-27169);
           this.field_e = 256;
         }
         int fieldTemp$0 = this.field_e - 1;
@@ -167,13 +167,13 @@ final class IsaacCipher {
         return this.field_d[fieldTemp$0];
     }
 
-    final static void b(byte param0) {
+    final static void handleRankingsResponse(byte param0) {
         String[][] dupTemp$0 = null;
         int[][] dupTemp$1 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
-        v var3 = null;
+        QueuedListRequest var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6_int = 0;
@@ -193,63 +193,63 @@ final class IsaacCipher {
         int var11Lifetime1;
         var12 = TetraLink.field_J;
         try {
-          var13 = kb.field_q;
+          var13 = BackgroundSparkle.field_q;
           var15 = var13;
           var2 = var15.readUnsignedByte((byte) -99);
           if (param0 > -95) {
-            IsaacCipher.b((byte) -78);
+            IsaacCipher.handleRankingsResponse((byte) -78);
           }
-          var3 = (v) (tc.field_p.c(false));
+          var3 = (QueuedListRequest) (DelayedIncomingPacket.field_p.first(false));
           while (var3 != null) {
             if (var3.field_n != var2) {
-              var3 = (v) (tc.field_p.a((byte) -70));
+              var3 = (QueuedListRequest) (DelayedIncomingPacket.field_p.next((byte) -70));
               continue;
             }
             break;
           }
           if (var3 == null) {
-            mk.a(false);
+            SocialTabsPanel.closeGameSocket(false);
             return;
           }
           var4 = var15.readUnsignedByte((byte) -99);
           if (var4 != 0) {
-            nj.field_a[0] = ph.field_w;
+            KeyEventHelpers.field_a[0] = NetworkGameClient.field_w;
             var5 = var3.field_q;
             for (var6_int = 1; var4 > var6_int; var6_int++) {
-              nj.field_a[var6_int] = var13.readString((byte) 81);
+              KeyEventHelpers.field_a[var6_int] = var13.readString((byte) 81);
             }
-            lm.a(var5, var4, (byte) 71);
+            MusicPatchEnvelope.decodeRankingRows(var5, var4, (byte) 71);
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {
-              lb.a(var15, false);
+              DateOfBirthPanel.readPackedRankingValues(var15, false);
               if (var6_intLifetime1 == 0) {
-                var3.field_B = tl.field_X;
-                var3.field_s = fd.field_F;
-                var3.field_o = om.field_Nb;
-                var3.field_t = l.field_j;
-                ug.a(fd.field_F, tl.field_X, om.field_Nb, 20, var6_intLifetime1, l.field_j);
+                var3.field_B = LoginPanel.field_X;
+                var3.field_s = DiskArchiveRequest.field_F;
+                var3.field_o = ReportAbuseDialog.field_Nb;
+                var3.field_t = BoardAnimator.field_j;
+                LoadingProgressDialog.appendRankingRow(DiskArchiveRequest.field_F, LoginPanel.field_X, ReportAbuseDialog.field_Nb, 20, var6_intLifetime1, BoardAnimator.field_j);
               } else {
-                ug.a(fd.field_F, tl.field_X, om.field_Nb, 20, var6_intLifetime1, l.field_j);
+                LoadingProgressDialog.appendRankingRow(DiskArchiveRequest.field_F, LoginPanel.field_X, ReportAbuseDialog.field_Nb, 20, var6_intLifetime1, BoardAnimator.field_j);
               }
             }
-            ae.b(94, var5);
+            TextButton.sortRankedListIndices(94, var5);
             dupTemp$0 = new String[2][var5];
             var3.field_p = dupTemp$0;
             var6 = dupTemp$0;
             dupTemp$1 = new int[2][var5 * 4];
             var3.field_y = dupTemp$1;
             var7 = dupTemp$1;
-            var8 = nd.field_Mb;
+            var8 = QuickChatHelpDialog.field_Mb;
             var9 = 0;
             var10 = 0;
             while (var8 > var9) {
-              var11 = qd.field_W[var9];
-              var6[0][var10] = nj.field_a[var11];
-              var7[0][var10 * 4] = lb.field_P[var11];
-              var7[0][var10 * 4 + 1] = ac.field_b[var11];
-              var7[0][2 + var10 * 4] = ai.field_g[var11];
-              var7[0][3 + 4 * var10] = gl.field_n[var11];
-              if (ej.matchesNormalizedSessionName(nj.field_a[var11], 4) &&
-                ai.field_g[var11] + (ac.field_b[var11] + gl.field_n[var11]) == 0) {
+              var11 = DialWidget.field_W[var9];
+              var6[0][var10] = KeyEventHelpers.field_a[var11];
+              var7[0][var10 * 4] = DateOfBirthPanel.field_P[var11];
+              var7[0][var10 * 4 + 1] = ScreenSwitchHelpers.field_b[var11];
+              var7[0][2 + var10 * 4] = ArchiveFactoryHelpers.field_g[var11];
+              var7[0][3 + 4 * var10] = AlternateLongAndTextCredentials.field_n[var11];
+              if (PieceDropAnimation.matchesNormalizedSessionName(KeyEventHelpers.field_a[var11], 4) &&
+                ArchiveFactoryHelpers.field_g[var11] + (ScreenSwitchHelpers.field_b[var11] + AlternateLongAndTextCredentials.field_n[var11]) == 0) {
                 var6[0][var10] = null;
                 var10--;
               }
@@ -260,14 +260,14 @@ final class IsaacCipher {
             var14 = 0;
             var10Lifetime1 = var14;
             while (var8 > var9Lifetime1) {
-              var11Lifetime1 = qd.field_W[var5 + var9Lifetime1];
-              var6[1][var14] = nj.field_a[var11Lifetime1];
-              var7[1][4 * var14] = lb.field_P[var11Lifetime1];
-              var7[1][4 * var14 + 1] = ac.field_b[var11Lifetime1];
-              var7[1][var14 * 4 + 2] = ai.field_g[var11Lifetime1];
-              var7[1][var14 * 4 + 3] = gl.field_n[var11Lifetime1];
-              if (ej.matchesNormalizedSessionName(nj.field_a[var11Lifetime1], 4) &&
-                gl.field_n[var11Lifetime1] + ai.field_g[var11Lifetime1] + ac.field_b[var11Lifetime1] == 0) {
+              var11Lifetime1 = DialWidget.field_W[var5 + var9Lifetime1];
+              var6[1][var14] = KeyEventHelpers.field_a[var11Lifetime1];
+              var7[1][4 * var14] = DateOfBirthPanel.field_P[var11Lifetime1];
+              var7[1][4 * var14 + 1] = ScreenSwitchHelpers.field_b[var11Lifetime1];
+              var7[1][var14 * 4 + 2] = ArchiveFactoryHelpers.field_g[var11Lifetime1];
+              var7[1][var14 * 4 + 3] = AlternateLongAndTextCredentials.field_n[var11Lifetime1];
+              if (PieceDropAnimation.matchesNormalizedSessionName(KeyEventHelpers.field_a[var11Lifetime1], 4) &&
+                AlternateLongAndTextCredentials.field_n[var11Lifetime1] + ArchiveFactoryHelpers.field_g[var11Lifetime1] + ScreenSwitchHelpers.field_b[var11Lifetime1] == 0) {
                 var6[1][var14] = null;
                 var14--;
               }
@@ -281,11 +281,11 @@ final class IsaacCipher {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oi.wrapException((Throwable) ((Object) var1), "oj.A(" + param0 + ')');
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) var1), "oj.A(" + param0 + ')');
         }
     }
 
-    final static boolean a(int param0, String param1) {
+    final static boolean isFriend(int param0, String param1) {
         RuntimeException var2 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -294,7 +294,7 @@ final class IsaacCipher {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 1) {
-            stackIn_6_0 = (ke.a(param1, false) != null);
+            stackIn_6_0 = (DiskCacheWorker.findFriendByName(param1, false) != null);
             return stackIn_6_0;
           }
           return false;
@@ -308,11 +308,11 @@ final class IsaacCipher {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw oi.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
-    private final void a(int param0) {
+    private final void generateResults(int param0) {
         int var2 = 0;
         int dupTemp$1 = 0;
         int dupTemp$2 = 0;
@@ -342,23 +342,23 @@ final class IsaacCipher {
             }
           }
           this.field_b = this.field_b + this.field_g[255 & var2 + 128];
-          dupTemp$1 = this.field_g[pl.a(1020, var3) >> 2] + this.field_b + this.field_i;
+          dupTemp$1 = this.field_g[StatusRequestHelpers.bitAnd(1020, var3) >> 2] + this.field_b + this.field_i;
           var4 = dupTemp$1;
           this.field_g[var2] = dupTemp$1;
-          dupTemp$2 = this.field_g[pl.a(var4 >> 8 >> 2, 255)] + var3;
+          dupTemp$2 = this.field_g[StatusRequestHelpers.bitAnd(var4 >> 8 >> 2, 255)] + var3;
           this.field_i = dupTemp$2;
           this.field_d[var2] = dupTemp$2;
         }
     }
 
-    private final void b(int param0) {
+    private final void initialize(int param0) {
         int var2 = 0;
         int var11 = TetraLink.field_J;
         int var2Lifetime1;
         int var2Lifetime2;
         if (param0 != 3) {
           String var12 = (String) null;
-          IsaacCipher.a((el) null, (byte) -74, true, (String) null);
+          IsaacCipher.openLobbyGameContextMenu((LobbyGame) null, (byte) -74, true, (String) null);
         }
         int var4 = -1640531527;
         int var7 = -1640531527;
@@ -478,7 +478,7 @@ final class IsaacCipher {
           this.field_g[6 + var2Lifetime2] = var9;
           this.field_g[var2Lifetime2 + 7] = var10;
         }
-        this.a(-27169);
+        this.generateResults(-27169);
         this.field_e = 256;
     }
 
@@ -490,9 +490,9 @@ final class IsaacCipher {
           for (var2_int = 0; param0.length > var2_int; var2_int++) {
             this.field_d[var2_int] = param0[var2_int];
           }
-          this.b(3);
+          this.initialize(3);
         } catch (RuntimeException runtimeException) {
-          throw oi.wrapException((Throwable) ((Object) runtimeException), "oj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) runtimeException), "oj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -504,15 +504,15 @@ final class IsaacCipher {
         int var1 = -111 % ((68 - param0) / 57);
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int getDaysInMonth(int param0, int param1, int param2) {
         if (param2 != 10121) {
-          IsaacCipher.a(-107, -60, -22);
+          IsaacCipher.getDaysInMonth(-107, -60, -22);
         }
         if (param0 == 1 &&
-          bn.a(param2 ^ 10120, param1)) {
+          ProxyAuthenticationRequiredException.isLeapYear(param2 ^ 10120, param1)) {
           return 29;
         }
-        return ai.field_a[param0];
+        return ArchiveFactoryHelpers.field_a[param0];
     }
 
     static {

@@ -1,0 +1,74 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+import java.util.*;
+
+final class PendingReplyNode extends IntrusiveNode {
+    static String field_t;
+    static String field_s;
+    static java.util.zip.CRC32 field_r;
+    static int field_n;
+    static int field_q;
+    static String[] field_o;
+    static String[] field_p;
+
+    private PendingReplyNode() throws Throwable {
+        throw new Error();
+    }
+
+    final static SocketConnector createSocketConnector(int param0, String param1, byte param2) {
+        ProxySocketConnector var3 = null;
+        RuntimeException var3_ref = null;
+        String var4 = null;
+        ProxySocketConnector stackIn_3_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          var3 = new ProxySocketConnector();
+          ((SocketConnector) ((Object) var3)).host = param1;
+          ((SocketConnector) ((Object) var3)).port = param0;
+          if (param2 != 118) {
+            var4 = (String) null;
+            PendingReplyNode.createSocketConnector(101, (String) null, (byte) -45);
+          }
+          stackIn_3_0 = var3;
+          return (SocketConnector) ((Object) stackIn_3_0);
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3_ref = decompiledCaughtException;
+          stackIn_6_0 = var3_ref;
+          stackIn_6_1 = new StringBuilder().append("co.B(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
+        }
+    }
+
+    public static void releaseStatics(int param0) {
+        field_r = null;
+        field_o = null;
+        field_p = null;
+        field_s = null;
+        if (param0 == 22) {
+          field_t = null;
+          return;
+        }
+        String var2 = (String) null;
+        PendingReplyNode.createSocketConnector(-20, (String) null, (byte) 61);
+        field_t = null;
+    }
+
+    static {
+        field_t = "Email: ";
+        field_n = 10;
+        field_s = "Cancel rematch";
+        field_r = new java.util.zip.CRC32();
+        field_q = 22;
+        field_o = new String[]{"Connection lost - attempting to reconnect", "Connection lost - attempting to reconnect.", "Connection lost - attempting to reconnect..", "Connection lost - attempting to reconnect..."};
+    }
+}

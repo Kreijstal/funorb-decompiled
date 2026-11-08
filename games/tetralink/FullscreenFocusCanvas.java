@@ -13,29 +13,29 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
     public final void update(java.awt.Graphics param0) {
     }
 
-    final static void a(int param0, int param1, int param2, byte param3, int param4) {
+    final static void pushRasterAndIntersectClip(int param0, int param1, int param2, byte param3, int param4) {
         if (param3 == -79) {
-          nm.b((byte) 75);
+          ReflectionCheck.pushRasterState((byte) 75);
           SoftwareRasterizer.intersectClip(param4, param2, param0, param1);
           return;
         }
-        FullscreenFocusCanvas.a(20, -54, 32, (byte) 91, -80);
-        nm.b((byte) 75);
+        FullscreenFocusCanvas.pushRasterAndIntersectClip(20, -54, 32, (byte) 91, -80);
+        ReflectionCheck.pushRasterState((byte) 75);
         SoftwareRasterizer.intersectClip(param4, param2, param0, param1);
     }
 
     public final void paint(java.awt.Graphics param0) {
     }
 
-    final void a(byte param0, PlatformTaskDispatcher param1) {
+    final void exitFullscreen(byte param0, PlatformTaskDispatcher param1) {
         try {
           if (param0 <= 33) {
             java.awt.Graphics var4 = (java.awt.Graphics) null;
             this.paint((java.awt.Graphics) null);
           }
-          r.exitFullscreenAndDisposeFrame(param1, this.field_d, 0);
+          MusicCrossfadeStream.exitFullscreenAndDisposeFrame(param1, this.field_d, 0);
         } catch (RuntimeException runtimeException) {
-          throw oi.wrapException((Throwable) ((Object) runtimeException), "kl.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) runtimeException), "kl.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -58,7 +58,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         try {
           this.field_c = true;
         } catch (RuntimeException runtimeException) {
-          throw oi.wrapException((Throwable) ((Object) runtimeException), "kl.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) runtimeException), "kl.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

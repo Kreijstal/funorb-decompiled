@@ -12,9 +12,9 @@ final class NodeHashTableIterator implements Iterator {
     private int field_g;
     static int[] field_b;
 
-    final static id a(int param0, BitPacketBuffer param1) {
+    final static TriangleMesh decodeMesh(int param0, BitPacketBuffer param1) {
         int var7 = 0;
-        id stackIn_25_0 = null;
+        TriangleMesh stackIn_25_0 = null;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         String stackIn_29_2 = null;
@@ -23,7 +23,7 @@ final class NodeHashTableIterator implements Iterator {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        id var5 = null;
+        TriangleMesh var5 = null;
         int var6 = 0;
         int var8 = 0;
         var8 = TetraLink.field_J;
@@ -34,37 +34,37 @@ final class NodeHashTableIterator implements Iterator {
           }
           var3 = BitPacketBuffer.readBooleanBit(91, param1) ? 1 : 0;
           var4 = BitPacketBuffer.readBooleanBit(77, param1) ? 1 : 0;
-          var5 = new id();
+          var5 = new TriangleMesh();
           var5.field_q = (short)param1.readBits(16, (byte) -112);
-          var5.field_D = cc.a(var5.field_D, param1, 16, 0);
-          var5.field_i = cc.a(var5.field_i, param1, 16, param0 ^ param0);
-          var5.field_R = cc.a(var5.field_R, param1, 16, param0 ^ -16483);
+          var5.field_D = DialWidgetPainter.readBitPackedShorts(var5.field_D, param1, 16, 0);
+          var5.field_i = DialWidgetPainter.readBitPackedShorts(var5.field_i, param1, 16, param0 ^ param0);
+          var5.field_R = DialWidgetPainter.readBitPackedShorts(var5.field_R, param1, 16, param0 ^ -16483);
           var5.field_s = (short)param1.readBits(16, (byte) -112);
-          var5.field_K = cc.a(var5.field_K, param1, 16, 0);
-          var5.field_I = cc.a(var5.field_I, param1, 16, param0 ^ -16483);
-          var5.field_e = cc.a(var5.field_e, param1, 16, 0);
+          var5.field_K = DialWidgetPainter.readBitPackedShorts(var5.field_K, param1, 16, 0);
+          var5.field_I = DialWidgetPainter.readBitPackedShorts(var5.field_I, param1, 16, param0 ^ -16483);
+          var5.field_e = DialWidgetPainter.readBitPackedShorts(var5.field_e, param1, 16, 0);
           if (var3 != 0) {
             var5.field_O = (short)param1.readBits(16, (byte) -112);
-            var5.field_l = cc.a(var5.field_l, param1, 16, 0);
-            var5.field_d = cc.a(var5.field_d, param1, 16, 0);
-            var5.field_y = cc.a(var5.field_y, param1, 16, 0);
-            var5.field_t = cc.a(var5.field_t, param1, 16, param0 + 16483);
-            var5.field_b = cc.a(var5.field_b, param1, 16, 0);
-            var5.field_N = cc.a(var5.field_N, param1, 16, param0 + 16483);
+            var5.field_l = DialWidgetPainter.readBitPackedShorts(var5.field_l, param1, 16, 0);
+            var5.field_d = DialWidgetPainter.readBitPackedShorts(var5.field_d, param1, 16, 0);
+            var5.field_y = DialWidgetPainter.readBitPackedShorts(var5.field_y, param1, 16, 0);
+            var5.field_t = DialWidgetPainter.readBitPackedShorts(var5.field_t, param1, 16, param0 + 16483);
+            var5.field_b = DialWidgetPainter.readBitPackedShorts(var5.field_b, param1, 16, 0);
+            var5.field_N = DialWidgetPainter.readBitPackedShorts(var5.field_N, param1, 16, param0 + 16483);
           }
           if (var4 != 0) {
             param1.readBits(16, (byte) -112);
-            var5.field_k = cc.a(var5.field_k, param1, 16, param0 ^ -16483);
-            var5.field_p = cc.a(var5.field_p, param1, 16, 0);
-            var5.field_A = cc.a(var5.field_A, param1, 16, 0);
-            var5.field_o = cc.a(var5.field_o, param1, 16, 0);
-            var5.field_g = cc.a(var5.field_g, param1, 16, 0);
+            var5.field_k = DialWidgetPainter.readBitPackedShorts(var5.field_k, param1, 16, param0 ^ -16483);
+            var5.field_p = DialWidgetPainter.readBitPackedShorts(var5.field_p, param1, 16, 0);
+            var5.field_A = DialWidgetPainter.readBitPackedShorts(var5.field_A, param1, 16, 0);
+            var5.field_o = DialWidgetPainter.readBitPackedShorts(var5.field_o, param1, 16, 0);
+            var5.field_g = DialWidgetPainter.readBitPackedShorts(var5.field_g, param1, 16, 0);
           }
           if (BitPacketBuffer.readBooleanBit(126, param1)) {
-            var5.field_v = cc.a(var5.field_v, param1, 16, 0);
+            var5.field_v = DialWidgetPainter.readBitPackedShorts(var5.field_v, param1, 16, 0);
           }
           if (BitPacketBuffer.readBooleanBit(64, param1)) {
-            var5.field_u = fi.a(16, var5.field_u, param1, (byte) 119);
+            var5.field_u = AccountCreationDialog.readPackedByteArray(16, var5.field_u, param1, (byte) 119);
             var6 = 0;
             for (var7 = 0; var7 < var5.field_u.length; var7++) {
               if ((var5.field_u[var7] & 255) > var6) {
@@ -89,7 +89,7 @@ final class NodeHashTableIterator implements Iterator {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw oi.wrapException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
         }
     }
 
@@ -145,7 +145,7 @@ final class NodeHashTableIterator implements Iterator {
         field_a = null;
     }
 
-    private final void a(int param0) {
+    private final void reset(int param0) {
         this.field_f = this.field_e.buckets[0].next;
         this.field_g = 1;
         this.field_d = null;
@@ -162,29 +162,29 @@ final class NodeHashTableIterator implements Iterator {
         this.field_d = null;
     }
 
-    final static void a(byte param0) {
-        int var1 = (cf.field_n - 640) / 2;
-        int var2 = ma.field_f * ma.field_f;
-        int var3 = -(qd.field_ab * qd.field_ab) + var2;
+    final static void layoutLobbySlidePanels(byte param0) {
+        int var1 = (PendingStatQuery.field_n - 640) / 2;
+        int var2 = AnimationPlayer.field_f * AnimationPlayer.field_f;
+        int var3 = -(DialWidget.field_ab * DialWidget.field_ab) + var2;
         if (param0 >= -21) {
           BitPacketBuffer var4 = (BitPacketBuffer) null;
-          NodeHashTableIterator.a((BitPacketBuffer) null, -52);
+          NodeHashTableIterator.readMeshMaterials((BitPacketBuffer) null, -52);
         }
-        hn.field_P.a((byte) -92, 199, 90, -120 + SoftwareRasterizer.field_e - 94, var1 - var3 * 199 / var2);
-        GameKeyHandler.field_c.a((byte) -124, 438, 0, -4 + SoftwareRasterizer.field_e - 120, 438 * var3 / var2 + (202 + var1));
+        DateInputWidget.field_P.setBounds((byte) -92, 199, 90, -120 + SoftwareRasterizer.field_e - 94, var1 - var3 * 199 / var2);
+        GameKeyHandler.field_c.setBounds((byte) -124, 438, 0, -4 + SoftwareRasterizer.field_e - 120, 438 * var3 / var2 + (202 + var1));
     }
 
-    final static rm[] a(BitPacketBuffer param0, int param1) {
+    final static LoadingScreenHelpers[] readMeshMaterials(BitPacketBuffer param0, int param1) {
         int var5 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        rm[] var4 = null;
+        LoadingScreenHelpers[] var4 = null;
         int var6_int = 0;
-        rm var6 = null;
+        LoadingScreenHelpers var6 = null;
         int var7 = 0;
         Object stackIn_3_0 = null;
-        rm[] stackIn_11_0 = null;
+        LoadingScreenHelpers[] stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -194,13 +194,13 @@ final class NodeHashTableIterator implements Iterator {
           var2_int = param0.readBits(8, (byte) -112);
           if (param1 < var2_int) {
             stackIn_3_0 = null;
-            return (rm[]) (stackIn_3_0);
+            return (LoadingScreenHelpers[]) (stackIn_3_0);
           }
           var3 = param0.readBits(12, (byte) -112);
-          var4 = new rm[var3];
+          var4 = new LoadingScreenHelpers[var3];
           for (var5 = 0; var3 > var5; var5++) {
             if (BitPacketBuffer.readBooleanBit(100, param0)) {
-              var6 = new rm();
+              var6 = new LoadingScreenHelpers();
               param0.readBits(24, (byte) -112);
               param0.readBits(24, (byte) -112);
               var6.field_j = param0.readBits(24, (byte) -112);
@@ -210,7 +210,7 @@ final class NodeHashTableIterator implements Iterator {
               param0.readBits(12, (byte) -112);
               var4[var5] = var6;
             } else {
-              var6_int = param0.readBits(rn.a((byte) -127, -1 + var5), (byte) -112);
+              var6_int = param0.readBits(LoadingResourceHelpers.bitLength((byte) -127, -1 + var5), (byte) -112);
               var4[var5] = var4[var6_int];
             }
           }
@@ -226,7 +226,7 @@ final class NodeHashTableIterator implements Iterator {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw oi.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -234,9 +234,9 @@ final class NodeHashTableIterator implements Iterator {
         this.field_d = null;
         try {
           this.field_e = param0;
-          this.a(-1);
+          this.reset(-1);
         } catch (RuntimeException runtimeException) {
-          throw oi.wrapException((Throwable) ((Object) runtimeException), "lj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) runtimeException), "lj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

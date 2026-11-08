@@ -1,0 +1,38 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class LobbyListHelpers {
+    static int[] field_d;
+    static String[] field_a;
+    static int[] field_e;
+    static String field_f;
+    static String field_b;
+    static int[] field_c;
+
+    public static void releaseStatics(int param0) {
+        field_f = null;
+        field_b = null;
+        field_a = null;
+        field_d = null;
+        field_e = null;
+        field_c = null;
+        if (param0 != 3) {
+          LobbyListHelpers.releaseStatics(-19);
+        }
+    }
+
+    final static UiComponent getGameListContent(int param0) {
+        if (param0 != 21) {
+          LobbyListHelpers.getGameListContent(47);
+          return DateInputWidget.field_Q.field_Pb;
+        }
+        return DateInputWidget.field_Q.field_Pb;
+    }
+
+    static {
+        field_d = new int[]{20, 21, 8};
+        field_a = new String[3];
+        field_f = "Waiting for animations";
+        field_b = "Players";
+    }
+}

@@ -13,30 +13,30 @@ class UiWidget extends IntrusiveNode {
     int field_E;
     static String[] field_p;
     static String field_G;
-    hi field_D;
+    TextLayout field_D;
     static int[] field_v;
-    kg field_H;
+    WidgetPainter field_H;
     int field_x;
     static String[] field_n;
     private static int[] field_B;
-    dn field_s;
+    WidgetListener field_s;
     static String field_q;
     static int[] field_z;
     int field_u;
     boolean field_r;
     String field_A;
 
-    void f(int param0) {
+    void clearKeyboardFocus(int param0) {
         try {
           if (param0 >= -63) {
             this.field_r = false;
           }
         } catch (RuntimeException runtimeException) {
-          throw oi.wrapException((Throwable) ((Object) runtimeException), "na.UA(" + param0 + ')');
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) runtimeException), "na.UA(" + param0 + ')');
         }
     }
 
-    void a(int param0, int param1, int param2, int param3, int param4) {
+    void setBounds(int param0, int param1, int param2, int param3, int param4) {
         try {
           this.field_u = param0;
           this.field_w = param1;
@@ -44,7 +44,7 @@ class UiWidget extends IntrusiveNode {
           this.field_F = param4;
           this.field_t = param3;
         } catch (RuntimeException runtimeException) {
-          throw oi.wrapException((Throwable) ((Object) runtimeException), "na.FA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) runtimeException), "na.FA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -58,7 +58,7 @@ class UiWidget extends IntrusiveNode {
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = this.b(aa.field_Nb, 1343807649, param1, param2, a.field_a) ? 1 : 0;
+          var5_int = this.containsPoint(ContextMenu.field_Nb, 1343807649, param1, param2, ClientProtocolStage.field_a) ? 1 : 0;
           stackIn_3_0 = var5_int;
           if (this.field_r) {
             stackIn_4_1 = 0;
@@ -68,8 +68,8 @@ class UiWidget extends IntrusiveNode {
           if (stackIn_3_0 == stackIn_4_1) {
             this.field_r = var5_int != 0;
             if (this.field_s != null &&
-              this.field_s instanceof ol) {
-              ((ol) (this.field_s)).a(var5_int != 0, 30162, this);
+              this.field_s instanceof HoverListener) {
+              ((HoverListener) (this.field_s)).onHoverChanged(var5_int != 0, 30162, this);
             }
           }
           if (!param3) {
@@ -86,11 +86,11 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw oi.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    StringBuilder a(Hashtable param0, StringBuilder param1, int param2, int param3) {
+    StringBuilder appendDebugTree(Hashtable param0, StringBuilder param1, int param2, int param3) {
         RuntimeException var5 = null;
         StringBuilder stackIn_8_0 = null;
         RuntimeException stackIn_12_0 = null;
@@ -104,7 +104,7 @@ class UiWidget extends IntrusiveNode {
             field_z = (int[]) null;
           }
           if (this.beginDebugDescription(param0, param2, 91, param1)) {
-            this.a(-121, param1, param0, param2);
+            this.appendDebugProperties(-121, param1, param0, param2);
           }
           stackIn_8_0 = (StringBuilder) (param1);
           return stackIn_8_0;
@@ -124,7 +124,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw oi.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -147,11 +147,11 @@ class UiWidget extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oi.wrapException((Throwable) ((Object) var2), "na.IA(" + param0 + ')');
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) var2), "na.IA(" + param0 + ')');
         }
     }
 
-    final void a(int param0, StringBuilder param1, Hashtable param2, int param3) {
+    final void appendDebugProperties(int param0, StringBuilder param1, Hashtable param2, int param3) {
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
@@ -177,7 +177,7 @@ class UiWidget extends IntrusiveNode {
           if (this.field_r) {
             discarded$2 = param1.append(" mouseover");
           }
-          if (this.c(3)) {
+          if (this.isFocused(3)) {
             discarded$3 = param1.append(" focused");
           }
           if (null != this.field_H) {
@@ -185,10 +185,10 @@ class UiWidget extends IntrusiveNode {
             if (!(this.field_H instanceof UiWidget)) {
               discarded$5 = param1.append(this.field_H);
               if (var6 != 0) {
-                param1 = this.a(param2, param1, 1 + param3, -372494750);
+                param1 = this.appendDebugTree(param2, param1, 1 + param3, -372494750);
               }
             } else {
-              param1 = this.a(param2, param1, 1 + param3, -372494750);
+              param1 = this.appendDebugTree(param2, param1, 1 + param3, -372494750);
             }
           }
           if (null != this.field_s) {
@@ -196,14 +196,14 @@ class UiWidget extends IntrusiveNode {
             if (!(this.field_s instanceof UiWidget)) {
               discarded$7 = param1.append(this.field_s);
               if (var6 != 0) {
-                param1 = this.a(param2, param1, 1 + param3, -372494750);
+                param1 = this.appendDebugTree(param2, param1, 1 + param3, -372494750);
               }
             } else {
-              param1 = this.a(param2, param1, 1 + param3, -372494750);
+              param1 = this.appendDebugTree(param2, param1, 1 + param3, -372494750);
             }
           }
           if (param0 >= -106) {
-            UiWidget.a(-1, false);
+            UiWidget.updateIntroLogoOffset(-1, false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -222,18 +222,18 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_40_2 = "{...}";
           }
-          throw oi.wrapException((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param3).append(')').toString());
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    boolean a(UiWidget param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    boolean handlePointerPress(UiWidget param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.b(param6, 1343807649, param1, param3, param5)) {
+          if (this.containsPoint(param6, 1343807649, param1, param3, param5)) {
             this.field_x = param2;
           }
           if (param4 != -32738) {
@@ -250,7 +250,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw oi.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -276,13 +276,13 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw oi.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
-    final static void c(boolean param0) {
+    final static void drawPopupMenuItems(boolean param0) {
         boolean stackIn_20_0 = false;
-        ve stackIn_27_0 = null;
+        NineSliceFrame stackIn_27_0 = null;
         RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
         RuntimeException var1 = null;
@@ -293,54 +293,54 @@ class UiWidget extends IntrusiveNode {
         String var6 = null;
         int var7 = 0;
         int var8 = 0;
-        ve var9 = null;
+        NineSliceFrame var9 = null;
         int var10 = 0;
         var10 = TetraLink.field_J;
         try {
-          var1_int = hd.field_q - ja.field_j;
+          var1_int = EmailAvailabilityValidator.field_q - TextureCache.field_j;
           if (!param0) {
             field_v = (int[]) null;
           }
-          ja.field_j = nh.field_Nb - (var1_int >> 1);
-          ab.field_Q = -(hk.field_a >> 1) + fk.field_S;
-          hd.field_q = var1_int + ja.field_j;
-          var2 = ab.field_Q;
+          TextureCache.field_j = IconLabelItem.field_Nb - (var1_int >> 1);
+          ValidationStatusIcon.field_Q = -(ArchiveProvider.field_a >> 1) + HotspotTextWidget.field_S;
+          EmailAvailabilityValidator.field_q = var1_int + TextureCache.field_j;
+          var2 = ValidationStatusIcon.field_Q;
           var3 = 0;
-          while (var3 < hk.field_b.length) {
-            var4 = bi.field_c[var3];
+          while (var3 < ArchiveProvider.field_b.length) {
+            var4 = PendingMove.field_c[var3];
             if (var10 != 0) {
               return;
             }
             if (var4 < 0) {
-              var5 = wa.field_d;
-            } else if (~var4 == ~hb.field_a.field_b) {
-              var5 = bm.field_n;
+              var5 = TriangleSpanHelpers.field_d;
+            } else if (~var4 == ~ConditionalTextValue.field_a.field_b) {
+              var5 = FullscreenCanvasHelpers.field_n;
             } else {
-              var5 = uj.field_w;
+              var5 = ThreeSliceButtonPainter.field_w;
             }
-            var6 = hk.field_b[var3];
+            var6 = ArchiveProvider.field_b[var3];
             stackIn_20_0 = !(0 > var4);
-            var7 = tn.measureText(stackIn_20_0, 1, var6);
-            var8 = -(var7 >> 1) + nh.field_Nb;
+            var7 = ServerConnectionHelpers.measureText(stackIn_20_0, 1, var6);
+            var8 = -(var7 >> 1) + IconLabelItem.field_Nb;
             if (var4 >= 0) {
-              if (~hb.field_a.field_b == ~var4) {
-                stackIn_27_0 = aa.field_Wb;
+              if (~ConditionalTextValue.field_a.field_b == ~var4) {
+                stackIn_27_0 = ContextMenu.field_Wb;
               } else {
-                stackIn_27_0 = bn.field_b;
+                stackIn_27_0 = ProxyAuthenticationRequiredException.field_b;
               }
               var9 = stackIn_27_0;
-              var2 = var2 + cd.field_e;
+              var2 = var2 + MenuLabelGlobals.field_e;
               if (var9 != null) {
-                var9.a(var2, var8 - ao.field_a, (byte) -126, var7 + (ao.field_a << 1), i.field_n + (hc.field_q << 1));
+                var9.drawFrame(var2, var8 - ChatReceiveHelpers.field_a, (byte) -126, var7 + (ChatReceiveHelpers.field_a << 1), ViewportController.field_n + (PacketDiagnosticsHelpers.field_q << 1));
               }
-              var2 = var2 + hc.field_q;
+              var2 = var2 + PacketDiagnosticsHelpers.field_q;
             }
             if (var4 < 0) {
-              ko.field_u.drawLeft(var6, var8, var2 + h.field_a, var5, -1);
-              var2 = var2 + hl.field_wb;
+              PointerTrailBubble.field_u.drawLeft(var6, var8, var2 + ChatPanelHelpers.field_a, var5, -1);
+              var2 = var2 + UiComponent.field_wb;
             } else {
-              oi.field_a.drawLeft(var6, var8, var2 + nj.field_d, var5, -1);
-              var2 = var2 + (hc.field_q + cd.field_e + i.field_n);
+              IndexedSpriteState.field_a.drawLeft(var6, var8, var2 + KeyEventHelpers.field_d, var5, -1);
+              var2 = var2 + (PacketDiagnosticsHelpers.field_q + MenuLabelGlobals.field_e + ViewportController.field_n);
             }
             var3++;
           }
@@ -348,11 +348,11 @@ class UiWidget extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oi.wrapException((Throwable) ((Object) var1), "na.KA(" + param0 + ')');
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) var1), "na.KA(" + param0 + ')');
         }
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void updateIntroLogoOffset(int param0, boolean param1) {
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -363,7 +363,7 @@ class UiWidget extends IntrusiveNode {
         var6 = TetraLink.field_J;
         try {
           var2_int = 0;
-          var3 = en.field_K;
+          var3 = SingleChildWidget.field_K;
           boolean decompiledSharedTail0 = !(5 > var3);
           if (!decompiledSharedTail0) {
             var2_int = var3 * var3 * 8192 / 1100;
@@ -401,7 +401,7 @@ class UiWidget extends IntrusiveNode {
             var5 = 1;
           }
           if (param1) {
-            UiWidget.a(-61, true);
+            UiWidget.updateIntroLogoOffset(-61, true);
           }
           if (param0 == 6) {
             var5 = -1;
@@ -431,16 +431,16 @@ class UiWidget extends IntrusiveNode {
             var4 = 1;
             var5 = 1;
           }
-          bk.field_k = fk.a(var5 * var2_int, (byte) -67, var2_int * var4);
+          TextLayoutLine.field_k = HotspotTextWidget.buildRotationTransform(var5 * var2_int, (byte) -67, var2_int * var4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oi.wrapException((Throwable) ((Object) var2), "na.CB(" + param0 + ',' + param1 + ')');
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) var2), "na.CB(" + param0 + ',' + param1 + ')');
         }
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         try {
           field_v = null;
           field_p = null;
@@ -450,10 +450,10 @@ class UiWidget extends IntrusiveNode {
           field_G = null;
           field_q = null;
           if (param0 != 101) {
-            UiWidget.c((byte) 52);
+            UiWidget.releaseStatics((byte) 52);
           }
         } catch (RuntimeException runtimeException) {
-          throw oi.wrapException((Throwable) ((Object) runtimeException), "na.TA(" + param0 + ')');
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) runtimeException), "na.TA(" + param0 + ')');
         }
     }
 
@@ -462,27 +462,27 @@ class UiWidget extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
-          stackIn_1_0 = this.a(new Hashtable(), new StringBuilder(), 0, -372494750).toString();
+          stackIn_1_0 = this.appendDebugTree(new Hashtable(), new StringBuilder(), 0, -372494750).toString();
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oi.wrapException((Throwable) ((Object) var1), "na.toString()");
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) var1), "na.toString()");
         }
     }
 
-    UiWidget(String param0, dn param1) {
-        this(param0, dh.field_q.field_e, param1);
+    UiWidget(String param0, WidgetListener param1) {
+        this(param0, LruTextureCache.field_q.field_e, param1);
     }
 
-    final void b(byte param0) {
+    final void reapplyBounds(byte param0) {
         try {
-          this.a(this.field_u, this.field_w, -117, this.field_t, this.field_F);
+          this.setBounds(this.field_u, this.field_w, -117, this.field_t, this.field_F);
           if (param0 <= 4) {
             this.field_t = -71;
           }
         } catch (RuntimeException runtimeException) {
-          throw oi.wrapException((Throwable) ((Object) runtimeException), "na.VA(" + param0 + ')');
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) runtimeException), "na.VA(" + param0 + ')');
         }
     }
 
@@ -494,7 +494,7 @@ class UiWidget extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != 1) {
-            this.d(-61);
+            this.getLastRenderPass(-61);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -507,11 +507,11 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw oi.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void drawAllLayers(int param0, int param1, int param2) {
         RuntimeException runtimeException = null;
         int var4_int = 0;
         int var5_int = 0;
@@ -520,10 +520,10 @@ class UiWidget extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         var6 = TetraLink.field_J;
         try {
-          var4_int = this.d(param2 + 23335);
+          var4_int = this.getLastRenderPass(param2 + 23335);
           var5_int = 0;
           if (param2 != -23452) {
-            this.d(-24);
+            this.getLastRenderPass(-24);
           }
           while (var5_int <= var4_int) {
             this.drawLayer(0, param1, param0, var5_int);
@@ -533,19 +533,19 @@ class UiWidget extends IntrusiveNode {
             }
             break;
           }
-          var5 = tl.h(8);
+          var5 = LoginPanel.getVisibleTooltipText(8);
           if (var5 != null) {
-            dh.field_q.a(var5, ph.field_z, fi.field_Db, -63);
+            LruTextureCache.field_q.drawTooltip(var5, NetworkGameClient.field_z, AccountCreationDialog.field_Db, -63);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw oi.wrapException((Throwable) ((Object) runtimeException), "na.GB(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) runtimeException), "na.GB(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    int d(int param0) {
+    int getLastRenderPass(int param0) {
         RuntimeException var2 = null;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -558,16 +558,16 @@ class UiWidget extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oi.wrapException((Throwable) ((Object) var2), "na.RA(" + param0 + ')');
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) var2), "na.RA(" + param0 + ')');
         }
     }
 
-    final boolean a(int param0, boolean param1, int param2, boolean param3) {
+    final boolean processPointerFrame(int param0, boolean param1, int param2, boolean param3) {
         boolean stackIn_48_0 = false;
         RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
         RuntimeException var5 = null;
-        ed var6 = null;
+        DraggableWidget var6 = null;
         int var7 = 0;
         var7 = TetraLink.field_J;
         try {
@@ -575,69 +575,69 @@ class UiWidget extends IntrusiveNode {
             this.focusNext((UiWidget) null, -123);
           }
           this.updatePointer(this, param0, param2, true);
-          var5_int = this.c(3) ? 1 : 0;
+          var5_int = this.isFocused(3) ? 1 : 0;
           if (param1) {
-            if (hc.field_p != 0 &&
+            if (PacketDiagnosticsHelpers.field_p != 0 &&
               var5_int != 0) {
-              this.onFocusedKey(-19137, this, param2, a.field_a, param0, aa.field_Nb, hc.field_p);
+              this.onFocusedKey(-19137, this, param2, ClientProtocolStage.field_a, param0, ContextMenu.field_Nb, PacketDiagnosticsHelpers.field_p);
             }
-            if (tm.field_t != 0) {
-              if (this.a(this, param0, tm.field_t, param2, -32738, li.field_o, ci.field_B)) {
+            if (NameAvailabilityValidator.field_t != 0) {
+              if (this.handlePointerPress(this, param0, NameAvailabilityValidator.field_t, param2, -32738, WhirlpoolHasher.field_o, PasswordFieldPainter.field_B)) {
                 param1 = false;
                 if ((var7 != 0) &&
                   (var5_int != 0)) {
-                  this.f(-101);
+                  this.clearKeyboardFocus(-101);
                 }
               } else {
                 if (var5_int != 0) {
-                  this.f(-101);
+                  this.clearKeyboardFocus(-101);
                 }
               }
             }
-            if ((ho.field_X == 0) &&
+            if ((AccountCreationForm.field_X == 0) &&
               (BufferedSocket.field_q != 0)) {
-              this.handlePointerRelease(a.field_a, false, this, param2, aa.field_Nb, param0);
-              var6 = gi.field_c;
+              this.handlePointerRelease(ClientProtocolStage.field_a, false, this, param2, ContextMenu.field_Nb, param0);
+              var6 = InterfaceTextLoader.field_c;
               if (var6 != null) {
-                if (var6.field_s instanceof hf) {
-                  ((hf) (var6.field_s)).a(var6, 87, (te) null);
+                if (var6.field_s instanceof DropTargetListener) {
+                  ((DropTargetListener) (var6.field_s)).onWidgetDropped(var6, 87, (DropTargetWidget) null);
                 }
-                gi.field_c = null;
+                InterfaceTextLoader.field_c = null;
               }
               if ((var7 != 0) && (var5_int != 0 &&
-                tm.field_t != 0)) {
-                this.f(-119);
+                NameAvailabilityValidator.field_t != 0)) {
+                this.clearKeyboardFocus(-119);
               }
             }
           } else {
             if (var5_int != 0 &&
-              tm.field_t != 0) {
-              this.f(-119);
+              NameAvailabilityValidator.field_t != 0) {
+              this.clearKeyboardFocus(-119);
             }
           }
-          BufferedSocket.field_q = ho.field_X;
-          PacketBuffer.a(-57, this.getTooltip(0));
+          BufferedSocket.field_q = AccountCreationForm.field_X;
+          PacketBuffer.updateTooltip(-57, this.getTooltip(0));
           stackIn_48_0 = param1;
           return stackIn_48_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw oi.wrapException((Throwable) ((Object) var5), "na.BB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) var5), "na.BB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    final boolean a(int param0, char param1, int param2) {
+    final boolean processKeyInput(int param0, char param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         boolean stackIn_13_0 = false;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.c(3) &&
+          if (this.isFocused(3) &&
             this.handleKey(param0, param1, param2 + 82, this)) {
             return true;
           }
           if (param2 != -81) {
-            this.c(-34);
+            this.isFocused(-34);
           }
           var4_int = param0;
           if (var4_int == 80) {
@@ -648,11 +648,11 @@ class UiWidget extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw oi.wrapException((Throwable) ((Object) var4), "na.LA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) var4), "na.LA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    boolean c(int param0) {
+    boolean isFocused(int param0) {
         RuntimeException var2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -663,11 +663,11 @@ class UiWidget extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oi.wrapException((Throwable) ((Object) var2), "na.JA(" + param0 + ')');
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) var2), "na.JA(" + param0 + ')');
         }
     }
 
-    final boolean b(int param0, int param1, int param2, int param3, int param4) {
+    final boolean containsPoint(int param0, int param1, int param2, int param3, int param4) {
         RuntimeException var6 = null;
         boolean stackIn_16_0 = false;
         RuntimeException decompiledCaughtException = null;
@@ -680,7 +680,7 @@ class UiWidget extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw oi.wrapException((Throwable) ((Object) var6), "na.QA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) var6), "na.QA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -719,7 +719,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw oi.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -732,13 +732,13 @@ class UiWidget extends IntrusiveNode {
             this.field_H.drawWidget(this, param1, param2, true, true);
           }
           if (param0 != 0) {
-            this.field_D = (hi) null;
+            this.field_D = (TextLayout) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw oi.wrapException((Throwable) ((Object) var5), "na.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) var5), "na.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -763,7 +763,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw oi.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -788,11 +788,11 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw oi.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
-    final static void a(int[] param0, boolean param1, int[] param2, int param3, boolean param4, boolean param5, id param6) {
+    final static void projectMeshAndQueueFaces(int[] param0, boolean param1, int[] param2, int param3, boolean param4, boolean param5, TriangleMesh param6) {
         int stackIn_60_0 = 0;
         int stackIn_60_1 = 0;
         RuntimeException stackIn_65_0 = null;
@@ -865,40 +865,40 @@ class UiWidget extends IntrusiveNode {
           var21Lifetime1 = param2[0] - param0[0];
           var22Lifetime1 = -param0[1] + param2[1];
           var23Lifetime1 = -param0[2] + param2[2];
-          var9 = var21Lifetime1 * param0[3] + (param0[4] * var22Lifetime1 + var23Lifetime1 * param0[5]) >> -mh.field_a + 16;
-          var10 = param0[8] * var23Lifetime1 + var22Lifetime1 * param0[7] + var21Lifetime1 * param0[6] >> 16 - mh.field_a;
+          var9 = var21Lifetime1 * param0[3] + (param0[4] * var22Lifetime1 + var23Lifetime1 * param0[5]) >> -GameRoomPanelHelpers.field_a + 16;
+          var10 = param0[8] * var23Lifetime1 + var22Lifetime1 * param0[7] + var21Lifetime1 * param0[6] >> 16 - GameRoomPanelHelpers.field_a;
           var11 = param0[10] * var22Lifetime1 + param0[9] * var21Lifetime1 + var23Lifetime1 * param0[11] >> 16;
-          var21Lifetime2 = vn.field_a;
-          var22Lifetime2 = vn.field_f;
+          var21Lifetime2 = TriangleRasterizer.field_a;
+          var22Lifetime2 = TriangleRasterizer.field_f;
           var23Lifetime2 = 0;
           scanLoop1: while (true) {
             if (param6.field_q > var23Lifetime2) {
               var24Lifetime1 = param6.field_D[var23Lifetime2];
               var25Lifetime1 = param6.field_i[var23Lifetime2];
               var26Lifetime1 = param6.field_R[var23Lifetime2];
-              var27Lifetime1 = var9 + (var18 * var26Lifetime1 + (var24Lifetime1 * var12 + var25Lifetime1 * var15) >> -mh.field_a + 16);
-              var28Lifetime1 = var10 + (var19 * var26Lifetime1 + var25Lifetime1 * var16 + var24Lifetime1 * var13 >> 16 - mh.field_a);
+              var27Lifetime1 = var9 + (var18 * var26Lifetime1 + (var24Lifetime1 * var12 + var25Lifetime1 * var15) >> -GameRoomPanelHelpers.field_a + 16);
+              var28Lifetime1 = var10 + (var19 * var26Lifetime1 + var25Lifetime1 * var16 + var24Lifetime1 * var13 >> 16 - GameRoomPanelHelpers.field_a);
               var29Lifetime1 = var11 + (var14 * var24Lifetime1 + var25Lifetime1 * var17 + var20 * var26Lifetime1 >> 16);
               stackIn_60_0 = var29Lifetime1;
               stackIn_60_1 = 50;
               if (var30 == 0) {
                 if (stackIn_60_0 >= stackIn_60_1) {
                   NodeHashTableIterator.field_b[var23Lifetime2] = var27Lifetime1 / var29Lifetime1 + var21Lifetime2;
-                  pl.field_f[var23Lifetime2] = var22Lifetime2 + var28Lifetime1 / var29Lifetime1;
+                  StatusRequestHelpers.field_f[var23Lifetime2] = var22Lifetime2 + var28Lifetime1 / var29Lifetime1;
                   if (var29Lifetime1 < var7_int) {
                     var7_int = var29Lifetime1;
                   }
                   if (var8 < var29Lifetime1) {
                     var8 = var29Lifetime1;
                   }
-                  nc.field_b[var23Lifetime2] = var29Lifetime1;
+                  NameAlphabetTable.field_b[var23Lifetime2] = var29Lifetime1;
                 } else {
-                  nc.field_b[var23Lifetime2] = -2147483648;
+                  NameAlphabetTable.field_b[var23Lifetime2] = -2147483648;
                 }
                 if (param4) {
-                  oa.field_q[var23Lifetime2] = var27Lifetime1 >> mh.field_a;
-                  jg.field_e[var23Lifetime2] = var28Lifetime1 >> mh.field_a;
-                  bk.field_d[var23Lifetime2] = var29Lifetime1;
+                  HighscoreQuery.field_q[var23Lifetime2] = var27Lifetime1 >> GameRoomPanelHelpers.field_a;
+                  RsaKeyAndTextGlobals.field_e[var23Lifetime2] = var28Lifetime1 >> GameRoomPanelHelpers.field_a;
+                  TextLayoutLine.field_d[var23Lifetime2] = var29Lifetime1;
                 }
                 var23Lifetime2++;
                 continue;
@@ -918,20 +918,20 @@ class UiWidget extends IntrusiveNode {
                   var24Lifetime1 = param6.field_F[var23Lifetime2];
                   var25Lifetime1 = param6.field_G[var23Lifetime2];
                   var26Lifetime1 = param6.field_B[var23Lifetime2];
-                  lb.field_S[var23Lifetime2] = (var18 * var26Lifetime1 + var24Lifetime1 * var12 + var15 * var25Lifetime1 >> 16) + var9;
-                  MatchSetup.field_i[var23Lifetime2] = var10 + (var24Lifetime1 * var13 + var25Lifetime1 * var16 + var26Lifetime1 * var19 >> 16);
-                  pe.field_a[var23Lifetime2] = (var14 * var24Lifetime1 + (var17 * var25Lifetime1 + var26Lifetime1 * var20) >> 16) + var11;
+                  DateOfBirthPanel.field_S[var23Lifetime2] = (var18 * var26Lifetime1 + var24Lifetime1 * var12 + var15 * var25Lifetime1 >> 16) + var9;
+                  GameBoard.field_i[var23Lifetime2] = var10 + (var24Lifetime1 * var13 + var25Lifetime1 * var16 + var26Lifetime1 * var19 >> 16);
+                  ByteArrayPool.field_a[var23Lifetime2] = (var14 * var24Lifetime1 + (var17 * var25Lifetime1 + var26Lifetime1 * var20) >> 16) + var11;
                   var24Lifetime1 = param6.field_C[var23Lifetime2];
                   var25Lifetime1 = param6.field_E[var23Lifetime2];
                   var26Lifetime1 = param6.field_H[var23Lifetime2];
-                  mb.field_w[var23Lifetime2] = var9 + (var26Lifetime1 * var18 + var25Lifetime1 * var15 + var12 * var24Lifetime1 >> 16);
-                  pm.field_e[var23Lifetime2] = (var26Lifetime1 * var19 + (var13 * var24Lifetime1 + var16 * var25Lifetime1) >> 16) + var10;
-                  lb.field_Q[var23Lifetime2] = var11 + (var20 * var26Lifetime1 + (var25Lifetime1 * var17 + var24Lifetime1 * var14) >> 16);
+                  CacheEntry.field_w[var23Lifetime2] = var9 + (var26Lifetime1 * var18 + var25Lifetime1 * var15 + var12 * var24Lifetime1 >> 16);
+                  FontAndBrightnessHelpers.field_e[var23Lifetime2] = (var26Lifetime1 * var19 + (var13 * var24Lifetime1 + var16 * var25Lifetime1) >> 16) + var10;
+                  DateOfBirthPanel.field_Q[var23Lifetime2] = var11 + (var20 * var26Lifetime1 + (var25Lifetime1 * var17 + var24Lifetime1 * var14) >> 16);
                   var24Lifetime1 = param6.field_c[var23Lifetime2];
                   var25Lifetime1 = param6.field_z[var23Lifetime2];
                   var26Lifetime1 = param6.field_h[var23Lifetime2];
-                  nl.field_f[var23Lifetime2] = (var26Lifetime1 * var18 + (var15 * var25Lifetime1 + var24Lifetime1 * var12) >> 16) + var9;
-                  da.field_d[var23Lifetime2] = (var26Lifetime1 * var19 + var25Lifetime1 * var16 + var24Lifetime1 * var13 >> 16) + var10;
+                  DisplayMode.field_f[var23Lifetime2] = (var26Lifetime1 * var18 + (var15 * var25Lifetime1 + var24Lifetime1 * var12) >> 16) + var9;
+                  CanvasAndErrorHelpers.field_d[var23Lifetime2] = (var26Lifetime1 * var19 + var25Lifetime1 * var16 + var24Lifetime1 * var13 >> 16) + var10;
                   field_B[var23Lifetime2] = (var26Lifetime1 * var20 + var17 * var25Lifetime1 + var14 * var24Lifetime1 >> 16) + var11;
                   var23Lifetime2++;
                   if (var30 != 0) {
@@ -952,7 +952,7 @@ class UiWidget extends IntrusiveNode {
                 var18 = 0;
                 while (!(param6.field_O <= var18)) {
                   stackIn_60_0 = ~var18;
-                  stackIn_60_1 = ~kk.field_T.length;
+                  stackIn_60_1 = ~MarkerSlider.field_T.length;
                   if (var30 != 0) {
                     break scanLoop1;
                   }
@@ -962,9 +962,9 @@ class UiWidget extends IntrusiveNode {
                   var19 = param6.field_l[var18];
                   var20 = param6.field_d[var18];
                   var21Lifetime2 = param6.field_y[var18];
-                  kk.field_T[var18] = var20 * var12 + var19 * var9 + var21Lifetime2 * var15 >> 16;
-                  bf.field_p[var18] = var16 * var21Lifetime2 + var10 * var19 + var13 * var20 >> 16;
-                  od.field_X[var18] = var21Lifetime2 * var17 + (var14 * var20 + var19 * var11) >> 16;
+                  MarkerSlider.field_T[var18] = var20 * var12 + var19 * var9 + var21Lifetime2 * var15 >> 16;
+                  PlayingSound.field_p[var18] = var16 * var21Lifetime2 + var10 * var19 + var13 * var20 >> 16;
+                  NumericDateInputWidget.field_X[var18] = var21Lifetime2 * var17 + (var14 * var20 + var19 * var11) >> 16;
                   var18++;
                 }
               }
@@ -973,7 +973,7 @@ class UiWidget extends IntrusiveNode {
             }
             break;
           }
-          nh.a(stackIn_60_0, stackIn_60_1, param6, true, param5);
+          IconLabelItem.renderMeshFaces(stackIn_60_0, stackIn_60_1, param6, true, param5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -997,7 +997,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_74_2 = "{...}";
           }
-          throw oi.wrapException((Throwable) ((Object) stackIn_65_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(')').toString());
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) stackIn_65_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(')').toString());
         }
     }
 
@@ -1006,9 +1006,9 @@ class UiWidget extends IntrusiveNode {
         this.field_o = 0;
     }
 
-    UiWidget(String param0, kg param1, dn param2) {
+    UiWidget(String param0, WidgetPainter param1, WidgetListener param2) {
         RuntimeException runtimeException = null;
-        jh var4 = null;
+        WidgetTextLayout var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -1023,10 +1023,10 @@ class UiWidget extends IntrusiveNode {
           this.field_H = param1;
           this.field_A = param0;
           this.field_s = param2;
-          if (this.field_H instanceof jh) {
-            var4 = (jh) ((Object) this.field_H);
+          if (this.field_H instanceof WidgetTextLayout) {
+            var4 = (WidgetTextLayout) ((Object) this.field_H);
             this.field_F = var4.getPreferredHeight(this, (byte) 36);
-            this.field_u = var4.a(this, 91);
+            this.field_u = var4.getPreferredTextHeight(this, 91);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1051,11 +1051,11 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw oi.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
-    UiWidget(int param0, int param1, int param2, int param3, kg param4, dn param5) {
+    UiWidget(int param0, int param1, int param2, int param3, WidgetPainter param4, WidgetListener param5) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -1089,7 +1089,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw oi.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 

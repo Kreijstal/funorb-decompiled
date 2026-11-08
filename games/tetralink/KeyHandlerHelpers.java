@@ -1,0 +1,44 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class KeyHandlerHelpers {
+    static String field_e;
+    static String field_g;
+    static int[] field_c;
+    static int field_d;
+    static int field_a;
+    static Sprite[][] field_b;
+    static PcmStreamMixer field_f;
+
+    final static void clearKeyHandler(int param0) {
+        Object var1 = null;
+        Throwable var2 = null;
+        Throwable decompiledCaughtException = null;
+        if (param0 != -9648) {
+          return;
+        }
+        if (LoadingStatusHelpers.field_a == null) {
+          return;
+        }
+        var1 = LoadingStatusHelpers.field_a;
+        synchronized (var1) {
+          LoadingStatusHelpers.field_a = null;
+        }
+    }
+
+    public static void releaseStatics(int param0) {
+        field_e = null;
+        field_b = (Sprite[][]) null;
+        field_g = null;
+        field_f = null;
+        field_c = null;
+        if (param0 != 14236) {
+          KeyHandlerHelpers.clearKeyHandler(109);
+        }
+    }
+
+    static {
+        field_e = "Game";
+        field_g = "Loading music";
+    }
+}

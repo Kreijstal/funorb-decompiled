@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class SecondaryNodeDeque implements Iterable {
-    static hl field_d;
+    static UiComponent field_d;
     DualLinkNode field_e;
     static int[] field_b;
     static String field_a;
@@ -21,7 +21,7 @@ final class SecondaryNodeDeque implements Iterable {
           param1.secondaryPrevious.secondaryNext = param1;
           param1.secondaryNext.secondaryPrevious = param1;
         } catch (RuntimeException runtimeException) {
-          throw oi.wrapException((Throwable) ((Object) runtimeException), "rk.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) runtimeException), "rk.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -29,7 +29,7 @@ final class SecondaryNodeDeque implements Iterable {
         return (Iterator) ((Object) new SecondaryNodeDequeIterator(this));
     }
 
-    final DualLinkNode b(int param0) {
+    final DualLinkNode removeFirst(int param0) {
         DualLinkNode var2 = this.field_e.secondaryNext;
         if (this.field_e == var2) {
           return null;
@@ -41,32 +41,32 @@ final class SecondaryNodeDeque implements Iterable {
         return var2;
     }
 
-    final static void a(int param0, int param1, int param2) {
-        vg.field_Lb = param2;
-        dh.field_i = param0;
+    final static void setPopupMenuAnchor(int param0, int param1, int param2) {
+        NameEntryPopup.field_Lb = param2;
+        LruTextureCache.field_i = param0;
         if (param1 != -33) {
           SecondaryNodeDeque.releaseStatics(-45);
         }
     }
 
-    final static void c(int param0) {
+    final static void resetFrameTimingHistory(int param0) {
         int var1_int = 0;
         int var2 = TetraLink.field_J;
         int var1_intLifetime1;
         try {
-          wn.field_t.a(104);
+          MusicPatchPcmStream.field_t.resetTiming(104);
           if (param0 != -8243) {
             field_b = (int[]) null;
           }
           for (var1_int = 0; var1_int < 32; var1_int++) {
-            uh.field_c[var1_int] = 0L;
+            GameClock.field_c[var1_int] = 0L;
           }
           for (var1_intLifetime1 = 0; var1_intLifetime1 < 32; var1_intLifetime1++) {
-            ui.field_c[var1_intLifetime1] = 0L;
+            ModelMergeHelpers.field_c[var1_intLifetime1] = 0L;
           }
-          qh.field_n = 0;
+          DateOfBirthValidator.field_n = 0;
         } catch (RuntimeException runtimeException) {
-          throw oi.wrapException((Throwable) ((Object) runtimeException), "rk.E(" + param0 + ')');
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) runtimeException), "rk.E(" + param0 + ')');
         }
     }
 

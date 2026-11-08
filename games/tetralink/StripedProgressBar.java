@@ -1,0 +1,280 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class StripedProgressBar extends UiWidget {
+    int field_bb;
+    static String field_I;
+    private int field_T;
+    private Sprite field_L;
+    private int field_U;
+    private Sprite field_P;
+    static boolean field_S;
+    private int field_M;
+    private int field_W;
+    static int field_X;
+    static String field_O;
+    private int field_N;
+    private Sprite[] field_Q;
+    static String field_Z;
+    boolean field_K;
+    static int[] field_ab;
+    private int field_J;
+    private Sprite field_Y;
+    static String field_V;
+
+    private final Sprite buildEndMask(int param0) {
+        int var4 = 0;
+        int var6 = 0;
+        double var7 = 0.0;
+        int var9 = 0;
+        int var10 = TetraLink.field_J;
+        int var2 = this.field_u >> 1;
+        Sprite var3 = new Sprite(var2, this.field_u);
+        SectorCacheStore.setRasterTarget((byte) 117, var3);
+        int var5 = -120 % ((2 - param0) / 39);
+        for (var4 = 0; var4 < this.field_u; var4++) {
+          for (var6 = 0; var2 > var6; var6++) {
+            var7 = (double)var6 * (double)var6 / (double)((this.field_u - var4) * var4);
+            var9 = 1;
+            if (var7 < 1.0) {
+              var7 = Math.sqrt(-var7 + 1.0);
+              var9 = !(1.0 <= var7) ? (int)(var7 * 255.0) : 255;
+            }
+            SoftwareRasterizer.setPixel(var6, var4, var9 << 8 | var9 | var9 << 16);
+          }
+        }
+        LruTextureCache.popRaster(-581);
+        return var3;
+    }
+
+    public static void releaseStatics(byte param0) {
+        field_ab = null;
+        field_O = null;
+        field_V = null;
+        field_I = null;
+        if (param0 >= -99) {
+          return;
+        }
+        field_Z = null;
+    }
+
+    private final Sprite buildStripeSprite(int param0, byte param1, int param2) {
+        int var6 = 0;
+        int var5;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        Sprite var14;
+        int stackIn_7_0 = 0;
+        int stackIn_10_0 = 0;
+        int var8Lifetime1;
+        int var9Lifetime1;
+        int var12Lifetime1;
+        var13 = TetraLink.field_J;
+        var14 = new Sprite(this.field_U * 2, this.field_u);
+        SectorCacheStore.setRasterTarget((byte) 112, var14);
+        var5 = this.field_u >> 1;
+        for (var6 = 0; this.field_u > var6; var6++) {
+          var7 = (var6 >> 1) * (2 * this.field_U - 1) % (this.field_U * 2);
+          var8 = param2 & 16711935;
+          var9 = 65280 & param2;
+          var10 = -var5 + var6;
+          var11 = 128 + (int)(Math.sqrt((double)(-(var10 * var10) + var5 * var5)) / (double)var5 * 128.0);
+          if (256 > var11) {
+            stackIn_7_0 = (var9 * var11 & 16711680 | -16711936 & var11 * var8) >>> 8;
+          } else {
+            stackIn_7_0 = var8 | var9;
+          }
+          var12 = stackIn_7_0;
+          SoftwareRasterizer.drawHorizontalLine(var7, var6, this.field_U, var12);
+          var8Lifetime1 = param0 & 16711935;
+          var9Lifetime1 = 65280 & param0;
+          SoftwareRasterizer.drawHorizontalLine(-(2 * this.field_U) + var7, var6, this.field_U, var12);
+          if (var11 < 256) {
+            stackIn_10_0 = (-16711936 & var8Lifetime1 * var11 | 16711680 & var9Lifetime1 * var11) >>> 8;
+          } else {
+            stackIn_10_0 = var8Lifetime1 | var9Lifetime1;
+          }
+          var12Lifetime1 = stackIn_10_0;
+          SoftwareRasterizer.drawHorizontalLine(this.field_U + var7, var6, this.field_U, var12Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(var7 - this.field_U, var6, this.field_U, var12Lifetime1);
+        }
+        if (param1 >= -15) {
+          return (Sprite) null;
+        }
+        LruTextureCache.popRaster(-581);
+        return var14;
+    }
+
+    final static void drawOverlayBackdrop(boolean param0, int param1, boolean param2) {
+        if (!param2) {
+          SoftwareRasterizer.clear();
+        } else {
+          SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_f, SoftwareRasterizer.field_e, 0, 192);
+        }
+        if (param1 != 1) {
+          field_X = 111;
+        }
+        ViewportController.drawRootWidgets(param2, param1 + 107);
+    }
+
+    StripedProgressBar(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+        this(param0, param1, param2, param3, param4, param5, param6, param5 >> 1 & 8355711, param6 >> 1 & 8355711);
+    }
+
+    private final void rebuildSprites(int param0) {
+        Sprite discarded$0 = null;
+        this.field_Q = new Sprite[]{this.buildStripeSprite(this.field_W, (byte) -55, this.field_T), this.buildStripeSprite(this.field_N, (byte) -77, this.field_J)};
+        this.field_L = this.buildEndMask(param0 - 308991302);
+        this.field_P = this.field_L.copyFlippedHorizontal();
+        this.field_Y = new Sprite(this.field_u >> 1, this.field_u);
+        if (param0 != 308991265) {
+          discarded$0 = this.buildEndMask(-5);
+        }
+    }
+
+    final static String charToString(boolean param0, char param1) {
+        if (param0) {
+          StripedProgressBar.charToString(false, '￐');
+        }
+        return String.valueOf(param1);
+    }
+
+    private final void drawStripedBar(int param0, Sprite param1, int param2, byte param3) {
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_17_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int var5_int = 0;
+        RuntimeException var5 = null;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        var9 = TetraLink.field_J;
+        try {
+          var5_int = this.field_F + param0;
+          FullscreenFocusCanvas.pushRasterAndIntersectClip(-this.field_L.field_u + var5_int, param2 + this.field_u, param2, (byte) -79, this.field_L.field_u + param0);
+          var6 = param0 - this.field_M;
+          var7 = 10 % ((param3 - 44) / 63);
+          while (var5_int > var6) {
+            param1.drawTransparent(var6, param2);
+            var6 = var6 + param1.field_u;
+          }
+          LruTextureCache.popRaster(-581);
+          if (param0 + this.field_L.field_u >= SoftwareRasterizer.field_j) {
+            SectorCacheStore.setRasterTarget((byte) 118, this.field_Y);
+            param1.drawTransparent(-this.field_M, 0);
+            param1.drawTransparent(2 * this.field_U - this.field_M, 0);
+            this.field_P.drawMultiply(0, 0);
+            LruTextureCache.popRaster(-581);
+            this.field_Y.drawTransparent(param0, param2);
+          }
+          if (SoftwareRasterizer.field_l >= -this.field_L.field_u + var5_int) {
+            SectorCacheStore.setRasterTarget((byte) 116, this.field_Y);
+            for (var8 = this.field_M - this.field_L.field_u + this.field_F; var8 > 2 * this.field_U; var8 = var8 - 2 * this.field_U) {
+            }
+            param1.drawTransparent(-var8, 0);
+            param1.drawTransparent(this.field_U * 2 - var8, 0);
+            this.field_L.drawMultiply(0, 0);
+            LruTextureCache.popRaster(-581);
+            this.field_Y.drawTransparent(-this.field_L.field_u + var5_int, param2);
+            return;
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_16_0 = var5;
+          stackIn_16_1 = new StringBuilder().append("lg.C(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_17_2 = "null";
+          } else {
+            stackIn_17_2 = "{...}";
+          }
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+        }
+    }
+
+    final void updatePointer(UiWidget param0, int param1, int param2, boolean param3) {
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var5 = null;
+        try {
+          if (!param3) {
+            return;
+          }
+          if (this.field_K) {
+            this.field_M = this.field_M + 1;
+            if (this.field_M > this.field_U * 2) {
+              this.field_M = this.field_M - this.field_U * 2;
+              return;
+            }
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_8_0 = var5;
+          stackIn_8_1 = new StringBuilder().append("lg.MA(");
+          if (param0 == null) {
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_2 = "{...}";
+          }
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+        }
+    }
+
+    final void setStripeColours(int param0, int param1, int param2) {
+        this.field_N = 8355711 & param2 >> 1;
+        this.field_T = param1;
+        int var4 = 63 / ((66 - param0) / 52);
+        this.field_W = param2;
+        this.field_J = 8355711 & param1 >> 1;
+        this.rebuildSprites(308991265);
+    }
+
+    final void drawLayer(int param0, int param1, int param2, int param3) {
+        if (param0 != param3) {
+          return;
+        }
+        int var5 = this.field_t + param1;
+        int var6 = this.field_w + param2;
+        this.drawStripedBar(var5, this.field_Q[0], var6, (byte) 124);
+        if (65536 > this.field_bb) {
+          FullscreenFocusCanvas.pushRasterAndIntersectClip(var5 + this.field_F, this.field_u + var6, var6, (byte) -79, (this.field_bb * this.field_F >> 16) + var5);
+          this.drawStripedBar(var5, this.field_Q[1], var6, (byte) 119);
+          LruTextureCache.popRaster(-581);
+        }
+    }
+
+    private StripedProgressBar(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+        this.field_W = param6;
+        this.field_T = param5;
+        this.field_J = param7;
+        this.field_N = param8;
+        this.field_U = param4;
+        this.setBounds(param3, param1, 86, param0, param2);
+    }
+
+    final void setBounds(int param0, int param1, int param2, int param3, int param4) {
+        int var6 = -19 % ((param2 + 61) / 51);
+        super.setBounds(param0, param1, 90, param3, param4);
+        this.rebuildSprites(308991265);
+    }
+
+    static {
+        field_I = "Suggest muting this player";
+        field_O = "Accept draw";
+        field_Z = "Month";
+        field_ab = new int[16384];
+        field_V = "Playing";
+    }
+}

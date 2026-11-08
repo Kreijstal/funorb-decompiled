@@ -9,17 +9,17 @@ class DualLinkNode extends IntrusiveNode {
     static String field_p;
     DualLinkNode secondaryPrevious;
 
-    final long c(int param0) {
+    final long getSecondaryKey(int param0) {
         int var2 = 17 / ((param0 + 27) / 46);
         return this.secondaryKey;
     }
 
-    final void a(long param0, int param1) {
+    final void setSecondaryKey(long param0, int param1) {
         if (null != this.secondaryPrevious) {
           throw new RuntimeException();
         }
         if (param1 != 17260) {
-          DualLinkNode.a((byte) -92, true);
+          DualLinkNode.enterFullscreen((byte) -92, true);
         }
         this.secondaryKey = param0;
     }
@@ -35,11 +35,11 @@ class DualLinkNode extends IntrusiveNode {
         return true;
     }
 
-    final static kh createRepalettedSprite(boolean param0, int[] param1, kh param2) {
-        kh var3 = null;
+    final static IndexedSprite createRepalettedSprite(boolean param0, int[] param1, IndexedSprite param2) {
+        IndexedSprite var3 = null;
         RuntimeException var3_ref = null;
-        kh stackIn_2_0 = null;
-        kh stackIn_4_0 = null;
+        IndexedSprite stackIn_2_0 = null;
+        IndexedSprite stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -48,10 +48,10 @@ class DualLinkNode extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0) {
-            stackIn_2_0 = (kh) null;
+            stackIn_2_0 = (IndexedSprite) null;
             return stackIn_2_0;
           }
-          var3 = new kh(0, 0, 0);
+          var3 = new IndexedSprite(0, 0, 0);
           var3.field_k = param2.field_k;
           var3.field_d = param2.field_d;
           var3.field_f = param2.field_f;
@@ -78,38 +78,38 @@ class DualLinkNode extends IntrusiveNode {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw oi.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
-    final static void a(byte param0, boolean param1) {
+    final static void enterFullscreen(byte param0, boolean param1) {
         int var2;
         int var3;
-        kh var4;
+        IndexedSprite var4;
         var3 = TetraLink.field_J;
-        if (0 >= mb.field_C) {
-          var2 = (!ug.o(-115)) ? 1 : 0;
+        if (0 >= CacheEntry.field_C) {
+          var2 = (!LoadingProgressDialog.isKeyboardIdle(-115)) ? 1 : 0;
         } else {
-          if (hn.field_M != null) {
-            hd.field_u = hn.field_M.b(false);
-            pf.a(123, 2);
+          if (DateInputWidget.field_M != null) {
+            EmailAvailabilityValidator.field_u = DateInputWidget.field_M.enterFullscreen(false);
+            PlayerContextMenu.notifyBrowserResize(123, 2);
           } else {
-            hd.field_u = bm.createFullscreenCanvas(480, 0, 0, 640, 0, nd.field_Pb);
+            EmailAvailabilityValidator.field_u = FullscreenCanvasHelpers.createFullscreenCanvas(480, 0, 0, 640, 0, QuickChatHelpDialog.field_Pb);
           }
-          if (hd.field_u == null) {
+          if (EmailAvailabilityValidator.field_u == null) {
             var2 = 3;
           } else {
-            da.a((byte) -76, hd.field_u);
+            CanvasAndErrorHelpers.attachCanvasInput((byte) -76, EmailAvailabilityValidator.field_u);
             var2 = 2;
           }
         }
-        if (null == hn.field_M &&
-          rm.field_f) {
-          om.a(param1, 10, var2);
+        if (null == DateInputWidget.field_M &&
+          LoadingScreenHelpers.field_f) {
+          ReportAbuseDialog.buildFullscreenDialog(param1, 10, var2);
         }
         if (param0 > -68) {
-          var4 = (kh) null;
-          DualLinkNode.createRepalettedSprite(false, (int[]) null, (kh) null);
+          var4 = (IndexedSprite) null;
+          DualLinkNode.createRepalettedSprite(false, (int[]) null, (IndexedSprite) null);
         }
     }
 
@@ -126,29 +126,29 @@ class DualLinkNode extends IntrusiveNode {
         this.secondaryNext = null;
     }
 
-    final static dk a(byte param0, java.applet.Applet param1) {
+    final static LoginMethod readLastLoginMethod(byte param0, java.applet.Applet param1) {
         int var4 = 0;
         String var2 = null;
         RuntimeException var2_ref = null;
-        dk[] var3_ref_dk__ = null;
+        LoginMethod[] var3_ref_dk__ = null;
         int var3 = 0;
-        dk var5 = null;
+        LoginMethod var5 = null;
         int var6 = 0;
-        dk stackIn_4_0 = null;
-        dk stackIn_10_0 = null;
-        dk stackIn_13_0 = null;
+        LoginMethod stackIn_4_0 = null;
+        LoginMethod stackIn_10_0 = null;
+        LoginMethod stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         var6 = TetraLink.field_J;
         try {
-          var2 = TetraLink.a("jagex-last-login-method", -28536, param1);
+          var2 = TetraLink.readCookie("jagex-last-login-method", -28536, param1);
           if (var2 == null) {
-            stackIn_4_0 = vc.field_b;
+            stackIn_4_0 = DefaultQuickChatContext.field_b;
             return stackIn_4_0;
           }
-          var3_ref_dk__ = lf.a(7);
+          var3_ref_dk__ = BevelFrameSpriteFactory.getLoginMethods(7);
           for (var4 = 0; var4 < var3_ref_dk__.length; var4++) {
             var5 = var3_ref_dk__[var4];
             if (var5.matchesCookieValue(16412, var2)) {
@@ -157,7 +157,7 @@ class DualLinkNode extends IntrusiveNode {
             }
           }
           var3 = -31 / ((param0 - 21) / 47);
-          stackIn_13_0 = vc.field_b;
+          stackIn_13_0 = DefaultQuickChatContext.field_b;
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -169,7 +169,7 @@ class DualLinkNode extends IntrusiveNode {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw oi.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw IndexedSpriteState.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
