@@ -187,7 +187,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
               TextButton.field_E = stackIn_58_0;
               if (fl.field_a) {
                 UiContainer.field_z.readUnsignedByte((byte) 110);
-                ne.field_g = UiContainer.field_z.readUnsignedByte((byte) -115);
+                PlayerActionMenu.field_g = UiContainer.field_z.readUnsignedByte((byte) -115);
                 UiContainer.field_z.readInt(-10674);
                 ResizableViewResizeListener.field_d = UiContainer.field_z.readUnsignedShort(-98);
                 ra.field_f = new byte[ResizableViewResizeListener.field_d];

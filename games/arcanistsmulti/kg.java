@@ -107,7 +107,7 @@ final class kg {
           if (!param1) {
             field_b = 104;
           }
-          var4 = UsernameCredentials.a(0, param2);
+          var4 = UsernameCredentials.findEntryByName(0, param2);
           if (var4 != null &&
             var4.field_Lb != null) {
             return true;

@@ -138,7 +138,7 @@ final class MenuButtonPanel extends UiContainer implements ButtonListener {
 
     private final static IndexedSprite createDecodedIndexedSprite(int param0) {
         IndexedSprite var1 = new IndexedSprite(pb.field_g, gn.field_a, hl.field_l[0], SectorCacheStore.field_d[0], jg.field_p[0], ho.field_i[0], AccountRegistrationPanel.field_I[param0], ph.field_c);
-        CanvasRasterBuffer.a(-18229);
+        CanvasRasterBuffer.releaseDecodeArrays(-18229);
         return var1;
     }
 

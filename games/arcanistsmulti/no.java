@@ -36,7 +36,7 @@ final class no extends ContentTransitionDialog {
         int var4;
         aj[] var5;
         var4 = ArcanistsMulti.field_G ? 1 : 0;
-        var5 = so.c(96);
+        var5 = MenuInputState.getRegisteredEntries(96);
         var2 = var5;
         for (var3 = param1; var3 < var5.length; var3++) {
           if (var5[var3].field_c == param0) {

@@ -45,7 +45,7 @@ final class i {
           }
           var3 = new ArgbSprite(pb.field_g, gn.field_a, hl.field_l[0], SectorCacheStore.field_d[0], jg.field_p[0], ho.field_i[0], var13);
         }
-        CanvasRasterBuffer.a(-18229);
+        CanvasRasterBuffer.releaseDecodeArrays(-18229);
         return (Sprite) (var3);
     }
 
@@ -166,10 +166,10 @@ final class i {
         RuntimeException var1 = null;
         var2 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          if (!bj.g(false)) {
+          if (!bj.hasActivePanel(false)) {
             if (ProxySocketConnector.field_m != null &&
               ProxySocketConnector.field_m.field_e) {
-              u.b(param0 ^ 6);
+              HuffmanCodec.restoreWindowedMode(param0 ^ 6);
               pm.field_e.pushPanel(new qn(pm.field_e, FadingModalPanel.field_C), 15637);
             }
             return;
@@ -266,7 +266,7 @@ final class i {
         String[] var3 = null;
         SceneWidget[] var4 = null;
         try {
-          var3 = new String[]{param0, u.field_d, lm.field_g};
+          var3 = new String[]{param0, HuffmanCodec.field_d, lm.field_g};
           var4 = new SceneWidget[]{param1, ec.field_d, (SceneWidget) ((Object) dd.field_c)};
           this.field_c = new tn(0L, ub.field_c, var3, mn.field_t, var4, 0);
         } catch (RuntimeException runtimeException) {

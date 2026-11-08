@@ -193,7 +193,7 @@ final class BevelBoxPainter implements WidgetPainter {
             oj.a(-32171, var7 + 2, var6_int + 2, -4 + param0.field_k, param0.field_v - 4);
           }
           SoftwareRasterizer.setClip(var6_int, var7, -2 + (var6_int + param0.field_v), param0.field_k + var7);
-          var8 = this.field_d.field_P.g(126);
+          var8 = this.field_d.field_P.getSelectedItem(126);
           if (var8 != null) {
             var9 = var8.toString();
             this.field_d.field_Q.drawText(var9, var6_int + 2, -1 + (this.field_d.field_Q.field_C + param0.field_k >> 1) + var7, 10000536, -1);

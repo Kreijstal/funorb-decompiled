@@ -77,7 +77,7 @@ final class ng extends UiContainer implements TextHotspotListener, ButtonListene
         int var10Lifetime1;
         var12 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          TextHotspotWidget.a(16, sm.field_a);
+          TextHotspotWidget.positionZoomedPanels(16, sm.field_a);
           if (null != om.field_x) {
             SocketConnector.field_d.field_I = 0;
             var15 = SocketConnector.field_d;
@@ -217,13 +217,13 @@ final class ng extends UiContainer implements TextHotspotListener, ButtonListene
             }
           }
           stackIn_64_0 = hl.field_m;
-          stackIn_65_1 = (param2) && (!param0) && (!so.field_j);
+          stackIn_65_1 = (param2) && (!param0) && (!MenuInputState.field_j);
           ((SceneWidget) (Object) stackIn_64_0).updateInputFullScreen(stackIn_65_1, (byte) 33);
           stackIn_69_0 = ReflectionCheckRequest.field_h;
-          stackIn_70_1 = (param2) && (!param0) && (!so.field_j);
+          stackIn_70_1 = (param2) && (!param0) && (!MenuInputState.field_j);
           ((SceneWidget) (Object) stackIn_69_0).updateInputFullScreen(stackIn_70_1, (byte) 90);
           stackIn_74_0 = IconTextSceneWidget.field_Fb;
-          stackIn_75_1 = (param2) && (!param0) && (so.field_j);
+          stackIn_75_1 = (param2) && (!param0) && (MenuInputState.field_j);
           ((SceneWidget) (Object) stackIn_74_0).updateInputFullScreen(stackIn_75_1, (byte) 64);
           tn.field_Ob.field_c.updateTabs((byte) 101);
           if (null != om.field_x) {
@@ -328,14 +328,14 @@ final class ng extends UiContainer implements TextHotspotListener, ButtonListene
         var6 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           if (0 == param3) {
-            ClipState.a(126, "terms.ws");
+            ClipState.setStatusCaption(126, "terms.ws");
           } else {
             if (param3 != 1) {
               if (param3 == 2) {
-                ClipState.a(127, "conduct.ws");
+                ClipState.setStatusCaption(127, "conduct.ws");
               }
             } else {
-              ClipState.a(126, "privacy.ws");
+              ClipState.setStatusCaption(126, "privacy.ws");
             }
           }
           if (param2 != -1607) {
@@ -403,7 +403,7 @@ final class ng extends UiContainer implements TextHotspotListener, ButtonListene
           this.field_J.a(1, 0, MenuButtonPainter.field_s);
           this.field_J.field_o = (UiListener) (this);
           this.field_J.field_v = -40 + this.field_v;
-          this.field_J.a(26, (byte) -4, this.field_v - 40, var3);
+          this.field_J.setBoundsToPreferredHeight(26, (byte) -4, this.field_v - 40, var3);
           var3 = var3 + (this.field_J.field_k + 15);
           this.addChild(-111, this.field_J);
           var5 = 4;

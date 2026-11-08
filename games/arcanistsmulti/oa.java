@@ -27,7 +27,7 @@ final class oa {
         RuntimeException decompiledCaughtException = null;
         try {
           Bzip2State.field_h = false;
-          u.field_k = false;
+          HuffmanCodec.field_k = false;
           if (null != vf.field_k &&
             vf.field_k.field_G) {
             var3_int = 1;

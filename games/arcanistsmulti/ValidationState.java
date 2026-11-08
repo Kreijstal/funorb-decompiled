@@ -61,7 +61,7 @@ final class ValidationState {
         }
     }
 
-    final static void b(byte param0) {
+    final static void processDisconnectQueue(byte param0) {
         ce var1 = (ce) (lh.field_c.first(12623));
         int var2 = -104 % ((-41 - param0) / 40);
         if (var1 == null) {
@@ -76,9 +76,9 @@ final class ValidationState {
         var1.unlink(true);
     }
 
-    final static boolean a(boolean param0, int param1, int param2, int param3) {
+    final static boolean routeKeyInput(boolean param0, int param1, int param2, int param3) {
         if (param0) {
-          ValidationState.b((byte) -111);
+          ValidationState.processDisconnectQueue((byte) -111);
         }
         if (wh.field_g) {
           return AccountRegistrationPanel.field_U.processKey(ed.field_Bb, (byte) 123, IntrusiveDeque.field_d);
@@ -99,7 +99,7 @@ final class ValidationState {
         throw new IllegalStateException();
     }
 
-    final static String a(byte param0, int param1, String param2) {
+    final static String getDisplayNameError(byte param0, int param1, String param2) {
         String stackIn_3_0 = null;
         String stackIn_7_0 = null;
         String stackIn_11_0 = null;
@@ -179,7 +179,7 @@ final class ValidationState {
         field_a = null;
     }
 
-    final static boolean a(int param0, ResourceArchive param1) {
+    final static boolean areAllGroupsReady(int param0, ResourceArchive param1) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -206,7 +206,7 @@ final class ValidationState {
         }
     }
 
-    final static void a(boolean param0, boolean param1, int param2, int param3) {
+    final static void updateStatusTexts(boolean param0, boolean param1, int param2, int param3) {
         SceneWidget stackIn_11_0 = null;
         boolean stackIn_12_1 = false;
         SceneWidget stackIn_18_0 = null;
@@ -215,7 +215,7 @@ final class ValidationState {
         boolean stackIn_24_1 = false;
         int var5;
         var5 = ArcanistsMulti.field_G ? 1 : 0;
-        WidgetStyleLayer.a((byte) -126);
+        WidgetStyleLayer.layoutCenteredPanels((byte) -126);
         if (param2 != 4) {
           field_b = (String) null;
         }

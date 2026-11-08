@@ -4,7 +4,7 @@
 final class eo {
     static Sprite[] field_a;
     static int[] field_b;
-    static ne field_c;
+    static PlayerActionMenu field_c;
 
     final static short[] readPackedShorts(CipherPacketBuffer param0, short[] param1, int param2, int param3) {
         int var4_int = 0;

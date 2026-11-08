@@ -169,7 +169,7 @@ final class DraggableWidget extends SingleChildContainer {
           if (param1 != 1) {
             return true;
           }
-          so.field_i = this;
+          MenuInputState.field_i = this;
           this.field_O = -this.field_j + param0 - param3;
           this.field_F = -param6 + (param5 - this.field_n);
           return true;

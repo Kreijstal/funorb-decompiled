@@ -14,7 +14,7 @@ final class th {
     static String field_a;
     static int[] field_b;
 
-    final void a(int param0, int param1, String param2, int param3) {
+    final void setEntryText(int param0, int param1, String param2, int param3) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -45,7 +45,7 @@ final class th {
         }
     }
 
-    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static Sprite[] createBevelFrameSprites(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var14 = 0;
         int var9;
         Sprite[] var10;
@@ -113,7 +113,7 @@ final class th {
         return var10Lifetime1;
     }
 
-    final static void a(ResourceArchive param0, ResourceArchive param1, ResourceArchive param2, byte param3, boolean param4) {
+    final static void initializeUi(ResourceArchive param0, ResourceArchive param1, ResourceArchive param2, byte param3, boolean param4) {
         try {
           SingleChildContainer.field_z = nj.a("", param3 + 133);
           SingleChildContainer.field_z.a(false, (byte) -59);
@@ -129,7 +129,7 @@ final class th {
         }
     }
 
-    final boolean a(int param0, int param1) {
+    final boolean isEntryAvailable(int param0, int param1) {
         if (param0 > param1) {
           return false;
         }
@@ -309,7 +309,7 @@ final class th {
         }
     }
 
-    final String a(byte param0, int param1) {
+    final String getEntryName(byte param0, int param1) {
         if (param0 <= 107) {
           return (String) null;
         }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vg {
+final class MeshModel {
     int field_i;
     short[] field_s;
     static ResourceArchive field_l;
@@ -48,7 +48,7 @@ final class vg {
     int[] field_J;
     int field_N;
 
-    final static void a(byte param0) {
+    final static void handleZoomKeys(byte param0) {
         int var1;
         if (!td.e(true)) {
           return;
@@ -75,7 +75,7 @@ final class vg {
         var1 = 36 / ((21 - param0) / 50);
     }
 
-    final void a(int param0, byte param1, int param2, int param3) {
+    final void translate(int param0, byte param1, int param2, int param3) {
         int var6 = 0;
         int var7 = ArcanistsMulti.field_G ? 1 : 0;
         int var5 = -13 % ((-60 - param1) / 62);
@@ -84,7 +84,7 @@ final class vg {
           this.field_B[var6] = (short)(this.field_B[var6] + param0);
           this.field_L[var6] = (short)(this.field_L[var6] + param2);
         }
-        this.a(false);
+        this.setBoundsValid(false);
     }
 
     public static void releaseStatics(int param0) {
@@ -98,15 +98,15 @@ final class vg {
         field_n = null;
     }
 
-    static long a(long param0, long param1) {
+    static long longOr(long param0, long param1) {
         return param0 | param1;
     }
 
-    private final void a(boolean param0) {
+    private final void setBoundsValid(boolean param0) {
         this.field_m = param0 ? true : false;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
+    final void scale(int param0, int param1, int param2, int param3, int param4) {
         int var6 = 0;
         int var7 = ArcanistsMulti.field_G ? 1 : 0;
         for (var6 = param1; this.field_f > var6; var6++) {
@@ -114,10 +114,10 @@ final class vg {
           this.field_B[var6] = (short)(param0 * this.field_B[var6] / param2);
           this.field_L[var6] = (short)(param3 * this.field_L[var6] / param2);
         }
-        this.a(false);
+        this.setBoundsValid(false);
     }
 
-    final void b(byte param0) {
+    final void computeBounds(byte param0) {
         int var8 = 0;
         int var2;
         int var3;
@@ -174,7 +174,7 @@ final class vg {
         this.field_i = var5;
     }
 
-    vg() {
+    MeshModel() {
         this.field_m = false;
         this.field_F = (byte) 0;
     }

@@ -263,7 +263,7 @@ final class co {
               rk.field_O.setPlayerCount(1, (byte) -95);
             }
           }
-          ce.field_m.a(true);
+          ce.field_m.makeRasterTarget(true);
           qn.field_ob.field_z = gj.field_a[rk.field_O.field_F];
           if (param0 <= 103) {
             co.resetBattleState(-94);

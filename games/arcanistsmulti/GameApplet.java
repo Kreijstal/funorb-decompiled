@@ -36,7 +36,7 @@ abstract class GameApplet extends GameAppletShell {
         StrongCacheEntry.field_w = qj.createMouseWheelHandler((byte) -86);
         IntKeyLookup.attachInputHandlers(on.field_c, (byte) 122);
         sa.field_Bb = param6;
-        u.field_g = param1;
+        HuffmanCodec.field_g = param1;
         dm.field_H = param7;
         ce.field_n = param5;
         cj.field_d = param3;
@@ -196,9 +196,9 @@ abstract class GameApplet extends GameAppletShell {
             }
           }
           if (3 == var4) {
-            if (u.field_b != -1 &&
-              u.field_b != 0) {
-              u.field_b = -1;
+            if (HuffmanCodec.field_b != -1 &&
+              HuffmanCodec.field_b != 0) {
+              HuffmanCodec.field_b = -1;
               MusicPatchNode.a((byte) -34);
             }
             if (param1) {
@@ -210,7 +210,7 @@ abstract class GameApplet extends GameAppletShell {
                   oa.a(!param0, var5_intLifetime2, MenuButtonPanel.field_E);
                   MenuButtonPanel.field_E = null;
                 } else {
-                  vg.field_K = fk.field_k;
+                  MeshModel.field_K = fk.field_k;
                   ArcanistsMulti.updateNoticeText((byte) 48);
                   qe.field_p = false;
                   fj.field_j = 10;
@@ -227,7 +227,7 @@ abstract class GameApplet extends GameAppletShell {
             }
           }
           if (5 == var4) {
-            UsernameCredentials.a((byte) 125, IconButtonPainter.getApplet(121));
+            UsernameCredentials.openQuitPage((byte) 125, IconButtonPainter.getApplet(121));
           }
           if (6 == var4 &&
             lh.field_n) {
@@ -364,7 +364,7 @@ abstract class GameApplet extends GameAppletShell {
         if (fj.field_j != 11) {
           return var2;
         }
-        if (u.field_b != 0) {
+        if (HuffmanCodec.field_b != 0) {
           return var2;
         }
         ArcanistsMulti.updateNoticeText((byte) 48);
@@ -481,7 +481,7 @@ abstract class GameApplet extends GameAppletShell {
               UiContainer.d(false);
             }
           } else {
-            ValidationState.b((byte) -128);
+            ValidationState.processDisconnectQueue((byte) -128);
           }
           return;
         }
@@ -540,35 +540,35 @@ abstract class GameApplet extends GameAppletShell {
             tn.field_Hb = 15000L + qj.monotonicTimeMillis(-26572);
           }
         }
-        if (u.field_b == -1 ||
-          u.field_b == 0) {
-          stackIn_24_0 = (u.field_b != -1) ? 0 : 1;
+        if (HuffmanCodec.field_b == -1 ||
+          HuffmanCodec.field_b == 0) {
+          stackIn_24_0 = (HuffmanCodec.field_b != -1) ? 0 : 1;
           var3Lifetime1 = stackIn_24_0;
-          u.field_b = CheckboxPainter.a((byte) 116);
+          HuffmanCodec.field_b = CheckboxPainter.a((byte) 116);
           if (var3Lifetime1 != 0 &&
-            u.field_b == 0 &&
+            HuffmanCodec.field_b == 0 &&
             11 == fj.field_j &&
             !ProxySocketConnector.c((byte) -44)) {
             ArcanistsMulti.updateNoticeText((byte) 48);
           }
-          if (u.field_b != -1 &&
-            u.field_b != 0) {
+          if (HuffmanCodec.field_b != -1 &&
+            HuffmanCodec.field_b != 0) {
             tn.field_Hb = qj.monotonicTimeMillis(-26572) + 15000L;
           }
         }
-        if (u.field_b != -1 &&
-          u.field_b != 0) {
+        if (HuffmanCodec.field_b != -1 &&
+          HuffmanCodec.field_b != 0) {
           if (ih.field_f < 10) {
-            if (3 == u.field_b) {
+            if (3 == HuffmanCodec.field_b) {
               this.showErrorPage("js5crc", (byte) -128);
             } else {
-              if (u.field_b == 4) {
+              if (HuffmanCodec.field_b == 4) {
                 this.showErrorPage("js5io", (byte) -128);
               } else {
-                if (u.field_b == 2) {
+                if (HuffmanCodec.field_b == 2) {
                   this.showErrorPage("js5connect_full", (byte) -126);
                 } else {
-                  if (5 == u.field_b) {
+                  if (5 == HuffmanCodec.field_b) {
                     this.showErrorPage("outofdate", (byte) -117);
                   } else {
                     this.showErrorPage("js5connect", (byte) -126);
@@ -579,14 +579,14 @@ abstract class GameApplet extends GameAppletShell {
           } else {
             if (fj.field_j >= 10) {
               fk.d(-11);
-              if (u.field_b != 3) {
-                if (u.field_b == 4) {
+              if (HuffmanCodec.field_b != 3) {
+                if (HuffmanCodec.field_b == 4) {
                   oa.a(true, 256, BattleScreen.field_N);
                 } else {
-                  if (u.field_b == 2) {
+                  if (HuffmanCodec.field_b == 2) {
                     oa.a(true, 256, BevelTextPainter.field_p);
                   } else {
-                    if (u.field_b != 5) {
+                    if (HuffmanCodec.field_b != 5) {
                       oa.a(true, 256, dd.field_a);
                     } else {
                       oa.a(true, 5, IndexedSpriteState.field_d);
@@ -600,18 +600,18 @@ abstract class GameApplet extends GameAppletShell {
             }
           }
         }
-        if ((u.field_b != -1 &&
-          u.field_b != 0 ||
+        if ((HuffmanCodec.field_b != -1 &&
+          HuffmanCodec.field_b != 0 ||
           ProxySocketConnector.c((byte) -44)) &&
           qj.monotonicTimeMillis(-26572) >= tn.field_Hb) {
           kg.field_f = false;
-          if (u.field_b != -1 &&
-            0 != u.field_b) {
-            u.field_b = -1;
+          if (HuffmanCodec.field_b != -1 &&
+            0 != HuffmanCodec.field_b) {
+            HuffmanCodec.field_b = -1;
             MusicPatchNode.a((byte) -34);
           }
         }
-        if (u.field_b == 0 &&
+        if (HuffmanCodec.field_b == 0 &&
           !ProxySocketConnector.c((byte) -44)) {
           ii.field_f = false;
         }
@@ -628,7 +628,7 @@ abstract class GameApplet extends GameAppletShell {
           }
           da.field_b = ViewportController.a((byte) -93, false, true, cj.field_d, 1);
           DiskCacheRequest.field_C = ViewportController.a((byte) -93, false, true, dm.field_H, 1);
-          ho.field_g = ViewportController.a((byte) -93, false, true, u.field_g, 1);
+          ho.field_g = ViewportController.a((byte) -93, false, true, HuffmanCodec.field_g, 1);
           field_D = DiskCacheRequest.field_C;
           ih.field_f = 2;
           LoadingTracker.field_a = da.field_b;
@@ -652,12 +652,12 @@ abstract class GameApplet extends GameAppletShell {
         }
         if (ih.field_f == 3 &&
           IntrusiveDeque.areCommonUiResourcesReady(ho.field_g, param0, DiskCacheRequest.field_C, da.field_b) &&
-          ValidationState.a(18306, ho.field_g)) {
+          ValidationState.areAllGroupsReady(18306, ho.field_g)) {
           rk.f(-73);
           cj.composeAgreementText(-128);
           ArrayWidgetContainer.field_C = hn.field_l;
           lh.field_n = false;
-          th.a(da.field_b, ho.field_g, DiskCacheRequest.field_C, (byte) -40, Js5Transport.field_d);
+          th.initializeUi(da.field_b, ho.field_g, DiskCacheRequest.field_C, (byte) -40, Js5Transport.field_d);
           if (af.field_Ib ||
             null != Bzip2State.field_y) {
             stackIn_101_0 = !(af.field_Ib);
@@ -720,7 +720,7 @@ abstract class GameApplet extends GameAppletShell {
           IntKeyLookup.attachInputHandlers(on.field_c, (byte) 125);
         }
         if (cc.field_d[8]) {
-          UsernameCredentials.c(-99);
+          UsernameCredentials.sendPendingDateRequests(-99);
         }
     }
 
@@ -734,7 +734,7 @@ abstract class GameApplet extends GameAppletShell {
           discarded$0 = this.pollLoginResponse(false, true, false);
         }
         UiContainer.field_z.readEncryptedBytes(var5, (byte) 108, 0, var4);
-        DelegatingCanvas.a(ValidationHelpWidget.a((byte) 113, var5), IconButtonPainter.getApplet(127), var3 != 0, (byte) -116);
+        DelegatingCanvas.a(ValidationHelpWidget.decodeString((byte) 113, var5), IconButtonPainter.getApplet(127), var3 != 0, (byte) -116);
     }
 
     final void enableMessageGroups(boolean param0, boolean param1, boolean param2, boolean param3, boolean param4, byte param5, boolean param6) {

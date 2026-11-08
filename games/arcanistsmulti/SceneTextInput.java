@@ -208,7 +208,7 @@ final class SceneTextInput extends SceneWidget {
           DualLinkDeque.field_b = IterableNodeHashTable.loadIndexedSpritesByName("", 0, "32", param0);
           tk.field_x = qe.loadSpriteSheet(param0, "64", "", 122);
           md.field_f = qe.loadSpriteSheet(param0, "128", "", 46);
-          vg.field_M = af.loadIndexedSpriteByName("volcano", "", 19412, param0);
+          MeshModel.field_M = af.loadIndexedSpriteByName("volcano", "", 19412, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -263,7 +263,7 @@ final class SceneTextInput extends SceneWidget {
           SceneTextInput.drawMeshTriangle(120, -69, 53, 92, -36, 113, 49, (int[]) null, 83, -103, -7, -17, -113, 48, -117, -23, 64);
         }
         if (param1) {
-          stackIn_26_0 = ~re.field_r;
+          stackIn_26_0 = ~WrappedTextLayout.field_r;
           stackIn_26_1 = -1;
           if (stackIn_26_0 != stackIn_26_1 &&
             0 == this.field_U) {

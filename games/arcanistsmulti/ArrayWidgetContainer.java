@@ -340,7 +340,7 @@ abstract class ArrayWidgetContainer extends UiComponent implements UiContainerMa
             var3 = (String) null;
             ArrayWidgetContainer.a((String) null, -51);
           }
-          stackIn_5_0 = (UsernameCredentials.a(0, param0) != null);
+          stackIn_5_0 = (UsernameCredentials.findEntryByName(0, param0) != null);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

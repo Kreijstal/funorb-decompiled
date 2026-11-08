@@ -236,7 +236,7 @@ final class qn extends ResizableModalPanel implements ButtonListener {
             } else {
               this.field_k = this.field_k + 10;
               var3 = ki.field_w;
-              if (ne.b(-22768)) {
+              if (PlayerActionMenu.canEnterFullscreen(-22768)) {
                 this.field_k = this.field_k + 20;
                 var3 = CredentialKind.field_f;
               }

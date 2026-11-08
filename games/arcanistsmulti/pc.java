@@ -86,7 +86,7 @@ final class pc {
           }
           if (0 < var12 &&
             0 < var11) {
-            ClipState.a(param0, var10, var13, var11, param6.field_A, param5, 0, 0, (byte) -99, param3, var14, var9, param2, var12, SoftwareRasterizer.field_l, 0);
+            ClipState.blitTextureRows(param0, var10, var13, var11, param6.field_A, param5, 0, 0, (byte) -99, param3, var14, var9, param2, var12, SoftwareRasterizer.field_l, 0);
             return;
           }
           return;
@@ -201,7 +201,7 @@ final class pc {
           }
           if (0 < var12 &&
             0 < var11) {
-            ClipState.a(param0, var10, var13, var11, param6.field_A, param5, 0, 0, (byte) -99, param3, var14, var9, param2, var12, SoftwareRasterizer.field_l, 0);
+            ClipState.blitTextureRows(param0, var10, var13, var11, param6.field_A, param5, 0, 0, (byte) -99, param3, var14, var9, param2, var12, SoftwareRasterizer.field_l, 0);
             return;
           }
           return;

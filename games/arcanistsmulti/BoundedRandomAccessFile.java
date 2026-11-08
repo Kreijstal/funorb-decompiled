@@ -49,7 +49,7 @@ final class BoundedRandomAccessFile {
         }
         co.field_f.updateInputFullScreen(param0, (byte) 75);
         var4 = CacheEntry.field_q.isAnyTabActive((byte) 93) ? 1 : 0;
-        if (re.field_r != 0 &&
+        if (WrappedTextLayout.field_r != 0 &&
           var4 == 0) {
           param0 = false;
           uc.c(3);

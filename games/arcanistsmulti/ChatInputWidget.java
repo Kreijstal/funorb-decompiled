@@ -23,7 +23,7 @@ final class ChatInputWidget extends SceneWidget {
         if (pn.a((byte) -123)) {
           mc.a(param3, param5, -113, param4);
           if (null != eo.field_c &&
-            eo.field_c.a(param4, param2, param6, param3, param0 ^ 12815)) {
+            eo.field_c.processInput(param4, param2, param6, param3, param0 ^ 12815)) {
             param4 = false;
             IntrusiveDequeCursor.a(false);
           }
@@ -540,7 +540,7 @@ final class ChatInputWidget extends SceneWidget {
           field_Bb = (String) null;
         }
         if (param0 &&
-          0 != re.field_r &&
+          0 != WrappedTextLayout.field_r &&
           0 == this.field_U) {
           return -1;
         }

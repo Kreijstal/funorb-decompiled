@@ -371,7 +371,7 @@ final class ArchiveIndex {
 
     final static boolean b(int param0) {
         int var1 = 60 % ((8 - param0) / 48);
-        return re.a((byte) -68, IconButtonPainter.getApplet(122));
+        return WrappedTextLayout.hasStatusCookie((byte) -68, IconButtonPainter.getApplet(122));
     }
 
     final static void a(byte param0) {
@@ -405,7 +405,7 @@ final class ArchiveIndex {
               if ((1 << SpriteState.field_z.field_I | SpriteState.field_z.field_a) != -1 + (1 << SpriteState.field_z.field_V.getPlayerCount(param0 ^ 121))) {
                 ce.field_g[12] = IconTextSceneWidget.field_Bb;
               } else {
-                ce.field_g[12] = so.field_b;
+                ce.field_g[12] = MenuInputState.field_b;
               }
             } else {
               ce.field_g[12] = ng.field_H;

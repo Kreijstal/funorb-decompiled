@@ -343,7 +343,7 @@ final class WhirlpoolHasher {
               var3_int = param1;
             }
             var4 = new byte[var3_int];
-            param0.position = param0.position + TextLayout.field_g.a(0, (byte) -126, var4, var3_int, param0.payload, param0.position);
+            param0.position = param0.position + TextLayout.field_g.compress(0, (byte) -126, var4, var3_int, param0.payload, param0.position);
             var5 = PatchEnvelopeSet.decodeCp1252String(0, var3_int, (byte) -124, var4);
             if (param2 < -55) {
               stackIn_7_0 = var5;
@@ -425,7 +425,7 @@ final class WhirlpoolHasher {
           }
           var5_int = param4.getGroupProgressByName(param2, -48);
           var6 = param4.getFileId(param0, (byte) 33, var5_int);
-          stackIn_3_0 = UsernameCredentials.a(param4, var6, param1, 101, var5_int);
+          stackIn_3_0 = UsernameCredentials.loadCoverageFont(param4, var6, param1, 101, var5_int);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

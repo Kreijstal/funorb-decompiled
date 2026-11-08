@@ -644,7 +644,7 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
           if (NanoFrameClock.b(true) ||
             !(this.field_O.field_g.length() <= 0) &&
             !(this.field_G.field_g.length() <= 0)) {
-            UsernameCredentials.a(this.field_O.field_g, 0, this.field_G.field_g);
+            UsernameCredentials.setLoginPanelTexts(this.field_O.field_g, 0, this.field_G.field_g);
           }
           var2_int = -118 % ((param0 + 17) / 46);
           return;

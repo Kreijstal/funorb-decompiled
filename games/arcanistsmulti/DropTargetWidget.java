@@ -40,19 +40,19 @@ final class DropTargetWidget extends SingleChildContainer {
           if (param1 != -20592) {
             field_J = (String) null;
           }
-          var8 = so.field_i;
+          var8 = MenuInputState.field_i;
           if (var8 != null &&
             this.containsPoint((byte) -47, param3, param0, param4, param2)) {
             if (this.field_o instanceof WidgetDropListener) {
               ((WidgetDropListener) (this.field_o)).onWidgetDropped(var8, (byte) 125, this);
-              so.field_i = null;
+              MenuInputState.field_i = null;
               return;
             }
             if (!(var8.field_o instanceof WidgetDropListener)) {
               return;
             }
             ((WidgetDropListener) (var8.field_o)).onWidgetDropped(var8, (byte) 75, this);
-            so.field_i = null;
+            MenuInputState.field_i = null;
           }
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "q.IA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');

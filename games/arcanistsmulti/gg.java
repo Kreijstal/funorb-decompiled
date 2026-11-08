@@ -64,7 +64,7 @@ final class gg {
             var1[var2] = (Sprite) ((Object) new ArgbSprite(pb.field_g, gn.field_a, hl.field_l[var2], SectorCacheStore.field_d[var2], jg.field_p[var2], ho.field_i[var2], var16));
           }
         }
-        CanvasRasterBuffer.a(-18229);
+        CanvasRasterBuffer.releaseDecodeArrays(-18229);
         return var1;
     }
 

@@ -2230,7 +2230,7 @@ final class SpellProjectile extends DualLinkNode {
                                               var8 = 0;
                                               while (var8 < 5) {
                                                 var5 = this.spawnFromHere(this.field_v, this.field_t, (byte) 81, 14, this.field_G, this.field_q);
-                                                var9 = u.a(var7_ref_jd, -2147483648, 8192);
+                                                var9 = HuffmanCodec.randomBelow(var7_ref_jd, -2147483648, 8192);
                                                 ((SpellProjectile) (var5)).field_u = of.sine(127, var9) >> 9;
                                                 ((SpellProjectile) (var5)).field_F = (BevelBoxPainter.cosine(var9, -115) * 3 >> 11) - 64;
                                                 this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
@@ -2253,7 +2253,7 @@ final class SpellProjectile extends DualLinkNode {
                                                   break;
                                                 }
                                                 var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 42, this.field_G, this.field_q);
-                                                var9 = u.a(var7_ref_jd, -2147483648, 8192);
+                                                var9 = HuffmanCodec.randomBelow(var7_ref_jd, -2147483648, 8192);
                                                 ((SpellProjectile) (var5)).field_u = of.sine(-95, var9) >> 9;
                                                 ((SpellProjectile) (var5)).field_F = (3 * BevelBoxPainter.cosine(var9, -111) >> 11) - 64;
                                                 this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
@@ -2261,7 +2261,7 @@ final class SpellProjectile extends DualLinkNode {
                                               } while (var19 == 0);
                                               while (var8 < 4) {
                                                 var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 76, this.field_G, this.field_q);
-                                                var9 = u.a(var7_ref_jd, param0 ^ -2147477632, 8192);
+                                                var9 = HuffmanCodec.randomBelow(var7_ref_jd, param0 ^ -2147477632, 8192);
                                                 ((SpellProjectile) (var5)).field_u = of.sine(-71, var9) >> 11;
                                                 ((SpellProjectile) (var5)).field_F = BevelBoxPainter.cosine(var9, param0 - 6130) >> 11;
                                                 this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
@@ -2847,7 +2847,7 @@ final class SpellProjectile extends DualLinkNode {
                       var10 = 0;
                       while (var10 < 15) {
                         var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 76, this.field_G, this.field_q);
-                        stackIn_958_0 = u.a(var9_ref_jd, -2147483648, 8192);
+                        stackIn_958_0 = HuffmanCodec.randomBelow(var9_ref_jd, -2147483648, 8192);
                         if (var19 != 0) {
                           decompiledFrameCompleted6 = false;
                           break;
@@ -3039,7 +3039,7 @@ final class SpellProjectile extends DualLinkNode {
                         if (var10 < 10) {
                           var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 42, this.field_G, this.field_q);
                           ((SpellProjectile) (var5)).field_w = this.field_w;
-                          var11 = u.a(var9_ref_jd, param0 ^ -2147477632, 8192);
+                          var11 = HuffmanCodec.randomBelow(var9_ref_jd, param0 ^ -2147477632, 8192);
                           ((SpellProjectile) (var5)).field_u = of.sine(126, var11) >> 9;
                           ((SpellProjectile) (var5)).field_F = -64 + (BevelBoxPainter.cosine(var11, -119) >> 9);
                           this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
@@ -3077,12 +3077,12 @@ final class SpellProjectile extends DualLinkNode {
                           var10 = 0;
                           break;
                         }
-                        u.a(var9_ref_jd, -2147483648, 256);
+                        HuffmanCodec.randomBelow(var9_ref_jd, -2147483648, 256);
                         var10++;
                       } while (var19 == 0);
                       while (var10 < 5) {
                         var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 82, this.field_G, this.field_q);
-                        var11 = u.a(var9_ref_jd, -2147483648, 8192);
+                        var11 = HuffmanCodec.randomBelow(var9_ref_jd, -2147483648, 8192);
                         ((SpellProjectile) (var5)).field_u = of.sine(param0 - 5899, var11) >> 10;
                         ((SpellProjectile) (var5)).field_F = (BevelBoxPainter.cosine(var11, -120) >> 11) - 48;
                         ((SpellProjectile) (var5)).field_v = ((SpellProjectile) (var5)).field_v + ((SpellProjectile) (var5)).field_u;
@@ -3108,7 +3108,7 @@ final class SpellProjectile extends DualLinkNode {
                       while (var10 < 7) {
                         var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 20, this.field_G, this.field_q);
                         ((SpellProjectile) (var5)).field_w = this.field_w;
-                        var11 = u.a(var9_ref_jd, -2147483648, 8192);
+                        var11 = HuffmanCodec.randomBelow(var9_ref_jd, -2147483648, 8192);
                         ((SpellProjectile) (var5)).field_u = of.sine(10, var11) >> 9;
                         ((SpellProjectile) (var5)).field_F = BevelBoxPainter.cosine(var11, -114) >> 9;
                         this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
@@ -3131,7 +3131,7 @@ final class SpellProjectile extends DualLinkNode {
                       var10 = 0;
                       while (var10 < 10) {
                         var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 76, this.field_G, this.field_q);
-                        var11 = u.a(var9_ref_jd, -2147483648, 8192);
+                        var11 = HuffmanCodec.randomBelow(var9_ref_jd, -2147483648, 8192);
                         ((SpellProjectile) (var5)).field_u = of.sine(0, var11) >> 11;
                         ((SpellProjectile) (var5)).field_F = BevelBoxPainter.cosine(var11, -116) >> 11;
                         this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
@@ -3159,7 +3159,7 @@ final class SpellProjectile extends DualLinkNode {
                           var10 = 0;
                           while (var10 < 4) {
                             var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 76, this.field_G, this.field_q);
-                            var11 = u.a(var9_ref_jd, -2147483648, 8192);
+                            var11 = HuffmanCodec.randomBelow(var9_ref_jd, -2147483648, 8192);
                             ((SpellProjectile) (var5)).field_u = of.sine(param0 - 6088, var11) >> 11;
                             ((SpellProjectile) (var5)).field_F = BevelBoxPainter.cosine(var11, -114) >> 11;
                             this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
@@ -3182,7 +3182,7 @@ final class SpellProjectile extends DualLinkNode {
                           var10 = 0;
                           while (var10 < 2) {
                             var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 43, this.field_G, this.field_q);
-                            var11 = u.a(var9_ref_jd, -2147483648, 8192);
+                            var11 = HuffmanCodec.randomBelow(var9_ref_jd, -2147483648, 8192);
                             ((SpellProjectile) (var5)).field_u = of.sine(-5, var11) >> 10;
                             ((SpellProjectile) (var5)).field_F = BevelBoxPainter.cosine(var11, -103) >> 10;
                             this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
@@ -3205,7 +3205,7 @@ final class SpellProjectile extends DualLinkNode {
                           var10 = 0;
                           while (15 > var10) {
                             var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 43, this.field_G, this.field_q);
-                            var11 = u.a(var9_ref_jd, -2147483648, 8192);
+                            var11 = HuffmanCodec.randomBelow(var9_ref_jd, -2147483648, 8192);
                             ((SpellProjectile) (var5)).field_u = of.sine(116, var11) >> 9;
                             ((SpellProjectile) (var5)).field_F = BevelBoxPainter.cosine(var11, -112) >> 9;
                             this.field_q.onProjectileFinished(param0 - 5964, (SpellProjectile) (var5));
@@ -3327,7 +3327,7 @@ final class SpellProjectile extends DualLinkNode {
                   while (true) {
                     if (this.field_y / 2 > var8) {
                       var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 20, this.field_G, this.field_q);
-                      var9 = u.a(this.field_C, -2147483648, 8192);
+                      var9 = HuffmanCodec.randomBelow(this.field_C, -2147483648, 8192);
                       ((SpellProjectile) (var5)).field_u = of.sine(-46, var9) >> 9;
                       ((SpellProjectile) (var5)).field_F = BevelBoxPainter.cosine(var9, -127) >> 9;
                       this.field_q.onProjectileFinished(param0 ^ 6068, (SpellProjectile) (var5));
@@ -3412,8 +3412,8 @@ final class SpellProjectile extends DualLinkNode {
               if (null != this.field_t &&
                 0 == this.field_q.field_x[this.field_t.field_u]) {
                 var7 = 2 * this.field_q.field_X[this.field_t.field_u];
-                ((SpellProjectile) (var5)).field_u = this.field_u + u.a(this.field_C, -2147483648, var7 * 2 + 1) - var7;
-                ((SpellProjectile) (var5)).field_F = -var7 + this.field_F + u.a(this.field_C, -2147483648, var7 * 2 + 1);
+                ((SpellProjectile) (var5)).field_u = this.field_u + HuffmanCodec.randomBelow(this.field_C, -2147483648, var7 * 2 + 1) - var7;
+                ((SpellProjectile) (var5)).field_F = -var7 + this.field_F + HuffmanCodec.randomBelow(this.field_C, -2147483648, var7 * 2 + 1);
               }
             }
             if (this.field_I == 144) {
@@ -3455,26 +3455,26 @@ final class SpellProjectile extends DualLinkNode {
               if (var19 != 0) {
                 if (125 != this.field_I &&
                   153 != this.field_I) {
-                  ((SpellProjectile) (var5)).field_u = -15 + (this.field_u >> 1) + u.a(this.field_C, -2147483648, 31);
-                  ((SpellProjectile) (var5)).field_F = -15 + (this.field_F >> 1) + u.a(this.field_C, param0 + 2147477632, 31);
-                  ((SpellProjectile) (var5)).field_u = this.field_u + u.a(this.field_C, -2147483648, 31) - 15;
-                  ((SpellProjectile) (var5)).field_F = this.field_F + (u.a(this.field_C, -2147483648, 31) - 15);
+                  ((SpellProjectile) (var5)).field_u = -15 + (this.field_u >> 1) + HuffmanCodec.randomBelow(this.field_C, -2147483648, 31);
+                  ((SpellProjectile) (var5)).field_F = -15 + (this.field_F >> 1) + HuffmanCodec.randomBelow(this.field_C, param0 + 2147477632, 31);
+                  ((SpellProjectile) (var5)).field_u = this.field_u + HuffmanCodec.randomBelow(this.field_C, -2147483648, 31) - 15;
+                  ((SpellProjectile) (var5)).field_F = this.field_F + (HuffmanCodec.randomBelow(this.field_C, -2147483648, 31) - 15);
                 } else {
-                  ((SpellProjectile) (var5)).field_u = this.field_u + u.a(this.field_C, -2147483648, 31) - 15;
-                  ((SpellProjectile) (var5)).field_F = this.field_F + (u.a(this.field_C, -2147483648, 31) - 15);
+                  ((SpellProjectile) (var5)).field_u = this.field_u + HuffmanCodec.randomBelow(this.field_C, -2147483648, 31) - 15;
+                  ((SpellProjectile) (var5)).field_F = this.field_F + (HuffmanCodec.randomBelow(this.field_C, -2147483648, 31) - 15);
                 }
               }
             } else {
               boolean decompiledSharedTail0 = (125 == this.field_I ||
                 153 == this.field_I);
               if (!decompiledSharedTail0) {
-                ((SpellProjectile) (var5)).field_u = -15 + (this.field_u >> 1) + u.a(this.field_C, -2147483648, 31);
-                ((SpellProjectile) (var5)).field_F = -15 + (this.field_F >> 1) + u.a(this.field_C, param0 + 2147477632, 31);
+                ((SpellProjectile) (var5)).field_u = -15 + (this.field_u >> 1) + HuffmanCodec.randomBelow(this.field_C, -2147483648, 31);
+                ((SpellProjectile) (var5)).field_F = -15 + (this.field_F >> 1) + HuffmanCodec.randomBelow(this.field_C, param0 + 2147477632, 31);
                 decompiledSharedTail0 = (var19 != 0);
               }
               if (decompiledSharedTail0) {
-                ((SpellProjectile) (var5)).field_u = this.field_u + u.a(this.field_C, -2147483648, 31) - 15;
-                ((SpellProjectile) (var5)).field_F = this.field_F + (u.a(this.field_C, -2147483648, 31) - 15);
+                ((SpellProjectile) (var5)).field_u = this.field_u + HuffmanCodec.randomBelow(this.field_C, -2147483648, 31) - 15;
+                ((SpellProjectile) (var5)).field_F = this.field_F + (HuffmanCodec.randomBelow(this.field_C, -2147483648, 31) - 15);
               }
             }
             this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
@@ -3511,7 +3511,7 @@ final class SpellProjectile extends DualLinkNode {
         RuntimeException var2 = null;
         try {
           if (this.field_D != null) {
-            DateOfBirthValidator.a(this.field_D, 123);
+            DateOfBirthValidator.stopEffectStream(this.field_D, 123);
           }
           if (this.field_t != null) {
             if (this == this.field_t.field_gb) {
@@ -4663,7 +4663,7 @@ final class SpellProjectile extends DualLinkNode {
                                                   if (!stackIn_1134_0) {
                                                     var9_ref_mlLifetime1.field_z = true;
                                                     var9_ref_mlLifetime1.field_eb = -16;
-                                                    var9_ref_mlLifetime1.field_kb = 64 * (u.a(this.field_C, -2147483648, 256) & 2) - 32;
+                                                    var9_ref_mlLifetime1.field_kb = 64 * (HuffmanCodec.randomBelow(this.field_C, -2147483648, 256) & 2) - 32;
                                                     var5 = this.spawnFromHere(var9_ref_mlLifetime1.field_lb + (int)(Math.random() * (double)var9_ref_mlLifetime1.field_Y - (double)(var9_ref_mlLifetime1.field_Y / 2)), (BattleUnit) null, (byte) 81, 90, var9_ref_mlLifetime1.field_db, this.field_q);
                                                     this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                                                   }
@@ -4703,7 +4703,7 @@ final class SpellProjectile extends DualLinkNode {
                                                   this.field_y == 33) {
                                                   this.field_C = new IsaacRandom(new int[]{this.field_q.field_Q, param0, this.field_v, this.field_G});
                                                 }
-                                                var9 = u.a(this.field_C, -2147483648, 8192);
+                                                var9 = HuffmanCodec.randomBelow(this.field_C, -2147483648, 8192);
                                                 var5 = this.spawnFromHere(this.field_v, (BattleUnit) null, (byte) 81, 21, this.field_G, this.field_q);
                                                 ((SpellProjectile) (var5)).field_w = this.field_w;
                                                 this.playSound(89, true);
@@ -5211,9 +5211,9 @@ final class SpellProjectile extends DualLinkNode {
                                                                   }
                                                                   if (this.field_y > 400 ||
                                                                     (this.field_y & var9) == 0) {
-                                                                    var10Lifetime1 = -128 + (this.field_v + u.a(this.field_C, -2147483648, 256));
-                                                                    var11Lifetime1 = 48 + (this.field_G + u.a(this.field_C, -2147483648, 16));
-                                                                    var12Lifetime1 = u.a(this.field_C, -2147483648, 8192);
+                                                                    var10Lifetime1 = -128 + (this.field_v + HuffmanCodec.randomBelow(this.field_C, -2147483648, 256));
+                                                                    var11Lifetime1 = 48 + (this.field_G + HuffmanCodec.randomBelow(this.field_C, -2147483648, 16));
+                                                                    var12Lifetime1 = HuffmanCodec.randomBelow(this.field_C, -2147483648, 8192);
                                                                     var5 = this.spawnFromHere(var10Lifetime1, (BattleUnit) null, (byte) 81, 135, var11Lifetime1, this.field_q);
                                                                     if (this.field_q.field_sb != null &&
                                                                       null != this.field_q.field_sb[CacheEntry.field_n[7][1]]) {
@@ -5335,7 +5335,7 @@ final class SpellProjectile extends DualLinkNode {
                                                                   if (null != var5) {
                                                                     var10Lifetime1 = (int)(Math.random() * 8192.0);
                                                                     if (var7Lifetime4 != 132) {
-                                                                      var10Lifetime1 = u.a(this.field_C, -2147483648, 8192);
+                                                                      var10Lifetime1 = HuffmanCodec.randomBelow(this.field_C, -2147483648, 8192);
                                                                     }
                                                                     ((SpellProjectile) (var5)).field_u = of.sine(-17, var10Lifetime1) >> 9;
                                                                     ((SpellProjectile) (var5)).field_F = -256 + (BevelBoxPainter.cosine(var10Lifetime1, -101) >> 9);
@@ -5343,7 +5343,7 @@ final class SpellProjectile extends DualLinkNode {
                                                                       ((SpellProjectile) (var5)).field_u = ((SpellProjectile) (var5)).field_u >> 1;
                                                                       ((SpellProjectile) (var5)).field_F = ((SpellProjectile) (var5)).field_F >> 1;
                                                                       ((SpellProjectile) (var5)).field_F = ((SpellProjectile) (var5)).field_F - 96;
-                                                                      ((SpellProjectile) (var5)).field_y = u.a(this.field_C, -2147483648, 200);
+                                                                      ((SpellProjectile) (var5)).field_y = HuffmanCodec.randomBelow(this.field_C, -2147483648, 200);
                                                                       ((SpellProjectile) (var5)).field_v = ((SpellProjectile) (var5)).field_v - 2 * ((SpellProjectile) (var5)).field_u;
                                                                       ((SpellProjectile) (var5)).field_o = ((SpellProjectile) (var5)).field_v << 4;
                                                                     } else {
@@ -5400,7 +5400,7 @@ final class SpellProjectile extends DualLinkNode {
                                                                 if (this.field_y % 15 != 10) {
                                                                   return;
                                                                 }
-                                                                var9 = u.a(this.field_C, -2147483648, 320) - 160;
+                                                                var9 = HuffmanCodec.randomBelow(this.field_C, -2147483648, 320) - 160;
                                                                 this.playSound(100, true);
                                                                 var5 = this.spawnFromHere(this.field_v + var9, (BattleUnit) null, (byte) 81, 84, 48 + this.field_G, this.field_q);
                                                                 ((SpellProjectile) (var5)).field_u = 0;
@@ -5476,7 +5476,7 @@ final class SpellProjectile extends DualLinkNode {
                                                                     if (var5 == null) {
                                                                       return;
                                                                     }
-                                                                    var9 = u.a(this.field_C, -2147483648, 8192);
+                                                                    var9 = HuffmanCodec.randomBelow(this.field_C, -2147483648, 8192);
                                                                     ((SpellProjectile) (var5)).field_u = of.sine(127, var9) >> 11;
                                                                     ((SpellProjectile) (var5)).field_F = 0;
                                                                     if (var7Lifetime1 == 64) {
@@ -5545,8 +5545,8 @@ final class SpellProjectile extends DualLinkNode {
                                                                         return;
                                                                       }
                                                                       var5 = this.spawnFromHere(this.field_v, this.field_t, (byte) 81, 0, this.field_G, this.field_q);
-                                                                      ((SpellProjectile) (var5)).field_u = (this.field_u >> 1) + (u.a(this.field_C, -2147483648, 65) - 32);
-                                                                      ((SpellProjectile) (var5)).field_F = -32 + (this.field_F >> 1) + u.a(this.field_C, -2147483648, 65);
+                                                                      ((SpellProjectile) (var5)).field_u = (this.field_u >> 1) + (HuffmanCodec.randomBelow(this.field_C, -2147483648, 65) - 32);
+                                                                      ((SpellProjectile) (var5)).field_F = -32 + (this.field_F >> 1) + HuffmanCodec.randomBelow(this.field_C, -2147483648, 65);
                                                                       ((SpellProjectile) (var5)).field_w = this.field_w;
                                                                       this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                                                                       return;
@@ -5574,9 +5574,9 @@ final class SpellProjectile extends DualLinkNode {
                                                                     if (this.field_y % 3 != 0) {
                                                                       return;
                                                                     }
-                                                                    var5 = this.spawnFromHere(-15 + (this.field_v + u.a(this.field_C, -2147483648, 31)), this.field_t, (byte) 81, 135, this.field_G, this.field_q);
-                                                                    ((SpellProjectile) (var5)).field_u = 0 + (u.a(this.field_C, -2147483648, 3) - 1);
-                                                                    ((SpellProjectile) (var5)).field_F = 64 - (-u.a(this.field_C, -2147483648, 31) + 15);
+                                                                    var5 = this.spawnFromHere(-15 + (this.field_v + HuffmanCodec.randomBelow(this.field_C, -2147483648, 31)), this.field_t, (byte) 81, 135, this.field_G, this.field_q);
+                                                                    ((SpellProjectile) (var5)).field_u = 0 + (HuffmanCodec.randomBelow(this.field_C, -2147483648, 3) - 1);
+                                                                    ((SpellProjectile) (var5)).field_F = 64 - (-HuffmanCodec.randomBelow(this.field_C, -2147483648, 31) + 15);
                                                                     this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                                                                     return;
                                                                   }
@@ -5809,7 +5809,7 @@ final class SpellProjectile extends DualLinkNode {
                                                                 }
                                                                 pn.field_e.makeRasterTarget();
                                                                 SoftwareRasterizer.fillRectangle(0, 0, 512, 128, 0);
-                                                                vg.field_M.drawScaled(0, 0, 4 * var9, var9);
+                                                                MeshModel.field_M.drawScaled(0, 0, 4 * var9, var9);
                                                                 this.field_q.carveTerrainAndSprite(var10Lifetime1, -38, -(2 * var9) + this.field_v, pn.field_e);
                                                               }
                                                               if (this.field_y >= 500) {
@@ -5837,7 +5837,7 @@ final class SpellProjectile extends DualLinkNode {
                                                                   var10Lifetime1 = (int)(8192.0 * Math.random());
                                                                   if (87 != var7Lifetime3 &&
                                                                     var7Lifetime3 != 88) {
-                                                                    var10Lifetime1 = u.a(this.field_C, -2147483648, 8192);
+                                                                    var10Lifetime1 = HuffmanCodec.randomBelow(this.field_C, -2147483648, 8192);
                                                                   }
                                                                   if (var7Lifetime3 == 10) {
                                                                     this.playSound(76, true);
@@ -5856,7 +5856,7 @@ final class SpellProjectile extends DualLinkNode {
                                                                     var7Lifetime3 == 13) {
                                                                     ((SpellProjectile) (var5)).field_u = ((SpellProjectile) (var5)).field_u >> 2;
                                                                     ((SpellProjectile) (var5)).field_F = ((SpellProjectile) (var5)).field_F - 128;
-                                                                    ((SpellProjectile) (var5)).field_y = u.a(this.field_C, -2147483648, 200);
+                                                                    ((SpellProjectile) (var5)).field_y = HuffmanCodec.randomBelow(this.field_C, -2147483648, 200);
                                                                   }
                                                                   if (var7Lifetime3 == 87 ||
                                                                     var7Lifetime3 == 88) {
@@ -5922,18 +5922,18 @@ final class SpellProjectile extends DualLinkNode {
                                                               if (this.field_t.field_jb != 5 ||
                                                                 this.field_y > 100) {
                                                                 if (71 != this.field_I) {
-                                                                  var9 = this.field_v - (-u.a(this.field_C, -2147483648, 256) + 128);
-                                                                  var10Lifetime1 = this.field_G - (-u.a(this.field_C, -2147483648, 16) - 48);
-                                                                  var11Lifetime1 = u.a(this.field_C, -2147483648, 8192);
+                                                                  var9 = this.field_v - (-HuffmanCodec.randomBelow(this.field_C, -2147483648, 256) + 128);
+                                                                  var10Lifetime1 = this.field_G - (-HuffmanCodec.randomBelow(this.field_C, -2147483648, 16) - 48);
+                                                                  var11Lifetime1 = HuffmanCodec.randomBelow(this.field_C, -2147483648, 8192);
                                                                   var5 = this.spawnFromHere(var9, (BattleUnit) null, (byte) 81, 46, var10Lifetime1, this.field_q);
                                                                   ((SpellProjectile) (var5)).field_u = of.sine(125, var11Lifetime1) >> 11;
                                                                   ((SpellProjectile) (var5)).field_F = (BevelBoxPainter.cosine(var11Lifetime1, -104) >> 11) + 32;
                                                                   this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
                                                                 } else {
-                                                                  var9 = this.field_v + u.a(this.field_C, -2147483648, 192) - 96;
-                                                                  var10Lifetime1 = this.field_G + (48 + u.a(this.field_C, -2147483648, 16));
+                                                                  var9 = this.field_v + HuffmanCodec.randomBelow(this.field_C, -2147483648, 192) - 96;
+                                                                  var10Lifetime1 = this.field_G + (48 + HuffmanCodec.randomBelow(this.field_C, -2147483648, 16));
                                                                   var5 = this.spawnFromHere(var9, (BattleUnit) null, (byte) 81, 46, var10Lifetime1, this.field_q);
-                                                                  var11Lifetime1 = u.a(this.field_C, -2147483648, 8192);
+                                                                  var11Lifetime1 = HuffmanCodec.randomBelow(this.field_C, -2147483648, 8192);
                                                                   ((SpellProjectile) (var5)).field_u = of.sine(-2, var11Lifetime1) >> 11;
                                                                   ((SpellProjectile) (var5)).field_F = 32 + (BevelBoxPainter.cosine(var11Lifetime1, -128) >> 11);
                                                                   this.field_q.onProjectileFinished(52, (SpellProjectile) (var5));
@@ -7393,7 +7393,7 @@ final class SpellProjectile extends DualLinkNode {
             stackIn_5_0 = (CoverageBitmapFont) null;
             return stackIn_5_0;
           }
-          CanvasRasterBuffer.a(-18229);
+          CanvasRasterBuffer.releaseDecodeArrays(-18229);
           stackIn_7_0 = var2;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -8126,7 +8126,7 @@ final class SpellProjectile extends DualLinkNode {
               this.field_J = 0;
               this.field_D = this.createFlightSoundStream(var3, 19227);
               if (this.field_D != null) {
-                ValidationHelpWidget.a(this.field_D, (byte) 68);
+                ValidationHelpWidget.playEffectStream(this.field_D, (byte) 68);
               }
             }
           }
@@ -9673,10 +9673,10 @@ final class SpellProjectile extends DualLinkNode {
                       return;
                     }
                   }
-                  if (null == u.field_j) {
+                  if (null == HuffmanCodec.field_j) {
                     return;
                   }
-                  u.field_j[this.field_H].draw(-50 + (param2 + this.field_v), param0 + this.field_G - 50);
+                  HuffmanCodec.field_j[this.field_H].draw(-50 + (param2 + this.field_v), param0 + this.field_G - 50);
                   if (var16 == 0) {
                     return;
                   }

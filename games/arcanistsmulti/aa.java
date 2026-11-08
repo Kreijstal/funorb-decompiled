@@ -129,7 +129,7 @@ final class aa extends IntrusiveNode {
           }
           var8 = param0.queueDisplayModeQuery(-27886);
           while (var8.field_e == 0) {
-            ao.a(10L, 1);
+            ao.sleepMillis(10L, 1);
           }
           if (var8.field_e == 2) {
             stackIn_10_0 = new ScreenDisplayMode[]{};

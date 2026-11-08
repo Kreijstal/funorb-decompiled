@@ -1129,7 +1129,7 @@ final class BattleUnit extends DualLinkNode {
                                           var9 -= 32;
                                           var44.makeRasterTarget();
                                           var12_ref_qb.drawRotatedAboutPivot(512, 768, 1024, 1024, this.field_E * -this.field_gb.field_y * 8000, 4096);
-                                          ce.field_m.a(true);
+                                          ce.field_m.makeRasterTarget(true);
                                         }
                                       } else {
                                         var10 = var10 - this.field_gb.field_y * this.field_gb.field_F / 100;
@@ -1141,7 +1141,7 @@ final class BattleUnit extends DualLinkNode {
                                         var10 = var10 - this.field_Y / 2;
                                         var43.makeRasterTarget();
                                         var12_ref_qbLifetime2.drawRotatedAboutPivot(this.field_Y / 2 << 4, 3 * this.field_Y / 4 << 4, this.field_Y << 4, this.field_Y << 4, this.field_E * 4000 * -this.field_gb.field_y, 4096);
-                                        ce.field_m.a(true);
+                                        ce.field_m.makeRasterTarget(true);
                                       }
                                       decompiledFrameRemainder0 = false;
                                     }
@@ -1155,7 +1155,7 @@ final class BattleUnit extends DualLinkNode {
                                       var8_ref_qb = var45;
                                       var45.makeRasterTarget();
                                       var12_ref_qbLifetime1.drawRotatedAboutPivot(512, 768, 1024, 1024, this.field_E * 4000 * -this.field_gb.field_y, 4096);
-                                      ce.field_m.a(true);
+                                      ce.field_m.makeRasterTarget(true);
                                     }
                                   }
                                 } else {
@@ -2762,9 +2762,9 @@ final class BattleUnit extends DualLinkNode {
           }
           if (this.hasNoLinkedUnit(109)) {
             if (null != this.field_L.field_Ib) {
-              this.field_L.field_Ib.a(0, this.field_T);
-              var4_ref_String = this.field_L.field_Ib.a((byte) 127, param0);
-              this.field_L.field_Ib.a(0, 0, var4_ref_String, this.field_T);
+              this.field_L.field_Ib.isEntryAvailable(0, this.field_T);
+              var4_ref_String = this.field_L.field_Ib.getEntryName((byte) 127, param0);
+              this.field_L.field_Ib.setEntryText(0, 0, var4_ref_String, this.field_T);
               var5 = this.field_G;
               var6 = null;
               if (var5 >= 0 &&
@@ -2774,7 +2774,7 @@ final class BattleUnit extends DualLinkNode {
               if (var6 == null) {
                 var6 = "(unknown" + var5 + ")";
               }
-              this.field_L.field_Ib.a(1, 0, (String) (var6), this.field_T);
+              this.field_L.field_Ib.setEntryText(1, 0, (String) (var6), this.field_T);
             }
             if (this.field_T == param0) {
               this.field_L.field_U[param0] = this.field_L.field_U[param0] - 1;
@@ -4219,7 +4219,7 @@ final class BattleUnit extends DualLinkNode {
             this.playSound(-30225, cj.field_a[param1]);
           }
           if (this.field_jb == 6) {
-            this.playSound(-30225, vg.field_c[param1]);
+            this.playSound(-30225, MeshModel.field_c[param1]);
           }
           if (this.field_jb == 13) {
             this.playSound(-30225, fi.field_c[param1]);
@@ -4231,7 +4231,7 @@ final class BattleUnit extends DualLinkNode {
             this.playSound(-30225, om.field_B[param1]);
           }
           if (this.field_jb == 39) {
-            this.playSound(-30225, u.field_h[param1]);
+            this.playSound(-30225, HuffmanCodec.field_h[param1]);
           }
           if (this.field_jb == 33) {
             this.playSound(-30225, fk.field_h[param1]);

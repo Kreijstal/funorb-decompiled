@@ -421,7 +421,7 @@ final class MusicCrossfadeStream extends PcmStream {
           } else {
             stackIn_4_1 = sm.field_a;
           }
-          TextHotspotWidget.a(stackIn_3_0, stackIn_4_1);
+          TextHotspotWidget.positionZoomedPanels(stackIn_3_0, stackIn_4_1);
           tn.field_Ob.a(0, 0, -42 + hl.field_m.field_I, hl.field_m.field_x, 5);
           aj.field_d.setBounds(Checkbox.field_M.field_x, 0, 0, ImageProducerRasterBuffer.field_r, (byte) -120);
           stackIn_6_0 = qc.field_d;
@@ -666,7 +666,7 @@ final class MusicCrossfadeStream extends PcmStream {
             }
           }
           var2_intLifetime1 = -44 % ((-45 - param1) / 34);
-          vf.field_g.a(true, 0, false, TextFieldValidator.a(MenuButtonPanel.field_I, EmailLoginCredentials.field_g, -121));
+          vf.field_g.reset(true, 0, false, TextFieldValidator.a(MenuButtonPanel.field_I, EmailLoginCredentials.field_g, -121));
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "io.H(" + param0 + ',' + param1 + ')');
         }

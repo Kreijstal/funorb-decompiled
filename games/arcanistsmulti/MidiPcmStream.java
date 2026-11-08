@@ -492,8 +492,8 @@ final class MidiPcmStream extends PcmStream {
 
     final static int multiplyFixed16(int param0, byte param1, int param2) {
         if (param1 != 96) {
-          u var7 = (u) null;
-          MidiPcmStream.setHuffmanCodec(107, (u) null);
+          HuffmanCodec var7 = (HuffmanCodec) null;
+          MidiPcmStream.setHuffmanCodec(107, (HuffmanCodec) null);
         }
         int var3 = param2 >> 16;
         int var4 = 65535 & param2;
@@ -1302,7 +1302,7 @@ final class MidiPcmStream extends PcmStream {
         return (PcmStream) ((Object) this.field_G);
     }
 
-    final static void setHuffmanCodec(int param0, u param1) {
+    final static void setHuffmanCodec(int param0, HuffmanCodec param1) {
         try {
           int var2_int = 66 / ((param0 + 27) / 62);
           TextLayout.field_g = param1;

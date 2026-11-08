@@ -121,7 +121,7 @@ final class mn extends TextFieldValidator {
               var2 = var2 + (ic.field_a + (FullscreenFocusCanvas.field_d + tm.field_b));
             } else {
               ResizableModalPanel.field_T.drawText(var6, var8, var2 + NanoFrameClock.field_k, var5, -1);
-              var2 = var2 + u.field_l;
+              var2 = var2 + HuffmanCodec.field_l;
             }
           }
           return;

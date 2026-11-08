@@ -45,7 +45,7 @@ final class ie extends ed implements ButtonListener {
           field_Tb = (IndexedSprite[]) null;
         }
         if (this.field_Wb) {
-          ValidationHelpWidget.a(true, false, false);
+          ValidationHelpWidget.showLoginPanelWithOptions(true, false, false);
           return;
         }
         try {
@@ -72,7 +72,7 @@ final class ie extends ed implements ButtonListener {
         }
         if (this.field_G &&
           !this.field_Ob) {
-          var2 = ContextActionMenu.e(false);
+          var2 = ContextActionMenu.getCurrentMessage(false);
           if (var2 != null) {
             this.a(var2, (byte) 119, false);
           }

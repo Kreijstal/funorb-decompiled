@@ -49,7 +49,7 @@ class EditableTextWidget extends TextButton {
           return;
         }
         if (!NodeHashTableIterator.field_e) {
-          if (0 == (1 & ne.field_g)) {
+          if (0 == (1 & PlayerActionMenu.field_g)) {
             var1 = ResizableViewResizeListener.field_d;
             if (0 >= var1 &&
               qf.field_d >= 2) {
@@ -580,9 +580,9 @@ class EditableTextWidget extends TextButton {
         }
     }
 
-    final static vg a(boolean param0, CipherPacketBuffer param1) {
+    final static MeshModel a(boolean param0, CipherPacketBuffer param1) {
         int var7 = 0;
-        vg stackIn_25_0 = null;
+        MeshModel stackIn_25_0 = null;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         String stackIn_29_2 = null;
@@ -591,7 +591,7 @@ class EditableTextWidget extends TextButton {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        vg var5 = null;
+        MeshModel var5 = null;
         int var6 = 0;
         int var8 = 0;
         var8 = ArcanistsMulti.field_G ? 1 : 0;
@@ -605,7 +605,7 @@ class EditableTextWidget extends TextButton {
           if (!param0) {
             field_K = (String) null;
           }
-          var5 = new vg();
+          var5 = new MeshModel();
           var5.field_f = (short)param1.readBits(28089, 16);
           var5.field_b = eo.readPackedShorts(param1, var5.field_b, 16, 16);
           var5.field_B = eo.readPackedShorts(param1, var5.field_B, 16, 16);

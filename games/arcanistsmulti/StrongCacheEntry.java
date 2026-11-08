@@ -217,9 +217,9 @@ final class StrongCacheEntry extends CacheEntry {
           }
           var4_ref_StringLifetime1 = var1.readString(-1);
           var5Lifetime1 = var1.readString(-1);
-          var6Lifetime1 = UsernameCredentials.a(0, var4_ref_StringLifetime1);
+          var6Lifetime1 = UsernameCredentials.findEntryByName(0, var4_ref_StringLifetime1);
           if (var6Lifetime1 == null) {
-            var6Lifetime1 = UsernameCredentials.a(0, var5Lifetime1);
+            var6Lifetime1 = UsernameCredentials.findEntryByName(0, var5Lifetime1);
             if (var6Lifetime1 != null) {
               ie.field_Qb.put(var6Lifetime1, (long)Js5ArchiveManager.a((CharSequence) ((Object) var4_ref_StringLifetime1), -13).hashCode(), (byte) 119);
             }

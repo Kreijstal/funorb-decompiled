@@ -641,18 +641,18 @@ class SceneWidget extends SceneWidgetNode {
         var12 = 0;
         if (!fd.field_i &&
           param2 &&
-          re.field_r != 0 &&
+          WrappedTextLayout.field_r != 0 &&
           SoftwareRasterizer.field_i <= pb.field_h &&
           SoftwareRasterizer.field_h > pb.field_h &&
           SoftwareRasterizer.field_c <= ja.field_s &&
           ja.field_s < SoftwareRasterizer.field_k) {
           var12 = 1;
           this.field_cb = -this.field_V + pb.field_h;
-          this.field_P = re.field_r;
+          this.field_P = WrappedTextLayout.field_r;
           this.field_y = -this.field_nb + ja.field_s;
-          this.field_U = re.field_r;
+          this.field_U = WrappedTextLayout.field_r;
         } else {
-          if (re.field_r != 0) {
+          if (WrappedTextLayout.field_r != 0) {
             this.field_P = 0;
           }
           this.field_U = 0;

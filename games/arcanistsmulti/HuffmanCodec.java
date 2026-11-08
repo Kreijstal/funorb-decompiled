@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class u {
+final class HuffmanCodec {
     private byte[] field_a;
     static boolean field_k;
     static int[] field_h;
@@ -16,7 +16,7 @@ final class u {
     static String field_d;
     static int field_l;
 
-    final int a(int param0, byte param1, byte[] param2, int param3, byte[] param4, int param5) {
+    final int compress(int param0, byte param1, byte[] param2, int param3, byte[] param4, int param5) {
         int dupTemp$0 = 0;
         int incrementValue$1 = 0;
         int dupTemp$2 = 0;
@@ -64,7 +64,7 @@ final class u {
           var7_int = 0;
           var8 = param5;
           if (param1 > -113) {
-            u.releaseStatics(-33);
+            HuffmanCodec.releaseStatics(-33);
           }
           scanLoop1: while (true) {
             var9 = param4[var8];
@@ -222,7 +222,7 @@ final class u {
         }
     }
 
-    final int a(byte[] param0, int param1, byte[] param2, int param3, int param4, int param5) {
+    final int decompress(byte[] param0, int param1, byte[] param2, int param3, int param4, int param5) {
         int dupTemp$0 = 0;
         int stackIn_21_0 = 0;
         RuntimeException stackIn_24_0 = null;
@@ -315,7 +315,7 @@ final class u {
         }
     }
 
-    final static int a(IsaacRandom param0, int param1, int param2) {
+    final static int randomBelow(IsaacRandom param0, int param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -353,7 +353,7 @@ final class u {
         }
     }
 
-    final static void a(byte param0) {
+    final static void handleSocialListPacket(byte param0) {
         int stackIn_45_0 = 0;
         SocialListEntry stackIn_51_0 = null;
         boolean stackIn_52_1 = false;
@@ -720,7 +720,7 @@ final class u {
         }
     }
 
-    final static void b(int param0) {
+    final static void restoreWindowedMode(int param0) {
         if (param0 != 6) {
           return;
         }
@@ -747,7 +747,7 @@ final class u {
         field_j = null;
     }
 
-    u(byte[] param0) {
+    HuffmanCodec(byte[] param0) {
         int var5 = 0;
         int var14 = 0;
         RuntimeException stackIn_38_0 = null;
@@ -851,7 +851,7 @@ final class u {
         }
     }
 
-    final static String a(byte param0, int param1, String param2) {
+    final static String formatStatusText(byte param0, int param1, String param2) {
         String stackIn_2_0 = null;
         String stackIn_6_0 = null;
         String stackIn_9_0 = null;
@@ -906,7 +906,7 @@ final class u {
             return stackIn_30_0;
           }
           if (param1 == 12) {
-            stackIn_34_0 = CachedArchiveProvider.formatTemplate(-85, new String[]{param2}, so.field_n);
+            stackIn_34_0 = CachedArchiveProvider.formatTemplate(-85, new String[]{param2}, MenuInputState.field_n);
             return stackIn_34_0;
           }
           if (param0 >= -125) {

@@ -42,7 +42,7 @@ final class am {
           }
           var2_long = qj.monotonicTimeMillis(-26572);
           if (ResizableModalPanel.field_ab != 0 &&
-            so.field_d < 0) {
+            MenuInputState.field_d < 0) {
             var4_ref_qe = (qe) (uf.field_a.first(12623));
             if (var4_ref_qe != null &&
               var4_ref_qe.field_q < var2_long) {
@@ -60,14 +60,14 @@ final class am {
             }
           }
           while (true) {
-            if (0 > so.field_d) {
+            if (0 > MenuInputState.field_d) {
               UiContainer.field_z.position = 0;
               if (!ContextActionMenu.hasIncomingBytes((byte) -86, 1)) {
                 return false;
               }
-              so.field_d = UiContainer.field_z.readOpcode((byte) 62);
+              MenuInputState.field_d = UiContainer.field_z.readOpcode((byte) 62);
               UiContainer.field_z.position = 0;
-              fj.field_h = param1[so.field_d];
+              fj.field_h = param1[MenuInputState.field_d];
             }
             if (!pn.b(-12564)) {
               return false;
@@ -76,8 +76,8 @@ final class am {
               ArchiveRequest.field_m = Battle.field_W;
               Battle.field_W = DraggableWidget.field_I;
               DraggableWidget.field_I = on.field_g;
-              on.field_g = so.field_d;
-              so.field_d = -1;
+              on.field_g = MenuInputState.field_d;
+              MenuInputState.field_d = -1;
               return true;
             }
             var4 = ResizableModalPanel.field_ab;
@@ -87,12 +87,12 @@ final class am {
                 var4 = 0;
               }
             }
-            var5 = new qe(var2_long + (long)var4, so.field_d, new byte[fj.field_h]);
+            var5 = new qe(var2_long + (long)var4, MenuInputState.field_d, new byte[fj.field_h]);
             for (var6 = 0; fj.field_h > var6; var6++) {
               var5.field_k[var6] = UiContainer.field_z.payload[var6];
             }
             uf.field_a.addLast(var5, -1);
-            so.field_d = -1;
+            MenuInputState.field_d = -1;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

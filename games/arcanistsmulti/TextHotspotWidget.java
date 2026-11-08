@@ -105,7 +105,7 @@ class TextHotspotWidget extends TextButton {
         }
     }
 
-    final void a(int param0, byte param1, int param2, int param3) {
+    final void setBoundsToPreferredHeight(int param0, byte param1, int param2, int param3) {
         this.setBounds(((WidgetTextLayout) ((Object) this.field_r)).getPreferredHeight((UiComponent) (this), 1), param3, param2, param0, -123);
         if (param1 != -4) {
           UiComponent var6 = (UiComponent) null;
@@ -119,7 +119,7 @@ class TextHotspotWidget extends TextButton {
         field_R = null;
         field_P = null;
         if (param0 != 20445) {
-          TextHotspotWidget.a(31, -44);
+          TextHotspotWidget.positionZoomedPanels(31, -44);
         }
         field_N = null;
         field_L = null;
@@ -147,7 +147,7 @@ class TextHotspotWidget extends TextButton {
         int var7Lifetime1;
         var16 = ArcanistsMulti.field_G ? 1 : 0;
         if (param0 != 63) {
-          TextHotspotWidget.a(-9);
+          TextHotspotWidget.postPendingMessage(-9);
         }
         this.field_O = new IntrusiveDeque();
         var2 = 0;
@@ -218,7 +218,7 @@ class TextHotspotWidget extends TextButton {
         return null;
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void drawLetterboxedScene(int param0, boolean param1) {
         SceneWidget stackIn_7_0 = null;
         boolean stackIn_8_1 = false;
         SceneWidget stackIn_11_0 = null;
@@ -248,16 +248,16 @@ class TextHotspotWidget extends TextButton {
             oo.field_t.drawOpaque(hl.field_m.field_T, 0);
           }
           stackIn_24_0 = hl.field_m;
-          stackIn_25_1 = (param1) && (!so.field_j);
+          stackIn_25_1 = (param1) && (!MenuInputState.field_j);
           ((SceneWidget) (Object) stackIn_24_0).drawFullScreen(stackIn_25_1, true);
           stackIn_28_0 = ReflectionCheckRequest.field_h;
-          stackIn_29_1 = (param1) && (!so.field_j);
+          stackIn_29_1 = (param1) && (!MenuInputState.field_j);
           ((SceneWidget) (Object) stackIn_28_0).drawFullScreen(stackIn_29_1, true);
         }
         oo.popClipState(-15405);
     }
 
-    final static void a(int param0) {
+    final static void postPendingMessage(int param0) {
         String var2 = null;
         if (null != va.field_e) {
           var2 = va.field_e;
@@ -278,7 +278,7 @@ class TextHotspotWidget extends TextButton {
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void positionZoomedPanels(int param0, int param1) {
         int var2 = (-640 + SecondaryNodeDequeIterator.field_g) / 2;
         int var3 = DiskCacheRequest.field_F * DiskCacheRequest.field_F;
         if (param0 != 16) {
@@ -315,7 +315,7 @@ class TextHotspotWidget extends TextButton {
         }
     }
 
-    final static void b(int param0, boolean param1) {
+    final static void drawSpellInfoPanel(int param0, boolean param1) {
         int stackIn_3_0 = 0;
         int stackIn_3_1 = 0;
         int stackIn_3_2 = 0;

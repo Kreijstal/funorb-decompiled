@@ -34,7 +34,7 @@ final class vm {
           MenuButtonPanel.field_I = dd.field_i;
           ArchiveProvider.field_d = qa.field_g;
           qa.field_g = false;
-          re.field_r = ValidationState.field_c;
+          WrappedTextLayout.field_r = ValidationState.field_c;
           pb.field_h = bo.field_e;
           ja.field_s = ResizableViewResizeListener.field_j;
           ValidationState.field_c = param0;

@@ -126,7 +126,7 @@ final class GzipDecoder {
         CharSequence var5 = null;
         try {
           nj.field_c = 2;
-          so.field_p = param0;
+          MenuInputState.field_p = param0;
           if (param2 != -26510) {
             field_a = -55;
           }

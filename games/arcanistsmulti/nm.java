@@ -88,9 +88,9 @@ final class nm {
             var4 = var3;
             var4 = var3;
           }
-          if (so.field_g != null &&
-            !so.field_g.equals(param0.getParameter("session"))) {
-            var4 = so.field_g;
+          if (MenuInputState.field_g != null &&
+            !MenuInputState.field_g.equals(param0.getParameter("session"))) {
+            var4 = MenuInputState.field_g;
           }
           if (param2 == -31843) {
             stackIn_11_0 = CheckboxPainter.appendUrlSettings((byte) 115, (String) (var3), (String) (var4), -1, param1);

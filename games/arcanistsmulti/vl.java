@@ -77,7 +77,7 @@ final class vl extends IntrusiveNode {
           for (var3Lifetime1 = 0; 6 > var3Lifetime1; var3Lifetime1++) {
             incrementValue$2 = var2;
             var2++;
-            var1[incrementValue$2] = (byte)so.field_c[var3Lifetime1];
+            var1[incrementValue$2] = (byte)MenuInputState.field_c[var3Lifetime1];
           }
           if (param0 <= 59) {
             field_l = (String) null;

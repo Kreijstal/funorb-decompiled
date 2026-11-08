@@ -62,10 +62,10 @@ final class SecondaryNodeDequeIterator implements Iterator {
           while (true) {
             var3 = param1.queueFrameClose(param2, 6);
             while (var3.field_e == 0) {
-              ao.a(10L, 1);
+              ao.sleepMillis(10L, 1);
             }
             if (var3.field_e != 1) {
-              ao.a(100L, 1);
+              ao.sleepMillis(100L, 1);
               continue;
             }
             break;

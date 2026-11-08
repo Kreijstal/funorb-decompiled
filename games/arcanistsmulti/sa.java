@@ -151,7 +151,7 @@ final class sa extends SceneWidget {
         if (param1 != 48) {
           return true;
         }
-        stackIn_9_0 = ((re.field_r != 0 &&
+        stackIn_9_0 = ((WrappedTextLayout.field_r != 0 &&
           0 == this.field_U) ||
           this.field_Fb.field_U != 0);
         return stackIn_9_0;

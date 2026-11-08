@@ -68,7 +68,7 @@ final class ii implements WidgetPainter {
           if (param1) {
             ii.a((byte) 81);
           }
-          stackIn_3_0 = ValidationHelpWidget.a(PcmSampleStream.createAtRatePercent(param2, param0, param3), (byte) 68);
+          stackIn_3_0 = ValidationHelpWidget.playEffectStream(PcmSampleStream.createAtRatePercent(param2, param0, param3), (byte) 68);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -117,13 +117,13 @@ final class ii implements WidgetPainter {
               stackIn_19_0 = 2;
               return stackIn_19_0;
             }
-            vf.field_g.a((byte) -76);
-            if (!vf.field_g.b(true)) {
+            vf.field_g.pollKeys((byte) -76);
+            if (!vf.field_g.isActivatePressed(true)) {
               continue;
             }
           }
-          vf.field_g.a(TextFieldValidator.a(MenuButtonPanel.field_I, EmailLoginCredentials.field_g, -123), TextFieldValidator.a(ja.field_s, pb.field_h, -74), -97);
-          if (!vf.field_g.b(true)) {
+          vf.field_g.setItemBounds(TextFieldValidator.a(MenuButtonPanel.field_I, EmailLoginCredentials.field_g, -123), TextFieldValidator.a(ja.field_s, pb.field_h, -74), -97);
+          if (!vf.field_g.isActivatePressed(true)) {
           }
           var2 = 0;
           stackIn_24_0 = var2;

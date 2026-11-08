@@ -19,7 +19,7 @@ final class oo extends DualLinkNode {
     static String field_m;
     static String field_o;
     static IntrusiveDeque field_B;
-    static vg[] field_u;
+    static MeshModel[] field_u;
     static Sprite field_t;
 
     private final void decodeOpcode(PacketBuffer param0, int param1, int param2) {
@@ -155,7 +155,7 @@ final class oo extends DualLinkNode {
         int var3 = ArcanistsMulti.field_G ? 1 : 0;
         int var2Lifetime1;
         if (param0 >= -24) {
-          field_u = (vg[]) null;
+          field_u = (MeshModel[]) null;
         }
         if (null != this.field_D) {
           for (var2 = 0; var2 < this.field_D.length; var2++) {

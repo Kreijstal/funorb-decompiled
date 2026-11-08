@@ -75,7 +75,7 @@ final class ModalPanelStack extends SingleChildContainer {
 
     final static void a(long param0, int param1, String param2) {
         CharSequence var5 = null;
-        so.field_p = param2;
+        MenuInputState.field_p = param2;
         if (param1 != -30687) {
           return;
         }

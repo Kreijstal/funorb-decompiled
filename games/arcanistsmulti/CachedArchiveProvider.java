@@ -270,7 +270,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
 
     final static void a(boolean param0, byte param1) {
         try {
-          ValidationHelpWidget.a(false, false, param0);
+          ValidationHelpWidget.showLoginPanelWithOptions(false, false, param0);
           if (param1 >= -93) {
             field_t = (BinaryBitmapFont) null;
           }

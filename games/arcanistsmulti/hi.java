@@ -4,7 +4,7 @@
 final class hi {
     static String field_c;
     static boolean field_a;
-    static so field_h;
+    static MenuInputState field_h;
     static int[][] field_b;
     static int field_g;
     static int[] field_f;
@@ -50,7 +50,7 @@ final class hi {
     static {
         field_c = "Unpacking graphics";
         field_b = new int[][]{new int[]{255, 204, 153}, new int[]{255, 153, 102}, new int[]{198, 138, 72}, new int[]{124, 84, 39}, new int[]{255, 253, 253}, new int[]{153, 0, 255}, new int[]{0, 153, 204}, new int[]{64, 255, 0}};
-        field_h = new so(1);
+        field_h = new MenuInputState(1);
         field_f = new int[]{3, 4, 5};
         field_e = new StringBuilder(80);
     }

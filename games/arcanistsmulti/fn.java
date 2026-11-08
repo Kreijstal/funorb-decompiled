@@ -151,7 +151,7 @@ final class fn {
             MusicCrossfadeStream.a(124, false);
           } else {
             if (null == om.field_x) {
-              ao.a((byte) -124);
+              ao.layoutLobby((byte) -124);
             } else {
               MusicCrossfadeStream.a(13, true);
             }
@@ -164,7 +164,7 @@ final class fn {
         }
         gl.a(param3, 0);
         if (ce.field_h > 0) {
-          ValidationState.a(param1, param3, 4, param7);
+          ValidationState.updateStatusTexts(param1, param3, 4, param7);
         }
         NodeHashTableIterator.field_d.field_X = 1;
         NodeHashTableIterator.field_d.field_t = BevelBoxPainter.field_f.field_t;
@@ -174,7 +174,7 @@ final class fn {
         if (oo.field_y > 0) {
           c.a(param7, param3, param0, 2, param1);
         }
-        if (so.field_j &&
+        if (MenuInputState.field_j &&
           DirectByteStorage.field_f.field_Rb >= DirectByteStorage.field_f.field_dc) {
           StatefulTextPainter.field_s.field_ub = false;
           nj.field_m.field_Hb.field_rb = ck.field_f;
@@ -185,7 +185,7 @@ final class fn {
           fn.a(param2, nj.field_m, param6, param7, true);
         }
         var10 = -105 / ((-23 - param9) / 50);
-        ContextActionMenu.a(param7, param2, param5, 0, param4, param8, param6);
+        ContextActionMenu.drawLobby(param7, param2, param5, 0, param4, param8, param6);
         fn.a(param2, lf.field_b, param6, param7, true);
         sb.field_e = sb.field_e + 1;
     }
@@ -466,7 +466,7 @@ final class fn {
                 }
               }
             }
-            var23 = u.a((byte) -128, var12.field_Sb, var20);
+            var23 = HuffmanCodec.formatStatusText((byte) -128, var12.field_Sb, var20);
             var24 = var23;
             var30 = var24;
             var25 = var30;
@@ -627,7 +627,7 @@ final class fn {
                 if (lf.field_b == param1 &&
                   ContentTransitionDialog.k((byte) 101)) {
                   if (var26Lifetime1 == 0) {
-                    var24Lifetime2 = var34 + "<br>" + CachedArchiveProvider.formatTemplate(119, new String[]{(String) (var25)}, vg.field_t);
+                    var24Lifetime2 = var34 + "<br>" + CachedArchiveProvider.formatTemplate(119, new String[]{(String) (var25)}, MeshModel.field_t);
                   } else {
                     var24Lifetime2 = var34 + "<br>" + ie.field_Ub + (String) (var25);
                   }

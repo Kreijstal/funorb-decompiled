@@ -25,10 +25,10 @@ final class gn {
           }
           var3 = new tk();
           if (var4 != null) {
-            var3.a(new PacketBuffer(var4), -22034);
+            var3.decode(new PacketBuffer(var4), -22034);
           }
           if (32768 <= param0) {
-            var3.e((byte) -127);
+            var3.markExtended((byte) -127);
           }
           this.field_i.putUnitWeight(var3, (long)param0, -70);
           int var5 = 80 / ((param1 - 3) / 56);

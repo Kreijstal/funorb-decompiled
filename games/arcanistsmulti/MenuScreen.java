@@ -3,7 +3,7 @@
  */
 final class MenuScreen {
     private int field_i;
-    private so field_g;
+    private MenuInputState field_g;
     private int field_h;
     static IntrusiveDeque field_j;
     private int field_n;
@@ -201,7 +201,7 @@ final class MenuScreen {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (re.field_r == 1) {
+          if (WrappedTextLayout.field_r == 1) {
             var2_int = dd.field_g;
             if (LabeledField.field_K != var2_int) {
               if (var2_int != -1) {
@@ -212,7 +212,7 @@ final class MenuScreen {
             }
           }
           if (param0 != -1) {
-            this.field_g = (so) null;
+            this.field_g = (MenuInputState) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -630,7 +630,7 @@ final class MenuScreen {
                     SoftwareRasterizer.fillRoundedRectangleBlended(70 + var4, var3, 20, 15, 4, 65280, 64);
                     SoftwareRasterizer.drawLine(180 + (160 + var4), var3 + 22, 10 + (160 + var4), var3 + 22, 33023);
                     SoftwareRasterizer.drawLine(var4 + 145 + 10, var3 + 10, 160 + var4 + 10, var3 + 22, 33023);
-                    SpellProjectile.field_B.drawRightAlignedText(u.field_m, 160 + var4 + 180, 20 + var3, 0, 33023);
+                    SpellProjectile.field_B.drawRightAlignedText(HuffmanCodec.field_m, 160 + var4 + 180, 20 + var3, 0, 33023);
                     SoftwareRasterizer.drawRoundedRectangle(145 + var4, 5 + var3, 10, 10, 4, 33023);
                     SoftwareRasterizer.fillRoundedRectangleBlended(var4 + 145, 5 + var3, 10, 10, 4, 33023, 64);
                     SoftwareRasterizer.drawLine(-170 + var4, 122 + var3, -10 + var4, 122 + var3, 16711935);
@@ -664,29 +664,29 @@ final class MenuScreen {
                     var20.makeRasterTarget();
                     SoftwareRasterizer.fillCircle(64, 64, 32, 7829367);
                     gn.a(32, (byte) 62, 128, 64, 64);
-                    pc.drawTexturedSpriteIntGuard(kg.field_d[2], var17 + var3, kg.field_d[3], kg.field_d[0], 118, kg.field_d[1], qe.field_i[so.field_c[3]], var4 + var16);
-                    if (so.field_c[0] != 46) {
+                    pc.drawTexturedSpriteIntGuard(kg.field_d[2], var17 + var3, kg.field_d[3], kg.field_d[0], 118, kg.field_d[1], qe.field_i[MenuInputState.field_c[3]], var4 + var16);
+                    if (MenuInputState.field_c[0] != 46) {
                       pc.drawTexturedSpriteIntGuard(kg.field_d[2], var3 + var13_int, kg.field_d[3], kg.field_d[0], -123, kg.field_d[1], fn.field_b[0], var4 + var12_int);
                     }
-                    pc.drawTexturedSpriteIntGuard(kg.field_d[2], var3, kg.field_d[3], kg.field_d[0], 109, kg.field_d[1], IsaacRandom.field_j[so.field_c[0]], var4);
+                    pc.drawTexturedSpriteIntGuard(kg.field_d[2], var3, kg.field_d[3], kg.field_d[0], 109, kg.field_d[1], IsaacRandom.field_j[MenuInputState.field_c[0]], var4);
                     var3 -= 8;
                     var3 -= 16;
-                    pc.drawTexturedSpriteIntGuard(kg.field_d[2], var3, kg.field_d[3], kg.field_d[0], 47, kg.field_d[1], SceneWidget.field_kb[so.field_c[1]], var4);
+                    pc.drawTexturedSpriteIntGuard(kg.field_d[2], var3, kg.field_d[3], kg.field_d[0], 47, kg.field_d[1], SceneWidget.field_kb[MenuInputState.field_c[1]], var4);
                     var3 += 16;
-                    pc.drawTexturedSpriteIntGuard(kg.field_d[2], var3, kg.field_d[3], kg.field_d[0], -99, kg.field_d[1], hn.field_d[so.field_c[5]], var4);
-                    if (so.field_c[5] != 53 &&
-                      so.field_c[5] != 55) {
+                    pc.drawTexturedSpriteIntGuard(kg.field_d[2], var3, kg.field_d[3], kg.field_d[0], -99, kg.field_d[1], hn.field_d[MenuInputState.field_c[5]], var4);
+                    if (MenuInputState.field_c[5] != 53 &&
+                      MenuInputState.field_c[5] != 55) {
                       pc.drawTexturedSpriteIntGuard(kg.field_d[2], var3, kg.field_d[3], kg.field_d[0], -90, kg.field_d[1], bo.field_a[0], var4);
                     }
                     var3 -= 16;
-                    pc.drawTexturedSpriteIntGuard(kg.field_d[2], var3, kg.field_d[3], kg.field_d[0], -80, kg.field_d[1], CachedArchiveProvider.field_A[so.field_c[4]], var4);
+                    pc.drawTexturedSpriteIntGuard(kg.field_d[2], var3, kg.field_d[3], kg.field_d[0], -80, kg.field_d[1], CachedArchiveProvider.field_A[MenuInputState.field_c[4]], var4);
                     var3 += 8;
                     var3 += 16;
-                    if (46 != so.field_c[0]) {
+                    if (46 != MenuInputState.field_c[0]) {
                       pc.drawTexturedSpriteIntGuard(kg.field_d[2], var3 + var15, kg.field_d[3], kg.field_d[0], -117, kg.field_d[1], ModalPanelStack.field_I[0], var14 + var4);
                     }
-                    pc.drawTexturedSpriteIntGuard(kg.field_d[2], var3 + var19, kg.field_d[3], kg.field_d[0], 20, kg.field_d[1], DiskCacheRequest.field_u[so.field_c[2]], var4 + var18);
-                    ce.field_m.a(true);
+                    pc.drawTexturedSpriteIntGuard(kg.field_d[2], var3 + var19, kg.field_d[3], kg.field_d[0], 20, kg.field_d[1], DiskCacheRequest.field_u[MenuInputState.field_c[2]], var4 + var18);
+                    ce.field_m.makeRasterTarget(true);
                     var21 = 320 + ValidatedTextWidget.field_I;
                     var22 = 350 + uc.field_a;
                     var20.drawHalfSize(var21, var22);
@@ -764,7 +764,7 @@ final class MenuScreen {
                             var2 = EmailLoginCredentials.field_m;
                             var3 = var3 + (CachedArchiveProvider.field_t.field_C * CachedArchiveProvider.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, CachedArchiveProvider.field_t.field_C) + 8);
                             this.drawPlayerTile(var3, var4, (byte) -102, 3);
-                            var2 = ne.field_j;
+                            var2 = PlayerActionMenu.field_j;
                             SpellProjectile.field_B.drawParagraph(var2, 320 + ValidatedTextWidget.field_I, var3, 256, 120, 0, -1, 0, 1, SpellProjectile.field_B.field_C + SpellProjectile.field_B.field_m);
                             var2 = LobbyGameEntry.field_Tb;
                             var3 += 128;
@@ -966,7 +966,7 @@ final class MenuScreen {
           if (this.field_l == 10) {
             param1 = 1;
           }
-          this.field_g.a(param0, param1, false, this.hitTestItem((byte) 88, EmailLoginCredentials.field_g, MenuButtonPanel.field_I));
+          this.field_g.reset(param0, param1, false, this.hitTestItem((byte) 88, EmailLoginCredentials.field_g, MenuButtonPanel.field_I));
           LabeledField.field_K = -1;
           if (param2 >= -113) {
             field_r = (String) null;
@@ -2193,7 +2193,7 @@ final class MenuScreen {
                         var9 = -(var14 >> 1) - 16;
                         var8 -= 2;
                         var7 += 2;
-                        var16 = -DiskCacheRequest.field_u[so.field_c[2]].field_o + (-DiskCacheRequest.field_u[so.field_c[2]].field_y + DiskCacheRequest.field_u[so.field_c[2]].field_w);
+                        var16 = -DiskCacheRequest.field_u[MenuInputState.field_c[2]].field_o + (-DiskCacheRequest.field_u[MenuInputState.field_c[2]].field_y + DiskCacheRequest.field_u[MenuInputState.field_c[2]].field_w);
                         if (var11 > var16) {
                             statePc = 131;
                         } else {
@@ -2238,7 +2238,7 @@ final class MenuScreen {
                 }
                 case 132: {
                     try {
-                        var16 = -qe.field_i[so.field_c[3]].field_o - qe.field_i[so.field_c[3]].field_y + qe.field_i[so.field_c[3]].field_w;
+                        var16 = -qe.field_i[MenuInputState.field_c[3]].field_o - qe.field_i[MenuInputState.field_c[3]].field_y + qe.field_i[MenuInputState.field_c[3]].field_w;
                         if (var16 < var12) {
                             /* Inlined CFG state: 135. */
                             {
@@ -2284,8 +2284,8 @@ final class MenuScreen {
                         if (var18_int >= 6) {
                             /* Inlined CFG state: 140. */
                             {
-                                pc.drawTexturedSpriteIntGuard(kg.field_d[2], var12 + var3, kg.field_d[3], kg.field_d[0], -121, kg.field_d[1], qe.field_i[so.field_c[3]], var2_int + var10);
-                                if (46 != so.field_c[0]) {
+                                pc.drawTexturedSpriteIntGuard(kg.field_d[2], var12 + var3, kg.field_d[3], kg.field_d[0], -121, kg.field_d[1], qe.field_i[MenuInputState.field_c[3]], var2_int + var10);
+                                if (46 != MenuInputState.field_c[0]) {
                                     /* Inlined CFG state: 143. */
                                     {
                                         pc.drawTexturedSpriteIntGuard(kg.field_d[2], var8 + var3, kg.field_d[3], kg.field_d[0], 105, kg.field_d[1], fn.field_b[0], var6 + var2_int);
@@ -2303,7 +2303,7 @@ final class MenuScreen {
                         } else {
                             /* Inlined CFG state: 138. */
                             {
-                                var17[var18_int] = so.field_c[var18_int];
+                                var17[var18_int] = MenuInputState.field_c[var18_int];
                                 var18_int++;
                                 statePc = 137;
                                 continue scanLoop1;
@@ -2320,19 +2320,19 @@ final class MenuScreen {
                 }
                 case 144: {
                     try {
-                        pc.drawTexturedSpriteIntGuard(kg.field_d[2], var3, kg.field_d[3], kg.field_d[0], -92, kg.field_d[1], IsaacRandom.field_j[so.field_c[0]], var2_int);
+                        pc.drawTexturedSpriteIntGuard(kg.field_d[2], var3, kg.field_d[3], kg.field_d[0], -92, kg.field_d[1], IsaacRandom.field_j[MenuInputState.field_c[0]], var2_int);
                         var3 -= 8;
                         var3 -= 16;
-                        pc.drawTexturedSpriteIntGuard(kg.field_d[2], var3, kg.field_d[3], kg.field_d[0], 75, kg.field_d[1], SceneWidget.field_kb[so.field_c[1]], var2_int);
+                        pc.drawTexturedSpriteIntGuard(kg.field_d[2], var3, kg.field_d[3], kg.field_d[0], 75, kg.field_d[1], SceneWidget.field_kb[MenuInputState.field_c[1]], var2_int);
                         var3 += 16;
-                        pc.drawTexturedSpriteIntGuard(kg.field_d[2], var3, kg.field_d[3], kg.field_d[0], -80, kg.field_d[1], hn.field_d[so.field_c[5]], var2_int);
-                        if (so.field_c[5] == 53) {
+                        pc.drawTexturedSpriteIntGuard(kg.field_d[2], var3, kg.field_d[3], kg.field_d[0], -80, kg.field_d[1], hn.field_d[MenuInputState.field_c[5]], var2_int);
+                        if (MenuInputState.field_c[5] == 53) {
                             statePc = 150;
                             continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 145. */
                             {
-                                if (so.field_c[5] != 55) {
+                                if (MenuInputState.field_c[5] != 55) {
                                     /* Inlined CFG state: 149. */
                                     {
                                         pc.drawTexturedSpriteIntGuard(kg.field_d[2], var3, kg.field_d[3], kg.field_d[0], -99, kg.field_d[1], bo.field_a[0], var2_int);
@@ -2360,10 +2360,10 @@ final class MenuScreen {
                 case 150: {
                     try {
                         var3 -= 16;
-                        pc.drawTexturedSpriteIntGuard(kg.field_d[2], var3, kg.field_d[3], kg.field_d[0], -109, kg.field_d[1], CachedArchiveProvider.field_A[so.field_c[4]], var2_int);
+                        pc.drawTexturedSpriteIntGuard(kg.field_d[2], var3, kg.field_d[3], kg.field_d[0], -109, kg.field_d[1], CachedArchiveProvider.field_A[MenuInputState.field_c[4]], var2_int);
                         var3 += 8;
                         var3 += 16;
-                        if (46 == so.field_c[0]) {
+                        if (46 == MenuInputState.field_c[0]) {
                             statePc = 153;
                             continue scanLoop1;
                         } else {
@@ -2385,7 +2385,7 @@ final class MenuScreen {
                 }
                 case 153: {
                     try {
-                        pc.drawTexturedSpriteIntGuard(kg.field_d[2], var11 + var3, kg.field_d[3], kg.field_d[0], -95, kg.field_d[1], DiskCacheRequest.field_u[so.field_c[2]], var9 + var2_int);
+                        pc.drawTexturedSpriteIntGuard(kg.field_d[2], var11 + var3, kg.field_d[3], kg.field_d[0], -95, kg.field_d[1], DiskCacheRequest.field_u[MenuInputState.field_c[2]], var9 + var2_int);
                         var18_int = 0;
                         statePc = 154;
                         continue scanLoop1;
@@ -2457,7 +2457,7 @@ final class MenuScreen {
                         } else {
                             /* Inlined CFG state: 155. */
                             {
-                                so.field_c[var18_int] = var34[var18_int];
+                                MenuInputState.field_c[var18_int] = var34[var18_int];
                                 var18_int++;
                                 statePc = 154;
                                 continue scanLoop1;
@@ -5935,7 +5935,7 @@ final class MenuScreen {
                 case 628: {
                     try {
                         SoftwareRasterizer.fillRectangle(var2_int + var22 * var23 + 1, var22 * var24 + var3 + 1, 30, 30, var25);
-                        if (var21 == so.field_c[this.field_h]) {
+                        if (var21 == MenuInputState.field_c[this.field_h]) {
                             /* Inlined CFG state: 631. */
                             {
                                 SoftwareRasterizer.fillRectangle(1 + var2_int + var23 * var22, var3 + var22 * var24 + 1, 30, 30, 16711935 | var25);
@@ -6165,7 +6165,7 @@ final class MenuScreen {
                                 } else {
                                     /* Inlined CFG state: 669. */
                                     {
-                                        var18 = vg.field_n;
+                                        var18 = MeshModel.field_n;
                                         statePc = 671;
                                         continue scanLoop1;
                                     }
@@ -7655,15 +7655,15 @@ final class MenuScreen {
         boolean stackIn_135_1 = false;
         int stackIn_155_0 = 0;
         boolean stackIn_156_1 = false;
-        so stackIn_187_0 = null;
+        MenuInputState stackIn_187_0 = null;
         boolean stackIn_188_1 = false;
-        so stackIn_299_0 = null;
+        MenuInputState stackIn_299_0 = null;
         boolean stackIn_300_1 = false;
-        so stackIn_309_0 = null;
+        MenuInputState stackIn_309_0 = null;
         boolean stackIn_310_1 = false;
-        so stackIn_329_0 = null;
+        MenuInputState stackIn_329_0 = null;
         boolean stackIn_330_1 = false;
-        so stackIn_355_0 = null;
+        MenuInputState stackIn_355_0 = null;
         boolean stackIn_356_1 = false;
         RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
@@ -7688,7 +7688,7 @@ final class MenuScreen {
               boolean decompiledFrameRemainder0 = true;
               if (var6 != 2) {
                 if (var6 == 7) {
-                  if (!this.field_g.b(true)) {
+                  if (!this.field_g.isActivatePressed(true)) {
                     return;
                   }
                   var6 = param0 ? 1 : 0;
@@ -7700,7 +7700,7 @@ final class MenuScreen {
                   return;
                 }
                 if (var6 == 24) {
-                  if (!this.field_g.b(true)) {
+                  if (!this.field_g.isActivatePressed(true)) {
                     return;
                   }
                   var6 = param0 ? 1 : 0;
@@ -7710,7 +7710,7 @@ final class MenuScreen {
                 }
                 if (var6 != 22) {
                   if (var6 == 14) {
-                    if (!this.field_g.b(true)) {
+                    if (!this.field_g.isActivatePressed(true)) {
                       return;
                     }
                     var6 = param0 ? 1 : 0;
@@ -7720,7 +7720,7 @@ final class MenuScreen {
                     return;
                   }
                   if (15 == var6) {
-                    if (this.field_g.b(true)) {
+                    if (this.field_g.isActivatePressed(true)) {
                       if (!MenuScreen.getSessionFlag((byte) 112) &&
                         ah.field_c > 0) {
                         return;
@@ -7731,7 +7731,7 @@ final class MenuScreen {
                     }
                   } else {
                     if (var6 == 5) {
-                      if (!this.field_g.b(true)) {
+                      if (!this.field_g.isActivatePressed(true)) {
                         return;
                       }
                       SecondaryNodeDequeIterator.field_e = 0;
@@ -7740,7 +7740,7 @@ final class MenuScreen {
                       return;
                     }
                     if (8 == var6) {
-                      if (!this.field_g.b(true)) {
+                      if (!this.field_g.isActivatePressed(true)) {
                         return;
                       }
                       var6 = th.field_f;
@@ -7751,7 +7751,7 @@ final class MenuScreen {
                     if (var6 != 4) {
                       if (var6 != 27) {
                         if (var6 == 28) {
-                          if (!this.field_g.b(true)) {
+                          if (!this.field_g.isActivatePressed(true)) {
                             return;
                           }
                           var6 = param0 ? 1 : 0;
@@ -7760,17 +7760,17 @@ final class MenuScreen {
                         }
                         if (20 == var6) {
                           var5 = 0;
-                          if (this.field_g.a(-13722) &&
+                          if (this.field_g.isHomePressed(-13722) &&
                             CheckboxPainter.field_l > 0) {
                             mf.setSoundEffectVolume(0, 21298);
                             var5 = 1;
                           }
-                          if (this.field_g.d((byte) 112) &&
+                          if (this.field_g.isEndPressed((byte) 112) &&
                             CheckboxPainter.field_l < 256) {
                             var5 = 1;
                             mf.setSoundEffectVolume(256, 21298);
                           }
-                          if (this.field_g.c((byte) -26)) {
+                          if (this.field_g.isPointerMode((byte) -26)) {
                             var6 = this.getItemTop(41, param1) + (this.getItemY(param1, (byte) 103) + (ff.field_c - 120)) >> 1;
                             var7Lifetime1 = -var6 + EmailLoginCredentials.field_g;
                             var8 = var7Lifetime1 * 256 / 120;
@@ -7785,12 +7785,12 @@ final class MenuScreen {
                               }
                             }
                           }
-                          if (this.field_g.b((byte) -40) &&
+                          if (this.field_g.isLeftPressed((byte) -40) &&
                             CheckboxPainter.field_l > 0) {
                             var5 = 1;
                             ResizableModalPanel.stepEffectVolumeDown((byte) -109);
                           }
-                          if (this.field_g.b(-65) &&
+                          if (this.field_g.isRightPressed(-65) &&
                             CheckboxPainter.field_l < 256) {
                             var5 = 1;
                             IndexedSpriteState.a(false);
@@ -7798,7 +7798,7 @@ final class MenuScreen {
                           if (var5 == 0) {
                             return;
                           }
-                          decompiledFrameRemainder0 = (!(this.field_g.c((byte) -102)) ||
+                          decompiledFrameRemainder0 = (!(this.field_g.isPointerMode((byte) -102)) ||
                             !(oj.field_e >= SpriteState.field_v));
                           if (decompiledFrameRemainder0) {
                             if (null != cf.field_h[CacheEntry.field_n[0][2]]) {
@@ -7810,13 +7810,13 @@ final class MenuScreen {
                         }
                         if (decompiledFrameRemainder0) {
                           if (var6 == 21) {
-                            if (this.field_g.a(-13722)) {
+                            if (this.field_g.isHomePressed(-13722)) {
                               EmptyPainter.setMusicVolume(0, false);
                             }
-                            if (this.field_g.d((byte) 125)) {
+                            if (this.field_g.isEndPressed((byte) 125)) {
                               EmptyPainter.setMusicVolume(256, false);
                             }
-                            if (this.field_g.c((byte) 85)) {
+                            if (this.field_g.isPointerMode((byte) 85)) {
                               var6 = -120 + this.getItemTop(41, param1) - (-this.getItemY(param1, (byte) 103) - ff.field_c) >> 1;
                               var7Lifetime1Lifetime1 = -var6 + EmailLoginCredentials.field_g;
                               var8Lifetime1 = 256 * var7Lifetime1Lifetime1 / 120;
@@ -7830,24 +7830,24 @@ final class MenuScreen {
                                 EmptyPainter.setMusicVolume(0, param2);
                               }
                             }
-                            if (this.field_g.b((byte) -40)) {
+                            if (this.field_g.isLeftPressed((byte) -40)) {
                               TextWidgetPainter.stepMusicVolumeDown(60);
                             }
-                            if (!this.field_g.b(-74)) {
+                            if (!this.field_g.isRightPressed(-74)) {
                               return;
                             }
                             ck.a((byte) 115);
                             return;
                           }
                           if (var6 == 6) {
-                            if (this.field_g.b(true)) {
+                            if (this.field_g.isActivatePressed(true)) {
                               NumericDateInputWidget.f(!param2);
                               return;
                             }
                           } else {
                             if (var6 != 9) {
                               if (var6 == 10) {
-                                if (!this.field_g.b(true)) {
+                                if (!this.field_g.isActivatePressed(true)) {
                                   return;
                                 }
                                 SpriteState.field_z.sendTurnCommand59(true);
@@ -7859,7 +7859,7 @@ final class MenuScreen {
                                 if (var6 == 12) {
                                   stackIn_299_0 = this.field_g;
                                   stackIn_300_1 = !(param2);
-                                  if (!((so) (Object) stackIn_299_0).b(stackIn_300_1)) {
+                                  if (!((MenuInputState) (Object) stackIn_299_0).isActivatePressed(stackIn_300_1)) {
                                     return;
                                   }
                                   SpriteState.field_z.sendTurnCommand61((byte) -61);
@@ -7869,7 +7869,7 @@ final class MenuScreen {
                                 }
                                 if (var6 != 13) {
                                   if (var6 == 17) {
-                                    if (this.field_g.b(true)) {
+                                    if (this.field_g.isActivatePressed(true)) {
                                       ie.field_Sb = 0;
                                       return;
                                     }
@@ -7877,7 +7877,7 @@ final class MenuScreen {
                                     if (var6 == 18) {
                                       stackIn_329_0 = this.field_g;
                                       stackIn_330_1 = !(param2);
-                                      if (!((so) (Object) stackIn_329_0).b(stackIn_330_1)) {
+                                      if (!((MenuInputState) (Object) stackIn_329_0).isActivatePressed(stackIn_330_1)) {
                                         return;
                                       }
                                       ie.field_Sb = 1;
@@ -7887,7 +7887,7 @@ final class MenuScreen {
                                       if (var6 == 25) {
                                         stackIn_355_0 = this.field_g;
                                         stackIn_356_1 = !(param2);
-                                        if (((so) (Object) stackIn_355_0).b(stackIn_356_1)) {
+                                        if (((MenuInputState) (Object) stackIn_355_0).isActivatePressed(stackIn_356_1)) {
                                           if (!this.canMoveToPage((byte) -46, param1)) {
                                             return;
                                           }
@@ -7914,7 +7914,7 @@ final class MenuScreen {
                                         }
                                       } else {
                                         if (26 == var6) {
-                                          if (this.field_g.b(true) &&
+                                          if (this.field_g.isActivatePressed(true) &&
                                             this.canMoveToPage((byte) -46, param1)) {
                                             if (CheckboxPainter.field_g == 8) {
                                               IntrusiveDeque.field_g = IntrusiveDeque.field_g + 1;
@@ -7939,13 +7939,13 @@ final class MenuScreen {
                                           }
                                         } else {
                                           if (var6 == 19) {
-                                            if (this.field_g.b(true)) {
-                                              UsernameCredentials.a((byte) 79, IconButtonPainter.getApplet(120));
+                                            if (this.field_g.isActivatePressed(true)) {
+                                              UsernameCredentials.openQuitPage((byte) 79, IconButtonPainter.getApplet(120));
                                               return;
                                             }
                                           } else {
                                             if (30 == var6) {
-                                              if (!this.field_g.b(true)) {
+                                              if (!this.field_g.isActivatePressed(true)) {
                                                 return;
                                               }
                                               UiContainer.a((byte) 89, 7);
@@ -7954,7 +7954,7 @@ final class MenuScreen {
                                             if (var6 != 29) {
                                               return;
                                             }
-                                            if (!this.field_g.b(true)) {
+                                            if (!this.field_g.isActivatePressed(true)) {
                                               return;
                                             }
                                             var6 = param0 ? 1 : 0;
@@ -7963,7 +7963,7 @@ final class MenuScreen {
                                         }
                                       }
                                     } else {
-                                      if (this.field_g.b(true)) {
+                                      if (this.field_g.isActivatePressed(true)) {
                                         if ((this.field_l != 8 &&
                                           CheckboxPainter.field_g != 6) &&
                                           (decompiledFrameRemainder0 = (10 == this.field_l))) {
@@ -7980,7 +7980,7 @@ final class MenuScreen {
                                 } else {
                                   stackIn_309_0 = this.field_g;
                                   stackIn_310_1 = !(param2);
-                                  if (((so) (Object) stackIn_309_0).b(stackIn_310_1)) {
+                                  if (((MenuInputState) (Object) stackIn_309_0).isActivatePressed(stackIn_310_1)) {
                                     if (hi.field_a) {
                                       var6 = param0 ? 1 : 0;
                                       gj.a(var6 != 0, true, -5, mn.field_r);
@@ -7993,7 +7993,7 @@ final class MenuScreen {
                                   }
                                 }
                               } else {
-                                if (this.field_g.b(true)) {
+                                if (this.field_g.isActivatePressed(true)) {
                                   SpriteState.field_z.sendTurnCommand60(26873);
                                   var6 = param0 ? 1 : 0;
                                   gj.a(var6 != 0, true, -1, mn.field_r);
@@ -8001,7 +8001,7 @@ final class MenuScreen {
                                 }
                               }
                             } else {
-                              if (this.field_g.b(true)) {
+                              if (this.field_g.isActivatePressed(true)) {
                                 SpriteState.field_z.returnToLobby(-111, param0);
                                 fi.field_h = true;
                                 MusicCrossfadeStream.field_A = false;
@@ -8013,14 +8013,14 @@ final class MenuScreen {
                       } else {
                         stackIn_187_0 = this.field_g;
                         stackIn_188_1 = !(param2);
-                        if (((so) (Object) stackIn_187_0).b(stackIn_188_1)) {
+                        if (((MenuInputState) (Object) stackIn_187_0).isActivatePressed(stackIn_188_1)) {
                           var6 = param0 ? 1 : 0;
                           gj.a(var6 != 0, true, 11, mn.field_r);
                           return;
                         }
                       }
                     } else {
-                      if (this.field_g.b(true)) {
+                      if (this.field_g.isActivatePressed(true)) {
                         var6 = param0 ? 1 : 0;
                         gj.a(var6 != 0, true, 6, mn.field_r);
                         return;
@@ -8028,7 +8028,7 @@ final class MenuScreen {
                     }
                   }
                 } else {
-                  if (!this.field_g.b(true)) {
+                  if (!this.field_g.isActivatePressed(true)) {
                     return;
                   }
                   var6 = param0 ? 1 : 0;
@@ -8039,7 +8039,7 @@ final class MenuScreen {
                   }
                 }
               } else {
-                if (this.field_g.b(true)) {
+                if (this.field_g.isActivatePressed(true)) {
                   var6 = param0 ? 1 : 0;
                   stackIn_125_0 = var6;
                   stackIn_126_1 = !(param2);
@@ -8048,7 +8048,7 @@ final class MenuScreen {
                 }
               }
             } else {
-              if (this.field_g.b(true)) {
+              if (this.field_g.isActivatePressed(true)) {
                 if (MenuScreen.getSessionFlag((byte) 112)) {
                   LabeledField.a(ResizableViewResizeListener.field_h, param0, SpellProjectile.field_B, 1, ArchiveRequest.field_t, 0, EmailLoginCredentials.field_j / 2, 16, SpellProjectile.field_B.field_o, 10, EmailLoginCredentials.field_f / 2, GameApplet.field_o, true, SpellProjectile.field_B.field_o + SpellProjectile.field_B.field_m, -21071);
                 } else {
@@ -8058,7 +8058,7 @@ final class MenuScreen {
               }
             }
           } else {
-            if (this.field_g.b(true)) {
+            if (this.field_g.isActivatePressed(true)) {
               var6 = param0 ? 1 : 0;
               gj.a(var6 != 0, true, -3, mn.field_r);
             }
@@ -9166,7 +9166,7 @@ final class MenuScreen {
                 DualLinkDeque.field_b[7].drawFadedToColour(16 + 8 * var32 + 8, 24, 0, 16744703);
               }
               SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 8 * var30 + 24 + 32, 80);
-              ce.field_m.a(true);
+              ce.field_m.makeRasterTarget(true);
               var31.drawAdditive(-(var30 * 8) + (var22 - 36), -24 + var23 - 16, 256);
               var31.drawAdditive(-14 + (var22 + (-(8 * var30) - 16)) + 6, -16 + (-24 + var23), 256);
               var31.drawAdditive(var22 - (8 * var30 + 30), -24 + var23 - 22, 256);
@@ -9853,7 +9853,7 @@ final class MenuScreen {
                   SoftwareRasterizer.blurRectangle(6, 6, 8 + (32 + ValidatedTextWidget.field_I), 186 + uc.field_a, 229, 229);
                   WhirlpoolHasher.field_o[10].drawTransparentWithOpacity((-WhirlpoolHasher.field_o[9].field_n + 245) / 2 + ValidatedTextWidget.field_I + 26, (245 - WhirlpoolHasher.field_o[9].field_w) / 2 + uc.field_a + 178, 64);
                   WhirlpoolHasher.field_o[var9].drawTransparentWithOpacity((245 - WhirlpoolHasher.field_o[var9].field_n) / 2 + (-6 + ValidatedTextWidget.field_I + 32), (245 - WhirlpoolHasher.field_o[9].field_w) / 2 + uc.field_a + 178, 64);
-                  ce.field_m.a(true);
+                  ce.field_m.makeRasterTarget(true);
                   var14 = 416 + (ValidatedTextWidget.field_I << 4) + 1960;
                   var15 = 2848 + ((uc.field_a << 4) + 1960);
                   if (!ArcanistsMulti.i((byte) -102)) {
@@ -9891,14 +9891,14 @@ final class MenuScreen {
                   SoftwareRasterizer.blurRectangle(6, 6, ValidatedTextWidget.field_I + 32 + 8, 8 + (uc.field_a + 178), 229, 229);
                   WhirlpoolHasher.field_o[10].drawTransparentWithOpacity(-6 + (ValidatedTextWidget.field_I + 32 + (-WhirlpoolHasher.field_o[9].field_n + 245) / 2), (-WhirlpoolHasher.field_o[9].field_w + 245) / 2 + 178 + uc.field_a, 64);
                   WhirlpoolHasher.field_o[var9].drawTransparentWithOpacity((245 - WhirlpoolHasher.field_o[var9].field_n) / 2 + (ValidatedTextWidget.field_I + 26), uc.field_a - (-178 - (-WhirlpoolHasher.field_o[9].field_w + 245) / 2), 64);
-                  ce.field_m.a(true);
+                  ce.field_m.makeRasterTarget(true);
                 } else {
                   WhirlpoolHasher.field_o[10].drawSilhouette((-WhirlpoolHasher.field_o[9].field_n + 245) / 2 - 6 + (ValidatedTextWidget.field_I + 32), 178 + (uc.field_a + (-WhirlpoolHasher.field_o[9].field_w + 245) / 2), (16843008 | var12 & 16711422) >> 1);
                   WhirlpoolHasher.field_o[var9].drawSilhouette(32 + (ValidatedTextWidget.field_I + (-6 + (245 - WhirlpoolHasher.field_o[var9].field_n) / 2)), (245 - WhirlpoolHasher.field_o[9].field_w) / 2 + uc.field_a + 178, var12 >> 1 & 8355711 | 8421504);
                   SoftwareRasterizer.blurRectangle(6, 6, 32 + ValidatedTextWidget.field_I + 8, 8 + (uc.field_a + 178), 229, 229);
                   WhirlpoolHasher.field_o[10].drawTransparent((245 - WhirlpoolHasher.field_o[9].field_n) / 2 + 32 + (ValidatedTextWidget.field_I - 6), (245 - WhirlpoolHasher.field_o[9].field_w) / 2 + uc.field_a + 178);
                   WhirlpoolHasher.field_o[var9].drawTransparent(-6 + ValidatedTextWidget.field_I + (32 + (245 - WhirlpoolHasher.field_o[var9].field_n) / 2), 178 + (uc.field_a + (-WhirlpoolHasher.field_o[9].field_w + 245) / 2));
-                  ce.field_m.a(true);
+                  ce.field_m.makeRasterTarget(true);
                 }
               }
             }
@@ -10775,7 +10775,7 @@ final class MenuScreen {
             }
           }
           if (param0 <= 42) {
-            this.field_g = (so) null;
+            this.field_g = (MenuInputState) null;
           }
           if (CheckboxPainter.field_g == 12) {
             if (IntrusiveDeque.field_d == 96) {
@@ -10802,7 +10802,7 @@ final class MenuScreen {
             }
             if (IntrusiveDeque.field_d != 98 &&
               IntrusiveDeque.field_d != 99) {
-              this.field_g.d(-101);
+              this.field_g.clearInput(-101);
               return;
             }
             if (this.field_g.field_h != 3) {
@@ -10812,7 +10812,7 @@ final class MenuScreen {
             } else {
               this.field_g.field_h = 1;
             }
-            this.field_g.d(-101);
+            this.field_g.clearInput(-101);
           } else {
             if (CheckboxPainter.field_g != 7) {
               if (CheckboxPainter.field_g == 6 &&
@@ -10822,20 +10822,20 @@ final class MenuScreen {
               }
               if (CheckboxPainter.field_g != 14) {
                 if (CheckboxPainter.field_g == 10) {
-                  this.field_g.a(-100, 0);
+                  this.field_g.pollKeysAndPointer(-100, 0);
                 } else {
-                  this.field_g.a((byte) -76);
+                  this.field_g.pollKeys((byte) -76);
                 }
               } else {
                 if (IntrusiveDeque.field_d == 96) {
                   if (this.canMoveToPage((byte) -46, 0)) {
-                    this.field_g.a(0, false);
+                    this.field_g.setHighlightedItem(0, false);
                   }
                   return;
                 }
                 if (IntrusiveDeque.field_d == 97) {
                   if (this.canMoveToPage((byte) -46, 1)) {
-                    this.field_g.a(1, false);
+                    this.field_g.setHighlightedItem(1, false);
                   }
                   return;
                 }
@@ -10853,9 +10853,9 @@ final class MenuScreen {
                       !this.canMoveToPage((byte) -46, 1)) {
                       var2_int++;
                     }
-                    this.field_g.a(var2_int, false);
+                    this.field_g.setHighlightedItem(var2_int, false);
                   } else {
-                    this.field_g.a((byte) -76);
+                    this.field_g.pollKeys((byte) -76);
                   }
                 } else {
                   var2_int = -1 + this.field_g.field_h;
@@ -10870,7 +10870,7 @@ final class MenuScreen {
                   if (var2_int < 0) {
                     var2_int = this.field_g.field_f - 1;
                   }
-                  this.field_g.a(var2_int, false);
+                  this.field_g.setHighlightedItem(var2_int, false);
                 }
               }
             } else {
@@ -11102,30 +11102,30 @@ final class MenuScreen {
         var4 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           if (param0) {
-            this.field_g = (so) null;
+            this.field_g = (MenuInputState) null;
           }
           stackIn_8_0 = (!this.canMoveToPage((byte) -46, 0)) ? 1 : 0;
           var2_int = stackIn_8_0;
           stackIn_12_0 = (this.canMoveToPage((byte) -46, 2)) ? 2 : 1;
           var3 = stackIn_12_0;
-          if (!this.field_g.c((byte) 84)) {
+          if (!this.field_g.isPointerMode((byte) 84)) {
             if (96 == IntrusiveDeque.field_d) {
               if (this.field_g.field_h > var2_int) {
-                this.field_g.a(this.field_g.field_h - 1, param0);
+                this.field_g.setHighlightedItem(this.field_g.field_h - 1, param0);
               } else {
-                this.field_g.a(var3, false);
+                this.field_g.setHighlightedItem(var3, false);
               }
             }
             if (IntrusiveDeque.field_d == 97) {
               if (0 <= this.field_g.field_h &&
                 this.field_g.field_h < var3) {
-                this.field_g.a(1 + this.field_g.field_h, false);
+                this.field_g.setHighlightedItem(1 + this.field_g.field_h, false);
               } else {
-                this.field_g.a(var2_int, false);
+                this.field_g.setHighlightedItem(var2_int, false);
               }
             }
           }
-          this.field_g.d(51);
+          this.field_g.clearInput(51);
           stackIn_38_0 = (this.canMoveToPage((byte) -46, 0)) ? 0 : 1;
           var2_intLifetime1 = stackIn_38_0;
           stackIn_42_0 = (!this.canMoveToPage((byte) -46, 2)) ? 1 : 2;
@@ -11270,7 +11270,7 @@ final class MenuScreen {
           }
           if (14 != this.field_l) {
             boolean decompiledFrameRemainder0 = true;
-            ce.field_m.a(true);
+            ce.field_m.makeRasterTarget(true);
             if (!qn.a(this.field_l, (byte) -32) && (!(640 >= EmailLoginCredentials.field_f) ||
               !(480 >= EmailLoginCredentials.field_j))) {
               ValidationHelpWidget.a(param0 ^ -47, EmailLoginCredentials.field_j, EmailLoginCredentials.field_f);
@@ -11288,7 +11288,7 @@ final class MenuScreen {
                 wm.field_H[this.field_l].drawTransparent(ValidatedTextWidget.field_I, uc.field_a);
               } else {
                 NanoFrameClock.renderThemeBackground(true, this.field_l);
-                ce.field_m.a(true);
+                ce.field_m.makeRasterTarget(true);
               }
             }
           }
@@ -11350,29 +11350,29 @@ final class MenuScreen {
             var16 = 160;
             var17 = new Sprite(128, 256);
             var17.makeRasterTarget();
-            pc.drawTexturedSpriteIntGuard(kg.field_d[2], -var11 + var16 + var8Lifetime1Lifetime1, kg.field_d[3], kg.field_d[0], -116, kg.field_d[1], qe.field_i[so.field_c[3]], var7Lifetime1 + var15);
-            if (46 != so.field_c[0]) {
+            pc.drawTexturedSpriteIntGuard(kg.field_d[2], -var11 + var16 + var8Lifetime1Lifetime1, kg.field_d[3], kg.field_d[0], -116, kg.field_d[1], qe.field_i[MenuInputState.field_c[3]], var7Lifetime1 + var15);
+            if (46 != MenuInputState.field_c[0]) {
               pc.drawTexturedSpriteIntGuard(kg.field_d[2], -(var11 / 2) + var4Lifetime2 + var16, kg.field_d[3], kg.field_d[0], -81, kg.field_d[1], fn.field_b[0], var3Lifetime2 + var15);
             }
-            pc.drawTexturedSpriteIntGuard(kg.field_d[2], -var11 + var16, kg.field_d[3], kg.field_d[0], 68, kg.field_d[1], IsaacRandom.field_j[so.field_c[0]], var15);
+            pc.drawTexturedSpriteIntGuard(kg.field_d[2], -var11 + var16, kg.field_d[3], kg.field_d[0], 68, kg.field_d[1], IsaacRandom.field_j[MenuInputState.field_c[0]], var15);
             var16 -= 8;
             var16 -= 16;
-            pc.drawTexturedSpriteIntGuard(kg.field_d[2], -var11 + var16, kg.field_d[3], kg.field_d[0], 43, kg.field_d[1], SceneWidget.field_kb[so.field_c[1]], var15);
+            pc.drawTexturedSpriteIntGuard(kg.field_d[2], -var11 + var16, kg.field_d[3], kg.field_d[0], 43, kg.field_d[1], SceneWidget.field_kb[MenuInputState.field_c[1]], var15);
             var16 += 16;
-            pc.drawTexturedSpriteIntGuard(kg.field_d[2], -var11 + var16, kg.field_d[3], kg.field_d[0], 45, kg.field_d[1], hn.field_d[so.field_c[5]], var15);
-            if (53 != so.field_c[5] &&
-              so.field_c[5] != 55) {
+            pc.drawTexturedSpriteIntGuard(kg.field_d[2], -var11 + var16, kg.field_d[3], kg.field_d[0], 45, kg.field_d[1], hn.field_d[MenuInputState.field_c[5]], var15);
+            if (53 != MenuInputState.field_c[5] &&
+              MenuInputState.field_c[5] != 55) {
               pc.drawTexturedSpriteIntGuard(kg.field_d[2], -var11 + var16, kg.field_d[3], kg.field_d[0], -125, kg.field_d[1], bo.field_a[var14], var15);
             }
             var16 -= 16;
-            pc.drawTexturedSpriteIntGuard(kg.field_d[2], -var11 + var16, kg.field_d[3], kg.field_d[0], 2, kg.field_d[1], CachedArchiveProvider.field_A[so.field_c[4]], var15);
+            pc.drawTexturedSpriteIntGuard(kg.field_d[2], -var11 + var16, kg.field_d[3], kg.field_d[0], 2, kg.field_d[1], CachedArchiveProvider.field_A[MenuInputState.field_c[4]], var15);
             var16 += 8;
             var16 += 16;
-            if (so.field_c[0] != 46) {
+            if (MenuInputState.field_c[0] != 46) {
               pc.drawTexturedSpriteIntGuard(kg.field_d[2], var16 + (var6Lifetime1 - var11 / 2), kg.field_d[3], kg.field_d[0], -92, kg.field_d[1], ModalPanelStack.field_I[0], var15 + var5Lifetime2);
             }
-            pc.drawTexturedSpriteIntGuard(kg.field_d[2], var10Lifetime1 + (var16 - var11), kg.field_d[3], kg.field_d[0], -111, kg.field_d[1], DiskCacheRequest.field_u[so.field_c[2]], var9 + var15);
-            ce.field_m.a(true);
+            pc.drawTexturedSpriteIntGuard(kg.field_d[2], var10Lifetime1 + (var16 - var11), kg.field_d[3], kg.field_d[0], -111, kg.field_d[1], DiskCacheRequest.field_u[MenuInputState.field_c[2]], var9 + var15);
+            ce.field_m.makeRasterTarget(true);
             var18 = EmailLoginCredentials.field_f - 256;
             var19 = EmailLoginCredentials.field_j - 128;
             SoftwareRasterizer.fillRectangleAlpha(var18, var19, 256, 128, 0, 192);
@@ -11551,7 +11551,7 @@ final class MenuScreen {
     private final void resetSelection(byte param0) {
         try {
           int var2_int = -61 % ((-38 - param0) / 46);
-          this.field_g.a(82, 2);
+          this.field_g.pollKeysAndPointer(82, 2);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "lc.H(" + param0 + ')');
         }
@@ -11716,7 +11716,7 @@ final class MenuScreen {
           if (null == NumericDateInputWidget.field_L[this.field_l]) {
             this.field_g = null;
           } else {
-            this.field_g = new so(NumericDateInputWidget.field_L[this.field_l].length);
+            this.field_g = new MenuInputState(NumericDateInputWidget.field_L[this.field_l].length);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -11801,7 +11801,7 @@ final class MenuScreen {
                 this.performItemAction(false, this.field_g.field_h, false);
                 continue;
               }
-              this.field_g.a(this.hitTestItem((byte) 88, EmailLoginCredentials.field_g, MenuButtonPanel.field_I), this.hitTestItem((byte) 88, pb.field_h, ja.field_s), -97);
+              this.field_g.setItemBounds(this.hitTestItem((byte) 88, EmailLoginCredentials.field_g, MenuButtonPanel.field_I), this.hitTestItem((byte) 88, pb.field_h, ja.field_s), -97);
               stackIn_46_0Lifetime1 = this.field_g.field_h;
               stackIn_46_1Lifetime1 = -1;
               if (stackIn_46_0Lifetime1 == stackIn_46_1Lifetime1) {
@@ -11843,7 +11843,7 @@ final class MenuScreen {
           if (3 == this.field_l) {
           }
           if (this.field_l == 12) {
-            if (re.field_r == 1) {
+            if (WrappedTextLayout.field_r == 1) {
               if (this.field_m == 10) {
                 this.field_d = this.field_d + this.field_i;
               }
@@ -11943,9 +11943,9 @@ final class MenuScreen {
             }
           }
           if (this.field_l == 11) {
-            if (1 == re.field_r) {
+            if (1 == WrappedTextLayout.field_r) {
               if (this.field_m == 0) {
-                so.field_c[this.field_h] = this.field_i;
+                MenuInputState.field_c[this.field_h] = this.field_i;
               }
               if (this.field_m == 6) {
                 this.field_n = this.field_n + this.field_i;
@@ -11969,12 +11969,12 @@ final class MenuScreen {
                 kg.field_d[3] = hi.field_b[this.field_i];
               }
               if (this.field_m == 7) {
-                so.field_c[0] = (int)(12.0 * Math.random());
-                so.field_c[1] = (int)(18.0 * Math.random() * 3.0);
-                so.field_c[2] = (int)(Math.random() * 12.0);
-                so.field_c[3] = (int)(12.0 * Math.random());
-                so.field_c[4] = (int)(3.0 * (14.0 * Math.random()));
-                so.field_c[5] = (int)(3.0 * (14.0 * Math.random()));
+                MenuInputState.field_c[0] = (int)(12.0 * Math.random());
+                MenuInputState.field_c[1] = (int)(18.0 * Math.random() * 3.0);
+                MenuInputState.field_c[2] = (int)(Math.random() * 12.0);
+                MenuInputState.field_c[3] = (int)(12.0 * Math.random());
+                MenuInputState.field_c[4] = (int)(3.0 * (14.0 * Math.random()));
+                MenuInputState.field_c[5] = (int)(3.0 * (14.0 * Math.random()));
                 kg.field_d[0] = AlternateUsernameCredentials.field_n[(int)(Math.random() * (double)AlternateUsernameCredentials.field_n.length)];
                 kg.field_d[1] = GameApplet.field_z[(int)(Math.random() * (double)GameApplet.field_z.length)];
                 kg.field_d[2] = IsaacCipher.field_d[(int)(Math.random() * (double)IsaacCipher.field_d.length)];

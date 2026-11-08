@@ -128,14 +128,14 @@ final class GrowableIntList {
             !wm.c(false)) {
             boolean decompiledSharedTail1 = !(!ArrayWidgetContainer.a(GridContainer.field_S, 1));
             if (!decompiledSharedTail1) {
-              var2 = CachedArchiveProvider.formatTemplate(125, new String[]{so.field_p}, qc.field_b);
+              var2 = CachedArchiveProvider.formatTemplate(125, new String[]{MenuInputState.field_p}, qc.field_b);
               decompiledSharedTail1 = (var10 != 0);
             }
             if (decompiledSharedTail1) {
-              var2 = CachedArchiveProvider.formatTemplate(-41, new String[]{so.field_p}, oo.field_m);
+              var2 = CachedArchiveProvider.formatTemplate(-41, new String[]{MenuInputState.field_p}, oo.field_m);
             }
             if (oj.field_i) {
-              ao.a(0, (byte) 83, (String) (var2), (String) null, 2, (String) null);
+              ao.addChatMessage(0, (byte) 83, (String) (var2), (String) null, 2, (String) null);
               uc.c(3);
             }
           }
@@ -157,7 +157,7 @@ final class GrowableIntList {
             var6 = nj.field_c;
             var7 = 0;
             if (var6 == 2) {
-              var4 = CachedArchiveProvider.formatTemplate(-99, new String[]{so.field_p}, ge.field_n);
+              var4 = CachedArchiveProvider.formatTemplate(-99, new String[]{MenuInputState.field_p}, ge.field_n);
               var8 = CachedArchiveProvider.formatTemplate(-51, new String[]{var3}, IterableNodeHashTable.field_f);
               var7 = -485 + (sa.field_Cb.field_x + SingleChildContainer.field_D.field_x + oo.field_x.textWidth(var8)) - oo.field_x.textWidth(var4);
               if (0 > var7) {
@@ -182,7 +182,7 @@ final class GrowableIntList {
                   var6 = 1;
                 }
               }
-              if (tk.f((byte) -128)) {
+              if (tk.hasResizableListener((byte) -128)) {
                 stackIn_63_0 = ": ";
               } else {
                 stackIn_63_0 = "<img=3>: ";
@@ -203,7 +203,7 @@ final class GrowableIntList {
                 var5 = "";
               }
               var9 = oo.field_x.textWidth(var4);
-              if (!tk.f((byte) -113)) {
+              if (!tk.hasResizableListener((byte) -113)) {
                 if (SingleChildContainer.field_D.field_C &&
                   (-SingleChildContainer.field_D.field_V + EmailLoginCredentials.field_g) < var9) {
                   if (!wh.field_g) {
@@ -224,7 +224,7 @@ final class GrowableIntList {
               sa.field_Cb.field_C = false;
             }
             if (sa.field_Cb.field_C) {
-              var1 = CachedArchiveProvider.formatTemplate(-118, new String[]{var3, so.field_p}, tn.field_Db);
+              var1 = CachedArchiveProvider.formatTemplate(-118, new String[]{var3, MenuInputState.field_p}, tn.field_Db);
             }
           }
           stackIn_103_0 = var1;

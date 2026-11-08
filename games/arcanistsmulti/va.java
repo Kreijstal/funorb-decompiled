@@ -80,11 +80,11 @@ final class va implements WidgetPainter {
             param4 = 0;
           }
           nj.field_c = param4;
-          so.field_p = param3;
+          MenuInputState.field_p = param3;
           var7 = (CharSequence) ((Object) param3);
           GridContainer.field_S = Js5ArchiveManager.a(var7, param1 ^ -14);
           gg.field_e = param0;
-          var6 = ff.a(param2, 49, gl.field_c, StatefulTextPainter.field_z, CipherPacketBuffer.field_p);
+          var6 = ff.createQuickChatPanel(param2, 49, gl.field_c, StatefulTextPainter.field_z, CipherPacketBuffer.field_p);
           TextButton.a(var6, (byte) -104);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

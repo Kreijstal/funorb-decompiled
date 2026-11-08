@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vf extends IntrusiveNode {
-    static so field_g;
+    static MenuInputState field_g;
     byte[] field_t;
     static ed field_k;
     static ec field_s;
@@ -120,7 +120,7 @@ final class vf extends IntrusiveNode {
     }
 
     static {
-        field_g = new so(1);
+        field_g = new MenuInputState(1);
         field_p = "Press '<col=ffffff><%0></col>' or '<col=ffffff><%1></col>' to cycle through your minions or to centre on your Arcanist.<br>  Use the '<col=ffffff>Arrow keys</col>' to scroll around the map.";
         km.configureSpeed(100, 50);
         field_v = new int[8192];

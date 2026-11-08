@@ -7,7 +7,7 @@ final class NumericDateInputWidget extends DateInputWidget {
     static String field_M;
     private EditableTextWidget field_J;
     private EditableTextWidget field_T;
-    static so field_S;
+    static MenuInputState field_S;
     private boolean field_G;
     private EditableTextWidget field_Q;
     static String field_R;
@@ -78,7 +78,7 @@ final class NumericDateInputWidget extends DateInputWidget {
         var5 = var8.readUnsignedShort(-98);
         try {
           var9 = th.field_d.getDefinition(var5, (byte) -119);
-          fe.field_p = var9.c(true);
+          fe.field_p = var9.getText(true);
           if (ff.field_a.equals(ah.field_b)) {
             stackIn_24_0 = null;
           } else {
@@ -138,7 +138,7 @@ final class NumericDateInputWidget extends DateInputWidget {
           }
           param1 = param1 + this.field_n;
           param3 = param3 + this.field_j;
-          this.drawFieldCaption(param3, ne.field_f, this.field_T, -5187, param1);
+          this.drawFieldCaption(param3, PlayerActionMenu.field_f, this.field_T, -5187, param1);
           this.drawFieldCaption(param3, GameApplet.field_y, this.field_Q, -5187, param1);
           this.drawFieldCaption(param3, LoadingTracker.field_g, this.field_J, -5187, param1);
           return;
@@ -149,7 +149,7 @@ final class NumericDateInputWidget extends DateInputWidget {
         }
         param1 = param1 + this.field_n;
         param3 = param3 + this.field_j;
-        this.drawFieldCaption(param3, ne.field_f, this.field_T, -5187, param1);
+        this.drawFieldCaption(param3, PlayerActionMenu.field_f, this.field_T, -5187, param1);
         this.drawFieldCaption(param3, GameApplet.field_y, this.field_Q, -5187, param1);
         this.drawFieldCaption(param3, LoadingTracker.field_g, this.field_J, -5187, param1);
     }
@@ -328,7 +328,7 @@ final class NumericDateInputWidget extends DateInputWidget {
         field_L = new int[17][];
         field_R = "Error connecting to server. Please try using a different server.";
         field_I = "The '<%0>' setting needs to be changed.";
-        field_S = new so(1);
+        field_S = new MenuInputState(1);
         field_H = "You need to choose a name before you can log in. This is the name that will be displayed to other players.";
         field_K = 64;
         field_P = "You must be a member to play with the current options.";

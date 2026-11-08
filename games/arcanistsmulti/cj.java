@@ -15,7 +15,7 @@ final class cj {
         qj.field_i = PasswordFieldPainter.field_C + " <b>" + AccountRegistrationPanel.field_R + "</b> " + NameSuggestionsPanel.field_G + " <b>" + ki.field_t + "</b> " + we.field_d + "<br>" + "<br>" + ClientException.field_f;
     }
 
-    final static void drawModel(int param0, int param1, int param2, int param3, vg param4, int param5, int param6, int param7) {
+    final static void drawModel(int param0, int param1, int param2, int param3, MeshModel param4, int param5, int param6, int param7) {
         int stackIn_15_0 = 0;
         int[] stackIn_17_0 = null;
         int stackIn_18_1 = 0;
@@ -61,7 +61,7 @@ final class cj {
         int var40 = 0;
         int[] var41 = null;
         int var44 = 0;
-        vg var45 = null;
+        MeshModel var45 = null;
         int[] var50 = null;
         int[] var55 = null;
         byte[] var61 = null;
@@ -267,7 +267,7 @@ final class cj {
         String var11_ref_String = null;
         int var11 = 0;
         int var13 = 0;
-        vg var14 = null;
+        MeshModel var14 = null;
         String var15 = null;
         Object var16 = null;
         CharSequence var17 = null;
@@ -294,8 +294,8 @@ final class cj {
             return stackIn_6_0;
           }
           if (param1 != -91) {
-            var14 = (vg) null;
-            cj.drawModel(-75, -92, 61, -80, (vg) null, 40, 3, -5);
+            var14 = (MeshModel) null;
+            cj.drawModel(-75, -92, 61, -80, (MeshModel) null, 40, 3, -5);
           }
           if (ResizableModalPanel.field_eb == pc.field_g) {
             kj.field_e = null;

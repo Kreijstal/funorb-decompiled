@@ -261,9 +261,9 @@ final class UiTheme {
         this.field_d = -1;
         var4.field_e = 11711154;
         this.field_C = 15658734;
-        var4.createStyleLayer((byte) -37, 0).b(0, 15658734).withFrameSprites((byte) -71, ff.a((byte) 109, 7829367, 10066329, 8947848));
-        var4.createStyleLayer((byte) -121, 1).withFrameSprites((byte) -71, ff.a((byte) 35, 13421772, 10066329, 11184810));
-        var4.createStyleLayer((byte) -68, 3).withFrameSprites((byte) -71, ff.a((byte) 53, 10066329, 7829367, 8947848)).c(-1, 1).a(1, (byte) 120);
+        var4.createStyleLayer((byte) -37, 0).withTextColour(0, 15658734).withFrameSprites((byte) -71, ff.createFrameSprites((byte) 109, 7829367, 10066329, 8947848));
+        var4.createStyleLayer((byte) -121, 1).withFrameSprites((byte) -71, ff.createFrameSprites((byte) 35, 13421772, 10066329, 11184810));
+        var4.createStyleLayer((byte) -68, 3).withFrameSprites((byte) -71, ff.createFrameSprites((byte) 53, 10066329, 7829367, 8947848)).withVerticalOffset(-1, 1).withAlignment(1, (byte) 120);
         Sprite[] var5 = new Sprite[9];
         ArgbSprite var16 = new ArgbSprite(32, 32);
         ArgbSprite var18 = var16;
@@ -271,22 +271,22 @@ final class UiTheme {
           var16.field_A[var7_int] = 1077952576;
         }
         var5[4] = (Sprite) ((Object) var18);
-        var4.createStyleLayer((byte) -62, 4).a(true, -5859).withFrameSprites((byte) -71, var5);
-        var4.createStyleLayer((byte) -113, 5).withFrameSprites((byte) -71, BattleScreen.createPanelFrame(0, 0, 1, 0, 65793)).a(true, -5859).b(0, -1);
+        var4.createStyleLayer((byte) -62, 4).withChildStyle(true, -5859).withFrameSprites((byte) -71, var5);
+        var4.createStyleLayer((byte) -113, 5).withFrameSprites((byte) -71, BattleScreen.createPanelFrame(0, 0, 1, 0, 65793)).withChildStyle(true, -5859).withTextColour(0, -1);
         this.field_u = (WidgetPainter) ((Object) var4);
         StatefulTextPainter var6 = new StatefulTextPainter(var4, true);
         var6.field_i = 0;
         StatefulTextPainter var7 = new StatefulTextPainter(var4, true);
         var7.field_i = 0;
         var7.setAllFrameSprites(DropTargetWidget.createCentreFrame(8947848, 0), -23165);
-        var7.createStyleLayer((byte) -28, 1).withFrameSprites((byte) -71, DropTargetWidget.createCentreFrame(11184810, 0)).b(0, 2236962);
+        var7.createStyleLayer((byte) -28, 1).withFrameSprites((byte) -71, DropTargetWidget.createCentreFrame(11184810, 0)).withTextColour(0, 2236962);
         this.field_b = (WidgetPainter) ((Object) new CheckboxPainter(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
         of discarded$0 = new of(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
         lh discarded$1 = new lh(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
         StatefulTextPainter var8 = new StatefulTextPainter();
         var17.copyStyleTo(var8, 1881);
-        var8.createStyleLayer((byte) -25, 0).withFrameSprites((byte) -71, ff.a((byte) 104, 10066329, 7829367, 15658734)).b(0, 1118481).a(125, -1);
-        var8.createStyleLayer((byte) -100, 4).a(true, -5859).withFrameSprites((byte) -71, var5);
+        var8.createStyleLayer((byte) -25, 0).withFrameSprites((byte) -71, ff.createFrameSprites((byte) 104, 10066329, 7829367, 15658734)).withTextColour(0, 1118481).withShadowColour(125, -1);
+        var8.createStyleLayer((byte) -100, 4).withChildStyle(true, -5859).withFrameSprites((byte) -71, var5);
         this.field_l = (WidgetPainter) ((Object) var8);
         Sprite[] var9 = new Sprite[9];
         Sprite[] var10 = new Sprite[9];
@@ -418,7 +418,7 @@ final class UiTheme {
           }
           var11 = param1.queueDisplayModeChange(param2, param5, param4 ^ 122, param3, param0);
           while (var11.field_e == 0) {
-            ao.a(10L, param4 ^ 11);
+            ao.sleepMillis(10L, param4 ^ 11);
           }
           var7 = (java.awt.Frame) (var11.field_g);
           if (var7 == null) {

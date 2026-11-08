@@ -32,7 +32,7 @@ final class fl {
             if (100 <= param3 &&
               param3 <= 105) {
               var8 = param2;
-              ao.a(var8, param0 ^ -20688);
+              ao.setNameSuggestions(var8, param0 ^ -20688);
               SecondaryNodeDequeIterator.field_i = ho.createWithLines((byte) 120, param2);
               return;
             }
@@ -43,7 +43,7 @@ final class fl {
           stackIn_7_1 = !(13 <= UiComponent.field_u);
           SecondaryNodeDequeIterator.field_i = oj.a(stackIn_6_0, stackIn_7_1);
           var7 = (String[]) null;
-          ao.a((String[]) null, -127);
+          ao.setNameSuggestions((String[]) null, -127);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -26,13 +26,13 @@ final class jo {
           jo.releaseStatics(19);
         }
         if (ce.field_h > 0) {
-          WidgetStyleLayer.a((byte) 37);
+          WidgetStyleLayer.layoutCenteredPanels((byte) 37);
         }
         if (sm.field_a > 0) {
-          TextHotspotWidget.a(16, sm.field_a);
+          TextHotspotWidget.positionZoomedPanels(16, sm.field_a);
         }
         if (oo.field_y > 0) {
-          TextHotspotWidget.a(16, oo.field_y);
+          TextHotspotWidget.positionZoomedPanels(16, oo.field_y);
         }
     }
 

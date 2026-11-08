@@ -34,7 +34,7 @@ final class WidgetStyleLayer {
         }
     }
 
-    final WidgetStyleLayer a(int param0, byte param1) {
+    final WidgetStyleLayer withAlignment(int param0, byte param1) {
         this.field_a = param0;
         if (param1 <= 114) {
           return (WidgetStyleLayer) null;
@@ -57,17 +57,17 @@ final class WidgetStyleLayer {
         field_l = null;
     }
 
-    final WidgetStyleLayer a(boolean param0, int param1) {
+    final WidgetStyleLayer withChildStyle(boolean param0, int param1) {
         if (param1 == -5859) {
           this.field_k = param0 ? true : false;
           return this;
         }
-        this.b(21, 109);
+        this.withTextColour(21, 109);
         this.field_k = param0 ? true : false;
         return this;
     }
 
-    final WidgetStyleLayer a(int param0, int param1) {
+    final WidgetStyleLayer withShadowColour(int param0, int param1) {
         this.field_h = param1;
         int var3 = 122 % ((38 - param0) / 46);
         return this;
@@ -82,7 +82,7 @@ final class WidgetStyleLayer {
         try {
           this.field_b = param1;
           if (param0 != -71) {
-            this.a(3, 17);
+            this.withShadowColour(3, 17);
           }
           return this;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -209,9 +209,9 @@ final class WidgetStyleLayer {
         }
     }
 
-    final WidgetStyleLayer c(int param0, int param1) {
+    final WidgetStyleLayer withVerticalOffset(int param0, int param1) {
         if (param0 != -1) {
-          this.a(35, -108);
+          this.withShadowColour(35, -108);
           this.field_g = param1;
           return this;
         }
@@ -219,9 +219,9 @@ final class WidgetStyleLayer {
         return this;
     }
 
-    final WidgetStyleLayer b(int param0, int param1) {
+    final WidgetStyleLayer withTextColour(int param0, int param1) {
         if (param0 != 0) {
-          this.a(-22, -123);
+          this.withShadowColour(-22, -123);
           this.field_m = param1;
           return this;
         }
@@ -229,7 +229,7 @@ final class WidgetStyleLayer {
         return this;
     }
 
-    final static void a(byte param0) {
+    final static void layoutCenteredPanels(byte param0) {
         int var1 = (SecondaryNodeDequeIterator.field_g - 640) / 2;
         int var3 = -12 % ((-49 - param0) / 62);
         int var2 = DiskCacheRequest.field_F * DiskCacheRequest.field_F;

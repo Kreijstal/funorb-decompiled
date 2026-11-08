@@ -4,7 +4,7 @@
 abstract class TextLayout {
     static String field_e;
     static String field_a;
-    static u field_g;
+    static HuffmanCodec field_g;
     static String field_c;
     TextLine[] field_f;
     static boolean field_b;
@@ -171,7 +171,7 @@ abstract class TextLayout {
         int var6;
         var7 = ArcanistsMulti.field_G ? 1 : 0;
         if (param0 < 13) {
-          field_g = (u) null;
+          field_g = (HuffmanCodec) null;
         }
         var2 = -1;
         if (null != this.field_f) {
@@ -237,7 +237,7 @@ abstract class TextLayout {
         field_c = null;
         field_d = null;
         if (param0 != 6481) {
-          field_g = (u) null;
+          field_g = (HuffmanCodec) null;
         }
     }
 

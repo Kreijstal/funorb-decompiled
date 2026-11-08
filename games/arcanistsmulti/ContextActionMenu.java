@@ -26,7 +26,7 @@ final class ContextActionMenu extends SceneWidget {
     final static boolean hasIncomingBytes(byte param0, int param1) {
         try {
           if (param0 != -86) {
-            ContextActionMenu.a(-103, 27, (byte) -56, 44);
+            ContextActionMenu.handleEscapeForOverlays(-103, 27, (byte) -56, 44);
           }
           if (param1 <= UiContainer.field_z.position) {
             return true;
@@ -66,7 +66,7 @@ final class ContextActionMenu extends SceneWidget {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, boolean param5, boolean param6) {
+    final static void drawLobby(int param0, int param1, int param2, int param3, int param4, boolean param5, boolean param6) {
         int var18_int = 0;
         int var22_int = 0;
         SceneWidget dupTemp$0 = null;
@@ -439,7 +439,7 @@ final class ContextActionMenu extends SceneWidget {
                 var34_int = var34_int + (var52_ref.field_n + MenuButtonPainter.field_p);
               }
               if ((var14Lifetime1 & 1 << LinkButtonPainter.field_a) != 0) {
-                stackIn_90_0 = re.field_j;
+                stackIn_90_0 = WrappedTextLayout.field_j;
                 if (var12.field_oc) {
                   stackIn_91_1 = 1;
                 } else {
@@ -630,9 +630,9 @@ final class ContextActionMenu extends SceneWidget {
         return true;
     }
 
-    final static boolean a(int param0, int param1, byte param2, int param3) {
+    final static boolean handleEscapeForOverlays(int param0, int param1, byte param2, int param3) {
         if (null != eo.field_c &&
-          eo.field_c.b((byte) 49)) {
+          eo.field_c.handleEscape((byte) 49)) {
           IntrusiveDequeCursor.a(false);
           return true;
         }
@@ -645,17 +645,17 @@ final class ContextActionMenu extends SceneWidget {
         if (lo.e(false)) {
           return true;
         }
-        if (ValidationState.a(false, param1, param3, param0)) {
+        if (ValidationState.routeKeyInput(false, param1, param3, param0)) {
           return true;
         }
         if (param2 <= 25) {
           IndexedSprite var5 = (IndexedSprite) null;
-          ContextActionMenu.a(6, (Battle) null, (byte) -73, -25, -95, (Sprite) null, (IndexedSprite) null);
+          ContextActionMenu.stampHalfResolution(6, (Battle) null, (byte) -73, -25, -95, (Sprite) null, (IndexedSprite) null);
         }
         return false;
     }
 
-    final static ho e(boolean param0) {
+    final static ho getCurrentMessage(boolean param0) {
         if (SceneScrollbar.field_Gb == ScreenDisplayMode.field_h) {
           throw new IllegalStateException();
         }
@@ -686,7 +686,7 @@ final class ContextActionMenu extends SceneWidget {
             return this.field_Pb[var3];
           }
         }
-        if (re.field_r != 0) {
+        if (WrappedTextLayout.field_r != 0) {
           return -1;
         }
         return this.field_Cb;
@@ -698,7 +698,7 @@ final class ContextActionMenu extends SceneWidget {
         }
     }
 
-    final static void a(int param0, Battle param1, byte param2, int param3, int param4, Sprite param5, IndexedSprite param6) {
+    final static void stampHalfResolution(int param0, Battle param1, byte param2, int param3, int param4, Sprite param5, IndexedSprite param6) {
         int var19 = 0;
         int var20 = 0;
         int var23 = 0;
@@ -818,7 +818,7 @@ final class ContextActionMenu extends SceneWidget {
         }
     }
 
-    final static SceneWidget f(int param0) {
+    final static SceneWidget getScrollContent(int param0) {
         if (param0 != 0) {
           return (SceneWidget) null;
         }

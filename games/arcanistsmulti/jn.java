@@ -36,7 +36,7 @@ final class jn {
     }
 
     final static void a(String param0, boolean param1, int param2) {
-        u.field_k = true;
+        HuffmanCodec.field_k = true;
         NodeHashTable.field_h = param1 ? true : false;
         vf.field_k = new ed(ClientException.field_b, SocketConnector.field_k, param0, MusicPatchPcmStream.field_s, NodeHashTable.field_h);
         if (param2 != -1) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class so {
+final class MenuInputState {
     static String field_b;
     private boolean field_l;
     private int field_a;
@@ -19,7 +19,7 @@ final class so {
     int field_f;
     static DraggableWidget field_i;
 
-    final void a(int param0, int param1, int param2) {
+    final void setItemBounds(int param0, int param1, int param2) {
         if (param0 >= this.field_f) {
           throw new IllegalArgumentException();
         }
@@ -29,11 +29,11 @@ final class so {
           }
           this.field_a = 0;
           this.field_o = 0;
-          if (0 != re.field_r) {
-            this.field_o = re.field_r;
+          if (0 != WrappedTextLayout.field_r) {
+            this.field_o = WrappedTextLayout.field_r;
             this.field_l = true;
             this.field_h = param1;
-            this.field_m = re.field_r;
+            this.field_m = WrappedTextLayout.field_r;
             this.field_e = hn.field_p;
           }
           if (this.field_m != 0 &&
@@ -41,7 +41,7 @@ final class so {
             if (0 >= this.field_e) {
               this.field_e = MusicPatchNode.field_g;
               this.field_e = this.field_e - 1;
-              if (0 == re.field_r &&
+              if (0 == WrappedTextLayout.field_r &&
                 PacketBuffer.field_m == 0) {
                 this.field_m = 0;
               }
@@ -68,7 +68,7 @@ final class so {
             }
             this.field_e = this.field_e - 1;
           }
-          if (0 == re.field_r &&
+          if (0 == WrappedTextLayout.field_r &&
             PacketBuffer.field_m == 0) {
             this.field_m = 0;
             if (this.field_m == 0) {
@@ -130,13 +130,13 @@ final class so {
         }
         this.field_a = 0;
         this.field_o = 0;
-        if (0 == re.field_r) {
+        if (0 == WrappedTextLayout.field_r) {
           if (this.field_m != 0 &&
             PacketBuffer.field_m != 0) {
             if (0 >= this.field_e) {
               this.field_e = MusicPatchNode.field_g;
               this.field_e = this.field_e - 1;
-              if (0 == re.field_r &&
+              if (0 == WrappedTextLayout.field_r &&
                 PacketBuffer.field_m == 0) {
                 this.field_m = 0;
               }
@@ -163,7 +163,7 @@ final class so {
             }
             this.field_e = this.field_e - 1;
           }
-          if (0 == re.field_r &&
+          if (0 == WrappedTextLayout.field_r &&
             PacketBuffer.field_m == 0) {
             this.field_m = 0;
             if (this.field_m == 0) {
@@ -219,17 +219,17 @@ final class so {
           }
           return;
         }
-        this.field_o = re.field_r;
+        this.field_o = WrappedTextLayout.field_r;
         this.field_l = true;
         this.field_h = param1;
-        this.field_m = re.field_r;
+        this.field_m = WrappedTextLayout.field_r;
         this.field_e = hn.field_p;
         if (this.field_m != 0 &&
           PacketBuffer.field_m != 0) {
           if (0 >= this.field_e) {
             this.field_e = MusicPatchNode.field_g;
             this.field_e = this.field_e - 1;
-            if (0 == re.field_r &&
+            if (0 == WrappedTextLayout.field_r &&
               PacketBuffer.field_m == 0) {
               this.field_m = 0;
             }
@@ -256,7 +256,7 @@ final class so {
           }
           this.field_e = this.field_e - 1;
         }
-        if (0 == re.field_r &&
+        if (0 == WrappedTextLayout.field_r &&
           PacketBuffer.field_m == 0) {
           this.field_m = 0;
           if (this.field_m != 0) {
@@ -288,7 +288,7 @@ final class so {
         this.field_l = true;
     }
 
-    final void a(int param0, int param1) {
+    final void pollKeysAndPointer(int param0, int param1) {
         int var3;
         var3 = -55 % ((-18 - param0) / 61);
         this.field_o = 0;
@@ -369,7 +369,7 @@ final class so {
         this.field_h = param1;
     }
 
-    final void a(byte param0) {
+    final void pollKeys(byte param0) {
         this.field_o = 0;
         this.field_a = 0;
         if (param0 != -76) {
@@ -399,7 +399,7 @@ final class so {
         this.field_l = false;
     }
 
-    final void a(int param0, boolean param1) {
+    final void setHighlightedItem(int param0, boolean param1) {
         if (param1) {
           this.field_h = -45;
           if (this.field_m == 0) {
@@ -416,25 +416,25 @@ final class so {
         this.field_h = param0;
     }
 
-    final void a(boolean param0, int param1, boolean param2, int param3) {
+    final void reset(boolean param0, int param1, boolean param2, int param3) {
         this.field_m = 0;
         this.field_l = param0 ? true : false;
         if (this.field_l) {
           this.field_h = param3;
           if (param2) {
-            this.c((byte) 42);
+            this.isPointerMode((byte) 42);
             return;
           }
           return;
         }
         this.field_h = param1;
         if (param2) {
-          this.c((byte) 42);
+          this.isPointerMode((byte) 42);
           return;
         }
     }
 
-    final boolean b(boolean param0) {
+    final boolean isActivatePressed(boolean param0) {
         if (!param0) {
           return false;
         }
@@ -450,12 +450,12 @@ final class so {
         return true;
     }
 
-    final boolean d(byte param0) {
+    final boolean isEndPressed(byte param0) {
         int var2 = -101 / ((param0 - 43) / 52);
         return this.field_a == 103 ? true : false;
     }
 
-    final static void a(java.awt.Component param0, int param1) {
+    final static void detachMouseInput(java.awt.Component param0, int param1) {
         try {
           param0.removeMouseListener(ResizableModalPanel.field_hb);
           param0.removeMouseMotionListener(ResizableModalPanel.field_hb);
@@ -466,12 +466,12 @@ final class so {
         }
     }
 
-    final boolean c(byte param0) {
+    final boolean isPointerMode(byte param0) {
         int var2 = 42 % ((param0 - 45) / 35);
         return this.field_m != 0 ? true : false;
     }
 
-    final static aj[] c(int param0) {
+    final static aj[] getRegisteredEntries(int param0) {
         if (param0 == 96) {
           return new aj[]{ValidationHelpWidget.field_W, Js5NetworkRequest.field_B, IntrusiveDequeCursor.field_b, td.field_G, om.field_M, ModalPanelStack.field_G, BevelTextPainter.field_q, gl.field_b, um.field_b, gg.field_b, fc.field_b, DropTargetWidget.field_G, ng.field_I, GameAppletShell.field_e};
         }
@@ -479,7 +479,7 @@ final class so {
         return new aj[]{ValidationHelpWidget.field_W, Js5NetworkRequest.field_B, IntrusiveDequeCursor.field_b, td.field_G, om.field_M, ModalPanelStack.field_G, BevelTextPainter.field_q, gl.field_b, um.field_b, gg.field_b, fc.field_b, DropTargetWidget.field_G, ng.field_I, GameAppletShell.field_e};
     }
 
-    final void d(int param0) {
+    final void clearInput(int param0) {
         this.field_o = 0;
         int var2 = 30 % ((-43 - param0) / 55);
         this.field_a = 0;
@@ -501,7 +501,7 @@ final class so {
           return;
         }
         java.awt.Component var2 = (java.awt.Component) null;
-        so.a((java.awt.Component) null, 80);
+        MenuInputState.detachMouseInput((java.awt.Component) null, 80);
         field_g = null;
         field_b = null;
         field_c = null;
@@ -511,22 +511,22 @@ final class so {
         field_p = null;
     }
 
-    final boolean a(int param0) {
+    final boolean isHomePressed(int param0) {
         if (param0 == -13722) {
           return 102 == this.field_a ? true : false;
         }
-        this.a(-52, 68, 71);
+        this.setItemBounds(-52, 68, 71);
         return 102 == this.field_a ? true : false;
     }
 
-    final boolean b(int param0) {
+    final boolean isRightPressed(int param0) {
         if (param0 > -62) {
           return true;
         }
         return this.field_a == 97 ? true : false;
     }
 
-    final boolean b(byte param0) {
+    final boolean isLeftPressed(byte param0) {
         if (param0 == -40) {
           return 96 == this.field_a ? true : false;
         }
@@ -534,7 +534,7 @@ final class so {
         return 96 == this.field_a ? true : false;
     }
 
-    so(int param0) {
+    MenuInputState(int param0) {
         this.field_l = false;
         this.field_h = 0;
         this.field_f = param0;

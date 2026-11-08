@@ -170,7 +170,7 @@ final class BufferedSocket implements Runnable {
           }
           if (null != this.field_a) {
             while (this.field_a.field_e == 0) {
-              ao.a(1L, 1);
+              ao.sleepMillis(1L, 1);
             }
             if (this.field_a.field_e == 1) {
               try {

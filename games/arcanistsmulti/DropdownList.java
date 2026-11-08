@@ -525,7 +525,7 @@ final class DropdownList extends UiContainer implements ButtonListener {
           if (param0 != -30) {
             field_I = (IndexedSprite[]) null;
           }
-          stackIn_3_0 = ValidationHelpWidget.a(PcmSampleStream.createAtRatePercent(param2, 100, param1), (byte) 68);
+          stackIn_3_0 = ValidationHelpWidget.playEffectStream(PcmSampleStream.createAtRatePercent(param2, 100, param1), (byte) 68);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -555,14 +555,14 @@ final class DropdownList extends UiContainer implements ButtonListener {
           -1 != this.field_P.field_Q) {
           return this.field_P.field_W[this.field_P.field_Q].toString();
         }
-        if (this.field_P.g(126) != null) {
-          return this.field_P.g(127).toString();
+        if (this.field_P.getSelectedItem(126) != null) {
+          return this.field_P.getSelectedItem(127).toString();
         }
         return super.getTooltip(false);
     }
 
     private final void openList(int param0) {
-        int var2 = this.field_P.f(27825);
+        int var2 = this.field_P.contentHeight(27825);
         int var3 = var2;
         int var4 = 0;
         if (var3 > this.field_R) {

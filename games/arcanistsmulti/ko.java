@@ -56,34 +56,34 @@ final class ko extends IntrusiveNode {
         int var6 = 0;
         int var7 = 0;
         ResourceArchive var8 = null;
-        ne var10 = null;
+        PlayerActionMenu var10 = null;
         Sprite var11 = null;
         String var12 = null;
-        ne var13 = null;
+        PlayerActionMenu var13 = null;
         Sprite var14 = null;
         String var15 = null;
-        ne var16 = null;
+        PlayerActionMenu var16 = null;
         Sprite var17 = null;
         String var18 = null;
-        ne var19 = null;
+        PlayerActionMenu var19 = null;
         Sprite var20 = null;
         String var21 = null;
-        ne var22 = null;
+        PlayerActionMenu var22 = null;
         Sprite var23 = null;
         String var24 = null;
-        ne var25 = null;
+        PlayerActionMenu var25 = null;
         Sprite var26 = null;
         String var27 = null;
-        ne var28 = null;
+        PlayerActionMenu var28 = null;
         Sprite var29 = null;
         String var30 = null;
-        ne var31 = null;
+        PlayerActionMenu var31 = null;
         Sprite var32 = null;
         String var33 = null;
-        ne var34 = null;
+        PlayerActionMenu var34 = null;
         Sprite var35 = null;
         String var36 = null;
-        ne var37 = null;
+        PlayerActionMenu var37 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -279,19 +279,19 @@ final class ko extends IntrusiveNode {
                 var5 = 1;
               }
               if (ReflectionCheckRequest.a((byte) 117, var5) != 2) {
-                BufferedRandomAccessFile.a(-1, var4_ref_String, 82, param1, nj.field_c, so.field_p);
+                BufferedRandomAccessFile.a(-1, var4_ref_String, 82, param1, nj.field_c, MenuInputState.field_p);
               } else {
                 DiskCacheRequest.a(param2, 1, true, var5);
-                BufferedRandomAccessFile.a(-1, var4_ref_String, 82, param1, nj.field_c, so.field_p);
+                BufferedRandomAccessFile.a(-1, var4_ref_String, 82, param1, nj.field_c, MenuInputState.field_p);
                 ue.b(10);
               }
             } else {
               var13 = (String) null;
               var12 = (String) null;
-              ao.a(0, (byte) 83, IconButtonPainter.field_q, (String) null, 2, (String) null);
+              ao.addChatMessage(0, (byte) 83, IconButtonPainter.field_q, (String) null, 2, (String) null);
               var15 = (String) null;
               var14 = (String) null;
-              ao.a(0, (byte) 73, TextTableInitializer.field_b, (String) null, 2, (String) null);
+              ao.addChatMessage(0, (byte) 73, TextTableInitializer.field_b, (String) null, 2, (String) null);
               ue.b(10);
             }
           }
@@ -308,7 +308,7 @@ final class ko extends IntrusiveNode {
           return true;
         }
         var4 = ed.field_Bb;
-        if (!ByteStorage.a(-256, (char) var4)) {
+        if (!ByteStorage.isPrintableCharacter(-256, (char) var4)) {
           return false;
         }
         if (var3 == 0) {
@@ -363,7 +363,7 @@ final class ko extends IntrusiveNode {
           var62 = var7Lifetime1 + var19 + ": ";
           var5Lifetime1 = var5Lifetime1 - oo.field_x.textWidth(var62);
         } else {
-          var64 = (CharSequence) ((Object) so.field_p);
+          var64 = (CharSequence) ((Object) MenuInputState.field_p);
           var18 = CachedArchiveProvider.formatTemplate(-45, new String[]{qo.normalizeName((byte) 84, var64)}, ge.field_n);
           var8 = CachedArchiveProvider.formatTemplate(113, new String[]{var16}, IterableNodeHashTable.field_f);
           var9 = oo.field_x.textWidth(var18);

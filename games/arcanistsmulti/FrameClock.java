@@ -11,7 +11,7 @@ abstract class FrameClock {
     final int sleepAndCountTicks(long param0, int param1) {
         long var4 = this.nanosUntilNextTick((byte) 52);
         if (var4 > 0L) {
-          ao.a(var4, 1);
+          ao.sleepMillis(var4, 1);
         }
         if (param1 != -1) {
           field_e = (SceneWidget) null;
@@ -47,8 +47,8 @@ abstract class FrameClock {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        ne var16 = null;
-        ne var17 = null;
+        PlayerActionMenu var16 = null;
+        PlayerActionMenu var17 = null;
         var15 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           if (param2) {
@@ -227,7 +227,7 @@ abstract class FrameClock {
     }
 
     final static void a(boolean param0) {
-        u.b(6);
+        HuffmanCodec.restoreWindowedMode(6);
         if (on.field_c != null) {
           UiComponent.attachInputListeners(on.field_c, (byte) 91);
         }
@@ -249,7 +249,7 @@ abstract class FrameClock {
           Bzip2State.a(md.field_b, SpellProjectile.field_A, nj.field_d, BattleUnit.field_S, MouseWheelHandler.field_c, param1, BevelBoxPainter.field_f, th.field_k, 27874, MouseWheelHandler.field_d, IntrusiveNode.field_c, IntrusiveDeque.field_i);
           ArchiveProvider.field_a = qe.loadSpriteSheet(param2, "chatfilter", "lobby", 119);
           cf.field_b[2] = TextButton.field_A;
-          cf.field_b[1] = u.field_d;
+          cf.field_b[1] = HuffmanCodec.field_d;
           cf.field_b[0] = GzipDecoder.field_e;
           hj.a(DiskCacheRequest.field_w, param0, 3896);
         } catch (RuntimeException runtimeException) {

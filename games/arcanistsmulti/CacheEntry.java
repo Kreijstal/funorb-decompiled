@@ -131,12 +131,12 @@ abstract class CacheEntry extends DualLinkNode {
           BattleUnit.field_m = param9;
           SecondaryNodeDeque.field_d = param0;
           IntrusiveNodeHashTable.field_b = qe.loadSpriteSheet(param8, "gameprivacy", "lobby", 92);
-          re.field_j = qe.loadSpriteSheet(param8, "ratedgame", "lobby", 81);
+          WrappedTextLayout.field_j = qe.loadSpriteSheet(param8, "ratedgame", "lobby", 81);
           sk.field_f = qe.loadSpriteSheet(param8, "opentome", "lobby", 71);
           ec.field_i = qe.loadSpriteSheet(param8, "allowspectators", "lobby", 88);
           vm.field_c = new String[5];
           vm.field_c[4] = MusicCrossfadeStream.field_C;
-          vm.field_c[1] = ne.field_a;
+          vm.field_c[1] = PlayerActionMenu.field_a;
           vm.field_c[0] = wm.field_F;
           vm.field_c[2] = um.field_d;
           vm.field_c[3] = NanoFrameClock.field_m;

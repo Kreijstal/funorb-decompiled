@@ -56,7 +56,7 @@ final class oe {
             stackIn_8_0 = oo.field_E;
             return stackIn_8_0;
           }
-          var8 = UsernameCredentials.a(0, param0);
+          var8 = UsernameCredentials.findEntryByName(0, param0);
           if (var8 == null) {
             stackIn_12_0 = CachedArchiveProvider.formatTemplate(122, new String[]{param0}, FixedViewResizeListener.field_c);
             return stackIn_12_0;

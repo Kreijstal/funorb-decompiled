@@ -39,7 +39,7 @@ final class um {
           String var8 = null;
           String var5 = null;
           try {
-            so.field_g = param0;
+            MenuInputState.field_g = param0;
             var7 = param1.getParameter("cookieprefix");
             var4 = param1.getParameter("cookiehost");
             var8 = var7 + "session=" + param0 + "; version=1; path=/; domain=" + var4;

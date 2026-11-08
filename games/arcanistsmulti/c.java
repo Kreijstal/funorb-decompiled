@@ -124,7 +124,7 @@ final class c {
         var18 = null;
         var19 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          TextHotspotWidget.a(16, oo.field_y);
+          TextHotspotWidget.positionZoomedPanels(16, oo.field_y);
           if (DirectByteStorage.field_f != null) {
             IntrusiveNodeHashTable.field_o.field_ub = true;
             var22 = SocketConnector.field_d;
@@ -163,7 +163,7 @@ final class c {
                   var10_ref_String = ContentTransitionDialog.field_pb;
                 }
                 if ((16 & sb.field_e) == 0 &&
-                  !so.field_j) {
+                  !MenuInputState.field_j) {
                   SocketConnector.field_d.field_v = ko.field_h.field_Ab;
                 }
                 SocketConnector.field_d.field_rb = SocketConnector.field_d.field_rb + "<br>" + var10_ref_String;
@@ -501,13 +501,13 @@ final class c {
             aj.field_d.field_rb = CachedArchiveProvider.formatTemplate(116, new String[]{Integer.toString(DirectByteStorage.field_f.field_Rb), Integer.toString(DirectByteStorage.field_f.field_dc)}, IsaacCipher.field_h);
           }
           stackIn_182_0 = hl.field_m;
-          stackIn_183_1 = (param4) && (!param1) && (!so.field_j);
+          stackIn_183_1 = (param4) && (!param1) && (!MenuInputState.field_j);
           ((SceneWidget) (Object) stackIn_182_0).updateInputFullScreen(stackIn_183_1, (byte) 60);
           stackIn_187_0 = ReflectionCheckRequest.field_h;
-          stackIn_188_1 = (param4) && (!param1) && (!so.field_j);
+          stackIn_188_1 = (param4) && (!param1) && (!MenuInputState.field_j);
           ((SceneWidget) (Object) stackIn_187_0).updateInputFullScreen(stackIn_188_1, (byte) 69);
           stackIn_192_0 = IconTextSceneWidget.field_Fb;
-          stackIn_193_1 = (param4) && (!param1) && (so.field_j);
+          stackIn_193_1 = (param4) && (!param1) && (MenuInputState.field_j);
           ((SceneWidget) (Object) stackIn_192_0).updateInputFullScreen(stackIn_193_1, (byte) 115);
           tn.field_Ob.field_c.updateTabs((byte) 118);
           if (param3 != 2) {
@@ -518,13 +518,13 @@ final class c {
               qc.a(false, DirectByteStorage.field_f.getSortKey((byte) 94), param0);
             }
             if (0 != SocketConnector.field_d.field_U) {
-              so.field_j = true;
+              MenuInputState.field_j = true;
             }
             if (CanvasRasterBuffer.field_k.field_U != 0) {
               bj.field_ub = true;
             }
             if (0 != gj.field_d.field_U) {
-              so.field_j = false;
+              MenuInputState.field_j = false;
             }
             lm.a(false, param0, DirectByteStorage.field_f, 0);
           }

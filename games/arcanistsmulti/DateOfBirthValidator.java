@@ -5,7 +5,7 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
     static int[] field_i;
     DateInputWidget field_h;
 
-    final static int a(int param0, byte param1, int param2) {
+    final static int hitTestTab(int param0, byte param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -48,13 +48,13 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
         }
     }
 
-    final static void d(byte param0) {
+    final static void showEmptyLoginPanel(byte param0) {
         String var2 = (String) null;
         bb.showLoginPanel("", -3, (String) null);
         int var1 = -117 / ((-16 - param0) / 36);
     }
 
-    final static SceneTabbedPanel a(boolean param0, SceneWidget param1, SceneWidget param2, oo param3, SceneWidget param4) {
+    final static SceneTabbedPanel createQuickChatMenu(boolean param0, SceneWidget param1, SceneWidget param2, oo param3, SceneWidget param4) {
         int var14 = 0;
         Object stackIn_3_0 = null;
         int stackIn_7_0 = 0;
@@ -126,7 +126,7 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
               var13_ref_oo = ByteStorage.field_d.a(3, param3.field_p[var12]);
               var8[var12] = var13_ref_oo.field_w;
               var9[var12] = param3.field_n[var12];
-              var11[var12] = DateOfBirthValidator.a(true, param1, param2, var13_ref_oo, param4);
+              var11[var12] = DateOfBirthValidator.createQuickChatMenu(true, param1, param2, var13_ref_oo, param4);
             }
           }
           if (null != param3.field_D) {
@@ -140,7 +140,7 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
                 var10[var12Lifetime1 + var14] = param3.field_D[var14];
               } else {
                 var16 = th.field_d.getDefinition(var15, (byte) -70);
-                var8[var14 + var12Lifetime1] = var16.c(true);
+                var8[var14 + var12Lifetime1] = var16.getText(true);
                 var9[var12Lifetime1 + var14] = param3.field_z[var14];
                 if (var9[var12Lifetime1 + var14] <= 0) {
                   var13 = (char)(var13 + 1);
@@ -206,7 +206,7 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
         }
     }
 
-    final static boolean d(int param0) {
+    final static boolean hasPendingReflectionCheck(int param0) {
         int var2 = 0;
         ReflectionCheckRequest var1 = null;
         RuntimeException var1_ref = null;
@@ -260,12 +260,12 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
         }
     }
 
-    final static void a(PcmSampleStream param0, int param1) {
+    final static void stopEffectStream(PcmSampleStream param0, int param1) {
         try {
           pc.field_e.removeSubStream(param0);
           if (param1 < 119) {
             PcmSampleStream var3 = (PcmSampleStream) null;
-            DateOfBirthValidator.a((PcmSampleStream) null, 64);
+            DateOfBirthValidator.stopEffectStream((PcmSampleStream) null, 64);
           }
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "bl.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

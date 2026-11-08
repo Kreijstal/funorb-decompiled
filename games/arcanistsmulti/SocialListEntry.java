@@ -87,7 +87,7 @@ final class SocialListEntry extends SceneWidget {
         int var1_int = 0;
         int[] var2 = null;
         int var3 = 0;
-        vg var4_ref_vg = null;
+        MeshModel var4_ref_vg = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -106,7 +106,7 @@ final class SocialListEntry extends SceneWidget {
         int[] var21 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
-        vg var17 = null;
+        MeshModel var17 = null;
         int var3Lifetime1;
         int var5Lifetime1;
         int var6Lifetime1;
@@ -125,8 +125,8 @@ final class SocialListEntry extends SceneWidget {
           var2 = var20;
           for (var3 = 0; var1_int > var3; var3++) {
             var4_ref_vg = oo.field_u[var3];
-            var4_ref_vg.b((byte) 62);
-            ValidationHelpWidget.b(var3, 14130);
+            var4_ref_vg.computeBounds((byte) 62);
+            ValidationHelpWidget.computeIntroShake(var3, 14130);
             var5 = var4_ref_vg.field_k + var4_ref_vg.field_i >> 1;
             var6 = var4_ref_vg.field_v + var4_ref_vg.field_R >> 1;
             var7 = var4_ref_vg.field_N + var4_ref_vg.field_P >> 1;
@@ -174,7 +174,7 @@ final class SocialListEntry extends SceneWidget {
             }
             var21[var16] = -2147483648;
             var17 = oo.field_u[var16];
-            ValidationHelpWidget.b(var16, param0 ^ 252570192);
+            ValidationHelpWidget.computeIntroShake(var16, param0 ^ 252570192);
             for (var18 = 0; var18 < 3; var18++) {
               tn.field_Gb[var18] = tn.field_Gb[var18] + gn.field_g[var15][var18];
             }

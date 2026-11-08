@@ -106,7 +106,7 @@ final class ik {
         BufferedSocket.field_d = new SceneWidget(0L, (SceneWidget) null);
         BufferedSocket.field_d.addChild(aj.field_h.field_c, param0 ^ -74);
         BufferedSocket.field_d.addChild(ii.field_b, param0 ^ -54);
-        ao.a((byte) -120);
+        ao.layoutLobby((byte) -120);
     }
 
     static {

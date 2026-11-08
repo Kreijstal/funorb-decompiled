@@ -254,7 +254,7 @@ class AudioOutput {
           if (var1 != 0) {
             field_o.field_g = true;
             while (field_o.field_a) {
-              ao.a(50L, 1);
+              ao.sleepMillis(50L, 1);
             }
             field_o = null;
           }

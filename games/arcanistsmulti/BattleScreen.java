@@ -88,7 +88,7 @@ final class BattleScreen {
             stackIn_12_0 = -98;
             return stackIn_12_0;
           }
-          if (u.field_k) {
+          if (HuffmanCodec.field_k) {
             stackIn_15_0 = 3;
             return stackIn_15_0;
           }
@@ -561,7 +561,7 @@ final class BattleScreen {
         int var12Lifetime2;
         var13 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          ce.field_m.a(true);
+          ce.field_m.makeRasterTarget(true);
           SoftwareRasterizer.setClip(param4, param2, param4 + param6, param2 + param1);
           if (this.field_k &&
             !this.field_V.isTurnActive(4)) {
@@ -942,7 +942,7 @@ final class BattleScreen {
           this.field_O = false;
           if (!this.field_ab &&
             qg.a(-79)) {
-            vg.a((byte) 86);
+            MeshModel.handleZoomKeys((byte) 86);
           }
           if (13 != IntrusiveDeque.field_d) {
             return;
@@ -1179,7 +1179,7 @@ final class BattleScreen {
           if (this.field_H) {
             this.drawSpellbookPanel(8);
           }
-          ce.field_m.a(true);
+          ce.field_m.makeRasterTarget(true);
           var5 = 0;
           var5 += 6;
           if (this.field_g) {
@@ -1639,7 +1639,7 @@ final class BattleScreen {
             fk.drawTooltipBox(0, TextLayout.field_c);
           }
           if (eo.field_c != null) {
-            eo.field_c.a(param0 ^ -22718, param1);
+            eo.field_c.draw(param0 ^ -22718, param1);
           }
           KeyboardInputHandler.a(param1, (byte) -101);
           if (db.field_a != null) {
@@ -1744,7 +1744,7 @@ final class BattleScreen {
                 var9_intLifetime1 = var6.getSize(-8323);
                 stackIn_152_0 = (this.field_V.canStandAt(this.field_s, var6, -16, this.field_r)) ? 65280 : 16711680;
                 var10Lifetime2 = stackIn_152_0;
-                ce.field_m.a(true);
+                ce.field_m.makeRasterTarget(true);
                 SoftwareRasterizer.setClip(-param1 + (EmailLoginCredentials.field_f >> 1), (var4_int >> 1) - param2, (EmailLoginCredentials.field_f >> 1) + (-param1 + this.field_V.field_y), this.field_V.field_H - param2 + (var4_int >> 1));
                 SoftwareRasterizer.resetClip();
                 var11_int = -param1 + (this.field_s + (EmailLoginCredentials.field_f >> 1));
@@ -1761,7 +1761,7 @@ final class BattleScreen {
                 var9_intLifetime2 = var6.getSize(-8323);
                 stackIn_25_0 = (this.field_V.canPlaceUnitAt(this.field_s, this.field_V.field_H - 16, (byte) -75, var6)) ? 65280 : 16711680;
                 var10Lifetime3 = stackIn_25_0;
-                ce.field_m.a(true);
+                ce.field_m.makeRasterTarget(true);
                 SoftwareRasterizer.setClip((EmailLoginCredentials.field_f >> 1) - param1, (var4_int >> 1) - param2, this.field_V.field_y - param1 + (EmailLoginCredentials.field_f >> 1), (var4_int >> 1) + (this.field_V.field_H - param2));
                 SoftwareRasterizer.resetClip();
                 var11_intLifetime1 = (EmailLoginCredentials.field_f >> 1) + (this.field_s - param1);
@@ -1801,7 +1801,7 @@ final class BattleScreen {
                 if (9 == DropdownList.field_N) {
                   stackIn_57_0 = (this.field_V.isInsideMargin(false, this.field_s, this.field_r)) ? 65280 : 16711680;
                   var9_intLifetime3 = stackIn_57_0;
-                  ce.field_m.a(true);
+                  ce.field_m.makeRasterTarget(true);
                   var10Lifetime4 = 32;
                   var11_intLifetime2 = (EmailLoginCredentials.field_f >> 1) + (-param1 + this.field_s);
                   var12Lifetime2 = -(var10Lifetime4 >> 1) + (-param2 + this.field_r + (var4_int >> 1));
@@ -1840,7 +1840,7 @@ final class BattleScreen {
                     stackIn_66_0 = 16711680;
                   }
                   var9_intLifetime3Lifetime2 = stackIn_66_0;
-                  ce.field_m.a(true);
+                  ce.field_m.makeRasterTarget(true);
                   var10Lifetime4 = 32;
                   var11_intLifetime2Lifetime1 = (EmailLoginCredentials.field_f >> 1) - param1 + var7Lifetime1;
                   var12Lifetime2Lifetime1 = (var4_int >> 1) + var8Lifetime1 - param2 - (var6.getSize(-8323) + 32);
@@ -1918,7 +1918,7 @@ final class BattleScreen {
                 }
                 stackIn_144_0 = (this.field_V.isUnitInRange(false, var6, DropdownList.field_N, this.field_r, this.field_s)) ? 65280 : 16711680;
                 var10Lifetime5 = stackIn_144_0;
-                ce.field_m.a(true);
+                ce.field_m.makeRasterTarget(true);
                 SoftwareRasterizer.setClip(-param1 + (EmailLoginCredentials.field_f >> 1), -param2 + (var4_int >> 1), (EmailLoginCredentials.field_f >> 1) + (-param1 + this.field_V.field_y), (var4_int >> 1) + (-param2 + this.field_V.field_H));
                 var11_intLifetime3 = -param1 + (var7Lifetime1 + (EmailLoginCredentials.field_f >> 1));
                 var12Lifetime3 = (var4_int >> 1) + var8Lifetime1 + (-param2 - (var9_intLifetime4 >> 1));
@@ -1970,7 +1970,7 @@ final class BattleScreen {
               var11.makeRasterTarget();
               var9.drawSilhouette(8, 8, var10Lifetime1);
               SoftwareRasterizer.blurRectangle(5, 5, 0, 0, var11.field_n, var11.field_w);
-              ce.field_m.a(true);
+              ce.field_m.makeRasterTarget(true);
               var11.drawAdditive(-param1 + (-(var9.field_n / 2) + var7Lifetime1 + (EmailLoginCredentials.field_f >> 1) - 8), var8Lifetime1 + (-var9.field_w + (-param2 + (var4_int >> 1)) - 8), 256);
               var9.drawSilhouette((EmailLoginCredentials.field_f >> 1) + var7Lifetime1 + (-(var9.field_n / 2) - param1), (var4_int >> 1) + (var8Lifetime1 - var9.field_w - param2), var10Lifetime1);
               var9.drawAlpha(-param1 + (var7Lifetime1 - var9.field_n / 2 + (EmailLoginCredentials.field_f >> 1)), -param2 + var8Lifetime1 - (var9.field_w - (var4_int >> 1)), 128);
@@ -2232,7 +2232,7 @@ final class BattleScreen {
           if (param2 != 1) {
             field_E = (SceneWidget) null;
           }
-          stackIn_3_0 = th.a(param4, 1, 3, param0, param2 - 32574, param3, 1, 1, param1);
+          stackIn_3_0 = th.createBevelFrameSprites(param4, 1, 3, param0, param2 - 32574, param3, 1, 1, param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2792,7 +2792,7 @@ final class BattleScreen {
         int var6Lifetime1;
         var8 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          if (re.field_r == 1 &&
+          if (WrappedTextLayout.field_r == 1 &&
             -3 == mf.field_g) {
             stackIn_9_0 = !(ao.field_d);
             ao.field_d = stackIn_9_0;
@@ -3824,7 +3824,7 @@ final class BattleScreen {
             }
           }
           if (var7 != 0) {
-            if (re.field_r == 1) {
+            if (WrappedTextLayout.field_r == 1) {
               if (mf.field_g >= 0 &&
                 null != lm.field_f &&
                 this.field_V.canOwnerCast(lm.field_f[mf.field_g], true, this.field_bb)) {
@@ -3871,7 +3871,7 @@ final class BattleScreen {
                 this.field_s = -1000;
               }
             }
-            if (2 == re.field_r) {
+            if (2 == WrappedTextLayout.field_r) {
               this.field_s = -1000;
               DropdownList.field_N = -1;
             }
@@ -3883,10 +3883,10 @@ final class BattleScreen {
               stackIn_181_0 = (DropdownList.field_N < 0) ? 0 : 1;
               var8Lifetime1Lifetime1 = stackIn_181_0;
               if (PacketBuffer.field_m == 1 && ((this.field_u > 0 ||
-                re.field_r == 1) &&
+                WrappedTextLayout.field_r == 1) &&
                 (this.field_u == 0 ||
                 !(DropdownList.field_N < 0))) && this.field_u < 100) {
-                if (re.field_r == 1 &&
+                if (WrappedTextLayout.field_r == 1 &&
                   cf.field_h[222] != null) {
                   DropdownList.playSampleAtVolume((byte) -30, SceneWidgetNode.field_r[222], cf.field_h[222]);
                 }
@@ -3904,7 +3904,7 @@ final class BattleScreen {
                     }
                   }
                   if (null != sm.field_e) {
-                    ValidationHelpWidget.a(sm.field_e, (byte) 68);
+                    ValidationHelpWidget.playEffectStream(sm.field_e, (byte) 68);
                   }
                 }
                 var8Lifetime1Lifetime1 = 0;
@@ -3943,7 +3943,7 @@ final class BattleScreen {
                   }
                 }
                 if (sm.field_e != null) {
-                  DateOfBirthValidator.a(sm.field_e, param1 ^ 119);
+                  DateOfBirthValidator.stopEffectStream(sm.field_e, param1 ^ 119);
                   sm.field_e = null;
                 }
                 boolean decompiledFrameRemainder2 = true;

@@ -8,7 +8,7 @@ class UsernameCredentials extends LoginCredentials {
     private String field_e;
     private long field_h;
 
-    final static void a(byte param0, java.applet.Applet param1) {
+    final static void openQuitPage(byte param0, java.applet.Applet param1) {
         try {
           java.net.URL var2 = null;
           Exception var2_ref = null;
@@ -49,7 +49,7 @@ class UsernameCredentials extends LoginCredentials {
         }
     }
 
-    final static LobbyGameEntry a(int param0, byte param1) {
+    final static LobbyGameEntry getGameEntry(int param0, byte param1) {
         if (param1 < -28) {
           return null == nk.field_q ? null : (LobbyGameEntry) (nk.field_q.get((long)param0, (byte) -102));
         }
@@ -92,7 +92,7 @@ class UsernameCredentials extends LoginCredentials {
         }
     }
 
-    final static void c(int param0) {
+    final static void sendPendingDateRequests(int param0) {
         int fieldTemp$0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
@@ -104,7 +104,7 @@ class UsernameCredentials extends LoginCredentials {
         try {
           var1_int = -117 / ((param0 - 89) / 35);
           var2 = he.field_e;
-          while (DateOfBirthValidator.d(0)) {
+          while (DateOfBirthValidator.hasPendingReflectionCheck(0)) {
             var2.writeOpcode((byte) -66, 8);
             fieldTemp$0 = var2.position + 1;
             var2.position = var2.position + 1;
@@ -120,9 +120,9 @@ class UsernameCredentials extends LoginCredentials {
         }
     }
 
-    final static void a(String param0, int param1, String param2) {
+    final static void setLoginPanelTexts(String param0, int param1, String param2) {
         try {
-          ff.a(false, param2, (byte) -97, param0);
+          ff.setLoginContext(false, param2, (byte) -97, param0);
           if (param1 != 0) {
             UsernameCredentials.releaseStatics((byte) -12);
           }
@@ -139,7 +139,7 @@ class UsernameCredentials extends LoginCredentials {
         return MusicPatchPcmStream.field_m;
     }
 
-    final static wa a(int param0, String param1) {
+    final static wa findEntryByName(int param0, String param1) {
         String var2 = null;
         wa var3 = null;
         String var4 = null;
@@ -214,7 +214,7 @@ class UsernameCredentials extends LoginCredentials {
         }
     }
 
-    final static void a(int param0, MidiPcmStream param1, PlatformTaskDispatcher param2, java.awt.Component param3, int param4, boolean param5) {
+    final static void initializeAudioOutputs(int param0, MidiPcmStream param1, PlatformTaskDispatcher param2, java.awt.Component param3, int param4, boolean param5) {
         try {
           if (param4 != -22836) {
             field_f = (String) null;
@@ -225,7 +225,7 @@ class UsernameCredentials extends LoginCredentials {
         }
     }
 
-    final static CoverageBitmapFont a(ResourceArchive param0, int param1, ResourceArchive param2, int param3, int param4) {
+    final static CoverageBitmapFont loadCoverageFont(ResourceArchive param0, int param1, ResourceArchive param2, int param3, int param4) {
         RuntimeException var5 = null;
         Object stackIn_2_0 = null;
         CoverageBitmapFont stackIn_6_0 = null;
@@ -281,7 +281,7 @@ class UsernameCredentials extends LoginCredentials {
           return;
         }
         String var2 = (String) null;
-        UsernameCredentials.a((String) null, -94, (String) null);
+        UsernameCredentials.setLoginPanelTexts((String) null, -94, (String) null);
         field_i = null;
     }
 

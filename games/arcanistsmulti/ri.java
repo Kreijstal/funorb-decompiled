@@ -24,7 +24,7 @@ final class ri {
         int[] var4 = (int[]) null;
         SoftwareRasterizer.setTarget((int[]) null, 0, 0);
         ce.field_m = DraggableWidget.createRasterBuffer(param0, (java.awt.Component) ((Object) on.field_c), param2, (byte) -123);
-        ce.field_m.a(true);
+        ce.field_m.makeRasterTarget(true);
         ho.a((byte) 51, param2 / param1, param0 / 2);
         IconTextSceneWidget.setViewSize(param0, param1 ^ 19131, param2);
         MenuScreen.setScreenSize(param2, param0, false);

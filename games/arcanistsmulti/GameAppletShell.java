@@ -167,7 +167,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                   do {
                     if (!(var3 < LoginPanel.field_Q)) {
                       this.runDrawTick(85);
-                      mb.a(-94, on.field_c, fi.field_d);
+                      mb.flushEventQueue(-94, on.field_c, fi.field_d);
                       break;
                     }
                     this.runUpdateTick((byte) -123);
@@ -384,7 +384,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         }
         try {
           ResizableViewResizeListener.field_b = qj.monotonicTimeMillis(-26572);
-          ao.a(5000L, 1);
+          ao.sleepMillis(5000L, 1);
           rb.field_k = null;
           this.shutdown(false, -29);
         } catch (RuntimeException runtimeException) {
@@ -779,7 +779,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               var8 = fi.field_d.queueThreadStart(127, 1, (Runnable) (this));
               while (true) {
                 if (var8.field_e == 0) {
-                  ao.a(10L, 1);
+                  ao.sleepMillis(10L, 1);
                   if (var9 == 0) {
                     continue;
                   }

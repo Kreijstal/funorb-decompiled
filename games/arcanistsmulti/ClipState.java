@@ -16,7 +16,7 @@ final class ClipState extends IntrusiveNode {
     static String field_l;
     static IntrusiveDeque field_n;
 
-    final static void a(int[] param0, int param1, int param2, int param3, int[] param4, int[] param5, int param6, int param7, byte param8, int[] param9, int param10, int param11, int[] param12, int param13, int[] param14, int param15) {
+    final static void blitTextureRows(int[] param0, int param1, int param2, int param3, int[] param4, int[] param5, int param6, int param7, byte param8, int[] param9, int param10, int param11, int[] param12, int param13, int[] param14, int param15) {
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
         int incrementValue$3 = 0;
@@ -167,7 +167,7 @@ final class ClipState extends IntrusiveNode {
         }
     }
 
-    final static void a(Sprite param0, int param1) {
+    final static void tileSprite(Sprite param0, int param1) {
         int dupTemp$0 = 0;
         int dupTemp$1 = 0;
         RuntimeException stackIn_16_0 = null;
@@ -235,7 +235,7 @@ final class ClipState extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 > -120) {
-            ClipState.a((int[]) null, 98, -65, 94, (int[]) null, (int[]) null, -75, 116, (byte) -14, (int[]) null, -110, 9, (int[]) null, -39, (int[]) null, -48);
+            ClipState.blitTextureRows((int[]) null, 98, -65, 94, (int[]) null, (int[]) null, -75, 116, (byte) -14, (int[]) null, -110, 9, (int[]) null, -39, (int[]) null, -48);
           }
           stackIn_16_0 = ((!(param0 < 65) &&
             !(90 < param0)) ||
@@ -314,7 +314,7 @@ final class ClipState extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, String param1) {
+    final static void setStatusCaption(int param0, String param1) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

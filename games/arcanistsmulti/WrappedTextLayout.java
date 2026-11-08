@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class re extends TextLayout {
+final class WrappedTextLayout extends TextLayout {
     static String[] field_t;
     private boolean field_n;
     static Sprite[] field_j;
@@ -16,7 +16,7 @@ final class re extends TextLayout {
     private int field_p;
     private int field_h;
 
-    final void a(String param0, int param1, int param2, byte param3, BitmapFont param4) {
+    final void layoutAlignedLine(String param0, int param1, int param2, byte param3, BitmapFont param4) {
         TextLine discarded$0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -44,10 +44,10 @@ final class re extends TextLayout {
           this.field_n = true;
           if (param3 != -18) {
             var8 = (String) null;
-            discarded$0 = this.a((BitmapFont) null, 47, 36, (String) null);
+            discarded$0 = this.createLine((BitmapFont) null, 47, 36, (String) null);
           }
           this.field_h = 1;
-          var9 = this.a(param4, 0, param2, param0);
+          var9 = this.createLine(param4, 0, param2, param0);
           var7 = param4.textWidth(param0);
           var9.field_f[0] = -(var7 >> 1) + param1;
           var9.field_f[param0.length()] = param1 + (var7 >> 1);
@@ -73,7 +73,7 @@ final class re extends TextLayout {
         }
     }
 
-    final void a(int param0, byte param1, BitmapFont param2, int param3, String param4) {
+    final void layoutSingleLine(int param0, byte param1, BitmapFont param2, int param3, String param4) {
         TextLine var9 = null;
         TextLine var10 = null;
         if (param4 == null) {
@@ -89,7 +89,7 @@ final class re extends TextLayout {
           this.field_i = param2;
           this.field_h = 2;
           this.field_q = param4;
-          var9 = this.a(param2, 0, param3, param4);
+          var9 = this.createLine(param2, 0, param3, param4);
           var10 = var9;
           var10.field_f[0] = -param2.textWidth(param4) + param0;
           var10.field_f[param4.length()] = param0;
@@ -100,7 +100,7 @@ final class re extends TextLayout {
         }
     }
 
-    private final TextLine a(BitmapFont param0, int param1, int param2, String param3) {
+    private final TextLine createLine(BitmapFont param0, int param1, int param2, String param3) {
         TextLine var5 = null;
         RuntimeException var5_ref = null;
         TextLine var6 = null;
@@ -142,7 +142,7 @@ final class re extends TextLayout {
         }
     }
 
-    final static boolean a(byte param0, java.applet.Applet param1) {
+    final static boolean hasStatusCookie(byte param0, java.applet.Applet param1) {
         try {
           int var5 = 0;
           String var3 = null;
@@ -169,7 +169,7 @@ final class re extends TextLayout {
               var4 = ValidationState.split(false, ';', var3);
               if (param0 != -68) {
                 var8 = (java.applet.Applet) null;
-                re.a((byte) 30, (java.applet.Applet) null);
+                WrappedTextLayout.hasStatusCookie((byte) 30, (java.applet.Applet) null);
               }
               for (var5 = 0; var5 < var4.length; var5++) {
                 var6 = var4[var5].indexOf('=');
@@ -203,7 +203,7 @@ final class re extends TextLayout {
         }
     }
 
-    final void a(byte param0, BitmapFont param1, int param2, int param3, int param4, int param5, String param6, int param7) {
+    final void layoutParagraph(byte param0, BitmapFont param1, int param2, int param3, int param4, int param5, String param6, int param7) {
         TextLine stackIn_37_0;
         TextLine stackIn_37_1;
         int stackIn_37_2;
@@ -335,7 +335,7 @@ final class re extends TextLayout {
         }
     }
 
-    final void a(String param0, byte param1, BitmapFont param2, int param3, int param4) {
+    final void layoutJustifiedLine(String param0, byte param1, BitmapFont param2, int param3, int param4) {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -349,7 +349,7 @@ final class re extends TextLayout {
         try {
           if (param1 > -109) {
             var7 = (String) null;
-            this.a((byte) 70, (BitmapFont) null, -111, -15, -72, 7, (String) null, -64);
+            this.layoutParagraph((byte) 70, (BitmapFont) null, -111, -15, -72, 7, (String) null, -64);
           }
           if (param0 == null) {
             this.field_f = null;
@@ -366,7 +366,7 @@ final class re extends TextLayout {
           this.field_q = param0;
           this.field_h = 0;
           this.field_i = param2;
-          var8 = this.a(param2, 0, param3, param0);
+          var8 = this.createLine(param2, 0, param3, param0);
           var9 = var8;
           var8.field_f[0] = param4;
           var9.field_f[param0.length()] = param2.textWidth(param0) + param4;
@@ -402,7 +402,7 @@ final class re extends TextLayout {
         field_m = null;
     }
 
-    public re() {
+    public WrappedTextLayout() {
     }
 
     static {

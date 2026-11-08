@@ -580,7 +580,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         var7 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           if (null == param1.field_s) {
-            param1.field_s = (TextLayout) ((Object) new re());
+            param1.field_s = (TextLayout) ((Object) new WrappedTextLayout());
           }
           var3_int = this.getAvailableWidth(param1, (byte) 71);
           var4 = this.getAvailableHeight(param1, false);
@@ -604,22 +604,22 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           if (0 != var6Lifetime1 &&
             3 != var6Lifetime1) {
             if (1 == var6Lifetime1) {
-              if (!(param1.field_s instanceof re)) {
+              if (!(param1.field_s instanceof WrappedTextLayout)) {
                 return;
               }
-              ((re) (param1.field_s)).a(this.getDisplayText(false, param1), var3_int >> 1, var5, (byte) -18, this.field_g);
+              ((WrappedTextLayout) (param1.field_s)).layoutAlignedLine(this.getDisplayText(false, param1), var3_int >> 1, var5, (byte) -18, this.field_g);
               return;
             }
             if (var6Lifetime1 != 2) {
               return;
             }
-            if (!(param1.field_s instanceof re)) {
+            if (!(param1.field_s instanceof WrappedTextLayout)) {
               return;
             }
-            ((re) (param1.field_s)).a(var3_int, (byte) -105, this.field_g, var5, this.getDisplayText(false, param1));
+            ((WrappedTextLayout) (param1.field_s)).layoutSingleLine(var3_int, (byte) -105, this.field_g, var5, this.getDisplayText(false, param1));
           } else {
-            if (param1.field_s instanceof re) {
-              ((re) (param1.field_s)).a(this.getDisplayText(false, param1), (byte) -123, this.field_g, var5, 0);
+            if (param1.field_s instanceof WrappedTextLayout) {
+              ((WrappedTextLayout) (param1.field_s)).layoutJustifiedLine(this.getDisplayText(false, param1), (byte) -123, this.field_g, var5, 0);
               return;
             }
           }
@@ -718,10 +718,10 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         try {
           var3_int = 58 % ((-83 - param1) / 35);
           if (param0.field_s == null) {
-            param0.field_s = (TextLayout) ((Object) new re());
+            param0.field_s = (TextLayout) ((Object) new WrappedTextLayout());
           }
           if (this.field_n) {
-            ((re) (param0.field_s)).a((byte) 119, this.field_g, this.getAvailableHeight(param0, false), this.field_h, this.field_i, this.field_a, this.getDisplayText(false, param0), this.getAvailableWidth(param0, (byte) -62));
+            ((WrappedTextLayout) (param0.field_s)).layoutParagraph((byte) 119, this.field_g, this.getAvailableHeight(param0, false), this.field_h, this.field_i, this.field_a, this.getDisplayText(false, param0), this.getAvailableWidth(param0, (byte) -62));
           } else {
             this.layoutText((byte) -33, param0);
           }

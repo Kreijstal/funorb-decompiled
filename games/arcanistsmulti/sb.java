@@ -235,7 +235,7 @@ final class sb {
             var3 = null;
           }
           if (var3 != null) {
-            TextHotspotWidget.b(0, param0);
+            TextHotspotWidget.drawSpellInfoPanel(0, param0);
           } else {
             UiTheme.field_n = false;
           }

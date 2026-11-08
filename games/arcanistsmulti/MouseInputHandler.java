@@ -238,13 +238,13 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         int var5 = 0;
         int var6 = 0;
         PacketBuffer var7 = null;
-        ne var9 = null;
+        PlayerActionMenu var9 = null;
         String var10 = null;
-        ne var11 = null;
+        PlayerActionMenu var11 = null;
         String var12 = null;
-        ne var13 = null;
+        PlayerActionMenu var13 = null;
         String var14 = null;
-        ne var15 = null;
+        PlayerActionMenu var15 = null;
         try {
           ArcanistsMulti.openInfoPanel(-26335, (int[]) null, DebouncedValidator.field_g, (String) null, 0L, -1, param1.getSortKey((byte) 73), (String) null, param1);
           if (param1.field_Lb && (2 == param1.field_Fb ||
@@ -253,7 +253,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             var10 = CachedArchiveProvider.formatTemplate(param0 - 949002960, new String[]{param2}, LinkButtonPainter.field_i);
             var9.field_l.addAction(10, var10, (byte) -26);
           }
-          eo.field_c.a(param0 ^ 949002929);
+          eo.field_c.addSocialActions(param0 ^ 949002929);
           if (param3) {
             if (eo.field_c.field_e != ki.field_q) {
               var13 = eo.field_c;

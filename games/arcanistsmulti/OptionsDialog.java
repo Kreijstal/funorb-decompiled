@@ -205,7 +205,7 @@ final class OptionsDialog extends ResizableModalPanel implements ButtonListener 
           }
           stackIn_31_1 = !(0 >= this.field_V.length);
           this.field_yb = stackIn_31_1;
-          stackIn_34_0 = (!ne.b(-22768)) ? 0 : 1;
+          stackIn_34_0 = (!PlayerActionMenu.canEnterFullscreen(-22768)) ? 0 : 1;
           var2_intLifetime1 = stackIn_34_0;
           stackIn_37_0 = (var2_intLifetime1 == 0) ? 2 : 3;
           var3Lifetime1 = stackIn_37_0;
@@ -494,7 +494,7 @@ final class OptionsDialog extends ResizableModalPanel implements ButtonListener 
         boolean decompiledFrameRemainder0 = true;
         var3 = ArcanistsMulti.field_G ? 1 : 0;
         if (this.field_jb == this.field_xb) {
-          u.b(6);
+          HuffmanCodec.restoreWindowedMode(6);
           ArchiveProvider.a(-30267);
         } else {
           if (this.field_xb != this.field_mb) {
@@ -514,7 +514,7 @@ final class OptionsDialog extends ResizableModalPanel implements ButtonListener 
               this.field_H.pushPanel(new bj(this.field_H), 15637);
             }
           } else {
-            u.b(6);
+            HuffmanCodec.restoreWindowedMode(6);
             LinkButtonPainter.a((byte) -127);
           }
         }

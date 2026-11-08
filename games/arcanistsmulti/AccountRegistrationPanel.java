@@ -236,7 +236,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
         this.field_S.a(0, 0, MenuButtonPainter.field_s);
         this.field_S.a(1, 0, MenuButtonPainter.field_s);
         this.field_S.field_o = (UiListener) (this);
-        this.field_S.a(46, (byte) -4, this.field_v - 90, var3);
+        this.field_S.setBoundsToPreferredHeight(46, (byte) -4, this.field_v - 90, var3);
         var3 = var3 + (this.field_S.field_k + 15);
         this.addChild(-66, this.field_S);
         int var6 = 4;
@@ -358,14 +358,14 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
         try {
           if (0 != param3) {
             if (1 == param3) {
-              ClipState.a(126, "privacy.ws");
+              ClipState.setStatusCaption(126, "privacy.ws");
             } else {
               if (param3 == 2) {
-                ClipState.a(127, "conduct.ws");
+                ClipState.setStatusCaption(127, "conduct.ws");
               }
             }
           } else {
-            ClipState.a(param2 + 1734, "terms.ws");
+            ClipState.setStatusCaption(param2 + 1734, "terms.ws");
           }
           if (param2 == -1607) {
             return;

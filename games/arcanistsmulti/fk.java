@@ -207,7 +207,7 @@ final class fk extends IntrusiveNode {
         for (var2 = param0; ModalPanelStack.field_J > var2; var2++) {
           var1[var2] = new IndexedSprite(pb.field_g, gn.field_a, hl.field_l[var2], SectorCacheStore.field_d[var2], jg.field_p[var2], ho.field_i[var2], AccountRegistrationPanel.field_I[var2], ph.field_c);
         }
-        CanvasRasterBuffer.a(-18229);
+        CanvasRasterBuffer.releaseDecodeArrays(-18229);
         return var1;
     }
 

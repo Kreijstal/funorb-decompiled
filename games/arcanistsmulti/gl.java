@@ -244,7 +244,7 @@ final class gl {
         var3 = ArcanistsMulti.field_G ? 1 : 0;
         if (param0 ||
           DirectByteStorage.field_f == null) {
-          so.field_j = false;
+          MenuInputState.field_j = false;
         }
         if (param0) {
           if (ce.field_h <= 0) {
@@ -261,7 +261,7 @@ final class gl {
         } else {
           if (DirectByteStorage.field_f == null) {
             if (om.field_x == null) {
-              so.field_j = false;
+              MenuInputState.field_j = false;
               if (sm.field_a > 0) {
                 sm.field_a = sm.field_a - 1;
               } else {

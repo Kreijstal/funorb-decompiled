@@ -10,11 +10,11 @@ final class ff {
     static String field_g;
     static String field_e;
 
-    final static void a(byte param0, oo param1) {
+    final static void initializeDefaultResponse(byte param0, oo param1) {
         try {
           if (param0 != 91) {
             oo var3 = (oo) null;
-            ff.a((byte) -45, (oo) null);
+            ff.initializeDefaultResponse((byte) -45, (oo) null);
           }
           param1.field_D = new int[]{-1};
           param1.field_z = new char[]{(char)63};
@@ -41,7 +41,7 @@ final class ff {
         field_e = null;
     }
 
-    final static SceneTabbedPanel a(int[] param0, int param1, SceneWidget param2, SceneWidget param3, SceneWidget param4) {
+    final static SceneTabbedPanel createQuickChatPanel(int[] param0, int param1, SceneWidget param2, SceneWidget param3, SceneWidget param4) {
         int var10_int = 0;
         int var5_int = 0;
         String[] var6 = null;
@@ -78,7 +78,7 @@ final class ff {
           try {
             for (var10_int = 0; var5_int > var10_int; var10_int++) {
               var11 = th.field_d.getDefinition(param0[var10_int], (byte) -87);
-              var6[var10_int] = var11.c(true);
+              var6[var10_int] = var11.getText(true);
               var9 = (char)(var9 + 1);
               var7[var10_int] = (char)var9;
               var8[var10_int] = null;
@@ -123,16 +123,16 @@ final class ff {
         }
     }
 
-    final static Sprite[] a(byte param0, int param1, int param2, int param3) {
+    final static Sprite[] createFrameSprites(byte param0, int param1, int param2, int param3) {
         if (param0 > 25) {
           return qa.createFrameSprites(param3, param1, 1, param2, (byte) 123);
         }
         oo var5 = (oo) null;
-        ff.a((byte) -74, (oo) null);
+        ff.initializeDefaultResponse((byte) -74, (oo) null);
         return qa.createFrameSprites(param3, param1, 1, param2, (byte) 123);
     }
 
-    final static void a(boolean param0, String param1, byte param2, String param3) {
+    final static void setLoginContext(boolean param0, String param1, byte param2, String param3) {
         try {
           ge.field_g = param3;
           UiTheme.field_o = param1;

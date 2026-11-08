@@ -23,7 +23,7 @@ abstract class ByteStorage {
 
     abstract void a(int param0, byte[] param1);
 
-    final static boolean a(int param0, char param1) {
+    final static boolean isPrintableCharacter(int param0, char param1) {
         if (param1 < 32) {
           if (param1 >= 160 &&
             param1 <= 255) {
@@ -133,7 +133,7 @@ abstract class ByteStorage {
         }
     }
 
-    final static void a(boolean param0, byte param1) {
+    final static void drawRootScenes(boolean param0, byte param1) {
         IntKeyLookup.field_g.drawFullScreen(param0, true);
         BirthDateEntryPanel var2 = AccountRegistrationPanel.field_U;
         if (var2 != null) {

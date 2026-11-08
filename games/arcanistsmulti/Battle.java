@@ -1713,7 +1713,7 @@ final class Battle {
 
     final void a(BattleUnit param0, int param1) {
         try {
-          ContextActionMenu.a(-(param0.field_Y >> 1) + param0.field_lb, this, (byte) 0, param0.field_db - param0.field_Y, 21374, param0.field_w, this.field_Jb);
+          ContextActionMenu.stampHalfResolution(-(param0.field_Y >> 1) + param0.field_lb, this, (byte) 0, param0.field_db - param0.field_Y, 21374, param0.field_w, this.field_Jb);
           if (param1 != 0) {
             this.rasterizeTerrainProfile((int[]) null, (byte) 67);
           }
@@ -2223,7 +2223,7 @@ final class Battle {
 
     final void stampUnitMask(int param0, BattleUnit param1) {
         try {
-          ContextActionMenu.a(param1.field_lb - (param1.field_Y >> 1), this, (byte) -1, -param1.field_Y + param1.field_db, 21374, param1.field_w, this.field_Jb);
+          ContextActionMenu.stampHalfResolution(param1.field_lb - (param1.field_Y >> 1), this, (byte) -1, -param1.field_Y + param1.field_db, 21374, param1.field_w, this.field_Jb);
           if (param0 > -36) {
             field_z = (int[]) null;
           }
@@ -2656,7 +2656,7 @@ final class Battle {
                 var6_int = 0;
                 while (var6_int < 5) {
                   var39 = BevelBoxPainter.createProjectile((BattleUnit) null, var38.field_db - var38.field_Y / 2, (byte) 51, this, 95, var38.field_lb, 116);
-                  var8 = u.a(var5_ref_jd, param0 + 2147483579, 8192);
+                  var8 = HuffmanCodec.randomBelow(var5_ref_jd, param0 + 2147483579, 8192);
                   var39.field_u = of.sine(-56, var8) >> 9;
                   var39.field_F = (BevelBoxPainter.cosine(var8, -109) * 3 >> 11) - 64;
                   this.onProjectileFinished(52, var39);
@@ -2665,7 +2665,7 @@ final class Battle {
                 var6_intLifetime1 = 0;
                 while (5 > var6_intLifetime1) {
                   var40 = BevelBoxPainter.createProjectile((BattleUnit) null, -(var38.field_Y / 2) + var38.field_db, (byte) -97, this, 95, var38.field_lb, 122);
-                  var8Lifetime1 = u.a(var5_ref_jd, -2147483648, 8192);
+                  var8Lifetime1 = HuffmanCodec.randomBelow(var5_ref_jd, -2147483648, 8192);
                   var40.field_u = of.sine(-8, var8Lifetime1) >> 9;
                   var40.field_F = -64 + (3 * BevelBoxPainter.cosine(var8Lifetime1, -113) >> 11);
                   this.onProjectileFinished(param0 ^ 113, var40);
@@ -4007,8 +4007,8 @@ final class Battle {
             break;
           }
           if (decompiledNaturalLoopExit1) {
-            u.field_f.setDeque((byte) 120, this.field_i);
-            stackIn_14_0 = u.field_f.first(-67);
+            HuffmanCodec.field_f.setDeque((byte) 120, this.field_i);
+            stackIn_14_0 = HuffmanCodec.field_f.first(-67);
           }
           var5_ref = (BattleUnit) (stackIn_14_0);
           boolean decompiledNaturalLoopExit0 = false;
@@ -4029,7 +4029,7 @@ final class Battle {
               } else {
                 this.field_Gb = true;
               }
-              var5_ref = (BattleUnit) (u.field_f.next(-18502));
+              var5_ref = (BattleUnit) (HuffmanCodec.field_f.next(-18502));
               continue;
             }
             break;
@@ -9438,7 +9438,7 @@ final class Battle {
         try {
           MidiPcmStream.field_D = new IntrusiveDequeCursor();
           IntKeyLookup.field_d = new IntrusiveDequeCursor();
-          u.field_f = new IntrusiveDequeCursor();
+          HuffmanCodec.field_f = new IntrusiveDequeCursor();
           ValidationStatusIcon.field_J = new IntrusiveDequeCursor();
           ge.field_p = new IntrusiveDequeCursor();
           this.field_m = param11;

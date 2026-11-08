@@ -40,13 +40,13 @@ class SceneWidgetNode extends DualLinkNode {
           if (pn.a((byte) 111)) {
             param0 = false;
           }
-          TextHotspotWidget.a(-11837, param0);
+          TextHotspotWidget.drawLetterboxedScene(-11837, param0);
           var2_int = 125 / ((25 - param1) / 59);
           if (GridContainer.field_J) {
             SoftwareRasterizer.darkenRectangle(tn.field_Ob.field_c.field_T, tn.field_Ob.field_c.field_db, tn.field_Ob.field_c.field_x, tn.field_Ob.field_c.field_I);
             tn.field_Ob.field_c.drawFullScreen(param0, true);
           }
-          ByteStorage.a(param0, (byte) -73);
+          ByteStorage.drawRootScenes(param0, (byte) -73);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -179,7 +179,7 @@ class SceneWidgetNode extends DualLinkNode {
               if (ClipState.field_m == 2) {
                 td.field_E = new BufferedSocket((java.net.Socket) (FrameClock.field_a.field_g), ri.field_g);
                 var1 = new PacketBuffer(13);
-                SpriteState.a(var1, ne.field_b, BevelTextPainter.field_u, ce.field_o, 123);
+                SpriteState.a(var1, PlayerActionMenu.field_b, BevelTextPainter.field_u, ce.field_o, 123);
                 var1.writeByte(15, (byte) -28);
                 var1.writeInt(hd.field_a, (byte) -101);
                 td.field_E.write(13, 0, (byte) 126, var1.payload);
@@ -231,7 +231,7 @@ class SceneWidgetNode extends DualLinkNode {
         }
     }
 
-    final static void a(byte param0, int[] param1, int[] param2, boolean param3, vg param4, boolean param5, boolean param6) {
+    final static void a(byte param0, int[] param1, int[] param2, boolean param3, MeshModel param4, boolean param5, boolean param6) {
         int stackIn_57_0 = 0;
         int stackIn_57_1 = 0;
         int stackIn_66_0 = 0;

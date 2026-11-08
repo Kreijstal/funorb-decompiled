@@ -10545,17 +10545,17 @@
       "inputTreeSha256": "cb35eeeb97345181e40620f0f0948dfb771d6390b0699c56900b5f91559c8df0",
       "sources": {
         "files": 363,
-        "sha256": "b7af06b16a919936b28f65946bbbe060eb00be8fa3d34b4d8b5c072205e7427b"
+        "sha256": "89acdbfec9c8fbbf3953d749677a61cab7768450ee0b0ed0dfcd96d3a2aa8c9e"
       },
       "dictionary": {
         "path": "decompilation/arcanistsmulti-naming.json",
-        "sha256": "4d74d0176aea334d1470d5dd22e8331d787046941ee1f6706493b9fb5a7808a6"
+        "sha256": "a5faa8c9ede2990fd3f810b168377bedbe1a00926a3b4c9cce58dee7ca9e4b39"
       },
       "readingGuide": {
         "path": "games/arcanistsmulti/README.md",
-        "sha256": "f759fe483d1f8c78b2ad61554e96655d83a653c3098c73a9d016407d3e8ec04f"
+        "sha256": "ecd07d6aaa6e8b00d3a667831e9de7ce14b6ae552027862082c5e3cdfbd9ed4b"
       },
-      "rulesSha256": "04159bd1c11436079e1c6d8d6ad155fc30d480867fc1c66658ab3cb2325a5e9c",
+      "rulesSha256": "1900a1a206f4479110f22fc2f93ae8cabdc36b7cafec145ccd61d6a97226a749",
       "compiler": {
         "repository": "Kreijstal/java-tools",
         "commit": "d88bc5ce810baed642d8cb3fd7a6cd8953baac3d",
@@ -11643,7 +11643,7 @@
         },
         "publishedSources": {
           "files": 363,
-          "sha256": "b7af06b16a919936b28f65946bbbe060eb00be8fa3d34b4d8b5c072205e7427b"
+          "sha256": "89acdbfec9c8fbbf3953d749677a61cab7768450ee0b0ed0dfcd96d3a2aa8c9e"
         }
       },
       "armiesofgielinor": {

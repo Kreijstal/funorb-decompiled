@@ -67,7 +67,7 @@ final class td extends UiContainer implements ButtonListener {
             field_G = (aj) null;
           }
           if (param4 == this.field_F) {
-            DateOfBirthValidator.d((byte) 109);
+            DateOfBirthValidator.showEmptyLoginPanel((byte) 109);
             return;
           }
           if (param4 == this.field_C) {

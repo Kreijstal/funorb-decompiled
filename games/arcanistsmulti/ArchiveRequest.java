@@ -322,7 +322,7 @@ abstract class ArchiveRequest extends DualLinkNode {
           ed.field_Hb = param2;
           ri.field_g = param4;
           hd.field_a = param6;
-          ne.field_b = param5;
+          PlayerActionMenu.field_b = param5;
           BevelTextPainter.field_u = param1;
           ce.field_o = param7;
           qe.field_h = param3;

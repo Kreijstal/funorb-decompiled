@@ -50,7 +50,7 @@ final class MenuButtonPainter extends TextWidgetPainter {
           }
           stackIn_18_0 = (!param4) ? 7105644 : 16777215;
           var8 = stackIn_18_0;
-          ne.a(-52, param0.field_v, this.field_u, param0.field_j + (param3 + (-this.field_u[0].field_w + param0.field_k >> 1)), param0.field_n + param2, var7);
+          PlayerActionMenu.drawThreeSliceBarAlpha(-52, param0.field_v, this.field_u, param0.field_j + (param3 + (-this.field_u[0].field_w + param0.field_k >> 1)), param0.field_n + param2, var7);
           this.field_g.drawParagraph(param0.field_g, param2 + param0.field_n, -2 + param3 + param0.field_j, param0.field_v, param0.field_k, var8, -1, 1, 1, this.field_g.field_C);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

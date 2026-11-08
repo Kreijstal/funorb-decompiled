@@ -22,7 +22,7 @@ final class MembershipOfferScreen {
     private int field_s;
     private Sprite field_g;
     private IndexedSprite[] field_i;
-    private so field_d;
+    private MenuInputState field_d;
 
     public static void releaseStatics(boolean param0) {
         if (param0) {
@@ -57,8 +57,8 @@ final class MembershipOfferScreen {
         if (param0 >= -61) {
           this.field_i = (IndexedSprite[]) null;
         }
-        this.field_d.a((byte) -76);
-        if (this.field_d.b(true)) {
+        this.field_d.pollKeys((byte) -76);
+        if (this.field_d.isActivatePressed(true)) {
           if (this.field_d.field_h == 0) {
             this.openMembershipPage(127);
             return 3;
@@ -373,7 +373,7 @@ final class MembershipOfferScreen {
             this.field_u = 2;
           }
           this.field_j = param2;
-          this.field_d = new so(2);
+          this.field_d = new MenuInputState(2);
           this.field_i = param0;
           this.field_a = param5;
           if (param1 >= -99) {
@@ -630,7 +630,7 @@ final class MembershipOfferScreen {
         }
         if (SocialListEntry.field_Ib != null) {
           var4 = 0;
-          if (re.field_r != 0 &&
+          if (WrappedTextLayout.field_r != 0 &&
             ja.field_s > 257 &&
             290 > ja.field_s) {
             if (pb.field_h > 9 &&
@@ -661,9 +661,9 @@ final class MembershipOfferScreen {
           }
         }
         if (param0) {
-          this.field_d.a(this.hitTestButtons(EmailLoginCredentials.field_g, 112, MenuButtonPanel.field_I), this.hitTestButtons(pb.field_h, 76, ja.field_s), -97);
+          this.field_d.setItemBounds(this.hitTestButtons(EmailLoginCredentials.field_g, 112, MenuButtonPanel.field_I), this.hitTestButtons(pb.field_h, 76, ja.field_s), -97);
           var4Lifetime1 = 0;
-          if (this.field_d.b(true)) {
+          if (this.field_d.isActivatePressed(true)) {
             if (this.field_d.field_h == 0) {
               var4Lifetime1 = 1;
             }

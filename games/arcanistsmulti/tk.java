@@ -15,7 +15,7 @@ final class tk extends DualLinkNode {
     int[] field_u;
     static String field_r;
 
-    private final void a(int param0, PacketBuffer param1, int param2) {
+    private final void decodeOpcode(int param0, PacketBuffer param1, int param2) {
         int[] array$0 = null;
         int var8 = 0;
         RuntimeException stackIn_23_0 = null;
@@ -65,7 +65,7 @@ final class tk extends DualLinkNode {
           }
           if (param0 != -4) {
             var10 = (PacketBuffer) null;
-            this.a(5, (PacketBuffer) null, -90);
+            this.decodeOpcode(5, (PacketBuffer) null, -90);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -82,7 +82,7 @@ final class tk extends DualLinkNode {
         }
     }
 
-    final void a(PacketBuffer param0, int param1) {
+    final void decode(PacketBuffer param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -100,7 +100,7 @@ final class tk extends DualLinkNode {
             if (var3_int == 0) {
               return;
             }
-            this.a(-4, param0, var3_int);
+            this.decodeOpcode(-4, param0, var3_int);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -116,7 +116,7 @@ final class tk extends DualLinkNode {
         }
     }
 
-    final static boolean f(byte param0) {
+    final static boolean hasResizableListener(byte param0) {
         if (param0 > -94) {
           field_p = (String) null;
         }
@@ -140,7 +140,7 @@ final class tk extends DualLinkNode {
         return -DisplayNameForm.field_H[134217728 / param1] + 2048;
     }
 
-    final void e(byte param0) {
+    final void markExtended(byte param0) {
         int var2 = 0;
         int var3 = ArcanistsMulti.field_G ? 1 : 0;
         if (null != this.field_u) {
@@ -153,7 +153,7 @@ final class tk extends DualLinkNode {
         }
     }
 
-    final String c(boolean param0) {
+    final String getText(boolean param0) {
         int var3 = 0;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
@@ -203,14 +203,14 @@ final class tk extends DualLinkNode {
                 var5 = oe.a(var4, 29140, param2);
               }
               if (TextLine.field_h == 2) {
-                var5 = ValidationState.a((byte) -48, param2, var4);
+                var5 = ValidationState.getDisplayNameError((byte) -48, param2, var4);
               }
               if (TextLine.field_h == 3) {
                 var5 = MembershipOfferScreen.a(var4, var4, param2, param0 ^ 10068666);
               }
               if (var5 != null) {
                 var6 = (String) null;
-                ao.a(0, (byte) 126, (String) (var5), var4, 2, (String) null);
+                ao.addChatMessage(0, (byte) 126, (String) (var5), var4, 2, (String) null);
               }
               PasswordFieldPainter.field_A = null;
               TextLine.field_h = -1;

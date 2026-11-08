@@ -12,11 +12,11 @@ final class ci {
         MusicCrossfadeStream.field_n = oo.d(-9685);
         ClientException.field_b = new ModalPanelStack();
         if (param0 > 49) {
-          ValidationHelpWidget.a(true, false, true);
+          ValidationHelpWidget.showLoginPanelWithOptions(true, false, true);
           return;
         }
         field_b = (String) null;
-        ValidationHelpWidget.a(true, false, true);
+        ValidationHelpWidget.showLoginPanelWithOptions(true, false, true);
     }
 
     public static void releaseStatics(int param0) {

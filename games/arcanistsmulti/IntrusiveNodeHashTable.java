@@ -126,11 +126,11 @@ final class IntrusiveNodeHashTable {
     final static void g(int param0) {
         if (param0 != -1) {
           field_b = (Sprite[]) null;
-          ff.a(true, kf.field_a, (byte) -97, on.field_d);
+          ff.setLoginContext(true, kf.field_a, (byte) -97, on.field_d);
           NodeHashTable.field_h = true;
           return;
         }
-        ff.a(true, kf.field_a, (byte) -97, on.field_d);
+        ff.setLoginContext(true, kf.field_a, (byte) -97, on.field_d);
         NodeHashTable.field_h = true;
     }
 
@@ -143,22 +143,22 @@ final class IntrusiveNodeHashTable {
 
     final static void a(int param0, boolean param1, int param2) {
         wa var3 = null;
-        ne var4 = null;
+        PlayerActionMenu var4 = null;
         String var5_ref_String = null;
         int var5 = 0;
         int var6 = 0;
         wa var3Lifetime1;
-        ne var4Lifetime1;
+        PlayerActionMenu var4Lifetime1;
         String var5_ref_StringLifetime1;
-        ne var4Lifetime2;
-        ne var4Lifetime1Lifetime1;
+        PlayerActionMenu var4Lifetime2;
+        PlayerActionMenu var4Lifetime1Lifetime1;
         int var5Lifetime1;
         int var6Lifetime1;
         if (param0 != 1) {
           field_j = (String) null;
-          var3 = bj.a(param1, -3, param2);
+          var3 = bj.createLobbyRow(param1, -3, param2);
           if (var3 != null) {
-            eo.field_c.a((byte) 72, false);
+            eo.field_c.populateActions((byte) 72, false);
             var4 = eo.field_c;
             var5_ref_String = Js5NetworkRequest.field_z;
             var4.field_l.addAction(5, var5_ref_String, (byte) -26);
@@ -170,9 +170,9 @@ final class IntrusiveNodeHashTable {
           FrameClock.a(param2, param1, false);
           return;
         }
-        var3Lifetime1 = bj.a(param1, -3, param2);
+        var3Lifetime1 = bj.createLobbyRow(param1, -3, param2);
         if (var3Lifetime1 != null) {
-          eo.field_c.a((byte) 72, false);
+          eo.field_c.populateActions((byte) 72, false);
           var4Lifetime1 = eo.field_c;
           var5_ref_StringLifetime1 = Js5NetworkRequest.field_z;
           var4Lifetime1.field_l.addAction(5, var5_ref_StringLifetime1, (byte) -26);

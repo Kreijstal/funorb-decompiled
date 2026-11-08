@@ -16,7 +16,7 @@ abstract class CanvasRasterBuffer {
     java.awt.Image field_j;
     static SceneWidget field_k;
 
-    final static void a(int param0) {
+    final static void releaseDecodeArrays(int param0) {
         ho.field_i = null;
         ph.field_c = null;
         SectorCacheStore.field_d = null;
@@ -28,7 +28,7 @@ abstract class CanvasRasterBuffer {
         }
     }
 
-    final void a(boolean param0) {
+    final void makeRasterTarget(boolean param0) {
         if (!param0) {
           field_k = (SceneWidget) null;
         }
@@ -41,7 +41,7 @@ abstract class CanvasRasterBuffer {
         if (param1 != 14067) {
           CanvasRasterBuffer.releaseStatics(true);
         }
-        if (!bj.g(false)) {
+        if (!bj.hasActivePanel(false)) {
           return;
         }
         if (param0) {
@@ -141,14 +141,14 @@ abstract class CanvasRasterBuffer {
           for (var8Lifetime2 = 0; var8Lifetime2 < pm.field_f.length; var8Lifetime2++) {
             stackIn_42_0 = ih.field_b;
             if (AccountRegistrationPanel.field_M[var8Lifetime2] < 0) {
-              stackIn_43_1 = u.field_l;
+              stackIn_43_1 = HuffmanCodec.field_l;
             } else {
               stackIn_43_1 = tm.field_b;
             }
             ih.field_b = stackIn_42_0 + stackIn_43_1;
           }
           qe.field_o = ub.field_g - (ih.field_b >> 1);
-          NumericDateInputWidget.field_S.a(param4, 0, false, ao.a(31128, EmailLoginCredentials.field_g, MenuButtonPanel.field_I));
+          NumericDateInputWidget.field_S.reset(param4, 0, false, ao.computeColumnX(31128, EmailLoginCredentials.field_g, MenuButtonPanel.field_I));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

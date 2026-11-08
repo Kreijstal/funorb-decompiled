@@ -31,7 +31,7 @@ public final class ArcanistsMulti extends GameApplet {
           var2_int = 115 / ((obfuscationGuard + 83) / 41);
           sb.shutdownAudioOutputs(8000);
           if (null != ProxySocketConnector.field_m) {
-            u.b(6);
+            HuffmanCodec.restoreWindowedMode(6);
           }
           FrameClock.a(false);
           return;
@@ -53,8 +53,8 @@ public final class ArcanistsMulti extends GameApplet {
           }
           hb.field_Fb = BufferedRandomAccessFile.openArchive(6, (byte) 62);
           ue.field_d = BufferedRandomAccessFile.openArchive(1, (byte) 23);
-          so.field_k = BufferedRandomAccessFile.openArchive(7, (byte) 11);
-          vg.field_l = BufferedRandomAccessFile.openArchive(2, (byte) 55);
+          MenuInputState.field_k = BufferedRandomAccessFile.openArchive(7, (byte) 11);
+          MeshModel.field_l = BufferedRandomAccessFile.openArchive(2, (byte) 55);
           DateInputWidget.field_E = BufferedRandomAccessFile.openArchive(3, (byte) 36);
           if (!param0) {
             this.loadResources(-126);
@@ -179,7 +179,7 @@ public final class ArcanistsMulti extends GameApplet {
           IntrusiveNodeHashTable.serviceAudio(200);
           if (null != ProxySocketConnector.field_m &&
             ProxySocketConnector.field_m.field_e) {
-            u.b(6);
+            HuffmanCodec.restoreWindowedMode(6);
           }
           stackIn_10_1 = true;
           stackIn_11_2 = (null != ProxySocketConnector.field_m);
@@ -235,10 +235,10 @@ public final class ArcanistsMulti extends GameApplet {
                   if (1 == var2_intLifetime2 ||
                     2 == var2_intLifetime2) {
                     if (ProxySocketConnector.field_m != null) {
-                      u.b(6);
+                      HuffmanCodec.restoreWindowedMode(6);
                     }
                     if (2 == var2_intLifetime2) {
-                      UsernameCredentials.a((byte) 75, IconButtonPainter.getApplet(123));
+                      UsernameCredentials.openQuitPage((byte) 75, IconButtonPainter.getApplet(123));
                       if (var27 != 0) {
                         ao.a(5623);
                       }
@@ -336,7 +336,7 @@ public final class ArcanistsMulti extends GameApplet {
                 }
                 if (on.field_g == 10 &&
                   wa.field_Ob) {
-                  u.a((byte) -108);
+                  HuffmanCodec.handleSocialListPacket((byte) -108);
                   continue;
                 }
                 if (73 == on.field_g) {
@@ -723,7 +723,7 @@ public final class ArcanistsMulti extends GameApplet {
             }
           }
           DropdownList.initializeCaptionTable((byte) -90);
-          if (null != vg.field_l) {
+          if (null != MeshModel.field_l) {
             if (LoadingTracker.field_a.ensureIndex(-10923) &&
               LoadingTracker.field_a.isGroupAvailableByName("basic", -24417)) {
               if (LoadingTracker.field_a.ensureIndex(-10923) &&
@@ -734,8 +734,8 @@ public final class ArcanistsMulti extends GameApplet {
                     LoadingTracker.field_a.isGroupAvailableByName("lobby", -24417)) {
                     if (GameApplet.field_D.ensureIndex(-10923) &&
                       GameApplet.field_D.isGroupAvailableByName("lobby", -24417)) {
-                      if (vg.field_l.ensureIndex(-10923) &&
-                        vg.field_l.areAllGroupsAvailable(106)) {
+                      if (MeshModel.field_l.ensureIndex(-10923) &&
+                        MeshModel.field_l.areAllGroupsAvailable(106)) {
                         if (DateInputWidget.field_E.ensureIndex(-10923) &&
                           DateInputWidget.field_E.areAllGroupsAvailable(-15)) {
                           if (ki.field_s.ensureIndex(-10923) &&
@@ -749,8 +749,8 @@ public final class ArcanistsMulti extends GameApplet {
                                   rb.a(nm.formatArchiveProgress(17153, LoadingProgressDialog.field_nb, ue.field_d, ValidationHelpWidget.field_Z, ec.field_c), false, 40.0f);
                                   return false;
                                 }
-                                if (so.field_k.ensureIndex(-10923) &&
-                                  so.field_k.areAllGroupsAvailable(109)) {
+                                if (MenuInputState.field_k.ensureIndex(-10923) &&
+                                  MenuInputState.field_k.areAllGroupsAvailable(109)) {
                                   if (hb.field_Fb.ensureIndex(-10923) &&
                                     hb.field_Fb.areAllGroupsAvailable(-33)) {
                                     if (GridContainer.field_K.ensureIndex(-10923) &&
@@ -761,8 +761,8 @@ public final class ArcanistsMulti extends GameApplet {
                                       if (!param1) {
                                         return false;
                                       }
-                                      lo.field_w = new SoundCache(vg.field_l, DateInputWidget.field_E);
-                                      vg.field_l = null;
+                                      lo.field_w = new SoundCache(MeshModel.field_l, DateInputWidget.field_E);
+                                      MeshModel.field_l = null;
                                       DateInputWidget.field_E = null;
                                       Checkbox.a(2);
                                       return false;
@@ -773,7 +773,7 @@ public final class ArcanistsMulti extends GameApplet {
                                   rb.a(qe.formatLoadingProgress(MenuButtonPainter.field_t, 115, hb.field_Fb, NodeHashTable.field_c), false, 50.0f);
                                   return false;
                                 }
-                                rb.a(qe.formatLoadingProgress(LoadingProgressDialog.field_nb, 113, so.field_k, ValidationHelpWidget.field_Z), false, 45.0f);
+                                rb.a(qe.formatLoadingProgress(LoadingProgressDialog.field_nb, 113, MenuInputState.field_k, ValidationHelpWidget.field_Z), false, 45.0f);
                                 return false;
                               }
                               rb.a(nm.formatArchiveProgress(17153, LoadingProgressDialog.field_nb, ue.field_d, ValidationHelpWidget.field_Z, ""), false, 35.0f);
@@ -788,7 +788,7 @@ public final class ArcanistsMulti extends GameApplet {
                         rb.a(qe.formatLoadingProgress(StatefulTextPainter.field_v, 76, DateInputWidget.field_E, fn.field_a), false, 23.0f);
                         return false;
                       }
-                      rb.a(qe.formatLoadingProgress(StatefulTextPainter.field_v, 122, vg.field_l, fn.field_a), false, 20.0f);
+                      rb.a(qe.formatLoadingProgress(StatefulTextPainter.field_v, 122, MeshModel.field_l, fn.field_a), false, 20.0f);
                       return false;
                     }
                     rb.a(nm.formatArchiveProgress(17153, ra.field_d, GameApplet.field_D, wh.field_a, "lobby"), false, 17.0f);
@@ -815,7 +815,7 @@ public final class ArcanistsMulti extends GameApplet {
             return false;
           }
           var3_intLifetime1 = -84 / ((14 - param0) / 56);
-          if (null != so.field_k) {
+          if (null != MenuInputState.field_k) {
             if (MembershipOfferScreen.field_o == null) {
               rb.a(hi.field_c, false, 90.0f);
               this.updateClient((byte) -89);
@@ -886,10 +886,10 @@ public final class ArcanistsMulti extends GameApplet {
               if (decompiledNaturalLoopExit0) {
                 DiskCacheRequest.field_E[0] = null;
                 IntrusiveDeque.field_b = null;
-                ce.field_m.a(true);
+                ce.field_m.makeRasterTarget(true);
                 SceneTextInput.loadSceneSprites(ue.field_d, (byte) -66);
-                CachedArchiveProvider.field_t = LoadingTracker.loadBinaryFont(so.field_k, -24755, "", "font", ue.field_d);
-                SpellProjectile.field_B = LoadingTracker.loadBinaryFont(so.field_k, -24755, "", "smallfont", ue.field_d);
+                CachedArchiveProvider.field_t = LoadingTracker.loadBinaryFont(MenuInputState.field_k, -24755, "", "font", ue.field_d);
+                SpellProjectile.field_B = LoadingTracker.loadBinaryFont(MenuInputState.field_k, -24755, "", "smallfont", ue.field_d);
                 Checkbox.a(2);
                 stackIn_188_0 = 0;
               }
@@ -959,7 +959,7 @@ public final class ArcanistsMulti extends GameApplet {
                   ih.field_e = new Sprite(32, 32);
                   ih.field_e.makeRasterTarget();
                   NodeHashTable.field_d.drawScaledAveraged(0, 0, 32, 32);
-                  ce.field_m.a(true);
+                  ce.field_m.makeRasterTarget(true);
                   Checkbox.a(2);
                   break;
                 }
@@ -968,7 +968,7 @@ public final class ArcanistsMulti extends GameApplet {
               } while (var9 == 0);
               return false;
             }
-            if (so.field_k != null) {
+            if (MenuInputState.field_k != null) {
               rb.a(hi.field_c, false, 97.0f);
               this.updateClient((byte) -89);
               LoadingTracker.field_a.field_f = 0;
@@ -1002,7 +1002,7 @@ public final class ArcanistsMulti extends GameApplet {
               SceneTextInput.field_Hb = co.field_a;
               qn.a(-24539, LoadingTracker.field_a, GameApplet.field_D);
               GameApplet.field_D = null;
-              so.field_k = null;
+              MenuInputState.field_k = null;
               if (MenuScreen.getSessionFlag((byte) 112) ||
                 !(0 < ah.field_c)) {
                 var8 = IterableNodeHashTable.loadIndexedSpritesByName("", 0, "expansion_screens", ue.field_d);
@@ -1016,7 +1016,7 @@ public final class ArcanistsMulti extends GameApplet {
             PacketBuffer.d((byte) -98);
             return true;
           }
-          MidiPcmStream.setHuffmanCodec(-92, new u(hb.field_Fb.getNamedFile("huffman", "", -1)));
+          MidiPcmStream.setHuffmanCodec(-92, new HuffmanCodec(hb.field_Fb.getNamedFile("huffman", "", -1)));
           hb.field_Fb = null;
           Checkbox.a(2);
           return false;
@@ -1034,7 +1034,7 @@ public final class ArcanistsMulti extends GameApplet {
         RuntimeException var1 = null;
         var2 = field_G ? 1 : 0;
         try {
-          u.field_k = false;
+          HuffmanCodec.field_k = false;
           if (param0 != 48) {
             ArcanistsMulti.releaseStatics((byte) -33);
           }
@@ -1043,7 +1043,7 @@ public final class ArcanistsMulti extends GameApplet {
             var1_int = dd.field_j;
             if (var1_int > 0) {
               if (var1_int == 1) {
-                MusicPatch.field_o = re.field_k;
+                MusicPatch.field_o = WrappedTextLayout.field_k;
               }
               if (var1_int != 1 ||
                 var2 != 0) {
@@ -1082,7 +1082,7 @@ public final class ArcanistsMulti extends GameApplet {
         RuntimeException decompiledCaughtException = null;
         try {
           dd.field_h = param2;
-          eo.field_c = new ne(param8, param4, param3, param7, param6, param5, param1);
+          eo.field_c = new PlayerActionMenu(param8, param4, param3, param7, param6, param5, param1);
           if (param0 != -26335) {
             ArcanistsMulti.i((byte) 116);
           }
@@ -1186,7 +1186,7 @@ public final class ArcanistsMulti extends GameApplet {
           IntrusiveNode.releaseStatics((byte) -115);
           pn.releaseStatics((byte) 122);
           cc.releaseStatics((byte) 107);
-          so.releaseStatics(param0);
+          MenuInputState.releaseStatics(param0);
           MidiPcmStream.releaseStatics((byte) 115);
           NodeHashTable.releaseStatics(13);
           MusicPatchNode.c(true);
@@ -1239,7 +1239,7 @@ public final class ArcanistsMulti extends GameApplet {
           SceneScrollbar.releaseStatics((byte) -120);
           ContextActionMenu.releaseStatics(0);
           hb.releaseStatics(0);
-          ne.releaseStatics(-14);
+          PlayerActionMenu.releaseStatics(-14);
           ChatInputWidget.releaseStatics((byte) 126);
           SocialListEntry.releaseStatics(param0);
           i.releaseStatics((byte) 6);
@@ -1263,7 +1263,7 @@ public final class ArcanistsMulti extends GameApplet {
           LoginCredentials.releaseStatics(0);
           CipherPacketBuffer.releaseStatics(21657);
           da.releaseStatics(-121);
-          u.releaseStatics(1);
+          HuffmanCodec.releaseStatics(1);
           vm.releaseStatics((byte) -75);
           IsaacCipher.releaseStatics(109);
           ic.releaseStatics(0);
@@ -1306,7 +1306,7 @@ public final class ArcanistsMulti extends GameApplet {
           b.releaseStatics(67);
           MeshRasterState.releaseStatics();
           gl.releaseStatics((byte) 15);
-          vg.releaseStatics(40);
+          MeshModel.releaseStatics(40);
           bo.releaseStatics(120);
           he.releaseStatics(-31399);
           oa.releaseStatics((byte) 98);
@@ -1368,7 +1368,7 @@ public final class ArcanistsMulti extends GameApplet {
           DateInputWidget.releaseStatics(42);
           ScrollContainer.releaseStatics(123);
           GrowableIntList.c(-125);
-          re.releaseStatics(0);
+          WrappedTextLayout.releaseStatics(0);
           DraggableWidget.releaseStatics(-114);
           DropTargetWidget.f(-1764031359);
           bj.l((byte) -46);
@@ -1488,7 +1488,7 @@ public final class ArcanistsMulti extends GameApplet {
         int var11Lifetime2;
         var13 = field_G ? 1 : 0;
         try {
-          if (bj.g(false)) {
+          if (bj.hasActivePanel(false)) {
             param1 = true;
           }
           if (b.field_a.first(12623) != null) {
@@ -1503,8 +1503,8 @@ public final class ArcanistsMulti extends GameApplet {
           if (~ii.field_c != ~ii.field_a) {
             if (ie.field_Vb != ii.field_a) {
               if (ii.field_a != ScrollContainer.field_I) {
-                u.field_i = u.field_i - 1;
-                decompiledFrameRemainder2 = (u.field_i == 0);
+                HuffmanCodec.field_i = HuffmanCodec.field_i - 1;
+                decompiledFrameRemainder2 = (HuffmanCodec.field_i == 0);
                 if (decompiledFrameRemainder2) {
                   ii.field_a = ii.field_c;
                   decompiledFrameRemainder2 = (var13 != 0);
@@ -1531,8 +1531,8 @@ public final class ArcanistsMulti extends GameApplet {
               }
             }
             if (decompiledFrameRemainder2) {
-              u.field_i = u.field_i + 1;
-              decompiledFrameRemainder2 = (u.field_i == 16);
+              HuffmanCodec.field_i = HuffmanCodec.field_i + 1;
+              decompiledFrameRemainder2 = (HuffmanCodec.field_i == 16);
               if (decompiledFrameRemainder2) {
                 if (!ChatInputWidget.field_Cb) {
                   IntrusiveDeque.a((byte) 4);
@@ -1639,7 +1639,7 @@ public final class ArcanistsMulti extends GameApplet {
                         continue;
                       }
                       if (decompiledFrameRemainder0) {
-                        ContextActionMenu.a(15, 12, (byte) 32, 13);
+                        ContextActionMenu.handleEscapeForOverlays(15, 12, (byte) 32, 13);
                       }
                     }
                     if (StatefulTextPainter.field_w) {
@@ -1728,7 +1728,7 @@ public final class ArcanistsMulti extends GameApplet {
                 while (var11Lifetime1 < 6) {
                   incrementValue$3 = var10;
                   var10++;
-                  var5_array[var9][incrementValue$3] = so.field_c[var11Lifetime1];
+                  var5_array[var9][incrementValue$3] = MenuInputState.field_c[var11Lifetime1];
                   var11Lifetime1++;
                 }
                 var11Lifetime2 = 0;
@@ -1778,7 +1778,7 @@ public final class ArcanistsMulti extends GameApplet {
                 var3_int = 0;
                 break;
               }
-              he.field_e.writeByte(so.field_c[var3_int], (byte) -81);
+              he.field_e.writeByte(MenuInputState.field_c[var3_int], (byte) -81);
               var3_int++;
             } while (var13 == 0);
             do {
@@ -1826,7 +1826,7 @@ public final class ArcanistsMulti extends GameApplet {
           ta.field_b = false;
           var2 = new MidiPcmStream();
           var2.selectChannelBank(128, 68, 9);
-          UsernameCredentials.a(22050, var2, fi.field_d, (java.awt.Component) ((Object) on.field_c), -22836, true);
+          UsernameCredentials.initializeAudioOutputs(22050, var2, fi.field_d, (java.awt.Component) ((Object) on.field_c), -22836, true);
           pn.field_d = 16728128;
           wm.field_I = 16777215;
           LoginMethod.field_a = 0;
@@ -1923,7 +1923,7 @@ public final class ArcanistsMulti extends GameApplet {
             stackIn_5_0 = ProxySocketConnector.field_m;
           }
           var2 = stackIn_5_0;
-          ce.field_m.a(true);
+          ce.field_m.makeRasterTarget(true);
           if (obfuscationGuard != -89) {
             ArcanistsMulti.openInfoPanel(66, (int[]) null, (SceneScrollPane) null, (String) null, 78L, -15, 110, (String) null, (SceneWidget) null);
           }
@@ -2014,7 +2014,7 @@ public final class ArcanistsMulti extends GameApplet {
               var11 = (SpriteState.field_v >> 9) % 24;
               var12 = 32;
               var13 = 160;
-              stackIn_67_0 = (so.field_c[5] + so.field_c[2] + (so.field_c[0] + so.field_c[1]) - (-so.field_c[3] - so.field_c[4]) != 0) ? 0 : 1;
+              stackIn_67_0 = (MenuInputState.field_c[5] + MenuInputState.field_c[2] + (MenuInputState.field_c[0] + MenuInputState.field_c[1]) - (-MenuInputState.field_c[3] - MenuInputState.field_c[4]) != 0) ? 0 : 1;
               boolean decompiledFrameRemainder1 = true;
               var14 = stackIn_67_0;
               if (((SpriteState.field_v & 1024) > 0) &&
@@ -2045,22 +2045,22 @@ public final class ArcanistsMulti extends GameApplet {
               }
               var15 = new Sprite(128, 256);
               var15.makeRasterTarget();
-              pc.drawTexturedSpriteIntGuard(kg.field_d[2], var8 + var13, kg.field_d[3], kg.field_d[0], 116, kg.field_d[1], qe.field_i[so.field_c[3]], var12 + var7);
+              pc.drawTexturedSpriteIntGuard(kg.field_d[2], var8 + var13, kg.field_d[3], kg.field_d[0], 116, kg.field_d[1], qe.field_i[MenuInputState.field_c[3]], var12 + var7);
               pc.drawTexturedSpriteIntGuard(kg.field_d[2], var13 + var4Lifetime3, kg.field_d[3], kg.field_d[0], -87, kg.field_d[1], fn.field_b[0], var3_intLifetime1 + var12);
-              pc.drawTexturedSpriteIntGuard(kg.field_d[2], var13, kg.field_d[3], kg.field_d[0], 80, kg.field_d[1], IsaacRandom.field_j[so.field_c[0]], var12);
+              pc.drawTexturedSpriteIntGuard(kg.field_d[2], var13, kg.field_d[3], kg.field_d[0], 80, kg.field_d[1], IsaacRandom.field_j[MenuInputState.field_c[0]], var12);
               var13 -= 8;
               var13 -= 16;
-              pc.drawTexturedSpriteIntGuard(kg.field_d[2], var13, kg.field_d[3], kg.field_d[0], -87, kg.field_d[1], SceneWidget.field_kb[so.field_c[1]], var12);
+              pc.drawTexturedSpriteIntGuard(kg.field_d[2], var13, kg.field_d[3], kg.field_d[0], -87, kg.field_d[1], SceneWidget.field_kb[MenuInputState.field_c[1]], var12);
               var13 += 16;
-              pc.drawTexturedSpriteIntGuard(kg.field_d[2], var13, kg.field_d[3], kg.field_d[0], -90, kg.field_d[1], hn.field_d[so.field_c[5]], var12);
+              pc.drawTexturedSpriteIntGuard(kg.field_d[2], var13, kg.field_d[3], kg.field_d[0], -90, kg.field_d[1], hn.field_d[MenuInputState.field_c[5]], var12);
               pc.drawTexturedSpriteIntGuard(kg.field_d[2], var13, kg.field_d[3], kg.field_d[0], -117, kg.field_d[1], bo.field_a[var11], var12);
               var13 -= 16;
-              pc.drawTexturedSpriteIntGuard(kg.field_d[2], var13, kg.field_d[3], kg.field_d[0], -127, kg.field_d[1], CachedArchiveProvider.field_A[so.field_c[4]], var12);
+              pc.drawTexturedSpriteIntGuard(kg.field_d[2], var13, kg.field_d[3], kg.field_d[0], -127, kg.field_d[1], CachedArchiveProvider.field_A[MenuInputState.field_c[4]], var12);
               var13 += 8;
               var13 += 16;
               pc.drawTexturedSpriteIntGuard(kg.field_d[2], var6 + var13, kg.field_d[3], kg.field_d[0], -113, kg.field_d[1], ModalPanelStack.field_I[0], var12 + var5Lifetime2);
-              pc.drawTexturedSpriteIntGuard(kg.field_d[2], var10 + var13, kg.field_d[3], kg.field_d[0], 122, kg.field_d[1], DiskCacheRequest.field_u[so.field_c[2]], var9 + var12);
-              ce.field_m.a(true);
+              pc.drawTexturedSpriteIntGuard(kg.field_d[2], var10 + var13, kg.field_d[3], kg.field_d[0], 122, kg.field_d[1], DiskCacheRequest.field_u[MenuInputState.field_c[2]], var9 + var12);
+              ce.field_m.makeRasterTarget(true);
               var16 = db.a(false);
               if (null != var16) {
                 var17 = var16.field_V - 202;
@@ -2167,7 +2167,7 @@ public final class ArcanistsMulti extends GameApplet {
             EmptyPainter.setFrameSprites(kf.field_b, kf.field_b[0].field_y, -117, kf.field_b[0].field_q);
           }
           if (ii.field_c != ii.field_a) {
-            var4Lifetime2 = u.field_i * 256 / 16;
+            var4Lifetime2 = HuffmanCodec.field_i * 256 / 16;
             if (var4Lifetime2 > 0) {
               SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_e, SoftwareRasterizer.field_j, 0, var4Lifetime2);
             }
@@ -2191,7 +2191,7 @@ public final class ArcanistsMulti extends GameApplet {
         RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
-        vg var5 = null;
+        MeshModel var5 = null;
         int[] var6 = null;
         int var7 = 0;
         var7 = field_G ? 1 : 0;
@@ -2201,7 +2201,7 @@ public final class ArcanistsMulti extends GameApplet {
           var2.beginBitAccess(param1 + 166);
           ph.field_e = Scrollbar.a((byte) -101, var2);
           gn.field_g = new int[var3][];
-          oo.field_u = new vg[var3];
+          oo.field_u = new MeshModel[var3];
           var4 = 0;
           do {
             if (var3 <= var4) {
@@ -2214,11 +2214,11 @@ public final class ArcanistsMulti extends GameApplet {
           var4 = 0;
           while (var3 > var4) {
             var5 = oo.field_u[var4];
-            var5.a(6, 0, 1, 6, 6);
-            var5.b((byte) 62);
+            var5.scale(6, 0, 1, 6, 6);
+            var5.computeBounds((byte) 62);
             var6 = new int[]{var5.field_k + var5.field_i >> 1, var5.field_v + var5.field_R >> 1, var5.field_N + var5.field_P >> 1};
             gn.field_g[var4] = var6;
-            var5.a(-var6[1], (byte) -124, -var6[2], -var6[0]);
+            var5.translate(-var6[1], (byte) -124, -var6[2], -var6[0]);
             var4++;
             if (var7 != 0) {
               return;
@@ -2327,7 +2327,7 @@ public final class ArcanistsMulti extends GameApplet {
                   !ue.field_d.isNamedFileAvailable(true, "stormpuff", "streamed")) {
                   if (SingleChildContainer.field_C == 7 &&
                     ue.field_d.isNamedFileAvailable(true, "stormexplosion", "streamed")) {
-                    u.field_j = IterableNodeHashTable.loadIndexedSpritesByName("streamed", param0 - 15433, "stormexplosion", ue.field_d);
+                    HuffmanCodec.field_j = IterableNodeHashTable.loadIndexedSpritesByName("streamed", param0 - 15433, "stormexplosion", ue.field_d);
                     SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                     if (var3 == 0) {
                       return;
@@ -3470,9 +3470,9 @@ public final class ArcanistsMulti extends GameApplet {
                 this.registerSample(158, cj.field_a[0], VorbisSample.loadNamed(ck.field_b, "pegasus", "arcanists_pegasus_select").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);
                 this.registerSample(229, cj.field_a[2], VorbisSample.loadNamed(ck.field_b, "pegasus", "arcanists_pegasus_hit").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);
                 this.registerSample(183, cj.field_a[1], VorbisSample.loadNamed(ck.field_b, "pegasus", "arcanists_pegasus_death").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);
-                this.registerSample(256, vg.field_c[0], VorbisSample.loadNamed(ck.field_b, "swarm", "arcanists_swarm_select").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);
-                this.registerSample(256, vg.field_c[2], VorbisSample.loadNamed(ck.field_b, "swarm", "arcanists_swarm_hit").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);
-                this.registerSample(256, vg.field_c[1], VorbisSample.loadNamed(ck.field_b, "swarm", "arcanists_swarm_death").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);
+                this.registerSample(256, MeshModel.field_c[0], VorbisSample.loadNamed(ck.field_b, "swarm", "arcanists_swarm_select").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);
+                this.registerSample(256, MeshModel.field_c[2], VorbisSample.loadNamed(ck.field_b, "swarm", "arcanists_swarm_hit").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);
+                this.registerSample(256, MeshModel.field_c[1], VorbisSample.loadNamed(ck.field_b, "swarm", "arcanists_swarm_death").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);
                 this.registerSample(256, ScreenDisplayMode.field_c[0], VorbisSample.loadNamed(ck.field_b, "cyclops", "arcanists_storm_spirit_select").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);
                 this.registerSample(85, gg.field_j[0], VorbisSample.loadNamed(ck.field_b, "pixie", "arcanists_pixie_select").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);
                 this.registerSample(83, gg.field_j[2], VorbisSample.loadNamed(ck.field_b, "pixie", "arcanists_pixie_hit").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);
@@ -3496,9 +3496,9 @@ public final class ArcanistsMulti extends GameApplet {
                 this.registerSample(255, om.field_B[0], cf.field_h[176], tm.field_a, false, FullscreenFocusCanvas.field_g);
                 this.registerSample(255, om.field_B[2], cf.field_h[176], tm.field_a, false, FullscreenFocusCanvas.field_g);
                 this.registerSample(255, om.field_B[1], cf.field_h[176], tm.field_a, false, FullscreenFocusCanvas.field_g);
-                this.registerSample(255, u.field_h[0], VorbisSample.loadNamed(ck.field_b, "steam_dragon", "arcanists_cog_steam_dragon_select").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);
-                this.registerSample(255, u.field_h[2], VorbisSample.loadNamed(ck.field_b, "steam_dragon", "arcanists_cog_steam_dragon_hit").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);
-                this.registerSample(255, u.field_h[1], VorbisSample.loadNamed(ck.field_b, "steam_dragon", "arcanists_cog_steam_dragon_death").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);
+                this.registerSample(255, HuffmanCodec.field_h[0], VorbisSample.loadNamed(ck.field_b, "steam_dragon", "arcanists_cog_steam_dragon_select").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);
+                this.registerSample(255, HuffmanCodec.field_h[2], VorbisSample.loadNamed(ck.field_b, "steam_dragon", "arcanists_cog_steam_dragon_hit").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);
+                this.registerSample(255, HuffmanCodec.field_h[1], VorbisSample.loadNamed(ck.field_b, "steam_dragon", "arcanists_cog_steam_dragon_death").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);
                 ck.field_b = null;
                 wh.field_l = null;
                 return;

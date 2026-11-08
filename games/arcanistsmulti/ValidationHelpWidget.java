@@ -270,12 +270,12 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         DropTargetWidget.a(IntrusiveNode.field_c, false, SectorCacheStore.field_l, mf.field_d, am.field_c);
     }
 
-    final static void a(boolean param0, boolean param1, boolean param2) {
+    final static void showLoginPanelWithOptions(boolean param0, boolean param1, boolean param2) {
         String var4 = (String) null;
         BevelBoxPainter.a(param2, (String) null, param0, param1);
     }
 
-    final static String a(byte param0, byte[] param1) {
+    final static String decodeString(byte param0, byte[] param1) {
         RuntimeException var2 = null;
         String stackIn_2_0 = null;
         String stackIn_4_0 = null;
@@ -304,7 +304,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         }
     }
 
-    final static void b(int param0, int param1) {
+    final static void computeIntroShake(int param0, int param1) {
         int var2;
         int var3;
         int var4;
@@ -546,7 +546,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
           return;
         }
         byte[] var2 = (byte[]) null;
-        ValidationHelpWidget.a((byte) -71, (byte[]) null);
+        ValidationHelpWidget.decodeString((byte) -71, (byte[]) null);
         field_W = null;
         field_bb = null;
     }
@@ -577,27 +577,27 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         }
         if (null == pn.field_c) {
           if (null != pn.field_c) {
-            ClipState.a(pn.field_c, param0 + 0);
+            ClipState.tileSprite(pn.field_c, param0 + 0);
             return;
           }
           pn.field_c = new Sprite(param2 / 2, param1 / 2);
           pn.field_c.makeRasterTarget();
           LoginMethod.a(param2, param1, 0);
-          ce.field_m.a(true);
-          ClipState.a(pn.field_c, param0 + 0);
+          ce.field_m.makeRasterTarget(true);
+          ClipState.tileSprite(pn.field_c, param0 + 0);
           return;
         }
         if (pn.field_c.field_n == param2 / 2) {
           if (param1 / 2 == pn.field_c.field_w) {
             if (null != pn.field_c) {
-              ClipState.a(pn.field_c, param0 + 0);
+              ClipState.tileSprite(pn.field_c, param0 + 0);
               return;
             }
             pn.field_c = new Sprite(param2 / 2, param1 / 2);
             pn.field_c.makeRasterTarget();
             LoginMethod.a(param2, param1, 0);
-            ce.field_m.a(true);
-            ClipState.a(pn.field_c, param0 + 0);
+            ce.field_m.makeRasterTarget(true);
+            ClipState.tileSprite(pn.field_c, param0 + 0);
             return;
           }
           if (mn.field_r == CheckboxPainter.field_g) {
@@ -605,39 +605,39 @@ final class ValidationHelpWidget extends TextHotspotWidget {
             System.gc();
           }
           if (null != pn.field_c) {
-            ClipState.a(pn.field_c, param0 + 0);
+            ClipState.tileSprite(pn.field_c, param0 + 0);
             return;
           }
           pn.field_c = new Sprite(param2 / 2, param1 / 2);
           pn.field_c.makeRasterTarget();
           LoginMethod.a(param2, param1, 0);
-          ce.field_m.a(true);
-          ClipState.a(pn.field_c, param0 + 0);
+          ce.field_m.makeRasterTarget(true);
+          ClipState.tileSprite(pn.field_c, param0 + 0);
           return;
         }
         if (mn.field_r != CheckboxPainter.field_g) {
           if (null != pn.field_c) {
-            ClipState.a(pn.field_c, param0 + 0);
+            ClipState.tileSprite(pn.field_c, param0 + 0);
             return;
           }
           pn.field_c = new Sprite(param2 / 2, param1 / 2);
           pn.field_c.makeRasterTarget();
           LoginMethod.a(param2, param1, 0);
-          ce.field_m.a(true);
-          ClipState.a(pn.field_c, param0 + 0);
+          ce.field_m.makeRasterTarget(true);
+          ClipState.tileSprite(pn.field_c, param0 + 0);
           return;
         }
         pn.field_c = null;
         System.gc();
         if (null != pn.field_c) {
-          ClipState.a(pn.field_c, param0 + 0);
+          ClipState.tileSprite(pn.field_c, param0 + 0);
           return;
         }
         pn.field_c = new Sprite(param2 / 2, param1 / 2);
         pn.field_c.makeRasterTarget();
         LoginMethod.a(param2, param1, 0);
-        ce.field_m.a(true);
-        ClipState.a(pn.field_c, param0 + 0);
+        ce.field_m.makeRasterTarget(true);
+        ClipState.tileSprite(pn.field_c, param0 + 0);
     }
 
     ValidationHelpWidget(ValidationProvider param0, String param1, int param2, int param3, int param4, int param5) {
@@ -651,7 +651,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         }
     }
 
-    final static fk a(PcmSampleStream param0, byte param1) {
+    final static fk playEffectStream(PcmSampleStream param0, byte param1) {
         fk var2 = null;
         RuntimeException var2_ref = null;
         fk stackIn_2_0 = null;

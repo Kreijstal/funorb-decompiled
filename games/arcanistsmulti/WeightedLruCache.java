@@ -10,7 +10,7 @@ final class WeightedLruCache {
     private SecondaryNodeDeque field_b;
     private IterableNodeHashTable field_c;
 
-    final static void a(boolean param0, vg param1, int param2, byte param3, int param4) {
+    final static void a(boolean param0, MeshModel param1, int param2, byte param3, int param4) {
         byte dupTemp$0 = 0;
         boolean stackIn_10_0 = false;
         int stackIn_30_0 = 0;
@@ -347,7 +347,7 @@ final class WeightedLruCache {
             oo.field_y <= 0) {
             return;
           }
-          if (so.field_j) {
+          if (MenuInputState.field_j) {
             SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_e, IntKeyLookup.field_g.field_nb);
             IconTextSceneWidget.field_Fb.drawFullScreen(param1, true);
           }

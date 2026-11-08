@@ -95,15 +95,15 @@ final class EmptyPainter implements WidgetPainter {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        ne var5 = null;
+        PlayerActionMenu var5 = null;
         String var6 = null;
-        ne var7 = null;
+        PlayerActionMenu var7 = null;
         String var8 = null;
-        ne var9 = null;
+        PlayerActionMenu var9 = null;
         String var10 = null;
-        ne var11 = null;
+        PlayerActionMenu var11 = null;
         String var12 = null;
-        ne var13 = null;
+        PlayerActionMenu var13 = null;
         try {
           stackIn_2_0 = -26335;
           stackIn_2_1 = null;
@@ -143,11 +143,11 @@ final class EmptyPainter implements WidgetPainter {
             var12 = SocketJs5Transport.field_s;
             var11.field_l.addAction(20, var12, (byte) -26);
           }
-          eo.field_c.a(3);
-          eo.field_c.a((byte) 72, false);
-          eo.field_c.a(param1.field_m, param1.field_f, 13);
-          eo.field_c.d(5552);
-          eo.field_c.a(19, param1);
+          eo.field_c.addSocialActions(3);
+          eo.field_c.populateActions((byte) 72, false);
+          eo.field_c.addGameActions(param1.field_m, param1.field_f, 13);
+          eo.field_c.addPrivateMessageAction(5552);
+          eo.field_c.addChatLineActions(19, param1);
           var13 = eo.field_c;
           var3 = pb.field_h;
           var4 = ja.field_s;

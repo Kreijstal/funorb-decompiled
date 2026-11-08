@@ -98,7 +98,7 @@ final class mb extends mh {
         return 57;
     }
 
-    final int f(int param0) {
+    final int contentHeight(int param0) {
         if (param0 == 27825) {
           return null == this.field_W ? 200 : this.field_T * (1 + 2 * this.field_W.length) >> 1;
         }
@@ -134,7 +134,7 @@ final class mb extends mh {
         return -Checkbox.field_I + bj.field_tb;
     }
 
-    final Object g(int param0) {
+    final Object getSelectedItem(int param0) {
         if (param0 < 125) {
           this.drawLayer((byte) -47, ((int[]) (this.field_W[4]))[0], ((int[]) (this.field_W[3]))[0], 2);
           if (this.field_W == null) {
@@ -186,7 +186,7 @@ final class mb extends mh {
         }
     }
 
-    private final void a(Object[] param0, byte param1, int param2) {
+    private final void setItems(Object[] param0, byte param1, int param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -221,7 +221,7 @@ final class mb extends mh {
         }
     }
 
-    final static void a(int param0, Object param1, PlatformTaskDispatcher param2) {
+    final static void flushEventQueue(int param0, Object param1, PlatformTaskDispatcher param2) {
         int var3_int = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -240,7 +240,7 @@ final class mb extends mh {
           }
           for (var3_int = 0; var3_int < 50; var3_int++) {
             if (null != param2.field_a.peekEvent()) {
-              ao.a(1L, 1);
+              ao.sleepMillis(1L, 1);
               continue;
             }
             break;
@@ -248,7 +248,7 @@ final class mb extends mh {
           try {
             if (param0 >= -48) {
               var5 = (PlatformTaskDispatcher) null;
-              mb.a(-54, (Object) null, (PlatformTaskDispatcher) null);
+              mb.flushEventQueue(-54, (Object) null, (PlatformTaskDispatcher) null);
             }
             if (param1 == null) {
               return;
@@ -286,7 +286,7 @@ final class mb extends mh {
           this.field_X = param0;
           this.field_M = param1;
           this.field_T = this.field_M.field_m + this.field_M.field_C;
-          this.a(param2, (byte) 10, param3);
+          this.setItems(param2, (byte) 10, param3);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "mb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
@@ -323,9 +323,9 @@ final class mb extends mh {
                 var10 = var10 ^ 285L;
             }
             var12 = var10 ^ var2;
-            field_L[0][var0] = vg.a(vg.a(vg.a(vg.a(vg.a(vg.a(var6 << 40, vg.a(var2 << 56, var2 << 48)), var2 << 32), var10 << 24), var8 << 16), var4 << 8), var12);
+            field_L[0][var0] = MeshModel.longOr(MeshModel.longOr(MeshModel.longOr(MeshModel.longOr(MeshModel.longOr(MeshModel.longOr(var6 << 40, MeshModel.longOr(var2 << 56, var2 << 48)), var2 << 32), var10 << 24), var8 << 16), var4 << 8), var12);
             for (var14 = 1; var14 < 8; var14++) {
-                field_L[var14][var0] = vg.a(field_L[-1 + var14][var0] >>> 8, field_L[var14 - 1][var0] << 56);
+                field_L[var14][var0] = MeshModel.longOr(field_L[-1 + var14][var0] >>> 8, field_L[var14 - 1][var0] << 56);
             }
             var0++;
         }

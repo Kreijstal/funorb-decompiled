@@ -239,7 +239,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        ne var12 = null;
+        PlayerActionMenu var12 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -248,9 +248,9 @@ final class StatefulTextPainter extends TextWidgetPainter {
         RuntimeException decompiledCaughtException = null;
         try {
           ArcanistsMulti.openInfoPanel(param2 ^ -26334, (int[]) null, param4, param1.field_Tb, param1.field_Nb, -1, -1, param1.field_Qb, param1);
-          eo.field_c.a((byte) 72, true);
-          eo.field_c.a(0, (int[]) null, 13);
-          eo.field_c.d(param2 + 5549);
+          eo.field_c.populateActions((byte) 72, true);
+          eo.field_c.addGameActions(0, (int[]) null, 13);
+          eo.field_c.addPrivateMessageAction(param2 + 5549);
           var12 = eo.field_c;
           var8 = param3;
           var9 = param6;

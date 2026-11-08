@@ -75,14 +75,14 @@ final class we {
           }
           var1_int = 0;
           while (BevelTextPainter.pollKeyEvent(false)) {
-            NumericDateInputWidget.field_S.a((byte) -76);
-            if (!NumericDateInputWidget.field_S.b(true)) {
+            NumericDateInputWidget.field_S.pollKeys((byte) -76);
+            if (!NumericDateInputWidget.field_S.isActivatePressed(true)) {
               continue;
             }
             var1_int = 1;
           }
-          NumericDateInputWidget.field_S.a(ao.a(param0 + 31131, EmailLoginCredentials.field_g, MenuButtonPanel.field_I), ao.a(param0 ^ -31131, pb.field_h, ja.field_s), -97);
-          if (NumericDateInputWidget.field_S.b(true)) {
+          NumericDateInputWidget.field_S.setItemBounds(ao.computeColumnX(param0 + 31131, EmailLoginCredentials.field_g, MenuButtonPanel.field_I), ao.computeColumnX(param0 ^ -31131, pb.field_h, ja.field_s), -97);
+          if (NumericDateInputWidget.field_S.isActivatePressed(true)) {
             var1_int = 1;
           }
           var2 = 0;

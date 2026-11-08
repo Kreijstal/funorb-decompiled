@@ -145,7 +145,7 @@ final class ec {
             for (var4 = 0; var4 < 6; var4++) {
               incrementValue$20 = var2_int;
               var2_int++;
-              so.field_c[var4] = param0[incrementValue$20];
+              MenuInputState.field_c[var4] = param0[incrementValue$20];
             }
             for (var4 = 0; var4 < 16; var4++) {
               incrementValue$19 = var2_int;
@@ -205,7 +205,7 @@ final class ec {
               for (var4 = 0; var4 < 6; var4++) {
                 incrementValue$6 = var2_int;
                 var2_int++;
-                so.field_c[var4] = param0[incrementValue$6];
+                MenuInputState.field_c[var4] = param0[incrementValue$6];
               }
               for (var4 = 0; 16 > var4; var4++) {
                 incrementValue$5 = var2_int;

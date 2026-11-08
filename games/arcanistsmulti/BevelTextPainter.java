@@ -12,7 +12,7 @@ class BevelTextPainter extends TextWidgetPainter {
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         NanoFrameClock.field_k = param2;
-        u.field_l = param1;
+        HuffmanCodec.field_l = param1;
         tm.field_b = param3;
         if (param4 < 92) {
           return;

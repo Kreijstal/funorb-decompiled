@@ -285,7 +285,7 @@ final class MusicPatchPcmStream extends PcmStream {
     }
 
     final static void d(int param0) {
-        u.field_k = false;
+        HuffmanCodec.field_k = false;
         field_s = false;
         if (param0 == -24225) {
           DebouncedValidator.a(-1, (byte) 30);

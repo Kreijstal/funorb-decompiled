@@ -251,9 +251,9 @@ final class DiskCacheWorker implements Runnable {
     final static SceneWidget c(byte param0) {
         if (param0 > -83) {
           DiskCacheWorker.b((byte) -7);
-          return ContextActionMenu.f(0);
+          return ContextActionMenu.getScrollContent(0);
         }
-        return ContextActionMenu.f(0);
+        return ContextActionMenu.getScrollContent(0);
     }
 
     final DiskCacheRequest queueRead(int param0, boolean param1, SectorCacheStore param2) {
@@ -300,7 +300,7 @@ final class DiskCacheWorker implements Runnable {
         try {
           var2 = param0.queueThreadStart(126, 5, (Runnable) (this));
           while (0 == var2.field_e) {
-            ao.a(10L, 1);
+            ao.sleepMillis(10L, 1);
           }
           if (var2.field_e == 2) {
             throw new RuntimeException();

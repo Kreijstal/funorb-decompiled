@@ -99,7 +99,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
           qn.field_ob.field_g = false;
           qn.field_ob.field_X = false;
           if (WhirlpoolHasher.field_k == 0) {
-            IntrusiveNodeHashTable.field_f = re.field_m;
+            IntrusiveNodeHashTable.field_f = WrappedTextLayout.field_m;
             qn.field_ob.field_B = true;
             i.b(-115);
             ArrayWidgetContainer.field_A = 400;
@@ -588,7 +588,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
           var5 = (CharSequence) ((Object) param2);
           var4 = SocketConnector.encodeCp1252(var5, (byte) -82);
           param0.writeUnsignedSmart(var4.length, (byte) -124);
-          param0.position = param0.position + TextLayout.field_g.a(param0.payload, var4.length, var4, param0.position, 1, 0);
+          param0.position = param0.position + TextLayout.field_g.decompress(param0.payload, var4.length, var4, param0.position, 1, 0);
           stackIn_3_0 = -var3_int + param0.position;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -663,7 +663,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
             if (null == fj.field_i) {
               stackIn_15_2 = null;
               stackIn_15_3 = null;
-              stackIn_15_6 = "" + vg.field_K;
+              stackIn_15_6 = "" + MeshModel.field_K;
             } else {
               stackIn_15_2 = null;
               stackIn_15_3 = null;
@@ -671,7 +671,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
             }
             var4 = ((PlatformTaskDispatcher) (Object) stackIn_14_0).queueUrlOpen(stackIn_14_1, new java.net.URL(stackIn_14_4, ((StringBuilder) (Object) stackIn_14_5).append(stackIn_15_6).append("&v1=").append(PlatformTaskDispatcher.field_l).append("&v2=").append(PlatformTaskDispatcher.field_c).append("&e=").append(var8).toString()));
             while (var4.field_e == 0) {
-              ao.a(1L, 1);
+              ao.sleepMillis(1L, 1);
             }
             if (var4.field_e == 1) {
               var5 = (DataInputStream) (var4.field_g);

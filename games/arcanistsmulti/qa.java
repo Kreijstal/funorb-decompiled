@@ -334,9 +334,9 @@ final class qa extends IntrusiveNode {
             var4Lifetime3++;
           }
           if (SocketConnector.field_i == 2) {
-            hi.field_h.a(param0, -1, false, -1);
+            hi.field_h.reset(param0, -1, false, -1);
           } else {
-            hi.field_h.a(param0, 0, false, DateOfBirthValidator.a(MenuButtonPanel.field_I, (byte) 70, EmailLoginCredentials.field_g));
+            hi.field_h.reset(param0, 0, false, DateOfBirthValidator.hitTestTab(MenuButtonPanel.field_I, (byte) 70, EmailLoginCredentials.field_g));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

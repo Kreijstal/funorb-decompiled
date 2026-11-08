@@ -16,14 +16,14 @@ final class BufferedImageRasterBuffer extends CanvasRasterBuffer {
         if (param2 == 0) {
           this.field_j = (java.awt.Image) ((Object) new java.awt.image.BufferedImage((java.awt.image.ColorModel) ((Object) var6), var7, false, new Hashtable()));
           this.field_n = param1;
-          this.a(true);
+          this.makeRasterTarget(true);
           return;
         }
         java.awt.Graphics var8 = (java.awt.Graphics) null;
         this.a(117, (java.awt.Graphics) null, 45, -66);
         this.field_j = (java.awt.Image) ((Object) new java.awt.image.BufferedImage((java.awt.image.ColorModel) ((Object) var6), var7, false, new Hashtable()));
         this.field_n = param1;
-        this.a(true);
+        this.makeRasterTarget(true);
     }
 
     public BufferedImageRasterBuffer() {

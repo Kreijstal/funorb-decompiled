@@ -11,7 +11,7 @@ final class ao {
     static boolean field_d;
     static int field_g;
 
-    final static void a(String[] args, int param1) {
+    final static void setNameSuggestions(String[] args, int param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -43,7 +43,7 @@ final class ao {
         }
     }
 
-    final static void a(int param0, byte param1, String param2, String param3, int param4, String param5) {
+    final static void addChatMessage(int param0, byte param1, String param2, String param3, int param4, String param5) {
         jg var6 = null;
         RuntimeException var6_ref = null;
         RuntimeException stackIn_5_0 = null;
@@ -88,7 +88,7 @@ final class ao {
         }
     }
 
-    final static void a(long param0, int param1) {
+    final static void sleepMillis(long param0, int param1) {
         if (0L >= param0) {
           return;
         }
@@ -112,7 +112,7 @@ final class ao {
 
     final static int a(boolean param0) {
         if (!param0) {
-          ao.a(-63, -91, 35);
+          ao.computeColumnX(-63, -91, 35);
           return rf.field_o;
         }
         return rf.field_o;
@@ -124,12 +124,12 @@ final class ao {
         }
     }
 
-    final static void a(byte param0) {
+    final static void layoutLobby(byte param0) {
         int var3 = 0;
         int var3Lifetime1;
         SecondaryNodeDequeIterator.field_g = SoftwareRasterizer.field_e;
         ri.field_a = SoftwareRasterizer.field_j;
-        WidgetStyleLayer.a((byte) -128);
+        WidgetStyleLayer.layoutCenteredPanels((byte) -128);
         aj.field_h.a(0, 0, -40 + (BufferedSocket.field_d.field_I - 2), BufferedSocket.field_d.field_x, 5);
         kg.field_c.setBounds(DraggableWidget.field_H.field_x, 0, 0, ImageProducerRasterBuffer.field_r, (byte) -120);
         int var1 = 2 + ImageProducerRasterBuffer.field_r;
@@ -155,7 +155,7 @@ final class ao {
           GrowableIntList.field_a.setBounds(fn.field_e.field_x - var3, var3, fn.field_e.field_I - 40, 40, (byte) -120);
           return;
         }
-        ao.a((byte) 81);
+        ao.layoutLobby((byte) 81);
         var3Lifetime1 = (fn.field_e.field_x + 2) / 2;
         of.field_a.setBounds(-2 + var3Lifetime1, 0, fn.field_e.field_I - 40, 40, (byte) -120);
         if (!fc.field_a) {
@@ -164,7 +164,7 @@ final class ao {
         GrowableIntList.field_a.setBounds(fn.field_e.field_x - var3Lifetime1, var3Lifetime1, fn.field_e.field_I - 40, 40, (byte) -120);
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int computeColumnX(int param0, int param1, int param2) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
@@ -187,7 +187,7 @@ final class ao {
           while (pm.field_f.length > var3_int) {
             var5 = AccountRegistrationPanel.field_M[var3_int];
             if (var5 < 0) {
-              var4 = var4 + u.field_l;
+              var4 = var4 + HuffmanCodec.field_l;
             } else {
               var6 = MenuScreen.measureText(true, pm.field_f[var3_int], (byte) -97);
               var4 = var4 + ic.field_a;

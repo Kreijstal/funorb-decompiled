@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ne {
+final class PlayerActionMenu {
     String field_h;
     static String field_j;
     ContextActionMenu field_l;
@@ -16,7 +16,7 @@ final class ne {
     static int field_b;
     static String field_f;
 
-    private final boolean a(int param0, int param1, int param2) {
+    private final boolean handleSocialAction(int param0, int param1, int param2) {
         String var4_ref = null;
         int var5 = 0;
         String var6 = null;
@@ -35,7 +35,7 @@ final class ne {
           var5 = 61 / ((11 - param1) / 63);
           if (var4_ref != null) {
             var6 = (String) null;
-            ao.a(0, (byte) 97, var4_ref, this.field_h, 2, (String) null);
+            ao.addChatMessage(0, (byte) 97, var4_ref, this.field_h, 2, (String) null);
           }
           return true;
         }
@@ -44,17 +44,17 @@ final class ne {
           var5Lifetime1 = 61 / ((11 - param1) / 63);
           if (var4_refLifetime1 != null) {
             var6Lifetime1 = (String) null;
-            ao.a(0, (byte) 97, var4_refLifetime1, this.field_h, 2, (String) null);
+            ao.addChatMessage(0, (byte) 97, var4_refLifetime1, this.field_h, 2, (String) null);
             return true;
           }
           return true;
         }
         if (param0 == 6) {
-          var4_refLifetime2 = ValidationState.a((byte) -120, param2, this.field_h);
+          var4_refLifetime2 = ValidationState.getDisplayNameError((byte) -120, param2, this.field_h);
           var5Lifetime2 = 61 / ((11 - param1) / 63);
           if (var4_refLifetime2 != null) {
             var6Lifetime2 = (String) null;
-            ao.a(0, (byte) 97, var4_refLifetime2, this.field_h, 2, (String) null);
+            ao.addChatMessage(0, (byte) 97, var4_refLifetime2, this.field_h, 2, (String) null);
           }
           return true;
         }
@@ -65,12 +65,12 @@ final class ne {
         var5Lifetime3 = 61 / ((11 - param1) / 63);
         if (var4_refLifetime3 != null) {
           var6Lifetime3 = (String) null;
-          ao.a(0, (byte) 97, var4_refLifetime3, this.field_h, 2, (String) null);
+          ao.addChatMessage(0, (byte) 97, var4_refLifetime3, this.field_h, 2, (String) null);
         }
         return true;
     }
 
-    final boolean a(boolean param0, int param1, int param2, int param3, int param4) {
+    final boolean processInput(boolean param0, int param1, int param2, int param3, int param4) {
         boolean discarded$0 = false;
         boolean discarded$1 = false;
         boolean discarded$2 = false;
@@ -78,29 +78,29 @@ final class ne {
         int var6 = 0;
         int var6Lifetime1;
         if (param4 != 12815) {
-          this.d(102);
+          this.addPrivateMessageAction(102);
           var6 = this.field_l.processInput(-1, param0);
           if (var6 == -2) {
             return false;
           }
-          discarded$0 = this.b(param2, param4 ^ 32446, var6);
-          discarded$1 = this.a(var6, -68, param3);
-          discarded$2 = this.a(var6, param3, false);
-          discarded$3 = this.a(param1, (byte) -64, var6);
+          discarded$0 = this.handleModerationAction(param2, param4 ^ 32446, var6);
+          discarded$1 = this.handleSocialAction(var6, -68, param3);
+          discarded$2 = this.handleGameAction(var6, param3, false);
+          discarded$3 = this.openChatInput(param1, (byte) -64, var6);
           return true;
         }
         var6Lifetime1 = this.field_l.processInput(-1, param0);
         if (var6Lifetime1 == -2) {
           return false;
         }
-        boolean discarded$4 = this.b(param2, param4 ^ 32446, var6Lifetime1);
-        boolean discarded$5 = this.a(var6Lifetime1, -68, param3);
-        boolean discarded$6 = this.a(var6Lifetime1, param3, false);
-        boolean discarded$7 = this.a(param1, (byte) -64, var6Lifetime1);
+        boolean discarded$4 = this.handleModerationAction(param2, param4 ^ 32446, var6Lifetime1);
+        boolean discarded$5 = this.handleSocialAction(var6Lifetime1, -68, param3);
+        boolean discarded$6 = this.handleGameAction(var6Lifetime1, param3, false);
+        boolean discarded$7 = this.openChatInput(param1, (byte) -64, var6Lifetime1);
         return true;
     }
 
-    private final boolean a(int param0, byte param1, int param2) {
+    private final boolean openChatInput(int param0, byte param1, int param2) {
         if (param2 == 17) {
           db.field_a = new ChatInputWidget(this.field_c.field_V, this.field_c.field_nb, this.field_c.field_x, this.field_c.field_I, param0, mf.field_d, SectorCacheStore.field_l, wj.field_b, IntrusiveNode.field_c, ec.field_g, nj.field_d, this.field_h, this.field_d);
           return true;
@@ -112,7 +112,7 @@ final class ne {
         return false;
     }
 
-    final void d(int param0) {
+    final void addPrivateMessageAction(int param0) {
         String var3 = null;
         if (this.field_h != null) {
           if (this.field_d == qf.field_a) {
@@ -122,7 +122,7 @@ final class ne {
             }
             return;
           }
-          var3 = this.a((byte) 32);
+          var3 = this.getDisplayName((byte) 32);
           String var2 = var3;
           this.field_l.addAction(17, CachedArchiveProvider.formatTemplate(-38, new String[]{var3}, ad.field_b), (byte) -26);
         }
@@ -132,7 +132,7 @@ final class ne {
         field_a = (String) null;
     }
 
-    private final String a(byte param0) {
+    private final String getDisplayName(byte param0) {
         String var2 = null;
         String var2Lifetime1;
         if (param0 == 32) {
@@ -143,7 +143,7 @@ final class ne {
           }
           return var2;
         }
-        this.a(false, -123, 50, 70, -1);
+        this.processInput(false, -123, 50, 70, -1);
         if (null == this.field_k) {
           var2Lifetime1 = this.field_h;
         } else {
@@ -152,7 +152,7 @@ final class ne {
         return var2Lifetime1;
     }
 
-    final static boolean b(int param0) {
+    final static boolean canEnterFullscreen(int param0) {
         if (param0 != -22768) {
           field_g = 24;
           if (ResizableModalPanel.field_Y == null) {
@@ -172,7 +172,7 @@ final class ne {
         return false;
     }
 
-    final void a(int param0, jg param1) {
+    final void addChatLineActions(int param0, jg param1) {
         if (param1.field_i) {
           return;
         }
@@ -204,7 +204,7 @@ final class ne {
         }
     }
 
-    final void a(byte param0, boolean param1) {
+    final void populateActions(byte param0, boolean param1) {
         SocialListEntry var4;
         String var5;
         int var6;
@@ -213,7 +213,7 @@ final class ne {
         SocialListEntry var4Lifetime1;
         var6 = ArcanistsMulti.field_G ? 1 : 0;
         if (param0 != 72) {
-          this.a((byte) -94, false);
+          this.populateActions((byte) -94, false);
           if (this.field_h == null) {
             return;
           }
@@ -224,7 +224,7 @@ final class ne {
             }
             var12 = fn.lookupEntry(this.field_d, 110);
             var4 = vf.a(this.field_d, 8192);
-            var5 = this.a((byte) 32);
+            var5 = this.getDisplayName((byte) 32);
             if (var4 != null) {
               if (!DirectByteStorage.field_f.field_Lb) {
                 this.field_l.addAction(1, CachedArchiveProvider.formatTemplate(-18, new String[]{var5}, gg.field_a), (byte) -26);
@@ -271,7 +271,7 @@ final class ne {
         }
         var11 = fn.lookupEntry(this.field_d, 110);
         var4Lifetime1 = vf.a(this.field_d, 8192);
-        var5 = this.a((byte) 32);
+        var5 = this.getDisplayName((byte) 32);
         if (var4Lifetime1 != null) {
           if (DirectByteStorage.field_f.field_Lb &&
             DirectByteStorage.field_f.field_nc < 0) {
@@ -302,7 +302,7 @@ final class ne {
         this.field_l.addAction(0, CachedArchiveProvider.formatTemplate(param0 + 48, new String[]{var5}, StrongCacheEntry.field_x), (byte) -26);
     }
 
-    final void a(int param0) {
+    final void addSocialActions(int param0) {
         String var3;
         int var4;
         Sprite[] var5;
@@ -312,11 +312,11 @@ final class ne {
         var4 = ArcanistsMulti.field_G ? 1 : 0;
         if (param0 != 3) {
           var5 = (Sprite[]) null;
-          ne.a(39, -67, (Sprite[]) null, -123, 12, 116);
+          PlayerActionMenu.drawThreeSliceBarAlpha(39, -67, (Sprite[]) null, -123, 12, 116);
           if (DirectByteStorage.field_f != null) {
             return;
           }
-          var8 = UsernameCredentials.a(this.field_e, (byte) -103);
+          var8 = UsernameCredentials.getGameEntry(this.field_e, (byte) -103);
           if (var8 == null) {
             return;
           }
@@ -343,7 +343,7 @@ final class ne {
           if (DirectByteStorage.field_f != null) {
             return;
           }
-          var7 = UsernameCredentials.a(this.field_e, (byte) -103);
+          var7 = UsernameCredentials.getGameEntry(this.field_e, (byte) -103);
           var6 = var7;
           if (var7 == null) {
             return;
@@ -375,7 +375,7 @@ final class ne {
         this.field_l.addAction(3, CachedArchiveProvider.formatTemplate(-82, new String[]{var3}, hl.field_h), (byte) -26);
     }
 
-    final void a(int param0, boolean param1) {
+    final void draw(int param0, boolean param1) {
         if (param0 != -22717) {
           field_b = -81;
           this.field_l.drawFullScreen(param1, true);
@@ -384,7 +384,7 @@ final class ne {
         this.field_l.drawFullScreen(param1, true);
     }
 
-    final void a(int param0, int[] param1, int param2) {
+    final void addGameActions(int param0, int[] param1, int param2) {
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         String stackIn_31_2 = null;
@@ -398,9 +398,9 @@ final class ne {
         try {
           if (null != this.field_h && (~qf.field_a != ~this.field_d ||
             param0 == 2) && SpriteState.field_t == 2) {
-            var8 = this.a((byte) 32);
+            var8 = this.getDisplayName((byte) 32);
             var4 = var8;
-            var5 = UsernameCredentials.a(param2 ^ 13, this.field_h);
+            var5 = UsernameCredentials.findEntryByName(param2 ^ 13, this.field_h);
             var6 = sa.a(this.field_h, param2 ^ 333) ? 1 : 0;
             if (var5 == null &&
               var6 == 0) {
@@ -435,7 +435,7 @@ final class ne {
             return;
           }
           var7 = (Sprite[]) null;
-          ne.a(-44, -48, (Sprite[]) null, 59, 24, -88);
+          PlayerActionMenu.drawThreeSliceBarAlpha(-44, -48, (Sprite[]) null, 59, 24, -88);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -451,7 +451,7 @@ final class ne {
         }
     }
 
-    private final boolean b(int param0, int param1, int param2) {
+    private final boolean handleModerationAction(int param0, int param1, int param2) {
         int var5 = ArcanistsMulti.field_G ? 1 : 0;
         if (param1 != 19633) {
           return false;
@@ -488,7 +488,7 @@ final class ne {
         return true;
     }
 
-    private final boolean a(int param0, int param1, boolean param2) {
+    private final boolean handleGameAction(int param0, int param1, boolean param2) {
         int stackIn_8_0 = 0;
         int stackIn_8_1 = 0;
         boolean stackIn_9_2 = false;
@@ -554,7 +554,7 @@ final class ne {
         return true;
     }
 
-    final boolean b(byte param0) {
+    final boolean handleEscape(byte param0) {
         if (param0 != 49) {
           return false;
         }
@@ -580,7 +580,7 @@ final class ne {
         field_j = null;
     }
 
-    ne(SceneWidget param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
+    PlayerActionMenu(SceneWidget param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
         try {
           this.field_l = new ContextActionMenu(BattleUnit.field_H);
           param0.field_ab = true;
@@ -596,7 +596,7 @@ final class ne {
         }
     }
 
-    final static void a(int param0, int param1, Sprite[] param2, int param3, int param4, int param5) {
+    final static void drawThreeSliceBarAlpha(int param0, int param1, Sprite[] param2, int param3, int param4, int param5) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;

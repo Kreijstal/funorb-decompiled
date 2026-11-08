@@ -270,7 +270,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
               this.submitDisplayName(true);
             }
           } else {
-            DateOfBirthValidator.d((byte) -77);
+            DateOfBirthValidator.showEmptyLoginPanel((byte) -77);
           }
           if (!param0) {
             field_F = (byte[][]) null;

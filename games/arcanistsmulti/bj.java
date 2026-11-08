@@ -168,7 +168,7 @@ final class bj extends ResizableModalPanel implements ButtonListener {
           var5_long = qj.monotonicTimeMillis(-26572) - this.field_V;
           var7 = (int)((-var5_long + 10999L) / 1000L);
           if (var7 <= 0) {
-            u.b(6);
+            HuffmanCodec.restoreWindowedMode(6);
             this.clearPendingFlag((byte) 119);
             this.field_H.pushPanel(new qn(this.field_H, bh.field_c), param2 ^ 15807);
           }
@@ -201,7 +201,7 @@ final class bj extends ResizableModalPanel implements ButtonListener {
         }
     }
 
-    final static wa a(boolean param0, int param1, int param2) {
+    final static wa createLobbyRow(boolean param0, int param1, int param2) {
         SceneScrollPane stackIn_4_0 = null;
         boolean stackIn_5_1 = false;
         SceneWidget stackIn_32_0 = null;
@@ -226,10 +226,10 @@ final class bj extends ResizableModalPanel implements ButtonListener {
         int var14 = 0;
         int var15 = 0;
         String var16 = null;
-        ne var17 = null;
+        PlayerActionMenu var17 = null;
         String var18 = null;
         int var19 = 0;
-        ne var17Lifetime1;
+        PlayerActionMenu var17Lifetime1;
         String var18Lifetime1;
         var19 = ArcanistsMulti.field_G ? 1 : 0;
         try {
@@ -396,7 +396,7 @@ final class bj extends ResizableModalPanel implements ButtonListener {
         try {
           if (this.field_nb != param4) {
             if (this.field_lb == param4) {
-              u.b(6);
+              HuffmanCodec.restoreWindowedMode(6);
               this.clearPendingFlag((byte) 104);
               if (ArcanistsMulti.field_G) {
                 this.clearPendingFlag((byte) 86);
@@ -423,7 +423,7 @@ final class bj extends ResizableModalPanel implements ButtonListener {
         }
     }
 
-    final static boolean g(boolean param0) {
+    final static boolean hasActivePanel(boolean param0) {
         RuntimeException var1 = null;
         boolean stackIn_10_0 = false;
         RuntimeException decompiledCaughtException = null;
