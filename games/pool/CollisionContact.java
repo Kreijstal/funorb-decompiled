@@ -30,11 +30,11 @@ final class CollisionContact {
     static String tickerHintAim;
     static int[] field_w;
 
-    final static String a(boolean param0) {
+    final static String getAccountUsername(boolean obfuscationGuard) {
         if (IntegerRecordProtocolSupport.field_e == TabbedPane.field_Lb) {
           return ContextMenu.field_Xb;
         }
-        if (param0) {
+        if (obfuscationGuard) {
           CollisionContact.releaseStatics(38);
           if (TimeTrialSelectScreen.field_I == IntegerRecordProtocolSupport.field_e) {
             return ClientUiResourceState.field_c;

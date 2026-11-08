@@ -100,7 +100,7 @@ final class HotspotRectangle extends IntrusiveNode {
         try {
           SpriteState.field_x = username;
           VertexTransformSupport.field_a = password;
-          PacketAvailabilitySupport.a(active, DebouncedValidationProvider.loggingIn, -126);
+          PacketAvailabilitySupport.showLoginProgressDialog(active, DebouncedValidationProvider.loggingIn, -126);
           int var4_int = -110 % ((obfuscationGuard + 30) / 57);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "qa.E(" + active + ',' + (username != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + (password != null ? "{...}" : "null") + ')');

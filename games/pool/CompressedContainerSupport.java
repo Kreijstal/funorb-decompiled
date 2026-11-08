@@ -70,7 +70,7 @@ final class CompressedContainerSupport implements QuickChatResolverMarker {
         }
     }
 
-    final static SocialListEntry a(boolean param0, int param1, int param2) {
+    final static SocialListEntry updateFriendListAndPollEntry(boolean active, int scrollRows, int obfuscationGuard) {
         ScrollPane stackIn_3_0 = null;
         boolean stackIn_3_1 = false;
         boolean stackIn_4_2 = false;
@@ -103,9 +103,9 @@ final class CompressedContainerSupport implements QuickChatResolverMarker {
         String var18Lifetime1;
         try {
           stackIn_3_0 = NameEntryPopup.field_Mb.scrollPane;
-          stackIn_3_1 = param0;
+          stackIn_3_1 = active;
           stackIn_4_2 = (NameEntryPopup.field_Mb.scrollPane == WidgetStyleLayer.field_c);
-          var3_int = ((ScrollPane) (Object) stackIn_3_0).updateContentLayout(stackIn_3_1, stackIn_4_2, 2, (byte) 80, 2 + ArchiveIndex.field_x, (ArchiveIndex.field_x + 2) * (3 * param1)) ? 1 : 0;
+          var3_int = ((ScrollPane) (Object) stackIn_3_0).updateContentLayout(stackIn_3_1, stackIn_4_2, 2, (byte) 80, 2 + ArchiveIndex.field_x, (ArchiveIndex.field_x + 2) * (3 * scrollRows)) ? 1 : 0;
           var4 = NameEntryPopup.field_Mb.content.children;
           var5 = null;
           if (2 == ChatInputSupport.field_a) {
@@ -236,17 +236,17 @@ final class CompressedContainerSupport implements QuickChatResolverMarker {
             }
             AudioService.collapseComponentHeights(NameEntryPopup.field_Mb.content, (byte) 109);
           }
-          var6 = -31 / ((param2 - 31) / 62);
+          var6 = -31 / ((obfuscationGuard - 31) / 62);
           stackIn_88_0 = var5;
           return (SocialListEntry) (stackIn_88_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var3), "wp.C(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var3), "wp.C(" + active + ',' + scrollRows + ',' + obfuscationGuard + ')');
         }
     }
 
-    final static RankingsRequest a(int param0, int param1, byte param2, int param3) {
+    final static RankingsRequest requestRankings(int requestId, int option, byte obfuscationGuard, int opcode) {
         RankingsRequest var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -256,13 +256,13 @@ final class CompressedContainerSupport implements QuickChatResolverMarker {
         var5 = Pool.field_O;
         try {
           var4 = (RankingsRequest) (AccountTextSupport.field_c.last((byte) -82));
-          if (param2 <= 27) {
+          if (obfuscationGuard <= 27) {
             field_g = (MouseHandler) null;
           }
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (null == var4))) {
             if (var5 == 0) {
-              if (param0 == var4.field_s) {
+              if (requestId == var4.field_s) {
                 stackIn_12_0 = var4;
                 return stackIn_12_0;
               }
@@ -273,17 +273,17 @@ final class CompressedContainerSupport implements QuickChatResolverMarker {
           }
           if (decompiledNaturalLoopExit0) {
             var4 = new RankingsRequest();
-            var4.field_o = param1;
-            var4.field_s = param0;
+            var4.field_o = option;
+            var4.field_s = requestId;
             AccountTextSupport.field_c.addFirst((byte) -114, var4);
-            RankingsProtocolSupport.sendRankingsRequest(var4, param3, (byte) -96);
+            RankingsProtocolSupport.sendRankingsRequest(var4, opcode, (byte) -96);
           }
           stackIn_16_0 = var4;
           return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var4_ref), "wp.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var4_ref), "wp.B(" + requestId + ',' + option + ',' + obfuscationGuard + ',' + opcode + ')');
         }
     }
 

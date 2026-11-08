@@ -272,7 +272,7 @@ final class MusicCrossfadeStream extends PcmStream {
         field_B = null;
     }
 
-    final static void a(int param0, int param1, boolean param2, int param3, int param4, int param5) {
+    final static void appendRankingRecord(int param0, int param1, boolean param2, int param3, int param4, int param5) {
         StateIconLabel.field_Nb[MenuScreenBase.field_c] = param1;
         NetworkGameClient.field_H[MenuScreenBase.field_c] = MenuScreenBase.field_c;
         TickClock.field_g[MenuScreenBase.field_c] = param3;

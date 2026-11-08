@@ -128,7 +128,7 @@ final class DialogLayer extends SingleChildWidget {
           if (param2 != MeshBoundsSupport.field_e.pressedButton) {
             AccountMenuText.field_b = new ReportAbuseDialog(MeshBoundsSupport.field_e.screenX, MeshBoundsSupport.field_e.screenY, MeshBoundsSupport.field_e.width, MeshBoundsSupport.field_e.height, param3, AccountStateQuery.field_m, DiskArchiveRequest.field_J, VertexTransformSupport.field_f, AlignedIconLabel.field_Lb, ChoiceButtonSupport.field_e, UiWidget.field_A, (String) null, 0L);
           }
-          var9 = IntrusiveNodeHashTable.a(param0, (byte) -126, ArchiveIndex.field_x, CueAim.field_j);
+          var9 = IntrusiveNodeHashTable.updateChatHistoryAndPollMessage(param0, (byte) -126, ArchiveIndex.field_x, CueAim.field_j);
           if (var9 != null) {
             IntegerSyntaxSupport.openChatMessageContextMenu(var9, 122);
           }

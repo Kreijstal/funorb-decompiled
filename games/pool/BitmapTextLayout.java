@@ -18,26 +18,26 @@ final class BitmapTextLayout extends TextLayout {
     private static int field_p;
     private int field_v;
 
-    final static void a(int param0, int param1, int param2, NineSliceFrame param3) {
+    final static void configureClientNoticeOuterFrame(int obfuscationGuard, int verticalPadding, int horizontalPadding, NineSliceFrame frame) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          Pool.field_I = param3;
-          TutorialStep.field_v = param2;
-          if (param0 < 106) {
+          Pool.field_I = frame;
+          TutorialStep.field_v = horizontalPadding;
+          if (obfuscationGuard < 106) {
             return;
           }
-          WhirlpoolHasher.field_b = param1;
+          WhirlpoolHasher.field_b = verticalPadding;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
           stackIn_7_0 = runtimeException;
-          stackIn_7_1 = new StringBuilder().append("ve.L(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_7_1 = new StringBuilder().append("ve.L(").append(obfuscationGuard).append(',').append(verticalPadding).append(',').append(horizontalPadding).append(',');
+          if (frame == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
@@ -134,7 +134,7 @@ final class BitmapTextLayout extends TextLayout {
         }
     }
 
-    final static void b(byte param0) {
+    final static void decreaseSoundEffectVolume(byte obfuscationGuard) {
         int var1_int = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
@@ -152,23 +152,23 @@ final class BitmapTextLayout extends TextLayout {
             }
             AgeValidator.setSoundEffectVolume(true, BallDebugOverlay.field_b - var1_int);
           }
-          var1_intLifetime1 = -10 / ((74 - param0) / 42);
+          var1_intLifetime1 = -10 / ((74 - obfuscationGuard) / 42);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "ve.M(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "ve.M(" + obfuscationGuard + ')');
         }
     }
 
-    final static String d(int param0) {
+    final static String localPlayerNameOrDefault(int obfuscationGuard) {
         String var1 = null;
         RuntimeException var1_ref = null;
         String stackIn_14_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           var1 = "";
-          if (param0 < 116) {
+          if (obfuscationGuard < 116) {
             field_p = -70;
           }
           if (null != TextLineLayout.field_j) {
@@ -185,7 +185,7 @@ final class BitmapTextLayout extends TextLayout {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1_ref), "ve.J(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1_ref), "ve.J(" + obfuscationGuard + ')');
         }
     }
 
@@ -447,7 +447,7 @@ final class BitmapTextLayout extends TextLayout {
     public BitmapTextLayout() {
     }
 
-    final static void a(int param0, boolean param1, int[] param2, boolean param3, boolean param4, int[] param5, TriangleMesh param6) {
+    final static void transformAndBucketMesh(int param0, boolean param1, int[] param2, boolean param3, boolean param4, int[] param5, TriangleMesh param6) {
         RuntimeException stackIn_64_0 = null;
         StringBuilder stackIn_64_1 = null;
         String stackIn_65_2 = null;

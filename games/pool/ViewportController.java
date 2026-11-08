@@ -129,7 +129,7 @@ final class ViewportController {
         String var5_ref_String = null;
         int var5 = 0;
         int var6 = 0;
-        SocialListEntry var3 = CompressedContainerSupport.a(active, opcode, 100);
+        SocialListEntry var3 = CompressedContainerSupport.updateFriendListAndPollEntry(active, opcode, 100);
         PlayerContextMenu var4Lifetime1;
         if (obfuscationGuard >= -72) {
           int[] var7 = (int[]) null;

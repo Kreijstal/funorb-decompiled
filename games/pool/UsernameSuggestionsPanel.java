@@ -159,7 +159,7 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonAc
         TextHotspotRegion.field_o.textInset = TimeTrialSelectScreen.field_M.textInset;
         TextHotspotRegion.field_o.horizontalAlignment = 1;
         if (PoolMatchController.field_z > 0) {
-          MessageDialogContent.a(param4, param9, param1, 112);
+          MessageDialogContent.updateRatedMatchmakingPanel(param4, param9, param1, 112);
         }
         if (LogoMaterial.field_b > 0) {
           ButtonWidget.updateLobbyGameControls(param8, param4, param1, -102, param9);
@@ -172,10 +172,10 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonAc
         } else {
           QuickChatMenuSupport.field_e.enabled = true;
           DebugTuningSlider.field_c.viewport.text = null;
-          HuffmanCodec.a(param7, param0, DebugTuningSlider.field_c, param9, (byte) -83);
+          HuffmanCodec.updateLobbyPlayerRows(param7, param0, DebugTuningSlider.field_c, param9, (byte) -83);
         }
         SharedWidgetLayoutSupport.updateLobbyGameRows(param3, 0, param9, param7, param6, param2, param0);
-        HuffmanCodec.a(param7, param0, DualLinkDeque.field_f, param9, (byte) -83);
+        HuffmanCodec.updateLobbyPlayerRows(param7, param0, DualLinkDeque.field_f, param9, (byte) -83);
         MultiHandleSliderWidget.field_V = MultiHandleSliderWidget.field_V + 1;
     }
 

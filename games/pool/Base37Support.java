@@ -81,8 +81,8 @@ final class Base37Support {
         field_g = null;
     }
 
-    final static boolean a(boolean param0) {
-        if (!param0) {
+    final static boolean isReconnectActive(boolean obfuscationGuard) {
+        if (!obfuscationGuard) {
           CharSequence var2 = (CharSequence) null;
           Base37Support.encodeBase37((byte) 6, (CharSequence) null);
         }

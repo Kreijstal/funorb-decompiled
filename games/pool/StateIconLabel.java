@@ -69,7 +69,7 @@ final class StateIconLabel extends UiComponent {
         }
     }
 
-    final static boolean a(int param0, String param1, String param2) {
+    final static boolean containsTextOrReverse(int obfuscationGuard, String needle, String text) {
         String var3 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -80,25 +80,25 @@ final class StateIconLabel extends UiComponent {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          param1 = UiComponentNode.replaceChar('_', "", param1, param0 ^ 23139);
-          if (param0 != 23138) {
+          needle = UiComponentNode.replaceChar('_', "", needle, obfuscationGuard ^ 23139);
+          if (obfuscationGuard != 23138) {
             StateIconLabel.releaseStatics(-5);
           }
-          var3 = HotspotRectangle.reverseString(param1, 0);
-          stackIn_7_0 = (-1 != param2.indexOf(param1)) || (param2.indexOf(var3) != -1);
+          var3 = HotspotRectangle.reverseString(needle, 0);
+          stackIn_7_0 = (-1 != text.indexOf(needle)) || (text.indexOf(var3) != -1);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_10_0 = var3_ref;
-          stackIn_10_1 = new StringBuilder().append("wg.A(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_10_1 = new StringBuilder().append("wg.A(").append(obfuscationGuard).append(',');
+          if (needle == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
           stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',');
-          if (param2 == null) {
+          if (text == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";

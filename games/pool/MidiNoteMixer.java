@@ -206,7 +206,7 @@ final class MidiNoteMixer extends PcmStream {
           this.field_p.mixInto(param0, param1, param2);
           var6 = (MusicVoice) (this.field_t.last((byte) -67));
           while (var6 != null) {
-            if (!this.field_w.a(-16257, var6)) {
+            if (!this.field_w.isVoiceInactive(-16257, var6)) {
               var5 = param2;
               var4_int = param1;
               do {
@@ -285,7 +285,7 @@ final class MidiNoteMixer extends PcmStream {
         this.field_p.skip(length);
         var3 = (MusicVoice) (this.field_t.last((byte) -20));
         while (var3 != null) {
-          stackIn_4_0 = this.field_w.a(-16257, var3);
+          stackIn_4_0 = this.field_w.isVoiceInactive(-16257, var3);
           boolean decompiledFrameCompleted0 = true;
           if (!stackIn_4_0) {
             var2 = length;

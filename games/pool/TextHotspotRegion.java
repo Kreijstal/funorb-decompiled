@@ -149,7 +149,7 @@ final class TextHotspotRegion extends IntrusiveNode {
             for (var18 = 0; var18 < 3; var18++) {
               IsaacCipher.field_b[var18] = IsaacCipher.field_b[var18] + QuickChatMenu.field_gc[var15][var18];
             }
-            BitmapTextLayout.a(obfuscationGuard + 21815, false, HighScoreRequest.field_p, false, true, IsaacCipher.field_b, var17);
+            BitmapTextLayout.transformAndBucketMesh(obfuscationGuard + 21815, false, HighScoreRequest.field_p, false, true, IsaacCipher.field_b, var17);
             CueAim.drawLitMeshFaces(var14, 8355711, var17, var8Lifetime1, var13Lifetime1, var9Lifetime1, var12Lifetime1, var7Lifetime1);
           }
           return;

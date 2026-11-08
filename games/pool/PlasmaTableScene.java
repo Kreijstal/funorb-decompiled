@@ -700,7 +700,7 @@ final class PlasmaTableScene extends TableScene {
               } else {
                 stackIn_29_1 = 1;
               }
-              ReflectionReplySupport.$cfr$intArgs$a$2435eea43ef1(stackIn_26_0, stackIn_29_1, var5, this.field_X, 127, 0, this.field_R, this.field_M);
+              ReflectionReplySupport.drawGradientPolylineIntArgs(stackIn_26_0, stackIn_29_1, var5, this.field_X, 127, 0, this.field_R, this.field_M);
             }
             param2.buildAimPreviewTrail(-125);
             return;
@@ -1042,7 +1042,7 @@ final class PlasmaTableScene extends TableScene {
             } else {
               stackIn_21_1 = 2;
             }
-            ReflectionReplySupport.$cfr$intArgs$a$2435eea43ef1(stackIn_18_0, stackIn_21_1, var6, this.field_X, 127, 0, this.field_R, this.field_M);
+            ReflectionReplySupport.drawGradientPolylineIntArgs(stackIn_18_0, stackIn_21_1, var6, this.field_X, 127, 0, this.field_R, this.field_M);
           }
           this.drawWireframeGrid((byte) 44, var16);
           this.drawBallsInOrder(var16, (byte) 79, false, var14, false);

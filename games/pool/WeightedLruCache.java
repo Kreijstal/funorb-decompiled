@@ -186,7 +186,7 @@ final class WeightedLruCache {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = decompiledCaughtException;
             }
-            IntrusiveNodeHashTable.a(558370049, param0);
+            IntrusiveNodeHashTable.updateBrowserNavigationLinks(558370049, param0);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

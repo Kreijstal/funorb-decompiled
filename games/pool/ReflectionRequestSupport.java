@@ -168,16 +168,16 @@ final class ReflectionRequestSupport {
         return NameEntryPopup.multiplyFixed16(third, false, NameEntryPopup.multiplyFixed16(second, false, first));
     }
 
-    final void a(int param0, int param1, int param2, int param3, byte param4) {
+    final void layoutTabbedInterface(int height, int width, int left, int top, byte obfuscationGuard) {
         int var6 = 24;
         int var7 = 5;
-        this.field_i.setTabbedPaneBounds(param2, param1, -82, param0, param3, var7, var6);
+        this.field_i.setTabbedPaneBounds(left, width, -82, height, top, var7, var6);
         AccountContentDialog.field_sb.setBounds(0, 2147483647, 0, SingleChildWidget.field_J.width, ArchiveIndex.field_x);
         PoolUiText.field_e.setBounds(2 + ArchiveIndex.field_x, 2147483647, 0, -80 + (-2 - TranslatedUiText.field_n) + (SingleChildWidget.field_J.width - 2), 18);
         ByteStorage.field_f.setBounds(ArchiveIndex.field_x + 2, 2147483647, -2 + SingleChildWidget.field_J.width + (-TranslatedUiText.field_n - 80), 82 + TranslatedUiText.field_n, 18);
         NameEntryPopup.field_Mb.setPaneFooterBounds(0, SingleChildWidget.field_J.width, 8, 2, TranslatedUiText.field_n, 20, -22 - ArchiveIndex.field_x + SingleChildWidget.field_J.height, 20 + (2 + ArchiveIndex.field_x));
         InputIdleSupport.field_c.layoutPaneFooter(20, TranslatedUiText.field_n, 0, 2);
-        int var8 = 111 % ((param4 + 58) / 45);
+        int var8 = 111 % ((obfuscationGuard + 58) / 45);
     }
 
     ReflectionRequestSupport(String param0, UiComponent param1) {

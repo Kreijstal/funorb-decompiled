@@ -230,7 +230,7 @@ final class ReflectionReplySupport {
     public static void releaseStatics(boolean param0) {
         if (!param0) {
           int[] var2 = (int[]) null;
-          ReflectionReplySupport.$cfr$intArgs$a$2435eea43ef1(51, -10, (int[]) null, (int[]) null, 92, 127, (int[]) null, (int[]) null);
+          ReflectionReplySupport.drawGradientPolylineIntArgs(51, -10, (int[]) null, (int[]) null, 92, 127, (int[]) null, (int[]) null);
         }
         field_g = null;
         field_f = null;
@@ -241,7 +241,7 @@ final class ReflectionReplySupport {
         field_b = null;
     }
 
-    final static void a(byte param0, byte param1, int[] param2, int[] param3, int param4, int param5, int[] param6, int[] param7) {
+    final static void drawGradientPolyline(byte param0, byte param1, int[] param2, int[] param3, int param4, int param5, int[] param6, int[] param7) {
         int stackIn_18_0;
         int stackIn_18_1;
         int stackIn_18_2;
@@ -375,7 +375,7 @@ final class ReflectionReplySupport {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$2435eea43ef1(int param0, int param1, int[] param2, int[] param3, int param4, int param5, int[] param6, int[] param7) {
+    final static void drawGradientPolylineIntArgs(int param0, int param1, int[] param2, int[] param3, int param4, int param5, int[] param6, int[] param7) {
         int stackIn_18_0;
         int stackIn_18_1;
         int stackIn_18_2;

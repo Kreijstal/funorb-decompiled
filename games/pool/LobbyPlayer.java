@@ -55,7 +55,7 @@ final class LobbyPlayer extends UiComponent {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!TextLineLayout.a(groupId, archive, fileId, (byte) 121)) {
+          if (!TextLineLayout.loadSpriteSheet(groupId, archive, fileId, (byte) 121)) {
             stackIn_2_0 = null;
             return (Sprite[]) (stackIn_2_0);
           }

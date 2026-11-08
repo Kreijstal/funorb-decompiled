@@ -377,7 +377,7 @@ class MenuScreen extends MenuScreenBase {
           return;
         }
         if (this.selection.field_a) {
-          TextLineLayout.a((byte) -27, BeveledFrameSpriteFactory.field_c[0]);
+          TextLineLayout.playSoundEffect((byte) -27, BeveledFrameSpriteFactory.field_c[0]);
         }
         regionExit1: {
           regionExit2: {
@@ -601,11 +601,11 @@ class MenuScreen extends MenuScreenBase {
                                                                       if (this.selection.isLeftArrow(-20421) &&
                                                                         BallDebugOverlay.field_b > 0) {
                                                                         var5 = 1;
-                                                                        BitmapTextLayout.b((byte) -14);
+                                                                        BitmapTextLayout.decreaseSoundEffectVolume((byte) -14);
                                                                       }
                                                                       if (this.selection.isRightArrow(-1) &&
                                                                         BallDebugOverlay.field_b < 256) {
-                                                                        SingleChildWidget.f(param0 + 16245);
+                                                                        SingleChildWidget.increaseSoundEffectVolume(param0 + 16245);
                                                                         var5 = 1;
                                                                       }
                                                                       if ((var5 != 0)) {
@@ -613,7 +613,7 @@ class MenuScreen extends MenuScreenBase {
                                                                           SocialListEntry.field_Tb <= field_D) {
                                                                           break regionExit2;
                                                                         }
-                                                                        TextLineLayout.a((byte) -27, BeveledFrameSpriteFactory.field_c[2]);
+                                                                        TextLineLayout.playSoundEffect((byte) -27, BeveledFrameSpriteFactory.field_c[2]);
                                                                         field_D = SocialListEntry.field_Tb + 20;
                                                                       }
                                                                     } else {

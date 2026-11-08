@@ -201,7 +201,7 @@ final class HuffmanCodec {
         }
     }
 
-    final static void a(boolean param0, int param1, ScrollPane param2, int param3, byte param4) {
+    final static void updateLobbyPlayerRows(boolean param0, int param1, ScrollPane param2, int param3, byte param4) {
         int var27_int = 0;
         ScrollPane stackIn_45_0 = null;
         boolean stackIn_45_1 = false;
@@ -322,7 +322,7 @@ final class HuffmanCodec {
           var11 = null;
           if (param4 != -83) {
             var32 = (ScrollPane) null;
-            HuffmanCodec.a(true, -46, (ScrollPane) null, -111, (byte) 66);
+            HuffmanCodec.updateLobbyPlayerRows(true, -46, (ScrollPane) null, -111, (byte) 66);
           }
           var12 = (LobbyPlayer) (var10.last((byte) 115));
           while (var12 != null) {
@@ -471,7 +471,7 @@ final class HuffmanCodec {
               }
               var19 = var19 + ArchiveIndex.field_x;
             }
-            var23 = MidiPcmStream.a(var20, var12.field_hc, (byte) -126);
+            var23 = MidiPcmStream.lobbyPlayerDepartureMessage(var20, var12.field_hc, (byte) -126);
             var24 = var23;
             var30 = var24;
             var25 = var30;

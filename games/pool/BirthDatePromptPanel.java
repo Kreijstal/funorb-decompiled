@@ -121,7 +121,7 @@ final class BirthDatePromptPanel extends ArrayWidgetGroup implements ButtonActiv
             }
             var6 = QuickChatMenu.field_Sb[var3];
             stackIn_10_0 = !(var4 < 0);
-            var7 = ReportAbuseDialog.a(stackIn_10_0, obfuscationGuard ^ -9377, var6);
+            var7 = ReportAbuseDialog.measureMenuRowText(stackIn_10_0, obfuscationGuard ^ -9377, var6);
             var8 = ArchiveIndex.field_u - (var7 >> 1);
             if (var4 >= 0) {
               var2 = var2 + LookupQuery.field_m;
@@ -183,7 +183,7 @@ final class BirthDatePromptPanel extends ArrayWidgetGroup implements ButtonActiv
           if (!param0) {
             BirthDatePromptPanel.releaseStatics(82);
           }
-          ReportAbuseDialog.a(-121, this.field_N.getYear(37), this.field_N.getMonthIndex(25), this.field_N.getDay((byte) -119));
+          ReportAbuseDialog.sendEncryptedBirthDate(-121, this.field_N.getYear(37), this.field_N.getMonthIndex(25), this.field_N.getDay((byte) -119));
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "jj.P(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }

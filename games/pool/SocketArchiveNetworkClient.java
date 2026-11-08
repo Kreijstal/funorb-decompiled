@@ -60,7 +60,7 @@ final class SocketArchiveNetworkClient extends Js5Transport {
         this.field_c = (byte)(int)(Math.random() * 255.0 + 1.0);
     }
 
-    final static IntrusiveDeque a(int[] param0, int param1, String param2, int param3, BitmapFont param4, boolean param5, int param6) {
+    final static IntrusiveDeque buildTextHotspotRegions(int[] lineHeights, int wrapWidth, String text, int top, BitmapFont font, boolean obfuscationGuard, int left) {
         int var11 = 0;
         int var13 = 0;
         IntrusiveDeque stackIn_2_0 = null;
@@ -94,12 +94,12 @@ final class SocketArchiveNetworkClient extends Js5Transport {
         try {
           var26 = new IntrusiveDeque();
           var8 = new String[100];
-          if (!param5) {
+          if (!obfuscationGuard) {
             stackIn_2_0 = (IntrusiveDeque) null;
             return stackIn_2_0;
           }
-          var9 = param4.wrapText(param2, new int[]{param1}, var8);
-          var10 = param2.toLowerCase();
+          var9 = font.wrapText(text, new int[]{wrapWidth}, var8);
+          var10 = text.toLowerCase();
           for (var11 = 0; var11 < DimmedPauseMenu.field_P.length; var11++) {
             var12 = DimmedPauseMenu.field_P[var11];
             for (var13 = 0; var12.length > var13; var13++) {
@@ -125,30 +125,30 @@ final class SocketArchiveNetworkClient extends Js5Transport {
                       var19 = new TextHotspotRegion(var11);
                       var20 = var19;
                       var21 = 0;
-                      var22 = param3;
+                      var22 = top;
                       scanLoop1: while (true) {
                         if (var21 < var9) {
                           var23 = var8[var21].length();
-                          var24 = param0[(-1 + (var21 + param0.length)) % param0.length];
+                          var24 = lineHeights[(-1 + (var21 + lineHeights.length)) % lineHeights.length];
                           if (var18 <= var16 &&
                             var18 + var23 > var16) {
-                            var25 = param4.stringWidth(var8[var21].substring(0, var16 - var18));
-                            var20.field_r = 1 + param4.maxAscent + param4.maxDescent;
-                            var20.field_m = param6 + var25;
+                            var25 = font.stringWidth(var8[var21].substring(0, var16 - var18));
+                            var20.field_r = 1 + font.maxAscent + font.maxDescent;
+                            var20.field_m = left + var25;
                             var20.field_q = var22;
                             if (var17 >= var18 &&
                               var23 + var18 >= var17) {
-                              var20.field_l = param4.stringWidth(var8[var21].substring(-var18 + var16, var17 - var18));
+                              var20.field_l = font.stringWidth(var8[var21].substring(-var18 + var16, var17 - var18));
                               break scanLoop1;
                             }
-                            var20.field_l = param4.stringWidth(var8[var21].substring(var16 - var18));
+                            var20.field_l = font.stringWidth(var8[var21].substring(var16 - var18));
                             var20.next = new TextHotspotRegion(var20.field_p);
                             var20 = var20.next;
                           } else {
                             if (var18 <= var17 &&
                               var17 < var23 + var18) {
-                              var25 = param4.stringWidth(var8[var21].substring(0, -var18 + var17));
-                              var20.field_m = param6;
+                              var25 = font.stringWidth(var8[var21].substring(0, -var18 + var17));
+                              var20.field_m = left;
                               var20.field_l = var25;
                               var20.field_q = var22;
                               var20.field_r = var24;
@@ -156,8 +156,8 @@ final class SocketArchiveNetworkClient extends Js5Transport {
                             }
                             if (var16 < var18 &&
                               var18 + var23 < var17) {
-                              var20.field_l = param1;
-                              var20.field_m = param6;
+                              var20.field_l = wrapWidth;
+                              var20.field_m = left;
                               var20.field_r = var24;
                               var20.field_q = var22;
                               var20.next = new TextHotspotRegion(var20.field_p);
@@ -170,7 +170,7 @@ final class SocketArchiveNetworkClient extends Js5Transport {
                             var18 = var18 + (var23 + 1);
                           }
                           var21++;
-                          var22 = var22 + param0[var21 % param0.length];
+                          var22 = var22 + lineHeights[var21 % lineHeights.length];
                           continue;
                         }
                         break;
@@ -190,24 +190,24 @@ final class SocketArchiveNetworkClient extends Js5Transport {
           var7 = decompiledCaughtException;
           stackIn_45_0 = var7;
           stackIn_45_1 = new StringBuilder().append("ug.G(");
-          if (param0 == null) {
+          if (lineHeights == null) {
             stackIn_46_2 = "null";
           } else {
             stackIn_46_2 = "{...}";
           }
-          stackIn_48_1 = ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_48_1 = ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(wrapWidth).append(',');
+          if (text == null) {
             stackIn_49_2 = "null";
           } else {
             stackIn_49_2 = "{...}";
           }
-          stackIn_51_1 = ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          stackIn_51_1 = ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(',').append(top).append(',');
+          if (font == null) {
             stackIn_52_2 = "null";
           } else {
             stackIn_52_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(',').append(obfuscationGuard).append(',').append(left).append(')').toString());
         }
     }
 
@@ -436,7 +436,7 @@ final class SocketArchiveNetworkClient extends Js5Transport {
             }
             if (param0 != -2147483648) {
               var17 = (BitmapFont) null;
-              SocketArchiveNetworkClient.a((int[]) null, 69, (String) null, 35, (BitmapFont) null, true, -63);
+              SocketArchiveNetworkClient.buildTextHotspotRegions((int[]) null, 69, (String) null, 35, (BitmapFont) null, true, -63);
             }
             for (var2_int = 0; 100 > var2_int; var2_int++) {
               var3_int = this.socket.availableBytes(75);
@@ -589,7 +589,7 @@ final class SocketArchiveNetworkClient extends Js5Transport {
         }
     }
 
-    final static String a(String param0, String param1, String param2, int param3) {
+    final static String replaceAllLiteral(String key, String replacement, String text, int obfuscationGuard) {
         StringBuilder discarded$2 = null;
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
@@ -615,18 +615,18 @@ final class SocketArchiveNetworkClient extends Js5Transport {
         int var12 = 0;
         var12 = Pool.field_O;
         try {
-          var4_int = param2.length();
-          var5 = param0.length();
-          var6 = param1.length();
+          var4_int = text.length();
+          var5 = key.length();
+          var6 = replacement.length();
           if (var5 == 0) {
             throw new IllegalArgumentException("Key cannot have zero length");
           }
           var7 = var4_int;
           var8 = -var5 + var6;
-          if (param3 != ~var8) {
+          if (obfuscationGuard != ~var8) {
             var9_int = 0;
             while (true) {
-              var9_int = param2.indexOf(param0, var9_int);
+              var9_int = text.indexOf(key, var9_int);
               if (0 > var9_int) {
                 break;
               }
@@ -637,46 +637,46 @@ final class SocketArchiveNetworkClient extends Js5Transport {
           var9 = new StringBuilder(var7);
           var10 = 0;
           while (true) {
-            var11 = param2.indexOf(param0, var10);
+            var11 = text.indexOf(key, var10);
             if (var11 < 0) {
-              discarded$2 = var9.append(param2.substring(var10));
+              discarded$2 = var9.append(text.substring(var10));
               stackIn_14_0 = var9.toString();
               return stackIn_14_0;
             }
-            discarded$0 = var9.append(param2.substring(var10, var11));
+            discarded$0 = var9.append(text.substring(var10, var11));
             var10 = var11 + var5;
-            discarded$1 = var9.append(param1);
+            discarded$1 = var9.append(replacement);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_17_0 = var4;
           stackIn_17_1 = new StringBuilder().append("ug.A(");
-          if (param0 == null) {
+          if (key == null) {
             stackIn_18_2 = "null";
           } else {
             stackIn_18_2 = "{...}";
           }
           stackIn_20_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',');
-          if (param1 == null) {
+          if (replacement == null) {
             stackIn_21_2 = "null";
           } else {
             stackIn_21_2 = "{...}";
           }
           stackIn_23_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',');
-          if (param2 == null) {
+          if (text == null) {
             stackIn_24_2 = "null";
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
     public SocketArchiveNetworkClient() {
     }
 
-    final static int g(int param0) {
+    final static int pollArchiveConnection(int obfuscationGuard) {
         try {
           int stackIn_14_0 = 0;
           int stackIn_24_0 = 0;
@@ -737,7 +737,7 @@ final class SocketArchiveNetworkClient extends Js5Transport {
               }
             }
             if (MonotonicClock.field_e != 4) {
-              if (param0 == -27108) {
+              if (obfuscationGuard == -27108) {
                 stackIn_36_0 = -1;
                 return stackIn_36_0;
               }

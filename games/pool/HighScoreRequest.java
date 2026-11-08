@@ -20,16 +20,16 @@ final class HighScoreRequest extends IntrusiveNode {
     static int[] field_w;
 
     final static LoginTextValue createLoginTextValue(int obfuscationGuard) {
-        String var1 = CollisionContact.a(false);
+        String var1 = CollisionContact.getAccountUsername(false);
         if (var1 != null &&
           var1.indexOf('@') >= 0) {
           var1 = "";
         }
         if (obfuscationGuard == 8388) {
-          return new LoginTextValue(CollisionContact.a(false), NetworkArchiveRequest.isUsernameAvailabilityPending(0));
+          return new LoginTextValue(CollisionContact.getAccountUsername(false), NetworkArchiveRequest.isUsernameAvailabilityPending(0));
         }
         HighScoreRequest.resendHighScoreOperations(115, true);
-        return new LoginTextValue(CollisionContact.a(false), NetworkArchiveRequest.isUsernameAvailabilityPending(0));
+        return new LoginTextValue(CollisionContact.getAccountUsername(false), NetworkArchiveRequest.isUsernameAvailabilityPending(0));
     }
 
     final static void resendHighScoreOperations(int opcode, boolean obfuscationGuard) {
@@ -50,7 +50,7 @@ final class HighScoreRequest extends IntrusiveNode {
           }
           var5 = (HighScoreRequest) (StateIconLabel.field_Lb.last((byte) -49));
           while (var5 != null) {
-            AlternateLongAndTextLoginPayload.a(var5, opcode, (byte) -126);
+            AlternateLongAndTextLoginPayload.sendHighScoreRequest(var5, opcode, (byte) -126);
             var5 = (HighScoreRequest) (StateIconLabel.field_Lb.previous((byte) -5));
           }
           return;

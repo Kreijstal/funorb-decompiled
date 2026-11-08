@@ -435,7 +435,7 @@ final class HighscoresScreen extends MenuScreen {
         try {
           QuickChatPhraseDefinition.loadLobbyTheme(param4, false, param13, param8, param9);
           DualLinkDeque.initializeSocialListPanels(1, param9);
-          DiskCacheWorker.a(param10, param14, args, param2, (byte) 60, param12, param18, param15, param1, param5, param11, param19, param16, param7, param9);
+          DiskCacheWorker.initializeLobbyGamePanels(param10, param14, args, param2, (byte) 60, param12, param18, param15, param1, param5, param11, param19, param16, param7, param9);
           CueStick.initializeChatInterface(param3, false, param9, param6);
           FaceNormal.initializeRuleDescriptions(-74);
           var20_int = -118 % ((26 - param17) / 52);

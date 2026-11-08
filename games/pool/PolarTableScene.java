@@ -39,7 +39,7 @@ final class PolarTableScene extends ModelTableScene {
           super.updatePottedBalls(param0, param1);
           DebugTuningSlider.field_f = DebugTuningSlider.field_f + 1;
           for (var3_int = 0; var3_int < this.field_U.length; var3_int++) {
-            this.field_U[var3_int].a(this, 10);
+            this.field_U[var3_int].advanceFloatingObject(this, 10);
           }
           this.updateRollingSounds(24, 50, (byte) -121, new PcmSample[]{this.field_V, this.field_W, this.field_T, this.field_db, this.field_fb}, Pool.field_N);
           this.updateRollingSounds(24, 50, (byte) 125, new PcmSample[]{this.field_eb, this.field_Z, this.field_kb}, TextPairLoginPayload.field_g);
@@ -139,9 +139,9 @@ final class PolarTableScene extends ModelTableScene {
           var5[1] = ArchiveLoadSequence.bitwiseAnd(var37[1], -4);
           var5[0] = ArchiveLoadSequence.bitwiseAnd(var37[0], -4);
           CookieDateSupport.fillScreenWhite(-3143);
-          this.a(true, param1);
-          this.a();
-          this.a(GzipDecoder.field_d, param1.camera.getBackdropPitchOffset(param0 - 72));
+          this.drawCameraAlignedBackdrop(true, param1);
+          this.advanceNoiseTextureGeneration();
+          this.fillMaskedNoisePlane(GzipDecoder.field_d, param1.camera.getBackdropPitchOffset(param0 - 72));
           this.prepareBallDrawOrder(false, var37, var4);
           if ((LinkButtonPainter.field_i & 1073741824L) == 0L) {
             this.drawBallsInOrder(var37, (byte) 122, false, var4, false);
@@ -461,7 +461,7 @@ final class PolarTableScene extends ModelTableScene {
         EmailAvailabilityValidator.field_y.allocateModelArrays(92);
     }
 
-    private final void a(int[] param0, int param1) {
+    private final void fillMaskedNoisePlane(int[] cameraTransform, int top) {
         int var4 = 0;
         int var19 = 0;
         int var3;
@@ -488,23 +488,23 @@ final class PolarTableScene extends ModelTableScene {
         int var16Lifetime1;
         int var16Lifetime1Lifetime1;
         var3 = 65536 / SoftwareRasterizer.width;
-        if (SoftwareRasterizer.clipTop <= param1) {
-          stackIn_3_0 = param1;
+        if (SoftwareRasterizer.clipTop <= top) {
+          stackIn_3_0 = top;
         } else {
           stackIn_3_0 = SoftwareRasterizer.clipTop;
         }
         for (var4 = stackIn_3_0; var4 < SoftwareRasterizer.clipBottom; var4++) {
           var5 = var4 - 240;
-          var6 = var4 - param1;
+          var6 = var4 - top;
           if (var6 >= 5) {
             var6 = 0;
           } else {
             var6 = (5 - var6) * 127 / 5;
           }
           var7 = 127 - var6;
-          var12 = param0[9] + (param0[3] * (SoftwareRasterizer.clipLeft - 320) + param0[6] * var5 >> 9) >> 1;
-          var13 = param0[10] + (param0[4] * (SoftwareRasterizer.clipLeft - 320) + param0[7] * var5 >> 9) >> 1;
-          var14 = param0[11] + (param0[5] * (SoftwareRasterizer.clipLeft - 320) + param0[8] * var5 >> 9) >> 1;
+          var12 = cameraTransform[9] + (cameraTransform[3] * (SoftwareRasterizer.clipLeft - 320) + cameraTransform[6] * var5 >> 9) >> 1;
+          var13 = cameraTransform[10] + (cameraTransform[4] * (SoftwareRasterizer.clipLeft - 320) + cameraTransform[7] * var5 >> 9) >> 1;
+          var14 = cameraTransform[11] + (cameraTransform[5] * (SoftwareRasterizer.clipLeft - 320) + cameraTransform[8] * var5 >> 9) >> 1;
           var15 = var12 * var12 + var13 * var13 + var14 * var14 >> 16;
           if (var15 > 0) {
             var15 = AccountDisplayNameSupport.sqrtScaled256(var15, -128);
@@ -512,12 +512,12 @@ final class PolarTableScene extends ModelTableScene {
             var13 = ArchiveProvider.divideFixed16(var15, (byte) -100, (long)var13);
             var14 = ArchiveProvider.divideFixed16(var15, (byte) -92, (long)var14);
             if (var14 != 0) {
-              var16 = ArchiveProvider.divideFixed16(var14, (byte) -90, (long)(BallDebugOverlay.field_f - param0[2]));
-              var8 = param0[0] + (var16 * var12 >> 16) >> 3;
-              var10 = param0[1] + (var16 * var13 >> 16) >> 3;
-              var12 = param0[9] + (param0[3] * (SoftwareRasterizer.clipRight - 320) + param0[6] * var5 >> 9) >> 1;
-              var13 = param0[10] + (param0[4] * (SoftwareRasterizer.clipRight - 320) + param0[7] * var5 >> 9) >> 1;
-              var14 = param0[11] + (param0[5] * (SoftwareRasterizer.clipRight - 320) + param0[8] * var5 >> 9) >> 1;
+              var16 = ArchiveProvider.divideFixed16(var14, (byte) -90, (long)(BallDebugOverlay.field_f - cameraTransform[2]));
+              var8 = cameraTransform[0] + (var16 * var12 >> 16) >> 3;
+              var10 = cameraTransform[1] + (var16 * var13 >> 16) >> 3;
+              var12 = cameraTransform[9] + (cameraTransform[3] * (SoftwareRasterizer.clipRight - 320) + cameraTransform[6] * var5 >> 9) >> 1;
+              var13 = cameraTransform[10] + (cameraTransform[4] * (SoftwareRasterizer.clipRight - 320) + cameraTransform[7] * var5 >> 9) >> 1;
+              var14 = cameraTransform[11] + (cameraTransform[5] * (SoftwareRasterizer.clipRight - 320) + cameraTransform[8] * var5 >> 9) >> 1;
               var15 = var12 * var12 + var13 * var13 + var14 * var14 >> 16;
               if (var15 > 0) {
                 var15 = AccountDisplayNameSupport.sqrtScaled256(var15, -121);
@@ -525,9 +525,9 @@ final class PolarTableScene extends ModelTableScene {
                 var13 = ArchiveProvider.divideFixed16(var15, (byte) -120, (long)var13);
                 var14 = ArchiveProvider.divideFixed16(var15, (byte) -119, (long)var14);
                 if (var14 != 0) {
-                  var16Lifetime1 = ArchiveProvider.divideFixed16(var14, (byte) -112, (long)(BallDebugOverlay.field_f - param0[2]));
-                  var9 = param0[0] + (var16Lifetime1 * var12 >> 16) >> 3;
-                  var11 = param0[1] + (var16Lifetime1 * var13 >> 16) >> 3;
+                  var16Lifetime1 = ArchiveProvider.divideFixed16(var14, (byte) -112, (long)(BallDebugOverlay.field_f - cameraTransform[2]));
+                  var9 = cameraTransform[0] + (var16Lifetime1 * var12 >> 16) >> 3;
+                  var11 = cameraTransform[1] + (var16Lifetime1 * var13 >> 16) >> 3;
                   var12 = var9 - var8;
                   var13 = var11 - var10;
                   var14 = var12 * var3;
@@ -1022,7 +1022,7 @@ final class PolarTableScene extends ModelTableScene {
         }
     }
 
-    private final void a(boolean param0, PoolMatchController param1) {
+    private final void drawCameraAlignedBackdrop(boolean obfuscationGuard, PoolMatchController controller) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
@@ -1034,14 +1034,14 @@ final class PolarTableScene extends ModelTableScene {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          var3_int = param1.camera.getBackdropPitchOffset(-128);
-          if (!param0) {
+          var3_int = controller.camera.getBackdropPitchOffset(-128);
+          if (!obfuscationGuard) {
             PolarTableScene.clearSharedReferences((byte) -126);
           }
           var4 = this.field_B.field_z << 1;
           var5 = this.field_B.field_A << 1;
           if (var3_int > 0) {
-            var6 = (int)((double)var4 * -param1.camera.getYaw(param0) / 2.0 / 3.141592653589793);
+            var6 = (int)((double)var4 * -controller.camera.getYaw(obfuscationGuard) / 2.0 / 3.141592653589793);
             var7 = -var5 + var3_int;
             this.field_B.drawScaled(var6 - var4, var7, var4, var5);
             if (-640 + var4 > var6) {
@@ -1053,8 +1053,8 @@ final class PolarTableScene extends ModelTableScene {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_10_0 = var3;
-          stackIn_10_1 = new StringBuilder().append("vf.NA(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_10_1 = new StringBuilder().append("vf.NA(").append(obfuscationGuard).append(',');
+          if (controller == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
@@ -1063,7 +1063,7 @@ final class PolarTableScene extends ModelTableScene {
         }
     }
 
-    private final void a() {
+    private final void advanceNoiseTextureGeneration() {
         int var2_int = 0;
         int var3 = 0;
         int var4 = 0;
@@ -1122,7 +1122,7 @@ final class PolarTableScene extends ModelTableScene {
         super.resetForGame(obfuscationGuard);
         DebugTuningSlider.field_f = 0;
         for (var2 = 0; var2 < this.field_U.length; var2++) {
-          this.field_U[var2].a(-40);
+          this.field_U[var2].restoreModelTransforms(-40);
         }
     }
 

@@ -60,7 +60,7 @@ final class LimitedRandomAccessFile {
 
     final void close(byte param0) throws IOException {
         if (param0 < 92) {
-          LimitedRandomAccessFile.a(-71);
+          LimitedRandomAccessFile.releaseKeyHandler(-71);
         }
         if (this.file != null) {
           this.file.close();
@@ -68,10 +68,10 @@ final class LimitedRandomAccessFile {
         }
     }
 
-    final static void a(int param0) {
+    final static void releaseKeyHandler(int obfuscationGuard) {
         Throwable decompiledCaughtException = null;
         Object var1 = null;
-        if (param0 != -22444) {
+        if (obfuscationGuard != -22444) {
           LimitedRandomAccessFile.closeChatCompositionPanel((byte) -109);
         }
         if (ReflectionReplySupport.field_a != null) {
@@ -127,7 +127,7 @@ final class LimitedRandomAccessFile {
           ArchiveProvider.field_i = null;
         }
         if (obfuscationGuard >= -59) {
-          LimitedRandomAccessFile.a(-8, -59, 'ﾽ');
+          LimitedRandomAccessFile.createFilledString(-8, -59, 'ﾽ');
         }
         DualLinkNode.field_p = true;
     }
@@ -173,12 +173,12 @@ final class LimitedRandomAccessFile {
         }
     }
 
-    final static String a(int param0, int param1, char param2) {
+    final static String createFilledString(int length, int startIndex, char character) {
         int var4 = 0;
-        char[] var5 = new char[param0];
+        char[] var5 = new char[length];
         char[] var3 = var5;
-        for (var4 = param1; var4 < param0; var4++) {
-          var5[var4] = param2;
+        for (var4 = startIndex; var4 < length; var4++) {
+          var5[var4] = character;
         }
         return new String(var5);
     }

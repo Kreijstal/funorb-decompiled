@@ -22,7 +22,7 @@ final class OpacityWidget extends SingleChildWidget {
         AchievementsScreen.field_I = null;
     }
 
-    final static void a(int param0, int param1, int param2, boolean param3, LobbyGame param4, int param5, int param6, boolean param7) {
+    final static void searchAllowedGameOptions(int param0, int param1, int param2, boolean param3, LobbyGame param4, int param5, int param6, boolean param7) {
         AlignedIconLabel[][] stackIn_4_0 = null;
         int stackIn_5_1 = 0;
         int stackIn_25_0 = 0;
@@ -173,7 +173,7 @@ final class OpacityWidget extends SingleChildWidget {
                   } else {
                     param6 = var11;
                   }
-                  OpacityWidget.a(param0, param1, param2, false, param4, 1 + param5, param6, param7);
+                  OpacityWidget.searchAllowedGameOptions(param0, param1, param2, false, param4, 1 + param5, param6, param7);
                   if (PoolUiText.field_b) {
                     return;
                   }
@@ -212,7 +212,7 @@ final class OpacityWidget extends SingleChildWidget {
               }
               if (var12 != 0) {
                 var10_intLifetime1 = 1;
-                OpacityWidget.a(param0, param1, param2, false, param4, param5 + 1, param6, param7);
+                OpacityWidget.searchAllowedGameOptions(param0, param1, param2, false, param4, param5 + 1, param6, param7);
               }
               if (PoolUiText.field_b) {
                 return;
@@ -346,7 +346,7 @@ final class OpacityWidget extends SingleChildWidget {
     final static void updateLobbyFrame(boolean param0, int param1, boolean param2, int param3, int param4, byte param5, int param6, int param7, boolean param8, int param9, boolean param10, boolean param11) {
         if (param5 != -12) {
           LobbyGame var13 = (LobbyGame) null;
-          OpacityWidget.a(-82, 16, -99, true, (LobbyGame) null, -40, 16, false);
+          OpacityWidget.searchAllowedGameOptions(-82, 16, -99, true, (LobbyGame) null, -40, 16, false);
         }
         DiskCacheWorker.updateLobbyFrame(param1, param6, param11, param3, param10, param8, param2, param0, 16777215, param9, param4, param7, -124, 16777215);
     }
@@ -362,7 +362,7 @@ final class OpacityWidget extends SingleChildWidget {
     final static void updateLobbyFrameIntArgs(boolean param0, int param1, boolean param2, int param3, int param4, int param5, int param6, int param7, boolean param8, int param9, boolean param10, boolean param11) {
         if (param5 != -12) {
           LobbyGame var13 = (LobbyGame) null;
-          OpacityWidget.a(-82, 16, -99, true, (LobbyGame) null, -40, 16, false);
+          OpacityWidget.searchAllowedGameOptions(-82, 16, -99, true, (LobbyGame) null, -40, 16, false);
         }
         DiskCacheWorker.updateLobbyFrame(param1, param6, param11, param3, param10, param8, param2, param0, 16777215, param9, param4, param7, -124, 16777215);
     }

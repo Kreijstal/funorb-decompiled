@@ -40,13 +40,13 @@ final class Bzip2DecoderState {
     byte[] field_r;
     int field_z;
 
-    final static void a(long param0, byte param1) {
+    final static void sleepIgnoringInterrupts(long milliseconds, byte obfuscationGuard) {
         try {
           Throwable decompiledCaughtException = null;
           InterruptedException var3 = null;
           try {
-            Thread.sleep(param0);
-            if (param1 != 104) {
+            Thread.sleep(milliseconds);
+            if (obfuscationGuard != 104) {
               Bzip2DecoderState.releaseStatics(-92);
               return;
             }
@@ -61,14 +61,14 @@ final class Bzip2DecoderState {
         }
     }
 
-    final static void a(byte param0) {
+    final static void serviceAudioAndPruneSounds(byte obfuscationGuard) {
         PlayingSound var1 = null;
         int var2 = Pool.field_O;
         PlayingSound var1Lifetime1;
         try {
           MidiNoteMixer.field_s.serviceOutput();
           CacheEntry.field_D.serviceOutput();
-          if (param0 >= -79) {
+          if (obfuscationGuard >= -79) {
             createAlertPasslength = (String) null;
           }
           LobbyGame.field_Pb = LobbyGame.field_Pb - 1;
@@ -95,7 +95,7 @@ final class Bzip2DecoderState {
             RankingsScreen.field_N.isReady(-11414)) {
           }
         } catch (RuntimeException runtimeException) {
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "uq.B(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "uq.B(" + obfuscationGuard + ')');
         }
     }
 
@@ -109,18 +109,18 @@ final class Bzip2DecoderState {
         field_D = null;
     }
 
-    final static void a(int param0, String param1, int param2, byte param3, long param4) {
+    final static void rememberSentQuickChat(int phraseId, String recipient, int channel, byte obfuscationGuard, long recipientId) {
         try {
-          if (param3 > -52) {
+          if (obfuscationGuard > -52) {
             field_i = (PcmSample) null;
           }
-          QuickChatDynamicCommand.field_c = param4;
+          QuickChatDynamicCommand.field_c = recipientId;
           AccountWelcomePanel.field_T = true;
-          BrowserCookieSupport.field_e = param1;
-          PasswordValidator.field_x = param0;
-          AccountStateQuery.field_t = param2;
+          BrowserCookieSupport.field_e = recipient;
+          PasswordValidator.field_x = phraseId;
+          AccountStateQuery.field_t = channel;
         } catch (RuntimeException runtimeException) {
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "uq.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "uq.A(" + phraseId + ',' + (recipient != null ? "{...}" : "null") + ',' + channel + ',' + obfuscationGuard + ',' + recipientId + ')');
         }
     }
 

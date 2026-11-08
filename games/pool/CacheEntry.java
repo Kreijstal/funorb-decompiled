@@ -389,7 +389,7 @@ abstract class CacheEntry extends DualLinkNode {
             var4Lifetime3++;
           }
           if (ClientException.field_h != 2) {
-            LabeledChildWidget.field_W.initializeSelection(pointerDriven, 0, AlternateLongAndTextLoginPayload.a(ReflectionReplySupport.field_i, DebouncedValidationProvider.field_f, 0), true);
+            LabeledChildWidget.field_W.initializeSelection(pointerDriven, 0, AlternateLongAndTextLoginPayload.choiceAtPoint(ReflectionReplySupport.field_i, DebouncedValidationProvider.field_f, 0), true);
           } else {
             LabeledChildWidget.field_W.initializeSelection(pointerDriven, -1, -1, true);
           }

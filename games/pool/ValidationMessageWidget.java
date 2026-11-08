@@ -45,7 +45,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
     }
 
     ValidationMessageWidget(ValidationProvider param0, String param1, int param2, int param3, int param4, int param5) {
-        super(param1, AlternateLongAndTextLoginPayload.c(4));
+        super(param1, AlternateLongAndTextLoginPayload.validationMessagePainter(4));
         try {
           this.field_S = param0;
           this.field_X = param1;

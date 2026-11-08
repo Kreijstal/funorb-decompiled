@@ -94,7 +94,7 @@ final class MultiHandleSliderWidget extends ButtonWidget {
           field_T = null;
           return;
         }
-        MultiHandleSliderWidget.g((byte) 126);
+        MultiHandleSliderWidget.isReflectionCheckReady((byte) 126);
         field_T = null;
     }
 
@@ -105,7 +105,7 @@ final class MultiHandleSliderWidget extends ButtonWidget {
         return this.maximumValue;
     }
 
-    final static String a(String param0, int param1, int param2) {
+    final static String requestAddFriend(String name, int opcode, int obfuscationGuard) {
         String stackIn_2_0 = null;
         String stackIn_6_0 = null;
         String stackIn_10_0 = null;
@@ -124,7 +124,7 @@ final class MultiHandleSliderWidget extends ButtonWidget {
         CipherPacketBuffer var6 = null;
         CharSequence var7 = null;
         try {
-          var7 = (CharSequence) ((Object) param0);
+          var7 = (CharSequence) ((Object) name);
           if (!ProgressBarWidget.isAllowedDisplayName(-25908, var7)) {
             stackIn_2_0 = ModelInstance.invalidName;
             return stackIn_2_0;
@@ -133,12 +133,12 @@ final class MultiHandleSliderWidget extends ButtonWidget {
             stackIn_6_0 = AgeValidator.unableToAddFriend;
             return stackIn_6_0;
           }
-          if (BallEvent.isLocalPlayerName((byte) 3, param0)) {
+          if (BallEvent.isLocalPlayerName((byte) 3, name)) {
             stackIn_10_0 = QuickChatHelpDialog.cannotAddYourself;
             return stackIn_10_0;
           }
-          if (DialogLayer.isFriendName(param0, -1)) {
-            stackIn_13_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{param0}, -1, RankingsScreen.friendlistdupe);
+          if (DialogLayer.isFriendName(name, -1)) {
+            stackIn_13_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{name}, -1, RankingsScreen.friendlistdupe);
             return stackIn_13_0;
           }
           if (AccountWelcomePanel.field_S >= 100 &&
@@ -150,17 +150,17 @@ final class MultiHandleSliderWidget extends ButtonWidget {
             stackIn_22_0 = MessageDialogContent.friendlistfull;
             return stackIn_22_0;
           }
-          if (MenuSelection.isIgnoredName(param0, 24552)) {
-            stackIn_26_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{param0}, -1, DisplayNamePanel.removeignorefirst);
+          if (MenuSelection.isIgnoredName(name, 24552)) {
+            stackIn_26_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{name}, -1, DisplayNamePanel.removeignorefirst);
             return stackIn_26_0;
           }
           var6 = JaggrabDownloader.field_j;
-          var6.writeCipheredOpcode(false, param1);
+          var6.writeCipheredOpcode(false, opcode);
           var6.position = var6.position + 1;
           var4 = var6.position;
           var6.writeByte(0, false);
-          var5 = -59 % ((-53 - param2) / 33);
-          var6.writeNullTerminatedString(-9946, param0);
+          var5 = -59 % ((-53 - obfuscationGuard) / 33);
+          var6.writeNullTerminatedString(-9946, name);
           var6.writeByteLengthPrefix(var6.position - var4, true);
           stackIn_28_0 = null;
           return (String) (stackIn_28_0);
@@ -169,16 +169,16 @@ final class MultiHandleSliderWidget extends ButtonWidget {
           var3 = decompiledCaughtException;
           stackIn_31_0 = var3;
           stackIn_31_1 = new StringBuilder().append("va.G(");
-          if (param0 == null) {
+          if (name == null) {
             stackIn_32_2 = "null";
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(opcode).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
-    final static boolean g(byte param0) {
+    final static boolean isReflectionCheckReady(byte obfuscationGuard) {
         ReflectionCheck var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -194,7 +194,7 @@ final class MultiHandleSliderWidget extends ButtonWidget {
             return false;
           }
           var2 = 0;
-          var3 = -7 % ((param0 + 62) / 57);
+          var3 = -7 % ((obfuscationGuard + 62) / 57);
           while (var1.field_t > var2) {
             if (null != var5.field_n[var2] &&
               0 == var5.field_n[var2].field_f) {
@@ -210,25 +210,25 @@ final class MultiHandleSliderWidget extends ButtonWidget {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1_ref), "va.F(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1_ref), "va.F(" + obfuscationGuard + ')');
         }
     }
 
-    final static void a(boolean param0, UiComponent param1, UiComponent param2) {
+    final static void centerWidgetVertically(boolean obfuscationGuard, UiComponent container, UiComponent widget) {
         try {
-          if (param0) {
+          if (obfuscationGuard) {
             field_T = (int[]) null;
           }
-          param2.localY = -param2.height + param1.height >> 1;
+          widget.localY = -widget.height + container.height >> 1;
         } catch (RuntimeException runtimeException) {
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "va.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "va.D(" + obfuscationGuard + ',' + (container != null ? "{...}" : "null") + ',' + (widget != null ? "{...}" : "null") + ')');
         }
     }
 
     final int getHandleValueAt(byte param0, int param1) {
         if (param0 > -22) {
           UiComponent var4 = (UiComponent) null;
-          MultiHandleSliderWidget.a(true, (UiComponent) null, (UiComponent) null);
+          MultiHandleSliderWidget.centerWidgetVertically(true, (UiComponent) null, (UiComponent) null);
           if (0 > param1) {
             return -1;
           }

@@ -188,7 +188,7 @@ final class NameEntryPopup extends UiComponent {
               JavaScriptBridge.evaluateScript("document.cookie=\"" + var5Lifetime4 + "\"", applet, (byte) 35);
             } catch (Throwable throwable) {
             }
-            IntrusiveNodeHashTable.a(558370049, applet);
+            IntrusiveNodeHashTable.updateBrowserNavigationLinks(558370049, applet);
           } catch (RuntimeException runtimeException) {
             throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "aj.D(" + (applet != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + (session != null ? "{...}" : "null") + ')');
           }

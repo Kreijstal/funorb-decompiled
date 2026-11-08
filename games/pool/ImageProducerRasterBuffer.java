@@ -177,7 +177,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         var5.field_r = param4;
         var5.field_v = param1;
         StateIconLabel.field_Lb.addFirst((byte) -24, var5);
-        AlternateLongAndTextLoginPayload.a(var5, param3, (byte) -117);
+        AlternateLongAndTextLoginPayload.sendHighScoreRequest(var5, param3, (byte) -117);
         return var5;
     }
 

@@ -17,10 +17,10 @@ final class ArchiveLoadSequence {
     static String[] instructionsPages;
     private ArchiveLoadStep[] steps;
 
-    final static void c(int param0, int param1) {
+    final static void sendRatedGameRequest(int opcode, int obfuscationGuard) {
         CipherPacketBuffer var2 = JaggrabDownloader.field_j;
-        var2.writeCipheredOpcode(false, param0);
-        if (param1 == 100) {
+        var2.writeCipheredOpcode(false, opcode);
+        if (obfuscationGuard == 100) {
           var2.writeByte(1, false);
           var2.writeByte(0, false);
           return;

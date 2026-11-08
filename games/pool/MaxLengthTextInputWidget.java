@@ -81,7 +81,7 @@ final class MaxLengthTextInputWidget extends TextInputWidget implements Validati
           DualLinkDeque.field_c = true;
           ProjectedVertex.field_e = true;
           TabbedPane.field_Ub.hideAllDialogs(-22216);
-          PacketAvailabilitySupport.a(param0, IntegerSyntaxSupport.connectionlostReconnecting, -127);
+          PacketAvailabilitySupport.showLoginProgressDialog(param0, IntegerSyntaxSupport.connectionlostReconnecting, -127);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ga.LA(" + param0 + ')');
         }
@@ -174,7 +174,7 @@ final class MaxLengthTextInputWidget extends TextInputWidget implements Validati
             var3 = var1.readNullTerminatedString(-118);
             LocalGameSetupScreen.field_J = ((String) (var3)).intern();
             var4 = var1.readUnsignedByte(-84);
-            DialRenderer.a((byte) 78, var4);
+            DialRenderer.unpackChatFilterModes((byte) 78, var4);
             return;
           }
           if (AimTarget.field_b == null) {
@@ -211,7 +211,7 @@ final class MaxLengthTextInputWidget extends TextInputWidget implements Validati
           var6Lifetime1.unlink((byte) -117);
           var7_ref = (SocialListEntry) (SoundCache.field_k.last((byte) -125));
           while (var7_ref != null) {
-            if (MessageDialogContent.a(var6Lifetime1, var7_ref, 83)) {
+            if (MessageDialogContent.isSocialEntryAfter(var6Lifetime1, var7_ref, 83)) {
               var7_ref = (SocialListEntry) (SoundCache.field_k.previous((byte) -5));
               continue;
             }

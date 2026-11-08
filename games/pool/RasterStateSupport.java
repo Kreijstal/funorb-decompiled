@@ -51,7 +51,7 @@ final class RasterStateSupport {
         AccountCreationForm.field_S.addFirst((byte) 83, var1);
     }
 
-    final static double[][] a(boolean param0, double[][][] param1) {
+    final static double[][] flattenRecordGroups(boolean obfuscationGuard, double[][][] groups) {
         int var3_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -67,19 +67,19 @@ final class RasterStateSupport {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = 0;
-          if (!param0) {
+          if (!obfuscationGuard) {
             RasterStateSupport.pushRasterSnapshot((byte) 42);
           }
-          for (var3_int = 0; param1.length > var3_int; var3_int++) {
-            var2_int = var2_int + param1[var3_int].length;
+          for (var3_int = 0; groups.length > var3_int; var3_int++) {
+            var2_int = var2_int + groups[var3_int].length;
           }
           var3 = new double[var2_int][6];
           var4 = 0;
-          for (var5 = 0; param1.length > var5; var5++) {
-            for (var6 = 0; var6 < param1[var5].length; var6++) {
+          for (var5 = 0; groups.length > var5; var5++) {
+            for (var6 = 0; var6 < groups[var5].length; var6++) {
               incrementValue$1 = var4;
               var4++;
-              var3[incrementValue$1] = param1[var5][var6];
+              var3[incrementValue$1] = groups[var5][var6];
             }
           }
           stackIn_12_0 = var3;
@@ -88,8 +88,8 @@ final class RasterStateSupport {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_15_0 = var2;
-          stackIn_15_1 = new StringBuilder().append("uc.D(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_15_1 = new StringBuilder().append("uc.D(").append(obfuscationGuard).append(',');
+          if (groups == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";

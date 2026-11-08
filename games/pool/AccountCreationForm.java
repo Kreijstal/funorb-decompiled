@@ -556,10 +556,10 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
         } catch (NumberFormatException numberFormatException) {
         }
         if (param0 >= 94) {
-          return BufferedSocket.a(this.newsOptInCheckbox.active, this.passwordInput.widgetText, (byte) 114, this, var2, this.emailInput.widgetText, this.displayNameInput.widgetText);
+          return BufferedSocket.beginAccountCreation(this.newsOptInCheckbox.active, this.passwordInput.widgetText, (byte) 114, this, var2, this.emailInput.widgetText, this.displayNameInput.widgetText);
         }
         AccountCreationForm.getLobbyGamePlayersContent((byte) -63);
-        return BufferedSocket.a(this.newsOptInCheckbox.active, this.passwordInput.widgetText, (byte) 114, this, var2, this.emailInput.widgetText, this.displayNameInput.widgetText);
+        return BufferedSocket.beginAccountCreation(this.newsOptInCheckbox.active, this.passwordInput.widgetText, (byte) 114, this, var2, this.emailInput.widgetText, this.displayNameInput.widgetText);
     }
 
     public final void onSuggestionSelected(String param0, int param1) {

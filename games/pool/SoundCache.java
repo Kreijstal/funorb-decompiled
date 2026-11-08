@@ -579,10 +579,10 @@ final class SoundCache {
           tutorialNineBallBreak = (String) null;
         }
         if (0L == milliseconds % 10L) {
-          Bzip2DecoderState.a(milliseconds - 1L, (byte) 104);
-          Bzip2DecoderState.a(1L, (byte) 104);
+          Bzip2DecoderState.sleepIgnoringInterrupts(milliseconds - 1L, (byte) 104);
+          Bzip2DecoderState.sleepIgnoringInterrupts(1L, (byte) 104);
         } else {
-          Bzip2DecoderState.a(milliseconds, (byte) 104);
+          Bzip2DecoderState.sleepIgnoringInterrupts(milliseconds, (byte) 104);
         }
     }
 

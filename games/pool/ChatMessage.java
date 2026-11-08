@@ -53,7 +53,7 @@ final class ChatMessage {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!TextLineLayout.a(param2, param1, param0, (byte) 121)) {
+          if (!TextLineLayout.loadSpriteSheet(param2, param1, param0, (byte) 121)) {
             stackIn_2_0 = null;
             return (IndexedSprite[]) (stackIn_2_0);
           }

@@ -482,7 +482,7 @@ class ButtonWidget extends UiWidget {
             if (AccountContentDialog.field_vb.pressedButton != 0) {
               AccountWelcomePanel.field_bb = false;
             }
-            RankingsScreen.a(param4, HighscoresScreen.field_L, 0, false);
+            RankingsScreen.updateLobbyGameOptionControls(param4, HighscoresScreen.field_L, 0, false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -655,7 +655,7 @@ class ButtonWidget extends UiWidget {
         boolean stackOut_7_0;
         var5 = Pool.field_O;
         try {
-          var3 = CachedArchiveSource.a(mode, name, (byte) 117);
+          var3 = CachedArchiveSource.validateNameLengthAndSeparators(mode, name, (byte) 117);
           if (var3 != null) {
             stackIn_4_0 = var3;
             return stackIn_4_0;

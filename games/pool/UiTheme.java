@@ -269,7 +269,7 @@ final class UiTheme {
         }
         var5[4] = (Sprite) ((Object) var18);
         var4.createStateLayer(4, 0).setFlushBeforeApply(-15359, true).setFrameSprites(var5, (byte) 126);
-        var4.createStateLayer(5, 0).setFrameSprites(DualLinkNode.a(0, 0, -119, 65793, 0), (byte) 90).setFlushBeforeApply(-15359, true).setTextColor(-1, 71);
+        var4.createStateLayer(5, 0).setFrameSprites(DualLinkNode.createStandardBeveledFrameSprites(0, 0, -119, 65793, 0), (byte) 90).setFlushBeforeApply(-15359, true).setTextColor(-1, 71);
         this.field_l = (WidgetPainter) ((Object) var4);
         StatefulTextPainter var6 = new StatefulTextPainter(var4, true);
         var6.horizontalAlignment = 0;

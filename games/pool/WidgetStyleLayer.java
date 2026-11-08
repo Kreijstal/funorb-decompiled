@@ -397,7 +397,7 @@ final class WidgetStyleLayer {
             field_e = (QuickChatDynamicCommand) null;
           }
           var5 = param3.getFileId(var4_int, 0, param2);
-          stackIn_3_0 = UiComponent.a(var4_int, param3, -55, var5);
+          stackIn_3_0 = UiComponent.loadDecodedSprite(var4_int, param3, -55, var5);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

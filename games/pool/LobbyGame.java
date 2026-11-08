@@ -390,7 +390,7 @@ final class LobbyGame extends UiComponent {
         RuntimeException decompiledCaughtException = null;
         try {
           var4_int = -89 / ((-33 - obfuscationGuard) / 51);
-          if (TextLineLayout.a(groupId, archive, fileId, (byte) 121)) {
+          if (TextLineLayout.loadSpriteSheet(groupId, archive, fileId, (byte) 121)) {
             return KeyHandler.createDecodedIndexedSprite((byte) -23);
           }
           return null;

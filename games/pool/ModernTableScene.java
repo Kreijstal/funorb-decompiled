@@ -229,7 +229,7 @@ final class ModernTableScene extends ModelTableScene {
           var4[1] = ArchiveLoadSequence.bitwiseAnd(var36[1], -4);
           var4[2] = ArchiveLoadSequence.bitwiseAnd(var36[2], -4);
           var4[0] = ArchiveLoadSequence.bitwiseAnd(var36[0], -4);
-          this.e(true);
+          this.updateModelVisibilityAndDepth(true);
           this.prepareBallDrawOrder(false, var36, var20);
           PlayingSound.sortParallelArrays(ScreenProjectionSupport.field_c, (byte) -104, TimeTrialSelectScreen.field_L, AccountProtocolStage.field_g, ChatMessageLine.field_m);
           PlayingSound.sortParallelArrays(FixedPointVectorSupport.field_a, (byte) -104, TimeTrialSelectScreen.field_L, AccountProtocolStage.field_g, GrowableIntListFactory.field_h);
@@ -629,13 +629,13 @@ final class ModernTableScene extends ModelTableScene {
         var38 = new int[var3][][];
         var21 = var38;
         var5 = var21;
-        var6 = this.a(CueAim.field_b, var4, var38, -57, HighScoreRequest.field_t);
+        var6 = this.splitAndRecenterModels(CueAim.field_b, var4, var38, -57, HighScoreRequest.field_t);
         var7 = -ResizableDialog.field_fb + MarkerSliderPainter.field_m;
         var8 = new MeshBuilder[var7][];
         var39 = new int[var7][][];
         var22 = var39;
         var9 = var22;
-        var10 = this.a(ResizableDialog.field_fb, var8, var39, -58, MarkerSliderPainter.field_m);
+        var10 = this.splitAndRecenterModels(ResizableDialog.field_fb, var8, var39, -58, MarkerSliderPainter.field_m);
         for (var11 = 0; var11 < var4.length; var11++) {
           for (var12_int = 0; var12_int < var4[var11].length; var12_int++) {
             MarkerSliderPainter.recenterTextureTriangles(var4[var11][var12_int], (byte) -37);
@@ -682,7 +682,7 @@ final class ModernTableScene extends ModelTableScene {
           var12_intLifetime4 = var2Lifetime2;
           var27 = ChatInputSupport.field_l;
           var14_int = var11Lifetime2;
-          this.a(var27, 0, 0, false, this.field_O[var12_intLifetime4], var14_int, this.field_M[var12_intLifetime4], 0);
+          this.createMirroredModelQuartet(var27, 0, 0, false, this.field_O[var12_intLifetime4], var14_int, this.field_M[var12_intLifetime4], 0);
           var11Lifetime2 += 4;
         }
         ScreenProjectionSupport.field_c = var11Lifetime2;
@@ -702,7 +702,7 @@ final class ModernTableScene extends ModelTableScene {
             stackIn_35_0 = this;
             stackIn_35_4 = true;
           }
-          this.a(stackIn_34_1, stackIn_34_2, stackIn_34_3, stackIn_35_4, this.field_O[var12_intLifetime5], var14_intLifetime1, this.field_M[var12_intLifetime5], 0);
+          this.createMirroredModelQuartet(stackIn_34_1, stackIn_34_2, stackIn_34_3, stackIn_35_4, this.field_O[var12_intLifetime5], var14_intLifetime1, this.field_M[var12_intLifetime5], 0);
           var11Lifetime2 += 4;
         }
         CushionSegment.field_k = var11Lifetime2;

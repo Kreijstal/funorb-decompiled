@@ -67,7 +67,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           var3.setInputText((byte) -124, false, var4);
           if (param0 != 8) {
             String var5 = (String) null;
-            LoginForm.a((byte) -7, (String) null, (String) null);
+            LoginForm.beginLoginWithCredentials((byte) -7, (String) null, (String) null);
           }
           this.passwordInput.clearInputText(88);
         } catch (RuntimeException runtimeException) {
@@ -303,10 +303,10 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
 
     private final void submitLogin(int param0) {
         UiWidget var3;
-        if (Base37Support.a(true) ||
+        if (Base37Support.isReconnectActive(true) ||
           !(this.usernameInput.widgetText.length() <= 0) &&
           !(this.passwordInput.widgetText.length() <= 0)) {
-          LoginForm.a((byte) 34, this.usernameInput.widgetText, this.passwordInput.widgetText);
+          LoginForm.beginLoginWithCredentials((byte) 34, this.usernameInput.widgetText, this.passwordInput.widgetText);
         }
         if (param0 != -1) {
           var3 = (UiWidget) null;
@@ -314,26 +314,26 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
         }
     }
 
-    private final static void a(byte param0, String param1, String param2) {
+    private final static void beginLoginWithCredentials(byte obfuscationGuard, String username, String password) {
         try {
-          if (param0 != 34) {
+          if (obfuscationGuard != 34) {
             String var4 = (String) null;
-            LoginForm.a((byte) -59, (String) null, (String) null);
+            LoginForm.beginLoginWithCredentials((byte) -59, (String) null, (String) null);
           }
-          HotspotRectangle.beginLoginWithCredentials(false, param1, -102, param2);
+          HotspotRectangle.beginLoginWithCredentials(false, username, -102, password);
         } catch (RuntimeException runtimeException) {
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ui.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ui.H(" + obfuscationGuard + ',' + (username != null ? "{...}" : "null") + ',' + (password != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static int a(int param0, byte param1) {
-        if (param1 <= 67) {
+    final static int toFixed16(int value, byte obfuscationGuard) {
+        if (obfuscationGuard <= 67) {
           return 14;
         }
-        return PauseMenuScreen.shiftLeft(16, -54264319, param0);
+        return PauseMenuScreen.shiftLeft(16, -54264319, value);
     }
 
-    final static void a(String param0, int param1, int param2, boolean param3, int param4) {
+    final static void enqueueUniqueMessageLine(String param0, int param1, int param2, boolean param3, int param4) {
         IntrusiveDequeCursor var5 = null;
         ChatMessageLine var6 = null;
         int var7 = 0;
@@ -433,7 +433,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
         }
     }
 
-    final static void a(String param0, java.applet.Applet param1, boolean param2) {
+    final static void openAppletRelativeUrl(String path, java.applet.Applet applet, boolean obfuscationGuard) {
         try {
           java.net.URL var3 = null;
           java.applet.Applet var4 = null;
@@ -447,17 +447,17 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           RuntimeException var3_ref2 = null;
           try {
             try {
-              var3 = new java.net.URL(param1.getCodeBase(), param0);
-              var3 = ModelInstance.rewriteAppletUrl((byte) -61, var3, param1);
-              AppletUrlSupport.openUrl(-10553, param1, var3.toString(), true);
+              var3 = new java.net.URL(applet.getCodeBase(), path);
+              var3 = ModelInstance.rewriteAppletUrl((byte) -61, var3, applet);
+              AppletUrlSupport.openUrl(-10553, applet, var3.toString(), true);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3_ref = (Exception) (Object) decompiledCaughtException;
               var3_ref.printStackTrace();
             }
-            if (param2) {
+            if (obfuscationGuard) {
               var4 = (java.applet.Applet) null;
-              LoginForm.a((String) null, (java.applet.Applet) null, true);
+              LoginForm.openAppletRelativeUrl((String) null, (java.applet.Applet) null, true);
             }
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -465,18 +465,18 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
             var3_ref2 = (RuntimeException) (Object) decompiledCaughtException;
             stackIn_8_0 = var3_ref2;
             stackIn_8_1 = new StringBuilder().append("ui.D(");
-            if (param0 == null) {
+            if (path == null) {
               stackIn_9_2 = "null";
             } else {
               stackIn_9_2 = "{...}";
             }
             stackIn_11_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',');
-            if (param1 == null) {
+            if (applet == null) {
               stackIn_12_2 = "null";
             } else {
               stackIn_12_2 = "{...}";
             }
-            throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
+            throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(obfuscationGuard).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

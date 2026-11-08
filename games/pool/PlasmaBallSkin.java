@@ -419,7 +419,7 @@ final class PlasmaBallSkin extends BallSkin {
             stackIn_27_1 = 0;
             break;
           }
-          ReflectionReplySupport.$cfr$intArgs$a$2435eea43ef1(stackIn_27_0, stackIn_27_1, DisplayModeSupport.a(ballIndex, 115), field_n[ballIndex], 32512 - fade * 127 >> 8, 0, MusicPatchEnvelope.field_i[ballIndex], TikiBallSkin.field_o[ballIndex]);
+          ReflectionReplySupport.drawGradientPolylineIntArgs(stackIn_27_0, stackIn_27_1, DisplayModeSupport.plasmaLightningPaletteForBall(ballIndex, 115), field_n[ballIndex], 32512 - fade * 127 >> 8, 0, MusicPatchEnvelope.field_i[ballIndex], TikiBallSkin.field_o[ballIndex]);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

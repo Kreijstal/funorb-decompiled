@@ -125,7 +125,7 @@ final class HighScoreSubmission extends IntrusiveNode {
           }
           if (PlasmaBallSkin.allowRateLimitedMessage(param2 + 12010)) {
             String var4 = (String) null;
-            AlternateLongAndTextLoginPayload.a((byte) -127, (String) null, param1, BrowserCookieSupport.field_e, AccountStateQuery.field_t, PasswordValidator.field_x);
+            AlternateLongAndTextLoginPayload.sendChatOrQuickChat((byte) -127, (String) null, param1, BrowserCookieSupport.field_e, AccountStateQuery.field_t, PasswordValidator.field_x);
           }
           return true;
         }

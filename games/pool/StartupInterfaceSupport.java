@@ -8,7 +8,7 @@ final class StartupInterfaceSupport {
     static int field_a;
     static int field_e;
 
-    final static void a(byte param0, String param1) {
+    final static void advanceTooltipTransition(byte obfuscationGuard, String text) {
         int stackIn_18_0 = 0;
         RuntimeException stackIn_41_0 = null;
         StringBuilder stackIn_41_1 = null;
@@ -18,8 +18,8 @@ final class StartupInterfaceSupport {
         RuntimeException var2 = null;
         try {
           PauseMenuScreen.field_J = PauseMenuScreen.field_J + 1;
-          if (param0 != 70) {
-            StartupInterfaceSupport.a((byte) 11);
+          if (obfuscationGuard != 70) {
+            StartupInterfaceSupport.requiresStartupScreen((byte) 11);
           }
           if (DebugTuningSlider.field_i == -1 &&
             -1 == DebouncedValidationProvider.field_g) {
@@ -27,10 +27,10 @@ final class StartupInterfaceSupport {
             DebugTuningSlider.field_i = ReflectionReplySupport.field_i;
           }
           boolean decompiledFrameRemainder0 = true;
-          if (param1 == null) {
+          if (text == null) {
             decompiledFrameRemainder0 = (MessageScreen.field_I == null);
           } else {
-            decompiledFrameRemainder0 = !(param1.equals(MessageScreen.field_I));
+            decompiledFrameRemainder0 = !(text.equals(MessageScreen.field_I));
           }
           if (decompiledFrameRemainder0) {
             if (!BrowserCookieWriter.field_d) {
@@ -44,7 +44,7 @@ final class StartupInterfaceSupport {
             }
             boolean decompiledFrameRemainder1 = true;
             var2_int = stackIn_18_0;
-            if (param1 != null) {
+            if (text != null) {
               if (BrowserCookieWriter.field_d) {
                 PauseMenuScreen.field_J = CompressedContainerSupport.field_c;
                 decompiledFrameRemainder1 = false;
@@ -59,7 +59,7 @@ final class StartupInterfaceSupport {
             if (decompiledFrameRemainder1) {
               PauseMenuScreen.field_J = 0;
             }
-            if (param1 == null) {
+            if (text == null) {
               if (var2_int != 0) {
                 BrowserCookieWriter.field_d = true;
               }
@@ -69,7 +69,7 @@ final class StartupInterfaceSupport {
             MouseWheelInput.field_b = DebugTuningSlider.field_i;
             MatchingTextValidator.field_n = DebouncedValidationProvider.field_g;
           }
-          MessageScreen.field_I = param1;
+          MessageScreen.field_I = text;
           if (!BrowserCookieWriter.field_d &&
             PauseMenuScreen.field_J < CompressedContainerSupport.field_c &&
             LoginPayload.field_c) {
@@ -89,8 +89,8 @@ final class StartupInterfaceSupport {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_41_0 = var2;
-          stackIn_41_1 = new StringBuilder().append("ue.D(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_41_1 = new StringBuilder().append("ue.D(").append(obfuscationGuard).append(',');
+          if (text == null) {
             stackIn_42_2 = "null";
           } else {
             stackIn_42_2 = "{...}";
@@ -99,20 +99,20 @@ final class StartupInterfaceSupport {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void settleAccountAndTooltipAnimations(boolean obfuscationGuard) {
         if (TabbedPane.field_Ub != null) {
           TabbedPane.field_Ub.settleDialogAnimations(11741);
         }
         if (null != ScrollPane.field_Nb) {
           ScrollPane.field_Nb.stopNormalAnimation(0);
-          ByteArrayPool.resetTooltipState(param0);
+          ByteArrayPool.resetTooltipState(obfuscationGuard);
           return;
         }
-        ByteArrayPool.resetTooltipState(param0);
+        ByteArrayPool.resetTooltipState(obfuscationGuard);
     }
 
-    final static boolean a(int param0) {
-        if (param0 == 11) {
+    final static boolean deferLoginRetryAndCheckReconnect(int obfuscationGuard) {
+        if (obfuscationGuard == 11) {
           LoginPayloadFactory.field_f = true;
           MenuSelection.field_k = MonotonicClock.monotonicTimeMillis((byte) -110) + 15000L;
           return 11 == PlasmaTableScene.field_ab ? true : false;
@@ -126,12 +126,12 @@ final class StartupInterfaceSupport {
         field_b = null;
         if (param0) {
           String var2 = (String) null;
-          StartupInterfaceSupport.a((byte) 106, (String) null);
+          StartupInterfaceSupport.advanceTooltipTransition((byte) 106, (String) null);
         }
     }
 
-    final static boolean a(byte param0) {
-        if (param0 > -70) {
+    final static boolean requiresStartupScreen(byte obfuscationGuard) {
+        if (obfuscationGuard > -70) {
           field_e = -55;
           if (QuickChatCategoryDefinition.field_y < 20) {
             return true;

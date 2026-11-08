@@ -378,12 +378,12 @@ public final class Pool extends NetworkGameClient {
         int var4_intLifetime2;
         var10 = field_O;
         var11 = TextLineLayout.getActiveCanvas((byte) -126);
-        if (StartupInterfaceSupport.a((byte) -123)) {
+        if (StartupInterfaceSupport.requiresStartupScreen((byte) -123)) {
           KeyHandler.drawStartupScreen((byte) -55, AccountCreationDialog.hasCanvasFocus(0), var11);
           return;
         }
         if (!MeshSymmetrySupport.field_d) {
-          ModelTableScene.a(true, var11);
+          ModelTableScene.drawLoadingProgressToCanvas(true, var11);
           return;
         }
         if (param0 != 120) {
@@ -391,7 +391,7 @@ public final class Pool extends NetworkGameClient {
         }
         if (!PoolMatchController.hasAccountDataOrGuestMode(false)) {
           KeyHandler.setLoadingProgress(SoundCache.loadingExtradata, 100.0f, false);
-          ModelTableScene.a(true, var11);
+          ModelTableScene.drawLoadingProgressToCanvas(true, var11);
           return;
         }
         if (!DebugTuningSupport.field_g &&
@@ -461,7 +461,7 @@ public final class Pool extends NetworkGameClient {
           SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
           TutorialController.drawClientNotice(-29322);
         }
-        if (StartupInterfaceSupport.a(param0 - 109)) {
+        if (StartupInterfaceSupport.deferLoginRetryAndCheckReconnect(param0 - 109)) {
           stackIn_49_0 = -82;
           if (null == MatchingTextValidator.field_u) {
             stackIn_50_1 = MeshBase.field_e;
@@ -1285,7 +1285,7 @@ public final class Pool extends NetworkGameClient {
         var5 = field_O;
         LogoMaterial.getKeyboardSnapshotCount(-21055);
         MessageDialogContent.field_P = PaletteFontLoader.getMouseIdleTicks((byte) 64);
-        Bzip2DecoderState.a((byte) -92);
+        Bzip2DecoderState.serviceAudioAndPruneSounds((byte) -92);
         if (MatchingTextValidator.field_u != null &&
           MatchingTextValidator.field_u.focusLost) {
           AccountStateQuery.leaveFullscreen((byte) -127);
@@ -1300,9 +1300,9 @@ public final class Pool extends NetworkGameClient {
         }
         SocialListEntry.field_Tb = SocialListEntry.field_Tb + 1;
         var2 = 56 / ((param0 - 29) / 60);
-        if (StartupInterfaceSupport.a((byte) -84)) {
+        if (StartupInterfaceSupport.requiresStartupScreen((byte) -84)) {
           this.serviceStartupAndAccountFlow((byte) -75);
-          if (StartupInterfaceSupport.a((byte) -111)) {
+          if (StartupInterfaceSupport.requiresStartupScreen((byte) -111)) {
             if (!DebouncedValidationProvider.isAccountFlowReady(true)) {
               return;
             }
@@ -1320,7 +1320,7 @@ public final class Pool extends NetworkGameClient {
             ProjectedVertex.pollAccountStateRefresh(-26);
           } else {
             if (!LookupQuery.isClientNoticeOpen(1)) {
-              if (!StartupInterfaceSupport.a(11)) {
+              if (!StartupInterfaceSupport.deferLoginRetryAndCheckReconnect(11)) {
                 if (!RenderingInitializationSupport.isLoginRequiredPromptOpen((byte) -122)) {
                   if (!DebugTuningSupport.field_g) {
                     this.updateScreenTransition(false, 0);
@@ -1648,7 +1648,7 @@ public final class Pool extends NetworkGameClient {
           RankingsScreen.field_N.setChannelVolumeScale((byte) -125, -1, 256);
           AnimatedNotification.field_u = HalloweenBallSkin.field_m;
           RankingsScreen.field_N.startMusicScore(HalloweenBallSkin.field_m, 8821, true);
-          IntrusiveNodeHashTable.a(FreePlayRules.field_e.field_L, 8, CollisionContact.field_h.maxDescent + CollisionContact.field_h.field_L, 240, FreePlayRules.field_e.field_L + FreePlayRules.field_e.maxDescent, 2, MidiPcmStream.field_y[0].field_z + 5, 5 + MidiPcmStream.field_y[0].field_A, 8, 480, 3, MeshSymmetrySupport.field_g, -23994, CollisionContact.field_h, 4, 13421772, CollisionContact.field_h.field_L, 320, MidiPcmStream.field_y, MeshSymmetrySupport.field_g, FreePlayRules.field_e);
+          IntrusiveNodeHashTable.configureSharedNoticeAndChoiceStyle(FreePlayRules.field_e.field_L, 8, CollisionContact.field_h.maxDescent + CollisionContact.field_h.field_L, 240, FreePlayRules.field_e.field_L + FreePlayRules.field_e.maxDescent, 2, MidiPcmStream.field_y[0].field_z + 5, 5 + MidiPcmStream.field_y[0].field_A, 8, 480, 3, MeshSymmetrySupport.field_g, -23994, CollisionContact.field_h, 4, 13421772, CollisionContact.field_h.field_L, 320, MidiPcmStream.field_y, MeshSymmetrySupport.field_g, FreePlayRules.field_e);
           PlasmaBallSkin.configureSharedInterfaceStyle(240, MidiPcmStream.field_y[0].field_A + 5, MeshSymmetrySupport.field_g, 8, MeshSymmetrySupport.field_g, 4, 8, FreePlayRules.field_e, 5 + MidiPcmStream.field_y[0].field_z, 2, MidiPcmStream.field_y, -1373633266, 2, 3, 320);
           ArrayWidgetGroup.resetFrameTiming(0);
           return true;
@@ -1696,11 +1696,11 @@ public final class Pool extends NetworkGameClient {
                                               KeyHandler.setLoadingProgress(SupportPageLauncher.formatProgressLabel(var61, var62, -641, var63), (float)(GrowableIntListFactory.field_i[18] + (GrowableIntListFactory.field_i[19] - GrowableIntListFactory.field_i[18]) * var61.getOverallProgress(0) / 100), false);
                                               return false;
                                             }
-                                            StartupInterfaceSupport.a(true);
+                                            StartupInterfaceSupport.settleAccountAndTooltipAnimations(true);
                                             var64 = TutorialFactory.unpackingSoundeffects;
                                             KeyHandler.setLoadingProgress(var64, (float)GrowableIntListFactory.field_i[19], false);
                                             this.paintFrame((byte) 120);
-                                            IntKeyLookup.a(true);
+                                            IntKeyLookup.initializeTableScenesAndBallSkins(true);
                                             VertexTransformSupport.field_g = new SoundCache(WeightedLruCache.field_d, CanvasInputSupport.field_b);
                                             BeveledFrameSpriteFactory.field_c[0] = VertexTransformSupport.field_g.getVorbisSound("interface_mouseover_menuitems", true, "");
                                             BeveledFrameSpriteFactory.field_c[1] = VertexTransformSupport.field_g.getVorbisSound("interface_music_level_change", true, "");

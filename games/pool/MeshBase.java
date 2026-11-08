@@ -8,7 +8,7 @@ abstract class MeshBase {
     private static int field_b;
     static boolean field_e;
 
-    final static void a(int param0, int param1) {
+    final static void resendByteRecordOperations(int obfuscationGuard, int opcode) {
         IntrusiveNode var2 = null;
         int var3 = 0;
         ByteRecordSubmission var4 = null;
@@ -18,22 +18,22 @@ abstract class MeshBase {
         try {
           var4 = (ByteRecordSubmission) (ArchiveLoadStep.field_c.last((byte) 65));
           while (var4 != null) {
-            DelayedServerPacket.sendByteRecordSubmission(98, var4, param1);
+            DelayedServerPacket.sendByteRecordSubmission(98, var4, opcode);
             var4 = (ByteRecordSubmission) (ArchiveLoadStep.field_c.previous((byte) -5));
           }
-          if (param0 != 10) {
+          if (obfuscationGuard != 10) {
             field_e = false;
           }
           var2 = LoginTextValue.field_f.last((byte) -34);
           while (var2 != null) {
-            DirectByteStorage.sendByteRecordQuery(1, param1);
+            DirectByteStorage.sendByteRecordQuery(1, opcode);
             var2 = LoginTextValue.field_f.previous((byte) -5);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2_ref), "um.T(" + param0 + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2_ref), "um.T(" + obfuscationGuard + ',' + opcode + ')');
         }
     }
 

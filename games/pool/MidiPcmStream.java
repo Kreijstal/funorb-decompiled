@@ -229,7 +229,7 @@ final class MidiPcmStream extends PcmStream {
         this.channelPitchBend[param1] = 8192;
         this.field_q[param1] = 0;
         this.field_s[param1] = 8192;
-        this.d(param1, 0);
+        this.releasePortamentoNotes(param1, 0);
         this.resetChannelRetriggerPhases(param1, false);
         if (param0 != -44) {
           MusicTrack var4 = (MusicTrack) null;
@@ -242,7 +242,7 @@ final class MidiPcmStream extends PcmStream {
         this.setChannelRetriggerControl(8192, param1, 6779);
     }
 
-    final static String a(String param0, int param1, byte param2) {
+    final static String lobbyPlayerDepartureMessage(String name, int reasonCode, byte obfuscationGuard) {
         String stackIn_3_0 = null;
         String stackIn_7_0 = null;
         String stackIn_11_0 = null;
@@ -261,63 +261,63 @@ final class MidiPcmStream extends PcmStream {
         int var3_int = 0;
         RuntimeException var3 = null;
         try {
-          if (param1 == 1) {
-            stackIn_3_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{param0}, -1, ChatInputSupport.muXEnteredGame);
+          if (reasonCode == 1) {
+            stackIn_3_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{name}, -1, ChatInputSupport.muXEnteredGame);
             return stackIn_3_0;
           }
-          var3_int = 23 / ((param2 + 71) / 45);
-          if (param1 == 2) {
-            stackIn_7_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{param0}, -1, CachedArchiveSource.muXJoinedYourGame);
+          var3_int = 23 / ((obfuscationGuard + 71) / 45);
+          if (reasonCode == 2) {
+            stackIn_7_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{name}, -1, CachedArchiveSource.muXJoinedYourGame);
             return stackIn_7_0;
           }
-          if (3 == param1) {
-            stackIn_11_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{param0}, -1, MenuLabelSupport.muXEnteredOtherGame);
+          if (3 == reasonCode) {
+            stackIn_11_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{name}, -1, MenuLabelSupport.muXEnteredOtherGame);
             return stackIn_11_0;
           }
-          if (param1 == 4) {
-            stackIn_15_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{param0}, -1, DisplayModeSupport.muXLeftLobby);
+          if (reasonCode == 4) {
+            stackIn_15_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{name}, -1, DisplayModeSupport.muXLeftLobby);
             return stackIn_15_0;
           }
-          if (param1 == 5) {
-            stackIn_18_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{param0}, -1, ArchiveProvider.muXLostCon);
+          if (reasonCode == 5) {
+            stackIn_18_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{name}, -1, ArchiveProvider.muXLostCon);
             return stackIn_18_0;
           }
-          if (param1 == 6) {
-            stackIn_22_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{param0}, -1, ViewportController.muXCannotJoinFull);
+          if (reasonCode == 6) {
+            stackIn_22_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{name}, -1, ViewportController.muXCannotJoinFull);
             return stackIn_22_0;
           }
-          if (param1 == 7) {
-            stackIn_25_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{param0}, -1, ProxyConnectorSupport.muXCannotJoinInprogress);
+          if (reasonCode == 7) {
+            stackIn_25_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{name}, -1, ProxyConnectorSupport.muXCannotJoinInprogress);
             return stackIn_25_0;
           }
-          if (param1 == 8) {
-            stackIn_29_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{param0}, -1, StrongCacheEntry.muXDeclinedInvite);
+          if (reasonCode == 8) {
+            stackIn_29_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{name}, -1, StrongCacheEntry.muXDeclinedInvite);
             return stackIn_29_0;
           }
-          if (param1 == 11) {
-            stackIn_33_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{param0}, -1, ThemeSelectScreen.muXWithdrewRequest);
+          if (reasonCode == 11) {
+            stackIn_33_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{name}, -1, ThemeSelectScreen.muXWithdrewRequest);
             return stackIn_33_0;
           }
-          if (param1 == 12) {
-            stackIn_36_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{param0}, -1, Under13NoticePanel.muXRemoved);
+          if (reasonCode == 12) {
+            stackIn_36_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{name}, -1, Under13NoticePanel.muXRemoved);
             return stackIn_36_0;
           }
-          if (param1 != 13) {
+          if (reasonCode != 13) {
             return null;
           }
-          stackIn_40_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{param0}, -1, SectorCacheStore.muXDroppedOut);
+          stackIn_40_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{name}, -1, SectorCacheStore.muXDroppedOut);
           return stackIn_40_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_43_0 = var3;
           stackIn_43_1 = new StringBuilder().append("vk.P(");
-          if (param0 == null) {
+          if (name == null) {
             stackIn_44_2 = "null";
           } else {
             stackIn_44_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(reasonCode).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -404,34 +404,34 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final boolean a(int param0, MusicVoice param1) {
+    final boolean isVoiceInactive(int obfuscationGuard, MusicVoice voice) {
         RuntimeException var3 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 != -16257) {
+          if (obfuscationGuard != -16257) {
             this.instrumentPatches = (IterableNodeHashTable) null;
           }
-          if (null != param1.field_o) {
+          if (null != voice.field_o) {
             return false;
           }
-          if (param1.field_G < 0) {
+          if (voice.field_G < 0) {
             return true;
           }
-          param1.unlink((byte) -117);
-          if (param1.field_n > 0 &&
-            param1 == this.notesByKeyGroup[param1.field_t][param1.field_n]) {
-            this.notesByKeyGroup[param1.field_t][param1.field_n] = null;
+          voice.unlink((byte) -117);
+          if (voice.field_n > 0 &&
+            voice == this.notesByKeyGroup[voice.field_t][voice.field_n]) {
+            this.notesByKeyGroup[voice.field_t][voice.field_n] = null;
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_14_0 = var3;
-          stackIn_14_1 = new StringBuilder().append("vk.OA(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_14_1 = new StringBuilder().append("vk.OA(").append(obfuscationGuard).append(',');
+          if (voice == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";
@@ -512,7 +512,7 @@ final class MidiPcmStream extends PcmStream {
         int var3 = 0;
         int var3Lifetime1;
         if (!param0) {
-          this.a(-1, 0);
+          this.allNotesOff(-1, 0);
         } else {
           this.fadeOutChannelNotes(-45, -1);
         }
@@ -539,15 +539,15 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    private final void a(int param0, int param1) {
+    private final void allNotesOff(int channel, int obfuscationGuard) {
         MusicVoice var3;
-        if (param1 != 0) {
+        if (obfuscationGuard != 0) {
           return;
         }
         var3 = (MusicVoice) (this.noteMixer.field_t.last((byte) 124));
         while (var3 != null) {
-          if ((param0 < 0 ||
-            param0 == var3.field_t) &&
+          if ((channel < 0 ||
+            channel == var3.field_t) &&
             var3.field_G < 0) {
             this.heldNotesByKey[var3.field_t][var3.field_A] = null;
             var3.field_G = 0;
@@ -579,12 +579,12 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    private final void d(int param0, int param1) {
+    private final void releasePortamentoNotes(int channel, int obfuscationGuard) {
         MusicVoice var3 = null;
-        if (param1 != (this.field_F[param0] & 2)) {
+        if (obfuscationGuard != (this.field_F[channel] & 2)) {
           var3 = (MusicVoice) (this.noteMixer.field_t.last((byte) -92));
           while (var3 != null) {
-            if (var3.field_t == param0 && null == this.heldNotesByKey[param0][var3.field_A] &&
+            if (var3.field_t == channel && null == this.heldNotesByKey[channel][var3.field_A] &&
               !(var3.field_G >= 0)) {
               var3.field_G = 0;
             }
@@ -1013,7 +1013,7 @@ final class MidiPcmStream extends PcmStream {
           if (var6Lifetime3 >= 64) {
             this.field_F[var4Lifetime4] = RenderingInitializationSupport.bitwiseOr(this.field_F[var4Lifetime4], 2);
           } else {
-            this.d(var4Lifetime4, param1 ^ -122);
+            this.releasePortamentoNotes(var4Lifetime4, param1 ^ -122);
             this.field_F[var4Lifetime4] = ArchiveLoadSequence.bitwiseAnd(this.field_F[var4Lifetime4], -3);
           }
         }
@@ -1036,7 +1036,7 @@ final class MidiPcmStream extends PcmStream {
           this.resetChannelControllers((byte) -44, var4Lifetime4);
         }
         if (var5Lifetime4 == 123) {
-          this.a(var4Lifetime4, 0);
+          this.allNotesOff(var4Lifetime4, 0);
         }
         if (6 == var5Lifetime4) {
           var7 = this.field_cb[var4Lifetime4];

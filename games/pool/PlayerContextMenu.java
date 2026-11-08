@@ -264,7 +264,7 @@ final class PlayerContextMenu {
         String var5;
         var4 = null;
         if (action == 4) {
-          var4_ref = MultiHandleSliderWidget.a(this.field_m, opcode, 88);
+          var4_ref = MultiHandleSliderWidget.requestAddFriend(this.field_m, opcode, 88);
         } else {
           if (action == 5) {
             var4_ref = HalloweenBallSkin.removeFriend((byte) 91, this.field_m, opcode);

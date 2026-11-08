@@ -165,25 +165,25 @@ final class GradientPaletteSupport {
         }
     }
 
-    final static void a(byte param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
+    final static void fillGradientTriangleHalfBlend(byte param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
         if (param6 < param13) {
           if (param13 < param1) {
-            RankingsScreen.a(param10, param13, param6, param15, param3, param11, param14, param2, param7, param5, (byte) -49, param4, param12, param9, param1, param8, SoftwareRasterizer.pixels);
+            RankingsScreen.fillSortedGradientTriangleHalfBlend(param10, param13, param6, param15, param3, param11, param14, param2, param7, param5, (byte) -49, param4, param12, param9, param1, param8, SoftwareRasterizer.pixels);
           } else {
             if (param6 >= param1) {
-              RankingsScreen.a(param3, param6, param1, param10, param15, param2, param11, param14, param12, param9, (byte) -49, param7, param4, param8, param13, param5, SoftwareRasterizer.pixels);
+              RankingsScreen.fillSortedGradientTriangleHalfBlend(param3, param6, param1, param10, param15, param2, param11, param14, param12, param9, (byte) -49, param7, param4, param8, param13, param5, SoftwareRasterizer.pixels);
             } else {
-              RankingsScreen.a(param15, param1, param6, param10, param3, param14, param11, param2, param4, param8, (byte) -49, param7, param12, param9, param13, param5, SoftwareRasterizer.pixels);
+              RankingsScreen.fillSortedGradientTriangleHalfBlend(param15, param1, param6, param10, param3, param14, param11, param2, param4, param8, (byte) -49, param7, param12, param9, param13, param5, SoftwareRasterizer.pixels);
             }
           }
         } else {
           if (param6 < param1) {
-            RankingsScreen.a(param3, param6, param13, param15, param10, param2, param14, param11, param12, param9, (byte) -49, param4, param7, param5, param1, param8, SoftwareRasterizer.pixels);
+            RankingsScreen.fillSortedGradientTriangleHalfBlend(param3, param6, param13, param15, param10, param2, param14, param11, param12, param9, (byte) -49, param4, param7, param5, param1, param8, SoftwareRasterizer.pixels);
           } else {
             if (param13 >= param1) {
-              RankingsScreen.a(param10, param13, param1, param3, param15, param11, param2, param14, param7, param5, (byte) -49, param12, param4, param8, param6, param9, SoftwareRasterizer.pixels);
+              RankingsScreen.fillSortedGradientTriangleHalfBlend(param10, param13, param1, param3, param15, param11, param2, param14, param7, param5, (byte) -49, param12, param4, param8, param6, param9, SoftwareRasterizer.pixels);
             } else {
-              RankingsScreen.a(param15, param1, param13, param3, param10, param14, param2, param11, param4, param8, (byte) -49, param12, param7, param5, param6, param9, SoftwareRasterizer.pixels);
+              RankingsScreen.fillSortedGradientTriangleHalfBlend(param15, param1, param13, param3, param10, param14, param2, param11, param4, param8, (byte) -49, param12, param7, param5, param6, param9, SoftwareRasterizer.pixels);
             }
           }
         }

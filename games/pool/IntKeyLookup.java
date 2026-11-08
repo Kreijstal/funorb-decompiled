@@ -95,7 +95,7 @@ final class IntKeyLookup {
         return '_';
     }
 
-    final static boolean a(int param0, int param1, int param2, int param3, boolean param4, byte param5, int param6) {
+    final static boolean updateInputOverlays(int param0, int param1, int param2, int param3, boolean param4, byte param5, int param6) {
         if (param5 != 33) {
           IntKeyLookup.releaseStatics(-79);
         }
@@ -113,10 +113,10 @@ final class IntKeyLookup {
         return param4;
     }
 
-    final static void a(boolean param0) {
+    final static void initializeTableScenesAndBallSkins(boolean obfuscationGuard) {
         TriangleMesh.initializeTableScenes(-97);
         GameRules.createBallSkins((byte) 118);
-        if (!param0) {
+        if (!obfuscationGuard) {
           muChatGameFriendsOnly = (String) null;
         }
     }
@@ -192,7 +192,7 @@ final class IntKeyLookup {
         }
     }
 
-    final static void a(int param0) {
+    final static void readIntegerRecordResponse(int obfuscationGuard) {
         int var7 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
@@ -209,16 +209,16 @@ final class IntKeyLookup {
         int[] var11 = null;
         var8 = Pool.field_O;
         try {
-          if (param0 != 199) {
+          if (obfuscationGuard != 199) {
             muGamelistStatus = (String) null;
           }
           var9 = PlayerContextMenu.field_e;
           var2 = var9.readUnsignedByte(-125);
-          var3 = var9.readUnsignedByte(param0 ^ -151);
+          var3 = var9.readUnsignedByte(obfuscationGuard ^ -151);
           if (var2 == 0) {
             var4_ref_fl = (IntLookupQuery) (TutorialFactory.field_g.last((byte) -124));
             if (var4_ref_fl == null) {
-              ShotEvent.closeClientSocket(param0 - 79);
+              ShotEvent.closeClientSocket(obfuscationGuard - 79);
               return;
             }
             var5_int = ScrollPane.field_Pb - var9.position;
@@ -235,7 +235,7 @@ final class IntKeyLookup {
             return;
           }
           if (var2 == 1) {
-            var4 = var9.readSignedSmart(param0 - 272);
+            var4 = var9.readSignedSmart(obfuscationGuard - 272);
             var5 = (IntegerRecordSubmission) (AvailabilityQueryResult.field_a.last((byte) 68));
             while (var5 != null) {
               if (var3 != var5.field_t ||
@@ -252,13 +252,13 @@ final class IntKeyLookup {
             var5.unlink((byte) -117);
             return;
           }
-          GrowableIntList.reportClientError((Throwable) null, "LR1: " + PacketDiagnosticsSupport.formatPacketDump(param0 ^ 159), param0 - 8754);
+          GrowableIntList.reportClientError((Throwable) null, "LR1: " + PacketDiagnosticsSupport.formatPacketDump(obfuscationGuard ^ 159), obfuscationGuard - 8754);
           ShotEvent.closeClientSocket(125);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "wi.A(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "wi.A(" + obfuscationGuard + ')');
         }
     }
 

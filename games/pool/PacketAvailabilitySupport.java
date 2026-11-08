@@ -7,7 +7,7 @@ final class PacketAvailabilitySupport {
     static Sprite field_a;
     static java.awt.Image field_c;
 
-    final static void a(int param0, int param1, int param2, Sprite param3, int param4, int param5, int param6, int param7, int param8) {
+    final static void drawClippedAdditiveSpriteOutline(int param0, int param1, int param2, Sprite param3, int param4, int param5, int param6, int param7, int param8) {
         int var9_int = 0;
         int var10 = 0;
         int var11 = 0;
@@ -22,7 +22,7 @@ final class PacketAvailabilitySupport {
           param3.drawAdditive(-1 + param6, param8 + 1, param1);
           if (param0 > -9) {
             Sprite var12 = (Sprite) null;
-            PacketAvailabilitySupport.a(39, -40, -90, (Sprite) null, 42, 37, -34, 83, 88);
+            PacketAvailabilitySupport.drawClippedAdditiveSpriteOutline(39, -40, -90, (Sprite) null, 42, 37, -34, 83, 88);
           }
           SoftwareRasterizer.restoreClip(AgeValidator.field_o);
           SoftwareRasterizer.intersectClip(var9_int + 1, 0, var10 + 1, var11 + param2);
@@ -44,17 +44,17 @@ final class PacketAvailabilitySupport {
         }
     }
 
-    final static void a(boolean param0, String param1, int param2) {
+    final static void showLoginProgressDialog(boolean loginOption, String message, int obfuscationGuard) {
         try {
           NetworkGameClient.field_z = true;
-          PolarBallSkin.field_q = param0 ? true : false;
-          MeshBoundsSupport.field_d = new MessageDialog(TabbedPane.field_Ub, LoginPayloadFactory.field_e, param1, ProjectedVertex.field_e, PolarBallSkin.field_q);
+          PolarBallSkin.field_q = loginOption ? true : false;
+          MeshBoundsSupport.field_d = new MessageDialog(TabbedPane.field_Ub, LoginPayloadFactory.field_e, message, ProjectedVertex.field_e, PolarBallSkin.field_q);
           TabbedPane.field_Ub.showDialog(MeshBoundsSupport.field_d, 30000);
-          if (param2 > -122) {
+          if (obfuscationGuard > -122) {
             field_a = (Sprite) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "wf.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "wf.A(" + loginOption + ',' + (message != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -89,7 +89,7 @@ final class PacketAvailabilitySupport {
         return DialogLayer.pollPacketBytes((byte) 67, ScrollPane.field_Pb);
     }
 
-    final static void a(byte param0, boolean param1, LobbyGame param2, String param3) {
+    final static void openLobbyGameContextMenu(byte obfuscationGuard, boolean includePlayerToggle, LobbyGame game, String ownerName) {
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -107,27 +107,27 @@ final class PacketAvailabilitySupport {
         String var14 = null;
         PlayerContextMenu var15 = null;
         try {
-          LogoFinalFrameLoader.openPlayerContextMenu((String) null, -1, 0L, param2.getGameId(20872), BufferedSocket.field_m, (String) null, 32540, param2, (int[]) null);
-          if (param2.field_ec && (param2.field_Yb == 2 ||
+          LogoFinalFrameLoader.openPlayerContextMenu((String) null, -1, 0L, game.getGameId(20872), BufferedSocket.field_m, (String) null, 32540, game, (int[]) null);
+          if (game.field_ec && (game.field_Yb == 2 ||
             !(TutorialController.field_i < 2))) {
             var9 = PlasmaBallSkin.field_m;
-            var10 = AccountWelcomePanel.substituteTemplateArguments(new String[]{param3}, param0 + 109, PacketBuffer.spectateXsGame);
+            var10 = AccountWelcomePanel.substituteTemplateArguments(new String[]{ownerName}, obfuscationGuard + 109, PacketBuffer.spectateXsGame);
             var9.field_n.addAction(var10, 17130, 10);
           }
           PlasmaBallSkin.field_m.addInviteActions(2616);
-          if (param1) {
+          if (includePlayerToggle) {
             if (AgeValidator.field_r != PlasmaBallSkin.field_m.field_b) {
               var13 = PlasmaBallSkin.field_m;
-              var14 = AccountWelcomePanel.substituteTemplateArguments(new String[]{param3}, param0 + 109, LoginPayloadFactory.showPlayersInXsGame);
-              var13.field_n.addAction(var14, param0 + 17240, 15);
+              var14 = AccountWelcomePanel.substituteTemplateArguments(new String[]{ownerName}, obfuscationGuard + 109, LoginPayloadFactory.showPlayersInXsGame);
+              var13.field_n.addAction(var14, obfuscationGuard + 17240, 15);
             } else {
               var11 = PlasmaBallSkin.field_m;
-              var12 = AccountWelcomePanel.substituteTemplateArguments(new String[]{param3}, -1, BirthDatePromptPanel.hidePlayersInXsGame);
+              var12 = AccountWelcomePanel.substituteTemplateArguments(new String[]{ownerName}, -1, BirthDatePromptPanel.hidePlayersInXsGame);
               var11.field_n.addAction(var12, 17130, 16);
             }
           }
           var15 = PlasmaBallSkin.field_m;
-          if (param0 != -110) {
+          if (obfuscationGuard != -110) {
             field_a = (Sprite) null;
           }
           var5 = DialogLayer.field_W;
@@ -138,14 +138,14 @@ final class PacketAvailabilitySupport {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_15_0 = var4;
-          stackIn_15_1 = new StringBuilder().append("wf.B(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_15_1 = new StringBuilder().append("wf.B(").append(obfuscationGuard).append(',').append(includePlayerToggle).append(',');
+          if (game == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
           }
           stackIn_18_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',');
-          if (param3 == null) {
+          if (ownerName == null) {
             stackIn_19_2 = "null";
           } else {
             stackIn_19_2 = "{...}";

@@ -15,7 +15,7 @@ final class PasswordValidator extends TextInputValidator {
     private TextInputWidget usernameInput;
     static int field_w;
 
-    final static void a(int param0, UiComponent param1, UiComponent param2, UiComponent param3, UiComponent param4) {
+    final static void initializeChatComposer(int param0, UiComponent param1, UiComponent param2, UiComponent param3, UiComponent param4) {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -274,7 +274,7 @@ final class PasswordValidator extends TextInputValidator {
             stackIn_28_0 = AgeValidator.createAlertPasscontainsnamePartial;
             return stackIn_28_0;
           }
-          if (!StateIconLabel.a(23138, var7, var5)) {
+          if (!StateIconLabel.containsTextOrReverse(23138, var7, var5)) {
             return Bzip2DecoderState.createAlertPasslength;
           }
           stackIn_32_0 = TranslatedUiText.field_o;

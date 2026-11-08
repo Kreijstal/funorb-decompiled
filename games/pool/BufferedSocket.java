@@ -198,7 +198,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final static boolean a(boolean param0, String param1, byte param2, AccountCreationForm param3, int param4, String param5, String param6) {
+    final static boolean beginAccountCreation(boolean param0, String param1, byte param2, AccountCreationForm param3, int param4, String param5, String param6) {
         RuntimeException var7 = null;
         int var8 = 0;
         AccountCreationDialog var9 = null;
@@ -335,7 +335,7 @@ final class BufferedSocket implements Runnable {
         try {
           if (obfuscationGuard != -6584) {
             var3 = (String) null;
-            BufferedSocket.a(false, (String) null, (byte) 126, (AccountCreationForm) null, -39, (String) null, (String) null);
+            BufferedSocket.beginAccountCreation(false, (String) null, (byte) 126, (AccountCreationForm) null, -39, (String) null, (String) null);
           }
           dupTemp$1 = new BallEvent(0, (BallEvent) null);
           ball.field_q = dupTemp$1;

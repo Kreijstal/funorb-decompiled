@@ -10,7 +10,7 @@ abstract class ModelTableScene extends TableScene {
     static int field_L;
     MeshBuilder[] field_O;
 
-    final int a(int param0, MeshBuilder[][] param1, int[][][] param2, int param3, int param4) {
+    final int splitAndRecenterModels(int startIndex, MeshBuilder[][] parts, int[][][] translations, int obfuscationGuard, int endIndex) {
         int var6_int = 0;
         int var9 = 0;
         RuntimeException var6 = null;
@@ -27,17 +27,17 @@ abstract class ModelTableScene extends TableScene {
         var10 = Pool.field_O;
         try {
           var7 = 0;
-          for (var6_int = param0; param4 > var6_int; var6_int++) {
-            var8 = -param0 + var6_int;
-            param1[var8] = Atan2Support.splitMeshForSpatialCells(91, this.field_O[var6_int]);
-            var7 = var7 + param1[var8].length;
-            param2[var8] = new int[param1[var8].length][3];
-            for (var9 = 0; param1[var8].length > var9; var9++) {
-              ModelOriginSupport.recenterModel(param2[var8][var9], 0, param1[var8][var9]);
-              MarkerSliderPainter.recenterTextureTriangles(param1[var8][var9], (byte) -37);
+          for (var6_int = startIndex; endIndex > var6_int; var6_int++) {
+            var8 = -startIndex + var6_int;
+            parts[var8] = Atan2Support.splitMeshForSpatialCells(91, this.field_O[var6_int]);
+            var7 = var7 + parts[var8].length;
+            translations[var8] = new int[parts[var8].length][3];
+            for (var9 = 0; parts[var8].length > var9; var9++) {
+              ModelOriginSupport.recenterModel(translations[var8][var9], 0, parts[var8][var9]);
+              MarkerSliderPainter.recenterTextureTriangles(parts[var8][var9], (byte) -37);
             }
           }
-          if (param3 > -49) {
+          if (obfuscationGuard > -49) {
             this.field_M = (int[][]) null;
           }
           stackIn_10_0 = var7;
@@ -46,23 +46,23 @@ abstract class ModelTableScene extends TableScene {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
           stackIn_13_0 = var6;
-          stackIn_13_1 = new StringBuilder().append("vc.H(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_13_1 = new StringBuilder().append("vc.H(").append(startIndex).append(',');
+          if (parts == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
           stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',');
-          if (param2 == null) {
+          if (translations == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(obfuscationGuard).append(',').append(endIndex).append(')').toString());
         }
     }
 
-    final void e(boolean param0) {
+    final void updateModelVisibilityAndDepth(boolean obfuscationGuard) {
         int var2;
         int var3;
         java.awt.Canvas var4;
@@ -71,7 +71,7 @@ abstract class ModelTableScene extends TableScene {
         if (this.field_h) {
           for (var2 = 0; AccountProtocolStage.field_g.length > var2; var2++) {
             TimeTrialSelectScreen.field_L[var2] = ChatInputSupport.field_l[AccountProtocolStage.field_g[var2]].distanceSquaredTo(-13025, GzipDecoder.field_d);
-            OpacityWidget.field_Q[var2] = ChatInputSupport.field_l[var2].passesBoundaryFacingTest(param0, GzipDecoder.field_d);
+            OpacityWidget.field_Q[var2] = ChatInputSupport.field_l[var2].passesBoundaryFacingTest(obfuscationGuard, GzipDecoder.field_d);
           }
         } else {
           var5 = 0;
@@ -82,9 +82,9 @@ abstract class ModelTableScene extends TableScene {
             var5++;
           }
         }
-        if (!param0) {
+        if (!obfuscationGuard) {
           var4 = (java.awt.Canvas) null;
-          ModelTableScene.a(true, (java.awt.Canvas) null);
+          ModelTableScene.drawLoadingProgressToCanvas(true, (java.awt.Canvas) null);
         }
     }
 
@@ -112,7 +112,7 @@ abstract class ModelTableScene extends TableScene {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, ModelInstance[] param6) {
+    final void createOpposedModelPair(int param0, int param1, int param2, int param3, int param4, int param5, ModelInstance[] param6) {
         int[] var13 = null;
         int[] var11 = null;
         int[] var9 = null;
@@ -142,22 +142,22 @@ abstract class ModelTableScene extends TableScene {
 
     abstract void initializeScene(boolean param0);
 
-    final static void a(boolean param0, java.awt.Canvas param1) {
+    final static void drawLoadingProgressToCanvas(boolean active, java.awt.Canvas canvas) {
         try {
           if (PlasmaTableScene.field_ab == 11) {
             LoginPayloadFactory.validateLoginFactoryGuard(-125);
           }
-          Cp1252DecodingSupport.showLoadingProgress(TextWidgetPainter.field_n, param0, PasswordValidator.field_o, CacheEntry.field_w);
-          if (!param0) {
+          Cp1252DecodingSupport.showLoadingProgress(TextWidgetPainter.field_n, active, PasswordValidator.field_o, CacheEntry.field_w);
+          if (!active) {
             optionsmenuNotpaused = (String) null;
           }
-          ButtonWidget.drawRasterToCanvas(0, 0, (byte) -118, param1);
+          ButtonWidget.drawRasterToCanvas(0, 0, (byte) -118, canvas);
         } catch (RuntimeException runtimeException) {
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "vc.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "vc.I(" + active + ',' + (canvas != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(ModelInstance[] param0, int param1, int param2, boolean param3, MeshBuilder param4, int param5, int[] param6, int param7) {
+    final void createMirroredModelQuartet(ModelInstance[] param0, int param1, int param2, boolean param3, MeshBuilder param4, int param5, int[] param6, int param7) {
         MeshBuilder var10 = null;
         int[] var15 = null;
         int[] var11 = null;
@@ -208,7 +208,7 @@ abstract class ModelTableScene extends TableScene {
         }
     }
 
-    final static void a(boolean param0, int param1, String param2, java.awt.Color param3, int param4) {
+    final static void drawAwtLoadingBar(boolean clear, int barHeight, String message, java.awt.Color color, int percent) {
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
@@ -228,42 +228,42 @@ abstract class ModelTableScene extends TableScene {
             if (ProjectedLineSupport.field_c == null) {
               ProjectedLineSupport.field_c = new java.awt.Font("Helvetica", 1, 13);
             }
-            if (param0) {
+            if (clear) {
               var9.setColor(java.awt.Color.black);
               var9.fillRect(0, 0, LoginMethod.field_d, ArchiveIndex.field_c);
             }
-            if (param3 == null) {
-              param3 = new java.awt.Color(140, 17, 17);
+            if (color == null) {
+              color = new java.awt.Color(140, 17, 17);
             }
             try {
               if (PacketAvailabilitySupport.field_c == null) {
                 PacketAvailabilitySupport.field_c = TimeTrialSelectScreen.field_K.createImage(304, 34);
               }
               var10 = PacketAvailabilitySupport.field_c.getGraphics();
-              var10.setColor(param3);
+              var10.setColor(color);
               var10.drawRect(0, 0, 303, 33);
-              var10.fillRect(2, 2, param4 * 3, param1);
+              var10.fillRect(2, 2, percent * 3, barHeight);
               var10.setColor(java.awt.Color.black);
               var10.drawRect(1, 1, 301, 31);
-              var10.fillRect(param4 * 3 + 2, 2, -(3 * param4) + 300, 30);
+              var10.fillRect(percent * 3 + 2, 2, -(3 * percent) + 300, 30);
               var10.setFont(ProjectedLineSupport.field_c);
               var10.setColor(java.awt.Color.white);
-              var10.drawString(param2, (304 - param2.length() * 6) / 2, 22);
+              var10.drawString(message, (304 - message.length() * 6) / 2, 22);
               var9.drawImage(PacketAvailabilitySupport.field_c, LoginMethod.field_d / 2 - 152, ArchiveIndex.field_c / 2 - 18, (java.awt.image.ImageObserver) null);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = (Exception) (Object) decompiledCaughtException;
               var7 = LoginMethod.field_d / 2 - 152;
               var8 = ArchiveIndex.field_c / 2 - 18;
-              var9.setColor(param3);
+              var9.setColor(color);
               var9.drawRect(var7, var8, 303, 33);
-              var9.fillRect(var7 + 2, var8 + 2, 3 * param4, 30);
+              var9.fillRect(var7 + 2, var8 + 2, 3 * percent, 30);
               var9.setColor(java.awt.Color.black);
               var9.drawRect(1 + var7, 1 + var8, 301, 31);
-              var9.fillRect(param4 * 3 + (var7 + 2), 2 + var8, 300 - 3 * param4, 30);
+              var9.fillRect(percent * 3 + (var7 + 2), 2 + var8, 300 - 3 * percent, 30);
               var9.setFont(ProjectedLineSupport.field_c);
               var9.setColor(java.awt.Color.white);
-              var9.drawString(param2, (-(6 * param2.length()) + 304) / 2 + var7, 22 + var8);
+              var9.drawString(message, (-(6 * message.length()) + 304) / 2 + var7, 22 + var8);
             }
             if (null != ImageProducerRasterBuffer.field_o) {
               var9.setFont(ProjectedLineSupport.field_c);
@@ -280,26 +280,26 @@ abstract class ModelTableScene extends TableScene {
           decompiledCaughtException = decompiledCaughtParameter2;
           var5_ref = (RuntimeException) (Object) decompiledCaughtException;
           stackIn_21_0 = var5_ref;
-          stackIn_21_1 = new StringBuilder().append("vc.C(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_21_1 = new StringBuilder().append("vc.C(").append(clear).append(',').append(barHeight).append(',');
+          if (message == null) {
             stackIn_22_2 = "null";
           } else {
             stackIn_22_2 = "{...}";
           }
           stackIn_24_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',');
-          if (param3 == null) {
+          if (color == null) {
             stackIn_25_2 = "null";
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param4).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(percent).append(')').toString());
         }
     }
 
     public static void releaseStatics(byte param0) {
         if (param0 < 95) {
           java.awt.Canvas var2 = (java.awt.Canvas) null;
-          ModelTableScene.a(false, (java.awt.Canvas) null);
+          ModelTableScene.drawLoadingProgressToCanvas(false, (java.awt.Canvas) null);
         }
         presstabtochat = null;
         pottingBallForYou = null;
@@ -316,7 +316,7 @@ abstract class ModelTableScene extends TableScene {
           this.onSceneryTransitionComplete(16);
           if (param1 != 21894) {
             int[] var4 = (int[]) null;
-            this.a((ModelInstance[]) null, 81, -71, false, (MeshBuilder) null, -4, (int[]) null, -24);
+            this.createMirroredModelQuartet((ModelInstance[]) null, 81, -71, false, (MeshBuilder) null, -4, (int[]) null, -24);
           }
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "vc.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

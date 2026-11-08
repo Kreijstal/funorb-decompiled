@@ -246,7 +246,7 @@ final class BrowserCookieSupport {
             decompiledFrameRemainder0 = false;
           }
           else {
-            ArchiveLoadSequence.c(param3, 100);
+            ArchiveLoadSequence.sendRatedGameRequest(param3, 100);
           }
         }
         if (RasterStateSupport.field_b.pressedButton != 0) {

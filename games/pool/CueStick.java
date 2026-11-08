@@ -18,7 +18,7 @@ final class CueStick {
 
     final static void initializeChatInterface(boolean param0, boolean param1, ResourceArchive param2, ResourceArchive param3) {
         try {
-          AlternateLongAndTextLoginPayload.a(RenderingInitializationSupport.field_d, FixedPointVectorSupport.field_c, TutorialFactory.field_d, RasterBuffer.field_f, AlignedIconLabel.field_Lb, UiWidget.field_A, TimeTrialSelectScreen.field_M, AchievementSubmission.field_l, param0, GameApplet.field_a, ScreenProjectionSupport.field_f, (byte) 37);
+          AlternateLongAndTextLoginPayload.initializeChatWidgets(RenderingInitializationSupport.field_d, FixedPointVectorSupport.field_c, TutorialFactory.field_d, RasterBuffer.field_f, AlignedIconLabel.field_Lb, UiWidget.field_A, TimeTrialSelectScreen.field_M, AchievementSubmission.field_l, param0, GameApplet.field_a, ScreenProjectionSupport.field_f, (byte) 37);
           if (param1) {
             ResourceArchive var5 = (ResourceArchive) null;
             CueStick.initializeChatInterface(true, true, (ResourceArchive) null, (ResourceArchive) null);

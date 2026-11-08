@@ -207,8 +207,8 @@ final class QuickChatMenu extends UiComponent {
                 TextInputPainter.setChatFilterMode(1, var6, param2, (byte) -89);
               }
               var7 = (String) null;
-              AlternateLongAndTextLoginPayload.a((byte) 117, (String) null, param3, ArrayWidgetGroup.field_I, CookieDateSupport.field_b, var5);
-              Bzip2DecoderState.a(var5, ArrayWidgetGroup.field_I, CookieDateSupport.field_b, (byte) -76, QuickChatMenuSupport.field_d);
+              AlternateLongAndTextLoginPayload.sendChatOrQuickChat((byte) 117, (String) null, param3, ArrayWidgetGroup.field_I, CookieDateSupport.field_b, var5);
+              Bzip2DecoderState.rememberSentQuickChat(var5, ArrayWidgetGroup.field_I, CookieDateSupport.field_b, (byte) -76, QuickChatMenuSupport.field_d);
               DialogLayer.hideQuickChatOverlay(15975);
               InputIdleSupport.resetInputIdleTimer(false);
             } else {

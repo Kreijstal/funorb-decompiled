@@ -53,7 +53,7 @@ class DualLinkNode extends IntrusiveNode {
     protected DualLinkNode() {
     }
 
-    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4) {
+    final static Sprite[] createStandardBeveledFrameSprites(int param0, int param1, int param2, int param3, int param4) {
         if (param2 > -107) {
           DualLinkNode.updateChatCompositionPanel(-20, 53, 78, true, 78, 37, 85);
         }

@@ -20,7 +20,7 @@ final class AlternateLongAndTextLoginPayload extends LongAndTextLoginPayload {
         }
     }
 
-    final static void a(HighScoreRequest param0, int param1, byte param2) {
+    final static void sendHighScoreRequest(HighScoreRequest request, int opcode, byte obfuscationGuard) {
         RuntimeException runtimeException = null;
         CipherPacketBuffer var3 = null;
         RuntimeException stackIn_8_0 = null;
@@ -29,27 +29,27 @@ final class AlternateLongAndTextLoginPayload extends LongAndTextLoginPayload {
         RuntimeException decompiledCaughtException = null;
         try {
           var3 = JaggrabDownloader.field_j;
-          var3.writeCipheredOpcode(false, param1);
+          var3.writeCipheredOpcode(false, opcode);
           var3.writeByte(5, false);
           var3.writeByte(0, false);
-          if (param2 >= -113) {
+          if (obfuscationGuard >= -113) {
             field_p = false;
           }
-          var3.writeShort((byte) -81, param0.field_A);
-          var3.writeByte(param0.field_r, false);
-          var3.writeByte(param0.field_v, false);
+          var3.writeShort((byte) -81, request.field_A);
+          var3.writeByte(request.field_r, false);
+          var3.writeByte(request.field_v, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
           stackIn_8_0 = runtimeException;
           stackIn_8_1 = new StringBuilder().append("ub.O(");
-          if (param0 == null) {
+          if (request == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(opcode).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -69,7 +69,7 @@ final class AlternateLongAndTextLoginPayload extends LongAndTextLoginPayload {
         }
     }
 
-    final static String a(String param0, int param1, boolean param2) {
+    final static String lobbyGameClosureMessage(String ownerName, int reasonCode, boolean obfuscationGuard) {
         RuntimeException var3 = null;
         String stackIn_4_0 = null;
         String stackIn_9_0 = null;
@@ -86,59 +86,59 @@ final class AlternateLongAndTextLoginPayload extends LongAndTextLoginPayload {
         String stackIn_43_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 == 3) {
+          if (reasonCode == 3) {
             stackIn_4_0 = DebugSliderInputSupport.muEnteredOtherGame;
             return stackIn_4_0;
           }
-          if (param1 == 6) {
+          if (reasonCode == 6) {
             stackIn_9_0 = MouseHandler.muGameIsFull;
             return stackIn_9_0;
           }
-          if (param1 == 7) {
+          if (reasonCode == 7) {
             stackIn_12_0 = RankingsProtocolSupport.muGameHasStarted;
             return stackIn_12_0;
           }
-          if (param1 == 8) {
+          if (reasonCode == 8) {
             stackIn_15_0 = EightBallRules.muYouDeclinedInvite;
             return stackIn_15_0;
           }
-          if (param1 == 9) {
+          if (reasonCode == 9) {
             stackIn_20_0 = CachedArchiveSource.muInviteWithdrawn;
             return stackIn_20_0;
           }
-          if (!param2) {
+          if (!obfuscationGuard) {
             stackIn_23_0 = (String) null;
             return stackIn_23_0;
           }
-          if (param1 == 10) {
+          if (reasonCode == 10) {
             stackIn_28_0 = ViewportController.muRequestDeclined;
             return stackIn_28_0;
           }
-          if (param1 == 11) {
+          if (reasonCode == 11) {
             stackIn_33_0 = PlasmaBallSkin.muRequestWithdrawn;
             return stackIn_33_0;
           }
-          if (param1 != 14) {
+          if (reasonCode != 14) {
             stackIn_38_0 = null;
             return (String) (stackIn_38_0);
           }
-          stackIn_36_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{param0}, -1, PacketBuffer.muAllPlayersHaveLeft);
+          stackIn_36_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{ownerName}, -1, PacketBuffer.muAllPlayersHaveLeft);
           return stackIn_36_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_42_0 = var3;
           stackIn_42_1 = new StringBuilder().append("ub.N(");
-          if (param0 == null) {
+          if (ownerName == null) {
             stackIn_43_2 = "null";
           } else {
             stackIn_43_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(reasonCode).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
-    final static void a(byte param0, String param1, int param2, String param3, int param4, int param5) {
+    final static void sendChatOrQuickChat(byte obfuscationGuard, String text, int opcode, String recipient, int channel, int phraseId) {
         RuntimeException runtimeException = null;
         int var6_int = 0;
         CipherPacketBuffer var7 = null;
@@ -150,19 +150,19 @@ final class AlternateLongAndTextLoginPayload extends LongAndTextLoginPayload {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6_int = 125 % ((param0 + 54) / 62);
+          var6_int = 125 % ((obfuscationGuard + 54) / 62);
           var7 = JaggrabDownloader.field_j;
-          var7.writeCipheredOpcode(false, param2);
+          var7.writeCipheredOpcode(false, opcode);
           var7.position = var7.position + 1;
           var8 = var7.position;
-          var7.writeByte(param4, false);
-          if (2 == param4) {
-            var7.writeNullTerminatedString(-9946, param3);
+          var7.writeByte(channel, false);
+          if (2 == channel) {
+            var7.writeNullTerminatedString(-9946, recipient);
           }
-          if (param1 == null) {
-            var7.writeShort((byte) -81, param5);
+          if (text == null) {
+            var7.writeShort((byte) -81, phraseId);
           } else {
-            LobbyPlayer.writeCompressedChatText(var7, (byte) 75, param1);
+            LobbyPlayer.writeCompressedChatText(var7, (byte) 75, text);
           }
           var7.writeByteLengthPrefix(-var8 + var7.position, true);
           return;
@@ -170,28 +170,28 @@ final class AlternateLongAndTextLoginPayload extends LongAndTextLoginPayload {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
           stackIn_12_0 = runtimeException;
-          stackIn_12_1 = new StringBuilder().append("ub.P(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_12_1 = new StringBuilder().append("ub.P(").append(obfuscationGuard).append(',');
+          if (text == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
-          stackIn_16_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_16_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(opcode).append(',');
+          if (recipient == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(channel).append(',').append(phraseId).append(')').toString());
         }
     }
 
-    final static TextWidgetPainter c(int param0) {
+    final static TextWidgetPainter validationMessagePainter(int obfuscationGuard) {
         RuntimeException var1 = null;
         TextWidgetPainter stackIn_8_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 != 4) {
+          if (obfuscationGuard != 4) {
             field_p = false;
           }
           if (ContentTransitionDialog.field_mb == null) {
@@ -202,11 +202,11 @@ final class AlternateLongAndTextLoginPayload extends LongAndTextLoginPayload {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "ub.M(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "ub.M(" + obfuscationGuard + ')');
         }
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int choiceAtPoint(int x, int y, int startIndex) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -219,7 +219,7 @@ final class AlternateLongAndTextLoginPayload extends LongAndTextLoginPayload {
         RuntimeException decompiledCaughtException = null;
         var8 = Pool.field_O;
         try {
-          var3_int = param2;
+          var3_int = startIndex;
           var4 = PasswordValidator.field_n;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (!(var3_int < TransformRotationSupport.field_j.length)))) {
@@ -232,7 +232,7 @@ final class AlternateLongAndTextLoginPayload extends LongAndTextLoginPayload {
                 var6 = WidgetContainer.measureSharedTextWidth(TransformRotationSupport.field_j[var3_int], true, false);
                 var7 = BrowserCookieWriter.field_c - (var6 >> 1);
                 var4 = var4 + IterableDualLinkDeque.field_e;
-                if (ResizableDialog.containsPoint(param0, -23, (NineBallRules.field_h << 1) + WidgetContainer.field_I, param1, (MeshSymmetrySupport.field_b << 1) + var6, var4, var7 - MeshSymmetrySupport.field_b)) {
+                if (ResizableDialog.containsPoint(x, -23, (NineBallRules.field_h << 1) + WidgetContainer.field_I, y, (MeshSymmetrySupport.field_b << 1) + var6, var4, var7 - MeshSymmetrySupport.field_b)) {
                   stackIn_12_0 = var5;
                   return stackIn_12_0;
                 }
@@ -250,11 +250,11 @@ final class AlternateLongAndTextLoginPayload extends LongAndTextLoginPayload {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var3), "ub.K(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var3), "ub.K(" + x + ',' + y + ',' + startIndex + ')');
         }
     }
 
-    final static void a(UiComponent param0, BitmapFont param1, UiComponent param2, VerticalScrollbar param3, UiComponent param4, UiComponent param5, UiComponent param6, UiComponent param7, boolean param8, UiComponent param9, UiComponent param10, byte param11) {
+    final static void initializeChatWidgets(UiComponent param0, BitmapFont param1, UiComponent param2, VerticalScrollbar param3, UiComponent param4, UiComponent param5, UiComponent param6, UiComponent param7, boolean param8, UiComponent param9, UiComponent param10, byte param11) {
         String stackIn_13_0 = null;
         int stackIn_35_0 = 0;
         int stackIn_35_1 = 0;

@@ -103,7 +103,7 @@ final class PasswordInputPainter extends TextInputPainter {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == -1) {
-            stackIn_4_0 = LimitedRandomAccessFile.a(param1.widgetText.length(), 0, '*');
+            stackIn_4_0 = LimitedRandomAccessFile.createFilledString(param1.widgetText.length(), 0, '*');
             return stackIn_4_0;
           }
           stackIn_2_0 = (String) null;

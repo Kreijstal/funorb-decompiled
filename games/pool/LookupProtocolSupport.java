@@ -25,7 +25,7 @@ final class LookupProtocolSupport {
         highscores = null;
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int menuActionAtPoint(int obfuscationGuard, int y, int x) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
@@ -36,7 +36,7 @@ final class LookupProtocolSupport {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          if (param0 != -49) {
+          if (obfuscationGuard != -49) {
             field_h = 77;
           }
           var3_int = 0;
@@ -46,10 +46,10 @@ final class LookupProtocolSupport {
             if (var5 < 0) {
               var4 = var4 + MenuScreen.field_u;
             } else {
-              var6 = ReportAbuseDialog.a(true, param0 ^ -35, QuickChatMenu.field_Sb[var3_int]);
+              var6 = ReportAbuseDialog.measureMenuRowText(true, obfuscationGuard ^ -35, QuickChatMenu.field_Sb[var3_int]);
               var7 = ArchiveIndex.field_u - (var6 >> 1);
               var4 = var4 + LookupQuery.field_m;
-              if (ResizableDialog.containsPoint(param2, -59, LobbyGame.field_yc + (TriangleMesh.field_B << 1), param1, var6 + (IterableDualLinkDeque.field_g << 1), var4, -IterableDualLinkDeque.field_g + var7)) {
+              if (ResizableDialog.containsPoint(x, -59, LobbyGame.field_yc + (TriangleMesh.field_B << 1), y, var6 + (IterableDualLinkDeque.field_g << 1), var4, -IterableDualLinkDeque.field_g + var7)) {
                 stackIn_7_0 = var5;
                 return stackIn_7_0;
               }
@@ -62,7 +62,7 @@ final class LookupProtocolSupport {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var3), "un.E(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var3), "un.E(" + obfuscationGuard + ',' + y + ',' + x + ')');
         }
     }
 
@@ -79,8 +79,8 @@ final class LookupProtocolSupport {
         LobbyPlayer.field_fc = LobbyPlayer.field_fc + 1;
     }
 
-    final static void a(int param0) {
-        if (param0 != 676) {
+    final static void clearMessageLines(int obfuscationGuard) {
+        if (obfuscationGuard != 676) {
           field_b = true;
           MatchingTextValidator.field_r.clear((byte) 47);
           return;

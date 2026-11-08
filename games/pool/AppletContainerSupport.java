@@ -35,7 +35,7 @@ final class AppletContainerSupport {
               var4 = -40 + UiComponentNode.field_C.field_z;
             }
           }
-          PacketAvailabilitySupport.a(-68, 80, 0, UiComponentNode.field_C, var4, 0, param1, 30, param3);
+          PacketAvailabilitySupport.drawClippedAdditiveSpriteOutline(-68, 80, 0, UiComponentNode.field_C, var4, 0, param1, 30, param3);
           return;
         }
         fsButtonTryagain = (String) null;
@@ -54,7 +54,7 @@ final class AppletContainerSupport {
             var4Lifetime1 = -40 + UiComponentNode.field_C.field_z;
           }
         }
-        PacketAvailabilitySupport.a(-68, 80, 0, UiComponentNode.field_C, var4Lifetime1, 0, param1, 30, param3);
+        PacketAvailabilitySupport.drawClippedAdditiveSpriteOutline(-68, 80, 0, UiComponentNode.field_C, var4Lifetime1, 0, param1, 30, param3);
     }
 
     final static java.awt.Container getTopLevelContainer(boolean param0) {

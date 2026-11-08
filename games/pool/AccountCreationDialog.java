@@ -184,7 +184,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
               KillerBallSkin.playMusicTrack(256, false, true, HalloweenBallSkin.field_m);
               if (GameRules.field_b != -2 &&
                 GameRules.field_b != -4) {
-                TextLineLayout.a((byte) -27, BeveledFrameSpriteFactory.field_c[3]);
+                TextLineLayout.playSoundEffect((byte) -27, BeveledFrameSpriteFactory.field_c[3]);
               }
               return;
             }
@@ -218,7 +218,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
           if (GameRules.field_b == -4) {
             return;
           }
-          TextLineLayout.a((byte) -27, BeveledFrameSpriteFactory.field_c[3]);
+          TextLineLayout.playSoundEffect((byte) -27, BeveledFrameSpriteFactory.field_c[3]);
           return;
         }
         DisplayModeSupport.field_c[GameRules.field_b].parentScreenId = parentScreenId;
@@ -233,7 +233,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
               KillerBallSkin.playMusicTrack(256, false, true, HalloweenBallSkin.field_m);
               if (GameRules.field_b != -2 &&
                 GameRules.field_b != -4) {
-                TextLineLayout.a((byte) -27, BeveledFrameSpriteFactory.field_c[3]);
+                TextLineLayout.playSoundEffect((byte) -27, BeveledFrameSpriteFactory.field_c[3]);
               }
               return;
             }
@@ -241,7 +241,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
               KillerBallSkin.playMusicTrack(256, false, true, HalloweenBallSkin.field_m);
               if (GameRules.field_b != -2 &&
                 GameRules.field_b != -4) {
-                TextLineLayout.a((byte) -27, BeveledFrameSpriteFactory.field_c[3]);
+                TextLineLayout.playSoundEffect((byte) -27, BeveledFrameSpriteFactory.field_c[3]);
                 return;
               }
               return;
@@ -257,7 +257,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
                 KillerBallSkin.playMusicTrack(256, false, true, HalloweenBallSkin.field_m);
                 if (GameRules.field_b != -2 &&
                   GameRules.field_b != -4) {
-                  TextLineLayout.a((byte) -27, BeveledFrameSpriteFactory.field_c[3]);
+                  TextLineLayout.playSoundEffect((byte) -27, BeveledFrameSpriteFactory.field_c[3]);
                   return;
                 }
                 return;
@@ -266,7 +266,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
                 KillerBallSkin.playMusicTrack(256, false, true, HalloweenBallSkin.field_m);
                 if (GameRules.field_b != -2 &&
                   GameRules.field_b != -4) {
-                  TextLineLayout.a((byte) -27, BeveledFrameSpriteFactory.field_c[3]);
+                  TextLineLayout.playSoundEffect((byte) -27, BeveledFrameSpriteFactory.field_c[3]);
                   return;
                 }
                 return;
@@ -275,7 +275,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
                 KillerBallSkin.playMusicTrack(256, false, true, HalloweenBallSkin.field_m);
                 if (GameRules.field_b != -2 &&
                   GameRules.field_b != -4) {
-                  TextLineLayout.a((byte) -27, BeveledFrameSpriteFactory.field_c[3]);
+                  TextLineLayout.playSoundEffect((byte) -27, BeveledFrameSpriteFactory.field_c[3]);
                   return;
                 }
                 return;
@@ -289,7 +289,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
               KillerBallSkin.playMusicTrack(256, false, true, HalloweenBallSkin.field_m);
               if (GameRules.field_b != -2 &&
                 GameRules.field_b != -4) {
-                TextLineLayout.a((byte) -27, BeveledFrameSpriteFactory.field_c[3]);
+                TextLineLayout.playSoundEffect((byte) -27, BeveledFrameSpriteFactory.field_c[3]);
                 return;
               }
               return;
@@ -298,7 +298,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
               KillerBallSkin.playMusicTrack(256, false, true, HalloweenBallSkin.field_m);
               if (GameRules.field_b != -2 &&
                 GameRules.field_b != -4) {
-                TextLineLayout.a((byte) -27, BeveledFrameSpriteFactory.field_c[3]);
+                TextLineLayout.playSoundEffect((byte) -27, BeveledFrameSpriteFactory.field_c[3]);
                 return;
               }
               return;
@@ -311,7 +311,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
               KillerBallSkin.playMusicTrack(256, false, true, HalloweenBallSkin.field_m);
               if (GameRules.field_b != -2 &&
                 GameRules.field_b != -4) {
-                TextLineLayout.a((byte) -27, BeveledFrameSpriteFactory.field_c[3]);
+                TextLineLayout.playSoundEffect((byte) -27, BeveledFrameSpriteFactory.field_c[3]);
                 return;
               }
               return;
@@ -320,7 +320,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
               KillerBallSkin.playMusicTrack(256, false, true, HalloweenBallSkin.field_m);
               if (GameRules.field_b != -2 &&
                 GameRules.field_b != -4) {
-                TextLineLayout.a((byte) -27, BeveledFrameSpriteFactory.field_c[3]);
+                TextLineLayout.playSoundEffect((byte) -27, BeveledFrameSpriteFactory.field_c[3]);
                 return;
               }
               return;
@@ -329,7 +329,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
               KillerBallSkin.playMusicTrack(256, false, true, HalloweenBallSkin.field_m);
               if (GameRules.field_b != -2 &&
                 GameRules.field_b != -4) {
-                TextLineLayout.a((byte) -27, BeveledFrameSpriteFactory.field_c[3]);
+                TextLineLayout.playSoundEffect((byte) -27, BeveledFrameSpriteFactory.field_c[3]);
                 return;
               }
               return;
@@ -338,7 +338,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
               KillerBallSkin.playMusicTrack(256, false, true, HalloweenBallSkin.field_m);
               if (GameRules.field_b != -2 &&
                 GameRules.field_b != -4) {
-                TextLineLayout.a((byte) -27, BeveledFrameSpriteFactory.field_c[3]);
+                TextLineLayout.playSoundEffect((byte) -27, BeveledFrameSpriteFactory.field_c[3]);
                 return;
               }
               return;
@@ -351,7 +351,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
         if (GameRules.field_b == -4) {
           return;
         }
-        TextLineLayout.a((byte) -27, BeveledFrameSpriteFactory.field_c[3]);
+        TextLineLayout.playSoundEffect((byte) -27, BeveledFrameSpriteFactory.field_c[3]);
         return;
     }
 

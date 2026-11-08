@@ -699,7 +699,7 @@ final class PoolMatchController {
               }
               var11_int = stackIn_20_0;
               while (var10.length > var11_int) {
-                var10[var11_int] = SingleChildWidget.a(var5[var9], (byte) 91, var7[var11_int]);
+                var10[var11_int] = SingleChildWidget.copyIndexedSpriteWithPalette(var5[var9], (byte) 91, var7[var11_int]);
                 var11_int++;
               }
               var9++;
@@ -2209,7 +2209,7 @@ final class PoolMatchController {
 
     final void leaveShotMode(boolean param0, byte param1) {
         try {
-          AlignedIconLabel.c(false);
+          AlignedIconLabel.expireTransientMessageLines(false);
           this.shotModeActive = false;
           this.cuePower = this.cueAim.power;
           LobbyGame.field_gc.stopTableSound((byte) 124, param0, 9);
@@ -4824,7 +4824,7 @@ final class PoolMatchController {
           this.viewMatrixDirty = true;
           this.cameraGoal.setDistance(true, 1.0);
           this.shotModeActive = true;
-          AlignedIconLabel.c(false);
+          AlignedIconLabel.expireTransientMessageLines(false);
           this.cueAim.power = this.cuePower;
           this.idleOrbitStep = -1;
           LobbyGame.field_gc.playTableSound(9, 256, (byte) -112, 128);
@@ -4853,7 +4853,7 @@ final class PoolMatchController {
         int var6 = 0;
         int var6Lifetime1;
         try {
-          LookupProtocolSupport.a(676);
+          LookupProtocolSupport.clearMessageLines(676);
           Cp1252CharacterSupport.clearNotifications(-7414);
           this.tutorial = param2;
           this.introDelayTicks = 200;
@@ -4940,9 +4940,9 @@ final class PoolMatchController {
         try {
           if (AnimatedNotification.field_G > 0) {
             if (AnimatedNotification.field_G > 25) {
-              AlignedIconLabel.c(false);
-              LoginForm.a(RasterSnapshot.cannotPositionCueThere, 16729156, -6, false, 1);
-              TextLineLayout.a((String) null, (byte) 18, Atan2Support.cueCantGoThere, 7);
+              AlignedIconLabel.expireTransientMessageLines(false);
+              LoginForm.enqueueUniqueMessageLine(RasterSnapshot.cannotPositionCueThere, 16729156, -6, false, 1);
+              TextLineLayout.restartActiveNotificationOrEnqueue((String) null, (byte) 18, Atan2Support.cueCantGoThere, 7);
             }
             AnimatedNotification.field_G = AnimatedNotification.field_G - 1;
             if (AnimatedNotification.field_G == 0) {
@@ -9079,7 +9079,7 @@ final class PoolMatchController {
           this.unrated = param8;
           stackIn_4_1 = !(TutorialController.field_i < 2);
           this.cheatsUnlocked = stackIn_4_1;
-          LookupProtocolSupport.a(676);
+          LookupProtocolSupport.clearMessageLines(676);
           Cp1252CharacterSupport.clearNotifications(-7414);
           this.initGameModel(param6, param2, -112, param1);
           var10 = null;

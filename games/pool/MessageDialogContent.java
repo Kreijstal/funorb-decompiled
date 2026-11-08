@@ -107,14 +107,14 @@ final class MessageDialogContent extends WidgetContainer implements ButtonActiva
 
     public static void releaseStatics(int param0) {
         if (param0 >= -85) {
-          MessageDialogContent.a(true, -59, false, -90);
+          MessageDialogContent.updateRatedMatchmakingPanel(true, -59, false, -90);
         }
         field_N = null;
         friendlistfull = null;
         field_T = null;
     }
 
-    final static void a(int param0) {
+    final static void initializeIntroRasterTables(int obfuscationGuard) {
         int var1_int = 0;
         double var2 = 0.0;
         int var4 = 0;
@@ -129,7 +129,7 @@ final class MessageDialogContent extends WidgetContainer implements ButtonActiva
             var2 = 15.0;
             InputIdleSupport.field_d[var1_int] = (int)(Math.pow((double)((float)var1_int / 256.0f), var2) * 255.0);
           }
-          if (param0 != -257) {
+          if (obfuscationGuard != -257) {
             return;
           }
           var4 = 256;
@@ -142,7 +142,7 @@ final class MessageDialogContent extends WidgetContainer implements ButtonActiva
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "wk.F(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "wk.F(" + obfuscationGuard + ')');
         }
     }
 
@@ -173,7 +173,7 @@ final class MessageDialogContent extends WidgetContainer implements ButtonActiva
         }
     }
 
-    final static void a(boolean param0, int param1, boolean param2, int param3) {
+    final static void updateRatedMatchmakingPanel(boolean param0, int param1, boolean param2, int param3) {
         int stackIn_11_0 = 0;
         String stackIn_25_0 = null;
         UiComponent stackIn_36_0 = null;
@@ -288,7 +288,7 @@ final class MessageDialogContent extends WidgetContainer implements ButtonActiva
                   UsernameSuggestionSupport.field_b[var13] = false;
                   var13++;
                 }
-                OpacityWidget.a(0, LogoFinalFrameLoader.field_c, -1, false, LookupRetrySupport.field_e, -1, -1, true);
+                OpacityWidget.searchAllowedGameOptions(0, LogoFinalFrameLoader.field_c, -1, false, LookupRetrySupport.field_e, -1, -1, true);
                 if (!(2 > TutorialController.field_i) &&
                   TextLineLayout.field_c[12]) {
                   PoolUiText.field_b = true;
@@ -361,7 +361,7 @@ final class MessageDialogContent extends WidgetContainer implements ButtonActiva
           var4_int = -10 % ((-1 - param3) / 35);
           if (null != LookupRetrySupport.field_e) {
             if (ContentTransitionDialog.field_ob.pressedButton != 0) {
-              ByteArrayNode.b(param1, -29);
+              ByteArrayNode.sendReturnToLobby(param1, -29);
             }
             if (0 != MeshBoundsSupport.field_c.pressedButton) {
               if (LobbyGame.field_Ac) {
@@ -370,7 +370,7 @@ final class MessageDialogContent extends WidgetContainer implements ButtonActiva
                 Js5ArchiveManager.sendMatchmakingRequest((byte) 81, param1);
               }
             }
-            RankingsScreen.a(param1, LookupRetrySupport.field_e, 0, true);
+            RankingsScreen.updateLobbyGameOptionControls(param1, LookupRetrySupport.field_e, 0, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -380,7 +380,7 @@ final class MessageDialogContent extends WidgetContainer implements ButtonActiva
         }
     }
 
-    final static boolean a(SocialListEntry param0, SocialListEntry param1, int param2) {
+    final static boolean isSocialEntryAfter(SocialListEntry first, SocialListEntry second, int obfuscationGuard) {
         int var3_int = 0;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
@@ -390,21 +390,21 @@ final class MessageDialogContent extends WidgetContainer implements ButtonActiva
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          var3_int = param0.insertionIndex - param1.insertionIndex;
-          if (param2 < 17) {
+          var3_int = first.insertionIndex - second.insertionIndex;
+          if (obfuscationGuard < 17) {
             field_N = (UiComponent) null;
           }
-          if (param0.serverName != LocalGameSetupScreen.field_J) {
-            if (null == param0.serverName) {
+          if (first.serverName != LocalGameSetupScreen.field_J) {
+            if (null == first.serverName) {
               var3_int += 200;
             }
           } else {
             var3_int -= 200;
           }
-          if (param1.serverName == LocalGameSetupScreen.field_J) {
+          if (second.serverName == LocalGameSetupScreen.field_J) {
             var3_int += 200;
           } else {
-            if (param1.serverName == null) {
+            if (second.serverName == null) {
               var3_int -= 200;
             }
           }
@@ -414,22 +414,22 @@ final class MessageDialogContent extends WidgetContainer implements ButtonActiva
           var3 = decompiledCaughtException;
           stackIn_18_0 = var3;
           stackIn_18_1 = new StringBuilder().append("wk.H(");
-          if (param0 == null) {
+          if (first == null) {
             stackIn_19_2 = "null";
           } else {
             stackIn_19_2 = "{...}";
           }
           stackIn_21_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',');
-          if (param1 == null) {
+          if (second == null) {
             stackIn_22_2 = "null";
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
-    final static void a(int param0, int param1, BitmapFont param2, int param3, BitmapFont param4, int param5, int param6, NineSliceFrame param7, int param8, int param9, NineSliceFrame param10, int param11, int param12, int param13, int param14, int param15, int param16, int param17, NineSliceFrame param18, int param19, int param20) {
+    final static void configureSharedNoticeAndChoiceStyle(int param0, int param1, BitmapFont param2, int param3, BitmapFont param4, int param5, int param6, NineSliceFrame param7, int param8, int param9, NineSliceFrame param10, int param11, int param12, int param13, int param14, int param15, int param16, int param17, NineSliceFrame param18, int param19, int param20) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -451,7 +451,7 @@ final class MessageDialogContent extends WidgetContainer implements ButtonActiva
             field_P = 121;
           }
           ClassicBallSkin.configureClientNoticeFrames((byte) -91, param1, param10, param7, param3, param14);
-          BitmapTextLayout.a(111, param15, param17, param18);
+          BitmapTextLayout.configureClientNoticeOuterFrame(111, param15, param17, param18);
           GradientPaletteSupport.setChoiceTextColors((byte) -96, param11, param20, param6);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

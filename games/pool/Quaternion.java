@@ -239,7 +239,7 @@ final class Quaternion {
         if (HighScoreSubmission.hasInputOverlay(-26)) {
           active = false;
         }
-        DraggableWidget.a(-114, active);
+        DraggableWidget.drawSlidingNotices(-114, active);
         if (obfuscationGuard == -19213) {
           AgeValidator.drawQuickChatOverlay((byte) -97);
           return;

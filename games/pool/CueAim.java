@@ -263,7 +263,7 @@ final class CueAim {
               var39 = (16711913 & var36 * var30) >>> 8 | -755040001 & var30 * var35 >>> 8;
               var38 = var38 + var32 * 65793;
               var39 = var39 + 65793 * var33;
-              GradientPaletteSupport.a((byte) -125, var27, var22, 255 & var37, var39 >> 16, var38 >> 8 & 255, var23, var38 >> 16, (var39 & 65528) >> 8, var37 >> 8 & 255, var38 & 255, var24, var37 >> 16, var25, var26, 255 & var39);
+              GradientPaletteSupport.fillGradientTriangleHalfBlend((byte) -125, var27, var22, 255 & var37, var39 >> 16, var38 >> 8 & 255, var23, var38 >> 16, (var39 & 65528) >> 8, var37 >> 8 & 255, var38 & 255, var24, var37 >> 16, var25, var26, 255 & var39);
             }
             var43++;
           }
@@ -283,7 +283,7 @@ final class CueAim {
     }
 
     final static void initializeSharedChatComponents(byte obfuscationGuard) {
-        PasswordValidator.a(-124, AlternateLongAndTextLoginPayload.field_n, AlignedIconLabel.field_Lb, DiskArchiveRequest.field_J, AccountStateQuery.field_m);
+        PasswordValidator.initializeChatComposer(-124, AlternateLongAndTextLoginPayload.field_n, AlignedIconLabel.field_Lb, DiskArchiveRequest.field_J, AccountStateQuery.field_m);
         if (obfuscationGuard > -97) {
           TriangleMesh var2 = (TriangleMesh) null;
           CueAim.drawLitMeshFaces(-66, 60, (TriangleMesh) null, -82, -71, 60, 97, 51);

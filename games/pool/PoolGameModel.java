@@ -287,7 +287,7 @@ final class PoolGameModel {
               for (var5 = 0; var5 < this.pockets.length; var5++) {
                 var6 = -this.pockets[var5].centerX + param1[var4_int].positionX;
                 var7 = -this.pockets[var5].centerY + param1[var4_int].positionY;
-                if (FullscreenFocusCanvas.multiplyFixedChecked((long)var6, (long)var6, false) + FullscreenFocusCanvas.multiplyFixedChecked((long)var7, (long)var7, false) < (long)LoginForm.a(324, (byte) 90)) {
+                if (FullscreenFocusCanvas.multiplyFixedChecked((long)var6, (long)var6, false) + FullscreenFocusCanvas.multiplyFixedChecked((long)var7, (long)var7, false) < (long)LoginForm.toFixed16(324, (byte) 90)) {
                   param1[var4_int].inPlay = false;
                   param1[var4_int].motionState = 0;
                   if (param1[var4_int].field_q != null) {
@@ -1541,7 +1541,7 @@ final class PoolGameModel {
             stackIn_4_1 = LogoMaterial.field_b;
           }
           DelayedServerPacket.layoutSlidingGamePanelsIntArgs(stackIn_3_0, stackIn_4_1);
-          IntegerSyntaxSupport.field_e.a(-40 + SceneNode.field_k.height - 2, SceneNode.field_k.width, 0, 0, (byte) -114);
+          IntegerSyntaxSupport.field_e.layoutTabbedInterface(-40 + SceneNode.field_k.height - 2, SceneNode.field_k.width, 0, 0, (byte) -114);
           MarkerSliderPainter.field_c.setBounds(0, 2147483647, 0, ProjectedLineSupport.field_d.width, ArchiveIndex.field_x);
           stackIn_6_0 = LoginRequiredScreen.field_M;
           stackIn_6_1 = 2 + ArchiveIndex.field_x;

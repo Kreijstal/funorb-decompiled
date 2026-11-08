@@ -467,7 +467,7 @@ final class SharedWidgetLayoutSupport {
                 var31 = var31 + ArchiveIndex.field_x;
               }
             }
-            var33 = AlternateLongAndTextLoginPayload.a(var32, var12.field_Fc, true);
+            var33 = AlternateLongAndTextLoginPayload.lobbyGameClosureMessage(var32, var12.field_Fc, true);
             var34 = var33;
             var34Lifetime1 = var33;
             if (var33 != null) {
@@ -545,7 +545,7 @@ final class SharedWidgetLayoutSupport {
                 continue;
               }
               if (var12.field_Tb.pressedButton == 0) {
-                PacketAvailabilitySupport.a((byte) -110, param4, var12, var32);
+                PacketAvailabilitySupport.openLobbyGameContextMenu((byte) -110, param4, var12, var32);
               } else {
                 if (var12.field_ec && (!var12.field_Dc ||
                   !var12.field_ic &&

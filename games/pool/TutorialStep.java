@@ -128,7 +128,7 @@ final class TutorialStep extends IntrusiveNode {
           this.field_z.bindAsRenderTarget();
           CollisionContact.field_h.setInlineSprites(AccountCreationForm.field_Z, LoginPayloadFactory.field_d);
           CollisionContact.field_h.drawParagraph(FaceNormal.highlightGlossaryTerms("</col>", this.field_p, (byte) 4, "<col=ccccff>"), 10, 7, this.field_n, this.field_t, 16777215, 3355443, 0, 1, this.field_y);
-          this.field_r = SocketArchiveNetworkClient.a(new int[]{this.field_y}, this.field_n, this.field_p, 7, CollisionContact.field_h, true, 10);
+          this.field_r = SocketArchiveNetworkClient.buildTextHotspotRegions(new int[]{this.field_y}, this.field_n, this.field_p, 7, CollisionContact.field_h, true, 10);
           OpacityWidget.field_P.bindAsRenderTarget(15100);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

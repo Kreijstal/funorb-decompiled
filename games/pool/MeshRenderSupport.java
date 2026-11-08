@@ -11,7 +11,7 @@ final class MeshRenderSupport {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard < 72) {
-            MeshRenderSupport.a(-96, 16, 11, false, (int[]) null, (int[]) null, (int[]) null, (int[]) null, -65, (int[]) null, (int[]) null, -114, 112, (int[]) null, (byte[]) null, (int[]) null, (int[]) null, 52, (int[]) null, -56, (int[]) null, (MeshBuilder) null, 52, (int[]) null);
+            MeshRenderSupport.splitMeshAcrossPlane(-96, 16, 11, false, (int[]) null, (int[]) null, (int[]) null, (int[]) null, -65, (int[]) null, (int[]) null, -114, 112, (int[]) null, (byte[]) null, (int[]) null, (int[]) null, 52, (int[]) null, -56, (int[]) null, (MeshBuilder) null, 52, (int[]) null);
           }
           stackIn_7_0 = !(LobbyPlayer.field_fc <= 250);
           return stackIn_7_0;
@@ -22,7 +22,7 @@ final class MeshRenderSupport {
         }
     }
 
-    final static void a(int param0, int param1, int param2, boolean param3, int[] param4, int[] param5, int[] param6, int[] param7, int param8, int[] param9, int[] param10, int param11, int param12, int[] param13, byte[] param14, int[] param15, int[] param16, int param17, int[] param18, int param19, int[] param20, MeshBuilder param21, int param22, int[] param23) {
+    final static void splitMeshAcrossPlane(int param0, int param1, int param2, boolean param3, int[] param4, int[] param5, int[] param6, int[] param7, int param8, int[] param9, int[] param10, int param11, int param12, int[] param13, byte[] param14, int[] param15, int[] param16, int param17, int[] param18, int param19, int[] param20, MeshBuilder param21, int param22, int[] param23) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -1060,7 +1060,7 @@ final class MeshRenderSupport {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard <= 53) {
-            MeshRenderSupport.a(-58, -76, -84, false, (int[]) null, (int[]) null, (int[]) null, (int[]) null, -35, (int[]) null, (int[]) null, -23, 17, (int[]) null, (byte[]) null, (int[]) null, (int[]) null, -54, (int[]) null, 18, (int[]) null, (MeshBuilder) null, 89, (int[]) null);
+            MeshRenderSupport.splitMeshAcrossPlane(-58, -76, -84, false, (int[]) null, (int[]) null, (int[]) null, (int[]) null, -35, (int[]) null, (int[]) null, -23, 17, (int[]) null, (byte[]) null, (int[]) null, (int[]) null, -54, (int[]) null, 18, (int[]) null, (MeshBuilder) null, 89, (int[]) null);
           }
           if (reverse) {
             stackIn_7_0 = CushionSegment.field_h;

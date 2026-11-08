@@ -27,7 +27,7 @@ final class ModelOriginSupport extends IntrusiveNode {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!TextLineLayout.a(groupId, archive, fileId, (byte) 121)) {
+          if (!TextLineLayout.loadSpriteSheet(groupId, archive, fileId, (byte) 121)) {
             return null;
           }
           var4_int = -39 / ((obfuscationGuard + 12) / 57);

@@ -91,7 +91,7 @@ final class AlignedIconLabel extends UiComponent {
         }
     }
 
-    final static void f(int param0) {
+    final static void readAccountStateResponse(int obfuscationGuard) {
         int var7 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
@@ -111,8 +111,8 @@ final class AlignedIconLabel extends UiComponent {
         try {
           var13 = PlayerContextMenu.field_e;
           var2 = var13.readUnsignedByte(-94);
-          if (param0 >= -102) {
-            AlignedIconLabel.f(44);
+          if (obfuscationGuard >= -102) {
+            AlignedIconLabel.readAccountStateResponse(44);
           }
           if (0 == var2) {
             var10 = MenuSelectionSupport.createEmptyGameStateWords(121);
@@ -160,14 +160,14 @@ final class AlignedIconLabel extends UiComponent {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "uo.F(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "uo.F(" + obfuscationGuard + ')');
         }
     }
 
     public static void releaseStatics(byte param0) {
         playerNameBallInHand = null;
         if (param0 != -102) {
-          AlignedIconLabel.c(true);
+          AlignedIconLabel.expireTransientMessageLines(true);
         }
         field_Mb = null;
         field_Lb = null;
@@ -222,7 +222,7 @@ final class AlignedIconLabel extends UiComponent {
         }
     }
 
-    final static void c(boolean param0) {
+    final static void expireTransientMessageLines(boolean obfuscationGuard) {
         IntrusiveDequeCursor var1 = null;
         ChatMessageLine var2 = null;
         RuntimeException decompiledCaughtException = null;
@@ -243,14 +243,14 @@ final class AlignedIconLabel extends UiComponent {
             }
             var2 = (ChatMessageLine) (var1.previous(-117));
           }
-          if (param0) {
+          if (obfuscationGuard) {
             AlignedIconLabel.releaseStatics((byte) 125);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1_ref), "uo.C(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1_ref), "uo.C(" + obfuscationGuard + ')');
         }
     }
 

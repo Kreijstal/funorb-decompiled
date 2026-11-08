@@ -25,7 +25,7 @@ final class LoginResponse {
             var6 = (ResourceArchive) null;
             LoginResponse.loadBinaryFont((ResourceArchive) null, -35, -8, (ResourceArchive) null, -32);
           }
-          if (!TextLineLayout.a(groupId, spriteArchive, fileId, (byte) 121)) {
+          if (!TextLineLayout.loadSpriteSheet(groupId, spriteArchive, fileId, (byte) 121)) {
             return null;
           }
           stackIn_6_0 = QuickChatHelpDialog.createDecodedBinaryFont((byte) 126, metricsArchive.getFileBytesUnkeyed(123, fileId, groupId));

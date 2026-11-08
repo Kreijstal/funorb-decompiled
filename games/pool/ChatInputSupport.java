@@ -15,15 +15,15 @@ final class ChatInputSupport {
     static int field_b;
     static String xsGame;
 
-    final static void a(byte param0, int param1) {
-        ByteRecordSubmission.field_q = CanvasInputAttachmentSupport.field_g[param1];
-        BufferedFile.field_b = CueAim.field_i[param1];
-        if (param0 < -55) {
-          SingleChildWidget.field_F = AwtEventQueueSupport.field_f[param1];
+    final static void selectLoadingLanguage(byte obfuscationGuard, int languageIndex) {
+        ByteRecordSubmission.field_q = CanvasInputAttachmentSupport.field_g[languageIndex];
+        BufferedFile.field_b = CueAim.field_i[languageIndex];
+        if (obfuscationGuard < -55) {
+          SingleChildWidget.field_F = AwtEventQueueSupport.field_f[languageIndex];
           return;
         }
         field_j = (byte[][]) null;
-        SingleChildWidget.field_F = AwtEventQueueSupport.field_f[param1];
+        SingleChildWidget.field_F = AwtEventQueueSupport.field_f[languageIndex];
     }
 
     final static boolean handleChatKey(int param0, int param1, int param2) {
@@ -110,7 +110,7 @@ final class ChatInputSupport {
                 if (LobbyPanelLayoutSupport.getChatFilterMode(5, var6) == 2) {
                   TextInputPainter.setChatFilterMode(1, var6, param0, (byte) -4);
                 }
-                AlternateLongAndTextLoginPayload.a((byte) -116, var5_ref_String, param2, ArrayWidgetGroup.field_I, CookieDateSupport.field_b, -1);
+                AlternateLongAndTextLoginPayload.sendChatOrQuickChat((byte) -116, var5_ref_String, param2, ArrayWidgetGroup.field_I, CookieDateSupport.field_b, -1);
               }
             }
           }
@@ -326,7 +326,7 @@ final class ChatInputSupport {
           }
           return;
         }
-        ChatInputSupport.a((byte) -3, 101);
+        ChatInputSupport.selectLoadingLanguage((byte) -3, 101);
         if (ArrayWidgetGroup.field_H) {
           DialogLayer.hideQuickChatOverlay(obfuscationGuard + 15976);
         }

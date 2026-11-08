@@ -440,17 +440,17 @@ final class ReportAbuseDialog extends UiComponent {
         return true;
     }
 
-    final static void a(int param0, int param1, int param2, int param3) {
+    final static void sendEncryptedBirthDate(int obfuscationGuard, int year, int month, int day) {
         FontPaletteSupport.field_b.position = 0;
         FontPaletteSupport.field_b.writeByte(12, false);
         FontPaletteSupport.field_b.writeInt(true, ValidationIconWidget.field_P.nextInt());
-        if (param0 >= -116) {
+        if (obfuscationGuard >= -116) {
           field_Wb = (char[]) null;
         }
         FontPaletteSupport.field_b.writeInt(true, ValidationIconWidget.field_P.nextInt());
-        FontPaletteSupport.field_b.writeByte(param3, false);
-        FontPaletteSupport.field_b.writeByte(param2, false);
-        FontPaletteSupport.field_b.writeShort((byte) -81, param1);
+        FontPaletteSupport.field_b.writeByte(day, false);
+        FontPaletteSupport.field_b.writeByte(month, false);
+        FontPaletteSupport.field_b.writeShort((byte) -81, year);
         FontPaletteSupport.field_b.encryptRsa(ArchiveLoadSequence.field_l, 124, UiWidget.field_q);
         JaggrabDownloader.field_j.writeCipheredOpcode(false, 18);
         int fieldTemp$0 = JaggrabDownloader.field_j.position + 1;
@@ -529,7 +529,7 @@ final class ReportAbuseDialog extends UiComponent {
         }
     }
 
-    final static int a(boolean param0, int param1, String param2) {
+    final static int measureMenuRowText(boolean selectable, int obfuscationGuard, String text) {
         RuntimeException var3 = null;
         int stackIn_4_0 = 0;
         int stackIn_6_0 = 0;
@@ -538,21 +538,21 @@ final class ReportAbuseDialog extends UiComponent {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 != 18) {
+          if (obfuscationGuard != 18) {
             ReportAbuseDialog.releaseStatics((byte) 15);
           }
-          if (!param0) {
-            stackIn_6_0 = QuickChatMenu.field_ec.stringWidth(param2);
+          if (!selectable) {
+            stackIn_6_0 = QuickChatMenu.field_ec.stringWidth(text);
             return stackIn_6_0;
           }
-          stackIn_4_0 = HotspotRectangle.field_t.stringWidth(param2);
+          stackIn_4_0 = HotspotRectangle.field_t.stringWidth(text);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_9_0 = var3;
-          stackIn_9_1 = new StringBuilder().append("wm.A(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_9_1 = new StringBuilder().append("wm.A(").append(selectable).append(',').append(obfuscationGuard).append(',');
+          if (text == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";

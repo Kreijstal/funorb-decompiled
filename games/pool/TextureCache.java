@@ -219,7 +219,7 @@ final class TextureCache implements TextureProvider {
         TranslatedUiText.field_m.serviceProviders((byte) -46);
         int var1 = 55 / ((25 - obfuscationGuard) / 40);
         if (!GameRules.field_c.processNetwork(-2147483648)) {
-          return SocketArchiveNetworkClient.g(-27108);
+          return SocketArchiveNetworkClient.pollArchiveConnection(-27108);
         }
         return 0;
     }

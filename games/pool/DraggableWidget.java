@@ -15,25 +15,25 @@ final class DraggableWidget extends SingleChildWidget {
     private boolean easeToLayoutPosition;
     static String[] field_S;
 
-    final static void a(int param0, boolean param1) {
+    final static void drawSlidingNotices(int obfuscationGuard, boolean active) {
         if (NodeHashTableIterator.field_a > 0 &&
           LoginPayloadKind.field_d) {
           SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.width, IntLookupQuery.field_q.screenY);
-          ModelOriginSupport.field_q.drawRoot((byte) -79, param1);
+          ModelOriginSupport.field_q.drawRoot((byte) -79, active);
         }
         if (PoolMatchController.field_z > 0) {
           if (AccountWelcomePanel.field_bb) {
             SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.width, IntLookupQuery.field_q.screenY);
-            DebugTuningSupport.field_b.drawRoot((byte) -79, param1);
+            DebugTuningSupport.field_b.drawRoot((byte) -79, active);
           }
         } else {
           if (LogoMaterial.field_b > 0 &&
             AccountWelcomePanel.field_bb) {
             SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.width, IntLookupQuery.field_q.screenY);
-            DebugTuningSupport.field_b.drawRoot((byte) -79, param1);
+            DebugTuningSupport.field_b.drawRoot((byte) -79, active);
           }
         }
-        if (param0 < -42) {
+        if (obfuscationGuard < -42) {
           return;
         }
         DraggableWidget.releaseStatics(-57);
@@ -107,7 +107,7 @@ final class DraggableWidget extends SingleChildWidget {
         playerYouFirstListHaveResigned = null;
         if (param0 >= -33) {
           PcmStreamMixer var2 = (PcmStreamMixer) null;
-          DraggableWidget.a((ResourceArchive) null, 96, false, (PcmStreamMixer) null);
+          DraggableWidget.initializeLogoIntro((ResourceArchive) null, 96, false, (PcmStreamMixer) null);
         }
     }
 
@@ -136,20 +136,20 @@ final class DraggableWidget extends SingleChildWidget {
         }
     }
 
-    final static void a(ResourceArchive param0, int param1, boolean param2, PcmStreamMixer param3) {
+    final static void initializeLogoIntro(ResourceArchive archive, int delayMillis, boolean obfuscationGuard, PcmStreamMixer mixer) {
         try {
-          ProjectedLineSupport.field_h = param1 * CachedArchiveSource.getTargetFramesPerSecond(-21282) / 1000;
-          if (param2) {
+          ProjectedLineSupport.field_h = delayMillis * CachedArchiveSource.getTargetFramesPerSecond(-21282) / 1000;
+          if (obfuscationGuard) {
             field_S = (String[]) null;
           }
-          LogoJingleLoader.loadLogoJingle(param0, 102);
-          HighScoreSubmission.loadLogoModel(param0, (byte) -106);
-          LogoFinalFrameLoader.loadFinalFrame((byte) -65, param0);
-          MessageDialogContent.a(-257);
+          LogoJingleLoader.loadLogoJingle(archive, 102);
+          HighScoreSubmission.loadLogoModel(archive, (byte) -106);
+          LogoFinalFrameLoader.loadFinalFrame((byte) -65, archive);
+          MessageDialogContent.initializeIntroRasterTables(-257);
           SpaceBallSkin.buildBlurredIntroSprite(23);
           LobbyPlayer.field_fc = 0 - ProjectedLineSupport.field_h;
         } catch (RuntimeException runtimeException) {
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "wj.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "wj.F(" + (archive != null ? "{...}" : "null") + ',' + delayMillis + ',' + obfuscationGuard + ',' + (mixer != null ? "{...}" : "null") + ')');
         }
     }
 

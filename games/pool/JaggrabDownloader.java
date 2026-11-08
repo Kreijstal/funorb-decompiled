@@ -127,7 +127,7 @@ final class JaggrabDownloader implements Runnable {
           QuickChatMenu.field_Yb = param8.vertexX;
           CollisionContact.field_w = param1.vertexZ;
           LobbyPanelLayoutSupport.field_b = param1.faceVertexB;
-          MeshRenderSupport.a(param0, param4, param6, true, (int[]) null, (int[]) null, param9.vertexX, param9.faceVertexA, param5, (int[]) null, param9.vertexZ, param2, param9.faceCount, param9.vertexY, param9.field_Q, param9.faceVertexC, (int[]) null, param7, param9.faceVertexB, param9.field_l, (int[]) null, param9, param9.vertexCount, (int[]) null);
+          MeshRenderSupport.splitMeshAcrossPlane(param0, param4, param6, true, (int[]) null, (int[]) null, param9.vertexX, param9.faceVertexA, param5, (int[]) null, param9.vertexZ, param2, param9.faceCount, param9.vertexY, param9.field_Q, param9.faceVertexC, (int[]) null, param7, param9.faceVertexB, param9.field_l, (int[]) null, param9, param9.vertexCount, (int[]) null);
           var10 = param8;
           param1.field_J = null;
           var10.field_J = null;

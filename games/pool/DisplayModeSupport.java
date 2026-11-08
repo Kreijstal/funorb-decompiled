@@ -148,7 +148,7 @@ final class DisplayModeSupport {
           var9 = var10;
           var3 = var9;
           if (param0 > -86) {
-            DisplayModeSupport.a(67, 62);
+            DisplayModeSupport.plasmaLightningPaletteForBall(67, 62);
           }
           var4 = new FullscreenDisplayMode[var10.length >> 2];
           for (var5 = 0; var4.length > var5; var5++) {
@@ -215,13 +215,13 @@ final class DisplayModeSupport {
         }
     }
 
-    final static int[] a(int param0, int param1) {
-        if (param1 > 111) {
-          return 0 == param0 ? AppletUrlSupport.field_i : param0 != 8 ? 8 > param0 ? LimitedRandomAccessFile.field_a : TransformRotationSupport.field_i : FontPaletteSupport.field_c;
+    final static int[] plasmaLightningPaletteForBall(int ballIndex, int obfuscationGuard) {
+        if (obfuscationGuard > 111) {
+          return 0 == ballIndex ? AppletUrlSupport.field_i : ballIndex != 8 ? 8 > ballIndex ? LimitedRandomAccessFile.field_a : TransformRotationSupport.field_i : FontPaletteSupport.field_c;
         }
         java.applet.Applet var3 = (java.applet.Applet) null;
         DisplayModeSupport.openSubscribePage((java.applet.Applet) null, 17);
-        return 0 == param0 ? AppletUrlSupport.field_i : param0 != 8 ? 8 > param0 ? LimitedRandomAccessFile.field_a : TransformRotationSupport.field_i : FontPaletteSupport.field_c;
+        return 0 == ballIndex ? AppletUrlSupport.field_i : ballIndex != 8 ? 8 > ballIndex ? LimitedRandomAccessFile.field_a : TransformRotationSupport.field_i : FontPaletteSupport.field_c;
     }
 
     static {

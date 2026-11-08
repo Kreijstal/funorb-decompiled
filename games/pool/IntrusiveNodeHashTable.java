@@ -101,7 +101,7 @@ final class IntrusiveNodeHashTable implements Iterable {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, Sprite[] param11, int param12, BitmapFont param13, int param14, int param15, int param16, int param17, Sprite[] param18, Sprite[] param19, BitmapFont param20) {
+    final static void configureSharedNoticeAndChoiceStyle(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, Sprite[] param11, int param12, BitmapFont param13, int param14, int param15, int param16, int param17, Sprite[] param18, Sprite[] param19, BitmapFont param20) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -119,9 +119,9 @@ final class IntrusiveNodeHashTable implements Iterable {
         try {
           if (param12 != -23994) {
             var22 = (java.applet.Applet) null;
-            IntrusiveNodeHashTable.a(-48, (java.applet.Applet) null);
+            IntrusiveNodeHashTable.updateBrowserNavigationLinks(-48, (java.applet.Applet) null);
           }
-          MessageDialogContent.a(param9, param5, param13, param8, param20, param4, param15, new NineSliceFrame(param11), param3, param17, new NineSliceFrame(param19), param10, param0, param2, param1, param7, 255, param6, new NineSliceFrame(param18), param16, param14);
+          MessageDialogContent.configureSharedNoticeAndChoiceStyle(param9, param5, param13, param8, param20, param4, param15, new NineSliceFrame(param11), param3, param17, new NineSliceFrame(param19), param10, param0, param2, param1, param7, 255, param6, new NineSliceFrame(param18), param16, param14);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -202,7 +202,7 @@ final class IntrusiveNodeHashTable implements Iterable {
         return (Iterator) ((Object) new NodeHashTableIterator(this));
     }
 
-    final static ChatMessage a(int param0, byte param1, int param2, int param3) {
+    final static ChatMessage updateChatHistoryAndPollMessage(int scrollRows, byte obfuscationGuard, int lineHeight, int left) {
         boolean stackIn_47_0 = false;
         Object var4;
         int var5;
@@ -251,7 +251,7 @@ final class IntrusiveNodeHashTable implements Iterable {
               var8_ref_pn.field_u.font = RatingTextState.field_c;
               var8_ref_pn.field_u.textColor = var12;
               var8_ref_pn.field_u.activeTextColor = var12 - (var12 >> 1 & 8355711) + ((TickClock.field_h.activeTextColor & 16711423) >> 1);
-              var6 = var6 + param2;
+              var6 = var6 + lineHeight;
             }
           } else {
             var8_ref_pn.field_u = null;
@@ -262,11 +262,11 @@ final class IntrusiveNodeHashTable implements Iterable {
           var9_ref_pn = RankingsProtocolSupport.field_e[var8];
           if (var9_ref_pn.field_u != null) {
             Js5ArchiveManager.field_b.content.addChild(-104, var9_ref_pn.field_u);
-            var9_ref_pn.field_u.setBounds(var7Lifetime1, 2147483647, param3, var9_ref_pn.field_u.getContentWidth(true), param2);
+            var9_ref_pn.field_u.setBounds(var7Lifetime1, 2147483647, left, var9_ref_pn.field_u.getContentWidth(true), lineHeight);
             if (var9_ref_pn.field_u.pressedButton != 0) {
               var4 = var9_ref_pn;
             }
-            var7Lifetime1 = var7Lifetime1 + param2;
+            var7Lifetime1 = var7Lifetime1 + lineHeight;
           }
         }
         var8Lifetime1 = Js5ArchiveManager.field_b.content.height + Js5ArchiveManager.field_b.content.remainingHeight + (-var7Lifetime1 + var6);
@@ -281,7 +281,7 @@ final class IntrusiveNodeHashTable implements Iterable {
           LoginTextSupport.field_b = true;
           Js5ArchiveManager.field_b.content.localY = -Js5ArchiveManager.field_b.content.height + Js5ArchiveManager.field_b.viewport.height;
         }
-        if (param1 > -58) {
+        if (obfuscationGuard > -58) {
           field_a = 102;
         }
         Js5ArchiveManager.field_b.content.remainingHeight = -Js5ArchiveManager.field_b.content.height + var7Lifetime1;
@@ -293,7 +293,7 @@ final class IntrusiveNodeHashTable implements Iterable {
         if (LoginTextSupport.field_b) {
           Js5ArchiveManager.field_b.content.remainingY = -Js5ArchiveManager.field_b.content.localY + var9Lifetime1;
         }
-        Js5ArchiveManager.field_b.updateScroll(-1207, param0 * (2 * param2), param2, true);
+        Js5ArchiveManager.field_b.updateScroll(-1207, scrollRows * (2 * lineHeight), lineHeight, true);
         stackIn_47_0 = (Js5ArchiveManager.field_b.content.localY + Js5ArchiveManager.field_b.content.remainingY == var9Lifetime1);
         LoginTextSupport.field_b = stackIn_47_0;
         return (ChatMessage) (var4);
@@ -344,7 +344,7 @@ final class IntrusiveNodeHashTable implements Iterable {
         }
     }
 
-    final static void a(int param0, java.applet.Applet param1) {
+    final static void updateBrowserNavigationLinks(int obfuscationGuard, java.applet.Applet applet) {
         try {
           RuntimeException stackIn_8_0 = null;
           StringBuilder stackIn_8_1 = null;
@@ -356,17 +356,17 @@ final class IntrusiveNodeHashTable implements Iterable {
           java.net.URL var4 = null;
           try {
             try {
-              var4 = param1.getCodeBase();
-              var3 = ModelInstance.rewriteAppletUrl((byte) -100, var4, param1).getFile();
-              JavaScriptBridge.callWindowFunctionWithArguments("updatelinks", new Object[]{"home", var3 + "home.ws"}, 98, param1);
-              JavaScriptBridge.callWindowFunctionWithArguments("updatelinks", new Object[]{"gamelist", var3 + "togamelist.ws"}, 70, param1);
-              JavaScriptBridge.callWindowFunctionWithArguments("updatelinks", new Object[]{"serverlist", var3 + "toserverlist.ws"}, 116, param1);
-              JavaScriptBridge.callWindowFunctionWithArguments("updatelinks", new Object[]{"options", var3 + "options.ws"}, param0 ^ 558370174, param1);
-              JavaScriptBridge.callWindowFunctionWithArguments("updatelinks", new Object[]{"terms", var3 + "terms.ws"}, param0 ^ 558370117, param1);
-              if (param0 != 558370049) {
+              var4 = applet.getCodeBase();
+              var3 = ModelInstance.rewriteAppletUrl((byte) -100, var4, applet).getFile();
+              JavaScriptBridge.callWindowFunctionWithArguments("updatelinks", new Object[]{"home", var3 + "home.ws"}, 98, applet);
+              JavaScriptBridge.callWindowFunctionWithArguments("updatelinks", new Object[]{"gamelist", var3 + "togamelist.ws"}, 70, applet);
+              JavaScriptBridge.callWindowFunctionWithArguments("updatelinks", new Object[]{"serverlist", var3 + "toserverlist.ws"}, 116, applet);
+              JavaScriptBridge.callWindowFunctionWithArguments("updatelinks", new Object[]{"options", var3 + "options.ws"}, obfuscationGuard ^ 558370174, applet);
+              JavaScriptBridge.callWindowFunctionWithArguments("updatelinks", new Object[]{"terms", var3 + "terms.ws"}, obfuscationGuard ^ 558370117, applet);
+              if (obfuscationGuard != 558370049) {
                 field_b = (Sprite[]) null;
               }
-              JavaScriptBridge.callWindowFunctionWithArguments("updatelinks", new Object[]{"privacy", var3 + "privacy.ws"}, 125, param1);
+              JavaScriptBridge.callWindowFunctionWithArguments("updatelinks", new Object[]{"privacy", var3 + "privacy.ws"}, 125, applet);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = decompiledCaughtException;
@@ -376,8 +376,8 @@ final class IntrusiveNodeHashTable implements Iterable {
             decompiledCaughtException = decompiledCaughtParameter1;
             var2_ref = (RuntimeException) (Object) decompiledCaughtException;
             stackIn_8_0 = var2_ref;
-            stackIn_8_1 = new StringBuilder().append("uk.G(").append(param0).append(',');
-            if (param1 == null) {
+            stackIn_8_1 = new StringBuilder().append("uk.G(").append(obfuscationGuard).append(',');
+            if (applet == null) {
               stackIn_9_2 = "null";
             } else {
               stackIn_9_2 = "{...}";

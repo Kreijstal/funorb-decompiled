@@ -34,7 +34,7 @@ final class TextLineLayout {
           return this.caretXs.length - 1;
         }
         var5 = (String) null;
-        TextLineLayout.a((String) null, (byte) -110, (String) null, 52);
+        TextLineLayout.restartActiveNotificationOrEnqueue((String) null, (byte) -110, (String) null, 52);
         for (var3Lifetime1 = 1; this.caretXs.length > var3Lifetime1; var3Lifetime1++) {
           if (param1 < this.caretXs[var3Lifetime1] + this.caretXs[var3Lifetime1 - 1] >> 1) {
             return -1 + var3Lifetime1;
@@ -67,7 +67,7 @@ final class TextLineLayout {
         }
     }
 
-    final static AnimatedNotification a(String param0, byte param1, String param2, int param3) {
+    final static AnimatedNotification restartActiveNotificationOrEnqueue(String secondLine, byte obfuscationGuard, String firstLine, int kind) {
         AnimatedNotification var4 = null;
         RuntimeException var4_ref = null;
         AnimatedNotification stackIn_10_0 = null;
@@ -79,15 +79,15 @@ final class TextLineLayout {
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 != 18) {
+          if (obfuscationGuard != 18) {
             TextLineLayout.getActiveCanvas((byte) -44);
           }
           if (MarkerSliderPainter.field_i.isEmpty(0)) {
-            stackIn_12_0 = TextHotspotRegion.enqueueNotificationIfAbsent(true, param3, param2, param0);
+            stackIn_12_0 = TextHotspotRegion.enqueueNotificationIfAbsent(true, kind, firstLine, secondLine);
             return stackIn_12_0;
           }
           var4 = (AnimatedNotification) (MarkerSliderPainter.field_i.last((byte) -88));
-          if (param3 == var4.field_m &&
+          if (kind == var4.field_m &&
             var4.field_H <= ByteRecordSubmission.field_m &&
             var4.field_H + var4.field_B > ByteRecordSubmission.field_m) {
             ByteRecordSubmission.field_m = var4.field_H;
@@ -99,22 +99,22 @@ final class TextLineLayout {
           var4_ref = decompiledCaughtException;
           stackIn_15_0 = var4_ref;
           stackIn_15_1 = new StringBuilder().append("vj.E(");
-          if (param0 == null) {
+          if (secondLine == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
           }
-          stackIn_18_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_18_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(obfuscationGuard).append(',');
+          if (firstLine == null) {
             stackIn_19_2 = "null";
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(kind).append(')').toString());
         }
     }
 
-    final static boolean a(int param0, ResourceArchive param1, int param2, byte param3) {
+    final static boolean loadSpriteSheet(int groupId, ResourceArchive archive, int fileId, byte obfuscationGuard) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;
@@ -123,13 +123,13 @@ final class TextLineLayout {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5 = param1.getFileBytesUnkeyed(param3 ^ 44, param2, param0);
+          var5 = archive.getFileBytesUnkeyed(obfuscationGuard ^ 44, fileId, groupId);
           var4 = var5;
           if (var5 == null) {
             return false;
           }
           ClientException.decodeSpriteSheet(true, var5);
-          if (param3 == 121) {
+          if (obfuscationGuard == 121) {
             return true;
           }
           ratingWon = (String) null;
@@ -138,17 +138,17 @@ final class TextLineLayout {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
           stackIn_10_0 = var4_ref;
-          stackIn_10_1 = new StringBuilder().append("vj.H(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_10_1 = new StringBuilder().append("vj.H(").append(groupId).append(',');
+          if (archive == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(fileId).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
-    final static PlayingSound a(byte param0, PcmSample param1) {
+    final static PlayingSound playSoundEffect(byte obfuscationGuard, PcmSample sample) {
         RuntimeException var2 = null;
         PlayingSound stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -156,17 +156,17 @@ final class TextLineLayout {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 != -27) {
+          if (obfuscationGuard != -27) {
             ratingWon = (String) null;
           }
-          stackIn_3_0 = DualLinkDequeIterator.registerSoundEffectStream(param0 ^ 24317, PcmSampleStream.createAtRatePercent(param1, 100, 96));
+          stackIn_3_0 = DualLinkDequeIterator.registerSoundEffectStream(obfuscationGuard ^ 24317, PcmSampleStream.createAtRatePercent(sample, 100, 96));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_6_0 = var2;
-          stackIn_6_1 = new StringBuilder().append("vj.C(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_6_1 = new StringBuilder().append("vj.C(").append(obfuscationGuard).append(',');
+          if (sample == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
@@ -178,7 +178,7 @@ final class TextLineLayout {
     final int rightEdge(int param0) {
         if (param0 > -9) {
           ResourceArchive var3 = (ResourceArchive) null;
-          TextLineLayout.a(-35, (ResourceArchive) null, 64, (byte) 45);
+          TextLineLayout.loadSpriteSheet(-35, (ResourceArchive) null, 64, (byte) 45);
           if (null != this.caretXs) {
             return this.caretXs.length == 0 ? 0 : this.caretXs[this.caretXs.length - 1];
           }

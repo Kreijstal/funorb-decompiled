@@ -732,7 +732,7 @@ class UiComponent extends UiComponentNode {
         return this.measureContentWidth(-126, 2147483647);
     }
 
-    final static Sprite a(int param0, ResourceArchive param1, int param2, int param3) {
+    final static Sprite loadDecodedSprite(int groupId, ResourceArchive archive, int obfuscationGuard, int fileId) {
         RuntimeException var4 = null;
         Object stackIn_4_0 = null;
         Sprite stackIn_6_0 = null;
@@ -741,10 +741,10 @@ class UiComponent extends UiComponentNode {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param2 >= -28) {
+          if (obfuscationGuard >= -28) {
             field_Ab = (TutorialController) null;
           }
-          if (TextLineLayout.a(param0, param1, param3, (byte) 121)) {
+          if (TextLineLayout.loadSpriteSheet(groupId, archive, fileId, (byte) 121)) {
             stackIn_6_0 = NameEntryPopup.createDecodedSprite((byte) 89);
             return stackIn_6_0;
           }
@@ -754,13 +754,13 @@ class UiComponent extends UiComponentNode {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_9_0 = var4;
-          stackIn_9_1 = new StringBuilder().append("vh.IA(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_9_1 = new StringBuilder().append("vh.IA(").append(groupId).append(',');
+          if (archive == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(obfuscationGuard).append(',').append(fileId).append(')').toString());
         }
     }
 

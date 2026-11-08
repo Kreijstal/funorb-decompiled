@@ -159,7 +159,7 @@ final class ProxyConnectorSupport {
               }
               var5 = null;
               if (MatchingTextValidator.field_m == 0) {
-                var5 = MultiHandleSliderWidget.a(var4, opcode, 51);
+                var5 = MultiHandleSliderWidget.requestAddFriend(var4, opcode, 51);
               }
               if (MatchingTextValidator.field_m == 1) {
                 var5 = HalloweenBallSkin.removeFriend((byte) 83, var4, opcode);

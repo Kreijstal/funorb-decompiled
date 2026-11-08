@@ -138,7 +138,7 @@ final class AchievementsScreen extends MenuScreen {
             if (null == PolarObject.field_g ||
               var6Lifetime1 != AlignedIconLabel.field_Qb) {
               PolarObject.field_g = FaceNormal.highlightGlossaryTerms("</col>", CanvasInputAttachmentSupport.achievementCriteria[var6Lifetime1], (byte) 4, "<col=aaaaff>");
-              ScrollPaneWithFooter.field_Lb = SocketArchiveNetworkClient.a(new int[]{var8}, 260, CanvasInputAttachmentSupport.achievementCriteria[var6Lifetime1], 260, CollisionContact.field_h, true, 225);
+              ScrollPaneWithFooter.field_Lb = SocketArchiveNetworkClient.buildTextHotspotRegions(new int[]{var8}, 260, CanvasInputAttachmentSupport.achievementCriteria[var6Lifetime1], 260, CollisionContact.field_h, true, 225);
               AlignedIconLabel.field_Qb = var6Lifetime1;
               IterableDualLinkDeque.field_b = CollisionContact.field_h.measureWrappedHeight(PolarObject.field_g, 260, var8);
             }
@@ -279,7 +279,7 @@ final class AchievementsScreen extends MenuScreen {
         int var3;
         LobbyGame.field_Gc = this.findIconAt(ReflectionReplySupport.field_i, param0, DebouncedValidationProvider.field_f, false);
         if (MatchingTextValidator.field_s == 1) {
-          TextLineLayout.a((byte) -27, BeveledFrameSpriteFactory.field_c[0]);
+          TextLineLayout.playSoundEffect((byte) -27, BeveledFrameSpriteFactory.field_c[0]);
           var3 = this.findIconAt(DialogLayer.field_W, param0, UsernameAvailabilityValidator.field_o, false);
           if (IntrusiveNodeHashTable.field_j == var3) {
             IntrusiveNodeHashTable.field_j = -1;

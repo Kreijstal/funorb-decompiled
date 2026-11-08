@@ -72,7 +72,7 @@ final class CachedArchiveSource extends ArchiveProvider {
         }
         if (param0 <= 82) {
           CharSequence var5 = (CharSequence) null;
-          CachedArchiveSource.a(false, (CharSequence) null, (byte) 71);
+          CachedArchiveSource.validateNameLengthAndSeparators(false, (CharSequence) null, (byte) 71);
         }
     }
 
@@ -100,7 +100,7 @@ final class CachedArchiveSource extends ArchiveProvider {
         return var3.getProgress(54);
     }
 
-    final static String a(boolean param0, CharSequence param1, byte param2) {
+    final static String validateNameLengthAndSeparators(boolean allowRepeatedSeparators, CharSequence name, byte obfuscationGuard) {
         int var6 = 0;
         String stackIn_3_0 = null;
         String stackIn_8_0 = null;
@@ -120,31 +120,31 @@ final class CachedArchiveSource extends ArchiveProvider {
         int var8 = 0;
         var8 = Pool.field_O;
         try {
-          if (param1 == null) {
+          if (name == null) {
             stackIn_3_0 = AchievementProtocolSupport.createAlertNamelength;
             return stackIn_3_0;
           }
-          var3_int = param1.length();
+          var3_int = name.length();
           if (var3_int >= 1 &&
             12 >= var3_int) {
-            var4 = TutorialController.normalizeDisplayName(91, param1);
+            var4 = TutorialController.normalizeDisplayName(91, name);
             if (var4 != null &&
               var4.length() >= 1) {
               if (!Js5ArchiveManager.isNameSeparator(0, var4.charAt(0)) &&
                 !Js5ArchiveManager.isNameSeparator(0, var4.charAt(var4.length() - 1))) {
                 var5 = 0;
-                if (param2 < 96) {
+                if (obfuscationGuard < 96) {
                   CachedArchiveSource.getTargetFramesPerSecond(-125);
                 }
-                for (var6 = 0; param1.length() > var6; var6++) {
-                  var7 = param1.charAt(var6);
+                for (var6 = 0; name.length() > var6; var6++) {
+                  var7 = name.charAt(var6);
                   if (Js5ArchiveManager.isNameSeparator(0, (char) var7)) {
                     var5++;
                   } else {
                     var5 = 0;
                   }
                   if (var5 >= 2 &&
-                    !param0) {
+                    !allowRepeatedSeparators) {
                     stackIn_30_0 = GzipDecoder.createAlertDoublespace;
                     return stackIn_30_0;
                   }
@@ -167,13 +167,13 @@ final class CachedArchiveSource extends ArchiveProvider {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_38_0 = var3;
-          stackIn_38_1 = new StringBuilder().append("up.K(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_38_1 = new StringBuilder().append("up.K(").append(allowRepeatedSeparators).append(',');
+          if (name == null) {
             stackIn_39_2 = "null";
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -184,7 +184,7 @@ final class CachedArchiveSource extends ArchiveProvider {
         return (int)(1000000000L / GzipDecoder.field_e);
     }
 
-    final static Sprite[] a(Sprite[] param0, int param1) {
+    final static Sprite[] useFullSpriteBounds(Sprite[] sprites, int obfuscationGuard) {
         int var2_int = 0;
         RuntimeException var2 = null;
         Sprite var3 = null;
@@ -197,30 +197,30 @@ final class CachedArchiveSource extends ArchiveProvider {
         RuntimeException decompiledCaughtException = null;
         var4 = Pool.field_O;
         try {
-          if (param1 != 12519) {
+          if (obfuscationGuard != 12519) {
             stackIn_3_0 = (Sprite[]) null;
             return stackIn_3_0;
           }
-          for (var2_int = 0; param0.length > var2_int; var2_int++) {
-            var3 = param0[var2_int];
-            param0[var2_int].field_B = 0;
+          for (var2_int = 0; sprites.length > var2_int; var2_int++) {
+            var3 = sprites[var2_int];
+            sprites[var2_int].field_B = 0;
             var3.field_G = 0;
-            param0[var2_int].field_w = param0[var2_int].field_z;
-            param0[var2_int].field_y = param0[var2_int].field_A;
+            sprites[var2_int].field_w = sprites[var2_int].field_z;
+            sprites[var2_int].field_y = sprites[var2_int].field_A;
           }
-          stackIn_8_0 = (Sprite[]) (param0);
+          stackIn_8_0 = (Sprite[]) (sprites);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_11_0 = var2;
           stackIn_11_1 = new StringBuilder().append("up.D(");
-          if (param0 == null) {
+          if (sprites == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

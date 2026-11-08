@@ -1035,7 +1035,7 @@ final class SpaceTableScene extends ModelTableScene {
             }
             var2 = 1;
           }
-          LabeledChildWidget.field_W.updatePointerSelection(AlternateLongAndTextLoginPayload.a(DialogLayer.field_W, UsernameAvailabilityValidator.field_o, 0), AlternateLongAndTextLoginPayload.a(ReflectionReplySupport.field_i, DebouncedValidationProvider.field_f, ~obfuscationGuard), -41);
+          LabeledChildWidget.field_W.updatePointerSelection(AlternateLongAndTextLoginPayload.choiceAtPoint(DialogLayer.field_W, UsernameAvailabilityValidator.field_o, 0), AlternateLongAndTextLoginPayload.choiceAtPoint(ReflectionReplySupport.field_i, DebouncedValidationProvider.field_f, ~obfuscationGuard), -41);
           if (LabeledChildWidget.field_W.isPressActivated((byte) 93)) {
             var1_int = 1;
           }

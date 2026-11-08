@@ -323,7 +323,7 @@ final class ProxySocketConnector extends SocketConnector {
           if (MeshBoundsSupport.field_d != null) {
             MeshBoundsSupport.field_d.dismissDialog(17);
           }
-          var1 = BitmapTextLayout.d(120);
+          var1 = BitmapTextLayout.localPlayerNameOrDefault(120);
           TextLineLayout.field_j = new LoginForm(var1, (String) null, true, false, param0);
           TabbedPane.field_Ub.showDialog(RasterSnapshot.field_n, 30000);
           RasterSnapshot.field_n.replaceContent(TextLineLayout.field_j, 30);

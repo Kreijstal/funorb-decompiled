@@ -20,7 +20,7 @@ final class PolarObject {
     private SceneNode field_h;
     static String field_g;
 
-    final void a(PolarTableScene param0, int param1) {
+    final void advanceFloatingObject(PolarTableScene scene, int obfuscationGuard) {
         int var5 = 0;
         float stackIn_20_1 = 0.0f;
         float stackIn_21_2 = 0.0f;
@@ -54,7 +54,7 @@ final class PolarObject {
             if (this.field_c != 0.0f) {
               var4_ref_hm = new Quaternion();
               var4_ref_hm.setFromAxisAngle(66, 0, 0, 1, (int)this.field_c);
-              this.field_e.multiplyBy(param1 ^ 9, var4_ref_hm);
+              this.field_e.multiplyBy(obfuscationGuard ^ 9, var4_ref_hm);
               this.field_e.toRotationMatrix(MenuSelectionSupport.field_b, -96);
               for (var5 = 0; var5 < this.field_h.field_b.length; var5++) {
                 this.field_h.field_b[var5].field_d[3] = MenuSelectionSupport.field_b[3];
@@ -91,7 +91,7 @@ final class PolarObject {
               decompiledFrameRemainder0 = false;
             }
             else {
-              this.field_h.bakeModels(param0.field_q, param0.field_e, param0.field_F, (byte) -88, param0.field_u, param0.field_C);
+              this.field_h.bakeModels(scene.field_q, scene.field_e, scene.field_F, (byte) -88, scene.field_u, scene.field_C);
               this.field_i = (float)((double)this.field_i * 0.99);
               this.field_a = (float)((double)this.field_a * 0.99);
               this.field_c = (float)((double)this.field_c * 0.99);
@@ -131,8 +131,8 @@ final class PolarObject {
             this.field_h.field_b[var7].field_d[2] = this.field_k[var7][2] + (UiComponentNode.sineFixed(DebugTuningSlider.field_f * this.field_l, (byte) 82) >> 13);
             var7++;
           }
-          if (param1 != 10) {
-            this.a(-110);
+          if (obfuscationGuard != 10) {
+            this.restoreModelTransforms(-110);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -140,16 +140,16 @@ final class PolarObject {
           var3 = decompiledCaughtException;
           stackIn_55_0 = var3;
           stackIn_55_1 = new StringBuilder().append("vm.A(");
-          if (param0 == null) {
+          if (scene == null) {
             stackIn_56_2 = "null";
           } else {
             stackIn_56_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
-    final void a(int param0) {
+    final void restoreModelTransforms(int obfuscationGuard) {
         int var3 = 0;
         int var2;
         int var4;
@@ -159,7 +159,7 @@ final class PolarObject {
         int[] var10;
         int[] var13;
         var7 = Pool.field_O;
-        var2 = -82 % ((param0 - 62) / 60);
+        var2 = -82 % ((obfuscationGuard - 62) / 60);
         for (var3 = 0; this.field_h.field_b.length > var3; var3++) {
           var10 = this.field_h.field_b[var3].field_d;
           var8 = var10;

@@ -183,7 +183,7 @@ final class StrongCacheEntry extends CacheEntry {
           if (obfuscationGuard <= 117) {
             return;
           }
-          while (MultiHandleSliderWidget.g((byte) -120)) {
+          while (MultiHandleSliderWidget.isReflectionCheckReady((byte) -120)) {
             var1.writeCipheredOpcode(false, 8);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;

@@ -109,10 +109,10 @@ final class MembershipBenefitsScreen extends MenuScreen {
     final void advanceScreen(int param0) {
         int var2 = 0;
         if (param0 == -1) {
-          var2 = StrongCacheEntry.advanceMembershipSlideshow(!StartupInterfaceSupport.a(11) ? true : false, (byte) 65);
+          var2 = StrongCacheEntry.advanceMembershipSlideshow(!StartupInterfaceSupport.deferLoginRetryAndCheckReconnect(11) ? true : false, (byte) 65);
         } else {
           MembershipBenefitsScreen.releaseStatics(false);
-          var2 = StrongCacheEntry.advanceMembershipSlideshow(!StartupInterfaceSupport.a(11) ? true : false, (byte) 65);
+          var2 = StrongCacheEntry.advanceMembershipSlideshow(!StartupInterfaceSupport.deferLoginRetryAndCheckReconnect(11) ? true : false, (byte) 65);
         }
         if (3 == var2) {
           if (MatchingTextValidator.field_u != null) {

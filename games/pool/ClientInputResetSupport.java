@@ -13,7 +13,7 @@ final class ClientInputResetSupport {
         if (TimeTrialSelectScreen.field_K != null) {
           CanvasInputSupport.detachInputListeners(TimeTrialSelectScreen.field_K, 0);
         }
-        LimitedRandomAccessFile.a(-22444);
+        LimitedRandomAccessFile.releaseKeyHandler(-22444);
         int var1 = 8 / ((param0 + 12) / 55);
         DebugOverlayLayoutSupport.detachMouseHandler(0);
         TextWidgetPainter.closeNetworkAndCacheResources((byte) 70);

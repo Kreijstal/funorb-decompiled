@@ -188,7 +188,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
             LoginEncryptionSupport.setAccountDialogResult(3, (byte) 121);
             this.dismissDialog(17);
           } else {
-            LoginForm.a("tochangedisplayname.ws", NanoTickClock.getApplet(97), false);
+            LoginForm.openAppletRelativeUrl("tochangedisplayname.ws", NanoTickClock.getApplet(97), false);
           }
           if (param0) {
             return;

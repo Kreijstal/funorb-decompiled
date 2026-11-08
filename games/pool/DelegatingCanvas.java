@@ -21,7 +21,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
           if (obfuscationGuard != 24888) {
             openinpopupwindow = (String) null;
           }
-          if (TextLineLayout.a(groupId, spriteArchive, fileId, (byte) 121)) {
+          if (TextLineLayout.loadSpriteSheet(groupId, spriteArchive, fileId, (byte) 121)) {
             stackIn_6_0 = ProjectedLineSupport.createAlphaFont(metricsArchive.getFileBytesUnkeyed(obfuscationGuard - 24766, fileId, groupId), true);
             return stackIn_6_0;
           }

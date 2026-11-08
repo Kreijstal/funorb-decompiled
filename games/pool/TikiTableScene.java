@@ -892,7 +892,7 @@ final class TikiTableScene extends ModelTableScene {
           var4[1] = ArchiveLoadSequence.bitwiseAnd(var30[1], -4);
           var4[0] = ArchiveLoadSequence.bitwiseAnd(var30[0], -4);
           var4[2] = ArchiveLoadSequence.bitwiseAnd(var30[2], -4);
-          this.e(true);
+          this.updateModelVisibilityAndDepth(true);
           for (var5 = 0; ModelOriginSupport.field_u.length > var5; var5++) {
             var19 = ModelOriginSupport.field_u[var5];
             var39 = ArchiveRequest.field_w;
@@ -1389,7 +1389,7 @@ final class TikiTableScene extends ModelTableScene {
           var4 = var2;
           var9 = ChatInputSupport.field_l;
           var6 = var3;
-          this.a(0, var6, 0, 0, 0, var4, var9);
+          this.createOpposedModelPair(0, var6, 0, 0, 0, var4, var9);
           var3 += 2;
           var2++;
         }
@@ -1399,7 +1399,7 @@ final class TikiTableScene extends ModelTableScene {
           var4Lifetime1 = var2Lifetime1;
           var10 = ChatInputSupport.field_l;
           var6Lifetime1 = var3;
-          this.a(0, var6Lifetime1, 0, 0, 0, var4Lifetime1, var10);
+          this.createOpposedModelPair(0, var6Lifetime1, 0, 0, 0, var4Lifetime1, var10);
           var3 += 2;
         }
         StartupInterfaceSupport.field_a = var3;
@@ -1408,7 +1408,7 @@ final class TikiTableScene extends ModelTableScene {
           var4Lifetime2 = var2Lifetime2;
           var11 = ChatInputSupport.field_l;
           var6Lifetime2 = var3;
-          this.a(var11, 0, 0, false, this.field_O[var4Lifetime2], var6Lifetime2, this.field_M[var4Lifetime2], 0);
+          this.createMirroredModelQuartet(var11, 0, 0, false, this.field_O[var4Lifetime2], var6Lifetime2, this.field_M[var4Lifetime2], 0);
           var3 += 4;
         }
         ReflectionReplySupport.field_j = var3;
@@ -1417,7 +1417,7 @@ final class TikiTableScene extends ModelTableScene {
           var4Lifetime3 = var2Lifetime3;
           var12 = ChatInputSupport.field_l;
           var6Lifetime3 = var3;
-          this.a(var12, 0, 0, false, this.field_O[var4Lifetime3], var6Lifetime3, this.field_M[var4Lifetime3], 0);
+          this.createMirroredModelQuartet(var12, 0, 0, false, this.field_O[var4Lifetime3], var6Lifetime3, this.field_M[var4Lifetime3], 0);
           var3 += 4;
         }
         CheckboxPainter.field_n = var3;
@@ -1426,14 +1426,14 @@ final class TikiTableScene extends ModelTableScene {
           var4Lifetime4 = var2Lifetime4;
           var13 = ChatInputSupport.field_l;
           var6Lifetime4 = var3;
-          this.a(var13, 0, 0, false, this.field_O[var4Lifetime4], var6Lifetime4, this.field_M[var4Lifetime4], 0);
+          this.createMirroredModelQuartet(var13, 0, 0, false, this.field_O[var4Lifetime4], var6Lifetime4, this.field_M[var4Lifetime4], 0);
           var3 += 4;
         }
         for (var2Lifetime5 = ThemeSelectScreen.field_S; MarkerSliderPainter.field_l > var2Lifetime5; var2Lifetime5++) {
           var4Lifetime5 = var2Lifetime5;
           var14 = ChatInputSupport.field_l;
           var6Lifetime5 = var3;
-          this.a(0, var6Lifetime5, 0, 0, 0, var4Lifetime5, var14);
+          this.createOpposedModelPair(0, var6Lifetime5, 0, 0, 0, var4Lifetime5, var14);
           var3 += 2;
         }
         UsernameSuggestionSupport.field_d = var3;

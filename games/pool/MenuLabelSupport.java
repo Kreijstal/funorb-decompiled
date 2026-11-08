@@ -73,9 +73,9 @@ final class MenuLabelSupport {
                 var3.field_w = DialRenderer.field_n;
                 var3.field_y = IntKeyLookup.field_a;
                 var3.field_x = BirthDatePromptPanel.field_F;
-                MusicCrossfadeStream.a(DialRenderer.field_n, var6_intLifetime1, true, BufferedSocket.field_f, IntKeyLookup.field_a, BirthDatePromptPanel.field_F);
+                MusicCrossfadeStream.appendRankingRecord(DialRenderer.field_n, var6_intLifetime1, true, BufferedSocket.field_f, IntKeyLookup.field_a, BirthDatePromptPanel.field_F);
               } else {
-                MusicCrossfadeStream.a(DialRenderer.field_n, var6_intLifetime1, true, BufferedSocket.field_f, IntKeyLookup.field_a, BirthDatePromptPanel.field_F);
+                MusicCrossfadeStream.appendRankingRecord(DialRenderer.field_n, var6_intLifetime1, true, BufferedSocket.field_f, IntKeyLookup.field_a, BirthDatePromptPanel.field_F);
               }
             }
             NetworkArchiveRequest.sortRankingsViews(true, var5);

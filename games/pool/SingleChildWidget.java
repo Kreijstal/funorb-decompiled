@@ -93,7 +93,7 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
         return null != this.findFocusTarget(-1) ? true : false;
     }
 
-    private final boolean a(UiWidget param0, int param1) {
+    private final boolean requestUnfocusedChildFocus(UiWidget requester, int obfuscationGuard) {
         RuntimeException var3 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -101,22 +101,22 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 != 10) {
+          if (obfuscationGuard != 10) {
             this.clearKeyboardFocus((byte) -92);
           }
-          stackIn_7_0 = (this.child != null) && (!this.child.hasKeyboardFocus(param1 + 48)) && (this.child.requestKeyboardFocus(param0, (byte) -119));
+          stackIn_7_0 = (this.child != null) && (!this.child.hasKeyboardFocus(obfuscationGuard + 48)) && (this.child.requestKeyboardFocus(requester, (byte) -119));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_10_0 = var3;
           stackIn_10_1 = new StringBuilder().append("ud.QA(");
-          if (param0 == null) {
+          if (requester == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -195,8 +195,8 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
         }
     }
 
-    final static void f(int param0) {
-        if (param0 >= ~BallDebugOverlay.field_b) {
+    final static void increaseSoundEffectVolume(int obfuscationGuard) {
+        if (obfuscationGuard >= ~BallDebugOverlay.field_b) {
           AgeValidator.setSoundEffectVolume(true, 256);
           return;
         }
@@ -204,7 +204,7 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
         AgeValidator.setSoundEffectVolume(true, -var1 + (32 + BallDebugOverlay.field_b));
     }
 
-    final static IndexedSprite a(IndexedSprite param0, byte param1, int[] param2) {
+    final static IndexedSprite copyIndexedSpriteWithPalette(IndexedSprite sprite, byte obfuscationGuard, int[] palette) {
         IndexedSprite var3 = null;
         RuntimeException var3_ref = null;
         IndexedSprite stackIn_3_0 = null;
@@ -216,17 +216,17 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
         RuntimeException decompiledCaughtException = null;
         try {
           var3 = new IndexedSprite(0, 0, 0);
-          var3.field_i = param2;
-          var3.trimX = param0.trimX;
-          var3.trimY = param0.trimY;
-          var3.fullHeight = param0.fullHeight;
-          if (param1 <= 23) {
+          var3.field_i = palette;
+          var3.trimX = sprite.trimX;
+          var3.trimY = sprite.trimY;
+          var3.fullHeight = sprite.fullHeight;
+          if (obfuscationGuard <= 23) {
             SingleChildWidget.doubleToFixed(0.5253398849342288, -86, 126);
           }
-          var3.width = param0.width;
-          var3.field_j = param0.field_j;
-          var3.height = param0.height;
-          var3.fullWidth = param0.fullWidth;
+          var3.width = sprite.width;
+          var3.field_j = sprite.field_j;
+          var3.height = sprite.height;
+          var3.fullWidth = sprite.fullWidth;
           stackIn_3_0 = var3;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -234,13 +234,13 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
           var3_ref = decompiledCaughtException;
           stackIn_6_0 = var3_ref;
           stackIn_6_1 = new StringBuilder().append("ud.KA(");
-          if (param0 == null) {
+          if (sprite == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(',');
+          if (palette == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
@@ -305,9 +305,9 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
             return false;
           }
           if (!TextLineLayout.field_c[81]) {
-            stackIn_12_0 = this.a(param3, 10);
+            stackIn_12_0 = this.requestUnfocusedChildFocus(param3, 10);
           } else {
-            stackIn_12_0 = this.a(param3, false);
+            stackIn_12_0 = this.requestUnfocusedChildFocus(param3, false);
           }
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -394,7 +394,7 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
         }
     }
 
-    private final boolean a(UiWidget param0, boolean param1) {
+    private final boolean requestUnfocusedChildFocus(UiWidget requester, boolean obfuscationGuard) {
         RuntimeException var3 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -402,22 +402,22 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1) {
+          if (obfuscationGuard) {
             field_G = (int[]) null;
           }
-          stackIn_7_0 = (null != this.child) && (!this.child.hasKeyboardFocus(120)) && (this.child.requestKeyboardFocus(param0, (byte) -109));
+          stackIn_7_0 = (null != this.child) && (!this.child.hasKeyboardFocus(120)) && (this.child.requestKeyboardFocus(requester, (byte) -109));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_10_0 = var3;
           stackIn_10_1 = new StringBuilder().append("ud.NA(");
-          if (param0 == null) {
+          if (requester == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

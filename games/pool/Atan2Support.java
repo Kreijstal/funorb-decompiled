@@ -148,7 +148,7 @@ final class Atan2Support {
           if (BirthDateInputWidget.containsForwardOrReversed(username, (byte) -111, password)) {
             return false;
           }
-          if (!StateIconLabel.a(23138, username, password)) {
+          if (!StateIconLabel.containsTextOrReverse(23138, username, password)) {
             return true;
           }
           return false;

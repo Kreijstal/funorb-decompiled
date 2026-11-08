@@ -26,12 +26,12 @@ final class ByteArrayNode extends IntrusiveNode {
         }
     }
 
-    final static void b(int param0, int param1) {
+    final static void sendReturnToLobby(int opcode, int obfuscationGuard) {
         CipherPacketBuffer var2 = JaggrabDownloader.field_j;
-        var2.writeCipheredOpcode(false, param0);
+        var2.writeCipheredOpcode(false, opcode);
         var2.writeByte(1, false);
         var2.writeByte(1, false);
-        if (param1 <= -1) {
+        if (obfuscationGuard <= -1) {
           return;
         }
         ByteArrayNode.nextPowerOfTwo(45, 53);

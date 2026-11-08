@@ -58,7 +58,7 @@ final class LobbyPanelLayoutSupport {
         field_h = SoftwareRasterizer.height;
         DelayedServerPacket.field_s = SoftwareRasterizer.width;
         IterableDualLinkDeque.layoutSlidingLobbyPanels((byte) -95);
-        ByteRecordSubmission.field_l.a(BufferedFile.field_a.height - 40 - 2, BufferedFile.field_a.width, 0, 0, (byte) -124);
+        ByteRecordSubmission.field_l.layoutTabbedInterface(BufferedFile.field_a.height - 40 - 2, BufferedFile.field_a.width, 0, 0, (byte) -124);
         SceneNodeEntry.field_m.setBounds(0, 2147483647, 0, BirthDateValidator.field_m.width, ArchiveIndex.field_x);
         int var1 = 2 + ArchiveIndex.field_x;
         QuickChatMenuSupport.field_e.setBounds(!AccountStateQuery.field_p ? 0 : var1, 2147483647, 0, BirthDateValidator.field_m.width, -(!AccountStateQuery.field_p ? 0 : var1) + BirthDateValidator.field_m.height);

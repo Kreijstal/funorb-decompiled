@@ -26,7 +26,7 @@ final class InstructionsScreen extends MenuScreen {
             var3 += 5;
             if (AchievementNotice.field_p != this.pageIndex ||
               null == LocalGameSetupScreen.field_K) {
-              ScrollPaneWithFooter.field_Lb = SocketArchiveNetworkClient.a(NameEntryPopup.field_Ob[ProgressBarWidget.field_S][this.pageIndex], var2, ArchiveLoadSequence.instructionsPages[this.pageIndex], var3 + 10, CollisionContact.field_h, true, SoftwareRasterizer.width - var2 >> 1);
+              ScrollPaneWithFooter.field_Lb = SocketArchiveNetworkClient.buildTextHotspotRegions(NameEntryPopup.field_Ob[ProgressBarWidget.field_S][this.pageIndex], var2, ArchiveLoadSequence.instructionsPages[this.pageIndex], var3 + 10, CollisionContact.field_h, true, SoftwareRasterizer.width - var2 >> 1);
               LocalGameSetupScreen.field_K = FaceNormal.highlightGlossaryTerms("</col>", ArchiveLoadSequence.instructionsPages[this.pageIndex], (byte) 4, "<col=aaaaff>");
               AchievementNotice.field_p = this.pageIndex;
             }
@@ -38,7 +38,7 @@ final class InstructionsScreen extends MenuScreen {
             var3 += 5;
             if (AchievementNotice.field_p != this.pageIndex ||
               null == LocalGameSetupScreen.field_K) {
-              ScrollPaneWithFooter.field_Lb = SocketArchiveNetworkClient.a(NameEntryPopup.field_Ob[ProgressBarWidget.field_S][this.pageIndex], var2, ArchiveLoadSequence.instructionsPages[this.pageIndex], var3 + 10, CollisionContact.field_h, true, SoftwareRasterizer.width - var2 >> 1);
+              ScrollPaneWithFooter.field_Lb = SocketArchiveNetworkClient.buildTextHotspotRegions(NameEntryPopup.field_Ob[ProgressBarWidget.field_S][this.pageIndex], var2, ArchiveLoadSequence.instructionsPages[this.pageIndex], var3 + 10, CollisionContact.field_h, true, SoftwareRasterizer.width - var2 >> 1);
               LocalGameSetupScreen.field_K = FaceNormal.highlightGlossaryTerms("</col>", ArchiveLoadSequence.instructionsPages[this.pageIndex], (byte) 4, "<col=aaaaff>");
               AchievementNotice.field_p = this.pageIndex;
             }
@@ -70,7 +70,7 @@ final class InstructionsScreen extends MenuScreen {
           var3Lifetime1 += 5;
           if (AchievementNotice.field_p != this.pageIndex ||
             null == LocalGameSetupScreen.field_K) {
-            ScrollPaneWithFooter.field_Lb = SocketArchiveNetworkClient.a(NameEntryPopup.field_Ob[ProgressBarWidget.field_S][this.pageIndex], var2, ArchiveLoadSequence.instructionsPages[this.pageIndex], var3Lifetime1 + 10, CollisionContact.field_h, true, SoftwareRasterizer.width - var2 >> 1);
+            ScrollPaneWithFooter.field_Lb = SocketArchiveNetworkClient.buildTextHotspotRegions(NameEntryPopup.field_Ob[ProgressBarWidget.field_S][this.pageIndex], var2, ArchiveLoadSequence.instructionsPages[this.pageIndex], var3Lifetime1 + 10, CollisionContact.field_h, true, SoftwareRasterizer.width - var2 >> 1);
             LocalGameSetupScreen.field_K = FaceNormal.highlightGlossaryTerms("</col>", ArchiveLoadSequence.instructionsPages[this.pageIndex], (byte) 4, "<col=aaaaff>");
             AchievementNotice.field_p = this.pageIndex;
           }
@@ -98,7 +98,7 @@ final class InstructionsScreen extends MenuScreen {
         VertexProjectionSupport.field_a.draw(SoftwareRasterizer.width - VertexProjectionSupport.field_a.field_z >> 1, -FreePlayRules.field_e.maxAscent + var3Lifetime1);
         var3Lifetime1 += 5;
         if (AchievementNotice.field_p != this.pageIndex) {
-          ScrollPaneWithFooter.field_Lb = SocketArchiveNetworkClient.a(NameEntryPopup.field_Ob[ProgressBarWidget.field_S][this.pageIndex], var2, ArchiveLoadSequence.instructionsPages[this.pageIndex], var3Lifetime1 + 10, CollisionContact.field_h, true, SoftwareRasterizer.width - var2 >> 1);
+          ScrollPaneWithFooter.field_Lb = SocketArchiveNetworkClient.buildTextHotspotRegions(NameEntryPopup.field_Ob[ProgressBarWidget.field_S][this.pageIndex], var2, ArchiveLoadSequence.instructionsPages[this.pageIndex], var3Lifetime1 + 10, CollisionContact.field_h, true, SoftwareRasterizer.width - var2 >> 1);
           LocalGameSetupScreen.field_K = FaceNormal.highlightGlossaryTerms("</col>", ArchiveLoadSequence.instructionsPages[this.pageIndex], (byte) 4, "<col=aaaaff>");
           AchievementNotice.field_p = this.pageIndex;
           CollisionContact.field_h.setInlineSprites(AccountCreationForm.field_Z, LoginPayloadFactory.field_d);
@@ -120,7 +120,7 @@ final class InstructionsScreen extends MenuScreen {
           return;
         }
         if (null == LocalGameSetupScreen.field_K) {
-          ScrollPaneWithFooter.field_Lb = SocketArchiveNetworkClient.a(NameEntryPopup.field_Ob[ProgressBarWidget.field_S][this.pageIndex], var2, ArchiveLoadSequence.instructionsPages[this.pageIndex], var3Lifetime1 + 10, CollisionContact.field_h, true, SoftwareRasterizer.width - var2 >> 1);
+          ScrollPaneWithFooter.field_Lb = SocketArchiveNetworkClient.buildTextHotspotRegions(NameEntryPopup.field_Ob[ProgressBarWidget.field_S][this.pageIndex], var2, ArchiveLoadSequence.instructionsPages[this.pageIndex], var3Lifetime1 + 10, CollisionContact.field_h, true, SoftwareRasterizer.width - var2 >> 1);
           LocalGameSetupScreen.field_K = FaceNormal.highlightGlossaryTerms("</col>", ArchiveLoadSequence.instructionsPages[this.pageIndex], (byte) 4, "<col=aaaaff>");
           AchievementNotice.field_p = this.pageIndex;
         }

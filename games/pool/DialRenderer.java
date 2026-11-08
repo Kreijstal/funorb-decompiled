@@ -17,25 +17,25 @@ final class DialRenderer implements WidgetPainter {
     private int field_d;
     static String messageGame;
 
-    final static void a(byte param0, int param1) {
-        BallDebugOverlay.field_i = param1 >> 4 & 3;
+    final static void unpackChatFilterModes(byte obfuscationGuard, int packed) {
+        BallDebugOverlay.field_i = packed >> 4 & 3;
         if (!(2 >= BallDebugOverlay.field_i)) {
           BallDebugOverlay.field_i = 2;
         }
-        FixedPointVectorSupport.field_e = param1 >> 2 & 3;
-        ResourceArchive.field_e = param1 & 3;
+        FixedPointVectorSupport.field_e = packed >> 2 & 3;
+        ResourceArchive.field_e = packed & 3;
         if (!(FixedPointVectorSupport.field_e <= 2)) {
           FixedPointVectorSupport.field_e = 2;
         }
         if (2 < ResourceArchive.field_e) {
           ResourceArchive.field_e = 2;
-          if (param0 != 78) {
+          if (obfuscationGuard != 78) {
             DialRenderer.projectY(111, (byte) -79, -26);
             return;
           }
           return;
         }
-        if (param0 == 78) {
+        if (obfuscationGuard == 78) {
           return;
         }
         DialRenderer.projectY(111, (byte) -79, -26);
