@@ -132,10 +132,10 @@ final class QuickChatCategoryDefinition extends DualLinkNode {
         }
     }
 
-    final static void a(boolean param0, java.awt.Canvas param1) {
+    final static void renderLoadingScreen(boolean param0, java.awt.Canvas param1) {
         try {
           if (11 == AchievementIcon.field_j) {
-            SecondaryHashTable.a(-1);
+            SecondaryHashTable.maybeClearSharedReferences(-1);
           }
           if (!param0) {
             QuickChatCategoryDefinition.clearSharedReferences((byte) -116);
@@ -154,7 +154,7 @@ final class QuickChatCategoryDefinition extends DualLinkNode {
         int unusedChildIndex;
         if (obfuscationGuard >= -86) {
           java.awt.Canvas unusedCanvas = (java.awt.Canvas) null;
-          QuickChatCategoryDefinition.a(false, (java.awt.Canvas) null);
+          QuickChatCategoryDefinition.renderLoadingScreen(false, (java.awt.Canvas) null);
         }
         if (null != this.phraseIds) {
           for (phraseIndex = 0; phraseIndex < this.phraseIds.length; phraseIndex++) {

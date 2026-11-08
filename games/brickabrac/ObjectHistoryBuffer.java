@@ -24,7 +24,7 @@ final class ObjectHistoryBuffer extends IntrusiveNode {
         field_k = null;
     }
 
-    final static String a(int param0, int param1, int param2, CharSequence[] param3) {
+    final static String joinCharSequenceRange(int param0, int param1, int param2, CharSequence[] param3) {
         int var6_int = 0;
         int var7 = 0;
         StringBuilder discarded$3 = null;

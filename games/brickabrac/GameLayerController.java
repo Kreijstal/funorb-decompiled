@@ -4,7 +4,7 @@
 interface GameLayerController {
     public abstract void renderGameLayer(int obfuscationGuard);
 
-    public abstract boolean b(int param0);
+    public abstract boolean capturesInput(int param0);
 
     public abstract boolean handleGameKey(int keyCode, char character, int obfuscationGuard);
 

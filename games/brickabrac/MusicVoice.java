@@ -115,7 +115,7 @@ final class MusicVoice extends IntrusiveNode {
         }
     }
 
-    final static void a(boolean param0, ScrollPane param1, int param2, int param3, int param4) {
+    final static void updateGamePlayerList(boolean param0, ScrollPane param1, int param2, int param3, int param4) {
         ScrollPane stackIn_68_0;
         int stackIn_68_1;
         int stackIn_68_2;
@@ -341,7 +341,7 @@ final class MusicVoice extends IntrusiveNode {
               }
               var26_int = 0;
               if (null != ClientResourceHelpers.currentLobbyGame &&
-                GameTransportHelpers.b((byte) 7) &&
+                GameTransportHelpers.isCurrentGameCompatible((byte) 7) &&
                 ~Widget.field_p != ~var13.playerId) {
                 if (null != var13.statusLabel.text) {
                   var27 = var13.statusLabel.getContentWidth(123) + 2 * LobbyGame.field_oc;
@@ -386,7 +386,7 @@ final class MusicVoice extends IntrusiveNode {
               }
               var20 = var20 + WidgetLayerBootstrap.uiRowHeight;
             }
-            var24 = SoundPlayback.a((byte) -110, var21, var13.removalStatus);
+            var24 = SoundPlayback.formatPlayerRemovalMessage((byte) -110, var21, var13.removalStatus);
             if (null != var24) {
               var25_intLifetime1 = var13.field_Tb.font.countWrappedLines(var24, -LobbyGame.field_oc + var13.width - LobbyGame.field_oc);
               var13.field_Tb.textAlpha256 = var13.statusChangeTick * 256 / AlternateNumericLoginCredentials.field_o;
@@ -533,7 +533,7 @@ final class MusicVoice extends IntrusiveNode {
                     continue;
                   }
                   if (param1 != TimedSplashScreen.field_u ||
-                    !GameTransportHelpers.b((byte) 7)) {
+                    !GameTransportHelpers.isCurrentGameCompatible((byte) 7)) {
                     if (var27Lifetime1 == 0) {
                       var25 = (String) (var25) + "<br>" + GamePresentationHelpers.formatIndexedText(ProducerFramebuffer.field_k, new String[]{(String) (var26)}, (byte) 103);
                     } else {
@@ -549,7 +549,7 @@ final class MusicVoice extends IntrusiveNode {
                   break;
                 }
                 if (TimedSplashScreen.field_u == param1 &&
-                  !GameTransportHelpers.b((byte) 7)) {
+                  !GameTransportHelpers.isCurrentGameCompatible((byte) 7)) {
                   var28 = ClientResourceHelpers.currentLobbyGame.displayName;
                   var25 = (String) (var25) + "<br>" + GamePresentationHelpers.formatIndexedText(UiComponentNode.field_y, new String[]{var28}, (byte) 103);
                 }
@@ -573,7 +573,7 @@ final class MusicVoice extends IntrusiveNode {
         }
     }
 
-    public static void c(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
@@ -633,7 +633,7 @@ final class MusicVoice extends IntrusiveNode {
         }
     }
 
-    final static boolean a(byte param0) {
+    final static boolean isTutorialPromptActive(byte param0) {
         RuntimeException var1 = null;
         boolean stackIn_10_0 = false;
         RuntimeException decompiledCaughtException = null;

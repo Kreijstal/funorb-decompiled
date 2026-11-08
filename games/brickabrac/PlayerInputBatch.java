@@ -58,7 +58,7 @@ final class PlayerInputBatch extends IntrusiveNode {
         }
         if (obfuscationGuard < -98) {
           if (0 == var1.length()) {
-            var1 = MultiValueSliderRenderer.b(100);
+            var1 = MultiValueSliderRenderer.getLocalPlayerNameOrEmpty(100);
           }
           if (var1.length() == 0) {
             var1 = LevelSelectScreen.field_t;
@@ -67,7 +67,7 @@ final class PlayerInputBatch extends IntrusiveNode {
         }
         halfBallSprite = (RgbSprite) null;
         if (0 == var1.length()) {
-          var1 = MultiValueSliderRenderer.b(100);
+          var1 = MultiValueSliderRenderer.getLocalPlayerNameOrEmpty(100);
         }
         if (var1.length() == 0) {
           var1 = LevelSelectScreen.field_t;

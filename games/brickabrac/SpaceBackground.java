@@ -18,7 +18,7 @@ final class SpaceBackground extends BackgroundScene {
               HalloweenBackground.renderBackdropSurface(1, 0, !obfuscationGuard ? true : false, colorIndex, ScreenNavigationHelpers.spaceFarSprite, var8);
               var8.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
             }
-            AchievementBrowserScreen.a(LobbyGame.spaceNearSprite, destinationX, scroll16, colorIndex, 640, 0, 0, var8.sprite, 1, LevelResultSubmission.spaceMidSprite, destinationY);
+            AchievementBrowserScreen.drawSpaceBackgroundLayers(LobbyGame.spaceNearSprite, destinationX, scroll16, colorIndex, 640, 0, 0, var8.sprite, 1, LevelResultSubmission.spaceMidSprite, destinationY);
           }
           return;
         }
@@ -32,7 +32,7 @@ final class SpaceBackground extends BackgroundScene {
           HalloweenBackground.renderBackdropSurface(1, 0, !obfuscationGuard ? true : false, colorIndex, ScreenNavigationHelpers.spaceFarSprite, var7);
           var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
         }
-        AchievementBrowserScreen.a(LobbyGame.spaceNearSprite, destinationX, scroll16, colorIndex, 640, 0, 0, var7.sprite, 1, LevelResultSubmission.spaceMidSprite, destinationY);
+        AchievementBrowserScreen.drawSpaceBackgroundLayers(LobbyGame.spaceNearSprite, destinationX, scroll16, colorIndex, 640, 0, 0, var7.sprite, 1, LevelResultSubmission.spaceMidSprite, destinationY);
     }
 
     final RgbSprite[] getLeverSprites(int obfuscationGuard) {
@@ -55,7 +55,7 @@ final class SpaceBackground extends BackgroundScene {
               HalloweenBackground.renderBackdropSurface(2, 0, false, colorIndex, NodeDequeCursor.field_b, var8);
               var8.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
             }
-            AchievementBrowserScreen.a(UiGeometryHelpers.spaceNearHalfSprite, destinationX, scroll16, colorIndex, 306, 0, 0, var8.sprite, 2, MusicVoiceMixer.field_t, destinationY);
+            AchievementBrowserScreen.drawSpaceBackgroundLayers(UiGeometryHelpers.spaceNearHalfSprite, destinationX, scroll16, colorIndex, 306, 0, 0, var8.sprite, 2, MusicVoiceMixer.field_t, destinationY);
           }
           return;
         }
@@ -68,7 +68,7 @@ final class SpaceBackground extends BackgroundScene {
             HalloweenBackground.renderBackdropSurface(2, 0, false, colorIndex, NodeDequeCursor.field_b, var7);
             var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
           }
-          AchievementBrowserScreen.a(UiGeometryHelpers.spaceNearHalfSprite, destinationX, scroll16, colorIndex, 306, 0, 0, var7.sprite, 2, MusicVoiceMixer.field_t, destinationY);
+          AchievementBrowserScreen.drawSpaceBackgroundLayers(UiGeometryHelpers.spaceNearHalfSprite, destinationX, scroll16, colorIndex, 306, 0, 0, var7.sprite, 2, MusicVoiceMixer.field_t, destinationY);
         }
     }
 

@@ -95,7 +95,7 @@ final class ResourcePreparationQueue {
         }
     }
 
-    final static void a(byte param0) {
+    final static void returnToLoginWithRegisteredEmail(byte param0) {
         String var2 = (String) null;
         Mesh3D.transitionToLoginPanel(true, (String) null, ReportAbuseDialog.field_cc);
         if (param0 == -30) {
@@ -104,7 +104,7 @@ final class ResourcePreparationQueue {
         field_a = (String) null;
     }
 
-    final static void b(int param0) {
+    final static void layoutLobbyPlayerList(int param0) {
         FarmBackground.field_v.setBounds(18, 0, 0, -(!PacketReceiveHelpers.field_e ? 0 : 2 + (DialogMessagePanel.uiScrollbarWidth + 2) + 40) + Ball.field_A.width, (byte) 64);
         GameUiController.field_a.setBounds(18, 0, -42 + Ball.field_A.width - DialogMessagePanel.uiScrollbarWidth, 42 + DialogMessagePanel.uiScrollbarWidth, (byte) 64);
         if (param0 >= 122) {
@@ -199,7 +199,7 @@ final class ResourcePreparationQueue {
           completedUnits = (float)entryPercent / 100.0f + (float)(this.completedEntries + 1);
           this.scaledProgress = (float)this.progressScale * completedUnits / (float)(1 + this.entryCount);
           if (obfuscationGuard != -22269) {
-            ResourcePreparationQueue.b(116);
+            ResourcePreparationQueue.layoutLobbyPlayerList(116);
           }
           if (entryPercent == 0) {
             this.statusText = entry.waitingCaption;

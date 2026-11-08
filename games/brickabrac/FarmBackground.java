@@ -106,7 +106,7 @@ final class FarmBackground extends BackgroundScene {
         MouseInput.farmFarSprite = SpriteInputHelpers.loadRgbSpriteByName("farm", "farm_far", (byte) -78, AchievementIcon.backgroundSpriteArchive);
         MultiplayerExitScreen.farmSmallSprite = SpriteInputHelpers.loadRgbSpriteByName("farm", "farm_small", (byte) 106, AchievementIcon.backgroundSpriteArchive);
         if (obfuscationGuard) {
-          FarmBackground.g(-29);
+          FarmBackground.showConnectionMessageDialog(-29);
         }
         ActivityIndicatorWidget.field_D = UiGeometryHelpers.createScaledHalfSizeSprite(0, LevelPackCard.farmNearSprite);
         WidgetTextLayout.field_b = UiGeometryHelpers.createScaledHalfSizeSprite(0, FontRequestHelpers.farmMidSprite);
@@ -296,9 +296,9 @@ final class FarmBackground extends BackgroundScene {
         return var2;
     }
 
-    final static void g(int param0) {
+    final static void showConnectionMessageDialog(int param0) {
         if (10 == AchievementIcon.field_j ||
-          !ReportAbuseDialog.i(0)) {
+          !ReportAbuseDialog.constantTrue(0)) {
           DialogMessagePanel.showAccountMessageDialog(6846);
           AchievementIcon.field_j = 11;
         }

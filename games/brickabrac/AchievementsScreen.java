@@ -29,7 +29,7 @@ final class AchievementsScreen extends AchievementBrowserScreen {
         RuntimeException var3_ref = null;
         var5 = BrickABrac.field_J ? 1 : 0;
         try {
-          var3 = AgeValidator.a(param1, param2, 3);
+          var3 = AgeValidator.validatePlayerNameFormat(param1, param2, 3);
           if (var3 != null) {
             stackIn_4_0 = var3;
             return stackIn_4_0;

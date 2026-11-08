@@ -63,7 +63,7 @@ final class RankingsScreen extends MenuScreen {
           var5.width = var2Lifetime1;
           var5.height = this.getButtonHeight((byte) -86, 2);
         } else {
-          this.e(2);
+          this.layoutButtonsInCenteredRow(2);
         }
         if (!obfuscationGuard) {
           rankingWins = (int[]) null;
@@ -80,7 +80,7 @@ final class RankingsScreen extends MenuScreen {
 
     final void advanceScreen(boolean updateFlag, boolean inputEnabled, int obfuscationGuard) {
         super.advanceScreen(updateFlag, inputEnabled, -94);
-        if (QuickChatMenu.h(-26090)) {
+        if (QuickChatMenu.isGuestSession(-26090)) {
           return;
         }
         if (obfuscationGuard >= -52) {
@@ -112,8 +112,8 @@ final class RankingsScreen extends MenuScreen {
         }
     }
 
-    final static void a(byte param0, boolean param1) {
-        ArrayWidgetGroup.a((byte) -16, false, param1);
+    final static void showLoginPanelNoMessage(byte param0, boolean param1) {
+        ArrayWidgetGroup.showLoginPanelWithoutMessage((byte) -16, false, param1);
         if (param0 >= -61) {
           rankingWins = (int[]) null;
         }
@@ -133,7 +133,7 @@ final class RankingsScreen extends MenuScreen {
         PlayerNameChooserPanel.field_N = 10 + PasswordFieldRenderer.field_D.measureText("10. ");
         var8 = new String[]{QuickChatCategoryRegistry.field_e, NodeDeque.field_c, WidgetPaintStyle.field_e, ScrollPaneWithFooter.field_Vb, BufferedFile.field_p};
         var9 = var8;
-        var2 = ContextActionController.field_g.measureText(IntrusiveNode.a((CharSequence[]) ((Object) var9), true));
+        var2 = ContextActionController.field_g.measureText(IntrusiveNode.joinCharSequences((CharSequence[]) ((Object) var9), true));
         var3 = 582;
         var4 = 182;
         var5 = (-var4 + (var3 - var2)) / 5;
@@ -152,7 +152,7 @@ final class RankingsScreen extends MenuScreen {
         }
     }
 
-    final static void f(int param0) {
+    final static void decreaseMusicVolume(int param0) {
         if (param0 != -1) {
           RgbSprite var2 = (RgbSprite) null;
           RankingsScreen.renderBackdropSurface((RasterCacheSurface) null, -117, -10, (RgbSprite) null, -120, 52);
@@ -162,14 +162,14 @@ final class RankingsScreen extends MenuScreen {
 
     final static void drawOverlayBackdrop(boolean param0, int param1, boolean param2) {
         if (param1 >= -51) {
-          RankingsScreen.a((byte) -69, false);
+          RankingsScreen.showLoginPanelNoMessage((byte) -69, false);
         }
         if (param2) {
           Rasterizer2D.fillRectangleAlpha(0, 0, Rasterizer2D.width, Rasterizer2D.height, 0, 192);
         } else {
           Rasterizer2D.clear();
         }
-        HalfRgbBlendHelpers.a(param2, -1);
+        HalfRgbBlendHelpers.drawRootWidgetLayers(param2, -1);
     }
 
     final boolean handleMenuAction(int buttonIndex, boolean inputFlag, byte obfuscationGuard) {
@@ -219,11 +219,11 @@ final class RankingsScreen extends MenuScreen {
         Object var4Lifetime1;
         var9 = BrickABrac.field_J ? 1 : 0;
         super.drawScreen((byte) -101);
-        GzipInflater.a(550, 5, 243, 5, 140, (byte) -62, 45);
+        GzipInflater.drawMenuPanel(550, 5, 243, 5, 140, (byte) -62, 45);
         AchievementMaskRequest.drawHorizontallyCenteredSprite(this.screenId, 19);
         this.drawEnabledButtons(0);
-        if (QuickChatMenu.h(-26090)) {
-          NumericLoginCredentials.a((byte) 97, DateFieldsWidget.field_N);
+        if (QuickChatMenu.isGuestSession(-26090)) {
+          NumericLoginCredentials.drawRankingsStatusText((byte) 97, DateFieldsWidget.field_N);
           return;
         }
         var2 = 149 + ContextActionController.field_g.capHeight;
@@ -271,7 +271,7 @@ final class RankingsScreen extends MenuScreen {
           var4Lifetime1 = BackgroundSurfaceHelpers.field_a;
         }
         if (var4Lifetime1 != null) {
-          NumericLoginCredentials.a((byte) 119, (String) (var4Lifetime1));
+          NumericLoginCredentials.drawRankingsStatusText((byte) 119, (String) (var4Lifetime1));
         }
         return;
     }
@@ -329,7 +329,7 @@ final class RankingsScreen extends MenuScreen {
           this.selection.navigateHorizontal(0, -1);
         }
         if (obfuscationGuard != -120) {
-          RankingsScreen.f(0);
+          RankingsScreen.decreaseMusicVolume(0);
         }
     }
 

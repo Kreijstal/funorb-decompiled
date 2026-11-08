@@ -45,7 +45,7 @@ final class JungleBackground extends BackgroundScene {
         return StatefulWidgetRenderer.jungleCentreSprites[scaleDivisor - 1];
     }
 
-    final static void a(int param0, LobbyGame param1, boolean param2, boolean param3) {
+    final static void updateGameOptionsPanel(int param0, LobbyGame param1, boolean param2, boolean param3) {
         AlignedIconLabel dupTemp$0 = null;
         AlignedIconLabel[] dupTemp$1 = null;
         int stackIn_6_0 = 0;
@@ -181,7 +181,7 @@ final class JungleBackground extends BackgroundScene {
           }
           if (!param2 ||
             var26 != 0) {
-            if (!GameTransportHelpers.b((byte) 7)) {
+            if (!GameTransportHelpers.isCurrentGameCompatible((byte) 7)) {
               stackIn_13_0 = 0;
             } else {
               stackIn_13_0 = (!param1.started) ? 1 : 0;
@@ -220,7 +220,7 @@ final class JungleBackground extends BackgroundScene {
               if (stackIn_40_0 == 0) {
                 break;
               }
-              if (!GameTransportHelpers.b((byte) 7)) {
+              if (!GameTransportHelpers.isCurrentGameCompatible((byte) 7)) {
                 WidgetTextLayout.field_e = GamePresentationHelpers.formatIndexedText(ChocolateBackground.field_t, new String[]{ClientResourceHelpers.currentLobbyGame.displayName}, (byte) 103);
                 if (var26 == 0) {
                   break;
@@ -543,7 +543,7 @@ final class JungleBackground extends BackgroundScene {
                       var17_int++;
                       continue;
                     }
-                    GameSettingConstraintHelpers.a(param2, param1, var9, -1, -1, 0, var7, 0);
+                    GameSettingConstraintHelpers.findValidSettingCombination(param2, param1, var9, -1, -1, 0, var7, 0);
                     if (2 <= QuickChatHelpDialog.loginPrivilegeByteOne &&
                       IntArrayRequest.heldKeys[12]) {
                       MeshAttributeRecord.field_g = true;
@@ -704,7 +704,7 @@ final class JungleBackground extends BackgroundScene {
                   }
                   if (var21 != null) {
                     var21 = "<col=A00000>" + (String) (var21);
-                    var31 = LoadingProgressDialog.a("<br><col=A00000>", (String) (var21), true, "<br>");
+                    var31 = LoadingProgressDialog.replaceAllOccurrences("<br><col=A00000>", (String) (var21), true, "<br>");
                     if (var20 != null) {
                       var20 = (String) (var20) + "<br>" + var31;
                     } else {
@@ -811,7 +811,7 @@ final class JungleBackground extends BackgroundScene {
         LobbyGame var3;
         if (obfuscationGuard >= -91) {
           var3 = (LobbyGame) null;
-          JungleBackground.a(81, (LobbyGame) null, true, true);
+          JungleBackground.updateGameOptionsPanel(81, (LobbyGame) null, true, true);
         }
         stackIn_13_0 = (null != SocialListResponseHelpers.jungleNearSprite) && (null != MultiValueSliderRenderer.jungleMidSprite) && (WidgetLayerBootstrap.jungleFarSprite != null) && (null != Brick.jungleSmallSprite) && (null != WidgetTextLayout.jungleCharacterSprite) && (DualLinkNode.jungleCapsSprites != null) && (DualLinkIterator.jungleSegsSprites != null) && (null != StatefulWidgetRenderer.jungleCentreSprites);
         return stackIn_13_0;

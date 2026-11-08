@@ -49,10 +49,10 @@ final class NinjaBackground extends BackgroundScene {
         }
         RasterCacheSurface var6 = PowerUp.selectBackgroundSurface960(this.sceneId, colorIndex, -20777);
         if (!var6.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-          JavaRandomHelpers.a(0, GameTransportHelpers.ninjaFarSprite, true, colorIndex, var6, 1);
+          JavaRandomHelpers.renderNinjaBackgroundSurface(0, GameTransportHelpers.ninjaFarSprite, true, colorIndex, var6, 1);
           var6.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
         }
-        ByteStorage.a(var6.sprite, (byte) -78, destinationY, 640, LegacyUtf8Decoder.ninjaNearSprite, CanvasInputHelpers.ninjaMidSprite, scroll16, 0, colorIndex, destinationX, 1);
+        ByteStorage.drawNinjaParallaxLayers(var6.sprite, (byte) -78, destinationY, 640, LegacyUtf8Decoder.ninjaNearSprite, CanvasInputHelpers.ninjaMidSprite, scroll16, 0, colorIndex, destinationX, 1);
     }
 
     NinjaBackground(int sceneId, String musicName, String soundEffectPrefix, int soundEffectCount) {
@@ -161,10 +161,10 @@ final class NinjaBackground extends BackgroundScene {
         }
         RasterCacheSurface var8 = BackgroundSurfaceHelpers.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) 120);
         if (!var8.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-          JavaRandomHelpers.a(0, CalendarMatchmakingState.field_c, true, colorIndex, var8, 2);
+          JavaRandomHelpers.renderNinjaBackgroundSurface(0, CalendarMatchmakingState.field_c, true, colorIndex, var8, 2);
           var8.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
         } else {
-          ByteStorage.a(var8.sprite, (byte) -78, destinationY, 306, AppletFlowHelpers.field_h, SocialListEntry.field_Zb, scroll16, 0, colorIndex, destinationX, 2);
+          ByteStorage.drawNinjaParallaxLayers(var8.sprite, (byte) -78, destinationY, 306, AppletFlowHelpers.field_h, SocialListEntry.field_Zb, scroll16, 0, colorIndex, destinationX, 2);
           if (obfuscationGuard > -84) {
             var7Lifetime1 = (ResourceArchive) null;
             NinjaBackground.loadRgbSprites(90, 38, (ResourceArchive) null, true);
@@ -172,7 +172,7 @@ final class NinjaBackground extends BackgroundScene {
           }
           return;
         }
-        ByteStorage.a(var8.sprite, (byte) -78, destinationY, 306, AppletFlowHelpers.field_h, SocialListEntry.field_Zb, scroll16, 0, colorIndex, destinationX, 2);
+        ByteStorage.drawNinjaParallaxLayers(var8.sprite, (byte) -78, destinationY, 306, AppletFlowHelpers.field_h, SocialListEntry.field_Zb, scroll16, 0, colorIndex, destinationX, 2);
         if (obfuscationGuard <= -84) {
           return;
         }
@@ -203,19 +203,19 @@ final class NinjaBackground extends BackgroundScene {
           return PacketReceiveHelpers.field_a.handleKeyInput(ResourceArchiveFactory.currentKeyCharacter, MeshAttributeRecord.currentKeyCode, true);
         }
         if (TooltipSprite.quickChatMenuOpen) {
-          return InteractiveGameClient.a(argument1, 102, argument0);
+          return InteractiveGameClient.handleQuickChatKey(argument1, 102, argument0);
         }
-        if (BytePayloadSubmission.a(argument1, 11, argument0)) {
+        if (BytePayloadSubmission.handleChatShortcutKey(argument1, 11, argument0)) {
           return true;
         }
         if (PlayerNameChooserPanel.field_I) {
           return false;
         }
         if (obfuscationGuard == 108) {
-          return ButtonWidgetRenderer.a(false, argument3, argument1);
+          return ButtonWidgetRenderer.handleChatInputKey(false, argument3, argument1);
         }
         parisNearSprite = (RgbSprite) null;
-        return ButtonWidgetRenderer.a(false, argument3, argument1);
+        return ButtonWidgetRenderer.handleChatInputKey(false, argument3, argument1);
     }
 
     static {

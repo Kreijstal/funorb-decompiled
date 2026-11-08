@@ -50,7 +50,7 @@ final class NanoGameClock extends GameClock {
         }
         int var1 = WidgetLayerBootstrap.uiRowHeight + 2;
         Ball.field_A.setBounds(-(!PacketReceiveHelpers.field_e ? 0 : var1) + RectangleBody.field_q.height, !PacketReceiveHelpers.field_e ? 0 : var1, 0, RectangleBody.field_q.width, (byte) 64);
-        ResourcePreparationQueue.b(124);
+        ResourcePreparationQueue.layoutLobbyPlayerList(124);
         HighscorePackSelector.field_k.setBounds(40, ContentTransitionLayer.field_gb.height - 40, 0, ContentTransitionLayer.field_gb.width, (byte) 64);
         RasterStackHelpers.field_b.setBounds(30, 0, 0, FontRequestHelpers.field_a.width, (byte) 64);
         PasswordTooltipHelpers.field_e.setBounds(-72 + FontRequestHelpers.field_a.height, 30, 0, FontRequestHelpers.field_a.width, (byte) 64);

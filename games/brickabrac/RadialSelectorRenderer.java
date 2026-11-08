@@ -142,7 +142,7 @@ final class RadialSelectorRenderer implements WidgetRenderer {
         }
     }
 
-    final static void a(int param0, String param1) {
+    final static void setChosenPlayerName(int param0, String param1) {
         try {
           ParisBackground.field_t = param1;
           int var2_int = 7 / ((-10 - param0) / 51);
@@ -165,7 +165,7 @@ final class RadialSelectorRenderer implements WidgetRenderer {
         field_h = null;
     }
 
-    final static void a(int param0, byte[] param1, ResourceArchive param2, String[] param3, int param4, boolean param5, RgbSprite[][] param6, ResourceArchive param7, int param8, int[] param9, String[] param10, RgbSprite[][] param11, IndexedSprite[] param12, int param13, byte[] param14, String[][] param15, String[] param16, String[][] param17, int[] param18, ResourceArchive param19) {
+    final static void initializeLobbyUi(int param0, byte[] param1, ResourceArchive param2, String[] param3, int param4, boolean param5, RgbSprite[][] param6, ResourceArchive param7, int param8, int[] param9, String[] param10, RgbSprite[][] param11, IndexedSprite[] param12, int param13, byte[] param14, String[][] param15, String[] param16, String[][] param17, int[] param18, ResourceArchive param19) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -200,16 +200,16 @@ final class RadialSelectorRenderer implements WidgetRenderer {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var20 = null;
         try {
-          MeshLobbyUiHelpers.a((byte) 113, param12, param9, param7, param19);
+          MeshLobbyUiHelpers.loadLobbySprites((byte) 113, param12, param9, param7, param19);
           Mesh3D.initializeSocialPanels(param7, (byte) 121);
           if (param4 != -27460) {
             field_i = 90;
           }
-          CacheEntry.a(param17, param11, 45, param10, param13, param1, param3, param7, param18, param6, param14, param0, param16, param8, param15);
-          IntegerBitLengthHelpers.a(param5, param7, param2, (byte) 104);
-          GameClock.b((byte) 13);
+          CacheEntry.initializeLobbyComponents(param17, param11, 45, param10, param13, param1, param3, param7, param18, param6, param14, param0, param16, param8, param15);
+          IntegerBitLengthHelpers.initializeLobbyChatResources(param5, param7, param2, (byte) 104);
+          GameClock.buildReportReasonLabels((byte) 13);
           SingleChildWidget.buildMainScreenRoots((byte) -24);
-          SoftwareFramebuffer.b((byte) 40);
+          SoftwareFramebuffer.layoutLobbyChatPanel((byte) 40);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -367,7 +367,7 @@ final class RadialSelectorRenderer implements WidgetRenderer {
           return true;
         }
         var3 = (ResourceArchive) null;
-        RadialSelectorRenderer.a(97, (byte[]) null, (ResourceArchive) null, (String[]) null, 18, true, (RgbSprite[][]) null, (ResourceArchive) null, -121, (int[]) null, (String[]) null, (RgbSprite[][]) null, (IndexedSprite[]) null, -69, (byte[]) null, (String[][]) null, (String[]) null, (String[][]) null, (int[]) null, (ResourceArchive) null);
+        RadialSelectorRenderer.initializeLobbyUi(97, (byte[]) null, (ResourceArchive) null, (String[]) null, 18, true, (RgbSprite[][]) null, (ResourceArchive) null, -121, (int[]) null, (String[]) null, (RgbSprite[][]) null, (IndexedSprite[]) null, -69, (byte[]) null, (String[][]) null, (String[]) null, (String[][]) null, (int[]) null, (ResourceArchive) null);
         if (null == InvitationDialogHelpers.pendingScreen &&
           param1 == AccountMessageDialog.currentScreen.screenId) {
           return true;

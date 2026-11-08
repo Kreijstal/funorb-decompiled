@@ -25,7 +25,7 @@ class IntrusiveNode {
         return false;
     }
 
-    final static String a(CharSequence[] param0, boolean param1) {
+    final static String joinCharSequences(CharSequence[] param0, boolean param1) {
         RuntimeException var2 = null;
         String stackIn_2_0 = null;
         String stackIn_4_0 = null;
@@ -35,7 +35,7 @@ class IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1) {
-            stackIn_4_0 = ObjectHistoryBuffer.a(0, param0.length, 19166, param0);
+            stackIn_4_0 = ObjectHistoryBuffer.joinCharSequenceRange(0, param0.length, 19166, param0);
             return stackIn_4_0;
           }
           stackIn_2_0 = (String) null;

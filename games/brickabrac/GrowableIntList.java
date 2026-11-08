@@ -81,15 +81,15 @@ final class GrowableIntList {
         }
     }
 
-    final static void a(int param0, int param1, int param2, boolean param3, boolean param4, byte param5, boolean param6, boolean param7, boolean param8, int param9) {
+    final static void updateLobbyPanels(int param0, int param1, int param2, boolean param3, boolean param4, byte param5, boolean param6, boolean param7, boolean param8, int param9) {
         int var11;
         var11 = BrickABrac.field_J ? 1 : 0;
         if (param3) {
           if (param3) {
             ValidationStatus.field_f = LobbyPlayer.field_Pb;
-            MusicPatch.a(-128, param3);
+            MusicPatch.advanceLobbyTransitions(-128, param3);
             if (TextLineLayout.field_b > 0) {
-              DateFieldsWidget.a(param8, param3, -94, param2);
+              DateFieldsWidget.updateCreateGameControls(param8, param3, -94, param2);
             }
             AppletGameShell.field_e.horizontalAlignment = 1;
             AppletGameShell.field_e.textInset = Paddle.field_C.textInset;
@@ -107,13 +107,13 @@ final class GrowableIntList {
             } else {
               IsaacGenerator.field_b.viewport.text = null;
               Ball.field_A.enabled = true;
-              MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);
+              MusicVoice.updateGamePlayerList(param4, IsaacGenerator.field_b, param2, param0, -108);
             }
           } else {
             ValidationStatus.field_f = (LevelResultWireHelpers.field_a - 640) / 2;
-            MusicPatch.a(-128, param3);
+            MusicPatch.advanceLobbyTransitions(-128, param3);
             if (TextLineLayout.field_b > 0) {
-              DateFieldsWidget.a(param8, param3, -94, param2);
+              DateFieldsWidget.updateCreateGameControls(param8, param3, -94, param2);
               AppletGameShell.field_e.horizontalAlignment = 1;
               AppletGameShell.field_e.textInset = Paddle.field_C.textInset;
               if (0 < IntArrayRequest.field_j) {
@@ -130,7 +130,7 @@ final class GrowableIntList {
               } else {
                 IsaacGenerator.field_b.viewport.text = null;
                 Ball.field_A.enabled = true;
-                MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);
+                MusicVoice.updateGamePlayerList(param4, IsaacGenerator.field_b, param2, param0, -108);
               }
             } else {
               AppletGameShell.field_e.horizontalAlignment = 1;
@@ -144,12 +144,12 @@ final class GrowableIntList {
               if (!MeshLobbyUiHelpers.joinRequestsPanelOpen) {
                 IsaacGenerator.field_b.viewport.text = null;
                 Ball.field_A.enabled = true;
-                MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);
+                MusicVoice.updateGamePlayerList(param4, IsaacGenerator.field_b, param2, param0, -108);
               } else {
                 if (ClientResourceHelpers.currentLobbyGame.maxPlayers > ClientResourceHelpers.currentLobbyGame.playerCount) {
                   IsaacGenerator.field_b.viewport.text = null;
                   Ball.field_A.enabled = true;
-                  MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);
+                  MusicVoice.updateGamePlayerList(param4, IsaacGenerator.field_b, param2, param0, -108);
                 } else {
                   IsaacGenerator.field_b.viewport.text = GameCanvas.field_d;
                   Ball.field_A.enabled = false;
@@ -164,10 +164,10 @@ final class GrowableIntList {
               Rasterizer2D.height == BallPulseEffect.framebuffer.height &&
               Rasterizer2D.width == BallPulseEffect.framebuffer.width) {
               if (ClientResourceHelpers.currentLobbyGame != null) {
-                CacheIoRequest.a(true, false);
+                CacheIoRequest.layoutLobbyComponents(true, false);
               } else {
                 if (null != IncomingPacketHelpers.pendingLobbyGame) {
-                  CacheIoRequest.a(true, true);
+                  CacheIoRequest.layoutLobbyComponents(true, true);
                 } else {
                   NanoGameClock.layoutMainScreenWidgets(31);
                 }
@@ -175,9 +175,9 @@ final class GrowableIntList {
             }
             if (param3) {
               ValidationStatus.field_f = LobbyPlayer.field_Pb;
-              MusicPatch.a(-128, param3);
+              MusicPatch.advanceLobbyTransitions(-128, param3);
               if (TextLineLayout.field_b > 0) {
-                DateFieldsWidget.a(param8, param3, -94, param2);
+                DateFieldsWidget.updateCreateGameControls(param8, param3, -94, param2);
               }
               AppletGameShell.field_e.horizontalAlignment = 1;
               AppletGameShell.field_e.textInset = Paddle.field_C.textInset;
@@ -195,13 +195,13 @@ final class GrowableIntList {
               } else {
                 IsaacGenerator.field_b.viewport.text = null;
                 Ball.field_A.enabled = true;
-                MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);
+                MusicVoice.updateGamePlayerList(param4, IsaacGenerator.field_b, param2, param0, -108);
               }
             } else {
               ValidationStatus.field_f = (LevelResultWireHelpers.field_a - 640) / 2;
-              MusicPatch.a(-128, param3);
+              MusicPatch.advanceLobbyTransitions(-128, param3);
               if (TextLineLayout.field_b > 0) {
-                DateFieldsWidget.a(param8, param3, -94, param2);
+                DateFieldsWidget.updateCreateGameControls(param8, param3, -94, param2);
               }
               AppletGameShell.field_e.horizontalAlignment = 1;
               AppletGameShell.field_e.textInset = Paddle.field_C.textInset;
@@ -214,12 +214,12 @@ final class GrowableIntList {
               if (!MeshLobbyUiHelpers.joinRequestsPanelOpen) {
                 IsaacGenerator.field_b.viewport.text = null;
                 Ball.field_A.enabled = true;
-                MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);
+                MusicVoice.updateGamePlayerList(param4, IsaacGenerator.field_b, param2, param0, -108);
               } else {
                 if (ClientResourceHelpers.currentLobbyGame.maxPlayers > ClientResourceHelpers.currentLobbyGame.playerCount) {
                   IsaacGenerator.field_b.viewport.text = null;
                   Ball.field_A.enabled = true;
-                  MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);
+                  MusicVoice.updateGamePlayerList(param4, IsaacGenerator.field_b, param2, param0, -108);
                 } else {
                   IsaacGenerator.field_b.viewport.text = GameCanvas.field_d;
                   Ball.field_A.enabled = false;
@@ -231,10 +231,10 @@ final class GrowableIntList {
             if (Rasterizer2D.height == BallPulseEffect.framebuffer.height &&
               Rasterizer2D.width == BallPulseEffect.framebuffer.width) {
               if (ClientResourceHelpers.currentLobbyGame != null) {
-                CacheIoRequest.a(true, false);
+                CacheIoRequest.layoutLobbyComponents(true, false);
               } else {
                 if (null != IncomingPacketHelpers.pendingLobbyGame) {
-                  CacheIoRequest.a(true, true);
+                  CacheIoRequest.layoutLobbyComponents(true, true);
                 } else {
                   NanoGameClock.layoutMainScreenWidgets(31);
                 }
@@ -242,9 +242,9 @@ final class GrowableIntList {
             }
             if (param3) {
               ValidationStatus.field_f = LobbyPlayer.field_Pb;
-              MusicPatch.a(-128, param3);
+              MusicPatch.advanceLobbyTransitions(-128, param3);
               if (TextLineLayout.field_b > 0) {
-                DateFieldsWidget.a(param8, param3, -94, param2);
+                DateFieldsWidget.updateCreateGameControls(param8, param3, -94, param2);
               }
               AppletGameShell.field_e.horizontalAlignment = 1;
               AppletGameShell.field_e.textInset = Paddle.field_C.textInset;
@@ -262,13 +262,13 @@ final class GrowableIntList {
               } else {
                 IsaacGenerator.field_b.viewport.text = null;
                 Ball.field_A.enabled = true;
-                MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);
+                MusicVoice.updateGamePlayerList(param4, IsaacGenerator.field_b, param2, param0, -108);
               }
             } else {
               ValidationStatus.field_f = (LevelResultWireHelpers.field_a - 640) / 2;
-              MusicPatch.a(-128, param3);
+              MusicPatch.advanceLobbyTransitions(-128, param3);
               if (TextLineLayout.field_b > 0) {
-                DateFieldsWidget.a(param8, param3, -94, param2);
+                DateFieldsWidget.updateCreateGameControls(param8, param3, -94, param2);
                 AppletGameShell.field_e.horizontalAlignment = 1;
                 AppletGameShell.field_e.textInset = Paddle.field_C.textInset;
                 if (0 < IntArrayRequest.field_j) {
@@ -285,7 +285,7 @@ final class GrowableIntList {
                 } else {
                   IsaacGenerator.field_b.viewport.text = null;
                   Ball.field_A.enabled = true;
-                  MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);
+                  MusicVoice.updateGamePlayerList(param4, IsaacGenerator.field_b, param2, param0, -108);
                 }
               } else {
                 AppletGameShell.field_e.horizontalAlignment = 1;
@@ -299,12 +299,12 @@ final class GrowableIntList {
                 if (!MeshLobbyUiHelpers.joinRequestsPanelOpen) {
                   IsaacGenerator.field_b.viewport.text = null;
                   Ball.field_A.enabled = true;
-                  MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);
+                  MusicVoice.updateGamePlayerList(param4, IsaacGenerator.field_b, param2, param0, -108);
                 } else {
                   if (ClientResourceHelpers.currentLobbyGame.maxPlayers > ClientResourceHelpers.currentLobbyGame.playerCount) {
                     IsaacGenerator.field_b.viewport.text = null;
                     Ball.field_A.enabled = true;
-                    MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);
+                    MusicVoice.updateGamePlayerList(param4, IsaacGenerator.field_b, param2, param0, -108);
                   } else {
                     IsaacGenerator.field_b.viewport.text = GameCanvas.field_d;
                     Ball.field_A.enabled = false;
@@ -315,8 +315,8 @@ final class GrowableIntList {
             }
           }
         }
-        TextWidgetRenderer.a(param6, param9, param4, param0, param2, param1, (byte) -114);
-        MusicVoice.a(param4, TimedSplashScreen.field_u, param2, param0, 121);
+        TextWidgetRenderer.updateLobbyGameList(param6, param9, param4, param0, param2, param1, (byte) -114);
+        MusicVoice.updateGamePlayerList(param4, TimedSplashScreen.field_u, param2, param0, 121);
         if (param5 <= 6) {
           field_g = -90;
         }

@@ -6,7 +6,7 @@ final class TextHuffmanHelpers {
     static String field_a;
     static int field_b;
 
-    final static void b(int param0) {
+    final static void noOperation(int param0) {
         if (param0 >= -78) {
           field_a = (String) null;
         }
@@ -27,7 +27,7 @@ final class TextHuffmanHelpers {
         try {
           QuickChatCategoryRegistry.textHuffman = codec;
           if (obfuscationGuard) {
-            TextHuffmanHelpers.b(-94);
+            TextHuffmanHelpers.noOperation(-94);
           }
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "rj.C(" + (codec != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');

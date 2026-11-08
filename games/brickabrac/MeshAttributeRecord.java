@@ -22,8 +22,8 @@ final class MeshAttributeRecord {
         awaitingLoginSeed = null;
     }
 
-    final static void a(int param0, boolean param1, int param2, int param3, int param4, int param5, boolean param6, int param7, boolean param8, boolean param9, int param10, boolean param11) {
-        EmailAvailabilityRequest.a(param10, param7, param11, param9, param6, param5, param1, param4, param0, (byte) -113, param8, param2, 16777215, param3);
+    final static void updateLobbyUi(int param0, boolean param1, int param2, int param3, int param4, int param5, boolean param6, int param7, boolean param8, boolean param9, int param10, boolean param11) {
+        EmailAvailabilityRequest.updateLobbyUi(param10, param7, param11, param9, param6, param5, param1, param4, param0, (byte) -113, param8, param2, 16777215, param3);
     }
 
     final static boolean isDecimalInt(CharSequence text, int obfuscationGuard) {

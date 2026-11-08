@@ -12,12 +12,12 @@ abstract class SoftwareFramebuffer {
 
     abstract void draw(int y, int x, int obfuscationGuard, java.awt.Graphics graphics);
 
-    final static void b(byte param0) {
+    final static void layoutLobbyChatPanel(byte param0) {
         if (param0 != 40) {
           return;
         }
         ProxyAuthenticationRequiredException.animateLobbyOverlayBounds(param0 ^ -54);
-        CacheIoWorker.a((byte) 93, LobbyGame.field_oc, ProxyAuthenticationRequiredException.field_b[0].canvasWidth, WidgetLayerBootstrap.uiRowHeight, DialogMessagePanel.uiScrollbarWidth, MenuSelection.field_g);
+        CacheIoWorker.layoutChatPanel((byte) 93, LobbyGame.field_oc, ProxyAuthenticationRequiredException.field_b[0].canvasWidth, WidgetLayerBootstrap.uiRowHeight, DialogMessagePanel.uiScrollbarWidth, MenuSelection.field_g);
     }
 
     final void bindRaster(byte obfuscationGuard) {
@@ -33,7 +33,7 @@ abstract class SoftwareFramebuffer {
         int var1 = 112 % ((obfuscationGuard + 44) / 63);
     }
 
-    final static void a(int param0, int param1, int param2, RgbSprite param3) {
+    final static void drawShadowMask(int param0, int param1, int param2, RgbSprite param3) {
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
@@ -87,7 +87,7 @@ abstract class SoftwareFramebuffer {
           }
           if (var7 > 0 &&
             var6 > 0) {
-            TableRowSubmission.a(Rasterizer2D.pixels, var8, 0, var5, var6, var9, var7, -1, var4_int, param3.pixels);
+            TableRowSubmission.applyAlphaMaskDarken(Rasterizer2D.pixels, var8, 0, var5, var6, var9, var7, -1, var4_int, param3.pixels);
             return;
           }
           return;

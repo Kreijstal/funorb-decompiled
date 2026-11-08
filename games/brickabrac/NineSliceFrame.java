@@ -61,12 +61,12 @@ class NineSliceFrame {
 
     void paintFrame(int width, int height, int x, boolean obfuscationGuard, int y) {
         if (obfuscationGuard) {
-          NineSliceFrame.a(true, false);
+          NineSliceFrame.drawWidgetLayers(true, false);
         }
         LobbyUiHelpers.paintNineSliceFrame(width, height, -40, x, this.sprites, y);
     }
 
-    final static void a(boolean param0, boolean param1) {
+    final static void drawWidgetLayers(boolean param0, boolean param1) {
         if (param1) {
           return;
         }

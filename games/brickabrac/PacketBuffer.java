@@ -554,7 +554,7 @@ class PacketBuffer extends IntrusiveNode {
         this.data[this.position - length - 1] = (byte)length;
     }
 
-    final static IndexedSprite[] a(String param0, ResourceArchive param1, String param2, int param3) {
+    final static IndexedSprite[] loadIndexedSpritesByName(String param0, ResourceArchive param1, String param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

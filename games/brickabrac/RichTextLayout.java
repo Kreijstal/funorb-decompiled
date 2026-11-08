@@ -45,7 +45,7 @@ final class RichTextLayout extends WidgetTextLayout {
         }
     }
 
-    final static void a(boolean param0, byte param1) {
+    final static void drawLobbyPanels(boolean param0, byte param1) {
         UiComponent stackIn_7_0 = null;
         boolean stackIn_7_1 = false;
         boolean stackIn_8_2 = false;
@@ -250,7 +250,7 @@ final class RichTextLayout extends WidgetTextLayout {
         }
     }
 
-    final static void a(int param0, Paddle param1, int param2, int param3, byte param4, PlayerBoard param5, int param6) {
+    final static void drawPaddle(int param0, Paddle param1, int param2, int param3, byte param4, PlayerBoard param5, int param6) {
         RgbSprite[] stackIn_4_0 = null;
         RgbSprite[] stackIn_7_0 = null;
         RgbSprite stackIn_10_0 = null;
@@ -445,7 +445,7 @@ final class RichTextLayout extends WidgetTextLayout {
         }
     }
 
-    final static int b(boolean param0) {
+    final static int getUiLoadPercent(boolean param0) {
         if (GameConnectionShell.clientStage < 2) {
           return 0;
         }
@@ -612,7 +612,7 @@ final class RichTextLayout extends WidgetTextLayout {
               if (horizontalAlignment != 3) {
                 stackIn_40_3 = 0;
               } else {
-                stackIn_40_3 = this.a(wrapWidth, font.measureText(var14), var14, true);
+                stackIn_40_3 = this.computeJustifySpacing(wrapWidth, font.measureText(var14), var14, true);
               }
               DraggableWidget.populateCaretPositions(stackIn_39_0, stackIn_39_1, stackIn_39_2, stackIn_40_3, font);
             }

@@ -15,7 +15,7 @@ final class MessageScreen extends MenuScreen {
         if (obfuscationGuard == 88) {
           return;
         }
-        MessageScreen.a((String) null, -65L, 54);
+        MessageScreen.openChatInputTo((String) null, -65L, 54);
     }
 
     final static void appendRankingStatistics(int rating, int draws, int sourceIndex, int obfuscationGuard, int losses, int wins) {
@@ -128,7 +128,7 @@ final class MessageScreen extends MenuScreen {
         return;
     }
 
-    final static void a(String param0, long param1, int param2) {
+    final static void openChatInputTo(String param0, long param1, int param2) {
         CharSequence var5 = null;
         try {
           ScreenNavigationHelpers.quickChatChannel = param2;
@@ -198,7 +198,7 @@ final class MessageScreen extends MenuScreen {
 
     final void drawScreen(byte obfuscationGuard) {
         super.drawScreen((byte) -50);
-        GzipInflater.a(550, 5, 243, 5, 140, (byte) -107, 45);
+        GzipInflater.drawMenuPanel(550, 5, 243, 5, 140, (byte) -107, 45);
         ContextActionController.field_g.drawParagraph(CanvasResizeController.messageText, 54, 149, 532, 225, 2, -1, 1, 1, 22);
         if (obfuscationGuard < -14) {
           this.drawEnabledButtons(0);
@@ -207,7 +207,7 @@ final class MessageScreen extends MenuScreen {
     }
 
     final void layoutButtons(boolean obfuscationGuard) {
-        this.e(2);
+        this.layoutButtonsInCenteredRow(2);
         if (obfuscationGuard) {
           return;
         }

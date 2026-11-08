@@ -76,10 +76,10 @@ abstract class ArchiveFetchClient {
         return this.getPriorityCount((byte) -123) >= 20 ? true : false;
     }
 
-    final static void a(String param0, int param1) {
+    final static void requestOpenLink(String param0, int param1) {
         try {
           PasswordValidator.field_m = param0;
-          CheckboxWidgetRenderer.a(param1, true);
+          CheckboxWidgetRenderer.setAccountDialogResult(param1, true);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ih.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -156,7 +156,7 @@ abstract class ArchiveFetchClient {
         return this.getBackgroundCount((byte) 105) >= 20 ? true : false;
     }
 
-    final static void a(boolean param0, String param1, String param2, int param3) {
+    final static void startLoginWithCredentials(boolean param0, String param1, String param2, int param3) {
         GameScreen.field_d = param1;
         SocketConnector.field_e = param2;
         if (param3 != 2) {
@@ -178,7 +178,7 @@ abstract class ArchiveFetchClient {
 
     abstract boolean pollTransport(int obfuscationGuard);
 
-    final static void a(byte param0, boolean param1) {
+    final static void drawDialogBackdrop(byte param0, boolean param1) {
         if (param0 > -16) {
           ArchiveFetchClient.clearSharedReferences(-18);
           RankingsScreen.drawOverlayBackdrop(param1, -58, true);

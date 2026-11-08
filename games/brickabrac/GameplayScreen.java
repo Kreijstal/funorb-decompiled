@@ -263,7 +263,7 @@ final class GameplayScreen extends GameScreen {
             } else {
               if (TabbedPane.currentBackground != null &&
                 TabbedPane.currentBackground.musicReady) {
-                BytePayloadRequest.a(1, true, TabbedPane.currentBackground.getMusicChannelGain(-109), false, 1, TabbedPane.currentBackground.musicData, true);
+                BytePayloadRequest.scheduleMusicTrack(1, true, TabbedPane.currentBackground.getMusicChannelGain(-109), false, 1, TabbedPane.currentBackground.musicData, true);
               } else {
                 IterableIntrusiveHashTable.scheduleMusicTrack(25459, true, LoginCredentialKind.titleMusicTrack, 1, 1, true);
               }
@@ -285,7 +285,7 @@ final class GameplayScreen extends GameScreen {
                 this.requestRematchAction(87);
               }
             }
-            ResourcePreparationEntry.a((byte) -97);
+            ResourcePreparationEntry.captureMatchResultSummary((byte) -97);
             if (!this.networkedMatch) {
               ScreenNavigationHelpers.requestScreen(false, 62, 20);
               NewAchievementsScreen.discardGameplayOnTransition = true;
@@ -401,13 +401,13 @@ final class GameplayScreen extends GameScreen {
           var5Lifetime4 = stackIn_120_0;
         } else {
           if (MenuScreen.field_i == 0) {
-            DelegatingCanvas.a((byte) 32);
+            DelegatingCanvas.tickTutorialTimers((byte) 32);
             var18 = this.match.playerBoards[0];
             if (2 == var18.boardState) {
-              WidgetLayer.a(var18.controlMask, 0, (byte) -85);
+              WidgetLayer.onTutorialEvent(var18.controlMask, 0, (byte) -85);
             }
             if (var18.boardState == 0 ||
-              !MusicVoice.a((byte) 62)) {
+              !MusicVoice.isTutorialPromptActive((byte) 62)) {
               stackIn_116_0 = (!this.advanceMatch(var7, true, var19)) ? 0 : 1;
               var5Lifetime4 = stackIn_116_0;
             }
@@ -444,7 +444,7 @@ final class GameplayScreen extends GameScreen {
               this.queueProgressAchievement(false, 239, 16);
             }
             if (this.lastReportedLevel < this.match.configuration.getPeriod(95)) {
-              ScreenshotViewer.field_r = HotspotTextWidget.a(2, this.match.configuration.getLevelTitle(this.lastReportedLevel, (byte) -122), -1);
+              ScreenshotViewer.field_r = HotspotTextWidget.renderDoubleSizeTextSprite(2, this.match.configuration.getLevelTitle(this.lastReportedLevel, (byte) -122), -1);
             }
           }
           if (var20.backgroundChangePending) {
@@ -592,7 +592,7 @@ final class GameplayScreen extends GameScreen {
         if (null == VerticalScrollbar.field_Ub &&
           !(0 >= this.match.playerBoards[0].score)) {
           VerticalScrollbar.field_Ub = new TableRowSubmission(this.match.configuration.pack.completionWord, 65535 ^ this.match.configuration.pack.completionWord, OptionsScreen.resultCounterOne, WidgetTextLayout.resultCounterTwo, DelegatingCanvas.field_c, QuickChatMenu.field_Wb, new int[]{this.match.playerBoards[0].score, this.progressBaseLevel << 16 | this.resultLevel});
-          if (!QuickChatMenu.h(-26090)) {
+          if (!QuickChatMenu.isGuestSession(-26090)) {
             CheckboxWidgetRenderer.submitTableRow(3, (byte) 25, VerticalScrollbar.field_Ub);
           }
         }
@@ -639,7 +639,7 @@ final class GameplayScreen extends GameScreen {
         if (obfuscationGuard != 69) {
           return;
         }
-        if (QuickChatMenu.h(-26090)) {
+        if (QuickChatMenu.isGuestSession(-26090)) {
           if (!WidgetGroup.containsNonzeroInFirstEight(SpriteInputHelpers.pendingAchievementMask, -1) &&
             VerticalScrollbar.field_Ub == null) {
             ScreenNavigationHelpers.requestScreen(usePointer, 121, 0);
@@ -674,7 +674,7 @@ final class GameplayScreen extends GameScreen {
         try {
           playerId = packet.readUnsignedByte(255);
           if (this.match.playerCount <= playerId) {
-            AlignedIconLabel.a("K1: (" + playerId + "/" + packet.position + ") " + WhirlpoolHasher.describePacketHistory((byte) -110), (Throwable) null, obfuscationGuard + 125);
+            AlignedIconLabel.reportClientError("K1: (" + playerId + "/" + packet.position + ") " + WhirlpoolHasher.describePacketHistory((byte) -110), (Throwable) null, obfuscationGuard + 125);
             GameTransportHelpers.closeGameTransport((byte) 89);
             return;
           }
@@ -880,9 +880,9 @@ final class GameplayScreen extends GameScreen {
         }
         if (this.match.playerCount == 1 &&
           TextFieldRenderer.field_A &&
-          MusicVoice.a((byte) 113)) {
+          MusicVoice.isTutorialPromptActive((byte) 113)) {
           if (84 == keyCode) {
-            GzipInflater.b(-8);
+            GzipInflater.dismissTutorialPrompt(-8);
           }
           return true;
         }
@@ -1034,12 +1034,12 @@ final class GameplayScreen extends GameScreen {
     private final void sendProgressUpdate(int packId, int levelIndex, long elapsedMillis, boolean intermediate, int timeDivisor) {
         int intermediateFlag = 0;
         if (!this.suppressResultSubmission) {
-          if (QuickChatMenu.h(-26090)) {
+          if (QuickChatMenu.isGuestSession(-26090)) {
             return;
           }
           levelIndex = levelIndex + packId * 1000;
           intermediateFlag = intermediate ? 1 : 0;
-          SaveResultsPromptScreen.a(levelIndex, intermediateFlag, timeDivisor - 468, ((int)elapsedMillis + 500) / timeDivisor);
+          SaveResultsPromptScreen.sendProgressUpdate(levelIndex, intermediateFlag, timeDivisor - 468, ((int)elapsedMillis + 500) / timeDivisor);
           return;
         }
     }
@@ -1088,7 +1088,7 @@ final class GameplayScreen extends GameScreen {
           this.lastReportedLevel = levelIndex;
           counterLevelAdjustment = levelIndex;
           OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne + counterLevelAdjustment;
-          ScreenshotViewer.field_r = HotspotTextWidget.a(2, this.match.configuration.getLevelTitle(this.lastReportedLevel, (byte) -122), -1);
+          ScreenshotViewer.field_r = HotspotTextWidget.renderDoubleSizeTextSprite(2, this.match.configuration.getLevelTitle(this.lastReportedLevel, (byte) -122), -1);
         }
     }
 
@@ -1283,7 +1283,7 @@ final class GameplayScreen extends GameScreen {
                       expectedChecksum = inputBoard.computeBoardChecksum(obfuscationGuard, (StringBuilder) (checksumDiagnostics)) ^ inputBoard.nextRandomInt(120);
                       if (inputBatch.maskedChecksum != expectedChecksum) {
                         GameTransportHelpers.closeGameTransport((byte) 91);
-                        AlignedIconLabel.a("T2 " + inputBatch.maskedChecksum + " " + expectedChecksum + " ", (Throwable) null, 54);
+                        AlignedIconLabel.reportClientError("T2 " + inputBatch.maskedChecksum + " " + expectedChecksum + " ", (Throwable) null, 54);
                         PauseMenuHelpers.checksumMismatchCount = PauseMenuHelpers.checksumMismatchCount + 1;
                       }
                     }
@@ -1627,7 +1627,7 @@ final class GameplayScreen extends GameScreen {
               TabbedPane.currentBackground.drawFullBackground(true, singleBoardScroll, 0, 0, 0);
               if (TabbedPane.currentBackground.sceneId == 7 ||
                 this.match.playerBoards[backgroundPlayerId].boardState == 5) {
-                TextChoiceDialogStyles.a(121, true);
+                TextChoiceDialogStyles.drawFireworks(121, true);
               }
               if (MenuScreen.field_i <= 0) {
                 break;
@@ -1746,12 +1746,12 @@ final class GameplayScreen extends GameScreen {
           LobbyUiHelpers.paintNineSliceFrame(125, 9, -40, 516, LoginCredentialKind.field_h, 229);
           ArchiveNetworkClient.drawSinglePlayerCharacterHud(640, this.match, singleBoard);
           if (TextFieldRenderer.field_A &&
-            MusicVoice.a((byte) 124)) {
-            AppletSettingsUiHelpers.a(LoadingProgressDialog.field_eb + Bzip2State.field_v, PasswordFieldRenderer.field_D, 6, GrowableIntList.field_i, 100, 621, 1729, 340, 230, 0);
+            MusicVoice.isTutorialPromptActive((byte) 124)) {
+            AppletSettingsUiHelpers.drawTextBubble(LoadingProgressDialog.field_eb + Bzip2State.field_v, PasswordFieldRenderer.field_D, 6, GrowableIntList.field_i, 100, 621, 1729, 340, 230, 0);
           } else {
             if (null != singleBoard.displayedMessage) {
               unusedInlineSprites = (IndexedSprite[]) null;
-              AppletSettingsUiHelpers.a(singleBoard.displayedMessage, ContextActionController.field_g, 0, (IndexedSprite[]) null, 80, 621, 1729, 340, 85, -1);
+              AppletSettingsUiHelpers.drawTextBubble(singleBoard.displayedMessage, ContextActionController.field_g, 0, (IndexedSprite[]) null, 80, 621, 1729, 340, 85, -1);
             }
           }
         }

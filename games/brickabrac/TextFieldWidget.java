@@ -365,12 +365,12 @@ class TextFieldWidget extends FocusableWidget {
         }
     }
 
-    final static void k(int param0) {
+    final static void openGuestLoginPanelWithCreateAccount(int param0) {
         if (!LevelPackSelectScreen.field_s) {
           throw new IllegalStateException();
         }
         SpaceBackground.field_t = true;
-        RankingsScreen.a((byte) -71, true);
+        RankingsScreen.showLoginPanelNoMessage((byte) -71, true);
         AchievementIcon.field_j = param0;
     }
 

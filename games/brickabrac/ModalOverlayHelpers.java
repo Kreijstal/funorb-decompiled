@@ -15,7 +15,7 @@ final class ModalOverlayHelpers {
         }
     }
 
-    final static boolean a(byte param0) {
+    final static boolean drawModalOverlays(byte param0) {
         int var2 = 0;
         int var3 = BrickABrac.field_J ? 1 : 0;
         int var1 = 0;
@@ -29,9 +29,9 @@ final class ModalOverlayHelpers {
           canvasResizeController = (CanvasResizeController) null;
           if (ConditionalTextValue.hasVisibleLayer(2)) {
             var1 = 1;
-            IntArrayRequest.c(126);
-            if (!GameClock.c((byte) 119)) {
-              if (LoginMethodPreference.b(param0 + 39)) {
+            IntArrayRequest.drawDimmedWidgetLayers(126);
+            if (!GameClock.armDialogTimeoutAndCheckState((byte) 119)) {
+              if (LoginMethodPreference.isScreenFadeActive(param0 + 39)) {
                 var2 = (CachedArchiveSource.field_p - 1 << 8) / 16;
                 if (var2 > 0) {
                   Rasterizer2D.fillRectangleAlpha(0, 0, Rasterizer2D.width, Rasterizer2D.height, 0, var2);
@@ -42,8 +42,8 @@ final class ModalOverlayHelpers {
             }
             if (!HotspotTextWidget.isFullscreenDialogOpen(9)) {
               var1 = 1;
-              ArchiveFetchClient.a((byte) -118, GameplayRenderHelpers.fullscreenCanvas == null ? NinjaBackground.frameFocus : true);
-              if (LoginMethodPreference.b(param0 + 39)) {
+              ArchiveFetchClient.drawDialogBackdrop((byte) -118, GameplayRenderHelpers.fullscreenCanvas == null ? NinjaBackground.frameFocus : true);
+              if (LoginMethodPreference.isScreenFadeActive(param0 + 39)) {
                 var2 = (CachedArchiveSource.field_p - 1 << 8) / 16;
                 if (var2 > 0) {
                   Rasterizer2D.fillRectangleAlpha(0, 0, Rasterizer2D.width, Rasterizer2D.height, 0, var2);
@@ -52,7 +52,7 @@ final class ModalOverlayHelpers {
               }
               return var1 != 0;
             }
-            if (LoginMethodPreference.b(param0 + 39)) {
+            if (LoginMethodPreference.isScreenFadeActive(param0 + 39)) {
               var2 = (CachedArchiveSource.field_p - 1 << 8) / 16;
               if (var2 > 0) {
                 Rasterizer2D.fillRectangleAlpha(0, 0, Rasterizer2D.width, Rasterizer2D.height, 0, var2);
@@ -67,12 +67,12 @@ final class ModalOverlayHelpers {
               var1 = 1;
               DesertBackground.drawTextChoiceDialog(param0 ^ -11184849);
             }
-            if (GameClock.c((byte) 119) &&
+            if (GameClock.armDialogTimeoutAndCheckState((byte) 119) &&
               !HotspotTextWidget.isFullscreenDialogOpen(9)) {
               var1 = 1;
-              ArchiveFetchClient.a((byte) -118, GameplayRenderHelpers.fullscreenCanvas == null ? NinjaBackground.frameFocus : true);
+              ArchiveFetchClient.drawDialogBackdrop((byte) -118, GameplayRenderHelpers.fullscreenCanvas == null ? NinjaBackground.frameFocus : true);
             }
-            if (LoginMethodPreference.b(param0 + 39)) {
+            if (LoginMethodPreference.isScreenFadeActive(param0 + 39)) {
               var2Lifetime4 = (CachedArchiveSource.field_p - 1 << 8) / 16;
               if (var2Lifetime4 > 0) {
                 Rasterizer2D.fillRectangleAlpha(0, 0, Rasterizer2D.width, Rasterizer2D.height, 0, var2Lifetime4);
@@ -83,12 +83,12 @@ final class ModalOverlayHelpers {
           }
           ClientResourceHelpers.drawFullscreenDialog(-24435);
           var1 = 1;
-          if (GameClock.c((byte) 119) &&
+          if (GameClock.armDialogTimeoutAndCheckState((byte) 119) &&
             !HotspotTextWidget.isFullscreenDialogOpen(9)) {
             var1 = 1;
-            ArchiveFetchClient.a((byte) -118, GameplayRenderHelpers.fullscreenCanvas == null ? NinjaBackground.frameFocus : true);
+            ArchiveFetchClient.drawDialogBackdrop((byte) -118, GameplayRenderHelpers.fullscreenCanvas == null ? NinjaBackground.frameFocus : true);
           }
-          if (LoginMethodPreference.b(param0 + 39)) {
+          if (LoginMethodPreference.isScreenFadeActive(param0 + 39)) {
             var2Lifetime5 = (CachedArchiveSource.field_p - 1 << 8) / 16;
             if (var2Lifetime5 > 0) {
               Rasterizer2D.fillRectangleAlpha(0, 0, Rasterizer2D.width, Rasterizer2D.height, 0, var2Lifetime5);
@@ -99,13 +99,13 @@ final class ModalOverlayHelpers {
         }
         if (ConditionalTextValue.hasVisibleLayer(2)) {
           var1 = 1;
-          IntArrayRequest.c(126);
-          if (GameClock.c((byte) 119) &&
+          IntArrayRequest.drawDimmedWidgetLayers(126);
+          if (GameClock.armDialogTimeoutAndCheckState((byte) 119) &&
             !HotspotTextWidget.isFullscreenDialogOpen(9)) {
             var1 = 1;
-            ArchiveFetchClient.a((byte) -118, GameplayRenderHelpers.fullscreenCanvas == null ? NinjaBackground.frameFocus : true);
+            ArchiveFetchClient.drawDialogBackdrop((byte) -118, GameplayRenderHelpers.fullscreenCanvas == null ? NinjaBackground.frameFocus : true);
           }
-          if (LoginMethodPreference.b(param0 + 39)) {
+          if (LoginMethodPreference.isScreenFadeActive(param0 + 39)) {
             var2Lifetime1 = (CachedArchiveSource.field_p - 1 << 8) / 16;
             if (var2Lifetime1 > 0) {
               Rasterizer2D.fillRectangleAlpha(0, 0, Rasterizer2D.width, Rasterizer2D.height, 0, var2Lifetime1);
@@ -120,12 +120,12 @@ final class ModalOverlayHelpers {
             var1 = 1;
             DesertBackground.drawTextChoiceDialog(param0 ^ -11184849);
           }
-          if (GameClock.c((byte) 119) &&
+          if (GameClock.armDialogTimeoutAndCheckState((byte) 119) &&
             !HotspotTextWidget.isFullscreenDialogOpen(9)) {
             var1 = 1;
-            ArchiveFetchClient.a((byte) -118, GameplayRenderHelpers.fullscreenCanvas == null ? NinjaBackground.frameFocus : true);
+            ArchiveFetchClient.drawDialogBackdrop((byte) -118, GameplayRenderHelpers.fullscreenCanvas == null ? NinjaBackground.frameFocus : true);
           }
-          if (LoginMethodPreference.b(param0 + 39)) {
+          if (LoginMethodPreference.isScreenFadeActive(param0 + 39)) {
             var2Lifetime2 = (CachedArchiveSource.field_p - 1 << 8) / 16;
             if (var2Lifetime2 > 0) {
               Rasterizer2D.fillRectangleAlpha(0, 0, Rasterizer2D.width, Rasterizer2D.height, 0, var2Lifetime2);
@@ -136,12 +136,12 @@ final class ModalOverlayHelpers {
         }
         ClientResourceHelpers.drawFullscreenDialog(-24435);
         var1Lifetime1 = 1;
-        if (GameClock.c((byte) 119) &&
+        if (GameClock.armDialogTimeoutAndCheckState((byte) 119) &&
           !HotspotTextWidget.isFullscreenDialogOpen(9)) {
           var1Lifetime1 = 1;
-          ArchiveFetchClient.a((byte) -118, GameplayRenderHelpers.fullscreenCanvas == null ? NinjaBackground.frameFocus : true);
+          ArchiveFetchClient.drawDialogBackdrop((byte) -118, GameplayRenderHelpers.fullscreenCanvas == null ? NinjaBackground.frameFocus : true);
         }
-        if (LoginMethodPreference.b(param0 + 39)) {
+        if (LoginMethodPreference.isScreenFadeActive(param0 + 39)) {
           var2Lifetime3 = (CachedArchiveSource.field_p - 1 << 8) / 16;
           if (var2Lifetime3 > 0) {
             Rasterizer2D.fillRectangleAlpha(0, 0, Rasterizer2D.width, Rasterizer2D.height, 0, var2Lifetime3);

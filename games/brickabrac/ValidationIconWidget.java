@@ -207,7 +207,7 @@ final class ValidationIconWidget extends FocusableWidget {
         }
     }
 
-    final static int a(String param0, boolean param1, int param2, ConditionalTextValue param3, int param4, ConditionalTextValue param5, int param6) {
+    final static int performAccountServerRequest(String param0, boolean param1, int param2, ConditionalTextValue param3, int param4, ConditionalTextValue param5, int param6) {
         int var12 = 0;
         int stackIn_6_0 = 0;
         PacketBuffer stackIn_11_0 = null;
@@ -266,14 +266,14 @@ final class ValidationIconWidget extends FocusableWidget {
               MeshAudioHelpers.accountPacketScratch.writePrefixedCp1252String(param6 ^ 4, var14);
               MeshAudioHelpers.accountPacketScratch.writePrefixedCp1252String(0, var8);
               var15 = (CharSequence) ((Object) param0);
-              MeshAudioHelpers.accountPacketScratch.writePrefixedCp1252String(0, AccountIntroductionPanel.a(var15, -58));
+              MeshAudioHelpers.accountPacketScratch.writePrefixedCp1252String(0, AccountIntroductionPanel.sanitizeAccountName(var15, -58));
               MeshAudioHelpers.accountPacketScratch.writeShort((byte) 113, param4);
               MeshAudioHelpers.accountPacketScratch.writeByte(89, param2);
               MeshAudioHelpers.accountPacketScratch.writeByte(127, var9);
               TextFieldValidator.outgoingPackets.writeByte(53, 18);
               TextFieldValidator.outgoingPackets.position = TextFieldValidator.outgoingPackets.position + 2;
               var10 = TextFieldValidator.outgoingPackets.position;
-              var11_ref_String = GameClock.readSettingsCookie(true, EmailConfirmationValidator.e((byte) -75));
+              var11_ref_String = GameClock.readSettingsCookie(true, EmailConfirmationValidator.getHostApplet((byte) -75));
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
@@ -319,7 +319,7 @@ final class ValidationIconWidget extends FocusableWidget {
               ArchiveSourceManager.field_f = new String[-100 + var9Lifetime1];
             } else {
               if (var9Lifetime1 == 248) {
-                MatchingTextValidator.setTuhstatbutMarker(EmailConfirmationValidator.e((byte) -108), param6 + 5);
+                MatchingTextValidator.setTuhstatbutMarker(EmailConfirmationValidator.getHostApplet((byte) -108), param6 + 5);
                 DirectByteStorage.field_e = ConditionalTextValue.field_d;
                 GameTransportHelpers.closeGameTransport((byte) 96);
                 RadialSelectorRenderer.field_d = false;
@@ -327,8 +327,8 @@ final class ValidationIconWidget extends FocusableWidget {
                 return stackIn_33_0;
               }
               if (var9Lifetime1 == 99) {
-                PacketReceiveHelpers.ensureGamePacketBytes(20, Widget.d((byte) -59));
-                AchievementBrowserScreen.pendingEmailAvailabilityReply = new Boolean(BackgroundSurfaceHelpers.a(-2, LogoRenderHelpers.incomingPackets));
+                PacketReceiveHelpers.ensureGamePacketBytes(20, Widget.getAvailabilityReplyLength((byte) -59));
+                AchievementBrowserScreen.pendingEmailAvailabilityReply = new Boolean(BackgroundSurfaceHelpers.readFlagByte(-2, LogoRenderHelpers.incomingPackets));
                 LogoRenderHelpers.incomingPackets.position = 0;
               } else {
                 IntrusiveHashTable.currentPacketOpcode = var9Lifetime1;
@@ -359,7 +359,7 @@ final class ValidationIconWidget extends FocusableWidget {
             if (IntrusiveHashTable.currentPacketOpcode == 255) {
               var9_ref_String = LogoRenderHelpers.incomingPackets.readNullableCp1252String(param6 - 4);
               if (var9_ref_String != null) {
-                AppletSettingsUiHelpers.setSettingsCookie(param6 ^ -55, EmailConfirmationValidator.e((byte) -120), var9_ref_String);
+                AppletSettingsUiHelpers.setSettingsCookie(param6 ^ -55, EmailConfirmationValidator.getHostApplet((byte) -120), var9_ref_String);
               }
             } else {
               DirectByteStorage.field_e = LogoRenderHelpers.incomingPackets.readCp1252String(-1);

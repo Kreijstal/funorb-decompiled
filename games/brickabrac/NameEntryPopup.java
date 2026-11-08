@@ -292,7 +292,7 @@ final class NameEntryPopup extends UiComponent {
           chocLeverSprites = null;
           return;
         }
-        NameEntryPopup.d((byte) -20);
+        NameEntryPopup.pollAchievementMaskReply((byte) -20);
         field_Rb = null;
         field_Sb = null;
         field_Wb = null;
@@ -300,7 +300,7 @@ final class NameEntryPopup extends UiComponent {
         chocLeverSprites = null;
     }
 
-    final static boolean d(byte param0) {
+    final static boolean pollAchievementMaskReply(byte param0) {
         int[] var1 = null;
         int var1_int = 0;
         RuntimeException var1_ref = null;

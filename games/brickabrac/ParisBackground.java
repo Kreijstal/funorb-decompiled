@@ -49,7 +49,7 @@ final class ParisBackground extends BackgroundScene {
         }
     }
 
-    final static void a(byte param0, float param1, String param2) {
+    final static void setLoadingStatus(byte param0, float param1, String param2) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -87,7 +87,7 @@ final class ParisBackground extends BackgroundScene {
         try {
           var2 = new LevelMetadata();
           if (obfuscationGuard != -12) {
-            ParisBackground.a((byte) -119, 0.37269747257232666f, (String) null);
+            ParisBackground.setLoadingStatus((byte) -119, 0.37269747257232666f, (String) null);
           }
           var2.readMetadata(obfuscationGuard - 12976, packet);
           stackIn_4_0 = var2;
@@ -120,7 +120,7 @@ final class ParisBackground extends BackgroundScene {
           BallPulseEffect.parisCharacterSprite = SpriteInputHelpers.loadRgbSpriteByName("paris", "paris_character", (byte) -43, AchievementIcon.backgroundSpriteArchive);
           IntrusiveHashTable.field_i = UiGeometryHelpers.createScaledHalfSizeSprite(0, NinjaBackground.parisNearSprite);
           if (obfuscationGuard) {
-            ParisBackground.a((UiComponent) null, (TextFont) null, (UiComponent) null, (UiComponent) null, (UiComponent) null, (UiComponent) null, (UiComponent) null, (UiComponent) null, (byte) 19, false, (VerticalScrollbar) null, (UiComponent) null);
+            ParisBackground.buildChatPanelComponents((UiComponent) null, (TextFont) null, (UiComponent) null, (UiComponent) null, (UiComponent) null, (UiComponent) null, (UiComponent) null, (UiComponent) null, (byte) 19, false, (VerticalScrollbar) null, (UiComponent) null);
           }
           UnderwaterBackground.field_t = UiGeometryHelpers.createScaledHalfSizeSprite(0, QuickChatParameterType.parisMidSprite);
           MembershipBenefitsScreen.field_s = UiGeometryHelpers.createScaledHalfSizeSprite(0, ToggleButtonWidget.parisFarSprite);
@@ -159,7 +159,7 @@ final class ParisBackground extends BackgroundScene {
             ParallaxMusicHelpers.drawParisParallaxLayers(destinationY, scroll16, UnderwaterBackground.field_t, 118, 306, 0, destinationX, 2, IntrusiveHashTable.field_i, var6.sprite, colorIndex);
           }
           if (obfuscationGuard >= -84) {
-            ParisBackground.a((byte) -61, -0.03386414423584938f, (String) null);
+            ParisBackground.setLoadingStatus((byte) -61, -0.03386414423584938f, (String) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -198,7 +198,7 @@ final class ParisBackground extends BackgroundScene {
         }
     }
 
-    final static void a(UiComponent param0, TextFont param1, UiComponent param2, UiComponent param3, UiComponent param4, UiComponent param5, UiComponent param6, UiComponent param7, byte param8, boolean param9, VerticalScrollbar param10, UiComponent param11) {
+    final static void buildChatPanelComponents(UiComponent param0, TextFont param1, UiComponent param2, UiComponent param3, UiComponent param4, UiComponent param5, UiComponent param6, UiComponent param7, byte param8, boolean param9, VerticalScrollbar param10, UiComponent param11) {
         String stackIn_30_0 = null;
         int stackIn_34_0 = 0;
         RuntimeException stackIn_44_0 = null;
@@ -249,7 +249,7 @@ final class ParisBackground extends BackgroundScene {
           TextFieldRenderer.field_C[3] = 16736511;
           TextFieldRenderer.field_C[0] = 16764000;
           if (param8 != 61) {
-            ParisBackground.a((UiComponent) null, (TextFont) null, (UiComponent) null, (UiComponent) null, (UiComponent) null, (UiComponent) null, (UiComponent) null, (UiComponent) null, (byte) 97, false, (VerticalScrollbar) null, (UiComponent) null);
+            ParisBackground.buildChatPanelComponents((UiComponent) null, (TextFont) null, (UiComponent) null, (UiComponent) null, (UiComponent) null, (UiComponent) null, (UiComponent) null, (UiComponent) null, (byte) 97, false, (VerticalScrollbar) null, (UiComponent) null);
           }
           TextFieldRenderer.field_C[1] = 6356832;
           var12 = new RgbSprite(4, 4);

@@ -21,7 +21,7 @@ final class ScreenshotViewer {
     private int field_i;
     private RgbSprite field_l;
 
-    final int a(boolean param0, boolean param1) {
+    final int advanceViewer(boolean param0, boolean param1) {
         int stackIn_3_0 = 0;
         int stackIn_75_0 = 0;
         int stackIn_82_0 = 0;
@@ -120,7 +120,7 @@ final class ScreenshotViewer {
             stackIn_89_0 = 0;
             return stackIn_89_0;
           }
-          this.selection.updatePointer(this.a(ResourcePreparationEntry.pointerY, -636, MusicPatch.pointerX), 27479, this.a(PlayerNameChooserPanel.pressY, -636, LoadingProgressDialog.pressX));
+          this.selection.updatePointer(this.hitTestButton(ResourcePreparationEntry.pointerY, -636, MusicPatch.pointerX), 27479, this.hitTestButton(PlayerNameChooserPanel.pressY, -636, LoadingProgressDialog.pressX));
           var4Lifetime1 = 0;
           if (this.selection.isActivated((byte) 113)) {
             if (this.selection.selectedIndex == 0) {
@@ -133,7 +133,7 @@ final class ScreenshotViewer {
           }
           if (InputOptionsHelpers.field_a) {
             while (LogoRenderHelpers.pollKeyEvent((byte) 5)) {
-              var5 = this.a((byte) -120);
+              var5 = this.pollKeyAction((byte) -120);
               if (var5 == 0) {
                 continue;
               }
@@ -144,7 +144,7 @@ final class ScreenshotViewer {
           if (var4Lifetime1 == 0) {
             return 0;
           }
-          this.b((byte) 9);
+          this.openSubscribePage((byte) 9);
           stackIn_87_0 = 3;
           return stackIn_87_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -154,7 +154,7 @@ final class ScreenshotViewer {
         }
     }
 
-    private final void a(boolean param0) {
+    private final void drawScreenshot(boolean param0) {
         RuntimeException decompiledCaughtException = null;
         IndexedSprite var2 = null;
         RuntimeException var2_ref = null;
@@ -188,9 +188,9 @@ final class ScreenshotViewer {
               var3 = (60 + var7.canvasWidth) * this.field_j / IsaacGenerator.field_n;
               var4 = var3 - 30;
               if (this.field_a) {
-                TextLineLayout.a(-256 * var4 / 30, var2Lifetime1, (byte) 101, 58, 9, (-var4 + var7.canvasWidth) * 256 / 30);
+                TextLineLayout.drawHorizontalFadeSprite(-256 * var4 / 30, var2Lifetime1, (byte) 101, 58, 9, (-var4 + var7.canvasWidth) * 256 / 30);
               } else {
-                TextLineLayout.a(256 * (-var4 + var7.canvasWidth) / 30, var7, (byte) 106, 58, 9, -256 * var4 / 30);
+                TextLineLayout.drawHorizontalFadeSprite(256 * (-var4 + var7.canvasWidth) / 30, var7, (byte) 106, 58, 9, -256 * var4 / 30);
               }
             }
           }
@@ -205,7 +205,7 @@ final class ScreenshotViewer {
         }
     }
 
-    private final void a(int param0) {
+    private final void renderCachedSprites(int param0) {
         RuntimeException runtimeException = null;
         int var2_int = 0;
         int var3 = 0;
@@ -224,10 +224,10 @@ final class ScreenshotViewer {
             var2_int = 16448250;
             var3 = 10068666;
             var16 = MusicVoiceMixer.createColorRamp(param0 - 580, var2_int, var3);
-            this.a(47, 0, this.title, var16, ArchiveSourceManager.field_j, 622, 0, 0);
+            this.drawGradientParagraph(47, 0, this.title, var16, ArchiveSourceManager.field_j, 622, 0, 0);
             RasterStackHelpers.popRaster(param0 - 592);
             this.field_e = new RgbSprite(param0, 24);
-            this.a(ArchiveSourceManager.field_j, -4, 0.75f, (byte) 124, 475, DialogPointerGlobals.field_c, var16, 24, this.field_e, 0);
+            this.drawSmoothedText(ArchiveSourceManager.field_j, -4, 0.75f, (byte) 124, 475, DialogPointerGlobals.field_c, var16, 24, this.field_e, 0);
             var17 = MusicVoiceMixer.createColorRamp(-124, 526344, 526344);
             var5 = new RgbSprite(121, 122);
             IndexedSpriteGeometry.pushSpriteRaster(param0 ^ -388, var5);
@@ -235,9 +235,9 @@ final class ScreenshotViewer {
             Rasterizer2D.fillVerticalGradient(0, var5.height / 2, var5.width, var5.height, 16306250, 15568919);
             var6 = ByteStorage.field_a;
             var7 = ArchiveIndex.field_q;
-            this.a(ArchiveSourceManager.field_j, -16, 0.5f, (byte) 118, var5.width, var6, var17, var5.height, var5, 0);
-            this.a(ArchiveSourceManager.field_j, 20, 0.5f, (byte) 105, var5.width, var7, var17, var5.height, var5, 0);
-            this.a(ArchiveSourceManager.field_j, -ArchiveSourceManager.field_j.ascent + (var5.height / 2 + 12), 0.699999988079071f, (byte) 62, var5.width, AppletResourceHelpers.field_e[this.field_c], var17, var5.height / 3, var5, 0);
+            this.drawSmoothedText(ArchiveSourceManager.field_j, -16, 0.5f, (byte) 118, var5.width, var6, var17, var5.height, var5, 0);
+            this.drawSmoothedText(ArchiveSourceManager.field_j, 20, 0.5f, (byte) 105, var5.width, var7, var17, var5.height, var5, 0);
+            this.drawSmoothedText(ArchiveSourceManager.field_j, -ArchiveSourceManager.field_j.ascent + (var5.height / 2 + 12), 0.699999988079071f, (byte) 62, var5.width, AppletResourceHelpers.field_e[this.field_c], var17, var5.height / 3, var5, 0);
             RasterStackHelpers.popRaster(-119);
             this.field_p = new RgbSprite(121, 122);
             IndexedSpriteGeometry.pushSpriteRaster(-115, this.field_p);
@@ -253,7 +253,7 @@ final class ScreenshotViewer {
         }
     }
 
-    final void e(byte param0) {
+    final void drawViewer(byte param0) {
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -275,7 +275,7 @@ final class ScreenshotViewer {
             var3 += 121;
           }
           if (param0 > -6) {
-            this.a(111);
+            this.renderCachedSprites(111);
           }
           var2_intLifetime1 = 0;
           var3Lifetime1 = 299;
@@ -285,7 +285,7 @@ final class ScreenshotViewer {
             var3Lifetime1 += 91;
             var2_intLifetime1++;
           }
-          this.a(true);
+          this.drawScreenshot(true);
           if (BufferedFile.field_d != null &&
             BufferedFile.field_d.ensureIndex((byte) -127) &&
             BufferedFile.field_d.ensureGroupAvailableByName("members_expansion_screen", -28138) &&
@@ -298,14 +298,14 @@ final class ScreenshotViewer {
             AchievementsScreen.field_J = AppletResourceHelpers.loadIndexedSpriteByName((byte) 29, BufferedFile.field_d, "frame", "members_expansion_screen");
             PasswordTooltipHelpers.field_c = SpriteInputHelpers.loadRgbSpriteByName("members_expansion_screen", "arrow", (byte) 111, BufferedFile.field_d);
             SocialListResponseHelpers.field_c = TooltipSprite.loadBinaryMaskFontByName((byte) -37, "arialish12", BufferedFile.field_d, ContentTransitionLayer.field_jb, "");
-            ArchiveSourceManager.field_j = IntrusiveHashTable.a((byte) -107, "pump32", "", BufferedFile.field_d, ContentTransitionLayer.field_jb);
-            MainMenuScreen.field_u = TextWidgetRenderer.a("members_expansion_screen", "benefit_orbs", 1593955777, BufferedFile.field_d);
-            LevelPack.field_e = TextWidgetRenderer.a("members_expansion_screen", "button_text", 1593955777, BufferedFile.field_d);
+            ArchiveSourceManager.field_j = IntrusiveHashTable.loadAlphaFontByName((byte) -107, "pump32", "", BufferedFile.field_d, ContentTransitionLayer.field_jb);
+            MainMenuScreen.field_u = TextWidgetRenderer.loadRgbSpriteByName("members_expansion_screen", "benefit_orbs", 1593955777, BufferedFile.field_d);
+            LevelPack.field_e = TextWidgetRenderer.loadRgbSpriteByName("members_expansion_screen", "button_text", 1593955777, BufferedFile.field_d);
             ValidatedTextFieldWidget.field_V = CheckboxWidgetRenderer.loadRgbSpritesByName("members_expansion_screen", "button_highlights", BufferedFile.field_d, (byte) -8);
             ContentTransitionLayer.field_jb = null;
             BufferedFile.field_d = null;
           }
-          this.a(475);
+          this.renderCachedSprites(475);
           if (null == AchievementsScreen.field_J) {
             return;
           }
@@ -361,14 +361,14 @@ final class ScreenshotViewer {
         }
     }
 
-    private final void b(byte param0) {
+    private final void openSubscribePage(byte param0) {
         int var2_int = 0;
         Throwable decompiledCaughtException = null;
         Exception var2 = null;
         RuntimeException var2_ref = null;
         try {
           try {
-            ChocolateBackground.openSubscribePage(EmailConfirmationValidator.e((byte) -86), 0);
+            ChocolateBackground.openSubscribePage(EmailConfirmationValidator.getHostApplet((byte) -86), 0);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var2 = (Exception) (Object) decompiledCaughtException;
@@ -383,7 +383,7 @@ final class ScreenshotViewer {
         }
     }
 
-    final int a(byte param0) {
+    final int pollKeyAction(byte param0) {
         int stackIn_5_0 = 0;
         int stackIn_10_0 = 0;
         int stackIn_13_0 = 0;
@@ -395,7 +395,7 @@ final class ScreenshotViewer {
           this.selection.navigateVertical(-1);
           if (this.selection.isActivated((byte) 113)) {
             if (this.selection.selectedIndex == 0) {
-              this.b((byte) 125);
+              this.openSubscribePage((byte) 125);
               stackIn_5_0 = 3;
               return stackIn_5_0;
             }
@@ -418,7 +418,7 @@ final class ScreenshotViewer {
         }
     }
 
-    private final void a(TextFont param0, int param1, float param2, byte param3, int param4, String param5, int[] param6, int param7, RgbSprite param8, int param9) {
+    private final void drawSmoothedText(TextFont param0, int param1, float param2, byte param3, int param4, String param5, int[] param6, int param7, RgbSprite param8, int param9) {
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -448,7 +448,7 @@ final class ScreenshotViewer {
           var13 = new RgbSprite(var11_int, var12);
           IndexedSpriteGeometry.pushSpriteRaster(-116, var13);
           param8.drawScaled((int)((float)(-param9) / param2), (int)((float)(-param1) / param2), (int)((float)param8.width / param2), (int)((float)param8.height / param2));
-          this.a(var12, 0, param5, param6, param0, var11_int, 0, 0);
+          this.drawGradientParagraph(var12, 0, param5, param6, param0, var11_int, 0, 0);
           RasterStackHelpers.popRaster(-104);
           IndexedSpriteGeometry.pushSpriteRaster(-126, param8);
           var13.drawScaledAveraged(param9, param1, param4, param7);
@@ -495,7 +495,7 @@ final class ScreenshotViewer {
         }
     }
 
-    private final void a(String param0, boolean param1, boolean param2, IndexedSprite[] param3, String[] param4, java.applet.Applet param5) {
+    private final void initializeViewer(String param0, boolean param1, boolean param2, IndexedSprite[] param3, String[] param4, java.applet.Applet param5) {
         String var7 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
@@ -666,7 +666,7 @@ final class ScreenshotViewer {
         }
     }
 
-    private final void a(int param0, int param1, String param2, int[] param3, TextFont param4, int param5, int param6, int param7) {
+    private final void drawGradientParagraph(int param0, int param1, String param2, int[] param3, TextFont param4, int param5, int param6, int param7) {
         int var9_int = 0;
         int var10 = 0;
         int var11 = 0;
@@ -730,7 +730,7 @@ final class ScreenshotViewer {
         }
     }
 
-    private final int a(int param0, int param1, int param2) {
+    private final int hitTestButton(int param0, int param1, int param2) {
         int stackIn_4_0 = 0;
         int stackIn_14_0 = 0;
         int stackIn_22_0 = 0;
@@ -790,7 +790,7 @@ final class ScreenshotViewer {
         this.field_i = 0;
         this.field_o = 0;
         try {
-          this.a(title, false, param3, screenshots, captions, applet);
+          this.initializeViewer(title, false, param3, screenshots, captions, applet);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

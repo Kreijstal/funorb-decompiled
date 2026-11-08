@@ -28,7 +28,7 @@ final class InvitationDialogHelpers {
         int payloadStart = packet.position;
         packet.writeByte(-115, 6);
         if (obfuscationGuard <= 35) {
-          InvitationDialogHelpers.a(true);
+          InvitationDialogHelpers.resetTutorialState(true);
         }
         packet.writeLong(-23054, playerId);
         packet.backfillByteLength((byte) 121, -payloadStart + packet.position);
@@ -55,7 +55,7 @@ final class InvitationDialogHelpers {
         pendingScreen = null;
     }
 
-    final static void a(boolean param0) {
+    final static void resetTutorialState(boolean param0) {
         LobbyOverlayHelpers.field_i = 12;
         AlternateNumericLoginCredentials.field_s = param0 ? true : false;
         LoadingProgressDialog.field_eb = null;

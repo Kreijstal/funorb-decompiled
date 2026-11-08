@@ -16,7 +16,7 @@ abstract class TextFieldValidator extends DebouncedValidationSource implements T
 
     abstract ValidationStatus validateText(String text, byte obfuscationGuard);
 
-    final static void d(byte param0) {
+    final static void decreaseSoundVolume(byte param0) {
         if (param0 < 114) {
           return;
         }
@@ -325,7 +325,7 @@ abstract class TextFieldValidator extends DebouncedValidationSource implements T
     public final boolean isIncomplete(byte obfuscationGuard) {
         boolean stackIn_7_0 = false;
         if (obfuscationGuard > -27) {
-          TextFieldValidator.d((byte) 112);
+          TextFieldValidator.decreaseSoundVolume((byte) 112);
         }
         stackIn_7_0 = (this.textField.text == null) || (0 == this.textField.text.length());
         return stackIn_7_0;

@@ -15,10 +15,10 @@ final class SaveResultsPromptScreen extends MenuScreen {
     final void layoutButtons(boolean obfuscationGuard) {
         if (!obfuscationGuard) {
           field_x = (String) null;
-          this.e(2);
+          this.layoutButtonsInCenteredRow(2);
           return;
         }
-        this.e(2);
+        this.layoutButtonsInCenteredRow(2);
     }
 
     final int getButtonTop(int buttonIndex, int obfuscationGuard) {
@@ -30,7 +30,7 @@ final class SaveResultsPromptScreen extends MenuScreen {
 
     final void drawScreen(byte obfuscationGuard) {
         super.drawScreen((byte) -39);
-        GzipInflater.a(550, 5, 243, 5, 140, (byte) -81, 45);
+        GzipInflater.drawMenuPanel(550, 5, 243, 5, 140, (byte) -81, 45);
         if (obfuscationGuard <= -14) {
           ContextActionController.field_g.drawParagraph(this.promptText, 54, 149, 532, 225, 2, -1, 1, 1, 22);
           this.drawEnabledButtons(0);
@@ -38,8 +38,8 @@ final class SaveResultsPromptScreen extends MenuScreen {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3) {
-        if (QuickChatMenu.h(-26090)) {
+    final static void sendProgressUpdate(int param0, int param1, int param2, int param3) {
+        if (QuickChatMenu.isGuestSession(-26090)) {
           return;
         }
         BitPacketBuffer var4 = TextFieldValidator.outgoingPackets;
@@ -59,7 +59,7 @@ final class SaveResultsPromptScreen extends MenuScreen {
         var4.backfillByteLength((byte) 121, -var5 + var4.position);
     }
 
-    final static QuickChatMenu a(int[] param0, UiComponent param1, UiComponent param2, UiComponent param3, byte param4) {
+    final static QuickChatMenu createQuickChatPhraseMenu(int[] param0, UiComponent param1, UiComponent param2, UiComponent param3, byte param4) {
         int var10_int = 0;
         Object stackIn_9_0 = null;
         QuickChatMenu stackIn_11_0 = null;
@@ -89,7 +89,7 @@ final class SaveResultsPromptScreen extends MenuScreen {
         try {
           if (param4 != -78) {
             var13 = (UiComponent) null;
-            SaveResultsPromptScreen.a((int[]) null, (UiComponent) null, (UiComponent) null, (UiComponent) null, (byte) -45);
+            SaveResultsPromptScreen.createQuickChatPhraseMenu((int[]) null, (UiComponent) null, (UiComponent) null, (UiComponent) null, (byte) -45);
           }
           var5_int = param0.length;
           var6 = new String[var5_int];

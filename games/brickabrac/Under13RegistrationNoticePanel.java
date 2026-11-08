@@ -29,13 +29,13 @@ final class Under13RegistrationNoticePanel extends WidgetGroup implements TextHo
         var6 = BrickABrac.field_J ? 1 : 0;
         try {
           if (hotspotId == 0) {
-            ArchiveFetchClient.a("terms.ws", obfuscationGuard + 538);
+            ArchiveFetchClient.requestOpenLink("terms.ws", obfuscationGuard + 538);
           } else {
             if (hotspotId == 1) {
-              ArchiveFetchClient.a("privacy.ws", obfuscationGuard + 538);
+              ArchiveFetchClient.requestOpenLink("privacy.ws", obfuscationGuard + 538);
             } else {
               if (2 == hotspotId) {
-                ArchiveFetchClient.a("conduct.ws", obfuscationGuard + 538);
+                ArchiveFetchClient.requestOpenLink("conduct.ws", obfuscationGuard + 538);
               }
             }
           }
@@ -57,7 +57,7 @@ final class Under13RegistrationNoticePanel extends WidgetGroup implements TextHo
         }
     }
 
-    final static void b(int param0, int param1, int param2, int param3, int param4) {
+    final static void drawInsetFieldBorder(int param0, int param1, int param2, int param3, int param4) {
         int var7 = 0;
         int var5_int = 0;
         int var6 = 0;
@@ -85,7 +85,7 @@ final class Under13RegistrationNoticePanel extends WidgetGroup implements TextHo
             Rasterizer2D.pixels[param2 + (param1 + (param3 + var7) * Rasterizer2D.width)] = var9;
           }
           if (param4 != -17634) {
-            Under13RegistrationNoticePanel.b(-122, -110, 30, -70, -97);
+            Under13RegistrationNoticePanel.drawInsetFieldBorder(-122, -110, 30, -70, -97);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -103,7 +103,7 @@ final class Under13RegistrationNoticePanel extends WidgetGroup implements TextHo
         RuntimeException var6 = null;
         try {
           if (widget == this.continueButton) {
-            FullscreenFailureDialog.l(111);
+            FullscreenFailureDialog.loginWithRegisteredAccount(111);
             this.registrationDialog.closeDialog(17);
           }
           if (obfuscationGuard > -22) {

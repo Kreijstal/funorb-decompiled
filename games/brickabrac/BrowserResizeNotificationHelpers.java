@@ -27,7 +27,7 @@ final class BrowserResizeNotificationHelpers {
           Throwable ignoredBridgeFailure = null;
           guardCalculation = 25 / ((42 - obfuscationGuard) / 40);
           try {
-            AppletJavaScriptBridge.callFunction(new Object[]{new Integer(mode)}, 78, EmailConfirmationValidator.e((byte) -82), "resizing");
+            AppletJavaScriptBridge.callFunction(new Object[]{new Integer(mode)}, 78, EmailConfirmationValidator.getHostApplet((byte) -82), "resizing");
           } catch (java.lang.Throwable caughtBridgeFailure) {
             caughtFailure = caughtBridgeFailure;
             ignoredBridgeFailure = caughtFailure;

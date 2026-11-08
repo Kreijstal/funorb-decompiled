@@ -150,7 +150,7 @@ final class SecondaryHashTable {
         return this.next(false);
     }
 
-    final static void a(int param0) {
+    final static void maybeClearSharedReferences(int param0) {
         if (param0 == -1) {
           return;
         }

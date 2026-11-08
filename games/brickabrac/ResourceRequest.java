@@ -25,11 +25,11 @@ abstract class ResourceRequest extends DualLinkNode {
         }
     }
 
-    final static void g(int param0) {
+    final static void requestGuestPlay(int param0) {
         if (param0 < 20) {
           return;
         }
-        CheckboxWidgetRenderer.a(4, true);
+        CheckboxWidgetRenderer.setAccountDialogResult(4, true);
     }
 
     public static void clearSharedReferences(byte obfuscationGuard) {
@@ -50,24 +50,24 @@ abstract class ResourceRequest extends DualLinkNode {
         }
         param4 = 256 - param4;
         if (param8 != 0) {
-          MainMenuScreen.a(param8 + param0, 65280, -(param8 * 2) + param6, param4 * param7 >> 8, -(param1 * 2) + param5, param1 + param2);
-          MainMenuScreen.a(param0, 65280, param6, param4, param1, param2);
-          MainMenuScreen.a(param0, 65280, param6, param4, param1, param2 + param5 - param1);
-          MainMenuScreen.a(param0, 65280, param8, param4, -(2 * param1) + param5, param2 + param1);
-          MainMenuScreen.a(-param8 + param0 + param6, 65280, param8, param4, param5 - 2 * param1, param1 + param2);
+          MainMenuScreen.scaleRectangleBrightness(param8 + param0, 65280, -(param8 * 2) + param6, param4 * param7 >> 8, -(param1 * 2) + param5, param1 + param2);
+          MainMenuScreen.scaleRectangleBrightness(param0, 65280, param6, param4, param1, param2);
+          MainMenuScreen.scaleRectangleBrightness(param0, 65280, param6, param4, param1, param2 + param5 - param1);
+          MainMenuScreen.scaleRectangleBrightness(param0, 65280, param8, param4, -(2 * param1) + param5, param2 + param1);
+          MainMenuScreen.scaleRectangleBrightness(-param8 + param0 + param6, 65280, param8, param4, param5 - 2 * param1, param1 + param2);
           LobbyUiHelpers.paintNineSliceFrame(14 + param6, param5 + 14, -40, -7 + param0, LoginCredentialKind.field_h, param2 - 7);
           return;
         }
         if (0 == param1) {
-          MainMenuScreen.a(param0, 65280, param6, param4, param5, param2);
+          MainMenuScreen.scaleRectangleBrightness(param0, 65280, param6, param4, param5, param2);
           LobbyUiHelpers.paintNineSliceFrame(14 + param6, param5 + 14, -40, -7 + param0, LoginCredentialKind.field_h, param2 - 7);
           return;
         }
-        MainMenuScreen.a(param8 + param0, 65280, -(param8 * 2) + param6, param4 * param7 >> 8, -(param1 * 2) + param5, param1 + param2);
-        MainMenuScreen.a(param0, 65280, param6, param4, param1, param2);
-        MainMenuScreen.a(param0, 65280, param6, param4, param1, param2 + param5 - param1);
-        MainMenuScreen.a(param0, 65280, param8, param4, -(2 * param1) + param5, param2 + param1);
-        MainMenuScreen.a(-param8 + param0 + param6, 65280, param8, param4, param5 - 2 * param1, param1 + param2);
+        MainMenuScreen.scaleRectangleBrightness(param8 + param0, 65280, -(param8 * 2) + param6, param4 * param7 >> 8, -(param1 * 2) + param5, param1 + param2);
+        MainMenuScreen.scaleRectangleBrightness(param0, 65280, param6, param4, param1, param2);
+        MainMenuScreen.scaleRectangleBrightness(param0, 65280, param6, param4, param1, param2 + param5 - param1);
+        MainMenuScreen.scaleRectangleBrightness(param0, 65280, param8, param4, -(2 * param1) + param5, param2 + param1);
+        MainMenuScreen.scaleRectangleBrightness(-param8 + param0 + param6, 65280, param8, param4, param5 - 2 * param1, param1 + param2);
         LobbyUiHelpers.paintNineSliceFrame(14 + param6, param5 + 14, -40, -7 + param0, LoginCredentialKind.field_h, param2 - 7);
     }
 

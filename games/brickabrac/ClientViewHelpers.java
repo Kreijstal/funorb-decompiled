@@ -10,12 +10,12 @@ final class ClientViewHelpers {
     static int field_f;
     static UiComponent field_d;
 
-    final static void a(int param0) {
+    final static void openGuestLoginPanel(int param0) {
         if (!LevelPackSelectScreen.field_s) {
           throw new IllegalStateException();
         }
         SpaceBackground.field_t = true;
-        RankingsScreen.a((byte) -78, false);
+        RankingsScreen.showLoginPanelNoMessage((byte) -78, false);
         AchievementIcon.field_j = param0;
     }
 

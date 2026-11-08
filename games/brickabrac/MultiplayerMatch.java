@@ -423,7 +423,7 @@ final class MultiplayerMatch {
                         board.progressBrickClears = board.progressBrickClears + 1;
                       }
                       if (TextFieldRenderer.field_A) {
-                        WidgetLayer.a(transitionBrick.flags, 1, (byte) -95);
+                        WidgetLayer.onTutorialEvent(transitionBrick.flags, 1, (byte) -95);
                       }
                     } else {
                       if (transitionBrick.typeId == 0) {
@@ -596,7 +596,7 @@ final class MultiplayerMatch {
                   }
                   ((PlayerBoard) (Object) missedPowerUpBoard).setBriefEyeExpression(missedPowerUpExpressionGuard, missedPowerUpExpression);
                   if (TextFieldRenderer.field_A) {
-                    WidgetLayer.a(fallingPowerUp.typeId, 4, (byte) -110);
+                    WidgetLayer.onTutorialEvent(fallingPowerUp.typeId, 4, (byte) -110);
                   }
                   fallingPowerUp.unlink((byte) 111);
                 } else {
@@ -632,7 +632,7 @@ final class MultiplayerMatch {
                       }
                     }
                     if (TextFieldRenderer.field_A) {
-                      WidgetLayer.a(fallingPowerUp.typeId, 3, (byte) -115);
+                      WidgetLayer.onTutorialEvent(fallingPowerUp.typeId, 3, (byte) -115);
                     }
                     if (audioEvents != null) {
                       audioEvents.addLast(new GameplayAudioEvent(3, fallingPowerUp.typeId), (byte) 3);
@@ -1008,7 +1008,7 @@ final class MultiplayerMatch {
                   board.setEyeExpression(6, true, 150);
                 }
                 if (TextFieldRenderer.field_A) {
-                  WidgetLayer.a(0, 5, (byte) -124);
+                  WidgetLayer.onTutorialEvent(0, 5, (byte) -124);
                 }
                 board.resetServeWithRandomAngle(26496, true);
                 board.stateTicks = 0;
@@ -1029,7 +1029,7 @@ final class MultiplayerMatch {
               if (ValidationIconWidget.field_N) {
                 if (!AlternateNumericLoginCredentials.field_s &&
                   ball.contactCount == 39) {
-                  WidgetLayer.a(0, 6, (byte) -108);
+                  WidgetLayer.onTutorialEvent(0, 6, (byte) -108);
                 }
               } else {
                 ball.contactCount = 0;
@@ -1163,7 +1163,7 @@ final class MultiplayerMatch {
         if (remainingPlayerMask == 0) {
           this.markResultsReady(false);
         } else {
-          if (FriendListUi.a(remainingPlayerMask, (byte) -6)) {
+          if (FriendListUi.isPowerOfTwo(remainingPlayerMask, (byte) -6)) {
             this.lastRemainingPlayerId = IntegerBitLengthHelpers.unsignedBitLength(9, remainingPlayerMask - 1);
             this.playerMaskThree = this.playerMaskThree | 1 << this.lastRemainingPlayerId;
             this.markResultsReady(false);

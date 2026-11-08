@@ -149,7 +149,7 @@ final class BitPacketBuffer extends PacketBuffer {
                 break;
               }
               if (var12_ref_vn.contactCount >= 40) {
-                AchievementMaskRequest.a((var12_ref_vn.radius256 >> 8) / scaleDivisor + (destinationY + (var12_ref_vn.y256 >> 8) / scaleDivisor), 40 / scaleDivisor, 256, InteractiveGameClient.sine8192(100 * MembershipBenefitsScreen.clientTick, -4097) * 10 >> 16, 123, 20 / scaleDivisor, (var12_ref_vn.x256 >> 8) / scaleDivisor + destinationX + (var12_ref_vn.radius256 >> 8) / scaleDivisor);
+                AchievementMaskRequest.drawBlueRadialGlow((var12_ref_vn.radius256 >> 8) / scaleDivisor + (destinationY + (var12_ref_vn.y256 >> 8) / scaleDivisor), 40 / scaleDivisor, 256, InteractiveGameClient.sine8192(100 * MembershipBenefitsScreen.clientTick, -4097) * 10 >> 16, 123, 20 / scaleDivisor, (var12_ref_vn.x256 >> 8) / scaleDivisor + destinationX + (var12_ref_vn.radius256 >> 8) / scaleDivisor);
                 RasterEffectHelpers.drawBranchedGlow((var12_ref_vn.x256 + var12_ref_vn.radius256 >> 4) / scaleDivisor + (destinationX << 4), (destinationY << 4) + (var12_ref_vn.y256 + var12_ref_vn.radius256 >> 4) / scaleDivisor, (var12_ref_vn.radius256 >> 3) / scaleDivisor, 4, 3, PowerUpWarning.field_n, var24.simulationTick / 5);
               }
               IntNode.drawBall(var12_ref_vn, (byte) -119, scaleDivisor, destinationX, destinationY);
@@ -175,7 +175,7 @@ final class BitPacketBuffer extends PacketBuffer {
             var24.boardState == 4 ||
             var24.boardState == 1) &&
             var10 == 0) {
-            RichTextLayout.a(QuickChatHelpDialog.getLeverFrameIndex(match, playerId, 127, var24), var7, scaleDivisor, destinationY, (byte) 107, var24, destinationX);
+            RichTextLayout.drawPaddle(QuickChatHelpDialog.getLeverFrameIndex(match, playerId, 127, var24), var7, scaleDivisor, destinationY, (byte) 107, var24, destinationX);
           }
           var27 = (BallPulseEffect) (var24.ballPulses.first(-30));
           while (var27 != null) {

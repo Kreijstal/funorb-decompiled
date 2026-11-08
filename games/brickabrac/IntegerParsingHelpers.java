@@ -19,7 +19,7 @@ final class IntegerParsingHelpers {
         unusedGameFlag = BrickABrac.field_J ? 1 : 0;
         try {
           while (true) {
-            exitTask = platform.a(10, frame);
+            exitTask = platform.enqueueCloseFrame(10, frame);
             while (exitTask.status == 0) {
               BytePayloadRequest.sleepMillis(obfuscationGuard ^ 20898, 10L);
             }
@@ -139,12 +139,12 @@ final class IntegerParsingHelpers {
         }
     }
 
-    final static ConditionalTextValue a(int param0) {
+    final static ConditionalTextValue createEmailValidationValue(int param0) {
         if (param0 > 31) {
-          return new ConditionalTextValue(IndexedSpriteGeometry.a(57), LobbyOverlayHelpers.isEmailAvailabilityPending(30794));
+          return new ConditionalTextValue(IndexedSpriteGeometry.getPendingEmail(57), LobbyOverlayHelpers.isEmailAvailabilityPending(30794));
         }
         quickChatHelpDialog = (QuickChatHelpDialog) null;
-        return new ConditionalTextValue(IndexedSpriteGeometry.a(57), LobbyOverlayHelpers.isEmailAvailabilityPending(30794));
+        return new ConditionalTextValue(IndexedSpriteGeometry.getPendingEmail(57), LobbyOverlayHelpers.isEmailAvailabilityPending(30794));
     }
 
     public static void clearSharedReferences(byte obfuscationGuard) {
@@ -210,7 +210,7 @@ final class IntegerParsingHelpers {
               LoginCredentials.diagnosticLines.addLast(FullscreenDialogHelpers.renderRateDiagnosticLine, (byte) 3);
             }
           } else {
-            IntegerParsingHelpers.a(15);
+            IntegerParsingHelpers.createEmailValidationValue(15);
             if (GzipInflater.showRenderRateDiagnostic) {
               if (FocusableWidget.recentRenderRate != BoundedFile.lastDiagnosticRenderRate) {
                 FullscreenDialogHelpers.renderRateDiagnosticLine.text.setLength(0);
@@ -248,7 +248,7 @@ final class IntegerParsingHelpers {
               LoginCredentials.diagnosticLines.addLast(FullscreenDialogHelpers.renderRateDiagnosticLine, (byte) 3);
             }
           } else {
-            IntegerParsingHelpers.a(15);
+            IntegerParsingHelpers.createEmailValidationValue(15);
             if (GzipInflater.showRenderRateDiagnostic) {
               if (FocusableWidget.recentRenderRate != BoundedFile.lastDiagnosticRenderRate) {
                 FullscreenDialogHelpers.renderRateDiagnosticLine.text.setLength(0);
@@ -274,7 +274,7 @@ final class IntegerParsingHelpers {
               LoginCredentials.diagnosticLines.addLast(FullscreenDialogHelpers.renderRateDiagnosticLine, (byte) 3);
             }
           } else {
-            IntegerParsingHelpers.a(15);
+            IntegerParsingHelpers.createEmailValidationValue(15);
             if (GzipInflater.showRenderRateDiagnostic) {
               if (FocusableWidget.recentRenderRate != BoundedFile.lastDiagnosticRenderRate) {
                 FullscreenDialogHelpers.renderRateDiagnosticLine.text.setLength(0);
@@ -306,7 +306,7 @@ final class IntegerParsingHelpers {
             LoginCredentials.diagnosticLines.addLast(FullscreenDialogHelpers.renderRateDiagnosticLine, (byte) 3);
           }
         } else {
-          IntegerParsingHelpers.a(15);
+          IntegerParsingHelpers.createEmailValidationValue(15);
           if (GzipInflater.showRenderRateDiagnostic) {
             if (FocusableWidget.recentRenderRate != BoundedFile.lastDiagnosticRenderRate) {
               FullscreenDialogHelpers.renderRateDiagnosticLine.text.setLength(0);

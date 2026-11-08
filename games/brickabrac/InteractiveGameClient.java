@@ -43,7 +43,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements Game
         return angle < 2048 ? TextWidgetRenderer.quarterSineQ16[angle] : TextWidgetRenderer.quarterSineQ16[4096 - angle];
     }
 
-    final static boolean a(int param0, int param1, int param2) {
+    final static boolean handleQuickChatKey(int param0, int param1, int param2) {
         boolean stackIn_10_0 = false;
         if (MeshAttributeRecord.currentKeyCode == 13) {
           QuickChatParameterType.closeQuickChatIfOpen(param1 ^ 103);
@@ -59,11 +59,11 @@ abstract class InteractiveGameClient extends GameConnectionShell implements Game
 
     public abstract void renderGameLayer(int obfuscationGuard);
 
-    abstract void b(int param0, int param1);
+    abstract void onConnectionResult(int param0, int param1);
 
     public abstract boolean handleGameKey(int keyCode, char character, int obfuscationGuard);
 
-    private final void i(boolean param0) {
+    private final void updateClientIfRequested(boolean param0) {
         if (param0) {
           this.updateClient(-67);
         }
@@ -75,18 +75,18 @@ abstract class InteractiveGameClient extends GameConnectionShell implements Game
         int var4 = 0;
         var4 = BrickABrac.field_J ? 1 : 0;
         var2 = ByteArrayPoolHelpers.getActiveCanvas((byte) 0);
-        if (TextFieldRenderer.c((byte) -84)) {
+        if (TextFieldRenderer.isLoginFlowIncomplete((byte) -84)) {
           TableNameEntry.renderStartupScreen((byte) 68, var2, LegacyUtf8Decoder.hasFrameFocusOrFullscreen((byte) -81));
           return;
         }
         if (!CalendarRankingHelpers.field_f) {
-          QuickChatCategoryDefinition.a(true, var2);
+          QuickChatCategoryDefinition.renderLoadingScreen(true, var2);
           return;
         }
         if (!TextWidgetRenderer.field_t &&
-          !QuickChatMenu.h(-26090)) {
-          ParisBackground.a((byte) 24, 100.0f, BrowserResizeNotificationHelpers.field_e);
-          QuickChatCategoryDefinition.a(true, var2);
+          !QuickChatMenu.isGuestSession(-26090)) {
+          ParisBackground.setLoadingStatus((byte) 24, 100.0f, BrowserResizeNotificationHelpers.field_e);
+          QuickChatCategoryDefinition.renderLoadingScreen(true, var2);
           return;
         }
         IntArrayRequest.field_i = true;
@@ -102,13 +102,13 @@ abstract class InteractiveGameClient extends GameConnectionShell implements Game
           var3--;
         } while (var4 == 0);
         if (IntArrayRequest.field_i) {
-          ModalOverlayHelpers.a((byte) -123);
+          ModalOverlayHelpers.drawModalOverlays((byte) -123);
           DiagnosticTextLine.drawFramebufferToCanvas(var2, 0, 14209, 0);
           if (var4 == 0) {
             return;
           }
         }
-        this.i(false);
+        this.updateClientIfRequested(false);
         return;
     }
 
@@ -145,7 +145,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements Game
 
     abstract boolean handleGamePacket(BitPacketBuffer packet, byte obfuscationGuard, int opcode);
 
-    final static void a(int param0, PaletteFont param1, String param2, int param3, int param4, int param5, int param6) {
+    final static void drawCenteredTextInBand(int param0, PaletteFont param1, String param2, int param3, int param4, int param5, int param6) {
         int var7_int = 0;
         try {
           var7_int = (-param1.capHeight + (param4 + (2 * param0 - param1.xHeight))) / 2;
@@ -156,7 +156,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements Game
         }
     }
 
-    private final void r(int param0) {
+    private final void dispatchInputEvents(int param0) {
         boolean stackIn_20_1 = false;
         boolean stackIn_39_0 = false;
         int stackIn_64_0 = 0;
@@ -180,15 +180,15 @@ abstract class InteractiveGameClient extends GameConnectionShell implements Game
         var2 = 0;
         if (!ConditionalTextValue.hasVisibleLayer(2)) {
           if (HotspotTextWidget.isFullscreenDialogOpen(9)) {
-            if (!LoginMethodPreference.b(126)) {
+            if (!LoginMethodPreference.isScreenFadeActive(126)) {
               var3 = InstructionsScreen.pollFullscreenDialogAction((byte) 124);
               switch (var3) {
                 case 3:
-                  WidgetLayerStack.a(true, 21543);
+                  WidgetLayerStack.enterFullscreen(true, 21543);
                 default:
                   break;
                 case 4:
-                  AccountIntroductionPanel.a(CanvasResizeController.field_k, false, (byte) 61);
+                  AccountIntroductionPanel.startScreenFade(CanvasResizeController.field_k, false, (byte) 61);
                   ProxySocketConnector.field_g = true;
                   if (var5 == 0) {
                     break;
@@ -201,21 +201,21 @@ abstract class InteractiveGameClient extends GameConnectionShell implements Game
               decompiledFrameRemainder0 = (var5 != 0);
             }
             if (decompiledFrameRemainder0) {
-              AppletFlowHelpers.a(58);
+              AppletFlowHelpers.advanceScreenFade(58);
               decompiledFrameRemainder0 = (var5 != 0);
             }
           }
           if (decompiledFrameRemainder0) {
-            if (GameClock.c((byte) -33)) {
+            if (GameClock.armDialogTimeoutAndCheckState((byte) -33)) {
               stackIn_20_1 = (GameplayRenderHelpers.fullscreenCanvas != null);
-              var3 = this.b(stackIn_20_1, (byte) -118);
+              var3 = this.handleAccountDialogResultWithoutLogin(stackIn_20_1, (byte) -118);
               if (1 == var3 ||
                 var3 == 2) {
                 if (null != GameplayRenderHelpers.fullscreenCanvas) {
                   LevelPack.closeFullscreenCanvas(118);
                 }
                 if (var3 == 2) {
-                  AppletFlowHelpers.showQuitPage(param0 ^ 2058, EmailConfirmationValidator.e((byte) -85));
+                  AppletFlowHelpers.showQuitPage(param0 ^ 2058, EmailConfirmationValidator.getHostApplet((byte) -85));
                 }
               }
               this.updateGameLayer(false, (byte) 81);
@@ -223,21 +223,21 @@ abstract class InteractiveGameClient extends GameConnectionShell implements Game
             }
             if (decompiledFrameRemainder0) {
               if (EmailConfirmationValidator.isTextChoiceDialogOpen(21651)) {
-                if (!LoginMethodPreference.b(param0 ^ -16)) {
+                if (!LoginMethodPreference.isScreenFadeActive(param0 ^ -16)) {
                   var3 = RadialSelectorWidget.pollTextChoiceDialog(0);
                   if (1 == var3) {
-                    AccountIntroductionPanel.a(LevelPackLoader.field_a, true, (byte) 97);
+                    AccountIntroductionPanel.startScreenFade(LevelPackLoader.field_a, true, (byte) 97);
                   }
                   this.updateGameLayer(false, (byte) 7);
                   decompiledFrameRemainder0 = (var5 != 0);
                 }
                 if (decompiledFrameRemainder0) {
-                  AppletFlowHelpers.a(param0 + 47);
+                  AppletFlowHelpers.advanceScreenFade(param0 + 47);
                   decompiledFrameRemainder0 = (var5 != 0);
                 }
               }
               if (decompiledFrameRemainder0) {
-                if (!LoginMethodPreference.b(-34)) {
+                if (!LoginMethodPreference.isScreenFadeActive(-34)) {
                   var2 = 1;
                   var3 = -1;
                   while (true) {
@@ -283,11 +283,11 @@ abstract class InteractiveGameClient extends GameConnectionShell implements Game
                   if ((decompiledFrameCompleted1) &&
                     (decompiledFrameCompleted0) &&
                     (var5 != 0)) {
-                    AppletFlowHelpers.a(114);
+                    AppletFlowHelpers.advanceScreenFade(114);
                     this.updateGameLayer(false, (byte) 28);
                   }
                 } else {
-                  AppletFlowHelpers.a(114);
+                  AppletFlowHelpers.advanceScreenFade(114);
                   if (var5 != 0) {
                     this.updateGameLayer(false, (byte) 28);
                   }
@@ -308,7 +308,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements Game
               break;
             }
             stackIn_64_0 = var2;
-            if (var6.b(59)) {
+            if (var6.capturesInput(59)) {
               stackIn_65_1 = 0;
             } else {
               stackIn_65_1 = 1;
@@ -320,7 +320,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements Game
 
     }
 
-    final static String a(char param0, int param1, int param2) {
+    final static String repeatCharacter(char param0, int param1, int param2) {
         char[] var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -340,16 +340,16 @@ abstract class InteractiveGameClient extends GameConnectionShell implements Game
         return new String(var6);
     }
 
-    abstract void p(int param0);
+    abstract void applyPendingNavigation(int param0);
 
-    public final boolean b(int param0) {
+    public final boolean capturesInput(int param0) {
         if (param0 < 36) {
           return true;
         }
         return true;
     }
 
-    abstract boolean q(int param0);
+    abstract boolean isConnectionBusy(int param0);
 
     final static void drawParallaxLayers(byte obfuscationGuard, RgbSprite nearSprite, int destinationY, int scaleDivisor, RgbSprite midSprite, RgbSprite farSprite, int scroll16, int viewportWidth, int verticalOffset, int destinationX) {
         RuntimeException stackIn_6_0 = null;
@@ -407,7 +407,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements Game
         if (null != GameplayRenderHelpers.fullscreenCanvas &&
           GameplayRenderHelpers.fullscreenCanvas.focusLossPending) {
           LevelPack.closeFullscreenCanvas(84);
-          MotionWaypoint.c(4);
+          MotionWaypoint.rebuildFullscreenDialogIfOpen(4);
         }
         stackIn_7_1 = (GameplayRenderHelpers.fullscreenCanvas != null);
         this.updateConnection(stackIn_7_1, 1);
@@ -418,16 +418,16 @@ abstract class InteractiveGameClient extends GameConnectionShell implements Game
           AchievementMaskRequest.uiLifecycle.prepareUiAssets(true);
           LegacyEmailValidationError.field_d = false;
         }
-        if (TextFieldRenderer.c((byte) -87)) {
-          this.g(false);
-          if (TextFieldRenderer.c((byte) -113)) {
+        if (TextFieldRenderer.isLoginFlowIncomplete((byte) -87)) {
+          this.updateLoginFlow(false);
+          if (TextFieldRenderer.isLoginFlowIncomplete((byte) -113)) {
             return;
           }
         }
         boolean decompiledFrameRemainder0 = true;
         this.dispatchIncomingPackets(true);
         if (!CalendarRankingHelpers.field_f) {
-          MouseWheelSource.a(GameplayAudioEvent.mouseWheelDelta, (byte) 112);
+          MouseWheelSource.updateAccountDialog(GameplayAudioEvent.mouseWheelDelta, (byte) 112);
           decompiledFrameRemainder0 = !(!AchievementMaskRequest.uiLifecycle.pollUiBootstrap((byte) -54));
           if (decompiledFrameRemainder0) {
             AchievementMaskRequest.uiLifecycle.initializeUi(false);
@@ -437,19 +437,19 @@ abstract class InteractiveGameClient extends GameConnectionShell implements Game
         }
         if (decompiledFrameRemainder0) {
           boolean decompiledSharedTail0 = (!(TextWidgetRenderer.field_t) &&
-            !(QuickChatMenu.h(-26090)));
+            !(QuickChatMenu.isGuestSession(-26090)));
           if (!decompiledSharedTail0) {
-            this.r(10);
+            this.dispatchInputEvents(10);
             decompiledSharedTail0 = (var4 != 0);
           }
           if ((decompiledSharedTail0) &&
             (AchievementMaskRequest.uiLifecycle.pollUiReady(23570))) {
             TextWidgetRenderer.field_t = true;
-            this.p(1);
+            this.applyPendingNavigation(1);
             UiCleanupHelpers.cleanupPopupUi((byte) 126);
           }
         }
-        if (!QuickChatMenu.h(-26090)) {
+        if (!QuickChatMenu.isGuestSession(-26090)) {
           do {
             var5 = (AchievementSubmission) (AccountMessageDialog.queuedAchievementSubmissions.removeFirst(3));
             if (var5 == null) {
@@ -463,24 +463,24 @@ abstract class InteractiveGameClient extends GameConnectionShell implements Game
         }
         HuffmanCodec.writeReflectionCheckResponses(14114);
         OutgoingPacketHelpers.flushGamePackets((byte) 110, 0);
-        if (AppletSettingsUiHelpers.a(false)) {
-          var2 = this.o(-105);
+        if (AppletSettingsUiHelpers.isLoginConnectionNeeded(false)) {
+          var2 = this.pollLoginResult(-105);
           if (0 == var2 ||
             var2 == 1) {
-            this.b(var2, 1);
+            this.onConnectionResult(var2, 1);
           }
           var3 = 0;
           if (var2 == 2) {
             var3 = 1;
           }
-          if (this.q(73)) {
+          if (this.isConnectionBusy(73)) {
             var3 = 1;
           }
-          if (!AppletSettingsUiHelpers.a(false)) {
+          if (!AppletSettingsUiHelpers.isLoginConnectionNeeded(false)) {
             var3 = 0;
           }
           if (var3 != 0) {
-            FarmBackground.g(115);
+            FarmBackground.showConnectionMessageDialog(115);
           }
         }
     }

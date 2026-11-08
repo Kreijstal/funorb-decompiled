@@ -58,7 +58,7 @@ final class RankingsRequest extends IntrusiveNode {
           if (GameRenderAudioHelpers.contextActions != null) {
             GameRenderAudioHelpers.contextActions.drawContextMenu((byte) -126, flag);
           }
-          MembershipBenefitsScreen.a(flag, false);
+          MembershipBenefitsScreen.drawNameEntryPopup(flag, false);
           if (null != CircleBody.reportAbuseDialog) {
             CircleBody.reportAbuseDialog.drawRoot(true, flag);
           }
@@ -66,14 +66,14 @@ final class RankingsRequest extends IntrusiveNode {
           return;
         }
         var3 = (LevelSequence) null;
-        RankingsRequest.a(103, true, 42, (LevelSequence) null);
+        RankingsRequest.startSinglePlayerLevel(103, true, 42, (LevelSequence) null);
         if (null != WidgetTextLayout.field_e) {
           DelayedPacket.drawPointerTooltipText(false, WidgetTextLayout.field_e);
         }
         if (GameRenderAudioHelpers.contextActions != null) {
           GameRenderAudioHelpers.contextActions.drawContextMenu((byte) -126, flag);
         }
-        MembershipBenefitsScreen.a(flag, false);
+        MembershipBenefitsScreen.drawNameEntryPopup(flag, false);
         if (null != CircleBody.reportAbuseDialog) {
           CircleBody.reportAbuseDialog.drawRoot(true, flag);
         }
@@ -81,7 +81,7 @@ final class RankingsRequest extends IntrusiveNode {
         return;
     }
 
-    final static void a(int param0, boolean param1, int param2, LevelSequence param3) {
+    final static void startSinglePlayerLevel(int param0, boolean param1, int param2, LevelSequence param3) {
         String[] array$0 = null;
         String[] var5 = null;
         String[] stackIn_2_0 = null;
@@ -116,15 +116,15 @@ final class RankingsRequest extends IntrusiveNode {
           DiagnosticTextLine.resetSessionDisplayState((byte) 66);
           TextFieldRenderer.field_A = WidgetPaintStyle.field_a;
           if (!TextFieldRenderer.field_A) {
-            InvitationDialogHelpers.a(true);
+            InvitationDialogHelpers.resetTutorialState(true);
             BitPacketBuffer.field_q = ModalOverlayHelpers.field_d;
           } else {
             if (param3.pack.packId != 0) {
-              InvitationDialogHelpers.a(true);
+              InvitationDialogHelpers.resetTutorialState(true);
               BitPacketBuffer.field_q = ModalOverlayHelpers.field_d;
             } else {
               if (param2 > 0) {
-                InvitationDialogHelpers.a(true);
+                InvitationDialogHelpers.resetTutorialState(true);
                 BitPacketBuffer.field_q = ModalOverlayHelpers.field_d;
               }
             }

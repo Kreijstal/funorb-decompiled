@@ -83,7 +83,7 @@ final class TextChoiceDialogStyles {
         }
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void drawFireworks(int param0, boolean param1) {
         SaveResultsPromptScreen.advanceAndDrawFireworks(true, param1, 0);
         if (param0 < 119) {
           TextChoiceDialogStyles.clearSharedReferences(35);

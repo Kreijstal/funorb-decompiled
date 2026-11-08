@@ -18,14 +18,14 @@ abstract class ByteStorage {
           return;
         }
         RgbSprite var2 = (RgbSprite) null;
-        ByteStorage.a((RgbSprite) null, (byte) 73, 53, -72, (RgbSprite) null, (RgbSprite) null, 93, 73, -92, 81, -52);
+        ByteStorage.drawNinjaParallaxLayers((RgbSprite) null, (byte) 73, 53, -72, (RgbSprite) null, (RgbSprite) null, 93, 73, -92, 81, -52);
         field_c = null;
         missingEmailAddress = null;
     }
 
     abstract void store(int obfuscationGuard, byte[] data);
 
-    final static void a(RgbSprite param0, byte param1, int param2, int param3, RgbSprite param4, RgbSprite param5, int param6, int param7, int param8, int param9, int param10) {
+    final static void drawNinjaParallaxLayers(RgbSprite param0, byte param1, int param2, int param3, RgbSprite param4, RgbSprite param5, int param6, int param7, int param8, int param9, int param10) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

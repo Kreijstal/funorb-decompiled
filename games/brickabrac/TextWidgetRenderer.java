@@ -225,7 +225,7 @@ class TextWidgetRenderer implements WidgetRenderer, WidgetLayoutProvider {
         try {
           if (obfuscationGuard != 61823) {
             var4 = (ResourceArchive) null;
-            TextWidgetRenderer.a((String) null, (String) null, -49, (ResourceArchive) null);
+            TextWidgetRenderer.loadRgbSpriteByName((String) null, (String) null, -49, (ResourceArchive) null);
           }
           stackIn_3_0 = -this.leftInset + (widget.width - this.rightInset);
           return stackIn_3_0;
@@ -507,7 +507,7 @@ class TextWidgetRenderer implements WidgetRenderer, WidgetLayoutProvider {
         }
     }
 
-    final static RgbSprite a(String param0, String param1, int param2, ResourceArchive param3) {
+    final static RgbSprite loadRgbSpriteByName(String param0, String param1, int param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -748,7 +748,7 @@ class TextWidgetRenderer implements WidgetRenderer, WidgetLayoutProvider {
         }
     }
 
-    final static void a(boolean param0, int param1, boolean param2, int param3, int param4, int param5, byte param6) {
+    final static void updateLobbyGameList(boolean param0, int param1, boolean param2, int param3, int param4, int param5, byte param6) {
         int var19_int = 0;
         int var23_int = 0;
         UiComponent dupTemp$0 = null;
@@ -1214,7 +1214,7 @@ class TextWidgetRenderer implements WidgetRenderer, WidgetLayoutProvider {
                 var32 = var32 + WidgetLayerBootstrap.uiRowHeight;
               }
             }
-            var34 = NodeDeque.a(var13.removalStatus, var33, -15);
+            var34 = NodeDeque.getJoinFailureMessage(var13.removalStatus, var33, -15);
             var35 = var34;
             var35Lifetime1 = var34;
             if (var34 != null) {
@@ -1292,7 +1292,7 @@ class TextWidgetRenderer implements WidgetRenderer, WidgetLayoutProvider {
                 continue;
               }
               if (var13.field_nc.pressedButton == 0) {
-                FullscreenFailureKind.a(var13, param0, (byte) -71, var33);
+                FullscreenFailureKind.openLobbyGameContextMenu(var13, param0, (byte) -71, var33);
               } else {
                 if (var13.started && (!var13.protocolFlag8 ||
                   !var13.directJoinAvailable &&

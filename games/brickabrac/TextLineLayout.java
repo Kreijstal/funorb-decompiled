@@ -85,7 +85,7 @@ final class TextLineLayout {
         return stackIn_7_0;
     }
 
-    final static void a(int param0, IndexedSprite param1, byte param2, int param3, int param4, int param5) {
+    final static void drawHorizontalFadeSprite(int param0, IndexedSprite param1, byte param2, int param3, int param4, int param5) {
         int incrementValue$0 = 0;
         RuntimeException stackIn_35_0 = null;
         StringBuilder stackIn_35_1 = null;
@@ -203,7 +203,7 @@ final class TextLineLayout {
         field_e = null;
         if (obfuscationGuard != 111) {
           IndexedSprite var2 = (IndexedSprite) null;
-          TextLineLayout.a(26, (IndexedSprite) null, (byte) 26, -9, 66, -42);
+          TextLineLayout.drawHorizontalFadeSprite(26, (IndexedSprite) null, (byte) 26, -9, 66, -42);
         }
     }
 

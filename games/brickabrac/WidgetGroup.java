@@ -434,7 +434,7 @@ class WidgetGroup extends Widget implements WidgetContainer {
         originX = originX + (-(var9.canvasWidth / 2) + var7);
         originY = originY + (-(var9.canvasHeight / 2) + var8);
         if (highlighted) {
-          SoftwareFramebuffer.a(-111, originY, originX, MusicVoiceMixer.field_n[characterIndex]);
+          SoftwareFramebuffer.drawShadowMask(-111, originY, originX, MusicVoiceMixer.field_n[characterIndex]);
           BoundedFile.field_a[characterIndex].drawAdditive(originX, originY, 256);
         }
         var9.drawTransparent(originX, originY);

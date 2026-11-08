@@ -124,7 +124,7 @@ final class MeshLobbyUiHelpers {
         }
     }
 
-    final static void a(byte param0, IndexedSprite[] param1, int[] param2, ResourceArchive param3, ResourceArchive param4) {
+    final static void loadLobbySprites(byte param0, IndexedSprite[] param1, int[] param2, ResourceArchive param3, ResourceArchive param4) {
         RgbSprite[] dupTemp$0 = null;
         RgbSprite[] dupTemp$1 = null;
         RgbSprite[] dupTemp$2 = null;
@@ -167,7 +167,7 @@ final class MeshLobbyUiHelpers {
         int var7_intLifetime3;
         var18 = BrickABrac.field_J ? 1 : 0;
         try {
-          var20 = PacketBuffer.a("lobby", param3, "crowns", -946715356);
+          var20 = PacketBuffer.loadIndexedSpritesByName("lobby", param3, "crowns", -946715356);
           var5 = var20;
           LevelPackLoader.field_g = var20.length;
           if (param1 != null) {
@@ -231,7 +231,7 @@ final class MeshLobbyUiHelpers {
           ValidationStatus.field_j = new UiComponent(0L, var8);
           ValidationStatus.field_j.frameSprites = GameConnectionShell.resetSpriteOffsets(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "heading", 2), (byte) -117);
           AccountMessageDialog.field_Ab = new UiComponent(0L, (UiComponent) null);
-          AccountMessageDialog.field_Ab.frameSprites = TimedSplashScreen.a(false, (byte) 83, 8421504, 120, 4210752, false);
+          AccountMessageDialog.field_Ab.frameSprites = TimedSplashScreen.createGradientTabSprites(false, (byte) 83, 8421504, 120, 4210752, false);
           TableResponseHelpers.field_a = new UiComponent(0L, (UiComponent) null);
           TableResponseHelpers.field_a.frameSprites = DateFieldsWidget.createGradientNineSliceSprites(false, 6316128, 3, 6316128, 114, 1);
           GameUiController.field_c = new UiComponent(0L, (UiComponent) null);
@@ -245,16 +245,16 @@ final class MeshLobbyUiHelpers {
           ReportAbuseDialog.field_Zb.sprite = SpriteInputHelpers.loadRgbSpriteByName("lobby", "closebutton", (byte) -90, param3);
           ReportAbuseDialog.field_Zb.activeSprite = SpriteInputHelpers.loadRgbSpriteByName("lobby", "closebutton_mouseover", (byte) 119, param3);
           PowerUpWarning.field_k = new UiComponent(0L, var8);
-          PowerUpWarning.field_k.frameSprites = TimedSplashScreen.a(true, (byte) 57, 3815994, 40, 2039583, true);
+          PowerUpWarning.field_k.frameSprites = TimedSplashScreen.createGradientTabSprites(true, (byte) 57, 3815994, 40, 2039583, true);
           MainMenuScreen.field_t = new UiComponent(0L, var10);
           MainMenuScreen.field_t.textInset = 2;
-          MainMenuScreen.field_t.frameSprites = TimedSplashScreen.a(true, (byte) 44, 3815994, 30, 2039583, false);
+          MainMenuScreen.field_t.frameSprites = TimedSplashScreen.createGradientTabSprites(true, (byte) 44, 3815994, 30, 2039583, false);
           LoginCredentialKind.field_d = new UiComponent(0L, var10);
           LoginCredentialKind.field_d.textInset = 2;
-          LoginCredentialKind.field_d.frameSprites = TimedSplashScreen.a(false, (byte) 77, 3815994, 30, 2039583, false);
+          LoginCredentialKind.field_d.frameSprites = TimedSplashScreen.createGradientTabSprites(false, (byte) 77, 3815994, 30, 2039583, false);
           IntrusiveHashIterator.field_a = new UiComponent(0L, var10);
           IntrusiveHashIterator.field_a.textInset = 2;
-          IntrusiveHashIterator.field_a.frameSprites = TimedSplashScreen.a(false, (byte) 83, 3815994, 30, 2039583, true);
+          IntrusiveHashIterator.field_a.frameSprites = TimedSplashScreen.createGradientTabSprites(false, (byte) 83, 3815994, 30, 2039583, true);
           CappedUrlRequest.field_l = new UiComponent(0L, (UiComponent) null);
           CappedUrlRequest.field_l.verticalAlignment = 1;
           CappedUrlRequest.field_l.font = (TextFont) ((Object) GamePresentationHelpers.field_e);
@@ -271,10 +271,10 @@ final class MeshLobbyUiHelpers {
           var15.textColor = 16777215;
           var15.lineSpacing = WidgetLayerBootstrap.uiRowHeight;
           Paddle.field_C = new UiComponent(0L, CappedUrlRequest.field_l);
-          Paddle.field_C.frameSprites = TimedSplashScreen.a(false, (byte) 94, 2236962, 16, 2236962, false);
+          Paddle.field_C.frameSprites = TimedSplashScreen.createGradientTabSprites(false, (byte) 94, 2236962, 16, 2236962, false);
           Paddle.field_C.textInset = 2;
           ProxySocketConnector.field_n = new UiComponent(0L, CappedUrlRequest.field_l);
-          ProxySocketConnector.field_n.frameSprites = TimedSplashScreen.a(false, (byte) 80, 1513239, 16, 1513239, false);
+          ProxySocketConnector.field_n.frameSprites = TimedSplashScreen.createGradientTabSprites(false, (byte) 80, 1513239, 16, 1513239, false);
           ProxySocketConnector.field_n.textInset = 2;
           OptionsScreen.field_v = new UiComponent(0L, Paddle.field_C);
           OptionsScreen.field_v.copyStyle((byte) -82, DualLinkNode.field_t);

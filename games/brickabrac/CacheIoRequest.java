@@ -90,7 +90,7 @@ final class CacheIoRequest extends ResourceRequest {
         return 100;
     }
 
-    final static void a(boolean param0, boolean param1) {
+    final static void layoutLobbyComponents(boolean param0, boolean param1) {
         int var6 = 0;
         UiComponent dupTemp$0 = null;
         int var11 = 0;
@@ -261,7 +261,7 @@ final class CacheIoRequest extends ResourceRequest {
           stackIn_78_0.frameSprites = DateFieldsWidget.createGradientNineSliceSprites(stackIn_79_1, 8421504, 3, 11579568, MembershipBenefitsScreen.field_t.height, 1);
           Ball.field_A.setBounds(MembershipBenefitsScreen.field_t.height - 10 - 26, 5, 5, -10 + MembershipBenefitsScreen.field_t.width, (byte) 64);
           RankingSocketHelpers.field_a.setBounds(24, -29 + MembershipBenefitsScreen.field_t.height, (MembershipBenefitsScreen.field_t.width - 80) / 2, 80, (byte) 64);
-          ResourcePreparationQueue.b(125);
+          ResourcePreparationQueue.layoutLobbyPlayerList(125);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -12,7 +12,7 @@ final class LoginMethodPreference {
     final void persistLoginMethod(int obfuscationGuard, java.applet.Applet applet) {
         try {
           if (obfuscationGuard < 92) {
-            LoginMethodPreference.b(-113);
+            LoginMethodPreference.isScreenFadeActive(-113);
           }
           ChatLobbyUiHelpers.setAppletCookie(applet, (byte) 122, this.cookieValue, "jagex-last-login-method", 31536000L);
         } catch (RuntimeException runtimeException) {
@@ -31,7 +31,7 @@ final class LoginMethodPreference {
         }
     }
 
-    final static boolean b(int param0) {
+    final static boolean isScreenFadeActive(int param0) {
         int var1 = 0 % ((param0 - 66) / 35);
         return ArchiveConnectionHelpers.field_b != ArchiveConnectionHelpers.field_a ? true : false;
     }

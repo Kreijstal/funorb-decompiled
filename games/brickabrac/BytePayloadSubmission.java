@@ -162,7 +162,7 @@ final class BytePayloadSubmission extends IntrusiveNode {
         }
     }
 
-    final static boolean a(int param0, int param1, int param2) {
+    final static boolean handleChatShortcutKey(int param0, int param1, int param2) {
         int var3 = null != IncomingPacketHelpers.pendingLobbyGame ? 1 : 0;
         if (MeshAttributeRecord.currentKeyCode == 9 &&
           QuickChatHelpDialog.canUseQuickChat(QuickChatHelpDialog.field_Zb, -3, Under13RegistrationNoticePanel.field_K, ResourceRequest.field_z, TextFieldRenderer.field_x)) {
@@ -184,14 +184,14 @@ final class BytePayloadSubmission extends IntrusiveNode {
             return false;
           }
           if (QuickChatPhraseDefinition.repeatMessageChannel == 2 &&
-            !LevelSelectScreen.a(MultiplayerExitScreen.repeatRecipientId, UiComponentNode.repeatRecipientName, param1 ^ -106)) {
+            !LevelSelectScreen.isPlayerReachable(MultiplayerExitScreen.repeatRecipientId, UiComponentNode.repeatRecipientName, param1 ^ -106)) {
             return false;
           }
           if (QuickChatPhraseDefinition.repeatMessageChannel != 2 &&
             var3 != 0) {
             return false;
           }
-          if (LoginCredentialKind.a(param1 - 138)) {
+          if (LoginCredentialKind.isConnectionRetryDue(param1 - 138)) {
             String var4 = (String) null;
             GrowableIntList.writeChatMessage(WidgetTextLayout.repeatMessageId, UiComponentNode.repeatRecipientName, (byte) -117, QuickChatPhraseDefinition.repeatMessageChannel, param2, (String) null);
           }

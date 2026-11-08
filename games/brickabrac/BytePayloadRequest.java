@@ -98,7 +98,7 @@ final class BytePayloadRequest extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, boolean param1, int param2, boolean param3, int param4, MusicTrack param5, boolean param6) {
+    final static void scheduleMusicTrack(int param0, boolean param1, int param2, boolean param3, int param4, MusicTrack param5, boolean param6) {
         Object var7 = null;
         Throwable var8 = null;
         Object stackIn_11_0 = null;

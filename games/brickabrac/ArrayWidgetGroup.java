@@ -727,7 +727,7 @@ abstract class ArrayWidgetGroup extends Widget implements WidgetContainer {
         return var2;
     }
 
-    final static void a(byte param0, boolean param1, boolean param2) {
+    final static void showLoginPanelWithoutMessage(byte param0, boolean param1, boolean param2) {
         if (param0 != -16) {
           String var4 = (String) null;
           ArrayWidgetGroup.showMessageDialogText((byte) 10, (String) null);

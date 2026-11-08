@@ -90,16 +90,16 @@ final class InputOptionsHelpers {
         packet.backfillByteLength((byte) 118, -payloadStart + packet.position);
     }
 
-    final static java.awt.Container b(int param0) {
+    final static java.awt.Container getCanvasContainer(int param0) {
         if (param0 != 0) {
           field_g = true;
           if (null == MatchingTextValidator.field_o) {
-            return (java.awt.Container) ((Object) EmailConfirmationValidator.e((byte) -83));
+            return (java.awt.Container) ((Object) EmailConfirmationValidator.getHostApplet((byte) -83));
           }
           return (java.awt.Container) ((Object) MatchingTextValidator.field_o);
         }
         if (null == MatchingTextValidator.field_o) {
-          return (java.awt.Container) ((Object) EmailConfirmationValidator.e((byte) -83));
+          return (java.awt.Container) ((Object) EmailConfirmationValidator.getHostApplet((byte) -83));
         }
         return (java.awt.Container) ((Object) MatchingTextValidator.field_o);
     }

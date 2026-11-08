@@ -161,7 +161,7 @@ final class AccountRegistrationPanel extends WidgetGroup implements TextHotspotL
           var2 = Integer.parseInt(this.ageField.text);
         } catch (NumberFormatException numberFormatException) {
         }
-        return ArchiveSource.a(this.usernameField.text, this.passwordField.text, this.emailField.text, var2, (byte) -126, this, this.newsletterToggle.active);
+        return ArchiveSource.startRegistrationSubmission(this.usernameField.text, this.passwordField.text, this.emailField.text, var2, (byte) -126, this, this.newsletterToggle.active);
     }
 
     private final String getLinkOpenTag(boolean obfuscationGuard) {
@@ -212,14 +212,14 @@ final class AccountRegistrationPanel extends WidgetGroup implements TextHotspotL
             this.passwordField = (ValidatedTextFieldWidget) null;
           }
           if (0 == hotspotId) {
-            ArchiveFetchClient.a("terms.ws", 12);
+            ArchiveFetchClient.requestOpenLink("terms.ws", 12);
           } else {
             if (1 != hotspotId) {
               if (hotspotId == 2) {
-                ArchiveFetchClient.a("conduct.ws", 12);
+                ArchiveFetchClient.requestOpenLink("conduct.ws", 12);
               }
             } else {
-              ArchiveFetchClient.a("privacy.ws", 12);
+              ArchiveFetchClient.requestOpenLink("privacy.ws", 12);
             }
           }
           return;

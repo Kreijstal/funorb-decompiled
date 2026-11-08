@@ -86,7 +86,7 @@ final class ConditionalTextValue {
         }
     }
 
-    final static boolean a(int param0, String param1) {
+    final static boolean isPrivateChatInputTo(int param0, String param1) {
         RuntimeException var2 = null;
         CharSequence var3 = null;
         RuntimeException stackIn_15_0 = null;

@@ -84,9 +84,9 @@ class AccountMessageDialog extends ContentTransitionLayer implements WidgetActio
         RuntimeException decompiledCaughtException = null;
         try {
           if (!this.response256) {
-            AgeValidator.openRelativeUrl("tochangedisplayname.ws", (byte) -113, EmailConfirmationValidator.e((byte) -103));
+            AgeValidator.openRelativeUrl("tochangedisplayname.ws", (byte) -113, EmailConfirmationValidator.getHostApplet((byte) -103));
           } else {
-            CheckboxWidgetRenderer.a(3, true);
+            CheckboxWidgetRenderer.setAccountDialogResult(3, true);
             this.closeDialog(17);
           }
           if (obfuscationGuard < -22) {
@@ -211,7 +211,7 @@ class AccountMessageDialog extends ContentTransitionLayer implements WidgetActio
             return;
           }
           if (this.field_tb) {
-            ResourcePreparationQueue.a((byte) -30);
+            ResourcePreparationQueue.returnToLoginWithRegisteredEmail((byte) -30);
             return;
           }
           return;
@@ -225,7 +225,7 @@ class AccountMessageDialog extends ContentTransitionLayer implements WidgetActio
           return;
         }
         if (this.field_tb) {
-          ResourcePreparationQueue.a((byte) -30);
+          ResourcePreparationQueue.returnToLoginWithRegisteredEmail((byte) -30);
           return;
         }
     }

@@ -96,7 +96,7 @@ abstract class BackgroundScene {
         }
         if (obfuscationGuard != 1) {
           String var3 = (String) null;
-          BackgroundScene.a((java.applet.Applet) null, 122, (String) null);
+          BackgroundScene.readBrowserCookie((java.applet.Applet) null, 122, (String) null);
         }
     }
 
@@ -157,7 +157,7 @@ abstract class BackgroundScene {
         }
     }
 
-    final static String a(java.applet.Applet param0, int param1, String param2) {
+    final static String readBrowserCookie(java.applet.Applet param0, int param1, String param2) {
         try {
           int var5 = 0;
           String var3 = null;

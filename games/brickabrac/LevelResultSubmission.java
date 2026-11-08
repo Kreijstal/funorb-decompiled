@@ -29,7 +29,7 @@ final class LevelResultSubmission extends IntrusiveNode {
         }
     }
 
-    final static String c(int param0) {
+    final static String buildChatInputPrompt(int param0) {
         String stackIn_3_0 = null;
         String stackIn_59_0 = null;
         Object stackIn_96_0 = null;
@@ -58,7 +58,7 @@ final class LevelResultSubmission extends IntrusiveNode {
             var2 = LobbyCaptionGlobals.field_a;
           }
           if (2 == ScreenNavigationHelpers.quickChatChannel &&
-            !FileCacheStore.b(-21835160)) {
+            !FileCacheStore.isPrivateRecipientReachable(-21835160)) {
             boolean decompiledSharedTail2 = !(LevelPack.isFriend(0, QuickChatHelpDialog.field_Qb));
             if (!decompiledSharedTail2) {
               var2 = GamePresentationHelpers.formatIndexedText(ScorePopup.field_j, new String[]{DualLinkNode.quickChatRecipient}, (byte) 103);
@@ -78,7 +78,7 @@ final class LevelResultSubmission extends IntrusiveNode {
             var2 = CalendarRankingHelpers.field_h;
           }
           if (null != var2) {
-            DateFieldsWidget.a(-115, (String) null, (String) (var2), 0, GameOverlayHelpers.field_d);
+            DateFieldsWidget.setChatInputText(-115, (String) null, (String) (var2), 0, GameOverlayHelpers.field_d);
           } else {
             var3 = LoadingProgressDialog.field_cb;
             var3 = TextFieldRenderer.prefixLocalPlayerBadge((byte) 82, var3);
@@ -114,7 +114,7 @@ final class LevelResultSubmission extends IntrusiveNode {
                   }
                 }
               }
-              if (!UsernameSuggestionPanel.a(param0 + 9142)) {
+              if (!UsernameSuggestionPanel.hasChatPromptComponent(param0 + 9142)) {
                 stackIn_59_0 = "<img=3>: ";
               } else {
                 stackIn_59_0 = ": ";
@@ -133,7 +133,7 @@ final class LevelResultSubmission extends IntrusiveNode {
                 var5 = "";
               }
               var9 = CachedArchiveSource.chatFont.measureText(var4);
-              if (!UsernameSuggestionPanel.a(-112)) {
+              if (!UsernameSuggestionPanel.hasChatPromptComponent(-112)) {
                 if (PasswordValidator.field_n.activeInside &&
                   (-PasswordValidator.field_n.screenX + MusicPatch.pointerX) < var9) {
                   if (!TextWidgetRenderer.field_e) {
@@ -149,7 +149,7 @@ final class LevelResultSubmission extends IntrusiveNode {
                 }
               }
             }
-            DateFieldsWidget.a(param0 + 9132, var5, var4 + TextFont.escapeAngles(OptionsScreen.field_A.toString()), var7, BackgroundScene.field_i[var6]);
+            DateFieldsWidget.setChatInputText(param0 + 9132, var5, var4 + TextFont.escapeAngles(OptionsScreen.field_A.toString()), var7, BackgroundScene.field_i[var6]);
             if (!MatchResultScreen.field_s) {
               CanvasInputHelpers.field_e.activeInside = false;
             }
@@ -190,7 +190,7 @@ final class LevelResultSubmission extends IntrusiveNode {
           BubbleDistortion.chatHistoryCategoryCounts = new int[3];
           ScrollPane.chatHistorySize = 0;
           if (obfuscationGuard > -4) {
-            LevelResultSubmission.c(104);
+            LevelResultSubmission.buildChatInputPrompt(104);
           }
           UnderwaterBackground.chatHistory = new ChatMessage[categoryLimit * 15];
           return;

@@ -5,7 +5,7 @@ final class AppletSettingsUiHelpers {
     static int[] field_a;
     static String field_b;
 
-    final static void a(String param0, PaletteFont param1, int param2, IndexedSprite[] param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    final static void drawTextBubble(String param0, PaletteFont param1, int param2, IndexedSprite[] param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int dupTemp$0 = 0;
         int var17 = 0;
         int stackIn_8_0 = 0;
@@ -121,7 +121,7 @@ final class AppletSettingsUiHelpers {
             var5 = (IntArrayRequest) (PasswordFieldRenderer.pendingIntArrayRequests.next((byte) 116));
           }
           if (obfuscationGuard != 115) {
-            AppletSettingsUiHelpers.a(-72);
+            AppletSettingsUiHelpers.releaseLoadingBarResources(-72);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -131,9 +131,9 @@ final class AppletSettingsUiHelpers {
         }
     }
 
-    final static void a(int param0) {
+    final static void releaseLoadingBarResources(int param0) {
         if (param0 != 384920353) {
-          AppletSettingsUiHelpers.a(false);
+          AppletSettingsUiHelpers.isLoginConnectionNeeded(false);
         }
         RichTextLayout.field_r = null;
         DirectByteStorage.field_g = null;
@@ -183,7 +183,7 @@ final class AppletSettingsUiHelpers {
         }
     }
 
-    final static boolean a(boolean param0) {
+    final static boolean isLoginConnectionNeeded(boolean param0) {
         boolean stackIn_7_0 = false;
         if (param0) {
           field_b = (String) null;

@@ -210,7 +210,7 @@ final class FullscreenFailureDialog extends PopupWidgetLayer implements WidgetAc
         }
     }
 
-    final static int a(ConditionalTextValue param0, ConditionalTextValue param1, byte param2) {
+    final static int submitDetailsValidationRequest(ConditionalTextValue param0, ConditionalTextValue param1, byte param2) {
         RuntimeException var3 = null;
         ConditionalTextValue var4 = null;
         String var5 = null;
@@ -224,10 +224,10 @@ final class FullscreenFailureDialog extends PopupWidgetLayer implements WidgetAc
         try {
           if (param2 > 0) {
             var4 = (ConditionalTextValue) null;
-            FullscreenFailureDialog.a((ConditionalTextValue) null, (ConditionalTextValue) null, (byte) 87);
+            FullscreenFailureDialog.submitDetailsValidationRequest((ConditionalTextValue) null, (ConditionalTextValue) null, (byte) 87);
           }
           var5 = (String) null;
-          stackIn_3_0 = ValidationIconWidget.a((String) null, false, 0, param0, 0, param1, 4);
+          stackIn_3_0 = ValidationIconWidget.performAccountServerRequest((String) null, false, 0, param0, 0, param1, 4);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -249,8 +249,8 @@ final class FullscreenFailureDialog extends PopupWidgetLayer implements WidgetAc
         }
     }
 
-    final static void l(int param0) {
-        ArchiveFetchClient.a(true, ReportAbuseDialog.field_cc, VerticalScrollbar.field_Qb, 2);
+    final static void loginWithRegisteredAccount(int param0) {
+        ArchiveFetchClient.startLoginWithCredentials(true, ReportAbuseDialog.field_cc, VerticalScrollbar.field_Qb, 2);
         BytePayloadSubmission.field_l = true;
         int var1 = -31 / ((-11 - param0) / 62);
     }

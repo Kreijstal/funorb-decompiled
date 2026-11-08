@@ -28,7 +28,7 @@ final class NodeDeque {
         return (IntrusiveNode) null;
     }
 
-    final static String a(int param0, String param1, int param2) {
+    final static String getJoinFailureMessage(int param0, String param1, int param2) {
         RuntimeException var3 = null;
         String stackIn_2_0 = null;
         String stackIn_5_0 = null;
@@ -92,7 +92,7 @@ final class NodeDeque {
 
     public static void clearSharedReferences(byte obfuscationGuard) {
         if (obfuscationGuard != 100) {
-          NodeDeque.a(false, 28);
+          NodeDeque.createSocialTabbedPanel(false, 28);
           field_c = null;
           field_a = (boolean[][]) null;
           return;
@@ -191,7 +191,7 @@ final class NodeDeque {
         }
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void createSocialTabbedPanel(boolean param0, int param1) {
         BrickGameLayerController.field_c = !param0 ? new SocialTabbedPanel(UiComponent.field_Z, IterableIntrusiveHashTable.field_b) : new SocialTabbedPanel(MidiSynthesizer.field_u, CanvasInputCleanup.field_f);
         NinjaBackground.field_w = new UiComponent(0L, (UiComponent) null);
         NinjaBackground.field_w.addChild(BrickGameLayerController.field_c.tabs, 0);
@@ -203,7 +203,7 @@ final class NodeDeque {
         int var2 = -67 / ((1 - param1) / 63);
         MembershipBenefitsScreen.field_t.addChild(Ball.field_A, 0);
         MembershipBenefitsScreen.field_t.addChild(RankingSocketHelpers.field_a, 0);
-        CacheIoRequest.a(true, param0);
+        CacheIoRequest.layoutLobbyComponents(true, param0);
     }
 
     final boolean isEmpty(boolean obfuscationGuard) {
@@ -266,7 +266,7 @@ final class NodeDeque {
         return;
     }
 
-    final static void a(java.applet.Applet param0, byte param1) {
+    final static void openSupportPage(java.applet.Applet param0, byte param1) {
         try {
           java.net.URL var2 = null;
           Exception var2_ref = null;
@@ -282,7 +282,7 @@ final class NodeDeque {
               if (param1 <= -42) {
                 return;
               }
-              NodeDeque.a(false, -57);
+              NodeDeque.createSocialTabbedPanel(false, -57);
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -361,9 +361,9 @@ final class NodeDeque {
         return null;
     }
 
-    final static void a(MusicTrack param0, int param1, boolean param2) {
+    final static void playMusicTrackAtFullGain(MusicTrack param0, int param1, boolean param2) {
         try {
-          SocialTabbedPanel.a(param2, 256, (byte) 121, param0);
+          SocialTabbedPanel.switchMusicTrack(param2, 256, (byte) 121, param0);
           if (param1 != -27300) {
             field_a = (boolean[][]) null;
           }

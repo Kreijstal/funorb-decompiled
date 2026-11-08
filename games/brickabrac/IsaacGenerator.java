@@ -58,12 +58,12 @@ final class IsaacGenerator {
         return;
     }
 
-    final static void a(MusicTrack param0, int param1) {
+    final static void playMusicTrack(MusicTrack param0, int param1) {
         if (param1 != 0) {
           return;
         }
         try {
-          NodeDeque.a(param0, -27300, true);
+          NodeDeque.playMusicTrackAtFullGain(param0, -27300, true);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "fo.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -255,6 +255,6 @@ final class IsaacGenerator {
 
     static {
         awaitingLoginSuccessBody = new ConnectionPhase();
-        PlayerNameChooserPanel.a(150, 50);
+        PlayerNameChooserPanel.configureSlideshowTiming(150, 50);
     }
 }

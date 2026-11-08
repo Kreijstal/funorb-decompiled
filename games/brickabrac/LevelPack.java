@@ -69,7 +69,7 @@ final class LevelPack {
         CacheIoRequest.windowCanvas.requestFocus();
     }
 
-    final static UiComponent c(int param0) {
+    final static UiComponent getGamePlayerListContent(int param0) {
         int var1 = -61 / ((param0 + 36) / 63);
         return TimedSplashScreen.field_u.content;
     }

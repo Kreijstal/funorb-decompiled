@@ -19,7 +19,7 @@ final class LobbyCaptionGlobals {
           field_a = null;
           return;
         }
-        LobbyCaptionGlobals.b(-43);
+        LobbyCaptionGlobals.shutdownAudio(-43);
         field_d = null;
         field_f = null;
         field_e = null;
@@ -28,7 +28,7 @@ final class LobbyCaptionGlobals {
         field_a = null;
     }
 
-    final static void b(int param0) {
+    final static void shutdownAudio(int param0) {
         TooltipSprite.shutdownAudioPlayers(40);
         if (param0 != 18) {
           LobbyCaptionGlobals.clearSharedReferences(81);

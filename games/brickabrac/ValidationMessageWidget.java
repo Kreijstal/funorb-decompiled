@@ -56,7 +56,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
         }
     }
 
-    final static void a(byte param0) {
+    final static void increaseMusicVolume(byte param0) {
         ResourcePreparationEntry.increaseMusicGain(13);
         if (param0 != 109) {
           field_T = (String) null;
@@ -68,7 +68,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
         halloweenNearSprite = null;
         field_T = null;
         if (obfuscationGuard >= -18) {
-          ValidationMessageWidget.a((byte) 48);
+          ValidationMessageWidget.increaseMusicVolume((byte) 48);
         }
     }
 

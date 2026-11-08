@@ -108,26 +108,26 @@ final class ChocolateBackground extends BackgroundScene {
         return TextChoiceDialogHitTest.chocSegsSprites[-1 + scaleDivisor];
     }
 
-    final static ConditionalTextValue f(int param0) {
-        String var1 = LevelSelectScreen.d(true);
+    final static ConditionalTextValue createUsernameValidationValue(int param0) {
+        String var1 = LevelSelectScreen.getPendingUsername(true);
         if (param0 < 68) {
           ChocolateBackground.clearSharedReferences((byte) 97);
           if (var1 != null) {
             if (!(0 > var1.indexOf('@'))) {
               var1 = "";
             }
-            return new ConditionalTextValue(LevelSelectScreen.d(true), RasterEffectHelpers.b((byte) 118));
+            return new ConditionalTextValue(LevelSelectScreen.getPendingUsername(true), RasterEffectHelpers.isUsernameCheckPending((byte) 118));
           }
-          return new ConditionalTextValue(LevelSelectScreen.d(true), RasterEffectHelpers.b((byte) 118));
+          return new ConditionalTextValue(LevelSelectScreen.getPendingUsername(true), RasterEffectHelpers.isUsernameCheckPending((byte) 118));
         }
         if (var1 == null) {
-          return new ConditionalTextValue(LevelSelectScreen.d(true), RasterEffectHelpers.b((byte) 118));
+          return new ConditionalTextValue(LevelSelectScreen.getPendingUsername(true), RasterEffectHelpers.isUsernameCheckPending((byte) 118));
         }
         if (0 <= var1.indexOf('@')) {
           var1 = "";
-          return new ConditionalTextValue(LevelSelectScreen.d(true), RasterEffectHelpers.b((byte) 118));
+          return new ConditionalTextValue(LevelSelectScreen.getPendingUsername(true), RasterEffectHelpers.isUsernameCheckPending((byte) 118));
         }
-        return new ConditionalTextValue(LevelSelectScreen.d(true), RasterEffectHelpers.b((byte) 118));
+        return new ConditionalTextValue(LevelSelectScreen.getPendingUsername(true), RasterEffectHelpers.isUsernameCheckPending((byte) 118));
     }
 
     final RgbSprite[] getLeverSprites(int obfuscationGuard) {

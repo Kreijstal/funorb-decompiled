@@ -29,7 +29,7 @@ final class ToggleButtonWidget extends FocusableWidget {
           }
           ChatLobbyUiHelpers.loadingProgressDialog.setProgress(param2, param0, param3, (byte) 86);
           Rasterizer2D.clear();
-          HalfRgbBlendHelpers.a(true, -1);
+          HalfRgbBlendHelpers.drawRootWidgetLayers(true, -1);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "bf.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
@@ -75,7 +75,7 @@ final class ToggleButtonWidget extends FocusableWidget {
 
     final static void showLoginPanel(boolean flagOne, boolean flagTwo, int obfuscationGuard, String message) {
         try {
-          IntKeyIndex.a(-1);
+          IntKeyIndex.resetAccountFlowState(-1);
           ResourceArchive.field_f.hideLayers(-127);
           if (obfuscationGuard != -15947) {
             parisFarSprite = (RgbSprite) null;

@@ -11,7 +11,7 @@ final class EmailConfirmationValidator extends TextFieldValidator {
     static String field_r;
     static NodeDeque pendingBytePayloadRequests;
 
-    final static java.applet.Applet e(byte param0) {
+    final static java.applet.Applet getHostApplet(byte param0) {
         if (null != CacheEntry.field_x) {
           return CacheEntry.field_x;
         }
@@ -121,7 +121,7 @@ final class EmailConfirmationValidator extends TextFieldValidator {
         pendingBytePayloadRequests = null;
     }
 
-    final static void e(int param0) {
+    final static void clearSocialLists(int param0) {
         DualLinkNode var2 = null;
         int var3 = BrickABrac.field_J ? 1 : 0;
         DualLinkNode var2Lifetime1;

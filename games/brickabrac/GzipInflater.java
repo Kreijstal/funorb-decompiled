@@ -20,12 +20,12 @@ final class GzipInflater {
         this(-1, 1000000, 1000000);
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, byte param5, int param6) {
+    final static void drawMenuPanel(int param0, int param1, int param2, int param3, int param4, byte param5, int param6) {
         if (param5 < -51) {
           ResourceRequest.drawFramedPanel(param6, param3, param4, 2, 196, param2, param0, 76, param1);
           return;
         }
-        GzipInflater.a(39, -27, -77, 50, -59, (byte) -97, -42);
+        GzipInflater.drawMenuPanel(39, -27, -77, 50, -59, (byte) -97, -42);
         ResourceRequest.drawFramedPanel(param6, param3, param4, 2, 196, param2, param0, 76, param1);
     }
 
@@ -49,7 +49,7 @@ final class GzipInflater {
             FarmBackground.field_u = param2;
             MainMenuScreen.field_x = param7;
             if (param9 <= 121) {
-              GzipInflater.b(47);
+              GzipInflater.dismissTutorialPrompt(47);
             }
             SocketConnector.field_b = param13;
             DebouncedValidationSource.field_a = param12;
@@ -102,7 +102,7 @@ final class GzipInflater {
         field_a = null;
     }
 
-    final static void b(int param0) {
+    final static void dismissTutorialPrompt(int param0) {
         TextValidationHelpers.field_a = LobbyOverlayHelpers.field_i;
         if (param0 != -8) {
           GzipInflater.clearSharedReferences(42);
@@ -120,7 +120,7 @@ final class GzipInflater {
               this.inflater = new java.util.zip.Inflater(true);
             }
             if (obfuscationGuard != -20555) {
-              GzipInflater.b(-99);
+              GzipInflater.dismissTutorialPrompt(-99);
             }
             try {
               this.inflater.setInput(packet.data, packet.position + 10, packet.data.length + (-8 - packet.position) - 10);

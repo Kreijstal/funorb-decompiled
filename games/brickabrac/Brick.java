@@ -134,7 +134,7 @@ final class Brick extends RectangleBody {
             if (!TextFieldRenderer.field_A) {
               return;
             }
-            WidgetLayer.a(this.typeId, 2, (byte) -92);
+            WidgetLayer.onTutorialEvent(this.typeId, 2, (byte) -92);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

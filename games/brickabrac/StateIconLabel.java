@@ -92,7 +92,7 @@ final class StateIconLabel extends UiComponent {
         }
     }
 
-    final static AudioMixer h(int param0) {
+    final static AudioMixer getSoundMixer(int param0) {
         if (param0 < 91) {
           field_Pb = (String) null;
         }

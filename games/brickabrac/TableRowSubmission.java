@@ -21,7 +21,7 @@ final class TableRowSubmission extends IntrusiveNode {
         }
     }
 
-    final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int[] param9) {
+    final static void applyAlphaMaskDarken(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int[] param9) {
         int var12 = 0;
         int var13 = 0;
         int incrementValue$0 = 0;

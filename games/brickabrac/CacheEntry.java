@@ -19,7 +19,7 @@ abstract class CacheEntry extends DualLinkNode {
         field_A = null;
         field_B = null;
         if (obfuscationGuard != 31434) {
-          CacheEntry.a((String[][]) null, (RgbSprite[][]) null, -45, (String[]) null, 69, (byte[]) null, (String[]) null, (ResourceArchive) null, (int[]) null, (RgbSprite[][]) null, (byte[]) null, 112, (String[]) null, -119, (String[][]) null);
+          CacheEntry.initializeLobbyComponents((String[][]) null, (RgbSprite[][]) null, -45, (String[]) null, 69, (byte[]) null, (String[]) null, (ResourceArchive) null, (int[]) null, (RgbSprite[][]) null, (byte[]) null, 112, (String[]) null, -119, (String[][]) null);
         }
         field_C = null;
         field_D = null;
@@ -27,7 +27,7 @@ abstract class CacheEntry extends DualLinkNode {
 
     abstract Object getValue(int obfuscationGuard);
 
-    final static void a(String[][] param0, RgbSprite[][] param1, int param2, String[] param3, int param4, byte[] param5, String[] param6, ResourceArchive param7, int[] param8, RgbSprite[][] param9, byte[] param10, int param11, String[] param12, int param13, String[][] param14) {
+    final static void initializeLobbyComponents(String[][] param0, RgbSprite[][] param1, int param2, String[] param3, int param4, byte[] param5, String[] param6, ResourceArchive param7, int[] param8, RgbSprite[][] param9, byte[] param10, int param11, String[] param12, int param13, String[][] param14) {
         AlignedIconLabel[] array$0 = null;
         AlignedIconLabel[] array$1 = null;
         AlignedIconLabel[] array$2 = null;

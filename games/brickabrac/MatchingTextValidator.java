@@ -86,7 +86,7 @@ final class MatchingTextValidator extends TextFieldValidator {
         field_l = null;
     }
 
-    final static void b(boolean param0) {
+    final static void requestEnterLobby(boolean param0) {
         TextFieldValidator.outgoingPackets.writeCipheredOpcode(-13413, 9);
         RadialSelectorWidget.field_L = param0 ? true : false;
     }
@@ -141,7 +141,7 @@ final class MatchingTextValidator extends TextFieldValidator {
         }
     }
 
-    final static boolean e(int param0) {
+    final static boolean isPublicChatInputOpen(int param0) {
         if (param0 >= -90) {
           return false;
         }

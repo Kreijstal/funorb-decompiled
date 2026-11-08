@@ -356,7 +356,7 @@ final class WidgetPaintStyle {
         }
     }
 
-    final static boolean a(byte param0) {
+    final static boolean getRegistrationNewsletterOptIn(byte param0) {
         int var1 = 47 % ((59 - param0) / 63);
         return FullscreenFailureKind.field_i;
     }

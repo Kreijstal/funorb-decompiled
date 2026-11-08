@@ -90,10 +90,10 @@ final class LevelPackLoader {
 
     final static boolean appletHasTuhstatbutMarker(byte obfuscationGuard) {
         int var1 = 25 % ((obfuscationGuard - 55) / 54);
-        return AppletResourceHelpers.hasTuhstatbutMarker(EmailConfirmationValidator.e((byte) -95), (byte) 14);
+        return AppletResourceHelpers.hasTuhstatbutMarker(EmailConfirmationValidator.getHostApplet((byte) -95), (byte) 14);
     }
 
-    final static UiComponent c(int param0) {
+    final static UiComponent getLobbyPlayerListContent(int param0) {
         if (param0 != 0) {
           return (UiComponent) null;
         }

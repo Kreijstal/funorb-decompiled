@@ -159,7 +159,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         }
     }
 
-    final static void a(int param0, int param1, UiComponent param2) {
+    final static void openChatFilterMenu(int param0, int param1, UiComponent param2) {
         ContextActionController var9 = null;
         RgbSprite var11 = null;
         String var10 = null;

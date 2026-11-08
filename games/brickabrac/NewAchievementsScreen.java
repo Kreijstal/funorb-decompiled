@@ -13,28 +13,28 @@ final class NewAchievementsScreen extends AchievementBrowserScreen {
         this.achievementMask = SpriteInputHelpers.pendingAchievementMask;
     }
 
-    final static void f(int param0) {
+    final static void startGuestPlay(int param0) {
         if (param0 != 967) {
           discardGameplayOnTransition = false;
           NinjaBackground.showLoadingProgressDialog((byte) -95);
-          CheckboxWidgetRenderer.a(4, true);
+          CheckboxWidgetRenderer.setAccountDialogResult(4, true);
           return;
         }
         NinjaBackground.showLoadingProgressDialog((byte) -95);
-        CheckboxWidgetRenderer.a(4, true);
+        CheckboxWidgetRenderer.setAccountDialogResult(4, true);
     }
 
     final boolean isAchievementExcluded(int achievementId, byte obfuscationGuard) {
         if (obfuscationGuard == 38) {
           return AppletResourceHelpers.isBitClear(achievementId, (byte) 47, this.achievementMask);
         }
-        NewAchievementsScreen.a(-57, true, false, -49);
+        NewAchievementsScreen.drawChatCaptionTab(-57, true, false, -49);
         return AppletResourceHelpers.isBitClear(achievementId, (byte) 47, this.achievementMask);
     }
 
-    final static void a(int param0, boolean param1, boolean param2, int param3) {
+    final static void drawChatCaptionTab(int param0, boolean param1, boolean param2, int param3) {
         int var4 = IntrusiveHashTable.field_l + ContextActionController.field_g.measureText(ContextActionController.field_f);
-        KeyboardInput.a(1, MultiValueSliderWidget.field_K, var4, 6, LevelSelectScreen.field_w, !param2 ? 196 : 256, -5 - LevelSelectScreen.field_w + param0);
+        KeyboardInput.drawNineSliceFrame(1, MultiValueSliderWidget.field_K, var4, 6, LevelSelectScreen.field_w, !param2 ? 196 : 256, -5 - LevelSelectScreen.field_w + param0);
         Rasterizer2D.saveClip(LevelPackSelectScreen.field_v);
         Rasterizer2D.intersectClip(MultiValueSliderWidget.field_K[0].width - 1, DualLinkDeque.field_d.screenY + (-LevelSelectScreen.field_w - MultiValueSliderWidget.field_K[0].height), 1 - (-var4 + MultiValueSliderWidget.field_K[0].width), -MultiValueSliderWidget.field_K[0].height + DualLinkDeque.field_d.screenY);
         ContextActionController.field_g.drawLeftAlpha(ContextActionController.field_f, MultiValueSliderWidget.field_K[0].width + 1, -5 - MultiValueSliderWidget.field_K[6].height + (DualLinkDeque.field_d.screenY + 2), !param1 ? 1 : 0, -1, !param2 ? 196 : 256);

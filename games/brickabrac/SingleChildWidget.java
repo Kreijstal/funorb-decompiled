@@ -455,7 +455,7 @@ abstract class SingleChildWidget extends Widget implements WidgetContainer {
             param5 = false;
           }
           SoundCache.handleFriendNameEntry(124, param1, param5);
-          Paddle.a(param2, param5, 124);
+          Paddle.updateReportAbuseDialog(param2, param5, 124);
           param5 = false;
         }
         return param5;

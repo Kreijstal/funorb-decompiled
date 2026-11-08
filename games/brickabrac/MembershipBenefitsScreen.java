@@ -25,17 +25,17 @@ final class MembershipBenefitsScreen extends MenuScreen {
         Rasterizer2D.clear();
         if (obfuscationGuard <= -14) {
           if (LoginCredentials.field_c != null) {
-            LoginCredentials.field_c.e((byte) -93);
+            LoginCredentials.field_c.drawViewer((byte) -93);
           }
           return;
         }
         MembershipBenefitsScreen.clearSharedReferences(61);
         if (LoginCredentials.field_c != null) {
-          LoginCredentials.field_c.e((byte) -93);
+          LoginCredentials.field_c.drawViewer((byte) -93);
         }
     }
 
-    final static void a(boolean param0, boolean param1) {
+    final static void drawNameEntryPopup(boolean param0, boolean param1) {
         if (!param1) {
           if (null != MusicCrossfadeStream.nameEntryPopup) {
             MusicCrossfadeStream.nameEntryPopup.drawRoot(true, param0);
@@ -56,7 +56,7 @@ final class MembershipBenefitsScreen extends MenuScreen {
         return MonotonicTime.nowMillis(false) - RichTextLayout.lastGameReadMillis;
     }
 
-    private final boolean c(int param0, int param1) {
+    private final boolean handleScreenAction(int param0, int param1) {
         int var3 = 0;
         if (param0 != 460) {
           return false;
@@ -88,11 +88,11 @@ final class MembershipBenefitsScreen extends MenuScreen {
           return;
         }
         if (null == this.screenshots) {
-          this.screenshots = PacketBuffer.a("benefits", this.archive, "members_benefits_screenshots", -946715356);
+          this.screenshots = PacketBuffer.loadIndexedSpritesByName("benefits", this.archive, "members_benefits_screenshots", -946715356);
           return;
         }
         if (LoginCredentials.field_c != null) {
-          discarded$0 = this.c(460, LoginCredentials.field_c.a(false, inputEnabled));
+          discarded$0 = this.handleScreenAction(460, LoginCredentials.field_c.advanceViewer(false, inputEnabled));
           return;
         }
         LoginCredentials.field_c = new ScreenshotViewer(CacheEntry.field_C, Widget.field_u, this.screenshots, false, SaveResultsPromptScreen.field_u);
@@ -103,7 +103,7 @@ final class MembershipBenefitsScreen extends MenuScreen {
           return false;
         }
         if (null != LoginCredentials.field_c) {
-          return this.c(460, LoginCredentials.field_c.a((byte) -93));
+          return this.handleScreenAction(460, LoginCredentials.field_c.pollKeyAction((byte) -93));
         }
         return false;
     }

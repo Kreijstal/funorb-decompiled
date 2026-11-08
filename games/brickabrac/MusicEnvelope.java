@@ -304,7 +304,7 @@ final class MusicEnvelope {
             GameTransportHelpers.closeGameTransport((byte) 110);
             return;
           }
-          AlignedIconLabel.a("LR1: " + WhirlpoolHasher.describePacketHistory((byte) -96), (Throwable) null, 53);
+          AlignedIconLabel.reportClientError("LR1: " + WhirlpoolHasher.describePacketHistory((byte) -96), (Throwable) null, 53);
           GameTransportHelpers.closeGameTransport((byte) 52);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

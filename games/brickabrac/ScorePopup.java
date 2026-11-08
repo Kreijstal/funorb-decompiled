@@ -57,7 +57,7 @@ final class ScorePopup extends IntrusiveNode {
         field_j = null;
     }
 
-    final static RgbSprite[] a(int param0, int param1, byte param2, int param3) {
+    final static RgbSprite[] createTwoToneSpriteSet(int param0, int param1, byte param2, int param3) {
         if (param2 <= 34) {
           ScorePopup.initializeMeshLighting(19);
         }

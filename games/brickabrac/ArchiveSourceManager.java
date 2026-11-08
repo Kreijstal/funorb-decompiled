@@ -191,9 +191,9 @@ final class ArchiveSourceManager {
         }
     }
 
-    final static void a(byte param0, MusicTrack param1) {
+    final static void startMusicTrack(byte param0, MusicTrack param1) {
         try {
-          IsaacGenerator.a(param1, 0);
+          IsaacGenerator.playMusicTrack(param1, 0);
           if (param0 >= -74) {
             field_d = (String) null;
           }

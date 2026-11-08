@@ -207,7 +207,7 @@ final class VerticalScrollbar extends UiComponent {
           return;
         }
         PaletteFont var2 = (PaletteFont) null;
-        VerticalScrollbar.a(31, (String) null, 82, (PaletteFont) null, 55, -109);
+        VerticalScrollbar.drawCenteredLabel(31, (String) null, 82, (PaletteFont) null, 55, -109);
         rankingSortIndices = null;
     }
 
@@ -379,12 +379,12 @@ final class VerticalScrollbar extends UiComponent {
         }
     }
 
-    final static void a(int param0, String param1, int param2, PaletteFont param3, int param4, int param5) {
+    final static void drawCenteredLabel(int param0, String param1, int param2, PaletteFont param3, int param4, int param5) {
         try {
           if (param4 != -15531) {
             VerticalScrollbar.clearSharedReferences((byte) 21);
           }
-          InteractiveGameClient.a(param2, param3, param1, 320, param0, param5, -126);
+          InteractiveGameClient.drawCenteredTextInBand(param2, param3, param1, 320, param0, param5, -126);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "fj.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }

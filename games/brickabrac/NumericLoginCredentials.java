@@ -34,9 +34,9 @@ class NumericLoginCredentials extends LoginCredentials {
         }
     }
 
-    final static void a(byte param0, String param1) {
+    final static void drawRankingsStatusText(byte param0, String param1) {
         try {
-          VerticalScrollbar.a(243, param1, 140, ContextActionController.field_g, -15531, 2);
+          VerticalScrollbar.drawCenteredLabel(243, param1, 140, ContextActionController.field_g, -15531, 2);
           if (param0 <= 93) {
             NumericLoginCredentials.getLoginMethodPreferences(99);
           }

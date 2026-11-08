@@ -91,13 +91,13 @@ final class CacheIoWorker implements Runnable {
         }
     }
 
-    final static void a(int param0) {
+    final static void noOperation(int param0) {
         if (param0 != 21678) {
-          CacheIoWorker.a(-67);
+          CacheIoWorker.noOperation(-67);
         }
     }
 
-    final static void a(byte param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void layoutChatPanel(byte param0, int param1, int param2, int param3, int param4, int param5) {
         int var13 = 0;
         int var6_int = 0;
         int var7 = 0;
@@ -206,7 +206,7 @@ final class CacheIoWorker implements Runnable {
           if (obfuscationGuard == -3) {
             return;
           }
-          CacheIoWorker.a((byte) -81, -120, -50, 43, 109, -99);
+          CacheIoWorker.layoutChatPanel((byte) -81, -120, -50, 43, 109, -99);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -269,7 +269,7 @@ final class CacheIoWorker implements Runnable {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2_ref = (Exception) (Object) decompiledCaughtException;
               var6 = (String) null;
-              AlignedIconLabel.a((String) null, (Throwable) ((Object) var2_ref), 35);
+              AlignedIconLabel.reportClientError((String) null, (Throwable) ((Object) var2_ref), 35);
               var7.pending = false;
             }
           }

@@ -23,7 +23,7 @@ final class MainMenuScreen extends MenuScreen {
         return super.getButtonTop(buttonIndex, 1);
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void scaleRectangleBrightness(int param0, int param1, int param2, int param3, int param4, int param5) {
         int incrementValue$0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
@@ -84,14 +84,14 @@ final class MainMenuScreen extends MenuScreen {
         TooltipSprite var4 = null;
         int var3 = BrickABrac.field_J ? 1 : 0;
         super.drawScreen((byte) -68);
-        GzipInflater.a(this.buttonRight + (-this.buttonLeft + 30), 0, 468, 0, 6, (byte) -90, -15 + this.buttonLeft);
+        GzipInflater.drawMenuPanel(this.buttonRight + (-this.buttonLeft + 30), 0, 468, 0, 6, (byte) -90, -15 + this.buttonLeft);
         MovingBody.drawGameLogo((byte) -105);
         this.drawEnabledButtons(0);
         if (obfuscationGuard > -14) {
           field_s = (RgbSprite) null;
         }
-        IntrusiveHashTable.a(MusicPatch.pointerX, (byte) -118, ResourcePreparationEntry.pointerY, MeshLobbyUiHelpers.field_h);
-        if (!DelayedPacket.c(77)) {
+        IntrusiveHashTable.drawMainMenuLogo(MusicPatch.pointerX, (byte) -118, ResourcePreparationEntry.pointerY, MeshLobbyUiHelpers.field_h);
+        if (!DelayedPacket.isFullscreenUnavailable(77)) {
           var4 = (TooltipSprite) (this.tooltipSprites.first(-90));
           while (var4 != null) {
             var4.draw(2);
@@ -114,7 +114,7 @@ final class MainMenuScreen extends MenuScreen {
           GrowableIntList.field_g = GrowableIntList.field_g - 1;
           if (0 == fieldTemp$0) {
             IndexedSpriteGeometry.pushSpriteRaster(-59, field_s);
-            TranslucentNineSliceFrame.a(true);
+            TranslucentNineSliceFrame.drawMenuBackdrop(true);
             RasterStackHelpers.popRaster(-96);
             if (IntrusiveHashTable.field_k != null) {
               IntArrayRequest.lastBackgroundId = IntrusiveHashTable.field_k.sceneId;
@@ -124,7 +124,7 @@ final class MainMenuScreen extends MenuScreen {
             GzipInflater.field_e = 50;
           }
         }
-        if (!DelayedPacket.c(112)) {
+        if (!DelayedPacket.isFullscreenUnavailable(112)) {
           var6 = (TooltipSprite) (this.tooltipSprites.first(-90));
           while (var6 != null) {
             var6.updateHover(0);
@@ -140,7 +140,7 @@ final class MainMenuScreen extends MenuScreen {
           return;
         }
         boolean decompiledFrameRemainder0 = true;
-        if (DelayedPacket.c(117)) {
+        if (DelayedPacket.isFullscreenUnavailable(117)) {
           if (this.selection.selectedIndex == 9) {
             if (keyCode == 99) {
               this.selection.setSelectedIndex(false, 0);
@@ -201,7 +201,7 @@ final class MainMenuScreen extends MenuScreen {
         if (obfuscationGuard > -60) {
           MainMenuScreen.clearSharedReferences(false);
         }
-        if (!DelayedPacket.c(102)) {
+        if (!DelayedPacket.isFullscreenUnavailable(102)) {
           this.initializeButtons(PasswordValidator.field_o, 0);
         }
     }

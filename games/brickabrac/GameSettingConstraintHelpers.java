@@ -4,7 +4,7 @@
 final class GameSettingConstraintHelpers {
     static String[] field_a;
 
-    final static void a(boolean param0, LobbyGame param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final static void findValidSettingCombination(boolean param0, LobbyGame param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         AlignedIconLabel[][] stackIn_33_0 = null;
         int stackIn_34_1 = 0;
         int stackIn_53_0 = 0;
@@ -157,7 +157,7 @@ final class GameSettingConstraintHelpers {
                   } else {
                     param3 = var11;
                   }
-                  GameSettingConstraintHelpers.a(param0, param1, param2, param3, 1 + param4, 0, param6, param7);
+                  GameSettingConstraintHelpers.findValidSettingCombination(param0, param1, param2, param3, 1 + param4, 0, param6, param7);
                   if (MeshAttributeRecord.field_g) {
                     return;
                   }
@@ -195,7 +195,7 @@ final class GameSettingConstraintHelpers {
                 }
               }
               if (var12 != 0) {
-                GameSettingConstraintHelpers.a(param0, param1, param2, param3, param4 + 1, 0, param6, param7);
+                GameSettingConstraintHelpers.findValidSettingCombination(param0, param1, param2, param3, param4 + 1, 0, param6, param7);
                 var10Lifetime1 = 1;
               }
               if (MeshAttributeRecord.field_g) {
@@ -222,7 +222,7 @@ final class GameSettingConstraintHelpers {
         }
     }
 
-    final static int a(byte param0) {
+    final static int getScaledSoundBufferSize(byte param0) {
         if (param0 != 120) {
           return 9;
         }
@@ -232,7 +232,7 @@ final class GameSettingConstraintHelpers {
     public static void clearSharedReferences(int obfuscationGuard) {
         if (obfuscationGuard != -1) {
           LobbyGame var2 = (LobbyGame) null;
-          GameSettingConstraintHelpers.a(true, (LobbyGame) null, -103, -124, -112, 116, 82, 7);
+          GameSettingConstraintHelpers.findValidSettingCombination(true, (LobbyGame) null, -103, -124, -112, 116, 82, 7);
         }
         field_a = null;
     }

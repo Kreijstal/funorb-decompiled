@@ -5,7 +5,7 @@ final class CheckboxWidgetRenderer implements WidgetRenderer {
     static String field_a;
     static AchievementMaskRequest field_b;
 
-    final static void a(int param0, boolean param1) {
+    final static void setAccountDialogResult(int param0, boolean param1) {
         if (!param1) {
           CheckboxWidgetRenderer.sendBytePayloadRequest(-34, 70);
           SocialListResponseHelpers.field_b = param0;
@@ -29,7 +29,7 @@ final class CheckboxWidgetRenderer implements WidgetRenderer {
         try {
           OutgoingPacketHelpers.pendingTableSubmissions.addLast(submission, (byte) 3);
           if (obfuscationGuard != 25) {
-            CheckboxWidgetRenderer.a(20, false);
+            CheckboxWidgetRenderer.setAccountDialogResult(20, false);
           }
           AppletGameShell.sendTableRow(opcode, submission, obfuscationGuard + 14964);
         } catch (RuntimeException runtimeException) {
@@ -165,7 +165,7 @@ final class CheckboxWidgetRenderer implements WidgetRenderer {
           if (callbackGuard != -20618) {
             field_a = (String) null;
           }
-          Under13RegistrationNoticePanel.b(widget.height, var6_int, widget.width, var7, -17634);
+          Under13RegistrationNoticePanel.drawInsetFieldBorder(widget.height, var6_int, widget.width, var7, -17634);
           var8 = AccountDateHelpers.field_a[1];
           if (widget instanceof FocusableWidget &&
             ((FocusableWidget) (widget)).active) {
@@ -174,7 +174,7 @@ final class CheckboxWidgetRenderer implements WidgetRenderer {
           if (!widget.isFocused(callbackGuard ^ 20732)) {
             return;
           }
-          ScrollPaneWithFooter.a(var7 + 2, var6_int + 2, 124, -4 + widget.height, -4 + widget.width);
+          ScrollPaneWithFooter.drawDottedRectangle(var7 + 2, var6_int + 2, 124, -4 + widget.height, -4 + widget.width);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

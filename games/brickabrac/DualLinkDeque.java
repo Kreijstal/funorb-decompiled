@@ -134,17 +134,17 @@ final class DualLinkDeque implements Iterable {
         return node;
     }
 
-    final static void a(boolean param0, boolean param1) {
+    final static void drawLobbyAndChatPanels(boolean param0, boolean param1) {
         if (DualLinkDeque.isPopupOpen(-4858)) {
           param0 = false;
         }
-        RichTextLayout.a(param0, (byte) 123);
+        RichTextLayout.drawLobbyPanels(param0, (byte) 123);
         if (ValidationMessageWidget.field_V) {
           Rasterizer2D.darkenRectangle(BrickGameLayerController.field_c.tabs.localX, BrickGameLayerController.field_c.tabs.localY, BrickGameLayerController.field_c.tabs.width, BrickGameLayerController.field_c.tabs.height);
           BrickGameLayerController.field_c.tabs.drawRoot(true, param0);
         }
         if (!param1) {
-          IntrusiveHashTable.a(7070, param0);
+          IntrusiveHashTable.drawChatPanel(7070, param0);
           return;
         }
     }

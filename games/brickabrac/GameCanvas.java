@@ -17,7 +17,7 @@ final class GameCanvas extends java.awt.Canvas implements java.awt.event.FocusLi
         }
     }
 
-    final static int a(String param0, byte param1, boolean param2, String param3, int param4, String param5, int param6) {
+    final static int submitRegistrationRequest(String param0, byte param1, boolean param2, String param3, int param4, String param5, int param6) {
         ConditionalTextValue var7 = null;
         RuntimeException var7_ref = null;
         ConditionalTextValue var8 = null;
@@ -36,7 +36,7 @@ final class GameCanvas extends java.awt.Canvas implements java.awt.event.FocusLi
             invalidEmailSyntax = (LegacyEmailValidationError) null;
           }
           var8 = new ConditionalTextValue(param3);
-          stackIn_3_0 = ValidationIconWidget.a(param0, param2, param4, var7, param6, var8, 4);
+          stackIn_3_0 = ValidationIconWidget.performAccountServerRequest(param0, param2, param4, var7, param6, var8, 4);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -88,7 +88,7 @@ final class GameCanvas extends java.awt.Canvas implements java.awt.event.FocusLi
           return;
         }
         String var2 = (String) null;
-        GameCanvas.a((String) null, (byte) 44, true, (String) null, -49, (String) null, 29);
+        GameCanvas.submitRegistrationRequest((String) null, (byte) 44, true, (String) null, -49, (String) null, 29);
         invalidEmailSyntax = null;
         field_b = null;
         field_d = null;
@@ -121,7 +121,7 @@ final class GameCanvas extends java.awt.Canvas implements java.awt.event.FocusLi
         }
     }
 
-    final static void a(int param0, int param1, int param2, boolean param3) {
+    final static void updateChatPanel(int param0, int param1, int param2, boolean param3) {
         int var4_int = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
@@ -155,7 +155,7 @@ final class GameCanvas extends java.awt.Canvas implements java.awt.event.FocusLi
             var5 = IntrusiveHashIterator.field_i[var4_int];
             if (var5 != null) {
               if (var5.pressedButton != 0) {
-                QuickChatPhraseDefinition.a(784, var4_int, var5);
+                QuickChatPhraseDefinition.openChatFilterMenu(784, var4_int, var5);
               }
               var6 = OutgoingPacketHelpers.getChatFilter(var4_int, (byte) 18);
               SocialTabbedPanel.field_a[var4_int].sprite = ProxyAuthenticationRequiredException.field_b[var6];
@@ -167,9 +167,9 @@ final class GameCanvas extends java.awt.Canvas implements java.awt.event.FocusLi
           }
           var9 = ChatLobbyUiHelpers.rebuildChatHistoryRows(LobbyGame.field_oc, WidgetLayerBootstrap.uiRowHeight, -13294, param0);
           if (var9 != null) {
-            ScrollPaneWithFooter.a(0, var9);
+            ScrollPaneWithFooter.openChatMessageContextMenu(0, var9);
           }
-          var8 = LevelResultSubmission.c(-9235);
+          var8 = LevelResultSubmission.buildChatInputPrompt(-9235);
           if (var8 == null) {
             return;
           }

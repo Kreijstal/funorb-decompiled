@@ -17,9 +17,9 @@ final class ReportAbuseDialog extends UiComponent {
     private StringBuilder reportedName;
     private UiComponent instructions;
 
-    final static boolean i(int param0) {
+    final static boolean constantTrue(int param0) {
         if (param0 != 0) {
-          ReportAbuseDialog.i(79);
+          ReportAbuseDialog.constantTrue(79);
           return true;
         }
         return true;
@@ -452,7 +452,7 @@ final class ReportAbuseDialog extends UiComponent {
         }
     }
 
-    final static void a(int[] param0, int param1) {
+    final static void registerGamePacketLengths(int[] param0, int param1) {
         try {
           param0[75] = 2;
           param0[79] = -2;

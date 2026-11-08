@@ -272,7 +272,7 @@ final class ConnectionPhase {
                   SingleChildWidget.field_D[settingIndex] = false;
                   settingIndex++;
                 }
-                GameSettingConstraintHelpers.a(true, IncomingPacketHelpers.pendingLobbyGame, -1, -1, -1, 0, RankingsRequest.gameSettingCount, 0);
+                GameSettingConstraintHelpers.findValidSettingCombination(true, IncomingPacketHelpers.pendingLobbyGame, -1, -1, -1, 0, RankingsRequest.gameSettingCount, 0);
                 if (!(QuickChatHelpDialog.loginPrivilegeByteOne < 2) &&
                   IntArrayRequest.heldKeys[12]) {
                   MeshAttributeRecord.field_g = true;
@@ -327,7 +327,7 @@ final class ConnectionPhase {
                 TextWidgetRenderer.requestCancelOpponentSearch(obfuscationGuard + 276, gameActionOpcode);
               }
             }
-            JungleBackground.a(gameActionOpcode, IncomingPacketHelpers.pendingLobbyGame, true, false);
+            JungleBackground.updateGameOptionsPanel(gameActionOpcode, IncomingPacketHelpers.pendingLobbyGame, true, false);
           }
           return;
         } catch (java.lang.RuntimeException caughtUpdateFailure) {

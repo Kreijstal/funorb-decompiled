@@ -31,7 +31,7 @@ final class LevelPackCard {
         return (1 << featureId & ClientResourceHelpers.enabledFeatureMask) != 0 ? true : false;
     }
 
-    final static void a(String[][] param0, IndexedSprite[] param1, byte param2, String[] param3, int param4, String[] param5, String[][] param6, ResourceArchive param7, ResourceArchive param8, ResourceArchive param9, int[] param10, RgbSprite[][] param11, int param12, boolean param13, RgbSprite[][] param14, byte[] param15, byte[] param16, int[] param17, int param18) {
+    final static void initializeLobbyUi(String[][] param0, IndexedSprite[] param1, byte param2, String[] param3, int param4, String[] param5, String[][] param6, ResourceArchive param7, ResourceArchive param8, ResourceArchive param9, int[] param10, RgbSprite[][] param11, int param12, boolean param13, RgbSprite[][] param14, byte[] param15, byte[] param16, int[] param17, int param18) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -67,10 +67,10 @@ final class LevelPackCard {
         String[] var21 = null;
         try {
           var21 = (String[]) null;
-          RadialSelectorRenderer.a(param18, param15, param8, param3, -27460, param13, param14, param7, param12, param10, (String[]) null, param11, param1, 1, param16, param0, param5, param6, param17, param9);
+          RadialSelectorRenderer.initializeLobbyUi(param18, param15, param8, param3, -27460, param13, param14, param7, param12, param10, (String[]) null, param11, param1, 1, param16, param0, param5, param6, param17, param9);
           if (param2 != 47) {
             var20 = (int[]) null;
-            LevelPackCard.a((String[][]) null, (IndexedSprite[]) null, (byte) -33, (String[]) null, 104, (String[]) null, (String[][]) null, (ResourceArchive) null, (ResourceArchive) null, (ResourceArchive) null, (int[]) null, (RgbSprite[][]) null, 5, true, (RgbSprite[][]) null, (byte[]) null, (byte[]) null, (int[]) null, -25);
+            LevelPackCard.initializeLobbyUi((String[][]) null, (IndexedSprite[]) null, (byte) -33, (String[]) null, 104, (String[]) null, (String[][]) null, (ResourceArchive) null, (ResourceArchive) null, (ResourceArchive) null, (int[]) null, (RgbSprite[][]) null, 5, true, (RgbSprite[][]) null, (byte[]) null, (byte[]) null, (int[]) null, -25);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

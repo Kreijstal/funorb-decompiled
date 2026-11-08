@@ -10,7 +10,7 @@ final class GameTransportHelpers {
         ninjaFarSprite = null;
     }
 
-    final static boolean b(byte param0) {
+    final static boolean isCurrentGameCompatible(byte param0) {
         if (param0 != 7) {
           return true;
         }
@@ -75,7 +75,7 @@ final class GameTransportHelpers {
           }
           ToggleButtonWidget.friendEntries = friendsListContent.children;
           CachedArchiveSource.ignoreEntries = ignoreListContent.children;
-          EmailConfirmationValidator.e(108);
+          EmailConfirmationValidator.clearSocialLists(108);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "hn.E(" + (ignoreListContent != null ? "{...}" : "null") + ',' + (friendsListContent != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }

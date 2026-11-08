@@ -118,7 +118,7 @@ final class CappedUrlRequest implements Runnable {
               break;
             }
             if (this.packet.position == this.packet.data.length) {
-              throw CappedUrlRequest.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.packet.data.length + " " + this.url));
+              throw CappedUrlRequest.<RuntimeException>rethrowUnchecked(new Exception("HG1: " + this.packet.data.length + " " + this.url));
             }
             var1 = this;
             synchronized (var1) {
@@ -268,7 +268,7 @@ final class CappedUrlRequest implements Runnable {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException rethrowUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

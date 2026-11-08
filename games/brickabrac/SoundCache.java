@@ -198,7 +198,7 @@ final class SoundCache {
         }
     }
 
-    final static int a(String param0, boolean param1, boolean param2, boolean param3, int param4, String param5) {
+    final static int performLoginRequest(String param0, boolean param1, boolean param2, boolean param3, int param4, String param5) {
         try {
           int stackIn_5_0 = 0;
           int stackIn_29_0 = 0;
@@ -265,7 +265,7 @@ final class SoundCache {
               PacketReceiveHelpers.ensureGamePacketBytes(20, 8)) {
               PopupWidgetLayer.field_ab = LogoRenderHelpers.incomingPackets.readLong(-32768);
               LogoRenderHelpers.incomingPackets.position = 0;
-              SocialListEntry.a(param4, NanoGameClock.field_s, param1, param3, false);
+              SocialListEntry.writeLoginPacket(param4, NanoGameClock.field_s, param1, param3, false);
               GameConnectionHelpers.connectionPhase = LobbyLoginGlobals.awaitingLoginReply;
             }
             boolean decompiledFrameRemainder0 = true;
@@ -335,27 +335,27 @@ final class SoundCache {
               OptionsScreen.field_x = LogoRenderHelpers.incomingPackets.readUnsignedByte(255);
               GameConnectionHelpers.connectionPhase = MenuButton.loggedInConnection;
               if (NanoGameClock.field_s.getCredentialKind(13) == RadialSelectorWidget.emailLoginKind) {
-                EmailConfirmationValidator.field_k.persistLoginMethod(100, EmailConfirmationValidator.e((byte) -66));
+                EmailConfirmationValidator.field_k.persistLoginMethod(100, EmailConfirmationValidator.getHostApplet((byte) -66));
               } else {
                 if (NanoGameClock.field_s.getCredentialKind(13) == MembershipBenefitsScreen.numericLoginKind) {
-                  PasswordTooltipHelpers.field_d.persistLoginMethod(112, EmailConfirmationValidator.e((byte) -81));
+                  PasswordTooltipHelpers.field_d.persistLoginMethod(112, EmailConfirmationValidator.getHostApplet((byte) -81));
                 }
               }
               RadialSelectorRenderer.field_d = false;
               if (var11 != null) {
-                AppletSettingsUiHelpers.setSettingsCookie(-70, EmailConfirmationValidator.e((byte) -112), var11);
+                AppletSettingsUiHelpers.setSettingsCookie(-70, EmailConfirmationValidator.getHostApplet((byte) -112), var11);
               }
               if (0 >= ResourceArchiveFactory.windowModeCapabilityWord &&
                 !ChocolateBackground.field_r) {
                 try {
-                  AppletJavaScriptBridge.callFunctionWithoutArguments("unzap", -121, EmailConfirmationValidator.e((byte) -100));
+                  AppletJavaScriptBridge.callFunctionWithoutArguments("unzap", -121, EmailConfirmationValidator.getHostApplet((byte) -100));
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               } else {
                 try {
-                  AppletJavaScriptBridge.callFunction(new Object[]{GameplayAudioEvent.decodeBase37Name(CacheEntry.field_v, (byte) 3)}, 116, EmailConfirmationValidator.e((byte) -75), "zap");
+                  AppletJavaScriptBridge.callFunction(new Object[]{GameplayAudioEvent.decodeBase37Name(CacheEntry.field_v, (byte) 3)}, 116, EmailConfirmationValidator.getHostApplet((byte) -75), "zap");
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;
@@ -662,7 +662,7 @@ final class SoundCache {
         field_k = null;
         if (obfuscationGuard >= -99) {
           String var2 = (String) null;
-          SoundCache.a((String) null, true, true, true, -106, (String) null);
+          SoundCache.performLoginRequest((String) null, true, true, true, -106, (String) null);
         }
         field_b = null;
         diagnosticFont = null;

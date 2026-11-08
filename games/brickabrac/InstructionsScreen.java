@@ -277,7 +277,7 @@ final class InstructionsScreen extends MenuScreen {
         int var9;
         var9 = BrickABrac.field_J ? 1 : 0;
         super.drawScreen((byte) -27);
-        GzipInflater.a(550, 5, 243, 5, 140, (byte) -101, 45);
+        GzipInflater.drawMenuPanel(550, 5, 243, 5, 140, (byte) -101, 45);
         AchievementMaskRequest.drawHorizontallyCenteredSprite(this.screenId, 19);
         if (this.pageIndex != 0) {
           PasswordFieldRenderer.field_D.setInlineSprites(SingleChildWidget.field_C, RankingSocketHelpers.field_f);

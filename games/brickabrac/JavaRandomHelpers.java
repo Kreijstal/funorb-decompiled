@@ -20,14 +20,14 @@ final class JavaRandomHelpers {
         field_c = null;
     }
 
-    final static int a(int param0) {
+    final static int getRegistrationAge(int param0) {
         if (param0 != 480) {
           return 109;
         }
         return Paddle.field_x;
     }
 
-    final static void a(int param0, RgbSprite param1, boolean param2, int param3, RasterCacheSurface param4, int param5) {
+    final static void renderNinjaBackgroundSurface(int param0, RgbSprite param1, boolean param2, int param3, RasterCacheSurface param4, int param5) {
         RuntimeException var6 = null;
         int stackIn_2_0 = 0;
         int stackIn_3_1 = 0;
@@ -52,7 +52,7 @@ final class JavaRandomHelpers {
           } else {
             stackIn_6_2 = 20;
           }
-          QuickChatMenu.a(stackIn_2_0, stackIn_3_1, stackIn_6_2, param1, 16777215, (param4.width - param1.canvasWidth) / 2, 10 / param5 - param1.canvasHeight + (480 + param0));
+          QuickChatMenu.drawGradientAlphaSilhouette(stackIn_2_0, stackIn_3_1, stackIn_6_2, param1, 16777215, (param4.width - param1.canvasWidth) / 2, 10 / param5 - param1.canvasHeight + (480 + param0));
           RasterStackHelpers.popRaster(-86);
           if (param2) {
             return;
@@ -95,7 +95,7 @@ final class JavaRandomHelpers {
           return;
         }
         var2 = (RasterCacheSurface) null;
-        JavaRandomHelpers.a(90, (RgbSprite) null, false, 114, (RasterCacheSurface) null, 94);
+        JavaRandomHelpers.renderNinjaBackgroundSurface(90, (RgbSprite) null, false, 114, (RasterCacheSurface) null, 94);
         if (MeshLobbyUiHelpers.field_f > 0) {
           MeshLobbyUiHelpers.field_f = MeshLobbyUiHelpers.field_f - 1;
         }
@@ -126,7 +126,7 @@ final class JavaRandomHelpers {
           if (!obfuscationGuard) {
             field_b = (RgbSprite) null;
           }
-          if (FriendListUi.a(bound, (byte) -6)) {
+          if (FriendListUi.isPowerOfTwo(bound, (byte) -6)) {
             powerOfTwoResult = (int)((long)bound * ((long)random.nextInt() & 4294967295L) >> 32);
             return powerOfTwoResult;
           }

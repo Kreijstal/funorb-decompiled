@@ -22,7 +22,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         }
     }
 
-    final static void a(byte param0) {
+    final static void tickTutorialTimers(byte param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
@@ -180,7 +180,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
 
     public static void clearSharedReferences(boolean obfuscationGuard) {
         if (obfuscationGuard) {
-          DelegatingCanvas.a((byte) 23);
+          DelegatingCanvas.tickTutorialTimers((byte) 23);
         }
         field_b = null;
     }

@@ -32,9 +32,9 @@ final class IntArrayRequest extends IntrusiveNode {
         field_k = null;
     }
 
-    final static void c(int param0) {
+    final static void drawDimmedWidgetLayers(int param0) {
         int var1 = -95 / ((param0 - 64) / 58);
-        NineSliceFrame.a(true, false);
+        NineSliceFrame.drawWidgetLayers(true, false);
     }
 
     final static int getFullscreenDialogWidth(byte obfuscationGuard) {

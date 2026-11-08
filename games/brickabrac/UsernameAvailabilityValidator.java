@@ -58,7 +58,7 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           var5 = (CharSequence) ((Object) text);
-          var3 = QuickChatParameterType.a(var5, -106);
+          var3 = QuickChatParameterType.validateUsernameText(var5, -106);
           if (var3 != null) {
             stackIn_3_0 = var3;
             return stackIn_3_0;
@@ -137,7 +137,7 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
             UsernameAvailabilityValidator.clearTooltipState((byte) -106);
           }
           var4 = (CharSequence) ((Object) text);
-          if (!ByteArrayNode.a(17165, var4)) {
+          if (!ByteArrayNode.isValidPlayerNameText(17165, var4)) {
             stackIn_4_0 = AccountMessageDialog.validationInvalid;
             return stackIn_4_0;
           }

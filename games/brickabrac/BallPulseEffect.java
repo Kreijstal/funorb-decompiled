@@ -39,7 +39,7 @@ final class BallPulseEffect extends IntrusiveNode {
 
     final static void loadLogoAssets(ResourceArchive param0, AudioMixer param1, int param2, int param3) {
         try {
-          BoundedFile.field_i = FriendListUi.a((byte) -98) * param2 / 1000;
+          BoundedFile.field_i = FriendListUi.getTicksPerSecond((byte) -98) * param2 / 1000;
           if (param3 < 91) {
             AudioMixer var5 = (AudioMixer) null;
             BallPulseEffect.loadLogoAssets((ResourceArchive) null, (AudioMixer) null, -127, -72);
@@ -58,7 +58,7 @@ final class BallPulseEffect extends IntrusiveNode {
     final void draw(int scaleDivisor, int destinationX, int destinationY, boolean obfuscationGuard) {
         int var5 = (int)((Math.exp((double)((float)(-this.ageTicks) / 20.0f)) - Math.exp(-2.0)) * 200.0);
         int var6 = this.pulseSize((byte) 116);
-        AchievementMaskRequest.a(destinationY + (this.y256 >> 8) / scaleDivisor, var6 / (scaleDivisor << 1), (-this.ageTicks + 40 << 8) / 40, var5, -94, var6 / scaleDivisor, (this.x256 >> 8) / scaleDivisor + destinationX);
+        AchievementMaskRequest.drawBlueRadialGlow(destinationY + (this.y256 >> 8) / scaleDivisor, var6 / (scaleDivisor << 1), (-this.ageTicks + 40 << 8) / 40, var5, -94, var6 / scaleDivisor, (this.x256 >> 8) / scaleDivisor + destinationX);
         if (obfuscationGuard) {
           return;
         }
@@ -72,7 +72,7 @@ final class BallPulseEffect extends IntrusiveNode {
           var3[4] = InvitationDialogHelpers.createSolidSprite(color, 64, (byte) -6);
           return var2;
         }
-        BallPulseEffect.$cfr$intArgs$a$a948187ac0af(-5, false);
+        BallPulseEffect.readIncomingChatMessage(-5, false);
         var3[4] = InvitationDialogHelpers.createSolidSprite(color, 64, (byte) -6);
         return var2;
     }
@@ -148,7 +148,7 @@ final class BallPulseEffect extends IntrusiveNode {
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (Exception) (Object) decompiledCaughtException;
-          AlignedIconLabel.a("CC1", (Throwable) ((Object) var6), obfuscationGuard ^ 16);
+          AlignedIconLabel.reportClientError("CC1", (Throwable) ((Object) var6), obfuscationGuard ^ 16);
           BoundedFile.receivedChatSuggestions = null;
           ByteArrayPoolHelpers.receivedChatText = null;
           return new ChatMessage(quickChat);
@@ -167,7 +167,7 @@ final class BallPulseEffect extends IntrusiveNode {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static ChatMessage $cfr$intArgs$a$a948187ac0af(int param0, boolean param1) {
+    final static ChatMessage readIncomingChatMessage(int param0, boolean param1) {
         boolean stackIn_5_0 = false;
         int stackIn_11_0 = 0;
         int[] stackIn_24_0 = null;
@@ -233,7 +233,7 @@ final class BallPulseEffect extends IntrusiveNode {
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (Exception) (Object) decompiledCaughtException;
-          AlignedIconLabel.a("CC1", (Throwable) ((Object) var6), param0 ^ 16);
+          AlignedIconLabel.reportClientError("CC1", (Throwable) ((Object) var6), param0 ^ 16);
           BoundedFile.receivedChatSuggestions = null;
           ByteArrayPoolHelpers.receivedChatText = null;
           return new ChatMessage(param1);

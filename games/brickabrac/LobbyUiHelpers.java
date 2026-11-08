@@ -351,7 +351,7 @@ final class LobbyUiHelpers {
             waitingMessageForCollapse = AppletGameShell.field_e;
             AppletGameShell.field_e.height = 0;
             waitingMessageForCollapse.width = 0;
-            if (!GameTransportHelpers.b((byte) 7)) {
+            if (!GameTransportHelpers.isCurrentGameCompatible((byte) 7)) {
               gameDisplayName = ClientResourceHelpers.currentLobbyGame.displayName;
               UiComponentNode.field_v.text = GamePresentationHelpers.formatIndexedText(LobbyKeyboardGlobals.field_a, new String[]{gameDisplayName}, (byte) 103).toUpperCase();
               AppletGameShell.field_e.setBounds(40, MultiplayerMatch.field_d.height - 40, 0, MultiplayerMatch.field_d.width, (byte) 64);
@@ -708,7 +708,7 @@ final class LobbyUiHelpers {
             if (0 != RankingSocketHelpers.field_a.pressedButton) {
               MeshLobbyUiHelpers.joinRequestsPanelOpen = false;
             }
-            JungleBackground.a(gameActionOpcode, ClientResourceHelpers.currentLobbyGame, false, false);
+            JungleBackground.updateGameOptionsPanel(gameActionOpcode, ClientResourceHelpers.currentLobbyGame, false, false);
           }
           return;
         } catch (java.lang.RuntimeException caughtUpdateFailure) {

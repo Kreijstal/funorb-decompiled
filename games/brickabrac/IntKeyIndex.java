@@ -9,7 +9,7 @@ final class IntKeyIndex {
     static int field_b;
     private int[] entries;
 
-    final static boolean a(int param0, int param1) {
+    final static boolean hasEnoughPlayers(int param0, int param1) {
         if (param1 != 0) {
           chocCentreSprites = (RgbSprite[]) null;
         }
@@ -58,10 +58,10 @@ final class IntKeyIndex {
         }
     }
 
-    final static void a(int param0) {
+    final static void resetAccountFlowState(int param0) {
         CanvasInputCleanup.field_g = false;
         NanoGameClock.field_l = false;
-        CheckboxWidgetRenderer.a(param0, true);
+        CheckboxWidgetRenderer.setAccountDialogResult(param0, true);
         MusicVoice.field_l = StrongCacheEntry.field_P;
         IntrusiveHashIterator.field_g = StrongCacheEntry.field_P;
     }
@@ -78,7 +78,7 @@ final class IntKeyIndex {
         int bucket;
         int originalIndex;
         if (obfuscationGuard >= -68) {
-          IntKeyIndex.a(47);
+          IntKeyIndex.resetAccountFlowState(47);
         }
         bucketMask = -1 + (this.entries.length >> 1);
         bucket = bucketMask & key;

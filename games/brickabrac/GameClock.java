@@ -26,7 +26,7 @@ abstract class GameClock {
         return 106;
     }
 
-    final static int a(int param0, int param1) {
+    final static int signedBitLength(int param0, int param1) {
         int var2;
         int var2Lifetime1;
         if (0 == param0) {
@@ -82,7 +82,7 @@ abstract class GameClock {
 
     abstract void reset(int obfuscationGuard);
 
-    final static boolean c(byte param0) {
+    final static boolean armDialogTimeoutAndCheckState(byte param0) {
         int var1 = 15 % ((81 - param0) / 36);
         LoginPanel.field_R = true;
         NanoGameClock.field_i = 15000L + MonotonicTime.nowMillis(false);
@@ -167,7 +167,7 @@ abstract class GameClock {
         }
     }
 
-    final static void b(byte param0) {
+    final static void buildReportReasonLabels(byte param0) {
         BackgroundSurfaceHelpers.field_d = new String[QuickChatPhraseRegistry.field_a];
         BackgroundSurfaceHelpers.field_d[18] = NineSliceFrame.field_c;
         BackgroundSurfaceHelpers.field_d[4] = BackgroundRegistry.field_a;

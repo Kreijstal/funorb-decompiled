@@ -78,7 +78,7 @@ final class MeshAudioHelpers {
         }
     }
 
-    final static void a(int param0, boolean param1, MidiSynthesizer param2, PlatformServices param3, int param4, java.awt.Component param5) {
+    final static void startAudioOutput(int param0, boolean param1, MidiSynthesizer param2, PlatformServices param3, int param4, java.awt.Component param5) {
         try {
           BubbleDistortion.initializeAudioOutput(param2, param3, param0, param4, param0, param4 ^ 2024, param5, param1);
         } catch (RuntimeException runtimeException) {

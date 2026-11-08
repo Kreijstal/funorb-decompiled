@@ -83,7 +83,7 @@ final class AccountIntroductionPanel extends WidgetGroup implements WidgetAction
         this.addChild(this.guestPlayButton, true);
     }
 
-    final static void a(PacketBuffer param0, byte param1) {
+    final static void writeMachineId(PacketBuffer param0, byte param1) {
         try {
           int var4 = 0;
           RuntimeException runtimeException = null;
@@ -188,7 +188,7 @@ final class AccountIntroductionPanel extends WidgetGroup implements WidgetAction
         }
     }
 
-    final static String a(CharSequence param0, int param1) {
+    final static String sanitizeAccountName(CharSequence param0, int param1) {
         int var4 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -256,7 +256,7 @@ final class AccountIntroductionPanel extends WidgetGroup implements WidgetAction
         try {
           if (obfuscationGuard > -22) {
             var8 = (PacketBuffer) null;
-            AccountIntroductionPanel.a((PacketBuffer) null, (byte) -62);
+            AccountIntroductionPanel.writeMachineId((PacketBuffer) null, (byte) -62);
           }
           if (this.backButton == widget) {
             MotionWaypoint.openLoginPanel(-117);
@@ -265,7 +265,7 @@ final class AccountIntroductionPanel extends WidgetGroup implements WidgetAction
               Mesh3D.showAccountRegistrationPanel(-1);
             } else {
               if (widget == this.guestPlayButton) {
-                NewAchievementsScreen.f(967);
+                NewAchievementsScreen.startGuestPlay(967);
               }
             }
           }
@@ -292,7 +292,7 @@ final class AccountIntroductionPanel extends WidgetGroup implements WidgetAction
         field_L = null;
     }
 
-    final static void a(String param0, boolean param1, byte param2) {
+    final static void startScreenFade(String param0, boolean param1, byte param2) {
         try {
           if (param2 <= 18) {
             field_H = (AccountResponse) null;

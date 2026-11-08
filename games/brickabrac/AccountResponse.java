@@ -11,7 +11,7 @@ final class AccountResponse {
     static int collisionX256;
     int responseCode;
 
-    final static String b(byte param0) {
+    final static String getPendingLinkPath(byte param0) {
         if (param0 != -49) {
           collisionX256 = 94;
           return PasswordValidator.field_m;

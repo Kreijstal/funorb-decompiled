@@ -29,7 +29,7 @@ final class PlatformServices implements Runnable {
     static String javaVersion;
     private MicrosoftJvmCursorController microsoftCursorDriver;
 
-    private final PlatformTask a(String param0, int param1, boolean param2, int param3) {
+    private final PlatformTask enqueueSocketRequest(String param0, int param1, boolean param2, int param3) {
         if (param3 != -31592) {
           this.microsoftJvm = false;
         }
@@ -73,7 +73,7 @@ final class PlatformServices implements Runnable {
           Object var5 = (Object) null;
           discarded$0 = this.enqueue(false, -76, (Object) null, 124, 36);
         }
-        return this.a(host, port, false, -31592);
+        return this.enqueueSocketRequest(host, port, false, -31592);
     }
 
     public final void run() {
@@ -174,7 +174,7 @@ final class PlatformServices implements Runnable {
                   case 16:
                   default:
                     if (!this.privilegedMode) {
-                      throw PlatformServices.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
+                      throw PlatformServices.<RuntimeException>rethrowUnchecked(new Exception(""));
                     }
                     switch (var2_int) {
                       case 16:
@@ -208,21 +208,21 @@ final class PlatformServices implements Runnable {
                           Class.forName("AwtPointerController").getDeclaredMethod("setcustomcursor", new Class[]{java.awt.Component.class, int[].class, Integer.TYPE, Integer.TYPE, java.awt.Point.class}).invoke(this.awtPointerDriver, new Object[]{var12[0], var12[1], new Integer(var8.argumentOne), new Integer(var8.argumentTwo), var12[2]});
                         } else {
                           if (var2_int != 16) {
-                            throw PlatformServices.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
+                            throw PlatformServices.<RuntimeException>rethrowUnchecked(new Exception(""));
                           }
                           try {
                             if (!osNameLowercase.startsWith("win")) {
-                              throw PlatformServices.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                              throw PlatformServices.<RuntimeException>rethrowUnchecked(new Exception());
                             }
                             var13 = (String) (var8.payload);
                             if (!var13.startsWith("http://") &&
                               !var13.startsWith("https://")) {
-                              throw PlatformServices.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                              throw PlatformServices.<RuntimeException>rethrowUnchecked(new Exception());
                             }
                             var4 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
                             for (var5 = 0; var5 < var13.length(); var5++) {
                               if (-1 == var4.indexOf((int) var13.charAt(var5))) {
-                                throw PlatformServices.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                                throw PlatformServices.<RuntimeException>rethrowUnchecked(new Exception());
                               }
                             }
                             Runtime.getRuntime().exec("cmd /c start \"j\" \"" + var13 + "\"");
@@ -231,16 +231,16 @@ final class PlatformServices implements Runnable {
                             decompiledCaughtException = decompiledCaughtParameter1;
                             var3_ref = (Exception) (Object) decompiledCaughtException;
                             var8.result = var3_ref;
-                            throw PlatformServices.<RuntimeException>$cfr$sneakyThrow(var3_ref);
+                            throw PlatformServices.<RuntimeException>rethrowUnchecked(var3_ref);
                           }
                         }
                         break;
                       case 13:
-                        var3_ref2 = PlatformServices.a((String) (var8.payload), field_c, "", (byte) -89);
+                        var3_ref2 = PlatformServices.openPreferencesFile((String) (var8.payload), field_c, "", (byte) -89);
                         var8.result = var3_ref2;
                         break;
                       case 12:
-                        var3_ref2 = PlatformServices.a((String) (var8.payload), field_c, field_t, (byte) -70);
+                        var3_ref2 = PlatformServices.openPreferencesFile((String) (var8.payload), field_c, field_t, (byte) -70);
                         var8.result = var3_ref2;
                         break;
                       case 7:
@@ -338,7 +338,7 @@ final class PlatformServices implements Runnable {
         return this.enqueue(true, 0, new Object[]{owner, name}, 9, 0);
     }
 
-    private final static BoundedFile a(String param0, int param1, String param2, byte param3) {
+    private final static BoundedFile openPreferencesFile(String param0, int param1, String param2, byte param3) {
         try {
           int var6 = 0;
           BoundedFile stackIn_12_0 = null;
@@ -377,7 +377,7 @@ final class PlatformServices implements Runnable {
             return null;
           }
           var9 = (String) null;
-          PlatformServices.a((String) null, 48, (String) null, (byte) -119);
+          PlatformServices.openPreferencesFile((String) null, 48, (String) null, (byte) -119);
           return null;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -457,7 +457,7 @@ final class PlatformServices implements Runnable {
         return this.enqueue(true, 0, new Object[]{owner, name, parameterTypes}, 8, 0);
     }
 
-    final PlatformTask a(int param0, java.awt.Frame param1) {
+    final PlatformTask enqueueCloseFrame(int param0, java.awt.Frame param1) {
         int var3 = -2 / ((param0 - 54) / 37);
         return this.enqueue(true, 0, param1, 7, 0);
     }
@@ -624,7 +624,7 @@ final class PlatformServices implements Runnable {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException rethrowUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

@@ -170,7 +170,7 @@ final class TableResponseHelpers {
             rowSubmission.unlink((byte) 111);
             return;
           }
-          AlignedIconLabel.a("HS1: " + WhirlpoolHasher.describePacketHistory((byte) -96), (Throwable) null, obfuscationGuard ^ 102);
+          AlignedIconLabel.reportClientError("HS1: " + WhirlpoolHasher.describePacketHistory((byte) -96), (Throwable) null, obfuscationGuard ^ 102);
           GameTransportHelpers.closeGameTransport((byte) 70);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

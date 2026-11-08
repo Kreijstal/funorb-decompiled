@@ -120,7 +120,7 @@ final class MenuButton {
                 if (20 != this.actionId) {
                   stackIn_56_0 = MultiValueSliderWidget.getMusicGain(-29946) * 120 / 256;
                 } else {
-                  stackIn_56_0 = FramedMenuScreen.getMasterSoundGain((byte) -44) * 120 / MenuSelection.e((byte) 43);
+                  stackIn_56_0 = FramedMenuScreen.getMasterSoundGain((byte) -44) * 120 / MenuSelection.getOpaqueAlpha((byte) 43);
                 }
                 var8 = stackIn_56_0;
                 if (!focused) {

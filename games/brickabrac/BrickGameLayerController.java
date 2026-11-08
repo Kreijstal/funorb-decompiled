@@ -9,7 +9,7 @@ final class BrickGameLayerController implements GameLayerController {
     static SocialTabbedPanel field_c;
     static long field_e;
 
-    private final boolean d(int param0) {
+    private final boolean canShowLobbyChatControls(int param0) {
         boolean stackIn_18_0 = false;
         int var2;
         GameplayScreen var3;
@@ -225,11 +225,11 @@ final class BrickGameLayerController implements GameLayerController {
               if (var4 != 0) {
                 stackIn_309_0 = 1;
                 var5 = stackIn_309_0;
-                if (this.d(-119)) {
-                  NewAchievementsScreen.a(var3, var4 != 0, var5 != 0, -114);
+                if (this.canShowLobbyChatControls(-119)) {
+                  NewAchievementsScreen.drawChatCaptionTab(var3, var4 != 0, var5 != 0, -114);
                 }
-                TableDataRequest.a(var2 != 0, 24);
-                if (this.d(101)) {
+                TableDataRequest.drawLobbyLayers(var2 != 0, 24);
+                if (this.canShowLobbyChatControls(101)) {
                   stackIn_358_0 = CanvasInputHelpers.field_a;
                   stackIn_358_1 = 10;
                   stackIn_358_2 = -8 + var3;
@@ -241,11 +241,11 @@ final class BrickGameLayerController implements GameLayerController {
               if (RadialSelectorRenderer.field_p) {
                 stackIn_313_0 = 1;
                 var5Lifetime8 = stackIn_313_0;
-                if (this.d(-119)) {
-                  NewAchievementsScreen.a(var3, var4 != 0, var5Lifetime8 != 0, -114);
+                if (this.canShowLobbyChatControls(-119)) {
+                  NewAchievementsScreen.drawChatCaptionTab(var3, var4 != 0, var5Lifetime8 != 0, -114);
                 }
-                TableDataRequest.a(var2 != 0, 24);
-                if (this.d(101)) {
+                TableDataRequest.drawLobbyLayers(var2 != 0, 24);
+                if (this.canShowLobbyChatControls(101)) {
                   stackIn_319_0 = CanvasInputHelpers.field_a;
                   stackIn_319_1 = 10;
                   stackIn_319_2 = -8 + var3;
@@ -256,11 +256,11 @@ final class BrickGameLayerController implements GameLayerController {
               }
               if (IntArrayRequest.gameplayScreen == null) {
                 var5Lifetime9 = 0;
-                if (this.d(-119)) {
-                  NewAchievementsScreen.a(var3, var4 != 0, var5Lifetime9 != 0, -114);
+                if (this.canShowLobbyChatControls(-119)) {
+                  NewAchievementsScreen.drawChatCaptionTab(var3, var4 != 0, var5Lifetime9 != 0, -114);
                 }
-                TableDataRequest.a(var2 != 0, 24);
-                if (this.d(101)) {
+                TableDataRequest.drawLobbyLayers(var2 != 0, 24);
+                if (this.canShowLobbyChatControls(101)) {
                   stackIn_329_0 = CanvasInputHelpers.field_a;
                   stackIn_329_1 = 10;
                   stackIn_329_2 = -8 + var3;
@@ -271,11 +271,11 @@ final class BrickGameLayerController implements GameLayerController {
               }
               if (IntArrayRequest.gameplayScreen.match.resultsReady) {
                 var5Lifetime10 = 1;
-                if (this.d(-119)) {
-                  NewAchievementsScreen.a(var3, var4 != 0, var5Lifetime10 != 0, -114);
+                if (this.canShowLobbyChatControls(-119)) {
+                  NewAchievementsScreen.drawChatCaptionTab(var3, var4 != 0, var5Lifetime10 != 0, -114);
                 }
-                TableDataRequest.a(var2 != 0, 24);
-                if (this.d(101)) {
+                TableDataRequest.drawLobbyLayers(var2 != 0, 24);
+                if (this.canShowLobbyChatControls(101)) {
                   stackIn_348_0 = CanvasInputHelpers.field_a;
                   stackIn_348_1 = 10;
                   stackIn_348_2 = -8 + var3;
@@ -285,11 +285,11 @@ final class BrickGameLayerController implements GameLayerController {
                 return;
               }
               var5Lifetime11 = 0;
-              if (this.d(-119)) {
-                NewAchievementsScreen.a(var3, var4 != 0, var5Lifetime11 != 0, -114);
+              if (this.canShowLobbyChatControls(-119)) {
+                NewAchievementsScreen.drawChatCaptionTab(var3, var4 != 0, var5Lifetime11 != 0, -114);
               }
-              TableDataRequest.a(var2 != 0, 24);
-              if (this.d(101)) {
+              TableDataRequest.drawLobbyLayers(var2 != 0, 24);
+              if (this.canShowLobbyChatControls(101)) {
                 stackIn_339_0 = CanvasInputHelpers.field_a;
                 stackIn_339_1 = 10;
                 stackIn_339_2 = -8 + var3;
@@ -308,11 +308,11 @@ final class BrickGameLayerController implements GameLayerController {
               if (IntArrayRequest.gameplayScreen != null &&
                 IntArrayRequest.gameplayScreen.match.resultsReady) {
                 var5Lifetime7 = 1;
-                if (this.d(-119)) {
-                  NewAchievementsScreen.a(var3, var4Lifetime7 != 0, var5Lifetime7 != 0, -114);
+                if (this.canShowLobbyChatControls(-119)) {
+                  NewAchievementsScreen.drawChatCaptionTab(var3, var4Lifetime7 != 0, var5Lifetime7 != 0, -114);
                 }
-                TableDataRequest.a(var2 != 0, 24);
-                if (this.d(101)) {
+                TableDataRequest.drawLobbyLayers(var2 != 0, 24);
+                if (this.canShowLobbyChatControls(101)) {
                   stackIn_378_0 = CanvasInputHelpers.field_a;
                   stackIn_378_1 = 10;
                   stackIn_378_2 = -8 + var3;
@@ -330,11 +330,11 @@ final class BrickGameLayerController implements GameLayerController {
             stackIn_365_0 = 1;
             var5Lifetime7 = stackIn_365_0;
           }
-          if (this.d(-119)) {
-            NewAchievementsScreen.a(var3, var4Lifetime7 != 0, var5Lifetime7 != 0, -114);
+          if (this.canShowLobbyChatControls(-119)) {
+            NewAchievementsScreen.drawChatCaptionTab(var3, var4Lifetime7 != 0, var5Lifetime7 != 0, -114);
           }
-          TableDataRequest.a(var2 != 0, 24);
-          if (this.d(101)) {
+          TableDataRequest.drawLobbyLayers(var2 != 0, 24);
+          if (this.canShowLobbyChatControls(101)) {
             stackIn_389_0 = CanvasInputHelpers.field_a;
             stackIn_389_1 = 10;
             stackIn_389_2 = -8 + var3;
@@ -371,11 +371,11 @@ final class BrickGameLayerController implements GameLayerController {
             }
           }
           var5Lifetime1 = stackIn_20_0;
-          if (this.d(-119)) {
-            NewAchievementsScreen.a(var3Lifetime1, var4Lifetime1 != 0, var5Lifetime1 != 0, -114);
+          if (this.canShowLobbyChatControls(-119)) {
+            NewAchievementsScreen.drawChatCaptionTab(var3Lifetime1, var4Lifetime1 != 0, var5Lifetime1 != 0, -114);
           }
-          TableDataRequest.a(var2Lifetime1 != 0, 24);
-          if (this.d(101)) {
+          TableDataRequest.drawLobbyLayers(var2Lifetime1 != 0, 24);
+          if (this.canShowLobbyChatControls(101)) {
             stackIn_26_0 = CanvasInputHelpers.field_a;
             stackIn_26_1 = 10;
             stackIn_26_2 = -8 + var3Lifetime1;
@@ -405,11 +405,11 @@ final class BrickGameLayerController implements GameLayerController {
                 }
               }
               var5Lifetime2 = stackIn_46_0;
-              if (this.d(-119)) {
-                NewAchievementsScreen.a(var3Lifetime2, var4Lifetime2 != 0, var5Lifetime2 != 0, -114);
+              if (this.canShowLobbyChatControls(-119)) {
+                NewAchievementsScreen.drawChatCaptionTab(var3Lifetime2, var4Lifetime2 != 0, var5Lifetime2 != 0, -114);
               }
-              TableDataRequest.a(var2Lifetime2 != 0, 24);
-              if (this.d(101)) {
+              TableDataRequest.drawLobbyLayers(var2Lifetime2 != 0, 24);
+              if (this.canShowLobbyChatControls(101)) {
                 stackIn_52_0 = CanvasInputHelpers.field_a;
                 stackIn_52_1 = 10;
                 stackIn_52_2 = -8 + var3Lifetime2;
@@ -426,11 +426,11 @@ final class BrickGameLayerController implements GameLayerController {
           if (var4Lifetime2Lifetime1 != 0) {
             stackIn_59_0 = 1;
             var5Lifetime2Lifetime1 = stackIn_59_0;
-            if (this.d(-119)) {
-              NewAchievementsScreen.a(var3Lifetime2, var4Lifetime2Lifetime1 != 0, var5Lifetime2Lifetime1 != 0, -114);
+            if (this.canShowLobbyChatControls(-119)) {
+              NewAchievementsScreen.drawChatCaptionTab(var3Lifetime2, var4Lifetime2Lifetime1 != 0, var5Lifetime2Lifetime1 != 0, -114);
             }
-            TableDataRequest.a(var2Lifetime2 != 0, 24);
-            if (this.d(101)) {
+            TableDataRequest.drawLobbyLayers(var2Lifetime2 != 0, 24);
+            if (this.canShowLobbyChatControls(101)) {
               stackIn_108_0 = CanvasInputHelpers.field_a;
               stackIn_108_1 = 10;
               stackIn_108_2 = -8 + var3Lifetime2;
@@ -441,11 +441,11 @@ final class BrickGameLayerController implements GameLayerController {
             if (RadialSelectorRenderer.field_p) {
               stackIn_63_0 = 1;
               var5Lifetime2Lifetime1 = stackIn_63_0;
-              if (this.d(-119)) {
-                NewAchievementsScreen.a(var3Lifetime2, var4Lifetime2Lifetime1 != 0, var5Lifetime2Lifetime1 != 0, -114);
+              if (this.canShowLobbyChatControls(-119)) {
+                NewAchievementsScreen.drawChatCaptionTab(var3Lifetime2, var4Lifetime2Lifetime1 != 0, var5Lifetime2Lifetime1 != 0, -114);
               }
-              TableDataRequest.a(var2Lifetime2 != 0, 24);
-              if (this.d(101)) {
+              TableDataRequest.drawLobbyLayers(var2Lifetime2 != 0, 24);
+              if (this.canShowLobbyChatControls(101)) {
                 stackIn_69_0 = CanvasInputHelpers.field_a;
                 stackIn_69_1 = 10;
                 stackIn_69_2 = -8 + var3Lifetime2;
@@ -455,11 +455,11 @@ final class BrickGameLayerController implements GameLayerController {
             } else {
               if (IntArrayRequest.gameplayScreen == null) {
                 var5Lifetime2Lifetime1 = 0;
-                if (this.d(-119)) {
-                  NewAchievementsScreen.a(var3Lifetime2, var4Lifetime2Lifetime1 != 0, var5Lifetime2Lifetime1 != 0, -114);
+                if (this.canShowLobbyChatControls(-119)) {
+                  NewAchievementsScreen.drawChatCaptionTab(var3Lifetime2, var4Lifetime2Lifetime1 != 0, var5Lifetime2Lifetime1 != 0, -114);
                 }
-                TableDataRequest.a(var2Lifetime2 != 0, 24);
-                if (this.d(101)) {
+                TableDataRequest.drawLobbyLayers(var2Lifetime2 != 0, 24);
+                if (this.canShowLobbyChatControls(101)) {
                   stackIn_79_0 = CanvasInputHelpers.field_a;
                   stackIn_79_1 = 10;
                   stackIn_79_2 = -8 + var3Lifetime2;
@@ -469,11 +469,11 @@ final class BrickGameLayerController implements GameLayerController {
               } else {
                 if (IntArrayRequest.gameplayScreen.match.resultsReady) {
                   var5Lifetime2Lifetime1 = 1;
-                  if (this.d(-119)) {
-                    NewAchievementsScreen.a(var3Lifetime2, var4Lifetime2Lifetime1 != 0, var5Lifetime2Lifetime1 != 0, -114);
+                  if (this.canShowLobbyChatControls(-119)) {
+                    NewAchievementsScreen.drawChatCaptionTab(var3Lifetime2, var4Lifetime2Lifetime1 != 0, var5Lifetime2Lifetime1 != 0, -114);
                   }
-                  TableDataRequest.a(var2Lifetime2 != 0, 24);
-                  if (this.d(101)) {
+                  TableDataRequest.drawLobbyLayers(var2Lifetime2 != 0, 24);
+                  if (this.canShowLobbyChatControls(101)) {
                     stackIn_98_0 = CanvasInputHelpers.field_a;
                     stackIn_98_1 = 10;
                     stackIn_98_2 = -8 + var3Lifetime2;
@@ -482,11 +482,11 @@ final class BrickGameLayerController implements GameLayerController {
                   }
                 } else {
                   var5Lifetime2Lifetime1 = 0;
-                  if (this.d(-119)) {
-                    NewAchievementsScreen.a(var3Lifetime2, var4Lifetime2Lifetime1 != 0, var5Lifetime2Lifetime1 != 0, -114);
+                  if (this.canShowLobbyChatControls(-119)) {
+                    NewAchievementsScreen.drawChatCaptionTab(var3Lifetime2, var4Lifetime2Lifetime1 != 0, var5Lifetime2Lifetime1 != 0, -114);
                   }
-                  TableDataRequest.a(var2Lifetime2 != 0, 24);
-                  if (this.d(101)) {
+                  TableDataRequest.drawLobbyLayers(var2Lifetime2 != 0, 24);
+                  if (this.canShowLobbyChatControls(101)) {
                     stackIn_89_0 = CanvasInputHelpers.field_a;
                     stackIn_89_1 = 10;
                     stackIn_89_2 = -8 + var3Lifetime2;
@@ -506,11 +506,11 @@ final class BrickGameLayerController implements GameLayerController {
           if (var4Lifetime3 != 0) {
             stackIn_243_0 = 1;
             var5Lifetime3 = stackIn_243_0;
-            if (this.d(-119)) {
-              NewAchievementsScreen.a(var3Lifetime3, var4Lifetime3 != 0, var5Lifetime3 != 0, -114);
+            if (this.canShowLobbyChatControls(-119)) {
+              NewAchievementsScreen.drawChatCaptionTab(var3Lifetime3, var4Lifetime3 != 0, var5Lifetime3 != 0, -114);
             }
-            TableDataRequest.a(var2Lifetime3 != 0, 24);
-            if (this.d(101)) {
+            TableDataRequest.drawLobbyLayers(var2Lifetime3 != 0, 24);
+            if (this.canShowLobbyChatControls(101)) {
               stackIn_292_0 = CanvasInputHelpers.field_a;
               stackIn_292_1 = 10;
               stackIn_292_2 = -8 + var3Lifetime3;
@@ -521,11 +521,11 @@ final class BrickGameLayerController implements GameLayerController {
             if (RadialSelectorRenderer.field_p) {
               stackIn_247_0 = 1;
               var5Lifetime3 = stackIn_247_0;
-              if (this.d(-119)) {
-                NewAchievementsScreen.a(var3Lifetime3, var4Lifetime3 != 0, var5Lifetime3 != 0, -114);
+              if (this.canShowLobbyChatControls(-119)) {
+                NewAchievementsScreen.drawChatCaptionTab(var3Lifetime3, var4Lifetime3 != 0, var5Lifetime3 != 0, -114);
               }
-              TableDataRequest.a(var2Lifetime3 != 0, 24);
-              if (this.d(101)) {
+              TableDataRequest.drawLobbyLayers(var2Lifetime3 != 0, 24);
+              if (this.canShowLobbyChatControls(101)) {
                 stackIn_253_0 = CanvasInputHelpers.field_a;
                 stackIn_253_1 = 10;
                 stackIn_253_2 = -8 + var3Lifetime3;
@@ -535,11 +535,11 @@ final class BrickGameLayerController implements GameLayerController {
             } else {
               if (IntArrayRequest.gameplayScreen == null) {
                 var5Lifetime3 = 0;
-                if (this.d(-119)) {
-                  NewAchievementsScreen.a(var3Lifetime3, var4Lifetime3 != 0, var5Lifetime3 != 0, -114);
+                if (this.canShowLobbyChatControls(-119)) {
+                  NewAchievementsScreen.drawChatCaptionTab(var3Lifetime3, var4Lifetime3 != 0, var5Lifetime3 != 0, -114);
                 }
-                TableDataRequest.a(var2Lifetime3 != 0, 24);
-                if (this.d(101)) {
+                TableDataRequest.drawLobbyLayers(var2Lifetime3 != 0, 24);
+                if (this.canShowLobbyChatControls(101)) {
                   stackIn_263_0 = CanvasInputHelpers.field_a;
                   stackIn_263_1 = 10;
                   stackIn_263_2 = -8 + var3Lifetime3;
@@ -549,11 +549,11 @@ final class BrickGameLayerController implements GameLayerController {
               } else {
                 if (!IntArrayRequest.gameplayScreen.match.resultsReady) {
                   var5Lifetime3 = 0;
-                  if (this.d(-119)) {
-                    NewAchievementsScreen.a(var3Lifetime3, var4Lifetime3 != 0, var5Lifetime3 != 0, -114);
+                  if (this.canShowLobbyChatControls(-119)) {
+                    NewAchievementsScreen.drawChatCaptionTab(var3Lifetime3, var4Lifetime3 != 0, var5Lifetime3 != 0, -114);
                   }
-                  TableDataRequest.a(var2Lifetime3 != 0, 24);
-                  if (this.d(101)) {
+                  TableDataRequest.drawLobbyLayers(var2Lifetime3 != 0, 24);
+                  if (this.canShowLobbyChatControls(101)) {
                     stackIn_282_0 = CanvasInputHelpers.field_a;
                     stackIn_282_1 = 10;
                     stackIn_282_2 = -8 + var3Lifetime3;
@@ -562,11 +562,11 @@ final class BrickGameLayerController implements GameLayerController {
                   }
                 } else {
                   var5Lifetime3 = 1;
-                  if (this.d(-119)) {
-                    NewAchievementsScreen.a(var3Lifetime3, var4Lifetime3 != 0, var5Lifetime3 != 0, -114);
+                  if (this.canShowLobbyChatControls(-119)) {
+                    NewAchievementsScreen.drawChatCaptionTab(var3Lifetime3, var4Lifetime3 != 0, var5Lifetime3 != 0, -114);
                   }
-                  TableDataRequest.a(var2Lifetime3 != 0, 24);
-                  if (this.d(101)) {
+                  TableDataRequest.drawLobbyLayers(var2Lifetime3 != 0, 24);
+                  if (this.canShowLobbyChatControls(101)) {
                     stackIn_273_0 = CanvasInputHelpers.field_a;
                     stackIn_273_1 = 10;
                     stackIn_273_2 = -8 + var3Lifetime3;
@@ -584,11 +584,11 @@ final class BrickGameLayerController implements GameLayerController {
           if (var4Lifetime4 != 0) {
             stackIn_116_0 = 1;
             var5Lifetime4 = stackIn_116_0;
-            if (this.d(-119)) {
-              NewAchievementsScreen.a(var3Lifetime3, var4Lifetime4 != 0, var5Lifetime4 != 0, -114);
+            if (this.canShowLobbyChatControls(-119)) {
+              NewAchievementsScreen.drawChatCaptionTab(var3Lifetime3, var4Lifetime4 != 0, var5Lifetime4 != 0, -114);
             }
-            TableDataRequest.a(var2Lifetime3 != 0, 24);
-            if (this.d(101)) {
+            TableDataRequest.drawLobbyLayers(var2Lifetime3 != 0, 24);
+            if (this.canShowLobbyChatControls(101)) {
               stackIn_165_0 = CanvasInputHelpers.field_a;
               stackIn_165_1 = 10;
               stackIn_165_2 = -8 + var3Lifetime3;
@@ -599,11 +599,11 @@ final class BrickGameLayerController implements GameLayerController {
             if (RadialSelectorRenderer.field_p) {
               stackIn_120_0 = 1;
               var5Lifetime4 = stackIn_120_0;
-              if (this.d(-119)) {
-                NewAchievementsScreen.a(var3Lifetime3, var4Lifetime4 != 0, var5Lifetime4 != 0, -114);
+              if (this.canShowLobbyChatControls(-119)) {
+                NewAchievementsScreen.drawChatCaptionTab(var3Lifetime3, var4Lifetime4 != 0, var5Lifetime4 != 0, -114);
               }
-              TableDataRequest.a(var2Lifetime3 != 0, 24);
-              if (this.d(101)) {
+              TableDataRequest.drawLobbyLayers(var2Lifetime3 != 0, 24);
+              if (this.canShowLobbyChatControls(101)) {
                 stackIn_126_0 = CanvasInputHelpers.field_a;
                 stackIn_126_1 = 10;
                 stackIn_126_2 = -8 + var3Lifetime3;
@@ -613,11 +613,11 @@ final class BrickGameLayerController implements GameLayerController {
             } else {
               if (IntArrayRequest.gameplayScreen == null) {
                 var5Lifetime4 = 0;
-                if (this.d(-119)) {
-                  NewAchievementsScreen.a(var3Lifetime3, var4Lifetime4 != 0, var5Lifetime4 != 0, -114);
+                if (this.canShowLobbyChatControls(-119)) {
+                  NewAchievementsScreen.drawChatCaptionTab(var3Lifetime3, var4Lifetime4 != 0, var5Lifetime4 != 0, -114);
                 }
-                TableDataRequest.a(var2Lifetime3 != 0, 24);
-                if (this.d(101)) {
+                TableDataRequest.drawLobbyLayers(var2Lifetime3 != 0, 24);
+                if (this.canShowLobbyChatControls(101)) {
                   stackIn_136_0 = CanvasInputHelpers.field_a;
                   stackIn_136_1 = 10;
                   stackIn_136_2 = -8 + var3Lifetime3;
@@ -627,11 +627,11 @@ final class BrickGameLayerController implements GameLayerController {
               } else {
                 if (IntArrayRequest.gameplayScreen.match.resultsReady) {
                   var5Lifetime4 = 1;
-                  if (this.d(-119)) {
-                    NewAchievementsScreen.a(var3Lifetime3, var4Lifetime4 != 0, var5Lifetime4 != 0, -114);
+                  if (this.canShowLobbyChatControls(-119)) {
+                    NewAchievementsScreen.drawChatCaptionTab(var3Lifetime3, var4Lifetime4 != 0, var5Lifetime4 != 0, -114);
                   }
-                  TableDataRequest.a(var2Lifetime3 != 0, 24);
-                  if (this.d(101)) {
+                  TableDataRequest.drawLobbyLayers(var2Lifetime3 != 0, 24);
+                  if (this.canShowLobbyChatControls(101)) {
                     stackIn_155_0 = CanvasInputHelpers.field_a;
                     stackIn_155_1 = 10;
                     stackIn_155_2 = -8 + var3Lifetime3;
@@ -640,11 +640,11 @@ final class BrickGameLayerController implements GameLayerController {
                   }
                 } else {
                   var5Lifetime4 = 0;
-                  if (this.d(-119)) {
-                    NewAchievementsScreen.a(var3Lifetime3, var4Lifetime4 != 0, var5Lifetime4 != 0, -114);
+                  if (this.canShowLobbyChatControls(-119)) {
+                    NewAchievementsScreen.drawChatCaptionTab(var3Lifetime3, var4Lifetime4 != 0, var5Lifetime4 != 0, -114);
                   }
-                  TableDataRequest.a(var2Lifetime3 != 0, 24);
-                  if (this.d(101)) {
+                  TableDataRequest.drawLobbyLayers(var2Lifetime3 != 0, 24);
+                  if (this.canShowLobbyChatControls(101)) {
                     stackIn_146_0 = CanvasInputHelpers.field_a;
                     stackIn_146_1 = 10;
                     stackIn_146_2 = -8 + var3Lifetime3;
@@ -674,11 +674,11 @@ final class BrickGameLayerController implements GameLayerController {
             stackIn_172_0 = 1;
             var5Lifetime5 = stackIn_172_0;
           }
-          if (this.d(-119)) {
-            NewAchievementsScreen.a(var3Lifetime3, var4Lifetime5 != 0, var5Lifetime5 != 0, -114);
+          if (this.canShowLobbyChatControls(-119)) {
+            NewAchievementsScreen.drawChatCaptionTab(var3Lifetime3, var4Lifetime5 != 0, var5Lifetime5 != 0, -114);
           }
-          TableDataRequest.a(var2Lifetime3 != 0, 24);
-          if (this.d(101)) {
+          TableDataRequest.drawLobbyLayers(var2Lifetime3 != 0, 24);
+          if (this.canShowLobbyChatControls(101)) {
             stackIn_188_0 = CanvasInputHelpers.field_a;
             stackIn_188_1 = 10;
             stackIn_188_2 = -8 + var3Lifetime3;
@@ -692,11 +692,11 @@ final class BrickGameLayerController implements GameLayerController {
           if (RadialSelectorRenderer.field_p) {
             stackIn_198_0 = 1;
             var5Lifetime6 = stackIn_198_0;
-            if (this.d(-119)) {
-              NewAchievementsScreen.a(var3Lifetime3, var4Lifetime6 != 0, var5Lifetime6 != 0, -114);
+            if (this.canShowLobbyChatControls(-119)) {
+              NewAchievementsScreen.drawChatCaptionTab(var3Lifetime3, var4Lifetime6 != 0, var5Lifetime6 != 0, -114);
             }
-            TableDataRequest.a(var2Lifetime3 != 0, 24);
-            if (this.d(101)) {
+            TableDataRequest.drawLobbyLayers(var2Lifetime3 != 0, 24);
+            if (this.canShowLobbyChatControls(101)) {
               stackIn_204_0 = CanvasInputHelpers.field_a;
               stackIn_204_1 = 10;
               stackIn_204_2 = -8 + var3Lifetime3;
@@ -707,11 +707,11 @@ final class BrickGameLayerController implements GameLayerController {
           }
           if (IntArrayRequest.gameplayScreen == null) {
             var5Lifetime6 = 0;
-            if (this.d(-119)) {
-              NewAchievementsScreen.a(var3Lifetime3, var4Lifetime6 != 0, var5Lifetime6 != 0, -114);
+            if (this.canShowLobbyChatControls(-119)) {
+              NewAchievementsScreen.drawChatCaptionTab(var3Lifetime3, var4Lifetime6 != 0, var5Lifetime6 != 0, -114);
             }
-            TableDataRequest.a(var2Lifetime3 != 0, 24);
-            if (this.d(101)) {
+            TableDataRequest.drawLobbyLayers(var2Lifetime3 != 0, 24);
+            if (this.canShowLobbyChatControls(101)) {
               stackIn_214_0 = CanvasInputHelpers.field_a;
               stackIn_214_1 = 10;
               stackIn_214_2 = -8 + var3Lifetime3;
@@ -722,11 +722,11 @@ final class BrickGameLayerController implements GameLayerController {
           }
           if (IntArrayRequest.gameplayScreen.match.resultsReady) {
             var5Lifetime6 = 1;
-            if (this.d(-119)) {
-              NewAchievementsScreen.a(var3Lifetime3, var4Lifetime6 != 0, var5Lifetime6 != 0, -114);
+            if (this.canShowLobbyChatControls(-119)) {
+              NewAchievementsScreen.drawChatCaptionTab(var3Lifetime3, var4Lifetime6 != 0, var5Lifetime6 != 0, -114);
             }
-            TableDataRequest.a(var2Lifetime3 != 0, 24);
-            if (this.d(101)) {
+            TableDataRequest.drawLobbyLayers(var2Lifetime3 != 0, 24);
+            if (this.canShowLobbyChatControls(101)) {
               stackIn_225_0 = CanvasInputHelpers.field_a;
               stackIn_225_1 = 10;
               stackIn_225_2 = -8 + var3Lifetime3;
@@ -741,11 +741,11 @@ final class BrickGameLayerController implements GameLayerController {
           stackIn_194_0 = 1;
           var5Lifetime6 = stackIn_194_0;
         }
-        if (this.d(-119)) {
-          NewAchievementsScreen.a(var3Lifetime3, var4Lifetime6 != 0, var5Lifetime6 != 0, -114);
+        if (this.canShowLobbyChatControls(-119)) {
+          NewAchievementsScreen.drawChatCaptionTab(var3Lifetime3, var4Lifetime6 != 0, var5Lifetime6 != 0, -114);
         }
-        TableDataRequest.a(var2Lifetime3 != 0, 24);
-        if (this.d(101)) {
+        TableDataRequest.drawLobbyLayers(var2Lifetime3 != 0, 24);
+        if (this.canShowLobbyChatControls(101)) {
           stackIn_236_0 = CanvasInputHelpers.field_a;
           stackIn_236_1 = 10;
           stackIn_236_2 = -8 + var3Lifetime3;
@@ -757,12 +757,12 @@ final class BrickGameLayerController implements GameLayerController {
     public final boolean handleGameKey(int keyCode, char character, int obfuscationGuard) {
         if (obfuscationGuard > -58) {
           field_d = (String) null;
-          if (this.c(-25437)) {
+          if (this.isLobbyPanelVisible(-25437)) {
             return LevelSequence.dispatchCancelKey(13, -1, 12, 15);
           }
           return false;
         }
-        if (this.c(-25437)) {
+        if (this.isLobbyPanelVisible(-25437)) {
           return LevelSequence.dispatchCancelKey(13, -1, 12, 15);
         }
         return false;
@@ -947,16 +947,16 @@ final class BrickGameLayerController implements GameLayerController {
         var8 = BrickABrac.field_J ? 1 : 0;
         var3 = -86 / ((obfuscationGuard + 61) / 47);
         if (!MonotonicTime.field_c) {
-          UsernameSuggestionPanel.h(-111);
+          UsernameSuggestionPanel.tickLobbyLayout(-111);
           this.field_a = 0;
           return;
         }
         ContextActionController.field_f = PopupWidgetLayer.field_V;
-        if (this.c(-25437) &&
+        if (this.isLobbyPanelVisible(-25437) &&
           this.field_a < 20) {
           this.field_a = this.field_a + 1;
         }
-        if (!this.c(-25437)) {
+        if (!this.isLobbyPanelVisible(-25437)) {
           if (this.field_a > 0) {
             this.field_a = this.field_a - 1;
           }
@@ -965,7 +965,7 @@ final class BrickGameLayerController implements GameLayerController {
               ContextActionController.field_f = GamePresentationHelpers.formatIndexedText(ArchiveSource.field_a, new String[]{Integer.toString(Brick.unreadChatMessageCount)}, (byte) 103);
               var4 = ConnectionPhase.field_d ? 1 : 0;
               ConnectionPhase.field_d = false;
-              if (this.d(76)) {
+              if (this.canShowLobbyChatControls(76)) {
                 var5 = IntrusiveHashTable.field_l + ContextActionController.field_g.measureText(ContextActionController.field_f);
                 stackIn_22_0 = (0 <= MusicPatch.pointerX) && (MusicPatch.pointerX < var5) && (DualLinkDeque.field_d.screenY - LevelSelectScreen.field_w <= ResourcePreparationEntry.pointerY) && (DualLinkDeque.field_d.screenY > ResourcePreparationEntry.pointerY);
                 ConnectionPhase.field_d = stackIn_22_0;
@@ -990,16 +990,16 @@ final class BrickGameLayerController implements GameLayerController {
               }
               var5Lifetime5 = 400 - this.field_a * this.field_a;
               var6 = var5Lifetime5 * (480 - LevelPack.field_g) / 400 + LevelPack.field_g;
-              ConstructionBackground.b((byte) -118, var6);
+              ConstructionBackground.positionChatPanel((byte) -118, var6);
               LobbyUiHelpers.advanceLobbyStatusTimers(0);
               if (ClientResourceHelpers.currentLobbyGame != null) {
-                stackIn_43_0 = (IntKeyIndex.a(ClientResourceHelpers.currentLobbyGame.playerCount, 0)) ? 1 : 0;
+                stackIn_43_0 = (IntKeyIndex.hasEnoughPlayers(ClientResourceHelpers.currentLobbyGame.playerCount, 0)) ? 1 : 0;
               } else {
                 stackIn_43_0 = 0;
               }
               var7 = stackIn_43_0;
               stackIn_45_0 = 15;
-              stackIn_46_1 = (this.b(109)) ? false : true;
+              stackIn_46_1 = (this.capturesInput(109)) ? false : true;
               stackIn_48_2 = 11;
               stackIn_48_3 = GameplayAudioEvent.mouseWheelDelta;
               stackIn_48_4 = 0;
@@ -1010,7 +1010,7 @@ final class BrickGameLayerController implements GameLayerController {
               stackIn_48_9 = inputEnabled;
               stackIn_48_10 = 13;
               stackIn_49_11 = (QuickChatCategoryRegistry.getPointerIdleTicks((byte) -35) <= 50) ? false : true;
-              MeshAttributeRecord.a(stackIn_45_0, stackIn_46_1, stackIn_48_2, stackIn_48_3, stackIn_48_4, stackIn_48_5, stackIn_48_6, stackIn_48_7, stackIn_48_8 != 0, stackIn_48_9, stackIn_48_10, stackIn_49_11);
+              MeshAttributeRecord.updateLobbyUi(stackIn_45_0, stackIn_46_1, stackIn_48_2, stackIn_48_3, stackIn_48_4, stackIn_48_5, stackIn_48_6, stackIn_48_7, stackIn_48_8 != 0, stackIn_48_9, stackIn_48_10, stackIn_49_11);
               if (CacheEntry.field_w) {
                 TextFieldValidator.outgoingPackets.writeCipheredOpcode(-13413, 64);
                 CacheEntry.field_w = false;
@@ -1030,19 +1030,19 @@ final class BrickGameLayerController implements GameLayerController {
         }
         var4Lifetime1 = ConnectionPhase.field_d ? 1 : 0;
         ConnectionPhase.field_d = false;
-        if (!this.d(76)) {
+        if (!this.canShowLobbyChatControls(76)) {
           var5Lifetime1 = 400 - this.field_a * this.field_a;
           var6Lifetime1 = var5Lifetime1 * (480 - LevelPack.field_g) / 400 + LevelPack.field_g;
-          ConstructionBackground.b((byte) -118, var6Lifetime1);
+          ConstructionBackground.positionChatPanel((byte) -118, var6Lifetime1);
           LobbyUiHelpers.advanceLobbyStatusTimers(0);
           if (ClientResourceHelpers.currentLobbyGame != null) {
-            stackIn_62_0 = (IntKeyIndex.a(ClientResourceHelpers.currentLobbyGame.playerCount, 0)) ? 1 : 0;
+            stackIn_62_0 = (IntKeyIndex.hasEnoughPlayers(ClientResourceHelpers.currentLobbyGame.playerCount, 0)) ? 1 : 0;
           } else {
             stackIn_62_0 = 0;
           }
           var7Lifetime1 = stackIn_62_0;
           stackIn_64_0 = 15;
-          stackIn_65_1 = (this.b(109)) ? false : true;
+          stackIn_65_1 = (this.capturesInput(109)) ? false : true;
           stackIn_67_2 = 11;
           stackIn_67_3 = GameplayAudioEvent.mouseWheelDelta;
           stackIn_67_4 = 0;
@@ -1053,7 +1053,7 @@ final class BrickGameLayerController implements GameLayerController {
           stackIn_67_9 = inputEnabled;
           stackIn_67_10 = 13;
           stackIn_68_11 = (QuickChatCategoryRegistry.getPointerIdleTicks((byte) -35) <= 50) ? false : true;
-          MeshAttributeRecord.a(stackIn_64_0, stackIn_65_1, stackIn_67_2, stackIn_67_3, stackIn_67_4, stackIn_67_5, stackIn_67_6, stackIn_67_7, stackIn_67_8 != 0, stackIn_67_9, stackIn_67_10, stackIn_68_11);
+          MeshAttributeRecord.updateLobbyUi(stackIn_64_0, stackIn_65_1, stackIn_67_2, stackIn_67_3, stackIn_67_4, stackIn_67_5, stackIn_67_6, stackIn_67_7, stackIn_67_8 != 0, stackIn_67_9, stackIn_67_10, stackIn_68_11);
           if (CacheEntry.field_w) {
             TextFieldValidator.outgoingPackets.writeCipheredOpcode(-13413, 64);
             CacheEntry.field_w = false;
@@ -1071,16 +1071,16 @@ final class BrickGameLayerController implements GameLayerController {
           if (!ConnectionPhase.field_d) {
             var5Lifetime3 = 400 - this.field_a * this.field_a;
             var6Lifetime2 = var5Lifetime3 * (480 - LevelPack.field_g) / 400 + LevelPack.field_g;
-            ConstructionBackground.b((byte) -118, var6Lifetime2);
+            ConstructionBackground.positionChatPanel((byte) -118, var6Lifetime2);
             LobbyUiHelpers.advanceLobbyStatusTimers(0);
             if (ClientResourceHelpers.currentLobbyGame != null) {
-              stackIn_88_0 = (IntKeyIndex.a(ClientResourceHelpers.currentLobbyGame.playerCount, 0)) ? 1 : 0;
+              stackIn_88_0 = (IntKeyIndex.hasEnoughPlayers(ClientResourceHelpers.currentLobbyGame.playerCount, 0)) ? 1 : 0;
             } else {
               stackIn_88_0 = 0;
             }
             var7Lifetime2 = stackIn_88_0;
             stackIn_90_0 = 15;
-            stackIn_91_1 = (this.b(109)) ? false : true;
+            stackIn_91_1 = (this.capturesInput(109)) ? false : true;
             stackIn_93_2 = 11;
             stackIn_93_3 = GameplayAudioEvent.mouseWheelDelta;
             stackIn_93_4 = 0;
@@ -1091,23 +1091,23 @@ final class BrickGameLayerController implements GameLayerController {
             stackIn_93_9 = inputEnabled;
             stackIn_93_10 = 13;
             stackIn_94_11 = (QuickChatCategoryRegistry.getPointerIdleTicks((byte) -35) <= 50) ? false : true;
-            MeshAttributeRecord.a(stackIn_90_0, stackIn_91_1, stackIn_93_2, stackIn_93_3, stackIn_93_4, stackIn_93_5, stackIn_93_6, stackIn_93_7, stackIn_93_8 != 0, stackIn_93_9, stackIn_93_10, stackIn_94_11);
+            MeshAttributeRecord.updateLobbyUi(stackIn_90_0, stackIn_91_1, stackIn_93_2, stackIn_93_3, stackIn_93_4, stackIn_93_5, stackIn_93_6, stackIn_93_7, stackIn_93_8 != 0, stackIn_93_9, stackIn_93_10, stackIn_94_11);
           } else {
             stackIn_102_0 = ConnectionPhase.field_d;
             stackIn_103_1 = (var4Lifetime1 != 0) ? 0 : 1;
             if ((stackIn_102_0 ? 1 : 0) != stackIn_103_1) {
               var5Lifetime3 = 400 - this.field_a * this.field_a;
               var6Lifetime2 = var5Lifetime3 * (480 - LevelPack.field_g) / 400 + LevelPack.field_g;
-              ConstructionBackground.b((byte) -118, var6Lifetime2);
+              ConstructionBackground.positionChatPanel((byte) -118, var6Lifetime2);
               LobbyUiHelpers.advanceLobbyStatusTimers(0);
               if (ClientResourceHelpers.currentLobbyGame != null) {
-                stackIn_128_0 = (IntKeyIndex.a(ClientResourceHelpers.currentLobbyGame.playerCount, 0)) ? 1 : 0;
+                stackIn_128_0 = (IntKeyIndex.hasEnoughPlayers(ClientResourceHelpers.currentLobbyGame.playerCount, 0)) ? 1 : 0;
               } else {
                 stackIn_128_0 = 0;
               }
               var7Lifetime2 = stackIn_128_0;
               stackIn_130_0 = 15;
-              stackIn_131_1 = (this.b(109)) ? false : true;
+              stackIn_131_1 = (this.capturesInput(109)) ? false : true;
               stackIn_133_2 = 11;
               stackIn_133_3 = GameplayAudioEvent.mouseWheelDelta;
               stackIn_133_4 = 0;
@@ -1118,21 +1118,21 @@ final class BrickGameLayerController implements GameLayerController {
               stackIn_133_9 = inputEnabled;
               stackIn_133_10 = 13;
               stackIn_134_11 = (QuickChatCategoryRegistry.getPointerIdleTicks((byte) -35) <= 50) ? false : true;
-              MeshAttributeRecord.a(stackIn_130_0, stackIn_131_1, stackIn_133_2, stackIn_133_3, stackIn_133_4, stackIn_133_5, stackIn_133_6, stackIn_133_7, stackIn_133_8 != 0, stackIn_133_9, stackIn_133_10, stackIn_134_11);
+              MeshAttributeRecord.updateLobbyUi(stackIn_130_0, stackIn_131_1, stackIn_133_2, stackIn_133_3, stackIn_133_4, stackIn_133_5, stackIn_133_6, stackIn_133_7, stackIn_133_8 != 0, stackIn_133_9, stackIn_133_10, stackIn_134_11);
             } else {
               SoundCache.playUiSound(8, NineSliceFrame.uiSounds[0]);
               var5Lifetime3 = 400 - this.field_a * this.field_a;
               var6Lifetime2 = var5Lifetime3 * (480 - LevelPack.field_g) / 400 + LevelPack.field_g;
-              ConstructionBackground.b((byte) -118, var6Lifetime2);
+              ConstructionBackground.positionChatPanel((byte) -118, var6Lifetime2);
               LobbyUiHelpers.advanceLobbyStatusTimers(0);
               if (ClientResourceHelpers.currentLobbyGame != null) {
-                stackIn_110_0 = (IntKeyIndex.a(ClientResourceHelpers.currentLobbyGame.playerCount, 0)) ? 1 : 0;
+                stackIn_110_0 = (IntKeyIndex.hasEnoughPlayers(ClientResourceHelpers.currentLobbyGame.playerCount, 0)) ? 1 : 0;
               } else {
                 stackIn_110_0 = 0;
               }
               var7Lifetime2 = stackIn_110_0;
               stackIn_112_0 = 15;
-              stackIn_113_1 = (this.b(109)) ? false : true;
+              stackIn_113_1 = (this.capturesInput(109)) ? false : true;
               stackIn_115_2 = 11;
               stackIn_115_3 = GameplayAudioEvent.mouseWheelDelta;
               stackIn_115_4 = 0;
@@ -1143,7 +1143,7 @@ final class BrickGameLayerController implements GameLayerController {
               stackIn_115_9 = inputEnabled;
               stackIn_115_10 = 13;
               stackIn_116_11 = (QuickChatCategoryRegistry.getPointerIdleTicks((byte) -35) <= 50) ? false : true;
-              MeshAttributeRecord.a(stackIn_112_0, stackIn_113_1, stackIn_115_2, stackIn_115_3, stackIn_115_4, stackIn_115_5, stackIn_115_6, stackIn_115_7, stackIn_115_8 != 0, stackIn_115_9, stackIn_115_10, stackIn_116_11);
+              MeshAttributeRecord.updateLobbyUi(stackIn_112_0, stackIn_113_1, stackIn_115_2, stackIn_115_3, stackIn_115_4, stackIn_115_5, stackIn_115_6, stackIn_115_7, stackIn_115_8 != 0, stackIn_115_9, stackIn_115_10, stackIn_116_11);
             }
           }
           if (CacheEntry.field_w) {
@@ -1164,16 +1164,16 @@ final class BrickGameLayerController implements GameLayerController {
               if ((stackIn_231_0 ? 1 : 0) != stackIn_232_1) {
                 var5Lifetime4 = 400 - this.field_a * this.field_a;
                 var6Lifetime3 = var5Lifetime4 * (480 - LevelPack.field_g) / 400 + LevelPack.field_g;
-                ConstructionBackground.b((byte) -118, var6Lifetime3);
+                ConstructionBackground.positionChatPanel((byte) -118, var6Lifetime3);
                 LobbyUiHelpers.advanceLobbyStatusTimers(0);
                 if (ClientResourceHelpers.currentLobbyGame != null) {
-                  stackIn_238_0 = (!IntKeyIndex.a(ClientResourceHelpers.currentLobbyGame.playerCount, 0)) ? 0 : 1;
+                  stackIn_238_0 = (!IntKeyIndex.hasEnoughPlayers(ClientResourceHelpers.currentLobbyGame.playerCount, 0)) ? 0 : 1;
                 } else {
                   stackIn_238_0 = 0;
                 }
                 var7Lifetime3 = stackIn_238_0;
                 stackIn_240_0 = 15;
-                stackIn_241_1 = (this.b(109)) ? false : true;
+                stackIn_241_1 = (this.capturesInput(109)) ? false : true;
                 stackIn_243_2 = 11;
                 stackIn_243_3 = GameplayAudioEvent.mouseWheelDelta;
                 stackIn_243_4 = 0;
@@ -1184,23 +1184,23 @@ final class BrickGameLayerController implements GameLayerController {
                 stackIn_243_9 = inputEnabled;
                 stackIn_243_10 = 13;
                 stackIn_244_11 = (QuickChatCategoryRegistry.getPointerIdleTicks((byte) -35) <= 50) ? false : true;
-                MeshAttributeRecord.a(stackIn_240_0, stackIn_241_1, stackIn_243_2, stackIn_243_3, stackIn_243_4, stackIn_243_5, stackIn_243_6, stackIn_243_7, stackIn_243_8 != 0, stackIn_243_9, stackIn_243_10, stackIn_244_11);
+                MeshAttributeRecord.updateLobbyUi(stackIn_240_0, stackIn_241_1, stackIn_243_2, stackIn_243_3, stackIn_243_4, stackIn_243_5, stackIn_243_6, stackIn_243_7, stackIn_243_8 != 0, stackIn_243_9, stackIn_243_10, stackIn_244_11);
                 break regionExit1;
               }
               SoundCache.playUiSound(8, NineSliceFrame.uiSounds[0]);
             }
             var5Lifetime4 = 400 - this.field_a * this.field_a;
             var6Lifetime3 = var5Lifetime4 * (480 - LevelPack.field_g) / 400 + LevelPack.field_g;
-            ConstructionBackground.b((byte) -118, var6Lifetime3);
+            ConstructionBackground.positionChatPanel((byte) -118, var6Lifetime3);
             LobbyUiHelpers.advanceLobbyStatusTimers(0);
             if (ClientResourceHelpers.currentLobbyGame != null) {
-              stackIn_257_0 = (!IntKeyIndex.a(ClientResourceHelpers.currentLobbyGame.playerCount, 0)) ? 0 : 1;
+              stackIn_257_0 = (!IntKeyIndex.hasEnoughPlayers(ClientResourceHelpers.currentLobbyGame.playerCount, 0)) ? 0 : 1;
             } else {
               stackIn_257_0 = 0;
             }
             var7Lifetime3 = stackIn_257_0;
             stackIn_259_0 = 15;
-            stackIn_260_1 = (this.b(109)) ? false : true;
+            stackIn_260_1 = (this.capturesInput(109)) ? false : true;
             stackIn_262_2 = 11;
             stackIn_262_3 = GameplayAudioEvent.mouseWheelDelta;
             stackIn_262_4 = 0;
@@ -1211,7 +1211,7 @@ final class BrickGameLayerController implements GameLayerController {
             stackIn_262_9 = inputEnabled;
             stackIn_262_10 = 13;
             stackIn_263_11 = (QuickChatCategoryRegistry.getPointerIdleTicks((byte) -35) <= 50) ? false : true;
-            MeshAttributeRecord.a(stackIn_259_0, stackIn_260_1, stackIn_262_2, stackIn_262_3, stackIn_262_4, stackIn_262_5, stackIn_262_6, stackIn_262_7, stackIn_262_8 != 0, stackIn_262_9, stackIn_262_10, stackIn_263_11);
+            MeshAttributeRecord.updateLobbyUi(stackIn_259_0, stackIn_260_1, stackIn_262_2, stackIn_262_3, stackIn_262_4, stackIn_262_5, stackIn_262_6, stackIn_262_7, stackIn_262_8 != 0, stackIn_262_9, stackIn_262_10, stackIn_263_11);
           }
         } else {
           stackIn_145_0 = !(RadialSelectorRenderer.field_p);
@@ -1224,16 +1224,16 @@ final class BrickGameLayerController implements GameLayerController {
               if ((stackIn_149_0 ? 1 : 0) != stackIn_150_1) {
                 var5Lifetime4 = 400 - this.field_a * this.field_a;
                 var6Lifetime3 = var5Lifetime4 * (480 - LevelPack.field_g) / 400 + LevelPack.field_g;
-                ConstructionBackground.b((byte) -118, var6Lifetime3);
+                ConstructionBackground.positionChatPanel((byte) -118, var6Lifetime3);
                 LobbyUiHelpers.advanceLobbyStatusTimers(0);
                 if (ClientResourceHelpers.currentLobbyGame != null) {
-                  stackIn_156_0 = (!IntKeyIndex.a(ClientResourceHelpers.currentLobbyGame.playerCount, 0)) ? 0 : 1;
+                  stackIn_156_0 = (!IntKeyIndex.hasEnoughPlayers(ClientResourceHelpers.currentLobbyGame.playerCount, 0)) ? 0 : 1;
                 } else {
                   stackIn_156_0 = 0;
                 }
                 var7Lifetime3 = stackIn_156_0;
                 stackIn_158_0 = 15;
-                stackIn_159_1 = (this.b(109)) ? false : true;
+                stackIn_159_1 = (this.capturesInput(109)) ? false : true;
                 stackIn_161_2 = 11;
                 stackIn_161_3 = GameplayAudioEvent.mouseWheelDelta;
                 stackIn_161_4 = 0;
@@ -1244,7 +1244,7 @@ final class BrickGameLayerController implements GameLayerController {
                 stackIn_161_9 = inputEnabled;
                 stackIn_161_10 = 13;
                 stackIn_162_11 = (QuickChatCategoryRegistry.getPointerIdleTicks((byte) -35) <= 50) ? false : true;
-                MeshAttributeRecord.a(stackIn_158_0, stackIn_159_1, stackIn_161_2, stackIn_161_3, stackIn_161_4, stackIn_161_5, stackIn_161_6, stackIn_161_7, stackIn_161_8 != 0, stackIn_161_9, stackIn_161_10, stackIn_162_11);
+                MeshAttributeRecord.updateLobbyUi(stackIn_158_0, stackIn_159_1, stackIn_161_2, stackIn_161_3, stackIn_161_4, stackIn_161_5, stackIn_161_6, stackIn_161_7, stackIn_161_8 != 0, stackIn_161_9, stackIn_161_10, stackIn_162_11);
                 if (CacheEntry.field_w) {
                   TextFieldValidator.outgoingPackets.writeCipheredOpcode(-13413, 64);
                   CacheEntry.field_w = false;
@@ -1259,16 +1259,16 @@ final class BrickGameLayerController implements GameLayerController {
             }
             var5Lifetime4 = 400 - this.field_a * this.field_a;
             var6Lifetime3 = var5Lifetime4 * (480 - LevelPack.field_g) / 400 + LevelPack.field_g;
-            ConstructionBackground.b((byte) -118, var6Lifetime3);
+            ConstructionBackground.positionChatPanel((byte) -118, var6Lifetime3);
             LobbyUiHelpers.advanceLobbyStatusTimers(0);
             if (ClientResourceHelpers.currentLobbyGame != null) {
-              stackIn_174_0 = (!IntKeyIndex.a(ClientResourceHelpers.currentLobbyGame.playerCount, 0)) ? 0 : 1;
+              stackIn_174_0 = (!IntKeyIndex.hasEnoughPlayers(ClientResourceHelpers.currentLobbyGame.playerCount, 0)) ? 0 : 1;
             } else {
               stackIn_174_0 = 0;
             }
             var7Lifetime3 = stackIn_174_0;
             stackIn_176_0 = 15;
-            stackIn_177_1 = (this.b(109)) ? false : true;
+            stackIn_177_1 = (this.capturesInput(109)) ? false : true;
             stackIn_179_2 = 11;
             stackIn_179_3 = GameplayAudioEvent.mouseWheelDelta;
             stackIn_179_4 = 0;
@@ -1279,7 +1279,7 @@ final class BrickGameLayerController implements GameLayerController {
             stackIn_179_9 = inputEnabled;
             stackIn_179_10 = 13;
             stackIn_180_11 = (QuickChatCategoryRegistry.getPointerIdleTicks((byte) -35) <= 50) ? false : true;
-            MeshAttributeRecord.a(stackIn_176_0, stackIn_177_1, stackIn_179_2, stackIn_179_3, stackIn_179_4, stackIn_179_5, stackIn_179_6, stackIn_179_7, stackIn_179_8 != 0, stackIn_179_9, stackIn_179_10, stackIn_180_11);
+            MeshAttributeRecord.updateLobbyUi(stackIn_176_0, stackIn_177_1, stackIn_179_2, stackIn_179_3, stackIn_179_4, stackIn_179_5, stackIn_179_6, stackIn_179_7, stackIn_179_8 != 0, stackIn_179_9, stackIn_179_10, stackIn_180_11);
           } else {
             this.field_a = 0;
             Brick.unreadChatMessageCount = 0;
@@ -1289,16 +1289,16 @@ final class BrickGameLayerController implements GameLayerController {
               if ((stackIn_190_0 ? 1 : 0) != stackIn_191_1) {
                 var5Lifetime4 = 400 - this.field_a * this.field_a;
                 var6Lifetime3 = var5Lifetime4 * (480 - LevelPack.field_g) / 400 + LevelPack.field_g;
-                ConstructionBackground.b((byte) -118, var6Lifetime3);
+                ConstructionBackground.positionChatPanel((byte) -118, var6Lifetime3);
                 LobbyUiHelpers.advanceLobbyStatusTimers(0);
                 if (ClientResourceHelpers.currentLobbyGame != null) {
-                  stackIn_197_0 = (!IntKeyIndex.a(ClientResourceHelpers.currentLobbyGame.playerCount, 0)) ? 0 : 1;
+                  stackIn_197_0 = (!IntKeyIndex.hasEnoughPlayers(ClientResourceHelpers.currentLobbyGame.playerCount, 0)) ? 0 : 1;
                 } else {
                   stackIn_197_0 = 0;
                 }
                 var7Lifetime3 = stackIn_197_0;
                 stackIn_199_0 = 15;
-                stackIn_200_1 = (this.b(109)) ? false : true;
+                stackIn_200_1 = (this.capturesInput(109)) ? false : true;
                 stackIn_202_2 = 11;
                 stackIn_202_3 = GameplayAudioEvent.mouseWheelDelta;
                 stackIn_202_4 = 0;
@@ -1309,7 +1309,7 @@ final class BrickGameLayerController implements GameLayerController {
                 stackIn_202_9 = inputEnabled;
                 stackIn_202_10 = 13;
                 stackIn_203_11 = (QuickChatCategoryRegistry.getPointerIdleTicks((byte) -35) <= 50) ? false : true;
-                MeshAttributeRecord.a(stackIn_199_0, stackIn_200_1, stackIn_202_2, stackIn_202_3, stackIn_202_4, stackIn_202_5, stackIn_202_6, stackIn_202_7, stackIn_202_8 != 0, stackIn_202_9, stackIn_202_10, stackIn_203_11);
+                MeshAttributeRecord.updateLobbyUi(stackIn_199_0, stackIn_200_1, stackIn_202_2, stackIn_202_3, stackIn_202_4, stackIn_202_5, stackIn_202_6, stackIn_202_7, stackIn_202_8 != 0, stackIn_202_9, stackIn_202_10, stackIn_203_11);
                 if (CacheEntry.field_w) {
                   TextFieldValidator.outgoingPackets.writeCipheredOpcode(-13413, 64);
                   CacheEntry.field_w = false;
@@ -1324,16 +1324,16 @@ final class BrickGameLayerController implements GameLayerController {
             }
             var5Lifetime4 = 400 - this.field_a * this.field_a;
             var6Lifetime3 = var5Lifetime4 * (480 - LevelPack.field_g) / 400 + LevelPack.field_g;
-            ConstructionBackground.b((byte) -118, var6Lifetime3);
+            ConstructionBackground.positionChatPanel((byte) -118, var6Lifetime3);
             LobbyUiHelpers.advanceLobbyStatusTimers(0);
             if (ClientResourceHelpers.currentLobbyGame != null) {
-              stackIn_215_0 = (!IntKeyIndex.a(ClientResourceHelpers.currentLobbyGame.playerCount, 0)) ? 0 : 1;
+              stackIn_215_0 = (!IntKeyIndex.hasEnoughPlayers(ClientResourceHelpers.currentLobbyGame.playerCount, 0)) ? 0 : 1;
             } else {
               stackIn_215_0 = 0;
             }
             var7Lifetime3 = stackIn_215_0;
             stackIn_217_0 = 15;
-            stackIn_218_1 = (this.b(109)) ? false : true;
+            stackIn_218_1 = (this.capturesInput(109)) ? false : true;
             stackIn_220_2 = 11;
             stackIn_220_3 = GameplayAudioEvent.mouseWheelDelta;
             stackIn_220_4 = 0;
@@ -1344,7 +1344,7 @@ final class BrickGameLayerController implements GameLayerController {
             stackIn_220_9 = inputEnabled;
             stackIn_220_10 = 13;
             stackIn_221_11 = (QuickChatCategoryRegistry.getPointerIdleTicks((byte) -35) <= 50) ? false : true;
-            MeshAttributeRecord.a(stackIn_217_0, stackIn_218_1, stackIn_220_2, stackIn_220_3, stackIn_220_4, stackIn_220_5, stackIn_220_6, stackIn_220_7, stackIn_220_8 != 0, stackIn_220_9, stackIn_220_10, stackIn_221_11);
+            MeshAttributeRecord.updateLobbyUi(stackIn_217_0, stackIn_218_1, stackIn_220_2, stackIn_220_3, stackIn_220_4, stackIn_220_5, stackIn_220_6, stackIn_220_7, stackIn_220_8 != 0, stackIn_220_9, stackIn_220_10, stackIn_221_11);
           }
         }
         if (CacheEntry.field_w) {
@@ -1402,7 +1402,7 @@ final class BrickGameLayerController implements GameLayerController {
         }
     }
 
-    public final boolean b(int param0) {
+    public final boolean capturesInput(int param0) {
         if (param0 < 36) {
           field_d = (String) null;
           if (!MonotonicTime.field_c) {
@@ -1427,11 +1427,11 @@ final class BrickGameLayerController implements GameLayerController {
         IntrusiveHashTable.field_l = MultiValueSliderWidget.field_K[2].width + (3 + MultiValueSliderWidget.field_K[0].width);
     }
 
-    private final boolean c(int param0) {
+    private final boolean isLobbyPanelVisible(int param0) {
         if (param0 != -25437) {
           return true;
         }
-        if (this.b(param0 + 25496)) {
+        if (this.capturesInput(param0 + 25496)) {
           return true;
         }
         if (!RadialSelectorRenderer.field_p) {

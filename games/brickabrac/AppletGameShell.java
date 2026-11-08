@@ -91,11 +91,11 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
         return super.getCodeBase();
     }
 
-    final boolean e(int param0) {
+    final boolean isHostAllowed(int param0) {
         return true;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, String param5, int param6) {
+    final void startAppletShell(int param0, int param1, int param2, int param3, int param4, String param5, int param6) {
         try {
           PlatformServices dupTemp$0 = null;
           RuntimeException stackIn_21_0 = null;
@@ -128,7 +128,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
               RichTextLayout.field_m = param4;
               WidgetPaintStyle.canvasHeight = param2;
               UiCleanupHelpers.field_d = param2;
-              SecondaryHashTable.field_i = EmailConfirmationValidator.e((byte) -64);
+              SecondaryHashTable.field_i = EmailConfirmationValidator.getHostApplet((byte) -64);
               dupTemp$0 = new PlatformServices(param0, param5, param6, true);
               AccountMessageDialog.field_ub = dupTemp$0;
               LevelPackLoader.field_e = dupTemp$0;
@@ -145,7 +145,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var8 = decompiledCaughtException;
-              AlignedIconLabel.a((String) null, var8, 52);
+              AlignedIconLabel.reportClientError((String) null, var8, 52);
               this.redirectToErrorPage("crash", 4000);
             }
             return;
@@ -407,14 +407,14 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
                   }
                 }
                 IntegerValidationHelpers.refreshReportedHeapLimit(1);
-                this.c(false);
+                this.recreateCanvas(false);
                 BallPulseEffect.framebuffer = MusicEnvelope.createFramebuffer((java.awt.Component) ((Object) CacheIoRequest.windowCanvas), WeightedLruCache.canvasWidth, -2414, WidgetPaintStyle.canvasHeight);
                 this.initializeClient(false);
                 MenuSelection.gameClock = BoardPresentationHelpers.createGameClock((byte) 123);
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (0L != BufferedFile.shutdownDeadlineMillis) {
-                    stackIn_98_0 = $cfr$lcmp(BufferedFile.shutdownDeadlineMillis, MonotonicTime.nowMillis(false));
+                    stackIn_98_0 = compareLongs(BufferedFile.shutdownDeadlineMillis, MonotonicTime.nowMillis(false));
                     decompiledFrameRemainder0 = (var5 == 0);
                     if ((decompiledFrameRemainder0) &&
                       (stackIn_98_0 <= 0)) {
@@ -440,7 +440,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
             } catch (java.lang.Throwable decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var1 = decompiledCaughtException;
-              AlignedIconLabel.a((String) null, (Throwable) (var1), 77);
+              AlignedIconLabel.reportClientError((String) null, (Throwable) (var1), 77);
               this.redirectToErrorPage("crash", 4000);
             }
             this.shutdown(true, -93);
@@ -541,7 +541,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
         }
     }
 
-    public static void d(int param0) {
+    public static void clearSharedReferences(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
@@ -626,7 +626,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
         }
     }
 
-    final synchronized void c(boolean param0) {
+    final synchronized void recreateCanvas(boolean param0) {
         Object var2 = null;
         java.awt.Insets var3 = null;
         int var4 = 0;
@@ -761,7 +761,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
             this.field_d = true;
             System.out.println("error_game_" + errorCode);
             try {
-              AppletJavaScriptBridge.callFunctionWithoutArguments("loggedout", -123, EmailConfirmationValidator.e((byte) -124));
+              AppletJavaScriptBridge.callFunctionWithoutArguments("loggedout", -123, EmailConfirmationValidator.getHostApplet((byte) -124));
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               throwable = decompiledCaughtException;
@@ -1024,7 +1024,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
         field_f = "Shrink: makes your paddle shorter.";
     }
 
-    private static int $cfr$lcmp(long left, long right) {
+    private static int compareLongs(long left, long right) {
         return left < right ? -1 : (left == right ? 0 : 1);
     }
 }

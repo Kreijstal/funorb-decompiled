@@ -7,12 +7,12 @@ final class ByteArrayNode extends IntrusiveNode {
     byte[] bytes;
     static RgbSprite volcanicFarSprite;
 
-    final static RgbSprite[] a(int param0, byte param1, int param2) {
+    final static RgbSprite[] createSolidSpriteSet(int param0, byte param1, int param2) {
         if (param1 == -18) {
           return GameTransportHelpers.createSolidSpriteGrid(param2, param0, 1, param1 ^ 24);
         }
         CharSequence var4 = (CharSequence) null;
-        ByteArrayNode.a(21, (CharSequence) null);
+        ByteArrayNode.isValidPlayerNameText(21, (CharSequence) null);
         return GameTransportHelpers.createSolidSpriteGrid(param2, param0, 1, param1 ^ 24);
     }
 
@@ -23,7 +23,7 @@ final class ByteArrayNode extends IntrusiveNode {
         field_l = null;
     }
 
-    final static boolean a(int param0, CharSequence param1) {
+    final static boolean isValidPlayerNameText(int param0, CharSequence param1) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -32,7 +32,7 @@ final class ByteArrayNode extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 17165) {
-            ByteArrayNode.a(-74, (byte) 25, 127);
+            ByteArrayNode.createSolidSpriteSet(-74, (byte) 25, 127);
           }
           stackIn_3_0 = WhirlpoolDigestHelpers.isValidPlayerName((byte) 122, false, param1);
           return stackIn_3_0;

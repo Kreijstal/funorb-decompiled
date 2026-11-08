@@ -41,7 +41,7 @@ final class TableNameEntry {
               var3_int = 1;
               GameplayAudioEvent.redrawRequested = false;
             }
-            ResourcePreparationEntry.a(ArchiveNetworkRequest.getLoadingStatusMessage((byte) 103), BrickGameLayerController.field_f, RichTextLayout.b(false), var3_int != 0, 0);
+            ResourcePreparationEntry.drawAwtLoadingBar(ArchiveNetworkRequest.getLoadingStatusMessage((byte) 103), BrickGameLayerController.field_f, RichTextLayout.getUiLoadPercent(false), var3_int != 0, 0);
             return;
           }
           if (!BubbleDistortion.isLogoAnimationFinished((byte) -94)) {
@@ -51,7 +51,7 @@ final class TableNameEntry {
             return;
           }
           if (AchievementIcon.field_j != 0) {
-            QuickChatCategoryDefinition.a(true, param1);
+            QuickChatCategoryDefinition.renderLoadingScreen(true, param1);
             return;
           }
           RankingsScreen.drawOverlayBackdrop(param2, -71, false);

@@ -10,7 +10,7 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
     static IsaacGenerator field_w;
     private RgbSprite[] buttonSprites;
 
-    final static boolean a(boolean param0, int param1, int param2) {
+    final static boolean handleChatInputKey(boolean param0, int param1, int param2) {
         StringBuilder discarded$2 = null;
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
@@ -114,7 +114,7 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
             var3 = 0;
           }
           if (ScreenNavigationHelpers.quickChatChannel == 2 &&
-            !FileCacheStore.b(-21835160)) {
+            !FileCacheStore.isPrivateRecipientReachable(-21835160)) {
             var3 = 0;
           }
           if (MeshAttributeRecord.currentKeyCode == 84) {
@@ -220,7 +220,7 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
         if (ScreenNavigationHelpers.quickChatChannel == 0) {
           if (null == IncomingPacketHelpers.pendingLobbyGame) {
             if (ScreenNavigationHelpers.quickChatChannel == 2 &&
-              !FileCacheStore.b(-21835160)) {
+              !FileCacheStore.isPrivateRecipientReachable(-21835160)) {
               var3 = 0;
             }
             if (MeshAttributeRecord.currentKeyCode == 84) {
@@ -327,7 +327,7 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
           var3 = 0;
         }
         if (ScreenNavigationHelpers.quickChatChannel == 2 &&
-          !FileCacheStore.b(-21835160)) {
+          !FileCacheStore.isPrivateRecipientReachable(-21835160)) {
           var3 = 0;
         }
         if (MeshAttributeRecord.currentKeyCode == 84) {
@@ -521,7 +521,7 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
         this(2188450, 2591221, 9543);
     }
 
-    final static void a(int param0, String param1) {
+    final static void ignoreCountryList(int param0, String param1) {
         try {
           if (param0 != 85) {
             textChoiceResultCodes = (int[]) null;

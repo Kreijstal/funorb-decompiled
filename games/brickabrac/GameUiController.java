@@ -43,7 +43,7 @@ final class GameUiController implements GameUiLifecycle {
         RgbSprite[] var4 = (RgbSprite[]) null;
         LobbyUiHelpers.configureTextChoiceDialogWithFont((RgbSprite[]) null, 240, 8, 320, 0, ContextActionController.field_g, 2, 0, 1, AchievementBrowserScreen.field_A, 0, Ball.field_G, 2, (byte) -110, 8);
         MusicVoice.configureTextChoiceOuterFrame(20, -97, 20, var2);
-        TabbedPane.a(HighscorePackSelector.field_d, CircleBody.field_t, 2, PlayerBoard.field_jb, DualLinkNode.field_k, FriendListUi.field_c, (RgbSprite[][]) null, NameEntryPopup.field_Rb, true, 1, DropTargetWidget.field_I, PlayerBoard.field_jb, QuickChatPhraseDefinition.field_C, ValidationStatus.field_h, 22287);
+        TabbedPane.initializeLobbyUi(HighscorePackSelector.field_d, CircleBody.field_t, 2, PlayerBoard.field_jb, DualLinkNode.field_k, FriendListUi.field_c, (RgbSprite[][]) null, NameEntryPopup.field_Rb, true, 1, DropTargetWidget.field_I, PlayerBoard.field_jb, QuickChatPhraseDefinition.field_C, ValidationStatus.field_h, 22287);
         InputOptionsHelpers.field_g = true;
         GrowableIntList.field_e = IntegerRemainderHelpers.lobbyGameLogoSprite;
         LevelResultSubmission.configureChatHistory(-9, 200);
@@ -52,10 +52,10 @@ final class GameUiController implements GameUiLifecycle {
         CanvasResizeController.initializeFireworkSpawnArea(240, 0, 640, 0, -6532);
         GameRenderAudioHelpers.initializeBackgroundScenes(NodeDequeCursor.field_i, FarmBackground.field_r, 24876, LevelList.field_o, GameScreen.field_e, BackgroundScene.field_f, AchievementIcon.field_s);
         Widget.initializeDiagnosticOverlay(1, PasswordFieldRenderer.field_D);
-        LoginPanel.h((byte) 55);
+        LoginPanel.measureButtonLabelPair((byte) 55);
         LoginPanel.initializeMenuScreens((byte) 115, BackgroundScene.field_f);
         AccountMessageDialog.currentScreen = (GameScreen) ((Object) FullscreenDialogHelpers.lookupMenuScreen(21, 28472));
-        ArchiveSourceManager.a((byte) -79, LoginCredentialKind.titleMusicTrack);
+        ArchiveSourceManager.startMusicTrack((byte) -79, LoginCredentialKind.titleMusicTrack);
     }
 
     final static GameScreen getScreen(int screenId, byte obfuscationGuard) {
@@ -85,7 +85,7 @@ final class GameUiController implements GameUiLifecycle {
     public final boolean pollUiReady(int obfuscationGuard) {
         boolean stackIn_15_0 = false;
         if (!ResourceRequest.field_y) {
-          ResourceRequest.field_y = NameEntryPopup.d((byte) -126);
+          ResourceRequest.field_y = NameEntryPopup.pollAchievementMaskReply((byte) -126);
         }
         if (!WidgetLayer.field_H) {
           WidgetLayer.field_H = this.pollSavedProgress((byte) 127);
@@ -126,7 +126,7 @@ final class GameUiController implements GameUiLifecycle {
                 IntegerPowerHelpers.unlockedLevelCounts[var3] = OptionsScreen.progressRequests[var3].values[0];
               }
               ModalOverlayHelpers.field_d = ModalOverlayHelpers.field_d | BytePayloadSubmission.combineLevelAttributes(DateFieldsWidget.field_L[var3], 0, true, IntegerPowerHelpers.unlockedLevelCounts[var3]);
-              if (!DelayedPacket.c(obfuscationGuard ^ 27)) {
+              if (!DelayedPacket.isFullscreenUnavailable(obfuscationGuard ^ 27)) {
                 IntegerPowerHelpers.unlockedLevelCounts[var3] = 0;
               } else {
                 IntegerPowerHelpers.unlockedLevelCounts[var3] = 0;
@@ -143,7 +143,7 @@ final class GameUiController implements GameUiLifecycle {
 
     public final void prepareUiAssets(boolean obfuscationGuard) {
         if (null != GameplayAudioEvent.field_k) {
-          QuickChatMenu.a(!obfuscationGuard ? true : false, GameplayAudioEvent.field_k);
+          QuickChatMenu.loadGameStrings(!obfuscationGuard ? true : false, GameplayAudioEvent.field_k);
           GameplayAudioEvent.field_k = null;
           MeshLobbyUiHelpers.resetFrameTimingHistory(2);
         }
@@ -157,7 +157,7 @@ final class GameUiController implements GameUiLifecycle {
         IncomingPacketHelpers.field_a = TextChoiceDialogHitTest.createResourceArchiveForIndex(11, true);
         IntHistoryBuffer.field_i = TextChoiceDialogHitTest.createResourceArchiveForIndex(12, true);
         QuickChatPhraseDefinition.field_C = TextChoiceDialogHitTest.createResourceArchiveForIndex(13, true);
-        FriendListUi.a(NameEntryPopup.field_Rb, FriendListUi.field_c, 0);
+        FriendListUi.setMembersScreenArchives(NameEntryPopup.field_Rb, FriendListUi.field_c, 0);
         AccountContentTransitionLayer.startupResources = new ResourcePreparationQueue(82);
         AccountContentTransitionLayer.startupResources.addNamedGroup(OutgoingPacketHelpers.field_e, "basic", 125, WidgetGroup.field_F, NameEntryPopup.field_Rb);
         AccountContentTransitionLayer.startupResources.addNamedGroup(OutgoingPacketHelpers.field_e, "lobby", 126, WidgetGroup.field_F, NameEntryPopup.field_Rb);
@@ -188,7 +188,7 @@ final class GameUiController implements GameUiLifecycle {
             if (var3 != 2) {
               if (3 != var3) {
                 if (4 == var3) {
-                  ParisBackground.a((byte) 24, 92.0f, Ball.field_x);
+                  ParisBackground.setLoadingStatus((byte) 24, 92.0f, Ball.field_x);
                   CacheEntry.field_C.renderClient(121);
                   BrickGameLayerController.loadLevelPacks(IncomingPacketHelpers.field_a, IntHistoryBuffer.field_i, 2);
                 } else {
@@ -199,17 +199,17 @@ final class GameUiController implements GameUiLifecycle {
                   KeyDispatchHelpers.field_a = null;
                 }
               } else {
-                ParisBackground.a((byte) 24, 90.0f, MessageScreen.field_u);
+                ParisBackground.setLoadingStatus((byte) 24, 90.0f, MessageScreen.field_u);
                 CacheEntry.field_C.renderClient(106);
-                QuickChatCategoryRegistry.a(BackgroundScene.field_f, NameEntryPopup.field_Rb, ScorePopup.field_l, 29137, FriendListUi.field_c);
+                QuickChatCategoryRegistry.loadBasicUiResources(BackgroundScene.field_f, NameEntryPopup.field_Rb, ScorePopup.field_l, 29137, FriendListUi.field_c);
               }
             } else {
-              ParisBackground.a((byte) 24, 88.0f, ValidatedTextFieldWidget.field_bb);
+              ParisBackground.setLoadingStatus((byte) 24, 88.0f, ValidatedTextFieldWidget.field_bb);
               CacheEntry.field_C.renderClient(124);
               var2 = var2 != 0 & ParallaxMusicHelpers.pollSpecialMusicPreparation(2) ? 1 : 0;
             }
           } else {
-            ParisBackground.a((byte) 24, 82.0f, BitPacketBuffer.field_s);
+            ParisBackground.setLoadingStatus((byte) 24, 82.0f, BitPacketBuffer.field_s);
             CacheEntry.field_C.renderClient(123);
             ClientResourceHelpers.loadGameplaySoundAssets(123);
           }

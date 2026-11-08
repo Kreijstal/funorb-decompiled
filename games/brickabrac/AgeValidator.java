@@ -4,7 +4,7 @@
 final class AgeValidator extends TextFieldValidator {
     static int field_k;
 
-    final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int[] param6, int param7, int param8, int param9, int param10, int param11, int param12) {
+    final static void drawAlphaRunMaskRows(int[] param0, int param1, int param2, int param3, int param4, int param5, int[] param6, int param7, int param8, int param9, int param10, int param11, int param12) {
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         String stackIn_29_2 = null;
@@ -33,7 +33,7 @@ final class AgeValidator extends TextFieldValidator {
           var15 = -param4;
           if (param10 != 8) {
             var22 = (int[]) null;
-            AgeValidator.a((int[]) null, 92, 50, 37, -19, 126, (int[]) null, 74, 68, -55, 33, -74, 59);
+            AgeValidator.drawAlphaRunMaskRows((int[]) null, 92, 50, 37, -19, 126, (int[]) null, 74, 68, -55, 33, -74, 59);
           }
           while (var15 < 0) {
             var13_int = var13_int - param7;
@@ -173,7 +173,7 @@ final class AgeValidator extends TextFieldValidator {
         }
     }
 
-    final static String a(boolean param0, CharSequence param1, int param2) {
+    final static String validatePlayerNameFormat(boolean param0, CharSequence param1, int param2) {
         int var6 = 0;
         String stackIn_4_0 = null;
         String stackIn_9_0 = null;

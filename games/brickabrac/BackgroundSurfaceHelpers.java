@@ -24,7 +24,7 @@ final class BackgroundSurfaceHelpers {
         return QuickChatCategoryRegistry.selectCachedSurface(0, cacheKeyOne, cacheKeyTwo, ActivityIndicatorWidget.backgroundSurfacePool1280);
     }
 
-    final static boolean a(int param0, PacketBuffer param1) {
+    final static boolean readFlagByte(int param0, PacketBuffer param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

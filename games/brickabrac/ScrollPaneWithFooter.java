@@ -35,7 +35,7 @@ final class ScrollPaneWithFooter extends UiComponent {
         return var5;
     }
 
-    final static void a(int param0, ChatMessage param1) {
+    final static void openChatMessageContextMenu(int param0, ChatMessage param1) {
         int stackIn_2_0;
         UiComponent stackIn_2_1;
         Object stackIn_2_2;
@@ -71,7 +71,7 @@ final class ScrollPaneWithFooter extends UiComponent {
           }
           SpriteGeometry.createContextActions(stackIn_2_0, stackIn_2_1, (ScrollPane) (stackIn_2_2), (int[]) (stackIn_2_3), stackIn_2_4, stackIn_3_5, (byte) -58, param1.senderId, param1.senderDisplayName);
           if (param1.channel == 0 &&
-            !MatchingTextValidator.e(-91) &&
+            !MatchingTextValidator.isPublicChatInputOpen(-91) &&
             null == ClientResourceHelpers.currentLobbyGame &&
             IncomingPacketHelpers.pendingLobbyGame == null) {
             if (!PlayerNameChooserPanel.field_I) {
@@ -84,7 +84,7 @@ final class ScrollPaneWithFooter extends UiComponent {
             var7.contextMenu.addAction(var8, 20, (byte) 118);
           }
           if (param1.channel == 1 &&
-            !MatchingTextValidator.e(-128) &&
+            !MatchingTextValidator.isPublicChatInputOpen(-128) &&
             null != ClientResourceHelpers.currentLobbyGame &&
             param1.contextId == ClientResourceHelpers.currentLobbyGame.getGameId((byte) 118)) {
             if (!PlayerNameChooserPanel.field_I) {
@@ -153,7 +153,7 @@ final class ScrollPaneWithFooter extends UiComponent {
         field_Sb = null;
         if (obfuscationGuard > -15) {
           ChatMessage var2 = (ChatMessage) null;
-          ScrollPaneWithFooter.a(-63, (ChatMessage) null);
+          ScrollPaneWithFooter.openChatMessageContextMenu(-63, (ChatMessage) null);
         }
         field_Vb = null;
         field_Rb = null;
@@ -340,7 +340,7 @@ final class ScrollPaneWithFooter extends UiComponent {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void drawDottedRectangle(int param0, int param1, int param2, int param3, int param4) {
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_12_0 = 0;

@@ -12,7 +12,7 @@ final class AppletFlowHelpers {
     static UiComponent field_g;
     static RgbSprite field_c;
 
-    final static void a(int param0) {
+    final static void advanceScreenFade(int param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int var2;
@@ -22,9 +22,9 @@ final class AppletFlowHelpers {
           CachedArchiveSource.field_p = CachedArchiveSource.field_p + 1;
           if (fieldTemp$0 >= 16) {
             if (BytePayloadSubmission.field_k) {
-              TextFieldWidget.k(0);
+              TextFieldWidget.openGuestLoginPanelWithCreateAccount(0);
             } else {
-              ClientViewHelpers.a(0);
+              ClientViewHelpers.openGuestLoginPanel(0);
             }
             ArchiveConnectionHelpers.field_b = RasterSnapshot.field_q;
           }
@@ -35,14 +35,14 @@ final class AppletFlowHelpers {
           return;
         }
         if (ArchiveConnectionHelpers.field_b == RasterSnapshot.field_q) {
-          if (!QuickChatMenu.h(-26090)) {
+          if (!QuickChatMenu.isGuestSession(-26090)) {
             if (VerticalScrollbar.field_Ub != null) {
               CheckboxWidgetRenderer.submitTableRow(3, (byte) 25, VerticalScrollbar.field_Ub);
             }
             DualLinkIterator.closeTextChoiceDialog((byte) 117);
             if (ProxySocketConnector.field_g) {
               ProxySocketConnector.field_g = false;
-              WidgetLayerStack.a(false, 21543);
+              WidgetLayerStack.enterFullscreen(false, 21543);
             }
           }
           ArchiveConnectionHelpers.field_b = NodeDeque.field_d;
@@ -87,18 +87,18 @@ final class AppletFlowHelpers {
         return -2048 + IntrusiveHashTable.atanRatio2048Table[134217728 / -tangentQ16];
     }
 
-    final static void a(byte param0, boolean param1) {
+    final static void drawLobbyOverlayLayer(byte param0, boolean param1) {
         if (DualLinkDeque.isPopupOpen(-4858)) {
           param1 = false;
         }
         LobbyOverlayHelpers.drawLobbyOverlays(param1, -124);
         if (param0 == -25) {
-          BufferedSocket.a(21862);
+          BufferedSocket.drawQuickChatMenuOverlay(21862);
           return;
         }
         java.applet.Applet var3 = (java.applet.Applet) null;
         AppletFlowHelpers.showQuitPage(-89, (java.applet.Applet) null);
-        BufferedSocket.a(21862);
+        BufferedSocket.drawQuickChatMenuOverlay(21862);
     }
 
     public static void clearSharedReferences(byte obfuscationGuard) {
@@ -200,7 +200,7 @@ final class AppletFlowHelpers {
         }
     }
 
-    final static byte[] a(String param0, byte param1) {
+    final static byte[] takeLocalizedTextFile(String param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         byte[] stackIn_1_0 = null;

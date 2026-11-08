@@ -32,7 +32,7 @@ final class QuickChatHelpDialog extends UiComponent {
           }
           boolean decompiledFrameRemainder0 = true;
           if (menuIndices != null && (channel != 2 ||
-            LevelSelectScreen.a(recipientId, recipientName, -123))) {
+            LevelSelectScreen.isPlayerReachable(recipientId, recipientName, -123))) {
             stackIn_8_0 = true;
             decompiledFrameRemainder0 = false;
           }
@@ -276,9 +276,9 @@ final class QuickChatHelpDialog extends UiComponent {
         return GameScreen.friendsListPane.content;
     }
 
-    final static void a(String param0, int param1) {
+    final static void submitChosenPlayerName(String param0, int param1) {
         try {
-          RadialSelectorRenderer.a(48, param0);
+          RadialSelectorRenderer.setChosenPlayerName(48, param0);
           int var2_int = 81 % ((param1 - 86) / 38);
           MusicPatch.pushAccountMessageDialog(0, WidgetTextLayout.field_d, false);
         } catch (RuntimeException runtimeException) {
@@ -286,7 +286,7 @@ final class QuickChatHelpDialog extends UiComponent {
         }
     }
 
-    final static boolean i(int param0) {
+    final static boolean isPostLoginStage(int param0) {
         if (param0 != 7457) {
           return true;
         }
@@ -322,7 +322,7 @@ final class QuickChatHelpDialog extends UiComponent {
           }
           if (isPlayerMasked == 0 &&
             board.boardState == 2 && (!TextFieldRenderer.field_A ||
-            !MusicVoice.a((byte) 93))) {
+            !MusicVoice.isTutorialPromptActive((byte) 93))) {
             if ((1 & board.controlMask) != 0 &&
               (-2 & board.controlMask) == 0) {
               leftFrame = 0;

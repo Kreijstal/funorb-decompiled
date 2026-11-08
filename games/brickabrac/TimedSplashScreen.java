@@ -10,7 +10,7 @@ final class TimedSplashScreen extends MenuScreen {
     final void advanceScreen(boolean updateFlag, boolean inputEnabled, int obfuscationGuard) {
         int fieldTemp$0 = 0;
         if (obfuscationGuard >= -52) {
-          TimedSplashScreen.a(true, (byte) -10, 12, -97, -36, false);
+          TimedSplashScreen.createGradientTabSprites(true, (byte) -10, 12, -97, -36, false);
           if (!inputEnabled) {
             return;
           }
@@ -112,7 +112,7 @@ final class TimedSplashScreen extends MenuScreen {
         MovingBody.drawGameLogo((byte) -115);
     }
 
-    final static RgbSprite[] a(boolean param0, byte param1, int param2, int param3, int param4, boolean param5) {
+    final static RgbSprite[] createGradientTabSprites(boolean param0, byte param1, int param2, int param3, int param4, boolean param5) {
         RgbSprite var13 = null;
         RgbSprite var14 = null;
         int[] var16 = Rasterizer2D.pixels;

@@ -47,9 +47,9 @@ final class HighscoresScreen extends MenuScreen {
         }
     }
 
-    final static void a(String param0, int param1, String param2) {
+    final static void startManualLogin(String param0, int param1, String param2) {
         try {
-          ArchiveFetchClient.a(false, param0, param2, 2);
+          ArchiveFetchClient.startLoginWithCredentials(false, param0, param2, 2);
           if (param1 != 11455) {
             quickChatScrollX = -30;
           }
@@ -275,7 +275,7 @@ final class HighscoresScreen extends MenuScreen {
           var5.x = (-var10.width + 240) / 4;
           var5.y = 140;
         } else {
-          this.e(2);
+          this.layoutButtonsInCenteredRow(2);
         }
     }
 
@@ -491,7 +491,7 @@ final class HighscoresScreen extends MenuScreen {
         bzip2TraversalTable = null;
         if (obfuscationGuard != -5) {
           String var2 = (String) null;
-          HighscoresScreen.a((String) null, -31, (String) null);
+          HighscoresScreen.startManualLogin((String) null, -31, (String) null);
         }
         field_w = (int[][]) null;
     }
@@ -655,18 +655,18 @@ final class HighscoresScreen extends MenuScreen {
         super.drawScreen((byte) -38);
         AchievementMaskRequest.drawHorizontallyCenteredSprite(this.screenId, 19);
         this.drawEnabledButtons(0);
-        if (QuickChatMenu.h(-26090)) {
-          GzipInflater.a(550, 5, 243, 5, 140, (byte) -108, 45);
-          VerticalScrollbar.a(243, DateFieldsWidget.field_N, 140, ContextActionController.field_g, -15531, 2);
+        if (QuickChatMenu.isGuestSession(-26090)) {
+          GzipInflater.drawMenuPanel(550, 5, 243, 5, 140, (byte) -108, 45);
+          VerticalScrollbar.drawCenteredLabel(243, DateFieldsWidget.field_N, 140, ContextActionController.field_g, -15531, 2);
           return;
         }
-        GzipInflater.a(475, 5, 33, 5, 140, (byte) -101, 120);
+        GzipInflater.drawMenuPanel(475, 5, 33, 5, 140, (byte) -101, 120);
         ContextActionController.field_g.drawCentered(CanvasResizeController.packNames[this.packIndex], 357, 1 + (-ContextActionController.field_g.xHeight + 178), 0, -1);
         ArchiveNetworkRequest.packSelectorIcons[this.packIndex].drawRotatedAboutCenter(565, 140, -2048, 4096);
         if (obfuscationGuard >= -14) {
           quickChatScrollX = -65;
         }
-        GzipInflater.a(475, 5, 243, 5, 178, (byte) -57, 120);
+        GzipInflater.drawMenuPanel(475, 5, 243, 5, 178, (byte) -57, 120);
         var2 = 149 + ContextActionController.field_g.capHeight + 38;
         var3 = 0;
         ContextActionController.field_g.drawLeft(DualLinkIterator.field_i, -HuffmanCodec.field_g + SecondaryNodeQueue.field_b[0] + 12, var2, var3, -1);
@@ -712,7 +712,7 @@ final class HighscoresScreen extends MenuScreen {
           var4_ref = BackgroundSurfaceHelpers.field_a;
         }
         if (var4_ref != null) {
-          InteractiveGameClient.a(178, ContextActionController.field_g, var4_ref, 357, 243, 2, 15);
+          InteractiveGameClient.drawCenteredTextInBand(178, ContextActionController.field_g, var4_ref, 357, 243, 2, 15);
         }
         this.packSelector.draw(117);
     }
@@ -722,7 +722,7 @@ final class HighscoresScreen extends MenuScreen {
         if (obfuscationGuard >= -52) {
           return;
         }
-        if (QuickChatMenu.h(-26090)) {
+        if (QuickChatMenu.isGuestSession(-26090)) {
           return;
         }
         if (GameConnectionHelpers.field_g == null) {

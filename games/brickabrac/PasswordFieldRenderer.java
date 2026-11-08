@@ -56,7 +56,7 @@ final class PasswordFieldRenderer extends TextFieldRenderer {
             var4 = (Widget) null;
             this.getDisplayText((Widget) null, false);
           }
-          stackIn_3_0 = InteractiveGameClient.a('*', 122, widget.text.length());
+          stackIn_3_0 = InteractiveGameClient.repeatCharacter('*', 122, widget.text.length());
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

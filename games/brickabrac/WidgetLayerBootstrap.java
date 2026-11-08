@@ -13,12 +13,12 @@ final class WidgetLayerBootstrap {
         PopupWidgetLayer.widgetTheme = IntegerValidationHelpers.getSharedWidgetTheme((byte) 84);
         if (!param0) {
           ResourceArchive.field_f = new WidgetLayerStack();
-          ArrayWidgetGroup.a((byte) -16, true, true);
+          ArrayWidgetGroup.showLoginPanelWithoutMessage((byte) -16, true, true);
           return;
         }
         field_e = (String) null;
         ResourceArchive.field_f = new WidgetLayerStack();
-        ArrayWidgetGroup.a((byte) -16, true, true);
+        ArrayWidgetGroup.showLoginPanelWithoutMessage((byte) -16, true, true);
     }
 
     public static void clearSharedReferences(boolean obfuscationGuard) {

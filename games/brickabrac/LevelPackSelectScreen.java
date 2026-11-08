@@ -161,7 +161,7 @@ final class LevelPackSelectScreen extends MenuScreen {
     final void drawScreen(byte obfuscationGuard) {
         super.drawScreen((byte) -56);
         AchievementMaskRequest.drawHorizontallyCenteredSprite(this.screenId, 19);
-        GzipInflater.a(550, 5, 243, 5, 140, (byte) -91, 45);
+        GzipInflater.drawMenuPanel(550, 5, 243, 5, 140, (byte) -91, 45);
         this.drawEnabledButtons(0);
         this.firstPackCard.draw((byte) 105);
         this.secondPackCard.draw((byte) 116);

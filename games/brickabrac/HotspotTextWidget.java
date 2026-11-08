@@ -199,7 +199,7 @@ class HotspotTextWidget extends FocusableWidget {
         return IntrusiveHashIterator.fullscreenDialogOpen;
     }
 
-    final static RgbSprite a(int param0, String param1, int param2) {
+    final static RgbSprite renderDoubleSizeTextSprite(int param0, String param1, int param2) {
         RuntimeException var3 = null;
         RgbSprite stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -230,7 +230,7 @@ class HotspotTextWidget extends FocusableWidget {
         super.dispatchAction(pointerY, button, -106, pointerX);
         if (obfuscationGuard >= -8) {
           String var8 = (String) null;
-          HotspotTextWidget.a(-127, (String) null, 62);
+          HotspotTextWidget.renderDoubleSizeTextSprite(-127, (String) null, 62);
         }
         int var5 = -this.x + pointerX;
         int var6 = -this.y + pointerY;
@@ -304,7 +304,7 @@ class HotspotTextWidget extends FocusableWidget {
           var7 = var9.getTextOriginX((Widget) (this), (byte) 77, parentX);
           var8 = var9.getTextOriginY(parentY, (byte) -100, (Widget) (this));
           do {
-            ScrollPaneWithFooter.a(-2 + (var8 + var6.y), var7 - (-var6.x + 2), obfuscationGuard + 132, var6.height + 2, 2 + var6.width);
+            ScrollPaneWithFooter.drawDottedRectangle(-2 + (var8 + var6.y), var7 - (-var6.x + 2), obfuscationGuard + 132, var6.height + 2, 2 + var6.width);
             var6 = var6.nextSegment;
           } while (var6 != null);
         }

@@ -38,12 +38,12 @@ final class TooltipSprite extends IntrusiveNode {
           MusicVoice.field_n = SpriteInputHelpers.loadRgbSpriteByName("commonui", "jagex_logo_grey", (byte) -110, param3);
           ValidatedTextFieldWidget.field_U = ActivityIndicatorWidget.loadRgbSpritesByName("commonui", param3, "button", 2);
           AccountDateHelpers.field_a = CheckboxWidgetRenderer.loadRgbSpritesByName("commonui", "validation", param3, (byte) -8);
-          QuickChatMenu.field_Yb = (TextFont) ((Object) IntrusiveHashTable.a((byte) -118, "commonui", "arezzo12", param3, param0));
-          ArchiveNetworkClient.field_u = (TextFont) ((Object) IntrusiveHashTable.a((byte) -108, "commonui", "arezzo14", param3, param0));
-          FontSceneGlobals.field_a = (TextFont) ((Object) IntrusiveHashTable.a((byte) -126, "commonui", "arezzo14bold", param3, param0));
+          QuickChatMenu.field_Yb = (TextFont) ((Object) IntrusiveHashTable.loadAlphaFontByName((byte) -118, "commonui", "arezzo12", param3, param0));
+          ArchiveNetworkClient.field_u = (TextFont) ((Object) IntrusiveHashTable.loadAlphaFontByName((byte) -108, "commonui", "arezzo14", param3, param0));
+          FontSceneGlobals.field_a = (TextFont) ((Object) IntrusiveHashTable.loadAlphaFontByName((byte) -126, "commonui", "arezzo14bold", param3, param0));
           var17 = new RgbSprite(param1.takeFileByName(122, "button.gif", ""), (java.awt.Component) ((Object) CacheIoRequest.windowCanvas));
           AppletResourceHelpers.loadIndexedSpriteByName((byte) 29, param3, "dropdown", "commonui");
-          var5 = PacketBuffer.a("commonui", param3, "screen_options", param2 ^ 946715361);
+          var5 = PacketBuffer.loadIndexedSpritesByName("commonui", param3, "screen_options", param2 ^ 946715361);
           LevelPackLoader.field_b = new IndexedSprite[4];
           LoginCredentialKind.field_b = new IndexedSprite[4];
           ScreenNavigationHelpers.field_d = new IndexedSprite[4];
@@ -77,7 +77,7 @@ final class TooltipSprite extends IntrusiveNode {
           var11 = new RgbSprite(var9Lifetime1, var9Lifetime1);
           var11.bindRasterTarget();
           if (param2 != -59) {
-            TooltipSprite.d(-50);
+            TooltipSprite.openPublicChatInput(-50);
           }
           var17.drawAt(var9Lifetime1 - var17.width, 0);
           var12 = new RgbSprite(-(var9Lifetime1 * 2) + var17.width, var9Lifetime1);
@@ -118,7 +118,7 @@ final class TooltipSprite extends IntrusiveNode {
         field_n = null;
     }
 
-    final static void d(int param0) {
+    final static void openPublicChatInput(int param0) {
         if (param0 != 2) {
           textChoiceButtonLineHeight = 90;
         }

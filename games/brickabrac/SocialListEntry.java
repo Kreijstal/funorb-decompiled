@@ -230,7 +230,7 @@ final class SocialListEntry extends UiComponent {
         super(0L, (UiComponent) null);
     }
 
-    final static void a(int param0, LoginCredentials param1, boolean param2, boolean param3, boolean param4) {
+    final static void writeLoginPacket(int param0, LoginCredentials param1, boolean param2, boolean param3, boolean param4) {
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
@@ -249,7 +249,7 @@ final class SocialListEntry extends UiComponent {
           MeshAudioHelpers.accountPacketScratch.writeInt(LevelPackCard.field_a[1], (byte) -79);
           MeshAudioHelpers.accountPacketScratch.writeInt(LevelPackCard.field_a[2], (byte) -79);
           MeshAudioHelpers.accountPacketScratch.writeInt(LevelPackCard.field_a[3], (byte) -79);
-          AccountIntroductionPanel.a(MeshAudioHelpers.accountPacketScratch, (byte) -95);
+          AccountIntroductionPanel.writeMachineId(MeshAudioHelpers.accountPacketScratch, (byte) -95);
           MeshAudioHelpers.accountPacketScratch.writeShort((byte) 113, param0);
           param1.writeCredentials(0, MeshAudioHelpers.accountPacketScratch);
           TextFieldValidator.outgoingPackets.position = 0;
@@ -279,7 +279,7 @@ final class SocialListEntry extends UiComponent {
             return;
           }
           TextFieldValidator.outgoingPackets.writeByte(-105, var6);
-          var7 = GameClock.readSettingsCookie(true, EmailConfirmationValidator.e((byte) -101));
+          var7 = GameClock.readSettingsCookie(true, EmailConfirmationValidator.getHostApplet((byte) -101));
           if (var7 == null) {
             var7 = "";
           }

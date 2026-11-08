@@ -56,9 +56,9 @@ final class AppletResourceHelpers {
         }
     }
 
-    final static void a(boolean param0, boolean param1) {
-        DualLinkDeque.a(param0, param1);
-        AppletFlowHelpers.a((byte) -25, param0);
+    final static void drawLobbyScreenLayers(boolean param0, boolean param1) {
+        DualLinkDeque.drawLobbyAndChatPanels(param0, param1);
+        AppletFlowHelpers.drawLobbyOverlayLayer((byte) -25, param0);
     }
 
     final static void sendTableRequest(TableDataRequest request, int opcode, byte obfuscationGuard) {

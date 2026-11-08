@@ -51,7 +51,7 @@ final class HalfRgbBlendHelpers {
         }
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void drawRootWidgetLayers(boolean param0, int param1) {
         if (param1 == -1) {
           ResourceArchive.field_f.drawLayersAndTooltip(0, 0, param1 + 1);
           return;

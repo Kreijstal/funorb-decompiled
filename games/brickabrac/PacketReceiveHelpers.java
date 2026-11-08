@@ -17,7 +17,7 @@ final class PacketReceiveHelpers {
           IOException readFailure = null;
           Throwable caughtFailure = null;
           if (obfuscationGuard != 20) {
-            PacketReceiveHelpers.a(-79);
+            PacketReceiveHelpers.pumpAudio(-79);
           }
           if (length <= LogoRenderHelpers.incomingPackets.position) {
             return true;
@@ -62,7 +62,7 @@ final class PacketReceiveHelpers {
         }
     }
 
-    final static void a(int param0) {
+    final static void pumpAudio(int param0) {
         ScrollPane.pumpAudio(-29448);
         if (param0 >= -126) {
           field_a = (BirthDateEntryPanel) null;

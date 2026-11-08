@@ -56,7 +56,7 @@ final class LinkWidgetRenderer implements WidgetRenderer {
               var10 = var10 + (-var8 + widget.height >> 1);
             }
           }
-          ScrollPaneWithFooter.a(var10 + 2, var9 - 2, callbackGuard ^ -20727, var8, var7 + 4);
+          ScrollPaneWithFooter.drawDottedRectangle(var10 + 2, var9 - 2, callbackGuard ^ -20727, var8, var7 + 4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

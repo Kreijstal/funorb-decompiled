@@ -178,7 +178,7 @@ abstract class WidgetTextLayout {
         }
     }
 
-    final int a(int param0, int param1, String param2, boolean param3) {
+    final int computeJustifySpacing(int param0, int param1, String param2, boolean param3) {
         int var8 = 0;
         int var5_int = 0;
         int var6 = 0;

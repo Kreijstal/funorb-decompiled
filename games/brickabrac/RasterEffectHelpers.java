@@ -461,7 +461,7 @@ final class RasterEffectHelpers {
         }
     }
 
-    final static boolean b(byte param0) {
+    final static boolean isUsernameCheckPending(byte param0) {
         if (param0 < 117) {
           return true;
         }

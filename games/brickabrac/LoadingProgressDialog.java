@@ -29,7 +29,7 @@ final class LoadingProgressDialog extends PopupWidgetLayer {
         }
     }
 
-    final static AlphaFont a(int param0, int param1, ResourceArchive param2, ResourceArchive param3, int param4) {
+    final static AlphaFont loadAlphaFont(int param0, int param1, ResourceArchive param2, ResourceArchive param3, int param4) {
         RuntimeException var5 = null;
         Object stackIn_4_0 = null;
         AlphaFont stackIn_6_0 = null;
@@ -69,7 +69,7 @@ final class LoadingProgressDialog extends PopupWidgetLayer {
         }
     }
 
-    final static String a(String param0, String param1, boolean param2, String param3) {
+    final static String replaceAllOccurrences(String param0, String param1, boolean param2, String param3) {
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
@@ -105,7 +105,7 @@ final class LoadingProgressDialog extends PopupWidgetLayer {
           var7 = var4_int;
           if (!param2) {
             var13 = (ResourceArchive) null;
-            LoadingProgressDialog.a(95, -81, (ResourceArchive) null, (ResourceArchive) null, -12);
+            LoadingProgressDialog.loadAlphaFont(95, -81, (ResourceArchive) null, (ResourceArchive) null, -12);
           }
           var8 = var6 - var5;
           if (var8 != 0) {

@@ -12,7 +12,7 @@ final class FullscreenFailureKind {
     static String[] field_e;
     static boolean field_i;
 
-    final static void a(String param0, byte param1, int param2) {
+    final static void handleLoginFailure(String param0, byte param1, int param2) {
         int var3_int = 0;
         try {
           CanvasInputCleanup.field_g = false;
@@ -78,7 +78,7 @@ final class FullscreenFailureKind {
           return;
         }
         String var2 = (String) null;
-        FullscreenFailureKind.a((LobbyGame) null, false, (byte) -54, (String) null);
+        FullscreenFailureKind.openLobbyGameContextMenu((LobbyGame) null, false, (byte) -54, (String) null);
         javaKeyCodeMap = null;
         cacheSectorScratch = null;
         field_f = null;
@@ -88,7 +88,7 @@ final class FullscreenFailureKind {
         activePaddleCapSprites = null;
     }
 
-    final static void a(LobbyGame param0, boolean param1, byte param2, String param3) {
+    final static void openLobbyGameContextMenu(LobbyGame param0, boolean param1, byte param2, String param3) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;

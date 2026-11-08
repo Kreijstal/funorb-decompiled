@@ -11,7 +11,7 @@ final class ResourcePreparationEntry {
     static int pointerY;
     String waitingCaption;
 
-    final static void a(boolean param0) {
+    final static void createQuickChatHelpDialog(boolean param0) {
         if (!param0) {
           return;
         }
@@ -37,7 +37,7 @@ final class ResourcePreparationEntry {
         }
     }
 
-    final static void a(String param0, java.awt.Color param1, int param2, boolean param3, int param4) {
+    final static void drawAwtLoadingBar(String param0, java.awt.Color param1, int param2, boolean param3, int param4) {
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
@@ -125,7 +125,7 @@ final class ResourcePreparationEntry {
         }
     }
 
-    final static void a(byte param0) {
+    final static void captureMatchResultSummary(byte param0) {
         boolean stackIn_13_0 = false;
         boolean stackIn_18_0 = false;
         boolean stackIn_19_1 = false;

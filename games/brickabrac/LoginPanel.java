@@ -18,7 +18,7 @@ final class LoginPanel extends WidgetGroup implements TextFieldListener, WidgetA
     private boolean showGuestPlayButton;
     private TextFieldWidget passwordField;
 
-    final static void a(byte param0) {
+    final static void advanceLogoAnimation(byte param0) {
         if (MatchResultScreen.logoAnimationTicks != -BoundedFile.field_i + 0 &&
           -BoundedFile.field_i + 250 != MatchResultScreen.logoAnimationTicks) {
         }
@@ -92,7 +92,7 @@ final class LoginPanel extends WidgetGroup implements TextFieldListener, WidgetA
           var3_int = LoginCredentialKind.field_e;
           QuickChatPhraseDefinition.quickChatMenuRoot = new UiComponent(0L, (UiComponent) null);
           if (archive == null) {
-            AlignedIconLabel.a("QC1", (Throwable) null, obfuscationGuard ^ 118);
+            AlignedIconLabel.reportClientError("QC1", (Throwable) null, obfuscationGuard ^ 118);
             return;
           }
           archive.decodedFilePolicy = 0;
@@ -101,14 +101,14 @@ final class LoginPanel extends WidgetGroup implements TextFieldListener, WidgetA
           LobbyUiHelpers.quickChatPhrases = new QuickChatPhraseRegistry(var3_int, archive, archive, new FontRequestHelpers());
           var4 = TableQuickChatHelpers.findRootQuickChatCategory(0);
           if (var4 == null) {
-            AlignedIconLabel.a("QC2", (Throwable) null, obfuscationGuard - 14);
+            AlignedIconLabel.reportClientError("QC2", (Throwable) null, obfuscationGuard - 14);
             return;
           }
           ResourceRequest.setQuickChatHelpEntry(var4, false);
           var10 = (TextFont) null;
-          ArchiveIndex.field_j = DateInputWidget.a(1513239, 1127256, (byte) 123, 65793, 4020342, 5138823, 65793, 1513239, (TextFont) null, 0, 65793, 2245737, 8947848);
-          SoftwareFramebuffer.field_e = DateInputWidget.a(0, 0, (byte) 122, 0, 0, 0, 0, 0, font, 16764006, 0, 0, 0);
-          WidgetLayerStack.field_K = DateInputWidget.a(0, 0, (byte) 113, 0, 0, 0, 0, 0, font, 16777215, 0, 0, 0);
+          ArchiveIndex.field_j = DateInputWidget.createSolidFramedComponent(1513239, 1127256, (byte) 123, 65793, 4020342, 5138823, 65793, 1513239, (TextFont) null, 0, 65793, 2245737, 8947848);
+          SoftwareFramebuffer.field_e = DateInputWidget.createSolidFramedComponent(0, 0, (byte) 122, 0, 0, 0, 0, 0, font, 16764006, 0, 0, 0);
+          WidgetLayerStack.field_K = DateInputWidget.createSolidFramedComponent(0, 0, (byte) 113, 0, 0, 0, 0, 0, font, 16777215, 0, 0, 0);
           var5 = Rasterizer2D.width;
           var6 = Rasterizer2D.height;
           var14 = Rasterizer2D.pixels;
@@ -244,7 +244,7 @@ final class LoginPanel extends WidgetGroup implements TextFieldListener, WidgetA
         }
     }
 
-    final static void a(int param0, byte param1) {
+    final static void selectLanguageLoadingStrings(int param0, byte param1) {
         BackgroundSurfaceHelpers.field_c = FullscreenFailureKind.field_f[param0];
         int var2 = -14 % ((param1 + 33) / 34);
         FriendListUi.field_a = GameplayRenderHelpers.field_b[param0];
@@ -270,10 +270,10 @@ final class LoginPanel extends WidgetGroup implements TextFieldListener, WidgetA
                   if (this.showGuestPlayButton) {
                     BytePayloadSubmission.showAccountIntroductionPanel(-107);
                   } else {
-                    ResourceRequest.g(29);
+                    ResourceRequest.requestGuestPlay(29);
                   }
                 } else {
-                  MultiValueSliderRenderer.a(true);
+                  MultiValueSliderRenderer.requestQuit(true);
                 }
               }
             } else {
@@ -297,7 +297,7 @@ final class LoginPanel extends WidgetGroup implements TextFieldListener, WidgetA
         }
     }
 
-    final static void h(byte param0) {
+    final static void measureButtonLabelPair(byte param0) {
         int var1 = 0;
         int var2 = 0;
         if (param0 >= 4) {
@@ -400,7 +400,7 @@ final class LoginPanel extends WidgetGroup implements TextFieldListener, WidgetA
             this.y = this.y + (5 + var7.measureWrappedHeight(this.introMessage, -40 + this.width, var7.ascent));
           }
           var8 = PlayerInputBatch.field_p;
-          var9 = MultiValueSliderWidget.readLastLoginMethod(EmailConfirmationValidator.e((byte) -115), -28432);
+          var9 = MultiValueSliderWidget.readLastLoginMethod(EmailConfirmationValidator.getHostApplet((byte) -115), -28432);
           if (EmailConfirmationValidator.field_k == var9) {
             var8 = IntegerParsingHelpers.field_a;
           } else {
@@ -484,10 +484,10 @@ final class LoginPanel extends WidgetGroup implements TextFieldListener, WidgetA
     }
 
     private final void submitLogin(int obfuscationGuard) {
-        if (Mesh3D.a((byte) 114) ||
+        if (Mesh3D.isLoginRetryMode((byte) 114) ||
           !(this.accountField.text.length() <= 0) &&
           !(0 >= this.passwordField.text.length())) {
-          HighscoresScreen.a(this.accountField.text, 11455, this.passwordField.text);
+          HighscoresScreen.startManualLogin(this.accountField.text, 11455, this.passwordField.text);
         }
         if (obfuscationGuard != 25) {
           this.createAccountButton = (FocusableWidget) null;

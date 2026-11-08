@@ -188,7 +188,7 @@ final class PlayerNameChooserPanel extends WidgetGroup implements UsernameSugges
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void configureSlideshowTiming(int param0, int param1) {
         IsaacGenerator.field_f = 400 * param1 / param0;
         IsaacGenerator.field_c = (param1 << 16) / 150;
         IsaacGenerator.field_n = param1 * 100 / 150;
@@ -282,7 +282,7 @@ final class PlayerNameChooserPanel extends WidgetGroup implements UsernameSugges
         if (!this.canSubmitPlayerName((byte) 92)) {
           return;
         }
-        QuickChatHelpDialog.a(this.usernameField.text, -96);
+        QuickChatHelpDialog.submitChosenPlayerName(this.usernameField.text, -96);
         if (obfuscationGuard != 28462) {
           this.submitButton = (FocusableWidget) null;
           return;

@@ -78,7 +78,7 @@ final class Paddle extends RectangleBody {
         }
     }
 
-    final static void a(int param0, boolean param1, int param2) {
+    final static void updateReportAbuseDialog(int param0, boolean param1, int param2) {
         int var3 = 0;
         int var4 = 0;
         if (null != CircleBody.reportAbuseDialog) {

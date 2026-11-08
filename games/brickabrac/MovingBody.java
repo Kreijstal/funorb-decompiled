@@ -150,7 +150,7 @@ abstract class MovingBody extends IntrusiveNode {
           guardCalculation = -30 % ((55 - obfuscationGuard) / 43);
           if (SocialListResponseHelpers.field_b != -1) {
             dialogResult = SocialListResponseHelpers.field_b;
-            CheckboxWidgetRenderer.a(-1, true);
+            CheckboxWidgetRenderer.setAccountDialogResult(-1, true);
             explicitDialogResult = dialogResult;
             return explicitDialogResult;
           }

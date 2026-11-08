@@ -72,7 +72,7 @@ final class AlignedIconLabel extends UiComponent {
         }
     }
 
-    final static void a(String param0, Throwable param1, int param2) {
+    final static void reportClientError(String param0, Throwable param1, int param2) {
         try {
           PlatformServices stackIn_16_0;
           int stackIn_16_1;
@@ -100,7 +100,7 @@ final class AlignedIconLabel extends UiComponent {
             }
             var3 = "";
             if (param1 != null) {
-              var3 = TextValidationHelpers.a(22570, param1);
+              var3 = TextValidationHelpers.formatThrowableTrace(22570, param1);
             }
             if (param0 != null) {
               if (param1 != null) {
@@ -169,7 +169,7 @@ final class AlignedIconLabel extends UiComponent {
     final void setIconLabelBounds(int obfuscationGuard, int y, int inset, int gap, int x, int height, int width) {
         if (obfuscationGuard != -10411) {
           Throwable var9 = (Throwable) null;
-          AlignedIconLabel.a((String) null, (Throwable) null, 64);
+          AlignedIconLabel.reportClientError((String) null, (Throwable) null, 64);
         }
         this.setBounds(height, y, x, width, (byte) 64);
         this.layoutIconLabel(obfuscationGuard ^ 10436, inset, gap);
@@ -281,7 +281,7 @@ final class AlignedIconLabel extends UiComponent {
               packet.readBits(12, (byte) -112);
               records[recordIndex] = record;
             } else {
-              referenceIndex = packet.readBits(GameClock.a(-1 + recordIndex, 15), (byte) 98);
+              referenceIndex = packet.readBits(GameClock.signedBitLength(-1 + recordIndex, 15), (byte) 98);
               records[recordIndex] = records[referenceIndex];
             }
           }

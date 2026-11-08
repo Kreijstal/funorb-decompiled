@@ -71,9 +71,9 @@ final class WidgetTheme {
           this.field_c = 15658734;
           this.field_j = 15658734;
           this.field_g = 3;
-          var4.replaceStateStyle(0, 113).setTextPaint(false, 15658734).setFrameSprites(ScorePopup.a(7829367, 10066329, (byte) 66, 8947848), -2147483648);
-          var4.replaceStateStyle(1, 110).setFrameSprites(ScorePopup.a(13421772, 10066329, (byte) 115, 11184810), -2147483648);
-          var4.replaceStateStyle(3, 118).setFrameSprites(ScorePopup.a(10066329, 7829367, (byte) 115, 8947848), obfuscationGuard ^ -2134061876).setOffsetX(1, (byte) -50).setOffsetY(0, 1);
+          var4.replaceStateStyle(0, 113).setTextPaint(false, 15658734).setFrameSprites(ScorePopup.createTwoToneSpriteSet(7829367, 10066329, (byte) 66, 8947848), -2147483648);
+          var4.replaceStateStyle(1, 110).setFrameSprites(ScorePopup.createTwoToneSpriteSet(13421772, 10066329, (byte) 115, 11184810), -2147483648);
+          var4.replaceStateStyle(3, 118).setFrameSprites(ScorePopup.createTwoToneSpriteSet(10066329, 7829367, (byte) 115, 8947848), obfuscationGuard ^ -2134061876).setOffsetX(1, (byte) -50).setOffsetY(0, 1);
           var5 = new RgbSprite[9];
           var16 = new ArgbSprite(32, 32);
           var18 = var16;
@@ -95,7 +95,7 @@ final class WidgetTheme {
           discarded$1 = new MultiValueSliderRenderer(font, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new StatefulWidgetRenderer();
           var17.copyStyleTo(-68, var8);
-          var8.replaceStateStyle(0, 105).setFrameSprites(ScorePopup.a(10066329, 7829367, (byte) 124, 15658734), -2147483648).setTextPaint(false, 1118481).setShadowPaint(-1, (byte) -69);
+          var8.replaceStateStyle(0, 105).setFrameSprites(ScorePopup.createTwoToneSpriteSet(10066329, 7829367, (byte) 124, 15658734), -2147483648).setTextPaint(false, 1118481).setShadowPaint(-1, (byte) -69);
           var8.replaceStateStyle(4, 108).setPaintPreviousStyle(true, false).setFrameSprites(var5, -2147483648);
           this.textFieldRenderer = (WidgetRenderer) ((Object) var8);
           var9 = new RgbSprite[9];

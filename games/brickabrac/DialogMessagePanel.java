@@ -49,7 +49,7 @@ final class DialogMessagePanel extends WidgetGroup implements WidgetActionListen
             }
             var7 = this.actionIds[var6_int];
             if (var7 != -1) {
-              CheckboxWidgetRenderer.a(this.actionIds[var6_int], true);
+              CheckboxWidgetRenderer.setAccountDialogResult(this.actionIds[var6_int], true);
             } else {
               this.dialog.closeDialog(17);
             }
@@ -74,7 +74,7 @@ final class DialogMessagePanel extends WidgetGroup implements WidgetActionListen
     }
 
     final static void showAccountMessageDialog(int param0) {
-        IntKeyIndex.a(-1);
+        IntKeyIndex.resetAccountFlowState(-1);
         NanoGameClock.field_l = true;
         InteractiveGameClient.field_E = true;
         ResourceArchive.field_f.hideLayers(-126);
@@ -152,7 +152,7 @@ final class DialogMessagePanel extends WidgetGroup implements WidgetActionListen
         this.buttonCount = count;
     }
 
-    final static void a(int param0, int param1, int param2, byte param3, int param4, int param5, int param6, int param7) {
+    final static void drawRadialGlowBounded(int param0, int param1, int param2, byte param3, int param4, int param5, int param6, int param7) {
         RuntimeException decompiledCaughtException = null;
         int var8_int = 0;
         RuntimeException var8 = null;

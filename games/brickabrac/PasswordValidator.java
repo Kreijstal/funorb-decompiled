@@ -21,7 +21,7 @@ final class PasswordValidator extends TextFieldValidator {
         field_m = null;
     }
 
-    final static void e(byte param0) {
+    final static void applyChatRestrictionPacket(byte param0) {
         if (param0 <= -77) {
           TextWidgetRenderer.field_e = false;
           PlayerNameChooserPanel.field_I = LogoRenderHelpers.incomingPackets.readUnsignedByte(255) == 0 ? true : false;

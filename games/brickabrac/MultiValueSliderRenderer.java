@@ -77,7 +77,7 @@ final class MultiValueSliderRenderer implements WidgetRenderer {
         }
     }
 
-    final static String b(int param0) {
+    final static String getLocalPlayerNameOrEmpty(int param0) {
         if (null == LoadingProgressDialog.field_cb) {
           return "";
         }
@@ -195,8 +195,8 @@ final class MultiValueSliderRenderer implements WidgetRenderer {
         return (LobbyGame) null;
     }
 
-    final static void a(boolean param0) {
-        CheckboxWidgetRenderer.a(17, param0);
+    final static void requestQuit(boolean param0) {
+        CheckboxWidgetRenderer.setAccountDialogResult(17, param0);
     }
 
     final static void drawParallaxLayers(int param0, int param1, int param2, RgbSprite param3, RgbSprite param4, int param5, int param6, RgbSprite param7, int param8, int param9) {

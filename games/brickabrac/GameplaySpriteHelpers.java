@@ -16,7 +16,7 @@ final class GameplaySpriteHelpers {
         activeBallSprite = null;
     }
 
-    final static byte[] a(boolean param0, String param1) {
+    final static byte[] takeGameTextFileByName(boolean param0, String param1) {
         RuntimeException var2 = null;
         byte[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;

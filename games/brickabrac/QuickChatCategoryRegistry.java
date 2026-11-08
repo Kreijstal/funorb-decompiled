@@ -90,7 +90,7 @@ final class QuickChatCategoryRegistry {
         return definition;
     }
 
-    final static void a(ResourceArchive param0, ResourceArchive param1, ResourceArchive param2, int param3, ResourceArchive param4) {
+    final static void loadBasicUiResources(ResourceArchive param0, ResourceArchive param1, ResourceArchive param2, int param3, ResourceArchive param4) {
         int var7_int = 0;
         RgbSprite dupTemp$0 = null;
         RuntimeException stackIn_67_0 = null;
@@ -148,24 +148,24 @@ final class QuickChatCategoryRegistry {
           var15 = var21;
           var13 = var15;
           var5 = var13;
-          var16 = PacketBuffer.a("basic", param0, "gamefont", param3 - 946744493);
-          ConstructionBackground.a(param3 ^ 29068, var21, 1);
-          LabeledWidget.field_O = IndexedSpriteGeometry.a(0, var21, 0, var16, 0, 1);
+          var16 = PacketBuffer.loadIndexedSpritesByName("basic", param0, "gamefont", param3 - 946744493);
+          ConstructionBackground.offsetGlyphLeadingBytes(param3 ^ 29068, var21, 1);
+          LabeledWidget.field_O = IndexedSpriteGeometry.createPaletteFont(0, var21, 0, var16, 0, 1);
           LabeledWidget.field_O.palettes = ReflectionCheck.field_n;
-          ContextActionController.field_g = IndexedSpriteGeometry.a(2, var21, 0, var16, 0, 1);
+          ContextActionController.field_g = IndexedSpriteGeometry.createPaletteFont(2, var21, 0, var16, 0, 1);
           ContextActionController.field_g.palettes = ReflectionCheck.field_n;
           var22 = param4.takeFileByName(86, "kartika13", "");
           var17 = var22;
           var14 = var17;
           var5Lifetime1 = var14;
-          var18 = PacketBuffer.a("kartika13", param1, "", -946715356);
-          PasswordFieldRenderer.field_D = IndexedSpriteGeometry.a(0, var22, 0, var18, 0, 1);
+          var18 = PacketBuffer.loadIndexedSpritesByName("kartika13", param1, "", -946715356);
+          PasswordFieldRenderer.field_D = IndexedSpriteGeometry.createPaletteFont(0, var22, 0, var18, 0, 1);
           PasswordFieldRenderer.field_D.palettes = ReflectionCheck.field_n;
-          QuickChatPopupHelpers.field_e = IndexedSpriteGeometry.a(1, var22, 0, var18, 0, 1);
+          QuickChatPopupHelpers.field_e = IndexedSpriteGeometry.createPaletteFont(1, var22, 0, var18, 0, 1);
           QuickChatPopupHelpers.field_e.palettes = ReflectionCheck.field_n;
           TableQuickChatHelpers.field_c = CheckboxWidgetRenderer.loadRgbSpritesByName("basic", "menu_overlays", param0, (byte) -8);
           for (var7_int = 0; TableQuickChatHelpers.field_c.length > var7_int; var7_int++) {
-            TableQuickChatHelpers.field_c[var7_int] = GameConnectionShell.a(TableQuickChatHelpers.field_c[var7_int], 1);
+            TableQuickChatHelpers.field_c[var7_int] = GameConnectionShell.trimWhiteSpriteMargins(TableQuickChatHelpers.field_c[var7_int], 1);
             if (TableQuickChatHelpers.field_c[var7_int].width == 0 ||
               TableQuickChatHelpers.field_c[var7_int].height == 0) {
               TableQuickChatHelpers.field_c[var7_int] = null;
@@ -180,7 +180,7 @@ final class QuickChatCategoryRegistry {
           AchievementBrowserScreen.field_A = AgeValidator.loadTiledFrameSprites("button_frame", "basic", param0, -91);
           Ball.field_G = AgeValidator.loadTiledFrameSprites("button_raised", "basic", param0, 103);
           IntArrayRequest.field_k = AgeValidator.loadTiledFrameSprites("button_depressed", "basic", param0, -104);
-          IntrusiveHashTable.achievementSourceIcons = PacketBuffer.a("basic", param0, "achievements_large", -946715356);
+          IntrusiveHashTable.achievementSourceIcons = PacketBuffer.loadIndexedSpritesByName("basic", param0, "achievements_large", -946715356);
           LevelCompleteScreen.field_F = SpriteInputHelpers.loadRgbSpriteByName("basic", "unachieved", (byte) 97, param1);
           DelayedPacket.field_p = SpriteInputHelpers.loadRgbSpriteByName("basic", "orbcoin", (byte) 122, param1);
           SpriteInputHelpers.loadRgbSpriteByName("basic", "locked", (byte) -45, param1);
@@ -214,7 +214,7 @@ final class QuickChatCategoryRegistry {
           }
           MenuSelection.fullBallSprite = SpriteInputHelpers.loadRgbSpriteByName("basic", "ball", (byte) 121, param0);
           Ball.fullSteelBallSprite = SpriteInputHelpers.loadRgbSpriteByName("basic", "steelball", (byte) 98, param0);
-          SingleChildWidget.field_C = PacketBuffer.a("basic", param0, "brickset", -946715356);
+          SingleChildWidget.field_C = PacketBuffer.loadIndexedSpritesByName("basic", param0, "brickset", -946715356);
           MultiValueSliderRenderer.fullPaddleCapSprites = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "paddlecaps", param3 - 29135);
           GameConnectionShell.fullPaddleSegmentSprites = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "paddleseg", 2);
           AccountRegistrationPanel.fullPaddleCenterSprite = SpriteInputHelpers.loadRgbSpriteByName("basic", "paddlecentre", (byte) 100, param0);
@@ -234,11 +234,11 @@ final class QuickChatCategoryRegistry {
           CanvasInputHelpers.field_a = SpriteInputHelpers.loadRgbSpriteByName("basic", "frame_bubble_point", (byte) -120, param0);
           BytePayloadSubmission.smallRosetteSprites = CheckboxWidgetRenderer.loadRgbSpritesByName("basic", "rosette_sml", param0, (byte) -8);
           IntHistoryBuffer.largeRosetteSprites = CheckboxWidgetRenderer.loadRgbSpritesByName("basic", "rosette_lrg", param0, (byte) -8);
-          LoginMethodPreference.field_a = PacketBuffer.a("basic", param0, "podium2", -946715356);
-          SpriteInputHelpers.field_f = PacketBuffer.a("basic", param0, "podium3", param3 ^ -946719499);
+          LoginMethodPreference.field_a = PacketBuffer.loadIndexedSpritesByName("basic", param0, "podium2", -946715356);
+          SpriteInputHelpers.field_f = PacketBuffer.loadIndexedSpritesByName("basic", param0, "podium3", param3 ^ -946719499);
           BrickMotionPath.field_r = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "podium_happy", 2);
           AchievementSubmission.field_q = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "podium_sad", param3 ^ 29139);
-          ValidationStatus.field_e = TextWidgetRenderer.a("basic", "congratulations", 1593955777, param0);
+          ValidationStatus.field_e = TextWidgetRenderer.loadRgbSpriteByName("basic", "congratulations", 1593955777, param0);
           TranslucentNineSliceFrame.fullBrickSprites = new RgbSprite[SingleChildWidget.field_C.length];
           for (var10_intLifetime2 = 0; var10_intLifetime2 < TranslucentNineSliceFrame.fullBrickSprites.length; var10_intLifetime2++) {
             TranslucentNineSliceFrame.fullBrickSprites[var10_intLifetime2] = SingleChildWidget.field_C[var10_intLifetime2].toRgbSprite();
@@ -291,7 +291,7 @@ final class QuickChatCategoryRegistry {
           TextWidgetRenderer.field_p = SpriteInputHelpers.loadRgbSpriteByName("basic", "character_menu", (byte) -62, param0);
           TranslucentNineSliceFrame.field_j = SpriteInputHelpers.loadRgbSpriteByName("basic", "character_menu_eyes", (byte) -120, param0);
           GameplaySpriteHelpers.menuLeverSprites = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "lever_menu", 2);
-          IncomingPacketHelpers.gameLogoSprite = TextWidgetRenderer.a("basic", "logo", 1593955777, param0);
+          IncomingPacketHelpers.gameLogoSprite = TextWidgetRenderer.loadRgbSpriteByName("basic", "logo", 1593955777, param0);
           PasswordValidator.field_l = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "sliders", 2);
           SocialListEntry.field_Vb = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "arrow_level", param3 ^ 29139);
           TranslucentNineSliceFrame.field_l = new RgbSprite[SocialListEntry.field_Vb.length];
@@ -313,8 +313,8 @@ final class QuickChatCategoryRegistry {
           for (var10_intLifetime10 = 0; RankingSocketHelpers.field_f.length > var10_intLifetime10; var10_intLifetime10++) {
             RankingSocketHelpers.field_f[var10_intLifetime10] = 14;
           }
-          UnderwaterBackground.gameCompletedMessageSprite = HotspotTextWidget.a(2, BirthDateEntryPanel.field_N, -1);
-          ClientException.gameOverMessageSprite = HotspotTextWidget.a(2, SpaceBackground.field_s.toUpperCase(), -1);
+          UnderwaterBackground.gameCompletedMessageSprite = HotspotTextWidget.renderDoubleSizeTextSprite(2, BirthDateEntryPanel.field_N, -1);
+          ClientException.gameOverMessageSprite = HotspotTextWidget.renderDoubleSizeTextSprite(2, SpaceBackground.field_s.toUpperCase(), -1);
           IntegerBitLengthHelpers.countdownSprites = new RgbSprite[3];
           for (var10_intLifetime11 = 0; var10_intLifetime11 < IntegerBitLengthHelpers.countdownSprites.length; var10_intLifetime11++) {
             IntegerBitLengthHelpers.countdownSprites[var10_intLifetime11] = OptionsScreen.renderScaledTextSprite(2, 2, Integer.toString(-var10_intLifetime11 + 3), true);

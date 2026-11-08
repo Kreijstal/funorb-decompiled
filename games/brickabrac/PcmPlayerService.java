@@ -42,7 +42,7 @@ final class PcmPlayerService implements Runnable {
               caughtFailure = caughtWorkerFailure;
               workerFailure = (Exception) (Object) caughtFailure;
               unusedReportMessage = (String) null;
-              AlignedIconLabel.a((String) null, (Throwable) ((Object) workerFailure), 96);
+              AlignedIconLabel.reportClientError((String) null, (Throwable) ((Object) workerFailure), 96);
               exitRoute = 1;
             }
             if (exitRoute == 0) {
@@ -54,7 +54,7 @@ final class PcmPlayerService implements Runnable {
             caughtFailure = caughtFatalFailure;
             fatalFailure = caughtFailure;
             this.running = false;
-            throw PcmPlayerService.<RuntimeException>$cfr$sneakyThrow(fatalFailure);
+            throw PcmPlayerService.<RuntimeException>rethrowUnchecked(fatalFailure);
           }
           if (completionRoute == 0) {
             this.running = false;
@@ -81,7 +81,7 @@ final class PcmPlayerService implements Runnable {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException rethrowUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

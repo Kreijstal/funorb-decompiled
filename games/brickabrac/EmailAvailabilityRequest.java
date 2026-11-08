@@ -56,14 +56,14 @@ final class EmailAvailabilityRequest {
         return this.available;
     }
 
-    final static void a(int param0, int param1, boolean param2, boolean param3, boolean param4, int param5, boolean param6, int param7, int param8, byte param9, boolean param10, int param11, int param12, int param13) {
+    final static void updateLobbyUi(int param0, int param1, boolean param2, boolean param3, boolean param4, int param5, boolean param6, int param7, int param8, byte param9, boolean param10, int param11, int param12, int param13) {
         WidgetTextLayout.field_e = null;
         AchievementsScreen.flushPendingTableNameMessage(0);
         param3 = SingleChildWidget.dispatchPopupInput(param11, param0, param1, (byte) -126, param8, param3, param7);
-        GrowableIntList.a(param13, param12, param11, param6, param2, (byte) 126, param4, param10, param3, param5);
+        GrowableIntList.updateLobbyPanels(param13, param12, param11, param6, param2, (byte) 126, param4, param10, param3, param5);
         IntegerParsingHelpers.updateSocialListPanels(param2, param13, -126);
         if (param9 == -113) {
-          GameCanvas.a(param13, param7, -1, param3);
+          GameCanvas.updateChatPanel(param13, param7, -1, param3);
           return;
         }
     }

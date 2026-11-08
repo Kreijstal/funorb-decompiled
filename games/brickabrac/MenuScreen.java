@@ -18,7 +18,7 @@ abstract class MenuScreen extends GameScreen {
         int var3;
         var3 = BrickABrac.field_J ? 1 : 0;
         if (GzipInflater.field_e <= 0) {
-          TranslucentNineSliceFrame.a(true);
+          TranslucentNineSliceFrame.drawMenuBackdrop(true);
         } else {
           var2 = (-50 + GzipInflater.field_e) * 640 / 50;
           if (0 != MeshLobbyUiHelpers.field_h) {
@@ -77,7 +77,7 @@ abstract class MenuScreen extends GameScreen {
         }
     }
 
-    final void e(int param0) {
+    final void layoutButtonsInCenteredRow(int param0) {
         int dupTemp$0 = 0;
         int var4 = 0;
         String stackIn_5_0 = null;
@@ -246,7 +246,7 @@ abstract class MenuScreen extends GameScreen {
         return false;
     }
 
-    final static void a(java.applet.Applet param0, int param1) {
+    final static void checkUsernameParameter(java.applet.Applet param0, int param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         CharSequence var3 = null;
@@ -317,14 +317,14 @@ abstract class MenuScreen extends GameScreen {
               if (var8 == 37) {
                 if (!(!this.selection.isActivated((byte) 113))) {
                   WidgetPaintStyle.field_a = true;
-                  RankingsRequest.a(16727, inputFlag, 0, new LevelSequence(DateFieldsWidget.field_L[0]));
+                  RankingsRequest.startSinglePlayerLevel(16727, inputFlag, 0, new LevelSequence(DateFieldsWidget.field_L[0]));
                 }
                 break regionExit1;
               }
               if (var8 == 1) {
                 if (!(!this.selection.isActivated((byte) 113))) {
-                  if (!QuickChatMenu.h(-26090)) {
-                    MatchingTextValidator.b(true);
+                  if (!QuickChatMenu.isGuestSession(-26090)) {
+                    MatchingTextValidator.requestEnterLobby(true);
                   } else {
                     CacheEntry.field_z = -2;
                     AccountRegistrationPanel.showTextChoiceDialog(BrickGameLayerController.field_b, true, 0, inputFlag, 46);
@@ -389,31 +389,31 @@ abstract class MenuScreen extends GameScreen {
                   var7 = 1;
                 }
                 if (this.selection.isEndKey(-1) &&
-                  FramedMenuScreen.getMasterSoundGain((byte) -44) < MenuSelection.e((byte) 44)) {
-                  LabeledWidget.applyMasterSoundGain((byte) 47, MenuSelection.e((byte) 31));
+                  FramedMenuScreen.getMasterSoundGain((byte) -44) < MenuSelection.getOpaqueAlpha((byte) 44)) {
+                  LabeledWidget.applyMasterSoundGain((byte) 47, MenuSelection.getOpaqueAlpha((byte) 31));
                   var7 = 1;
                 }
                 if (this.selection.isLeftArrow((byte) -57) &&
                   FramedMenuScreen.getMasterSoundGain((byte) -44) > 0) {
-                  TextFieldValidator.d((byte) 116);
+                  TextFieldValidator.decreaseSoundVolume((byte) 116);
                   var7 = 1;
                 }
                 if (this.selection.isRightArrow(-98) &&
-                  FramedMenuScreen.getMasterSoundGain((byte) -44) < MenuSelection.e((byte) 90)) {
+                  FramedMenuScreen.getMasterSoundGain((byte) -44) < MenuSelection.getOpaqueAlpha((byte) 90)) {
                   var7 = 1;
-                  QuickChatParameterType.a((byte) -63);
+                  QuickChatParameterType.increaseSoundVolume((byte) -63);
                 }
                 if (this.selection.isHeld(false)) {
                   var8 = -120 + var5.width + var5.x + var5.x + MultiValueSliderRenderer.field_d >> 1;
                   var9 = MusicPatch.pointerX - var8;
-                  var10 = var9 * MenuSelection.e((byte) 51) / 120;
+                  var10 = var9 * MenuSelection.getOpaqueAlpha((byte) 51) / 120;
                   if (var10 <= 0) {
                     LabeledWidget.applyMasterSoundGain((byte) -114, 0);
                   } else {
-                    if (var10 < MenuSelection.e((byte) 81)) {
+                    if (var10 < MenuSelection.getOpaqueAlpha((byte) 81)) {
                       LabeledWidget.applyMasterSoundGain((byte) -127, var10);
                     } else {
-                      LabeledWidget.applyMasterSoundGain((byte) 95, MenuSelection.e((byte) 32));
+                      LabeledWidget.applyMasterSoundGain((byte) 95, MenuSelection.getOpaqueAlpha((byte) 32));
                     }
                   }
                   var7 = 1;
@@ -427,28 +427,28 @@ abstract class MenuScreen extends GameScreen {
               }
               if (var8 == 21) {
                 if (this.selection.isHomeKey(obfuscationGuard ^ -30)) {
-                  BubbleDistortion.a((byte) 86, 0);
+                  BubbleDistortion.applyMusicGain((byte) 86, 0);
                 }
                 if (this.selection.isEndKey(-1)) {
-                  BubbleDistortion.a((byte) 86, 256);
+                  BubbleDistortion.applyMusicGain((byte) 86, 256);
                 }
                 if (this.selection.isLeftArrow((byte) -57)) {
-                  RankingsScreen.f(-1);
+                  RankingsScreen.decreaseMusicVolume(-1);
                 }
                 if (this.selection.isRightArrow(obfuscationGuard ^ -27)) {
-                  ValidationMessageWidget.a((byte) 109);
+                  ValidationMessageWidget.increaseMusicVolume((byte) 109);
                 }
                 if (!(!this.selection.isHeld(false))) {
                   var8 = -120 + (MultiValueSliderRenderer.field_d + (var5.x + var5.width) + var5.x) >> 1;
                   var9 = -var8 + MusicPatch.pointerX;
                   var10 = 256 * var9 / 120;
                   if (var10 <= 0) {
-                    BubbleDistortion.a((byte) 86, 0);
+                    BubbleDistortion.applyMusicGain((byte) 86, 0);
                   } else {
                     if (var10 >= 256) {
-                      BubbleDistortion.a((byte) 86, 256);
+                      BubbleDistortion.applyMusicGain((byte) 86, 256);
                     } else {
-                      BubbleDistortion.a((byte) 86, var10);
+                      BubbleDistortion.applyMusicGain((byte) 86, var10);
                     }
                   }
                 }
@@ -458,7 +458,7 @@ abstract class MenuScreen extends GameScreen {
                 if (!(!this.selection.isActivated((byte) 113))) {
                   var4 = 1;
                   if (null == GameplayRenderHelpers.fullscreenCanvas) {
-                    WidgetLayerStack.a(inputFlag, 21543);
+                    WidgetLayerStack.enterFullscreen(inputFlag, 21543);
                   } else {
                     LevelPack.closeFullscreenCanvas(82);
                   }
@@ -494,11 +494,11 @@ abstract class MenuScreen extends GameScreen {
               if (var8 == 23) {
                 if (!(!this.selection.isActivated((byte) 113))) {
                   if (this.screenId != 10) {
-                    AccountIntroductionPanel.a(LevelPackLoader.field_a, true, (byte) 126);
+                    AccountIntroductionPanel.startScreenFade(LevelPackLoader.field_a, true, (byte) 126);
                     CacheEntry.field_z = 2147483647;
                   } else {
                     var12 = (String) null;
-                    AccountIntroductionPanel.a((String) null, true, (byte) 123);
+                    AccountIntroductionPanel.startScreenFade((String) null, true, (byte) 123);
                     if (WidgetGroup.containsNonzeroInFirstEight(SpriteInputHelpers.pendingAchievementMask, -1)) {
                       CacheEntry.field_z = 9;
                     } else {
@@ -512,7 +512,7 @@ abstract class MenuScreen extends GameScreen {
               if (19 == var8) {
                 if (!(!this.selection.isActivated((byte) 113))) {
                   var4 = 1;
-                  AppletFlowHelpers.showQuitPage(2048, EmailConfirmationValidator.e((byte) -66));
+                  AppletFlowHelpers.showQuitPage(2048, EmailConfirmationValidator.getHostApplet((byte) -66));
                 }
                 break regionExit1;
               }
@@ -524,7 +524,7 @@ abstract class MenuScreen extends GameScreen {
               }
               if (var8 == 33) {
                 if (!(!this.selection.isActivated((byte) 113))) {
-                  RankingsRequest.a(16727, inputFlag, IntArrayRequest.gameplayScreen.resultLevel, IntArrayRequest.gameplayScreen.match.configuration);
+                  RankingsRequest.startSinglePlayerLevel(16727, inputFlag, IntArrayRequest.gameplayScreen.resultLevel, IntArrayRequest.gameplayScreen.match.configuration);
                 }
                 break regionExit1;
               }
@@ -565,7 +565,7 @@ abstract class MenuScreen extends GameScreen {
                   TextFieldRenderer.field_A = stackIn_165_0;
                   if (TextFieldRenderer.field_A &&
                     IntArrayRequest.gameplayScreen != null) {
-                    InvitationDialogHelpers.a(true);
+                    InvitationDialogHelpers.resetTutorialState(true);
                   }
                   var4 = 1;
                   break regionExit1;
@@ -578,7 +578,7 @@ abstract class MenuScreen extends GameScreen {
             if (this.selection.isActivated((byte) 113)) {
               stackIn_47_0 = inputFlag;
               stackIn_47_1 = obfuscationGuard - 44;
-              if (DelayedPacket.c(72)) {
+              if (DelayedPacket.isFullscreenUnavailable(72)) {
                 stackIn_48_2 = 13;
               } else {
                 stackIn_48_2 = 16;

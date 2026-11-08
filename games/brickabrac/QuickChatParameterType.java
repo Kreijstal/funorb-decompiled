@@ -44,7 +44,7 @@ final class QuickChatParameterType {
           var7 = (CharSequence) ((Object) recipientName);
           QuickChatHelpDialog.field_Qb = ChatMessage.normalizePlayerName(var7, 64);
           CanvasResizeController.field_n = recipientId;
-          var6 = SaveResultsPromptScreen.a(menuIndices, WidgetLayerStack.field_K, ArchiveIndex.field_j, SoftwareFramebuffer.field_e, (byte) -78);
+          var6 = SaveResultsPromptScreen.createQuickChatPhraseMenu(menuIndices, WidgetLayerStack.field_K, ArchiveIndex.field_j, SoftwareFramebuffer.field_e, (byte) -78);
           if (flag) {
             field_f = (String) null;
           }
@@ -70,7 +70,7 @@ final class QuickChatParameterType {
         }
     }
 
-    final static void a(byte param0) {
+    final static void increaseSoundVolume(byte param0) {
         if (param0 == -63) {
           UsernameSuggestionPanel.increaseMasterSoundGain(true);
           return;
@@ -80,7 +80,7 @@ final class QuickChatParameterType {
         UsernameSuggestionPanel.increaseMasterSoundGain(true);
     }
 
-    final static String a(CharSequence param0, int param1) {
+    final static String validateUsernameText(CharSequence param0, int param1) {
         RuntimeException var2 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -89,7 +89,7 @@ final class QuickChatParameterType {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 >= -81) {
-            QuickChatParameterType.a((byte) -77);
+            QuickChatParameterType.increaseSoundVolume((byte) -77);
           }
           stackIn_3_0 = AchievementsScreen.validateNameText(0, false, param0);
           return stackIn_3_0;
@@ -109,7 +109,7 @@ final class QuickChatParameterType {
 
     final static void closeQuickChatIfOpen(int obfuscationGuard) {
         if (obfuscationGuard != 1) {
-          QuickChatParameterType.a((byte) 83);
+          QuickChatParameterType.increaseSoundVolume((byte) 83);
           if (!TooltipSprite.quickChatMenuOpen) {
             return;
           }

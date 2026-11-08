@@ -95,7 +95,7 @@ final class MusicPatch extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void advanceLobbyTransitions(int param0, boolean param1) {
         int var3;
         var3 = BrickABrac.field_J ? 1 : 0;
         if (param1 ||
@@ -144,7 +144,7 @@ final class MusicPatch extends IntrusiveNode {
                 } else {
                   if (ScrollPaneWithFooter.field_Yb > IntArrayRequest.field_j) {
                     if (IntArrayRequest.field_j == 0) {
-                      NodeDeque.a(true, -122);
+                      NodeDeque.createSocialTabbedPanel(true, -122);
                     }
                     IntArrayRequest.field_j = IntArrayRequest.field_j + 1;
                   }
@@ -156,7 +156,7 @@ final class MusicPatch extends IntrusiveNode {
               if (0 >= IntArrayRequest.field_j) {
                 if (ScrollPaneWithFooter.field_Yb > TableDataRequest.field_m) {
                   if (TableDataRequest.field_m == 0) {
-                    NodeDeque.a(false, -64);
+                    NodeDeque.createSocialTabbedPanel(false, -64);
                   }
                   TableDataRequest.field_m = TableDataRequest.field_m + 1;
                 }

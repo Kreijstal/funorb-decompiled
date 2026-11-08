@@ -54,7 +54,7 @@ final class FriendListUi {
           keepChildLayout = (GameScreen.friendsListPane.scrollPane == ClientResourceHelpers.field_b);
           layoutRetained = ((ScrollPane) (Object) scrollPaneForLayout).updateContentLayout(rowGapForLayout, wheelPixels, lineStep, layoutGuard, activeRelayout, keepChildLayout) ? 1 : 0;
           if (obfuscationGuard > -12) {
-            FriendListUi.a((byte) 96);
+            FriendListUi.getTicksPerSecond((byte) 96);
           }
           boolean processFooterActions = true;
           entries = GameScreen.friendsListPane.content.children;
@@ -157,7 +157,7 @@ final class FriendListUi {
                 pressedName = entry.name;
                 SpriteGeometry.createContextActions(-1, entry, GameScreen.friendsListPane.scrollPane, (int[]) null, pressedName, -1, (byte) -58, 0L, (String) null);
                 if (null != entry.serverName &&
-                  !ConditionalTextValue.a(13134, GameRenderAudioHelpers.contextActions.targetName) &&
+                  !ConditionalTextValue.isPrivateChatInputTo(13134, GameRenderAudioHelpers.contextActions.targetName) &&
                   !TextWidgetRenderer.field_e) {
                   if (!PlayerNameChooserPanel.field_I) {
                     contextForMessage = GameRenderAudioHelpers.contextActions;
@@ -219,7 +219,7 @@ final class FriendListUi {
           keyboardMonitor = DualLinkDeque.keyboardInput;
           synchronized (keyboardMonitor) {
             if (obfuscationGuard != -97) {
-              FriendListUi.a(-86, (byte) 78);
+              FriendListUi.isPowerOfTwo(-86, (byte) 78);
             }
             boolean decompiledFrameCompleted0 = true;
             boolean decompiledFrameRemainder0 = true;
@@ -273,7 +273,7 @@ final class FriendListUi {
         }
     }
 
-    final static void a(ResourceArchive param0, ResourceArchive param1, int param2) {
+    final static void setMembersScreenArchives(ResourceArchive param0, ResourceArchive param1, int param2) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -358,7 +358,7 @@ final class FriendListUi {
         }
     }
 
-    final static boolean a(int param0, byte param1) {
+    final static boolean isPowerOfTwo(int param0, byte param1) {
         RuntimeException var2 = null;
         boolean stackIn_7_0 = false;
         RuntimeException decompiledCaughtException = null;
@@ -399,7 +399,7 @@ final class FriendListUi {
         }
     }
 
-    final static int a(byte param0) {
+    final static int getTicksPerSecond(byte param0) {
         RuntimeException var1 = null;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;

@@ -174,7 +174,7 @@ final class DateFieldsWidget extends DateInputWidget {
         return true;
     }
 
-    private final void a(Widget param0, String param1, byte param2, int param3, int param4) {
+    private final void drawFieldCaption(Widget param0, String param1, byte param2, int param3, int param4) {
         try {
           QuickChatMenu.field_Yb.drawCentered(param1, param3 + param0.x + (param0.width >> 1), param0.y + (param4 - 5), 16777215, -1);
           int var6_int = -127 % ((-2 - param2) / 59);
@@ -183,7 +183,7 @@ final class DateFieldsWidget extends DateInputWidget {
         }
     }
 
-    final static void a(int param0, String param1, String param2, int param3, int param4) {
+    final static void setChatInputText(int param0, String param1, String param2, int param3, int param4) {
         try {
           PasswordValidator.field_n.textColor = param4;
           PasswordValidator.field_n.textSuffix = param1;
@@ -192,7 +192,7 @@ final class DateFieldsWidget extends DateInputWidget {
           CanvasInputHelpers.field_e.localX = CanvasInputHelpers.field_e.localX + CanvasInputHelpers.field_e.width;
           CanvasInputHelpers.field_e.width = param3;
           if (param0 >= -72) {
-            DateFieldsWidget.a(true, true, 77, -47);
+            DateFieldsWidget.updateCreateGameControls(true, true, 77, -47);
           }
           PasswordValidator.field_n.width = PasswordValidator.field_n.width - CanvasInputHelpers.field_e.width;
           CanvasInputHelpers.field_e.localX = CanvasInputHelpers.field_e.localX - CanvasInputHelpers.field_e.width;
@@ -201,7 +201,7 @@ final class DateFieldsWidget extends DateInputWidget {
         }
     }
 
-    final static void a(boolean param0, boolean param1, int param2, int param3) {
+    final static void updateCreateGameControls(boolean param0, boolean param1, int param2, int param3) {
         UiComponent stackIn_7_0 = null;
         boolean stackIn_8_1 = false;
         UiComponent stackIn_14_0 = null;
@@ -276,9 +276,9 @@ final class DateFieldsWidget extends DateInputWidget {
         if (layer == 0) {
           parentY = parentY + this.y;
           parentX = parentX + this.x;
-          this.a(this.dayField, StrongCacheEntry.field_M, (byte) 127, parentX, parentY);
-          this.a(this.monthField, LobbyCaptionGlobals.field_f, (byte) 123, parentX, parentY);
-          this.a(this.yearField, IndexedSpriteHelpers.field_f, (byte) -86, parentX, parentY);
+          this.drawFieldCaption(this.dayField, StrongCacheEntry.field_M, (byte) 127, parentX, parentY);
+          this.drawFieldCaption(this.monthField, LobbyCaptionGlobals.field_f, (byte) 123, parentX, parentY);
+          this.drawFieldCaption(this.yearField, IndexedSpriteHelpers.field_f, (byte) -86, parentX, parentY);
           return;
         }
     }

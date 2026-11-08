@@ -26,7 +26,7 @@ final class MultiValueSliderWidget extends FocusableWidget {
         RuntimeException decompiledCaughtException = null;
         var6 = BrickABrac.field_J ? 1 : 0;
         try {
-          var2 = BackgroundScene.a(param0, 104, "jagex-last-login-method");
+          var2 = BackgroundScene.readBrowserCookie(param0, 104, "jagex-last-login-method");
           if (var2 == null) {
             stackIn_4_0 = LinkWidgetRenderer.field_c;
             return stackIn_4_0;
@@ -183,7 +183,7 @@ final class MultiValueSliderWidget extends FocusableWidget {
             return;
           }
           if (responseType != 2) {
-            AlignedIconLabel.a("A1: " + WhirlpoolHasher.describePacketHistory((byte) -92), (Throwable) null, 88);
+            AlignedIconLabel.reportClientError("A1: " + WhirlpoolHasher.describePacketHistory((byte) -92), (Throwable) null, 88);
             GameTransportHelpers.closeGameTransport((byte) 52);
             return;
           }

@@ -199,7 +199,7 @@ final class ProducerFramebuffer extends SoftwareFramebuffer implements java.awt.
                   else {
                     var16.drawTransparent(var7_int, var8);
                     if (TextFieldRenderer.field_A &&
-                      MusicVoice.a((byte) 89) &&
+                      MusicVoice.isTutorialPromptActive((byte) 89) &&
                       4 == LobbyOverlayHelpers.field_i &&
                       (2 & var14.flags) != 0) {
                       var17 = MembershipBenefitsScreen.clientTick - SpriteGeometry.field_v;

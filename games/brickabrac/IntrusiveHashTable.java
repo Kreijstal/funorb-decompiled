@@ -18,7 +18,7 @@ final class IntrusiveHashTable {
     private IntrusiveNode[] buckets;
     static int field_l;
 
-    final static AlphaFont a(byte param0, String param1, String param2, ResourceArchive param3, ResourceArchive param4) {
+    final static AlphaFont loadAlphaFontByName(byte param0, String param1, String param2, ResourceArchive param3, ResourceArchive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -38,7 +38,7 @@ final class IntrusiveHashTable {
           var5_int = param3.getGroupId(param1, false);
           var6 = param3.getFileId(var5_int, -40, param2);
           if (param0 < -5) {
-            stackIn_4_0 = LoadingProgressDialog.a(117, var5_int, param3, param4, var6);
+            stackIn_4_0 = LoadingProgressDialog.loadAlphaFont(117, var5_int, param3, param4, var6);
             return stackIn_4_0;
           }
           stackIn_2_0 = (AlphaFont) null;
@@ -112,7 +112,7 @@ final class IntrusiveHashTable {
         field_o = null;
         field_k = null;
         if (obfuscationGuard <= 76) {
-          IntrusiveHashTable.a(-40, false);
+          IntrusiveHashTable.drawChatPanel(-40, false);
           field_i = null;
           atanRatio2048Table = null;
           bytePool30000 = (byte[][]) null;
@@ -175,7 +175,7 @@ final class IntrusiveHashTable {
         return this.next(true);
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void drawChatPanel(int param0, boolean param1) {
         DualLinkDeque.field_d.drawRoot(true, param1);
         if (param0 != 7070) {
           return;
@@ -187,7 +187,7 @@ final class IntrusiveHashTable {
         var2.drawLayersAndTooltip(DualLinkDeque.field_d.screenX, DualLinkDeque.field_d.screenY, 0);
     }
 
-    final static void a(int param0, byte param1, int param2, int param3) {
+    final static void drawMainMenuLogo(int param0, byte param1, int param2, int param3) {
         int var8 = 0;
         int var9 = 0;
         int var10 = BrickABrac.field_J ? 1 : 0;
@@ -200,7 +200,7 @@ final class IntrusiveHashTable {
         int var9Lifetime2;
         TextWidgetRenderer.field_p.drawTransparent(var4, var5);
         if (param1 >= -115) {
-          IntrusiveHashTable.a(75, (byte) 65, 92, -101);
+          IntrusiveHashTable.drawMainMenuLogo(75, (byte) 65, 92, -101);
         }
         int var6 = var4 + (TextWidgetRenderer.field_p.canvasWidth - TranslucentNineSliceFrame.field_j.canvasWidth) / 2;
         int var7 = 64 + var5;
@@ -246,7 +246,7 @@ final class IntrusiveHashTable {
           }
           if (obfuscationGuard != 34) {
             ResourceArchive var6 = (ResourceArchive) null;
-            IntrusiveHashTable.a((byte) -123, (String) null, (String) null, (ResourceArchive) null, (ResourceArchive) null);
+            IntrusiveHashTable.loadAlphaFontByName((byte) -123, (String) null, (String) null, (ResourceArchive) null, (ResourceArchive) null);
           }
           var5 = this.buckets[(int)((long)(this.bucketCount - 1) & key)];
           node.next = var5;

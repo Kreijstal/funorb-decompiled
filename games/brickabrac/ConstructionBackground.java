@@ -10,7 +10,7 @@ final class ConstructionBackground extends BackgroundScene {
     private final static void drawParallaxLayers(RgbSprite param0, int param1, int param2, int param3, int param4, RgbSprite param5, int param6, int param7, int param8, int param9, RgbSprite param10, int param11, RgbSprite param12) {
         try {
           param12.drawAt(-((-param3 + param12.canvasWidth) / 2) + (param6 + (param2 * param7 >> 16)), param8);
-          QuickChatMenu.a(-121, 144, 128, param10, 11970969, (param2 * 9 >> 16) + (-param10.canvasWidth + param3) / 2 + param6 - 35 / param1, -(120 / param1) - param10.canvasHeight + (param9 + param4) + param8);
+          QuickChatMenu.drawGradientAlphaSilhouette(-121, 144, 128, param10, 11970969, (param2 * 9 >> 16) + (-param10.canvasWidth + param3) / 2 + param6 - 35 / param1, -(120 / param1) - param10.canvasHeight + (param9 + param4) + param8);
           param5.drawTransparent(-(23 / param1) + (10 * param2 >> 16) + (param6 + (-param5.canvasHeight + param3) / 2), -param5.canvasHeight + param9 + (param8 + param4));
           param0.drawTransparent(-(279 / param1) + (param3 - param0.canvasHeight) / 2 + (param6 + (20 * param2 >> 16)), -param0.canvasHeight + param9 + (param8 + param4));
         } catch (RuntimeException runtimeException) {
@@ -93,7 +93,7 @@ final class ConstructionBackground extends BackgroundScene {
     final void drawFullBackground(boolean obfuscationGuard, int scroll16, int destinationY, int colorIndex, int destinationX) {
         RasterCacheSurface var6 = null;
         if (!obfuscationGuard) {
-          ConstructionBackground.b((byte) -60, 50);
+          ConstructionBackground.positionChatPanel((byte) -60, 50);
         }
         if (!this.hasSprites((byte) -124)) {
           Rasterizer2D.fillRectangle(destinationX, destinationY, 640, 480, 16777215);
@@ -131,7 +131,7 @@ final class ConstructionBackground extends BackgroundScene {
         return true;
     }
 
-    final static void b(byte param0, int param1) {
+    final static void positionChatPanel(byte param0, int param1) {
         int var2 = 0;
         int var3 = 0;
         BoundedFile.field_h = param1;
@@ -148,7 +148,7 @@ final class ConstructionBackground extends BackgroundScene {
         }
     }
 
-    final static void a(int param0, byte[] param1, int param2) {
+    final static void offsetGlyphLeadingBytes(int param0, byte[] param1, int param2) {
         int incrementValue$1 = 0;
         int var3_int = 0;
         int var4 = 0;

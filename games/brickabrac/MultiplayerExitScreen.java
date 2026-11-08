@@ -96,7 +96,7 @@ final class MultiplayerExitScreen extends MatchResultScreen {
         }
     }
 
-    final static void a(boolean param0, ResourceArchive param1, ResourceArchive param2, ResourceArchive param3, int param4) {
+    final static void initializeAccountUi(boolean param0, ResourceArchive param1, ResourceArchive param2, ResourceArchive param3, int param4) {
         try {
           LabeledWidget.emailAvailabilityRequest = FontRequestHelpers.createEmailAvailabilityRequest("", 16711935);
           LabeledWidget.emailAvailabilityRequest.complete(false, 20892);
@@ -117,7 +117,7 @@ final class MultiplayerExitScreen extends MatchResultScreen {
           return DualLinkDeque.field_d.screenY;
         }
         ResourceArchive var3 = (ResourceArchive) null;
-        MultiplayerExitScreen.a(false, (ResourceArchive) null, (ResourceArchive) null, (ResourceArchive) null, 63);
+        MultiplayerExitScreen.initializeAccountUi(false, (ResourceArchive) null, (ResourceArchive) null, (ResourceArchive) null, 63);
         return DualLinkDeque.field_d.screenY;
     }
 

@@ -47,7 +47,7 @@ final class UsernameSuggestionPanel extends WidgetGroup implements WidgetActionL
         }
     }
 
-    final static boolean a(int param0) {
+    final static boolean hasChatPromptComponent(int param0) {
         if (param0 > -69) {
           return false;
         }
@@ -108,7 +108,7 @@ final class UsernameSuggestionPanel extends WidgetGroup implements WidgetActionL
         }
     }
 
-    final static void h(int param0) {
+    final static void tickLobbyLayout(int param0) {
         if (param0 > -41) {
           return;
         }

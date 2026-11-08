@@ -31,7 +31,7 @@ final class RegistrationResponseDialog extends AccountMessageDialog implements W
         if (this.registrationResponseHandled) {
           return super.tickLayerAndCheckHidden(0);
         }
-        AccountResponse var2 = SoundPlayback.a(106);
+        AccountResponse var2 = SoundPlayback.takeRegistrationResponse(106);
         if (var2 != null) {
           this.handleRegistrationResponse(-7, var2, false);
           return super.tickLayerAndCheckHidden(0);
@@ -62,14 +62,14 @@ final class RegistrationResponseDialog extends AccountMessageDialog implements W
 
     public final void onAction(int pointerY, int button, byte obfuscationGuard, int pointerX, FocusableWidget widget) {
         if (this.ineligibleResponse) {
-          ArrayWidgetGroup.a((byte) -16, true, false);
+          ArrayWidgetGroup.showLoginPanelWithoutMessage((byte) -16, true, false);
           return;
         }
         if (obfuscationGuard >= -22) {
           return;
         }
         try {
-          FullscreenFailureDialog.l(64);
+          FullscreenFailureDialog.loginWithRegisteredAccount(64);
           this.closeDialog(17);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "qf.Q(" + pointerY + ',' + button + ',' + obfuscationGuard + ',' + pointerX + ',' + (widget != null ? "{...}" : "null") + ')');
@@ -104,7 +104,7 @@ final class RegistrationResponseDialog extends AccountMessageDialog implements W
               message = response.message;
               if (response.responseCode == 248) {
                 if (!skipIneligibleAction) {
-                  CachedArchiveSource.e(-77);
+                  CachedArchiveSource.setRegistrationIneligibleMarker(-77);
                 }
                 this.ineligibleResponse = true;
                 message = CircleBody.field_q;

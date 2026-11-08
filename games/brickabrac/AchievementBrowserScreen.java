@@ -63,7 +63,7 @@ abstract class AchievementBrowserScreen extends MenuScreen {
         var16 = null;
         var14 = BrickABrac.field_J ? 1 : 0;
         super.drawScreen((byte) -104);
-        GzipInflater.a(550, 5, 88, 5, 140, (byte) -72, 45);
+        GzipInflater.drawMenuPanel(550, 5, 88, 5, 140, (byte) -72, 45);
         MovingBody.pushRasterIntersectClip((byte) 98, 560, 80, 140, 228);
         var17 = (AchievementIcon) (this.visibleIcons.first(-94));
         while (var17 != null) {
@@ -76,8 +76,8 @@ abstract class AchievementBrowserScreen extends MenuScreen {
           var15 = (AchievementIcon) (this.departingIcons.next((byte) 116));
         }
         RasterStackHelpers.popRaster(-81);
-        GzipInflater.a(146, 5, 146, 5, 233, (byte) -87, 45);
-        GzipInflater.a(399, 5, 146, 5, 233, (byte) -107, 196);
+        GzipInflater.drawMenuPanel(146, 5, 146, 5, 233, (byte) -87, 45);
+        GzipInflater.drawMenuPanel(399, 5, 146, 5, 233, (byte) -107, 196);
         if (ValidationMessageWidget.selectedAchievementId != -1) {
           stackIn_9_0 = ValidationMessageWidget.selectedAchievementId;
         } else {
@@ -123,7 +123,7 @@ abstract class AchievementBrowserScreen extends MenuScreen {
           }
         } else {
           ContextActionController.field_g.drawLeft(ProducerFramebuffer.field_h, 209, 246 + ContextActionController.field_g.capHeight, 2, -1);
-          if (QuickChatMenu.h(-26090)) {
+          if (QuickChatMenu.isGuestSession(-26090)) {
             var6 = 246 + var5 * 3;
             PasswordFieldRenderer.field_D.drawLeft(DateFieldsWidget.field_N, 209, var6, 2, -1);
           }
@@ -223,7 +223,7 @@ abstract class AchievementBrowserScreen extends MenuScreen {
         }
         if (obfuscationGuard != -120) {
           var6 = (RgbSprite) null;
-          AchievementBrowserScreen.a((RgbSprite) null, -23, 26, 101, 46, -121, -33, (RgbSprite) null, 118, (RgbSprite) null, -100);
+          AchievementBrowserScreen.drawSpaceBackgroundLayers((RgbSprite) null, -23, 26, 101, 46, -121, -33, (RgbSprite) null, 118, (RgbSprite) null, -100);
         }
     }
 
@@ -267,7 +267,7 @@ abstract class AchievementBrowserScreen extends MenuScreen {
         field_B = null;
     }
 
-    final static void a(RgbSprite param0, int param1, int param2, int param3, int param4, int param5, int param6, RgbSprite param7, int param8, RgbSprite param9, int param10) {
+    final static void drawSpaceBackgroundLayers(RgbSprite param0, int param1, int param2, int param3, int param4, int param5, int param6, RgbSprite param7, int param8, RgbSprite param9, int param10) {
         if (param5 != 0) {
           return;
         }

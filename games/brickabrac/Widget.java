@@ -108,7 +108,7 @@ class Widget extends IntrusiveNode {
         try {
           if (match.playerCount == 1) {
             if (TextFieldRenderer.field_A) {
-              tutorialActiveValue = (MusicVoice.a((byte) 88)) ? 1 : 0;
+              tutorialActiveValue = (MusicVoice.isTutorialPromptActive((byte) 88)) ? 1 : 0;
             } else {
               tutorialActiveValue = 0;
             }
@@ -611,7 +611,7 @@ class Widget extends IntrusiveNode {
         try {
           ChatLobbyUiHelpers.field_f = new MidiSynthesizer();
           ChatLobbyUiHelpers.field_f.setInitialProgram(0, 9, 128);
-          MeshAudioHelpers.a(22050, true, ChatLobbyUiHelpers.field_f, param0, 1024, (java.awt.Component) ((Object) param2));
+          MeshAudioHelpers.startAudioOutput(22050, true, ChatLobbyUiHelpers.field_f, param0, 1024, (java.awt.Component) ((Object) param2));
           if (param1 != 60) {
             field_y = (int[]) null;
           }
@@ -690,7 +690,7 @@ class Widget extends IntrusiveNode {
         }
     }
 
-    final static int d(byte param0) {
+    final static int getAvailabilityReplyLength(byte param0) {
         if (param0 != -59) {
           return 73;
         }

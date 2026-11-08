@@ -8,7 +8,7 @@ final class MotionWaypoint extends MovingBody {
     int durationTicks;
     static boolean[][] field_r;
 
-    final static String b(boolean param0) {
+    final static String getPendingPassword(boolean param0) {
         if (param0) {
           return (String) null;
         }
@@ -22,7 +22,7 @@ final class MotionWaypoint extends MovingBody {
         super(x256, y256, velocityX256, velocityY256, typeId);
     }
 
-    final static void c(int param0) {
+    final static void rebuildFullscreenDialogIfOpen(int param0) {
         if (!HotspotTextWidget.isFullscreenDialogOpen(9)) {
           return;
         }

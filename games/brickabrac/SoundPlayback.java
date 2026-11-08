@@ -23,7 +23,7 @@ final class SoundPlayback extends IntrusiveNode {
         }
     }
 
-    final static AccountResponse a(int param0) {
+    final static AccountResponse takeRegistrationResponse(int param0) {
         if (IntrusiveHashIterator.field_g == StrongCacheEntry.field_P) {
           throw new IllegalStateException();
         }
@@ -47,7 +47,7 @@ final class SoundPlayback extends IntrusiveNode {
         field_k = null;
     }
 
-    final static String a(byte param0, String param1, int param2) {
+    final static String formatPlayerRemovalMessage(byte param0, String param1, int param2) {
         String stackIn_2_0 = null;
         String stackIn_5_0 = null;
         String stackIn_9_0 = null;

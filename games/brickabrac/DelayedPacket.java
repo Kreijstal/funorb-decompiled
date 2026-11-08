@@ -13,15 +13,15 @@ final class DelayedPacket extends IntrusiveNode {
     long deliverAfterMillis;
     static MenuScreen[] menuScreens;
 
-    final static boolean c(int param0) {
+    final static boolean isFullscreenUnavailable(int param0) {
         if (param0 <= 57) {
           field_o = (String) null;
-          if (!QuickChatMenu.h(-26090)) {
+          if (!QuickChatMenu.isGuestSession(-26090)) {
             return 0 >= ResourceArchiveFactory.windowModeCapabilityWord ? true : false;
           }
           return true;
         }
-        if (QuickChatMenu.h(-26090)) {
+        if (QuickChatMenu.isGuestSession(-26090)) {
           return true;
         }
         if (0 < ResourceArchiveFactory.windowModeCapabilityWord) {
@@ -43,7 +43,7 @@ final class DelayedPacket extends IntrusiveNode {
         var5 = BrickABrac.field_J ? 1 : 0;
         try {
           if (obfuscationGuard != -17912) {
-            DelayedPacket.c(-48);
+            DelayedPacket.isFullscreenUnavailable(-48);
           }
           var6 = new RgbSprite(radius * 2 + sprite.width, 2 * radius + sprite.height);
           var6.bindRasterTarget();

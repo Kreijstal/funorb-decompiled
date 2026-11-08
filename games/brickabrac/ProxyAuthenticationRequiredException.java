@@ -68,7 +68,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
         VerticalScrollbar.layoutQuickChatMenu(QuickChatCategoryDefinition.field_z, 5, StrongCacheEntry.field_O - 24, 640, LobbyGame.field_oc, 0, (byte) 94);
     }
 
-    final static void a(String param0, int param1, int param2, String[] param3) {
+    final static void handleAccountRequestResult(String param0, int param1, int param2, String[] param3) {
         RuntimeException var4 = null;
         int var5 = 0;
         String[] var6 = null;
@@ -86,7 +86,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
         try {
           if (param1 != -106) {
             var6 = (String[]) null;
-            ProxyAuthenticationRequiredException.a((String) null, 72, 40, (String[]) null);
+            ProxyAuthenticationRequiredException.handleAccountRequestResult((String) null, 72, 40, (String[]) null);
           }
           MusicVoice.field_l = StatefulWidgetRenderer.field_v;
           if (param2 != 255) {

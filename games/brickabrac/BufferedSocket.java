@@ -210,7 +210,7 @@ final class BufferedSocket implements Runnable {
             decompiledCaughtException = decompiledCaughtParameter4;
             var1_ref = (Exception) (Object) decompiledCaughtException;
             var7 = (String) null;
-            AlignedIconLabel.a((String) null, (Throwable) ((Object) var1_ref), 105);
+            AlignedIconLabel.reportClientError((String) null, (Throwable) ((Object) var1_ref), 105);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -263,7 +263,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final static void a(int param0) {
+    final static void drawQuickChatMenuOverlay(int param0) {
         if (param0 != 21862) {
           return;
         }

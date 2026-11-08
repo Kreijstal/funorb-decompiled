@@ -8,7 +8,7 @@ final class WidgetLayerStack extends SingleChildWidget {
     static RgbSprite volcanicMidSprite;
     static String field_H;
 
-    final static void a(boolean param0, int param1) {
+    final static void enterFullscreen(boolean param0, int param1) {
         int var2;
         int var3;
         PlayerBoard var4;
@@ -18,7 +18,7 @@ final class WidgetLayerStack extends SingleChildWidget {
           WidgetLayerStack.drawBoardEndOverlay(103, 104, 91, (byte) -14, (PlayerBoard) null, 105, 90);
         }
         if (0 >= ResourceArchiveFactory.windowModeCapabilityWord) {
-          var2 = (QuickChatMenu.h(-26090)) ? 0 : 1;
+          var2 = (QuickChatMenu.isGuestSession(-26090)) ? 0 : 1;
         } else {
           if (null == ModalOverlayHelpers.canvasResizeController) {
             GameplayRenderHelpers.fullscreenCanvas = LoginCredentials.createFullscreenCanvas(0, 0, 640, 480, true, AccountMessageDialog.field_ub);
@@ -361,7 +361,7 @@ final class WidgetLayerStack extends SingleChildWidget {
             LegacyEmailValidationError.drawBoardResultWord(width, var8Lifetime1, 60, x, scaleDivisor, y, height, board);
           }
           if (obfuscationGuard < 118) {
-            WidgetLayerStack.a(true, 86);
+            WidgetLayerStack.enterFullscreen(true, 86);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

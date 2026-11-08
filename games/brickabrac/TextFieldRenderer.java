@@ -60,19 +60,19 @@ class TextFieldRenderer extends TextWidgetRenderer {
         this(ArchiveNetworkClient.field_u, textColor);
     }
 
-    final static boolean c(byte param0) {
+    final static boolean isLoginFlowIncomplete(byte param0) {
         if (param0 >= -80) {
-          TextFieldRenderer.c((byte) 16);
+          TextFieldRenderer.isLoginFlowIncomplete((byte) 16);
           if (GameConnectionShell.clientStage < 20) {
             return true;
           }
-          if (!QuickChatHelpDialog.i(7457)) {
+          if (!QuickChatHelpDialog.isPostLoginStage(7457)) {
             return true;
           }
           if (OptionsScreen.field_x <= 0) {
             return false;
           }
-          if (!ReportAbuseDialog.i(0)) {
+          if (!ReportAbuseDialog.constantTrue(0)) {
             return true;
           }
           return false;
@@ -80,13 +80,13 @@ class TextFieldRenderer extends TextWidgetRenderer {
         if (GameConnectionShell.clientStage < 20) {
           return true;
         }
-        if (!QuickChatHelpDialog.i(7457)) {
+        if (!QuickChatHelpDialog.isPostLoginStage(7457)) {
           return true;
         }
         if (OptionsScreen.field_x <= 0) {
           return false;
         }
-        if (!ReportAbuseDialog.i(0)) {
+        if (!ReportAbuseDialog.constantTrue(0)) {
           return true;
         }
         return false;
@@ -120,7 +120,7 @@ class TextFieldRenderer extends TextWidgetRenderer {
         }
         try {
           if (obfuscationGuard) {
-            Under13RegistrationNoticePanel.b(widget.height, widget.x + parentX, widget.width, parentY + widget.y, -17634);
+            Under13RegistrationNoticePanel.drawInsetFieldBorder(widget.height, widget.x + parentX, widget.width, parentY + widget.y, -17634);
           }
           super.paintWidget(obfuscationGuard, callbackGuard ^ 0, parentX, widget, parentY);
         } catch (RuntimeException runtimeException) {

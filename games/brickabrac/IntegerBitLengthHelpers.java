@@ -16,9 +16,9 @@ final class IntegerBitLengthHelpers {
         }
     }
 
-    final static void a(boolean param0, ResourceArchive param1, ResourceArchive param2, byte param3) {
+    final static void initializeLobbyChatResources(boolean param0, ResourceArchive param1, ResourceArchive param2, byte param3) {
         try {
-          ParisBackground.a(AccountMessageDialog.field_Ab, ScorePopup.field_m, TableResponseHelpers.field_a, Paddle.field_C, GzipInflater.field_d, ProxySocketConnector.field_n, DualLinkNode.field_t, CappedUrlRequest.field_l, (byte) 61, param0, LobbyInputHelpers.field_c, OptionsScreen.field_u);
+          ParisBackground.buildChatPanelComponents(AccountMessageDialog.field_Ab, ScorePopup.field_m, TableResponseHelpers.field_a, Paddle.field_C, GzipInflater.field_d, ProxySocketConnector.field_n, DualLinkNode.field_t, CappedUrlRequest.field_l, (byte) 61, param0, LobbyInputHelpers.field_c, OptionsScreen.field_u);
           if (param3 < 74) {
             IntegerBitLengthHelpers.unsignedBitLength(2, -57);
           }

@@ -60,14 +60,14 @@ final class FileCacheStore {
         }
     }
 
-    final static boolean b(int param0) {
+    final static boolean isPrivateRecipientReachable(int param0) {
         if (param0 != -21835160) {
-          FileCacheStore.b(-54);
+          FileCacheStore.isPrivateRecipientReachable(-54);
         }
-        return LevelSelectScreen.a(CanvasResizeController.field_n, QuickChatHelpDialog.field_Qb, 21);
+        return LevelSelectScreen.isPlayerReachable(CanvasResizeController.field_n, QuickChatHelpDialog.field_Qb, 21);
     }
 
-    final static void a(int param0) {
+    final static void detachMouseInput(int param0) {
         Throwable decompiledCaughtException = null;
         Object var1 = null;
         if (PowerUpWarning.mouseInput != null) {

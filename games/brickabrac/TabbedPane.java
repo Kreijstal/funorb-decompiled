@@ -13,7 +13,7 @@ final class TabbedPane extends UiComponent {
     static BackgroundScene currentBackground;
     static String field_Tb;
 
-    final static void a(String[] args, RgbSprite[][] param1, int param2, String[][] param3, byte[] param4, ResourceArchive param5, RgbSprite[][] param6, ResourceArchive param7, boolean param8, int param9, int[] param10, String[][] param11, ResourceArchive param12, byte[] param13, int param14) {
+    final static void initializeLobbyUi(String[] args, RgbSprite[][] param1, int param2, String[][] param3, byte[] param4, ResourceArchive param5, RgbSprite[][] param6, ResourceArchive param7, boolean param8, int param9, int[] param10, String[][] param11, ResourceArchive param12, byte[] param13, int param14) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -45,7 +45,7 @@ final class TabbedPane extends UiComponent {
             var16 = (TextFont) null;
             TabbedPane.configureTextChoiceDialogFromSprites(56, 101, -86, 51, -89, 7, -10, 119, -103, (RgbSprite[]) null, (TextFont) null, (RgbSprite[]) null, -32, 111, 0, true, -111, (RgbSprite[]) null, (TextFont) null, 2);
           }
-          QuickChatMenu.a(args, (IndexedSprite[]) null, param13, param6, param4, param10, param14 - 22286, param1, param12, param9, param5, param3, param7, param2, (int[]) null, param11, param8);
+          QuickChatMenu.initializeLobbyUi(args, (IndexedSprite[]) null, param13, param6, param4, param10, param14 - 22286, param1, param12, param9, param5, param3, param7, param2, (int[]) null, param11, param8);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

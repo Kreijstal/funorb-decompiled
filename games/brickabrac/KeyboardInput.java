@@ -72,7 +72,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
         }
     }
 
-    final static void a(int param0, RgbSprite[] param1, int param2, int param3, int param4, int param5, int param6) {
+    final static void drawNineSliceFrame(int param0, RgbSprite[] param1, int param2, int param3, int param4, int param5, int param6) {
         int var22 = 0;
         int stackIn_12_0 = 0;
         int stackIn_15_0 = 0;
@@ -346,7 +346,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
         }
     }
 
-    final static String a(boolean param0, int param1) {
+    final static String formatTwoDigitLevelLabel(boolean param0, int param1) {
         if (param0) {
           GameLayerController var3 = (GameLayerController) null;
           KeyboardInput.insertGameLayerController((GameLayerController) null, -56);

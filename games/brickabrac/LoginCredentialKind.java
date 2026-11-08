@@ -11,7 +11,7 @@ final class LoginCredentialKind {
     static int field_e;
     static RgbSprite[] field_h;
 
-    final static boolean a(int param0) {
+    final static boolean isConnectionRetryDue(int param0) {
         long var1;
         long var3;
         int var5;

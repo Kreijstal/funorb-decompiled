@@ -17,7 +17,7 @@ abstract class IndexedSpriteGeometry {
           Rasterizer2D.bind(sprite.pixels, sprite.canvasWidth, sprite.canvasHeight);
           if (obfuscationGuard > -46) {
             IndexedSprite[] var3 = (IndexedSprite[]) null;
-            IndexedSpriteGeometry.a(79, (byte[]) null, 74, (IndexedSprite[]) null, -94, -115);
+            IndexedSpriteGeometry.createPaletteFont(79, (byte[]) null, 74, (IndexedSprite[]) null, -94, -115);
           }
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "fc.K(" + obfuscationGuard + ',' + (sprite != null ? "{...}" : "null") + ')');
@@ -32,7 +32,7 @@ abstract class IndexedSpriteGeometry {
         }
     }
 
-    final static String a(int param0) {
+    final static String getPendingEmail(int param0) {
         if (param0 <= 6) {
           return (String) null;
         }
@@ -48,7 +48,7 @@ abstract class IndexedSpriteGeometry {
         return GameScreen.field_d;
     }
 
-    final static PaletteFont a(int param0, byte[] param1, int param2, IndexedSprite[] param3, int param4, int param5) {
+    final static PaletteFont createPaletteFont(int param0, byte[] param1, int param2, IndexedSprite[] param3, int param4, int param5) {
         int var16_int = 0;
         byte[] array$0 = null;
         int incrementValue$3 = 0;

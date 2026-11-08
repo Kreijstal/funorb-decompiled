@@ -46,7 +46,7 @@ final class Mesh3D {
     static PcmSound[] field_e;
     short[] faceDirectionC;
 
-    final static boolean a(byte param0) {
+    final static boolean isLoginRetryMode(byte param0) {
         if (param0 <= 33) {
           Mesh3D.showAccountRegistrationPanel(-80);
         }

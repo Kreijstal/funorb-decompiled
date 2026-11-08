@@ -34,13 +34,13 @@ final class SocialTabbedPanel {
           return;
         }
         MusicTrack var2 = (MusicTrack) null;
-        SocialTabbedPanel.a(true, 99, (byte) -104, (MusicTrack) null);
+        SocialTabbedPanel.switchMusicTrack(true, 99, (byte) -104, (MusicTrack) null);
         field_f = null;
         field_a = null;
         field_b = null;
     }
 
-    final static void a(boolean param0, int param1, byte param2, MusicTrack param3) {
+    final static void switchMusicTrack(boolean param0, int param1, byte param2, MusicTrack param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         Object var5 = null;

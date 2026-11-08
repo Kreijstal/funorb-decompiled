@@ -13,8 +13,8 @@ final class TableDataRequest extends IntrusiveNode {
     String[][] names;
     int columnCount;
 
-    final static void a(boolean param0, int param1) {
-        AppletResourceHelpers.a(param0, false);
+    final static void drawLobbyLayers(boolean param0, int param1) {
+        AppletResourceHelpers.drawLobbyScreenLayers(param0, false);
         RankingsRequest.drawOverlayLayers(param0, (byte) -125);
         if (param1 < 10) {
           byte[] var3 = (byte[]) null;

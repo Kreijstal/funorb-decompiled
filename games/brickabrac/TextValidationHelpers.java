@@ -8,7 +8,7 @@ final class TextValidationHelpers {
     static String field_c;
     static int field_a;
 
-    final static String a(int param0, Throwable param1) throws IOException {
+    final static String formatThrowableTrace(int param0, Throwable param1) throws IOException {
         String var2;
         PrintWriter var4;
         String var5;

@@ -32,7 +32,7 @@ final class TranslucentNineSliceFrame extends NineSliceFrame {
           InvitationDialogHelpers.configureFullscreenDialogFrame(117, outerFrame, outerPaddingX, outerPaddingY);
           LegacyUtf8Decoder.configureFullscreenDialogPaints(buttonPaint, selectedPaint, false, bodyPaint);
           if (obfuscationGuard != 10) {
-            TranslucentNineSliceFrame.a(true);
+            TranslucentNineSliceFrame.drawMenuBackdrop(true);
           }
           return;
         } catch (java.lang.RuntimeException caughtParameter) {
@@ -78,7 +78,7 @@ final class TranslucentNineSliceFrame extends NineSliceFrame {
         super.paintFrame(width, height, x, obfuscationGuard, y);
     }
 
-    final static void a(boolean param0) {
+    final static void drawMenuBackdrop(boolean param0) {
         if (param0) {
           IntegerBitLengthHelpers.drawMenuBackground(0, 0);
           return;

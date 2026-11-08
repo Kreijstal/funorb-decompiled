@@ -159,7 +159,7 @@ abstract class WidgetLayer extends WidgetGroup {
 
     abstract void paintLayerFrame(int x, int obfuscationGuard, int y);
 
-    final static void a(java.applet.Applet param0, byte param1) {
+    final static void clearSessionAndReload(java.applet.Applet param0, byte param1) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -204,7 +204,7 @@ abstract class WidgetLayer extends WidgetGroup {
         }
     }
 
-    final static void a(int param0, int param1, byte param2) {
+    final static void onTutorialEvent(int param0, int param1, byte param2) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -230,7 +230,7 @@ abstract class WidgetLayer extends WidgetGroup {
             }
             if (TextValidationHelpers.field_a != 0 &&
               TextValidationHelpers.field_a != 1) {
-              if (!MusicVoice.a((byte) 91)) {
+              if (!MusicVoice.isTutorialPromptActive((byte) 91)) {
                 return;
               }
               if (LobbyOverlayHelpers.field_i == 0) {
@@ -242,7 +242,7 @@ abstract class WidgetLayer extends WidgetGroup {
                   LogoRenderHelpers.field_a = 25;
                   LobbyOverlayHelpers.field_i = 2;
                 }
-                GzipInflater.b(-8);
+                GzipInflater.dismissTutorialPrompt(-8);
                 return;
               }
               if (LobbyOverlayHelpers.field_i != 1 &&
@@ -252,7 +252,7 @@ abstract class WidgetLayer extends WidgetGroup {
               if (0 == (param0 & 4)) {
                 return;
               }
-              GzipInflater.b(-8);
+              GzipInflater.dismissTutorialPrompt(-8);
               return;
             }
             if ((4 & param0) == 0) {

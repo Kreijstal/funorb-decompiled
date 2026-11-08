@@ -93,9 +93,9 @@ final class LevelSelectScreen extends MenuScreen {
         int var6;
         super.drawScreen((byte) -101);
         AchievementMaskRequest.drawHorizontallyCenteredSprite(13, 19);
-        GzipInflater.a(550, 5, 33, 5, 140, (byte) -106, 45);
-        GzipInflater.a(160, 5, 243, 5, 178, (byte) -88, 45);
-        GzipInflater.a(385, 5, 243, 5, 178, (byte) -124, 210);
+        GzipInflater.drawMenuPanel(550, 5, 33, 5, 140, (byte) -106, 45);
+        GzipInflater.drawMenuPanel(160, 5, 243, 5, 178, (byte) -88, 45);
+        GzipInflater.drawMenuPanel(385, 5, 243, 5, 178, (byte) -124, 210);
         ContextActionController.field_g.drawCentered(CanvasResizeController.packNames[this.pack.packId], 320, 1 + (178 - ContextActionController.field_g.xHeight), 0, -1);
         ArchiveNetworkRequest.packSelectorIcons[this.pack.packId].drawRotatedAboutCenter(565, 140, -2048, 4096);
         if (this.levelList.selectedLevelIndex >= 0 &&
@@ -108,7 +108,7 @@ final class LevelSelectScreen extends MenuScreen {
           }
           if (GameConnectionShell.field_t ||
             !(this.previewLevelIndex >= 3 + IntegerPowerHelpers.unlockedLevelCounts[this.pack.packId])) {
-            this.a(178, 243 - 2 * var2, 210, 385, (byte) 85);
+            this.drawLevelPreview(178, 243 - 2 * var2, 210, 385, (byte) 85);
           }
           if (GameConnectionShell.field_t ||
             !(IntegerPowerHelpers.unlockedLevelCounts[this.pack.packId] < this.previewLevelIndex)) {
@@ -169,7 +169,7 @@ final class LevelSelectScreen extends MenuScreen {
         if (obfuscationGuard <= 53) {
           return (String) null;
         }
-        return ArrayWidgetGroup.buttonLabels[DelayedPacket.c(61) ? 7 : 39];
+        return ArrayWidgetGroup.buttonLabels[DelayedPacket.isFullscreenUnavailable(61) ? 7 : 39];
     }
 
     private final void loadPreview(int obfuscationGuard, int levelIndex) {
@@ -217,7 +217,7 @@ final class LevelSelectScreen extends MenuScreen {
         }
     }
 
-    final static boolean a(long param0, String param1, int param2) {
+    final static boolean isPlayerReachable(long param0, String param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         SocialListEntry var5 = null;
@@ -279,7 +279,7 @@ final class LevelSelectScreen extends MenuScreen {
         return this.buttonTop + 32;
     }
 
-    final static String d(boolean param0) {
+    final static String getPendingUsername(boolean param0) {
         if (MusicEnvelope.field_f == IntrusiveHashIterator.field_g) {
           return VolcanicBackground.field_w;
         }
@@ -341,7 +341,7 @@ final class LevelSelectScreen extends MenuScreen {
               return false;
             }
             if (this.levelList.selectedLevelIndex < this.pack.levelCount) {
-              RankingsRequest.a(16727, inputFlag, this.levelList.selectedLevelIndex, new LevelSequence(this.pack));
+              RankingsRequest.startSinglePlayerLevel(16727, inputFlag, this.levelList.selectedLevelIndex, new LevelSequence(this.pack));
             }
           }
         } else {
@@ -399,7 +399,7 @@ final class LevelSelectScreen extends MenuScreen {
         this.initializeButtons(GameRenderAudioHelpers.field_f, 0);
     }
 
-    private final void a(int param0, int param1, int param2, int param3, byte param4) {
+    private final void drawLevelPreview(int param0, int param1, int param2, int param3, byte param4) {
         int var8 = 0;
         Brick var9 = null;
         int var10 = BrickABrac.field_J ? 1 : 0;
@@ -500,7 +500,7 @@ final class LevelSelectScreen extends MenuScreen {
         if (!obfuscationGuard) {
           this.field_s = (LobbyOverlayHelpers) null;
         }
-        return !DelayedPacket.c(73) ? 16 : 0;
+        return !DelayedPacket.isFullscreenUnavailable(73) ? 16 : 0;
     }
 
     static {
